@@ -1,0 +1,112 @@
+
+> *Libraries are not made; they grow.*
+> 
+> — AUGUSTINE BIRRELL
+
+## INTRODUCTION
+
+There is a large collection of standard data structures for holding data. Since they are so standard it makes sense to have standard portable implementations for them. The Standard Template Library (STL) includes libraries for such data structures. Included in the STL are implementations of the stack, queue, and many other standard data structures. When discussed in the context of the STL, these data structures are usually called *container classes* because they are used to hold collections of data. In Chapter 8 we presented a preview of the STL by describing the vector template class, which is one of the container classes in the STL. In this chapter we will present an overview of some of the basic classes included in the STL. We do not have room to give a comprehensive treatment of the STL here, but we will present enough to get you started using some basic STL container classes.
+
+The STL was developed by Alexander Stepanov and Meng Lee at Hewlett-Packard and was based on research by Stepanov, Lee, and David Musser. It is a collection of libraries written in the C++ language. Although the STL is not part of the core C++ language, it is part of the C++ standard and so any implementation of C++ that conforms to the standard would include the STL. As a practical matter, you can consider the STL to be part of the C++ language.
+
+As its name suggests, the classes in the STL are template classes. A typical container class in the STL has a type parameter for the type of data to be stored in the container class. The STL container classes make extensive use of iterators, which are objects that facilitate cycling through the data in a container. An introduction to the concept of an iterator was given in Section 13.1, where we discussed pointers used as iterators. You will find it helpful to read that section before reading this chapter. If you have not already done so, you should also read Section 8.3, which covers the vector template class of the STL.
+
+The STL also includes implementations of many important generic algorithms, such as searching and sorting algorithms. The algorithms are implemented as template functions. After discussing the container classes, we will describe some of these algorithm implementations.
+
+The STL differs from other C++ libraries, such as `<iostream>` for example, in that the classes and algorithms are generic, which is another way of saying they are template classes and template functions.
+
+## PREREQUISITES
+
+This chapter uses the material from Chapters 2 through 13, 15, and Chapter 17.
+
+## 18.1 ITERATORS
+
+> The White Rabbit put on his spectacles. "Where shall I begin, please your Majesty?" he asked.
+> 
+> "Begin at the beginning," the King said, very gravely, "And go on till you come to the end: then stop."
+> 
+> LEWIS CARROLL, Alice in Wonderland
+
+Vectors, introduced in Chapter 8, are one of the container template classes in the STL. Iterators are a generalization of pointers. (Chapter 13 includes an introduction to pointers used as iterators.) This section shows you how to use iterators with vectors. Other container template classes, which we introduce in Section 18.2, use iterators in the same way. So, all you learn about iterators in this section will apply across a wide range of containers and does not apply solely to vectors. This reflects one of the basic tenets of the STL philosophy: The semantics, naming, and syntax for iterator usage should be (and are) uniform across different container types. We begin with a review and discussion of the using declarations, which we will use extensively when discussing iterators and the STL.
+
+### using Declarations
+
+It may help to review the subsection entitled "Qualifying Names" in Chapter 12 before you continue with this subsection and this chapter.
+
+Suppose my_function is a function defined in the namespace my_space. The following using declaration allows you to use the identifier my_function and have it mean the versions of my_function defined in the namespace my_space:
+
+```
+using my_space::my_function;
+```
+
+Within the scope of this using declaration an expression such as my_function(1,2) means the same thing as my_space::my_function(1,2); that is, within the scope of this using declaration the identifier my_function always indicates the version of my_function defined in my_space, as opposed to any definition of my_function defined in any other namespace.
+
+When discussing iterators we will often apply the :: operator to another level. You will often see expressions such as the following:
+
+```
+using std::vector<int>::iterator;
+```
+
+In this case, the identifier `iterator` names a type. So within the scope of this using directive, the following would be allowed:
+
+```
+iterator p;
+```
+
+This declares p to be of the type iterator. What is the type iterator? It is defined in the definition of the class `vector<int>`. Which class `vector<int>`? The one defined in the namespace `std`. (We will fully explain the type iterator later. At this point we are concerned only with explaining using directives.)
+
+You may object that this is all a big to-do about nothing. There is no class `vector<int>` defined in any namespace other than the namespace `std`. That may or may not be true, but there could be a class named `vector<int>` defined in some other namespace either now or in the future. You may object further that you never heard of defining a type within a class. We have not covered such definitions, but they are possible and they are common in the STL. So, you must know how to use such types, even if you do not define such types.
+
+In summary, consider the using directive
+
+```
+using std::vector<int>::iterator;
+```
+
+Within the scope of this using directive the identifier `iterator` means the type named iterator that is defined in the class `vector<int>`, which in turn is defined in the `std` namespace.
+
+### Iterator Basics
+
+An iterator is a generalization of a pointer, and in fact is typically even implemented using a pointer, but the abstraction of an iterator is designed to spare you the details of the implementation and give you a uniform interface to iterators that is the same across different container classes. Each container class has its own iterator types, just like each data type has its own pointer type. But just as all pointer types behave essentially the same for dynamic variables of their particular data type, so too does each iterator type behave the same, but each iterator is used only with its own container class.
+
+An iterator is not a pointer, but you will not go far wrong if you think of it and use it as if it were a pointer. Like a pointer variable, an iterator variable is located at (“points to”) one data entry in the container. You manipulate iterators using the following overloaded operators that apply to iterator objects:
+
+- Prefix and postfix increment operators, `++`, for advancing the iterator to the next data item
+- Prefix and postfix decrement operators, `--`, for moving the iterator to the previous data item
+- Equal and unequal operators, `==` and `!=`, to test whether two iterators point to the same data location.
+- A dereferencing operator, `*`, so that if `p` is an iterator variable, then `*p` gives access to the data located at (“pointed to by”) `p`. This access may be read-only, write-only, or allow both reading and changing of the data, depending on the particular container class.
+
+Not all iterators have all of these operators. However, the vector template class is an example of a container whose iterators have all these operators and more.
+
+A container class has member functions that get the iterator process started. After all, a new iterator variable is not located at (“pointing to”) any data in the container. Many container classes, including the vector template class, have the following member functions that return iterator objects (iterator values) that point to special data elements in the data structure:
+
+- `c.begin()` returns an iterator for the container `c` that points to the “first” data item in the container `c`.
+- `c.end()` returns something that can be used to test when an iterator has passed beyond the last data item in a container `c`. The iterator `c.end()` is completely analogous to `NULL` used to test when a pointer has passed the last node in a linked list of the kind discussed in Chapter 13. The iterator `c.end()` is thus an iterator that is located at no data item, but that is a kind of end marker or sentinel.
+
+For many container classes, these tools allow you to write `for` loops that cycle through all the elements in a container object `c`, as follows:
+
+```
+/*p is an iterator variable of the type for the container object c.
+for (p = c.begin(); p != c.end(); p++)
+    process *p //p is the current data item.
+```
+
+That’s the big picture. Now let’s look at the details in the concrete setting of the vector template container class.
+
+Display 18.1 illustrates the use of iterators with the vector template class. Keep in mind that each container type in the STL has its own iterator types, although they are all used in the same basic ways. The iterators we want for a vector of ints are of type
+
+```
+std::vector<int>::iterator
+```
+
+Another container class is the list template class. Iterators for lists of ints are of type
+
+```
+std::list<int>::iterator
+```
+
+In the program in Display 18.1, we specialize the type name iterator so that it applies to iterators for vectors of ints. The type name iterator that we want in Display 18.1 is defined in the template class vector and so if we specialize the template class vector to ints and want the iterator type for vector<int>, we want the type
+
+```
+std::vector<int>::iterator;
+```

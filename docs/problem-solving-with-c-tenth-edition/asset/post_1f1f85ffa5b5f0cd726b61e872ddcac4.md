@@ -1,0 +1,204 @@
+
+## DISPLAY 18.2 Bidirectional and Random Access Iterator Use (part 2 of 2)
+
+```
+25     cout << "Two steps forward and one step back:\n";
+26     p++;
+27     cout << *p << endl;
+28     p++;
+29     cout << *p << endl;
+30     p--;
+31     cout << *p << endl;
+32     return 0;
+33 }
+```
+
+This is the decrement operator. It works for any bidirectional iterator.
+
+## Sample Dialogue
+
+```
+container[0] == A
+container[1] == B
+container[2] == C
+container[3] == D
+The third entry is C
+The third entry is C
+The third entry is C
+Back to container[0].
+which has value A
+Two steps forward and one step back:
+B
+C
+B
+```
+
+The decrement operator is used in Display 18.2, where the line containing it is shown in highlight. As you would expect, p-- moves the iterator p to the previous location. The decrement operator -- is the same as the increment operator ++, but it moves the iterator in the opposite direction.
+
+The increment and decrement operators can be used in either prefix (++p) or postfix (p++) notation. In addition to changing p, they also return a value. The details of the value returned are completely analogous to what happens with the increment and decrement operators on int variables. In prefix notation, first the variable is changed and the changed value is returned. In postfix notation, the value is returned before the variable is changed. We prefer not to use the increment and decrement operators as expressions that return a value and use them only to change the variable value.
+
+The following lines from Display 18.2 illustrate that with vector iterators you have random access to the elements of a vector, such as container:
+
+```
+vector<char>::iterator p = container.begin();
+cout << "The third entry is " << container[2] << endl;
+cout << "The third entry is " << p[2] << endl;
+cout << "The third entry is " << *(p + 2) << endl;
+```
+
+Random access means you can go in one step directly to any particular element. We have already used container[2] as a form of random access to a vector. It is simply the square bracket operator that is standard with arrays and vectors. What is new is that you can use this same square bracket notation with an iterator. The expression p[2] is a way to obtain access to the element indexed by 2.
+
+The expressions p[2] and *(p + 2) are completely equivalent. By analogy to pointer arithmetic (see Chapter 9), (p + 2) names the location two places beyond p. Since p is at the first (index 0) location in the above code, (p + 2) is at the third (index 2) location. The expression (p + 2) returns an iterator. The expression *(p + 2) dereferences that iterator. Of course, you can replace 2 with a different nonnegative integer to obtain a pointer pointing to a different element.
+
+Be sure to note that neither p[2] nor (p + 2) changes the value of the iterator in the iterator variable p. The expression (p + 2) returns another iterator at another location, but it leaves p where it was. The same thing happens with p[2]. Also note that the meaning of p[2] and (p + 2) depends on the location of the iterator in p. For example, (p + 2) means two locations beyond the location of p, wherever that may be.
+
+For example, suppose the previously discussed code from Display 18.2 were replaced with the following (note the added p++):
+
+```
+vector<char>::iterator p = container.begin();
+p++;
+cout << "The third entry is " << container[2] << endl;
+cout << "The third entry is " << p[2] << endl;
+cout << "The third entry is " << *(p + 2) << endl;
+```
+
+The output of these three couts would no longer be
+
+```
+The third entry is C
+The third entry is C
+The third entry is C
+```
+
+but would instead be
+
+```
+The third entry is C
+The third entry is D
+The third entry is D
+```
+
+The p++ moves p from location 0 to location 1 and so (p + 2) is now an iterator at location 3, not location 2. So, *(p + 2) and p[2] are equivalent to container[3], not container[2].
+
+## Kinds of Iterators
+
+Different containers have different kinds of iterators. The following are the main kinds of iterators:
+
+**Forward iterators:** ++ works on the iterator.
+
+**Bidirectional iterators:** both ++ and -- work on the iterator.
+
+**Random access iterators:** ++, --, and random access all work with the iterator.
+
+We now know enough about iterators to make sense of how iterators are classified. The main kinds of iterators are
+
+**Forward iterators:** ++ works on the iterator.
+
+**Bidirectional iterators:** both ++ and -- work on the iterator.
+
+**Random access iterators:** ++, --, and random access all work with the iterator.
+
+Note that these are increasingly strong categories: Every random access iterator is also a bidirectional iterator, and every bidirectional iterator is also a forward iterator. As we will see, different template container classes have different kinds of iterators. The iterators for the vector template class are random access iterators.
+
+Note that the names *forward iterator*, *bidirectional iterator*, and *random access iterator* refer to kinds of iterators, not type names. The actual type names will be something like `std::vector<int>::iterator`, which in this case happens to be a random access iterator.
+
+## SELF-TEST EXERCISE
+
+4. Suppose the vector v contains the letters 'A', 'B', 'C', and 'D' in that order. What is the output of the following code?
+
+```
+vector<char>::iterator i = v.begin();
+i++;
+cout << *(i + 2) << " ";
+i--;
+cout << i[2] << " ";
+cout << *(i + 2) << " ";
+```
+
+## Constant and Mutable Iterators
+
+The categories forward iterator, bidirectional iterator, and random access iterator each subdivide into two categories: constant and mutable, depending on how the dereferencing operator behaves with the iterator. With a constant iterator the dereferencing operator produces a read-only version of the element. With a constant iterator p, you can use *p, for example, to assign it to a variable or output it to the screen, but you cannot change the element in the container by, for example, assigning it to *p. With a mutable iterator p, *p can be assigned a value and that will change the corresponding element in the container. The vector iterators are mutable, as shown by the following lines from Display 18.1:
+
+```
+cout << "Setting entries to 0:\n";
+for (p = container.begin(); p != container.end(); p++)
+    *p = 0;
+```
+
+If a container has only constant iterators, you cannot obtain a mutable iterator for the container. However, if a container has mutable iterators and you want a constant iterator for the container, you can have it. You might want a constant iterator as a kind of error checking if you intend that your code not change the elements in the container. For example, the following will produce a constant iterator for a vector container named container:
+
+```
+std::vector<char>::const_iterator p = container.begin();
+```
+
+or equivalently
+
+```
+using std::vector<char>::const_iterator;
+const_iterator p = container.begin();
+```
+
+With p declared in this way, the following would produce an error message:
+
+```
+*p = 'Z';
+```
+
+For example, Display 18.2 would behave exactly the same if you change
+
+```
+vector<int>::iterator p;
+```
+
+to
+
+```
+vector<int>::const_iterator p;
+```
+
+However, a similar change would not work in Display 18.1 because of the following line from the program in Display 18.1:
+
+```
+*p = 0;
+```
+
+Note that const_iterator is a type name, while constant iterator is the name of a kind of iterator. However, every iterator of a type named const_iterator will be a constant iterator.
+
+## Constant Iterator
+
+A constant iterator is an iterator that does not allow you to change the element at its location.
+
+## Reverse Iterators
+
+Sometimes you want to cycle through the elements in a container in reverse order. If you have a container with bidirectional iterators, you might be tempted to try
+
+```
+vector<int>::iterator p;
+for (p = container.end(); p != container.begin(); p--)
+    cout << *p << " ";
+```
+
+This code will compile, and you may be able to get something like this to work on some systems, but there is something fundamentally wrong with this: container.end() is not a regular iterator, but only a sentinel, and container.begin() is not a sentinel.
+
+Fortunately, there is an easy way to do what you want. For a container with bidirectional iterators, there is a way to reverse everything using a kind of iterator known as a reverse iterator. The following will work fine:
+
+```
+vector<int>::reverse_iterator rp;
+for (rp = container.rbegin(); rp != container.rend(); rp++)
+    cout << *rp << " ";
+```
+
+The member function rbegin() returns an iterator located at the last element. The member function rend() returns a sentinel that marks the “end” of the elements in the reverse order. Note that for an iterator of type reverse_iterator, the increment operator ++ moves backward through the elements. In other words, the meanings of -- and ++ are interchanged. The program in Display 18.3 demonstrates a reverse iterator.
+
+## Reverse Iterators
+
+A reverse iterator can be used to cycle through all elements of a container, provided that the container has bidirectional iterators.
+The general scheme is as follows:
+
+```
+STL_Container<type>::reverse_iterator rp;
+for (rp = c.rbegin(); rp != c.rend(); rp++)
+    Process_At_Location rp;
+```
+
+The object c is a container class with bidirectional iterators.

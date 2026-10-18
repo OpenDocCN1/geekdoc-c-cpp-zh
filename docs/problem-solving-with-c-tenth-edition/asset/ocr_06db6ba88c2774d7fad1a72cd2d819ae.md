@@ -1,0 +1,7 @@
+# Random Number Generator
+
+| Function Declaration | Description | Header File |
+|---|---|---|
+| `int random(int);` | The call random(n) returns a pseudorandom integer greater than or equal to 0 and less than or equal to n−1. (Not available in all implementations. If not available, then you must use rand.) | `cstdlib` |
+| `int rand();` | The call rand() returns a pseudorandom integer greater than or equal to 0 and less than or equal to RAND_MAX. RAND_MAX is a predefined integer constant that is defined in cstdlib. The value of RAND_MAX is implementation dependent but will be at least 32767. | `cstdlib` |
+| `void srand(unsigned int);`<br>`void srandom(unsigned int);`<br><br>(The type `unsigned int` is an integer type that only allows nonnegative values. You can think of the argument type as `int` with the restriction that it must be nonnegative.) | Reinitializes the random number generator. The argument is the seed. Calling srand multiple times with the same argument will cause rand or random (whichever you use) to produce the same sequence of pseudorandom numbers. If rand or random is called without any previous call to srand, the sequence of numbers produced is the same as if there had been a call to srand with an argument of 1. | `cstdlib` |

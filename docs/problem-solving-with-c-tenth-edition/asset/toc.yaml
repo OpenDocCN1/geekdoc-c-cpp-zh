@@ -1,0 +1,2600 @@
+- - '##'
+  - 1.1 **计算机系统** 34
+- - '##'
+  - 1.2 **编程与问题求解** 44
+- - '##'
+  - 1.3 **C++ 简介** 50
+- - '##'
+  - 1.4 **测试与调试** 61
+- - '##'
+  - 18.1 **迭代器** 993
+- - '##'
+  - 18.2 **容器** 1007
+- - '##'
+  - 18.3 **泛型算法** 1025
+- - '###'
+  - 1.1 计算机系统
+- - '####'
+  - 硬件
+- - '#####'
+  - 字节与地址
+- - '######'
+  - 显示 1.2 内存位置与字节
+- - '######'
+  - 为什么是八位？
+- - '####'
+  - 软件
+- - '#####'
+  - 显示 1.3 运行程序的简单视图
+- - '#####'
+  - 高级语言
+- - '#####'
+  - 编译器
+- - '######'
+  - 编译器
+- - '#####'
+  - 显示 1.5 准备运行 C++ 程序
+- - '#####'
+  - 自测练习
+- - '#####'
+  - 显示 1.6 一个算法
+- - '######'
+  - 算法
+- - '#####'
+  - 显示 1.7 程序设计过程
+- - '#####'
+  - 面向对象编程
+- - '#####'
+  - The Software Life Cycle
+- - '#####'
+  - SELF-TEST EXERCISES
+- - '###'
+  - 1.3 INTRODUCTION TO C++
+- - '####'
+  - Origins of the C++ Language
+- - '####'
+  - A Sample C++ Program
+- - '###'
+  - 数字证据
+- - '####'
+  - 可在以下位置找到数字证据：
+- - '###'
+  - PITFALL 使用 \n 时使用错误的斜杠
+- - '###'
+  - PROGRAMMING TIP 输入和输出语法
+- - '###'
+  - 简单 C++ 程序的布局
+- - '###'
+  - DISPLAY 1.9 简单 C++ 程序的布局
+- - '###'
+  - PITFALL 编译 C++11 程序
+- - '###'
+  - PROGRAMMING TIP 让您的程序运行
+- - '###'
+  - SELF-TEST EXERCISES
+- - '###'
+  - 1.4 测试和调试
+- - '####'
+  - 程序错误的类型
+- - '###'
+  - PITFALL 假设您的程序是正确的
+- - '###'
+  - SELF-TEST EXERCISES
+- - '###'
+  - 自测练习答案
+- - '###'
+  - 练习程序
+- - '###'
+  - 编程项目
+- - '###'
+  - INTRODUCTION
+- - '###'
+  - PREREQUISITES
+- - '###'
+  - 2.1 VARIABLES AND ASSIGNMENTS
+- - '####'
+  - Variables
+- - '####'
+  - 'Names: Identifiers'
+- - '####'
+  - Cannot Get Programs to Run?
+- - '####'
+  - Identifiers
+- - '####'
+  - Variable Declarations
+- - '####'
+  - Naming Conventions
+- - '####'
+  - Assignment Statements
+- - '###'
+  - 在声明中初始化变量
+- - '####'
+  - 语法
+- - '####'
+  - 示例
+- - '####'
+  - 在声明中初始化的替代语法
+- - '####'
+  - 示例
+- - '####'
+  - 编程提示：使用有意义的名称
+- - '####'
+  - 自测练习
+- - '###'
+  - 2.2 输入和输出
+- - '####'
+  - 使用 cout 输出
+- - '####'
+  - Include 指令和命名空间
+- - '####'
+  - 转义序列
+- - '###'
+  - 在输出中开始新行
+- - '###'
+  - 输出类型为 double 的值
+- - '###'
+  - 使用 cin 进行输入
+- - '####'
+  - cin 语句
+- - '###'
+  - 设计输入和输出
+- - '####'
+  - PROGRAMMING TIP 行内换行 I/O
+- - '###'
+  - 自测练习
+- - '##'
+  - 2.3 数据类型和表达式
+- - '###'
+  - 类型 *int* 和 *double*
+- - '####'
+  - 什么是 Doubled？
+- - '###'
+  - 其他数字类型
+- - '###'
+  - DISPLAY 2.3  一些 C++11 固定宽度整数类型
+- - '###'
+  - 类型 *char*
+- - '####'
+  - 程序清单 2.4 char 类型
+- - '####'
+  - 示例对话
+- - '###'
+  - bool 类型
+- - '###'
+  - string 类简介
+- - '####'
+  - 程序清单 2.5 string 类
+- - '####'
+  - 示例对话 1
+- - '####'
+  - 示例对话 2
+- - '###'
+  - 类型兼容性
+- - '###'
+  - 自测练习
+- - '###'
+  - 更多赋值语句
+- - '##'
+  - 2.4 简单的控制流
+- - '###'
+  - 简单的分支机制
+- - '###'
+  - 展示 2.8 if-else 语句（第 2 部分，共 2 部分）
+- - '####'
+  - 示例对话 2
+- - '###'
+  - 展示 2.9 if-else 语句的语法
+- - '####'
+  - 每个分支对应一条语句：
+- - '####'
+  - 每个分支对应一组语句：
+- - '###'
+  - “and”运算符 &&
+- - '####'
+  - 语法（使用 && 的布尔表达式）
+- - '####'
+  - 示例（在 if-else 语句中）
+- - '###'
+  - “or”运算符 ||
+- - '####'
+  - 语法（使用 || 的布尔表达式）
+- - '####'
+  - 示例（在 if-else 语句中）
+- - '###'
+  - 陷阱：不等式连写
+- - '###'
+  - 陷阱：用 = 代替 ==
+- - '###'
+  - 复合语句
+- - '####'
+  - 展示 2.11 在 if-else 语句中使用复合语句
+- - '###'
+  - 自测练习
+- - '###'
+  - DISPLAY 2.12 一个 while 循环
+- - '####'
+  - Sample Dialogue 1
+- - '####'
+  - Sample Dialogue 2
+- - '####'
+  - Sample Dialogue 3
+- - '###'
+  - DISPLAY 2.13 while 语句的语法
+- - '####'
+  - 包含多个语句的循环体：
+- - '####'
+  - 包含单个语句的循环体：
+- - '###'
+  - DISPLAY 2.15 一个 do-while 循环
+- - '####'
+  - Sample Dialogue
+- - '###'
+  - PROGRAMMING EXAMPLE 信用卡余额
+- - '###'
+  - 陷阱：无限循环
+- - '###'
+  - 显示 2.16 信用卡程序
+- - '###'
+  - 示例对话
+- - '###'
+  - 自测练习
+- - '##'
+  - 2.5 程序风格
+- - '###'
+  - 缩进
+- - '###'
+  - 注释
+- - '###'
+  - 使用const修饰符命名常量
+- - '####'
+  - 语法
+- - '####'
+  - 示例
+- - '####'
+  - 自测练习
+- - '###'
+  - 章节总结
+- - '###'
+  - 自测练习答案
+- - '###'
+  - 练习程序
+- - '###'
+  - 编程项目
+- - '#'
+  - 控制流的更多内容 3
+- - '##'
+  - 引言
+- - '##'
+  - 先决条件
+- - '##'
+  - 3.1 使用布尔表达式
+- - '###'
+  - 评估布尔表达式
+- - '###'
+  - DISPLAY 3.1 真值表
+- - '###'
+  - DISPLAY 3.2 优先级规则
+- - '##'
+  - '**PITFALL!** **布尔表达式转换为 _int_ 值**'
+- - '##'
+  - 避免使用“not”
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Enumeration Types (Optional)
+- - '##'
+  - 3.2 多路分支
+- - '###'
+  - 嵌套语句
+- - '###'
+  - DISPLAY 3.3 `if` 语句内的 `if-else` 语句
+- - '###'
+  - PROGRAMMING TIP 在嵌套语句中使用大括号
+- - '###'
+  - DISPLAY 3.4 大括号的重要性
+- - '###'
+  - Sample Dialogue 1
+- - '###'
+  - Sample Dialogue 2
+- - '###'
+  - 多路 `if-else` 语句
+- - '###'
+  - SYNTAX
+- - '###'
+  - '### PROGRAMMING EXAMPLE — 州所得税'
+- - '#'
+  - 自测练习
+- - '#'
+  - switch 语句
+- - '#'
+  - DISPLAY 3.6 switch 语句 (第 1 部分，共 2 部分)
+- - '#'
+  - DISPLAY 3.6 switch 语句 (第 2 部分，共 2 部分)
+- - '#'
+  - 示例对话 1
+- - '#'
+  - 示例对话 2
+- - '#'
+  - 示例对话 3
+- - '#'
+  - 示例对话 4
+- - '#'
+  - switch Statement
+- - '#'
+  - SYNTAX
+- - '#'
+  - EXAMPLE
+- - '#'
+  - PITFALL Forgetting a break in a switch Statement
+- - '##'
+  - Using switch Statements for Menus
+- - '##'
+  - DISPLAY 3.7 A Menu (part 1 of 2)
+- - '##'
+  - Blocks
+- - '##'
+  - DISPLAY 3.8 Block with a Local Variable (part 1 of 2)
+- - '##'
+  - DISPLAY 3.8 Block with a Local Variable (part 2 of 2)
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Blocks
+- - '##'
+  - Scope Rule for Nested Blocks
+- - '##'
+  - 3.3 MORE ABOUT C++ LOOP STATEMENTS
+- - '##'
+  - The while Statements Reviewed
+- - '##'
+  - DISPLAY 3.9 while 语句和 do-while 语句的语法
+- - '##'
+  - 增量和减量运算符回顾
+- - '##'
+  - DISPLAY 3.10 增量运算符作为表达式（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 3.10 增量运算符作为表达式（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 自测练习
+- - '##'
+  - for 语句
+- - '##'
+  - DISPLAY 3.11 for 语句（第 1 部分，共 2 部分）
+- - '###'
+  - for 语句
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLE
+- - '###'
+  - Equivalent while Loop
+- - '###'
+  - EQUIVALENT SYNTAX
+- - '###'
+  - EQUIVALENT EXAMPLE
+- - '##'
+  - 展示 3.11 for 语句（第 2 部分，共 2 部分）
+- - '##'
+  - 输出
+- - '##'
+  - 展示 3.12 一个 for 语句
+- - '##'
+  - 输出
+- - '##'
+  - 展示 3.13 带多语句循环体的 for 循环
+- - '##'
+  - 语法
+- - '##'
+  - 示例
+- - '##'
+  - 陷阱：for 语句中多余的分号
+- - '##'
+  - 使用哪种循环
+- - '##'
+  - 自测练习
+- - '##'
+  - PITFALL 未初始化变量和无限循环
+- - '##'
+  - The break Statement
+- - '##'
+  - The break Statement
+- - '##'
+  - PITFALL The break Statement in Nested Loops
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 3.4 DESIGNING LOOPS
+- - '###'
+  - Loops for Sums and Products
+- - '###'
+  - Repeat "This Many Times"
+- - '###'
+  - Ending a Loop
+- - '##'
+  - Nested Loops
+- - '###'
+  - DISPLAY 3.15 Explicitly Nested Loops (part 1 of 2)
+- - '###'
+  - DISPLAY 3.15 Explicitly Nested Loops (part 2 of 2)
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 测试循环
+- - '##'
+  - 调试一个非常糟糕的程序
+- - '##'
+  - 自测练习
+- - '##'
+  - 章节总结
+- - '##'
+  - 自测练习答案
+- - '##'
+  - PRACTICE PROGRAMS
+- - '##'
+  - 编程项目
+- - '#'
+  - 程序抽象和返回值的函数 4
+- - '##'
+  - 4.1 自顶向下设计 214
+- - '##'
+  - 4.2 预定义函数 215
+- - '##'
+  - 4.3 程序员定义的函数 225
+- - '##'
+  - 4.4 程序抽象 236
+- - '##'
+  - 4.5 作用域和局部变量 250
+- - '##'
+  - 4.6 重载函数名 264
+- - '##'
+  - 引言
+- - '##'
+  - 先决条件
+- - '##'
+  - 4.1 自顶向下设计
+- - '##'
+  - 4.2 预定义函数
+- - '##'
+  - 使用预定义函数
+- - '##'
+  - Function Call
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLES
+- - '##'
+  - DISPLAY 4.1 A Function Call
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - DISPLAY 4.2 Some Predefined Functions
+- - '##'
+  - Random Number Generation
+- - '##'
+  - 类型转换
+- - '###'
+  - 将int转换为double的函数
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '###'
+  - 函数声明
+- - '##'
+  - SYNTAX
+- - '##'
+  - EXAMPLE
+- - '##'
+  - A Function Is Like a Small Program
+- - '###'
+  - DISPLAY 4.4 Details of a Function Call
+- - '##'
+  - Functions That Return a Boolean Value
+- - '##'
+  - Alternate Form for Function Declarations
+- - '##'
+  - PITFALL 参数顺序错误
+- - '##'
+  - 更多关于函数定义放置的内容
+- - '##'
+  - DISPLAY 4.6 返回值的函数语法
+- - '##'
+  - PROGRAMMING TIP 在分支语句中使用函数调用
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 4.4 程序抽象
+- - '##'
+  - 黑盒类比
+- - '#'
+  - DISPLAY 4.7 定义：黑盒等价
+- - '#'
+  - 函数声明
+- - '#'
+  - Definition 1
+- - '#'
+  - Definition 2
+- - '#'
+  - Procedural Abstraction
+- - '#'
+  - HOW TO WRITE A BLACK-BOX FUNCTION DEFINITION
+- - '#'
+  - PROGRAMMING TIP Choosing Formal Parameter Names
+- - '#'
+  - DISPLAY 4.8 Simpler Formal Parameter Names
+- - '#'
+  - Function Declaration
+- - '#'
+  - Function Definition
+- - '#'
+  - PROGRAMMING TIP Nested Loops
+- - '#'
+  - Make a Loop Body a Function Call
+- - '#'
+  - DISPLAY 4.9  Nicely Nested Loops *(part 2 of 3)*
+- - '#'
+  - Sample Dialogue
+- - '#'
+  - DISPLAY 4.9 Nicely Nested Loops (part 3 of 3)
+- - '#'
+  - CASE STUDY Buying Pizza
+- - '#'
+  - Problem Definition
+- - '#'
+  - Input
+- - '#'
+  - Output
+- - '#'
+  - Analysis of the Problem
+- - '##'
+  - Algorithm Design
+- - '###'
+  - Algorithm Outline for the Function unitPrice
+- - '###'
+  - When to Define a Function
+- - '##'
+  - DISPLAY 4.10 Buying Pizza
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - PROGRAMMING TIP Use Pseudocode
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 4.5 作用域和局部变量
+- - '###'
+  - 小程序类比
+- - '###'
+  - DISPLAY 4.11 局部变量（第 1 部分，共 2 部分）
+- - '###'
+  - DISPLAY 4.11 局部变量（第 2 部分，共 2 部分）
+- - '####'
+  - 示例对话
+- - '###'
+  - 局部变量
+- - '##'
+  - 编程示例 — 实验豌豆地块
+- - '##'
+  - 全局常量和全局变量
+- - '#'
+  - 显示 4.12 全局命名常量（第 1 部分，共 2 部分）
+- - '#'
+  - 显示 4.12 全局命名常量（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '#'
+  - 显示 4.13 形式参数用作局部变量（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '#'
+  - 块作用域
+- - '#'
+  - 再论命名空间
+- - '#'
+  - 显示 4.14 局部、全局和块作用域
+- - '##'
+  - 块作用域再探
+- - '##'
+  - 程序清单4.15 使用命名空间（第1部分，共2部分）
+- - '##'
+  - 程序清单4.15 使用命名空间（第2部分，共2部分）
+- - '##'
+  - 自测练习题
+- - '##'
+  - 程序清单4.16 阶乘函数
+- - '###'
+  - 函数声明
+- - '###'
+  - 函数定义
+- - '##'
+  - 程序清单4.17 重载函数名
+- - '###'
+  - 输出
+- - '###'
+  - 重载函数名
+- - '##'
+  - 显示 4.18 重载函数名（第 1 部分，共 2 部分）
+- - '##'
+  - 自动类型转换
+- - '##'
+  - 重载与类型转换的交互
+- - '##'
+  - 自测练习
+- - '##'
+  - 章节总结
+- - '##'
+  - 自测练习答案
+- - '##'
+  - Practice Programs
+- - '##'
+  - 9. 编写一个足球比赛模拟器。你的模拟器应按照以下方式运作：
+- - '##'
+  - 10. 完成第 3 章中的编程项目 14，即 Edoc 计算器，但需编写一个函数，该函数以 candy、Edoc 和 Margorp 的数量作为输入参数，并返回可以获得的经验值数量。修改你的程序，按照以下规则给玩家提供建议：
+- - '##'
+  - 所有子任务的函数 5
+- - '###'
+  - 5.1 void 函数 284
+- - '###'
+  - 5.2 按引用调用参数 291
+- - '###'
+  - 5.3 使用过程抽象 305
+- - '###'
+  - 5.4 函数的测试与调试 313
+- - '###'
+  - 5.5 通用调试技巧 319
+- - '##'
+  - 引言
+- - '##'
+  - 先决条件
+- - '##'
+  - 5.1 void 函数
+- - '###'
+  - void 函数的定义
+- - '###'
+  - 显示 5.1 void 函数定义的语法
+- - '##'
+  - DISPLAY 5.2 void 函数（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 5.2 void 函数（第 2 部分，共 2 部分）
+- - '###'
+  - 示例对话
+- - '##'
+  - DISPLAY 5.3 void 函数中 return 的使用
+- - '###'
+  - 函数声明
+- - '###'
+  - 函数定义
+- - '##'
+  - 自测练习
+- - '##'
+  - 5.2 传引用参数
+- - '###'
+  - 对传引用的初步认识
+- - '#'
+  - DISPLAY 5.4 按引用传递参数
+- - '#'
+  - 示例对话
+- - '##'
+  - 按引用传递详解
+- - '##'
+  - 按引用传递
+- - '###'
+  - 'EXAMPLE (OF CALL-BY-REFERENCE PARAMETERS IN A FUNCTION DECLARATION):'
+- - '#'
+  - DISPLAY 5.5 按引用传递参数的行为（第 1 部分，共 2 部分）
+- - '##'
+  - 来自 Display 5.4 的函数调用解剖
+- - '##'
+  - Display 5.4 中函数调用的解剖（结束）
+- - '#'
+  - DISPLAY 5.5 按引用调用参数的行为（第 2 部分，共 2 部分）
+- - '##'
+  - 参数和实参
+- - '##'
+  - 混合参数列表
+- - '##'
+  - PROGRAMMING TIP 使用哪种参数
+- - '#'
+  - DISPLAY 5.6 比较实参机制（第 1 部分，共 2 部分）
+- - '#'
+  - DISPLAY 5.6 比较实参机制（第 2 部分，共 2 部分）
+- - '#'
+  - Sample Dialogue
+- - '#'
+  - PITFALL 意外局部变量
+- - '##'
+  - 显示5.7 疏忽导致的局部变量
+- - '###'
+  - 示例对话
+- - '##'
+  - 案例研究 超市定价
+- - '###'
+  - 问题定义
+- - '###'
+  - 输入
+- - '###'
+  - 输出
+- - '###'
+  - 问题分析
+- - '###'
+  - 算法设计
+- - '###'
+  - 编码
+- - '##'
+  - 显示5.9 超市定价（第1部分，共2部分）
+- - '##'
+  - 程序测试
+- - '##'
+  - 自测练习
+- - '##'
+  - 5.4 测试与调试函数
+- - '##'
+  - 桩和驱动程序
+- - '##'
+  - 显示5.10 驱动程序（第1部分，共2部分）
+- - '##'
+  - 显示5.10 驱动程序（第2部分，共2部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - DISPLAY 5.11 Program with a Stub (part 1 of 2)
+- - '##'
+  - DISPLAY 5.11 Program with a Stub (part 2 of 2)
+- - '#'
+  - Sample Dialogue
+- - '##'
+  - 5.5 GENERAL DEBUGGING TECHNIQUES
+- - '###'
+  - Keep an Open Mind
+- - '###'
+  - Check Common Errors
+- - '###'
+  - Localize the Error
+- - '##'
+  - DISPLAY 5.12 Temperature Conversion Program with a Bug
+- - '#'
+  - Sample Dialogue
+- - '##'
+  - DISPLAY 5.13 Debugging with cout Statements
+- - '#'
+  - Sample Dialogue
+- - '##'
+  - The assert Macro
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - CHAPTER SUMMARY
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - 编程项目
+- - '##'
+  - 6.1 STREAMS AND BASIC FILE I/O 340
+- - '##'
+  - 6.2 TOOLS FOR STREAM I/O 357
+- - '##'
+  - 6.3 CHARACTER I/O 372
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - PREREQUISITES
+- - '##'
+  - 6.1 STREAMS AND BASIC FILE I/O
+- - '##'
+  - 文件 I/O
+- - '##'
+  - 文件有两个名字
+- - '##'
+  - 类和对象的介绍
+- - '##'
+  - Calling a Member Function
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLES
+- - '##'
+  - Classes and Objects
+- - '##'
+  - PROGRAMMING TIP Check Whether a File Was Opened Successfully
+- - '##'
+  - The exit Statement
+- - '##'
+  - Techniques for File I/O
+- - '#'
+  - 自测练习
+- - '##'
+  - 追加到文件（可选）
+- - '##'
+  - DISPLAY 6.3 追加到文件（可选） （第 1 部分，共 2 部分）
+- - '##'
+  - 追加到文件
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLE
+- - '##'
+  - DISPLAY 6.4 输入文件名（可选） （第 1 部分，共 2 部分）
+- - '##'
+  - 展示 6.5 用于 setf 的格式化标志
+- - '##'
+  - 标志术语
+- - '##'
+  - 操纵符
+- - '#'
+  - 将流作为函数的参数
+- - '#'
+  - 编程技巧 检查文件末尾
+- - '#'
+  - DISPLAY 6.6 格式化输出（第 1 部分，共 2 部分）
+- - '#'
+  - DISPLAY 6.6 格式化输出（第 2 部分，共 2 部分）
+- - '#'
+  - rawdata.dat
+- - '#'
+  - neat.dat
+- - '#'
+  - Screen Output
+- - '#'
+  - 关于命名空间的说明
+- - '#'
+  - 编程示例 清理文件格式
+- - '##'
+  - 6.3 字符输入/输出
+- - '##'
+  - 成员函数 get 和 put
+- - '###'
+  - 读取空白和 `\n`
+- - '###'
+  - 检测输入行的末尾
+- - '###'
+  - '''\n'' 和 "\n"'
+- - '##'
+  - 成员函数 put
+- - '#'
+  - 语法
+- - '##'
+  - 编程示例：检查输入
+- - '##'
+  - 程序清单 6.7 检查输入（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 6.7 检查输入（第 2 部分，共 2 部分）
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - '**PITFALL** 输入中意外的 ‘\n’'
+- - '##'
+  - 使流参数具有通用性
+- - '##'
+  - SELF-TEST EXERCISES
+- - '###'
+  - 22. 假设 c 是类型为 char 的变量。以下两个语句有什么区别？
+- - '###'
+  - 23. 假设 `c` 是类型为 `char` 的变量。以下两个语句有什么区别？
+- - '###'
+  - 24. （此问题适用于阅读了可选章节“putback 成员函数”的人。）putback 成员函数将一个符号“放回”输入流。放回的符号必须是上一次从流中输入的最后一个符号吗？例如，如果你的程序从输入流读取一个
+    'a'，它能否使用 putback 函数放回一个 'b'，还是只能放回一个 'a'？
+- - '###'
+  - 25. 考虑以下代码（并假设它嵌入在一个完整且正确的程序中然后运行）：
+- - '###'
+  - 26. 考虑以下代码（并假设它嵌入在一个完整且正确的程序中然后运行）：
+- - '##'
+  - 决定如何测试输入文件的末尾
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - PROGRAMMING EXAMPLE Editing a Text File
+- - '##'
+  - Predefined Character Functions
+- - '##'
+  - DISPLAY 6.8 Editing a File of Text (part 1 of 2)
+- - '##'
+  - PITFALL toupper and tolower Return Values
+- - '##'
+  - DISPLAY 6.9 Some Predefined Character Functions in cctype
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - CHAPTER SUMMARY
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - PROGRAMMING PROJECTS
+- - '##'
+  - 数组 7
+- - '###'
+  - 7.1 数组简介
+- - '####'
+  - 编程提示：将 for 循环用于数组
+- - '####'
+  - 陷阱：数组下标总是从零开始
+- - '####'
+  - 编程提示：使用定义常量指定数组大小
+- - '####'
+  - 程序清单 7.1 使用数组的程序
+- - '####'
+  - 内存中的数组
+- - '##'
+  - 数组声明
+- - '##'
+  - 语法
+- - '##'
+  - 示例
+- - '##'
+  - 陷阱 数组索引越界
+- - '##'
+  - 初始化数组
+- - '##'
+  - 编程提示 C++11 基于范围的 for 语句
+- - '##'
+  - 3. 识别以下数组声明中的任何错误：
+- - '##'
+  - 4. 以下代码的输出是什么？
+- - '##'
+  - 5. 以下代码的输出是什么？
+- - '##'
+  - 6. 以下代码的输出是什么？
+- - '##'
+  - 7. 以下代码片段有什么问题？
+- - '##'
+  - 8. 假设我们期望数组 a 的元素有序，使得 a[0] ≤ a[1] ≤ a[2] ≤ ...
+- - '##'
+  - 显示 7.3 索引变量作为参数（第 1 部分，共 2 部分）
+- - '#'
+  - 显示 7.3 将下标变量作为实参（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 自测练习
+- - '#'
+  - 整个数组作为函数实参
+- - '#'
+  - 显示 7.4 带数组形参的函数
+- - '#'
+  - 数组实参
+- - '#'
+  - 不同大小的数组实参可以用于同一个数组形参
+- - '#'
+  - const 参数修饰符
+- - '##'
+  - 数组形式参数和实参
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLE
+- - '###'
+  - PITFALL Inconsistent Use of const Parameters
+- - '##'
+  - Functions That Return an Array
+- - '##'
+  - CASE STUDY Production Graph
+- - '###'
+  - Problem Definition
+- - '###'
+  - Input
+- - '##'
+  - Output
+- - '##'
+  - Analysis of the Problem
+- - '##'
+  - Algorithm Design for inputData
+- - '##'
+  - Coding for inputData
+- - '##'
+  - Testing inputData
+- - '##'
+  - Algorithm Design for scale
+- - '##'
+  - Coding for scale
+- - '##'
+  - DISPLAY 7.6 Test of Function inputData (part 1 of 3)
+- - '##'
+  - DISPLAY 7.6 Test of Function input_data (part 2 of 3)
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - DISPLAY 7.6 Test of Function input_data (part 3 of 3)
+- - '##'
+  - DISPLAY 7.7 The Function scale
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - Testing scale
+- - '##'
+  - The Function graph
+- - '##'
+  - DISPLAY 7.8 Production Graph Program (part 1 of 3)
+- - '##'
+  - DISPLAY 7.8 Production Graph Program (part 3 of 3)
+- - '###'
+  - Sample Dialogue
+- - '#'
+  - 自测练习
+- - '##'
+  - 7.3 使用数组编程
+- - '##'
+  - 部分填充的数组
+- - '##'
+  - 显示 7.9 部分填充数组（第 1 部分，共 2 部分）
+- - '##'
+  - 显示 7.9 部分填充数组（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 编程技巧 不要吝啬形式参数
+- - '##'
+  - 编程示例 搜索数组
+- - '#'
+  - 展示 7.10 数组搜索（第1部分，共2部分）
+- - '#'
+  - 展示 7.10 数组搜索（第2部分，共2部分）
+- - '#'
+  - 示例对话
+- - '#'
+  - 编程示例
+- - '#'
+  - 展示 7.11 选择排序
+- - '#'
+  - 展示 7.12 数组排序（第2部分，共2部分）
+- - '#'
+  - 示例对话
+- - '##'
+  - PROGRAMMING EXAMPLE
+- - '##'
+  - DISPLAY 7.13 Bubble Sort Program
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Multidimensional Array Basics
+- - '##'
+  - Multidimensional Array Parameters
+- - '##'
+  - Multidimensional Array Declaration
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLES
+- - '##'
+  - 多维数组参数
+- - '##'
+  - 编程示例
+- - '###'
+  - 二维评分程序
+- - '###'
+  - 显示7.14 二维数组
+- - '###'
+  - 示例对话
+- - '###'
+  - 显示7.15 二维数组grade
+- - '##'
+  - 自测练习
+- - '##'
+  - 章节总结
+- - '##'
+  - 自测练习答案
+- - '##'
+  - 编程练习
+- - '##'
+  - PROGRAMMING PROJECTS
+- - '###'
+  - Version 1 (all interactive).
+- - '###'
+  - Version 2 (combines interactive and file output).
+- - '###'
+  - Version 3 (all I/O with files).
+- - '##'
+  - 8. 编写一个程序，读取一行文本并输出该文本中出现的所有字母以及每个字母出现的次数列表。以用作哨兵值的句点结束该行。字母应按以下顺序列出：出现频率最高的字母，其次是出现频率次高的字母，依此类推。使用两个数组，一个保存整数，一个保存字母。可以假设输入使用全部小写字母。例如，输入
+- - '##'
+  - 9. 编写一个名为 `swapIfSmaller` 的函数，该函数接受一个 `double` 值数组和两个整数值作为输入。函数应比较数组中由两个整数值指定的索引处位于的元素。如果较高索引处的值小于较低索引处的值，则应交换这两个值。编写第二个名为
+    `isSorted` 的函数，如果数组按从小到大排序则返回 true。编写一个驱动程序来测试你的函数。你的驱动程序能否使用你的函数对整个数组进行排序？
+- - '##'
+  - 10. 编写一个程序，允许两位用户玩井字棋。程序应轮流向玩家 X 和玩家 O 请求走法。程序按如下方式显示游戏位置：
+- - '##'
+  - 11. 编写一个程序，为飞机上的乘客分配座位。假设一架小型飞机，座位编号如下：
+- - '##'
+  - 12. 编写一个程序，接受与 Display 7.8 中的程序类似的输入，并输出与该显示中类似的条形图，只是你的程序将垂直输出条形而不是水平输出。可能有用的是二维数组。
+- - '##'
+  - 13. 数学家 John Horton Conway 发明了“生命游戏”。虽然在传统意义上不是“游戏”，但它提供了仅用几条规则就能指定的有趣行为。本项目要求你编写一个程序，允许你指定初始配置。程序遵循
+    LIFE 的规则来展示配置的持续行为。
+- - '##'
+  - 14. 编写一个程序，将二维 `double` 数组写入逗号分隔的 CSV 文件。CSV 文件应使每个数字由逗号分隔。然而，行中最后一个元素之后不应有逗号。
+- - '##'
+  - 15. 重新做（或首次做）第 6 章的编程项目 11。你的程序不应硬编码为创建恰好四个整数的条形图，而应能够绘制多达 100 个整数的数组。适当缩放图表的水平和垂直尺寸，使条形图适合
+    400 x 400 像素的区域。你可以施加所有数组中的整数非负的约束。使用哨兵值 −1
+- - '##'
+  - 8 Strings and Vectors
+- - '###'
+  - Introduction
+- - '###'
+  - Prerequisites
+- - '###'
+  - 8.1 AN ARRAY TYPE FOR STRINGS
+- - '####'
+  - C-String Values and C-String Variables
+- - '##'
+  - C字符串变量声明
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - 使用=和==处理C字符串时的陷阱
+- - '##'
+  - <cstring>库
+- - '##'
+  - cstring中的其他函数
+- - '##'
+  - DISPLAY 8.1 `<cstring>` 中一些预定义的 C 字符串函数
+- - '##'
+  - PITFALL 使用 strcpy 复制到 C 字符串末尾之外
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - C 字符串输入和输出
+- - '##'
+  - getline
+- - '##'
+  - 语法
+- - '##'
+  - C 字符串到数字函数
+- - '##'
+  - 程序清单 8.2 C 字符串转整数（第 1 部分，共 2 部分）
+- - '##'
+  - 程序清单 8.2 C 字符串转换为整数（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 程序清单 8.3 健壮的输入函数（第 1 部分，共 2 部分）
+- - '##'
+  - 程序清单 8.3 健壮的输入函数（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 8.2 标准 string 类
+- - '###'
+  - 标准 string 类简介
+- - '#'
+  - DISPLAY 8.4 使用类 `string` 的程序
+- - '##'
+  - Sample Dialogue
+- - '#'
+  - 类 `string`
+- - '#'
+  - 使用类 string 的 I/O
+- - '#'
+  - DISPLAY 8.5 使用类 `string` 的程序（第 1 部分，共 2 部分）
+- - '#'
+  - DISPLAY 8.5 使用类 `string` 的程序（第 2 部分，共 2 部分）
+- - '##'
+  - Sample Dialogue
+- - '#'
+  - 使用 string 对象的 I/O
+- - '##'
+  - EXAMPLES
+- - '#'
+  - SELF-TEST EXERCISES
+- - '#'
+  - PROGRAMMING TIP More Versions of getline
+- - '#'
+  - PITFALL Mixing cin >> variable; and getline
+- - '#'
+  - 用于类 string 对象的 getline
+- - '##'
+  - 程序清单 8.6 字符串对象可以表现得像数组一样
+- - '###'
+  - 示例对话
+- - '##'
+  - 程序清单 8.7 标准 string 类的成员函数
+- - '##'
+  - 编程示例：回文测试
+- - '###'
+  - 程序清单 8.8 回文测试程序
+- - '##'
+  - DISPLAY 8.8 回文测试程序（第 3 部分，共 3 部分）
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - = and == Are Different for strings and C Strings
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Converting Between string Objects and C Strings
+- - '##'
+  - Converting Between Strings and Numbers
+- - '##'
+  - 8.3 VECTORS
+- - '###'
+  - Vector Basics
+- - '##'
+  - DISPLAY 8.9 使用向量
+- - '##'
+  - 示例对话
+- - '##'
+  - PITFALL 使用方括号超出向量大小
+- - '##'
+  - Vectors
+- - '##'
+  - PROGRAMMING TIP — 向量赋值行为良好
+- - '##'
+  - 效率问题
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - CHAPTER SUMMARY
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - 实践编程题
+- - '##'
+  - 9.1 POINTERS 542
+- - '##'
+  - 9.2 DYNAMIC ARRAYS 555
+- - '###'
+  - INTRODUCTION
+- - '###'
+  - PREREQUISITES
+- - '##'
+  - 9.1 POINTERS
+- - '###'
+  - Pointer Variables
+- - '###'
+  - Pointer Variable Declarations
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLE
+- - '###'
+  - Addresses and Numbers
+- - '##'
+  - The * and & Operators
+- - '##'
+  - DISPLAY 9.1 Uses of the Assignment Operator
+- - '##'
+  - DISPLAY 9.2 Basic Pointer Manipulations (part 1 of 2)
+- - '##'
+  - DISPLAY 9.2 Basic Pointer Manipulations (part 2 of 2)
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Pointer Variables Used with =
+- - '##'
+  - The new Operator
+- - '##'
+  - DISPLAY 9.3 Explanation of Display 9.2
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Basic Memory Management
+- - '##'
+  - The delete Operator
+- - '##'
+  - PITFALL Dangling Pointers
+- - '##'
+  - Type Definitions
+- - '##'
+  - SYNTAX
+- - '##'
+  - EXAMPLE
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 9.2 DYNAMIC ARRAYS
+- - '##'
+  - Array Variables and Pointer Variables
+- - '##'
+  - DISPLAY 9.4 Arrays and Pointer Variables
+- - '##'
+  - Output
+- - '##'
+  - Creating and Using Dynamic Arrays
+- - '##'
+  - 程序清单 9.5 对程序清单 9.4 的说明
+- - '##'
+  - 创建动态数组
+- - '##'
+  - 程序清单 9.6 动态数组（第 1 部分，共 2 部分）
+- - '##'
+  - 程序清单 9.6 动态数组（第 2 部分，共 2 部分）
+- - '##'
+  - 如何使用动态数组
+- - '##'
+  - 自测练习
+- - '##'
+  - 指针算术（可选）
+- - '##'
+  - 多维动态数组（可选）
+- - '###'
+  - 第 9.7 节 显示 一个二维动态数组
+- - '##'
+  - 章节总结
+- - '##'
+  - 自测练习答案
+- - '##'
+  - 实践程序
+- - '##'
+  - 10.1 结构体 576
+- - '##'
+  - 10.2 类 588
+- - '##'
+  - 10.3 抽象数据类型 622
+- - '##'
+  - 10.4 继承简介 632
+- - '#'
+  - 引言
+- - '#'
+  - 先决条件
+- - '##'
+  - 10.1 结构体
+- - '###'
+  - 用于多样化数据的结构体
+- - '##'
+  - 显示10.1 结构体定义（第1部分，共2部分）
+- - '##'
+  - 显示10.1 结构体定义（第2部分，共2部分）
+- - '###'
+  - 示例对话
+- - '##'
+  - 显示10.2 成员值
+- - '##'
+  - 点运算符
+- - '###'
+  - 语法
+- - '##'
+  - 结构体作为函数参数
+- - '##'
+  - PROGRAMMING TIP Use Hierarchical Structures
+- - '##'
+  - Simple Structure Types
+- - '###'
+  - SYNTAX
+- - '###'
+  - EXAMPLE
+- - '##'
+  - Initializing Structures
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 10.2 CLASSES
+- - '###'
+  - Defining Classes and Member Functions
+- - '##'
+  - DISPLAY 10.3 带成员函数的类
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - Calling member functions
+- - '##'
+  - Defining member functions
+- - '###'
+  - Member Function Definition
+- - '###'
+  - SYNTAX
+- - '###'
+  - Member variables in function definitions
+- - '###'
+  - The Dot Operator and the Scope Resolution Operator
+- - '##'
+  - 程序清单 10.4 具有私有成员的类（第 2 部分，共 2 部分）
+- - '###'
+  - 示例对话
+- - '##'
+  - 类与对象
+- - '###'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - 自测练习
+- - '##'
+  - 编程提示——将赋值运算符用于对象
+- - '##'
+  - 编程示例
+- - '##'
+  - 类的一些属性小结
+- - '##'
+  - 结构与类
+- - '##'
+  - 自测练习
+- - '##'
+  - 用于初始化的构造函数
+- - '###'
+  - DISPLAY 10.6 Class with Constructors (part 1 of 3)
+- - '##'
+  - DISPLAY 10.6 类与构造函数（第 2 部分，共 3 部分）
+- - '##'
+  - DISPLAY 10.6 类与构造函数（第 3 部分，共 3 部分）
+- - '##'
+  - 屏幕输出
+- - '##'
+  - 构造函数
+- - '##'
+  - 构造函数初始化区
+- - '##'
+  - 调用构造函数
+- - '###'
+  - SYNTAX（当你有构造函数时的对象声明）
+- - '###'
+  - EXAMPLE
+- - '###'
+  - SYNTAX（显式构造函数调用）
+- - '###'
+  - EXAMPLE
+- - '##'
+  - 编程提示 始终包含一个默认构造函数
+- - '###'
+  - 无参数构造函数
+- - '###'
+  - C++11 中的成员初始化器与构造函数委托
+- - '###'
+  - 自测练习
+- - '##'
+  - 10.3 抽象数据类型
+- - '###'
+  - 生成抽象数据类型的类
+- - '##'
+  - PROGRAMMING EXAMPLE
+- - '##'
+  - Alternative Implementation of a Class
+- - '###'
+  - DISPLAY 10.7 Alternative BankAccount Class Implementation (part 1 of 4)
+- - '###'
+  - DISPLAY 10.7 Alternative BankAccount Class Implementation (part 2 of 4)
+- - '#'
+  - 展示 10.7 替代的 BankAccount 类实现 *(第 3 部分，共 4 部分)*
+- - '#'
+  - 展示 10.7 替代的 BankAccount 类实现 (第 4 部分，共 4 部分)
+- - '##'
+  - 信息隐藏
+- - '#'
+  - 自测练习
+- - '#'
+  - 10.4 继承简介
+- - '##'
+  - 派生类
+- - '#'
+  - 展示 10.8 类层次结构
+- - '##'
+  - DISPLAY 10.9 A SavingsAccount Derived Class (part 1 of 2)
+- - '##'
+  - DISPLAY 10.9 A SavingsAccount Derived Class (part 2 of 2)
+- - '#'
+  - Screen Output
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - CHAPTER SUMMARY
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - PRACTICE PROGRAMS
+- - '##'
+  - 编程项目
+- - '##'
+  - 第 11 章：友元、运算符重载和类中的数组
+- - '###'
+  - 引言
+- - '###'
+  - 预备知识
+- - '###'
+  - 11.1 友元函数
+- - '####'
+  - 编程示例：相等函数
+- - '##'
+  - 程序清单 11.1 相等函数
+- - '###'
+  - 示例对话
+- - '###'
+  - 自测练习
+- - '##'
+  - 友元函数
+- - '##'
+  - 程序清单 11.2 相等函数作为友元
+- - '###'
+  - 编程提示：同时定义访问器函数和友元函数
+- - '##'
+  - 友元函数
+- - '##'
+  - 语法（带友元函数的类定义）
+- - '##'
+  - 示例
+- - '##'
+  - DISPLAY 11.3 Money 类–版本 1（第 1 部分，共 4 部分）
+- - '##'
+  - DISPLAY 11.3 Money 类-版本 1（第 2 部分，共 4 部分）
+- - '#'
+  - DISPLAY 11.3 Money 类-版本 1（第 3 部分，共 4 部分）
+- - '#'
+  - DISPLAY 11.3 Money 类—版本 1 *(第 4 部分，共 4 部分)*
+- - '#'
+  - Sample Dialogue
+- - '#'
+  - digitToInt 的实现（可选）
+- - '#'
+  - PITFALL 数字常量中的前导零
+- - '#'
+  - SELF-TEST EXERCISES
+- - '##'
+  - '`const` 参数修饰符'
+- - '###'
+  - 陷阱：*const* 使用不一致
+- - '###'
+  - 示例
+- - '###'
+  - 显示 11.4 带有常量参数的 Money 类
+- - '###'
+  - 自测练习
+- - '##'
+  - 11.2 运算符重载
+- - '###'
+  - 重载运算符
+- - '###'
+  - 运算符重载
+- - '###'
+  - 显示 11.5 重载运算符（共 2 部分，第 1 部分）
+- - '##'
+  - DISPLAY 11.5 重载运算符（第 2 部分，共 2 部分）
+- - '##'
+  - Output
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Rules on Overloading Operators
+- - '##'
+  - Constructors for Automatic Type Conversion
+- - '##'
+  - SELF-TEST EXERCISE
+- - '##'
+  - Overloading Unary Operators
+- - '##'
+  - Overloading >> and <<
+- - '##'
+  - 显示 11.6 重载一元运算符
+- - '##'
+  - 显示 11.7  << 作为运算符
+- - '##'
+  - 重载 >> 和 <<
+- - '##'
+  - 显示 11.8  重载 << 和 >> *（第 1 部分，共 4 部分）*
+- - '#'
+  - DISPLAY 11.8  **Overloading << and >>** *(part 2 of 4)*
+- - '#'
+  - DISPLAY 11.8  **Overloading << and >>** *(part 3 of 4)*
+- - '#'
+  - DISPLAY 11.8 Overloading << and >> (part 4 of 4)
+- - '#'
+  - infile.dat
+- - '#'
+  - outfile.dat
+- - '#'
+  - Screen Output
+- - '#'
+  - SELF-TEST EXERCISES
+- - '#'
+  - 11.3 ARRAYS AND CLASSES
+- - '#'
+  - Arrays of Classes
+- - '##'
+  - DISPLAY 11.9 使用 Money 对象数组的程序
+- - '###'
+  - Sample Dialogue
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Arrays as Class Members
+- - '##'
+  - PROGRAMMING EXAMPLE
+- - '###'
+  - A Class for a Partially Filled Array
+- - '#'
+  - 程序清单 11.10 包含数组成员类的程序（第 1 部分，共 2 部分）
+- - '#'
+  - 程序清单 11.10 包含数组成员类的程序（第 2 部分，共 2 部分）
+- - '#'
+  - 自测练习
+- - '#'
+  - 11.4 类与动态数组
+- - '#'
+  - 编程示例
+- - '#'
+  - 程序清单 11.11 使用 StringVar 类的程序（第 1 部分，共 2 部分）
+- - '#'
+  - 程序清单 11.11 使用 StringVar 类的程序（第 2 部分，共 2 部分）
+- - '#'
+  - 示例对话
+- - '##'
+  - Destructors
+- - '##'
+  - DISPLAY 11.12 Implementation of StringVar (part 1 of 2)
+- - '##'
+  - DISPLAY 11.12 Implementation of StringVar (part 2 of 2)
+- - '##'
+  - Destructor
+- - '##'
+  - PITFALL Pointers as Call-by-Value Parameters
+- - '##'
+  - DISPLAY 11.13 A Call-by-Value Pointer Parameter (part 1 of 2)
+- - '##'
+  - 展示 11.13 按值传递的指针参数（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 复制构造函数
+- - '##'
+  - 展示 11.14 函数调用 sneaky(p);
+- - '##'
+  - 返回值
+- - '##'
+  - 何时需要复制构造函数
+- - '##'
+  - 赋值语句
+- - '##'
+  - 拷贝构造函数
+- - '##'
+  - 大三件
+- - '##'
+  - 自测练习
+- - '##'
+  - 重载赋值运算符
+- - '##'
+  - 自测练习
+- - '#'
+  - 本章小结
+- - '##'
+  - 自测练习答案
+- - '##'
+  - PRACTICE PROGRAMS
+- - '##'
+  - PROGRAMMING PROJECTS
+- - '##'
+  - 8. 定义一个名为 List 的类，可以保存类型为 double 的值列表。参照第 11.10 节中给出的 TemperatureList 类来设计你的类定义，但你的
+    List 类在输出值时不会提及温度。值可以代表任何类型的数据项，只要它们是 double 类型即可。包含自我测试练习 21 和 22 中指定的附加功能。更改成员函数名，使其不引用温度。
+- - '##'
+  - 9. 定义一个名为 StringSet 的类，将用于存储一组 STL 字符串。使用数组或向量来存储字符串。创建一个构造函数，以字符串数组作为输入参数，用于集合的初始值。然后编写成员函数来向集合添加字符串、从集合中删除字符串、清空整个集合、返回集合中字符串的数量以及输出集合中的所有字符串。重载
+    + 运算符，使其返回两个 StringSet 对象的并集。还重载 * 运算符，使其返回两个 StringSet 对象的交集。编写一个程序来测试类中的所有成员函数和重载运算符。
+- - '##'
+  - 10. 本编程项目要求你先完成编程项目 9。
+- - '##'
+  - 11. 重新做第 9 章的编程项目 6（或第一次做），但这次将动态数组和数组大小封装在一个类中。该类应具有公共成员函数 addEntry 和 deleteEntry。使数组和大小变量为私有。这将需要添加用于获取和设置数组中特定项的函数以及返回数组当前大小的函数。添加一个析构函数以释放分配给动态数组的内存。还添加一个拷贝构造函数并重载赋值运算符，以便动态数组能正确地从赋值运算符右侧的对象复制到左侧的对象。将你的类嵌入到合适的测试程序中。
+- - '##'
+  - 12. 为了打击选举舞弊，你的城市正在实施一种新的投票程序。选票上与选民可能做出的每个选择都关联一个字母。示例选票如下所示。
+- - '##'
+  - 13. 创建一个名为 Document 的类，存储一个 String 对象的向量。定义一个默认构造函数，创建一个空向量。定义一个拷贝构造函数，复制 Document
+    对象及其包含的所有字符串。创建一个名为 addString 的方法，接受并将字符串添加到文档末尾。重载 << 运算符，以便文档可以以每个字符串对象之间有一个空格的方式输出。定义一个名为
+    getLength 的方法，返回文档的总长度。提示：使用方法 string.length() 来获取每个单独字符串的长度。编写一个驱动程序来测试你的类。
+- - '##'
+  - 14. 做第 8 章的编程项目 16，但使用 Racer 类来存储每个参赛者的信息。该类应存储参赛者的姓名、号码布号码、完赛名次以及 RFID 传感器记录的所有分段时间。你可以选择合适的结构来存储此信息。包含适当的函数来访问或更改参赛者的信息，以及一个构造函数。创建一个
+    Racer 对象的数组或向量来存储整个比赛结果。
+- - '##'
+  - 15. 定义一个名为 Box 的类，其中包含该形状的长度、宽度和高度字段。包含一个计算盒子体积的函数。重载 ==、<、<=、>、>= 运算符以比较不同盒子对象的体积。编写一个驱动程序来测试你的类。
+- - '#'
+  - 分离编译与命名空间 12
+- - '##'
+  - 回顾的 ADT
+- - '##'
+  - ADT
+- - '##'
+  - 案例研究 DigitalTime — 一个单独编译的类
+- - '##'
+  - 显示 12.1 DigitalTime 的接口文件
+- - '##'
+  - 编译并运行程序
+- - '##'
+  - 显示12.2 DigitalTime的实现文件（第1部分，共3部分）
+- - '##'
+  - 显示12.2 DigitalTime的实现文件（第2部分，共3部分）
+- - '##'
+  - 显示12.2 DigitalTime的实现文件（第3部分，共3部分）
+- - '##'
+  - 显示12.3 使用DigitalTime的应用程序文件
+- - '##'
+  - 示例对话
+- - '##'
+  - 在单独文件中定义类：概述
+- - '##'
+  - .h 与 .hpp
+- - '##'
+  - 可重用组件
+- - '##'
+  - '使用 #ifndef'
+- - '##'
+  - 图12.4 避免类的多重定义
+- - '###'
+  - '#pragma once'
+- - '##'
+  - 编程技巧 定义其他库
+- - '##'
+  - 自测练习
+- - '##'
+  - 12.2 命名空间
+- - '##'
+  - 命名空间和 *using* 指令
+- - '###'
+  - 创建命名空间
+- - '####'
+  - DISPLAY 12.5 命名空间演示
+- - '####'
+  - 示例对话
+- - '###'
+  - 自测练习
+- - '###'
+  - 限定名称
+- - '##'
+  - 关于命名空间的一个微妙点（可选）
+- - '##'
+  - DISPLAY 12.6 将类放入命名空间–头文件
+- - '##'
+  - DISPLAY 12.7 将类放入命名空间--实现文件（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 12.7 将类放入命名空间–实现文件（第 2 部分，共 2 部分）
+- - '#'
+  - '**显示 12.8**  将类放入命名空间——应用程序 *（第 1 部分，共 2 部分）*'
+- - '#'
+  - 显示 12.8 将类放入命名空间——应用程序（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 编程提示 为命名空间选择名称
+- - '##'
+  - 未命名命名空间
+- - '#'
+  - 陷阱  混淆全局命名空间与未命名命名空间
+- - '#'
+  - 自测练习
+- - '#'
+  - 章节小结
+- - '#'
+  - 自测练习答案
+- - '##'
+  - 练习程序
+- - '##'
+  - 编程项目
+- - '##'
+  - 指针与链表 13
+- - '##'
+  - 引言
+- - '##'
+  - 先修要求
+- - '##'
+  - 13.1 节点与链表
+- - '###'
+  - 节点
+- - '##'
+  - 显示 13.2 访问节点数据
+- - '##'
+  - 箭头运算符 ->
+- - '##'
+  - 'NULL'
+- - '##'
+  - nullptr
+- - '##'
+  - nullptr
+- - '##'
+  - 自测练习
+- - '##'
+  - 链表
+- - '##'
+  - 在表头插入节点
+- - '##'
+  - 链表作为实参
+- - '##'
+  - '`headInsert` 函数的伪代码'
+- - '###'
+  - DISPLAY 13.3 向链表添加一个节点（第 2 部分，共 2 部分）
+- - '###'
+  - DISPLAY 13.4 在链表头部添加节点的函数
+- - '###'
+  - 函数声明
+- - '###'
+  - 函数定义
+- - '##'
+  - PITFALL 丢失节点
+- - '###'
+  - DISPLAY 13.5 丢失的节点
+- - '##'
+  - 搜索链表
+- - '###'
+  - search 函数的伪代码
+- - '###'
+  - search 函数的代码初步版本
+- - '###'
+  - DISPLAY 13.7 定位链表中节点的函数
+- - '###'
+  - 函数声明
+- - '###'
+  - 函数定义
+- - '##'
+  - 指针作为迭代器
+- - '##'
+  - 在列表中插入和删除节点
+- - '##'
+  - 自测练习
+- - '##'
+  - 链表的变体
+- - '##'
+  - DISPLAY 13.12 二叉树
+- - '##'
+  - 类的链表
+- - '##'
+  - DISPLAY 13.13 Node 类的接口文件
+- - '##'
+  - DISPLAY 13.14 Node 类的实现文件
+- - '##'
+  - DISPLAY 13.15 使用 Node 类的程序（第 1 部分，共 3 部分）
+- - '##'
+  - DISPLAY 13.15 使用 Node 类的程序（第 2 部分，共 3 部分）
+- - '##'
+  - DISPLAY 13.15 使用 Node 类的程序（第 3 部分，共 3 部分）
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - 13.2 栈和队列
+- - '##'
+  - 栈
+- - '##'
+  - DISPLAY 13.16 一个栈
+- - '##'
+  - 编程示例
+- - '##'
+  - 一个栈类
+- - '##'
+  - DISPLAY 13.17 栈类的接口文件（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 13.18 使用栈类的程序（第 2 部分，共 2 部分）
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Implementation
+- - '##'
+  - DISPLAY 13.19 Stack 类的实现（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 13.19 Stack 类的实现（第 2 部分，共 2 部分）
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Queues
+- - '##'
+  - DISPLAY 13.20 一个队列
+- - '##'
+  - PROGRAMMING EXAMPLE — A Queue Class
+- - '##'
+  - DISPLAY 13.21 队列类的接口文件
+- - '##'
+  - DISPLAY 13.22 使用队列类的程序（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 13.22 Program Using the Queue Class (part 2 of 2)
+- - '###'
+  - Sample Dialogue
+- - '###'
+  - Implementation
+- - '##'
+  - DISPLAY 13.23 Implementation of the Queue Class (part 1 of 3)
+- - '##'
+  - DISPLAY 13.23 Implementation of the Queue Class (part 2 of 3)
+- - '##'
+  - DISPLAY 13.23 Implementation of the Queue Class (part 3 of 3)
+- - '###'
+  - SELF-TEST EXERCISES
+- - '###'
+  - CHAPTER SUMMARY
+- - '###'
+  - Answers to Self-Test Exercises
+- - '###'
+  - PROGRAMMING PROJECTS
+- - '###'
+  - 3. 设计并实现一个类，其对象表示多项式。
+- - '###'
+  - 6. 在一个古老的国度里，美丽的公主伊芙有许多追求者。
+- - '###'
+  - 7. 重做（或首次完成）第 9 章的编程项目 5。
+- - '###'
+  - 8. 修改或重写 Queue 类（显示 13.21 至 13.23），以模拟车辆管理局（DMV）柜台的客户到达情况。
+- - '###'
+  - 9. 下图被称为图。
+- - '##'
+  - 10. 编写一个程序，使用另外两个栈对一组整数值进行重新排列和排序。以下算法描述了如何实现此操作：
+- - '##'
+  - 11. 编写一个双向链表类以在 Node 对象中存储 double 值。包含以下功能：
+- - '#'
+  - Recursion 14
+- - '#'
+  - INTRODUCTION
+- - '#'
+  - PREREQUISITES
+- - '##'
+  - 14.1 RECURSIVE FUNCTIONS FOR TASKS
+- - '#'
+  - Recursion
+- - '##'
+  - CASE STUDY Vertical Numbers
+- - '#'
+  - Problem Definition
+- - '##'
+  - 算法设计
+- - '##'
+  - 编码
+- - '##'
+  - Tracing a Recursive Call
+- - '##'
+  - A Closer Look at Recursion
+- - '##'
+  - 递归函数定义的一般形式
+- - '###'
+  - 陷阱——无限递归
+- - '##'
+  - 自测练习
+- - '##'
+  - 递归的栈
+- - '##'
+  - 栈
+- - '##'
+  - 常见错误：栈溢出
+- - '##'
+  - 递归与迭代
+- - '##'
+  - 程序清单14.2 程序清单14.1中函数的迭代版本
+- - '##'
+  - 自测练习
+- - '##'
+  - 14.2 返回值的递归函数
+- - '##'
+  - 返回值的递归函数的一般形式
+- - '##'
+  - 编程示例——另一个幂函数
+- - '##'
+  - 程序清单14.3 递归函数power
+- - '##'
+  - 示例输出
+- - '###'
+  - 图 14.4 计算递归函数调用 power(2, 3)
+- - '##'
+  - 自测练习
+- - '##'
+  - 14.3 递归思维
+- - '###'
+  - 递归设计技巧
+- - '###'
+  - 案例研究 二分查找——递归思维的一个示例
+- - '###'
+  - 问题定义
+- - '###'
+  - 算法设计
+- - '##'
+  - DISPLAY 14.5 二分搜索的伪代码
+- - '##'
+  - DISPLAY 14.6 二分搜索的递归函数（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 14.6 二分搜索的递归函数（第 2 部分，共 2 部分）
+- - '##'
+  - DISPLAY 14.7 函数 search 的执行
+- - '##'
+  - 求解更一般的问题
+- - '##'
+  - 检查递归
+- - '##'
+  - 效率
+- - '##'
+  - DISPLAY 14.8 二分搜索的迭代版本（第 1 部分，共 2 部分）
+- - '###'
+  - 函数声明
+- - '###'
+  - 函数定义
+- - '##'
+  - DISPLAY 14.9  一个递归成员函数 *(第 1 部分，共 2 部分)*
+- - '##'
+  - DISPLAY 14.9 一个递归成员函数 (第 2 部分，共 2 部分)
+- - '###'
+  - Sample Dialogue
+- - '###'
+  - Recursion and Overloading
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - CHAPTER SUMMARY
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - 练习程序
+- - '##'
+  - 编程项目
+- - '#'
+  - Inheritance 15
+- - '#'
+  - 15.1 INHERITANCE BASICS 868
+- - '#'
+  - 15.2 INHERITANCE DETAILS 893
+- - '#'
+  - 15.3 POLYMORPHISM 896
+- - '#'
+  - INTRODUCTION
+- - '#'
+  - PREREQUISITES
+- - '#'
+  - 15.1 INHERITANCE BASICS
+- - '#'
+  - DISPLAY 15.1 **Example Inheritance Hierarchy for Home Automation Devices**
+- - '##'
+  - Derived Classes
+- - '###'
+  - DISPLAY 15.2 Interface for the Base Class Employee
+- - '###'
+  - DISPLAY 15.4 Interface for the Derived Class HourlyEmployee (part 2 of 2)
+- - '###'
+  - DISPLAY 15.5 Interface for the Derived Class SalariedEmployee
+- - '##'
+  - DISPLAY 15.6 Implementation for the Derived Class HourlyEmployee (part 1 of 2)
+- - '##'
+  - Parent and Child Classes
+- - '##'
+  - Inherited Members
+- - '##'
+  - Constructors in Derived Classes
+- - '##'
+  - An Object of a Derived Class Has More Than One Type
+- - '#'
+  - 派生类中的构造函数
+- - '##'
+  - 陷阱：使用基类中的私有成员变量
+- - '##'
+  - 陷阱：私有成员函数实际上不会被继承
+- - '##'
+  - '*受保护的*限定符'
+- - '##'
+  - Protected Members
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Redefinition of Member Functions
+- - '##'
+  - Redefining an Inherited Function
+- - '###'
+  - DISPLAY 15.7 Implementation for the Derived Class SalariedEmployee
+- - '###'
+  - DISPLAY 15.7 Implementation for the Derived Class SalariedEmployee (part 2 of
+    2)
+- - '###'
+  - DISPLAY 15.8 Using Derived Classes (part 1 of 2)
+- - '##'
+  - 显示 15.8 使用派生类（第2部分，共2部分）
+- - '###'
+  - 示例对话
+- - '##'
+  - 重定义与重载
+- - '##'
+  - 访问重定义的基类函数
+- - '##'
+  - 自测练习
+- - '##'
+  - 15.2 继承的细节
+- - '###'
+  - 不被继承的函数
+- - '##'
+  - Assignment Operators and Copy Constructors in Derived Classes
+- - '##'
+  - Destructors in Derived Classes
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 15.3 POLYMORPHISM
+- - '###'
+  - Late Binding
+- - '##'
+  - C++ 中的虚函数
+- - '##'
+  - DISPLAY 15.9 基类 Sale 的接口
+- - '##'
+  - DISPLAY 15.10 基类 Sale 的实现（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 15.10 基类 Sale 的实现（第 2 部分，共 2 部分）
+- - '##'
+  - DISPLAY 15.11 派生类 DiscountSale（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 15.11 派生类 DiscountSale（第 2 部分，共 2 部分）
+- - '##'
+  - DISPLAY 15.12 虚函数的用法（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 15.12 虚函数的用法（第 2 部分，共 2 部分）
+- - '##'
+  - 示例对话
+- - '##'
+  - 重写
+- - '##'
+  - 多态
+- - '###'
+  - 自测练习
+- - '##'
+  - 虚函数与扩展类型兼容性
+- - '###'
+  - DISPLAY 15.13 使用虚函数的更多继承
+- - '###'
+  - 示例对话
+- - '###'
+  - PITFALL 切片问题
+- - '###'
+  - PITFALL 未使用虚成员函数
+- - '###'
+  - PITFALL 尝试在没有为每个虚成员函数提供定义的情况下编译类定义
+- - '###'
+  - 编程技巧 使析构函数成为虚函数
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - CHAPTER SUMMARY
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - PRACTICE PROGRAMS
+- - '##'
+  - PROGRAMMING PROJECTS
+- - '##'
+  - 9. 本编程项目的目标是创建一个简单的二维捕食者-猎物模拟。在此模拟中，猎物是蚂蚁，捕食者是多足虫。这些生物生活在一个由 20 × 20 网格单元组成的世界中。一次只能有一个生物占据一个单元。网格是封闭的，因此生物不允许移出世界边缘。时间以时间步长模拟。每个生物每时间步执行某些动作。
+- - '##'
+  - 10. 下面列出了玩猜数字游戏的代码。在游戏中，两名玩家尝试猜一个数字。你的任务是扩展程序，使用表示人类玩家或计算机玩家的对象。`rand()` 函数需要包含
+    `cstdlib`（参见附录 4）：
+- - '##'
+  - 11. 编程项目 10 中的计算机玩家在猜数字游戏中玩得并不好，因为它只是随机猜测。修改程序，使计算机进行更明智的游戏。具体策略由你决定，但你必须向 Player
+    和 ComputerPlayer 类添加函数，以便 play(Player& player1, Player &player2) 函数可以将猜测结果发送回计算机玩家。换句话说，计算机必须被告知其上一次猜测是过高还是过低，并且还必须被告知其对手的上一次猜测是过高还是过低。计算机然后可以使用此信息来修改下一次猜测。此外，添加必要的函数以允许计算机玩家进行多场连续游戏。
+- - '##'
+  - 12. 从第 13.2 节给出的 `Queue` 类定义开始，并修改它以存储整数而不是字符。一种特殊的队列是 *priority queue*。优先队列的行为类似于普通队列，只是
+    remove 函数始终提取值最小的项（这是优先级最高的项）。创建一个派生自 `Queue` 类的 `PriorityQueue` 类，具有适当的构造函数。重新定义
+    `PriorityQueue` 类中的 remove 函数以提取值最小的项。通过向 `PriorityQueue` 对象添加几个数字，然后逐一移除它们，在移除时打印已移除的数字来测试
+    `PriorityQueue` 类。
+- - '##'
+  - 13. 编写一个 `BinaryTree` 类。此类应包含一个指向根节点的字段（使用第 13 章给出的 `TreeNode` 结构体）。你的类应包含一个名为
+    `InsertNode` 的方法，按以下算法插入节点：
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - PREREQUISITES
+- - '##'
+  - 16.1 EXCEPTION-HANDLING BASICS
+- - '###'
+  - A Toy Example of Exception Handling
+- - '##'
+  - catch 块参数
+- - '###'
+  - 示例
+- - '##'
+  - try-throw-catch
+- - '##'
+  - 语法
+- - '###'
+  - 示例
+- - '##'
+  - 自测练习题
+- - '##'
+  - 定义你自己的异常类
+- - '##'
+  - 多次抛出和捕获
+- - '##'
+  - DISPLAY 16.4 Catching Multiple Exceptions (part 1 of 2)
+- - '##'
+  - DISPLAY 16.4  Catching Multiple Exceptions (part 2 of 2)
+- - '##'
+  - Sample Dialogue 1
+- - '##'
+  - Sample Dialogue 2
+- - '##'
+  - Sample Dialogue 3
+- - '##'
+  - PROGRAMMING TIP Exception Classes Can Be Trivial
+- - '##'
+  - 在函数中抛出异常
+- - '##'
+  - DISPLAY 16.5  Throwing an Exception Inside a Function (part 1 of 2)
+- - '##'
+  - DISPLAY 16.5 Throwing an Exception Inside a Function (part 2 of 2)
+- - '##'
+  - Sample Dialogue 1
+- - '##'
+  - Sample Dialogue 2
+- - '##'
+  - 异常规范
+- - '##'
+  - PITFALL Exception Specification in Derived Classes
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 16.2 PROGRAMMING TECHNIQUES FOR EXCEPTION HANDLING
+- - '###'
+  - When to Throw an Exception
+- - '###'
+  - When to Throw an Exception
+- - '##'
+  - PITFALL Uncaught Exceptions
+- - '##'
+  - PITFALL Nested *try-catch* Blocks
+- - '##'
+  - PITFALL Overuse of Exceptions
+- - '##'
+  - 异常类层次结构
+- - '##'
+  - 测试可用内存
+- - '##'
+  - 重新抛出异常
+- - '##'
+  - 自测练习
+- - '##'
+  - 章节总结
+- - '##'
+  - 自测练习答案
+- - '##'
+  - 实践程序
+- - '##'
+  - 编程项目
+- - '###'
+  - A SHORT LESSON ON SYLLOGISMS
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - PREREQUISITES
+- - '##'
+  - 17.1 TEMPLATES FOR ALGORITHM ABSTRACTION
+- - '###'
+  - Templates for Functions
+- - '###'
+  - A template overloads the function name
+- - '##'
+  - DISPLAY17.1 一个函数模板
+- - '##'
+  - Output
+- - '##'
+  - PITFALL 编译器复杂性
+- - '##'
+  - 函数模板
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 算法抽象
+- - '##'
+  - 编程示例
+- - '##'
+  - 一个通用排序函数
+- - '##'
+  - 帮助函数
+- - '###'
+  - DISPLAY 17.2 A Generic Sorting Function
+- - '###'
+  - DISPLAY 17.3 Using a Generic Sorting Function (part 1 of 2)
+- - '###'
+  - 显示 17.3 使用通用排序函数（第 2 部分，共 2 部分）
+- - '###'
+  - 输出
+- - '###'
+  - 编程提示 如何定义模板
+- - '###'
+  - 陷阱 将模板与不合适的类型一起使用²
+- - '###'
+  - 自测练习
+- - '##'
+  - 17.2 用于数据抽象的模板
+- - '###'
+  - 类模板的语法
+- - '###'
+  - 定义成员函数
+- - '###'
+  - 类模板语法
+- - '##'
+  - 类型定义
+- - '##'
+  - 编程示例
+- - '###'
+  - 一个数组类
+- - '##'
+  - DISPLAY 17.7 Interface for the Class Template GenericList Without Implementation
+    (part 1 of 2)
+- - '##'
+  - DISPLAY 17.7 Interface for the Class Template GenericList Without Implementation
+    (part 2 of 2)
+- - '##'
+  - DISPLAY 17.8 Implementation of GenericList with Overloaded Operator
+- - '##'
+  - 练习程序
+- - '##'
+  - 编程项目
+- - '##'
+  - 标准模板库和 C++11 18
+- - '##'
+  - INTRODUCTION
+- - '##'
+  - PREREQUISITES
+- - '##'
+  - 18.1 ITERATORS
+- - '###'
+  - using Declarations
+- - '###'
+  - Iterator Basics
+- - '#'
+  - 程序清单18.1 与 vector 一起使用的迭代器
+- - '##'
+  - 示例对话
+- - '##'
+  - 编程技巧 使用 auto 简化变量声明
+- - '##'
+  - 陷阱 编译器问题
+- - '###'
+  - 迭代器
+- - '##'
+  - 解引用
+- - '##'
+  - 自测练习
+- - '##'
+  - 迭代器的种类
+- - '##'
+  - 程序清单18.2 双向迭代器和随机访问迭代器的使用（第1部分，共2部分）
+- - '##'
+  - DISPLAY 18.2 双向和随机访问迭代器使用（第 2 部分，共 2 部分）
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Kinds of Iterators
+- - '##'
+  - SELF-TEST EXERCISE
+- - '##'
+  - Constant and Mutable Iterators
+- - '##'
+  - Constant Iterator
+- - '##'
+  - Reverse Iterators
+- - '##'
+  - Reverse Iterators
+- - '##'
+  - DISPLAY 18.3 反向迭代器
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - Other Kinds of Iterators
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 18.2 CONTAINERS
+- - '###'
+  - Sequential Containers
+- - '###'
+  - DISPLAY 18.4 Two Kinds of Lists
+- - '###'
+  - DISPLAY 18.5 Using the list Template Class
+- - '##'
+  - Sample Dialogue
+- - '##'
+  - DISPLAY 18.6 STL 基本顺序容器
+- - '##'
+  - DISPLAY 18.7 部分顺序容器成员函数（第 1 部分，共 2 部分）
+- - '##'
+  - DISPLAY 18.7 部分顺序容器成员函数（第 2 部分，共 2 部分）
+- - '##'
+  - 顺序容器
+- - '##'
+  - PITFALL 迭代器与删除元素
+- - '##'
+  - PROGRAMMING TIP — 容器中的类型定义
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 容器适配器 stack 和 queue
+- - '##'
+  - DISPLAY 18.8 Stack 模板类（第 1 部分，共 2 部分）
+- - '#'
+  - 展示 18.8 Stack 模板类 *（第 2 部分，共 2 部分）*
+- - '##'
+  - 成员函数示例
+- - '#'
+  - 展示 18.9 Queue 模板类 *（第 1 部分，共 2 部分）*
+- - '##'
+  - Queue 适配器模板类细节
+- - '##'
+  - 成员函数示例
+- - '#'
+  - 展示 18.9 Queue 模板类 *（第 2 部分，共 2 部分）*
+- - '#'
+  - 展示 18.10 使用 Stack 模板类的程序 *（第 1 部分，共 2 部分）*
+- - '#'
+  - 展示 18.10 使用 Stack 模板类的程序 *（第 2 部分，共 2 部分）*
+- - '##'
+  - 示例对话
+- - '#'
+  - 自测练习
+- - '#'
+  - 关联容器 set 与 map
+- - '#'
+  - 展示 18.11 set 模板类
+- - '##'
+  - set 模板类细节
+- - '##'
+  - 成员函数示例
+- - '##'
+  - 演示 18.12 使用 set 模板类的程序
+- - '###'
+  - 示例对话
+- - '##'
+  - 演示 18.13 map 模板类
+- - '###'
+  - map 模板类详情
+- - '###'
+  - 示例成员函数
+- - '##'
+  - 演示 18.14 使用 map 模板类的程序
+- - '###'
+  - 示例对话
+- - '##'
+  - 编程提示 对容器使用初始化、范围 for 和 auto
+- - '##'
+  - 效率
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - 18.3 GENERIC ALGORITHMS
+- - '###'
+  - Running Times and Big-O Notation
+- - '##'
+  - 容器访问运行时间
+- - '##'
+  - 展示 18.16 运行时间比较
+- - '##'
+  - 自测练习
+- - '##'
+  - 非修改性序列算法
+- - '##'
+  - 展示 18.17 通用 find 函数（第 1 部分，共 2 部分）
+- - '##'
+  - 展示 18.17 通用find函数（第2部分，共2部分）
+- - '###'
+  - 示例对话1
+- - '###'
+  - 示例对话2
+- - '###'
+  - 范围 [first, last)
+- - '##'
+  - 展示 18.18 一些非修改性通用函数
+- - '##'
+  - 自测练习
+- - '##'
+  - 修改容器的算法
+- - '#'
+  - DISPLAY 18.19 一些修改通用函数
+- - '##'
+  - SELF-TEST EXERCISES
+- - '##'
+  - Set Algorithms
+- - '##'
+  - DISPLAY 18.20 Set Operations (part 1 of 2)
+- - '##'
+  - DISPLAY 18.20 Set Operations (part 2 of 2)
+- - '##'
+  - SELF-TEST EXERCISE
+- - '##'
+  - Sorting Algorithms
+- - '##'
+  - DISPLAY 18.21 Some Generic Sorting Algorithms
+- - '##'
+  - 18.4 C++ IS EVOLVING
+- - '##'
+  - std::array
+- - '##'
+  - DISPLAY 18.22 The std::array (part 1 of 2)
+- - '#'
+  - DISPLAY 18.22  **The `std::array` (part 2 of 2)**
+- - '###'
+  - Sample Dialogue
+- - '###'
+  - Regular Expressions
+- - '#'
+  - DISPLAY 18.23 Basic Regular Expressions
+- - '#'
+  - DISPLAY 18.24 Regular Expression Matching (part 1 of 2)
+- - '#'
+  - Sample Dialogue 1
+- - '#'
+  - Sample Dialogue
+- - '##'
+  - Threads
+- - '##'
+  - 显示 18.25 线程版 Hello World
+- - '###'
+  - 示例对话
+- - '##'
+  - 显示 18.26 线程与互斥锁
+- - '##'
+  - 显示 18.27 在线程中运行类
+- - '##'
+  - 显示 18.28 使用线程搜索数组
+- - '###'
+  - 示例对话
+- - '##'
+  - 智能指针
+- - '##'
+  - DISPLAY 18.29  存在内存泄漏的节点链表 *(第 1 部分，共 2 部分)*
+- - '##'
+  - DISPLAY 18.29  存在内存泄漏的节点链表 *(第 2 部分，共 2 部分)*
+- - '#'
+  - Sample Dialogue
+- - '##'
+  - DISPLAY 18.30  使用智能指针的节点链表 *(第 1 部分，共 2 部分)*
+- - '##'
+  - DISPLAY 18.30  使用智能指针的节点链表 *(第 2 部分，共 2 部分)*
+- - '#'
+  - Sample Dialogue
+- - '#'
+  - Sample Dialogue
+- - '##'
+  - Answers to Self-Test Exercises
+- - '##'
+  - PRACTICE PROGRAMS
+- - '##'
+  - PROGRAMMING PROJECTS
+- - '##'
+  - C++ Keywords 1
+- - '##'
+  - ASCII 字符集
+- - '##'
+  - 附录 4
+- - '###'
+  - 算术函数
+- - '###'
+  - 输入和输出成员函数
+- - '###'
+  - 字符串函数
+- - '###'
+  - 随机数生成器
+- - '##'
+  - 三角函数
+- - '##'
+  - 内联函数
+- - '##'
+  - 重载数组索引方括号
+- - '##'
+  - this 指针
+- - '##'
+  - 附录 8
+- - '###'
+  - 将运算符作为成员运算符重载
+- - '##'
+  - 版权说明
+- - '#'
+  - 索引
+- - '#'
+  - 符号
+- - '##'
+  - C
+- - '##'
+  - C
+- - '##'
+  - D
+- - '##'
+  - E
+- - '##'
+  - F
+- - '##'
+  - Functions *(continued)*
+- - '##'
+  - G
+- - '##'
+  - H
+- - '##'
+  - I
+- - '##'
+  - L
+- - '##'
+  - M
+- - '##'
+  - N
+- - '##'
+  - O
+- - '##'
+  - P
+- - '##'
+  - Size（元素数量） *(continued)*
+- - '##'
+  - T
+- - '##'
+  - U
+- - '##'
+  - V
+- - '##'
+  - W
+- - '##'
+  - Z
