@@ -1,0 +1,14 @@
+# CHAPTER 10  COSMIC MICROWAVE BACKGROUND ANALYSIS
+
+![](bbox=[0.164, 0.184, 0.533, 0.338])
+
+![](bbox=[0.55, 0.119, 0.823, 0.337])
+
+**FIGURE 10.1**  
+(a) The tiny density fluctuations in the CMB as measured by the Planck satellite experiment. (b) The nonrectangular integration domain within which the bispectrum is well defined by satisfying the triangle condition.
+
+The Modal code we discuss here is currently the only completely general method for constraining deviations from this Gaussian prediction for the CMB. It does so via the *bispectrum*, or three-point correlator, of the CMB. This can be thought of as searching for any correlations between any three points defined by the corners of a given triangle (as such, we will see that the code frequently involves triple products). To do this, the inflationary bispectrum must be evolved forward in time and then projected onto a spherical shell defined by the CMB in a way that can be easily compared to data. For this work, we have extracted this part of the calculation from the rest of the code and turned it into a mini-app called *miniModal*.
+
+The code employs two sets of three-dimensional basis templates: a theoretical one that has been evolved from the end of inflation until the time of observation (and hence involves an integration over *r*, which is the distance along a line of sight) and one defined on the 2D CMB itself—\(\tilde{Q}_n\) and \(Q_n\), respectively. These basis templates have been chosen as their form greatly simplifies the estimation part of the code (which would otherwise be seven-dimensional and hence intractable). The code in miniModal calculates the decomposition of the evolved primordial basis into the CMB basis. If we define the matrix \(\Gamma\) such that \(\tilde{Q}_n = \sum_r \Gamma_{nr}Q_r\), then \(\Gamma\) can be calculated using the equation shown in Figure 10.2a. Thus for optimizing the calculation of \(\Gamma\) we only need to focus on optimizing the evaluation of the inner product. The majority of the calculation time is in evaluating the second inner product due to the radial integral inherent in \(\tilde{Q}\), so we will restrict our attention to that alone.
+
+Writing it out explicitly, the calculation performed in miniModal is shown in Figure 10.2b. There is a known mapping \(n \to ijk\), and the values of \(\ell_1, \ell_2,\) and \(\ell_3\) are determined by the Wigner-3J symbol, shown in Figure 10.2c. The Wigner-3J symbol has two important properties: first, it is zero when the three \(\ell\) treated as lengths are unable to form a triangle (the triangle condition); and second, it is zero whenever \(\ell_1 + \ell_2 + \ell_3\) is odd (the parity condition), otherwise its value is unity. These constraints are a geometric effect which comes from conservation of momentum when projected onto the spherical shell. This integration domain is visualized in Figure 10.1b. The maximum value of any of the three \(\ell\) values is fixed at 2000.

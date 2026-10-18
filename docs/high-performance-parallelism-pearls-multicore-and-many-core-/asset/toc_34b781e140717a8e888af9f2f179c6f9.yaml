@@ -1,0 +1,962 @@
+- - '##'
+  - 贡献者
+- - '###'
+  - 扎哈尔·A. 马特维耶夫
+- - '###'
+  - 劳伦斯·梅多斯
+- - '###'
+  - 约翰·米查拉克斯
+- - '###'
+  - 亚尔诺·梅利凯宁
+- - '###'
+  - 拉维·A. 穆尔蒂
+- - '###'
+  - 佩里·尼德姆
+- - '###'
+  - 纳拉扬·兰加纳坦
+- - '###'
+  - 乔治·M. 拉斯库利内茨
+- - '###'
+  - 詹姆斯·赖因德斯
+- - '###'
+  - Mikhail Smelyanskiy
+- - '###'
+  - Paulo Souza
+- - '###'
+  - Dan Stanzione
+- - '###'
+  - Philippe Thierry
+- - '###'
+  - Prashanth Thinakaran
+- - '###'
+  - Karthikeyan Vaidyanathan
+- - '###'
+  - 2013 年 STAMPEDE——英特尔众核系统——首次尝试
+- - '###'
+  - HPC 之旅与启示
+- - '###'
+  - STAMPEDE 用户发现：这就是并行编程
+- - '###'
+  - 本书恰逢其时且意义重大
+- - '###'
+  - 引言
+- - '###'
+  - 应用与技术
+- - '###'
+  - SIMD AND VECTORIZATION
+- - '###'
+  - OpenMP AND NESTED PARALLELISM
+- - '###'
+  - LATENCY OPTIMIZATIONS
+- - '###'
+  - PYTHON
+- - '###'
+  - STREAMS
+- - '###'
+  - RAY TRACING
+- - '###'
+  - TUNING PREFETCHING
+- - '###'
+  - MPI SHARED MEMORY
+- - '###'
+  - USING EVERY LAST CORE
+- - '###'
+  - OpenCL VS. OpenMP
+- - '###'
+  - POWER ANALYSIS FOR NODES AND CLUSTERS
+- - '###'
+  - THE FUTURE OF MANY-CORE
+- - '###'
+  - NUMERICAL WEATHER PREDICTION OPTIMIZATION
+- - '###'
+  - 第二章 数值天气预报优化
+- - '###'
+  - 循环重构
+- - '###'
+  - 用于循环和数组边界的编译时常量
+- - '###'
+  - FIGURE 2.11
+- - '###'
+  - FIGURE 2.12
+- - '###'
+  - FIGURE 2.13
+- - '###'
+  - PERFORMANCE IMPROVEMENTS
+- - '###'
+  - FIGURE 2.14
+- - '###'
+  - FIGURE 2.15
+- - '###'
+  - FIGURE 2.16
+- - '###'
+  - FIGURE 2.17
+- - '###'
+  - FIGURE 2.18
+- - '###'
+  - FIGURE 2.19
+- - '###'
+  - SUMMARY
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - WRF GODDARD MICROPHYSICS SCHEME OPTIMIZATION
+- - '###'
+  - WRF 戈达德微物理方案
+- - '###'
+  - 戈达德微物理方案
+- - '###'
+  - 基准测试设置
+- - '###'
+  - 代码优化
+- - '###'
+  - 代码优化总结
+- - '###'
+  - WRF 中 Goddard 微物理方案优化的性能影响
+- - '###'
+  - 总结
+- - '###'
+  - 致谢
+- - '###'
+  - 了解更多信息
+- - '###'
+  - 成对 DNA 序列比对优化
+- - '###'
+  - 成对序列比对
+- - '###'
+  - 单协处理器上的并行化
+- - '###'
+  - 使用 OpenMP 的多线程
+- - '###'
+  - 使用 SIMD 内建函数的向量化
+- - '###'
+  - 使用 MPI 跨多个协处理器进行并行化
+- - '###'
+  - FIGURE 4.6
+- - '###'
+  - PERFORMANCE RESULTS
+- - '###'
+  - FIGURE 4.7
+- - '###'
+  - FIGURE 4.8
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - ACCELERATED STRUCTURAL BIOINFORMATICS FOR DRUG DISCOVERY
+- - '###'
+  - 并行计算助力蛋白质组规模的结构生物信息学
+- - '###'
+  - eFindSite概述
+- - '###'
+  - 基准数据集
+- - '###'
+  - 代码剖析
+- - '###'
+  - 移植 eFindSite 以支持协处理器卸载
+- - '###'
+  - 面向多核处理器的并行版本
+- - '###'
+  - 处理器与协处理器的任务级调度
+- - '###'
+  - CASE STUDY
+- - '###'
+  - SUMMARY
+- - '###'
+  - 更多信息
+- - '###'
+  - AMBER PME 分子动力学优化
+- - '###'
+  - MD 理论
+- - '###'
+  - 使用协处理器加速邻居列表的构建
+- - '###'
+  - 使用协处理器加速直接空间求和
+- - '###'
+  - 协处理器代码中的额外优化
+- - '###'
+  - 尽可能移除锁
+- - '###'
+  - 排除列表优化
+- - '###'
+  - 减少卸载代码中的数据传递和计算
+- - '###'
+  - 负载均衡算法的修改
+- - '###'
+  - PME 直接空间和与邻居列表工作
+- - '###'
+  - 图 6.8
+- - '###'
+  - 图 6.9
+- - '###'
+  - PME 倒易空间求和任务
+- - '###'
+  - 键合力工作
+- - '###'
+  - 编译器优化标志
+- - '###'
+  - 结果
+- - '###'
+  - 图 6.10
+- - '###'
+  - 图 6.11
+- - '###'
+  - 结论
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - LOW-LATENCY SOLUTIONS FOR FINANCIAL SERVICES APPLICATIONS
+- - '###'
+  - INTRODUCTION
+- - '###'
+  - THE OPPORTUNITY
+- - '###'
+  - FIGURE 7.1
+- - '###'
+  - 数据包处理架构
+- - '###'
+  - 图 7.2
+- - '###'
+  - 对称通信接口
+- - '###'
+  - 图 7.3
+- - '###'
+  - 内存注册
+- - '###'
+  - 图 7.5
+- - '###'
+  - 图 7.6
+- - '###'
+  - 通过 scif_mmap() 映射远程内存
+- - '###'
+  - 图 7.7
+- - '###'
+  - 优化协处理器上的数据包处理
+- - '###'
+  - '优化 #1：选用合适的API'
+- - '###'
+  - 图 7.8
+- - '###'
+  - 图 7.11
+- - '###'
+  - 图 7.12
+- - '###'
+  - '优化 #3：“推送”与“拉取”数据'
+- - '###'
+  - '优化 #4：“影子”指针实现高效FIFO管理'
+- - '###'
+  - FIGURE 7.13
+- - '###'
+  - 'OPTIMIZATION #5: TICKLESS KERNELS'
+- - '###'
+  - 'OPTIMIZATION #6: SINGLE THREAD AFFINITY AND CPU “ISOLATION”'
+- - '###'
+  - 'OPTIMIZATION #7: MISCELLANEOUS OPTIMIZATIONS'
+- - '###'
+  - 结果
+- - '###'
+  - 结论
+- - '###'
+  - 更多信息
+- - '###'
+  - 金融中的并行数值方法
+- - '###'
+  - 概述
+- - '###'
+  - 引言
+- - '###'
+  - 美国期权的定价方程
+- - '###'
+  - 初始 C/C++ 实现
+- - '###'
+  - 标量优化：你的最佳第一步
+- - '###'
+  - 编译器调用开关
+- - '###'
+  - 子表达式求值
+- - '###'
+  - 美式期权近似
+- - '###'
+  - 标量优化
+- - '###'
+  - SIMD 并行——向量化
+- - '###'
+  - 定义和使用向量数据
+- - '###'
+  - 向量算术运算
+- - '###'
+  - 向量函数调用
+- - '###'
+  - 分支语句
+- - '###'
+  - 月之暗面
+- - '###'
+  - 调用程序的向量版本和标量版本
+- - '###'
+  - 向量寄存器的加载与存储
+- - '###'
+  - 调用程序的向量版本
+- - '###'
+  - 比较向量版本和标量版本
+- - '###'
+  - 通过注释源代码进行向量化：#PRAGMA SIMD
+- - '###'
+  - 'C/C++ 向量扩展与 #PRAGMA SIMD'
+- - '###'
+  - 线程并行化
+- - '###'
+  - NUMA 系统中的内存分配
+- - '###'
+  - 线程绑定与亲和性接口
+- - '###'
+  - 从多核扩展到众核
+- - '###'
+  - 美式期权近似
+- - '###'
+  - 美式期权近似
+- - '###'
+  - 小结
+- - '###'
+  - 更多信息
+- - '###'
+  - 来自格点 QCD 优化的威尔逊 DSLASH 内核
+- - '###'
+  - 第 9 章
+- - '###'
+  - 威尔逊-DSLASH 内核
+- - '###'
+  - PERFORMANCE EXPECTATIONS
+- - '###'
+  - REFINEMENTS TO THE MODEL
+- - '###'
+  - Additional tricks—compression
+- - '###'
+  - 首次实现与性能
+- - '###'
+  - 在 Intel Xeon Phi 协处理器上运行朴素代码
+- - '###'
+  - 朴素代码的评估
+- - '###'
+  - 3.5D分块
+- - '###'
+  - 负载均衡
+- - '###'
+  - SMT 线程
+- - '###'
+  - 晶格遍历
+- - '###'
+  - 使用 QphiX-codegen 进行代码生成
+- - '###'
+  - QPhiX-CODEGEN 代码结构
+- - '###'
+  - 实现指令
+- - '###'
+  - 生成 DSLASH
+- - '###'
+  - 生成代码
+- - '###'
+  - QPhiX 的性能结果
+- - '###'
+  - 其他好处
+- - '###'
+  - 路的尽头？
+- - '###'
+  - 更多信息
+- - '###'
+  - 宇宙微波背景分析：实践中的嵌套并行
+- - '###'
+  - 使用 Modal 分析 CMB
+- - '###'
+  - 优化与现代化
+- - '###'
+  - 将循环拆分为并行任务
+- - '###'
+  - INTRODUCING NESTED PARALLELISM
+- - '###'
+  - OpenMP 4.0 TEAMS
+- - '###'
+  - 手动嵌套
+- - '###'
+  - 内层循环优化
+- - '###'
+  - RESULTS
+- - '###'
+  - Results
+- - '###'
+  - COMPARISON OF NESTED PARALLELISM APPROACHES
+- - '###'
+  - SUMMARY
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - VISUAL SEARCH OPTIMIZATION 11
+- - '###'
+  - 图像匹配应用
+- - '###'
+  - 图像采集与处理
+- - '###'
+  - 应用
+- - '###'
+  - 酒店与零售业
+- - '###'
+  - 社交互动
+- - '###'
+  - 监控
+- - '###'
+  - 视觉搜索应用的并行性研究
+- - '###'
+  - 数据库（DB）级并行
+- - '###'
+  - FLANN LIBRARY PARALLELISM
+- - '###'
+  - EXPERIMENTAL EVALUATION
+- - '###'
+  - SETUP
+- - '###'
+  - DATABASE THREADS SCALING
+- - '###'
+  - FLANN THREADS SCALING
+- - '###'
+  - KD-TREE SCALING WITH DBTHREADS
+- - '###'
+  - 总结
+- - '###'
+  - 更多信息
+- - '###'
+  - 射频射线追踪
+- - '###'
+  - '12'
+- - '###'
+  - 背景
+- - '###'
+  - STINGRAY 系统架构
+- - '###'
+  - 优化示例
+- - '###'
+  - 使用 OpenMP 进行并行 RF 仿真
+- - '###'
+  - 使用 ispc 进行并行 RF 可视化
+- - '###'
+  - 摘要
+- - '###'
+  - 致谢
+- - '###'
+  - 更多信息
+- - '###'
+  - 探索保留核心的使用
+- - '###'
+  - UINTAH 计算框架
+- - '###'
+  - 迈向揭开保留核心的神秘面纱
+- - '###'
+  - 探索线程亲和性模式
+- - '###'
+  - 使用 PTHREADS 的线程放置
+- - '###'
+  - 使用 PTHREADS 实现分散型亲和模式
+- - '###'
+  - 实验讨论
+- - '###'
+  - 机器配置
+- - '###'
+  - 模拟配置
+- - '###'
+  - 协处理器端结果
+- - '###'
+  - 第13章 探究保留核心的使用
+- - '###'
+  - 主机端结果
+- - '###'
+  - 进一步分析
+- - '###'
+  - 总结
+- - '###'
+  - 致谢
+- - '###'
+  - 更多信息
+- - '###'
+  - 第14章 高性能 Python 卸载
+- - '###'
+  - 背景
+- - '###'
+  - THE pyMIC OFFLOAD MODULE
+- - '###'
+  - DESIGN OF pyMIC
+- - '###'
+  - THE HIGH-LEVEL INTERFACE
+- - '###'
+  - THE LOW-LEVEL INTERFACE
+- - '###'
+  - 'EXAMPLE: SINGULAR VALUE DECOMPOSITION'
+- - '###'
+  - GPAW
+- - '###'
+  - 概述
+- - '###'
+  - DFT 算法
+- - '###'
+  - 卸载
+- - '###'
+  - PyFR
+- - '###'
+  - 概述
+- - '###'
+  - 运行时代码生成
+- - '###'
+  - 卸载
+- - '###'
+  - 性能
+- - '###'
+  - pyMIC 的性能
+- - '###'
+  - GPAW
+- - '###'
+  - PyFR
+- - '###'
+  - SUMMARY
+- - '###'
+  - ACKNOWLEDGMENTS
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - 异构流上的快速矩阵计算
+- - '###'
+  - 异构计算的挑战
+- - '###'
+  - 矩阵乘法
+- - '###'
+  - 基本矩阵乘法
+- - '###'
+  - 通过分块实现任务并发
+- - '###'
+  - 'HETEROGENEOUS STREAMING: CONCURRENCY AMONG COMPUTING DOMAINS'
+- - '###'
+  - PIPELINING WITHIN A STREAM
+- - '###'
+  - STREAM CONCURRENCY WITHIN A COMPUTING DOMAIN
+- - '###'
+  - TRADE-OFFS IN PIPELINING, TILING, AND OFFLOAD
+- - '###'
+  - Small matrix performance
+- - '###'
+  - 分块程度和流数量之间的权衡
+- - '###'
+  - 分块 hStreams 算法
+- - '###'
+  - hStreams 库和框架
+- - '###'
+  - FEATURES
+- - '###'
+  - HOW IT WORKS
+- - '###'
+  - RELATED WORK
+- - '###'
+  - 性能
+- - '###'
+  - Cholesky
+- - '###'
+  - LU 分解
+- - '###'
+  - CONTINUING WORK ON hStreams
+- - '###'
+  - ACKNOWLEDGMENTS
+- - '###'
+  - RECAP
+- - '###'
+  - SUMMARY
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - TILED hStreams MATRIX MULTIPLIER EXAMPLE SOURCE
+- - '###'
+  - MPI-3 共享内存编程简介
+- - '###'
+  - 动机
+- - '###'
+  - MPI 的进程间共享内存扩展
+- - '###'
+  - 何时使用 MPI 进程间共享内存
+- - '###'
+  - '1-D RING: FROM MPI MESSAGING TO SHARED MEMORY'
+- - '###'
+  - MODIFYING MPPTTEST HALO EXCHANGE TO INCLUDE MPI SHM
+- - '###'
+  - EVALUATION ENVIRONMENT AND RESULTS
+- - '###'
+  - Halo performance on one coprocessor
+- - '###'
+  - 八节点对称模式下的晕层加速
+- - '###'
+  - 摘要
+- - '###'
+  - 了解更多信息
+- - '###'
+  - 用于可扩展混合并行的粗粒度 OpenMP
+- - '###'
+  - 粗粒度与细粒度并行
+- - '###'
+  - 骨架上的血肉：一个 FORTRAN“模板测试”示例
+- - '###'
+  - 细粒度 OpenMP 代码
+- - '###'
+  - 完全粗粒度的 OpenMP 代码
+- - '###'
+  - 使用模板代码的性能结果
+- - '###'
+  - 数值天气预报模型中的并行性
+- - '###'
+  - 摘要
+- - '###'
+  - 了解更多信息
+- - '###'
+  - 在量子模拟中利用多级并行
+- - '###'
+  - 科学：更好的近似解
+- - '###'
+  - NOTE
+- - '###'
+  - ABOUT THE REFERENCE APPLICATION
+- - '###'
+  - PARALLELISM IN ES APPLICATIONS
+- - '###'
+  - MULTICORE AND MANY-CORE ARCHITECTURES FOR QUANTUM SIMULATIONS
+- - '###'
+  - OpenMP 4.0 AFFINITY AND HOT TEAMS OF INTEL OpenMP RUNTIME
+- - '###'
+  - HOT TEAMS MOTIVATION
+- - '###'
+  - SETTING UP EXPERIMENTS
+- - '###'
+  - MPI 与 OpenMP
+- - '###'
+  - DGEMM 实验
+- - '###'
+  - FFT 实验
+- - '###'
+  - 用户代码实验
+- - '###'
+  - 更多信息
+- - '###'
+  - OpenCL：去而复返
+- - '###'
+  - 第 19 章
+- - '###'
+  - GPU-HEOM 应用
+- - '###'
+  - HEXCITON 内核 OpenCL 实现
+- - '###'
+  - VECTORIZATION IN OpenCL
+- - '###'
+  - MEMORY LAYOUT OPTIMIZATION
+- - '###'
+  - COMPILE-TIME CONSTANTS
+- - '###'
+  - PREFETCHING
+- - '###'
+  - OPENCL PERFORMANCE RESULTS
+- - '###'
+  - PERFORMANCE PORTABILITY IN OpenCL
+- - '###'
+  - OpenCL 向量化方法（2x Xeon E5-2670）
+- - '###'
+  - OpenCL 向量化方法（2x Xeon E5-2697v3）
+- - '###'
+  - OpenCL 向量化方法（Xeon Phi 7120P）
+- - '###'
+  - NVIDIA GPGPU 特定优化
+- - '###'
+  - 将工作项映射到硬件线程
+- - '###'
+  - 工作组
+- - '###'
+  - 内存布局
+- - '###'
+  - OpenCL 性能可移植性结果
+- - '###'
+  - 将 OpenCL 内核移植到 OpenMP 4.0
+- - '###'
+  - OpenMP 4.0 VS. OpenCL
+- - '###'
+  - 替代 OpenCL 运行时
+- - '###'
+  - C++ SIMD 库
+- - '###'
+  - 进一步优化 OpenMP 4.0 内核
+- - '###'
+  - OpenMP 基准测试结果
+- - '###'
+  - 注
+- - '###'
+  - 总结
+- - '###'
+  - 致谢
+- - '###'
+  - 更多信息
+- - '###'
+  - OpenMP 与 OpenCL：性能差异？
+- - '###'
+  - 五个基准测试
+- - '###'
+  - 实验设置与时间测量
+- - '###'
+  - HotSpot 基准测试的优化
+- - '###'
+  - 第20章 OpenMP 与 OpenCL：性能差异？
+- - '###'
+  - 应用分块并减少指令数
+- - '###'
+  - 'FINAL TOUCH: LARGE PAGES AND AFFINITY'
+- - '###'
+  - HotSpot OPTIMIZATION CONCLUSIONS
+- - '###'
+  - OPTIMIZATION STEPS FOR THE OTHER FOUR BENCHMARKS
+- - '###'
+  - LUD BENCHMARK
+- - '###'
+  - 分块 LU 分解算法中的子矩阵及该算法的两次迭代
+- - '###'
+  - CFD 基准测试
+- - '###'
+  - NW 基准测试
+- - '###'
+  - BFS 基准测试
+- - '###'
+  - 总结
+- - '###'
+  - 更多信息
+- - '###'
+  - 预取调优优化
+- - '###'
+  - 预取对性能的重要性
+- - '###'
+  - 软件预取
+- - '###'
+  - VPREFETCH指令的编译器内建函数
+- - '###'
+  - 硬件预取
+- - '###'
+  - 吞吐量应用
+- - '###'
+  - STREAM TRIAD
+- - '###'
+  - SMITH-WATERMAN
+- - '###'
+  - SHOC MD
+- - '###'
+  - TUNING PREFETCHING
+- - '###'
+  - PREFETCH DISTANCE TUNING ON THE COPROCESSOR
+- - '###'
+  - RESULTS—PREFETCH TUNING EXAMPLES ON A COPROCESSOR
+- - '###'
+  - PREFETCHING METRICS FOR STREAM TRIAD
+- - '###'
+  - 用于更深入分析的有用协处理器硬件事件计数器
+- - '###'
+  - 为 Stream Triad 进行编译器预取距离调优
+- - '###'
+  - 为 Smith-Waterman 进行编译器预取距离调优
+- - '###'
+  - 在 SHOC MD 中使用内在预取处理难以预测的访问模式
+- - '###'
+  - CHAPTER 21 PREFETCH TUNING OPTIMIZATIONS
+- - '###'
+  - RESULTS—TUNING HARDWARE PREFETCHING ON A PROCESSOR
+- - '###'
+  - TUNING HARDWARE PREFETCHING FOR STREAM ON A PROCESSOR
+- - '###'
+  - TUNING HARDWARE PREFETCHING FOR SMITH-WATERMAN ON A PROCESSOR
+- - '###'
+  - TUNING HARDWARE PREFETCHING FOR SHOC MD ON A PROCESSOR
+- - '###'
+  - 总结
+- - '###'
+  - 致谢
+- - '###'
+  - 更多信息
+- - '###'
+  - 通过 OpenMP 使用 SIMD 函数 22
+- - '###'
+  - SIMD 向量化概述
+- - '###'
+  - 双精度三叉树模型加速
+- - '###'
+  - 指令引导的向量化
+- - '###'
+  - 循环向量化
+- - '###'
+  - SIMD 使能函数
+- - '###'
+  - TARGETING SPECIFIC ARCHITECTURES
+- - '###'
+  - OPTIMIZING FOR AN ARCHITECTURE WITH COMPILER OPTIONS AND THE PROCESSOR(...) CLAUSE
+- - '###'
+  - SUPPORTING MULTIPLE PROCESSOR TYPES
+- - '###'
+  - C++ 中的向量函数
+- - '###'
+  - UNIFORM(THIS) 子句
+- - '###'
+  - FORTRAN 中的向量函数
+- - '###'
+  - 性能结果
+- - '###'
+  - 摘要
+- - '###'
+  - 了解更多信息
+- - '###'
+  - 向量化建议
+- - '###'
+  - 向量化的重要性
+- - '###'
+  - Intel 向量化顾问及其底层技术
+- - '###'
+  - A LIFE CYCLE FOR EXPERIMENTATION
+- - '###'
+  - ANALYZING THE LATTICE BOLTZMANN CODE
+- - '###'
+  - OPTIMIZING THE COMPUTE EQUILIBRIUM LOOP (lbpSUB:744)
+- - '###'
+  - Trip count analysis
+- - '###'
+  - Fixing the problem
+- - '###'
+  - Note
+- - '###'
+  - 计算质量密度循环分析 (lbgPET.cpp:42)
+- - '###'
+  - fGetOneMassSite 函数
+- - '###'
+  - Advisor 调查
+- - '###'
+  - 修复问题
+- - '###'
+  - 平衡开销与优化取舍
+- - '###'
+  - 优化将粒子移动到相邻网格的循环 (lbpSUB.cpp:1247)
+- - '###'
+  - fPropagationSwap 函数中的循环
+- - '###'
+  - 依赖分析
+- - '###'
+  - 引入依赖
+- - '###'
+  - 探索可能的向量化策略
+- - '###'
+  - 预计加速与效率
+- - '###'
+  - 内存访问模式分析
+- - '###'
+  - 最后的 MAP 分析
+- - '###'
+  - Fixing the problem
+- - '###'
+  - THE RESULTS
+- - '###'
+  - SUMMARY
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - PORTABLE EXPLICIT VECTORIZATION INTRINSICS
+- - '###'
+  - RELATED WORK
+- - '###'
+  - WHY VECTORIZATION?
+- - '###'
+  - PORTABLE VECTORIZATION WITH OpenVec
+- - '###'
+  - 向量类型
+- - '###'
+  - 内建函数
+- - '###'
+  - IF/ELSE 向量化
+- - '###'
+  - 掩码还是不掩码？
+- - '###'
+  - 处理向量尾部
+- - '###'
+  - 数学归约
+- - '###'
+  - 编译 OpenVec 代码
+- - '###'
+  - 实际应用示例
+- - '###'
+  - PERFORMANCE RESULTS
+- - '###'
+  - DEVELOPING TOWARD THE FUTURE
+- - '###'
+  - OpenVec
+- - '###'
+  - Pearls C AVX-2 Intrinsics
+- - '###'
+  - SUMMARY
+- - '###'
+  - FOR MORE INFORMATION
+- - '###'
+  - POWER ANALYSIS FOR APPLICATIONS AND DATA CENTERS
+- - '###'
+  - INTRODUCTION TO MEASURING AND SAVING POWER
+- - '###'
+  - 'MOTIVATION TO ACT: IMPORTANCE OF POWER OPTIMIZATION'
+- - '###'
+  - 处理器特性：现代电源管理特性
+- - '###'
+  - 线程映射很重要：OpenMP 亲和性
+- - '###'
+  - 应用：功率测量和分析
+- - '###'
+  - 基本技术
+- - '###'
+  - 方法
+- - '###'
+  - 为 Intel® Xeon® 处理器构建
+- - '###'
+  - 为 Intel Xeon Phi 协处理器构建
+- - '###'
+  - DATA COLLECTION
+- - '###'
+  - ANALYSIS
+- - '###'
+  - 'DATA CENTER: INTERPRETATION VIA WATERFALL POWER DATA CHARTS'
+- - '###'
+  - NWPerf
+- - '###'
+  - WATERFALL CHARTS GENERATED WITH CVIEW FROM NWPerf DATA
+- - '###'
+  - INSTALLING AND CONFIGURING NWPerf AND CView
+- - '###'
+  - INTERPRETING THE WATERFALL CHARTS
+- - '###'
+  - 摘要
+- - '###'
+  - 作者索引
+- - '###'
+  - 主题索引
+- - '###'
+  - K
+- - '###'
+  - L
+- - '###'
+  - M
+- - '###'
+  - P
+- - '###'
+  - R
+- - '###'
+  - S
+- - '###'
+  - T
+- - '###'
+  - U
+- - '###'
+  - V
+- - '###'
+  - Visual search optimization
+- - '###'
+  - W
+- - '###'
+  - Waterfall charts
+- - '###'
+  - Wilson-Dslash kernel
+- - '###'
+  - WRF Goddard microphysics scheme
+- - '###'
+  - Z

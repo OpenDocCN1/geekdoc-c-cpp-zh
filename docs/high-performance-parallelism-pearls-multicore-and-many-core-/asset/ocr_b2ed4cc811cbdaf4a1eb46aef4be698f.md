@@ -1,0 +1,13 @@
+![](bbox=[0.32, 0.11, 0.64, 0.29])
+
+# FIGURE 4.1
+
+Data dependency in the SW algorithm.
+
+In the DP matrix computation, each cell depends on its left, upper, and upper-left (diagonal) neighbors as depicted in Figure 4.1. This dependency also implies that all cells on the same minor diagonal can be computed in parallel, and the computation can be performed in the order of minor diagonal from the top-left corner to the bottom-right one in linear space. The optimal local alignment score, with respect to the given scoring scheme, corresponds to the maximum value in matrix H. The overall calculation has a quadratic computational complexity of O(mn) and a linear space complexity of O(m+n) and O(min(m, n)) for the computation with and without optimal alignment retrieval, respectively. Note that in this chapter, we are only interested in computing the optimal local alignment score and not an actual alignment leading to this optimal score.
+
+We assume that in the alignment matrix S1 is placed vertically and S2 horizontally and m ≤ n (see Figure 4.1). Considering the alignment matrix as a two-dimensional coordinate space on the Cartesian plane, we assume that the origin is the left-top corner, the horizontal coordinate x (corresponding to columns) increases from left to right, and the vertical coordinate y (corresponding to rows) increases from top to bottom. Hence, for a cell on diagonal d (0 ≤ d < m + n − 1), the relationship between its coordinate (y, x), where x is the column index and y is the row index, and d can be expressed as x + y = d. We can see that the starting row index srow can be determined by computing the intersection point of a diagonal d with the line y = 0 or x = n − 1, and the ending row index erow can be determined by the intersection point of d with the line y = m − 1 or x = 0. Based on these observations, we compute srow and erow of diagonal d as srow = max(0, d − n + 1) and erow = min(d, m − 1). A corresponding calculation can also be made for the external diagonals in the tiled matrix (see Figure 4.2).
+
+# PARALLELIZATION ON A SINGLE COPROCESSOR
+
+Our parallelization on a single coprocessor is based on the scale-and-vectorize approach. We first partition the DP matrix into tiles of size α × β and distribute them over a team of threads using OpenMP. We call such a tile-based diagonal an external diagonal. The layout of the tiled DP matrix is shown in Figure 4.2. Our tiling scheme conceptually reorganizes the alignment matrix into a tiled DP matrix of size R × C with R = ⌈m/α⌉ and C = ⌈n/β⌉. In the tiled alignment matrix, the computation of all tiles on an external diagonal d (0 ≤ d < R + C − 1) can be performed independently. Within each tile, we can

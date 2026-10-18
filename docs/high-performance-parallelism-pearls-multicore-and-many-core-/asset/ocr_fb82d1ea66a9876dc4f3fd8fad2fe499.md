@@ -1,0 +1,19 @@
+In MPPTTEST, every process has a separate memory block for each partner, simulating that different message is intended for each neighbor. We followed the same approach in our code and allocated memory chunk which fits data for all neighbors:
+
+```
+MPI_Win_allocate_shared(n_partners * msg_size, 1, MPI_INFO_NULL, shmcomm, &exch_buf, &win);
+```
+
+This approach allows us to directly replace send and receive operations with memory copies and to measure the baseline performance benefits associated with eliminating MPI calls. Additional improvements to performance and reductions in per-node memory footprint are possible by further replacing memory copies with direct accesses to shared data.
+
+The resulting code is similar to the 1-D ring example, except the communication phase is repeated a predefined number of iteration times. MPI_Win_lock_all, MPI_Win_lock, MPI_Win_unlock_all, and MPI_Win_unlock calls open and close RMA access epoch just once per test rather than on each iteration step. Therefore, their costs are reduced with the growing number of iterations. The number of synchronizations also plays a significant role in realizing performance benefits; we reduce this overhead by performing a single synchronization, based on MPI_Barrier and MPI_Win_sync, following all these exchanges, as it is shown in code listing on Figure 16.7. The MPI_Win_sync is needed for memory synchronization. Its cost, which depends on the target platform, is typically low, as it is a local operation. The most time-consuming synchronization is MPI_Barrier which is collective operation over all processes in the node rather than point-to-point. As a result, MPI_Barrier call may incur excess overhead when the number of processes per node is much larger that the set of processes being communicated with.
+
+We also used MPI_Win_lock and MPI_Win_unlock calls in similar to MPI_Win_lock_all way by opening an access epoch to every partner prior to any data exchange (−mpi3shm_lock option). Using personal locks for each partner may save us some time, especially when number of neighbors is significantly less than number of processes on the node, because the MPI_Win_lock_all function assumes opening an access epoch to all processes in the given window, which means all processes on the node in our case.
+
+To investigate different process topologies in halo exchanges, we introduced a new configuration parameter into the MPPTTEST halo benchmarks: -dimension. This parameter instructs MPPTTEST to use one of two available processes decompositions, 1-D or 2-D, with the latter used by default. An example based on nine processes and four partners is shown on Figure 16.8. In the case of 1-D decomposition the partners of the rank 4 process are ranks 2, 3, 5, and 6, while in the 2-D case, its neighbors would be ranks 1, 3, 5, and 7.
+
+Finally, we modified the reported time by adjusting it to the time for a process with the biggest execution time. The current MPPTTEST approach reports overall time as the time of a rank 0, which might not be representative, especially in nonperiodic cases where rank 0 typically has fewer neighbors than other processes.
+
+# EVALUATION ENVIRONMENT AND RESULTS
+
+In our performance studies, we used Intel’s Endeavour cluster, where each node is equipped with a dual Intel Xeon E5-2697 processors, one Intel Xeon Phi 7120P coprocessor, and one Mellanox Connectx-3 InfiniBand adapter connected to the same socket. The cluster was running Red Hat Enterprise Linux 6.5 OS, Intel MPSS 3.3.30726, and OFED 1.5.4.1. We used Intel MPI Library v5.0.2, Intel® C++ Compiler v15.0.1, and the MPPTTEST benchmark with the modifications described above.
