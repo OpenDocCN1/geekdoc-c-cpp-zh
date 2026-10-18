@@ -1,0 +1,5 @@
+Gigaspaces is another enabling platform. The Gigaspaces XAP cloud PaaS is tightly integrated with Amazon EC2’s infrastructure. It allows customers to build Web applications for the cloud by migrating existing enterprise applications. It does this by providing a development platform that supports major frameworks, languages, and management environments.
+
+# Social network, framework, and portal platforms
+
+We could write a whole book on social networks, frameworks, and portals, but we want to give you an idea of the type of enabling technology that is a natural part of enablement of Platform as a Service. Customers are taking advantage of platforms for blogging like Wordpress; they’re using open-source environments like Joomla to create cloud-based applications. Even social networking environments like Facebook and Twitter are becoming a part of enablement of the cloud.

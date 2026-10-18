@@ -1,0 +1,13 @@
+includes the approach of access APIs through the WSDL interface. There are two versions of WSDL: one general and one for a specific customer implementation. If a customer wants to share data, for example, they have to go through the general WSDL interface.
+
++   - **Service delivery infrastructure:** Salesforce.com’s cloud delivery infrastructure is based on its managed and secure data center environment. This is the same infrastructure used to manage its CRM customers.
++   - **Database as a service:** The database is built on top of the metadata services. The data services provide data security by enabling customers to declare validation rules (such as confirming that an account number is valid). It enables customers to build customized objects and fields. The customer isn’t responsible for database tuning, backup, or upgrades, because of the cloud infrastructure.
++   - **Integration as a service:** At the center of Force.com’s integration capabilities is a Web services *Application Programming Interface (API).* This API allows customers to access data stored in a Force.com application because it supports industry-standard SOAP Web services. Salesforce.com partners use this API to create connectors to packaged applications such as SAP R/3 and Oracle Financials. In addition, there are prebuilt integrations to services such as Amazon’s Web services, Facebook, and Google App Engine. Force.com also supports Web services standards including Java, .NET, PhP, and Perl.
++   - **Logic as a service:** This is a set of automated workflow services. A built-in workflow engine includes services such as task creation, record assignment, and other event-triggered services. Customers can use a Salesforce.com programming language (called Apex) as a way to extend the application by writing new code.
++   - **User interface as a service:** Force.com provides two ways of building or customizing user interfaces:
++     - A builder to change the application layout and Visualforce
++     - A framework for building user interfaces for both private and public clouds
++   
++     Developers can use standard Web development tools including HTML, AJAX, and Adobe Flex.
++   - **Development as a service:** Development tools include the Metadata API, an IDE (Integrated Development Environment), a *development sandbox* (a separate development space for developers), and a service called Code Share for building cloud-based applications.
++   - **AppExchange marketplace:** This site enables vendors that have used the Salesforce.com interfaces. It is, in essence, a channel for partners to sell into the installed base.
