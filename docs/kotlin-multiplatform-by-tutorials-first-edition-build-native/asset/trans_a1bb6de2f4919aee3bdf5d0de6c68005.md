@@ -1,0 +1,239 @@
+
+-   [在 Android 应用中，你使用 Coil 来加载图片。不幸的是，它目前不支持多平台，因此你需要将此逻辑迁移到新的库：Kamel。Kamel 使用 Ktor（你可以在第 12 章“网络”中阅读更多关于该库的信息）来加载媒体。此 API 与 Coil 类似，因此你不需要做太多更改。]
+
+Open the build.gradle.kts file from shared-ui and in the commonMain/dependencies section, add Kamel:
+
+```
+api(project(":kamel-image"))
+```
+
+Here, you’re using a local version of Kamel, since the current one doesn’t support the latest version of Ktor.
+
+Synchronize the project.
+
+In the shared-ui/components directory, open ImagePreview.kt. This file contains the logic required to fetch an image from the network and handles the request state: success, loading, and error.
+
+The AddImagePreview Composable first checks if the url is empty. If it isn’t, it will create a request to download the image.
+
+Kamel doesn’t deal with the request directly in lazyPainterResource, so you can remove this logic. Update the else clause to:
+
+```
+else {
+    Box {
+    //1
+    when (val resource = lazyPainterResource(url)) {
+    //2
+    is Resource.Loading -> {
+    Logger.d(TAG, "Loading image from uri=$url")
+    AddImagePreviewEmpty(modifier)
+    }
+    //3
+    is Resource.Success -> {
+    Logger.d(TAG, "Loading successful image from uri=$url")
+
+    KamelImage(
+    resource = resource,
+    contentScale = ContentScale.Crop,
+    contentDescription = "Image preview",
+    modifier = modifier,
+    crossfade = true
+    )
+    }
+    }
+}
+```
+
+```
+kotlin
+// ...
+is Resource.Failure -> {
+    Logger.d(TAG, "Loading failed image from uri=$url.\nReason=${resource.exception}")
+
+    AddImagePreviewEmpty(modifier)
+}
+}
+}
+}
+```
+
+Here’s a step-by-step breakdown of this logic:
+
++   1. `lazyPainterResource` is part of the Kamel library, and it’s similar to the `request` that you had before. It returns the current state of the request via `Resource.*` which can either be `Loading`, `Success`, or `Failure`.
++   
++   2. Handling the state of a request, in case it’s `loading`, this means that the operation is ongoing. Visually, it will show an image placeholder that contains the app’s logo.
++   
++   3. If the image is available, the result is a `success`. An `Image` Composable is added with the received file.
++   
++   4. On the contrary, if the result is a `failure`, you’ll display an empty preview.
+
+With the image-fetching API migrated to Kamel, don’t forget to remove all the Coil imports along with the `OptIn` annotation at the beginning of the file. Scroll to the top of **ImagePreview.kt** and remove:
+
+```
+import androidx.compose.ui.platform.LocalContext
+import coil.annotation.ExperimentalCoilApi
+import coil.compose.ImagePainter
+import coil.compose.rememberImagePainter
+import coil.request.ImageRequest
+
+@OptIn(ExperimentalCoilApi::class)
+```
+
+**Using LiveData and ViewModels**
+
+**learn** was built using **LiveData** and **ViewModels** that are available in Android through the **runtime-livedata** library. Since it contains Android-specific code, it won’t be possible to use the same library in the desktop app.
+
+Fortunately, there’s a strong community around Kotlin Multiplatform and Compose that tries to reduce the gap between Android and desktop and creates libraries that you can use on both platforms. One of these libraries is **PreCompose**. It was written by [Tlaster](https://github.com/Tlaster) and supports the Android Jetpack Lifecycle, ViewModel, LiveData and Navigation components in Multiplatform.
+
+Since at the time of this writing, the version on GitHub is still using an older version of Compose Multiplatform instead of importing the published library, **learn** contains the source code of the project with a couple of changes — all the plugins/libraries are now using the latest versions.
+
+Now that you’re familiar with **precompose**, open the **build.gradle.kts** file from the **shared-ui** module, and after the `api(project())` includes, add:
+
+```
+api(project(":precompose"))
+```
+
+Synchronize your project. Once this operation ends, you’ll need to update your app **ViewModels**. Open the **BookmarkViewModel.kt** file on the **shared-ui** module, and remove the imports that you no longer need:
+
+```
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.raywenderlich.learn.ui.utils.SingleLiveEvent
+```
+
+To import `ViewModel()` and the `viewModelScope`, you’ll need to add the **precompose** version of both classes:
+
+```
+import moe.tlaster.precompose.viewmodel.ViewModel
+import moe.tlaster.precompose.viewmodel.viewModelScope
+```
+
+The **LiveData** class from this library is slightly different from the Android one. Remove the `_items` variable, and update the `items` declaration to:
+
+```
+val items: MutableState<List<RWEntry>> =
+mutableStateOf(emptyList())
+```
+
+This also requires that you change its usages. Update `onNewBookmarksList` to set the `items` value:
+
+```
+items.value = bookmarks
+```
+
+Now, open **FeedViewModel.kt**. You’ll need to make similar changes.
+
+Remove the imports to Android libraries:
+
+```
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+```
+
+And add the ones from **precompose** for `ViewModel()` and `viewModelScope`:
+
+```
+import moe.tlaster.precompose.viewmodel.ViewModel
+import moe.tlaster.precompose.viewmodel.viewModelScope
+```
+
+Finally, remove the `_profile` declaration and replace `profile` with:
+
+```
+val profile: MutableState<GravatarEntry> =
+mutableStateOf(GravatarEntry())
+```
+
+And update its usage on `onMyGravatarData` to:
+
+```
+profile.value = item
+```
+
+And replace the import:
+
+```
+import androidx.lifecycle.MutableLiveData
+```
+
+With:
+
+```
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
+```
+
+With both view models updated, navigate to the **androidApp** and open the **MainActivity.kt** file. Here, look for their declaration and update it to:
+
+```
+private lateinit var bookmarkViewModel: BookmarkViewModel
+private lateinit var feedViewModel: FeedViewModel
+```
+
+There’s no support to call `by viewModel()` on **precompose**. Instead, you need to initialize them inside a Composable function. This is why they’re set as `lateinit`. Inside `setContent`, add:
+
+```
+feedViewModel = viewModel {
+    FeedViewModel()
+}
+
+bookmarkViewModel = viewModel {
+    BookmarkViewModel()
+}
+```
+
+When prompted, add:
+
+```
+import moe.tlaster.precompose.ui.viewModel
+```
+
+**Main Bottom Bar**
+
+Open the **main/MainBottomBar.kt** file and replace the type of the `NavHostController` to `Navigator`. You need to make this change on `MainBottomBar` and `AppBottomNavigation`.
+
+Scroll down to where `BottomNavigationItem` is defined and look for `onClick`. Update this function with the new navigation from **Navigator**. Replace the current implementation with:
+
+```
+if (!isSelected) {
+    selectedIndex.value = index
+    navController.navigate(screen.route)
+}
+```
+
+You don’t need to set additional configurations.
+
+Once that’s done, don’t forget to remove the imports:
+
+```
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
+```
+
+Now that you’ve updated **MainBottomBar**, you’ll need to make similar changes on **MainContent.kt**. Open this file, and once again replace the `NavHostController` type on the different functions with `Navigator`.
+
+On `MainScreenNavigationConfigurations`, you also need to import the `NavHost` from **precompose**, replace `startDestination` with `initialRoute` and the `composable` call with `scene`.
+
+Finally, remove the `androidx.*` imports:
+
+```
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+```
+
+**Main Screen**
+
+Finally remove the import:
+
+```
+navController.enableOnBackPressed(false)
+```
+
+Which is currently not supported.
+
+And, remove:
+
+```
+import
+```
+
