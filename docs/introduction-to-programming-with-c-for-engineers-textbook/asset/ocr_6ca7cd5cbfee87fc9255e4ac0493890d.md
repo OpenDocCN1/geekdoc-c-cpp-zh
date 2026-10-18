@@ -1,0 +1,7 @@
+\begin{tabular}{cccc}
+Flowchart & Description & Syntax & C++ examples \\
+ &  &  & In this main function, the switch statement is used to decide on an action depending on the number of parameters provided in a command line (Section 9.2.2). argc conveys the number of parameters, separated by white space, and argv is a pointer to these parameters (i.e. text, in other words - this is a table of char \*). The function TensorFromVideo requires at least one parameter of type string and, optionally, two additional parameters. These are resolved in the case 2, case 3, and case 4 branches. The old-style char \* text will be converted to string objects using one of the constructors (Table 3.5). Note that after each action, the break statement is called to jump out of the switch statement. Otherwise, the action would pass to the lower branches. Also note that case 1 and all other possible calls represented by default are processed in one place. Thus, there is no break after case 1. \\
+ &  &  & The following code shows a newer version of the switch statement, which can be used in C++17 and newer. It is used to locally collect the user's answer and switch between different selections. \\
+ &  &  & bool answer_expected { true }; cout << "Do you want to play a game? [Y/N]" << endl; do { cin.clear(); // clear the input buffer switch( char c {}); std::cin >> c, c ) { case 'Y': answer_expected = false; case 'y': cout << "Let us play our game" << endl; //PlayGame(); // Call a function to play break; \\
+ &  &  & (C++17+) \\
+\end{tabular}

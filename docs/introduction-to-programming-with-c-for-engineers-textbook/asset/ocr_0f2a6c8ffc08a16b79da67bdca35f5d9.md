@@ -1,0 +1,5 @@
+| Operator (C++) | Description | Examples |
+|---|---|---|
+| `class name :: member` | Scope resolution – To access class members | SafeSqrt is a class in the User namespace whose role is to define the square root function `sqrt`, which can safely take any value; positive or negative. User: `SafeSqrt` accesses the user namespace and its `safeSqrt` class; `SafeSqrt` accesses the `sqrt` function, which is a static member of the `SafeSqrt` class (only static member functions can be accessed this way). Finally, `::sqrt` accesses the `sqrt` function from the global namespace.
+| `namespace_name :: name` | Scope resolution – To access namespace members | `namespace User { class SafeSqrt { public: static bool sqrt(const double & val, double & result) { if (val >= 0.0) { return result = ::sqrt(val); } return false; } }; }`
+| `::name` | Global access – To access identifiers from the global scope (out of namespaces) | `double x {}; yes {}; // user enters a value cin >> x; SafeSqrt::sqrt(x, res) << endl; cout << "SafeSqrt value must be positive." << endl;` |

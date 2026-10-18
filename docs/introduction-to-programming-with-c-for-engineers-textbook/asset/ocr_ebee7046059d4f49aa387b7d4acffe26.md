@@ -1,0 +1,5 @@
+\begin{tabular}{ccc}
+Object & Description & Examples \\
+strcat strncat & Appends s2 with the sentinel to the buffer pointed to by s1. Sentinel 0 in s1 is overwritten. Returns a pointer to s1. char * strcat( const char * s1, const char * s2 ); The second version appends the first n characters. & An example of reading a line of characters from a file. In C, fopen opens a file: #define line_len 256 /\* The way to make constant val */ char line_buf[ line_len ] = { 0 }; /\* Buffer set to 0 \*/ FILE * fp_in = fopen( "Fox.txt", "r" ); /\* Open a file \*/ if( fp_in ) { /\* Read a line to the buffer \*/ if( fgets( line_buf, line_len, fp_in ) ) { /\* Do something ... \*/ } fclose( fp_in ); /\* After finishing close the file. \*/ } \\
+strstr & Returns a pointer to the first occurrence of s2 in s1 if it exists. Otherwise returns NULL, which is the C definition of a 0-valued pointer. char * strstr( const char * s1, const char * s2 ) &  \\
+\end{tabular}

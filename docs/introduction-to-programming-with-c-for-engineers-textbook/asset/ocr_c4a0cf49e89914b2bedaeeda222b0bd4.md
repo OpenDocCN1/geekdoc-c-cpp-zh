@@ -1,0 +1,18 @@
++   - **Debug** – A software version that usually is not optimized and is used for “in house” testing and debugging
++   - **Release** – A stable version of the software after intensive testing, which is fully operational, optimized, and intended to be distributed to users
+
+Software can have different configurations and versions. Although many configurations are possible, usually there are two distinctive modes:
+
+Let’s assume we have attained a stable version of our software, so we can run real computations. In many cases, performance still is not satisfactory due to long execution times or stalls. This can be amended with the help of a *profiler*. Its role is to measure the performance of software-building components and discover *hot spots* at different levels. Such reported places in the code – i.e. those that consume the most execution time – can be further optimized with the help of other algorithms or *refactoring* (i.e. redesigning and reimplementing) into a *parallel* version, if possible. After that, we can repeat the entire software development process in order to build the software’s next, better version.
+
+During the software development cycle, we cannot forget to protect and control the versions of our software. This, in turn, can be accomplished by one of the source control and versioning platforms discussed in the Appendix, Section A.6.2.
+
+After the software is ready, it can be deployed on a concrete hardware platform. A degree of software-hardware (S/H) dependence is a function of software features. That is, some programs can easily run on almost any hardware platform, whereas others may require significant computational power or can be tuned for specific displays, for instance. Hence, if appropriate, such features need to be taken into account during the software development steps.
+
+Thus the software development process resembles a spiral: the same tasks are repeated over and over until a satisfactory solution is obtained. In other words, we operate in cycles with larger and larger diameters. Indeed, we enter a *spiral development model*, which is a recognized software development strategy used by many companies. If properly organized, such an approach can be highly efficient in practice. In the next section, we will look in more detail at the software development steps.
+
+Last but not least, note that the programming ecosystem in Figure 2.3 shows only one person – but software development and construction usually requires teamwork. The human factor, which frequently is overlooked in books on programming, can have a significant impact on the success or failure of any project. Although this serious issue is out of the scope of this book, smooth operation entails project organization and cooperation (McConnell 2004). To some extent, these are supported by the modular structure of C++ projects, as well as by tools that perform source versioning and maintaining, such as Git and GitHub in Figure 2.3.
+
+# 2.3 Software Development Steps
+
+Just as there is more than one way to design a house, a bridge, or a car, there is also more than one way to design software. However, in all of these cases, the ultimate criterion indicating success or failure is the performance of the final product. As in other engineering fields, based on years of experience and thousands of projects, some common rules can be recognized that help us avoid common pitfalls in future designs. Such software development steps are depicted in Figure 2.4, and we will take a closer look at each of them.
