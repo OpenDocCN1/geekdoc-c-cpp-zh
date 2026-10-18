@@ -1,0 +1,142 @@
+
+| Operator | Associativity |
+|---|---|
+| `::` | left to right |
+| `-> . () [] postfix ++ postfix --` | left to right |
+| `prefix ++ prefix -- ~ ! unary + unary - unary * unary & (type) sizeof new delete` | right to left |
+| `->* .*` | left to right |
+| `* / %` | left to right |
+| `+ -` | left to right |
+| `<< >>` | left to right |
+| `< <= > >=` | left to right |
+| `== !=` | left to right |
+| `&` | left to right |
+| `^` | left to right |
+| `\|` | left to right |
+| `&&` | left to right |
+| `\|\|` | left to right |
+| `?:` | right to left |
+| `= *= /= %= += -= <<= >>= &= ^= \|=` | right to left |
+| `, (comma)` | — |
+
+**Note:** The unary operations assume higher precedence.
+
+## 3.25 Control Structures
+
+In C++, a large number of functions are used that pass messages, and process the data contained in objects. A function is set up to perform a task. When the task is complex, many different algorithms can be designed to achieve the same goal. Some are simple to comprehend, while others are not. Experience has also shown that the number of bugs that occur is related to the format of the program. The format should be such that it is easy to trace the flow of execution of statements. This would help not only in debugging but also in the review and maintenance of the program later. One method of achieving the objective of an accurate, error-resistant and maintainable code is to use one or any combination of the following three control structures:
+
+1. Sequence structure (straight line)
+2. Selection structure (branching)
+3. Loop structure (iteration or repetition)
+
+Figure 3.4 shows how these structures are implemented using one-entry, one-exit concept, a popular approach used in modular programming.
+
+![](img/62b7c32e48e4f960a8dc2825a7119fb2_123_0.png)
+
+It is important to understand that all program processing can be coded by using only these three logic structures. The approach of using one or more of these basic control constructs in programming is known as structured programming, an important technique in software engineering.
+
+Using these three basic constructs, we may represent a function structure either in detail or in summary form as shown in Figs. 3.5(a), (b) and (c).
+
+Like C, C++ also supports all the three basic control structures, and implements them using various control statements as shown in Fig. 3.6. This shows that C++ combines the power of structured programming with the object-oriented paradigm.
+
+![](img/62b7c32e48e4f960a8dc2825a7119fb2_125_0.png)
+
+(a) First level of abstraction
+
+(b) Second level of abstraction
+
+(c) Detailed flow chart
+
+### The if statement
+
+The if statement is implemented in two forms:
+
+- Simple if statement
+- **if...else** statement
+
+![](img/62b7c32e48e4f960a8dc2825a7119fb2_126_0.png)
+
+Examples:
+
+*Form 1*
+
+``` 
+if(expression is true)
+{
+    action1;
+}
+action2;
+action3;
+```
+
+*Form 2*
+
+### The do-while statement
+
+The do-while is an _exit-controlled_ loop. Based on a condition, the control is transferred back to a particular point in the program. The syntax is as follows:
+
+```cpp
+do
+{
+  action1;
+}
+while(condition is true);
+action2;
+```
+
+### The while statement
+
+This is also a loop structure, but is an _entry-controlled_ one. The syntax is as follows:
+
+```cpp
+while(condition is true)
+{
+  action1;
+}
+action2;
+```
+
+### The for statement
+
+The for is an _entry-controlled_ loop and is used when an action is to be repeated for a predetermined number of times. The syntax is as follows:
+
+```cpp
+for(initial value; test; increment)
+{
+  action1;
+}
+action2;
+```
+
+The syntax of the control statements in C++ is very much similar to that of C and therefore they are implemented as and when they are required.
+
+## Summary
+
+- C++ provides various types of tokens that include keywords, identifiers, constants, strings, and operators.
+- Identifiers refer to the names of variables, functions, arrays, classes, etc.
+- C++ provides an additional use of **void**, for declaration of generic pointers.
+- The enumerated data types differ slightly in C++. The tag names of the enumerated data types become new type names. That is, we can declare new variables using these tag names.
+- In C++, the size of character array should be one larger than the number of characters in the string.
+- C++ adds the concept of constant pointer and pointer to constant. In case of constant pointer, we can not modify the address that the pointer is initialized to. In case of pointer to a constant, contents of what it points to cannot be changed.
+- Pointers are widely used in C++ for memory management and to achieve polymorphism.
+- C++ provides a qualifier called **const** to declare named constants which are just like variables except that their values can not be changed. A **const** modifier defaults to an **int**.
+- C++ is very strict regarding type checking of variables. It does not allow to equate variables of two different data types. The only way to break this rule is type casting.
+- C++ allows us to declare a variable anywhere in the program, as also its initialization at run time, using the expressions at the place of declaration.
+- A reference variable provides an alternative name for a previously defined variable. Both the variables refer to the same data object in the memory. Hence, change in the value of one will also be reflected in the value of the other variable.
+- A reference variable must be initialized at the time of declaration, which establishes the correspondence between the reference and the data object that it names.
+- A major application of the scope resolution (::) operator is in the classes to identify the class to which a member function belongs.
+- In addition to malloc(), calloc() and free() functions, C++ also provides two unary operators, new and delete to perform the task of allocating and freeing the memory in a better and easier way.
+- C++ also provides manipulators to format the data display. The most commonly used manipulators are endl and setw.
+- C++ supports seven types of expressions. When data types are mixed in an expression, C++ performs the conversion automatically using certain rules.
+- C++ also permits explicit type conversion of variables and expressions using the type cast operators.
+- Like C, C++ also supports the three basic control structures namely, sequence, selection and loop, and implements them using various control statements such as, if, if...else, switch, do...while, while and for.
+
+## Key Terms
+
+array | associativity | automatic conversion | backslash character | bitwise expression | **bool** | boolean expression | branching | call by reference | **calloc()** | character constant | chained assignment | **class** | compound assignment | compound expression | **const** | constant | constant expression | control structure | data types | decimal integer | declaration | **delete** | dereferencing | derived-type | **do... while** | embedded assignment | **endl** | entry control | enumeration | exit control | explicit conversion | expression | float expression | floating point integers | **for** | formatting | free store | **free()** | function | hexadecimal integer | identifier | if | **if... else** | implicit conversion | initialization | integer constant | integral expression | integral widening | iteration | keyword | literal | logical expression | loop | loop structure | **malloc()** | manipulator | memory | named constant | **new** | octal integer | operator | operator keywords | operator overloading | operator precedence | pointer | pointer expression | pointer variable | reference | reference variable | relational expression | repetition | scope resolution | selection | selection structure | sequence | sequence structure | **setw** | short-hand assignment | **sizeof()** | straight line | **string** | string constant | **struct** | structure | structured programming | switch | symbolic constant | token | type casting | type compatibility | **typedef** | **union** | user-defined type | variable | **void** | water-fall model | **wchar_t** | **while** | wide-character
+
+## Review Questions
+
+1. **3.1** Enumerate the rules of naming variables in C++. How do they differ from ANSI C rules?
+2. **3.2** An **unsigned int** can be twice as large as the **signed int**. Explain how?
+3. **3.3** Why does C++ have type modifiers?

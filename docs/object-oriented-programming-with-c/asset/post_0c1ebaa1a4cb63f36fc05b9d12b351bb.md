@@ -1,0 +1,249 @@
+
+friend void show(complex);
+};
+complex sum(complex c1, complex c2) // friend
+{
+complex c3;
+c3.x = c1.x + c2.x;
+c3.y = c1.y + c2.y;
+return(c3);
+}
+void show(complex c)  // friend
+{
+cout << c.x << " + j" << c.y << "\n";
+}
+int main( )
+{
+complex A(2.7, 3.5);  // define& initialize
+complex B(1.6); // define& initialize
+complex C;  // define
+C = sum(A, B);  // sum( ) is a friend
+cout << "A = "; show(A);  // show( ) is also friend
+cout << "B = "; show(B);
+cout << "C = "; show(C);
+// Another way to give initial values(second method)
+complex P,Q,R; // define P, Q and R
+P = complex(2.5,3.9); // initialize P
+Q = complex(1.6,2.5); // initialize Q
+R = sum(P,Q);
+cout << "\n"
+cout << "P = "; show(P);
+cout << "Q = "; show(Q);
+cout << "R = "; show(R);
+return 0;
+}
+```
+The output of Program 6.2 would be:
+
+A = 2.7 + j3.5
+
+It is possible to define constructors with default arguments. For example, the constructor `complex()` can be declared as follows:
+
+```
+complex(float real, float imag=0);
+```
+
+The default value of the argument **imag** is zero. Then, the statement
+
+```
+complex C(5.0);
+```
+
+assigns the value 5.0 to the **real** variable and 0.0 to **imag** (by default). However, the statement
+
+```
+complex C(2.0,3.0);
+```
+
+assigns 2.0 to **real** and 3.0 to **imag**. The actual parameter, when specified, overrides the default value. As pointed out earlier, the missing arguments must be the trailing ones.
+
+It is important to distinguish between the default constructor **A::A()** and the default argument constructor **A::A(int = 0)**. The default argument constructor can be called with either one argument or no arguments. When called with no arguments, it becomes a default constructor. When both these forms are used in a class, it causes ambiguity for a statement such as
+
+```
+A a;
+```
+
+The ambiguity is whether to ‘call’ **A::A()** or **A::A(int = 0)**.
+
+## 6.6 Dynamic Initialization of Objects
+
+Class objects can be initialized dynamically too. That is to say, the initial value of an object may be provided during run time. One advantage of dynamic initialization is that we can provide various initialization formats, using overloaded constructors. This provides
+
+the flexibility of using different format of data at run time depending upon the situation.
+
+Consider the long term deposit schemes working in the commercial banks. The banks provide different interest rates for different schemes as well as for different periods of investment. Program 6.3 illustrates how to use the class variables for holding account details and how to construct these variables at run time using dynamic initialization.
+
+# Program 6.3  Dynamic Initialization of Objects
+
+```
+#include <iostream>
+using namespace std;
+class Fixed_deposit
+{
+long int P_amount;  // Principal amount
+int Years; // Period of investment
+float Rate;  // Interest rate
+float R_value; // Return value of amount
+public:
+Fixed_deposit(){}
+Fixed_deposit(long int p, int y, float r=0.12);
+Fixed_deposit(long int p, int y, int r);
+void display(void);
+};
+Fixed_deposit :: Fixed_deposit(long int p, int y, float r)
+{
+P_amount = p;
+Years = y;
+Rate = r;
+R_value = P_amount;
+for(int i = 1; i <= y; i++)
+}
+R_value = R_value * (1.0 + r);
+Fixed_deposit :: Fixed_deposit(long int p, int y, int r)
+{
+P_amount = p; Years = y; Rate = r;
+R_value = P_amount; for(int i=1; i<=y; i++)
+R_value = R_value*(1.0+float(r)/100);
+}
+void Fixed_deposit :: display(void)
+{
+cout << "\n"
+<< "Principal Amount = " << P_amount << "\n"
+<< "Return Value = " << R_value << "\n"
+}
+int main( )
+{
+Fixed_deposit FD1, FD2, FD3; // deposits created
+long int p; // principal amount
+int y; // investment period, years
+float r; // interest rate, decimal form
+int R; // interest rate, percent form
+cout << "Enter amount, period,interest rate(in percent)" << "\n"
+cin >> p >> y >> R;
+FD1 = Fixed_deposit(p,y,R);
+cout << "Enter amount and period, interest rate(decimal form)" << "\n"
+cin >> p >> y >> r;
+FD2 = Fixed_deposit(p,y,r);
+cout << "Enter amount and period" << "\n"
+cin >> p >> y;
+FD3 = Fixed_deposit(p,y);
+cout << "\nDeposit 1" FD1.display( );
+cout << "\nDeposit 2" FD2.display( );
+cout << "\nDeposit 3" FD3.display( );
+return 0;
+}
+```
+
+The output of Program 6.3 would be:
+Enter amount,period,interest rate(in percent) 10000 3 18
+Enter amount,period,interest rate(in decimal form)
+10000 3 0.18
+Enter amount and period
+10000 3
+
+Deposit 1
+Principal Amount = 10000
+Return Value = 16430.3
+
+Deposit 2
+Principal Amount = 10000
+Return Value = 16430.3
+
+Deposit 3
+Principal Amount = 10000
+Return Value = 14049.3
+
+The program uses three overloaded constructors. The parameter values to these constructors are provided at run time. The user can provide input in one of the following forms:
+
++   1. Amount, period and interest in decimal form.
++   2. Amount, period and interest in percent form.
++   3. Amount and period.
+
+> **NOTE:** *Since the constructors are overloaded with the appropriate parameters, the one that matches the input values is invoked. For example, the second constructor is invoked for the forms (1) and (3), and the third is invoked for the form (2). Note that, for form (3), the constructor with default argument is used. Since input to the third parameter is missing, it uses the default value for r.*
+
+# 6.7 Copy Constructor
+
+We briefly mentioned about the copy constructor in Sec. 6.3. We used the copy constructor
+
+```
+integer(integer &I);
+```
+
+in Sec. 6.4 as one of the overloaded constructors.
+
+As stated earlier, a copy constructor is used to declare and initialize an object from another object. For example, the statement
+
+```
+integer I2(I1);
+```
+
+would define the object I2 and at the same time initialize it to the values of I1. Another form of this statement is
+
+```
+integer I2 = I1;
+```
+
+The process of initializing through a copy constructor is known as *copy initialization*. Remember, the statement
+
+```
+I2 = I1;
+```
+
+will not invoke the copy constructor. However, if I1 and I2 are objects, this statement is legal and simply assigns the values of I1 to I2 member-by-member. This is the task of the overloaded assignment operator(=). We shall see more about this later.
+
+A copy constructor takes a reference to an object of the same class as itself as an argument. Let us consider a simple example of constructing and using a copy constructor as shown in Program 6.4.
+
+# Program 6.4  Copy Constructor
+
+The output of Program 6.5 would be:
+
+Joseph
+Louis
+Lagrange
+Joseph Louis
+Joseph Louis Lagrange
+
+> **NOTE:** *This Program uses two constructors. The first is an empty constructor that allows us to declare an array of strings. The second constructor initializes the **length** of the string, allocates necessary space for the string to be stored and creates the string itself. Note that one additional character space is allocated to hold the end-of-string character '\0'.*
+
+The member function **join()** concatenates two strings. It estimates the combined length of the strings to be joined, allocates memory for the combined string and then creates the same using the string functions **strcpy()** and **strcat()**. Note that in the function **join()**, **length** and **name** are members of the object that calls the function, while **a.length** and **a.name** are members of the argument object **a**. The **main()** function program concatenates three strings into one string. The output is as shown below:
+
+Joseph Louis Lagrange
+
+# 6.9 Constructing Two-Dimensional Arrays
+
+We can construct matrix variables using the class type objects. The example in Program 6.6 illustrates how to construct a matrix of size m x n.
+
+# Program 6.6 Constructing Matrix Objects
+
+```
+#include <iostream>
+using namespace std;
+class matrix
+{
+int **p; // pointer to matrix
+d1,d2; // dimensions
+public:
+matrix(int x, int y);
+void get_element(int i, int j, int value)
+{p[i][j]=value;}
+int & put_element(int i, int j)
+{return p[i][j];}
+};
+matrix :: matrix(int x, int y)
+{
+d1 = x; d2 = y;
+p = new int *[d1]; // creates an array pointer
+for(int i = 0; i < d1; i++)
+p[i] = new int[d2]; // creates space for each row
+}
+int main( )
+{
+int m, n;
+cout << "Enter size of matrix: "
+cin >> m >> n;
+matrix A(m,n); // matrix object A constructed
+cout << "Enter matrix elements row by row \n"
+int i, j, value;
+for(i = 0; i < m; i++)
+for(j = 0; j < n; j++)
+```
