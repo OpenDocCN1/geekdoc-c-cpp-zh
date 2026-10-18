@@ -1,0 +1,9 @@
+proportional to the current bandwidth that its associated users receive. This policy may lead to unfair bandwidth allocation and poor load balancing.
+
+# 6.1.2.5  Min-Max Load Balancing Allocation
+
+An association policy aiming at providing fair load balancing across the APs is *min-max load balancing* [3]. The load of an *AP* needs to reflect its inability to satisfy the requirements of its associated users and it should be inversely proportional to the average bandwidth that they enjoy. A feasible association is min-max load balanced if its corresponding load vector has the same or lower lexicographical value than any other load vector of any other feasible assignment. According to such a policy, *STAs* are associated to the *APs* with the objective of min-max load balancing [3]. Load balancing along with mean *RSSI* can be used as the association metric [4]. According to such a metric, users select the *AP* on the basis of the number of users already associated with that AP and the mean *RSSI* value.
+
+# 6.1.2.6  Link Rate and Throughput-Based Association
+
+Link rate and realized throughput together can be considered to formulate an association policy [13] for a multi-channel multiple AP network. The objective is to maximize the capacity region of the set of *APs* under a dynamic traffic model. Users arrive at a point within the network coverage area, associate with an access point, realize a download and leave. Network capacity is defined by the limiting load beyond which the number of active users would grow indefinitely as the arrival rate in some region is greater than the rate at which downloads complete. The limitation of such an approach is that using network capacity as a criterion for comparison does not necessarily consider how well policies perform at normal loads.

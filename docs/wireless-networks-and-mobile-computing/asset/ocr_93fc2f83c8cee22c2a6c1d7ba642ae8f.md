@@ -1,0 +1,93 @@
+Tri-digit Fibonacci number system, 448
+
+tri-digit Fibonacci Number System, 453
+
+triangulation, 27, 195
+
+trilateration, 27
+
+TSS, 402
+
+two-band buffering, 85, 91, 95, 100, 116, 119, 122–125, 128, 129, 131, 147, 164, 167
+
+UHF, 4, 6
+
+user profile replication, 54
+
+VANET, 14
+
+VarBaTaC, 361
+
+variable-base tacit communication, 361
+
+vehicular ad hoc networks, 14
+
+vertical handoff, 64
+
+VHF, 4
+
+viewed region of residence, 195
+
+visitor location register, 43
+
+VLR, 43, 45, 49, 51, 53, 54
+
+voice over IP, 18
+
+VoIP, 18
+
+Voronoi diagram, 336
+
+WATM networks, 21
+
+WBAN, 16
+
+WEP, 5
+
+white spaces, 11
+
+Wi-Fi protected access, 5
+
+WiFi, 4, 6, 11, 12
+
+wired equivalent privacy, 5
+
+wireless asynchronous transfer mode networks, 21
+
+wireless local area network, 5
+
+wireless mesh networks, 13
+
+wireless microphone, 4
+
+wireless personal area networks, 6
+
+wireless sensor network, 66
+
+wireless sensor sensor networks, 14
+
+WLAN, 5, 13, 321
+
+WMN, 13
+
+Worst-Case Deviation of Bandwidth from Optimality, 162
+
+Worst-Case Time Complexity of Assignment Algorithm, 161
+
+WPA, 5
+
+WPA2, 5
+
+WPAN, 6, 16
+
+WSN, 14, 66
+
+WSNs for agriculture, 445
+
+ZDO, 6
+
+ZigBee, 5, 11
+
+ZigBee device objects, 6
+
+ZRP, 301, 314

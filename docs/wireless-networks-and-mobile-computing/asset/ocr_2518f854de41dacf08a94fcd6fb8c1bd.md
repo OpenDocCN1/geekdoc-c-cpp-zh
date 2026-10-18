@@ -1,0 +1,7 @@
+![](bbox=[0.257, 0.095, 0.752, 0.419])
+
+**FIGURE 1.2:** Schematic view of a cognitive radio network
+
+Cognitive radios are widely accepted as the wireless technology of the future and it is envisioned that most radios on portable devices (e.g., cellphones (telephones used in cellular mobile networks) and Wi-Fi enabled notebook PCs) will possess some amount of cognitive capability [14] by the time this book is published.
+
+In the context of networks operating in licensed bands, the ability to exploit unused parts of the spectrum can provide a multitude of benefits. Taking the case of cellular networks as an example, such frequency agility can dramatically reduce operational, deployment and licensing costs, increase the number of users that can be supported under a single base station and improve the operator’s ability to provide guaranteed service through the intelligent exploitation of the large additional unused spectrum pool. Moreover, such cognitive radio-based cellular networks can offer benefits in the events of attacks or natural disasters. While a conventional cellular system is centralized and can only operate in licensed bands, a cognitive system is capable of establishing communications even if some network elements are out of order or the

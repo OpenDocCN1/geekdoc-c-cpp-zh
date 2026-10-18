@@ -1,0 +1,7 @@
+# Wireless Networks and Mobile Computing
+
+![](bbox=[0.16, 0.057, 0.839, 0.426])
+
+k. For simplicity, we assume the regions of residence as polygonal. Let \( r_{1u} \), \( r_{2u} \) and \( r_{3u} \) be the range measurements that \( u \) obtains by ranging with \( i \), \( j \) and \( k \), respectively. According to the view of node \( i \), \( u \) lies in the region \( R_{iu} \), dictated by the shape \( A'B'C'D'C''A'' \) as demonstrated in Example 18. Similarly, \( D'E'F'E''F''D'' \) and \( P'Q'Q''R'R'S'S''P'' \) define the region of residence of \( u \) in the views of the nodes \( j \) and \( k \), respectively. Following Theorem 11, the shaded region \( LMN \) defines the minimum region of residence of node \( u \) where \( u \) is guaranteed to be found.
+
+Once the minimum region of residence of node \( u \) is found, node \( u \) then tries to refine the minimum region of residence of a neighbor \( v \), \( \forall v \in N(u) \), using \( R_u \) and the corresponding measured range \( r_{uv} \) from \( v \). The new minimum region of residence of node \( v \), \( R'_v \), is defined as the intersection of the viewed region of residence of \( v \) by \( u \), \( R_{vu} \) and the current minimum region of residence of \( v \), \( R_v \). In Figure 4.9, region \( LMN \) defines the minimum region of residence of node \( u \) and \( r_{3u} \) is the measured

@@ -1,0 +1,7 @@
+# Mobility Management in Cellular Networks
+
+![](bbox=[0.195, 0.072, 0.786, 0.384])
+
+different subnetworks must send their packets through IP nodes or routers that perform the switching functions. Standards allow the packets to be sent by a mobile node (MN) without interruption to another destination MN in some other subnetwork even when the source MN is moving from one subnetwork to another. (Note that the term MN is used instead of MT in order to follow the mobile IP conventions.) When an MN resides in its own registered area, it accesses the Internet through a home agent (HA) which is a router in its own subnetwork (where it is originally registered). When the MN moves to a different subnetwork, it accesses the Internet through a foreign agent (FA) which is a router in its currently visiting subnetwork. The destination node which receives the packet from this MN is called the correspondent node (CN). The essence of the mobile IP network architecture is illustrated in Figure 2.10 [1].
+
+As shown in the figure, the MN has a home agent in its own subnetwork (subnet A) through which it accesses the Internet. When the MN moves to a different subnetwork (subnet B in the figure), it will have a foreign agent in subnet B through which it will access the Internet. The communication between the MN and the correspondent node is now effected through the MN’s HA and the current FA.

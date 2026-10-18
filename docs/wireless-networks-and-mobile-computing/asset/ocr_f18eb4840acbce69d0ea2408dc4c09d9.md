@@ -1,0 +1,9 @@
+networks such as cellular networks are beginning to look at possibilities of migrating to either WMN-based or WMN-like topologies [21, 22, 24, 28]. The promises are several: reducing infrastructure setup and maintenance cost, improving fault tolerance and robustness in the face of unnatural events and natural calamities and enhancing network coverage, among others. However, with the use of a mesh architecture, the importance of the channel assignment problem becomes even more accentuated due to the increased probability of interference between the links of a WMN, as most applications of WMNs (e.g., dense sensor networks) tend to contain more links than traditional cellular and ad hoc networks in an attempt to improve reliability through path diversity [28, 27, 26, 25]. As an example, Lan and Trang [23] proposed a technique for channel assignment in WMNs with multiple channels and multiple radios at each node of the network for increasing the network throughput.
+
+# 1.1.9 Vehicular Ad Hoc Networks (VANETs)
+
+A vehicular ad hoc network (VANET) is a mobile ad hoc network (MANET) consisting of moving cars. Each participating car acts as a wireless router or node of the network, with a range of about 100 to 300 metres. If cars move out of the signal range, they will drop out of the network, while other cars may also join the network. Design of such a network was first intended to enable police and fire vehicles to communicate with each other for security and safety purposes on highways.
+
+# 1.1.10 Wireless Sensor Networks
+
+A wireless sensor network (WSN) or simply a sensor network, is a network of spatially distributed autonomous sensors to monitor physical or environmental conditions, such as temperature, sound, pressure, etc. and cooperatively pass their data through the network to a sink node at some location, as shown in Figure 1.3. The more modern networks are bi-directional so as to enable control of sensor activity.

@@ -1,0 +1,97 @@
+
+[11] A. Eisenblatter, H.-F. Geerders, and I. Siomina, “Integrated access point placement and channel assignment for wireless LANs in an indoor office environment,” *In Proceedings of WoWMoM 2007*, Espoo, Finland, pp. 1–10, 2007.
+
+[12] F. Xu, C. C. Tan, Q. Li, G. Yan, and Jie Wu, “Designing a practical access point association protocol,” *In Proceedings of INFOCOM 2010*, San Diego, pp. 1361–1369, March 15–19, 2010.
+
+[13] T. Bonald, A. Ibrahim, and J. Roberts, “The impact of association on the capacity of WLANs,” *In Proceedings of 7th International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks*, Seoul, pp. 1–10, 2009.
+
+[14] H. Zhou, P. Fan, and D. Guo, “Joint channel probing and proportional fair scheduling in wireless networks,” *IEEE Transactions on Wireless Communications*, vol. 10, no. 10, pp. 3496–3505, Oct. 2011.
+
+[15] I. Koukoutsidis and V. A. Siris, “Access point assignment algorithms in WLANs based on throughput objectives,” *In Proceedings of WiOPT 2008*, Berlin, pp. 375–383, April 2008.
+
+[16] I. Koutsopoulos and L. Tassiulas, “Joint optimal access point selection and channel assignment in wireless networks,” *IEEE/ACM Transactions on Networking*, vol. 15, no. 3, June 2007.
+
+[17] X. Ling and K. L. Yeung, “Joint access point placement and channel assignment for 802.11 wireless LANs,” *IEEE Transactions on Wireless Communications*, vol. 5, no. 10, pp. 2705–2711, 2006.
+
+[18] Li(Erran) L. Li, M. Pal, and Y. R. Yang, “Proportional fairness in multi-rate wireless LANs,” *In Proceedings of the INFOCOM 2008*, Phoenix, pp. 1678–1686, April 2008.
+
+[19] IEEE 802.11 Standard, 1997.
+
+[20] J. Lim, H. G. Myung, K. Oh, and D. J. Goodman, “Proportional fair scheduling of uplink single-carrier FDMA systems,” *In Proceedings of the PIMRC*, Helsinki, pp. 1–6, 2006.
+
+[21] H. Kim and Y. Han “A proportional fair scheduling for multicarrier transmission systems,” *IEEE Commun. Letters*, vol. 9, no. 3, pp. 210–212, 2005.
+
+[22] http://www.cisco.com/c/en/us/td/docs/solutions/Enterprise/Mobility/emob73dg/emob73.pdf
+
+[23] http://www.zcomax.co.uk/doc/XG-705S%20 Draft%20Product%20Specification_C0-060517.pdf, http://www.zcomax.co.uk/doc/AG-623C.pdf
+
+# Chapter 7
+
+# Placement of Sensor Nodes in WSN
+
+| Section | Title | Page |
+|---|---|---:|
+| 7.1 | Introduction | 335 |
+| 7.2 | Preliminaries | 336 |
+| 7.3 | Deployment Algorithm | 338 |
+| 7.4 | Experimental Results | 341 |
+| 7.5 | Exercises | 346 |
+|  | Bibliography | 347 |
+
+# 7.1  Introduction
+
+In this chapter, we consider the problem of deployment of sensor nodes in a wireless sensor network (WSN) to cover a region with a given number of sensor nodes. However, the results we present here will also be applicable for placement of base stations in a cellular mobile network. The overall objective is to place a given number of sensor nodes in a convex region and assign range to each of them so that every point in the region is covered by at least one sensor node and the maximum range assigned is minimized. We assume that the same range is assigned uniformly to all the sensor nodes and that the sensing ranges and communication ranges of the sensor nodes are the same.
+
+In an abstract sense, the above problem basically maps to completely cover a
+
+convex region (without leaving any holes) by a given number of circles of equal radius, as illustrated in Figure 7.1, with the objective of minimizing the radius. We describe an elegant algorithm for this problem using a Voronoi diagram, as presented in [8, 9]. Other results for this problem appear in the literature and indicate some special geometric structure of the region to be covered, e.g., a square [2] and an equilateral triangle [1]. For these special cases, the minimum radius obtained by the algorithm [8] compares favorably with the results reported in [1, 2]. Also, the execution time of this algorithm is a fraction of a second, whereas the existing methods may require 2 weeks to yield a reasonable value of the number of circles (≥ 27) as reported in [1, 2], even for special cases.
+
+# 7.2  Preliminaries
+
+Consider a set of points $P = \{p_1,p_2,\ldots,p_k\}$ inside a convex polygon $\Pi$ where the $i$-th base station is located at point $p_i \in \Pi$. We use $VOR(P)$ to refer the Voronoi diagram [3] of the set of points $P$, and $vor(p_i)$ to denote the Voronoi cell corresponding to the point $p_i \in P$. Since we need to establish communication inside $\Pi$, if a part of the region $vor(p_i)$ goes outside $\Pi$ for some $i$, the region $vor(p_i) \cap \Pi$ is used as $vor(p_i)$.
+
+Note that all the points inside $vor(p_i)$ are closer to $p_i$ than any other point $p_j \in P$, $j \ne i$. Thus, all these points will communicate with $p_i$. As all the sensor nodes are of equal range, our objective is to arrange the points in $P$ inside the region so that the maximum range required $(\rho)$ among the points in $P$ is as small as possible. The algorithm [8] described below is iterative. At each step, it perturbs the point set $P$ as explained below, and finally attains a local minimum.
+
+[PAGE 357]
+
+![](img/6578f6fc95ac71d2c7109e594d9df12f_357_0.png)
+
+**FIGURE 7.1:** Illustration of abstract problem
+
+[PAGE 358]
+
+# 7.3 Deployment Algorithm
+
+In each iteration, we compute _VOR_(_P_) [3], and then compute the circumscribing circle _C<sub>i</sub>_ of each _vor_(_p<sub>i</sub>_) using the algorithm proposed in [4] for each _i_ = 1, 2, ..., _k_. Let _r<sub>i</sub>_ denote the radius of _C<sub>i</sub>_. It can be easily verified that to cover a given convex polygon completely by a sensor node with minimum range, we need to place the sensor node at the center of the circumscribing circle of that convex region, and the range assigned to that base station is equal to the radius of the circumscribing circle. Thus, for each _i_ = 1, 2, ..., _k_, we move _p<sub>i</sub>_ to the center of _C<sub>i</sub>_ and assign range _r<sub>i</sub>_ to it. Next, we compute $\rho = max\{r_i, i=1,2,\dots,k\}$. The stepwise description of the algorithm for an iteration is given below.
+
++   Input: (* of the _j_-th iteration *)
++   _k_ points _P_ = {_p_<sub>1</sub>, _p_<sub>2</sub>, ..., _p<sub>k</sub>_}
++   If _j_ = 1, the members of _P_ are _k_ random points inside the polygon $\Pi$, and if _j_ > 1, the members of _P_ are the output of the (_j_ - 1)-th iteration.
+
++   Output: /\* of the _j_-th iteration \*/
++   The range $\rho$ obtained in this iteration and
++   the centers of _k_ circles for the next iteration.
+
++   Step 1: Compute _VOR_(_P_).
+
++   Step 2: Compute the minimum enclosing circle _C<sub>i</sub>_ of _vor_(_p<sub>i</sub>_).
+
++   Step 3: Compute $\rho = max\{r_i\}_{i=1}^k$, where _r<sub>i</sub>_ is the radius of the circle _C<sub>i</sub>_.
+
++   Step 4: Output $\rho$ and the centers of _C<sub>i</sub>_ for _i_ = 1, 2, ..., _k_.
+
++   Lemma 24. At each iteration, _i_) the newly assigned position of each point _p<sub>i</sub>_ lies inside the corresponding _vor_(_p<sub>i</sub>_), and _ii_) the value of $\rho$ decreases.
+
++   Proof. (i) The smallest enclosing circle of a convex polygon passes through the farthest pair of vertices of the polygon and the line segment joining that pair of vertices
+
+[PAGE 359]
+
+# Placement of Sensor Nodes in WSN
+
+![](img/6578f6fc95ac71d2c7109e594d9df12f_359_0.png)
+
+defines the diameter of the smallest enclosing circle, or it passes through three or more vertices of the polygon. In the first case, the lemma obviously follows. In the second case, if the center lies outside the convex polygon, there exists a point-free arc of the enclosing circle having length greater than half of the perimeter of the circle. Thus it is not the minimum enclosing circle of that convex polygon (see Chapter 16 of [5]).
+
+(ii) Let {p<sub>1</sub>,p<sub>2</sub>,...,p<sub>k</sub>} be the position of the base stations prior to an iteration and ρ<sub>old</sub> be the corresponding value of ρ. We have drawn the Voronoi diagram of {p<sub>1</sub>,p<sub>2</sub>,...,p<sub>k</sub>} and then computed the smallest enclosing circle of each vor(p<sub>i</sub>). Let {p'<sub>1</sub>,p'<sub>2</sub>,...,p'<sub>k</sub>} be the center of these circles, and C* be the largest one among these circles. In other words, ρ<sub>old</sub> is equal to the radius of C*. In this iteration, the positions of the base stations are revised to {p'<sub>1</sub>,p'<sub>2</sub>,...,p'<sub>k</sub>}. The Voronoi polygon around each p'<sub>i</sub> in the next iteration is obtained as follows:
+
+Draw copies of C* with centers at {p'<sub>1</sub>,p'<sub>2</sub>,...,p'<sub>k</sub>}. Let C<sub>i</sub> be the copy of C*

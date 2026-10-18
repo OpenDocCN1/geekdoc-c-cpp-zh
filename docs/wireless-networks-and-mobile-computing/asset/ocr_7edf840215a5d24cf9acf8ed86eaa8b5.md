@@ -1,0 +1,10 @@
+their true destinations by changing their destination addresses. Packets may be selected randomly or, more intelligently, by critical examination of their contents and limiting selection to packets containing important information.
+
+A fourth kind of attack may be a little different. The attacker node misdirects a packet with changed route information in the message so that the packet moves around a local loop. Thus, the packet never reaches its destination, but the network resources of communication bandwidth, node energy, etc., are continuously wasted. This kind of attack is more serious than the third kind mentioned above.
+
+In a fifth type, an internal node may be *jamming* by continually transmitting high intensity radio signals of the same frequency as that used by all the nodes in the network so that other nodes are unable to transmit their packets (for collision-free transmission) or nodes are unable to receive packets correctly due to the interference created by noise signals from the attacker node (bit-error rate of the receiver may be reduced due to reduced SNR). To measure the performance of the network under noisy situations, we usually define two parameters:
+
++   - **Packet Sending Ratio (PSR)** on the transmitter side, which is equal to *s/n*, where *s* is the number of packets actually sent by the transmitter (within a specified time-out period), given a total number of *n* generated packets (which are intended to be sent).
++   - **Packet Delivery Ratio (PDR)** on the receiver side, which is equal to *r/s*, where *r* is the number of correctly received packets out of the total of *s* packets sent by the transmitter.
+
+Due to such jamming signals, both *PSR* and *PDR* are likely to be reduced. This type is called *constant jamming* to distinguish it from the other types of jamming which arise from the attack of the second type above. Note that the second type of attack has a flavour of jamming as transmission of regular packets is hampered by

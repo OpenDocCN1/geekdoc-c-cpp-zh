@@ -1,0 +1,9 @@
+width is always less than or equal to 5/3. However, where 1) $s_0 \geq (s_1 + 5s_2)$ with $s_2 \leq s_1 \leq 2s_2$, and 2) $s_0 \geq (2s_1 + 3s_2)$ with $s_1 \geq 2s_2$, this ratio becomes 10/7. The benchmark Problems 3, 4, 7, 8, 10 and 11 all fall under one of these two cases.
+
+It should be noted that the above analysis is based on a conservative estimate of the increment (taking it always to be the maximum) and thus the above ratio is a very loose upper bound on the deviation of the required bandwidth from optimality. However, computing the average case approximation ratio appears to be very difficult and is left as an open problem.
+
+# 3.7  Conclusion
+
+We have discussed lower bounds on the required bandwidth for assigning $w$ channels to each node of a hexagonal cellular network with two-band buffering for different relative values of $s_0$, $s_1$, and $s_2$ [29]. Next we described an algorithm based on GA for solving the channel assignment problem in its general form, then demonstrated how this technique can be effectively applied to the special cases of hexagonal cellular networks with homogeneous demands and two-band buffering. We have also shown that this methodology can easily be applied to the cases of non-homogeneous demands.
+
+We explained an elegant technique for solving the channel assignment problem (CAP) which is applicable even to a cellular network of non-hexagonal structure. The assignment is performed for a given bandwidth $B$ with a view to minimizing call blocking. This technique can achieve the optimal solutions for all the well-known benchmark problems when the given bandwidth $B$ is equal to the lower bound of the corresponding problem. The required computation time has also been improved over the critical block approach in [28]. How the unused or redundant channels pro-

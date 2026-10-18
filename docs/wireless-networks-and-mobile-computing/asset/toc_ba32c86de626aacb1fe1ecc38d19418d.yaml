@@ -1,0 +1,528 @@
+- - '#'
+  - 无线网络与移动计算
+- - '##'
+  - 前言
+- - '##'
+  - 第1章
+- - '###'
+  - 引言
+- - '##'
+  - 1.1 涉及无线通信的应用
+- - '###'
+  - 1.1.1 无绳电话
+- - '###'
+  - 1.1.4 ZigBee网络
+- - '###'
+  - 1.1.6 Ad Hoc Networks
+- - '###'
+  - 1.1.8 无线网状网络
+- - '###'
+  - 1.1.9 车载自组织网络（VANETs）
+- - '###'
+  - 1.1.10 无线传感器网络
+- - '###'
+  - 1.1.11 体域网
+- - '##'
+  - 1.2 设备移动性的影响
+- - '##'
+  - 1.3 蜂窝移动网络中的问题
+- - '###'
+  - 1.3.1 移动性管理
+- - '###'
+  - 1.3.1.1 呼叫建立
+- - '###'
+  - 1.3.1.2 切换管理
+- - '###'
+  - 1.3.1.3 互联与互操作
+- - '##'
+  - 1.3.2 带宽管理
+- - '##'
+  - 1.3.3 能量管理
+- - '##'
+  - 1.3.4 安全性
+- - '##'
+  - 1.4 Ad Hoc 网络中的问题
+- - '###'
+  - 1.4.1 初始化与领导者选举
+- - '###'
+  - 1.4.2 位置识别
+- - '##'
+  - 1.4.3 能源与安全问题
+- - '##'
+  - 1.5 认知无线电网络中的问题
+- - '##'
+  - 1.6 传感器网络中的问题
+- - '##'
+  - 1.7 练习
+- - '##'
+  - Chapter 2
+- - '##'
+  - Mobility Management in Cellular Networks
+- - '##'
+  - Wireless Networks and Mobile Computing
+- - '##'
+  - 'FIGURE 2.4: Movement-based location update scheme'
+- - '##'
+  - 2.1.4 数据库架构
+- - '###'
+  - 中央化数据库架构
+- - '###'
+  - per-user 位置缓存
+- - '##'
+  - 移动性管理在蜂窝网络中
+- - '###'
+  - 分布式数据库架构
+- - '####'
+  - 完全分布式树形数据库架构
+- - '##'
+  - 2.2 移动 IP 网络中的呼叫设置
+- - '##'
+  - 2.3 切换管理
+- - '##'
+  - 2.4.1 随机游走移动模型
+- - '##'
+  - 2.4.2 随机途径移动模型
+- - '##'
+  - 2.4.4 基于地图的移动模型
+- - '##'
+  - 2.4.5 基于组的移动模型
+- - '##'
+  - 2.5 习题
+- - '##'
+  - 参考文献
+- - '##'
+  - Mobility Management in Cellular Networks
+- - '##'
+  - Chapter 3
+- - '##'
+  - Bandwidth Management in Cellular Networks
+- - '###'
+  - 3.1.2 Mathematical Formulation of CAP
+- - '###'
+  - 3.1.3 CAP and Generalized Graph Coloring
+- - '##'
+  - 注意事项
+- - '##'
+  - 示例
+- - '##'
+  - 以下是需要翻译的文本
+- - '##'
+  - '**结果 4.** *(第 2 条定理，[20])*: 设 $P=(X,W,C)$ 为 CAP，$Q$ 为 1 完备子集。设 $i\in Q$。假设 $c_{ii}=k>v''>1$
+    且存在 $Q$ 的子集 $R$，满足：'
+- - '##'
+  - 3.4.1 问题建模
+- - '##'
+  - 'Step 3:'
+- - '##'
+  - 'Step 4: *(Selection or Reproduction)*'
+- - '##'
+  - '*Selection operation*'
+- - '##'
+  - 'Step 5: *(Crossover)*'
+- - '##'
+  - '*Crossover operation*'
+- - '##'
+  - 'Step 6: *(Mutation)*'
+- - '##'
+  - '*Mutation operation*'
+- - '##'
+  - 'Step 7:'
+- - '##'
+  - 'Step 8: (Elitism)'
+- - '##'
+  - 'Step 9:'
+- - '##'
+  - '**FIGURE 3.10:** (a) Subgraph of cellular graph and (b) frequency assignment
+    when $s_1=s_2$'
+- - '##'
+  - Theorem 3.
+- - '##'
+  - '3.4.3.2　Scheme 2: for i) $s_2<s_1\leq 2s_2$ and ii) $s_1\geq 2s_2$'
+- - '##'
+  - 图3.13：六边形蜂窝网络的九节点子图
+- - '##'
+  - '**表3.6：** 方案2的频率间隔矩阵'
+- - '###'
+  - 3.5.2 解决原始 CAP 从聚合 CAP 的技术
+- - '##'
+  - 情况1：分配方案$\Phi'$是可允许的
+- - '##'
+  - 蜂窝网络中的带宽管理 143
+- - '##'
+  - 表3.13：问题5中\(P'\)的推导信道分配方案
+- - '##'
+  - 表3.15：问题5的完整信道分配方案
+- - '##'
+  - 3.6 快速近乎最优信道分配
+- - '##'
+  - 3.6.1 分配算法
+- - '##'
+  - 3.6.2  **算法收敛行为**
+- - '##'
+  - 3.7  结论
+- - '##'
+  - 3.8 习题
+- - '##'
+  - 参考文献
+- - '##'
+  - 蜂窝网络中的带宽管理
+- - '##'
+  - 第 4 章：移动网络中的节点定位
+- - '###'
+  - 4.2 预备知识
+- - '##'
+  - 图 4.1：延迟信道与接收机设计
+- - '##'
+  - 4.3 定位误差估计
+- - '##'
+  - 4.3.1 节点坐标模糊性引起的误差
+- - '##'
+  - '**Lemma 9.**'
+- - '##'
+  - 4.3.2 测距误差的贡献
+- - '##'
+  - 4.3.3 综合误差估计
+- - '##'
+  - '**Corollary 1.**'
+- - '##'
+  - 无线网络与移动计算
+- - '##'
+  - '图 4.10: 相邻节点的后续区域的精炼'
+- - '##'
+  - 定理 13.
+- - '##'
+  - 定义 3.
+- - '##'
+  - 定理 14.
+- - '##'
+  - 定理 15.
+- - '##'
+  - 4.5.2 区域估计算法
+- - '##'
+  - 4.5.3 复杂度分析
+- - '##'
+  - 4.5.4 仿真结果
+- - '##'
+  - Localization of Nodes in Mobile Networks
+- - '##'
+  - 'FIGURE 4.11: Variation of size of stable region of residence with λ'
+- - '##'
+  - 'FIGURE 4.13: Variation of size of stable region of residence with percent of
+    LOS signals'
+- - '##'
+  - 'FIGURE 4.14: Variation of size of stable region of residence with percent of
+    RNs'
+- - '##'
+  - Exercises
+- - '##'
+  - 5.2 自组网中的广播
+- - '##'
+  - 5.2.1 系统模型
+- - '##'
+  - 5.2.2 确定性传输调度
+- - '##'
+  - 5.2.2.3 逐次划分方案
+- - '##'
+  - 备注 16. 每个二级块 $P(2,k)$，其中 $0 \leq k \leq r^2m(m-1)-1$，其大小为 $n/r^2$。
+- - '##'
+  - 备注 17. 任意节点 $id \in V$ 将恰好属于 $m(m-1)$ 个二级分区块中其中之一。
+- - '##'
+  - '**Theorem 16.** 给定任意子集 $R$ 的 $V$，满足 $2^h \leq |R| \leq 2^{h+1}-1$，$h \geq 0$，且
+    $n \geq r^h(2^{h+1}-1)/2^h$，则至少存在一个 $j \leq h$ 级块，其中仅包含 $R$ 的一个元素。'
+- - '##'
+  - '**Theorem 17.** 考虑一个在相位开始时尚未接收到消息的节点 $x$，以及至少有一个节点 $y$（在节点 $x$ 的邻居集合 $R$ 中）已经拥有消息。在该相位期间，必然存在至少一个时间槽
+    $T(k)$（$0 \leq k \leq r^h\frac{m!}{(m-h)!}-1$），使得恰好有一个已知的邻居在该时隙发送消息，节点 $x$ 能够正确接收（不发生碰撞）。'
+- - '##'
+  - 5.4 基于位置信息的时隙分配
+- - '##'
+  - 5.4.3 最小槽位需求（蜂窝网络）
+- - '##'
+  - 5.4.4 均匀小区需求
+- - '##'
+  - '**Theorem 20.** *The minimum slot requirement of a cellular graph with two-cell
+    buffering having s₀ = s₁ = s₂ and a homogeneous demand of one time slot per cell
+    is equal to the demand of the seven-node critical block of the graph.*'
+- - '##'
+  - '**Theorem 20.** *The minimum slot requirement of a cellular graph with two-cell
+    buffering having s₀ = s₁ = s₂ and a homogeneous demand of one time slot per cell
+    is equal to the demand of the seven-node critical block of the graph.*'
+- - '##'
+  - 5.4.4.2  Algorithm homogeneous_slot_assignment
+- - '##'
+  - 5.4.5  异构小区需求
+- - '##'
+  - 信号传输在自组织网络中的应用
+- - '##'
+  - 5.4.6.1 算法 COSA
+- - '##'
+  - 5.4.6.2 复杂度分析
+- - '##'
+  - 5.4.6.3 新移动终端加入网络
+- - '##'
+  - 5.4.6.4  **移动终端离开单元格或网络**
+- - '##'
+  - 5.4.6.5  **handoff 情况**
+- - '###'
+  - 5.5.2.1  Preliminaries and Basic Idea
+- - '###'
+  - 5.5.2.3  Collision Resolution
+- - '###'
+  - 5.5.2.4  Moving from *active* State to *transmit* State
+- - '##'
+  - 5.5.2.5   Algorithm bf_broadcast
+- - '##'
+  - 图 5.22：广播算法解决冲突的一个示例
+- - '##'
+  - 步骤 6.3
+- - '##'
+  - 步骤 6.4
+- - '###'
+  - 示例 27
+- - '###'
+  - 图 5.23：广播算法解决冲突的另一个示例
+- - '###'
+  - 示例 28
+- - '##'
+  - 3.2，当由处于*冲突*状态的节点引起的 *ack2* 或 *ack3* 信号不再存在时，将其状态改为*发送*
+- - '##'
+  - 5.5.2.6 移动性鲁棒性
+- - '##'
+  - 5.5.2.7 复杂度
+- - '##'
+  - 5.5.3 闲聊
+- - '###'
+  - 5.5.3.1 基本思想
+- - '###'
+  - 5.5.3.2 算法 bf_gossip
+- - '###'
+  - 5.5.3.3 复杂度
+- - '##'
+  - 5.6 自组织网络中的点对点路由
+- - '##'
+  - 5.8 动态源路由（DSR）
+- - '##'
+  - 5.9 自组织按需距离矢量路由（AODV）
+- - '##'
+  - 5.36 请求泛洪
+- - '##'
+  - 6. 描述一个确定性广播算法，用于在自适应网络中进行广播，明确说明底层模型和算法的工作原理。
+- - '##'
+  - 7. 证明上述算法的正确性，并计算其最坏情况时间复杂度。
+- - '##'
+  - 8. 主动、反应式和混
+- - '##'
+  - 第 6 章
+- - '###'
+  - 无线局域网
+- - '###'
+  - 6.1.2 不同的关联策略
+- - '####'
+  - 6.1.2.1 最强信号优先（SSF）关联
+- - '####'
+  - 6.1.2.2 基于最大效用的关联
+- - '##'
+  - 6.1.2.3 Max-Min Fair (MMF) Allocation
+- - '##'
+  - 6.1.2.4 Least Load First (LLF)
+- - '##'
+  - 6.1.2.5 Min-Max Load Balancing Allocation
+- - '##'
+  - 6.1.2.6 Link Rate and Throughput-Based Association
+- - '##'
+  - 6.3 Exercises
+- - '##'
+  - Bibliography
+- - '##'
+  - Chapter 7
+- - '##'
+  - Placement of Sensor Nodes in WSN
+- - '##'
+  - 7.1  Introduction
+- - '##'
+  - 7.2  Preliminaries
+- - '##'
+  - 7.3 Deployment Algorithm
+- - '##'
+  - Placement of Sensor Nodes in WSN
+- - '##'
+  - 7.4 实验结果
+- - '##'
+  - 7.4 实验结果
+- - '##'
+  - 能源高效通信
+- - '##'
+  - 一些优雅的物理层中心技术
+- - '##'
+  - 8.3 冗余二进制数编码与静默零通信（RBNSiZeComm）
+- - '###'
+  - 8.3.1 冗余二进制数系统预备知识
+- - '##'
+  - 无线网络和移动计算
+- - '##'
+  - 8.3.2  RBNSiZeComm 通信协议
+- - '##'
+  - 8.3.3  能耗节约分析
+- - '###'
+  - 8.3.3.1  生成函数方法
+- - '##'
+  - '**表 8.1：** *n* = 8 时游程长度的出现次数'
+- - '##'
+  - 8.3.3.2　递推关系方法
+- - '##'
+  - 表 8.2：n = 16 时游程长度的出现次数
+- - '##'
+  - 表 8.3：由包含长度为 6 的游程的字符串生成的游程长度为 5 的字符串
+- - '##'
+  - '**引理 25.** $\mathcal{L}^{m}\mathcal{R}(R_{n-1},0R_{n-1})=\mathcal{L}^{m}(R_{n-2},0R_{n-2})$'
+- - '##'
+  - '**引理 26.** $\mathcal{R}^{m}\mathcal{L}(R_{n-1},R_{n-1}0)=\mathcal{R}^{m}(R_{n-2},0R_{n-2}0)$'
+- - '##'
+  - '**引理 27.** $\mathcal{L}\mathcal{R}(R_{n-2},0R_{n-2}0)=\mathcal{R}\mathcal{L}(R_{n-2},0R_{n-2}0)$'
+- - '##'
+  - '**引理 28.** $\mathcal{L}^{p}\mathcal{R}^{q}(R_{n-2},0R_{n-2}0)=\mathcal{R}^{q}\mathcal{L}^{p}(R_{n-2},0R_{n-2}0)$'
+- - '###'
+  - '**Lemma 29.** Given that $S = *^{k_1}0R_{k_0}0*^{k_2}0R_{n-k-k_1-k_2-3}$, we
+    have'
+- - '###'
+  - '**Lemma 30.** $\mathcal{L}^{m}(R_{n-1},0R_{n-1})$ and $\mathcal{R}^{j}(R_{n-1},R_{n-1}0)$
+    always generate two distinct substrings $R_{n-m-1}$ and $R_{n-j-1}$ for any value
+    of $m$ and $j$.'
+- - '###'
+  - '**Theorem 25.** The biased replacement rule always produces all possible distinct
+    appearances of $R_{n-k}$''s in all possible strings without any duplicate counting.'
+- - '###'
+  - '**Theorem 26.** $\mathcal{N}_n=1$, $\mathcal{N}_{n-1}=2$, and for $k\geq 2$,'
+- - '###'
+  - '**Theorem 27.** $\mathcal{N}_n=1$, $\mathcal{N}_{n-1}=2$, and for $k\geq 2$,'
+- - '##'
+  - 8.3.4.2 Synchronization Issues
+- - '##'
+  - 8.3.4.3 Collision Avoidance Issues
+- - '##'
+  - 8.3.4.4 Effect of Device Characteristics
+- - '##'
+  - '**FIGURE 8.10:** Representative non-coherent FSK receiver for RBNS scheme'
+- - '##'
+  - 8.3.5  Transceiver Design and Analysis for Noisy Channels
+- - '##'
+  - 8.3.6 与CtS和VarBaTaC的性能比较
+- - '##'
+  - 无线网络和移动计算
+- - '##'
+  - '**表 8.5：** 基数为2的幂且*k* = 64时VarBaTaC的时隙数'
+- - '##'
+  - 8.3.7 与QPSK的性能比较
+- - '##'
+  - 8.3.7.1 采用非相干接收机设计
+- - '##'
+  - 8.4 带静默符号的三进制（TSS）通信协议
+- - '###'
+  - 8.4.1 基本思想和算法描述
+- - '##'
+  - TransmitTSS 协议
+- - '##'
+  - ReceiveTSS 协议
+- - '##'
+  - 8.4.2 性能分析
+- - '##'
+  - 8.4.3 非相干检测
+- - '##'
+  - 8.4.3.1 Energy Savings Analysis
+- - '#'
+  - 8.4.3.1 Energy Savings Analysis
+- - '#'
+  - '# Energy-Efficient Communication'
+- - '##'
+  - 8.5.2.1   Representation of Encoded Numbers
+- - '##'
+  - 8.5.2.2   Mapping to Codewords
+- - '##'
+  - 8.5.2.3 同步问题
+- - '##'
+  - 8.5.2.4 碰撞避免问题
+- - '##'
+  - '**TABLE 8.12:** \(\gamma''\) values for CC1100'
+- - '##'
+  - '**TABLE 8.13:** \(\gamma''\) values for CC2420'
+- - '###'
+  - 8.5.3.2 无噪声信道中的性能比较
+- - '##'
+  - 节能通信
+- - '###'
+  - 8.5.3.4 不同 SNR 值下的误码率
+- - '###'
+  - 8.5.3.5 静默符号对能量节省的影响
+- - '###'
+  - 8.5.3.6 数据压缩对能量节省的影响
+- - '##'
+  - 8.6 三位数斐波那契数字系统（TFNS）通信协议
+- - '###'
+  - 8.6.1 基本概念
+- - '##'
+  - 8.6.2 三值斐波那契数制
+- - '###'
+  - 8.6.2.1 推导 TFNS 数字分布
+- - '###'
+  - 8.6.2.2 \(\nu'_0\) 的计算
+- - '##'
+  - 8.6.2.3 \(\nu'_1\) 和 \(\nu'_2\) 的计算
+- - '##'
+  - 8.6.3 利用 TFNS 的节能通信
+- - '###'
+  - 8.6.3.1 TFNS 协议的实施
+- - '###'
+  - 8.6.3.3 非相干检测
+- - '###'
+  - 8.6.3.4 性能评估
+- - '###'
+  - 8.6.3.5 能量节省分析
+- - '###'
+  - 8.6.3.7 能量节省分析
+- - '##'
+  - 参考文献
+- - '##'
+  - 节能通信
+- - '##'
+  - 第9章
+- - '###'
+  - 无线通信中的安全
+- - '##'
+  - 9.1.2 外部攻击
+- - '##'
+  - 9.2.2 入侵检测
+- - '##'
+  - 9.2.3 消息加密
+- - '##'
+  - 9.2.4 RC4流密码
+- - '###'
+  - 步骤1：计算$i_1$和$i_2$
+- - '###'
+  - 步骤2：计算$j_1$和$j_2$
+- - '###'
+  - 步骤3：交换$S$值
+- - '##'
+  - 图 9.3：交换 $S$ 值的电路（仅显示固定 $k$ 的数据线）
+- - '##'
+  - 步骤 4：计算 $Z_1$ 和 $Z_2$。
+- - '###'
+  - 9.3.2 完整电路
+- - '##'
+  - 无线网络与移动计算
+- - '##'
+  - PRGA 设计的效率：
+- - '###'
+  - 表 9.3：文献[18]所提出设计的流水线阶段
+- - '###'
+  - 表 9.4：设计 1 与文献[11]、[17]和[18]的时序比较
+- - '##'
+  - 9.3.5 RC4 的又一种设计方法
+- - '###'
+  - '**图 9.9：** 通过硬件流水线实现每周期 1 字节'
+- - '###'
+  - 表 9.5：RC4 密钥调度的两个连续循环
+- - '###'
+  - 9.3.5.1 **流水线设计 A 中的面积优化**
+- - '##'
+  - 索引
+- - '##'
+  - 索引

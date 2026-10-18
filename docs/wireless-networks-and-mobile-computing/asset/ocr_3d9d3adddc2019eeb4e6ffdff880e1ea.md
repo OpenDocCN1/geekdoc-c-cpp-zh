@@ -1,0 +1,9 @@
+**Proof.** By definition, a cellular Distance 2 clique is a seven-node subgraph of the cellular graph such that no node in the clique is more than Distance 2 from one another. Hence, considering a node *u* that is adjacent to some node *v* of the clique, it is easy to see that there must be at least two nodes in the cellular Distance 2 clique that are at a Distance 3 from *u*. Hence, *u* can be assigned the time slot corresponding to any of these Distance 3 nodes without violating the slot separation constraints.
+
+Based on Lemma 20 we now demonstrate the minimum number of slots requirement of a cellular graph with homogeneous demand of one slot per cell in the form of the following theorem.
+
+# **Theorem 20.** *The minimum slot requirement of a cellular graph with two-cell buffering having s₀ = s₁ = s₂ and a homogeneous demand of one time slot per cell is equal to the demand of the seven-node critical block of the graph.*
+
+**Proof.** Let G* be the critical block of the network with node *g* as the central node. Let G be a cellular Distance 2 clique adjacent to G*, whose nodes have to be assigned time slots. As G is adjacent to G*, the four common nodes of G and G* have already assigned time slots. From Lemma 20, for the remaining nodes in G we observe that the symmetry of the cellular graph implies that for any node *i* in G, it is always possible to find at least one satisfied node *j* at Distance 3 from *i* such that the time slot assigned to *j* is unused within Distance 2 of node *i*. Hence, G can be satisfied using only the time slots from G*.
+
+The above procedure can be repeated for all cellular Distance 2 cliques adjacent to G* to obtain a collision-free schedule using only seven time slots. By exploiting the symmetry of the cellular graph, this pattern can be repeated over the network by considering unsatisfied cellular Distance 2 cliques adjacent to each satisfied cellular Distance 2 clique.

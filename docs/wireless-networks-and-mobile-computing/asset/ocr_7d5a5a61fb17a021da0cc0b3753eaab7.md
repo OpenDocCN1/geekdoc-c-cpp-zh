@@ -1,0 +1,1 @@
+In a similar manner, we can reconvert the received _m_-digit ternary message to its equivalent binary form by using the _Ternary2Binary_ algorithm, and again we scan the given ternary number from its most significant (leftmost) position in a digit-by-digit manner, and convert the scanned ternary digits to their equivalent binary representa-
