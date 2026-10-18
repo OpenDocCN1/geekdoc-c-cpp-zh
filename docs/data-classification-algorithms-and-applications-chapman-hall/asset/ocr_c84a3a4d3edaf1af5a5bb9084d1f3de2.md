@@ -1,0 +1,23 @@
+consists of a mixture of components $c_j \in \mathcal{C} = \{c_1, \dots, c_{|\mathcal{C}|}\}$. Each component is parameterized by a disjoint subset of $\theta$. A document, $d_i$, is created by first selecting a mixture component according to the mixture weights (or class prior probabilities), $P(c_j|\theta)$, and then generating a document according to the selected component's own parameters, with distribution $P(d_i|c_j;\theta)$. The parameters of an individual mixture component are a multinomial distribution over words, i.e., the collection of word probabilities, each written $\theta_{w_t|c_j}$, such that $\theta_{w_t|c_j} = P(w_t|c_j;\theta)$, where $t = \{1,\dots,|V|\}$, $V$ is the size of vocabulary, and $\sum_t P(w_t|c_j;\theta) = 1$. The only other parameters of the model are the mixture weights (class prior probabilities), written as $\theta_{c_j}$, which indicate the probabilities of selecting the different mixture components. Thus, the complete collection of model parameters, $\theta$, is a set of multinomials and prior probabilities over those multinomials: $\theta = \{\theta_{w_t|c_j} : w_t \in V, c_j \in \mathcal{C}; \theta_{c_j} : c_j \in \mathcal{C}\}$.
+
+The classifier used in this approach is a naive Bayes classifier that makes the standard assumption that the words of a document are generated independently of context, that is, independently of the other words in the same document given the class label. Learning a naive Bayes text classifier consists of estimating the parameters of the generative model by using a set of labeled training data, $\mathcal{D} = \{d_1, \dots, d_{|\mathcal{D}|}\}$. The estimate of $\theta$ is written as $\hat{\theta}$. Naive Bayes uses the maximum a posteriori estimate, thus finding $\arg\max_\theta P(\theta|\mathcal{D})$. This is the value of $\theta$ that is most probable given the evidence of the training data and a prior. Using Bayes rule, this is equivalent to finding $\arg\max_\theta P(\theta)P(\mathcal{D}|\theta)$.
+
+In semi-supervised setting, only some subset of the documents $d_i \in \mathcal{D}^l \subset \mathcal{D}$ come with class labels $y_i \in \mathcal{C}$, and for the rest of the documents, in subset $\mathcal{D}^u = \mathcal{D} \setminus \mathcal{D}^l$, the class labels are unknown. Learning a classifier is approached as calculating a maximum a posteriori estimate of $\theta$, i.e. $\arg\max_\theta P(\theta)P(\mathcal{D}|\theta)$. To estimate the missing labels (of unlabeled documents), EM algorithm is applied in naive Bayes settings. Applying EM to naive Bayes is quite straightforward. First, the naive Bayes parameters, $\hat{\theta}$, are estimated from just the labeled documents. Then, the classifier is used to assign probabilistically weighted class labels to each unlabeled document by calculating expectations of the missing class labels, $P(c_j|d_i;\hat{\theta})$. This is the E-step. Next, new classifier parameters, $\hat{\theta}$, are estimated using all the document, both the original and newly labeled documents. This is the M-step. These last two steps are iterated until $\hat{\theta}$ does not change. The details are given in Algorithm 20.1.
+
+# Algorithm 20.1 EM under Generative Model assumption
+
+Input : Collection $\mathcal{D}^l$ of labeled documents and $\mathcal{D}^u$ of unlabeled documents.
+
+Output : A classifier, $\hat{\theta}$, that takes an unlabeled document and predicts a class label.
+
++   1. Build an initial Naive Bayes classifier, $\hat{\theta}$, from the labeled documents, $\mathcal{D}^l$, only. Use maximum a posteriori parameter estimation to find $\hat{\theta} = \arg\max_\theta P(\mathcal{D}|\theta)P(\theta)$.
+
++   2. Loop while classifier parameters improve, as measured by the change in $l_c(\theta|\mathcal{D};z)$ (the complete log probability of the labeled and unlabeled data, and the prior).
+
++   (a) (E-step) Use the current classifier, $\hat{\theta}$, to estimate component membership of each unlabeled documents, i.e., the probability that each mixture component (and class) generated each document, $P(c_j|d_i;\hat{\theta})$.
+
++   (b) (M-step) Re-estimate the classifier, $\hat{\theta}$, given the estimated component membership of each document. Use maximum a posteriori parameter estimation to find $\hat{\theta} = \arg\max_\theta P(\mathcal{D}|\theta)P(\theta)$.
+
+# 20.2.3 Theoretical Justification and Relevant Results
+
+When the examples are indeed generated from an identifiable mixture model, the hope is that the mixture components can be identified from unlabeled examples alone. Ideally, one then would only need one labeled example per component (class) to fully determine the mixture distribution (that

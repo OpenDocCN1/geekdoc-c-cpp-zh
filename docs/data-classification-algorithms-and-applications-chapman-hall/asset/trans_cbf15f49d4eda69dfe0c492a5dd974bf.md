@@ -1,0 +1,59 @@
+
+- [33] W. Cohen. 学习用于分类电子邮件的规则, AAAI 会议, 页码 18–25, 1996 年。
+- [34] W. Cohen. 使用集合值特征学习树和规则, AAAI 会议, 页码 709–716, 1996 年。
+- [35] W. Cooper. 概率信息检索中的一些不一致性和误称, ACM 信息系统汇刊, 13(1):100–111, 1995 年。
+- [36] C. Cortes 和 V. Vapnik. 支持向量网络, 机器学习, 20(3):273–297, 1995 年。
+- [37] T. M. Cover 和 J. A. Thomas. 信息论基础, 纽约: 约翰·威利父子公司, 1991 年。
+- [38] M. Craven 和 S. Slattery. 具有统计谓词发明的关联学习：超文本的更好模型。机器学习, 43(1-2):97–119, 2001 年。
+- [39] M. Craven, D. DiPasquo, D. Freitag, A. McCallum, T. Mitchell, K. Nigam, 和 S. Slattery. 学习从万维网提取符号知识, AAAI 会议, 页码 509–516, 1998 年。
+- [40] N. Cristianini 和 J. Shawe-Taylor. 支持向量机及其他基于核学习方法导论, 剑桥大学出版社, 2000 年。
+- [41] I. Dagan, Y. Karov, 和 D. Roth. 文本分类中的基于错误的驱动学习, EMNLP 论文集, 页码 55–63, 1997 年。
+- [42] W. Dai, Y. Chen, G.-R. Xue, Q. Yang, 和 Y. Yu. 翻译学习：跨不同特征空间的迁移学习, 神经信息处理系统进展论文集, 2008 年。
+- [43] A. Dayanik, D. Lewis, D. Madigan, V. Menkov, 和 A. Genkin. 从领域知识构建文本分类中有信息量的先验分布, ACM SIGIR 会议, 页码 493–500, 2006 年。
+- [44] A. P. Dempster, N.M. Laird, 和 D.B. Rubin. 通过 EM 算法从不完整数据中进行最大似然估计, 皇家统计学会杂志, B 系列, 39(1): 页码 1–38, 1977 年。
+- [45] F. Denis 和 A. Laurent. 从正例和未标记示例进行文本分类与协同训练, ICML 2003 研讨会：从标记数据到未标记数据的连续体。http://www.grappa.univ-lille3.fr/ftp/reports/icmlws03.pdf。
+- [46] S. Deerwester, S. Dumais, T. Landauer, G. Furnas, 和 R. Harshman. 通过潜在语义分析进行索引, JASIS, 41(6):391–407, 1990 年。
+- [47] P. Domingos 和 M. J. Pazzani. 在零一损失下简单贝叶斯分类器的最优性, 机器学习, 29(2–3), 103–130, 1997 年。
+- [48] P. Domingos. MetaCost：一种使分类器具有成本敏感性的通用方法, ACM KDD 会议, 页码 155–164, 1999 年。
+- [49] H. Drucker, D. Wu, 和 V. Vapnik. 用于垃圾邮件分类的支持向量机, IEEE 神经网络汇刊, 10(5):1048–1054, 1999 年。
+- [50] R. Duda, P. Hart, 和 W. Stork. 模式分类, Wiley Interscience, 2000 年。
+- [51] S. Dumais, J. Platt, D. Heckerman, 和 M. Sahami. 文本分类的归纳学习算法与表示, CIKM 会议, 页码 148–155, 1998 年。
+- [52] S. Dumais 和 H. Chen. 网页内容的层次分类, ACM SIGIR 会议, 页码 256–263, 2000 年。
+- [53] C. Elkan. 成本敏感学习的 foundations, IJCAI 会议, 页码 973–978, 2001 年。
+- [54] R. Fisher. 分类问题中多重测量的使用, 进化年鉴, 7(2):179–188, 1936 年。
+- [55] R. El-Yaniv 和 O. Souroujon. 用于无监督和半监督学习的迭代双聚类, NIPS 会议, 页码 121–132, 2002 年。
+- [56] Y. Freund 和 R. Schapire. 在线学习的决策理论推广及其在提升中的应用。第二次计算学习理论欧洲会议论文集, 页码 23–37, 1995 年。
+- [57] Y. Freund, R. Schapire, Y. Singer, 和 M. Warmuth. 使用和组合专业化预测器, 第 29 届 ACM 理论计算研讨会论文集, 页码 334–343, 1997 年。
+- [58] S. Gao, W. Wu, C.-H. Lee, 和 T.-S. Chua. 文本分类的最大图优学习方法, SIGIR 会议, 页码 190–218, 2003 年。
+- [59] R. Gilad-Bachrach, A. Navot, 和 N. Tishby. 基于边界的特征选择 – 理论与算法, ICML 会议, 页码 43–50, 2004 年。
+- [60] S. Gopal 和 Y. Yang. 具有元级特征的多标签分类, ACM SIGIR 会议, 页码 315–322, 2010 年。
+- [61] L. Guthrie 和 E. Walker. 机器文档分类：理论与实践, COLING, 页码 1059–1063, 1994 年。
+- [62] L. Hamel. 使用支持向量机的知识发现, Wiley, 2009 年。
+- [63] E.-H. Han, G. Karypis, 和 V. Kumar. 使用加权调整 k 近邻分类进行文本分类, PAKDD 会议, 页码 53–65, 2001 年。
+- [64] E.-H. Han 和 G. Karypis. 基于质心的文档分类：分析和实验结果, PKDD 会议, 页码 424–431, 2000 年。
+- [65] D. Hardin, I. Tsamardinos, 和 C. Aliferis. 基于线性 SVM 的特征选择的理论表征, ICML 会议, 2004 年。
+- [66] S. Haykin. 神经网络与学习机, Prentice Hall, 2008 年。
+- [67] T. Hofmann. 概率潜在语义索引, ACM SIGIR 会议, 页码 50–57, 1999 年。
+- [68] P. Howland, M. Jeon, 和 H. Park. 基于广义奇异值分解的聚类文本数据的结构保持降维, SIAM 矩阵分析与应用学报, 25(1):165–179, 2003 年。
+- [69] P. Howland 和 H. Park. 使用广义奇异值分解推广判别分析, IEEE 模式分析与机器智能汇刊, 26(8):995–1006, 2004 年。
+- [70] D. Hull, J. Pedersen, 和 H. Schutze. 文档过滤的方法组合, ACM SIGIR 会议, 页码 279–287, 1996 年。
+- [71] R. Iyer, D. Lewis, R. Schapire, Y. Singer, 和 A. Singhal. 用于文档路由的提升, CIKM 会议, 页码 70–77, 2000 年。
+- [72] M. James. 分类算法, Wiley Interscience, 1985 年。
+- [73] D. Jensen, J. Neville, 和 B. Gallagher. 为什么集体推理能改善关系分类, ACM KDD 会议, 页码 593–598, 2004 年。
+- [74] T. Joachims. 使用 TFIDF 的 Rocchio 算法的概率分析用于文本分类, ICML 会议, 页码 143–151, 1997 年。
+- [75] T. Joachims. 使用支持向量机的文本分类：使用大量相关特征的学习, ECML 会议, 页码 137–142, 1998 年。
+- [76] T. Joachims. 使用支持向量机的文本分类的转导推理, ICML 会议, 页码 200–209, 1999 年。
+- [77] T. Joachims. 用于支持向量机的文本分类的统计学习模型, ACM SIGIR 会议, 页码 128–136, 2001 年。
+- [78] T. Joachims. 使大规模 SVM 实用化, 《核方法进展，支持向量学习》, 页码 169–184, MIT Press, 剑桥, MA, 1998 年。
+- [79] T. Joachims. 在线性时间内训练线性 SVM, KDD, 页码 217–226, 2006 年。
+- [80] D. Johnson, F. Oles, T. Zhang 和 T. Goetz. 用于文本分类的基于决策树的符号规则归纳系统, IBM 系统学报, 41(3):428–437, 2002 年。
+- [81] I. T. Jolliffe. 主成分分析, Springer, 2002 年。
+- [82] T. Kalt 和 W. B. Croft. 文本分类和检索的新概率模型, 技术报告 IR-78, 马萨诸塞大学智能信息检索中心, 1996 年。http://ciir.cs.umass.edu/publications/index.shtml
+- [83] G. Karypis 和 E.-H. Han. 用于文档分类和检索的快速监督降维, ACM CIKM 会议, 页码 12–19, 2000 年。
+- [84] T. Kawatani. 两组文档之间主题差异因子提取及其在文本分类中的应用, ACM SIGIR 会议, 页码 137–144, 2002 年。
+- [85] Y.-H. Kim, S.-Y. Hahn, 和 B.-T. Zhang. 通过提升朴素贝叶斯分类器进行文本过滤, ACM SIGIR 会议, 页码 168–175, 2000 年。
+- [86] D. Koller 和 M. Sahami. 使用很少词的层次化文档分类, ICML 会议, 页码 170–178, 2007 年。
+- [87] S. Lam 和 D. Lee. 神经网络<|message|> 文本分类的特征约简, DASFAA 会议, 页码 195–202, 1999 年。
+- [88] W. Lam 和 C. Y. Ho. 使用广义实例集进行自动文本分类, ACM SIGIR 会议, 页码 81–89, 1998 年。
+- [89] W. Lam 和 K.-Y. Lai. 文本分类的元学习方法, ACM SIGIR 会议, 页码 303–309, 2001 年。
+- [90] K. Lang. Newsweeder：学习过滤网新闻, ICML 会议, 页码 331–339, 1995 年。

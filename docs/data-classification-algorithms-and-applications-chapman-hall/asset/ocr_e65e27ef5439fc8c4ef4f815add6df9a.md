@@ -1,0 +1,17 @@
+![](bbox=[0.12, 0.12, 0.82, 0.27])
+
+# FIGURE 19.1: Ensemble approach overcomes the limitation of hypothesis space.
+
+0.3² + 5 × 0.7⁴ × 0.3 + 0.7⁵ = 83.7% (the sum of the probability of having 3, 4, and 5 classifiers predicting correctly). If we now have 101 such classifiers, following the same principle, we can derive that the majority voting approach on 101 classifiers can reach an accuracy of 99.9%. Clearly, the ensemble approach can successfully cancel out independent errors made by individual classifiers and thus improve the classification accuracy.
+
+Another advantage of ensemble learning is its ability to overcome the limitation of hypothesis space assumption made by single models. As discussed, a single-model classifier usually searches for the best model within a hypothesis space that is assumed by the specific learning algorithm. It is very likely that the true model does not reside in the hypothesis space, and then it is impossible to obtain the true model by the learning algorithm. Figure 19.1 shows a simple example of binary classification. The rightmost plot shows that the true decision boundary is V-shaped, but if we search for a classifier within a hypothesis space consisting of all the linear classifiers, for example, models 1 and 2, we are unable to recover the true boundary. However, by combining multiple classifiers, ensemble approaches can successfully simulate the true boundary. The reason is that ensemble learning methods combine different hypotheses and the final hypothesis is not necessarily contained in the original hypothesis space. Therefore, ensemble methods have more flexibility in the hypothesis they could represent.
+
+Due to these advantages, many ensemble approaches [4, 23, 52, 63, 74, 75, 90] have been developed to combine complementary predictive power of multiple models. Ensemble learning is demonstrated as useful in many data mining competitions (e.g., Netflix contest,¹ KDD cup,² ICDM contest³) and real-world applications. There are two critical components in ensemble learning: Training base models and learning their combinations, which are discussed as follows.
+
+From the majority voting example we mentioned, it is obvious that the base classifiers should be accurate and independent to obtain a good ensemble. In general, we do not require the base models to be highly accurate—as long as we have a good amount of base classifiers, the weak classifiers can be boosted to a strong classifier by combination. However, in the extreme case where each classifier is terribly wrong, the combination of these classifiers will give even worse results. Therefore, at least the base classifiers should be better than random guessing. Independence among classifiers is another important property we want to see in the collection of base classifiers. If base classifiers are highly correlated and make very similar predictions, their combination will not improve anymore. In contrast, when base classifiers are independent and make diverse predictions, the independent errors have better chances to be canceled out. Typically, the following techniques have been used to generate a good set of base classifiers:
+
++   - Obtain different bootstrap samples from the training set and train a classifier on each bootstrap sample;
+
+¹ http://www.netflixprize.com/
+² http://www.kddcup.org/ 
+³ http://www.cs.uu.nl/groups/ADA/icdm08cup/

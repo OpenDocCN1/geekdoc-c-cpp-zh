@@ -1,0 +1,59 @@
+
+- [33] W. Cohen. Learning rules that classify e-mail, AAAI Conference, pages 18–25, 1996.
+- [34] W. Cohen. Learning trees and rules with set-valued features, AAAI Conference, pages 709–716, 1996.
+- [35] W. Cooper. Some inconsistencies and misnomers in probabilistic information retrieval, ACM Transactions on Information Systems, 13(1):100–111, 1995.
+- [36] C. Cortes and V. Vapnik. Support-vector networks, Machine Learning, 20(3):273–297, 1995.
+- [37] T. M. Cover and J. A. Thomas. Elements of Information Theory, New York: John Wiley and Sons, 1991.
+- [38] M. Craven and S. Slattery. Relational learning with statistical predicate invention: Better models for hypertext. Machine Learning, 43(1-2):97–119, 2001.
+- [39] M. Craven, D. DiPasquo, D. Freitag, A. McCallum, T. Mitchell, K. Nigam, and S. Slattery. Learning to extract symbolic knowledge from the worldwide web, AAAI Conference, pages 509–516, 1998.
+- [40] N. Cristianini and J. Shawe-Taylor. An Introduction to Support Vector Machines and Other Kernel-based Learning Methods, Cambridge University Press, 2000.
+- [41] I. Dagan, Y. Karov, and D. Roth. Mistake-driven learning in text categorization, Proceedings of EMNLP, pages 55–63, 1997.
+- [42] W. Dai, Y. Chen, G.-R. Xue, Q. Yang, and Y. Yu. Translated learning: Transfer learning across different feature spaces, Proceedings of Advances in Neural Information Processing Systems, 2008.
+- [43] A. Dayanik, D. Lewis, D. Madigan, V. Menkov, and A. Genkin. Constructing informative prior distributions from domain knowledge in text classification, ACM SIGIR Conference, pages 493–500, 2006.
+- [44] A. P. Dempster, N.M. Laird, and D.B. Rubin. Maximum likelihood from incomplete data via the EM algorithm, Journal of the Royal Statistical Society, Series B, 39(1): pp. 1–38, 1977.
+- [45] F. Denis and A. Laurent. Text Classification and Co-Training from Positive and Unlabeled Examples, ICML 2003 Workshop: The Continuum from Labeled to Unlabeled Data. http://www.grappa.univ-lille3.fr/ftp/reports/icmlws03.pdf.
+- [46] S. Deerwester, S. Dumais, T. Landauer, G. Furnas, and R. Harshman. Indexing by latent semantic analysis, JASIS, 41(6):391–407, 1990.
+- [47] P. Domingos and M. J. Pazzani. On the optimality of the simple Bayesian classifier under zero-one loss, Machine Learning, 29(2–3), 103–130, 1997.
+- [48] P. Domingos. MetaCost: A general method for making classifiers cost-sensitive, ACM KDD Conference, pages 155–164, 1999.
+- [49] H. Drucker, D. Wu, and V. Vapnik. Support vector machines for spam categorization, IEEE Transactions on Neural Networks, 10(5):1048–1054, 1999.
+- [50] R. Duda, P. Hart, and W. Stork. Pattern Classification, Wiley Interscience, 2000.
+- [51] S. Dumais, J. Platt, D. Heckerman, and M. Sahami. Inductive learning algorithms and representations for text categorization, CIKM Conference, pages 148–155, 1998.
+- [52] S. Dumais and H. Chen. Hierarchical classification of web content, ACM SIGIR Conference, pages 256–263, 2000.
+- [53] C. Elkan. The foundations of cost-sensitive learning, IJCAI Conference, pages 973–978, 2001.
+- [54] R. Fisher. The use of multiple measurements in taxonomic problems, Annals of Eugenics, 7(2):179–188, 1936.
+- [55] R. El-Yaniv and O. Souroujon. Iterative double clustering for unsupervised and semi-supervised learning, NIPS Conference, pages 121–132, 2002.
+- [56] Y. Freund and R. Schapire. A decision-theoretic generalization of on-line learning and an application to boosting. In Proceedings of Second European Conference on Computational Learning Theory, pages 23–37, 1995.
+- [57] Y. Freund, R. Schapire, Y. Singer, and M. Warmuth. Using and combining predictors that specialize, Proceedings of the 29th Annual ACM Symposium on Theory of Computing, pages 334–343, 1997.
+- [58] S. Gao, W. Wu, C.-H. Lee, and T.-S. Chua. A maximal figure-of-merit learning approach to text categorization, SIGIR Conference, pages 190–218, 2003.
+- [59] R. Gilad-Bachrach, A. Navot, and N. Tishby. Margin based feature selection – theory and algorithms, ICML Conference, pages 43–50, 2004.
+- [60] S. Gopal and Y. Yang. Multilabel classification with meta-level features, ACM SIGIR Conference, pages 315–322, 2010.
+- [61] L. Guthrie and E. Walker. Document classification by machine: Theory and practice, COLING, pages 1059–1063, 1994.
+- [62] L. Hamel. Knowledge Discovery with Support Vector Machines, Wiley, 2009.
+- [63] E.-H. Han, G. Karypis, and V. Kumar. Text categorization using weighted-adjusted k-nearest neighbor classification, PAKDD Conference, pages 53–65, 2001.
+- [64] E.-H. Han and G. Karypis. Centroid-based document classification: Analysis and experimental results, PKDD Conference, pages 424–431, 2000.
+- [65] D. Hardin, I. Tsamardinos, and C. Aliferis. A theoretical characterization of linear SVM-based feature selection, ICML Conference, 2004.
+- [66] S. Haykin. Neural Networks and Learning Machines, Prentice Hall, 2008.
+- [67] T. Hofmann. Probabilistic latent semantic indexing, ACM SIGIR Conference, pages 50–57, 1999.
+- [68] P. Howland, M. Jeon, and H. Park. Structure preserving dimension reduction for clustered text data based on the generalized singular value decomposition, SIAM Journal of Matrix Analysis and Applications, 25(1):165–179, 2003.
+- [69] P. Howland and H. Park. Generalizing discriminant analysis using the generalized singular value decomposition, IEEE Transactions on Pattern Analysis and Machine Intelligence, 26(8):995–1006, 2004.
+- [70] D. Hull, J. Pedersen, and H. Schutze. Method combination for document filtering, ACM SIGIR Conference, pages 279–287, 1996.
+- [71] R. Iyer, D. Lewis, R. Schapire, Y. Singer, and A. Singhal. Boosting for document routing, CIKM Conference, pages 70–77, 2000.
+- [72] M. James. Classification Algorithms, Wiley Interscience, 1985.
+- [73] D. Jensen, J. Neville, and B. Gallagher. Why collective inference improves relational classification, ACM KDD Conference, page 593–598, 2004.
+- [74] T. Joachims. A probabilistic analysis of the rocchio algorithm with TFIDF for text categorization, ICML Conference, pages 143–151, 1997.
+- [75] T. Joachims. Text categorization with support vector machines: Learning with many relevant features, ECML Conference, pages 137–142, 1998.
+- [76] T. Joachims. Transductive inference for text classification using support vector machines, ICML Conference, pages 200–209, 1999.
+- [77] T. Joachims. A statistical learning model of text classification for support vector machines, ACM SIGIR Conference, pages 128–136, 2001.
+- [78] T. Joachims. Making large scale SVMs practical, In Advances in Kernel Methods, Support Vector Learning, pages 169–184, MIT Press, Cambridge, MA, 1998.
+- [79] T. Joachims. Training linear SVMs in linear time, KDD, pages 217–226, 2006.
+- [80] D. Johnson, F. Oles, T. Zhang and T. Goetz. A decision tree-based symbolic rule induction system for text categorization, IBM Systems Journal, 41(3):428–437, 2002.
+- [81] I. T. Jolliffe. Principal Component Analysis, Springer, 2002.
+- [82] T. Kalt and W. B. Croft. A new probabilistic model of text classification and retrieval, Technical Report IR-78, University of Massachusetts Center for Intelligent Information Retrieval, 1996. http://ciir.cs.umass.edu/publications/index.shtml
+- [83] G. Karypis and E.-H. Han. Fast supervised dimensionality reduction with applications to document categorization and retrieval, ACM CIKM Conference, pages 12–19, 2000.
+- [84] T. Kawatani. Topic difference factor extraction between two document sets and its application to text categorization, ACM SIGIR Conference, pages 137–144, 2002.
+- [85] Y.-H. Kim, S.-Y. Hahn, and B.-T. Zhang. Text filtering by boosting naive Bayes classifiers, ACM SIGIR Conference, pages 168–175, 2000.
+- [86] D. Koller and M. Sahami. Hierarchically classifying documents using very few words, ICML Conference, pages 170–178, 2007.
+- [87] S. Lam and D. Lee. Feature reduction for neural network based text categorization, DASFAA Conference, pages 195–202, 1999.
+- [88] W. Lam and C. Y. Ho. Using a generalized instance set for automatic text categorization, ACM SIGIR Conference, pages 81–89, 1998.
+- [89] W. Lam and K.-Y. Lai. A meta-learning approach for text categorization, ACM SIGIR Conference, pages 303–309, 2001.
+- [90] K. Lang. Newsweeder: Learning to filter netnews, ICML Conference, page 331–339, 1995.

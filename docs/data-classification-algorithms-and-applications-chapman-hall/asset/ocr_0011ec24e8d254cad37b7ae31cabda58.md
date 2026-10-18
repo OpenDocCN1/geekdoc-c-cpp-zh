@@ -1,0 +1,15 @@
+![](bbox=[0.092, 0.073, 0.837, 0.306])
+
+other, the two ROC curves can be plotted on the same ROC space, as illustrated in Figure 24.3. On the left-hand-side, it is easy to see that classifier A outperforms B, as its ROC-curve is north-west of the ROC-curve of B. This means that for each threshold, the TP rate of A is higher than the TP rate of B, and that the FP rate of B is higher for each threshold. On the right-hand-side, the situation is less obvious and it is hard to say if C is better than D or the other way around. However, some interesting information can be extracted from the graph, that is, we can conclude that C is more precise than D for high thresholds, which means that it is the best choice if not many false positives are allowed. D on the other hand is more appropriate when a high sensitivity is required.
+
+Although this visualization is a handy tool that is frequently used, many researchers prefer a single value to assess the performance of a classifier. The Area-Under the Curve (AUC) is a measure that is often used to that goal. It is the surface between the ROC curve and the horizontal axis, and is a good measure to reflect the quality, as ROC curves that are more to the north west are better and have a bigger surface. AUC values are often used as a single evaluation metric in imbalanced classification problems. In real-world problems, however, one should keep in mind that ROC curves reveal much more information than the single AUC value.
+
+An important point when evaluating classifiers using ROC curves is that they do not measure the absolute performance of the classifier but the relative ranking of the probabilities. For instance, when the probabilities of a classifier are all higher than 0.5 and the threshold is also 0.5, no instance will be classified as negative. However, when all probabilities of the positive instances are higher than the probabilities of the negative instances, the classifier will have a perfect ROC curve and the AUC will be 1. This example shows that determining an appropriate threshold for the final classifier should be done appropriately.
+
+When evaluating probabilistic classifiers for multi-class problems [38], a straightforward option is to decompose the multi-class problems to multiple two-class problems and to carry out the ROC analysis for each two-class problem. Understanding and interpreting these multiple visualizations is challenging, therefore specific techniques for multi-class ROC analysis were developed.
+
+The first approach is discussed in [41], where ROC analysis is extended for three-class classification problems. Instead of an ROC curve, an ROC surface is plotted, and the Volume Under the Surface (VUS) is calculated analogously to the AUC. ROC surfaces can be used to compare classifiers on three-class classification problems by analyzing the maximum information gain on each of them.
+
+ROC analysis for multi-class problems gains more and more attention. In [10], the multi-class problem is decomposed in partial two-class problems, where each problem retains labels of the in-
+
+**FIGURE 24.3:** Comparing classifiers using ROC-curves.

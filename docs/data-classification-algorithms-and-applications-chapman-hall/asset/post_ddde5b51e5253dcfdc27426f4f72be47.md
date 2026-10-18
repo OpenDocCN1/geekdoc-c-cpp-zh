@@ -1,0 +1,60 @@
+
+![](img/e042be977d84f1032c985f0d70b57c8b_568_0.png)
+
+![](img/e042be977d84f1032c985f0d70b57c8b_568_1.png)
+
+(a) WiFi RSS received by device A in T₁.
+
+(b) WiFi RSS received by device A in T₂.
+
+![](img/e042be977d84f1032c985f0d70b57c8b_568_2.png)
+
+![](img/e042be977d84f1032c985f0d70b57c8b_568_3.png)
+
+(c) WiFi RSS received by device B in T₁.
+
+(d) WiFi RSS received by device B in T₂.
+
+## FIGURE 21.1 (See color insert.): Contours of RSS values over a 2-dimensional environment collected from a same access point in different time periods and received by different mobile devices. Different colors denote different values of signal strength.
+
+with little additional human supervision, transfer learning techniques are again desirable, and have proven to be promising [87].
+
+Generally speaking, transfer learning can be classified into two different fields: 1) transfer learning for classification, regression, and clustering problems [97], and 2) transfer learning for reinforcement learning tasks [128]. In this chapter, we focus on transfer learning in data classification and its real-world applications. Furthermore, as first introduced in a survey article [97], there are three main research issues in transfer learning: 1) What to transfer, 2) How to transfer, and 3) When to transfer. Specifically, “What to transfer” asks which part of knowledge can be extracted and transferred across domains or tasks. Some knowledge is domain- or task-specific, which may not be observed in other domains or tasks, while some knowledge is commonly shared by different domains or tasks, which can be treated as a bridge for knowledge transfer across domains or tasks. After discovering which knowledge can be transferred, learning algorithms need to be developed to transfer the knowledge, which corresponds to the “how to transfer” issue. Different knowledge-transfer strategies lead to specific transfer learning approaches. “When to transfer” asks in which situations it is appropriate to use transfer learning. Likewise, we are interested in knowing in which situations
+
+knowledge should not be transferred. In some situations, when the source domain and target domain are not related to each other, brute-force transfer may be unsuccessful. In the worst case, it may even hurt the performance of learning in the target domain, a situation that is often referred to as *negative transfer*. Therefore, the goal of “When to transfer” is to avoid *negative transfer* and then ensure *positive transfer*.
+
+The rest of this chapter is organized as follows. In Section 21.2, we start by giving an overview of transfer learning including its brief history, definitions, and different learning settings. In Sections 21.3–21.4, we summarize approaches into different categories based on two transfer learning settings, namely homogeneous transfer learning and heterogeneous transfer learning. In Sections 21.5–21.6, we discuss the negative transfer issue and other research issues of transfer learning. After that, we show diverse real-world applications of transfer learning in Section 21.7. Finally, we give concluding remarks in Section 21.8.
+
+## 21.2 Transfer Learning Overview
+
+In this section, we will provide an overview of transfer learning in terms of background and motivation. The notations and definitions will also be introduced.
+
+### 21.2.1 Background
+
+The study of transfer learning is motivated by the fact that people can intelligently apply knowledge learned previously to solve new problems faster or with better solutions [47]. For example, if one is good at coding in C++ programming language, he/she may learn Java programming language fast. This is because both C++ and Java are object-oriented programming (OOP) languages, and share similar programming motivations. As another example, if one is good at playing table tennis, he/she may learn playing tennis fast because the skill sets of these two sports are overlapping. Formally, from a psychological point of view, the definition of transfer learning or learning of transfer is the study of the dependency of human conduct, learning, or performance on prior experience. More than 100 years ago, researchers had already explored how individuals would transfer in one context to another context that share similar characteristics [129].
+
+The fundamental motivation for transfer learning in the field of machine learning is the need for lifelong machine learning methods that retain and reuse previously learned knowledge such that intelligent agencies can adapt to new environments or novel tasks effectively and efficiently with little human supervision. Informally, the definition of transfer learning in the field of machine learning is the ability of a system to recognize and apply knowledge and skills learned in previous domains or tasks to new domains or novel domains, which share some commonality.
+
+### 21.2.2 Notations and Definitions
+
+In this section, we follow the notations introduced in [97] to describe the problem statement of transfer learning. A *domain* 𝒟 consists of two components: a feature space 𝒳 and a marginal probability distribution P(x), where x ∈ 𝒳. In general, if two domains are different, then they may have different feature spaces or different marginal probability distributions. Given a specific domain, 𝒟 = {𝒳, P(x)}, a *task* 𝒯 consists of two components: a label space 𝒴 and a predictive function f(·) (denoted by 𝒯 = {𝒴, f(·)}). The function f(·) is a predictive function that can be used to make predictions on unseen instances {x*}’s. From a probabilistic viewpoint, f(x) can be written as
+
+P(y|x). In classification, labels can be binary, i.e., 𝒴 = {−1, +1}, or discrete values, i.e., multiple classes.
+
+For simplicity, we only consider the case where there is one source domain 𝒟_S, and one target domain 𝒟_T, as this is by far the most popular of the research works in the literature. The issue of knowledge transfer from multiple source domains will be discussed in Section 21.6. More specifically, we denote D_S = {(x_Si, y_Si)}^n_S_{i=1} the source domain data, where x_Si ∈ 𝒳_S is the data instance, and y_Si ∈ 𝒴_S is the corresponding class label. Similarly, we denote D_T = {(x_Ti, y_Ti)}^n_T_{i=1} the target domain data, where the input x_Ti is in 𝒳_T and y_Ti ∈ 𝒴_T is the corresponding output. In most cases, 0 ≤ n_T ≪ n_S. Based on the notations defined above, the definition of transfer learning can be defined as follows [97]:
+
+## Definition 1 Given a source domain 𝒟_S and learning task 𝒯_S, a target domain 𝒟_T and learning task 𝒯_T, transfer learning aims to help improve the learning of the target predictive function f_T(·) in 𝒟_T using the knowledge in 𝒟_S and 𝒯_S, where 𝒟_S ≠ 𝒟_T, or 𝒯_S ≠ 𝒯_T.
+
+In the above definition, a domain is a pair 𝒟 = {𝒳, P(x)}. Thus the condition 𝒟_S ≠ 𝒟_T implies that either 𝒳_S ≠ 𝒳_T or P(x_S) ≠ P(x_T). Similarly, a task is defined as a pair 𝒯 = {𝒴, P(y|x)}. Thus the condition 𝒯_S ≠ 𝒯_T implies that either 𝒴_S ≠ 𝒴_T or P(y_S|x_S) ≠ P(y_T|x_T). When the target and source domains are the same, i.e., 𝒟_S = 𝒟_T, and their learning tasks are the same, i.e., 𝒯_S = 𝒯_T, the learning problem becomes a traditional machine learning problem. Based on whether the feature spaces or label spaces are identical or not, we can further categorize transfer learning into two settings: 1) homogenous transfer learning, and 2) heterogenous transfer learning. In the following two sections, we give the definitions of these two settings and review their representative methods, respectively.
+
+## 21.3 Homogenous Transfer Learning
+
+In this section, we first give an definition of homogenous transfer learning as follows:
+
+## Definition 2 Given a source domain 𝒟_S and learning task 𝒯_S, a target domain 𝒟_T and learning task 𝒯_T, homogenous transfer learning aims to help improve the learning of the target predictive function f_T(·) in 𝒟_T using the knowledge in 𝒟_S and 𝒯_S, where 𝒳_S ∩ 𝒳_T ≠ ∅ and 𝒴_S = 𝒴_T, but P(x_S) ≠ P(x_T) or P(y_S|x_S) ≠ P(y_T|x_T).
+
+Based on the above definition, in homogenous transfer learning, the feature spaces between domains are overlapping, and the label spaces between tasks are identical. The difference between domains or tasks is caused by the marginal distributions or predictive distributions. Approaches to homogenous transfer learning can be summarized into four categories: 1) instance-based approach, 2) feature-representation-based approach, 3) model-parameter-based approach, and 4) relational-information-based approach. In the following sections, we describe the motivations of these approaches and introduce some representative methods of each approach.
+
+### 21.3.1 Instance-Based Approach
+
+A motivation of the instance-based approach is that although the source domain labeled data cannot be reused directly, part of them can be reused for the target domain after re-weighting or re-sampling. An assumption behind the instance-based approach is that the source and target domains have a lot of overlapping features, which means that the domains share the same or similar support. Based on whether labeled data are required or not in the target domain, the instance-based approach

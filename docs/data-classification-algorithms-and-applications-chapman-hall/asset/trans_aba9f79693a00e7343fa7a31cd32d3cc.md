@@ -1,0 +1,119 @@
+
+
+[12] E. S. Edgington. *Randomization tests, 3rd ed.* New York: Marcel-Dekker, 1995.
+
+[13] B. Efron and R. Tibshirani. Improvements on cross-validation: The .632+ bootstrap method. *Journal of the American Statistical Association*, 92(438):548–560, 1997.
+
+[14] C. Ferri, J. Hernández-Orallo, and M.A. Salido. Volume under the ROC surface for multi-class problems. In *Proc. of 14th European Conference on Machine Learning*, pages 108–120, 2003.
+
+[15] H. Finner. On a monotonicity problem in step-down multiple test procedures. *Journal of the American Statistical Association*, 88:920–923, 1993.
+
+[16] M. Friedman. The use of ranks to avoid the assumption of normality implicit in the analysis of variance. *Journal of the American Statistical Association*, 32:674–701, 1937.
+
+[17] M. Friedman. A comparison of alternative tests of significance for the problem of m rankings. *Annals of Mathematical Statistics*, 11:86–92, 1940.
+
+[18] S. García, A. Fernández, J. Luengo, and F. Herrera. Advanced nonparametric tests for multiple comparisons in the design of experiments in computational intelligence and data mining: Experimental analysis of power. *Information Sciences*, 180:2044–2064, 2010.
+
+[19] D. J. Hand and R. J. Till. A simple generalisation of the area under the ROC curve for multiple class classification problems. *Machine Learning*, 45(2):171–186, 2001.
+
+[20] M.R. Hassan, K. Ramamohanarao, C. Karmakar, M. M. Hossain, and J. Bailey. A novel scalable multi-class roc for effective visualization and computation. In *Advances in Knowledge Discovery and Data Mining*, volume 6118, pages 107–120. Springer Berlin Heidelberg, 2010.
+
+[21] Y. Hochberg. A sharper Bonferroni procedure for multiple tests of significance. *Biometrika*, 75:800–803, 1988.
+
+[22] J. Hodges and E. Lehmann. Ranks methods for combination of independent experiments in analysis of variance. *Annals of Mathematical Statistics*, 3:482–497, 1962.
+
+[23] M. C. B. S. Holland. An improved sequentially rejective Bonferroni test procedure. *Biometrics*, 43:417–423, 1987.
+
+[24] S. Holm. A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics*, 6:65–70, 1979.
+
+[25] G. Hommel. A stagewise rejective multiple test procedure based on a modified Bonferroni test. *Biometrika*, 75:383–386, 1988.
+
+[26] G. Hommel and G. Bernhard. A rapid algorithm and a computer program for multiple test procedures using logical structures of hypotheses. *Computer Methods and Programs in Biomedicine*, 43(3-4):213–216, 1994.
+
+[27] R. Iman and J. Davenport. Approximations of the critical region of the Friedman statistic. *Communications in Statistics*, 9:571–595, 1980.
+
+[28] M. Keuls. The use of the studentized range in connection with an analysis of variance. *Euphytica*, 1:112–122, 1952.
+
+[29] R. E. Kirk. *Experimental design: Procedures for the Behavioral Sciences, 3rd ed.* Pacific Grove, CA: Brooks/Cole Publishing Company, 1995.
+
+[30] R. Kohavi. A study of cross-validation and bootstrap for accuracy estimation and model selection. In Proceedings of the 14th International Joint Conference on Artificial Intelligence—Volume 2, IJCAI'95, pages 1137–1143, 1995.
+
+[31] T. C. W. Landgrebe and R. P. W. Duin. A simplified extension of the area under the ROC to the multiclass domain. In 17th Annual Symposium of the Pattern Recognition Association of South Africa, 2006.
+
+[32] T. C. W. Landgrebe and R. P. W. Duin. Approximating the multiclass ROC by pairwise analysis. Pattern Recognition Letters, 28(13):1747–1758, 2007.
+
+[33] T. C. W. Landgrebe and R. P. W. Duin. Efficient multiclass ROC approximation by decomposition via confusion matrix perturbation analysis. IEEE Transactions on Pattern Analysis and Machine Intelligence, 30(5):810–822, 2008.
+
+[34] T. C. W. Landgrebe and P. Paclik. The ROC skeleton for multiclass ROC estimation. Pattern Recognition Letters, 31(9):949–958, 2010.
+
+[35] S. C. Larson. The shrinkage of the coefficient of multiple correlation. Journal of Educational Psychology, 22(1):45–55, 1931.
+
+[36] J. Li. A two-step rejection procedure for testing multiple hypotheses. Journal of Statistical Planning and Inference, 138:1521–1527, 2008.
+
+[37] J. Luengo, S. García, and F. Herrera. A study on the use of statistical tests for experimentation with neural networks: Analysis of parametric test conditions and non-parametric tests. Expert Systems with Applications, 36:7798–7808, 2009.
+
+[38] M. Majnik and Z. Bosnić. ROC analysis of classifiers in machine learning: A survey. Intelligent Data Analysis, 17(3):531–558, 2011.
+
+[39] J. G. Moreno-Torres, T. Raeder, R. A. Rodriguez, N. V. Chawla, and F. Herrera. A unifying view on dataset shift in classification. Pattern Recognition, 45(1):521–530, 2012.
+
+[40] J. G. Moreno-Torres, J. A. Sáez, and F. Herrera. Study on the impact of partition-induced dataset shift on k-fold cross-validation. IEEE Transactions on Neural Networks and Learning Systems, 23(8):1304–1312, 2012.
+
+[41] D. Mossman. Three-way ROCS. Medical Decision Making, 19:78–89, 1999.
+
+[42] T. Nichols and S. Hayasaka. Controlling the familywise error rate in functional neuroimaging: A comparative review. Statistical Methods in Medical Research, 12:419–446, 2003.
+
+[43] D. Quade. Using weighted rankings in the analysis of complete blocks with additive block effects. Journal of the American Statistical Association, 74:680–683, 1979.
+
+[44] A. Rhyne and R. Steel. Tables for a treatments versus control multiple comparisons sign test. Technometrics, 7:293–306, 1965.
+
+[45] D. Rom. A sequentially rejective test procedure based on a modified Bonferroni inequality. Biometrika, 77:663–665, 1990.
+
+[46] H. Scheffé. A method for judging all contrasts in the analysis of variance. Biometrika, 40:87–104, 1953.
+
+[47] J. Shaffer. Modified sequentially rejective multiple test procedures. Journal of American Statistical Association, 81:826–831, 1986.
+
+[48] D. J. Sheskin. *Handbook of Parametric and Nonparametric Statistical Procedures, 4th ed.*, Boca Raton, FL: Chapman and Hall/CRC, 2006.
+
+[49] H. Shimodaira. Improving predictive inference under covariate shift by weighting the log-likelihood function. *Journal of Statistical Planning and Inference*, 90(2):227–244, 2000.
+
+[50] Z. Sidak. Rectangular confidence regions for the means of multivariate normal distributions. *Journal of the American Statistical Association*, 62(318):626–633, 1967.
+
+[51] M. Stone. Cross-validatory choice and assessment of statistical predictions. *Journal of the Royal Statistical Society*, 36:111–147, 1974.
+
+[52] F. Wilcoxon. Individual comparisons by ranking methods. *Biometrics Bulletin*, 6:80–83, 1945.
+
+[53] D. H. Wolpert. The supervised learning no-free-lunch theorems. In *Proceedings of the Sixth Online World Conference on Soft Computing in Industrial Applications*, 2001.
+
+[54] Q. S. Xu and Y. Z. Liang. Monte Carlo cross validation. *Chemometrics and Intelligent Laboratory Systems*, 56(1):1–11, 2001.
+
+[55] J. H. Zar. *Biostatistical Analysis*. Prentice Hall, 1999.
+
+[56] X. Zeng and T. R. Martinez. Distribution-balanced stratified cross-validation for accuracy estimation. *Journal of Experimental and Theoretical Artificial Intelligence*, 12(1):1–12, 2000.
+
+## Chapter 25
+
+## Educational and Software Resources for Data Classification
+
+**Charu C. Aggarwal**
+
+*IBM T. J. Watson Research Center*
+*Yorktown Heights, NY*
+`charu@us.ibm.com`
+
++ 25.1 Introduction ........................................................................ 657
++ 25.2 Educational Resources ................................................................. 658
++ 25.2.1 Books on Data Classification .................................................... 658
++ 25.2.2 Popular Survey Papers on Data Classification ................................. 658
++ 25.3 Software for Data Classification ......................................................... 659
++ 25.3.1 Data Benchmarks for Software and Research .................................. 660
++ 25.4 Summary .............................................................................. 661
++ Bibliography .......................................................................... 661
+
+### 25.1 Introduction
+
+This chapter will summarize the key resources available in the literature on data classification. While this book provides a basic understanding of the important aspects of data classification, these resources will provide the researcher more in-depth perspectives on each individual topic. Therefore, this chapter will summarize the key resources in this area. In general, the resources on data classification can be divided into the categories of (i) books, (ii) survey articles, and (iii) software.
+
+Numerous books exist in data classification, both for general topics in classification and for more specific subject areas. In addition, numerous software packages exist in the area of data classification. In fact, this is perhaps the richest area of data classification in terms of availability of software. This chapter will list all the possible resources currently available both from commercial and non-commercial sources for data classification.
+
+This chapter is organized as follows. Section 25.2 presents educational resources on data classification. This section is itself divided into two subsections. The key books are discussed in Section 25.2.1, whereas the survey papers on data classification will be discussed in Section 25.2.2. Finally, the software on data classification will be discussed in Section 25.3. Section 25.4 discusses the conclusions and summary.
+

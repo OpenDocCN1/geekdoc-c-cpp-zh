@@ -1,0 +1,17 @@
+![](bbox=[0.106, 0.09, 0.853, 0.188])
+
+(a) Class Separation
+
+(b) Random Sample with SVM Classifier
+
+(c) Active Sample with SVM Classifier
+
+**FIGURE 1.5:** Motivation of active learning.
+
+# 1.4.5.1  Active Learning
+
+Most classification algorithms assume that the learner is a passive recipient of the data set, which is then used to create the training model. Thus, the data collection phase is cleanly separated out from modeling, and is generally not addressed in the context of model construction. However, data collection is costly, and is often the (cost) bottleneck for many classification algorithms. In active learning, the goal is to collect more labels *during the learning process* in order to improve the effectiveness of the classification process at a low cost. Therefore, the learning process and data collection process are tightly integrated with one another and enhance each other. Typically, the classification is performed in an interactive way with the learner providing well-chosen examples to the user, for which the user may then provide labels.
+
+For example, consider the two-class example of Figure 1.5. Here, we have a very simple division of the data into two classes, which is shown by a vertical dotted line, as illustrated in Figure 1.5(a). The two classes here are labeled by A and B. Consider the case where it is possible to query only seven examples for the two different classes. In this case, it is quite possible that the small number of allowed samples may result in a training data which is unrepresentative of the true separation between the two classes. Consider the case when an SVM classifier is used in order to construct a model. In Figure 1.5(b), we have shown a total of seven samples randomly chosen from the underlying data. Because of the inherent noisiness in the process of picking a small number of samples, an SVM classifier will be unable to accurately divide the data space. This is shown in Figure 1.5(b), where a portion of the data space is incorrectly classified, because of the error of modeling the SVM classifier. In Figure 1.5(c), we have shown an example of a well chosen set of seven instances along the decision boundary of the two classes. In this case, the SVM classifier is able to accurately model the decision regions between the two classes. This is because of the careful choice of the instances chosen by the active learning process. An important point to note is that it is particularly useful to sample instances that can clearly demarcate the decision boundary between the two classes.
+
+In general, the examples are typically chosen for which the learner has the greatest level of uncertainty based on the current training knowledge and labels. This choice evidently provides the greatest additional information to the learner in cases where the greatest uncertainty exists about the current label. As in the case of semi-supervised learning, the assumption is that unlabeled data is copious, but acquiring labels for it is expensive. Therefore, by using the help of the learner in choosing the appropriate examples to label, it is possible to greatly reduce the effort involved in the classification process. Active learning algorithms often use support vector machines, because the latter are particularly good at determining the boundaries between the different classes. Examples that lie on these boundaries are good candidates to query the user, because the greatest level of uncertainty exists for these examples. Numerous criteria exist for training example choice in active

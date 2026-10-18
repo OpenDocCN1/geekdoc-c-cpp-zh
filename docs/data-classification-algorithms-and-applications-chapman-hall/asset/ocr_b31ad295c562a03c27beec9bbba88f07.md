@@ -1,0 +1,19 @@
+# 25.2 Educational Resources
+
+Educational resources are either generic in the form of books, or more focussed on the research communities in the form of surveys. Books are generally more useful from a practical perspective, whereas survey articles are more useful for an academic perspective. The survey articles are often focussed on special areas of data classification such as decision trees, rule-based methods, and neural networks.
+
+# 25.2.1 Books on Data Classification
+
+The most well known books on on data classification include those by Duda et al [19], Hastie et al [23], Mitchell [29], Murphy [31], and Bishop [11]. Many of these books discuss different aspects of data classification in a comprehensive way, and serve as useful resources on the subject. The book authored by Duda et. al [19] is written in a simple way, and serves as a particularly useful guide.
+
+Numerous books have also been written in the context of specific areas of data classification. An excellent book on feature selection in classification may be found in [27]. Methods for probabilistic classification are discussed in [97]. For example, the topic of decision trees has been covered comprehensively in [34]. Decision trees are closely related to rule-based classifiers, and both topics are discussed in detail in [34]. The topic of Support Vector Machines is discussed comprehensively in [16,21,38–41]. A guide to instance-based classification may be found in [17]. Kernel methods are discussed in detail in [39]. Neural networks are discussed in detail in [10,22].
+
+In addition, a number of books exist, that address classification from the perspective of specific data types. Methods for text classification are discussed in detail in [5]. Methods for multimedia data classification are discussed in [28]. Network classification is discussed in detail in [3,4]. Methods for streaming classification are addressed in the book on data streaming [2]. The big data framework is explained in detail in [18,42], though no book currently exists, that specifically addresses the problem of classification within this framework.
+
+Numerous books also exist on different variations of classification algorithms. The problem of rare class learning is addressed in a general book on outlier analysis [1]. Active learning is addressed in the book by Burr Settles [36], whereas semi-supervised learning is addressed in [15,46]. Visual data mining is addressed in [37], while the topic of evaluation of classification algorithms is addressed in [25].
+
+# 25.2.2 Popular Survey Papers on Data Classification
+
+Numerous surveys also exist in the area of data classification. Two popular surveys may be found in [24,26]. Since data classification is a rather broad area, the books and surveys in this area generally cover a very specific area of classification. This is because the general area of data classification is too broad to be covered comprehensively by a survey paper. The most well known survey on decision trees is provided in [32]. Some other surveys may be found in [12,30]. An excellent tutorial on support vector machines may be found in [13]. Methods for instance-based learning are discussed in [8,9,43]. Two surveys on text classification may be found in [6,35]. Time-series classification methods are addressed in [44].
+
+An overview on rare class methods may be found in [14]. An excellent survey on transfer learning may be found in [33]. The topic of distance function learning is addressed in [45]. The topic of network classification is addressed in two survey chapters in [4] and [3], respectively. An overview on visual data mining methods is provided in [7].
