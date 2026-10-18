@@ -1,5 +1,4 @@
-# 
-C 语言入门指南
+# C 语言入门指南
 
 > 原文：[Learn C Programming [C Tutorial ]]()
 > 

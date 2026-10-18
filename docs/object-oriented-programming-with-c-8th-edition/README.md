@@ -1,5 +1,4 @@
-# 
-C++ 面向对象编程 8th 版
+# C++ 面向对象编程 8th 版
 
 > 原文：[Object Oriented Programming with C++, 8th Edition]()
 > 

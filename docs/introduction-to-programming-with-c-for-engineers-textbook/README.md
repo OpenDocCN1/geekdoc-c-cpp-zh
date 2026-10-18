@@ -1,5 +1,4 @@
-# 
-工程师 C++ 编程入门指南教材
+# 工程师 C++ 编程入门指南教材
 
 > 原文：[Introduction to Programming with C++ for Engineers Textbook]()
 > 
