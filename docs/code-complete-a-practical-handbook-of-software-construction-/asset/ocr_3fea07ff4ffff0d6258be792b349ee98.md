@@ -1,0 +1,11 @@
+![](bbox=[0.231, 0.069, 0.856, 0.335])
+
+**Figure 2-4** More complicated structures require more careful planning.
+
+What other parallels do the two activities share? In building a house, you won’t try to build things you can buy already built. You’ll buy a washer and dryer, dishwasher, refrigerator, and freezer. Unless you’re a mechanical wizard, you won’t consider building them yourself. You’ll also buy prefabricated cabinets, counters, windows, doors, and bathroom fixtures. If you’re building a software system, you’ll do the same thing. You’ll make extensive use of high-level language features rather than writing your own operating-system-level code. You might also use prebuilt libraries of container classes, scientific functions, user interface classes, and database-manipulation classes. It generally doesn’t make sense to code things you can buy ready-made.
+
+If you’re building a fancy house with first-class furnishings, however, you might have your cabinets custom-made. You might have a dishwasher, refrigerator, and freezer built in to look like the rest of your cabinets. You might have windows custom-made in unusual shapes and sizes. This customization has parallels in software development. If you’re building a first-class software product, you might build your own scientific functions for better speed or accuracy. You might build your own container classes, user interface classes, and database classes to give your system a seamless, perfectly consistent look and feel.
+
+Both building construction and software construction benefit from appropriate levels of planning. If you build software in the wrong order, it’s hard to code, hard to test, and hard to debug. It can take longer to complete, or the project can fall apart because everyone’s work is too complex and therefore too confusing when it’s all combined.
+
+Careful planning doesn’t necessarily mean exhaustive planning or over-planning. You can plan out the structural supports and decide later whether to put in hardwood floors or carpeting, what color to paint the walls, what roofing material to use, and so

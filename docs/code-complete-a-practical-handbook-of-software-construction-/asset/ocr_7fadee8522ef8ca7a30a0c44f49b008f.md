@@ -1,0 +1,15 @@
+**Cross-Reference** For details on change control, see Section 28.2, “Configuration Management.”
+
+*Change-control procedures* One big obstacle to achieving software quality is uncontrolled changes. Uncontrolled requirements changes can result in disruption to design and coding. Uncontrolled changes in design can result in code that doesn’t agree with its requirements, inconsistencies in the code, or more time spent modifying code to meet the changing design than spent moving the project forward. Uncontrolled changes in the code itself can result in internal inconsistencies and uncertainties about which code has been fully reviewed and tested and which hasn’t. The natural effect of change is to destabilize and degrade quality, so handling changes effectively is a key to achieving high quality levels.
+
+*Measurement of results* Unless results of a quality-assurance plan are measured, you’ll have no way to know whether the plan is working. Measurement tells you whether your plan is a success or a failure and also allows you to vary your process in a controlled way to see how it can be improved. You can also measure quality attributes themselves—correctness, usability, efficiency, and so on—and it’s useful to do so. For details on measuring quality attributes, see Chapter 9 of *Principles of Software Engineering* (Gilb 1988).
+
+![](bbox=[0.137, 0.416, 0.204, 0.474])
+
+*Prototyping* Prototyping is the development of realistic models of a system’s key functions. A developer can prototype parts of a user interface to determine usability, critical calculations to determine execution time, or typical data sets to determine memory requirements. A survey of 16 published and 8 unpublished case studies compared prototyping to traditional, specification-development methods. The comparison revealed that prototyping can lead to better designs, better matches with user needs, and improved maintainability (Gordon and Bieman 1991).
+
+# ## Setting Objectives
+
+Explicitly setting quality objectives is a simple, obvious step in achieving quality software, but it’s easy to overlook. You might wonder whether, if you set explicit quality objectives, programmers will actually work to achieve them? The answer is, yes, they will, if they know what the objectives are and that the objectives are reasonable. Programmers can’t respond to a set of objectives that change daily or that are impossible to meet.
+
+Gerald Weinberg and Edward Schulman conducted a fascinating experiment to investigate the effect on programmer performance of setting quality objectives (1974). They had five teams of programmers work on five versions of the same program. The same five quality objectives were given to each of the five teams, and each team was told to optimize a different objective. One team was told to minimize the memory required, another was told to produce the clearest possible output, another was told to build

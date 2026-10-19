@@ -1,0 +1,419 @@
+
+## M
+
+- metrics reporters, 714
+- minimum normal configurations, 515
+- mission-critical systems, 31–32
+- mixed-language environments, 276
+- mixins, 149
+- mock objects, 523
+- modeling, metaphors as. See metaphors, software
+- moderator role in inspections, 486
+- modularity
+  - design goal of, 107
+  - global variables, damage from, 337–338
+- modules, coupling considerations, 100–102
+- multiple inheritance, 148–149
+- multiple returns from routines, 391–393
+- multiple-file string search capability, 711–712
+
+## N
+
+- named constants. See constants
+- naming conventions
+  - “a” prefix convention, 272
+  - abbreviating names, 282–285
+  - abbreviation guidelines, 282
+  - arrays, 280–281
+  - benefits of, 270–271
+  - C language, 275, 278
+  - C++, 275–277
+  - capitalization, 274, 286
+  - case-insensitive languages, 273
+  - characters, hard to read, 287
+  - checklist, 288–289, 780
+  - class member variables, 273
+  - class vs. object names, 272–273
+  - common operations, for, 172–173
+  - constants, 273–274
+  - cross-project benefits, 270
+  - descriptiveness guideline, 171
+  - documentation, 284–285, 778–780
+  - enumerated types, 269, 274, 277–279
+  - formality, degrees of, 271
+  - files, 811
+  - function return values, 172
+  - global variables, 273, 342
+  - homonyms, 286
+  - Hungarian, 279
+  - informal, 272–279
+  - input parameters, 274
+  - Java, 276, 277
+  - key points, 289
+  - kinds of information in names, 277
+  - language-independence guidelines, 272–274
+  - length, not limiting, 171
+  - Macintosh, 275
+  - meanings in names, too similar, 285
+  - misleading names, 285
+  - misspelled words, 286
+  - mixed-language considerations, 276
+  - multiple natural languages, 287
+  - numbers, differentiating solely by, 171
+  - numerals, 286
+  - opposites, use of, 172
+  - parameters, 178
+  - phonic abbreviations, 283
+  - prefix standardization, 279–281
+  - procedure descriptions, 172
+  - proliferation reduction benefit, 270
+  - pronunciation guideline, 283
+  - purpose of, 270–271
+  - readability, 274
+  - relationships, emphasis of, 271
+  - reserved names, 287
+  - routines, 171–173, 222
+  - semantic principles, 280–281
+  - short names, 282–285, 288–289
+  - similarity of names, too much, 285
+  - spacing characters, 274
+  - t_ prefix convention, 272
+  - thesaurus, using, 283
+  - types vs. variables names, 272–273
+  - UDT abbreviations, 279–280
+  - variables, for. See variable names
+  - Visual Basic, 278–279
+  - when to use, 271
+- nested if statements
+  - case statements, converting to, 448–449, 451
+  - converting to if-then-else statements, 447–448
+  - factoring to routines, 449–451
+  - factory method approach, converting to, 452–453
+  - functional decomposition of, 450–451
+  - object-oriented approach, converting to, 452–453
+  - redesigning, 453
+  - simplification by retesting conditions, 445–446
+  - simplification with break blocks, 446–447
+  - summary of techniques for reducing, 453–454
+  - too many levels of, 445–454
+- nested loops
+  - designing, 382–383, 385
+  - ordering for performance, 623
+- nondeterministic nature of design process, 76, 87
+- nonstandard language features, 98
+- null objects, refactoring, 573
+- null statements, 444–445
+- numbers, literal, 292
+- numeric data types
+  - BCD, 297
+  - checklist, 316
+  - compiler warnings, 293
+  - comparisons, 440–442
+  - conversions, showing, 293
+  - costs of operations, 602
+  - declarations, commenting, 802
+  - floating-point types, 295–297, 316, 602
+  - hard coded 0s and 1s, 292
+  - integers, 293–295
+  - literal numbers, avoiding, 292
+  - magic numbers, avoiding, 292
+  - magnitudes, greatly different, operations with, 295
+  - mixed-type comparisons, 293
+  - overflows, 293–295
+  - ranges of integers, 294
+  - zero, dividing by, 292
+
+## O
+
+- objectives, software quality, 466, 468–469
+- object-oriented programming
+  - hiding information. See information hiding
+  - inheritance. See inheritance
+  - objects. See classes; objects
+  - polymorphism. See polymorphism
+  - resources for, 119, 159
+- object-parameter coupling, 101
+- objects
+  - ADTs as, 130
+  - attribute identification, 88
+  - class names, differentiating from, 272–273
+  - classes, contrasted to, 86
+  - containment, identifying, 88
+  - deleting objects, 206
+  - factory methods, 103–104, 452–453, 577
+  - identifying, 88
+  - inheritance, identifying, 88. See also inheritance
+  - interfaces, designing, 89. See also interfaces, class
+  - operations, identifying, 88
+  - parameters, using as, 179, 574
+  - protected interfaces, designing, 89
+  - public vs. private members, designing, 89
+  - real world, finding, 87–89
+  - refactoring, 574–576
+  - reference objects, 574
+  - responsibilities, assigning to, 106
+  - singleton property, enforcing, 151
+  - steps in designing, 87–89
+- Observer pattern, 104
+- off-by-one errors
+  - boundary analysis, 513–514
+  - fixing, approaches to, 553
+- offensive programming, 206
+- one-in, one-out control constructs, 454
+- operating systems, 590
+- operations, costs of common, 601–603
+- opposites for variable names, 264
+- optimization, premature, 840. See also performance tuning
+- oracles, software, 851
+- out keyword creation, 175–176
+- overengineering, 51
+- overflows, integer, 293–295
+- overlay linkers, 716
+- overridable routines, 145–146, 156
+- oyster farming metaphor, 15–16
+
+## P
+
+- packages, 156–157
+- paging operations, 599
+- pair programming
+  - benefits of, 484
+  - checklist, 484
+  - coding standards support for, 483
+  - compared to other collaboration, 495–496
+  - defined, 483
+  - experienced pairs, 484
+  - key points, 497
+  - pace, matching, 483
+  - personality conflicts, 484
+  - resources, 496
+  - rotating pairs, 483
+  - team leaders, 484
+  - visibility of monitor, 484
+  - watching, 483
+  - when not to use, 483
+- parameters of routines
+  - abstraction and object parameters, 179
+  - actual, matching to formal, 180
+  - asterisk (*) rule for pointers, 334–335
+  - behavior dependence on, 574
+  - by reference vs. by value, 333
+  - checklist for, 185
+  - C-library order, 175
+  - commenting, 806–807
+  - const prefix, 176, 177, 274
+  - dependencies, clarifying, 349
+  - documentation, 178
+  - enumerated types for, 303
+  - error variables, 176
+  - formal, matching to actual, 180
+  - global variables for, 336
+  - guidelines for use in routines, 174–180
+  - in keyword creation, 175–176
+  - input-modify-output order, 174–175
+  - Java, 176–177
+  - list size as refactoring indicator, 566
+  - matching actual to formal, 180
+  - naming, 178, 180, 274, 277, 278, 279
+  - number of, limiting, 178
+  - objects, passing, 179
+  - order for, 174–176
+  - out keyword creation, 175–176
+  - passing, types of, 333
+  - refactoring, 571, 573
+  - status, 176
+  - structures as, 322
+  - using all of rule, 176
+  - variables, using as, 176–177
+  - Visual Basic, 180
+- parentheses
+  - balancing technique, 437–438
+  - layout with, 738
+- Pareto Principle, 592
+- passing parameters, 333
+- patterns
+  - advantages of, 103–104
+  - alternatives suggested by, 103
+  - communications benefit, 104
+  - complexity reduction with, 103
+  - disadvantages of, 105
+  - error reduction benefit, 103
+  - Factory Method, 103–104
+  - resource for, 120
+  - table of, 104
+- people first theme. See readability
+- performance appraisals, 487
+- performance tuning
+  - algorithm choice, 590
+  - architecture prerequisites, 48
+  - arrays, 593–594, 603–604
+  - checklist, 607–608
+  - code tuning for. See code tuning
+  - comments, effects on, 791
+  - competing objectives dilemma, 595, 605
+  - compiler considerations, 590, 596–597
+  - correctness, importance of, 595–596
+  - database indexing, 601
+  - defects in code, 601
+  - DES example, 605–606
+  - design view, 589–590
+  - feature specific, 595
+  - hardware considerations, 591
+  - inefficiency, sources of, 598–601
+  - information hiding, considerations of, 96
+  - input/output, 598–599
+  - interpreted vs. compiled languages, 600–601
+  - key points, 608
+  - lines of code, minimizing number of, 593–594
+  - measurement of, 603–604
+  - memory vs. file operations, 598–599
+  - old wives’ tales, 593–596
+  - operating system considerations, 590
+  - operations, costs of common, 601–603
+  - overview of, 643–644
+  - paging operations, 599
+  - premature optimization, 840
+  - program requirements view of, 589
+  - purpose of, 587
+- prerequisites, upstream
+  - choosing between iterative and sequential approaches, 35–36
+  - coding too early mistake, 25
+  - compelling argument for, 27–31
+  - data arguing for, 28–30
+  - error detection, doing early, 29–30
+  - goal of, 25
+  - good practices table for, 31–32
+  - importance of, 24
+  - incomplete preparation, causes of, 25–27
+  - iterative and sequential mixes, 34–35
+  - iterative methods with, 28, 33–34
+  - key points for, 59–60
+  - kinds of projects, 31–33
+  - logical argument for, 27
+  - manager ignorance problem, 26
+  - problem definition, 36–38
+  - requirements development. See requirements
+  - risk reduction goal, 25
+  - skills required for success, 25
+  - time allowed for, 55–56
+  - WIMP syndrome, 26
+  - WISCA syndrome, 26
+- Principle of Proximity, 242, 351
+- private data, 148
+- problem-definition prerequisites, 36–38
+- problem domain, programming at, 845–847
+- problem-solving skills development, 823
+- procedural cohesion, 170
+- procedures. See also routines
+  - naming guidelines for, 172
+  - when to use, 181–182
+- processes, development. See approaches to development
+- productivity
+  - effects of good construction practice, 7
+  - industry average, 474
+  - size of projects, effects on, 653
+- professional development, 824–825
+- professional organizations, 862
+- program flow
+  - control of. See control structures
+  - sequential. See straight-line code
+- program organization prerequisite, 45–46
+- program size. See size of projects
+- programmers, character of. See character, programmers
+- programmers, treatment of. See also teams
+  - overview, 680
+  - physical environment, 684–685
+  - privacy of offices, 684
+  - religious issues, 683–684
+  - resources on, 685–686
+  - style issues, 683–684
+  - time allocations, 681
+  - variations in performance, 681–683
+- programming conventions
+  - choosing, 66
+  - coding practices checklist, 69
+  - formatting rules. See layout
+  - programming into languages, 68–69, 843
+- programming language choice
+  - Ada, 63
+  - assembly language, 63
+  - Basic, 65
+  - C, 64
+  - C#, 64
+  - C++, 64
+  - Cobol, 64
+  - expressiveness of concepts, 63
+  - familiar vs. unfamiliar languages, 62
+  - Fortran, 64
+  - higher- vs. lower-level language productivity, 62
+  - importance of, 61–63
+  - Java, 65
+  - JavaScript, 65
+  - Perl, 65
+  - PHP, 65
+  - productivity from, 62
+  - programming into languages, 68–69, 843
+  - Python, 65
+  - ratio of statements compared to C code, table of, 62
+  - SQL, 65
+  - thinking, effects on, 63
+  - Visual Basic, 65
+- programming tools
+  - assembler listing tools, 720
+  - beautifiers, 712
+  - build tools, 716–717
+  - building your own, 721–722
+  - CASE tools, 710
+  - checklist, 724–725
+  - class-hierarchy generators, 713
+  - code libraries, 717
+  - code tuning, 720
+  - code-generation wizards, 718
+  - compilers, 716
+  - cross-reference tools, 713
+  - data dictionaries, 715
+  - debugging tools, 526–527, 545, 558–559, 719
+  - dependency checkers, 716
+  - design tools, 710
+  - Diff tools, 712
+  - disassemblers, 720
+  - editing tools, 710–713
+  - executable-code tools, 716–720
+  - execution profiler tools, 720
+  - fantasyland, 722–723
+  - graphical design tools, 710
+  - grep, 711
+  - IDEs, 710–711
+  - interface documentation, 713
+  - key points, 725
+  - linkers, 716
+  - merge tools, 712
+  - metrics reporters, 714
+  - multiple-file string searches, 711–712
+  - preprocessors, 718–719
+  - project-specific tools, 721–722
+  - purpose of, 709
+  - quality analysis, 713–714
+  - refactoring tools, 714–715
+  - resources on, 724
+  - restructuring tools, 715
+  - scripts, 722
+  - semantics checkers, 713–714
+  - source-code tools, 710–715
+  - syntax checkers, 713–714
+  - templates, 713
+  - testing tools, 719
+  - tool-oriented environments, 720–721
+  - translators, 715
+  - version control tools, 715
+- project types, prerequisites corresponding to, 31–33
+- protected data, 148
+- prototyping, 114–115, 468
+- Proximity, Principle of, 242, 351
+- pseudocode
+  - algorithms, researching, 223
+  - bad, example of, 218–219
+  - benefits from, 219–220
+  - changing, efficiency of, 220
+  - checking for errors, 230–231
+  - checklist for PPP, 233–234

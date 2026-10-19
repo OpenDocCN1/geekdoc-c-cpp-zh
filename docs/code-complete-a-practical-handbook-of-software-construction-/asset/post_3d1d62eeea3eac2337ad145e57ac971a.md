@@ -1,0 +1,111 @@
+
+“Aha! But my program takes only one second per input.” The veteran leaned back, satisfied that he’d stumped the upstart. The other programmers seemed to agree, but the new programmer wasn’t intimidated.
+
+“Yes, but your program *doesn’t* work. If mine doesn’t have to work, I can make it run instantly.”
+
+For a certain class of projects, speed or size is a major concern. This class is the minority, is much smaller than most people think, and is getting smaller all the time. For these projects, the performance risks must be addressed by up-front design. For other projects, early optimization poses a significant threat to overall software quality, *including performance*.
+
+## When to Tune
+
+> Jackson’s Rules of Optimization: Rule 1. Don’t do it. Rule 2 (for experts only). Don’t do it yet—that is, not until you have a perfectly clear and unoptimized solution.
+> 
+> —M. A. Jackson
+
+Use a high-quality design. Make the program right. Make it modular and easily modifiable so that it’s easy to work on later. When it’s complete and correct, check the performance. If the program lumbers, make it fast and small. Don’t optimize until you know you need to.
+
+A few years ago I worked on a C++ project that produced graphical outputs to analyze investment data. After my team got the first graph working, testing reported that the program took about 45 minutes to draw the graph, which was clearly not acceptable. We held a team meeting to decide what to do about it. One of the developers became irate and shouted, “If we want to have any chance of releasing an acceptable product, we’ve got to start rewriting the whole code base in assembler right now.” I responded that I didn’t think so—that four percent of the code probably accounted for 50 percent or more of the performance bottleneck. It would be best to address that four percent toward the end of the project. After a bit more shouting, our manager assigned me to do some initial performance work (which was really a case of “Oh no! Please don’t throw me into that briar patch!”).
+
+As is often the case, a day’s work identified a couple of glaring bottlenecks in the code. A small number of code-tuning changes reduced the drawing time from 45 minutes to less than 30 seconds. Far less than one percent of the code accounted for 90 percent of the run time. By the time we released the software months later, several additional code-tuning changes reduced that drawing time to a little more than 1 second.
+
+## Compiler Optimizations
+
+Modern compiler optimizations might be more powerful than you expect. In the case I described earlier, my compiler did as good a job of optimizing a nested loop as I was able to do by rewriting the code in a supposedly more efficient style. When shopping for a compiler, compare the performance of each compiler on your program. Each compiler has different strengths and weaknesses, and some will be better suited to your program than others.
+
+Optimizing compilers are better at optimizing straightforward code than they are at optimizing tricky code. If you do “clever” things like fooling around with loop indexes, your compiler has a harder time doing its job and your program suffers. See “Using Only One Statement Per Line” in Section 31.5 for an example in which a straightforward approach resulted in compiler-optimized code that was 11 percent faster than comparable “tricky” code.
+
+With a good optimizing compiler, your code speed can improve 40 percent or more across the board. Many of the techniques described in the next chapter produce gains of only 15–30 percent. Why not just write clear code and let the compiler do the work? Here are the results of a few tests to check how much an optimizer speeded up an insertion-sort routine:
+
+| Language | Time Without Compiler Optimizations | Time with Compiler Optimizations | Time Savings | Performance Ratio |
+|---|---:|---:|---:|---:|
+| C++ compiler 1 | 2.21 | 1.05 | 52% | 2:1 |
+| C++ compiler 2 | 2.78 | 1.15 | 59% | 2.5:1 |
+| C++ compiler 3 | 2.43 | 1.25 | 49% | 2:1 |
+| C# compiler | 1.55 | 1.55 | 0% | 1:1 |
+| Visual Basic | 1.78 | 1.78 | 0% | 1:1 |
+| Java VM 1 | 2.77 | 2.77 | 0% | 1:1 |
+| Java VM 2 | 1.39 | 1.38 | <1% | 1:1 |
+| Java VM 3 | 2.63 | 2.63 | 0% | 1:1 |
+
+The only difference between versions of the routine was that compiler optimizations were turned off for the first compile and turned on for the second. Clearly, some compilers optimize better than others, and some are better without optimizations in the first place. Some Java Virtual Machines (JVMs) are also clearly better than others. You’ll have to check your own compiler, JVM, or both to measure the effect.
+
+## 25.3 Kinds of Fat and Molasses
+
+In code tuning you find the parts of a program that are as slow as molasses in winter and as big as Godzilla and change them so that they are as fast as greased lightning and so skinny they can hide in the cracks between the other bytes in RAM. You always have to profile the program to know with any confidence which parts are slow and fat, but some operations have a long history of laziness and obesity, and you can start by investigating them.
+
+## Common Sources of Inefficiency
+
+Here are several common sources of inefficiency:
+
+### Input/output operations
+One of the most significant sources of inefficiency is unnecessary input/output (I/O). If you have a choice of working with a file in memory vs. on disk, in a database, or across a network, use an in-memory data structure unless space is critical.
+
+Here’s a performance comparison between code that accesses random elements in a 100-element in-memory array and code that accesses random elements of the same size in a 100-record disk file:
+
+| Language | External File Time | In-Memory Data Time | Time Savings | Performance Ratio |
+|---|---|---|---|---|
+| C++ | 6.04 | 0.000 | 100% | n/a |
+| C# | 12.8 | 0.010 | 100% | 1000:1 |
+
+According to this data, in-memory access is on the order of 1000 times faster than accessing data in an external file. Indeed with the C++ compiler I used, the time required for in-memory access wasn’t measurable.
+
+The performance comparison for a similar test of sequential access times is similar:
+
+| Language | External File Time | In-Memory Data Time | Time Savings | Performance Ratio |
+|---|---|---|---|---|
+| C++ | 3.29 | 0.021 | 99% | 150:1 |
+| C# | 2.60 | 0.030 | 99% | 85:1 |
+
+Note: The tests for sequential access were run with 13 times the data volume of the tests for random access, so the results are not comparable across the two types of tests.
+
+If the test had used a slower medium for external access—for example, a hard disk across a network connection—the difference would have been even greater. The performance looks like this when a similar random-access test is performed on a network location instead of on the local machine:
+
+| Language | Local File Time | Network File Time | Time Savings |
+|---|---|---|---|
+| C++ | 6.04 | 6.64 | -10% |
+| C# | 12.8 | 14.1 | -10% |
+
+Of course, these results can vary dramatically depending on the speed of your network, network loading, distance of the local machine from the networked disk drive, speed of the networked disk drive compared to the speed of the local drive, current phase of the moon, and other factors.
+
+Overall, the effect of in-memory access is significant enough to make you think twice about having I/O in a speed-critical part of a program.
+
+### Paging
+An operation that causes the operating system to swap pages of memory is much slower than an operation that works on only one page of memory. Sometimes a simple change makes a huge difference. In the next example, one programmer wrote an initialization loop that produced many page faults on a system that used 4K pages.
+
+```
+Java Example of an Initialization Loop That Causes Many Page Faults
+for ( column = 0; column < MAX_COLUMNS; column++ ) {
+    for ( row = 0; row < MAX_ROWS; row++ ) {
+        table[ row ][ column ] = BlankTableElement();
+    }
+}
+```
+
+This is a nicely formatted loop with good variable names, so what’s the problem? The problem is that each element of table is about 4000 bytes long. If table has too many rows, every time the program accesses a different row, the operating system will have to switch memory pages. The way the loop is structured, every single array access switches rows, which means that every single array access causes paging to disk.
+
+The programmer restructured the loop this way:
+
+```
+Java Example of an Initialization Loop That Causes Few Page Faults
+for ( row = 0; row < MAX_ROWS; row++ ) {
+    for ( column = 0; column < MAX_COLUMNS; column++ ) {
+        table[ row ][ column ] = BlankTableElement();
+    }
+}
+```
+
+This code still causes a page fault every time it switches rows, but it switches rows only MAX_ROWS times instead of MAX_ROWS * MAX_COLUMNS times.
+
+The specific performance penalty varies significantly. On a machine with limited memory, I measured the second code sample to be about 1000 times faster than the first code sample. On machines with more memory, I’ve measured the difference to be as small as a factor of 2, and it doesn’t show up at all except for very large values of MAX_ROWS and MAX_COLUMNS.
+
+### System calls
+Calls to system routines are often expensive. They often involve a context switch—saving the program’s state, recovering the kernel’s state, and the reverse. System routines include input/output operations to disk, keyboard, screen, printer, or other device; memory-management routines; and certain utility routines. If perfor-

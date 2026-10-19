@@ -1,0 +1,15 @@
+What if the short program shows that the feature doesn’t work the way you want it to? That’s what you wanted to find out. Better to find it out in a small program than a large one. One key to effective programming is learning to make mistakes quickly, learning from them each time. Making a mistake is no sin. Failing to learn from a mistake is.
+
+**Read about problem solving**  Problem solving is the core activity in building computer software. Herbert Simon reported a series of experiments on human problem solving. They found that human beings don’t always discover clever problem-solving strategies themselves, even though the same strategies could readily be taught to the same people (Simon 1996). The implication is that even if you want to reinvent the wheel, you can’t count on success. You might reinvent the square instead.
+
+**Analyze and plan before you act**  You’ll find that there’s a tension between analysis and action. At some point you have to quit gathering data and act. The problem for most programmers, however, isn’t an excess of analysis. The pendulum is currently so far on the “acting” side of the arc that you can wait until it’s at least partway to the middle before worrying about getting stuck on the “analysis-paralysis” side.
+
+**Learn about successful projects**  One especially good way to learn about programming is to study the work of the great programmers. Jon Bentley thinks that you should be able to sit down with a glass of brandy and a good cigar and read a program the way you would a good novel. That might not be as far-fetched as it sounds. Most people wouldn’t want to use their recreational time to scrutinize a 500-page source listing, but many people would enjoy studying a high-level design and dipping into more detailed source listings for selected areas.
+
+The software-engineering field makes extraordinarily limited use of examples of past successes and failures. If you were interested in architecture, you’d study the drawings of Louis Sullivan, Frank Lloyd Wright, and I. M. Pei. You’d probably visit some of their buildings. If you were interested in structural engineering, you’d study the Brooklyn Bridge; the Tacoma Narrows Bridge; and a variety of other concrete, steel, and wood structures. You would study examples of successes and failures in your field.
+
+Thomas Kuhn points out that a part of any mature science is a set of solved problems that are commonly recognized as examples of good work in the field and that serve as examples for future work (Kuhn 1996). Software engineering is only beginning to mature to this level. In 1990, the Computer Science and Technology Board concluded that there were few documented case studies of either successes or failures in the software field (CSTB 1990).
+
+An article in the *Communications of the ACM* argued for learning from case studies of programming problems (Linn and Clancy 1992). The fact that someone has to argue
+
+**Further Reading** A great book that teaches problem solving is James Adams’s *Conceptual Blockbusting* (2001).
