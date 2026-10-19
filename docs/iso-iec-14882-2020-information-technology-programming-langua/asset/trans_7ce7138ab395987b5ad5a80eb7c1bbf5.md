@@ -1,0 +1,199 @@
+
+
+# ISO/IEC 14882:2020(E)
+
+// 22.4.7, class template multiset
+template<class Key, class Compare = less<Key>, class Allocator = allocator<Key>>
+    class multiset;
+
+template<class Key, class Compare, class Allocator>
+    bool operator==(const multiset<Key, Compare, Allocator>& x,
+                    const multiset<Key, Compare, Allocator>& y);
+template<class Key, class Compare, class Allocator>
+    synth-three-way-result<Key> operator<=>(const multiset<Key, Compare, Allocator>& x,
+                                            const multiset<Key, Compare, Allocator>& y);
+
+template<class Key, class Compare, class Allocator>
+    void swap(multiset<Key, Compare, Allocator>& x,
+              multiset<Key, Compare, Allocator>& y)
+        noexcept(noexcept(x.swap(y)));
+
+template<class Key, class Compare, class Allocator, class Predicate>
+    typename multiset<Key, Compare, Allocator>::size_type
+        erase_if(multiset<Key, Compare, Allocator>& c, Predicate pred);
+
+namespace pmr {
+    template<class Key, class Compare = less<Key>>
+        using set = std::set<Key, Compare, polymorphic_allocator<Key>>;
+
+    template<class Key, class Compare = less<Key>>
+        using multiset = std::multiset<Key, Compare, polymorphic_allocator<Key>>;
+}
+
+## 22.4.4 Class template map [map]
+
+### 22.4.4.1 Overview [map.overview]
+
+1 A map is an associative container that supports unique keys (contains at most one of each key value) and provides for fast retrieval of values of another type T based on the keys. The map class supports bidirectional iterators.
+
+2 A map meets all of the requirements of a container, of a reversible container (22.2), of an associative container (22.2.6), and of an allocator-aware container (Table 76). A map also provides most operations described in 22.2.6 for unique keys. This means that a map supports the a_unique operations in 22.2.6 but not the a_eq operations. For a map<Key,T> the key_type is Key and the value_type is pair<const Key,T>. Descriptions are provided here only for operations on map that are not described in one of those tables or for operations where there is additional semantic information.
+
+```
+namespace std {
+    template<class Key, class T, class Compare = less<Key>,
+             class Allocator = allocator<pair<const Key, T>>>
+    class map {
+    public:
+        // types
+        using key_type            = Key;
+        using mapped_type         = T;
+        using value_type          = pair<const Key, T>;
+        using key_compare         = Compare;
+        using allocator_type      = Allocator;
+        using pointer             = typename allocator_traits<Allocator>::pointer;
+        using const_pointer       = typename allocator_traits<Allocator>::const_pointer;
+        using reference           = value_type&;
+        using const_reference     = const value_type&;
+        using size_type           = implementation-defined; // see 22.2
+        using difference_type     = implementation-defined; // see 22.2
+        using iterator            = implementation-defined; // see 22.2
+        using const_iterator      = implementation-defined; // see 22.2
+        using reverse_iterator    = std::reverse_iterator<iterator>;
+        using const_reverse_iterator = std::reverse_iterator<const_iterator>;
+```
+
+# ISO/IEC 14882:2020(E)
+
+```
+using node_type                = unspecified;
+using insert_return_type       = insert-return-type<iterator, node_type>;
+
+class value_compare {
+    friend class map;
+protected:
+    Compare comp;
+    value_compare(Compare c) : comp(c) {}
+public:
+    bool operator()(const value_type& x, const value_type& y) const {
+        return comp(x.first, y.first);
+    }
+};
+
+// 22.4.4.2, construct/copy/destroy
+map() : map(Compare()) { }
+explicit map(const Compare& comp, const Allocator& = Allocator());
+template<class InputIterator>
+    map(InputIterator first, InputIterator last,
+        const Compare& comp = Compare(), const Allocator& = Allocator());
+map(const map& x);
+map(map&& x);
+explicit map(const Allocator&);
+map(const map&, const Allocator&);
+map(map&&, const Allocator&);
+map(initializer_list<value_type>,
+    const Compare& = Compare(),
+    const Allocator& = Allocator());
+template<class InputIterator>
+    map(InputIterator first, InputIterator last, const Allocator& a)
+    : map(first, last, Compare(), a) { }
+map(initializer_list<value_type> il, const Allocator& a)
+    : map(il, Compare(), a) { }
+~map();
+map& operator=(const map& x);
+map& operator=(map&& x)
+    noexcept(allocator_traits<Allocator>::is_always_equal::value &&
+             is_nothrow_move_assignable_v<Compare>);
+map& operator=(initializer_list<value_type>);
+allocator_type get_allocator() const noexcept;
+
+// iterators
+iterator            begin() noexcept;
+const_iterator      begin() const noexcept;
+iterator            end() noexcept;
+const_iterator      end() const noexcept;
+
+reverse_iterator    rbegin() noexcept;
+const_reverse_iterator rbegin() const noexcept;
+reverse_iterator    rend() noexcept;
+const_reverse_iterator rend() const noexcept;
+
+const_iterator      cbegin() const noexcept;
+const_iterator      cend() const noexcept;
+const_reverse_iterator crbegin() const noexcept;
+const_reverse_iterator crend() const noexcept;
+
+// capacity
+[[nodiscard]] bool empty() const noexcept;
+size_type size() const noexcept;
+size_type max_size() const noexcept;
+
+// 22.4.4.3, element access
+mapped_type& operator[](const key_type& x);
+```
+
+Complexity: The same as emplace and emplace_hint, respectively.
+
+```
+template<class M>
+  pair<iterator, bool> insert_or_assign(const key_type& k, M&& obj);
+template<class M>
+  iterator insert_or_assign(const_iterator hint, const key_type& k, M&& obj);
+```
+
+Mandates: is_assignable_v<mapped_type&, M&&> is true.
+
+Preconditions: value_type is Cpp17EmplaceConstructible into map from k, forward<M>(obj).
+
+Effects: If the map already contains an element e whose key is equivalent to k, assigns std::forward<M>(obj) to e.second. Otherwise inserts an object of type value_type constructed with k, std::forward<M>(obj).
+
+Returns: In the first overload, the bool component of the returned pair is true if and only if the insertion took place. The returned iterator points to the map element whose key is equivalent to k.
+
+Complexity: The same as emplace and emplace_hint, respectively.
+
+```
+template<class M>
+  pair<iterator, bool> insert_or_assign(key_type&& k, M&& obj);
+template<class M>
+  iterator insert_or_assign(const_iterator hint, key_type&& k, M&& obj);
+```
+
+Mandates: is_assignable_v<mapped_type&, M&&> is true.
+
+Preconditions: value_type is Cpp17EmplaceConstructible into map from move(k), forward<M>(obj).
+
+Effects: If the map already contains an element e whose key is equivalent to k, assigns std::forward<M>(obj) to e.second. Otherwise inserts an object of type value_type constructed with std::move(k), std::forward<M>(obj).
+
+Returns: In the first overload, the bool component of the returned pair is true if and only if the insertion took place. The returned iterator points to the map element whose key is equivalent to k.
+
+Complexity: The same as emplace and emplace_hint, respectively.
+
+## 22.4.4.5 Erasure [map.erasure]
+
+```
+template<class Key, class T, class Compare, class Allocator, class Predicate>
+  typename map<Key, T, Compare, Allocator>::size_type
+    erase_if(map<Key, T, Compare, Allocator>& c, Predicate pred);
+```
+
+Effects: Equivalent to:
+
+```
+auto original_size = c.size();
+for (auto i = c.begin(), last = c.end(); i != last; ) {
+  if (pred(*i)) {
+    i = c.erase(i);
+  } else {
+    ++i;
+  }
+}
+return original_size - c.size();
+```
+
+## 22.4.5 Class template multimap [multimap]
+
+### 22.4.5.1 Overview [multimap.overview]
+
+1 A multimap is an associative container that supports equivalent keys (possibly containing multiple copies of the same key value) and provides for fast retrieval of values of another type T based on the keys. The multimap class supports bidirectional iterators.
+
+2 A multimap meets all of the requirements of a container and of a reversible container (22.2), of an associative container (22.2.6), and of an allocator-aware container (Table 76). A multimap also provides most operations described in 22.2.6 for equal keys. This means that a multimap supports the a_eq operations in 22.2.6 but not the a_uniq operations. For a multimap<Key,T> the key_type is Key and the value_type is pair<const Key,T>. Descriptions are provided here only for operations on multimap that are not described in one of those tables or for operations where there is additional semantic information.
+

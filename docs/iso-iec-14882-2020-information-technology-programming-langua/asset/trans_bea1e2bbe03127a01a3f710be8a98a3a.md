@@ -1,0 +1,274 @@
+
+
+```cpp
+namespace ranges {
+    template<random_access_iterator I, sentinel_for<I> S, class Comp = ranges::less,
+        class Proj = identity>
+    requires sortable<I, Comp, Proj>
+    constexpr I
+    push_heap(I first, S last, Comp comp = {}, Proj proj = {});
+    template<random_access_range R, class Comp = ranges::less, class Proj = identity>
+    requires sortable<iterator_t<R>, Comp, Proj>
+    constexpr borrowed_iterator_t<R>
+    push_heap(R&& r, Comp comp = {}, Proj proj = {});
+}
+
+template<class RandomAccessIterator>
+constexpr void pop_heap(RandomAccessIterator first, RandomAccessIterator last);
+template<class RandomAccessIterator, class Compare>
+constexpr void pop_heap(RandomAccessIterator first, RandomAccessIterator last,
+    Compare comp);
+
+namespace ranges {
+    template<random_access_iterator I, sentinel_for<I> S, class Comp = ranges::less,
+        class Proj = identity>
+    requires sortable<I, Comp, Proj>
+    constexpr I
+    pop_heap(I first, S last, Comp comp = {}, Proj proj = {});
+    template<random_access_range R, class Comp = ranges::less, class Proj = identity>
+    requires sortable<iterator_t<R>, Comp, Proj>
+    constexpr borrowed_iterator_t<R>
+    pop_heap(R&& r, Comp comp = {}, Proj proj = {});
+}
+
+template<class RandomAccessIterator>
+constexpr void make_heap(RandomAccessIterator first, RandomAccessIterator last);
+template<class RandomAccessIterator, class Compare>
+constexpr void make_heap(RandomAccessIterator first, RandomAccessIterator last,
+    Compare comp);
+
+namespace ranges {
+    template<random_access_iterator I, sentinel_for<I> S, class Comp = ranges::less,
+        class Proj = identity>
+    requires sortable<I, Comp, Proj>
+    constexpr I
+    make_heap(I first, S last, Comp comp = {}, Proj proj = {});
+    template<random_access_range R, class Comp = ranges::less, class Proj = identity>
+    requires sortable<iterator_t<R>, Comp, Proj>
+    constexpr borrowed_iterator_t<R>
+    make_heap(R&& r, Comp comp = {}, Proj proj = {});
+}
+
+template<class RandomAccessIterator>
+constexpr void sort_heap(RandomAccessIterator first, RandomAccessIterator last);
+template<class RandomAccessIterator, class Compare>
+constexpr void sort_heap(RandomAccessIterator first, RandomAccessIterator last,
+    Compare comp);
+
+namespace ranges {
+    template<random_access_iterator I, sentinel_for<I> S, class Comp = ranges::less,
+        class Proj = identity>
+    requires sortable<I, Comp, Proj>
+    constexpr I
+    sort_heap(I first, S last, Comp comp = {}, Proj proj = {});
+    template<random_access_range R, class Comp = ranges::less, class Proj = identity>
+    requires sortable<iterator_t<R>, Comp, Proj>
+    constexpr borrowed_iterator_t<R>
+    sort_heap(R&& r, Comp comp = {}, Proj proj = {});
+}
+```
+
+```cpp
+template<copyable T, class Proj = identity,
+    indirect_strict_weak_order<projected<const T*, Proj>> Comp = ranges::less>
+constexpr T min(initializer_list<T> r, Comp comp = {}, Proj proj = {});
+template<input_range R, class Proj = identity,
+    indirect_strict_weak_order<projected<iterator_t<R>, Proj>> Comp = ranges::less>
+requires indirectly_copyable_storable<iterator_t<R>, range_value_t<R>*>
+constexpr range_value_t<R>
+min(R&& r, Comp comp = {}, Proj proj = {});
+}
+template<class T> constexpr const T& max(const T& a, const T& b);
+template<class T, class Compare>
+constexpr const T& max(const T& a, const T& b, Compare comp);
+template<class T>
+constexpr T max(initializer_list<T> t);
+template<class T, class Compare>
+constexpr T max(initializer_list<T> t, Compare comp);
+
+namespace ranges {
+template<class T, class Proj = identity,
+    indirect_strict_weak_order<projected<const T*, Proj>> Comp = ranges::less>
+constexpr const T& max(const T& a, const T& b, Comp comp = {}, Proj proj = {});
+template<copyable T, class Proj = identity,
+    indirect_strict_weak_order<projected<const T*, Proj>> Comp = ranges::less>
+constexpr T max(initializer_list<T> r, Comp comp = {}, Proj proj = {});
+template<input_range R, class Proj = identity,
+    indirect_strict_weak_order<projected<iterator_t<R>, Proj>> Comp = ranges::less>
+requires indirectly_copyable_storable<iterator_t<R>, range_value_t<R>*>
+constexpr range_value_t<R>
+max(R&& r, Comp comp = {}, Proj proj = {});
+}
+
+template<class T> constexpr pair<const T&, const T&> minmax(const T& a, const T& b);
+template<class T, class Compare>
+constexpr pair<const T&, const T&> minmax(const T& a, const T& b, Compare comp);
+template<class T>
+constexpr pair<T, T> minmax(initializer_list<T> t);
+template<class T, class Compare>
+constexpr pair<T, T> minmax(initializer_list<T> t, Compare comp);
+
+namespace ranges {
+template<class T>
+using minmax_result = min_max_result<T>;
+
+template<class T, class Proj = identity,
+    indirect_strict_weak_order<projected<const T*, Proj>> Comp = ranges::less>
+constexpr minmax_result<const T&>
+minmax(const T& a, const T& b, Comp comp = {}, Proj proj = {});
+template<copyable T, class Proj = identity,
+    indirect_strict_weak_order<projected<const T*, Proj>> Comp = ranges::less>
+constexpr minmax_result<T>
+minmax(initializer_list<T> r, Comp comp = {}, Proj proj = {});
+template<input_range R, class Proj = identity,
+    indirect_strict_weak_order<projected<iterator_t<R>, Proj>> Comp = ranges::less>
+requires indirectly_copyable_storable<iterator_t<R>, range_value_t<R>*>
+constexpr minmax_result<range_value_t<R>>
+minmax(R&& r, Comp comp = {}, Proj proj = {});
+}
+
+template<class ForwardIterator>
+constexpr ForwardIterator min_element(ForwardIterator first, ForwardIterator last);
+template<class ForwardIterator, class Compare>
+constexpr ForwardIterator min_element(ForwardIterator first, ForwardIterator last,
+    Compare comp);
+```
+
+```cpp
+template<class I1, class I2, class O0>
+    requires convertible_to<const I1&, II1> &&
+            convertible_to<const I2&, II2> &&
+            convertible_to<const O0&, OO>
+constexpr operator in_in_out_result<I1, I2, O0>() const & {
+    return {in1, in2, out};
+}
+
+template<class I1, class I2, class O0>
+    requires convertible_to<I1, II1> &&
+            convertible_to<I2, II2> &&
+            convertible_to<O0, OO>
+constexpr operator in_in_out_result<I1, I2, O0>() && {
+    return {std::move(in1), std::move(in2), std::move(out)};
+};
+
+template<class I, class O1, class O2>
+struct in_out_out_result {
+    [[no_unique_address]] I in;
+    [[no_unique_address]] O1 out1;
+    [[no_unique_address]] O2 out2;
+
+    template<class II, class O01, class O02>
+        requires convertible_to<const I&, II> &&
+                convertible_to<const O1&, O01> &&
+                convertible_to<const O2&, O02>
+    constexpr operator in_out_out_result<II, O01, O02>() const & {
+        return {in, out1, out2};
+    }
+
+    template<class II, class O01, class O02>
+        requires convertible_to<I, II> &&
+                convertible_to<O1, O01> &&
+                convertible_to<O2, O02>
+    constexpr operator in_out_out_result<II, O01, O02>() && {
+        return {std::move(in), std::move(out1), std::move(out2)};
+    }
+};
+
+template<class T>
+struct min_max_result {
+    [[no_unique_address]] T min;
+    [[no_unique_address]] T max;
+
+    template<class T2>
+        requires convertible_to<const T&, T2>
+    constexpr operator min_max_result<T2>() const & {
+        return {min, max};
+    }
+
+    template<class T2>
+        requires convertible_to<T, T2>
+    constexpr operator min_max_result<T2>() && {
+        return {std::move(min), std::move(max)};
+    }
+};
+
+template<class I>
+struct in_found_result {
+    [[no_unique_address]] I in;
+    bool found;
+
+    template<class I2>
+        requires convertible_to<const I&, I2>
+    constexpr operator in_found_result<I2>() const & {
+        return {in, found};
+    }
+
+    template<class I2>
+        requires convertible_to<I, I2>
+    constexpr operator in_found_result<I2>() && {
+        return {std::move(in), found};
+    }
+};
+}
+```
+
+## 25.6 非修改序列操作 [alg.nonmodifying]
+
+### 25.6.1 全部满足 [alg.all.of]
+
+```cpp
+template<class InputIterator, class Predicate>
+    constexpr bool all_of(InputIterator first, InputIterator last, Predicate pred);
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    bool all_of(ExecutionPolicy&& exec, ForwardIterator first, ForwardIterator last,
+                Predicate pred);
+
+template<input_iterator I, sentinel_for<I> S, class Proj = identity,
+        indirect_unary_predicate<projected<I, Proj>> Pred>
+    constexpr bool ranges::all_of(I first, S last, Pred pred, Proj proj = {});
+template<input_range R, class Proj = identity,
+        indirect_unary_predicate<projected<iterator_t<R>, Proj>> Pred>
+    constexpr bool ranges::all_of(R&& r, Pred pred, Proj proj = {});
+```
+
+1 让 E 为：
+
+- 对于 std 命名空间中的重载，pred(*i)；
+- 对于 ranges 命名空间中的重载，invoke(pred, invoke(proj, *i))。
+
+2 返回：如果范围 [first, last) 中存在某个迭代器 i 使得 E 为 false，则返回 false，否则返回 true。
+
+3 复杂度：最多对谓词和任何投影进行 last - first 次应用。
+
+### 25.6.2 任意满足 [alg.any.of]
+
+```cpp
+template<class InputIterator, class Predicate>
+    constexpr bool any_of(InputIterator first, InputIterator last, Predicate pred);
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    bool any_of(ExecutionPolicy&& exec, ForwardIterator first, ForwardIterator last,
+                Predicate pred);
+
+template<input_iterator I, sentinel_for<I> S, class Proj = identity,
+        indirect_unary_predicate<projected<I, Proj>> Pred>
+    constexpr bool ranges::any_of(I first, S last, Pred pred, Proj proj = {});
+template<input_range R, class Proj = identity,
+        indirect_unary_predicate<projected<iterator_t<R>, Proj>> Pred>
+    constexpr bool ranges::any_of(R&& r, Pred pred, Proj proj = {});
+```
+
+1 让 E 为：
+
+- 对于 std 命名空间中的重载，pred(*i)；
+- 对于 ranges 命名空间中的重载，invoke(pred, invoke(proj, *i))。
+
+2 返回：如果范围 [first, last) 中存在某个迭代器 i 使得 E 为 true，则返回 true，否则返回 false。
+
+3 复杂度：最多对谓词和任何投影进行 last - first 次应用。
+
+### 25.6.3 不存在满足 [alg.none.of]
+
+```cpp
+template<class InputIterator, class Predicate>
+    constexpr bool none_of(InputIterator first, InputIterator last, Predicate pred);
+```

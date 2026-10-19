@@ -1,0 +1,199 @@
+
+
+Table 89: Cpp17RandomAccessIterator requirements (in addition to Cpp17BidirectionalIterator) (continued)
+
+| Expression | Return type | Operational semantics | Assertion/note pre-/post-condition |
+|---|---|---|---|
+| a <= b | contextually convertible to bool. | !(a > b) | |
+
+## 23.3.6 Indirect callable requirements [indirectcallable]
+
+### 23.3.6.1 General [indirectcallable.general]
+
+1 There are several concepts that group requirements of algorithms that take callable objects (20.14.3) as arguments.
+
+### 23.3.6.2 Indirect callables [indirectcallable.indirectinvocable]
+
+1 The indirect callable concepts are used to constrain those algorithms that accept callable objects (20.14.3) as arguments.
+
+```
+namespace std {
+  template<class F, class I>
+    concept indirectly_unary_invocable =
+      indirectly_readable<I> &&
+      copy_constructible<F> &&
+      invocable<F&, iter_value_t<I>&> &&
+      invocable<F&, iter_reference_t<I>> &&
+      invocable<F&, iter_common_reference_t<I>> &&
+      common_reference_with<
+        invoke_result_t<F&, iter_value_t<I>&>,
+        invoke_result_t<F&, iter_reference_t<I>>>;
+
+  template<class F, class I>
+    concept indirectly_regular_unary_invocable =
+      indirectly_readable<I> &&
+      copy_constructible<F> &&
+      regular_invocable<F&, iter_value_t<I>&> &&
+      regular_invocable<F&, iter_reference_t<I>> &&
+      regular_invocable<F&, iter_common_reference_t<I>> &&
+      common_reference_with<
+        invoke_result_t<F&, iter_value_t<I>&>,
+        invoke_result_t<F&, iter_reference_t<I>>>;
+
+  template<class F, class I>
+    concept indirect_unary_predicate =
+      indirectly_readable<I> &&
+      copy_constructible<F> &&
+      predicate<F&, iter_value_t<I>&> &&
+      predicate<F&, iter_reference_t<I>> &&
+      predicate<F&, iter_common_reference_t<I>>;
+
+  template<class F, class I1, class I2>
+    concept indirect_binary_predicate =
+      indirectly_readable<I1> && indirectly_readable<I2> &&
+      copy_constructible<F> &&
+      predicate<F&, iter_value_t<I1>&, iter_value_t<I2>&> &&
+      predicate<F&, iter_value_t<I1>&, iter_reference_t<I2>> &&
+      predicate<F&, iter_reference_t<I1>, iter_value_t<I2>&> &&
+      predicate<F&, iter_reference_t<I1>, iter_reference_t<I2>> &&
+      predicate<F&, iter_common_reference_t<I1>, iter_common_reference_t<I2>>;
+
+  template<class F, class I1, class I2 = I1>
+    concept indirect_equivalence_relation =
+      indirectly_readable<I1> && indirectly_readable<I2> &&
+      copy_constructible<F> &&
+      equivalence_relation<F&, iter_value_t<I1>&, iter_value_t<I2>&> &&
+```
+
+```
+equivalence_relation<F&, iter_value_t<I1>&, iter_reference_t<I2>> &&
+equivalence_relation<F&, iter_reference_t<I1>, iter_value_t<I2>&> &&
+equivalence_relation<F&, iter_reference_t<I1>, iter_reference_t<I2>> &&
+equivalence_relation<F&, iter_common_reference_t<I1>, iter_common_reference_t<I2>>;
+
+template<class F, class I1, class I2 = I1>
+concept indirect_strict_weak_order =
+    indirectly_readable<I1> && indirectly_readable<I2> &&
+    copy_constructible<F> &&
+    strict_weak_order<F&, iter_value_t<I1>&, iter_value_t<I2>&> &&
+    strict_weak_order<F&, iter_value_t<I1>&, iter_reference_t<I2>> &&
+    strict_weak_order<F&, iter_reference_t<I1>, iter_value_t<I2>&> &&
+    strict_weak_order<F&, iter_reference_t<I1>, iter_reference_t<I2>> &&
+    strict_weak_order<F&, iter_common_reference_t<I1>, iter_common_reference_t<I2>>;
+}
+```
+
+### 23.3.6.3 Class template projected [projected]
+
+1 Class template projected is used to constrain algorithms that accept callable objects and projections (3.39). It combines a indirectly_readable type I and a callable object type Proj into a new indirectly_readable type whose reference type is the result of applying Proj to the iter_reference_t of I.
+
+```
+namespace std {
+    template<indirectly_readable I, indirectly_regular_unary_invocable<I> Proj>
+    struct projected {
+        using value_type = remove_cvref_t<indirect_result_t<Proj&, I>>;
+        indirect_result_t<Proj&, I> operator*() const;        // not defined
+    };
+
+    template<weakly_incrementable I, class Proj>
+    struct incrementable_traits<projected<I, Proj>> {
+        using difference_type = iter_difference_t<I>;
+    };
+}
+```
+
+## 23.3.7 Common algorithm requirements [alg.req]
+
+### 23.3.7.1 General [alg.req.general]
+
+1 There are several additional iterator concepts that are commonly applied to families of algorithms. These group together iterator requirements of algorithm families. There are three relational concepts that specify how element values are transferred between indirectly_readable and indirectly_writable types: indirectly_movable, indirectly_copyable, and indirectly_swappable. There are three relational concepts for rearrangements: permutable, mergeable, and sortable. There is one relational concept for comparing values from different sequences: indirectly_comparable.
+
+2 [Note 1: The ranges::less function object type used in the concepts below imposes constraints on the concepts’ arguments in addition to those that appear in the concepts’ bodies (20.14.9). — end note]
+
+### 23.3.7.2 Concept indirectly_movable [alg.req.ind.move]
+
+1 The indirectly_movable concept specifies the relationship between a indirectly_readable type and a indirectly_writable type between which values may be moved.
+
+```
+template<class In, class Out>
+concept indirectly_movable =
+    indirectly_readable<In> && indirectly_writable<Out, iter_rvalue_reference_t<In>>;
+```
+
+2 The indirectly_movable_storable concept augments indirectly_movable with additional requirements enabling the transfer to be performed through an intermediate object of the indirectly_readable type’s value type.
+
+```
+template<class In, class Out>
+concept indirectly_movable_storable =
+    indirectly_movable<In, Out> &&
+    indirectly_writable<Out, iter_value_t<In>> &&
+    movable<iter_value_t<In>> &&
+    constructible_from<iter_value_t<In>, iter_rvalue_reference_t<In>> &&
+    assignable_from<iter_value_t<In>&, iter_rvalue_reference_t<In>>;
+```
+
+3 Let i be a dereferenceable value of type In. In and Out model indirectly_movable_storable<In, Out> only if after the initialization of the object obj in
+iter_value_t<In> obj(ranges::iter_move(i));
+obj is equal to the value previously denoted by *i. If iter_rvalue_reference_t<In> is an rvalue reference type, the resulting state of the value denoted by *i is valid but unspecified (16.4.6.16).
+
+### 23.3.7.3 Concept indirectly_copyable [alg.req.ind.copy]
+
+1 The indirectly_copyable concept specifies the relationship between a indirectly_readable type and a indirectly_writable type between which values may be copied.
+
+```
+template<class In, class Out>
+concept indirectly_copyable =
+    indirectly_readable<In> &&
+    indirectly_writable<Out, iter_reference_t<In>>;
+```
+
+2 The indirectly_copyable_storable concept augments indirectly_copyable with additional requirements enabling the transfer to be performed through an intermediate object of the indirectly_readable type’s value type. It also requires the capability to make copies of values.
+
+```
+template<class In, class Out>
+concept indirectly_copyable_storable =
+    indirectly_copyable<In, Out> &&
+    indirectly_writable<Out, iter_value_t<In>&> &&
+    indirectly_writable<Out, const iter_value_t<In>&> &&
+    indirectly_writable<Out, iter_value_t<In>&&> &&
+    indirectly_writable<Out, const iter_value_t<In>&&> &&
+    copyable<iter_value_t<In>> &&
+    constructible_from<iter_value_t<In>, iter_reference_t<In>> &&
+    assignable_from<iter_value_t<In>&, iter_reference_t<In>>;
+```
+
+3 Let i be a dereferenceable value of type In. In and Out model indirectly_copyable_storable<In, Out> only if after the initialization of the object obj in
+iter_value_t<In> obj(*i);
+obj is equal to the value previously denoted by *i. If iter_reference_t<In> is an rvalue reference type, the resulting state of the value denoted by *i is valid but unspecified (16.4.6.16).
+
+### 23.3.7.4 Concept indirectly_swappable [alg.req.ind.swap]
+
+1 The indirectly_swappable concept specifies a swappable relationship between the values referenced by two indirectly_readable types.
+
+```
+template<class I1, class I2 = I1>
+concept indirectly_swappable =
+    indirectly_readable<I1> && indirectly_readable<I2> &&
+    requires(const I1 i1, const I2 i2) {
+        ranges::iter_swap(i1, i1);
+        ranges::iter_swap(i2, i2);
+        ranges::iter_swap(i1, i2);
+        ranges::iter_swap(i2, i1);
+    };
+```
+
+### 23.3.7.5 Concept indirectly_comparable [alg.req.ind.cmp]
+
+1 The indirectly_comparable concept specifies the common requirements of algorithms that compare values from two different sequences.
+
+```
+template<class I1, class I2, class R, class P1 = identity,
+    class P2 = identity>
+concept indirectly_comparable =
+    indirect_binary_predicate<R, projected<I1, P1>, projected<I2, P2>>;
+```
+
+### 23.3.7.6 Concept permutable [alg.req.permutable]
+
+1 The permutable concept specifies the common requirements of algorithms that reorder elements in place by moving or swapping them.
+

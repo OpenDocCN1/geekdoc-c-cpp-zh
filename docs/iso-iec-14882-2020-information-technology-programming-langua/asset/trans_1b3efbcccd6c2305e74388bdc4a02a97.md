@@ -1,0 +1,208 @@
+
+
+[Note 3: This occurs even if overload resolution selects a static member function for the id-expression. — end note]
+
++   (7.2) — A this expression potentially references *this.
++   (7.3) — A lambda-expression potentially references the local entities named by its simple-captures.
+
+If an expression potentially references a local entity within a declarative region in which it is odr-usable, and the expression would be potentially evaluated if the effect of any enclosing typeid expressions (7.6.1.8) were ignored, the entity is said to be implicitly captured by each intervening lambda-expression with an associated capture-default that does not explicitly capture it. The implicit capture of *this is deprecated when the capture-default is =; see D.3.
+
+[Example 4:
+
+```
+void f(int, const int (&)[2] = {});          // #1
+void f(const int&, const int (&)[1]);        // #2
+void test() {
+    const int x = 17;
+    auto g = [] (auto a) {
+        f(x);
+    };                                          // OK: calls #1, does not capture x
+
+    auto g1 = [=] (auto a) {
+        f(x);
+    };                                          // OK: calls #1, captures x
+
+    auto g2 = [=] (auto a) {
+        int selector[sizeof(a) == 1 ? 1 : 2]{};
+        f(x, selector);                         // OK: captures x, can call #1 or #2
+    };
+
+    auto g3 = [=] (auto a) {
+        typeid(a + x);                          // captures x regardless of whether a + x is an unevaluated operand
+    };
+}
+```
+
+Within g1, an implementation can optimize away the capture of x as it is not odr-used. — end example]
+
+[Note 4: The set of captured entities is determined syntactically, and entities are implicitly captured even if the expression denoting a local entity is within a discarded statement (8.5.2).]
+
+[Example 5:
+
+```
+template<bool B>
+void f(int n) {
+    [=] (auto a) {
+        if constexpr (B && sizeof(a) > 4) {
+            (void)n;                        // captures n regardless of the value of B and sizeof(int)
+        }
+    }(0);
+}
+```
+
+— end example]
+— end note]
+
+8 An entity is captured if it is captured explicitly or implicitly. An entity captured by a lambda-expression is odr-used (6.3) in the scope containing the lambda-expression.
+
+[Note 5: As a consequence, if a lambda-expression explicitly captures an entity that is not odr-usable, the program is ill-formed (6.3). — end note]
+
+[Example 6:
+
+```
+void f1(int i) {
+    int const N = 20;
+    auto m1 = [=]{
+        int const M = 30;
+        auto m2 = [i]{
+            int x[N][M];                     // OK: N and M are not odr-used
+            x[0][0] = i;                     // OK: i is explicitly captured by m2 and implicitly captured by m1
+
+};
+};
+struct s1 {
+    int f;
+    void work(int n) {
+        int m = n*n;
+        int j = 40;
+        auto m3 = [this,m] {
+            auto m4 = [&,j] {
+                auto x = n;                // error: j not odr-usable due to intervening lambda m3
+                // error: n is odr-used but not odr-usable due to intervening lambda m3
+                x += m;                    // OK: m implicitly captured by m4 and explicitly captured by m3
+                x += i;                    // error: i is odr-used but not odr-usable
+                // due to intervening function and class scopes
+                x += f;                    // OK: this captured implicitly by m4 and explicitly by m3
+            };
+        };
+    }
+};
+}
+```
+
+```
+struct s2 {
+    double ohseven = .007;
+    auto f() {
+        return [this] {
+            return [*this] {
+                return ohseven;            // OK
+            };
+        }();
+    }
+    auto g() {
+        return [] {
+            return [*this] { };          // error: *this not captured by outer lambda-expression
+        }();
+    }
+};
+— end example
+```
+
+9 [Note 6: Because local entities are not odr-usable within a default argument (6.3), a lambda-expression appearing in a default argument cannot implicitly or explicitly capture any local entity. Such a lambda-expression can still have an init-capture if any full-expression in its initializer satisfies the constraints of an expression appearing in a default argument (9.3.4.7). — end note]
+
+[Example 7:]
+
+```
+void f2() {
+    int i = 1;
+    void g1(int = ([i]{ return i; })());        // error
+    void g2(int = ([i]{ return 0; })());        // error
+    void g3(int = ([=]{ return i; })());        // error
+    void g4(int = ([=]{ return 0; })());        // OK
+    void g5(int = ([]{ return sizeof i; })());  // OK
+    void g6(int = ([x=1]{ return x; })());      // OK
+    void g7(int = ([x=i]{ return x; })());      // error
+}
+```
+
+— end example
+
+10 An entity is captured by copy if
+
++   (10.1) — it is implicitly captured, the capture-default is =, and the captured entity is not *this, or
++   (10.2) — it is explicitly captured with a capture that is not of the form this, & identifier, or & identifier initializer.
+
+For each entity captured by copy, an unnamed non-static data member is declared in the closure type. The declaration order of these members is unspecified. The type of such a data member is the referenced type if the entity is a reference to an object, an lvalue reference to the referenced function type if the entity is a reference to a function, or the type of the corresponding captured entity otherwise. A member of an anonymous union shall not be captured by copy.
+
+11 Every *id-expression* within the *compound-statement* of a *lambda-expression* that is an odr-use (6.3) of an entity captured by copy is transformed into an access to the corresponding unnamed data member of the closure type.
+
+> [Note 7: An *id-expression* that is not an odr-use refers to the original entity, never to a member of the closure type. However, such an *id-expression* can still cause the implicit capture of the entity. — end note]
+
+If *this* is captured by copy, each expression that odr-uses *this* is transformed to instead refer to the corresponding unnamed data member of the closure type.
+
+[Example 8:
+
+```
+void f(const int*);
+void g() {
+    const int N = 10;
+    [=] {
+        int arr[N];        // OK: not an odr-use, refers to automatic variable
+        f(&N);             // OK: causes N to be captured; &N points to
+                           // the corresponding member of the closure type
+    };
+}
+```
+
+— end example
+
+12 An entity is *captured by reference* if it is implicitly or explicitly captured but not captured by copy. It is unspecified whether additional unnamed non-static data members are declared in the closure type for entities captured by reference. If declared, such non-static data members shall be of literal type.
+
+[Example 9:
+
+```
+// The inner closure type must be a literal type regardless of how reference captures are represented.
+static_assert([](int n) { return [&n] { return ++n; }(); }(3) == 4);
+```
+
+— end example
+
+A bit-field or a member of an anonymous union shall not be captured by reference.
+
+13 An *id-expression* within the *compound-statement* of a *lambda-expression* that is an odr-use of a reference captured by reference refers to the entity to which the captured reference is bound and not to the captured reference.
+
+> [Note 8: The validity of such captures is determined by the lifetime of the object to which the reference refers, not by the lifetime of the reference itself. — end note]
+
+[Example 10:
+
+```
+auto h(int &r) {
+    return [&] {
+        ++r;               // Valid after h returns if the lifetime of the
+                           // object to which r is bound has not ended
+    };
+}
+```
+
+— end example
+
+14 If a *lambda-expression* m2 captures an entity and that entity is captured by an immediately enclosing *lambda-expression* m1, then m2’s capture is transformed as follows:
+
++   (14.1) — if m1 captures the entity by copy, m2 captures the corresponding non-static data member of m1’s closure type;
++   (14.2) — if m1 captures the entity by reference, m2 captures the same entity captured by m1.
+
+[Example 11: The nested *lambda-expressions* and invocations below will output 123234.
+
+```
+int a = 1, b = 1, c = 1;
+auto m1 = [a, &b, &c]() mutable {
+    auto m2 = [a, b, &c]() mutable {
+        std::cout << a << b << c;
+        a = 4; b = 4; c = 4;
+    };
+    a = 3; b = 3; c = 3;
+    m2();
+};
+```
+

@@ -1,0 +1,171 @@
+
+[Note 2: The atexit() functions do not introduce a data race (16.4.6.10). — end note]
+
+Implementation limits: The implementation shall support the registration of at least 32 functions.
+
+Returns: The atexit() function returns zero if the registration succeeds, nonzero if it fails.
+
+```cpp
+[[noreturn]] void exit(int status);
+```
+
+Effects:
+
+- — First, objects with thread storage duration and associated with the current thread are destroyed. Next, objects with static storage duration are destroyed and functions registered by calling atexit are called.216 See 6.9.3.4 for the order of destructions and calls. (Objects with automatic storage duration are not destroyed as a result of calling exit()).217
+- If control leaves a registered function called by exit because the function does not provide a handler for a thrown exception, the function std::terminate shall be called (14.6.2).
+- — Next, all open C streams (as mediated by the function signatures declared in <cstdio> (29.12.1)) with unwritten buffered data are flushed, all open C streams are closed, and all files created by calling tmpfile() are removed.
+- — Finally, control is returned to the host environment. If status is zero or EXIT_SUCCESS, an implementation-defined form of the status successful termination is returned. If status is EXIT_FAILURE, an implementation-defined form of the status unsuccessful termination is returned. Otherwise the status returned is implementation-defined.218
+
+```cpp
+int at_quick_exit(c-atexit-handler* f) noexcept;
+int at_quick_exit(atexit-handler* f) noexcept;
+```
+
+Effects: The at_quick_exit() functions register the function pointed to by f to be called without arguments when quick_exit is called. It is unspecified whether a call to at_quick_exit() that does not happen before (6.9.2) all calls to quick_exit will succeed.
+
+[Note 3: The at_quick_exit() functions do not introduce a data race (16.4.6.10). — end note]
+
+[Note 4: The order of registration can be indeterminate if at_quick_exit is called from more than one thread. — end note]
+
+[Note 5: The at_quick_exit registrations are distinct from the atexit registrations, and applications possibly need to call both registration functions with the same argument. — end note]
+
+Implementation limits: The implementation shall support the registration of at least 32 functions.
+
+Returns: Zero if the registration succeeds, nonzero if it fails.
+
+```cpp
+[[noreturn]] void quick_exit(int status) noexcept;
+```
+
+Effects: Functions registered by calls to at_quick_exit are called in the reverse order of their registration, except that a function shall be called after any previously registered functions that had already been called at the time it was registered. Objects shall not be destroyed as a result of calling quick_exit. If control leaves a registered function called by quick_exit because the function does not provide a handler for a thrown exception, the function std::terminate shall be called.
+
+[Note 6: A function registered via at_quick_exit is invoked by the thread that calls quick_exit, which can be a different thread than the one that registered it, so registered functions cannot rely on the identity of objects with thread storage duration. — end note]
+
+After calling registered functions, quick_exit shall call _Exit(status).
+
+Remarks: The function quick_exit is signal-safe (17.13.5) when the functions registered with at_quick_exit are.
+
+SEE ALSO: ISO C 7.22.4
+
+## 17.6 Dynamic memory management [support.dynamic]
+
+### 17.6.1 General [support.dynamic.general]
+
+1 The header <new> defines several functions that manage the allocation of dynamic storage in a program. It also defines components for reporting storage management errors.
+
+### 17.6.2 Header <new> synopsis [new.syn]
+
+```cpp
+namespace std {
+  // 17.6.4, storage allocation errors
+  class bad_alloc;
+  class bad_array_new_length;
+
+  struct destroying_delete_t {
+    explicit destroying_delete_t() = default;
+  };
+  inline constexpr destroying_delete_t destroying_delete{};
+
+  // global operator new control
+  enum class align_val_t : size_t {};
+
+  struct nothrow_t { explicit nothrow_t() = default; };
+  extern const nothrow_t nothrow;
+
+  using new_handler = void (*)();
+  new_handler get_new_handler() noexcept;
+  new_handler set_new_handler(new_handler new_p) noexcept;
+
+  // 17.6.5, pointer optimization barrier
+  template<class T> [[nodiscard]] constexpr T* launder(T* p) noexcept;
+
+  // 17.6.6, hardware interference size
+  inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
+  inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
+}
+```
+
+```cpp
+// 17.6.3, storage allocation and deallocation
+[[nodiscard]] void* operator new(std::size_t size);
+[[nodiscard]] void* operator new(std::size_t size, std::align_val_t alignment);
+[[nodiscard]] void* operator new(std::size_t size, const std::nothrow_t&) noexcept;
+[[nodiscard]] void* operator new(std::size_t size, std::align_val_t alignment,
+    const std::nothrow_t&) noexcept;
+
+void operator delete(void* ptr) noexcept;
+void operator delete(void* ptr, std::size_t size) noexcept;
+void operator delete(void* ptr, std::align_val_t alignment) noexcept;
+void operator delete(void* ptr, std::size_t size, std::align_val_t alignment) noexcept;
+void operator delete(void* ptr, const std::nothrow_t&) noexcept;
+void operator delete(void* ptr, std::align_val_t alignment, const std::nothrow_t&) noexcept;
+
+[[nodiscard]] void* operator new[](std::size_t size);
+[[nodiscard]] void* operator new[](std::size_t size, std::align_val_t alignment);
+[[nodiscard]] void* operator new[](std::size_t size, const std::nothrow_t&) noexcept;
+[[nodiscard]] void* operator new[](std::size_t size, std::align_val_t alignment,
+    const std::nothrow_t&) noexcept;
+
+void operator delete[](void* ptr) noexcept;
+void operator delete[](void* ptr, std::size_t size) noexcept;
+void operator delete[](void* ptr, std::align_val_t alignment) noexcept;
+void operator delete[](void* ptr, std::size_t size, std::align_val_t alignment) noexcept;
+void operator delete[](void* ptr, const std::nothrow_t&) noexcept;
+void operator delete[](void* ptr, std::align_val_t alignment, const std::nothrow_t&) noexcept;
+```
+
+```cpp
+[[nodiscard]] void* operator new (std::size_t size, void* ptr) noexcept;
+[[nodiscard]] void* operator new[](std::size_t size, void* ptr) noexcept;
+void operator delete  (void* ptr, void*) noexcept;
+void operator delete[](void* ptr, void*) noexcept;
+```
+
+### 17.6.3 Storage allocation and deallocation
+
+#### 17.6.3.1 General
+
+Except where otherwise specified, the provisions of 6.7.5.5 apply to the library versions of operator new and operator delete. If the value of an alignment argument passed to any of these functions is not a valid alignment value, the behavior is undefined.
+
+#### 17.6.3.2 Single-object forms
+
+```cpp
+[[nodiscard]] void* operator new(std::size_t size);
+[[nodiscard]] void* operator new(std::size_t size, std::align_val_t alignment);
+```
+
+*Effects:* The allocation functions (6.7.5.5.2) called by a *new-expression* (7.6.2.8) to allocate size bytes of storage. The second form is called for a type with new-extended alignment, and the first form is called otherwise.
+
+*Replaceable:* A C++ program may define functions with either of these function signatures, and thereby displace the default versions defined by the C++ standard library.
+
+*Required behavior:* Return a non-null pointer to suitably aligned storage (6.7.5.5), or else throw a bad_alloc exception. This requirement is binding on any replacement versions of these functions.
+
+*Default behavior:*
+
+1. Executes a loop: Within the loop, the function first attempts to allocate the requested storage. Whether the attempt involves a call to the C standard library functions `malloc` or `aligned_alloc` is unspecified.
+2. Returns a pointer to the allocated storage if the attempt is successful. Otherwise, if the current `new_handler` (17.6.4.5) is a null pointer value, throws `bad_alloc`.
+3. Otherwise, the function calls the current `new_handler` function (17.6.4.3). If the called function returns, the loop repeats.
+4. The loop terminates when an attempt to allocate the requested storage is successful or when a called `new_handler` function does not return.
+
+```cpp
+[[nodiscard]] void* operator new(std::size_t size, const std::nothrow_t&) noexcept;
+[[nodiscard]] void* operator new(std::size_t size, std::align_val_t alignment,
+                                 const std::nothrow_t&) noexcept;
+```
+
+*Effects:* Same as above, except that these are called by a placement version of a *new-expression* when a C++ program prefers a null pointer result as an error indication, instead of a `bad_alloc` exception.
+
+*Replaceable:* A C++ program may define functions with either of these function signatures, and thereby displace the default versions defined by the C++ standard library.
+
+*Required behavior:* Return a non-null pointer to suitably aligned storage (6.7.5.5), or else return a null pointer. Each of these nothrow versions of operator new returns a pointer obtained as if acquired from the (possibly replaced) corresponding non-placement function. This requirement is binding on any replacement versions of these functions.
+
+*Default behavior:* Calls `operator new(size)`, or `operator new(size, alignment)`, respectively. If the call returns normally, returns the result of that call. Otherwise, returns a null pointer.
+
+```cpp
+[Example 1:
+
+T* p1 = new T;                 // throws bad_alloc if it fails
+T* p2 = new(nothrow) T;        // returns nullptr if it fails
+
+— end example]
+```

@@ -1,0 +1,340 @@
+
+## Index
+
+## Symbols
+
+! , see operator, logical negation
+!=, see operator, inequality
+(), see operator, function call, see declarator, function
+*, see operator, indirection, see operator, multiplication, see declarator, pointer
++, see operator, unary plus, see operator, addition
+++, see operator, increment
+,, see operator, comma
+-, see operator, unary minus, see operator, subtraction
+->, see operator, class member access
+->*, see operator, pointer to member
+--, see operator, decrement
+., see operator, class member access
+.* , see operator, pointer to member
+..., see ellipsis
+/ , see operator, division
+: 
+  bit-field declaration, 282
+  label specifier, 154
+::, see operator, scope resolution
+::*, see declarator, pointer-to-member
+<, see operator, less than
+  template and, 364, 366
+<<, see operator, left shift
+<=, see operator, less than or equal to
+<=>, see operator, three-way comparison
+=, see assignment operator
+==, see operator, equality
+>, see operator, greater than
+>=, see operator, greater than or equal to
+>>, see operator, right shift
+?:, see operator, conditional expression
+[], see operator, subscripting, see declarator, array
+# operator, 467, 470
+## operator, 470
+#define, 468
+#elif, 463
+#else, 464
+#endif, 464
+#error, see preprocessing directive, error
+#if, 463, 501
+#ifdef, 464
+#ifndef, 464
+#include, 464, 487
+#line, see preprocessing directive, line control
+#pragma, see preprocessing directive, pragma
+#undef, 472, 499
+%, see operator, remainder
+&, see operator, address-of, see operator, bitwise AND, see declarator, reference
+&&, see operator, logical AND
+^, see operator, bitwise exclusive OR
+\, see backslash character
+{} 
+  block statement, 154
+  class declaration, 258
+  class definition, 258
+  enum declaration, 220
+  initializer list, 201
+_, see character, underscore
+__cplusplus, 473
+__cpp_aggregate_bases, 474
+__cpp_aggregate_nsdmi, 474
+__cpp_aggregate_paren_init, 474
+__cpp_alias_templates, 474
+__cpp_aligned_new, 474
+__cpp_attributes, 474
+__cpp_binary_literals, 474
+__cpp_capture_star_this, 474
+__cpp_char8_t, 474
+__cpp_concepts, 474
+__cpp_conditional_explicit, 474
+__cpp_consteval, 474
+__cpp_constexpr, 474
+__cpp_constexpr_dynamic_alloc, 474
+__cpp_constexpr_in_decltype, 474
+__cpp_constinit, 474
+__cpp_decltype, 474
+__cpp_decltype_auto, 474
+__cpp_deduction_guides, 474
+__cpp_delegating_constructors, 474
+__cpp_designated_initializers, 474
+__cpp_enumerator_attributes, 474
+__cpp_fold_expressions, 474
+__cpp_generic_lambdas, 474
+__cpp_guaranteed_copy_elision, 474
+__cpp_hex_float, 474
+__cpp_if_constexpr, 474
+__cpp_impl_coroutine, 474
+__cpp_impl_destroying_delete, 474
+__cpp_impl_three_way_comparison, 474
+__cpp_inheriting_constructors, 474
+__cpp_init_captures, 474
+__cpp_initializer_lists, 474
+__cpp_inline_variables, 474
+__cpp_lambdas, 474
+__cpp_modules, 474
+__cpp_namespace_attributes, 474
+__cpp_noexcept_function_type, 474
+__cpp_nontype_template_args, 474
+__cpp_nontype_template_parameter_auto, 474
+
+base class member, 295
+class conversion, 297
+declaration type, 165
+declaration versus cast, 184
+declaration versus expression, 161
+function declaration, 199
+member access, 295
+overloaded function, 327
+parentheses and, 131
+ambiguous conversion sequence, see conversion
+sequence, ambiguous
+Amendment 1, 499
+and, 18
+*and-expression*, 142, 1640
+and_eq, 18
+anonymous union, 286
+anonymous union object, 286
+<any>, 509, 622, 1664
+appearance-ordered, 87
+appertain, 240
+argc, 86
+argument, 3, 500, 501, 567
+    access checking and default, 300
+    binding of default, 195
+    evaluation of default, 195, 196
+    example of default, 194, 195
+    function call expression, 3
+    function-like macro, 3
+    overloaded operator and default, 353
+    reference, 118
+    scope of default, 196
+    template, 368
+    template instantiation, 3
+    throw expression, 3
+    type checking of default, 195
+argument and name hiding
+    default, 196
+argument and virtual function
+    default, 197
+argument forwarding call wrapper, 687
+argument list
+    empty, 191
+    variable, 191
+argument passing, 118
+    reference and, 206
+argument substitution, see macro, argument
+    substitution
+argument type
+    unknown, 191
+argv, 86
+arithmetic
+    pointer, 139
+    unsigned, 74
+array
+    bound, 189
+    const, 77
+    delete, 135
+    element, 190
+    handler of type, 454
+
+new, 131
+overloading and pointer versus, 325
+parameter of type, 191
+sizeof, 129
+template parameter of type, 363
+<array>, 509–511, 597, 839, 842, 978, 1670, 1695
+array
+    as aggregate, 842
+    contiguous storage, 842
+    creation, 844
+    initialization, 842, 843
+    tuple interface to, 844
+    zero sized, 844
+array size
+    default, 190
+array type, 189
+arrow operator, see operator, class member access
+as-if rule, 10
+asm, 18, 236, 1647
+    implementation-defined, 236
+*asm-declaration*, 236, 1647
+assembler, 236
+<assert.h>, 487, 568, 1681, 1685
+assignment
+    and lvalue, 146
+    conversion by, 146
+    copy, see assignment operator, copy
+    move, 5, see assignment operator, move
+    reference, 206
+assignment operator
+    copy, 268, 273–275
+        hidden, 274
+        implicitly declared, 273
+        implicitly defined, 275
+        non-trivial, 275
+        trivial, 274
+        virtual bases and, 275
+    move, 268, 273–275
+        hidden, 274
+        implicitly declared, 274
+        implicitly defined, 275
+        non-trivial, 275
+        trivial, 274
+    overloaded, 354
+*assignment-expression*, 146, 1640
+*assignment-operator*, 146, 1640
+associated, 1574
+associated constraints, 376
+associative containers
+    exception safety, 827
+    requirements, 827
+    unordered, see unordered associative
+        containers
+asynchronous provider, 1619
+asynchronous return object, 1619
+at least as constrained, 378
+at least as specialized as, see more specialized
+atexit, 89
+atomic
+
+## ISO/IEC 14882:2020(E)
+
+notifying operation, 1546
+operation, 81–86
+smart pointers, 1563–1568
+waiting operation, 1546
+eligible to be unblocked, 1547
+<atomic>, 486, 509, 1540, 1670, 1704
+atomic constraint, see constraint, atomic
+identical, 375
+attached
+declaration, 248
+entity, 55
+attribute, 239–242
+alignment, 241
+carries dependency, 242
+deprecated, 243
+fallthrough, 243
+likely, 244
+maybe unused, 244
+no unique address, 246
+nodiscard, 245
+noreturn, 246
+syntax and semantics, 239
+unlikely, 244
+attribute, 239, 1647
+attribute-argument-clause, 240, 1647
+attribute-declaration, 163, 1642
+attribute-list, 239, 1647
+attribute-namespace, 240, 1647
+attribute-scoped-token, 240, 1647
+attribute-specifier, 239, 1647
+attribute-specifier-seq, 239, 1647
+attribute-token, 240, 1647
+attribute-using-prefix, 239, 1647
+auto, 18, 158, 178, 1644
+automatic storage duration, see storage duration, automatic
+await-expression, 128, 1639
+awk, 1513
+B
+backslash character, 21
+bad_alloc, 133
+bad_cast, 121
+bad_typeid, 121
+balanced-token, 240, 1647
+balanced-token-seq, 240, 1647
+barrier
+phase synchronization point, 1616
+<barrier>, 509, 1615, 1660
+barrier phase, 1616
+base characteristic, 707
+base class, 287–289
+dependent, 409
+direct, 288
+indirect, 288
+non-virtual, 289
+overloading and, 326
+private, 301
+protected, 301
+public, 301
+virtual, 289
+base class subobject, 58
+base prefix, 747
+base-2 representation, 74
+base-clause, 287, 1649
+base-specifier, 288, 1649
+base-specifier-list, 287, 1649
+behavior
+conditionally-supported, 4, 9
+default, 4, 480
+implementation-defined, 5, 10
+locale-specific, 5
+observable, 10
+on receipt of signal, 80
+required, 7, 480
+undefined, 8–10, 975
+unspecified, 8, 10
+Ben, 327
+Bernoulli distributions, 1195–1197
+bernoulli_distribution
+discrete probability function, 1195
+Bessel functions
+Iν, 1240
+Jν, 1240
+Kν, 1240
+Nν, 1241
+jn, 1243
+n_n, 1243
+beta functions B, 1239
+better conversion, see conversion, better
+better conversion sequence, see conversion sequence, better
+binary fold, 112
+binary left fold, 112
+binary operator
+interpretation of, 354
+overloaded, 354
+binary operator function, see operator function, binary
+binary right fold, 112
+binary-digit, 19, 1634
+binary-exponent-part, 23, 1635
+binary-literal, 19, 1634
+bind directly, 209
+binding
+reference, 207
+binomial_distribution
+discrete probability function, 1195
+<bit>, 509, 510, 1170, 1660
+bit-field, 282
+address of, 283
+alignment of, 283
+implementation-defined alignment of, 282
+implementation-defined sign of, 1679
+type of, 282
+unnamed, 282
+zero width of, 283

@@ -1,0 +1,706 @@
+- - '###'
+  - 5.2 翻译阶段 [lex.phases]
+- - '###'
+  - 5.3 字符集 [lex.charset]
+- - '###'
+  - 5.4 预处理标记 [lex.pptoken]
+- - '###'
+  - 5.5 替代标记 [lex.digraph]
+- - '####'
+  - 4.1.2 抽象机 [intro.abstract]
+- - '####'
+  - 4.2 本文档的结构 [intro.structure]
+- - '####'
+  - 4.3 语法表示法 [syntax]
+- - '###'
+  - 5.6 标记 [lex.token]
+- - '###'
+  - 5.7 注释 [lex.comment]
+- - '###'
+  - 5.8 头文件名称 [lex.header]
+- - '###'
+  - 5.9 预处理数字 [lex.ppnumber]
+- - '###'
+  - 5.10 标识符 [lex.name]
+- - '###'
+  - 5.12 运算符和标点符号 [lex.operators]
+- - '###'
+  - 5.13 字面量 [lex.literal]
+- - '####'
+  - 5.13.1 字面量的种类 [lex.literal.kinds]
+- - '####'
+  - 5.13.2 整数字面量 [lex.icon]
+- - '####'
+  - 5.13.3 字符字面量 [lex.ccon]
+- - '###'
+  - 5.13.5 字符串字面量 [lex.string]
+- - '###'
+  - 5.13.6 布尔字面量 [lex.bool]
+- - '###'
+  - 5.13.7 指针字面量 [lex.nullptr]
+- - '###'
+  - 5.13.8 用户定义字面量 [lex.ext]
+- - '###'
+  - 6.1 前言 [basic.pre]
+- - '###'
+  - 6.2 声明和定义 [basic.def]
+- - '###'
+  - 6.3 一定义规则 [basic.def.odr]
+- - '####'
+  - 6.4.3 块作用域 [basic.scope.block]
+- - '####'
+  - 6.4.4 函数参数作用域 [basic.scope.param]
+- - '####'
+  - 6.4.5 函数作用域 [basic.funscope]
+- - '####'
+  - 6.4.6 命名空间作用域 [basic.scope.namespace]
+- - '####'
+  - 6.4.7 类作用域
+- - '####'
+  - 6.4.8 枚举作用域 [basic.scope.enum]
+- - '####'
+  - 6.4.9 模板形参作用域 [basic.scope.temp]
+- - '####'
+  - 6.4.10 名称隐藏 [basic.scope.hiding]
+- - '###'
+  - 6.5 名称查找 [basic.lookup]
+- - '####'
+  - 6.5.1 一般规则 [basic.lookup.general]
+- - '####'
+  - 6.5.2 未限定名称查找 [basic.lookup.unqual]
+- - '####'
+  - 6.5.5 详细类型说明符
+- - '####'
+  - 6.5.6 类成员访问
+- - '####'
+  - 6.7.2 对象模型
+- - '####'
+  - 6.7.3 Lifetime [basic.life]
+- - '####'
+  - 6.7.4 不确定值 [basic.indet]
+- - '####'
+  - 6.7.5 存储期 [basic.stc]
+- - '#####'
+  - 6.7.5.1 概述 [basic.stc.general]
+- - '#####'
+  - 6.7.5.2 静态存储期 [basic.stc.static]
+- - '#####'
+  - 6.7.5.3 线程存储期 [basic.stc.thread]
+- - '#####'
+  - 6.7.5.4 自动存储期 [basic.stc.auto]
+- - '#####'
+  - 6.7.5.5 动态存储期 [basic.stc.dynamic]
+- - '######'
+  - 6.7.5.5.1 概述 [basic.stc.dynamic.general]
+- - '######'
+  - 6.7.5.5.2 分配函数 [basic.stc.dynamic.allocation]
+- - '######'
+  - 6.7.5.5.3 解分配函数 [basic.stc.dynamic.deallocation]
+- - '###'
+  - 6.8 Types
+- - '####'
+  - 6.8.1 General
+- - '###'
+  - 6.9 程序执行 [basic.exec]
+- - '####'
+  - 6.9.1 顺序执行 [intro.execution]
+- - '####'
+  - 6.9.2 多线程执行和数据竞争 [intro.multithread]
+- - '#####'
+  - 6.9.2.1 通用 [intro.multithread.general]
+- - '#####'
+  - 6.9.2.2 数据竞争 [intro.races]
+- - '####'
+  - 6.9.3.4 Termination [basic.start.term]
+- - '###'
+  - 7.2 Properties of expressions
+- - '####'
+  - 7.2.1 Value category
+- - '####'
+  - 7.2.2 Type [expr.type]
+- - '####'
+  - 7.3.2 Lvalue-to-rvalue conversion [conv.lval]
+- - '####'
+  - 7.3.3 Array-to-pointer conversion [conv.array]
+- - '####'
+  - 7.3.4 Function-to-pointer conversion [conv.func]
+- - '####'
+  - 7.3.5 Temporary materialization conversion [conv.rval]
+- - '####'
+  - 7.3.6 Qualification conversions [conv.qual]
+- - '####'
+  - 7.3.7 Integral promotions [conv.prom]
+- - '####'
+  - 7.3.8 Floating-point promotion [conv.fpprom]
+- - '####'
+  - 7.3.9 Integral conversions [conv.integral]
+- - '####'
+  - 7.3.10 Floating-point conversions [conv.double]
+- - '####'
+  - 7.3.11 Floating-integral conversions [conv.fpint]
+- - '#####'
+  - 7.5.3 Parentheses [expr.prim.paren]
+- - '#####'
+  - 7.5.4 Names [expr.prim.id]
+- - '######'
+  - 7.5.4.1 General [expr.prim.id.general]
+- - '######'
+  - 7.5.4.2 Unqualified names [expr.prim.id.unqual]
+- - '######'
+  - 7.5.4.3 Qualified names [expr.prim.id.qual]
+- - '######'
+  - 7.5.4.4 Destruction [expr.prim.id.dtor]
+- - '#####'
+  - 7.5.5.3 Captures
+- - '######'
+  - 7.6.1.4 Explicit type conversion (functional notation)
+- - '######'
+  - 7.6.1.8 Type identification [expr.typeid]
+- - '######'
+  - 7.6.1.10 重新解释转换 [expr.reinterpret.cast]
+- - '######'
+  - 7.6.1.11 Const cast [expr.const.cast]
+- - '######'
+  - 7.6.2.3 Increment and decrement [expr.pre.incr]
+- - '######'
+  - 7.6.2.4 Await
+- - '######'
+  - 7.6.2.5 Sizeof [expr.sizeof]
+- - '######'
+  - 7.6.5 乘法运算符 [expr.mul]
+- - '######'
+  - 7.6.6 加法运算符 [expr.add]
+- - '######'
+  - 7.6.7 移位运算符 [expr.shift]
+- - '######'
+  - 7.6.10 相等运算符 [expr.eq]
+- - '######'
+  - 7.6.12 按位异或运算符 [expr.xor]
+- - '######'
+  - 7.6.13 按位或运算符 [expr.or]
+- - '######'
+  - 7.6.14 逻辑与运算符 [expr.log.and]
+- - '######'
+  - 7.6.15 逻辑或运算符 [expr.log.or]
+- - '######'
+  - 7.6.16 条件运算符 [expr.cond]
+- - '######'
+  - 7.6.20 逗号运算符 [expr.comma]
+- - '######'
+  - 7.7 常量表达式 [expr.const]
+- - '###'
+  - 8.2 Labeled statement [stmt.label]
+- - '###'
+  - 8.3 Expression statement [stmt.expr]
+- - '###'
+  - 8.4 Compound statement or block [stmt.block]
+- - '###'
+  - 8.5 Selection statements [stmt.select]
+- - '####'
+  - 8.5.1 General [stmt.select.general]
+- - '####'
+  - 8.5.2 The if statement [stmt.if]
+- - '####'
+  - 8.6.4 The for statement
+- - '####'
+  - 8.6.5 The range-based for statement
+- - '####'
+  - 8.7.4 The return statement
+- - '####'
+  - 8.7.5 The co_return statement
+- - '####'
+  - 8.7.6 The goto statement
+- - '###'
+  - 9.1 前言 [dcl.pre]
+- - '###'
+  - 9.2 说明符 [dcl.spec]
+- - '####'
+  - 9.2.1 一般规定 [dcl.spec.general]
+- - '####'
+  - 9.2.2 存储类说明符 [dcl.stc]
+- - '####'
+  - 9.2.3 函数说明符 [dcl.fct.spec]
+- - '####'
+  - 9.2.4 typedef说明符 [dcl.typedef]
+- - '####'
+  - 9.2.5 friend说明符
+- - '####'
+  - 9.2.6 constexpr和consteval说明符
+- - '#####'
+  - 9.2.7 The constinit specifier [dcl.constinit]
+- - '#####'
+  - 9.2.8 The inline specifier [dcl.inline]
+- - '#####'
+  - 9.2.9.3 Simple type specifiers [dcl.type.simple]
+- - '#####'
+  - 9.2.9.4 Elaborated type specifiers [dcl.type.elab]
+- - '#####'
+  - 9.2.9.6 Placeholder type specifiers [dcl.spec.auto]
+- - '######'
+  - 9.2.9.6.1 General [dcl.spec.auto.general]
+- - '######'
+  - 9.2.9.6.2 占位符类型推导 [dcl.type.auto.deduct]
+- - '####'
+  - 9.3.2 类型名称
+- - '####'
+  - 9.3.3 歧义消除
+- - '####'
+  - 9.3.4 声明符的含义 [dcl.meaning]
+- - '#####'
+  - 9.3.4.1 通用 [dcl.meaning.general]
+- - '#####'
+  - 9.3.4.2 指针 [dcl.ptr]
+- - '#####'
+  - 9.3.4.3 引用 [dcl.ref]
+- - '#####'
+  - 9.3.4.4 成员指针 [dcl.mptr]
+- - '#####'
+  - 9.3.4.6 函数
+- - '######'
+  - 9.3.4.7 默认实参 [dcl.fct.default]
+- - '###'
+  - 9.4 初始化器 [dcl.init]
+- - '####'
+  - 9.4.1 一般 [dcl.init.general]
+- - '####'
+  - 9.4.2 聚合
+- - '###'
+  - 9.5 函数定义 [dcl.fct.def]
+- - '####'
+  - 9.5.1 一般情况 [dcl.fct.def.general]
+- - '####'
+  - 9.5.2 显式默认函数 [dcl.fct.def.default]
+- - '####'
+  - 9.5.3 已删除定义
+- - '####'
+  - 9.5.4 协程定义 [dcl.fct.def.coroutine]
+- - '###'
+  - 9.6 结构化绑定声明 [dcl.struct.bind]
+- - '###'
+  - 9.7.2 using enum 声明 [enum.udecl]
+- - '###'
+  - 9.8.2.2 未命名命名空间 [namespace.unnamed]
+- - '###'
+  - 9.8.2.3 命名空间成员定义 [namespace.memdef]
+- - '###'
+  - 9.9 using 声明 [namespace.udecl]
+- - '###'
+  - 9.10 asm 声明 [dcl.asm]
+- - '###'
+  - 9.11 链接规范 [dcl.link]
+- - '###'
+  - 9.12.2 对齐说明符 [dcl.align]
+- - '###'
+  - 9.12.3 Carries dependency attribute [dcl.attr.depend]
+- - '###'
+  - 9.12.6 Likelihood attributes [dcl.attr.likelihood]
+- - '###'
+  - 9.12.7 Maybe unused attribute [dcl.attr.unused]
+- - '#####'
+  - 9.12.9 Noreturn attribute [dcl.attr.noreturn]
+- - '#####'
+  - 9.12.10 No unique address attribute [dcl.attr.nouniqueaddr]
+- - '###'
+  - 10.2 导出声明 [module.interface]
+- - '###'
+  - 10.4 全局模块片段 [module.global.frag]
+- - '###'
+  - 10.6 实例化上下文 [module.context]
+- - '###'
+  - 11.4 类成员 [class.mem]
+- - '####'
+  - 11.4.1 一般规定 [class.mem.general]
+- - '#####'
+  - 11.4.3.2 this 指针 [class.this]
+- - '#####'
+  - 11.4.5.3 复制/移动构造函数 [class.copy.ctor]
+- - '#####'
+  - 11.4.6 复制/移动赋值运算符 [class.copy.assign]
+- - '####'
+  - 11.4.7 析构函数 [class.dtor]
+- - '####'
+  - 11.4.9 静态成员
+- - '#####'
+  - 11.4.9.1 通用
+- - '#####'
+  - 11.4.9.2 静态成员函数
+- - '#####'
+  - 11.4.9.3 静态数据成员 [class.static.data]
+- - '####'
+  - 11.4.10 位域 [class.bit]
+- - '####'
+  - 11.4.11 嵌套类声明 [class.nest]
+- - '####'
+  - 11.4.12 嵌套类型名 [class.nested.type]
+- - '###'
+  - 11.5 联合体 [class.union]
+- - '####'
+  - 11.5.1 通用 [class.union.general]
+- - '####'
+  - 11.5.2 匿名联合 [class.union.anon]
+- - '###'
+  - 11.6 局部类声明 [class.local]
+- - '###'
+  - 11.7 派生类 [class.derived]
+- - '####'
+  - 11.7.1 通用 [class.derived.general]
+- - '####'
+  - 11.7.2 多重基类 [class.mi]
+- - '####'
+  - 11.7.3 虚函数 [class.virtual]
+- - '####'
+  - 11.7.4 抽象类 [class.abstract]
+- - '###'
+  - 11.8 成员名称查找 [class.member.lookup]
+- - '###'
+  - 11.9 成员访问控制 [class.access]
+- - '####'
+  - 11.9.1 通用 [class.access.general]
+- - '####'
+  - 11.9.2 访问说明符 [class.access.spec]
+- - '####'
+  - 11.9.3 基类的可访问性和基类成员 [class.access.base]
+- - '####'
+  - 11.9.4 友元 [class.friend]
+- - '####'
+  - 11.9.7 多重访问 [class.paths]
+- - '####'
+  - 11.9.8 嵌套类 [class.access.nest]
+- - '###'
+  - 11.10.3 初始化基类和成员 [class.base.init]
+- - '###'
+  - 11.10.4 初始化由继承的构造器 [class.inhctor.init]
+- - '###'
+  - 11.10.5 构造和析构 [class.cdtor]
+- - '###'
+  - 11.11 Comparisons [class.compare]
+- - '####'
+  - 11.11.1 Defaulted comparison operator functions [class.compare.default]
+- - '####'
+  - 11.11.2 Equality operator [class.eq]
+- - '###'
+  - 11.12 自由存储区 [class.free]
+- - '###'
+  - 12 重载
+- - '###'
+  - 12.1 前言
+- - '###'
+  - 12.2 可重载的声明
+- - '###'
+  - 12.3 Declaration matching [over.dcl]
+- - '###'
+  - 12.4 Overload resolution [over.match]
+- - '####'
+  - 12.4.1 General [over.match.general]
+- - '####'
+  - 12.4.2 Candidate functions and argument lists [over.match.funcs]
+- - '#####'
+  - 12.4.2.1 General [over.match.funcs.general]
+- - '####'
+  - 12.4.2.2 Function call syntax [over.match.call]
+- - '#####'
+  - 12.4.2.2.1 General [over.match.call.general]
+- - '####'
+  - 12.4.2.4 Initialization by constructor [over.match.ctor]
+- - '####'
+  - 12.4.2.5 Copy-initialization of class by user-defined conversion [over.match.copy]
+- - '####'
+  - 12.4.2.6 Initialization by conversion function [over.match.conv]
+- - '####'
+  - 12.4.2.7 通过转换函数为直接引用绑定进行初始化 [over.match.ref]
+- - '####'
+  - 12.4.2.8 通过列表初始化进行初始化 [over.match.list]
+- - '####'
+  - 12.4.2.9 类模板实参推导 [over.match.class.deduct]
+- - '####'
+  - 12.4.3 可行函数 [over.match.viable]
+- - '####'
+  - 12.4.4 最佳可行函数 [over.match.best]
+- - '#####'
+  - 12.4.4.1 通用 [over.match.best.general]
+- - '#####'
+  - 12.4.4.2 隐式转换序列 [over.best.ics]
+- - '######'
+  - 12.4.4.2.1 通用 [over.best.ics.general]
+- - '######'
+  - 12.4.4.2.4 省略号转换序列 [over.ics.ellipsis]
+- - '######'
+  - 12.4.4.2.5 引用绑定 [over.ics.ref]
+- - '######'
+  - 12.4.4.2.6 列表初始化序列 [over.ics.list]
+- - '######'
+  - 12.4.4.3 排序隐式转换序列 [over.ics.rank]
+- - '###'
+  - 12.6 Overloaded operators [over.oper]
+- - '####'
+  - 12.6.1 General [over.oper.general]
+- - '####'
+  - 12.6.3 Binary operators [over.binary]
+- - '#####'
+  - 12.6.3.1 General [over.binary.general]
+- - '#####'
+  - 12.6.3.2 Simple assignment [over.ass]
+- - '####'
+  - 12.6.4 Function call [over.call]
+- - '####'
+  - 12.6.5 下标 [over.sub]
+- - '####'
+  - 12.6.6 类成员访问 [over.ref]
+- - '####'
+  - 12.6.7 自增与自减 [over.inc]
+- - '###'
+  - 13 模板
+- - '###'
+  - 13.1 前言
+- - '###'
+  - 13.2 模板参数 [temp.param]
+- - '####'
+  - 13.4.2 模板类型参数 [temp.arg.type]
+- - '####'
+  - 13.4.3 模板非类型参数 [temp.arg.nontype]
+- - '###'
+  - 13.5 模板约束 [temp.constr]
+- - '####'
+  - 13.5.1 一般 [temp.constr.general]
+- - '####'
+  - 13.5.2 约束 [temp.constr.constr]
+- - '#####'
+  - 13.5.2.1 一般 [temp.constr.constr.general]
+- - '####'
+  - 13.5.2.2 逻辑运算 [temp.constr.op]
+- - '#####'
+  - 13.5.2.3 原子约束 [temp.constr.atomic]
+- - '#####'
+  - 13.5.4 约束规范化 [temp.constr.normal]
+- - '#####'
+  - 13.5.5 约束部分排序
+- - '###'
+  - 13.6 类型等价 [temp.type]
+- - '###'
+  - 13.7 模板声明 [temp.decls]
+- - '####'
+  - 13.7.1 通用 [temp.decls.general]
+- - '####'
+  - 13.7.2 类模板 [temp.class]
+- - '#####'
+  - 13.7.2.1 通用 [temp.class.general]
+- - '#####'
+  - 13.7.2.2 类模板的成员函数 [temp.mem.func]
+- - '####'
+  - 13.7.2.3 推导指引 [temp.deduct.guide]
+- - '####'
+  - 13.7.2.4 类模板的成员类 [temp.mem.class]
+- - '####'
+  - 13.7.2.5 类模板的静态数据成员 [temp.static]
+- - '####'
+  - 13.7.4 可变参数模板 [temp.variadic]
+- - '####'
+  - 13.7.5 友元 [temp.friend]
+- - '####'
+  - 13.7.6.4 类模板特化的成员 [temp.class.spec.mfunc]
+- - '####'
+  - 13.7.7 函数模板 [temp.fct]
+- - '#####'
+  - 13.7.7.1 一般规定 [temp.fct.general]
+- - '#####'
+  - 13.7.7.2 函数模板重载 [temp.over.link]
+- - '###'
+  - 13.8 Name resolution [temp.res]
+- - '####'
+  - 13.8.1 General [temp.res.general]
+- - '####'
+  - 13.8.3.2 Dependent types [temp.dep.type]
+- - '####'
+  - 13.8.3.3 类型依赖的表达式 [temp.dep.expr]
+- - '####'
+  - 13.8.3.5 依赖的模板实参 [temp.dep.temp]
+- - '####'
+  - 13.8.4 非依赖名称 [temp.nondep]
+- - '####'
+  - 13.8.5 依赖名称解析 [temp.dep.res]
+- - '#####'
+  - 13.8.5.1 实例化点 [temp.point]
+- - '#####'
+  - 13.8.5.2 候选函数 [temp.dep.candidate]
+- - '###'
+  - 13.9.2 Implicit instantiation [temp.inst]
+- - '###'
+  - 13.9.3 显式实例化
+- - '###'
+  - 13.10.3 Template argument deduction [temp.deduct]
+- - '####'
+  - 13.10.3.1 General [temp.deduct.general]
+- - '####'
+  - 13.10.3.6 从类型推导模板实参 [temp.deduct.type]
+- - '####'
+  - 13.10.3.7 从函数声明推导模板参数 [temp.deduct.decl]
+- - '###'
+  - 14.3 构造函数和析构函数 [except.ctor]
+- - '###'
+  - 14.6 特殊函数
+- - '####'
+  - 14.6.1 General
+- - '####'
+  - 14.6.2 The `std::terminate` function
+- - '####'
+  - 14.6.3 The std::uncaught_exceptions function [except.uncaught]
+- - '###'
+  - 15 预处理指令 [cpp]
+- - '####'
+  - 15.1 引言 [cpp.pre]
+- - '####'
+  - 15.2 条件包含 [cpp.cond]
+- - '####'
+  - 15.3 Source file inclusion [cpp.include]
+- - '####'
+  - 15.6 Macro replacement [cpp.replace]
+- - '#####'
+  - 15.6.1 General [cpp.replace.general]
+- - '#####'
+  - 15.6.2 Argument substitution
+- - '####'
+  - '15.6.3 # 操作符 [cpp.stringize]'
+- - '####'
+  - '15.6.4 ## 操作符 [cpp.concat]'
+- - '####'
+  - 15.6.6 宏定义的范围 [cpp.scope]
+- - '####'
+  - 15.7 行控制 [cpp.line]
+- - '###'
+  - 16.2 C 标准库 [library.c]
+- - '###'
+  - 16.3 描述方法 [description]
+- - '####'
+  - 16.3.1 通用 [description.general]
+- - '####'
+  - 16.3.2 各条款的结构 [structure]
+- - '#####'
+  - 16.3.2.1 元素 [structure.elements]
+- - '#####'
+  - 16.3.2.2 摘要 [structure.summary]
+- - '#####'
+  - 16.3.2.3 要求 [structure.requirements]
+- - '#####'
+  - 16.3.2.4 详细规范 [structure.specifications]
+- - '#####'
+  - 16.3.2.5 C 库 [structure.see.also]
+- - '####'
+  - 16.3.3 其他约定 [conventions]
+- - '#####'
+  - 16.3.3.1 通用 [conventions.general]
+- - '####'
+  - 16.3.3.2 仅用于阐述的函数 [expos.only.func]
+- - '####'
+  - 16.3.3.3 类型描述 [type.descriptions]
+- - '#####'
+  - 16.3.3.3.1 通用 [type.descriptions.general]
+- - '#####'
+  - 16.3.3.3.2 仅用于阐述的类型 [expos.only.types]
+- - '#####'
+  - 16.3.3.3.3 枚举类型 [enumerated.types]
+- - '#####'
+  - 16.3.3.3.5 字符序列 [character.seq]
+- - '######'
+  - 16.3.3.3.5.1 通用 [character.seq.general]
+- - '######'
+  - 16.3.3.3.5.2 字节字符串 [byte.strings]
+- - '######'
+  - 16.3.3.3.5.3 多字节字符串 [multibyte.strings]
+- - '######'
+  - 16.3.3.3.6 自定义点对象类型 [customization.point.object]
+- - '####'
+  - 16.3.3.4 类内的函数 [functions.within.classes]
+- - '####'
+  - 16.3.3.5 私有成员 [objects.within.classes]
+- - '###'
+  - 16.4 库范围内的要求 [requirements]
+- - '####'
+  - 16.4.1 通用 [requirements.general]
+- - '####'
+  - 16.4.2 库内容和组织 [organization]
+- - '#####'
+  - 16.4.2.1 通用 [organization.general]
+- - '#####'
+  - 16.4.2.2 库内容 [contents]
+- - '#####'
+  - 16.4.2.3 头文件 [headers]
+- - '####'
+  - 16.4.3 Using the library [using]
+- - '#####'
+  - 16.4.3.1 Overview [using.overview]
+- - '#####'
+  - 16.4.3.2 Headers [using.headers]
+- - '#####'
+  - 16.4.3.3 Linkage [using.linkage]
+- - '####'
+  - 16.4.4 Requirements on types and expressions [utility.requirements]
+- - '#####'
+  - 16.4.4.1 General [utility.requirements.general]
+- - '####'
+  - 16.4.4.6 Cpp17Allocator requirements [allocator.requirements]
+- - '#####'
+  - 16.4.4.6.1 General [allocator.requirements.general]
+- - '####'
+  - 16.4.4.6.2 Allocator completeness requirements [allocator.requirements.completeness]
+- - '####'
+  - 16.4.5 Constraints on programs [constraints]
+- - '#####'
+  - 16.4.5.1 Overview [constraints.overview]
+- - '####'
+  - 16.4.5.2 Namespace use [namespace.constraints]
+- - '#####'
+  - 16.4.5.2.1 Namespace std [namespace.std]
+- - '####'
+  - 16.4.5.2.2 Namespace posix [namespace.posix]
+- - '####'
+  - 16.4.5.2.3 Namespaces for future standardization [namespace.future]
+- - '####'
+  - 16.4.5.3 Reserved names [reserved.names]
+- - '#####'
+  - 16.4.5.3.1 General [reserved.names.general]
+- - '#####'
+  - 16.4.5.3.2 Zombie names [zombie.names]
+- - '#####'
+  - 16.4.5.3.3 Macro names [macro.names]
+- - '#####'
+  - 16.4.5.3.4 External linkage [extern.names]
+- - '#####'
+  - 16.4.5.3.5 Types [extern.types]
+- - '#####'
+  - 16.4.5.3.6 User-defined literal suffixes [usrlit.suffix]
+- - '####'
+  - 16.4.5.4 Headers [alt.headers]
+- - '####'
+  - 16.4.5.5 Derived classes [derived.classes]
+- - '####'
+  - 16.4.5.6 Replacement functions [replacement.functions]
+- - '####'
+  - 16.4.5.7 Handler functions [handler.functions]
+- - '####'
+  - 16.4.5.8 Other functions [res.on.functions]
+- - '####'
+  - 16.4.5.9 Function arguments [res.on.arguments]
+- - '####'
+  - 16.4.5.10 库对象访问
+- - '####'
+  - 16.4.5.11 语义要求
+- - '####'
+  - 16.4.6 遵从的实现
+- - '#####'
+  - 16.4.6.1 概述
+- - '#####'
+  - 16.4.6.2 头文件
+- - '#####'
+  - 16.4.6.3 对宏定义的限制
+- - '#####'
+  - 16.4.6.4 非成员函数 [global.functions]
+- - '#####'
+  - 16.4.6.5 成员函数 [member.functions]
+- - '#####'
+  - 16.4.6.6 友元函数 [hidden.friends]
+- - '#####'
+  - 16.4.6.7 constexpr 函数和构造函数 [constexpr.functions]
+- - '#####'
+  - 16.4.6.8 稳定算法的要求 [algorithm.stable]
+- - '#####'
+  - 16.4.6.9 可重入性 [reentrancy]

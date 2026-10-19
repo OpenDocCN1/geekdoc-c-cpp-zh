@@ -1,0 +1,96 @@
+
+```
+assert(s == "I have heard it works only if you believe in it");    // OK
+```
+
+*— end example*
+
+> [*Note 8:* If an operator function is invoked using operator notation, argument evaluation is sequenced as specified for the built-in operator; see [12.4.2.3].  *— end note*]
+
+> [*Example 4:*
+
+```
+struct S {
+    S(int);
+};
+int operator<<(S, int);
+int i, j;
+int x = S(i=1) << (i=2);
+int y = operator<<(S(j=1), j=2);
+```
+
+After performing the initializations, the value of i is 2 (see [7.6.7]), but it is unspecified whether the value of j is 1 or 2.  *— end example*]
+
+The result of a function call is the result of the possibly-converted operand of the `return` statement ([8.7.4]) that transferred control out of the called function (if any), except in a virtual function call if the return type of the final overrider is different from the return type of the statically chosen function, the value returned from the final overrider is converted to the return type of the statically chosen function.
+
+> [*Note 9:* A function can change the values of its non-const parameters, but these changes cannot affect the values of the arguments except where a parameter is of a reference type ([9.3.4.3]); if the reference is to a const-qualified type, `const_cast` is required to be used to cast away the constness in order to modify the argument’s value. Where a parameter is of const reference type a temporary object is introduced if needed ([9.2.9], [5.13], [5.13.5], [9.3.4.5], [6.7.7]). In addition, it is possible to modify the values of non-constant objects through pointer parameters.  *— end note*]
+
+A function can be declared to accept fewer arguments (by declaring default arguments ([9.3.4.7])) or more arguments (by using the ellipsis, `...`, or a function parameter pack ([9.3.4.6])) than the number of parameters in the function definition ([9.5]).
+
+> [*Note 10:* This implies that, except where the ellipsis (`...`) or a function parameter pack is used, a parameter is available for each argument.  *— end note*]
+
+When there is no parameter for a given argument, the argument is passed in such a way that the receiving function can obtain the value of the argument by invoking `va_arg` ([17.13]).
+
+> [*Note 11:* This paragraph does not apply to arguments passed to a function parameter pack. Function parameter packs are expanded during template instantiation ([13.7.4]), thus each such argument has a corresponding parameter when a function template specialization is actually called.  *— end note*]
+
+The lvalue-to-rvalue ([7.3.2]), array-to-pointer ([7.3.3]), and function-to-pointer ([7.3.4]) standard conversions are performed on the argument expression. An argument that has type `cv std::nullptr_t` is converted to type `void*` ([7.3.12]). After these conversions, if the argument does not have arithmetic, enumeration, pointer, pointer-to-member, or class type, the program is ill-formed. Passing a potentially-evaluated argument of a scoped enumeration type or of a class type (Clause 11) having an eligible non-trivial copy constructor, an eligible non-trivial move constructor, or a non-trivial destructor ([11.4.4]), with no corresponding parameter, is conditionally-supported with implementation-defined semantics. If the argument has integral or enumeration type that is subject to the integral promotions ([7.3.7]), or a floating-point type that is subject to the floating-point promotion ([7.3.8]), the value of the argument is converted to the promoted type before the call. These promotions are referred to as the *default argument promotions*.
+
+Recursive calls are permitted, except to the `main` function ([6.9.3.1]).
+
+A function call is a value if the result type is an lvalue reference type or an rvalue reference to function type, an xvalue if the result type is an rvalue reference to object type, and a prvalue otherwise.
+
+## 7.6.1.4 Explicit type conversion (functional notation)
+
+A *simple-type-specifier* ([9.2.9.3]) or *typename-specifier* ([13.8]) followed by a parenthesized optional expression-list or by a braced-init-list (the initializer) constructs a value of the specified type given the initializer. If the type is a placeholder for a deduced class type, it is replaced by the return type of the function selected by overload resolution for class template argument deduction ([12.4.2.9]) for the remainder of this subclause.
+
+If the initializer is a parenthesized single expression, the type conversion expression is equivalent to the corresponding cast expression ([7.6.3]). Otherwise, if the type is `cv void` and the initializer is `()` or `{}` (after
+
+(8.2) — Otherwise, if v points (refers) to a public base class subobject of the most derived object, and the type of the most derived object has a base class, of type C, that is unambiguous and public, the result points (refers) to the C subobject of the most derived object.
+
+(8.3) — Otherwise, the runtime check fails.
+
+9 The value of a failed cast to pointer type is the null pointer value of the required result type. A failed cast to reference type throws an exception (14.2) of a type that would match a handler (14.4) of type std::bad_cast (17.7.4).
+
+[Example 2:
+
+```
+class A { virtual void f(); };
+class B { virtual void g(); };
+class D : public virtual A, private B { };
+void g() {
+  D d;
+  B* bp = (B*)&d;                // cast needed to break protection
+  A* ap = &d;                    // public derivation, no cast needed
+  D& dr = dynamic_cast<D&>(*bp); // fails
+  ap = dynamic_cast<A*>(bp);     // fails
+  bp = dynamic_cast<B*>(ap);     // fails
+  ap = dynamic_cast<A*>(&d);     // succeeds
+  bp = dynamic_cast<B*>(&d);     // ill-formed (not a runtime check)
+}
+```
+
+```
+class E : public D, public B { };
+class F : public E, public D { };
+void h() {
+  F f;
+  A* ap = &f;                    // succeeds: finds unique A
+  D* dp = dynamic_cast<D*>(ap);  // fails: yields null; f has two D subobjects
+  E* ep = (E*)ap;                // error: cast from virtual base
+  E* ep1 = dynamic_cast<E*>(ap); // succeeds
+}
+```
+
+— end example]
+
+[Note 1: Subclause 11.10.5 describes the behavior of a dynamic_cast applied to an object under construction or destruction. — end note]
+
+## 7.6.1.8 Type identification [expr.typeid]
+
+1 The result of a typeid expression is an lvalue of static type const std::type_info (17.7.3) and dynamic type const std::type_info or const name where name is an implementation-defined class publicly derived from std::type_info which preserves the behavior described in 17.7.3.66 The lifetime of the object referred to by the lvalue extends to the end of the program. Whether or not the destructor is called for the std::type_info object at the end of the program is unspecified.
+
+2 When typeid is applied to a glvalue whose type is a polymorphic class type (11.7.3), the result refers to a std::type_info object representing the type of the most derived object (6.7.2) (that is, the dynamic type) to which the glvalue refers. If the glvalue is obtained by applying the unary * operator to a pointer67 and the pointer is a null pointer value (6.8.3), the typeid expression throws an exception (14.2) of a type that would match a handler of type std::bad_typeid exception (17.7.5).
+
+3 When typeid is applied to an expression other than a glvalue of a polymorphic class type, the result refers to a std::type_info object representing the static type of the expression. Lvalue-to-rvalue (7.3.2), array-to-pointer (7.3.3), and function-to-pointer (7.3.4) conversions are not applied to the expression. If the expression is a prvalue, the temporary materialization conversion (7.3.5) is applied. The expression is an unevaluated operand (7.2).
+
+4 When typeid is applied to a type-id, the result refers to a std::type_info object representing the type of the type-id. If the type of the type-id is a reference to a possibly cv-qualified type, the result of the typeid expression refers to a std::type_info object representing the cv-unqualified referenced type. If the type of the type-id is a class type or a reference to a class type, the class shall be completely-defined.

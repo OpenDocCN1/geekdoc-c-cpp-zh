@@ -1,0 +1,241 @@
+
+
+Example 2:
+
+```
+template<class X, class Y> X f(Y);
+template<class X, class Y, class ... Z> X g(Y);
+void h() {
+    int i = f<int>(5.6);                // Y deduced as double
+    int j = f(5.6);                    // error: X cannot be deduced
+    f<void>(f<int, bool>());           // Y for outer f deduced as int (*) (bool)
+    f<void>(f<int>());                 // error: f<int> does not denote a single function template specialization
+    int k = g<int>(5.6);                // Y deduced as double; Z deduced as an empty sequence
+    f<void>(g<int, bool>());           // Y for outer f deduced as int (*) (bool),
+                                       // Z deduced as an empty sequence
+}
+```
+
+— end example
+
+5 [Note 1: An empty template argument list can be used to indicate that a given use refers to a specialization of a function template even when a non-template function (9.3.4.6) is visible that would otherwise be used. For example:
+
+```
+template <class T> int f(T);    // #1
+int f(int);                     // #2
+int k = f(1);                   // uses #2
+int l = f<>(1);                 // uses #1
+```
+
+— end note
+
+6 Template arguments that are present shall be specified in the declaration order of their corresponding template-parameters. The template argument list shall not specify more template-arguments than there are corresponding template-parameters unless one of the template-parameters is a template parameter pack.
+
+[Example 3:
+
+```
+template<class X, class Y, class Z> X f(Y,Z);
+template<class ... Args> void f2();
+void g() {
+    f<int,const char*,double>("aa",3.0);
+    f<int,const char*>("aa",3.0); // Z deduced as double
+    f<int>("aa",3.0);             // Y deduced as const char*; Z deduced as double
+    f("aa",3.0);                  // error: X cannot be deduced
+    f2<char, short, int, long>(); // OK
+}
+```
+
+— end example
+
+7 Implicit conversions (7.3) will be performed on a function argument to convert it to the type of the corresponding function parameter if the parameter type contains no template-parameters that participate in template argument deduction.
+
+[Note 2: Template parameters do not participate in template argument deduction if they are explicitly specified. For example,
+
+```
+template<class T> void f(T);
+
+class Complex {
+    Complex(double);
+};
+
+void g() {
+    f<Complex>(1);    // OK, means f<Complex>(Complex(1))
+}
+```
+
+— end note
+
+8 [Note 3: Because the explicit template argument list follows the function template name, and because constructor templates (11.4.5) are named without using a function name (6.5.4.2), there is no way to provide an explicit template argument list for these function templates. — end note]
+
+9 Template argument deduction can extend the sequence of template arguments corresponding to a template parameter pack, even when the sequence contains explicitly specified template arguments.
+
+[Example 4:
+
+```
+template<class ... Types> void f(Types ... values);
+```
+
+```
+void g() {
+    f<int*, float*>(0, 0, 0);    // Types deduced as the sequence int*, float*, int
+}
+```
+
+— end example]
+
+## 13.10.3 Template argument deduction [temp.deduct]
+
+### 13.10.3.1 General [temp.deduct.general]
+
+1 When a function template specialization is referenced, all of the template arguments shall have values. The values can be explicitly specified or, in some cases, be deduced from the use or obtained from default template-arguments.
+
+[Example 1:
+
+```
+void f(Array<dcomplex>& cv, Array<int>& ci) {
+    sort(cv);    // calls sort(Array<dcomplex>&)
+    sort(ci);    // calls sort(Array<int>&)
+}
+```
+
+and
+
+```
+void g(double d) {
+    int i = convert<int>(d);    // calls convert<int,double>(double)
+    int c = convert<char>(d);    // calls convert<char,double>(double)
+}
+```
+
+— end example]
+
+2 When an explicit template argument list is specified, if the given template-id is not valid (13.3), type deduction fails. Otherwise, the specified template argument values are substituted for the corresponding template parameters as specified below.
+
+3 After this substitution is performed, the function parameter type adjustments described in 9.3.4.6 are performed.
+
+[Example 2: A parameter type of "void (const int, int[5])" becomes "void(*)(int,int*)". — end example]
+
+[Note 1: A top-level qualifier in a function parameter declaration does not affect the function type but still affects the type of the function parameter variable within the function. — end note]
+
+[Example 3:
+
+```
+template <class T> void f(T t);
+template <class X> void g(const X x);
+template <class Z> void h(Z, Z*);
+```
+
+```
+int main() {
+    // #1: function type is f(int), t is non const
+    f<int>(1);
+
+    // #2: function type is f(int), t is const
+    f<const int>(1);
+
+    // #3: function type is g(int), x is const
+    g<int>(1);
+
+    // #4: function type is g(int), x is const
+    g<const int>(1);
+
+    // #5: function type is h(int, const int*)
+    h<const int>(1,0);
+}
+```
+
+— end example]
+
+4 [Note 2: f<int>(1) and f<const int>(1) call distinct functions even though both of the functions called have the same function type. — end note]
+
+5 The resulting substituted and adjusted function type is used as the type of the function template for template argument deduction. If a template argument has not been deduced and its corresponding template parameter has a default argument, the template argument is determined by substituting the template arguments
+
+广州汽车集团股份有限公司
+GAC GROUP
+
+# 委 托 书
+
+广州汽车集团股份有限公司：
+
+兹委托【**王芳**】先生/女士（身份证号：【**440*************】）代表本公司出席贵公司【**2024**】年【**12**】月【**20**】日召开的【**2024**】年【**第一次临时**】股东大会，并代为行使表决权。
+
+委托人对股东大会各项议案的表决意见如下：
+
+| 议案序号 | 议案名称 | 同意 | 反对 | 弃权 |
+|----------|----------|------|------|------|
+| 1 | 关于选举公司董事的议案 | √ | | |
+| 2 | 关于选举公司监事的议案 | √ | | |
+| 3 | 关于修订《公司章程》的议案 | √ | | |
+
+注：委托人对未作具体指示的议案，受托人有权按照自己的意思表决。
+
+委托人名称（盖章）：【**示例科技有限公司**】
+
+委托人营业执照号码：【**91440101MA5XXXXXX**】
+
+受托人签字：【**王芳**】　委托人法定代表人签字：【**张三**】
+
+委托日期：【**2024**】年【**12**】月【**15**】日
+
+[Example 9:
+template <class T> int f(typename T::B*);
+int i = f<int>(0);
+— end example]
+
+(11.4) — Attempting to use a type in a nested-name-specifier of a qualified-id when that type does not contain the specified member, or
+- (11.4.1) — the specified member is not a type where a type is required, or
+- (11.4.2) — the specified member is not a template where a template is required, or
+- (11.4.3) — the specified member is not a non-type where a non-type is required.
+
+[Example 10:
+template <int I> struct X { };
+template <template <class T> class> struct Z { };
+template <class T> void f(typename T::Y*){}
+template <class T> void g(X<T::N>*){}
+template <class T> void h(Z<T::template TT>*){}
+struct A {};
+struct B { int Y; };
+struct C {
+typedef int N;
+};
+struct D {
+typedef int TT;
+};
+int main() {
+// Deduction fails in each of these cases:
+f<A>(0); // A does not contain a member Y
+f<B>(0); // The Y member of B is not a type
+g<C>(0); // The N member of C is not a non-type
+h<D>(0); // The TT member of D is not a template
+}
+— end example]
+
+(11.5) — Attempting to create a pointer to reference type.
+
+(11.6) — Attempting to create a reference to void.
+
+(11.7) — Attempting to create “pointer to member of T” when T is not a class type.
+
+[Example 11:
+template <class T> int f(int T::*);
+int i = f<int>(0);
+— end example]
+
+(11.8) — Attempting to give an invalid type to a non-type template parameter.
+
+[Example 12:
+template <class T, T> struct S {};
+template <class T> int f(S<T, T()>*);
+struct X {};
+int i0 = f<X>(0);
+— end example]
+
+(11.9) — Attempting to perform an invalid conversion in either a template argument expression, or an expression used in the function declaration.
+
+[Example 13:
+template <class T, T*> int f(int);
+int i2 = f<int,1>(0); // can't conv 1 to int*
+— end example]
+
+(11.10) — Attempting to create a function type in which a parameter has a type of void, or in which the return type is a function type or array type.
+
