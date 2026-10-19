@@ -1,0 +1,96 @@
+
+- Lang, W.C. and Forinash, K. (1998) Time-frequency analysis with the continuous wavelet transform. Am. J. Phys., 66, 794.
+- Langtangen, H.P. (2008) Python Scripting for Computational Science, Springer, Heidelberg.
+- Langtangen, H.P. (2009) A Primer on Scientific Programming with Python, Springer, Heidelberg.
+- Li, Z. (2014) Numerical Methods for Partial Differential Equations – Finite Element Method, www4.ncsu.edu/~zhilin/ (accessed 22 March 2015).
+- Lorenz, E.N. (1963) Deterministic nonperiodic flow. J. Atmos. Sci., 20, 130.
+- Lotka, A.J. (1925) Elements of Physical Biology, Williams and Wilkins, Baltimore.
+- MacKeown, P.K. (1985) Am. J. Phys., 53, 880.
+- MacKeown, P.K. and Newman, D.J. (1987) Computational Techniques in Physics, Adam Hilger, Bristol.
+- Maestri, J.J.V., Landau, R.H., and Páez, M.J. (2000) Two-particle Schrödinger equation animations of wave packet-wave packet scattering. Am. J. Phys., 68, 1113; http://physics.oregonstate.edu/~rubin/nacphy/ComPhys/PACKETS/.
+- Mallat, S.G. (1989) A theory for multiresolution signal decomposition: The wavelet representation. IEEE Trans. Pattern Anal. Mach. Intell., 11 (7), 674.
+- Mandelbrot, B. (1967) How long is the coast of Britain? Science, 156, 638.
+- Mandelbrot, B. (1982) The Fractal Geometry of Nature, Freeman, San Francisco.
+- Manneville, P. (1990) Dissipative Structures and Weak Turbulence, Academic Press, San Diego.
+- Mannheim, P.D. (1983) The physics behind path integrals in quantum mechanics. Am. J. Phys., 51, 328.
+- Marion, J.B. and Thornton, S.T. (2003) Classical Dynamics of Particles and Systems, 5th edn, Harcourt Brace Jovanovich, Orlando.
+- Mathews, J. (2002) Numerical Methods for Mathematics, Science and Engineering, Prentice-Hall, Upper Saddle River.
+- Metropolis, N., Rosenbluth, A.W., Rosenbluth, M.N., Teller, A.H., and Teller, E. (1953) J. Chem. Phys., 21, 1087.
+- Moon, F.C. and Li, G.-X. (1985) Phys. Rev. Lett., 55, 1439.
+- Morse, P.M. and Feshbach, H. (1953) Methods of Theoretical Physics, McGraw-Hill, New York.
+- Motter, A. and Campbell, D. (2013) Chaos at fifty. Phys. Today, 66 (5), 27.
+- Nelson, M., Humphrey, W., Gursoy, A., Dalke, A., Kalé, L., Skeel, R.D., and Schulten, K. (1996) NAMD – Scalable Molecular Dynamics. J. Supercomput. Apps. High Perform. Comput., 10, 251–268, www.ks.uiuc.edu/Research/namd (accessed 22 March 2015).
+- Nesvizhevsky, V.V., Börner, H.G., Petukhov, A.K., Abele, H., Baessler, S., Ruess, E.J., Stöferle, T., Westphal, A., Gagarski, A.M., Petrov, G.A., and Strelkov, A.V. (2002) Quantum states of neutrons in the Earth’s gravitational field. Nature, 415, 297.
+- NIST Digital Library of Mathematical Functions (2014) dlmf.nist.gov/ (accessed 22 March 2015).
+- Numerical Python (2013) NumPy, numpy.scipy.org (accessed 22 March 2015).
+- NumPy Tutorial, Tentative (2015) Tentative NumPy Tutorial, wiki.scipy.org/Tentative_NumPy_Tutorial (accessed 22 March 2015).
+- Oliphant, T.E. (2006) Guide to NumPy, csc.ucdavis.edu/~chaos/courses/nlp/Software/NumPyBook.pdf (accessed 22 March 2015).
+- Ott, E. (2002) Chaos in Dynamical Systems, Cambridge University Press, Cambridge.
+- Otto, A. (2011) Numerical Simulations of Fluids and Plasmas, how.gl.alaska.edu/ao/sim (accessed 22 March 2015).
+- Pancake, C.M. (1996) Is parallelism for you? Comput. Sci. Eng., 3, 18.
+- Peitgen, H.-O., Jürgens, H., and Saupe, D. (1992) Chaos and Fractals, Springer, New York.
+- Penna, T.J.P. (1994) Comput. Phys., 9, 341.
+- Perez, F., Granger, B.E. and Hunter, J.D. (2010) Python: An Ecosystem for Scientific Computing. Comput. Sci. Eng., 13 (2), www.computer.org/web/computingnow/cise (accessed 22 March 2015).
+- Perlin, K. (1985) An Image Synthesizer, Computer Graphics (Proceedings of ACM SIGGRAPH 85), 19, 3.
+- Phatak, S.C. and Rao, S.S. (1995) Logistic map: A possible random-number generator. Phys. Rev. E, 51, 3670.
+- Plischke, M. and Bergersen, B. (1994) Equilibrium Statistical Physics, 2nd edn, World Scientific, Singapore.
+- Polikar, R. (2001) The Wavelet Tutorial, users.rowan.edu/~polikar/WAVELETS/WTtutorial.html (accessed 22 March 2015).
+- Polycarpou, A.C. (2006) Introduction to the Finite Element Method in Electromagnetics, Morgan and Claypool, San Rafael.
+- Potvin, J. (1993) Comput. Phys., 7, 149.
+- (2013) POV-Ray, Persistence of Vision Raytracer, www.povray.org (accessed 22 March 2015).
+- Press, W.H., Flannery, B.P., Teukolsky, S.A., and Vetterling, W.T. (1994) Numerical Recipes, Cambridge University Press, Cambridge.
+- Python (2014) Python for Programmers, https://wiki.python.org/moin/BeginnersGuide/Programmers (accessed 22 March 2015).
+- LearnPython.org (2014) Interactive Python Tutorial, http://www.learnpython.org/ (accessed 22 March 2015).
+- (2014) The Python Tutorial, docs.python.org/2/tutorial/ (accessed 22 March 2015).
+- (2014) Python Index of Packages, pypi.python.org/pypi (accessed 22 March 2015).
+- (2014) Python Documentation, www.python.org/doc (accessed 22 March 2015).
+- Quinn, M.J. (2004) Parallel Programming in C with MPI and OpenMP, McGraw-Hill, New York.
+- Ramasubramanian, K. and Sriram, M.S. (2000) A comparative study of computation of Lyapunov spectra with different algorithms. Physica D, 139, 72.
+- Rapaport, D.C. (1995) The Art of Molecular Dynamics Simulation, Cambridge University Press, Cambridge.
+- Rasband, S.N. (1990) Chaotic Dynamics of Nonlinear Systems, John Wiley & Sons, New York.
+- Rawitscher, G., Koltracht, I., Dai, H., and Ribetti, C. (1996) Comput. Phys., 10, 335.
+- Reddy, J.N. (1993) An Introduction to the Finite Element Method, 2nd edn, McGraw-Hill, New York.
+- Refson, K. (2000) Moldy, A General-Purpose Molecular Dynamics Simulation Program, cc-ipc.icp.ac.ru/Moldy_2_16.html (accessed 22 March 2015).
+- Reynolds, O. (1883) Proc. R. Soc. Lond., 35, 84.
+- Richardson, L.F. (1961) Problem of contiguity: an appendix of statistics of deadly quarrels. General Syst. Yearbook, 6, 139.
+- Rowe, A.C.H. and Abbott, P.C. (1995) Daubechies wavelets and Mathematica. Comput. Phys., 9, 635.
+- Russell, J.S. (1844) Report of the 14th Meeting of the British Association for the Advancement of Science, John Murray, London.
+- Sander, E., Sander, L.M., and Ziff, R.M. (1994) Comput. Phys., 8, 420.
+- Sanders, J. and Kandrot, E. (2011) CUDA by Example, Addison Wesley, Upper Saddle River.
+- Scheck, F. (1994) Mechanics, from Newton's Laws to Deterministic Chaos, 2nd edn, Springer, New York.
+- Shannon, C.E. (1948) A mathematical theory of communication. Bell Syst. Tech. J., 27, 379.
+- (2014) SciPy, a Python-based ecosystem, www.scipy.org (accessed 22 March 2015).
+- Shaw, C.T. (1992) Using Computational Fluid Dynamics, Prentice-Hall, Englewood Cliffs, NJ.
+- Singh, P.P. and Thompson, W.J. (1993) Comput. Phys., 7, 388.
+- Sipper, M. (1997) Evolution of Parallel Cellular Machines, Springer, Heidelberg, cell-auto.com (accessed 22 March 2015).
+- Smith, D.N. (1991) Concepts of Object-Oriented Programming, McGraw-Hill, New York.
+- Smith, L.I. (2002) A Tutorial on Principal Components Analysis, www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf (accessed 22 March 2015).
+- Smith, S.W. (1999) The Scientist and Engineer's Guide to Digital Signal Processing, California Technical Publishing, San Diego.
+- Stetz, A., Carroll, J., Chirapatpimol, N., Dixit, M., Igo, G., Nasser, M., Ortendahl, D., and Perez-Mendez, V. (1973) Determination of the Axial Vector Form Factor in the Radiative Decay of the Pion, LBL 1707.
+- Sullivan, D. (2000) Electromagnetic Simulation Using the FDTD Method, IEEE Press, New York.
+- Tabor, M. (1989) *Chaos and Integrability in Nonlinear Dynamics*, John Wiley & Sons, New York.
+- Taflove, A. and Hagness, S. (2000) *Computational Electrodynamics: The Finite Difference Time Domain Method*, 2nd edn, Artech House, Boston.
+- Tait, R.N., Smy, T., and Brett, M.J. (1990) *Thin Solid Films*, **187**, 375.
+- Thijssen, J.M. (1999) *Computational Physics*, Cambridge University Press, Cambridge.
+- Thompson, W.J. (1992) *Computing for Scientists and Engineers*, John Wiley & Sons, New York.
+- Tickner, J. (2004) Simulating nuclear particle transport in stochastic media using Perlin noise functions. *Nucl. Instrum. Methods B*, **203**, 124.
+- Vallée, O. (2000) Comment on a quantum bouncing ball. *Am. J. Phys.*, **68**, 672.
+- van de Velde, E.F. (1994) *Concurrent Scientific Computing*, Springer, New York.
+- van den Berg, J.C. (ed.) (1999) *Wavelets in Physics*, Cambridge University Press, Cambridge.
+- Vano, J.A., Wildenberg, J.C., Anderson, M.B., Noel, J.K., and Sprott, J.C. (2006) Chaos in low-dimensional Lotka–Volterra models of competition. *Nonlinearity*, **19**, 2391–2404.
+- Visscher, P.B. (1991) *Comput. Phys.*, **5**, 596.
+- Vold, M.J. (1959) *J. Colloid Sci.*, **14**, 168.
+- Volterra, V. (1926) Variazioni e fluttuazioni del numero d’individui in specie animali conviventi. *Mem. R. Accad. Naz. Lincei. Ser. VI*, **2**.
+- Warburton, R.D.H. and Wang, J. (2004) Analysis of asymptotic projectile motion with air resistance using the Lambert W function. *Am. J. Phys.*, **72**, 1404.
+- Ward, D.W. and Nelson, K.A. (2005) Finite difference time domain, FDTD, simulations of electromagnetic wave propagation using a spreadsheet. *Comput. Appl. Eng. Educat.*, **13** (3), 213–221.
+- Whineray, J. (1992) An energy representation approach to the quantum bouncer. *Am. J. Phys.*, **60**, 948.
+- (2014) *Principal component analysis*, en.wikipedia.org/wiki/Principal_component_analysis (accessed 22 March 2015).
+- Williams, G.P. (1997) *Chaos Theory Tamed*, Joseph Henry Press, Washington.
+- Witten, T.A. and Sander, L.M. (1981) *Phys. Rev. Lett.*, **47**, 1400; Witten, T.A. and Sander, L.M. (1983) *Phys. Rev. B*, **27**, 5686.
+- Wolf, A., Swift, J.B., Swinney, H.L., and Vastano, J.A. (1985) Determining Lyapunov exponents from a time series. *Physica D*, **16**, 285.
+- Wolfram, S. (1983) Statistical mechanics of cellular automata. *Rev. Mod. Phys.*, **55**, 601.
+- Yang, C.N. (1952) The spontaneous magnetization of a two-dimensional Ising model. *Phys. Rev.*, **85**, 809.
+- Yee, K. (1966) *IEEE Trans. Ant. Propagat.*, **AP-14**, 302.
+- Yue, K., Fiebig, K.M., Thomas, P.D., Chan, H.S., Shakhnovich, E.I., and Dill, K.A. (1995) *Proc. Natl. Acad. Sci. USA*, **92**, 325.
+- Zabusky, N.J. and Kruskal, M.D. (1965) *Phys. Rev. Lett.*, **15**, 240.
+- Zeller, C. (2008) High Performance Computing with CUDA, www.nvidia.com/object/sc10_cuda_tutorial.html (accessed 22 March 2015).

@@ -1,0 +1,15 @@
+# 10.14 Data Parallelism and Domain Decomposition
+
++   8. Run the MPI code for 2, 4, 8, and 16 computing nodes, with proportionally larger values for N_iter in each case (2000, 4000, 8000, 16000, etc.). In any case, make sure to go up to enough nodes so that the system no longer scales.
++   
++   9. Record the run time for each number of nodes and make a plot of the run time vs. number of computing nodes.
++   
++   10. Weak scaling would imply that the run time remains constant as the problem size and the number of compute nodes increase in proportion. Comment on your results.
++   
++   11. Is this problem more appropriate for weak or strong scaling?
+
+As you have probably realized by this point, there are two basic, but quite different, approaches to creating a program that runs in parallel. In task parallelism, you decompose your program by tasks, with differing tasks assigned to different processors, and with great care taken to maintain load balance, that is, to keep all processors equally busy. Clearly you must understand the internal workings of your program in order to do this, and you must also have made an accurate profile of your program so that you know how much time is being spent in various parts of your program based on the data being created or acted upon, with differing data spaces (domains) assigned to different processors. In data parallelism, there often must be data shared at the boundaries of the data spaces, and therefore synchronization among the data spaces. Data parallelism is the most common approach and is well suited to message-passing machines in which each node has its own private data space, although this may lead to a large amount of data transfer at times.
+
+When planning how to decompose global data into subsapces suitable for parallel processing, it is important to divide the data into contiguous blocks in order to minimize the time spent on moving data through the different stages of memory (page faults). Some compilers and operating systems help you in this regard by exploiting spatial locality, that is, by assuming that if you are using a data element at one location in data space, then it is likely that you may use some nearby ones as well, and so they too are made readily available. Some compilers and operating systems also exploit temporal locality, that is, by assuming that if you are using a data element at one time, then there is an increased probability that you may use it again in the near future, and so it too is kept handy. You can help optimize your programs by taking advantage of these localities while programming.
+
+As an example of domain decomposition, consider the solution of a partial differential equation by a finite difference method. It is known from classical electrodynamics that the electric potential U(x) in a charge-free region of 2D space

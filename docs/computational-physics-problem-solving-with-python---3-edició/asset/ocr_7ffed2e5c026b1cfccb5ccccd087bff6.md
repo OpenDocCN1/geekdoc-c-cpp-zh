@@ -1,0 +1,15 @@
+usually placed on a common bus (communication channel) and communicate with each other through the memory system. Medium-grain programs have different, independent, parallel subroutines running on different processors. Because the compilers are seldom smart enough to figure out which parts of the program to run where, the user must include the multitasking routines in the program.¹
+
+# Fine-grain parallel
+
+As the granularity decreases and the number of nodes increases, there is an increased requirement for fast communication among the nodes. For this reason, fine-grain systems tend to be custom-designed machines. The communication may be via a central bus or via shared memory for a small number of nodes, or through some form of high-speed network for massively parallel machines. In the latter case, the user typically divides the work via certain coding constructs, and the compiler just compiles the program. The program then runs concurrently on a user-specified number of nodes. For example, different for loops of a program may be run on different nodes.
+
+# 10.9
+
+# Distributed Memory Programming
+
+An approach to concurrent processing that, because it is built from commodity PCs, has gained dominant acceptance for coarse- and medium-grain systems is distributed memory. In it, each processor has its own memory and the processors exchange data among themselves through a high-speed switch and network. The data exchanged or passed among processors have encoded to and from addresses and are called messages. The clusters of PCs or workstations that constitute a Beowulf² are examples of distributed memory computers (Figure 10.6). The unifying characteristic of a cluster is the integration of highly replicated compute and communication components into a single system, with each node still able to operate independently. In a Beowulf cluster, the components are commodity ones designed for a general market, as are the communication network and its high-speed switch (special interconnects are used by major commercial manufacturers, but they do not come cheaply). Note: A group of computers connected by a network may also be called a cluster, but unless they are designed for parallel processing, with the same type of processor used repeatedly and with only a limited number of processors (the front end) onto which users may log in, they are not usually called a Beowulf.
+
+1) Some experts define our medium grain as coarse grain yet this distinction changes with time.
+
+2) Presumably there is an analogy between the heroic exploits of the son of Ecgtheow and the nephew of Hygelac in the 1000 C.E. poem Beowulf and the adventures of us common folk assembling parallel computers from common elements that have surpassed the performance of major corporations and their proprietary, multimillion-dollar supercomputers.
