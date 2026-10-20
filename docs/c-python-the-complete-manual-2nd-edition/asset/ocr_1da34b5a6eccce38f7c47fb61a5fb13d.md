@@ -1,0 +1,29 @@
+# How to Set Up Python in Linux
+
+Python version 2.x is already installed in most Linux distributions but as we’re going to be using Python 3.x, there’s a little work we need to do first to get hold of it. Thankfully, it’s not too difficult.
+
+# PYTHON PENGUIN
+
+Linux is such a versatile operating system that it’s often difficult to nail down just one way of doing something. Different distributions go about installing software in different ways, so we will stick to Linux Mint 18.1 for this particular tutorial.
+
+STEP 1 First you need to ascertain which version of Python is currently installed in your Linux system; as we mentioned, we’re going to be using Linux Mint 18.1 for this section. As with macOS, drop into a Terminal by pressing Ctrl+Alt+T.
+
+![](bbox=[0.06, 0.49, 0.49, 0.67])
+
+STEP 3 Some Linux distros will automatically update the installation of Python to the latest versions whenever the system is updated. To check, first do a system update and upgrade with:
+
+```
+sudo apt-get update && sudo apt-get upgrade
+```
+
+Enter your password and let the system do any updates.
+
+![](bbox=[0.51, 0.53, 0.93, 0.67])
+
+STEP 2 Next enter: python --version into the Terminal screen. You should have the output relating to version 2.x of Python in the display. Ours in this particular case is Python 2.7.12.
+
+![](bbox=[0.06, 0.76, 0.49, 0.94])
+
+STEP 4 Once the update and upgrade is complete, you may need to answer ‘Y’ to authorise any upgrades, enter: python3 --version to see if Python 3.x is updated or even installed. In the case of Linux Mint, the version we have is Python 3.5.2, which is fine for our purposes.
+
+![](bbox=[0.51, 0.77, 0.93, 0.94])
