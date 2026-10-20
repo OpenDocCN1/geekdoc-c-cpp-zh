@@ -1,0 +1,262 @@
+
+to the caller of call(). Therefore, we can call both functions that return by value and functions that return by reference. For example:
+
+```
+```cpp
+#include "call.hpp"
+#include <iostream>
+#include <string>
+
+std::string nextString()
+{
+	return "Let's dance";
+}
+
+std::ostream& print(std::ostream& strm, const std::string& val)
+{
+	return strm << "value: " << val;
+}
+
+std::string&& returnArg(std::string&& arg)
+{
+	return std::move(arg);
+}
+
+int main()
+{
+	auto s = call(nextString()); // call() returns temporary object
+	auto& ref = call(returnArg, std::move(s)); // call() returns rvalue reference to s
+	std::cout << "s: " << s << '\n';
+	std::cout << "ref: " << ref << '\n';
+	auto str = std::move(ref);
+	std::cout << "s: " << s << '\n';
+	std::cout << "ref: " << ref << '\n';
+	std::cout << "str: " << str << '\n';
+	call(print, std::cout, str) << '\n'; // call() returns reference to std::cout
+}
+```
+```
+
+When calling auto s = call(nextString);
+
+the function call() calls the function nextString() without any arguments and returns its return value perfectly to initialize s.
+
+When calling
+
+```
+auto&& ref = call(returnArg, std::move(s));
+```
+
+the function call() calls the function returnArg() with s marked with std::move(). returnArg() returns back the passed argument as an rvalue reference, which then call() perfectly returns to the caller to initialize ref. str still has its value and ref refers to it:
+
+```
+s:  Let’s dance
+ref: Let’s dance
+```
+
+With
+
+```
+auto str = std::move(ref);
+```
+
+we move the value of both s and ref to str, which means we get the following situation:
+
+```
+s:
+ref:
+str: Let’s dance
+```
+
+When calling
+
+```
+call(print, std::cout, ref) << '\n';
+```
+
+the function call() calls the function print() with std::cout and ref as perfectly forwarded arguments. print() returns the passed stream back as an lvalue reference, which is then returned perfectly to the caller of call().
+
+## 12.2.2 Deferred Perfect Returning
+
+To perfectly return a value that was computed earlier, we have to declare a local object with decltype(auto) and return it with std::move() if and only if it is an rvalue reference. For example:
+
+```
+template<typename Func, typename... Args>
+decltype(auto) call(Func f, Args&&... args)
+{
+    decltype(auto) ret{f(std::forward<Args>(args)...)};
+    ...
+    if constexpr (std::is_rvalue_reference_v<decltype(ret)>) {
+        return std::move(ret);  // move xvalue returned by f() to the caller
+    }
+    else {
+        return ret;            // return the plain value or the lvalue reference
+    }
+}
+```
+
+1 Thanks to Matthias Kretz for providing this solution.
+
+In this function, the type of ret is just the perfectly deduced type of f(). By using if constexpr (a compile-time if available since C++17), we use the two ways of decltype(auto) and decltype to deduce a type as follows:
+
+- If ret is declared as an rvalue reference, decltype(auto) uses the expression std::move(ret), which is an xvalue, to deduce an rvalue reference. So we move the value returned by f() to the caller of this function.
+- If ret is declared as a plain value or lvalue reference, decltype(auto) uses the type of the name ret, which is then also a value type or an lvalue reference type.
+
+Other solutions do not always work:
+
+- The following would do the right thing even before C++20, but we have a performance issue:
+
+```
+decltype(auto) call(...)
+{
+    decltype(auto) ret{f(...) };
+    ...
+    return static_cast<decltype(ret)>(ret);  // perfect return but unnecessary copy
+}
+```
+
+The fact that we always use a static_cast<> might disable move semantics and copy elision. For plain values, it is like having an unnecessary std::move() in the return statement.
+
+- Simply returning ret would not always work:
+
+```
+decltype(auto) call(...)
+{
+    decltype(auto) ret{f(...) };
+    ...
+    return ret;                  // may be an ERROR
+}
+```
+
+The return type of call() would be correct. However, if f() returns an rvalue reference, we cannot return the lvalue ret because a non-const rvalue reference does not bind to an lvalue.
+
+- Using auto&& to declare ret would not work because you would then always return by reference:
+
+```
+decltype(auto) call(...)
+{
+    auto&& ret{f(...) };
+    ...
+    return ret;  // fatal runtime error: returns a reference to a local object
+}
+```
+
+Do never put additional parentheses around a returned name when using decltype(auto):
+
+```
+decltype(auto) call(...)
+{
+    decltype(auto) ret{f(...) };
+    ...
+    if constexpr (std::is_rvalue_reference_v<decltype(ret)>) {
+        return std::move(ret);  // move value returned by f() to the caller
+    }
+}
+```
+
+```
+else {
+    return (ret);  // FATAL RUNTIME ERROR: always returns an lvalue reference
+}
+```
+
+In this case, the return type decltype(auto) switches to the rules of expressions and always deduces an lvalue reference because ret is an lvalue (an object with a name),
+
+If you are used to putting parentheses around names and expressions in return statements, stop doing that. It was never necessary, but now it might even be an error when using decltype(auto).
+
+## 12.2.3 Perfect Forwarding and Returning with Lambdas
+
+If a lambda should return perfectly, you have to change its return type. A declaration such as:
+
+```
+[] (auto f, auto&&... args) {
+    ...
+}
+```
+
+stands for:
+
+```
+[] (auto f, auto&&... args) -> auto {
+    ...
+}
+```
+
+This means that by default, lambdas always return by value.
+
+By explicitly declaring the lambda with the return type decltype(auto), we enable perfect returning:
+
+```
+[] (auto f, auto&&... args) -> decltype(auto) {
+    ...
+    return f(std::forward<decltype(args)>(args)...);
+};
+```
+
+For deferred perfect returning, we need the same trick as introduced before: we have to use std::move() if we return an rvalue reference:
+
+```
+[] (auto f, auto&&... args) -> decltype(auto) {
+    decltype(auto) ret = f(std::forward<decltype(args)>(args)...);
+    ...
+    if constexpr (std::is_rvalue_reference_v<decltype(ret)>) {
+        return std::move(ret);  // move value returned by f() to the caller
+    }
+    else {
+        return ret;            // return the value or the lvalue reference
+    }
+};
+```
+
+Again, do not put additional parentheses around a returned name because then decltype(auto) always deduces an lvalue reference:
+
+```
+[](auto f, auto&&... args) -> decltype(auto) {
+    ...
+    decltype(auto) ret = f(std::forward<decltype(args)>(args)...);
+    ...
+    if constexpr (std::is_rvalue_reference_v<decltype(ret)>) {
+        return std::move(ret);  // move value returned by f() to the caller
+    }
+    else {
+        return (ret);  // FATAL RUNTIME ERROR: always returns an lvalue reference
+    }
+};
+```
+
+## 12.3 Summary
+
+- `decltype(auto)` is a placeholder type for deducing a value type from a value and a reference type from a reference.
+- Use `decltype(auto)` to perfectly return a value in a generic function.
+- In a return statement, never put parentheses around the return value/expression as a whole.
+
+## Part III
+
+## Move Semantics in the C++ Standard Library
+
+After introducing all features of move semantics, this part of the book describes several applications of these features in the C++ standard library.
+This gives you a good overview of the use of move semantics in practice.
+
+This page is intentionally left blank
+
+## Chapter 13
+
+## Move-Only Types
+
+One major application of move semantics is move-only types. These are types where objects represent a value or “own” a resource for which copying does not make any sense. However, it should still be possible to pass the value or the ownership around (e.g., passing it as an argument, returning it, or storing it in a container).
+
+Examples of move-only types in the C++ standard library are:
+
+- IOStreams
+- Threads
+- Unique pointers
+
+In all these examples, an object represents a resource (an opened stream, a running thread, or an allocated object). The object “owns” the resource in the sense that the destructor of the object will release the resource (close the stream, end or wait for the end of the thread, release the allocated object).
+
+You can pass the ownership around but copying of the resource is not supported. Copying might not make sense for semantic reasons (what is a copy of an opened file, what is a copy of a running thread?) or for technical reasons (if we have two owners of the same resource, we have to synchronize the access or deal with potential consequences).
+
+Thus, move-only types simplify the management of unique resources. The type system is used to disable copying but we can still pass these resources around. There is always only one location at a time where the resource is stored/managed. However, we can still refer to these resources with pointers or references.
+
+## 13.1 Declaring and Using Move-Only Types
+
+Move-only types and objects have some common aspects when declared or used.

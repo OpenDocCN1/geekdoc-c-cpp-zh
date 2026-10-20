@@ -1,0 +1,52 @@
+```
+MOVE TestCustomer 0
+MOVE TestCustomer 1
+MOVE TestCustomer 2
+MOVE TestCustomer 3
+COPY TestCustomer -5
+COPY TestCustomer -4
+COPY TestCustomer -3
+COPY TestCustomer -2
+COPY TestCustomer -1
+COPY TestCustomer 0
+COPY TestCustomer 1
+COPY TestCustomer 2
+MOVE TestCustomer 4
+MOVE TestCustomer 5
+MOVE TestCustomer 6
+```
+
+Each time we insert a new object, a temporary object is created and moved into the vector. Therefore, for each element, we have a MOVE.
+
+In addition, we have several copies marked with COPY. These copies are caused by the fact that from time to time, a vector reallocates its internal memory (capacity) so that it is big enough for all elements. In this case, the vector grows from having memory for 1 to having memory for 2, 4, 8, and finally 16 elements. Therefore, we have to copy first 1, then 2, then 4, and then 8 elements already in the vector. Calling coll.reserve(20) before the loop would avoid these copies. However, you might wonder why no move is used here. This has to do with the missing noexcept declarations, which we will discuss in the chapter about move semantics and noexcept.
+
+Note that the exact policy of a vector to grow its capacity is implementation-specific. Thus, the output might differ when implementations grow differently (such as growing by 50% each time).
+
+# Sorting
+
+Next, we sort all elements by name:
+
+```
+std::sort(coll.begin(), coll.end(),
+    [] (const Customer& c1, const Customer& c2) {
+        return c1.getName() < c2.getName();
+    });
+```
+
+This sorting might have the following output:
+
+```
+MOVE TestCustomer -4
+MOVEASSIGN TestCustomer -5
+MOVEASSIGN TestCustomer -4
+MOVE TestCustomer -3
+MOVEASSIGN TestCustomer -5
+MOVEASSIGN TestCustomer -4
+MOVEASSIGN TestCustomer -3
+MOVE TestCustomer -2
+MOVEASSIGN TestCustomer -5
+MOVEASSIGN TestCustomer -4
+MOVEASSIGN TestCustomer -3
+MOVEASSIGN TestCustomer -2
+MOVE TestCustomer -1
+```

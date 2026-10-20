@@ -1,0 +1,43 @@
+```
+```cpp
+int main()
+{
+    C x;
+    x.foo(); // calls foo() &
+    C{}.foo(); // calls foo() &&
+    std::move(x).foo(); // calls foo() &&
+    
+    const C cx;
+    cx.foo(); // calls foo() const&
+    std::move(cx).foo(); // calls foo() const&&
+}
+```
+```
+
+This program demonstrates all reference qualifiers that are possible and when they are called. Usually, we have only two or three of these overloads, such as using & and const& (and &) for getters.
+
+Also note that overloading for both reference and non-reference qualifiers is not allowed:
+
+```
+```cpp
+class C {
+public:
+    void foo() &&;
+    void foo() const; // ERROR: can't overload by both reference and value qualifiers
+};
+```
+```
+
+# ## 5.3 When to Use Reference Qualifiers
+
+Reference qualifiers allow us to implement functions differently when they are called for objects of a specific value category. The goal is to provide a different implementation when we call a member function for an object that no longer needs its value.
+
+Although we do have this feature, it is not used as much as it could be. In particular, we could (and should) use it to ensure that operations that modify objects are not called for temporary objects that are about to die.
+
+# ## 5.3.1 Reference Qualifiers for Assignment Operators
+
+One example of better use of reference qualifiers would mean modifying the implementation of assignment operators. As proposed in http://wg21.link/n2819, it could be better to declare the assignment operator with reference qualifiers wherever we can.
+
+> 2 Thanks to Peter Sommerlad for pointing this out.
+
+> 3 The paper was formulated after discussing even changing the behavior of the generated assignment operators to have reference qualifiers. See http://wg21.link/cwg733.

@@ -1,0 +1,33 @@
++   6.1.2 Guaranteed States of Moved-From Objects ................................ 91
++   6.1.3 Broken Invariants ................................................... 92
++   6.2 Destructible and Assignable ............................................ 93
++   6.2.1 Assignable and Destructible Moved-From Objects ....................... 93
++   6.2.2 Non-Destructible Moved-From Objects ................................. 94
++   6.3 Dealing with Broken Invariants ......................................... 97
++   6.3.1 Breaking Invariants Due to a Moved Value Member ...................... 97
++   6.3.2 Breaking Invariants Due to Moved Consistent Value Members ........... 100
++   6.3.3 Breaking Invariants Due to Moved Pointer-Like Members ............... 102
++   6.4 Summary ............................................................... 106
++   7 Move Semantics and noexcept ............................................. 107
++   7.1 Move Constructors with and without noexcept ............................ 107
++   7.1.1 Move Constructors without noexcept .................................. 107
++   7.1.2 Move Constructors with noexcept ..................................... 110
++   7.1.3 Is noexcept Worth It? ............................................... 115
++   7.2 Details of noexcept Declarations ....................................... 116
++   7.2.1 Rules for Declaring Functions with noexcept ......................... 116
++   7.2.2 noexcept for Special Member Functions ............................... 117
++   7.3 noexcept Declarations in Class Hierarchies ............................. 120
++   7.3.1 Checking for noexcept Move Constructors in Abstract Base Classes .... 120
++   7.4 When and Where to Use noexcept ........................................ 122
++   7.5 Summary ............................................................... 123
++   8 Value Categories ....................................................... 125
++   8.1 Value Categories ..................................................... 125
++   8.1.1 History of Value Categories ......................................... 125
++   8.1.2 Value Categories Since C++11 ....................................... 127
++   8.1.3 Value Categories Since C++17 ....................................... 128
++   8.2 Special Rules for Value Categories .................................... 130
++   8.2.1 Value Category of Functions ......................................... 130
++   8.2.2 Value Category of Data Members ...................................... 130
++   8.3 Impact of Value Categories When Binding References .................... 133
++   8.3.1 Overload Resolution with Rvalue References .......................... 133
++   8.3.2 Overloading by Reference and Value .................................. 134

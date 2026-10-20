@@ -1,0 +1,54 @@
+# 3.3 Rules for Special Member Functions
+
+Because the fallback mechanism works, copying and moving a Person compiles but the move is performed as a copy:
+
+```
+```
+std::vector<Person> coll;
+
+Person p{"Tina", "Fox"};
+coll.push_back(p); // OK, copies p
+coll.push_back(std::move(p)); // OK, copies p
+```
+```
+
+Thus, declaring a special member function with =default is not the same as not declaring it at all. The copy constructor and copy assignment are user-declared, which disables move construction and move assignment so that moves fall back to copies. A declared destructor has the same effect.
+
+You might wonder why a declared destructor disables move semantics. The chapter about moved-from states discusses a concrete example of a class with a destructor that causes generated move semantics not to work properly.
+
+# 3.3.4 Declared Moving Disables Copying
+
+If you have user-declared move semantics, you have disabled copy semantics. The copying special member functions are deleted.
+
+In other words, if the move constructor or the move assignment operator is explicitly declared (implemented, generated with =default, or disabled with =delete), you have disabled to call the copy constructor and the copy assignment operator by declaring them with =delete.
+
+```
+```
+class Person {
+ ...
+public:
+ ...
+// NO copy constructor declared
+
+// move constructor/assignment declared:
+Person(Person&&) = default;
+Person& operator=(Person&&) = default;
+};
+```
+```
+
+In this case, we have a move-only type. A Person can be moved but not copied:
+
+```
+```
+std::vector<Person> coll;
+
+Person p{"Tina", "Fox"};
+coll.push_back(p); // ERROR: copying disabled
+coll.push_back(std::move(p)); // OK, moves p
+
+coll.push_back(Person{"Ben", "Cook"}); // OK, moves temporary person into coll
+```
+```
+
+Again, declaring a special member function with =default is not the same as not declaring it at all. However, this time, the consequences for the caller are more severe: the attempt to copy an object will no longer compile.
