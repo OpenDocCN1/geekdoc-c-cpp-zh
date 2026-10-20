@@ -1,0 +1,11 @@
+![](bbox=[0.13, 0.15, 0.86, 0.38])
+
+Fig. 14.13 | Event registration for JTextField textField1.
+
+executes, a new entry containing a reference to the TextFieldHandler object is placed in textField1’s listenerList. Although not shown in the diagram, this new entry also includes the listener’s type (in this case, ActionListener). Using this mechanism, each lightweight Swing GUI component maintains its own list of listeners that were registered to handle the component’s events.
+
+# Event-Handler Invocation
+
+The event-listener type is important in answering the second question: How does the GUI component know to call actionPerformed rather than another method? Every GUI component supports several event types, including mouse events, key events and others. When an event occurs, the event is dispatched only to the event listeners of the appropriate type. Dispatching is simply the process by which the GUI component calls an event-handling method on each of its listeners that are registered for the event type that occurred.
+
+Each event type has one or more corresponding event-listener interfaces. For example, ActionEvents are handled by ActionListeners, MouseEvents by MouseListeners and MouseMotionListeners, and KeyEvents by KeyListeners. When an event occurs, the GUI component receives (from the JVM) a unique event ID specifying the event type. The GUI component uses the event ID to decide the listener type to which the event should be dispatched and to decide which method to call on each listener object. For an ActionEvent, the event is dispatched to every registered ActionListener’s actionPerformed method (the only method in interface ActionListener). For a MouseEvent, the event is dispatched to every registered MouseListener or MouseMotionListener, depending on the mouse event that occurs. The MouseEvent’s event ID determines which of the several mouse event-handling methods are called. All these decisions are handled for you by the GUI components. All you need to do is register an event handler for the particular event type that your application requires, and the GUI component will ensure that the event handler’s appropriate method gets called when the event occurs. We discuss

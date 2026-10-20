@@ -1,0 +1,201 @@
+
+
+feel class that corresponds to the `UIManager.LookAndFeelInfo` object. If the look-and-feel class is not already loaded, it will be loaded as part of the call to `setLookAndFeel`. Line 89 invokes static method `updateComponentTreeUI` of class `SwingUtilities` (package `javax.swing`) to change the look-and-feel of every GUI component attached to its argument (this instance of application class `LookAndFeelFrame`) to the new look-and-feel.
+
+## 25.7 `JDesktopPane` and `JInternalFrame`
+
+Many of today’s applications use a **multiple-document interface (MDI)**—a main window (called the **parent window**) containing other windows (called **child windows**), to manage several open documents that are being processed in parallel. For example, many e-mail programs allow you to have several windows open at the same time, so you can compose or read multiple e-mail messages simultaneously. Similarly, many word processors allow the user to open multiple documents in separate windows within a main window, making it possible to switch between them without having to close one to open another. The application in Figs. 25.11–25.12 demonstrates Swing’s **`JDesktopPane`** and **`JInternalFrame`** classes for implementing multiple-document interfaces.
+
+```
+// Fig. 25.11: DesktopFrame.java
+// Demonstrating JDesktopPane.
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.util.Random;
+import javax.swing.JFrame;
+import javax.swing.JDesktopPane;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+import javax.swing.JInternalFrame;
+import javax.swing.JPanel;
+import javax.swing.ImageIcon;
+
+public class DesktopFrame extends JFrame
+{
+    private JDesktopPane theDesktop;
+
+    // set up GUI
+    public DesktopFrame()
+    {
+        super( "Using a JDesktopPane" );
+
+        JMenuBar bar = new JMenuBar(); // create menu bar
+        JMenu addMenu = new JMenu( "Add" ); // create Add menu
+        JMenuItem newFrame = new JMenuItem( "Internal Frame" );
+
+        addMenu.add( newFrame ); // add new frame item to Add menu
+        bar.add( addMenu ); // add Add menu to menu bar
+```
+
+![](img/009e962758dcc71dbc43a493362e6dc0_1059_0.png)
+
+```
+33    setJMenuBar( bar ); // set menu bar for this application
+34
+35    theDesktop = new JDesktopPane(); // create desktop pane
+36    add( theDesktop ); // add desktop pane to frame
+37
+38    // set up listener for newFrame menu item
+39    newFrame.addActionListener(
+40
+41        new ActionListener() // anonymous inner class
+42    {
+43        // display new internal window
+44        public void actionPerformed( ActionEvent event )
+45        {
+46            // create internal frame
+47            JInternalFrame frame = new JInternalFrame(
+48                "Internal Frame", true, true, true, true );
+49
+50            MyJPanel panel = new MyJPanel(); // create new panel
+51            frame.add( panel, BorderLayout.CENTER ); // add panel
+52            frame.pack(); // set internal frame to size of contents
+53
+54            theDesktop.add( frame ); // attach internal frame
+55            frame.setVisible( true ); // show internal frame
+56        } // end method actionPerformed
+57    } // end anonymous inner class
+58    ); // end call to addActionListener
+59    } // end DesktopFrame constructor
+60    } // end class DesktopFrame
+61
+62    // class to display an ImageIcon on a panel
+63    class MyJPanel extends JPanel
+64    {
+65        private static Random generator = new Random();
+66        private ImageIcon picture; // image to be displayed
+67        private final static String[] images = { "yellowflowers.png",
+68            "purpleflowers.png", "redflowers.png", "redflowers2.png",
+69            "lavenderflowers.png" };
+70
+71        // load image
+72        public MyJPanel()
+73        {
+74            int randomNumber = generator.nextInt( images.length );
+75            picture = new ImageIcon( images[ randomNumber ] ); // set icon
+76        } // end MyJPanel constructor
+77
+78        // display imageIcon on panel
+79        public void paintComponent( Graphics g )
+80        {
+81            super.paintComponent( g );
+82            picture.paintIcon( this, g, 0, 0 ); // display icon
+83        } // end method paintComponent
+84
+```
+
+```
+85      // return image dimensions
+86      public Dimension getPreferredSize()
+87      {
+88          return new Dimension( picture.getIconWidth(),
+89              picture.getIconHeight() );
+90      } // end method getPreferredSize
+91  } // end class MyJPanel
+```
+
+### Fig. 25.11 | Multiple-document interface. (Part 3 of 3.)
+
+Lines 27–33 create a JMenuBar, a JMenu and a JMenuItem, add the JMenuItem to the JMenu, add the JMenu to the JMenuBar and set the JMenuBar for the application window. When the user selects the JMenuItem newFrame, the application creates and displays a new JInternalFrame object containing an image.
+
+Line 35 assigns JDesktopPane (package javax.swing) variable theDesktop a new JDesktopPane object that will be used to manage the JInternalFrame child windows. Line 36 adds the JDesktopPane to the JFrame. By default, the JDesktopPane is added to the center of the content pane’s BorderLayout, so the JDesktopPane expands to fill the entire application window.
+
+Lines 39–58 register an ActionListener to handle the event when the user selects the newFrame menu item. When the event occurs, method actionPerformed (lines 44–56) creates a JInternalFrame object in lines 47–48. The JInternalFrame constructor used here takes five arguments—a String for the title bar of the internal window, a boolean indicating whether the internal frame can be resized by the user, a boolean indicating whether the internal frame can be closed by the user, a boolean indicating whether the internal frame can be maximized by the user and a boolean indicating whether the internal frame can be minimized by the user. For each of the boolean arguments, a true value indicates that the operation should be allowed (as is the case here).
+
+As with JFrames and JApplets, a JInternalFrame has a content pane to which GUI components can be attached. Line 50 (Fig. 25.11) creates an instance of our class MyJPanel (declared at lines 63–91) that is added to the JInternalFrame at line 51.
+
+```
+// Fig. 25.12: DesktopTest.java
+// Demonstrating JDesktopPane.
+import javax.swing.JFrame;
+
+public class DesktopTest
+{
+    public static void main( String[] args )
+    {
+        DesktopFrame desktopFrame = new DesktopFrame();
+        desktopFrame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        desktopFrame.setSize( 600, 480 ); // set frame size
+        desktopFrame.setVisible( true ); // display frame
+    } // end main
+} // end class DesktopTest
+```
+
+### Fig. 25.12 | Test class for DeskTopFrame. (Part 1 of 2.)
+
+## 25.7 JDesktopPane and JInternalFrame
+
+![](img/009e962758dcc71dbc43a493362e6dc0_1062_0.png)
+
+**Fig. 25.12** | Test class for DeskTopFrame. (Part 2 of 2.)
+
+Line 52 uses InternalFrame method **pack** to set the size of the child window. Method pack uses the preferred sizes of the components to determine the window’s size. Class MyJPanel declares method getPreferredSize (lines 86–90) to specify the panel’s preferred size for use by the pack method. Line 54 adds the JInternalFrame to the JDesktopPane, and line 55 displays the JInternalFrame.
+
+Classes JInternalFrame and JDesktopPane provide many methods for managing child windows. See the JInternalFrame and JDesktopPane online API documentation for complete lists of these methods:
+
+```
+download.oracle.com/javase/6/docs/api/javax/swing/JInternalFrame.html
+download.oracle.com/javase/6/docs/api/javax/swing/JDesktopPane.html
+```
+
+## 25.8 JTabbedPane
+
+A JTabbedPane arranges GUI components into layers, of which only one is visible at a time. Users access each layer via a tab—similar to folders in a file cabinet. When the user clicks a tab, the appropriate layer is displayed. The tabs appear at the top by default but also can be positioned at the left, right or bottom of the JTabbedPane. Any component can be placed on a tab. If the component is a container, such as a panel, it can use any layout manager to lay out several components on the tab. Class JTabbedPane is a subclass of JComponent. The application in Figs. 25.13–25.14 creates one tabbed pane with three tabs. Each tab displays one of the JPanels—panel1, panel2 or panel3.
+
+```
+// Fig. 25.13: JTabbedPaneFrame.java
+// Demonstrating JTabbedPane.
+import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+
+public class JTabbedPaneFrame extends JFrame
+{
+    // set up GUI
+    public JTabbedPaneFrame()
+    {
+        super( "JTabbedPane Demo " );
+
+        JTabbedPane tabbedPane = new JTabbedPane(); // create JTabbedPane
+
+        // set up panel1 and add it to JTabbedPane
+        JLabel label1 = new JLabel( "panel one", SwingConstants.CENTER );
+        JPanel panel1 = new JPanel(); // create first panel
+        panel1.add( label1 ); // add label to panel
+        tabbedPane.addTab( "Tab One", null, panel1, "First Panel" );
+
+        // set up panel2 and add it to JTabbedPane
+        JLabel label2 = new JLabel( "panel two", SwingConstants.CENTER );
+        JPanel panel2 = new JPanel(); // create second panel
+        panel2.setBackground( Color.YELLOW ); // set background to yellow
+        panel2.add( label2 ); // add label to panel
+        tabbedPane.addTab( "Tab Two", null, panel2, "Second Panel" );
+
+        // set up panel3 and add it to JTabbedPane
+        JLabel label3 = new JLabel( "panel three" );
+        JPanel panel3 = new JPanel(); // create third panel
+        panel3.setLayout( new BorderLayout() ); // use borderlayout
+        panel3.add( new JButton( "North" ), BorderLayout.NORTH );
+        panel3.add( new JButton( "West" ), BorderLayout.WEST );
+        panel3.add( new JButton( "East" ), BorderLayout.EAST );
+```
+

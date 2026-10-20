@@ -1,0 +1,17 @@
+a method that returns an Iterator object, which allows a program to walk through the collection and remove elements from it during the iteration. We discuss class Iterator in Section 20.6.1. Other methods of interface Collection enable a program to determine a collection’s size and whether a collection is empty.
+
+> **Software Engineering Observation 20.1**
+> *Collection is used commonly as a parameter type in methods to allow polymorphic processing of all objects that implement interface Collection.*
+
+> **Software Engineering Observation 20.2**
+> *Most collection implementations provide a constructor that takes a Collection argument, thereby allowing a new collection to be constructed containing the elements of the specified collection.*
+
+Class Collections provides static methods that search, sort and perform other operations on collections. Section 20.7 discusses more about the methods that are available in class Collections. We also cover this class’s wrapper methods that enable you to treat a collection as a synchronized collection (Section 20.13) or an unmodifiable collection (Section 20.14). Unmodifiable collections are useful when clients of a class need to view a collection’s elements, but they should not be allowed to modify the collection by adding and removing elements. Synchronized collections are for use with multithreading (discussed in Chapter 26), which enables programs to perform operations in parallel. When two or more threads of a program share a collection, problems might occur. As an analogy, consider a traffic intersection. If all cars were allowed to access the intersection at the same time, collisions might occur. For this reason, traffic lights are provided to control access to the intersection. Similarly, we can synchronize access to a collection to ensure that only one thread manipulates the collection at a time. The synchronization wrapper methods of class Collections return synchronized versions of collections that can be shared among threads in a program.
+
+# 20.6 Lists
+
+A List (sometimes called a sequence) is an ordered Collection that can contain duplicate elements. Like array indices, List indices are zero based (i.e., the first element’s index is zero). In addition to the methods inherited from Collection, List provides methods for manipulating elements via their indices, manipulating a specified range of elements, searching for elements and obtaining a ListIterator to access the elements.
+
+Interface List is implemented by several classes, including ArrayList, LinkedList and Vector. Autoboxing occurs when you add primitive-type values to objects of these classes, because they store only references to objects. Class ArrayList and Vector are resizable-array implementations of List. Inserting an element between existing elements of an ArrayList or Vector is an inefficient operation—all elements after the new one must be moved out of the way, which could be an expensive operation in a collection with a large number of elements. A LinkedList enables efficient insertion (or removal) of elements in the middle of a collection. We discuss the architecture of linked lists in Chapter 22.
+
+ArrayList and Vector have nearly identical behaviors. Vectors are synchronized by default, whereas ArrayLists are not. Also, class Vector is from Java 1.0, before the collections framework was added to Java. As such, Vector has some methods that are not part of

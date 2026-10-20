@@ -1,0 +1,18 @@
+```
+// debit an amount from Account with specified account number
+public void debit( int userAccountNumber, double amount )
+{
+    getAccount( userAccountNumber ).debit( amount );
+} // end method debit
+} // end class BankDatabase
+```
+
+Fig. 13.19 | Class BankDatabase represents the bank's account information database. (Part 3 of 3.)
+
+We determine one reference-type attribute for class BankDatabase based on its composition relationship with class Account. Recall from Fig. 13.9 that a BankDatabase is composed of zero or more objects of class Account. Line 6 implements attribute accounts—an array of Account objects—to implement this composition relationship. Class BankDatabase has a no-argument constructor (lines 9–14) that initializes accounts to contain a set of new Account objects. For the sake of testing the system, we declare accounts to hold just two array elements (line 11), which we instantiate as new Account objects with test data (lines 12–13). The Account constructor has four parameters—the account number, the PIN assigned to the account, the initial available balance and the initial total balance. Recall that class BankDatabase serves as an intermediary between class ATM and the actual Account objects that contain a user's account information. Thus, the methods of class BankDatabase do nothing more than invoke the corresponding methods of the Account object belonging to the current ATM user.
+
+We include private utility method getAccount (lines 17–28) to allow the BankDatabase to obtain a reference to a particular Account within array accounts. To locate the user's Account, the BankDatabase compares the value returned by method getAccountNumber for each element of accounts to a specified account number until it finds a match. Lines 20–25 traverse the accounts array. If the account number of currentAccount equals the value of parameter accountNumber, the method immediately returns the currentAccount. If no account has the given account number, then line 27 returns null.
+
+Method authenticateUser (lines 32–42) proves or disproves the identity of an ATM user. This method takes a user-specified account number and PIN as arguments and indicates whether they match the account number and PIN of an Account in the database. Line 35 calls method getAccount, which returns either an Account with userAccountNumber as its account number or null to indicate that userAccountNumber is invalid. If getAccount returns an Account object, line 39 returns the boolean value returned by that object's validatePIN method. BankDatabase's authenticateUser method does not perform the PIN comparison itself—rather, it forwards userPIN to the Account object's validatePIN method to do so. The value returned by Account method validatePIN indicates whether the user-specified PIN matches the PIN of the user's Account, so method authenticateUser simply returns this value to the class's client (i.e., ATM).
+
+BankDatabase trusts the ATM to invoke method authenticateUser and receive a return value of true before allowing the user to perform transactions. BankDatabase also trusts that each Transaction object created by the ATM contains the valid account number of the current authenticated user and that this is the account number passed to the remaining BankDatabase methods as argument userAccountNumber. Methods getAvailableBalance (lines 45–48), getTotalBalance (lines 51–54), credit (lines 57–60) and
