@@ -1,0 +1,9 @@
+# How to implement an interface
+
+Figure 15-4 shows how to code a class that implements one or more interfaces. To do that, you code the class name, followed by a colon and a list of the interfaces on the class declaration. Note that if the class also inherits another class, you must list the class before the interfaces.
+
+The three class declarations in this figure illustrate how this works. The first class declaration is for a Product class that implements the ICloneable interface. The second class declaration is for a Product class that implements two interfaces: ICloneable and IDisplayable. And the third class declaration is for a Book class that inherits the Product class and implements the ICloneable and IDisplayable interfaces.
+
+When you enter the name of an interface on a class declaration, you can automatically generate stubs for each member of the interface. To do that, you can click in the line that contains the name of the interface so a light bulb appears in the margin. Then, you can click on the light bulb to display a Quick Actions menu that contains two commands. If you select the Implement Interface command, code that’s similar to the code in the second to last example in this figure is inserted into the class. At this point, you can begin entering the code that’s needed to implement each member of the interface.
+
+Code is also inserted into the class if you select the Implement Interface Explicitly command instead of the Implement Interface command. However, the code that’s inserted doesn’t use the public keyword, and it fully qualifies each member of the interface. In this figure, for example, it specifies ICloneable.Clone instead of just specifying the Clone() method. Although this can help to avoid naming conflicts in some situations, you typically won’t need to use this command.

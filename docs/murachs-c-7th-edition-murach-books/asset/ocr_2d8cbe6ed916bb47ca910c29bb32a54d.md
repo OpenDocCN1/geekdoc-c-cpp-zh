@@ -1,0 +1,33 @@
+# Code that displays the numbers array in a message box
+
+```
+string numbersString = "";
+for (int i = 0; i < numbers.GetLength(0); i++)
+{
+    for (int j = 0; j < numbers[i].Length; j++)
+        numbersString += numbers[i][j] + " ";
+    numbersString += "\n";
+}
+MessageBox.Show(numbersString, "Jagged Numbers Test");
+```
+
+![](bbox=[0.156, 0.228, 0.32, 0.355])
+
+# Code that displays the titles array in a message box
+
+```
+string titlesString = "";
+for (int i = 0; i < titles.GetLength(0); i++)
+{
+    for (int j = 0; j < titles[i].Length; j++)
+        titlesString += titles[i][j] + "|";
+    titlesString += "\n";
+}
+MessageBox.Show(titlesString, "Jagged Titles Test");
+```
+
+![](bbox=[0.156, 0.52, 0.416, 0.645])
+
+# Description
+
++   - Since the number of columns in each row of a jagged array varies, you can’t use the GetLength() method to get the length of a row. Instead, you have to use the Length property of the array for that row.

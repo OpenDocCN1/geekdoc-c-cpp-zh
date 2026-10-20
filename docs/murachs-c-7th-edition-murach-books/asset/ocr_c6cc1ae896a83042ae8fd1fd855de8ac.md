@@ -1,0 +1,15 @@
+# # How to work with combo boxes and list boxes
+
+Figure 10-2 shows the properties, methods, and events that you’re likely to use as you work with combo boxes and list boxes. To get the index of the item that the user selects, for example, you use the SelectedIndex property. To get the selected item itself, you use the SelectedItem property. And to get a string that represents the selected item, you use the Text property. You’ll see coding examples that use these properties in the next figure.
+
+One property that applies only to a combo box is the DropDownStyle property. The default is DropDown, which means that the user can either click on the drop-down arrow at the right side of the combo box to display the drop-down list or enter a value directly into the text portion of the combo box. Note that if the user enters a value, that value doesn’t have to appear in the list.
+
+If you want to restrict user entries to just the values in the list, you can set the DropDownStyle property to DropDownList. Then, the user can only select a value from the list or enter the first letter of a value in the list to select it.
+
+One property that applies only to a list box is the SelectionMode property. The default is One, which means that the user can only select one item from the list box. However, you can let the user select multiple items by setting this property to MultiSimple or MultiExtended. If you set it to MultiSimple, the user can only select multiple entries by clicking on them. If you set it to MultiExtended, the user can hold down the Ctrl and Shift keys to select nonadjacent and adjacent items. This works just as it does for any standard Windows application. By the way, you can also set this property to None, in which case the user can’t select an entry. You might use this setting if you just want to display items.
+
+If you allow the user to select multiple items from a list box, you can use the SelectedIndices property to return a collection of the selected indexes, and you can use the SelectedItems property to return a collection of selected items. Or, you can use the SelectedIndex and SelectedItem properties to return the first index or item in the collection of selected items.
+
+When you work with the items in a list box or combo box, you should realize that you’re actually working with the items in a collection. To refer to this collection, you use the Items property of the control. Then, you can use an index to refer to any item in the collection. Or, you can use properties and methods that .NET provides for working with collections. The most common properties and methods are summarized in this figure.
+
+The most common event for working with combo boxes and list boxes is the SelectedIndexChanged event. This event occurs when the value of the SelectedIndex property changes, which happens when the user selects a different item from the list. For a combo box, you can also use the TextChanged event to detect when the user enters a value into the text portion of the control. Keep in mind, though, that this event will occur each time a single character is added, changed, or deleted.

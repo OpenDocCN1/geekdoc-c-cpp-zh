@@ -1,0 +1,45 @@
+# Code that declares a namespace
+
+```
+namespace ProductMaintenance
+{
+    public partial class Form1 : Form
+    {
+        // Body of Form1 class
+    }
+}
+```
+
+# Code that declares nested namespaces
+
+```
+namespace Murach
+{
+    namespace Validation
+    {
+        // Body of Validation namespace
+    }
+}
+```
+
+# Another way to nest namespaces
+
+```
+namespace Murach.Validation
+{
+    // Body of Validation namespace
+}
+```
+
+# A using directive that specifies a namespace
+
+```
+using Murach.Validation;
+```
+
+# Description
+
++   - A *namespace* is a container that can be used to group related classes. In most cases, all of the classes that make up a C# project are part of the same namespace.
++   - The namespace statement that appears near the beginning of a source file identifies the namespace that classes defined in that file belong to. By default, when you add a class to a project, it’s added to a namespace with the same name as the project.
++   - Namespaces can be nested. One way to nest namespaces is to include a namespace statement within the body of another namespace. Another way is to code the fully-qualified name of the nested namespace in a namespace statement.
++   - To use a class in a namespace other than the current namespace, you must either provide a using directive that names the other namespace, or you must qualify the class with the name of the namespace.

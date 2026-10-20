@@ -1,0 +1,7 @@
+# How to format the columns
+
+The first table in figure 22-4 lists three of the properties of the DataGridViewColumn class that you can use to format the columns of a grid. This class represents a single column in a grid. The first property, HeaderText, lets you set the text you want displayed in a column’s header. The second property, Width, lets you set the width of a column in pixels. By default, each column is set to a width of 100 pixels.
+
+The third property, DefaultCellStyle, lets you set the default styles for all the cells in a column. The second table in this figure lists some of the properties of the DefaultCellStyle object that you can use to set styles. For example, you can use the Format property to format the data in a column, and you can use the Alignment property to align the data in a column.
+
+The code example in this figure shows how you can change some of these column styles. Here, the first statement starts by using the Columns property to get the collection of columns in the grid. Then, it uses an index of 0 to get the first column in the collection, and it sets the header text for that column to “Product Code”. The second statement sets the width of the second column to 295. The third statement applies currency formatting to the third column. And the fourth statement right-aligns the third column. To do that, the Alignment property is set to a member of the DataGridViewContentAlignment enumeration. After these and similar styles are applied, the grid looks as shown at the top of this figure.

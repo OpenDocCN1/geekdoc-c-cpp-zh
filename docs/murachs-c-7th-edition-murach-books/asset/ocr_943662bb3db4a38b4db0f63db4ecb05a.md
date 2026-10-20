@@ -1,0 +1,7 @@
+# How to set the functions provided by a DataGridView control
+
+Figure 22-2 shows how to set the main functions that will be provided by a DataGridView control. The easiest way to do that is to use the smart tag menu that’s displayed when you add this control to a form. By default, the adding, editing, and deleting functions of the control are enabled. However, you can disable an option by removing its checkmark from the appropriate box. You can also control whether the user can reorder the columns in the grid.
+
+You can also change the functionality of a grid by writing code that sets the properties listed in this figure. For example, if you don’t want users to be able to use the grid to add rows, you can set the AllowUserToAddRows property to false. Similarly, if you don’t want users to be able to use the grid to delete rows, you can set the AllowUserToDeleteRows property to false. However, to determine whether users can use the grid to edit data, you use the ReadOnly property. For example, if you don’t want users to be able to use the grid to edit its data, you set the ReadOnly property to true.
+
+Note that the smart tag menu contains other options for working with a DataGridView control. For example, it lets you choose the data source for the control, and it lets you edit and add columns. However, you can’t use these options when you use code to specify the data source for the grid like you do when you use Entity Framework and ADO.NET as shown in this book. Instead, you have to perform these functions in code.

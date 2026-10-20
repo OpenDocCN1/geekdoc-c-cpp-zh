@@ -1,0 +1,13 @@
+# How to work with the object that’s passed to an event handler
+
+If you add button columns to a DataGridView control, you’ll need to code an event handler that’s executed if a user clicks in one of those columns. In most cases, you’ll code an event handler for the CellClick event as shown in figure 22-7. This event occurs when the user clicks on any part of the cell that contains the button. You can also code an event handler for the CellContentClick event, which occurs when the user clicks directly on the button.
+
+When one of these events occurs, a DataGridViewCellEventArgs object is passed to the event handler. You can use the RowIndex and ColumnIndex properties of this object to get the indexes of the row and column that were clicked. The example in this figure shows how this works.
+
+This example shows an event handler for the CellClick event of a DataGridView control that contains two button columns. This event handler starts by storing the index values of the button columns in constants named ModifyIndex and DeleteIndex. If you have several methods or event handlers that need to work with the index values of the button columns, you can use class-level constants, or you can move the constants to a separate class. Using constants like this makes your code easier to understand. In addition, this technique makes it so you only have to change the index values in one place if you add or remove columns from the control.
+
+Next, this event handler checks the index of the column that was clicked to determine if it was one of the button columns. If so, this code uses the RowIndex property to get the row that was clicked. Then, it uses the Cells property of that row to get the first cell in the collection of cells in the row. This cell contains the product code. Finally, it gets the value of the cell, converts that value to a string, and trims any spaces from the beginning and end of the string.
+
+After the product code is retrieved, it’s used to get the Products entity for that product. To do that, this code calls the Find() method of the entity collection. Then, the product is assigned to a class variable named selectedProduct.
+
+Finally, this event handler checks if the column that contains the Modify button was clicked. If so, it calls the ModifyProduct() method. Otherwise, it checks if the column that contains the Delete button was clicked. If so, it calls the DeleteProduct() method.

@@ -1,0 +1,9 @@
+# How to get information about dates and times
+
+The DateTime structure provides a variety of properties and methods for getting information about dates and times. These properties and methods are listed in figure 9-3, and the statements presented here show how to work with most of them.
+
+The first statement uses the Now property to get the current date and time. Then, the second statement uses the Month property to get the month of that date, the third statement uses the Hour property to get the hour of that time, and the fourth statement uses the DayOfYear property to get an int value from 1 to 366 that represents the day of the year.
+
+The next two statements show how to use the two methods for getting information about a date. Since both of these methods are static, they’re accessed through the DateTime structure. The first method, DaysInMonth(), returns the number of days in a given month and year. In this example, since 2019 isn't a leap year, there are 28 days in February. However, if you specified 2020, which is a leap year, there would be 29 days in February. The second method, IsLeapYear(), returns a true or false value that indicates whether the specified year is a leap year.
+
+The last code example in this figure shows how to use the DayOfWeek property. Note that this property returns a member of the DayOfWeek enumeration. In this case, the first statement gets the day of the week for the current date. Then, an if statement checks if the current date is a Saturday or a Sunday. If it is, a string variable named message is set to “Weekend”. Otherwise, it’s set to “Weekday”.

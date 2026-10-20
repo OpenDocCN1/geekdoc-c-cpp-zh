@@ -1,0 +1,11 @@
+# How to validate multiple entries
+
+Figure 7-10 shows how to code a method named IsValidData() that validates multiple entries on a form. The method shown here validates the Monthly Investment and Interest Rate text boxes on the Future Value form using the IsDecimal() and IsWithinRange() methods you saw in figure 7-9. In addition, it uses the IsWithinRange() method and a method named IsInt32() to validate the Years text box. The IsInt32() method works similarly to the IsDecimal() method, but it checks for an integer value using the TryParse() method of the Int32 class. Because this method checks every entry on the form for validity, all the validation code is in one location, which makes the code easy to read and maintain.
+
+This code starts by declaring two variables named success and errorMessage. The success variable is a Boolean that will be used to determine if the validation is successful. The errorMessage variable is a string that will store any error messages to be displayed.
+
+Next, this method calls the IsDecimal() method and passes the Text and Tag properties of the Monthly Investment text box as arguments. For this to work, the Tag property must be set so it identifies the value that’s being validated. Then, the ToString() method is called to convert this property to a string, and this string is included in any error messages.
+
+If the Text property doesn’t contain a decimal value, the error message that’s returned by the IsDecimal() method is appended to the errorMessage variable. Then, the IsValidData() method calls the IsWithinRange() method to make sure that the value is greater than or equal to 1 and less than or equal to 1000. Remember that the IsWithinRange() method starts by checking if the value is a valid decimal, and it doesn’t check the range if it isn’t. Although that means that the value is checked twice to be sure it’s a decimal, this prevents an exception from being thrown when the range is checked.
+
+The IsValidData() method uses similar code to validate the Interest Rate and Years text boxes. Then, it checks the errorMessage variable to see if any of the validation methods returned an error. If they did, the success variable is set to false and a message box like the one at the top of this figure is displayed. This method ends by passing the success variable to the calling method.

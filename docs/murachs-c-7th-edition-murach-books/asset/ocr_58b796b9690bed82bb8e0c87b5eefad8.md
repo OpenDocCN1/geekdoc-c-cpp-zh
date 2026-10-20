@@ -1,0 +1,9 @@
+# How to use structured exception handling
+
+To prevent your applications from crashing due to runtime errors, you can write code that handles exceptions when they occur. This is known as *structured exception handling*, and it plays an important role in most applications.
+
+# How to catch an exception
+
+Figure 7-3 shows how to use *try-catch statements* to catch and handle exceptions. First, you code a *try block* around the statement or statements that may throw an exception. Then, immediately after the try block, you code a *catch block* that contains the statements that will be executed if an exception is thrown by a statement in the try block. This is known as an *exception handler*.
+
+The try-catch statement in this figure shows how you might catch any exceptions thrown by four of the statements in the Invoice Total application. For example, if the user enters a non-numeric value into the Subtotal text box, the ToDecimal() method of the Convert class will throw an exception. Then, the application will jump into the catch block, skipping all the remaining statements in the try block. In this case, the catch block simply displays a dialog box that notifies the user of the problem. Then, the user can click the OK button and enter a valid number.

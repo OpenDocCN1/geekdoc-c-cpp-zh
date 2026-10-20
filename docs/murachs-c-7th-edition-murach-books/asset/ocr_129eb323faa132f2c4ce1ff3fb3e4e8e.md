@@ -1,0 +1,43 @@
+# The property settings for the form
+
+| Default name | Property | Setting |
+|---|---|---|
+| Form1 | Text | Invoice Total |
+|  | AcceptButton | btnCalculate |
+|  | CancelButton | btnExit |
+|  | StartPosition | CenterScreen |
+
+# The property settings for the controls
+
+| Default name | Property | Setting |
+|---|---|---|
+| label1 | Text | &Subtotal: |
+|  | TextAlign | MiddleLeft |
+|  | TabIndex | 0 |
+| label2 | Text | Discount percent: |
+|  | TextAlign | MiddleLeft |
+| label3 | Text | Discount amount: |
+|  | TextAlign | MiddleLeft |
+| label4 | Text | Total: |
+|  | TextAlign | MiddleLeft |
+| textBox1 | Name | txtSubtotal |
+|  | TabIndex | 1 |
+| textBox2 | Name | txtDiscountPercent |
+|  | ReadOnly | True |
+|  | TabStop | False |
+| textBox3 | Name | txtDiscountAmount |
+|  | ReadOnly | True |
+|  | TabStop | False |
+| textBox4 | Name | txtTotal |
+|  | ReadOnly | True |
+|  | TabStop | False |
+| button1 | Name | btnCalculate |
+|  | Text | &Calculate |
+|  | TabIndex | 2 |
+| button2 | Name | btnExit |
+|  | Text | E&xit |
+|  | TabIndex | 3 |
+
+# Note
+
++   - To provide an access key for the Subtotal text box, you can set the TabIndex and Text properties for the Subtotal label as shown above.

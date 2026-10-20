@@ -1,0 +1,12 @@
+# How to use the properties and methods
+of an exception
+
+Since an exception is an object, it has properties and methods. If you want to use the properties or methods of an exception in the catch block that catches the exception, you must supply a name for the exception as shown in figure 7-4. To do that, you code a set of parentheses after the catch keyword. Within those parentheses, you code the name of the exception class, followed by a name for the exception.
+
+If you’re coding the try-catch statement within an event handler, you can’t use e as the name of the exception. That’s because, by default, the event handler already uses this name for its EventArgs parameter. As a result, you must specify another name such as x or ex. Or, you must change the name of the EventArgs parameter from e to another name.
+
+Once you specify a name for an exception, you can use the Message property to get a brief description of the error. You can also use the GetType() method to get the type of class that was used to create the exception object. Then, to get the name of that type, you can use the ToString() method as shown in the example in this figure. Finally, you can use the StackTrace property to get a string that represents the stack trace.
+
+A stack trace is a list of the methods that were called before the exception occurred. These methods are listed in the reverse order from the order in which they were called. As a result, the method that was called last is displayed first, and the method that was called first is displayed last. For example, the dialog box in this figure shows that line 24 of the btnCalculate_Click() method of the Invoice Total form called the ToDecimal() method of the Convert class. This method called the ParseDecimal() method of the Number class. And so on.
+
+When you use the properties and methods of an exception to get information about the exception, you can display that information in a dialog box. That way, if an exception is thrown, your users will be able to give you information about the exception so you can fix the problem. Or, if a serious exception occurs that prevents the application from continuing, you can write information about the exception to a log file so you can monitor and review these exceptions. You’ll learn how to write data to files in chapter 17.

@@ -1,0 +1,11 @@
+# How to write data to the Output window
+
+In some cases, it makes sense to write debugging information to the Output window. This can be useful for tracing the execution of an application or for documenting the changing value of a property or variable. The only problem is that your debugging information is mixed in with the other debugging information. However, the advantage of writing information to the Output window is that it remains available even when the application is no longer in break mode. As a result, you can display the Output window and review this information after the application has finished running.
+
+One way to write information to the Output window is to use tracepoints as described earlier in this chapter. Another way is to use the methods of the Debug class as summarized in figure 11-12. Most of the time, you’ll use the WriteLine() method because it automatically adds a line break to the end of the string. That way, the next time one of these methods is executed, the information is displayed on the next line. However, if you don’t want to end the string with a line break, you can use the Write() method.
+
+Note that the Debug class belongs to the System.Diagnostics namespace. As a result, you’ll want to include a using directive for this namespace when you use the Debug class as shown in the first example.
+
+The second example in this figure uses the WriteLine() method to write data to the Output window. Here, the first statement displays a string value that indicates that the CalculateFutureValue() method is starting. Then, the second and third statements display the values for the month and future value for each month in the calculation. Since the month is always one greater than the counter variable for the loop, you can get the month by adding one to the counter variable.
+
+Sometimes, you may only want to display data in the Output window when a certain condition is true. If, for example, you only want to display the future value every 12 months, you can use an if statement like the one in the third example. Here, the modulus operator (%) is used to check if the month is a multiple of 12. If so, the WriteLine() method displays the future value in the Output window.

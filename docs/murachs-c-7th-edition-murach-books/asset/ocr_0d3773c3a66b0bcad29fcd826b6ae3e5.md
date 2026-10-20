@@ -1,0 +1,5 @@
+# Some of the generic interfaces defined by .NET
+
+The generic collections of .NET work with the generic interfaces described in figure 15-9. If you compare these with the interfaces presented in figure 15-2, you'll see that most of these generic interfaces have corresponding regular interfaces. However, the generic interfaces use angle brackets to specify the data type for the interface, just as generic classes use angle brackets to specify the data type for the class. In addition, the generic interfaces are stored in the System.Collections.Generic namespace and were designed to work with the generic collections stored in that namespace.
+
+If you decide to define your own generic collection, such as the CustomList<> class shown in the previous figure, you may want to implement some of these interfaces. For example, if you want to be able to use a foreach loop to iterate through your generic collection, you'll need to implement the IEnumerable<> interface. You'll learn how to do that in figure 15-12. But first, you'll learn how to implement the IComparable<> interface in the next figure.

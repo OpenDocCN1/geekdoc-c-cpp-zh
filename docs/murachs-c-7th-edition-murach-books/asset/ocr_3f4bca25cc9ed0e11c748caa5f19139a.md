@@ -1,0 +1,3 @@
+# How to declare and initialize constants
+
+Unlike a variable, a constant stores a value that can’t be changed as the program executes. Many of the skills for declaring and initializing variables also apply to declaring and initializing constants. However, you always use a single statement to declare and initialize a constant, and that statement must begin with the const keyword. In addition, it’s a common coding convention to capitalize the first letter in each word of a constant, including the first word, as shown in figure 4-3. This is known as Pascal notation.
