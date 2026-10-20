@@ -1,0 +1,3451 @@
+- pgno: 0
+  md: '# FROM NOVICE
+
+    TO NINJA
+
+
+    # Mastering DSA in C++
+
+
+    Pabitra Banerjee
+
+
+    Navigate the path from novice coder to algorithmic ninja with C++ as your trusty
+    guide.
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_0_0.png)
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_0_1.png)
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_0_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Introduction
+
+
+    Welcome to the transformative journey through the realms of programming mastery.
+    In "From Novice to Ninja: Mastering DSA in C++", me, Pabitra Banerjee, a seasoned
+    full-stack AI engineer and the visionary CEO of MB WEBBER''S, will take you on
+    a captivating exploration of the intricate world of Data Structures and Algorithms
+    (DSA) using the powerful canvas of C++.
+
+
+    As technology evolves at an unprecedented pace, so does the demand for skilled
+    programmers who can navigate the complexities of data manipulation and algorithmic
+    problem-solving. Pabitra Banerjee, with years of hands-on experience and a passion
+    for both artificial intelligence and software development, is your trusted guide
+    in this expedition from novice to ninja.
+
+
+    # EmbarK on a Journey of Mastery
+
+
+    "From Novice to Ninja" is not just a book; it''s a roadmap for those looking to
+    transcend the boundaries of beginner-level programming and emerge as coding ninjas.
+    My approach is both insightful and practical, ensuring that each concept is not
+    only understood but also applied in real-world scenarios.
+
+
+    Whether you''re a newcomer to the programming universe or an experienced coder
+    seeking to enhance your skills, this book is crafted to meet you at your current
+    level and propel you towards coding excellence. So, buckle up as we embark on
+    a journey that promises not only to unravel the intricacies of C++ but also to
+    equip you with the arsenal of Data Structures and Algorithms needed to conquer
+    any coding challenge that comes your way.
+
+
+    Let the transformation from novice to ninja begin.
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_1_0.png)
+
+
+    Pabitra Banerjee
+
+    (Full-Stack AI Engineer)
+
+    MB WEBBER''S'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Chapter 1: Getting Started with C++
+
+
+    # History of C:
+
+
+    In the early 1970s, computer programming was dominated by languages like Fortran
+    and Assembly Language, each with its strengths and limitations. It was during
+    this era that Dennis Ritchie, an American computer scientist, began developing
+    a language that would bridge the gap between low-level machine languages and high-level
+    programming. The result of his efforts was C, a popular programming language.
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_2_0.png)
+
+
+    # Birth of C++:
+
+
+    The development of C++ started in 1979 when Bjarne Stroustrup, a Dutch computer
+    scientist was working at Bell Labs. He aimed to enhance the C language by adding
+    object-oriented programming features while maintaining its efficiency and low-level
+    capabilities. The first version of C++ was named "C with Classes," as it introduced
+    the concept of classes, which allowed for the creation of user-defined data types
+    and methods.
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_2_1.png)
+
+
+    # Object-Oriented Paradigm:
+
+
+    One of the groundbreaking aspects of C++ was its incorporation of object-oriented
+    programming (OOP) principles. This paradigm shift allowed developers to organize
+    their code in a more modular and reusable way, promoting concepts like encapsulation,
+    inheritance, and polymorphism. The ability to create classes and objects brought
+    a new level of abstraction and flexibility to software development.
+
+
+    # Standardization and Evolution:
+
+
+    C++ underwent significant improvements and refinements over the years. In 1983,
+    the language was renamed C++ to reflect its evolutionary nature. The first standardized
+    version, C++98, was released, establishing a common baseline for the language.
+    Subsequent updates, including C++11, C++14, and C++17, introduced new features,
+    enhanced performance, and improved the overall programming experience.
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_2_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "+   - **Integers (int)**: Perfect for handling whole numbers.\n+   - **Floating-Point\
+    \ (double, float)**: Used to represent numbers with decimal points.\n+   - **Characters\
+    \ (char)**: Stores individual characters like 'a', 'B', or '@'.\n+   - **Boolean\
+    \ (bool)**: Deals with true or false values.\n\nBeyond these fundamental types,\
+    \ C++ allows the creation of user-defined data types through structures and classes,\
+    \ empowering developers to encapsulate data and functionality into cohesive units.\n\
+    \n# Operators: The Tools of Transformation:\n\nOperators act as the manipulative\
+    \ tools that transform and combine variables and values. Understanding these operators\
+    \ is crucial for crafting expressive and functional code. Here's a glimpse of\
+    \ some essential operator types:\n\n+   - **Arithmetic Operators (+, -, /, %)**:\
+    \ Conduct basic mathematical operations.\n+   - **Relational Operators (==, !=,\
+    \ <, >, <=, >=)**: Compare values and yield a Boolean result.\n+   - **Logical\
+    \ Operators (&&, ||, !)**: Combine and manipulate Boolean values.\n+   - **Assignment\
+    \ Operator (=)**: Assigns a value to a variable.\n\n# Control Flow: Conditional\
+    \ Statements and Loops\n\nIn the dynamic landscape of C++ programming, mastering\
+    \ control flow is akin to wielding a powerful toolset that directs the execution\
+    \ of your code. Conditional statements and loops form the crux of control flow,\
+    \ allowing developers to make decisions and execute code iteratively.\n\n# Conditional\
+    \ Statements: Navigating Decision Paths:\n\nConditional statements are the programming\
+    \ constructs that enable the execution of specific code blocks based on certain\
+    \ conditions. In C++, these conditions are typically expressed through if, else\
+    \ if, and else statements.\n\n```\nint age = 25;\n\nif (age >= 18) {\n    cout\
+    \ << \"You are eligible to vote.\" << endl;\n} else {\n    cout << \"You are not\
+    \ eligible to vote yet.\" << endl;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "In this example, the if statement checks if the age variable is greater than\
+    \ or equal to 18. If true, the first block of code executes; otherwise, the else\
+    \ block runs. This decision-making capability is fundamental for creating adaptive\
+    \ and responsive programs.\n\n# Loops: Iterative Mastery:\n\nLoops provide a mechanism\
+    \ for executing a block of code repeatedly. C++ offers several types of loops,\
+    \ with the for, while, and do-while loops being the most common.\n\n```\nfor (int\
+    \ i = 1; i <= 5; ++i) {\n    cout << \"Iteration \" << i << \": Hello, C++!\"\
+    \ << endl;\n}\n```\n\nIn this for loop example, the code inside the loop's curly\
+    \ braces is executed five times, incrementing the loop variable i with each iteration.\
+    \ Loops are invaluable for tasks that require repetitive execution, such as processing\
+    \ arrays, iterating through data structures, or performing calculations until\
+    \ a certain condition is met.\n\n# Nesting and Combined Use:\n\nThe true power\
+    \ of control flow emerges when conditional statements and loops are combined and\
+    \ nested. By strategically placing loops inside conditional blocks or vice versa,\
+    \ you can create intricate and adaptive algorithms.\n\n```\nfor (int i = 1; i\
+    \ <= 3; ++i) {\n    cout << \"Group \" << i << \":\" << endl;\n    \n    for (int\
+    \ j = 1; j <= 2; ++j) {\n        cout << \"  Member \" << j << endl;\n    }\n\
+    }\n```\n\nIn this nested loop example, the outer loop iterates three times, and\
+    \ for each iteration, the inner loop executes twice. This kind of structure is\
+    \ powerful for handling multidimensional data and complex decision-making scenarios.\n\
+    \n# Functions and Modular Programming\n\nIn the vast landscape of C++ programming,\
+    \ mastering the art of functions and modular programming is akin to unlocking\
+    \ the door to structured, efficient, and scalable code. Functions, as the building\
+    \ blocks of modular programming, allow developers to break down their code into\
+    \ manageable and reusable units."
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "# Functions: The Essence of Modularity:\n\nA function in C++ is a self-contained\
+    \ block of code that performs a specific task. This task can range from a simple\
+    \ arithmetic calculation to a complex algorithm. Functions are defined using a\
+    \ declaration and a set of instructions enclosed within curly braces.\n\n```\n\
+    // Function declaration\nint add(int a, int b);\n\n// Function definition\nint\
+    \ add(int a, int b) {\n    return a + b;\n}\n\n// Function call\nint result =\
+    \ add(3, 4);\n```\n\nIn this example, add is a simple function that takes two\
+    \ parameters (a and b) and returns their sum. Functions not only promote code\
+    \ reuse but also enhance code readability and maintainability.\n\n# Modular Programming:\
+    \ Breaking the Code Barrier:\n\nModular programming involves breaking down a program\
+    \ into smaller, independent modules or functions. Each module encapsulates a specific\
+    \ functionality, promoting code organization and separation of concerns. This\
+    \ approach simplifies debugging, testing, and maintenance.\n\n```\n// Function\
+    \ declarations\nint calculateSquare(int x);\nvoid printResult(int value);\n\n\
+    // Main program\nint main() {\n    int number = 5;\n    int square = calculateSquare(number);\n\
+    \    printResult(square);\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "```\n// Function definitions\nint calculateSquare(int x) {\n    return x *\
+    \ x;\n}\nvoid printResult(int value) {\n    cout << \"The result is: \" << value\
+    \ << endl;\n}\n```\n\nIn this modular program, calculateSquare computes the square\
+    \ of a number, and printResult displays the result. The main function orchestrates\
+    \ these modules, providing a clear and concise structure to the overall program.\n\
+    \n# Function Parameters and Return Types:\n\nFunctions can have parameters (inputs)\
+    \ and a return type (output). Parameters allow functions to accept values necessary\
+    \ for their operation, and the return type specifies the type of value the function\
+    \ provides as output.\n\n```\n// Function with parameters and a return type\n\
+    double calculateAverage(int a, int b) {\n    return (a + b) / 2.0;\n}\n```\n\n\
+    In this example, calculateAverage takes two integers as parameters and returns\
+    \ their average as a double. This illustrates how functions can be tailored to\
+    \ specific needs within a program.\n\n# Arrays and Strings in C++\n\nIn the intricate\
+    \ tapestry of C++ programming, arrays and strings emerge as versatile data structures,\
+    \ enabling developers to efficiently manage and manipulate collections of elements.\
+    \ Understanding their nuances is pivotal for navigating the landscape of Data\
+    \ Structures and Algorithms.\n\n# Arrays: Ordered Collections of Elements:\n\n\
+    An array is a contiguous memory block that stores elements of the same data type.\
+    \ These elements can be accessed using an index, allowing for efficient storage\
+    \ and retrieval. The declaration and initialization of an array in C++ look like\
+    \ this:\n\n```\n// Declaration and initialization of an integer array\nint numbers[5]\
+    \ = {1, 2, 3, 4, 5};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "In this example, numbers are an array of integers with a capacity of five elements.\
+    \ Array indices start from 0, so numbers[0] refers to the first element, and numbers[4]\
+    \ refers to the last.\n\n# Strings: Dynamic Character Arrays:\n\nIn C++, strings\
+    \ are represented as arrays of characters but come with additional functionalities\
+    \ provided by the Standard Template Library (STL). The C++ string class allows\
+    \ for dynamic manipulation of strings, making them more versatile than traditional\
+    \ character arrays.\n\n```\n// Declaration and initialization of a C++ string\n\
+    #include <string>\nusing namespace std;\n\nstring greeting = \"Hello, C++!\";\n\
+    ```\n\nHere, greeting is a C++ string initialized with the phrase \"Hello, C++!\"\
+    . The string class provides numerous member functions for string manipulation,\
+    \ simplifying tasks like concatenation, substring extraction, and length determination.\n\
+    \n# Array and String Operations:\n\nManipulating arrays involves common operations\
+    \ like accessing elements, modifying values, and traversing the entire collection.\
+    \ Similarly, working with strings often includes tasks such as concatenation,\
+    \ finding substrings, and comparing strings.\n\n```\n// Array operations\nint\
+    \ sum = 0;\nfor (int i = 0; i < 5; ++i) {\n    sum += numbers[i];\n}\n\n// String\
+    \ operations\nstring firstName = \"John\";\nstring lastName = \"Doe\";\nstring\
+    \ fullName = firstName + \" \" + lastName;\n```\n\nIn this snippet, the array\
+    \ numbers are traversed to calculate the sum of its elements, showcasing a typical\
+    \ array operation. Additionally, string concatenation is demonstrated, highlighting\
+    \ the conciseness and readability offered by C++ strings.\n\n# Challenges and\
+    \ Considerations:\n\nArrays and strings, while powerful, come with challenges.\
+    \ Arrays have fixed sizes, and managing their length dynamically can be cumbersome.\
+    \ Strings, although dynamic, may incur performance overhead due to their implementation."
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Memory Deallocation: The delete Operator:
+
+
+    Deallocating memory is the responsibility of the programmer, and the delete operator
+    is used for this purpose. Failing to deallocate memory can lead to memory leaks,
+    potentially causing a program to consume excessive resources.
+
+
+    ```
+
+    delete dynamicNumber; // Deallocating memory to prevent a memory leak
+
+    ```
+
+
+    It is crucial to pair each new operation with a corresponding delete to maintain
+    a healthy memory management strategy.
+
+
+    # Pointers and Arrays: Dynamic Memory Allocation:
+
+
+    Pointers and arrays in C++ are intricately connected. Dynamic memory allocation
+    allows the creation of arrays whose sizes are determined at runtime.
+
+
+    ```
+
+    int *dynamicArray = new int[5]; // Allocating memory for an integer array of size
+    5
+
+    ```
+
+
+    Remember, each new[] operation should be matched with a corresponding delete[]
+    to release the allocated memory.
+
+
+    # Challenges and Best Practices:
+
+
+    While pointers and dynamic memory allocation provide unparalleled flexibility,
+    they come with challenges. Memory leaks, dangling pointers, and accessing invalid
+    memory regions are common pitfalls. Adopting best practices such as initializing
+    pointers to nullptr, deleting pointers after use, and using smart pointers can
+    mitigate these challenges.
+
+
+    ```
+
+    int *ptr = nullptr; // Initializing a pointer to nullptr
+
+    ```
+
+
+    # Chapter 2: Object-Oriented Programming in C++
+
+
+    # Classes and Objects: The Foundation of OOP
+
+
+    Object-Oriented Programming (OOP) is a paradigm that brings structure and organization
+    to code by modelling real-world entities as objects. In C++, the building blocks
+    of OOP are classes and objects. Let''s embark on a journey into the world of classes
+    and objects, the cornerstone of OOP in C++.
+
+
+    # Classes: Blueprints of Objects:
+
+
+    A class is a user-defined data type that encapsulates data and functions into
+    a single entity. It serves as a blueprint for creating objects, defining their
+    properties'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "(data members) and behaviours (member functions). The structure of a class\
+    \ is defined using the class keyword:\n\n```\n// Declaration of a simple class\n\
+    class Car {\npublic:\n    // Data members\n    string brand;\n    int year;\n\
+    \    // Member function\n    void displayInfo() {\n        cout << \"Brand: \"\
+    \ << brand << \", Year: \" << year << endl;\n    }\n};\n```\n\nIn this example,\
+    \ Car is a class with data members (brand and year) and a member function (displayInfo).\
+    \ The public: specifier denotes that the members following it are accessible from\
+    \ outside the class.\n\n# Objects: Instances of Classes:\n\nAn object is an instance\
+    \ of a class, representing a specific entity with its unique data and behaviours.\
+    \ Objects are created using the class blueprint, and each object has its own set\
+    \ of data members.\n\n```\n// Creating objects of the Car class\nCar myCar;  \
+    \        // An object named myCar\nmyCar.brand = \"Toyota\";\nmyCar.year = 2022;\n\
+    myCar.displayInfo();    // Invoking the member function\n\nCar anotherCar;   \
+    \  // Another object named anotherCar\nanotherCar.brand = \"Honda\";\nanotherCar.year\
+    \ = 2021;\nanotherCar.displayInfo();\n```\n\nHere, myCar and anotherCar are objects\
+    \ of the Car class, each with its own brand, year, and the ability to invoke the\
+    \ displayInfo member function.\n\n# Encapsulation: Data Hiding and Access Control:\n\
+    \nEncapsulation is a key principle of OOP that involves bundling data and functions\
+    \ within a class and controlling access to them. In C++, access specifiers (public,\
+    \ private, protected) determine the visibility of class members:"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "```\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass BankAccount\
+    \ {\nprivate:\n    // Private data member\n    double balance;\n\npublic:\n  \
+    \  // Public member functions\n    void deposit(double amount) {\n        // Deposit\
+    \ logic\n    }\n\n    void withdraw(double amount) {\n        // Withdrawal logic\n\
+    \    }\n};\n```\n```\n\nIn this example, `balance` is a private data member, accessible\
+    \ only within the `BankAccount` class. The deposit and withdraw functions provide\
+    \ controlled access to manipulate the balance.\n\n# Inheritance and Polymorphism:\
+    \ Extending and Shaping Classes\n\nInheritance and polymorphism are powerful pillars\
+    \ of Object-Oriented Programming (OOP) in C++. They facilitate the creation of\
+    \ complex and flexible class hierarchies, enabling code reuse, extensibility,\
+    \ and the implementation of polymorphic behaviour.\n\n# \U0001F539 Inheritance:\
+    \ Building on Foundations:\n\nInheritance is the mechanism by which a new class,\
+    \ called the derived class or subclass, can inherit the properties and behaviours\
+    \ of an existing class, known as the base class or superclass. The derived class\
+    \ can then extend or override these features.\n\n```\n```cpp\n// Base class\n\
+    class Animal {\npublic:\n    void eat() {\n        cout << \"Animal is eating.\"\
+    \ << endl;\n    }\n};\n\n// Derived class inheriting from Animal\nclass Dog :\
+    \ public Animal {\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '```
+
+    ```cpp
+
+    public:
+
+    void bark() {
+
+    cout << "Dog is barking." << endl;
+
+    }
+
+    };
+
+    ```
+
+    ```
+
+
+    In this example, Dog is a derived class that inherits the eat function from the
+    Animal base class. This relationship allows Dog to both use the existing functionality
+    of Animal and introduce its own unique behaviours.
+
+
+
+
+    Polymorphism allows objects of different types to be treated as objects of a common
+    type. This is achieved through two mechanisms: function overloading and virtual
+    functions.
+
+
+    # **Function Overloading:**
+
+
+    ```
+
+    ```cpp
+
+    class Calculator {
+
+    public:
+
+    int add(int a, int b) {
+
+    return a + b;
+
+    }
+
+    double add(double a, double b) {
+
+    return a + b;
+
+    }
+
+    };
+
+    ```
+
+    ```
+
+
+    Here, the add function is overloaded to handle both integer and floating-point
+    additions. The appropriate version is selected based on the types of arguments
+    provided.
+
+
+    # **Virtual Functions:**
+
+
+    ```
+
+    ```cpp
+
+    // Base class with a virtual function
+
+    class Shape {
+
+    public:
+
+    virtual void draw() {
+
+    cout << "Drawing a shape." << endl;
+
+    }
+
+    };
+
+
+    // Derived class overriding the virtual function
+
+    class Circle : public Shape {
+
+    };
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "```\npublic:\n    void draw() override {\n        cout << \"Drawing a circle.\"\
+    \ << endl;\n    }\n};\n```\n\nIn this case, the Shape class has a virtual function\
+    \ draw, which is overridden by the Circle class. This allows dynamic binding,\
+    \ enabling the correct function to be called based on the actual type of the object.\n\
+    \n# Benefits and Considerations\n\nInheritance and polymorphism promote code reuse,\
+    \ extensibility, and a more natural representation of real-world relationships.\
+    \ However, improper use of inheritance, also known as the \"diamond problem\"\
+    \ in multiple inheritance scenarios, can lead to ambiguity and maintenance challenges.\n\
+    \n# Encapsulation and Abstraction: Securing and Simplifying Complexity\n\nEncapsulation\
+    \ and abstraction are fundamental concepts in Object-Oriented Programming (OOP)\
+    \ that contribute to the creation of robust, modular, and easy-to-understand code.\
+    \ They play a crucial role in managing the complexity of software systems.\n\n\
+    # Encapsulation: Data Hiding and Access Control:\n\nEncapsulation involves bundling\
+    \ the data (attributes) and methods (functions) that operate on the data into\
+    \ a single unit known as a class. It facilitates the concept of data hiding, where\
+    \ the implementation details of a class are hidden from the outside world, and\
+    \ access to the internal state is controlled through public interfaces.\n\n```\n\
+    class BankAccount {\nprivate:\n    double balance;\n\npublic:\n    // Public member\
+    \ functions for controlled access\n    void deposit(double amount) {\n       \
+    \ // Implementation details\n        balance += amount;\n    }\n\n    void withdraw(double\
+    \ amount) {\n        // Implementation details\n        if (amount <= balance)\
+    \ {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "```\nbalance -= amount;\n} else {\n    cout << \"Insufficient funds.\" << endl;\n\
+    }\n}\n\ndouble getBalance() const {\n    // Accessor function for read-only access\n\
+    \    return balance;\n}\n};\n```\n\nIn this example, the balance data member is\
+    \ private, and access to it is provided through controlled member functions like\
+    \ deposit, withdraw, and getBalance. This encapsulation protects the internal\
+    \ state and ensures that modifications to it are performed with proper validation.\n\
+    \n# Abstraction: Managing Complexity::\n\nAbstraction involves simplifying complex\
+    \ systems by modelling classes based on real-world entities and focusing on essential\
+    \ properties and behaviours. It allows programmers to work with high-level concepts\
+    \ without delving into the intricate details of the implementation.\n\n```\nclass\
+    \ Shape {\npublic:\n    // Pure virtual function for abstraction\n    virtual\
+    \ void draw() const = 0;\n};\n```\n\nIn this example, the Shape class is an abstraction\
+    \ representing a generic shape. By declaring a pure virtual function draw, the\
+    \ class becomes abstract, and its derived classes (e.g., Circle, Rectangle) must\
+    \ provide concrete implementations. This enables high-level modelling without\
+    \ specifying the details of each shape until needed.\n\n# Benefits and Considerations:\n\
+    \nEncapsulation and abstraction provide several benefits :-\n\n+   1. **Modularity**:\
+    \ Encapsulation allows the creation of self-contained and modular units, making\
+    \ it easier to manage and maintain code.\n+   2. **Security**: Encapsulation protects\
+    \ the internal state of an object, preventing unintended access and modifications.\n\
+    +   3. **Flexibility**: Abstraction allows programmers to work with high-level\
+    \ concepts, promoting code adaptability to changing requirements.\n\nHowever,\
+    \ it's essential to strike a balance, as overuse of abstraction can lead to overly\
+    \ complex class hierarchies, making the code difficult to understand."
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "A destructor is a special member function with the same name as the class,\
+    \ preceded by a tilde (~). It is called automatically when an object goes out\
+    \ of scope or is explicitly deleted. Destructors are crucial for releasing resources,\
+    \ such as freeing memory or closing files, associated with an object.\n\n```\n\
+    class BankAccount {\npublic:\n    // Constructor\n    BankAccount() {\n      \
+    \  balance = 0.0;\n        cout << \"BankAccount object created.\" << endl;\n\
+    \    }\n\n    // Destructor\n    ~BankAccount() {\n        cout << \"BankAccount\
+    \ object destroyed.\" << endl;\n    }\n\n    // Member function to display balance\n\
+    \    void displayBalance() {\n        cout << \"Balance: \" << balance << endl;\n\
+    \    }\n\nprivate:\n    double balance;\n};\n```\n\nIn this example, the BankAccount\
+    \ class has a constructor that initializes the balance and a destructor that prints\
+    \ a message when the object is destroyed.\n\n# Implicit and Explicit Constructor\
+    \ Calls:\n\nConstructors can be implicitly called when objects are created, and\
+    \ they can also be explicitly invoked. Explicit calls are useful in scenarios\
+    \ where dynamic memory allocation or additional setup is required.\n\n```\nCar\
+    \ myCar;    // Implicit call to the default constructor\nCar anotherCar(\"Toyota\"\
+    , 2022);  // Explicit call to the parameterized constructor\n\nBankAccount* accountPtr\
+    \ = new BankAccount();  // Explicit dynamic object creation\ndelete accountPtr;\
+    \  // Explicit call to the destructor\n```\n\n# Copy Constructors:"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: "A copy constructor is a special constructor that creates an object by copying\
+    \ the contents of another object. It is called when objects are passed by value,\
+    \ returned by value, or explicitly copied.\n\n```\nclass Student {\npublic:\n\
+    // Copy constructor\nStudent(const Student& other) {\n\tthis->name = other.name;\n\
+    \tthis->age = other.age;\n\tcout << \"Copy constructor called.\" << endl;\n}\n\
+    // Constructor\nStudent(string name, int age) : name(name), age(age) {\n\tcout\
+    \ << \"Student object created.\" << endl;\n}\n// Destructor\n~Student() {\n\t\
+    cout << \"Student object destroyed.\" << endl;\n}\nprivate:\nstring name;\nint\
+    \ age;\n};\n```\n\nIn this example, the Student class has a copy constructor that\
+    \ creates a new object by copying the data from another Student object.\n\n# Operator\
+    \ Overloading: Extending the Language's Vocabulary\n\nOperator overloading in\
+    \ C++ allows user-defined classes to define their behaviour for standard operators.\
+    \ This feature enhances the expressiveness of classes by enabling them to work\
+    \ seamlessly with operators, making code more intuitive and readable.\n\n# Overloading\
+    \ Unary Operators:\n\nUnary operators operate on a single operand. To overload\
+    \ a unary operator, define a member function for the class with the operator keyword\
+    \ followed by the operator to be overloaded."
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "```\nclass ComplexNumber {\npublic:\n    double real;\n    double imag;\n\n\
+    \    // Overloading the unary minus (-) operator\n    ComplexNumber operator-()\
+    \ const {\n        ComplexNumber result;\n        result.real = -real;\n     \
+    \   result.imag = -imag;\n        return result;\n    }\n};\n```\n\nIn this example,\
+    \ the unary minus operator (-) is overloaded to negate the real and imaginary\
+    \ parts of a complex number.\n\n# Overloading Binary Operators:\n\nBinary operators\
+    \ work on two operands. To overload a binary operator, define a member function\
+    \ for the class with the operator keyword and two parameters.\n\n```\nclass Point\
+    \ {\npublic:\n    double x;\n    double y;\n\n    // Overloading the binary plus\
+    \ (+) operator\n    Point operator+(const Point& other) const {\n        Point\
+    \ result;\n        result.x = x + other.x;\n        result.y = y + other.y;\n\
+    \        return result;\n    }\n};\n```\n\nIn this example, the binary plus operator\
+    \ (+) is overloaded to add two points.\n\n# Overloading Comparison Operators:\n\
+    \nComparison operators (==, !=, <, >, <=, >=) can be overloaded to define custom\
+    \ comparison logic for user-defined types.\n\n```\nclass Date {\npublic:\n   \
+    \ int day;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "```\nint month;\nint year;\n\n// Overloading the equality (==) operator\nbool\
+    \ operator==(const Date& other) const {\n\treturn (day == other.day && month ==\
+    \ other.month && year == other.year);\n}\n};\n```\n\nHere, the equality operator\
+    \ (==) is overloaded to compare two Date objects.\n\n# Overloading Stream Insertion\
+    \ and Extraction Operators:\n\nThe stream insertion (<<) and extraction (>>) operators\
+    \ can be overloaded to define custom input and output behaviour for user-defined\
+    \ types.\n\n```\nclass Book {\npublic:\n\tstring title;\n\tstring author;\n\n\
+    // Overloading the stream insertion (<<) operator\nfriend ostream& operator<<(ostream&\
+    \ os, const Book& book) {\n\tos << \"Title: \" << book.title << \", Author: \"\
+    \ << book.author;\n\treturn os;\n}\n\n// Overloading the stream extraction (>>)\
+    \ operator\nfriend istream& operator>>(istream& is, Book& book) {\n\tcout << \"\
+    Enter title: \";\n\tgetline(is, book.title);\n\tcout << \"Enter author: \";\n\t\
+    getline(is, book.author);\n\treturn is;\n}\n};\n```\n\nIn this example, the stream\
+    \ insertion and extraction operators are overloaded for the Book class, allowing\
+    \ for custom input and output.\n\n# Guidelines and Best Practices:\n\nWhen overloading\
+    \ operators, it's important to follow certain guidelines :-\n\n+   1. Maintain\
+    \ Semantics: Ensure that the overloaded operators maintain their expected meaning\
+    \ and behaviour."
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "```\nclass Pair {\npublic:\n    T first;\n    T second;\n\n    Pair(T f, T\
+    \ s) : first(f), second(s) {}\n};\n\nint main() {\n    Pair<int> intPair(3, 7);\n\
+    \    Pair<double> doublePair(1.5, 2.5);\n}\n```\n\nHere, Pair is a class template\
+    \ that can be instantiated with different data types, such as int and double.\n\
+    \n# Template Specialization:\n\nTemplate specialization allows developers to provide\
+    \ custom implementations for specific data types while maintaining a generic version\
+    \ for others.\n\n```\n// Generic template\ntemplate <typename T>\nclass Container\
+    \ {\npublic:\n    T value;\n\n    Container(T val) : value(val) {}\n};\n\n// Specialization\
+    \ for strings\ntemplate <>\nclass Container<string> {\npublic:\n    string value;\n\
+    \n    Container(string val) : value(\"Special: \" + val) {}\n};\n```\n\nIn this\
+    \ example, the Container class template has a specialized version for strings,\
+    \ demonstrating how to tailor behaviour for specific data types."
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# Concepts (C++20 and later):\n\nC++20 introduced concepts, a powerful feature\
+    \ that allows developers to specify constraints on template parameters, enhancing\
+    \ code readability and providing better error messages.\n\n```\n// Example of\
+    \ a function template with a concept\ntemplate <typename T>\nrequires std::integral<T>\n\
+    T square(T x) {\n    return x * x;\n}\n```\n\nIn this snippet, the requires clause\
+    \ specifies that the template parameter T must be of integral type.\n\nTemplates\
+    \ and generic programming are fundamental to modern C++, offering a way to write\
+    \ flexible and efficient code that adapts to various data types. As we delve deeper\
+    \ into this chapter, we will explore other advanced features, including exception\
+    \ handling, the Standard Template Library (STL), smart pointers, and lambda expressions.\n\
+    \n# Exception Handling: Graceful Management of Errors\n\nException handling in\
+    \ C++ provides a structured and robust mechanism for managing errors and unexpected\
+    \ situations. By allowing developers to separate error-handling code from the\
+    \ normal flow of execution, exception handling promotes clearer, more maintainable\
+    \ code.\n\n# The try-catch Block:\n\nThe primary constructs for exception handling\
+    \ in C++ are the try and catch blocks. Code that might generate exceptions is\
+    \ enclosed in a try block, and potential exceptions are caught and handled in\
+    \ one or more associated catch blocks.\n\n```\n#include <iostream>\n\nint main()\
+    \ {\n    try {\n        // Code that might throw an exception\n        int numerator,\
+    \ denominator;\n        std::cout << \"Enter numerator: \";\n        std::cin\
+    \ >> numerator;\n        std::cout << \"Enter denominator: \";\n        std::cin\
+    \ >> denominator;\n\n        if (denominator == 0) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\nthrow std::runtime_error(\"Division by zero is not allowed.\");\n    }\n\
+    \n    double result = static_cast<double>(numerator) /\ndenominator;\n    std::cout\
+    \ << \"Result: \" << result << std::endl;\n} catch (const std::exception& e) {\n\
+    \    // Catch and handle exceptions\n    std::cerr << \"Exception caught: \" <<\
+    \ e.what() <<\nstd::endl;\n    }\n\n    return 0;\n}\n```\n\nIn this example,\
+    \ the try block contains code that may throw an exception, and the catch block\
+    \ handles any exceptions thrown during the execution of the try block.\n\n# Throwing\
+    \ Exceptions:\n\nExceptions are thrown using the throw statement. This can be\
+    \ done explicitly to signal errors or implicitly by the language or library functions\
+    \ when an unexpected condition occurs.\n\n```\n#include <stdexcept>\n\nvoid processValue(int\
+    \ value) {\n    if (value < 0) {\n        throw std::invalid_argument(\"Negative\
+    \ values are not allowed.\");\n    }\n\n    // Process the value\n}\n```\n\nHere,\
+    \ the processValue function throws an std::invalid_argument exception if the input\
+    \ value is negative.\n\n# Exception Classes:\n\nC++ provides a hierarchy of exception\
+    \ classes in the <stdexcept> header, including std::exception as the base class.\
+    \ Developers can derive their exception classes to create custom exceptions tailored\
+    \ to specific application needs."
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\n#include <stdexcept>\n\nclass CustomException : public std::exception\
+    \ {\npublic:\n    const char* what() const noexcept override {\n        return\
+    \ \"Custom exception occurred.\";\n    }\n};\n\nvoid someFunction() {\n    throw\
+    \ CustomException();\n}\n```\n\nIn this example, CustomException is a custom exception\
+    \ class derived from std::exception.\n\n# Exception Specifications (Deprecated):\n\
+    \nHistorically, C++ allowed developers to specify the types of exceptions that\
+    \ a function could throw using exception specifications. However, this feature\
+    \ has been deprecated in recent C++ standards, and the recommended practice is\
+    \ to use noexcept instead.\n\n```\n// Deprecated exception specification\nvoid\
+    \ someFunction() throw(std::runtime_error) {\n    // Function code\n}\n```\n\n\
+    # RAII and Resource Management:\n\nException handling in C++ aligns well with\
+    \ the Resource Acquisition Is Initialization (RAII) principle. By using smart\
+    \ pointers, automatic storage duration, and proper resource management, C++ programs\
+    \ can gracefully handle exceptions without leaking resources.\n\n```\n#include\
+    \ <iostream>\n#include <memory>\n\nclass Resource {\npublic:\n    Resource() {\n\
+    \        std::cout << \"Resource acquired.\" << std::endl;\n    }\n\n    ~Resource()\
+    \ {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\nstd::cout << \"Resource released.\" << std::endl;\n}\n};\n\nint main()\
+    \ {\n    try {\n        // Acquire a resource using smart pointers\n        std::unique_ptr<Resource>\
+    \ resource =\nstd::make_unique<Resource>();\n\n        // Code that may throw\
+    \ exceptions\n\n    } catch (const std::exception& e) {\n        std::cerr <<\
+    \ \"Exception caught: \" << e.what() <<\nstd::endl;\n    }\n\n    // Resource\
+    \ is automatically released when it goes out of\nscope\n\n    return 0;\n}\n```\n\
+    \nHere, the Resource class acquires and releases a resource in its constructor\
+    \ and destructor, respectively. The use of smart pointers ensures proper resource\
+    \ cleanup even in the presence of exceptions.\n\nException handling in C++ provides\
+    \ a powerful mechanism for dealing with errors in a structured and maintainable\
+    \ manner.\n\n# Standard Template Library (STL): Harnessing the Power of Containers\
+    \ and Algorithms\n\nThe Standard Template Library (STL) is a powerful collection\
+    \ of C++ template classes and functions that provides generic, efficient, and\
+    \ versatile components. It consists of several components, including containers,\
+    \ algorithms, iterators, and function objects, making it a cornerstone of modern\
+    \ C++ development.\n\n# Containers:\n\nContainers are fundamental data structures\
+    \ provided by the STL, offering dynamic memory management and various methods\
+    \ to manipulate stored elements. Some commonly used containers include :-"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Vector:-
+
+
+    ```
+
+    #include <vector>
+
+
+    std::vector<int> numbers = {1, 2, 3, 4, 5};
+
+    numbers.push_back(6);
+
+    ```
+
+
+    # List:-
+
+
+    ```
+
+    #include <list>
+
+
+    std::list<double> values = {1.1, 2.2, 3.3, 4.4};
+
+    values.push_back(5.5);
+
+    ```
+
+
+    # Deque:-
+
+
+    ```
+
+    #include <deque>
+
+
+    std::deque<char> characters = {''a'', ''b'', ''c''};
+
+    characters.push_front(''z'');
+
+    ```
+
+
+    # Map:-
+
+
+    ```
+
+    #include <map>
+
+
+    std::map<std::string, int> ages = {{"Alice", 25}, {"Bob", 30}};
+
+    ages["Charlie"] = 28;
+
+    ```
+
+
+    # Algorithms:
+
+
+    STL algorithms operate on containers, providing a rich set of functions for common
+    operations like sorting, searching, and modifying elements. Algorithms are designed
+    to work with iterators, providing a consistent interface for various container
+    types.
+
+
+    # Sorting:-
+
+
+    ```
+
+    #include <algorithm>
+
+
+    std::vector<int> numbers = {5, 2, 8, 1, 3};
+
+    std::sort(numbers.begin(), numbers.end());
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "# Searching:-\n\n```\n```cpp\n#include <algorithm>\n\nstd::vector<int> numbers\
+    \ = {10, 20, 30, 40, 50};\nauto it = std::find(numbers.begin(), numbers.end(),\
+    \ 30);\nif (it != numbers.end()) {\n // Element found\n}\n```\n```\n\n# Transformation:-\n\
+    \n```\n```cpp\n#include <algorithm>\n#include <cmath>\n\nstd::vector<double> values\
+    \ = {1.0, 2.0, 3.0, 4.0};\nstd::transform(values.begin(), values.end(), values.begin(),\
+    \ std::sqrt);\n```\n```\n\n# Iterators:\n\nIterators are used to traverse the\
+    \ elements of a container. They provide a common interface for accessing elements\
+    \ regardless of the underlying container type.\n\n# Iterator Example:-\n\n```\n\
+    ```cpp\n#include <vector>\n\nstd::vector<int> numbers = {1, 2, 3, 4, 5};\nfor\
+    \ (auto it = numbers.begin(); it != numbers.end(); ++it)\n{\n // Access elements\
+    \ using 'it'\n}\n```\n```\n\n# Range-Based For Loop:-\n\n```\n```cpp\n#include\
+    \ <vector>\n\nstd::vector<int> numbers = {1, 2, 3, 4, 5};\nfor (const auto& num\
+    \ : numbers) {\n // Access elements using 'num'\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "# Function Objects (Functors):\n\nFunction objects, also known as functors,\
+    \ are objects that can be called like functions. They are often used with algorithms\
+    \ that require callable entities.\n\n```\n#include <iostream>\n\nstruct Square\
+    \ {\n    int operator()(int x) const {\n        return x * x;\n    }\n};\n\nint\
+    \ main() {\n    Square square;\n    std::cout << square(5) << std::endl;  // Outputs\
+    \ 25\n    return 0;\n}\n```\n\n# Smart Pointers:\n\nSmart pointers, introduced\
+    \ in C++11, are a part of the STL and provide automatic memory management, helping\
+    \ to avoid memory leaks and improve code safety.\n\n+   Shared Pointer:-\n\n```\n\
+    #include <memory>\n\nstd::shared_ptr<int> sharedInt = std::make_shared<int>(42);\n\
+    ```\n\n+   Unique Pointer:-\n\n```\n#include <memory>\n\nstd::unique_ptr<double>\
+    \ uniqueDouble =\nstd::make_unique<double>(3.14);\n```\n\n# Conclusion:\n\nThe\
+    \ Standard Template Library is a versatile and powerful feature of C++, providing\
+    \ developers with a rich set of tools for data manipulation, algorithms, and resource\
+    \ management. Understanding the STL is essential for writing efficient and maintainable\
+    \ C++ code."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# Smart Pointers: Intelligent Memory Management\n\nSmart pointers in C++ are\
+    \ a set of classes that manage the memory of dynamically allocated objects in\
+    \ a safer and more efficient way than raw pointers. They provide automatic memory\
+    \ management, help prevent memory leaks, and contribute to writing more robust\
+    \ and maintainable code.\n\n# Unique Pointer:\n\nstd::unique_ptr is a smart pointer\
+    \ that owns a dynamically allocated object and ensures that there is only one\
+    \ std::unique_ptr instance pointing to that object. When the std::unique_ptr goes\
+    \ out of scope, the associated object is automatically deleted.\n\n```\n#include\
+    \ <memory>\n\nvoid useUniquePointer() {\n    std::unique_ptr<int> uniqueInt =\
+    \ std::make_unique<int>(42);\n    // uniqueInt owns the dynamically allocated\
+    \ integer\n\n    // Access the value\n    std::cout << \"Value: \" << *uniqueInt\
+    \ << std::endl;\n    // ...\n\n    // No need to explicitly delete, happens automatically\
+    \ when uniqueInt goes out of scope\n}\n```\n\n# Shared Pointer:\n\nstd::shared_ptr\
+    \ is a smart pointer that allows multiple std::shared_ptr instances to share ownership\
+    \ of the same dynamically allocated object. The object is deleted when the last\
+    \ std::shared_ptr pointing to it is destroyed.\n\n```\n#include <memory>\n\nvoid\
+    \ useSharedPtr() {\n    std::shared_ptr<int> sharedInt = std::make_shared<int>(42);\n\
+    \    // sharedInt and anotherSharedInt share ownership of the dynamically allocated\
+    \ integer\n\n    // Access the value\n    std::cout << \"Value: \" << *sharedInt\
+    \ << std::endl;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\n#include <iostream>\n\nint main() {\n    // Lambda expression that takes\
+    \ two integers and\nreturns their sum\n    auto add = [](int a, int b) -> int\
+    \ {\n        return a + b;\n    };\n\n    std::cout << \"Sum: \" << add(3, 4)\
+    \ << std::endl;  //\nOutputs 7\n\n    return 0;\n}\n```\n\n# Capturing Variables:\n\
+    \nLambda expressions can capture variables from the surrounding scope, either\
+    \ by value or by reference.\n\nCapture by Value :-\n\n```\n#include <iostream>\n\
+    \nint main() {\n    int x = 42;\n\n    // Lambda expression capturing x by value\n\
+    \    auto lambda = [x]() {\n        std::cout << \"Captured value: \" << x <<\n\
+    std::endl;\n    };\n    lambda();  // Outputs \"Captured value: 42\"\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# Capture by Reference :-\n\n```\n#include <iostream>\n\nint main() {\n   \
+    \ int x = 42;\n\n    // Lambda expression capturing x by reference\n    auto lambda\
+    \ = [&x]() {\n        std::cout << \"Captured reference: \" << x <<\nstd::endl;\n\
+    \    };\n\n    lambda();  // Outputs \"Captured reference: 42\"\n\n    return\
+    \ 0;\n}\n```\n\n# Mutable Lambdas:\n\nBy default, variables captured by value\
+    \ in a lambda are treated as read-only. To modify them, the mutable keyword is\
+    \ used.\n\n```\n#include <iostream>\n\nint main() {\n    int x = 42;\n\n    //\
+    \ Mutable lambda capturing x by value\n    auto lambda = [x]() mutable {\n   \
+    \     x++;\n        std::cout << \"Modified value: \" << x <<\nstd::endl;\n  \
+    \  };\n\n    lambda();  // Outputs \"Modified value: 43\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\nstd::cout << \"Original value: \" << x <<\nstd::endl;  // Outputs \"Original\
+    \ value: 42\"\n\nreturn 0;\n}\n```\n\n# Lambda Expressions in Algorithms\n\nLambda\
+    \ expressions are commonly used with algorithms from the Standard Template Library\
+    \ (STL), providing a concise way to define custom behaviours.\n\n```\n#include\
+    \ <algorithm>\n#include <vector>\n#include <iostream>\n\nint main() {\n    std::vector<int>\
+    \ numbers = {1, 2, 3, 4, 5};\n\n    // Using a lambda expression with std::for_each\
+    \ to square each element\n    std::for_each(numbers.begin(), numbers.end(),\n\
+    \    [](int& x) {\n        x = x * x;\n    });\n\n    // Print the squared values\n\
+    \    for (const auto& num : numbers) {\n        std::cout << num << \" \";\n \
+    \   }\n\n    return 0;\n}\n```\n\nLambda expressions add expressiveness and flexibility\
+    \ to C++, allowing developers to create concise and in-place function objects.\
+    \ Their usage is prevalent in modern C++, especially in combination with algorithms\
+    \ and other functional programming concepts."
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# Chapter 4: Arrays and Linked Lists\n\nArray Manipulation and Algorithms:\
+    \ Unveiling the Power of Sequential Storage\n\nArrays, as a fundamental data structure,\
+    \ offer sequential storage and efficient random access to elements. In this chapter,\
+    \ we explore various array manipulation techniques and algorithms that leverage\
+    \ the strengths of this data structure.\n\n# Array Basics:\n\nAn array is a contiguous\
+    \ block of memory that stores elements of the same data type. The elements are\
+    \ accessed using an index, with the first element typically having an index of\
+    \ 0.\n\n```\n#include <iostream>\n\nint main() {\n    // Declaring and initializing\
+    \ an array\n    int numbers[] = {1, 2, 3, 4, 5};\n\n    // Accessing elements\n\
+    \    std::cout << \"First element: \" << numbers[0] <<\nstd::endl;  // Outputs\
+    \ 1\n\n    return 0;\n}\n```\n\n# Array Manipulation Techniques:\n\nArrays can\
+    \ be manipulated using various techniques, including:\n\n+   Traversal:-\n\n```\n\
+    #include <iostream>\n\nint main() {\n    int numbers[] = {1, 2, 3, 4, 5};\n\n\
+    \    // Traversing and printing elements\n    for (int i = 0; i < 5; ++i) {\n\
+    \        std::cout << numbers[i] << \" \";\n    }\n    // Outputs: 1 2 3 4 5\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "```\nstd::cout << numbers[i] << \" \";\n}\n// Outputs: 1 2 4 5\n\nreturn 0;\n\
+    }\n```\n\n# Searching and Sorting Algorithms:\n\nArrays facilitate the implementation\
+    \ of various searching and sorting algorithms. Two common examples are :-\n\n\
+    # Linear Search:-\n\n```\n#include <iostream>\n\nint linearSearch(const int arr[],\
+    \ int size, int target) {\n    for (int i = 0; i < size; ++i) {\n        if (arr[i]\
+    \ == target) {\n            return i;  // Element found at index i\n        }\n\
+    \    }\n    return -1;  // Element not found\n}\n\nint main() {\n    int numbers[]\
+    \ = {1, 2, 3, 4, 5};\n\n    int target = 3;\n    int result = linearSearch(numbers,\
+    \ 5, target);\n\n    if (result != -1) {\n        std::cout << \"Element \" <<\
+    \ target << \" found at index \" << result << std::endl;\n    } else {\n     \
+    \   std::cout << \"Element not found.\" << std::endl;\n    }\n\n    return 0;\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "# Bubble Sort:-\n\n```\n#include <iostream>\n\nvoid bubbleSort(int arr[], int\
+    \ size) {\n    for (int i = 0; i < size - 1; ++i) {\n        for (int j = 0; j\
+    \ < size - i - 1; ++j) {\n            if (arr[j] > arr[j + 1]) {\n           \
+    \     // Swap elements if they are in the wrong order\n                int temp\
+    \ = arr[j];\n                arr[j] = arr[j + 1];\n                arr[j + 1]\
+    \ = temp;\n            }\n        }\n    }\n}\n\nint main() {\n    int numbers[]\
+    \ = {5, 2, 8, 1, 3};\n    int size = 5;\n\n    // Sorting the array using bubble\
+    \ sort\n    bubbleSort(numbers, size);\n\n    // Printing the sorted array\n \
+    \   for (int i = 0; i < size; ++i) {\n        std::cout << numbers[i] << \" \"\
+    ;\n    }\n    // Outputs: 1 2 3 5 8\n\n    return 0;\n}\n```\n\n# Conclusion:\n\
+    \nArrays serve as a powerful data structure for sequential storage, offering efficient\
+    \ random access and supporting various manipulation techniques and algorithms.\
+    \ As we delve deeper into this chapter, we will explore linked lists, another\
+    \ dynamic data structure that provides flexibility in memory allocation and manipulation."
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# Singly Linked Lists: Unveiling Dynamic Linked Structures\n\nSingly Linked\
+    \ Lists are dynamic data structures that provide an efficient way to store and\
+    \ manage collections of elements. Unlike arrays, linked lists offer dynamic memory\
+    \ allocation, allowing for easy insertion and removal of elements at any position.\n\
+    \n# Basic Structure of a Singly Linked List:\n\nA Singly Linked List consists\
+    \ of nodes, where each node contains two parts: the data and a reference (or pointer)\
+    \ to the next node in the sequence.\n\n```\n#include <iostream>\n\n// Node structure\
+    \ for a Singly Linked List\ntemplate <typename T>\nstruct Node {\n    T data;\n\
+    \    Node* next;\n\n    Node(const T& value) : data(value), next(nullptr) {}\n\
+    };\n\nint main() {\n    // Creating nodes for a Singly Linked List\n    Node<int>*\
+    \ node1 = new Node<int>(1);\n    Node<int>* node2 = new Node<int>(2);\n    Node<int>*\
+    \ node3 = new Node<int>(3);\n\n    // Linking nodes to form a Singly Linked List\n\
+    \    node1->next = node2;\n    node2->next = node3;\n\n    // Traversing and printing\
+    \ the linked list\n    Node<int>* current = node1;\n    while (current != nullptr)\
+    \ {\n        std::cout << current->data << \" \";\n        current = current->next;\n\
+    \    }\n    // Outputs: 1 2 3\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# Insertion and Deletion in Singly Linked Lists:\n\nOne of the key advantages\
+    \ of linked lists is the ease of insertion and deletion. Adding a new node or\
+    \ removing an existing one involves adjusting the pointers, without the need for\
+    \ contiguous memory.\n\n# Insertion at the Beginning:-\n\n```\n#include <iostream>\n\
+    \ntemplate <typename T>\nvoid insertAtBeginning(Node<T>*& head, const T& value)\
+    \ {\n    Node<T>* newNode = new Node<T>(value);\n    newNode->next = head;\n \
+    \   head = newNode;\n}\n\nint main() {\n    Node<int>* head = nullptr;\n\n   \
+    \ // Inserting nodes at the beginning\n    insertAtBeginning(head, 3);\n    insertAtBeginning(head,\
+    \ 2);\n    insertAtBeginning(head, 1);\n\n    // Traversing and printing the modified\
+    \ linked list\n    Node<int>* current = head;\n    while (current != nullptr)\
+    \ {\n        std::cout << current->data << \" \";\n        current = current->next;\n\
+    \    }\n    // Outputs: 1 2 3\n\n    return 0;\n}\n```\n\n# Deletion at a Given\
+    \ Position:-\n\n```\n#include <iostream>\n\ntemplate <typename T>\nvoid deleteAtPosition(Node<T>*&\
+    \ head, int position) {\n    if (head == nullptr) {\n        return;  // No nodes\
+    \ to delete\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "```\nif (position == 0) {\n    Node<T>* temp = head;\n    head = head->next;\n\
+    \    delete temp;\n    return;\n}\n\nNode<T>* current = head;\nfor (int i = 0;\
+    \ i < position - 1 && current->next != nullptr; ++i)\n{\n    current = current->next;\n\
+    }\n\nif (current->next == nullptr || position < 0) {\n    return; // Invalid position\n\
+    }\n\nNode<T>* temp = current->next;\ncurrent->next = current->next->next;\ndelete\
+    \ temp;\n}\n\nint main() {\n    Node<int>* head = nullptr;\n    // Inserting nodes\n\
+    \    insertAtBeginning(head, 3);\n    insertAtBeginning(head, 2);\n    insertAtBeginning(head,\
+    \ 1);\n\n    // Deleting a node at position 1\n    deleteAtPosition(head, 1);\n\
+    \n    // Traversing and printing the modified linked list\n    Node<int>* current\
+    \ = head;\n    while (current != nullptr) {\n        std::cout << current->data\
+    \ << \" \";\n        current = current->next;\n    }\n    // Outputs: 1 3\n\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# # Searching and Traversing in Singly Linked Lists:\n\nSearching in a singly\
+    \ linked list involves traversing the list until the target element is found or\
+    \ the end of the list is reached.\n\n\n\n```\n```cpp\n#include <iostream>\n\n\
+    template <typename T>\nbool searchElement(const Node<T>* head, const T& target)\
+    \ {\n    const Node<T>* current = head;\n    while (current != nullptr) {\n  \
+    \      if (current->data == target) {\n            return true; // Element found\n\
+    \        }\n        current = current->next;\n    }\n    return false; // Element\
+    \ not found\n}\n\nint main() {\n    Node<int>* head = nullptrptr;\n    // Inserting\
+    \ nodes\n    insertAtBeginning(head, 3);\n    insertAtBeginning(head, 2);\n  \
+    \  insertAtBeginning(head, 1);\n    // Searching for an element\n    int target\
+    \ = 2;\n    if (searchElement(head, target)) {\n        std::cout << \"Element\
+    \ \" << target << \" found in the linked list.\" << std::endl;\n    } else {\n\
+    \        std::cout << \"Element \" << target << \" not found in the linked list.\"\
+    \ << std::endl;\n    }\n    return 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "# Conclusion:\n\nSingly Linked Lists provide a flexible and dynamic data structure\
+    \ for managing collections of elements. Their simplicity allows for efficient\
+    \ insertion and deletion operations, making them suitable for scenarios where\
+    \ dynamic memory allocation and modification are common requirements.\n\n# Doubly\
+    \ Linked Lists: Embracing Bidirectional Linking\n\nDoubly Linked Lists extend\
+    \ the capabilities of singly linked lists by providing bidirectional links between\
+    \ nodes. In addition to a reference to the next node, each node in a doubly linked\
+    \ list also contains a reference to the previous node. This bidirectional linking\
+    \ simplifies certain operations, such as traversing the list in both directions.\n\
+    \n# Basic Structure of a Doubly Linked List:\n\nA Doubly Linked List node contains\
+    \ three parts: the data, a reference to the next node, and a reference to the\
+    \ previous node.\n\n```\n#include <iostream>\n\n// Node structure for a Doubly\
+    \ Linked List\ntemplate <typename T>\nstruct Node {\n    T data;\n    Node* next;\n\
+    \    Node* prev;\n\n    Node(const T& value) : data(value), next(nullptr), prev(nullptr)\
+    \ {}\n};\n\nint main() {\n    // Creating nodes for a Doubly Linked List\n   \
+    \ Node<int>* node1 = new Node<int>(1);\n    Node<int>* node2 = new Node<int>(2);\n\
+    \    Node<int>* node3 = new Node<int>(3);\n\n    // Linking nodes to form a Doubly\
+    \ Linked List\n    node1->next = node2;\n    node2->prev = node1;\n    node2->next\
+    \ = node3;\n    node3->prev = node2;\n\n    // Traversing and printing the linked\
+    \ list in both directions\n    Node<int>* forward = node1;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "```\nwhile (forward != nullptr) {\n    std::cout << forward->data << \" \"\
+    ;\n    forward = forward->next;\n}\n// Outputs: 1 2 3\n\nstd::cout << std::endl;\n\
+    \nNode<int>* backward = node3;\nwhile (backward != nullptr) {\n    std::cout <<\
+    \ backward->data << \" \";\n    backward = backward->prev;\n}\n// Outputs: 3 2\
+    \ 1\n\nreturn 0;\n}\n```\n\n# Insertion and Deletion in Doubly Linked Lists:\n\
+    \nDoubly Linked Lists allow for efficient insertion and deletion operations, especially\
+    \ when working with both forward and backward traversal.\n\n# Insertion at the\
+    \ Beginning:-\n\n```\n#include <iostream>\n\ntemplate <typename T>\nvoid insertAtBeginning(Node<T>*&\
+    \ head, const T& value) {\n    Node<T>* newNode = new Node<T>(value);\n    newNode->next\
+    \ = head;\n    if (head != nullptr) {\n        head->prev = newNode;\n    }\n\
+    \    head = newNode;\n}\n\nint main() {\n    Node<int>* head = nullptr;\n\n  \
+    \  // Inserting nodes at the beginning\n    insertAtBeginning(head, 3);\n    insertAtBeginning(head,\
+    \ 2);\n    insertAtBeginning(head, 1);\n\n    // Traversing and printing the modified\
+    \ linked list\n    Node<int>* forward = head;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "```\nwhile (forward != nullptr) {\n    std::cout << forward->data << \" \"\
+    ;\n    forward = forward->next;\n}\n// Outputs: 1 2 3\n\nreturn 0;\n}\n```\n\n\
+    # Deletion at a Given Position:-\n\n```\n#include <iostream>\n\ntemplate <typename\
+    \ T>\nvoid deleteAtPosition(Node<T>*& head, int position) {\n    if (head == nullptr)\
+    \ {\n        return; // No nodes to delete\n    }\n\n    Node<T>* current = head;\n\
+    \    for (int i = 0; i < position && current != nullptr; ++i) {\n        current\
+    \ = current->next;\n    }\n\n    if (current == nullptr) {\n        return; //\
+    \ Invalid position\n    }\n\n    if (current->prev != nullptr) {\n        current->prev->next\
+    \ = current->next;\n    } else {\n        head = current->next;\n    }\n\n   \
+    \ if (current->next != nullptr) {\n        current->next->prev = current->prev;\n\
+    \    }\n\n    delete current;\n}\n\nint main() {\n    Node<int>* head = nullptr;\n\
+    \n    // Inserting nodes\n    insertAtBeginning(head, 3);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "```\ninsertAtBeginning(head, 2);\ninsertAtBeginning(head, 1);\n\n// Deleting\
+    \ a node at position 1\ndeleteAtPosition(head, 1);\n\n// Traversing and printing\
+    \ the modified linked list\nNode<int>* forward = head;\nwhile (forward != nullptr)\
+    \ {\n    std::cout << forward->data << \" \";\n    forward = forward->next;\n\
+    }\n// Outputs: 1 3\n\nreturn 0;\n}\n```\n\n# Searching and Traversing in Doubly\
+    \ Linked Lists:\n\nSearching in a doubly linked list can be performed in both\
+    \ forward and backward directions, providing flexibility in traversal.\n\n# Searching\
+    \ for an Element:-\n\n```\n#include <iostream>\n\ntemplate <typename T>\nbool\
+    \ searchElement(const Node<T>* head, const T& target) {\n    const Node<T>* forward\
+    \ = head;\n    while (forward != nullptr) {\n        if (forward->data == target)\
+    \ {\n            return true;  // Element found\n        }\n        forward =\
+    \ forward->next;\n    }\n    return false;  // Element not found\n}\n\nint main()\
+    \ {\n    Node<int>* head = nullptr;\n\n    // Inserting nodes\n    insertAtBeginning(head,\
+    \ 3);\n    insertAtBeginning(head, 2);\n    insertAtBeginning(head, 1);\n\n  \
+    \  // Searching for an element\n```"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "```\nint target = 2;\nif (searchElement(head, target)) {\n    std::cout <<\
+    \ \"Element \" << target << \" found in the linked list.\" << std::endl;\n} else\
+    \ {\n    std::cout << \"Element \" << target << \" not found in the linked list.\"\
+    \ << std::endl;\n}\n\nreturn 0;\n}\n```\n\n# Conclusion:\n\nDoubly Linked Lists\
+    \ enhance the capabilities of linked lists by providing bidirectional links between\
+    \ nodes, allowing for efficient traversal in both directions. Their flexibility\
+    \ in insertion, deletion, and searching makes them suitable for scenarios where\
+    \ bidirectional navigation and modification are essential. As we progress through\
+    \ this chapter, we will explore circular linked lists and understand how they\
+    \ introduce cyclic relationships within the linked list structure.\n\n# Circular\
+    \ Linked Lists: Embracing the Infinite Loop\n\nCircular Linked Lists extend the\
+    \ concept of linked lists by allowing the last node to point back to the first\
+    \ node, creating a circular structure. This cyclic arrangement offers advantages\
+    \ in certain scenarios and introduces unique challenges in traversal and manipulation.\n\
+    \n# Basic Structure of a Circular Linked List:\n\nIn a Circular Linked List, the\
+    \ last node points back to the first node, creating a loop.\n\n```\n#include <iostream>\n\
+    \n// Node structure for a Circular Linked List\ntemplate <typename T>\nstruct\
+    \ Node {\n    T data;\n    Node* next;\n\n    Node(const T& value) : data(value),\
+    \ next(nullptr) {}\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "```\nNode<int>* head = nullptr;\n\n// Inserting nodes at the beginning\ninsertAtBeginning(head,\
+    \ 3);\ninsertAtBeginning(head, 2);\ninsertAtBeginning(head, 1);\n\n// Traversing\
+    \ and printing the modified circular linked list\nNode<int>* current = head;\n\
+    for (int i = 0; i < 5; ++i) {\n    std::cout << current->data << \" \";\n    current\
+    \ = current->next;\n}\n// Outputs: 1 2 3 1 2\n\nreturn 0;\n}\n```\n\n# Deletion\
+    \ at a Given Position:-\n\n```\n#include <iostream>\n\ntemplate <typename T>\n\
+    void deleteAtPosition(Node<T>*& head, int position) {\n    if (head == nullptr)\
+    \ {\n        return; // No nodes to delete\n    }\n\n    Node<T>* current = head;\n\
+    \    for (int i = 0; i < position - 1 && current->next != head; ++i) {\n     \
+    \   current = current->next;\n    }\n\n    if (current->next == head || position\
+    \ < 0) {\n        return; // Invalid position\n    }\n\n    Node<T>* temp = current->next;\n\
+    \    current->next = current->next->next;\n    delete temp;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "```\n```cpp\nint main() {\n    Node<int>* head = nullptr;\n\n    // Inserting\
+    \ nodes\n    insertAtBeginning(head, 3);\n    insertAtBeginning(head, 2);\n  \
+    \  insertAtBeginning(head, 1);\n\n    // Deleting a node at position 1\n    deleteAtPosition(head,\
+    \ 1);\n\n    // Traversing and printing the modified circular linked list\n  \
+    \  Node<int>* current = head;\n    for (int i = 0; i < 4; ++i) {\n        std::cout\
+    \ << current->data << \" \";\n        current = current->next;\n    }\n    //\
+    \ Outputs: 1 3 1 2\n\n    return 0;\n}\n```\n```\n\n# \U0001F4DA **Circular Linked\
+    \ Lists in Algorithms:**\n\nCircular Linked Lists find applications in algorithms\
+    \ where cyclic relationships are beneficial, such as in scheduling and circular\
+    \ buffers.\n\n# \U0001F4DA **Conclusion:**\n\nCircular Linked Lists introduce\
+    \ a circular structure, allowing the last node to point back to the first node.\
+    \ This cyclic arrangement offers advantages in specific scenarios, and careful\
+    \ handling of pointers is required for insertion and deletion operations. As we\
+    \ proceed through this chapter, we will explore the integration of arrays and\
+    \ linked lists in algorithms, combining the strengths of both data structures\
+    \ to address various computational challenges.\n\n# Combining Arrays and Linked\
+    \ Lists in Algorithms: Achieving Optimal Solutions\n\nThe combination of arrays\
+    \ and linked lists in algorithms provides a powerful approach to problem-solving,\
+    \ leveraging the strengths of both data structures. This synergy allows for efficient\
+    \ handling of dynamic data, flexibility in memory allocation, and optimal solutions\
+    \ to a wide range of computational challenges."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# Dynamic Data Management:\n\nArrays and linked lists complement each other\
+    \ when managing dynamic data. Arrays offer constant-time random access, while\
+    \ linked lists facilitate dynamic memory allocation and easy insertion and deletion.\n\
+    \n# Example: Implementing a Stack with Linked List\n\n```\n#include <iostream>\n\
+    \n// Node structure for a linked list\ntemplate <typename T>\nstruct Node {\n\
+    \    T data;\n    Node* next;\n\n    Node(const T& value) : data(value), next(nullptr)\
+    \ {}\n};\n\n// Stack implemented with a linked list\ntemplate <typename T>\nclass\
+    \ Stack {\nprivate:\n    Node<T>* top;\n\npublic:\n    Stack() : top(nullptr)\
+    \ {}\n\n    // Push operation\n    void push(const T& value) {\n        Node<T>*\
+    \ newNode = new Node<T>(value);\n        newNode->next = top;\n        top = newNode;\n\
+    \    }\n\n    // Pop operation\n    void pop() {\n        if (top != nullptr)\
+    \ {\n            Node<T>* temp = top;\n            top = top->next;\n        \
+    \    delete temp;\n        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "```\n// Display the stack\nvoid display() const {\n    Node<T>* current = top;\n\
+    \    while (current != nullptr) {\n        std::cout << current->data << \" \"\
+    ;\n        current = current->next;\n    }\n    std::cout << std::endl;\n}\n};\n\
+    \nint main() {\n    // Using a stack implemented with a linked list\n    Stack<int>\
+    \ stack;\n\n    stack.push(3);\n    stack.push(7);\n    stack.push(1);\n\n   \
+    \ stack.display();  // Outputs: 1 7 3\n\n    stack.pop();\n\n    stack.display();\
+    \  // Outputs: 7 3\n\n    return 0;\n}\n```\n\n# Algorithmic Efficiency:\n\nAlgorithms\
+    \ often benefit from a combination of arrays and linked lists to achieve optimal\
+    \ efficiency. Arrays offer constant-time access to elements, making them suitable\
+    \ for tasks such as searching and sorting. Linked lists, on the other hand, excel\
+    \ in dynamic scenarios, allowing for easy insertion and deletion.\n\nExample:\
+    \ Merge Sort with Arrays\n\n```\n#include <iostream>\n#include <vector>\n\n//\
+    \ Merge function for merging two sorted arrays\ntemplate <typename T>\nvoid merge(std::vector<T>&\
+    \ arr, int left, int mid, int right) {\n    int n1 = mid - left + 1;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "```\n```cpp\nint n2 = right - mid;\n\n// Create temporary arrays\nstd::vector<T>\
+    \ L(n1), R(n2);\n\n// Copy data to temporary arrays L[] and R[]\nfor (int i =\
+    \ 0; i < n1; i++) {\n\tL[i] = arr[left + i];\n}\n\n// Merge the temporary arrays\
+    \ back into arr[left..right]\nint i = 0, j = 0, k = left;\nwhile (i < n1 && j\
+    \ < n2) {\n\tif (L[i] <= R[j]) {\n\t\tarr[k++] = L[i++];\n\t} else {\n\t\tarr[k++]\
+    \ = R[j++];\n\t}\n}\n\n// Copy the remaining elements of L[], if there are any\n\
+    while (i < n1) {\n\tarr[k++] = L[i++];\n}\n\n// Copy the remaining elements of\
+    \ R[], if there are any\nwhile (j < n2) {\n\tarr[k++] = R[j++];\n}\n}\n\n// Recursive\
+    \ function to perform merge sort on the array\ntemplate <typename T>\nvoid mergeSort(std::vector<T>&\
+    \ arr, int left, int right) {\n\tif (left < right) {\n\t\t// Same as (left+right)/2,\
+    \ but avoids overflow\n\t\tint mid = left + (right - left) / 2;\n\t\t// Recursive\
+    \ calls to split the array into halves\n\t}\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "```\nmergeSort(arr, left, mid);\nmergeSort(arr, mid + 1, right);\n\n// Merge\
+    \ the sorted halves\nmerge(arr, left, mid, right);\n}\n}\n\nint main() {\n   \
+    \ // Using merge sort with arrays\n    std::vector<int> numbers = {12, 11, 13,\
+    \ 5, 6, 7};\n\n    std::cout << \"Original array: \";\n    for (const auto& num\
+    \ : numbers) {\n        std::cout << num << \" \";\n    }\n    std::cout << std::endl;\n\
+    \n    // Applying merge sort\n    mergeSort(numbers, 0, numbers.size() - 1);\n\
+    \n    std::cout << \"Sorted array: \";\n    for (const auto& num : numbers) {\n\
+    \        std::cout << num << \" \";\n    }\n    std::cout << std::endl;\n\n  \
+    \  return 0;\n}\n```\n\n# Addressing Memory Constraints:\n\nIn scenarios with\
+    \ memory constraints, the combination of arrays and linked lists allows for efficient\
+    \ utilization of available memory. Arrays provide contiguous storage for fixed-size\
+    \ elements, while linked lists dynamically allocate memory for variable-sized\
+    \ elements.\n\n# Example: Dynamic Memory Allocation with Linked Lists\n\n```\n\
+    #include <iostream>\n\n// Node structure for a linked list\ntemplate <typename\
+    \ T>\nstruct Node {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\n```cpp\nT data;\nNode* next;\nNode(const T& value) : data(value), next(nullptr)\
+    \ {}\n};\n\n// Function to display elements in a linked list\ntemplate <typename\
+    \ T>\nvoid displayList(const Node<T>* head) {\n    const Node<T>* current = head;\n\
+    \    while (current != nullptr) {\n        std::cout << current->data << \" \"\
+    ;\n        current = current->next;\n    }\n    std::cout << std::endl;\n}\n\n\
+    int main() {\n    // Using linked list for dynamic memory allocation\n    Node<int>*\
+    \ head = nullptr;\n    for (int i = 1; i <= 5; ++i) {\n        // Creating nodes\
+    \ dynamically\n        Node<int>* newNode = new Node<int>(i);\n        newNode->next\
+    \ = head;\n        head = newNode;\n    }\n    // Displaying the linked list\n\
+    \    displayList(head); // Outputs: 5 4 3 2 1\n    return 0;\n}\n```\n```\n\n\U0001F4DD\
+    \ Conclusion:\n\nCombining arrays and linked lists in algorithms provides a versatile\
+    \ and powerful approach to problem-solving. By leveraging the strengths of both\
+    \ data structures, developers can address dynamic data management, algorithmic\
+    \ efficiency, and memory constraints. As we progress through this chapter, we\
+    \ will explore more algorithmic examples that showcase the synergy between arrays\
+    \ and linked lists in tackling various computational challenges."
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# Chapter 5: Stacks and Queues\n\n# Understanding Stacks and their Applications:\
+    \ LIFO in Action\n\nStacks, a fundamental data structure, follow the Last In,\
+    \ First Out (LIFO) principle. In this chapter, we delve into the conceptual understanding\
+    \ of stacks and explore their versatile applications in various computational\
+    \ scenarios.\n\n# Anatomy of a Stack:\n\nA stack is a collection of elements with\
+    \ two main operations: push, which adds an element to the top of the stack, and\
+    \ pop, which removes the top element. The last element added is the first to be\
+    \ removed, embodying the LIFO principle.\n\n# Example: Basic Stack Operations\n\
+    \n```\n#include <iostream>\n#include <stack>\n\nint main() {\n\n    // Creating\
+    \ a stack of integers\n    std::stack<int> myStack;\n\n    // Pushing elements\
+    \ onto the stack\n    myStack.push(3);\n    myStack.push(7);\n    myStack.push(1);\n\
+    \n    // Displaying the top element\n    std::cout << \"Top element: \" << myStack.top()\
+    \ << std::endl;\n\n    // Popping elements from the stack\n    myStack.pop();\n\
+    \n    // Displaying the top element after pop\n    std::cout << \"Top element\
+    \ after pop: \" << myStack.top() <<\nstd::endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# Applications of Stacks:\n\nStacks find applications in a myriad of computational\
+    \ scenarios due to their simplicity and efficiency. Some common applications include:-\n\
+    \n+   > **Function Call Management**: Stacks are used to manage function calls\
+    \ in programs. Each function call is pushed onto the stack, and when a function\
+    \ completes, it is popped off the stack.\n+   > **Expression Evaluation**: Stacks\
+    \ play a crucial role in evaluating arithmetic expressions. They are used to keep\
+    \ track of operators and operands, ensuring the correct order of evaluation.\n\
+    +   > **Undo Mechanisms in Software**: Stacks are employed in software applications\
+    \ to implement undo mechanisms. Each action performed is pushed onto the stack,\
+    \ allowing users to undo operations in reverse order.\n+   > **Backtracking in\
+    \ Algorithms**: Stacks are utilized in algorithms that involve backtracking, such\
+    \ as depth-first search. The stack stores the path taken, and backtracking involves\
+    \ popping elements to explore alternative paths.\n+   > **Parsing and Syntax Checking**:\
+    \ Stacks are integral to parsing and syntax checking in compilers. They help ensure\
+    \ that the syntax of a program follows the specified grammar rules.\n\n# Example:\
+    \ Checking Balanced Parentheses\n\n```\n#include <iostream>\n#include <stack>\n\
+    #include <string>\n\n// Function to check if parentheses are balanced\nbool areParenthesesBalanced(const\
+    \ std::string& expression) {\n    std::stack<char> charStack;\n\n    for (char\
+    \ ch : expression) {\n        if (ch == '(' || ch == '[' || ch == '{') {\n   \
+    \         charStack.push(ch);\n        } else if (ch == ')' || ch == ']' || ch\
+    \ == '}') {\n            if (charStack.empty() ||\n                (ch == ')'\
+    \ && charStack.top() != '(') ||\n                (ch == ']' && charStack.top()\
+    \ != '[') ||\n                (ch == '}' && charStack.top() != '{')) {\n     \
+    \           return false;  // Unbalanced parentheses\n            }\n\n      \
+    \      charStack.pop();\n        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "```\nreturn charStack.empty(); // Stack should be empty for balanced parentheses\n\
+    }\nint main() {\n    // Checking balanced parentheses\n    std::string expression\
+    \ = \"[{( )]( )}\";\n    if (areParenthesesBalanced(expression)) {\n        std::cout\
+    \ << \"Parentheses are balanced.\" << std::endl;\n    } else {\n        std::cout\
+    \ << \"Parentheses are not balanced.\" << std::endl;\n    }\n\n    return 0;\n\
+    }\n```\n\n# Conclusion:\n\nUnderstanding stacks and their applications is foundational\
+    \ to solving a variety of computational problems. The LIFO principle provides\
+    \ a simple yet powerful mechanism for managing data, making stacks a crucial component\
+    \ in algorithm design and software development. As we progress through this chapter,\
+    \ we will explore the implementation of queues, their applications, and the role\
+    \ they play in solving diverse problems.\n\n# Implementing Queues and Dequeues:\
+    \ FIFO and Double-Ended Queues\n\nQueues and Dequeues (Double-Ended Queues) are\
+    \ essential data structures that adhere to the First In, First Out (FIFO) principle\
+    \ for queues and provide additional flexibility for Dequeues. In this section,\
+    \ we explore the implementation details and applications of both structures.\n\
+    \n# Queues: FIFO at its Core:\n\nQueues represent ordered collections where elements\
+    \ are inserted at the rear (enqueue) and removed from the front (dequeue), following\
+    \ the First In, First Out (FIFO) principle.\n\n# Example: Basic Queue Operations\n\
+    \n```\n#include <iostream>\n#include <queue>\n\nint main() {\n    // Creating\
+    \ a queue of integers\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '```
+
+    ```cpp
+
+    // Displaying the front and rear elements
+
+    std::cout << "Front element: " << myDeque.front() << std::endl;
+
+    std::cout << "Rear element: " << myDeque.back() << std::endl;
+
+    // Dequeuing elements from the front and rear of the deque
+
+    myDeque.pop_front();
+
+    myDeque.pop_back();
+
+    // Displaying the front and rear elements after dequeue
+
+    std::cout << "Front element after dequeue: " << myDeque.front() << std::endl;
+
+    std::cout << "Rear element after dequeue: " << myDeque.back() << std::endl;
+
+    return 0;
+
+    ```
+
+    ```
+
+
+    # Applications of Queues and Deques::
+
+
+    Queues and deques find applications in various real-world scenarios due to their
+    adherence to FIFO and the additional flexibility provided by deques.
+
+
+    +   - Task Scheduling: Queues are used in task scheduling algorithms, where tasks
+    are scheduled based on their arrival time.
+
+    +   - Breadth-First Search (BFS): Queues play a vital role in BFS algorithms for
+    graph traversal. Nodes are explored level by level.
+
+    +   - Print Queue Management: Queues are employed in print queue systems, ensuring
+    documents are printed in the order they are submitted.
+
+    +   - Deque Applications: Deques find applications in scenarios that require insertion
+    and removal of elements at both ends, such as managing sliding windows in algorithms.
+
+
+    # Implementing Queues and Deques from Scratch::
+
+
+    Understanding the underlying principles, we can implement queues and deques from
+    scratch using arrays or linked lists. The choice of implementation depends on
+    the specific requirements of the problem.
+
+
+    # Example: Implementing a Queue with Linked List
+
+
+    ```
+
+    ```cpp
+
+    #include <iostream>
+
+    // Node structure for a linked list
+
+    template <typename T>
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "```\nstruct Node {\n    T data;\n    Node* next;\n\n    Node(const T& value)\
+    \ : data(value), next(nullptr) {}\n};\n\n// Queue implemented with a linked list\n\
+    template <typename T>\nclass Queue {\nprivate:\n    Node<T>* front;\n    Node<T>*\
+    \ rear;\n\npublic:\n    Queue() : front(nullptr), rear(nullptr) {}\n\n    // Enqueue\
+    \ operation\n    void enqueue(const T& value) {\n        Node<T>* newNode = new\
+    \ Node<T>(value);\n        if (rear == nullptr) {\n            front = rear =\
+    \ newNode;\n        } else {\n            rear->next = newNode;\n            rear\
+    \ = newNode;\n        }\n    }\n\n    // Dequeue operation\n    void dequeue()\
+    \ {\n        if (front != nullptr) {\n            Node<T>* temp = front;\n   \
+    \         front = front->next;\n            if (front == nullptr) {\n        \
+    \        rear = nullptr;  // Queue is empty after dequeue\n            }\n   \
+    \         delete temp;\n        }\n    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "```\n}\n\n// Display the queue\nvoid display() const {\n    Node<T>* current\
+    \ = front;\n    while (current != nullptr) {\n        std::cout << current->data\
+    \ << \" \";\n        current = current->next;\n    }\n    std::cout << std::endl;\n\
+    }\n};\n\nint main() {\n\n    // Using a queue implemented with a linked list\n\
+    \    Queue<int> myQueue;\n\n    myQueue.enqueue(3);\n    myQueue.enqueue(7);\n\
+    \    myQueue.enqueue(1);\n\n    myQueue.display();  // Outputs: 3 7 1\n\n    myQueue.dequeue();\n\
+    \n    myQueue.display();  // Outputs: 7 1\n\n    return 0;\n}\n```\n\n# Conclusion::\n\
+    \nImplementing queues and dequeues provides a hands-on understanding of their\
+    \ mechanics and flexibility. Whether adhering to the FIFO principle in queues\
+    \ or exploring the enhanced capabilities of dequeues, these data structures play\
+    \ pivotal roles in algorithm design, problem-solving, and real-world applications.\
+    \ As we progress through this chapter, we will delve into solving problems using\
+    \ stacks and queues and explore advanced topics such as priority queues."
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\nstd::cout << \"Expression 1 is \" <<\n(isValidParentheses(expression1)\
+    \ ? \"valid.\" : \"not valid.\") <<\nstd::endl;\n    std::cout << \"Expression\
+    \ 2 is \" <<\n(isValidParentheses(expression2) ? \"valid.\" : \"not valid.\")\
+    \ <<\nstd::endl;\n    return 0;\n}\n```\n\n# Problem Solving with Queues:\n\n\
+    Now we’ll solve a problem using queue.\n\n# Problem: Implementing a BFS Algorithm::\n\
+    \nQueues play a crucial role in breadth-first search (BFS) algorithms. In BFS,\
+    \ nodes are explored level by level, and a queue is used to maintain the order\
+    \ of exploration.\n\n```\n#include <iostream>\n#include <queue>\n#include <vector>\n\
+    \n// Adjacency list representation of a graph\nstd::vector<std::vector<int>> graph\
+    \ = {\n    {1, 2},\n    {0, 3, 4},\n    {0, 4},\n    {1},\n    {1, 2}\n};\n\n\
+    void bfs(int startNode) {\n    std::vector<bool> visited(graph.size(), false);\n\
+    \    std::queue<int> nodeQueue;\n\n    visited[startNode] = true;\n    nodeQueue.push(startNode);\n\
+    \n    while (!nodeQueue.empty()) {\n        int currentNode = nodeQueue.front();\n\
+    \        nodeQueue.pop();\n\n        std::cout << currentNode << \" \";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\nfor (int neighbor : graph[currentNode]) {\n    if (!visited[neighbor])\
+    \ {\n        visited[neighbor] = true;\n        nodeQueue.push(neighbor);\n  \
+    \  }\n}\n}\n}\n\nint main() {\n    // Performing BFS starting from node 0\n  \
+    \  std::cout << \"BFS starting from node 0: \";\n    bfs(0);\n    std::cout <<\
+    \ std::endl;\n\n    return 0;\n}\n```\n\n# Combining Stacks and Queues for Complex\
+    \ Problems:\n\nNow we’ll solve a problem using stack & queue together.\n\n# Problem:\
+    \ Evaluating Postfix Expressions::\n\nCombining stacks and queues can be effective\
+    \ in solving more complex problems. For instance, in evaluating postfix expressions,\
+    \ a stack can be used to track operands, and a queue can help manage the sequence\
+    \ of operations.\n\n```\n#include <iostream>\n#include <stack>\n#include <queue>\n\
+    #include <sstream>\n\nint evaluatePostfix(const std::string& expression) {\n \
+    \   std::stack<int> operandStack;\n    std::istringstream iss(expression);\n \
+    \   std::string token;\n\n    while (iss >> token) {\n        if (isdigit(token[0]))\
+    \ {\n            operandStack.push(std::stoi(token));\n        } else {\n    \
+    \        int operand2 = operandStack.top();\n            operandStack.pop();\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "```\nint operand1 = operandStack.top();\noperandStack.pop();\n\nswitch (token[0])\
+    \ {\n    case '+':\n        operandStack.push(operand1 + operand2);\n        break;\n\
+    \    case '-':\n        operandStack.push(operand1 - operand2);\n        break;\n\
+    \    case '*':\n        operandStack.push(operand1 * operand2);\n        break;\n\
+    \    case '/':\n        operandStack.push(operand1 / operand2);\n        break;\n\
+    \    default:\n        std::cerr << \"Invalid operator: \" << token <<\nstd::endl;\n\
+    \        return -1;  // Error\n    }\n}\n}\nreturn operandStack.top();\n}\n\n\
+    int main() {\n    // Evaluating a postfix expression\n    std::string postfixExpression\
+    \ = \"3 4 + 2 *\";\n    std::cout << \"Result: \" << evaluatePostfix(postfixExpression)\
+    \ <<\nstd::endl;\n\n    return 0;\n}\n```\n\n# Conclusion:\n\nSolving problems\
+    \ with stacks and queues demonstrates the versatility of these data structures\
+    \ in algorithmic design. Whether ensuring balanced parentheses, implementing graph\
+    \ algorithms, or tackling complex arithmetic expressions, stacks and queues offer\
+    \ elegant and efficient solutions. As we proceed through this chapter, we will\
+    \ explore advanced topics, including priority queues and double-ended queues,\
+    \ to further enhance our problem-solving toolkit."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "# Advanced Topics: Priority Queues and Double-Ended Queues\n\nIn this section,\
+    \ we explore advanced topics within the realm of stacks and queues, specifically\
+    \ focusing on priority queues and double-ended queues (dequeues).\n\n\n\nPriority\
+    \ queues are a type of queue where elements are assigned priorities, and the element\
+    \ with the highest (or lowest) priority is served before others. This ordering\
+    \ is crucial in scenarios where tasks or events need to be processed based on\
+    \ their significance.\n\n\n\nA common implementation of priority queues is using\
+    \ heaps, specifically binary heaps. Binary heaps provide efficient insertion and\
+    \ extraction of the highest (or lowest) priority element.\n\n\n\n```\n#include\
+    \ <iostream>\n#include <vector>\n#include <algorithm>\n\ntemplate <typename T>\n\
+    class MaxHeap {\nprivate:\n    std::vector<T> heap;\n\nvoid heapifyUp(int index)\
+    \ {\n    while (index > 0) {\n        int parentIndex = (index - 1) / 2;\n   \
+    \     if (heap[index] > heap[parentIndex]) {\n            std::swap(heap[index],\
+    \ heap[parentIndex]);\n            index = parentIndex;\n        } else {\n  \
+    \          break;\n        }\n    }\n}\n\nvoid heapifyDown(int index) {\n    int\
+    \ leftChild = 2 * index + 1;\n    int rightChild = 2 * index + 2;\n    int largest\
+    \ = index;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "```\nif (leftChild < heap.size() && heap[leftChild] > heap[largest]) {\n  \
+    \  largest = leftChild;\n}\n\nif (rightChild < heap.size() && heap[rightChild]\
+    \ > heap[largest]) {\n    largest = rightChild;\n}\n\nif (largest != index) {\n\
+    \    std::swap(heap[index], heap[largest]);\n    heapifyDown(largest);\n}\n}\n\
+    \npublic:\n    void insert(T value) {\n        heap.push_back(value);\n      \
+    \  heapifyUp(heap.size() - 1);\n    }\n\n    T extractMax() {\n        if (heap.empty())\
+    \ {\n            throw std::out_of_range(\"Heap is empty\");\n        }\n\n  \
+    \      T max = heap[0];\n        heap[0] = heap.back();\n        heap.pop_back();\n\
+    \        heapifyDown(0);\n\n        return max;\n    }\n\n    bool isEmpty() const\
+    \ {\n        return heap.empty();\n    }\n};\n\nint main() {\n    // Using a max\
+    \ heap as a priority queue\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "```\nMaxHeap<int> priorityQueue;\npriorityQueue.insert(20);\npriorityQueue.insert(10);\n\
+    priorityQueue.insert(30);\nwhile (!priorityQueue.isEmpty()) {\n\tstd::cout <<\
+    \ priorityQueue.extractMax() << \" \";\n}\nreturn 0;\n}\n```\n\n# Double-Ended\
+    \ Queues (Deques): Versatile Queues with Two Ends::\n\nDouble-ended queues, or\
+    \ deques, are queues that allow insertion and removal of elements from both the\
+    \ front and the rear. This flexibility makes deques suitable for a variety of\
+    \ scenarios, including managing sliding windows in algorithms.\n\nDeques can be\
+    \ implemented using arrays or linked lists, depending on the specific requirements\
+    \ of the problem.\n\n# Example: Deque Implementation using Linked List\n\n```\n\
+    #include <iostream>\ntemplate <typename T>\nstruct Node {\n\tT data;\n\tNode*\
+    \ next;\n\tNode* prev;\n\tNode(const T& value) : data(value), next(nullptr), prev(nullptr)\n\
+    \t{};\n};\ntemplate <typename T>\nclass Deque {\nprivate:\n\tNode<T>* front;\n\
+    \tNode<T>* rear;\npublic:\n\tDeque() : front(nullptr), rear(nullptr) {}\n};\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\nvoid pushFront(const T& value) {\n    Node<T>* newNode = new Node<T>(value);\n\
+    \    if (isEmpty()) {\n        front = rear = newNode;\n    } else {\n       \
+    \ newNode->next = front;\n        front->prev = newNode;\n        front = newNode;\n\
+    \    }\n}\n\nvoid pushBack(const T& value) {\n    Node<T>* newNode = new Node<T>(value);\n\
+    \    if (isEmpty()) {\n        front = rear = newNode;\n    } else {\n       \
+    \ newNode->prev = rear;\n        rear->next = newNode;\n        rear = newNode;\n\
+    \    }\n}\n\nT popFront() {\n    if (isEmpty()) {\n        throw std::out_of_range(\"\
+    Deque is empty\");\n    }\n\n    T value = front->data;\n    Node<T>* temp = front;\n\
+    \n    if (front == rear) {\n        front = rear = nullptr;\n    } else {\n  \
+    \      front = front->next;\n        front->prev = nullptr;\n    }\n\n    delete\
+    \ temp;\n    return value;\n}\nT popBack() {\n    if (isEmpty()) {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "```\nthrow std::out_of_range(\"Deque is empty\");\n}\nT value = rear->data;\n\
+    Node<T>* temp = rear;\n\nif (front == rear) {\n    front = rear = nullptr;\n}\
+    \ else {\n    rear = rear->prev;\n    rear->next = nullptr;\n}\ndelete temp;\n\
+    return value;\n}\nbool isEmpty() const {\n    return front == nullptr && rear\
+    \ == nullptr;\n}\n};\n\nint main() {\n\n// Using a deque implemented with a linked\
+    \ list\nDeque<int> myDeque;\nmyDeque.pushFront(3);\nmyDeque.pushBack(7);\nmyDeque.pushBack(1);\n\
+    \nwhile (!myDeque.isEmpty()) {\n    std::cout << myDeque.popFront() << \" \";\n\
+    }\n\nreturn 0;\n}\n```\n\n# Conclusion:\n\nThe exploration of advanced topics\
+    \ in stacks and queues, namely priority queues and double-ended queues, enriches\
+    \ our understanding of these fundamental data structures. Priority queues offer\
+    \ a mechanism to handle elements based on their priority, while double-ended queues\
+    \ provide versatility by allowing operations at both ends. As we continue through\
+    \ this chapter, we will apply these advanced concepts to solve more complex problems\
+    \ and further enhance our algorithmic toolkit."
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Chapter 6: Trees and Graphs
+
+
+    # Binary Trees and Binary Search Trees: Foundations of Tree Structures
+
+
+    # Understanding Binary Trees:
+
+
+    A binary tree is a hierarchical data structure composed of nodes, each having
+    at most two children, referred to as the left child and the right child. The topmost
+    node is known as the root, and nodes with no children are called leaves. Binary
+    trees are fundamental in computer science and serve as the building blocks for
+    more complex tree structures.
+
+
+    # Anatomy of a Binary Tree:
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_73_0.png)
+
+
+    In the above example, 5 is the root, with 3 and 8 as its left and right children,
+    respectively. Node 3 has children 1 and 4.
+
+
+    # Binary Search Trees (BST):
+
+
+    A Binary Search Tree is a specific type of binary tree where the left child of
+    a node contains values less than the node, and the right child contains values
+    greater than the node. This ordering property enables efficient search, insertion,
+    and deletion operations.
+
+
+    # Example of Binary Search Tree:
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_73_1.png)
+
+
+    In this BST, for any given node, all nodes in its left subtree have values less
+    than the node, and all nodes in its right subtree have values greater than the
+    node.
+
+
+    # Operations on Binary Search Trees:
+
+
+    +   > **Search**: Starting from the root, compare the target value with each node
+    and traverse left or right accordingly until finding the target or reaching a
+    leaf.
+
+    +   > **Insertion**: Search for the correct position to insert the new node based
+    on the ordering property of the BST.
+
+    +   > **Deletion**: Locate the node to be deleted and handle cases based on the
+    number of children:-'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '+   - **Balancing Operations:** When an insertion or deletion violates the
+    balance criterion, rotations (single or double) are performed to restore balance.
+
+    +   - **Advantages:** AVL trees guarantee logarithmic height, ensuring efficient
+    search, insertion, and deletion operations.
+
+
+    # Red-Black Trees:
+
+
+    +   - **Definition:** Red-Black trees are another type of self-balancing binary
+    search tree.
+
+    +   - **Balancing Criteria:**
+
+    +     - Each node is coloured red or black.
+
+    +     - The root is always black.
+
+    +     - Every leaf (null pointer) is black.
+
+    +     - If a node is red, both its children are black.
+
+    +     - Every path from a node to its descendant leaves contains the same number
+    of black nodes.
+
+    +   - **Balancing Operations:** Red-Black trees use colour-flipping and rotations
+    to maintain balance during insertions and deletions.
+
+    +   - **Advantages:** Red-Black trees are simpler to implement than AVL trees
+    and provide a good balance between performance and simplicity.
+
+
+    # Choosing Between AVL and Red-Black Trees:
+
+
+    +   - **Search-Intensive Applications:** For scenarios where searches are more
+    frequent than insertions or deletions, AVL trees may be preferred due to their
+    slightly better search performance.
+
+    +   - **Insertion and Deletion Intensive Applications:** For applications with
+    frequent insertions or deletions, Red-Black trees are often chosen as they require
+    less restructuring.
+
+
+    # Applications of Balanced Trees:
+
+
+    +   - **Database Indexing:** Efficient search and retrieval of data in databases.
+
+    +   - **Compiler Implementations:** Constructing and optimizing syntax trees during
+    the compilation process.
+
+    +   - **File System Implementations:** Managing file systems with hierarchical
+    structures.
+
+
+    In the subsequent sections of this chapter, we will extend our exploration to
+    graph structures, introducing the concept of graphs and graph traversal algorithms.
+    Understanding balanced trees lays the groundwork for more advanced data structures
+    and algorithms, enhancing the efficiency of various computational tasks.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# Introduction to Graphs and Graph Traversal - Exploring Networked Structures
+
+
+    # Understanding Graphs:
+
+
+    A graph is a versatile and fundamental data structure that represents a collection
+    of nodes (vertices) and the connections between them (edges). Graphs can model
+    a wide range of relationships, making them applicable to various real-world scenarios.
+
+
+    # Essential Graph Terminology:
+
+
+    +   > **Vertex (Node)**: Represents a point in the graph.
+
+    +   > **Edge**: Represents a connection between two vertices. An edge may have
+    a direction (directed graph) or be undirected.
+
+    +   > **Directed Graph (Digraph)**: A graph in which edges have a direction, indicating
+    a one-way connection.
+
+    +   > **Undirected Graph**: A graph in which edges have no direction, indicating
+    a two-way connection.
+
+    +   > **Weighted Graph**: A graph in which edges have associated weights, representing
+    costs or distances.
+
+    +   > **Degree of a Vertex**: The number of edges incident to a vertex.
+
+
+    # Types of Graphs:
+
+
+    +   > **Simple Graph**: No loops or multiple edges between the same pair of vertices.
+
+    +   > **Multigraph**: Allows multiple edges between the same pair of vertices.
+
+    +   > **Directed Acyclic Graph (DAG)**: A directed graph with no cycles.
+
+    +   > **Weighted Graph**: Assigns weights to edges.
+
+
+    # Graph Traversal:
+
+
+    Graph traversal involves systematically visiting all the vertices and edges of
+    a graph. Two common methods are depth-first traversal and breadth-first traversal.
+
+
+    +   > **Depth-First Search (DFS)**: Explores as far as possible along each branch
+    before backtracking. Implemented using recursion or a stack.
+
+
+    DFS Traversal: A -> B -> D -> E -> C
+
+
+    +   > **Breadth-First Search (BFS)**: Explores the graph level by level, visiting
+    all neighbours of a node before moving on to the next level. Implemented using
+    a queue.
+
+
+    BFS Traversal: A -> B -> C -> D -> E
+
+
+    # Applications of Graphs:
+
+
+    +   > **Networks and Social Graphs**: Representing relationships between individuals.
+
+    +   > **Transportation Networks**: Modelling roads, flights, or public transportation
+    routes.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "+   > **Dependency Analysis**: Analysing dependencies between tasks or components\
+    \ in a system.\n+   > **Web Page Ranking Algorithms**: Analysing link structures\
+    \ to determine the importance of web pages.\n\nIn the upcoming sections, we will\
+    \ delve into graph traversal algorithms, specifically focusing on two prominent\
+    \ algorithms for finding the shortest path in graphs: Dijkstra's algorithm and\
+    \ Bellman-Ford algorithm. Understanding graphs and their traversal is foundational\
+    \ for solving a wide array of real-world problems.\n\n# Shortest Path Algorithms:\
+    \ Dijkstra's and Bellman-Ford\n\n# Importance of Shortest Path Algorithms:\n\n\
+    Finding the shortest path in a graph is a fundamental problem with applications\
+    \ ranging from network routing to project scheduling. Two widely used algorithms\
+    \ for solving this problem are Dijkstra's algorithm and the Bellman-Ford algorithm.\n\
+    \n# Dijkstra's Algorithm:\n\n+   > **Objective**: Find the shortest path from\
+    \ a source vertex to every other vertex in a non-negative weighted graph.\n\n\
+    +   > **Approach**: Utilizes a priority queue (min-heap) to greedily select the\
+    \ vertex with the smallest tentative distance at each step.\n\n+   > **Steps:**\n\
+    +   1. Initialize distances from the source to all vertices as infinity and the\
+    \ distance to the source as 0.\n+   2. For the current vertex, explore its neighbours\
+    \ and update their tentative distances if a shorter path is found.\n+   3. Repeat\
+    \ the process until all vertices are processed.\n\n+   > **Advantages:**\n+  \
+    \ 1. Efficient for dense graphs.\n+   2. Suitable for scenarios where the edge\
+    \ weights are non-negative.\n\n+   > **Example:**\n\n```\nGraph:\n\n    1\nA -----\
+    \ B\n| \\   |\n3 |  \\  | 2\n|   \\  |\nC ----- D\n    4\nShortest Path from A\
+    \ to D: A -> C -> D (Total distance: 7)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '+   3. Move the boundary between the sorted and unsorted regions.
+
+
+    Time Complexity: O(n^2) in the worst case.
+
+
+    # Insertion Sort:
+
+
+    Principle: Builds the sorted array one element at a time by repeatedly taking
+    elements from the unsorted region and inserting them into their correct position
+    in the sorted region.
+
+
+    Process:
+
+
+    +   1. Start with the second element and compare it with the previous elements
+    in the sorted region.
+
+    +   2. Insert the element into its correct position.
+
+    +   3. Move to the next element in the unsorted region.
+
+
+    Time Complexity: O(n^2) in the worst case.
+
+
+    Example:
+
+
+    ```
+
+    Original Array: 5 2 9 1 5
+
+
+    Pass 1: 1 2 9 5 5
+
+    Pass 2: 1 2 9 5 5
+
+    Pass 3: 1 2 5 9 5
+
+    Pass 4: 1 2 5 5 9
+
+    ```
+
+
+    # Comparison and Selection:
+
+
+    +   Bubble Sort: Simple to implement but inefficient for large datasets.
+
+    +   Selection Sort: Similar to bubble sort in terms of efficiency, with a smaller
+    number of swaps.
+
+    +   Insertion Sort: Efficient for small datasets and nearly sorted arrays.
+
+
+    # Choosing the Right Algorithm:
+
+
+    +   Size of Dataset: For small datasets or nearly sorted data, fundamental sorting
+    algorithms like insertion sort may be more appropriate.
+
+    +   Efficiency Concerns: For large datasets, more efficient sorting algorithms
+    like merge sort or quicksort should be considered.
+
+
+    Understanding these fundamental sorting algorithms provides a solid foundation
+    for exploring more complex and efficient sorting techniques in the subsequent
+    sections of this chapter.
+
+
+    > "CONSISTENCY IS THE KEY TO SUCCESS..."
+
+    > ~ Life'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# Efficient Sorting: Merge Sort, Quick Sort
+
+
+    # The Need for Efficient Sorting:
+
+
+    While fundamental sorting algorithms serve their purpose, they may become impractical
+    for large datasets. Efficient sorting algorithms address this limitation, offering
+    improved time complexity and performance.
+
+
+    # Merge Sort:
+
+
+    Principle: A divide-and-conquer algorithm that recursively divides the array into
+    halves until each sub-array contains a single element. It then merges these sub-arrays
+    in a sorted manner until the entire array is sorted.
+
+
+    # Process:
+
+
+    +   1. Divide the array into two halves.
+
+    +   2. Recursively apply the merge sort algorithm to each half.
+
+    +   3. Merge the sorted halves to produce the final sorted array.
+
+
+    Time Complexity: O(n log n) in the worst and average cases.
+
+
+    # Example:
+
+
+    ```
+
+    Original Array: 5 2 9 1 5
+
+    Divide: 5 2 | 9 1 5
+
+    Divide: 5 | 2     9 | 1 5
+
+    Merge: 2 5     1 5 9
+
+    Merge: 1 2 5 5 9
+
+    ```
+
+
+    # Quick Sort:
+
+
+    Principle: Also, a divide-and-conquer algorithm, quicksort selects a "pivot" element
+    and partitions the array into two sub-arrays: elements less than the pivot and
+    elements greater than the pivot. The process is then applied recursively to each
+    sub-array.
+
+
+    # Process:
+
+
+    +   1. Choose a pivot element from the array.
+
+    +   2. Partition the array into elements less than and greater than the pivot.
+
+    +   3. Recursively apply the quicksort algorithm to the two sub-arrays.
+
+    +   4. Concatenate the sorted sub-arrays.
+
+
+    Time Complexity: O(n log n) in the average case, O(n^2) in the worst case (can
+    be mitigated with randomized pivot selection).
+
+
+    # Example:
+
+
+    ```
+
+    Original Array: 5 2 9 1 5
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '```
+
+    Pivot: 5
+
+    Partition: 2 1 | 5 | 9 5
+
+    Pivot: 2
+
+    Partition: 1 | 2 | 5 | 9 5
+
+    ```
+
+
+    # Comparison and Selection:
+
+
+    +   - **Merge Sort:** Offers consistent `O(n log n)` time complexity but requires
+    additional space for merging.
+
+    +   - **Quick Sort:** In-place sorting with better average-case performance but
+    susceptible to worst-case scenarios.
+
+
+    # Choosing the Right Algorithm:
+
+
+    +   - **Merge Sort:** Suitable when stable sorting and consistent performance
+    are crucial. Ideal for linked lists.
+
+    +   - **Quick Sort:** Preferred for in-place sorting and when average-case performance
+    is more important than worst-case performance.
+
+
+    Efficient sorting algorithms play a pivotal role in optimizing the sorting process,
+    especially for larger datasets. Understanding their principles and trade-offs
+    enables practitioners to make informed choices based on the characteristics of
+    the data being sorted. In the subsequent sections, we will explore searching algorithms
+    and delve into their applications.
+
+
+    # Searching Algorithms: Linear Search, Binary Search
+
+
+    # Introduction to Searching:
+
+
+    Searching involves finding a specific element within a collection of data. Different
+    searching algorithms are employed based on factors such as data structure, size,
+    and the degree of organization.
+
+
+    # Linear Search:
+
+
+    +   - **Principle:** Also known as sequential search, linear search involves traversing
+    the entire dataset sequentially until the desired element is found or the end
+    of the dataset is reached.
+
+    +   - **Process:**
+
+    +     1. Start from the first element in the dataset.
+
+    +     2. Compare each element with the target element.
+
+    +     3. If a match is found, return the index; otherwise, continue to the next
+    element.
+
+    +     4. Repeat until the target is found or the end of the dataset is reached.
+
+    +   - **Time Complexity:** `O(n)` in the worst case, where n is the size of the
+    dataset.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# Example:
+
+
+    ```
+
+    Dataset: 5 2 9 1 5
+
+    Target: 1
+
+
+    Iteration 1: 5 (no match)
+
+    Iteration 2: 2 (no match)
+
+    Iteration 3: 9 (no match)
+
+    Iteration 4: 1 (match found at index 3)
+
+    ```
+
+
+    # Binary Search:
+
+
+    Principle: Applicable to sorted datasets, binary search divides the dataset in
+    half repeatedly, narrowing down the search range until the target element is found
+    or determined to be absent.
+
+
+    # Process:
+
+
+    +   1. Start with the entire sorted dataset.
+
+    +   2. Compare the target element with the middle element.
+
+    +   3. If they match, the search is successful; otherwise, narrow the search range
+    based on the comparison.
+
+    +   4. Repeat the process until the target is found or the search range becomes
+    empty.
+
+
+    Time Complexity: O(log n) in the worst case, where n is the size of the dataset.
+
+
+    # Example:
+
+
+    ```
+
+    Sorted Dataset: 1 2 5 5 9
+
+    Target: 5
+
+
+    Iteration 1: 5 (match found at index 2)
+
+    ```
+
+
+    # Comparison and Selection:
+
+
+    Linear Search: Simple and applicable to any dataset, but less efficient for large
+    datasets.
+
+
+    Binary Search: Efficient for sorted datasets, reducing the search space exponentially
+    with each comparison.
+
+
+    # Choosing the Right Algorithm:
+
+
+    Linear Search: Suitable for unsorted datasets or scenarios where the dataset size
+    is small.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: 'Binary Search: Ideal for sorted datasets, providing a significant speedup for
+    large datasets.
+
+
+    # Applications of Searching:
+
+
+    +   - Database Queries: Locating records based on specified criteria.
+
+    +   - Information Retrieval: Finding relevant data in large datasets.
+
+    +   - Sorting Algorithms: Binary search is often used as part of efficient sorting
+    algorithms.
+
+
+    In the final section of this chapter, we will explore practical applications of
+    sorting and searching algorithms, showcasing their significance in various domains.
+    Understanding these algorithms equips individuals with the tools to address diverse
+    challenges related to data organization and retrieval.
+
+
+    # Applications of Sorting and Searching - Real-World Significance
+
+
+    # Sorting Applications:
+
+
+    +   - Database Management:
+
+    +     1. Sorting is crucial for efficiently organizing and retrieving data in
+    databases.
+
+    +     2. Queries that involve sorting facilitate faster access to relevant information.
+
+    +   - File Systems:
+
+    +     1. File systems use sorting to arrange and locate files, improving access
+    times.
+
+    +     2. Directory listings and file searches benefit from sorted structures.
+
+    +   - Contact Lists and Directories:
+
+    +     1. Sorting is essential for contact lists on devices and online directories.
+
+    +     2. Users can quickly find contacts based on names, addresses, or other criteria.
+
+    +   - E-Commerce Platforms:
+
+    +     1. Product listings on e-commerce platforms are often sorted based on various
+    parameters like price, popularity, or relevance.
+
+    +     2. Sorting enhances the user experience by presenting products in a meaningful
+    order.
+
+    +   - Task Scheduling:
+
+    +     1. Sorting is employed in task scheduling applications to prioritize and
+    arrange tasks based on deadlines or priority levels.
+
+    +     2. Efficient scheduling ensures optimal resource utilization.
+
+    +   - Data Presentation:
+
+    +     1. Sorting is used in visualizations and reports to present data in a structured
+    and comprehensible manner.
+
+    +     2. Bar charts, tables, and graphs often display sorted information.
+
+
+    > "CONSISTENCY IS THE KEY TO SUCCESS..."
+
+    > ~ Life'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# Searching Applications:
+
+
+    +   > Web Search Engines:
+
+    +   1. Search engines use sophisticated algorithms to retrieve and rank search
+    results based on relevance.
+
+    +   2. Indexing and searching vast amounts of web content rely on efficient searching
+    techniques.
+
+
+    +   > Navigation Systems:
+
+    +   1. GPS and map applications use searching algorithms to locate and provide
+    directions to destinations.
+
+    +   2. Searching for addresses or points of interest is a common application.
+
+
+    +   > Information Retrieval:
+
+    +   1. In information retrieval systems, searching algorithms help users find
+    specific documents or pieces of information within large databases.
+
+
+    +   > Compiler Implementations:
+
+    +   1. Compilers use searching algorithms during the symbol resolution phase.
+
+    +   2. Efficient searching ensures quick access to variables, functions, and other
+    program elements.
+
+
+    +   > Spell Checkers and Autocorrect:
+
+    +   1. Searching algorithms are used to suggest corrections or completions in
+    spell checkers and autocorrect features.
+
+    +   2. Quickly identifying and offering relevant suggestions enhance user productivity.
+
+
+    +   > Network Routing:
+
+    +   1. Routing algorithms in computer networks rely on searching techniques to
+    find the most efficient path for data transmission.
+
+    +   2. Efficient searching contributes to reduced latency and improved network
+    performance.
+
+
+    # The Interplay of Sorting and Searching:
+
+
+    +   > Sorting as a Preprocessing Step: Sorting is often a preprocessing step before
+    searching, enhancing the efficiency of subsequent search operations, especially
+    in binary search scenarios.
+
+
+    +   > Combining Sorting and Searching in Algorithms: Advanced algorithms, such
+    as binary search trees and hash tables, combine sorting and searching principles
+    to achieve optimal performance in various applications.
+
+
+    Understanding the applications of sorting and searching algorithms is essential
+    for software developers, data scientists, and anyone involved in data management.
+    These algorithms are the backbone of numerous systems and applications, providing
+    the necessary tools for efficient data organization, retrieval, and processing.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# Chapter 8: Dynamic Programming
+
+
+    Understanding Dynamic Programming - Optimal Solutions through Efficient Techniques
+
+
+    # Introduction to Dynamic Programming:
+
+
+    Dynamic Programming (DP) is a powerful optimization technique used to solve problems
+    by breaking them down into smaller overlapping subproblems. Unlike traditional
+    recursive approaches, DP stores the solutions to subproblems and reuses them,
+    leading to improved efficiency.
+
+
+    # Core Concepts of Dynamic Programming:
+
+
+    # Overlapping Subproblems:
+
+
+    +   1. Dynamic Programming identifies and solves subproblems that recur multiple
+    times.
+
+    +   2. These subproblems form the building blocks of the overall problem.
+
+
+    # Optimal Substructure:
+
+
+    +   1. The optimal solution to the overall problem can be constructed from the
+    optimal solutions of its subproblems.
+
+    +   2. Breaking down the problem into smaller parts ensures that the solution
+    is built step by step.
+
+
+    # Key Steps in Dynamic Programming:
+
+
+    # Formulation of Recurrence Relations:
+
+
+    +   1. Express the solution to the problem in terms of solutions to its subproblems.
+
+    +   2. Define the relationship between the problem and its subproblems.
+
+
+    # Memorization and Tabulation:
+
+
+    +   1. Store and reuse solutions to subproblems to avoid redundant computations.
+
+    +   2. Memorization involves caching results in a data structure like a dictionary
+    or array.
+
+    +   3. Tabulation involves building a table of solutions iteratively from the
+    bottom up.
+
+
+    # Optimal Solution Reconstruction:
+
+
+    +   1. Once the solutions to subproblems are computed, reconstruct the optimal
+    solution to the original problem.
+
+
+    # Benefits of Dynamic Programming:
+
+
+    # Time Complexity Reduction:
+
+
+    +   1. By storing and reusing solutions to subproblems, DP reduces the time complexity
+    of the overall problem.
+
+    +   2. Avoiding redundant computations leads to more efficient algorithms.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Versatility:
+
+
+    +   1. Dynamic Programming is applicable to a wide range of problems, from optimization
+    to combinatorial problems.
+
+    +   2. Common applications include sequence alignment, resource allocation, and
+    path optimization.
+
+
+    # Limitations and Considerations:
+
+
+    # Optimal Substructure Requirement:
+
+
+    +   1. Problems must exhibit the optimal substructure property for dynamic programming
+    to be applicable.
+
+
+    # State Space Explosion:
+
+
+    +   1. In some cases, the number of subproblems can grow exponentially, leading
+    to a large state space.
+
+    +   2. Techniques like memorization and pruning are used to mitigate this issue.
+
+
+    # Real-World Analogy:
+
+
+    Dynamic Programming can be likened to climbing a staircase where each step represents
+    a subproblem. By efficiently solving each step and remembering the solutions,
+    one can reach the top with optimal efficiency.
+
+
+    # Example: Fibonacci Sequence:
+
+
+    The classic Fibonacci sequence provides a simple introduction to dynamic programming.
+    The naive recursive approach suffers from redundant computations, while DP techniques,
+    such as memorization or tabulation, drastically improve efficiency.
+
+
+    Understanding the principles of dynamic programming lays the foundation for solving
+    complex problems in a more efficient manner. In the subsequent sections of this
+    chapter, we will explore the practical application of dynamic programming through
+    problem-solving and case studies.
+
+
+    # Memorization and Tabulation Techniques - Optimizing Dynamic Programming Solutions
+
+
+    # Introduction to Memorization and Tabulation:
+
+
+    Dynamic Programming (DP) employs two fundamental techniques, memorization and
+    tabulation, to optimize the solution process. Both techniques aim to avoid redundant
+    computations by storing and reusing solutions to subproblems, enhancing the overall
+    efficiency of DP algorithms.
+
+
+    # Memorization (Top-Down Approach):'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'Memorization involves caching solutions to subproblems during the recursive
+    solution process. It is typically implemented using data structures like dictionaries
+    or arrays to store computed results.
+
+
+    # Steps in Memorization:
+
+
+    +   - **Recursive Function with Cache:**
+
+    +     1. Design a recursive function that solves subproblems.
+
+    +     2. Incorporate a cache to store and retrieve solutions to avoid redundant
+    computations.
+
+    +   - **Check Cache Before Computation:**
+
+    +     1. Before computing the solution to a subproblem, check the cache.
+
+    +     2. If the solution is present in the cache, retrieve it; otherwise, proceed
+    with computation.
+
+    +   - **Recursive Calls with Memorization:**
+
+    +     1. Recursively call the function for subproblems, utilizing memorization.
+
+    +     2. Cache the solutions to subproblems for future reference.
+
+    +   - **Example – Fibonacci Sequence:**
+
+    +     1. In the Fibonacci sequence problem, a memorized solution prevents redundant
+    computations by storing intermediate results in a cache.
+
+
+    # Tabulation (Bottom-Up Approach):
+
+
+    Tabulation involves building a table or array to store solutions to subproblems
+    iteratively from the bottom up. This approach starts with the smallest subproblems
+    and progressively computes larger solutions.
+
+
+    # Steps in Tabulation:
+
+
+    +   - **Initialize Table:**
+
+    +     1. Create a table or array to store solutions to subproblems.
+
+    +     2. Initialize the table with base case values.
+
+    +   - **Iterative Computation:**
+
+    +     1. Iteratively compute solutions to subproblems from the smallest to the
+    largest.
+
+    +     2. Utilize previously computed solutions in the table.
+
+    +   - **Final Result Extraction:**
+
+    +     1. Extract the final result from the completed table.
+
+    +     2. The last entry in the table represents the optimal solution to the overall
+    problem.
+
+    +   - **Example – Longest Increasing Subsequence:**
+
+    +     1. In the Longest Increasing Subsequence problem, tabulation efficiently
+    computes the length of the longest increasing subsequence for each subarray length.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# Choosing Between Memorization and Tabulation:
+
+
+    # Memorization:
+
+
+    +   1. Suitable for problems with recursive structures.
+
+    +   2. Emphasizes a top-down approach where the solution is computed from the
+    original problem.
+
+
+    # Tabulation:
+
+
+    +   1. Preferred for problems with an iterative nature and optimal substructure.
+
+    +   2. Utilizes a bottom-up approach, building solutions iteratively from subproblems
+    to the overall problem.
+
+
+    # Advantages and Considerations:
+
+
+    # Memorization Advantages:
+
+
+    +   1. Intuitive and easy to implement for recursive problems.
+
+    +   2. Efficiently avoids redundant computations.
+
+
+    # Tabulation Advantages:
+
+
+    +   1. Provides a systematic and structured approach to solving problems.
+
+    +   2. May be more efficient in terms of both time and space for certain problems.
+
+
+    # Real-World Analogy:
+
+
+    Memorization is akin to jotting down solutions to problems in a notebook for reference,
+    while tabulation is similar to constructing a table of solutions in a systematic
+    manner.
+
+
+    Understanding when to apply memorization or tabulation is crucial for optimizing
+    dynamic programming solutions. In the following sections, we will apply these
+    techniques to real-world case studies, demonstrating their practical utility in
+    solving complex problems.
+
+
+    # Case Studies: Longest Common Subsequence, Knapsack Problem - Applying Dynamic
+    Programming
+
+
+    # Introduction to Case Studies:
+
+
+    In this section, we will delve into two classic case studies, the Longest Common
+    Subsequence (LCS) problem and the Knapsack Problem, to demonstrate the practical
+    application of dynamic programming. These problems showcase how dynamic programming
+    techniques can be employed to efficiently solve real-world challenges.
+
+
+    # Case Study 1: Longest Common Subsequence (LCS):
+
+
+    Given two sequences, find the length of the longest common subsequence present
+    in both sequences.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# Dynamic Programming Approach:
+
+
+    # Formulation of Recurrence Relation:
+
+
+    +   1. Define the recurrence relation based on the characters of the two sequences.
+
+    +   2. Express the length of the LCS in terms of the lengths of shorter sub sequences.
+
+
+    # Memorization (Top-Down):
+
+
+    +   1. Implement a recursive function with memorization to compute the length
+    of the LCS.
+
+    +   2. Cache intermediate results to avoid redundant computations.
+
+
+    # Tabulation (Bottom-Up):
+
+
+    +   1. Create a table to store the lengths of LCS for various subsequence lengths.
+
+    +   2. Fill in the table iteratively from the bottom up.
+
+
+    # Optimal Solution Reconstruction:
+
+
+    +   1. Once the table is complete, reconstruct the LCS by backtracking through
+    the table.
+
+
+    # Example:
+
+
+    +   1. For sequences "ABCBDAB" and "BDCAB," the LCS is "BCAB" with a length of
+    4.
+
+
+    # Case Study 2: Knapsack Problem:
+
+
+    Given a set of items, each with a weight and a value, determine the maximum value
+    that can be obtained by selecting a subset of items without exceeding a given
+    weight capacity.
+
+
+    # Dynamic Programming Approach:
+
+
+    # Formulation of Recurrence Relation:
+
+
+    +   1. Define the recurrence relation based on the decision to include or exclude
+    each item.
+
+    +   2. Express the maximum value in terms of the values and weights of the remaining
+    items.
+
+
+    # Memorization (Top-Down):
+
+
+    +   1. Implement a recursive function with memorization to compute the maximum
+    value.
+
+    +   2. Cache intermediate results to avoid redundant computations.
+
+
+    # Tabulation (Bottom-Up):
+
+
+    +   1. Create a table to store the maximum values for various item subsets and
+    weight capacities.
+
+    +   2. Fill in the table iteratively from the bottom up.
+
+
+    # Optimal Solution Reconstruction:
+
+
+    +   1. Once the table is complete, reconstruct the optimal subset of items that
+    maximizes the total value.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# Example:
+
+
+    +   1. Given items with weights [2, 3, 4, 5] and values [3, 4, 5, 6], and a knapsack
+    capacity of 5, the maximum value is 11 (selecting items with weights 2 and 3).
+
+
+    # Key Takeaways:
+
+
+    +   > These case studies illustrate the versatility and power of dynamic programming
+    in solving problems with optimal substructure and overlapping subproblems.
+
+    +   > Memorization and tabulation techniques provide efficient solutions to complex
+    problems, optimizing both time and space complexity.
+
+    +   > The principles learned from these case studies can be applied to a wide
+    range of optimization problems in various domains.
+
+
+    # Chapter 9: Greedy Algorithms
+
+
+    # Introduction to Greedy Algorithms - Optimizing Locally for Global Solutions
+
+
+    # Overview of Greedy Algorithms:
+
+
+    Greedy algorithms are problem-solving strategies that make locally optimal choices
+    at each stage with the hope of finding a global optimum. These algorithms aim
+    to achieve the best possible solution at each step without considering the entire
+    problem in its entirety.
+
+
+    # Key Characteristics:
+
+
+    # Greedy Choice Property:
+
+
+    +   1. Greedy algorithms make choices that seem best at the current moment without
+    reconsidering them in future steps.
+
+    +   2. The strategy is to pick the locally optimal solution with the expectation
+    that it will contribute to the overall optimal solution.
+
+
+    # Lack of Backtracking:
+
+
+    +   1. Unlike dynamic programming, greedy algorithms do not revisit or revise
+    choices made in the past.
+
+    +   2. Decisions are made in a one-time forward pass, with no backtracking or
+    reconsideration.
+
+
+    # Suitable Problems:
+
+
+    +   1. Greedy algorithms are effective for problems with optimal substructure
+    and the greedy choice property.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '2. They are particularly useful when a locally optimal choice also leads to
+    a globally optimal solution.
+
+
+    # Strategies for Greedy Algorithms:
+
+
+    +   > Greedy Choice:
+
+    +   1. At each step, make the choice that appears to be the best option at that
+    specific moment.
+
+    +   2. This choice should contribute positively to the overall solution.
+
+    +   > Greedy-Choice Property:
+
+    +   1. The choice made at each step should be the one that minimizes or maximizes
+    a certain criterion without considering the global context.
+
+    +   > Optimization Function:
+
+    +   1. Define an optimization function that evaluates the quality of a solution.
+
+    +   2. The goal is to optimize this function over the course of the algorithm.
+
+
+    # Advantages and Considerations:
+
+
+    +   > Simplicity:
+
+    +   1. Greedy algorithms are often simple and easy to implement.
+
+    +   2. They provide straightforward solutions to optimization problems.
+
+    +   > Efficiency:
+
+    +   1. Greedy algorithms can be efficient for specific types of problems, especially
+    those with substructure and the greedy-choice property.
+
+    +   2. They may outperform other approaches in terms of time complexity.
+
+    +   > Limitations:
+
+    +   1. Greedy algorithms may not always guarantee the optimal global solution.
+
+    +   2. Lack of backtracking can lead to locally optimal choices that do not contribute
+    to the best overall solution.
+
+
+    # Real-World Analogy:
+
+
+    Greedy algorithms can be compared to a hiker climbing a mountain. At each step,
+    the hiker chooses the steepest path, hoping to reach the summit. This strategy
+    might not guarantee the globally easiest path, but it aims to reach a high point
+    with each step.
+
+
+    # Example: The Coin Change Problem:
+
+
+    In the coin change problem, a greedy algorithm can be applied to minimize the
+    number of coins needed to make change for a given amount. The algorithm selects
+    the largest coin at each step until the desired amount is reached.
+
+
+    Understanding the principles of greedy algorithms is crucial for selecting the
+    appropriate strategy when solving optimization problems. In the following sections,
+    we will explore'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: 'practical applications of greedy algorithms through problem-solving and case
+    studies, showcasing their effectiveness in various scenarios.
+
+
+    # Solving Problems with Greedy Strategies - Local Choices, Global Optimality
+
+
+    # General Approach to Greedy Problem Solving:
+
+
+    Greedy algorithms focus on making locally optimal choices at each step with the
+    expectation that these choices will collectively lead to a globally optimal solution.
+    The process involves iteratively selecting the best available option based on
+    a specific criterion.
+
+
+    # Steps in Solving Problems with Greedy Strategies:
+
+
+    +   > Problem Identification:
+
+    +     1. Identify a problem that exhibits the greedy-choice property, allowing
+    locally optimal choices to contribute to a global optimum.
+
+    +   > Greedy Choice Definition:
+
+    +     1. Define the criteria for making greedy choices at each step.
+
+    +     2. This could involve selecting the maximum or minimum value, considering
+    ratios, or optimizing based on specific criteria.
+
+    +   > Iterative Decision-Making:
+
+    +     1. Iteratively make decisions, selecting the best available choice at each
+    step.
+
+    +     2. Ensure that each choice contributes positively to the overall solution.
+
+    +   > Lack of Backtracking:
+
+    +     1. Unlike dynamic programming, avoid revisiting or revising choices made
+    in the past.
+
+    +     2. The algorithm progresses in a forward-only manner.
+
+
+    # Example: The Activity Selection Problem
+
+
+    Given a set of activities with start and finish times, find the maximum number
+    of non-overlapping activities that can be performed.
+
+
+    # Greedy Strategy:
+
+
+    +   > Sorting Activities:
+
+    +     1. Sort the activities based on their finish times in ascending order.
+
+    +   > Greedy Choice:
+
+    +     1. Choose the activity with the earliest finish time that is compatible
+    with the previously selected activities.
+
+    +   > Iterative Selection:
+
+    +     1. Iteratively select activities until the entire set is processed.'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# Key Concepts:
+
+
+    # Frequency-Based Code Lengths:
+
+
+    +   1. Huffman coding assigns shorter codes to more frequent characters and longer
+    codes to less frequent characters.
+
+    +   2. The goal is to minimize the total encoded length of the input.
+
+
+    # Prefix-Free Codes:
+
+
+    +   1. Huffman codes are prefix-free, meaning no code is the prefix of another.
+
+    +   2. This property ensures that the encoded message can be uniquely deciphered
+    without ambiguity.
+
+
+    # Greedy Construction:
+
+
+    +   1. Huffman coding is constructed in a greedy manner, building the code tree
+    step by step based on the frequencies of characters.
+
+
+    # Huffman Coding Algorithm:
+
+
+    # Character Frequency Analysis:
+
+
+    +   1. Analyse the frequency of each character in the input data.
+
+
+    # Create Initial Nodes:
+
+
+    +   1. Create initial nodes for each character with their respective frequencies.
+
+
+    # Build Huffman Tree:
+
+
+    +   1. Repeatedly merge the two nodes with the lowest frequencies to create a
+    new internal node.
+
+    +   2. Update the frequency of the new node to be the sum of the merged nodes.
+
+    +   3. Continue this process until a single tree is formed.
+
+
+    # Assign Codes:
+
+
+    +   1. Assign binary codes to each character based on the path taken to reach
+    them in the Huffman tree.
+
+    +   2. Characters on the left side get a ''0'', and characters on the right side
+    get a ''1''.
+
+
+    # Encode Data:
+
+
+    +   1. Replace each character in the input data with its corresponding Huffman
+    code.
+
+    +   2. The encoded data is now more compact, with frequent characters having shorter
+    codes.
+
+
+    # Decode Data:
+
+
+    +   1. Use the Huffman tree to decode the encoded data back into the original
+    characters.
+
+
+    # Example: Take a look at the code below
+
+
+    ```
+
+    Original Data: "ABRACADABRA"
+
+
+    Character Frequencies:
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "```\nA: 5\nB: 2\nR: 2\nC: 1\nD: 1\n\nHuffman Tree:\n\n      [11]\n       /\
+    \ \\\n   [5]   [6]\n    / \\   / \\\n   A [2] [4] [2]\n      / \\ / \\ / \\\n\
+    \     B  R C  D\n\nHuffman Codes:\nA: 0\nB: 10\nR: 11\nC: 100\nD: 101\n\nEncoded\
+    \ Data: \"0100110110101000100100100110110101\"\n```\n\n# Applications:\n\n+  \
+    \ Data Compression:\n+   1. Huffman coding is widely used in data compression\
+    \ algorithms, including file compression formats like ZIP.\n+   Image and Video\
+    \ Compression:\n+   1. Huffman coding is employed in various image and video compression\
+    \ techniques to reduce file sizes while preserving quality.\n+   Network Transmission:\n\
+    +   1. In network communication, Huffman coding can be used to compress data before\
+    \ transmission, reducing bandwidth requirements.\n\n# Advantages and Considerations:"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Space Efficiency:
+
+
+    +   1. Huffman coding achieves space-efficient encoding by assigning shorter codes
+    to more frequent characters.
+
+
+    # Time Complexity:
+
+
+    +   1. The time complexity of the Huffman coding algorithm is typically linear
+    in the number of characters.
+
+
+    # Greedy Nature:
+
+
+    +   1. The greedy nature of Huffman coding allows for quick construction of optimal
+    prefix-free codes.
+
+
+    Understanding Huffman coding and its application of greedy algorithms is fundamental
+    to efficient data compression. In the subsequent sections, we will explore additional
+    applications of greedy algorithms, further showcasing their versatility in problem-solving.
+
+
+    # Dijkstra''s Algorithm Revisited - Efficient Shortest Path Finding with Greedy
+    Optimization
+
+
+    # Introduction to Dijkstra''s Algorithm:
+
+
+    Dijkstra''s algorithm is a classic algorithm for finding the shortest paths from
+    a source vertex to all other vertices in a weighted graph. It was conceived by
+    computer scientist Edsger W. Dijkstra in 1956 and is particularly effective in
+    scenarios where the graph is dense or the number of vertices is relatively small.
+
+
+    # Key Concepts:
+
+
+    # Single-Source Shortest Paths:
+
+
+    +   1. Dijkstra''s algorithm determines the shortest paths from a single source
+    vertex to all other vertices in the graph.
+
+
+    # Greedy Approach:
+
+
+    +   1. The algorithm employs a greedy strategy, iteratively selecting the vertex
+    with the shortest known distance from the source at each step.
+
+
+    # Relaxation:
+
+
+    +   1. The process of relaxation involves updating the shortest known distance
+    to a vertex if a shorter path is discovered.
+
+
+    # Steps of Dijkstra''s Algorithm:
+
+
+    # Initialization:
+
+
+    +   1. Set the distance of the source vertex to 0 and the distances of all other
+    vertices to infinity.
+
+    +   2. Maintain a priority queue or min-heap to store vertices based on their
+    current distances.
+
+
+    # Greedy Vertex Selection:
+
+
+    +   1. Extract the vertex with the minimum distance from the priority queue.
+
+    +   2. This vertex becomes the current focus for exploration.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# Relaxation:
+
+
+    +   1. For each neighbour of the current vertex, update their distances if a shorter
+    path through the current vertex is found.
+
+
+    # Repeat:
+
+
+    +   1. Repeat steps 2 and 3 until all vertices have been processed or the destination
+    is reached.
+
+
+    # Shortest Path Reconstruction:
+
+
+    +   1. After completion, the shortest path to any vertex can be reconstructed
+    by backtracking through the predecessors.
+
+
+    # Example: Consider the following weighted graph
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_99_0.png)
+
+
+    # Execution of Dijkstra''s Algorithm:
+
+
+    # Initialization:
+
+
+    +   Set distances: A (0), B (∞), C (∞), D (∞), E (∞), F (∞), G (∞).
+
+
+    # Iteration 1:
+
+
+    +   Visit A, relax edges (A-B, A-C).
+
+    +   Set distances: A (0), B (2), C (4), D (∞), E (∞), F (∞), G (∞).
+
+
+    # Iteration 2:
+
+
+    +   Visit B, relax edges (B-D, B-C).
+
+    +   Set distances: A (0), B (2), C (4), D (6), E (∞), F (∞), G (∞).
+
+
+    # Iteration 3:
+
+
+    +   Visit C, relax edges (C-E, C-G).
+
+    +   Set distances: A (0), B (2), C (4), D (6), E (8), F (∞), G (11).
+
+
+    # Iteration 4:
+
+
+    +   Visit D, relax edges (D-F).
+
+    +   Set distances: A (0), B (2), C (4), D (6), E (8), F (9), G (11).
+
+
+    # Iteration 5:
+
+
+    +   Visit F, relax edges (F-G).
+
+    +   Set distances: A (0), B (2), C (4), D (6), E (8), F (9), G (10).
+
+
+    # Iteration 6:'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '+   - Visit G, no relaxation possible.
+
+
+    # Shortest Paths:
+
+
+    +   - Shortest paths from A to all other vertices are now known.
+
+
+    # Applications:
+
+
+    # Routing Protocols:
+
+
+    +   1. Dijkstra''s algorithm is employed in computer networks for routing data
+    packets, determining the shortest paths.
+
+
+    # Transportation Networks:
+
+
+    +   1. In transportation planning, Dijkstra''s algorithm can be used to find the
+    most efficient routes between locations.
+
+
+    # Robotics and Path Planning:
+
+
+    +   1. Autonomous robots use Dijkstra''s algorithm to plan their paths in dynamic
+    environments.
+
+
+    # Advantages and Considerations:
+
+
+    # Optimality:
+
+
+    +   1. Dijkstra''s algorithm guarantees the optimality of the computed shortest
+    paths.
+
+
+    # Greedy Nature:
+
+
+    +   1. The greedy approach makes the algorithm efficient for finding shortest
+    paths in dense graphs.
+
+
+    # Limitations:
+
+
+    +   1. Dijkstra''s algorithm may not perform well in large graphs, and more efficient
+    algorithms like A may be preferred.
+
+
+    Dijkstra''s algorithm remains a fundamental tool in graph theory and computer
+    science, providing an efficient solution for finding shortest paths in various
+    applications.
+
+
+    ![](img/717c6998455b631da454a8027cd01ebd_100_0.png)
+
+
+    # Chapter 10: Case Studies and Projects
+
+
+    # Building Real-World Applications with DSA and C++ - Bridging Theory and Practice
+
+
+    # Introduction:
+
+
+    In this chapter, we delve into the practical aspect of Data Structures and Algorithms
+    (DSA) using the C++ programming language. Theoretical knowledge is essential,
+    but its true value emerges when applied to real-world scenarios. We explore'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: 'the process of designing, implementing, and optimizing applications that leverage
+    DSA principles for enhanced performance and efficiency.
+
+
+    # Case Study 1: Inventory Management System
+
+
+    Design and implement an Inventory Management System using DSA principles for efficient
+    data organization and retrieval.
+
+
+    +   > Data Structures:
+
+    +   1. Utilize arrays, linked lists, or hash tables for managing product data.
+
+    +   2. Implement sorting algorithms for quick and efficient retrieval.
+
+    +   > Algorithms:
+
+    +   1. Employ searching algorithms to locate products quickly.
+
+    +   2. Optimize inventory updates using efficient algorithms for addition and
+    removal.
+
+    +   > User Interface:
+
+    +   1. Design a user-friendly interface for adding, updating, and querying inventory.
+
+    +   2. Implement error handling and validation mechanisms.
+
+    +   > Performance Optimization:
+
+    +   1. Profile the application to identify bottlenecks.
+
+    +   2. Apply optimization techniques to enhance the system''s responsiveness.
+
+
+    # Case Study 2: Route Planning Application
+
+
+    Develop a Route Planning Application that finds the shortest path between two
+    locations on a map.
+
+
+    +   > Graph Representation:
+
+    +   1. Implement a graph data structure to represent the map.
+
+    +   2. Use Dijkstra''s algorithm for finding the shortest path.
+
+    +   > User Interface:
+
+    +   1. Create an intuitive interface for users to input locations and view optimized
+    routes.
+
+    +   2. Incorporate graphical representations for a better user experience.
+
+    +   > Error Handling:
+
+    +   1. Implement error-checking mechanisms for invalid inputs or unavailable routes.
+
+    +   2. Provide informative error messages to guide users.
+
+    +   > Integration with Maps API:
+
+    +   1. Integrate the application with a maps API for accurate location data.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '2. Ensure real-time updates and accurate distance calculations.
+
+
+    # Project: Building a Code Editor with Autocomplete
+
+
+    Build a code editor that supports autocompletion and provides suggestions based
+    on the user''s coding context.
+
+
+    # Trie Data Structure:
+
+
+    +   - Implement a trie to store a dictionary of programming keywords.
+
+    +   - Utilize the trie for efficient autocompletion suggestions.
+
+
+    # Algorithms:
+
+
+    +   - Develop algorithms for analysing the user''s code context and predicting
+    potential keywords.
+
+    +   - Optimize the autocomplete feature for responsiveness.
+
+
+    # User Interface:
+
+
+    +   - Design a clean and user-friendly code editor interface.
+
+    +   - Implement features like syntax highlighting and error checking.
+
+
+    # Integration with IDEs:
+
+
+    +   - Allow seamless integration with popular Integrated Development Environments
+    (IDEs).
+
+    +   - Ensure compatibility with multiple programming languages.
+
+
+    # Tips for Success:
+
+
+    # Maintain Modularity:
+
+
+    +   - Divide the application into modular components for easier development and
+    maintenance.
+
+
+    # Continuously Optimize:
+
+
+    +   - Regularly profile and optimize the code for better performance.
+
+    +   - Identify and eliminate bottlenecks in the application.
+
+
+    # Embrace Design Patterns:
+
+
+    +   - Incorporate design patterns for scalable and maintainable code.
+
+    +   - Leverage object-oriented principles to enhance code structure.
+
+
+    # User-Centric Design:
+
+
+    +   - Prioritize user experience in the application''s design.
+
+    +   - Implement features that align with user expectations and preferences.
+
+
+    # Collaboration and Code Reviews:
+
+
+    +   - Foster collaboration within the development team.
+
+    +   - Conduct regular code reviews to ensure code quality and adherence to best
+    practices.
+
+
+    This chapter aims to bridge the gap between theoretical knowledge and practical
+    application by exploring real-world case studies and projects. The provided examples'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: 'demonstrate how DSA principles can be effectively utilized in developing robust
+    and efficient software solutions using the C++ programming language.
+
+
+    # Optimizing Code for Performance
+
+
+    Efficient code is paramount for the success of any software project. Optimization
+    involves enhancing code to run faster, use fewer resources, and deliver a smoother
+    user experience. Techniques such as algorithmic improvements, data structure optimizations,
+    and minimizing redundant operations contribute to performance optimization. Profiling
+    tools help identify bottlenecks, guiding developers to focus their efforts where
+    improvements will yield the most significant impact. By fine-tuning code through
+    optimization, applications can achieve better responsiveness and scalability,
+    crucial in resource-intensive environments.
+
+
+    # Debugging and Profiling Techniques
+
+
+    Effective debugging is an essential skill in software development. Debugging involves
+    identifying and resolving errors or defects in the code, ensuring its correctness
+    and reliability. Profiling, on the other hand, involves analysing the program''s
+    performance and resource usage. Developers use tools like breakpoints, logging,
+    and interactive debuggers to isolate and fix bugs. Profiling tools provide insights
+    into runtime behaviour, memory usage, and execution times, aiding in the identification
+    of performance bottlenecks. A systematic approach to debugging and profiling is
+    critical for maintaining code quality and delivering robust software.
+
+
+    # Tips for Efficient Problem Solving
+
+
+    Efficient problem-solving is the foundation of successful software development.
+    This involves breaking down complex problems into manageable components, understanding
+    the requirements, and devising effective solutions. Key tips include developing
+    a clear problem-solving strategy, understanding the problem domain thoroughly,
+    and choosing appropriate data structures and algorithms. Continuous learning,
+    practicing on coding platforms, and collaborating with peers contribute to honing
+    problem-solving skills. Additionally, embracing a systematic approach, handling
+    edge cases, and seeking feedback foster an environment of continuous improvement,
+    enabling developers to tackle challenges with confidence and creativity.
+
+
+    # Thank You'
+  merge: -1
+  img_proc: true
