@@ -1,0 +1,30 @@
+That introduces some subtle bugs in your application. The compiler does not help you find these bugs. It’s all because of boxing. Start with a simple structure that lets you modify one of its fields, and put some of those objects in a collection:
+
+```
+public struct Person
+{
+    public string Name { get; set; }
+
+    public override string ToString()
+    {
+        return Name;
+    }
+}
+
+// Using the Person in a collection:
+var attendees = new List<Person>();
+Person p = new Person { Name = "Old Name" };
+attendees.Add(p);
+
+// Try to change the name:
+// Would work if Person was a reference type.
+Person p2 = attendees[0];
+p2.Name = "New Name";
+
+// Writes "Old Name":
+Console.WriteLine(attendees[0].ToString());
+```
+
+Person is a value type. The JIT compiler creates a specific closed generic type for List<Person> so that Person objects are not boxed, because they are stored in the attendees collection. Another copy gets made when you remove the Person object to access the Name property to change. All you did was change the copy. In fact, a third copy was made to call the ToString() function through the attendees[0] object. For this and many other reasons, you should create immutable value types (see Item 20).
+
+Yes, value types can be converted to System.Object or any interface reference. That conversion happens implicitly, complicating the task of finding them. Those are the rules of the environment and the language. The boxing and unboxing operations make copies where you might not expect. That causes bugs. There is also a performance cost to treating value types

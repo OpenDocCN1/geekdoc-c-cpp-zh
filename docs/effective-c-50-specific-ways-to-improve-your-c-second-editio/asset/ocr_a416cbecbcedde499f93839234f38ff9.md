@@ -1,0 +1,36 @@
+```
+try
+{
+    urls.RunAsync(
+        url => startDownload(url),
+        task => finishDownload(
+            task.AsyncState.ToString(), task.Result));
+}
+catch (AggregateException problems)
+{
+    ReportAggregateError(problems);
+}
+```
+
+```
+private static void ReportAggregateError(
+    AggregateException aggregate)
+{
+    foreach (var exception in aggregate.InnerExceptions)
+        if (exception is AggregateException)
+            ReportAggregateError(
+                exception as AggregateException);
+        else
+            Console.WriteLine(exception.Message);
+}
+```
+
+The ReportAggregateError prints out the messages for all exceptions that are not themselves AggregateExceptions. Of course, this has the nasty side effect of swallowing all exceptions, whether you anticipated them or not. That’s rather dangerous. Instead, what you want to do is handle only those exceptions from which you can recover, and rethrow any other exceptions.
+
+There are enough recursive collections here that a utility method makes sense. The generic method must know which exception types you want to handle, and which are not expected and how you’ll handle the ones you are handling. You need to send this method a set of exception types, and the code to handle the exception. That’s simply a dictionary of types and Action<T> lambda expressions. And, if the handler doesn’t process everything in the collection of InnerExceptions, clearly something else went wrong. That means it’s time to rethrow the original exception. Here’s the updated code that calls RunAsync:
+
+```
+try
+{
+    urls.RunAsync(
+```

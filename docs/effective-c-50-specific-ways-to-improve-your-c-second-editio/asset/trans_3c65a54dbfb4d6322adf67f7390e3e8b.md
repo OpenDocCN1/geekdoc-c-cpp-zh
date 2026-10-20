@@ -1,0 +1,118 @@
+
+
+```
+url => startDownload(url),
+    task => finishDownload(task.AsyncState.ToString(),
+    task.Result));
+}
+catch (AggregateException problems)
+{
+    var handlers = new Dictionary<Type, Action<Exception>>();
+    handlers.Add(typeof(WebException),
+        ex => Console.WriteLine(ex.Message));
+
+    if (!HandleAggregateError(problems, handlers))
+        throw;
+}
+```
+
+The HandleAggregateError method recursively looks at every exception. If the exception is expected, the handler is called. Otherwise, HandleAggregateError returns false, indicating that this set of aggregate exceptions cannot be processed correctly.
+
+```
+private static bool HandleAggregateError(
+    AggregateException aggregate,
+    Dictionary<Type, Action<Exception>> exceptionHandlers)
+{
+    foreach (var exception in aggregate.InnerExceptions)
+        if (exception is AggregateException)
+            return HandleAggregateError(
+                exception as AggregateException,
+                exceptionHandlers);
+        else if (exceptionHandlers.ContainsKey(
+            exception.GetType()))
+        {
+            exceptionHandlers[exception.GetType()]
+                (exception);
+        }
+        else
+            return false;
+    return true;
+}
+```
+
+This code does look a bit dense, but it’s not that hard. When it encounters an AggregateException, it evaluates that child list recursively. When it
+encounters any other kind of exception, it looks into the dictionary. If a handler Action<> has been registered, it calls that handler. If not, then it returns false immediately, having found an exception that it should not be handled.
+
+You may be wondering why the original AggregateException gets thrown rather than the single exception for which there was no handler. The problem is that throwing one exception out of the collection could lose important information. The InnerExceptions may contain any number of exceptions. More than one may be of a type that is not expected. You must return the entire collection or risk losing much of that information. In many cases, there will be only one exception in the AggregateException’s InnerExceptions collection. However, you should not code that way because when you do need that extra information, it won’t be there.
+
+Of course, this feels a bit ugly. Wouldn’t it be better to prevent the exception from leaving the task doing the background work? In almost all cases, that is better. That requires changing the code that runs the background task to ensure that no exceptions can exit the background task. Whenever you use the TaskCompletionSource<> class, that means never calling TrySetException(), but rather ensuring that every task somehow calls TrySetResult() to indicate completeness. That would mean the following changes to startDownload. But, just like I said earlier, you should not be catching every single exception. You should catch only those exceptions from which you can recover. In this example, you can reasonably recover from a WebException, indicating that the remote host isn’t available. Other exception types would indicate more serious problems. Those should continue to generate exceptions and stop all processing. That causes the following changes to the startDownload method:
+
+```
+private static Task<byte[]> startDownload(string url)
+{
+    var tcs = new TaskCompletionSource<byte[]>(url);
+    var wc = new WebClient();
+    wc.DownloadDataCompleted += (sender, e) =>
+    {
+        if (e.UserState == tcs)
+        {
+            if (e.Cancelled)
+                tcs.TrySetCanceled();
+            else if (e.Error != null)
+```
+```
+{
+    if (e.Error is WebException)
+        tcs.TrySetResult(new byte[0]);
+    else
+        tcs.TrySetException(e.Error);
+}
+else
+    tcs.TrySetResult(e.Result);
+}
+};
+wc.DownloadDataAsync(new Uri(url), tcs);
+return tcs.Task;
+}
+```
+
+A WebException causes a return indicating 0 bytes read, and all other exceptions are thrown through the normal channels. Yes, this does mean that you still need to handle what happens when AggregateExceptions are thrown. It’s possible that you merely need to treat those as fatal errors, and your background tasks can handle all other errors. But you do need to understand that it’s a different kind of exception.
+
+Of course, errors in background tasks create other issues when you use LINQ syntax. Remember from Item 35 that I described three different parallel algorithms. In all cases, using PLINQ makes some changes to the normal lazy evaluation, and these changes are important for how you must handle exceptions in your PLINQ algorithms. Remember that usually, a query executes only as other code requests the items produced by the query. That isn’t quite how it works with PLINQ. Background threads generate results as they run, and another task constructs the final result sequence. It’s not exactly an eager evaluation. The query results are not produced immediately. However, the background threads that produce the results will start as soon as the scheduler allows. Not immediately, but very soon. Processing any of those items may throw an exception. Now, that means you must change your exception handling code. In a typical LINQ query, you can put try/catch blocks around the code that uses the query results. It’s not needed around the code that defines the LINQ query expression:
+
+```
+var nums = from n in data
+    where n < 150
+    select Factorial(n);
+```
+
+```
+try
+{
+    foreach (var item in nums)
+        Console.WriteLine(item);
+}
+catch (InvalidOperationException inv)
+{
+    // elided
+}
+```
+
+Once PLINQ is involved, you must enclose the definition of the query in the try/catch block as well. And, of course, remember that once you use PLINQ, you must catch AggregateException instead of whatever exception you had been originally expecting. This is true whether you use Pipelining, Stop and Go, or Inverted Enumeration.
+
+Exceptions are complicated in any algorithm. Parallel tasks create more complications. The Parallel Task Library uses the AggregateException class to hold any and all exceptions thrown somewhere in the depths of your parallel algorithms. Once any of the background threads throws an exception, any other background operations are also stopped. Your best plan is to try to ensure that no exceptions can be thrown from the code executing in your parallel tasks. Even so, other exceptions that you don’t expect may be thrown elsewhere. That means you must handle any AggregateException in the controlling thread that initiated all the background work.
+
+This page intentionally left blank
+
+## 5 Dynamic Programming in C#
+
+There are advantages to both static typing and dynamic typing. Dynamic typing can enable quicker development times and easier interoperability with dissimilar systems. Static typing enables the compiler to find classes of errors. Because the compiler can make those checks, runtime checks can be streamlined, which results in better performance. C# is a statically typed language and will remain one. However, for those times when dynamic languages provide more efficient solutions, C# now contains dynamic features. Those features enable you to switch between static typing and dynamic typing when the needs arise. The wealth of features that you have in static typing means that most of your C# code will be statically typed. This chapter shows you the problems suited for dynamic programming and the techniques you will use to solve those problems most efficiently.
+
+### Item 38: Understand the Pros and Cons of Dynamic
+
+C#’s support for dynamic typing is meant to provide a bridge to other locations. It’s not meant to encourage general dynamic language programming, but rather to provide a smoother transition between the strong, static typing associated with C# and those environments that use a dynamic typing model.
+
+However, that doesn’t mean you should restrict your use of dynamic to interoperating with other environments. C# types can be coerced into dynamic objects and treated as dynamic objects. Like everything else in this world, there’s good and bad in treating C# objects as dynamic objects. Let’s look at one example and go over what happens, both good and bad.
+
+One of the limitations of C# generics is that in order to access methods beyond those defined in System.Object, you need to specify constraints. Furthermore, constraints must be in the form of a base class, a set of interfaces, or the special constraints for reference type, value type, and the existence of a public parameterless constructor. You can’t specify that some
+

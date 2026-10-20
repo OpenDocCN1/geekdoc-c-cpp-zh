@@ -1,0 +1,30 @@
+```
+// Discussed below.
+if (this.GetType() != right.GetType())
+    return false;
+
+// Compare this type's contents here:
+return this.Equals(right as Foo);
+}
+
+#region IEquatable<Foo> Members
+public bool Equals(Foo other)
+{
+    // elided.
+    return true;
+}
+#endregion
+}
+```
+
+First, Equals() should never throw exceptions—it doesn’t make much sense. Two variables are or are not equal; there’s not much room for other failures. Just return false for all failure conditions, such as null references or the wrong argument types. Now, let’s go through this method in detail so you understand why each check is there and why some checks can be left out. The first check determines whether the right-side object is null. There is no check on this reference. In C#, this is never null. The CLR throws an exception before calling any instance method through a null reference. The next check determines whether the two object references are the same, testing object identity. It’s a very efficient test, and equal object identity guarantees equal contents.
+
+The next check determines whether the two objects being compared are the same type. The exact form is important. First, notice that it does not assume that this is of type Foo; it calls this.GetType(). The actual type might be a class derived from Foo. Second, the code checks the exact type of objects being compared. It is not enough to ensure that you can convert the right-side parameter to the current type. That test can cause two subtle bugs. Consider the following example involving a small inheritance hierarchy:
+
+```
+public class B : IEquatable<B>
+{
+    public override bool Equals(object right)
+    {
+        // check null:
+```

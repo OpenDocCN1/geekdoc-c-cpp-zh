@@ -1,0 +1,64 @@
++   Reusable code, 130, 134–135
++   Rights, security, 294–298
++   Role-based security, 295
++   RunAsync
++     asynchronous downloading, 217
++     handling exceptions in, 220–222
++   Runtime constants vs. compile-time constants, 8–12
++   Runtime type checking, 12
++   
++   S
++   SafeUpdate method, 293
++   Scope, 127–129
++   Searching containers, 45
++   Security
++     building cohesive assemblies, 307
++     overview, 294–298
++     permissions, 163
++   Sequence element conversion, 19–20
++   Serializable attribute, 158–166
++   Serialization
++     creating APIs based on, 167
++     exception class, 282–283
++     type, 157–166
++   SerializationFormatter, 163
++   Servers
++     building cohesive assemblies, 305–306
++     creating internet service APIs, 166–171
++   Set accessors, 4–5
++   Shape conversion, 56–60
++   Shoemaker, Martin, 179
++   Single-dimension indexers, 5
++   Singleton pattern, 77–78
++   
++   Size, type, 109
++   Skip(), 213–214
++   Slicing the object, 105
++   Small functions, 64–68
++   SOAP serialization, 159
++   Software design. See Design expression
++   SomeMethod(), 28
++   Source compatibility, 6–7
++   StackTrace class, 23
++   Standard dispose pattern, 98–104
++   StartDownload(), 217
++   State
++     ensuring that 0 is valid for value types, 110–114
++     immutable atomic value type, 114–123
++     protecting read-only properties from, 154–157
++     strong exception guarantee, 285–286
++   Statements for resource cleanup, 87–94
++   Static class member initialization, 77–79
++   Static constructors, 77–79
++   Static member variables, 96
++   Static programming, 227
++   Stop and Go, 207–208
++   Storing data
++     isolated storage, 296–297
++     with value types, 104–110
++   string serialization, 158
++   String types
++     dynamic programming, 228–229
++     ensuring 0 is valid state for, 113–114
++     providing ToString(), 28–36
++     using with compile-time constants, 8–9

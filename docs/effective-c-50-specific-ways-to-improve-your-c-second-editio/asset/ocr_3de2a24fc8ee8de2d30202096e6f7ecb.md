@@ -1,0 +1,25 @@
+But there are still holes in the mechanism you’ve created. How does a derived class clean up its resources and still let a base class clean up as well? If derived classes override finalize or add their own implementation of IDisposable, those methods must call the base class; otherwise, the base class doesn’t clean up properly. Also, finalize and Dispose share some of the same responsibilities: You have almost certainly duplicated code between the finalize method and the Dispose method. As you’ll learn in Item 23, overriding interface functions does not work the way you’d expect. The third method in the standard Dispose pattern, a protected virtual helper function, factors out these common tasks and adds a hook for derived classes to free resources they allocate. The base class contains the code for the core interface. The virtual function provides the hook for derived classes to clean up resources in response to Dispose() or finalization:
+
+```
+protected virtual void Dispose(bool isDisposing)
+```
+
+This overloaded method does the work necessary to support both finalize and Dispose, and because it is virtual, it provides an entry point for all derived classes. Derived classes can override this method, provide the proper implementation to clean up their resources, and call the base class version. You clean up managed and unmanaged resources when isDisposing is true, and you clean up only unmanaged resources when isDisposing is false. In both cases, call the base class’s Dispose(bool) method to let it clean up its own resources.
+
+Here is a short sample that shows the framework of code you supply when you implement this pattern. The MyResourceHog class shows the code to implement IDisposable and create the virtual Dispose method:
+
+```
+public class MyResourceHog : IDisposable
+{
+    // Flag for already disposed
+    private bool alreadyDisposed = false;
+
+    // Implementation of IDisposable.
+    // Call the virtual Dispose method.
+    // Suppress Finalization.
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+```

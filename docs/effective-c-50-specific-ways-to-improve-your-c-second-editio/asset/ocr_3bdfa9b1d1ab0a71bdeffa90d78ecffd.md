@@ -1,0 +1,48 @@
+```
+```
+get { return city; }
+}
+private readonly string city;
+```
+```
+
+```
+```
+public string State
+{
+get { return state; }
+}
+private readonly string state;
+```
+```
+
+```
+```
+public int ZipCode
+{
+get { return zip; }
+}
+private readonly int zip;
+```
+```
+
+```
+```
+public Address3(string line1,
+string line2,
+string city,
+string state,
+int zipCode) :
+{
+this.line1 = line1;
+this.line2 = line2;
+this.city = city;
+ValidateState(state);
+this.state = state;
+ValidateZip(zipCode);
+this.zip = zipCode;
+}
+```
+```
+
+To create an immutable type, you need to ensure that there are no holes that would allow clients to change your internal state. Value types do not support derived types, so you do not need to defend against derived types modifying fields. But you do need to watch for any fields in an immutable type that are mutable reference types. When you implement your constructors for these types, you need to make a defensive copy of that mutable type. All these examples assume that Phone is an immutable value type because we're concerned only with immutability in value types:

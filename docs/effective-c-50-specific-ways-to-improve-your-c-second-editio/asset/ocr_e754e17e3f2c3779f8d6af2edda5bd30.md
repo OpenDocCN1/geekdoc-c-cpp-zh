@@ -1,0 +1,36 @@
+Stop and Go means that the thread starting the enumeration will join on all the threads running the query expression. That method is used when you request that immediate execution of a query by using ToList() or ToArray(), or anytime PLINQ needs the full result set before continuing such as ordering and sorting. Both of the following queries use Stop and Go:
+
+```
+var stopAndGoArray = (from n in data.AsParallel()
+    where n < 150
+    select Factorial(n)).ToArray();
+```
+
+```
+var stopAndGoList = (from n in data.AsParallel()
+    where n < 150
+    select Factorial(n)).ToList();
+```
+
+Using Stop and Go processing you’ll often get slightly better performance at a cost of a higher memory footprint. However, notice that I’ve still constructed the entire query before executing any of the query expressions. You’ll still want to compose the entire query, rather than processing each portion using Stop and Go and then composing the final results using another query. That will often cause the threading overhead to overwhelm performance gains. Processing the entire query expression as one composed operation is almost always preferable.
+
+The final algorithm used by the parallel task library is Inverted Enumeration. Inverted Enumeration doesn’t produce a result. Instead, it performs some action on the result of every query expression. In my earlier samples, I printed the results of the Factorial computation to the console:
+
+```
+var numsParallel = from n in data.AsParallel()
+    where n < 150
+    select Factorial(n);
+
+foreach (var item in numsParallel)
+    Console.WriteLine(item);
+```
+
+LINQ to Objects (nonparallel) queries are evaluated lazily. That means each value is produced only when it is requested. You can opt into the parallel execution model (which is a bit different) while processing the result of the query. That’s how you ask for the Inverted Enumeration model:
+
+```
+var nums2 = from n in data.AsParallel()
+    where n < 150
+    select Factorial(n);
+
+nums2.ForAll(item => Console.WriteLine(item));
+```

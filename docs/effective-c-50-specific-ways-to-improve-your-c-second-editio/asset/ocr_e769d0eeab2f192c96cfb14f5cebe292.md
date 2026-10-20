@@ -1,0 +1,26 @@
+# # Item 7: Understand the Pitfalls of GetHashCode()
+
+```
+MyStruct s = new MyStruct();
+s.SetMessage("Hello");
+return s.GetHashCode() == s.GetMessage().GetHashCode();
+```
+
+The first rule says that two objects that are equal (as defined by operator==()) must have the same hash code. This rule is followed for value types under most conditions, but you can break it, just as you could with for reference types. ValueType.operator==() compares the first field in the struct, along with every other field. That satisfies rule 1. As long as any override that you define for operator== uses the first field, it will work. Any struct whose first field does not participate in the equality of the type violates this rule, breaking GetHashCode().
+
+The second rule states that the hash code must be an instance invariant. That rule is followed only when the first field in the struct is an immutable field. If the value of the first field can change, so can the hash code. That breaks the rules. Yes, GetHashCode() is broken for any struct that you create when the first field can be modified during the lifetime of the object. It’s yet another reason why immutable value types are your best bet (see Item 20).
+
+The third rule depends on the type of the first field and how it is used. If the first field generates a random distribution across all integers, and the first field is distributed across all values of the struct, then the struct generates an even distribution as well. However, if the first field often has the same value, this rule is violated. Consider a small change to the earlier struct:
+
+```
+public struct MyStruct
+{
+    private DateTime epoch;
+    private string msg;
+    private int id;
+}
+```
+
+If the epoch field is set to the current date (not including the time), all MyStruct objects created in a given date will have the same hash code. That prevents an even distribution among all hash code values.
+
+Summarizing the default behavior, Object.GetHashCode() works correctly for reference types, although it does not necessarily generate an efficient distribution. (If you have overridden Object.operator==(), you can break

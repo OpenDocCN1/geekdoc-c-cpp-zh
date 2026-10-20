@@ -1,0 +1,49 @@
+```
+where (destProp != null) &&
+    (destProp.CanWrite)
+select Expression.Assign(
+    Expression.Property(dest,
+        destProp),
+    Expression.Property(source,
+        srcProp));
+```
+
+```
+// put together the body:
+var body = new List<Expression>();
+body.Add(Expression.Assign(dest,
+    Expression.New(typeof(TDest))));
+body.AddRange(assignments);
+body.Add(dest);
+```
+
+```
+var expr =
+    Expression.Lambda<Func<TSource, TDest>>(
+        Expression.Block(
+            new[] { dest }, // expression parameters
+            body.ToArray() // body
+        ),
+        source  // lambda expression
+    );
+```
+
+```
+var func = expr.Compile();
+converter = func;
+}
+```
+
+This method creates code that mimics the pseudo code shown before. First, you declare the parameter:
+
+```
+var source = Expression.Parameter(typeof(TSource), "source");
+```
+
+Then, you have to declare a local variable to hold the destination:
+
+```
+var dest = Expression.Variable(typeof(TDest), "dest");
+```
+
+The bulk of the method is the code that assigns properties from the source object to the destination object. I wrote this code as a LINQ query. The source sequence of the LINQ query is the set of all public instance properties in the source object where there is a get accessor:
