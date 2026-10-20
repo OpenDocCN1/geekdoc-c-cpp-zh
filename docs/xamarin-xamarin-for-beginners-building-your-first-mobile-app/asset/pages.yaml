@@ -1,0 +1,3330 @@
+- pgno: 0
+  md: 'NLN LLC
+
+
+    4nd Edition
+
+
+    # Xamarin
+
+
+    Xamarin for beginners , Building Your First Mobile App with C# .NET and Xamarin
+
+
+    By John Bach & Claudia Alves & Rufus Stewart
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Xamarin'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# amarin for beginners , Building Your First Mobile App with C# .NET and Xamarin
+
+
+    4ⁿᵈ Edition'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# How XAMARIN WORKS
+
+
+    # CONCLUSION
+
+
+    # CHAPTER ONE
+
+
+    # APPLICATION ARCHITECTURE
+
+
+    # THE STRUCTURE OF THE APPLICATION CREATED USING XAMARIN
+
+
+    # WRITE CODE
+
+
+    # CONCLUSION
+
+
+    # CHAPTER II
+
+
+    # WORKING WITH TEXTS
+
+
+    # WORKING WITH CLIPS
+
+
+    # FORMATTING TEXT WITHIN A STICKER
+
+
+    # CONCLUSION
+
+
+    # CHAPTER III
+
+
+    # StackLayout in XAMARIN
+
+
+    # COLORSApp APPLICATION TO DISPLAY SOME COLORS
+
+
+    # Enhanced COLORSApp IMPLEMENTATION
+
+
+    # CONCLUSION
+
+
+    # CHAPTER IV
+
+
+    # SCREEN MEASUREMENTS
+
+
+    # HISTORICAL OVERVIEW
+
+
+    # THE SOLUTION PROVIDED BY XAMARIN.FORMS:
+
+
+    # SOFTWARE TO GET SCREEN MEASUREMENT
+
+
+    # CONCLUSION
+
+
+    # CHAPTER V
+
+
+    # TAP EVENTS ON THE SCREEN
+
+
+    # COUNTER APPLICATION
+
+
+    # NOTE
+
+
+    # CONCLUSION
+
+
+    # CHAPTER VI
+
+
+    # IMAGE PROCESSING IN XAMARIN
+
+
+    # GET A PICTURE FROM A LOCAL RESOURCE:
+
+
+    # CONCLUSION
+
+
+    # CHAPTER VII
+
+
+    # MOVE BETWEEN PAGES
+
+
+    # THE CONCEPT OF NAVIGATING BETWEEN APPLICATION PAGES'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '> "Programming isn''t about what you know; it''s about what you can figure
+    out." - *Chris Pine*'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Introduction
+
+
+    The Xamarin platform is currently one of the most important mobile application
+    development platforms available, which seems to remain on the forefront of time,
+    especially after the acquisition of Microsoft company, which also has the same
+    name (Xamarin). You may be motivated to enter the mobile app development world
+    (as when you first got acquainted with Xamarin) and ready to write code directly,
+    but to be patient a little, and to understand the beginnings, and the principle
+    of Xamarin working better within this article, which is the first in a series
+    that will guide you to How to develop applications using Xamarin platform and
+    create practical applications through them.
+
+
+    Xamarin (read Zamarin) was founded in 2011 by the same engineers who designed
+    the Mono project. The Mono Brothers project like Mono for android and Mono Touch
+    are platforms to run applications written in C # on the operating systems: Linux,
+    Android and iOS respectively. With Xamarin, you can create native Native Apps
+    for Android, iOS, Mac and Windows in a programming language that isn''t officially
+    supported. In this series, we''ll focus on building Android apps.
+
+
+    # Whose series?
+
+
+    If you have a good familiarity with C Sharp and BCL within the DotNet framework,
+    as well as a basic knowledge of how to use the Visual Studio'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '2015 development environment, and are passionate about learning how to program
+    mobile apps using Xamarin, this series is definitely for you. Here at the Hassoub
+    Academy we have a C-Sharp educational series that can be used.
+
+
+    # Need for Xamarin
+
+
+    The need for Xamarin has arisen because of the nature of mobile applications and
+    their work on different operating systems from competing companies. There are
+    currently three different operating systems dominating the market: iOS for Apple,
+    Android for Google, and Windows Phone for Microsoft. These systems differ in many
+    respects, which we will discuss below.
+
+
+    # User experience
+
+
+    For the user experience there is a similarity in these systems in terms of providing
+    the graphical user interfaces and interacting with the device through touch or
+    multi-touch, but there are differences in the details. Each operating system has
+    different ways of navigating application pages, presenting data, working with
+    menus, and other details that require a developer to take a different approach
+    for each operating system.
+
+
+    # Development environments and different programming languages
+
+
+    For programming languages and development environments, this is another matter.
+    Each operating system has its own requirements, which I quickly summarize as follows:
+
+
+    +   - To create applications on iOS you need to master the Objective-C programming
+    language or the Swift programming language. And own a MacBook (any version) with
+    the Xcode development environment.
+
+    +   - To create applications on Android you will need Java with the Android Studio
+    development environment running on many operating systems.
+
+    +   - To create applications running on Windows Phone or Windows 10 Mobile, you
+    need the C # programming language with a computer running Windows,'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'and the Visual Studio development environment.
+
+
+    # Different programming interfaces
+
+
+    All previous operating systems rely on different APIs. However, there are some
+    similarities for user-interface objects. For example, all previous systems provide
+    a way for the user to choose a Boolean logical state that can be represented as
+    True or False. In iOS, this object is classified as a view named UISwitch, in
+    Android it is a widget called Switch, and in Windows it is called ToggleSwitch.
+
+
+    # The solution provided by Xamarin
+
+
+    All of the above points can be bypassed by Xamarin because it provides a single
+    programming language, C-Sharp, that can be used to write applications on any operating
+    system. It also provides a single advanced development environment, Visual Studio
+    2015, for writing these applications (the Xamarin Studio development environment
+    can also be used for Mac). In addition, it unified the various APIs into a single
+    developer interface.
+
+
+    The C-Sharp language is defenseless. It is a strong, flexible, very rich and enduring
+    language. It has truly become one of the most advanced and modern programming
+    languages. We are not here to prefer a programming language over another, but
+    in my personal experience, and to know many other programming languages, you can
+    say that Sea Sharp occupies a prominent position among them.
+
+
+    For a specific application, developers can write one common code for all previous
+    operating systems without any modifications to them in terms of business logic
+    within the application and the software operations that are not related to the
+    type of mobile device or operating system it is running on. We call this code
+    independent of platform independent. If the application is required to handle
+    the hard hardware of the device it is working on (such as a camera or a GPS sensor),
+    then you can write parts of the code that take into account the specificity of
+    each operating system, we call such code as the code associated with the platform
+    dependent operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# The main components of the platform Xamarin
+
+
+    Since its inception, Xamarin has focused on the technology of compilers. The company
+    has released three core sets of .NET libraries: Xamarin.Mac, Xamarin.iOS and Xamarin.Andorid,
+    which together make up the Xamarin platform. These libraries allow developers
+    to write native apps for each of the supported operating systems.
+
+
+    # Xamarin models
+
+
+    In 2014, Xamarin created what is known as Xamarin or Xamarin Forms. This platform
+    allows developers to write user interface code so that it can be converted directly
+    into applications running on Android, iOS and Windows. In fact, Xamarin Forms
+    now supports generic Universal Windows Platform applications on devices running
+    different Windows versions such as Windows Phone, Windows 10, Windows 10 Mobile,
+    Windows 8.1, and Windows 8.1 Phone.
+
+
+    The solution architecture in Visual Studio will not change much, except that the
+    separate projects for previous operating systems will be remarkably small due
+    to the small amount of code in them. In this case, the PCL or SAP project will
+    include the shared code, independent of the operating systems as agreed earlier,
+    as well as the code responsible for displaying and handling the user interface.
+    In other words, Xamarin Forms allows us to write a single code that works directly
+    on different operating systems. See the following figure to understand how Xamarin
+    Forms applications work.
+
+
+    Applications written for different operating systems in this case rely entirely
+    on the PCL or SAP project to communicate with the APIs. Thus in many applications
+    it is possible to write only one code that works on all devices! Except where
+    it is necessary to write custom code for a specific operating system. In the future
+    this may change, it may be possible to write only one code that works on all devices
+    of any kind. In this series we will talk about'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Xamarin Forms mainly.
+
+
+    # How Xamarin works
+
+
+    For iOS applications, Xamarin''s C-Sharp translator translates the code into MSIL,
+    and then Apple''s Mac translator is used to generate native native code running
+    on iOS as if it were an object-C application.
+
+
+    For Android applications, the compiler will also generate the MSIL language, which
+    in this case will create a common CLR for Android. The resulting applications
+    in this case will also be very similar to those created using the Java language
+    and Android Studio development environment for Android.
+
+
+    Finally, for apps running on Windows Phone and Windows 10 Mobile, apps are clearly
+    supported, and will work like native apps created with Visual Studio without Xamarin.
+
+
+    # Conclusion
+
+
+    The Xamarin platform is promising, and has a long history and rich experiences
+    before Xamarin emerged. Microsoft may have realized its importance, and the acquisition
+    was completed. I recommend that you take the initiative to learn Xamarin, especially
+    if you are a C Sharp programmer, or have preliminary information about it. The
+    coming days may bring more support and surprises to the Xamarin platform, the
+    first of which was to make it free for personal use or small software teams. Starting
+    with the next lesson in this tutorial, we will install Visual Studio 2015 and
+    start working with Xamarin.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Chapter One
+
+
+    # Application architecture
+
+
+    # The structure of the application created using Xamarin
+
+
+    Run Visual Studio 2015, and after the main window appears go to the File'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'menu and then to New and choose from the submenu that will appear Project option.
+    As we did in the previous lesson, choose from the left side of the window that
+    appears Cross-Platform, then choose Blank App (Xamarin.Forms Portable) from the
+    middle section of the window. Give this project the name SimpleTextApp and click
+    the OK button.
+
+
+    We will build a simple application that shows how to use a single Label to show
+    text in Xamarin-based applications. From the Solution Explorer, which is usually
+    on the right side of the Visual Studio development environment window, just keep
+    the SimpleTextApp.Droid and SimpleTextApp (Portable) projects because we will
+    only handle Android applications (as we agreed from the previous lesson). You
+    get a shape similar to the following:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_13_0.png)
+
+
+    SimpleTextApp (Portable) contains most of the code, which is common behavior in
+    PCL-style projects. The code within the project (with the Portable section plus
+    its name) is common to all types of applications running on any operating system
+    including Android. The basic .cs that will be present in any Xamarin application
+    we talked about in the previous lesson and saw how it contains the App class that
+    inherits from the Application class, and how the builder of that class is responsible
+    for creating the application''s home page. You will notice that there are several
+    libraries that interest us These include: Xamarin.Forms.Core, Xamarin.Forms.Platform,
+    Xamarin.Forms.Xaml These'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'are the main libraries that are formed for Xamarin.Forms.
+
+
+    The SimpleTextApp.Droid project contains two folders: Assets and Resources. The
+    Resources folder contains image files, layouts descriptions, and other files that
+    are the resources for your app. Publish the Resources folder to see its structure.
+    As for the Assets folder, the other public files that you want to include with
+    your application are included. This project also contains the MainActivity.cs
+    file, which contains a category with the same name as MainActivity, which is the
+    main activity of the Android application. Open this file to find that this class
+    contains the OnCreate function that is executed when you start the Android app.
+    Note the following code statement within this function:
+
+
+    ```
+
+    LoadApplication (new App ());
+
+    ```
+
+
+    Obviously, it creates a new object from the App class within the SimpleTextApp
+    (Portable) project and then passes it directly to the LoadApplication function
+    to load the application and show it to the user. Creating a new object from the
+    App class executes its structure and is responsible for creating the main page
+    of the application as we have mentioned, however the idea will be well clarified
+    after we start writing the code.
+
+
+    # Write code
+
+
+    Right-click on SimpleTextApp (Portable) in the Solution Explorer to display a
+    context menu, choose Add and then from the submenu Choose Class. The window for
+    adding a new class will appear. Visual Studio will add a new file to the project
+    named MainPage.cs that contains a class with the same name and content similar
+    to the following:
+
+
+    ```
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Text;
+
+    using System.Threading.Tasks;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '```
+
+    namespace SimpleTextApp
+
+    {
+
+    class MainPage
+
+    {
+
+    }
+
+    }
+
+    ```
+
+
+    We do not need most of the name ranges in the previous code in this program, we
+    will currently need the domain name Xamarin.Forms. We will make the MainPage class
+    inherit from the ContentPage class and add the builder to it. Modify the previous
+    code to read as follows:
+
+
+    ```
+
+    using Xamarin.Forms;
+
+    ```
+
+
+    ```
+
+    namespace SimpleTextApp
+
+    {
+
+    class MainPage: ContentPage
+
+    {
+
+    public MainPage ()
+
+    {
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    Note that I got rid of all unnecessary name ranges (however any unused name range
+    will appear in the code in a faint color in the Visual Studio 2015 development
+    environment). The MainPage class will play the role of a simple content page for
+    the SimpleTextApp application. We will include in this category the code needed
+    to create a single Label containing simple text. Then we will do some simple experiments
+    on this label. This program is actually simple, and its mission is to make you
+    more familiar with Xamarin.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "We will start by creating a label from the Label class within the MainPage\
+    \ class builder. Labels are typically used to display text to the user. Look at\
+    \ the following simple code:\n\n```\nLabel lblMain = new Label ();\n lblMain.Text\
+    \ = \"Welcome to moaml Academy!\";\n```\n\nWe create a label and create any object\
+    \ of a class. We set up a new code in the previous object of the class and Label\
+    \ Osndnah to the variable lblMain. Then Osndna text \"! Welcome to Hsoub Academy\"\
+    \ to the Text property of the variable lblMain. The Text property is used to set\
+    \ and read the text content of a list.\n\nSo that we can view the previous close-on\
+    \ the home page of the application, we assign variable lblMain to the Content\
+    \ property of the class ContentPage. Since the MainPage class inherits from the\
+    \ ContentPage, the Content property is automatically included within it. The attribution\
+    \ process will be as follows:\n\n```\nthis.Content = lblMain;\n```\n\nPrevious\
+    \ attribution process is possible because the class inherits from Label Class\
+    \ View, which represents a general view display interface concept. Since the Content\
+    \ property is also of type View, this attribution is possible. The contents of\
+    \ the MainPage.cs file will be similar to the following:"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "```\nusing Xamarin.Forms;\n\nnamespace SimpleTextApp\n{\n    class MainPage:\
+    \ ContentPage\n    {\n    public MainPage ()\n        {\n    Label lblMain = new\
+    \ Label ();\n    lblMain.Text = \"Welcome to moaml Academy!\";\n\n    this.Content\
+    \ = lblMain;\n        }\n    }\n}\n```\n\nThat's it! Now we have to do a small\
+    \ step last, which is to make our application creates a new object of our brand\
+    \ as part of the MainPage file App.cs. Navigate to this file (located within the\
+    \ project (SimpleTextApp (Portable and make sure to be the builder of Class App\
+    \ on the following figure:\n\n```\npublic App ()\n{\n// The root page of your\
+    \ application\nMainPage = new MainPage ();\n}\n```\n\nNow press the F5 key to\
+    \ execute the application, to get a shape similar to the following:\n\n**Welcome\
+    \ to moaml Academy!**"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# 小
+
+
+    大家好！
+
+
+    插入的内容要能正常显示才是比较好的。
+
+
+    这是第二行内容。'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Note that I dropped the lblMain variable because we assigned the Label object
+    directly to the Content property.
+
+
+    # *Additional advantages over the app:*
+
+
+    You will notice from the previous application that the sticker appears in the
+    upper left corner of the window. We''ll make it appear in the center of the screen.
+    Two adjective properties should be set for this purpose:
+
+    HorizontalOptions (for horizontal alignment options) and VerticalOptions (for
+    vertical alignment options). Both of these properties are of type LayoutOptions,
+    a struct structure that exists within the domain name Xamarin.Forms. This structure
+    contains several ready-made fields that are useful for horizontal and vertical
+    positioning options for the adhesion, which are very important options as we will
+    see later in this series. Let us now make the required modification to the label
+    within the MainPage class builder. The contents of the MainPage.cs file will look
+    like this:
+
+
+    ```
+
+    using Xamarin.Forms;
+
+
+    namespace SimpleTextApp
+
+    {
+
+    class MainPage: ContentPage
+
+    {
+
+    public MainPage ()
+
+    {
+
+    this.Content = new Label {
+
+    Text = "Welcome to Hsoub Academy!",
+
+    HorizontalOptions = LayoutOptions.Center,
+
+    VerticalOptions = LayoutOptions.Center
+
+    };
+
+    }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'Notice that LayoutOptions.Center is assigned to HorizontalOptions and VerticalOptions
+    for horizontal and vertical centering respectively. Run the program again You
+    will notice that the sticker is in the center of the screen as shown in the following
+    figure:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_20_0.png)
+
+
+    If you would like the text within the sticker to be a different color, say red,
+    in this case, assign the Color.Red value to the TextColor property of the sticker
+    object. Color is a structure within the Xamarin.Forms name range as well.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'might encounter when working with text in apps they create.
+
+
+    # Working with clips
+
+
+    We often need to display a bit of text on the screen. This text may come from
+    a document, web service or other sources. The application should be able to handle
+    texts of this size. As we did from the previous lesson, he created a new Blank
+    App (Xamarin.Forms Portable) project called TextManipulationApp. Keep only the
+    TextManipulationApp (Portable and TextManipulationApp.Droid) projects.
+
+
+    We will now add a new content page, but in a different and concise way than we
+    did in the previous lesson. Right-click on the project (TextManipulationApp (Portable)
+    and choose Add, then from the submenu that appears choose New Item. Choose from
+    the left of the window that appears Cross-Platform node, and after updating the
+    contents of the middle section of the window, choose the file type From the Name
+    box at the bottom, click Add.
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_22_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: 'After Visual Studio adds this file, its contents will look like this:
+
+
+    ```
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Reflection.Emit;
+
+    using System.Text;
+
+
+    using Xamarin.Forms;
+
+    namespace TextManipulationApp
+
+    {
+
+    public class ParagraphPage: ContentPage
+
+    {
+
+    public ParagraphPage ()
+
+    {
+
+    Content = new StackLayout
+
+    {
+
+    Children = {
+
+    new Label {Text = "Hello ContentPage"}
+
+    }
+
+    };
+
+    }
+
+    }
+
+    }
+
+    ```
+
+
+    There are unnecessary name domains here but are currently ok. Note that the ParagraphPage
+    class inherits from the ContentPage class by default, and that the ParagraphPage
+    class builder is ready and has a simple example ready. Delete the contents of
+    this builder, let''s start working on our app. We will create a Label that contains
+    a text clip written in Arabic. Type the following code into the ParagraphPage
+    class builder:
+
+
+    ```
+
+    Content = new Label
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\nVerticalOptions = LayoutOptions.Center,\n    Text = \"Xamarin is currently\
+    \ one of the most important mobile app development platforms available,\" +\n\
+    \    \"Which seems to stay on the front for not too long,\" +\n    \"Especially\
+    \ after Microsoft acquired the company that also has the same name.\" +\n    \"\
+    Through this series we will learn to write practical applications by using this\
+    \ promising technology.\"\n};\n```\n\nGo to the App.cs file within the TextManipulationApp\
+    \ (Portal) project and make sure that the app class builder looks like this:\n\
+    \n```\npublic App ()\n{\n// The root page of your application\nMainPage = new\
+    \ ParagraphPage ();\n}\n```\n\n# Run the program using F5\n\nNote that all text\
+    \ is aligned vertically in the middle of the screen. The reason for this is to\
+    \ assign the LayoutOptions.Center value to the VerticalOptions property of the\
+    \ Label. Also note that the text in the previous figure is aligned to the left,\
+    \ not to the right as expected for Arabic texts. This is because the HorizontalTextAlignment\
+    \ property of the Label class, which is responsible for the horizontal alignment\
+    \ of text within a label, will have the default value of TextAlignment.Start when\
+    \ running the program. TextAlignment is a number of enum with three values: Start,\
+    \ Center, and End. Since the screen of the mobile device is divided into three\
+    \ main areas horizontally: Start for the left area, Center for the central (central)\
+    \ area and End for the right area of the screen so the text will be aligned to\
+    \ the left instead of to the right. If we want to align the text to the right,\
+    \ all you have to do is assign the"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'TextAlignment.End value to the HorizontalTextAlignment property, which we will
+    do shortly. Another thing to note from the previous figure is that the text is
+    so close to the edges of the screen that it almost sticks to it. The solution
+    to this topic is simple: adding padding to the edges of the screen, a small area
+    that can be programmatically assigned to the screen, from which we can control
+    the margin space on its four sides. Now look at the ParagraphPage class builder
+    with the required modifications:
+
+
+    ```
+
+    public ParagraphPage ()
+
+    {
+
+    Content = new Label
+
+    {
+
+    VerticalOptions = LayoutOptions.Center,
+
+    Text = "Xamarin is currently one of the most important mobile app development
+    platforms available," +
+
+    "Which seems to stay on the front for not too long," +
+
+    "Especially after Microsoft acquired the company that also has the same name."
+    +
+
+    "Through this series we will learn to write practical applications through the
+    use of this promising technology.",
+
+
+    HorizontalTextAlignment = TextAlignment.End
+
+    };
+
+
+    Padding = new Thickness (5, 5, 5, 5);
+
+    }
+
+    ```
+
+
+    We first added the HorizontalTextAlignment property to the Label and assigned
+    the TextAlignment.End value to align the text within the label to the right (note
+    that the regular comma separates properties). We also added the Padding property
+    (from the ParagraphPage class) and assigned it a new object of the Thickness class.
+    Thickness is subject to overloading as it has more than one shape. I used the
+    last figure that accepts four arguments representing padding amounts from left,
+    top, right and bottom, respectively. You may wonder about one analogy used here,
+    but I will postpone the discussion'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '```
+
+    the screen
+
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Reflection.Emit;
+
+    using System.Text;
+
+
+    using Xamarin.Forms;
+
+
+    namespace TextManipulationApp
+
+    {
+
+    public class FormattedParagraphPage: ContentPage
+
+    {
+
+    public FormattedParagraphPage ()
+
+    {
+
+    FormattedString formattedString = new FormattedString ();
+
+
+    formattedString.Spans.Add (new Span
+
+    {
+
+    Text = "Don''t count",
+
+    });
+
+
+    formattedString.Spans.Add (new Span
+
+    {
+
+    Text = "Glory",
+
+    BackgroundColor = Color.Yellow,
+
+    ForegroundColor = Color.Blue,
+
+    });
+
+
+    formattedString.Spans.Add (new Span
+
+    {
+
+    Text = "Pass you eat",
+
+    });
+
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "```\nformattedString.Spans.Add (new Span\n{\n    Text = \"You will not attain\
+    \ glory until you lick patience.\",\n    ForegroundColor = Color.Aqua,\n    FontSize\
+    \ = Device.GetNamedSize (NamedSize.Large, typeof\n(Label))\n});\n\nContent = new\
+    \ Label\n{\nVerticalOptions = LayoutOptions.Center,\nFormattedText = formattedString,\n\
+    HorizontalTextAlignment = TextAlignment.End,\nFontSize = Device.GetNamedSize (NamedSize.Medium,\
+    \ typeof (Label))\n};\n\nPadding = new Thickness (5, 5, 5, 5);\n}\n}\n}\n```\n\
+    \nWe started in the builder (line 15) by creating an object of the FormattedString\
+    \ class and assigning it to the formattedString variable. We then started adding\
+    \ formatted text to the Spans menu using the following simple method (lines 17\
+    \ to 20):\n\n```\nformattedString.Spans.Add (new Span\n{\nText = \"Don't count\"\
+    \n});\n```\n\nWe used the Add function from the Spans menu to add an object of\
+    \ type Span where we created this object and assigned the Text property to it\
+    \ directly upon creation. The text in the previous code does not carry any special\
+    \ formatting. In fact, we have repeated this method for each part of the full\
+    \ text. But we sometimes adopted some different text formats. See, for example,\
+    \ the code in lines 22 through 27:"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '```
+
+    formattedString.Spans.Add (new Span
+
+    {
+
+    Text = "Glory",
+
+    BackgroundColor = Color.Yellow,
+
+    ForegroundColor = Color.Blue,
+
+    });
+
+    ```
+
+
+    This time we coordinated the text "Glory" so that we assigned yellow as the background
+    color for BackgroundColor, and blue for the text color ForegroundColor. See also
+    the text portion we added in lines 34 to 39:
+
+
+    ```
+
+    formattedString.Spans.Add (new Span
+
+    {
+
+    Text = "You will not attain glory until you lick patience.",
+
+    ForegroundColor = Color.Aqua,
+
+    FontSize = Device.GetNamedSize (NamedSize.Large, typeof (Label))
+
+    });
+
+    ```
+
+
+    This time the font color Aqua and font size Large. Notice how we assigned the
+    font size value to the FontSize property. The following expression was used for
+    this purpose:
+
+
+    **Device.GetNamedSize (NamedSize.Large, typeof (Label))**
+
+
+    Device represents the current device on which our application works, and contains
+    many useful static functions. From these functions we used the GetNamedSize function,
+    which returns the font size required by the arguments passed to it. The first
+    argument is NamedSize.Large, so we want a large font size (NamedSize is numbered),
+    and the second argument is the type of element to apply this font to. In this
+    case we want to apply this line to the Label so we passed typeof (Label) as the
+    second argument where the Type of Label returns. This is the preferred method
+    of setting the appropriate measurements for anything that comes to your mind,
+    because the devices we'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'are working on will be differently measured screens , So we want to let the
+    GetNamedSize function do the right calculations to return the appropriate font
+    size relative to the screen size the program is currently working on, and to the
+    size to be obtained (in our example we wanted to get a large font size NamedSize.Large
+    and other measurements are definitely there).
+
+
+    The rest of the program is very easy, in line 44 we assign the formattedString
+    variable to the FormattedText property of the property. This ensures that the
+    text is formatted on the screen, noting that we did not use the Text attribute
+    in this case.
+
+
+    One last thing to pay attention to. Note that in line 46 we assign a new font
+    size to the FontSize property of the label. This font will be medium in size (note
+    the first argument, NamedSize.Medium). The idea here is that this font will be
+    applied to each piece of text (contained within a Span object) if the FontSize
+    property of that part is not set. For example, this size will not apply to the
+    part of the text specified in lines 34 to 39. This part has set its own font size
+    (NamedSize.Large) as we saw earlier.
+
+
+    Note: To try this program, you will need to modify the App Builder within the
+    App.cs file. Make sure the builder looks like this to use our new class FormattedParagraphPage:
+
+
+    ```
+
+    public App ()
+
+    {
+
+    // The root page of your application
+
+    MainPage = new FormattedParagraphPage ();
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# Conclusion
+
+
+    In this lesson, we introduced the principles of text processing in Xamarin and
+    built for the first time two simple applications that show some information to
+    the user. We learned how to align text and make some formatting operations such
+    as changing the text color and background color of any word or phrase. This lesson
+    did not address how to handle a situation where the text is large and needs a
+    way to pass it to display its entire contents. We will address this issue in a
+    later lesson
+
+
+    # Chapter III
+
+
+    # StackLayout in Xamarin'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: 'In the previous lessons, we dealt with only one element that appears on the
+    screen. This element was a Label that we assigned to the Content property of a
+    content page. In real programs as is known, we will definitely need many elements
+    that will appear on the screen to meet the requirements of the program. The problem
+    here is that the Content property of a content page only accepts one element that
+    inherits from the View class.
+
+    Xamarin has found a simple solution to this problem using layouts. A chart can
+    accommodate any number of items that each inherits from the View class. In fact,
+    the chart itself inherits from the Layout <View> class and this class inherits
+    indirectly from the View class. Any content schema can be directly assigned. Xamarin
+    supports four types of charts:
+
+
+    +   AbsoluteLayout
+
+    +   - GridLayout
+
+    +   - RelativeLayout
+
+    +   - StackLayout stack layout.
+
+
+    We will look at three schemes in this series: Mutlaq, Reticular and Stacked. In
+    this chapter we will begin with the StackLayout stack diagram.
+
+
+    # StackLayout stack layout:
+
+
+    Any number of items can be added to this chart. The reason for this name is because
+    it arranges stacked elements. The StackLayout class has two additional properties
+    from the rest of the charts: Orientation, which expresses the direction (horizontal
+    or vertical) and Spacing, and represents the spacing between the elements added
+    to the chart and has a default value of 6.0. Let us'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "now take a simple example of how to deal with this useful scheme.\n\n# ColorsApp\
+    \ application to display some colors\n\nCreate a new app as we learned from previous\
+    \ lessons so that it is of type Blank App (Xamarin.Forms Portable) and named ColorsApp.\
+    \ After you create the application in Visual Studio, keep only the ColorsApp (Portable)\
+    \ and ColorsApp.Droid projects.\n\nAdd to the Project ColorsApp (Portable) a content\
+    \ page named ColorsListPage (right click on the project and choose Add and choose\
+    \ New Item. After the window appears, choose Cross-Platform from the left, and\
+    \ from the center of the screen choose Forms ContentPage). After creating this\
+    \ page we will notice that it already has a stacked layout ready. See the contents\
+    \ of this page:\n\n```\nusing System;\nusing System.Collections.Generic;\nusing\
+    \ System.Linq;\nusing System.Reflection.Emit;\nusing System.Text;\n\nusing Xamarin.Forms;\n\
+    \nnamespace ColorsApp\n{\n    public class ColorsListPage: ContentPage\n    {\n\
+    \        public ColorsListPage ()\n        {\n            Content = new StackLayout\n\
+    \            {\n                Children = {\n                    new Label {Text\
+    \ = \"Hello ContentPage\"}\n                },\n            };\n        }\n  \
+    \  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Notice how we assign a new object from the StackLayout class to the Content
+    property within the ColorsListPage builder. Also note how the StackLayout schema
+    has a property called Children that expresses the child elements (each inheriting
+    from the View class) that we would like to add to the stack.
+
+    Replace the contents of the ColorsListPage.cs file with the following code:
+
+
+    ```
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Reflection.Emit;
+
+    using System.Text;
+
+
+    using Xamarin.Forms;
+
+
+    namespace ColorsApp
+
+    {
+
+    public class ColorInfo
+
+    {
+
+    public Color Color {get; set; }
+
+    public string Name {get; set; }
+
+    }
+
+
+    public class ColorsListPage: ContentPage
+
+    {
+
+    public ColorsListPage ()
+
+    {
+
+    ColorInfo [] colors = new ColorInfo []
+
+    {
+
+    new ColorInfo {Color = Color.Aqua, Name = "Aqua"},
+
+    new ColorInfo {Color = Color.Blue, Name = "Blue"},
+
+    new ColorInfo {Color = Color.Gray, Name = "Gray"},
+
+    new ColorInfo {Color = Color.Black, Name = "Black"},
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\nnew ColorInfo {Color = Color.Silver, Name = \"Silver\"},\nnew ColorInfo\
+    \ {Color = Color.Red, Name = \"Red\"},\nnew ColorInfo {Color = Color.Maroon, Name\
+    \ = \"Maroon\"},\nnew ColorInfo {Color = Color.Yellow, Name = \"Yellow\"},\nnew\
+    \ ColorInfo {Color = Color.Olive, Name = \"Olive\"},\nnew ColorInfo {Color = Color.Lime,\
+    \ Name = \"Lime\"},\nnew ColorInfo {Color = Color.Green, Name = \"Green\"},\n\
+    new ColorInfo {Color = Color.Navy, Name = \"Navy\"},\n    new ColorInfo {Color\
+    \ = Color.Teal, Name = \"Teal\"},\nnew ColorInfo {Color = Color.Pink, Name = \"\
+    Pink\"},\nnew ColorInfo {Color = Color.Fuchsia, Name = \"Fuchsia\"},\nnew ColorInfo\
+    \ {Color = Color.Purple, Name = \"Purple\"}\n};\n\nStackLayout stackLayout = new\
+    \ StackLayout ();\n\nfor (int i = 0; i <colors.Length; i++)\n{\nstackLayout.Children.Add\
+    \ (new Label\n{\nText = colors [i] .Name,\n    TextColor = colors [i] .Color,\n\
+    FontSize = Device.GetNamedSize (NamedSize.Large, typeof (Label))\n});\n}\n\nPadding\
+    \ = new Thickness (5, 5, 5, 5);\n\nContent = stackLayout;\n}\n}\n}\n```\n\nWe've\
+    \ added a new simple class named ColorInfo to this file (lines 11 through 15).\
+    \ Although having two classes in the same file is usually bad"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "software, I opted for simplification. The function of this class is to keep\
+    \ simple information about any color value and its name. In line 21, we created\
+    \ an array of the ColorInfo class and assigned it to the colors variable. This\
+    \ matrix will obviously have 16 colors. We then create a new object of the StackLayout\
+    \ class and assign it to the stackLayout variable (line 41), then enter a for\
+    \ loop (line 43) that passes over the elements of the colors array. To the stackLayout\
+    \ stack by adding the child property of it. Next, determine the amount of padding\
+    \ for the page (line 53) and eventually assign the stackLayout variable to the\
+    \ page's Content property (line 55). To try this app, first go to the App.cs file\
+    \ and make sure the App class builder looks like this:\n\n```\npublic App ()\n\
+    {\n    // The root page of your application\n    MainPage = new ColorsListPage\
+    \ ();\n}\n```\n\n# Run the program using F5 to get a look similar to the following:"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: Here are two important things. The first is that some colors do not appear well
+    on the black background (the default background for Xamarin apps in Android) because
+    the color contrast is not good, but the word Black will not appear because the
+    color is similar to the black background color. As for the second thing, we have
+    basically 16 colors, but only 12 of them appeared. The number of colors you see
+    may vary depending on the screen you are using.It may all appear for example,
+    but in any case you will definitely encounter
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "apps in the future where not all items will appear at once on the screen. In\
+    \ fact, we need a scrolling mechanism like any other Android app. We will now\
+    \ address both of the above.\n\n# Enhanced ColorsApp implementation\n\nWe will\
+    \ first address the color variation that can be solved by adding a new function\
+    \ to the ColorsListPage class named GetSuitableBackground. The function of this\
+    \ function is to calculate the amount of luminance according to the numerical\
+    \ constants that are recognized as ideal. If the illumination of the color to\
+    \ be shown is greater than 0.5, the background will be black; if less than or\
+    \ equal to 0.5, the background will be white. This gives an appropriate contrast\
+    \ to the colors displayed on the screen. See the code for this function:\n\n```\n\
+    private Color GetSuitableBackground (Color color)\n{\n    double luminance = 0.30\
+    \ * color.R +\n            0.59 * color.G +\n            0.11 * color.B;\n\n \
+    \   return luminance> 0.5? Color.Black: Color.White;\n}\n```\n\nThe color.R, color.G,\
+    \ and color.B properties express the red, green, and blue components, respectively,\
+    \ of the color passed to this function to which the appropriate background color\
+    \ is to be found. The 0.30, 0.59 and 0.11 constants are ideal for finding color\
+    \ lighting and you can change them if you like.\n\nAs for scrolling the screen,\
+    \ it's simple to use ScrollView where we create a new object, assign the stackLayout\
+    \ variable to the Content property of that object, and then assign that new object\
+    \ to the Content property of the ColorsListPage instead of assigning stackLayout\
+    \ directly to it as we did. In the previous program. Look at the following code:\n\
+    \n```\nContent = new ScrollView\n{\n    Content = stackLayout\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "};\n\nNow look at the full code after making the previous modifications:\n\n\
+    ```\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing\
+    \ System.Reflection.Emit;\nusing System.Text;\n\nusing Xamarin.Forms;\n\nnamespace\
+    \ ColorsApp\n{\n    public class ColorInfo\n    {\n        public Color Color\
+    \ {get; set; }\n        public string Name {get; set; }\n    }\n\n    public class\
+    \ ColorsListPage: ContentPage\n    {\n        public ColorsListPage ()\n     \
+    \   {\n            ColorInfo [] colors = new ColorInfo []\n            {\n   \
+    \             new ColorInfo {Color = Color.Aqua, Name = \"Aqua\"},\n         \
+    \       new ColorInfo {Color = Color.Blue, Name = \"Blue\"},\n               \
+    \ new ColorInfo {Color = Color.Gray, Name = \"Gray\"},\n                new ColorInfo\
+    \ {Color = Color.Black, Name = \"Black\"},\n                new ColorInfo {Color\
+    \ = Color.Silver, Name = \"Silver\"},\n                new ColorInfo {Color =\
+    \ Color.Red, Name = \"Red\"},\n                new ColorInfo {Color = Color.Maroon,\
+    \ Name = \"Maroon\"},\n                new ColorInfo {Color = Color.Yellow, Name\
+    \ = \"Yellow\"},\n```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "```\n```csharp\nnew ColorInfo {Color = Color.Olive, Name = \"Olive\"},\nnew\
+    \ ColorInfo {Color = Color.Lime, Name = \"Lime\"},\nnew ColorInfo {Color = Color.Green,\
+    \ Name = \"Green\"},\nnew ColorInfo {Color = Color.Navy, Name = \"Navy\"},\nnew\
+    \ ColorInfo {Color = Color.Teal, Name = \"Teal\"},\nnew ColorInfo {Color = Color.Pink,\
+    \ Name = \"Pink\"},\nnew ColorInfo {Color = Color.Fuchsia, Name = \"Fuchsia\"\
+    },\nnew ColorInfo {Color = Color.Purple, Name = \"Purple\"}\n};\n\nStackLayout\
+    \ stackLayout = new StackLayout ();\n\nfor (int i = 0; i <colors.Length; i ++)\n\
+    {\n\tstackLayout.Children.Add (new Label \n\t{\n\t\tText = colors [i ].Name,\n\
+    \t\tTextColor = colors [i ].Color,\n\t\tBackgroundColor = GetSuitableBackgroundColor\
+    \ (colors [i ].Color),\n\t\tFontSize = Device.GetNamedSize (NamedSize.Large, typeof\
+    \ (Label))\n\t});\n};\n\nPadding = new Thickness (5, 5, 5, 5);\n\nContent = new\
+    \ ScrollView \n{\n\tContent = stackLayout\n};\n\nprivate Color GetSuitableBackgroundColor\
+    \ (Color color)\n{\n\tdouble luminance = 0.30 * color.R +\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "```\n0.59 * color.G +\n0.11 * color.B;\n\n    return luminance> 0.5? Color.Black:\
+    \ Color.White;\n    }\n    }\n}\n```\n\nConsider the previous code, and make sure\
+    \ you understand it well. Then run the program using F5 to get a look similar\
+    \ to the following. I used the new scrolling feature to show the rest of the elements\
+    \ that were not shown before with us:"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'Silver
+
+
+    Red
+
+
+    Maroon
+
+
+    Yellow
+
+
+    Olive
+
+
+    Lime
+
+
+    Green
+
+
+    Navy
+
+
+    Teal
+
+
+    Pink
+
+
+    Fuchsia
+
+
+    Purple'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'You will notice that each color shown in this list has a background color suitable
+    for it to be optimized.
+
+
+    # *Note*
+
+
+    You can use the Spacing feature of the stack chart to increase or decrease the
+    amount of spacing between labels on the screen. Spacing has the default value
+    of 6.0, as mentioned above. Try to set the value to 0, for example, and see what
+    happens. You can set this property for the previous program by adding the following
+    line:
+
+
+    ```
+
+    stackLayout.Spacing = 0;
+
+    ```
+
+
+    Immediately after the next line:
+
+
+    ```
+
+    StackLayout stackLayout = new StackLayout ();
+
+    ```
+
+
+    # Conclusion
+
+
+    In this lesson, we learned about the principles of dealing with the StackLayout
+    stack diagram, which is widely used in Xamarin applications to arrange the visual
+    elements on the screen stacked. We also learned how to stack the stack layout
+    so we can display items that don''t appear on the screen. We will continue our
+    work with the stack plan in the next lesson, where we will talk about more important
+    advantages that this scheme has.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# Chapter IV
+
+
+    # Screen measurements
+
+
+    In this lesson in the Xamarin mobile application programming series, we will talk
+    about an important topic that often causes some confusion for mobile app developers,
+    which is dealing with measurements and sizes on the screen. We will first start
+    with a quick historical overview, moving on to understanding the units of measurements
+    used in Xamarin.Forms.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# Historical overview
+
+
+    Any projector consists of a rectangular array of Pixels. Any object displayed
+    on the screen will have a pixel area. From the outset, programmers treated pixels
+    as a standard measurement to draw different objects and shapes on the screen.
+    Although the programmer should not usually rely on fixed measurements of the visual
+    elements in the applications he writes, it is often necessary to do so as required
+    by the application. With different screen sizes and different pixel density per
+    screen due to technical advances in this field, it is becoming a major challenge
+    for programmers to have the same shape on different displays.
+
+
+    Desktop monitors have a wide range of pixel measurements, from the old 640x480
+    (640 pixels wide, 480 pixels tall) to these days reaching a few thousand per dimension.
+    The monitors also have a physical measurement, usually in inches, the diagonal
+    distance of the screen rectangle. By measuring and physically measuring any pixel
+    of a screen, we can calculate the resolution of pixels per inch (PPI), often called
+    DPI (Dots Per Inch).
+
+
+    For example, for an old 800x600 pixel screen, we can simply conclude that according
+    to Pythagoras''s theorem in the existing triangle, this screen is 1000 pixels
+    in diameter.
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_45_0.png)
+
+
+    In contrast, for the same 13-inch screen, we can now find pixel measurements such
+    as 2560x1600, which gives the DPI of this screen an approximate 230. This means
+    that any object on the new screen, say, 100 square pixels, for example, will occupy
+    a third of the virtual space occupied by the body itself'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: 'but on the old screen, which will lead to a significant difference in the forms
+    of applications on different monitors.
+
+    Practical solutions are beginning to emerge with the development of desktop operating
+    systems, which were later adapted to mobile devices. Companies like Microsoft
+    and Apple have devised measurement systems based on non-device-independent units
+    rather than pixels. It is incumbent upon the operating system to convert these
+    measurements designed with the new measurement system to suitable pixel measurements.
+    Thus, programmers can write applications based on an independent measurement system,
+    so that their applications appear almost uniformly on different types of screens.
+
+    Google in Android followed the same behavior to ensure that formats with specified
+    sizes would appear uniformly on all Android screens of various genres.
+
+
+    # The solution provided by Xamarin.Forms:
+
+
+    Xamarin.Forms provided a good solution to this issue with the following simple
+    hypothesis: every 160 units (device independent) correspond to one inch. This
+    is equivalent to 64 units of measurement per centimeter. The above hypothesis
+    is valid for any application running on Android, iOS or Windows Phone.
+
+    Any visible object that appears on the screen inherits from the VisualElement
+    class. This category has two useful features: Width and Height. These properties
+    express the width of the Width and the height of any visible element on the screen
+    in units independent of the device as we agreed. The initial value of each is
+    -1 at the beginning, and gives us valid values only when the layout that appears
+    on the screen is processed and each element takes its place.
+
+    The VisualElement class also defines an event named SizeChanged that occurs when
+    the value of one of the Width or Height properties changes. These values may change
+    for a variety of reasons, such as rotating the screen. It is possible to install
+    a handler for the SizeChanged event for any visual element that appears on the
+    page, including the page itself. In the following'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "section, we will cover a simple program that shows the measurement of the screen\
+    \ on which it works, but in units independent of the device.\n\n# Software to\
+    \ get screen measurement\n\nCreate a new Blank App (Xamarin.Forms Portable) application\
+    \ and name it GetSize. As agreed, delete all projects except GetSize (Portable)\
+    \ and GetSize.Droid. Add a new ContentPage to the GetSize (Portable) project and\
+    \ name it GetSizePage and make sure the GetSizePage class looks like this:\n\n\
+    ```\npublic class GetSizePage: ContentPage\n{\nprivate Label label;\n\n    public\
+    \ GetSizePage ()\n    {\n    this.label = new Label\n    {\n    FontSize = Device.GetNamedSize\
+    \ (NamedSize.Large, typeof (Label)),\n    HorizontalOptions = LayoutOptions.Center,\n\
+    \    VerticalOptions = LayoutOptions.Center,\n    };\n\n    Content = this.label;\n\
+    \n    SizeChanged += GetSizePage_SizeChanged;\n    }\n\n    private void GetSizePage_SizeChanged\
+    \ (object sender, EventArgs e)\n    {\n    label.Text = String.Format (\"{0} \\\
+    u00D7 {1}\", this.Width, this.Height);\n    }\n}\n```\n\nNote at the beginning\
+    \ that we have declared the label field of type Label in"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "line 3, where we will assign a reference to a new tag that we will create later\
+    \ in the GetSizePage class builder in line 7. The reason for creating this field\
+    \ is the need to access the label within the event handler as we will see shortly.\
+    \ . We assigned the HorizontalOptions and VerticalOptions options on lines 10\
+    \ and 11 respectively for this new label to appear in the center of the page.\
+    \ Note that we do not use a stacked layout in this program, but we assign the\
+    \ adjective directly to the page's Content property in line 14. The new thing\
+    \ for us in this series is to assign an event handler to the SizeChanged event\
+    \ of the page in line 16. The event handler I called GetPageSize_SizeChanged is\
+    \ declared in Lines 19 through 22.\nIf you look at line 21 you will find that\
+    \ we are generating formatted text to display within the list (we assign it to\
+    \ its Text property). Note the \\u00D7 code used to generate the multiplication\
+    \ sign x as we will see shortly. Note that we read the page's Width and Height\
+    \ properties and include them in the generated formatting text. Go to the App\
+    \ Builder and make sure it is as follows:\n\n```\npublic App ()\n{\n    // The\
+    \ root page of your application\n    MainPage = new GetSizePage ();\n}\n```\n\n\
+    # Run the program using F5 to get a look similar to the following:"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/affff2e3b09de80cc0ffe811bbf63f5d_50_0.png)
+
+
+    - The logo is not part of the result
+
+
+    # Note
+
+
+    You have run the previous program on your Samsung Galaxy Core Prime.
+
+
+    # Conclusion
+
+
+    This lesson is essential for understanding how to deal with measurements in Xamarin.Forms
+    applications where we talked about measurements in their old and new concepts.
+    Ways of dealing with device-independent units and their essential role in standardizing
+    the measurements of visual elements with fixed dimensions on different types of
+    screens. In the next lesson, we will find useful practical examples of using standalone
+    modules to write two simple applications. The first application deals with drawing
+    a simple shape with a specific area on the screen, while the second application
+    deals with a simple digital clock that matches the text displayed according to
+    the size of the screen on which the application works.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# Chapter V
+
+
+    # Tap events on the screen
+
+
+    In the preceding chapters in this series, we deal with visual elements whose primary
+    function is to display data appropriately to the user. In fact there is another
+    type of visual element, including those elements that the user can interact with
+    to perform a particular command or task. In this fun chapter we will look at the
+    Button element, a visual element that allows a user to click (or rather touch)
+    a particular command.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# Counter application
+
+
+    It is a simple application, intended to understand how to handle buttons in Xamarin.Forms.
+    The interface of this application consists of two buttons in addition to a sticker.
+    The idea of the application is simple. When a user clicks one of the buttons,
+    the number displayed on the label increases by one, and when he clicks on the
+    other button, that number decreases by one too.
+
+
+    Create a new Blank App (Xamarin.Forms Portable) application as usual and name
+    it CounterApp, and keep only the CounterApp.Droid and CounterApp (Portable) projects
+    within it. Add a new ContentPage content page named CounterPage. Make sure that
+    the content of the CounterPage.cs file is as follows:
+
+
+    ```
+
+    1 using System;
+
+    2using Xamarin.Forms;
+
+    3
+
+    4namespace CounterApp
+
+    5{
+
+    6  public class CounterPage : ContentPage
+
+    7 {
+
+    8   private int counter = 0;
+
+    9   private Label lblDisplay;
+
+    10
+
+    11   public CounterPage()
+
+    12 {
+
+    13    Button btnIncrement = new Button
+
+    14    {
+
+    15     Text = "+",
+
+    16     HorizontalOptions = LayoutOptions.CenterAndExpand,
+
+    17     FontSize = Device.GetNamedSize(NamedSize.Large,
+
+    typeof(Label))
+
+    18    };
+
+    19   btnIncrement.Clicked += btnIncrement_Clicked;
+
+    20
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '```
+
+    21      Button btnDecrement = new Button
+
+    22      {
+
+    23          Text = "-",
+
+    24          HorizontalOptions = LayoutOptions.CenterAndExpand,
+
+    25          FontSize = Device.GetNamedSize(NamedSize.Large,
+
+    typeof(Label))
+
+    26      };
+
+    27      btnDecrement.Clicked += BtnDecrement_Clicked;
+
+    28
+
+    29      lblDisplay = new Label
+
+    30      {
+
+    31          Text = "0",
+
+    32          TextColor = Color.Accent,
+
+    33          HorizontalOptions = LayoutOptions.CenterAndExpand,
+
+    34          FontSize = Device.GetNamedSize(NamedSize.Large,
+
+    typeof(Label))
+
+    35      };
+
+    36
+
+    37      Content = new StackLayout
+
+    38      {
+
+    39          Children = {
+
+    40              new StackLayout
+
+    41              {
+
+    42                  Orientation = StackOrientation.Horizontal,
+
+    43                  Padding = new Thickness(0,64,0,64),
+
+    44                  Children =
+
+    45                  {
+
+    46                      btnIncrement,
+
+    47                      btnDecrement
+
+    48                  }
+
+    49              },
+
+    50              lblDisplay
+
+    51          }
+
+    52      };
+
+    53  }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "```\nprivate void BtnDecrement_Clicked(object sender, EventArgs e)\n{\n\tcounter--;\n\
+    \tlblDisplay.Text = counter.ToString();\n}\n```\n\n```\nprivate void btnIncrement_Clicked(object\
+    \ sender, EventArgs e)\n{\n\tcounter++;\n\tlblDisplay.Text = counter.ToString();\n\
+    }\n```\n\n# Note\n\nRemember that we are adding a new content page by right-clicking\
+    \ on the CounterApp (Portable) project and then selecting Add and then New Item.\
+    \ From the window that appears, choose Cross-Platform from the left section, and\
+    \ from the right section we choose Forms ContentPage\n\nWe have encountered many\
+    \ of the techniques used in this application in the previous lessons. With some\
+    \ new things. For example, for the first time we have developed a stacked layout\
+    \ among others, which is very common in the design of facades.\n\nIn line 8, we\
+    \ declare the counter field, which is the counter that will keep the current value\
+    \ of the number displayed in the list. We will need each of the two previous fields\
+    \ within different dependents of the CounterPage class so we put them in the form\
+    \ of two fields for this image.\n\nIn the CounterPage builder, we declare the\
+    \ btnIncrement of the Button type and assign it a new Button-type object where\
+    \ we assign the property values directly upon creation. Note that on line 19 we\
+    \ have assigned the Clicked event handler for this button. The name of this handler\
+    \ is btnIncrement_Clicked, which is stated below in lines 61 through 65. The"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "same is true for the btnDecrement button (lines 21 through 27) and its event\
+    \ handler btnDecrement_Clicked (lines 55 to 59). By one and display the result\
+    \ within the adhesion.\nIf we go to the Content property of the CounterPage class\
+    \ (line 37), a new stack chart is assigned and it has a default vertical orientation\
+    \ as we explained in a previous lesson. We will assign it only to Children (line\
+    \ 39). This feature states that there are two sons to this scheme, the first son\
+    \ is another stacked planner (lines 40 to 49), and the second is the lblDisplay,\
+    \ which will display the current issue:\n\n```\nChildren = {\n    new StackLayout\n\
+    \    {\n        Orientation = StackOrientation.Horizontal,\n        Padding =\
+    \ new Thickness(0,64,0,64),\n        Children =\n        {\n            btnIncrement,\n\
+    \            btnDecrement\n        }\n    },\n    lblDisplay\n}\n```\n\nAs for\
+    \ the Stacked Son Scheme as shown in the last code, note that we set the Orientation\
+    \ property to be horizontal StackOrientation.Horizontal, we have a suitable padding\
+    \ padding from the top and bottom of its content, and finally we assigned the\
+    \ Child property to it so that it has two sons here with the increase buttons\
+    \ btnIncrement and decrease btnDecemut Clear.\nThe stacked son (inner) scheme\
+    \ would then have two buttons located horizontally in the middle, and the father's\
+    \ (stacked) stacked plan would contain a stacked son scheme, and a sticker vertically\
+    \ positioned.\nGo to the App.cs file and make sure the App class builder looks\
+    \ like this:"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\npublic App ()\n{\n    // The root page of your application\n    MainPage\
+    \ = new CounterPage ();\n}\n```\n\nWhen you execute the program using F5, you\
+    \ will get a look similar to the following, I made several clicks on each of the\
+    \ buttons:\n\n![](img/affff2e3b09de80cc0ffe811bbf63f5d_56_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: 'As we know, images are essential elements of any application, they add aesthetic
+    touch and give an explanatory impression of the basic functions of the application.
+    We will continue our work in this series by explaining how to use images in Xamarin.Forms.
+    Xamarin deals with bitmaps that may differ slightly for Android, iOS, and Windows,
+    but if you rely on formats like JPEG, PNG and BMP, you won''t have any problems.
+
+
+    Xamarin.Forms handles images in two main styles. The first method relies on platform-independent
+    images, and the second method relies on platform-specific images or, more precisely,
+    the operating system. You will address the first method in our lesson through
+    two simple applications that illustrate this. The second method will be postponed
+    to another lesson.
+
+
+    Images within Xamarin applications can be viewed by a visual element represented
+    by the Image class. As with other visual elements that inherit from the VisualElement
+    class, this element has many properties in common with any other visual element,
+    such as the Label. In addition to other features that distinguish it, such as
+    the Source property, which reflects the source of the image that will be displayed
+    within it. This feature will be our focus in this lesson. Device independent images
+    can be obtained in two different styles. In each method, you need to assign an
+    object of the ImageSource class to the Image property of the Image object.
+
+
+    The first method is to get images directly from the Internet, by calling the'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "FromUri static function from the ImageSource class and passing the Uri address\
+    \ of the image file online.\n\nThe second method is to invoke the FromResource\
+    \ static function from the ImageSource class and pass the resource name to it.\
+    \ The following two simple applications will explain how to do this.\n\nGet a\
+    \ picture from the Internet:\n\nCreate a new app called WebImageApp of type Blank\
+    \ App (Xamarin.Forms Portable) and keep only the WebImageApp (Portable) and WebImageApp.Droid\
+    \ projects as we have already agreed. Add a new ContentPage as we did in this\
+    \ lesson. Name it WebImagePage and make sure that the contents of the WebImagePage.cs\
+    \ file are as follows:\n\n```\nusing System;\nusing Xamarin.Forms;\n\nnamespace\
+    \ WebImageApp\n{\n    public class WebImagePage: ContentPage\n    {\n        public\
+    \ WebImagePage ()\n        {\n            Image webImage = new Image\n       \
+    \     {\n                VerticalOptions = LayoutOptions.FillAndExpand,\n    \
+    \            HorizontalOptions = LayoutOptions.FillAndExpand,\n              \
+    \  Source = ImageSource.FromUri (new Uri (\"https://developer.xamarin.com/demo/IMG_2138.JPG?width=800\"\
+    )),\n                Aspect = Aspect.AspectFit,\n                BackgroundColor\
+    \ = Color.Accent\n            };\n\n            Content = new StackLayout\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "```\n{\n    Children = {\n        webImage\n    }\n};\n}\n}\n}\n```\n\nThen\
+    \ navigate to the App.cs file and make sure that it looks like this:\n\n```\n\
+    public App ()\n{\n    // The root page of your application\n    MainPage = new\
+    \ WebImagePage ();\n}\n```\n\nThe application code is simple, it creates a new\
+    \ image object, assigns it to the webImage variable, and then makes that image\
+    \ object a child of the stack layout clearly.\n\nWhat we are interested in now\
+    \ is the properties of the image object. The Source property is the source from\
+    \ which we get the image. In this application we will get the image from the Internet\
+    \ so we will use the static function ImageSource.FromUri that returns an object\
+    \ from the ImageSource row. Note that we've passed a new Uri object to this function:\n\
+    \n```\nImageSource.FromUri (new Uri (\"https://developer.xamarin.com/demo/IMG_2138.JPG?width=800\"\
+    ))\n```\n\nThe address used here is:\n\n```\n\"https://developer.xamarin.com/demo/IMG_2138.JPG?width=800\"\
+    \n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'Aspect specifies how the image is displayed within the Image element. They
+    accept values from the Aspect of the same name. This number has three elements:
+    AspectFit, AspectFill and Fill. In this application we used the AspectFit value
+    which is the default value. Here''s what the three previous values mean:
+
+
+    +   * AspectFit: means that the image will appear within the element so that it
+    is consistent with the space allocated to it, while respecting the aspect ratio
+    of the image appearance.
+
+    +   * AspectFill: In this case the image will appear within the element so that
+    the aspect ratio of the image will be respected, but it will not take care of
+    the space allocated to this element. Therefore, the image may appear truncated
+    if it is larger than the element.
+
+    +   * Fill: This value means that the image will appear to occupy the entire area
+    allocated to the object without regard to the aspect ratio of the image. So just
+    the image appears stretched horizontally or vertically. You have assigned Color.Accent
+    to the BackgroundColor property of the image element in order to see the actual
+    space occupied by that element. Run the previous program using F5 to get a look
+    similar to the following, noting that I''m testing on a device with a 4.5-inch
+    screen, so the results you get on your device may vary if you have a larger screen.
+    If so, I recommend deleting the "? Width = 800" section of the image''s Uri title
+    from the Source property:'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '![](img/affff2e3b09de80cc0ffe811bbf63f5d_62_0.png)
+
+
+    Notice how the image appeared so that the space remained empty from the top and
+    bottom. This is because it respected the aspect ratio of the original image. If
+    you modify the Aspect property to carry the value Aspect.AspectFill, you will
+    get a look similar to the following:'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/affff2e3b09de80cc0ffe811bbf63f5d_63_0.png)
+
+
+    Notice here how the image appeared slightly truncated. Now try the last case,
+    assigning the value Aspect.Fill to the Aspect property to get a shape similar
+    to the following:'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '![](img/affff2e3b09de80cc0ffe811bbf63f5d_64_0.png)
+
+
+    As expected, the image appeared to be stretched vertically because it would fill
+    the entire space available for the image element without regard to the proportion
+    of the appearance of the original image as noted.
+
+
+    # Get a picture from a local resource:
+
+
+    Working with images in this method is no different from the way we handle'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: 'images we get from the web. Except that we use the FromResource static function
+    of the ImageSource class. In this section, we’ll discuss a practical application
+    to browse through a set of images that I have created specifically for this purpose.
+    You will be browsed by two buttons: "Next" and "Previous", in addition to a sticker
+    showing a simple information about the current image number displayed on the image
+    element. These images will be locally located within the app. Now let''s start
+    by creating a new app called ResourceImageApp of type Blank App (Xamarin.Forms
+    Portable). Keep only the ResourceImageApp (Portable) and ResourceImageApp.Droid
+    projects. Add a new content page named ContentImagePage and make sure the contents
+    of the ResourceImagePage.cs file are as follows:
+
+
+    ```
+
+    1using System;
+
+    2using Xamarin.Forms;
+
+    3
+
+    4namespace ResourceImageApp
+
+    5{
+
+    6  public class ResourceImagePage : ContentPage
+
+    7  {
+
+    8    private Button btnPrev;
+
+    9    private Button btnNext;
+
+    10    private Image resourceImage;
+
+    11    private Label lblInfo;
+
+    12    private int currentIndex = 1;
+
+    13
+
+    14    public ResourceImagePage()
+
+    15    {
+
+    16      lblInfo = new Label
+
+    17      {
+
+    18        VerticalOptions = LayoutOptions.Start,
+
+    19        HorizontalOptions = LayoutOptions.FillAndExpand,
+
+    20        HorizontalTextAlignment = TextAlignment.Center,
+
+    21        TextColor = Color.Accent,
+
+    22        FontSize = Device.GetNamedSize(NamedSize.Medium,
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '```
+
+    typeof(Label))
+
+    23        };
+
+    24
+
+    25        resourceImage = new Image
+
+    26        {
+
+    27            VerticalOptions = LayoutOptions.FillAndExpand,
+
+    28            HorizontalOptions = LayoutOptions.FillAndExpand,
+
+    29            Aspect = Aspect.AspectFit
+
+    30        };
+
+    31
+
+    32        btnPrev = new Button
+
+    33        {
+
+    34            Text = "first",
+
+    35            HorizontalOptions = LayoutOptions.FillAndExpand,
+
+    36            IsEnabled = false
+
+    37        };
+
+    38        btnPrev.Clicked += BtnPrev_Clicked;
+
+    39
+
+    40        btnNext = new Button
+
+    41        {
+
+    42            Text = "next",
+
+    43            HorizontalOptions = LayoutOptions.FillAndExpand
+
+    44        };
+
+    45        btnNext.Clicked += BtnNext_Clicked;
+
+    46
+
+    47        StackLayout buttonsLayout = new StackLayout
+
+    48        {
+
+    49            Orientation = StackOrientation.Horizontal,
+
+    50            VerticalOptions = LayoutOptions.End,
+
+    51            HorizontalOptions = LayoutOptions.FillAndExpand,
+
+    52            Children =
+
+    53            {
+
+    54                btnNext,
+
+    55                btnPrev
+
+    56            }
+
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    57     };
+
+    58
+
+    59     Content = new StackLayout
+
+    60     {
+
+    61         Children = {
+
+    62             lblInfo,
+
+    63             resourceImage,
+
+    64             buttonsLayout
+
+    65         }
+
+    66     };
+
+    67
+
+    68     Padding = new Thickness(5, 5, 5, 5);
+
+    69
+
+    70     UpdateScreen();
+
+    71     }
+
+    72
+
+    73     private void BtnPrev_Clicked(object sender, EventArgs e)
+
+    74     {
+
+    75         currentIndex--;
+
+    76         if (currentIndex == 1)
+
+    77         {
+
+    78             btnPrev.IsEnabled = false;
+
+    79         }
+
+    80
+
+    81         btnNext.IsEnabled = true;
+
+    82
+
+    83         UpdateScreen();
+
+    84     }
+
+    85
+
+    86     private void BtnNext_Clicked(object sender, EventArgs e)
+
+    87     {
+
+    88         currentIndex++;
+
+    89         if (currentIndex == 5)
+
+    90         {
+
+    91         btnNext.IsEnabled = false;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "```\n92      }\n93\n94      btnPrev.IsEnabled = true;\n95\n96      UpdateScreen();\n\
+    97    }\n98\n99    private void UpdateScreen()\n100    {\n101      lblInfo.Text\
+    \ = string.Format(\"5\", currentIndex); {0}\n102      string path =\nstring.Format(\"\
+    ResourceImageApp.Images.res0{0}.jpg\", currentIndex);\n103      resourceImage.Source\
+    \ = ImageSource.FromResource(path);\n104    }\n105  }\n106}\n```\n\nThen navigate\
+    \ to the App.cs file and make sure that it looks like this:\n\n```\npublic App\
+    \ ()\n{\n    // The root page of your application\n    MainPage = new ResourceImagePage\
+    \ ();\n}\n```\n\nRight-click on the ResourceImageApp (Portable) joint project\
+    \ and choose Add and from the side menu that appears choose New Folder. This will\
+    \ create a new volume within this project, called Images. Then right-click on\
+    \ our new Images folder and select Add. Choose image files: res01.jpg, res02.jpg,\
+    \ res03.jpg, res04.jpg, res05.jpg (click here to download Images.zip). The images\
+    \ in this order contain the words \"Welcome to Hassoub Academy\". Right-click\
+    \ again on each file name you just added to the project and from the menu select\
+    \ Properties. The file properties will appear, set the Build Action property to\
+    \ Embedded Resource as shown in the following file"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'format:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_69_0.png)
+
+
+    Once you click the Back button, the Next button will be back up. Let''s discuss
+    the operating code for this application. Note in lines 8 through 11 that I have
+    stated special fields that represent most of the visual elements that we will
+    deal with in this application, a picture element and a close element and two buttons
+    for the next and previous. In line 12, you declare a special variable currentIndex
+    that represents the current file number that we would like to display in the image
+    file and has a preliminary value of 1. The ResourceImagePage class structure configures
+    all the visual elements used as we know. In lines 16 through 23, we set the properties
+    of the lblInfo label where we assign the LayoutOptions.Start value to the VerticalOptions
+    property so that the first (top) of the screen appears. We also assigned the TextAlignment.Center
+    value for the HorizontalTextAlignment property so that the text would appear horizontal.
+    As for the resourceImage image element, we set its properties in lines 25 through
+    30 where we set the Aspect property value to Aspect.AspectFit to fill the image
+    space available with respect to the proportion of the appearance of the image.
+    Next comes the adjustment of the btnPrev (previous) and btnNext (next) buttons
+    from lines'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '32 to 45. Later, we will add these buttons to their stacked layout, buttonsLayout,
+    which is why we want to make these buttons adjacent horizontally and fill the
+    horizontal space available to them. Note the LayoutOptions.FillAndExpand value
+    for the HorizontalOptions property for both). We announce the stackLayout layout
+    on lines 47 through 57. We will add to this chart the buttons btnPrev and btnNext
+    and set the Orientation property to be horizontal StackOrientation.Horizontal
+    to show the previous two buttons horizontally and not vertically. We will add
+    this stack layout shortly to the basic stack layout of the page.
+
+
+    We set the content property of the page in lines 59 to 66 so that we create a
+    new stack chart that contains the elements: sticker, image, and stack layout of
+    buttons, respectively. This is why previous items appear in this order. Look at
+    the following diagram showing the approximate position of the previous items on
+    the page:'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# lblInfo
+
+
+    resourceImage
+
+
+    btnNext
+
+
+    btnPrev
+
+
+    The brown rectangle at the bottom represents the stack layout of buttonsLayout
+
+
+    The btnPrev (lines 73 to 84) and btnNext (lines 86 to 97) buttons have simple
+    programmatic logic that ensures proper navigation between the five images within
+    the application resource. Finally, the UpdateScreen function (lines 99 to 104)
+    updates the data that appears on the close and image elements at each'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: 'click of the Next and Previous buttons. The FromResource function of the ImageSource
+    class requires a text argument that represents the file ID. The file ID consists
+    of the name of the application (or more precisely the Assembly) followed by a
+    period, the name of the folder containing the image file, followed by another
+    point, and finally the name of the file with its extension. In our example, the
+    file ID res01.jpg is as follows:
+
+
+    ResourceImageApp.Images.res01.jpg
+
+
+    The code of this app may look relatively large, but I assure you that you will
+    write a few times in any commercial program that you can work on! This is due
+    to the approach we have taken from the beginning of this series so far, relying
+    on the code to create the entire user interface. Although it is possible to use
+    good methods that contribute to the arrangement and organization of this code
+    significantly, many developers prefer to use the other method in the development
+    of applications using Xamarin.Forms, which is the use of XAML (code-like XML),
+    which allows to separate the user interface from the code Software. We will, of
+    course, deal with this in future lessons.
+
+
+    # Conclusion
+
+
+    In this lesson we dealt with images in Xamarin.Forms. We discussed the issue from
+    two different sides. The first aspect is to download the image from the Internet
+    (and possibly from a local network), while the second aspect is to download the
+    image from a local source. There is more to talk about in this topic, especially
+    with regard to the acquisition of images through the sources of images associated
+    with the device platform-specific or more precisely associated with the operating
+    system running on the device, which is the Android system in our case. This is
+    similar to the method used when working with image sources through Android Studio.
+    We will cover this topic later in this book.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# Chapter VII
+
+
+    # Move between pages
+
+
+    Mobile apps typically consist of separate pages that the user navigates to take
+    advantage of the capabilities the app offers. For Android apps, the Back button
+    is essential in this navigation. In this tutorial from the Xamarin.Forms Android
+    Application Programming Learning Series, we learn how to navigate between application
+    pages. First we will talk about the concept of page navigation in a single application,
+    and then we will talk about the types of content pages used in navigation through
+    a simple practical example.'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# # The concept of navigating between application pages
+
+
+    Navigating between application pages is very similar to the principle that Stack
+    works. The stack is known as a data structure that supports the concept of LIFO
+    (which finally comes out first). When you move from page A to page B, page B is
+    pushed to the top of the stack, resulting in the user appearing. Similarly, when
+    you move from page B to page C, page C is pushed to the stack to be shown to the
+    user. When we want to return to the original page A, popped page C should be removed
+    from the stack, page B will be at the top of the stack (i.e. it will appear to
+    the user), and page B will be removed from the stack and page A will be at the
+    top of the stack. See the following figure to illustrate this idea:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_74_0.png)
+
+
+    Modal and Modeless Pages:'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'Each application contains a main page (which will be in the category NavigationPage)
+    is the main node from which all other pages, whatever their number and level,
+    can be accessed. Xamarin also distinguishes two types of content pages that are
+    used within this navigation structure: Modal Pages and Modeless Pages. The difference
+    between these two types for Android apps is simple. That is, in Modal pages, the
+    title of the page will not be displayed at the top as we will see in the example
+    shortly. In a Modeless page, the title of the page will be at the top if it is
+    specified using the Title property of the content page. To preview the difference
+    between these types, let''s create a simple, practical application that illustrates
+    this. Start by creating a new Blank App (Xamarin.Forms Portable) project called
+    ModelessAndModal, then just keep the ModelessAndModal (Portable) and ModelessAndModal.Droid
+    projects as we did in this lesson. Next we will add three regular content pages
+    (Forms ContentPage): MainPage, ModalPage and ModelessPage. Edit the contents of
+    the MainPage file to be similar to the following:
+
+
+    ```
+
+    1  using Xamarin.Forms;
+
+    2
+
+    3  namespace ModelessAndModal
+
+    4  {
+
+    5    public class MainPage : ContentPage
+
+    6    {
+
+    7      public MainPage()
+
+    8      {
+
+    9        Title = "Main Page";
+
+    10
+
+    11       Button gotoModelessButton = new Button
+
+    12       {
+
+    13         Text = "Go to Modeless Page",
+
+    14         HorizontalOptions = LayoutOptions.Center,
+
+    15         VerticalOptions = LayoutOptions.CenterAndExpand
+
+    16       };
+
+    17
+
+    18       gotoModelessButton.Clicked += async (sender, args) =>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\n19    {\n20        await Navigation.PushAsync(new ModelessPage());\n21\
+    \    };\n22\n23    Button gotoModalButton = new Button\n24    {\n25        Text\
+    \ = \"Go to Modal Page\",\n26        HorizontalOptions = LayoutOptions.Center,\n\
+    27        VerticalOptions = LayoutOptions.CenterAndExpand\n28    };\n29\n30  \
+    \  gotoModalButton.Clicked += async (sender, args) =>\n31    {\n32        await\
+    \ Navigation.PushModalAsync(new ModalPage());\n33    };\n34\n35    Content = new\
+    \ StackLayout\n36    {\n37        Children = { gotoModelessButton, gotoModalButton\
+    \ }\n38    };\n39    }\n40    }\n41 }\n```\n\nThe MainPage will display only two\
+    \ buttons. The first button is gotoModelessButton and its function is to create\
+    \ a modeless non-rigid page and navigate to it. The second button is gotoModalButton\
+    \ and its function is to create and navigate to a static modal page. For the first\
+    \ button gotoModelessButton look at lines 11 through 21:\n\n```\nButton gotoModelessButton\
+    \ = new Button\n{\n    Text = \"Go to Modeless Page\",\n    HorizontalOptions\
+    \ = LayoutOptions.Center,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "```\nVerticalOptions = LayoutOptions.CenterAndExpand\n};\n\ngotoModelessButton.Clicked\
+    \ += async (sender, args) =>\n{\n    await Navigation.PushAsync (new ModelessPage\
+    \ ());\n};\n```\n\nWe first create a Button object and assign it to the gotoModelessButton\
+    \ variable, and then assign a clicked event handler, a simple lambda expression\
+    \ that represents a function that needs a sender and e argument, preceded by the\
+    \ reserved word async, as shown in the previous code. The reason async exists\
+    \ is because we'll use an asynchronous call within this event handler:\n\n```\n\
+    await Navigation.PushAsync (new ModelessPage ());\n```\n\nThe PushAsync function\
+    \ called from the Navigation property of the current page pushes a new page within\
+    \ the stack to move between pages. In the previous line, a new page of type ModelessPage\
+    \ will be created and passed to the PushAsync child. I recommend you review this\
+    \ lesson to refresh your memory on the topic of asynchronous calls. The same will\
+    \ be done for the button to go to the static page with a nuance. This time, the\
+    \ call will be via PushModalAsync (line 32) to move to a static page (ModalPage).\
+    \ In each of the two previous cases, we could have the two click processors within\
+    \ independent dependencies and not as with Lambda. Also noteworthy for the MainPage\
+    \ class is the title property set (line 9). In fact, this feature has had no meaning\
+    \ in all the programs we have created in this series so far. Setting this feature\
+    \ or not will make no difference! What's new here is how to create the MainPage\
+    \ page itself, which we will create as usual within the App class. Go to the App.cs\
+    \ file and make sure that it looks like the following:\n\n```\npublic App ()\n\
+    {\n    // The root page of your application\n    MainPage = new NavigationPage\
+    \ (new MainPage ());\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: 'Notice with me the new command here. We don''t create a content page and assign
+    it to the MainPage property just as we used to. We create a content page (in our
+    example it is from the MainPage class) and then pass this page as an intermediary
+    to the NavigationPage class builder. That is, we are actually creating a content
+    page that supports navigation. This will make the title of the home page set with
+    the title property appear at the top of the page as we will see shortly. We can
+    now try this app. Run the app to get a look like this:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_78_0.png)
+
+
+    Stop the implementation of the program to begin with the final stage of'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "preparing the content pages ModalPage and ModelessPage. Go to the ModalPage.cs\
+    \ file and make sure that its contents match the following:\n\n```\nusing Xamarin.Forms;\n\
+    \nnamespace ModelessAndModal\n{\n    public class ModalPage: ContentPage\n   \
+    \ {\n        public ModalPage ()\n        {\n            Title = \"Modal Page\"\
+    ;\n            Button goBackButton = new Button\n            {\n             \
+    \   Text = \"Back to Main\",\n                HorizontalOptions = LayoutOptions.Center,\n\
+    \                VerticalOptions = LayoutOptions.Center\n            };\n\n  \
+    \          goBackButton.Clicked += async (sender, args) =>\n            {\n  \
+    \              await Navigation.PopModalAsync ();\n            };\n\n        \
+    \    Content = goBackButton;\n        }\n    }\n}\n```\n\nThen navigate to the\
+    \ ModelessPage.cs file and make sure its contents are as follows:\n\n```\nusing\
+    \ Xamarin.Forms;\n\nnamespace ModelessAndModal\n{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "```\n```csharp\npublic class ModelessPage: ContentPage\n{\n    public ModelessPage\
+    \ ()\n    {\n        Title = \"Modeless Page\";\n        Button goBackButton =\
+    \ new Button\n        {\n            Text = \"Back to Main\",\n            HorizontalOptions\
+    \ = LayoutOptions.Center,\n            VerticalOptions = LayoutOptions.Center\n\
+    \        };\n\n        goBackButton.Clicked += async (sender, args) =>\n     \
+    \   {\n            await Navigation.PopAsync();\n        };\n\n        Content\
+    \ = goBackButton;\n    }\n}\n```\n```\n\nThe contents of each of the previous\
+    \ two pages are identical. Each has a button called goBackButton that is intended\
+    \ to return to the previous page (which caused the current page to appear). There\
+    \ is only one slight difference between the two click event handlers on the previous\
+    \ two pages. For the modal page, the navigation.PopModalAsync call was used to\
+    \ return to the previous page. For the modeless page, Navigation.PopAsync was\
+    \ used to return to the previous page. Another difference when executing the program\
+    \ is that if you move from the home page to the ModelessPage page, the page title\
+    \ will appear at the top with a small arrow that allows us to return to the previous\
+    \ page. When you go from the home page to the ModePage page, the title of the\
+    \ page will never appear (although the Title property is set to it). The only\
+    \ way to return to the previous page is by clicking the back button on the page\
+    \ or by clicking the back button provided by the operating system. Experiment\
+    \ with the app and see the difference between the two pages."
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Conclusion
+
+
+    In this lesson we discussed how to navigate between pages in Android apps, which
+    is of course an important topic. We’ve identified the difference between modal
+    and modeless pages. We also learned how to create the master page, which is the
+    main building block in the transition between pages, by creating the master page
+    to be NavigationPage.
+
+
+    # Chapter VIII
+
+
+    # Engineering Transformations
+
+
+    Transforms are essential mathematical concepts in the world of graphic programming.
+    There are three types of engineering conversions:
+
+
+    +   - **Withdrawal**
+
+    +   - **Rotation**
+
+    +   - **Emulating Scale**
+
+
+    Geometric conversions are based primarily on matrices. They are important mathematical
+    structures that are the backbone of any geometric transformation. Fortunately,
+    Xamarin simplifies it and makes it easy to use'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "the previous three conversions. In this lesson from the series on learning\
+    \ Android application programming using Xamarin.Forms, we will talk about each\
+    \ of the three previous types and how to implement it in a simple practical example.\n\
+    \n# Withdrawal Translation:\n\nWithdrawal is the transition without changing the\
+    \ size of the body, or making any rotation. Any element of the VisualElement class\
+    \ is rotated by the TranslationX and TranslationY properties. When assigning a\
+    \ positive value to the TranslationX property, this will move the object horizontally\
+    \ to the right (relative to its current location). When assigning a positive value\
+    \ to the TranslationY property, this will move the object vertically downward\
+    \ (relative to its current position). Let's start by testing this type of conversion.\
+    \ Start by creating a new Blank App (Xamarin.Forms Portable) project named TransformsApp,\
+    \ then just keep the TransformsApp (Portable) and TransformsApp.Droid projects\
+    \ as we did in this lesson. Next we will add a content page based on the XAML\
+    \ code, as we have already done in this lesson, we will call it TranslationPage.\
+    \ Make sure the contents of this page are as follows:\n\n```\n<ContentPage xmlns\
+    \ = \"http://xamarin.com/schemas/2014/forms\" xmlns: x = \"http://schemas.microsoft.com/winfxx/2009/xaml\"\
+    \ x: Class = \"TransformsApp.TranslationPage\">\n    <StackLayout Padding = \"\
+    20, 10\">\n        <Frame x: Name = \"frame\" HorizontalOptions = \"Center\" VerticalOptions\
+    \ = \"CenterAndExpand\" OutlineColor = \"Accent\">\n            <Label Text =\
+    \ \"TEXT\" FontSize = \"Large\" />\n        </Frame>\n        <Slider x: Name\
+    \ = \"xSlider\" Minimum = \"- 200\" Maximum = \"200\" Value = \"{Binding Source\
+    \ = {x: Reference frame}, Path = TranslationX}\" />\n        <Label Text = \"\
+    {Binding Source = {x: Reference xSlider}, Path = Value, StringFormat = 'TranslationX\
+    \ = {0: F0}'}\" HorizontalTextAlignment =\n```"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "```\n\"Center\" />\n<Slider x: Name = \"ySlider\"\n    Minimum = \"- 200\"\
+    \ Maximum = \"200\" Value = \"{Binding Source = \n{x: Reference frame}, Path =\
+    \ TranslationY}\" />\n    <Label Text = \"{Binding Source = {x: Reference ySlider},\
+    \ Path = Value,\nStringFormat = 'TranslationY = {0: F0}'}\" HorizontalTextAlignment\
+    \ = \n\"Center\" />\n    </StackLayout>\n</ContentPage>\n```\n\nThe previous code\
+    \ uses the data-linking technology that we talked about in this lesson. It controls\
+    \ the location of a frame element with a sticker within it, via the Slider elements.\
+    \ The upper element controls the horizontal withdrawal, while the lower element\
+    \ controls the vertical withdrawal. This is done by linking the Value property\
+    \ of the Slider element xSlider to the TranslationX property of the frame element.\
+    \ Similarly, the Slider element, called ySlider, has a Value property associated\
+    \ with the TranslationY property of the frame element. Modify the App class builder\
+    \ in the App.cs file to read as follows:\n\n```\npublic App ()\n{\n    // The\
+    \ root page of your application\n    MainPage = new TranslationPage ();\n}\n```\n\
+    \nRun the program to get output similar to the following:"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'TEXT
+
+
+    TranslationX = 84
+
+
+    TranslationY = 52
+
+
+    Drag some experiments and note the cruise in this movement.
+
+
+    # -Rotation
+
+
+    Any visible element in Xamarin can be rotated by selecting the center of rotation
+    and angle of rotation. The angle of rotation is determined by degrees, and the
+    positive values of the angle of rotation indicate the clockwise rotation. The
+    rotation center of any element is determined by its AnchorX and AnchorY properties.
+    The rotation angle can also be determined by Rotation.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "If no value is specified for the AnchorX and AnchorY properties, the center\
+    \ of rotation is the same as the center of the visible element by default. Let's\
+    \ see how this works by a simple example. Add to the current project a content\
+    \ page based on the XAML code, as we have already done in this lesson called RotationPage.\
+    \ Make sure the contents of this page are as follows:\n\n```\n<? xml version =\
+    \ \"1.0\" encoding = \"utf-8\"?>\n<ContentPage xmlns = \"http://xamarin.com/schemas/2014/forms\"\
+    \n    xmlns: x = \"http://schemas.microsoft.com/winfx/2009/xaml\"\n    x: Class\
+    \ = \"TransformsApp.RotationPage\">\n    <StackLayout Padding = \"20, 10\">\n\
+    \        <Frame x: Name = \"frame\" HorizontalOptions = \"Center\" VerticalOptions\
+    \ = \"CenterAndExpand\" OutlineColor = \"Accent\">\n            <Label Text =\
+    \ \"TEXT\" FontSize = \"Large\" />\n        </Frame>\n\n        <Slider x: Name\
+    \ = \"rotationSlider\" Maximum = \"360\" Value = \"{Binding Source = {x: Reference\
+    \ frame}, Path = Rotation}\" />\n\n        <Label Text = \"{Binding Source = {x:\
+    \ Reference rotationSlider}, Path = Value, StringFormat = 'Rotation = {0: F0}'}\"\
+    \ HorizontalTextAlignment = \"Center\" />\n\n        <StackLayout Orientation\
+    \ = \"Horizontal\" HorizontalOptions = \"Center\">\n            <Stepper x: Name\
+    \ = \"anchorXStepper\" Minimum = \"- 1\" Maximum = \"2\" Increment = \"0.25\"\
+    \ Value = \"{Binding Source = {x: Reference frame}, Path = AnchorX}\" />\n   \
+    \         <Label Text = \"{Binding Source = {x: Reference anchorXStepper}, Path\
+    \ = Value, StringFormat = 'AnchorX = {0: F2}'}\" VerticalOptions = \"Center\"\
+    \ />\n        </StackLayout>\n\n        <StackLayout Orientation = \"Horizontal\"\
+    \ HorizontalOptions = \"Center\">\n            <Stepper x: Name = \"anchorYStepper\"\
+    \n                Minimum = \"- 1\" Maximum = \"2\" Increment = \"0.25\" Value\
+    \ = \"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\n{Binding Source = {x: Reference frame}, Path = AnchorY}\" />\n    <Label\
+    \ Text = \"{Binding Source = {x: Reference anchorYStepper}, Path = Value, StringFormat\
+    \ = 'AnchorY = {0: F2}'}\" VerticalOptions = \"Center\" />\n    </StackLayout>\n\
+    \n    </StackLayout>\n</ContentPage>\n```\n\nThe previous program relies on rotating\
+    \ a frame element containing a sticker. For this purpose, we will use a Slider\
+    \ named rotationSlider to control the angle of rotation (by associating with the\
+    \ Rotation property of the frame element). We will also use the Stepper elements\
+    \ anchorXStepper and anchorYStepper to control the coordinates of the spin center\
+    \ (by linking with the AnchorX and AnchorY properties of the frame element). To\
+    \ execute this program, go to the App class builder within the App.cs file and\
+    \ make sure to be as follows:\n\n```\npublic App ()\n{\n    // The root page of\
+    \ your application\n    MainPage = new RotationPage ();\n}\n```\n\nRun the program\
+    \ to get a look similar to the following:"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '![](img/affff2e3b09de80cc0ffe811bbf63f5d_87_0.png)
+
+
+    - It''s a great !
+
+    is not she ?
+
+
+    Do some experiments and enjoy the program!
+
+
+    # Emulation Scale
+
+
+    Simulation is a geometric transformation that leads to change in sizes. The simulation
+    can be used to control the sizes of visual elements via its Scale property. This
+    property has a default value of 1. When using a value less than'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "1, we will reduce the size. When any value greater than 1 is used, we will\
+    \ enlarge the volume. For example, a value of 3 means we will magnify the volume\
+    \ 3 times, and so on. A value of 0 for the Scale property is allowed but will\
+    \ cause the element to disappear. Negative values of Scale can be used, but this\
+    \ will overturn the element while the previous concept remains the same. That\
+    \ is, a value of -1 will overturn the element but the volume remains the same.\
+    \ To simulate, add to the current project a content page based on the XAML code\
+    \ as we have already done in this lesson. Make sure the contents of this page\
+    \ are as follows:\n\n```\n```xml\n<? xml version = \"1.0\" encoding = \"utf-8\"\
+    ?>\n<ContentPage xmlns = \"http://xamarin.com/schemas/2014/forms\"\n xmlns: x\
+    \ = \"http://schemas.microsoft.com/winfx/2009/xaml\"\n x: Class = \"TransformsApp.ScalePage\"\
+    >\n\n<StackLayout Padding = \"20, 10\">\n<Frame x: Name = \"frame\" HorizontalOptions\
+    \ = \"Center\" VerticalOptions = \"CenterAndExpand\" OutlineColor = \"Accent\"\
+    >\n<Label Text = \"TEXT\" FontSize = \"Large\" />\n</Frame>\n</StackLayout>\n\n\
+    <Slider x: Name = \"scaleSlider\" Minimum = \"- 10\" Maximum = \"10\" Value =\
+    \ \"{Binding Source = {x: Reference frame}, Path = Scale}\" />\n\n<Label Text\
+    \ = \"{Binding Source = {x: Reference scaleSlider}, Path = Value, StringFormat\
+    \ = 'Scale = {0:F1}'}\" HorizontalTextAlignment = \"Center\" />\n</StackLayout>\n\
+    </ContentPage>\n```\n```\n\nGo to the App class builder within the App.cs file\
+    \ and make sure it looks like this:\n\n```\n```csharp\npublic App ()\n{\n}\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '```
+
+    ```csharp
+
+    // The root page of your application
+
+    MainPage = new ScalePage();
+
+    }
+
+    ```
+
+    ```
+
+
+    Run the program to get a look similar to the following:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_89_0.png)
+
+
+    # Conclusion:
+
+
+    In this lesson we talked about basic engineering transformations: Translation,
+    Rotation, Scale and how to deal with them through Xamarin. In fact, the need for
+    such conversions often lies in gaming or graphical applications. We will'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: 'apply some of these conversions in the next lessons of this series.
+
+
+    # Build contacts app using Xamarin
+
+
+    1
+
+
+    In this chapter, we will start by building a practical application with high technical
+    standards. Where we will use the knowledge we gained from previous lessons to
+    build a simple contact application but it uses relatively advanced techniques
+    and concepts.
+
+
+    We will address this application in three consecutive parts, here is a brief description
+    of the content of each of them:
+
+
+    **Part one:** Explain the purpose of the application, and clarify the idea of
+    the Repository repository model in building applications, while building the general
+    structure of the application, and this is the content of this lesson.
+
+    **Part two:** equipping the functional aspects of the warehouse and making it
+    usable.
+
+    **Part Three:** Implementing the main and sub-application interfaces for displaying
+    details. And the implementation of the process of movement between the two interfaces
+
+
+    # The purpose of the application and how it works
+
+
+    The idea of the application is very simple, it boils down to displaying pre-'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'existing contacts and the ability to search within them, with the ability to
+    add, edit and delete new contacts. The application depends on the presence of
+    two interfaces. The first interface is the main interface and contains a section
+    for searching by name or nickname for any pre-existing contact, in addition to
+    a list to display the contacts resulting from the search process, and finally
+    a button for adding new contacts. See the following figure that results when FIND
+    is pressed when no search criteria are specified:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_91_0.png)
+
+
+    When the user clicks on the FIND button without specifying any criteria, the application
+    will display all the contacts he has, which will be in this version'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: 'of the program are fake data present in the application memory. When the user
+    specifies the name or nickname, the application will search using the logic of
+    AND.
+
+    As for the second interface, it appears when the user touches one of the contacts
+    from the previous list, as this interface displays detailed data about this contact:
+    name, nickname, phone number, email address and hobbies. See the following figure:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_92_0.png)
+
+
+    It is possible to modify any of this data and then the user clicks the save'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: 'button to save it, or the back to the previous interface button at the top
+    next to the program icon can be clicked if he does not want to modify the data.
+    The user can also delete this contact by clicking on the Delete button as it appears
+    from the previous figure. This is simply the idea of implementation.
+
+
+    # Repository repository form
+
+
+    As applications grow in size and the tasks required of them are varied, a way
+    to organize work within the application is needed. In fact, there are many models
+    supported by Xamarin for this purpose, such as the MVVM model that is used effectively
+    within Xamarin to organize and separate the parts responsible for the interfaces
+    for the parts responsible for the business logic from those responsible for dealing
+    with remote or local data servers of various types.
+
+
+    One of my models that I personally prefer is the Repository which I use extensively
+    in all kinds of applications I am working on. It is a beautiful and rational method
+    that allows the application to develop smoothly and quickly to work in various
+    types of environments, and it is compatible to work with the MVVM model.
+
+
+    The repository model allows isolating the code responsible for handling data from
+    business logic. There are several benefits in this matter, the most important
+    of which are:
+
+
+    +   Organizing the program, and making it more understandable and development.
+
+    +   Development of the data-handling method, without making any changes to the
+    program''s logic.
+
+    +   The ability to radically change the type of service we use to store data without
+    negligible change in business logic.
+
+
+    I will go directly to how this model is adopted in our app. Where we will need
+    to use a single interface with a single class achieved. To refresh your'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "memory around the facades, see this lesson. Let's start building this app now\
+    \ in the next paragraph.\n\n# Build the app\n\nStart by creating a new Blank App\
+    \ (Xamarin.Forms Portable) project named ContactsApp then just keep the ContactsApp\
+    \ (Portable) and ContactsApp.Droid projects just as we did in this lesson.\n\n\
+    From the Solution Explorer window, right-click on the ContactsApp project and\
+    \ choose from the menu that appears the Add option, then from the submenu the\
+    \ New Folder option to add a new folder. Name this folder Entity, and after it\
+    \ appears in the Solution Explore window, right-click on it and choose Add and\
+    \ from the submenu choose Class. A window will appear allowing you to assign a\
+    \ name to this item. Choose the name, Contact. This category is the main building\
+    \ block for this program and represents the logic of working in it. Be sure to\
+    \ make the contents of the Contact.cs file as follows:\n\n```\nnamespace ContactsApp.Entities\n\
+    {\n    public class Contact\n    {\n        public int Id {get; set;}\n      \
+    \  public string FirstName {get; set;}\n        public string LastName {get; set;}\n\
+    \        public string Tel {get; set;}\n        public string EMail {get; set;}\n\
+    \        public string Hobbies {get; set;}\n\n        public override string ToString\
+    \ ()\n        {\n            return string.Concat (FirstName, \"\" \" , LastName);\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "The Contact category as it appears from the previous figure contains the basic\
+    \ data that any contact needs, in addition to the hobby feature that may seem\
+    \ a little strange for a contact.\nRight-click again on the ContactsApp project,\
+    \ then choose from the list that appears, add, and from the submenu the New Folder\
+    \ option to add a new folder. Name this folder Abstract, and after it appears\
+    \ in the Solution Explore window, right-click on it and choose Add and from the\
+    \ submenu choose New Item. A window will appear allowing you to specify the type\
+    \ of item to be added. Choose the Interface and assign it the name IContactsRepository.\n\
+    Make sure the contents of the IContactsRepository.cs file are as follows:\n\n\
+    ```\nusing System.Threading.Tasks;\nusing System.Collections.ObjectModel;\nusing\
+    \ ContactsApp.Entities;\n\nnamespace ContactsApp.Abstract\n{\n    public interface\
+    \ IContactsRepository\n    {\n        Task<ObservableCollection<Contact>> GetContactsAsync\
+    \ (string firstName, string lastName);\n\n        Task<bool> AddContactAsync (Contact\
+    \ contactToAdd);\n\n        Task<bool> UpdateContactAsync (Contact contactToUpdate);\n\
+    \n        Task<bool> DeleteContactAsync (Contact contactToDelete);\n    }\n}\n\
+    ```\n\nInterfaces are generally used when we want to strip Abstraction and make\
+    \ it public, which is a huge benefit in making software code more understandable\
+    \ and reusable. This is why this interface has been added to the Abstract folder.\
+    \ The interfaces do not contain any software code as we know, all that it"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "contains are permits for dependencies that must be achieved within any category\
+    \ that wishes to achieve this interface. This interface briefly contains the basic\
+    \ processes our application needs to accomplish its tasks: obtaining contacts\
+    \ by name and nickname GetContactsAsync, adding a new contact AddContactAsync,\
+    \ updating a pre-existing contact UpdateContactAsync, and deleting a DeleteContactAsync\
+    \ contact. The reason for the presence of the word Async in each of these functions\
+    \ is to indicate that it is assumed that you will use the Asynchronous Programming\
+    \ technology that we talked about in this lesson. The interesting thing is that\
+    \ this interface does not care about the location of the data or how to obtain\
+    \ and deal with it. They only care about what the application needs and just.\n\
+    \nWe will now repeat the same process for adding a new folder within the ContactsApp.cs\
+    \ project named Concrete which will contain the item that will implement the previous\
+    \ IContactsRepository interface. Right-click on this folder and choose Add. From\
+    \ the submenu choose Class. Name this item named MemoryContactsRepository and\
+    \ make sure its contents are as follows:\n\n```\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nusing System.Collections.ObjectModel;\n\
+    using ContactsApp.Abstract;\nusing ContactsApp.Entities;\n\nnamespace ContactsApp.Concrete\n\
+    {\n    public class MemoryContactsRepository: IContactsRepository\n    {\n   \
+    \     private ObservableCollection<Contact> contacts;\n\n        public MemoryContactsRepository()\n\
+    \        {\n            contacts = new ObservableCollection<Contact>()\n     \
+    \   {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "```\nnew Contact ()\n{\n    Id = 1,\n    FirstName = \"Ahmad\",\n    LastName\
+    \ = \"Saeed\",\n    Tel = \"123456\",\n    EMail = \"admin@example.com\",\n  \
+    \  Hobbies = \"Swimming\"\n},\nnew Contact ()\n{\n    Id = 2,\n    FirstName =\
+    \ \"Mahmood\",\n    LastName = \"Maktabi\",\n    Tel = \"852136\",\n    EMail\
+    \ = \"info@example.com\",\n    Hobbies = \"Reading\"\n},\nnew Contact ()\n{\n\
+    \    Id = 3,\n    FirstName = \"Mazen\",\n    LastName = \"Najem\",\n    Tel =\
+    \ \"987456\",\n    EMail = \"it@example.com\",\n    Hobbies = \"Swimming\"\n},\n\
+    new Contact ()\n{\n    Id = 4,\n    FirstName = \"Sawsan\",\n    LastName = \"\
+    Hilal\",\n    Tel = \"741258\",\n    EMail = \"sales@example.com\",\n    Hobbies\
+    \ = \"Writing, Reading\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "```\n},\nnew Contact ()\n{\n    Id = 5,\n    FirstName = \"Musab\",\n    LastName\
+    \ = \"Aga\",\n    Tel = \"357159\",\n    EMail = \"admin@example.com\",\n    Hobbies\
+    \ = \"Sport\"\n}\n};\n}\npublic async Task<ObservableCollection<Contact>>\nGetContactsAsync\
+    \ (string firstName, string lastName)\n{\n    throw new System.NotImplementedException\
+    \ ();\n}\n\npublic async Task<bool> AddContactAsync (Contact\ncontactToAdd)\n\
+    {\n    throw new System.NotImplementedException ();\n}\npublic async Task<bool>\
+    \ UpdateContactAsync (Contact\ncontactToUpdate)\n{\n    throw new System.NotImplementedException\
+    \ ();\n}\npublic async Task<bool> DeleteContactAsync (Contact\ncontactToDelete)\n\
+    {\n    throw new System.NotImplementedException ();\n}\n}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: 'The striking thing here is that contact data already exists within this category
+    and specifically within its structure. It is stored within the contacts variable
+    and is defined at the class level and the global type ObservableCollection, which
+    we will talk about in the next lesson. It suffices now to know that it is a collection
+    of elements whose type is a contact type and is useful in applications where asynchronous
+    programming is used. It is absolutely unrealistic to have the data stored in the
+    item in this way. It is assumed to be within a local or remote database or even
+    within a normal file. In fact, the Repository''s power is actually powerful in
+    isolating the data acquisition method from the actual program.
+
+
+    It is also clear that the dependencies in here actually contain a code that causes
+    the NotImplementedException to be thrown to remind us that it is not yet ready.
+
+
+    The Solution Explorer will eventually look similar to the following:'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '![](img/affff2e3b09de80cc0ffe811bbf63f5d_100_0.png)
+
+
+    # Conclusion
+
+
+    This lesson is the introduction to the Contacts application that we will continue
+    building over the next two lessons. In this lesson, we covered the basic application
+    idea, and clarified the idea of the Repository model by building an interface
+    that represents it in addition to a class that achieves it. Through this class
+    (the warehouse class), we will be able to handle data that'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: 'are contained within the application memory only. Although this method is unrealistic,
+    it is necessary to simplify matters and make them easier to understand. We also
+    created an item that represents the contact in the app. We saw what is the relationship
+    between it and the warehouse class, through summons to the disciples in the last
+    class.
+
+
+    In this lesson, we will continue the work that we started in the previous lesson,
+    which is building the contacts application. In the previous lesson, we finished
+    building the repository model by declaring the IContactsRepository interface and
+    achieving it through the MemoryContactsRepository class. We also created the Contacts
+    category that is the building block in the app.
+
+
+    In this lesson we will add the functionalities of the repository MemoryContactsRepository
+    to make our application workable.
+
+
+    # Preparing the functional aspects of the warehouse
+
+
+    Open the MemoryContactsRepository.cs file and make sure its contents are as follows:'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "```\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    using System.Collections.ObjectModel;\nusing ContactsApp.Abstract;\nusing ContactsApp.Entities;\n\
+    \nnamespace ContactsApp.Concrete\n{\n    public class MemoryContactsRepository\
+    \ : IContactsRepository\n    {\n        private ObservableCollection<Contact>\
+    \ contacts;\n        public MemoryContactsRepository()\n        {\n          \
+    \  contacts = new ObservableCollection<Contact>()\n            {\n           \
+    \     new Contact()\n                {\n                    Id=1,\n          \
+    \          FirstName = \"Ahmad\",\n                    LastName=\"Saeed\",\n \
+    \                   Tel=\"123456\",\n                    EMail=\"admin@example.com\"\
+    ,\n                    Hobbies=\"Swimming\"\n                },\n            \
+    \    new Contact()\n                {\n                    Id=2,\n           \
+    \         FirstName = \"Mahmood\",\n                    LastName=\"Maktabi\",\n\
+    \                    Tel=\"852136\",\n                    EMail=\"info@example.com\"\
+    ,\n                    Hobbies=\"Reading\"\n                }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "```\n},\nnew Contact()\n{\n    Id=3,\n    FirstName = \"Mazen\",\n    LastName=\"\
+    Najem\",\n    Tel=\"987456\",\n    Email=\"it@example.com\",\n    Hobbies=\"Swimming\"\
+    \n},\nnew Contact()\n{\n    Id=4,\n    FirstName = \"Sawsan\",\n    LastName=\"\
+    Hilal\",\n    Tel=\"741258\",\n    Email=\"sales@example.com\",\n    Hobbies=\"\
+    Writing, Reading\"\n},\nnew Contact()\n{\n    Id=5,\n    FirstName = \"Musab\"\
+    ,\n    LastName=\"Aga\",\n    Tel=\"357159\",\n    Email=\"admin@example.com\"\
+    ,\n    Hobbies=\"Sport\"\n}\n};\n}\npublic async Task<ObservableCollection<Contact>>\n\
+    GetContactsAsync(string firstName, string lastName)\n{\n    return await Task.Factory.StartNew(()\
+    \ =>\n    {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "```\nIEnumerable<Contact> result = from contact in contacts where\n    contact.FirstName\n\
+    \        .ToUpper()\n        .Contains(firstName.ToUpper()) &&\n    contact.LastName\n\
+    \        .ToUpper()\n        .Contains(lastName.ToUpper())\n    select contact;\n\
+    \n    ObservableCollection<Contact> tmp = new\nObservableCollection<Contact>(result);\n\
+    \    return tmp;\n    });\n}\npublic async Task<bool> AddContactAsync(Contact\
+    \ contactToAdd)\n{\n    return await Task.Factory.StartNew(() =>\n    {\n    \
+    \    contactToAdd.Id = contacts.Count() + 1;\n        contacts.Add(contactToAdd);\n\
+    \        return true;\n    });\n}\n    public async Task<bool> UpdateContactAsync(Contact\
+    \ contactToUpdate)\n{\n    return await Task.Factory.StartNew(() =>\n    {\n \
+    \       Contact result = (from contact in contacts\n            where contact.Id\
+    \ == contactToUpdate.Id\n            select contact).FirstOrDefault();\n\n   \
+    \     if (result != null)\n        {\n            contactToUpdate.FirstName =\
+    \ result.FirstName;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "```\ncontactToUpdate.LastName = result.LastName;\ncontactToUpdate.Email = result.Email;\n\
+    contactToUpdate.Tel = result.Tel;\ncontactToUpdate.Hobbies = result.Hobbies;\n\
+    \nreturn true;\n} \nelse \n{\nreturn false;\n}\n});\n\npublic async Task<bool>\
+    \ DeleteContactAsync(Contact contactToDelete)\n{\nreturn await Task.Factory.StartNew(()\
+    \ =>\n{\nvar result = (from contact in contacts\nwhere contact.Id != contactToDelete.Id\n\
+    select contact);\n\nif (result != null)\n{\ncontacts = new ObservableCollection<Contact>(result);\n\
+    contactToDelete = null;\nreturn true;\n}\nelse \n{\nreturn false;\n}\n}\n});\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "```\n}\n}\n```\n\nWhat is new here is that we have assigned a code for each\
+    \ of the basic functions in the repository. Look at the following paragraphs that\
+    \ explain the work of the code within each child.\n\n# Continue searching GetContactsAsync\n\
+    \nHere is the GetContactsAsync function, which requires string arguments to search\
+    \ by name and nickname for contacts:\n\n```\npublic async Task<ObservableCollection<Contact>>\n\
+    GetContactsAsync (string firstName, string lastName)\n{\n    return await Task.Factory.StartNew\
+    \ (() =>\n    {\n        IEnumerable<Contact> result = from contact in contacts\
+    \ where\n            contact.FirstName\n                .ToUpper ()\n        \
+    \        .Contains (firstName.ToUpper ()) &&\n            contact.LastName\n \
+    \               .ToUpper ()\n                .Contains (lastName.ToUpper ())\n\
+    \            select contact;\n        ObservableCollection<Contact> tmp = new\
+    \ ObservableCollection<Contact> (result);\n        return tmp;\n    });\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "In the last two lines of the inner function (lambda expression) we present\
+    \ the search result in the form of a global group which is ObservableCollection\
+    \ <Contact> where it is implicitly transformed into an object of type <ObservableCollection\
+    \ <Contact>>.\n\n# Continue adding a new contact, AddContactAsync\n\nThe AddContactAsync\
+    \ function requires only one Contact argument and returns a Task <bool> object\
+    \ to indicate the success of the add operation:\n\n```\npublic async Task <bool>\
+    \ AddContactAsync (Contact contactToAdd)\n{\n\treturn await Task.Factory.StartNew\
+    \ (() =>\n\t{\n\t\tcontactToAdd.Id = contacts.Count () + 1;\n\t\tcontacts.Add\
+    \ (contactToAdd);\n\t\treturn true;\n\t});\n}\n```\n\nThis code adds a new contact\
+    \ to the pre-existing contacts under the contacts variable, paying attention to\
+    \ this code:\n\n```\ncontactToAdd.Id = contacts.Count () + 1;\n```\n\nWhat this\
+    \ phrase does is not found in any real practical application. It assigns a value\
+    \ to the Id property of the passing contact to the function. No application should\
+    \ do this, as this number should be generated automatically when the contact is\
+    \ added to the database. Since our application relies on fake data present in\
+    \ the memory we had to do this to distinguish the newly added contacts."
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: "# Continue with DeleteContactAsync\n\nThe DeleteContactAsync function requires\
+    \ only one Contact argument and returns a Task <bool> object to indicate the success\
+    \ of the deletion:\n\n```\n```csharp\npublic async Task <bool> DeleteContactAsync\
+    \ (Contact contactToDelete)\n{\n return await Task.Factory.StartNew (() =>\n {\n\
+    \ var result = (from contact in contacts where contact.Id! = contactToDelete.Id\
+    \ select contact);\n if (result! = null)\n {\n contacts = new ObservableCollection\
+    \ <Contact> (result);\n contactToDelete = null;\n return true;\n }\n else\n {\n\
+    \ return false;\n }\n });\n}\n```\n```\n\nThe preceding code actually filters\
+    \ the contact to be deleted, which simply means that the LINQ to Objects query\
+    \ will return all contacts except those whose Id value has a value of Id for the\
+    \ contact we want to delete. Then the result is attributed to the contacts variable,\
+    \ which means that we have actually deleted this contact from memory."
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "# Follow the UpdateContactAsync\n\nThe UpdateContactAsync function, which requires\
+    \ only one Contact type argument and returns a Task <bool> object to indicate\
+    \ the success of the deletion:\n\n```\npublic async Task <bool> UpdateContactAsync\
+    \ (Contact contactToUpdate)\n{\n    return await Task.Factory.StartNew (() =>\n\
+    \    {\n        Contact result = (from contact in contacts\n                 \
+    \         where contact.Id == contactToUpdate.Id\n                          select\
+    \ contact) .FirstOrDefault ();\n        if (result! = null)\n        {\n     \
+    \       contactToUpdate.FirstName = result.FirstName;\n            contactToUpdate.LastName\
+    \ = result.LastName;\n            contactToUpdate.EMail = result.EMail;\n    \
+    \        contactToUpdate.Tel = result.Tel;\n            contactToUpdate.Hobbies\
+    \ = result.Hobbies;\n            return true;\n        }\n        else\n     \
+    \   {\n            return false;\n        }\n    });\n}\n```\n\nThis code is subject\
+    \ to the same principle: The LINQ to Objects query searches for the required contact\
+    \ within the contacts within the contacts variable according to the value of the\
+    \ contact's Id property, and after obtaining it, the values of the other properties\
+    \ are updated as is clear."
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'This way, the warehouse template is ready for use. Where it will deal with
+    all components of the application to perform four different types of operations
+    on the data: search, add, modify, and delete.
+
+
+    # ## Conclusion
+
+
+    In this lesson, we examined how to build the repository model represented by the
+    MemoryContactsRepository class, which is achieved as we know the IContactsRepository
+    interface, where we got to know the four functions within it that allow the application
+    components to deal with data without paying attention to the location of these
+    data. We also learned how to use the LINQ to Objects query technology within the
+    four dependencies to perform the tasks required from this warehouse. In the next
+    lesson, we''ll start with building the application interfaces.
+
+
+    # 3
+
+
+    This lesson is the third and final part of the lessons on how to build a simple
+    practical application for managing contacts with preliminary data. You will need
+    to read the first and second parts before you can continue in this lesson.
+
+
+    +   - The main interface through which you can search for contacts by name and
+    nickname, and also add a new contact.
+
+    +   - The interface for viewing the contact details chosen from the main interface,
+    and then the ability to modify their data or even delete it.
+
+
+    In addition to modifying the class App to make the application workable.'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# The main interface of ContactsPage\n\nInitially, we will need to add a new\
+    \ folder, which we will call Pages, in which we will place any new page for the\
+    \ application.\nFrom the Solution Explorer window, right-click on the ContactsApp\
+    \ (Portal) project name, then choose from the list that appears the Add option.\
+    \ From the submenu, choose New Folder and name it Pages.\nRight-click on the folder\
+    \ you just added, which is Pages, and choose from the Add menu, then choose from\
+    \ the New Item submenu, for a window to appear that allows you to choose the new\
+    \ item you want to add. Choose a code-based content page as we have already done\
+    \ in this lesson. Name this page ContactsPage.\nNow go to the ContactsPage.xaml\
+    \ file and make sure its contents are as follows:\n\n```\n<? xml version = \"\
+    1.0\" encoding = \"utf-8\"?>\n<ContentPage xmlns = \"http://xamarin.com/schemas/2014/forms\"\
+    \ xmlns: x = \"http://schemas.microsoft.com/winfx/2009/xaml\" x: Class = \"ContactsApp.Pages.ContactsPage\"\
+    \ Appearing = \"ContactsPage_Appearing\">\n\n<StackLayout>\n    <StackLayout Padding\
+    \ = \"5,25,5,5\">\n        <StackLayout Orientation = \"Horizontal\">\n      \
+    \      <Label Text = \"First Name\" />\n            <Editor x: Name = \"txtFirstName\"\
+    \ HorizontalOptions = \"FillAndExpand\" TextChanged = \"Editor_TextChanged\" />\n\
+    \        </StackLayout>\n\n        <StackLayout Orientation = \"Horizontal\">\n\
+    \            <Label Text = \"Last Name\" />\n            <Editor x: Name = \"\
+    txtLastName\" HorizontalOptions = \"FillAndExpand\" TextChanged = \"Editor_TextChanged\"\
+    \ />\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '```
+
+    </StackLayout>
+
+
+    <Button Text = "Find" x: Name = "btnFind" Clicked =
+
+    "btnFind_Clicked" />
+
+    </StackLayout>
+
+
+    <StackLayout>
+
+    <ListView x: Name = "lsvContacts"
+
+    ItemTapped = "lsvContacts_ItemTapped" />
+
+    </StackLayout>
+
+
+    <Button Text = "+ New Contact"
+
+    HorizontalOptions = "FillAndExpand"
+
+    Clicked = "btnNewContact_Clicked" />
+
+    </StackLayout>
+
+
+    </ContentPage>
+
+    ```
+
+
+    We have used four different events on this page. We will give a short description
+    of each of them below:
+
+
+    +   - The Contacts Appearing event has been linked to the ContactsPage_Appearing
+    handler to update page data when returning from the page responsible for viewing
+    contact details as we will see later in this lesson.
+
+    +   - TextChanged change occurred for both txtFirstName and txtLastName and we
+    have linked it to the Editor_TextChanged handler to clear search results that
+    appear under the lsvContacts menu when any user changes.
+
+    +   - Touching the portlet occurred within the lsvContacts menu and we linked
+    it to the lsvContacts_ItemTapped handler in order for the program to move to the
+    interface responsible for viewing contact details when touched.
+
+    +   - Clicked to add a new contact button and linked it to the btnNewContact_Clicked
+    handler.
+
+
+    Then, go to the corresponding code file, ContactsPage.xaml.cs, and make'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "sure its contents are as follows:\n\n```\nusing System;\nusing Xamarin.Forms;\n\
+    using ContactsApp.Entities;\n\nnamespace ContactsApp.Pages\n{\n    public partial\
+    \ class ContactsPage: ContentPage\n    {\n        public ContactsPage ()\n   \
+    \     {\n            InitializeComponent ();\n        }\n\n        private async\
+    \ void DoFind ()\n        {\n            string firstName = txtFirstName.Text\
+    \ == null? \"::\ntxtFirstName.Text;\n            string lastName = txtLastName.Text\
+    \ == null? \"::\ntxtLastName.Text;\n\n            lsvContacts.ItemsSource = await\
+    \ ((App) Application.Current)\n.ContactsRepository\n                .GetContactsAsync\
+    \ (firstName, lastName);\n        }\n\n        private void btnFind_Clicked (object\
+    \ sender, EventArgs e)\n        {\n            DoFind ();\n        }\n\n     \
+    \   private void Editor_TextChanged (object sender,\nTextChangedEventArgs e)\n\
+    \        {\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: "```\nif (lsvContacts.ItemsSource != null)\n    lsvContacts.ItemsSource = null;\n\
+    }\n\nprivate async void lsvContacts_ItemTapped (object sender, ItemTappedEventArgs\
+    \ e)\n{\n    Contact selectedContact = (Contact) e.Item;\n    ContactDetailsPage\
+    \ ContactDetailsPage = new\n        ContactDetailsPage (selectedContact);\n\n\
+    \    await Navigation.PushAsync (ContactDetailsPage);\n}\n\nprivate void ContactsPage_Appearing\
+    \ (object sender, EventArgs e)\n{\n    DoFind ();\n}\n\nprivate async void btnNewContact_Clicked\
+    \ (object sender, EventArgs e)\n{\n    ContactDetailsPage ContactDetailsPage =\
+    \ new\n        ContactDetailsPage (null);\n\n    await Navigation.PushAsync (ContactDetailsPage);\n\
+    }\n}\n}\n```\n\nThis file contains the ContactsPage class, which contains event\
+    \ handlers that we have reported on the corresponding code page as we saw earlier,\
+    \ in addition to a service dependent, which is DoFind and its function is to perform\
+    \ a search according to the criteria desired by the user (name and nickname).\
+    \ The code in the event handlers is simple and clear. But I want to"
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: 'pause for a bit of code that the DoFind utility that executes the search uses:
+
+
+    ```
+
+    string firstName = txtFirstName.Text == null? "": txtFirstName.Text;
+
+    string lastName = txtLastName.Text == null? "": txtLastName.Text;
+
+    ```
+
+
+    ```
+
+    lsvContacts.ItemsSource = await ((App) Application.Current)
+
+    .ContactsRepository
+
+    .GetContactsAsync (firstName, lastName);
+
+    ```
+
+
+    The first two clear lines where they get the search criteria that a user wants
+    from the text boxes txtFirstName and txtLastName. As for the last line, it works
+    to contact the repository to execute the search and return the results by making
+    a call to the GetContactsAsync function and passing the search criteria to it.
+    See this phrase:
+
+
+    ```
+
+    await ((App) Application.Current) .ContactsRepository
+
+    .GetContactsAsync (firstName, lastName);
+
+    ```
+
+
+    The Application.Current property returns an Application-type object representing
+    the current application that we are working with. Which, in turn, needs to be
+    cast using the Transform (App) into an App type object, which is the primary class
+    in the application. In fact, I have declared the ContactsRepository feature in
+    the App class to access the repository from anywhere in our application. We will
+    see a declaration of this feature shortly.
+
+
+    # ContactDetailsPage contact details interface
+
+
+    Add this interface in the same way that we did when adding the main interface
+    file, i.e. to the Pages folder. Its name should be ContactDetailsPage.'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'Your solution explorer will look like the following:
+
+
+    ![](img/affff2e3b09de80cc0ffe811bbf63f5d_117_0.png)
+
+
+    We move to the ContactDetailsPage.xaml symbol file, and make sure its contents
+    are as follows:
+
+
+    ```
+
+    <? xml version = "1.0" encoding = "utf-8"?>
+
+    <ContentPage xmlns = "http://xamarin.com/schemas/2014/forms"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '```
+
+    xmlns: x = "http://schemas.microsoft.com/winfx/2009/xaml"
+
+    x: Class = "ContactsApp.Pages.ContactDetailsPage"
+
+
+    <StackLayout Orientation = "Vertical" Padding = "5,25,5">
+
+    <Label Text = "FirstName" />
+
+    <Entry x: Name = "txtFirstName" />
+
+    <Label Text = "LastName" />
+
+    <Entry x: Name = "txtLastName" />
+
+    <Label Text = "Tel" />
+
+    <Entry x: Name = "txtTel" />
+
+    <Label Text = "EMail" />
+
+    <Entry x: Name = "txtEMail" />
+
+    <Label Text = "Hobbies" />
+
+    <Editor x: Name = "txtHobbies" />
+
+    <StackLayout Orientation = "Horizontal">
+
+    <Button Text = "Save"
+
+    x: Name = "btnSave"
+
+    Clicked = "btnSave_Clicked" />
+
+    <Button Text = "Delete"
+
+    x: Name = "btnDelete"
+
+    Clicked = "btnDelete_Clicked" />
+
+    </StackLayout>
+
+    </StackLayout>
+
+    </ContentPage>
+
+    ```
+
+
+    It is clearly a simple file. There are two events we have reported on this page:'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "+   * The Clicked Save button event has been linked to the btnSave_Clicked\
+    \ processor and is responsible for saving and adding.\n+   * The Clicked Delete\
+    \ button click event has been linked to the btnDelete_Clicked processor and is\
+    \ responsible for deleting the contact.\n\nGo to the code file corresponding to\
+    \ the previous symbol file, called ContactDetailsPage.xaml.cs, and make sure that\
+    \ its contents are as follows:\n\n```\nusing System;\nusing Xamarin.Forms;\nusing\
+    \ ContactsApp.Entities;\n\nnamespace ContactsApp.Pages\n{\n    public partial\
+    \ class ContactDetailsPage : ContentPage\n    {\n        private Contact currentContact;\n\
+    \n        public ContactDetailsPage(Contact contact)\n        {\n            InitializeComponent();\n\
+    \n            this.currentContact = contact;\n\n            if (this.currentContact\
+    \ != null)\n            {\n                txtFirstName.Text = contact.FirstName;\n\
+    \                txtLastName.Text = contact.LastName;\n                txtEMail.Text\
+    \ = contact.EMail;\n                txtTel.Text = contact.Tel;\n             \
+    \   txtHobbies.Text = contact.Hobbies;\n\n                Title = contact.ToString()\
+    \ + \" Details\";\n\n                btnDelete.IsVisible = true;\n           \
+    \ }\n            else\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\n{\n    Title = \"New Contact\";\n\n    btnDelete.IsVisible = false;\n\
+    }\n}\n\nprivate async void btnSave_Clicked(object sender, EventArgs e)\n{\n  \
+    \  string firstName = txtFirstName.Text == null ? \"\" : txtFirstName.Text;\n\
+    \    string lastName = txtLastName.Text == null ? \"\" : txtLastName.Text;\n \
+    \   string tel = txtTel.Text == null ? \"\" : txtTel.Text;\n    string email =\
+    \ txtEMail.Text == null ? \"\" : txtEMail.Text;\n    string hobbies = txtHobbies.Text\
+    \ == null ? \"\" : txtHobbies.Text;\n\n    if (this.currentContact != null)\n\
+    \    {\n        this.currentContact.FirstName = firstName;\n        this.currentContact.LastName\
+    \ = lastName;\n        this.currentContact.EMail = tel;\n        this.currentContact.Tel\
+    \ = email;\n        this.currentContact.Hobbies = hobbies;\n\n        await ((App)Application.Current).ContactsRepository\n\
+    \            .UpdateContactAsync(this.currentContact);\n    }\n    else\n    {\n\
+    \        Contact contact = new Contact\n        {\n            FirstName = firstName,\n\
+    \            LastName = lastName,\n            Tel = tel,\n            EMail =\
+    \ email,\n```"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "```\n```csharp\nHobbies = hobbies,\n};\nawait ((App)Application.Current).ContactsRepository\n\
+    .AddContactAsync(contact);\n}\nawait Navigation.PopAsync();\n}\n```\n```\n\n```\n\
+    ```csharp\nprivate async void btnDelete_Clicked(object sender, EventArgs e)\n\
+    {\n    var result = await\n        DisplayAlert(\"Delete Confirmation\",\n   \
+    \         \"Are you sure you want to delete this contact?\",\n            \"Yes\"\
+    , \"No\");\n\n    if (result)\n    {\n        await ((App)Application.Current).ContactsRepository\n\
+    \            .DeleteContactAsync(this.currentContact);\n\n        await Navigation.PopAsync();\n\
+    \    }\n}\n```\n```\n\nWe also explained previously that the function of this\
+    \ interface is to view and edit the details of a contact, with the possibility\
+    \ of deleting it, in addition to using this interface to add a new contact as\
+    \ well. This interface distinguishes its intended purpose by a contact-type object\
+    \ passed as a medium to its builder. If this medium contains a valid Contact object,\
+    \ then this means that we want to display the contact that this object represents,\
+    \ and then modify or delete it, and of course this requires the Delete Delete\
+    \ button. In the event that null is passed as an intermediary to the builder,\
+    \ this means that the page has"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "been called to create an entirely new contact, thus hiding the Delete button\
+    \ because it would not make sense in this case. A copy of the passed object is\
+    \ saved under a special field within the class named currentContact. The purpose\
+    \ of the interface is determined within the structure itself. See the definition\
+    \ of the btnSave_Clicked event handler from the previous code and see how it handles\
+    \ the previous two cases (modification or addition).\n\n# Item: App\n\nGo to the\
+    \ App.cs file and make sure its contents are as follows:\n\n```\n```csharp\nusing\
+    \ Xamarin.Forms;\nusing ContactsApp.Abstract;\nusing ContactsApp.Concrete;\nusing\
+    \ ContactsApp.Pages;\n\nnamespace ContactsApp\n{\n\tpublic class App: Application\n\
+    \t{\n\t\tpublic IContactsRepository ContactsRepository {get; set; }\n\t\tpublic\
+    \ App ()\n\t\t{\n\t\t\tContactsRepository = new MemoryContactsRepository();\n\t\
+    \t\t// The root page of your application\n\t\t\tMainPage = new NavigationPage\
+    \ (new ContactsPage ());\n\t\t}\n\t\tprotected override void OnStart ()\n\t\t\
+    {\n\t\t\t// Handle when your app starts\n\t\t}\n\t}\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '> “ The strength of the repository model will be evident when we want to change
+    the location where data is saved, as we will only need to change the repository
+    class (not the interface) while the rest of the application components remain
+    unchanged. More precisely, the change will be in only one place and it is within
+    the class of the App class, where we will change the type from which we will create
+    the object that we assign to the ContactsRepository property”
+
+
+    # Conclusion
+
+
+    With this lesson, we have finished building the Contacts app, where we talked
+    about how to build the two application interfaces, how to navigate between these
+    two interfaces, and how they relate to the repository when needed to deal with
+    the data source that is in our application. This is a group consisting of contact
+    type elements present in memory Application.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
