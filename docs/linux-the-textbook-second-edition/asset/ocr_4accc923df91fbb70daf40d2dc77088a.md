@@ -1,0 +1,19 @@
++   - Communication between processes
++   - Error detection and reporting
++   - Manipulation of all types of files
++   - Management of users and security
+
+A detailed discussion of these services is outside the scope of this textbook, but we discuss them briefly when they are relevant to the topic being presented.
+
+# 1.4 Character (Command Line) versus Graphical User Interfaces
+
+To use a computer system, you have to give commands to its operating system. An input device, such as a keyboard, is used to issue a command. If you use the keyboard to issue commands to the operating system, the operating system has a character user interface (CUI), commonly known as the command line interface. If the primary input device for issuing commands to the operating system is a point-and-click device, such as a mouse, a touch screen, or a touch pad, the operating system has a graphical user interface (GUI). Most, if not all, operating systems have both CUI and GUI, and you can use either. Some have a command line as their primary interface but allow you to also run software that provides a GUI. Operating systems such as UNIX and Linux have CUIs, whereas Mac OSX and Microsoft Windows primarily offer GUIs but have the capability to allow a user to enter text in a terminal screen. Although Linux comes with a CUI as its fundamental interface, it can just as easily run the GUI-based software that uses Wayland to provide the GUI interface. We primarily discuss the Linux GUI in Chapters 17 and W28.
+
+Although a GUI makes a computer easier to use, it gives you an automated setup with reduced flexibility. A GUI also presents an extra layer of software between you and the task that you want to perform on the computer, thereby making the task slower. That is because this GUI layer of software consumes a significantly larger part of system resources to maintain its operability. In contrast, a CUI gives you ultimate, fine-grained control of your computer system and allows you to run application programs any way you want. A CUI is also more efficient because a minimal layer of software is needed between you and your task on the computer, thereby enabling you to complete the task faster. The CUI software consumes a significantly smaller part of system resources to maintain its operability. It is also malleable and gives the user more control. Because many people are accustomed to the graphical interfaces of popular gizmos and applications, such as IoT devices, high-powered video games, and Web browsers, the character interface presents an unfamiliar, and sometimes less intuitive, and difficult style of communicating commands to the computer system. However, computer science students are usually able to meet this challenge after a few hands-on sessions.
+
+# 1.5 Types of Operating Systems
+
+Operating systems can be categorized according to the number of users who can use the system at the same time and the number of processes (executing programs) that the system can run simultaneously. These criteria lead to three types of operating systems:
+
++   - Single-user, single-process system: These operating systems allow only one user at a time to use the computer system, and the user can run only one process at a time. Such operating systems are commonly used for PCs. Examples of these operating systems are earlier versions of Mac OS, DOS, and many of Microsoft’s Windows operating systems.
++   - Single-user, multiprocess system: As the name indicates, these operating systems allow only a single user to use the computer system, but the user can run multiple processes simultaneously. These operating systems are also used on PCs. Examples of such operating systems are OS/2, Windows XP Workstation, and batch operating systems. Batch processing is still commonly
