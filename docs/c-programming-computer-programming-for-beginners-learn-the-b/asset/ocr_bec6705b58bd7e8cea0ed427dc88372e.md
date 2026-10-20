@@ -1,0 +1,5 @@
+However, it is certainly possible that the user ends up making a typing mistake. It is also possible that the user writes something that is not one of the given options. In these cases, the switch statement would not generate any output whatsoever if the default keyword was not mentioned. Since it is present in this application, the program will return "I'm sorry, I don't understand that!"
+
+The job of the default statement is to provide an alternative action if all of the case statements turn out to be false. Of course, this is a completely optional statement but useful in many circumstances nonetheless.
+
+You should have become family with the functions of these statements and how they are meant to be used. You should now be able to implement the if else statements and the switch case statements easily into your codes.
