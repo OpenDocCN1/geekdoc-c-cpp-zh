@@ -1,0 +1,81 @@
+
+A Tokenizer class encapsulates the data structure that represents a collection of tokens. This encapsulation shields the interface to bar() from a decision to change the underlying data structure from, for example, a vector of strings to a list of strings. Finally, a Tokenizer class can encapsulate additional state information about tokenization (e.g., the original, pre-tokenized input), if desired. A collection of strings is obviously limited to carrying only the tokens themselves.
+
+Now let’s examine a simplified implementation of the stackChanged() function, shown in Listing 5-6.
+
+**Listing 5-6. The stackChanged Function**
+
+```cpp
+void Cli::CliImpl::stackChanged() {
+    unsigned int nElements{4};
+    auto v =
+        Stack::Instance().getElements(nElements);
+    ostringstream oss;
+    size_t size = Stack::Instance().size();
+
+    oss << "stack\n";
+```
+
+In the display code, we meticulously designed these two layers to be independent. Interpretation and processing of commands (the business logic) resides entirely in the command dispatcher. Therefore, the CLI is only responsible for accepting commands, tokenizing commands, and reporting results. Furthermore, based on the design of our event system, the CLI has no direct coupling to the command dispatcher, a decision consistent with our MVC architecture. The command dispatcher does have a direct link to the user interface, but because of our abstraction, the command dispatcher binds to an abstract UserInterface rather than a specific user interface implementation. In this way, the CLI perfectly substitutes as a UserInterface (application of the LSP) and can trivially be swapped in or out as any one of many unique views to the calculator. While this flexibility may seem like overkill for the design of a calculator, the modularity of all of the components is beneficial from both a testing and separation of concerns standpoint even if the calculator were not slated to have another user interface.
+
+```cpp
+Stack::Instance().attach(
+    Stack::StackChanged,
+    make_unique<StackUpdatedObserver>(cli));
+cli.execute();
+return 0; }
+```
+
+Due to the modularity of the design, the entire calculator can be set up, assembled, and executed in just six executable statements! The logic within the main() function is easy to follow. From a maintenance perspective, any new programmer to the project would easily be able to trace the calculator’s logic and see that the functionality for each module is clearly divided into distinct abstractions. As will be seen in future chapters, the abstraction is even more powerful as more modules are added.
+
+To get you started quickly, a project is included in the repository source code that builds an executable, pdCalc-simple-cli, using the above main() function as the application’s driver. The executable is a standalone CLI that includes all of the features discussed up to this point in the book.
+
+In the next chapter, we’ll consider the design of the graphical user interface for our calculator. As soon as the GUI is complete, many users will quickly dismiss the CLI as simply an exercise or a relic from a previous era. Before doing so, I’d like to encourage the reader not to be so quick to judge the humble CLI. CLIs are very efficient interfaces, and they are typically much easier to script for tasks requiring large deployments or automation. As for pdCalc, personally, I prefer the CLI to the GUI due to its ease of use. Of course, maybe that is just an indication that I, too, am a relic from a previous era.
+
+## CHAPTER 6
+
+## The Graphical User Interface
+
+In this chapter, we will explore the design of the graphical user interface (GUI) for pdCalc. Whenever one designs a GUI, a widget platform needs to be selected. As previously noted, I have chosen to use Qt for the creation of the GUI. That said, this is not a how-to chapter on using Qt to design an interface. Rather, I assume that the reader has a working knowledge of Qt, and the chapter itself focuses on design aspects of the GUI. In fact, as much as possible, I will refer the reader to the source code to see detailed aspects of the widget implementations. Any discussion of the Qt implementation is either merely incidental or worthy of particular emphasis. If you have no interest in GUI design, this chapter can be skipped entirely with virtually no loss in continuity.
+
+### 6.1 Requirements
+
+In Chapter 5, we began our analysis of the command line interface (CLI) by deriving an interface abstraction that would be used by both the CLI and the GUI. Obviously, we will
+
+2. The GUI should have clickable buttons for entering numbers and all supported commands.
+
+3. The GUI should have a status display area for displaying error messages.
+
+The above requirements still do not explain what the calculator should actually look like. For that, we need a picture.
+
+Figure 6-1 shows the working calculator as it appears on my Linux desktop (Kubuntu 16.10 using Qt 5.7.1).
+
+> To show the finished GUI as a prototype for designing the GUI is most certainly “cheating.”
+
+Hopefully, this shortcut does not detract from the realism of the case study too much.
+
+Obviously, one would not have a finished product at this stage in the development.
+
+In a production setting, one might have mock-ups drawn either by hand or with a program such as Microsoft PowerPoint, Adobe Illustrator, Inkscape, etc.
+
+Alternatively, maybe the GUI is being modeled from a physical object, and the designer either has photographs or direct access to that object.
+
+For example, one might be designing a GUI to replace a physical
+
+![](img/7aac03e344e518d9d0db5131f6619db9_272_0.png)
+
+Figure 6-1. The GUI on Linux with no plugins
+
+The GUI for pdCalc was inspired by my HP48S calculator. For those familiar with any of the Hewlett-Packard calculators in this series, the interface will feel somewhat familiar. For those not familiar with this series of calculators (likely, the majority of readers), the following description explains the basic behavior of the GUI.
+
+The top third of the GUI is a dedicated input/output (I/O) window. The I/O window displays labels for the top six stack levels on the left, with the top of the stack being at the bottom of the window. Values on the stack appear on the right side of the window on the line corresponding to the number’s location on the stack. As the user enters a number, the stack reduces to showing only the top five stack elements, while the number being entered is displayed left justified on the bottom line. A number is terminated and entered onto the stack by pressing the enter button.
+
+Assuming sufficient input, an operation takes place as soon as the button is pressed. If insufficient input is present, an error message is displayed above the I/O window. With respect to commands, a valid number in the input area is treated as the top number on the stack. That is, applying an operation while entering a number is equivalent to pressing Enter and then applying the operation.
+
+To economize on space, some buttons have a shifted operation above and to the left of the button itself. These shifted operations can be activated by first pressing the shift button and then pressing the button below the shifted text. Pressing the shift button places the calculator in shift mode until a button with a shifted operation is pressed or until the shift button is pressed again. For clarity, a shifted operation is often the inverse of the operation on the button.
+
+To ease input, many buttons are bound to keyboard shortcuts. Numbers are activated by pressing the corresponding number key, the enter button is activated by pressing the enter key, shift is activated by pressing the s key, backspace is activated by pressing the backspace key, the exponentiation operation is activated by pressing the e key, and the four basic arithmetic operations (+, -, *, /) are activated by pressing the corresponding keys.
+
+Finally, a few operations are semi-hidden. When not entering numbers, the backspace button drops the top entry from the stack, while the enter button duplicates the top entry on the stack. Some of these combinations are not intuitive and therefore might not represent very good GUI design. However, they do mimic the input used on the HP48S. If you have never used an HP48 series calculator before, I highly suggest building and familiarizing yourself with the GUI from the GitHub repository before continuing.
+
+If you’re wondering what a prockey does, it executes stored procedures. It is one of the “new” requirements we’ll encounter in Chapter 8. One’s first critique about the GUI might be that it is not very pretty. I agree. The purpose of the GUI in this chapter is not to demonstrate advanced Qt features. Rather, the purpose is to illustrate how to design a code base to be modular, robust, reliable, and

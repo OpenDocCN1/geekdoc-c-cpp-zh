@@ -1,0 +1,5 @@
+interface layer. However, the mechanism for GUI callbacks makes this impossible because it would force an undesired dependency in the business logic layer on the GUI’s widget library (e.g., in Qt, a button callback is a slot in a class, which requires the callback’s class to be a Q_OBJECT). Alternatively, the GUI could deploy double indirection to dispatch each command (each button click would call a function which would call a function in the business logic layer). This scenario seems both inelegant and inefficient.
+
+While the above strategy appears rather cumbersome, this initialization scheme has a structural deficit much deeper than inconvenience. In the model-view-controller architecture we have adopted for pdCalc, the views are not permitted direct access to the controller. Since the commands rightly belong to the controller, direct initialization of commands by the UI violates our foundational architecture.
+
+How do we solve this new problem? Recall from Table 2-2 that the command

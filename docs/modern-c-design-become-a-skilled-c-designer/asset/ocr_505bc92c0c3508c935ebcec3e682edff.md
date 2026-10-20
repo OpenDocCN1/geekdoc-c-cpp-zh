@@ -1,0 +1,5 @@
+needed to clearly explain the design. The available source code demonstrates the intricacies necessary for developing efficient C++ interfaces. In a very small project, allowing developers some latitude in adapting the interface can usually be tolerated and is often beneficial as it allows implementation details to be delayed until they can be practically determined. However, in a large-scale development, in order to prevent absolute chaos between independent teams, it is wise to finalize the interfaces as soon as practical before implementation begins.
+
+# Assessment of Our Current Design
+
+Before beginning the detailed design of our three major components, let’s stop and assess our current design against the criteria we identified in the beginning of this chapter. First, having defined three distinct modules, our design is clearly modular. Second, each module acts as a cohesive unit, with each module dedicated to one specific task. User

@@ -1,0 +1,5 @@
+custom deleter in an analogous fashion.
+
+# 7.2.2 The Interface for Adding New GUI Buttons
+
+Conceptually, dynamically adding buttons is not much different than dynamically adding commands. The main application does not know what buttons need to be imported from the plugin, so the Plugin interface must provide a virtual function providing a button descriptor. Unlike commands, however, the plugin does not actually need to allocate the button itself. Recall from Chapter 6 that the GUI CommandButton widget only requires text for construction. In particular, it needs the push button’s display text (optionally, the shifted state text) and the command text issued with the clicked() signal. Therefore, even for plugin commands, the corresponding GUI button itself resides entirely in the main application; the plugin must only provide text. This leads to the following trivial interface in the Plugin class:

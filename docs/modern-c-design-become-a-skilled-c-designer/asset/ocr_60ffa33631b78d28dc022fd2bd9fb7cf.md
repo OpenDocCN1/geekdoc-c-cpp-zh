@@ -1,0 +1,5 @@
+to the number of commands in the stored procedure. The same deficiency is present for the redo operation. In my opinion, the expected behavior for undoing a stored procedure should be to undo the entire procedure and leave the I/O stack in its state prior to executing the stored procedure. Hence, the design for handling stored procedures not employing a StoredProcedure class fails to implement undo and redo properly and must therefore be discarded.
+
+# 8.1.2.4 The Composite Pattern
+
+Essentially, in order to solve the undo/redo problem with stored procedures, we need a special command that encapsulates multiple commands but behaves as a single command. Fortunately, the composite pattern solves this dilemma. According to Gamma et al [6], the composite pattern “lets clients treat individual objects and compositions of objects uniformly.” Typically, the composite pattern refers to treed data structures. I prefer a looser definition where the pattern may be applied to any data structure admitting

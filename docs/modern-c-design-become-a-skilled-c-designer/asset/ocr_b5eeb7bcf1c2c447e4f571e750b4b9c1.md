@@ -1,0 +1,5 @@
+virtual function. Instead, it is given a default implementation of doing nothing, which is equivalent to stating that preconditions are satisfied.
+
+Because errors in commands are checked via the checkPreconditionImpl() function, a proper implementation of any command should not throw an exception except from checkPreconditionImpl(). Therefore, for added interface protection, each pure virtual function in the Command class should be marked noexcept. For brevity, I often skip this keyword in the text; however, noexcept does appear in the implementation. This specifier is really only important in the implementation of plugin commands, which are discussed in Chapter 7.
+
+The next set of functions to be added to the Command class are functions for copying objects polymorphically. This set includes a protected copy constructor, a public nonvirtual clone() function, and a private cloneImpl() function. At this point in the design, the rationale for why commands must

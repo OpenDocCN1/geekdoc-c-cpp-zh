@@ -1,0 +1,476 @@
+- - '#'
+  - 第 2 章
+- - '#'
+  - CHAPTER 3
+- - '#'
+  - 第 4 章
+- - '#'
+  - CHAPTER 5
+- - '#'
+  - CHAPTER 6
+- - '#'
+  - 第 8 章
+- - '#'
+  - 附录 A
+- - '##'
+  - 第 1 章
+- - '##'
+  - 定义案例研究
+- - '##'
+  - 简要介绍
+- - '###'
+  - 关于需求的几句话
+- - '###'
+  - 逆波兰表示法
+- - '###'
+  - 计算器的需求
+- - '###'
+  - 源代码
+- - '###'
+  - 分解
+- - '##'
+  - 良好分解的元素
+- - '##'
+  - 选择架构
+- - '##'
+  - 多层架构
+- - '##'
+  - 模型-视图-控制器（MVC）架构
+- - '##'
+  - Figure 2-2. An MVC architecture with arrows indicating communication. Solid lines
+    indicate direct communication. Dashed lines indicate indirect communication (e.g.,
+    via eventing) [30].
+- - '##'
+  - Choosing the Calculator’s Architecture
+- - '##'
+  - Interfaces
+- - '##'
+  - 'Use Case: User Swaps Top Stack Elements'
+- - '##'
+  - 'Use Case: User Drops the Top Stack Element'
+- - '##'
+  - 'Use Case: User Clears the Stack'
+- - '##'
+  - 'Use Case: User Duplicates the Top Stack Element'
+- - '##'
+  - 'Use Case: User Negates the Top Stack Element'
+- - '##'
+  - 'Use Case: User Performs an Arithmetic Operation'
+- - '##'
+  - 'Use Case: User Performs a Trigonometric Operation'
+- - '##'
+  - 'Use Case: User Performs y^x'
+- - '##'
+  - 'Use Case: User Performs □^x y'
+- - '##'
+  - 'Use Case: User Loads a Plugin'
+- - '##'
+  - Analysis of Use Cases
+- - '##'
+  - 表 2-1. 从将浮点数输入栈的用例分析得出的公共接口
+- - '###'
+  - 表 2-2. 整个第一级分解的公共接口
+- - '##'
+  - 关于实际实现的简要说明
+- - '##'
+  - 对当前设计的评估
+- - '##'
+  - Next Steps
+- - '##'
+  - The Stack
+- - '##'
+  - Decomposition of the Stack Module
+- - '###'
+  - 将 STL 容器包装起来的第三个原因是
+- - '##'
+  - The Stack Class
+- - '##'
+  - 单例模式
+- - '##'
+  - 作为单例类的栈模块
+- - '###'
+  - 清单 3-2. 作为单例类的栈
+- - '##'
+  - Pimpl 惯用法
+- - '##'
+  - 添加事件
+- - '##'
+  - 观察者模式
+- - '##'
+  - 增强观察者模式的实现
+- - '##'
+  - 清单 3-3. Publisher 类的最终公共接口
+- - '##'
+  - 现代 C++ 设计说明：
+- - '##'
+  - 处理事件数据
+- - '###'
+  - 清单 3-4. 事件数据层次结构
+- - '##'
+  - 现代 C++ 设计说明：共享语义与 shared_ptr
+- - '##'
+  - 清单 3-5. 抽象 Observer 接口
+- - '##'
+  - 作为事件发布者的 Stack
+- - '##'
+  - 完整的 Stack 接口
+- - '##'
+  - 关于测试的简短说明
+- - '##'
+  - 命令分发器
+- - '##'
+  - 命令分发器的分解
+- - '##'
+  - Command 类
+- - '##'
+  - 命令模式
+- - '##'
+  - 关于实现撤销/重做的更多内容
+- - '##'
+  - The Command Pattern Applied to the Calculator
+- - '##'
+  - The Command Interface
+- - '###'
+  - '*Listing 4-1.* A First Attempt at the Command Interface'
+- - '##'
+  - 清单 4-3. 命令类的完整抽象接口
+- - '##'
+  - MODERN C++ 设计说明：OVERRIDE 关键字
+- - '##'
+  - The Undo Strategy
+- - '##'
+  - 具体命令
+- - '###'
+  - 表 4-1. 按其直接抽象基类列出的核心命令
+- - '###'
+  - 深度命令层次结构的替代方案
+- - '###'
+  - 清单 4-5. 一个替代的部分设计
+- - '###'
+  - 清单 4-6. 一个细微的差异
+- - '##'
+  - 'MODERN C++ DESIGN NOTE: LAMBDAS, STANDFUNCTION, AND THE FINAL KEYWORD'
+- - '###'
+  - 'Lambdas:'
+- - '###'
+  - 'Standard function:'
+- - '###'
+  - 'The final Keyword:'
+- - '##'
+  - The Command Repository
+- - '###'
+  - The CommandRepository Class
+- - '##'
+  - MODERN C++ 设计说明：统一初始化
+- - '##'
+  - 注册核心命令
+- - '##'
+  - The Command Manager
+- - '###'
+  - The Interface
+- - '###'
+  - Implementing Undo and Redo
+- - '##'
+  - The Command Dispatcher
+- - '###'
+  - The Interface
+- - '##'
+  - 实现细节
+- - '###'
+  - Listing 4-7. The Implementation of executeCommand()
+- - '##'
+  - 重新审视之前的决策
+- - '##'
+  - 命令行界面
+- - '###'
+  - 5.1 用户界面抽象
+- - '###'
+  - 5.1.1 抽象接口
+- - '##'
+  - 图 5-1. 最小接口层次结构
+- - '##'
+  - 清单 5-1. UserInterface 类
+- - '###'
+  - 5.1.2 用户界面事件
+- - '###'
+  - 5.1.2.1 命令数据
+- - '##'
+  - Listing 5-2. The Complete Implementation for the CommandData Class
+- - '###'
+  - 5.1.2.2 User Interface Observers
+- - '##'
+  - Listing 5-3. The Declaration for CommandIssuedObserver
+- - '##'
+  - The Concrete CLI Class
+- - '##'
+  - Requirements
+- - '##'
+  - The CLI Design
+- - '###'
+  - The Interface
+- - '###'
+  - 5.2.2.2 The Implementation
+- - '##'
+  - The Graphical User Interface
+- - '###'
+  - 6.1 Requirements
+- - '##'
+  - 6.2 构建 GUI
+- - '###'
+  - 6.2.1 在 IDE 中构建 GUI
+- - '###'
+  - 6.2.2 在代码中构建 GUI
+- - '###'
+  - 6.2.3 哪种 GUI 构建方法更好？
+- - '##'
+  - 模块化
+- - '##'
+  - 6.3.2 The CommandButton Design
+- - '##'
+  - 6.3.3 CommandButton 接口
+- - '##'
+  - 获取输入
+- - '###'
+  - InputWidget 的设计
+- - '###'
+  - 6.3.6 InputWidget 的接口
+- - '###'
+  - Display 类的设计
+- - '##'
+  - 一个糟糕的设计
+- - '##'
+  - 6.4.3 一个改进的显示设计
+- - '###'
+  - Listing 6-3. The GuiModel Interface class
+- - '###'
+  - Listing 6-4. The State struct for the GuiModel
+- - '##'
+  - 6.6 The Display Redux
+- - '##'
+  - 列表 6-6. MainWindow 的接口
+- - '##'
+  - 6.8 外观与感觉
+- - '##'
+  - 6.10 A Microsoft Windows Build Note
+- - '##'
+  - 7.1.1 Rules for C++ Plugins
+- - '##'
+  - '**问题 1：插件接口**'
+- - '###'
+  - 发现命令的接口
+- - '##'
+  - 'MODERN C++ DESIGN NOTE: UNIQUE_PTR DESTRUCTION SEMANTICS'
+- - '##'
+  - 7.2.2 The Interface for Adding New GUI Buttons
+- - '##'
+  - The Plugin Command Interface
+- - '##'
+  - 7.2.5 API 版本控制
+- - '##'
+  - 7.2.6 使栈可用
+- - '##'
+  - 7.3.3 跨平台代码的设计
+- - '##'
+  - 显而易见的解决方案：库
+- - '##'
+  - 原始预处理器指令
+- - '###'
+  - 7.3.3.3 （稍微）更巧妙的预处理器指令
+- - '##'
+  - 7.3.3.4 一个构建系统解决方案
+- - '##'
+  - 7.3.3.5 一个平台工厂函数
+- - '###'
+  - Listing 7-1. 一个动态加载器工厂函数
+- - '##'
+  - 7.3.3.6 用于通用平台无关代码的抽象工厂
+- - '###'
+  - Figure 7-2. The settings hierarchy for platform-independent persistent settings
+- - '###'
+  - Figure 7-3. The abstract factory pattern applied to pdCalc
+- - '##'
+  - 7.4 问题 3：改造 pdCalc
+- - '##'
+  - 模块接口
+- - '##'
+  - 源代码隐藏
+- - '##'
+  - 隐式隐藏或文档化隐藏
+- - '##'
+  - pdCalc 的模块设计
+- - '##'
+  - 7.4.2 向 GUI 添加插件按钮
+- - '##'
+  - 7.5 集成插件
+- - '###'
+  - 7.5.1 加载插件
+- - '###'
+  - 7.5.2 注入功能
+- - '##'
+  - '*清单 7-2.* 一个用于加载插件的函数'
+- - '##'
+  - 一个具体的插件
+- - '##'
+  - 插件接口
+- - '##'
+  - 7.6.2 源代码依赖倒置
+- - '##'
+  - 7.6.3 实现 HyperbolicLnPlugin 的功能
+- - '##'
+  - 列表 7-4. HyperbolicLnPluginCommand 类
+- - '###'
+  - 7.7 后续步骤
+- - '##'
+  - 新需求
+- - '###'
+  - 8.1 完全设计的新功能
+- - '####'
+  - 8.1.1 批处理操作
+- - '####'
+  - 8.1.2 存储过程
+- - '#####'
+  - 8.1.2.1 用户界面
+- - '###'
+  - 8.1.2.2 对命令调度器的更改
+- - '##'
+  - 'MODERN C++ DESIGN NOTE:'
+- - '###'
+  - VARIADIC TEMPLATES AND
+- - '###'
+  - PERFECT FORWARDING
+- - '##'
+  - 8.1.2.3 设计存储过程类
+- - '##'
+  - 8.1.2.4 The Composite Pattern
+- - '##'
+  - 8.1.2.5 A First Attempt
+- - '##'
+  - Figure 8-4. The undo stack using a StoredProcedure class
+- - '##'
+  - 8.1.2.6 A Final Design for the StoredProcedure Class
+- - '##'
+  - Figure 8-5. The undo stack using nested CommandDispatchers
+- - '##'
+  - 设计更实用的计算器
+- - '##'
+  - 复数
+- - '###'
+  - 8.2.1.2 修改堆栈
+- - '##'
+  - 8.2.1.3 修改命令
+- - '##'
+  - 变量
+- - '##'
+  - 输入和新命令
+- - '##'
+  - Number Representation and the Stack
+- - '##'
+  - 8.2.2.3 The Symbol Table
+- - '##'
+  - 'A Trivial Extension: Numeric Constants'
+- - '##'
+  - Functionality Enabled by Variables
+- - '##'
+  - Some Interesting Extensions for Self-Exploration
+- - '###'
+  - High DPI Scaling
+- - '###'
+  - Dynamic Skinning
+- - '###'
+  - Flow Control
+- - '###'
+  - An Alternative GUI Layout
+- - '###'
+  - A Graphing Calculator
+- - '##'
+  - 插件管理系统
+- - '##'
+  - 移动设备界面
+- - '###'
+  - 获取、构建和执行 pdCalc
+- - '####'
+  - 获取源代码
+- - '####'
+  - 依赖项
+- - '####'
+  - 构建 pdCalc
+- - '#####'
+  - 使用 Qt Creator
+- - '###'
+  - A.3.2 使用命令行
+- - '##'
+  - 使用命令行
+- - '##'
+  - A.5 故障排除
+- - '##'
+  - 源代码的组织结构
+- - '##'
+  - pdCalc-simple-cli 目录
+- - '##'
+  - pdCalc-simple-gui 目录
+- - '##'
+  - B.1.6 cli 目录
+- - '##'
+  - gui 目录
+- - '##'
+  - 表 B-3. gui 目录中的源文件
+- - '##'
+  - plugins 目录
+- - '##'
+  - test 目录
+- - '##'
+  - testDriver 目录
+- - '##'
+  - utilitiesTest 目录
+- - '##'
+  - 表 B-4. utilitiesTest 目录中的源文件
+- - '##'
+  - backendTest 目录
+- - '##'
+  - 表 B-5. backendTest 目录中的源文件
+- - '##'
+  - cliTest 目录
+- - '##'
+  - guiTest 目录
+- - '##'
+  - pluginsTest 目录
+- - '##'
+  - B
+- - '##'
+  - C
+- - '##'
+  - D
+- - '##'
+  - H
+- - '##'
+  - E
+- - '##'
+  - F
+- - '##'
+  - G
+- - '##'
+  - I, J, K
+- - '##'
+  - L
+- - '##'
+  - M
+- - '###'
+  - 模块接口样式
+- - '###'
+  - 多平台设计
+- - '##'
+  - N
+- - '##'
+  - O
+- - '##'
+  - P
+- - '##'
+  - Q
+- - '##'
+  - R
+- - '##'
+  - U
+- - '##'
+  - V
+- - '##'
+  - W, X, Y, Z

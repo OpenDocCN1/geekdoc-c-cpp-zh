@@ -1,0 +1,5 @@
+calculator must have both a CLI and a GUI. Therefore, our overall design will be better served by first considering the commonality between these two interfaces and factoring this functionality into a common abstraction. Let’s consider two design alternatives to constructing a user interface abstraction, a top-down approach and a bottom-up approach.
+
+Designing an abstract interface before considering the concrete types is akin to topdown design. In terms of a user interface, you first consider the barest essentials to which any UI must conform and create an abstract interface based on this minimalist concept. Refinement to the interface becomes necessary when the abstract concept misses something required to implement a concrete type.
+
+Designing an abstract interface after considering the concrete types is akin to bottom-up design. Again, in terms of a user interface, you first consider the needs of all the concrete types (CLI and GUI, in this

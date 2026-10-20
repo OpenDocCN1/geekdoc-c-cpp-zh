@@ -1,0 +1,5 @@
+include a dialog for customizing individual widgets or a mechanism to choose skins from skin configuration files. Having a centralized class to handle the look-and-feel for the application should make this change straightforward. Don’t forget to add a signal to LookAndFeel so the other GUI elements will know when they need to repaint themselves with a new appearance!
+
+# Flow Control
+
+With variables, we greatly enhanced the flexibility of stored procedures. For computing most formulas, this framework should prove sufficient. However, what if we wanted to implement a recursive formula such as computing the factorial of a number? While we have the ability to perform such complex computations via plugins, it would be nice to extend this functionality to users of the calculator who are not also experienced C++ programmers. To accomplish this task, we would need to devise a syntax for flow control. The simplest design would at least be able to handle looping and conditional

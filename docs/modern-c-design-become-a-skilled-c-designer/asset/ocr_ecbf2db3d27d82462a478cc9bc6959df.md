@@ -1,0 +1,5 @@
+design had some serious problems, and finally to see the design that eventually emerged after a night of refactoring. Possibly, the most interesting lesson here is that bad designs can certainly lead to working code, so never assume that working code is an indicator of a good design. Additionally, bad designs, if localized, can be refactored, and sometimes refactoring should be undertaken solely to increase clarity. Refactoring, of course, assumes your project schedule contains enough contingency time to pause periodically just to pay down technical debt. Let’s briefly study my mistake before returning to a better design.
+
+# A Poor Design
+
+From the analysis above, we determined that the calculator should have one unified Display class for handling both input and output. The fundamental mistake in my design for the display derived from incorrectly interpreting that oneDisplay class implied no additional classes for orthogonal concerns. Hence, I proceeded to lump all

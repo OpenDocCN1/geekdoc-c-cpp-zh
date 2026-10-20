@@ -1,0 +1,5 @@
+Visual Studio using the default configuration. Additional modifications may also be needed to support exporting names from DLLs using MSVC. If I receive enough reader requests, I may extend the build system to include MSVC in a future update.
+
+The above caveat stated, and despite considerable effort to ensure trouble-free building of pdCalc, I still find that every different combination of Qt, gcc, environment variables, operating system, and probably the weather manages to create some new, wonderful build error. If you encounter build or runtime errors, I encourage you to make an effort to diagnose and correct them yourself. Diagnosing and correcting build errors are skills worth acquiring. This will also give you a greater appreciation for the thankless soul on your team tasked with maintaining your cross-platform build system. Often the problem is as trivial as conflicting compiler versions or incorrect/missing paths.
+
+In building on Windows, I have found two

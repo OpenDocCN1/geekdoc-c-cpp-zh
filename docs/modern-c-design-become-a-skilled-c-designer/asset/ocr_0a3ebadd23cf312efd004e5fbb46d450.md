@@ -1,0 +1,5 @@
+libraries. For both Linux and Windows, Qt can also be downloaded from http://www.qt.io/download/. Once you are on the website, select the Desktop and Mobile edition, and then choose the version that is licensed appropriately for your use. pdCalc is distributed under the GPL version 3, so the open source edition of Qt is compatible. From Qt’s download page, you can select a fully downloadable binary installer, a network-based binary installer, or the complete source code. Unless you are experienced in building complex libraries from source, I recommend one of the binary installers. On Windows, be sure to install the mingw compiled version of Qt as well as the mingw tool chain. On all operating systems, while not strictly necessary, I highly recommend also installing Qt Creator. Please be patient with the download. Qt, with its many modules, is a powerful, but very sizable package.
+
+# A.3 Building pdCalc
+
+To avoid additional dependencies, pdCalc

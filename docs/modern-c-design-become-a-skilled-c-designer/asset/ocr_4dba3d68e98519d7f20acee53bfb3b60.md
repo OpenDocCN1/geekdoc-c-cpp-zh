@@ -1,0 +1,5 @@
+build an abstract class hierarchy and execute specific functionality via polymorphism.
+
+We’ll build our solution of designing a general cross-platform architecture in two steps. First, we’ll design a platform hierarchy for handling dynamic loading. Second, we’ll extend this specific solution into a framework for abstracting platform dependence into a platform-independent interface. In both steps, we will employ a hybrid solution that utilizes the build system in a type-safe manner through a minimum use of platformspecific preprocessor directives. Along the way, we’ll encounter two additional, important design patterns: the factory method and the abstract factory. Let’s start by examining the platform-independent dynamic loading of plugins.
+
+To address our specific problem, we start by first defining a platform -independent abstract interface for a DynamicLoader base class. Our DynamicLoader only needs to do two things: allocate and deallocate plugins. The base class is therefore trivially defined as

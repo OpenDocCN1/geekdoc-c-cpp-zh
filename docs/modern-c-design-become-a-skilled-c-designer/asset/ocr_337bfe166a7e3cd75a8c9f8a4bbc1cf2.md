@@ -1,0 +1,5 @@
+language itself gives very little help in the enforcement of a module interface. We do, however, have a few basic options for defining modules and their interfaces. First, encapsulate all classes not directly part of the interface in one source file and only expose a limited module interface in a single header file. Second, build each module into a separate DLL and use the DLL symbol export mechanism to selectively export interface functions. Third, implicitly define module boundaries via declarations in documentation and comments. Let’s explore each of these options.
+
+# Source Code Hiding
+
+Let’s begin by discussing the encapsulation model that has always been available to C programmers: hide non-public interface classes and functions in source files and do not expose their interfaces in headers. This is the only mechanism that C++ provides for truly hiding symbols (remember, access modifiers, such as private, cannot be used for classes themselves, as would be possible in

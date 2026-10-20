@@ -1,0 +1,5 @@
+discussion, we’ll concentrate on the keyword’s usefulness in design. performance optimization aside, the choice to use noexcept in a function’s specification is largely amatterof preference. For most functions, no exception specification is the norm. even if a function’s code does not itself emit exceptions, it is difficult to ensure statically that nested function callswithin a function do not emit any exceptions. therefore,noexcept is enforced at runtime rather than guaranteed atcompile time. thus, my personal recommendation is to reserve the usage of the noexcept specifier for particular instances where making a strong statement about the intent of a function is necessary. pdCalc’s Command hierarchy illustrates several situations where not throwing an exception is importantfor correctoperation. this requirement is codified in the interface to inform developers that throwing exceptions will lead to runtime faults.
+
+# 7.2.5 API Versioning
+
+Invariably, over the lifetime of a long-lived

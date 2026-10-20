@@ -1,0 +1,5 @@
+the clone() virtual member function. Let’s see how these two prior design decisions effectively enable plugins.
+
+Based on the C++ plugin rules above, the only means we have to effect command discovery is to encapsulate it as a pure virtual interface to which all plugins must adhere. Ideally, our virtual function would return an associative container of unique_ ptr<CommandPtr> values keyed bystrings. However, our C++ plugin rules also stipulate that we cannot use standard containers, thus excluding string, map, unordered_map, and unique_ptr. Rather than (poorly) reimplementing custom versions of any of these containers, we’ll just use a typically avoided, low-level facility available to us: arrays of pointers.
+
+The above design is enforced by creating a Pluginclass to which all plugins must conform. The purpose of this abstract class is to standardize plugin command discovery. The class declaration is given by the following:

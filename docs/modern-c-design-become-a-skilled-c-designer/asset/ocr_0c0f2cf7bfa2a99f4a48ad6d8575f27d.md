@@ -1,0 +1,5 @@
+implementations from the Gang of Four [6] for the sake of pattern purity.
+
+# 6.3.2 The CommandButton Design
+
+Introductory remarks aside, we still must determine what exactly our CommandButton needs to do and how it will interact with the rest of the GUI. In many ways, a CommandButton looks and acts similarly to aQPushButton. For example, aCommandButton must present a visual button that can be clicked, and after the button is clicked, it should emit some kind of signal to let other GUI components know a click action has occurred. Unlike a standardQPushButton, however, ourCommandButton must support both a standard and shifted state (e.g., a button that supports both sin and arcsin). This support should be both visual (both states should be shown by our CommandButton widget) and functional (click signals must describe both a standard click and a shifted click). We therefore have two design questions to answer. First, how do we design and

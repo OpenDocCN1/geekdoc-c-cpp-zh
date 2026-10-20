@@ -1,0 +1,5 @@
+simply serves as a conduit to display error messages verbatim from other modules.
+
+# MODERN C++ DESIGN NOTE: MOVE SEMANTICS
+
+In table 2-1, the stack has the function void getElements(n, vector<double>&), which enables callers to fill a vector with the top n elements from the stack. however, the interface of the function tells us nothing about how the elements are actually added to the vector. are they added at the front? are they added at the back? is it presumed that the vector is already sized correctly and the new elements are entered using operator[]? are old elements erased from the vector before the new ones are added? hopefully, this ambiguity will be resolved by developer documentation (good luck with that one). in the absence of further information, one would likely conclude that new elements were simply pushed to the back of the vector. Beginning with C++11, however, the above interface ambiguity can be resolved semantically by the language itself.

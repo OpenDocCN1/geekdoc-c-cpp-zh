@@ -1,0 +1,5 @@
+respect to commands, a valid number in the input area is treated as the top number on the stack. That is, applying an operation while entering a number is equivalent to pressing Enter and then applying the operation.
+
+To economize on space, some buttons have a shifted operation above and to the left of the button itself. These shifted operations can be activated by first pressing the shift button and then pressing the button below the shifted text. Pressing the shift button places the calculator in shift mode until a button with a shifted operation is pressed or until the shift button is pressed again. For clarity, a shifted operation is often the inverse of the operation on the button.
+
+To ease input, many buttons are bound to keyboard shortcuts. Numbers are activated by pressing the corresponding number key, the enter button is activated by pressing the enter key, shift is activated by pressing the s key, backspace is activated by pressing the backspace key, the exponentiation operation is activated by pressing the e key, and the
