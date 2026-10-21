@@ -1,0 +1,3 @@
+Richard Smith in http://wg21.link/p0512r0, by Jason Merrill in http://wg21.link/p0620r0, and by Michael Spertus and Jason Merrill (as a defect report against C++17) in http://wg21.link/p702r1.
+
+The support for class template argument deduction in the standard library was added by Michael Spertus, Walter E. Brown, and Stephan T. Lavavej in http://wg21.link/p0433r2 and (as a defect report against C++17) in http://wg21.link/p0739r0.

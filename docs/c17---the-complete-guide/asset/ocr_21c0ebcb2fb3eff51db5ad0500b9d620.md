@@ -1,0 +1,29 @@
+# Chapter 10
+
+# Compile-Time if
+
+With the syntax if constexpr(...), the compiler uses a compile-time expression to decide at compile time whether to use the then part or the else part (if any) of an if statement. The other part (if any) is discarded, meaning that no code is generated. This does not mean that the discarded part is completely ignored though. It will be checked just like the code of unused templates.
+
+For example:
+
+tmp l/ifcomptime.hpp
+
+```
+#include <string>
+
+template<typename T>
+std::string asString(T x)
+{
+    if constexpr(std::is_same_v<T, std::string>) {
+        return x;        // statement invalid if no conversion to string
+    }
+    else if constexpr(std::is_arithmetic_v<T>) {
+        return std::to_string(x); // statement invalid if x is not numeric
+    }
+    else {
+        return std::string(x);    // statement invalid if no conversion to string
+    }
+}
+```
+
+By using if constexpr we decide at compile time whether we just return a passed string, call to_string() for a passed integral or floating-point value, or use a constructor to convert the passed argument to type std::string. The invalid calls are discarded, therefore the following code compiles (which would not be the case when using a regular runtime if):

@@ -1,0 +1,1 @@
+After C++17 was published, Mike Spertus, Walter E. Brown, and Stephan T. Lavavej fixed a minor flaw with http://wg21.link/p0739r0.

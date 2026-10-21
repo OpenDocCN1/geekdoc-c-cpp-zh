@@ -1,0 +1,1 @@
+constexpr support was added as proposed by Antony Polukhin in http://wg21.link/p0426r1. Additional fixes by Daniel Krügler are contained in http://wg21.link/lwg2946 (which were accepted with C++20 as a defect against C++17).

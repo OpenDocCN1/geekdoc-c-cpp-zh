@@ -1,0 +1,261 @@
+
+
+An xvalue is then considered a special location, representing an object whose resources can be reused (usually because the object is near the end of its lifetime).
+
+C++17 then introduces a new term, called materialization (of a temporary), for the moment a prvalue becomes a temporary object. Thus, a temporary materialization conversion is a prvalue-to-xvalue conversion.
+
+Any time a prvalue validly appears where a glvalue (lvalue or xvalue) is expected, a temporary object is created and initialized with the prvalue (remember that prvalues are primarily “initializing values”), and the prvalue is replaced by an xvalue designating the temporary. So in the example above, strictly speaking, we have:
+
+```
+void f(const X& p);  // accepts an expression of any value category,
+                     // but expects a glvalue
+
+f(X());              // passes a prvalue materialized as xvalue
+```
+
+Because f() in this example has a reference parameter, it expects a glvalue argument. However, the expression X() is a prvalue. The “temporary materialization” rule therefore kicks in, and the expression X() is “converted” into an xvalue designating a temporary object initialized with the default constructor.
+
+Note that materialization does not mean that we create a new/different object. The lvalue reference p still binds to both an xvalue and a prvalue, although the latter now always involves a conversion to an xvalue.
+
+With this modification (that prvalues are no longer objects but are instead expressions that can be used to initialize objects), the required copy elision makes perfect sense because the prvalues no longer need to be movable in order to initialize a variable using assignment syntax. We simply pass an initial value around that, sooner or later, is materialized to initialize an object.
+
+## 5.4 Unmaterialized Return Value Passing
+
+Unmaterialized return value passing applies to all forms of returning a temporary object (prvalue) by value:
+
+- When we return a literal that is not a string literal:
+```
+int f1() {  // return int by value
+    return 42;
+}
+```
+- When we return a temporary object by its type or auto:
+```
+auto f2() {  // return deduced type by value
+    ...
+    return MyType{...};
+}
+```
+- When we return a temporary object by decltype(auto):
+```
+decltype(auto) f3() {  // return temporary from return statement by value
+    ...
+    return MyType{...};
+}
+```
+
+## Chapter 5: Mandatory Copy Elision or Passing Unmaterialized Objects
+
+Remember that a declaration with decltype(auto) operates by value if the expression used for initialization (here the return statement) is an expression that creates a temporary (a prvalue).
+
+Because we return a prvalue in all these cases by value, we do not require any copy/move support at all.
+
+The mandatory copy elision for initializations from temporaries was first proposed by Richard Smith in http://wg21.link/p0135r0. The finally accepted wording was also formulated by Richard Smith in http://wg21.link/p0135r1.
+
+## Chapter 6
+
+### Lambda Extensions
+
+Lambdas, introduced with C++11, and generic lambdas, introduced with C++14, are a success story. They allow us to specify functionality as arguments, which makes it a lot easier to specify behavior right where it is needed.
+
+- In constant expressions (i.e., at compile time)
+- In places where you need a copy of the current object (e.g., when calling lambdas in threads)
+
+Since C++17, lambdas are implicitly constexpr if possible. That is, any lambda can be used in compile-time contexts provided the features it uses are valid for compile-time contexts (e.g., only literal types, no virtual, no try/catch, no new/delete).
+
+```
+auto squared = [](auto val) {
+    return val*val;
+};
+std::array<int,squared(5)> a; // OK since C++17 => std::array<int,25>
+```
+
+Using features that are not allowed in constexpr contexts disables this ability but you can still use the lambda in runtime contexts
+
+```
+auto squared2 = [](auto val) {
+    static int calls = 0; // OK, but disables lambda for constexpr contexts
+    ...
+    return val*val;
+};
+std::array<int,squared2(5)> a; // ERROR: static variable in compile-time context
+std::cout << squared2(5) << '\n'; // OK
+```
+
+## Chapter 6: Lambda Extensions
+
+To find out at compile time whether a lambda is valid for a compile-time context, you can declare it as constexpr:
+
+```
+```cpp
+auto squared3 = [] (auto val) constexpr {
+return val*val;
+};
+```
+```
+
+With specified return types, the syntax looks as follows:
+
+```
+```cpp
+auto squared3i = [] (int val) constexpr -> int {
+return val*val;
+};
+```
+```
+
+The usual rules regarding constexpr for functions apply: if the lambda is used in a runtime context, the corresponding functionality is performed at run time.
+
+However, using features in a constexpr lambda that are not valid in a compile-time context results in a compile-time error:
+
+```
+```cpp
+auto squared4 = [] (auto val) constexpr {
+static int calls=0;
+... // ERROR: static variable in compile-time context
+return val*val;
+};
+```
+```
+
+For an implicit or explicit constexpr lambda, the function call operator is constexpr. That is, the definition of
+
+```
+```cpp
+auto squared = [] (auto val) {
+return val*val;
+};
+```
+```
+
+converts into the closure type:
+
+```
+```cpp
+class CompilerSpecificName {
+public:
+...
+template<typename T>
+constexpr auto operator() (T val) const {
+return val*val;
+}
+};
+```
+```
+
+Note that the function call operator of the generated closure type is automatically constexpr. In general, since C++17, the generated function call operator is constexpr if either the lambda is explicitly defined to be constexpr or the lambda is implicitly constexpr (as is the case here).
+
+Note that there is a difference between
+
+```
+```cpp
+auto squared1 = [] (auto val) constexpr {
+return val*val;
+};
+```
+```
+
+> ¹ Features not allowed in compile-time context are, for example, static variables, virtual functions, try and catch, and new and delete.
+
+and
+
+```
+constexpr auto squared2 = [](auto val) {  // compile-time initialization
+    return val*val;
+};
+```
+
+If (only) the lambda is constexpr it can be used at compile time, but squared1 might be initialized at run time, which means that some problems might occur if the static initialization order matters (e.g., causing the static initialization order fiasco). If the (closure) object initialized by the lambda is constexpr, the object is initialized when the program starts but the lambda might still be a lambda that can only be used at run time (e.g., using static variables). Therefore, you might consider declaring:
+
+```
+constexpr auto squared = [](auto val) constexpr {
+    return val*val;
+};
+```
+
+### 6.1.1 Using constexpr Lambdas
+
+Here is an example using constexpr lambdas. Assume we have a generic hash function for character sequences which is still parameterized according to the way a hash value is combined with the next character value:²
+
+```
+auto hashed = [](const char* str) {
+    std::size_t hash = 5381;        // initial hash value
+    while (*str != '\0') {
+        hash = hash * 33 ^ *str++;  // combine hash value with next character
+    }
+    return hash;
+};
+```
+
+With that lambda, we can initialize enumeration values for different strings at compile time:
+
+```
+enum Hashed { beer = hashed("beer"),
+                wine = hashed("wine"),
+                water = hashed("water"), ... };  // OK, compile-time hashing
+```
+
+We can also compute case labels at compile time:
+
+```
+switch (hashed(argv[1])) {      // runtime hashing
+    case hashed("beer"):         // OK, compile-time hashing
+        ...
+        break;
+    case hashed("wine"):
+        ...
+        break;
+    ...
+}
+```
+
+## Chapter 6: Lambda Extensions
+
+Note that we use the lambda hashed in the case labels at compile time, but inside the switch expression we use it at run time.
+
+If we initialize a container using a compile-time lambda, it becomes more likely that an optimizing compiler will compute the initial values at compile time (here, also using class template argument deduction for std::array):
+
+```
+for std::array:
+std::array arr{hashed("beer"), hashed("wine"), hashed("water")};
+```
+
+You can even parameterize such a constexpr lambda with another constexpr lambda. Assume that we parameterized the lambda hashed according to the way a hash value is combined with the next character value:
+
+```
+auto hashed = [](const char* str, auto combine) {
+  std::size_t hash = 5381; // initial hash value
+  while (*str != '\0') {
+    hash = combine(hash, *str++); // combine hash value with next character
+  }
+  return hash;
+};
+```
+
+The lambda can then be used at compile time as follows:
+
+```
+constexpr std::size_t hv1{hashed("wine", [](auto h, char c){return h*3 + c;});}
+constexpr std::size_t hv2{hashed("wine", [](auto h, char c){return h^3 + c;});}
+```
+
+Here, we initialize two different hash values for "wine" at compile time using different sub-algorithms for combining a hash value with the value of the next character. Both the lambda hashed and the passed lambdas are called at compile time.
+
+### 6.2 Passing Copies of this to Lambdas
+
+When using lambdas in non-static member functions, you have no implicit access to the object the member function is called for. That is, inside the lambda, you cannot use members of the object without capturing this in some form (whether you qualify the members with this-> does not matter):
+
+```
+class C {
+  private:
+    std::string name;
+  public:
+    ...
+    void foo() {
+      auto l1 = []( ){ std::cout << name << '\n'; }; // ERROR
+      auto l2 = []( ){ std::cout << this->name << '\n'; }; // ERROR
+      ...
+    }
+  ...
+}
+```
