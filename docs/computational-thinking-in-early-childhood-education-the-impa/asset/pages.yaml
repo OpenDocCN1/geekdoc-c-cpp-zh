@@ -1,0 +1,1780 @@
+- pgno: 0
+  md: '# Computational thinking in early childhood education: The impact of programming
+    a tangible robot on developing debugging knowledge
+
+
+    Anastasia Misirli, Vassilis Komis*
+
+
+    Department of Educational Sciences and, Early Childhood Education, University
+    of Patras, Greece
+
+
+    # ARTICLE INFO
+
+
+    +   Keywords:
+
+    +   Computational thinking
+
+    +   Programming
+
+    +   Debugging
+
+    +   Educational robotics
+
+    +   Early childhood education
+
+
+    # ABSTRACT
+
+
+    The present study investigates the debugging process of 526 children in preschool
+    (4-6 aged) when programming a tangible robot. When a child is involved in programming,
+    it is needed to identify and correct errors, or in other words, debug a program.
+    Debugging is a high-level thinking skill and is an essential component closely
+    related to developing Computational Thinking in early childhood education. Though
+    the debugging process is a cognitive function in programming investigated by many
+    researchers in recent decades, most studies are conducted either in primary, secondary
+    education, or higher education concerning beginners or experts in programming.
+    Very few reviews, and some focus on preschool education. Our study set out the
+    following objectives: 1) How do children identify the existence of error and locate
+    it? 2) What types of errors emerge when coding? 3) What type of error is complex
+    for novice programmers? 4) What strategies are developed by novice programmers
+    to debug effectively? and 5) What types of knowledge do novice programmers construct
+    by debugging the tangible robot Bee-Bot? The study follows an iterative model
+    of a design-based research approach. It uses multiple case studies to collect
+    qualitative and quantitative data. The programming intervention was implemented
+    by 30 educators in their classrooms and was based on a scenario-based teaching
+    design. The debugging process was analysed using Klahr & Craven''s framework (1988):
+    1) test and evaluate program, 2) identify bug, 3) represent program, 4) locate
+    bug and 5) correct bug. The main finding is the construction and development of
+    syntactic and semantic knowledge.
+
+
+    # 1. Introduction
+
+
+    # 1.1. Computational thinking in early childhood education
+
+
+    The development of Computational Thinking (CT) is included in computer science
+    and, extensively, is combined with educational robotics due to the common goals
+    and objectives they share. In recent years, the term CT has been introduced in
+    the computer science research community and the computer science teaching community
+    by Wing who suggested that CT skills are not only beneficial in computer science
+    but also in many other fields as a skill that is as fundamental as being able
+    to read, write, and do arithmetic (Wing, 2006). From the emergence of the concept
+    to the present day, an extensive literature has been developed which studies the
+    development of this term and the context in which it can be developed. The concept
+    of CT extends the term ''algorithmic thinking'' closely related to programming
+    processes (Wing, 2006). Some years later Guzdial in his viewpoint on Association
+    for Computing Machinery (ACM) proposed that CT is the new literacy of the 21st
+    century, which drawing methods from diverse disciplines would improve teaching
+    computing in higher education (Guzdial, 2008). Furthermore,
+
+
+    is a fundamental and high-level thinking skill for an evolving modern era since
+    it equips children with different levels of thinking and development of deductive
+    ability and avoids repetitive, fixed cognitive processes (Wing, 2010). The educational
+    benefits of CT involve the generalisation of CT to various contexts outside of
+    computer science while strengthening and improving intellectual abilities (Wing,
+    2010). Potentially, CT''s context of skills and abilities find application in
+    all scientific areas due to the applicability of different problem-solving strategies
+    and multiple levels of abstraction depending on the context in which they are
+    embedded (Barr & Stephenson, 2011).
+
+
+    In the US, many organisations working in parallel or exclusively for education
+    for the last decade, have published and reported on the aspects of CT and its
+    development in education. For example, the International Society for Technology
+    in Education (ISTE), advocates that CT is an essential literacy for all students,
+    combining four pillars — problem decomposition, pattern recognition, abstraction
+    and algorithms. It involves expressing solutions as a series of steps to automate
+    a process and is linked to programming and coding because CT is the highest thinking
+    order of problem-solving. In 2019, in partnership with the Computer Science Teachers
+    Association (CSTE), they launched an effort to revise the'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 1.3. Debugging in early childhood education
+
+
+    guage with different types of data representations, the program’s execution, the
+    analysis of the outcome, and the correction of program errors constitute the basic
+    framework of the Logo culture and to the idea of constructing components to favour
+    modularity which in turn leads students to learn the powerful idea of ‘state’
+    (Papert, 1993, p. 60). The idea of ‘state’ answers to the question how a machine
+    is programmed yet behaves similarly. Different users may program differently but
+    with the same outcome for the machine.
+
+
+    Finally, from a psychological point of view, debugging is received as a diagnostic
+    test for ‘symptoms’ displayed on a programme, which would help the programmer
+    to their identification and fixation (Hoc et al., 1990, p.55). Especially, the
+    Logo environment was designed to cultivate debugging as a cognitive function (Solomon
+    & Cambridge, 1986). The emphasis is much more on debugging a child’s ideas than
+    on debugging the actual code (Solomon et al., 2020). Detecting errors in a program
+    is a significant learning and self-regulation activity based on observing differences
+    between expected and observed results. Therefore, debugging process through the
+    pedagogical lens of Logo the has a broader dimension. It is not just about composing
+    correct programs but aims to develop the cognitive aspects of debugging as a fundamental
+    learning and self-regulation activity based on observing differences between expected
+    and observed results. Throughout the debugging process learners develops behaviour
+    patterns such as perseverance and self-regulation (Bers, 2018a).
+
+
+    On the other hand, in the context of teaching programming the detection and correction
+    of errors (mainly logical and less syntactic errors) holds a dominant position:
+    finding and correcting errors is a necessary cognitive and teaching process approached
+    by many researchers but initially is focused on older children and students and
+    tried to compare or highlight debugging strategies established either by novices
+    or between novices and experienced programmers (Kurland et al., 1989; McCauley
+    et al., 2008; Murphy et al., 2008; Kim et al., 2018).
+
+
+    Other researchers are more focused on how debugging could be taught in higher
+    education (Whalley et al., 2021). A considerate volume of work investigated student’s
+    misconceptions in relations to the reasons the bugs occur and how programming
+    course can be improved towards the teaching of debugging (Luxton-Reilly et al.,
+    2018; Rich et al., 2019; Swidan et al., 2018; Albrecht & Grabowski, 2020; Emerson
+    et al., 2020; Johnson et al., 2020). In order for educators to understand how
+    novice programmers interpret debugging process in Logo they need to take into
+    account the level of programmers’ knowledge of the syntactic structure (the rules
+    for combining elements into commands and the rules for combining commands into
+    programs or program segments), and the semantic structure of a programming environment
+    (operations, objects and locations) (Fay & Mayer, 1988).
+
+
+    The programming activity and behaviour of early childhood children during the
+    design of an algorithm and writing of a program (code) is directly related to
+    the process of ‘debugging’. The process in computer science, particularly in computer
+    programming, is called ‘debugging’ and is a high-level thinking skill. Debugging
+    is a fundamental concept even when early childhood students learn programming,
+    and it will be of great value if CT starts in early childhood education (Wing,
+    2010). Kong shows in a review conducted in 24 senior primary school education
+    studies that testing and debugging are suggested in seven studies’ core CT aspects
+    (Kong, 2019). While much of recent scholarly work deals with the knowledge and
+    CT of novice programmers, there has been less emphasis on how very young children
+    learn to debug. At an early stage, Cuneo examined the debugging strategies of
+    young children in a turtle logo-like programming environment without previous
+    experience in computer programming. Although the feedback and practice children
+    had received in the immediate conditions, they presented difficulty in fixing
+    incomplete programs (missing commands) than fixing a program in an appropriate
+    form (sequence or suitability of commands) (Cuneo, 1986). Despite the fact that
+    early learning environments increasingly incorporate coding curricula and CS standards,
+    there is little about programming and debugging knowledge in early childhood education
+    (Wang et al., 2021). However, we can identify a few studies in early childhood
+    education (ages 4–8) focused on debugging and robotics education either using
+    tangible or visual-block programming or Logo-based computer programming (Bers
+    et al., 2014; Fessakis et al., 2013; Flannery & Bers, 2013; Heikkila & Mannila,
+    2018; Newhouse et al., 2017; Pugnali et al., 2017; Strawhacker et al., 2018; Sullivan
+    & Bers, 2013). Firstly, Fessakis et al. reported that children could be introduced
+    to basic computer programming concepts using a Logo-based computer environment
+    (Fessakis et al., 2013). Applying a hybrid programming environment with concrete
+    robots and computer visual-block programming Flannery & Bers pointed out distinctive
+    differences of debugging strategies in early childhood children’s reasoning as
+    this was categorised in three cognitive development measures with older ones to
+    demonstrate more sophisticated programming expertise (Flannery & Bers, 2013).
+    Nevertheless, when children use tangible robots in free play, no organised problem-solving
+    behaviours could be developed that could result in a concrete understanding of
+    programming and debugging (Newhouse et al., 2017). Furthermore, Pugnali et al.
+    emphasised that debugging is the most challenging concept amongst other concepts
+    of CT but can be highly mastered with tangible robotic kits such as KIBO rather
+    than visual-block graphic programming environments such as ScratchJr (Pugnali
+    et al., 2017). However, Strawhacker et al. (2018) reported that children ages
+    5–8 indicated mid-to-high levels of ScratchJr programming comprehension on assessment
+    tasks on programming concepts and skills of symbol decoding, sequencing, debugging,
+    and goal-orientated programming. Especially for the debugging concept it was observed
+    younger children displaying poorer comprehension than older ones.
+
+
+    Although Gomes et al. (2018) used digital games to examine the effects of their
+    interactional affordances for teaching computing concepts on children’s aged 5–7
+    the interesting evidence regarding debugging was that children developed the strategy
+    of erasing the entire program and starting from scratch rather than trying to
+    fix the program. Furthermore, Relkin et al. (2021) found that the group of students
+    who did not receive the CAL curriculum, which includes the aspect of debugging
+    for the development of CT, scored higher than the CAL group; it is assumed that
+    is more likely that problem-solving skills was learned through another school
+    subject that increased NO-CAL group’s debugging skills.
+
+
+    Teaching debugging using tangible robots and coding toys is suggested as an appropriate
+    developmental context for early childhood education (Angeli & Valanides, 2020;
+    Bers, 2018a; Flannery & Bers, 2013; Silvis et al., 2021). For young children,
+    debugging using tangible toys involves solving problems at the program level and
+    physical materials (Fields et al., 2016). However, most of these devices use a
+    logo-like programming language, which encompasses a complexity of syntactic knowledge
+    of external modalities (buttons, tiles, blocks) that children encounter in their
+    learning to code and debugging (Silvis et al., 2021). Similar evidence is reported
+    by Bers et al. (2014) in a tangible-graphical programming environment where the
+    discovery of errors may lead children to either decide to keep their original
+    goal or switch to an appropriate alternative and in this stage children’s ability
+    was reported higher in activities for simpler than complex modalities of a robotic
+    system (Bers et al., 2014). Furthermore, concurrent physical and programming bugs
+    present opportunities for young children to learn about the broader computational
+    system in which they are learning to construct learning models of their debugging
+    strategies and the types of bugs they encounter (Silvis et al., 2021). In line
+    with this evidence is Nusen & Sipitakiat’s work, when introduced the tangible
+    robot Robo-Blocks which allowed children to step through each instruction and
+    observe the resulting action, thus making programming accessible to young children
+    (Nusen & Sipitakiat, 2011).
+
+
+    Additionally, some researchers investigated debugging through the lens of teachers
+    and their subject knowledge of programming or teach-'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Fig. 1. The cognitive model of debugging process according to Klahr and Craven
+    (1988).
+
+
+    ing style. For example, Kim et al. (2018) were interested in understanding the
+    types of errors and patterns educators developed for fixing their programs and
+    how they might affect their teaching in block-based programming. Strawhacker et
+    al. (2018)) reported mid-to-high levels of programming achievement in students
+    whose educators demonstrated flexibility in lesson planning, responsiveness to
+    student needs, technological content expertise, and concern for developing students’
+    independent thinking. To this end, Lee and Junoh (2019) provided developmentally
+    appropriate unplugged coding activities for in-service teachers in early childhood
+    education that presented practical examples of tasks to enhance CT abilities,
+    especially on algorithmic design and debugging.
+
+
+    However, Sipitakiat and Nusen (2012) examined how debugging can be incorporated
+    into a tangible programming system and applied Klahr’s framework for assessing
+    debugging abilities. They added new design aspects to the robots they developed
+    and provided clues that helped children better understand, locate, and solve the
+    problems by showing how step-by-step control allowed children to better articulate
+    and pinpoint errors in the program. We followed similar steps with Sipitakiat
+    and Nusen (2012) and Rich et al. (2019), but mainly what was proposed early on
+    by Carver and Klahr (1986) modelling the specific steps of debugging for children
+    (Mayer, 1988, p.33). Thus, we adopted for our study Klahr & Carver’s debugging
+    framework, which approaches debugging through five distinct and interrelated phases:
+    1) Test and evaluate a program, 2) Identify bug, 3) Represent program, 4) Locate
+    bug and 5) Correct bug (Fig. 1). In the first phase, the user tests the program
+    and checks by comparing the initial design of the program with its performance
+    in the robotic system. If a discrepancy between design and performance is observed
+    in the behaviour of the particular robotic system, then the user should proceed
+    to Phases 2–5. In that case, the user should first the user should recognise that
+    there is an error (bug), then reproduce the program to investigate the possible
+    location of the error (bug) and thus lead to the detection of the error (bug)
+    and finally correct it.
+
+
+    As stated by Papert (1993) ‘the process of debugging is a normal part of the process
+    of understanding a program’ (p.61). In this study, we identify how novice programmers’
+    debugging process matches the troubleshooting framework proposed by Klahr and
+    Craven (1988) and how we use that framework to explain debugging. Specifically,
+    we aim to answer the following questions: 1) How do children identify the existence
+    of error and locate it? 2) What types of errors emerge when coding? 3) What type
+    of error is complex for novice programmers? 4) What strategies are developed by
+    novice programmers to debug effectively? and 5) What types of knowledge do novice
+    programmers construct by debugging the tangible robot Bee-Bot?
+
+
+    Our work contributes to the field of CT and tangible programming by demonstrating
+    how debugging can be analysed in classifications and play an essential role in
+    the learning process of fostering CT abilities. This study provides typologies
+    of debugging practices focused on developing syntactic and semantic/logical knowledge
+    and their effectiveness. Furthermore, results demonstrate the importance of classified
+    debugging strategies and behaviours to increase preschool children’s exposure
+    to coding and build upon an understanding of the debugging process more systematically.
+    Moreover, the study suggests teaching developmentally appropriate robotic and
+    programming-based activities that further promote the development of computational
+    concepts and thinking in tangible programming.
+
+
+    # 2. Material and methods
+
+
+    # 2.1. Participants
+
+
+    Participants in this study were 526 young children from urban and suburban public
+    schools and local mainstream preschools, with a mean age 5,18 years (4.3 – 6.5,
+    SD=0,4655). The sample comprised 256 males and 270 females, with 167 younger (4–5
+    years old) and 359 older (5–6 years old), given that in the Greek educational
+    system, both ages are blended in each class.
+
+
+    Thirty (30) preschool educators from mainstream public schools trained to implement
+    robotics and programming in their classes following a teaching approach based
+    on a scenario-based design with additional research instruments to collect data.
+    They were instructed to assess children’s prior and post-mental representations
+    and subject knowledge of robots and programming by interviewing them individually
+    following the script of open-ended questions (Appendix 1). That was highly innovative
+    for educators’ theoretical knowledge about summative assessment then. According
+    to those reports, children had no prior knowledge of robots and programming. Though
+    these results are not included in the present paper, we can report algorithmic
+    thinking and programming ability evolution. The ‘Instruments and Data collection’
+    section provides more details regarding the research design and instruments used.
+
+
+    # 2.2. Recruitment
+
+
+    The study was part of the FP7 European Project’ The Fibonacci Project-Disseminating
+    an Inquiry Based Science and Mathematics Education (ISBME)’ which had the ambition
+    to contribute to the dissemination of ISBME throughout the European Union. The
+    Fibonacci project defined the dissemination process starting with 12 Reference
+    Centres'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'and 24 Twin Centres. The Department of Educational Sciences and Early Childhood
+    Education, especially the Laboratory of Science, Mathematics and ICT Education
+    of the University of Patras in Greece, was one of the twenty-four Twin Centres
+    responsible for training educators on how to plan their teaching following the
+    enquiry-based approach. To achieve that, the Twin Centre of the University of
+    Patras established its initial Teacher-Network by organizing an open meeting where
+    the philosophy and the usefulness of the project, as well as the actual work plan
+    presented to preschool teachers and other stakeholders. In that event, the educators
+    who were willing to participate in the Teacher-Network got familiar with the enquiry-based
+    approach in 3 different scientific areas: i) Science, ii) Mathematics, and iii)
+    ICT and were meant to be trained to integrate them into their teaching practice
+    through a series of professional development pieces of training and workshops
+    that the project offered. Moreover, they were supported by the research team during
+    the implementation phase in their classrooms. At the same time, they, in turn,
+    contributed to the preparatory phase of the new members of the Teacher-Network
+    by sharing with them their experiences and expertise in the meetings.
+
+
+    # 2.3. Professional development
+
+
+    Educators attended a three-hour training led by the researchers of this study.
+    The training was planned in two parts. In the first part, educators were familiarised
+    with the principles of Inquiry Science-Based Education with an emphasis on robotics
+    and tangible programming. Programming concepts were approached through maths (spatial
+    reasoning, measurement and patterns/iteration) to show how they are embedded within
+    the national curriculum. In addition, this part provided introductory information
+    on the robotic tools, focusing mainly on the tangible robot Bee-Bot and its affordances
+    in early childhood education to teach programming. In the second part, educators
+    participated in hands-on play with the robot. They were introduced to the scenario-based
+    design in early childhood, the pedagogical principles and methodology, and this
+    was based on and how these were formulated in activities. Teachers were given
+    the opportunity to implement the scenario as it was planned for their classrooms,
+    understand how to implement the research instruments and their importance for
+    data’s validity, share possible drawbacks and propose solutions altogether as
+    a group. Furthermore, teachers were given hard copies of the scenario, the assessment
+    instruments, and the kit for implementation (robots, cards of commands-pseudocode,
+    mats, pictures and other additional resources). The training slides, the scenario
+    and assessment instruments were also provided in a digital form. Educators were
+    given ongoing professional development and support through in-person assistance
+    and role-modelling from researchers in their classrooms or phone calls and meetings.
+    Additionally, a log was created to keep track of which classes delivered assessments
+    and when and when they were planned to finish the implementation and organise
+    the rotation of kits’ distribution.
+
+
+    # 3. Procedure
+
+
+    # 3.1. Instruments and Data collection
+
+
+    The present study followed the design-based research (DBR) methodology, which
+    aims to improve educational practices through systematic, flexible, and iterative
+    review, analysis, design, development, and implementation, based upon collaboration
+    amongst researchers and practitioners in real-world settings leading to design
+    principles or theories (The Design-Based Research Collective, 2003; Wang & Hannafin,
+    2004). Thus, an iterative model of a developmental DBR approach through a three-year
+    implementation, analysis, and redesign was developed. It involved multiple collaborative
+    iterations (Anderson & Shattuck, 2012). It used multiple case studies to collect
+    qualitative and quantitative developmental data (Kelly et al., 2008) within the
+    same methodological framework without a distinction to be made. It was considered
+    to be included under the case study method (Yin, 2009). These are approached from
+    mixed research methods and involve three iterations, collaborative partnership
+    between researchers and educators and tactic impact on the educational process.
+    Hence, as the DBR approach supports, this research applies mixed methods from
+    quantitative and qualitative data and instruments (Fig. 2). A concurrent triangulation
+    approach is applied, which ‘provides quantitative statistical results followed
+    by qualitative quotes that support or disconfirm the quantitative results’ (Creswell,
+    2009). This study utilised the Logo-like tangible robot Bee-Bot and a scenario-based
+    design with three scenarios (teaching sequences), following pedagogical and developmentally
+    appropriate methodological criteria to organise the learning in programming through
+    three different learning areas of the curriculum: i) spatial reasoning, ii) measurement,
+    iii) memory/iteration. Different research instruments were developed and introduced
+    to children through the distinct phases of an educational scenario concerning
+    the data collection and analysis techniques (Fig. 2). All these instruments were
+    tools for educators to record and evaluate the learning process. Mainly, all the
+    data emerged from the post-test interviews, which were structured interviews with
+    two different instruments reporting on mental representations and subject knowledge
+    (Appendices 1-4). The interviews were used individually to assess (prior) and
+    evaluate (post) the transformation of children’s mental representations and consolidation
+    of CT’s skills. Furthermore, data on debugging was derived from the richness and
+    range of the programming profiles that emerged in this study since no teaching
+    activities or assessment of the debugging process were not included in the scenarios
+    implemented.
+
+
+    be included under the case study method (Yin, 2009). These are approached from
+    mixed research methods and involve three iterations, collaborative partnership
+    between researchers and educators and tactic impact on the educational process.
+    Hence, as the DBR approach supports, this research applies mixed methods from
+    quantitative and qualitative data and instruments (Fig. 2). A concurrent triangulation
+    approach is applied, which ‘provides quantitative statistical results followed
+    by qualitative quotes that support or disconfirm the quantitative results’ (Creswell,
+    2009). This study utilised the Logo-like tangible robot Bee-Bot and a scenario-based
+    design with three scenarios (teaching sequences), following pedagogical and developmentally
+    appropriate methodological criteria to organise the learning in programming through
+    three different learning areas of the curriculum: i) spatial reasoning, ii) measurement,
+    iii) memory/iteration. Different research instruments were developed and introduced
+    to children through the distinct phases of an educational scenario concerning
+    the data collection and analysis techniques (Fig. 2). All these instruments were
+    tools for educators to record and evaluate the learning process. Mainly, all the
+    data emerged from the post-test interviews, which were structured interviews with
+    two different instruments reporting on mental representations and subject knowledge
+    (Appendices 1-4). The interviews were used individually to assess (prior) and
+    evaluate (post) the transformation of children’s mental representations and consolidation
+    of CT’s skills. Furthermore, data on debugging was derived from the richness and
+    range of the programming profiles that emerged in this study since no teaching
+    activities or assessment of the debugging process were not included in the scenarios
+    implemented.
+
+
+    # 3.2. Scenario-based design for teaching and learning programming
+
+
+    At this point, we should describe what a scenario-based design is. A scenario-based
+    design for teaching and learning alongside the tangible robot Bee-Bot is used
+    to develop children’s abilities of CT (Misirli & Komis, 2014; Komis & Misirli,
+    2015; Komis et al., 2017). The conceptualisation of a scenario-based design is
+    based on constructionism pedagogical approaches such as project-based learning,
+    child-centred learning, problem-solving learning environment, collaborative learning,
+    and scaffolding and reflection process. It includes seven parts: 1.Identification
+    of the teaching subject, 2.Children’s prior mental representations and subject
+    knowledge, 3.Learning goals, 4.Teaching activities, 5.Artifacts and material,
+    6.Children’s post mental representations and subject knowledge, and 7.Documentation.
+    This model constructs a linear model for designing a full teaching intervention
+    based on robotics and presents different planning and implementation instances
+    (Misirli & Komis, 2014).
+
+
+    Especially for part 4 (Teaching activities), the idea was to have two sections.
+    The first section of activities was designed to be focused on robotics concepts
+    (function, control and operation of the robot), around two basic programming strategies:
+    i) ‘step-by-step’ and ii) automated. The first strategy is highly recommended
+    to help students in synchronise their thinking better with the actual movement
+    of the robot and the program being executed (Nusen & Sipitakiat, 2011). The gridded
+    mats we designed supported this strategy as the length of each square corresponds
+    to the distance Bee-Bot moves on one linear step. Hence, children, by moving the
+    robot on the grid from one location to the other, formulated in an abstractive
+    way the program meant to be built. The second section integrated these concepts
+    into activities but focused on mathematical and programming concepts (spatial
+    reasoning, measurement and memory/iteration). In addition, material (gridded mats
+    of 15 cm squares, cards/set of commands, themed pictures) was developed and provided
+    to educators in a kit. However, when using the Bee-Bot, the children’s programme
+    was not visible as stored internally in the device. Hence, we introduced the set
+    of commands in cards, which worked as a ‘pseudocode’ (Fig. 3). Initially, the
+    ‘pseudocode’ is a written list of actions in a numbered sequence. However, since
+    in the national curriculum, children at that age are not systematically taught
+    writing, this'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# Fig. 4. Sequential programming structure.
+
+
+    ![](img/9a18e486b463cb027ef41704bcf91c4e_6_0.png)
+
+
+    # Table 1
+
+    Variables, modalities, frequencies and relative frequencies (N=526).
+
+
+    | Variables | Modalities | f | rf |
+
+    |---|---|---|---|
+
+    | 1. Number of attempts when debug V1_EvalProg_NumberOfTries | 1=V1E_NumberOfMoreTries
+    | 37 | 7.034 |
+
+    |  | 2=V1E_NumberOfTries_3_4 | 40 | 7.605 |
+
+    |  | 3=V1E_NumberOfTries_1_2 | 449 | 85.361 |
+
+    | 2. Types of errors V2_EvalProg_TypesOfErrors | 1=V2E_TofSyntSemLog | 36 | 6.844
+    |
+
+    |  | 2=V2E_TofSemLogic | 184 | 34.981 |
+
+    |  | 3=V2E_TofSyntax | 22 | 4.183 |
+
+    |  | 4=V2E_NoErrorsAtAll | 284 | 53.992 |
+
+    | 3. Type of error Syntax V3_EvalProg_Syntax Errors | 1=V3E_SyError_CLEARGO |
+    20 | 3.802 |
+
+    |  | 2=V3E_SyError_CLEAR | 25 | 4.753 |
+
+    |  | 3=V3E_SyError_GO | 13 | 2.471 |
+
+    |  | 4=V3E_NoSyError | 468 | 88.973 |
+
+    | 4. Type of error Semantic-Logical V4_EvalProg_SemanticLogicalErrors | 1=V4E_SemLogError_TurnOriDir
+    | 70 | 13.308 |
+
+    |  | 2=V4E_SemLogError_PosNum | 3 | 0.57 |
+
+    |  | 3=V4E_SemLogError_TurnNumDir | 12 | 2.281 |
+
+    |  | 4=V4E_SemLogError_TurnOri | 34 | 6.464 |
+
+    |  | 5=V4E_SemLogError_TurnDir | 38 | 7.224 |
+
+    |  | 6=V4E_SemLogError_NumberOri | 11 | 2.091 |
+
+    |  | 7=V4E_SemLogError_NumberDir | 43 | 8.175 |
+
+    |  | 8=V4E_NoSemLogError | 315 | 59.886 |
+
+    | 5. Effectiveness of debugging V5_EvalProg_Program Debugging | 1=V5E_NoDebug_ProgramError
+    | 122 | 23.194 |
+
+    |  | 2=V5E_Debugging_NotEffective | 6 | 1.141 |
+
+    |  | 3=V5E_Debugging_Effective | 120 | 22.814 |
+
+    |  | 4=V5E_Debugging_NotAtAll | 278 | 52.852 |
+
+    | 6. Strategies of debugging V6_EvalProg_Debugging Patterns | 1=V6E_DebStr_CardsDebug
+    | 15 | 2.852 |
+
+    |  | 2=V6E_DebStr_VerbalDebug | 7 | 1.331 |
+
+    |  | 3=V6E_DebStr_DifferentProgram | 110 | 20.913 |
+
+    |  | 4=V6E_DebStr_None | 394 | 74.905 |
+
+
+    ary order starting with those related to the types of errors and ending with those
+    related in the whole debugging process. The added value of these variables is
+    to capture a self-reflective process, which is mostly displayed in experienced
+    programmers (Solomon & Cambridge, 1986; Sipitakiat & Nusen, 2012). This allows
+    us to have valid data on the process of developing programming ability and CT.
+
+
+    # 4.1. The different cognitive phases of a debugging ‘journey’
+
+
+    The analysis that follows is made according to Klahr and Carver’s (1988) framework
+    that includes different cognitive phases of the debugging process.
+
+
+    # 4.2. Phase 1: Test and evaluate program
+
+
+    By observing the behaviour of all children when coding, the majority follow the
+    process: a) writing a program, b) executing the program, c) debugging the program,
+    and d) retesting and evaluating the program. So we define Variable 1, which records
+    the number of times a child coded a program and inputted and executed it by the
+    robot. Though some children were led to an effective program by their first attempt,
+    using a combination of the taught programming strategies, variable V1 enabled
+
+
+    us to examine the number of attempts as a result of an ‘error’ to test a program
+    and complete it successfully an algorithmic design. In variable V1, children’s
+    efforts are recorded by a scaling and the following categories are created: a)
+    one (01) to two (02) times, b) three (03) to four (04) times, and c) more than
+    four times. The underlying idea was to rank the categories on a scale of one (01)
+    to four (04) attempts to classify two types of programming behaviour: a) incidents
+    that exhibited the programming strategies with potentially more than one attempt
+    and b) incidents that exhibited errors. Obviously, in each category, both types
+    of behaviour appear together. As illustrated in Table 1, 449 of the 526 children
+    (f = 449, rf = 85.36) attempted up to two times to write and execute a program
+    to complete an algorithmic design. As this number of children represents a significant
+    proportion of the sample, it implies interpretations such as that a large proportion
+    of children: a) were led to implementing the corresponding programming strategy
+    (or strategies) or b) identified the error relatively easy, thus were led to an
+    effective debugging. On the other hand, these interpretations apply to a smaller
+    proportion of children, 40 out of 526 (f=40, rf=7.6), who led to coding three
+    to four times. The distribution shows similar behaviour for 37 out of 526 children
+    (f=37, rf=7.03) who show a more significant number of attempts more than four
+    times.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: "# Fig. 5. Syntax errors and sequential programming structure.\n\n![](img/9a18e486b463cb027ef41704bcf91c4e_8_0.png)\n\
+    \n+   ### Table 2\n+   Typology of syntactic knowledge.\n+   \n+   Qualitative\
+    \ characteristics of syntax errors (Variable 3)\n+   \n+   - **Incomplete**: V3E_SyError_CLEARGO\n\
+    +     Error in using commands CLEAR & GO Coding behaviour: wrong position or missing\n\
+    +   \n+   - **SemiComplete**: V3E_SyError_CLEAR\n+     Error in using command\
+    \ CLEAR Coding behaviour: wrong position or missing\n+   \n+   - **SemiComplete**:\
+    \ V3E_SyError_GO\n+     Error in using command GO Coding behaviour: wrong position\
+    \ or missing\n+   \n+   - **Complete**: V3E_NoSyError\n+     Both control and\
+    \ operation commands (CLEAR & GO) included and in correct position\n\n# Fig. 6.\
+    \ Semantic/logical errors and sequential programming structure.\n\n![](img/9a18e486b463cb027ef41704bcf91c4e_8_1.png)\n\
+    \n(Fig. 6). Again, we ended to a semi-complete and complete description of children's\
+    \ programming behaviour.\n\nSemi-complete included a range of behaviours (07 categories)\
+    \ trying to capture the difficulty of building semantic knowledge on both levels\
+    \ of understanding, namely semantic and logical. In contrast, the complete strategy\
+    \ describes a consolidation of syntactic knowledge as expressed by the absence\
+    \ of semantic-logical errors (Table 3).\n\nAs can be identified from the qualitative\
+    \ content of the modalities, most errors are described as insufficiency of direction\
+    \ and orientation commands, which is why we call them logical errors. Only two\
+    \ cases are characterised by semantic error and related to the misconception of\
+    \ orientation orders. However, we decided to record them in different categories\
+    \ in light of qualitative analysis. In Variable V4 to highlight the predominant\
+    \ categories contributing to understanding cognitive programming processes. The\
+    \ majority of the sample, 315 out of 526 children (f=315, rf=60.00), exhibit constructed\
+    \ semantic knowledge with"
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Table 3
+
+
+    Typology of semantic knowledge.
+
+
+    | Qualitative characteristics of semantic/logical errors (Variable 4) | Type of
+    errors Semantic (S) Logical (L) |
+
+    |---|---|
+
+    | **SemiComplete: V4E_SemLogError_TurnOriDir**
+
+    Error: orientation or direction command
+
+    Coding behaviour: Orientation or direction command missing | **L** |
+
+    | **SemiComplete: V4E_SemLogError_PosNum**
+
+    Error: position & number of commands
+
+    Coding behaviour: Number of command(s) and order of commands differ from the initial
+    verbal coding | **L** |
+
+    | **SemiComplete: V4E_SemLogError_TurnNumDir**
+
+    Error: position & number of commands
+
+    Coding behaviour: Direction command(s) after an orientation command missing, and
+    overall order of commands differ from the initial verbal coding | **L** |
+
+    | **SemiComplete: V4E_SemLogError_TurnOri**
+
+    Error: turn orientation
+
+    Coding behaviour: Misconception of orientation command
+
+    Orientation command(s) missing | **S/L** |
+
+    | **SemiComplete: V4E_SemLogError_TurnDir**
+
+    Error: turn direction
+
+    Coding behaviour: direction command after an orientation command missing | **L**
+    |
+
+    | **SemiComplete: V4E_SemLogError_NumberOri**
+
+    Error: number of orientation commands
+
+    Coding behaviour: more or fewer orientation commands than initially required |
+    **S/L** |
+
+    | **SemiComplete: V4E_SemLogError_NumberDir**
+
+    Error: after orientation commands number of direction commands
+
+    Coding behaviour: more or fewer direction commands than initially required | **L**
+    |
+
+    | **Complete: V4E_NoSemLogError**
+
+    No Semantic/Logical error |  |
+
+
+    children have not constructed the sides of turns and consequently orientation
+    commands. On the other hand, it is regarded as a logical error in cases where
+    children cannot locate orientation commands in the algorithmic structure. The
+    following categories show slightly the same distribution. Thus, 12 of the 526
+    children (f=12, rf=2.00) exhibit a coding behaviour with semantic knowledge exhibiting
+    a logical error, which is found in omissions of directional instructions after
+    turn instructions and overall on the set of direction commands in a program. In
+    addition, the category with incorrect semantic knowledge (logical errors) recorded
+    11 out of 526 children (f=11, rf=2.00), which emerged from the difficulty of selecting
+    an appropriate number of orientation commands. If this category of errors is seen
+    from a semantic prism, we can explain this coding behaviour as a misunderstanding
+    of orientation concepts, confusing selecting the appropriate number of commands.
+    Finally, the category containing only three children is considered with a nominal
+    recorded frequency and no interest.
+
+
+    and its validity at this phase, so they judge the ‘state’ of an algorithm and
+    the coding designed to program the robot.
+
+
+    # 4.8. Locate and correct bug
+
+
+    Mapping the cognitive process in Phases 4 and 5, we created Variable V5 (V5_EvalProg_ProgramDebugging).
+    Its subcategories are assigned when a child is led to identifying and debugging
+    errors (syntax, semantic/logical, or both) after executing a program or debugging
+    the code. Mainly, it involves four subcategories that capture children’s behaviour
+    and cognitive process when they locate and correct one or more errors. Children
+    exhibit incomplete, semi-complete and complete cognitive processes in the range
+    of categories that emerged. A category was not involved in this cognitive process
+    due to the original coding’s appropriateness. The following categories created
+    and assigned to capture the final stage, the result of a debugging process, are
+    qualitatively presented in the following table (Table 4).
+
+
+    # 4.7. Phase 3–5: Represent program, locate bug and correct bug
+
+
+    In these three phases, the user should represent the program to investigate the
+    possible location of an error, in other words, to detect the error and then take
+    action to correct it. This process requires changing and replacing one or more
+    errors and retesting the program. Consequently, a programmer should detect, decode
+    and verify if one or more errors occur. Our study considers all three phases described
+    by two Variables, V5 and V6. Phase 3 regards the representation of a program,
+    so in our study, this phase is met by the program’s visual representation with
+    the ‘pseudocode’. The teaching sequences of educational scenarios ensured that
+    all children would visualise and reflect their verbal algorithmic designs by ‘pseudocode’.
+    To that end, each child could easily recognise when an algorithmic design was
+    unsuccessful due to error(s) by matching each robot’s movement with each command
+    card. Hence, they were led to detect and locate a bug as suggested in Phase 4,
+    the most demanding cognitive process in debugging. At this point, the child must
+    have identified the location of the error and selected the appropriate command
+    to correct the program effectively and successfully solve the algorithm, Phase
+    5. Children initially process the solution on an algorithmic design
+
+
+    Most of the children, 278 out of 526 (f=278, rf=52.85), presented complete and
+    functional programs, so they did not debug. In the same category fall those children
+    who exhibited the ‘step-by-step’ programming strategy as when in this strategy
+    they didn’t come up with errors. Then, 122 out of 526 children (f=122, rf=23.19)
+    belong to the category where their programs show errors without corresponding
+    debugging.
+
+
+    In contrast, 120 out of 526 children (f=120, rf=22.81) identify and locate the
+    error and consequently successfully correct it, so in this case, it is called
+    effective debugging. However, out of the whole set of children who proceeded to
+    debug (126/526), only 6 children (f=6, rf=1.14) ultimately failed to modify the
+    inaccurate program while attempting its correction. So they do not complete the
+    process and would have to continue again by going through Phases 3–5 of the debugging
+    model.
+
+
+    The Variable V6 (V6_EvalProg_Debugging Strategies) is the most important one as
+    it is assigned to children to capture the specific strategy they developed when
+    they debugged. In particular, it includes four (04) subcategories that record
+    children’s cognitive process to correct an error. The range of categories indicates
+    that children primarily develop debugging strategies of experienced programmers,
+    such as when creating a new program. However, they also develop other strategies
+    on'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# Table 4
+
+
+    Typology of debugging effectiveness.
+
+
+    Qualitative characteristics of debugging effectiveness (Variable 5)
+
+
+    **Incomplete: V5E_NoDebug_ProgramError**
+
+    Error in coding: The child does not identify it, and thus no debugging occurs.
+
+    **Semi-complete: V5E_Debugging_NotEffective**
+
+    Unsuccessful debugging: the algorithmic design does not resolve the problem.
+
+    **Complete: V5E_Debugging_Effective**
+
+    Successful debugging: the algorithmic design resolves the problem.
+
+    **No debugging: V5E_Debugging_NotAtAll**
+
+    Successful coding; the algorithmic design resolves the problem. Also, it is applied
+    for children who used the programming strategy ‘step-by-step’.
+
+
+    # Table 5
+
+
+    Typology of debugging strategies.
+
+
+    Qualitative characteristics of debugging strategies (Variable 6)
+
+
+    **Incomplete: V6E_DebStr_CardsDebug**
+
+    Assigned when a child verbally developed the algorithmic design, but when writing
+    the program by ‘pseudocode’, realised that it eventually needs to be differentiated
+    from the verbalisation and proceeded to recode.
+
+    **Semi-complete: V6E_DebStr_VerbalDebug**
+
+    Assigned when a child verbally articulated the debugging but did not code and
+    execute a new program to correct the error and retest it.
+
+    **Complete: V6E_DebStr_DifferentProgram**
+
+    Assigned when a child coded a new program to correct an error
+
+    **No debugging: V6E_DebStr_None**
+
+    There was no error in the coding and execution of the program, and even if there
+    was an error, the subject did not identify it or locate the error to debug.
+
+
+    which no literature is provided to report. What is essential for all categories
+    is that the specific cognitive processes consist of elaborations which in turn
+    lead to the construction of procedural knowledge, i.e., how a programmer can complete
+    a debugging process (Komis, 2005). The qualitative characteristics of the variable
+    are contained in the table (Table 5).
+
+
+    As seen from the quantitative data of variable V6, two are the most prevalent
+    of the four categories under study. In particular, the category of children of
+    programmers with completed programming profiles includes more than two-thirds
+    of the sample (394 out of 526 children, f = 394, rf = 74.9); consequently, this
+    number of children is not driven by debugging procedures. The next category with
+    a significant frequency consists of 110 out of 526 children (f=110, rf=20.91)
+    and involves implementing the new program strategy to complete debugging. Subsequently,
+    the remaining two categories show minimal distributions and thus do not constitute
+    significant findings. Thus, 15 out of 526 children (f=15, rf=2.85) proceed only
+    to verbal debugging and 7 out of 526 children (f=7, rf=1,33) proceed to use the
+    ‘pseudocode’.
+
+
+    # 5. Discussion
+
+
+    This study provides empirical evidence from a large-scale study that teaching
+    preschool students (ages 4–6) to code through the tangible robot Bee-Bot can accelerate
+    the acquisition of one of CT’s practices, such as debugging. The current study
+    uses developmentally appropriate educational intervention and is the first to
+    document and report on typologies of debugging behaviours linked to syntactic
+    and semantic knowledge. Our research demonstrates the debugging behaviours young
+    preliterate children exhibit while processing programming without having prior
+    experience but trying to understand if a program is fixable (Papert, 1993, p.
+    23) when programming the tangible robot Bee-Bot and what processes are emerging
+    in order to identify, locate and correct errors. The children were not aware of
+    what steps a debugging process consists of, nor were they taught so. Thus we may
+    suggest that children were led to debug intuitively and as a result of their logical
+    process to make their program fixable to fulfil their algorithm and solve the
+    problem. Although Cuneo (1986) suggested otherwise in a graphic-programming environment,
+    in our study, the children managed to debug their incorrect programs even though
+    they were not meant to do so, and those programs were more complex than three
+    commands. However, most proba-
+
+
+    bly, tangible programming facilitated and supported this process. In this programming
+    context, we applied Klahr’s framework for assessing debugging abilities and describing
+    strategy aspects to provide indicators of stages of the debugging process matched
+    to preschoolers’ development of CT. The types of errors are categorised in syntactic
+    and semantic knowledge, and the individual strategies children develop when they
+    recognise the existence of an error are highlighted. We have shown how ‘step-by-step’
+    control allowed children to better articulate and pinpoint errors in the program,
+    as suggested by Sipitakiat and Nusen (2012). We designed the ‘step-by-step’ function
+    to allow children to slow down the execution process and have more time to observe
+    and compare the code simultaneously during the robot’s execution. Without this
+    function, children had to choose whether to pay attention to the floor robot or
+    the ‘pseudocode’ set in a program. The former was usually the case, which often
+    made it difficult, especially for children aged 4–5, to associate the observed
+    problem with the bug in the program. On the other hand, when using the ‘step-by-step’
+    function, students pushed the execution button to run one command at a time, so
+    they minimised error risk-taking and articulated the algorithmic design to resolve
+    a problem at their own pace.
+
+
+    # 5.1. Identification of an error and reflective process
+
+
+    Firstly, regarding the research question about the process children follow to
+    identify the existence of error and locate it, we gather evidence from Variable
+    1. As shown, most children debugged the same program more than once but up to
+    two times. The same evidence is shared by Gould and Drongowski (1974), so we can
+    suggest that it is common for this age group to attempt two tries for debugging.
+
+
+    # 5.2. Types of errors
+
+
+    Regarding the research question for the types of errors that emerged when coding
+    it, an interesting finding is the presence of the two main types of errors: i)
+    syntax and ii) semantic/logical. The former type records most children exhibiting
+    a complete programming behaviour, in which syntactic errors are absent. However,
+    a small proportion of children exhibit semi-complete syntactic knowledge; possibly
+    this relates to difficulty building the memory command’s position and perhaps
+    its function. It would be helpful for future reference to relate this finding'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "to the relative age group and cognitive development. The latter type of error\
+    \ is the predominant category of semantic/logical errors belonging to the high-level\
+    \ cognitive process. It found that this type was likely more complex for children\
+    \ to build. The qualitative data analysis shows that the semantic errors relate\
+    \ to a misunderstanding of the location or numbering of the commands.\n\nIn contrast,\
+    \ the logical errors relate to the missing programmable robot’s control commands.\
+    \ The number of errors in a program ranges from one (1) to three (3); for debugging\
+    \ them, novice programmers end up with appropriate strategies. Each child appeared\
+    \ to identify one error for each program debugging attempt. Most children show\
+    \ to form semantic knowledge, so we attribute them a well-organised and consolidated\
+    \ programming behaviour.\n\nThe number of children presented with the highest\
+    \ semantic/logical errors distribution was divided into the categories ’Semantic/Logical\
+    \ Error_TurnOriDir’ and ’Semantic/Logical Error_NumDir’. This number of children\
+    \ had difficulty selecting a combination of two (2) commands (orientation and\
+    \ direction) in structural parts of a program. Evidence suggests that children\
+    \ tended to delete more commands than needed or even compose a new program to\
+    \ fix the error (Misirli & Komis, 2020). This evidence suggests the error was\
+    \ either made by their difficulty in spatial reasoning or an error in counting\
+    \ (Shumway et al., 2021), even though the scenarios proved effective in constructing\
+    \ spatial reasoning (Misirli et al., 2019). Thus, this semantic/logical error\
+    \ type seems to be the most difficult for novice programmers.\n\nAdditionally,\
+    \ we have not observed \"initialisation bugs\" taking place in the physical, tangible\
+    \ domain where they represent failures to re-set the robot itself on the proper\
+    \ trajectory (Silvis et al., 2021). That would be causing semantic/logical errors\
+    \ as the scenario-based pedagogical design had predicted this kind of device complexity\
+    \ and anticipated adequate activities. Overall, bugs in the programs most often\
+    \ involved turn errors and missing codes (Silvis et al., 2021), but not those\
+    \ involved controller errors.\n\n# 5.3. Strategies of debugging and types of knowledge\n\
+    \nFurthermore, regarding the strategies developed by novice programmers to debug\
+    \ effectively, children having already represented a program on ‘pseudocode’ might\
+    \ have been helped to move the debugging process without an effective result.\
+    \ As Ahn et al. (2021) suggest, the learning experience in varied forms (plugged\
+    \ and unplugged) that lead to experiential and meaningful learning can increase\
+    \ accessibility to programming education.\n\nAs shown in our study, half of the\
+    \ children implemented the debugging strategy by composing a ’new program’ to\
+    \ complete their debugging process. A ’new program’ is a twofold process of identifying\
+    \ and correcting an error in the original code or writing a new code by scratch\
+    \ to accomplish their algorithmic design.\n\nFrom the above, we conclude that\
+    \ in Phase 3–5, the preschool children have already represented a program since\
+    \ it was a prerequisite of the teaching intervention, moving some of them to the\
+    \ debugging process without being led to an effective process. As it is shown,\
+    \ half of the children in the sample design and compose successful programs in\
+    \ solving an algorithm. However, a significant number still present difficulties\
+    \ in syntactic and semantic knowledge, made to identify some of the errors they\
+    \ present (syntax and semantic/logical) and are led to appropriate correction\
+    \ and modification of the program. Nevertheless, a significant number of children\
+    \ continue to show syntactic knowledge difficulties. It might be the programming\
+    \ environment of tangible robotics that may not be adequate for consolidating\
+    \ syntactic knowledge. However, the graphical programming such as Scratch, prevents\
+    \ syntax errors as students can drag and drop the code to build programs without\
+    \ making syntax errors (Resnick et al., 2009; Maloney et al., 2010; Qian & Lehmann,\
+    \ 2017), and also is reported that can help novices build a better understanding\
+    \ of some programming concepts (Weintrop & Wilensky, 2018; Chou, 2019). It would\
+    \ be interesting to examine the development of syntactic knowledge in a graphical\
+    \ programming environment such as Scratch using our scenarios for teaching and\
+    \ compare results to the PTD curriculum and children’s lower scores in debugging\
+    \ (Pugnali et al., 2017), as in both teaching frameworks the sole focus was not\
+    \ on debugging. Furthermore, this study shed light to the importance of teachers’\
+    \ well-designed professional development that needs to focus explicitly on how\
+    \ to use tangible robots and develop programming skills to promote computational\
+    \ thinking whilst providing a developmentally appropriate pedagogical design on\
+    \ planning to teach as suggested by Chalmers (2018).\n\n# 6. Limitations and future\
+    \ research directions\n\nThis study was conducted in public schools during their\
+    \ regular school timetable. We were aware that no matter how dedicated teachers\
+    \ might be and successfully teach these contents in their classroom, they had\
+    \ different teaching styles and approaches, although we had tested all scenarios\
+    \ before delivering the professional development in robotics education. Thus,\
+    \ as with any study in a school setting, we acknowledge that this study faced\
+    \ several environmental limitations. Even though each participating teacher taught\
+    \ the same scenario, controlling all factors from different school settings was\
+    \ not feasible; this may have influenced the results. For example, absences for\
+    \ each child were not recorded, which might be one factor that influenced some\
+    \ children to develop segmented programming skills. In addition, while some teachers\
+    \ followed a more constructivist approach in their teaching, as was implied in\
+    \ the scenarios, others more likely followed a teacher-led mode of implementation.\n\
+    \nFurthermore, another element to examine is follow-up cases, even though a small\
+    \ number occur, and discuss their programming profiles towards the evolution of\
+    \ syntactic and semantic knowledge. That would probably provide great insight\
+    \ into debugging or other aspects of CT that might emerge along with differences\
+    \ between novices and experienced programmers. Also, investigating pair debugging\
+    \ (McCauley et al., 2008) would be another possibility to expand on the findings\
+    \ of this study in regards to debugging strategies and their evolution. Further\
+    \ analysis would examine a correlation between gender and the two age groups to\
+    \ highlight CT skills and abilities that emerge even though they were not initially\
+    \ planned. Ideally, a focus group of teachers who participated in this professional\
+    \ development would provide more insight into their confidence and subject knowledge\
+    \ in CT education with young children (Chalmers, 2018; Wang et al., 2021).\n\n\
+    Despite the limitations of the study described in this paper, post-study evaluation\
+    \ data collected from the teachers show the success of robotics in education.\
+    \ All the teachers mentioned they would participate in this project again. Furthermore,\
+    \ most of them purchased robots for their classrooms or borrowed them from us\
+    \ to continue teaching programming after the end of the European project. Nevertheless,\
+    \ it was not only teachers supporting this positive feedback; post-study evaluation\
+    \ data from children drew attention to the success and enthusiasm reported and\
+    \ asked for exploring more modalities on the robot like the pause button. Therefore,\
+    \ this feedback highlights this process’s widespread pedagogically adequate and\
+    \ educational nature.\n\n# 7. Conclusion\n\n> As Bers writes in *Coding as a Playground*:\n\
+    > \n> > ’Once children understand how to debug their systems, they start to develop\
+    \ common troubleshooting strategies that can be used on a variety of computing\
+    \ systems. Learning how to debug is an important skill similar to checking your\
+    \ work in math or editing in literacy. It teaches the powerful lesson that things\
+    \ do not just happen to work on the first try, but many iterations are usually\
+    \ necessary to get it right’ (Bers, 2018a, p. 77).\n\nIn the present work, we\
+    \ approached debugging as a CT practice studied through programming in a tangible\
+    \ robotic context as emerged from"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'the programming activity of young children. Klahr & Craver’s framework was
+    applied to analyse young children’s programming behaviour and identify the development
+    of syntactic & semantic/logical knowledge through common errors and how they debug
+    them. Furthermore, we organised the debugging skills in typologies for each type
+    of error and for the overall debugging process. The use of ‘pseudocode’ clearly
+    worked out as a medium visually representing a program, thus facilitating novice
+    programmers to take a step back and reflect on their programming. The children
+    using the ‘pseudocode’ gradually developed coding skills starting from the basic
+    ‘step-by-step’ strategy and uplifting to the ‘automated’ one. The findings corresponded
+    to the conceptual constructs of high-level thinking skills in debugging. At the
+    same time, the number of case studies provided a more reliable context of analysis
+    and not low-level abilities as implied by Xu and Rajlich (2004).
+
+
+    In this study, we have shown that debugging as a core practice of CT may emerge
+    in preschool children when controlling a tangible robot without using the ‘step-by-step’
+    strategy or particular design aspects to teach debugging, as it was suggested
+    by Nusen and Sipitakiat (2011) and Sipitakiat and Nusen (2012). In addition, it
+    is shown that the ability of novices to recognise and separate their selves from
+    coding and machine is a common problem for novices in programming (Pea, 1986).
+    Further work needs to be done on various tangible robotic tools and the challenges
+    and opportunities these provide (Wing, 2008). Though the findings of this study
+    come from a robotics context, still could provide researchers and educators with
+    explicit information of children’s debugging process to support their teaching
+    and can be applied to other tangible robots or block-based programming environments
+    (Bers, 2018b; Kim et al., 2018; Silvis et al., 2021). Furthermore, it will help
+    us to expand and improve our analysis and conceptual programming model of scenario-based
+    design (Misirli & Komis, 2014; Komis et al. 2017).
+
+
+    Considering debugging is one of the of the CT aspects, the benefits of this line
+    of research are likely to be included in investigating how teachers debug the
+    code programmed by others (e.g., students) and help them debug and provide knowledge
+    towards cultivating a process-orientated teaching design than one based only on
+    outcomes of successful or unsuccessful programming (Chalmers, 2018; Kim et al.,
+    2018; Relkin & Bers, 2021; Silvis et al., 2021). Above all, institutional commitment
+    to teaching coding and CT to young children is strongly recommended, besides integration
+    into early childhood curricula and policies (Relkin & Bers, 2021).
+
+
+    # Formatting of funding sources
+
+
+    The publication fees of this manuscript have been financed by the Research Council
+    of the University of Patras.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # CRediT authorship contribution statement
+
+
+    Anastasia Misirli: Conceptualization, Methodology, Validation, Investigation,
+    Resources, Data curation, Project administration, Formal analysis. Writing – original
+    draft, Writing – review & editing. Vassilis Komis: Conceptualization, Methodology,
+    Formal analysis, Project administration, Funding acquisition, Supervision, Writing
+    – original draft.
+
+
+    # Acknowledgements
+
+
+    The authors would like to thank "The Fibonacci Project - Disseminating Inquiry-Based
+    Science and Mathematics Education in Europe" – FP7. They also acknowledge the
+    willingness of participating partner schools (children and educators) to undertake
+    Robotics and Programming activities under this European project.
+
+
+    # Appendix 1
+
+
+    Assessment of prior/post mental representations & subject-knowledge. Individual
+    interview (pre & post- test).
+
+
+    +   Date:
+
+    +   Name of child / Age
+
+    +   1. What do you think the Bee-Bot is?
+
+    +   2. What do you think the Bee-Bot does?
+
+    +   3. How does the Bee-Bot fly/move...?
+
+    +   4. Are all buttons the same, continue with question: What they have different?
+
+    +   If the answer is "No", continue with question: What they have different?
+
+    +   5. What you think you can do with buttons?
+
+    +   6. Forward arrow button: What do you think will happen if you press it?
+
+    +   7. Backward arrow button: What do you think will happen if you press it?
+
+    +   8. Left arrow button: What do you think will happen if you press it?
+
+    +   9. Right arrow button: What do you think will happen if you press it?
+
+    +   10. Button "GO": What do you think will happen if you press it?
+
+    +   11. Button "CLEAR": What do you think will happen if you press it?
+
+    +   12. What do you think is a robot?'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Assessment instrument of subject-knowledge evaluation activity for Scenario
+    1.
+
+
+    Name:
+
+    Age:
+
+    1. You can circle or underline the child''s toy choice on the grid
+
+    2. In the next column record the verbalisation of algorithm starting with the
+    number 1 for the first command and continuing onwards..
+
+    3. In the next column, record the program''s syntax starting with the number 1
+    for the first command and continuing onwards.
+
+    Notes:
+
+
+    +   - FORWARD
+
+    +   - LEFT
+
+    +   - RIGHT
+
+    +   - BACKWARDS
+
+    +   - CLEAR
+
+    +   - GO
+
+
+    +   - CLEAR
+
+    +   - ↑
+
+    +   - ↓
+
+    +   - ←
+
+    +   - →
+
+    +   - GO
+
+
+    | Assessment instrument of subject-knowledge evaluation activity for Scenario
+    1 |
+
+    | Name: |
+
+    | Age: |
+
+    | 1. You can circle or underline the child''s toy choice on the grid |
+
+    | 2. In the next column record the verbalisation of algorithm starting with the
+    number 1 for the first command and continuing onwards.. | • FORWARD • LEFT • RIGHT
+    • BACKWARDS • CLEAR • GO |
+
+    | 3. In the next column, record the program''s syntax starting with the number
+    1 for the first command and continuing onwards. | • CLEAR • ↑ • ↓ • ← • → • GO
+    |
+
+    | Notes: |
+
+
+    ![](img/9a18e486b463cb027ef41704bcf91c4e_14_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# Appendix 3
+
+
+    # Description of subject-knowledge evaluation activity as included in Scenario
+    2: Measurement.
+
+    Individual interview (post-test).
+
+
+    Scenario 2: Measurement
+
+    Playful learning context: The class with their friend the Bee-Bot visit the local
+    Fun-Fair
+
+
+    For the evaluation activity, the narration was a new context to reinforce the
+    generalisation of knowledge. Here, the class visits the local museum of zoology.
+    Therefore numbers 1, 2 & 3 represent the museum''s animal images.
+
+    The educator asks each child the following questions:
+
+
+    +   i) Which is the shortest path to the Bee-Bot? (the answer is valid only if
+    counting justification is given)
+
+    +   ii) Which animal do you find on this path?
+
+    +   iii) How can the Bee-Bot get to the animal using the commands cards?
+
+
+    Note: the BB should arrive at each animal and look at it.
+
+
+    ![](img/9a18e486b463cb027ef41704bcf91c4e_15_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# Assessment instrument of subject-knowledge evaluation activity for Scenario
+    2.
+
+
+    | Name: |  | Animal 1 | Animal 2 | Animal 3 | ↑ | ↓ | ↖ | ↗ | ‘GO’ | ‘CLEAR’ |
+
+    | Age: |  |  |  |  |  |  |  |  |  | |
+
+    | Which is the shortest path to the Bee-Bot? (the answer is valid only if counting
+    justification is given) | Exemplar answer: ‘the shortest path is the one which
+    has 4 squares, cause the other paths have more’ |  |  |  |  |  |  |  |  | |
+
+    | Which animal do you find on this path? | Note ‘X’ to the animal | X |  |  |  |  |  |  |  |
+    |
+
+    | How can the Bee-Bot get to the animal using the commands cards? | Record each
+    programme starting with the number 1 for the first command and continuing onwards.
+
+    Here is an example of how it should look like when a programme is filled in. |  |  |  |
+    2, 3, 5, 6 |  |  | 4 | 7 | 1 |'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# Appendix 4
+
+
+    # Description of subject-knowledge evaluation activity as included in Scenario
+    3: Memory/iteration.
+
+    Individual interview (post-test).
+
+
+    Scenario 3: Memory/iteration
+
+
+    Playful learning context: The class asks the Bee-Bot to accomplish different tasks
+
+
+    For the evaluation activity, the narration was a new context to reinforce the
+    generalisation of knowledge (knowledge transfer). The class asks the BB to get
+    to the bookcase or any other context they may encounter. The teaching contract
+    is to determine how this can happen using the iteration structure solely.
+
+
+    The educator asks each child the following question:
+
+
+    +   i) How can the Bee-Bot reach the bookcase using the repetition command?
+
+
+    Note: the BB should arrive at the top and look forward to the bookcase or any
+    other object/image. More importantly, each child needs to answer what they should
+    do to make the BB forget their program before they hand it in to the next child.
+
+
+    ![](img/9a18e486b463cb027ef41704bcf91c4e_17_0.png)
+
+
+    # Assessment instrument of subject-knowledge evaluation activity for Scenario
+    3.
+
+
+    Name:
+
+
+    Age:
+
+
+    1. In the next column record the verbalisation of algorithm starting with the
+    number 1 for the first command and continuing onwards.
+
+
+    +   FORWARD
+
+    +   LEFT
+
+    +   RIGHT
+
+    +   BACKWARDS
+
+    +   CLEAR
+
+    +   GO
+
+
+    2. In the next column, record the program''s syntax starting with the number 1
+    for the first command and continuing onwards.
+
+
+    +   CLEAR
+
+    +   ↑
+
+    +   ↓
+
+    +   ←
+
+    +   →
+
+    +   GO
+
+
+    Notes:
+
+
+    # Assessment instrument of subject-knowledge evaluation activity for Scenario
+    3
+
+
+    Name:
+
+
+    Age:
+
+
+    1. In the next column record the verbalisation of algorithm starting with the
+    number 1 for the first command and continuing onwards.
+
+
+    +   FORWARD
+
+    +   LEFT
+
+    +   RIGHT
+
+    +   BACKWARDS
+
+    +   CLEAR
+
+    +   GO
+
+
+    2 In the next column, record the program''s syntax starting with the number 1
+    for the first command and continuing onwards.
+
+
+    +   CLEAR
+
+    +   ↑
+
+    +   ↓
+
+    +   ←
+
+    +   →
+
+    +   GO
+
+
+    Notes:
+
+
+    A real object or image is placed here
+
+
+    ![](img/9a18e486b463cb027ef41704bcf91c4e_17_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# References
+
+
+    Ahn, J, Sung, W., & Black, B. J. (2021). Unplugged debugging activities for developing
+    young learners’ debugging skills. Journal of Research in Childhood Education.
+    10.1080/02568543.2021.1981503.
+
+    Albrecht, E., & Grabowski, J. (2020). Sometimes It’s Just Sloppiness – Studying
+    Students’ Programming Errors and Misconceptions. In Proceedings of the 51st ACM
+    Technical Symposium on Computer Science Education (Portland, USA) SIGCSE ’20 (pp.
+    340–345). New York, NY: Association for Computing Machinery.
+
+    Allan, V., Barr, V., Brylow, D., & Hambruch, S. (2010). Computational thinking
+    in high school courses. In Proceedings of the 41st ACM technical symposium on
+    Computer science education, SIGCSE 2010, Milwaukee, Wisconsin, USA March 10-13.
+    10.1145/1734263.1734395.
+
+    Anderson, T., & Shattuck, J. (2012). Design-based research: A decade of progress
+    in education research? Educational Researcher, 41(1), 16–25. 10.3102/0013189X11428813.
+
+    Angeli, C., & Valanides, N. (2020). Developing young children’s computational
+    thinking with educational robotics: An interaction effect between gender and scaffolding
+    strategy. Computers in Human Behavior, 105. 10.1016/j.chb.2019.03.018.
+
+    Angeli, C., Voogt, J., Fluck, A., Webb, M., Cox, M., Malyn-Smith, J., & Zagami,
+    J. (2016). A K6 computational thinking curriculum framework: Implications for
+    teacher knowledge. Journal of Educational Technology and Society, 19(3), 47–57.
+
+    Arfé, B., Vardanega, T., Montuori, C., & Lavanga, M. (2019). Coding in primary
+    grades boosts children’s executive functions. Frontiers in Psychology, 10, 2713.
+    10.3389/fpsyg.2019.02713.
+
+    Barr, V., & Stephenson, C. (2011). Bringing computational thinking to K-12: What
+    is involved and what is the role of the computer science education community?
+    ACM Inroads, 2(1), 48–54. 10.1145/1929887.1929905.
+
+    Bers, M. U. (2018a). Coding and computational thinking in early childhood: The
+    impact of ScratchJr in Europe. European Journal of STEM Education, 3(3), 08. 10.20897/ejsteme.3868.
+
+    Bers, M. U. (2018b). Coding as a playground: Programming and computational thinking
+    in the early childhood classroom. New York, NY: Routledge Press.
+
+    Bers, M. U., Flannery, L. P., Kazakoff, E. R., & Sullivan, A. (2014). Computational
+    thinking and tinkering: Exploration of an early childhood robotics curriculum.
+    Computers & Education, 72, 145–157.
+
+    Bers, M. U., Strawhacker, A., & Sullivan, A. (2022). The state of the field of
+    computational thinking in early childhood education. OECD education working papers,
+    no. 274. Paris: OECD Publishing. 10.1787/3354387a-en.
+
+    Brennan, K., & Resnick, M. (2012). Using artifact-based interviews to study the
+    development of computational thinking in interactive media design. Paper presented
+    at annual American Educational Research Association meeting, Vancouver, BC, Canada.
+
+    Brusilovsky, P. (1993). Program visualization as a debugging tool for novices.
+    In S. Ashlund, K. Mullet, A. Henderson, E. Hollnagel, & T. White (Eds.), Proceedings
+    of INTERACT ’93 and CHI ’93 conference Companion on human factors in computing
+    systems (pp. 29–30). New York: ACM Press.
+
+    Carver, S. M., & Kahr, D. (1986). Assessing children’s LOGO debugging skills with
+    a formal model. The Journal of Educational Computing Research, 2, 487–525.
+
+    Chalmers, C. (2018). Robotics and computational thinking in primary school. International
+    Journal of Child Computer Interaction, 17, 93–100. 10.1016/j.ijcci.2018.06.005.
+
+    Chou, P. (2019). Using ScratchJr to Foster Young children’s computational thinking
+    competence: A case study in a third-grade computer class. Journal of Educational
+    Computing Research, 0(0), 1–26. 10.1177/0735633119872908.
+
+    Creswell, W. J. (2009). Research design: Qualitative, quantitative, and mixed
+    methods approaches. Thousand Oaks, CA: SAGE Publications.
+
+    Cuneo, D. O. (1986). Young Children and Turtle Graphics Programming: Generating
+    and Debugging Simple Turtle Programs. Annual meeting of the american educational
+    research association.
+
+    De Paula, B. H., Burn, A., Noss, R., & Valente, J. A. (2018). Playing Beowulf:
+    Bridging computational thinking, arts and literature through game-making. International
+    Journal of Child-Computer Interaction, 16, 39–46.
+
+    Emerson, A., Smith, A., Rodriguez, F. J., Wiebe, E. N., Mott, B. W., Boyer, K.
+    E., & Lester, J. C. (2020). Cluster-Based Analysis of Novice Coding Misconceptions
+    in Block-Based Programming. In Proceedings of the 51st ACM Technical Symposium
+    on Computer Science Education (Portland, USA) (SIGCSE ’20) (pp. 825–831). New
+    York, NY: Association for Computing Machinery. 10.1145/3328778.3366924.
+
+    Fay, A. L., & Mayer, R. E. (1988). Learning LOGO: A cognitive analysis. In R.
+    E. Mayer (Ed.), Teaching and learning computer programming: Multiple research
+    perspectives. Lawrence Erlbaum Associates Inc.
+
+    Fessakis, G., Gouli, E., & Mavroudi, E. (2013). Problem solving by 5–6 years old
+    kindergarten children in a computer programming environment: A case study. Computers
+    & Education, 63, 87–97. 10.1016/j.compedu.2012.11.016.
+
+    Fields, D. A., Searle, K. A., & Kafai, Y. B. (2016). Deconstruction kits for learning:
+    Students’ collaborative debugging of electronic textile designs. In P. Blikstein,
+    M. Berland, & A. Fields (Eds.), Proceedings of the 6th Annual Conference on Creativity
+    and Fabrication in Education (pp. 82–85). New York, NY: ACM. 10.1145/3003997.3003410.
+
+    Fincher, A. S., & Robins, V. A. (2019). The cambridge handbook of computing education
+    research. Cambridge University Press.
+
+    Flannery, L. P., & Bers, M. U. (2013). Let’s Dance the “Robot Hokey-Pokey!”: Children’s
+    programming approaches and achievement throughout early cognitive development.
+    Journal of Research on Technology in Education, 46(1), 81–101.
+
+    Gomes, T. C. S., Falcão, T. P., & Tedesco, P. C. D. A. R. (2018). Exploring an
+    approach based on digital games for teaching programming concepts to young children.
+    In Proceedings of the 17th Brazilian Symposium on Human Factors in Computing Systems.
+    Porto Alegre: SBC. 10.5753/ihc.2018.4227.
+
+    Gould, J. D., & Drongowski, P. (1974). An exploratory study of computer program
+    debugging. Human Factors, 16(3), 258–277. 10.1177/001872087401600308.
+
+    Grover, S., & Pea, R. (2013). Computational Thinking in K-12: A Review of the
+    State of the Field. Educational Researcher, 42(1), 38–43. 10.3102/0013189X12463051.
+
+    Guzdial, M. (2008). Paving the way for computational thinking. Communications
+    of the ACM, 51(8), 25–27. 10.1145/1378704.1378713.
+
+    Heikkilä, M., & Mannila, L. (2018). Debugging in programming as a multimodal practice
+    in early childhood education settings. Multimodal Technologies and Interaction,
+    2(42).
+
+    Hoc, J. M., Green, T. R. G., Samurcay, R., & Gilmore, D. J. (1990). Psychology
+    of programming. Academic Press ISBN 0-12-350772-3.
+
+    IEEE (1994). IEEE standard classification for software anomalies. IEEE Computer
+    Society.
+
+    Johnson, F., McQuistin, S., & O’Donnell, J. (2020). Analysis of student misconceptions
+    using python as an introductory programming language. In Proceedings of the 4th
+    Conference on Computing Education Practice 2020, Durham, UK, 09 Jan 2020 (p. 4).
+    ISBN 97814503477294. 10.1145/3372356.3372360.
+
+    Kelly, A. E., Lesh, R. A., & Baek, J. Y. (2008). Handbook of design research methods
+    in education: Innovations in science, technology, engineering, and mathematics
+    learning and teaching. New York: Routledge.
+
+    Kim, C., Yuan, J., Vasconcelos, L., Shin, M., & Hill, R. B. (2018). Debugging
+    during block-based programming. Instructional Science, 46(5), 767–787.
+
+    Klair, D., & Mc Coy Carver, S. (1988). Cognitive objectives in a LOGO debugging
+    curriculum: Instruction, Learning and Transfer. Cognitive Psychology, 20, 362–404.
+
+    Komis, V. (2005). Introduction to Teaching Informatics. Klidarithmos: Athens.
+
+    Komis, V., & Misirli, A. (2015). Apprendre à programmer à l’école maternelle à
+    l’aide de jouets programmables. In G.-L. Baron, É. Bruillard, & B. Drot-Delange
+    (Eds.), Informatique en éducation: Perspectives curriculaires et didactiques (pp.
+    209–226). Clermont-Ferrand: Presses Universitaires Blaise-Pascal.
+
+    Komis, V., Romero, M., & Misirli, A. (2017). A Scenario-Based Approach for Designing
+    Educational Robotics Activities for Co-creative Problem Solving. In Alimisis,
+    & M. Moro (Eds.), Educational Robotics in the Makers Era, Advances in Intelligent
+    Systems and Computing: vol. 560 (pp. 158–169). Springer International Publishing
+    AG 2017D. 10.1007/978-3-319-55553-9_12.
+
+    Kong, S. C. (2019). Components and methods of evaluating computational thinking
+    for fostering creative problem-solvers in senior primary school education. Computational
+    thinking education, 119–141. 10.1007/978-981-13-6528-7_8.
+
+    Kurland, M. D., Pea, R. D., Clement, C., & Mawby, R. (1989). A study of the development
+    of programming ability and thinking skills in High School students. In E. Soloway,
+    & C. J. Spohrer (Eds.), Studying the novice programmer. New Jersey: Lawrence Erlbaum
+    Associates.
+
+    Lee, I, Martin, F, Denner, J., Coulter, B, Allan, W, Erickson, J, Malyn-Smith,
+    J., & Werner, L. (2011). Computational thinking for youth in practice. ACM Inroads,
+    2(1), 32–37. 10.1145/1929887.1929902.
+
+    Lee, J., & Junoh, J. (2019). Implementing unplugged coding activities in early
+    childhood. Early Childhood Education Journal 47(3). 10.1007/s10643-019-00967-z.
+
+    Luxton-Reilly, A., McMillan, E., Stevenson, E., Tempero, E., & Denny, P. (2018).
+    Ladebug: An online tool to help novice programmers improve their debugging skills.
+    In Proceedings of the 23rd Annual ACM Conference on Innovation and Technology
+    in Computer Science Education July 2018 (pp. 159–164). 10.1145/3.
+
+    Lye, S. Y., & Koh, J. H. (2014). Review on teaching and learning of computational
+    thinking through programming: What is next for K-12? Computers in Human Behavior,
+    41, 51–61.
+
+    Maloney, J., Resnick, M., Rusk, N., Silverman, B., & Eastmond, E. (2010). The
+    scratch programming language and environment. ACM Transactions on Computing Education
+    10(4), Article 16. 10.1145/1868358.1868363.
+
+    Mayer, R. E. (1988). Teaching and learning computer programming. multiple research
+    perspectives (1st ed.). Routledge.
+
+    McCauley, R., Fitzgerald, F., Lewandowski, G., Murphy, L., Simon, B., Thomas,
+    L., & Zander, C. (2008). Debugging: A review of the literature from an educational
+    perspective. Computer Science Education, 18(2), 67–92.
+
+    Metzger, R. (2004). Debugging by thinking: A multidisciplinary approach. Burlington,
+    MA: Elsevier Digital Press.
+
+    Misirli, A., & Komis, V. (2014). Robotics and programming concepts in early childhood
+    education: A conceptual framework for designing educational scenarios. In C. Karagiannidis,
+    P. Politis, & I. Karasavvidis (Eds.), Research on e-Learning and ict in education.
+    Springer. 10.1007/978-1-4614-6501-0_8.
+
+    Misirli, A., & Komis, V. (2020). Emerged debugging abilities in early childhood
+    education. In Proceedings of Constructionism 2020 (pp. 92–95). http://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf.
+
+    Misirli, A., Komis, V., & Ravanis, K. (2019). The construction of spatial awareness
+    in early childhood: The effect of an educational scenario-based programming environment.
+    Review of Science, Mathematics and ICT Education, 13, 111–124.
+
+    Mukaseva, M., & Omirzakova, A. (2021). Computational thinking assessment at primary
+    school in the context of learning programming. World Journal on Educational Technology:
+    Current Issues, 13(3), 336–353. 10.18844/wjet.v13i3.5918.
+
+    Murphy, L., Lewandowski, G., McCauley, R., Simon, B., Thomas, L., & Zander, C.
+    (2008). Debugging: The good, the bad, and the quirky-a qualitative analysis of
+    novices’ strategies. ACM SIGCSE Bulletin, 40(1), 163–167.
+
+    Newhouse, C.P., Cooper, M., & Cordrey, Z. (2017). Programmable toys and free play
+    in early childhood classrooms. Australian Educational Computing, 32.
+
+    Nusen, N., Sipitakiat, A., et al. (2011). Proceedings of the 19th International
+    Conference on Computers in Education. Chiang Mai. In T. Hirashima (Ed.). Thailand:
+    Asia-Pacific Society for Computers in Education.
+
+    Papert, S. (1993). Mindstorms: Children, computers and powerful ideas (2nd ed.).
+    New York: Basic Books.
+
+    Pea, R. D. (1986). Language-Independent Conceptual Bugs in Program Understanding.
+    Journal of Educational Computing Research, 2(1).'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Pugnali, A., Sullivan, A., & Bers, M. U. (2017). The Impact of User Interface
+    on Young Children''s Computational Thinking. Journal of Information Technology
+    Education: Innovations in Practice, 16, 171–193.
+
+
+    Qian, Y., & Lehman, J. (2017). Students’ misconceptions and other difficulties
+    in introductory programming: A literature review. ACM Transactions on Computing
+    Education 18(1), Article 1. 10.1145/3077618.
+
+
+    Relkin, E., de Ruiter, L.E., & Bers, M.U. (2021). Learning to code and the acquisition
+    of computational thinking by young children. Computers & Education, 169, 104222.
+    ISSN 0360-1315. 10.1016/j.compedu.2021.104222.
+
+
+    Relkin, E., & Bers, M. U. (2021). Factors influencing learning of computational
+    thinking skills in young children. Virtual Annual Meeting of the American Educational
+    Research Association (AERA) https://cph-usw2.wpmucdn.com/sites.bc.edu/dist/c/183/files/2021/04/aera21_proceeding_1687044.pdf
+    (accessed 28 June 2021).
+
+
+    Resnick, M., Maloney, J., Monroy-Hernandez, A., Rusk, N., Eastmond, E., Brennan,
+    K., Millner, A., Rosenbaum, E., Silver, J., Silverman, B., & Kafai, Y. (2009).
+    Scratch: Programming for all. Communications of the ACM, 52(11), 60–67.
+
+
+    Rich, K. M., Strickland, C., Binkowski, T. A., & Franklin, D. (2019). A K-8 debugging
+    learning trajectory derived from research literature. In Proceedings of the 50th
+    ACM Technical Symposium on Computer Science Education (pp. 745–775). New York,
+    NY, USA.: Association for Computing Machinery. 10.1145/3287324.3283739.
+
+
+    Shumway, J. F., Welch, L. E., Kozlowski, J. S., Clarke-Midura, J., & Lee, V. R.
+    (2021). Kindergarten students’ mathematics knowledge at work: The mathematics
+    for programming robot toys. Mathematical Thinking and Learning, 10.1080/10986065.2021.1982666.
+
+
+    Silvis, D., Clarke-Midura, J., Shumway, J., & Lee, V. R. (2021). Objects to debug
+    with: How young children resolve errors with tangible coding toys. In E. de Vries,
+    Y. D. Ho, & J. Ahn (Eds.), Proceedings of the 15th International Conference of
+    the Learning Sciences - ICLS 2021 (pp. 147–154). Bochum, Germany: International
+    Society of the Learning Sciences.
+
+
+    Siptakiat, A., & Nusen, N. (2012). Robo-Blocks: Designing Debugging Abilities
+    in a Tangible Programming System for Early Primary School Children. In Proceedings
+    of the 11th International Conference on Interaction, Design and Children.
+
+
+    Solomon, C., & ). Computer environments for children: A reflection on theories
+    of learning and education. Cambridge, MA. (1986): MIT Press.
+
+
+    Solomon, C., Harvey, B., Kahn, K., Lieberman, H., Miller, M., Minsky, M., Papert,
+    A., & Silverman, B. (2020). History of Logo. Proceedings of the ACM on Programming
+    Languages, 4(HOPL).
+
+
+    Spinellis, D. (2017). Effective debugging: 66 specific ways to debug software
+    and systems. Addison Wesley-Pearson Education.
+
+
+    Strawhacker, A., Lee, M., & Bers, M. U. (2018). Teaching tools, teachers’ rules:
+    Exploring the impact of teaching styles on young children’s programming knowledge
+    in ScratchJr. International Journal of Technology and Design Education, 28, 347–376.
+
+
+    Sullivan, A., & Bers, M. U. (2013). Gender differences in kindergarteners’ robotics
+    and programming achievement. International Journal of Technology and Design Education,
+    23(3), 691–702.
+
+
+    Swidan, A., Hermans, F., & Smit, M. (2018). Programming Misconceptions for School
+    Students. In Proceedings of the 2018 ACM Conference on International Computing
+    Education Research, August 2018 (pp. 151–159). 10.1145/3230977.3230995.
+
+
+    The Design-Based Research Collective. (2003). Design-based research: An emerging
+    paradigm for educational inquiry. Educational Researcher, 32(1), 5–8.
+
+
+    Vygotsky, L. S. (1978). Mind in society. Cambridge, MA: Harvard University Press.
+
+
+    Wang, C., Choi, Y., Benson, K., Eggeleston, C., & Weber, D. (2021). Teacher’s
+    role in fostering preschoolers’ computational thinking: An exploratory case study.
+    Early Education and Development, 32(1), 26–48.
+
+
+    Wang, F., & Hannafin, M. J. (2004). Using Design-based Research in Design and
+    Research of Technology- Enhanced Learning Environments. Educational Technology
+    Research and Development, 53(4), 1042–1629.
+
+
+    Weintrop, D., & Wilensky, U. (2018). How block-based, text-based, and hybrid block/text
+    modalities shape novice programming practices. International Journal of Child-Computer
+    Interaction, 17, 83–92. 10.1016/j.ijcci.2018.04.00.
+
+
+    Whalley, J., Settle, A., & Luxton-Reilly, A. (2021). Analysis of a Process for
+    Introductory Debugging. In Australasian Computing Education Conference (ACE ’21)
+    (pp. 11–20). New York, NY: Association for Computing Machinery. 10.1145/3441636.3442300.
+
+
+    Wilson, A., & Moffat, D.C. (2010). Evaluating scratch to introduce younger schoolchildren
+    to programming. PPIG.
+
+
+    Wing, J. (2008). Computational thinking and thinking about computing. Philosophical
+    Transactions of The Royal Society, 366(1881), 3717–3725. 10.1098/rsta.2008.0118.
+
+
+    Wing, J. (2010). Computational Thinking: What and Why?. https://www.cs.cmu.edu/~cp/Think/resources/TheLinkWing.pdf
+
+
+    Wing, J. M. (2006). Computational thinking. Communications of the ACM, 49(3),
+    33–35. 10.1145/1118178.1118215.
+
+
+    Xu, S., & Rajlich, V. (2004). Cognitive process during program debugging. In Proceedings
+    of the 3rd IEEE International Conference on Cognitive Informatics (pp. 176–182).
+
+
+    Yadav, A., Hong, H., & Stephenson, C. (2016). Computational Thinking for All:
+    Pedagogical Approaches to Embedding 21st Century Problem Solving in K-12 Classrooms.
+    TechTrends, 60, 565-568.
+
+
+    Yin, K. R. (2009). Case study research. Design and methods.: SAGE.'
+  merge: -1
+  img_proc: true

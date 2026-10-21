@@ -1,0 +1,61 @@
+# References
+
+Ahn, J, Sung, W., & Black, B. J. (2021). Unplugged debugging activities for developing young learners’ debugging skills. Journal of Research in Childhood Education. 10.1080/02568543.2021.1981503.
+Albrecht, E., & Grabowski, J. (2020). Sometimes It’s Just Sloppiness – Studying Students’ Programming Errors and Misconceptions. In Proceedings of the 51st ACM Technical Symposium on Computer Science Education (Portland, USA) SIGCSE ’20 (pp. 340–345). New York, NY: Association for Computing Machinery.
+Allan, V., Barr, V., Brylow, D., & Hambruch, S. (2010). Computational thinking in high school courses. In Proceedings of the 41st ACM technical symposium on Computer science education, SIGCSE 2010, Milwaukee, Wisconsin, USA March 10-13. 10.1145/1734263.1734395.
+Anderson, T., & Shattuck, J. (2012). Design-based research: A decade of progress in education research? Educational Researcher, 41(1), 16–25. 10.3102/0013189X11428813.
+Angeli, C., & Valanides, N. (2020). Developing young children’s computational thinking with educational robotics: An interaction effect between gender and scaffolding strategy. Computers in Human Behavior, 105. 10.1016/j.chb.2019.03.018.
+Angeli, C., Voogt, J., Fluck, A., Webb, M., Cox, M., Malyn-Smith, J., & Zagami, J. (2016). A K6 computational thinking curriculum framework: Implications for teacher knowledge. Journal of Educational Technology and Society, 19(3), 47–57.
+Arfé, B., Vardanega, T., Montuori, C., & Lavanga, M. (2019). Coding in primary grades boosts children’s executive functions. Frontiers in Psychology, 10, 2713. 10.3389/fpsyg.2019.02713.
+Barr, V., & Stephenson, C. (2011). Bringing computational thinking to K-12: What is involved and what is the role of the computer science education community? ACM Inroads, 2(1), 48–54. 10.1145/1929887.1929905.
+Bers, M. U. (2018a). Coding and computational thinking in early childhood: The impact of ScratchJr in Europe. European Journal of STEM Education, 3(3), 08. 10.20897/ejsteme.3868.
+Bers, M. U. (2018b). Coding as a playground: Programming and computational thinking in the early childhood classroom. New York, NY: Routledge Press.
+Bers, M. U., Flannery, L. P., Kazakoff, E. R., & Sullivan, A. (2014). Computational thinking and tinkering: Exploration of an early childhood robotics curriculum. Computers & Education, 72, 145–157.
+Bers, M. U., Strawhacker, A., & Sullivan, A. (2022). The state of the field of computational thinking in early childhood education. OECD education working papers, no. 274. Paris: OECD Publishing. 10.1787/3354387a-en.
+Brennan, K., & Resnick, M. (2012). Using artifact-based interviews to study the development of computational thinking in interactive media design. Paper presented at annual American Educational Research Association meeting, Vancouver, BC, Canada.
+Brusilovsky, P. (1993). Program visualization as a debugging tool for novices. In S. Ashlund, K. Mullet, A. Henderson, E. Hollnagel, & T. White (Eds.), Proceedings of INTERACT ’93 and CHI ’93 conference Companion on human factors in computing systems (pp. 29–30). New York: ACM Press.
+Carver, S. M., & Kahr, D. (1986). Assessing children’s LOGO debugging skills with a formal model. The Journal of Educational Computing Research, 2, 487–525.
+Chalmers, C. (2018). Robotics and computational thinking in primary school. International Journal of Child Computer Interaction, 17, 93–100. 10.1016/j.ijcci.2018.06.005.
+Chou, P. (2019). Using ScratchJr to Foster Young children’s computational thinking competence: A case study in a third-grade computer class. Journal of Educational Computing Research, 0(0), 1–26. 10.1177/0735633119872908.
+Creswell, W. J. (2009). Research design: Qualitative, quantitative, and mixed methods approaches. Thousand Oaks, CA: SAGE Publications.
+Cuneo, D. O. (1986). Young Children and Turtle Graphics Programming: Generating and Debugging Simple Turtle Programs. Annual meeting of the american educational research association.
+De Paula, B. H., Burn, A., Noss, R., & Valente, J. A. (2018). Playing Beowulf: Bridging computational thinking, arts and literature through game-making. International Journal of Child-Computer Interaction, 16, 39–46.
+Emerson, A., Smith, A., Rodriguez, F. J., Wiebe, E. N., Mott, B. W., Boyer, K. E., & Lester, J. C. (2020). Cluster-Based Analysis of Novice Coding Misconceptions in Block-Based Programming. In Proceedings of the 51st ACM Technical Symposium on Computer Science Education (Portland, USA) (SIGCSE ’20) (pp. 825–831). New York, NY: Association for Computing Machinery. 10.1145/3328778.3366924.
+Fay, A. L., & Mayer, R. E. (1988). Learning LOGO: A cognitive analysis. In R. E. Mayer (Ed.), Teaching and learning computer programming: Multiple research perspectives. Lawrence Erlbaum Associates Inc.
+Fessakis, G., Gouli, E., & Mavroudi, E. (2013). Problem solving by 5–6 years old kindergarten children in a computer programming environment: A case study. Computers & Education, 63, 87–97. 10.1016/j.compedu.2012.11.016.
+Fields, D. A., Searle, K. A., & Kafai, Y. B. (2016). Deconstruction kits for learning: Students’ collaborative debugging of electronic textile designs. In P. Blikstein, M. Berland, & A. Fields (Eds.), Proceedings of the 6th Annual Conference on Creativity and Fabrication in Education (pp. 82–85). New York, NY: ACM. 10.1145/3003997.3003410.
+Fincher, A. S., & Robins, V. A. (2019). The cambridge handbook of computing education research. Cambridge University Press.
+Flannery, L. P., & Bers, M. U. (2013). Let’s Dance the “Robot Hokey-Pokey!”: Children’s programming approaches and achievement throughout early cognitive development. Journal of Research on Technology in Education, 46(1), 81–101.
+Gomes, T. C. S., Falcão, T. P., & Tedesco, P. C. D. A. R. (2018). Exploring an approach based on digital games for teaching programming concepts to young children. In Proceedings of the 17th Brazilian Symposium on Human Factors in Computing Systems. Porto Alegre: SBC. 10.5753/ihc.2018.4227.
+Gould, J. D., & Drongowski, P. (1974). An exploratory study of computer program debugging. Human Factors, 16(3), 258–277. 10.1177/001872087401600308.
+Grover, S., & Pea, R. (2013). Computational Thinking in K-12: A Review of the State of the Field. Educational Researcher, 42(1), 38–43. 10.3102/0013189X12463051.
+Guzdial, M. (2008). Paving the way for computational thinking. Communications of the ACM, 51(8), 25–27. 10.1145/1378704.1378713.
+Heikkilä, M., & Mannila, L. (2018). Debugging in programming as a multimodal practice in early childhood education settings. Multimodal Technologies and Interaction, 2(42).
+Hoc, J. M., Green, T. R. G., Samurcay, R., & Gilmore, D. J. (1990). Psychology of programming. Academic Press ISBN 0-12-350772-3.
+IEEE (1994). IEEE standard classification for software anomalies. IEEE Computer Society.
+Johnson, F., McQuistin, S., & O’Donnell, J. (2020). Analysis of student misconceptions using python as an introductory programming language. In Proceedings of the 4th Conference on Computing Education Practice 2020, Durham, UK, 09 Jan 2020 (p. 4). ISBN 97814503477294. 10.1145/3372356.3372360.
+Kelly, A. E., Lesh, R. A., & Baek, J. Y. (2008). Handbook of design research methods in education: Innovations in science, technology, engineering, and mathematics learning and teaching. New York: Routledge.
+Kim, C., Yuan, J., Vasconcelos, L., Shin, M., & Hill, R. B. (2018). Debugging during block-based programming. Instructional Science, 46(5), 767–787.
+Klair, D., & Mc Coy Carver, S. (1988). Cognitive objectives in a LOGO debugging curriculum: Instruction, Learning and Transfer. Cognitive Psychology, 20, 362–404.
+Komis, V. (2005). Introduction to Teaching Informatics. Klidarithmos: Athens.
+Komis, V., & Misirli, A. (2015). Apprendre à programmer à l’école maternelle à l’aide de jouets programmables. In G.-L. Baron, É. Bruillard, & B. Drot-Delange (Eds.), Informatique en éducation: Perspectives curriculaires et didactiques (pp. 209–226). Clermont-Ferrand: Presses Universitaires Blaise-Pascal.
+Komis, V., Romero, M., & Misirli, A. (2017). A Scenario-Based Approach for Designing Educational Robotics Activities for Co-creative Problem Solving. In Alimisis, & M. Moro (Eds.), Educational Robotics in the Makers Era, Advances in Intelligent Systems and Computing: vol. 560 (pp. 158–169). Springer International Publishing AG 2017D. 10.1007/978-3-319-55553-9_12.
+Kong, S. C. (2019). Components and methods of evaluating computational thinking for fostering creative problem-solvers in senior primary school education. Computational thinking education, 119–141. 10.1007/978-981-13-6528-7_8.
+Kurland, M. D., Pea, R. D., Clement, C., & Mawby, R. (1989). A study of the development of programming ability and thinking skills in High School students. In E. Soloway, & C. J. Spohrer (Eds.), Studying the novice programmer. New Jersey: Lawrence Erlbaum Associates.
+Lee, I, Martin, F, Denner, J., Coulter, B, Allan, W, Erickson, J, Malyn-Smith, J., & Werner, L. (2011). Computational thinking for youth in practice. ACM Inroads, 2(1), 32–37. 10.1145/1929887.1929902.
+Lee, J., & Junoh, J. (2019). Implementing unplugged coding activities in early childhood. Early Childhood Education Journal 47(3). 10.1007/s10643-019-00967-z.
+Luxton-Reilly, A., McMillan, E., Stevenson, E., Tempero, E., & Denny, P. (2018). Ladebug: An online tool to help novice programmers improve their debugging skills. In Proceedings of the 23rd Annual ACM Conference on Innovation and Technology in Computer Science Education July 2018 (pp. 159–164). 10.1145/3.
+Lye, S. Y., & Koh, J. H. (2014). Review on teaching and learning of computational thinking through programming: What is next for K-12? Computers in Human Behavior, 41, 51–61.
+Maloney, J., Resnick, M., Rusk, N., Silverman, B., & Eastmond, E. (2010). The scratch programming language and environment. ACM Transactions on Computing Education 10(4), Article 16. 10.1145/1868358.1868363.
+Mayer, R. E. (1988). Teaching and learning computer programming. multiple research perspectives (1st ed.). Routledge.
+McCauley, R., Fitzgerald, F., Lewandowski, G., Murphy, L., Simon, B., Thomas, L., & Zander, C. (2008). Debugging: A review of the literature from an educational perspective. Computer Science Education, 18(2), 67–92.
+Metzger, R. (2004). Debugging by thinking: A multidisciplinary approach. Burlington, MA: Elsevier Digital Press.
+Misirli, A., & Komis, V. (2014). Robotics and programming concepts in early childhood education: A conceptual framework for designing educational scenarios. In C. Karagiannidis, P. Politis, & I. Karasavvidis (Eds.), Research on e-Learning and ict in education. Springer. 10.1007/978-1-4614-6501-0_8.
+Misirli, A., & Komis, V. (2020). Emerged debugging abilities in early childhood education. In Proceedings of Constructionism 2020 (pp. 92–95). http://www.constructionismconf.org/wp-content/uploads/2020/05/C2020-Proceedings.pdf.
+Misirli, A., Komis, V., & Ravanis, K. (2019). The construction of spatial awareness in early childhood: The effect of an educational scenario-based programming environment. Review of Science, Mathematics and ICT Education, 13, 111–124.
+Mukaseva, M., & Omirzakova, A. (2021). Computational thinking assessment at primary school in the context of learning programming. World Journal on Educational Technology: Current Issues, 13(3), 336–353. 10.18844/wjet.v13i3.5918.
+Murphy, L., Lewandowski, G., McCauley, R., Simon, B., Thomas, L., & Zander, C. (2008). Debugging: The good, the bad, and the quirky-a qualitative analysis of novices’ strategies. ACM SIGCSE Bulletin, 40(1), 163–167.
+Newhouse, C.P., Cooper, M., & Cordrey, Z. (2017). Programmable toys and free play in early childhood classrooms. Australian Educational Computing, 32.
+Nusen, N., Sipitakiat, A., et al. (2011). Proceedings of the 19th International Conference on Computers in Education. Chiang Mai. In T. Hirashima (Ed.). Thailand: Asia-Pacific Society for Computers in Education.
+Papert, S. (1993). Mindstorms: Children, computers and powerful ideas (2nd ed.). New York: Basic Books.
+Pea, R. D. (1986). Language-Independent Conceptual Bugs in Program Understanding. Journal of Educational Computing Research, 2(1).
