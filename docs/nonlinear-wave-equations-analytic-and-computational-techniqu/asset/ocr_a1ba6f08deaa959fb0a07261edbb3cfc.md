@@ -1,0 +1,19 @@
+The double-precision calculation is particularly fast due to the use of Intel's math kernel library. The higher-precision examples were parallelized using openMP, but do not employ block-matrix algorithms to re-use data that has been pulled from main memory to cache. Our general experience (excluding level 3 BLAS routines such as matrix-matrix multiplication) is that switching from double to quadruple to arbitrary precision slows down the calculation by a factor of 10 each.
+
+In Figure 2, we plot the non-zero matrix entries of $A_n(f)^\wedge$ and $G_n(f)^\wedge$ for Example 1. Because $f(x)=\cos(x-\pi/6)$, the Fourier modes $(f^n)_k^\wedge$ are zero for $|k|>n$ or $k-n$ odd. As a result, $A_n(f)^\wedge$ and $G_n(f)^\wedge$ have only finitely many nonzero terms in this example:
+
+$A_n(f)^\wedge_{kj}=0\quad\text{if}\quad kj\ge0,\ |k|>n-|j|,\ \text{or}\ k-j-n\ \text{is odd},$ $G_n(f)^\wedge_{kj}=0\quad\text{if}\quad kj=0,\ |k|>n-|j|,\ \text{or}\ k-j-n\ \text{is odd}.$
+
+In Figure 2, we explicitly filtered the data to zero out matrix entries of $A_n(f)^\wedge$ and $G_n(f)^\wedge$ with indices in these ranges. If this is not done, roundoff error from the FFT is rapidly amplified by the recurrence (3.14), and requires additional precision to maintain accuracy. This is demonstrated in Figure 3, where we did not filter the data. Increasing the precision from 300 bits to 600 causes the correct values of $G_n(f)^\wedge$ to emerge from the roundoff noise. This is less of an issue for $A_n(f)^\wedge$, which involves errors from taking the FFT of $f^n$, amplified by $|k|^n/n!$, but no recurrence.
+
+In Figures 4 and 5, we plot selected columns of $A_n(f)^\wedge$ and $G_n(f)^\wedge$ for Examples 2 and 3. The main change from the band-limited case of Example 1 is that the matrices are no longer of finite rank, and do not have compactly supported columns. For small $n$, the decay rate of each column (with respect to row index $k$) is still very fast, and the cancellations in obtaining $G_n(f)^\wedge$ from $A_n(f)^\wedge$ is fairly mild. However, as $n$ increases, the cancellations become quite severe. The cancellations can be seen in the figures as the vertical difference from one curve to the other. Recall that $A_n(f)^\wedge$ is the first term in the formula (3.14) for $G_n(f)^\wedge$. The functions (3.17) and (3.18) have Fourier modes of the form
+
+(3.21) $\qquad\text{Examples 2 and 3:}\qquad \hat f_k = e^{-\alpha|k|^{\beta}},$
+
+where $\alpha=\beta=1$ in Example 2 and $\alpha=\beta^{-1}=3/2$ in Example 3. Example 2 is intended to represent a typical real-analytic function, while Example 3 was designed to check if super-exponential growth in the norms of the operators $A_n(f)$ might cause $G_n(f)$ to also grow super-exponentially with $n$. To see why $A_n(f)$ grows super-exponentially, note that iterated convolution of $\hat f$ with itself yields $(f^n)_k^\wedge \ge \hat f_k = e^{-\alpha|k|^{\beta}}$ for functions of the form (3.21). We then consider the $j=1$ column of (3.15) and maximize
+
+$\max_k A_n(f)^\wedge_{k,1} \ge \max_k |k|^n e^{-\alpha|k|^{\beta}}/n!.$
+
+The maximum on the right occurs near $k^*=-(n/\alpha\beta)^{1/\beta}$, so we set $\alpha=\beta^{-1}$ and obtain, via Sterling's formula, $A_n(f)^\wedge_{k^*,1} \ge (\sqrt{2\pi n})^{\beta^{-1}} (n!)^{\beta^{-1}-1}.$
+
+We tried $\beta=1/2$ and $\beta=2/3$. The decay in the former case was too slow for the problem to be computationally tractable beyond $n=50$. So we present the results in Figure 5 with $\beta=2/3$, where we were able to compute terms out to $n=150$. Returning to Figure 1, the right panel shows that the Frobenius norm of $A_n(f)^\wedge$

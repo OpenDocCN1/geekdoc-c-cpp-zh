@@ -1,0 +1,5 @@
+FIGURE 3. Repeat of the calculation of Figure 2 without imposing a zero-pattern filter on the matrices as they are constructed. The n = 20 solution has been replaced by a second instance of the n = 100 solution. (top left and bottom) With 300 bits of precision, G_n(f)^ is almost entirely corrupted with roundoff errors. (top right) With 600 bits of precision, roundoff error is suppressed enough to achieve an accurate result. Errors are largest near k = ±M/2, and propagates inward as n increases.
+
+does indeed grow super-exponentially, but the cancellations are strong enough that G_n(f)^ remains fairly flat. As a result, ||G_n(εf)^||_F decays like ε^n for large n even though ||A_n(εf)^||_F eventually stops decaying for any positive ε.
+
+In addition to visual confirmation that roundoff error has not corrupted G_n(f)^_{jk} for |k| small, as demonstrated in Figures 3–5, we also validate the results by checking

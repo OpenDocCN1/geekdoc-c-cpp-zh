@@ -1,0 +1,45 @@
+
+
+- [43] Boris G. Konopelchenko and Antonio Moro, *非线性介质中的几何光学与可积方程*, J. Phys. A **37** (2004), no. 10, L105–L111, DOI 10.1088/0305-4470/37/10/L105. MR2039848 (2004m:78001)
+- [44] M. Lassas, J. L. Mueller, and S. Siltanen, *二维情形下非线性傅里叶变换的映射性质*, Comm. Partial Differential Equations **32** (2007), no. 4-6, 591–610, DOI 10.1080/03605300500530412. MR2334824 (2009b:81207)
+- [45] M. Lassas, J. L. Mueller, S. Siltanen, and A. Stahel, *Novikov-Veselov 方程与逆散射方法，第一部分：分析*, Phys. D **241** (2012), no. 16, 1322–1335, DOI 10.1016/j.physd.2012.04.010. MR2947348
+- [46] M. Lassas, J. L. Mueller, S. Siltanen, and A. Stahel, *Novikov-Veselov 方程与逆散射方法：II. 计算*, Nonlinearity **25** (2012), no. 6, 1799–1818, DOI 10.1088/0951-7715/25/6/1799. MR2929603
+- [47] Sen Yue Luo and Guang Jiong Ni, *某些 (D + 1) 维非线性方程中一类特殊解之间的关系*, J. Math. Phys. **30** (1989), no. 7, 1614–1620, DOI 10.1063/1.528294. MR1002269 (90c:35182)
+- [48] S. V. Manakov, *逆散射问题方法与二维演化方程* (Russian), Uspekhi Mat. Nauk **31** (1976), no. 5(191), 245–246. MR0467037 (57 #6906)
+- [49] Robert M. Miura, *Korteweg-de Vries 方程及其推广。I. 一个 remarkable 的显式非线性变换*, J. Mathematical Phys. **9** (1968), 1202–1204. MR0252825 (40 #6042a)
+- [50] Jennifer L. Mueller and Samuli Siltanen, *从边界测量直接重建电导率*, SIAM J. Sci. Comput. **24** (2003), no. 4, 1232–1266, DOI 10.1137/S1064827501394568. MR1976215 (2004c:78036)
+- [51] Jennifer L. Mueller and Samuli Siltanen, *具有实际应用的线性与非线性反问题*, Computational Science & Engineering, vol. 10, Society for Industrial and Applied Mathematics (SIAM), Philadelphia, PA, 2012. MR2986262
+- [52] Minoru Murata, *正解与 Schrödinger 半群的大时间行为，Simon's 问题*, J. Funct. Anal. **56** (1984), no. 3, 300–310, DOI 10.1016/0022-1236(84)90079-X. MR743843 (85j:35050)
+- [53] Minoru Murata, *R^n 中 (−Δ + V)u = 0 的正解结构*, Duke Math. J. **53** (1986), no. 4, 869–943, DOI 10.1215/S0012-7094-86-05347-0. MR874676 (88f:35039)
+- [54] Music, M. 二维亚临界势的非线性傅里叶变换. arXiv:1312.0567[Math.AP], submitted to *Inverse Problems and Imaging*, Special Issue on Inverse Problems and Complex Geometrical Optics Solutions.
+- [55] Music, M., Perry, P. 具有亚临界初值的 Novikov-Veselov 方程. *In preparation*.
+- [56] M. Music, P. Perry, and S. Siltanen, *径向势的例外圆*, Inverse Problems **29** (2013), no. 4, 045004, 25, DOI 10.1088/0266-5611/29/4/045004. MR3042080
+- [57] Adrian I. Nachman, *二维反边界值问题的整体唯一性*, Ann. of Math. (2) **143** (1996), no. 1, 71–96, DOI 10.2307/2118653. MR1370758 (96k:35189)
+- [58] Adrian I. Nachman, *二维反边界值问题的整体唯一性*, Ann. of Math. (2) **143** (1996), no. 1, 71–96, DOI 10.2307/2118653. MR1370758 (96k:35189)
+- [59] Nikolai A. Kudryashov, *求解非线性微分方程精确解的七个常见错误*, Commun. Nonlinear Sci. Numer. Simul. **14** (2009), no. 9-10, 3507–3529, DOI 10.1016/j.cnsns.2009.01.023. MR2509943 (2010m:35451)
+- [60] Nickel, J., Serov, V. S., Schürmann, H. W. Novikov–Veselov 方程的一些椭圆行波解 *Progress In Electromagnetics Research* (2006) **61**, 323–331.
+- [61] L. P. Nizhnik, *逆问题方法积分多维非线性方程* (Russian), Dokl. Akad. Nauk SSSR **254** (1980), no. 2, 332–335. MR591004 (82k:35096)
+- [62] R. G. Novikov, *固定能量水平上二维 Schrödinger 算子的逆散射问题*, J. Funct. Anal. **103** (1992), no. 2, 409–463, DOI 10.1016/0022-1236(92)90127-5. MR1151554 (93c:35080)
+- [63] R. G. Novikov, *正能量下 Novikov-Veselov 方程指数局域孤子的不存在*, Phys. Lett. A **375** (2011), no. 9, 1233–1235, DOI 10.1016/j.physleta.2011.01.052. MR2770407 (2011k:35208)
+- [64] A. P. Veselov and S. P. Novikov, *有限间隙二维势 Schrödinger 算子。显式公式与演化方程* (Russian), Dokl. Akad. Nauk SSSR **279** (1984), no. 1, 20–24. MR769198 (86d:58053)
+- [65] S. P. Novikov and A. P. Veselov, *二维 Schrödinger 算子：逆散射变换与演化方程*, Phys. D **18** (1986), no. 1-3, 267–273, DOI 10.1016/0167-2789(86)90187-9. Solitons and coherent structures (Santa Barbara, Calif., 1985). MR838332 (87k:58114)
+- [66] Yasuhiro Ohta, *Veselov-Novikov 方程的 Pfaffian 解*, J. Phys. Soc. Japan **61** (1992), no. 11, 3928–3933, DOI 10.1143/JPSJ.61.3928. MR1196152 (93j:35164)
+- [67] Perry, P. 在 $H^{1,1}(\mathbb{R}^2)$ 中去聚焦 Davey-Stewartson II 方程的整体适定性与大时间渐近性. Preprint, arXiv:1110.5589 [math.AP], 2011. Submitted to Journal of Spectral Theory.
+- [68] Peter A. Perry, *Novikov-Veselov 方程的 Miura 映射与逆散射*, Anal. PDE **7** (2014), no. 2, 311–343, DOI 10.2140/apde.2014.7.311. MR3218811
+- [69] Perry, P. Novikov 与 Veselov 遇见 Lippmann 与 Schwinger. *In preparation*
+- [70] C. Rogers, B. G. Konopelchenko, M. P. Stallybrass, and W. K. Schief, *Nizhnik-Veselov-Novikov 方程：相关边值问题*, Internat. J. Non-Linear Mech. **31** (1996), no. 4, 441–450, DOI 10.1016/0020-7462(96)00012-1. MR1409721 (97f:35194)
+- [71] Hang-Yu Ruan and Yi-Xin Chen, *(2 + 1)-维广义 Nizhnik-Novikov-Veselov 方程中的局域相干结构*, J. Phys. Soc. Japan **70** (2001), no. 6, 1499–1504, DOI 10.1143/JPSJ.70.1499. MR1847111 (2002e:35213)
+- [72] Ruan, H.-Y., Chen, Y.-X. (2 + 1)-维 Nizhnik-Novikov-Veselov 方程中直线孤子与 Y-周期孤子的相互作用. Z. Naturforsch **57a** (2002), 948–954
+- [73] Hang-yu Ruan and Yi-xin Chen, *(2 + 1)-维 KdV 型方程的 Dromion 相互作用*, J. Phys. Soc. Japan **72** (2003), no. 3, 491–495, DOI 10.1143/JPSJ.72.491. MR1978363 (2004c:35366)
+- [74] Jukka Saranen and Gennadi Vainikko, *周期积分与伪微分方程及其数值逼近*, Springer Monographs in Mathematics, Springer-Verlag, Berlin, 2002. MR1870713 (2003h:47088)
+- [75] Samuli Siltanen, *电导率层析成像与 Faddeev  Green 函数*, Ann. Acad. Sci. Fenn. Math. Diss. **121** (1999), 56. Dissertation, Helsinki University of Technology, Espoo, 1999. MR1719277 (2001b:35301)
+- [76] Samuli Siltanen, Jennifer Mueller, and David Isaacson, *A. Nachman 重建算法在二维反电导率问题中的实现*, Inverse Problems **16** (2000), no. 3, 681–699, DOI 10.1088/0266-5611/16/3/310. MR1766226 (2001g:35269)
+- [77] Siltanen, S., Tamminen, J. P. 正能量下径向势的例外点. arXiv:1307.2037 [Math.NA]
+- [78] Shingareva, I., Lizarraga-Celaya, C. 用 Maple 和 Mathematica 求解非线性偏微分方程. Springer (2011)
+- [79] Barry Simon, *布朗运动、Schrödinger 算子的 $L^p$ 性质与束缚的局域化*, J. Funct. Anal. **35** (1980), no. 2, 215–229, DOI 10.1016/0022-1236(80)90006-3. MR561987 (81c:35033)
+- [80] Barry Simon, *Schrödinger 半群 $L^p$ 范数的大时间行为*, J. Funct. Anal. **40** (1981), no. 1, 66–83, DOI 10.1016/0022-1236(81)90073-2. MR607592 (82i:81027)
+- [81] Barry Simon, *Schrödinger 半群*, Bull. Amer. Math. Soc. (N.S.) **7** (1982), no. 3, 447–526, DOI 10.1090/S0273-0979-1982-15041-8. MR670130 (86b:81001a)
+- [82] Yukiko Tagami, *(2 + 1)-维 KdV 方程推广的类孤子解*, Phys. Lett. A **141** (1989), no. 3-4, 116–120, DOI 10.1016/0375-9601(89)90770-6. MR1025708 (90k:35248)
+- [83] Iskander A. Taimanov, *修正的 Novikov-Veselov 方程与曲面的微分几何*, Solitons, geometry, and topology: on the crossroad, Amer. Math. Soc. Transl. Ser. 2, vol. 179, Amer. Math. Soc., Providence, RI, 1997, pp. 133–151. MR1437161 (98c:53071)
+- [84] I. A. Taimanov and S. P. Tsarëv, *具有快速衰减有理势的二维 Schrödinger 算子与多维 $L_2$-核* (Russian), Uspekhi Mat. Nauk **62** (2007), no. 3(375), 217–218, DOI 10.1070/RM2007v062n03ABEH004423; English transl., Russian Math. Surveys **62** (2007), no. 3, 631–633. MR2355430
+
