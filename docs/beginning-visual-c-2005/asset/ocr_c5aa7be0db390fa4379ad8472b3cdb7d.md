@@ -1,0 +1,19 @@
+The first thing that the handler does after verifying the left mouse button is down is to save the current cursor position. This is used as the second defining point for an element. The rest of the logic is clear in general terms, but you need to establish a few more things before you can complete the function. You have no means of defining an element — you’ll want to define an element as an object of a class so some classes must be defined. You also need to devise a way to delete an element and get one drawn when you create a new one. A brief digression is called for.
+
+# Getting the Client Area Redrawn
+
+Drawing or erasing elements involves redrawing all or part of the client area of a window. As you’ve already discovered, the client area gets drawn by the OnDraw() member function of the CSketcherView class, and this function is called when a WM_PAINT message is received by the Sketcher application. Along with the basic message to repaint the client area, Windows supplies information about the part of the client area that needs to be redrawn. This can save a lot of time when you’re displaying complicated images because only the area specified actually needs to be redrawn, which may be a very small proportion of the total area.
+
+You can tell Windows that a particular area should be redrawn by calling the InvalidateRect() function that is an inherited member of your view class. The function accepts two arguments, the first of which is a pointer to a RECT or CRect object that defines the rectangle in the client area to be redrawn. Passing null for this parameter causes the whole client area to be redrawn. The second parameter is a BOOL value, which is TRUE if the background to the rectangle is to be erased and FALSE otherwise. This argument has a default value of TRUE because you normally want the background erased before the rectangle is redrawn, so you can ignore it most of the time. BOOL is a Windows API type representing Boolean values and can be assigned the values TRUE or FALSE.
+
+A typical situation in which you’d want to cause an area to be redrawn would be where something has changed that necessitates the contents of the area being recreated — moving a displayed entity might be an example. In this case, you want to erase the background to remove the old representation of what was displayed before you draw the new version. When you want to draw on top of an existing background, you just pass FALSE as the second argument to InvalidateRect().
+
+Calling the InvalidateRect() function doesn’t directly cause any part of the window to be redrawn; it just communicates to Windows the rectangle that you would like to have it redraw at some time. Windows maintains an update region — actually a rectangle — that identifies the area in a window that needs to be redrawn. The area specified in your call to InvalidateRect() is added to the current update region, so the new update region encloses the old region plus the new rectangle you have indicated as invalid. Eventually a WM_PAINT message is sent to the window, and the update region is passed to the window along with it. When processing of the WM_PAINT message is complete, the update region is reset to the empty state.
+
+Thus, all you have to do to get a newly created shape drawn is:
+
++   1. Make sure that the OnDraw() function in your view includes the newly-created item when it redraws the window.
+
++   2. Call InvalidateRect() with a pointer to the rectangle bounding the shape to be redrawn passed as the first argument.
+
+Similarly, if you want a shape removed from the client area of a window, you need to do the following:

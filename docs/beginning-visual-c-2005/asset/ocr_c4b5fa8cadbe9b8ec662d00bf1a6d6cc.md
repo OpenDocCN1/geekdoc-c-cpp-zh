@@ -1,0 +1,5 @@
+# About the Author
+
+**Ivor Horton** graduated as a mathematician and was lured into information technology by promises of great rewards for very little work. In spite of the reality being usually a great deal of work for relatively modest rewards, he has continued to work with computers to the present day. He has been engaged at various times in programming, systems design, consultancy, and the management of the implementation of projects of considerable complexity.
+
+Horton has many years of experience in the design and implementation of computer systems applied to engineering design and to manufacturing operations in a variety of industries. He also has considerable experience in developing occasionally useful applications in a wide variety of programming languages, and of teaching primarily scientists and engineers to do likewise. He has written books on programming for more than 10 years; his currently published works include tutorials on C, C++, and Java. At the present time, when he is not writing programming books or providing advice to others, he spends his time fishing, travelling, and trying to speak better French.

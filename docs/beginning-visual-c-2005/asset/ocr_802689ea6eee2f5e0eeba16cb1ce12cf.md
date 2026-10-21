@@ -1,0 +1,15 @@
+A data source is represented by a class object, so inevitably adding a data source to your project adds definitions for a number of classes. Take a brief look at what they are.
+
+| Data Source | A data source is defined by a class that is derived from the DataSet class that is defined in the System::Data namespace. This class encapsulates an in-memory cache of all the data from the database that is accessible in your project. |
+| Database Tables | Each table in the database is defined by a nested class in the DataSet class that represents the database, and the class that defines a table is derived from the System::Data::DataTable class. The classes representing tables also define events that signal changes to the data in the table and proprietie, making each of the values of the current database record available.
+Each table in a data source is identified by a member in the DataSet class that is a handle to the corresponding DataTable object. |
+| Table Columns | Each column in a given database table is identified by a member of the DataTable class that defines the table. The members representing columns are of type System::Data::DataColumn and define the characteristics of the column, such as the column name and the type of data in the column. These characteristics are collectively referred to as the schema for the column. |
+| Table Rows | A row in a table is represented by an object of type System::Data::DataRow. A DataRow object contains the data in a row and has as many data items as there are columns in the DataTable object. |
+
+Clearly, with a database that involves several tables that each have a number of columns, you are going to see quite a lot of code generated to represent a data source; certainly, tens of thousands of lines of code are not uncommon in a practical context.
+
+The classes I have identified in the previous table are solely to encapsulate data from a data source; they do not provide the mechanism for connecting to a data source such as a database and accessing the data within it. That capability is provided by a component class called a table adapter that will be generated automatically. A table adapter establishes a connection to a database and executes the commands or SQL statements that operate on the database. There is one table adapter class for each DataTable member in the DataSet object, so if your application is going to work with three tables from a database, there are three table adapter classes defined. A table adapter object populates a DataTable member of a DataSet object with data and can update the table in the database when required.
+
+# Accessing and Displaying Data
+
+There are three components defined in the System::Windows::Forms namespace that are designed to be used together for accessing and displaying data in a Windows Forms application:

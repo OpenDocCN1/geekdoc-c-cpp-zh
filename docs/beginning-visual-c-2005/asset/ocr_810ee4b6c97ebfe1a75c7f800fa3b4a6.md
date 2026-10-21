@@ -1,0 +1,13 @@
+# Applications Using Windows Forms
+
+Place five buttons in the group box in the upper pane and add two more in the group box in the lower pane below to make an elegant arrangement. You can reposition any of the buttons by dragging it with the mouse whereupon you should see vertical and/or horizontal alignment guides displayed to help you align the control to the others. You can also use the Format > Horizontal Spacing > Make Equal menu item to make the spacing in a horizontal sequence of controls uniform. The other menu items in the Format menu are worth exploring; they provide for setting the vertical spacing, for aligning controls, for centering a selected group of controls in a form, and for adjusting the height and width of the controls. You can select any number of controls by clicking them while holding the Ctrl key down.
+
+Figure 21-13 shows my arrangement for the buttons on the Euromillions tab, and also shows the alignment guides that appear when positioning button7.
+
+![](bbox=[0.27, 0.27, 0.84, 0.56])
+
+Figure 21-13
+
+You’ll be generating values to display as the text on these buttons, so you need to change the properties for each of them. I suggest you make the values for the Text property on the upper five buttons the values 1, 2, 3, 4, and 5, and the values for the Text property on the two buttons in the lower pane 1 and 2. You can change the (Name) property for each button too. The buttons in the upper pane can have names euroValue1, euroValue2, through to euroValue5, and the two on the lower pane euroStar1 and euroStar1. While you’re at it, you might like to change the BackColor property for each button that determines the background color. I chose the color Silver for the top five buttons and Gold for the bottom two—where both colors are from the Web palette. When you have completed that, the application window with the Euromillions tab selected should look as shown in Figure 21-14.
+
+Now you can return to the Lotto tab by clicking it in the Editor window. You can then add buttons to that. The Lotto lottery is very simple: you just have to choose six different values from 1 to 49 for an entry. You therefore need to add six Button controls to the GroupBox that is already on the Lotto tab. After you have arranged the buttons to your satisfaction, change the text on the buttons so they show the default values 1 to 6 and change the (Name) property for the buttons to lottoValue1, lottoValue2,

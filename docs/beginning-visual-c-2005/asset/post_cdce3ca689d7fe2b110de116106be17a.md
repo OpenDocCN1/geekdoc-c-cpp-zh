@@ -1,0 +1,252 @@
+
+## Contents
+- Modifying a Variable 73
+- The Increment and Decrement Operators 74
+- The Sequence of Calculation 77
+- Operator Precedence 77
+- **Variable Types and Casting** 78
+- Rules for Casting Operands 78
+- Casts in Assignment Statements 79
+- Explicit Casts 80
+- Old-Style Casts 81
+- The Bitwise Operators 81
+- The Bitwise AND 82
+- The Bitwise OR 84
+- The Bitwise Exclusive OR 85
+- The Bitwise NOT 86
+- The Bitwise Shift Operators 86
+- **Understanding Storage Duration and Scope** 88
+- Automatic Variables 88
+- Positioning Variable Declarations 91
+- Global Variables 91
+- Static Variables 94
+- **Namespaces** 95
+- Declaring a Namespace 96
+- Multiple Namespaces 98
+- **C++/CLI Programming** 99
+- C++/CLI Specific: Fundamental Data Types 99
+- C++/CLI Output to the Command Line 104
+- C++/CLI Specific — Formatting the Output 104
+- C++/CLI Input from the Keyboard 107
+- Using safe_cast 108
+- C++/CLI Enumerations 109
+- Specifying a Type for Enumeration Constants 111
+- Specifying Values for Enumeration Constants 111
+- **Summary** 112
+- **Exercises** 113
+- **Chapter 3: Decisions and Loops** 115
+- **Comparing Values** 115
+- The if Statement 117
+- Nested if Statements 118
+- The Extended if Statement 120
+- Nested if-else Statements 122
+
+- Pointers and Arrays 185
+- Pointer Arithmetic 185
+- Using Pointers with Multidimensional Arrays 190
+- Pointer Notation with Multidimensional Arrays 191
+- Dynamic Memory Allocation 192
+- The Free Store, Alias the Heap 192
+- The new and delete Operators 193
+- Allocating Memory Dynamically for Arrays 194
+- Dynamic Allocation of Multidimensional Arrays 196
+- Using References 197
+- What Is a Reference? 197
+- Declaring and Initializing References 197
+- C++/CLI Programming 198
+- Tracking Handles 199
+- Declaring Tracking Handles 199
+- CLR Arrays 200
+- Sorting One-Dimensional Arrays 205
+- Searching One-Dimensional Arrays 206
+- Multidimensional Arrays 209
+- Arrays of Arrays 213
+- Strings 216
+- Joining Strings 217
+- Modifying Strings 220
+- Searching Strings 222
+- Tracking References 225
+- Interior Pointers 225
+- Summary 228
+- Exercises 230
+- Chapter 5: Introducing Structure into Your Programs 231
+- Understanding Functions 232
+- Why Do You Need Functions? 233
+- Structure of a Function 233
+- The Function Header 233
+- The Function Body 234
+- The return Statement 235
+- Using a Function 235
+- Function Prototypes 235
+- Passing Arguments to a Function 239
+- The Pass-by-value Mechanism 240
+- Pointers as Arguments to a Function 241
+
+## Contents
+- Passing Arrays to a Function 243
+- Passing Multi-Dimensional Arrays to a Function 245
+- References as Arguments to a Function 247
+- Use of the const Modifier 249
+- Arguments to main() 250
+- Accepting a Variable Number of Function Arguments 252
+- **Returning Values from a Function** 254
+- Returning a Pointer 254
+- A Cast Iron Rule for Returning Addresses 256
+- Returning a Reference 258
+- A Teflon-Coated Rule: Returning References 260
+- Static Variables in a Function 260
+- **Recursive Function Calls** 262
+- Using Recursion 264
+- **C++/CLI Programming** 265
+- Functions Accepting a Variable Number of Arguments 266
+- Arguments to main() 267
+- **Summary** 268
+- **Exercises** 269
+
+## Chapter 6: More about Program Structure 271
+- **Pointers to Functions** 271
+- Declaring Pointers to Functions 272
+- A Pointer to a Function as an Argument 275
+- Arrays of Pointers to Functions 277
+- **Initializing Function Parameters** 277
+- **Exceptions** 279
+- Throwing Exceptions 281
+- Catching Exceptions 282
+- Exception Handling in the MFC 283
+- **Handling Memory Allocation Errors** 284
+- **Function Overloading** 285
+- What Is Function Overloading? 286
+- When to Overload Functions 288
+- **Function Templates** 288
+- Using a Function Template 289
+- **An Example Using Functions** 291
+- Implementing a Calculator 291
+- Analyzing the Problem 292
+- Eliminating Blanks from a String 294
+- Evaluating an Expression 295
+- Getting the Value of a Term 298
+- Analyzing a Number 299
+- Putting the Program Together 302
+- Extending the Program 304
+- Extracting a Substring 305
+- Running the Modified Program 307
+- **C++/CLI Programming** 308
+- Understanding Generic Functions 309
+- Defining Generic Functions 309
+- Using Generic Functions 310
+- A Calculator Program for the CLR 315
+- Removing Spaces from the Input String 316
+- Evaluating an Arithmetic Expression 316
+- Obtaining the Value of a Term 318
+- Evaluating a Number 318
+- Extracting a Parenthesized Substring 319
+- **Summary** 320
+- **Exercises** 321
+- **Chapter 7: Defining Your Own Data Types** 323
+- **The struct in C++** 324
+- What Is a struct? 324
+- Defining a struct 324
+- Initializing a struct 325
+- Accessing the Members of a struct 325
+- Intellisense Assistance with Structures 329
+- The struct RECT 330
+- Using Pointers with a struct 330
+- Accessing Structure Members through a Pointer 332
+- The Indirect Member Selection Operator 332
+- **Data Types, Objects, Classes and Instances** 332
+- First Class 334
+- Operations on Classes 334
+- Terminology 335
+- **Understanding Classes** 335
+- Defining a Class 336
+- Access Control in a Class 336
+- Declaring Objects of a Class 336
+- Accessing the Data Members of a Class 337
+- Member Functions of a Class 339
+
+## Chapter 8: More on Classes 399
+- Class Destructors 399
+- What Is a Destructor? 399
+- The Default Destructor 400
+- Destructors and Dynamic Memory Allocation 402
+- Implementing a Copy Constructor 405
+- Sharing Memory Between Variables 407
+- Defining Unions 408
+- Anonymous Unions 409
+- Unions in Classes and Structures 410
+- Operator Overloading 410
+- Implementing an Overloaded Operator 411
+- Implementing Full Support for an Operator 414
+- Overloading the Assignment Operator 418
+- Fixing the Problem 418
+- Overloading the Addition Operator 423
+- Overloading the Increment and Decrement Operators 426
+- Class Templates 427
+- Defining a Class Template 428
+- Template Member Functions 430
+- Creating Objects from a Class Template 431
+- Class Templates with Multiple Parameters 434
+- Using Classes 436
+- The Idea of a Class Interface 436
+- Defining the Problem 436
+- Implementing the CBox Class 437
+- Comparing CBox Objects 438
+- Combining CBox Objects 439
+- Analyzing CBox Objects 441
+- Defining the CBox Class 445
+- Adding Data Members 446
+- Defining the Constructor 447
+- Adding Function Members 448
+- Adding Global Functions 453
+- Using Our CBox Class 455
+- Organizing Your Program Code 458
+- Naming Program Files 460
+- C++/CLI Programming 461
+- Overloading Operators in Value Classes 461
+- Overloading the Increment and Decrement Operators 467
+- Overloading Operators in Reference Classes 467
+- Summary 470
+- Exercises 471
+
+- Chapter 10: Debugging Techniques 565
+- Understanding Debugging 565
+- Program Bugs 567
+- Common Bugs 567
+- Basic Debugging Operations 568
+- Setting Breakpoints 570
+- Advanced Breakpoints 572
+- Setting Tracepoints 572
+- Starting Debugging 573
+- Inspecting Variable Values 576
+- Viewing Variables in the Edit Window 577
+- Changing the Value of a Variable 577
+- Adding Debugging Code 578
+- Using Assertions 578
+- Adding Your Own Debugging Code 580
+- Debugging a Program 585
+- The Call Stack 585
+- Step Over to the Error 587
+- Testing the Extended Class 591
+- Finding the Next Bug 593
+- Debugging Dynamic Memory 593
+- Functions Checking the Free Store 594
+- Controlling Free Store Debug Operations 595
+- Free Store Debugging Output 596
+- Debugging C++/CLI Programs 602
+- Using the Debug and Trace Classes 602
+- Generating Output 603
+- Setting the Output Destination 604
+- Indenting the Output 604
+- Controlling Output 605
+- Assertions 607
+- Summary 611
+
+- Chapter 11: Windows Programming Concepts 613
+- Windows Programming Basics 614
+- Elements of a Window 614
+- Windows Programs and the Operating System 616
+- Event-Driven Programs 617
+- Windows Messages 617
+- The Windows API 617
+- Windows Data Types 618
+- Notation in Windows Programs 619

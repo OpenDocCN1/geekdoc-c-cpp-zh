@@ -1,0 +1,9 @@
+![](bbox=[0.27, 0.09, 0.78, 0.54])
+
+# Figure 11-1
+
+The example actually generated two windows. The larger window with the menu and the tool bars is the main, or **parent window**, and the smaller window is a **child window** of the parent. Although the child window can be closed without closing the parent window by double-clicking the title bar icon that is in the upper-left corner of the child window, closing the parent window automatically closes the child window as well. This is because the child window is owned by, and dependent upon, the parent window. In general, a parent window may have a number of child windows, as you’ll see.
+
+The most fundamental parts of a typical window are its **border**, the **title bar** that shows the name that you give to the window, the **title bar icon** that appear at the left end of the title bar, and the **client area**, which is the area in the center of the window not used by the title bar or borders. You can get all of these created for free in a Windows program. As you will see, all you have to do is provide some text for the title bar.
+
+The border defines the boundary of a window and may be fixed or resizable. If the border is resizable, you can drag it to alter the size of the window. The window also may possess a size grip, which you can use to alter the size of a window while maintaining its aspect ratio — the ratio of the width to the height. When you define a window you can modify how the border behaves and appears if you want. Most windows will also have the maximize, minimize, and close buttons in the upper-right corner of the window. These allow the window to be increased to full screen size, reduced to an icon or closed.

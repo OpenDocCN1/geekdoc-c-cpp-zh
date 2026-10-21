@@ -1,0 +1,170 @@
+
+
+```
+cout << endl;                  // Start on a new line
+cout << setw(6) << num1 << setw(6) << num2;  // Output two values
+cout << endl;                  // Start on a new line
+return 0;                       // Exit program
+}
+```
+
+## How It Works
+
+The changes from the last example are the addition of the #include directive for the <iomanip> header file, the addition of a using declaration for the setw name from the std namespace, and the insertion of the setw() manipulator in the output stream preceding each value so that the output values are presented in a field six characters wide. Now you get nice neat output where you can actually separate the two values:
+
+```
+1234  5678
+```
+
+Note that the setw() manipulator works only for the single output value immediately following its insertion into the stream. You have to insert the manipulator into the stream immediately preceding each value that you want to output within a given field width. If you put only one setw(), it would apply to the first value to be output after it was inserted. Any following value would be output in the default manner. You could try this out by deleting the second setw(6) and its insertion operator in the example.
+
+## Escape Sequences
+
+When you write a character string between double quotes, you can include special characters called escape sequences in the string They are called escape sequences because they allow characters to be included in a string that otherwise could not be represented by escaping from the default interpretation of the characters. An escape sequence starts with a backslash character, \, and the backslash character cues the compiler to interpret the character that follows in a special way. For example, a tab character is written as \t, so the t is understood by the compiler to represent a tab in the string, not the letter t. Look at these two output statements
+
+```
+cout << endl << "This is output.";
+cout << endl << "\tThis is output after a tab.";
+```
+
+They will produce these lines:
+
+```
+This is output.
+
+    This is output after a tab.
+```
+
+The \t in the second output statement causes the output text to be indented to the first tab position.
+
+In fact, instead of using endl you could use the escape sequence for the newline character, \n, in each string, so you could rewrite the preceding statements as follows:
+
+```
+cout << "\nThis is output.";
+cout << "\n\tThis is output after a tab.";
+```
+
+## Data, Variables, and Calculations
+
+If you compile and execute this example, it produces the following output:
+
+> "We'll make our escapes in sequence", he said.
+> 
+> The program's over, it's time take make a beep beep.
+
+### How It Works
+
+The first line in main() defines the variable newline and initializes it with a character defined by the escape sequence for a new line. You can then use newline instead of endl from the standard library.
+
+### Calculating in C++
+
+This is where you actually start doing something with the data that you enter. You know how to carry out simple input and output; now you are beginning the bit in the middle, the "processing" part of a C++ program. Almost all of the computational aspects of C++ are fairly intuitive, so you should slice through this like a hot knife through butter.
+
+### The Assignment Statement
+
+You have already seen examples of the assignment statement. A typical assignment statement looks like this:
+
+```
+whole = part1 + part2 + part3;
+```
+
+The assignment statement enables you to calculate the value of an expression which appears on the right hand side of the equals sign, in this case the sum of part1, part2, and part3, and store the result in the variable specified on the left hand side, in this case the variable with the name whole. In this statement, the whole is exactly the sum of its parts and no more.
+
+Note how the statement, as always, ends with a semicolon.
+
+You can also write repeated assignments such as,
+
+```
+a = b = 2;
+```
+
+This is equivalent to assigning the value 2 to b and then assigning the value of b to a, so both variables will end up storing the value 2.
+
+## Chapter 2
+
+## Understanding lvalues and rvalues
+
+An **lvalue** is something that refers to an address in memory and is so called because any expression that results in an lvalue can appear on the left of the equals sign in an assignment statement. Most variables are lvalues, because they specify a place in memory. However, as you’ll see, there are variables that aren’t lvalues and can’t appear on the left of an assignment because their values have been defined as constant.
+
+The variables a and b that appear in the preceding paragraph are lvalues, whereas the result of evaluating the expression a+b would not be, because its result doesn’t determine an address in memory where a value might be stored. The result of an expression that is not an lvalue is referred to as an **rvalue**.
+
+> Lvalues will pop up at various times throughout the book, sometimes where you least expect them, so keep the idea in mind.
+
+## Arithmetic Operations
+
+The basic arithmetic operators you have at your disposal are addition, subtraction, multiplication, and division, represented by the symbols +, −, * and /, respectively. These operate generally as you would expect, with the exception of division which has a slight aberration when working with integer variables or constants, as you’ll see. You can write statements such as the following:
+
+```
+netPay = hours * rate - deductions;
+```
+
+Here, the product of hours and rate will be calculated and then deductions subtracted from the value produced. The multiply and divide operators are executed before addition and subtraction, as you would expect. I will discuss the order of execution of the various operators in expressions more fully later in this chapter. The overall result of evaluating the expression hours * rate − deductions will be stored in the variable netPay.
+
+The minus sign used in the last statement has two operands — it subtracts the value of its right operand from the value of its left operand. This is called a **binary operation** because two values are involved. The minus sign can also be used with one operand to change the sign of the value to which it is applied, in which case it is called a **unary minus**. You could write this:
+
+```
+int a = 0;
+int b = -5;
+a = -b;                         // Changes the sign of the operand
+```
+
+Here, a will be assigned the value +5 because the unary minus changes the sign of the value of the operand b.
+
+Note that an assignment is not the equivalent of the equations you saw in high school algebra. It specifies an action to be carried out rather than a statement of fact. The expression to the right of the assignment operator is evaluated and the result is stored in the lvalue — typically a variable — that appears on the left.
+
+Look at this statement:
+
+```
+number = number + 1;
+```
+
+This means “add 1 to the current value stored in number and then store the result back in number.” As a normal algebraic statement it wouldn’t make sense.
+
+## Try It Out Exercising Basic Arithmetic
+
+You can exercise basic arithmetic in C++ by calculating how many standard rolls of wallpaper are needed to paper a room. The following example does this:
+
+```
+// Ex2_05.cpp
+// Calculating how many rolls of wallpaper are required for a room
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+
+int main()
+{
+    double height = 0.0, width = 0.0, length = 0.0; // Room dimensions
+    double perimeter = 0.0;                         // Room perimeter
+
+    const double rollwidth = 21.0;                  // Standard roll width
+    const double rolllength = 12.0*33.0;            // Standard roll length(33ft.)
+
+    int strips_per_roll = 0;                        // Number of strips in a roll
+    int strips_reqd = 0;                            // Number of strips needed
+    int nrolls = 0;                                 // Total number of rolls
+
+    cout << endl                                 // Start a new line
+         << "Enter the height of the room in inches: ";
+    cin >> height;
+
+    cout << endl                                 // Start a new line
+         << "Now enter the length and width in inches: ";
+    cin >> length >> width;
+
+    strips_per_roll = rolllength / height;        // Get number of strips per roll
+    perimeter = 2.0*(length + width);             // Calculate room perimeter
+    strips_reqd = perimeter / rollwidth;          // Get total strips required
+    nrolls = strips_reqd / strips_per_roll;       // Calculate number of rolls
+
+    cout << endl
+         << "For your room you need " << nrolls << " rolls of wallpaper."
+         << endl;
+
+    return 0;
+}
+```
+
+Unless you are more adept than I am at typing, chances are there will be a few errors when you compile this for the first time. Once you have fixed the typos, it will compile and run just fine. You’ll get a couple of warning messages from the compiler. Don’t worry about them — the compiler is just making sure you understand what’s going on. I’ll explain the reason for the error messages in a moment.
+
