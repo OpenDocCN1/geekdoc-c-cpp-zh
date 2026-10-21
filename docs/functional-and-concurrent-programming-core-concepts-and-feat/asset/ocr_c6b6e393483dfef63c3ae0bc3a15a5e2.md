@@ -1,0 +1,1 @@
++   - In typed languages, functions can often be parameterized by types, making it possible for developers to write code templates that implement multiple functions of different signatures. Effective use of type parameterization helps reduce the need for runtime type checks and typecasts and the risk of runtime exceptions they carry.

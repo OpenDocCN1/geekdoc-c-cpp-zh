@@ -1,0 +1,3 @@
+# 28.8 Summary
+
+While the case study in Chapter 24 focused on tasks as actions, executed for their side effects, this variant considered functional—value-producing—tasks instead. It used futures, a common handler of functional tasks, either as synchronizers (Lis. 28.1), or jointly with other synchronizers (Lis. 28.2 and 28.3), or through non-blocking higher-order functions (Lis. 28.4 to 28.9). Special attention was given to issues of timeouts and cancellation. To contrast two standard future implementations, we implemented the asynchronous runner twice, first with Scala futures and then with Java’s CompletableFuture. Finally, a thread-safe, timeout-aware cache was added to asynchronous runners using Scala futures and promises.

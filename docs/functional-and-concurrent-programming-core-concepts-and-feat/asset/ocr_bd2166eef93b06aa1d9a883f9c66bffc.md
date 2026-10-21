@@ -1,0 +1,5 @@
+# About the Author
+
+**Michel Charpentier** is an associate professor with the Computer Science department at the University of New Hampshire (UNH). His interests over the years have ranged from distributed systems to formal verification and mobile sensor networks. He has been with UNH since 1999 and currently teaches courses in programming languages, concurrency, formal verification, and model-checking.
+
+Register your copy of *Functional and Concurrent Programming: Core Concepts and Features* on the InformIT site for convenient access to updates and/or corrections as they become available. To start the registration process, go to informit.com/register and log in or create an account. Enter the product ISBN (9780137466542) and click Submit. Look on the Registered Products tab for an Access Bonus Content link next to this product, and follow that link to access any available bonus materials. If you would like to be notified of exclusive offers on new editions and updates, please check the box to receive email from us.

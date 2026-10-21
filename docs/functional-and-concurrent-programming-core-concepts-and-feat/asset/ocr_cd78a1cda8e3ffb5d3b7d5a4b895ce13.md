@@ -1,0 +1,9 @@
+# FUNCTIONAL AND CONCURRENT PROGRAMMING
+
+# Core Concepts and Features
+
+MICHEL
+CHARPENTIER
+
+Foreword by
+CAY HORSTMANN
