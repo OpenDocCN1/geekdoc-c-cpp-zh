@@ -1,0 +1,19 @@
+possible to inherit a new class from student class again. Then, there is no need to add those details (name, address, etc.) to the Engineering class, which should only contain information specific to it. This is another advantage of inheritance. If the proper base classes are in place, further programming is easier and faster. It leads to modular and quick programming. It is also robust if the base class is debugged and tested properly.
+
+# 9.10 MULTIPLE INHERITANCE
+
+It is also possible to derive a single class from more than one class. When a single class is inherited from multiple base classes, it is known as multiple inheritance. Many examples of multiple inheritance can be seen in the real world.
+
+For example, Indian people are Indians as well as people at the same point of time; similarly, a personal computer is both personal and computer at the same point of time. When such a concept is implemented as a class, multiple inheritance occurs. If ever a class IndianPeople is derived, it would be multiple inherited from the classes Indian as well as People. Similarly, the class PersonalComputer will be inherited from the classes Personal as well as Computer. The multiple-inherited derived class inherits attributes from all the classes it is derived from. Let us take one specific example to learn how multiple inheritance found in real world can be mapped to a C++ program. Though we would like to come as close to a real-world example as possible, we will fall short of an actual real-world C++ program, because the complexity of such a program would be out of bounds for a text book such as this.
+
+Multiple inheritance is a great idea. There are so many such hierarchies in the real world. An Indian cricket player can be a player from the south, north, east, or west zone. At the same time, he is also either a bowler, a batsman, a wicket keeper, or an all-rounder. One class can be described as a combination of a bowler and a south zone player. The class under consideration inherits from both the south zone player class and the bowler class.
+
+Another example is that of an auto-rickshaw, which is a member of three-wheeler vehicle class and, at the same time, is also a member of the class of vehicles available on rent. Program 9.6 shows Beckham to be an object of the class ScienceStudent; he can as well be an object of the class FootballStudent. In such a case, there is a need to have one more class FootballScienceStudent of which Beckham is a member. Multiple inheritance relates to an entity that inherits attributes from more than one distinct entities. Such natural inheritance becomes easy and intuitive to a program with the facility of multiple inheritance provided by the language.
+
+# Implementing Multiple Inheritance in C++
+
+Let us see how one can implement multiple inheritance in a C++ program. Program 9.7 contains a class called SportsStudent, which is inherited from the student class and the SportsPerson class.
+
+The object of SportsStudent class contains properties such as name and address derived from the student class and the details such as the name of the sport one is playing, the national and international sports events taken part in, and medals won so far, which are derived from the SportsPerson class. Moreover, note that there are some other attributes such as sports subjects taken and sports points obtained (from practicals and participation in various events), which are specific to the SportsStudent class. Program 9.7 reinforces what is stated here.
+
+> When a single class is inherited from multiple base classes, it is known as multiple inheritance.

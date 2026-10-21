@@ -1,0 +1,19 @@
+Text files can be read using text editors, whereas binary files can be opened only using a program.
+
+File handles are unique identifiers assigned by the OS to identify different files.
+
+2. The second step is to ask for the association of the physical file with the logical file. If we are dealing with an existing file, this is the first step. It is a kind of linking the file that we treat in our program as, say, “InputFile” to “Input.dat” file known to OS. This step also involves specifying the type of linking, that is, if we are interested in just reading from the physical file, just writing to it, doing both read and write together, etc. This specification is known as file mode. It is possible to open the same physical file in different modes at different times, may be by the same program. We can open a file in write mode, close the file, and then reopen the file in read mode.
+
+3. When we describe different modes of the file we are opening, we are usually specifying the stream that we are going to work with. Specifying the stream is the third step. There are two types of streams associated with C++ files. The default stream is text. The files created using text stream are known as text files and are readable without using the program. Any standard text editor such as notepad, vi, or edit can be used to open and read that file. The other type of stream is known as the binary stream. Binary stream files are known as binary files. They can be opened and read only by using a program. Even though there are such restrictions with binary files, they are usually more suitable for commercial programs. Section 13.4 elaborates the difference between text and binary streams.
+
+Note To provide I/O operations, first, allocate disk space for file and allocate buffers, second, relate the physical file name with a logical file name, and third, specify the way you are going to access the file (text or binary).
+
+4. When we finish these three operations, the file is opened and can now be used. The OS gives our file some buffer to store intermediate data. It also provides us a unique identifier, usually known as file handle, to describe that file. This point onwards, all our requests to manipulate the file will bear this identifier. The handle is represented by the logical file name in our context. We would never be using the actual handle in our programs. Rather, we would use the logical file name to access the file.
+
+Note All I/O functions where a logical file name is specified map it to a file handle. The OS will operate on a specified file using a specified handle.
+
+The buffers allocated by the OS may be read buffers or write buffers. Read buffers are needed when the file content is read from the disk and write buffers are needed when the program intends to write to the disk. Buffers enable read and write operation done in bulk.
+
+Note If we were doing lower level I/O using C, we would use the file handle directly in our programs. For example, a call to low-level read function may look like fd = read(...), where fd is the file handle. A handle is an index to the array where file-related information is stored. Though we are using the logical file name to address the file (similar to Student in fprintf(Student, "This is testing");), the OS inherently transforms the file name into an ID. For an analogy, assume that we are a customer of some company. The company has allocated us a customer ID. We are requested to quote the customer ID in all our conversation with the company. This customer ID is equivalent to a file handle.
+
+Exhibit 13.3 describes a file pointer and a file handle.
