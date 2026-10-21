@@ -1,0 +1,367 @@
+
+## O
+
+- OAuth, 174, 176, 200
+- OCT, 54
+- octal numbering systems, 55
+- Ohm's law, 238
+- Ohm, Georg, 238
+- OR operator, 249
+- output
+  - devices exercise, 101
+  - edge values, 137
+  - floating-point numbers and, 112
+  - fonts, 146
+  - format specifier, 54
+  - Morse code, 93
+  - parsing, 128
+  - verbose, 48, 247
+- _output, 261
+- output pins, see analog pins; digital I/O pins
+- output_code(), 93
+- output_distance() method, 112
+- output_result() function, 72
+- output_symbol(), 93
+- OutputStream object, 261
+
+## P
+
+- Pachube, 174
+- Paperduino, 25
+- Parallax PING))) ultrasonic sensor, see ultrasonic sensors
+- Parallax PIR sensor, see PIR sensors
+- parity bit, 252
+- parity control, 252
+- parseArduinoOutput(), 128
+- parts list, 18–21
+- passive infrared sensors, see PIR sensors
+- PC relay, 172–179
+- Perl, 264
+- physical computing, 23
+- piezo speakers, 100
+- Pin 13, internal resistor, 42, 68
+- PING))) ultrasonic sensor, see ultrasonic sensors
+- pinMode() method, 38
+- pins, see analog pins; digital I/O pins
+- PIR sensors
+  - burglar alarm project, 192–200
+  - connecting, 193
+  - principles, 193
+- plant water alarm, 180
+- PlayStation Eye, 157
+- PNA4602 receiver, 206
+  - see also remote control project
+- popMatrix(), 168
+- power jack, 25f
+- power selection jumper, 27
+- power supply
+  - analog pin voltage and, 115
+  - motors and, 226, 234
+  - pins, 25f, 27
+  - sharing with devices, 27
+- USB port, 26
+- preferences, 48
+- print() function, 53
+- println() function, 53
+- Processing
+  - brick game, 144–152
+  - conventions, 124
+  - development of, 121
+  - drawing cube with, 167
+  - IDE, 123
+  - rotating cube project, 163–169
+  - sensor visualizer project, 121–131
+  - serial communication, 125
+  - Twitter support, 176
+- programming languages, 16
+  - C++, 51, 92, 109, 247, 255–259
+  - Java, 259–261
+  - Perl, 264
+  - Python, 263
+  - Ruby, 261–262
+  - serial communications, 253–265
+    - see also Processing
+- programming, serial, 251–265
+- programs, see sketches
+- project management, 47
+- projects
+  - binary dice, 63–87
+  - blinking LED, 35–44
+  - controlling status LED, 52, 61
+  - distance sensor, 102–131
+  - game controller, motion sensing, 132–153
+  - Morse code generator, 88–101
+  - motor controlling, 223–234
+  - networking, 170–200
+  - Nintendo Nunchuk, 154–169
+  - remote control, 202–222
+  - rotating cube, 163–169
+- Prototyping shield, 141
+
+## R
+
+- pseudorandom number generator, 72, 73
+- publishing services, sensor data, 174
+- pull-down resistors, 75
+- pull-up resistors, 75
+- pulseIn() method, 107
+- pushbuttons
+  - adding to binary dice project, 74–86
+  - adding to game controller, 140–143
+  - connecting, 74, 79
+  - debouncing, 78, 143
+- pushMatrix(), 168
+- Putty, 55
+- PWR_SEL switch, 27
+- pyserial library, 263
+- Python, 263
+- RadioShack, 19
+- radius variable, 126
+- random number generators, 72, 73, 234
+- random seed, 73
+- random() function, 72, 73
+- randomSeed() function, 73
+- read() function, 52
+- remote control codes, 205
+- remote control project, 202–222
+  - browser control, 212–221
+  - building remote, 209–212
+  - exercises, 222
+  - infrared principles, 204
+  - infrared proxy, 215–221
+  - interface, 212–214
+  - obtaining codes, 205
+  - troubleshooting, 221
+- reset button, 25f, 30
+- resistance, 238, 240
+- resistors
+  - calculating size of, 239
+  - exercise, 87
+  - internal (Pin 13), 42, 68
+  - need for, 68, 74
+  - pull-down, 75
+  - pull-up, 75
+  - pushbuttons and, 74
+  - resistance values of, 240
+  - types of, 239
+- resources
+  - online, 17
+  - parts, 18–21
+- return keyword, 125
+- RGB values, 167
+- Roboduino, 233
+- router connections, 184
+- Ruby, 261–262
+- RX LED, 39
+- RXTX project, 259
+
+## S
+
+- sampling and sampling rate, 29
+- saving, 34, 47
+- scaled values, 118
+- schematic, Arduino, 24
+- screen command, 56
+- screens, clearing, 129
+- Seeeduino, 25
+- send_message() method, 90, 94
+- SensorData class, 124, 126
+- Sensorpedia, 174
+- sensors
+  - accelerometers, 134–140
+  - connecting, 28, 104, 113, 134
+  - distance, 102–131
+  - encoding sensor data, 119
+  - floating-point numbers, 110–113, 118
+  - infrared, 131
+  - publishing services, 174
+  - temperature, 113–131, 172–179, 235
+  - tilt, 87, 150
+  - troubleshooting, 131
+  - tweeting data, 172–185
+  - ultrasonic, 102–131
+  - visualizer, 119–131
+- serial communication
+  - through digital pins, 59
+  - disabling, 59
+  - principles of, 51, 251
+  - Processing, 125
+  - programming languages, 253–265
+  - troubleshooting, 60, 131
+- Serial Monitor button, 35
+- serial monitor, LED control project, 52, 61
+- serial port
+  - configuring, 38
+  - errors, 44
+  - initializing, 52, 261
+  - multiple, 59
+  - Perl programming, 264
+  - Processing communication, 127
+- Seriality plug-in for JavaScript, 212
+  - see also serial programming
+- serial programming, advanced, 251–265
+- serial receive buffer, 58
+- serial terminals, 55
+- serialEvent() function, 151
+- Seriality plug-in, 212
+- serialport functions, 256
+- SerialPort object, 261, 262
+- Servo library, 228
+- servo motors, 225–228
+- setup() function, 36, 38
+  - in Processing, 127
+- shields
+  - GSM, 200
+  - motor, 233
+  - Prototyping, 141
+  - troubleshooting, 153
+  - WiFi, 200
+  - see also Ethernet connections
+- shifting operations, 249
+- Simple Mail Transfer Protocol, see SMTP (Simple Mail Transfer Protocol)
+- sketchbook directory, 94
+- sketches
+  - examples folder, 48
+  - file management, 47
+  - storing example, 98
+- SMD LEDs, 41
+- SMTP (Simple Mail Transfer Protocol), 186
+- SmtpService class, 189
+- SoftwareSerial library, 59
+- soldering
+  - basics, 241–246
+  - equipment, 242
+  - parts for, 21
+  - temperatures, 244
+  - troubleshooting, 153
+- sonar project, see distance sensor project
+- spark-fun, 19
+- speakers, see piezo speakers
+- speed of sound, 113, 131
+- SPI library, 183
+- split method, 128
+- Standard Template Library (STL), 248
+- start bit, 252
+- start button, adding, 74–86
+- starter packs, 18
+- status LED project, 52, 61
+- stepper motors, 225
+- STL (Standard Template Library), 248
+- stop bit, 252
+- String class, 189
+- strings syntax, 37
+- strsep() function, 219
+- Super Mario Bros clone, 152
+- surface mounted devices (SMD) LEDs, 41
+- synchronizing data transfer, 58
+- syntax coloring, 97, 100
+- syntax errors, 44
+- Tabs menu, 47
+- Telegraph class, 89, 94
+- telegraph variable, 97
+- telnet command, 181
+- temperature sensors
+  - distance sensor project, 113–131
+  - motorized, 235
+  - tweeting alarm, 172–179
+  - voltage and, 113
+- textiles, 24, 53, 185
+- thermometer project, 235
+- tilt sensor
+  - binary dice exercise, 87
+  - hacky sack toy, 150
+- timestamp exercise, 201
+- tinning, 245
+- TMP36 voltage output temperature sensor, see temperature sensors
+- toolbar functions, 34
+- toothbrush project, 150
+- trim method, 128
+- troubleshooting
+  - board errors, 44
+  - breadboard connections, 86
+  - Ethernet connections, 199
+  - LED connections, 43
+  - libraries, 99
+  - motors, 234
+  - networking project, 199
+  - Nunchuk project, 169
+  - remote control project, 221
+  - sensor connections, 131
+  - serial communication, 60, 131
+  - serial port errors, 44
+  - shields, 153
+  - soldering, 153
+  - syntax coloring, 100
+  - tweetAlarm(), 179
+- Twitter
+  - libraries, 176
+  - registering applications, 174
+  - troubleshooting, 200
+  - tweeting sensor data, 172–185
+- twitter4j() method, 176
+- Twitwee Clock, 180
+- Two-Wire Interface (TWI), 156
+- TX LED, 39
+
+## U
+
+- UART (Universal Asynchronous Receiver/Transmitter), 59
+- ultrasonic sensors
+  - connecting, 104
+  - distance sensor project, 102–131
+  - ideas for, 130
+  - principles of, 104
+- Universal Asynchronous Receiver/Transmitter (UART), 59
+- universal remote control, see remote control project
+- unsigned int variable, 37
+- unsigned long values, 37
+- upload.verbose setting, 48, 248
+- uploading, 35, 39
+- USB connector, 26
+- USB hourglass, 234
+
+## V
+
+- value arrays, 37
+- values, data, 36
+- values, edge, 137
+- values, RGB, 167
+- verbose output setting, 48, 247
+- Verify button, 34, 39
+- versions, 16
+- vertex(), 168
+- Vin pin, 28
+- visualizer, sensor, 119–131
+- void value type, 37
+- voltage
+  - analog pins and, 114
+  - defined, 237
+  - digital pin states and, 35
+  - drop, 239
+  - forward, 239
+  - Ohm's law, 238
+  - power supply, 27
+  - serial communication and, 252
+  - see also resistors
+
+## W
+
+- weapons, 59
+- web publishing services, 174
+- WiFi shield, 200
+- wii Nunchuck, see Nintendo Nunchuk project
+- Windows
+  - installation, 31
+  - serial port configuration, 39
+  - serial terminals, 55
+- Wire library, 156, 162
+- wireless networking, 200
+- WProgram.h, 91
+
+## X
+
+- XOR operator, 249
+
+## Z
+
+- ZigBee, 200
