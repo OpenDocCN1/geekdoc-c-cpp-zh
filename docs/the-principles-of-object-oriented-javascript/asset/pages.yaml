@@ -1,0 +1,3770 @@
+- pgno: 0
+  md: '# THE PRINCIPLES OF
+
+    OBJECT-ORIENTED
+
+    JAVASCRIPT
+
+
+    NICHOLAS C. ZAKAS
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_0_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# THE PRINCIPLES OF
+
+    OBJECT-ORIENTED
+
+    JAVASCRIPT
+
+
+    by Nicholas C. Zakas
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_3_0.png)
+
+
+    no starch
+
+    press
+
+
+    San Francisco'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# THE PRINCIPLES OF OBJECT-ORIENTED JAVASCRIPT. Copyright © 2014 by Nicholas\
+    \ C. Zakas.\n\nAll rights reserved. No part of this work may be reproduced or\
+    \ transmitted in any form or by any means, electronic or mechanical, including\
+    \ photocopying, recording, or by any information storage or retrieval system,\
+    \ without the prior written permission of the copyright owner and the publisher.\n\
+    \nPrinted in USA\nFirst printing\n\n18 17 16 15 14     1 2 3 4 5 6 7 8 9\n\nISBN-10:\
+    \ 1-59327-540-4\nISBN-13: 978-1-59327-540-2\n\nPublisher: William Pollock\nProduction\
+    \ Editor: Serena Yang\nCover Illustration: Charlie Wylie\nInterior Design: Octopod\
+    \ Studios\nDevelopmental Editor: Jennifer Griffith-Delgado\nTechnical Reviewer:\
+    \ Angus Croll\nCopyeditor: Rachel Monaghan\nCompositor: Serena Yang\nProofreader:\
+    \ Elaine Merrill\nIndexer: Nancy Guenther\n\nFor information on distribution,\
+    \ translations, or bulk sales, please contact No Starch Press, Inc. directly:\n\
+    \nNo Starch Press, Inc.\n245 8th Street, San Francisco, CA 94103\nphone: 415.863.9900;\
+    \ fax: 415.863.9950; info@nostarch.com; www.nostarch.com\n\n# Library of Congress\
+    \ Cataloging-in-Publication Data\n\nZakas, Nicholas C.\n    The principles of\
+    \ object-oriented JavaScript / by Nicholas C. Zakas.\n        pages cm\n    Includes\
+    \ index.\nISBN-13: 978-1-59327-540-2 (paperback)\nISBN-10: 1-59327-540-4 (paperback)\n\
+    1. JavaScript (Computer program language) 2. Object-oriented programming languages.\
+    \ I. Title.\nQA76.73.J39Z357 2014\n005.1'17--dc23\n\n2013048973\n\nNo Starch Press\
+    \ and the No Starch Press logo are registered trademarks of No Starch Press, Inc.\
+    \ Other product and company names mentioned herein may be the trademarks of their\
+    \ respective owners. Rather than use a trademark symbol with every occurrence\
+    \ of a trademarked name, we are using the names only in an editorial fashion and\
+    \ to the benefit of the trademark owner, with no intention of infringement of\
+    \ the trademark.\n\nThe information in this book is distributed on an \"As Is\"\
+    \ basis, without warranty. While every precaution has been taken in the preparation\
+    \ of this work, neither the author nor No Starch Press, Inc. shall have any liability\
+    \ to any person or entity with respect to any loss or damage caused or alleged\
+    \ to be caused directly or indirectly by the information contained in it."
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# About the Author
+
+
+    Nicholas C. Zakas is a software engineer at Box and is known for writing on and
+    speaking about the latest in JavaScript best practices. He honed his experience
+    during his five years at Yahoo!, where he was principal frontend engineer for
+    the Yahoo! home page. He is the author of several books, including *Maintainable
+    JavaScript* (O''Reilly Media, 2012) and *Professional JavaScript for Web Developers*
+    (Wrox, 2012).
+
+
+    # About the Technical Reviewer
+
+
+    Originally from the UK, Angus Croll is now part of Twitter’s web framework team
+    in San Francisco and is the co-author and principal maintainer of Twitter’s open
+    source Flight framework. He’s obsessed with JavaScript and literature in equal
+    measure and is a passionate advocate for the greater involvement of artists and
+    creative thinkers in software development. Angus is a frequent speaker at conferences
+    worldwide and is currently working on two books for No Starch Press. He can be
+    reached on Twitter at @angustweets.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# BRIEF CONTENTS
+
+
+    +   Foreword by Cody Lindley ........................................................
+    xiii
+
+    +   Acknowledgments ...............................................................
+    xv
+
+    +   Introduction ...............................................................
+    xvii
+
+    +   Chapter 1: Primitive and Reference Types ...........................................
+    1
+
+    +   Chapter 2: Functions ...........................................................
+    17
+
+    +   Chapter 3: Understanding Objects ...............................................
+    31
+
+    +   Chapter 4: Constructors and Prototypes ...........................................
+    49
+
+    +   Chapter 5: Inheritance .........................................................
+    65
+
+    +   Chapter 6: Object Patterns .....................................................
+    79
+
+    +   Index .......................................................................
+    93'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# FOREWORD
+
+
+    The name Nicholas Zakas is synonymous with JavaScript development itself. I could
+    ramble on for pages with his professional accolades, but I am not going to do
+    that. Nicholas is well-known as a highly skilled JavaScript developer and author,
+    and he needs no introduction. However, I would like to offer some personal thoughts
+    before praising the contents of this book.
+
+
+    My relationship with Nicholas comes from years of studying his books, reading
+    his blog posts, watching him speak, and monitoring his Twitter updates as a JavaScript
+    pupil. We first met in person when I asked him to speak at a jQuery conference
+    several years ago. He treated the jQuery community to a high-quality talk, and
+    since then, we have spoken publicly and privately over the Internet. In that time,
+    I have come to admire him as more than just a leader and developer in the JavaScript
+    community. His words are always gracious and thoughtful, his demeanor always kind.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'His intent as a developer, speaker, and author is always to help, to educate,
+    and to improve. When he speaks, you should listen, not just because he is a JavaScript
+    expert, but because his character rises above his professional status.
+
+
+    This book’s title and introduction make Nicholas’s intentions clear: he has written
+    it to help class-minded (that is, C++ or Java) programmers transition to a language
+    without classes. In the book, he explains how encapsulation, aggregation, inheritance,
+    and polymorphism can be accomplished when writing JavaScript. This is the ideal
+    text to bring a knowledgeable programmer into the fold of object-oriented JavaScript
+    development. If you are reading this book as a developer from another language,
+    you are about to be treated to a concise and skillfully worded JavaScript book.
+
+
+    However, this book also stands to serve programmers coming from within the JavaScript
+    fold. Many JavaScript developers have only an ECMAScript 3 (ES3) understanding
+    of objects, and they are in need of a proper introduction to ECMAScript 5 (ES5)
+    object features. This book can serve as that introduction, bridging a knowledge
+    gap between ES3 objects and ES5 objects.
+
+
+    Now, you might be thinking, “Big deal. Several books have included chapters or
+    notes on the additions to JavaScript found in ES5.” Well, that is true. However,
+    I believe this to be the only book written to date that focuses on the nature
+    of objects by giving ES5 objects first-class citizenship in the entire narrative.
+    This book brings a cohesive introduction to not only ES5 objects, but also the
+    bits of ES3 that you need to grok while learning many of the new additions found
+    in ES5.
+
+
+    As an author myself, I strongly believe this is the one book, given its focus
+    on object-oriented principles and ES5 object updates, that needed to be written
+    as we await ES6 updates to scripting environments.
+
+
+    Cody Lindley (www.codylindley.com)
+
+    Author of JavaScript Enlightenment, DOM Enlightenment, and jQuery Enlightenment
+
+    Boise, Idaho
+
+    December 16, 2013'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# ACKNOWLEDGMENT
+
+
+    I''d like to thank Kate Matsudaira for convincing me that self-publishing an ebook
+    was the best way to get this information out. Without her advice, I''d probably
+    still be trying to figure out what I should do with the information contained
+    in this book.
+
+
+    Thanks to Rob Friesel for once again providing excellent feedback on an early
+    copy of this book, and Cody Lindley for his suggestions. Additional thanks to
+    Angus Croll for his technical review of the finished version—his nitpicking made
+    this book much better.
+
+
+    Thanks as well to Bill Pollock, whom I met at a conference and who started the
+    ball rolling on publishing this book.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# INTRODUCTION
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_17_0.png)
+
+
+    Most developers associate object-oriented programming with languages that are
+    typically taught in school, like C++ and Java, which base object-oriented programming
+    around classes. Before you can do anything in these languages, you need to create
+    a class, even if you’re just writing a simple command-line program.
+
+    Common design patterns in the industry reinforce class-based concepts as well.
+    But JavaScript doesn’t use classes, and this is part of the reason people get
+    confused when they try learning it after C++ or Java.
+
+    Object-oriented languages have several characteristics:
+
+
+    **Encapsulation** Data can be grouped together with functionality that operates
+    on that data. This, quite simply, is the definition of an object.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '**Aggregation** One object can reference another object.
+
+    **Inheritance** A newly created object has the same characteristics as another
+    object without explicitly duplicating its functionality.
+
+    **Polymorphism** One interface may be implemented by multiple objects.
+
+
+    JavaScript has all these characteristics, though because the language has no concept
+    of classes, some aren’t implemented in quite the way you might expect. At first
+    glance, a JavaScript program might even look like a procedural program you would
+    write in C. If you can write a function and pass it some variables, you have a
+    working script that seemingly has no objects. A closer look at the language, however,
+    reveals the existence of objects through the use of dot notation.
+
+
+    Many object-oriented languages use dot notation to access properties and methods
+    on objects, and JavaScript is syntactically the same. But in JavaScript, you never
+    need to write a class definition, import a package, or include a header file.
+    You just start coding with the data types that you want, and you can group those
+    together in any number of ways. You could certainly write JavaScript in a procedural
+    way, but its true power emerges when you take advantage of its object-oriented
+    nature. That’s what this book is about.
+
+
+    Make no mistake: A lot of the concepts you may have learned in more traditional
+    object-oriented programming languages don’t necessarily apply to JavaScript. While
+    that often confuses beginners, as you read, you’ll quickly find that JavaScript’s
+    weakly typed nature allows you to write less code to accomplish the same tasks
+    as other languages. You can just start coding without planning the classes that
+    you need ahead of time. Need an object with specific fields? Just create an ad
+    hoc object wherever you want. Did you forget to add a method to that object? No
+    problem—just add it later.
+
+
+    Inside these pages, you’ll learn the unique way that JavaScript approaches object-oriented
+    programming. Leave behind the notions of classes and class-based inheritance and
+    learn about prototype-based inheritance and constructor functions that behave
+    similarly. You’ll learn how to create objects, define your own types, use inheritance,
+    and otherwise manipulate objects to get the most out of them. In short, you’ll
+    learn everything you need to know to understand and write JavaScript professionally.
+    Enjoy!
+
+
+    # Who This Book Is For
+
+
+    This book is intended as a guide for those who already understand object-oriented
+    programming but want to know exactly how the concept works in JavaScript. Familiarity
+    with Java, C#, or object-oriented programming in'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# 1
+
+
+    # PRIMITIVE AND
+
+    REFERENCE TYPES
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_21_0.png)
+
+
+    Most developers learn object-oriented programming by working with class-based
+    languages such as Java or C#. When these developers start learning JavaScript,
+    they get disoriented because JavaScript has no formal support for classes. Instead
+    of defining classes from the beginning, with JavaScript you can just write code
+    and create data structures as you need them. Because it lacks classes, JavaScript
+    also lacks class groupings such as packages. Whereas in languages like Java, package
+    and class names define both the types of objects you use and the layout of files
+    and folders in your project, programming in JavaScript is like starting with a
+    blank slate: You can'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'organize things any way you want. Some developers choose to mimic structures
+    from other languages, while others take advantage of JavaScript’s flexibility
+    to come up with something completely new. To the uninitiated, this freedom of
+    choice can be overwhelming, but once you get used to it, you’ll find JavaScript
+    to be an incredibly flexible language that can adapt to your preferences quite
+    easily.
+
+
+    To ease the transition from traditional object-oriented languages, JavaScript
+    makes objects the central part of the language. Almost all data in JavaScript
+    is either an object or accessed through objects. In fact, even functions (which
+    languages traditionally make you jump through hoops to get references to) are
+    represented as objects in JavaScript, which makes them first-class functions.
+
+
+    Working with and understanding objects is key to understanding JavaScript as a
+    whole. You can create objects at any time and add or remove properties from them
+    whenever you want. In addition, JavaScript objects are extremely flexible and
+    have capabilities that create unique and interesting patterns that are simply
+    not possible in other languages.
+
+
+    This chapter focuses on how to identify and work with the two primary JavaScript
+    data types: primitive types and reference types. Though both are accessed through
+    objects, they behave in different ways that are important to understand.
+
+
+    # What Are Types?
+
+
+    Although JavaScript has no concept of classes, it still uses two kinds of types:
+    primitive and reference. Primitive types are stored as simple data types. Reference
+    types are stored as objects, which are really just references to locations in
+    memory.
+
+
+    The tricky thing is that JavaScript lets you treat primitive types like reference
+    types in order to make the language more consistent for the developer.
+
+
+    While other programming languages distinguish between primitive and reference
+    types by storing primitives on the stack and references in the heap, JavaScript
+    does away with this concept completely: It tracks variables for a particular scope
+    with a variable object. Primitive values are stored directly on the variable object,
+    while reference values are placed as a pointer in the variable object, which serves
+    as a reference to a location in memory where the object is stored. However, as
+    you’ll see later in this chapter, primitive values and reference values behave
+    quite differently although they may initially seem the same.
+
+
+    Of course, there are other differences between primitive and reference types.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: 'Here, color1 is assigned the value of "red". The variable color2 is then assigned
+    the value color1, which stores "red" in color2. Even though color1 and color2
+    contain the same value, they are completely separate from each other, and you
+    can change the value in color1 without affecting color2 and vice versa. That''s
+    because there are two different storage locations, one for each variable. Figure
+    1-1 illustrates the variable object for this snippet of code.
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_24_0.png)
+
+
+    Figure 1-1: Variable object
+
+
+    Because each variable containing a primitive value uses its own storage space,
+    changes to one variable are not reflected on the other. For example:
+
+
+    ```
+
+    var color1 = "red";
+
+    var color2 = color1;
+
+
+    console.log(color1);    // "red"
+
+    console.log(color2);    // "red"
+
+
+    color1 = "blue";
+
+
+    console.log(color1);    // "blue"
+
+    console.log(color2);    // "red"
+
+    ```
+
+
+    In this code, color1 is changed to "blue" and color2 retains its original value
+    of "red".
+
+
+    # Identifying Primitive Types
+
+
+    The best way to identify primitive types is with the typeof operator, which works
+    on any variable and returns a string indicating the type of data. The typeof operator
+    works well with strings, numbers, Booleans, and undefined. The following shows
+    the output when using typeof on different primitive values:
+
+
+    ```
+
+    console.log(typeof "Nicholas");    // "string"
+
+    console.log(typeof 10);             // "number"
+
+    console.log(typeof 5.1);            // "number"
+
+    console.log(typeof true);           // "boolean"
+
+    console.log(typeof undefined);      // "undefined"
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'As you might expect, typeof returns "string" when the value is a string; "number"
+    when the value is a number (regardless of integer or floating-point values); "boolean"
+    when the value is a Boolean; and "undefined" when the value is undefined.
+
+
+    The tricky part involves null.
+
+
+    ```
+
+    console.log(typeof null); // "object"
+
+    ```
+
+
+    When you run typeof null, the result is "object". But why an object when the type
+    is null? (In fact, this has been acknowledged as an error by TC39, the committee
+    that designs and maintains JavaScript. You could reason that null is an empty
+    object pointer, making "object" a logical return value, but that’s still confusing.)
+
+
+    The best way to determine if a value is null is to compare it against null directly,
+    like this:
+
+
+    ```
+
+    console.log(value === null); // true or false
+
+    ```
+
+
+    # **COMPARING WITHOUT COERCION**
+
+
+    Notice that this code uses the triple equals operator (===) instead of the double
+    equals operator. The reason is that triple equals does the comparison without
+    coercing the variable to another type. To understand why this is important, consider
+    the following:
+
+
+    ```
+
+    console.log("5" == 5); // true
+
+    console.log("5" === 5); // false
+
+    console.log(undefined == null); // true
+
+    console.log(undefined === null); // false
+
+    ```
+
+
+    When you use the double equals, the string "5" and the number 5 are considered
+    equal because the double equals converts the string into a number before it makes
+    the comparison. The triple equals operator doesn’t consider these values equal
+    because they are two different types. Likewise, when you compare undefined and
+    null, the double equals says that they are equivalent, while the triple equals
+    says they are not. When you’re trying to identify null, use triple equals so that
+    you can correctly identify the type.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# Primitive Methods
+
+
+    Despite the fact that they’re primitive types, strings, numbers, and Booleans
+    actually have methods. (The null and undefined types have no methods.) Strings,
+    in particular, have numerous methods to help you work with them. For example:
+
+
+    ```
+
+    var name = "Nicholas";
+
+    var lowercaseName = name.toLowerCase();      // convert to lowercase
+
+    var firstLetter = name.charAt(0);             // get first character
+
+    var middleOfName = name.substring(2, 5);      // get characters 2-4
+
+
+    var count = 10;
+
+    var fixedCount = count.toFixed(2);            // convert to "10.00"
+
+    var hexCount = count.toString(16);            // convert to "a"
+
+
+    var flag = true;
+
+    var stringFlag = flag.toString();             // convert to "true"
+
+    ```
+
+
+    > NOTE Despite the fact that they have methods, primitive values themselves are
+    not objects. JavaScript makes them look like objects to provide a consistent experience
+    in the language, as you’ll see later in this chapter.
+
+
+    # Reference Types
+
+
+    Reference types represent objects in JavaScript and are the closest things to
+    classes that you will find in the language. Reference values are instances of
+    reference types and are synonymous with objects (the rest of this chapter refers
+    to reference values simply as objects). An object is an unordered list of properties
+    consisting of a name (always a string) and a value. When the value of a property
+    is a function, it is called a method. Functions themselves are actually reference
+    values in JavaScript, so there’s little difference between a property that contains
+    an array and one that contains a function except that a function can be executed.
+
+
+    Of course, you must create objects before you can begin working with them.
+
+
+    # Creating Objects
+
+
+    It sometimes helps to think of JavaScript objects as nothing more than hash tables,
+    as shown in Figure 1-2.
+
+
+    There are a couple of ways to create, or instantiate, objects. The first is to
+    use the new operator with a constructor. (A constructor is simply a function that
+    uses new to create an object—any function can be
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_26_0.png)
+
+
+    Figure 1-2: Structure of an object'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'a constructor.) By convention, constructors in JavaScript begin with a capital
+    letter to distinguish them from nonconstructor functions. For example, this code
+    instantiates a generic object and stores a reference to it in object:
+
+
+    ```
+
+    var object = new Object();
+
+    ```
+
+
+    Reference types do not store the object directly into the variable to which it
+    is assigned, so the object variable in this example doesn’t actually contain the
+    object instance. Instead, it holds a pointer (or reference) to the location in
+    memory where the object exists. This is the primary difference between objects
+    and primitive values, as the primitive is stored directly in the variable.
+
+
+    When you assign an object to a variable, you’re actually assigning a pointer.
+    That means if you assign one variable to another, each variable gets a copy of
+    the pointer, and both still reference the same object in memory. For example:
+
+
+    ```
+
+    var object1 = new Object();
+
+    var object2 = object1;
+
+    ```
+
+
+    This code first creates an object (with new) and stores a reference in object1.
+    Next, object2 is assigned the value of object1. There is still only the one instance
+    of the object that was created on the first line, but both variables now point
+    to that object, as illustrated in Figure 1-3.
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_27_0.png)
+
+
+    Figure 1-3: Two variables pointing to one object
+
+
+    # Dereferencing Objects
+
+
+    JavaScript is a garbage-collected language, so you don’t really need to worry
+    about memory allocations when you use reference types. However, it’s best to dereference
+    objects that you no longer need so that the garbage collector can free up that
+    memory. The best way to do this is to set the object variable to null.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '```
+
+    var object1 = new Object();
+
+
+    // do something
+
+
+    object1 = null;    // dereference
+
+    ```
+
+
+    Here, object1 is created and used before finally being set to null. When there
+    are no more references to an object in memory, the garbage collector can use that
+    memory for something else. (Dereferencing objects is especially important in very
+    large applications that use millions of objects.)
+
+
+    # Adding or Removing Properties
+
+
+    Another interesting aspect of objects in JavaScript is that you can add and remove
+    properties at any time. For example:
+
+
+    ```
+
+    var object1 = new Object();
+
+    var object2 = object1;
+
+
+    object1.myCustomProperty = "Awesome!";
+
+    console.log(object2.myCustomProperty);    // "Awesome!"
+
+    ```
+
+
+    Here, myCustomProperty is added to object1 with a value of "Awesome!". That property
+    is also accessible on object2 because both object1 and object2 point to the same
+    object.
+
+
+    > NOTE This example demonstrates one particularly unique aspect of JavaScript:
+    You can modify objects whenever you want, even if you didn''t define them in the
+    first place. And there are ways to prevent such modifications, as you''ll learn
+    later in this book.
+
+
+    In addition to generic object reference types, JavaScript has several other built-in
+    types that are at your disposal.
+
+
+    # Instantiating Built-in Types
+
+
+    You''ve seen how to create and interact with generic objects created with new
+    Object(). The Object type is just one of a handful of built-in reference types
+    that JavaScript provides. The other built-in types are more specialized in their
+    intended usage and can be instantiated at any time.
+
+
+    The built-in types are:
+
+
+    +   - **Array**    An ordered list of numerically indexed values
+
+    +   - **Date**    A date and time'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "Error    A runtime error (there are also several more specific error subtypes)\n\
+    Function    A function\nObject    A generic object\nRegExp    A regular expression\n\
+    \nYou can instantiate each built-in reference type using new, as shown here:\n\
+    \n```\nvar items = new Array();\nvar now = new Date();\nvar error = new Error(\"\
+    Something bad happened.\");\nvar func = new Function(\"console.log('Hi');\");\n\
+    var object = new Object();\nvar re = new RegExp(\"\\\\d+\");\n```\n\n# Literal\
+    \ Forms\n\nSeveral built-in reference types have literal forms. A literal is syntax\
+    \ that allows you to define a reference value without explicitly creating an object,\
+    \ using the new operator and the object's constructor. (Earlier in this chapter,\
+    \ you saw examples of primitive literals including string literals, numeric literals,\
+    \ Boolean literals, the null literal, and the undefined literal.)\n\n# Object\
+    \ and Array Literals\n\nTo create an object with object literal syntax, you can\
+    \ define the properties of a new object inside braces. Properties are made up\
+    \ of an identifier or string, a colon, and a value, with multiple properties separated\
+    \ by commas. For example:\n\n```\nvar book = {\n  name: \"The Principles of Object-Oriented\
+    \ JavaScript\",\n  year: 2014\n};\n```\n\nYou can also use string literals as\
+    \ property names, which is useful when you want a property name to have spaces\
+    \ or other special characters:\n\n```\nvar book = {\n  \"name\": \"The Principles\
+    \ of Object-Oriented JavaScript\",\n  \"year\": 2014\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "This example is equivalent to the previous one despite the syntactic differences.\
+    \ Both examples are also logically equivalent to the following:\n\n```\nvar book\
+    \ = new Object();\nbook.name = \"The Principles of Object-Oriented JavaScript\"\
+    ;\nbook.year = 2014;\n```\n\nThe outcome of each of the previous three examples\
+    \ is the same: an object with two properties. The choice of pattern is up to you\
+    \ because the functionality is ultimately the same.\n\n> NOTE Using an object\
+    \ literal doesn’t actually call new Object(). Instead, the JavaScript engine follows\
+    \ the same steps it does when using new Object() without actually calling the\
+    \ constructor. This is true for all reference literals.\n\nYou can define an array\
+    \ literal in a similar way by enclosing any number of comma-separated values inside\
+    \ square brackets. For example:\n\n```\nvar colors = [ \"red\", \"blue\", \"green\"\
+    \ ];\nconsole.log(colors[0]);      // \"red\"\n```\n\nThis code is equivalent\
+    \ to the following:\n\n```\nvar colors = new Array(\"red\", \"blue\", \"green\"\
+    )\nconsole.log(colors[0]);      // \"red\"\n```\n\n# Function Literals\n\nYou\
+    \ almost always define functions using their literal form. In fact, using the\
+    \ Function constructor is typically discouraged given the challenges of maintaining,\
+    \ reading, and debugging a string of code rather than actual code, so you’ll rarely\
+    \ see it in code.\n\nCreating functions is much easier and less error prone when\
+    \ you use the literal form. For example:\n\n```\nfunction reflect(value) {\n \
+    \   return value;\n}\n\n// is the same as\n\nvar reflect = new Function(\"value\"\
+    , \"return value;\");\n```\n\nThis code defines the reflect() function, which\
+    \ returns any value passed to it. Even in the case of this simple function, the\
+    \ literal form is easier to write and understand than the constructor form. Further,\
+    \ there"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'is no good way to debug functions that are created in the constructor form:
+    These functions aren’t recognized by JavaScript debuggers and therefore act as
+    a black box in your application.
+
+
+    # Regular Expression Literals
+
+
+    JavaScript also has regular expression literals that allow you to define regular
+    expressions without using the RegExp constructor. Regular expression literals
+    look very similar to regular expressions in Perl: The pattern is contained between
+    two slashes, and any additional options are single characters following the second
+    slash. For example:
+
+
+    ```
+
+    var numbers = /\d+/g;
+
+
+    // is the same as
+
+
+    var numbers = new RegExp("\\d+", "g");
+
+    ```
+
+
+    The literal form of regular expressions in JavaScript is a bit easier to deal
+    with than the constructor form because you don’t need to worry about escaping
+    characters within strings. When using the RegExp constructor, you pass the pattern
+    in as a string, so you have to escape any backslashes. (That’s why \d is used
+    in the literal and \\d is used in the constructor.) Regular expression literals
+    are preferred over the constructor form in JavaScript except when the regular
+    expression is being constructed dynamically from one or more strings.
+
+
+    That said, with the exception of Function, there really isn’t any right or wrong
+    way to instantiate built-in types. Many developers prefer literals, while some
+    prefer constructors. Choose whichever method you find more comfortable to use.
+
+
+    # Property Access
+
+
+    Properties are name/value pairs that are stored on an object. Dot notation is
+    the most common way to access properties in JavaScript (as in many object-oriented
+    languages), but you can also access properties on JavaScript objects by using
+    bracket notation with a string.
+
+
+    For example, you could write this code, which uses dot notation:
+
+
+    ```
+
+    var array = [];
+
+    array.push(12345);
+
+    ```
+
+
+    With bracket notation, the name of the method is now included in a string enclosed
+    by square brackets, as in this example:
+
+
+    ```
+
+    var array = [];
+
+    array["push"](12345);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "This syntax is very useful when you want to dynamically decide which property\
+    \ to access. For example, here bracket notation allows you to use a variable instead\
+    \ of the string literal to specify the property to access.\n\n```\nvar array =\
+    \ [];\nvar method = \"push\";\narray[method](12345);\n```\n\nIn this listing,\
+    \ the variable method has a value of \"push\", so push() is called on the array.\
+    \ This capability is quite useful, as you’ll see throughout this book. The point\
+    \ to remember is that, other than syntax, the only difference—performance or otherwise—between\
+    \ dot notation and bracket notation is that bracket notation allows you to use\
+    \ special characters in property names. Developers tend to find dot notation easier\
+    \ to read, so you’ll see it used more frequently than bracket notation.\n\n# Identifying\
+    \ Reference Types\n\nA function is the easiest reference type to identify because\
+    \ when you use the typeof operator on a function, the operator should return \"\
+    function\":\n\n```\nfunction reflect(value) {\n    return value;\n}\n\nconsole.log(typeof\
+    \ reflect);    // \"function\"\n```\n\nOther reference types are trickier to identify\
+    \ because, for all reference types other than functions, typeof returns \"object\"\
+    . That’s not very helpful when you’re dealing with a lot of different types. To\
+    \ identify reference types more easily, you can use JavaScript’s instanceof operator.\n\
+    \nThe instanceof operator takes an object and a constructor as parameters. When\
+    \ the value is an instance of the type that the constructor specifies, instanceof\
+    \ returns true; otherwise, it returns false, as you can see here:\n\n```\nvar\
+    \ items = [];\nvar object = {};\n\nfunction reflect(value) {\n    return value;\n\
+    }\n\nconsole.log(items instanceof Array);      // true\nconsole.log(object instanceof\
+    \ Object);     // true\nconsole.log(reflect instanceof Function);  // true\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "In this example, several values are tested using instanceof and a constructor.\
+    \ Each reference type is correctly identified by using instanceof and the constructor\
+    \ that represents its true type (even though the constructor wasn’t used in creating\
+    \ the variable).\n\nThe instanceof operator can identify inherited types. That\
+    \ means every object is actually an instance of Object because every reference\
+    \ type inherits from Object.\n\nTo demonstrate, the following listing examines\
+    \ the three references previously created with instanceof:\n\n```\nvar items =\
+    \ [];\nvar object = {};\n\nfunction reflect(value) {\n    return value;\n}\n\n\
+    console.log(items instanceof Array);     // true\nconsole.log(items instanceof\
+    \ Object);    // true\nconsole.log(object instanceof Object);   // true\nconsole.log(object\
+    \ instanceof Array);    // false\nconsole.log(reflect instanceof Function); //\
+    \ true\nconsole.log(reflect instanceof Object);   // true\n```\n\nEach reference\
+    \ type is correctly identified as an instance of Object, from which all reference\
+    \ types inherit.\n\n# Identifying Arrays\n\nAlthough instanceof can identify arrays,\
+    \ there is one exception that affects web developers: JavaScript values can be\
+    \ passed back and forth between frames in the same web page. This becomes a problem\
+    \ only when you try to identify the type of a reference value, because each web\
+    \ page has its own global context—its own version of Object, Array, and all other\
+    \ built-in types. As a result, when you pass an array from one frame to another,\
+    \ instanceof doesn’t work because the array is actually an instance of Array from\
+    \ a different frame.\n\nTo solve this problem, ECMAScript 5 introduced Array.isArray(),\
+    \ which definitively identifies the value as an instance of Array regardless of\
+    \ the value’s origin. This method should return true when it receives a value\
+    \ that is a native array from any context. If your environment is ECMAScript 5\
+    \ compliant, Array.isArray() is the best way to identify arrays:\n\n```\nvar items\
+    \ = [];\n\nconsole.log(Array.isArray(items));     // true\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'The Array.isArray() method is supported in most environments, both in browsers
+    and in Node.js. This method isn’t supported in Internet Explorer 8 and earlier.
+
+
+    # Primitive Wrapper Types
+
+
+    Perhaps one of the most confusing parts of JavaScript is the concept of primitive
+    wrapper types. There are three primitive wrapper types (String, Number, and Boolean).
+    These special reference types exist to make working with primitive values as easy
+    as working with objects. (It would be very confusing if you had to use a different
+    syntax or switch to a procedural style just to get a substring of text.)
+
+
+    The primitive wrapper types are reference types that are automatically created
+    behind the scenes whenever strings, numbers, or Booleans are read. For example,
+    in the first line of this listing, a primitive string value is assigned to name.
+    The second line treats name like an object and calls charAt(0) using dot notation.
+
+
+    ```
+
+    var name = "Nicholas";
+
+    var firstChar = name.charAt(0);
+
+    console.log(firstChar); // "N"
+
+    ```
+
+
+    This is what happens behind the scenes:
+
+
+    ```
+
+    // what the JavaScript engine does
+
+    var name = "Nicholas";
+
+    var temp = new String(name);
+
+    var firstChar = temp.charAt(0);
+
+    temp = null;
+
+    console.log(firstChar); // "N"
+
+    ```
+
+
+    Because the second line uses a string (a primitive) like an object, the JavaScript
+    engine creates an instance of String so that charAt(0) will work. The String object
+    exists only for one statement before it’s destroyed (a process called autoboxing).
+    To test this out, try adding a property to a string as if it were a regular object:
+
+
+    ```
+
+    var name = "Nicholas";
+
+    name.last = "Zakas";
+
+    console.log(name.last); // undefined
+
+    ```
+
+
+    This code attempts to add the property last to the string name. The code itself
+    is just fine except that the property disappears. What happened? When working
+    with regular objects, you can add properties at any time and they stay until you
+    manually remove them. With primitive wrapper types, properties seem to disappear
+    because the object on which the property was assigned is destroyed immediately
+    afterward.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# Here’s what’s actually happening in the JavaScript engine:
+
+
+    ```
+
+    // what the JavaScript engine does
+
+    var name = "Nicholas";
+
+    var temp = new String(name);
+
+    temp.last = "Zakas";
+
+    temp = null;                     // temporary object destroyed
+
+
+    var temp = new String(name);
+
+    console.log(temp.last);          // undefined
+
+    temp = null;
+
+    ```
+
+
+    Instead of assigning a new property to a string, the code actually creates a new
+    property on a temporary object that is then destroyed. When you try to access
+    that property later, a different object is temporarily created and the new property
+    doesn’t exist there. Although reference values are created automatically for primitive
+    values, when instanceof checks for these types of values the result is false:
+
+
+    ```
+
+    var name = "Nicholas";
+
+    var count = 10;
+
+    var found = false;
+
+
+    console.log(name instanceof String);   // false
+
+    console.log(count instanceof Number);  // false
+
+    console.log(found instanceof Boolean); // false
+
+    ```
+
+
+    The instanceof operator returns false because a temporary object is created only
+    when a value is read. Because instanceof doesn’t actually read anything, no temporary
+    objects are created, and it tells us the values aren’t instances of primitive
+    wrapper types. You can create primitive wrapper types manually, but there are
+    certain side effects:
+
+
+    ```
+
+    var name = new String("Nicholas");
+
+    var count = new Number(10);
+
+    var found = new Boolean(false);
+
+
+    console.log(typeof name);   // "object"
+
+    console.log(typeof count);  // "object"
+
+    console.log(typeof found);  // "object"
+
+    ```
+
+
+    As you can see, creating an instance of the primitive wrapper type just creates
+    another object, which means that typeof can’t identify the type of data you intend
+    to store.
+
+
+    In addition, you can’t use String, Number, and Boolean objects as you would primitive
+    values. For example, the following code uses a Boolean object. The Boolean object
+    is false, yet console.log("Found") still executes because an object is always
+    considered true inside a conditional statement. It doesn’t matter that the object
+    represents false; it’s an object, so it evaluates to true.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "```\nvar found = new Boolean(false);\n\nif (found) {\n    console.log(\"Found\"\
+    );    // this executes\n}\n```\n\nManually instantiating primitive wrappers can\
+    \ also be confusing in other ways, so unless you find a special case where it\
+    \ makes sense to do so, you should avoid it. Most of the time, using primitive\
+    \ wrapper objects instead of primitives only leads to errors.\n\n# Summary\n\n\
+    While JavaScript doesn’t have classes, it does have types. Each variable or piece\
+    \ of data is associated with a specific primitive or reference type. The five\
+    \ primitive types (strings, numbers, Booleans, null, and undefined) represent\
+    \ simple values stored directly in the variable object for a given context. You\
+    \ can use typeof to identify primitive types with the exception of null, which\
+    \ must be compared directly against the special value null.\n\nReference types\
+    \ are the closest thing to classes in JavaScript, and objects are instances of\
+    \ reference types. You can create new objects using the new operator or a reference\
+    \ literal. You access properties and methods primarily using dot notation, but\
+    \ you can also use bracket notation. Functions are objects in JavaScript, and\
+    \ you can identify them with the typeof operator. You should use instanceof with\
+    \ a constructor to identify objects of any other reference type.\n\nTo make primitives\
+    \ seem more like references, JavaScript has three primitive wrapper types: String,\
+    \ Number, and Boolean. JavaScript creates these objects behind the scenes so that\
+    \ you can treat primitives like regular objects, but the temporary objects are\
+    \ destroyed as soon as the statement using them is complete. Although you can\
+    \ create your own instances of primitive wrappers, it’s best not to do that because\
+    \ it can be confusing."
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '# 2
+
+
+    # FUNCTIONS
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_37_0.png)
+
+
+    As discussed in Chapter 1, functions are actually objects in JavaScript. The defining
+    characteristic of a function—what distinguishes it from any other object—is the
+    presence of an *internal property* named [[Call]]. Internal properties are not
+    accessible via code but rather define the behavior of code as it executes. ECMAScript
+    defines multiple internal properties for objects in JavaScript, and these internal
+    properties are indicated by double-square-bracket notation.
+
+
+    The [[Call]] property is unique to functions and indicates that the object can
+    be executed. Because only functions have this property, the typeof operator is
+    defined by ECMAScript to return "function" for any object with a [[Call]] property.
+    That led to some confusion in the past, because some browsers also included a
+    [[Call]] property for regular'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "expressions, which were thus incorrectly identified as functions. All browsers\
+    \ now behave the same, so typeof no longer identifies regular expressions as functions.\n\
+    \nThis chapter discusses the various ways that functions are defined and executed\
+    \ in JavaScript. Because functions are objects, they behave differently than functions\
+    \ in other languages, and this behavior is central to a good understanding of\
+    \ JavaScript.\n\n# Declarations vs. Expressions\n\nThere are actually two literal\
+    \ forms of functions. The first is a function declaration, which begins with the\
+    \ function keyword and includes the name of the function immediately following\
+    \ it. The contents of the function are enclosed in braces, as shown in this declaration:\n\
+    \n```\nfunction add(num1, num2) {\n    return num1 + num2;\n}\n```\n\nThe second\
+    \ form is a function expression, which doesn’t require a name after function.\
+    \ These functions are considered anonymous because the function object itself\
+    \ has no name. Instead, function expressions are typically referenced via a variable\
+    \ or property, as in this expression:\n\n```\nvar add = function(num1, num2) {\n\
+    \    return num1 + num2;\n};\n```\n\nThis code actually assigns a function value\
+    \ to the variable add. The function expression is almost identical to the function\
+    \ declaration except for the missing name and the semicolon at the end. Assignment\
+    \ expressions typically end with a semicolon, just as if you were assigning any\
+    \ other value.\n\nAlthough these two forms are quite similar, they differ in a\
+    \ very important way. Function declarations are hoisted to the top of the context\
+    \ (either the function in which the declaration occurs or the global scope) when\
+    \ the code is executed. That means you can actually define a function after it\
+    \ is used in code without generating an error. For example:\n\n```\nvar result\
+    \ = add(5, 5);\n\nfunction add(num1, num2) {\n    return num1 + num2;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "This code might look like it will cause an error, but it works just fine. That's\
+    \ because the JavaScript engine hoists the function declaration to the top and\
+    \ actually executes the code as if it were written like this:\n\n```\n// how the\
+    \ JavaScript engine interprets the code\nfunction add(num1, num2) {\n    return\
+    \ num1 + num2;\n}\n\nvar result = add(5, 5);\n```\n\nFunction hoisting happens\
+    \ only for function declarations because the function name is known ahead of time.\
+    \ Function expressions, on the other hand, cannot be hoisted because the functions\
+    \ can be referenced only through a variable. So this code causes an error:\n\n\
+    ```\n// error!\nvar result = add(5, 5);\n\nvar add = function(num1, num2) {\n\
+    \    return num1 + num2;\n};\n```\n\nAs long as you always define functions before\
+    \ using them, you can use either function declarations or function expressions.\n\
+    \n# Functions as Values\n\nBecause JavaScript has first-class functions, you can\
+    \ use them just as you do any other objects. You can assign them to variables,\
+    \ add them to objects, pass them to other functions as arguments, and return them\
+    \ from functions. Basically, you can use a function anywhere you would use any\
+    \ other reference value. This makes JavaScript functions incredibly powerful.\
+    \ Consider the following example:\n\n```\n① function sayHi() {\n    console.log(\"\
+    Hi!\");\n}\n\nsayHi();      // outputs \"Hi!\"\n\n② var sayHi2 = sayHi;\n\nsayHi2();\
+    \     // outputs \"Hi!\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "In this code, there is a function declaration for sayHi ①. A variable named\
+    \ sayHi2 is then created and assigned the value of sayHi ②. Both sayHi and sayHi2\
+    \ are now pointing to the same function, and that means either can be executed,\
+    \ with the same result. To understand why this happens, take a look at the same\
+    \ code rewritten to use the Function constructor:\n\n```\nvar sayHi = new Function(\"\
+    console.log(\\\"Hi!\\\");\");\n\nsayHi();  // outputs \"Hi!\"\n\nvar sayHi2 =\
+    \ sayHi;\n\nsayHi2();  // outputs \"Hi!\"\n```\n\nThe Function constructor makes\
+    \ it more explicit that sayHi can be passed around just like any other object.\
+    \ When you keep in mind that functions are objects, a lot of the behavior starts\
+    \ to make sense.\n\nFor instance, you can pass a function into another function\
+    \ as an argument. The sort() method on JavaScript arrays accepts a comparison\
+    \ function as an optional parameter. The comparison function is called whenever\
+    \ two values in the array must be compared. The first value is smaller than the\
+    \ second, the comparison function must return a negative number. If the first\
+    \ value is larger than the second, the function must return a positive number.\
+    \ If the two values are equal, the function should return zero.\n\n```\nvar numbers\
+    \ = [ 1, 5, 8, 4, 7, 10, 2, 6 ];\n\nnumbers.sort(function(first, second) {\n \
+    \ return first - second;\n});\n\nconsole.log(numbers);  // \"[1, 2, 4, 5, 6, 7,\
+    \ 8, 10]\"\n```\n\n```\nnumbers.sort();\n\nconsole.log(numbers);  // \"[1, 10,\
+    \ 2, 4, 5, 6, 7, 8]\"\n```\n\nIn this example, the comparison function ① that\
+    \ is passed into sort() is actually a function expression. Note that there is\
+    \ no name for the function; it exists only as a reference that is passed into\
+    \ another function (making it an anonymous function). Subtracting the two values\
+    \ returns the correct result from the comparison function."
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "Compare that to the second call to sort() 2, which does not use a comparison\
+    \ function. The order of the array is different than expected, as 1 is followed\
+    \ by 10. This is because the default comparison converts all values to strings\
+    \ before comparing them.\n\n# Parameters\n\nAnother unique aspect of JavaScript\
+    \ functions is that you can pass any number of parameters to any function without\
+    \ causing an error. That's because function parameters are actually stored as\
+    \ an array-like structure called arguments. Just like a regular JavaScript array,\
+    \ arguments can grow to contain any number of values. The values are referenced\
+    \ via numeric indices, and there is a length property to determine how many values\
+    \ are present.\n\nThe arguments object is automatically available inside any function.\
+    \ This means named parameters in a function exist mostly for convenience and don't\
+    \ actually limit the number of arguments that a function can accept.\n\n> NOTE\
+    \ The arguments object is not an instance of Array and therefore doesn't have\
+    \ the same methods as an array; Array.isArray(arguments) always returns false.\n\
+    \nOn the other hand, JavaScript doesn't ignore the named parameters of a function\
+    \ either. The number of arguments a function expects is stored on the function's\
+    \ length property. Remember, a function is actually just an object, so it can\
+    \ have properties. The length property indicates the function's arity, or the\
+    \ number of parameters it expects. Knowing the function's arity is important in\
+    \ JavaScript because functions won't throw an error if you pass in too many or\
+    \ too few parameters.\n\nHere's a simple example using arguments and function\
+    \ arity; note that the number of arguments passed to the function has no effect\
+    \ on the reported arity:\n\n```\nfunction reflect(value) {\n  return value;\n\
+    }\n\nconsole.log(reflect(\"Hi!\"));      // \"Hi!\"\nconsole.log(reflect(\"Hi!\"\
+    , 25));  // \"Hi!\"\nconsole.log(reflect.length);       // 1\n\nreflect = function()\
+    \ {\n  return arguments[0];\n};\n\nconsole.log(reflect(\"Hi!\"));      // \"Hi!\"\
+    \nconsole.log(reflect(\"Hi!\", 25));  // \"Hi!\"\nconsole.log(reflect.length);\
+    \       // 0\n```"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "# Overloading\n\nMost object-oriented languages support *function overloading*,\
+    \ which is the ability of a single function to have multiple *signatures*. A function\
+    \ signature is made up of the function name plus the number and type of parameters\
+    \ the function expects. Thus, a single function can have one signature that accepts\
+    \ a single string argument and another that accepts two numeric arguments. The\
+    \ language determines which version of a function to call based on the arguments\
+    \ that are passed in.\n\nAs mentioned previously, JavaScript functions can accept\
+    \ any number of parameters, and the types of parameters a function takes aren’t\
+    \ specified at all. That means JavaScript functions don’t actually have signatures.\
+    \ A lack of function signatures also means a lack of function overloading. Look\
+    \ at what happens when you try to declare two functions with the same name:\n\n\
+    ```\nfunction sayMessage(message) {\n    console.log(message);\n}\n\nfunction\
+    \ sayMessage() {\n    console.log(\"Default message\");\n}\n\nsayMessage(\"Hello!\"\
+    );    // outputs \"Default message\"\n```\n\nIf this were another language, the\
+    \ output of sayMessage(\"Hello!\") would likely be \"Hello!\". In JavaScript,\
+    \ however, when you define multiple functions with the same name, the one that\
+    \ appears last in your code wins. The earlier function declarations are completely\
+    \ removed, and the last is the one that is used. Once again, it helps to think\
+    \ about this situation using objects:\n\n```\nvar sayMessage = new Function(\"\
+    message\", \"console.log(message);\");\n\nsayMessage = new Function(\"console.log(\\\
+    \"Default message\\\");\");\n\nsayMessage(\"Hello!\");    // outputs \"Default\
+    \ message\"\n```\n\nLooking at the code this way makes it clear why the previous\
+    \ code didn’t work. A function object is being assigned to sayMessage twice in\
+    \ a row, so it makes sense that the first function object would be lost."
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "The fact that functions don’t have signatures in JavaScript doesn’t mean you\
+    \ can’t mimic function overloading. You can retrieve the number of parameters\
+    \ that were passed in by using the arguments object, and you can use that information\
+    \ to determine what to do. For example:\n\n```\nfunction sayMessage(message) {\n\
+    \    if (arguments.length === 0) {\n        message = \"Default message\";\n \
+    \   }\n    console.log(message);\n}\n\nsayMessage(\"Hello!\");      // outputs\
+    \ \"Hello!\"\n```\n\nIn this example, the sayMessage() function behaves differently\
+    \ based on the number of parameters that were passed in. If no parameters are\
+    \ passed in (arguments.length === 0), then a default message is used. Otherwise,\
+    \ the first parameter is used as the message. This is a little more involved than\
+    \ function overloading in other languages, but the end result is the same. If\
+    \ you really want to check for different data types, you can use typeof and instanceof.\n\
+    \nNOTE In practice, checking the named parameter against undefined is more common\
+    \ than relying on arguments.length.\n\n# Object Methods\n\nAs mentioned in Chapter\
+    \ 1, you can add and remove properties from objects at any time. When a property\
+    \ value is actually a function, the property is considered a method. You can add\
+    \ a method to an object in the same way that you would add a property. For example,\
+    \ in the following code, the person variable is assigned an object literal with\
+    \ a name property and a method called sayName.\n\n```\nvar person = {\n    name:\
+    \ \"Nicholas\",\n    sayName: function() {\n        console.log(person.name);\n\
+    \    }\n};\n\nperson.sayName();      // outputs \"Nicholas\"\n```\n\nNote that\
+    \ the syntax for a data property and a method is exactly the same—an identifier\
+    \ followed by a colon and the value. In the case of sayName, the value just happens\
+    \ to be a function. You can then call the method directly from the object as in\
+    \ person.sayName(\"Nicholas\")."
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "# The this Object\n\nYou may have noticed something strange in the previous\
+    \ example. The sayName() method references person.name directly, which creates\
+    \ tight coupling between the method and the object. This is problematic for a\
+    \ number of reasons. First, if you change the variable name, you also need to\
+    \ remember to change the reference to that name in the method. Second, this sort\
+    \ of tight coupling makes it difficult to use the same function for different\
+    \ objects. Fortunately, JavaScript has a way around this issue.\n\nEvery scope\
+    \ in JavaScript has a this object that represents the calling object for the function.\
+    \ In the global scope, this represents the global object (window in web browsers).\
+    \ When a function is called while attached to an object, the value of this is\
+    \ equal to that object by default. So, instead of directly referencing an object\
+    \ inside a method, you can reference this instead. For example, you can rewrite\
+    \ the code from the previous example to use this:\n\n```\nvar person = {\n  name:\
+    \ \"Nicholas\",\n  sayName: function() {\n    console.log(this.name);\n  }\n};\n\
+    \nperson.sayName();      // outputs \"Nicholas\"\n```\n\nThis code works the same\
+    \ as the earlier version, but this time, sayName() references this instead of\
+    \ person. That means you can easily change the name of the variable or even reuse\
+    \ the function on different objects.\n\n```\nfunction sayNameForAll() {\n  console.log(this.name);\n\
+    }\n\nvar person1 = {\n  name: \"Nicholas\",\n  sayName: sayNameForAll\n};\n\n\
+    var person2 = {\n  name: \"Greg\",\n  sayName: sayNameForAll\n};\n\nvar name =\
+    \ \"Michael\";\n\nperson1.sayName();      // outputs \"Nicholas\"\nperson2.sayName();\
+    \      // outputs \"Greg\"\n\nsayNameForAll();        // outputs \"Michael\"\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "In this example, a function called sayName is defined first. Then, two object\
+    \ literals are created that assign sayName to be equal to the sayNameForAll function.\
+    \ Functions are just reference values, so you can assign them as property values\
+    \ on any number of objects. When sayName() is called on person1, it outputs \"\
+    Nicholas\"; when called on person2, it outputs \"Greg\". That's because this is\
+    \ set when the function is called, so this.name is accurate.\n\nThe last part\
+    \ of this example defines a global variable called name. When sayNameForAll()\
+    \ is called directly, it outputs \"Michael\" because the global variable is considered\
+    \ a property of the global object.\n\n# Changing this\n\nThe ability to use and\
+    \ manipulate the this value of functions is key to good object-oriented programming\
+    \ in JavaScript. Functions can be used in many different contexts, and they need\
+    \ to be able to work in each situation. Even though this is typically assigned\
+    \ automatically, you can change its value to achieve different goals. There are\
+    \ three function methods that allow you to change the value of this. (Remember\
+    \ that functions are objects, and objects can have methods, so functions can,\
+    \ too.)\n\n# The call() Method\n\nThe first function method for manipulating this\
+    \ is call(), which executes the function with a particular this value and with\
+    \ specific parameters. The first parameter of call() is the value to which this\
+    \ should be equal when the function is executed. All subsequent parameters are\
+    \ the parameters that should be passed into the function. For example, suppose\
+    \ you update sayNameForAll() to take a parameter:\n\n```\nfunction sayNameForAll(label)\
+    \ {\n    console.log(label + \":\" + this.name);\n}\n\nvar person1 = {\n    name:\
+    \ \"Nicholas\"\n};\n\nvar person2 = {\n    name: \"Greg\"\n};\n\nvar name = \"\
+    Michael\";\n\nsayNameForAll.call(this, \"global\");      // outputs \"global:Michael\"\
+    \nsayNameForAll.call(person1, \"person1\");  // outputs \"person1:Nicholas\"\n\
+    sayNameForAll.call(person2, \"person2\");  // outputs \"person2:Greg\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "In this example, sayNameForAll() accepts one parameter that is used as a label\
+    \ to the output value. The function is then called three times. Notice that there\
+    \ are no parentheses after the function name because it is accessed as an object\
+    \ rather than as code to execute. The first function call uses the global this\
+    \ and passes in the parameter \"global\" to output \"global:Michael\". The same\
+    \ function is called two more times, once each for person1 and person2. Because\
+    \ the call() method is being used, you don't need to add the function directly\
+    \ onto each object—you explicitly specify the value of this instead of letting\
+    \ the JavaScript engine do it automatically.\n\n# The apply() Method\n\nThe second\
+    \ function method you can use to manipulate this is apply(). The apply() method\
+    \ works exactly the same as call() except that it accepts only two parameters:\
+    \ the value for this and an array or array-like object of parameters to pass to\
+    \ the function (that means you can use an arguments object as the second parameter).\
+    \ So, instead of individually naming each parameter using call(), you can easily\
+    \ pass arrays to apply() as the second argument. Otherwise, call() and apply()\
+    \ behave identically. This example shows the apply() method in action:\n\n```\n\
+    ```javascript\nfunction sayNameForAll(label) {\n  console.log(label + \":\" +\
+    \ this.name);\n}\n\nvar person1 = {\n  name: \"Nicholas\"\n};\n\nvar person2 =\
+    \ {\n  name: \"Greg\"\n};\n\nvar name = \"Michael\";\n\nsayNameForAll.apply(this,\
+    \ [\"global\"]); // outputs \"global:Michael\"\nsayNameForAll.apply(person1, [\"\
+    person1\"]); // outputs \"person1:Nicholas\"\nsayNameForAll.apply(person2, [\"\
+    person2\"]); // outputs \"person2:Greg\"\n```\n```\n\nThis code takes the previous\
+    \ example and replaces call() with apply(); the result is exactly the same. The\
+    \ method you use typically depends on the type of data you have. If you already\
+    \ have an array of data, use apply(); if you just have individual variables, use\
+    \ call()."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# The bind() Method\n\nThe third function method for changing this is bind().\
+    \ This method was added in ECMAScript 5, and it behaves quite differently than\
+    \ the other two. The first argument to bind() is the this value for the new function.\
+    \ All other arguments represent named parameters that should be permanently set\
+    \ in the new function. You can still pass in any parameters that aren’t permanently\
+    \ set later.\n\nThe following code shows two examples that use bind(). You create\
+    \ the sayNameForPerson1() function by binding the this value to person1, while\
+    \ sayNameForPerson2() binds this to person2 and binds the first parameter as \"\
+    person2\".\n\n```\nfunction sayNameForAll(label) {\n    console.log(label + \"\
+    :\" + this.name);\n}\n\nvar person1 = {\n    name: \"Nicholas\"\n};\n\nvar person2\
+    \ = {\n    name: \"Greg\"\n};\n\n// create a function just for person1\n① var\
+    \ sayNameForPerson1 = sayNameForAll.bind(person1);\nsayNameForPerson1(\"person1\"\
+    );      // outputs \"person1:Nicholas\"\n\n// create a function just for person2\n\
+    ② var sayNameForPerson2 = sayNameForAll.bind(person2, \"person2\");\nsayNameForPerson2();\
+    \                // outputs \"person2:Greg\"\n\n// attaching a method to an object\
+    \ doesn't change 'this'\n③ person2.sayName = sayNameForPerson1;\nperson2.sayName(\"\
+    person2\");         // outputs \"person2:Nicholas\"\n```\n\nNo parameters are\
+    \ bound for sayNameForPerson1() ①, so you still need to pass in the label for\
+    \ the output. The function sayNameForPerson2() not only binds this to person2\
+    \ but also binds the first parameter as \"person2\" ②. That means you can call\
+    \ sayNameForPerson2() without passing in any additional arguments. The last part\
+    \ of this example adds sayNameForPerson1() onto person2 with the name sayName\
+    \ ③. The function is bound, so the value of this doesn’t change even though sayNameForPerson1\
+    \ is now a function on person2. The method still outputs the value of person1.name."
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# Summary
+
+
+    JavaScript functions are unique in that they are also objects, meaning they can
+    be accessed, copied, overwritten, and generally treated just like any other object
+    value. The biggest difference between a JavaScript function and other objects
+    is a special internal property, [[Call]], which contains the execution instructions
+    for the function. The typeof operator looks for this internal property on an object,
+    and if it finds it, returns "function".
+
+
+    There are two function literal forms: declarations and expressions. Function declarations
+    contain the function name to the right of the function keyword and are hoisted
+    to the top of the context in which they are defined. Function expressions are
+    used where other values can also be used, such as assignment expressions, function
+    parameters, or the return value of another function.
+
+
+    Because functions are objects, there is a Function constructor. You can create
+    new functions with the Function constructor, but this isn’t generally recommended
+    because it can make your code harder to understand and debugging much more difficult.
+    That said, you will likely run into its usage from time to time in situations
+    where the true form of the function isn’t known until runtime.
+
+
+    You need a good grasp of functions to understand how object-oriented programming
+    works in JavaScript. Because JavaScript has no concept of a class, functions and
+    other objects are all you have to work with to achieve aggregation and inheritance.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# 3
+
+
+    # UNDERSTANDING OBJECTS
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_51_0.png)
+
+
+    Even though there are a number of built-in reference types in JavaScript, you
+    will most likely create your own objects fairly frequently. As you do so, keep
+    in mind that objects in JavaScript are dynamic, meaning that they can change at
+    any point during code execution. Whereas class-based languages lock down objects
+    based on a class definition, JavaScript objects have no such restrictions.
+
+
+    A large part of JavaScript programming is managing those objects, which is why
+    understanding how objects work is key to understanding JavaScript as a whole.
+    This is discussed in more detail later in this chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# Defining Properties\n\nRecall from Chapter 1 that there are two basic ways\
+    \ to create your own objects: using the Object constructor and using an object\
+    \ literal. For example:\n\n```\nvar person1 = {\n  name: \"Nicholas\"\n};\n\n\
+    var person2 = new Object();\nperson2.name = \"Nicholas\";\n\n① person1.age = \"\
+    Redacted\";\nperson2.age = \"Redacted\";\n\n② person1.name = \"Greg\";\nperson2.name\
+    \ = \"Michael\";\n```\n\nBoth person1 and person2 are objects with a name property.\
+    \ Later in the example, both objects are assigned an age property ①. You could\
+    \ do this immediately after the definition of the object or much later. Objects\
+    \ you create are always wide open for modification unless you specify otherwise\
+    \ (more on that in “Preventing Object Modification” on page 45). The last part\
+    \ of this example changes the value of name on each object ②; property values\
+    \ can be changed at any time as well.\n\nWhen a property is first added to an\
+    \ object, JavaScript uses an internal method called [[Put]] on the object. The\
+    \ [[Put]] method creates a spot in the object to store the property. You can compare\
+    \ this to adding a key to a hash table for the first time. This operation specifies\
+    \ not just the initial value, but also some attributes of the property. So, in\
+    \ the previous example, when the name and age properties are first defined on\
+    \ each object, the [[Put]] method is invoked for each.\n\nThe result of calling\
+    \ [[Put]] is the creation of an own property on the object. An own property simply\
+    \ indicates that the specific instance of the object owns that property. The property\
+    \ is stored directly on the instance, and all operations on the property must\
+    \ be performed through that object.\n\n> NOTE Own properties are distinct from\
+    \ prototype properties, which are discussed in Chapter 4.\n\nWhen a new value\
+    \ is assigned to an existing property, a separate operation called [[Set]] takes\
+    \ place. This operation replaces the current value of the property with the new\
+    \ one. In the previous example, setting name"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: "to a second value results in a call to [[Set]]. See Figure 3-1 for a step-by-step\
+    \ view of what happened to person1 behind the scenes as its name and age properties\
+    \ were changed.\n\n![](img/dcf53336af93733d4dab8829d31ceb8e_53_0.png)\n\nFigure\
+    \ 3-1: Adding and changing properties of an object\n\nIn the first part of the\
+    \ diagram, an object literal is used to create the person1 object. This performs\
+    \ an implicit [[Put]] for the name property. Assigning a value to person1.age\
+    \ performs a [[Put]] for the age property. However, setting person1.name to a\
+    \ new value (\"Greg\") performs a [[Set]] operation on the name property, overwriting\
+    \ the existing property value.\n\n# Detecting Properties\n\nBecause properties\
+    \ can be added at any time, it’s sometimes necessary to check whether a property\
+    \ exists in the object. New JavaScript developers often incorrectly use patterns\
+    \ like the following to detect whether a property exists:\n\n```\n// unreliable\n\
+    if (person1.age) {\n    // do something with age\n}\n```\n\nThe problem with this\
+    \ pattern is how JavaScript’s type coercion affects the outcome. The if condition\
+    \ evaluates to true if the value is truthy (an object, a nonempty string, a nonzero\
+    \ number, or true) and evaluates to false if the value is falsy (null, undefined,\
+    \ 0, false, NaN, or an empty string). Because an object property can contain one\
+    \ of these falsy values, the example code can yield false negatives. For instance,\
+    \ if person1.age is 0, then the if condition will not be met even though the property\
+    \ exists. A more reliable way to test for the existence of a property is with\
+    \ the in operator."
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: "The in operator looks for a property with a given name in a specific object\
+    \ and returns true if it finds it. In effect, the in operator checks to see if\
+    \ the given key exists in the hash table. For example, here’s what happens when\
+    \ in is used to check for some properties in the person1 object:\n\n```\nconsole.log(\"\
+    name\" in person1);    // true\nconsole.log(\"age\" in person1);      // true\n\
+    console.log(\"title\" in person1);    // false\n```\n\nKeep in mind that methods\
+    \ are just properties that reference functions, so you can check for the existence\
+    \ of a method in the same way. The following adds a new function, sayName(), to\
+    \ person1 and uses in to confirm the function’s presence.\n\n```\nvar person1\
+    \ = {\n    name: \"Nicholas\",\n    sayName: function() {\n        console.log(this.name);\n\
+    \    }\n};\n\nconsole.log(\"sayName\" in person1);  // true\n```\n\nIn most cases,\
+    \ the in operator is the best way to determine whether the property exists in\
+    \ an object. It has the added benefit of not evaluating the value of the property,\
+    \ which can be important if such an evaluation is likely to cause a performance\
+    \ issue or an error.\n\nIn some cases, however, you might want to check for the\
+    \ existence of a property only if it is an own property. The in operator checks\
+    \ for both own properties and prototype properties, so you’ll need to take a different\
+    \ approach. Enter the hasOwnProperty() method, which is present on all objects\
+    \ and returns true only if the given property exists and is an own property. For\
+    \ example, the following code compares the results of using in versus hasOwnProperty()\
+    \ on different properties in person1:\n\n```\nvar person1 = {\n    name: \"Nicholas\"\
+    ,\n    sayName: function() {\n        console.log(this.name);\n    }\n};\n\nconsole.log(\"\
+    name\" in person1);                     // true\nconsole.log(person1.hasOwnProperty(\"\
+    name\"));        // true\n\nconsole.log(\"toString\" in person1);            \
+    \     // true\nconsole.log(person1.hasOwnProperty(\"toString\"));    // false\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "In this example, name is an own property of person1, so both the in operator\
+    \ and hasOwnProperty() return true. The toString() method, however, is a prototype\
+    \ property that is present on all objects. The in operator returns true for toString(),\
+    \ but hasOwnProperty() returns false ①. This is an important distinction that\
+    \ is discussed further in Chapter 4.\n\n# Removing Properties\n\nJust as properties\
+    \ can be added to objects at any time, they can also be removed. Simply setting\
+    \ a property to null doesn't actually remove the property completely from the\
+    \ object, though. Such an operation calls [[Set]] with a value of null, which,\
+    \ as you saw earlier in the chapter, only replaces the value of the property.\
+    \ You need to use the delete operator to completely remove a property from an\
+    \ object.\n\nThe delete operator works on a single object property and calls an\
+    \ internal operation named [[Delete]]. You can think of this operation as removing\
+    \ a key/value pair from a hash table. When the delete operator is successful,\
+    \ it returns true. (Some properties can't be removed, and this is discussed in\
+    \ more detail later in the chapter.) For example, the following listing shows\
+    \ the delete operator at work:\n\n```\nvar person1 = {\n  name: \"Nicholas\"\n\
+    };\n\nconsole.log(\"name\" in person1);    // true\n\ndelete person1.name;   \
+    \             // true - not output\nconsole.log(\"name\" in person1);    // false\n\
+    console.log(person1.name);          // undefined\n```\n\nIn this example, the\
+    \ name property is deleted from person1. The in operator returns false after the\
+    \ operation is complete. Also, note that attempting to access a property that\
+    \ doesn't exist will just return undefined ①. Figure 3-2 shows how delete affects\
+    \ an object.\n\n![](img/dcf53336af93733d4dab8829d31ceb8e_55_0.png)\n\nFigure 3-2:\
+    \ When you delete the name property, it completely disappears from person1."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# Enumeration\n\nBy default, all properties that you add to an object are enumerable,\
+    \ which means that you can iterate over them using a for-in loop. Enumerable properties\
+    \ have their internal [[Enumerable]] attributes set to true. The for-in loop enumerates\
+    \ all enumerable properties on an object, assigning the property name to a variable.\
+    \ For example, the following loop outputs the property names and values of an\
+    \ object:\n\n```\nvar property;\n\nfor (property in object) {\n    console.log(\"\
+    Name: \" + property);\n    console.log(\"Value: \" + object[property]);\n}\n```\n\
+    \nEach time through the for-in loop, the property variable is filled with the\
+    \ next enumerable property on the object until all such properties have been used.\
+    \ At that point, the loop is finished and code execution continues. This example\
+    \ uses bracket notation to retrieve the value of the object property and output\
+    \ it to the console, which is one of the primary use cases for bracket notation\
+    \ in JavaScript.\n\nIf you just need a list of an object's properties to use later\
+    \ in your program, ECMAScript 5 introduced the Object.keys() method to retrieve\
+    \ an array of enumerable property names, as shown here:\n\n```\nvar properties\
+    \ = Object.keys(object);\n\n// if you want to mimic for-in behavior\nvar i, len;\n\
+    \nfor (i=0, len=properties.length; i < len; i++){\n    console.log(\"Name: \"\
+    \ + properties[i]);\n    console.log(\"Value: \" + object[properties[i]]);\n}\n\
+    ```\n\nThis example uses Object.keys() to retrieve the enumerable properties from\
+    \ an object ①. A for loop is then used to iterate over the properties and output\
+    \ the name and value. Typically, you would use Object.keys() in situations where\
+    \ you want to operate on an array of property names and for-in when you don't\
+    \ need an array.\n\n> NOTE There is a difference between the enumerable properties\
+    \ returned in a for-in loop and the ones returned by Object.keys(). The for-in\
+    \ loop also enumerates prototype properties, while Object.keys() returns only\
+    \ own (instance) properties. The differences between prototype and own properties\
+    \ are discussed in Chapter 4."
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "Keep in mind that not all properties are enumerable. In fact, most of the native\
+    \ methods on objects have their [[Enumerable]] attribute set to false. You can\
+    \ check whether a property is enumerable by using the propertyIsEnumerable() method,\
+    \ which is present on every object:\n\n```\nvar person1 = {\n    name: \"Nicholas\"\
+    \n};\n\nconsole.log(\"name\" in person1);                     // true\nconsole.log(person1.propertyIsEnumerable(\"\
+    name\"));   // true\n\nvar properties = Object.keys(person1);\n\nconsole.log(\"\
+    length\" in properties);                 // true\nconsole.log(properties.propertyIsEnumerable(\"\
+    length\")); // false\n```\n\nHere, the property name is enumerable, as it is a\
+    \ custom property defined on person1 ①. The length property for the properties\
+    \ array, on the other hand, is not enumerable ② because it's a built-in property\
+    \ on Array.prototype. You'll find that many native properties are not enumerable\
+    \ by default.\n\n# Types of Properties\n\nThere are two different types of properties:\
+    \ data properties and accessor properties. Data properties contain a value, like\
+    \ the name property from earlier examples in this chapter. The default behavior\
+    \ of the [[Put]] method is to create a data property, and every example up to\
+    \ this point in the chapter has used data properties. Accessor properties don't\
+    \ contain a value but instead define a function to call when the property is read\
+    \ (called a getter), and a function to call when the property is written to (called\
+    \ a setter). Accessor properties only require either a getter or a setter, though\
+    \ they can have both.\n\nThere is a special syntax to define an accessor property\
+    \ using an object literal:\n\n```\nvar person1 = {\n    _name: \"Nicholas\",\n\
+    \n    get name() {\n        console.log(\"Reading name\");\n        return this._name;\n\
+    \    },\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# Common Attributes\n\nThere are two property attributes shared between data\
+    \ and accessor properties. One is [[Enumerable]], which determines whether you\
+    \ can iterate over the property. The other is [[Configurable]], which determines\
+    \ whether the property can be changed. You can remove a configurable property\
+    \ using delete and can change its attributes at any time. (This also means configurable\
+    \ properties can be changed from data to accessor properties and vice versa.)\
+    \ By default, all properties you declare on an object are both enumerable and\
+    \ configurable.\n\nIf you want to change property attributes, you can use the\
+    \ Object.defineProperty() method. This method accepts three arguments: the object\
+    \ that owns the property, the property name, and a property descriptor object\
+    \ containing the attributes to set. The descriptor has properties with the same\
+    \ name as the internal attributes but without the square brackets. So you use\
+    \ enumerable to set [[Enumerable]], and configurable to set [[Configurable]].\
+    \ For example, suppose you want to make an object property nonenumerable and nonconfigurable:\n\
+    \n```\nvar person1 = {\n    name: \"Nicholas\"\n};\n\nObject.defineProperty(person1,\
+    \ \"name\", {\n    enumerable: false\n});\n\nconsole.log(\"name\" in person1);\
+    \          // true\nconsole.log(person1.propertyIsEnumerable(\"name\"));  // false\n\
+    \nvar properties = Object.keys(person1);\nconsole.log(properties.length);    \
+    \       // 0\n\nObject.defineProperty(person1, \"name\", {\n    configurable:\
+    \ false\n});\n\n// try to delete the Property\ndelete person1.name;\nconsole.log(\"\
+    name\" in person1);          // true\nconsole.log(person1.name);             \
+    \   // \"Nicholas\"\n\nObject.defineProperty(person1, \"name\", {  // error!!!\n\
+    \    configurable: true\n});\n```\n\nThe name property is defined as usual ①,\
+    \ but it’s then modified to set its [[Enumerable]] attribute to false ②. The propertyIsEnumerable()\
+    \ method now returns false ③ because it references the new value of [[Enumerable]]."
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "After that, name is changed to be nonconfigurable ④. From now on, attempts\
+    \ to delete name fail because the property can't be changed, so name is still\
+    \ present on person1 ⑤. Calling Object.defineProperty() on name again would also\
+    \ result in no further changes to the property. Effectively, name is locked down\
+    \ as a property on person1.\n\nThe last piece of the code tries to redefine name\
+    \ to be configurable once again ⑥. However, this throws an error because you can't\
+    \ make a nonconfigurable property configurable again. Attempting to change a data\
+    \ property into an accessor property or vice versa should also throw an error\
+    \ in this case.\n\n> NOTE When JavaScript is running in strict mode, attempting\
+    \ to delete a nonconfigurable property results in an error. In nonstrict mode,\
+    \ the operation silently fails.\n\n# Data Property Attributes\n\nData properties\
+    \ possess two additional attributes that accessors do not. The first is [[Value]],\
+    \ which holds the property value. This attribute is filled in automatically when\
+    \ you create a property on an object. All property values are stored in [[Value]],\
+    \ even if the value is a function.\n\nThe second attribute is [[Writable]], which\
+    \ is a Boolean value indicating whether the property can be written to. By default,\
+    \ all properties are writable unless you specify otherwise.\n\nWith these two\
+    \ additional attributes, you can fully define a data property using Object.defineProperty()\
+    \ even if the property doesn't already exist. Consider this code:\n\n```\nvar\
+    \ person1 = {\n    name: \"Nicholas\"\n};\n```\n\nYou've seen this snippet throughout\
+    \ this chapter; it adds the name property to person1 and sets its value. You can\
+    \ achieve the same result using the following (more verbose) code:\n\n```\nvar\
+    \ person1 = {};\n\nObject.defineProperty(person1, \"name\", {\n    value: \"Nicholas\"\
+    ,\n    enumerable: true,\n    configurable: true,\n    writable: true\n});\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "When Object.defineProperty() is called, it first checks to see if the property\
+    \ exists. If the property doesn’t exist, a new one is added with the attributes\
+    \ specified in the descriptor. In this case, name isn’t already a property of\
+    \ person1, so it is created.\n\nWhen you are defining a new property with Object.defineProperty(),\
+    \ it’s important to specify all of the attributes because Boolean attributes automatically\
+    \ default to false otherwise. For example, the following code creates a name property\
+    \ that is nonenumerable, nonconfigurable, and nonwritable because it doesn’t explicitly\
+    \ make any of those attributes true in the call to Object.defineProperty().\n\n\
+    ```\nvar person1 = {};\n\nObject.defineProperty(person1, \"name\", {\n    value:\
+    \ \"Nicholas\"\n});\n\nconsole.log(\"name\" in person1);                // true\n\
+    console.log(person1.propertyIsEnumerable(\"name\"));  // false\n\ndelete person1.name;\n\
+    console.log(\"name\" in person1);                // true\n\nperson1.name = \"\
+    Greg\";\nconsole.log(person1.name);                      // \"Nicholas\"\n```\n\
+    \nIn this code, you can’t do anything with the name property except read the value;\
+    \ every other operation is locked down. If you’re changing an existing property,\
+    \ keep in mind that only the attributes you specify will change.\n\n> NOTE Nonwritable\
+    \ properties throw an error in strict mode when you try to change the value. In\
+    \ nonstrict mode, the operation silently fails.\n\n# Accessor Property Attributes\n\
+    \nAccessor properties also have two additional attributes. Because there is no\
+    \ value stored for accessor properties, there is no need for [[Value]] or [[Writable]].\
+    \ Instead, accessors have [[Get]] and [[Set]], which contain the getter and setter\
+    \ functions, respectively. As with the object literal form of getters and setters,\
+    \ you need only define one of these attributes to create the property.\n\n> NOTE\
+    \ If you try to create a property with both data and accessor attributes, you\
+    \ will get an error."
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "The advantage of using accessor property attributes instead of object literal\
+    \ notation to define accessor properties is that you can also define those properties\
+    \ on existing objects. If you want to use object literal notation, you have to\
+    \ define accessor properties when you create the object.\n\nAs with data properties,\
+    \ you can also specify whether accessor properties are configurable or enumerable.\
+    \ Consider this example from earlier:\n\n```\nvar person1 = {\n  _name: \"Nicholas\"\
+    ,\n\n  get name() {\n    console.log(\"Reading name\");\n    return this._name;\n\
+    \  },\n\n  set name(value) {\n    console.log(\"Setting name to %s\", value);\n\
+    \    this._name = value;\n  }\n};\n```\n\nThis code can also be written as follows:\n\
+    \n```\nvar person1 = {\n  _name: \"Nicholas\"\n};\n\nObject.defineProperty(person1,\
+    \ \"name\", {\n  get: function() {\n    console.log(\"Reading name\");\n    return\
+    \ this._name;\n  },\n  set: function(value) {\n    console.log(\"Setting name\
+    \ to %s\", value);\n    this._name = value;\n  },\n  enumerable: true,\n  configurable:\
+    \ true\n});\n```\n\nNotice that the get and set keys on the object passed in to\
+    \ Object.defineProperty() are data properties that contain a function. You can’t\
+    \ use object literal accessor format here.\n\nSetting the other attributes ([[Enumerable]]\
+    \ and [[Configurable]]) allows you to change how the accessor property works.\
+    \ For example, you can create a nonconfigurable, nonenumerable, nonwritable property\
+    \ like this:\n\n```\nvar person1 = {\n  _name: \"Nicholas\"\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "```\nObject.defineProperty(person1, \"name\", {\n    get: function() {\n  \
+    \      console.log(\"Reading name\");\n        return this._name;\n    }\n});\n\
+    \nconsole.log(\"name\" in person1);                // true\nconsole.log(person1.propertyIsEnumerable(\"\
+    name\"));  // false\ndelete person1.name;\nconsole.log(\"name\" in person1); \
+    \               // true\n\nperson1.name = \"Greg\";\nconsole.log(person1.name);\
+    \                      // \"Nicholas\"\n```\n\nIn this code, the name property\
+    \ is an accessor property with only a getter ①. There is no setter or any other\
+    \ attributes to explicitly set to true, so the value can be read but not changed.\n\
+    \n> NOTE As with accessor properties defined via object literal notation, an accessor\
+    \ property without a setter throws an error in strict mode when you try to change\
+    \ the value. In nonstrict mode, the operation silently fails. Attempting to read\
+    \ an accessor property that has only a setter defined always returns undefined.\n\
+    \n# Defining Multiple Properties\n\nIt’s also possible to define multiple properties\
+    \ on an object simultaneously if you use Object.defineProperties() instead of\
+    \ Object.defineProperty(). This method accepts two arguments: the object to work\
+    \ on and an object containing all of the property information. The keys of that\
+    \ second argument are property names, and the values are descriptor objects defining\
+    \ the attributes for those properties. For example, the following code defines\
+    \ two properties:\n\n```\nvar person1 = {};\n\nObject.defineProperties(person1,\
+    \ {\n    // data property to store data\n    _name: {\n        value: \"Nicholas\"\
+    ,\n        enumerable: true,\n        configurable: true,\n        writable: true\n\
+    \    },\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\n// accessor property\nname: {\n    get: function() {\n        console.log(\"\
+    Reading name\");\n        return this._name;\n    },\n    set: function(value)\
+    \ {\n        console.log(\"Setting name to %s\", value);\n        this._name =\
+    \ value;\n    },\n    enumerable: true,\n    configurable: true\n}\n});\n```\n\
+    \nThis example defines _name as a data property to contain information ① and name\
+    \ as an accessor property ②. You can define any number of properties using Object.defineProperties();\
+    \ you can even change existing properties and create new ones at the same time.\
+    \ The effect is the same as calling Object.defineProperty() multiple times.\n\n\
+    # Retrieving Property Attributes\n\nIf you need to fetch property attributes,\
+    \ you can do so in JavaScript by using Object.getOwnPropertyDescriptor(). As the\
+    \ name suggests, this method works only on own properties. This method accepts\
+    \ two arguments: the object to work on and the property name to retrieve. If the\
+    \ property exists, you should receive a descriptor object with four properties:\
+    \ configurable, enumerable, and the two others appropriate for the type of property.\
+    \ Even if you didn’t specifically set an attribute, you will still receive an\
+    \ object containing the appropriate value for that attribute. For example, this\
+    \ code creates a property and checks its attributes:\n\n```\nvar person1 = {\n\
+    \    name: \"Nicholas\"\n};\n\nvar descriptor = Object.getOwnPropertyDescriptor(person1,\
+    \ \"name\");\n\nconsole.log(descriptor.enumerable);    // true\nconsole.log(descriptor.configurable);\
+    \   // true\nconsole.log(descriptor.writable);       // true\nconsole.log(descriptor.value);\
+    \          // \"Nicholas\"\n```\n\nHere, a property called name is defined as\
+    \ part of an object literal. The call to Object.getOwnPropertyDescriptor() returns\
+    \ an object with enumerable, configurable, writable, and value, even though these\
+    \ weren’t explicitly defined via Object.defineProperty()."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "# Preventing Object Modification\n\nObjects, just like properties, have internal\
+    \ attributes that govern their behavior. One of these attributes is [[Extensible]],\
+    \ which is a Boolean value indicating if the object itself can be modified. All\
+    \ objects you create are extensible by default, meaning new properties can be\
+    \ added to the object at any time. You’ve seen this several times in this chapter.\
+    \ By setting [[Extensible]] to false, you can prevent new properties from being\
+    \ added to an object. There are three different ways to accomplish this.\n\n#\
+    \ Preventing Extensions\n\nOne way to create a nonextensible object is with Object.preventExtensions().\
+    \ This method accepts a single argument, which is the object you want to make\
+    \ nonextensible. Once you use this method on an object, you’ll never be able to\
+    \ add any new properties to it again. You can check the value of [[Extensible]]\
+    \ by using Object.isExtensible(). The following code shows examples of both methods\
+    \ at work.\n\n```\nvar person1 = {\n  name: \"Nicholas\"\n};\n\n① console.log(Object.isExtensible(person1));\
+    \    // true\n\n② Object.preventExtensions(person1);\nconsole.log(Object.isExtensible(person1));\
+    \    // false\n\n③ person1.sayName = function() {\n  console.log(this.name);\n\
+    };\n\nconsole.log(\"sayName\" in person1);    // false\n```\n\nAfter creating\
+    \ person1, this example checks the object’s [[Extensible]] attribute ① before\
+    \ making it unchangeable ②. Now that person1 is nonextensible, the sayName() method\
+    \ ③ is never added to it.\n\n> NOTE\n> Attempting to add a property to a nonextensible\
+    \ object will throw an error in strict mode. In nonstrict mode, the operation\
+    \ fails silently. You should always use strict mode with nonextensible objects\
+    \ so that you are aware when a nonextensible object is being used incorrectly.\n\
+    \n# Sealing Objects\n\nThe second way to create a nonextensible object is to seal\
+    \ the object. A sealed object is nonextensible, and all of its properties are\
+    \ nonconfigurable. That means not only can you not add new properties to the object,"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "but you also can’t remove properties or change their type (from data to accessor\
+    \ or vice versa). If an object is sealed, you can only read from and write to\
+    \ its properties.\n\nYou can use the Object.seal() method on an object to seal\
+    \ it. When that happens, the [[Extensible]] attribute is set to false, and all\
+    \ properties have their [[Configurable]] attribute set to false. You can check\
+    \ to see whether an object is sealed using Object.isSealed() as follows:\n\n```\n\
+    var person1 = {\n  name: \"Nicholas\"\n};\n\nconsole.log(Object.isExtensible(person1));\
+    \ // true\nconsole.log(Object.isSealed(person1)); // false\n```\n\n+   ① Object.seal(person1);\n\
+    +   ② console.log(Object.isExtensible(person1)); // false\n+   console.log(Object.isSealed(person1));\
+    \ // true\n+   ③ person1.sayName = function() {\n+     console.log(this.name);\n\
+    +   };\n+   console.log(\"sayName\" in person1); // false\n+   ④ person1.name\
+    \ = \"Greg\";\n+   console.log(person1.name); // \"Greg\"\n+   ⑤ delete person1.name;\n\
+    +   console.log(\"name\" in person1); // true\n+   console.log(person1.name);\
+    \ // \"Greg\"\n+   \n+   var descriptor = Object.getOwnPropertyDescriptor(person1,\
+    \ \"name\");\n+   console.log(descriptor.configurable); // false\n\nThis code\
+    \ seals person1 ① so you can’t add or remove properties. Since all sealed objects\
+    \ are nonextensible, Object.isExtensible() returns false ② when used on person1,\
+    \ and the attempt to add a method called sayName() ③ fails silently. Also, though\
+    \ person1.name is successfully changed to a new value ④, the attempt to delete\
+    \ ⑤ fails.\n\nIf you’re familiar with Java or C++, sealed objects should also\
+    \ be familiar. When you create a new object instance based on a class in one of\
+    \ those languages, you can’t add any new properties to that object. However, if\
+    \ a property contains an object, you can modify that object. In effect, sealed\
+    \ objects are JavaScript’s way of giving you the same measure of control without\
+    \ using classes.\n\n**NOTE**\n\nBe sure to use strict mode with sealed objects\
+    \ so you’ll get an error when someone tries to use the object incorrectly."
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "# Freezing Objects\n\nThe last way to create a nonextensible object is to freeze\
+    \ it. If an object is frozen, you can't add or remove properties, you can't change\
+    \ properties' types, and you can't write to any data properties. In essence, a\
+    \ frozen object is a sealed object where data properties are also read-only. Frozen\
+    \ objects can't become unfrozen, so they remain in the state they were in when\
+    \ they became frozen. You can freeze an object by using Object.freeze() and determine\
+    \ if an object is frozen by using Object.isFrozen(). For example:\n\n```\nvar\
+    \ person1 = {\n    name: \"Nicholas\"\n};\n\nconsole.log(Object.isExtensible(person1));\
+    \    // true\nconsole.log(Object.isSealed(person1));        // false\nconsole.log(Object.isFrozen(person1));\
+    \        // false\n\n① Object.freeze(person1);\n② console.log(Object.isExtensible(person1));\
+    \  // false\n③ console.log(Object.isSealed(person1));      // true\nconsole.log(Object.isFrozen(person1));\
+    \        // true\n\nperson1.sayName = function() {\n    console.log(this.name);\n\
+    };\n\nconsole.log(\"sayName\" in person1);           // false\n\n④ person1.name\
+    \ = \"Greg\";\nconsole.log(person1.name);                    // \"Nicholas\"\n\
+    \ndelete person1.name;\nconsole.log(\"name\" in person1);              // true\n\
+    console.log(person1.name);                    // \"Nicholas\"\n\nvar descriptor\
+    \ = Object.getOwnPropertyDescriptor(person1, \"name\");\nconsole.log(descriptor.configurable);\
+    \         // false\nconsole.log(descriptor.writable);             // false\n```\n\
+    \nIn this example, person1 is frozen ①. Frozen objects are also considered nonextensible\
+    \ and sealed, so Object.isExtensible() returns false ② and Object.isSealed() returns\
+    \ true ③. The name property can't be changed, so even though it is assigned to\
+    \ \"Greg\", the operation fails ④, and subsequent checks of name will still return\
+    \ \"Nicholas\".\n\n> NOTE Frozen objects are simply snapshots of an object at\
+    \ a particular point in time. They are of limited use and should be used rarely.\
+    \ As with all nonextensible objects, you should use strict mode with frozen objects."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# Summary
+
+
+    It helps to think of JavaScript objects as hash maps where properties are just
+    key/value pairs. You access object properties using either dot notation or bracket
+    notation with a string identifier. You can add a property at any time by assigning
+    a value to it, and you can remove a property at any time with the delete operator.
+    You can always check whether a property exists by using the in operator on a property
+    name and object. If the property in question is an own property, you could also
+    use hasOwnProperty(), which exists on every object. All object properties are
+    enumerable by default, which means that they will appear in a for-in loop or be
+    retrieved by Object.keys().
+
+
+    There are two types of properties: data properties and accessor properties. Data
+    properties are placeholders for values, and you can read from and write to them.
+    When a data property holds a function value, the property is considered a method
+    of the object. Unlike data properties, accessor properties don’t store values
+    on their own; they use a combination of getters and setters to perform specific
+    actions. You can create both data properties and accessor properties directly
+    using object literal notation.
+
+
+    All properties have several associated attributes. These attributes define how
+    the properties work. Both data and accessor properties have [[Enumerable]] and
+    [[Configurable]] attributes. Data properties also have [[Writable]] and [[Value]]
+    attributes, while accessor properties have [[Get]] and [[Set]] attributes. By
+    default, [[Enumerable]] and [[Configurable]] are set to true for all properties,
+    and [[Writable]] is set to true for data properties. You can change these attributes
+    by using Object.defineProperty() or Object.defineProperties(). It’s also possible
+    to retrieve these attributes by using Object.getOwnPropertyDescriptor().
+
+
+    When you want to lock down an object’s properties in some way, there are three
+    different ways to do so. If you use Object.preventExtensions(), objects will no
+    longer allow properties to be added. You could also create a sealed object with
+    the Object.seal() method, which makes that object non-extensible and makes its
+    properties nonconfigurable. The Object.freeze() method creates a frozen object,
+    which is a sealed object with nonwritable data properties. Be careful with nonextensible
+    objects, and always use strict mode so that attempts to access the objects incorrectly
+    will throw an error.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# 4
+
+
+    # CONSTRUCTORS AND PROTOTYPES
+
+
+    You might be able to get pretty far in JavaScript without understanding constructors
+    and prototypes, but you won’t truly appreciate the language without a good grasp
+    of them. Because JavaScript lacks classes, it turns to constructors and prototypes
+    to bring a similar order to objects. But just because some of the patterns resemble
+    classes doesn’t mean they behave the same way. In this chapter, you’ll explore
+    constructors and prototypes in detail to see how JavaScript uses them to create
+    objects.
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_69_0.png)
+
+
+
+
+    A constructor is simply a function that is used with new to create an object.
+    Up to this point, you’ve seen several of the built-in JavaScript constructors,
+    such as Object, Array, and Function. The advantage of constructors is'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "that objects created with the same constructor contain the same properties\
+    \ and methods. If you want to create multiple similar objects, you can create\
+    \ your own constructors and therefore your own reference types.\n\nBecause a constructor\
+    \ is just a function, you define it in the same way. The only difference is that\
+    \ constructor names should begin with a capital letter, to distinguish them from\
+    \ other functions. For example, look at the following empty Person function:\n\
+    \n```\nfunction Person() {\n // intentionally empty\n}\n```\n\nThis function is\
+    \ a constructor, but there is absolutely no syntactic difference between this\
+    \ and any other function. The clue that Person is a constructor is in the name—the\
+    \ first letter is capitalized.\n\nAfter the constructor is defined, you can start\
+    \ creating instances, like the following two Person objects:\n\n```\nvar person1\
+    \ = new Person();\nvar person2 = new Person();\n```\n\nWhen you have no parameters\
+    \ to pass into your constructor, you can even omit the parentheses:\n\n```\nvar\
+    \ person1 = new Person;\nvar person2 = new Person;\n```\n\nEven though the Person\
+    \ constructor doesn’t explicitly return anything, both person1 and person2 are\
+    \ considered instances of the new Person type. The new operator automatically\
+    \ creates an object of the given type and returns it. That also means you can\
+    \ use the instanceof operator to deduce an object’s type. The following code shows\
+    \ instanceof in action with the newly created objects:\n\n```\nconsole.log(person1\
+    \ instanceof Person); // true\nconsole.log(person2 instanceof Person); // true\n\
+    ```\n\nBecause person1 and person2 were created with the Person constructor, instanceof\
+    \ returns true when it checks whether these objects are instances of the Person\
+    \ type.\n\nYou can also check the type of an instance using the constructor property.\
+    \ Every object instance is automatically created with a constructor property that\
+    \ contains a reference to the constructor function that created it. For generic\
+    \ objects (those created via an object literal or the Object constructor), constructor\
+    \ is set to Object; for objects created with a custom"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "constructor, constructor points back to that constructor function instead.\
+    \ For example, Person is the constructor property for person1 and person2:\n\n\
+    ```\nconsole.log(person1.constructor === Person);    // true\nconsole.log(person2.constructor\
+    \ === Person);    // true\n```\n\nThe console.log function outputs true in both\
+    \ cases, because both objects were created with the Person constructor.\n\nEven\
+    \ though this relationship exists between an instance and its constructor, you\
+    \ are still advised to use instanceof to check the type of an instance. This is\
+    \ because the constructor property can be overwritten and therefore may not be\
+    \ completely accurate.\n\nOf course, an empty constructor function isn't very\
+    \ useful. The whole point of a constructor is to make it easy to create more objects\
+    \ with the same properties and methods. To do that, simply add any properties\
+    \ you want to this inside of the constructor, as in the following example:\n\n\
+    ```\nfunction Person(name) {\n    this.name = name;\n    this.sayName = function()\
+    \ {\n        console.log(this.name);\n    };\n}\n```\n\nThis version of the Person\
+    \ constructor accepts a single named parameter, name, and assigns it to the name\
+    \ property of the this object ①. The constructor also adds a sayName() method\
+    \ to the object ②. The this object is automatically created by new when you call\
+    \ the constructor, and it is an instance of the constructor's type. (In this case,\
+    \ this is an instance of Person.) There's no need to return a value from the function\
+    \ because the new operator produces the return value.\n\nNow you can use the Person\
+    \ constructor to create objects with an initialized name property:\n\n```\nvar\
+    \ person1 = new Person(\"Nicholas\");\nvar person2 = new Person(\"Greg\");\n\n\
+    console.log(person1.name);          // \"Nicholas\"\nconsole.log(person2.name);\
+    \          // \"Greg\"\n\nperson1.sayName();                  // outputs \"Nicholas\"\
+    \nperson2.sayName();                  // outputs \"Greg\"\n```\n\nEach object\
+    \ has its own name property, so sayName() should return different values depending\
+    \ on the object on which you use it."
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "NOTE You can also explicitly call return inside of a constructor. If the returned\
+    \ value is an object, it will be returned instead of the newly created object\
+    \ instance. If the returned value is a primitive, the newly created object is\
+    \ used and the returned value is ignored.\n\nConstructors allow you to initialize\
+    \ an instance of a type in a consistent way, performing all of the property setup\
+    \ that is necessary before the object can be used. For example, you could also\
+    \ use Object.defineProperty() inside of a constructor to help initialize the instance:\n\
+    \n```\nfunction Person(name) {\n\n    Object.defineProperty(this, \"name\", {\n\
+    \        get: function() {\n            return name;\n        },\n        set:\
+    \ function(newName) {\n            name = newName;\n        },\n        enumerable:\
+    \ true,\n        configurable: true\n    });\n\n    this.sayName = function()\
+    \ {\n        console.log(this.name);\n    };\n}\n```\n\nIn this version of the\
+    \ Person constructor, the name property is an accessor property that uses the\
+    \ name parameter for storing the actual name. This is possible because named parameters\
+    \ act like local variables. Make sure to always call constructors with new; otherwise,\
+    \ you risk changing the global object instead of the newly created object. Consider\
+    \ what happens in the following code:\n\n```\nvar person1 = Person(\"Nicholas\"\
+    );        // note: missing \"new\"\n\nconsole.log(person1 instanceof Person);\
+    \    // false\nconsole.log(typeof person1);                // \"undefined\"\n\
+    console.log(name);                          // \"Nicholas\"\n```\n\nWhen Person\
+    \ is called as a function without new, the value of this inside of the constructor\
+    \ is equal to the global this object. The variable person1 doesn’t contain a value\
+    \ because the Person constructor relies on new to supply a return value. Without\
+    \ new, Person is just a function without a return statement. The assignment to\
+    \ this.name actually creates a global"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "variable called name, which is where the name passed to Person is stored. Chapter\
+    \ 6 describes a solution to both this problem and more complex object composition\
+    \ patterns.\n\n> An error occurs if you call the Person constructor in strict\
+    \ mode without using new. This is because strict mode doesn't assign this to the\
+    \ global object. Instead, this remains undefined, and an error occurs whenever\
+    \ you attempt to create a property on undefined.\n\nConstructors allow you to\
+    \ configure object instances with the same properties, but constructors alone\
+    \ don't eliminate code redundancy. In the example code thus far, each instance\
+    \ has had its own sayName() method even though sayName() doesn't change. That\
+    \ means if you have 100 instances of an object, then there are 100 copies of a\
+    \ function that do the exact same thing, just with different data.\n\nIt would\
+    \ be much more efficient if all of the instances shared one method, and then that\
+    \ method could use this.name to retrieve the appropriate data. This is where prototypes\
+    \ come in.\n\n# Prototypes\n\nYou can think of a prototype as a recipe for an\
+    \ object. Almost every function (with the exception of some built-in functions)\
+    \ has a prototype property that is used during the creation of new instances.\
+    \ That prototype is shared among all of the object instances, and those instances\
+    \ can access properties of the prototype. For example, the hasOwnProperty() method\
+    \ is defined on the generic Object prototype, but it can be accessed on any object\
+    \ as if it were an own property, as shown in this example:\n\n```\nvar book =\
+    \ {\n  title: \"The Principles of Object-Oriented JavaScript\"\n};\n\nconsole.log(\"\
+    title\" in book); // true\nconsole.log(book.hasOwnProperty(\"title\")); // true\n\
+    console.log(\"hasOwnProperty\" in book); // true\nconsole.log(book.hasOwnProperty(\"\
+    hasOwnProperty\")); // false\nconsole.log(Object.prototype.hasOwnProperty(\"hasOwnProperty\"\
+    )); // true\n```\n\nEven though there is no definition for hasOwnProperty() on\
+    \ book, that method can be accessed as book.hasOwnProperty() because the definition\
+    \ does exist on Object.prototype. Remember that the in operator returns true for\
+    \ both prototype properties and own properties."
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "# IDENTIFYING A PROTOTYPE PROPERTY\n\nYou can determine whether a property\
+    \ is on the prototype by using a function such as:\n\n```\nfunction hasPrototypeProperty(object,\
+    \ name) {\n  return name in object && !object.hasOwnProperty(name);\n}\n```\n\n\
+    ```\nconsole.log(hasPrototypeProperty(book, \"title\")); // false\nconsole.log(hasPrototypeProperty(book,\
+    \ \"hasOwnProperty\")); // true\n```\n\nIf the property is in an object but hasOwnProperty()\
+    \ returns false, then the property is on the prototype.\n\n# The [[Prototype]]\
+    \ Property\n\nAn instance keeps track of its prototype through an internal property\
+    \ called [[Prototype]]. This property is a pointer back to the prototype object\
+    \ that the instance is using. When you create a new object using new, the constructor's\
+    \ prototype property is assigned to the [[Prototype]] property of that new object.\
+    \ Figure 4-1 shows how the [[Prototype]] property lets multiple instances of an\
+    \ object type refer to the same prototype, which can reduce code duplication.\n\
+    \n![](img/dcf53336af93733d4dab8829d31ceb8e_74_0.png)\n\n> Figure 4-1: The [[Prototype]]\
+    \ properties for person1 and person2 point to the same prototype."
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: 'You can read the value of the [[Prototype]] property by using the object.getPrototypeOf()
+    method on an object. For example, the following code checks the [[Prototype]]
+    of a generic, empty object.
+
+
+    ```
+
+    ```js
+
+    var object = {};
+
+    var prototype = Object.getPrototypeOf(object);
+
+    console.log(prototype === Object.prototype); // true
+
+    ```
+
+    ```
+
+
+    For any generic object like this one ①, [[Prototype]] is always a reference to
+    Object.prototype.
+
+
+    > Some JavaScript engines also support a property called __proto__ on all objects.
+    This property allows you to both read from and write to the [[Prototype]] property.
+    Firefox, Safari, Chrome, and Node.js all support this property, and __proto__
+    is on the path for standardization in ECMAScript 6.
+
+
+    You can also test to see if one object is a prototype for another by using the
+    isPrototypeOf() method, which is included on all objects:
+
+
+    ```
+
+    ```js
+
+    var object = {};
+
+    console.log(Object.prototype.isPrototypeOf(object)); // true
+
+    ```
+
+    ```
+
+
+    Because object is just a generic object, its prototype should be Object.prototype,
+    meaning isPrototypeOf() should return true.
+
+
+    When a property is read on an object, the JavaScript engine first looks for an
+    own property with that name. If the engine finds a correctly named own property,
+    it returns that value. If no own property with that name exists on the target
+    object, JavaScript searches the [[Prototype]] object instead. If a prototype property
+    with that name exists, the value of that property is returned. If the search concludes
+    without finding a property with the correct name, undefined is returned.
+
+
+    Consider the following, in which an object is first created without any own properties:
+
+
+    ```
+
+    ```js
+
+    var object = {};
+
+
+    console.log(object.toString()); // "[object Object]"
+
+
+    object.toString = function() {
+
+    return "[object Custom]";
+
+    };
+
+
+    console.log(object.toString()); // "[object Custom]"
+
+
+    // delete own property
+
+    delete object.toString;
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '```
+
+    ③ console.log(object.toString()); // "[object Object]"
+
+    // no effect - delete only works on own properties
+
+    delete object.toString;
+
+    console.log(object.toString()); // "[object Object]"
+
+    ```
+
+
+    In this example, the toString() method comes from the prototype and returns "[object
+    Object]" ① by default. If you then define an own property called toString(), that
+    own property is used whenever toString() is called on the object again ②. The
+    own property shadows the prototype property, so the prototype property of the
+    same name is no longer used. The prototype property is used again only if the
+    own property is deleted from the object ③. (Keep in mind that the delete operator
+    acts only on own properties.)
+
+
+    This example also highlights an important concept: You cannot assign a value to
+    a prototype property from an instance. As you can see in the middle section of
+    Figure 4-2, assigning a value to toString creates a new own property on the instance,
+    leaving the property on the prototype untouched.
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_76_0.png)
+
+
+    ```
+
+    var object = {};
+
+    ```
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_76_1.png)
+
+
+    ```
+
+    object.toString = function() {
+
+    return "[object Custom]";
+
+    };
+
+    ```
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_76_2.png)
+
+
+    ```
+
+    delete object.toString;
+
+    ```
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_76_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "# Using Prototypes with Constructors\n\nThe shared nature of prototypes makes\
+    \ them ideal for defining methods once for all objects of a given type. Because\
+    \ methods tend to do the same thing for all instances, there’s no reason each\
+    \ instance needs its own set of methods.\n\nIt’s much more efficient to put the\
+    \ methods on the prototype and then use this to access the current instance. For\
+    \ example, consider the following new Person constructor:\n\n```\nfunction Person(name)\
+    \ {\n    this.name = name;\n}\n\n① Person.prototype.sayName = function() {\n \
+    \   console.log(this.name);\n};\n\nvar person1 = new Person(\"Nicholas\");\nvar\
+    \ person2 = new Person(\"Greg\");\n\nconsole.log(person1.name);        // \"Nicholas\"\
+    \nconsole.log(person2.name);        // \"Greg\"\n\nperson1.sayName();        \
+    \        // outputs \"Nicholas\"\nperson2.sayName();                // outputs\
+    \ \"Greg\"\n```\n\nIn this version of the Person constructor, sayName() is defined\
+    \ on the prototype ① instead of in the constructor. The object instances work\
+    \ exactly the same as the example from earlier in this chapter, even though sayName()\
+    \ is now a prototype property instead of an own property. Because person1 and\
+    \ person2 are each base references for their calls to sayName(), the this value\
+    \ is assigned to person1 and person2, respectively.\n\nYou can also store other\
+    \ types of data on the prototype, but be careful when using reference values.\
+    \ Because these values are shared across instances, you might not expect one instance\
+    \ to be able to change values that another instance will access. This example\
+    \ shows what can happen when you don’t watch where your reference values are pointing:\n\
+    \n```\nfunction Person(name) {\n    this.name = name;\n}\n\nPerson.prototype.sayName\
+    \ = function() {\n    console.log(this.name);\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\n① Person.prototype.favorites = [];\n\nvar person1 = new Person(\"Nicholas\"\
+    );\nvar person2 = new Person(\"Greg\");\n\nperson1.favorites.push(\"pizza\");\n\
+    person2.favorites.push(\"quinoa\");\n\nconsole.log(person1.favorites);    // \"\
+    pizza,quinoa\"\nconsole.log(person2.favorites);    // \"pizza,quinoa\"\n```\n\n\
+    The favorites property ① is defined on the prototype, which means person1.favorites\
+    \ and person2.favorites point to the same array. Any values you add to either\
+    \ person's favorites will be elements in that array on the prototype. That may\
+    \ not be the behavior that you actually want, so it's important to be very careful\
+    \ about what you define on the prototype.\n\nEven though you can add properties\
+    \ to the prototype one by one, many developers use a more succinct pattern that\
+    \ involves replacing the prototype with an object literal:\n\n```\nfunction Person(name)\
+    \ {\n    this.name = name;\n}\n\nPerson.prototype = {\n    ① sayName: function()\
+    \ {\n        console.log(this.name);\n    },\n\n    ② toString: function() {\n\
+    \        return \"[Person \" + this.name + \"]\";\n    }\n};\n```\n\nThis code\
+    \ defines two methods on the prototype, sayName() ① and toString() ②. This pattern\
+    \ has become quite popular because it eliminates the need to type Person.prototype\
+    \ multiple times. There is, however, one side effect to be aware of:\n\n```\n\
+    var person1 = new Person(\"Nicholas\");\n\nconsole.log(person1 instanceof Person);\
+    \      // true\nconsole.log(person1.constructor === Person);  // false\n① console.log(person1.constructor\
+    \ === Object);  // true\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "Using the object literal notation to overwrite the prototype changed the constructor\
+    \ property so that it now points to Object instead of Person. This happened because\
+    \ the constructor property exists on the prototype, not on the object instance.\
+    \ When a function is created, its prototype property is created with a constructor\
+    \ property equal to the function. This pattern completely overwrites the prototype\
+    \ object, which means that constructor will come from the newly created (generic)\
+    \ object that was assigned to Person.prototype. To avoid this, restore the constructor\
+    \ property to a proper value when overwriting the prototype:\n\n```\n```javascript\n\
+    function Person(name) {\n  this.name = name;\n}\n\nPerson.prototype = {\n  ① constructor:\
+    \ Person,\n  sayName: function() {\n    console.log(this.name);\n  },\n  toString:\
+    \ function() {\n    return \"[Person \" + this.name + \"]\";\n  }\n};\n\nvar person1\
+    \ = new Person(\"Nicholas\");\n\nvar person2 = new Person(\"Greg\");\n\nconsole.log(person1\
+    \ instanceof Person); // true\nconsole.log(person1.constructor === Person); //\
+    \ true\nconsole.log(person1.constructor === Object); // false\n\nconsole.log(person2\
+    \ instanceof Person); // true\nconsole.log(person2.constructor === Person); //\
+    \ true\nconsole.log(person2.constructor === Object); // false\n```\n```\n\nIn\
+    \ this example, the constructor property is specifically assigned on the prototype\
+    \ ① . It's good practice to make this the first property on the prototype so you\
+    \ don't forget to include it.\n\nPerhaps the most interesting aspect of the relationships\
+    \ among constructors, prototypes, and instances is that there is no direct link\
+    \ between the instance and the constructor. There is, however, a direct link between\
+    \ the instance and the prototype and between the prototype and the constructor.\
+    \ Figure 4-3 illustrates this relationship."
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "![](img/dcf53336af93733d4dab8829d31ceb8e_80_0.png)\n\nFigure 4-3: An instance\
+    \ and its constructor are linked via the prototype.\n\nThis nature of this relationship\
+    \ means that any disruption between the instance and the prototype will also create\
+    \ a disruption between the instance and the constructor.\n\n# Changing Prototypes\n\
+    \nBecause all instances of a particular type reference a shared prototype, you\
+    \ can augment all of those objects together at any time. Remember, the [[Prototype]]\
+    \ property just contains a pointer to the prototype, and any changes to the prototype\
+    \ are immediately available on any instance referencing it. That means you can\
+    \ literally add new members to a prototype at any point and have those changes\
+    \ reflected on existing instances, as in this example:\n\n```\nfunction Person(name)\
+    \ {\n    this.name = name;\n}\n\nPerson.prototype = {\n    constructor: Person,\n\
+    \n    sayName: function() {\n        console.log(this.name);\n    },\n\n    toString:\
+    \ function() {\n        return \"[Person \" + this.name + \"]\";\n    }\n};\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "> In practice, you probably won't use prototypes this way very often when developing\
+    \ in JavaScript. However, it's important to understand the relationships that\
+    \ exist between objects and their prototype, and strange examples like this help\
+    \ to illuminate the concepts.\n\n# Built-in Object Prototypes\n\nAt this point,\
+    \ you might wonder if prototypes also allow you to modify the built-in objects\
+    \ that come standard in the JavaScript engine. The answer is yes. All built-in\
+    \ objects have constructors, and therefore, they have prototypes that you can\
+    \ change. For instance, adding a new method for use on all arrays is as simple\
+    \ as modifying Array.prototype.\n\n```\nArray.prototype.sum = function() {\n \
+    \ return this.reduce(function(previous, current) {\n    return previous + current;\n\
+    \  });\n};\n\nvar numbers = [ 1, 2, 3, 4, 5, 6 ];\nvar result = numbers.sum();\n\
+    \nconsole.log(result);  // 21\n```\n\nThis example creates a method called sum()\
+    \ on Array.prototype that simply adds up all the items in the array and returns\
+    \ the result. The numbers array automatically has access to that method through\
+    \ the prototype. Inside of sum(), this refers to numbers, which is an instance\
+    \ of Array, so the method is free to use other array methods such as reduce().\
+    \ You may recall that strings, numbers, and Booleans all have built-in primitive\
+    \ wrapper types that are used to access primitive values as if they were objects.\
+    \ If you modify the primitive wrapper type prototype as in this example, you can\
+    \ actually add more functionality to those primitive values:\n\n```\nString.prototype.capitalize\
+    \ = function() {\n  return this.charAt(0).toUpperCase() + this.substring(1);\n\
+    };\n\nvar message = \"hello world!\";\n\nconsole.log(message.capitalize());  //\
+    \ \"Hello world!\"\n```\n\nThis code creates a new method called capitalize()\
+    \ for strings. The String type is the primitive wrapper for strings, and modifying\
+    \ its prototype means that all strings automatically get those changes."
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '> While it may fun and interesting to modify built-in objects to experiment
+    with functionality, it’s not a good idea to do so in a production environment.
+    Developers expect built-in objects to behave a certain way and have certain methods.
+    Deliberately altering built-in objects violates those expectations and makes other
+    developers unsure how the objects should work.
+
+
+    # # Summary
+
+
+    Constructors are just normal functions that are called with the new operator.
+    You can define your own constructors anytime you want to create multiple objects
+    with the same properties. You can identify objects created from constructors using
+    instanceof or by accessing their constructor property directly.
+
+
+    Every function has a prototype property that defines any properties shared by
+    objects created with a particular constructor. Shared methods and primitive value
+    properties are typically defined on prototypes, while all other properties are
+    defined within the constructor. The constructor property is actually defined on
+    the prototype because it is shared among object instances.
+
+
+    The prototype of an object is stored internally in the [[Prototype]] property.
+    This property is a reference, not a copy. If you change the prototype at any point
+    in time, those changes will occur on all instances because of the way JavaScript
+    looks up properties. When you try to access a property on an object, that object
+    is searched for any own property with the name you specify. If an own property
+    is not found, the prototype is searched. This searching mechanism means the prototype
+    can continue to change, and object instances referencing that prototype will reflect
+    those changes immediately.
+
+
+    Built-in objects also have prototypes that can be modified. While it’s not recommended
+    to do this in production, it can be helpful for experimentation and proofs of
+    concept for new functionality.'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# 5
+
+
+    # INHERITANCE
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_85_0.png)
+
+
+    Learning how to create objects is the first step to understanding object-oriented
+    programming. The second step is to understand inheritance. In traditional object-oriented
+    languages, classes inherit properties from other classes. In JavaScript, however,
+    inheritance can occur between objects with no classlike structure defining the
+    relationship. The mechanism for this inheritance is one with which you are already
+    familiar: prototypes.
+
+
+    # Prototype Chaining and Object.prototype
+
+
+    JavaScript''s built-in approach for inheritance is called prototype chaining,
+    or prototypal inheritance. As you learned in Chapter 4, prototype properties are
+    automatically available on object instances, which is a form of inheritance. The
+    object instances inherit properties from the prototype. Because'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "the prototype is also an object, it has its own prototype and inherits properties\
+    \ from that. This is the prototype chain: An object inherits from its prototype,\
+    \ while that prototype in turn inherits from its prototype, and so on.\n\nAll\
+    \ objects, including those you define yourself, automatically inherit from Object.prototype\
+    \ unless you specify otherwise (discussed later in this chapter). More specifically,\
+    \ all objects inherit from Object.prototype. Any object defined via an object\
+    \ literal has its [[Prototype]] set to Object.prototype, meaning that it inherits\
+    \ properties from Object.prototype, just like book in this example:\n\n```\n```javascript\n\
+    var book = {\n\t\ttitle: \"The Principles of Object-Oriented JavaScript\"\n\t\
+    };\n\nvar prototype = Object.getPrototypeOf(book);\n\nconsole.log(prototype ===\
+    \ Object.prototype); // true\n```\n```\n\nHere, book has a prototype equal to\
+    \ Object.prototype. No additional code was necessary to make this happen, as this\
+    \ is the default behavior when new objects are created. This relationship means\
+    \ that book automatically receives methods from Object.prototype.\n\n# **Methods\
+    \ Inherited from Object.prototype**\n\n+   - hasOwnProperty() Determines whether\
+    \ an own property with the given name exists\n+   - propertyIsEnumerable() Determines\
+    \ whether an own property is enumerable\n+   - isPrototypeOf() Determines whether\
+    \ the object is the prototype of another\n+   - valueOf() Returns the value representation\
+    \ of the object\n+   - toString() Returns a string representation of the object\n\
+    \nThese five methods appear on all objects through inheritance. The last two are\
+    \ important when you need to make objects work consistently in JavaScript, and\
+    \ sometimes you might want to define them yourself."
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# valueOf()\n\nThe valueOf() method gets called whenever an operator is used\
+    \ on an object. By default, valueOf() simply returns the object instance. The\
+    \ primitive wrapper types override valueOf() so that it returns a string for String,\
+    \ a Boolean for Boolean, and a number for Number. Likewise, the Date object’s\
+    \ valueOf() method returns the epoch time in milliseconds (just as Date.prototype.getTime()\
+    \ does). This is what allows you to write code that compares dates such as:\n\n\
+    ```\nvar now = new Date();\nvar earlier = new Date(2010, 1, 1);\n\nconsole.log(now\
+    \ > earlier);      // true\n```\n\nIn this example, now is a Date representing\
+    \ the current time, and earlier is a fixed date in the past. When the greater-than\
+    \ operator (>) is used ①, the valueOf() method is called on both objects before\
+    \ the comparison is performed. You can even subtract one date from another and\
+    \ get the difference in epoch time because of valueOf().\n\nYou can always define\
+    \ your own valueOf() method if your objects are intended to be used with operators.\
+    \ If you do define a valueOf() method, keep in mind that you’re not changing how\
+    \ the operator works, only what value is used with the operator’s default behavior.\n\
+    \n# toString()\n\nThe toString() method is called as a fallback whenever valueOf()\
+    \ returns a reference value instead of a primitive value. It is also implicitly\
+    \ called on primitive values whenever JavaScript is expecting a string. For example,\
+    \ when a string is used as one operand for the plus operator, the other operand\
+    \ is automatically converted to a string. If the other operand is a primitive\
+    \ value, it is converted into a string representation (for example, true becomes\
+    \ \"true\"), but if it is a reference value, then valueOf() is called. If valueOf()\
+    \ returns a reference value, toString() is called and the returned value is used.\
+    \ For example:\n\n```\nvar book = {\n  title: \"The Principles of Object-Oriented\
+    \ JavaScript\"\n};\n\nvar message = \"Book = \" + book;\nconsole.log(message);\
+    \      // \"Book = [object Object]\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "This code constructs the string by combining \"Book = \" with book. Since book\
+    \ is an object, its toString() method is called. That method is inherited from\
+    \ Object.prototype and returns the default value of \"[object Object]\" in most\
+    \ JavaScript engines. If you are happy with that value, there's no need to change\
+    \ your object's toString() method. Sometimes, however, it's useful to define your\
+    \ own toString() method so that string conversions return a value that gives more\
+    \ information. Suppose, for example, that you want the previous script to log\
+    \ the book's title:\n\n```\nvar book = {\n    title: \"The Principles of Object-Oriented\
+    \ JavaScript\",\n    toString: function() {\n        return \"[Book \" + this.title\
+    \ + \"]\"\n    }\n};\n\nvar message = \"Book = \" + book;\n\n// \"Book = [Book\
+    \ The Principles of Object-Oriented JavaScript]\"\nconsole.log(message);\n```\n\
+    \nThis code defines a custom toString() method for book that returns a more useful\
+    \ value ① than the inherited version. You don't usually need to worry about defining\
+    \ a custom toString() method, but it's good to know that it's possible to do so\
+    \ if necessary.\n\n# Modifying Object.prototype\n\nAll objects inherit from Object.prototype\
+    \ by default, so changes to Object.prototype affect all objects. That's a very\
+    \ dangerous situation. You were advised in Chapter 4 not to modify built-in object\
+    \ prototypes, and that advice goes double for Object.prototype. Take a look at\
+    \ what can happen:\n\n```\nObject.prototype.add = function(value) {\n    return\
+    \ this + value;\n};\n\nvar book = {\n    title: \"The Principles of Object-Oriented\
+    \ JavaScript\"\n};\n\nconsole.log(book.add(5));        // \"[object Object]5\"\
+    \nconsole.log(\"title\".add(\"end\"));  // \"titleend\"\n\n// in a web browser\n\
+    console.log(document.add(true));  // \"[object HTMLDocument]true\"\nconsole.log(window.add(5));\
+    \       // \"[object Window]true\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "The Object.create() method accepts two arguments. The first argument is the\
+    \ object to use for [[Prototype]] in the new object. The optional second argument\
+    \ is an object of property descriptors in the same format used by Object.defineProperties()\
+    \ (see Chapter 3). Consider the following:\n\n```\nvar book = {\n  title: \"The\
+    \ Principles of Object-Oriented JavaScript\"\n};\n\n// is the same as\n\nvar book\
+    \ = Object.create(Object.prototype, {\n  title: {\n    configurable: true,\n \
+    \   enumerable: true,\n    value: \"The Principles of Object-Oriented JavaScript\"\
+    ,\n    writable: true\n  }\n});\n\n```\n\nThe two declarations in this code are\
+    \ effectively the same. The first declaration uses an object literal to define\
+    \ an object with a single property called title. That object automatically inherits\
+    \ from Object.prototype, and the property is set to be configurable, enumerable,\
+    \ and writable by default. The second declaration takes the same steps but does\
+    \ so explicitly using Object.create(). The resulting book object from each declaration\
+    \ behaves the exact same way. But you'll probably never write code that inherits\
+    \ from Object.prototype directly, because you get that by default. Inheriting\
+    \ from other objects is much more interesting:\n\n```\nvar person1 = {\n  name:\
+    \ \"Nicholas\",\n  sayName: function() {\n    console.log(this.name);\n  }\n};\n\
+    \nvar person2 = Object.create(person1, {\n  name: {\n    configurable: true,\n\
+    \    enumerable: true,\n    value: \"Greg\",\n    writable: true\n  }\n});\n\n\
+    person1.sayName(); // outputs \"Nicholas\"\nperson2.sayName(); // outputs \"Greg\"\
+    \n```"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '```
+
+    console.log(person1.hasOwnProperty("sayName"));    // true
+
+    console.log(person1.isPrototypeOf(person2));    // true
+
+    console.log(person2.hasOwnProperty("sayName"));    // false
+
+    ```
+
+
+    This code creates an object, person1, with a name property and a sayName() method.
+    The person2 object inherits from person1, so it inherits both name and sayName().
+    However, person2 is defined via Object.create(), which also defines an own name
+    property for person2. This own property shadows the prototype property of the
+    same name and is used in its place. So, person1.sayName() outputs "Nicholas",
+    while person2.sayName() outputs "Greg". Keep in mind that sayName() still exists
+    only on person1 and is being inherited by person2.
+
+
+    The inheritance chain in this example is longer for person2 than it is for person1.
+    The person2 object inherits from the person1 object, and the person1 object inherits
+    from Object.prototype. See Figure 5-1.
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_91_0.png)
+
+
+    Figure 5-1: The prototype chain for person2 includes person1 and Object.prototype.
+
+
+    When a property is accessed on an object, the JavaScript engine goes through a
+    search process. If the property is found on the instance (that is, if it’s an
+    own property), that property value is used. If the property is not found on the
+    instance, the search continues on [[Prototype]]. If the property is still not
+    found, the search continues to that object’s [[Prototype]], and so on until the
+    end of the chain is reached. That chain usually ends with Object.prototype, whose
+    [[Prototype]] is set to null.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "You can also create objects with a null [[Prototype]] via Object.create(),\
+    \ such as:\n\n```\nvar nakedObject = Object.create(null);\nconsole.log(\"toString\"\
+    \ in nakedObject); // false\nconsole.log(\"valueOf\" in nakedObject); // false\n\
+    ```\n\nThe nakedObject in this example is an object with no prototype chain. That\
+    \ means built-in methods such as toString() and valueOf() aren’t present on the\
+    \ object. In effect, this object is a completely blank slate with no predefined\
+    \ properties, which makes it perfect for creating a lookup hash without potential\
+    \ naming collisions or inherited property names. There aren’t many other uses\
+    \ for an object like this, and you can’t use it as if it were inheriting from\
+    \ Object.prototype. For example, any time you use an operator on nakedObject,\
+    \ you’ll just get an error along the lines of “Cannot convert object to primitive\
+    \ value.” Still, it’s an interesting quirk of the JavaScript language that you\
+    \ can create a prototype-less object.\n\n# Constructor Inheritance\n\nObject inheritance\
+    \ in JavaScript is also the basis of constructor inheritance. Recall from Chapter\
+    \ 4 that almost every function has a prototype property that can be modified or\
+    \ replaced. That prototype property is automatically assigned to be a new generic\
+    \ object that inherits from Object.prototype and has a single own property called\
+    \ constructor. In effect, the JavaScript engine does the following for you:\n\n\
+    ```\n// you write this\nfunction YourConstructor() {\n  // initialization\n}\n\
+    \n// JavaScript engine does this for you behind the scenes\nYourConstructor.prototype\
+    \ = Object.create(Object.prototype, {\n  constructor: {\n    configurable: true,\n\
+    \    enumerable: true,\n    value: YourConstructor,\n    writable: true\n  }\n\
+    });\n```\n\nSo without doing anything extra, this code sets the constructor's\
+    \ prototype property to an object that inherits from Object.prototype, which means\
+    \ any instances of YourConstructor also inherit from Object.prototype. YourConstructor\
+    \ is a subtype of Object, and Object is a supertype of YourConstructor."
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n```js\n// inherits from Rectangle\nfunction Square(size) {\n\tthis.length\
+    \ = size;\n\tthis.width = size;\n}\n\nSquare.prototype = Object.create(Rectangle.prototype,\
+    \ {\n\tconstructor: {\n\t\tconfigurable: true,\n\t\tenumerable: true,\n\t\tvalue:\
+    \ Square,\n\t\twritable: true\n\t}\n});\n\nSquare.prototype.toString = function()\
+    \ {\n\treturn \"[Square \" + this.length + \"x\" + this.width + \"]\";\n};\n```\n\
+    ```\n\nIn this version of the code, Square.prototype is overwritten with a new\
+    \ object that inherits from Rectangle.prototype, and the Rectangle constructor\
+    \ is never called. That means you don't need to worry about causing an error by\
+    \ calling the constructor without arguments anymore. Otherwise, this code behaves\
+    \ exactly the same as the previous code. The prototype chain remains intact, so\
+    \ all instances of Square inherit from Rectangle.prototype and the constructor\
+    \ is restored in the same step.\n\n**NOTE** Always make sure that you overwrite\
+    \ the prototype before adding properties to it, or you will lose the added methods\
+    \ when the overwrite happens.\n\n# Constructor Stealing\n\nBecause inheritance\
+    \ is accomplished through prototype chains in JavaScript, you don't need to call\
+    \ an object's supertype constructor. If you do want to call the supertype constructor\
+    \ from the subtype constructor, then you need to take advantage of how JavaScript\
+    \ functions work. \n\nIn Chapter 2, you learned about the call() and apply() methods,\
+    \ which allow functions to be called with a different this value. That's exactly\
+    \ how constructor stealing works. You simply call the supertype constructor from\
+    \ the subtype constructor using either call() or apply() to pass in the newly\
+    \ created object. In effect, you're stealing the supertype constructor for your\
+    \ own object, as in this example:\n\n```\n```js\nfunction Rectangle(length, width)\
+    \ {\n\tthis.length = length;\n\tthis.width = width;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "```\nRectangle.prototype.getArea = function() {\n    return this.length * this.width;\n\
+    };\n\nRectangle.prototype.toString = function() {\n    return \"[Rectangle \"\
+    \ + this.length + \"x\" + this.width + \"]\";\n};\n\n// inherits from Rectangle\n\
+    function Square(size) {\n    Rectangle.call(this, size, size);\n    // optional:\
+    \ add new properties or override existing ones here\n}\n\nSquare.prototype = Object.create(Rectangle.prototype,\
+    \ {\n    constructor: {\n        configurable: true,\n        enumerable: true,\n\
+    \        value: Square,\n        writable: true\n    }\n});\n\nSquare.prototype.toString\
+    \ = function() {\n    return \"[Square \" + this.length + \"x\" + this.width +\
+    \ \"]\";\n};\n\nvar square = new Square(6);\n\nconsole.log(square.length);   \
+    \   // 6\nconsole.log(square.width);        // 6\nconsole.log(square.getArea());\
+    \    // 36\n```\n\nThe ① Square constructor calls the Rectangle constructor and\
+    \ passes in this as well as size two times (once for length and once for width).\
+    \ Doing so creates the length and width properties on the new object and makes\
+    \ each equal to size. This is the way to avoid redefining properties from a constructor\
+    \ from which you want to inherit. You can add new properties or override existing\
+    \ ones after applying the super type constructor.\n\nThis two-step process is\
+    \ useful when you need to accomplish inheritance between custom types. You'll\
+    \ always need to modify a constructor's prototype, and you may also need to call\
+    \ the supertype constructor from within the subtype constructor. Generally, you'll\
+    \ modify the prototype for method inheritance and use constructor stealing for\
+    \ properties. This approach is typically referred to as pseudoclassical inheritance\
+    \ because it mimics classical inheritance from class-based languages."
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "# Accessing Supertype Methods\n\nIn the previous example, the Square type has\
+    \ its own toString() method that shadows toString() on the prototype. It is fairly\
+    \ common to override supertype methods with new functionality in the subtype,\
+    \ but what if you still want to access the supertype method? In other languages,\
+    \ you might be able to say super.toString(), but JavaScript doesn’t have anything\
+    \ similar. Instead, you can directly access the method on the supertype’s prototype\
+    \ and use either call() or apply() to execute the method on the subtype object.\
+    \ For example:\n\n```\n```js\nfunction Rectangle(length, width) {\n  this.length\
+    \ = length;\n  this.width = width;\n}\n```\n```\n\n```\n```js\nRectangle.prototype.getArea\
+    \ = function() {\n  return this.length * this.width;\n};\n```\n```\n\n```\n```js\n\
+    Rectangle.prototype.toString = function() {\n  return \"[Rectangle \" + this.length\
+    \ + \"x\" + this.height + \"]\";\n};\n```\n```\n\n// inherits from Rectangle\n\
+    \n```\n```js\nfunction Square(size) {\n  Rectangle.call(this, size, size);\n}\n\
+    ```\n```\n\n```\n```js\nSquare.prototype = Object.create(Rectangle.prototype,\
+    \ {\n  constructor: {\n    configurable: true,\n    enumerable: true,\n    value:\
+    \ Square,\n    writable: true\n  }\n});\n```\n```\n\n// call the supertype method\n\
+    \n```\n```js\nSquare.prototype.toString = function() {\n  var text = Rectangle.prototype.toString.call(this);\n\
+    \  return text.replace(\"Rectangle\", \"Square\");\n};\n```\n```\n\nIn this version\
+    \ of the code, Square.prototype.toString() calls Rectangle.prototype.toString()\
+    \ by using call(). The method just needs to replace \"Rectangle\" with \"Square\"\
+    \ before returning the resulting text. This approach may seem a bit verbose for\
+    \ such a simple operation, but it is the only way to access a supertype's method."
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# Summary
+
+
+    JavaScript supports inheritance through prototype chaining. A prototype chain
+    is created between objects when the [[Prototype]] of one object is set equal to
+    another. All generic objects automatically inherit from Object.prototype. If you
+    want to create an object that inherits from something else, you can use Object.create()
+    to specify the value of [[Prototype]] for a new object.
+
+
+    You accomplish inheritance between custom types by creating a prototype chain
+    on the constructor. By setting the constructor’s prototype property to another
+    value, you create inheritance between instances of the custom type and the prototype
+    of that other value. All instances of that constructor share the same prototype,
+    so they all inherit from the same object. This technique works very well for inheriting
+    methods from other objects, but you cannot inherit own properties using prototypes.
+
+
+    To inherit own properties correctly, you can use constructor stealing, which is
+    simply calling a constructor function using call() or apply() so that any initialization
+    is done on the subtype object. Combining constructor stealing and prototype chaining
+    is the most common way to achieve inheritance between custom types in JavaScript.
+    This combination is frequently called pseudoclassical inheritance because of its
+    similarity to inheritance in class-based languages.
+
+
+    You can access methods on a supertype by directly accessing the supertype’s prototype.
+    In doing so, you must use call() or apply() to execute the supertype method on
+    the subtype object.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '# 6
+
+
+    # OBJECT PATTERNS
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_99_0.png)
+
+
+    JavaScript has many patterns for creating objects, and there''s usually more than
+    one way to accomplish the same thing. You can define your own custom types or
+    your own generic objects whenever you want. You can use inheritance to share behavior
+    between objects, or you can employ other techniques, such as mix-ins. You can
+    also take advantage of advanced JavaScript features to prevent an object''s structure
+    from being modified. The patterns discussed in this chapter give you powerful
+    ways of managing and creating objects, all based on your use cases.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "# Private and Privileged Members\n\nAll object properties in JavaScript are\
+    \ public, and there’s no explicit way to indicate that a property shouldn’t be\
+    \ accessed from outside a particular object. At some point, however, you might\
+    \ not want data to be public. For example, when an object uses a value to determine\
+    \ some sort of state, modifying that data without the object’s knowledge throws\
+    \ the state management process into chaos. One way to avoid this is by using naming\
+    \ conventions. For example, it’s quite common to prefix properties with an underscore\
+    \ (such as _name) when they are not intended to be public. However, there are\
+    \ ways of hiding data that don’t rely on convention and are therefore more “bulletproof”\
+    \ in preventing the modification of private information.\n\n\n\nThe module pattern\
+    \ is an object-creation pattern designed to create singleton objects with private\
+    \ data. The basic approach is to use an immediately invoked function expression\
+    \ (IIFE) that returns an object. An IIFE is a function expression that is defined\
+    \ and then called immediately to produce a result. That function expression can\
+    \ contain any number of local variables that aren’t accessible from outside that\
+    \ function. Because the returned object is defined within that function, the object’s\
+    \ methods have access to the data. (All objects defined within the IIFE have access\
+    \ to the same local variables.) Methods that access private data in this way are\
+    \ called privileged methods. Here’s the basic format for the module pattern:\n\
+    \n```\nvar yourObject = (function() {\n  // private data variables\n  return {\n\
+    \    // public methods and properties\n  };\n})();\n①\n```\n\nIn this pattern,\
+    \ an anonymous function is created and executed immediately. (Note the extra parentheses\
+    \ at the end of the function ①. You can execute anonymous functions immediately\
+    \ using this syntax.) That means the function exists for just a moment, is executed,\
+    \ and then is destroyed. IIFEs are a very popular pattern in JavaScript, partially\
+    \ for their use in the module pattern."
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "The module pattern allows you to use regular variables as de facto object properties\
+    \ that aren’t exposed publicly. You accomplish this by creating closure functions\
+    \ as object methods. Closures are simply functions that access data outside their\
+    \ own scope. For example, whenever you access a global object in a function, such\
+    \ as window in a web browser, that function is accessing a variable outside its\
+    \ own scope. The difference with the module function is that the variables are\
+    \ declared within the IIFE, and a function that is also declared inside the IIFE\
+    \ accesses those variables. For example:\n\n```\nvar person = (function() {\n\
+    \  ① var age = 25;\n  return {\n    name: \"Nicholas\",\n    ② getAge: function()\
+    \ {\n      return age;\n    },\n    ③ growOlder: function() {\n      age++;\n\
+    \    }\n  };\n})();\n\nconsole.log(person.name); // \"Nicholas\"\nconsole.log(person.getAge());\
+    \ // 25\n\nperson.age = 100;\nconsole.log(person.getAge()); // 25\n\nperson.growOlder();\n\
+    console.log(person.getAge()); // 26\n```\n\nThis code creates the person object\
+    \ using the module pattern. The age variable ① acts like a private property for\
+    \ the object. It can’t be accessed directly from outside the object, but it can\
+    \ be used by the object methods. There are two privileged methods on the object:\
+    \ getAge() ②, which reads the value of the age variable, and growOlder() ③, which\
+    \ increments age. Both of these methods can access the variable age directly because\
+    \ it is defined in the outer function in which they are defined."
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "There is a variation of the module pattern called the revealing module pattern,\
+    \ which arranges all variables and methods at the top of the IIFE and simply assigns\
+    \ them to the returned object. You can write the previous example using the revealing\
+    \ module pattern as follows:\n\n```\nvar person = (function() {\n  var age = 25;\n\
+    \  function getAge() {\n    return age;\n  }\n  function growOlder() {\n    age++;\n\
+    \  }\n  return {\n    name: \"Nicholas\",\n    getAge: getAge,\n    growOlder:\
+    \ growOlder\n  };\n})();\n```\n\nIn the revealing module pattern, age, getAge(),\
+    \ and growOlder() are all defined as local to the IIFE. The getAge() and growOlder()\
+    \ functions are then assigned to the returned object ①, effectively “revealing”\
+    \ them outside the IIFE. This code is essentially the same as the earlier example\
+    \ using the traditional module pattern; however, some prefer this pattern because\
+    \ it keeps all variable and function declarations together.\n\n\n\nThe module\
+    \ pattern is great for defining individual objects that have private properties,\
+    \ but what about custom types that also require their own private properties?\
+    \ You can use a pattern that’s similar to the module pattern inside the constructor\
+    \ to create instance-specific private data. For example:\n\n```\nfunction Person(name)\
+    \ {\n  // define a variable only accessible inside of the Person constructor\n\
+    \  var age = 25;\n  this.name = name;\n  this.getAge = function() {\n    return\
+    \ age;\n  };\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "```\nthis.growOlder = function() {\n    age++;\n};\n}\n\nvar person = new Person(\"\
+    Nicholas\");\n\nconsole.log(person.name);    // \"Nicholas\"\nconsole.log(person.getAge());\
+    \    // 25\n\nperson.age = 100;\nconsole.log(person.getAge());    // 25\n\nperson.growOlder();\n\
+    console.log(person.getAge());    // 26\n```\n\nIn this code, the Person constructor\
+    \ has a local variable, age. That variable is used as part of the getAge() ① and\
+    \ growOlder() ② methods. When you create an instance of Person, that instance\
+    \ receives its own age variable, getAge() method, and growOlder() method. In many\
+    \ ways, this is similar to the module pattern, where the constructor creates a\
+    \ local scope and returns the this object. As discussed in Chapter 4, placing\
+    \ methods on an object instance is less efficient than doing so on the prototype,\
+    \ but this is the only approach possible when you want private, instance-specific\
+    \ data.\n\nIf you want private data to be shared across all instances (as if it\
+    \ were on the prototype), you can use a hybrid approach that looks like the module\
+    \ pattern but uses a constructor:\n\n```\nvar Person = (function() {\n\n    //\
+    \ everyone shares the same age\n    var age = 25;\n\n    function InnerPerson(name)\
+    \ {\n        this.name = name;\n    }\n\n    InnerPerson.prototype.getAge = function()\
+    \ {\n        return age;\n    };\n\n    InnerPerson.prototype.growOlder = function()\
+    \ {\n        age++;\n    };\n\n    return InnerPerson;\n\n})();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "```\n```js\nvar person1 = new Person(\"Nicholas\");\nvar person2 = new Person(\"\
+    Greg\");\nconsole.log(person1.name); // \"Nicholas\"\nconsole.log(person1.getAge());\
+    \ // 25\nconsole.log(person2.name); // \"Greg\"\nconsole.log(person2.getAge());\
+    \ // 25\nperson1.growOlder();\nconsole.log(person1); // Person { name: 'Nicholas',\
+    \ age: 26 }\nconsole.log(person1.getAge()); // 26\nconsole.log(person2.getAge());\
+    \ // 26\n```\n```\n\nIn this code, the InnerPerson constructor ② is defined inside\
+    \ an IIFE. The variable age ① is defined outside the constructor but is used for\
+    \ two prototype methods. The InnerPerson constructor is then returned and becomes\
+    \ the Person constructor in the global scope. All instances of Person end up sharing\
+    \ the age variable, so changing the value with one instance automatically affects\
+    \ the other instance.\n\n# # Mixins\n\nAlthough pseudoclassical inheritance and\
+    \ prototypal inheritance are used frequently in JavaScript, there is also a type\
+    \ of pseudoinheritance accomplished through mixins. Mixins occur when one object\
+    \ acquires the properties of another object without modifying the prototype chain.\
+    \ The first object (a receiver) actually receives the properties of the second\
+    \ object (the supplier) by copying those properties directly. Traditionally, you\
+    \ create mixins using a function such as this:\n\n```\n```js\nfunction mixin(receiver,\
+    \ supplier) {\n  for (var property in supplier) {\n    if (supplier.hasOwnProperty(property))\
+    \ {\n      receiver[property] = supplier[property]\n    }\n  }\n  return receiver;\n\
+    }\n```\n```\n\nThe mixin() function accepts two arguments: the receiver and the\
+    \ supplier. The goal of the function is to copy all enumerable properties from\
+    \ the supplier onto the receiver. You accomplish this using a for-in loop that\
+    \ iterates over the properties in supplier and then assigns the value"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "of that property to a property of the same name on receiver. Keep in mind that\
+    \ this is a shallow copy, so if a property contains an object, then both the supplier\
+    \ and the receiver will be pointing to the same object. This pattern is used frequently\
+    \ for adding new behaviors to JavaScript objects that already exist on other objects.\n\
+    \nFor example, you can add event support to an object through a mixin rather than\
+    \ inheritance. First, suppose you've already defined a custom type for using events:\n\
+    \n```\nfunction EventTarget(){\n}\n\nEventTarget.prototype = {\n\n    constructor:\
+    \ EventTarget,\n\n    addListener: function(type, listener){\n        // create\
+    \ an array if it doesn't exist\n        if (!this.hasOwnProperty(\"_listeners\"\
+    )) {\n            this._listeners = [];\n        }\n\n        if (typeof this._listeners[type]\
+    \ == \"undefined\"){\n            this._listeners[type] = [];\n        }\n\n \
+    \       this._listeners[type].push(listener);\n    },\n\n    fire: function(event){\n\
+    \        if (!event.target){\n            event.target = this;\n        }\n\n\
+    \        if (!event.type){ // falsy\n            throw new Error(\"Event object\
+    \ missing 'type' property.\");\n        }\n\n        if (this._listeners && this._listeners[event.type]\
+    \ instanceof Array){\n            var listeners = this._listeners[event.type];\n\
+    \            for (var i=0, len=listeners.length; i < len; i++){\n            \
+    \    listeners[i].call(this, event);\n            }\n        }\n    },\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "```\n```javascript\nremoveListener: function(type, listener){\n\tif (this._listeners\
+    \ && this._listeners[type] instanceof Array){\n\t\tvar listeners = this._listeners[type];\n\
+    \t\tfor (var i=0, len=listeners.length; i < len; i++){\n\t\t\tif (listeners[i]\
+    \ === listener){\n\t\t\t\tlisteners.splice(i, 1);\n\t\t\t\tbreak;\n\t\t\t}\n\t\
+    \t}\n\t}\n};\n```\n```\n\nThe EventTarget type provides basic event handling for\
+    \ any object.\nYou can add ① and remove ③ listeners as well as fire events ② directly\
+    \ on the object. The event listeners are stored on a _listeners property that\
+    \ is created only when addListener() is called for the first time (this makes\
+    \ it easier to mix in). You can use instances of EventTarget like this:\n\n```\n\
+    ```javascript\nvar target = new EventTarget();\ntarget.addListener(\"message\"\
+    , function(event) {\n\tconsole.log(\"Message is \" + event.data);\n});\ntarget.fire({\n\
+    \ttype: \"message\",\n\tdata: \"Hello world!\"\n});\n```\n```\n\nSupport for events\
+    \ is useful for objects in JavaScript. If you want to have a different type of\
+    \ object that also supports events, you have a few options. First, you can create\
+    \ a new instance of EventTarget and then add on the properties that you want:\n\
+    \n```\n```javascript\nvar person = new EventTarget();\nperson.name = \"Nicholas\"\
+    ;\nperson.sayName = function() {\n\tconsole.log(this.name);\n};\nthis.fire({ type:\
+    \ \"namesaid\", name: name });\n```\n```\n\nIn this code, a new variable called\
+    \ person is created as an instance of EventTarget, and then the person-related\
+    \ properties are added. Unfortunately, this means that person is actually an instance\
+    \ of EventTarget instead of Object or a custom type. You also incur the overhead\
+    \ of needing to add a bunch of new properties by hand. It would be better to have\
+    \ a more organized way of doing this."
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "A second way to solve this problem is to use pseudoclassical inheritance:\n\
+    \n```\nfunction Person(name) {\n    this.name = name;\n}\n\n① Person.prototype\
+    \ = Object.create(EventTarget.prototype);\nPerson.prototype.constructor = Person;\n\
+    \nPerson.prototype.sayName = function() {\n    console.log(this.name);\n    this.fire({\
+    \ type: \"namesaid\", name: name });\n};\n\nvar person = new Person(\"Nicholas\"\
+    );\n\nconsole.log(person instanceof Person);    // true\nconsole.log(person instanceof\
+    \ EventTarget); // true\n```\n\nIn this case, there is a new Person type that\
+    \ inherits from EventTarget ①. You can add any further methods you need to Person's\
+    \ prototype afterward. However, this isn't as succinct as it could be, and you\
+    \ could argue that the relationship doesn't make sense: A person is a type of\
+    \ event target? By using a mixin instead, you can reduce the amount of code necessary\
+    \ to assign those new properties to the prototype:\n\n```\nfunction Person(name)\
+    \ {\n    this.name = name;\n}\n\n① mixin(Person.prototype, new EventTarget());\n\
+    mixin(Person.prototype, {\n    constructor: Person,\n    sayName: function() {\n\
+    \        console.log(this.name);\n        this.fire({ type: \"namesaid\", name:\
+    \ name });\n    }\n});\n\nvar person = new Person(\"Nicholas\");\n\nconsole.log(person\
+    \ instanceof Person);    // true\nconsole.log(person instanceof EventTarget);\
+    \ // false\n```\n\nHere, Person.prototype is mixed in with a new instance of EventTarget\
+    \ ① to get the event behavior. Then, Person.prototype is mixed in with constructor\
+    \ and sayName() to complete the composition of the prototype. Instances of Person\
+    \ are not instances of EventTarget in this example because there is no inheritance."
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "Of course, you might decide that while you do want to use an object's properties,\
+    \ you don't want a constructor of pseudoclassical inheritance at all. In that\
+    \ case, you can use a mixin directly when you create your new object:\n\n```\n\
+    var person = mixin(new EventTarget(), {\n\n    name: \"Nicholas\",\n\n    sayName:\
+    \ function() {\n        console.log(this.name);\n        this.fire({ type: \"\
+    namesaid\", name: name });\n    }\n\n});\n```\n\nIn this example, a new instance\
+    \ of EventTarget is mixed in with some new properties to create the person object\
+    \ without affecting person's prototype chain.\n\nOne thing to keep in mind about\
+    \ using mixins in this way is that accessor properties on the supplier become\
+    \ data properties on the receiver, which means you can overwrite them if you're\
+    \ not careful. That's because the receiver properties are being created by assignment\
+    \ rather than by Object.defineProperty(), meaning the current value of the supplier\
+    \ property is read and then assigned to a property of the same name on the receiver.\
+    \ For example:\n\n```\nvar person = mixin(new EventTarget(), {\n\n    get name()\
+    \ {\n        return \"Nicholas\"\n    },\n\n    sayName: function() {\n      \
+    \  console.log(this.name);\n        this.fire({ type: \"namesaid\", name: name\
+    \ });\n    }\n\n});\n\nconsole.log(person.name);      // \"Nicholas\"\n\nperson.name\
+    \ = \"Greg\";\nconsole.log(person.name);      // \"Greg\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: 'In this code, name is defined as an accessor property with only a getter ①.
+    That means assigning a value to the property should have no effect. However, because
+    the accessor property becomes a data property on the person object, it''s possible
+    to overwrite name with a new value ②. During the call to mixin(), the value of
+    name is read from the supplier and assigned to the property called name on the
+    receiver. At no point during this process is a new accessor defined, making the
+    name property on the receiver a data property.
+
+
+    If you want accessor properties to be copied over as accessor properties, you
+    need a different mixin() function, such as:
+
+
+    ```
+
+    function mixin(receiver, supplier) {
+
+    Object.keys(supplier).forEach(function(property) {
+
+    var descriptor = Object.getOwnPropertyDescriptor(supplier, property);
+
+    Object.defineProperty(receiver, property, descriptor);
+
+    });
+
+    return receiver;
+
+    }
+
+
+    var person = mixin(new EventTarget(), {
+
+    get name() {
+
+    return "Nicholas"
+
+    },
+
+    sayName: function() {
+
+    console.log(this.name);
+
+    this.fire({ type: "namesaid", name: name });
+
+    }
+
+    });
+
+
+    console.log(person.name); // "Nicholas"
+
+
+    person.name = "Greg";
+
+    console.log(person.name); // "Nicholas"
+
+    ```
+
+
+    This version of mixin() uses Object.keys() ① to get an array of all enumerable
+    own properties on supplier. The forEach() method is used to iterate over those
+    properties. The property descriptor for each property on supplier is retrieved
+    and then added to receiver via Object.defineProperty() ②. This ensures that all
+    of the relevant property information is transferred to receiver, not just the
+    value. That means the person object has an accessor property called name, so it
+    cannot be overwritten.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: "Of course, this version of mixin() works only in ECMAScript 5 JavaScript engines.\
+    \ If your code needs to work for older engines, you should combine the two mixin()\
+    \ approaches into a single function:\n\n```\nfunction mixin(receiver, supplier)\
+    \ {\n    if (Object.getOwnPropertyDescriptor) {\n        Object.keys(supplier).forEach(function(property)\
+    \ {\n            var descriptor = Object.getOwnPropertyDescriptor(supplier, property);\n\
+    \            Object.defineProperty(receiver, property, descriptor);\n        });\n\
+    \    } else {\n        for (var property in supplier) {\n            if (supplier.hasOwnProperty(property))\
+    \ {\n                receiver[property] = supplier[property]\n            }\n\
+    \        }\n    }\n    return receiver;\n}\n```\n\nHere, mixin() checks whether\
+    \ Object.getOwnPropertyDescriptor() ① exists to determine whether the JavaScript\
+    \ engine supports ECMAScript 5. If so, it goes on to use the ECMAScript 5 version.\
+    \ Otherwise, the ECMAScript 3 version is used ②. This function is safe to use\
+    \ in both modern and legacy JavaScript engines, as they will apply the most appropriate\
+    \ mixin strategy.\n\nNOTE Keep in mind that Object.keys() returns only enumerable\
+    \ properties. If you want to also copy over nonenumerable properties, use Object.getOwnPropertyNames()\
+    \ instead.\n\n# Scope-Safe Constructors\n\nBecause all constructors are just functions,\
+    \ you can call them without using the new operator and therefore affect the value\
+    \ of this. Doing so can yield unexpected results, as this ends up coerced to the\
+    \ global object in nonstrict mode, or the constructor throws an error in strict\
+    \ mode. In Chapter 4, you encountered this example:\n\n```\nfunction Person(name)\
+    \ {\n    this.name = name;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "```\nPerson.prototype.sayName = function() {\n    console.log(this.name);\n\
+    };\n\n① var person1 = Person(\"Nicholas\");        // note: missing \"new\"\n\n\
+    console.log(person1 instanceof Person);    // false\nconsole.log(typeof person1);\
+    \               // \"undefined\"\nconsole.log(name);                         //\
+    \ \"Nicholas\"\n```\n\nIn this case, name is created as a global variable because\
+    \ the Person constructor is called without new ①. Keep in mind that this code\
+    \ is running in nonstrict mode, as leaving out new would throw an error in strict\
+    \ mode. The fact that the constructor begins with a capital letter usually indicates\
+    \ that it should be preceded by new, but what if you want to allow this use case\
+    \ and have the function work without new? Many built-in constructors, such as\
+    \ Array and RegExp, also work without new because they are written to be scope\
+    \ safe. A scope-safe constructor can be called with or without new and returns\
+    \ the same type of object in either case.\n\nWhen new is called with a function,\
+    \ the newly created object represented by this is already an instance of the custom\
+    \ type represented by the constructor. So you can use instanceof to determine\
+    \ whether new was used in the function call:\n\n```\nfunction Person(name) {\n\
+    \    if (this instanceof Person) {\n        // called with \"new\"\n    } else\
+    \ {\n        // called without \"new\"\n    }\n}\n```\n\nUsing a pattern like\
+    \ this lets you control what a function does based on whether it's called with\
+    \ new or without. You may want to treat each circumstance differently, but you'll\
+    \ often want the function to behave the same way (frequently, to protect against\
+    \ accidental omission of new). A scope-safe version of Person looks like this:\n\
+    \n```\nfunction Person(name) {\n    if (this instanceof Person) {\n        this.name\
+    \ = name;\n    } else {\n        return new Person(name);\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'For this constructor, the name property is assigned as always when new is used.
+    If new isn’t used, the constructor is called recursively via new to create a proper
+    instance of the object. In this way, the following are equivalent:
+
+
+    ```
+
+    var person1 = new Person("Nicholas");
+
+    var person2 = Person("Nicholas");
+
+
+    console.log(person1 instanceof Person);   // true
+
+    console.log(person2 instanceof Person);   // true
+
+    ```
+
+
+    Creating new objects without using the new operator is becoming more common as
+    an effort to curb errors caused by omitting new. JavaScript itself has several
+    reference types with scope-safe constructors, such as Object, Array, RegExp, and
+    Error.
+
+
+    # Summary
+
+
+    There are many different ways to create and compose objects in JavaScript. While
+    JavaScript does not include the formal concept of private properties, you can
+    create data or functions that are accessible only from within an object. For singleton
+    objects, you can use the module pattern to hide data from the outside world. You
+    can use an immediately invoked function expression (IIFE) to define local variables
+    and functions that are accessible only by the newly created object. Privileged
+    methods are methods on the object that have access to private data. You can also
+    create constructors that have private data by either defining variables in the
+    constructor function or by using an IIFE to create private data that is shared
+    among all instances.
+
+
+    Mixins are a powerful way to add functionality to objects while avoiding inheritance.
+    A mixin copies properties from one object to another so that the receiving object
+    gains functionality without inheriting from the supplying object. Unlike inheritance,
+    mixins do not allow you to identify where the capabilities came from after the
+    object is created. For this reason, mixins are best used with data properties
+    or small pieces of functionality. Inheritance is still preferable when you want
+    to obtain more functionality and know where that functionality came from.
+
+
+    Scope-safe constructors are constructors that you can call with or without new
+    to create a new object instance. This pattern takes advantage of the fact that
+    this is an instance of the custom type as soon as the constructor begins to execute,
+    which lets you alter the constructor’s behavior depending on whether or not you
+    used the new operator.'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "# INDEX\n\n# Symbols\n\n{ } (braces)\n  for function contents, 18\n  and object\
+    \ properties, 9\n== (double equals operator), 5\n=== (triple equals operator),\
+    \ 5\n[ ] (square brackets)\n  for array literals, 10\n  for property access, 11–12\n\
+    [[ ]] (double-square-bracket notation), 17\n_ (underscore), in property name prefix,\
+    \ 38, 80\n\n# A\n\naccessor properties, 37–38\n  attributes, 41–43\n    creating,\
+    \ 42–43\nadding properties, 8\nanonymous functions, 20, 80\napply() method, 27,\
+    \ 75\narguments, functions as, 20\narguments object, 21\narity, 21\nArray built-in\
+    \ type, 8\nArray.isArray() method, 13–14\narray literals, 9–10\nArray.prototype,\
+    \ modifying, 62\narrays\n  identifying, 13–14\n  passing to apply(), 27\nassignment\
+    \ expressions, 18\nattributes of properties, 38–44\n  accessor properties, 41–43\n\
+    \  data properties, 40–41\nautoboxing, 14\n\n# B\n\nbind() method, 28\nBoolean\
+    \ object, 3, 15–16\nBoolean primitive wrapper type, 14–15\nbraces ({ }) \n  for\
+    \ function contents, 18\n  and object properties, 9\nbracket notation, for property\
+    \ access, 11–12\nbuilt-in object prototypes, 62–63\nbuilt-in types, instantiating,\
+    \ 8–11\n\n# C\n\ncall() method, 26–27, 75\n[[Call]] property, 17\ncapitalization,\
+    \ of constructor names, 50\ncapitalize() method, for strings, 62\ncharAt() method,\
+    \ 6\nclasses, JavaScript lack of support for, 1\nclosure functions, 81\ncomparison\
+    \ functions, 20\ncomparison without coercion, 5\n[[Configurable]] attribute, 39,\
+    \ 42\n  for sealed object, 46\nconsole.log function, 51\nconstructor property,\
+    \ 50–51\n  changing by object literal notation, 59\nconstructors, 6–7, 49–53\n\
+    \  inheritance, 72–75\nObject.defineProperty() method inside, 52\nprivate members\
+    \ for, 82–84\nprototype use with, 57–60\npurpose of, 51\nscope-safe, 90–92"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: 'constructors (continued)
+
+    stealing, 75–76
+
+    subtype, 72, 75–76
+
+    supertype, 72, 75–76
+
+    create() method, 70
+
+    creating
+
+    accessor properties, 42–43
+
+    objects, 6–7
+
+    properties, on temporary objects, 15
+
+    Crockford, Douglas, 69
+
+
+    D
+
+    data
+
+    sharing private, 83–84
+
+    storing on prototype, 57
+
+    types. See primitive types; reference types; types
+
+    data properties, 37
+
+    attributes, 40–41
+
+    from mixins, 88–89
+
+    Date built-in type, 8
+
+    Date object, valueOf() method, 67
+
+    declarations, vs. expressions, 18–19
+
+    defineProperties() method, 43–44
+
+    defineProperty() method, 39–41, 52
+
+    [[Delete]] operation, for object property, 35
+
+    delete operator, 35, 48
+
+    dereferencing, objects, 7–8
+
+    detecting properties, 33–35
+
+    dot notation, for property access, 11
+
+    double equals operator (==), 5
+
+    double-square-bracket notation ([[ ]]), 17
+
+
+    E
+
+    enumerable properties
+
+    adding to Object.prototype, 69
+
+    copying between supplier and receiver, 84
+
+    [[Enumerable]] property attribute, 39, 42
+
+    enumeration, 36–37
+
+    equals operators, double (==) and triple (===), 5
+
+    Error built-in type, 9
+
+    errors
+
+    from constructors in strict mode, 53
+
+    for primitive wrapper objects, 16
+
+    event support, adding to objects, 85–87
+
+    expressions, vs. declarations, 18–19
+
+
+    [[Extensible]] attribute, 45–47
+
+    extensions for objects, preventing, 45
+
+
+    F
+
+    falsy values, 33
+
+    first-class functions, 2
+
+    flexibility of JavaScript, 2
+
+    for-in loops, 36, 69, 84
+
+    frames of web pages, passing values between, 13
+
+    freeze() method, 47, 61
+
+    freezing objects, 47
+
+    frozen objects, prototype modification and, 61
+
+    Function constructor, 9, 10, 20
+
+    function keyword, 18
+
+    function literals, 10–11
+
+    functions, 2, 17–29
+
+    declarations vs. expressions, 18–19
+
+    hoisting, 18–19
+
+    overloading, 23–24
+
+    parameters, 21–22
+
+    as values, 19–21
+
+
+    G
+
+    garbage-collection language, JavaScript as, 7
+
+    [[Get]] attribute, 41
+
+    getOwnPropertyDescriptor() method, 44
+
+    getPrototypeOf() method, 55
+
+    getter functions, 37–38
+
+    global object, this to represent, 25
+
+
+    H
+
+    hash maps, JavaScript objects as, 48
+
+    hasOwnProperty() method, 34–35, 53, 66, 69
+
+    hoisting functions, 18–19
+
+
+    I
+
+    if condition, 33
+
+    immediately invoked function expression (IIFE), 80
+
+    inheritance, 65–78
+
+    constructor, 72–75
+
+    methods from Object.prototype, 66–68
+
+    between objects, 69–72
+
+    prototype chaining, 65–69
+
+    pseudoclassical, 76, 87'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: 'in operator, 53
+
+    testing for property instance
+
+    with, 33–34
+
+    instanceof operator, 12–13
+
+    temporary objects and, 15
+
+    instances. See also objects
+
+    checking type of, 50–51
+
+    prototype link to constructor, 60
+
+    of reference types, 6
+
+    instantiating
+
+    built-in types, 8–11
+
+    objects, 6
+
+    primitive wrappers, 16
+
+    internal property, of functions, 17
+
+    isArray() method, 13–14
+
+    isExtensible() method, 45, 46
+
+    isFrozen() method, 47
+
+    isPrototypeOf() method, 55, 66
+
+    isSealed() method, 46
+
+    K
+
+    keys() method, 36, 89–90
+
+    key/value pairs, 48
+
+    L
+
+    length property, of functions, 21–22
+
+    literals, 3, 9
+
+    array, 10
+
+    function, 10–11
+
+    object, 9–10
+
+    regular expression, 11
+
+    M
+
+    memory location, pointer to, 7
+
+    methods, 6, 24–28
+
+    adding to arrays, 62
+
+    primitive, 6
+
+    privileged, 80
+
+    prototypes for defining, 57–60
+
+    for supertypes, accessing, 77
+
+    mixins, 84–90
+
+    data properties from, 88–89
+
+    module patterns, 80–82
+
+    N
+
+    names
+
+    for constructors,
+
+    capitalization of, 50
+
+    multiple functions with same, 23
+
+    for properties, 80
+
+    new operator, 6, 90–92
+
+    constructors and, 49, 50, 52
+
+    instantiating reference types with, 9
+
+    this object created with, 51
+
+    null value, 3
+
+    determining if a value is, 5
+
+    setting object variable to, 7–8
+
+    setting property to, 35
+
+    typeof operator and, 5
+
+    Number primitive wrapper type, 14–15
+
+    number type, 3
+
+    O
+
+    Object built-in type, 9
+
+    Object constructor, 32
+
+    Object.create() method, 70
+
+    Object.defineProperties() method, 43–44
+
+    Object.defineProperty() method, 39–41, 52
+
+    Object.freeze() method, 47, 61
+
+    Object.getOwnPropertyDescriptor() method, 44
+
+    Object.getPrototypeOf() method, 55
+
+    Object.isExtensible() method, 45, 46
+
+    Object.isFrozen() method, 47
+
+    Object.isSealed() method, 46
+
+    Object.keys() method, 36, 89–90
+
+    object literals, 9–10
+
+    object patterns, 79–92
+
+    private and privileged
+
+    members, 80–84
+
+    Object.preventExtensions() method, 45
+
+    Object.prototype.isPrototypeOf() method, 55, 66
+
+    Object.prototype prototype
+
+    methods inherited from, 66–68
+
+    modifying, 68–69
+
+    objects, 2, 6, 31–48
+
+    creating, 6–7
+
+    dereferencing, 7–8
+
+    freezing, 47
+
+    inheritance, 69–72
+
+    methods, 24–28
+
+    modification, preventing, 45–47
+
+    properties, defining, 32–33
+
+    property inheritance from
+
+    prototype, 65–69
+
+    reference types as, 2
+
+    sealing, 45–46
+
+    Object.seal() method, 45–46, 61
+
+    overloading functions, 23–24'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: "own properties\n  determining existence of, 66\n  determining whether\n   \
+    \ enumerable, 66\n  in operator to check for, 34\n  for objects, 32\n  vs. prototype\
+    \ properties, 55–56\n\nP\n\nparameters, 21–22\nperson object, module pattern for\n\
+    \  creating, 81\npointer to memory location, 7\npreventExtensions() method, 45\n\
+    preventing object modifications, 45–47\nprimitive methods, 6\nprimitive types,\
+    \ 2, 3–6\nprimitive wrapper types, 14–16\nprivate data, sharing, 83–84\nprivate\
+    \ members, 80–84\n  for constructors, 82–84\nprivileged members, 80–84\nproperties,\
+    \ 6, 11–12, 80\n  adding or removing, 8\n  copying enumerable, between\n    receiver\
+    \ and supplier, 84–86\n  creating on temporary objects, 15\n  defining, 32–33\n\
+    \  defining multiple, 43–44\n  detecting, 33–35\n  enumerable, adding to\n   \
+    \ Object.prototype, 69\n  enumeration, 36–37\n  identifying on prototype, 54\n\
+    \  removing, 35\n  string literals for names, 9\n  types, 37–38\nproperty attributes,\
+    \ 38–44\n  changing, 39–40\n  retrieving, 44\npropertyIsEnumerable() method, 37,\
+    \ 39, 66\n_proto_ property, 55\nprototype chaining, 65–69, 71, 74\n  object without,\
+    \ 72\n  overwriting, 73\nprototype properties\n  identifying, 54\n  vs. own properties,\
+    \ 55–56\nprototype property, of functions, 53, 72\n[[Prototype]] property, 54–56,\
+    \ 60–61\n\nprototypes, 53–63\n  built-in object, 62–63\n  changing, 60–62\n  identifying\
+    \ properties, 54\n  overwriting, 59\n  property inheritance from, 65–69\n  use\
+    \ with constructors, 57–60\npseudoclassical inheritance, 76, 87\npseudoinheritance,\
+    \ mixins for, 84\n[[Put]] method, 32–33\n  for data properties, 37\n\nR\n\nread-only\
+    \ property, 38\nreceiver, copying enumerable\n  properties between\n  supplier\
+    \ and, 84–86\nRectangle constructor, 73–75\nreference types, 2, 6–8\n  identifying,\
+    \ 12–13\nreference values, storing on prototype,\n  57–58\nRegExp built-in type,\
+    \ 9\nRegExp constructor, 11\nregular expression literals, 11\nremoving properties,\
+    \ 8, 35\nretrieving property attributes, 44\nrevealing module pattern, 82\n\n\
+    S\n\nscope-safe constructors, 90–92\nsealed objects, prototype modification\n\
+    \  and, 61\nsealing objects, 45–46\nseal() method, 45–46, 61\n[[Set]] attribute,\
+    \ 32–33, 41\nsetter functions, 37–38\nsharing private data, 83–84\nsignatures,\
+    \ function with multiple, 23\nsort() method, 20\nsquare brackets ([ ])\n  for\
+    \ array literals, 10\n  for property access, 11–12\nSquare constructor, 73–75\n\
+    stealing constructors, 75–76\nstrict mode\n  for nonextensible objects, 45\n \
+    \ for sealed objects, 46\nstring literals, as property names, 9\nString primitive\
+    \ wrapper type, 14–15"
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "strings\n  capitalize() method, 62\n  conversion of values to,\n    for comparison,\
+    \ 21\n  methods, 6\nstring type, 3\nsubstring() method, 6\nsubtype constructors,\
+    \ 72, 75–76\nsum() function, 21\nsupertype\n  constructors, 72, 75–76\n  methods,\
+    \ accessing, 77\nsupplier, copying enumerable\n  properties between\n  receiver\
+    \ and, 84–86\n\nT\ntemporary objects, creating\n  properties on, 15\nthis object,\
+    \ 25–26\n  changing value of, 26–28\n  to create length and width\n    properties,\
+    \ 76\n  creating with new, 51\ntoFixed() method, 6\ntoLowerCase() method, 6\n\
+    toString() method, 6, 35, 66, 67–68\ntriple equals operator (===), 5\ntruthy values,\
+    \ 33\ntypeof operator, 4–5, 12\ntypes, 2. See also primitive types;\n  reference\
+    \ types\n  checking for different, 24\n  checking instance for, 50–51\n  instantiating\
+    \ built-in, 8–11\n\nU\nundefined type, 3\nunderscore (_), in property name\n \
+    \ prefix, 38, 80\n\nV\n[[Value]] attribute, 40\nvalueOf() method, 66, 67\nvalues\n\
+    \  functions as, 19–21\n  passing, between web page\n    frames, 13\nvariable\
+    \ object, 2\nvariables, for primitive types, 3–4\n\nW\nweb pages, passing values\
+    \ between\n  frames, 13\nwrapper types, primitive, 14–16\n[[Writable]] attribute,\
+    \ 40\nwrite-only properties, 38"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: The Principles of Object-Oriented JavaScript is set in New Baskerville, Futura,
+    TheSansMono Condensed, and Dogma. The book was printed and bound by Lake Book
+    Manufacturing in Melrose Park, Illinois. The paper is 60# Husky Opaque Offset
+    Smooth, which is certified by the Sustainable Forestry Initiative (SFI).
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '# UPDATES
+
+
+    Visit http://nostarch.com/oojs/ for updates, errata, and other information.
+
+
+    More no-nonsense books from no starch press
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_120_0.png)
+
+
+    ELOQUENT JAVASCRIPT
+
+    A Modern Introduction to Programming
+
+    by MARIJN HAVERBEKE
+
+    JANUARY 2011, 224 PP., $29.95
+
+    ISBN 978-1-59327-282-1
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_120_1.png)
+
+
+    THE MODERN WEB
+
+    Multi-Device Web Development with HTML5, CSS3, and JavaScript
+
+    by PETER GASSTON
+
+    APRIL 2013, 264 PP., $34.95
+
+    ISBN 978-1-59327-487-0
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_120_2.png)
+
+
+    THE BOOK OF CSS3
+
+    A Developer''s Guide to the Future of Web Design
+
+    by PETER GASSTON
+
+    MAY 2011, 304 PP., $34.95
+
+    ISBN 978-1-59327-286-9
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_120_3.png)
+
+
+    JAVASCRIPT FOR KIDS
+
+    A Playful Introduction to Programming
+
+    by NICK MORGAN
+
+    JUNE 2014, 252 PP., $34.95
+
+    ISBN 978-1-59327-408-5
+
+    full color
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_120_4.png)
+
+
+    PYTHON FOR KIDS
+
+    A Playful Introduction to Programming
+
+    by JASON R. BRIGGS
+
+    DECEMBER 2012, 344 PP., $34.95
+
+    ISBN 978-1-59327-407-8
+
+    full color
+
+
+    ![](img/dcf53336af93733d4dab8829d31ceb8e_120_5.png)
+
+
+    RUBY UNDER A MICROSCOPE
+
+    An Illustrated Guide to Ruby Internals
+
+    by PAT SHAUGHNESSY
+
+    NOVEMBER 2013, 360 PP., $39.95
+
+    ISBN 978-1-59327-527-3
+
+
+    PHONE:
+
+    800.420.7240 OR
+
+    415.863.9900
+
+
+    EMAIL:
+
+    SALES@NOSTARCH.COM
+
+
+    WEB:
+
+    WWW.NOSTARCH.COM'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# # TAKE CONTROL OF JAVASCRIPT OBJECTS
+
+
+    > Foreword by Cody Lindley, Best-selling Author and Principal Frontend Architect
+    at TandemSeven
+
+
+    If you’ve used a more traditional object-oriented language, such as C++ or Java,
+    JavaScript probably doesn’t seem object-oriented at all. It has no concept of
+    classes, and you don’t even need to define any objects in order to write code.
+    But don’t be fooled—JavaScript is an incredibly powerful and expressive object-oriented
+    language that puts many design decisions right into your hands.
+
+
+    In The Principles of Object-Oriented JavaScript, Nicholas C. Zakas thoroughly
+    explores JavaScript’s object-oriented nature, revealing the language’s unique
+    implementation of inheritance and other key characteristics. You’ll learn:
+
+
+    +   - The difference between primitive and reference values
+
+    +   - What makes JavaScript functions so unique
+
+    +   - The various ways to create objects
+
+
+    +   - How to define your own constructors
+
+    +   - How to work with and understand prototypes
+
+    +   - Inheritance patterns for types and objects
+
+
+    The Principles of Object-Oriented JavaScript will leave even experienced developers
+    with a deeper understanding of JavaScript. Unlock the secrets behind how objects
+    work in JavaScript so you can write clearer, more flexible, and more efficient
+    code.
+
+
+    # ## ABOUT THE AUTHOR
+
+
+    Nicholas C. Zakas is a software engineer at Box and is known for writing on and
+    speaking about the latest in JavaScript best practices. He honed his experience
+    during his five years at Yahoo!, where he was principal frontend engineer for
+    the Yahoo! home page. He is the author of several books, including Maintainable
+    JavaScript and Professional JavaScript for Web Developers.'
+  merge: -1
+  img_proc: true
