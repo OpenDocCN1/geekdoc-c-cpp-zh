@@ -1,0 +1,5 @@
+# EXERCISES
+
+Exercises are found at the ends of chapters. The exercises are mainly of the write a program variety. Always write enough code for a solution to be compiled and run with at least a few test cases. The exercises vary considerably in difficulty, so they are marked with an estimate of their difficulty. The scale is exponential so that if an exercise takes you ten minutes, it might take an hour and it might take a day. The time needed to write and test a program depends more on your experience than on the exercise itself. An exercise might take a day if you first have to get acquainted with a new computer system in order to run it. On the other hand, an exercise might be done in an hour by someone who happens to have the right collection of programs handy.
+
+Any book on programming in C can be used as a source of extra exercises for some introductory chapters. Any book on data structures and algorithms can be used as a source of exercises for some middle chapters for the formation of algorithms.
