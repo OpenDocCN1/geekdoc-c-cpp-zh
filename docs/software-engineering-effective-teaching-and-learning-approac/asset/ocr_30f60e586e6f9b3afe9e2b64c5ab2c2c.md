@@ -1,0 +1,19 @@
+# Assessment/Individual Contribution
+
+A delicate aspect of teaching CSE293 is the requirement for each team member to perform confidential self and team-member assessments. As noted by Chrisman and Beccue (1987), Scott, Bisland, Tiehenor, and Cross (1994) and Wilkins and Lawhead (2000), individually assessing students within team settings present difficult problems that can be further complicated by the need for instructor intervention to resolve intra-team disputes. Over the years, we have tried different approaches as given in Table 4.
+
+The first approach we tried, the “Letter Grade” technique from Table 4, resulted, with a few exceptions (less than seven out of more than 70 teams), in almost all students self-grading to an average of 90+ or higher for the semester and indicating that all team members deserve an A or A- at worst. This is often totally contrary to reality, particularly in terms of the grades that have been received by the students’ respective course projects. We believe that this is a result of students’ perceptions that if they finish the course project and it more or less “works”, they deserve a high grade. A similar effect occurred when using the “Sums to One” approach in Table 4. Related examples occurred when each student was asked to identify his/her and teammates level of participation for each deliverable (e.g., specification, design, etc.).
+
+Even though students are specifically told that not all students had to contribute equally to all deliverables, for four person teams, students usually indicated 25% effort per person per deliverable, for five person teams, 20%, and so on. In a few cases, the assessments were lopsided. For example, we had a case where for a team of six, five students indicated that the sixth student did not contribute equally and deserved a low grade; refreshingly, that sixth student concurred! There have also been dysfunctional teams where every team member criticized a different team member as not contributing, and teams that complained that the leader was too controlling.
+
+Meaningful peer assessment has long been problematic in capstone courses. In efforts by Clark, et al. (2005), self and peer assessments were conducted in a formal business-oriented way with student supplied time sheets, detailed surveys, and grading formulas for instructors. In another effort (Ellis & Mitchell, 2004), surveys were used with the instructor making similar conclusions to our observations. In the following sections we discuss our approaches to strengthening the utility and impact of peer assessments.
+
+At USNA, we instituted the rubric shown in Table 5 in pursuit of what we termed a Peer-Assessment-Multiplier for awarding individual students grades for team projects. During these assessments, each student circles a rating to in-
+
+Table 4. Techniques for student assessments of self and team members
+
+| Description | Technique | Result |
+|---|---|---|
+| Letter Grade | Students assign a letter or numeric grade (0..100) to self and each of their teammates. | Unproductive. Almost all students self-graded to an average of 90+ or higher for the semester and indicated that all team members deserved an A or A- at worst |
+| Sums to One | Students assign a fraction to self and team members where the fractions must sum to one. | Unproductive. Almost all students self-graded to a .25 for four person teams, .20 for five person teams, etc. Same net effect as Letter Grade above. |
+| Descriptive Rubric | Students use a pre-defined descriptive rubric to assess self and team members. | Productive. Students rarely self-graded to a description that maximized their score, and few teams uniformly chose the highest descriptor for each team member. |

@@ -1,0 +1,17 @@
+# THE sUNDERLAND APPROACH:
+THE kILLER TRAIL / 
+INVEs TIGATION
+
+Our solution has been to facilitate consideration of a code of ethics by use of a case study coupled with role-play. The latter becomes a highlight in our tutorial activities and has been found to be an excellent mechanism for encouraging the students to work together. The case study we use is the fictitious “The Case of the Killer Robot” (Epstein, 1997). This is a purposefully exaggerated study and in the full form it is rather long. However, we make use of an abridged version that is freely available on the web for student use. The core of this case study consists of seven newspaper articles, one journal article and one magazine interview. It is centred on the situation where a robot operator at Cybernetics, Inc., is killed by an assembly line robot produced by another company Silicon Techtronics. The case is first made that the cause of the accident was poor quality software produced by a programmer at Silicon Technologies. However, as the case study progresses it becomes more obvious that there are many other people who could be held fully or partly responsible and that numerous ethical issues are involved.
+
+We divide the students into teams and each team is allocated a selected character from the case study. One half of the team must produce the case for their character being responsible for (or contributing to) the death of the robot operator and the other half of the team must produce the opposing view. The team also has to show how the action of the character was in contravention of the principles detailed in the Software Engineering Code of Ethics and Professional Practice. Students are each given a copy of the abridged case study, and the Code of Ethics and Professional Practice. The teams then have a week to prepare, with their team members, for the Killer Robot Trial/Investigation.
+
+We normally divide the students into five teams and allocate to each team one of the main characters from the case study. The particular characters and their roles which we have decided to concentrate on are (Epstein, 1997):
+
++   - Randy Samuels, a programmer. He wrote the program code that caused the Robbie CX30 robot to oscillate wildly, killing its operator, Bart Matthews.
++   - Sam Reynolds, the CX30 Project Manager. He had a background in data processing but was put in charge of the Robbie project. Reynolds was committed to the waterfall model of development.
++   - Michael Waterson, the President and CEO of Silicon Techtronics. He placed Sam Reynolds in charge of Robbie CX30 project as a cost-saving measure.
++   - Cindy Yardley, a Silicon Techtronics employee and software tester. She admitted to faking software tests in order to save the jobs of her co-workers.
++   - Bart Matthews, a robot operator. The malfunctioning Robbie robot struck him dead.
+
+These characters give us a good coverage of people at different levels within the case study from top management to the worker who is killed. As stated above, in the week before the trial/investigation half the members of each team must prepare the case for their character being held responsible (the prosecution case) and other members of the team member must prepare the opposing view (the case for the defence). In each case they should make reference as to how the character’s actions have aligned or not aligned with the code of ethics.

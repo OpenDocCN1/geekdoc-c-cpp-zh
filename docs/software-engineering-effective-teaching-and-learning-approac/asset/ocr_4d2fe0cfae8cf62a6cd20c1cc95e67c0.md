@@ -1,0 +1,19 @@
+classroom and experience sharing, where a faculty or guest speaker discusses real-world experiences related to effective team behaviors. To encourage the development of basic leadership skills, we lecture on and model setting agendas, assigning roles in meetings, clarifying task assignments, reaching consensus, defining tasks and timelines, maintaining meeting minutes and checking on progress towards a goal. The agendas and minutes are used by the Guidance Team when assessing individual accountability.
+
+# Individual Accountability
+
+We often hear from students that they do not like working in teams because some students do all the work and other students sit back and get a free ride. In class, it is not possible to fire a non-contributing team member. We can, however, structure the team so that it is difficult for inactive students to hide. We hold students accountable for their contribution to the team effort, and we use three essential tools for monitoring student participation: observation, self-assessment, and direct interview. Our formal and informal approaches to assessing the contributions that individuals make towards the team project give us a clear picture of the level of contributions made by each student, and we use these indicators to adjust individual grades for the group project.
+
+The team notebook, which may include an individual engineering notebook, is updated weekly by students and contains meeting minutes, email exchanges, and draft work products. Reviews of these notebooks, which may be kept electronically (e.g., using WebCT), have frequently identified teams in conflict and instances of team members not performing to team expectations. These reviews can be used to identify problems in team functioning and allow the instructor to intervene when necessary. Informal approaches include observing students while they are working. The teaching assistants for the course are in frequent contact with students working in the laboratory,
+
+and informally the TAs observe how project team members behave. To help with observation, a rubric is useful to tally particular behaviors exhibited by team members during meetings, e.g., seeking member participation, summarizing major points, or asking questions.
+
+Students are required to self report their level of contribution. Some of these statements must be shared with (and signed by) other team members, and some are private between the student and the Guidance Team. In addition, members report on what is working well in the team and what needs to be improved.
+
+During meetings between a team and the instructor, the instructor interviews each team member to assess the level of contribution. Exams are used to assess the level of competency with respect to given topics. Frequently, these exams expose weaknesses in students who have not participated in the development of a team’s work products.
+
+One further technique for assessing student performance on the team project is the interview at the final presentations. These presentations include members of the academic community outside the course, and questioning of individual students in this setting is highly effective in determining the familiarity with the course concepts as well as the level of contribution toward team success.
+
+# Team Issues
+
+Frequently, students working in teams experience conflict, and not all students are equally adept at dealing with these situations, particularly those that result from clashing priorities and personalities (Scholtes, 1996). Significant challenges arise for the instructor of the project course when students are unable to resolve team issues on their own. In order for us to expect students to work on a team, we have to teach them how to resolve team conflicts. The process described by Johnson (Johnson, 2005) is generally more effective than ad hoc processes for conflict resolution.
