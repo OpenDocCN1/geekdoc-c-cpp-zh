@@ -1,0 +1,26 @@
+# 7.14 Imagine that there exists an algorithm SPLITk that can split a list L of n elements into k sublists, each containing one or more elements, such that sublist i contains only elements whose values are less than all elements in sublist j for i < j <= k. If n < k, then k − n sublists are empty, and the rest are of length 1. Assume that SPLITk has time complexity O(length of L). Furthermore, assume that the k lists can be concatenated again in constant time. Consider the following algorithm:
+
+```
+List SORTk(List L) {
+    List sub[k]; // To hold the sublists
+    if (L.length() > 1) {
+        SPLITk(L, sub); // SPLITk places sublists into sub
+        for (i=0; i<k; i++)
+            sub[i] = SORTk(sub[i]); // Sort each sublist
+        L = concatenation of k sublists in sub;
+        return L;
+    }
+}
+```
+
++   (a) What is the worst-case asymptotic running time for SORTk? Why?
++   (b) What is the average-case asymptotic running time of SORTk? Why?
+
+# 7.15 Here is a variation on sorting. The problem is to sort a collection of n nuts and n bolts by size. It is assumed that for each bolt in the collection, there is a corresponding nut of the same size, but initially we do not know which nut goes with which bolt. The differences in size between two nuts or two bolts can be too small to see by eye, so you cannot rely on comparing the sizes of two nuts or two bolts directly. Instead, you can only compare the sizes of a nut and a bolt by attempting to screw one into the other (assume this comparison to be a constant time operation). This operation tells you that either the nut is bigger than the bolt, the bolt is bigger than the nut, or they are the same size. What is the minimum number of comparisons needed to sort the nuts and bolts in the worst case?
+
+# 7.16 (a) Devise an algorithm to sort three numbers. It should make as few comparisons as possible. How many comparisons and swaps are required in the best, worst, and average cases?
+
++   (b) Devise an algorithm to sort five numbers. It should make as few comparisons as possible. How many comparisons and swaps are required in the best, worst, and average cases?
++   (c) Devise an algorithm to sort eight numbers. It should make as few comparisons as possible. How many comparisons and swaps are required in the best, worst, and average cases?
+
+7.17 Devise an efficient algorithm to sort a set of numbers with values in the range 0 to 30,000. There are no duplicates. Keep memory requirements to a minimum.

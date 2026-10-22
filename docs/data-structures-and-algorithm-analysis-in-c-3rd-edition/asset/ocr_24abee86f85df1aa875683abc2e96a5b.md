@@ -1,0 +1,13 @@
+special niche applications (Heapsort). Sorting provides an example of a significant technique for analyzing the lower bound for a problem. Sorting will also be used to motivate the introduction to file processing presented in Chapter 8.
+
+The present chapter covers several standard algorithms appropriate for sorting a collection of records that fit in the computer’s main memory. It begins with a discussion of three simple, but relatively slow, algorithms requiring Θ(n²) time in the average and worst cases. Several algorithms with considerably better performance are then presented, some with Θ(n log n) worst-case running time. The final sorting method presented requires only Θ(n) worst-case time under special conditions. The chapter concludes with a proof that sorting in general requires Ω(n log n) time in the worst case.
+
+# 7.1 Sorting Terminology and Notation
+
+Except where noted otherwise, input to the sorting algorithms presented in this chapter is a collection of records stored in an array. Records are compared to one another by means of a comparator class, as introduced in Section 4.4. To simplify the discussion we will assume that each record has a key field whose value is extracted from the record by the comparator. The key method of the comparator class is prior, which returns true when its first argument should appear prior to its second argument in the sorted list. We also assume that for every record type there is a swap function that can interchange the contents of two records in the array(see the Appendix).
+
+Given a set of records r₁, r₂, ..., rₙ with key values k₁, k₂, ..., kₙ, the Sorting Problem is to arrange the records into any order s such that records rₛ₁, rₛ₂, ..., rₛₙ have keys obeying the property kₛ₁ ≤ kₛ₂ ≤ ... ≤ kₛₙ. In other words, the sorting problem is to arrange a set of records so that the values of their key fields are in non-decreasing order.
+
+As defined, the Sorting Problem allows input with two or more records that have the same key value. Certain applications require that input not contain duplicate key values. The sorting algorithms presented in this chapter and in Chapter 8 can handle duplicate key values unless noted otherwise.
+
+When duplicate key values are allowed, there might be an implicit ordering to the duplicates, typically based on their order of occurrence within the input. It might be desirable to maintain this initial ordering among duplicates. A sorting algorithm is said to be stable if it does not change the relative ordering of records with identical key values. Many, but not all, of the sorting algorithms presented in this chapter are stable, or can be made stable with minor changes.

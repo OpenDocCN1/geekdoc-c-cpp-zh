@@ -1,0 +1,40 @@
+
+## 3.4 Asymptotic Analysis
+
+Despite the larger constant for the curve labeled 10n in Figure 3.1, 2n² crosses it at the relatively small value of n = 5. What if we double the value of the constant in front of the linear equation? As shown in the graph, 20n is surpassed by 2n² once n = 10. The additional factor of two for the linear growth rate does not much matter. It only doubles the x-coordinate for the intersection point. In general, changes to a constant factor in either equation only shift where the two curves cross, not whether the two curves cross.
+
+When you buy a faster computer or a faster compiler, the new problem size that can be run in a given amount of time for a given growth rate is larger by the same factor, regardless of the constant on the running-time equation. The time curves for two algorithms with different growth rates still cross, regardless of their running-time equation constants. For these reasons, we usually ignore the constants when we want an estimate of the growth rate for the running time or other resource requirements of an algorithm. This simplifies the analysis and keeps us thinking about the most important aspect: the growth rate. This is called asymptotic algorithm analysis. To be precise, asymptotic analysis refers to the study of an algorithm as the input size “gets big” or reaches a limit (in the calculus sense). However, it has proved to be so useful to ignore all constant factors that asymptotic analysis is used for most algorithm comparisons.
+
+It is not always reasonable to ignore the constants. When comparing algorithms meant to run on small values of n, the constant can have a large effect. For example, if the problem is to sort a collection of exactly five records, then an algorithm designed for sorting thousands of records is probably not appropriate, even if its asymptotic analysis indicates good performance. There are rare cases where the constants for two algorithms under comparison can differ by a factor of 1000 or more, making the one with lower growth rate impractical for most purposes due to its large constant. Asymptotic analysis is a form of “back of the envelope” estimation for algorithm resource consumption. It provides a simplified model of the running time or other resource needs of an algorithm. This simplification usually helps you understand the behavior of your algorithms. Just be aware of the limitations to asymptotic analysis in the rare situation where the constant is important.
+
+### 3.4.1 Upper Bounds
+
+Several terms are used to describe the running-time equation for an algorithm. These terms — and their associated symbols — indicate precisely what aspect of the algorithm’s behavior is being described. One is the upper bound for the growth of the algorithm’s running time. It indicates the upper or highest growth rate that the algorithm can have.
+
+Because the phrase “has an upper bound to its growth rate of f(n)” is long and often used when discussing algorithms, we adopt a special notation, called big-Oh notation. If the upper bound for an algorithm’s growth rate (for, say, the worst case) is f(n), then we would write that this algorithm is “in the set O(f(n)) in the worst case” (or just “in O(f(n)) in the worst case”). For example, if n² grows as fast as T(n) (the running time of our algorithm) for the worst-case input, we would say the algorithm is “in O(n²) in the worst case.”
+
+The following is a precise definition for an upper bound. T(n) represents the true running time of the algorithm. f(n) is some expression for the upper bound.
+
+For T(n) a non-negatively valued function, T(n) is in set O(f(n)) if there exist two positive constants c and n₀ such that T(n) ≤ c f(n) for all n > n₀.
+
+Constant n₀ is the smallest value of n for which the claim of an upper bound holds true. Usually n₀ is small, such as 1, but does not need to be. You must also be able to pick some constant c, but it is irrelevant what the value for c actually is. In other words, the definition says that for all inputs of the type in question (such as the worst case for all inputs of size n) that are large enough (i.e., n > n₀), the algorithm always executes in less than c f(n) steps for some constant c.
+
+**Example 3.4.** Consider the sequential search algorithm for finding a specified value in an array of integers. If visiting and examining one value in the array requires cₛ steps where cₛ is a positive number, and if the value we search for has equal probability of appearing in any position in the array, then in the average case T(n) = cₛ n/2. For all values of n > 1, cₛ n/2 ≤ cₛ n. Therefore, by the definition, T(n) is in O(n) for n₀ = 1 and c = cₛ.
+
+**Example 3.5.** For a particular algorithm, T(n) = c₁ n² + c₂ n in the average case where c₁ and c₂ are positive numbers. Then, c₁ n² + c₂ n ≤ c₁ n² + c₂ n² ≤ (c₁ + c₂) n² for all n > 1. So, T(n) ≤ c n² for c = c₁ + c₂, and n₀ = 1. Therefore, T(n) is in O(n²) by the definition.
+
+**Example 3.6.** Assigning the value from the first position of an array to a variable takes constant time regardless of the size of the array. Thus, T(n) = c (for the best, worst, and average cases). We could say in this case that T(n) is in O(c). However, it is traditional to say that an algorithm whose running time has a constant upper bound is in O(1).
+
+If someone asked you out of the blue “Who is the best?” your natural reaction should be to reply “Best at what?” In the same way, if you are asked “What is the growth rate of this algorithm,” you would need to ask “When? Best case? Average case? Or worst case?” Some algorithms have the same behavior no matter which input instance they receive. An example is finding the maximum in an array of integers. But for many algorithms, it makes a big difference, such as when searching an unsorted array for a particular value. So any statement about the upper bound of an algorithm must be in the context of some class of inputs of size n. We measure this upper bound nearly always on the best-case, average-case, or worst-case inputs. Thus, we cannot say, “this algorithm has an upper bound to its growth rate of n².” We must say something like, “this algorithm has an upper bound to its growth rate of n² in the average case.”
+
+Knowing that something is in O(f(n)) says only how bad things can be. Perhaps things are not nearly so bad. Because sequential search is in O(n) in the worst case, it is also true to say that sequential search is in O(n²). But sequential search is practical for large n, in a way that is not true for some other algorithms in O(n²). We always seek to define the running time of an algorithm with the tightest (lowest) possible upper bound. Thus, we prefer to say that sequential search is in O(n). This also explains why the phrase “is in O(f(n))” or the notation “∈ O(f(n))” is used instead of “is O(f(n))” or “= O(f(n)).” There is no strict equality to the use of big-Oh notation. O(n) is in O(n²), but O(n²) is not in O(n).
+
+### 3.4.2 Lower Bounds
+
+Big-Oh notation describes an upper bound. In other words, big-Oh notation states a claim about the greatest amount of some resource (usually time) that is required by an algorithm for some class of inputs of size n (typically the worst such input, the average of all possible inputs, or the best such input).
+
+Similar notation is used to describe the least amount of a resource that an algorithm needs for some class of input. Like big-Oh notation, this is a measure of the algorithm’s growth rate. Like big-Oh notation, it works for any resource, but we most often measure the least amount of time required. And again, like big-Oh notation, we are measuring the resource required for some particular class of inputs: the worst-, average-, or best-case input of size n.
+
+The lower bound for an algorithm (or a problem, as explained later) is denoted by the symbol Ω, pronounced “big-Omega” or just “Omega.” The following definition for Ω is symmetric with the definition of big-Oh.
+
+For T(n) a non-negatively valued function, T(n) is in set Ω(g(n)) if there exist two positive constants c and n₀ such that T(n) ≥ c g(n) for all n > n₀.

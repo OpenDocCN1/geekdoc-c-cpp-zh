@@ -1,0 +1,15 @@
+The standard deviation is thus about √logₑ n. So, 75% of the observations are between logₑ n − 2√logₑ n and logₑ n + 2√logₑ n. Is this a narrow spread or a wide spread? Compared to the mean value, this spread is pretty wide, meaning that the number of assignments varies widely from run to run of the program.
+
+# 15.4 Adversarial Lower Bounds Proofs
+
+Our next problem will be finding the second largest in a collection of objects. Consider what happens in a standard single-elimination tournament. Even if we assume that the “best” team wins in every game, is the second best the one that loses in the finals? Not necessarily. We might expect that the second best must lose to the best, but they might meet at any time.
+
+Let us go through our standard “algorithm for finding algorithms” by first proposing an algorithm, then a lower bound, and seeing if they match. Unlike our analysis for most problems, this time we are going to count the exact number of comparisons involved and attempt to minimize this count. A simple algorithm for finding the second largest is to first find the maximum (in n − 1 comparisons), discard it, and then find the maximum of the remaining elements (in n − 2 comparisons) for a total cost of 2n − 3 comparisons. Is this optimal? That seems doubtful, but let us now proceed to the step of attempting to prove a lower bound.
+
+# Theorem 15.2 The lower bound for finding the second largest value is 2n − 3.
+
+Proof: Any element that loses to anything other than the maximum cannot be second. So, the only candidates for second place are those that lost to the maximum. Function largest might compare the maximum element to n − 1 others. Thus, we might need n − 2 additional comparisons to find the second largest.
+
+This proof is wrong. It exhibits the necessity fallacy: “Our algorithm does something, therefore all algorithms solving the problem must do the same.”
+
+This leaves us with our best lower bounds argument at the moment being that finding the second largest must cost at least as much as finding the largest, or n − 1. Let us take another try at finding a better algorithm by adopting a strategy of divide and conquer. What if we break the list into halves, and run largest on each half? We can then compare the two winners (we have now used a total of n − 1 comparisons), and remove the winner from its half. Another call to largest on the winner’s half yields its second best. A final comparison against the winner of the other half gives us the true second place winner. The total cost is ⌈3n/2⌉ − 2. Is this optimal? What if we break the list into four pieces? The best would be ⌈5n/4⌉. What if we break the list into eight pieces? Then the cost would be about ⌈9n/8⌉. Notice that as we break the list into more parts, comparisons among the winners of the parts becomes a larger concern.

@@ -1,0 +1,14 @@
+(c) The records arrive with values having a uniform random distribution (so the BST is likely to be well balanced). 1000 insertions are interspersed with 1000 searches.
+
+(d) The records arrive with values having a uniform random distribution (so the BST is likely to be well balanced). 1000 insertions are performed, followed by 1,000,000 searches.
+
+# 5.9 Projects
+
+5.1 Re-implement the composite design for the binary tree node class of Figure 5.11 using a flyweight in place of NULL pointers to empty nodes.
+
+5.2 One way to deal with the “problem” of NULL pointers in binary trees is to use that space for some other purpose. One example is the threaded binary tree. Extending the node implementation of Figure 5.7, the threaded binary tree stores with each node two additional bit fields that indicate if the child pointers lc and rc are regular pointers to child nodes or threads. If lc is not a pointer to a non-empty child (i.e., if it would be NULL in a regular binary tree), then it instead stores a pointer to the inorder predecessor of that node. The inorder predecessor is the node that would be printed immediately before the current node in an inorder traversal. If rc is not a pointer to a child, then it instead stores a pointer to the node’s inorder successor. The inorder successor is the node that would be printed immediately after the current node in an inorder traversal. The main advantage of threaded binary trees is that operations such as inorder traversal can be implemented without using recursion or a stack.
+Re-implement the BST as a threaded binary tree, and include a non-recursive version of the preorder traversal
+
+5.3 Implement a city database using a BST to store the database records. Each database record contains the name of the city (a string of arbitrary length) and the coordinates of the city expressed as integer x- and y-coordinates. The BST should be organized by city name. Your database should allow records to be inserted, deleted by name or coordinate, and searched by name or coordinate. Another operation that should be supported is to print all records within a given distance of a specified point. Collect running-time statistics for each operation. Which operations can be implemented reasonably efficiently (i.e., in Θ(log n) time in the average case) using a BST? Can the database system be made more efficient by using one or more additional BSTs to organize the records by location?
+
+5.4 Create a binary tree ADT that includes generic traversal methods that take a visitor, as described in Section 5.2. Write functions count and BSTcheck of Section 5.2 as visitors to be used with the generic traversal method.
