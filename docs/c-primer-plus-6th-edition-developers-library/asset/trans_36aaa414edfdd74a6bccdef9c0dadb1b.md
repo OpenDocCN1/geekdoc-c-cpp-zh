@@ -1,0 +1,93 @@
+
+
+this property in more detail.) So if you tell printf() that the number is unsigned, it prints one value, and if you tell it that the same number is signed, it prints the other value. This behavior shows up with values larger than the maximum signed value. Smaller positive values, such as 96, are stored and displayed the same for both signed and unsigned types.
+
+Next, note that the short variable end is displayed the same whether you tell printf() that end is a short (the %hd specifier) or an int (the %d specifier). That’s because C automatically expands a type short value to a type int value when it’s passed as an argument to a function. This may raise two questions in your mind: Why does this conversion take place, and what’s the use of the h modifier? The answer to the first question is that the int type is intended to be the integer size that the computer handles most efficiently. So, on a computer for which short and int are different sizes, it may be faster to pass the value as an int. The answer to the second question is that you can use the h modifier to show how a longer integer would look if truncated to the size of short. The third line of output illustrates this point. The value 65537 expressed in binary format as a 32-bit number is 00000000000000001000000000000001. Using the %hd specifier persuaded printf() to look at just the last 16 bits; therefore, it displayed the value as 1. Similarly, the final output line shows the full value of verybig and then the value stored in the last 32 bits, as viewed through the %ld specifier.
+
+Earlier you saw that it is your responsibility to make sure the number of specifiers matches the number of values to be displayed. Here you see that it is also your responsibility to use the correct specifier for the type of value to be displayed.
+
+## Tip Match the Type printf() Specifiers
+
+Remember to check to see that you have one format specifier for each value being displayed in a printf() statement. And also check that the type of each format specifier matches the type of the corresponding display value.
+
+## Using Characters: Type char
+
+The char type is used for storing characters such as letters and punctuation marks, but technically it is an integer type. Why? Because the char type actually stores integers, not characters. To handle characters, the computer uses a numerical code in which certain integers represent certain characters. The most commonly used code in the U.S. is the ASCII code given in the table on the inside front cover. It is the code this book assumes. In it, for example, the integer value 65 represents an uppercase A. So to store the letter A, you actually need to store the integer 65. (Many IBM mainframes use a different code, called EBCDIC, but the principle is the same. Computer systems outside the U.S. may use entirely different codes.)
+
+The standard ASCII code runs numerically from 0 to 127. This range is small enough that 7 bits can hold it. The char type is typically defined as an 8-bit unit of memory, so it is more than large enough to encompass the standard ASCII code. Many systems, such as the IBM PC and the Apple Macs, offer extended ASCII codes (different for the two systems) that still stay within an 8-bit limit. More generally, C guarantees that the char type is large enough to store the basic character set for the system on which C is implemented.
+
+Many character sets have many more than 127 or even 255 values. For example, there is the Japanese kanji character set. The commercial Unicode initiative has created a system to represent a variety of characters sets worldwide and currently has over 110,000 characters. The International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC) have developed a standard called ISO/IEC 10646 for character sets. Fortunately, the Unicode standard has been kept compatible with the more extensive ISO/IEC 10646 standard.
+
+The C language defines a byte to be the number of bits used by type char, so one can have a system with a 16-bit or 32-bit byte and char type.
+
+## Declaring Type char Variables
+
+As you might expect, char variables are declared in the same manner as other variables. Here are some examples:
+
+```
+char response;
+char itable, latan;
+```
+
+This code would create three char variables: response, itable, and latan.
+
+## Character Constants and Initialization
+
+Suppose you want to initialize a character constant to the letter A. Computer languages are supposed to make things easy, so you shouldn’t have to memorize the ASCII code, and you don’t. You can assign the character A to grade with the following initialization:
+
+```
+char grade = 'A';
+```
+
+A single character contained between single quotes is a C character constant. When the compiler sees 'A', it converts the 'A' to the proper code value. The single quotes are essential. Here’s another example:
+
+```
+char broiled;        /* declare a char variable        */
+broiled = 'T';      /* OK                             */
+broiled = T;        /* NO! Thinks T is a variable     */
+broiled = "T";    /* NO! Thinks "T" is a string    */
+```
+
+If you omit the quotes, the compiler thinks that T is the name of a variable. If you use double quotes, it thinks you are using a string. We’ll discuss strings in Chapter 4.
+
+Because characters are really stored as numeric values, you can also use the numerical code to assign values:
+
+```
+char grade = 65;  /* ok for ASCII, but poor style */
+```
+
+In this example, 65 is type int, but, because the value is smaller than the maximum char size, it can be assigned to grade without any problems. Because 65 is the ASCII code for the letter A, this example assigns the value A to grade. Note, however, that this example assumes that the
+
+| Sequence | Meaning |
+|---|---|
+| \" | Double quote ("). |
+| \? | Question mark (?). |
+| \ooo | Octal value. (o represents an octal digit.) |
+| \xhh | Hexadecimal value. (h represents a hexadecimal digit.) |
+
+Escape sequences must be enclosed in single quotes when assigned to a character variable. For example, you could make the statement
+
+```
+char nerf = '\n';
+```
+
+and then print the variable nerf to advance the printer or screen one line.
+
+Now take a closer look at what each escape sequence does. The alert character (\a), added by C90, produces an audible or visible alert. The nature of the alert depends on the hardware, with the beep being the most common. (With some systems, the alert character has no effect.) The C standard states that the alert character shall not change the active position. By active position, the standard means the location on the display device (screen, teletype, printer, and so on) at which the next character would otherwise appear. In short, the active position is a generalization of the screen cursor with which you are probably accustomed. Using the alert character in a program displayed on a screen should produce a beep without moving the screen cursor.
+
+Next, the \b, \f, \n, \r, \t, and \v escape sequences are common output device control characters. They are best described in terms of how they affect the active position. A backspace (\b) moves the active position back one space on the current line. A form feed character (\f) advances the active position to the start of the next page. A newline character (\n) sets the active position to the beginning of the next line. A carriage return (\r) moves the active position to the beginning of the current line. A horizontal tab character (\t) moves the active position to the next horizontal tab stop (typically, these are found at character positions 1, 9, 17, 25, and so on). A vertical tab (\v) moves the active position to the next vertical tab position.
+
+These escape sequence characters do not necessarily work with all display devices. For example, the form feed and vertical tab characters produce odd symbols on a PC screen instead of any cursor movement, but they work as described if sent to a printer instead of to the screen.
+
+The next three escape sequences (\\, \', and \") enable you to use \, ', and " as character constants. (Because these symbols are used to define character constants as part of a printf() command, the situation could get confusing if you use them literally.) Suppose you want to print the following line:
+
+```
+Gramps sez, "a \ is a backslash."
+```
+
+Then use this code:
+
+```
+printf("Gramps sez, \"a \\ is a backslash.\"\n");
+```
+

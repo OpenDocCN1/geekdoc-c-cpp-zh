@@ -1,0 +1,3 @@
+choice must be in the range 0-48, so the next guess would be (0 + 48) / 2, or 24. If element 24 were too early in the alphabet, the next guess would be (25 + 48) / 2, or 36. This is where the random access feature of the array comes into play. It enables you to jump from one location to another without visiting every location in between. Linked lists, which support only sequential access, don’t provide a means to jump to the midpoint of a list, so you can’t use the binary search technique with linked lists.
+
+![](bbox=[0.05, 0.35, 0.95, 0.95])

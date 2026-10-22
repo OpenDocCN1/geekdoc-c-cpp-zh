@@ -1,0 +1,365 @@
+
+- linked lists, 779-780
+  - arrays comparison, 824-828
+  - creating, 784-785
+  - displaying lists, 783-784
+  - elements, inserting, 824
+  - films2.c program, 781-785
+  - list memory, freeing, 785-786
+  - searches, 826
+  - several items, 781
+  - two items, 780
+- Linux systems, 18-19
+  - compiling, multiple source code files and, 362-363
+  - redirection, 307-311
+  - Windows/Linux option, 21
+- list.c program, 796-802
+- list.h header file, 791-793
+- ListIsEmpty( ) function, 800
+- ListIsFull( ) function, 800-801
+- ListItemCount( ) function, 800-801
+- lists
+  - ADTS, operations, 788
+  - linked
+    - arrays and, 824-828
+    - creating, 784-785
+    - displaying, 783-784
+    - freeing list memory, 785-786
+  - ordered, 826
+- literals, 81-82
+  - character string literals, 442-443
+  - compound, 431
+    - arrays, 432-434
+    - structures and, 631-633
+  - string literals, storage, 512
+- LLVM Project, 18
+- loccheck.c program, 367-368
+- logical operators, 264, 911
+  - alternative spellings, 265
+  - bitwise, 678-680
+  - order of evaluation, 266
+  - precedence, 265-266
+  - relational expressions, 291
+- long constants, 68
+- long double type, 80-81
+- long int type, 66-67
+  - printing, 70
+- long keyword, 60
+- long long constants, 68
+- long long int type, printing, 70
+- long strings, printing, 126-128
+- loops
+  - break statement, 277-279
+  - continue statement, 274-277
+  - counting, 207-208
+  - do while, 220-223
+  - entry condition, 195
+  - for, 210-214
+  - indefinite, 207-208
+  - introduction, 144-146
+  - nested, 224-226
+  - selecting, 223-224
+  - tail recursion and, 356-358
+  - while, 144, 190-191, 195
+    - terminating, 194-195
+
+## M
+
+- mac_arg.c program, 719-721
+- machine language, 6
+- Macintosh
+  - command-line arguments, 500
+  - Xcode, 21
+- multiplication (*) operator, 151-153
+- mycomp( ) function, 758-760
+
+## N
+
+- names1.c program, 622-624
+- names2.c program, 624-626
+- names3.c program, 629-631
+- names.h header file, 735
+- namespaces, shared, 652-653
+- names_st.h header file, 727
+- naming, 36
+  - arrays, pointer notation, 402
+  - functions, 336
+    - uses of names, 664
+  - pointer variables, 371
+  - pointers, arrays and, 402
+  - variables, 375
+  - typedef, 653-654
+- nested function calls, 468-469
+- nested if statement, 259-262
+- nested loops, 224-226
+- nested structures, 613-615
+- newline character
+  - preprocessor directives, 713
+  - stripping, 603
+- no_data.c program, 386
+- nogood.c program, 46-49
+- nono.c program, 465
+- nonprinting characters, 73-76
+- _Noreturn functions (C11), 744
+- Notepad, 19
+- null character, 101, 459
+  - scanf( ) function, 103
+- null pointer, 459
+- num variable, 30, 34
+- number input, mixing with character, 314-317, 327-330
+- numbers, 6
+  - binary, octal digits, 677
+  - bits, values, 674
+  - decimal points, 57
+  - decimal system, 674
+  - floating-point, 57-61
+  - hexadecimal, 65-66, 94, 677-678
+  - input, 323-324
+  - octal, 65-66, 94
+  - order number bases, 676-678
+
+## O
+
+- object code files, 14-18
+- object-like macros, 714, 731
+- octal numbers, 65-66, 94, 677
+- one's complement, 679
+- online resources, 905-906
+- operators
+  - #, 713
+  - ##, 722
+  - AND, 679
+  - + (addition), 149
+  - = (assignment), 146-149, 202
+  - ?: (conditional), 272-273
+  - -- (decrement), 164-166
+  - == (equality), 191
+  - ++ (increment), 166
+  - * (indirection), 371-372
+  - . (membership), 912
+  - * (multiplication), 151-153
+  - == (relational), 202
+  - -/+ (sign operators), 150
+  - - (subtraction), 149-150
+  - / (division), 153-154
+  - < (redirection), 308
+  - > (redirection), 308
+  - arithmetic, 908
+  - assignment, 910-911
+    - %=, 215
+    - *=, 215
+    - +=, 215
+    - -=, 215
+    - /=, 215
+  - binary, 150
+  - bitwise, 913-914
+    - binbit.c program, 686-687
+    - bit fields and, 696-703
+    - clearing bits, 682-683
+    - logical, 678-680
+    - masks, 680-681
+    - setting bits, 681-682
+    - shift operators, 684-685
+    - toggling bits, 683
+    - value checking, 683-684
+  - C, 908
+  - comma operator, 214-218
+  - conditional, 911-912
+  - EXCLUSIVE OR, 680
+  - indirect membership, 913
+  - logical, 264, 911
+    - alternative spellings, 265
+    - order of evaluation, 266
+    - precedence, 265-266
+  - miscellaneous, 914
+  - modulus, 159-160
+  - OR, 679-680
+  - pointer-related, 912
+  - precedence, 154-155
+    - increment/decrement, 165-166
+    - logical operators, 265-266
+    - order of evaluation, 155-157, 266
+  - relational, 197, 910
+    - expressions, 910
+    - precedence, 205
+  - sign, 912
+  - sizeof, 158, 388
+  - structure, 617-618, 647, 912-913
+  - structure pointer, 913
+  - unary, 150
+    - *, 406
+    - ++, 406
+  - union, 912-913
+- OR operator, 679-680
+- order number bases, 676-678
+- order of operator evaluation, 155-157
+  - logical operators, 266
+- order.c program, 406-407
+- ordered lists, 826
+- output, 23
+  - binary, 586
+  - disappearing, 28, 57
+  - printf() function, 92-93
+  - redirection, 308-309
+  - string
+    - fputs() function, 465-466
+    - printf() function, 466
+    - puts() function, 464-465
+  - text, 586
+
+## P
+
+- paint.c program, 272-273
+- parameters
+  - arrays, declaring, 403
+  - const type qualifier, 552-553
+  - formal parameters
+    - const keyword, 413-415
+    - function arguments, 342-343
+  - pointers, 404-407
+- parentheses, pointers to arrays, 420
+- predefined macros, 737-740
+- prefix, 163-164
+- preproc.c program, 713-718
+- preprocessor
+  - constants and, 106-112
+  - directives, newline character, 713
+  - identifiers and, 731
+- print_name( ) function, 352-353
+- print1.c program, 64-65
+- print2.c program, 70-71
+- printf( ) function, 30-31, 38-39
+  - * modifier, 133-135
+  - %f specifier, 57
+  - arguments, 89-91, 114
+  - conversion specifications, 112-113
+    - mismatched conversions, 122-124
+    - modifiers, 116-121
+  - escape sequences, 91-92
+  - flags, 118
+  - multiple values, 43-44
+  - output, 92-93
+  - return value, 126
+  - usage tips, 135-136
+- printing
+  - char type and, 76
+  - floating-point values, 82-83
+  - int values, 64
+  - long long types, 70
+  - long types, 70
+  - short types, 70
+  - strings, 102-103
+    - long strings, 126-128
+  - unsigned types, 70
+- printout.c program, 112-114
+- prntval.c program, 126
+- program jumps, 290
+- program state, 49
+- programmers, 3
+- programming
+  - books, 907
+  - code, writing, 11
+  - commenting, 13
+  - compiling, 11-12
+  - debugging, 12
+  - design, 11
+  - maintenance, 13
+  - objectives, 10
+  - running the program, 12
+  - seven steps,
+  - testing, 12
+- programs
+  - readability, 41-42
+  - structure, 40
+- protecting array contents, 412-417
+- proto.c program, 351-352
+- prototyping functions
+  - ANSI C, 349-353
+  - arguments and, 343
+  - scope, 514-515
+- ptr_ops.c program, 408-409
+- put1( ) function, 467
+- put2( ) function, 468
+- putc( ) function, 572
+- putchar( ) function, 250-252
+  - single-character I/O and, 300-301
+- put_out.c program, 464-465
+- put_put.c program, 468-469
+- puts( ) function, 442
+  - null character and, 471
+  - string input, 453-455
+  - string output, 464-465
+
+## Q
+
+- qsort( ) function, 657, 755-758
+- queue abstract data type, 804
+  - array as queue, 806
+  - circular queue, 808
+  - interface, defining, 805-806
+  - simulations, 818-824
+  - testing queue, 815-817
+- queue.c implementation file, 813-815
+- queue.h interface header file, 809-810
+- quotation marks, double, 465
+
+## R
+
+- ragged arrays, 450
+- rain.c program, 395-396
+- RAM (random access memory), 5
+- rand( ) function, 534, 819, 820
+- rand0( ) function, 535
+- randbin.c program, 593-594
+- random access
+  - binary I/O, 593-594
+  - fgetpos( ) function, 583
+  - fopen( ) function, 579
+  - fseek( ) function, 579-582
+  - fsetpos( ) function, 583
+  - ftell( ) function, 579-582
+- ranges, && operator, 267-268
+- readability, 41-42
+- rectangular arrays, 450
+- rect_pol.c program, 749-750
+- recur.c program, 354-355
+- recursion, 353-355
+  - Fibonacci numbers and, 360
+  - pros/cons, 360-361
+  - returns, 356
+  - reversal and, 358-360
+  - statements, 356
+  - tail recursion, 356-358
+  - up_and_down( ) function, 354-355
+  - variables, 355
+- redefining constants, 717-718
+- redirection, 307
+  - < operator, 308
+  - > operator, 308
+  - combination, 309-310
+  - command-line, 310
+  - input, 307-308
+  - output, 308-309
+- reducto.c program, 574-576
+- reference books, 908
+- register variables, storage classes, 522
+- relational expressions
+  - false, 199-203
+  - logical operator and, 291
+  - true, 199-203
+- relational operators, 197, 910
+  - ==, 191
+  - expressions, 910
+  - precedence, 205
+- repeat.c program, 498-499
+- reserved identifiers, 49-50
+- resources
+  - books
+    - C++, 907
+    - C language, 907
+    - programming, 907
+    - reference, 908
+  - online, 905-906
+- restrict type qualifier, 555-556
+- return keyword, 230, 345-348
+- return statement, 40

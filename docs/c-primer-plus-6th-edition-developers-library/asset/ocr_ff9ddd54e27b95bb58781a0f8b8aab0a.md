@@ -1,0 +1,15 @@
+# Complex and Imaginary Types
+
+Many computations in science and engineering use complex and imaginary numbers. C99 supports these numbers, with some reservations. A free-standing implementation, such as that used for embedded processors, doesn’t need to have these types. (A VCR chip probably doesn’t need complex numbers to do its job.) Also, more generally, the imaginary types are optional. With C11, the entire complex number package is optional.
+
+In brief, there are three complex types, called float _Complex, double _Complex, and long double _Complex. A float _Complex variable, for example, would contain two float values, one representing the real part of a complex number and one representing the imaginary part. Similarly, there are three imaginary types, called float _Imaginary, double _Imaginary, and long double _Imaginary.
+
+Including the complex.h header file lets you substitute the word complex for _Complex and the word imaginary for _Imaginary, and it allows you to use the symbol I to represent the square root of −1.
+
+You may wonder why the C standard doesn’t simply use complex as the keyword instead of using _Complex and then adding a header file to define complex as _Complex. The standards committee is hesitant to introduce a new keyword because that can invalidate existing code that uses the same word as an identifier. For example, prior to C99, many programmers had already used, say, struct complex to define a structure to represent complex numbers or, perhaps, psychological conditions. (The keyword struct, as discussed in Chapter 14, “Structures and Other Data Forms,” is used to define data structures capable of holding more than one value.) Making complex a keyword would make these previous uses syntax errors. But it’s much less likely that someone would have used struct _Complex, especially since using identifiers having an initial underscore is supposed to be reserved. So the committee settled on _Complex as the keyword and made complex available as an option for those who don’t have to worry about conflicts with past usage.
+
+# Beyond the Basic Types
+
+That finishes the list of fundamental data types. For some of you, the list must seem long. Others of you might be thinking that more types are needed. What about a character string type? C doesn’t have one, but it can still deal quite well with strings. You will take a first look at strings in Chapter 4.
+
+C does have other types derived from the basic types. These types include arrays, pointers, structures, and unions. Although they are subject matter for later chapters, we have already smuggled some pointers into this chapter’s examples. For instance, a pointer points to the location of a variable or other data object. The & prefix used with the scanf() function creates a pointer telling scanf() where to place information.
