@@ -1,0 +1,185 @@
+
+last name starts with J and the birth year is between 2000 and 2015. The resulting LINQ method calls look like this:
+
+```
+var resultUsers = moreUsers.Where(x =>
+    x.LastName[0] == 'J'
+        && x.BirthYear >= 2000
+        && x.BirthYear <= 2015)
+        .OrderBy(x => x.FirstName)
+        .Select(x => x.FirstName + " " + x.LastName);
+```
+
+When using LINQ, the return type of a query is often of type `IEnumerable<T>`. This is a generic interface that collections use to be enumerable, which means they can create an iterator over the collection, which can return elements within it.
+
+However, sometimes what we really want is a full-blown collection. For these times, LINQ includes methods that will convert `IEnumerable<T>` to a concrete collection, such as a `List<T>` or an array:
+
+```
+var numbers = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9};
+var evenNumbers = numbers.Where(x => x % 2 == 0);
+List<int> list = evenNumbers.ToList();
+int[] array = evenNumbers.ToArray();
+```
+
+## Existence Operations
+
+LINQ is also great to run checks for the existence of objects in a collection that match given conditions. For example,
+
+## Intersection
+
+An intersection is the group of objects that appear in both two lists:
+
+```
+var intersectionList1 = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9};
+var intersectionList2 = new List<int> {2, 4, 6, 8, 10, 12, 14};
+var intersection = intersectionList1.Intersect(intersectionList2);
+//{2, 4, 6, 8}
+```
+
+## Union
+
+A union is the combined list of unique objects from two separate lists. An item which appears in both lists will only be listed in the union object once:
+
+```
+var unionList1 = new List<int> {5, 7, 3, 2, 9, 8};
+var unionList2 = new List<int> {9, 4, 6, 1, 5};
+var union = unionList1.Union(unionList2);
+//{5, 7, 3, 2, 9, 8, 4, 6, 1}
+```
+
+## Except
+
+There is also the LINQ method `Except()`, which produces the elements that are in the first set, but not in the second set:
+
+```
+var exceptList1 = new List<int> {1, 2, 3, 4, 5, 6, 7, 8, 9};
+var exceptList2 = new List<int> {7, 2, 8, 5, 0, 10, 3};
+var except = exceptList1.Except(exceptList2); //{ 1, 4, 6, 9}
+```
+
+```
+{
+    ID = 3,
+    Title = "Title 3",
+    AuthorName = "Author 1",
+    YearOfPublication = 2017
+},
+new Book()
+{
+    ID = 4,
+    Title = "Title 4",
+    AuthorName = "Author 3",
+    YearOfPublication = 1999
+},
+new Book()
+{
+    ID = 5,
+    Title = "Title 5",
+    AuthorName = "Author 4",
+    YearOfPublication = 2017
+},
+};
+```
+
+One query we might want to run is this query using a group by query. A group by query has the following format:
+
+```
+var results = from collectionVar in collectionName
+              group collectionVar by collectionVar.PropertyName
+              into varGroupName
+              orderby varGroupName.Key //orderby is optional
+              select new {
+                  Key = varGroupName.Key,
+                  Objects = varGroupName.ToList()
+              };
+```
+
+Using this format, our query to get all books in order by publishing year looks like this:
+
+```
+List<Book> books = SomeOtherClass.GetBooks();
+var results = from b in books
+              group b by b.YearOfPublication into g
+              orderby g.Key
+              select new { Year = g.Key, Books = g.ToList() };
+```
+
+We could then use a nested foreach loop to output all the books:
+
+```
+foreach (var result in results)
+{
+    Console.WriteLine("Books published in " + result.Year.ToString());
+
+    var yearBooks = result.Books;
+    foreach (var book in yearBooks)
+    {
+        Console.WriteLine(book.Title + " by " + book.AuthorName);
+    }
+}
+```
+
+## Dynamic Programming and Reflection
+
+### IN THIS CHAPTER
+
+- What is Dynamic Programming
+- Understanding Reflection
+- Using the Dynamic Type
+
+We have covered Functional Programming and Lambda in C# in the previous chapter, and now we will discuss Dynamic Programming and Reflection. Static languages and dynamic languages are the two primary types of software development languages. The fundamental difference between a dynamic and a static language is how it operates its types or doesn’t.
+
+Static languages (statically typed languages) revolve around the very concept of statically typed variables. In dynamic languages, the variable Type doesn’t have to be defined straight away. In other words, variables are settled during “compile time” in a static language, and during “runtime” in a dynamic language.
+
+Then what does this mean?
+
+In a static language, a variable is given its Type when the project is compiled, and it remains fixed that way during the whole execution of the application. A variable can alter its Type several times in a dynamic language while the application is already running.
+
+Below are examples of static and dynamic languages:
+
+- There are significant languages in both of these categories.
+
+| Static | Dynamic |
+| --- | --- |
+| C | JavaScript |
+| Java | Perl |
+| C# | Python |
+| C++ | PHP |
+| F# | Ruby |
+| Go | Objective-C |
+
+### Advantages of Dynamic and Static Languages
+
+Dynamic languages, while being slower, are much simpler to write. And you can write them quickly without thinking about which Type to use or how to initialize them.
+
+This comes at the price of identifying more bugs in runtime due to the interpreter failing to determine a variable’s Type. At the same time, such code seems to be simple to read and is smaller overall, so the bugs generally have less space to hide in.
+
+On the other hand, static languages are generally considered quicker because they settle their types during the compilation phase. This helps enhance the application’s performance and optimization.
+
+Apart from being fast, static languages are also quick to fail. You are able to find bugs even before the application starts, as the compiler checks. This means fewer bugs once the application is up and running.
+
+Any language is significant in the right hands, and knowing any language to its core and utilizing its outstanding characteristics is the key to making great applications. Dynamic programming is an optimization approach that changes a complex problem into a sequence of more straightforward problems; its essential characteristic is the multistage nature of the optimization procedure. Dynamic programming gives a general framework for analyzing many problem types. Various optimization techniques can be adopted within this framework to sort out particular aspects of a more general formulation. Commonly, creativity is required before we can recognize that a specific problem can be cast effectively as a dynamic program. Often, subtle insights are necessary to restructure the formulation so that it can be solved effectively.
+
+The definition of dynamic programming elaborates that it is a technique for sorting out a complex problem by breaking it into a collection of simpler subproblems, solving each subproblem just once, and then storing their solutions to prevent recurring computations.
+
+So now understand this approach by an example.
+
+Contemplate an example of the Fibonacci series. We have provided you with the Fibonacci series below:
+
+- 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+
+We can simply understand that the numbers in the above series are not calculated arbitrarily. Mathematically, we could simply write each of the terms that we have described using a formula:
+
+- F(n) = F(n-1) + F(n-2),
+
+With the base values F(0) = 0, and F(1) = 1. To calculate the other numbers, we adhere to the above relationship.
+
+An example is F(2), which is the sum of F(0) and F(1), equal to 1.
+
+So how could we calculate F(20) here?
+
+The F(20) term here will be calculated using the formula for the nth term of the Fibonacci series. The below figure elaborates how F(20) is calculated.
+
+![](img/b309938baef4102d657b9261db923ba5_279_0.png)
+
+As we can see in the above figure, F(20) is calculated as the sum of F(19) and F(18). In the dynamic programming approach, we attempt to divide the problem into smaller subproblems. We are adhering to this approach in the above case, where F(20) is divided into similar subproblems, i.e., F(19) and F(18). If we recall the definition of dynamic programming, it says the same subproblem must not be computed more than once. But, in the above case, the subproblem is calculated two times. In the example, F(18) is calculated twice; similarly, F(17) is also calculated twice. However, this technique is beneficial as it solves similar subproblems. Still, we need to be cautious while storing the results, because if we are not particular about keeping the result that we have computed once, then it can lead to wastage of resources.

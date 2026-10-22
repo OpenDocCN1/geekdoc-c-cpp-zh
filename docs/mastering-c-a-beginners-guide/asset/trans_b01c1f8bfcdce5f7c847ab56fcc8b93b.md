@@ -1,0 +1,293 @@
+
+
+{
+    // following are the data members
+    jan,
+    feb,
+    mar,
+    apr,
+    may
+}
+class Program {
+    // Main Method
+    static void Main(string[] args)
+    {
+        // getting the integer values of
+        data members..
+        Console.WriteLine("The value of jan in month " +
+            "enum is " +
+            (int)month.jan);
+        Console.WriteLine("The value of feb in month " +
+            "enum is " +
+            (int)month.feb);
+        Console.WriteLine("The value of mar in month " +
+            "enum is " +
+            (int)month.mar);
+        Console.WriteLine("The value of apr in month " +
+            "enum is " +
+            (int)month.apr);
+        Console.WriteLine("The value of may in month " +
+"enum is " +
+(int)month.may);
+}
+}
+}
+
+- **Output:**
+  - The value of jan in month enum is 0.
+  - The value of feb in month enum is 1.
+  - The value of mar in month enum is 2.
+  - The value of apr in month enum is 3.
+  - The value of may in month enum is 4.
+
+As discussed above, that the default value of the first enum member is set to 0, and it increases by 1 for the further data members of enum. However, the user can also change these default value:
+
+```
+enum days {
+    day1 = 1,
+    day2 = day1 + 1,
+    day3 = day1 + 2
+.
+.
+}
+```
+
+In the above example, day1 is assigned value ‘1’ by the user, day2 will be assigned value ‘2’ and similar is the case with day3 member. So you have to just change the value of the first data member of enum, further data members of enums will increase by 1 than the previous one automatically.
+
+if the data member of enum member has not been initialized, then its value is set according to rules stated below:
+
+- If it is the first member, then its value is set to 0 otherwise.
+- It set out the value which is obtained by adding 1 to the previous value of enum data member.
+
+To demonstrate with an example:
+
+```
+enum random {
+A,
+B,
+C = 6;
+D
+}
+```
+
+Here, A is set to 0 by default, B will be incremented to 1. However, as C is initialized with 6 so the value of D will be 7.
+
+To demonstrate the initialization of enum data member with user define values and some particular case of initialization:
+
+```
+// C# program to illustrate the enum
+// data member Initialisation
+using System;
+namespace ConsoleApplication3 {
+// enum declaration
+enum days {
+    // enum data members
+```
+
+```
+Monday,
+Tuesday,
+Wednesday,
+Thursday,
+Friday,
+Saturday,
+Sunday
+}
+// enum declaration
+enum color {
+    // enum data members
+    Red,
+    Yellow,
+    Blue,
+        // assigning value yellow(1) + 5
+    Green = Yellow + 5,
+    Brown,
+    // assigning value yellow(1) + 5
+    Green = Yellow + 5,
+    Brown,
+        // assigning value Green(6) + 3
+    Black = Green + 3
+}
+class Program {
+    // Main Method
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Demonstrating
+    the difference "+
+                          "between Special
+Initialisation" +
+                          " cases and non-
+initialisation cases\n\n");
+        // first of all non-initialized enum
+        // 'days' will be displayed
+```
+
+```
+// as mentioned already, the first
+// member is initialized to 0
+// hence the output will numbers
+// from 0 1 2 3 4 5 6
+
+Console.WriteLine("Value of Monday is " +
+    (int)days.monday);
+Console.WriteLine("Value of Tuesday is " +
+    (int)days.tuesday);
+Console.WriteLine("Value of Wednesday is " +
+    (int)days.wednesday);
+Console.WriteLine("Value of Thursday is " +
+Console.WriteLine("Value of Friday is " +
+    (int)days.friday);
+Console.WriteLine("Value of Saturday is " +
+    (int)days.saturday);
+Console.WriteLine("Value of Sunday is " +
+    (int)days.sunday);
+// Now the use of special
+initialisation
+// cases is demostrated as expected
+Red
+    // will be assigned 0 value
+similarly
+    // yellow will be 1 and blue will
+be 2
+```
+
+```
+// however, green will be assigned the
+// value 1+5=6 similarly is the case
+// with brown and black
+Console.WriteLine("\\nColor Enum");
+Console.WriteLine("Value of Red Color is " + (int)color.Red);
+Console.WriteLine("Value of Yellow Color is " + (int)color.Yellow);
+Console.WriteLine("Value of Blue Color is " + (int)color.Blue);
+Console.WriteLine("Value of Green Color is " + (int)color.Green);
+Console.WriteLine("Value of Brown Color is " + (int)color.Brown);
+Console.WriteLine("Value of Black Color is " + (int)color.Black);
+}
+}
+```
+
+- **Output:**
+  - Value of Monday is 0.
+  - Value of Tuesday is 1.
+  - Value of Wednesday is 2.
+  - Value of Thursday is 3.
+  - Value of Friday is 4.
+  - Value of Saturday is 5.
+  - Value of Sunday is 6.
+
+- **Color Enum:**
+  - Value of Red Color is 0.
+  - Value of Yellow Color is 1.
+  - Value of Blue Color is 2.
+  - Value of Green Color is 6.
+  - Value of Brown Color is 7.
+  - Value of Black Color is 9.
+
+# NAMESPACES
+
+Namespaces are used to organize the classes.[^5] They are great to manage the scope of methods and classes. To put it simply, you can say that it provides a way to keep one set of names (like class names) different from other sets of names. The most important advantage of using namespace is that the class names declared in one namespace will not clash with the same class names displayed in another namespace. It is also referred to as a named group of classes having common features. The items of a namespace can be namespaces, interfaces, structures, and delegates.
+
+In order to define a namespace in C#, we will use the namespace keyword followed by the name of the namespace and curly braces containing the body of the namespace as follows:
+
+```
+namespace name_of_namespace {
+// Namespace (Nested Namespaces)
+// Classes
+// Interfaces
+// Structures
+// Delegates
+}
+```
+
+> [^5]: https://www.geeksforgeeks.org/c-sharp-namespaces/, geeksforgeeks
+
+# For example
+
+```
+// defining the namespace name1
+namespace name1
+{
+    // C1 is the class in the namespace name1
+    class C1
+    {
+        // class code
+    }
+}
+```
+
+Please keep in mind that the members of a namespace are accessed by using dot(.) operator. Its respective namespace fully knows a class in C#:
+
+```
+[namespace_name].[member_name]
+```
+
+At the same time, remember that two classes with the same name can be created inside two different namespaces in a single program. Inside a namespace, no two classes can have the same name.
+
+In C#, the full name of the class starts from its namespace name followed by dot(.) operator and the class name, which is termed as the fully qualified name of the class. For example:
+
+```
+// C# program to illustrate the
+// use of namespaces
+// namespace declaration
+```
+
+```
+// Class declaration
+class Newsco_2
+{
+
+    // Main Method
+    public static void Main(String []args)
+    {
+        // calling the display method of
+        // class Newsco_1 by using two dot
+        // operator as one is use to access
+        // the class of first namespace
+and
+        // another is use to access the
+        // static method of class Newsco_1.
+        // Termed as fully qualified name
+        first.Newsco_1.display();
+    }
+}
+```
+
+The output would then be the following:
+
+- Hello Newsco!
+
+It is not actually practical to call the function or class (or any other members of a namespace) every time by using its fully qualified name. In the above example, System.Console.WriteLine("Hello Newsco!"); and first.Newsco_1.display(); are the fully qualified name. So C# uses a keyword “using” which helps the user to avoid writing fully qualified names every other time. The user has to add the namespace name
+
+at the starting of the program, and then he can easily omit using fully qualified names. To demonstrate:
+
+```
+// predefined namespace name
+using System;
+// user-defined namespace name
+using name1
+// namespace having subnamespace
+using System.Collections.Generic;
+```
+
+Program:
+
+```
+// C# program to illustrate the
+// use of using keyword
+// predefined namespace
+using System;
+// user-defined namespace
+using first;
+    // namespace declaration
+namespace first {
+    // name_1 namespace members
+    // i.e. class
+    class Newsco_1
+    {
+                // function of class
+Geeks_1
+    public static void display()
+    {
+        // No need to write fully
+qualified name
+
