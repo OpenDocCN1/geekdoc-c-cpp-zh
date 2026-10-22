@@ -1,0 +1,16 @@
+```
+template<typename T, std::size_t Maxsize>
+Stack<T,Maxsize>::Stack ()
+  : numElems(0)                      // start with no elements
+{
+    // nothing else to do
+}
+
+template<typename T, std::size_t Maxsize>
+void Stack<T,Maxsize>::push (T const& elem)
+{
+    assert(numElems < Maxsize);
+    elems[numElems] = elem;          // append element
+    ++numElems;                      // increment number of elements
+}
+```

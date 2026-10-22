@@ -1,0 +1,3 @@
+```
+typedef Stack<int> IntStack;
+```

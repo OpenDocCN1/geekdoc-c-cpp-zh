@@ -1,0 +1,374 @@
+
+```cpp
+mid = (1+16+1)/2
+    = 9
+value = (16<9*9) ? Sqrt<16,1,8>::value
+                : Sqrt<16,9,16>::value
+    = (16<81) ? Sqrt<16,1,8>::value
+                : Sqrt<16,9,16>::value
+    = Sqrt<16,1,8>::value
+mid = (1+8+1)/2
+    = 5
+value = (16<5*5) ? Sqrt<16,1,4>::value
+                : Sqrt<16,5,8>::value
+    = (16<25) ? Sqrt<16,1,4>::value
+                : Sqrt<16,5,8>::value
+    = Sqrt<16,1,4>::value
+mid = (1+4+1)/2
+    = 3
+value = (16<3*3) ? Sqrt<16,1,2>::value
+                : Sqrt<16,3,4>::value
+    = (16<9) ? Sqrt<16,1,2>::value
+                : Sqrt<16,3,4>::value
+    = Sqrt<16,3,4>::value
+mid = (3+4+1)/2
+    = 4
+value = (16<4*4) ? Sqrt<16,3,3>::value
+                : Sqrt<16,4,4>::value
+    = (16<16) ? Sqrt<16,3,3>::value
+                : Sqrt<16,4,4>::value
+    = Sqrt<16,4,4>::value
+```
+
+```cpp
+(16<=8*8) ? Sqrt<16,1,8>::value
+: Sqrt<16,9,16>::value
+```
+
+### meta/sqrt2.hpp
+```cpp
+#include "ifthenelse.hpp"
+
+// primary template for main recursive step
+template<int N, int LO=1, int HI=N>
+struct Sqrt {
+    // compute the midpoint, rounded up
+    static constexpr auto mid = (LO+HI+1)/2;
+
+    // search a not too large value in a halved interval
+    using SubT = IfThenElse<(N<mid*mid),
+                            Sqrt<N,LO,mid-1>,
+                            Sqrt<N,mid,HI>>;
+    static constexpr auto value = SubT::value;
+};
+
+// partial specialization for end of recursion criterion
+template<int N, int S>
+struct Sqrt<N, S, S> {
+    static constexpr auto value = S;
+};
+```
+
+```cpp
+using SubT = IfThenElse<(N<mid*mid), Sqrt<N,LO,mid-1>, Sqrt<N,mid,HI>>;
+```
+
+```cpp
+template<typename T, typename U>
+struct Doublify {
+};
+
+template<int N>
+struct Trouble {
+    using LongType = Doublify<typename Trouble<N-1>::LongType,
+        typename Trouble<N-1>::LongType>;
+};
+
+template<>
+struct Trouble<0> {
+    using LongType = double;
+};
+
+Trouble<10>::LongType ouch;
+```
+
+### meta/pow3enum.hpp
+```cpp
+// primary template to compute 3 to the Nth
+template<int N>
+struct Pow3 {
+    enum { value = 3 * Pow3<N-1>::value };
+};
+
+// full specialization to end the recursion
+template<>
+struct Pow3<0> {
+    enum { value = 1 };
+};
+```
+
+### meta/pow3const.hpp
+```cpp
+// primary template to compute 3 to the Nth
+template<int N>
+struct Pow3 {
+    static int const value = 3 * Pow3<N-1>::value;
+};
+
+// full specialization to end the recursion
+template<>
+struct Pow3<0> {
+    static int const value = 1;
+};
+```
+
+## meta/unruh.cpp
+```cpp
+// prime number computation
+// (modified from original from 1994 by Erwin Unruh)
+
+template<int p, int i>
+struct is_prime {
+  enum { pri = (p==2) || ((p%i) && is_prime<(i>2?p:0),i-1>::pri) };
+};
+
+template<>
+struct is_prime<0,0> {
+  enum {pri=1};
+};
+
+template<>
+struct is_prime<0,1> {
+  enum {pri=1};
+};
+
+template<int i>
+struct D {
+  D(void*);
+};
+
+template<int i>
+struct CondNull {
+  static int const value = i;
+};
+
+template<>
+struct CondNull<0> {
+    static void* value;
+};
+void* CondNull<0>::value = 0;
+
+template<int i>
+struct Prime_print {      // primary template for loop to print prime numbers
+    Prime_print<i-1> a;
+    enum { pri = is_prime<i,i-1>::pri };
+    void f() {
+        D<i> d = CondNull<pri ? 1 : 0>::value;   // 1 is an error, 0 is fine
+        a.f();
+    }
+};
+```
+
+```text
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<17>'
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<13>'
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<11>'
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<7>'
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<5>'
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<3>'
+unruh.cpp:39:14: error: no viable conversion from 'const int' to 'D<2>'
+```
+
+### typelist/typelist.hpp
+```cpp
+template<typename... Elements>
+class Typelist
+{
+};
+```
+
+```cpp
+using SignedIntegralTypes =
+    Typelist<signed char, short, int, long, long long>;
+```
+
+### typelist/typelistfront.hpp
+```cpp
+template<typename List>
+class FrontT;
+
+template<typename Head, typename... Tail>
+class FrontT<Typelist<Head, Tail...>>
+{
+public:
+    using Type = Head;
+};
+
+template<typename List>
+using Front = typename FrontT<List>::Type;
+```
+
+### typelist/typelistpopfront.hpp
+```cpp
+template<typename List>
+class PopFrontT;
+
+template<typename Head, typename... Tail>
+class PopFrontT<Typelist<Head, Tail...>> {
+public:
+    using Type = Typelist<Tail...>;
+};
+
+template<typename List>
+using PopFront = typename PopFrontT<List>::Type;
+```
+
+```cpp
+Typelist<short, int, long, long long>
+```
+
+```cpp
+PushFront<SignedIntegralTypes, bool>
+```
+
+```cpp
+Typelist<bool, signed char, short, int, long, long long>
+```
+
+```cpp
+using Type = PushFront<PopFront<SignedIntegralTypes>, bool>;
+// equivalent to Typelist<bool, short, int, long, long long>
+```
+
+```cpp
+using TL = NthElement<Typelist<short, int, long>, 2>;
+```
+
+### typelist/nthelement.hpp
+```cpp
+// recursive case:
+template<typename List, unsigned N>
+class NthElementT : public NthElementT<PopFront<List>, N-1>
+{
+};
+
+// basis case:
+template<typename List>
+class NthElementT<List, 0> : public FrontT<List>
+{
+};
+
+template<typename List, unsigned N>
+using NthElement = typename NthElementT<List, N>::Type;
+```
+
+```cpp
+NthElementT<Typelist<long>, 0>
+```
+
+### typelist/largesttype.hpp
+```cpp
+template<typename List>
+class LargestTypeT;
+
+// recursive case:
+template<typename List>
+class LargestTypeT
+{
+private:
+    using First = Front<List>;
+    using Rest = typename LargestTypeT<PopFront<List>>::Type;
+public:
+    using Type = IfThenElse<(sizeof(First) >= sizeof(Rest)), First, Rest>;
+};
+
+// basis case:
+template<>
+class LargestTypeT<Typelist<>>
+{
+public:
+    using Type = char;
+};
+
+template<typename List>
+using LargestType = typename LargestTypeT<List>::Type;
+```
+
+### typelist/typelistisempty.hpp
+```cpp
+template<typename List>
+class IsEmpty
+{
+public:
+    static constexpr bool value = false;
+};
+
+template<>
+class IsEmpty<Typelist<>> {
+public:
+    static constexpr bool value = true;
+};
+```
+
+### typelist/genericlargesttype.hpp
+```cpp
+template<typename List, bool Empty = IsEmpty<List>::value>
+class LargestTypeT;
+
+// recursive case:
+template<typename List>
+class LargestTypeT<List, false>
+{
+private:
+    using Contender = Front<List>;
+    using Best = typename LargestTypeT<PopFront<List>>::Type;
+public:
+    using Type = IfThenElse<(sizeof(Contender) >= sizeof(Best)), Contender, Best>;
+};
+
+// basis case:
+template<typename List>
+class LargestTypeT<List, true>
+{
+public:
+    using Type = char;
+};
+
+template<typename List>
+using LargestType = typename LargestTypeT<List>::Type;
+```
+
+## typelist/genericpushback.hpp
+```cpp
+template<typename List, typename NewElement, bool = IsEmpty<List>::value>
+class PushBackRecT;
+
+// recursive case:
+template<typename List, typename NewElement>
+class PushBackRecT<List, NewElement, false>
+{
+  using Head = Front<List>;
+  using Tail = PopFront<List>;
+  using NewTail = typename PushBackRecT<Tail, NewElement>::Type;
+
+public:
+  using Type = PushFront<Head, NewTail>;
+};
+
+// basis case:
+template<typename List, typename NewElement>
+class PushBackRecT<List, NewElement, true>
+{
+public:
+    using Type = PushFront<List, NewElement>;
+};
+
+// generic push-back operation:
+template<typename List, typename NewElement>
+class PushBackT : public PushBackRecT<List, NewElement> { };
+
+template<typename List, typename NewElement>
+using PushBack = typename PushBackT<List, NewElement>::Type;
+```
+
+```cpp
+PushBackRecT<Typelist<short, int>, long>
+```
+
+```cpp
+PushBackRecT<Typelist<int>, long>
+```
+
+```cpp
+PushBackRecT<Typelist<>, long>
+```

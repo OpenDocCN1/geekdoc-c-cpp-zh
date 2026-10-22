@@ -1,0 +1,6 @@
+```
+```cpp
+remove_const_t<remove_reference_t<int const&>>  // yields int
+remove_reference_t<remove_const_t<int const&>>  // yields int const
+```
+```

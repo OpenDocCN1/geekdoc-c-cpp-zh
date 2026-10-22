@@ -1,0 +1,3 @@
+```
+if (IsSameT<T, int>::value) ...
+```

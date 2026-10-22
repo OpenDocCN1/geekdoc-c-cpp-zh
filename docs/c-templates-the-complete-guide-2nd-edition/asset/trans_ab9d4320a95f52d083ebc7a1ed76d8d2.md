@@ -1,0 +1,382 @@
+
+
+```cpp
+typedef Stack<int> IntStack;    // typedef
+void foo (IntStack const& s);   // s is stack of ints
+IntStack istack[10];             // istack is array of 10 stacks of ints
+```
+
+```
+using IntStack = Stack<int>;    // alias declaration
+void foo (IntStack const& s);   // s is stack of ints
+IntStack istack[10];            // istack is array of 10 stacks of ints
+```
+
+```
+typedef Stack<int> IntStack;
+```
+
+```
+using IntStack = Stack<int>; 
+```
+
+```
+template<typename T>
+using DequeStack = Stack<T, std::deque<T>>;
+```
+
+```
+struct MyType {
+  using iterator = ...;
+  ...
+};
+```
+
+```
+template<typename T>
+using MyTypeIterator = typename MyType<T>::iterator;
+```
+
+```
+```cpp
+MyTypeIterator<int> pos;
+```
+```
+
+```
+typename MyType<T>::iterator pos;
+```
+
+std::add_const_t<T>      // since C++14
+
+```
+typename std::add_const<T>::type  // since C++11
+```
+
+```
+Stack<int> intStack1;      // stack of strings
+Stack<int> intStack2 = intStack1;  // OK in all versions
+Stack intStack3 = intStack1;       // OK since C++17
+```
+
+```
+```cpp
+template<typename T>
+class Stack {
+private:
+    std::vector<T> elems;        // elements
+public:
+    Stack () = default;
+    Stack (T const& elem)        // initialize stack with one element
+        : elems({elem}) {
+    }
+    ...
+};
+```
+```
+
+```
+Stack intStack = 0;      // Stack<int> deduced since C++17
+```
+
+```
+Stack stringStack = "bottom"; //Stack<char const[7]> deduced since C++17
+```
+
+```
+```cpp
+template<typename T>
+class Stack {
+private:
+    std::vector<T> elems;       // elements
+public:
+    Stack (T elem)              // initialize stack with one element by value
+        : elems{elem} {          // to decay on class tmpl arg deduction
+    }
+    ...
+};
+```
+```
+
+```
+Stack stringStack = "bottom"; //Stack<char const*> deduced since C++17
+```
+
+```
+template<typename T>
+class Stack {
+    private:
+        std::vector<T> elems;      // elements
+    public:
+        Stack (T elem)            // initialize stack with one element by value
+            : elems({std::move(elem)}) {
+        }
+        ...
+};
+```
+
+```
+Stack(char const*) -> Stack<std::string>;
+```
+
+```
+Stack stringStack{"bottom"};  // OK: Stack<std::string> deduced since C++17
+```
+
+```
+Stack stringStack = "bottom"; // Stack<std::string> deduced, but still not valid
+```
+
+```
+class Stack {
+    private:
+        std::vector<std::string> elems;      // elements
+    public:
+        Stack (std::string const& elem)      // initialize stack with one element
+            : elems({elem}) {
+
+        }
+        ...
+};
+```
+
+```
+Stack stack2{stringStack};   //Stack<std::string> deduced
+Stack stack3(stringStack);   //Stack<std::string> deduced
+Stack stack4 = {stringStack};   //Stack<std::string> deduced
+```
+
+```
+```cpp
+ValueWithComment<int> vc;
+vc.value = 42;
+vc.comment = "initial value";
+```
+```
+
+```
+ValueWithComment(char const*, char const*)
+  -> ValueWithComment<std::string>;
+ValueWithComment vc2 = {"hello", "initial value"};
+```
+
+basics/stacknontype.hpp
+
+```
+#include <array>
+#include <cassert>
+
+template<typename T, std::size_t Maxsize>
+class Stack {
+private:
+    std::array<T,Maxsize> elems; // elements
+    std::size_t numElems;         // current number of elements
+public:
+    Stack();                     // constructor
+    void push(T const& elem);    // push element
+    void pop();                  // pop element
+    T const& top() const;        // return top element
+    bool empty() const {         // return whether the stack is empty
+        return numElems == 0;
+    }
+    std::size_t size() const { // return current number of elements
+        return numElems;
+    }
+};
+```
+
+```
+template<typename T, std::size_t Maxsize>
+Stack<T,Maxsize>::Stack ()
+  : numElems(0)                      // start with no elements
+{
+    // nothing else to do
+}
+
+template<typename T, std::size_t Maxsize>
+void Stack<T,Maxsize>::push (T const& elem)
+{
+    assert(numElems < Maxsize);
+    elems[numElems] = elem;          // append element
+    ++numElems;                      // increment number of elements
+}
+```
+
+```
+```cpp
+template<typename T, std::size_t Maxsize>
+void Stack<T,Maxsize>::pop ()
+{
+    assert(!elems.empty());
+    --numElems;              // decrement number of elements
+}
+
+template<typename T, std::size_t Maxsize>
+T const& Stack<T,Maxsize>::top () const
+{
+    assert(!elems.empty());
+    return elems[numElems-1];  // return last element
+}
+```
+```
+
+![](img/0d5072d8203dcaf6ef50e76a3d9a3203_1097_0.png)
+# ## ALEXANDER WANG
+
+UX / UI DESIGNER
+
+Email: alex.wang@email.com | Phone: +1 234 567 890
+
+# ## WORK EXPERIENCE
+
+**Senior UX Designer** — TechCorp Inc., 2019 – Present
+
++   - 负责核心产品重新设计，用户满意度提升 35%
++   - 管理 5 人设计团队并与开发人员协调
++   - 建立设计系统和无障碍指南
+
+**Product Designer** — DesignStudio, 2016 – 2019
+
++   - 为金融科技客户设计移动应用
++   - 进行用户研究和可用性测试
++   - 与跨职能团队协作交付功能
+
+# ## EDUCATION
+
+**B.A. in Graphic Design** — Rhode Island School of Design, 2012 – 2016
+
+# ## SKILLS
+
++   - 线框图与原型设计
++   - 可用性测试
++   - Figma / Sketch / Adobe XD
++   - HTML / CSS / JavaScript
++   - 设计思维与敏捷方法
+
+basics/stacknontype.cpp
+
+```
+#include "stacknontype.hpp"
+#include <iostream>
+#include <string>
+
+int main()
+{
+    Stack<int,20>        int20Stack;      // stack of up to 20 ints
+    Stack<int,40>        int40Stack;      // stack of up to 40 ints
+    Stack<std::string,40> stringStack;    // stack of up to 40 strings
+
+    // manipulate stack of up to 20 ints
+    int20Stack.push(7);
+    std::cout << int20Stack.top() << '\n';
+    int20Stack.pop();
+
+    // manipulate stack of up to 40 strings
+    stringStack.push("hello");
+    std::cout << stringStack.top() << '\n';
+    stringStack.pop();
+}
+```
+
+# basics/addvalue.hpp
+
+```
+```cpp
+template<int Val, typename T>
+T addValue (T x)
+{
+  return x + Val;
+}
+```
+```
+
+```
+template<auto Val, typename T = decltype(Val)>
+T foo();
+```
+
+```
+template<typename T, T Val = T{}>
+T bar();
+```
+
+```
+template<double VAT>      // ERROR: floating-point values are not
+double process (double v)   //         allowed as template parameters
+{
+    return v * VAT;
+}
+
+template<std::string name>  // ERROR: class-type objects are not
+class MyClass {             //         allowed as template parameters
+    ...
+};
+```
+
+```
+template<char const* name>
+class MyClass {
+    ...
+};
+
+MyClass<"hello"> x;  // ERROR: string literal "hello" not allowed
+```
+
+```
+extern char const s03[] = "hi";      // external linkage
+char const s11[] = "hi";               // internal linkage
+
+int main()
+{
+    Message<s03> m03;                    // OK (all versions)
+    Message<s11> m11;                    // OK since C++11
+    static char const s17[] = "hi";    // no linkage
+    Message<s17> m17;                    // OK since C++17
+}
+```
+
+```
+```cpp
+template<int I, bool B>
+class C;
+...
+C<sizeof(int) + 4, sizeof(int)==4> c;
+```
+```
+
+```
+C<42, sizeof(int) > 4> c;    // ERROR: first > ends the template argument list
+C<42, (sizeof(int) > 4)> c;  // OK
+```
+
+这是一份示例文档内容，用于演示文档解析功能。
+
+# ## 示例标题
+
++   - 第一项
++   - 第二项
++   - 第三项
+
+| 列1 | 列2 |
+| --- | --- |
+| 数据1 | 数据2 |
+| 数据3 | 数据4 |
+
+```
+// constructor
+template<typename T, auto Maxsize>
+Stack<T,Maxsize>::Stack ()
+  : numElems(0)          // start with no elements
+{
+    // nothing else to do
+}
+
+template<typename T, auto Maxsize>
+void Stack<T,Maxsize>::push (T const& elem)
+{
+    assert(numElems < Maxsize);
+    elems[numElems] = elem;    // append element
+    ++numElems;                // increment number of elements
+}
+```
+

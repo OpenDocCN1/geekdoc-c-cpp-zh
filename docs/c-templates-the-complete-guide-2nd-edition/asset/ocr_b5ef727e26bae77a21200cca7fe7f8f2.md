@@ -1,0 +1,9 @@
+```
+```cpp
+int main()
+{
+    printf(1);        // selects template #1
+    printf("1's);     // selects template #2
+}
+```
+```

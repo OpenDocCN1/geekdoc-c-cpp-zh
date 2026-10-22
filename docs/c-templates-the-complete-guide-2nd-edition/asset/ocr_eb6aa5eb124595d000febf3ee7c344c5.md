@@ -1,0 +1,12 @@
+```
+```cpp
+template<typename T>
+int find(T const* array, int n, T const& value) {
+    int i = 0;
+    while(i != n && !(array[i] == value))
+        ++i;
+
+    return i;
+}
+```
+```

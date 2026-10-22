@@ -1,0 +1,6 @@
+```
+struct MyType {
+  using iterator = ...;
+  ...
+};
+```

@@ -1,0 +1,164 @@
+
+
+is plugged into the non-deduced context, a type compatible with that of the actual argument `&X<T>::f` is obtained. The deduction therefore succeeds on that argument-parameter pair.
+
+Conversely, it is possible to deduce contradictions for a parameter type entirely built from deduced contexts. For example, assuming suitably declared class templates `X` and `Y`:
+
+```cpp
+template<typename T>
+void f(X<Y<T>, Y<T>>);
+void g()
+{
+  f(X<Y<int>, Y<int>>()); // OK
+  f(X<Y<int>, Y<char>>()); // ERROR: deduction fails
+}
+```
+
+The problem with the second call to the function template `f()` is that the two arguments deduce different values for the parameter `T`, which is not valid. (In both cases, the function call argument is a temporary object obtained by calling the default constructor of the class template `X`.)
+
+## 15.3 Special Deduction Situations
+
+There are several situations in which the pair `(A, P)` used for deduction is not obtained from the arguments to a function call and the parameters of a function template. The first situation occurs when the address of a function template is taken. In this case, `P` is the parameterized type of the function template declaration, and `A` is the function type underlying the pointer that is initialized or assigned to. For example:
+
+```cpp
+template<typename T>
+void f(T, T);
+
+void (*pf)(char, char) = &f;
+```
+
+In this example, `P` is `void(T, T)` and `A` is `void(char, char)`. Deduction succeeds with `T` substituted with `char`, and `pf` is initialized to the address of the specialization `f<char>`.
+
+Similarly, function types are used for `P` and `A` for a few other special situations:
+
+- Determining a partial ordering between overloaded function templates
+- Matching an explicit specialization to a function template
+- Matching an explicit instantiation to a template
+- Matching a friend function template specialization to a template
+- Matching a placement operator `delete` or operator `delete[]` to a corresponding placement operator `new` or operator `new[]` template
+
+Some of these topics, along with the use of template argument deduction for class template partial specializations, are further developed in Chapter 16.
+
+Another special situation occurs with conversion function templates. For example:
+
+```cpp
+class S {
+public:
+    template<typename T> operator T&();
+};
+```
+
+In this case, the pair `(P, A)` is obtained as if it involved an argument of the type to which we are attempting to convert and a parameter type that is the return type of the conversion function. The following code illustrates one variation:
+
+```cpp
+void f(int (&)[20]);
+
+void g(S s)
+{
+    f(s);
+}
+```
+
+Here we are attempting to convert `S` to `int (&)[20]`. Type `A` is therefore `int[20]` and type `P` is `T`. The deduction succeeds with `T` substituted with `int[20]`.
+
+Finally, some special treatment is also needed for the deduction of the `auto` placeholder type. That is discussed in Section 15.10.4 on page 303.
+
+## 15.4 Initializer Lists
+
+When the argument of a function call is an initializer list, that argument doesn’t have a specific type, so in general no deduction will be performed from that given pair `(A, P)` because there is no `A`. For example:
+
+```cpp
+#include <initializer_list>
+
+template<typename T> void f(T p);
+
+int main() {
+    f({1, 2, 3});  // ERROR: cannot deduce T from a braced list
+}
+```
+
+However, if the parameter type `P`, after removing references and top-level `const` and `volatile` qualifiers, is equivalent to `std::initializer_list<P'>` for some type `P'` that has a deducible pattern, deduction proceeds by comparing `P'` to the type of each element in the initializer list, succeeding only if all of the elements have the same type:
+
+`deduce/initlist.cpp`
+
+```cpp
+#include <initializer_list>
+
+template<typename T> void f(std::initializer_list<T>);
+
+int main()
+{
+    f({2, 3, 5, 7, 9}); // OK: T is deduced to int
+    f({'a', 'e', 'i', 'o', 'u', 42}); // ERROR: T deduced to both char and int
+}
+```
+
+Similarly, if the parameter type `P` is a reference to an array type with element type `P'` for some type `P'` that has a deducible pattern, deduction proceeds by comparing `P'` to the type of each element in the initializer list, succeeding only if all of the elements have the same type. Furthermore, if the bound has a deducible pattern (i.e., just names a nontype template parameter), then that bound is deduced to the number of elements in the list.
+
+## 15.5 Parameter Packs
+
+The deduction process matches each argument to each parameter to determine the values of template arguments. When performing template argument deduction for variadic templates, however, the 1:1 relationship between parameters and arguments no longer holds, because a parameter pack can match multiple arguments. In this case, the same parameter pack (`P`) is matched to multiple arguments (`A`), and each matching produces additional values for any template parameter packs in `P`:
+
+```cpp
+template<typename First, typename... Rest>
+void f(First first, Rest... rest);
+
+void g(int i, double j, int* k)
+{
+    f(i, j, k); // deduces First to int, Rest to {double, int*}
+}
+```
+
+Here, the deduction for the first function parameter is simple, since it does not involve any parameter packs. The second function parameter, `Rest`, is a function parameter pack. Its type is a pack expansion (`Rest...`) whose pattern is the type `Rest`. This pattern serves as `P`, to be compared against the types `A` of the second and third call arguments. When compared against the first such `A` (the type `double`), the first value in the template parameter pack `Rest` is deduced to `double`. Similarly, when compared against the second such `A` (the type `int*`), the second value in the template parameter pack `Rest` is deduced to `int*`. Thus, deduction determines the value of the parameter pack `Rest` to be the sequence `{double, int*}`. Substituting the results of that deduction and the deduction for the first function parameter yields the function type `void(int, double, int*)`, which matches the argument types at the call site.
+
+Because deduction for function parameter packs uses the pattern of the expansion for its comparison, the pattern can be arbitrarily complex, and values for multiple template parameters and parameter packs can be determined from each of the argument types. Consider the deduction behavior of the functions `h1()` and `h2()`, below:
+
+```cpp
+template<typename T, typename U> class pair { };
+
+template<typename T, typename... Rest>
+void h1(pair<T, Rest> const&...);
+template<typename... Ts, typename... Rest>
+void h2(pair<Ts, Rest> const&...);
+
+void foo(pair<int, float> pif, pair<int, double> pid,
+         pair<double, double> pdd)
+{
+  h1(pif, pid);  // OK: deduces T to int, Rest to {float, double}
+  h2(pif, pid);  // OK: deduces Ts to {int, int}, Rest to {float,
+                 // double}
+  h1(pif, pdd);  // ERROR: T deduced to int from the 1st arg, but to
+                 // double from the 2nd
+  h2(pif, pdd);  // OK: deduces Ts to {int, double}, Rest to {float,
+                 // double}
+}
+```
+
+For both `h1()` and `h2()`, `P` is a reference type that is adjusted to the unqualified version of the reference (`pair<T, Rest>` or `pair<Ts, Rest>`, respectively) for deduction against each argument type. Since all parameters and arguments are specializations of class template `pair`, the template arguments are compared. For `h1()`, the first template argument (`T`) is not a parameter pack, so its value is deduced independently for each argument. If the deductions differ, as in the second call to `h1()`, deduction fails. For the second pair template argument in both `h1()` and `h2()` (`Rest`), and for the first pair argument in `h2()` (`Ts`), deduction determines successive values for the template parameter packs from each of the argument types in `A`.
+
+Deduction for parameter packs is not limited to function parameter packs where the argument-parameter pairs come from call arguments. In fact, this deduction is used wherever a pack expansion is at the end of a function parameter list or a template argument list.³ For example, consider two similar operations on a simple `Tuple` type:
+
+```cpp
+template<typename... Types> class Tuple { };
+
+template<typename... Types>
+bool f1(Tuple<Types...>, Tuple<Types...>);
+
+template<typename... Types1, typename... Types2>
+bool f2(Tuple<Types1...>, Tuple<Types2...>);
+
+void bar(Tuple<short, int, long> sv,
+         Tuple<unsigned short, unsigned, unsigned long> uv)
+{
+    f1(sv, sv); // OK: Types is deduced to {short, int, long}
+    f2(sv, sv); // OK: Types1 is deduced to {short, int, long},
+                // Types2 is deduced to {short, int, long}
+    f1(sv, uv); // ERROR: Types is deduced to {short, int, long} from the 1st arg, but
+                // to {unsigned short, unsigned, unsigned long} from the 2nd
+    f2(sv, uv); // OK: Types1 is deduced to {short, int, long},
+                // Types2 is deduced to {unsigned short, unsigned, unsigned long}
+}
+```
+
+In both `f1()` and `f2()`, the template parameter packs are deduced by comparing the pattern of the pack expansion embedded within the `Tuple` type (e.g., `Types` for `f1()`) against each of the template arguments of the `Tuple` type provided by the call argument, deducing successive values for the corresponding template parameter pack. The function `f1()` uses the same template parameter pack `Types` in both function parameters, ensuring that deduction only succeeds when the two function call arguments have the same `Tuple` specialization as their type. The function `f2()`, on the other hand, uses different parameter packs for the `Tuple` types in each of its function parameters, so the types of the function call arguments can be different—so long as both are specializations of `Tuple`.
+

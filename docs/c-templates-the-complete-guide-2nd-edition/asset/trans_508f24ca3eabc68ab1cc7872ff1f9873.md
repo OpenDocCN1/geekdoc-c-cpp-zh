@@ -1,0 +1,341 @@
+
+
+```cpp
+template<typename T1, typename T2>
+constexpr pair<typename decay<T1>::type, typename decay<T2>::type>
+make_pair (T1&& a, T2&& b)
+{
+    return pair<typename decay<T1>::type,
+                typename decay<T2>::type>(forward<T1>(a),
+                                          forward<T2>(b));
+}
+```
+
+### basics/isprime.hpp
+
+```cpp
+template<unsigned p, unsigned d>    // p: number to check, d: current divisor
+struct DoIsPrime {
+  static constexpr bool value = (p%d != 0) && DoIsPrime<p,d-1>::value;
+};
+
+template<unsigned p>                         // end recursion if divisor is 2
+struct DoIsPrime<p,2> {
+  static constexpr bool value = (p%2 != 0);
+};
+
+template<unsigned p>                         // primary template
+struct IsPrime {
+  // start recursion with divisor from p/2:
+  static constexpr bool value = DoIsPrime<p,p/2>::value;
+};
+
+// special cases (to avoid endless recursion with template instantiation):
+template<>
+struct IsPrime<0> { static constexpr bool value = false; };
+template<>
+struct IsPrime<1> { static constexpr bool value = false; };
+template<>
+struct IsPrime<2> { static constexpr bool value = true; };
+template<>
+struct IsPrime<3> { static constexpr bool value = true; };
+```
+
+```cpp
+9%4!=0 && 9%3!=0 && DoIsPrime<9,2>::value
+9%4!=0 && 9%3!=0 && 9%2!=0
+```
+
+```cpp
+constexpr bool b1 = isPrime(9);  // evaluated at compile time
+```
+
+```cpp
+const bool b2 = isPrime(9);    // evaluated at compile time if in namespace scope
+```
+
+```cpp
+bool fiftySevenIsPrime() {
+    return isPrime(57);
+}
+// evaluated at compile or running time
+```
+
+```cpp
+int x;
+...
+std::cout << isPrime(x);      // evaluated at run time
+```
+
+```cpp
+// primary helper template:
+template<int SZ, bool = isPrime(SZ)>
+struct Helper;
+
+// implementation if SZ is not a prime number:
+template<int SZ>
+struct Helper<SZ, false>
+{
+    ...
+};
+
+// implementation if SZ is a prime number:
+template<int SZ>
+struct Helper<SZ, true>
+{
+    ...
+};
+
+template<typename T, std::size_t SZ>
+long foo (std::array<T,SZ> const& coll)
+{
+    Helper<SZ> h;    // implementation depends on whether array has prime number as size
+    ...
+}
+```
+
+```cpp
+// primary helper template (used if no specialization fits):
+template<int SZ, bool = isPrime(SZ)>
+struct Helper
+{
+    ...
+};
+
+// special implementation if SZ is a prime number:
+template<int SZ>
+struct Helper<SZ, true>
+{
+    ...
+};
+```
+
+### basics/len1.hpp
+
+```cpp
+// number of elements in a raw array:
+template<typename T, unsigned N>
+std::size_t len (T(&)[N])
+{
+    return N;
+}
+
+// number of elements for a type having size_type:
+template<typename T>
+typename T::size_type len (T const& t)
+{
+    return t.size();
+}
+```
+
+```cpp
+int a[10];
+std::cout << len(a);    // OK: only len() for array matches
+std::cout << len("tmp");  // OK: only len() for array matches
+
+std::vector<int> v;
+std::cout << len(v);        // OK: only len() for a type with size_type matches
+
+int* p;
+std::cout << len(p);    // ERROR: no matching len() function found
+```
+
+### basics/len2.hpp
+
+```cpp
+// number of elements in a raw array:
+template<typename T, unsigned N>
+std::size_t len (T(&)[N])
+{
+  return N;
+}
+
+// number of elements for a type having size_type:
+template<typename T>
+typename T::size_type len (T const& t)
+{
+  return t.size();
+}
+
+// fallback for all other types:
+std::size_t len (...)
+{
+  return 0;
+}
+```
+
+```cpp
+int a[10];
+std::cout << len(a);      // OK: len() for array is best match
+std::cout << len("tmp"); // OK: len() for array is best match
+
+std::vector<int> v;
+std::cout << len(v);      // OK: len() for a type with size_type is best match
+
+int* p;
+std::cout << len(p);      // OK: only fallback len() matches
+
+std::allocator<int> x;
+std::cout << len(x);      // ERROR: 2nd len() function matches best,
+//          but can't call size() for x
+```
+
+```cpp
+namespace std {
+    class thread {
+        public:
+            ...
+            template<typename F, typename... Args,
+                typename = std::enable_if_t<!std::is_same_v<std::decay_t<F>, thread>>>
+            explicit thread(F&& f, Args&&... args);
+            ...
+    };
+}
+```
+
+```cpp
+template<typename T>
+typename T::size_type len (T const& t)
+{
+    return t.size();
+}
+
+std::allocator<int> x;
+std::cout << len(x) << '\n';    // ERROR: len() selected, but x has no size()
+```
+
+```cpp
+decltype( (void)(t.size()), T::size_type() )
+```
+
+```cpp
+template<typename T, typename... Types>
+void print (T const& firstArg, Types const&... args)
+{
+    std::cout << firstArg << '\n';
+    if constexpr(sizeof...(args) > 0) {
+        print(args...);  // code only available if sizeof...(args)>0 (since C++17)
+    }
+}
+```
+
+```cpp
+template<typename T>
+void foo(T t)
+{
+    if constexpr (std::is_integral_v<T>) {
+        if (t > 0) {
+            foo(t-1);   // OK
+        }
+    }
+    else {
+        undeclared(t);      // error if not declared and not discarded (i.e. T is not integral)
+        undeclared();       // error if not declared (even if discarded)
+        static_assert(false, "no integral");   // always asserts (even if discarded)
+        static_assert(!std::is_integral_v<T>, "no integral");   // OK
+    }
+}
+```
+
+```cpp
+int main()
+{
+    if constexpr(std::numeric_limits<char>::is_signed) {
+        foo(42);            // OK
+    }
+    else {
+        undeclared(42);  // error if undeclared() not declared
+        static_assert(false, "unsigned");  // always asserts (even if discarded)
+        static_assert(!std::numeric_limits<char>::is_signed,
+            "char is unsigned"); // OK
+    }
+}
+```
+
+```cpp
+template<typename T, std::size_t SZ>
+void foo (std::array<T,SZ> const& coll)
+{
+    if constexpr (!isPrime(SZ)) {
+        ...  // special additional handling if the passed array has no prime number as size
+    }
+    ...
+}
+```
+
+```cpp
+enum { value = (p%d != 0) && DoIsPrime<p,d-1>::value };
+```
+
+### basics/myfirst.hpp
+
+```cpp
+#ifndef MYFIRST_HPP
+#define MYFIRST_HPP
+
+// declaration of template
+template<typename T>
+void printTypeof (T const&);
+
+#endif // MYFIRST_HPP
+```
+
+### basics/myfirst.cpp
+
+```cpp
+#include <iostream>
+#include <typeinfo>
+#include "myfirst.hpp"
+
+// implementation/definition of template
+template<typename T>
+void printTypeof (T const& x)
+{
+    std::cout << typeid(x).name() << '\n';
+}
+```
+
+### basics/myfirst2.hpp
+
+```cpp
+#ifndef MYFIRST_HPP
+#define MYFIRST_HPP
+
+#include <iostream>
+#include <typeinfo>
+
+// declaration of template
+template<typename T>
+void printTypeof (T const&);
+
+// implementation/definition of template
+template<typename T>
+void printTypeof (T const& x)
+{
+    std::cout << typeid(x).name() << '\n';
+}
+
+#endif // MYFIRST_HPP
+```
+
+```text
+1  In file included from /cygdrive/p/gcc/gcc61-include/bits/stl_algobase.h:71:0,
+2                           from /cygdrive/p/gcc/gcc61-include/bits/char_traits.h:39,
+3                           from /cygdrive/p/gcc/gcc61-include/string:40,
+4                           from errornovel1.cpp:1:
+5  /cygdrive/p/gcc/gcc61-include/bits/predefined_ops.h: In instantiation of 'bool __gnu_cxx::__ops::_Iter_pred<_Predicate>::operator()(_Iterator) [with _Iterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = main()::<lambda(const string&)>]':
+6  /cygdrive/p/gcc/gcc61-include/bits/stl_algo.h:104:42:   required from '_InputIterator std::_find_if(_InputIterator, _InputIterator, _Predicate, std::input_iterator_tag) [with _InputIterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = __gnu_cxx::__ops::_Iter_pred<main()::<lambda(const string&)> >]'
+7  /cygdrive/p/gcc/gcc61-include/bits/stl_algo.h:161:23:   required from '_Iterator std::find_if(_Iterator, _Iterator, _Predicate) [with _Iterator = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = __gnu_cxx::__ops::_Iter_pred<main()::<lambda(const string&)> >]'
+8  /cygdrive/p/gcc/gcc61-include/bits/stl_algo.h:3824:28:   required from '_IIter std::find_if(_IIter, _IIter, _Predicate) [with _IIter = std::_Rb_tree_iterator<std::pair<const std::__cxx11::basic_string<char>, double> >; _Predicate = main()::<lambda(const string&)>]'
+9  errornovel1.cpp:13:29:   required from here
+10 /cygdrive/p/gcc/gcc61-include/bits/predefined_ops.h:234:11: error: no match for call to '(main()::<lambda(const string&)>) (std::pair<const std::__cxx11::basic_string<char>, double>&)'
+11     { return bool(_M_pred(*__it)); }
+                  ~~~~~~~^~~~~~~
+12
+13 /cygdrive/p/gcc/gcc61-include/bits/predefined_ops.h:234:11: note: candidate: bool (*)(const string&) {aka bool (*)(const std::__cxx11::basic_string<char>&)} <conversion>
+14 /cygdrive/p/gcc/gcc61-include/bits/predefined_ops.h:234:11: note: candidate expects 2 arguments, 2 provided
+15 errornovel1.cpp:11:52: note: candidate: main()::<lambda(const string&)>
+16                              [] (std::string const& s) {
+17
+18 errornovel1.cpp:11:52: note:     no known conversion for argument 1 from 'std::pair<const std::__cxx11::basic_string<char>, double>' to 'const string& {aka const std::__cxx11::basic_string<char>&}'
+```

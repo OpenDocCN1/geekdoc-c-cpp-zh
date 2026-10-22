@@ -1,0 +1,428 @@
+
+
+```
+template<typename T>
+void deduceT (T);
+...
+deduceT({ 2, 3, 4});      // ERROR
+deduceT({ 1 });          // ERROR
+```
+
+```
+template<typename T>
+void deduceInitList(std::initializer_list<T>);
+...
+deduceInitList({ 2, 3, 5, 7 });  //OK: T deduced as int
+```
+
+```
+```cpp
+auto oops { 0, 8, 15 };   // ERROR in C++17
+auto val { 2 };             // OK: val has type int in C++17
+```
+```
+
+```
+auto first = container.begin(), last = container.end();
+```
+
+```
+char c;
+auto *cp = &c, d = c;    // OK
+auto e = c, f = c+1;    // ERROR: deduction mismatch char vs. int
+```
+
+```
+auto f(bool b) {
+    if (b) {
+        return 42.0;        // deduces return type double
+    } else {
+        return 0;           // ERROR: deduction conflict
+    }
+}
+```
+
+```
+```cpp
+auto f(int n)
+{
+    if (n > 1) {
+        return n*f(n-1);    // ERROR: type of f (n−1) unknown
+    } else {
+        return 1;
+    }
+}
+```
+```
+
+```
+auto f1() { }      // OK: return type is void
+auto f2() { return; }  // OK: return type is void
+```
+
+```
+auto* f3() {}    // ERROR: auto* cannot deduce as void
+```
+
+```
+struct MaybeInt { bool valid; int value; };
+MaybeInt g();
+auto const&& [b, N] = g();  // binds b and N to the members of the result of g()
+```
+
+```
+int main() {
+    double pt[3];
+    auto& [x, y, z] = pt;
+    x = 3.0; y = 4.0; z = 0.0;
+    plot(pt);
+}
+```
+
+```
+auto f() -> int(&)[2];  // f() returns reference to int array
+
+auto [ x, y ] = f();    // #1
+auto& [ r, s ] = f();  // #2
+```
+
+```
+std::tuple_element<i, E>::type&  n_i = e.get<i>();
+```
+
+```
+std::tuple_element<i, E>::type&&  n_i = e.get<i>();
+```
+
+```
+std::tuple_element<i, E>::type&  n_i = get<i>(e);
+```
+
+```
+std::tuple_element<i, E>::type&&  n_i = get<i>(e);
+```
+
+```
+#include <tuple>
+std::tuple<bool, int> bi{true, 42};
+auto [b, i] = bi;
+int r = i;    // initializes r to 42
+```
+
+```
+template<typename Iter>
+Iter findNegative(Iter first, Iter last)
+{
+    return std::find_if(first, last,
+        [] (typename std::iterator_traits<Iter>::value_type value) {
+            return value < 0;
+        });
+}
+```
+
+```
+template<typename Iter>
+Iter findNegative(Iter first, Iter last)
+{
+    return std::find_if(first, last,
+        [] (auto value) {
+            return value < 0;
+        });
+}
+```
+
+```
+class SomeCompilerSpecificNameX
+{
+    public:
+        SomeCompilerSpecificNameX();  // only callable by the compiler
+        bool operator() (int i) const
+        {
+            return i < 0;
+        }
+};
+```
+
+```
+foo(...,
+    SomeCompilerSpecificNameX{});  // pass an object of the closure type
+```
+
+```
+class SomeCompilerSpecificNameY {
+    private
+        int _x, _y;
+    public:
+        SomeCompilerSpecificNameY(int x, int y) // only callable by the compiler
+            : _x(x), _y(y) {
+        }
+        bool operator() (int i) const {
+            return i > _x && i < _y;
+        }
+};
+```
+
+deduce/aliastemplate.cpp
+
+```
+template<typename T, typename Cont>
+class Stack;
+
+template<typename T>
+using DequeStack = Stack<T, std::deque<T>>;
+
+template<typename T, typename Cont>
+void f1(Stack<T, Cont>);
+
+template<typename T>
+void f2(DequeStack<T>);
+
+template<typename T>
+void f3(Stack<T, std::deque<T>>);  // equivalent to f2
+
+void test(DequeStack<int> intStack)
+{
+    f1(intStack);    // OK: T deduced to int, Cont deduced to std::deque<int>
+    f2(intStack);    // OK: T deduced to int
+    f3(intStack);    // OK: T deduced to int
+}
+```
+
+```
+C c1(22, 44.3, "hi");  // OK in C++17: T1 is int, T2 is double, T3 is char const*
+C c2(22, 44.3);         // OK in C++17: T1 is int, T2 and T3 are double
+C c3("hi", "guy");   // OK in C++17: T1, T2, and T3 are char const*
+C c4;                  // ERROR: T1 and T2 are undefined
+C c5("hi");           // ERROR: T2 is undefined
+```
+
+```
+```c
+S* p = &x;        // ERROR: syntax not permitted
+```
+```
+
+```
+S s1(1), s2(2.0); // ERROR: deduces S both as S<int> and S<double>
+```
+
+```
+template<typename T>
+struct A
+{
+    T val;
+};
+
+template<typename T> A(T) -> A<T>;  // deduction guide
+```
+
+```
+A<int> a1{42};      // OK
+A<int> a2(42);      // ERROR: not aggregate initialization
+A<int> a3 = {42};   // OK
+A a4 = 42;          // ERROR: can't deduce type
+```
+
+```
+template<typename T>
+class S {
+    private:
+        T a;
+    public:
+        S(T b) : a(b) {
+        }
+};
+```
+
+```
+std::vector v{1, 2, 3};  // vector<int>, not surprising
+std::vector w2{v, v};  // vector<vector<int>>
+std::vector w1{v};  // vector<int>!
+```
+
+```
+template<typename T, typename... Ts>
+auto f(T p, Ts... ps) {
+    std::vector v{p, ps...};  // type depends on pack length
+    ...
+}
+```
+
+```
+template<typename T>
+struct ValueArg {
+    using Type = T;
+};
+
+template<typename T>
+class S {
+    private:
+        T a;
+    public:
+        using ArgType = typename ValueArg<T>::Type;
+        S(ArgType b) : a(b) {
+        }
+};
+```
+
+```
+template<typename T> struct Y {
+    Y(T const&);
+    Y(T&&);
+};
+void g(std::string s) {
+    Y y = s;
+}
+```
+
+```
+template<typename T> Y(T const&) -> Y<T>;  // #1
+template<typename T> Y(T&&) -> Y<T>;      // #2
+```
+
+```
+template<typename T, typename U> struct Z {
+    Z(T const&);
+    Z(T&&);
+};
+
+template<typename T> Z(T const&) -> Z<T, T&>;     // #1
+template<typename T> explicit Z(T&&) -> Z<T, T>;     // #2
+
+Z z1 = 1;   // only considers #1; same as: Z<int, int&> z1 = 1;
+Z z2{2};    // prefers #2; same as:          Z<int, int> z2{2};
+```
+
+```
+template<typename ... Ts> struct Tuple {
+    Tuple(Ts...);
+    Tuple(Tuple<Ts...> const&);
+};
+```
+
+```
+template<typename T>
+void genericAlgorithm(T* x, T* y)
+{
+    ...
+    exchange(x, y);  // How do we select the right algorithm?
+    ...
+}
+```
+
+```
+```cpp
+template<typename T>
+void exchange (Array<T>* a, Array<T>* b)
+{
+    T* p = &(*a)[0];
+    T* q = &(*b)[0];
+    for (std::size_t k = a->size(); k-- != 0; ) {
+        exchange(p++, q++);
+    }
+}
+```
+```
+
+details/funcoverload1.cpp
+
+```
+#include <iostream>
+#include "funcoverload1.hpp"
+
+int main()
+{
+    std::cout << f<int*>((int*)nullptr);  // calls f<T>(T)
+    std::cout << f<int>((int*)nullptr);  // calls f<T>(T*)
+}
+```
+
+```
+f1<T1 = char, T2 = char>(T1, T2)
+```
+
+```
+f1<T1 = char, T2 = char>(T2, T1)
+```
+
+```
+// —— translation unit 1:
+#include <iostream>
+
+template<typename T1, typename T2>
+void f1(T1, T2)
+{
+    std::cout << "f1(T1, T2)\n";
+}
+
+void g()
+{
+    f1<char, char>('a', 'b');
+}
+
+// —— translation unit 2:
+#include <iostream>
+```
+
+```
+template<typename T1, typename T2>
+void f1(T2, T1)
+{
+    std::cout << "f1(T2, T1)\n";
+}
+
+extern void g();  // defined in translation unit 1
+
+int main()
+{
+    f1<char, char>('a', 'b');
+    g();
+}
+```
+
+```
+```cpp
+std::cout << f<int>((int*)nullptr);  // calls f<T>(T)
+std::cout << f<int>((int*)nullptr);  // calls f<T>(T*)
+```
+```
+
+```
+template<typename T>
+void t(T*, T const* = nullptr, ...);
+
+template<typename T>
+void t(T const*, T*, T* = nullptr);
+
+void example(int* p)
+{
+    t(p, p);
+}
+```
+
+details/nontmpl2.cpp
+
+```
+#include <string>
+#include <iostream>
+
+template<typename T>
+std::string f(T&)
+{
+    return "Template";
+}
+
+std::string f(int const&)
+{
+    return "Nontemplate";
+}
+
+int main()
+{
+    int x = 7;
+    std::cout << f(x) << '\n';  // prints: Template
+    int const c = 7;
+    std::cout << f(c) << '\n';  // prints: Nontemplate
+}
+```
+

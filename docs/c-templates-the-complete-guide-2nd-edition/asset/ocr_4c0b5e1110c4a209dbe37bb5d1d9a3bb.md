@@ -1,0 +1,2 @@
+sufficed for the C++98 standard. The introduction of scoped enumeration types into the language, which do not have such an implicit conversion, complicates the detection of enumeration types.
+31 A copy or move constructor is called *trivial* if, in effect, a call to it can be replaced by a simple copy of the underlying bytes.

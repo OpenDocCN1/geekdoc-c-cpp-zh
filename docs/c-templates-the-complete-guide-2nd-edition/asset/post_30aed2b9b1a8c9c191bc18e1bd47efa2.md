@@ -1,0 +1,232 @@
+
+```
+Stack<int,20u> int20Stack; // stack of up to 20 ints
+Stack<std::string,40> stringStack; // stack of up to 40 strings
+
+// manipulate stack of up to 20 ints
+int20Stack.push(7);
+std::cout << int20Stack.top() << '\n';
+auto size1 = int20Stack.size();
+
+// manipulate stack of up to 40 strings
+stringStack.push("hello");
+std::cout << stringStack.top() << '\n';
+auto size2 = stringStack.size();
+
+if (!std::is_same_v<decltype(size1), decltype(size2)>) {
+std::cout << "size types differ" << '\n';
+}
+```
+
+With
+
+```
+Stack<int,20u> int20Stack; // stack of up to 20 ints
+```
+
+the internal size type is `unsigned int`, because `20u` is passed.
+
+With
+
+```
+Stack<std::string,40> stringStack; // stack of up to 40 strings
+```
+
+the internal size type is `int`, because `40` is passed.
+
+`size()` for the two stacks will have different return types, so that after
+
+```
+auto size1 = int20Stack.size();
+...
+auto size2 = stringStack.size();
+```
+
+the types of `size1` and `size2` differ.
+
+By using the standard type trait `std::is_same` (see Section D.3.3 on page 726) and `decltype`, we can check that:
+
+```
+if (!std::is_same<decltype(size1), decltype(size2)>::value) {
+std::cout << "size types differ" << '\n';
+}
+```
+
+Thus, the output will be: `size types differ`
+
+Since C++17, for traits returning values, you can also use the suffix `_v` and skip `::value` (see Section 5.6 on page 83 for details):
+
+```
+if (!std::is_same_v<decltype(size1), decltype(size2)>) {
+```
+
+### 3.5 Summary
+
+- Templates can have template parameters that are values rather than types.
+- You cannot use floating-point numbers or class-type objects as arguments for nontype template parameters. For pointers/references to string literals, temporaries, and subobjects, restrictions apply.
+- Using `auto` enables templates to have nontype template parameters that are values of generic types.
+
+## Chapter 4 Variadic Templates
+
+Since C++11, templates can have parameters that accept a variable number of template arguments. This feature allows the use of templates in places where you have to pass an arbitrary number of arguments of arbitrary types. A typical application is to pass an arbitrary number of parameters of arbitrary type through a class or framework. Another application is to provide generic code to process any number of parameters of any type.
+
+### 4.1 Variadic Templates
+
+Template parameters can be defined to accept an unbounded number of template arguments. Templates with this ability are called *variadic templates*.
+
+#### 4.1.1 Variadic Templates by Example
+
+For example, you can use the following code to call `print()` for a variable number of arguments of different types:
+
+*basics/varprint1.hpp*
+
+```
+#include <iostream>
+
+void print ()
+{
+}
+
+template<typename T, typename... Types>
+void print (T firstArg, Types... args)
+{
+std::cout << firstArg << '\n'; //print first argument
+print(args...); // call print() for remaining arguments
+}
+```
+
+If one or more arguments are passed, the function template is used, which by specifying the first argument separately allows printing of the first argument before recursively calling `print()` for the remaining arguments. These remaining arguments named `args` are a function parameter pack:
+
+```
+void print (T firstArg, Types... args)
+```
+
+using different "Types" specified by a template parameter pack:
+
+```
+template<typename T, typename... Types>
+```
+
+To end the recursion, the nontemplate overload of `print()` is provided, which is issued when the parameter pack is empty.
+
+For example, a call such as
+
+```
+std::string s("world");
+print (7.5, "hello", s);
+```
+
+would output the following:
+
+```
+7.5
+hello
+world
+```
+
+The reason is that the call first expands to
+
+```
+print<double, char const*, std::string> (7.5, "hello", s);
+```
+
+with
+
+- `firstArg` having the value `7.5` so that type `T` is a `double` and `args` being a variadic template argument having the values `"hello"` of type `char const*` and `"world"` of type `std::string`.
+
+After printing `7.5` as `firstArg`, it calls `print()` again for the remaining arguments, which then expands to:
+
+```
+print<char const*, std::string> ("hello", s);
+```
+
+with
+
+- `firstArg` having the value `"hello"` so that type `T` is a `char const*` here and `args` being a variadic template argument having the value of type `std::string`.
+
+After printing `"hello"` as `firstArg`, it calls `print()` again for the remaining arguments, which then expands to:
+
+```
+print<std::string> (s);
+```
+
+with
+
+- `firstArg` having the value `"world"` so that type `T` is a `std::string` now and `args` being an empty variadic template argument having no value.
+
+Thus, after printing `"world"` as `firstArg`, we call `print()` with no arguments, which results in calling the nontemplate overload of `print()` doing nothing.
+
+#### 4.1.2 Overloading Variadic and Nonvariadic Templates
+
+Note that you can also implement the example above as follows:
+
+*basics/varprint2.hpp*
+
+```
+#include <iostream>
+
+template<typename T>
+void print (T arg)
+{
+std::cout << arg << '\n'; //print passed argument
+}
+
+template<typename T, typename... Types>
+void print (T firstArg, Types... args)
+{
+print(firstArg); // call print() for the first argument
+print(args...); // call print() for remaining arguments
+}
+```
+
+That is, if two function templates only differ by a trailing parameter pack, the function template without the trailing parameter pack is preferred.¹ Section C.3.1 on page 688 explains the more general overload resolution rule that applies here.
+
+#### 4.1.3 Operator sizeof…
+
+C++11 also introduced a new form of the `sizeof` operator for variadic templates: `sizeof…`. It expands to the number of elements a parameter pack contains. Thus,
+
+```
+template<typename T, typename... Types>
+void print (T firstArg, Types... args)
+{
+std::cout << sizeof...(Types) << '\n'; //print number of remaining types
+std::cout << sizeof...(args) << '\n'; //print number of remaining args
+…
+}
+```
+
+twice prints the number of remaining arguments after the first argument passed to `print()`. As you can see, you can call `sizeof…` for both template parameter packs and function parameter packs.
+
+This might lead us to think we can skip the function for the end of the recursion by not calling it in case there are no more arguments:
+
+```cpp
+template<typename T, typename... Types>
+void print (T firstArg, Types... args)
+{
+  std::cout << firstArg << '\n';
+  if (sizeof...(args) > 0) { //error if sizeof...(args)==0
+    print(args...); // and no print() for no arguments declared
+  }
+}
+```
+
+However, this approach doesn’t work because in general both branches of all *if* statements in function templates are instantiated. Whether the instantiated code is useful is a *run-time* decision, while the instantiation of the call is a *compile-time* decision. For this reason, if you call the `print()` function template for one (last) argument, the statement with the call of `print(args...)` still is instantiated for no argument, and if there is no function `print()` for no arguments provided, this is an error.
+
+However, note that since C++17, a compile-time `if` is available, which achieves what was expected here with a slightly different syntax. This will be discussed in Section 8.5 on page 134.
+
+### 4.2 Fold Expressions
+
+Since C++17, there is a feature to compute the result of using a binary operator over all the arguments of a parameter pack (with an optional initial value).
+
+For example, the following function returns the sum of all passed arguments:
+
+```cpp
+template<typename... T>
+auto foldSum (T... s) {
+  return (... + s); // ((s1 + s2) + s3) ...
+}
+```
+
+If the parameter pack is empty, the expression is usually ill-formed (with the exception that for operator `&&` the value is `true`, for operator `||` the value is `false`, and for the comma operator the value for an empty parameter pack is `void()`).
+
+Table 4.1 lists the possible fold expressions.

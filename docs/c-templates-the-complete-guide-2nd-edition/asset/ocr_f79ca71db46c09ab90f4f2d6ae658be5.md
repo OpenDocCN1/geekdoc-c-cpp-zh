@@ -1,0 +1,3 @@
+```
+is_same_v<T, U1> && is_same_v<T, U2> && is_same_v<T, U3> ...
+```
