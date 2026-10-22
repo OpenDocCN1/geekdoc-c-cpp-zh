@@ -1,0 +1,446 @@
+
+
+# if 语句流程图
+
+![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_42_0.png)
+
+Figure: Flowchart of if Statement
+
+```
+// Program to display a number if user enters negative number
+
+#include<stdio.h>
+
+void main()
+{
+int number;
+
+printf("Enter an integer: ");
+scanf("%d",&number);
+
+// Test expression is true if number is less than 0
+if(number <0)
+{
+printf("You entered a negative number %d",number);
+}
+
+printf("The if statement is easy.");
+}
+```
+
+Output 1:
+
+Enter an integer: -2
+
+You entered a negative number -2.
+
+The if statement is easy.
+
+Output 2:
+
+Enter an integer: 5
+
+The if statement in C programming is easy.
+
+## 2) The if else Statement
+
+The if...else statement executes some code if the test expression is true (nonzero) and some other code if the test expression is false (0).
+
+## Syntax of if...else
+
+```
+if (testExpression) {
+
+    // codes inside the body of if
+
+}
+```
+```
+else {
+
+    // codes inside the body of else
+
+}
+```
+
+If test expression is true, codes inside the body of `if` statement is executed and, codes inside the body of `else` statement is skipped.
+
+If test expression is false, codes inside the body of `else` statement is executed and, codes inside the body of `if` statement is skipped.
+
+## Flowchart of if...else statement
+
+![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_44_0.png)
+
+Figure: Flowchart of if...else Statement
+
+```
+// Program to check whether an integer entered by the user is odd or even
+```
+```
+#include<stdio.h>
+
+int main()
+{
+    int number;
+
+    printf("Enter an integer: ");
+    scanf("%d",&number);
+
+    // True if remainder is 0
+    if(number%2==0)
+        printf("%d is an even integer.",number);
+    else
+        printf("%d is an odd integer.",number);
+
+    return 0;
+}
+```
+
+## Output:1
+
+```
+Enter an integer: 7
+
+7 is an odd integer.
+```
+
+When user enters 7, the test expression `( number%2 == 0 )` is evaluated to false. Hence, the statement inside the body of `else` statement `printf("%d is an odd integer");` is executed and the statement inside the body of `if` is skipped.
+
+## Output:2
+
+```
+Enter an integer: 4
+
+4 is an even integer.
+```
+
+### Nested if...else statement (if...elseif....else Statement)
+
+The nested if...else statement allows you to check for multiple test expressions and execute different codes for more than two conditions.
+
+## Syntax of nested if...else statement.
+
+When an if else statement is present inside the body of another “if” or “else” then this is called nested if else.
+
+## Syntax of Nested if else statement:
+
+```
+if(condition){
+//Nested if else inside the body of "if"
+if(condition2){
+//Statements inside the body of nested "if"
+}
+else{
+//Statements inside the body of nested "else"
+}
+}
+else{
+//Statements inside the body of "else"
+}
+```
+
+## Example of nested if..else
+
+```
+#include<stdio.h>
+int main()
+{
+int var1, var2;
+printf("Input the value of var1:");
+scanf("%d",&var1);
+printf("Input the value of var2:");
+scanf("%d",&var2);
+if(var1 != var2)
+{
+        printf("var1 is not equal to var2\n");
+        //Nested if else
+        if(var1 > var2)
+        {
+                printf("var1 is greater than var2\n");
+        }
+        else
+        {
+                printf("var2 is greater than var1\n");
+        }
+}
+else
+{
+        printf("var1 is equal to var2\n");
+}
+return 0;
+}
+```
+
+Output:
+
+```
+Input the value of var1:12
+Input the value of var2:21
+var1 is not equal to var2
+```
+
+![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_48_0.png)
+
+## Example of else.if statement
+
+program check whether a student passed or failed in examination using if statement.
+
+```
+#include<stdio.h>
+#include<conio.h>
+
+int main(){
+    int marks;
+
+    printf("Enter your marks between 0-100\n");
+    scanf("%d", &marks);
+    /* Using if else ladder statement to print
+       Grade of a Student */
+    if(marks >= 90){
+        /* Marks between 90-100 */
+        printf("YOUR GRADE : A\n");
+    } else if(marks >= 70 && marks < 90){
+        /* Marks between 70-89 */
+        printf("YOUR GRADE : B\n");
+    } else if(marks >= 50 && marks < 70){
+        /* Marks between 50-69 */
+        printf("YOUR GRADE : C\n");
+    } else{
+        /* Marks less than 50 */
+        printf("YOUR GRADE : Failed\n");
+```
+
+```
+}
+
+getch();
+return(0);
+}
+```
+
+Output
+
+```
+Enter your marks
+
+96
+
+YOUR GRADE : A
+
+Enter your marks
+
+75
+
+YOUR GRADE : B
+
+Enter your marks
+
+60
+
+YOUR GRADE : C
+
+Enter your marks
+
+35
+
+YOUR GRADE : Failed
+```
+
+## Cascaded if..else
+
+A cascading if-else is a composite of if-else statements where the false path of outer if statement is a nested if-else statement. The nesting can continue to several levels.
+
+```
+if ( expression )
+statement
+
+else
+
+    if (expression )
+    statement
+
+    else
+
+    if ( expression )
+    statement
+
+    else
+```
+
+## C switch...case Statement
+
+The `if...else...if` ladder allows you to execute a block code among many alternatives. If you are checking on the value of a single variable in `if...else...if`, it is better to use `switch` statement.
+
+The switch statement is often faster than nested `if...else` (not always)
+
+## Syntax of switch...case
+
+```
+switch (int_expr)
+
+{
+
+case constant1:
+
+    // code to be executed if n is equal to constant1;
+
+break;
+
+case constant2:
+
+    // code to be executed if n is equal to constant2;
+
+break;
+
+.
+
+.
+
+.
+```
+```
+default:
+
+    // code to be executed if n doesn't match any constant
+
+}
+```
+
+When a case constant is found that matches the switch expression, control of the program passes to the block of code associated with that case.
+
+In the above pseudocode, suppose the value of *n* is equal to *constant2*. The compiler will execute the block of code associate with the case statement until the end of switch block, or until the break statement is encountered.
+
+The break statement is used to prevent the code running into the next case.
+
+## switch Statement Flowchart
+
+![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_52_0.png)
+
+## Example: switch Statement
+
+```
+// Program to create a simple calculator
+// Performs addition, subtraction, multiplication or division depending the input from user
+
+# include <stdio.h>
+```
+```
+int main(){
+
+char operator;
+
+double firstNumber,secondNumber;
+
+printf("Enter an operator (+, -, *, /): ");
+scanf("%c",&operator);
+
+printf("Enter two operands: ");
+scanf("%lf %lf",&firstNumber,&secondNumber);
+
+switch(operator)
+{
+case '+':
+printf("%.1f + %.1f = %.1f",firstNumber,secondNumber,firstNumber+secondNumber);
+break;
+
+case '-':
+printf("%.1f - %.1f = %.1f",firstNumber,secondNumber,firstNumber-secondNumber);
+break;
+
+case '*':
+printf("%.1f * %.1f = %.1f",firstNumber,secondNumber,firstNumber*secondNumber);
+break;
+
+case '/':
+printf("%.1f / %.1f = %.1f",firstNumber,secondNumber,firstNumber/firstNumber);
+break;
+
+// operator is doesn't match any case constant (+, -, *, /)
+default:
+printf("Error! operator is not correct");
+
+```
+
+```
+}
+
+return 0;
+}
+```
+
+## Output
+
+```
+Enter an operator (+, -, *, ): -
+
+Enter two operands: 32.5
+
+12.4
+
+32.5 - 12.4 = 20.1
+```
+
+he - operator entered by the user is stored in operator variable. And, two operands 32.5 and 12.4 are stored in variables firstNumber and secondNumber respectively.
+
+Then, control of the program jumps to
+
+```
+printf("%.11f / %.11f = %.11f",firstNumber, secondNumber, firstNumber/firstNumber);
+```
+
+Finally, the break statement ends the switch statement.
+
+If break statement is not used, all cases after the correct case is executed.
+
+If none of cases match then default statement is executed.
+
+## Unconditional Branching Statements
+
+## C – goto statement
+
+When a goto statement is encountered in a C program, the control jumps directly to the label mentioned in the goto statement
+
+## Syntax of goto statement in C
+
+```
+goto label_name;
+..
+..
+label_name: C-statements
+```
+
+![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_55_0.png)
+
+## Example of goto statement
+
+```
+#include<stdio.h>
+int main()
+{
+int sum=0;
+for(int i =0; i<=10; i++){
+    sum=sum+i;
+    if(i==5){
+    goto addition;
+    }
+}
+
+addition:
+printf("%d", sum);
+
+return 0;
+}
+```
+
+Output:
+
+```
+15
+```
+
+**Explanation:** In this example, we have a label addition and when the value of i (inside loop) is equal to 5 then we are jumping to this label using goto. This is reason the sum is displaying the sum of numbers till 5 even though the loop is set to run from 0 to 10.
+
+It is sometimes desirable to skip some statements inside the loop or terminate the loop immediately without checking the test expression.
+
+In such cases, `break` and `continue` statements are used.
+

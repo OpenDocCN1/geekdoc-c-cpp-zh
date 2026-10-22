@@ -1,0 +1,6273 @@
+- pgno: 0
+  md: '# # Module 1
+
+
+    # ## Hardware Components
+
+
+    Processor, memory and Input/Output devices, are the important components of a
+    digital computer. **Processor** will have ALU (Arithmetic Logic Unit) and Control
+    Unit (CU) as its components. **Memory** can be subdivided into primary and secondary
+    memory. **Input devices** accept data and control signals from the user. Examples
+    of input devices are keyboard, mouse, pen based systems, data scanners, game controllers,
+    voice recognition systems etc. **Output devices** communicate the processed data
+    to the user. Examples of output devices are Monitor, Printer, Plotter, sound system
+    etc.
+
+
+    # ## Processor
+
+
+    Central Processing Unit (CPU) -It is the brain of the computer. It performs the
+    bulk of the data processing operations. The function of the processor is to fetch
+    the instruction from memory, examine (decode) the instruction and execute the
+    instructions. It consists of Control unit, Arithmetic Logic Unit (ALU) and registers.
+    Control unit is responsible for fetching the instructions from memory and interpreting
+    them. ALU performs arithmetic and logical operations. Registers are very high
+    speed memory units for storing very small amount of data. Program counter, Instruction
+    register, Memory address register, memory buffer register and accumulator are
+    some examples of registers. Bus is a collection of wires. They may be unidirectional
+    or bidirectional. Bus is used to connect different parts of a computer. Bus may
+    be serial or parallel. USB is an example of a serial bus. Bus connecting computer
+    and a dot matrix printer is normally a parallel bus. Parallel bus carries several
+    bits at a time. These bits may indicate instruction, data, address or commands.
+    Bus width and Bus speed are the two major components for performance measure of
+    a computer.
+
+
+    # ## Memory
+
+
+    In the memory, the information is stored in terms of bits or bytes or words. Byte
+    is made of 8 bits and word is a collection of 16, 32 or 64 bits. Memory can be
+    volatile or non volatile. Information present in Volatile memory is lost as soon
+    as the power is turned off. Figure-1 gives the classification of memory devices
+    in a digital computer. Secondary memories are non volatile in nature. Examples
+    of secondary memory include Hard disk, Pen drive, DVD-ROM, Recordable DVD, CD-RW,
+    Blue-Ray, Magnetic tapes. Main memory devices are ones in which any memory location
+    can be accessed in any order (not necessarily in a sequential order). RAM (Random
+    Access Memory) and ROM (Read Only Memory) are the two types of main memory devices.
+    RAM is also called Read-Write Memory. It is volatile memory. ROM is non-volatile
+    memory. It is also considered an example of firmware. Cache memory is a memory
+    placed between CPU and main memory. It contains a part of main memory content.
+    Processor when needs some information, first looks in the cache. If not found
+    in cache, the portion of memory containing the needed information is moved to
+    the cache and is also read by the processor. Both internal and external cache
+    memories are volatile in nature. External'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'cache is mounted on the motherboard. Registers are small memory units internally
+    available within the processor.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_1_0.png)
+
+
+    Figure 1
+
+
+    # C Language : An Introduction
+
+
+    C is a procedural programming language. It was initially developed by Dennis Ritchie
+    between 1969 and 1973. It was mainly developed as a system programming language
+    to write operating system. The main features of C language include low-level access
+    to memory, simple set of keywords, and clean style, these features make C language
+    suitable for system programming like operating system or compiler development.
+    Many later languages have borrowed syntax/features directly or indirectly from
+    C language. Like syntax of Java, PHP, JavaScript and many other languages is mainly
+    based on C language. C++ is nearly a superset of C language (There are few programs
+    that may compile in C, but not in C++).
+
+
+    # Basic Structure of a C program'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "All section, except the main () function section may be absent when they are\
+    \ not required.\n\n# 2) Writing first program:\n\nFollowing is first program in\
+    \ C\n\n```\n#include <stdio.h>\nvoid main()\n{\n    printf(\"Welcome to C Programming!!\"\
+    );\n}\n```\n\nOutput:\n\nWelcome to C Programming!!\n\nLet us analyze the program\
+    \ line by line.\n\nLine 1: [ #include <stdio.h> ] In a C program, all lines that\
+    \ start with # are processed by preprocessor which is a program invoked by the\
+    \ compiler. In a very basic term, preprocessor takes a C program and produces\
+    \ another C program. The produced program has no lines starting with #, all such\
+    \ lines are processed by the preprocessor. In the above example, preprocessor\
+    \ copies the preprocessed code of stdio.h to our file. The .h files are called\
+    \ header files in C. These header files generally contain declaration of functions.\
+    \ We need stdio.h for the function printf() used in the program.\n\nLine 2 [void\
+    \ main() ] There must to be starting point from where execution of compiled C\
+    \ program begins. In C, the execution typically begins with first line of main().\
+    \ The void written before main indicates return type of main(). The value returned\
+    \ by main indicates status of program termination.\n\nLine 3 and 6: [ { and }\
+    \ ] In C language, a pair of curly brackets define a scope and mainly used in\
+    \ functions and control statements like if, else, loops. All functions must start\
+    \ and end with curly brackets.\n\nLine 4 [ printf(\"Welcome to C Programming!!\"\
+    ); ] printf() is a standard library function to print something on standard output.\
+    \ The semicolon at the end of printf indicates line termination. In C, semicolon\
+    \ is always used to indicate end of statement.\n\n# Interesting Facts about Macros\
+    \ and Preprocessors in C"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'kernels and it also supports functions of high level programming languages,
+    such as scripting for software applications etc.
+
+
+    +   2. C is a structured programming language which allows a complex program to
+    be broken into simpler programs called functions. It also allows free movement
+    of data across these functions.
+
+    +   3. Various features of C including direct access to machine level hardware
+    APIs, presence of C compilers, deterministic resource use and dynamic memory allocation
+    make C language an optimum choice for scripting applications and drivers of embedded
+    systems.
+
+    +   4. C language is case-sensitive which means lowercase and uppercase letters
+    are treated differently.
+
+    +   5. C is highly portable and is used for scripting system applications which
+    form a major part of Windows, UNIX and Linux operating system.
+
+    +   6. C is a general purpose programming language and can efficiently work on
+    enterprise applications, games, graphics, and applications requiring calculations
+    etc.
+
+    +   7. C language has a rich library which provides a number of built-in functions.
+    It also offers dynamic memory allocation.
+
+
+    # Escape Sequences in C
+
+
+    In C programming language, there are 256 numbers of characters in character set.
+    The entire character set is divided into 2 parts i.e. the ASCII characters set
+    and the extended ASCII characters set. But apart from that, some other characters
+    are also there which are not the part of any characters set, known as ESCAPE characters.
+
+
+    # List of Escape Sequences
+
+
+    +   \a  Alarm or Beep
+
+    +   \b  Backspace
+
+    +   \f  Form Feed
+
+    +   \n  New Line
+
+    +   \r  Carriage Return
+
+    +   \t  Tab (Horizontal)
+
+    +   \v  Vertical Tab
+
+    +   \\  Backslash
+
+    +   \''  Single Quote
+
+    +   \"  Double Quote
+
+    +   \?  Question Mark
+
+    +   \ooo  octal number
+
+    +   \xhh  hexadecimal number
+
+    +   \0  Null
+
+
+    # C Tokens'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'gotostatements.
+
+
+    # There are certain rules that should be followed while naming c identifiers:
+
+
+    +   - They must begin with a letter or underscore(_).
+
+    +   - They must consist of only letters, digits, or underscore. No other special
+    character is allowed.
+
+    +   - It should not be a keyword.
+
+    +   - It must not contain white space.
+
+    +   - It should be up to 31 characters long as only first 31 characters are significant.
+
+
+    Some examples of c identifiers:
+
+
+    | name | Remark |
+
+    |------|--------|
+
+    | _A9 | Valid |
+
+    | Temp.var | Invalid as it contains special character other than the underscore
+    |
+
+    | void | Invalid as it is a keyword |
+
+
+    # C program:
+
+
+    ```
+
+    void main()
+
+    {
+
+    int a = 10;
+
+    }
+
+    ```
+
+
+    In the above program there are 2 identifiers:
+
+
+    +   6. **main:** method name.
+
+    +   7. **a:** variable name.
+
+
+    **Constants:** Constants are also like normal variables. But, only difference
+    is, their values can not be modified by the program once they are defined. Constants
+    refer to fixed values. They are also called as literals.
+
+
+    Constants may belong to any of the data type.**Syntax:**
+
+
+    ```
+
+    const
+
+
+    data_typevariable_name; (or) constdata_type *variable_name;
+
+    ```
+
+
+    # Types of Constants:
+
+
+    Integer constants – Example: 0, 1, 1218, 12482'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Real or Floating point constants – Example: 0.0, 1203.03, 30486.184
+
+
+    Octal & Hexadecimal constants – Example: octal: (013 )₈ = (11)₁₀, Hexadecimal:
+    (013)₁₆ = (19)₁₀
+
+
+    Character constants -Example: ‘a’, ‘A’, ‘z’
+
+
+    String constants -Example: “GeeksforGeeks”
+
+
+    **Strings:** Strings are nothing but an array of characters ended with a null
+    character (‘\0’). This null character indicates the end of the string. Strings
+    are always enclosed in double quotes. Whereas, a character is enclosed in single
+    quotes in C and C++. **Declarations for String:**
+
+
+    +   - char string[20] = {‘g’, ‘e’, ‘e’, ‘k’, ‘s’, ‘f’, ‘o’, ‘r’, ‘g’, ‘e’, ‘e’,
+    ‘k’, ‘s’, ‘\0’};
+
+    +   - char string[20] = “geeksforgeeks”;
+
+    +   - char string [] = “geeksforgeeks”;
+
+
+    # **Difference between above declarations are:**
+
+
+    when we declare char as “string[20]”, 20 bytes of memory space is allocated for
+    holding the string value.
+
+
+    When we declare char as “string[]”, memory space will be allocated as per the
+    requirement during execution of the program
+
+
+    **Special Symbols:** The following special symbols are used in C having some special
+    meaning and thus, cannot be used for some other purpose.[] () {} , ; * = #
+
+
+    **Brackets[]:** Opening and closing brackets are used as array element reference.
+    These indicate single and multidimensional subscripts.
+
+
+    **Parentheses():** These special symbols are used to indicate function calls and
+    function parameters.
+
+
+    **Braces{}:** These opening and ending curly braces marks the start and end of
+    a block of code containing more than one executable statement.
+
+
+    **comma (, ):** It is used to separate more than one statements like in for loop
+    is separates initialization, condition and increment.
+
+
+    **semi colon :** It is an operator that essentially invokes something called an
+    initialization list.
+
+
+    **asterick (*):** It is used to create pointer variable.
+
+
+    **assignment operator:** It is used to assign values.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '**pre processor(#):** The preprocessor is a macro processor that is used automatically
+    by the compiler to transform your program before actual compilation.
+
+
+    **Operators:** Operators are symbols that triggers an action when applied to C
+    variables and other objects. The data items on which operators act upon are called
+    operands. Depending on the number of operands that an operator can act upon, operators
+    can be classified as follows:
+
+
+    **Unary Operators:** Those operators that require only single operand to act upon
+    are known as unary operators. For Example increment and decrement operators
+
+
+    **Binary Operators:** Those operators that require two operands to act upon are
+    called binary operators. **Binary operators are classified into :**
+
+
+    +   1. Arithmetic operators
+
+    +   2. Relational Operators
+
+    +   3. Logical Operators
+
+    +   4. Assignment Operators
+
+    +   5. Conditional Operators
+
+    +   6. Bitwise Operators
+
+
+    **Ternary Operators:** These operators requires three operands to act upon. For
+    Example Conditional operator(?:).
+
+
+    # Variables and Keywords in C
+
+
+    A **variable** in simple terms is a storage place which has some memory allocated
+    to it. So basically a variable used to store some form of data. Different types
+    of variables require different amounts of memory and have some specific set of
+    operations which can be applied on them.
+
+
+    **Variable**                                                                 **Declaration:**
+
+    A typical variable declaration is of the form:
+
+
+    ```
+
+    typevariable_name;
+
+    or for multiple variables:
+
+    type variable1_name, variable2_name, variable3_name;
+
+    ```
+
+
+    A variable name can consist of alphabets (both upper and lower case), numbers
+    and the underscore ` _ ` character. However, the name must not start with a number.
+
+
+    # Difference b/w variable declaration and definition
+
+
+    Variable declaration refers to the part where a variable is first declared or
+    introduced before its first use. Variable definition is the part where the variable
+    is assigned a memory location and a value. Most of the times, variable declaration
+    and definition are done together
+
+
+    See the following C program for better clarification:'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: "```\n```c\n#include <stdio.h>\nintmain()\n{\n    // declaration and definition\
+    \ of variable 'a123'\n    chara123 = 'a';\n    // This is also both declaration\
+    \ and definition as 'b' is allocated\n    // memory and assigned some garbage\
+    \ value.\n    floatb;\n    // multiple declarations and definitions\n    int_c,\
+    \ _d45, e;\n    // Let us print a variable\n    printf(\"%c \\n\", a123);\n  \
+    \  return0;\n}\n```\n```\n\n**Output:**\n\na\n\n**Keywords** are specific reserved\
+    \ words in C each of which has a specific feature associated with it. Almost all\
+    \ of the words which help us use the functionality of the C language are included\
+    \ in the list of keywords. So you can imagine that the list of keywords is not\
+    \ going to be a small one!\n\nThere are a total of 32 keywords in C:\n\n+   auto\
+    \    break    case    char    const    continue  \n+   default    do    double\
+    \    else    enum    extern  \n+   float    for    goto    if    int    long \
+    \ \n+   register    return    short    signed    sizeof    static  \n+   struct\
+    \    switch    typedef    union    unsigned    void  \n+   volatile    while\n\
+    \nconst: const can be used to declare constant variables. Constant variables are\
+    \ variables which when initialized, can’t change their value. Or in other words,\
+    \ the value assigned to them is unmodifiable.\n\nSyntax:\n\n```\n```c\nconstdata_typevar_name\
+    \ = var_value;\n```\n```\n\nNote: Constant variables need to be compulsorily be\
+    \ initialized during their declaration itself. const keyword is also used with\
+    \ pointers. Please refer the [const qualifier in C](#) for understanding the same."
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "**static:** static keyword is used to declare static variables which are popularly\
+    \ used while writing programs in C language. Static variables have a property\
+    \ of preserving their value even after they are out of their scope! Hence, static\
+    \ variables preserve the value of their last use in their scope. So we can say\
+    \ that they are initialized only once and exist till the termination of the program.\
+    \ Thus, no new memory is allocated because they are not re-declared. Their scope\
+    \ is local to the function to which they were defined. Global static variables\
+    \ can be accessed anywhere in the program. By default, they are assigned the value\
+    \ 0 by the compiler.\n\nSyntax:\n\n```\nstaticdata_typevar_name = var_value;\n\
+    ```\n\n# How are variables scoped in C – Static or Dynamic?\n\nIn C, variables\
+    \ are always statically (or lexically) scoped i.e., binding of a variable can\
+    \ be determined by program text and is independent of the run-time function call\
+    \ stack.\n\nFor example, output for the below program is 0, i.e., the value returned\
+    \ by f() is not dependent on who is calling it. f() always returns the value of\
+    \ global variable x.\n\n```\nint x = 0;\nint f()\n{\n    return x;\n}\nint g()\n\
+    {\n    int x = 1;\n    return f();\n}\nint main()\n{\n    printf(\"%d\", g());\n\
+    \    printf(\"\\n\");\n    getchar();\n}\n```\n\n# Scope rules in C"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "Scope of an identifier is the part of the program where the identifier may\
+    \ directly be accessible. In C, all identifiers are lexically (or statically)\
+    \ scoped. C scope rules can be covered under following two categories.\n\n# Global\
+    \ Scope: Can be accessed anywhere in a program.\n\n```\n// filename: file1.c\n\
+    inta;\nintmain(void)\n{\n  a = 2;\n}\n// filename: file2.c\n// When this file\
+    \ is linked with file1.c, functions of this file can access a\nexterninta;\nintmyfun()\n\
+    {\n  a = 2;\n}\n```\n\nTo restrict access to current file only, global variables\
+    \ can be marked as static.\n\n# Block Scope: A Block is a set of statements enclosed\
+    \ within left and right braces ({ and } respectively). Blocks may be nested in\
+    \ C (a block may contain other blocks inside it). A variable declared in a block\
+    \ is accessible in the block and all inner blocks of that block, but not accessible\
+    \ outside the block.\n\nWhat if the inner block itself has one variable with the\
+    \ same name? If an inner block declares a variable with the same name as the variable\
+    \ declared by the outer block, then the visibility of the outer block variable\
+    \ ends at the pint of declaration by inner block.\n\n```\nintmain()\n{\n  {\n\
+    \    intx = 10, y = 20;\n    {\n      // The outer block contains declaration\
+    \ of x and y, so\n      // following statement is valid and prints 10 and 20\n\
+    \      printf(\"x = %d, y = %d\\n\", x, y);\n      {\n        // y is declared\
+    \ again, so outer block y is not accessible\n        // in this block\n      \
+    \  inty = 40;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '```
+
+    x++; // Changes the outer block variable x to 11
+
+    y++; // Changes this block''s variable y to 41
+
+
+    printf("x = %d, y = %d\n", x, y);
+
+    }
+
+
+    // This statement accesses only outer block''s variables
+
+    printf("x = %d, y = %d\n", x, y);
+
+    }
+
+    }
+
+    return0;
+
+    }
+
+    ```
+
+
+    Output:
+
+    x = 10, y = 20
+
+    x = 11, y = 41
+
+    x = 11, y = 20
+
+
+    What about functions and parameters passed to functions? A function itself is
+    a block. Parameters and other local variables of a function follow the same block
+    scope rules.
+
+
+    Can variables of block be accessed in another subsequent block?* No, a variabled
+    declared in a block can only be accessed inside the block and all inner blocks
+    of this block. For example, following program produces compiler error.
+
+
+    ```
+
+    intmain()
+
+    {
+
+    {
+
+    intx = 10;
+
+    }
+
+    {
+
+    printf("%d", x); // Error: x is not accessible here
+
+    }
+
+    return0;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "}\n\n# Output:\n\nerror: 'x' undeclared (first use in this function)\n\nAs\
+    \ an exercise, predict the output of following program.\n\n```\nintmain()\n{\n\
+    \    intx = 1, y = 2, z = 3;\n    printf(\" x = %d, y = %d, z = %d \\n\", x, y,\
+    \ z);\n    {\n        intx = 10;\n        floaty = 20;\n        printf(\" x =\
+    \ %d, y = %f, z = %d \\n\", x, y, z);\n        {\n            intz = 100;\n  \
+    \          printf(\" x = %d, y = %f, z = %d \\n\", x, y, z);\n        }\n    }\n\
+    \    return0;\n}\n```\n\n# C Input/Output Statements\n\n# Unformatted I/O functions\n\
+    \nThere are mainly six unformatted I/O functions discussed as follows:\n\n+  \
+    \ a) getchar()\n+   b) putchar()\n+   c) gets()\n+   d) puts()\n+   e) getch()\n\
+    +   f) getche()\n\n# a) getchar()\n\nThis function is an Input function. It is\
+    \ used for reading a single character from the keyborad. It is buffered function.\
+    \ Buffered functions get the input from the keyboard and store it in the"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'memory buffer temporally until you press the Enter key.
+
+
+    The general syntax is as:
+
+
+    ```
+
+    v = getchar();
+
+    ```
+
+
+    where v is the variable of character type. For example:
+
+
+    ```
+
+    char
+
+    n;
+
+    n = getchar();
+
+    ```
+
+
+    A simple C-program to read a single character from the keyboard is as:
+
+
+    ```
+
+    /*To read a single character from the keyboard using the getchar() function*/
+
+    main()
+
+    {
+
+    char n;
+
+    n = getchar();
+
+    }
+
+    ```
+
+
+    # b) putchar()
+
+
+    This function is an output function. It is used to display a single character
+    on the screen. The general syntax is as:
+
+
+    ```
+
+    putchar(v);
+
+    ```
+
+
+    where v is the variable of character type. For example:
+
+
+    ```
+
+    char
+
+    n;
+
+    putchar(n);
+
+    ```
+
+
+    A simple program is written as below, which will read a single character using
+    getchar() function and display inputted data using putchar() function:
+
+
+    ```
+
+    /*Program illustrate the use of getchar() and putchar() functions*/
+
+
+    main()
+
+    {
+
+    char n;
+
+    n = getchar();
+
+    putchar(n);
+
+    }
+
+    ```
+
+
+    # c) gets()
+
+
+    This function is an input function. It is used to read a string from the keyboar.
+    It is also'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '**OUTPUT IS:**
+
+    Enter the Name
+
+    Laura
+
+    Name is:
+
+    Laura
+
+
+    # ### e) getch()
+
+
+    This is also an input function. This is used to read a single character from the
+    keyboard like getchar() function. But getchar() function is a buffered function,
+    getchar() function is a non-buffered function. The character data read by this
+    function is directly assign to a variable rather it goes to the memory buffer,
+    the character data directly assign to a variable without the need to press the
+    Enter key.
+
+    Another use of this function is to maintain the output on the screen till you
+    have not press the Enter Key. The general syntax is as:
+
+
+    ```
+
+    v = getch();
+
+    ```
+
+
+    where v is the variable of character type.
+
+    A simple C program to illustrate the use of getch() function:
+
+
+    ```
+
+    /*Program to explain the use of getch() function*/
+
+    main()
+
+    {
+
+    char n;
+
+    puts("Enter the Char");
+
+    n = getch();
+
+    puts("Char is :");
+
+    putchar(n);
+
+    getch();
+
+    }
+
+    ```
+
+
+    **OUTPUT IS:**
+
+    Enter the Char
+
+    Char is L
+
+
+    # ### f) getche()
+
+
+    All are same as getch() function except it is an echoed function. It means when
+    you type the character data from the keyboard it will visible on the screen. The
+    general syntax is as:
+
+
+    ```
+
+    v = getche();
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '| Format Code | Meaning |
+
+    |---|---|
+
+    | %c | To read a single character |
+
+    | %d | To read a signed decimal integer (short) |
+
+    | %ld | To read a signed long decimal integer |
+
+    | %e | To read a float value exponential |
+
+    | %f | To read a float (short0 or a single precision value |
+
+    | %lf | To read a double precision float value |
+
+    | %g | To read double float value |
+
+    | %h | To read short integer |
+
+    | %i | To read an integer (decimal, octal, hexadecimal) |
+
+    | %o | To read an octal integer only |
+
+    | %x | To read a hexadecimal integer only |
+
+    | %u | To read unsigned decimal integer (used in pointer) |
+
+    | %s | To read a string |
+
+    | %[...] | To read a string of words from the defined range |
+
+    | %[^] | To read string of words which are not from the defined range |
+
+
+    ```
+
+    /*Program to illustrate the use of formatted code by using the formatted scanf()
+    function */
+
+    main()
+
+    {
+
+    char n,name[20];
+
+    intabc;
+
+    float xyz;
+
+    printf("Enter the single character, name, integer data and real value");
+
+    scanf("\n%c%s%d%f", &n,name,&abc,&xyz);
+
+    getch();
+
+    }
+
+    ```
+
+
+    # b) printf()
+
+
+    This ia an output function. It is used to display a text message and to display
+    the mixed type (int, float, char) of data on screen. The general syntax is as:
+
+
+    ```
+
+    printf("controlstrings",&v1,&v2,&v3,................&vn);
+
+
+    or
+
+
+    printf("Message line or text line");
+
+    ```
+
+
+    Where v1,v2,v3,......vn all are the variables.
+
+    The control strings use some printf() format codes or format specifiers or conversion
+    characters.
+
+
+    These all are discussed in the below table as:'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'Different data types also have different ranges upto which they can store numbers.
+    These ranges may vary from compiler to compiler. Below is list of ranges along
+    with the memory requirement and format specifiers on 32 bit gcc compiler.
+
+
+    | Data Type | Memory (bytes) | Range | Format Specifier |
+
+    |---|---|---|---|
+
+    | shortint 2 |  | -32,768 to 32,767 | %hd |
+
+    | unsigned short int 2 |  | 0 to 65,535 | %hu |
+
+    | unsigned int 4 |  | 0 to 4,294,967,295 | %u |
+
+    | int 4 |  | -2,147,483,648 to 2,147,483,647 | %d |
+
+    | long int 4 |  | -2,147,483,648 to 2,147,483,647 | %ld |
+
+    | unsigned long int 4 |  | 0 to 4,294,967,295 | %lu |
+
+    | long long int 8 |  | -(2^63) to (2^63)-1 | %lld |
+
+    | unsigned long long int 8 |  | 0 to 18,446,744,073,709,551,615 | %llu |
+
+    | signed char 1 |  | -128 to 127 | %c |
+
+    | unsigned char 1 |  | 0 to 255 | %c |
+
+    | float 4 |  |  | %f |
+
+    | double 8 |  |  | %lf |
+
+    | long double 12 |  |  | %Lf |
+
+
+    # Type modifiers/qualifiers :
+
+
+    A type modifiers alter the meaning of the base data type to yield a new type.
+    There are four types of modifiers in C they are
+
+
+    +   - signed
+
+    +   - unsigned
+
+    +   - short
+
+    +   - long
+
+
+    +   1. Each of these type modifiers can be applied to the base type int.
+
+    +   2. Type modifiers signed and unsigned can also be applied to the base type
+    char.
+
+    +   3. In addition, long can be applied to double.
+
+
+    | Data type | Format | Memory size | Accessibility range |
+
+    |---|---|---|---|
+
+    | unsigned char | %c | 1 Byte | 0 to 255 |
+
+    | char | %c | 1 Byte | -128 to 127 |
+
+    | int | %d | 2 Bytes | -32768 to 32767 |
+
+    | unsigned int | %u | 2 Bytes | 0 to 65535 |
+
+    | long (or) long int | %ld | 4 Bytes | -2147483648 to 2147483647 |'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '| unsigned long (or) unsigned long int | %lu | 4 Bytes | 0 to 4294967295 |
+
+    | float | %f | 4 Bytes | 3.4*(10 power -38) to 3.4*(10 power 38) |
+
+    | double | %lf | 8 Bytes | 1.7*(10 power -308) to 1.7*(10 power 308) |
+
+    | long double | %Lf | 10 Bytes | 3.4*(10 power -4932) to 1.1*(10 power 4932) |
+
+    | char[ ] (string) | %s |  |  |
+
+
+    %o    Octal Base
+
+    %x    Hexa decimal base
+
+    %p    Memory address
+
+
+    # Type Conversion in C
+
+
+    A type cast is basically a conversion from one type to another. There are two
+    types of type conversion:
+
+
+    +   1. **Implicit Type Conversion** Also known as ‘automatic type conversion’.
+
+
+    Done by the compiler on its own, without any external trigger from the user.
+
+
+    Generally takes place when in an expression more than one data type is present.
+    In such condition type conversion (type promotion) takes place to avoid lose of
+    data.
+
+
+    All the data types of the variables are upgraded to the data type of the variable
+    with largest data type.
+
+
+    ```
+
+    bool-> char -> short int ->int ->
+
+    unsignedint -> long -> unsigned ->
+
+    longlong -> float -> double -> long double
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "It is possible for implicit conversions to lose information, signs can be lost\
+    \ (when signed is implicitly converted to unsigned), and overflow can occur (when\
+    \ long long is implicitly converted to float).\n\n# **Example of Type Implicit\
+    \ Conversion:**\n\n```\n```c\n// An example of implicit conversion\n#include<stdio.h>\n\
+    int main()\n{\n    int x = 10;   // integer x\n    char y = 'a'; // character\
+    \ c\n\n    // y implicitly converted to int. ASCII\n    // value of 'a' is 97\n\
+    \    x = x + y;\n\n    // x is implicitly converted to float\n    float z = x\
+    \ + 1.0;\n\n    printf(\"x = %d, z = %f\", x, z);\n    return 0;\n}\n```\n```\n\
+    \n+   1. **Output:**\n+   \n+      `x = 107, z = 108.000000`\n\n+   2. **Explicit\
+    \ Type Conversion**– This process is also called type casting and it is user defined.\
+    \ Here the user can type cast the result to make it of a particular data type.\n\
+    \nThe syntax in C:\n\n```\n```c\n(type) expression\n```\n```\n\nType indicated\
+    \ the data type to which the final result is converted.\n\n```\n```c\n// C program\
+    \ to demonstrate explicit type casting\n#include<stdio.h>\n\nint main()\n{\n \
+    \   double x = 1.2;\n\n    // Explicit conversion from double to int\n    int\
+    \ sum = (int)x + 1;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\nprintf(\"sum = %d\", sum);\n\n    return 0;\n}\n```\n\nOutput:\n\nsum\
+    \ = 2\n\n# Operators in C\n\nOperators are the foundation of any programming language.\
+    \ Thus the functionality of C language is incomplete without the use of operators.\
+    \ Operators allow us to perform different kinds of operations on operands. In\
+    \ C, operators in Can be categorized in following categories:\n\n+   - **Arithmetic\
+    \ Operators** (+, -, *, /, %, post-increment, pre-increment, post-decrement, pre-decrement)\n\
+    +   - **Relational Operators** (==, !=, >, <, >= & <=) Logical Operators (&&,\
+    \ || and !)\n+   - **Bitwise Operators** (&, |, ^, ~, >> and <<)\n+   - **Assignment\
+    \ Operators** (=, +=, -=, *=, etc)\n+   - **Other Operators** (conditional, comma,\
+    \ sizeof, address, redirecton)\n\n**Arithmetic Operators:** These are used to\
+    \ perform arithmetic/mathematical operations on operands. The binary operators\
+    \ falling in this category are:\n\n+   - **Addition:** The ‘+’ operator adds two\
+    \ operands. For example, x+y.\n+   - **Subtraction:** The ‘-’ operator subtracts\
+    \ two operands. For example, x-y.\n+   - **Multiplication:** The ‘*’ operator\
+    \ multiplies two operands. For example, x*y.\n+   - **Division:** The ‘/’ operator\
+    \ divides the first operand by the second. For example, x/y.\n+   - **Modulus:**\
+    \ The ‘%’ operator returns the remainder when first operand is divided by the\
+    \ second. For example, x%y.\n\n```\n// C program to demonstrate working of binary\
+    \ arithmetic operators\n#include<stdio.h>\n```\n\n```\nint main()\n{\n    int\
+    \ a = 10, b = 4, res;\n\n    //printing a and b\n    printf(\"a is %d and b is\
+    \ %d\\n\", a, b);\n\n    res = a+b; //addition\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '```
+
+    ```c
+
+    printf("a+b is %d\n", res);
+
+
+    res = a-b; //subtraction
+
+    printf("a-b is %d\n", res);
+
+
+    res = a*b; //multiplication
+
+    printf("a*b is %d\n", res);
+
+
+    res = a/b; //division
+
+    printf("a/b is %d\n", res);
+
+
+    res = a%b; //modulus
+
+    printf("a%%b is %d\n", res);
+
+
+    return 0;
+
+    }
+
+    ```
+
+    ```
+
+
+    # Output:
+
+
+    a is 10 and b is 4
+
+    a+b is 14
+
+    a-b is 6
+
+    a*b is 40
+
+    a/b is 2
+
+    a%b is 2
+
+
+    The ones falling into the category of unary arithmetic operators are:
+
+
+    +   - **Increment:** The ‘++’ operator is used to increment the value of an integer.
+    When placed before the variable name (also called pre-increment operator), its
+    value is incremented instantly. For example, **++x**. And when it is placed after
+    the variable name (also called post-increment operator), its value is preserved
+    temporarily until the execution of this statement and it gets updated before the
+    execution of the next statement. For example, **x++**.
+
+    +   - **Decrement:** The ‘−−’ operator is used to decrement the value of an integer.
+    When placed before the variable name (also called pre-decrement operator), its
+    value is decremented instantly. For example, **−−x**. And when it is placed after
+    the variable name (also called post-decrement operator), its value is preserved
+    temporarily until the execution of this statement and it gets updated before the
+    execution of the next statement. For example, **x−−**.
+
+
+    ```
+
+    ```c
+
+    // C program to demonstrate working of Unary arithmetic operators
+
+    #include<stdio.h>
+
+
+    int main()
+
+    {
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "```\n```c\nint a = 10, b = 4, res;\n\n// post-increment example:\n// res is\
+    \ assigned 10 only, a is not updated yet\nres = a++;\nprintf(\"a is %d and res\
+    \ is %d\\n\", a, res); //a becomes 11 now\n\n// post-decrement example:\n// res\
+    \ is assigned 11 only, a is not updated yet\nres = a--;\nprintf(\"a is %d and\
+    \ res is %d\\n\", a, res); //a becomes 10 now\n\n// pre-increment example:\n//\
+    \ res is assigned 11 now since a is updated here itself\nres = ++a;\n// a and\
+    \ res have same values = 11\nprintf(\"a is %d and res is %d\\n\", a, res);\n\n\
+    // pre-decrement example:\n// res is assigned 10 only since a is updated here\
+    \ itself\nres = --a;\n// a and res have same values = 10\nprintf(\"a is %d and\
+    \ res is %d\\n\",a,res);\n\nreturn 0;\n}\n```\n```\n\nOutput:\n\na is 11 and res\
+    \ is 10  \na is 10 and res is 11  \na is 11 and res is 11  \na is 10 and res is\
+    \ 10\n\n# Relational Operators:\n\nRelational operators are used for comparison\
+    \ of two values. Let’s see them one by one:\n\n+   - `==` operator checks whether\
+    \ the two given operands are equal or not. If so, it returns true. Otherwise it\
+    \ returns false. For example, **5==5** will return true.\n+   - `!=` operator\
+    \ checks whether the two given operands are equal or not. If not, it returns true.\
+    \ Otherwise it returns false. It is the exact boolean complement of the `==` operator.\
+    \ For example, **5!=5** will return false."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "+   - ‘>’ operator checks whether the first operand is greater than the second\
+    \ operand. If so, it returns true. Otherwise it returns false. For example, **6>5**\
+    \ will return true.\n+   - ‘<’ operator checks whether the first operand is lesser\
+    \ than the second operand. If so, it returns true. Otherwise it returns false.\
+    \ For example, **6<5** will return false.\n+   - ‘>=’ operator checks whether\
+    \ the first operand is greater than or equal to the second operand. If so, it\
+    \ returns true. Otherwise it returns false. For example, **5>=5** will return\
+    \ true.\n+   - ‘<=’ operator checks whether the first operand is lesser than or\
+    \ equal to the second operand. If so, it returns true. Otherwise it returns false.\
+    \ For example, **5<=5** will also return true.\n\n```\n// C program to demonstrate\
+    \ working of relational operators\n#include <stdio.h>\n\nint main()\n{\n    int\
+    \ a=10, b=4;\n\n    // relational operators\n    // greater than example\n   \
+    \ if (a > b)\n        printf(\"a is greater than b\\n\");\n    else printf(\"\
+    a is less than or equal to b\\n\");\n\n    // greater than equal to\n    if (a\
+    \ >= b)\n        printf(\"a is greater than or equal to b\\n\");\n    else printf(\"\
+    a is lesser than b\\n\");\n\n    // less than example\n    if (a < b)\n      \
+    \  printf(\"a is less than b\\n\");\n    else printf(\"a is greater than or equal\
+    \ to b\\n\");\n\n    // lesser than equal to\n    if (a <= b)\n        printf(\"\
+    a is lesser than or equal to b\\n\");\n    else printf(\"a is greater than b\\\
+    n\");\n\n    // equal to\n    if (a == b)\n        printf(\"a is equal to b\\\
+    n\");\n    else printf(\"a and b are not equal\\n\");\n\n    // not equal to\n\
+    \    if (a != b)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "```\n```c\nprintf(\"a is not equal to b\\n\");\nelse printf(\"a is equal b\\\
+    n\");\n\nreturn 0;\n}\n```\n```\n\n# Output:\n\na is greater than b\na is greater\
+    \ than or equal to b\na is greater than or equal to b\na is greater than b\na\
+    \ and b are not equal\na is not equal to b\n\n# Logical Operators:\n\nThey are\
+    \ used to combine two or more conditions/constraints or to complement the evaluation\
+    \ of the original condition in consideration. They are described below:\n\n+ \
+    \  - **Logical AND:** The ‘&&’ operator returns true when both the conditions\
+    \ in consideration are satisfied. Otherwise it returns false. For example, **a\
+    \ && b** returns true when both a and b are true (i.e. non-zero).\n+   - **Logical\
+    \ OR:** The ‘||’ operator returns true when one (or both) of the conditions in\
+    \ consideration is satisfied. Otherwise it returns false. For example, **a ||\
+    \ b** returns true if one of a or b is true (i.e. non-zero). Of course, it returns\
+    \ true when both a and b are true.\n+   - **Logical NOT:** The ‘!’ operator returns\
+    \ true the condition in consideration is not satisfied. Otherwise it returns false.\
+    \ For example, **!a** returns true if a is false, i.e. when a=0.\n\n```\n```c\n\
+    // C program to demonstrate working of logical operators\n#include <stdio.h>\n\
+    \nint main()\n{\n    int a=10, b=4, c = 10, d = 20;\n\n    // logical operators\n\
+    \n    // logical AND example\n    if (a>b && c==d)\n        printf(\"a is greater\
+    \ than b AND c is equal to d\\n\");\n    else printf(\"AND condition not satisfied\\\
+    n\");\n\n    // logical AND example\n    if (a>b || c==d)\n        printf(\"a\
+    \ is greater than b OR c is equal to d\\n\");\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\nelse printf(\"Neither a is greater than b nor c is equal \"\n    \" to\
+    \ d\\n\");\n\n// logical NOT example\nif (!a)\n    printf(\"a is zero\\n\");\n\
+    else printf(\"a is not zero\");\n\nreturn 0;\n}\n```\n\n# Output:\n\nAND condition\
+    \ not satisfied\na is greater than b OR c is equal to d\na is not zero\n\n# Short-Circuiting\
+    \ in Logical Operators:\n\nIn case of logical AND, the second operand is not evaluated\
+    \ if first operand is false. For example, program 1 below doesn’t print “GeeksQuiz”\
+    \ as the first operand of logical AND itself is false.\n\n```\n#include <stdio.h>\n\
+    #include <stdbool.h>\nint main()\n{\n    int a=10, b=4;\n    bool res = ((a ==\
+    \ b) &&printf(\"GeeksQuiz\"));\n    return 0;\n}\n```\n\nBut below program prints\
+    \ “GeeksQuiz” as first operand of logical AND is true.\n\n```\n#include <stdio.h>\n\
+    #include <stdbool.h>\nint main()\n{\n    int a=10, b=4;\n    bool res = ((a !=\
+    \ b) &&printf(\"GeeksQuiz\"));\n    return 0;\n}\n```\n\nIn case of logical OR,\
+    \ the second operand is not evaluated if first operand is true. For example, program\
+    \ 1 below doesn’t print “GeeksQuiz” as the first operand of logical OR itself\
+    \ is true."
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\n#include <stdio.h>\n#include <stdbool.h>\nint main()\n{\n    int a=10,\
+    \ b=4;\n    bool res = ((a != b) || printf(\"GeeksQuiz\"));\n    return 0;\n}\n\
+    ```\n\nBut below program prints “GeeksQuiz” as first operand of logical OR is\
+    \ false.\n\n```\n#include <stdio.h>\n#include <stdbool.h>\nint main()\n{\n   \
+    \ int a=10, b=4;\n    bool res = ((a == b) || printf(\"GeeksQuiz\"));\n    return\
+    \ 0;\n}\n```\n\n# Interesting Facts about Bitwise Operators in C\n\nIn C, following\
+    \ 6 operators are bitwise operators (work at bit-level)\n\n& (bitwise AND) Takes\
+    \ two numbers as operands and does AND on every bit of two numbers. The result\
+    \ of AND is 1 only if both bits are 1.\n\n| (bitwise OR) Takes two numbers as\
+    \ operands and does OR on every bit of two numbers. The result of OR is 1 any\
+    \ of the two bits is 1.\n\n^ (bitwise XOR) Takes two numbers as operands and does\
+    \ XOR on every bit of two numbers. The result of XOR is 1 if the two bits are\
+    \ different.\n\n<< (left shift) Takes two numbers, left shifts the bits of the\
+    \ first operand, the second operand decides the number of places to shift.\n\n\
+    >> (right shift) Takes two numbers, right shifts the bits of the first operand,\
+    \ the second operand decides the number of places to shift.\n\n~ (bitwise NOT)\
+    \ Takes one number and inverts all bits of it\n\nFollowing is example C program.\n\
+    \n```\n/* C Program to demonstrate use of bitwise operators */\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "```\n#include<stdio.h>\n\nint main()\n{\n    unsigned char a = 5, b = 9; //\
+    \ a = 5(00000101), b = 9(00001001)\n    printf(\"a = %d, b = %d\\n\", a, b);\n\
+    \    printf(\"a&b = %d\\n\", a&b); // The result is 00000001\n    printf(\"a|b\
+    \ = %d\\n\", a|b); // The result is 00001101\n    printf(\"a^b = %d\\n\", a^b);\
+    \ // The result is 00001100\n    printf(\"~a = %d\\n\", a = ~a);  // The result\
+    \ is 11111010\n    printf(\"b<<1 = %d\\n\", b<<1); // The result is 00010010\n\
+    \    printf(\"b>>1 = %d\\n\", b>>1); // The result is 00000100\n    return0;\n\
+    }\n```\n\nOutput:\n\na = 5, b = 9\na&b = 1\na|b = 13\na^b = 12\n~a = 250\nb1 =\
+    \ 4\n\nFollowing are interesting facts about bitwise operators.\n\n1) The left\
+    \ shift and right shift operators should not be used for negative numbers The\
+    \ result of is undefined behaviour if any of the operands is a negative number.\
+    \ For example results of both -1 << 1 and 1 << -1 is undefined. Also, if the number\
+    \ is shifted more than the size of integer, the behaviour is undefined. For example,\
+    \ 1 << 33 is undefined if integers are stored using 32 bits. See this for more\
+    \ details.\n\n2) The bitwise XOR operator is the most useful operator from technical\
+    \ interview perspective. It is used in many problems. A simple example could be\
+    \ “Given a set of numbers where all elements occur even number of times except\
+    \ one number, find the odd occurring number” This problem can be efficiently solved\
+    \ by just doing XOR of all numbers."
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "```\n// Function to return the only odd occurring element\nint findOdd(int\
+    \ arr[], int n) {\n    int res = 0, i;\n    for(i = 0; i < n; i++)\n        res\
+    \ ^= arr[i];\n    return res;\n}\n```\n\n```\nvoid main() {\n    int arr[] = {12,\
+    \ 12, 14, 90, 14, 14, 14};\n    int n = sizeof(arr)/sizeof(arr[0]);\n    printf(\"\
+    The odd occurring element is %d \", findOdd(arr, n));\n    return 0;\n}\n```\n\
+    \n// Output: The odd occurring element is 90\n\nThe following are many other interesting\
+    \ problems which can be used using XOR operator. Find the Missing Number, swap\
+    \ two numbers without using a temporary variable, A Memory Efficient Doubly Linked\
+    \ List, and Find the two non-repeating elements. There are many more (See this,\
+    \ this, this, this, this and this)\n\n# 3) The bitwise operators should not be\
+    \ used in place of logical operators.\n\nThe result of logical operators (&&,\
+    \ || and !) is either 0 or 1, but bitwise operators return an integer value. Also,\
+    \ the logical operators consider any non-zero operand as 1. For example, consider\
+    \ the following program, the results of & and && are different for same operands.\n\
+    \n```\nint main()\n{\n    int x = 2, y = 5;\n    (x & y)? printf(\"True \") :\
+    \ printf(\"False \");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '```
+
+    (x&& y)? printf("True ") : printf("False ");
+
+
+    return0;
+
+
+    }
+
+    ```
+
+
+    // Output: False True
+
+
+    # 4) The left-shift and right-shift operators are equivalent to multiplication
+    and division by 2 respectively.
+
+
+    As mentioned in point 1, it works only if numbers are positive.
+
+
+    ```
+
+    intmain()
+
+    {
+
+
+    intx = 19;
+
+
+    printf("x << 1 = %d\n", x << 1);
+
+
+    printf("x >> 1 = %d\n", x >> 1);
+
+
+    return0;
+
+
+    }
+
+    ```
+
+
+    // Output: 38 9
+
+
+    # 5) The & operator can be used to quickly check if a number is odd or even
+
+
+    The value of expression (x & 1) would be non-zero only if x is odd, otherwise
+    the value would be zero.
+
+
+    ```
+
+    intmain()
+
+    {
+
+
+    intx = 19;
+
+
+    (x& 1)? printf("Odd"): printf("Even");
+
+
+    return0;
+
+
+    }
+
+    ```
+
+
+    // Output: Odd'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# 6) The ~ operator should be used carefully\n\nThe result of ~ operator on\
+    \ a small number can be a big number if the result is stored in an unsigned variable.\
+    \ And result may be negative number if result is stored in signed variable (assuming\
+    \ that the negative numbers are stored in 2’s complement form where leftmost bit\
+    \ is the sign bit)\n\n// Note that the output of the following program is compiler\
+    \ dependent\n\n```\nintmain()\n{\n    unsigned intx = 1;\n    printf(\"Signed\
+    \ Result %d \\n\", ~x);\n    printf(\"Unsigned Result %ud \\n\", ~x);\n    return0;\n\
+    }\n```\n\n/* Output:\nSigned Result -2\nUnsigned Result 4294967294d */\n\n# Interesting\
+    \ facts about Operator Precedence and Associativity\n\nOperator precedence determines\
+    \ which operator is performed first in an expression with more than one operators\
+    \ with different precedence. For example 10 + 20 * 30 is calculated as 10 + (20\
+    \ * 30) and not as (10 + 20) * 30.\n\nAssociativity is used when two operators\
+    \ of same precedence appear in an expression. Associativity can be either Left\
+    \ to Right or Right to Left. For example ‘*’ and ‘/’ have same precedence and\
+    \ their associativity is Left to Right, so the expression “100 / 10 * 10” is treated\
+    \ as “(100 / 10) * 10”.\n\n> Precedence and Associativity are two characteristics\
+    \ of operators that determine the evaluation order of subexpressions in absence\
+    \ of brackets.\n\n# 1) Associativity is only used when there are two or more operators\
+    \ of same precedence.\n\nThe point to note is associativity doesn’t define the\
+    \ order in which operands of a single operator are evaluated. For example consider\
+    \ the following program, associativity of the + operator is left to right, but\
+    \ it doesn’t mean f1() is always called before f2(). The output of following program\
+    \ is in-fact compiler dependent. See this for details."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "// Associativity is not used in the below program. Output\n\n// is compiler\
+    \ dependent.\n\n```\nintx = 0;\n\nintf1() {\n    x = 5;\n    returnx;\n}\n\nintf2()\
+    \ {\n    x = 10;\n    returnx;\n}\n\nintmain() {\n    intp = f1() + f2();\n  \
+    \  printf(\"%d \", x);\n    return0;\n}\n```\n\n# 2) All operators with same precedence\
+    \ have same associativity\n\nThis is necessary, otherwise there won’t be any way\
+    \ for compiler to decide evaluation order of expressions which have two operators\
+    \ of same precedence and different associativity. For example + and – have same\
+    \ associativity.\n\n# 3) Precedence and associativity of postfix ++ and prefix\
+    \ ++ are different\n\nPrecedence of postfix ++ is more than prefix ++, their associativity\
+    \ is also different. Associativity of postfix ++ is left to right and associativity\
+    \ of prefix ++.\n\n| Operator | Description | Associativity |\n|---|---|---|\n\
+    | ( ) | Parentheses (function call) (see Note 1) | left-to-right |\n| [ ] | Brackets\
+    \ (array subscript) |  |\n| . | Member selection via object name |  |\n| -> |\
+    \ Member selection via pointer |  |\n| ++ -- | Postfix increment/decrement (see\
+    \ Note 2) |  |"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '| Operators | Description | Associativity |
+
+    |---|---|---|
+
+    | `++` `--` | Prefix increment/decrement | right-to-left |
+
+    | `+` `-` | Unary plus/minus | right-to-left |
+
+    | `!` `~` | Logical negation/bitwise complement | right-to-left |
+
+    | `(type)` | Cast (convert value to temporary value of *type*) | right-to-left
+    |
+
+    | `*` | Dereference | right-to-left |
+
+    | `&` | Address (of operand) | right-to-left |
+
+    | `sizeof` | Determine size in bytes on this implementation | right-to-left |
+
+    | `* / %` | Multiplication/division/modulus | left-to-right |
+
+    | `+ −` | Addition/subtraction | left-to-right |
+
+    | `<< >>` | Bitwise shift left, Bitwise shift right | left-to-right |
+
+    | `< <=`<br>`> >=` | Relational less than/less than or equal to<br>Relational
+    greater than/greater than or equal to | left-to-right |
+
+    | `== !=` | Relational is equal to/is not equal to | left-to-right |
+
+    | `&` | Bitwise AND | left-to-right |
+
+    | `^` | Bitwise exclusive OR | left-to-right |
+
+    | `|` | Bitwise inclusive OR | left-to-right |
+
+    | `&&` | Logical AND | left-to-right |
+
+    | `||` | Logical OR | left-to-right |
+
+    | `? :` | Ternary conditional | right-to-left |
+
+    | `=` | Assignment | right-to-left |
+
+    | `+= -=` | Addition/subtraction assignment | right-to-left |
+
+    | `*= /=` | Multiplication/division assignment | right-to-left |
+
+    | `%= &=` | Modulus/bitwise AND assignment | right-to-left |
+
+    | `^= |=` | Bitwise exclusive/inclusive OR assignment | right-to-left |
+
+    | `<<= >>=` | Bitwise shift left/right assignment | right-to-left |
+
+    | `,` | Comma (separate expressions) | left-to-right |
+
+
+    # Expressions and statements
+
+
+    # Expression
+
+
+    +   - Expression is a sequence of operators and operands that specifies computation
+    of a value. An expressions may consist of single entity or some combination of
+    such entities interconnected by one or more operators.
+
+
+    In C every expression evaluates to a value i.e., every expression results in some
+    value of a certain type(that can be assigned to a variable). Some examples of
+    expression are shown in the table given below.
+
+
+    ```
+
+    a+b
+
+    ```
+
+
+    ```
+
+    3.14*r*r
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "b*b-4*a*c\n\nThe statements of a C program, control the flow of program execution.\
+    \ In C language several kinds of statements are available, which can be classified\
+    \ as\n\n+   1) **Expression Statements**\n+   2) **Compound Statements**\n+  \
+    \ 3) **Control Statements**\n\n**Expression Statements:** Most of the statements\
+    \ in a C program are expression statements. An expression statement consists of\
+    \ an expression followed by a semicolon. The execution of an expression causes\
+    \ the expression to be evaluated.\n\n**Examples:** 7 expression statements are\
+    \ given below\n\n```\na=10;\na+=20;\nprintf(\"Hello,Goodmorning!\\n\");\ndisplay(a,b);\
+    \        /*A function call*/\nc=a+b;               /* An assignment statement*/\n\
+    c+sum(a+b);          /* A valid , but strange statement*/\n;                 \
+    \   /*An empty or null statement*/\n```\n\n**Compound Statements:** A compound\
+    \ statement (also called a “block”) typically appears as the body of another statement,\
+    \ such as the if statement, for statement, while statement, etc\n\nIt consists\
+    \ of several individual statements enclosed within a pair of braces { }. The individual\
+    \ statements may themselves be expression statements, compound statements or control\
+    \ statements. Unlike expression statements, a compound statements does not end\
+    \ with a semicolon. A typical Compound statements is given below.\n\n```\n{\n\
+    \    pi=3.14;\n    area=pi*radius*radius;\n}\n```\n\nThe particular compound statement\
+    \ consists of two assignment-type expression statements.\n\n**Control Statements:**\
+    \ Statements used to specify the flow of program control; ie, the order in which\
+    \ the instructions in a program must be executed. It is possible to make decisions,\
+    \ to perform tasks repeatedly or to jump from one section of code to another."
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'There are four types of control statements in C:
+
+
+    +   1. Decision making statements (Conditional Branching)
+
+    +   2. Selection statements (Multi-way selection-switch statement)
+
+    +   3. Iteration statements (Loop control statements)
+
+    +   4. Jump statements (Unconditional branching)
+
+
+    # Sample Questions
+
+
+    | Questions | CO’s | RBT Levels |
+
+    |---|---|---|
+
+    | Define tokens in C with examples. | CO1,CO2 | L1 |
+
+    | Explain all the operators present in C. | CO1,CO2 | L1 |
+
+    | Define algorithm and write its uses. | CO1,CO2 | L1 |
+
+    | Define flowchart. List its symbols with meaning. | CO1,CO2 | L1 |
+
+    | Describe the different **data types** in C with example of each | CO1,CO2 |
+    L1 |
+
+    | Define **constant and its classification** by giving suitable example | CO1,CO2
+    | L1 |
+
+    | Differentiate **keyword and identifier** with rules and suitable examples. |
+    CO1,CO2 | L1 |
+
+    | Discuss different types of data types available in C Language with Memory layout
+    example | CO1,CO2 | L2 |
+
+    | Explain implicit and explicit type conversion with example | CO1,CO2 | L2 |
+
+    | Explain **Logical and Relational** operators with example of each | CO1,CO2
+    | L2 |
+
+    | Explain **Bitwise and Conditional** operators with example of each | CO1,CO2
+    | L2 |
+
+    | Explain the structure of a C program. | CO1,CO2 | L2 |
+
+    | Explain the increment and decrement operators in C with syntax | CO1,CO2 | L2
+    |
+
+    | Discuss **&& and &** operators with suitable example. | CO1,CO2 | L2 |
+
+    | Apply **conditional operator** into a suitable program | CO1,CO2 | L3 |
+
+    | Develop a **Flowchart & write an Algorithm** to swap three numbers | CO1,CO2
+    | L3 |
+
+    | Illustrate **conditional operator** with syntax and a suitable programming example.
+    | CO1,CO2 | L3 |
+
+    | (a) If a=20 Evaluate a+=a+ ++a | CO1,CO2 | L4 |'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "|  | CO1,CO2 | L4 |\n|(b)Solve the expression a+2>b&&!c||a!=d&&a-2<=e\nWhere\
+    \ a=11, b=6, c=0, d=7, e=5 |  |  |\n|Test the following code for ERRORS and write\
+    \ the OUTPUT of it. void main()\n    int a ,b ,\n    clrscr();\n    a=5;b=3;\n\
+    \    d=a+b;\n    d=a-b;\n    d=a/b; | CO1,CO2 | L4 |\n|Solve the following expressions\
+    \ for A=2,b=3,c=4,d=3,e=7.\n    (a) A++ + b++ - ++b / ++c\n    (b) A+b*c&d*e/c\n\
+    \    (c) (a>b) + |c / d++ | CO1,CO2 | L4 |\n|Compare the working of increment\
+    \ and decrement operator with example | CO1,CO2 | L4 |\n|Explain the usage of\
+    \ = and == operator with a programming example. | CO1,CO2 | L4 |\n|Explain standard\
+    \ input, output functions (scanf(),printf()) with syntax and programming example.\
+    \ | CO1,CO2 | L4 |\n|Solve the expression a+2>b&&!c||a!=d&&a-2<=e\nWhere a=11,\
+    \ b=6, c=0, d=7, e=5 | CO1,CO2 | L5 |\n|a)If a=20 Evaluate a+=a+ ++a\n(b) Solve\
+    \ int p=7;\nint q=2;\nfloat r;\n    r=p/q; | CO1,CO2 | L5 |\n|Find the OUTPUT\
+    \ of the following code :\n#include<stdio.h>\nvoid main()\n{\nint i=1,k=0,j=1,a;\n\
+    a=i++*!k&&&j;\nprintf(\"\\n %d\",a>1);\n} | CO1,CO2 | L5 |\n|Solve the following\
+    \ expressions for a=17,b=8,c=4,d=2,e=3.\n    (a) a && b++*d--/e\n(b) a+b*c&d*e%c\
+    \ | CO1,CO2 | L5 |\n|Design a flowchart and pseudo code to find sum of ‘n’ natural\
+    \ number without using any looping | CO1,CO2 | L6 |"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '| statement. |  |  |
+
+    |---|---|---|
+
+    | Design a **Flowchart & write an Algorithm** to swap three numbers | CO1,CO2
+    | L6 |
+
+    | Write an algorithm to find roots of a quadratic equation. | CO1,CO2 | L6 |
+
+    | Design a **Flowchart** to find the result of a student as distinction, first
+    class, pass, fail and absent. | CO1,CO2 | L6 |
+
+    | What is the output of the following program
+
+
+    `#include <stdio.h>`
+
+    `void main()`
+
+    `{`
+
+    `inti = 0;`
+
+    `for (i = 0;i < 5; i++)`
+
+    `if (i<4)`
+
+    `{`
+
+    `printf("Hello");`
+
+    `break;`
+
+    `}`
+
+    `}` | CO1,CO2 | L6 |
+
+    | Write a **program** to swap two numbers without using 3<sup>rd</sup> variable.
+    | CO1,CO2 | L6 |'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# MODULE 2\n\n# Branching (Conditional and Unconditional branching)\n\n# Control\
+    \ Flow\n\nA program consists of a number of statements which are usually executed\
+    \ in sequence. Programs can be much more powerful if we can control the order\
+    \ in which statements are run. Statements fall into three general types;\n\n+\
+    \   - Assignment statements, where values, usually the results of calculations,\
+    \ are stored in variables.\n+   - Input / Output statements, data is read in or\
+    \ printed out.\n+   - Control statements, the program makes a decision about which\
+    \ statement should be executed next.\n\nControl statements can be\n\n**Branching:**\
+    \ Selecting between optional sections of a program.\n\n**Looping:** Repeating\
+    \ important sections of the program.\n\n# Branching:\n\n# 1) The Simple if statement\n\
+    \n```\nif (testExpression)\n{\n    // statements\n}\n\nStatement x;\n```\n\nThe\
+    \ `if` statement evaluates the test expression inside the parenthesis.\n\nIf the\
+    \ test expression is evaluated to true (nonzero), statements inside the body of\
+    \ `if` is executed.\n\nIf the test expression is evaluated to false (0), statements\
+    \ inside the body of `if` is skipped from execution and control goes to statement\
+    \ x"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '# Flowchart of if statement
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_42_0.png)
+
+
+    Figure: Flowchart of if Statement
+
+
+    ```
+
+    // Program to display a number if user enters negative number
+
+
+    #include<stdio.h>
+
+
+    void main()
+
+    {
+
+    int number;
+
+
+    printf("Enter an integer: ");
+
+    scanf("%d",&number);
+
+
+    // Test expression is true if number is less than 0
+
+    if(number <0)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "```\n{\nprintf(\"You entered a negative number %d\",number);\n}\n\nprintf(\"\
+    The if statement is easy.\");\n}\n```\n\nOutput 1:\n\nEnter an integer: -2\n\n\
+    You entered a negative number -2.\n\nThe if statement is easy.\n\nOutput 2:\n\n\
+    Enter an integer: 5\n\nThe if statement in C programming is easy.\n\n# 2) The\
+    \ if else Statement\n\nThe if...else statement executes some code if the test\
+    \ expression is true (nonzero) and some other code if the test expression is false\
+    \ (0).\n\n# Syntax of if...else\n\n```\nif (testExpression) {\n\n    // codes\
+    \ inside the body of if\n\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "```\n```c\nelse {\n\n    // codes inside the body of else\n\n}\n```\n```\n\n\
+    If test expression is true, codes inside the body of `if` statement is executed\
+    \ and, codes inside the body of `else` statement is skipped.\n\nIf test expression\
+    \ is false, codes inside the body of `else` statement is executed and, codes inside\
+    \ the body of `if` statement is skipped.\n\n# Flowchart of if...else statement\n\
+    \n![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_44_0.png)\n\nFigure: Flowchart of if...else\
+    \ Statement\n\n```\n```c\n// Program to check whether an integer entered by the\
+    \ user is odd or even\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "```\n```c\n#include<stdio.h>\n\nint main()\n{\n    int number;\n\n    printf(\"\
+    Enter an integer: \");\n    scanf(\"%d\",&number);\n\n    // True if remainder\
+    \ is 0\n    if(number%2==0)\n        printf(\"%d is an even integer.\",number);\n\
+    \    else\n        printf(\"%d is an odd integer.\",number);\n\n    return 0;\n\
+    }\n```\n```\n\n# **Output:1**\n\n```\n```text\nEnter an integer: 7\n\n7 is an\
+    \ odd integer.\n```\n```\n\nWhen user enters 7, the test expression `( number%2\
+    \ == 0 )` is evaluated to false. Hence, the statement inside the body of `else`\
+    \ statement `printf(\"%d is an odd integer\");` is executed and the statement\
+    \ inside the body of `if` is skipped.\n\n# **Output:2**\n\n```\n```text\nEnter\
+    \ an integer: 4\n\n4 is an even integer.\n```\n```\n\n# ## Nested if...else statement\
+    \ (if...elseif....else Statement)\n\nThe nested if...else statement allows you\
+    \ to check for multiple test expressions and execute different codes for more\
+    \ than two conditions."
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# Syntax of nested if...else statement.\n\nWhen an if else statement is present\
+    \ inside the body of another “if” or “else” then this is called nested if else.\n\
+    \n# Syntax of Nested if else statement:\n\n```\nif(condition){\n//Nested if else\
+    \ inside the body of \"if\"\nif(condition2){\n//Statements inside the body of\
+    \ nested \"if\"\n}\nelse{\n//Statements inside the body of nested \"else\"\n}\n\
+    }\nelse{\n//Statements inside the body of \"else\"\n}\n```\n\n# Example of nested\
+    \ if..else\n\n```\n#include<stdio.h>\nint main()\n{\nint var1, var2;\nprintf(\"\
+    Input the value of var1:\");\nscanf(\"%d\",&var1);\nprintf(\"Input the value of\
+    \ var2:\");\nscanf(\"%d\",&var2);\nif(var1 != var2)\n{\n        printf(\"var1\
+    \ is not equal to var2\\n\");\n        //Nested if else\n        if(var1 > var2)\n\
+    \        {\n                printf(\"var1 is greater than var2\\n\");\n      \
+    \  }\n        else\n        {\n                printf(\"var2 is greater than var1\\\
+    n\");\n        }\n}\nelse\n{\n        printf(\"var1 is equal to var2\\n\");\n\
+    }\nreturn 0;\n}\n```\n\nOutput:\n\n```\nInput the value of var1:12\nInput the\
+    \ value of var2:21\nvar1isnot equal to var2\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_48_0.png)\n\n# Example of else.if\
+    \ statement\n\nprogram check whether a student passed or failed in examination\
+    \ using if statement.\n\n```\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint\
+    \ main(){\n    int marks;\n\n    printf(\"Enter your marks between 0-100\\\\n\"\
+    );\n    scanf(\"%d\", &marks);\n    /* Using if else ladder statement to print\n\
+    \       Grade of a Student */\n    if(marks >= 90){\n        /* Marks between\
+    \ 90-100 */\n        printf(\"YOUR GRADE : A\\\\n\");\n    } elseif(marks >= 70\
+    \ && marks < 90){\n        /* Marks between 70-89 */\n        printf(\"YOUR GRADE\
+    \ : B\\\\n\");\n    } elseif(marks >= 50 && marks < 70){\n        /* Marks between\
+    \ 50-69 */\n        printf(\"YOUR GRADE : C\\\\n\");\n    } else{\n        /*\
+    \ Marks less than 50 */\n        printf(\"YOUR GRADE : Failed\\\\n\");\n```\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\n}\n\ngetch();\nreturn(0);\n}\n```\n\nOutput\n\n```\nEnter your marks\n\
+    \n96\n\nYOUR GRADE : A\n\nEnter your marks\n\n75\n\nYOUR GRADE : B\n\nEnter your\
+    \ marks\n\n60\n\nYOUR GRADE : C\n\nEnter your marks\n\n35\n\nYOUR GRADE : Failed\n\
+    ```\n\n# Cascaded if..else\n\nA cascading if-else is a composite of if-else statements\
+    \ where the false path of outer if statement is a nested if-else statement. The\
+    \ nesting can continue to several levels.\n\n```\nif ( expression )\nstatement\n\
+    \nelse\n\n    if (expression )\n    statement\n\n    else\n\n    if ( expression\
+    \ )\n    statement\n\n    else\n```"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "# # C switch...case Statement\n\nThe `if...else...if` ladder allows you to\
+    \ execute a block code among many alternatives. If you are checking on the value\
+    \ of a single variable in `if...else...if`, it is better to use `switch` statement.\n\
+    \nThe switch statement is often faster than nested `if...else` (not always)\n\n\
+    # Syntax of switch...case\n\n```\n```c\nswitch (int_expr)\n\n{\n\ncase constant1:\n\
+    \n    // code to be executed if n is equal to constant1;\n\nbreak;\n\ncase constant2:\n\
+    \n    // code to be executed if n is equal to constant2;\n\nbreak;\n\n.\n\n.\n\
+    \n.\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "```\n```text\ndefault:\n\n    // code to be executed if n doesn't match any\
+    \ constant\n\n}\n```\n```\n\nWhen a case constant is found that matches the switch\
+    \ expression, control of the program passes to the block of code associated with\
+    \ that case.\n\nIn the above pseudocode, suppose the value of *n* is equal to\
+    \ *constant2*. The compiler will execute the block of code associate with the\
+    \ case statement until the end of switch block, or until the break statement is\
+    \ encountered.\n\nThe break statement is used to prevent the code running into\
+    \ the next case."
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: '# switch Statement Flowchart
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_52_0.png)
+
+
+    # Example: switch Statement
+
+
+    ```
+
+    // Program to create a simple calculator
+
+    // Performs addition, subtraction, multiplication or division depending the input
+    from user
+
+
+    # include <stdio.h>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '```
+
+    int main(){
+
+
+    char operator;
+
+
+    double firstNumber,secondNumber;
+
+
+    printf("Enter an operator (+, -, *, /): ");
+
+    scanf("%c",&operator);
+
+
+    printf("Enter two operands: ");
+
+    scanf("%lf %lf",&firstNumber,&secondNumber);
+
+
+    switch(operator)
+
+    {
+
+    case ''+'':
+
+    printf("%.1f + %.1f = %.1f",firstNumber,secondNumber,firstNumber+secondNumber);
+
+    break;
+
+
+    case ''-'':
+
+    printf("%.1f - %.1f = %.1f",firstNumber,secondNumber,firstNumber-secondNumber);
+
+    break;
+
+
+    case ''*'':
+
+    printf("%.1f * %.1f = %.1f",firstNumber,secondNumber,firstNumber*secondNumber);
+
+    break;
+
+
+    case ''/'':
+
+    printf("%.1f / %.1f = %.1f",firstNumber,secondNumber,firstNumber/firstNumber);
+
+    break;
+
+
+    // operator is doesn''t match any case constant (+, -, *, /)
+
+    default:
+
+    printf("Error! operator is not correct");
+
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '```
+
+    }
+
+
+    return0;
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    ```
+
+    Enter an operator (+, -, *, ): -
+
+
+    Enter two operands: 32.5
+
+
+    12.4
+
+
+    32.5 - 12.4 = 20.1
+
+    ```
+
+
+    he - operator entered by the user is stored in operator variable. And, two operands
+    32.5 and 12.4 are stored in variables firstNumber and secondNumber respectively.
+
+
+    Then, control of the program jumps to
+
+
+    ```
+
+    printf("%.11f / %.11f = %.11f",firstNumber, secondNumber, firstNumber/firstNumber);
+
+    ```
+
+
+    Finally, the break statement ends the switch statement.
+
+
+    If break statement is not used, all cases after the correct case is executed.
+
+
+    If none of cases match then default statement is executed.
+
+
+    # Unconditional Branching Statements
+
+
+    # C – goto statement
+
+
+    When a goto statement is encountered in a C program, the control jumps directly
+    to the label mentioned in the goto statement
+
+
+    # Syntax of goto statement in C'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "```\ngotolabel_name;\n..\n..\nlabel_name: C-statements\n```\n\n![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_55_0.png)\n\
+    \n# Example of goto statement\n\n```\n#include<stdio.h>\nint main()\n{\nint sum=0;\n\
+    for(int i =0; i<=10; i++){\n    sum=sum+i;\n    if(i==5){\n    goto addition;\n\
+    \    }\n}\n\naddition:\nprintf(\"%d\", sum);\n\nreturn0;\n}\n```\n\nOutput:\n\n\
+    ```\n15\n```\n\n**Explanation:** In this example, we have a label addition and\
+    \ when the value of i (inside loop) is equal to 5 then we are jumping to this\
+    \ label using goto. This is reason the sum is displaying the sum of numbers till\
+    \ 5 even though the loop is set to run from 0 to 10.\n\nIt is sometimes desirable\
+    \ to skip some statements inside the loop or terminate the loop immediately without\
+    \ checking the test expression.\n\nIn such cases, `break` and `continue` statements\
+    \ are used."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# break Statement
+
+
+    The break statement terminates the loop (for, while and do...while loop) immediately
+    when it is encountered. The break statement is used with decision making statement
+    such as if...else. In C programming, break statement is also used with switch...case
+    statement.
+
+
+    # Syntax of break statement
+
+
+    ```
+
+    break;
+
+    ```
+
+
+    # Flowchart of break statement
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_56_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# How break statement works?\n\n```\n```c\nwhile (test Expression)\n{\n   \
+    \ // codes\n    if (condition for break)\n    {\n        break;\n    }\n    //\
+    \ codes\n}\n```\n```\n\n```\n```c\nfor (init, condition, update)\n{\n    // codes\n\
+    \    if (condition for break)\n    {\n        break;\n    }\n    // codes\n}\n\
+    ```\n```\n\n# Example #1: break statement\n\n```\n```c\n// Program to calculate\
+    \ the sum of maximum of 10 numbers\n\n// Calculates sum until user enters positive\
+    \ number\n\n#include <stdio.h>\n\nvoid main()\n{\n    int i;\n\n    double number,\
+    \ sum = 0.0;\n\n    for(i=1; i <=10; ++i)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '```
+
+    {
+
+    printf("Enter a n%d: ",i);
+
+    scanf("%lf",&number);
+
+
+    // If user enters negative number, loop is terminated
+
+    if(number <0.0)
+
+    {
+
+    break;
+
+    }
+
+
+    sum+= number;// sum = sum + number;
+
+    }
+
+
+    printf("Sum = %.2lf",sum);
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    ```
+
+    Enter a n1: 2.4
+
+
+    Enter a n2: 4.5
+
+
+    Enter a n3: 3.4
+
+
+    Enter a n4: -3
+
+
+    Sum = 10.30
+
+    ```
+
+
+    # Continue Statement
+
+
+    The continue statement skips some statements inside the loop. The continue statement
+    is lso used with decision making statement such as if...else.
+
+
+    # Syntax of continue Statement
+
+
+    ```
+
+    continue;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# Flowchart of continue Statement
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_59_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# How continue statement works?\n\n```\nwhile (test Expression)\n{\n    //\
+    \ codes\n    if (condition for continue)\n    {\n        continue;\n    }\n  \
+    \  // codes\n}\n```\n\n```\nfor (init, condition, update)\n{\n    // codes\n \
+    \   if (condition for continue)\n    {\n        continue;\n    }\n    // codes\n\
+    }\n```\n\n```\n// Program to calculate sum of maximum of 10 numbers\n// Negative\
+    \ numbers are skipped from calculation\n\n# include <stdio.h>\nint main()\n{\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '```
+
+    int i;
+
+
+    double number, sum =0.0;
+
+
+    for(i=1; i <=10;++i)
+
+    {
+
+    printf("Enter a n%d: ",i);
+
+    scanf("%lf",&number);
+
+
+    // If user enters negative number, loop is terminated
+
+    if(number <0.0)
+
+    {
+
+    continue;
+
+    }
+
+
+    sum+= number;// sum = sum + number;
+
+    }
+
+
+    printf("Sum = %.2lf",sum);
+
+
+    return0;
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    ```
+
+    Enter a n1: 1.1
+
+
+    Enter a n2: 2.2
+
+
+    Enter a n3: 5.5
+
+
+    Enter a n4: 4.4
+
+
+    Enter a n5: -3.4
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: 'Enter a n6: -45.5
+
+
+    Enter a n7: 34.5
+
+
+    Enter a n8: -4.2
+
+
+    Enter a n9: -1000
+
+
+    Enter a n10: 12
+
+
+    Sum = 59.70
+
+
+    In the program, when the user enters positive number, the sum is calculated using
+    `sum += number;` statement.
+
+
+    When the user enters negative number, the `continue` statement is executed and
+    skips the negative number from calculation.
+
+
+    # Branching & Looping
+
+
+    # Looping (repetition)
+
+
+    A set of statements may have to be repeatedly executed for a specified number
+    of times or till a condition is satisfied. The statements that help us to execute
+    a set of statements repeatedly are called looping or repetitive or iterative statements.
+
+
+    There are 3 types of loops in C
+
+
+    +   - while loop
+
+    +   - for loop
+
+    +   - do-while loop
+
+
+    any looping construct will have to perform 3 tasks namely initialization, condition
+    checking and incrementation. The difference between yhe three looping control
+    constructs is the order in which they perform the 3 tasks i.i (initialization,
+    increment, condition checking)
+
+
+    # The while loop'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: 'It’s a pretest or entry controlled loop and hence the condition is evaluated
+    first and body of the loop is executed only if the condition is true. Its also
+    a condition controlled or event controlled loop.
+
+
+    # Syntax
+
+
+    ```
+
+    initialization;
+
+
+    while(condition)
+
+    {
+
+    Statement;
+
+    updation;
+
+    }
+
+    Statement;
+
+    ```
+
+
+    # Working
+
+
+    +   1. Initialization of loop control variable is done.
+
+    +   2. Next condition is checked
+
+    +   3. If the condition is evaluated to true then control enters the body of the
+    loop and executes the statements in the body.
+
+    +   4. Next updates the loop counter variable after which control goes back to
+    the condition check. If the condition is true, again the body is executed.
+
+    +   5. This process repeats as long as the condition evaluates to be true. Once,
+    the condition evaluates to be false, the control flows to the statement outside
+    the body of the loop.
+
+
+    # Example:
+
+
+    /* program to display numbers from 1-10*/
+
+
+    ```
+
+    #include<stdio.H
+
+
+    void main()
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\nint i;\n\ni=0;    /* initialization */\nwhile(i<=10)    /*condition checking*/\n\
+    {\n    printf(\"%d\\n\",i);\n    i++;    /*updation*/\n}\ngetch();\n}\n```\n\n\
+    Note: study corresponding lab programs and the programs given in theory class.\n\
+    \n# for loop\n\nUsing this we can execute set of statements repeatedly for a specified\
+    \ number of times. So it’s also called as counter controlled loop. It’s a pretest\
+    \ or top testing loop.\n\n# Syntax\n\n```\nfor(initialization;condition check;\
+    \ updation)\n{\n    Statements\n}\n```\n\n# working:\n\n+   1. Here initialization,\
+    \ condition check and updation is done in same statement.\n+   2. Initialization\
+    \ of the loop counter is performed"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '3. Condition is checked. If the condition evaluates to be true , then the control
+    enter the body of the loop. The statements in the body are executed.
+
+
+    4. Updation of the loop counter is performed. After which again the control goes
+    back to condition check. . If the condition is true, again the body is executed.
+
+
+    5. This process repeats as long as the condition evaluates to be true. Once, the
+    condition evaluates to be false, the control flows to the statement outside the
+    body of the loop.
+
+
+    # Example:
+
+
+    # /* program to display numbers from 1-10*/
+
+
+    ```
+
+    #include<stdio.H
+
+
+    void main()
+
+    {
+
+
+    int i;
+
+
+    for(i=0;i<=10;i++)
+
+    {
+
+
+    printf("%d\n",i);
+
+
+    }
+
+
+    getch();
+
+    }
+
+    ```
+
+
+    Note: study corresponding lab programs and the programs given in theory class.
+
+
+    # Do-while:
+
+
+    It is post-test or bottom test loop and hence the body of the loop is executed
+    first and then the condition is checked.
+
+
+    # Syntax:
+
+
+    Initialization;
+
+
+    do
+
+
+    {'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: 'statement;
+
+
+    updation;
+
+
+    }while(condition);  [note: there is a semi colon at the end of while]
+
+
+    statements
+
+
+    # Working:
+
+
+    +   1. Initialization is performed first
+
+    +   2. Then the statements inside the body of the loop are executed one after
+    another
+
+    +   3. Updation is performed at the end of the body and then the condition is
+    checked
+
+    +   4. If the condition is evaluated to be true, then the control re-enters the
+    body and executes the statements within the body
+
+    +   5. This process repeats as long as the condition evaluates to be true.
+
+    +   6. When the condition becomes false , the control comes out of the loop body.
+
+
+    # Example:
+
+
+    /* program to display numbers from 1-10*/
+
+
+    ```
+
+    #include<stdio.H
+
+    void main()
+
+    {
+
+    int i;
+
+    i=0;    /* initialization*/
+
+    do
+
+    {
+
+    printf("%d\n",i);
+
+    i++;    /*updation*/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '```
+
+    ```c
+
+    }while(i<=10);    /* condition checking */
+
+
+    getch();
+
+    }
+
+    ```
+
+    ```
+
+
+    **Note:** study corresponding lab programs and the programs given in theory class.
+
+
+    # Difference between while-loop and do-while loop
+
+
+    |  | While loop | Do-while loop |
+
+    |---|---|---|
+
+    | **1** | **Syntax**<br><br>initialization;<br><br>while(condition)<br><br>{<br><br>Statement;<br><br>updation;<br><br>}<br><br>Statement;
+    | **Syntax:**<br><br>Initialization;<br><br>do<br><br>{<br><br>statement;<br><br>updation;<br><br>}while(condition);<br><br>Statement;
+    |
+
+    | **2** | It is a top-testing or entry control loop since the condition is checked
+    in the beginning itself | It is a bottom-testing or exit control loop since the
+    condition is checked at the bottom of the loop |
+
+    | **3** | It is pre-test loop and if the expression is evaluated to false in the
+    beginning itself, then the statements within the body of the loop will not be
+    executed even once. | It is post-test loop and the body of the loop will be executed
+    atleast once even if the condition is false. |
+
+    | **4** | Example | Example |'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# example
+
+
+    ```
+
+    sum=0;
+
+    i=0;
+
+    top: sum=sum+i;
+
+    i++;
+
+    if(i<=n) goto top;
+
+    ```
+
+
+    # Disadvantage:
+
+
+    +   - Its an unstructured programming style.
+
+    +   - Very difficult to read and understand
+
+    +   - Very difficult to debug the programs
+
+
+    # The break statement
+
+
+    It’s a jump statement which can be used in switch statement and loops.
+
+
+    # Working
+
+
+    +   1. In switch statement it causes control to terminate switch statement and
+    statement following switch statement will be executed.
+
+    +   2. If break is executed in loop(for, while, do-while), the control comes out
+    of the loop and the statement following the loop will be executed.
+
+
+    Note: if break appears in the inner loop of a nested loop, control only comes
+    out of the inner loop.
+
+
+    ```
+
+    for(............)
+
+    {
+
+    for(............)
+
+    {
+
+    ................
+
+    if(error)
+
+    break;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '# Continue statement:
+
+
+    It is used to skip a part of the loop based on some conditions.
+
+
+    # Working:
+
+
+    On encountering continue statement , the rest of the statements within the body
+    of the loop are skipped and the conditional expression in the loop is executed.
+
+
+    # Pictorial representation:
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_70_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "# Difference between break and continue statement\n\n|  | Break | Continue\
+    \ |\n|---|---|---|\n| 1 | When break is executed, the statements following break\
+    \ are skipped and causes the loop to be terminated. | When continue statement\
+    \ is executed, the statements following continue are skipped and causes the loop\
+    \ to be continued with the next iteration |\n| 2 | It can be used in switch statement\
+    \ to transfer the control outside switch | It cannot be used in switch statement\
+    \ |\n| 3 | **Example:**\\n\\n```c\\nfor(i=1;i<=5;i++)\\n{\\n    if(i==3)\\n  \
+    \      break;\\n    printf(\"%d\\\\t\",i)\\n}\\n```\\n\\n**Output:**\\n\\n`1 2`\
+    \ | **Example:**\\n\\n```c\\nfor(i=1;i<=5;i++)\\n{\\n    if(i==3)\\n        continue;\\\
+    n    printf(\"%d\\\\t\",i)\\n}\\n```\\n\\n**Output:**\\n\\n`1 2 4 5` |\n\n# Nested\
+    \ loops:\n\nThe loop within another loop is called as nested loop.\n\n```\n```c\n\
+    for(; ;)\n{\n    ...........\n    for(; ;)\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '```
+
+    {
+
+    ................
+
+    }
+
+    }
+
+    ```
+
+
+    # SAMPLE QUESTIONS
+
+
+    | Questions | CO''S | RBT Levels |
+
+    |---|---|---|
+
+    | Explain in brief the simple if, if-else and nested if-else statement with example
+    | CO2,CO3 | L2 |
+
+    | Explain the concept of For, While and Do-While loops with example. | CO2,CO3
+    | L2 |
+
+    | Explain switch-case statement with syntax | CO2,CO3 | L2 |
+
+    | Discuss break and continue statements with an example. | CO2,CO3 | L2 |
+
+    | Discuss for loop with syntax and an example | CO2,CO3 | L2 |
+
+    | Apply conditional operator into a suitable program | CO2,CO3 | L3 |
+
+    | Develop a Flowchart & write an Algorithm to swap three numbers | CO2,CO3 | L3
+    |
+
+    | Illustrate conditional operator with syntax and a suitable programming example.
+    | CO2,CO3 | L3 |
+
+    | With example explain the while and do-while loop, and justify your opinion which
+    one is best with one scenario | CO2,CO3 | L4 |
+
+    | Analogy:
+
+    **Student is categorized based on the marks they secured in the CIE, the analogy
+    is show below:**
+
+    **Marks>=75 Distinction**
+
+    **Marks >=60 and <75 First Class**
+
+    **Marks >=50 and <60 Second Class**
+
+    **Marks >=40 and <50 Third Class**
+
+    **Marks <40 Fail**
+
+    Design a flow chart for above scenario with proper message and flow. | CO2,CO3
+    | L4 |
+
+    | Design a flowchart and pseudo code to find sum of ‘n’ natural number without
+    using any looping statement. | CO2,CO3 | L6 |'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '| Design a Flowchart & write an Algorithm to swap three numbers | CO2,CO3 |
+    L6 |
+
+    | Explain switch-case statement in C with an example. | CO2,CO3 | L6 |
+
+    | Write an algorithm to find roots of a quadratic equation. | CO2,CO3 | L6 |
+
+    | Design a Flowchart to find the result of a student as distinction, first class,
+    pass, fail and absent. | CO2,CO3 | L6 |
+
+    | Write a C program to find whether a given year is leap year or not. | CO2,CO3
+    | L6 |
+
+    | Write a C program to find the sum of 1st 100 numbers | CO2,CO3 | L6 |
+
+    | Write a C program to find the given triangle is equilateral, isosceles or scalene.
+    | CO2,CO3 | L6 |
+
+    | What is the output of the following program
+
+    #include <stdio.h>
+
+    void main()
+
+    {
+
+    inti = 0;
+
+    for (i = 0;j < 5; i++)
+
+    if (i< 4)
+
+    {
+
+    printf("Hello");
+
+    break;
+
+    }
+
+    } | CO2,CO3 | L6 |
+
+    | Write a program to find whether a given number is even or odd | CO2,CO3 | L6
+    |
+
+    | Write a C program to print 1st ten prime numbers. | CO2,CO3 | L6 |
+
+    | Write a C program to print Fibonacci series upto 100. | CO2,CO3 | L6 |
+
+    | Write a program to read a 3 digit number and print the digits at units place,10''s
+    place,100''s place. | CO2,CO3 | L6 |
+
+    | Evaluate the concept of For, While and Do-While loops with example. | CO2,CO3
+    | L5 |
+
+    | Describe for loop with syntax and an example | CO3 | L1 |
+
+    | With example explain the while and do-while loop, and justify your | CO2,CO3
+    | L4 |'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "| Question | CO | Level |\n|---|---|---|\n| opinion which one is best with\
+    \ one scenario |  |  |\n| Explain the different looping concepts with example\
+    \ | CO3 | L2 |\n| Apply nested looping in an example of your own | CO2,CO3 | L3\
+    \ |\n| Write a C program to find the sum of 1st 100 numbers | CO3 | L6 |\n| What\
+    \ is the output of the following program\n\n```c\n#include<stdio.h>\n\nvoid main()\n\
+    {\n    Int i = 0;\n    for (i = 0; i > 5; i++)\n        if (i > 4)\n        {\n\
+    \            printf(\"Hello\");\n            break;\n        }\n}\n``` | CO3 |\
+    \ L6 |\n| Write a C program to print 1st ten prime numbers. | CO3 | L6 |\n| Write\
+    \ a C program to print Fibonacci series upto 100. | CO3 | L6 |\n| Write a program\
+    \ to read a 3 digit number and print the digits at units | CO3 | L6 |"
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '| Content | CO | Level |
+
+    |---|---|---|
+
+    | place,10’s place,100’s place. |  |  |
+
+    | Write a C program to find the factorial of a given number. | CO3 | L6 |
+
+    | Write a C program to find the sum of even and odd numbers | CO3 | L6 |
+
+    | Write a C program to find the reverse of a given number. | CO3 | L6 |
+
+    | Write a C program to find the given number is prime or not | CO3 | L6 |
+
+    | Write a C program to generate the right triangle<br><br>1<br><br>1 2<br><br>1
+    2 3<br><br>1 2 3 4 | CO3 | L6 |'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "# Module 3\n\n# Arrays, Strings AndFunctions\n\n# What is function?\n\nA large\
+    \ program can be divided into manageable pieces called modules where each module\
+    \ does a specific task. Each module is called as function. It’s a self contained\
+    \ small program called program segment that carry out some specific, well-defined\
+    \ task.\n\nIts classified into\n\n+   - Library function/pre-defined function\n\
+    +   - User defined functions(UDF)\n\n# Library functions\n\nThe functions written\
+    \ by the manufacturers of c compilers are called library functions. The implementation\
+    \ details of these functions are not known to the programmers. The library functions\
+    \ are also called as predefined or built -in or in- built or standard library\
+    \ functions. C library has a collection of various functions which perform standard\
+    \ and pre-defined tasks. These functions are ready to be used in our program.\n\
+    \n+   Ex: sqrt(x)                 -computes square root of x\n+   \n+   Printf()\
+    \                 -used to print data on the screen\n+   \n+   Scanf()       \
+    \          -used to read data from the keyboard\n\n```\n/* program to demonstrate\
+    \ the use of library function*/\n\n#include<stdio.h>\n\n#include<math.h>\n\nvoid\
+    \ main()\n{\n    floats,n;\n    printf(\"enter value of n\\n\");\n    scanf(\"\
+    %d\",&n);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '```
+
+    s=sqrt(n);
+
+
+    printf("Squareroot=%d\n",s);
+
+    }
+
+    ```
+
+
+    Note: declaration of printf and scanf are available in stdio.h and declaration
+    of sqrt is available in math.h header file.
+
+
+    main() is a user defined function, it controls and coordinates all the activities
+    by executing each statements in sequence.
+
+
+    # Called and calling function
+
+
+    A function that is invoked by writing the name of the function is called “called
+    function” and the invoking function is called “calling function”.
+
+
+    In the above example, main() is calling function and sqrt() is called function
+
+
+    # Advantage and disadvantage of using library functions
+
+
+    # Advantage:
+
+
+    +   - The programmer’s job is made easier because, the functions are already available.
+
+    +   - It reduces program development time.
+
+
+    # Disadvantage:
+
+
+    They are limited in number, programmer cannot completely rely on these library
+    functions.
+
+
+    # User –defined functions
+
+
+    The functions written by the user/programmer to do the specific tasks are called
+    user defined functions. They are also called as programmer defined functions.
+
+
+    # Elements of user defined function:
+
+
+    +   - Function definition
+
+    +   - Function call
+
+    +   - Function declaration
+
+
+    # Function definition'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "The program module that is written to achieve a specific task is called function\
+    \ definition. Each function definition consists of two parts:\n\n+   - Function\
+    \ header: consisting of datatype of the value returned by the function, the name\
+    \ of the function and parameters.\n+   - Function body: consisting of set of statements\
+    \ to do the specific task.\n\n# Syntax:\n\n```\nreturn_type function name(parameters)\n\
+    {\n    Declaration part;\n\n    Executable part;\n\n    Return statement;\n}\n\
+    ```\n\n# Example:\n\n![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_78_0.png)\n\n# Function\
+    \ header:\n\nIt consists of 3 parts.\n\n+   - Return type: this is the data type\
+    \ of the value that the function is expected to return. The data type can be int,\
+    \ float, char, double, void etc.. (any valid C data type)\n+   - Function name:\
+    \ it’s the name of the function. It can be any valid identifier.\n+   - Parameters:\
+    \ these are list of variables enclosed within parentheses. All these variables\
+    \ should be separately declared and each declaration should be separated by comma."
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: '# Function body:
+
+
+    The compound statement immediately following the function header is function body.
+    It consists of 3 elements.
+
+
+    +   - Declaration: all the variables used in the function body should be declared
+    in the declaration part. But, the variables used in the function header should
+    not be declared again.
+
+    +   - Executable part: this part contains statements or instructions that perform
+    the specified activity.
+
+    +   - return: it’s a keyword. It’s used to return control to the calling function
+    with/without a value.
+
+
+    Note: if the function is not returning any value, then we need to specify the
+    return type as void.
+
+
+    If return type is not explicitly written, it’s assumed that return type is integer.
+    So, integer is the default return value.
+
+
+    # Function declaration
+
+
+    The function should be declared before they are used. This process of declaring
+    the functions before they are used is called function prototype or function declaration.
+
+
+    Function declaration contains only the function header but terminated with semi
+    colon. It informs the compiler about
+
+
+    +   - The type of value returned by the function
+
+    +   - The name of the function
+
+    +   - The number of parameters passed to that function
+
+    +   - The type of each parameter in the function header
+
+
+    # Syntax:
+
+
+    ```
+
+    type function-name(type p1, type p2, ........ type pn);   /*semi colon is must*/
+
+    ```
+
+
+    where
+
+
+    type – is type of the value returned from the function such as void, int, float
+    etc.
+
+
+    function name- name of the function
+
+
+    p1,p2,........pn – are parameters. All the parameters have to be separately declared
+    and each declaration should be separated by comma.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "ex 1:    int   add(int a, int b);\n\n# Function calls\n\nThe method of calling\
+    \ a function to achieve a specified task is called function call. The function\
+    \ can be called by writing the name of the function and passing appropriate number\
+    \ of arguments. The number and the type of the argument in function call should\
+    \ match the number and type of the parameters in function definition.\n\n```\n\
+    /* program to demonstrate user defined function*/\n\n#include<stdio.h>\n\nint\
+    \ add(inta,int b);      /*function prototype*/\n\nvoid main()\n{\n        int\
+    \ result;\n        result=add(10,20);  /* function call*/\n        printf(“sum=%d\\\
+    n”,result);\n}\n\nint add(inta,int b)                 /*function definition*/\n\
+    {\n        returna+b;\n}\n```\n\nThe sequence of operations performed here are:\n\
+    \n+   - The function add() is called with two arguments 10 and 20\n+   - Control\
+    \ is transferred to function add() and the values 10 and 20 are received using\
+    \ the variables a and b.\n+   - The result is computed by adding 10 and 20\n+\
+    \   - The result is returned to main() and copied to variable result\n+   - The\
+    \ result is displayed n the screen"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# Rules:
+
+
+    +   - The number of arguments in the function call must be equal to the number
+    of parameters in function prototype and header.
+
+    +   - The type of the arguments arguments in the function call must be equal to
+    the type of parameters in function prototype and header.
+
+    +   - A void function doesn’t return a value. So, when a function is called, it
+    can’t be used in an expression or print statement. It can be used only as statement.
+
+    +   - If function return type is void, then it should not return any value. It
+    results in syntax error.
+
+    +   - Function can return at most one value
+
+
+    # Formal parameters and actual parameters
+
+
+    # Formal parameter/dummy parameter
+
+
+    The variables defined in the function header of function definition are called
+    formal parameters. All the variables must be separately declared and each declaration
+    must be separated by commas. The formal parameters receive data from actual parameters.
+
+
+    # Actual parameters/arguments
+
+
+    The variables that are used in function call are called actual parameters. Using
+    actual parameters, the data can be transferred to the function. The corresponding
+    formal parameters in the function definition receive them. The actual parameter
+    and formal parameter should match in number and type of data.
+
+
+    # Categories of functions
+
+
+    Based on the parameters and return value, the functions are categorized as follows:
+
+
+    +   - Function with no parameters and no return values.
+
+    +   - Function with no parameters and return values
+
+    +   - Function with parameters and no return values
+
+    +   - Function with parameters and return values
+
+
+    # Function with no parameters and no return values
+
+
+    This category is called “void function with no parameters”. There is no data transfer
+    between the calling function and called function. So, calling function cannot
+    send values and called function cannot receive the data.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: "```\n/*program to demonstrate Function with no parameter and no return values*/\n\
+    #include<stdio.h>\n\nvoid add();\n\nvoid main()\n{\n    add();      /*no arguments\
+    \ are passed*/\n}\n\nvoid add()\n{\n    int a,b,c;\n    printf(\"enter two numbers\\\
+    n\");\n    scanf(\"%d%d\",&a,&b);\n    c=a+b;\n    printf(\"sum=%d\\n\",c);\n\
+    \    retun;      /*returns nothing*/\n}\n```\n\n# Function with parameters and\
+    \ no return values\n\nThis is called “void functions with parameters”. There is\
+    \ a data transfer from the calling function to the called function using parameters.\
+    \ But, no data transfer from called function to the calling function.\n\n```\n\
+    /*program to demonstrate Function with parameter and no return values*/\n#include<stdio.h>\n\
+    \nvoid add(int x,int y);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: "```\n```c\nvoid main()\n{\n    int a,b;\n    printf(“enter two numbers\\n”);\n\
+    \    scanf(“%d%d”,&a,&b);\n    add(a,b);        /*two arguments are passed to\
+    \ called function*/\n}\n\nvoid add(int x, int y)\n{\n    int z;\n    z=x+y;\n\
+    \    printf(“sum=%d\\n”,z);\n    retun;           /*returns nothing*/\n}\n```\n\
+    ```\n\n# Function with no parameters and return values\n\nThere is no data transfer\
+    \ from the calling function to the called function. But, there is data transfer\
+    \ from called function to the calling function. When the function returns a value,\
+    \ the calling function receives one value from the called function.\n\n```\n```c\n\
+    /*program to demonstrate Function with no parameter and return values*/\n\n#include<stdio.h>\n\
+    \nint add();\n\nvoid main()\n{\n    int z;\n    z=add();    /*no arguments passed\
+    \ returned value will be saved in variable z*/\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "```\n```c\nprintf(\"sum=%d\\n\",z);\n}\n\nint add()\n{\n    int a,b,c;\n  \
+    \  printf(\"enter two numbers\\n\");\n    scanf(\"%d%d\",&a,&b);\n    c=a+b;\n\
+    \    return c;    /* returns the result to the calling function*/\n}\n```\n```\n\
+    \n# Function with parameters and return values\n\nThere is data transfer between\
+    \ calling and called function. When parameters are passed, the called function\
+    \ can receive values from the calling function. When the function returns a value,\
+    \ the calling function can receive a value from the called function.\n\n```\n\
+    ```c\n/*program to demonstrate Function with parameter and return values*/\n\n\
+    #include<stdio.h>\n\nint add(int x,int y);\n\nvoid main()\n{\n    int a,b,c;\n\
+    \    printf(\"enter two numbers\\n\");\n    scanf(\"%d%d\",&a,&b);\n    c=add(a,b);\
+    \ /*two arguments are passed to the called function and result stored in c*/\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "```\nprintf(\"sum=%d\\n\",c);\n}\n```\n\n```\nint add(int x, int y)\n{\n  \
+    \  int z;\n    z=x+y;\n    return z;\n}\n```\n\n# Passing parameters to functions\n\
+    \nThere are two ways of passing parameters to the function\n\n+   - Pass by value\
+    \ (call by value)\n+   - Pass by address\n\n# Pass by value\n\nHere, the values\
+    \ of actual parameters are copied into formal parameters i.e., formal parameters\
+    \ contain only the copy of actual parameters. So, even if the values of the formal\
+    \ parameters changes in the called function, the values of the actual parameters\
+    \ are not changed.\n\nAdvantage:\n\n+   - Makes the functions more self-contained\n\
+    +   - Protects them against accidental changes.\n\nDisadvantage:\n\nIt does not\
+    \ allow information to be transferred back to calling function via arguments.\n\
+    \n```\n/*program to demonstrate pass by value(swapping 2 numbers)*/\n```"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\n```c\n#include<stdio.h>\n\nvoid exchange(intm,int n);\n\nvoid main()\n\
+    {\n    int a=10,b=20;\n    exchange(a,b);\n    printf(\"a=%d\\nb=%d\\n\",a,b);\n\
+    }\n\nvoid exchange(intm,int n)\n{\n    int temp;\n    temp=m;\n    m=n;\n    n=temp;\n\
+    }\n```\n```\n\nOutput:\n\na=10\n\nb=20\n\nWorking:\n\n+   - Execution starts from\
+    \ main() and the variables a and b are assigned the values 10 and 20 respectively.\n\
+    +   - The function exchange() is called with actual parameter a and b whose values\
+    \ are 10,20\n+   - In exchange() function, the formal parameter m and n receive\
+    \ 10 and 20 respectively.\n+   - The values of m and n are exchanged here.\n+\
+    \   - But, the values of actual parameters a and b in function main() have not\
+    \ been exchanged."
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: "# Pass by address\n\nHere, when the function is called, the addresses of actual\
+    \ parameters are sent. In the called function, the formal parameters should be\
+    \ declared as pointers with the same type as the actual parameters. The addresses\
+    \ of actual parameter are copied to formal parameter. Using these addresses, the\
+    \ values of the actual parameters can be changed. This way of changing the actual\
+    \ parameters indirectly using its address is called pass by address.\n\n```\n\
+    /*program to demonstrate pass by address(swapping 2 numbers)*/\n#include<stdio.h>\n\
+    \nvoid exchange(int *m,int *n);\n\nvoid main()\n{\n    int a=10,b=20;\n    exchange(&a,&b);\n\
+    \    printf(\"a=%d\\nb=%d\\n\",a,b);\n}\n\nvoid exchange(int *m,int *n)\n{\n \
+    \   int temp;\n    temp=*m;\n    *m=*n;\n    *n=temp;\n}\n```\n\nOutput:\n\na=20\n\
+    \nb=10"
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: "Working:\n\n+   - Execution starts from main() and variables a and b are assigned\
+    \ 10 and 20 respectively\n+   - The function exchange() is called by sending the\
+    \ address of a and b.\n+   - In function exchange(), the formal parameters m and\
+    \ n declared using * to hold the addresses of a and b\n+   - Using *m and *n we\
+    \ can access the values of a and b and they are exchanged.\n+   - When control\
+    \ comes to the calling function, the values of a and b have been exchanged.\n\n\
+    # Recursion\n\nCalling a same function again and again until some termination\
+    \ conditions are satisfied is called recursion. Recursive function should contain\
+    \ base case and general case. While designing recursive function decide about\
+    \ the base case and general case carefully, it should not generate infinite loop.\n\
+    \nBase case is a special case where the solution can be obtained without using\
+    \ the recursion. It is also called as terminal condition. Each recursive function\
+    \ must have a base case. A base case serves two purposes:\n\n+   - It acts as\
+    \ terminating condition\n+   - The recursive function obtains the solution from\
+    \ the base case it reaches.\n\nGeneral case this portion of the code contains\
+    \ the logic required to reduce the size of the problem so as to move towards the\
+    \ base case or terminal condition. Here, each time the function is called, the\
+    \ size of the problem is reduced.\n\nEx:\n\n```\n/*factorial of a number*/\n\n\
+    #include<stdio.h>\n\nint fact(int m);\n\nvoid main()\n{\n    int n,res;\n    printf(\"\
+    enter the number\\n\");\n    scanf(\"%d\",&n);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: 'Since array is identified by a common name any element in the array can be
+    accessed by specifying its index or subscript. Index gives the position of an
+    element in the array.
+
+
+    Basic properties of an array are:
+
+
+    +   - The array elements should be of the same data type.
+
+    +   - The data items stored contiguously in memory
+
+    +   - The subscript of first item is always zero.
+
+    +   - Each data item is accessed using the name of the array, but, with different
+    subscripts.
+
+    +   - The index of the array is always an integer.
+
+
+    # Declaration of single dimensional array
+
+
+    Arrays must be declared and defined before it is used. The declaration informs
+    the compiler about the:
+
+
+    +   - Type of each element of the array
+
+    +   - Name of the array
+
+    +   - Number of elements (size of an array)
+
+
+    Syntax:
+
+
+    ```
+
+    Data_typearray_name[int expression];
+
+    ```
+
+
+    Ex: inta[10];
+
+
+    Here a is an array of 10 integers.
+
+
+    Rules:
+
+
+    +   - The expression must be enclosed within brackets
+
+    +   - The expression can be an integer constant
+
+    +   - The expression can be an integer expression without variables.
+
+
+    # Initialization of single dimensional arrays
+
+
+    Assigning values to a variable before processing is called initialization. Array
+    elements can be initialized at the time of declaration.
+
+
+    Syntax:
+
+
+    ```
+
+    Type array_name[expression]={v1,v2,v3,...........vn};
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'Where
+
+
+    +   - Type can be a data type such as int, float, char etc
+
+    +   - Array_name is the name of the array.
+
+    +   - Expression is an integer and should be enclosed within square brackets.
+
+    +   - v1,v2, are values and should be enclosed within ‘{‘ and ‘}’ separated by
+    commas. The value v1 is stored in 0th location, v2 is stored in 1st location and
+    soon.
+
+
+    The various ways of initializing arrays are:
+
+
+    +   - Initializing all specified memory locations
+
+    +   - Partial array initialization
+
+    +   - Initialization without size
+
+
+    # Initializing all specified memory locations
+
+
+    Ex:
+
+
+    ```
+
+    int a[6]={10,15,20,25,30};
+
+    ```
+
+
+    | 10 | 15 | 20 | 25 | 30 | 35 |
+
+    | a[0] | a[1] | a[2] | a[3] | a[4] | a[5] |
+
+
+    # Partial array initialization
+
+
+    If the number of values to be initialized is less than the size of the array,
+    then the elements are initialized in the order from 0th location. The remaining
+    locations will be initialized to zero automatically.
+
+
+    ```
+
+    int a[5]={10,15};
+
+    ```
+
+
+    | 10 | 15 | 0 | 0 | 0 |
+
+    | a[0] | a[1] | a[2] | a[3] | a[4] |
+
+
+    # Initialization without size
+
+
+    ```
+
+    int a[]={10,20,30,40,50};
+
+    ```
+
+
+    | 10 | 20 | 30 | 40 | 50 |
+
+    | a[0] | a[1] | a[2] | a[3] | a[4] |'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: "The compiler will calculate the size of the array based on the number of initial\
+    \ values. Here the size is 5.\n\n# Reading/writing single dimensional arrays:\n\
+    \nSyntax for reading:\n\n```\nfor(i=0; i<n; i++)\n{\n    scanf(\"%d\",&a[i]);\n\
+    }\n```\n\nWhere n is the no. of elements of an array.\n\nSyntax for writing:\n\
+    \n```\nfor(i=0; i<n; i++)\n{\n    printf(\"%d\\n\",a[i]);\n}\n```\n\nEx:/*program\
+    \ to read n items from the keyboard and display it on the monitor*/\n\n```\n#include<stdio.h>\n\
+    \nvoid main()\n{\n    int a[25],n ,i;\n    printf(\"enter the no. of elements\\\
+    n\");\n    scanf(\"%d\",&n);\n    for(i=0;i<n;i++)\n    {\n    scanf(\"%d\",&a[i]);\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: "```\nprintf(\"enter the no. of elements\\n\");\n\nscanf(\"%d\",&n);\n\nfor(i=0;\
+    \ i<n; i++)\n{\n\nscanf(\"%d\",&a[i]);\n\n}\n\nprintf(\"the square of array elements\
+    \ are\\n\");\n\nfor(i=0; i<n; i++)\n{\n\n    print_square(a[i]);      /*passing\
+    \ individual array elements*/\n\n}\n\ngetch();\n}\n\nvoid print_square(int x)\n\
+    {\n\n    printf(\"%d\",x*x);\n\n}\n```\n\n# Passing the whole array\n\nWhen passing\
+    \ the whole array to a function,\n\n+   - The function must be called by passing\
+    \ the name of an array\n+   - In the function definition, the parameter must be\
+    \ declared as an array of the same type as that of actual parameter. No need to\
+    \ specify the size of the array.\n\nPassing whole array to a function is similar\
+    \ to pass by reference. Any change made to the array in the called function will\
+    \ reflect to the original array."
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n/*program to reverse array elements*/\n\n#include<stdio.h>\n\nvoid reverse(int\
+    \ b[]);\n\nvoid main()\n{\n    int a[5]={10,20,30,40,50};\n    reverse(a);\n \
+    \   for(i=0; i<5; i++)\n    {\n        printf(\"%d\\t\",a[i]);\n    }\n}\n\nvoid\
+    \ reverse(int b[])\n{\n    b[0]=50, b[1]=40,b[2]=30,b[3]=20,b[4]=10;\n}\n```\n\
+    \nOutput:\n\n50 40 30 20 10\n\nNote: in the above program, the parameter b is\
+    \ an array, any change in array b will have the corresponding changes in array\
+    \ a.\n\n# Searching\n\nProcess of finding a particular item in the large amount\
+    \ of data is called searching. There are 2 searching techniques."
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "```\n}\n}\nif(found==1)\n    printf(\"element found at %d position\\n\",i);\n\
+    else\n    printf(\"element not found\\n\");\ngetch();\n}\n```\n\nAdvantage:\n\n\
+    +   - Very simple approach\n+   - Works well for small arrays\n+   - Used to search\
+    \ when the elements are not sorted\n\nDisadvantage:\n\n+   - Less efficient if\
+    \ the array size is large\n+   - If the elements are already sorted, linear search\
+    \ is not efficient\n\n**Binary search**: This technique can be applied if the\
+    \ array elements are sorted.\n\nWorking:\n\n+   - Initialize position of the first\
+    \ element to variable low and position of last element to variable high. i.e.,\
+    \ **low=0** and **high=n-1**\n+   - Using above initial values obtain the position\
+    \ of middle element as **mid=(low+high)/2**\n+   - The key to be searched is compared\
+    \ with middle element. If the key is same as middle element, then element found\
+    \ and stop searching process. If key is not same as middle element, it may be\
+    \ present in the left part or right part of the array.\n+   - If key is less than\
+    \ the middle element, then left part of the array has to be compared from low\
+    \ to mid-1. So change upper bound as **high=mid-1**\n+   - If key is greater than\
+    \ the middle element, then right part of the array has to be compared from mid+1\
+    \ to high. So change lower bound as **low=mid+1**"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "The above 4 steps has to be repeatedly executed as long as low is less than\
+    \ or equal to high. Finally, when the value of low exceeds the value of high indicates\
+    \ that key is not present in the array.\n\n```\n/*binary search program*/\n\n\
+    #include<stdio.h>\n\nvoid main()\n{\n    int a[5],n,i,key,found=0,low,high;\n\n\
+    \    printf(\"Enter the size of array\\n\");\n\n    scanf(\"%d\",&n);\n\n    printf(\"\
+    enter array elements in ascending order\\n\");\n\n    for(i=0; i<n;i++)\n    {\n\
+    \        scanf(\"%d\",&a[i]);\n    }\n\n    printf(\"Enter the element to be srearached\\\
+    n\");\n    scanf(\"%d\",&key);\n\n    low=0;\n\n    high=n-1;\n\n    while(low<=high)\
+    \   /*binary search*/\n    {\n        mid=(low+high)/2;   /*compute mid*/\n  \
+    \      if(key==a[mid])  /*compare with mid if its equal stop searching*/\n   \
+    \     {\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '```
+
+    found=1;
+
+
+    break;
+
+
+    }
+
+    else if(key>a[mid])
+
+
+    low=mid+1;
+
+
+    else
+
+
+    high=mid-1;
+
+    }
+
+
+    if(found==1)
+
+
+    printf("element found at %d position\n",mid);
+
+    else
+
+
+    printf("element not found\n");
+
+    getch();
+
+    }
+
+    ```
+
+
+    # Advantage
+
+
+    +   - Simple technique
+
+    +   - Very efficient searching technique
+
+
+    # Disadvantage
+
+
+    +   - The array elements should be sorted
+
+
+    # Sorting
+
+
+    It is the process of arranging the random numbers either in the ascending order
+    or in the descending order. There are many different sorting techniques such as
+    bubble sort, selection sort, merge sort etc.
+
+
+    # Bubble sort
+
+
+    Here, compare the adjacent elements. If the number to the left is greater than
+    the number to the right, then exchange them. If the number to the left is not
+    greater than the number to the'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: "right, then don’t exchange them. At the end of each pass largest element will\
+    \ be in its sorted position. This is also called as sinking sort.\n\n```\n/*bubble\
+    \ sort*/\n#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\nint i,j,n,a[20],temp;\n\
+    clrscr();\nprintf(\"Enter the size: \");\nscanf(\"%d\",&n);\nprintf(\"Enter %d\
+    \ numbers \\n\",n);\nfor(i=0;i<n;i++)\nscanf(\"%d\",&a[i]);\nfor(i=1;i<n;i++)\n\
+    {\n  for(j=0;j<n-i;j++)\n  {\n    if(a[j]>a[j+1])\n    {\n        temp=a[j];\n\
+    \        a[j]=a[j+1];\n        a[j+1]=temp;\n    }\n  }\n}\nprintf(\"\\nThe sorted\
+    \ array is \\n\");\nfor(i=0;i<n;i++)\nprintf(\"%d \\n\",a[i]);\ngetch();\n}\n\
+    ```\n\n# Advantage\n\n+   - Very simple and easy to program\n+   - Straight forward\
+    \ approach\n\n# Disadvantage\n\n+   - Less efficient"
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: "+   - It requires n-1 passes even if the elements are sorted\n\n# Two dimensional\
+    \ arrays\n\nArrays with two sets of square brackets [][ ] are called two dimensional\
+    \ arrays. It’s used when the data items are arranged in row-wise and column wise\
+    \ in a tabular fashion. To identify an item we need to specify two indices: the\
+    \ first index identifies the row number and second index identify the column number\
+    \ of the item.\n\n# Declaration of 2D array\n\n# Syntax\n\n```\nData_typearray_name[exp1][exp2];\n\
+    ```\n\nWhere\n\n+   - Data_type can be int, float, char etc\n+   - Array name\
+    \ is the name of the array\n+   - Exp1 and exp2 are constant expressions and must\
+    \ be enclosed within square brackets and no variables are allowed.\n\nEx:\n\n\
+    ```\nint a[10][20];\n```\n\nthe array a is an integer array with 10 rows and 20\
+    \ coloumns. it reserves 10*20=200 locations contiguously one after the other.\n\
+    \n# Initialization\n\n```\nData_typearray_name[exp1][exp2]={\n    {a1,a2,............an},\n\
+    \    {b1,b2, ..........bn},\n    .......................\n    .......................\n\
+    \    {z1,z2,..............zn}\n};\n```\n\nWhere"
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: "+   - Data-type can be int,floatetc\n+   - Exp1 and exp2 are row and column\
+    \ numbers respectively\n+   - A1 to an are the values assigned to 1st row, b1\
+    \ to bn are the values assigned to 2nd row and so on.\n\nEx:\n\n```\ninta[4][3]={\n\
+    \    {11,22,33},\n    {44,55,66},\n    {77,88,99},\n    {10,11,12},\n};\n```\n\
+    \nPictorial representation of above initialization is as shown below\n\ncolumns\n\
+    \n|   | 0 | 1 | 2 |\n|---|---|---|---|\n| 0 | 11 | 22 | 33 |\n| 1 | 44 | 55 |\
+    \ 66 |\n| 2 | 77 | 88 | 99 |\n| 3 | 10 | 11 | 12 |\n\nrows\n\nPartial array initialization:\
+    \ if the numbers of values to be initialized are less than the size of the array,\
+    \ then the elements are initialized from left to right one after the other. The\
+    \ remaining locations will be initialized to zero automatically.\n\n```\nex: int\
+    \ a[4][3]={  {11,22},\n    {33,44},\n    {55,66},\n    {77,88}\n};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "# Reading and writing two-dimensional arrays\n\nThe elements of the matrix\
+    \ can be accessed in two different ways.\n\n+   - Row major order\n+   - Column\
+    \ major order\n\n# Row major order\n\nAll elements are accessed one by one row\
+    \ wise. Here,\n\n+   - Firstly, all elements in 0th row are accessed\n+   - Secondly,\
+    \ all elements in 1st row are accessed\n+   - Thirdly, all elements in 3rd row\
+    \ are accessed and so on.\n\n# Column major order\n\nAll elements are accessed\
+    \ one by one column wise. Here,\n\n+   - Firstly, all elements in 0th column are\
+    \ accessed\n+   - Secondly, all elements in 1st column are accessed\n+   - Thirdly,\
+    \ all elements in 3rd column are accessed and so on.\n\n# Reading matrix in row\
+    \ major order\n\n```\nfor(i=0; i<m; i++)        /*m rows*/\n{\n    for(j=0; j<n;\
+    \ j++)  /*n columns*/\n    {\n        scanf(\"%d\",&a[i][j]);\n    }\n}\n```\n\
+    \n# Reading matrix in column major order\n\n```\nfor(i=0; i<n; i++)        /*n\
+    \ columns */\n{\n    for(j=0; j<m; j++)  /*m rows */\n    {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: "```\n```c\nscanf(\"%d\",&a[i][j]);\n}\n}\n```\n```\n\n# Printing(writing) matrix\n\
+    \n```\n```c\nfor(i=0; i<m; i++)        /*m rows*/\n{\n    for(j=0; j<n; j++) \
+    \   /*n columns*/\n    {\n        printf(\"%d\\t\",a[i][j]);\n    }\n    Printf(\"\
+    \\n\");\n}\n```\n```\n\n# Example programs\n\n```\n```c\n/*program to add two\
+    \ matrices*/\n#include<stdio.h>\n\nvoid main()\n{\nint a[10][10],b[10][10],c[10][10],m,n,i,j;\n\
+    printf(\"enter the order of matrices\\n\");\nscanf(\"%d%d\",&m,&n);\nprintf(\"\
+    enter the elements of matrix a\\n\");\nfor(i=0; i<m; i++)\n{\n    for(j=0; j<n;\
+    \ j++)\n    {\n        scanf(\"%d\",&a[i][j]);\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: "```\n```c\n}\n\nprintf(\"enter the elements of matrix b\\n\");\nfor(i=0; i<m;\
+    \ i++)\n{\n    for(j=0; j<n; j++)\n    {\n        scanf(\"%d\", &b[i][j]);\n \
+    \   }\n}\n\nfor(i=0; i<m; i++)        /**addition**/\n{\n    for(j=0; j<n; j++)\n\
+    \    {\n        c[i][j]=a[i][j]+b[i][j];\n    }\n}\n\nprintf(\"resultant matrix\
+    \ c is\\n\");\nfor(i=0; i<m; i++)\n{\n    for(j=0; j<n; j++)\n    {\n        printf(\"\
+    %d\\t\", c[i][j]);\n    }\n    printf(\"\\n\");\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '```
+
+    ```c
+
+    getch();
+
+    }
+
+
+    /*matrix multiplication*/
+
+    #include<stdio.h>
+
+    #include<conio.h>
+
+    void main()
+
+    {
+
+    int a[10][10],b[10][10],c[10][10]={0};
+
+    int m,n,p,q,i,j,k;
+
+    clrscr();
+
+    printf("\\n Enter the order of the matrix A :");
+
+    scanf("%d%d",&m,&n);
+
+    printf("\\n Enter the order of the matrix B :");
+
+    scanf("%d%d",&p,&q);
+
+    if(n!=p)
+
+    {
+
+    printf("multiplication not possible\\n");
+
+    getch();
+
+    exit(0);
+
+    }
+
+    printf("\\n Enter the elements of matrix A in row major order\\n");
+
+    for(i=0;i<m;i++)
+
+    {
+
+    for(j=0;j<n;j++)
+
+    {
+
+    scanf("%d",&a[i][j]);
+
+    }
+
+    }
+
+    printf("\\n Enter the elements of matrix B in column major order \\n");
+
+    for(i=0;i<q;i++)
+
+    {
+
+    for(j=0;j<p;j++)
+
+    {
+
+    scanf("%d",&b[j][i]);
+
+    }
+
+    }
+
+    for(i=0;i<m;i++)
+
+    {
+
+    for(j=0;j<q;j++)
+
+    {
+
+    for(k=0;k<n;k++)
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "```\nprintf(\"enter the order of matrices\\n\");\nscanf(\"%d%d\",&m,&n);\n\
+    printf(\"enter the elements of matrix a\\n\");\nfor(i=0; i<m; i++)\n{\n    for(j=0;\
+    \ j<n; j++)\n    {\n        scanf(\"%d\",&a[i][j]);\n    }\n}\nfor(i=0; i<m; i++)\n\
+    {\n    for(j=0; j<n; j++)\n    {\n        b[j][i]=a[i][j];\n    }\n}\nprintf(\"\
+    resultant matrix is\\n\");\nfor(i=0; i<n; i++)\n{\n    for(j=0; j<m; j++)\n  \
+    \  {\n        printf(\"%d\\t\",b[i][j]);\n    }\n    printf(\"\\n\");\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '```
+
+    getch();
+
+    }
+
+    ```
+
+
+    # Strings
+
+
+    A string is an array of characters terminated by NULL character which is denoted
+    by the escape sequence ''\0''.
+
+
+    Ex: “VTU” is stored as
+
+
+    | V | T | U | \0 |
+
+
+    Strings are treated as an array of characters. String variable can be declared
+    as
+
+
+    ```
+
+    char a[20];
+
+    ```
+
+
+    the string variable a can hold maximum of 20 characters including null character.
+
+
+    # String initialization
+
+
+    # String input/output functions
+
+
+    +   - Formatted input function (scanf)
+
+    +   - Formatted output function (printf)
+
+    +   - Unformatted input function (gets)
+
+    +   - Unformatted output function (puts)
+
+
+    # Formatted input and output function (scanf,printf)
+
+
+    The format specifier used is %s.
+
+
+    # Working
+
+
+    +   - If white spaces are present before the string, then they are removed from
+    the keyboard buffer
+
+    +   - All nonwhite space characters are copied into the array till it finds another
+    white space. Then the copied string is terminated by ''\0''. Remaining characters
+    are left in the keyboard buffer.
+
+
+    ```
+
+    char s1[15];
+
+    ```
+
+
+    ```
+
+    scanf("%s",s1);
+
+    ```
+
+
+    ```
+
+    printf("%s\n",s1);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: "col-------> maximum length of each string\n\n```\nex: char a[5][20];\n```\n\
+    \nabove array a can contain at most 5 strings with each string can have at most\
+    \ 20 characters.\n\n```\nchar a[4][10]={\"ANU\",\n    \"BHANU\",\n    \"DHANYA\"\
+    ,\n    \"MADHU\"};\n```\n\n# Memory representation\n\n|   | 0 | 1 | 2 | 3 | 4\
+    \ | 5 | 6 | 7 | 8 | 9 |\n|---|---|---|---|---|---|---|---|---|---|---|\n| 0 |\
+    \   |   |   |   |   |   |   |   |   |   |\n| 1 | A | N | U | \\0 |   |   |   |\
+    \   |   |   |\n| 2 | B | H | A | N | U | \\0 |   |   |   |   |\n| 3 | D | H |\
+    \ A | N | Y | A | \\0 |   |   |   |\n|   | M | A | D | H | U | \\0 |   |   | \
+    \  |   |\n\n# Reading and writingto an array of strings\n\n```\nfor(i=0;i<n;i++)\
+    \        /*reading*/\n{\n    scanf(\"%s\",a[i]);\n}\n```\n\n```\nfor(i=0;i<n;i++)\
+    \        /*writing*/\n{\n    printf(\"%s\\n\",a[i]);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# String handling functions\n\nString handling functions are defined in string.h\
+    \ header.\n\n| strlen(str) | Returns length of the string str |\n| strcpy(dest,src)\
+    \ | Copies the source string src to destination string dest |\n| strncpy(dest,src,n)\
+    \ | Copies at most n characters of the source string src to destination string\
+    \ dest. |\n| strcat(str1,str2) | Append string str2 to string str1 |\n| strncat(str1,str2,n)\
+    \ | Append first n characters of string str2 to string str1 |\n| strcmp(str1,str2)\
+    \ | compare two strings str1,str2 |\n| strrev(str) | Reverses string |\n\n# strlen(str)\n\
+    \nThis function returns the length of the string str i.e., it counts all the characters\
+    \ up to ‘\\0’ except \\0. So, an empty string has length zero.\n\n/*program to\
+    \ display string length  using library function*/\n\n```\n#include<stdio.h>\n\n\
+    #include<string.h>\n\nvoid main()\n{\n    char s[]=\"hello\";\n    printf(\"length\
+    \ of string s=%d\\n\",strlen(s);\n    getch();\n}\n```\n\nOutput\n\nlength of\
+    \ string s=5\n\n/*program to display string length without using library function*/\n\
+    \n```\n#include<stdio.h>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "```\n```c\nvoid main()\n{\n    char s[]=\"hello\";\n    inti=0;\n    while(s[i]!='\\\
+    0')\n    {\n        i++;\n    }\n    printf(\"length=%d\\n\",i);\n    getch();\n\
+    }\n```\n```\n\n# Output\n\nlength=5\n\n# strcpy(dest,src)\n\nCopies the contents\
+    \ of source string **src** to destination string **dest** including '\\0', So,\
+    \ the size of destination string **dest** should be greater or equal to the size\
+    \ of source string **src**. After copying, the original contents of destination\
+    \ string **dest** are lost.\n\n```\n```c\n/*program to demonstrate strcpy()*/\n\
+    \n#include<stdio.h>\n\n#include<string.h>\n\nvoid main()\n{\n    char s1[]=”hello”;\n\
+    \    char s2[10];\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '```
+
+    strcpy(s2,s1);
+
+
+    printf("destination string is=%s\n",s2;
+
+
+    getch();
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    destination string is=hello
+
+
+    ```
+
+    /*program to demonstrate strcpy() without using library function*/
+
+
+    #include<stdio.h>
+
+
+    #include<string.h>
+
+
+    void main()
+
+    {
+
+
+    char s1[10], s2[10];
+
+
+    inti;
+
+
+    printf("enter source string\n");
+
+
+    gets(s1);
+
+
+    i=0;
+
+
+    while(s1[i]!=''\0'')
+
+    {
+
+
+    s2[i]=s1[i];
+
+
+    i++;
+
+    }
+
+
+    s2[i]=''\0'';
+
+
+    printf("destination string is=%s\n",s2;
+
+
+    getch();
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# Output
+
+
+    Enter source string
+
+
+    hello
+
+
+    destination string is=hello
+
+
+    ```
+
+    strncpy(dest,src,n);
+
+    ```
+
+
+    Here n is the number of characters to be copied.
+
+
+    # Working
+
+
+    +   - If source string is less than n, the entire string is copied from source
+    to destination and then null character is placed at the end.
+
+    +   - If the source string src is longer than n characters, only n characters
+    are copied into destination. Then, the destination string will not have a delimiter
+    ''\0'' and hence it will be invalid string.
+
+
+    Ex:
+
+
+    ```
+
+    char s1[10];
+
+    ```
+
+
+    ```
+
+    char s2[8]="VTU123";
+
+    ```
+
+
+    ```
+
+    strncpy(s1,s2,5);
+
+    ```
+
+
+    before copying
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_115_0.png)
+
+
+    And s2
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_115_1.png)
+
+
+    After copying'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: 's1
+
+
+    | V | T | U | 1 | 2 | \0 |  |  |  |  |
+
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+
+    And s2
+
+
+    | V | T | U | 1 | 2 | 3 | \0 |  |
+
+    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+
+
+    # strcat(str1,str2)
+
+
+    This function copies all the characters of string str2 to the end of string str1.
+    The delimiter of string str1 is replaced by the first character of str2. The size
+    of str1 should be large enough to store a string whose length is str1+str2.
+
+
+    Str1
+
+
+    | h | i |  |  |  |  |  |  |  |  |
+
+
+    Str2
+
+
+    | h | e | l | l | o |  |
+
+
+    afterstrcat
+
+
+    Str1
+
+
+    | h | i | h | e | l | l | o | \0 |  |  |
+
+
+    Str2
+
+
+    | h | e | l | l | o |  |
+
+    |  |  |  |  |  |  |'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# Sample Questions
+
+
+    | Questions | CO''s | RBT Level |
+
+    |---|---|---|
+
+    | How functions are categorized. Explain with an example. | CO2,CO3 | L3 |
+
+    | Explain the characteristics of 2-Dimensional array with an example | CO3 | L2
+    |
+
+    | Describe any 3 string handling function with an example. | CO2,CO3 | L1 |
+
+    | Explain with an example how arrays can be passed into a function | CO3 | L2
+    |
+
+    | What are the characteristics of recursive function? Explain with an example
+    | CO2,CO3 | L4 |
+
+    | What are arrays? Classify the declaration of one dimensional and 2 dimensional
+    array. | CO3 | L4 |
+
+    | Classify function declaration, function definition and calling function with
+    example. | CO3 | L4 |
+
+    | Classify string manipulation library function and explain them with example
+    | CO2, CO3, CO5 | L4 |
+
+    | Compare the working of recursion in a C program with example. | CO3 | L5 |
+
+    | Develop a C program to search an element using linear search | CO3 | L6 |
+
+    | Develop a C program to search an element using binary search | CO3 | L6 |
+
+    | Develop a C program to arrange elements in descending order using bubble sort
+    | CO2, CO3, CO5 | L6 |
+
+    | Write a program to print the sum of positive and negative numbers and return
+    average value | CO2, CO3, CO5 | L6 |
+
+    | Write a program to find the Fibonacci series using arrays | CO2, CO3, CO5 |
+    L6 |
+
+    | Write a program to find the smallest element in an array | CO2, CO3, CO5 | L6
+    |
+
+    | Develop a C program to perform addition of | CO2, | L6 |'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '|  |  |  |
+
+    |---|---|---|
+
+    | 2 matrices | CO3, CO5 |  |
+
+    | Develop a C program to perform product of 2 matrices | CO2, CO3 | L6 |
+
+    | Develop a C program to implement STRCOPY operation that copies one sting STR1
+    to another string STR2 without using library function | CO2, CO3 | L6 |
+
+    | Develop a C program to find the Number of Vowels, Consonants, Digits and White
+    space in a String | CO2, CO3 | L6 |
+
+    | Write a program to concatenate 2 strings | CO2, CO3 | L6 |
+
+    | Write a program to find the length of the given string | CO2, CO3 | L6 |
+
+    | Write a program to reverse a given string | CO2, CO3 | L6 |
+
+    | Write a program to find prime and Armstrong number using functions | CO2, CO3
+    | L6 |
+
+    | Write a program to find the factorial using recursion | CO2, CO3 | L6 |'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "# Module 4\n\n# Structures and file management\n\n# The type definition\n\n\
+    The typedef is a keyword that allows the programmer to create a new datatype name\
+    \ for an already existing data type. i.e it redefines the name of an existing\
+    \ data type.\n\nSyntax:\n\n```\ntypedef datatype new_name1,new_name2,.................,new_name\
+    \ n;\n```\n\n```\nex: typedef int MARKS,ID_NUMBER;\n```\n\nhere MARKS & ID_NUMBER\
+    \ are called user defined data types.\n\nUsing these types we can decalre variables..\n\
+    \n```\nMARKS sub1,sub2,sub3;\n```\n\nThe typedef definitions can be placed :\n\
+    \n+   - Prior to the prototype of any function\n+   - At the beginning of the\
+    \ program before declaring other variables.\n\nAdvantage:\n\n+   - Provides a\
+    \ meaningful way of declaring the variables\n+   - Increases the readability of\
+    \ the program\n+   - Complex and lengthy declaration can be reduced to short and\
+    \ meaningful declaration\n+   - Helps us to understand the source code\n\nNote:\
+    \ The user-defined data type will be in upper case\n\nExample program:\n\nTo compute\
+    \ Simple interest\n\n```\n#include<stdio.h>\ntypedef float\nAMOUNT; typedef\n\
+    float TIME; typedef\nfloat RATE; void main()\n{\n    AMOUNT p,si;\n    TIME t;\n\
+    \    RATE r;\n    printf(\"Enter p,t,r\\n\");\n    scanf(\"%%f%%f%%f\",&p,&t,&r);\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: "```\nsi=p*t*r/100;\nprintf(\"Simple interest=%f\\n\",si);\n}\n```\n\n# STRUCTURES\n\
+    \nStructures:\n\nA structure is a collection of one or more variables of same\
+    \ data type or dissimilar data types, grouped together under a single name.\n\n\
+    Example: A student information to be grouped may consists of Name of the student\
+    \ University number Average marks\n\nThe general syntax of a structure:\n\n```\n\
+    struct tagname\n{\n    Type1 member1;\n    Type2 member2;\n};\n```\n\n+   - Where\
+    \ struct is a keyword which tells the compiler that structure is being defined\n\
+    +   - Tagname is the name of the structure\n+   - Variables in a structure such\
+    \ as member1,member 2 are called as the members of the structure of fields of\
+    \ the structure.\n+   - Members can be int,float,char etc..\n+   - There should\
+    \ be semicolon at the end of the closing brace.\n\nNote:\n\nThe structure definition\
+    \ does not reserve any space in memory for the members. It is just a template.\n\
+    \n# Structure Declaration:\n\nThere are 3 different ways to declare a structure:\n\
+    \n+   ✓ Tagged structure\n+   ✓ Structure without tag\n+   ✓ Typedefined structure"
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "# Tagged structure:\n\nSynatx:\n\n```\nstruct tagname\n{\n    Type1 member1;\n\
+    \    Type2 member2;\n};\n```\n\nExample:\n\n```\nstruct student\n{\n    char name[10];\n\
+    \    int usn, marks;\n};\n```\n\n+   - Student is the name of the structure(tag\
+    \ name)\n+   - Struct student together represent the data type.\n+   - To allocate\
+    \ memory for structure ,variables must be declared.\n\nSyntax for structure variable\
+    \ declaration:\n\n```\nstruct tagname v1,v2,...vn;\n```\n\nExample:\n\n```\nstruct\
+    \ student s1,s2;\n```\n\nOnce the variable are declared , memory for the variables\
+    \ s1 amd s2 are allocated. The number of bytes allocated for the variables s1\
+    \ and s2 are 14 bytes respectively\n\n10 bytes for name\n\n2 bytes for usn\n\n\
+    2 bytes for marks\n\nThe total size of the memory allocated is the sum of sizes\
+    \ of individual members.\n\n# Structure without tag:\n\nThe structure without\
+    \ a tag name is called structure without tag.\n\nSyntax:\n\n```\nstruct\n{\n \
+    \   Type1 member1;\n    Type2 member2;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "}v1,v2...vn;\n\n# Example:\n\n```\nstruct\n{\n        char name[10];\n    \
+    \    int usn,marks;\n}s1,s2;\n```\n\n+   - In the absence of tag name, immediately\
+    \ after the right brace we have to declare the variables.\n\n# Type-defined structure:\n\
+    \nThe structure definition associated with the keyword typedef is called typedefined\
+    \ structure\n\n# Syntax:\n\n```\ntypedef struct\n{\n    Type1 member1;\n    Type2\
+    \ member2;\n}TYPE_ID;\n```\n\n# EXAMPLE:\n\n```\ntypedef struct\n{\n    char name[10];\n\
+    \    int usn,marks;\n}STUDENT;\n```\n\n+   - Struct and typedef are keywords.\n\
+    +   - STUDENT is the new data type created using typedef which can be used for\
+    \ the variable declaration.\n\n# Syntax for variable declaration:\n\n```\nTYPE_ID\
+    \ v1,v2...vn;\n```\n\n# Example:\n\n```\nSTUDENT s1,s2;\n```\n\n# Structure initialization:\n\
+    \n# Syntax:\n\n```\nstruct tagname variable={v1,v2...vn};\n```"
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: "Where struct tagname is derived data type\n\nV1,v2..vn are all the intial values\n\
+    \nExample:\n\n```\nstruct student\n{\n    char name[10];\n    int usn, marks;\n\
+    } s1 = {\"ram\",10,90};\n(or)\n```\n\n```\nstruct student\n{\n    char name[10];\n\
+    \    int usn, marks;\n};\nstruct student s1 = {\"ram\",10,90};\n(or)\n```\n\n\
+    ```\nstruct student\n{\n    char name[10];\n    int usn,marks;\n} s1 = {\"ram\"\
+    ,10,90}, s2 = {\"bheem\",11,99};\n```\n\n# Accessing structures:\n\nThe member\
+    \ of the structure can be accessed by specifying the variable name followed by\
+    \ a period(.) followed by the member name\n\nSyntax:\n\n```\nVariable.member\n\
+    ```\n\nExample:\n\n```\nstruct student\n{\n    char name[10];\n    int usn,marks;\n\
+    } s1 = {\"ram\",10,90};\n```\n\nThe members can be accessed as follows:\n\nBy\
+    \ specifying S1.name, we can access the string “ram”.\n\nBy specifying S1.usn,\
+    \ we can access 10."
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "By specifying S1.marks, we can access 90.\n\n# NESTED STRUCTURES:\n\nA structure\
+    \ which includes another structure is called as nested structure(i.e) a structure\
+    \ can be used a member of another structure.\n\nExample:\n\n```\nstruct subject\n\
+    {\n        int marks1;\n        int marks2;\n        int marks3;\n};\ntypedef\
+    \ struct\n{\n        char name[10];\n        int usn;\n        struct subject\
+    \ marks;\n}STUDENT;\n```\n\nThe above structure consists of a member marks whose\
+    \ type is struct subject(another structure). So this is called as nested structure.\n\
+    \n```\nSTUDENT s;\n```\n\nWe can access the fields suing the dot operator as follows:\n\
+    \n```\ns.name;\n\ns.usn;\n\ns.marks.marks1;\n\ns.marks.marks2;\n\ns.marks.marks3;\n\
+    ```\n\n# STRUCTURE CONATINING ARRAYS:\n\nA single or multi dimensional array of\
+    \ int, float,char and double can be used within the structure\n\nSyntax:\n\n```\n\
+    Typedef struct\n{\n        Char name[10];\n        Int marks[3];\n}STUDENT;\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "Delcaring structure variable\n\n```\nSTUDENT S;\n```\n\nAccessing members:\n\
+    \n```\nS.name;\n```\n\n```\ns.marks[0];\n```\n\n```\ns.marks[1];\n```\n\n```\n\
+    s.marks[2];\n```\n\n# ARRAY OF STRUCTURES:\n\nLike an array of integers we can\
+    \ have an array of structures.\n\nExample:\n\nSuppose we want to store the details\
+    \ of 50 students consisting of name and marks\n\nWe can write the definitition\
+    \ as\n\n```\ntypedef struct\n{\n    char name[20];\n    int marks;\n}STUDENT;\n\
+    ```\n\nWe can declare an array of structures as follows\n\n```\nSTUDENT s[50];\n\
+    ```\n\nThe structure elements can be accessed by s[i].name, s[i].marks\n\n# Structures\
+    \ and functions:\n\nThe structure or structure members can be passed to the function\
+    \ in various ways\n\n+   - By passing individual members\n+   - By passing the\
+    \ whole structure\n+   - By passign structures through pointers(Refer module 5)\n\
+    \n# By passing individual members:\n\nProgram to display the student details\n\
+    \n```\nstruct student\n{\n    char name[50];\n```"
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "```\nint usn;\n};\nvoid disp(char name[],int usn);------ function prototype\n\
+    void main()\n{\n    struct student s1;\n    printf(\"Enter name and usn\\n\");\n\
+    \    scanf(\"%s%d\",s1.name,&s1.usn);\n    disp(s1.name,s1.usn);------ function\
+    \ call\ngetch();\n}\nvoid disp(char name[],int usn)-- function definition\n{\n\
+    \    Printf(\"name=%s\\n\",name);\n    Printf(\"usn=%d\\n\",usn);\n}\n```\n\n\
+    # Explanation:\n\nIn the above example , function disp is called by passing individual\
+    \ member of the structure to the user-defined function. In the user-defined function,\
+    \ formal parameters are created to receive the value of name and usn from the\
+    \ actual paramters.\n\n# Passing the whole structure:\n\n```\nstruct student\n\
+    {\n    char name[50];\n    int usn;\n};\nvoid disp(struct student stu);------\
+    \ function prototype\nvoid main()\n{\n    struct student s1;\n    printf(\"Enter\
+    \ name and usn\\n\");\n    scanf(\"%s%d\",s1.name,&s1.usn);\n    disp(s1);------\
+    \ function call\ngetch();\n}\n```\n\n```\nvoid disp(struct student stu)-- function\
+    \ definition\n```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "```\n{\n    Printf(\"name=%s\\n\",stu.name);\n    Printf(\"usn=%d\\n\",stu.usn);\n\
+    }\n```\n\nExplanation:\n\nIn the above example, function disp is called by passing\
+    \ whole the structure to the user-defined function. In the user-defined function,\
+    \ formal parameter is declared is of type structure to receive the value of the\
+    \ actual parameter.\n\n# FILES\n\n> “File is place on the disk where a group of\
+    \ related data is stored”.\n\n# DEFINING AND OPENING A FILE\n\nIf you want to\
+    \ store the data in a file in the secondary memory we must specify certain things\
+    \ about the file to the os.\n\n+   ✓ File name\n+   ✓ Data structure\n+   ✓ Purpose\n\
+    \n# File name:\n\nFile name is a string of characters that make up a valid file\
+    \ name for the operating system\n\nIt may contain 2 parts, a primary name and\
+    \ an optional period with the extension\n\nExample:\n\n+   Prog.c\n+   Data.txt\n\
+    +   Output.c\n\n# Data strucuture:\n\nData structure of a file is defined as a\
+    \ structure FILE in stdio.h. Therefore all files should be declared as type FILE\
+    \ before they are used.\n\nWhen we open a file we must specify what we want ot\
+    \ do with the file(i.e) we may write data to the file or read the already existing\
+    \ data .\n\nSyntax for declaring and opening a file:\n\nThe first statement declares\
+    \ the variable fp as a pointer to the datatype FILE"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: "In both the functions, the first parameter is a file pointer which specifies\
+    \ which file has to be used here. The second parameter contains format specifier\
+    \ for the items in the list. The third parameter list can be a variable, constant\
+    \ or string.\n\nExample :\n\nCopying the content of a file containing name and\
+    \ roll no to another file.\n\n```\n```c\n#include<stdio.h>\nvoid main()\n{\n \
+    \       FILE  *fp1,*fp2;\n        char name[10];\n        int rollno;\n      \
+    \  fp1=fopen(\"file1.txt\",\"r\");\n        fp2=fopen(\"file2.txt\",\"w\");\n\
+    \        fscanf(fp1,\"%s%d\",name,&rollno);\n        fprintf(fp2,\" %s\\t%d\\\
+    n\",name,rollno);\n        getch();\n}\n```\n```\n\n# Fgets() and fputs()\n\n\
+    These functions are used to read & write a string of character from and to file.\n\
+    \nSyntax of fgets:\n\n```\n```c\nps=fgets(str,n,fp);\n```\n```\n\nHere str is\
+    \ an array of characters\n\n+   - n is number of characters to be read from the\
+    \ file\n+   - fp is a file pointer\n\nIf this function is successful, it returns\
+    \ pointer to the string read in. Otherwise it returns NULL. It reads n~1 character\
+    \ or a newline which ever comes first.If it reads a new line, it retains it as\
+    \ a part of the string and appends a null character. If it does not read a new\
+    \ line then it reads n~1 characters and appends null character at the end.\n\n\
+    Example:"
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: "# Program to read a line from file\n\n```\n#include<stdio.h>\nvoid main()\n\
+    {\n    FILE *fp;\n    char str[15];\n    char *ps;\n    fp=fopen(\"input.dat\"\
+    ,\"r\");\n    ps=fgets(str,10,fp);\n    if(ps!=NULL)\n    {\n        puts(str);\n\
+    \    }\n    else\n        printf(\"unsuccessfulreading\");\n}\n```\n\n# Syntax\
+    \ of fputs:\n\n```\nFputs(str,fp);\n```\n\nStr string to be written to a file\
+    \ pointed by fp.It doesn’t automatically writes a new line to file.If its present\
+    \ then only it writes.\n\n# Example:\n\n```\nvoid main()\n{\n    FILE *fp;\n \
+    \   char str[15];\n    char *ps;\n    printf(\"enter the string\\n\");\n    gets(str);\n\
+    \    fp=fopen(\"file.txt\",\"w\");\n    fputs(str,fp);\n    fclose(fp);\n}\n```\n\
+    \n# fgetc and fputc():\n\nfgetc () is used to read a character from the file.\n\
+    \nfputc() is used write a character to a file.\n\n# Syntax:"
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: "fputc(c,fp1);\n\nC is character to be inserted to a file\n\nFp1 is a file pointer\
+    \ returned by fopen\n\nC=fgetc(fp1);\n\nReturns a character from the file pointed\
+    \ by fp1.\n\nExample:\n\nProgram to copy a single character from one file to another\
+    \ file.\n\n```\nvoid main()\n{\n    FILE *fp1,*fp2;\n    char c;\n    fp1=fopen(\"\
+    f1.txt\",\"r\");\n    fp2=fopen(\"f2.txt\",\"w\");\n    c=fgetc(fp1);\n    fputc(c,fp2);\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# Sample Questions
+
+
+    | Questions | RBT Levels | CO’s |
+
+    |---|---|---|
+
+    | Describe structures. Explain how to declare and initialize a structure. | L1
+    | CO4, CO5 |
+
+    | Describe file. Explain different modes of files. | L1 | CO4, CO5 |
+
+    | What is the output of this C code?\n\n```c\n#include <stdio.h>\nstruct student\n{\n    char
+    *name;\n};\n\nvoid main()\n{\n    struct student s, m;\n    s.name = "st";\n    m
+    = s;\n    printf("%s%s", s.name, m.name);\n}\n``` | L2 | CO4, CO5 |
+
+    | Explain the operations which are illegal in structure implementation | L2 |
+    CO4, CO5 |
+
+    | Illustrate with an example how structures are defined, declared and initialized.
+    | L3 | CO4, CO5 |
+
+    | Illustrate with an example how structure members are accessed | L3 | CO4, CO5
+    |
+
+    | Illustrate with syntax how a file can be opened and closed. | L3 | CO4, CO5
+    |
+
+    | What are the characteristics of files | L4 | CO4, CO5 |
+
+    | What are the characteristics of structure | L4 | CO4, CO5 |
+
+    | Trace the following code and explain what will be the output.\n\n```c\n#include<stdio.h>\nstruct\n{\n    int
+    i;\n    float ft;\n}decl;\nint main()\n{\n    decl.i = 4;\n    decl.ft = 7.96623;\n    printf("%d
+    %.2f", decl.i, decl.ft);\n    return 0;\n}\n``` | L5 | CO4, CO5 |'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "| What is the similarity between a structure, union and enumeration? | L5 |\
+    \ CO4, CO5 | \n| Develop a C program to search for a name in an array of structure\
+    \ | L6 | CO4, CO5 | \n| Develop a C program to read student name and USN from\
+    \ two different files and write into a different file. | L6 | CO4, CO5 | \n| Write\
+    \ a C program to read n numbers from keyboard and write into a file. | L6 | CO4,\
+    \ CO5 | \n| Write a C program to copy contents of one file to another file | L6\
+    \ | CO4, CO5 | \n| Write a program to Store Information(name, roll and marks)\
+    \ of a Student Using Structure | L6 | CO4, CO5 | \n| Write a C program to write\
+    \ all the members of an array of structures to a file using fwrite(). Read the\
+    \ array from the file and display on the screen. | L6 | CO4, CO5 | \n| Write a\
+    \ C program to read name and marks of n number of students from user and store\
+    \ them in a file. If the file previously exits, add the information of n students.\
+    \ | L6 | CO4, CO5 | \n| Write a C program to Calculate Difference Between Two\
+    \ Time Periods using structures. | L6 | CO4, CO5 |"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '# MODULE 5:
+
+
+    # 5.1 Data Structure in C
+
+
+    **Data structures** are used to store data in a computer in an organized form.
+    In C language Different types of data structures are; Array, Stack, Queue, Linked
+    List, Tree.
+
+
+    +   - **Array:** Array is collection of similar data type, you can insert and
+    deleted element form array without follow any order.
+
+    +   - **Stack:** Stack work on the basis of Last-In-First-Out (LIFO). Last entered
+    element removed first.
+
+    +   - **Queue:** Queue work on the basis of First-In-First-Out (FIFO). First entered
+    element removed first.
+
+    +   - **Linked List:** Linked list is the collection of node, Here you can insert
+    and delete data in any order.
+
+    +   - **Tree:** Stores data in a non linear form with one root node and sub nodes.
+
+
+    # 5.1.1 Array in Data Structure
+
+
+    An **Array** is a collection of similar data type value in a single variable.
+    An array is a derived data type in C, which is constructed from fundamental data
+    type of C language.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_134_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# Insert element in array at specific position
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<conio.h>
+
+
+    void main()
+
+    {
+
+    inti,a[5],no,pos;
+
+    clrscr();
+
+    printf("Enter element in array: ");
+
+    for(i=0;i<5;i++)
+
+    {
+
+    scanf("%d",&a[i]);
+
+    }
+
+    printf("\nStored element in array: ");
+
+    for(i=0;i<5;i++)
+
+    {
+
+    printf(" %d",a[i]);
+
+    }
+
+    printf("\nEnter position for enter element: ");
+
+    scanf("%d",&pos);
+
+    if(pos>5)
+
+    {
+
+    printf("\nThis is out of range");
+
+    }
+
+    else
+
+    {
+
+    printf("\nEnter new element: ");
+
+    scanf("%d",&no);
+
+    --pos;
+
+    for(i=5;i>=pos;i--)
+
+    {
+
+    a[i+1]=a[i];
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: '```
+
+    }
+
+    a[pos]=no;
+
+    printf("\nStored data in array: ");
+
+    for(i=0;i<6;i++)
+
+    {
+
+    printf(" %d",a[i]);
+
+    }
+
+    }
+
+    getch();
+
+    }
+
+    ```
+
+
+    # Output
+
+
+    Enter elements in array:4
+
+    4
+
+    2
+
+    5
+
+    7
+
+    Stored data in array:4257
+
+    Enter position for enter element:2
+
+    Enternew element:8
+
+    Stored data in array:42578
+
+
+    # Delete array element at specific position
+
+
+    ```
+
+    #include <stdio.h>
+
+    void main()
+
+    {
+
+    intvectorx[10];
+
+    int i, n,pos, element, found =0;
+
+
+    printf("Enter how many elements\n");
+
+    scanf("%d",&n);
+
+    printf("Enter the elements\n");
+
+
+    for(i =0; i < n; i++)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: '```
+
+    {
+
+    scanf("%d",&vectorx[i]);
+
+    }
+
+
+    printf("Input array elements are\n");
+
+    for(i =0; i < n; i++)
+
+    {
+
+    printf("%d\n",vectorx[i]);
+
+    }
+
+
+    printf("Enter the element to be deleted\n");
+
+    scanf("%d",&element);
+
+
+    for(i =0; i < n; i++)
+
+    {
+
+    if(vectorx[i]== element)
+
+    {
+
+    found=1;
+
+    pos= i;
+
+    break;
+
+    }
+
+    }
+
+
+    if(found ==1)
+
+    {
+
+    for(i =pos; i < n -1; i++)
+
+    {
+
+    vectorx[i]=vectorx[i +1];
+
+    }
+
+
+    printf("The resultant vector is \n");
+
+    for(i =0; i < n -1; i++)
+
+    {
+
+    printf("%d\n",vectorx[i]);
+
+    }
+
+    }
+
+    else
+
+    printf("Element %d is not found in the vector\n", element);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# 5.1.2 Queue in C
+
+
+    Queue is work on the principal of **First-In-First-Out (FIFO)**, it means first
+    entered item remove first. Queue have two end front and rear, from front you can
+    insert element and from rear you can delete element.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_139_0.png)
+
+
+    # Real life example of Queue
+
+
+    A common example of queue is movie theater ticket counter, there first person
+    who stand in front of ticket window take ticket first and remove from line and
+    new person always stand in line from end.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_139_1.png)
+
+
+    Real Life Example of Queue : Library Counter'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# Single-Lane One-Way Road: First car go first
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_140_0.png)
+
+
+    Ticket Counter: First person get ticket first and go out first
+
+
+    # Some other Real Life Examples of Queue are
+
+
+    +   - Queue of processes in OS.
+
+    +   - Queue of people at any service point such as ticketing etc.
+
+    +   - Queue of packets in data communication.
+
+    +   - Queue of air planes waiting for landing instructions.
+
+
+    # Application of Queue Data Structure in C
+
+
+    Queues are used for any situation where you want to efficiently maintain a First-in-first
+    out order on some entities. Transport and operations research where various entities
+    are stored and held to be processed later i.e the queue performs the function
+    of a buffer.
+
+
+    In a multitasking operating system, the CPU cannot run all jobs at once, so jobs
+    must be batched up and then scheduled according to some policy. Again, a queue
+    might be a suitable option in this case.
+
+
+    # Operation on a queue
+
+
+    The basic operation that can be perform on queue are;
+
+
+    +   - Insert an element in a queue.
+
+    +   - Delete an element from the queue.'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# Insert an element in a queue.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_141_0.png)
+
+
+    In queue insert any element form Rear. If you insert new element in queue value
+    of Rear will be increased by 1.
+
+
+    # Insert element in queue
+
+
+    ```
+
+    void insert()
+
+    {
+
+    int item;
+
+    printf("Element : ");
+
+    scanf("%d",&item);
+
+    if(front==(rear+1)%3)
+
+    {
+
+    printf("Queue is Full");
+
+    return;
+
+    }
+
+    if(front==-1)
+
+    {
+
+    rear=front=0;
+
+    }
+
+    else
+
+    {
+
+    rear=(rear+1)%3;
+
+    }
+
+    cque.cqueue[rear]=item;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '```
+
+    printf("Successfully Insert");
+
+    }
+
+    ```
+
+
+    # Delete any element from the queue.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_142_0.png)
+
+
+    In queue delete an element form Front. If you delete an element from queue value
+    of Front will be increased by 1.
+
+
+    # Delete element from queue
+
+
+    ```
+
+    voiddel()
+
+    {
+
+    intnum;
+
+    if(front==-1)
+
+    {
+
+    printf("Queue Empty");
+
+    return;
+
+    }
+
+    else
+
+    {
+
+    num=cque.cqueue[front];
+
+    printf("Deleted item : %d",num);
+
+    }
+
+    if(front==rear)
+
+    {
+
+    front=-1;
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: "```\n```c\ncase3:\n    display();\n    break;\ncase0:\n    exit(0);\n    break;\n\
+    default:\n    printf(\"\\n\\n Invalid Option \");\n}\ngetch();\n}\n}\n\nvoid insert()\n\
+    {\n    int item;\n    printf(\"Element : \");\n    scanf(\"%d\",&item);\n    if(front==(rear+1)%3)\n\
+    \    {\n        printf(\"Queue is Full\");\n        return;\n    }\n    if(front==-1)\n\
+    \    {\n        rear=front=0;\n    }\n    else\n    {\n        rear=(rear+1)%3;\n\
+    \    }\n    cque.cqueue[rear]=item;\n    printf(\"Successfully Insert\");\n}\n\
+    \nvoid del()\n{\n    int num;\n    if(front==-1)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_146_0.png)
+
+
+    https://www.sitesbay.com/data-structure/c-queue
+
+
+    # 5.1.3 Linked List in C
+
+
+    Linked list is a special type of data structure where all data elements are linked
+    to one another. Linked list is the collection of nodes and every nodes contains
+    two parts data part and address part.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_146_1.png)
+
+
+    # Why use Linked List
+
+
+    Suppose you want ot store marks of 50 students, so need to write code like below;'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# Example
+
+
+    ```
+
+    int marks[50];
+
+    ```
+
+
+    But some time you need to store more than 50 students marks, in that case you
+    can not increase memory of array, and some time you need to store less than 50
+    students marks in this case extra memory will be wastage. To overcome this problem
+    you need to use Linked List because in linked list memory will be created at run
+    time.
+
+
+    # Advantages of linked list
+
+
+    +   - Linked List is Dynamic data Structure.
+
+    +   - You can change size of Linked List during program run time.
+
+    +   - Insertion and Deletion Operations are Easier, you can insert any node at
+    any place and also delete any node easily..
+
+    +   - No memory wastage ,i.e no need to pre-allocate memory
+
+    +   - Faster Access time,can be expanded in constant time without memory overhead
+
+    +   - You can easily implement Linear Data Structures such as Stack,Queue using
+    Linked list
+
+
+    # Advantages of linked list
+
+
+    +   - **Dynamic Data Structure:** The size of linked list increase and decrease
+    during program execution.
+
+    +   - **No memory wastage:** In linked list memory will be allocated at the time
+    of program execution so no memory wastage.
+
+    +   - **Easily insert and delete data:** In linked list you can insert any data
+    at specific position and also delete any data from specific position.
+
+
+    # Dis-Advantages of linked list
+
+
+    +   - **Need more memory:** For store data in linked list you need more memory
+    space, you need memory space for both data and address part.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# Real life example of Linked list
+
+
+    A common example of linked list is train, in this case all the buggies are nodes
+    and two coaches are connected using the connectors, peoples seating arrangement
+    inside the coaches is called as data part of linked list while connection between
+    two buggies is address filed of linked list.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_148_0.png)
+
+
+    Like linked list, trains also have last coach which is not further connected to
+    any of the buggies. Engine can be called as first node of linked list and last
+    buggies are last node of linked list.
+
+
+    https://www.sitesbay.com/data-structure/c-linked-list
+
+
+    # 5.1.4 Stack in C
+
+
+    **Stack** is linear data structure. In stack addition of new data item and deletion
+    of already existing data item is done from only one end, known as **top**. Working
+    of stack on the basis of **Last-in-First-out (LIFO)** principal, it means last
+    entered item remove first.'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_149_0.png)
+
+
+    # Real life example of stack
+
+
+    A most popular example of stack is plates in marriage party. Fresh plates are
+    **pushed** onto to the top and **popped** from the top.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_149_1.png)
+
+
+    # Stack Operation
+
+
+    In stack data structure mainly perform two operation; push and pop
+
+
+    +   - **pop:** In case of stack deletion of any item from stack is called pop.
+
+    +   - **push:** In case of stack Insertion of any item in stack is called push.
+
+
+    # Push Operation'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: 'In case of stack Insertion of any item in stack is called **push**. In stack
+    any item is inserted from top of the stack, When you insert any item in stack
+    top will be increased by 1.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_150_0.png)
+
+
+    # Algorithm for push
+
+
+    +   1. Initialization, set top=-1
+
+    +   2. Repeat step 3 to 5 until top<Max size-1
+
+    +   3. Read, item
+
+    +   4. Set top=top+1
+
+    +   5. Set stack[top]=item
+
+    +   6. Print "stack overflow"
+
+
+    # Example of push item in stack
+
+
+    ```
+
+    void push()
+
+    {
+
+    int item;
+
+    if(top==size-1)
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '```
+
+    printf("\n stack is full");
+
+    }
+
+    else
+
+    {
+
+    top=top+1;
+
+    printf("\n\n Enter element in stack: ");
+
+    scanf("%d",&s.item);
+
+    s.stack[top]=s.item;
+
+    }
+
+    }
+
+    ```
+
+
+    # POP Operation
+
+
+    In case of stack deletion of any item from stack is called **pop**. In any item
+    is delete from top of the stack, When you delete any item from stack top will
+    be decreased by 1.
+
+
+    ![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_151_0.png)
+
+
+    # Algorithm for pop
+
+
+    +   1. Repeated steps 2 to 4 until top>=0'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '+   2. Set item=stack[top]
+
+    +   3. Set top=top-1
+
+    +   4. Print "Item deleted"
+
+    +   5. Print "Stack under flow"
+
+
+    # Example
+
+
+    ```
+
+    void pop()
+
+    {
+
+    int item;
+
+    if(top==-0)
+
+    {
+
+    printf("\\nStack is empty: ");
+
+    }
+
+    else
+
+    {
+
+    s.item=s.stack[top];
+
+    top=top-1;
+
+    printf("deleted data is: %d",s.item);
+
+    }
+
+    }
+
+    ```
+
+
+    [https://www.sitesbay.com/data-structure/c-stack-pop-operation](https://www.sitesbay.com/data-structure/c-stack-pop-operation)
+
+
+    # Example of Stack in C
+
+
+    Program of stack is very simple when you insert any item in stack top will be
+    increased by 1 and when you pop any item from stack top will be decreased by 1.
+    Both insertion and deletion operation in stack perform from top of stack.
+
+
+    # Example
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<conio.h>
+
+    #include<stdlib.h>
+
+
+    #define size 5
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '```
+
+    ```c
+
+    void pop();
+
+    void push();
+
+    void display();
+
+
+    struct stack
+
+    {
+
+    int item;
+
+    int stack[size];
+
+    }s;
+
+
+    int top=-1;
+
+
+    void push()
+
+    {
+
+    if(top==size-1)
+
+    {
+
+    printf("\n stack is full");
+
+    }
+
+    else
+
+    {
+
+    top=top+1;
+
+    printf("\n\n Enter element in stack: ");
+
+    scanf("%d",&s.item);
+
+    s.stack[top]=s.item;
+
+    }
+
+    }
+
+
+    void pop()
+
+    {
+
+    if(top==0)
+
+    {
+
+    printf("\nStack is empty: ");
+
+    }
+
+    else
+
+    {
+
+    s.item=s.stack[top];
+
+    top=top-1;
+
+    printf("deleted data is: %d",s.item);
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: "```\n}\n}\n\nvoid display()\n{\nint i;\nif(top==0)\n{\nprintf(\"\\n Stack is\
+    \ empty: \");\n}\nelse\n{\nfor(i=top;i>0;i--)\n{\nprintf(\"\\n%d\",s.stack[i]);\n\
+    }\n}\n}\n\nvoid main()\n{\ncharch,c;\n\ndo\n{\nu:\nclrscr();\nprintf(\"\\n\\n1:\
+    \ push\");\nprintf(\"\\n2: pop\");\nprintf(\"\\n3: display\");\nprintf(\"\\n4:\
+    \ exit\");\nprintf(\"\\nenter your choice: \");\nscanf(\"%d\",&ch);\nswitch(ch)\n\
+    {\ncase1:\n    up:\n    push();\n    break;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: "```\ncase2:\n    pop();\n    break;\ncase3:\n    display();\n    break;\ncase4:\n\
+    \    exit();\n    break;\ndefault:\n    printf(\"\\nwrong choice\");\n}\nprintf(\"\
+    \\n\\n Pushed an element (Y/N)\");\nc=getch();\nif(c=='y'||c=='Y')\n{\n    goto\
+    \ up;\n}\nelse\n{\n    goto u;\n}\n}\nwhile(ch!='5');\n}\n```\n\n![](img/bb6d48ce0279cc8c245e23e6b7e31d4d_155_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: "[https://www.sitesbay.com/data-structure/c-stack-example](https://www.sitesbay.com/data-structure/c-stack-example)\n\
+    \n# 5.1.5 Binary Tree | Set 1 (Introduction)\n\n**Trees:** Unlike Arrays, Linked\
+    \ Lists, Stack and queues, which are linear data structures, trees are hierarchical\
+    \ data structures.\n\n**Tree Vocabulary:** The topmost node is called root of\
+    \ the tree. The elements that are directly under an element are called its children.\
+    \ The element directly above something is called its parent. For example, a is\
+    \ a child of f and f is the parent of a. Finally, elements with no children are\
+    \ called leaves.\n\n```\ntree\n----\n  j  <-- root\n / \\\\\n f   k\n/ \\\\  \
+    \ \\\\\na  h   z  <-- leaves\n```\n\n# Why Trees?\n\n+   1. One reason to use\
+    \ trees might be because you want to store information that naturally forms a\
+    \ hierarchy. For example, the file system on a computer:\n\n```\nfile system\n\
+    -----------\n    /   <-- root\n   / \\\\\n ...  home\n      /   \\\\\n   ugrad\
+    \  course\n      /    /  |  \\\\\n    ...  cs101 cs112 cs113\n```\n\n+   2. Trees\
+    \ (with some ordering e.g., BST) provide moderate access/search (quicker than\
+    \ Linked List and slower than arrays).\n+   3. Trees provide moderate insertion/deletion\
+    \ (quicker than Arrays and slower than Unordered Linked Lists)."
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '4. Like Linked Lists and unlike Arrays, Trees don’t have an upper limit on
+    number of nodes as nodes are linked using pointers.
+
+
+    # Main applications of trees include:
+
+
+    +   1. Manipulate hierarchical data.
+
+    +   2. Make information easy to search (see tree traversal).
+
+    +   3. Manipulate sorted lists of data.
+
+    +   4. As a workflow for compositing digital images for visual effects.
+
+    +   5. Router algorithms
+
+    +   6. Form of a multi-stage decision-making (see business chess).
+
+
+    Binary Tree: A tree whose elements have at most 2 children is called a binary
+    tree. Since each element in a binary tree can have only 2 children, we typically
+    name them the left and right child.
+
+
+    Binary Tree Representation in C: A tree is represented by a pointer to the topmost
+    node in tree. If the tree is empty, then value of root is NULL.
+
+    A Tree node contains following parts.
+
+
+    +   1. Data
+
+    +   2. Pointer to left child
+
+    +   3. Pointer to right child
+
+
+    # 5.2 Dynamic memory allocation in C
+
+
+    The concept of dynamic memory allocation in c language enables the C programmer
+    to allocate memory at runtime. Dynamic memory allocation in c language is possible
+    by 4 functions of stdlib.h header file.
+
+
+    +   1. malloc()
+
+    +   2. calloc()
+
+    +   3. realloc()
+
+    +   4. free()
+
+
+    Before learning above functions, let''s understand the difference between static
+    memory allocation and dynamic memory allocation.
+
+
+    static memory allocation
+
+    memory is allocated at compile time.
+
+    memory can''t be increased while
+
+
+    dynamic memory allocation
+
+    memory is allocated at run time.
+
+    memory can be increased while'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: 'executing program.
+
+    used in array.
+
+    executing program.
+
+    used in linked list.
+
+
+    Now let''s have a quick look at the methods used for dynamic memory allocation.
+
+
+    **malloc()** allocates single block of requested memory.
+
+    **calloc()** allocates multiple block of requested memory.
+
+    **realloc()** reallocates the memory occupied by malloc() or calloc() functions.
+
+    **free()** frees the dynamically allocated memory.
+
+
+    For complete tutorial of dynamic memory allocation refer to the link below:
+
+
+    https://www.youtube.com/watch?v=xDVC3wKjS64
+
+
+    # 5.3 C - Preprocessors
+
+
+    The **C Preprocessor** is not a part of the compiler, but is a separate step in
+    the compilation process. In simple terms, a C Preprocessor is just a text substitution
+    tool and it instructs the compiler to do required pre-processing before the actual
+    compilation. We''ll refer to the C Preprocessor as CPP.
+
+
+    All preprocessor commands begin with a hash symbol (#). It must be the first nonblank
+    character, and for readability, a preprocessor directive should begin in the first
+    column. The following section lists down all the important preprocessor directives
+    –
+
+
+    **Sr.No.**        **Directive & Description**
+
+
+    1        **#define**
+
+    Substitutes a preprocessor macro.
+
+
+    2        **#include**
+
+    Inserts a particular header from another file.
+
+
+    3        **#undef**
+
+    Undefines a preprocessor macro.'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '4 #ifdef
+
+    Returns true if this macro is defined.
+
+
+    5 #ifndef
+
+    Returns true if this macro is not defined.
+
+
+    6 #if
+
+    Tests if a compile time condition is true.
+
+
+    7 #else
+
+    The alternative for #if.
+
+
+    8 #elif
+
+    #else and #if in one statement.
+
+
+    9 #endif
+
+    Ends preprocessor conditional.
+
+
+    10 #error
+
+    Prints error message on stderr.
+
+
+    # How a Preprocessor works in C?
+
+
+    # 1. #include
+
+
+    The #include preprocessor directive is used to paste code of given file into current
+    file. It is used include system-defined and user-defined header files. If included
+    file is not found, compiler renders error. It has three variants:
+
+
+    #include <file>
+
+
+    This variant is used for system header files. It searches for a file named file
+    in a list of directories specified by you, then in a standard list of system directories.'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# #include "file"
+
+
+    This variant is used for header files of your own program. It searches for a file
+    named file first in the current directory, then in the same directories used for
+    system header files. The current directory is the directory of the current input
+    file.
+
+
+    # #include anything else
+
+
+    This variant is called a computed #include. Any #include directive whose argument
+    does not fit the above two forms is a computed include.
+
+
+    # 2. Macro''s (#define)
+
+
+    Let''s start with macro, as we discuss, a macro is a segment of code which is
+    replaced by the value of macro. Macro is defined by #define directive.
+
+
+    # Syntax
+
+
+    ```
+
+    #define token value
+
+    ```
+
+
+    There are two types of macros:
+
+
+    +   1. Object-like Macros
+
+    +   2. Function-like Macros
+
+
+    # 1. Object-like Macros
+
+
+    The object-like macro is an identifier that is replaced by value. It is widely
+    used to represent numeric constants. For example:
+
+
+    ```
+
+    #define PI 3.1415
+
+    ```
+
+
+    Here, PI is the macro name which will be replaced by the value 3.14. Let''s see
+    an example of Object-like Macros :
+
+
+    ```
+
+    #include <stdio.h>
+
+    #define PI 3.1415
+
+    main()
+
+    {
+
+    printf("%f",PI);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '}
+
+
+    # Output:
+
+
+    3.14000
+
+
+    # 2. Function-like Macros
+
+
+    The function-like macro looks like function call. For example:
+
+
+    ```
+
+    #define MIN(a,b) ((a)<(b)?(a):(b))
+
+    ```
+
+
+    Here, MIN is the macro name. Let''s see an example of Function-like Macros :
+
+
+    ```
+
+    #include <stdio.h>
+
+    #define MIN(a,b) ((a)<(b)?(a):(b))
+
+    void main(){
+
+    printf("Minimum between 10 and 20 is: %d\n",MIN(10,20));
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    Minimum between 10 and 20 is: 10
+
+
+    # Preprocessor Formatting
+
+
+    A preprocessing directive cannot be more than one line in normal circumstances.
+    It may be split cosmetically with Backslash-Newline. Comments containing Newlines
+    can also divide the directive into multiple lines.
+
+
+    for example, you can split a line cosmetically with Backslash-Newline anywhere:
+
+
+    ```
+
+    /*
+
+    */ # /*
+
+    */defi\
+
+    ne FO\
+
+    0 10\
+
+    20
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: 'is equivalent into #define FOO 1020.
+
+
+    # 3. #undef
+
+
+    To undefine a macro means to cancel its definition. This is done with the #undef
+    directive.
+
+
+    # Syntax:
+
+
+    #undef token
+
+
+    # define and undefine example
+
+
+    ```
+
+    ```c
+
+    #include <stdio.h>
+
+    #define PI 3.1415
+
+    #undef PI
+
+    main(){
+
+    printf("%f",PI);
+
+    }
+
+    ```
+
+    ```
+
+
+    # Output:
+
+
+    Compile Time Error: ''PI'' undeclared
+
+
+    # 4. #ifdef
+
+
+    The #ifdef preprocessor directive checks if macro is defined by #define. If yes,
+    it executes the code.
+
+
+    # Syntax:
+
+
+    ```
+
+    ```c
+
+    #ifdef MACRO
+
+    //code
+
+    #endif
+
+    ```
+
+    ```
+
+
+    # 5. #ifndef
+
+
+    The #ifndef preprocessor directive checks if macro is not defined by #define.
+    If yes, it executes the code.
+
+
+    # Syntax:'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '```
+
+    #ifndef MACRO
+
+    //code
+
+    #endif
+
+    ```
+
+
+    # 6. #if
+
+
+    The #if preprocessor directive evaluates the expression or condition. If condition
+    is true, it executes the code.
+
+
+    # Syntax:
+
+
+    ```
+
+    #if expression
+
+    //code
+
+    #endif
+
+    ```
+
+
+    # 7. #else
+
+
+    The #else preprocessor directive evaluates the expression or condition if condition
+    of #if is false. It can be used with #if, #elif, #ifdef and #ifndef directives.
+
+
+    # Syntax:
+
+
+    ```
+
+    #if expression
+
+    //if code
+
+    #else
+
+    //else code
+
+    #endif
+
+    ```
+
+
+    # Syntax with #elif
+
+
+    ```
+
+    #if expression
+
+    //if code
+
+    #elif expression
+
+    //elif code
+
+    #else
+
+    //else code
+
+    #endif
+
+    ```
+
+
+    # Example'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '# 5.4 C - Pointers
+
+
+    Pointers in C are easy and fun to learn. Some C programming tasks are performed
+    more easily with pointers, and other tasks, such as dynamic memory allocation,
+    cannot be performed without using pointers. So it becomes necessary to learn pointers
+    to become a perfect C programmer. Let''s start learning them in simple and easy
+    steps.
+
+
+    As you know, every variable is a memory location and every memory location has
+    its address defined which can be accessed using ampersand (&) operator, which
+    denotes an address in memory. Consider the following example, which prints the
+    address of the variables defined –
+
+
+    Live Demo
+
+
+    ```
+
+    #include<stdio.h>
+
+
+    int main (){
+
+
+    int var1;
+
+    char var2[10];
+
+
+    printf("Address of var1 variable: %x\n",&var1 );
+
+    printf("Address of var2 variable: %x\n",&var2 );
+
+
+    return0;
+
+    }
+
+    ```
+
+
+    When the above code is compiled and executed, it produces the following result
+    –
+
+
+    Address of var1 variable: bff5a400
+
+    Address of var2 variable: bff5a3f6'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '# 5.4.1 What are Pointers?
+
+
+    A **pointer** is a variable whose value is the address of another variable, i.e.,
+    direct address of the memory location. Like any variable or constant, you must
+    declare a pointer before using it to store any variable address. The general form
+    of a pointer variable declaration is –
+
+
+    ```
+
+    type *var-name;
+
+    ```
+
+
+    Here, **type** is the pointer''s base type; it must be a valid C data type and
+    **var-name** is the name of the pointer variable. The asterisk * used to declare
+    a pointer is the same asterisk used for multiplication. However, in this statement
+    the asterisk is being used to designate a variable as a pointer. Take a look at
+    some of the valid pointer declarations –
+
+
+    ```
+
+    int  *ip;  /* pointer to an integer */
+
+    double *dp;  /* pointer to a double */
+
+    float *fp;  /* pointer to a float */
+
+    char  *ch   /* pointer to a character */
+
+    ```
+
+
+    The actual data type of the value of all pointers, whether integer, float, character,
+    or otherwise, is the same, a long hexadecimal number that represents a memory
+    address. The only difference between pointers of different data types is the data
+    type of the variable or constant that the pointer points to.
+
+
+    # 5.4.2 How to Use Pointers?
+
+
+    There are a few important operations, which we will do with the help of pointers
+    very frequently. (**a**) We define a pointer variable, (**b**) assign the address
+    of a variable to a pointer and (**c**) finally access the value at the address
+    available in the pointer variable. This is done by using unary operator * that
+    returns the value of the variable located at the address specified by its operand.
+    The following example makes use of these operations –
+
+
+    Live Demo
+
+
+    ```
+
+    #include<stdio.h>
+
+    ```
+
+
+    ```
+
+    int main (){
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: '```
+
+    intvar=20; /* actual variable declaration */
+
+    int*ip; /* pointer variable declaration */
+
+
+    ip=&var; /* store address of var in pointer variable */
+
+
+    printf("Address of var variable: %x\n",&var);
+
+
+    /* address stored in pointer variable */
+
+    printf("Address stored in ip variable: %x\n",ip);
+
+
+    /* access the value using the pointer */
+
+    printf("Value of *ip variable: %d\n",*ip);
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    When the above code is compiled and executed, it produces the following result
+    –
+
+
+    Address of var variable: bffd8b3c
+
+    Address stored in ip variable: bffd8b3c
+
+    Value of *ip variable: 20
+
+
+    # 5.4.3 Key points to remember about pointers in C:
+
+
+    +   - Normal variable stores the value whereas pointer variable stores the address
+    of the variable.
+
+    +   - The content of the C pointer always be a whole number i.e. address.
+
+    +   - Always C pointer is initialized to null, i.e. int *p = null.
+
+    +   - The value of null pointer is 0.
+
+    +   - & symbol is used to get the address of the variable.
+
+    +   - * symbol is used to get the value of the variable that the pointer is pointing
+    to.
+
+    +   - If a pointer in C is assigned to NULL, it means it is pointing to nothing.
+
+    +   - Two pointers can be subtracted to know how many elements are available between
+    these two pointers.'
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: '+   - But, Pointer addition, multiplication, division are not allowed.
+
+    +   - The size of any pointer is 2 byte (for 16 bit compiler).
+
+
+    # 5.4.4 A Simple Example of Pointers in C
+
+
+    This program shows how a pointer is declared and used. There are several other
+    things that we can do with pointers, we have discussed them later in this guide.
+    For now, we just need to know how to link a pointer to the address of a variable.
+
+
+    **Important point to note is:** The data type of pointer and the variable must
+    match, an int pointer can hold the address of int variable, similarly a pointer
+    declared with float data type can hold the address of a float variable. In the
+    example below, the pointer and the variable both are of int type.
+
+
+    ```
+
+    ```c
+
+    #include<stdio.h>
+
+    int main()
+
+    {
+
+    //Variable declaration
+
+    intnum=10;
+
+
+    //Pointer declaration
+
+    int*p;
+
+
+    //Assigning address of num to the pointer p
+
+    p =#
+
+
+    printf("Address of variable num is: %p", p);
+
+    return0;
+
+    }
+
+    ```
+
+    ```
+
+
+    Output:
+
+
+    Address of variable numis:0x7fff5694dc58
+
+
+    # C Pointers – Operators that are used with Pointers
+
+
+    Lets discuss the operators & and * that are used with Pointers in C.'
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: '# 5.4.5 “Address of”(&) Operator
+
+
+    We have already seen in the first example that we can display the address of a
+    variable using ampersand sign. I have used &num to access the address of variable
+    num. The **& operator** is also known as **“Address of” Operator.**
+
+
+    ```
+
+    printf("Address of var is: %p",&num);
+
+    ```
+
+
+    **Point to note:** %p is a format specifier which is used for displaying the address
+    in hex format.
+
+
+    Now that you know how to get the address of a variable but **how to store that
+    address in some other variable?** That’s where pointers comes into picture. As
+    mentioned in the beginning of this guide, pointers in C programming are used for
+    holding the address of another variables.
+
+
+    **Pointer is just like another variable, the main difference is that it stores
+    address of another variable rather than a value.**
+
+
+    # “Value at Address”(*) Operator
+
+
+    The * Operator is also known as **Value at address operator.**
+
+
+    # How to declare a pointer?
+
+
+    ```
+
+    int*p1  /*Pointer to an integer variable*/
+
+    double*p2  /*Pointer to a variable of data type double*/
+
+    char*p3  /*Pointer to a character variable*/
+
+    float*p4  /*pointer to a float variable*/
+
+    ```
+
+
+    The above are the few examples of pointer declarations. **If you need a pointer
+    to store the address of integer variable then the data type of the pointer should
+    be int.** Same case is with the other data types.
+
+
+    By using * operator we can access the value of a variable through a pointer. For
+    example:
+
+
+    ```
+
+    double a =10;
+
+    double*p;
+
+    p =&a;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: "*p would give us the value of the variable a. The following statement would\
+    \ display 10 as output.\n\n```\nprintf(\"%d\",*p);\n```\n\nSimilarly if we assign\
+    \ a value to *pointer like this:\n\n```\n*p =200;\n```\n\nIt would change the\
+    \ value of variable a. The statement above will change the value of a from 10\
+    \ to 200.\n\n# Example of Pointer demonstrating the use of & and *\n\n```\n#include<stdio.h>\n\
+    int main()\n{\n/* Pointer of integer type, this can hold the\n   * address of\
+    \ a integer type variable.\n   */\nint*p;\n\nintvar=10;\n\n/* Assigning the address\
+    \ of variable var to the pointer\n   * p. The p can hold the address of var because\
+    \ var is\n   * an integer type variable.\n   */\np=&var;\n\nprintf(\"Value of\
+    \ variable var is: %d\",var);\nprintf(\"\\nValue of variable var is: %d\",*p);\n\
+    printf(\"\\nAddress of variable var is: %p\",&var);\nprintf(\"\\nAddress of variable\
+    \ var is: %p\",p);\nprintf(\"\\nAddress of pointer p is: %p\",&p);\nreturn0;\n\
+    }\n```\n\nOutput:\n\nValue of variable var is:10"
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: 'Value of variable varis:10
+
+    Address of variable varis:0x7fff5ed98c4c
+
+    Address of variable varis:0x7fff5ed98c4c
+
+    Address of pointer p is:0x7fff5ed98c50
+
+
+    # 5.4.6 C - Pointer arithmetic
+
+
+    A pointer in c is an address, which is a numeric value. Therefore, you can perform
+    arithmetic operations on a pointer just as you can on a numeric value. There are
+    four arithmetic operators that can be used on pointers: ++, --, +, and -
+
+
+    To understand pointer arithmetic, let us consider that ptr is an integer pointer
+    which points to the address 1000. Assuming 32-bit integers, let us perform the
+    following arithmetic operation on the pointer –
+
+
+    ```
+
+    ptr++
+
+    ```
+
+
+    After the above operation, the ptr will point to the location 1004 because each
+    time ptr is incremented, it will point to the next integer location which is 4
+    bytes next to the current location. This operation will move the pointer to the
+    next memory location without impacting the actual value at the memory location.
+    If ptr points to a character whose address is 1000, then the above operation will
+    point to the location 1001 because the next character will be available at 1001.
+
+
+    # Incrementing a Pointer
+
+
+    We prefer using a pointer in our program instead of an array because the variable
+    pointer can be incremented, unlike the array name which cannot be incremented
+    because it is a constant pointer. The following program increments the variable
+    pointer to access each succeeding element of the array –
+
+
+    Live Demo
+
+
+    ```
+
+    #include<stdio.h>
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '```
+
+    #include<stdio.h>
+
+
+    constint MAX =3;
+
+
+    int main (){
+
+
+    intvar[]={10,100,200};
+
+    int i,*ptr;
+
+
+    /* let us have array address in pointer */
+
+    ptr=&var[MAX-1];
+
+
+    for( i = MAX; i >0; i--){
+
+
+    printf("Address of var[%d] = %x\n", i-1,ptr);
+
+    printf("Value of var[%d] = %d\n", i-1,*ptr);
+
+
+    /* move to the previous location */
+
+    ptr--;
+
+    }
+
+
+    return0;
+
+    }
+
+    ```
+
+
+    When the above code is compiled and executed, it produces the following result
+    –
+
+
+    Address of var[2] = bfedbcd8
+
+    Value of var[2] = 200
+
+    Address of var[1] = bfedbcd4
+
+    Value of var[1] = 100
+
+    Address of var[0] = bfedbcd0
+
+    Value of var[0] = 10
+
+
+    # Pointer Comparisons
+
+
+    Pointers may be compared by using relational operators, such as ==, <, and >.
+    If p1 and p2 point to variables that are related to each other, such as elements
+    of the same array, then p1 and p2 can be meaningfully compared.'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "The following program modifies the previous example – one by incrementing the\
+    \ variable pointer so long as the address to which it points is either less than\
+    \ or equal to the address of the last element of the array, which is &var[MAX\
+    \ - 1] –\n\nLive Demo\n\n```\n#include<stdio.h>\n\nconst int MAX =3;\n\nint main\
+    \ (){\n\nint var[]={10,100,200};\nint i,*ptr;\n\n/* let us have address of the\
+    \ first element in pointer */\nptr=var;\n    i =0;\n\nwhile(ptr<=&var[MAX -1]){\n\
+    \nprintf(\"Address of var[%d] = %x\\n\", i,ptr);\nprintf(\"Value of var[%d] =\
+    \ %d\\n\",i,*ptr);\n\n/* point to the previous location */\nptr++;\ni++;\n}\n\n\
+    return0;\n}\n```\n\nWhen the above code is compiled and executed, it produces\
+    \ the following result –\n\nAddress of var[0] = bfdbcb20\nValue of var[0] = 10\n\
+    Address of var[1] = bfdbcb24\nValue of var[1] = 100"
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: 'Address of var[2] = bfdbcb28
+
+    Value of var[2] = 200
+
+
+    # Sample Questions
+
+
+    | QUESTION | RBT LEVEL | COs |
+
+    |---|---|---|
+
+    | Define a data-structure. List the available data structures in C. | L1 | **CO5,CO6**
+    |
+
+    | Define stack. List out the applications, and operations performed on stack.
+    | L1 | **CO5,CO6** |
+
+    | Explain the operations performed on stack with neat diagrams. | L2 | **CO5,CO6**
+    |
+
+    | Define queue. List out the applications, and operations performed on queue.
+    | L1 | **CO5,CO6** |
+
+    | Explain the operations performed on queue with neat diagrams. | L2 | **CO5,CO6**
+    |
+
+    | Define linked-list. List out the applications, and operations performed on list.
+    | L1 | **CO5,CO6** |
+
+    | Explain the operations performed on list with neat diagrams. | L2 | **CO5,CO6**
+    |
+
+    | Define tree. List out the applications, and operations performed on tree. |
+    L1 | **CO5,CO6** |
+
+    | Explain the operations performed on tree with neat diagrams. | L2 | **CO5,CO6**
+    |
+
+    | Develop a C program to demonstrate the operations on stack. | L5 | **CO5,CO6**
+    |
+
+    | Develop a C program to demonstrate the operations on queue. | L5 | **CO5,CO6**
+    |
+
+    | List the functions available for dynamic memory allocation in C? Explain any
+    3 with example. | L2 | **CO5,CO6** |'
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: '| Question | Level | Outcome |
+
+    |---|---|---|
+
+    | Define pointer. What is reference and deference operator? | L1 | **CO5,CO6**
+    |
+
+    | Explain the usage of pointers with example. | L2 | **CO5,CO6** |
+
+    | Explain pointer arithmetic in C. | L2 | **CO5,CO6** |
+
+    | Develop a C program to find the variance and standard deviation using pointers.
+    | L5 | **CO5,CO6** |
+
+    | List the preprocessor directives available in C and their uses. | L1 | **CO5,CO6**
+    |
+
+    | Develop a C program to demonstrate the preprocessor directives. | L5 | **CO5,CO6**
+    |
+
+    | Compare and contrast stacks, queues, and lists with examples | L4 | **CO5,CO6**
+    |
+
+    | Compare and contrast malloc(), calloc() and realloc() with examples | L4 | **CO5,CO6**
+    |
+
+    | Apply arrays to implement a stack operation in C language | L4 | **CO5,CO6**
+    |
+
+    | Compare the operations of stack and queue with diagrams. | L6 | **CO5,CO6**
+    |
+
+    | Show the use of malloc(), calloc() and realloc() free() functions with examples
+    | L3 | **CO5,CO6** |
+
+    | List the available data structures in C. | L1 | **CO5,CO6** |
+
+    | List out the applications, and operations performed on stack. | L1 | **CO5,CO6**
+    |
+
+    | List out the applications, and operations performed on queue. | L1 | **CO5,CO6**
+    |
+
+    | Define stack. | L1 | **CO5,CO6** |
+
+    | Define queue. | L1 | **CO5,CO6** |
+
+    | Define linked-list. | L1 | **CO5,CO6** |
+
+    | Define pointer. | L1 | **CO5,CO6** |'
+  merge: -1
+  img_proc: true
