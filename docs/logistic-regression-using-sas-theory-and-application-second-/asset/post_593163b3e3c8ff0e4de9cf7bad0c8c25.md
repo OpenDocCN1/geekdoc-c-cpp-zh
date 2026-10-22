@@ -1,0 +1,255 @@
+
+![](img/bbec4f484c16475caccf067e8da3ac57_1_0.png)
+
+# Logistic Regression Using SAS®
+
+# Theory and Application
+
+Second Edition
+
+Paul D. Allison
+
+![](img/bbec4f484c16475caccf067e8da3ac57_1_1.png)
+
+The correct bibliographic citation for this manual is as follows: Allison, Paul D. 2012. *Logistic Regression Using SAS®: Theory and Application, Second Edition.* Cary, NC: SAS Institute Inc.
+
+# Logistic Regression Using SAS®: Theory and Application, Second Edition
+
+Copyright © 2012, SAS Institute Inc., Cary, NC, USA
+
+ISBN 978-1-60764-995-3 (electronic book)
+ISBN 978-1-59994-641-2
+
+All rights reserved. Produced in the United States of America.
+
+**For a hard-copy book:** No part of this publication may be reproduced, stored in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, or otherwise, without the prior written permission of the publisher, SAS Institute Inc.
+
+**For a Web download or e-book:** Your use of this publication shall be governed by the terms established by the vendor at the time you acquire this publication.
+
+The scanning, uploading, and distribution of this book via the Internet or any other means without the permission of the publisher is illegal and punishable by law. Please purchase only authorized electronic editions and do not participate in or encourage electronic piracy of copyrighted materials. Your support of others’ rights is appreciated.
+
+**U.S. Government Restricted Rights Notice:** Use, duplication, or disclosure of this software and related documentation by the U.S. government is subject to the Agreement with SAS Institute and the restrictions set forth in FAR 52.227-19, Commercial Computer Software-Restricted Rights (June 1987).
+
+SAS Institute Inc., SAS Campus Drive, Cary, North Carolina 27513-2414
+
+1st printing, April 2012
+
+SAS® Publishing provides a complete selection of books and electronic products to help customers use SAS software to its fullest potential. For more information about our e-books, e-learning products, CDs, and hard-copy books, visit the SAS Publishing Web site at support.sas.com/publishing or call 1-800-727-3228.
+
+SAS® and all other SAS Institute Inc. product or service names are registered trademarks or trademarks of SAS Institute Inc. in the USA and other countries. ® indicates USA registration.
+
+Other brand and product names are registered trademarks or trademarks of their respective companies.
+
+# Contents
+
+Preface vii
+
+# Chapter 1 Introduction 1
+
+1.1 What This Book Is About 1
+
+1.2 What This Book Is Not About 3
+
+1.3 What You Need to Know 3
+
+1.4 Computing 4
+
+1.5 References 4
+
+# Chapter 2 Binary Logistic Regression with PROC LOGISTIC: Basics 7
+
+2.1 Introduction 7
+
+2.2 Dichotomous Dependent Variables: Example 8
+
+2.3 Problems with Ordinary Linear Regression 10
+
+2.4 Odds and Odds Ratios 15
+
+2.5 The Logistic Regression Model 17
+
+2.6 Estimation of the Logistic Model: General Principles 19
+
+2.7 Maximum Likelihood Estimation with PROC LOGISTIC 21
+
+2.8 Interpreting Coefficients 26
+
+2.9 CLASS Variables 29
+
+2.10 Multiplicative Terms in the MODEL Statement 36
+
+# Chapter 3 Binary Logistic Regression: Details and Options 39
+
+3.1 Introduction 40
+
+3.2 Confidence Intervals 40
+
+3.3 Details of Maximum Likelihood Estimation 42
+
+3.4 Convergence Problems 46
+
+3.5 Multicollinearity 60
+
+3.6 Goodness-of-Fit Statistics 63
+
+3.7 Statistics Measuring Predictive Power 68
+
+3.8 ROC Curves 72
+
+3.9 Predicted Values, Residuals, and Influence Statistics 81
+
+3.10 Latent Variables and Standardized Coefficients 87
+
+3.11 Probit and Complementary Log-Log Models 91
+
+3.12 Unobserved Heterogeneity 97
+
+# Chapter 4 Logit Analysis of Contingency Tables 109
+
+3.13 Sampling on the Dependent Variable 103
+
+3.14 Plotting Effects of Predictor Variables 105
+
+4.1 Introduction 109
+
+4.2 A Logit Model for a 2 × 2 Table 110
+
+4.3 A Three-Way Table 114
+
+4.4 A Four-Way Table 116
+
+4.5 A Four-Way Table with Ordinal Explanatory Variables 122
+
+4.6 Overdispersion 129
+
+# Chapter 5 Multinomial Logit Analysis 139
+
+5.1 Introduction 139
+
+5.2 Example 140
+
+5.3 A Model for Three Categories 141
+
+5.4 Estimation with PROC LOGISTIC 143
+
+5.5 Estimation with a Binary Logit Procedure 152
+
+5.6 General Form of the Model 153
+
+5.7 Contingency Table Analysis 154
+
+5.8 Problems of Interpretation 157
+
+# Chapter 6 Logistic Regression for Ordered Categories 159
+
+6.1 Introduction 159
+
+6.2 Cumulative Logit Model: Example 160
+
+6.3 Cumulative Logit Model: Explanation 163
+
+6.4 Cumulative Logit Model: Practical Considerations 167
+
+6.5 Cumulative Logit Model: Contingency Tables 171
+
+6.6 Adjacent Categories Model 177
+
+6.7 Continuation Ratio Model 180
+
+# Chapter 7 Discrete Choice Analysis 189
+
+7.1 Introduction 189
+
+7.2 Chocolate Example 190
+
+7.3 Model and Estimation 194
+
+7.4 Travel Example 197
+
+7.5 Other Applications 205
+
+7.6 Ranked Data 206
+
+7.7 More Advanced Models with PROC MDC 209
+
+# Chapter 8 Logit Analysis of Longitudinal and Other Clustered Data 217
+
+8.1 Introduction 217
+
+8.2 Longitudinal Example 218
+
+8.3 Robust Standard Errors 222
+
+8.4 GEE Estimation with PROC GENMOD 226
+
+8.5 Mixed Models with GLIMMIX 234
+
+8.6 Fixed-Effects with Conditional Logistic Regression 240
+
+8.7 Postdoctoral Training Example 244
+
+8.8 Matching 250
+
+8.9 Comparison of Methods 259
+
+8.10 A Hybrid Method 260
+
+# Chapter 9 Regression for Count Data 265
+
+9.1 Introduction 265
+
+9.2 The Poisson Regression Model 266
+
+9.3 Scientific Productivity Example 267
+
+9.4 Overdispersion 272
+
+9.5 Negative Binomial Regression 275
+
+9.6 Adjustment for Varying Time Spans 278
+
+9.7 Zero-Inflated Models 283
+
+# Chapter 10 Loglinear Analysis of Contingency Tables 291
+
+10.1 Introduction 291
+
+10.2 A Loglinear Model for a 2 × 2 Table 292
+
+10.3 Loglinear Models for a Four-Way Table 298
+
+10.4 Fitting the Adjacent Categories Model as a Loglinear Model 304
+
+10.5 Loglinear Models for Square, Ordered Tables 310
+
+10.6 Marginal Tables 317
+
+10.7 The Problem of Zeros 319
+
+10.8 GENMOD versus CATMOD 324
+
+# References 325
+
+# Index 331
+
+# Chapter 1
+
+# Introduction
+
+- 1.1 What This Book Is About 1
+- 1.2 What This Book Is Not About 3
+- 1.3 What You Need to Know 3
+- 1.4 Computing 4
+- 1.5 References 4
+
+## 1.1 What This Book Is About
+
+When I began graduate study at the University of Wisconsin in 1970, categorical data analysis consisted of chi-square tests for cross-tabulated data, a technique introduced around 1900 by the great Karl Pearson. This methodology was viewed with scorn by most of my quantitatively oriented cohorts. It was the province of old fogies who hadn’t bothered to learn about REGRESSION ANALYSIS, the new universal tool for social science data analysis. Little did we realize that another revolution was taking place under our noses. By the time I left Wisconsin in 1975, the insanely great new thing was LOGLINEAR ANALYSIS, which made it possible to analyze complicated contingency tables in ways that Karl Pearson never dreamed of. But loglinear analysis was a rather different animal from linear regression and I, for one, never felt entirely comfortable working in the loglinear mode.
+
+In the years after I left Wisconsin, these dissimilar approaches to data analysis came together in the form of LOGIT ANALYSIS, also known as logistic regression analysis. The logit model is essentially a regression model that is tailored to fit a categorical dependent variable. In its most widely used form, the dependent variable is a simple dichotomy, and the independent variables can be either quantitative or categorical. As we shall see, the logit model can be generalized to dependent variables that have more than two categories, both ordered and unordered. Using the method of conditional logit analysis, it can also be extended to handle specialized kinds of data such as discrete-choice applications, matched-pair analysis, and longitudinal data. Logit models for longitudinal data can also be estimated with such methods as generalized estimating equations and logistic regression with random effects.
+
+This book is an introduction to the logit model and its various extensions. Unlike most introductory texts, however, this one is heavily focused on the use of SAS to estimate logit and related models. In my judgment, you can’t fully understand and appreciate a new statistical technique without carefully considering the practical details of estimation. To accomplish that, it’s necessary to choose a particular software system to carry out the computations. Although there are many good statistical packages for doing logistic regression, SAS is certainly among the best in terms of the range of estimation methods, available features and options, efficiency and stability of the algorithms, and quality of the documentation. I find I can do almost anything I want to do in SAS and, in the process, I encounter few of the annoying software problems that seem to crop up frequently in other packages.
+
+In addition to the logit model, I also write briefly about two alternatives for binary data, the probit model and the complementary log-log model. The last chapter is about loglinear analysis, which is a close cousin to logit analysis. Because some kinds of contingency table analysis are awkward to handle with the logit model, the loglinear model can be a useful alternative. I don’t pretend to give a comprehensive treatment of loglinear analysis, however. The emphasis is on how to do it with the GENMOD procedure, and to show examples of the types of applications where a loglinear analysis might be particularly useful. The penultimate chapter is about Poisson regression models for count data. I’ve included this topic partly for its intrinsic interest, but also because it’s a useful preparation for the loglinear chapter. In PROC GENMOD, loglinear analysis is accomplished by way of Poisson regression.
+
+Besides GENMOD, this book includes discussions of the following SAS procedures: LOGISTIC, SURVEYLOGISTIC, GLIMMIX, NLMIXED, QLIM, and MDC. However, this book is not intended to be a comprehensive guide to these SAS procedures. I discuss only those features that are most widely used, most potentially useful, and most likely to cause

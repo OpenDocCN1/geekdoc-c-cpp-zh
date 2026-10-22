@@ -1,0 +1,546 @@
+- - '#'
+  - SAS 逻辑回归：理论与应用（第二版）
+- - '#'
+  - Chapter 1
+- - '##'
+  - Introduction
+- - '###'
+  - 1.1 What This Book Is About
+- - '###'
+  - 1.4 计算
+- - '###'
+  - 1.5 参考文献
+- - '###'
+  - 2.2 二分因变量：示例
+- - '####'
+  - 输出 2.1 死刑对所选自变量的线性回归
+- - '####'
+  - 方差分析
+- - '###'
+  - 2.3 普通线性回归的问题
+- - '##'
+  - 线性回归模型的假设
+- - '###'
+  - 输出2.2　经异方差修正的死刑判决线性回归
+- - '###'
+  - 2.4 概率与优势比
+- - '####'
+  - 表 2.1 优势与概率之间的关系
+- - '####'
+  - 表 2.2 147 起量刑审判中死刑判决与被告种族
+- - '####'
+  - 图 2.1 单个解释变量的逻辑模型图
+- - '###'
+  - 2.6 逻辑模型的估计：一般原则
+- - '###'
+  - 2.7 使用 PROC LOGISTIC 进行最大似然估计
+- - '###'
+  - 2.8 解释系数
+- - '####'
+  - 输出2.4：PROC QLIM对前10个案例产生的边际效应
+- - '###'
+  - 2.9 CLASS变量
+- - '####'
+  - 输出2.5：在PROC LOGISTIC中使用CLASS变量
+- - '####'
+  - Output 2.7 Results from CLASS Statement Using Default Design Variables
+- - '####'
+  - Output 2.8 Results from ESTIMATE Statement
+- - '###'
+  - 2.10 Multiplicative Terms in the MODEL Statement
+- - '####'
+  - Output 2.9 Multiplicative Variables in PROC LOGISTIC
+- - '#'
+  - Chapter 3
+- - '##'
+  - 'Binary Logistic Regression: Details and Options'
+- - '###'
+  - 3.1 Introduction
+- - '###'
+  - 3.2 Confidence Intervals
+- - '###'
+  - 3.3 最大似然估计的细节
+- - '###'
+  - 3.4 收敛问题
+- - '####'
+  - Output 3.3 PROC LOGISTIC Results for Data with Complete Separation
+- - '####'
+  - Figure 3.1 Log-Likelihood as a Function of the Slope under Complete Separation
+- - '####'
+  - Output 3.4 PROC LOGISTIC Results under Quasi-Complete Separation
+- - '####'
+  - Output 3.5 LOGISTIC Estimates for Nonblack Defendants Only
+- - '####'
+  - Table 3.1 Cross-Classification of Death Penalty by Culpability, Nonblack Defendants
+- - '####'
+  - 输出 3.6 合并类别以消除准完全分离
+- - '####'
+  - 输出 3.7 排除个案以消除准完全分离
+- - '####'
+  - 保留存在准完全分离的模型，但使用似然比检验
+- - '####'
+  - 输出 3.8 准完全分离下的剖面似然置信区间
+- - '####'
+  - 使用精确方法
+- - '####'
+  - 输出 3.9 准完全分离下的 EXACT 估计
+- - '####'
+  - 输出 3.10 拟完全分离下的惩罚似然估计
+- - '###'
+  - 3.5 多重共线性
+- - '####'
+  - 输出 3.11 具有高度相关解释变量的模型
+- - '####'
+  - 输出 3.12 由 PROC REG 获得的多重共线性诊断
+- - '###'
+  - 3.6 拟合优度统计量
+- - '####'
+  - 输出 3.13 AGGREGATE 和 SCALE 选项的统计量
+- - '####'
+  - 输出 3.14 PROC LOGISTIC 中 LACKFIT 选项的结果
+- - '###'
+  - 3.7 衡量预测能力的统计量
+- - '####'
+  - Output 3.15  Means of Predicted Values by Values of the Dependent Variable
+- - '####'
+  - Output 3.16  Ordinal Measures of Association from PROC LOGISTIC
+- - '###'
+  - 3.8 ROC曲线
+- - '####'
+  - 输出 3.17 不同截止点的分类表
+- - '####'
+  - Output 3.18 ROC Curve for Death Penalty Model
+- - '####'
+  - Output 3.19 ROC Curve with Cutpoints Added
+- - '####'
+  - Output 3.20 ROC Curves for Comparing Different Models
+- - '####'
+  - Output 3.21 Association Statistics for Three Different Models
+- - '####'
+  - Output 3.22 Tables Produced by ROCCONTRAST Statement
+- - '###'
+  - 3.9 Predicted Values, Residuals, and Influence Statistics
+- - '####'
+  - 输出3.23 删除每个观测导致的偏差变化图
+- - '####'
+  - 输出3.24 BLACKD系数的DFBETAS图
+- - '####'
+  - 输出3.25 DIFDEV统计量与预测值的对比图
+- - '####'
+  - 输出3.26 DIFDEV统计量与预测值的对比图（按CI位移着色）
+- - '####'
+  - 输出3.27 DIFDEV统计量与杠杆值的对比图
+- - '###'
+  - 3.10 潜变量与标准化系数
+- - '####'
+  - 3.11 Probit 和 Complementary Log-Log 模型
+- - '####'
+  - 图 3.3 互补对数-对数模型的图
+- - '####'
+  - 输出 3.30 PROC LOGISTIC 输出用于互补对数-对数模型
+- - '###'
+  - 3.12 未观测异质性
+- - '####'
+  - Output 3.31 PROC QLIM Output for Promotion Data
+- - '####'
+  - Output 3.32 PROC QLIM Output with Interaction between FEMALE and ARTS
+- - '####'
+  - Output 3.34 PROC QLIM Output with Adjustment for Heterogeneity as a Function of
+    Continuous Variables
+- - '###'
+  - 3.14 绘制预测变量效应的图
+- - '####'
+  - Output 3.37 Predicted Probability of Promotion as a Function of Articles, by Gender
+- - '#'
+  - Chapter 4
+- - '##'
+  - Logit Analysis of Contingency Tables
+- - '###'
+  - 4.1 Introduction
+- - '###'
+  - 4.2 A Logit Model for a 2 × 2 Table
+- - '####'
+  - Table 4.1 Death Sentence by Race of Defendant
+- - '####'
+  - Output 4.1 PROC LOGISTIC Output for a 2 x 2 Table
+- - '####'
+  - Output 4.2 PROC FREQ Results
+- - '###'
+  - 4.3 A Three-Way Table
+- - '####'
+  - Table 4.2 Race by Gender by Sexual Intercourse
+- - '####'
+  - Output 4.3 PROC LOGISTIC Output for Analysis of Three-Way Table
+- - '####'
+  - Output 4.4 PROC LOGISTIC Output for a Saturated Model
+- - '###'
+  - 4.4 A Four-Way Table
+- - '####'
+  - 表 4.3 按国家和职业划分的工人阶级认同
+- - '####'
+  - 输出 4.5 PROC LOGISTIC 输出：工人阶级认同
+- - '####'
+  - Deviance and Pearson Goodness-of-Fit Statistics
+- - '####'
+  - Analysis of Maximum Likelihood Estimates
+- - '####'
+  - Odds Ratio Estimates
+- - '####'
+  - 输出 4.6 包含全部两两交互的模型
+- - '####'
+  - Deviance and Pearson Goodness-of-Fit Statistics
+- - '####'
+  - Analysis of Maximum Likelihood Estimates
+- - '####'
+  - 输出 4.7 包含一个两两交互的模型
+- - '####'
+  - Deviance and Pearson Goodness-of-Fit Statistics
+- - '####'
+  - Analysis of Maximum Likelihood Estimates
+- - '####'
+  - Odds Ratio Estimates
+- - '####'
+  - 输出 4.8 两个变量在两两交互中的比值比
+- - '###'
+  - 4.5 具有有序解释变量的四维表
+- - '####'
+  - 输出4.9 四维表的PROC LOGISTIC输出
+- - '####'
+  - 输出4.10 主效应和二阶交互的检验
+- - '####'
+  - 输出 4.11 CONTRAST 语句的结果
+- - '####'
+  - 输出 4.12 IQ 具有定量效应的模型
+- - '####'
+  - 输出 4.13 不含 PARENT 的模型
+- - '###'
+  - 4.6 过度离散
+- - '####'
+  - 输出 4.14 博士数据的 PROC LOGISTIC 结果
+- - '####'
+  - Output 4.15 Doctorate Model with Overdispersion Adjustment
+- - '####'
+  - Output 4.16 Doctorate Model with Williams’ Adjustment for Overdispersion
+- - '#'
+  - 第5章
+- - '##'
+  - 多项逻辑分析
+- - '###'
+  - 5.1  引言
+- - '###'
+  - 5.2 示例
+- - '####'
+  - 表 5.1 PROC LOGISTIC 输出的重组
+- - '####'
+  - 输出 5.2 多分类对数模型的拟合优度统计量
+- - '####'
+  - 输出 5.3 多分类对数模型的期望频数
+- - '####'
+  - 输出 5.4 二维交互模型的类型 3 表
+- - '####'
+  - 输出 5.5 预测概率作为 PUNISH 函数的图
+- - '###'
+  - 5.5 使用二元对数程序进行估计
+- - '###'
+  - 5.6 模型的一般形式
+- - '###'
+  - 5.7 列联表分析
+- - '####'
+  - Output 5.6 PROC LOGISTIC Results for Afterlife Data
+- - '###'
+  - 5.8 解释问题
+- - '####'
+  - 输出 5.7 x 对处于三个类别中每一类别的概率的影响
+- - '####'
+  - 图 5.1 当 x 增加时个体的移动
+- - '###'
+  - 6.2 累积 logit 模型：示例
+- - '####'
+  - 输出 6.1 钱包数据的累积 logit 模型的 PROC LOGISTIC 输出
+- - '###'
+  - 6.3 累积 logit 模型：解释
+- - '####'
+  - 输出 6.2 二分后钱包数据的 Logistic 结果
+- - '####'
+  - 输出 6.3 钱包数据替代二分法的结果
+- - '###'
+  - 6.4 累积 Logit 模型：实际考虑
+- - '###'
+  - 6.5 累积 Logit 模型：列联表
+- - '####'
+  - 输出6.6 幸福感数据的累积Logit结果
+- - '####'
+  - 输出6.7 删除年份后的幸福感模型
+- - '####'
+  - 输出6.8 一般幸福感的替代二分法结果
+- - '####'
+  - 输出6.9 QLIM异质扰动项结果
+- - '###'
+  - 6.6 相邻类别模型
+- - '####'
+  - Output 6.10 CATMOD Output for Adjacent Categories Model, Happiness Data
+- - '####'
+  - Output 6.11 Adjacent Categories Model with Two Sets of Coefficients
+- - '###'
+  - 6.7 Continuation Ratio Model
+- - '####'
+  - Table 6.2 Educational Attainment by Race, Age, and Father’s Education
+- - '####'
+  - 输出 6.12 PROC LOGISTIC 延续比模型的 结果
+- - '####'
+  - 输出 6.14 两个进展水平的单独 Logit 模型
+- - '####'
+  - 从小学到高中的进展
+- - '####'
+  - 从高中入学到高中毕业的进展
+- - '#'
+  - 第7章
+- - '##'
+  - 离散选择分析
+- - '###'
+  - 7.1  引言
+- - '###'
+  - 7.2 巧克力示例
+- - '####'
+  - 输出 7.1 PROC LOGISTIC 输出 离散选择模型，巧克力数据
+- - '####'
+  - 条件分析
+- - '###'
+  - 7.3 模型与估计
+- - '###'
+  - 7.4 旅行示例
+- - '####'
+  - Output 7.2 First 20 Observations in Travel Data Set
+- - '####'
+  - Output 7.3 Conditional PROC LOGISTIC Model for the Determinants of Travel Mode
+- - '####'
+  - 输出 7.4 将 MODE 作为 CLASS 变量的出行模型
+- - '####'
+  - 输出 7.5 结合 MODE 和出行方式特征的模型
+- - '####'
+  - 输出 7.6 包含交互作用的条件 Logit 模型
+- - '####'
+  - 输出 7.7 多项 Logit 模型
+- - '####'
+  - 输出 7.8 旅行选择的混合模型
+- - '###'
+  - 7.5 其他应用
+- - '####'
+  - 输出 7.10 含附加变量的 PROC PHREG 排序模型
+- - '###'
+  - 7.7 使用 PROC MDC 的更多高级模型
+- - '####'
+  - 输出 7.11 使用 PROC MDC 的条件 logit 模型
+- - '####'
+  - Output 7.12 A Heteroscedastic Extreme Value Model with PROC MDC
+- - '####'
+  - Output 7.13 A Multivariate Probit Model with PROC MDC
+- - '####'
+  - Output 7.14 A Nested Logit Model with PROC MDC
+- - '#'
+  - 第 8 章：纵向数据和其他聚类数据的 Logit 分析
+- - '###'
+  - 8.1 引言
+- - '###'
+  - 8.2 纵向示例
+- - '###'
+  - 8.3 稳健标准误差
+- - '####'
+  - Output 8.3 PROC SURVEYLOGISTIC Output with Robust Standard Errors
+- - '####'
+  - Output 8.4 PROC GENMOD Output with Robust Standard Errors
+- - '####'
+  - 输出 8.5 由 ESTIMATE 语句产生的比值比
+- - '###'
+  - 8.4 使用 PROC GENMOD 进行 GEE 估计
+- - '####'
+  - 输出 8.6 具有非结构化相关矩阵的 PTSD 数据的 GEE 结果
+- - '####'
+  - 输出 8.8 MDEP(2) 相关性结构的 GEE 结果
+- - '####'
+  - 输出8.9 非结构化优势比模型的GEE结果
+- - '####'
+  - 输出8.10 可交换优势比模型的GEE结果
+- - '###'
+  - 8.5 使用PROC GLIMMIX的混合模型
+- - '####'
+  - Output 8.11 PROC GLIMMIX Results for a Random Intercepts Model
+- - '####'
+  - Output 8.12 PROC GLIMMIX Results for a Random Slope Model
+- - '###'
+  - 8.6 Fixed-Effects with Conditional Logistic Regression
+- - '####'
+  - 输出 8.13 固定效应 Logit 模型的 PROC LOGISTIC 输出
+- - '###'
+  - 8.7 博士后训练示例
+- - '####'
+  - Output 8.15 PROC LOGISTIC Estimates for Conventional Logit Model
+- - '####'
+  - Output 8.17 PROC GLIMMIX Results for Postdoctoral Data
+- - '####'
+  - Output 8.18 Fixed-Effects Results for Postdoctoral Data
+- - '###'
+  - 8.8 Matching
+- - '####'
+  - Output 8.19 Logistic Regression of Exit to Public Housing
+- - '####'
+  - Output 8.20 Regression of PUBHOUSE with Matched-Pair Data without Adjustment for
+    Matching
+- - '####'
+  - Output 8.21 Regression of PUBHOUSE with Matched-Pair Data Using GEE Adjustment
+    for Matching
+- - '####'
+  - Output 8.23 Logistic Regression of STAYBABY for Full Sample
+- - '####'
+  - Output 8.24 Logistic Regression of STAYBABY for Matched Pairs, No Adjustment for
+    Matching
+- - '###'
+  - 8.10 混合方法
+- - '####'
+  - 输出 8.26 PROC GLIMMIX 混合 PTSD 模型估计
+- - '#'
+  - 第 9 章
+- - '##'
+  - 计数数据的回归
+- - '###'
+  - 9.1 引言
+- - '###'
+  - 9.2 泊松回归模型
+- - '###'
+  - 9.3 科学生产力示例
+- - '####'
+  - Output 9.1  Frequency Distribution of Article Counts
+- - '####'
+  - Output 9.2  Frequency Distribution of Citation Counts
+- - '####'
+  - Output 9.3 Poisson Regression for Article Counts
+- - '####'
+  - 输出 9.4 引用计数泊松回归
+- - '###'
+  - 9.4 过度离散
+- - '####'
+  - 输出 9.7 对数线性引用模型的 OLS 结果
+- - '###'
+  - 9.5 负二项回归
+- - '####'
+  - 输出 9.8 文章计数负二项回归
+- - '####'
+  - 输出 9.9 引用计数负二项回归
+- - '###'
+  - 9.6 对可变时间跨度的调整
+- - '####'
+  - 输出 9.10 关于预后的话语数量分布
+- - '####'
+  - 输出 9.11 具有偏移变量的泊松回归
+- - '####'
+  - 输出 9.12 具有偏移变量的负二项回归
+- - '####'
+  - 输出 9.13 零膨胀泊松模型
+- - '####'
+  - 输出 9.14 零膨胀负二项模型
+- - '####'
+  - 输出 9.15 带协变量的零膨胀负二项模型
+- - '#'
+  - 第 10 章：列联表的对数线性分析
+- - '###'
+  - 10.1 引言
+- - '###'
+  - 10.2 2×2 表的对数线性模型
+- - '####'
+  - 表 10.1 按被告种族划分的死刑判决
+- - '####'
+  - 输出 10.1 PROC GENMOD 对 2 × 2 表的对数线性模型的输出
+- - '####'
+  - 输出 10.2 PROC GENMOD 对 2 ×2 表的 Logit 模型的输出
+- - '####'
+  - 输出 10.3 PROC GENMOD 对 2 × 2 表的 Logit 模型输出，变量已反转
+- - '###'
+  - 10.3 四向表的对数线性模型
+- - '####'
+  - Output 10.4 Data for a Four-Way Contingency Table
+- - '####'
+  - Output 10.5 PROC GENMOD Output for Loglinear Analysis of a Four-Way Table
+- - '####'
+  - Output 10.6 PROC GENMOD Output for the Adjacent Categories Model
+- - '####'
+  - Criteria For Assessing Goodness Of Fit
+- - '####'
+  - Analysis Of Maximum Likelihood Parameter Estimates
+- - '####'
+  - 输出 10.7 多项模型的选定参数估计
+- - '####'
+  - 输出 10.8 简约模型的选定参数估计
+- - '###'
+  - 10.5 方形有序表的对数线性模型
+- - '####'
+  - 表 10.2 受访者职业地位与父亲职业地位的交叉分类（3,497 名英国男性）
+- - '####'
+  - 输出 10.9 拟合对角线参数模型的结果
+- - '####'
+  - 输出 10.10 准均匀关联模型的选定输出
+- - '###'
+  - 10.6 边际表
+- - '####'
+  - 表 10.3 独立模型的观察（和预测）频率
+- - '###'
+  - 10.7 零值问题
+- - '####'
+  - 输出10.11 具有边际零值数据的Logit输出
+- - '###'
+  - 10.8 GENMOD与CATMOD的比较
+- - '##'
+  - 参考文献
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - D
+- - '###'
+  - E
+- - '###'
+  - F
+- - '###'
+  - G
+- - '####'
+  - GENMOD 过程（续）
+- - '###'
+  - GLIMMIX 过程
+- - '###'
+  - H
+- - '###'
+  - I
+- - '###'
+  - L
+- - '###'
+  - LOGISTIC 过程
+- - '###'
+  - M
+- - '###'
+  - O
+- - '###'
+  - P
+- - '###'
+  - Q
+- - '###'
+  - R
+- - '###'
+  - S
+- - '###'
+  - T
+- - '###'
+  - U
+- - '###'
+  - V
+- - '###'
+  - W
+- - '###'
+  - X
+- - '###'
+  - Z
+- - '###'
+  - Symbols

@@ -1,0 +1,11 @@
+I have tried to keep the mathematics at a minimal level throughout the book. Except for one section on maximum likelihood estimation (which can be skipped without loss of continuity), there is no calculus and little use of matrix notation. Nevertheless, to simplify the presentation of regression models, I occasionally use the vector notation **βx** = β₀ + β₁x₁ + … + βₖxₖ. While it would be helpful to have some knowledge of maximum likelihood estimation, it’s hardly essential. However, you should know the basic properties of logarithms and exponential functions.
+
+With regard to SAS, the more experience you have with SAS/STAT and the SAS DATA step, the easier it will be to follow the presentation of SAS programs. On the other hand, the programs presented in this book are fairly simple and short, so don’t be intimidated if you’re just beginning to learn SAS.
+
+# 1.4 Computing
+
+All the computer input and output displayed in this book was produced by and for SAS 9.3. Occasionally, I point out differences between the syntax of SAS 9.3 and earlier releases. I use the following convention for presenting SAS programs: all SAS keywords are in uppercase. All user-specified variable names and data set names are in lowercase. In the main text, both SAS keywords and user-specified variables are in uppercase. In the output displays, nonessential output lines are often edited out to conserve space. If you would like to get a copy of the SAS code and the data sets used in this book, you can download them from my SAS Press author page at http://support.sas.com/publishing/authors/allison.html.
+
+# 1.5 References
+
+Most of the topics in this book can be found in any one of several textbooks on categorical data analysis. In preparing this book, I have particularly benefited from consulting Agresti (2002), Hosmer and Lemeshow (2000), Long (1997), Fienberg (2007), and Everitt (1992). I have generally refrained from giving references for material that is well established in the textbook literature, but I do provide references for any unusual, nonstandard, or controversial claims. I also give references whenever I think the reader might want to pursue additional information or discussion. This book should not be regarded as a substitute for official SAS
