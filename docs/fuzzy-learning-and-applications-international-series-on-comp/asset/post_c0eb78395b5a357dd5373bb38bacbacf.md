@@ -1,0 +1,87 @@
+
+Figure 2.9: Singleton defuzzification strategies: (a) follower-aggregation; (b) weighting-plus-division; (c) normalization-plus-weighting.
+
+operation; fourthly, the resulting current is weighted by a digitally-controlled current mirror to obtain the shifted version of the k-th rule output current.
+
+Fig.2.11 shows the CMOS normalizer circuit used in the proposed chip, based on a translinear BJT circuit by Gilbert [33]. Unlike the normalizers used in [34][23], Fig.2.11 does not involve any global feedback loop and, hence, features much faster dynamic response. Note that Fig.2.11 can be split into N equal cells, one per each input-output pair, plus a common circuitry consisting of transistor M_NA and current source I_SS. Fig.2.10 exploits this modularity by incorporating one of these cells at each rule block.
+
+Assuming that the transistors operate in strong inversion, where the BJT
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_80_0.png)
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_80_1.png)
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_80_2.png)
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_81_0.png)
+
+Figure 2.10: Rule Block.
+
+translinear principle does not hold, the circuit is found to realize the following nonlinear transformation:
+
+w*_ks = (β_N4t / β_N4b) w_ks [1 + η(w_s) / sqrt(w_ks) ]^2  (2.12)
+
+where function η(w_s) is
+
+η(w_s) = ( Σ_k sqrt(w_ks) / N ) ( sqrt( 1 + ( N I'_SS - Σ_k w_ks ) / ( Σ_k sqrt(w_ks) )^2 ) - 1 )  (2.13)
+(I'_SS = (β_N4b / β_N4t) I_SS)
+
+and
+
+w*_k = w*_ks - I*_OS      I*_OS = w*_ks(I_OS)  (2.14)
+
+The offset current I_OS is added to improve the dynamic behavior. Note from Fig.2.10 that it is related to the bias currents in the rule antecedent by
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_82_0.png)
+
+Figure 2.11: Normalization circuit schematics.
+
+I_OS = I_C − 2I_Q − I_B . Thus, it can be introduced by just increasing current I_C without additional area cost, although it will be preserved in figures and equations to gain clarity.
+
+The circuit in Fig.2.11 exhibits the following features: a) the sum of all output currents is constant and equal to I_SS ; b) for each input, the input-output transformation is a soft monotonic one, i.e., the higher an input current, the higher the corresponding output current. Thus, the relative strengths of the different rule antecedents are preserved at the outputs – as required for defuzzification [1]-[5]. Hence, although this circuit does not realize the ideal normalization operation, it keeps the essential features needed for defuzzification; non-linearity is not problematic because the whole controller chip is highly nonlinear. Actually, system-level analysis shows that, despite this non-linearity, the normalization-plus-weighting defuzzification approach may feature smaller deviations from the linear interpolation than the ideal weighting-plus-division structure [27].
+
+Fig.2.10 employs a digitally-controlled current-mirror (represented at the conceptual level in Fig.2.12(a)) in order to implement a programmable singleton value y_k^*. As compared to analog-programmed current mirrors [37][45], the digital approach is preferred because it is more robust and accurate, compatible with standard memory circuits and directly controllable through conventional computers.
+
+Regarding the mirror circuitry itself, and because the normalization circuit output stage does not impose major range limitations, a stacked (self-biased) cascode structure is used to minimize errors due to dc mismatching. On the
+
+## 2.3. Analog Core Implementation
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_83_0.png)
+
+(a)
+
+y_1 = y_1* (w_1* + I_OS*)
+
+y_k = y_k* (w_k* + I_OS*)
+
+y_N = y_N* (w_N* + I_OS*)
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_83_1.png)
+
+(b)
+
+Figure 2.12: (a) Singleton weighting concept; (b) controller output node.
+
+other hand, parallel-connected unit transistors are used to realize the binary weighting and, thus, reduce systematic errors caused by the lack of symmetry. The bias current depicted by the dashed lines in Fig.2.12(a) is added to reduce speed degradations due to the increase of parasitic capacitance for large singleton values.
+
+After singleton weighting, the rule block outputs are wired up to the output node where a current −∑_{1,N} y_k* I_OS* is added to remove the offset, thus obtaining equation (2.4).
+
+### 2.3.2. Modifications for the Multiplexed Architecture
+
+The architecture of the analog core in Fig.2.5 is similar to that in Fig.2.2, but just 2^M rules are needed here, and only two membership functions per input. Building blocks are also quite similar to those described above, although we should point out some differences derived from the specific multiplexing strategy. First, as mentioned in Section 2.2.3., only the thick part of the membership functions in Fig.2.4(b) is needed in each interval. Hence, the membership function circuit must be able to generate two pieces with slopes of opposite signs. This is achieved in the simplest way by a differential pair, as Fig.2.13(a) depicts. Moreover, the differential pair provides two complementary curves, which can be exploited to save the explicit complement implementation if we perform the minimum by means of a maximum-plus-complement circuitry
+
+further processing is made in current mode. Current outputs of the differential pair are replicated to generate the 2^M outputs required to implement the 2^M rules that determine the output inside a specific interval. Such currents are converted into voltages by the minimum circuit input unit cell that is shaded in Fig.2.13(b). The 2^M voltage outputs of this block are attached to those provided by the remaining input blocks. As a result, 2^M rule antecedents are implemented. The voltage outputs of these antecedents feed 2^M rule blocks like those depicted in Fig.2.13(c). Circuitry in Fig.2.13(c) implements the blocks in the second layer of Fig.2.2. Fig.2.13(d) shows an example interface to build rule R_mn in Fig.2.4. In the example of Fig.2.4, we need two input blocks, which provide four voltage outputs each (note that the differential pair outputs are replicated to share the circuit and save area and power consumption). To build rule R_mn, outputs V_G1(m+1) and V_G2(n+1), corresponding to membership functions X_1(m+1) and X_2(n+1), are connected to the minimum output cell of the rule block associated to R_mn. Fig.2.13(d) is in fact a minimum circuit where the complement at input is saved because the complements are directly provided. Note that X_1(m+1) and X_2(n+1) are the complements of X_1m and X_2n respectively in the interpolation interval C_mn of Fig.2.4.
+
+With respect to the high level block in Fig.2.13(c), it is very similar to the rule block described in Section 2.3.1., but two main differences are worthy of comment. The first refers to the design of the normalization circuit in Fig.2.11. Although the implementation for the new architecture has the same topology, the transistors are sized taking into account the multiplexing strategy. To understand this, see Fig.2.12(b) and note that an offset that depends on the singleton values associated to the rule set has to be removed at the output node. Since the core in Fig.2.5 is multiplexed, the singleton values set y_1^*...y_1^*...y_2^M changes from one interpolation interval to the other; thus the offset also varies as a function of the input. It could be solved by properly programming the offset current source in Fig.2.12(b), as done with other circuitry in the analog core. However, a simpler solution is achieved by designing the normalization circuit in such a way that when an output of the normalization circuit is at maximum, the remaining ones are zero; thus there is no residual offset to be weighted by the output singleton-weighting mirror. This is accom-
+
+## 2.4. A/D Converters, Interval Selector and Digital Memory
+
+### 2.4.1. A/D Converters
+
+Many possible implementations of A/D converters have been reported and could be used for this block. However, since a resolution of i_s(log₂L) bits is required and L (number of labels) is rarely higher than seven, a simple and fast flash converter like the one depicted in Fig.2.14(a) can be used. Although it is a common flash converter, some implementation details are worthy of comment here. First, the array of linear resistors generates twice the voltage levels needed for the A/D conversion. The “extra” voltage levels are used as programming values for the rule antecedent; thus they are a kind of analog read only memory. Note also that this array of resistors can be shared by all the converters (one per input) as long as the comparators have high impedance inputs. Secondly, these comparators are designed to have hysteresis, which is needed to filter the noise associated to the system inputs and to avoid an unstable out-
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_87_0.png)
+
+![](img/ffb89ef8c668ade3e6e47a9ee7de70e5_87_1.png)
+
+Figure 2.14: (a) A/D Flash Converter ; (b) Interval Selector k Cell.

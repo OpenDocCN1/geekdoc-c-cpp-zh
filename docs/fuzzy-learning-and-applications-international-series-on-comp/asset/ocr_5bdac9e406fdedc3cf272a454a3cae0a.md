@@ -1,0 +1,11 @@
+# Multistage Fuzzy Control
+
+# Abstract
+
+This chapter is related to the design of a multistage fuzzy control system. A general method to generate fuzzy rules for a multistage fuzzy controller from the performance index of the control system is presented. The simulation results using three-stage fuzzy inference showed that the good performance is achieved using this approach.
+
+# 5.1 Introduction
+
+The recent success of fuzzy logic has encouraged its use in complex applications that have large amounts of rules and require real-time responses [1]. The typical fuzzy logic models contain various inputs and outputs and can be divided into three types: single-input and single-output (SISO), multiple-input and single-output (MISO), and multiple-input and multiple-output (MIMO) shown in Fig. 5.1. As application systems become more complicated, they would contain more complex knowledge which may be expressed in more complex ways, and they involve a large number of fuzzy rules that will increase quickly with the growing numbers of inputs, outputs and membership functions. For example, in a system of N input variables and single output variable with M fuzzy values for each variables, the total number of complete fuzzy rules is M^N. The completeness of fuzzy rules means that at any point in the input space there is at least one rule that will be fired. This large size of fuzzy rules would need great efforts to develop them and the inference computation time will be lengthy. Consequently, the typical single-stage fuzzy inference may not be suitable for human intelligent activities.
+
+To reduce the complexity of the fuzzy systems, they are often performed via decentralized into a number of small fuzzy subsystem or divided into multistage inference system to solve complex problems. Since the decentralized control approach is reliable and practical in view of the implementation, it is the most popular approach which attempts to design control schemes where each subsystem is controlled independently based on local information. For example, a three-link robot may be treated as three subsystems and each subsystem is controlled independently. However, some complex systems are difficult to divide into subsystems; thus some of the complex systems are suitable to be controlled by hierarchical controllers (multistage).

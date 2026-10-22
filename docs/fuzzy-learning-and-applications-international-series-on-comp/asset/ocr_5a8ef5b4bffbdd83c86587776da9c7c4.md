@@ -1,0 +1,7 @@
+L^{M-1} / 2^{M-1} rows and L columns. Every memory cell array stores pairs of singleton values which need to be addressed simultaneously. The row selector selects 2^{M-1} rows simultaneously, one for each memory cell array, to provide a set of L × 2^{M-1} singleton values. The column selector selects the correct singleton values from this set, and controls the multiplexor in order to place them in the right location to form the 2^{M} × P output word, all in one step. To illustrate the data distribution and memory operation let us show the situation for a bi-dimensional case. Fig.2.16(a) shows four generic adjacent intervals C_{mn}, C_{(m-1)n}, C_{(m-1)(n-1)}, C_{m(n-1)} with their associated singleton values. These values are distributed into two memory cell arrays as the top of Fig.2.16(b) shows. Memory cell array 1 contains the rows with odd n index, while memory cell array 2 contains the rows with even n index. Both arrays have L columns. Below these arrays in Fig.2.16(b) the result of a row selection is shown for the four intervals in Fig.2.16(a). All the singleton values needed to program the analog core (enclosed in squares in the figure) are in the resulting word. Finally, the column selector selects these singleton values and places them in the output bus. Note that each singleton value appears in the right location (see Fig.2.16(a)). Although somewhat tricky for internal accesses, the memory is configured as a conventional RAM for external accesses.
+
+![](bbox=[0.18, 0.68, 0.85, 0.88])
+
+(a)
+
+Figure 2.16: Caption on next page.
