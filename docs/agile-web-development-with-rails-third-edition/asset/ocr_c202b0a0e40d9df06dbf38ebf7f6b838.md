@@ -1,0 +1,3 @@
+the Rails helpers to hide the bulk of the JavaScript from you, it is also great to know what is actually being done on your behalf.
+
+And remember: use Ajax to benefit your users! Your motto should be the same as a doctor's: first, do no harm. Use Ajax where it makes your users' lives better, not where it just confuses them or makes it harder to get things done. Follow that simple rule, and Ajax on Rails can be wonderful.

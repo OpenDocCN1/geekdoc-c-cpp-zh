@@ -1,0 +1,172 @@
+
+This will report validation failures (but only after we've written one more chunk of code).
+
+## Capturing the Order Details
+
+Let's implement the save_order action in the controller. This method has to do the following:
+
+- 1. Capture the values from the form to populate a new Order model object.
+- 2. Add the line items from our cart to that order.
+- 3. Validate and save the order. If this fails, display the appropriate messages, and let the user correct any problems.
+- 4. Once the order is successfully saved, redisplay the catalog page, including a message confirming that the order has been placed.
+
+The method ends up looking something like this:
+
+```
+Download depot_p/app/controllers/store_controller.rb
+
+Line 1 def save_order
+- @cart = find_cart
+- @order = Order.new(params[:order])
+- @order.add_line_items_from_cart(@cart)
+5 if @order.save
+- session[:cart] = nil
+- redirect_to_index("Thank you for your order")
+- else
+- render :action => 'checkout'
+10 end
+end
+```
+
+On line 3, we create a new Order object and initialize it from the form data. In this case, we want all the form data related to order objects, so we select the :order hash from the parameters (this is the name we passed as the first parameter to form_for). The next line adds into this order the items that are already stored in the cart—we'll write the actual method to do this in a minute.
+
+Next, on line 5, we tell the order object to save itself (and its children, the line items) to the database. Along the way, the order object will perform validation (but we'll get to that in a minute). If the save succeeds, we do two things. First, we ready ourselves for this customer's next order by deleting the cart from the session. Then, we redisplay the catalog using our redirect_to_index method to display a cheerful message. If, instead, the save fails, we redisplay the checkout form.
+
+## Joe Asks...
+
+### Aren't You Creating Duplicate Orders?
+
+Joe is concerned to see our controller creating Order model objects in two actions: checkout and save_order. He's wondering why this doesn't lead to duplicate orders in the database.
+
+The answer is simple: the checkout action creates an Order object in memory simply to give the template code something to work with. Once the response is sent to the browser, that particular object gets abandoned, and it will eventually be reaped by Ruby's garbage collector. It never gets close to the database.
+
+The save_order action also creates an Order object, populating it from the form fields. This object does get saved in the database.
+
+So, model objects perform two roles: they map data into and out of the database, but they are also just regular objects that hold business data. They affect the database only when you tell them to, typically by calling save.
+
+In the save_order action we assumed that the order object contains the method add_line_items_from_cart, so let's implement that method now:
+
+```
+Download: depot_p/app/models/order.rb
+
+def add_line_items_from_cart(cart)
+  cart.items.each do |item|
+    li = LineItem.from_cart_item(item)
+    line_items << li
+  end
+end
+```
+
+Notice that we didn't have to do anything special with the various foreign key fields, such as setting the order_id column in the line item rows to reference the newly created order row. Rails does that knitting for us using the has_many and belongs_to declarations we added to the Order and LineItem models. Appending each new line item to the line_items collection on line 4 hands the responsibility for key management over to Rails.
+
+This method in the Order model in turn relies on a simple helper in the line item model that constructs a new line item given a cart item:
+
+```
+Download: depot_p/app/models/line_item.rb
+
+class LineItem < ActiveRecord::Base
+  belongs_to :order
+  belongs_to :product
+```
+
+![](img/a160fc3a330a0b3b2a764d41d614e688_154_0.png)
+
+Figure 10.3: Full house! Every field fails validation.
+
+## One Last Ajax Change
+
+After we accept an order, we redirect to the index page, displaying the cheery flash message “Thank you for your order.” If the user continues to shop and they have JavaScript enabled in their browser, we’ll fill the cart in their sidebar without redrawing the main page. This means that the flash message will continue to be displayed. We’d rather it went away after we add the first item to the cart (as it does when JavaScript is disabled in the browser). Fortunately, the fix is simple: we just hide the <div> that contains the flash message when we add something to the cart. Except, nothing is really ever that simple.
+
+A first attempt to hide the flash might involve adding the following line to add_to_cart.js.rjs:
+
+```
+page[:notice].hide
+# rest as before...
+```
+
+However, this doesn’t work. If we come to the store for the first time, there’s nothing in the flash, so the <div> with an id of notice is not displayed. And, if there’s no <div> with the id of notice, the JavaScript generated by the RJS
+
+template that tries to hide it bombs out, and the rest of the template never gets run. As a result, you never see the cart update in the sidebar.
+
+The solution is a little hack. We want to run the .hide only if the notice <div> is present, but RJS doesn’t give us the ability to generate JavaScript that tests for <div>s. It does, however, let us iterate over elements on the page that match a certain CSS selector pattern. So let’s iterate over all <div> tags with an id of notice. The loop will find either one, which we can hide, or none, in which case the hide won’t get called.
+
+```
+Download depot_p/app/views/store/add_to_cart.js.rjs
+page.select("div#notice").each { |div| div.hide }
+
+page.replace_html("cart", :partial => "cart", :object => @cart)
+
+page[:cart].visual_effect :blind_down if @cart.total_items == 1
+
+page[:current_item].visual_effect :highlight,
+  :startcolor => "#88ff88",
+  :endcolor => "#114411"
+```
+
+The customer likes it. We’ve implemented product maintenance, a basic catalog, and a shopping cart, and now we have a simple ordering system. Obviously we’ll also have to write some kind of fulfillment application, but that can wait for a new iteration. (And that iteration is one that we’ll skip in this book; it doesn’t have much new to say about Rails.)
+
+## What We Just Did
+
+In a fairly short amount of time, we did the following:
+
+- - We added orders and line_items tables (with the corresponding models) and linked them together.
+- - We created a form to capture details for the order and linked it to the order model.
+- - We added validation and used helper methods to display errors to the user.
+
+## Playtime
+
+Here’s some stuff to try on your own:
+
+- - Trace the flow through the methods save_order, add_line_items_from_cart, and from_cart_item. Do the controller, order model, and line item model seem suitably decoupled from each other? (One way to tell is to look at potential changes—if you change something, such as by adding a new
+field to a cart item, does that change ripple through the code?) Can you find a way to further reduce coupling?
+- - What happens if you click the Checkout button in the sidebar while the checkout screen is already displayed? Can you find a way of disabling the button in this circumstance? (Hint: variables set in the controller are available in layouts and partials as well as in the directly rendered template.)
+- - The list of possible payment types is currently stored as a constant in the Order class. Can you move this list into a database table? Can you still make validation work for the field?
+
+(You'll find hints at http://pragprog.wiki dot.com/rails-play-time.)
+
+## PRAGMATIC BOOKSHELF
+
+## Your Cart
+
+1x Pragmatic Project Automation $29.95
+Total $29.95
+
+Checkout
+
+Empty cart
+
+- - Home
+- - Questions
+- - News
+- - Contact
+
+## Please Enter Your Details
+
+Name: Dave Thomas
+
+Address: 123 Main St
+
+E-Mail: customer@pragprog.com
+
+Pay with: Check
+
+Place Order
+
+## PRAGMATIC BOOKSHELF
+
+- - Home
+- - Questions
+- - News
+- - Contact
+
+Thank you for your order
+
+## Your Pragmatic Catalog
+
+## Pragmatic Project Automation
+
+Pragmatic Project Automation shows you how to improve the consistency and repeatability of your project's procedures using automation to reduce risk and errors.
+
+Simply put, we're going to put this thing called a computer to work for you doing the mundane (but important) project stuff.
+
+Figure 10.4: Our first checkout

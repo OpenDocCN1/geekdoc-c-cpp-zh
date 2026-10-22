@@ -1,0 +1,152 @@
+
+
+partial once for each item in the collection. Let’s rewrite our cart view to use this feature:
+
+```
+```erb
+<div class="cart-title">Your Cart</div>
+<table>
+  <%= render(:partial => "cart_item", :collection => @cart.items) %>
+
+  <tr class="total-line">
+    <td colspan="2">Total</td>
+    <td class="total-cell"><%= number_to_currency(@cart.total_price) %></td>
+  </tr>
+
+</table>
+
+<%= button_to "Empty cart", :action => :empty_cart %>
+```
+```
+
+That’s a lot simpler. The render method takes the name of the partial and the collection object as parameters. The partial template itself is simply another template file (by default in the same directory as the template that invokes it). However, to keep the names of partials distinct from regular templates, Rails automatically prepends an underscore to the partial name when looking for the file. That means our partial will be stored in the file _cart_item.html.erb in the app/views/store directory.
+
+```
+```erb
+<tr>
+  <td><%= cart_item.quantity %>&times;</td>
+  <td><%=h cart_item.title %></td>
+  <td class="item-price"><%= number_to_currency(cart_item.price) %></td>
+</tr>
+```
+```
+
+There’s something subtle going on here. Inside the partial template, we refer to the current cart item using the variable cart_item. That’s because the render method in the main template arranges to set a variable with the same name as the partial template to the current item each time around the loop. The partial is called cart_item, so inside the partial we expect to have a variable called cart_item.
+
+So, now we’ve tidied up the cart display, but that hasn’t moved it into the sidebar. To do that, let’s revisit our layout. If we had a partial template that could display the cart, we could simply embed a call like this within the sidebar:
+
+```
+```ruby
+render(:partial => "cart")
+```
+```
+
+But how would the partial know where to find the cart object? One way would be for it to make an assumption. In the layout, we have access to the @cart instance variable that was set by the controller. It turns out that this is also available inside partials called from the layout. However, this is a bit like calling a method and passing it some value in a global variable. It works, but it’s
+
+ugly coding, and it increases coupling (which in turn makes your programs brittle and hard to maintain).
+
+Remember using render with the collection option inside the add_to_cart template? It set the variable cart_item inside the partial. It turns out we can do the same when we invoke a partial directly. The :object parameter to render takes an object that is assigned to a local variable with the same name as the partial. So, in the layout we could call this:
+
+```
+<%= render(:partial => "cart", :object => @cart) %>
+```
+
+and in the _cart.html.erb template, we can refer to the cart via the variable cart.
+
+Let’s do that wiring now. First, we’ll create the _cart.html.erb template. This is basically our add_to_cart template but using cart instead of @cart. (Note that it’s OK for a partial to invoke other partials.)
+
+```
+Download depot_j/app/views/store/_cart.html.erb
+<div class="cart-title">Your Cart</div>
+<table>
+  <%= render(:partial => "cart_item", :collection => cart.items) %>
+  <tr class="total-line">
+    <td colspan="2">Total</td>
+    <td class="total-cell"><%= number_to_currency(cart.total_price) %></td>
+  </tr>
+</table>
+
+<%= button_to "Empty cart", :action => :empty_cart %>
+```
+
+Now we’ll change the store layout to include this new partial in the sidebar:
+
+```
+Download depot_j/app/views/layouts/store.html.erb
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Pragprog Books Online Store</title>
+  <%= stylesheet_link_tag "depot", :media => "all" %>
+</head>
+<body id="store">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <div id="cart">
+        <%= render(:partial => "cart", :object => @cart) %>
+      </div>
+```
+
+You tell form_remote_tag how to invoke your server application using the :url parameter. This takes a hash of values that are the same as the trailing parameters we passed to button_to. The code inside the Ruby block (between the do and end keywords) is the body of the form. In this case, we have a simple submit button. From the user's perspective, this page looks identical to the previous one.
+
+While we're dealing with the views, we also need to arrange for our application to send the JavaScript libraries used by Rails to the user's browser. We'll talk more about this in Chapter 24, The Web, v2.0, on page 563, but for now let's just add a call to javascript_include_tag to the <head> section of the store layout:
+
+```
+Download depot_l/app/views/layouts/store.html.erb
+<html>
+<head>
+<title>Pragprog Books Online Store</title>
+<%= stylesheet_link_tag "depot", :media => "all" %>
+<%= javascript_include_tag :defaults %>
+</head>
+```
+
+So far, we've arranged for the browser to send an Ajax request to our application. The next step is to have the application return a response. The plan is to create the updated HTML fragment that represents the cart and to have the browser stick that HTML into the DOM¹ as a replacement for the cart that's already there. The first change is to stop the add_to_cart action redirecting to the index display. (We know, we just added that only a few pages back. Now we're taking it out again. We're agile, right?) What we are going to replace it with is a call to respond_to telling it that we want to respond with a format of .js.²
+
+```
+Download depot_l/app/controllers/store_controller.rb
+def add_to_cart
+  product = Product.find(params[:id])
+  @cart = find_cart
+  @cart.add_product(product)
+  respond_to do |format|
+    format.js
+  end
+rescue ActiveRecord::RecordNotFound
+  logger.error("Attempt to access invalid product #{params[:id]}")
+  redirect_to_index("Invalid product")
+end
+```
+
+1. The Document Object Model. This is the browser's internal representation of the structure and content of the document being displayed. By manipulating the DOM, we cause the display to change in front of the user's eyes.
+
+2. This syntax may seem surprising at first, but it is simply a method call that is passing a block as an argument. Blocks are described in Section A.9, Blocks and Iterators, on page 675. We will cover the respond_to method in greater detail in Section 12.1, Responding Appropriately, on page 185.
+
+Because of this change, when add_to_cart finishes handling the Ajax request, Rails will look for an add_to_cart template to render. We deleted the old .html.erb template back on page 129, so it looks like we’ll need to add something back in. Let’s do something a little bit different.
+
+Rails supports RJS templates—the JS stands for JavaScript. A .js.rjs template is a way of getting JavaScript on the browser to do what you want, all by writing server-side Ruby code. Let’s write our first: add_to_cart.js.rjs. It goes in the app/views/store directory, just like any other template:
+
+```
+depot1/app/views/store/add_to_cart.js.rjs
+page.replace_html("cart", :partial => "cart", :object => @cart)
+```
+
+Let’s analyze that template. The page variable is an instance of something called a JavaScript generator—a Rails class that knows how to create JavaScript on the server and have it executed by the browser. Here, we tell it to replace the content of the element on the current page with the id cart with…something. The remaining parameters to replace_html look familiar. They should—they’re the same ones we used to render the partial in the store layout. This simple RJS template renders the HTML that represents the cart. It then tells the browser to replace the content of the <div> whose id="cart" with that HTML.
+
+Does it work? It’s hard to show in a book, but it sure does. Make sure you reload the index page in order to get the form_remote_tag and the JavaScript libraries loaded into your browser. Then, click one of the Add to Cart buttons. You should see the cart in the sidebar update. And you shouldn’t see your browser show any indication of reloading the page. You’ve just created an Ajax application.
+
+## Troubleshooting
+
+Although Rails makes Ajax incredibly simple, it can’t make it foolproof. And, because you’re dealing with the loose integration of a number of technologies, it can be hard to work out why your Ajax doesn’t work. That’s one of the reasons you should always add Ajax functionality one step at a time.
+
+Here are a few hints if your Depot application didn’t show any Ajax magic:
+
+- Did you delete the old add_to_cart.html.erb file?
+- Did you remember to include the JavaScript libraries in the store layout (using javascript_include_tag)?
+- Does your browser have any special incantation to force it to reload everything on a page? Sometimes browsers hold local cached versions of page assets, and this can mess up testing. Now would be a good time to do a full reload.
+

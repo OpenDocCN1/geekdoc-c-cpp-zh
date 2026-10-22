@@ -1,0 +1,12 @@
+> Tous les jours, à tous points de vue, je vais de mieux en mieux.
+> ► Émile Coué
+
+# Preface to the Second Edition
+
+It has been eighteen months since I announced the first edition of this book. It was clear before the book came out that Rails would be big, but I don't think anyone back then realized just how significant this framework would turn out to be.
+
+In the year that followed, Rails went from strength to strength. It was used as the basis for any number of new, exciting websites. Just as significantly, large corporations (many of them household names) started to use Rails for both inward- and outward-facing applications. Rails gained critical acclaim, too. David Heinemeier Hansson, the creator of Rails, was named Hacker of the Year at OSCON. Rails won a Jolt Award as best web development tool, and the first edition of this book received a Jolt Award as best technical book.
+
+But the Rails core team didn't just sit still, soaking up the praise. Instead, they've been heads-down adding new features and facilities. Rails 1.0, which came out some months after the first edition hit the streets, added features such as database migration support, as well as updated Ajax integration. Rails 1.1, released in the spring of 2006, was a blockbuster, with more than 500 changes since the previous release. Many of these changes are deeply significant. For example, RJS templates change the way that developers write Ajax-enabled applications, and the integration testing framework changes the way these applications can be tested. A lot of work has gone into extending and enhancing Active Record, which now includes polymorphic associations, join models, better caching, and a whole lot more.
+
+The time had come to update the book to reflect all this goodness. And, as I started making the changes, I realized that something else had changed. In the time since the first book was released, we'd all gained a lot more experience of just how to write a Rails application. Some stuff that seemed like a great idea didn't work so well in practice, and other features that initially seemed peripheral turned out to be significant. And those new practices meant that the changes to the book went far deeper than I'd expected. I was no longer doing a cosmetic sweep through the text, adding a couple of new APIs. Instead, I found myself rewriting the content. Some chapters from the original have been removed, and new chapters have been added. Many of the rest have been

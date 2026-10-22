@@ -1,0 +1,204 @@
+
+Ruby *statement* modifiers are a useful shortcut if the body of an if or while statement is just a single expression. Simply write the expression, followed by if or while and the condition:
+
+```
+puts "Danger, Will Robinson" if radiation > 3000
+```
+
+```
+distance = distance * 1.2 while distance < 100
+```
+
+## A.8 Regular Expressions
+
+A regular expression lets you specify a *pattern* of characters to be matched in a string. In Ruby, you typically create a regular expression by writing /pattern/ or %r(pattern).
+
+For example, you could write a pattern that matches a string containing the text Perl or the text Python using the regular expression /Perl|Python/.
+
+The forward slashes delimit the pattern, which consists of the two things we're matching, separated by a vertical bar (|). This bar character means "either the thing on the left or the thing on the right," in this case either Perl or Python. You can use parentheses within patterns, just as you can in arithmetic expressions, so you could also have written this pattern as /(Per|ython)/. Programs typically test strings against regular expressions using the =~ match operator:
+
+```
+if line =~ /(Per|ython)/
+  puts "There seems to be another scripting language here"
+end
+```
+
+You can specify *repetition* within patterns. /ab+c/ matches a string containing an a followed by one or more b's, followed by a c. Change the plus to an asterisk, and /ab*c/ creates a regular expression that matches one a, zero or more b's, and one c.
+
+Ruby's regular expressions are a deep and complex subject; this section barely skims the surface. See the PickAxe book for a full discussion.
+
+## A.9 Blocks and Iterators
+
+Code blocks are just chunks of code between braces or between do...end. A common convention is that people use braces for single-line blocks and do/end for multiline blocks:
+
+```
+{ puts "Hello" }    # this is a block
+```
+
+```
+do
+  club.enroll(person)  # and so is this
+  person.socialize
+end
+```
+
+A block must appear after the call to a method; put the start of the block at the end of the source line containing the method call. For example, in the following code, the block containing puts "Hi" is associated with the call to the method greet:
+
+```
+greet { puts "Hi" }
+```
+
+If the method has parameters, they appear before the block:
+
+```
+verbose_greet("Dave", "loyal customer") { puts "Hi" }
+```
+
+A method can invoke an associated block one or more times using the Ruby yield statement. You can think of yield as being something like a method call that calls out to the block associated with the method containing the yield. You can pass values to the block by giving parameters to yield. Within the block, you list the names of the arguments to receive these parameters between vertical bars (|).
+
+Code blocks appear throughout Ruby applications. Often they are used in conjunction with iterators: methods that return successive elements from some kind of collection, such as an array:
+
+```
+animals = %w( ant bee cat dog elk )    # create an array
+animals.each {|animal| puts animal }    # iterate over the contents
+```
+
+Each integer N implements a times method, which invokes an associated block N times:
+
+```
+3.times { print "Ho! " }    #=> Ho! Ho! Ho!
+```
+
+## A.10 Exceptions
+
+Exceptions are objects (of class Exception or its subclasses). The raise method causes an exception to be raised. This interrupts the normal flow through the code. Instead, Ruby searches back through the call stack for code that says it can handle this exception.
+
+Exceptions are handled by wrapping code between begin and end keywords and using rescue clauses to intercept certain classes of exception:
+
+```
+begin
+  content = load_blog_data(file_name)
+rescue BlogDataNotFound
+  STDERR.puts "File #{file_name} not found"
+rescue BlogDataFormatError
+  STDERR.puts "Invalid blog data in #{file_name}"
+rescue Exception => exc
+  STDERR.puts "General error loading #{file_name}: #{exc.message}"
+end
+```
+
+## A.11 Marshaling Objects
+
+Ruby can take an object and convert it into a stream of bytes that can be stored outside the application. This process is called marshaling. This saved object can later be read by another instance of the application (or by a totally separate application), and a copy of the originally saved object can be reconstituted.
+
+There are two potential issues when you use marshaling. First, some objects cannot be dumped. If the objects to be dumped include bindings, procedure or method objects, instances of class IO, or singleton objects or if you try to dump anonymous classes or modules, a TypeError will be raised.
+
+Second, when you load a marshaled object, Ruby needs to know the definition of the class of that object (and of all the objects it contains).
+
+Rails uses marshaling to store session data. If you rely on Rails to dynamically load classes, it is possible that a particular class may not have been defined at the point it reconstitutes session data. For that reason, you'll use the model declaration in your controller to list all models that are marshaled. This preemptively loads the necessary classes to make marshaling work.
+
+## A.12 Interactive Ruby
+
+irb—Interactive Ruby—is the tool of choice for executing Ruby interactively. irb is a Ruby shell, complete with command-line history, line-editing capabilities, and job control. You run irb from the command line. Once it starts, just type in Ruby code. irb shows you the value of each expression as it evaluates it:
+
+```
+% irb
+irb(main):001:0> def sum(n1, n2)
+irb(main):002:1>   n1 + n2
+irb(main):003:1> end
+=> nil
+irb(main):004:0> sum(3, 4)
+=> 7
+irb(main):005:0> sum("cat", "dog")
+=> "catdog"
+```
+
+You can run irb on Rails applications, letting you experiment with methods (and sometimes undo damage to your database). However, setting up the full Rails environment is tricky. Rather than do it manually, use the script/console wrapper, as shown on page 272.
+
+## A.13 Ruby Idioms
+
+Ruby is a language that lends itself to idiomatic usage. There are many good resources on the Web showing Ruby idioms and Ruby gotchas. Here are just a few.
+
+- http://www.ruby-lang.org/en/documentation/ruby-from-other-languages/
+- http://en.wikipedia.org/wiki/Ruby_programming_language
+- http://www.zenspider.com/Languages/Ruby/QuickRef.html
+
+This section shows some common Ruby idioms that we use in this book:
+
+Methods such as empty! and empty?
+
+Ruby method names can end with an exclamation mark (a bang method) or a question mark (a predicate method). Bang methods normally do something destructive to the receiver. Predicate methods return true or false depending on some condition.
+
+a || b
+
+The expression a || b evaluates a. If it isn't false or nil, then evaluation stops and the expression returns a. Otherwise, the statement returns b. This is a common way of returning a default value if the first value hasn't been set.
+
+a ||= b
+
+The assignment statement supports a set of shortcuts: a op= b is the same as a = a op b. This works for most operators.
+
+```
+count += 1        # same as count = count + 1
+price *= discount  #        price = price * discount
+count ||= 0        #        count = count || 0
+```
+
+So, count ||= 0 gives count the value 0 if count doesn't already have a value.
+
+obj = self.new
+
+Sometimes a class method needs to create an instance of that class.
+
+```
+class Person < ActiveRecord::Base
+  def self.for_dave
+    Person.new(:name => 'Dave')
+  end
+end
+```
+
+This works fine, returning a new Person object. But later, someone might subclass our class:
+
+```
+class Employee < Person
+  # ..
+end
+```
+
+```
+dave = Employee.for_dave  # returns a Person
+```
+
+The for_dave method was hardwired to return a Person object, so that's what is returned by Employee.for_dave. Using self.new instead returns a new object of the receiver's class, Employee.
+
+```
+require File.dirname(__FILE__) + '../test_helper'
+```
+
+Ruby's require method loads an external source file into our application. This is used to include library code and classes that our application relies on. In normal use, Ruby finds these files by searching in a list of directories, the LOAD_PATH.
+
+Sometimes we need to be specific about what file to include. We can do that by giving require a full filesystem path. The problem is, we don't know what that path will be—our users could install our code anywhere.
+
+Wherever our application ends up getting installed, the relative path between the file doing the requiring and the target file will be the same. Knowing this, we can construct the absolute path to the target by taking the absolute path to the file doing the requiring (available in the special variable __FILE__), stripping out all but the directory name, and then appending the relative path to the target file.
+
+## A.14 RDoc Documentation
+
+RDoc is a documentation system for Ruby source code. Just like JavaDoc, RDoc takes a bunch of source files and generates HTML documentation, using syntactic information from the source and text in comment blocks. Unlike JavaDoc, RDoc can produce fairly good content even if the source contains no comments. It's fairly painless to write RDoc documentation as you write the source for your applications. RDoc is described in Chapter 16 of the PickAxe book.
+
+RDoc is used to document Ruby's built-in and standard libraries. Depending on how your Ruby was installed, you might be able to use the ri command to access the documentation:
+
+```
+dave> ri String.capitalize
+--------------------------------------------- String#capitalize
+    str.capitalize   => new_str
+---------------------------------------------
+Returns a copy of str with the first character converted to uppercase and the remainder to lowercase.
+
+"hello".capitalize   #=> "Hello"
+"HELLO".capitalize   #=> "Hello"
+"123ABC".capitalize  #=> "123abc"
+```
+
+If you used RubyGems to install Rails, you can access the Rails API documentation by running gem server and then pointing your browser at the URL http://localhost:8808.
+
+The rake doc:app task creates the HTML documentation for a Rails project, leaving it in the doc/app directory.
