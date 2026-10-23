@@ -1,0 +1,5 @@
+when albums (or possibly songs) are selected, the cover art for the album is displayed. Cover art can be stored in the same directory as the script and data file or you can use URLs.
+
++   15. Most interactive box scores do more than just present the statistics in the way you did for project 12 (p. 282). They also use graphics to display things like team logos and photos of players. For this project you should extend what you did for project 12 so that it displays this information. You should also make it interactive so that the images of things like players can be changed by user actions. For example, you could listen to MouseEntered events on labels of their names. If the box scores involve different teams the logo displays should change with what teams are in the current box score.
+
+Additional exercises and projects, along with data files, are available on the book’s website.

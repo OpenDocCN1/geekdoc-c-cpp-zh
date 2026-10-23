@@ -1,0 +1,14 @@
++   4. Write a grammar for roman numerals. Have it parse to a tree such that the output has an `eval` method that will return the numeric value as an `Int`.
+
+# 30.5.3 Projects
+
++   1. If you have been working on the MUD project, this chapter gives you the ability to use commands with significantly greater complexity. This can be done with either regular expressions or a parser. You can decide which you want to use, but the suggestion would be to write a simple grammar for more complex commands that you could put into your MUD and then write a parser that will take those and build usable expression trees from them.
++   2. Regular expressions and parsers can be extremely useful in pulling data out of text files for the web spider. You likely wrote up a fair bit of *ad-hoc* code for getting the data you want out of HTML files. Convert that code to using a parser with regular expressions.
++   3. Both the networked and non-networked graphical game programs avoid having significant text input. However, in both cases, there are often reasons when it is nice to be able to give commands to the program that go beyond what a normal user should be able to do in order to help with testing and debugging.
++   
++   For this project, you should add a small command language to your game. If there is a good reason to do this for normal users, feel free to do so. Networked games could integrate this with chatting features. Non-networked games could put it into the Graphical User Interface (GUI), or you could use the logging socket that was added back in chapter 23.
++   4. The material from this chapter can be particularly beneficial to the math worksheet project. Using combinatorial parsers, you can create a more complex, powerful formula parser, introduce additional commands with relative ease, and even consider putting in a simple programming language. You can also include conditionals expressions in your parser so that your mathematical functions can use recursive definitions.
++   
++   For all of these additions, you should have the parser build an expression tree for faster evaluation. Add whatever set of features you feel takes the project in the direction you want to go.
++   5. Photoshop® is another project that included mathematical formulas, and which can benefit from having commands in a simple language. Given what you learned in this chapter, you should be able to add much more powerful parsing to your formulas that are used with filters.
++   6. The simulation workbench project will also benefit from having real formulas. All of the applications of formulas from chapter 29 apply when using a combinatorial parser as well. In addition, the combinatorial parser makes to reasonable to extend formulas into more of a real language.

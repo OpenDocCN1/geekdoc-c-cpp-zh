@@ -1,0 +1,20 @@
+because the **comp** function might be expensive and we need to check for equality and at least one form of inequality each time through the loop. Storing the result in a variable reduces the number of calls by two and does not really hurt code readability.
+
+The `+=` method is the next simplest and is heavily based on the **get** method. It has a special case for adding to an empty tree, as that has to change the value of **root** instead of a **left** or **right** in a node. The other case contains a **while** loop that is much like the one in **get** with the exception that it keeps a reference called **parent** that follows the rover down the tree. This happens because in the case of a new key value, the rover will fall off the bottom of the tree. At that point, we need to know the parent to be able to add a node. This is much like removing from a singly-linked list, where we needed a reference to the node before the one we were removing. That could also be done with a trailing node equivalent to **parent**, but it was easier to simply check the **next** reference in the node. In this case, there are both **left** and **right** references so it is easier to keep use the trailing reference approach. After the loop breaks, there are three cases for the key being less than, greater than, or equal to the last node checked.
+
+The condition where the key passed to `+=` is the same as one currently in the tree brings up something that was avoided above, what happens when there are duplicate keys? The map ADT is designed to only hold one value for any given key. For that reason, the code here replaces what is stored in the node with what is passed in. If a BST is used in a situation where duplicate keys are allowed, such as a multimap, a different approach must be taken. One option would be to have the node store a list of values instead of a single one, other options, such as having equal values go left or right, can cause problems for some applications.
+
+The **iterator** method is the next simplest. Any traversal would work, but there is a certain logic to using an in-order traversal as that traversal on a BST handles the nodes in sorted order by their keys. While it is simple enough to write a recursive traversal of a BST, that does not work well for the iterator, which needs to be able to provide elements one at a time instead of handling all elements as part of a single call. For this reason, our iterator needs to keep a stack to remember elements that have been passed over and not yet visited.
+
+To get an in-order traversal, we repeatedly push all elements running down the left branch of any subtree. This is done by the **pushRunLeft** method. It is called on the root initially to set up the stack. Then each time a node is popped, that method is called on the left child of the node before the data element is returned. As long as the stack contains items, the iterator is not empty.
+
+That leaves us with the `-=` method. The implementation shown here is not the most efficient, but it is far easier to understand than more efficient implementations. This version breaks the problem down a bit further and includes two nested functions that actually do the work. There are many possible special cases for removing from a BST. The overhead of these in the code is reduced by having the recursion set up so that values are assigned at each level.
+
+The first recursive method is called **findVictim** and it is repeated here. It returns the node that the parent, or root, should reference. As the name implies, the primary purpose of this method is to find the key value that needs to be removed. The easy base case is when the function is called with a **null** node. That implies that the walk fell off the tree without finding the element so nothing needs to be deleted.
+
+```
+def findVictim(n:Node):Node = {
+if (n==null) null
+else {
+val c = comp(key,n.key)
+```

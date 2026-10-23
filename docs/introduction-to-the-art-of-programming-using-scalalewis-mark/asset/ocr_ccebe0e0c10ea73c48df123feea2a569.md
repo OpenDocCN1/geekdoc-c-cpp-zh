@@ -1,0 +1,9 @@
+![](bbox=[0.22, 0.07, 0.72, 0.48])
+
+FIGURE 24.3: This figure shows a graphical representation of an array-based queue and how it changes over several operations. The queue stores data in the array and uses integer indexes to keep track of the front and back.
+
+As with the stack, this has only the signatures of the methods along with comments describing what they do.
+
+The queue ADT can also be implemented using an array. Figure 24.3 shows how this might look for several operations. Unlike the stack, the queue needs to keep track of two locations in the array: a front and a back. The back is where new elements go when something is added to the queue and the front is where values are taken from when they are removed. Both indexes are incremented during the proper operations. When an index moves beyond the end of the array, it is wrapped back around to the beginning. This allows us to continually add and remove items without having to grow the array or copy elements around. Both of those would require O(n) operations and prevent our total performance from being O(1).
+
+This figure does not show what happens when the queue gets full. At that point a bigger array is needed and values need to be copied from the old array into the new one. The details for the queue are not quite as straightforward as they were for the stack. Figure 24.4 demonstrates the problem and a possible solution. Doing a direct copy of elements is not appropriate because the wrapping could have resulted in a situation where the front and back are inverted. Instead, the copy needs to shift elements around so that they are contiguous. The values of front and back need to be adjusted appropriately as well. There

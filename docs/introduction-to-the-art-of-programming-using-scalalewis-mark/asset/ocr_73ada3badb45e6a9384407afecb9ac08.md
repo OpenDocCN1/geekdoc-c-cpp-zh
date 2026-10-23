@@ -1,0 +1,17 @@
+and Vect⁶ classes in particular can have methods for doing mathematical operations that will make your code much simpler and easier to read. Methods like mag and normalize could also come in handy.
+
+To color a point you need the color of the object that was hit, and the lighting on that point. To get the lighting, send a ray from the point of contact to the light source. If there is any geometry in the way (t value between 0.0 and 1.0), then that point is shadowed and the light does not get to it. If there is not anything in the way, that light contributed to the point. The color should be the component wise product of the colors of the light and the object hit, scaled by the cosine of the angle between the normal and the direction to the light. To find the cosine, keep in mind that a⃗ · b⃗ = |a||b| cos θ. To make this easier, you should probably store the colors of lights and geometry using DColor. This hopefully helps to demonstrate why putting proper methods in the DColor, Point, and Vect will help to make the code easier to write and to read.
+
+If the geometry that is hit is reflective, you do the recursive call to find what it hits and add the resulting colors, scaled by the appropriate fractions, together to get the color value of the incoming ray.
+
+9. You can make the scheduling script from project 6 (p.388) into an object-oriented application. To do this, you want to put a body on your Course case class. It is possible that you will leave it as an immutable case class and just add methods to it. The methods should probably include one that takes another Course and determines if the two overlap or not. There might also be methods designed to do specific types of copy operations that you find yourself doing frequently, such as making a copy of a course at a different time or with a different professor.
+
+The fact that the choice of professor often impacts how much you want to take a course, you could split this off and make a class called Professor that has the name of the Professor and a favorability rating. The Course could then hold a reference to Professor and have a rating that is independent of the professor. A method can be written to give you the combined favorability. This way you can easily copy course options with different professor selections and have that change automatically taken into account.
+
+You can also build a mutable Schedule class that keeps track of what the user wants in a schedule along with what has been met so far from the courses that have been put inside of the schedule. Put this all in an application and tie it together in a GUI.
+
+10. To upgrade the recipe project from 15.5 to be more object-oriented, you will most convert case classes to have methods and possibly make them mutable classes. You will also move the main functionality of the script into an object with a main method.
+
+In addition to having classes for Pantry, Recipe, and Item, you might want to have a class that keeps track of all the known Item types that have been used in the program. That class should have methods that facilitate looking up items by names or other attributes so that users do not wind up creating duplicates of Item objects.
+
+11. The music library script from project 9 (p.389) can be converted to an object-oriented application by filling out the different case classes with methods or turning them into mutable classes.

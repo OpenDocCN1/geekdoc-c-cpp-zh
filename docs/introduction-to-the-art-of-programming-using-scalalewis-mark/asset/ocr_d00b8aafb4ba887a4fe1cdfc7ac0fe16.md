@@ -1,0 +1,19 @@
+on the panel it should add a new “seed” at the click location (simply set the color at that point in the image to the crystal color).
+
+There should be either a Button or a menu option to release more particles. When a particle is released, it should start at one of the edges. You just need to keep track of the x, y location of it. Using a while loop, have the particle move randomly around until the move would put it on top of a spot that already has a crystal. At that point you change the pixel at the location the particle had been to the crystal color.
+
+To move the particle randomly you could use util.Random.nextInt(4) to get a number in the 0-3 range and move either up, down, left, or right depending on that value. If a move would put a particle outside of the image, simply ignore that move. The menu option should probably run through a loop that drops 100 or so particles and lets each run until it sticks. You only need to repaint after all have found their place.
+
+Note that especially early on when the crystal seed is small, it can take a long time for a particle to run around until it hits that seed.
+
+7. If you have been doing ray tracing options in earlier projects, it is time for you to finally see something. You can use the code you wrote for project 2 (p.244) that makes a grid of parameter values and simply set colors in a BufferedImage based on the t intersect parameters. To do this you will probably want to build your own colors. You can make a new Color object by saying new Color(r:Int, g:Int, b:Int) where r, g, and b are in the 0-255 range. Values outside of that range will cause an error. Simply display the image in a Panel that you have put in the GUI to see depth information for your ray trace.
+
+8. Write a simple 2-D game of your choosing with simple geometry or sprites (little images for characters). Your game should have a Timer to make actions occur as well and take input from the user in the form of key pressed or mouse movement. At this point you know enough to write many types of games, but it is suggested that you strive to keep things simple. Have movement and some collision checking.
+
+9. This project has you write another simple “game” that you are likely familiar with that involves sliding tiles in a 4x4 grid where one piece is missing. The tiles might have numbers or parts of a picture. Your goal is to move then around by sliding pieces into the one open space until they are in the desired order.
+
+Write a GUI with a Panel that shows the 4x4 grid. You can choose if you want to use numbers of parts of an image. If you want to use parts of an image, you can get the small sections by loading the full image, then drawing it into smaller images with offsets so that only the part you want for a given piece appears in the smaller image.
+
+The user should interact with the game by clicking on the piece that they want to slide. In the simplest implementation, they have to click on a square immediately adjacent to the open square. For a bit of an extra challenge you can make it so that they can click on any square in the same row or column as the empty one and multiple pieces can be moved over at the same time.
+
+10. If you did project 8 (p.281) then you already have a GUI set up for keeping track of what a person has in their pantry and checking on recipes. However, this GUI is fairly bland. Now that you know how to put in graphics you have the ability to make it more visually appealing. For this project you should add onto your previous GUI the ability to have images associated with ingredients and recipes. You should also add in directions for how to make the recipe in the GUI.

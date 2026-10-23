@@ -1,0 +1,10 @@
+![](bbox=[0.07, 0.07, 0.88, 0.22])
+
+![](bbox=[0.07, 0.21, 0.88, 0.38])
+
+# FIGURE 33.3: Part A on the top shows the tree from figure 33.2 with the addition of a record whose key value is 75.
+
+Part A on the top shows the tree from figure 33.2 with the addition of a record whose key value is 75. The 75 is simply placed in sorted order in a leaf because there is still space left in that node. For part B of this figure, a record with a key value of 82 has been added. It would go right after the 75 record, but there is no more space in that node. Of the five records that would be in the node, the 75 is the median so it is moved into the parent and the other records are split into two different nodes. This process can propagate to higher levels in the tree if the parent is also full. A new level is created when the root node fills and has to split.
+
+As long as that leaf still has spots left, that new record is inserted in the proper location and the add is done. This is illustrated in figure 33.3-A. If the leaf node where the new record belongs is already full, then a new node has to be made. This is done by splitting that one node into two, pushing the median record up into the parent, and putting links to the two children nodes on either side. This is shown in figure 33.3-B.
+Real B-trees will typically have many more records per node than what is drawn in these figures. The fact that their average splitting factor is very high means that they can hold an extremely large number of records in very few levels. To see this, consider a B-tree with 200 records per node that is roughly half filled. That means that each node has roughly 100 records in it and each internal node has roughly 100 children.² So the top level would hold 100 records. The next would hold 10,000. The next would hold 1,000,000. This is still O(log(n)) behavior, but it is technically O(log₁₀₀(n)), which grows very slowly. A tree with a billion records will only barely crack five levels. This is significant, because each level winds up being a seek and a read when trying to find records.

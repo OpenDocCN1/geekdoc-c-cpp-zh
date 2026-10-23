@@ -1,0 +1,15 @@
++   - classes can take parameters. By default they are not members. Adding val or var in front of the name makes it member data.
++   - By default, constructs declared inside of a class are public and can be seen by any code. A big part of the power of object-orientation comes from the ability to hide things so that other code can not get to it. The private modifier makes it so no code outside of the class can see the declaration. There is also a protected modifier that makes declarations visible only to subtypes.
++   - A big part of the benefit of making things private is that it can be used to hide implementation details. This facilitates the separation of interface and implementation.
++   - To enhance the expressivity of the language, Scala allows a broader range of names than most languages and interprets some method names in special ways.
++     * In addition to the “standard” names that start with characters or underscores and then have characters, numbers, or underscores, Scala allows two other types of names. One of those is names that include only operator characters. The other is a “normal” name followed by an underscore and one or more operator symbols. Operator syntax, dropping the dot and the parentheses works for any method with a single argument. Operator precedence is determined by the first character. Operators ending in : are right associative.
++     * Unary prefix operators can be declared with a method name of unary_ followed by symbols including +, -, ~, and !.
++     * Scala does not has a strong syntactic distinction between methods and members. You can mimic a property of the class by writing a method with no arguments or parentheses along with a special method for assignment. That method has the name of the property followed by _=.
++     * Function call syntax is expanded out to calls to the apply method.
++     * Indexed assignment is expanded out to a call to update.
++   - You can have multiple methods with the same name as long as they have different arguments. This is called overloading.
++   - Scala also allows object declarations which create singleton objects. These can not take arguments and are not instantiated with new. A single instance just exists for using.
++     - Scripts are good for small programs, but larger programs are written and run as applications. The entry point to an application is defined by a main method in an object. Top-level declarations are split to different files. Code is compiled with scalac and run using scala.
++     - An object with the same name as a class can be declared in the same file and it becomes a companion object. Companions have access to private declarations.
++   - The case keyword on a case class effectively adds a bit of code to a class. It makes all parameters into val declarations. It also adds a copy method and code for pattern matching.
++   - You can do a lot of different things with import statements. They can go anywhere in the code, rename things or hide them.
