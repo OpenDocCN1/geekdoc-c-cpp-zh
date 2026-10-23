@@ -1,0 +1,17 @@
+The finite-element discretization method produces a large system of algebraic equations called the stiffness system. The number of equations in this system, N, is as large as the number of nodes in the mesh. Actually, the system can be written algebraically as
+
+Ax = f.
+
+where A is the coefficient (stiffness) matrix of order N, f is the given N-dimensional right-hand-side vector, and x is the N-dimensional vector of unknowns. The matrix A is sparse in the sense that most of the elements in it are zero. Once this system is solved numerically, the i-th component in x, x_i, is the value of the numerical solution of the partial differential equation (PDE) at the node of index i in the list of nodes in the mesh. The approximate solution at points that are not in the grid can also be obtained by some interpolation.
+
+The numerical solution of a linear system of the form Ax = f is, thus, an essential part of the numerical solution of PDEs. In the past, before computers became available, this task had to be done manually using Gaussian elimination (Chapter 2, Section 21). Of course, this approach is impractical unless the order of the system is very small.
+
+Fortunately, the digital computer freed the human mind from the exhausting work of such calculations. All that is left for us humans to do is to write a correct and efficient computer program (code) and feed it to the computer.
+
+Since the machine is much more powerful than the human mind in terms of memory and computational ability, it can solve a system with a much higher order. The number of unknowns (or grid points) can be much larger than before and the numerical model much more accurate and realistic. Thus, the digital computer has started a new era in experimental and applied science and engineering.
+
+The opportunity to solve realistic numerical models increased the appetite of scientists and engineers to make further progress and solve even more advanced and complicated applications. Unfortunately, it turns out that the power of the digital computer is not unlimited. When the order of a system is too large, traditional Gaussian elimination is impractical because it requires prohibitively large time and memory resources. In fact, in some cases the computer can work for hours, days, and even weeks before it completes the calculations.
+
+It is therefore essential to use the computational power offered by the computer wisely and develop more efficient algorithms to solve large sparse linear systems of equations. These algorithms must be much more efficient than traditional Gaussian elimination in terms of both time and storage. They must preserve the sparsity of the coefficient matrix A and avoid extensive fill-in. The implementation must take advantage of this sparsity, store only nonzero matrix elements, and disregard zero ones. This is the subject of this part.
+
+This part contains three chapters. In the first one (Chapter 16), the present object-oriented approach is used to implement sparse matrices efficiently along with useful functions such as arithmetic operations. In the second one (Chapter 17), efficient iterative methods for solving large sparse linear systems are presented and implemented. In the third one (Chapter 18), parallel implementation is discussed.

@@ -1,0 +1,13 @@
+Consider, in particular, the $(i+1)$st time level. The contribution to this time level from the previous one is done when $n=1$ in the above sum through the block $J_{i+1}Q_iB_i^{-1}J_i^{-1}$ in the matrix $JQJ^{-1}$. In fact, the truncation error at the $i$th time level (multiplied by $J_i$) is first multiplied by $J_iQ_iB_i^{-1}J_i^{-1}$ (by which it can only decrease) then multiplied by $J_{i+1}J_i^{-1}$ to scale properly (that is, to scale by $J_{i+1}$). The contributions from former time levels (through $(JQJ^{-1})^n$) decrease exponentially with $n$. Thus, the error at the $(i+1)$st time level (multiplied by $J_{i+1}$) is governed by the truncation error at the $(i+1)$st time level (which is concentrated at the shock front), multiplied by $J_{i+1}$ and by $(J_{i+1}B_{i+1}^{-1}J_{i+1}^{-1})=O(\min(\Delta t,h))$. The conclusion is, thus, that the discretization error is of order $1$ at most at a finite number of grid points around the shock front. At grid points farther away from the shock front, the discretization error must decrease exponentially.
+
+Unfortunately, the above analysis proves adequacy only when the convection coefficient $C(t,x)$ is as in Figure 9.3 but not when it is a shock wave that is positive everywhere ($i>0$). In the latter case, the main-diagonal elements in $E$ decrease exponentially monotonically along each $x$-line, so large discretization errors ahead of the shock front (to the right of it) are not excluded in the above analysis. Still, it makes no sense to assume that instability should occur ahead of the shock front, and the present analysis still excludes discretization errors behind it.
+
+Similarly, when the convection coefficient $C(t,x)$ is a rarefaction wave as in Figure 9.1, the main-diagonal elements in $E$ increase exponentially monotonically along each $x$-line, so discretization errors are excluded by the above analysis only at grid points behind the intermediate linear segment in the rarefaction wave (to the right of it).
+
+Finally, when the convection coefficient $C(t,x)$ is a rarefaction wave as in Figure 9.2, the situation is more complex. The main-diagonal elements in $E$ decrease exponentially as one goes farther away from $x=0$ in each $x$-line. Therefore, the above analysis excludes discretization errors in the intermediate linear segment but not in the constant states to its left and right. Still, since these constant states lie ahead of the wave front, it is unlikely that any instability should occur there.
+
+# 9.10  The Inhomogeneous Case
+
+Let us now consider the Riemann problem with a nonzero right-hand-side function $F(t,x)$:
+
+$$u_t(t,x)+u(t,x)u_x(t,x)=F(t,x).$$

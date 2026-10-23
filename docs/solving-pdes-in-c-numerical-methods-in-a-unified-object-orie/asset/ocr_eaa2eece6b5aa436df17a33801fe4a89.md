@@ -1,0 +1,19 @@
+# 18.17 Examples from Harwell–Boeing
+
+The Harwell–Boeing collection of sparse matrices available on the Internet¹ contains sparse stiffness matrices arising from practical applications in numerical modeling, which are particularly suitable to serve as test problems for our purpose: comparing sequential and parallel architectures. Here, we focus on SPD matrices arising from problems in structural mechanics. These examples are stored in the file "bcsstruc2.data" in the Harwell–Boeing collection.
+
+In Chapter 4, Section 27, we already described briefly how the matrices are stored in the file. Here, we describe this efficient storage scheme in some more detail and introduce a short code that places it in a "sparseMatrix" object, ready to be used in iterative methods.
+
+The matrices are stored in three sequences of numbers. It is easier to describe these sequences from the last one to the first one. The third sequence contains the nonzero elements in the matrix, ordered column by column. The second sequence contains the row indices of these elements, in the same order. Thus, the length of the second sequence is the same as that of the third one, which is the same as the number of nonzero elements in the matrix. (Compare with the array of edges used in Chapter 4, Section 27.)
+
+These sequences don’t contain all the information about the matrix. Indeed, they don’t tell us where each column starts and where it ends. Therefore, we can’t break them back into the original columns and obtain the original matrix. For this, we need to specify where exactly the sequences should be broken. The place in the third sequence where a particular column starts is just the index in it of the first nonzero element that belongs to this column. In the terminology in Chapter 4, Section 27, the column starts at the virtual address of its first nonzero element. This index (or virtual address) is called here the column pointer, because it indicates the start of the column in the third sequence.
+
+The column pointers are listed in the first sequence in the file. This sequence ends with an extra 0 to mark its end, so the number of numbers in it is the same as the number of columns plus 1.
+
+With this additional information, one can now reconstruct the original matrix. Indeed, in order to get back a particular column, one should just approach the third sequence at the index indicated in the column pointer and proceed in this sequence until (and not including) the index indicated in the column pointer of the next column. (If the last column is required, then one should proceed until the end of the sequence.) This way, one has every nonzero element in this column. By doing the same in the second sequence, one also has the row indices of these nonzero elements. This gives the column exactly as it is in the original matrix. By doing the same for each column, one gets back the original matrix. This shows that this storage scheme is indeed appropriate.
+
+The "readSparseMatrix" function below reads the matrix elements in the above sequences. It is assumed that these sequences are stored in a file named "boeingMatrix" in the directory in which the program runs.
+
+The number of columns in the original matrix and the number of nonzero elements in it are available in the heading in the Harwell–Boeing collection. For simplicity, it is assumed here that this heading has been deleted from the "boeingMatrix" file.
+
+The "readSparseMatrix" function is a member of the "sparseMatrix" class, so it has access to the individual rows in it. Indeed, because the items in the "list" class are declared as "protected" rather than "private", the "sparseMatrix" class derived from it has access to them.

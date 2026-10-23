@@ -1,0 +1,17 @@
+(where −1 < x0 < 1 is the starting point of the characteristic curve). Because u(t,x) is not yet available, the characteristic curves are also unavailable. Thus, the solution u(t,x) determines the shape of characteristic curves that govern the data propagation to solve the original PDE. This circularity is the direct result of nonlinearity.
+
+Can the linear PDE serve as a good approximation to the corresponding nonlinear problem? Probably not, since it can never predict the nonlinear phenomena (shock and rarefaction waves) in the original nonlinear problem. The only way in which it may form a fair approximation is when the convection coefficient C(t,x) already incorporates the nonlinear waves, e.g., it is the solution of the unperturbed Riemann problem. We then say that the singularly perturbed Riemann problem has been linearized around C(t,x). Because C(t,x) already contains the required shock and rarefaction waves, it is sufficiently close to the solution, and the linearized problem indeed approximates the original nonlinear problem well.
+
+The above discussion leads to the following algorithm for the solution of the singularly perturbed Riemann problem: let u = (ui,j) be the numerical solution to the unperturbed Riemann problem, obtained from the Godunov scheme in Section 9.4 or the random-choice scheme in Section 9.5. Let C(t,x) be a function that coincides with ui,j on the time-space grid. The algorithm requires solving the convection-diffusion equation with C(t,x) as the convection coefficient. This solution is obtained numerically by using the explicit, implicit, or semi-implicit scheme in Chapter 7, Sections 5 to 7. Because this solution is a fair approximation to the required solution of the original nonlinear problem, it can be substituted for C(t,x) to yield an even better linearization. This process can repeat iteratively, resulting in better and better linearizations, and better and better numerical solutions to the original nonlinear problem. This is the Newton (or Newton-Raphson) iteration.
+
+In several model cases of major interest, we know that the explicit, implicit, and semi-implicit schemes used to solve the first linearized problem are indeed stable and, hence, also accurate and adequate. These model cases are the cases in which C(t,x) is a shock or a rarefaction wave as in Figures 9.1 to 9.3. Indeed, in these cases, one can show that the stability condition in Chapter 8, Section 3,
+
+‖Ji+1 Ji−1‖ ≤ 1,
+
+holds, where i is the index of the current time step and Ji is the Jordan matrix for the matrix Ai that contains the discrete convection-diffusion terms at time i Δt (also denoted by D(i) in Chapter 7, Section 3). The proof of this inequality is in Section A.12 of the Appendix.
+
+For more general initial conditions, the solution to the unperturbed Riemann problem that is substituted initially for C(t,x) may be much more complicated than the model waves in Figures 9.1 to 9.3. For sinusoidal initial conditions, for example, it converges with time to the N-wave in Figures 9.6 and 9.7. Although the present stability analysis no longer applies in these general cases, it can still be interpreted to indicate that time marching in the linearized problem should be stable and, hence, also accurate and adequate.
+
+# 9.9 Adequacy in the Linearized Problem
+
+This section is related to the theory in Chapter 8 and can be skipped by readers who are interested in the practical aspects only. Here, we study the adequacy of the time-marching
