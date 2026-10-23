@@ -1,0 +1,3 @@
+In the example, we first call the Add function through the pointer, which performs addition, and then change the pointer to point to the Subtract function. We call the Subtract function through the pointer, which performs subtraction, and obtain the result again.
+
+Note that function pointers can be used to achieve dynamic dispatch and can be particularly useful in scenarios where you need to select and invoke different functions at runtime based on certain conditions or user choices.
