@@ -1,0 +1,7 @@
+# Figure 10-3: Counting sort
+
+Therefore, we will count the numbers which are equal. Correspondingly, the count is written as illustrated in figure ii. Finally the count is commutative that assist in determining the number of elements less than the current number. Refer the list given in the i) again- Element is 6, Go to the 6th index of iii. In this case value is 10. Consequently, 6 is to be placed at the 10th position of the sorted list. Since, one item is already placed. Reduce the sum by 1 at the index position considered. This is followed by propagation of (-1) till the last element is not reached. In the considered example, since the last item is considered therefore, there is no propagation and reduction in value will occur.
+
+# C. Radix sort
+
+In the radix sort, numbers are arranged based on their radix. We define the radix as base. For instance, in decimal number radix is 10. In radix sort, numbers are arranged based on the positional value of a number. First on the most significant value, and afterwards move towards least significant value. In each pass, we arrange them based on one positional value. At the end, whole series is available in the sorted order. This series make the usage of count sort and arrange the series based on the count method.
