@@ -1,0 +1,309 @@
+
+
+The C++ class that models the PDE in equation (23.6) based on the new coordinates becomes:
+
+∂V/∂t = 1/2 σ²(S/A) x²(1−x)² ∂²V/∂x² + { r x(1−x) − σ²(S/A) x²(1−x)² } ∂V/∂x + (λ (S−A)(1−y)² / b) ∂V/∂y − r V
+for 0 < x < 1, 0 < y < 1 ( S = a x / (1−x), A = b y / (1−y) ). (23.7)
+
+We thus see that equation (23.7) is a PDE defined on the unit square (0,1)×(0,1). In order to describe the resulting initial boundary value problem we need to impose boundary conditions. For x = 0 and x = 1 we impose the well-known boundary conditions that apply to plain call or put options. For y = 0 and y = 1 no boundary conditions are needed, as mentioned in WLD (2014). This fact can be verified and motivated by application of the Fichera theory (see Duffy, 2009; Duffy and Germani, 2013) or by the method of characteristics.
+
+## 23.4 THE ANCHORING PDE
+
+The financial background to the current problem is given in WLD (2014). We define a volatility function σ(ξ), where ξ = S/A and the model is:
+
+dS = μ S dt + σ(ξ) S dW. (23.8)
+
+We model the problem as one with memory. To this end, we define a variable A that represents an average or an anchoring value. One of the simplest and most tractable models is given by the following sigmoidal function:
+
+σ(ξ) = a + (b − a) / (1 + e^{−c(log ξ − d)}). (23.9)
+
+where a, b, c and d are known parameters.
+
+The form of this function has been determined from time series (see WLD, 2014) and it will be used as the volatility function in the PDE that is represented in equations (23.6) and (23.7).
+
+Moving to C++ design of the anchoring PDE, we first note that it plays the role of the implementer of TwoFactorAsianPde in the Bridge pattern. It is an instance of TwoFactorAsianPde that is created by a factory method. In this case we choose from the following alternatives:
+
+- A1: Defining the PDE components in a namespace.
+- A2: Creating a void function that initialises an already created reference to an instance of TwoFactorAsianPde.
+- A3: A factory method (as discussed in GOF, 1995) that creates an instance of std::shared_ptr<TwoFactorAsianPde<double>>.
+
+We discuss each of these options as possible ways to create the objects that we need. Each choice has its advantages and disadvantages. The ultimate choice depends on the context. The traditional object-oriented programming style would tend to employ subtype polymorphism or the CRTP, both of which necessitate the creation of class hierarchies. The choices A1, A2 and A3 avoid this step.
+
+First, choice A1 involves placing all relevant data and functions in a humble name-space:
+
+```cpp
+namespace AnchorPde
+{ // Similar to an Asian PDE.
+
+double SIGMOID2(double t)
+{ // t = S/A
+
+    // Example of Table 2
+    const double a=0.6; // (vol for low S/I)
+    const double b=0.15; // (vol for high S/I)
+    const double c=10.0;
+    const double d=-0.3; // (when S=I vol is in the middle)
+    const double ecd = std::exp(c*d);
+
+    // Sigmoid2 function
+    double val = exp(-c*(log(t) - d));
+
+    double val2 = a + (b-a)/(1.0 + val);
+    return val2;
+}
+
+// Scale factors (hotspots)
+double scale1;
+double scale2;
+
+// Parameters of PDE
+double r;
+double lambda;
+double K;
+
+// Domain information
+double T;
+double xMax, yMax;
+
+std::function<double(double S1, double S2)> payoff;
+
+double a11(double x, double y, double t)
+{
+
+double tx = 1.0-x; double ty = 1.0-y;
+
+double S = scale1*x/tx;
+double I = scale2*y/ty;
+
+// Straight computation, i.e. function call
+double s1 = SIGMOID2(S / I);
+
+return 0.5*s1*s1*x*x*tx*tx;
+}
+
+double b1(double x, double y, double t)
+{
+    double tx = 1.0-x; double ty = 1.0 - y;
+
+    double S = scale1*x/tx;
+    double I = scale2*y/ty;
+    double s1 = SIGMOID2(S / I);
+    return r*x*tx - s1*s1*x*x*tx;
+}
+
+double b2(double x, double y, double t)
+{
+    double tx = 1.0-x; double ty = 1.0 - y;
+
+    double S = scale1*x/tx;
+    double I = scale2*y/ty;
+
+    return lambda*(S - I)*ty*ty/scale2;
+}
+
+double d(double x, double y, double t)
+{
+    return -r;
+}
+
+double F(double x, double y, double t)
+{
+    return 0;
+}
+
+double IC(double x, double y)
+{ // Initial condition
+
+    // Workaround/fudge to avoid spike
+    if (x == 1.0)
+        x -= 0.0001;
+
+    if (y == 1.0)
+        y -= 0.0001;
+
+    return payoff(scale1*x/(1.0-x), scale2*y/(1.0-y));
+}
+
+// Approach:
+double BCLower(double x, double t)
+{    // V1 rough and ready
+    return 0;
+}
+double BCUpper(double x, double t)
+{    // Tricky one for variable I
+    return 0; // Force the solution to be BS classic.
+}
+double BCLeft(double y, double t)
+{ // y is S2
+    // return 0; // C
+    return K* exp(-r*t); // P
+}
+double BCRight(double y, double t)
+{
+    return 0; // P
+    double S = scale1*xMax / (1 - xMax+0.001);
+    return S -K*std::exp(-r*t); // C
+}
+}
+```
+
+The above variables in the namespace AnchorPde are initialised in main():
+
+```cpp
+using namespace AnchorPde;
+r = 0.049;
+std::cout << "T: "; std::cin >> T;
+double S = 100; double I = 100;    // Values where price is calculated    // S/I == 1
+std::cout << "K: "; std::cin >> K;
+lambda = 0.5;
+// Define payoff as a lambda function
+int cp = -1;
+if (cp > 0) // Call
+    payoff=[=](double S, double A)->double {return std::max(S - K, 0.0);};
+else
+    payoff=[=](double S, double I)->double {return std::max(K - S, 0.0);};
+// Domain transformation data; we use the transform z = x/(x + scale1),
+```
+
+```cpp
+double K;
+cout << "K: "; cin >> K;
+
+double lambda = 0.5;
+
+// Define payoff as a lambda function
+
+double xMax = 1.0;        // x far field
+double yMax = 1.0;        // y FF
+
+double xHotSpot = 0.5; double yHotSpot = 0.5;
+double scale1 = S*(1.0 - xHotSpot) / xHotSpot;
+double scale2 = I*(1.0 - yHotSpot) / yHotSpot;
+
+TwoFactorAsianPde<double> pde;
+
+// Build components of pde
+auto SIGMOID2 = [] (double t)
+{ // t = S/A
+
+    // Example of Table 2
+    const double a = 0.6;  // (vol for low S/I)
+    const double b = 0.15; // (vol for high S/I)
+    const double c = 10.0;
+    const double d = -0.3; // (when S=I vol is in the middle)
+    const double ecd = std::exp(c*d);
+
+    // Sigmoid2 function
+    double val = exp(-c*(log(t) - d));
+
+    double val2 = a + (b - a) / (1.0 + val);
+    return val2;
+};
+
+auto a11 = [=] (double x, double y, double t)
+{
+    // return 0;
+    double tx = 1.0 - x; double ty = 1.0 - y;
+
+    double S = scale1*x / tx;
+    double I = scale2*y / ty;
+
+    // Straight computation, i.e. function call
+    double s1 = SIGMOID2(S / I);
+
+    return 0.5*s1*s1*x*x*tx*tx;
+};
+
+auto b1 = [=] (double x, double y, double t)
+{
+    double tx = 1.0 - x; double ty = 1.0 - y;
+
+    double S = scale1*x / tx;
+    double I = scale2*y / ty;
+    double s1 = SIGMOID2(S / I);
+    return r*x*tx - s1*s1*x*x*tx;
+};
+
+auto b2 = [=] (double x, double y, double t)
+{
+    double tx = 1.0 - x; double ty = 1.0 - y;
+    double S = scale1*x / tx;
+    double I = scale2*y / ty;
+    return lambda*(S - I)*ty*ty / scale2;
+};
+
+auto d = [=] (double x, double y, double t)
+{
+    return -r;
+};
+
+auto F = [=] (double x, double y, double t)
+{
+    return 0;
+};
+
+pde.a11 = a11;
+
+// a22 = c = 0
+
+pde.b1 = b1;
+pde.b2 = b2;
+pde.d = d;
+pde.F = F;
+
+return std::shared_ptr<TwoFactorAsianPde<double>>
+(new TwoFactorAsianPde<double>(pde));
+}
+```
+
+Finally, we show the code (using design choice A1) that creates the domain in which the anchoring PDE is defined:
+
+```cpp
+void CreateAnchorPdeDomain(TwoFactorPdeDomain<double>& pdeDomain,
+    double xMax, double yMax, double T,
+    const std::function<double(double, double)>& IC)
+{
+    using namespace AnchorPde;
+
+    pdeDomain.rx = Range<double>(0.0, xMax);
+    pdeDomain.ry = Range<double>(0.0, yMax);
+    pdeDomain.rt = Range<double>(0.0, T);
+
+    pdeDomain.LeftBC = BCLeft;
+    pdeDomain.RightBC = BCRight;
+    pdeDomain.UpperBC = BCUpper;
+    pdeDomain.LowerBC = BCLower;
+
+    pdeDomain.IC = IC;
+}
+```
+
+We now discuss each of the solutions A1, A2 and A3 as input to the ADE scheme.
+
+## 23.5 ADE FOR ANCHORING PDE
+
+The ADE method is well documented. For more background information see Saul’yev (1964), Campbell and Yin (2006), Duffy (2009), Pealat and Duffy (2011), Duffy and Germani (2013) and Buchova, Ehrhardt and Guenther (2015). In the current case we apply both the Barakat–Clark and Saul’yev variants of ADE to the *x* factor terms in equation (23.7) while we use *implicit upwinding* for the *y* factor terms in equation (23.7).
+
+We focus on the Barakat–Clark ADE variant with design choice A1. The corresponding class is called `TwoFactorAsianADESolver` and it has the following member functions:
+
+- Constructor: initialises mesh arrays and matrices holding option prices.
+- `calculate()`: computes the left-to-right and right-to-left sweeps and their averages at each time level.
+- `calculateBC()`: calculates the boundary conditions on each of the four boundaries of the domain of integration at each time level.
+- `initIC()`: initialises the solution at *t* = 0 by assigning it to the discretised values at the mesh points of the payoff function.
+- `result()`: this is the implementation of what is essentially the *state machine* that marches the solution from payoff up to expiration. In a later version of the software it will be a member function of a *mediator* class, as already discussed in our work.
+
+The code in this case is given by (notice that we are using the Boost *uBlas* library to model matrices):
+
+```cpp
+namespace u = boost::numeric::ublas;
+using namespace AnchorPde;
+
+class TwoFactorAsianADESolver
+{
+private:
+    TwoFactorPdeDomain<double> pdeDomain;  // Domain, BC, IC
+
+    // Data structures
+    u::matrix<double> U;                    // upper sweep, n+1
+    u::matrix<double> V;                    // lower sweep, n+1
+```

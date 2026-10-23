@@ -1,0 +1,331 @@
+
+
+## 索引
+
+- object connection architecture 986
+- object interfaces 988–9
+- objective functions 618–19, 1094
+- object-oriented paradigm 473
+- object-oriented programming 2, 4
+- object-oriented software metrics 207–10
+- object-oriented technology
+  - design patterns 31–4, 716
+  - PPL 987–8
+  - tasks 935, 936
+  - threads 929
+- objects
+  - aggregate 197–8
+  - callable 69–70, 903
+  - concurrent 978
+  - converter 258
+  - in Excel 433–4, 435
+  - factory 176
+  - function 176
+  - structure of 433–4
+  - types 153–5
+  - Whole-Part 458
+  - *see also* Component Object Model
+- observer class 794
+- *Observer* design pattern 267, 272, 717, 884, 979, 985, 987
+- observer functions 786–91
+- *odeint* library *see* Boost odeint library
+- ODEs *see* ordinary differential equations
+- offsets 561
+- one-factor Black–Scholes PDEs 386, 409, 653–4, 676–7, 691, 801–6
+- one-factor option models 669–726
+  - ADE method 671–3, 680, 685, 690, 692–3
+  - code for FDM classes 679–90
+  - code for PDE classes 674–9
+  - examples/test cases 690–3
+  - FDMs 670–1, 679–90
+  - option pricing software 993–1052
+  - payoffs 32
+  - PDEs 670–1, 674–9
+  - plain options 478–89
+  - software frameworks 669–726
+- one-step schemes 451, 670–1, 821
+- OpenMP
+  - library 13
+  - option pricing software 1026, 1032
+  - threads 901–3, 912, 929
+- operating environments 259–60
+- optimisation 617–40
+  - least squares 1075–80
+  - mathematical background 618–19
+  - multivariate 1094–6
+  - USD 255–9
+  - vector spaces 1093–4
+- OptionData 455–6
+- option data 999–1000
+- option pricing/prices
+  - ADE 673
+  - American options 335–6, 343, 347–9, 352–7
+  - assets with dividends 374–7
+  - Bernoulli paths 372–4
+  - binomial methods 379–83
+  - binomial models 374–7
+  - Black–Scholes formula 6–12, 478, 488
+  - Black–Scholes PDEs 801–6
+  - Black–Scholes–Merton formula 475, 544
+  - chooser options 548–9
+  - code for FDM classes 690
+  - cumulative distribution functions 477
+  - European options 347–9, 909–16
+  - FDMs 641, 690
+  - implied volatility 631
+  - improving efficiency 352–7
+  - lattice models 333–65, 372–85, 909–12
+  - layered method 335–52
+  - MOL for Black–Scholes PDEs 801–6
+  - Monte Carlo 497, 985
+  - one-factor plain options 478–89
+  - option sensitivities 378–9
+  - parallelising the binomial method 909–16
+  - PDEs 746–7, 749, 801–6
+  - plain options 9–10, 343, 354–5, 478–89
+  - software frameworks 701–3, 712–13
+  - trinomial method 384–5
+  - two-asset 515, 531–6
+- option pricing software 993–1052
+  - *Asynchronous Agents Library* 1023, 1041–7
+  - *Boost Parameter library* 995–1000
+  - builder classes 1013–14
+  - CEV model 1014, 1038–41, 1047–50
+  - CRTP 994, 1011–13, 1025
+  - dynamic polymorphism 1003–11
+  - *Factory Method* design pattern 1013–16
+  - modelling points in 3D space 996–7
+  - monolithic program 1000–3
+  - Monte Carlo simulation 993–1022
+  - one-factor option models 669–726
+  - parallel processing 1023–33
+  - PBD 994, 1003–13
+  - PPL 1023, 1031–2
+  - predictor–corrector methods 1023, 1033–8
+  - process management 994
+  - static polymorphism 1011–13
+  - structuring issues 1014–16
+- options
+  - Asian 730–1
+  - barrier 806–8
+  - basket 728
+  - cash-or-nothing 532, 533–4
+- partial differential equations (PDEs)
+  - modelling 670–1, 728–31
+  - MOL 781
+  - numerical greeks 714
+  - one-factor option models 669–71, 673–9
+  - parabolic 641–2, 649–54
+  - path-dependent options 727–54
+  - preprocessing 645–9, 731–2
+  - reduction to conservative form 646
+  - Richardson extrapolation 664–5
+  - Saul’yev method 744–6
+  - self-adjoint form 646
+  - software design 673–4
+  - software framework in C++11 727–54
+  - spline interpolation 702
+  - time-dependent 659–63
+  - tridiagonal systems 399, 405, 406
+  - see also Black–Scholes PDEs; convection-diffusion-reaction PDEs
+- partial function application 62
+- partial sorts 602–3
+- partial sums 599–600
+- partitioning work 967–71
+  - four options 969–70
+  - mutating algorithms 595–7
+  - parallel sorts 962, 970–1
+- Pascal’s triangle 341–2, 367, 368–9
+  - binomial coefficients 368–9
+  - defects/errors/faults 372
+  - Fibonacci sequence 370–1
+  - powers of two 370
+  - triangular numbers 371–4
+- path-dependent options 727–54
+  - accuracy/performance 746–8
+  - PDE software framework 727–54
+  - software framework in C++11 727–54
+  - useful utilities 746–8
+- path evolvers 1043, 1045–6
+- path generation, SDEs 448–59
+- patterns see design patterns
+- payoff functions 199–206
+- payoffs 32–4
+- PBD see policy-based design
+- PCSs see process control systems
+- PDEs see partial differential equations
+- pdfs see probability density functions
+- Peano iterative method 762
+- penalty method 802–3
+- percentage error 223
+- performance
+  - bivariate distributions 528–9
+  - move semantics 37–8
+  - PDE software framework 746–8
+  - tridiagonal matrices 405
+- permutations 592–4
+- perpetual American options 376–7
+- Person class 198
+- Phoenix library 171
+- Picard iterates 763
+- piecewise_constant_distribution 496
+- piecewise_linear_distribution 496
+- Pirbhai see Hatley–Pirbhai
+- placeholders 73–4, 554–5
+- plain options
+  - C++ calls example 9–10
+  - lattice models 343, 354–5
+  - one-factor 478–89
+  - pricing 9–10, 343, 354–5, 478–89
+- plug-in patterns 877–81
+- Point 309–11
+- pointers
+  - deprecated function adapters 557
+  - thread safe pointer interface 924–6
+  - type traits 150–5
+  - see also shared pointers; smart pointers; unique pointers
+- Poisson distributions 830
+- polar Marsaglia method 820, 1009, 1027–9
+- policies 260, 264–7, 267, 500–2
+- policy-based design (PBD) 7–8, 260–74
+  - advantages 266–7
+  - CRTP 1011–13
+  - delegates 272–3
+  - DVM problem 268–73
+  - dynamic polymorphism 1002–11
+  - events 272–3
+  - idiom 7–8
+  - limitations 266–7
+  - modelling functions 59
+  - option pricing software 994, 1003–13
+  - process guidelines 268
+  - static polymorphism 1011–13
+  - USD 259, 260–74
+- policy classes 264, 266–7, 268–9
+- Pólya, György 246, 247, 255, 995, 1000
+- polymorphic behaviour 141
+- polymorphic class type 155
+- polymorphic tuples 491
+- polymorphism 199–206
+  - class diagram 200
+  - duck typing 165–7
+  - see also dynamic polymorphism; static polymorphism; subtype polymorphism
+- polynomials 224–8, 476–7, 1063
+- Pool library 405
+- population growth/decay 759–60
+- POSA design patterns
+  - Layers 142–3, 335, 338, 351, 1014–15
+  - tasks 954
+  - USD 250
+- positive definite matrices 405, 834–5
+- positivity property 761
+- potential concurrency 935, 954
+  - see also exploitable concurrency
+- powers of two 370
+- PPL see Parallel Patterns Library
+- predator-prey models 759–60
+- predictor–corrector methods 766, 768, 1023, 1033–8
+- prev() 610–11
+- Pricer 1005, 1007, 1011
+- pricing/prices
+  - assets 336, 355–7, 382–3
+  - derivatives 471–2
+  - lattice models 333, 335–57, 372–86, 909–12
+  - Monte Carlo methods 141, 497, 985, 993–1052
+  - see also option pricing…
+- primary type categories 151–3
+- prime numbers 973–5
+- Prime Numbers Theorem 974–5
+- priority queues 603
+- private assemblies 889
+- probability density functions (pdfs)
+  - bivariate normal 442–4
+  - Boost distributions in Excel 507–10
+  - random numbers 820
+  - TVN 536–8
+- probability functions, discrete 499
+- problem frames 248
+- procedural programming 2
+- process control systems (PCSs) 249, 257
+- process management 994
+- producer-consumer metaphors 497–8
+- Producer–Consumer design pattern 922–4, 954, 983
+- programming
+  - in the large 989
+  - paradigms 2–3
+  - in the small 989
+  - see also individual types
+- promises 935, 941–5
+- Prototype design pattern 110–11
+- proxies 864–72, 876
+- Proxy design pattern 864–5, 876
+- prvalues 94
+- pseudocode 62
+- pseudo-random numbers 819, 831–3
+- pure abstract base classes 471
+- pure behaviour 861
+- pure functions 952
+- purity, definition 61
+- put-call parity 1049
+- put options
+  - ADE variants 673
+  - American 354–5, 356–7
+  - C++ example 9–12
+  - CEV closed-form solution 1047–8
+  - chooser options 543–6
+  - coding for PDE classes 678
+  - one-factor plain 478–89
+  - option pricing software 1000, 1009
+  - parallelising the binomial method 909–16
+  - plain 354–5, 478–89
+- qNaNs see quiet NaNs
+- QR decomposition 842–5, 847
+- quadratic programs 618
+- quadruple precision 219
+- quantities 96, 115–18
+- QuantLib library 517–8, 521–5, 544, 865, 868–9
+- QueryInterface 466, 469, 470
+- quicksort algorithms 968
+- quiet NaNs (qNaNs) 216
+- race conditions 926–7, 952
+- Radau scheme 767
+- Ralston method 766
+- rand() 831–2
+- `<random>` 819, 1023
+  - dynamic polymorphism 1009
+  - monolith program 1000
+  - path generation for SDEs 452
+  - tridiagonal systems 428
+  - univariate distributions 475, 491–2
+- Random library
+  - Boost 819, 826, 1023, 1025
+  - C++ 819, 827–30
+- random number generation 819–52, 1023
+  - automating generation 491–9
+  - C++ random library 819, 827–30
+  - cryptographic generators 833
+  - definition of generator 820–1
+  - distributions 819, 821–4, 830–1
+  - Eigen matrix library 846–8
+  - engines 825–30
+  - examples of generation 828–30
+  - generators 820–1, 833, 1025–9
+  - matrix decomposition 833–45
+  - multiple-precision arithmetic 1067–9
+  - numerical quadrature 80–1
+  - option pricing software 1000, 1007, 1009
+  - parallel processing 1025–9
+  - pseudo-random numbers 819, 831–3
+  - random variates 822–7, 1000
+  - seeding engines 828–30
+  - TVN 540
+  - uniform generation 820
+- random variables 821–2
+- random variates 822–7
+  - acceptance–rejection method 823–4
+  - analytical solutions 822–3
+  - composition method 824
+  - generating in C++ 825–7
+  - inverse transform method 823–4
+  - monolith program 1000
+

@@ -1,0 +1,145 @@
+
+The rationale is that an automated procedure can be run without human intervention and it produces a management report (for example, the results could be stored in a database) on the quality of the finite difference scheme that we are testing. In order to scope the problem we consider testing ADE against the Crank–Nicolson (CN) method and we can assume that the results produced by CN are accurate. Some of the features and requirements (accuracy and efficiency are the most important quality issues) are:
+
+- F1: Test the accuracy of ADE against CN. Determine those regions in which ADE produces values that deviate from those produced by CN.
+- F2: Test the robustness of ADE for a range of input parameters (which may be randomly generated).
+- F3: Investigate the accuracy in the case of convection dominance, large and small expiration and other stressful cases.
+- F4: Examine performance and accuracy of the different ADE variants for a range of mesh sizes and time steps.
+- F5: Compute option sensitivities (in particular, delta and gamma).
+
+Answer the following questions:
+
+- a) Apply the methods in Chapter 9 to scope this problem by creating a system context diagram, describing what the major output and input are and how the core process maps input to output.
+- b) Determine the interfaces of the modules in the system context diagram. Implement each module as an adapter class that reuses existing code.
+- c) Determine how to model the input data. In an initial version it can be hardwired in the code. If time permits you can consider using XML files, regular expressions (C++ has a regex library) or the Boost Parameter library. An important part of the project is to define the data structures to hold both the input data and the generated output data.
+- d) Do you see any opportunities for parallelising the code?
+
+## 3. (Numerical Integrals and Derivatives with Cubic Splines, Small Project)
+
+We gave an example in Section 22.3.3 of using a cubic spline to approximate a function and its derivatives. We also saw in Chapter 13 that cubic splines can be used for numerical integration (see also Stroud, 1974 for a mathematical discussion).
+
+The main goal of this exercise is to determine how to use cubic splines in your applications as a competitor to other methods. Some of the reasons for doing so could be:
+
+- Other methods may not be robust enough.
+- Cubic splines have many applications and are easy to use.
+- Cubic splines are accurate and have good performance characteristics.
+
+Answer the following questions:
+
+a) Compute the following integrals using cubic splines with different mesh sizes. How does the accuracy compare with the exact values and with those produced by other numerical integration rules (for example, the Gaussian methods that we discussed in Chapter 8)?
+
+∫₁² dx/x (exact value 0.69314718055)
+∫₀¹⁰ dx/(1 + x²) (exact value 1.471127674304)
+∫₀ˣ e^(-y²/2) dy where 0 < x < ∞.
+
+b) In Section 22.4 we discussed a number of methods to compute option sensitivities. Take some relevant examples and compare the methods with regard to accuracy and performance.
+
+## 4. (Optimum Step Size in Numerical Differentiation)
+
+Generalise the analysis (as far as possible) in Section 22.3.5 to compute the optimum h for an arbitrary function whose third derivative can be bounded from above. The error in computing function values is also an input value.
+
+Find the function of h to be minimised and find the optimum h by solving a polynomial equation or using one of the nonlinear solvers in Chapter 19.
+
+You may also find the C++ features regarding numerical precision in Chapter 8 to be useful.
+
+## 5. (Binary Call Option)
+
+This exercise involves computing the price, delta and gamma of a binary call option that has a payoff of 0 when S ≤ K at expiration and 1 otherwise. In other words, the payoff is a Heaviside function:
+
+Payoff (S) = H(S − K)
+
+where:
+
+H(x) = { 1, x > 0
+0, x ≤ 0. }
+
+Answer the following questions:
+
+- a) Carry out an analysis similar to that in Section 22.4.1 using this option type as test case. We wish to compare the relative accuracy of the CN and ADE methods.
+- b) Compute the delta and gamma of a binary call option using the exact form as well as the finite difference and cubic spline approaches (Haug, 2007).
+
+## 6. (Estimating Speed, Open Question)
+
+The speed of an option is the rate of change of the gamma with respect to the stock price. It is the same quantity for both calls and puts:
+
+∂³C/∂S³ = ∂³P/∂S³ = ∂Γ/∂S
+
+where Γ is the option gamma.
+
+The corresponding exact formulae are (Haug, 2007; Wilmott, 2006):
+
+−Γ/S ( d₁/(σ√T) + 1 ) where d₁ = [log(S/K) + (r − b + ½σ²)T] / (σ√T).
+
+A large value indicates that the gamma is very sensitive to changes in the underlying asset and it is useful when gamma is at its maximum with respect to the asset price.
+
+The objective of this exercise is to determine how to estimate speed accurately and efficiently. Investigate the following alternatives:
+
+- a) Using a simple finite difference approximation to the third derivative:
+f'''(x) ≈ (f(x + 2h) − f(x − 2h) − 2(f(x + h) − f(x − h))) + O(h²).
+b) Using the analytical formula.
+c) Using cubic splines to compute its third derivative (why do we not expect that the approximation will be very good?).
+
+Then:
+
+S''(x) = M_j ( (x_{j+1} - x)/h_{j+1} ) + M_{j+1} ( (x - x_j)/h_j ), x ∈ [x_j, x_{j+1}], j = 0, ..., n - 1.
+
+S'''(x) = -M_j / h_{j+1} + M_j / h_j, x ∈ [x_j, x_{j+1}] j = 0, ..., n - 1.
+
+d) Using the first-order divided difference on the analytical formula for gamma.
+e) ‘Spline on spline’: compute the array of gamma prices as second derivative of a cubic spline and then use these prices as the independent variable array for another round of cubic spline interpolation. In this latter case we take the first derivative to give us the value for the speed.
+
+## 7. (Far-Field Condition, Again)
+
+Examine the effects on accuracy of finite difference schemes (option price and greeks) when we truncate the asset domain at six-sigma from the spot price:
+
+S_max = S_0 e^{6σ√T}
+
+where S_0 = spot price, σ = volatility, T = expiration.
+
+## 8. (Software Maintenance and Design Patterns)
+
+We have given a global overview of the traditional GOF patterns in Section 22.6 and the possibility of improving them in some sense by trying to incorporate C++ syntax features. To make the exercise more focused, we place these patterns under the microscope as it were from the viewpoint of the software metrics that we described in Section 7.6. Answer the following questions:
+
+a) In general, how far do GOF patterns promote ‘good’ software practice by keeping the values of the metrics in Section 7.6 within reasonable limits?
+b) Which C++ features help to achieve the goals of software metrics?
+c) Can you think of metrics that are not discussed in Section 7.6?
+d) Determine the impact on software metrics if we decide to employ universal function pointers and tuples. Will their use result in better software by reducing the values of the threshold values?
+
+## 9. (Producing ‘Better’ Gammas, Mini Project)
+
+In Section 22.4.1 we discussed the different ways to calculate option delta and gamma using the analytic, CN and cubic spline interpolation approaches. We explained why these methods give the results that they do. In this exercise we ask you to use the spline-on-spline computation (explained in Section 22.4.1) to improve the accuracy of the gamma approximation. Answer the following questions:
+
+a) Implement the spline-on-spline algorithm and encapsulate it as a reusable C++ module.
+b) Test the module by running it on the data used to generate the results in Table 22.1. Do you get improved results compared to the values in the last column of that table?
+c) Stress test the module for large and small values of the input parameters, for example the convection dominance case (small diffusion and/or large convection terms).
+d) Calculate the delta and gamma for the CEV model that we discuss in Section 22.5.
+
+## 10. (Hitting Times and First Exit Times)
+
+In this exercise we examine a topic that is related to the determination of when a stochastic process reaches or ‘hits’ a given subset of state space. This is called the hitting time (or first hit time). A good example is when modelling path-dependent options, for example barrier options. In this case the payoff depends on whether the barrier has been triggered and we are interested in determining the likelihood of the barrier being triggered before expiration.
+
+We apply the ADE method to compute the first exit time for diffusion processes (Patie and Winter, 2008; Wilmott, 2006). We use it to compute the probability of the first exit time from a bounded domain for multidimensional distributions. To this end, let (Ω, (F_t)_{t≥0}, P) be a filtered probability space and X := (X^1, …, X^d)^T be the solution to the following system of stochastic differential equations:
+
+dX_t^i = b_i(X_t) dt + Σ_{j=1}^d σ_{ij}(X_t) dW_t^j,   1 ≤ i ≤ d
+
+where W := (W^1, …, W^d)^T is a d-dimensional standard Brownian motion with d ≥ 1 and the coefficients b_i and σ_{ij} smooth, for 1 ≤ i, j ≤ d.
+
+We denote the infinitesimal generator of X which has the form:
+
+Lf(x) = 1/2 Σ_{i=1}^d Σ_{j=1}^d a_{ij}(x) ∂²f(x)/∂x_i∂x_j + Σ_{i=1}^d b_i(x) ∂f(x)/∂x_i
+
+where a = σ^T σ and f ∈ C_K^2(ℝ^d), the space of twice continuously differentiable functions on ℝ^d with compact support; in other words, these functions are identically zero outside a closed bounded subset of ℝ^n.
+
+Let A be an open bounded Borel subset of ℝ^d with boundary ∂A. We define the stopping time:
+
+τ_A = inf { u ≥ 0; X_u ∉ A }.
+
+This is the first exit time of X from domain A where we assume that ∂A is smooth. It is a random variable.
+
+Let us denote by Q(t, x) the probability that X starting from x did not exit the domain A before t, that is:
+
+Q(t, x) = 1 − P_x(τ_A < t).
+
+Then Q coincides with the solution of the following backward Kolmogorov equation:
+
+∂u/∂t (t, x) = L u(t, x) on (t, x) ∈ ℝ^+ × A

@@ -1,0 +1,142 @@
+
+associated with the process X with initial condition and boundary conditions:
+
+```
+u(0, x) = 1,    x ∈ A
+```
+
+```
+u(t, x) = 0,    x ∈ ∂A, t > 0.
+```
+
+In this case the function u(x, t) is the probability of a random variable leaving the region A before a given time.
+
+Answer the following questions:
+
++   a) Compute the solution to the (n = 1) exit time PDE for the one-dimensional heat equation with initial condition = 1 and boundary conditions = 0 using ADE. Compute the solution at the space mesh points for T = 0.1, 1.0, 2.0, 10.0, 100.0 and 1000.0.
+
++   b) Check that the computed result is always in the range [0, 1].
+
++   c) Now implement this problem using the Crank–Nicolson scheme. Compare its accuracy and efficiency to that of the ADE method.
+
++   d) Carry out the same exercise for two-dimensional diffusions. In this case we solve a two-factor convection–diffusion PDE with zero Dirichlet boundary conditions.
+
+Concluding, we can compute the distribution of the first exit time from a bounded domain for n-dimensional diffusions.
+
+## CHAPTER 23
+
+## A PDE Software Framework in C++11 for a Class of Path-Dependent Options
+
+### 23.1 INTRODUCTION AND OBJECTIVES
+
+In this chapter we discuss how to analyse, design and implement a C++ software framework for a class of partial differential equations (an exemplar of which is discussed in Wilmott, Lewis and Duffy, 2014 (subsequently called WLD, 2014)). The focus is on applying the author’s system decomposition techniques (Duffy, 2004) in combination with the new features in C++11 to produce a customisable software framework that reproduces the numerical results in WLD (2014) and that can also be extended to other kinds of PDEs and finite difference schemes. We realise a certain level of flexibility in the new framework due to the following features:
+
+- Each subsystem has a single major responsibility and well-defined and narrow interfaces. Complex mathematical operations are hidden behind these interfaces.
+- We model PDEs as compositions of universal function wrappers using the *functional programming model*. In this way we avoid code bloat and proliferation of classes that arise when creating traditional class hierarchies based on subtype polymorphism or by using the curiously recurring template pattern (CRTP).
+- We begin with the C++ code that we used to implement the Alternating Direction Explicit (ADE) in WLD (2014) and we port it to code that fits into the new software framework.
+- Lambda functions help reduce code bloat, especially when configuring the application. Their use promotes code readability and maintainability.
+
+Having created the application we can then apply a range of finite difference schemes to various PDEs. We are interested in the relative accuracy of the schemes and we would like to compute approximate option values in an efficient manner. We can improve speedup by testing the resulting sequential code against multithreading and multitasking code. Specifically, we can use C++11 threads and tasks as well as tasks in the Microsoft *Parallel Patterns Library* (PPL). We shall discuss these topics in Chapters 28 to 32.
+
+This chapter is useful for model validators and front-office developers who wish to create pluggable applications in which components can be replaced by other components having similar functionality. An important assumption underlying our approach is that we design
+
+software systems with change in mind. We propose three different solutions for this problem and we discuss the flexibility of each one.
+
+### 23.2 MODELLING PDEs AND INITIAL BOUNDARY VALUE PROBLEMS IN THE FUNCTIONAL PROGRAMMING STYLE
+
+Mathematically, a PDE is an aggregation or composition of its defining functions such as diffusion, convection, reaction and inhomogeneous terms. Time-dependent PDEs have one time input argument and n input arguments that represent the space dimension (in this chapter we have n = 2 because we are investigating a special two-factor PDE). Furthermore, a PDE is defined in a bounded or unbounded region of space-time with corresponding initial and boundary conditions. To this end, we create a class that models the terms of the PDE and a class that models the domain in which the PDE is defined. The first class has the interface:
+
+```
+template <typename T> class TwoFactorPde
+{ // Model a convection-diffusion-reaction PDE as a
+// composition of universal function wrappers.
+
+public:
+    // U_t = a11U_xx + a22U_yy + b1U_x + b2U_y + cU_xy + dU + F;
+    // f = f(x,y,t) in general
+
+    std::function<T (T,T,T)> a11;
+    std::function<T (T,T,T)> a22;
+    std::function<T (T,T,T)> c;
+    std::function<T (T,T,T)> b1;
+    std::function<T (T,T,T)> b2;
+    std::function<T (T,T,T)> d;
+    std::function<T (T,T,T)> F;
+
+    TwoFactorPde() = default;
+};
+```
+
+This interface supports many of the linear two-factor PDEs in computational finance, for example basket and rainbow options, the Heston model, Asian options and PDEs in fixed-income applications (Duffy, 2006).
+
+Basket options:
+
+∂V/∂t + ½ σ₁² S₁² ∂²V/∂S₁² + (r − D₁) S₁ ∂V/∂S₁ + ½ σ₂² S₂² ∂²V/∂S₂² + (r − D₂) S₂ ∂V/∂S₂ + ρ σ₁ σ₂ S₁ S₂ ∂²V/∂S₁∂S₂ − r V = 0. (23.1)
+
+it) can be associated with several domains. For example, we could consider the following use cases:
+
+- U1: A PDE that is defined on two separate domains (one using domain truncation and the other using domain transformation).
+- U2: A PDE that is associated with different sets of boundary conditions.
+- U3: Defining a single PDE instance that is shared by a domain for call options and a domain for put options.
+
+These use cases are useful when we wish to test a new scheme and to determine the optimal far-field condition, choosing those boundary conditions that produce the most accurate results. It is also possible to associate multiple PDE instances with a single domain. The potential advantages are less code duplication and opportunities to write multitasking code.
+
+We note that the class TwoFactorPde corresponds to the abstraction role in the Bridge pattern. Finally, we can model PDEs by creating instances of TwoFactorPde for all cases. For example, each of the models in equations (23.1), (23.2) and (23.3) is mapped to an object and not a class. Using traditional OOP with inheritance usually entails creating a class for each new application. Our approach reduces any possible explosion in the number of classes.
+
+#### 23.2.1 A Special Case: Asian-Style PDEs
+
+A special case of the two-factor models just discussed is when there is one stochastic factor which leads to a PDE in which there is one diffusion term and no mixed derivative term. An example is an Asian option defined by the following PDE:
+
+$$\frac{\partial V}{\partial t}+S\frac{\partial V}{\partial I}+\frac{1}{2}\sigma^2S^2\frac{\partial^2V}{\partial S^2}+rS\frac{\partial V}{\partial S}-rV=0$$
+
+$$I=\int_{t}^{T}S(\tau)\,d\tau.$$
+
+Our interest is in the model that we have already discussed in WLD (2014):
+
+$$dA=\lambda(S-A)\,dt$$
+
+where:
+
+$$A=\lambda\int_{-\infty}^{t}e^{-\lambda(t-\tau)}S(\tau)\,d\tau$$
+
+with $\lambda$ a measure of the extent of memory.
+
+We then get the PDE:
+
+$$\frac{\partial V}{\partial t}=\frac{1}{2}\sigma^2\left(\frac{S}{A}\right)^2S^2\frac{\partial^2V}{\partial S^2}+rS\frac{\partial V}{\partial S}-rV+\lambda(S-A)\frac{\partial V}{\partial A}.$$
+
+The parameter $\lambda$ is a measure of the extent of memory in the anchoring model in WLD (2014). We now discuss how to model the PDE in equation (23.6) and to this end we create
+
+a new dedicated class rather than instantiating TwoFactorPde and setting one diffusion term and the cross-derivative term to zero. This new approach also leads to more readable and maintainable code at the expense of less generality and some extra code duplication. The class is thus a special case of TwoFactorPde:
+
+```
+template <typename T> class TwoFactorAsianPde
+{   // Model a convection-diffusion-reaction PDE as a composition
+    // of universal function wrappers. Asian-style PDE.
+
+public:
+    // U_t = a11U_xx + b1U_x + b2U_y + dU + F;
+    // f = f(x,y,t) in general
+    std::function<T (T,T,T)> a11;
+    std::function<T (T,T,T)> b1;
+    std::function<T (T,T,T)> b2;
+    std::function<T (T,T,T)> d;
+    std::function<T (T,T,T)> F;
+
+    TwoFactorAsianPde() = default;
+    TwoFactorAsianPde(const TwoFactorAsianPde& pde)
+      : a11(pde.a11),b1(pde.b1),b2(pde.b2),d(pde.d),F(pde.F) {}
+};
+```
+
+The class TwoFactorAsianPde is the one that we will be using in the rest of this discussion. The original form defined by equation (23.6) is defined on a quarter plane 0 < S < ∞, 0 < A < ∞. As in WLD (2014) we transform this domain to the unit square.
+
+We note that TwoFactorAsianPde is an abstract class in a certain sense. It cannot be instantiated directly without its members (which are universal function wrappers) being assigned to concrete target methods. In this sense TwoFactorAsianPde plays the role of the abstraction in the Bridge pattern. Clients instantiate this class as objects without the need to create classes or heavyweight class hierarchies.
+
+### 23.3 PDE PREPROCESSING
+
+We transform PDE (23.6) to one using new variables x and y defined by:
+
+x = S/(S + a), y = A/(A + b), 0 < x, y < 1.
+
+Here a and b are scaling factors which can be chosen in such a way as to allow us to define hotspot values in both original and transformed spaces. For example, the hotspot value (0.5, 0.5) in (x, y) space is usually the choice. Then the factors a and b are chosen in such a way that this hotspot corresponds to the user-defined hotspot (S0, A0) in (S, A) space, that is a = S0, b = A0.

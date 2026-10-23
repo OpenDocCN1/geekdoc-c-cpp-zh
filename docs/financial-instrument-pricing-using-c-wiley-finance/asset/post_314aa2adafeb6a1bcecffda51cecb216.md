@@ -1,0 +1,380 @@
+
+return S * std::exp((b-r)*T)*n(d1) * sqrt(T);
+}
+
+// The rhs of x' = f(x) defined as a class
+class Davidenko
+{
+private:
+    state_type x0;
+
+public:
+    Davidenko(state_type guess) : x0(guess) {}
+    void operator() (const state_type& x, state_type& dxdt,
+        const value_type t)
+    {
+        dxdt[0] = -Function(x0) / FunctionDeriv(x);
+    }
+};
+
+A test program is:
+
+```
+typedef double value_type;
+typedef std::vector<value_type> state_type;
+
+int main()
+{
+    namespace Bode = boost::numeric::odeint;
+
+    // Initial condition
+    state_type x(1, 0.0); // vector
+    x[0] = 0.113;
+
+    Davidenko ode(x);
+
+    value_type L = 0.0;
+    value_type U = 1.0; // upper limit
+    value_type dt = 1.0e-9;
+
+    std::size_t steps = Bode::integrate(ode, x, L, U, dt);
+    std::cout << "Value from 101 integrator: "
+              << std::setprecision(8)  << x[0] << std::endl;
+
+    Bode::runge_kutta_dopri5<state_type, value_type> myStepper;
+
+    x[0] = 0.113;
+    dt = 1.0e-1;
+    int n = static_cast<int>((U - L)/dt);
+```
+
+Some examples of use are:
+
+```
+double G(double x)
+{
+    return x+1;
+}
+
+double H(double x, double y)
+{
+    return x + y;
+}
+
+FType<double> e = [] (double x) { return 5.0; };
+FType<double> f = [] (double x) { return G(x); };
+FType<double> g = [] (double x) { return x*x; };
+
+FType<double> bindFun = std::bind(H, 1.0, std::placeholders::_1);
+auto func1 = g + bindFun;
+std::cout << "13? " << func1(3.0) << "\n";
+
+auto h1 = f + g;
+FType<double> h2 = f + exp(e);
+FType<double> h3 = g + f;
+```
+
+We see that this manner of coding is very close to the way we do mathematics. In the same vein as above we define the following set of functions:
+
+```
+template <typename T>
+    FType<T> operator + (const FType<T>& f, T a)
+{ // Scalar addition
+
+    return [=] (T x)
+    {
+        return f(x) + a;
+    };
+}
+
+template <typename T>
+    FType<T> operator * (T a, const FType<T>& f)
+{ // Scalar multiplication
+
+    return [=] (T x)
+    {
+        return a*f(x);
+    };
+}
+
+template <typename T>
+    FType<T> operator - (const FType<T>& f, FType<T>& g)
+```
+
+{ // Subtraction
+
+    return [=] (T x)
+    {
+        return f(x) - g(x);
+    };
+}
+
+template <typename T>
+    FType<T> operator - (const FType<T>& f)
+{ // Unary negation
+
+    return [=] (T x)
+    {
+        return -f(x);
+    };
+}
+
+template <typename T>
+    FType<T> operator + (const FType<T>& f)
+{ // Unary plus
+
+    return [=] (T x)
+    {
+        return +f(x);
+    };
+}
+
+template <typename T>
+    FType<T> operator << (FType<T>& f, FType<T>& g)
+{ // Composition of functions
+
+    return [=] (T x)
+    {
+        return f(g(x));
+    };
+}
+
+template <typename T>
+    FType<T> assign(T constant)
+{ // Create a function from a scalar constant
+
+    return [=] (T x)
+    {
+        return constant;
+    };
+}
+
+template <typename T>
+    FType<T> exp(const FType<T>& f)
+{ // exp
+```
+
+```
+return [-1](T x)
+{
+    return std::exp(f(x));
+};
+}
+```
+
+```
+template <typename T>
+    FType<T> log(const FType<T>& f)
+{ // log
+
+    return [-1](T x)
+    {
+        return std::log(f(x));
+    };
+}
+```
+
+```
+template <typename T>
+    FType<T> pow(const FType<T>& f, int n)
+{ // powers of a function f(x)*...*f(x) (n times)
+
+    return [-1](T x)
+    {
+        return std::pow(f(x), n);
+    };
+}
+```
+
+This list is by no means exhaustive (nor is it meant to be) but it is easy to define your own functions and variations including algebra for vector functions, vector-valued functions and specialisations of the underlying data types such as complex numbers, for example.
+
+We now give more examples of using this new functionality. The code compiles in all cases and is easy to understand. The first example computes the fourth power of a function:
+
+```
+FType<double> f = [](double x) { return x*x; };
+int n = 4;
+auto prodFun = pow(f, n);
+
+double x = 2.0;
+std::cout << "Power: " << prodFun(x) << "\n";
+```
+
+Strictly speaking, we should place these functions in a namespace to avoid confusing them with standard C++ functions such as std::pow, for example (we leave this as an exercise). The second example is a kind of *sanity check* to see how the code with unary minus and unary plus gives the expected result (the code compiles with flying colours):
+
+```
+{ // unary minus and plus
+
+    auto f = assign(5.0);
+    auto f1 = exp(f);
+    auto f2 = +exp(f);
+```
+
+```
+auto f3 = -exp(f);
+auto f4 = -(−exp(f));
+auto f5 = +(−exp(f));
+auto f6 = −(+exp(f));
+
+double x = 5.0;
+std::cout << "exp stuff: " << f1(x) << ", " << f2(x) << ", "
+          << f3(x) << ", " << f4(x) << ", " << f5(x)
+          << ", " << f6(x) << '\n'; // {+,-} 148.413
+}
+```
+
+We can concoct many more cases but they will all follow the same pattern as above. We now move on to create complex functions from simpler ones.
+
+## A2.5.2 Assembling Functions, Piece by Piece
+
+Since we have created an algebra of functions we are now in a position to construct a complex function from a library of simpler functions. As a first example we examine the *n*-dimensional *Ackley function*, which is one multimodal test function for optimisation algorithms (Price, Storn and Lampinen, 1996):
+
+$$f(x) = -20\exp\left(-0.2\sqrt{\frac{1}{n}\sum_{j=0}^{n-1}x_j^2}\right) - \exp\left(\frac{1}{n}\sum_{j=0}^{n-1}\cos(2\pi x_j)\right) + 20 + e$$
+
+$-30 \leq x_j \leq 30,\quad j=0,\ldots,n-1.$
+
+We reduce the scope by taking the one-dimensional case and implementing it as a free function:
+
+```
+double AckleyGlobalFunction(double x)
+{
+    double a = 20.0; double b = 0.2; double c = 2.0*3.14159;
+
+    return -a*std::exp(-b*x) - std::exp(std::cos(c*x))
+         + a + std::exp(1.0);
+}
+```
+
+We can also choose the function in equation (A2.10) as the sum of three functions, just to show how our function algebra works:
+
+```
+double AckleyGlobalFunctionII(double x)
+{ // Building the functions in a HOF assembly process
+
+    double a = 20.0; double b = 0.2; double c = 2.0*3.14159;
+
+    // Bit unwieldy; used to show function vector spaces.
+    FType<double> f11 = [&] (double x) {return -b*x; };
+    FType<double> f1 = -a*exp(f11);
+```
+
+```
+```cpp
+FType<double> f22 = [&] (double x) { return std::cos(c*x); };
+FType<double> f2 = -exp(f22);
+FType<double> f3 = assign(a + std::exp(1.0));
+FType<double> Ackley = f1 + f2 + f3;
+
+return Ackley(x);
+}
+```
+```
+
+We can test if these functions give the same output by running a simple test program:
+
+```
+```cpp
+double x = -1.0;
+while (x < 1.0)
+{
+    std::cout << AckleyGlobalFunction(x) - AckleyGlobalFunctionII(x);
+    x += 0.1;
+}
+```
+```
+
+The output should be (almost) zero in all cases.
+As a final example we take the function:
+
+$x^2 + x^4 + x^8, \quad -10 \leq x \leq 10.$  (A2.11)
+
+A possible implementation is:
+
+```
+```cpp
+double TestFunction(double x)
+{ // To show how function algebra works
+
+    // Bit unwieldy; used to show function vector spaces.
+    FType<double> f1 = [] (double x) {return x*x; };
+    FType<double> f2 = [&] (double x) {return f1(x)*f1(x); };
+    FType<double> f3 = [&] (double x) {return f2(x)*f2(x); };
+
+    FType<double> sumFunc = f1 + f2 + f3;
+
+    return sumFunc(x);
+}
+```
+```
+
+We can check this code with a straightforward implementation using the power function
+as follows:
+
+```
+```cpp
+double x = 2.710;
+std::cout << "Test vs exact: " << TestFunction(x) << ", "
+          << std::pow(x, 2.0) + std::pow(x, 4.0) + std::pow(x, 8.0);
+```
+```
+
+The output is:
+
+```
+```text
+Test vs exact: 2970.35, 2970.35
+```
+```
+
+## A2.5.3 Higher-Order Functions and Optimisation
+
+We conclude with a discussion of using Brent’s method with functions that have been created as above. We define a convenience function:
+
+```
+template <typename T>
+    void BrentMinimum(const FType<T>& fun, T minV, T maxV,
+        const std::string& s)
+{
+    std::cout << "Function " << s << ", ";
+    int bits = 50;
+    boost::uintmax_t maxIter = 10000;
+
+    std::pair<double, double> result
+        = boost::math::tools::brent_find_minima
+            (fun, minV, maxV, bits, maxIter);
+    std::cout << "x and y values: " << result.first
+              << ", " << result.second << std::endl;
+}
+```
+
+We apply this optimiser to equations (A2.10) and (A2.11), the Ackley function, the sphere function as well as the one-dimensional case of the Rastrigin function:
+
+f(x) = Σ_{j=0}^{n-1} (x_j² - 10 cos(2π x_j) + 10)
+-5.12 ≤ x_j ≤ 5.12,   j = 0, …, n - 1.    (A2.12)
+
+The code is:
+
+```
+// Define interval [min, max] where search will take place
+double minV = -30.0; double maxV = -minV;
+BrentMinimum<double>(AckleyGlobalFunctionII, minV, maxV, "Ackley");
+
+minV = -5.12; maxV = -minV;
+BrentMinimum<double>(RastriginGlobalFunction, minV, maxV, "Rastrigin");
+
+minV = -1000.0; maxV = -minV;
+BrentMinimum<double>(SphereGlobalFunction, minV, maxV, "Sphere");
+
+minV = -10.0; maxV = -minV;
+BrentMinimum<double>(TestFunction, minV, maxV, "Test");
+```
+
+where we have used the functions:
+
+```
+double RastriginGlobalFunction(double x)
+{
+    double A = 10.0;
+
+    return A + x*x - A*std::cos(2.0*3.14159);
+}
+```

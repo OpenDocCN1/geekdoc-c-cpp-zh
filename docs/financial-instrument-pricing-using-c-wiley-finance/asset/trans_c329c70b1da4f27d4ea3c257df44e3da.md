@@ -1,0 +1,256 @@
+
+
+The output is:
+
+```
+**** Block I, Full sort ****
+input vector:  1, -1, 2, -2, 3, -3,
+sorted vector using operator <:  -3, -2, -1, 1, 2, 3,
+sorted vector using lambda op:  3, 2, 1, -1, -2, -3,
+stable sorted vector using operator <:  -3, -2, -1, 1, 2, 3,
+stable sorted vector using lambda op:  3, 2, 1, -1, -2, -3,
+stable sorted vector using lambda op:  -3, -2, -1, 1, 2, 3,
+```
+
+## 18.4.2 Partial Sort
+
+There are four algorithms in this category: first, we can choose between the option to sort a range based on the operator < or by providing a user-defined comparison function and second, we can sort a range in-place as it were or we can create a new sorted array from an input range.
+
+In general, partial sorting entails sorting a range until the first n elements have been sorted.
+
+A code sample to show how to use the five algorithms is as follows:
+
+```
+void PartialSort()
+{
+    std::cout << "\n**** Block II, Partial sort ****\n";
+    std::vector<double> v
+        = { 1.0,-1.0,2.0,-2.0,3.0,-3.0,100.0,-100.0,200.0,
+            -200.0 };
+    print(v, "input vector: ");
+
+    // Sort using default <
+    auto pos = std::begin(v) + 5;
+    std::partial_sort(std::begin(v), pos, std::end(v));
+    print(v, "sorted vector using operator <: ");
+
+    auto DESCENDING = [](int d1, int d2) { return (d1 > d2); };
+    std::partial_sort(std::begin(v), pos, std::end(v), DESCENDING);
+    print(v, "sorted vector using lambda op: ");
+
+    // Copy from source range sorted into the destination range
+    std::deque<double> dq(v.size());
+    std::partial_sort_copy(std::begin(v), std::end(v),
+                           std::begin(dq), std::end(dq));
+    print(dq, "sorted copied vector using operator <: ");
+
+    std::partial_sort_copy(std::begin(v), std::end(v),
+                           std::begin(dq), std::end(dq), DESCENDING);
+    print(dq, "sorted copied vector using lambda op: ");
+}
+```
+
+The output is:
+
+```
+**** Block II, Partial sort ****
+input vector:  1, -1, 2, -2, 3, -3, 100, -100, 200, -200,
+sorted vector using operator <:          -200, -100, -3, -2, -1, 3, 100,
+2, 200, 1,
+sorted vector using lambda op:          200, 100, 3, 2, 1, -200, -100,
+-3, -2, -1,
+sorted copied vector using operator <:  -200, -100, -3, -2, -1,
+1, 2, 3, 100, 200,
+sorted copied vector using lambda op:  200, 100, 3, 2, 1, -1, -2,
+-3, -100, -200,
+```
+
+## 18.4.3 Heap Sort
+
+A max heap is a special kind of binary tree with the properties:
+
+- The value of each node is not less than the values stored in each of its children.
+- The tree is perfectly balanced and the leaves in the last level are all in the leftmost positions.
+
+It is also possible to define a min heap. Heaps and heap algorithms are supported in both Boost and C++. A special case is the priority queue in STL.
+
+Sample code is:
+
+```
+void Heap()
+{
+    std::cout << "\n*** Block III, heap sort etc. ***\n";
+    std::vector<int> v4 = { 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 1, 2, 3, 4 };
+    print(v4, "input vector");
+
+    // Construct a max heap using < as comparison operator
+    // as well as a user-defined one
+    std::make_heap(v4.begin(), v4.end());
+    print(v4, "heap sorted vector");
+
+    // Descending
+    std::vector<int> v2 = { 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 1, 2, 3, 4 };
+    print(v2, "2nd input vector");
+    auto comp = [] (int n, int m)->bool { return n > m; };
+    std::make_heap(v2.begin(), v2.end(), comp);
+    print(v2, "2nd heap sorted input vector");
+
+    std::pop_heap(v4.begin(), v4.end());  // Largest to end and vice versa
+    print(v4, "popped");
+    v4.pop_back();                        // No largest element in the heap
+    print(v4, "popped vector");
+
+    v4.push_back(17);
+    std::push_heap(v4.begin(), v4.end());
+    print(v4, "Value 17 pushed");
+```
+
+```
+std::sort_heap(v4.begin(), v4.end());
+print(v4, "Sorted heap");
+}
+```
+
+The output is:
+
+```
+**** Block III, heap sort etc. ****
+input vector 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 1, 2, 3, 4,
+heap sorted vector 9, 8, 6, 7, 7, 5, 5, 3, 6, 4, 1, 2, 3, 4,
+2nd input vector 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 1, 2, 3, 4,
+2nd heap sorted input vector 1, 3, 2, 6, 4, 3, 4, 7, 8, 9, 7,5,5, 6,
+popped 8, 7, 6, 7, 4, 5, 3, 6, 4, 1, 2, 3, 9,
+popped vector 8, 7, 6, 7, 4, 5, 6, 3, 6, 4, 1, 2, 3,
+Value 17 pushed 17, 7, 8, 7, 4, 5, 6, 3, 6, 4, 1, 2, 3, 5,
+Sorted heap 1, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 17,
+```
+
+## 18.5 SORTED-RANGE ALGORITHMS
+
+The algorithms in this category operate on ranges that have already been sorted according to their sorting criterion. These algorithms have significantly better performance than similar algorithms for unsorted ranges that we discussed in Chapter 17.
+
+The algorithms address the following functionality:
+
+- Does a sorted range contain a given value?
+- Does a sorted range contain all elements of another sorted range?
+- Give the position of the first element in a sorted range with value equal to or greater than a given value.
+- Give the position of the first element in a sorted range with value greater than a given value.
+- The range of elements that is equal to a given value.
+- Merge sorted ranges.
+- Set algorithms (union, intersection, difference, symmetric difference).
+- Merge consecutive sorted ranges.
+
+### 18.5.1 Binary Search
+
+Binary search in an ordered range is a divide-and-conquer approach. Instead of sequentially searching in a range to determine if a given value is in that range (linear O(n) complexity) we decompose a problem into two or more smaller subproblems. Complexity in this case is logarithmic.
+
+An example of use is:
+
+```
+void BinarySearch()
+{
+    std::cout << "\n** Block I, Binary search\n";
+    // I. Binary search
+    // Binary search: check if one element is present. Range must be sorted!
+    std::list<int> myList = { 3,5,6,-1,234,100,32,99,0,-2 };
+    print(myList, "input list, not sorted ");
+    int val = 100;
+    if (std::binary_search(myList.begin(), myList.end(), val))
+    {
+        std::cout << "Value " << val << " found in list\n";
+    }
+    else
+    {
+        std::cout << "Value " << val << " NOT found in list\n";
+    }
+
+    // Binary search with defined sorting algo
+    myList.sort(DESCENDING); // Algo will not work if list is not sorted
+    print(myList, "list, DESC");
+
+    val = 100;
+    if (std::binary_search(myList.begin(), myList.end(), val, DESCENDING))
+    {
+        std::cout << "Value " << val << " found in list\n";
+    }
+    else
+    {
+        std::cout << "Value " << val << " NOT found in l\n";
+    }
+}
+```
+
+The output in this case is:
+
+```
+** Block I, Binary search
+input list, not sorted  3, 5, 6, -1, 234, 100, 32, 99, 0, -2,
+Value 100 NOT found in list
+list, DESC 234, 100, 99, 32, 6, 5, 3, 0, -1, -2,
+Value 100 found in list
+```
+
+The container must be sorted for the binary search algorithm to work.
+
+### 18.5.2 Inclusion
+
+The two algorithms in this category determine whether one range contains all the elements of another range. The complexity is at most 2 * (N + M), where N is the number of elements to be searched in and M is the number of elements in the range whose occurrence in the first range of size N we are trying to determine:
+
+```
+void Includes()
+{
+    std::cout << "\n** Block II, Range includes\n";
+    std::list<int> range = { 1,2,3,4,5 };
+    std::list<int> searchRange = { 2,3,4 };
+    std::cout << ": found? " << std::boolalpha
+          << std::includes(range.begin(), range.end(),
+                           searchRange.begin(), searchRange.end())<< '\n';
+
+    auto CmpNoCase = [](char a, char b)
+    {return std::tolower(a) < std::tolower(b);};
+
+    std::vector<char> v1 = { 'a', 'b', 'c', 'f', 'h', 'x' };
+
+    std::vector<char> v2 = { 'A', 'B', 'C' };
+    std::cout << ": (case-insensitive) " << std::boolalpha
+          << std::includes(v1.begin(), v1.end(), v2.begin(), v2.end(),
+                           CmpNoCase) << '\n';
+}
+```
+
+The output is:
+
+```
+** Block II, Range includes
+: found? true
+: (case-insensitive) true
+```
+
+### 18.5.3 First and Last Positions
+
+The four algorithms in this category are similar to the non-modifying algorithms `std::find` and `std::find_if` that we already discussed in Chapter 17 (Section 17.3.3) but in the current case complexity is logarithmic for random-access iterators and linear otherwise. The complexity of the algorithms in Section 17.3.3 is always linear.
+
+The main functionality is:
+
+- Find the first element that has a value not less than a given target value (`lower_bound`).
+- Return the position of the first element that has a value greater than the target value (`upper_bound`).
+
+An example of use is:
+
+```
+void Bounds()
+{
+    std::cout << "\n** Block III, Lower and upper bounds\n";
+    // Searching for first and last possible positions.
+    // We do not take the option of using a binary predicate.
+    std::list<int> myListA
+        = { 3, 5, 6, -1, 234, 100, 100, 100, 32, 99, 0, -2 };
+
+    // Default sort is ascending.
+    myListA.sort();
+    print(myListA, "list, ASC");
+
+    int searchValue = 100;
+    std::list<int>::iterator posFirst, posLast;
+```
+

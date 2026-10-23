@@ -1,0 +1,222 @@
+
+![](img/fe10f87cc5d3cff29b178c4d9a6e3012_897_0.png)
+
+## FIGURE 27.9 Dynamic assembly loading
+
+assembly and then referencing the assembly in a CLR Console project containing C++/CLI code. For completeness, the C# code for the algorithms is:
+
+```
+public interface ICalculateDistance
+{
+    // Calculate the distance. We can't pass a point because then we
+    // need to know about point but the point must know about this
+    // interface. Then we get circular dependencies.
+    double Distance(double x1, double y1, double x2, double y2);
+}
+
+public class PythagorasDistanceCalculation: ICalculateDistance
+{
+    public double Distance(double x1, double y1,
+            double x2, double y2)
+    {
+        double dx=x1-x2;
+        double dy=y1-y2;
+
+        return Math.Sqrt(dx*dx+dy*dy);
+    }
+}
+
+public class TaxiDriverDistanceCalculation: ICalculateDistance
+{
+    public double Distance(double x1, double y1,
+            double x2, double y2)
+    {
+        double dx=x1-x2;
+        double dy=y1-y2;
+
+        return Math.Abs(dx) + Math.Abs(dy);
+    }
+}
+```
+
+We also implement a C# class implementing two-dimensional points containing an embedded global distance algorithm:
+
+```
+public class Point
+{
+    // The distance algorithm to use
+    private static ICalculateDistance s_distanceAlgorithm;
+    // Access the distance calculation algorithm
+    public static ICalculateDistance DistanceAlgorithm
+    {
+        get { return s_distanceAlgorithm; }
+        set { s_distanceAlgorithm=value; }
+    }
+
+    // Data members.
+    private double m_x;
+    private double m_y;
+
+    // Default constructor
+    public Point()
+    {
+        m_x=0.0;
+        m_y=0.0;
+    }
+
+    // Constructor.
+    public Point(double x, double y)
+    {
+        m_x=x;
+        m_y=y;
+    }
+
+    // X property.
+    public double X
+    {
+        get { return m_x; }
+        set { m_x=value; }
+    }
+
+    public double Y
+    {
+        get { return m_y; }
+        set { m_y=value; }
+    }
+
+    // Calculate distance between two points
+    public double Distance(Point p)
+    {
+```
+
+```
+// Is there an algorithm installed
+if (s_distanceAlgorithm==null) throw new
+ApplicationException
+    ("No distance calc algorithm installed.");
+
+// Calculate the distance using the installed algorithm
+return s_distanceAlgorithm.Distance
+    (m_x, m_y, p.m_x, p.m_y);
+}
+
+// String conversion.
+public override string ToString()
+{
+    return String.Format("Point({0}, {1})", m_x, m_y);
+}
+}
+```
+
+Finally, the client code is C++/CLI and it uses the above C# code for Point and algorithms:
+
+```
+using namespace System;
+
+int main()
+{
+    try
+    {
+        // Load the algorithm, later
+        //Point.DistanceAlgorithm=LoadDistanceAlgorithm(args[0]);
+
+        Point::DistanceAlgorithm =
+            gcnew PythagorasDistanceCalculation();
+        // Point::DistanceAlgorithm =
+        //     gcnew TaxiDriverDistanceCalculation();
+
+        Point^ p1=gcnew Point(0.0, 0.0);
+        Point^ p2=gcnew Point(1.0, 1.0);
+
+        Console::WriteLine("p1.Distance(p2): {0}",
+            p1->Distance(p2));
+    }
+    catch (Exception^ e)
+    {
+        Console::WriteLine("Error: {0}", e->Message);
+    }
+}
+```
+
+The choice of algorithm is hard-coded in the above example. It could be made more flexible by allowing the user to make a choice as to which specific algorithm to use. Unfortunately, if we wish to use another algorithm we will need to modify the source code and build a new executable file. A more flexible and elegant solution is to employ the .NET Reflection to open
+
+an assembly in an application and then extract the algorithm from it by instantiating the class that implements `ICalculateDistance`. In particular, we use the following functions:
+
+- `LoadFrom` and `LoadFile` methods: load an assembly from a file.
+- `Activator` class: has a method called `CreateInstance` that accepts a type and optional parameters that get passed to a constructor.
+
+An example to instantiate a distance algorithm is:
+
+```
+```csharp
+// Load distance algorithm
+private static ICalculateDistance LoadDistanceAlgorithm
+                                      (string assemblyFile)
+{
+    // Load the specified assembly
+    Assembly ass=Assembly.LoadFrom(assemblyFile);
+
+    // Get all the types from the assembly and
+    // find the class that implements our interface
+    foreach (Type t in ass.GetExportedTypes())
+    {
+        if (t.IsClass)
+        {
+            foreach (Type i in t.GetInterfaces())
+            {
+                // Class found so create instance
+                if (i==typeof(ICalculateDistance))
+                    return (ICalculateDistance)Activator.CreateInstance(t);
+            }
+        }
+    }
+
+    // Not found, in version 2 use exception handling
+    return null;
+}
+```
+```
+
+We can use this function in the main method as follows:
+
+```
+```csharp
+Point.DistanceAlgorithm=LoadDistanceAlgorithm(args[0]);
+```
+```
+
+This simple example is a prototype for larger and more complex applications. We are unable to elaborate on this topic but see Exercise 4 for a discussion of some interesting use cases.
+
+## 27.13 SUMMARY AND CONCLUSIONS
+
+In this chapter we introduced the C++/CLI and C# languages in the .NET Framework and we showed how it is possible to enhance the functionality of native C++ by the ability to create multi-language applications. Some important use cases were:
+
+- Using C++/CLI as language of choice (instead of C#).
+- Creating wrappers for C++ classes (for example, Boost, Quantlib, C++11 libraries) and using them in C# and C++/CLI applications.
+- Creating wrappers for C# and C++/CLI code and then using this code in native C++ applications.
+
+The main advantages are interoperability, reusability and maintainability.
+
+## 27.14 EXERCISES AND PROJECTS
+
+1. (Using Façade Design Pattern)
+
+The Façade design pattern is often used when a system is very complex or difficult to understand because the system has a large number of interdependent classes. This pattern hides the complexities of the larger system and provides a simpler interface to the client. It typically involves a single wrapper class that contains a set of members required by the client. These members access the system on behalf of the Façade client and hide the implementation details.
+
+Answer the following questions:
+
+- a) In Section 27.8 we enumerated the use cases whose presence in an application might persuade us to apply the Façade pattern. Which ones are most important in the general context of C++, C# and C++/CLI interoperability? For example, which features in the languages help in the construction of this pattern?
+- b) We now consider the use cases S1, S2, S3 and S4 in Section 27.8 when we wish to create user-friendly wrappers for the financial models in Quantlib for C# developers who do not necessarily have C++ knowledge. Which of the scenarios S1, S2, S3 and S4 are important in this case?
+- c) Now consider a (native) C++ developer who wishes to access .NET functionality. Which of the scenarios S1, S2, S3 and S4 are important in this case?
+- d) In GOF (1995) some of the consequences of using this pattern are:
+  - It shields clients from subsystem components.
+  - It promotes weak coupling between the subsystems and clients, especially for subsystems with tightly coupled components, for example poorly designed object-oriented code.
+  - The pattern does not prevent clients from using the subsystem classes directly if they wish to do so. Thus, clients can choose between ease of use and generality. New users can use the simpler interface before moving to the internals.
+
+Given these features, how would you integrate Façade into the design philosophy that we introduced in Chapter 9?
+
+e) What are the advantages of defining standardised interfaces between a client and a façade? How can the Bridge pattern be applied in order to create interchangeable façades?
+
+2. (Database Coupling and Integration, Brainstorming)
+
+C++ is primarily a systems language and there is no native support for persistence. In general, objects do not survive the life of the program in which they are created (these are called transient objects). A persistent object store is a type of computer storage system that records and retrieves complete objects, or provides the illusion of doing so. Simple

@@ -1,0 +1,328 @@
+
+## INDEX
+
+- Bulirsch–Stoer method 791–2
+- bull spread payoff 199–201, 205
+- Butcher tableau 779
+- BVN *see* bivariate normal distribution
+- C# 853
+  - assemblies 890, 891–4
+  - C++/CLI as main language 862
+  - calling code from C++11 872–6
+  - delegates 876, 878–9, 882, 884
+  - interfaces 861
+  - interpolators 872
+  - language 266–7, 862
+  - legacy C++ applications 869–71
+  - strategy patterns 878–9
+  - types 859
+- C++11 6–12, 853
+  - calling C# from C++11 872–6
+  - random variate generation 925–7
+  - reduction variables 903
+  - software frameworks 727–54
+- C++
+  - asynchronous futures 14
+  - concept map 15–16
+  - definition 1–2
+  - example 6–12
+  - guidelines 17–18
+  - new functionality 64–9
+  - overview 1–19
+  - parallel programming 12–14
+  - programming paradigms 2–3
+  - uses 2
+  - writing applications 14–16
+- C++/CLI 853–5, 873
+  - abstract class 861–2
+  - assemblies 889–95
+  - basic training 864
+  - delegates 879, 881–2, 884
+  - events 881–2, 884
+  - language 16, 862–4
+  - memory management 859–60
+  - namespaces 889–95
+  - *Proxy* design pattern 865
+  - types 859
+- C++ *Concurrency* library 899–934
+  - Boost thread group 1032
+  - parallel programming 12
+  - tasks 935–59
+  - threads 899–934
+  - writing C++ applications 16
+- C++ *random* library 819, 827–30
+- CAD (computer-aided design) 193–4, 206, 247, 248, 891
+  - `calculate()` 686, 739, 742
+  - `calculateBC()` 739, 741
+  - `call` 979, 981
+- `CallableClass` 905–6, 908
+- callable objects 69–70, 903
+- callbacks 267
+- call-by-need evaluation 63
+- call options
+  - American 335–8, 352–5
+  - C++ example 9–12
+  - CEV closed-form solution 1047–8
+  - chooser options 543–6
+  - coding for PDE classes 678
+  - down-and-out 335–8, 352, 807
+  - lattice models 343, 354–5
+  - option pricing software 1000, 1009
+  - parallelising the binomial method 909–16
+  - univariate distributions 478–91
+- call payoff 199–206
+- capture 68–9, 171–4
+- cash-or-nothing options 532, 533–4
+- Cash–Karp method 784, 791–2
+- catastrophic cancellation 224, 706, 1060–1
+- Cauchy
+  - Euler–Cauchy equation 756
+  - problem 644, 650
+  - sequences 637–8
+- CCWs *see* COM callable wrappers
+- cdfs *see* cumulative distribution functions
+- centred-difference formula 656–8, 704–5
+- CEV *see* constant elasticity of variance
+- CFL *see* Courant–Friedrichs–Lewy condition
+- CGM *see* conjugate gradient method
+- chart object, Excel 434
+- child threads 908, 912, 1026
+- chi-squared distribution 509–10, 1038, 1050
+- `choice` 980, 982
+- Cholesky decomposition 322, 327–30, 835–40, 846, 848
+- chooser options 543–6
+- `<chrono>` 283
+- *chrono* library 288–300
+  - *Boost Chrono* library 300
+  - clocks 288, 292–3, 300
+  - compile-time fractions 288–90
+  - duration 291–2
+  - examples/applications 295–300
+  - stopwatch class 293–5, 298–9
+  - timepoints 292–3
+- CIR *see* Cox–Ingersoll–Ross model
+- circle area 826–7, 1056–9
+- clamped splines 418
+- Clark *see* Barakat and Clark
+- class coupling 208–9
+- classes
+  - code for FDM classes 679–90
+  - code for PDE classes 673–9
+  - modelling an SDE 174–8
+  - multiparadigm design 190–9
+  - *see also* individual classes
+- class hierarchies 164–7, 206
+- class identifiers (CLSIDs) 468
+- class internals 207–8
+- class invariants 187
+- class size 206
+- CLI see Common Language Infrastructure language
+- clock classes 884–6
+- clocks 288, 292–3, 300, 884–6
+- closed-open interval 607
+- closure, function 61–2
+- CLR see Common Language Runtime
+- CLSIDs see class identifiers
+- code
+  - bloat 149, 162, 175
+  - calling C# code from C++11 872–6
+  - commented 192–3
+  - FDM classes 679–90
+  - ‘get it working’ code 270, 378
+  - multithreading 296–300, 929
+  - PDE classes 674–9
+  - pseudocode 62
+  - single-threaded 296–300
+  - smart pointers 23–30
+  - source 19
+  - supplier 554
+  - tuples 133–8, 142–3
+  - see also legacy code
+- cohesion metrics 208
+- collaborations 208
+- COM see Component Object Model
+- combinable<Ts> 972–3
+- COM callable wrappers (CCWs) 861, 888
+- Command design pattern 475, 479, 483, 717
+- commands 109, 479–85
+- commented code 192–3
+- Common Language Infrastructure (CLI) language see C++/CLI
+- Common Language Runtime (CLR) 858–9, 861–2, 872, 886, 892
+- Common Type System (CTS) 858–9
+- commutativity 159
+- compile-time
+  - arrays 306, 309–12, 575–6
+  - design patterns 167
+  - fractions 288–90
+  - matrices 283
+- complementary error functions 475–6
+- complete metric spaces 638, 639
+- complex chooser options 543
+- complex coefficients 839
+- complexity analysis 585–8
+  - asymptotic behaviour of functions 585–6
+  - asymptotic order 585–6
+  - definition of algorithm complexity 585
+  - examples 587–8
+  - key operations 585–6
+- complexity/complexities, STL 558, 560, 604–7, 610–11
+- complex numbers 114
+- Component Object Model (COM) 434, 463–74
+  - calling conventions 464
+  - CLSIDs 468
+  - components 463, 466
+  - example 468–71
+  - HRESULT 466–7, 469, 470
+  - IDL 468
+  - initialising the library 474
+  - interfaces 463–6, 468–75
+  - legacy code 886–7
+  - native classes 861
+  - object-oriented paradigm 473
+  - objects 465–6, 468–71
+  - return types 466–7
+  - virtual function tables 471–3
+- composite commands 483–4
+- Composite design pattern 483
+- composite type categories 153–5
+- composition-based delegation 78
+- composition method 824
+- compound types 153–5
+- computer-aided design (CAD) 193–4, 206, 247, 248, 891
+- concurrency 936–7, 977–8
+  - see also C++ Concurrency library
+- concurrent containers 977–8
+- concurrent objects 978
+- condition variables 948
+- configuration
+  - assemblies 891
+  - C++ example 10–12
+  - std::bind 205
+  - tuples 130–1
+- conjugate gradient method (CGM) 322, 323–4
+- Console projects 862, 869–71, 872, 886, 892
+- constant elasticity of variance (CEV) 715, 1038–41
+  - closed-form solution 1047–50
+  - modelling an SDE 176
+  - option pricing software 1014, 1038–41, 1047–50
+  - PDE preprocessing 648
+- constants 193, 1061–3
+- constexpr keyword 193–5
+- constrained optimisation problem 803
+- constraints 618–19, 643
+- constructors 157–8, 179
+  - atomics 916, 920
+  - bitsets 284
+  - cubic splines 418
+  - dates 302
+  - default 191, 231
+  - lattice models 340
+  - move 35–7, 191
+  - OptionData 456
+  - option pricing software 1014
+  - seeding random number engines 829
+  - threads 900, 916, 920
+- const volatile 221
+- containers 283
+  - concurrent 977–8
+  - copying/moving elements from 567–8
+- count() algorithm 558–9
+  - dimensions of 613
+  - minimum/maximum values 559–60
+  - mutating algorithms 589
+  - numeric algorithms 597–8
+  - partitioning work 968, 977
+  - STL algorithms 551–3, 557–60, 567–9, 583–5, 589, 596–7, 613
+  - types 583–5
+- continuations 63–4, 622, 950–2
+- continuity 638–9
+- continuous dividend yield 374–7
+- continuous functions 442–4
+- continuous maximum principle 649
+- continuous probability distributions 500
+- contractions 639
+- controlled steppers 783
+- convection-diffusion-reaction PDEs
+  - CEV model 715
+  - FDM for PDEs 641–5, 648, 654
+  - MOL 781, 799–800
+  - software frameworks 669–70, 673
+- convection dominance 381, 386, 387
+- convergence 385, 637–8
+- convergent sequences 637–8
+- converter objects 258
+- cooperative tasking 908–9
+- corrected drift functions 1023, 1034, 1036
+- corrector equations 1034
+  - see also predictor–corrector methods
+- coupling reduction 628–9
+- Courant–Friedrichs–Lewy (CFL) condition 746
+- covariance matrices 845–6
+- Cox–Ingersoll–Ross (CIR) model 652–3, 1050
+- Cox–Rubinstein–Ross (CRR) method 347, 367, 373, 378, 381
+- CPU time 288, 300
+- Crank–Nicolson method
+  - code for FDM classes 680, 683, 685, 690
+  - FDM for PDEs 656, 662, 664–5
+  - numerical greeks 712–14
+  - one-factor option models 671, 680, 683, 685, 690, 692–3
+  - software frameworks 701, 702, 712–14
+  - stiff ODEs 768
+  - tridiagonal systems 405–9, 413, 415
+- CreateMesh 443
+- creation design patterns 134–6, 176, 250, 718
+- credit ratings 799
+- CRR see Cox–Rubinstein–Ross method
+- CRRLatticeAlgorithms 347–8, 353, 356, 379
+- CRTP see Curiously Recurring Template Pattern
+- cryptographic random number generators 833
+- CTS see Common Type System
+- cubic splines 419–27
+  - examples 424–6
+  - failure conditions 426–7
+  - interpolation 419–27
+  - numerical greeks 711, 714
+  - software frameworks 706, 707–8, 711, 714
+  - sparse input data 426–7
+- cumulative bivariate normal distribution 515, 528, 544
+- cumulative distribution functions (cdfs) 477–9, 507–8
+- cumulative distributions 476–9, 507–8, 515, 528, 544
+- Curiously Recurring Template Pattern (CRTP)
+  - code for FDM classes 680, 685–7
+  - multiparadigm design 185, 203, 209–10
+  - one-factor option models 680, 685–7
+  - option pricing software 994, 1011–13, 1025
+  - path-dependent options 727
+  - path generation for SDEs 451
+- currying 62
+- cyclical dependencies 28
+- dangling pointers 22
+- dangling references 171
+- data chunking 142
+- data dependence graphs 939
+- data dependency graphs 928, 937–40, 944–5, 953–4
+- DataFlow class 195–7
+- data flow diagrams (DFDs) 249, 252–4
+- data flow graphs 939
+- data generation
+  - automating 491–9
+  - distributions 499–500
+  - functions 499–500
+  - generic coding 492–5
+  - producer-consumer metaphors 497–8
+  - random numbers 491–9
+  - sampling distributions 496–7
+  - STL algorithms 498–9
+- data parallelism 936–7, 939–40
+- data races 833, 901, 924, 972
+- datasets 491
+- data types
+  - ADTs 338–9, 342, 352, 369, 372, 376
+  - CTS 858–9
+  - heterogeneous 101–6
+  - multiprecision 216, 1054–6
+  - new 44–5, 283
+- data visualisation 433–74
+  - in Excel 433–74
+- ExcelDriver 437–48
+- Excel infrastructure 435–7
