@@ -1,0 +1,64 @@
+
+chip was designed, combining a sensory layer, a mixed/mode preprocessing layer, a special digital memory layer preparing the “foveal” processing in the fourth layer [44]. Optical implementation was also successful [45].
+
+With the advent of the FPGA kilo-processor chips, a new physical implementation became possible. The first CNN Universal Machine on FPGA was, in a way a new kind of compiler, translating cellular spatial-temporal algorithms onto a FPGA [46]. Several other new directions will be studied later.
+
+Using the analog/and/logic stored programmable chip, new vistas were found in experimenting on them. The test bed for studying various complex nonlinear phenomena led to the uncovering of spatial-temporal chaos, finding dynamic patterns of different cells, stationary, periodic and chaotic cells [47]. With another clever way of combining local noise with on chip algorithms, truly random patterns were generated [48].
+
+## 6. Biological Relevance and Bio-inspiration
+
+Following the gradual better and better understanding of the neuromorphic details of the retina, starting from the naïve “silicon retina” resistive grid model, a bio-inspired proposal was made [49], called the Bionic Eye. Though it was approximate in many aspects, the essence was practical. As it turned out by exploring the inner structure of the mammalian retina in 2001 [10], some fundamental modifications had to be made, especially reflecting the multi-channel output of a single retina. The next CNN model was more accurate [54], and many other refinements [55] and constructive combinations have been proposed.
+
+In addition to vision, other topographic modalities were also studied. Moreover, the interesting phenomenon of hyper acuity was studied. The hyper acuity in space in electric fishes [50] and in time in barn owl [52] were successfully modeled via 1 D CNN models [51 and 53]. The hyper acuity in time model was used for implementing a high resolution time to digital conversion chip [56]. Diverse other areas, such as immune response related, color vision related, locomotion related, and tactile action related effects were also useful examples [57–60]. A receptive field ATLAS was compiled for diverse sensory phenomena in terms of CNN models [61].
+
+## 7. Some Fundamental Theorems — More than PDE, Equivalence to Fully-connectedness, Analytic Theory of CA, Gödel Incompleteness
+
+Right from the beginning, the types of universality of the CNN Universal Machine had been a main issue. The universality in the Turing sense, via the game of life, was proved [62], indeed using two layers with 2 templates. Later, other simpler constructions were also shown. The other type of universality is the functional richness of the cell by cell nonlinear operator, especially if delay templates are used as well.
+
+For long, it was considered that the PDEs are the most complex operators in spatial-temporal description of dynamics systems. In 1987, Keener proved [71] that there exists a 1D special example for which for any finite spatial discretization there exist a range of parameters for which the qualitative behavior of the spatial-temporal response will be different compared to the spatially continuous case. This example triggered the fundamental question: is it true that for all Partial Differential Difference Equations (PDDE) defined by the CNN dynamics for each one of the cloning templates, there exists a PDE that is the limiting case in space, that is, the continuous space, version, with the same qualitative behavior? The detailed study led to the surprising conclusion: the answer is no [63]. Two types of equivalence were considered topological and numerical. It is quite interesting that Turing already studied the question of the relationship between PDE and its spatially discrete form [1], however, he did not noticed this possibility.
+
+As mentioned before, due to the feedback template the whole network is indirectly interconnected via the direct local connections, still there were no firm results as to the equivalence of operators between the fully and locally connected dynamical systems. In [64] it was shown that for oscillator cells this equivalence is true, and in some cases a constructive proof is available that show that linear template is sufficient.
+
+Cellular Automata were shown as special cases on CNN dynamics. In addition, several very interesting properties were discovered mostly by examples. John von Neumann’s prophecy was still hanging in the air: there will be sometimes an analytic theory for binary automata [73]. That vision became true when Professor Leon Chua bridged the gap by applying a real valued representation of the binary state of a 1D Cellular Automaton with n cells [65]. The following sequence of seminal papers, e.g. [66–68] developed a brand new analytic theory of the binary universe as diverse Cellular Automata. Introducing a local memory in each cell (like in the CNN Universal Machine) showed additional properties [70].
+
+What if we have not only an initial state, however, also an input to the Cellular Automaton, like in the CNN. This question was studied and the first result was surprising [69]: much more complexity and even the capability of dynamic input detection.
+
+Having been the deeper properties of Cellular Automata analyzed, special kind of attractors called Isles of Eden were found and their properties discovered. These Isles of Eden have been identified as special manifestations of Gödel’s incompleteness theorem [72].
+
+## 8. Prototype Spatial-temporal CNN Algorithms and Novel Applications
+
+The invention of the CNN Universal Machine provided for the algorithmic combination of various spatial-temporal template dynamics, or put it in a different way, algorithms with spatial-temporal elementary instructions. Indeed, a new kind of algorithmic thinking has started forming a basis for different classes of alpha-recursive functions and related parts of a new kind of software library. Indeed, starting with the first software library, called Analogic CNN Program Library [18], a new edition has been made available almost every year, and a quite comprehensive “Software Library for Cellular Wave Computing Engines in an era of kiloprocessor chips” was published and distributed with the IEEE CNN4-2010 conference Proceedings, also available via the internet [100]. Here, we will review three parts:
+
+- Prototype functional CNN algorithms,
+- Learning and adaptation methods, and
+- Novel applications.
+
+### Prototype functional CNN algorithms
+
+In some cases, a simpler version of CNN algorithms can be useful. Namely, in the so called discrete-time CNN (DTCNN) [74] the updating mechanism is performed by an iterative sequence of a given template with a memoryless (algebraic)
+
+CNN operator, actually calculating the spatial convolution and the bias term of the standard CNN equation [74]:
+
+```
+$$x_{ij}(n+1):=x_{ij}(n)+\Sigma A_{kl}*y_{kl}(n)$$
+$$\qquad +\Sigma B_{kl}*u_{kl}(n)$$
+$$\qquad +z_{ij}y_{ij}(n+1):=f(x_{ij}(n=1))$$
+```
+
+where n is the time sequence, x and y are the state and output values of the cell and ij is the cell place and kl is a cell place in the neighborhood, f is a sigmoid function.
+
+Many interesting applications have been performed by DT CNN that can be physically implemented in a simpler way.
+
+As to the Boolean functions, using standard CNN dynamics, actually, practically all useful classes have been implemented [e.g. 75, 76, 77], including such functions as majority voting, parity check, and binary valued layout design algorithms.
+
+Complex pattern calculation and skeleton generation even in a noisy environment are difficult tasks. Front propagation and active contour detection via nonlinear waves are key methods that were efficiently transformed into CNN wave dynamics operators [78].
+
+Since the Turing patterns [1] it is a major challenge to form 2-dimensional patterns that are common in nature and are impossible to define in a geometric way. It turned out that a plethora of such patterns can be easily generated by autonomous CNN dynamics [79].
+
+Some complex nonlinear analytic tools proved to be useful in analyzing CNN dynamics. For the continuous time case, the spectral approach was useful [80], and for the DT CNN the NLq theory was applied [81].
+
+Exploring more complex spatial-temporal dynamics was possible via more complex cells, in particular using chaotic cells [82]. In addition to different wave dynamics, synchronization phenomena and related synchronization patterns had also been found [83].
+
+A few typical more complex functions and special spatial filters had been invented. In particular, for binary and gray scale mathematical morphology [84], adaptive nonlinear spatial filters [85], separating signatures of various sound events [86], and computing optical flows [87].
+
+A fundamental drift from classical problem setting emerged when the spatial/temporal wave

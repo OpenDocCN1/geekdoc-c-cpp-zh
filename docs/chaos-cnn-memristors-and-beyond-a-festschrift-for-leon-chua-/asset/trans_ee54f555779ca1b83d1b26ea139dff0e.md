@@ -1,0 +1,81 @@
+
+expansion of (ℱ, X). Suppose there exist constants Λ_ij satisfying (2) for ℱ. Then there are constants \tilde{Λ}_ij satisfying (2) for 𝒳_S ℱ such that ρ(\tilde{Λ}) ≤ ρ(Λ).
+
+## Example 4.
+
+Let (ℱ, X) be the dynamical network given in Example 2 once again considered as a network without local dynamics. That is,
+
+ℱ(x) = [1 − T₁(x₁)T₂(x₂)/α; 1 − T₁(x₁)T₃(x₃)/α; 1 − T₂(x₂)T₃(x₃)/α] for α ≥ 1
+
+where T_i(x_i) = 4x_i(1 − x_i) and X = [0,1]³.
+
+Note that the system (ℱ, X) has the same form as the dynamical network in Example 3. Hence, for S = {v₁, v₃} the expansion (𝒳_S ℱ, X_S) given by Eq. (6) is
+
+𝒳_S ℱ(x) = [𝒳_S ℱ₁; 𝒳_S ℱ₃; 𝒳_S ℱ₁₂₁; 𝒳_S ℱ₁₂₃; 𝒳_S ℱ₃₂₁; 𝒳_S ℱ₃₂₃] = [1 − T₁(x₁)T₂(1 − T₁(x₁₂₁)T₃(x₃₂₁)/c)/c; 1 − T₂(1 − T₁(x₁₂₃)T₃(x₃₂₃)/c)T₃(x₃)/c; x₁; x₁; x₃; x₃] (7)
+
+Letting \tilde{Λ}_{ij} = max_{x∈X_S} |(Dℱ_S)_{ji}(x)| one can compute that
+
+\tilde{Λ} = [16(c−1)/c³ 0 1 1 0 0; 0 16(c−1)/c³ 0 0 1 1; 16/c³ 0 0 0 0 0; 0 16/c³ 0 0 0 0; 16/c³ 0 0 0 0 0; 0 16/c³ 0 0 0 0]
+
+where the rows (and columns) of \tilde{Λ} are numbered as in Eq. (7). The spectral radius of \tilde{Λ} is then given by ρ(\tilde{Λ}) = [8c − 8 + 4√(4 + 2c(c³ + 2c − 4))]/c³
+
+As ρ(\tilde{Λ}) < 1 for c > 6.75 then Theorem 3 implies (ℱ, X) has a globally attracting fixed point for c > 6.75. Note that this is better than the estimate gained by direct (standard) analysis of (ℱ, X) in Example 2.
+
+Importantly, we note that the method of using network expansions generalizes the method used in [1, 2] for determining whether a network has a unique global attractor. As a final observation, in this section, we note that it is possible to sequentially expand a dynamical network and thereby sequentially improve ones estimate of whether the original untransformed network has a globally attracting fixed point.
+
+## 4. Concluding Remarks
+
+The large majority of real world networks are dynamic. Yet most studies consider either only the structure or the dynamics of these networks. As the spectrum is an important dynamical aspect of a network, isospectral graph transformations provide a way of studying the interplay between the topology of a network and its dynamics.
+
+As a tool for investigating networks, isospectral transformations are quite flexible. Isospectral transformations can be used to reduce or expand the size of a network, considered as a graph, while either modifying or maintaining the edge weights of the network [5]. These isospectral graph reductions and isospectral graph expansion have the following useful properties and applications.
+
+Isospectral graph reductions allow one the ability to uniquely reduce a network to any subsets of its vertex set while preserving the network spectrum. This in turn allows for the introduction of new equivalence relations on the space of all networks where two networks are equivalent if they can be reduced to the same network via some rule.
+
+From the point of view of applications, such rules can be designed by experimentalist to compare different networks modulo some specific network structure. However, this requires experts in a particular field (biologist, physicist, etc.) to determine an appropriate set of network elements over which to reduce the network.
+
+Isospectral graph expansions can be used to enlarge a network while preserving its sets of edge weights. As a general dynamical system has an associated graph structure (i.e. can be considered as a dynamical network) it is also possible to use an analogous procedure to expand the dynamical system while preserving its dynamics. This can be used to establish whether the system has a globally attracting fixed point.
+
+## Acknowledgments
+
+The work of L. B. was partially supported by the NSF grant DMS-0900945.
+
+## References
+
+- [1] V. Afraimovich and L. Bunimovich. Dynamical networks: interplay of topology, interactions, and local dynamics, *Nonlinearity* **20** (2007) 1761–1771.
+- [2] Afraimovich V, Bunimovich L, and Moreno S 2010 Dynamical networks: Continuous time and general discrete time models *Regular and Chaotic Dynamics* **15** 129–147.
+- [3] Albert R and Barabási A-L 2002 Statistical mechanics of complex networks *Rev. Mod. Phys.* **74** 47–97.
+- [4] L. A. Bunimovich, B. Z. Webb, Isospectral Graph Transformations, Spectral Equivalence, and Global Stability of Dynamical Networks, *Nonlinearity* **25** (2012) 211–254.
+- [5] L. A. Bunimovich, B. Z. Webb, Isospectral Graph Reductions and Improved Estimates of Matrices’ Spectra, *Linear Algebra and its Applications* **437**(7) (2012) 1429–1457.
+- [6] Chazottes J-R and Fernandes B (ed) 2005 Dynamics of Coupled Map Lattices and Related Spatially Extended Systems *Lect. Notes in Physics* Vol 671, (Berlin: Springer).
+- [7] Dorogovtsev S and Mendes J 2003 Evolution of Networks: From Biological Networks to the Internet and WWW Oxford: Oxford Univ. Press.
+- [8] Faloutsos M, Faloutsos P and Faloutsos C 1999 On power-law relationship of the internet topology *ACMSIGCOMM,’99, Comput. Commun. Rev.* **29** 251–263.
+- [9] Gershgorin S 1931 Über die Abgrenzung der Eigenwerte einer Matrix, *Izv. Akad. Nauk SSSR Ser. Mat.* **1** 749–754.
+- [10] Newman M, Barabási A-L and Watts D (ed) 2006 The Structure of Dynamic Networks (Princeton: Princeton Univ. Press).
+- [11] Porter M, Onnela J and Mucha P 2009 Communities in Networks *AMS Notices* **56** 1082–1097, 1164–1166.
+- [12] Strogatz S 2003 Sync: The Emerging Science of Spontaneous Order (New York: Hyperion).
+- [13] Varga R 2004 Gershgorin and His Circles (Germany: Springer-Verlag Berlin Heidelberg).
+- [14] Watts D 1999 Small Worlds: The Dynamics of Networks Between Order and Randomness (Princeton: Princeton Univ. Press).
+
+## CHAPTER 20
+
+## CHUA’S TIME
+
+ARTURO BUSCARINO, LUIGI FORTUNA and MATTIA FRASCA
+
+*DIEEI, University of Catania, Italy*
+
+We discuss the relationship between the idea of time of the philosopher Bergson and the concept of time recurrence in chaotic systems. By taking into account the Chua’s circuit, we saw that the “Chua’s time”, i.e., the average recurrence time of trajectories in the Chua’s circuit, is able to qualitatively represent the features of the Bergson’s time. Numerical and experimental results are presented.
+
+- 1. Introduction .......................................................... 253
+- 2. The Average Recurrence Time ........................................... 254
+- 3. Experimental Setup ..................................................... 254
+- 4. Average Recurrence Time of the Chua’s Circuit ........................... 255
+- 5. Conclusions ........................................................... 257
+- References ................................................................ 258
+
+## 1. Introduction
+
+Henri Bergson (1859–1941) was one of the most influential philosophers of the beginning of the 20th century. A central theme of his thought is the problem of time [1, 2]. He refused the idea of an homogeneous and reversible, quantitative and measurable ‘scientific’ time, since in his conception what is measured is not the time interval itself, but only a portion of space. He stated that the time interval has not physical meaning, but it is the single consciousness which registers the real duration of time, which is qualitative and heterogeneous, not measurable and irreversible. Time according to Bergson is therefore a continuous flow of unique states of the consciousness. In this sense the concept of Bergson’s time includes that of strange attractors before the discovery of these by scientists [3].
+
+Bergson’s idea of time is that the duration is not the sequence of instants, since this would imply that only the present could exist and the past could not preperate into the present, thus avoiding the possibility of evolution and of a real duration. Bergson retained that the duration is the continuous progress and growth of the past, which preserves itself entirely, so that the past is always present in the human consciousness. The man actions and thoughts are thus dictated by the whole history of the past, even if the man clearly and distinctly perceives only a part of the past. The consequence of this conception of the past is that the consciousness cannot pass two times through the same identical state. Even if the external circumstances are the same, the person which experiences them is not the same, since he/she is in continuous evolution thanks to the irreversibility of the duration and the continuous growth of the experience. The idea of Bergson about time is therefore that it is dynamic and not static. In this sense, the idea of Bergson is anticipated by the thought of St. Augustine, who conceived the time as a dynamic reality that is an extension of the soul itself.
+

@@ -1,0 +1,9 @@
+Fig. 4. Basic action to generate inductively the safe sets in a map showing a horseshoe-like behaviour in the phase space. We begin with a vertical segment ($S^0$) that splits the square in two equal halves and we compute the preimages of that line in $Q$. The intersections of the $k$th preimage of $S^0$ with $Q$ gives the set $S^k$, that consists of $2^k$ curves.
+
+Fig. 5. These are the parameters needed in the partial control technique using the $S^2$ sets. The curves $\zeta_1$ and $\zeta_2$ are the curves whose points are at the same distance from a curve of each pair of curves of $S^2$. We can also see that $\delta_{max(i)}$ is the maximum distance from each pair of curves of $S^2$ to the curves $\zeta_i$ as well as $\delta_{min(i)}$ is the minimum distance.
+
+Fig. 6. The escape time set $T^3$, i.e., the set of points that escape from $Q$ after 3 or more iterations. It consists of four pairs of strips, and it is reminiscent of $S^3$.
+
+Fig. 7. In this picture we can see in grey the set of points of $T^2$ (the set of points that stay in the square under 2 or more iterations). We have also plotted in black the images of those points under one iteration. Due to the fact that the images of the strips do not lay between the pairs of strips, it is impossible to use the $T^2$ sets with a control smaller than the noise.
+
+a control smaller than the noise, as we can see in Fig. 7. In this figure, we can see the forward iterate, in black, of the strips corresponding to the set $T^2$ (number of points that stay in the square under two iterations or more) which appear colored in grey. We can see in this figure that not all the parts of the

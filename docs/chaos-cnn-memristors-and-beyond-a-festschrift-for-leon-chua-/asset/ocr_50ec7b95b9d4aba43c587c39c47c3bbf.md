@@ -1,0 +1,11 @@
+Introduction of asymmetry into constrained surfaces and/or periodically rotating force will bring unexpected motions, however these are left as further open problems.
+
+# 7. Conclusion
+
+The qualitative and quantitative behaviors of a mass point in a rotating external force and constrained on a surface of revolution upward has been studied. The basic behavior of this system is periodic motion. Jump phenomena in the amplitude of the periodic circular motion under variation of the angular velocity of the external force almost-stationarily have been observed, and qualitative difference of the jump phenomena on the curvature of the surface of revolution is disclosed, which is separated by a parabolic surface of revolution given by \(n=2\). Moreover, mechanisms of jumping-up and -down phenomena are also clarified by the loss of power balance and reactive force balance, respectively.
+
+# Acknowledgments
+
+In the preparation of this dedicatory study in honor of Professor Leon O. Chua, the author was greatly supported by Professor Shin’ichi Oishi, Dean of the Graduate School of Fundamental Science and Engineering, Waseda University, who provided him splendid research environment. He was also aided by his graduated students Mr. Kenta Hosoi and Mr. Takuma Kawamura of the Future University—Hakodate, Dr. Hirofumi Ohta of the Kyoto University and Professor Ralph Abraham of the University of California Santa Cruz, who gave him valuable suggestions and good advice of all kinds. Acknowledgment must also be made to Professor Guanrong (Ron) Chen of the City University of Hong Kong, and Professor Andrew Adamatzky of the University of the West of England at Bristol, for their excellent cooperation with great patience.
+
+As to the references of this study, there are too many good textbooks on Classical Physics and Nonlinear Dynamics or Oscillations. It seems very difficult for the author to refer to a long list of textbooks among many. The author especially appreciates many great precursors in the fields.

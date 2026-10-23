@@ -1,0 +1,23 @@
+charge q and the magnetic flux φ. Then, [6, p. 507] explained that:
+
+> “... by the axiomatic definition of the three classical circuits elements, namely, the resistor (defined by a relationship between v and i), the inductor (defined by a relationship between φ and i), and the capacitor (defined by a relationship between q and v). Only one relationship remains undefined, the relationship between φ and q.”
+
+He thus concluded from the logical as well as axiomatic points of view, that it is necessary, for the sake of completeness, to postulate the existence of a fourth circuit element to which he gave the name memristor since it behaves like a nonlinear resistor with memory. The manner with which these three first laws that he calls: “relationships” have been discovered will be briefly recalled in Sec. 2 while the fourth law that he has established as well as the main properties of the memristor will be presented in Sec. 3. Then, it will be shown in Sec. 4 that the singing arc which exhibits analogous characteristic to the missing circuit element can be considered as the oldest memristor.
+
+# 2. Fundamental Passive Circuits Elements
+
+Anyone who has taken a physics class is familiar with the capacitor, the resistor, the inductor and of course the generator. But the question that one can ask is when and how these devices have been invented. This section aims to answer this question.
+
+# 2.1. Le condensatore and Volta’s law
+
+In a way we could say that the history of the capacitor begins with the History of Physics, i.e. at the time of the Ancient Greece. Indeed, according to many historians of sciences, Thales of Miletus (624–547 B.C.) who is generally considered as the first physicist, has highlighted the fact that the rubbed amber (ηλεκτρον elektron in Greek) has the property of attracting light objects, such as pieces of straw or fabric. At the beginning of the seventeenth century, the English physician, physicist and natural philosopher William Gilbert (1544–1603) extended in his book De Magnete, Magneticisque Corporibus, et de Magno Magnete Tellure (On the Magnet and Magnetic Bodies, and on the Great Magnet the
+
+Earth) published in 1600, the number of substances capable of “becoming electric” (triboelectric), that is to say, after friction they exhibit the same property as amber. In the second chapter entitled: On the Magnetick Coition, and first on the Attraction of Amber, or more truly, on the Attaching of Bodies to Amber, [16, p. 48] wrote:
+
+> “Nam non solum succinum, & gagates (vt illi putant) allectant corpuscula. For it is not only amber and jet (as they suppose) which entice small bodies; but Diamond, Sapphire, Carbuncle, Iris gem, Opal, Amethyst, Vincentina, and Bristol la (an English gem or spar), Beryl, and Crystal do the same.”
+
+This list has grown with the glasses of various compositions, such as resins, or sulfur. After the body is rubbed with dry hands, or with paper, leather or fabric, feathers and straw are more or less attracted. But the observed phenomena, did not received spectacular interests before the 1700s. During this period, the electrostatic generator, then called friction machine, appeared. The German scientist Otto von Guericke (1602–1686) is considered as the inventor of a primitive form of frictional electrical machine. In 1671, he had the idea to make a sulphur globe that could be rotated and rubbed by hand. In 1707, Isaac Newton (1642–1727) suggested to use a glass globe instead of a sulphur one and in 1709 Francis Hauksbee (1666–1713) improved the basic design, by rotating a glass sphere to be rotated rapidly against a woollen cloth. Thus, in the middle of the eighteenth century, the Electricty becomes fashionable. In France, it was widely popularized by the French clergyman and physicist Jean-Antoine Nollet (1700–1770) known as Abbé Nollet. On March 14th 1746, he made one of his most spectacular experiments in the galerie des Glaces at Versailles in the presence of his Majesty the King Louis XV. He electrified a hundred eighty royal guards holding hands with an electrostatic generator (see Fig. 1) positioned at the beginning of the human chain.
+
+The same year in January, Nollet who has been asked to translate a letter send by the Dutch scientist Pieter Musschenbroek (1692–1761), then professor at Leiden, to René Réaumur (1683–1757) and written in Latin, had credited him erroneously for the discovery¹ of a device that he called the
+
+¹This episode has been clarified by Edmond Hoppe in his History of Physics [20, p. 448].
