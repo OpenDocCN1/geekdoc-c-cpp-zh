@@ -1,0 +1,129 @@
+
+
+Figure 7.25 One-Sided Cusum Chart for the OIL Data
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_141_0.png)
+
+Notice that the decision interval or horizontal line is set at the H-value entered (0.25). Also note that no V-mask appears with One-Sided Cusum charts.
+
+The Show Parameters option in the Cusum chart popup menu shows the Parameters report in Figure 7.26. The parameters report summarizes the charting parameters from the Known Statistics for CUSUM chart tab on the Control Chart Launch dialog. An additional chart option, Show ARL, adds the average run length (ARL) information to the report. The average run length is the expected number of samples taken before an out-of-control condition is signaled:
+
+- ARL (Delta), sometimes denoted ARL1, is the average run length for detecting a shift the size of the specified Delta
+- ARL(0), sometimes denoted ARL0, is the in-control average run length for the specified parameters (Montgomery (1985)).
+
+Figure 7.26 Show Parameters and Show ARL Options
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_141_1.png)
+
+## Time Series
+
+The Time Series platform lets you explore, analyze, and forecast univariate time series. A time series is a set y₁, y₂, …, yₙ of observations taken over a series of equally-spaced time periods. The analysis begins with a plot of the points in the time series. In addition, the platform displays graphs of the autocorrelations and partial autocorrelations of the series. These indicate how and to what degree each point in the series is correlated with earlier values in the series and can be used to identify the type of model appropriate for describing and predicting (forecasting) the evolution of the time series. The model types include
+
+- **ARIMA**, autoregressive integrated moving-average, often called Box-Jenkins models
+- **Smoothing Models**, several forms of exponential smoothing and Winter’s method.
+
+**Note:** The Time Series Launch dialog requires that one or more continuous variables be assigned as the time series. Optionally, you can specify a time ID variable, which is used to label the time axis. If a time ID variable is specified, it must be continuous, sorted ascending, evenly spaced, and without missing values.
+
+### Introduction
+
+The data for the next examples are in the Series.jmp table found in the Time Series sample data folder (Box and Jenkins 1976). The time series variable is Passengers and the time ID is Time.
+
+Select **Analyze > Time Series** to display the Time Series Launch dialog (Figure 8.1).
+
+This dialog allows you to specify the number of lags to use in computing the autocorrelations and partial autocorrelations. It also lets you specify the number of future periods to forecast using each model fitted to the data.
+
+For this example, assign Passengers as **Y, Time Series** and Time as **X, Time ID**.
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_143_0.png)
+
+Figure 8.3 Log Passenger Series
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_145_0.png)
+
+Since the autocorrelation graph decreases slowly and steadily, but the partial autocorrelation graph drops off drastically after lag 1, a reasonable guess for a model is an MA(1). To try this model,
+
+- Select **ARIMA** from the platform menu.
+- Enter a 1 beside **q, Moving Average Order.**
+- Click **Estimate.**
+
+JMP Student Edition estimates the model and displays a model summary, parameter estimates, and a forecast graph. The most important graph, however, is the residuals, which is initially closed.
+
+Figure 8.4 Model Results
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_146_0.png)
+
+Open the Residuals node to reveal a graph and autocorrelation plots for the model residuals.
+
+Figure 8.5 MA(1) Model Results
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_146_1.png)
+
+The expected reduction in spikes did not occur, so an MA(1) is not an appropriate model. A second model, an MA(2), can be run in the same way.
+
+- Select **ARIMA** from the platform menu.
+- Enter a 2 beside **q, Moving Average Order**.
+- Click **Estimate**.
+
+Similar unsatisfactory results appear. However, note that JMP is accumulating a list of models, along with appropriate fit statistics, in the **Model Comparison** table.
+
+Figure 8.6 Model Comparison Table
+
+| Model | DF | Variance | AIC | SBC | RSquare | -2LogLH |
+|---|---:|---:|---:|---:|---:|---:|
+| MA(1) | 142 | 0.011726 | -638.2299 | -632.2903 | 0.673 | -637.2532 |
+| MA(2) | 141 | 0.0098454 | -662.4197 | -653.5102 | 0.727 | -662.7299 |
+
+Examine the $R^2$ for the two models in this table. In fact, the MA(2) is a *worse* fit than the MA(1). Some reflection is necessary.
+
+### The Time Series Platform
+
+First, assign columns for analysis with the dialog in Figure 8.1. The selector list at the left of the dialog shows all columns in the current table. To cast a column into a role, select one or more columns in the column selector list and click a role button. Or, drag variables from the column selector list to one of the following role boxes:
+
+- **X, Time ID** for the x-axis, one variable used for labeling the time axis
+- **Y, Time Series** for the y-axis, one or more time series variables.
+
+To remove an unwanted variable from an assigned role, select it in the role box and click **Remove**. After assigning roles, click **OK** to see the analysis for each time series variable versus the time ID.
+
+You set the number of lags for the autocorrelation and partial autocorrelation plots in the **Autocorrelation Lags** box. This is the maximum number of periods between points used in the computation of the correlations. It must be more than one but less than the number of rows. A commonly used rule of thumb for the maximum number of lags is $n/4$, where $n$ is the number of observations. The **Forecast Periods** box allows you to set the number of periods into the future that the fitted models are forecast. By default, JMP uses 25 lags and 25 forecast periods.
+
+Figure 8.7 Time Series Plot of Seriesg (Airline Passenger) Data
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_148_0.png)
+
+By default, graphs of the autocorrelation and partial autocorrelation (Figure 8.5) of the time series are also shown, but can be hidden with commands from the platform popup menu on the Time Series title bar.
+
+The platform popup menu, discussed next, also has fitting commands and options for displaying additional graphs and statistical tables.
+
+### Time Series Commands
+
+The popup menu next to the time series name has the commands shown here.
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_148_1.png)
+
+The first three items in this menu control the descriptive and diagnostic graphs and tables. These are typically used to determine the nature of the model to be fitted to the series.
+
+The ARIMA and Smoothing Model commands are for fitting various models to the data and producing forecasts. You can select the model fitting commands repeatedly. The result of each new fit is appended to the report. After the first model has been fit, a summary of all the models is inserted just above the first model report (an example is shown in “Model Comparison Table,” p. 151).
+
+The following sections describe options and model fits, discuss statistical results, and cover additional platform features.
+
+### Graph
+
+![](img/a858f3b35ed4923af65c22e8829ee5a8_149_0.png)
+
+The Time Series platform begins by showing a time series plot, like the one shown previously in Figure 8.7. The Graph command on the platform popup menu has a submenu of controls for the time series plot with the following commands.
+
+- Time Series Graph hides or displays the time series graph.
+- Show Points hides or displays the points in the time series graph.
+- Connecting Lines hides or displays the lines connecting the points in the time series graph.
+- Mean Line hides or displays a horizontal line in the time series graph that depicts the mean of the time series.
+
+### Autocorrelation
+
+The Autocorrelation command alternately hides or displays the autocorrelation graph of the sample, often called the sample autocorrelation function. This graph describes the correlation between all the pairs of points in the time series with a given separation in time or lag. By definition, the first autocorrelation (lag 0) always has length 1.
+
+In addition, confidence curves show twice the large-lag standard error (± 2 standard errors). The autocorrelation plot for the Seriesg data is shown on the left in Figure 8.8. You can examine the autocorrelation and partial autocorrelations plots to determine whether the time series is stationary (meaning it has a fixed mean and standard deviation over time) and what model might be appropriate to fit the time series.
+
+### Partial Autocorrelation
+
+The Partial Autocorrelation command alternately hides or displays the graph of the sample partial autocorrelations. The plot on the right in Figure 8.8 shows the partial autocorrelation function for the Seriesg data. The solid black lines represent ± 2 standard errors for approximate 95% confidence limits
+
