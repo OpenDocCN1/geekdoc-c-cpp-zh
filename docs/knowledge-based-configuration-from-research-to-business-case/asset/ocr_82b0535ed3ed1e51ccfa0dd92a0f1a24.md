@@ -1,0 +1,22 @@
+Haug, A., 2010. A software system to support the development and maintenance of complex product configurators. International Journal of Advanced Manufacturing Technology 49 (1–4), 393–406.
+Heiskala, M., Paloheimo, K.-S., Tiihonen, J., 2007. Mass customization with configurable products and configurators: A review of benefits and challenges. In: Mass Customization Information Systems in Business, first ed., IGI Global, New York, NY, pp. 1–32 (Chapter 1).
+Hotz, L., Felfernig, A., Stumptner, M., Ryabokon, A., Bagley, C., Wolter, K., 2014. Configuration knowledge representation and reasoning. In: Felfernig, A., Hotz, L., Bagley, C., Tiihonen, J. (Eds.), Knowledge-based Configuration – From Research to Business Cases. Morgan Kaufmann Publishers, Waltham, MA, pp. 41–72 (Chapter 6).
+Hvam, L., Mortensen, N., Riis, H., 2008. Product Customization. Springer, Berlin.
+Jannach, D., Zanker, M., 2013. Modeling and solving distributed configuration problems: A CSP-based approach. IEEE Transactions on Knowledge and Data Engineering 25 (3), 603–618.
+Jannach, D., Felfernig, A., Kreutler, G., Zanker, M., Friedrich, G., 2007. Research issues in knowledge-based configuration. In: Mass Customization Information Systems in Business. Idea Group, Newyork, NY, pp. 221–236. (Chapter 11)
+Jiao, J., Tseng, M.M., 1999. A methodology of developing product family architecture for mass customization. Journal of Intelligent Manufacturing 10 (1), 3–20.
+Junker, U., 2001. Preference-based programming for Configuration. In: 17th International Joint Conference on Artificial Intelligence (IJCAI-2001), Configuration Workshop. Seattle, WA, pp. 50–56.
+Junker, U., 2004. QUICKXPLAIN: preferred explanations and relaxations for over-constrained problems. In: McGuinness, D.L., Ferguson, G. (Eds.), 19th Intl. Conference on Artifical Intelligence (AAAI’04). AAAI Press, San Jose, CA, pp. 167–172.
+Junker, U., Mailharro, D., 2003. Preference programming: Advanced problem solving for configuration. Artificial Intelligence for Engineering Design, Analysis and Manufacturing (AI EDAM) 17 (1), 13–29.
+Mailharro, D., 1998. A Classification and Constraint-based Framework for Configuration. Artificial Intelligence for Engineering Design, Analysis and Manufacturing (AI EDAM) 12 (04), 383–397.
+Malmgren, L., Jensen, P., Olofsson, T., 2011. Product modeling of configurable building systems – a case study. Journal of Information Technology in Construction (ITcon) 16, 697–712.
+McDermott, J., 1982. R1: a rule-based configurer of computer systems. Artificial Intelligence 19 (1), 39–88.
+McGuinness, D., Wright, J., 1998. An industrial-strength description logic-based configurator platform. Intelligent Systems and their Applications, IEEE 13 (4), 69–77.
+Mikkola, J.H., 2009. Management of product architecture modularity for mass customization: modeling and theoretical considerations. IEEE Transactions on Engineering Management 54 (1), 57–69.
+Mittal, S., Frayman, F., 1989. Towards a generic model of configuration tasks. 11th International Joint Conference on Artificial Intelligence (IJCAI-89), Detroit, Michigan, vol. 2 pp. 1395–1401.
+Moody, D.L., 2009. The physics of notations: toward a scientific basis for constructing visual notations in software engineering. IEEE Transactions on Software Engineering 35 (6), 756–779.
+Nellore, R., Söderquist, K., Eriksson, K.-A., 1999. A specification model for product development. European Management Journal 17 (1), 50–63.
+Nica, I., Wotawa, F., Ochenbauer, R., Schober, C., Hofbauer, H., Boltek, S., 2014. Kapsch: reconfiguration of mobile phone networks. In: Felfernig, A., Hotz, L., Bagley, C., Tiihonen, J. (Eds.), Knowledge-based Configuration – From Research to Business Cases. Morgan Kaufmann Publishers, Waltham, MA, pp. 229–240 (Chapter 19).
+Otto, K.N., Wood, K.L., 2001. Product Design. Prentice Hall, Upper Saddle River, NY.
+Piller, F.T., Blazek, P., 2014. Core capabilities of sustainable mass customization. In: Felfernig, A., Hotz, L., Bagley, C., Tiihonen, J. (Eds.), Knowledge-based Configuration – From Research to Business Cases. Morgan Kaufmann Publishers, Waltham, MA, pp. 107–120 (Chapter 9).
+Reiter, R., 1987. A theory of diagnosis from first principles. Artificial Intelligence 32 (1), 57–95.

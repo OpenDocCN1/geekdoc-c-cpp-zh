@@ -1,0 +1,15 @@
+# Core Capabilities of Sustainable Mass Customization
+
+Frank T. Piller* and Paul Blazek†
+*RWTH Aachen, Aachen, Germany
+†cyLEDGE, Vienna, Austria
+
+Abstract: The goal of mass customization is to efficiently provide customers with what they want, when they want it, at an affordable price. Realizing this promise demands from the perspective of process design the integration of customers into the value chain of the manufacturer. Here, configuration processes play a crucial role to manage this task by providing customers support and navigation in co-designing their individual product or service. But this capability of “choice navigation,” enabled by modern configuration systems, is just one of three strategic capabilities of mass customization. This chapter explains why configuration systems are playing a crucial role in meeting the particular demands of each individual customer and addresses the fundamental capabilities of sustainable mass customization: solution space development, the design of robust processes, and choice navigation.
+
+# 9.1 Introduction
+
+The objective of mass customization (MC)¹ is to deliver goods and services that meet individual customers’ needs with near mass production efficiency (Tseng and Jiao, 2001). Product configuration systems that are also referred to as “co-design toolkits” (Franke and Piller, 2003, 2004) are the traditional tools in mass customization that enable the individual customer to specify product features (Sabin and Weigel, 1998). Configuration systems are also known as configurators, choice boards, design systems, toolkits, or co-design platforms (Hvam et al., 2008; Salvador and Forza, 2007). They are responsible for guiding the user through the preference elicitation process. Whenever the term configurator or configuration system is quoted in literature, for the most part, it is used in a technical sense, usually addressing a software tool. The success of such a tool, however, is by no means defined solely by its technological capabilities, but also by its integration into the sales environment, its ability to allow for learning, its ability to provide experience and process satisfaction, and its integration into the brand concept.
+
+Configuration systems for mass customization have to be differentiated from configuration systems for complex technical requirements (Stumpfner, 1997). The latter are expert tools that often need usage trainings and are mainly used by technical experts, whereas MC product configurators deal with company-to-customer interaction and cooperation (Khalid and Helander, 2003; Tseng et al., 2003). Already in 1991, Udwadia and Kumar were envisioning customers and manufacturers becoming co-constructors (i.e., co-designers) of those products intended for each customer’s individual use. In their
+
+¹This chapter combines the argumentation developed in two earlier publications: Piller (2008) and Salvador et al. (2009).
