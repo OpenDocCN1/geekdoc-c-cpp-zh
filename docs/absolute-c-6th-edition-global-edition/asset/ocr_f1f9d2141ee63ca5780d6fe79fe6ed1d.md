@@ -1,0 +1,52 @@
+# Self-Test Exercises (continued)
+
+```
+int main()
+{
+    {
+        message();
+        using Sally::message;
+        message();
+    }
+    message();
+    return 0;
+}
+
+namespace Sally
+{
+    void message()
+    {
+        cout << "Hello from Sally.\n";
+    }
+}
+
+namespace
+{
+    void message()
+    {
+        cout << "Hello from unnamed.\n";
+    }
+}
+```
+
+12. What is the output produced by the following program?
+
+```
+#include <iostream>
+using namespace std;
+
+namespace Outer
+{
+    void message();
+    namespace Inner
+    {
+        void message();
+    }
+}
+int main()
+{
+    Outer::message();
+    Outer::Inner::message();
+    using namespace Outer;
+    Inner::message();
+```

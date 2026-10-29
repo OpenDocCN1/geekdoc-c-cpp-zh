@@ -1,0 +1,54 @@
++   4. 10 20
++   20 20
++   30 20
+
+5. To the unwary or to the neophyte, this looks like two objects of type pointer to int, that is, int*. Unfortunately, the * binds to the identifier, not to the type (that is, not to the int). The result is that this declaration declares intPtr1 to be an int pointer, while intPtr2 is an ordinary int variable.
+
+```
+6. delete p;
+```
+
+```
+7. typedef double* NumberPtr;
+NumberPtr myPoint;
+```
+
+8. The new operator takes a type for its argument. new allocates space on the freestore manager for a variable of the type of the argument. It returns a pointer to that memory, provided there is enough space. If there is not enough space, the new operator may return NULL, or may abort the program, depending on how your particular compiler works.
+
+```
+9. typedef char* CharArray;
+```
+
+```
+10. cout << "Enter 10 integers:\n";
+for (int i = 0; i < 10; i++)
+    cin >> entry[i];
+```
+
+```
+11. delete [] entry;
+```
+
++   12. 0 1 2 3 4 5 6 7 8 9
+
+13. The constructor is named MyClass, the same name as the name of the class. The destructor is named ~MyClass.
+
+14. The dialogue would change to the following:
+
+```
+This program tests the class PFArrayD.
+Enter capacity of this super array: 10
+Enter up to 10 nonnegative numbers.
+Place a negative number at the end.
+1.1
+2.2
+3.3
+4.4
+-1
+You entered the following 4 numbers:
+1.1 2.2 3.3 4.4
+(plus a sentinel value.)
+Good-bye cruel world! The short life of
+this dynamic array is about to end.
+Test again? (y/n) n
+```

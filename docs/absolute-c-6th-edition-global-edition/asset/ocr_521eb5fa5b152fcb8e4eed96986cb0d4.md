@@ -1,0 +1,8 @@
+Next, create a Hand class that represents the cards in a hand. Hand should be derived from Deck. This is because a hand is like a specialized version of a deck; we can print, shuffle, add, remove, and sort cards in a hand just like cards in a deck. The default constructor should set the hand to an empty set of cards.
+Finally, write a main function that creates a deck of cards, shuffles the deck, and creates two hands of five cards each. The cards should be removed from the deck and added to the hand. Test the sort and print functions for the hands and the deck. Finally, return the cards in the hand to the deck and test to ensure that the cards have been properly returned.
+
+You may add additional functions or class variables as desired to implement your solution.
+
+12. Do Programming Project 14.11 and extend the program to play blackjack, where the computer plays the role of the house and the user is a single player playing against the house. Use standard house rules for hitting or standing. Add more functions as necessary to implement your program. For an additional challenge, incorporate a betting component and additional blackjack rules, such as splitting or insurance.
+
+13. Do Programming Project 14.11 and extend the program to play five-card stud poker between two hands. Add more functions as necessary to implement your program. For an additional challenge, incorporate a betting component.

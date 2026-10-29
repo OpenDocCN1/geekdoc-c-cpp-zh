@@ -1,0 +1,22 @@
+| FUNCTION DECLARATION | DESCRIPTION | HEADER FILE |
+|---|---|---|
+| bool islower(char); | Returns true if its argument is a lowercase letter. Otherwise returns false. | cctype |
+| bool isupper(char); | Returns true if its argument is an uppercase letter. Otherwise returns false. | cctype |
+| int tolower(char); | Returns the lowercase version of its argument. If there are no lowercase versions, returns its argument unchanged. | cctype |
+| int toupper(char); | Returns the uppercase version of its argument. If there are no uppercase versions, returns its argument unchanged. | cctype |
+
+# C-String Functions
+
+| FUNCTION DECLARATION | DESCRIPTION | HEADER FILE |
+|---|---|---|
+| int atoi(const char a[]); | Converts a C-string of characters to an integer. | cstdlib |
+| long atol(const char a[]); | Converts a C-string of characters to a long integer. | cstdlib |
+| double atof(const char a[]); | Converts a C-string of characters to a double. | cstdlib* |
+| strcat(C-String_Variable, C-String_Expression); | Appends the value of the C-String_Expression to the end of the string in the C-String_Variable. | cstring |
+| strcmp(C-String_Exp1, C-String_Exp2) | Returns true if the values of the two string expressions are different; otherwise, returns false.* | cstring |
+| strcpy(C-String_Variable, C-String_Expression); | Changes the value of the C-String_Variable to the value of the C-String_Expression. | cstring |
+| strlen(C-String_Expression) | Returns the length of the C-String_Expression. | cstring |
+
+*Some implementations place it in cmath.
+
+bReturns an integer that is less than zero, zero, or greater than zero accordingly as C-String_Exp1 is less than, equal to, or greater than C-String_Exp2, respectively. The ordering is lexicographic ordering.

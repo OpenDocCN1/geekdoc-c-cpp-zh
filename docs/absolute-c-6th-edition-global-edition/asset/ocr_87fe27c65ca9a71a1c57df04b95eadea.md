@@ -1,0 +1,59 @@
+# Display 7.4 The const Parameter Modifier (part 3 of 3)
+
+```
+46 //Returns true if the balance in account1 is greater than that
+47 //in account2. Otherwise returns false.
+48 bool isLarger(const BankAccount& account1, const BankAccount& account2);
+49 void welcome(const BankAccount& yourAccount);
+```
+
+```
+50 int main()
+51 {
+52     BankAccount account1(6543.21, 4.5), account2;
+53     welcome(account1);
+54     cout << "Enter data for account 2:\n";
+55     account2.input( );
+56     if (isLarger(account1, account2))
+57         cout << "account1 is larger.\n";
+58     else
+59         cout << "account2 is at least as large as account1.\n";
+60
+61     return 0;
+62 }
+```
+
+```
+63 bool isLarger(const BankAccount& account1, const BankAccount& account2)
+64 {
+65     return(account1.getBalance( ) > account2.getBalance( ));
+66 }
+67 void welcome(const BankAccount& yourAccount)
+68 {
+69     cout << "Welcome to our bank.\n"
+70         << "The status of your account is:\n";
+71     yourAccount.output( );
+72 }
+```
+
+```
+73 //Uses iostream and cstdlib:
+74 void BankAccount::output( ) const
+75     <The rest of the function definition is the same as in Display 7.2.>
+76
+77     <Other function definitions are the same as in Display 7.2, except that const
+78 is added where needed to match the function declaration.>
+```
+
+# Sample Dialogue
+
+```
+Welcome to our bank.
+The status of your account is:
+Account balance: $6543.21
+Rate: 4.5%
+Enter data for account 2:
+Enter account balance $100.00
+Enter interest rate (NO percent sign): 10
+account1 is larger.
+```

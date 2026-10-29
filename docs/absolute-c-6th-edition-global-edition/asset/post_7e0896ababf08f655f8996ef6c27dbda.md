@@ -1,0 +1,140 @@
+
+## Display 3.4 A Function Using a Random Number Generator (part 2 of 2)
+
+### Sample Dialogue
+
+```
+Welcome to your friendly weather program.
+Enter today's date as two integers for the month and the day:
+2 14
+Weather for today:
+The day will be cloudy.
+Want the weather for the next day? (y/n): y
+The day will be cloudy.
+Want the weather for the next day? (y/n): y
+The day will be stormy!
+Want the weather for the next day? (y/n): y
+The day will be stormy!
+Want the weather for the next day? (y/n): y
+The day will be sunny!!
+Want the weather for the next day? (y/n): n
+That's it from your 24-hour weather program.
+```
+
+The type cast is made so that we get floating-point division rather than integer division.
+
+## Self-Test Exercises
+
+- 5. Give an expression to produce a pseudorandom integer number in the range 5 to 10 (inclusive).
+- 6. Write a complete program that asks the user for a seed and then outputs a list of ten random numbers based on that seed. The numbers should be floating-point numbers in the range 0.0 to 1.0 (inclusive).
+
+## 3.2 Programmer-Defined Functions
+
+> A custom-tailored suit always fits better than one off the rack.
+
+MY UNCLE, THE TAILOR
+
+The previous section told you how to use predefined functions. This section tells you how to define your own functions.
+
+## Defining Functions That Return a Value
+
+You can define your own functions, either in the same file as the main part of your program or in a separate file so that the functions can be used by several different programs. The definition is the same in either case, but for now we will assume that the function definition will be in the same file as the main part of your program. This subsection discusses only functions that return a value. A later subsection tells you how to define void functions.
+
+Display 3.5 contains a sample function definition in a complete program that demonstrates a call to the function. The function is called totalCost and takes two arguments—the price for one item and the number of items for a purchase. The function returns the total cost, including sales tax, for that many items at the specified price. The function is called in the same way a predefined function is called. The definition of the function, which the programmer must write, is a bit more complicated.
+
+The description of the function is given in two parts. The first part is called the function declaration or function prototype. The following is the function declaration (function prototype) for the function defined in Display 3.5:
+
+```
+double totalCost(int numberParameter, double priceParameter);
+```
+
+The first word in a function declaration specifies the type of the value returned by the function. Thus, for the function totalCost, the type of the value returned is double. Next, the function declaration tells you the name of the function; in this case, totalCost. The function declaration tells you (and the compiler) everything you need to know in order to write and use a call to the function. It tells you how many arguments the function needs and what the types of the arguments should be; in this case, the function totalCost takes two arguments, the first one of type int and the second one of type double. The identifiers numberParameter and priceParameter are called formal parameters, or parameters for short. A formal parameter is used as a kind of blank, or placeholder, to stand in for the argument. When you write a function declaration, you do not know what the arguments will be, so you use the formal parameters in place of the arguments. Names of formal parameters can be any valid identifiers. Notice that a function declaration ends with a semicolon.
+
+Although the function declaration tells you all you need to know to write a function call, it does not tell you what value will be returned. The value returned is determined by the function definition. In Display 3.5 the function definition is in lines 24 to 30 of the program. A function definition describes how the function computes the value it returns. A function definition consists of a function header followed by a function body. The function header is written similar to the function declaration, except that the header does not have a semicolon at the end. The value returned is determined by the statements in the function body.
+
+The function body follows the function header and completes the function definition. The function body consists of declarations and executable statements enclosed within a pair of braces. Thus, the function body is just like the body of the main part of a program. When the function is called, the argument values are plugged in for the formal parameters, and then the statements in the body are executed.
+
+## Display 3.5 A Function Using a Random Number Generator
+
+```cpp
+#include <iostream>
+using namespace std;
+
+double totalCost(int numberParameter, double priceParameter);
+//Computes the total cost, including 5% sales tax,
+//on numberParameter items at a cost of priceParameter each.
+
+int main()
+{
+    double price, bill;
+    int number;
+
+    cout << "Enter the number of items purchased: ";
+    cin >> number;
+    cout << "Enter the price per item $";
+    cin >> price;
+
+    bill = totalCost(number, price);
+
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    cout << number << " items at "
+         << "$" << price << " each.\n"
+         << "Final bill, including tax, is $" << bill
+         << endl;
+
+    return 0;
+}
+
+double totalCost(int numberParameter, double priceParameter)
+{
+    const double TAXRATE = 0.05; //5% sales tax
+    double subtotal;
+
+    subtotal = priceParameter * numberParameter;
+    return (subtotal + subtotal*TAXRATE);
+}
+```
+
+![](img/c76bba8c1d927f399768ffe2ab5f5bee_143_0.png)
+
+The value returned by the function is determined when the function executes a return statement. (The details of this "plugging in" will be discussed in Chapter 4.)
+
+A return statement consists of the keyword return followed by an expression. The function definition in Display 3.5 contains the following return statement:
+
+```
+return (subtotal + subtotal * TAXRATE);
+```
+
+When this return statement is executed, the value of the following expression is returned as the value of the function call:
+
+```
+(subtotal + subtotal * TAXRATE)
+```
+
+The parentheses are not needed. The program will run the same if the parentheses are omitted. However, with longer expressions, the parentheses make the return statement easier to read. For consistency, some programmers advocate using these parentheses even with simple expressions. In the function definition in Display 3.5 there are no statements after the return statement, but if there were, they would not be executed.
+
+When a return statement is executed, the function call ends.
+
+Note that the function body can contain any C++ statements and that the statements will be executed when the function is called. Thus, a function that returns a value may do any other action as well as return a value. In most cases, however, the main purpose of a function that returns a value is to return that value.
+
+Either the complete function definition or the function declaration (function prototype) must appear in the code before the function is called. The most typical arrangement is for the function declaration and the main part of the program to appear in one or more files, with the function declaration before the main part of the program, and for the function definition to appear in another file. We have not yet discussed dividing a program across more than one file, and so we will place the function definitions after the main part of the program. If the full function definition is placed before the main part of the program, the function declaration can be omitted.
+
+## Alternate Form for Function Declarations
+
+You are not required to list formal parameter names in a function declaration (function prototype). The following two function declarations are equivalent:
+
+```
+double totalCost(int numberParameter, double priceParameter);
+```
+
+and
+
+```
+double totalCost(int, double);
+```
+
+We will usually use the first form so that we can refer to the formal parameters in the comment that accompanies the function declaration. However, you will often see the second form in manuals.
+
+This alternate form applies only to function declarations. A function definition must always list the formal parameter names.

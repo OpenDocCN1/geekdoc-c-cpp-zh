@@ -1,0 +1,27 @@
+| EXAMPLE | EQUIVALENT TO |
+|---|---|
+| count += 2; | count = count + 2; |
+| total -= discount; | total = total - discount; |
+| bonus *= 2; | bonus = bonus * 2; |
+| time /= rushFactor; | time = time / rushFactor; |
+| change %= 100; | change = change % 100; |
+| amount *= cnt1 + cnt2; | amount = amount * (cnt1 + cnt2); |
+
+# Self-Test Exercises
+
++   1. Give the declaration for two variables called feet and inches. Both variables are of type int and both are to be initialized to zero in the declaration. Give both initialization alternatives.
++   2. Give the declaration for two variables called count and distance. count is of type int and is initialized to zero. distance is of type double and is initialized to 1.5. Give both initialization alternatives.
++   3. Write a program that contains statements that output the values of five or six variables that have been defined, but not initialized. Compile and run the program. What is the output? Explain.
+
+# Assignment Compatibility
+
+As a general rule, you cannot store a value of one type in a variable of another type. For example, most compilers will object to the following:
+
+```
+int intVariable;
+intVariable = 2.99;
+```
+
+The problem is a type mismatch. The constant 2.99 is of type double, and the variable intVariable is of type int. Unfortunately, not all compilers will react the same way to the previous assignment statement. Some will issue an error message, some will give only a warning message, and some compilers will not object at all. Even if the compiler does allow you to use the previous assignment statement, it will give intVariable the int value 2, not the value 3. Since you cannot count on your compiler accepting the previous assignment, you should not assign a double value to a variable of type int.
+
+Even if the compiler will allow you to mix types in an assignment statement, in most cases you should not. Doing so makes your program less portable, and it can be confusing.

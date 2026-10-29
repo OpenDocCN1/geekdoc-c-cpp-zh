@@ -1,0 +1,50 @@
+# Display 14.12 Demonstration Program for the Class PFArrayDBak (part 3 of 3)
+
+```
+52      cout << "Emptying array.\n";
+53      a.emptyArray();
+54      cout << a.getNumberUsed() <<
+55           " numbers are now stored in the array.\n";
+56
+57      cout << "Restoring array.\n";
+58      a.restore();
+59      count = a.getNumberUsed();
+60      cout << "The following " << count
+61           << " numbers are now stored:\n";
+62      for (index = 0; index < count; index++)
+63          cout << a[index] << " ";
+64  }
+```
+
+# Sample Dialogue
+
+```
+This program tests the class PFArrayDBak.
+Enter capacity of this super array: 10
+Enter up to 10 nonnegative numbers.
+Place a negative number at the end.
+1 2 3 4 5 -1
+The following 5 numbers read and stored:
+1 2 3 4 5
+Backing up array.
+Emptying array.
+0 numbers are now stored in the array.
+Restoring array.
+The following 5 numbers are now stored:
+1 2 3 4 5
+Test again? (y/n) y
+Enter capacity of this super array: 5
+Enter up to 5 nonnegative numbers.
+Place a negative number at the end.
+1 2 3 4 5 6 7 -1
+Could not read all numbers.
+The following 5 numbers read and stored:
+1 2 3 4 5
+Backing up array.
+Emptying array.
+0 numbers are now stored in the array.
+Restoring array.
+The following 5 numbers are now stored:
+1 2 3 4 5
+Test again? (y/n) n
+```

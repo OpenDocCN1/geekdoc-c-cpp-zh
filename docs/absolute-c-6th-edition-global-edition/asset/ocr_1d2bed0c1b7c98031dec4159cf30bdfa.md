@@ -1,0 +1,13 @@
+# PITFALL: (continued)
+
+An exception that is thrown in a function but is not caught either inside or outside the function has two possible cases. If the exception is not listed in the exception specification, then the function `unexpected()` is called. If the exception is not listed in the exception specification, the function `terminate()` is called. But unless you change the default behavior of `unexpected()`, `unexpected()` calls `terminate()`. So, the result is the same in both cases. If an exception is thrown in a function but not caught either inside or outside the function, then your program ends.
+
+# PITFALL: Nested try-catch Blocks
+
+You can place a `try` block and following `catch` blocks inside a larger `try` block or inside a larger `catch` block. In rare cases, this may be useful, but if you are tempted to do this, you should suspect that there is a nicer way to organize your program. It is almost always better to place the inner `try-catch` blocks inside a function definition and place an invocation of the function in the outer `try` or `catch` block (or maybe just eliminate one or more `try` blocks completely).
+
+If you place a `try` block and following `catch` blocks inside a larger `try` block, and an exception is thrown in the inner `try` block but not caught in any of the inner `catch` blocks, then the exception is thrown to the outer `try` block for processing and might be caught by a `catch` block following the outer `try` block.
+
+# PITFALL: Overuse of Exceptions
+
+Exceptions allow you to write programs whose flow of control is so involved that it is almost impossible to understand the program. Moreover, this is not hard to do. Throwing an exception allows you to transfer flow of control from anyplace in your program to almost anyplace else in your program. In the early days of programming, this sort of unrestricted flow of control was allowed via a construct known as a `goto`. Programming experts now agree that such unrestricted flow of control is very poor programming style. Exceptions allow you to revert to these bad old days of unrestricted flow of control. Exceptions should be used sparingly and in certain ways only. A good rule is the following: If you are tempted to include a throw statement, then think about how you might write your program or class definition without this throw statement. If you can think of an alternative that produces reasonable code, then you probably do not want to include the throw statement.

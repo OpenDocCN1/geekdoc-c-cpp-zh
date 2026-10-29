@@ -1,0 +1,33 @@
+# Self-Test Exercises
+
++   5. Why can’t you assign a base class object to a derived class variable?
++   
++   6. What is the problem with the (legal) assignment of a derived class object to a base class variable?
++   
++   7. Suppose the base class and the derived class each has a member function with the same signature. When you have a base class pointer to a derived class object and call a function member through the pointer, discuss what determines which function is actually called, the base class member function or the derived class member function.
+
+# TIP: Make Destructors Virtual
+
+It is a good policy to always make destructors virtual, but before we explain why this is a good policy we need to say a word or two about how destructors and pointers interact and about what it means for a destructor to be virtual.
+
+Consider the following code, where SomeClass is a class with a destructor that is not virtual:
+
+```
+SomeClass *p = new SomeClass;
+    . . .
+delete p;
+```
+
+When delete is invoked with p, the destructor of the class SomeClass is automatically invoked. Now, let’s see what happens when a destructor is marked virtual.
+
+The easiest way to describe how destructors interact with the virtual function mechanism is that destructors are treated as if all destructors had the same name (even though they do not really have the same name). For example, suppose Derived is a derived class of the class Base and that the destructor in the class Base is marked virtual. Now consider the following code:
+
+```
+Base *pBase = new Derived;
+    . . .
+delete pBase;
+```
+
+When delete is invoked with pBase, a destructor is called. Since the destructor in the class Base was marked virtual and the object pointed to is of type Derived, the destructor for the class Derived is called (and it in turn calls the destructor for the class Base). If the destructor in the class Base had not been declared as virtual, then only the destructor in the class Base would be called.
+
+Another point to keep in mind is that when a destructor is marked virtual, then all destructors of derived classes are automatically virtual (whether or not they are any marked virtual). Again, this behavior is as if all destructors had the same name (even though they do not).

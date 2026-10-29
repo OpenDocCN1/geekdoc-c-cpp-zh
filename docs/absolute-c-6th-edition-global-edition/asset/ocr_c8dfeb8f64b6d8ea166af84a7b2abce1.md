@@ -1,0 +1,23 @@
+```
+9. void wow(speedway::speed s1, indy500::speed s2);
+```
+
+10. The program would behave exactly the same. However, most authorities favor using the using declaration, as we have done in Display 11.10. Note that with either, there are still two different functions named readHour. The one in Display 11.10 is different from the one defined in the unnamed namespace in Display 11.9.
+
+```
+11. Hello from unnamed.
+Hello from Sally.
+Hello from unnamed.
+```
+
+```
+12. Outer.
+Inner.
+Inner.
+```
+
+# Programming Projects
+
++   1. This exercise is intended to illustrate namespaces and separate compilation in your development environment. You should use the development environment you regularly use in this course for this exercise. In a file f.h, place a declaration of void f() in namespace A. In a file g.h, place a declaration of void g() in namespace A. In files f.cpp and g.cpp, place the definitions of void f() and void g(), respectively. Place the definitions of void f() and void g() in namespace A. The functions can do anything you want, but to keep track of execution include something like cout << "Function_Name called" << endl; where Function_Name is the name of the particular function. In another file, main.cpp, put your main function, #include the minimum collection of files to provide access to the names from namespace A. In your main function call the functions f then g. Compile, link, and execute using your development environment. To provide access to names in namespaces, you may use local using declarations such as using std::cout; or use local using directives such as using namespace std; inside a block, or qualify names using the names of namespaces, such as std::cout. You may not use global namespace directives such as the following which are not in a block and apply to the entire file: using namespace std; Of course you must handle namespace A and function names f and g, in addition to possibly std and cout. After doing this, write a one page description of how to create and use namespaces and separate compilation in your environment.
+
++   2. Obtain the source code for the PFArrayD class and the demonstration program from Displays 11.10, 10.11, and 10.12. Modify this program to use namespaces and separate compilation. Put the class definition and other function declarations

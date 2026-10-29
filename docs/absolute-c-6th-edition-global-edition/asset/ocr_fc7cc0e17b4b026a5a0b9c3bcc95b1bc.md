@@ -1,0 +1,49 @@
+# Display 5.4  Production Graph Program (part 4 of 4)
+
+```
+Enter production data for plant number 3
+Enter number of units produced by each department.
+Append a negative number to the end of the list.
+5000 4020 500 4348 -1
+Total = 13868
+
+Enter production data for plant number 4
+Enter number of units produced by each department.
+Append a negative number to the end of the list.
+2507 6050 1809 -1
+Total = 10366
+
+Units produced in thousands of units:
+
+Plant #1 ******
+Plant #2 *****
+Plant #3 *************
+Plant #4 **********
+```
+
+# Self-Test Exercises
+
++   13. Write a function definition for a function called `oneMore`, which has a formal parameter for an array of integers and increases the value of each array element by 1. Add any other formal parameters that are needed.
++   
++   14. Consider the following function definition:
+
+```
+void too2(int a[], int howMany)
+{
+    for (int index = 0; index < howMany; index++)
+        a[index] = 2;
+}
+```
+
+Which of the following are acceptable function calls?
+
+```
+int myArray[29];
+too2(myArray, 29);
+too2(myArray, 10);
+too2(myArray, 55);
+too2(myArray[], 10)
+int yourArray[100];
+too2(yourArray, 100);
+too2(myArray[3], 29);
+```

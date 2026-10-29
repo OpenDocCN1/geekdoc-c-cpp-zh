@@ -1,0 +1,33 @@
+# Display 9.3 Some Functions in <cctype> (part 2 of 2)
+
+| FUNCTION | DESCRIPTION | EXAMPLE |
+|---|---|---|
+| isprint (Char_Exp) | Returns true provided Char_Exp is a printing character, otherwise, returns false. |  |
+| isgraph (Char_Exp) | Returns true provided Char_Exp is a printing character other than whitespace; otherwise, returns false. |  |
+| isctrl (Char_Exp) | Returns true provided Char_Exp is a control character, otherwise, returns false. |  |
+
+For example, the following will read a sentence terminated with a period and echo the string with all whitespace characters replaced with the symbol '.-':
+
+```
+char next;
+do
+{
+    cin.get(next);
+    if (isspace(next))
+        cout << '.-';
+    else
+        cout << next;
+} while (next != '.');
+```
+
+For example, if the previous code is given the following input:
+
+Ahh do be do.
+
+it will produce the following output:
+
+Ahh--do-be-do.
+
+# PITFALL: toupper and tolower Return int Values
+
+In many ways C++ considers characters to be whole numbers, similar to the numbers of type int. Each character is assigned a number. When the character is stored in a variable of type char, it is this number that is placed in the computer's memory. In C++ you can use a value of type char as a number, for example, by placing it in a variable of type int. You can also store a number of type int in a variable of type

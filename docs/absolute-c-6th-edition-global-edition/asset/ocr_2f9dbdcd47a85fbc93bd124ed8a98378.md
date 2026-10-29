@@ -1,0 +1,15 @@
+# PITFALL: (continued)
+
+means that all private member variables would be accessible to anybody who wants to put in a little extra effort. This scenario illustrates the problem, but the bigger problem is unintentional errors rather than intentional subversion. If private member variables of a class are accessible in member function definitions of a derived class, then the member variables might be changed by mistake or in inappropriate ways. (Remember, accessor and mutator functions can guard against inappropriate changes to member variables.)
+
+We will discuss one possible way to get around this restriction on private member variables of the base class in the subsection entitled "The protected Qualifier" a bit later in this chapter.
+
+# PITFALL: Private Member Functions Are Effectively Not Inherited
+
+As noted in the previous Pitfall section, a member variable (or member function) that is private in a base class is not directly accessible outside the interface and implementation of the base class, not even in a member function definition for a derived class. Note that private member functions are just like private variables in terms of not being directly available. In the case of member functions, however, the restriction is more dramatic. A private variable can be accessed indirectly via an accessor or mutator member function. A private member function is simply not available. It is just as if the private member function were not inherited.
+
+This should not be a problem. Private member functions should be used just as helping functions, and so their use should be limited to the class in which they are defined. If you want a member function to be used as a helping member function in a number of inherited classes, then it is not just a helping function, and you should make the member function public.
+
+# The protected Qualifier
+
+As you have seen, you cannot access a private member variable or private member function in the definition or implementation of a derived class. There is a classification of member variables and functions that allows them to be accessed by name in a derived class but not accessed anywhere else, such as in some class that is not a derived class. If you use the qualifier protected, rather than private or public, before a member variable or member function of a class, then for any class or function other than a derived class the effect is the same as if the member variable were labeled private; however, in a derived class the variable can be accessed by name.

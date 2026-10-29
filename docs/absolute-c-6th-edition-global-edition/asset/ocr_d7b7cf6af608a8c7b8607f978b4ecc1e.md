@@ -1,0 +1,55 @@
+# switch Statement
+
+# SYNTAX
+
+```
+switch (Controlling_Expression)
+{
+    case Constant_1:
+        Statement_Sequence_1
+        break;
+    case Constant_2:
+        Statement_Sequence_2
+        break;
+        .
+        .
+    case Constant_n:
+        Statement_Sequence_n
+        break;
+    default:
+        Default_Statement_Sequence
+}
+```
+
+You need not place a break statement in each case. If you omit a break, that case continues until a break (or the end of the switch statement) is reached.
+
+# EXAMPLE
+
+```
+int vehicleClass;
+double toll;
+cout << "Enter vehicle class: ";
+cin >> vehicleClass;
+```
+
+```
+switch (vehicleClass)
+{
+    case 1:
+        cout << "Passenger car.";
+        toll = 0.50;
+        break;
+    case 2:
+        cout << "Bus.";
+        toll = 1.50;
+        break;
+    case 3:
+        cout << "Truck.";
+        toll = 2.00;
+        break;
+    default:
+        cout << "Unknown vehicle class!";
+}
+```
+
+if you forget this break, then passenger cars will pay $ 1.50.

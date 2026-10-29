@@ -1,0 +1,47 @@
+Or, you must use one of the other ways of specifying the names and namespace, such as the following:
+
+```
+#include <iomanip>
+using std::setw;
+using std::setprecision;
+```
+
+# Saving Flag Settings
+
+A function should not have unwanted or unexpected side effects. For example, a function to output amounts of money might contain
+
+```
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
+```
+
+After the function invocation ends, these settings will still be in effect. If you do not want such side effects, you can save and restore the original settings.
+
+The function precision has been overloaded so that with no arguments it returns the current precision setting so the setting can later be restored.
+
+The flags set with setf are easy to save and restore. The member function flags is overloaded to provide a way to save and then restore the flag settings. The member function cout.flags( ) returns a value of type long that codes all the flag settings. The flags can be reset by using this long value as an argument to cout.flags. These techniques work the same for file output streams as they do for cout.
+
+For example, a function to save and restore these settings could be structured as follows:
+
+```
+void outputStuff(ofstream& outStream)
+{
+    int precisionSetting = outStream.precision();
+    long flagSettings = outStream.flags();
+    outStream.setf(ios::fixed);
+    outStream.setf(ios::showpoint);
+    outStream.precision(2);
+    //Do whatever you want here.
+    outStream.precision(precisionSetting);
+    outStream.flags(flagSettings);
+}
+```
+
+Another way to restore settings is
+
+```
+cout.setf(0, ios::floatfield);
+```
+
+An invocation of the member function setf with these arguments will restore the default setf settings. Note that these are the default values, not necessarily the settings before the last time they were changed. Also note that the default setting values are implementation-dependent. Finally, note that this does not reset precision settings or any settings that are not set with setf.

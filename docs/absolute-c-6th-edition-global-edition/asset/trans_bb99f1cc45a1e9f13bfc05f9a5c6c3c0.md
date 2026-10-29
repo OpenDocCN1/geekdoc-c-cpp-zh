@@ -1,0 +1,368 @@
+
+NULL, 457–459, 460, 772–773
+null character, 403, 404–405
+null statements, 107
+null ptr, 772–773, 775, 786, 791
+Numbers. 另见 Integers
+  addresses and, 456
+  decimal points, formatting, 59–61
+  double-precision, 45
+  floating-point, 36–37, 49, 50, 133
+  input, 62
+  naming, 47–48
+  pseudorandom, 138–139
+  random, 137–141, 143
+  single-precision, 45
+  vertical, 607–609
+  whole, division with, 51
+
+O
+Object-oriented programming (OOP), 31
+Objects, 286, 301–302
+  calling, 483, 484
+  constructors returning, 362–363
+  of derived class, 659
+  string, 431, 434–436, 442–443, 568
+ofstream class, 552, 553, 556, 558, 560, 582–583, 585
+open function, 114, 553, 560, 561
+Opening, files, 552, 558–560
+Operands, 356, 357, 362
+Operations, 930
+  set, 820–821, 826, 939–940
+Operator overloading
+  >> and <<, 380–386, 388–389, 553
+  array [] operator, 392–394
+  assignment operator, 389, 483–488, 670–671, 681
+  automatic type conversion and, 370–371
+  basics of, 356–370
+  decrement operator, 389–390
+  friend functions and, 372–374
+  function application (), 369
+  increment operator, 389–392
+  iterators, 829, 897–898
+  as member functions, 366–368
+  rules, 377
+  unary operators, 366
+
+Operators
+  address of, 456, 458
+  and, 76–77
+  arithmetic, 48–50
+  array, 392–394
+  arrow, 476, 771–772
+  assignment. See Assignment (=) operator
+  binary, 357, 362, 366
+  bitwise or, 569
+  comma, 103, 104, 133, 135, 223, 279, 370
+  comparison, 78
+  conditional, 97
+  decrement, 54–56, 101
+  delete, 465, 466, 493, 783
+  dereferencing. See Dereferencing (*) operator
+  division, 50–51, 194–195
+  dot, 277–278, 289, 291, 770
+  equality. See Equality (==) operator
+  extraction. See Extraction (>>) operator
+  function call (), 369
+  increment, 54–56, 101, 103
+  insertion, 57, 413
+  member, 371–372
+  new, 459–464, 473, 776–778
+  or, 76–77, 370
+  order of evaluation, 56
+  precedence rules, 49–50, 80–84, 953–954
+  scope resolution, 81, 289–291, 526, 668–669
+  ternary, 97–98
+  unary, 366
+  Or (||) operator, 76–77, 370
+  Order of evaluation, 56
+ostream, 582–583, 585
+Out of range, array index, 222
+Output. See also File input and output; I/O streams
+  buffered, 554
+  with cerr, 61
+  character, 415–416
+  C-strings, 413–415
+  formatting, 576–578
+  numbers, 59–61
+  with stream functions, 568–574
+  line breaks in, 64
+
+# Index
+
+I-15
+
+new lines in, 58–59
+spaces in, 58
+with string class, 430–431
+using cout, 57–58
+Output iterators, 909
+Output streams, 551, 553, 582–583. See also Streams
+  member functions, 568–574
+outStream, 562, 568–569
+Overloading, 394
+  automatic type conversion and, 196–198
+  based on l-value and r-value, 394
+  function application ( ), 369
+  functions, 732
+  introduction to, 193–197
+  as member functions, 366–368
+  operator, 356–370, 377, 380–386, 389–394, 483–488
+  versus redefining, 666
+  rules for resolving, 197–201
+  unary operators, 366
+Overridden functions, 705–706
+
+# P
+
+pair template class, 925
+Parameters, 142, 144, 145
+  arguments and, 186
+  array, 226–229
+  call-by-reference, 176, 178–183, 185–188, 227–229, 335
+  call-by-value, 176–178, 185–188, 201–202, 330, 470–470
+  catch-block, 868, 870
+  class templates as, 745
+  comparing types of, 187–189
+  const modifier, 230–231
+  constant, 330–335
+  constant reference, 183
+  C-strings, 409
+  input, 410–411
+  introduction to, 176
+  mixed lists, 185–186
+  multidimensional arrays, 251–252
+  names, choosing, 189
+  pointer, 462
+  stream, 585
+  type, 732, 734, 744, 746
+  used as local variable, 177–178
+Parent classes, 583, 654
+Parentheses ( ), 49, 57, 77, 80, 88
+Parsing, strings, 587–589
+Partially filled arrays, 237–240, 490–492, 672–674, 755–759
+Pathnames, 552
+peek function, 421
+PParray template class, 748–753
+PParrayBak template class, 755–759
+PParrayD class, 487–492, 672–676, 717
+PParrayDBak class, 676–680, 681–683, 717
+Pi, 159
+Pointers
+  arithmetic operations on, 478–479
+  arrow operator, 482
+  assignment operator with, 458–459
+  in assignment statements, 457–458
+  as call-by-value parameters, 469–470
+  dangling, 466
+  defining, 467–468, 480
+  introduction to, 454–455
+  iterators and, 828, 897
+  manipulations, 460–461
+  memory management, 463–465
+  nodes and, 770–773
+  nullptr, 465
+  parameters, 462
+  returning, to an array, 476–478
+  this, 483
+  types, 457, 467–468, 480
+  uses for, 470–471
+  variables, 455–463, 471–472, 480
+  virtual functions and, 708–717
+Polymorphism, 31, 698, 705. See also Virtual functions
+pop, 800, 806
+Postconditions, 151
+Postfix notation, 389, 903
+Postorder processing, 838
+pow function, 133, 134, 135, 620
+power function, 620–623
+Precedence rules, 49–50
+  Boolean expressions, 80–84
+  operators, 953–954
+
+precision function, 569, 571, 572, 573, 574
+Preconditions, 151, 153
+Predefined functions, 130–141
+  that return a value, 130–135
+  void, 135–137
+Predefined identifiers, 35
+Prefix notation, 389, 903
+Preorder processing, 838
+Preprocessor, 66
+Priority queues, 916
+priority_queue template class, 916
+Private inheritance, 685–686
+private: keyword, 293
+Private member functions, 662
+Private member variables, 507
+  inheritance, 660–662
+Private members, 293–296
+  access to, 684
+Procedural abstraction, 157–158
+Programmer-defined functions, 141–154
+Programming
+  with arrays, 237–248
+  for exception handling, 885–890
+  with inheritance, 670–686
+  object-oriented, 31
+  style, 65
+Programs, 32
+  closing, 554
+  comments in, 65
+  driver, 204–206
+  ending, 59
+  running times, 928–932
+  sample C++, 32–34
+Projects, 513
+Protected inheritance, 685–686
+Protected members, 662–665
+Protected qualifier, 662–665
+Pseudorandom numbers, 138–139
+Public inheritance, 685–686
+public keyword, 293, 685
+Public members, 296
+Pure virtual functions, 704–707
+push, 800, 805, 806
+push_back function, 343, 344, 912, 915
+
+put function, 417–418
+putback function, 421
+
+# Q
+
+Quadratic running times, 932
+queue template class, 806–812, 833–836, 916–919
+Queries, 806–809
+  priority, 916
+Quotes, 45–46
+
+# R
+
+rand function, 134, 138
+RAND_MAX, 138
+Random access, 903–905
+  to files, 590–591
+Random number generator, 137–141, 143, 963
+Random-access iterators, 903–906, 935
+Range [first, last), 935
+Range-based for loop, 222–223
+Raw string literals, 47
+Reading
+  blanks, 416
+  files, 114–116, 551–552
+Recursion
+  binary search, 628–630
+  checking for, 634
+  coding, 630
+  design techniques, 627–628
+  efficiency, 619, 634–636
+  ending, 613
+  infinite, 614–615, 628, 634
+  introduction to, 606
+  versus iteration, 618–619
+  mutual, 625–627
+  stacks for, 616–617
+  tail, 618–619
+  workings of, 613
+Recursive calls, 613, 634
+  stacks and, 616–617
+  tracing, 610–612
+Recursive functions, 153, 606
+  binary search, 628–633
+  definition, 614
+  design techniques, 627–628
+
+# Index
+
+I-17
+
+that return a value, 619–627
+void, 607–619
+Redefining
+  member functions, 654–655, 665–666
+  versus overloading, 666
+References, 378–380, 383
+Regular C++11 expressions, 968–972
+Repeat-N-times loops, 106
+Reserved words, 36
+  return 0;, 32
+  return statements, 144
+    in void functions, 151, 153
+Returned values, 497
+  recursive functions, 619–627
+Returning a reference, 378–380, 383
+Returning by const value, 363–365
+Returning high score, 879–882
+Reverse iterators, 908–909
+Ritchie, Dennis, 30
+Root node, 838
+round function, 146–147
+rounding function, 145–146
+Rules
+  overloading operators, 377
+  precedence, 48–49, 78–82
+    for resolving overloading, 197–201
+  scope, 155–163, 522
+Running times, 928–932
+  big-O estimates, 930–931
+  comparison, 932
+  container access, 932
+  linear, 931
+  quadratic, 931
+  worst-case, 929–931
+R-values, 39, 379, 394
+
+S
+Scaling, 138
+Scientific notation, 44
+Scope
+  rules, 155–163
+  of using directive, 522
+Scope resolution (::) operator, 81, 289–291, 526, 668–669
+Search function, 239, 630–636, 784–787, 935
+
+Searching
+  arrays, 241–243
+  binary, 628–636
+  linked lists, 783–787
+SearchTree class, 839–844
+Seed, 138
+seekp function, 591
+Selection sort, 243–244
+Semicolon (;), 107, 276, 280
+Separate compilation, 506–520
+  #ifndef directive, 517–519
+  application files, 513–514, 515
+  encapsulation and, 507
+  example, 516–517
+  header files, 507–508
+  implementation files, 507–508, 510–513, 515
+    include directive, 513, 517
+    interface files, 507–509, 513, 515
+    linking files, 513
+Sequential containers, 910–916
+Set algorithms, 939–940
+Set objects, 920–921
+Set operations, 820–821, 939–939
+Set template class, 820–827, 920–923
+setf function, 569, 570, 573, 574
+setIntersection function, 826–827
+setLink function, 810
+setprecision function, 572
+Sets, 820–827
+  efficiency, 826–827
+  set function, 572
+Shallow copy, 493
+short type, 37
+Short-circuit evaluation, 83, 85, 930
+Signature, 196, 668
+Single quote ('), 45
+Single-precision numbers, 44
+Singly linked lists, 910–912
+Size
+  of array, 217, 219
+  of dynamic array, 473–474
+  of vector, 343, 346
+sizeof operator, 591
+size_type, 916
+Slicing problem, 712–715, 717–718

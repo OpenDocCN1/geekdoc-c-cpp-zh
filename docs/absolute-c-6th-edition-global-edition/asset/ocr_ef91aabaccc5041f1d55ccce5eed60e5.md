@@ -1,0 +1,30 @@
+# TIP: (continued)
+
+Now we are ready to explain why all destructors should be virtual. Consider what happens when destructors are not declared as virtual in a base class. In particular, consider the base class PFArrayD (partially filled array of doubles) and its derived class PFArrayDBak (partially filled array of doubles with backup). We discussed these classes in Chapter 14, before we knew about virtual functions, and so the destructor in the base class PFArrayD was not marked virtual. In Display 15.8, we have summarized all the facts we need about the classes PFArrayD and PFArrayDBak so that you need not look back to Chapter 14.
+
+```
+PFArrayD *p = new PFArrayDBak;
+...
+delete p;
+```
+
+Since the destructor in the base class is not marked virtual, only the destructor for the base class (PFArrayD) will be invoked. This will return the memory for the member array a (declared in PFArrayD) to the freestore, but the memory for the member array b (declared in PFArrayDBak) will never be returned to the freestore (until the program ends).
+
+On the other hand, if (unlike Display 15.8) the destructor for the base class PFArrayD were marked virtual, then when delete is applied to p, the constructor for the class PFArrayDBak would be invoked (since the object pointed to is of type PFArrayDBak). The destructor for the class PFArrayDBak would delete the array b and then automatically invoke the constructor for the base class PFArrayD, which would delete the member array a. So, with the base class destructor marked as virtual, all the memory is returned to the freestore. To prepare for eventualities such as these, it is best to always mark destructors as virtual.
+
+# Downcasting and Upcasting
+
+You might think some sort of type casting would allow you to easily get around the slicing problem. However, things are not that simple. The following is illegal:
+
+```
+Pet vpet;
+Dog vdog; //Dog is a derived class with base class Pet.
+...
+vdog = static_cast<Dog>(vpet); //ILLEGAL!
+```
+
+However, casting in the other direction is perfectly legal and does not even need a casting operator:
+
+```
+vpet = vdog; //Legal (but does produce the slicing problem.)
+```

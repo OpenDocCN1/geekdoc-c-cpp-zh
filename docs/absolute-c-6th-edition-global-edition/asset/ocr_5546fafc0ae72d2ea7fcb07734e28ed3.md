@@ -1,0 +1,43 @@
+# Self-Test Exercises
+
+8. What is the output produced by the following program?
+
+```
+#include <iostream>
+using std::cout;
+void sampleFunction(double test) throw (int);
+int main()
+{
+    try
+    {
+        cout << "Trying.\n";
+        sampleFunction(98.6);
+        cout << "Trying after call.\n";
+    }
+    catch(int)
+    {
+        cout << "Catching.\n";
+    }
+    cout << "End program.\n";
+    return 0;
+}
+void sampleFunction(double test) throw (int)
+{
+    cout << "Starting sampleFunction.\n";
+    if (test < 100)
+        throw 42;
+}
+```
+
+9. What is the output produced by the program in Self-Test Exercise 8 when the following change is made to the program? Change
+sampleFunction(98.6);
+in the try block to
+sampleFunction(212);
+
+# 18.2 Programming Techniques for Exception Handling
+
+> Only use this in exceptional circumstances.
+> 
+> WARREN PEACE, The Lieutenant's Tools
+
+So far we have shown lots of code that explains how exception handling works in C++, but we have not shown many examples of program, that make good and realistic

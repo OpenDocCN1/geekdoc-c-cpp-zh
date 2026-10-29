@@ -1,0 +1,21 @@
+# TIP: (continued)
+
+There is not unanimous agreement on which to use when. So, do not expect too much consistency in usage. Even when an author or programmer has a clear policy, they seldom manage to follow it without exception. Still, some points are clear.
+
+If you are returning a simple type, like int or char, there is no point in using a const when returning by value or by reference. So programmers typically do not use a const on the return type when it is a simple type. If you want the simple value returned to be allowed as an l-value, that is, to be allowed on the left-hand side of an assignment statement, then return by reference; otherwise return the simple type by plain old value. Class types are not so simple. The rest of this discussion applies to returning an object of a class type.
+
+The decision on whether or not to return by reference has to do with whether or not you want to be able to use the returned object as an l-value. If you want to return something that can be used as an l-value, that is, that can be used on the left-hand side of an assignment operator, you must return by reference and so must use an ampersand & on the returned type.
+
+Returning a local variable (or other short-lived object) by reference, with or without a const, can produce problems and should be avoided.
+
+For class types, the two returned type specifications const T and const T& are very similar. They both mean that you cannot change the returned object by invoking some mutator function directly on the returned object, as in
+
+f().mutator();
+
+The returned value can still be copied to another variable with an assignment operator and that other variable can have the mutator function applied to it. If you cannot decide between the const T& and const T, use const T (without the ampersand). A const T& is perhaps a bit more efficient than a const T.* However, the difference is not typically that important and most programmers use const T rather than const T& as a returned type specification. As noted earlier, const T& can sometimes cause problems.
+
+The following summary may be of help. T is assumed to be a class type. Copy constructors are not covered until Chapter 10, but we include details about them here for reference value. If you have not yet read Chapter 10, simply ignore all references to copy constructors.
+
+If a public member function returns a private class member variable, it should always have a const on the returned type, as we explained in the Tip section of this chapter entitled "Returning Member Variables of a Class Type." (One exception to this rule is that programmers normally always return a value of type string by ordinary value, not by const value. This is presumably because the type string is thought of as a simple type like int and char, even though string is a class type.)
+
+(continued)

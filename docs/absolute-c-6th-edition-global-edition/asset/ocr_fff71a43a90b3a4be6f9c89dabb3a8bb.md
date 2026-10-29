@@ -1,0 +1,27 @@
+Notice that with a two-dimensional array parameter, the size of the first dimension is not given, so we must include an int parameter to give the size of this first dimension. (As with ordinary arrays, the compiler will allow you to specify the first dimension by placing a number within the first pair of square brackets. However, such a number is only a comment; the compiler ignores the number.) The size of the second dimension (and all other dimensions if there are more than two) is given after the array parameter, as shown for the parameter
+
+```
+const char p[] [100]
+```
+
+If you realize that a multidimensional array is an array of arrays, then this rule begins to make sense. Since the two-dimensional array parameter
+
+```
+const char p[] [100]
+```
+
+is a parameter for an array of arrays, the first dimension is really the index of the array and is treated just like an array index for an ordinary, one-dimensional array. The second dimension is part of the description of the base type, which is an array of characters of size 100.
+
+# Multidimensional Array Parameters
+
+When a multidimensional array parameter is given in a function heading or function declaration, the size of the first dimension is not given, but the remaining dimension sizes must be given in square brackets. Since the first dimension size is not given, you usually need an additional parameter of type int that gives the size of this first dimension. The following is an example of a function declaration with a two-dimensional array parameter p:
+
+```
+void getPage(char p[] [100], int sizeDimension1);
+```
+
+# EXAMPLE: Two-Dimensional Grading Program
+
+Display 5.10 contains a program that uses a two-dimensional array named grade to store and then display the grade records for a small class. The class has four students, and the records include three quizzes. Display 5.11 illustrates how the array grade is used to store data. The first array index is used to designate a student, and the second array index is used to designate a quiz. Since the students and quizzes are numbered starting with 1 rather than 0, we must subtract 1 from the student number and subtract 1 from the quiz number to obtain the indexed variable that stores a particular quiz score. For example, the score that student number 4 received on quiz number 1 is recorded in grade [3] [0].
+
+Our program also uses two ordinary one-dimensional arrays. The array stAve will be used to record the average quiz score for each of the students. For example, the program will set stAve [0] equal to the average of the quiz scores received by student 1, stAve [1] equal to the average of the quiz scores received by student 2,

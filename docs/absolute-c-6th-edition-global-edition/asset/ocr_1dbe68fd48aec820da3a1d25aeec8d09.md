@@ -1,0 +1,54 @@
+# Display 19.19 Some Modifying Generic Functions
+
+```
+template <class T>
+void swap(T& variable1, T& variable2);
+//Interchanges the values of variable1 and variable2.
+```
+
+The name of the iterator type parameter tells the kind of iterator for which the function works. Remember that these are minimum iterator requirements. For example, ForwardIterator works for forward iterators, bidirectional iterators, and random-access iterators.
+
+```
+template <class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 copy(ForwardIterator1 first1, ForwardIterator1 last1,
+ForwardIterator2 first2);
+//last2 is such that the ranges [first1, last1) and [first2, last2) are
+//the same size.
+//Action: Copies the elements at locations [first1, last1) to
+//locations [first2, last2). Returns last2.
+//Time complexity: linear in the size of the range [first1, last1].
+```
+
+```
+template <class ForwardIterator, class T>
+ForwardIterator remove(ForwardIterator first, ForwardIterator last,
+const T& target);
+//Removes those elements equal to target from the range [first, last).
+//The size of the container is not changed. The removed values equal to
+//target are moved to the end of the range [first, last). There is then
+//an iterator i in this range such that all the values not equal to
+//target are in [first, i). This i is returned. Time complexity: linear
+//in the size of the range [first, last).
+```
+
+```
+template <class BidirectionalIterator>
+void reverse(BidirectionalIterator first, BidirectionalIterator last);
+//Reverses the order of the elements in the range [first, last).
+//Time complexity: linear in the size of the range [first, last).
+```
+
+```
+template <class RandomAccessIterator>
+void random_shuffle(RandomAccessIterator first,
+RandomAccessIterator last);
+//Use a pseudorandom number generator to randomly reorder the elements
+//in the range [first, last).
+//Time complexity: linear in the size of the range [first, last).
+```
+
+# Self-Test Exercises
+
++   22. Can you use the random_shuffle template function with a list container?
+
++   23. Can you use the copy template function with vector containers, even though copy requires forward iterators and vector has random-access iterators?

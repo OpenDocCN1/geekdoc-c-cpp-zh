@@ -1,0 +1,43 @@
+9. Suppose that you are creating a fantasy role-playing game. In this game, we have four different types of creatures: humans, cyberdemons, balrogs, and elves. To represent one of these creatures, we might define a Creature class as follows:
+
+```
+class Creature
+{
+    private:
+        int type;    // 0 human, 1 cyberdemon, 2 balrog, 3 elf
+        int strength;    // How much damage we can inflict
+        int hitpoints;   // How much damage we can sustain
+        string getSpecies(); // Returns type of species
+    public:
+        Creature();
+        // Initialize to human, 10 strength, 10 hit points
+        Creature(int newType, int newStrength, int newHit);
+        // Initialize creature to new type, strength, hit points
+        // Also add appropriate accessor and mutator functions
+        // for type, strength, and hit points
+        int getDamage();
+        // Returns amount of damage this creature
+        // inflicts in one round of combat
+};
+```
+
+Here is an implementation of the getSpecies() function:
+
+```
+string Creature::getSpecies()
+{
+    switch (type)
+    {
+        case 0: return "Human";
+        case 1: return "Cyberdemon";
+        case 2: return "Balrog";
+        case 3: return "Elf";
+    }
+    return "Unknown";
+}
+```
+
+The getDamage() function outputs and returns the damage this creature can inflict in one round of combat. The rules for calculating the damage are as follows:
+
++   - Every creature inflicts damage that is a random number r, where 0 < r <= strength.
++   - Demons have a 5% chance of inflicting a demonic attack, which is an additional 50 damage points. Balrogs and Cyberdemons are demons.
