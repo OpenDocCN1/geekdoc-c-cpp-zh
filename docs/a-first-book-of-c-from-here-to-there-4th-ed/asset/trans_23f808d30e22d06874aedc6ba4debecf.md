@@ -1,0 +1,178 @@
+
+
+## 16.4 传递结构体
+
+### 按值传递结构体
+
+程序 16.4 展示了如何将结构体按值传递给函数。在这种方式下，被调函数接收的是结构体的一个副本。
+
+```cpp
+// set output formats
+cout << setw(10)
+    << setiosflags(ios::fixed)
+    << setiosflags(ios::showpoint)
+    << setprecision(2);
+
+cout << "The net pay for employee " << emp.idNum
+    << " is $" << netPay << endl;
+
+return 0;
+}
+
+double calcNet(Employee temp)  // temp is of data type Employee
+{
+    return (temp.payRate * temp.hours);
+}
+```
+
+程序 16.4 的输出如下：
+
+员工 6782 的净工资为 $361.66
+
+回顾程序 16.4，可以观察到 `main()` 和 `calcNet()` 都使用相同的数据类型来定义它们的结构体变量。在 `main()` 中定义的结构体变量和在 `calcNet()` 中定义的结构体变量是两个不同的结构体。对 `calcNet()` 中的局部变量 `temp` 所做的任何更改都不会反映在 `main()` 的 `emp` 变量中。事实上，由于两个结构体变量都是其函数的局部变量，因此可以在两个函数中使用相同的结构体变量名而不会产生歧义。
+
+当 `main()` 调用 `calcNet()` 时，`emp` 的结构体值的副本被传递给 `temp` 结构体。然后 `calcNet()` 使用两个传递的成员值来计算一个数字，并将其返回给 `main()`。程序 16.4 中按值传递函数调用的替代方案是按引用传递，即传递对结构体的引用。这样做允许被调函数直接访问和修改调用函数结构体变量中的值。例如，在程序 16.4 中，`calcNet()` 的原型可以修改为以下形式：
+
+```cpp
+double calcNet(Employee &);
+```
+
+如果使用此函数原型并且重写 `calcNet()` 函数以符合该原型，则程序 16.4 中的 `main()` 函数可以原样使用。程序 16.4a 在完整程序的上下文中显示了这些更改，其中两个更改的语句已加阴影。
+
+### 程序 16.4a
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+struct Employee    // declare a global data type
+{
+    int idNum;
+    double payRate;
+    double hours;
+};
+```
+
+```cpp
+double calcNet(Employee&);    // function prototype
+```
+
+```cpp
+int main()
+{
+    Employee emp = {6782, 8.93, 40.5};
+    double netPay;
+
+    netPay = calcNet(emp);    // pass a reference
+
+    // set output formats
+    cout << setw(10)
+         << setiosflags(ios::fixed)
+         << setiosflags(ios::showpoint)
+         << setprecision(2);
+
+    cout << "The net pay for employee " << emp.idNum
+         << " is $" << netPay << endl;
+
+    return 0;
+}
+```
+
+```cpp
+double calcNet(Employee& temp)    // temp is a reference variable
+{
+    return (temp.payRate * temp.hours);
+}
+```
+
+程序 16.4a 产生与程序 16.4 相同的输出，只是程序 16.4a 中的 `calcNet()` 函数直接访问 `emp` 结构体，而不是它的副本。这意味着 `calcNet()` 中的变量名 `temp` 是 `main()` 中变量 `emp` 的别名，对 `temp` 的任何更改都是对 `emp` 的直接更改。尽管两个程序都进行了相同的函数调用 `calcNet(emp)`，但程序 16.4a 中的调用传递的是引用，而程序 16.4 中的调用传递的是值。
+
+### 传递指针
+
+除了传递引用，还可以使用指针。使用指针需要修改函数的原型和头，并修改程序 16.4 中对 `calcNet()` 的调用，如下所示：
+
+```cpp
+calcNet(&emp);
+```
+
+这个函数调用清楚地表明正在传递一个地址（而程序 16.4a 中的情况并非如此）。缺点是函数内部需要解引用符号。然而，由于指针在实践中被广泛使用，熟悉这种表示法是值得的。
+
+为了存储传递的地址，`calcNet()` 必须将其参数声明为指针。以下 `calcNet()` 的函数定义是合适的：
+
+```cpp
+calcNet(Employee *pt)
+```
+
+此定义将 `pt` 参数声明为指向 `Employee` 类型结构体的指针。当调用 `calcNet()` 时，`pt` 指针接收结构体的起始地址。在 `calcNet()` 中，此指针用于访问结构体中的任何成员。例如，`(*pt).idNum` 指的是 `idNum` 结构体成员，`(*pt).payRate` 指的是 `payRate` 结构体成员，`(*pt).hours` 指的是 `hours` 结构体成员。这些关系如图 16.3 所示。
+
+![](img/e9bf940282dfb289356f077151cc69dd_735_0.png)
+
+图 16.3 指针可用于访问结构体成员
+
+图 16.3 中表达式 `*pt` 周围的括号是必要的，以访问“地址在 `pt` 中的结构体”。`(*pt)` 后跟一个标识符以访问结构体成员。在没有括号的情况下，结构体成员运算符 `.` 的优先级高于间接运算符 `*`。因此，表达式 `*pt.hours` 是 `*(pt.hours)` 的另一种写法，其含义是“地址在 `pt.hours` 变量中的变量”。这个表达式没有意义，因为没有名为 `pt` 的结构体，并且 `hours` 不包含地址。
+
+任一表达式都可以用来定位成员。例如，以下表达式是等价的：
+
+- `(*pt).idNum` 可以替换为 `pt->idNum`
+- `(*pt).payRate` 可以替换为 `pt->payRate`
+- `(*pt).hours` 可以替换为 `pt->hours`
+
+程序 16.5 展示了传递结构体的地址并使用带有新表示法的指针直接引用结构体。程序 16.5 中声明的指针参数名称当然是由程序员选择的。当调用 `calcNet()` 时，`emp` 的起始地址被传递给函数。使用此地址作为起点，通过将成员名称与指针一起包含来访问结构体成员。
+
+### 程序 16.5
+
+```cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+struct Employee  // declare a global data type
+{
+    int idNum;
+    double payRate;
+    double hours;
+};
+
+double calcNet(Employee *);  //function prototype
+
+int main()
+{
+    Employee emp = {6782, 8.93, 40.5};
+    double netPay;
+
+    netPay = calcNet(&emp);  // pass an address
+
+    // set output formats
+    cout << setw(10)
+         << setiosflags(ios::fixed)
+         << setiosflags(ios::showpoint)
+         << setprecision(2);
+
+    cout << "The net pay for employee " << emp.idNum
+         << " is $" << netPay << endl;
+
+    return 0;
+}
+
+double calcNet(Employee *pt)  // pt is a pointer to a
+{                         // structure of Employee type
+    return (pt->payRate * pt->hours);
+}
+```
+
+与所有访问变量的 C++ 表达式一样，递增（`++`）和递减（`--`）运算符也可以应用于它们。例如，表达式
+
+```cpp
+++pt->hours
+```
+
+将 `emp` 结构体的 `hours` 成员加 1。因为 `->` 运算符的优先级高于递增运算符，所以首先访问 `hours` 成员，然后应用递增。或者，表达式 `(++pt)->hours` 使用前缀递增运算符在访问 `hours` 成员之前递增 `pt` 中的地址。类似地，表达式 `(pt++)->hours` 使用后缀递增运算符在访问 `hours` 成员之后递增 `pt` 中的地址。然而，在这两种情况下，必须有足够的已定义结构体来确保递增后的指针确实指向合法的结构体。
+
+例如，图 16.4 显示了一个包含三个 `Employee` 类型结构体的数组。假设 `emp[1]` 的地址存储在指针变量 `pt` 中，表达式 `++pt` 将 `pt` 中的地址更改为 `emp[2]` 的起始地址，表达式 `--pt` 将地址更改为指向 `emp[0]`。
+
+![](img/e9bf940282dfb289356f077151cc69dd_737_0.png)
+
+### 返回结构体
+
+在实践中，大多数处理结构体的函数通过接收结构体引用或地址来直接访问结构体。然后可以在函数内部直接对结构体进行任何更改。但是，如果您希望函数返回一个单独的结构体，则必须遵循与返回标量值相同的过程来返回数据结构。
+

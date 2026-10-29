@@ -1,0 +1,253 @@
+
+This page intentionally left blank
+
+# Numbers
+
+# A
+
+# (pound sign): preprocessor command symbol, 19
+#include statement (command), 19, 661, 662
+\? escape sequence, 41t
+; (semicolon). See semicolon; statement terminator
+\ escape sequence, 41t
+'' (single quotes): character delimiters, 42, 43
+/ (slash). See division operator
+/* (slash-asterisk): begin comment symbol, 24
+// (slashes): comment symbol, 24
+~ (tilde): destructor prefix, 458
+_ (underscore): name character, 14
+
+data members, 509–510, 556
+one-dimensional array elements: with pointer constants, 359, 367; with pointers, 355, 357–358, 360, 367, 376–378; with subscripts, 295–296, 355–356, 360, 376–378
+string objects, 606
+structure members, 702
+two-dimensional array elements, 316, 379
+accessors (accessor methods), 459 in STL classes, 582–583t, 593–594t
+accumulate algorithm (STL), 57t
+accumulation statements, 85–86, 86–87
+counting statements, 88–90 in while loops, 192
+adding numbers to pointers, 365
+adding numbers to variables, 85–86, 86–87
+incrementing variables, 88–89
+addition operation: with memory locations, 57–58 with variables, 58–59
+addition operator (+), 53t precedence and associativity, 54–56t, 141t
+addition operator function, 495–498
+address operator (&), 258, 343
+addresses, 57–58, 72, 341–342, 343
+assigning to pointers, 364–365
+displaying, 343–344
+indirect addressing, 345
+passing to functions. See passing addresses to functions
+referring to (determining), 258, 343
+of register variables, 280
+storing, 344–345, 347
+
+aggregate data types, 297
+See also data structures
+AI (artificial intelligence), 599
+alert escape sequence (\a), 41t
+algorithms, 5–8
+coding, 8, 31
+developing, 29–31
+search algorithms, 325–333
+sort algorithms, 333–339
+STL algorithms, 576–577t
+See also specific algorithms
+aliases (reference variables), 349–350
+altering list (in for statements), 202, 205, 206–207
+ampersand (&): address operator, 258, 343
+ampersands (&&). See AND operator
+analysis of a problem, 29
+analyzing problems, 29
+AND operator (&&), 139
+precedence and associativity, 140–141t
+angles: converting to radians, 111
+append mode (of files), 400
+appending strings to strings. See concatenating strings
+arguments (of functions/in function calls), 16, 107, 228
+arithmetic expressions as, 109
+default arguments, 236–237
+file stream objects as, 419–423
+pass by reference arguments, 257–258
+pass by value arguments, 244, 257
+passing addresses as. See passing addresses to functions
+passing values as. See passing values to functions
+and reference parameters, 259–262
+See also parameters
+
+arithmetic:
+pointer arithmetic, 341, 364–369
+stack arithmetic, 592
+arithmetic expressions, 49, 51, 151–152
+as arguments in function calls, 109
+in assignment statements, 80–83
+displaying the value of, 49–51
+functions in, 109–111
+parentheses in, 49, 53–54
+rules for writing, 53–55
+types, 51
+arithmetic operations, 48–57
+as overloaded, 52
+arithmetic operators, 49, 53t
+precedence and associativity, 54–56t, 141t
+See also shortcut assignment operators
+array elements. See one-dimensional array elements; two-dimensional array elements
+array names as pointer constants, 358–359, 360
+arrays:
+as data structures, 297, 575
+vs. linked lists, 586
+multidimensional array analogies, 313, 319–320
+of objects, 459–461, 579
+passing to functions. See passing arrays to functions of pointers, 693–696
+vs. STL lists, 574–575, 579; linked lists, 586
+of structures. See arrays of structures
+See also one-dimensional arrays; two-dimensional arrays
+arrays of structures, 708–712
+declaring and defining, 709–710
+processing, 710–711
+artificial intelligence (AI), 599
+ASCII code, 40
+letter codes, 40t
+newline and null character codes, 43
+assign() method (STL classes), 582t, 594t
+assigning addresses to pointers, 364–365
+assigning filenames to string variables, 395–397
+assigning values to variables, 79–80, 132
+Boolean variables, 154
+by adding numbers, 85–86, 86–87, 88–89
+decrementing variables, 90
+incrementing variables, 88–89
+return values, 247
+See also assignment statements
+assignment expressions, 82–83
+assignment operator (=), 59, 80, 82–83
+vs. equality operator (==), 151–152, 173, 221
+memberwise assignment, 499, 565; for pointer data members, 499, 565–566, 568
+precedence and associativity, 83, 141t
+in string class, 614t
+See also shortcut assignment operators
+assignment operator functions, 499–500
+with a return statement, 511–512
+vs. copy constructor, 501
+for pointer data members, 566–567
+assignment statements, 59, 79–93
+accumulating. See accumulation statements
+arithmetic expressions in, 80–83
+counting statements, 88–90
+data type conversion in, 84
+vs. initialization statements, 500, 501
+multiple assignments, 83
+See also assigning values to variables
+associative lists, 574+t
+associativity of operators, 140–141+t
+arithmetic operators, 54–55t, 141t
+dot operator, 589
+asterisk (*) indirection operator, 345, 351
+See also multiplication operator
+asterisk-slash (*): end comment symbol, 24
+at() method (deque class), 593t
+at() method (string class), 613t, 616–618, 624, 626
+atof() function, 650t, 688–689+t
+atoi() function, 650t, 688–689+t
+atomic data types, 59
+atomic data values, 59
+atomic variables, 291
+attitude toward debugging, 136
+attributes (of objects), 485, 570
+specifying, 447, 485–486, 570–572
+types, 571
+in UML class and object diagrams, 570–572
+visibility, 572
+
+# Index
+
++   auto variables, 277–278, 283
++   *See also* variables
++   automatic references (implicit dereferences), 348, 350
++   averages: calculating, 193–194, 211–212
++   
++   **B**
++   \\b escape sequence, 41t
++   back( ) method (STL classes), 582t, 593t
++   backslash (\\): escape character, 21, 41
++   backslash escape sequence ((\\)), 41t
++   backslashes (\\): pathname item separator, 391, 661
++   backspace escape sequence (\\b), 41t
++   backup (of programs), 33
++   bad( ) method (fstream class), 393t, 425t
++   bar (|): bitwise OR operator, 100, 401
++   display field delimiter, 96
++   octal group separator, 77
++   bars ([ ]) See OR operator
++   base class members: access specifications, 542+t; function overriding, 547–551
++   base classes, 540 and derived classes, 543–544, 546
++   *See also* ios class; streambuf class
++   base/member initialization list, 503
++   basic analysis, 29
++   begin comment symbol (/*), 24
++   begin( ) method (STL classes), 583t, 594t
++   behaviors (of objects), 435–436, 485, specifying, 485–486
+
++   Big O notation, 332–333
++     for binary search algorithm, 332–333
++     for bubble sort algorithm, 339
++     for linear search algorithm, 332–333
++     for selection sort algorithm, 336
++   binary arithmetic expressions, 49
++   binary numbers, 74–75
++   converting: to decimal numbers, 75; to hexadecimal numbers, 76–77; to octal numbers, 77
++   converting decimal numbers to, 75
++   converting hexadecimal numbers to, 75–76–t
++   binary operators, 49, 53t
++   binary search algorithm, 328–332
++     Big O, 332–333
++     vs. linear search algorithm, 332
++   binary trees: STL list types, 574t
++   binary_search algorithm (STL), 576t
++   binary-based files, 389
++   binarySearch( ) function, 330–332
++   binding, function, 549–551
++   bits, 72
++     4-bit patterns, 77
++   bitwise OR operator (|), 100, 401
++   blank lines (in programs), 64, 145
++   block comments, 23, 24
++   block scope. *See* local scope
++   block statements. *See* compound statements
++   boiled egg model, 535–536
++   Book class, 562–567
++   bool data type, 41–42, 44t, 153–154
++   boolalpha manipulator, 94t
+
++   Boolean data, 41–42
++   Boolean values, 153–154
++     comparing, 154
++   Boolean variables:
++     assigning values to, 154
++   declaring, 153
++   bounds checks (on index values): one-dimensional array elements, 297
++   string objects, 667
++   braces ({ }): list delimiters, 303, 314
++   *See also* statement delimiters
++   break statements:
++     in for statements, 207
++     in switch statements, 169, 171
++     in while statements, 197
++   bubble sort algorithm, 336–339
++     Big O, 339
++     vs. selection sort algorithm, 339
++   bubbleSort( ) function, 338–339
++   buffers. *See* file buffers
++   bugs. *See* programming errors
++   built-in data types, 38–45
++     operational capabilities, 439+t
++   built-in to built-in data type conversion, 520
++     casts, 111, 520
++     in cin statements, 121
++     coercion, 84
++     explicit conversion, 111, 520
++     explicit conversion, 51, 84, 111, 121, 246, 520
++     in mixed-mode expressions, 51
++     in return statements, 246
++   built-in to class data type conversion, 522–524
++   bytes, 72

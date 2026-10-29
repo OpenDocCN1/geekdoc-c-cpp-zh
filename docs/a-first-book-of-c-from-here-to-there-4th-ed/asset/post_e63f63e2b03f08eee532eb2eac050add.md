@@ -1,0 +1,90 @@
+
+# Index
+
+throwing exceptions, 635†, 636–637, 637–639, 641–644
+tilde (~): destructor prefix, 458
+time() function, 287, 288
+tokens, 15
+  parsing C-strings into, 682†
+tolower() method/function, 623†, 686†
+top-level structure diagrams, 30
+toupper() method/function, 623†, 625, 686†–688
+tracing programs, 136
+trigonometric functions, 108†, 111
+true value, 153–154
+  as a do-while statement expression, 219
+try blocks, 636–639, 641, 644
+  nested blocks, 647–648
+Turing test, 599
+two-dimensional array elements:
+  accessing (cycling through), 316, 379
+  displaying the values of, 315–317, 317–319
+  initialization of, 314
+  processing, 316–317
+  referencing, 313, 378–379
+two-dimensional arrays, 313–319
+  declaration statements, 313–314, 380
+  elements. See two-dimensional array elements
+  initialization of, 314
+  passing to functions, 317–319, 379–380
+  sizing, 313, 315, 323
+  as specified in function prototypes and headers, 317–318, 319
+twos complement representation, 74–75
+type conversion constructors, 522–524
+
+## U
+UML (Unified Modeling Language), 486, 569
+UML class and object diagrams, 569–572
+unary operators, 52, 53
+  See also NOT operator
+underscore (_): name character, 14
+Unicode codes, 40
+Unified Modeling Language. See UML
+  See UML
+union variables, 724, 725
+unions, 724–727
+  common programming errors, 727
+unique algorithm (STL), 577†
+unique() method (list class), 558†
+unsigned data types, 43–44†, 73†
+uppercase letters:
+  converting lowercase to, 623†, 625, 686†–688
+  in identifiers, 15, 442
+uppercase manipulator, 94†
+user input, 117–127
+  character class methods, 628–629†, 666–670, 667–668†, get(), 629–632, 671–672. See also
+  getline() function; getline() method (fstream class)
+  as character-by-character, 627
+  errors in program execution from, 635
+  prompting. See prompting and storing user input
+  string class methods, 609–613†
+  validating. See validating user input
+  See also cin statements
+user-defined data types. See classes
+
+user-defined default constructors, 459, 460
+user-defined functions, 16
+user-defined objects: constructing linked lists using, 586–589
+user-input validation. See validating user input
+using statement, 19, 661, 662
+
+## V
+\v escape sequence, 41†
+valfun() function, 268–270
+validating user input, 121–122, 632–633, 649–656
+  with do-while statements, 219
+  with exception handling, 652–655
+value boxes, 74, 75
+values (of variables):
+  assigning. See assigning values to variables
+Boolean values, 153–154
+displaying temporarily, 136, 173
+exchanging in reference parameters, 262–265, 369–374
+literal, 38. See also characters; constants; numbers; strings
+numeric. See numbers
+vs. objects, 504
+passing to functions. See passing values to functions
+returning from functions, 244–257; multiple values, 257–267
+strings as objects as well as, 504
+verifying values accessed by pointers, 370–371
+See also data

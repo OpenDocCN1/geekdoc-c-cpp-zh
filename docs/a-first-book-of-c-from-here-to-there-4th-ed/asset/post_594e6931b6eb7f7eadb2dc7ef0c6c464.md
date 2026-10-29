@@ -1,0 +1,261 @@
+
+Recall from Section 14.3 that the code for general exception handling looks like this:
+
+```
+try
+{
+    // one or more statements,
+    // at least one of which should
+    // throw an exception
+}
+catch(exceptionDataType parameterName)
+{
+    // one or more statements
+}
+```
+
+In this code, the try block statements are executed. If no error occurs, the catch block statements are omitted, and processing continues with the statement following the catch block. However, if any statement in the try block throws an exception, the catch block with the exception data type matching the exception is executed. If no catch block is defined for a try block, a compiler error occurs. If no catch block exists that catches a thrown data type, a program crash occurs if the exception is thrown. The simplest approach is to have the catch block display an error message and terminate processing with a call to the exit() function. Program 14.15 shows the statements required to open a file in read mode and includes exception handling.
+
+# Program 14.15
+
+```
+#include <iostream>
+#include <fstream>
+#include <cstdlib>  // needed for exit()
+#include <string>
+using namespace std;
+
+int main()
+{
+    string filename = "prices.dat";  // put the filename up front
+    string descrip;
+    double price;
+
+    ifstream inFile;
+
+    try  // tries to open the file, read it, and display file's data
+    {
+        inFile.open(filename.c_str());
+
+        if (inFile.fail()) throw filename;  // exception being checked
+
+// read and display the file's contents
+inFile >> descrip >> price;
+while (inFile.good()) // check next character
+{
+    cout << descrip << ' ' << price << endl;
+    inFile >> descrip >> price;
+}
+inFile.close();
+
+return 0;
+}
+catch (string e)
+{
+    cout << "\nThe file "<< e << " was not successfully opened."
+         << "\n Please check that the file currently exists."
+         << endl;
+    exit(1);
+}
+```
+
+This is the exception message Program 14.15 displays when the prices.dat file isn't found:
+
+The file prices.dat was not successfully opened.
+Please check that the file currently exists.
+
+Although the exception-handling code in this program can be used to check for a successful file open for input and output, a more rigorous check is usually required for an output file because a file opened for output is almost guaranteed to be found. If it exists, the file will be found; if it doesn't exist, the operating system creates it (unless append mode is specified and the file exists). Knowing that the file has been found and opened, however, isn't enough for output purposes when an existing output file must not be overwritten. In these cases, the file can be opened for input, and if the file is found, a further check can be made to ensure that the user explicitly approves overwriting it. The shaded code in Program 14.16 shows how to make this check.
+
+# Program 14.16
+
+```
+#include <iostream>
+#include <fstream>
+#include <cstdlib>  // needed for exit()
+#include <string>
+#include <iomanip>  // needed for formatting
+using namespace std;
+
+int main()
+{
+    char response;
+    string filename = "prices.dat";  // put the filename up front
+    ifstream inFile;
+    ofstream outFile;
+
+    try  // open a basic input stream to check whether the file exists
+    {
+        inFile.open(filename.c_str());
+
+        if (inFile.fail()) throw 1;  // this means the file doesn't exist
+        // only get here if the file is found;
+        // otherwise, the catch block takes control
+        cout << "A file by the name " << filename << " currently exists.\n"
+             << "Do you want to overwrite it with the new data (y or n): ";
+        cin >> response;
+
+        if ((tolower(response) == 'n'))
+        {
+            inFile.close();
+            cout << "The existing file has not been overwritten." << endl;
+            exit(1);
+        }
+    }
+    catch(int e) {};  // a do-nothing block that permits
+                      // processing to continue
+
+    try
+    {
+        // open the file in write mode and continue with file writes
+        outFile.open(filename.c_str());
+
+        if (outFile.fail()) throw filename;
+        // set the output file stream formats
+        outFile << setiosflags(ios::fixed)
+                << setiosflags(ios::showpoint)
+                << setprecision(2);
+        // write the data to the file
+        outFile << "Mats " << 39.95 << endl
+                << "Bulbs " << 3.22 << endl
+                << "Fuses " << 1.08 << endl;
+        outFile.close();
+        cout << "The file " << filename
+             << " has been successfully written." << endl;
+        return 0;
+    }
+```
+
+## 1. 引言
+
+在当今快速发展的科技时代，人工智能（AI）已成为推动社会进步的关键力量。从智能助手到自动驾驶，AI 技术正深刻改变着我们的生活方式和工作模式。本文旨在探讨 AI 技术的最新进展及其在各领域的应用前景。
+
+## 2. AI 技术的主要领域
+
+- 机器学习
+- 深度学习
+- 自然语言处理
+- 计算机视觉
+
+## 3. 应用案例
+
+| 领域 | 应用 | 效果 |
+|------|------|------|
+| 医疗 | 影像诊断 | 准确率提升 20% |
+| 金融 | 风险控制 | 误报率降低 30% |
+| 教育 | 个性化学习 | 学习效率提高 15% |
+
+## 4. 未来展望
+
+随着技术的不断突破，AI 将在更多领域发挥重要作用。我们期待 AI 与人类社会的深度融合，共同创造更加智能、便捷的未来。
+
+# Point of Information
+
+# Checking That a File Was Opened Successfully
+
+When using exception handling, the most common method for checking that the operating system located the designated file is the one coded in Program 14.15. The key coding points are repeated here for convenience:
+
+```
+try // tries to open the file, read it,
+    // and display file's data
+{
+    // open the file, throwing an exception if the open fails
+    // perform all required file processing
+    // close the file
+}
+catch (string e)
+{
+    cout << "\nThe file " << e << " was not successfully opened."
+         << "\n Please check that the file currently exists."
+         << endl;
+    exit(1);
+}
+```
+
+# Program 14.17
+
+```
+#include <iostream>
+#include <fstream>
+#include <cstdlib>  // needed for exit()
+#include <string>
+using namespace std;
+
+int main()
+{
+    string fileOne = "info.txt";  // put the filename up front
+    string fileTwo = "info.bak";
+    char ch;
+    ifstream inFile;
+    ofstream outFile;
+
+    try //this block tries to open the input file
+    {
+        // open a basic input stream
+        inFile.open(fileOne.c_str());
+        if (inFile.fail()) throw fileOne;
+```cpp
+} // end of outer try block
+catch (string in)  // catch for outer try block
+{
+    cout << "The input file " << in
+         << " was not successfully opened. " << endl
+         << " No backup was made." << endl;
+    exit(1);
+}
+
+try  // this block tries to open the output file and
+{    // perform all file processing
+    outFile.open(fileTwo.c_str());
+
+    if (outFile.fail()) throw fileTwo;
+
+    while ((ch = inFile.get()) != EOF)
+        outFile.put(ch);
+
+    inFile.close();
+    outFile.close();
+}
+catch (string out)  // catch for inner try block
+{
+    cout << "The backup file " << out
+         << " was not successfully opened." << endl;
+    exit(1);
+}
+
+cout << "A successful backup of " << fileOne
+     << " named " << fileTwo << " was made." << endl;
+
+return 0;
+}
+```
+
+For simplicity, Program 14.17 attempts to open the input and output files in separate and unnested try blocks. More generally, the second file is opened in a nested inner try block, so the attempt to open this second file wouldn’t be made if opening the first file threw an exception. (The next Point of Information box explains how to nest try blocks.)
+
+In reviewing this program, pay particular attention to this statement:
+
+```
+while ((ch = inFile.get()) != EOF)
+```
+
+This statement reads a value from the input stream continuously until the EOF value is detected. As long as the return value doesn’t equal the EOF value, the value is written to the output object stream. The parentheses surrounding the expression (ch = inFile.get())
+
+- 5. (Practice) Enter and run Program 14.16.
+- 6. (Debug) Determine why the two unnested try blocks in Program 14.16 cause no problems in compilation or execution. (Hint: Place the declaration for the filename in the first try block and compile the program.)
+- 7. (Debug) a. If the nested try blocks in the preceding Point of Information are separated into unnested blocks, the program won’t compile. Determine why this is so.
+  b. What additional changes have to be made to the program in Exercise 7a to allow it to be written with unnested blocks? (Hint: See Exercise 6.)
+- 8. (Program) Enter the data for the info.txt file in Figure 14.11 or download it from this book’s Web site (see this book’s introduction for the URL). Then enter and run Program 14.17 and verify that the backup file was written.
+- 9. (Modify) Modify Program 14.17 to use a getline() method in place of the get() method currently in the program.
+
+# 14.5 Input Data Validation
+
+One of the major uses of strings in programs is for user-input validation. Validating user input is essential: Even though a program prompts the user to enter a specific type of data, such as an integer, the prompt doesn’t ensure that the user will comply. What a user enters is, in fact, totally out of the programmer’s control. What is in your control is how you deal with the entered data.
+
+It certainly does no good to tell a frustrated user that “The program clearly tells you to enter an integer, and you entered a date.” Successful programs anticipate invalid data and prevent it from being accepted and processed. Typically, this is accomplished by first validating that input data is of the correct type. If it is, the data is accepted; otherwise, the user is prompted to reenter the data, with an explanation of why the entered data was invalid.
+
+A common method of validating numerical input data is accepting all numbers as strings. Each character in the string can then be checked to make sure it complies with the requested data type. After this check is made and data is verified to be the correct type, the string is converted to an integer or double-precision value by using the conversion functions listed in Table 14.7. (For data accepted with string class objects, the c_str() method must be applied to the string before the conversion function is called.)
+
+As an example, consider inputting an integer number. To be valid, the data entered must adhere to the following conditions:
+
+- The data must contain at least one character.
+- If the first character is a + or - sign, the data must contain at least one digit.
+- Only digits from 0 to 9 are acceptable following the first character.

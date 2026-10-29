@@ -1,0 +1,20 @@
+level_changes: []
+text_changes:
+- line: 251
+  before: '## 1. 引言'
+  after: 1. 引言
+- line: 255
+  before: '## 2. AI技术的主要分支'
+  after: 2. AI技术的主要分支
+- line: 262
+  before: '## 3. 应用领域分析'
+  after: 3. 应用领域分析
+- line: 271
+  before: '## 4. 未来展望'
+  after: 4. 未来展望
+- line: 279
+  before: '## 1. 引言'
+  after: 1. 引言
+- line: 285
+  before: '## 2. 相关工作'
+  after: 2. 相关工作
