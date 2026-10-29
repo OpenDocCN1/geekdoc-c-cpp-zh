@@ -1,0 +1,215 @@
+
+
+## 信息点
+
+## 格式化 cout 流数据
+
+Floating-point data in a cout output stream can be formatted in precise ways. For example, a common format requirement is to display monetary amounts with two digits after the decimal point, such as 123.45. You can do this with the following statement:
+
+```
+cout << setiosflags(ios::fixed)
+<< setiosflags(ios::showpoint)
+<< setprecision(2);
+```
+
+The first manipulator flag, ios::fixed, forces all floating-point numbers in the cout stream to be displayed in decimal notation. This flag also prevents using scientific notation. The next flag, ios::showpoint, tells the stream to always display a decimal point. Finally, the setprecision manipulator tells the stream to always display two digits after the decimal point. Instead of using manipulators, you can use the cout stream methods setf() and precision(). For example, the previous formatting can also be accomplished with this code:
+
+```
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
+```
+
+Note the syntax: The name of the object, cout, is separated from the method with a period. This format is the standard way of specifying a method and connecting it to a specific object.
+
+Additionally, the flags used in both the setf() method and the setiosflags() manipulator method can be combined by using the bitwise OR operator, | (explained in Appendix C, available online). Using this operator, the following two statements are equivalent:
+
+```
+cout << setiosflags(ios::fixed | ios::showpoint);
+cout.setf(ios::fixed | ios::showpoint);
+```
+
+The statement you select is a matter of personal preference or a predefined standard.
+
+This is the output produced by Program 3.7:
+
+```
+The decimal (base 10) value of 15 is 15
+The octal (base 8) value of 15 is 017
+The hexadecimal (base 16) value of 15 is 0xf
+```
+
+## Chapter 3
+
+The display of integer values in one of three possible numbering systems (decimal, octal, and hexadecimal) doesn’t affect how the number is stored in a computer. All numbers are stored by using the computer’s internal codes. The manipulators sent to cout tell the object how to convert the internal code for output display purposes.
+
+Besides integers being displayed in octal or hexadecimal form, they can also be written in a program in these forms. To designate an octal integer, the number must have a leading zero. The number 023, for example, is an octal number in C++. Hexadecimal numbers are denoted with a leading 0x. Program 3.8 shows how octal and hexadecimal integer numbers are used.
+
+### Program 3.8
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "The decimal value of 025 is " << 025 << endl
+         << "The decimal value of 0x37 is " << 0x37 << endl;
+
+    return 0;
+}
+```
+
+Program 3.8 produces the following output:
+
+```
+The decimal value of 025 is 21
+The decimal value of 0x37 is 55
+```
+
+Figure 3.5 shows the relationship between input, storage, and display of integers.
+
+### Figure 3.5 Input, storage, and display of integers
+
+Finally, you can set the manipulators listed in Tables 3.1 and 3.2 by using the ostream class methods listed in Table 3.4.
+
+![](img/202cface8244f523c2641baa2e00d7dd_121_0.png)
+
+### Table 3.4 ostream Class Methods
+
+| Method | Comment | Example |
+|---|---|---|
+| precision(n) | Equivalent to setprecision() | cout.precision(2) |
+| fill('x') | Equivalent to setfill() | cout.fill('*') |
+| setf(ios::fixed) | Equivalent to cout.setf(ios::fixed) | setiosflags(ios::fixed) |
+| setf(ios::showpoint) | Equivalent to cout.setf(ios::showpoint) | setiosflags(ios::showpoint) |
+| setf(ios::left) | Equivalent to left | cout.setf(ios::left) |
+| setf(ios::right) | Equivalent to right | cout.setf(ios::right) |
+| setf(ios::flush) | Equivalent to endl | cout.setf(ios::flush) |
+
+In the Example column of Table 3.4, notice that the name of the object, cout, is separated from the method with a period. As mentioned, this format is the standard way of calling a class method and providing an object for it to operate on.
+
+![](img/202cface8244f523c2641baa2e00d7dd_122_0.png)
+
+## EXERCISES 3.2
+
+1. (Debug) Determine the errors in the following statements:
+   - a. cout << "\n << " 15)
+   - b. cout << "setw(4)" << 33;
+   - c. cout << "setprecision(5)" << 526.768;
+   - d. "Hello World!" >> cout;
+   - e. cout << 47 << setw(6);
+   - f. cout << set(10) << 526.768 << setprecision(2);
+
+2. (Desk check) Determine and write out the display produced by the following statements:
+   - a. cout << "|" << 5 << "|
+   - b. cout << "|" << setw(4) << 5 << "|";
+   - c. cout << "|" << setw(4) << 56829 << "|";
+   - d. cout << "|" << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 5.26 << "|";
+   - e. cout << "|" << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 5.267 << "|";
+   - f. cout << "|" << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 53.264 << "|";
+   - g. cout << "|" << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 534.264 << "|";
+   - h. cout << "|" << setw(5) << setiosflags(ios::fixed) << setprecision(2) << 534. << "|";
+
+3. (Desk check) Write out the display produced by the following statements:
+
+```
+a. cout << "The number is " << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2) << 26.27 << endl;
+cout << "The number is " << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2) << 682.3 << endl;
+cout << "The number is " << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2) << 1.968 << endl;
+```
+
+```
+b. cout << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2) << 26.27 << endl;
+cout << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2) << 682.3 << endl;
+cout << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2) << 1.968 << endl;
+cout << "------\n";
+cout << setw(6) << setiosflags(ios::fixed)
+<< setprecision(2)
+<< 26.27 + 682.3 + 1.968 << endl;
+```
+
+```
+c. cout << setw(5) << setiosflags(ios::fixed)
+<< setprecision(2) << 26.27 << endl;
+cout << setw(5) << setiosflags(ios::fixed)
+<< setprecision(2) << 682.3 << endl;
+cout << setw(5) << setiosflags(ios::fixed)
+<< setprecision(2) << 1.968 << endl;
+cout << "------\n";
+cout << setw(5) << setiosflags(ios::fixed)
+<< setprecision(2)
+<< 26.27 + 682.3 + 1.968 << endl;
+```
+
+```
+d. cout << setw(5) << setiosflags(ios::fixed)
+<< setprecision(2) << 36.164 << endl;
+cout << setw(5) << setiosflags(ios::fixed)
+<< setprecision(2) << 10.003 << endl;
+cout << "------" << endl;
+```
+
+4. (Desk check) The following chart lists the equivalent octal and hexadecimal representations for the decimal numbers 1 through 15:
+
+Decimal: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+Octal: 1 2 3 4 5 6 7 10 11 12 13 14 15 16 17
+Hexadecimal: 1 2 3 4 5 6 7 8 9 a b c d e f
+
+Using this chart, determine the output of the following program:
+
+```
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    cout << "\nThe value of 14 in octal is " << oct << 14
+        << "\nThe value of 14 in hexadecimal is " << hex << 14
+        << "\nThe value of 0xA in decimal is " << dec << 0xA
+        << "\nThe value of 0xA in octal is " << oct << 0xA
+        << endl;
+
+    return 0;
+}
+```
+
+5. (Program) Write a C++ program to calculate and display the value of the slope of the line connecting two points with the coordinates (3,7) and (8,12). Use the fact that the slope between two points at the coordinates (x1,y1) and (x2,y2) is slope = (y2 - y1) / (x2 - x1). Your program should produce this display:
+
+The value of the slope is xxx.xx
+
+The xxx.xx denotes placing the calculated value in a field wide enough for three places to the left of the decimal point and two places to the right of it.
+
+6. (Program) Write a C++ program to calculate and display the midpoint coordinates of the line connecting the two points with coordinates of (3,7) and (8,12). Use the fact that the midpoint coordinates between two points with the coordinates (x1,y1) and (x2,y2) are ((x2 + x1) / 2, (y2 + y1) / 2). Your program should produce this display:
+
+The x coordinate of the midpoint is xxx.xx
+The y coordinate of the midpoint is xxx.xx
+
+The xxx.xx denotes placing the calculated value in a field wide enough for three places to the left of the decimal point and two places to the right of it.
+
+Verify your program using the following test data:
+
+- Test data set 1: Point 1 = (0,0) and Point 2 = (16,0)
+- Test data set 2: Point 1 = (0,0) and Point 2 = (0,16)
+- Test data set 3: Point 1 = (0,0) and Point 2 = (-16,0)
+- Test data set 4: Point 1 = (0,0) and Point 2 = (0,-16)
+- Test data set 5: Point 1 = (-5,-5) and Point 2 = (5,5)
+
+When you have completed your verification, use your program to complete the following table.
+
+| Point 1 | Point 2 | Midpoint |
+|---------|---------|----------|
+| (4,6)   | (16,18) |          |
+| (22,3)  | (8,12)  |          |
+| (-10,8) | (14,4)  |          |
+| (-12,2) | (14,3.1)|          |
+| (3.1,-6)| (20,16) |          |
+| (3.1,-6)| (-16,-18)|         |
+

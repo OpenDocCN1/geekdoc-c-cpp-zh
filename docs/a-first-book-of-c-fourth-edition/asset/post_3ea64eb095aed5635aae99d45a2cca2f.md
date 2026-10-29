@@ -1,0 +1,269 @@
+
+as stored in memory, 72–77, 101, 102
+validating input. See validating user input
+See also decimal numbers; hexadecimal numbers; octal numbers
+interactive input. See user input
+interfaces (in object-oriented programming), 448, 537–538
+internal sort algorithms, 333–339
+interpreted languages, 10
+interpreters, 10
+invocation of statements, 31
+invoking functions. See function calls
+I/O. See input/output
+iostream header file, 96
+ios class, 426–427
+derived classes, 427–428t
+ios flags, 98–99t
+ios mode indicators (open() method), 400, 401
+iostream class, 391, 428t
+base classes, 426–427
+iostream class library, 19, 426, 426–427
+iostream header file, 19, 391, 412, 428t, 666
+is...( ) methods (istype() methods), 622–625+t, 684–687+t
+isalnum() method/function, 622t, 685t
+isalpha() method/function, 622t, 684t
+isascii() method/function, 623t, 685t
+isctrl() method/function, 623t, 686t
+isdigit() method/function, 622t, 685t, 686–687
+
+isgraph() method/function, 623t, 686t
+islower() method/function, 622t, 685t
+isolation testing, 236
+isprint() method/function, 623t, 685t
+ispunct() method/function, 623t, 686t
+isspace() method/function, 623t, 685t
+iostream class, 19, 391, 428t
+base and derived classes, 427
+isupper() method/function, 622t, 685t
+isvalidInt function, 650–655, 658–661
+iteration. See repetition
+iterators (STL), 577
+itoa() function, 650t, 688+t
+
+K
+keyboard (standard input device), 411
+keyboard input. See user input
+keywords, 14+t
+
+L
+languages. See machine language; programming languages
+last in, first out lists. See stacks
+left flag, 98, 99t
+left manipulator, 94t
+length of C-strings: determining, 681t, 683
+length of strings: determining, 613t, 615–616
+length() method (string class), 613t, 615–616
+less than operator (<), 138–139+t
+precedence and associativity, 140–141+t
+in STL classes, 584t, 595t
+
+less than or equal to operator (<=), 138–139t, 144–145
+precedence and associativity, 140–141t
+in STL classes, 584t, 595t
+less than signs (<): insertion symbol, 18, 50
+letters:
+comparing, 139+t
+converting lowercase to uppercase, 623t, 625, 686t, 687–688
+uppercase letters in identifiers, 15, 442
+See also characters
+libraries (of classes and functions): creating, 658–663
+See also library functions; STL (Standard Template Library)
+library functions:
+C-string functions, 670, 681–684+t; pointer-defined C-strings in, 675, 679–680
+character functions, 622–626t, 684–688+t
+mathematical functions, 106–116
+lifetimes. See storage categories
+LIFO lists. See stacks
+limits header file, 73
+line comments, 23–24
+linear search algorithm (sequential search algorithm), 325–327
+Big O, 332–333
+vs. binary search algorithm, 332
+linearSearch() function, 326–327
+link variables in queues, 599
+linked list objects:
+adding, 580
+pointers in, 580–581, 602
+removing/popping, 581, 584
+
+linked lists, 579–590
+vs. arrays, 586
+common programming errors, 602
+constructing, 581–589; using the list class, 581–586; using user-defined objects, 586–589
+objects in. See linked list objects
+STL list type, 574t
+of structures, 722
+See also list class (STL)
+linkers, 11
+list class (STL):
+common programming errors, 602
+constructing linked lists using, 581–586
+methods and operations, 581, 582–584t
+list delimiters ({ }), 303, 314
+list item separator (, ), 206, 303, 314
+lists:
+altering list (in for statements), 202, 205, 206–207
+base/member initialization list, 503
+containers. See arrays; STL lists
+first in, first out. See queues
+friends lists, 478–479
+initializing list (in for statements), 201, 205, 206–207
+last in, first out. See stacks
+linked. See linked lists
+See also STL lists
+literal values, 38
+See also characters; constants; letters; numbers; strings
+local scope (block scope), 148–149, 267–268, 473, 474
+local variables, 267–268
+auto variables, 277–278, 283
+common programming errors, 285
+vs. global variables of the same name, 271–272
+register variables, 279–280, 283
+scope, 148–149, 267–268
+static variables, 278, 283; initialization of, 278–279
+storage categories, 277–280, 283
+storage of, 269–270
+log() function, 108t, 109t
+log10() function, 108t, 109t
+logic errors, 135
+assignment operator (=) vs. equality operator (==), 151–152, 173, 221
+logical data, 41–42
+logical expressions, 139–140
+evaluating, 141
+logical file objects, 411
+logical operators, 139–140
+bitwise OR operator (|), 100, 401
+precedence and associativity, 140–141+t
+long double data type, 44–45t
+long int data type, 44t, 73t
+long integers: dates as, 519–520
+loop symbol (on flowcharts), 7
+loops, 179
+infinite. See infinite loops
+types, 196
+See also do-while statements; for statements; while statements
+low-level languages, 4
+lowercase letters: converting to uppercase, 623t, 625, 686t, 687–688
+Lukasiewicz, Jan, 592
+lvalues, 84, 694
+M
+machine language, 9
+translation of source programs into, 9–10
+magic numbers, 127
+main() function, 15–17, 22, 467
+general form, 22–23, 60–61
+maintenance of programs, 33
+manipulators (output stream/ format manipulators), 51, 93–106, 93–94t, 405
+endl manipulator, 51, 52, 94t, 404
+field justification. See setiosflags manipulator
+field width. See field width manipulators
+method equivalents, 100, 103t, 103t, 405
+parameterized manipulators, 99
+See also other specific manipulators
+mathematical library functions, 106–116
+max_object algorithm (STL), 577t
+max_size() method (STL classes), 584t, 595t
+maximum values: locating in arrays, 296
+See also findMax() function
+member access operator. See dot operator
+member functions/methods. See methods
+memberwise assignment (between objects):
+assignment operator, 499, 565;
+for pointer data members, 499, 565–566, 568
+default copy constructor, 500, 565; for pointer data members, 500, 567, 568
+
+memory:
+capacity growth, 657
+CPU storage areas, 280
+file buffers, 426
+in-memory streams, 428–429
+integers as displayed from, 99–102
+locations in. See addresses
+numbers as stored in, 72–77, 101, 102
+memory allocation, 64–66, 360
+dynamic. See dynamic allocation of memory
+See also storage
+memory leaks, 556–557
+memory locations. See addresses
+merge() method (list class), 583t
+methods (of classes), 389, 440–441
+access specifications/specifiers, 442, 443, 447, 541–546
+access to objects, 508–511
+accessors, 459
+C-string. See character
+class methods; and under library functions
+calling, 100, 391, 423, 446–448, 459, 476, 508–509
+character class. See character class methods
+classes without. See structures
+constructors. See constructors
+declaration statements, 443
+destructors, 458–459
+file status methods, 392–393t
+file stream methods, 390–401
+implementation format/ statements, 443–446
+mutators, 460
+nonmember methods. See friend functions
+output stream methods, 100, 103+t, 405
+passing objects to, 514–518
+pointer argument. See this pointer
+as public, 443
+returning objects from, 511–514
+scope, 473, 474
+static member methods, 476–477
+STL algorithms, 576–577+t in STL classes, 581, 582–584t, 592, 593–595t
+storage of, 508
+string class. See string class methods
+in UML class and object diagrams, 572
+min_object algorithm (STL), 577t
+minus sign (–):
+negation operator, 52, 53t
+private visibility indicator, 572
+See also subtraction operator
+mixed-mode expressions, 51
+mnemonics as identifiers, 14–15
+mode indicators (open() method), 400, 401
+combining, 401
+modeling objects (in classes), 484, 485–486, 486–488, 535–537
+See also constructing classes
+modules (of programs), 13
+functions as, 225–226, 267
+modulus operator (%), 52, 53t
+precedence and associativity, 54–56t, 141t
+monetary amounts:
+displaying, 100
+multidimensional arrays: analogies for, 313, 319–320
+See also two-dimensional arrays
+multiple assignments, 83
+multiple extraction operators, 119, 132
+multiple files: opening and checking, 644–648
+multiple inheritance, 540
+multiple insertion symbols, 50
+multiple values: returning from functions, 257–267
+multiplication operator (*), 53+t
+precedence and associativity, 54–56t, 141t
+mutators (mutator methods), 460
+in STL classes, 582–583t, 593–594t
+N
+\n escape sequence. See newline character/escape sequence
+named constants. See symbolic constants
+namespaces, 19, 662
+declaring (creating), 659
+including and designating, 661, 662
+nameTest class, 586–589
+naming (names):
+classes, 14, 442
+const identifiers, 128
+files. See filenames
+functions. See function names
+objects, 487
+variables, 58–59, 59–60
+negation operator (–), 52, 53t
+nested for loops, 209–212, 316, 318
+nested if statements, 158–159, 174
+nested if–else statements, 159
+if–else chains, 159–167
+nested try blocks, 647–648
+new operator:
+creating dynamic arrays, 360–361+t
+creating dynamic objects, 553–558+t, 602
+creating dynamic structures, 721–722+t

@@ -1,0 +1,18 @@
+# Class and Object Diagrams
+
+Class diagrams are used to describe classes and their relationships, and object diagrams are used to describe objects and their relationships. As you know, a class refers to a type of object, from which many specific objects can be created, and an object refers to a specific single item created from a class. For example, a class of books might be described as fiction or nonfiction, of which many specific instances, or objects, exist. The book A History of England is a specific object of the nonfiction class, and Pride and Prejudice is a specific object of the fiction class. Therefore, the class is always the basic plan, or recipe, from which real objects are created. It describes the properties and operations each object must have to be a member of the class.
+
+An attribute, as described in Section 10.7, is simply a characteristic each object in the class must have. For example, title and author are attributes of Book objects; name, age, sex, weight, and height are attributes of Person objects. After data values are assigned to attributes, a unique object is created. Every object created from a class must also have an identity to distinguish it from another object of the same class. This rule isn’t true of a pure data value, such as the number 5; all occurrences of this number are indistinguishable from one another.
+
+Both classes and objects are represented with a diagram consisting of a box. In class diagrams, the class name is in bold text and centered at the top of the box. In object diagrams, the object’s name is centered at the top of the box, but it’s underlined. Figure 12.10 shows the representation of a Person class along with a Person object named Janet Smith.
+
+![](bbox=[0.393, 0.478, 0.675, 0.583])
+
+A class diagram
+An object diagram
+
+**Figure 12.10**  Class and object representations
+
+Including the class name in object diagrams is optional, but if you do, underline it and precede the class name with an object name, using a colon to separate the two names. For example, in Figure 12.10’s object diagram, you could use the name Janet Smith:Person. Figure 12.11 shows the basic symbols and notations for constructing class and object diagrams.
+
+After class attributes have been identified, they’re listed in a box below the class name, separated by a line. Objects are shown in a similar manner, with data values included for all attributes. For example, Figure 12.12 shows the attributes associated with the Country class and the values of these attributes for the U.S.A. and Spain objects. As you might expect, the attributes listed in a class diagram become, in C++, the variables declared in the class declaration section.

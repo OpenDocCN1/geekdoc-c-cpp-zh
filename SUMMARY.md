@@ -44,6 +44,7 @@
 +   [代码的一天：用 C 编程语言编写的图解故事](docs/a-day-in-code-an-illustrated-story-written-in-the-c-programm/README.md)
 +   [数字色彩入门指南](docs/a-field-guide-to-digital-color/README.md)
 +   [C++ 入门指南](docs/a-first-book-of-c/README.md)
++   [C++ 入门指南 第四版](docs/a-first-book-of-c-fourth-edition/README.md)
 +   [C 编程入门指南](docs/a-first-course-in-programming-with-c-paperback-jul-07-2004-t/README.md)
 +   [网络安全编程与预算框架](docs/a-framework-for-programming-and-budgeting-for-cybersecurity/README.md)
 +   [游戏玩家 C# 编程入门指南；欢迎，勇敢的冒险者！；1](docs/a-gamers-introduction-to-programming-in-c-welcome-brave-adve/README.md)
