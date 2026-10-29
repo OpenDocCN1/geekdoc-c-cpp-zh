@@ -1,0 +1,1 @@
+Jonatan Catalan Navarrete created the upper image. "Kimochis," for a children's book. The lower image was done for Halloween. More of Jonatan's work can be found at www.jonatancatalan.com.

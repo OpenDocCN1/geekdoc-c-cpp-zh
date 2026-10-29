@@ -1,0 +1,1 @@
+The upper image, "The Unique," was created by Jose Luis Sendra Noguera (renjoss@gmail.com). The lower image, "Creative World," was created by Andre Kutscheraue. More of Andre's work is available at www.ak3d.de.

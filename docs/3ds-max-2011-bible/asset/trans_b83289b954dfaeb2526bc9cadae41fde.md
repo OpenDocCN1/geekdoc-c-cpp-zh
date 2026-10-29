@@ -1,0 +1,273 @@
+
+
+## 索引
+
+- i-drop，101
+- IFL Manager Utility，587
+- Ignore section，XRef Scenes 对话框，644
+- IK（逆向动力学）。另见 Inverse Kinematics（IK）
+- IK（逆向动力学）求解器，921–923
+- IK 控制器，861
+- IK Controller Parameters 展开面板，941–942
+- IK Limb 求解器，943
+- IK Solver 展开面板，938
+- Image File List（I）文件，587
+- image file lists，关键帧动画，587
+- Image Filters 部分，Glow Element Options 选项卡面板，1115
+- Image Motion Blur，Default Scanline Renderer 展开面板，622
+- Image Sequence File（IMSEQ）文件，587
+- Image Sources 部分，Glow Element Options 选项卡面板，1114
+- importing
+  - CAD 对象，733–734
+  - 文件，87–92，96–98
+- IMSQ（Image Sequence File）文件，587
+- Include in Calculation 部分，Schematic View 窗口，669
+- Increment or Save 功能，87
+- Index of Refraction，439，461
+- Index 面板，InfoCenter 工具栏，37
+- indirect illumination，mental ray，1136–1139
+- Indirect Illumination 面板，Render Scene 对话框，1136
+- Info（INF）日志文件消息，87
+- Info 消息，1152
+- InfoCenter 工具栏，18，34–36
+- Inherit 展开面板，256
+- Initial State 部分，IK Controller Parameters 展开面板，941–942
+- Ink Controls 展开面板，764
+- Ink ’n’ Paint 材质
+  - Ink Controls 展开面板，764
+  - Paint Controls 展开面板，763
+- inner envelope，978
+- inscribed pentagon，314
+- Insert 按钮，Geometry 展开面板，326
+- Insert Vertex 按钮，416
+- inserting
+  - 键，897
+  - 时间，896
+- Instance（Copy）Map 对话框，633
+- Instance（Duplicate）Map 对话框，501
+- instanced modifiers，278
+- instances
+  - 克隆对象，230
+  - 识别，278–279
+  - 贴图，500–501
+- Intensity/Color/Attenuation 展开面板，550
+- interactive gizmos，109–110
+- Interactive IK 方法
+  - 概述，930，934–935
+  - 首选项，设置，935–936
+- Interactive Tool 部分，Radiosity Processing Parameters 展开面板，1085
+- interface
+  - 按钮颜色提示，32–33
+  - Caddy 控制，31–32
+  - Command Panel，25–29
+  - 控制微调器，33
+  - 拖放功能，33
+  - Help 功能，34–38
+  - 底部界面栏控制，29–30
+  - 菜单，18–19
+  - 无模式和持久对话框，33–34
+  - 概述，16–18
+  - 右键单击四菜单，30–31
+  - Schematic View 窗口，656–659
+  - 工具栏，20–25
+  - 视口，25
+- Interpolation 展开面板，310–311
+- Inverse Kinematics（IK）
+  - Applied IK 方法，936–937
+  - 与前向运动学对比，929–930
+  - History Dependent IK 求解器，940–943
+  - History Independent IK 求解器，937–940
+  - IK Limb 求解器，943–944
+  - Interactive IK 方法，934–936
+  - Spline IK 求解器，945–946
+  - 系统，930–934
+- Inverse Kinematics（IK）求解器，921–923
+- Inverse Kinematics 面板，Preference Settings 对话框，935
+- Inverse Squared 衰减类型，550
+- invisible edge，367
+- Isolate Selection 模式，177–178
+- Isolated Vertices 功能，57
+
+Isometric 视图，40  
+Isosceles 创建方法，157
+
+J
+
+- Job Summary 窗格，Monitor 实用程序，1153
+- jobs，Monitor 实用程序，1153–1154
+- Join Bodies 功能，736–738
+- Joint Angle Deformer，985
+- joints
+  - 复制，932
+  - 定义约束，931
+  - 镜像，932
+  - 粘贴，932
+- JSR Viewer 应用程序，93
+- JSR-184（M3G）格式，92–94
+
+K
+
+- Kepler，Johannes，153
+- Kerning 值，文本，316
+- Key Controls，Lower Interface Bar，30
+- Key Info（Advanced）展开面板，Motion 面板，608
+- Key Info（Basic）展开面板，Motion 面板，608
+- Key Info 部分，Attachment Parameters 展开面板，594
+- Key Mode 部分，Link Params 展开面板，599
+- Key 窗格，Track View 接口，889–890
+- Key Stats 工具栏，890
+- Key Steps 组，Time Configuration 对话框，571
+- Key Tangents，577
+- Key Tangents 工具栏，Track View 接口，885–886
+- Keyboard Entry 展开面板，380
+- Keyboard Input Device 展开面板，851
+- Keyboard 面板，Customize User Interface 对话框，105–106
+- Keyboard Shortcut Map，38
+- keyboard shortcuts，105–107
+- keyframe animation
+  - 动画摄像机，584
+  - 幽灵显示，581–582
+  - IFL Manager Utility，987
+  - 图像文件列表，587
+  - 键，571–577
+  - 灯光，585–586
+  - 材质，586
+  - Motion 面板，577–581
+  - 首选项，582–584
+  - 预览，589–591
+  - 时间控制，569–571
+  - Track Bar，573–576
+- keys
+  - 添加，893
+  - 删除，893
+  - 显示可键控图标，894–895
+  - 编辑，893
+  - Euler filter 实用程序，894
+  - 插入，897
+  - 移动，893，897
+  - 概述，891–892
+  - Randomize Keys 实用程序，894
+  - 减少，900–901
+  - 缩放，893
+  - 选择，892–893
+  - 滑动，893
+- Keys 工具栏，Track View 接口，884
+
+L
+
+- Label 元素，Visual MAXScript，1190
+- Lasso 选择方法，172–173
+- lathing splines，345–346
+- Lattice 修改器，291
+- Launch Provider 菜单命令，Asset Tracking 接口，650
+- Layer Manager 对话框，188–190
+- Layer Manager 展开面板，956–958
+- Layer 菜单，Layers 调色板，779
+- Layer Properties 对话框，832
+- Layered fog，1105
+- layers
+  - 动画，829–833
+  - 层列表，191
+  - Layer Manager，188–190
+  - 设置，127
+- Layers 调色板，778–779
+- Layout 面板，Viewpoint Configuration 对话框，65
+- Legacy R4 旋转方法，Gizmo 面板，201
+- Lens Effects
+  - Auto Secondary Lens 效果，1118–1119
+  - 滤镜，1178–1185
+  - 全局参数，1110–1112
+  - Glow Lens 效果，1112–1115
+
+- Local Coordinate System，205
+  - locking
+    - 继承变换，256
+    - Max Interface，119
+- selection sets，175–176
+- LOD（Level of Detail）实用程序，273–274
+- Loft 复合对象
+  - 比较形状，724
+  - Creation Method 展开面板，715
+  - 变形，718–723
+  - 编辑路径，724
+  - 修改子对象，723–724
+  - 概述，714
+  - Path Parameters 展开面板，715–716
+  - Skin Parameters 展开面板，716–717
+  - Surface Parameters 展开面板，715
+  - 与曲面工具对比，725–726
+- log files，维护，87
+- Log 窗格，Monitor 实用程序，1154
+- Logarithmic Exposure Control，1096，1098–1099
+- Look At 约束，584
+- Look 模式，SteeringWheel gizmo，44
+- LookAt 约束，602
+- LookAt Constraint 展开面板，602
+- loop events，1176
+- Loop Mode 工具，Modify Selection 面板，404
+- Loop 选项
+  - Param Curve Out-of-Range Types 对话框，904
+  - Path Parameters 展开面板，598
+  - Time Configuration 对话框，570
+- loops，MAXScript，1180–1181
+- Lower Interface Bar，16–17
+- lower interface bar controls，29–30
+- Luminaire 对象，252
+- Luminance Center，Displace Space Warp，1031
+- Luminosity 颜色色块，Material Editor，438
+- Lumps 值，Torus Knots，158
+- LUT（Look-up Table）文件，132
+
+## M
+
+- M3G Player，93
+- Macro Recorder，1196–1198
+- Macro scripts，1202
+- MacroRecorder 菜单，Listener 窗口，1163
+- main toolbar，21–23
+- Make All Content Unique 按钮，Containers 工具栏，639–640
+- Make Controller Unique 按钮，Controllers 工具栏，887
+- Make Explicit 按钮，Edit Normals 修改器，691
+- Make First 按钮，Selection 展开面板，330
+- Make Planar 按钮，Edit Geometry 展开面板，362
+- Make Preview 对话框，589–590
+- Manual Secondary Lens 效果，1119–1120
+- Map Animation 对话框，836
+- Map Button 元素，Visual MAXScript，1219
+- Map Channel Info 对话框，816–817
+- Map Parameters 展开面板，809
+- Map Path 实用程序，500
+- Map Scaler 修改器，793
+- Map to Material Conversion 材质节点，767
+- Map Track to Track 展开面板，Map Animation 对话框，836
+- mapping coordinates，774
+- Mapping 菜单，Edit UVW 接口，797
+- mapping modifiers
+  - Camera Map，793
+  - Map Scaler，793
+  - 概述，789
+  - UVW Map，790–792
+  - UVW Mapping Add，792
+  - UVW Mapping Clear，792
+  - UVW Xform，793
+- maps。另见 2D maps
+  - 3D，482–488
+  - Camera Map Per Pixel，492
+  - Color Modifier，490–492
+  - compositor，488–490
+  - 连接到材质，469–471
+  - 使用外部工具创建纹理，501–505
+  - 定义，439–440
+  - Flat Mirror，493
+  - 全局视口渲染设置，468
+  - 实例，500–501
+  - Map Path 实用程序，500
+  - Maps 展开面板，496–499
+  - Normal Bump，493–494
+  - 概述，468–471
+  - Raytrace，494
+  - Real-World，468
+  - Reflect/Refract，494–495
+  - Thin Wall Refraction，495
+  - 类型，471–496
+

@@ -19,6 +19,7 @@
 +   [30个天才天才的 Arduino 项目](docs/30-projects-of-arduino-for-evil-genius/README.md)
 +   [300+ C 面试题与答案：单选题格式 | 从初学者到资深人士 | 详细解析](docs/300-c-interview-questions-and-answers-mcq-format-questions-f/README.md)
 +   [3D 游戏引擎开发：学习使用 C++ 和 OpenGL 构建跨平台 3D 游戏引擎](docs/3d-game-engine-development-learn-how-to-build-a-cross-platfo/README.md)
++   [3ds Max 2011 圣经](docs/3ds-max-2011-bible/README.md)
 +   [50 道 C 语言初级与中级练习：学习 C 编程的实用方法](docs/50-c-exercises-beginner-intermediate-a-practical-way-to-lear/README.md)
 +   [50 个 C++ 程序示例](docs/50-c-program-examples/README.md)
 +   [750+ C 语言编程面试题与答案：单选题格式｜从初学者到资深人士｜详细解析](docs/750-c-programming-interview-questions-and-answers-mcq-format/README.md)
