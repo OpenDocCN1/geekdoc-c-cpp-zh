@@ -1,0 +1,33 @@
+second expression. Using short-circuit evaluation, C++ says that the entire expression is false, without bothering to evaluate the second expression. This prevents a run-time error, since evaluating the second expression would involve dividing by zero.
+
+# Pitfall
+
+# INTEGER VALUES CAN BE USED AS BOOLEAN VALUES
+
+C++ sometimes uses integers as if they were Boolean values and bool values as if they were integers. In particular, C++ converts the integer 1 to true and converts the integer 0 to false, and vice versa. The situation is even a bit more complicated than simply using 1 for true and 0 for false. The compiler will treat any nonzero number as if it were the value true and will treat 0 as if it were the value false. As long as you make no mistakes in writing Boolean expressions, this conversion causes no problems. However, when you are debugging, it might help to know that the compiler is happy to combine integers using the Boolean operators &&, ||, and !.
+
+For example, suppose you want a Boolean expression that is true provided that time has not yet run out (in some game or process). You might use the following:
+
+```
+`!time`
+```
+
+This sounds right if you read it out loud: “not time greater than limit.” The Boolean expression is wrong, however, and unfortunately, the compiler will not give you an error message. The compiler will apply the precedence rules from Display 2.3 and interpret your Boolean expression as the following:
+
+```
+(!time) > limit
+```
+
+This looks like nonsense, and intuitively it is nonsense. If the value of time is, for example, 36, what could possibly be the meaning of (!time) > limit? After all, that is equivalent to “not 36.” But in C++, any nonzero integer converts to true and 0 is converted to false. Thus, !36 is interpreted as “not true” and so it evaluates to false, which is in turn converted back to 0 because we are comparing to an int.
+
+What we want as the value of this Boolean expression and what C++ gives us are not the same. If time has a value of 36 and limit has a value of 60, you want the above displayed Boolean expression to evaluate to true (because it is not true that time > limit). Unfortunately, the Boolean expression instead evaluates as follows: (!time) evaluates to false, which is converted to 0, so the entire Boolean expression is equivalent to
+
+```
+0 > limit
+```
+
+That in turn is equivalent to 0 > 60, because 60 is the value of limit, and that evaluates to false. Thus, the above logical expression evaluates to false, when you want it to evaluate to true.
+
+There are two ways to correct this problem. One way is to use the ! operator correctly. When using the operator !, be sure to include parentheses around the argument. The correct way to write the above Boolean expression is
+
+integers convert to bool

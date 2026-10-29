@@ -1,0 +1,37 @@
+In the function definition for a member function, you can use the names of all members of that class (both the data members and the function members) without using the dot operator.
+
+# THE DOT OPERATOR AND THE SCOPE RESOLUTION OPERATOR
+
+Both the dot operator and the scope resolution operator are used with member names to specify of what thing they are a member. For example, suppose you have declared a class called DayOfYear and you declare an object called today as follows:
+
+```
+DayOfYear today;
+```
+
+You use the dot operator to specify a member of the object today. For example, output is a member function for the class DayOfYear (defined in Display 6.3), and the following function call will output the data values stored in the object today:
+
+```
+today.output();
+```
+
+You use the scope resolution operator, ::, to specify the class name when giving the function definition for a member function. For example, the heading of the function definition for the member function output would be as follows:
+
+```
+void DayOfYear::output()
+```
+
+Remember, the scope resolution operator, ::, is used with a class name, whereas the dot operator is used with an object of that class.
+
+# A CLASS IS A FULL-FLEDGED TYPE
+
+A class is a type just like the types int and double. You can have variables of a class type, you can have parameters of a class type, a function can return a value of a class type, and more generally, you can use a class type like any other type.
+
+# Self-Test Exercises
+
++   9. Below we have redefined the class DayOfYear from Display 6.3 so that it now has one additional member function called input. Write an appropriate definition for the member function input.
++   
++   ```cpp
++   class DayOfYear
++   {
++   public:
++   ```

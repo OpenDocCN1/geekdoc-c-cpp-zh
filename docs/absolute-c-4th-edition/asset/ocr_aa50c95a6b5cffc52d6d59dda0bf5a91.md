@@ -1,0 +1,46 @@
+```
+inStream.get(symbol);
+} while (symbol != '\n');
+```
+
+Now, suppose your program contains this new version of the function newLine. If your program is taking input from an input stream called fin (which is connected to an input file), the following will discard all the input left on the line currently being read from the input file:
+
+```
+newLine(fin);
+```
+
+If your program is also reading some input from the keyboard, the following will discard the remainder of the input line that was typed in at the keyboard:
+
+```
+newLine(cin);
+```
+
+If your program has only the above rewritten version of newLine, which takes a stream argument such as fin or cin, you must always give the stream name, even if the stream name is cin. But thanks to overloading, you can have both versions of the function newLine in the same program: the version with no arguments that is given in Display 9.2 and the version with one argument of type istream that we just defined. In a program with both definitions of newLine, the following two calls are equivalent:
+
+```
+newLine(cin);
+
+and
+
+newLine();
+```
+
+You do not really need two versions of the function newLine. The version with one argument of type istream can serve all your needs. However, many programmers find it convenient to have a version with no arguments for keyboard input, since keyboard input is used so frequently.
+
+An alternative to having two overloaded versions of the newLine function is to use a default argument (as discussed in Chapter 4). In the following code, we have rewritten the newLine function a third time:
+
+```
+//Uses <iostream>:
+void newLine(istream& inStream = cin)
+{
+    char symbol;
+    do
+    {
+        inStream.get(symbol);
+    } while (symbol != '\n');
+}
+
+If we call this function as
+
+    newLine();
+```

@@ -1,0 +1,35 @@
+A **return statement** consists of the keyword return followed by an expression. The function definition in Display 3.5 contains the following return statement:
+
+```
+return (subtotal + subtotal*TAXRATE);
+```
+
+When this return statement is executed, the value of the following expression is returned as the value of the function call:
+
+```
+(subtotal + subtotal*TAXRATE)
+```
+
+The parentheses are not needed. The program will run the same if the parentheses are omitted. However, with longer expressions, the parentheses make the return statement easier to read. For consistency, some programmers advocate using these parentheses even with simple expressions. In the function definition in Display 3.3 there are no statements after the return statement, but if there were, they would not be executed. When a return statement is executed, the function call ends.
+
+Note that the function body can contain any C++ statements and that the statements will be executed when the function is called. Thus, a function that returns a value may do any other action as well as return a value. In most cases, however, the main purpose of a function that returns a value is to return that value.
+
+Either the complete function definition or the function declaration (function prototype) must appear in the code before the function is called. The most typical arrangement is for the function declaration and the main part of the program to appear in one or more files, with the function declaration before the main part of the program, and for the function definition to appear in another file. We have not yet discussed dividing a program across more than one file, and so we will place the function definitions after the main part of the program. If the full function definition is placed before the main part of the program, the function declaration can be omitted.
+
+# ALTERNATE FORM FOR FUNCTION DECLARATIONS
+
+You are not required to list formal parameter names in a function declaration (function prototype). The following two function declarations are equivalent:
+
+```
+double totalCost(int numberParameter, double priceParameter);
+```
+
+and
+
+```
+double totalCost(int, double);
+```
+
+We will usually use the first form so that we can refer to the formal parameters in the comment that accompanies the function declaration. However, you will often see the second form in manuals.
+
+This alternate form applies only to function declarations. A function definition must always list the formal parameter names.

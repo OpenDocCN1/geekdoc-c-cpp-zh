@@ -1,0 +1,133 @@
+
+interface or abstract programming interface or something similar. In this book we will call these rules the interface for the class. It is important to keep in mind a clear distinction between the interface and the implementation of a class. If your class is well designed, then any programmer who uses the class need only know the interface for the class and need not know any details of the implementation of the class. A class whose interface and implementation are separated in this way is sometimes called an abstract data type (ADT) or a nicely encapsulated class. In Chapter 11 we will show you how to separate the interface and implementation by placing them in different files, but the important thing is to keep them conceptually separated.
+
+For a C++ class, the interface consists of two sorts of things: the comments, usually at the beginning of the class definition, that tell what the data of the object is supposed to represent, such as a date or bank account or state of a simulated car wash; and the public member functions of the class along with the comments that tell how to use these public member functions. In a well-designed class, the interface of the class should be all you need to know in order to use the class in your program.
+
+The implementation of a class tells how the class interface is realized as C++ code. The implementation consists of the private members of the class and the definitions of both the public and private member functions. Although you need the implementation in order to run a program that uses the class, you should not need to know anything about the implementation in order to write the rest of a program that uses the class; that is, you should not need to know anything about the implementation in order to write the main function of the program and to write any nonmember functions or other classes used by the main function.
+
+The most obvious benefit you derive from cleanly separating the interface and implementation of your classes is that you can change the implementation without having to change the other parts of your program. On large programming projects this division between interface and implementation will facilitate dividing the work among different programmers. If you have a well-designed interface, then one programmer can write the implementation for the class while other programmers write the code that uses the class. Even if you are the only programmer working on a project, you have divided one larger task into two smaller tasks, which makes your program easier to design and to debug.
+
+## A TEST FOR ENCAPSULATION
+
+If your class definition produces an ADT (that is, if it properly separates the interface and the implementation), then you can change the implementation of the class (that is, change the data representation and/or change the implementation of some member functions) without needing to change any (other) code for any program that uses the class definition. This is a sure test for whether you have defined an ADT or just some class that is not properly encapsulated.
+
+For example, you can change the implementation of the class DayOfYear in Display 6.4 to the following and no program that uses this class definition would need any changes:
+
+```
+class DayOfYear
+{
+```
+
+```
+public:
+    void input();
+    void output();
+    void set(int newMonth, int newDay);
+    //Precondition: newMonth and newDay form a possible date.
+    //Postcondition: The date is reset according to the arguments.
+    void set(int newMonth);
+    //Precondition: 1 <= newMonth <= 12
+    //Postcondition: The date is set to first day of the month.
+    int getMonthNumber();
+    //Returns 1 for January, 2 for February, etc.
+    int getDay();
+private:
+    char firstLetter;//of month
+    char secondLetter;//of month
+    char thirdLetter;//of month
+    int day;
+};
+```
+
+In this version, a month is represented by the first three letters in its name, such as 'J', 'a', and 'n' for January. The member functions should also be rewritten, of course, but they can be rewritten to behave exactly as they did before. For example, the definition of the function getMonthNumber might start as follows:
+
+```
+int DayOfYear::getMonthNumber()
+{
+    if (firstLetter == 'J' && secondLetter == 'a'
+        && thirdLetter == 'n')
+        return 1;
+    if (firstLetter == 'F' && secondLetter == 'e'
+        && thirdLetter == 'b')
+        return 2;
+    ...
+```
+
+This would be rather tedious, but not difficult.
+
+## STRUCTURES VERSUS CLASSES
+
+Structures are normally used with all member variables public and with no member functions. However, in C++ a structure can have private member variables and both public and private member functions. Aside from some notational differences, a C++ structure can do anything a class can do. Having said this and satisfied the "truth in advertising" requirement, we advocate that you forget this technical detail about structures. If
+
+## CLASSES AND OBJECTS
+
+A class is a type whose variables can have both member variables and member functions. The syntax for a class definition is given below.
+
+## SYNTAX
+
+```
+class Class_Name
+{
+
+public:
+    Member_SpecificationN+1;
+    Member_SpecificationN+2;
+    .
+    .
+    .
+
+private:
+    Member_Specification_1;
+    Member_Specification_2;
+    .
+    .
+    .
+    Member_SpecificationN
+};
+```
+
+![](img/9505fd46e120aa9c1406715936ff6251_248_0.png)
+
+Each Member_Specification_i is either a member variable declaration or a member function declaration (prototype).
+
+Additional public: and private: sections are permitted. If the first group of members does not have either a public: or a private: label, then it is the same as if there were a private: before the first group.
+
+## EXAMPLE
+
+```
+class Bicycle
+{
+public:
+    char getColor();
+    int numberOfSpeeds();
+    void set(int theSpeeds, char theColor);
+private:
+    int speeds;
+    char color;
+};
+```
+
+Once a class is defined, an object variable (variable of the class type) can be declared in the same way as variables of any other type. For example, the following declares two object variables of type Bicycle:
+
+```
+Bicycle myBike, yourBike;
+```
+
+you take this technical detail seriously and use structures in the same way that you use classes, then you will have two names (with different syntax rules) for the same concept. On the other hand, if you use structures as we described them, then you will have a meaningful difference between structures (as you use them) and classes; and your usage will be the same as that of most other programmers.
+
+One difference between a structure and a class is that they differ in how they treat an initial group of members that has neither a public nor a private access specifier. If the first group of members in a definition is not labeled with either public: or private:, then a structure assumes the group is public, whereas a class would assume the group is private.
+
+## THINKING OBJECTS
+
+If you have not programmed with classes before, it can take a little while to get the feel of programming with them. When you program with classes, data rather than algorithms takes center stage. It is not that there are no algorithms. However, the algorithms are made to fit the data, as opposed to designing the data to fit the algorithms. It's a difference in point of view. In the extreme case, which is considered by many to be the best style, you have no global functions at all, only classes with member functions. In this case, you define objects and how the objects interact, rather than algorithms that operate on data. We will discuss the details of how you accomplish this throughout this book. Of course, you can ignore classes completely or relegate them to a minor role, but then you are really programming in C, not C++.
+
+## Self-Test Exercises
+
+- 16. When you define a C++ class, should you make the member variables public or private? Should you make the member functions public or private?
+- 17. When you define a C++ class, what items are considered part of the interface? What items are considered part of the implementation?
+
+## Chapter Summary
+
+- A structure can be used to combine data of different types into a single (compound) data value.
+- A class can be used to combine data and functions into a single (compound) object.
+- A member variable or a member function for a class can be either public or private. If it is public, it can be used outside the class. If it is private, it can be used only in the definition of a member function.

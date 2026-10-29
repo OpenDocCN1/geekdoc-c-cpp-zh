@@ -65,6 +65,7 @@
 +   [Web编程入门指南：使用 PHP、HTML 和 MySQL 的核心算法、语法和控制结构，第三版](docs/a-web-based-introduction-to-programming-essential-algorithms/README.md)
 +   [两个分裂的世界：为什么我们必须改变思维来改变未来](docs/a-world-in-two-minds-why-we-must-change-our-thinking-to-chan/README.md)
 +   [C 编程初学者指南：包含 2000+ C 代码示例和 23+ 完整章节](docs/absolute-beginners-guide-to-c-programming-with-2000-c-codes-/README.md)
++   [绝对 C++（第 4 版）](docs/absolute-c-4th-edition/README.md)
 +   [C++ 终极指南（第5版）](docs/absolute-c-5th-edition/README.md)
 +   [C++ 第 6 版](docs/absolute-c-6th-edition/README.md)
 +   [Absolute C++ 包含 MyProgrammingLab 及 Pearson eText -- 访问卡包（第5版）](docs/absolute-c-plus-myprogramminglab-with-pearson-etext----acces/README.md)

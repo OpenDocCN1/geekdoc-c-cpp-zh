@@ -1,0 +1,31 @@
+file, it cannot be defined again in the unnamed namespace in either the implementation file or the application file. Thus, a name conflict is avoided.
+
+# UNNAMED NAMESPACE
+
+You can use the unnamed namespace to make a definition local to a compilation unit. Each compilation unit has one unnamed namespace. All the identifiers defined in the unnamed namespace are local to the compilation unit. You place a definition in the unnamed namespace by placing the definition in a namespace grouping with no namespace name, as shown below:
+
+```
+namespace
+{
+    Definition_1
+    Definition_2
+    .
+    .
+    Definition_Last
+}
+```
+
+You can use any name in the unnamed namespace without qualifiers anyplace in the compilation unit. See Displays 11.8, 11.9, and 11.10 for a complete example.
+
+# Pitfall CONFUSING THE GLOBAL NAMESPACE AND THE UNNAMED NAMESPACE
+
+Do not confuse the global namespace with the unnamed namespace. If you do not put a name definition in a namespace grouping, then it is in the global namespace. To put a name definition in the unnamed namespace, you must put it in a namespace grouping that starts out as follows, without a name:
+
+```
+namespace
+{
+```
+
+Names in the global namespace and names in the unnamed namespace may both be accessed without a qualifier. However, names in the global namespace have global scope (all the program files), whereas names in an unnamed namespace are local to a compilation unit.
+
+This confusion between the global namespace and the unnamed namespace does not arise very much in writing code, since there is a tendency to think of names in the global namespace as being “in no namespace,” even though that is not technically correct. However, the confusion can easily arise when discussing code.
