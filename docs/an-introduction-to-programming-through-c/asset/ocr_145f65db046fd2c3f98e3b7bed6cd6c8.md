@@ -1,0 +1,11 @@
+![](bbox=[0.119, 0.087, 0.818, 0.366])
+
+numbers on the board. They begin at position 50 (the topmost position being 0), go to the last position, 99. Then they “wrap around” so that the last 20 numbers occupy positions 0 through 19 on the board. Positions 20–49 are then unused. This should not confuse us; say we make a mark next to the first waiting driver. When we assign a driver, we erase the number from the board, and also shift the mark down one. This works fine so long as the number of taxi drivers waiting at any time does not exceed 100.
+
+# Emulating a blackboard on a computer
+
+Our program will mirror the actions given above. We do not shift drivers up when a driver is assigned, instead we have a variable `front`, which will always contain the index of the element of `driverID` containing the earliest waiting unassigned driver. This performs the function of the mark that the dispatcher places on the board.
+
+If there are `nWaiting` drivers waiting for customers, their IDs will appear at positions starting at `front`. We need to be slightly careful as we say this: how do we describe what happens when the board fills to the bottom and the dispatcher is forced to write the numbers starting at the top again? We would like to somehow say that index that comes “next” after the last index n−1 (i.e. the “bottom” of the board) is index 0 (i.e. the “top” of the board). So instead of saying that the next index after `front` is `front+1`, we will say that it is `(front+1) % n`. If `front` has some value `i<n−1`, then `(front+1) % n` is just `i+1`. However, if `front` equals `n−1`, then `(front+1) % n` will indeed become 0 as we wish. Thus we will simply require that if there are `nWaiting` drivers that are waiting, their IDs will be at indices `front`, `(front + 1) % n`, …, `(front + nWaiting − 1) % n`.
+
+Next we consider what actions to execute when a driver arrives. As before, we accept the ID only if `driverID` is not full. The ID of the arriving driver must be added at the so

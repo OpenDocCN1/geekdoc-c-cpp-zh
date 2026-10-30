@@ -1,0 +1,15 @@
+3. Modify the projectile motion program so that the velocity is given by a second click. The projectile should start from the first click, and its initial velocity should be in the direction of the second click (relative to the first). Also the velocity should be taken to be proportional to the distance between the two clicks.
+
+4. Another idea is to treat the second click to be the highest point reached by the projectile as it moves. For this you may note that if $u_x, u_y$ are the initial velocities of the projectile in the $x, y$ directions, and $g$ the gravitational acceleration, then maximum height reached is $\frac{u_y^2}{2g}$. The horizontal distance covered by the time the maximum height is reached is $\frac{u_x u_y}{g}$.
+
+5. Modify the projectile motion program to trace the trajectories of the projectile for the same initial velocity and different angles. As you may know, for a fixed velocity, the projectile goes farthest if it is launched at 45 degrees to the horizontal. You should be able to verify this statement using your program.
+
+6. Write a program to produce the following effect. First a square appears on the screen. Then a tiny circle appears at the center. Slowly, the circle grows until it touches the sides of the square. Then both the circle and the square start shrinking until they vanish.
+
+7. Suppose you are given some observed positions of a projectile. Each position is an $(x, y)$ pair. You are further told that the projectile is surely known to pass through the origin $(0,0)$. Derive the best fit trajectory for the given points, such that it passes through $(0,0)$. For this you will have to adapt the process we followed to fit a straight line.
+
+8. Write a program that accepts 3 points on the canvas (given by clicking) and then draws a circle through those 3 points.
+
+9. Write a program that accepts 3 points, say $p, q, r$. Then the program draws the line joining $p, q$. Then the line is rotated around the point $r$, slowly, through one full rotation. The key question here is how to rotate a line through a point which is not its center. This can be done in two ways. You could calculate the next position of the line, and then reset the line to that position. Alternatively, you can observe that a rotation about an external point such as $r$ can be expressed as a rotation about the center and a translation, i.e. a move. This will require you to calculate the amount of translation.
+
+10. In this problem you are to determine how light reflects off a perfectly reflecting spherical surface. Suppose the sphere has radius $r$ and is centered at some point $(x, y)$. Suppose there is a light source at a point $(x', y)$. Rays will emerge from the source and bounce off the sphere. As you may know, the reflected ray will make an angle to the radius at the point of contact equal to that made by the incident ray. Write a program which traces many such rays. It should take $r, x, y, x'$ as input. Of course, in the plane the sphere will appear as a circle.

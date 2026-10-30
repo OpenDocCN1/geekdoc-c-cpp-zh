@@ -1,0 +1,14 @@
+to have this class at all and instead include the member functions from this class into the plane class itself. This would simplify the code a bit; you could directly access the members in plane in writing functions such as ATC::processArrival. However, we have preferred to have two classes because we felt it is better to put air traffic control actions in an ATC class.
+
+Another possibility is to not use the sim and Resource classes at all. Write the code from the point of view of the air traffic controllers who examine the planes at each step and advance them as needed. You are asked to do this in an exercise.
+
+# Exercises
+
++   1. Modify the simulation program to print out the average aircraft delay.
++   2. Define a better plane class in which the on screen image looks like an aircraft rather than a triangle.
++   3. Suppose we wish to ensure that as much as possible, an aircraft must land at its arrival time. Thus, while granting halfRW to a departing plane, we must check whether no plane will want to land during the interval in which the departing plane will use halfRW. Device a good mechanism to do this. Hint: perhaps you can reserve the landing runway and halfRW a bit earlier than needed?
++   4. The program given in the text uses so called busy waiting to allocate gates, i.e. if a gate is not currently available, the plane retries after 1 step. It will be more efficient if the plane can await the release of any gate. Develop a class to represent such a resource group. A resource group models a sequence of objects, each of which can be either reserved or unreserved. On a reserve request, one of the unreserved objects must be allocated, i.e. the requesting entity should be set as its owner. If all objects are currenly reserved, then the reserve request is deemed to fail and should thus return false. In that case the entity may await its release. When any of the objects becomes available, that should get reserved for the waiting entity. Use this in the simulation code.
++   5. Show that our strategy of reserving resources ensures that there is no deadlock. Specifically, show that at every step some aircraft will make progress, and that there will not exist entities e0,...,en−1 where ei is waiting for a resource currently held by entity ei+1 mod n.
++   6. Suppose we reserve halfRW first and then the take off or landing runways. Construct an input sequence (the file arrivals.txt) such that there is a deadlock.
++   7. Perform the airport simulation without using the sim and Resource classes, as described in Section 26.8. Do you think this will run faster than the simulation we have presented, or slower? What if there is no need to produce a graphical output, i.e. only a textual record is required?
++   8. Suppose we do not want to divide the taxiway into segments. Instead, suppose we will allow a plane to move a certain stepsize at each step while keeping a certain safe

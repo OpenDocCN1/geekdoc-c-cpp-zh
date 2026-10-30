@@ -1,0 +1,141 @@
+
+
+```c
+void merge(int U[], int uLength, int V[], int vLength, int S[]){
+  // arrays U, V of length uLength and vLength respectively contain the
+  // sequences that are sorted. The result of merging is to be placed
+  // in the array S. The length of S is not specified explicitly, but
+  // it is assumed (precondition) to be uLength + vLength.
+
+  for(int uFront=0, vFront=0, sBack=0; sBack<uLength+vLength; sBack++){
+    // INVARIANT: sBack = uFront + vFront. Keys U[0..uFront-1] will
+    // have been moved to S, and also keys V[0..vFront-1]. S will
+    // contain these keys in S[0..sBack-1] in non-decreasing order.
+
+    if(uFront<uLength && vFront<vLength){  // if both queues non-empty
+      if(U[uFront] < V[vFront]){           // if U has smaller
+        S[sBack] = U[uFront];              // move to S
+        uFront++;                          // advance U
+      }
+      else{                                // if V has smaller
+        S[sBack] = V[vFront];              // move to S
+        vFront++;                          // advance V
+      }
+    }
+    else if(uFront < uLength) {             // else if only U is not empty
+      S[sBack] = U[uFront];                 // move to S
+      uFront++;                             // advance U
+    }
+    else {                                  // else if only V is not empty
+      S[sBack] = V[vFront];                 // move to S
+      vFront++;                             // advance V
+    }
+  }
+}
+```
+
+Figure 14.1: The Merging algorithm
+
++   2. Copy n/2 elements of S to U and the remaining n−n/2 elements to V.
++   3. Get the arrays U and V sorted. This requires a recursive call for each.
++   4. Merge the arrays U and V back and put the result into the array S.
+
+The code for mergesort follows this outline exactly.
+
+```c
+void mergesort(int S[], int n){
+    if(n>1){
+        int U[n/2], V[n-n/2];
+        for(int i=0; i<n/2; i++) U[i] = S[i];
+        for(int i=n/2; i<n; i++) V[i-n/2] = S[i];
+
+        mergesort(U, n/2);
+        mergesort(V, n - n/2);
+        merge(U, n/2, V, n-n/2, S);
+    }
+}
+```
+
+Note that we wrote the number of elements to be copied to U as n − n/2 and not n/2 in order to account for the possibility that n might be odd.
+
+We will now estimate the time T(n) taken by mergesort to sort a sequence of length n. Initially, we copy the elements of S to U,V. As discussed above this takes total time proportional to at most n. After that we call mergesort recursively. This takes time T(n/2) and T(n − n/2). Finally we call merge. The time taken by merge, we said is at most proportional to n the total number of keys. Thus we have
+
+T(n) ≤ (Time proportional to n) + T(n/2) + T(n − n/2)
+
+where we have clubbed together the time to copy and time to merge as a single entry, proportional to n. Suppose the constant of proportionality is c. Then we have
+
+T(n) ≤ cn + 2T(n/2)
+
+Here we have assumed for simplicity that n is a power of 2, and hence n − n/2 = n/2.
+
+Note that our inequality for T(n) is also valid if we substitute n/2 instead of n. Thus we have T(n/2) ≤ c(n/2) + 2T(n/4), which we can substitute into itself! Thus we get
+
+T(n) ≤ cn + 2T(n/2) ≤ cn + 2(c(n/2) + 2T(n/4)) = 2cn + 4T(n/4)
+
+But we can continue in this manner till for k steps, where n = 2^k. Thus we will get
+
+T(n) ≤ kcn + 2^k T(n/2^k)
+
+Since n/2^k = 1 and k = log₂ n, we have
+
+T(n) ≤ cn log₂ n + n T(1)
+
+Noting that and T(1) ≤ c′ for some c′, we get T(n) ≤ cn log₂ n + c′n ≤ c″n log₂ n for some constant c″. Thus we have shown that T(n) is at most proportional to n log₂ n.
+
+## 14.6 Exercises
+
+-   1. Write a program that reads in an integer from the keyboard and prints it out in words. For example, on reading in 368, the program should print “three hundred and sixty eight”.
+
+-   2. For this exercise it is important to know that the codes for the digits are consecutive, starting at 0. Further ’8’ - ’0’ is valid expression and evaluates to the difference in the code used to represent the characters, and is thus 8. To clarify, if we execute
+   
+   ```cpp
+   char text[10] = "1729";
+   int d = text[1] - '0';
+   ```
+   
+   Then d will have the value 7. Use this to write a function that takes a char array containing a number and return an integer of the corresponding magnitude.
+
+-   3. Suppose destination and source are of type char*. What do you think the following statement does?
+   
+   ```cpp
+   while(*destination++ = *source++);
+   ```
+   
+   Note: it uses several programming idioms you have been warned not to use. The point of this exercise is not to encourage the use of these idioms but to warn you how dense C++ code can be.
+
+-   4. Extend the marks display program of Section 13.2.2 to use names rather than roll numbers. At the beginning, the teacher enters the number of students. Then the program must prompt the teacher to enter the name of the student, followed by the marks. After all names and marks have been entered, the program then gets ready to answer student queries. Students enter their name and the program prints out the marks they have obtained.
+
+-   5. Write a function which takes a sequence of parentheses, open and closed, of all types, and says whether it is a valid parenthesisation. Specifically, parentheses should be in matching pairs, with the opening parentheses before the closing, and if a pair of parentheses contains one parenthesis from another pair, then it must also contain the other parenthesis from that pair.
+
+-   6. Write a “calculator” program that takes 3 command line arguments in addition to the name of the executable: the first and third being double values and the second being a single char. The second argument must be specified as an arithmetic operator, i.e. +, −, * or /. The program must perform the required operation on the two numbers and print the result.
+
+-   7. Write a program that solves a system of n linear equations in n unknowns, based on the discussion of Section 14.2.1. You should write
+   
+   ```cpp
+   const int n = 4;
+   ```
+   
+   in your program and then subsequently define the arrays using n as defined above. This way it should be possible to use your program to solve systems of different size simply by changing the value of n.
+
+-   8. Write a program that reads in a square matrix and prints its determinant. As above, make the dimension of the matrix a const int. You should NOT use the recursive definition of determinant, but instead use the following properties:
+    - Adding a multiple of one row to another leaves the determinant unchanged.
+    - Exchanging a pair of rows causes the determinant to be multiplied by -1.
+    - The determinant of an upper triangular matrix (all zeros below the diagonal) is simply the product of the elements on the diagonal.
+
+If the first element of the first row is a zero, then exchange rows so that it becomes non zero. Then add suitable multiples of the first row to the other rows so that the first column is all zeros except the first row. Similarly produce zeros below the diagonal in the second column, and so on.
+
+-   9. Design an input instance for the mergesort algorithm such that every line of code in the merge algorithm of Section 14.5.1 will execute in one of the calls to merge.
+
+-   10. Suppose you are given two sorted sequences S,T of lengths m,n. Write a program that finds the median of their union. You may find it easier to write a program that finds the i th smallest in the union, for general i. Hint: Compare the medians of the sequences S,T. What does the comparison tell you about the position of the i th smallest?
+
+-   11. A very popular and elegant algorithm for sorting is the so called Quicksort. If A is the sequence to be sorted, this works as follows.
+    - (a) Pick a random element r of A.
+    - (b) Construct a sequence S consisting of all elements smaller than r.
+    - (c) Construct a sequence L consisting of the remaining elements.
+    - (d) Sort the sequences S, L (recursively!) to produce sequences S', L'.
+    - (e) Return the concatenation of sequences S', L'.
+
+Write the program for Quicksort. By and large, Quicksort works very fast. More precisely, it is possible to show that the expected time taken by Quicksort (expectation calculated over all random choices of r in all calls) is O(n log₂ n). The proof of this is outside the scope of this book.
+
+-   12. An interesting trick is employed to make Quicksort run fast. If the original sequence A is stored in the array A, then it is possible to ensure that steps 2,3 above will construct S, L in A itself, with S preceding L. This will ensure that the sorting step will also produce the result in-place, i.e. S', L' will be produced in the same (sub)arrays as were occupied by S, L. Thus the last step, concatenation, does not have to be done explicitly. Here is how we can create S, L inside A itself. Start scanning from A[0]
+
