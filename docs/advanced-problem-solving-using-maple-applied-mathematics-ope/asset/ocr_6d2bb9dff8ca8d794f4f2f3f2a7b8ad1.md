@@ -1,0 +1,11 @@
+the nature of a potential stationary or regular point. The bordered Hessian can be written in general as the block matrix
+
+![](bbox=[0.355, 0.143, 0.645, 0.22])
+
+We can classify, if possible, the stationary points as maxima or minima according to the bordered Hessian’s definiteness. If the bordered Hessian is indefinite, then a different classification method must be used.
+
+# The Complementary Slackness Condition
+
+The KTC computational solution process solves the $2^m$ possible cases for $\lambda_i$ and $\mu_i$, where $m$ equals the number of constraints, then applies the necessary conditions to find optimal points. The 2 comes from the number of possibilities for each $\lambda_i$: either $\lambda_i = 0$ or $\lambda_i \ne 0$. There is actually more to this process: it really involves the complementary slackness condition imbedded in the necessary condition (4.6c), $2\mu_i\lambda_i = 0$. If $\mu_i$ equals zero, then $\lambda_i$, the shadow price, can be nonzero and the $i$th constraint is *binding*—the optimal point lies on the constraint boundary. If $\mu_i$ is not equal to zero, then $\lambda_i$, the shadow price, must be zero and the $i$th constraint is *nonbinding*—there is slack ($\le$ constraint) or *surplus* ($\ge$ constraint), represented by $\mu_i$. Ensuring the complementary slackness conditions are satisfied reduces the work involved in solving the other necessary conditions from Equations (4.6a) and (4.6b).
+
+Based on this analysis, the complementary slackness necessary conditions (4.6c) lead to the solution process that focuses on four of our computational and geometric interpretations. We have defined $\mu_i^2$ as a slack or surplus variable. Therefore, if $\mu_i^2$ equals zero, then our optimal point lies on the $i$th constraint, and if $\mu_i^2$ is greater than zero, the optimal point is interior to the $i$th constraint boundary. However, if the value of $\mu_i$ is undefined because $\mu_i^2$ equals a negative number, then the point of concern is *infeasible*. Figure 4.18 illustrates these conditions.

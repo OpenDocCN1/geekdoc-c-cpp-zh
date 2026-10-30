@@ -82,6 +82,7 @@
 +   [高级动态范围成像：理论与实践](docs/advanced-high-dynamic-range-imaging-theory-and-practice/README.md)
 +   [计算机高级指南第 94 卷](docs/advanced-in-computers-volume-94/README.md)
 +   [高级 Mac OS X 编程：Big Nerd Ranch 指南](docs/advanced-mac-os-x-programming-the-big-nerd-ranch-guide-big-n/README.md)
++   [使用 Maple 进行高级问题求解：应用数学、运筹学、商业分析与决策分析（数学教材）](docs/advanced-problem-solving-using-maple-applied-mathematics-ope/README.md)
 +   [[计算机进展] ｜｜ 软件工程与软件保证进展](docs/advances-in-computers-advances-in-software-engineering-and-s/README.md)
 +   [计算机进展（第93卷）](docs/advances-in-computers-volume-93/README.md)
 +   [计算机进展第 93 卷 ｜ Web 测试最新进展](docs/advances-in-computers-volume-93-recent-advances-in-web-testi/README.md)
