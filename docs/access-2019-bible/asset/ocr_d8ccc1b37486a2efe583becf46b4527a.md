@@ -1,0 +1,15 @@
+Once you've established the integrity requirements of your applications, you don't have to be afraid that data in related tables will become lost or disorganized.
+
+We can't overemphasize the need for referential integrity in database applications. Many developers feel that they can use VBA code or user interface design to prevent orphaned records. The truth is that, in most databases, the data stored in a particular table may be used in many different places within the application, or even in other applications that use the data. Also, given the fact that many database projects extend over many years, and among any number of developers, it's not always possible to recall how data should be protected. By far, the best approach to ensuring the integrity of data stored in any database system is to use the power of the database engine to enforce referential integrity.
+
+The general relational model referential integrity rules ensure that records contained in relational tables are not lost or confused. For obvious reasons, it's important that the primary keys connecting tables be protected and preserved. Also, changes in a table that affect other tables (for example, deleting a record on the "one" side of a one-to-many relationship) should be rippled to the other tables connected to the first table. Otherwise, the data in the two tables will quickly become unsynchronized.
+
+# No primary key can contain a null value
+
+The first referential integrity rule states that no primary key can contain a null value. A null value is one that simply does not exist. The value of a field that has never been assigned a value (even a default value) is null. No row in a database table can have null in its primary key because the main purpose of the primary key is to guarantee uniqueness of the row. Obviously, null values cannot be unique, and the relational model would not work if primary keys could be null. Access will not allow you to set a field that already contains null values as the primary key.
+
+Furthermore, Access can't evaluate a null value. Because a null value doesn't exist, it can't be compared with any other value. It isn't larger or smaller than any other value; it simply doesn't exist. Therefore, a null value can't be used to look up a table or to form a relationship between two tables.
+
+Access automatically enforces the first referential integrity rule. As you add data to tables, you can't leave the primary key field empty without generating a warning (one reason the AutoNumber field works so well as a primary key). Once you've designated a field in an Access table as the primary key, Access won't let you delete the data in the field, nor will it allow you to change the value in the field so that it duplicates a value in another record.
+
+When using a composite primary key made up of several fields, all the fields in the composite key must contain values. None of the fields is allowed to be empty. The combination of values in the composite primary key must be unique.

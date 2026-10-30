@@ -1,0 +1,15 @@
+continued
+However, there are reasons why you might choose VBA over Access macros. For one, VBA code is portable to Word, Excel, Outlook, Visio, and even Visual Studio .NET (with changes). It’s impossible to tell where an Access application might end up. Sometimes Access applications are upsized and upgraded to SQL Server and Visual Studio .NET and converting VBA to Visual Basic .NET is easier than converting macros. Another reason is that during development of an application, you might encounter a situation that becomes too complex for a macro to handle. There is virtually no limit to what you can do in VBA and if you start with VBA, you know your application won’t outgrow it.
+VBA is a very powerful, portable, useful language, and VBA skills are applicable in many situations other than building Access applications.
+
+# Introducing Visual Basic for Applications
+
+Visual Basic for Applications (VBA) is the programming language built into Microsoft Access. VBA is shared among all the Office applications, including Word, Excel, Outlook, PowerPoint, and even Visio. If you aren’t already a VBA programmer, learning the VBA syntax and how to hook VBA into the Access event model is a definite career builder.
+
+VBA is a key element in most professional Access applications. Microsoft provides VBA in Access because VBA provides significant flexibility and power to Access database applications. Without a full-fledged programming language like VBA, Access applications would have to rely on the somewhat limited set of actions offered by Access macros. Although macro programming also adds flexibility to Access applications, VBA is much easier to work with when you’re programming complex data-management features or sophisticated user-interface requirements.
+
+If you want more information on macros, including converting macros to VBA code, turn to Chapter 22.
+
+If you’re new to programming, try not to become frustrated or overwhelmed by the seeming complexity of the VBA language. As with any new skill, you’re much better off approaching VBA programming by taking it one step at a time. You need to learn exactly what VBA can do for you and your applications, along with the general syntax, statement structure, and how to compose procedures using the VBA language.
+
+This book is chock-full of examples showing you how to use the VBA language to accomplish useful tasks. Each of the procedures you see in this book has been tested and verified to work correctly. If you find that a bit of code in this book doesn’t work as expected, take the time to ensure that you’ve used the example code exactly as presented in this book. Often, the most difficult problems implementing any programming technique stem from simple errors, such as misspelling or forgetting to include a comma or parentheses where required.

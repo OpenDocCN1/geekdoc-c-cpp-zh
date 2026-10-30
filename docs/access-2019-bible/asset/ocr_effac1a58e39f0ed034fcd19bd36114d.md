@@ -1,0 +1,17 @@
+# Understanding variable scope and lifetime
+
+A variable is more than just a simple data repository. Every variable is a dynamic part of the application and may be used at different times during the program's execution. The declaration of a variable establishes more than just the name and data type of the variable. Depending on the keyword used to declare the variable and the placement of the variable's declaration in the program's code, the variable may be visible to large portions of the application's code. Alternatively, a different placement may severely limit where the variable can be referenced in the procedures within the application.
+
+# Examining scope
+
+The visibility of a variable or procedure is called its scope. A variable that can be seen and used by any procedure in the application is said to have public scope. A variable that is available to any procedure in one module is scoped private to that module. A variable that is usable by a single procedure is said to have scope that is local to that procedure.
+
+There are many analogies for public and private scope. For example, a company is likely to have a phone number that is quite public (the main switchboard number) and is listed in the phone book and on the company's website; each office or room within the company might have its own extension number that is private within the company. A large office building has a public street address that is known by anyone passing by the building; each office or suite within that building will have a number that is private within that building.
+
+Variables declared within a procedure are local to that procedure and can't be used or referenced outside that procedure. Most of the listings in this chapter have included a number of variables declared within the procedures in the listings. In each case, the Dim keyword was used to define the variable. Dim is an instruction to VBA to allocate enough memory to contain the variable that follows the Dim keyword. Therefore, Dim lMyInt As Long allocates less memory (4 bytes) than Dim dMyDouble As Double (8 bytes).
+
+The Public (or Global) keyword makes a variable visible throughout an application. Public can be used only at the module level and can't be used within a procedure. Most often, the Public keyword is used only in standard (stand-alone) modules that are not part of a form. Figure 25.4 illustrates variables declared with three very different scopes. This code can be found in the modScope module in Chapter25.accdb.
+
+Every variable declared in the declarations section of a standard module is private to that module unless the Public keyword is used. Private restricts the visibility of a variable to the module in which the variable is declared. In Figure 25.4, the gsAppName variable declared with Public scope at the top of the module will be seen everywhere in the application while the mbIsComplete variable declared in the next statement is accessible only within the module. The sMessage variable is declared inside a procedure, so only that procedure can see it.
+
+Misunderstanding variable scope is a major cause of serious bugs in many Access applications. It's entirely possible to have two same-named variables with different scopes in an Access VBA project. When ambiguity exists, Access always uses the "closest" declared variable.

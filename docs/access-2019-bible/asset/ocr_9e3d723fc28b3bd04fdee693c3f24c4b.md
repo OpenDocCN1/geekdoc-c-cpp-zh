@@ -1,0 +1,3 @@
+intentional error. The error handler is restarted after the statements with the intentional errors. Above the error handling section, the clean-up and exiting statements are executed. If there are no errors, this code will be run and the procedure will complete without running the error handling code.
+
+The error handling section displays a message using the Description property of the Err object. There is a global variable, gbDebugMode, that the developer can set to True during debugging and False when the application is sent to the users. If gbDebugMode is True, the program stops and the developer can step through the code to investigate the error. Otherwise, the ErrExit portion of the code is executed and the user sees only the message box.

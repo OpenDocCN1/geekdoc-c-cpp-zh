@@ -1,0 +1,17 @@
+# Part I: Access Building Blocks
+
+Databases aren’t only for computers. There are also manual databases; we sometimes refer to these as manual filing systems or manual database systems. These filing systems usually consist of people, papers, folders, and filing cabinets—paper is the key to a manual database system. In manual database systems, you typically have in and out baskets and some type of formal filing method. You access information manually by opening a file cabinet, taking out a file folder, and finding the correct piece of paper. Users fill out paper forms for input, perhaps by using a keyboard to input information that’s printed on forms. You find information by manually sorting the papers or by copying information from many papers to another piece of paper (or even into an Excel spreadsheet). You may use a spreadsheet or calculator to analyze the data or display it in new and interesting ways.
+
+An Access database is nothing more than an automated version of the filing and retrieval functions of a paper filing system. Access databases store information in a carefully defined structure. Access tables store a variety of different kinds of data, from simple lines of text (such as name and address) to complex data (such as pictures, sounds, or video images). Storing data in a precise format enables a database management system (DBMS) like Access to turn data into useful information.
+
+Tables serve as the primary data repository in an Access database. Queries, forms, and reports provide access to the data, enabling a user to add or extract data and presenting the data in useful ways. Most developers add macros or Visual Basic for Applications (VBA) code to forms and reports to make their Access applications easier to use.
+
+A relational database management system (RDBMS), such as Access, stores data in related tables. For example, a table containing employee data (names and addresses) may be related to a table containing payroll information (pay date, pay amount, and check number).
+
+Queries allow the user to ask complex questions (such as “What is the sum of all paychecks issued to Jane Doe in 2012?”) from these related tables, with the answers displayed as onscreen forms and printed reports.
+
+One of the fundamental differences between a relational database and a manual filing system is that, in a relational database system, data for a single person or item may be stored in separate tables. For example, in a patient management system, the patient’s name, address, and other contact information is likely to be stored in a different table from the table holding patient treatments. In fact, the treatment table holds all treatment information for all patients, and a patient identifier (usually a number) is used to look up an individual patient’s treatments in the treatment table.
+
+In Access, a database is the overall container for the data and associated objects. It’s more than the collection of tables, however—a database includes many types of objects, including queries, forms, reports, macros, and code modules.
+
+As you open an Access database, the objects (tables, queries, and so on) in the database are presented for you to work with. You may open several copies of Access at the same time and simultaneously work with more than one database, if needed.
