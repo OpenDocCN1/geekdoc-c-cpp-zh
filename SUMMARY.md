@@ -71,6 +71,7 @@
 +   [Absolute C++ 第6版 全球版](docs/absolute-c-6th-edition-global-edition/README.md)
 +   [Absolute C++ 包含 MyProgrammingLab 及 Pearson eText -- 访问卡包（第5版）](docs/absolute-c-plus-myprogramminglab-with-pearson-etext----acces/README.md)
 +   [Access® 2019 圣经](docs/access-2019-bible/README.md)
++   [自适应代码：设计模式与SOLID原则的敏捷编码（开发人员最佳实践）](docs/adaptive-code-agile-coding-with-design-patterns-and-solid-pr/README.md)
 +   [C# 自适应代码：设计模式与 SOLID 原则敏捷编码 (开发者参考)](docs/adaptive-code-via-c-agile-coding-with-design-patterns-and-so/README.md)
 +   [Adobe Cold Fusion 9 Web Application 构建指南 - 卷 2 - 应用开发](docs/adobe-cold-fusion-9-web-application-construction-kit---volum/README.md)
 +   [Adobe ColdFusion 9 Web 应用构建指南，卷 3：高级应用开发](docs/adobe-coldfusion-9-web-application-construction-kit-volume-3/README.md)

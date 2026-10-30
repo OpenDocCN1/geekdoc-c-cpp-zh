@@ -1,0 +1,17 @@
+# Analysis
+
+During the delivery of software products, your process should aid you in making decisions. It should indicate the overall health of your progress. Ideally, the process—or its artefacts—should not only show clearly that something is wrong, but also point to what it is that is wrong.
+
+Kanban generates artefacts that indeed allow for a diagnosis of what is failing on a feature’s path to completion. This section introduces the Key Performance Indicators (KPIs) of *lead time* and *cycle time*. The *cumulative flow diagram* is also explained, in addition to how to differentiate between a healthy flow and a range of unhealthy flows.
+
+# Lead time and cycle time
+
+Work items start in a backlog column on the Kanban board. This could be a “To Do” column or a “Wait” column. It could even be a generic “Backlog” column. Regardless of its name, such a column is where you place work that has been requested but not yet started. It is possible that anyone can put anything into the backlog at any time. However, how long will it take for items placed on the backlog to be done? You can answer this question by analyzing the team’s throughput of work and extracting metrics such as lead time and cycle time.
+
+The backlog itself is prioritized so that items toward the top of the column are of higher priority than those toward the bottom of the column. When an item is added to the backlog, the date that it was placed there should be noted. This can be written directly on the ticket if your Kanban board is physical. Most virtual Kanban board tools will automatically store the date that a work item was added to the backlog.
+
+When there is capacity available in the next column, the ticket is moved into an in-progress column. As earlier examples showed, there can be multiple columns that are collectively classified as in-progress. Generally, the first column on the Kanban board is the backlog, and the final column is reserved for work items that are done. All columns between these two, therefore, are considered in-progress columns. When a work item is moved into the first in-progress column, the date is again written on the card—or otherwise noted.
+
+After all work has been completed for a piece of work, it is finally moved into the done column. This is a column without a work-in-progress limit, so it can hold any number of work items. The definition of done that has been defined for each phase of work in progress should act as a quality gate for whether a ticket is done or not. When the work item enters the done column, a final date is captured on the item.
+
+The time spent in each of the phases of delivery can be calculated by using each of the dates that have been written on the card. The time that a work item was waiting is the difference between the date that the card moved into the first-in-progress column and the date that the card first entered the backlog. The time that the work item was in progress is the difference between the date that the card was moved into the done column and the date that work first started for this item. This latter timing for a work item is also known as the *cycle time*. Adding the two timings together produces the work item’s *lead time*.
