@@ -1,0 +1,265 @@
+
+`_POSIX_ASYNCHRONOUS_IO` 常量，54、57  
+`_POSIX_ASYNC_IO` 常量，55  
+`_POSIX_BARRIERS` 常量，54、57  
+`_POSIX_CHILD_MAX` 常量，39–40  
+`_POSIX_CLOWN_RESTRICTED` 常量，55、57、110  
+`_POSIX_CLOCKRES_MIN` 常量，38  
+`_POSIX_CLOCK_SELECTION` 常量，54、57  
+`_POSIX_CPUTIME` 常量，31、189  
+`_POSIX_C_SOURCE` 常量，57–58、84、240  
+`_POSIX_DELAYTIMER_MAX` 常量，39–40  
+`posix_fadvise` 函数，452  
+`posix_fallocate` 函数，452  
+`_POSIX_FSYNC` 常量，31  
+`_POSIX_HOST_NAME_MAX` 常量，39–40  
+`_POSIX_IPv6` 常量，31  
+`_POSIX_JOB_CONTROL` 常量，57  
+`_POSIX_LINK_MAX` 常量，39  
+`_POSIX_LOGIN_NAME_MAX` 常量，39–40  
+`_POSIXLY_CORRECT` 环境变量，111  
+`_POSIX_MAPPED_FILES` 常量，54、57  
+`_POSIX_MAX_CANON` 常量，39  
+`_POSIX_MAX_INPUT` 常量，39  
+`_POSIX_MEMLOCK` 常量，31  
+`_POSIX_MEMLOCK_RANGE` 常量，31  
+`_POSIX_MEMORY_PROTECTION` 常量，54、57  
+`_POSIX_MESSAGE_PASSING` 常量，31  
+`_POSIX_MONOTONIC_CLOCK` 常量，31、189  
+`_POSIX_NAME_MAX` 常量，39、580  
+`_POSIX_NGROUPS_MAX` 常量，39  
+`_POSIX_NO_TRUNC` 常量，55、57、65  
+`_POSIX_OPEN_MAX` 常量，39–40  
+`posix_openpt` 函数，452、722–725；定义于 722  
+`_POSIX_PATH_MAX` 常量，39–40、696–697  
+`_POSIX_PIPE_BUF` 常量，39  
+`_POSIX_PRIO_IO` 常量，55  
+`_POSIX_PRIORITIZED_IO` 常量，31  
+`_POSIX_PRIORITY_SCHEDULING` 常量，31  
+`_POSIX_RAW_SOCKETS` 常量，31  
+`_POSIX_READER_WRITER_LOCKS` 常量，55、57  
+`_POSIX_REALTIME_SIGNALS` 常量，55、57  
+`_POSIX_RE_DUP_MAX` 常量，39  
+`_POSIX_RTSIG_MAX` 常量，39–40  
+`_POSIX_SAVED_IDS` 常量，57、98、256、337  
+`_POSIX_SEMAPHORES` 常量，55、57  
+`_POSIX_SEM_NSEMS_MAX` 常量，39–40  
+`_POSIX_SEM_VALUE_MAX` 常量，39–40  
+`_POSIX_SHARED_MEMORY_OBJECTS` 常量，31  
+`_POSIX_SHELL` 常量，57  
+`_POSIX_SIGQUEUE_MAX` 常量，39–40  
+`_POSIX_SOURCE` 常量，57  
+`_POSIX_SPAWN` 常量，31  
+`posix_spawn` 函数，452  
+`posix_spawnp` 函数，452  
+`_POSIX_SPIN_LOCKS` 常量，55、57  
+`_POSIX_SPORADIC_SERVER` 常量，31  
+`_POSIX_SSIZE_MAX` 常量，39  
+`_POSIX_STREAM_MAX` 常量，39–40  
+`_POSIX_SYMLINK_MAX` 常量，39  
+`_POSIX_SYNC_IO_MAX` 常量，39–40  
+`_POSIX_SYNCHRONIZED_IO` 常量，31  
+`_POSIX_SYNC_IO` 常量，55  
+`_POSIX_THREAD_ATTR_STACKADDR` 常量，31、429  
+`_POSIX_THREAD_ATTR_STACKSIZE` 常量，31、429  
+`_POSIX_THREAD_CPUTIME` 常量，31、189  
+`_POSIX_THREAD_PRIO_INHERIT` 常量，31  
+`_POSIX_THREAD_PRIO_PROTECT` 常量，31  
+`_POSIX_THREAD_PRIORITY_SCHEDULING` 常量，31  
+`_POSIX_THREAD_PROCESS_SHARED` 常量，31、431  
+`_POSIX_THREAD_ROBUST_PRIO_INHERIT` 常量，31  
+`_POSIX_THREAD_ROBUST_PRIO_PROTECT` 常量，31  
+`_POSIX_THREADS` 常量，55、57、384  
+`_POSIX_THREADS_SAFE_FUNCTIONS` 常量，55、57、442  
+`_POSIX_THREAD_SPORADIC_SERVER` 常量，31  
+`_POSIX_TIMEOUTS` 常量，55  
+`_POSIX_TIMER_MAX` 常量，39–40  
+`_POSIX_TIMERS` 常量，55、57  
+`_POSIX_TIMESTAMP_RESOLUTION` 常量，44  
+`posix_trace_event` 函数，331  
+`_POSIX_TTY_NAME_MAX` 常量，39–40  
+`posix_typed_mem_open` 函数，452  
+`_POSIX_TYPED_MEMORY_OBJECTS` 常量，31  
+`_POSIX_TZNAME_MAX` 常量，39–40  
+`_POSIX_V6_ILP32_OFF32` 常量，70  
+`_POSIX_V6_ILP32_OFFBIG` 常量，70  
+`_POSIX_V6_LP64_OFF64` 常量，70  
+`_POSIX_V6_LP64_OFFBIG` 常量，70  
+`_POSIX_V7_ILP32_OFF32` 常量，70  
+`_POSIX_V7_ILP32_OFFBIG` 常量，70  
+`_POSIX_V7_LP64_OFF64` 常量，70  
+`_POSIX_V7_LP64_OFFBIG` 常量，70  
+`_POSIX_V7_LPBIG_OFF64` 常量，70  
+`_POSIX_DISABLE` 常量，55、57、678–679  
+`_POSIX_VERSION` 常量，57、188  
+PowerPC，xxi–xxii、xxvii  
+`_P_PGID` 常量，244  
+
+`pthread_attr_setstacksize` 函数，429–430  
+  定义于 430  
+`pthread_attr_t` 数据类型，427–428、430、451  
+`pthread_barrierattr_destroy` 函数，441  
+  定义于 441  
+`pthread_barrierattr_getpshared` 函数，441  
+  定义于 441  
+`pthread_barrierattr_init` 函数，441  
+  定义于 441  
+`pthread_barrierattr_setpshared` 函数，441  
+  定义于 441  
+`pthread_barrier_destroy` 函数，418–419  
+  定义于 418  
+`pthread_barrier_init` 函数，418–419、421  
+  定义于 418  
+`PTHREAD_BARRIER_SERIAL_THREAD` 常量，419、422  
+`pthread_barrier_t` 数据类型，419  
+`pthread_barrier_wait` 函数，419–423  
+  定义于 419  
+`pthread_cancel` 函数，393、451、453、828  
+  定义于 393  
+`PTHREAD_CANCEL_ASYNCHRONOUS` 常量，453  
+`PTHREAD_CANCEL_DEFERRED` 常量，453  
+`PTHREAD_CANCEL_DISABLE` 常量，451  
+`PTHREAD_CANCEL_ENABLE` 常量，451  
+`pthread_cleanup_pop` 函数，394–396、827、829  
+  定义于 394  
+`pthread_cleanup_push` 函数，394–396、824  
+  定义于 394  
+`pthread_condattr_destroy` 函数，440  
+  定义于 440  
+`pthread_condattr_getclock` 函数，441  
+  定义于 441  
+`pthread_condattr_getpshared` 函数，440  
+  定义于 440  
+`pthread_condattr_init` 函数，440  
+  定义于 440  
+`pthread_condattr_setclock` 函数，441  
+  定义于 441  
+`pthread_condattr_setpshared` 函数，440  
+  定义于 440  
+`pthread_condattr_t` 数据类型，441  
+`pthread_cond_broadcast` 函数，415、422–423、927  
+  定义于 415  
+`pthread_cond_destroy` 函数，414、462  
+  定义于 414  
+
+`pthread_cond_init` 函数，414、462、941  
+  定义于 414  
+`PTHREAD_COND_INITIALIZER` 常量，413、416、455、814  
+`pthread_cond_signal` 函数，415–416、456、821、942  
+  定义于 415  
+`pthread_cond_t` 数据类型，413、416、455、814、940  
+`pthread_cond_timedwait` 函数，414–415、434、440–441、451  
+  定义于 414  
+`pthread_cond_wait` 函数，414–416、434、451、456、832、927、941  
+  定义于 414  
+`pthread_create` 函数，385–388、390–392、395、397、421、427–428、456、460、477、632、817、926、941  
+  定义于 385  
+`PTHREAD_CREATE_DETACHED` 常量，428  
+`PTHREAD_CREATE_JOINABLE` 常量，428  
+`PTHREAD_DESTRUCTOR_ITERATIONS` 常量，426、447  
+`pthread_detach` 函数，396–397、427  
+  定义于 397  
+`pthread_equal` 函数，385、412  
+`pthread_exit` 函数，198、236、389–391、393–396、447、824–829  
+  定义于 389  
+`pthread_getspecific` 函数，449–450  
+  定义于 449  
+`<pthread.h>` 头文件，29  
+`pthread_join` 函数，389–391、395–396、418、451、926  
+  定义于 389  
+`pthread_key_create` 函数，447–448、450  
+  定义于 447  
+`pthread_key_delete` 函数，447–448  
+  定义于 448  
+`PTHREAD_KEYS_MAX` 常量，426、447  
+`pthread_key_t` 数据类型，449  
+`pthread_kill` 函数，455  
+  定义于 455  
+`pthread_mutexattr_destroy` 函数，431、445  
+  定义于 431  
+`pthread_mutexattr_getpshared` 函数，431  
+  定义于 431  
+`pthread_mutexattr_getrobust` 函数，432  
+  定义于 432  
+`pthread_mutexattr_gettype` 函数，434  
+
+定义于 434  
+`pthread_mutexattr_init` 函数，431、438、442  
+定义于 431  
+`pthread_mutexattr_setpshared` 函数，431  
+定义于 431  
+`pthread_mutexattr_setrobust` 函数，432  
+定义于 432  
+`pthread_mutexattr_settype` 函数，434、438、445  
+定义于 434  
+`pthread_mutexattr_t` 数据类型，430–431、438、445  
+`pthread_mutex_consistent` 函数，432–433、571  
+定义于 433  
+`PTHREAD_MUTEX_DEFAULT` 常量，433–434  
+`pthread_mutex_destroy` 函数，400–401、404、407  
+定义于 400  
+`PTHREAD_MUTEX_ERRORCHECK` 常量，433–434  
+`pthread_mutex_init` 函数，400–401、403、405、431、428、445、941  
+定义于 400  
+`PTHREAD_MUTEX_INITIALIZER` 常量，400、402、407、416、431、449、459、813–814  
+`pthread_mutex_lock` 函数，400–401、403–404、406–408、416、422–423、432、438、445、450、456、459–460、820–821、828–830、832–833、941–942  
+定义于 400  
+`PTHREAD_MUTEX_NORMAL` 常量，433–434  
+`PTHREAD_MUTEX_RECURSIVE` 常量，433–434、438、441  
+`PTHREAD_MUTEX_ROBUST` 常量，432  
+`PTHREAD_MUTEX_STALLED` 常量，432  
+`pthread_mutex_t` 数据类型，400–401、403、405、408、416、438、445、449、455、459、813–814、940  
+`pthread_mutex_timedlock` 函数，407–409、413  
+定义于 407  
+`pthread_mutex_trylock` 函数，400、402  
+定义于 400  
+`pthread_mutex_unlock` 函数，400–401、403–404、406–407、416、422–423、438–439、445、450、456、460、820–821、828–830、832–833、941–942  
+定义于 400  
+`pthread_once` 函数，445、448、450、928  
+定义于 448  
+`PTHREAD_ONCE_INIT` 常量，445、448–449  
+`pthread_once_t` 数据类型，445、449  
+`PTHREAD_PROCESS_PRIVATE` 常量，417、431、442  
+`PTHREAD_PROCESS_SHARED` 常量，417、431、442、571  
+`pthread_rwlockattr_destroy` 函数，439  
+定义于 439  
+`pthread_rwlockattr_getpshared` 函数，440  
+定义于 440  
+`pthread_rwlockattr_init` 函数，439  
+定义于 439  
+`pthread_rwlockattr_setpshared` 函数，440  
+定义于 440  
+`pthread_rwlockattr_t` 数据类型，439  
+`pthread_rwlock_destroy` 函数，409–410  
+定义于 409  
+`pthread_rwlock_init` 函数，409、411  
+定义于 409  
+`PTHREAD_RWLOCK_INITIALIZER` 常量，409  
+`pthread_rwlock_rdlock` 函数，410、412、452  
+定义于 410  
+`pthread_rwlock_t` 数据类型，411  
+`pthread_rwlock_timedrdlock` 函数，413、452  
+定义于 413  
+`pthread_rwlock_timedwrlock` 函数，413、452  
+定义于 413  
+`pthread_rwlock_tryrdlock` 函数，410  
+定义于 410  
+`pthread_rwlock_trywrlock` 函数，410  
+定义于 410  
+`pthread_rwlock_unlock` 函数，410–412  
+定义于 410  
+`pthread_rwlock_wrlock` 函数，410–412、452  
+定义于 410  
+pthread，27、229、384、426  
+`pthread_self` 函数，385、387、391、824  
+定义于 385  
+`pthread_setcancelstate` 函数，451  
+定义于 451  
+`pthread_setcanceltype` 函数，453  
+定义于 453  
+`pthread_setspecific` 函数，449–450  
+定义于 449  
+`pthread_sigmask` 函数，453–454、477、815  
+定义于 454  
+`pthread_spin_destroy` 函数，417  
+定义于 417  

@@ -1,0 +1,15 @@
+STATUS The BSD status-request character. This character is recognized on input in extended, canonical mode (both IEXTEN and ICANON flags set) and generates the SIGINFO signal, which is sent to all processes in the foreground process group (refer to Figure 9.7). Additionally, if the NOKERNINFO flag is not set, status information on the foreground process group is displayed on the terminal. This character is discarded when processed (i.e., it is not passed to the process).
+
+STOP The stop character. This character is recognized on input if the IXON flag is set and is automatically generated as output if the IXOFF flag is set. A received STOP character with IXON set stops the output. In this case, the STOP character is discarded when processed (i.e., it is not passed to the process). The stopped output is restarted when a START character is entered.
+
+When IXOFF is set, the terminal driver automatically generates a STOP character to prevent the input buffer from overflowing.
+
+SUSP The suspend job-control character. This character is recognized on input if job control is supported and if the ISIG flag is set. The suspend character generates the SIGTSTP signal, which is sent to all processes in the foreground process group (refer to Figure 9.7). This character is discarded when processed (i.e., it is not passed to the process).
+
+WERASE The word-erase character. This character is recognized on input in extended, canonical mode (both IEXTEN and ICANON flags set) and causes the previous word to be erased. First, it skips backward over any white space (spaces or tabs), then skips backward over the previous token, leaving the cursor positioned where the first character of the previous token was located. Normally, the previous token ends when a white space character is encountered. We can change this behavior, however, by setting the ALTWERASE flag. This flag causes the previous token to end when the first nonalphanumeric character is encountered. The word-erase character is discarded when processed (i.e., it is not passed to the process).
+
+Another “character” that we need to define for terminal devices is the BREAK character. BREAK is not really a character, but rather a condition that occurs during asynchronous serial data transmission. A BREAK condition is signaled to the device driver in various ways, depending on the serial interface.
+
+> Most old serial terminals have a key labeled BREAK that generates the BREAK condition, which is why most people think of BREAK as a character. Some newer terminal keyboards don’t have a BREAK key. On PCs, the break key might be mapped for another purpose. For example, the Windows command interpreter can be interrupted by pressing Control-BREAK.
+
+For asynchronous serial data transmission, a BREAK is a sequence of zero-valued bits that continues for longer than the time required to send one byte. The entire sequence of zero-valued bits is considered a single BREAK. In Section 18.8, we’ll see how to send a BREAK with the tcsendbreak function.
