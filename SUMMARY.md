@@ -84,6 +84,7 @@
 +   [高级 Mac OS X 编程：Big Nerd Ranch 指南](docs/advanced-mac-os-x-programming-the-big-nerd-ranch-guide-big-n/README.md)
 +   [使用 Maple 进行高级问题求解：应用数学、运筹学、商业分析与决策分析（数学教材）](docs/advanced-problem-solving-using-maple-applied-mathematics-ope/README.md)
 +   [UNIX 环境高级编程 第三版](docs/advanced-programming-in-the-unix-environment-3rd-edition/README.md)
++   [Visual Basic 2008 高级编程使用指南](docs/advanced-programming-using-visual-basic-2008/README.md)
 +   [[计算机进展] ｜｜ 软件工程与软件保证进展](docs/advances-in-computers-advances-in-software-engineering-and-s/README.md)
 +   [计算机进展（第93卷）](docs/advances-in-computers-volume-93/README.md)
 +   [计算机进展第 93 卷 ｜ Web 测试最新进展](docs/advances-in-computers-volume-93-recent-advances-in-web-testi/README.md)

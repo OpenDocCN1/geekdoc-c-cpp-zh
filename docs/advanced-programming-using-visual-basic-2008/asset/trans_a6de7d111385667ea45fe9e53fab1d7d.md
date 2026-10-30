@@ -1,0 +1,324 @@
+
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_58_0.png)
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_58_1.png)
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_58_2.png)
+
+放置对象、属性和方法。确定表单和控件的对象及其属性设置。图 1.35 显示了程序类的图表。
+
+## MainForm
+
+| Object | Property | Setting |
+|---|---|---|
+| MainForm | Text | R ’n R for Reading and Refreshment |
+| MainForm | IsMdiContainer | True |
+| MainForm | ContextMenuStrip | ContextMenuStrip |
+| MenuStrip | MdiWindowListItem | WindowToolStripMenuItem |
+| FileToolStripMenuItem | Text | &File |
+| ExitToolStripMenuItem | Text | E&xit |
+| ViewToolStripMenuItem | Text | &View |
+| PayrollToolStripMenuItem | Text | &Payroll Form |
+| SummaryToolStripMenuItem | Text | &Summary |
+| WindowToolStripMenuItem | Text | &Window |
+
+动手编程示例的类图。
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_59_0.png)
+
+| Object | Property | Setting |
+|---|---|---|
+| TileVerticalToolStripMenuItem | Text | Tile & Vertical |
+| TileHorizontalToolStripMenuItem | Text | Tile & Horizontal |
+| CascadeToolStripMenuItem | Text | &Cascade |
+| HelpToolStripMenuItem | Text | &Help |
+| AboutToolStripMenuItem | Text | &About |
+| ToolStrip1 | Items collection | Payroll
+Summary
+Help |
+| StatusStrip1 | Items collection | Add 2 labels for the date and time |
+| ContextMenu | Items collection | Payroll
+Summary
+Help |
+
+| Procedure | Actions—Pseudocode |
+|---|---|
+| MainForm_Load | Retrieve the date and time for the StatusStrip. |
+| ExitToolStripMenuItem_Click | Close the form. |
+| AboutToolStripMenuItem_Click | Show the AboutBox form. |
+| PayrollFormToolStripMenuItem_Click | Create an instance of the Payroll form.
+Set the MdiParent property.
+Show the form. |
+| SummaryToolStripMenuItem_Click | Create an instance of the Summary form.
+Set the MdiParent property.
+Show the form. |
+
+## PayrollForm
+
+| Object | Property | Setting |
+|---|---|---|
+| PayrollForm | Text | Payroll |
+| CloseButton | Text | &Close Form |
+
+| Procedure | Actions—Pseudocode |
+|---|---|
+| CloseButton_Click | Close the form. |
+
+| Property |  |
+|---|---|
+| Instance | Read Only
+If an instance does not exist
+Create a new instance. |
+
+## Summary Form
+
+| Object | Property | Setting |
+|---|---|---|
+| SummaryForm | Text | Payroll Summary |
+| CloseButton | Text | &Close Form |
+
+| Procedure | Actions—Pseudocode |
+|---|---|
+| CloseButton_Click | Close the form. |
+
+| Property |  |
+|---|---|
+| Instance | Read Only
+If an instance does not exist
+Create a new instance. |
+
+## AboutBox
+
+| Object | Property | Setting |
+|---|---|---|
+| AboutBox1 | FormBorderStyle | FixedDialog |
+| Labels to display information about the company and application. |  |  |
+| OKButton | Text | &OK |
+
+| Procedure | Actions—Pseudocode |
+|---|---|
+| AboutBox_Load | Retrieve the attributes and set up the labels. (Code already in template file.) |
+| OKButton_Click | Close the form. |
+
+**Splash Screen** Include a graphic and labels identifying the company and application. You can use the Splash Screen template and replace the graphic. Add code to hold the form on the screen for a few seconds.
+
+**Assembly Information** Modify the assembly information:
+
+| Property | Setting |
+|---|---|
+| Title | Payroll Application |
+| Company | R 'n R for Reading and Refreshment |
+| Product | Books and Drinks |
+| Copyright | Copyright © 2009 |
+
+**Write the Project** Following the sketches in Figure 1.34, create the forms. Figure 1.36 shows the completed forms.
+
+- Set the properties of each of the objects, as you have planned. Don’t forget to set the tab order on all forms.
+- Write the code for the forms. Working from the pseudocode, write each procedure.
+- Modify the assembly information in the Project Designer to hold the company attributes.
+- When you complete the code, test each of the options. Make sure that all menu items work, the context menus work, and ToolTips appear for each button.
+
+## Figure 1.36
+
+R 'n R Payroll 项目的表单；a. 主表单（父表单）；b. 薪资表单；c. 汇总表单；d. 关于对话框；e. 启动画面。
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_62_0.png)
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_62_1.png)
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_62_2.png)
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_62_3.png)
+
+![](img/e2635c7dd07a6ad20d386d5f4f3c5310_62_4.png)
+
+## The Project Coding Solution
+
+## Main Form
+
+'Program:      Ch01HandsOn
+'Programmer:   Bradley/Millspaugh
+'Form:         MainForm
+'Date:         June 2009
+'Description:  MDI parent form; contains the menu and displays
+'              the various forms.
+
+```
+Public Class MainForm
+
+Private Sub MainForm_Load(ByVal sender As System.Object, _
+ByVal e As System.EventArgs) Handles MyBase.Load
+' Display the date in the status bar.
+
+DateToolStripStatusLabel.Text = Now.ToShortDateString
+TimeToolStripStatusLabel.Text = Now.ToLongTimeString
+End Sub
+```
+
+```
+Private Sub TileVerticalToolStripMenuItem_Click(
+ByVal sender As System.Object, ByVal e As System.EventArgs) _
+Handles TileVerticalToolStripMenuItem.Click
+' Display the open windows tiled vertically.
+
+Me.LayoutMdi(MdiLayout.TileVertical)
+End Sub
+```
+
+```
+Private Sub TileHorizontalToolStripMenuItem_Click(
+ByVal sender As Object, ByVal e As System.EventArgs) _
+Handles TileHorizontalToolStripMenuItem.Click
+' Display the open windows tiled horizontally.
+
+Me.LayoutMdi(MdiLayout.TileHorizontal)
+End Sub
+```
+
+```
+Private Sub CascadeToolStripMenuItem_Click(ByVal sender As Object, _
+ByVal e As System.EventArgs) Handles CascadeToolStripMenuItem.Click
+' Cascade the open windows
+
+Me.LayoutMdi(MdiLayout.Cascade)
+End Sub
+```
+
+```
+Private Sub PayrollFormToolStripMenuItem_Click(
+ByVal sender As System.Object, ByVal e As System.EventArgs) _
+Handles PayrollFormToolStripMenuItem.Click, PayrollToolStripButton.Click
+' Create an instance of the payroll form.
+Dim APayrollForm As PayrollForm = PayrollForm.Instance
+
+With APayrollForm
+.MdiParent = Me
+.Show()
+.Focus()
+End With
+End Sub
+```
+
+```
+Private Sub SummaryToolStripMenuItem_Click(ByVal sender As System.Object, _
+ByVal e As System.EventArgs)
+Handles SummaryToolStripMenuItem.Click, SummaryToolStripButton.Click, _
+SummaryFormToolStripMenuItem.Click
+' Create an instance of the summary form.
+Dim ASummaryForm As SummaryForm = SummaryForm.Instance
+
+With ASummaryForm
+    .MdiParent = Me
+    .Show()
+    .Focus()
+End With
+End Sub
+
+Private Sub ExitToolStripMenuItem_Click(ByVal sender As System.Object, _
+ByVal e As System.EventArgs) Handles ExitToolStripMenuItem.Click
+' Terminate the program.
+' Closing the startup form ends the program.
+Me.Close()
+End Sub
+
+Private Sub AboutToolStripMenuItem_Click(ByVal sender As System.Object, _
+ByVal e As System.EventArgs) _
+Handles AboutToolStripMenuItem.Click, AboutToolStripButton.Click
+' Display the About Box form with attribute information.
+
+Dim AnAboutBox As New AboutBox1
+AnAboutBox.ShowDialog()
+End Sub
+
+Private Sub ClockTimer_Tick(ByVal sender As System.Object, _
+ByVal e As System.EventArgs) Handles Timer1.Tick
+' Update the date and time on the status bar.
+' Interval = 1000 milliseconds (one second).
+
+DateToolStripStatusLabel.Text = Now.ToShortDateString()
+TimeToolStripStatusLabel.Text = Now.ToLongTimeString()
+End Sub
+End Class
+```
+
+## Payroll Form
+
+'Program: Ch01HandsOn
+'Programmer: Bradley/Millspaugh
+'Form: PayrollForm
+'Date: June 2009
+'Description: The Payroll form for the MDI application.
+' Uses the singleton design pattern to ensure that only one
+' instance of the form can be created.
+' Note: This form will be used for calculations in
+' Chapter 2.
+
+```
+Public Class PayrollForm
+Private Shared AnInstance As PayrollForm
+```
+
+```
+```vb
+Public Shared ReadOnly Property Instance() As PayrollForm
+    Get
+        If AnInstance Is Nothing Then
+            AnInstance = New PayrollForm
+        End If
+        Return AnInstance
+    End Get
+End Property
+
+Private Sub CloseButton_Click(ByVal sender As System.Object, _
+    ByVal e As System.EventArgs) Handles closeButton.Click
+    ' Close the form.
+
+    Me.Close()
+End Sub
+
+Private Sub PayrollForm_FormClosing(ByVal sender As Object, _
+    ByVal e As System.Windows.Forms.FormClosingEventArgs) _
+    Handles Me.FormClosing
+    ' Release the instance of this form.
+
+    AnInstance = Nothing
+End Sub
+End Class
+```
+```
+
+## Summary Form
+
+```
+```vb
+'Program:       Ch01HandsOn
+'Programmer:    Bradley/Millspaugh
+'Form:          SummaryForm
+'Date:          June 2009
+'Description:   Summary form for an MDI application.
+'               Uses the singleton design pattern to ensure that only one
+'               instance of the form can be created.
+'               Note: This form will be used to display the result of
+'               calculations in Chapter 2.
+
+Public Class SummaryForm
+    Private Shared AnInstance As SummaryForm
+
+    Public Shared ReadOnly Property Instance() As SummaryForm
+        Get
+            If AnInstance Is Nothing Then
+                AnInstance = New SummaryForm
+            End If
+            Return AnInstance
+        End Get
+    End Property
+
+    Private Sub CloseButton_Click(ByVal sender As System.Object, _
+        ByVal e As System.EventArgs) Handles CloseButton.Click
+        ' Close the form.
+
+        Me.Close()
+    End Sub
+```
+
