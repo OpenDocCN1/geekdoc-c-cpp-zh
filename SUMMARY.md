@@ -138,6 +138,7 @@
 +   [ANSI C 编程：循序渐进学习 ANSI C](docs/ansi-c-programming-learn-ansi-c-step-by-step/README.md)
 +   [ANSI C 面向对象编程（前五章）](docs/ansic-oop/README.md)
 +   [C Primer Plus 第 5 版编程练习答案](docs/answers-for-programming-exercises-in-c-primer-plus-5rd-editi/README.md)
++   [反脆弱软件：微服务适应性软件构建指南](docs/antifragile-software-building-adaptable-software-with-micros/README.md)
 +   [C++ API 设计指南](docs/api-design-for-c/README.md)
 +   [C++ API 设计（第二版）](docs/api-design-for-c-second-edition/README.md)
 +   [Asp.Net Core Web API API 开发使用指南](docs/api-development-using-aspnet-core-web-api/README.md)

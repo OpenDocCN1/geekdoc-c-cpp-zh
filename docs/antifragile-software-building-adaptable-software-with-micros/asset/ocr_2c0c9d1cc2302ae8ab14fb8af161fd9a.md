@@ -1,0 +1,5 @@
+Martin Fowler famously and pithily stated that architecture was about the *Big Decisions*, but in the case of microservices and antifragility we're trying to make those decisions smaller and all up-side.
+
+Microservices can, in themselves, often be re-written in a very short amount of time²⁹. The reduction of big decisions into smaller, frequent decisions is a key factor in the adaptability, and therefore potential anifragility, of the microservice-based approach.
+
+In addition, microservice-based systems are polyglot by definition with each microservice loosely coupled with its collaborators and running and evolving in its own space. So questions of which technology that would have deserved the monicker of being *the big decisions* shouldn't be any more. They are scoped to the specific service.

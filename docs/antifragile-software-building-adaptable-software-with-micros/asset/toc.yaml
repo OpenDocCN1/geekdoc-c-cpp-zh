@@ -1,0 +1,50 @@
+level_changes:
+- line: 155
+  before: 2
+  after: 3
+- line: 161
+  before: 2
+  after: 3
+- line: 184
+  before: 2
+  after: 3
+- line: 196
+  before: 2
+  after: 3
+- line: 206
+  before: 2
+  after: 3
+- line: 311
+  before: 3
+  after: 4
+- line: 323
+  before: 3
+  after: 4
+- line: 263
+  before: 2
+  after: 1
+text_changes:
+- line: 184
+  before: 公理 4：机械同理心为王
+  after: 公理4：机械同理心为王
+- line: 196
+  before: 公理 5：软件是一个*研究与开发*的过程
+  after: 公理5：软件是一个研究与开发的过程
+- line: 206
+  before: 公理 6：软件开发是一项极具挑战性的智力追求
+  after: 公理6：软件开发是一项极具挑战性的智力追求
+- line: 261
+  before: '*架构以及我们思考软件的方式.*'
+  after: 架构以及我们思考软件的方式。
+- line: 535
+  before: Simplicity is *Objective*
+  after: Simplicity is Objective
+- line: 673
+  before: 不确定镇中的恐惧、憎恶与*承诺*
+  after: 不确定镇中的恐惧、憎恶与承诺
+- line: 737
+  before: 不是***事物***，而是***发生的事情***
+  after: 不是事物，而是发生的事情
+- line: 830
+  before: 人工智能技术发展白皮书
+  after: 事件驱动架构
