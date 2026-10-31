@@ -1,0 +1,11 @@
+time. The desired business strategy is to dynamically set the price of the commodity based on the remaining inventory and the time remaining before the commodity becomes worthless. The situation being responded to in these cases is the presence of a potential consumer for the perishable commodity.
+
+The simplistic approach to pricing the commodity is to fix a point in time at which it will be put on sale. The idea is that this will raise demand and ensure that the commodity does not go to waste. The problem with this approach is that it neither maximizes revenue nor minimizes the likelihood that the commodity will go to waste. If the commodity is selling well and will likely sell out, putting it on sale will result in lost revenue. On the other hand, if the commodity is selling very poorly, lowering the price by a set amount at a fixed point in time might not ensure that the commodity actually sells out.
+
+A more sophisticated approach is to track the rate at which the commodity is selling versus the price of the commodity. With this approach, the offering price for the commodity can be adjusted dynamically. This approach is often applied to online product sales. It requires complex event processing to do the dynamic price adjustments as consumers shop and as commodity inventories change. Note that the rate of sales and the current inventory become part of the reference data—a dynamic part whose currency must be maintained in a timely manner—most likely via events!
+
+# Decision as a Service
+
+In the Decision-as-a-Service pattern (Figure 3-11), the logic necessary to make a decision is factored into a separate component. The service consumer gathers all relevant current-state input data for the decision and passes it to the service. This is typically a synchronous request-reply interaction, but it may be asynchronous. In either case, the decision service computes output data from the input data, using static reference data as appropriate. The output data reflects the decision results.
+
+The value of this pattern is that it encapsulates the logic of the decision as a service. This simplifies the maintenance of both the service consumer and the decision service. In particular, it allows the implementation of the service (that is, the business rules) to be updated without requiring a modification to the service consumer.

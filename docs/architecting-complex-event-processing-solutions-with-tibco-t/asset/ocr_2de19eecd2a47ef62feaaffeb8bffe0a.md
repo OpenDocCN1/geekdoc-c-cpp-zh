@@ -1,0 +1,5 @@
+to the world around it. Through continuous innovation in these areas, the event-enabled enterprise distinguishes itself from its competitors and builds competitive advantage. Done well, such innovations provide extreme value for its customers, turning them into loyal fans.
+
+# Summary
+
+Extreme value sets your enterprise apart from its peers and turns your customers into loyal fans. Business process improvements are one way of providing this extreme value. These improvements make your enterprise more responsive to its customer base by innovations in how the enterprise senses, analyzes, and responds to the world around it. The most significant innovation lies in performing these activities in real time. Proactively sensing events—recognizing that something has happened rather than passively waiting to be told—is a significant enabler for this type of process improvement. The event-enabled enterprise is one that recognizes such events and continuously innovates in its analysis and response. It delivers extreme value to its customers.

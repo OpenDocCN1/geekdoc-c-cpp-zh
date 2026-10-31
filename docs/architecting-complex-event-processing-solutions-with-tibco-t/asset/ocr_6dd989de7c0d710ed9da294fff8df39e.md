@@ -1,0 +1,7 @@
+# Summary
+
+Modularizing complex-event processing solutions is essential for both the comprehensibility and maintainability of the solution. One modularization approach is to separate the logic governing the recognition of a situation from the logic governing what to do once that situation is recognized. Another modularization approach is to separate the filtering and enhancement of events from the subsequent analysis of those events. In both cases an event is used to communicate between the modules.
+
+Modularization provides deployment choices. Both modules can be deployed in a single agent; in two agents running in the same processing unit; or in two agents, each running in separate processing units. This last alternative provides maximum flexibility in tuning and scalability, as additional instances of the processing units can be deployed to add capacity. When filtering and enhancement require integration with other components, there may be advantages to performing these functions in TIBCO ActiveMatrix BusinessWorks.
+
+The best practice is to always modularize the design. This opens the door for deployment flexibility. However, the deployment of the modules in separate agents should only be undertaken if there is a demonstrable benefit.

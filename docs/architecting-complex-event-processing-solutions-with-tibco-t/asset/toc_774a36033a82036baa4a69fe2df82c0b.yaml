@@ -1,0 +1,59 @@
+level_changes:
+- line: 9
+  before: 2
+  after: 1
+- line: 92
+  before: 2
+  after: 1
+- line: 94
+  before: 3
+  after: 2
+- line: 690
+  before: 2
+  after: 1
+- line: 1781
+  before: 2
+  after: 1
+- line: 2628
+  before: 2
+  after: 1
+- line: 3308
+  before: 2
+  after: 1
+- line: 3751
+  before: 3
+  after: 2
+- line: 3835
+  before: 3
+  after: 2
+- line: 3856
+  before: 3
+  after: 2
+- line: 3863
+  before: 3
+  after: 2
+- line: 3886
+  before: 3
+  after: 2
+text_changes:
+- line: 1786
+  before: 第10章
+  after: 第 10 章
+- line: 1318
+  before: '**清单 6-1：** *ACEPSTAccountConcept 欺诈规则*'
+  after: 清单 6-1：ACEPSTAccountConcept 欺诈规则
+- line: 252
+  before: '*技术事件和业务事件*'
+  after: 技术事件和业务事件
+- line: 258
+  before: '*简单事件和复杂事件*'
+  after: 简单事件和复杂事件
+- line: 265
+  before: '*点事件和区间事件*'
+  after: 点事件和区间事件
+- line: 2589
+  before: 在单个推断代理内保持排序
+  after: 在单个推理代理内保持排序
+- line: 2598
+  before: 跨多个推断代理保持排序
+  after: 跨多个推理代理保持排序

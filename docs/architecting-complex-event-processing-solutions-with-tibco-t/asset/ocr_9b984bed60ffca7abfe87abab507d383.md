@@ -1,0 +1,13 @@
+work across multiple agents. For example, while distributing work related to bank accounts across many agents, you might want to ensure that all the work related to a particular account executes in a single agent. One of the principal advantages is that since all work related to an instance occurs in the one agent, locking can be local and therefore more efficient. In general, this is the preferred approach for managing any stateful object, especially state machines.
+
+TIBCO BusinessEvents provides a mechanism for realizing this type of load distribution: content-aware load balancing. This is a variation on the load balancing shown in Figure 14-8. The load-balancing configuration not only specifies the routing and worker inference agents, but also a property of the event to be used in directing the event to the workers. The load balancer ensures that all events with the same property value (e.g., the account number) are sent to the same worker.
+
+You may encounter situations in which the incoming event does not contain the precise value you want to use to govern the distribution. In such cases you can specify a preprocessor function that computes the value and assigns it to a property of the event. Other than this type of preprocessor function, the Load Balancer IA has no business logic. The Worker IA agents execute all the logic needed to process the event.
+
+# Managing Sequencing
+
+Many applications present situations in which it is important to maintain the order in which things are done. If you are performing transactions on a bank account, for example, it is important that the deposits and withdrawals actually be executed in the same sequence in which they were initiated.
+
+Sequencing becomes a challenge when there are multiple parties doing the work in parallel (Figure 14-9). Despite the fact that the source sends request 1 before request 2, in the absence of any coordination there is no guarantee that result 1 will be produced before result 2. So the question becomes how to preserve sequencing when taking advantage of parallel processing.
+
+This question breaks down into two sub-questions: how to preserve sequencing within a single worker when the worker internally uses parallel processing, and how to preserve sequencing when there are multiple workers. These questions are addressed in Architecting Composite Applications and Services with TIBCO® when TIBCO Active

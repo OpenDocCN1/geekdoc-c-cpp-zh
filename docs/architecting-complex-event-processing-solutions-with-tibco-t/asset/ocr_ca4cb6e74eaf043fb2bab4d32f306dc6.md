@@ -1,0 +1,9 @@
+Yet people bought the iPhone—even people who had barely enough money for food. Why? What value did the iPhone offer that was so compelling that people who arguably couldn’t afford them still bought them?
+
+The answer is that the iPhone (and other types of smart phone) enables people to interact with the world around them in new and innovative ways. It enables people to sense what is going on, analyze the situation, and respond to the world—and to do so in real time, anywhere they happen to be. The user senses in new ways, no longer just by receiving phone calls but now by receiving text messages, e-mails, social media posts, and alerts from apps as well. The user analyzes what is going on in new ways, not only by using their address book and other personal reference information but also by using web browsers, social media, and apps. The user can respond not only with phone calls but also by using this new technology to communicate with others, purchase products, and make reservations. The iPhone makes it possible for the user to sense, analyze, and respond to the world around them anywhere and anytime they choose. This is the extreme value delivered by the iPhone.
+
+So what makes extreme value important to your enterprise? Extreme value turns customers into fans—fans who prefer the products and services of your enterprise to the exclusion of its competitors. Fans whose attitude is, as the 1960s commercial put it, “I’d rather fight than switch!” (Figure 1-1). Fans whose loyalty to your enterprise fosters its growth and profitability. So how can complex-event processing enable your enterprise to deliver extreme value?
+
+![](bbox=[0.22, 0.7, 0.78, 0.9])
+
+Figure 1-1: “I’d Rather Fight than Switch!”

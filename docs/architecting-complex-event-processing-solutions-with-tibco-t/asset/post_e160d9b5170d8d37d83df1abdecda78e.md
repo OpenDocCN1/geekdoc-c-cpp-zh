@@ -1,0 +1,297 @@
+
+- **Data**
+  - acquisition for analysis, 25
+  - aggregation, 136
+  - as context for analysis, 22
+  - innovations in sensing and data quality, 7–8
+- **Data Grid, ActiveSpaces**, 160
+- **Data modeling**
+  - designing models by concepts, 260–261
+  - state machine modeling, 57–58
+  - using database as system of record for reference data, 146
+- **Data structures**
+  - Claim Status example, 220
+  - concepts, 73–75
+  - events, 71–73
+  - of inference agents, 70–71
+  - locks and, 199–200
+  - overview of, 70–71
+  - scorecards, 75–76
+- **Databases**
+  - concepts and memory management, 181
+  - integration using ActiveMatrix Adapter for Database, 182–183
+  - integration with, 180–181
+  - object persistence options, 111
+  - queries, 181
+  - as system of record for reference data, 146
+  - updates and deletes, 182
+- **DB2**, 111
+- **Deadlocks.** *See also* locks, 199
+- **Decision-as-a-Service pattern**
+  - in decision making, 46–48
+  - decision tables, 155–156
+  - process orchestration and, 49
+- **Decision Manager**
+  - Decision-as-a-Service pattern and, 48
+  - overview of, 58–60
+  - runtime rule changes, 154
+- **Decision tables**
+  - defining processes and, 130
+  - organizing for performance, 228
+  - for virtual rules, 155–156
+- **Decision trees**, visualization with TIBCO BusinessEvents Studio, 228
+- **Declaration**, in rule clauses, 77–78
+- **declare keyword**, 77–78
+- **Dedicated worker pool thread**, 230
+- **Delegation with Confirmation**, coordination patterns, 159
+- **Deletes**, database, 182
+- **Demand analysis**, 232–233
+- **Deployment**
+  - agents for, 241–242
+  - clusters in, 243–244
+  - configuring object management, 244–246
+  - of dashboard agents, 139
+  - modularization units in, 240–241
+  - monitoring, 249–250
+  - of view, 239
+  - of patterns, 167, 247–248
+  - of process agents, 132
+  - processing units and, 242–243
+  - requirements for run-time configuration, 248–249
+  - summary, 250–251
+- **TIBCO BusinessEvents solutions**, 63–65
+- **Design**
+  - best practices for rule design, 261
+  - cache for information sharing, 196–198
+  - CEP patterns. *See* CEP design patterns
+  - directing related work to single agent, 202–203
+  - for duplicate event handling, 206–207
+  - for information sharing, 195–196
+  - for load distribution, 201–202
+  - for locking, 198–200
+  - overview of, 195
+  - for performance, 226
+  - for sequencing, 203–206
+  - summary, 207
+- **Destinations**
+  - channels and, 89
+  - preprocessing and, 92
+  - selecting threading model by, 261
+  - sending events to, 172–173
+- **Disaster recovery.** *See also* fault tolerance, 256–257
+- **Display options**, dashboard agents, 137
+- **Duplicate events**, handling, 151–153, 206–207
+
+### E
+
+- **EAR files**
+  - RMS generating, 156–157
+  - solution life cycle and, 65–66
+- **EMS (Enterprise Message Service)**
+  - analysis of Claim Tracker, 235
+  - deployment of Claim Tracker, 248
+  - interpreting performance analysis, 236
+  - resource information for, 171
+  - solution life cycle and, 65
+  - timeout notification and, 236
+- **Enhancement/enrichment**
+  - BusinessWorks used for, 191
+  - partitioning from rule processing, 190–191
+- **Enterprise architects**, intended audience for this book, xxi
+- **Enterprise Message Service.** *See* EMS
+- **Equivalent joins**
+  - inference agent conditions, 78
+  - types of rule conditions, 227
+- **Event data structure**, inference agent
+  - actions and, 78–79
+  - overview of, 70
+  - timeToLive, properties, and payload, 71–73
+- **Event-driven processes**
+  - demand analysis and, 232
+  - overview of, 28–31
+  - partitioning and, 188
+- **Event-enabled enterprises**
+  - capabilities of, 31–32
+  - delivery of extreme value and, 3–4
+  - innovations in analysis, 8
+  - innovations in response, 9
+  - innovations in sensing, 6–8
+  - overview of, 3
+  - sense-analyze-respond pattern, 5–6
+  - summary, 10
+  - what it is, 9
+- **Event pattern recognition**
+  - monitoring liveness of components, 168–169
+  - need for, 163–165
+  - overview of, 163
+  - pattern language in Event Stream Processing, 166
+  - putting patterns to use, 166–168
+  - summary, 169
+- **Event Stream Processing**
+  - event pattern recognition, 163, 165
+  - overview of, 60–61
+  - pattern language in, 166
+  - query agents and, 115
+- **Events**
+  - accessing XML event payloads, 228–229
+  - analysis requires context, 23–24
+  - analytical approaches, 25–26
+  - capabilities of event-enabled enterprises, 31–32
+  - categories of, 14–15
+  - communicating between blocks of rules, 260
+  - complex. *See complex events*
+  - complex-event processing. *See CEP (complex-event processing)*
+  - context of, 21–23
+  - correlation of, 20–21
+  - defined, 12
+  - directing events created in preprocessor functions, 90–91
+  - event-driven processes, 28–31
+  - handling duplicate, 151–153, 206–207
+  - for information sharing, 196
+  - for intermediate conclusions, 261
+  - missing or failing to recognize, 15–16
+  - modularization and, 241
+  - processing TIBCO BusinessEvents, 56
+  - recognizing, 12–14
+  - responding to, 26–28
+  - rule-based analysis, 19–20
+  - summary, 32–33
+- **Excel spreadsheets**, 58
+- **Exception handling**
+  - Exception Reporting Interface, 221–222
+  - Resolve Claim Processing Exception, 217, 221
+  - solutions, 160
+- **Expected behavior**, CEP metadata, 23
+- **Explicit buffer management**, for continuous queries, 123
+- **External system**, as system of record for reference data, 146–147
+- **Extreme value**, successful enterprises delivering, 3–4
+
+### F
+
+- **Fault tolerance**
+  - configuring backing store for, 254
+  - coordination patterns and, 254–256
+  - inter-agent communications for, 256
+  - object replication providing, 111
+  - summary, 257
+- **File systems**
+  - analysis of Claim Tracker, 235
+  - timeout notification and, 236
+- **Filters/filtering**
+  - BusinessWorks for, 191
+  - inference agent condition, 78
+  - partitioning from rule processing, 190–191
+  - snapshot query execution and, 115–117
+  - structuring rule conditions for performance, 261
+  - types of rule conditions, 227
+- **Fire and Forget coordination pattern**, 159
+- **Forgy, Charles L.**, 80
+
+### G
+
+- **Global locking**, performance impact of, 229
+- **Graphs**
+  - dashboard agent and, 135
+  - display options for metric data, 137
+
+### H
+
+- **Hawk**
+  - channel types, 88
+  - Hawk agent in MM (Monitoring and Management), 66
+  - Hawk agent in monitoring, 250
+  - Hawk agent starting/stopping processing units, 68
+  - managing logging, 160
+  - options for turning on profiler, 226
+- **High availability.** *See also* fault tolerance
+  - request-reply coordination patterns in, 254–255
+  - of solutions, 253
+- **Historical data**, recent history as context for analysis, 22
+- **Hot Deployment**, 249
+- **HTTP**
+  - channel types, 88
+  - custom function invocation, 180
+  - IP redirectors for load distribution, 201
+  - multithreaded channels and, 230
+  - sendRequest() for interacting with, 179
+  - TIBCO BusinessEvents as service provider for, 174
+- **HTTP Send Request Invocation**, 179
+
+### I
+
+- **I/O calls**, synchronous I/O calls used in rule actions, 231
+- **Implicit buffer management**, for continuous queries, 123
+- **Inference agents**
+  - analysis of Claim Tracker, 235
+  - channels, 88–89
+  - concept data structure and, 73–75
+  - ConditionsSeparate example, 81–84
+  - in core of TIBCO BusinessEvents, 56
+  - data structures used by, 70–71
+  - defining processes, 130
+  - deploying patterns, 167
+  - deploying process agents, 132
+  - directing events created in preprocessor functions, 90–91
+  - event data structure and, 71–73
+  - functional data modeling extensions and, 57
+  - Inference Agent Publication pattern, 183
+  - Inference Agent Request-Reply pattern, 183
+  - Inference Agent Subscription pattern, 184–185
+  - interpreting performance analysis, 236
+  - lacking fault tolerance, 254
+  - Load Balancer and, 202
+  - LocalChannel example, 94–98
+  - locks and, 109, 198
+  - overview of, 69–70
+  - partitioning and, 190–191, 241
+  - postprocessing behavior, 93–94
+  - preprocessing and postprocessing, 87–88
+  - preprocessing behavior, 91–92
+  - preprocessor functions, 90
+  - preserving sequences across multiple, 205
+  - preserving sequences within single, 204
+  - processing timeouts, 235–236
+  - RTC (run-to-completion) behavior, 79–81
+  - rule actions, 78–79
+  - rule attributes, 77
+  - rule conditions, 78
+  - rule conditions and Rete network efficiency, 83–87
+  - rule declaration, 77–78
+  - scorecard data structure and, 75–76
+  - sizing rules of thumb, 237
+  - solution deployment and, 63–64
+  - starting/stopping state machines, 99
+  - state models, 98
+  - state transitions, 98–99
+  - summary, 100–101
+  - threading model for, 229–231
+  - timeouts, 99
+  - updating reference data on external system, 147
+  - working memory, 103
+- **Information**
+  - cache for sharing, 196–198
+  - events for sharing, 196
+  - planning architecture and, 259–260
+  - sharing, 195
+- **Innovations**
+  - in analysis, 8
+  - extreme value and, 5
+  - in response, 9
+  - in sensing, 6–8
+- **Integration**
+  - with ActiveMatrix Adapter for Database, 182–183
+  - with ActiveMatrix BusinessWorks, 172
+  - BusinessWorks Receive Event activity, 173–174
+  - BusinessWorks Send Event activity, 172
+  - BusinessWorks Wait for Event activity, 173
+  - database concepts and memory management and, 181
+  - database queries and, 181
+  - database updates and deletes and, 182
+  - with databases, 180–181
+  - Inference Agent Publication pattern, 183
+  - Inference Agent Request-Reply pattern, 183
+  - Inference Agent Subscription pattern, 184–185
+  - invoking rule function for, 174
+  - overview of, 171–172
+  - summary, 185–186
+  - TIBCO BusinessEvents as asynchronous service consumer, 175–178
