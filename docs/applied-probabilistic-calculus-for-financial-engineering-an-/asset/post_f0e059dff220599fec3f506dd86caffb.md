@@ -1,0 +1,71 @@
+
+- portfolio *(continued)*
+  - differential evolution (DE)
+    - algorithm 404
+  - evolutionary algorithms (EA) 404
+  - in probabilistic calculus, for financial engineering 403–404
+    - process 401–403
+    - locating functional maxima and minima 402–403
+    - in Mathematics 401–402
+- R code DEoptim, application of 410
+- RmCTWu09 418
+- Rmetrics project 418
+  - by special numerical methods 411–412
+  - using R 409–465
+    - worked examples of 434–465
+- post-modern portfolio theory (PMPT) 126
+- postPortfolioWeights 224
+- priorPortfolioWeights 224
+- probabilistic calculus 26, 40, 41
+  - portfolio optimization methodologies in, for financial engineering 403–404
+- probabilistic differential equation 32, 33
+- probabilistic model, for the stock market 25
+- probabilistic risk assessment (PRA) 66
+- proprietary investment funds 14
+- p-value 250
+
+## *q*
+- quality assurance 240
+- quality control 240
+  - elements of 241
+- quality management in statistical agencies 241
+  - accessibility 241
+  - accuracy 241
+  - coherence 241
+  - interpretability 241
+  - relevance 241
+  - timeliness 241
+- quant 2
+- quantitative asset pricing 412
+- quantitative finance 412
+- quantitative financial management 412
+- quants 412
+- questions, in survey 237
+  - closed 237
+  - open 237
+
+## *r*
+- R 2.9.1 244
+- random walk
+  - concept 33
+  - hypothesis test 23
+  - model 33, 36
+- R Archive Network 243
+- R, as calculator 260
+  - arrays and matrices 270, 271
+  - assignment of values in R and computations 261
+  - code segment 73, 248, 250, 320
+  - computations in vectors and simple graphics 262
+  - development core group 242
+  - mathematical operations using R 260
+  - NA “not available” for missing values in data sets 273
+  - simple graphics 265–268
+  - special functions that create vectors 269, 270, 273, 274
+  - use of dimension function dim() in R 271
+  - use of factors in R programming 263
+  - use of matrix function matrix() in R 271–273
+  - x as vectors and matrices in statistics 268
+- R command, output 246
+- R domain 39, 73, 76
+- real financial data, modeling 33
+- real numbers (R) 401

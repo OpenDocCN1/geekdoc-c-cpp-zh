@@ -149,6 +149,7 @@
 +   [动态规划在农业决策问题中的应用](docs/applications-of-dynamic-programming-to-agricultural-decision/README.md)
 +   [MATLAB 在科学与工程中的应用](docs/applications-of-matlab-in-science-and-engineering/README.md)
 +   [应用微积分入门指南](docs/applied-calculus/README.md)
++   [金融工程的应用概率演算：R 使用入门指南](docs/applied-probabilistic-calculus-for-financial-engineering-an-/README.md)
 +   [R 时间序列分析应用](docs/applied-time-series-analysis-with-r/README.md)
 +   [Arduino：快速启动指南 (快速启动指南系列)](docs/arduino-a-quick-start-guide-quick-start-guides/README.md)
 +   [Arduino：操作系统、编程、项目及更多 Arduino 用户指南（树莓派 2, xml, c++, ruby, html, 项目, php, 编程, 机器人... php, sql, 主机, 微型计算机）](docs/arduino-arduino-user-guide-for-operating-system-programming-/README.md)
