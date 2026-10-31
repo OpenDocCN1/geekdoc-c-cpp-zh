@@ -1,0 +1,9 @@
+Table 3.1 is captured by the AR(1) component shown in Figure 3.26c.
+
+These types of decompositions are an instructive aid for visualizing the underlying structure of AR(p) models as well as understanding the associated physical phenomena.
+
+# EXAMPLE 3.21: ADDITIVE COMPONENTS OF THE SUNSPOT DATA
+
+We previously examined the sunspot data shown in Figure 1.23 (ss08 in tswge) and noted the pseudo-cyclic behavior with cycles of about 9–11 years. Also, there tends to be a hint of a pattern in the peaks of the cycles. That is, the peaks tended to be high in the late 1700s, again around 1850, and more recently since about 1940. In Figure 3.27a we replot the sunspot data, and in Figure 3.27b through d we show the first three additive components of an AR(9) model fit to the sunspot data. In Chapters 8 and 9 we will discuss the topic of finding an appropriate model for a set of data. The factor table, not shown here, of the AR(9) model fit not surprisingly shows the strongest behavior to be associated with a system frequency of about f = 0.09 and this is illustrated by the first component. The second component is a wandering behavior (associated with a factor of 1 − 0.95B and further examination of the wandering shows that it seems to track the heights of the peaks through time. The third component, in Figure 3.27d, shows some weak higher frequency behavior associated with system frequency f = 0.19 that is barely visible in the original plot.
+
+**Using R:** Decompositions of AR realizations into additive components can be accomplished using the tswge function factor.comp.wge. This function prints the factor table associated with the AR model fit to a time series realization using Burg estimates (see Chapter 7). The function then calculates ncomp (≤ nfactors) additive components where nfactors is the number of factors in the factor table for the fitted model. See Appendix 3B and Appendix 10A for more details.

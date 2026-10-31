@@ -1,0 +1,10 @@
+# 8
+Model Identification
+
+In Chapter 7, we discussed the problem of estimating the parameters of a given ARMA(p,q) process assuming that the model orders p and q are known. The procedure for finding an appropriate model actually begins with the intriguing and sometimes challenging problem of determining the number of parameters that should be estimated. In this chapter, we consider the problem of identifying the model orders p and q of a stationary ARMA(p,q) model as well as p, d, and q for the nonstationary ARUMA(p,d,q) model, and the model orders associated with a multiplicative seasonal model. Since there is realistically not a “true ARMA model” for a real process, our goal will be to find a model that adequately describes the process but does not contain unnecessary parameters. Tukey (1961) refers to such a model as being *parsimonious*.
+
+# 8.1 Preliminary Check for White Noise
+
+In searching for a parsimonious model, the investigation should begin with a decision concerning whether or not the process can be adequately modeled using the simplest of all ARMA models, white noise. Unnecessarily complicated models can be obtained by the careless analyst for processes that should have been modeled as white noise in the first place. Several techniques are available for testing for white noise, and we will address this problem further in Section 9.1 when we discuss the examination of residuals from a fitted model (which should essentially be white noise if the model is appropriate).
+
+At this point, we focus on checking for white noise by examining the realizations and sample autocorrelations. The first advice we give in this context is that *you should always first examine a plot of the data!* The failure to realize that a set of time series data should be modeled as white noise or to notice other

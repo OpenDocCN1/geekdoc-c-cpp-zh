@@ -1,0 +1,11 @@
+Tsay (1992) formalizes the procedure discussed in Example 9.3 for assessing the performance of a model fit by examining realizations from the fitted model and assessing how characteristics (e.g., the autocorrelations or spectral density) calculated from these realizations compare with the corresponding quantities for the actual data. Consider, for example, the spectral density estimates shown in Figure 9.11. Instead of simply overlaying several spectral density plots as we did here, Tsay (1992) proposes a parametric bootstrap procedure in which many realizations are generated from the fitted model, and for each frequency the empirical 100(1 − α/2)% and 100α/2% quantiles of the corresponding sample estimates are obtained. This forms an acceptance envelope for each frequency based on the simulated values. The procedure is to assess the extent to which the spectral density estimates for the observed data remain within these envelopes.
+
+Rather than comparing the entire spectral density with the acceptance envelope, another possible strategy is to compute a few variables of particular interest. For example, for the sunspot models one might calculate $(\hat{S}^{(b)}(0), \hat{S}^{(b)}(0.1))$ that is, the spectral density estimates at $f = 0$ and $f = 0.1$ for each of the $K$ bootstrap realizations, and compare the observed values of $(\hat{S}(0), \hat{S}(0.1))$ calculated on the original data with this empirical bootstrap distribution. Given a time series realization, Woodward and Gray (1995) introduce a procedure for generating bootstrap realizations from each of two candidate models and using linear discriminant analysis (see Johnson and Wichern, 2007) to ascertain which model generates realizations that best match the characteristics of the observed realization.
+
+# 9.5 Comprehensive Analysis of Time Series Data: A Summary
+
+In this chapter, we have discussed issues involved in an analysis of time series data. To summarize, given a realization to be modeled, a comprehensive analysis should involve
+
++   1. Examination
++      a. Of data
++      b. Of sample autocorrelations

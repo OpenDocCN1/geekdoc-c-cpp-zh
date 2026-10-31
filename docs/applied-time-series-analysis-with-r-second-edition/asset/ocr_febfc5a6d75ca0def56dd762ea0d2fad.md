@@ -1,0 +1,11 @@
+$$\Gamma = \begin{pmatrix} \gamma_0 & \gamma_1 & \cdots & \gamma_{t_0-1} \\ \gamma_1 & \gamma_0 & \vdots & \gamma_{t_0-2} \\ \vdots & & & \\ \gamma_{t_0-1} & \gamma_{t_0-2} & \cdots & \gamma_0 \end{pmatrix}.$$
+
+Proof: See Problem 6.8.
+
+The typical application of these results is the case t0 = n (i.e., the realization length). In this case, Equation 6.3 can be an extremely large system of equations, and these forecasts can be difficult to obtain. Consequently, in the next section, we will discuss the so-called Box–Jenkins forecasts. The Box–Jenkins forecasts are based on an ARMA model and are linear predictors based on the (unattainable) assumption that the random variables Xν, t = t0, t0 − 1, ... (i.e., the infinite past) are available. Nevertheless, forecasts based on the assumption of the availability of the infinite past are widely used in practice because they are easy to compute and are intuitively attractive, and for a moderately large t0, the results are close to those obtained by solving Equation 6.3. In this chapter, we focus on the Box–Jenkins style forecasts.
+
+# 6.2 Box–Jenkins Forecasting for ARMA(p,q) Models
+
+We return to the problem of finding the best predictor of X_{t0+ℓ}, but now we assume that we are given the infinite past X_{t0}, X_{t0−1}, ..., and that the data are from a known ARMA(p,q) model. That is, we assume that the model orders and parameters are known. In a practical situation, the model orders and parameters will be estimated, and, thus, the forecast errors will differ somewhat from those we present here. However, in most cases, this difference is small. As discussed in Section 6.1, “best” will be taken to be in the mean-square sense, and the best such predictor is the conditional expectation E[X_{t0+ℓ} | X_{t0}, X_{t0−ℓ}, ...] As mentioned earlier, the conditional expectation is often difficult to obtain, but it turns out that it can be readily computed in the current setting.
+
+Since X_t is an ARMA(p,q) process, then because of its stationarity and

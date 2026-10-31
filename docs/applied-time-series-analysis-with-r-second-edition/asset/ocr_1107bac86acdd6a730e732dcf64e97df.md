@@ -1,0 +1,12 @@
+univariate case, we assume that both dimensions are dyadic (i.e., powers of 2). Examples will be based on a square image, that is, of size 2^{J0} × 2^{J0} for some integer J0. The two-dimensional DWT maps the m × n image F_{m,n} to an m × n image of wavelet coefficients. The univariate DWT is based on two types of wavelets: father wavelets that measure smooth behavior and mother wavelets that measure more detailed behavior. In the case of the two-dimensional DWT, there are four types of wavelets
+
+Φ(x, y) = φ_h(x) × φ_v(y) (captures smooth features of the image)
+Ψ^v(x, y) = ψ_h(x) × φ_v(y) (captures vertical features of the image)
+Ψ^h(x, y) = φ_h(x) × ψ_v(y) (captures horizontal features of the image)
+Ψ^d(x, y) = ψ_h(x) × ψ_v(y) (captures diagonal features of the image)
+
+The subscripts h and v indicate horizontal and vertical dimensions, respectively, and for example, φ_v(y) is the father wavelet obtained by separately considering the one-dimensional 𝒴 variable. The two-dimensional counterpart to Equation 12.17 is given by
+
+g(x, y) = Σ_{j,k,m} s_{j,k,m} Φ_{j,k,m}(x, y) + Σ_{j=1}^{J} Σ_{k,m} d^v_{j,k,m} Ψ^v_{j,k,m}(x, y) + Σ_{j=1}^{J} Σ_{k,m} d^h_{j,k,m} Ψ^h_{j,k,m}(x, y) + Σ_{j=1}^{J} Σ_{k,m} d^d_{j,k,m} Ψ^d_{j,k,m}(x, y). (12.38)
+
+where the first term in Equation 12.38 gives a “smooth” approximation to g(x, y) to level J (i.e., involves the higher values of j). The remaining summations measure the vertical, horizontal, and diagonal detail, respectively. The s_{j,k,m}, d^v_{j,k,m}, d^h_{j,k,m}, and d^d_{j,k,m} are called the smooth coefficients, vertical detail, horizontal detail, and diagonal detail coefficients, respectively. The two-dimensional DWT consists of the coefficients s_{j,k,m} along with d^v_{j,k,m}, d^h_{j,k,m} and d^d_{j,k,m}, j = 1, ..., J. Each of these coefficients is represented as a gray scale (or color) on a pixel in a 2^{J0} × 2^{J0} image. In particular, for J = 3 the two-dimensional pyramid algorithm produces n/2 × n/2 coefficients of each level 1 detail type (d^v_{1,k,m}, d^h_{1,k,m}, and d^d_{1,k,m}). Also, there are n/2^2 × n/2^2 level 2 detail coefficients and n/2^3 × n/2^3 level 3 coefficients of types h, v, d. Additionally, n/2^3 × n/2^3 level 3 smooth coefficients are retained. Figure 12.21 shows a schematic diagram of a two-dimensional DWT with J = 3 where the original image contains 2^{J0} × 2^{J0} pixels where J0 ≥ 3.

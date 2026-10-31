@@ -1,0 +1,125 @@
+
+- Society B 24, 215–233.
+- Priestley, M.B. 1981. Spectral Analysis and Time Series, Academic Press: New York.
+- Quenouille, M.H. 1949. Approximate tests of correlation in time series, Journal of the Royal Statistical Society, Series B 11, 68–84.
+- Quinn, B.G. 1980. Limiting behaviour of autocorrelation function of ARMA process as several roots of characteristic equation approach unit circle, Communications in Statistics—Simulation and Computation 9, 195–198.
+- Rainville, E.D. 1960. Special Functions, Macmillan: New York.
+- Ramsey, F. 1974. Characterization of the partial autocorrelation function, Annals of Statistics 2, 1296–1303.
+- Reinsel, G.C. 1997. Elements of Multivariate Time Series Analysis, 2nd edn., Springer-Verlag: New York.
+- Robertson, S.D. 2008. Generalizations and applications of the linear chirp, PhD Dissertation, Department of Statistical Science, Southern Methodist University: Dallas, TX.
+- Robertson, S.D., Gray, H.L., and Woodward, W.A. 2010. The generalized linear chirp process, Journal of Statistical Planning and Inference 140, 3676–3687.
+- Sanders, J. 2009. Smoothing-based procedures for time series trend testing, PhD dissertation, Department of Statistical Science, Southern Methodist University: Dallas, TX.
+- Schwarz, G. 1978. Estimating the dimension of a model, The Annals of Statistics 6, 461–64.
+- Sendur, L. and Selesnick, I. 2002. Bivariate shrinkage functions for wavelet-based denoising exploiting interscale dependency, IEEE Transactions on Signal Processing 50, 2744–2756.
+- Sendur, L., Suckling, J., Whitcher, B., and Bullmore, E. 2007. Resampling methods for improved wavelet-based multiple hypothesis testing of parametric maps in functional MRI, NeuroImage 37, 1186–1194.
+- Shapiro, S.S. and Wilk, M.B. 1965. An analysis of variance test for normality (complete samples), Biometrika 52, 591–611.
+- Shen, X., Huang, H., and Cressie, N. 2002. Nonparametric hypothesis testing for a spatial event, Journal of the American Statistical Association 97, 1122–1140.
+- Shumway, R.H. and Stoffer, D.S. 1982. An approach to time series smoothing and forecasting using the EM algorithm, Journal of Time Series Analysis 3, 253–264.
+- Shumway, R.H. and Stoffer, D.S. 2010. Time Series Analysis and Its Applications—With R Examples, 3rd edn., Springer-Verlag: New York.
+- Stephens, M.A. 1974. Tests based on EDF statistics. In Goodness-of-Fit Techniques, D’Agostino, R.B. and Stephens, M.A. (eds.), Marcel Dekker: New York, 97–193.
+- Strand, O.N. 1977. Multichannel complex maximum entropy (autoregressive) spectral analysis, IEEE Transactions on Automatic Control 22, 634–640.
+- Strang, G. and Nguyen, T. 1997. Wavelets and Filter Banks, Wellesley-Cambridge Press: Wellesley, MA.
+- Sun, H. and Pantula, S.G. 1999. Testing for trends in correlated data, Statistics and Probability Letters 41, 87–95.
+- Tang, L., Woodward, W., and Schucany, W. 2008. Undercoverage of wavelet-based resampling confidence intervals, Communications in Statistics—Simulation and Computation 37, 1307–1315.
+- Taqqu, M.S. 1986. A bibliographical guide to self-similar processes and long-range dependence. In Dependence in Probability and Statistics, Eberlein, E. and Taqqu, M.S. (eds.), Birkhäuser: Boston, MA, 137–162.
+- Taylor, S. 1986. Modelling Financial Time Series, Wiley: Chichester, U.K.
+- Tewfik, A.H. and Kim, M. 1992. Correlation structure of the discrete wavelet coefficients of fractional Brownian motion, IEEE Transactions on Information Theory 38, 904–909.
+- Thomson, D.J. 1982. Spectrum estimation and harmonic analysis, Proceedings of the IEEE 70, 1055–1096.
+- Tiao, G.C. and Tsay, R.S. 1983. Consistency properties of least squares estimates of autoregressive parameters in ARMA models, Annals of Statistics 11, 856–871.
+- Tong, H. 1977. Some comments on the Canadian lynx data, Journal of the Royal Statistical Society A 140, 432–436.
+- Tong, H. 1990. Non-Linear Time Series, Clarendon Press: Oxford, U.K.
+
+## Index
+
+### A
+
+- AIC, see Akaike's information criterion
+- AICC, 326
+- Airline data, see Data Sets (airline, airlog)
+- airline model, 219, 225, 258, 344, 346
+  - modeling, 344–346
+  - seasonal pattern, 44
+- Akaike's information criterion (AIC)
+  - ARMA(p,q) model, 327–328
+  - definition, 325–326
+  - long memory models, 479–480
+  - multivariate extension, 419
+- Algebraic equivalent, 145, 416
+- Amplitude spectrum, 405
+- Anderson–Darling test, 380, 396
+- Aperiodic behavior, 42, 44–45, 131
+- Aperiodic function, 24
+- Appendicitis data, see Data Sets (appy)
+- ARCH and GARCH noise, 199–200
+- ARCH and GARCH process
+  - ARCH(1) model, 193–195
+    - conditional standard deviations, 196
+    - realization, 195
+    - variance, conditional, 191, 193, 197
+  - ARCH(q0) model, 196–197
+  - Dow Jones daily rate, 100, 191, 210–211
+  - white noise, 191
+- ARIMA and ARUMA(p,d,q) models
+  - ARUMA(2,2,2) process, 183–184
+  - autocorrelations, extended ARUMA models, 215–216
+    - definition, 211–212
+  - cyclical models, 217
+    - definition, 210
+  - Findley–Quinn theorem, 215, 329, 331, 338
+  - forecasting, see Forecasting
+  - parameter estimation, see Parameter estimation
+  - seasonal models, 217–220
+  - Tiao–Tsay theorem, 331–335
+- ARMA(2,1) model
+  - autocorrelations, 130–131
+  - factor table, 138–139
+  - realization, 138–139
+  - spectral density, 139
+- ARMA(4,3) model
+  - autocorrelations, 138–140
+  - factor table, 138
+  - realizations, 140
+  - spectral density, 140
+- ARMA(p,q) models
+  - autocorrelations, 140–144
+  - autocovariance, 140–144
+  - canceling factors, 135–136
+  - definition, 133–135
+  - factor tables, 137–139
+  - forecasting, *see* Forecasting
+  - generating realizations
+    - AR(2) model, 155–156
+    - general procedure, 155–157
+    - MA(q) model, 155
+  - high-order AR(p) model approximations, 146
+  - invertibility, 131–133
+    - conditions, 136
+  - model identification, *see* Model identification
+  - parameter estimation, *see* Parameter Estimation
+  - ψ-weights, 144–146
+  - seasonal models
+    - autocorrelations, 150–152
+    - factor table, 152
+    - realization, 152–153
+    - spectral density, 152–154
+  - spectral density, 136–137
+  - spectral estimation, *see* ARMA spectral estimation
+  - stationary/causal conditions, 136
+- ARMA spectral estimation, 309–313
+- ARUMA(p,d,q) models, *see* ARIMA and ARUMA(p,d,q) models
+- ARUMA spectral estimation, 313–315
+- AR(1) model
+  - autocorrelation, 37, 94–97
+  - behavior, 117–118
+  - building blocks, 122–124
+  - oscillating behavior, 97–98
+  - ψ-weights, 84
+  - realizations, 36–38, 96–98
+  - spectral densities, 37, 96, 99
+  - stationarity conditions, 94
+- AR(2) model
+  - autocorrelations, 105–108
+  - behavior, 117–118
+  - building blocks, 122–124
+  - causal/stationary region, 109
+  - characteristic equation, 106
