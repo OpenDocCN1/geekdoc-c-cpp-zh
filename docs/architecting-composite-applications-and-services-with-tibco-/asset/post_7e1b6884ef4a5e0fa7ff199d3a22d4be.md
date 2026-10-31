@@ -1,0 +1,271 @@
+
+## N
+
+- Naming
+  - deployment flexibility for HA and DR, 210–211
+  - developing your own, 211–212
+  - difficulty of changing names, 180
+  - distinct WSDL namespace URI for each interface, 190
+  - distinguishing types from instances, 189
+  - general-to-specific structure, 183–185
+  - hierarchical naming authorities, 185–186
+  - importance of, 180
+  - interface major version numbers, 191
+  - multi-word fields, 189–190
+  - naming authorities, 206
+  - objectives, 173–174
+  - overview of, 174
+  - relating abstract and WSDL-defined services, 178–180
+  - summary review, 212–213
+  - technology constraints on, 205–206
+  - things requiring, 182–183
+  - using this chapter, 174
+  - values for address location variables, 209–210
+  - WSDL interface definitions, 176–178
+- Nested retrieval, 111
+- Network bandwidth limits, benchmark results, 329–331, 337
+- Network interface cards (NICs), network bandwidth limits, 331
+- Nonfunctional behavior
+  - characterizing observable behavior, 116–117
+  - service specification contents, 127
+  - service specification documentation, 422–423
+  - service specification example, 140–141
+  - solution architecture documentation, 414–415
+- Nonfunctional requirements
+  - service usage contract specifying, 144
+  - solution architecture documentation, 412–413
+- Notification Router, Payment Manager Composite, 296
+- Notifications
+  - Hawk Event Service, 55
+  - service specification documenting, 126
+- Nouveau Health Care, case study
+  - objectives, 67–68
+  - Payment Manager service specification, 73
+  - Payment Manager specification, domain model, 77–81
+  - Payment Manager specification, interfaces, 82–83
+  - Payment Manager specification, process overview, 74–77
+  - Payment Manager specification, processes, 83–90
+  - service-related documentation. See Service-related documentation
+  - solution architecture, 68–73
+  - summary review, 91
+- Number scheme, OSGi versioning, 153–154
+
+## O
+
+- Object-Oriented Modeling and Design with UML, Second Edition (Blaha and Rumbaugh), 218
+- Observable architecture, 414
+- Observable behavior, defined, 96
+- Observable dependencies and behaviors
+  - black box perspective, 96–97
+  - composites not suitable for black box characterization, 117–118
+  - constraints, 115–116
+  - context, 111–112
+  - context summarizing, 124
+  - coordination, 114–115
+  - facets of, 97
+  - nonfunctional behavior, 116–117
+  - objectives, 95–96
+  - observable state, 114
+  - summary review, 119
+  - triggered behaviors, 113–114
+  - usage scenarios, 112–113
+- Observable dependencies and behaviors, Sales Order Service example
+  - avoiding caches with nested retrieval, 111
+  - observable state and cached information, 108–111
+  - observable state information, 104–108
+  - order delivered, 104
+  - order shipped, 102–103
+  - placing order, 98–102
+- Observable dependencies, defined, 96
+- Observable state
+  - cached information and, 108–111
+  - information, 104–108
+  - observable behavior characterized by, 114
+  - orderShipped() operation, 102–103
+  - service specification contents, 125–126
+  - service specification documentation, 421
+  - service specification example, 134–135
+  - solution architecture documentation, 414
+- ObtainPayment() operation, case study, 101–102, 113
+- ODS (Operational Data Store), 295–296
+- One-line description
+  - defined, 122
+  - service specification content, 124
+  - service specification documentation, 419
+  - service specification example, 128
+- One-way fire-and-forget messages, 268
+- Open Services Gateway initiative (OSGi) Framework
+  - dependencies on packages, 152–153
+  - overview of, 151
+  - version number scheme, 153–154
+- Operating capacity
+  - determining, 316–317
+  - interpreting benchmark results, 327–328
+  - misleading benchmark results, 315
+  - setting Max Jobs parameter in ActiveMatrix BusinessWorks, 366
+- Operation invocations, service specification documenting, 126
+- Operation names, WSDL, 200
+- Operational Data Store (ODS), 295–296
+- Operational information, service interfaces, 106–107
+- Optional field, XML schema, 162–163
+- Orchestration design pattern, 297–298
+- Order Fulfillment interface, Sales Order Service
+  - coordination patterns, 115–116
+  - orderDelivered() operation, 104
+  - orderShipped() operation, 102–103
+  - overview of, 100–101
+- Order status, deep data structure for, 220–222
+- Order-to-Delivery business process. See Sales Order Service example
+- OrderDelivered() operation, case study, 104–105, 108, 115
+- OrderShipped() operation, case study, 102–103, 108, 115
+- Organizations
+  - establishing naming standard for, 211–212
+  - naming complications in complex, 205–209
+  - service usage contract specifying responsible, 142–143
+- Orthogonal states, 441–442
+- OSGi (Open Services Gateway initiative) Framework
+  - dependencies on packages, 152–153
+  - overview of, 151
+  - version number scheme, 153–154
+- Out-in architecture pattern, 34
+- Out-Only architecture pattern, 34
+- Output rates
+  - determining operating capacity, 316–317
+  - documenting test results, 322–324
+  - identifying capacity limit, 327–328
+  - identifying CPU utilization limits, 328–329
+  - misleading benchmark results on, 314–316
+- Over-partitioning, JMS message load between servers, 269
+- Overhead benchmarks, for complex components, 325
+- Overruling, advanced Hawk rules, 50–52
+
+## P
+
+- Packages, version dependencies and, 152–153
+- Parameters
+  - ActiveMatrix BusinessWorks tuning, 365–369
+  - default SOAP/HTTP thread usage, 346–347
+  - documenting test results, 322–324
+  - documenting testing of experimental, 321–322
+  - individual activity benchmark, 326
+  - JMS process starters in ActiveMatrix BusinessWorks, 360–361
+  - overhead benchmark, 325
+  - thread pools in ActiveMatrix nodes, 342–345
+  - Tomcat thread pool, 357
+- Parenthetical () brackets, OSGi versioning, 155
+- Part-whole relationships, UML Class Diagram notation for, 430–431
+- Partial order sequencing
+  - load distribution patterns preserving, 278–280
+  - overview of, 274–275
+- Partitioning, JMS message load between servers, 267–269
+- Payer accounts, case study, 77–78
+- Payment domain model, case study, 80–81
+- Payment Manager composite
+  - behavior management, 296–298
+  - composite processes, 298–299
+  - implementation, 307–308
+  - overview of, 295–296
+- Payment Manager specification, case study
+  - domain model, 77–81
+  - interfaces, 82–83
+  - process overview, 74–77
+  - processes, 83–90
+  - service-related documentation. See Service-related documentation
+  - service specification example. See Service specification
+  - usage context, 73
+- Performance
+  - benchmarking. See Benchmarking
+  - service usage contract specifying, 144
+  - solution architecture documenting, 412, 417
+  - storage replication strategies and, 377–378
+  - System-of-Record pattern limitations, 285
+  - tuning. See Tuning
+  - typical curve showing, 314–315
+- Performance targets, high availability, 373
+- Persisted message read times, EMS failover strategy, 385
+- PERSISTENT mode, Deferred JMS Acknowledgement Pattern, 374
+- Phone schema, WSDL Sales Order, 448
+- PlaceOrder() operation, case study
+  - avoiding caches with nested retrieval, 111
+  - coordination pattern, 115
+  - overview of, 98–102
+- Platform Server, TIBCO Managed File Transfer product portfolio, 56
+- Policy
+  - hierarchical naming authorities managing, 186
+  - intents, 45
+- Ports
+  - name structure defining routing strategies, 180–181
+  - UML Class Diagram notation for, 436
+  - WSDL type names for, 198–200
+- Priority parameter, named thread pools, 344
+- Process claim, case study
+  - accounts and fund transfers, 77–81
+  - basic concepts, 74–75
+  - process coordination, 76–77
+  - processing claims from providers, 74
+- Process coordinator, 44–45
+- Process manager
+  - rule service as, 246–247
+  - rule service assembling process definition, 248–249
+  - rule service directing, 249–250
+  - rule service separated from, 245–246
+- Process mapping
+  - architecture pattern for incompatible change, 166–167
+  - composites, 21–22, 298–299, 303
+  - deferred payment case study, 88
+  - immediate payment case study, 83–86
+  - service utilization, 19
+  - settlement account case study, 90
+  - simple test, 318–321
+  - solution architecture, 14–16
+- Process models
+  - as architecture view, 4–6
+  - in hierarchy of architecture, 7–11
+  - service utilization, 18–19
+- Process-pattern mapping
+  - as architecture view, 6–7
+  - in hierarchy of architecture, 7–11
+  - showing usage scenarios with, 98, 113
+  - solution architecture documenting, 411
+- Process starters
+  - ActiveMatrix BusinessWorks internal engine architecture, 358–359
+  - JMS, 360–361
+- Processes
+  - Payment Manager, 83–90
+  - Payment Manager overview of, 74–77
+- Product portfolio. See TIBCO ActiveMatrix® Product Portfolio
+- Product Query interface, 99–100
+- Product schema, WSDL Sales Order, 448–449
+- ProductChange() operation, Sales Order Service, 110–111
+- Program-to-program interaction intent, mainframes, 39
+- Promoted services, Service Bus load distribution, 272–273
+- Protocols
+  - BusinessConnect facilitating B2B, 63–64
+  - external access interaction via non-supported, 39
+  - external access interaction via proprietary, 38
+  - external access interaction via supported, 37–38
+- Provider account, case study, 77–78
+- Provider Settlement Record, 83–86
+
+## Q
+
+- Query operations, Microagent, 54
+- Queue message delivery semantic, 35
+- Queue Pattern, EMS client load distribution, 270–271, 393–396
+- Queues, JMS load distribution, 266
+
+## R
+
+- RAID arrays
+  - identifying disk performance limits, 333
+  - preventing data loss in data center, 377
+- Ranges, dependencies in OSGi versioning as, 154–155
+- Read requests, disk performance limits, 331–334
+- Recovery point objective (RPO), 372–374, 377–378
+- Recovery time objective (RTO), 372–373, 390
+- Recursive structure, UML notation, 433
+- Refactored architecture, 242–243
+- Reference architecture
+  - documenting design pattern, 13
+  - service utilization pattern as, 17–19, 24
+- Reference (or master) data, managing, 64–65

@@ -1,0 +1,11 @@
+request-reply interfaces (typically synchronous), while for cached information they present notification interfaces. The choice of pattern impacts the interface design of the underlying services.
+
+The Cached Information Pattern is used by fedex.com for package status reporting. Underlying systems, which are responsible for managing the progression of packages from origin to destination, publish notifications of package status changes. A composite service at fedex.com, using the Cached Information Pattern, subscribes to those notifications and caches the package status information. When a customer goes to fedex.com and wants to know the status of a package, the composite service uses a local lookup from its cache rather than an interaction with a back-end system to provide the package status.
+
+# Lookup and Cross Reference
+
+A common type of information retrieval is a lookup: A piece of data is used as a key for looking up a corresponding piece of information. You might use a currency to look up the current exchange rate, or use the identifier of an entity in one system to locate the corresponding identifier for the same entity in a different system.
+
+Frequent lookups can lead to performance problems, particularly if the information resides on disk. The use of a memory-resident cache can considerably speed up this process. TIBCO BusinessWorks™ SmartMapper provides the ability to cache data either in the ActiveMatrix BusinessWorks instance or in a separate process that is readily accessible by multiple BusinessWorks instances. Lookups are performed by BusinessWorks activities that are placed in the BusinessWorks processes that require the data. The cache is kept up to date by actively monitoring the underlying reference information and updating the cache when it changes. BusinessWorks™ SmartMapper also provides BusinessWorks activities that can create and manage the cross-reference information.
+
+ActiveSpaces™ is also well suited for this task. The TIBCO ActiveMatrix BusinessWorks™ Plug-in for ActiveSpaces Software makes it easy to use the ActiveSpaces capabilities in a BusinessWorks process.

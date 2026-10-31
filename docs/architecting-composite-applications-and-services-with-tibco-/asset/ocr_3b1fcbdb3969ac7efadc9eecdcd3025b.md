@@ -1,0 +1,3 @@
+SOAP action names should have this form with the operation name appended at the end. Schema namespaces and filenames should use the portion of this structure that describes the intended scope of utilization of the schema.
+
+Technology constraints on the length of individual fields and the overall length of identifiers must be taken into consideration when defining names. The enterprise should establish a policy defining the hierarchical structure of names to be used and identifying the organization responsible for establishing the values of the top-level fields and the organizations responsible for ensuring the uniqueness of subordinate field values.

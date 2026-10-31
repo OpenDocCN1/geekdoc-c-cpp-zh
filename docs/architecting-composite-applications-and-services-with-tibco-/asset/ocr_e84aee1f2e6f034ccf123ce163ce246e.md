@@ -1,0 +1,9 @@
+# Acknowledgments
+
+Knowingly or unknowingly, many people have contributed to this book. Chief among these are my fellow global architects at TIBCO, particularly Kevin Bailey, Todd Bowman, Richard Flather, Ben Gundry, Nochum Klein, Marco Malva, Heejoon Park, and Michael Roeschter. Many of the other members of the architectural services team have contributed as well, including JenVay Chong, Dave Compton, Roger Kohler, Ed Presutti, and Michael Zhou. My thanks to these folks and the rest of the architectural services group—you’re a great team to work with.
+
+The educational services team at TIBCO has played a key role in conceptualizing this book, along with the accompanying course and architect certification program. More broadly, they have taught me the fine art of knowledge transfer and greatly influenced the manner in which this material is presented. Particular thanks to Alan Brown, Michael Fallon, Mike Goldsberry, Robert Irwin, Michelle Jackson, Lee Kleir, Madan Mashalkar, Tom Metzler, Howard Okrent, and Ademola Olateju.
+
+The folks in TIBCO engineering have been more than generous with their time helping me understand the architecture underlying their products, including Bill Brown, John Driver, Michael Hwang, Eric Johnson, Collin Jow, Salil Kulkarni, Erik Lundevall, Bill McLane, Jean-Noel Moyne, Kevin O’Keefe, Denny Page, and Shivajee Samdarshi. My specific thanks to those who corrected my flawed understanding and provided the foundation for the threading diagrams in this book: Mohamed Aariif, Praveen Balaji, Seema Deshmukh, Laurent Domenech, Tejaswini Hiwale, Sabin Ielceanu, Shashank Jahagirdar, Salil Kulkarni, and Pankaj Tolani.
+
+I wish to thank the management team at TIBCO whose support made this book possible: Paul Asmar, Eugene Coleman, Jan Plutzer, Bill Poteat, Murray Rode, Murat Sonmez.
