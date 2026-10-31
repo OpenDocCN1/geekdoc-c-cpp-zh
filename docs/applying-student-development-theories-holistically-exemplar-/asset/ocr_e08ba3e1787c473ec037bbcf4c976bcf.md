@@ -1,0 +1,8 @@
+# Theory-in-Use Core Concepts:
+Perspectives From Scholarly Practitioners
+
+Katie Branch with Jeanne S. Hart-Steffes
+
+*The examples provided in the previous chapters of student development theories used in programs and practices that promote student success demonstrate an array of holistic synergies. This chapter summarizes data from the proposals submitted for this book, and draws out thematic perspectives from lessons learned and recommendations made by contributing authors. Core concepts about applying student development theories in contemporary higher education contexts are highlighted, with the importance of scholarly practitioner engagement noted. Cautions or reminders are given about transferring theory use to multiple contexts and diverse student populations. Finally, applying theory in higher education environments is not magic; rather, it relies upon the knowledge, skills, and intentionality of practitioners dedicated to the holistic well-being of students.*
+
+When analyzing information provided in the proposals received for this book as well as the contributing chapters selected ultimately for publication, there are patterns and themes that emerge. We received 26 complete proposals during the two-month period from when we issued a Call for Proposals and began final reviews for selection purposes. We sorted these proposals into the clusters of theories outlined: psychosocial and social identity development, cognitive development, and influences on development. Proposal authors identified four psychosocial and social identity theories that were used in contemporary practices, with the most commonly cited theory being Chickering and Reisser's (1993) Theory of Identity Development (i.e., the Seven Vectors). Proposals also cited Cross
