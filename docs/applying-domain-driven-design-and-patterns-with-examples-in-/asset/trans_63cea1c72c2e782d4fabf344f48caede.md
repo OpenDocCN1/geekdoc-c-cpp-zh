@@ -1,0 +1,95 @@
+
+The Register() method on NewOrder is also pretty simple. At least it can focus on its own state, and that makes the code clean and clear. It could look like this:
+
+```
+public void Register()
+{
+    _parent._Register();
+    _parent._currentState = new Registered(_parent);
+}
+```
+
+Before changing the state, there was kind of a callback to the parent (_parent._Register()) telling it to do its thing before the state was changed. (Note that the "callback" went to the internal method _Register() and not the public Register().) This is just one example of an option, of course. Other examples would be to put the code in the OrderState base class or in the NewOrder class itself. It should go wherever it's best located.
+
+As you saw, if I want to do things before or after the state transformation, it's simple and very well encapsulated. If I want to disallow a certain transformation in the NewOrder class, I just skip implementing that method and use the implementation of the base class OrderState for that method. The implementation of the base class throws an exception saying it was an illegal state transformation, if that's the wanted behavior. Another typical default implementation is to do nothing.
+
+## Note
+
+If you need more context-aware exceptions, you can of course implement the methods in the subclasses just as well, even if all they will do is raise exceptions.
+
+This also implies that instead of using a base class for OrderState you could use an interface instead. I guess that if the GoF book had been written today, many of the patterns would have used interfaces instead of (or at least together with) abstract base classes. The State pattern isn't the most typical example of this, but it still is a possible example.
+
+## More Comments
+
+When using the State pattern, we were actually swapping a single field into a bunch of separate classes. That doesn't sound like a very good idea at first, but what we then get is the nice effect of moving the behavior to where it belongs and good alignment to the Single Responsibility Principle (SRP).
+
+There are drawbacks, of course, and a typical one is that the program can potentially be flooded with small classes when we use a solution such as State.
+
+Which solution you prefer is indeed up for debate, but I think the State pattern is one that should be seriously considered here. You might find that it solves your problem with the least amount of
+
+We try to split the classes so that the responsibilities are cohesively dealt with from a technological point of view.
+
+Therefore, the old classes will now only focus on the domain meaning (let's call the layer Domain layer). The presentation (or rather consumption) responsibilities are dealt with by another set of classes (another layer called the Consumer layer), and the persistence responsibilities are dealt with by yet another set of classes (the Persistence layer).
+
+Three layers spontaneously felt like a typical solution here, one per responsibility category. The two new layers have two *implementations* each for dealing with both the old requirements and the new.
+
+The dependencies between the layers are also defined, and in this case we decided that the consumption layer will depend on the domain layer, and the domain layer will depend on the persistence layer. That way, the Consumer layer is totally unaware of the Persistence layer, which was something we decided was good in this particular project.
+
+We will get back to the subject of layering again in [第4章](#chapter-4), "A New Default Architecture," and then approach it a bit differently.
+
+## Another Example: Domain Model Pattern
+
+We have already discussed the Domain Model pattern [Fowler PoEAA] in [第1章](#chapter-1) (and will do so much more throughout the book). I think about the Domain Model pattern as an example of an Architectural Pattern.
+
+We're not going to discuss an example about the Domain Model pattern here and now because the whole book is about just that. Instead, we'll continue by focusing on another dimension of the patterns, regarding domain-dependence or not. Next up are Design Patterns for specific types of applications.
+
+## Design Patterns for Specific Types of Applications
+
+Another set of Design Patterns isn't as generic as those discussed so far, but, for example, patterns for building enterprise applications.
+
+Defining an enterprise application is tricky, but you can think of it as a large-scale information system with many users and/or a lot of data.
+
+The main book dealing with the patterns in this category is Martin Fowler's Patterns of Enterprise Application Architecture [Fowler PoEAA].
+
+The patterns here at first sight might not seem as cool or amazing as some of the Design Patterns, but they are extremely useful, cover a lot of ground, and contain a lot of experience and knowledge. As I said, they are less generic than the other Design Patterns and focused just on large-scale information systems.
+
+They come into play for the chosen structure of the logic; for example, the Domain Model. The patterns here aren't so much about how the Domain Model itself (or any of the other models for structuring the main logic) should be structured, but more about the infrastructure for supporting the Domain Model.
+
+To make it more concrete, I'd like to discuss an example, and I choose Query Objects [Fowler PoEAA].
+
+## An Example: Query Objects
+
+Let's assume for a moment that you have a Domain Model for a SalesOrder application. There is a Customer class and an Order class, and the Order class in particular is composed of a number of other classes. This is simple and clear.
+
+There are several different solutions from which to choose in order to navigate the Domain Model. One solution is to have a global root object that has references to root-like collections. In this case, a customer collection would be an example of one of these. So what the developer does is to start with the global root object and navigate from there to the customer collection, and then iterate the collection until what is needed is found, or perhaps navigate to the customer's sales orders if that's what's of interest.
+
+A similar paradigm is that all collections are global so you can directly access the customer collection and iterate over it.
+
+Both those paradigms are easy to understand and simple to use, but one drawback is that they are lacking somewhat from the perspective of a distributed system. Assume you have the Domain Model running at the client (each client has one Domain Model, or rather a small subset of the Domain Model instances, and no shared Domain Model instances) and the database is running at a database server (a pretty common deployment model). What should happen when you ask the root object to get the customer collection of one million customers? You can get all the customers back to the client so the client can iterate over the collection locally. Not so nice to wait for that huge collection to be transmitted.
+
+Another option is to add an application server to the picture and ask it to only send over a collection reference to the client side, and then much less data is transmitted, of course. On the other hand, there will be an incredible amount of network calls when the client is iterating the list and asking for the next customer over the network one million times. (It will be even worse if the customer instances themselves aren't marshaled by value but only by reference.) Yet another option is to page the customer collection so the client perhaps gets 100 customers from the server at a time.
+
+I know all these solutions have one problem in common; you don't often want to look at all the customers. You need a subset, in which case it's time to discuss the next problem.
+
+## Problem
+
+The problem is that the users want a form where they can search for customers flexibly. They want to be able to ask for all customers who
+
+- Have a name with "aa" in it. (Hidden marketing for a Swedish car company.)
+- Ordered something last month.
+- Have orders with a total amount greater than one million.
+- Have a reference person called "Stig."
+
+But on the same form, they should also be able to ask for just customers in a certain part of Sweden. Again, the search form needs to be pretty flexible.
+
+I'm going to discuss three different solution proposals, namely "filtering within Domain Model," "filtering in database with huge parameter lists," and "Query Objects."
+
+## Solution Proposal One: Filter Within Domain Model
+
+Let's take a step back and admit that we could use any of the solutions already discussed so that the collection is materialized somewhere and then the filter is checked for every instance. All instances meeting the filter criteria are added to a new collection, and that is the result.
+
+This is a pretty simple solution, but practically unusable in many real-world situations. You will waste space and time. Not only were there one million customers, but you also had to materialize the orders for the customers. Phew, that solution is just impossible to use and it's even worse when you scale up the problem....
+
+Of course, the conclusion here depends to a large degree on the execution platform. Remember what I said about the deployment model: a subset of the Domain Model instances in each client, the database at a database server, no shared Domain Model instances.
+
+If instead there was one shared set of Domain Model instances at an application server (which has

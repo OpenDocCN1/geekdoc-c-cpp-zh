@@ -1,0 +1,17 @@
+# The Place of OO in SOA
+
+Now that it is clear that an application is really a service, a part of a larger whole, how then does object-orientation, the accepted practice for application development, fit into SOA? Although some have proclaimed SOA to be the next generation of application development, effectively replacing OO, nothing of the kind has happened yet. It has taken over two decades for mainstream development to move from procedural-oriented to OO programming. It is unlikely that were a shift from OO to SOA possible, it would happen in any less time.
+
+In fact, SOA and OO operate on different levels. OO deals with the design and code of a single deployment unit while SOA deals with a solution comprised of multiple deployment units. SOA does not suggest new or alternate ways of designing or coding the internal logic of a given application or service. There is no reason SOA and OO should not be cooperative technologies. The question that SOA does bring to the table when developing OO applications is how these applications will accept and respond to messages coming from sources other than the user, and even in parallel to user activity. The fact that a given application can receive requests and, at the same time, issue its own requests to other services brings us to the conclusion that interactions no longer follow the classic "client-server" pattern.
+
+# Client-Server and SOA
+
+Not so long ago, most application development was described as client-server. For example, client software would "send requests" (SQL) to a database server and receive responses from it. Later, client-server fell out of favor and was replaced with 3-Tier (or N-Tier) where the rise of the application server began. Again, requests went one way and responses the other.
+
+However, as systems grew and became more interconnected, the N-Tier concept blurred as application servers began to make requests from other application servers acting as their clients. The inherent ordering found in the tiered architectures wasn't being seen in practice. Finally, client-side software was beginning to receive events asynchronously from its servers, in essence responding to requests something that it wasn't explicitly designed for.
+
+Beyond the SOA theory that states that client software should also be designed as a service, there is a real need for client code to be able to receive messages. Consider the case where an action on the server takes a very long time to complete, longer than the time-out duration for HTTP, possibly even days. This is not at all unusual for operations that require human intervention. While the client may poll the server for completion, this places undue load on the server, requiring a background task on the client. If we were to use that same background task to listen for messages notifying about work completion, we could relieve the server of this load. This solution is both feasible with today's technology and simple to implement.
+
+In this manner, the client may receive any number of types of messages, effectively becoming a service. In fact, these message exchanges could better be described as conversations between an initiator and a target than requests/ response pairs between client and server. There are no inherent constraints as to which services can initiate a conversation and which can respond.
+
+# One-Way Asynchronous Messaging

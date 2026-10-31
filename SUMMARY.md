@@ -152,6 +152,7 @@
 +   [金融工程的应用概率演算：R 使用入门指南](docs/applied-probabilistic-calculus-for-financial-engineering-an-/README.md)
 +   [R 时间序列分析应用](docs/applied-time-series-analysis-with-r/README.md)
 +   [R 应用时间序列分析（第二版）](docs/applied-time-series-analysis-with-r-second-edition/README.md)
++   [应用领域驱动设计与模式：C# 和 .NET 示例](docs/applying-domain-driven-design-and-patterns-with-examples-in-/README.md)
 +   [Arduino：快速启动指南 (快速启动指南系列)](docs/arduino-a-quick-start-guide-quick-start-guides/README.md)
 +   [Arduino：操作系统、编程、项目及更多 Arduino 用户指南（树莓派 2, xml, c++, ruby, html, 项目, php, 编程, 机器人... php, sql, 主机, 微型计算机）](docs/arduino-arduino-user-guide-for-operating-system-programming-/README.md)
 +   [少老皆宜的 Arduino 入门指南](docs/arduino-for-kids-young-and-old/README.md)
