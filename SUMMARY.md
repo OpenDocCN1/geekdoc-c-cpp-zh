@@ -127,6 +127,7 @@
 +   [C++ 编程入门指南，第 6 版](docs/an-introduction-to-programming-with-c-6th-edition/README.md)
 +   [Python 和 LaTeX 入门指南 (草稿)](docs/an-introduction-to-python-and-latex-draft/README.md)
 +   [稀疏多面体库面向对象接口](docs/an-object-oriented-interface-to-the-sparse-polyhedral-librar/README.md)
++   [模拟与混合计算机编程](docs/analog-and-hybrid-computer-programming/README.md)
 +   [模拟与混合计算机编程 (De Gruyter 教科)](docs/analog-and-hybrid-computer-programming-de-gruyter-textbook/README.md)
 +   [基于 SAS 的临床试验分析：实用指南，第二版](docs/analysis-of-clinical-trials-using-sas-a-practical-guide-seco/README.md)
 +   [使用 SAS 进行观察性医疗健康数据分析](docs/analysis-of-observational-health-care-data-using-sas/README.md)
