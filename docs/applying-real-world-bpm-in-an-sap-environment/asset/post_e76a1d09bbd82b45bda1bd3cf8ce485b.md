@@ -1,0 +1,51 @@
+
+- Identifying executive strategic business objectives
+- Business issues, challenges, and pain point situations (PPSs) as well as pain point effects (PPEs) and the undesired effect (UDE)
+- Determining which core competitive and core differentiated competencies need to be adjusted
+- Determining which competencies should be as cost-effective and efficient as possible and applying the changes either for the entire organization (big bang) and process by process or project by project
+
+Today, the first approach is the most commonly applied, and it has multiple challenges and disadvantages. Some of these are links to executive business issues; challenges and pain points are very low to nonexistent; the link with strategy is not very strong, even though it's very time-consuming; the link with the business model is very low and therefore the needed business model innovation and transformation often don't occur; the operational approach is very complex and therefore is very difficult to control and very costly approach because it tackles operation-level processes, and unless input and output are measured on operational processes, it is difficult for executives to monitor and measure the value creation and realization that is happening and very complex to build a continuous improvement feedback loop from the reactions of the company to the changes needed.
+
+We are not saying that defining value drivers is easy, but it is worth the effort, and we hope these examples have given some motivation in the right direction.
+
+**More Information**
+For more information or questions about performance management, performance, and/or value drivers and value management, please visit www.openroundtable.org.
+
+> "The first future you can really see is the future you can get."
+> – His Holiness, the 14th Dalai Lama
+
+## 4 The Holistic Approach: Combining BPM with Value and Performance Management, Enterprise Architecture, Governance, and SOA
+
+*Robert Eijpe, Caspar Laar, Ann Rosenberg, Sascha Kuhlmann, Mark von Rosing*
+
+Over the past few years, many initiatives have come to life for SAP customers: Initiatives from service-oriented architecture (SOA), business process management (BPM), value management (VM), enterprise architecture (EA), and with this not only the technology architecture and information architecture, but also the business architecture. In addition to this, SAP’s new ASAP Methodology for Implementation has been totally remodeled for the release ASAP 7. For additional information please see Part III, Chapter 15, Section 15.3.
+
+This is a lot to handle, and more than one customer has become confused by the sheer numbers of methods and approaches. They start wondering how all of the pieces fit together and are concerned that all of them require governance to be in place. Seeing the potential of cost cutting and value creation with the business processes based on developing competencies and operational excellence, customers are nonetheless willing to invest in these products and embark on a journey to restructure and streamline their business. However, customers struggle with a lot of questions. Some of the most common questions run along the lines of: Are these frameworks, methods, and approaches complementary to each other? Are they overlapping or contradicting? Can I do the one without paying attention to the other? And most of all: Where do I start?
+
+### 4.1 Applying the Different Approaches
+
+First, there is no defined answer to what comes first or where a customer should start. However, every customer should have a clear and accurate understanding of the business strategy, business model, and business architecture. All methods focus on the linkage between strategy, the organization, the processes, and how to integrate it all into technology to create performance and value. They focus on improving the way business activities are organized or executed and have cyclic methods for improving the efficiency and effectiveness of the implementation of the operational model. BPM, enterprise architecture, value management, and service-oriented architecture address similar topics, but from a different perspective, and enable different forms of performance and value creation (see Figure 4.1):
+
+- **Enterprise architecture (EA)** focuses on setting the framework for the business design and sets in place standards, guidelines, policies, and procedures for ensuring the design, integrity, and, if identified and planned, performance, value creation, and realization for the business as a whole.
+- **Business process management (BPM)** focuses on the management of the business process lifecycle, outlining the way the organization can and will execute its competencies. True performance happens at the activity level, and therefore most form of value creation happens at this level. One of the real benefits of introducing BPM principles to your processes is that you can add the principle of continuous improvement to the process lifecycle.
+- **Value management (VM)** adds the concept of the value lifecycle form of value planning, value identification, value creation, and value realization, and benchmarks on the operational and strategic level and thereby identification of cost-cutting and improvement potential. Doing this improves the process lifecycle and EA setup. It also materializes the concept of operational excellence by adding characteristics and metrics used for setting up performance measurement.
+- **Service-oriented architecture (SOA)** focuses on providing the design principles for an application architecture based on reusable components (services) and a flexible orchestration layer, which are applied when performing the solution transformation from business process requirements to the supporting IT solution.
+- **Governance** focuses on continuously applying the principles in a structured and managed fashion. Governance is applied on all levels of the enterprise, and harmonization should be achieved between business, process, and IT governance.
+
+![](img/30a88f75957f887ca511028d178ca5c7_106_0.png)
+
+Figure 4.1 Applying Governance Principles to the Business Model, Business Process, Value and Performance Management, and Governance (Kuhlmann and von Rosing, 2010. "Applying BPM Principles to SAP EAF")
+
+The different perspectives overlap on topic but not on content (see Figure 4.1). They support each other, and by harmonizing the governance of these perspectives, they will add value to one another and improve the quality of the individual improvement cycles. The same governance principles should be applied to the business model, business process, value and performance management, and realization in the IT domain. Furthermore, harmonization of these perspectives aligns business and IT initiatives because they are based on common standards, policies, and procedures and a shared orientation on the business processes. So business governance is one of the principles that can add tremendous value to the various business areas from the business model, EA, BPM, and value management disciplines, because it combines the different business areas.
+
+### 4.2 Innovate Your EA Framework with BPM and Value and Performance Management Principles
+
+The year 2007 marked the 20-year anniversary of enterprise architecture. In that time, several enterprise-architectural methodologies have come and gone. Today, four methodologies dominate the field: The Zachman Framework for Enterprise Architectures, The Open Group Architecture Framework (TOGAF), which SAP customers are advised to use, the Federal Enterprise Architecture Framework (FEAF), and Gartner (formerly the Meta Framework).
+
+You could ask yourself if you should care about a field that is more than 20 years old. A good and right consulting answer would be: "It depends." The field of enterprise architecture was inaugurated to address two major problems in IT that were already becoming apparent by then. The first problem was managing the increasing complexity of information technology systems. The second problem was the increasing difficulty in aligning business with IT in delivering real business value with those systems. Sadly, most enterprise architects today only concentrate on the first part of the EA vision, neglecting the important second part, which focuses more on IT alignment. A good example of this is that most enterprise architects know hardly anything about business models, business operation models, value maps, value trees, and value drivers, which are all disciplines of business architecture. Developments in the business domain in the past few years have, however, put new demands on IT flexibility and business-IT alignment, putting this topic right back into the spotlight.
+
+The more complex a system is, the less likely it is that it will deliver maximum business value without the linkage to business model and strategy. The better an organization can manage complexity, the more the organization improves the chances of delivering real business value. So should an organization care about fields of EA, BPM, governance, SOA, and business modeling? It depends on how an organization feels about value identification, creation, and realization and thereby positively affecting the 'bottom line.' If managing system complexity and delivering business value are key priorities for the organization, they should care about these subjects.
+
+### Value Management
+
+The key that combines the discussed material is that principles, policies, and standards from the enterprise architecture are applied throughout the enterprise continuum to the processes and the definitions of performance and value needs. This helps organizations harmonize the business model, business process, application, information, and infrastructure domains that are all part of the enterprise architecture. Understanding the business architecture is the first step in any enterprise architecture and the key to harmonization of the different perspectives on the same architecture domains. The business architecture is the discipline that combines and incorporates the business strategy and thereby the direction of the organization, its business model, and its operational model. Core (competitive and differentiated) and non-core competencies are identified and business activities are

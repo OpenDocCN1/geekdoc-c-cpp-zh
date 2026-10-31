@@ -1,0 +1,13 @@
+standing the influences of upstream-downstream processes. This often results in incomplete information and leads to less than desired results.
+
+Probably, the biggest challenge faced by IT organizations (and the business) is to verify that the processes enabled by IT solutions are executed the way they were defined during the blueprinting sessions. Even with thorough blueprint documentation, efficient implementation, and elaborate training, processes tend to be executed by people in several ways. Process owners on the business side require information on how their processes are executed by their groups, and IT organizations struggle to provide this information, even though the processes are enabled by their IT systems.
+
+These are some of the key issues that BPM attempts to solve by aligning the organization to processes (as opposed to functions) and centralizing the knowledge of processes, roles, and systems in a consistent fashion, thereby fostering collaboration.
+
+To better support the business transformation and mitigate risks that occur due to organizational realignment, Craig Baumgardner, director of solutions delivery and integration (SD&I), initiated a program with the goal to mature BPM as a discipline within the organization.
+
+Working with various technology strategy groups within SAP, Hospira realized that SAP is transforming its business suite not only to support end-to-end processes across the enterprise, but also to exchange business processes and information across the value chain by driving standardization and composition.
+
+# 11.1.3 Architecture Practice and BPM
+
+Without business context, architectural activities within IT simply focus on technology solutions. To illustrate this, we can compare an enterprise to a city with highways, subdivisions, plumbing, electricity, nature preserves, and so on. (In industry-speak, enterprise architecture (EA) and process reference models are generally referred to as the city plan, enterprise models, etc.) Just as a city has dependencies between roads, utilities, construction, sewage, and so on, interdependencies exist between functions, business processes, technology, organizational culture, and so on within an enterprise. (We wouldn't want to dig a foundation where there is a major electric line running, would we?) Whether the functional group is supply chain or IT or finance, it is still a part of the "city" and has interdependencies with other groups. Addressing the needs of just one of the components

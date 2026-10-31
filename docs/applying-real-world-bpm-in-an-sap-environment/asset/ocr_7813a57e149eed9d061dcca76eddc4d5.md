@@ -1,0 +1,11 @@
+become successful, BPM is a precursor and should flourish first. With all of the energy invested and the support from the leadership team, the Hospira business architecture project is currently on their way to becoming the process champions for the rest of the enterprise.
+
+# 11.1.2 Need for Business Process Management Discipline
+
+Since the spinoff of Hospira in 2004, followed by a major acquisition of Mayne Pharma in 2006, Hospira Information Technology had been heavily focused on helping the business stabilize itself as an independent, global organization. This, in addition to the regulatory demands and changing business environment, resulted in an IT organization that was heavily focused on technology, with less emphasis on strategic architecture and business processes. The IT portfolio consisted of hundreds of custom applications and thousands of interfaces between the SAP ECC and legacy systems.
+
+Today, a single global instance of SAP ECC acts as the business process platform for Hospira. In addition to SAP ECC, the SAP landscape consists of SAP Solution Manager, SAP Advanced Planning & Optimization, SAP NetWeaver Business Warehouse, SAP NetWeaver Portal, SAP NetWeaver PI, and SAP NetWeaver Composition Environment.
+
+In 2009, Hospira embarked on an organization-wide strategic initiative, which involved optimizing their product portfolio, evaluating nonstrategic assets, streamlining the organizational structure, and so on. On the IT side, this led to co-sourcing of certain IT functions, introduction of new technologies, and so on. Given all of the changes happening across the organization, the leadership team realized that business process was the only element that was 100 percent under management's control, because processes represent the corporate memory of how assets are used and work is done.
+
+Generally, within organizations, one or more individuals have a broad understanding of the IT landscape, the business processes they enable, and the intricacies of their functional groups. Such isolation of information creates *islands of knowledge*, causing stagnation of innovation and a risk to the organization. Also, whereas business excellence can be achieved only by moving away from functional silos, usually, functional groups try to optimize their processes without properly under-

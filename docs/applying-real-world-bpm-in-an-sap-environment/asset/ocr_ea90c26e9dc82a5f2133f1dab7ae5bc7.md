@@ -1,0 +1,12 @@
+realize value, both in an effective and efficient way. Without applying a cost and/or differentiation approach to one's competencies, the competitors simply could replicate what the organization is doing and any advantage could quickly disappear.
+
+Let's go into the details of each of the capability/resource innovation elements in the competency – value model. We will start with resources.
+
+# 1.5.1 Resources
+
+Resources (also called assets) can be categorized as tangible, intangible, and human. Tangible assets can be physical, such as plants and equipment, or financial, such as cash. These are the types of assets that are usually identified and accounted for in financial statements under the category "assets." Intangible assets are non-physical and nonfinancial assets such as patents, brands, copyrights, trade secrets, market research findings, relationships with customers, knowledge in databases, and relationships with vendors. They are usually not identified in financial statements but can be excellent sources of profits. For example, a patent or trade secret that gives a firm exclusive access to a product or process may allow the firm to be the only one producing a product with certain characteristics, thereby making the product highly differentiated and profitable. For a while, the copyright for Intel's microcode allowed the firm to offer differentiated microprocessors to makers of personal computers. Human assets are the skills and knowledge that employees carry with them [Afuah, 2003]. As shown in Figure 1.6, for the most part resources are associated with cost, and therefore resource innovation leads to cost advantage. Resources are the organization-specific assets that are useful for creating a cost advantage; however, certain resource/assets can be applied to differentiation advantage as well, all which few competitors can copy or acquire easily. Resources are inputs into a firm's process, such as capital, equipment, and the skills of individual employees, patents, finance, and talented managers. With increasing effectiveness, the set of resources available to the firm tends to become larger. Individual resources may not yield to a competitive advantage. It is through the synergistic combination and integration of sets of resources that competitive advantages are formed. The following are some examples of such resources:
+
++   - Patents and trademarks
++   - Proprietary know-how
++   - Employee relations and commitment
++   - Employee morale

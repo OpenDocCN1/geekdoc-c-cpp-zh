@@ -1,0 +1,282 @@
+
+## Volmering, Thomas (Chapter 14.2)
+- Vice President
+- Product Management SOA Composition
+- SAP AG
+
+## von Gloeden, Volker (Chapter 13.3)
+- Platinum Support Consultant
+- SAP AG
+
+## von Scheel, Henrik (Chapter 13.2)
+- Vice President
+- IBM Software Group, North East Europe
+
+## Wagner, Oktavian (Chapter 7.3)
+- M&A Business Process and Application Migration Lead
+- SAP Global IT, SAP AG
+
+## Weber, Ingo (Online Article, A Requirements Framework for Semantic Business Process Modeling)
+- Senior Research Associate, School of Computer Science & Engineering
+- The University of New South Wales
+
+## Wiffen, Graham (Chapter 8.5)
+- SAP Practice Manager
+- RS Components
+
+## Ziegler, Carsten (Chapter 14.4)
+- Chief Product Owner, Development Manager BRFplus
+- Business Rules Evangelist
+- SAP AG
+
+## Index
+- BPM, 21, 73, 96, 106, 233, 619
+  - adoption, 123
+  - based orchestration, 133
+  - Center of Expertise (CoE), 246, 274
+  - competency, 125
+  - field, 632
+  - Future Outlook, 615
+  - implementation, 123
+  - initiatives, 112
+  - journey, 236
+  - method approach, 114
+  - methodology, 205
+  - methods and tools, 199
+  - principles and disciplines, 110
+  - process flows, 203
+  - (process lifecycle) principles, 111
+  - project, 176, 427
+  - Roadmap, 248
+  - solution, 143, 154, 174, 191
+  - suites (BPMS), 271
+  - task force, 274
+  - technologies, 297
+  - tool, 171, 426
+  - tooling, 565
+- Business Process Modeling Notation (BPMN), 176, 186, 194, 203, 226, 335, 620
+  - artifact, 427
+  - compliant process model, 138
+  - diagram, 424
+  - modeling, 115
+  - process, 234
+  - process models, 175
+- BPMS, 286
+  - task force, 287
+- BPX, 565, 574
+- Braksem S.A., 205
+  - BPM payment process, 211
+  - process transformation program, 214
+- Brazilian petrochemical industry, 206
+- BRFplus, 201, 203, 513, 514, 515, 524, 527, 528, 529, 543, 545
+- BRM, 145, 147, 158
+  - decision tables, 211
+- BRMS, 498, 529
+- Build, 300
+- Business add-on to ASAP agile methodology, 399
+- Business analysts, 530
+- Business architecture, 105, 108, 110, 117, 236
+- Business blueprint, 115, 353
+- Business blueprint phase, 359, 362
+- Business case, 142, 145, 164, 190, 198
+- Business competencies, 46, 243
+- Business competency development vision/roadmap, 50
+- Business configuration sets (BC sets), 403
+- Business governance, 251, 262
+- Business innovation and transformation, 46, 55
+- Business intelligence reports, 257
+- Business intelligence systems, 131
+- Business-IT alignment, 52, 74, 80, 108
+- Business logic implementation, 443
+- Business model, 28, 35, 252, 308, 327
+  - analysis, 319
+  - approach, 38
+  - design, 40
+  - improvement and optimization, 314
+  - innovation, 31, 33
+  - innovation and transformation, 26, 55
+- Business modeling, 49, 251, 316, 319
+- Business model management (BMM), 257, 337
+- Business networks, 58
+- BusinessObjects, 151
+- Business performance indicator (BPI), 271
+- Business practices, 622
+- Business process, 114, 151, 321, 619
+  - expert, 249, 568, 570, 572
+  - hierarchy, 322, 382
+  - improvement, 367, 368, 369
+  - management, 185, 198, 206, 235, 249, 250, 257, 266, 356, 634, 635
+- Business Process Management
+  - The SAP Roadmap, 57
+- Business process management (BPM), 21, 74, 105, 106, 117
+  - principles, 311
+- Business process map, 348
+- Business process modeling, 632
+- Business process monitoring, 367
+- Business process operations support, 382
+- Business process optimization, 367
+- Business process requirements, 112
+
+## E
+## F
+- Decisioning, 512
+- Decisioning approach, 511
+- Decisions, 480, 492
+- *service, 494*
+- *service design, 499*
+- Defense industry, 251
+- Defense organizations, 252
+- Define value drivers, 243
+- Definitions, 532, 535
+- Deloitte, 138
+- Designers of business processes, 632
+- Development components (DC), 430
+- Development group, 307
+- Development infrastructure (NWDI), 189
+- Documentation, 549
+- Dot com era, 33
+- Due diligence stage, 623
+- Dunn & Bradstreet, 155
+- EA, 107, 247
+  - *governance and strategy frameworks, 341*
+  - *metamodel, 112*
+  - *vision, 108*
+- EAI, 195
+- Ecenta AG, 146
+- Eclipse environment, 417
+- Economical negotiation, 199
+- EDI, 191, 195
+- Efficiency, 199
+- Electrical engineering and electronics, 184
+- Electrocomponents plc, 190
+- Emergency maintenance, 199, 200
+- End-result-oriented solution paradigm, 59
+- End-to-end, 142, 163
+  - *operations, 206*
+  - *processes, 131*
+  - *process integration, 178*
+- End user, 146, 167, 635
+- eNOVI, 210
+- Enterprise application integration layer, 195
+- Enterprise architects, 568, 572, 597
+- Enterprise-architectural methodologies, 107
+- Enterprise architecture, 73, 105, 106, 107, 117, 235, 236, 240
+  - *CoE, 248*
+  - *framework, 110, 111, 573*
+  - *practice, 246*
+- Enterprise asset management, 546
+- Enterprise business model, 26
+  - *innovation and transformation, 26*
+- Enterprise information management (EIM), 128
+- Enterprise IT architecture, 146
+- Enterprise JavaBeans (EJBs), 442
+- Enterprise portal, 147
+- Enterprise primary processes, 324
+- Enterprise resource planning, 70
+- Enterprise resource planning (ERP) solution, 266
+- Enterprise service bus, 586
+- Enterprise service orientation, 55
+- Enterprise services, 198, 415, 545, 546, 547, 549
+- Enterprise Services Repository, 175, 234, 302, 303, 304
+- Enterprise SOA Experience Workshop, 305
+- Enterprise SOA governance, 597
+- Enumerations, 532
+- EPC, 202
+- Ericsson, 141
+- ERP, 148, 175, 203, 209, 229
+  - *landscape, 223*
+  - *paradigm, 75*
+  - *system, 211, 228, 233*
+- ES Repository, 171
+- ES Workplace, 548
+- ES Workplace systems, 549
+- Execution, 74
+- Facebook, 58
+- Fast translation, 71
+- Federal Enterprise Architecture Framework (FEAF), 108
+- Final preparation phase, 377
+- Final Price, 518
+- Financial processes, 163, 164
+- Financial services, 161
+- Flat file, 370
+- Flexible IT solutions, 114
+- Flexible skeleton, 74
+- Flow-oriented modeling technique, 424
+- Flow ruleset, 529, 535
+- FOVISSSTE, 165, 167, 169, 170, 171
+  - process, 164
+- Framework for organizing competencies, 49
+- Full structured processes, 621
+- Function-oriented enterprise, 56, 60
+- Hospira Information Technology, 237
+- HR, 229
+  - system, 228, 233
+- Human capital management, 546
+
+## G
+## I
+- Gartner EA method, 247
+- Gartner (formerly the Meta Framework), 108
+- Generic acute-care, 236
+- GIS, 180
+  - systems, 182
+- GISA GmbH, 179
+- Globalization, 141
+- Global master data management, 144, 150
+- Goal-oriented processes, 621
+- Go-live support phase, 378
+- Governance, 106
+  - model for operations, 383
+  - processes, 511
+- Governance, risk, and compliance (GRC)
+  - management, 253
+- Governmental-thinking organization, 255
+- Grid Asset Management Suite (GAMS), 186
+- Grid assets, 184
+- Grid operators, 184
+- IBM, 146, 621
+- ICASIO pattern, 328, 332
+- Identification of value opportunities, 319
+- Identify performance parameters, 243
+- IDES, 222
+- ID mapping, 463
+- IDoc, 370
+- IDS Scheer, 199, 371
+- Industry model innovation, 26
+- Industry-specific IT solutions, 184
+- Information architecture, 105, 236
+- Information technology, 56, 108
+- Information technology systems, 108
+- Integrated change control, 342
+- Integrated infusion therapy, 236
+- Integrated payment process, 214
+- Intellectual capital (IC), 88
+- Internet-enabled networked markets, 59
+- Inventory management, 546
+- INVISTA, 136
+- IO structure-conduct-performance framework, 23
+- IS-Banking, 169
+- IT, 146, 150, 151, 194, 204
+  - alignment, 108
+  - backend systems, 336
+  - department, 135
+  - domain, 107
+  - enablement, 118
+  - environment, 498
+  - flexibility, 108
+  - infrastructure, 55
+  - landscape, 398, 572
+  - market, 21
+  - process, and outsourcing supplier, 179
+  - IT-related consulting services, 179
+  - solution, 111, 112, 335
+  - strategy, 359
+
+## H
+- Hewlett Packard, 66
+- Hewlett Packard Managed Printing Solutions, 64, 67
+- High tech, 163
+- Holistic approach, 337, 383
+- Holistic business model approach, 39
+- Holistic solution, 64
+- Hospira, 235

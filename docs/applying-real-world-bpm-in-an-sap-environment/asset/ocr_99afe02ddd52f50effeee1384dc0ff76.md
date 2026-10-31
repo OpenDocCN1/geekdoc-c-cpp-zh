@@ -1,0 +1,13 @@
+involved — what kind of letter to send, what offer to make in the letter, and so on. However, 10,000 micro decisions have been made — one per customer. The company has decided to send each customer a specific letter — one decision each. Even if it chose to make all 10,000 decisions the same way, it has still made 10,000 decisions. After all, each customer will react to the letter as though it was sent just to them. They don’t know the other customers who received it, and they are not aware of them.
+
+The recipients will regard the sending of the letter, and the choice of its content, to be a deliberate decision on the part of the company. By focusing on these micro decisions, the company can ensure that each letter is the result of a deliberate decision. Breaking the process down and considering each of these decisions separately allows them to be customized and targeted to each customer.
+
+Any time a process treats all instances of the process (all customers, all orders, all claims, or all tax returns) the same, there is the potential to introduce differentiation if the treatment decision is broken down into its constituent micro decisions. For instance, a company might use the same price for every customer. Yet each customer regards this as the price the company is willing to offer them personally. If the company considered these micro decisions and considered varying the price for each customer, it might find that different customers put different values on the product.
+
+Many strategic decisions can only be implemented if many supporting micro decisions are also made. For instance, a strategic decision to increase customer retention requires that many individual micro decisions — how to retain this specific customer — are improved. The strategic decision will have no impact unless the micro decisions are also improved.
+
+When reviewing processes for operational decisions, it can also be helpful to consider the various types of operational decisions that typically exist in an organization. The most common types are eligibility decisions, calculations, risk-based decisions, and opportunity-based decisions:
+
+# Eligibility decisions
+
+Eligibility decisions like "Is this customer eligible for this product?" are one of the most basic and common operational decision types. Eligibility decisions must be made repeatedly and consistently so that every customer and citizen has the same rules applied to determine if they are eligible. The policies and regulations driving these decisions can be extensive, and the critical challenge

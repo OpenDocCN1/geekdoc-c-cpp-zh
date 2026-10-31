@@ -1,0 +1,3 @@
+and custom-tailored prototype system, combining business, industry, solution, and technology. Source eight was the Composite in a Day workshop, which enables business process owners and IT to quickly evaluate SAP's BPM capabilities by modeling and executing their organization's business processes on the SAP platform. The last enablement source (nine) was several communities that we recommend you join for additional enablement.
+
+We will now move on to Part IV, which will focus on the future outlook of BPM.

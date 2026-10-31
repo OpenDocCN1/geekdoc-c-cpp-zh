@@ -1,0 +1,13 @@
+As discussed in Section 13.3, SAP has redesigned the ASAP Methodology for Implementation to enable creation of industry, solution, and other types of business add-on content. With the business add-ons the standard ASAP methodology for implementation can be extended to provide implementation content and methodology guidance not only for a specific industry or solution, but also to adjust the traditional implementation approach to enable the use of selected, proven agile methodology principles that work in SAP implementation projects.
+
+Although this approach is not suitable for every implementation project, there is a large body of SAP projects that can benefit from all or selected techniques using short time-boxed cycles (sprints) to deliver working solutions in frequent cycles. Note that SAP extracted a set of acceleration techniques into the core ASAP methodology.
+
+Let’s take a look at how the agile methods and techniques are implemented in business add-ons and how they extend or modify the ASAP Methodology for Implementation. The business add-on for agile is overlaid on top of the core ASAP methodology; it preserves key components and deliverables from ASAP while extending it with new concepts.
+
+The project starts with a standard project preparation phase in which the project team completes the standard set of deliverables, for example, high-level project WBS, high-level project schedule, project scope statement, and so on. The key driver for the project scope is the initial project scope statement that is determined in early stages of project preparation phase.
+
+This is the key deliverable that drives subsequent activities in the business blueprint phase during which the team completes the project backlog. The project backlog is built following acceleration techniques for blueprinting and the ASAP blueprint approach. These standard techniques are extended to support a clear way to prioritize the requirements and validate them with the business process owners.
+
+The project backlog in turn forms the basis for determining the scope of individual sprints that implement the iterative process of building or working a solution in short time-boxed cycles. Each sprint scope is then represented in a sprint backlog.
+
+During each sprint the project team works on functionality, feature sets, or configuration outlined in the sprint backlog. Each sprint is a cycle of detailed design, development, composition, configuration, and testing. Before completing the sprint, the project team conducts validation of the functionality specified in the sprint backlog with the end users through demo or presentation of results and formal sign-off.

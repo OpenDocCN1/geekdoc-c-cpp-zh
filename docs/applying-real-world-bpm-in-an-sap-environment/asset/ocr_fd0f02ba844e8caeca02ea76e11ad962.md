@@ -1,0 +1,13 @@
+munication, and fail-over mechanisms are in place to ensure efficient use of the full cluster resource.
+
+The engine executes process instances in a transactional and fail-safe manner. This means the state of a process is stored in the database (DB) at save points whenever the process logic, technical constraints, or general monitoring requirements demand it. Because the engine executes an arbitrary number of different process models, all with different data context definitions, it cannot use dedicated (transparent) DB tables to store this data. Instead, at every save point, the data context of a process is serialized to XML and stored as one “blob.” When the data needs to be read back, it is fetched from the DB and parsed to re-instantiate the data objects in the memory. This engine-persistent storage is required to enable fail-over of process instances in case of a Java engine — or a hardware failure. If this occurs, the engine will simply reload its previous state and continue process execution from the previous save point.
+
+Whenever a context switch occurs for a process instance, the entire instance must be serialized on the node where it is currently executed and later de-serialized on the node where execution is to continue. A context switch like this can occur when an incoming request is issued on a node in the cluster where the process instance is not currently running. Requests of this kind are service requests, a BPMN event (via correlation), or a human interaction leading to a status change of a task.
+
+For auditing reasons, note that there are at least two save points for every activity in your process: one after creation when the input data is available and another one after completion, when the output data is available. Human tasks can have significantly more save points than automated activities, typically one after each status change (e.g., task created, task started, task claimed, task failed, task completed, etc.). Also note that all major changes to a process instance and its activities (including changed process data) are written to the business log, where they are the basis for providing information about the history and the current state of the process (in graphical or textual form).
+
+In memory, data objects are represented using a standard compliant Service Data Objects (SDO) implementation.
+
+The size and complexity of the data context of a process therefore directly impact engine performance in three ways:
+
++   - The data context of every process instance currently in execution must be kept in the main memory. Very large data contexts (>1MB) can significantly impact the number of process instances that can be simultaneously executed.

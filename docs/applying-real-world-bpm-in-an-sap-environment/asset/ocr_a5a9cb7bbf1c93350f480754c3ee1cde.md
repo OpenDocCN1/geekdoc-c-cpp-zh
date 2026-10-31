@@ -1,0 +1,11 @@
+# High tech
+
+Shrinking product lifecycles, pressure to provide complete solutions, and demanding customers are driving high tech companies to initiate process improvement initiatives. Additionally, the trend in high tech is to build innovative multi-tiered business networks to increase the efficiency of manufacturing and distribution processes. Hence, efficient collaboration along the value chain is business critical for high tech companies. Therefore, they are applying BPM tools and methods to streamline the interaction between manufacturers, logistic service providers, distributors, and customers. We have included the example of RS Components, a company that automated supply chain collaboration to optimize stock inventory levels. RS Components is a trading brand of Electrocomponents plc, which is one of the largest global catalog and Web-based distributors of electronic components (see Section 8.5).
+
+# 8.1 Patrimonio Hipotecaria: Supporting Unique Mortgage Processes Attached to SAP for Banking
+
+> *In the banking industry, competitive differences are in service speed, quality, and efficiency, because banking services are essentially a commodity. The SAP NetWeaver technology platform is a key enabler of our agility and ability to respond to market demands. A BPM approach and the SOA-based SAP for Banking solutions are helping us rapidly implement collaborative processes to improve business process quality and efficiency in supporting our financial and mortgage lending products.*
+> 
+> - Alejandro Marroquin, Chief Information Officer, Patrimonio Hipotecaria
+
+Patrimonio Hipotecaria, a Mexico-based mortgage bank founded in 1995 with 17 regional branches, is recognized by Standard & Poor's for its highly efficient operations, which result from its integrated and flexible core IT systems. To keep pace with its rapid growth, Patrimonio developed a strategy to replace over 20 legacy applications with the SAP IS-Banking and the SAP NetWeaver technology platform. To support their unique end-to-end financial processes that span between SAP for Banking and non-SAP applications, Patrimonio leveraged SAP NetWeaver Business Process Management.

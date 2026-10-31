@@ -1,0 +1,13 @@
+term, the financial bailout will most likely redistribute available funds from defense to other needs. A cost focus will more than ever be a part of survival.
+
+The overview on the following pages will describe the lessons learned and the exciting journey of the necessary process-centric transformation. First, we will introduce the parameters and the value drivers for the business model. Next, we will look at tools and approaches for changing a dynamic organization without losing its focus, responsibility, flexibility, and robustness in undergoing such changes. Throughout this section, we will follow the value flows and focus on where in the organization we get the most performance and value for the money.
+
+# 11.2.1 The Importance of Having the Right Business Model in Place
+
+To enable our armed forces, coalition forces, and civilian organizations to liaise effectively in a global environment, we need to manage our processes efficiently and cost-effectively and ensure their openness and interaction across organizational boundaries. Bringing together previously unconnected processes allows groups and organizations to improve the visibility and availability of vital information. In the early stages of the business process transformation in the Danish Armed Forces, it became clear that if process changes were deployed without the correct business model management in place, the models used could not deliver the required benefits. The nature of the defense industry, and recent broader regulatory legislation such as the Sarbanes-Oxley Act, makes the management of governance, risk, and compliance (GRC) not only important, but mandatory. Government compliance regulations imposed on this industry go far beyond the regulations imposed on most other industries.
+
+International Traffic in Arms Regulations (ITAR); Registration, Evaluation, Authorization of Chemicals (REACH); Export Administration Regulations (EAR); and unique identification (UID) and radio frequency identification (RFID) are just a fraction of the regulations and mandates for which national defense organizations must demonstrate compliance.
+
+As a point of departure for the analysis, we will define business governance as discussed by Mark von Rosing in Part I of this book and according to Carl von Clausewitz as "the center of gravity." This concept has an orientation toward the outside and the inside core of an organization. Clausewitz explains it as follows:
+
+> Center of gravity is the characteristics, the capabilities, or the locations from which an organization derives its freedom of action, physical strength, or will to fight for the markets and earn money.
