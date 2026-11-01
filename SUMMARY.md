@@ -172,6 +172,7 @@
 +   [ASP.NET Dynamic Data 完全掌握](docs/aspnet-dynamic-data-unleashed/README.md)
 +   [汇编语言编程：ARM Cortex-M3](docs/assembly-language-programming-arm-cortex-m3/README.md)
 +   [汇编语言步步进：Linux 编程 3e](docs/assembly-language-step-by-step-programming-with-linux-3e/README.md)
++   [C#12 和 .NET 8 异步编程：编写更简洁、更高效的异步代码，开发响应式 UI 和可扩展的 Web 服务等等！](docs/asynchronous-programming-with-c12-and-net-8-write-cleaner-mo/README.md)
 +   [Professional Visual Basic 2010 and .NET 4 高级指南](docs/at-al-professional-visual-basic-2010-and-net-4/README.md)
 +   [C++ 音频编程实战](docs/audio-programming-in-c/README.md)
 +   [C++ 音频编程入门指南](docs/audio-programming-in-c-the-beginner-level/README.md)

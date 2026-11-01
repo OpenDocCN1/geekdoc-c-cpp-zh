@@ -1,0 +1,56 @@
+level_changes:
+- line: 41
+  before: 2
+  after: 1
+- line: 408
+  before: 2
+  after: 1
+- line: 750
+  before: 2
+  after: 1
+- line: 1502
+  before: 2
+  after: 1
+- line: 2204
+  before: 2
+  after: 1
+- line: 2206
+  before: 2
+  after: 1
+- line: 2572
+  before: 2
+  after: 1
+- line: 3312
+  before: 2
+  after: 1
+- line: 3822
+  before: 2
+  after: 1
+- line: 4175
+  before: 2
+  after: 1
+- line: 4627
+  before: 2
+  after: 1
+- line: 4908
+  before: 2
+  after: 1
+- line: 4942
+  before: 2
+  after: 1
+text_changes:
+- line: 0
+  before: C#12 和 .NET 8 异步编程：编写更简洁、更高效的异步代码，开发响应式 UI 和可扩展的 Web 服务等等！
+  after: C# 12 和 .NET 8 异步编程：编写更简洁、更高效的异步代码，开发响应式 UI 和可扩展的 Web 服务等等！
+- line: 7
+  before: 征服响应性：释放 C#12 和 .NET 8 异步编程的强大力量
+  after: 征服响应性：释放 C# 12 和 .NET 8 异步编程的强大力量
+- line: 1502
+  before: 第5章：利用异步编程进行网络通信（例如，HTTP请求/响应）
+  after: 第 5 章：利用异步编程进行网络通信（例如，HTTP请求/响应）
+- line: 3822
+  before: 第10章：像专业人士一样调试异步应用程序
+  after: 第 10 章：像专业人士一样调试异步应用程序
+- line: 2204
+  before: Chapter 6
+  after: 第 6 章
