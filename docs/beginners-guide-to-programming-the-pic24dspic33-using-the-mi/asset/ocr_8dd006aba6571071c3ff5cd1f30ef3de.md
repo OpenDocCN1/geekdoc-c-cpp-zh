@@ -1,0 +1,9 @@
+two discrete steps: acquisition time (sampling and holding the signal) and then conversion (performing the ADC process on the sampled and held signal). In order to collect and hold an analog signal for conversion a sample and hold capacitor is used. This capacitor is internal to the PIC24H electronics. The capacitor follows the analog input signal and then upon a sample command stores a voltage capture of the analog value for the conversion process. This is denoted as the sample and hold process.
+
+While the signal is held in the capacitor an analog to digital conversion process takes place. The conversion uses an exact number of CPU clock cycles (equivalent to resulting output word size), to perform the conversion. This type of conversion process is known as successive approximation, where an internal comparator is used to measure the difference between the analog sampled input and an internal generated ramp comparator. The ramp output voltage size is dictated by the number of conversion clocks. For each clock (one of the 10 or 12) a digital decision is made and a digital bit value is generated and stored as part of the final digital word result.
+
+![](bbox=[0.2, 0.5, 0.8, 0.85])
+
+Figure 4-2: ADC Sampling Time
+
+The PIC24H ADC peripheral is an extremely versatile part and has a number of operational modes configurable by setting peripheral specific SFR (special function registers). One of these modes is resolution and is selectable from 10 to 12 bit. The other is the number of sample and hold (S/H) channels that you can use. With 10 bit selection the number of total S/H is four, with a 12 bit ADC

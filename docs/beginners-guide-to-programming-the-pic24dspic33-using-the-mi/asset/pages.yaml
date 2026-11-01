@@ -1,0 +1,5038 @@
+- pgno: 0
+  md: '# Beginner’s Guide to...
+
+
+    # Programming the
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_0_0.png)
+
+
+    # PIC24/dsPIC33
+
+
+    Thomas Kibalo'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '> "He who refuses to embrace a unique opportunity loses the prize as surely
+    as if he tried and failed"
+
+    > - William James'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Running the experiment........................................89
+
+
+    16 bit Micro Experimenter (optional)................................92
+
+
+    # Chapter 5 – Using an LCD Display with the Microstick II..... 95
+
+
+    Hardware description........................................95
+
+
+    Software Library Description................................98
+
+
+    Experiment #1 – LCDDEMO......................................101
+
+
+    Running LCDDEMO..............................................102
+
+
+    Experiment #2 –A Simple Voltmeter............................103
+
+
+    Running the voltmeter........................................105
+
+
+    16 Bit Micro Experimenter (optional)..........................106
+
+
+    # Chapter 6 – Using Timers and Timer Interrupts ............... 109
+
+
+    The 16 bit Timer peripheral...................................109
+
+
+    Hardware description.........................................111
+
+
+    Timer 1 Experiment –non-Interrupt............................113
+
+
+    Timer 1 - 16 bit execution...................................115
+
+
+    Timer 1 - 16 bit Experiment using Interrupt...................116
+
+
+    The 32 bit Timer Using Timer Peripheral Pairs.................118
+
+
+    Timer3/4 32 Bit Operation –Non Interrupt.....................119
+
+
+    Timer3/4 32 Bit Operation Interrupt..........................121
+
+
+    16 bit Micro Experimenter (optional)..........................122
+
+
+    # Chapter 7 – Serial Communications ............................ 125
+
+
+    Serial Communications Overview ...............................125
+
+
+    RS-232 and RS-485 Industry Standard Serial Communications....127
+
+
+    American Standard Code for Information Interchange (ASCII)...128
+
+
+    USB (Universal serial Bus)...................................130
+
+
+    Serial Communications Review ...............................131
+
+
+    The PIC24H Peripheral Programming System (PPS)................132
+
+
+    Initializing PPS.............................................134
+
+
+    Experiment 1 "Implementing a Serial interface with a PC...136
+
+
+    Software Configuration.......................................137
+
+
+    Hardware Configuration.......................................138
+
+
+    Executing the code...........................................140
+
+
+    Using USB instead of RS-232..................................143
+
+
+    16 bit Micro Experimenter (optional)..........................145'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'An embedded design cycle starts first with designing and entering source code
+    for the target application, and then working through the any source code syntax
+    errors associated with target code''s software language to achieve an executable
+    form of this source code. This executable form of source code is designated as
+    object code. The next critical step, in this cycle, is to program the object code
+    into your microcontroller prototype in order to test and validation the original
+    code design. At this point in the cycle an external tool device is required to
+    program the microcontroller. This tool type, like the Microchip''s Microstick
+    II, allows "In Circuit Programming" to enable you to program the microcontroller
+    while it is in the prototype without having to remove it.
+
+
+    Ok, let''s assume we are far enough along in the embedded design cycle where we
+    now have executable object code programmed in the prototype. We now begin the
+    next step of testing our source code design. Nine times out of ten all code as
+    initially designed will have latent logic errors that need to be identified and
+    fixed. As designers, all of us are "only too human", and, as such, are infallible
+    in making mistakes. The mistakes at this point in the cycle are not syntax source
+    code errors but are logic errors in that are in implicit in the original source
+    code design. These logic errors are always, in the end, ultimately linked with
+    any assumptions you as the designer may have made about the application or the
+    microcontroller hardware. This is where debug comes "to the rescue".
+
+
+    In debug we need to test and exercise those original assumptions and discover
+    if they are correct or not. The IDE helps us here, and with support an external
+    debugger, allows operational test and control of the microcontroller "in Circuit"
+    with the ability to view its operation in an investigative way. For example you
+    should be able, in real time, to examine memory, single step the microcontroller
+    operations, or halt operation at a designated point in the code. As you apply
+    these tools, with your own careful thinking you begin to uncover the latent errors
+    or "bugs" in the design.
+
+
+    Now the real chore becomes reworking the source code, making changes to the source
+    code to fix the problem, and then verifying the fix by running through the entire
+    cycle once again. The process, in fact, relies on multiple iterations through
+    the embedded design cycle. For each of these iterations you will continue to discover
+    the bugs, and fix those, eventually converging on a baseline solution that is
+    hopefully bug free. There are some experts that believe that all designs reach
+    product maturity with some measure of latent bugs still present (I tend to believe
+    them). The amount of time you spend in iteration is dependent on a number of factors,
+    like the total complexity of the design, your complete understanding of the application
+    that you designed to, your skills with the tools, your knowledge of the microcontroller,
+    and finally, and most importantly, the numbers of assumptions you have made on
+    all the above. A lot of these factors will definitely tend to diminish with experience,
+    as both your skills with the tools and knowledge of the technology grows.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# Chapter 1 – Getting Started
+
+
+    In this chapter we will guide you through the installation process for Microchip
+    MPLAB, the Microchip ''C'' compiler, and the Microstick II programmer/debugger.
+    We will test this total install using the demo project "FLASH_LED" to insure that
+    all elements of the install are correct and complete. We will then cover some
+    of the important hardware elements of our tool suite, starting with an overview
+    of Microchip''s 16 bit Microcontroller family, and then covering in more detail
+    the PIC24H, and then finally discussing the Microstick II and its operation. This
+    chapter will serve as the foundation for all other chapters, and will leave us
+    with the necessary development tool suite, and hardware overviews, for all subsequent
+    chapter discussions and experiments.
+
+
+    Special Note: The hardware setup and projects described in this book are written
+    for the PIC24H. They are easily configurable with a few simple steps for both
+    the PIC24F and the dsPIC33. Details are at the end of this chapter.
+
+
+    # Introducing Microchip MPLAB IDE
+
+
+    To reiterate at this point, the Microchip MPLAB IDE is a Windows based program
+    that runs on a PC and is used to develop applications for Microchip microcontrollers.
+    As an IDE, it provides a single integrated "environment" to develop and test code,
+    as part of the embedded design cycle required for all microcontrollers. The environment
+    assists the designer in progressing through the "embedded design cycle" without
+    the distraction of switching among an array of distinct and different tools, and
+    allows for the designer to concentrate on completing the application without the
+    interruption of using these separate tools and their associated specific different
+    modes of operation.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'Again, MPLAB IDE, as a framework, functions as a "wrapper" in that it coordinates
+    all the tools from a single graphical user interface. For instance, once code
+    is written, it must be converted to executable instruction set (object code) and
+    then downloaded and programmed into a microcontroller to determine how well it
+    works. During this process multiple tools are needed: an editor to write the code,
+    a project manager to organize files and settings, a compiler to convert the source
+    code to object code and then a hardware programmer/debugger to test the object
+    code in operation with the microcontroller. MPLAB along with the Microstick II
+    programmer/debugger meets all these requirements, and will serve in this book
+    as our basic development environment.
+
+
+    The basic components and features of MPLAB are shown in the Figure 1-1. In the
+    chapters to follow we will continue to discuss and illustrate the detailed use
+    this integrated tool set as a part of each chapters'' "hands on" experiments.
+
+
+    # MPLAB®
+
+    Integrated Development Environment
+
+
+    +   - GUI Based
+
+    +   - Integrated Project Manager
+
+    +     - Organizers and maintains project file space
+
+    +     - Retains the workspace layout
+
+    +     - Provides quick view of all functions/symbols
+
+    +     - Automatic build operation operations ( single button)
+
+    +   - Syntactic Source code editor
+
+    +     - Color Syntax assisted-assembly and C code entry/review
+
+    +   - Language tools
+
+    +     - MPASM assembler, MPLIB linker, MPLIB Library tool
+
+    +     - C30 C compiler ( free student version)
+
+    +     - Extensive Library support ( Audio, Wireless, graphics, Ethernet, USB)
+
+    +   - Programming and Debug capability
+
+    +     - Fully compatible with Microstick
+
+    +   - Debug
+
+    +     - Simulation (MPLAB SIM software simulator) or in circuit with Microstick
+    debug
+
+    +     - Extensive tools sets
+
+    +     - Breakpoint, single step and animate operations
+
+    +     - Stopwatch, Logic Analyzer, Variable Watch, DCM, memory gauges
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_15_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Ok so far, but not very exciting. The MPLAB works well --but where is the beef?
+    We need to raise the ante. Let''s close this configuration out (''click'' red
+    X button in top right hand corner of IDE) and then let''s fire up a Demo project
+    directly. Under this new scenario we should see MPLAB populated with the components
+    of the particular demo project, displaying those functional components in MPLAB
+    in the workspace as they were last saved.
+
+
+    Navigate to where you stored your demo folder, open this folder and locate the
+    project folder FLASH_LED. Under Windows you should see the following project file
+    content (see Figure 1-6). The project file content contains the C source (.C)
+    and object code (.O), a MAP to show where code and data is assigned within the
+    microcontroller memory, and an executable file (.HEX). The most important files,
+    for our purposes at this time, are the project files (.MCP) and the workspace
+    file (.MCW). Both of these last files are displayed with the MPLAB IDE logo. Double
+    click the project icon marked .MCP file and MPLAB will reconstruct the project
+    from the last stored workspace for that project. The workspace captures what windows
+    are open, how the microcontroller is configured, and what debugging options were
+    set. The workspace is captured with the .MCW file. Figure 1-6 captures the whole
+    process.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_19_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: 'Let''s continue with a closer look at the MPLAB contents using this project
+    to gain a better appreciation of the MPLAB visual environment. In this project
+    workspace there are several windows open. First is the overall Project Window,
+    this window shows in tree structure all the associated user files or support files
+    that are part of this project''s source code build. Only two source code files
+    appear here. You can examine any files contents by double clicking on the specific
+    file within the Project Window. The other window that is open is the source code
+    window (Figure 1-7).
+
+
+    Notice that this window it is tabbed, in that all the source files within the
+    project have been open for viewing, but only one file can be viewed at a time.
+    You can alternate your source code views by clicking the associated tab aligned
+    with the particular source code file. Another window visible in the workspace
+    is the Output Window. The output window has many tabs and again you can alternate
+    your views between debugger statuses, build/compile errors as well as several
+    others (we will learn all of these features later in this book). Finally there
+    is the MPLAB panel and tool bar on top of the main window. Here you can direct
+    what operation you want the MPLAB to perform.
+
+
+    If you do not have your Microstick II connected at this time, the output window
+    should indicate this (only because the Microstick II debugger was active as part
+    of the original workspace configuration). Please connect your Microstick II at
+    this time, if it hasn''t been connected already. A Microchip USB driver is automatically
+    installed the first time you hook up your Microstick II. Once done the Windows
+    operating system should recognize the Microstick II connection automatically afterwards.
+    Once the Microstick II is connected and driver installed the output window should
+    respond that the debugger is connected. The Microstick II Debug LED should be
+    constantly on.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_22_0.png)
+
+
+    Figure 1-8: Building demo code
+
+
+    Now for execution, this is the absolute final step in the process. Here''s where
+    the payoff for all our hard work occurs. Let''s review our status so far. We have
+    a successful build, and the Microstick II is connected. Now let''s simply program
+    the device and run the debugger. This is a two-step process; again we have to
+    direct our attention to the tool bar. Click program button, and then click the
+    run button (Figure 1-9).
+
+
+    Build All Button'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_23_0.png)
+
+
+    Figure 1-9: Programming Microstick II
+
+
+    After clicking run the Microstick II should be running and the IDE should be responding
+    with a visible activity bar active in the lower left hand corner of the IDE window.
+    In addition, the run button on tool bar is disabled, and only the pause button
+    is available for use. You can click pause button on the tool bar and the Microstick
+    II will stop at the current line that the microcontroller was beginning to execute.
+    A green arrow will appear in the source code window (if it is open) as to what
+    line of source the microcontroller is paused at. You can then elect to run from
+    there (click run), or use single step (click single step) to execute one line
+    of source at a time, or reset (click reset) and the Microchip will start execution
+    of your code from the beginning.
+
+
+    It would help here to briefly cover some of the important debug functions, discussed
+    so far, that reside in the IDE tool bar (see bullet items below and Figure 1-10):
+
+
+    +   - Make – just rebuild code that is new
+
+    +   - Build All – rebuild all code in Project Window
+
+    +   - Program the device ( in this case for debugging functions)
+
+    +   - Run –execute the program'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '+   - Pause- stop the program
+
+    +   - Single Step – execute one line of code from where you previously paused
+    and then pause after execution.
+
+    +   - Reset –reset the device so the next run or pause execution will occur from
+    beginning of code
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_24_0.png)
+
+
+    Congratulations –you now have a fully functional microcontroller development system!
+    With this tool suite you can now undertake the exercises in this book and begin
+    to progressively prepare and train yourself in 16 bit Microcontroller embedded
+    design techniques.
+
+
+    We will be covering the function and features of MPLAB more carefully in the chapters
+    to follow. Now let''s discuss some of the important hardware features of the Microstick
+    II and the PIC24H microcontroller so as to better understand these important resources
+    and their full capabilities.
+
+
+    # Install Errors
+
+
+    +   1. Source Code Compile Errors-If compile errors occur you may have inadvertently
+    typed or entered text in the source window and this would be accepted by the IDE
+    as new code for the build. If this is the case close the IDE and do not save the
+    workspace, reload the demo code and start again.
+
+    +   2. ''C'' Complier Not installed -If compile operation did not even occur,
+    and the output window reports that it can''t find the complier; you may have overridden
+    the default location for complier. You now have one of two choices. The first
+    choice is to just reinstall the complier to its IDE default'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'digital controller operations, like motor control, digital power conversion,
+    digital filtering. This series is marked with its own dedicated MAC or "Multiplier
+    Accumulator Unit" in order to perform high speed math operations. This series
+    also has uses a 40 bit accumulator to insure there is no overflow of math operations.
+    The dsPIC30 is a +5V part. The dsPIC33 is a +3.3V. Microchip exclusively supplies
+    its own signal processing and high speed math libraries for these parts free.
+    For this book we will focus on experiments and operation for the PIC24H that can
+    also be applied to understanding the PIC24F and dsPIC33.
+
+
+    The Microstick II is socketed and can support both the PIC32 (32 bit microcontrollers),
+    PIC24H, PIC24F and dsPIC33 (16 bit microcontrollers) targets. it ships with the
+    PIC32 in the socket. This needs to be removed and replaced with the PIC24H part.
+    Our focus in this book is on the high end 16 bit microcontrollers not the 32 bit
+    microcontroller. The socket only supports 28 pin Skinny DIP packages. Your Microstick
+    II ships with four such devices, the PIC32MX220F032, the PIC24HJ128GP502, the
+    dsPIC33FJ128MC802, and the PIC24FJ64GB002. All of these parts are +3.3VDC logic
+    and have a similar pin out configurations. The PIC24H and dsPIC33 have memory
+    capacities 128K Flash and 8K Ram and both can operate up to full rate of 40 Million
+    Instructions per Second (MIPS). The PIC24H has a reduced memory capacity of 64K
+    Flash and 8K Ram with a 32 MIPS rate.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_26_0.png)
+
+
+    Figure 1-12: 16 Bit Microcontroller Support for Microstick II
+
+
+    Why use a Microchip 16 bit part? After all, the large variety of Microchip 8 bit
+    parts have been around for a while and are all well supported. To facilitate this
+    decision it may help to carefully review both performance and capability of a
+    new 16 bit processor side by side with an 8 bit machine. A table is provided to'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'illustrate this point. Let''s compare the PIC24HJ128GP502 part to a well-known
+    8 bit member of the Microchip family the PIC16F887.
+
+
+    We will compare data size, memory size, clock rates and final instruction speed
+    measured in MIPS (Millions of Instructions per Second). The comparison shows that
+    the PIC24H has 16x the memory capacity in flash, over 20x the RAM capacity, and
+    a MIPS rate of 8x the PIC16F887. If we also compare peripheral content we will
+    find that the 16 bit exceeds by a factor or 2:1 numerically over most of the 8
+    bit internal peripherals, and introduces new peripherals. Finally as the 16 data
+    bus is 2x the size of the 8 data bus meaning that twice as much data is handled
+    during any one instruction. With this type of processing power and peripheral
+    power you can handle a broader range of applications that 8 bit world could not
+    handle standalone. We discussed these briefly in the introduction but could include
+    network connectivity with TCP/IP stack, high resolution graphics, wireless stacks
+    like ZIGBEE, 802.11b, SD-CARD with 2GB+ capacity that is formatted in a WINDOWS
+    compatible file I/O, to name a few.
+
+
+    | | PIC24HJ128GP502 | PIC16F887 |
+
+    |---|---|---|
+
+    | Data bus | 16 bit | 8 bit |
+
+    | Flash Size | 128K Flash | 8K Flash |
+
+    | Ram Size | 8K RAM | 386 RAM |
+
+    | Clock rate | 80 MHZ | 20 MHZ |
+
+    | MIPS | 40 MIPS | 5 MIPS |
+
+    | Supply Voltage | 3.3V operation | 5 V operation |
+
+
+    # The PIC24HJ128GP502 Microcontroller
+
+
+    Let''s dig a little deeper and now explore the PIC24HJ128GP502 microcontroller
+    more closely. This device, as mentioned earlier, comes prepackaged in a "skinny
+    DIP". As discussed earlier the PIC24HJ128GP502 is a +3.3VDC logic part and supports
+    40 MIPS of operation with both a 128K FLASH, 8K RAM. Even though this part is
+    +3.3V logic it can also support +5V Input on some of its pins (see +5V input tolerant
+    pins) and it has the ability to drive +5VDC output logic level by using device
+    configurable open drain setting on output levels. Interrupt handling and response
+    times are important considerations in the use of microcontrollers for any real
+    time operations. The PIC24H is well equipped here. It has an internal interrupt
+    controller with guaranteed 5-cycle latency in respond to interrupts, up to 45
+    available interrupt sources, with seven priority levels, five traps for any processor
+    exception handling (i.e. divide by zero) and three external interrupts.
+
+
+    The PIC24H has built-in peripheral for Direct Memory Access (DMA) that supports
+    8 channels of DMA with an independent dual ported 2KB RAM that'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'As a final note with the PIC24H, you not only program its flash memory with
+    object code, but you also program its configuration setting by programming its
+    internal "configuration word". The configuration word setting can be set using
+    the MPLAB GUI or integrated in the source code as complier directives. The configuration
+    word itself resides in flash memory but it is a reserved location and not considered
+    as part of the code area. The configuration word controls clock settings as to
+    what clock source (i.e. external clock, internal clock, clock type), or whether
+    or not the device is being programmed in debug mode or whether the device is configured
+    for final release mode (program mode). The configuration word also sets which
+    pins are used for ICSP and finally use of watchdog timer. We will cover more of
+    these specific details in the chapters to follow, but for the demo LED_FLASH covered
+    in this chapter the specific configuration was set to disable the external oscillator,
+    use the internal 8MHz oscillator resident in the PIC24H, select pins 14 and 15
+    of the PIC24HJ128GP502 as ICSP data and clock, and disable the watchdog timer.
+
+
+    # Microstick II Hardware Description
+
+
+    Let''s now get into the Microstick II operational details. To reiterate, the Microstick
+    II is designed to provide users with an easy to use, economical programmer/debugger
+    for 16-bit Digital Signal Controllers and Microcontrollers and is fully integrated
+    with Microchip''s MPLAB Integrated Development Environment.
+
+
+    Microstick II supports all the essential features for programming/debugging. It
+    can be used stand-alone or plugged into a prototyping board. Once you are satisfied
+    with your design and feel that all the bugs are fixed, you take it the microcontroller
+    out of debug mode, and then program the device for standalone operation (release
+    mode). In release mode MPLAB is no longer required. The only requirement here
+    is to retain the USB connection to the Microstick II to retain power to the microcontroller.
+
+
+    A final option is to remove the microcontroller from the Microstick II and plug
+    the microcontroller directly into the prototype without the Microstick II. For
+    this you need to furnish your standalone microcontroller with its own power, ground,
+    and Master Clear. We will cover this process in the some of the chapters to follow.
+
+
+    Let''s discuss the detailed operation of the Microstick II hardware starting with
+    a block diagram of the device (see Figure 1-15).'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Figure 1-18 shows the Microstick II on a Solderless breadboard and powered
+    via USB connection. The debug LED is on either blinking or steady depending on
+    whether or not MPLAB is communicating with the on-board debugger.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_34_0.png)
+
+
+    Green Debug LED on (hooked to MPLAB)
+
+
+    User Red LED blinking because of running program
+
+
+    PIC24HJ128GP502 Microcontroller
+
+
+    Microstick II connected to PC via USB
+
+
+    Figure 1-18: Connecting USB to Microstick II
+
+
+    Note that with the Microstick II as installed in these photos and given its board
+    size of 20x76 mm column pin access is limited to two connections each. This is
+    more than enough for most prototyping efforts.
+
+
+    # The 16 Bit Micro Experimenter (optional)
+
+
+    The Microstick II development system is the primary focus for this book. The Microstick
+    II serves as a low cost introductory development system. As you further develop
+    your experimental repertoire and wish to include elements like the, built-in power
+    supply LCD, EEPROM, buttons etc. a lot of the recurring wiring can be cumbersome.
+    An alternative for moving beyond the Microstick II is the 16 Bit Micro Experimenter.
+    In each chapter of this book a 16 bit Micro Experimenter option will be discussed.
+    A complete description of the Experimenter is given in Appendix A. The Experimenter
+    is available for purchase through www.Kibacorp.com . The Experimenter facilitates
+    prototype exploration and testing of Microchip 16 bit'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'PIC24H/PIC24J/dsPIC33 Microcontroller with full on board support and peripheral
+    capabilities. These capabilities support an extensive prototyping circuit environment
+    without the need to rebuild any electronics. Like the Microstick II the Experimenter
+    plugs directly into a Solderless breadboard. The Experimenter is socketed allowing
+    it to easily support a number of Microchip 16 bit SDIP parts like the PIC24FJ128GP502
+    (which is included with the Microstick II). The Experimenter comes with a PIC24FJGA002.
+
+
+    A photo of the 16 bit Experimenter situated in a Solderless Breadboard is shown.
+    The Experimenter on-board support has 16x3 LCD. 4 user pushbuttons, on-board power
+    regulation (with power on LED indicator and power on/off switch), and a 32KB EEPROM,
+    power on reset button, ICSP (In Circuit Serial Programmer and Debugger Interface),
+    and finally an I/O Expansion Connector.
+
+
+    A photo of the 16 bit Experimenter situated in a Solderless Breadboard is shown.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_35_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# 16Bit Experimenter feature set:
+
+
+    +   - Plug in Module Format with built in 3.3V regulator for use with larger Solderless
+    Breadboards.
+
+    +   - 16x3 low profile LCD display and 4 user defined pushbuttons
+
+    +   - ICSP interface for in circuit programming and debug
+
+    +   - Standard I/O Expansion Bus for breadboard access to PIC24F/PIC24H peripheral
+    set
+
+    +   - On board 32KHz timing crystal for accurate timekeeping
+
+    +   - On board 32KB EEPROM
+
+    +   - Comes Equipped with PIC24FJGA002 but can Use PIC24HJ128GP502
+
+    +     - +3.3 V Operation 40 MIPS with some +5 Volt logic compatibility
+
+    +     - 128K Flash 8K RAM
+
+    +     - Host of on chip peripherals: ADC, Programmable I/O, Dual UART, Dual SPI,
+    I2C, Analog Comparators, Capture/Compare Modules
+
+    +   - On/off switch with power on LED indicator-- power by wall transformer or
+    direct connection. +3.3V out can be used for breadboard as well.
+
+    +   - Comes in kit format with assembly and operating instruction using full complement
+    of thru-hole parts for ease of assembly( see www.kibacorp.com)
+
+
+    # Review of MPLAB Key features:
+
+
+    +   - Integrated development environment for Microchip Microcontrollers
+
+    +   - Uses Integrated Project Manager to organize and maintain project files and
+    user''s workspace
+
+    +   - Uses syntactic source code editors supporting both ''C'' and assembly languages
+
+    +   - Single button build and program functions
+
+    +   - Support programming and debug of microcontroller using external devices
+    like Microstick II
+
+    +   - Tool bar for run, pause, single step during debug operation.
+
+
+    # Review of Microstick II Key Features:
+
+
+    +   - Low Cost
+
+    +   - Integrated USB programmer / debugger – No external debugger required
+
+    +   - USB Powered – Ease of use, No external power required
+
+    +   - Socketed dsPIC/PIC24/PIC32 – Flexible, Easy device replacement'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '+   - 0.025" Pin headers – Enables plug-in to Breadboard with room for jumper
+    wires
+
+    +   - Easy access to all device signals for probing
+
+    +   - Small size - Smaller than a stick of gum at 20 x76mm – Easily Portable
+
+    +   - On board debug LED, Utility LED and Reset Switch
+
+
+    # Review of 16 bit Experimenter Key Features:
+
+
+    +   - Plug in Module Format with built in 3.3V regulator for use with larger Solderless
+    Breadboards.
+
+    +   - 16x3 low profile LCD display and 4 user defined pushbuttons
+
+    +   - ICSP interface for in circuit programming and debug
+
+    +   - Standard I/O Expansion Bus for breadboard access to PIC24H peripheral set
+
+    +   - On board 32KHz timing crystal for accurate timekeeping
+
+    +   - On board 32KB EEPROM
+
+
+    # Special Notes for Using dsPIC33 or PIC24F
+
+
+    +   1. Remove in the source code (typically resident before Main function ) the
+    #include "p24hxxxx.h". Replace it with either #include "p33Fxxxx.h" for the dsPIC33
+    or #include "p24Fxxxx.h" for the PIC24F.
+
+    +   2. Use MPLAB IDE Configure Menu selection to select the exact dsPIC or PIC24F
+    part you want to use.
+
+    +   3. Save, rebuild project, and run.
+
+
+    # Exercises :
+
+
+    +   1. What are some of key tools supported by the MPLAB environment?
+
+    +   2. What is meant by ICSP? And how is it used by the Microstick II?
+
+    +   3. Gain familiarity with Microchip''s 16 bit family of products and target
+    applications. Go to and review the materials at Microchip web site http://www.microchip.com/en_US/family/16bit/
+
+    +      a. What are some applications?'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'b. What free libraries are available?
+
+
+    c. What are the more innovative peripherals listed for this family? And how does
+    the PIC24H support them?
+
+
+    4. Gain familiarity with the PIC24H application notes. Go to URL http://www.microchip.com/stellent/dd...
+    and select PIC24H as processor and do search. How many applications notes are
+    currently listed?
+
+
+    5. How many +5V tolerant pins does the PIC24HJ128GP502 support?
+
+
+    6. What is PPS feature of the PIC24H? How is it used?
+
+
+    7. What is a meant by the microcontroller''s configuration word? How is it used?
+    How can it be set?
+
+
+    # 8. Exploring MPLAB
+
+
+    +   a. Open Demo project FLASH_LED
+
+    +   b. Close all windows
+
+    +   i. Close project view
+
+    +   ii. Close source code views
+
+    +   iii. Close output window
+
+    +   c. Open all windows ( just basic IDE panel and tool bar should be present)
+
+    +   i. On IDE panel select view and from pull down select project—the project
+    window should be opened and project tree visible
+
+    +   ii. Double click on FLASH_LED.c (this is the main function) –the source code
+    should be open and source visible. Using edit tool find Main function.
+
+    +   iii. Click build button on tool bar –notice that output window with build
+    tab is automatically opened and results from the build are shown.
+
+    +   iv. Connect the Microstick II and notice the output window. It changes tab
+    from build to debug and automatically recognizes the connection.
+
+    +   v. Click run, then pause, then single step and follow the green arrow in the
+    source window indicating where execution has stop and what the next line of code
+    execution is. Now hit reset and notice arrow position, hit single step and notice
+    the green arrow is now place at the beginning of the source code. Hit run and
+    the Microstick II should be blinking the user led.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# Chapter 2 – Driving an LED
+
+
+    In this chapter we will develop prototype hardware and software for a LED. We
+    will be using the installed development system created in chapter 1. For our first
+    experiment will first start with just one LED. This is reminiscent of the ''C''
+    program "Hello World!" Here the programmer strives to write their first application
+    program outputting a hello world message to the console. With our microcontroller
+    there is no console- so we have to just settle to blink a LED as a type of "Hello
+    World". Here we will walk through hardware and software builds, and do the software
+    debug using simulation and the finally do hardware debugging using Microstick
+    II. In the second exercise we expand the hardware prototype capability by increasing
+    the number of LEDs to total of ten and enhance the software to perform a binary
+    counting display.
+
+
+    # Experiment 1- Hardware
+
+
+    The PIC24H has user programmable pins. These pins can be configured as digital
+    inputs, digital outputs, analog, or assigned as specific peripheral in/out. A
+    block diagram (see Figure 2-1) highlights the inner organization of an individual
+    PIC24H pin to show just how this works. The diagram depicts only the peripheral
+    and digital functionality of the pin, analog is not shown.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_40_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'A pin''s output can originate from either the peripheral side or the digital
+    side. Both have their own independent data paths and enabling signals through
+    an output mux which determines which side becomes the pin''s output. A peripheral
+    must be enabled for its output to be used. To enable a pin for digital output
+    the pin''s TRIS signal must be cleared. Only one side (peripheral or digital)
+    can output at any one time, and if both are enabled, the peripheral with higher
+    priority wins! On the input side no mux exists and so input signals connect to
+    both sides. In this chapter we will use digital output only.
+
+
+    Every pin has a corresponding TRIS control bit to set the digital direction of
+    the pin. A zero makes the pin an output; a one makes the pin an input. Each pin
+    also has a PORT bit that allows reading or writing to the pin. For our PIC24H
+    part we have two PORT registers PORTA and PORTB that are both 16 bits wide. However,
+    because of the 28 DIP package size not all of these PORT bits are available as
+    pins.
+
+
+    PORTA allows for read/write of pins RA0, RA1, RA3, RA4 these pins correspond to
+    bits 0, 1, 3, 4 of PORTA (the rest of the bits are unassigned).
+
+
+    PORTB allows for read/write of pins RB0, RB1, RB2, RB3, RB4, RB5, RB6, RB7, RB8,
+    RB9, RB10, RB11, RB12, RB13, RB14, RB15 again each of these pins corresponds to
+    a bit position in the register.
+
+
+    As mentioned earlier, for each PORT we have a TRIS. So in this device we have
+    a TRISA and a TRISB. Both PORT and TRIS exist in the PIC24H as "special function
+    registers" or SFR for short. They are RAM memory locations in the PIC24H dedicated
+    to digital pin operation. Pin bit positions in a PORT are identical to those in
+    its TRIS. For example if RB2 is to be an output then write a zero to bit position
+    2 in the TRISB register and then set that pin''s output value by writing a one
+    ( for +3.3VDC output) or zero (ground) to the corresponding bit position in PORTB.
+
+
+    There is also a third SFR that is used for digital I/O called LAT or latch. It
+    works in a similar way to PORT, however with LAT we can latch output or input
+    rather than directly reading or writing using PORT. We have both a LATA and LATB,
+    again both are 16 bits. There are a number of software techniques to access special
+    function registers, like TRIS, PORT, and LAT in C code and we will discuss this
+    some more when we talk about the software.
+
+
+    For experiment 1 we want to connect a single LED to bit 5 of PORTB or RB5 and
+    set RB5 to be a digital output. RB5 is pin number 14 on the PIC24HJ128GP502. The
+    device is a 28 pin DIP, so there are 14 pins on each side of the chip. Looking
+    down on the chip there is a notch in the package to indicate pin 1, all the pins
+    are numbered 1 to 28 and go counter clockwise on the device. This would make pin
+    14 or RB5 the last pin on the bottom right hand side of the chip.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'A schematic for experiment 1 is shown. The PIC24H digital output can drive
+    up to 25 milliamps on a digital output. We don’t need all that current to turn
+    on a LED (3 milliamps is more than enough), so we use a current limiting resistor
+    (1K) in series with the LED. The circuit is basically a series circuit where RB5
+    is tied to one side of the resistor, the other side of the resistor is connected
+    to LED anode, and finally the LED cathode is tied to ground. In this way when
+    we make RB5 = 1 the LED will light up, if we make RB5 = 0 the LED will turn off.
+    Make sure that the ground potential for your prototype circuit is the same ground
+    reference used by the Microstick II, so connect the Solderless breadboard ground
+    to pin 8 of Microstick II.
+
+
+    An assembled circuit is shown in Figure 2-3. Notice that ground is picked up from
+    pin 8 and connected to a common bus for ground on the prototype board. This same
+    ground is used for the LED cathode. The cathode must be grounded for the LED to
+    work. You need to be able to Figure out anode from cathode with the LED, to be
+    able to hook it up correctly. The cathode is typically the shorter lead on the
+    device is also marked by a flat edge on the part.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_42_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '# 1. Source Code- project view
+
+
+    +   - The source code is really the principal design. It is a .C file extension
+    that is ANSI C compliant with the only exceptions being operations to Microchip
+    processor specific function register (SFR) settings, and controls
+
+    +   - You can view the contents of the source code from the project view by double
+    clicking the source code listing in the project view. -The source code Window
+    will open up.
+
+    +   - Source code windows will open with the contents of source color code based
+    upon language syntax. For example comments are green, C language elements are
+    dark blue.
+
+    +   - In the source code window you have an editor that allows you to modify code
+    or add new code
+
+    +   - In this source code there are several major components. The generic header
+    file, configuration word, an additional function (that we incorporated to help
+    modularize the code), and finally the Main function
+
+
+    # 2. Generic Header File
+
+
+    ```
+
+    #include "p24hxxxx.h"  /* generic header for PIC24H family */
+
+    ```
+
+
+    +   - This file is referenced in the Source code. It is known as a header file
+    (has an .H extension). It was developed and supplied by Microchip. For our work
+    it''s internal definitions are needed in supporting reading/writing to the PIC24H
+    microcontroller peripherals and I/O in a C language environment.
+
+    +   - The actual file exists outside our project and resides within the MPLAB
+    C30 directory.
+
+    +   - This file contains reference to all the specific Microchip peripheral function
+    and register definitions. This reference allows us to access Microchip SFR functions
+    in a seamless matter with ANSI C complaint language components.
+
+
+    # 3. Configuration word
+
+
+    +   - These are C language macro (custom C language scripts) that set the configuration
+    word. These macros are defined as part of the .H file. In this case individual
+    scripts are used to fix the PIC24H CPU clock source to the internal RC oscillator
+    and disable the main primary crystal oscillator.
+
+
+    ```
+
+    _FOSCSEL(FNOSC_FRC);
+
+    _FOSC(FCKSM_CSDCMD & OSCIOFNC_ON & POSCMD_NONE);
+
+    _FWDT(FWDTEN_OFF);
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# 5. Delay function\n\n+   - In order to blink the LED we need some delay time\
+    \ for turning it on and turning it off in order to allow it to persist in our\
+    \ vision as a \"blink\". This function provides this. It is configured with a\
+    \ fixed delay, that idles and does nothing else but consume CPU cycle time for\
+    \ about ½ second. The delay is configured as a loop within a loop. The loop times\
+    \ are established by lend and jend values. The total delay time is approximately\
+    \ lend times jend cycles or 400 x 1000 or 400,000 cycles to achieve 500 millisecond\
+    \ delay.\n\n```\n```c\nvoid delay(void) ; // 501 msec\n\nint i,j;\nfor (i=0; i<lend;\
+    \ i++)\n    for (j=0;j<jend; j++);\n}\n```\n```\n\n# 6. Main code\n\n+   - Every\
+    \ C program must have a single function called \"main\". This is where execution\
+    \ begins for the user, only after the compiler sets the configuration word, initializes\
+    \ the processor stack pointer, and initializes all the variables. Only one main\
+    \ function can exist in a C language application at a time. As we will see the\
+    \ main function is often segmented with an initialization section and a continuous\
+    \ loop section. Once initialization is complete the microcontroller enters the\
+    \ continuous (\"infinite\") loop for its operations. This is marked by a While\
+    \ (1) { ...... }. The microcontroller normally never leaves this part of main\
+    \ unless a power reset or watchdog timeout occurs.\n\n```\n```c\n// main entry\
+    \ point\n...................\nint main void\n/* Initialize ports */\nAD1PCFGL\
+    \ = 0x0fff;    // reset all pins that others initialized make them digital\nLATB\
+    \ = 0x0000;        // set latch levels for ports\nTRISB = 0x0000;       // set\
+    \ IO as outputs for ports\n/* endless loop */\nwhile (1) {\n    delay();\n   \
+    \ led = !led;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "+   - Normally PC based C applications will run on and then return back to\
+    \ the PC operating system once the main function is finished. For microcontroller\
+    \ applications there is no Operating system so if main terminates the complier\
+    \ resets the processor by starting execution from the beginning\n\n# 7. I/O initialization\n\
+    \n+   - This is within the main function, as mentioned earlier, and it is the\
+    \ segment of main that is dedicated to initializing all microcontroller ports\
+    \ and peripherals (SFR) before the application can begin to use them. Initialization\
+    \ usually happens once in main before it enters into a continuous operating loop.\
+    \ Three special function register (SFR) are involved for our application. AD1PCFGL\
+    \ is used and configured to turn off all analog associated capability to those\
+    \ pins that have analog content. LATB is a latch output setting for all pins associated\
+    \ with PORTB pin outputs. In this case all latched settings are zeroed —nothing\
+    \ will appear as a high level on output to start. TRISB is the directional setting\
+    \ for PORTB that in this case makes them all outputs.\n\n```\nAD1PCFGL = 0xFFFF\n\
+    LATB = 0x0000\nTRISB = 0x0000\n```\n\n# 8. Continuous loop\n\n+   - This is the\
+    \ primary working segment of microcontroller applications. The continuous loop\
+    \ is where all the work gets done. In our loop things we invoke the delay function\
+    \ and after this we 'toggle' the current value of LED (which is defined as the\
+    \ LATB bit 5 or RB5 pin). By 'toggling' if the current RB5 is value 1 then is\
+    \ set to 0, if 0 then it is set to 1. In this way after every delay the LED connected\
+    \ to RB5 will blink.\n\n```\nwhile(1)\n    delay()\n    led = !led\n```\n\n# 9.\
+    \ Microstick II Status\n\n+   - IDE provides an output widow with the status of\
+    \ the Microstick II debugger (if it has been configured as the debugger of choice\
+    \ in your"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'stored workspace). Notice the output window has selection tabs to allow you
+    to select which output is viewed. The view options are compiler build, file search
+    results, version control, and debugger status. The Figure shown assumes you have
+    your Microstick II connected to the USB of your PC that is running MPLAB.
+
+
+    # 10. Debugger Specifics
+
+
+    +   - This is an integral element of IDE system that highlights processor type
+    processor status, and what debugger is currently in use.
+
+
+    # Experiment 1- How it Works
+
+
+    The application uses a single C source file (main_led.c) that is a main function
+    that references generic PIC24H headers/peripherals use (#include "pic24Hxxx.h").
+    This header will determine the specific PIC24H processor in use. The processor
+    configuration is set using predefined C library macros (also referenced in the
+    header file). These settings are internal CPU clock selection of 8Mhz, no external
+    oscillator, no clock switch over, no watchdog operation, and finally use of RA3
+    as a digital/analog pin versus an external crystal pin input.
+
+
+    In the main function the application executes I/O initialization and then proceeds
+    to enter a continuous loop for alternately turning on and then off the LED. A
+    flow diagram of this specific LED display application is shown in Figure 2-5.'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_49_0.png)
+
+
+    Figure 2-5: Experiment1 Software operations
+
+
+    # Experiment 1 Execution
+
+
+    Let''s go ahead and begin our debug. At this point we have a fairly good idea
+    of what will happen during execution given that the prototype hardware is configured
+    correctly, and the source code and processor configuration are in good shape.
+    The PIC24H will blink the LED connected to pin 14 RB5 of the Microstick II.
+
+
+    Let''s verify the delay time and ensure that it is sufficient to yield a good
+    blink rate. One quick way is to use the simulation tool "stopwatch" to measure
+    this delay time. Under simulation there are some tool advantages to perform detailed
+    analysis. Stop watch is an example of this. Under "stopwatch" we can make actual
+    time measurement. Let''s start with setting up simulation and then use stopwatch
+    to verify delay time before working with real time debugging and the Microstick
+    II.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_50_0.png)
+
+
+    Figure 2-6: Selecting Simulator
+
+
+    Once simulation is selected as the debugger makes sure that the debugger particular
+    simulation settings are correct (like processor clock rate).
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_50_1.png)
+
+
+    Figure 2-7: Setting Simulator Clock'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'Make sure we are set to 8MHz. This is the clock rate for the internal RC, which
+    matches configuration. We want to be sure that simulation matches the real world
+    condition.
+
+
+    Ok, at this point we should be good to go with our delay measurement. Go to the
+    source code. Position the cursor at the exact line where delay function is called
+    in the main loop. Move the cursor to the grey left side column in the source and
+    double click your mouse. A red breakpoint icon should appear aligned with source
+    code that calls the delay. The toolbar and associated buttons are shown for review.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_51_0.png)
+
+
+    Figure 2-8: Tool bar Button definitions
+
+
+    Position cursor over line in text
+
+
+    Select break point on tool bar
+
+
+    Select stopwatch
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_51_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'Ok, we have the stopwatch and the breakpoint set correctly. We want to measure
+    the delay between successive calls to the delay function. This should be good
+    enough to determine blink rate. Hit reset and the processor will run to first
+    breakpoint. This first reading includes execution time from the beginning; this
+    is not what we are interested in. Clear stopwatch by "clicking" zero button and
+    continue to run (click on the run button) without resetting. We will then break
+    again when the delay function breakpoint is reached a second time. Here we have
+    captured an accurate time for the delay function. The stop watch shows elapsed
+    time of approximately 500 milliseconds. This means that the LED "on" time and
+    the LED "off" time are both 500 milliseconds, meaning the LED has a blink rate
+    at about 1 second, slow enough for us to see.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_52_0.png)
+
+
+    Figure 2-10: Using the Stopwatch
+
+
+    One other thing we can do under simulation is to check the toggle of RB5 using
+    watch. Let’s leave the breakpoint where it is and do this. We select "view" from
+    the tool bar, scroll down to watch and invoke the watch window. In this window
+    we can view any named variable in our code or any SFR. Here we wish to add LATB
+    to our viewing. By watching LATB between the breakpoints we should be able to
+    see the RB5 turn on and off.
+
+
+    Ok, we should now have confidence that our source code is working as designed.
+    RB5 does in fact toggle and it toggles at a blink rate of every ½ second. All
+    design elements check out. Let’s now check it out for real with the prototype.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_55_0.png)
+
+
+    Figure 2-14: Programming Microstick II
+
+
+    Congratulations! You have you first working prototype! If you are tired of the
+    blinking LED you can stop at any time by clicking pause. To continue, click run
+    or reset. The simulation tools also work under Microstick II debug. For instance
+    you can still set breakpoints and watch as needed, stopwatch only works under
+    simulation. Let''s move on to Experiment 2.
+
+
+    # Experiment 2
+
+
+    Let''s expand on what we have and add some new functionality. Here we use the
+    same software structure as in Experiment 1 but modify the software and add hardware
+    to demonstrate a eleven LED digital counter. Let''s start with the hardware first.
+    The schematic shown in Figure 2-16 adds ten LEDs and series resistors to the prototype.
+    RB15 on the Microchip board already has its own LED (not shown in schematic).
+    Here we are now using most of the LATB associated pins. Also included is a photo
+    of the new assembly below.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_55_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_56_0.png)
+
+
+    Figure 2-16: Experiment 2 Schematic
+
+
+    The objective here is to blink all the LEDs. We will use a binary counter. With
+    a binary counter each successive LED in the LATB port will blink at a rate twice
+    as less as the previous LED. Besides the hardware addition very little change
+    needs to happen in software or the MPLAB workspace settings to make this happen.
+
+
+    First let''s modify example 1 by replacing the existing source code file with
+    a new source code file. The Figure 2-17 shows this process in five steps.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_57_0.png)
+
+
+    No source code present
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_57_1.png)
+
+
+    Figure 2-17: Changing Source Code for Experiment2
+
+
+    Once the new source code is in place, do a build. There should be no compile errors.
+    Let''s examine the code changes before executing. Again you have the option of
+    simulating, but it is really not necessary. Experiment 2 is a modification of
+    experiment1. Rather than simply toggling a LED (RB5 of LATB), we increment the
+    entire LATB and display each available pin as a digital out. To achieve this we
+    set up a new integer variable display. We then increment this display with each
+    cycle through the continuous loop and then output the entire display value to
+    LATB. Note that TRISD in initialization set all LATB pins to output.
+
+
+    We have available to us 11 LEDs on PORTB starting with RB5 to RB15 and designated
+    as the ''user LED''). To increment we do so with a value of 0x2f. This treats
+    RB5 as the least significant bit in our binary counter.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "```\n#include \"p24xxxx.h\"                 /* generic header for PIC24 family\
+    \ */\n_FOSCSEL(FOSC_PRC);                     // set configuration mode ...\n\
+    _FOSC(FCKSM_CSDCMD & OSCIOFCN_ON & FCKSM_NONE); // use OSCIO pin for RA...\n_FWDT(FWDTEN_OFF);\
+    \                      // turn off watchdog\n#define lend 25 //delay loop is lend\
+    \ times lend instruction cycles\nint display\nvoid delay(void)  // 100 msec\n\
+    {\n    int i,j;\n    for(i=0;i<...;i++)\n        for(j=0;j<lend;j++);\n}\nint\
+    \ main (void)\n{\n    /* Initialize ports */\n    AD1PCFG = 0xFFFF;   // set all\
+    \ pins that ... and make them digital\n    LATB = 0x0000;      // set latch level\
+    \ for PORTB\n    TRISB = 0x0000;     // set RB as outputs for PORTB\n    while(1)\n\
+    \    {\n        delay();\n        display = display + 0x002f;\n        LATB =\
+    \ display;\n    }\n```\n\nFigure 2-18: Experiment 2 Code\n\nMake the project,\
+    \ program the Microchip and then watch the binary counting light show. Any problems\
+    \ at this point must be attributed to hardware so double check with the provided\
+    \ schematic and assembly photos.\n\n# The 16 Bit Micro Experimenter (optional)\n\
+    \nThis is the LED experiment for the 16 bit Micro Experimenter. This operates\
+    \ in an identical fashion to Experimenter 1 in this chapter and in fact uses the\
+    \ same source code. You need to build the code and uses either PICKIT2/3 as debugger/programmer.\
+    \ The Experimenter can be used with or without an external power supply if the\
+    \ PICKIT2 is used (the PICKIT2 senses power and automatically supplies power if\
+    \ not sensed). In addition the Experimenter needs an external LED with series\
+    \ resistor to be added to J3 PIN3 (see hookup diagram)."
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_59_0.png)
+
+
+    Figure 2-19: Experimenter Experiment 1 Hook up
+
+
+    A more elaborate light show demo using the 16 Bit experimenter LCD library and
+    J3 I/O Expansion is shown in Figure 2-20. Use LIGHTSHOWDEMO project in Chapter2
+    source code. The Demo configures pins 1-8 of J3 I/O expansion bus as digital outputs
+    where only one of the eight outputs is a high level at a time in rapid succession
+    in random. To actually see the demo you must add eight LED''s and eight current
+    limiting resistors (330 ohms each) to the I/O bus pin as shown. Each pin will
+    have a 330 ohm resistor in series with an LED where the LED cathode is tied to
+    ground. Enjoy the show!'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# Exercise :
+
+
+    +   1. Expand on Exercise 2
+
+    +     d. Use same hardware configuration
+
+    +     e. Modify source code to do an arbitrary LED light pattern
+
+    +       i. Hint use a ''C'' array with LATB patterns and index lookup to move
+    individual LATB light patterns to LEDs during each loop delay
+
+    +       ii. Solution: a source code file named ''array.c'' existing within the
+    current project space. Use techniques established in experiment 2 to introduce
+    this new source. Examine this source for code example. Try modifying the light
+    pattern for something different.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_65_0.png)
+
+
+    Figure 3-1: Mechanical Switch Bounce
+
+
+    # Experiment 1- Hardware
+
+
+    As discussed in Chapter 2 PIC24H has user programmable pins. These pins can be
+    configured as digital inputs, digital outputs, analog, or assigned as specific
+    peripheral.
+
+
+    In this chapter we leverage the knowledge we gained in chapter 2 and now use digital
+    input. As you may recall every pin has a corresponding TRIS control bit to set
+    the digital direction of the pin. A zero makes the pin an output; a one makes
+    the pin an input. Each pin also has a PORT bit that allows reading or writing
+    to the pin and a LAT that works in a similar way to PORT, however with LAT we
+    can latch output or input rather than directly reading or writing using PORT.
+    The LAT, PORT, and TRIS are special function registers or SFR. All these registers
+    are 16 bits but with the reduced package 28 pin "skinny" DIP like the one are
+    using with the Microstick II, not all of this SFR bits are used.
+
+
+    There are a number of software techniques to access special function registers,
+    like TRIS, PORT, and LAT in C code, we covered this in Chapter 2 and we will continue
+    to expand on this some more when we talk about the software here. For experiment
+    1 we connect a single LED to bit 5 of PORTB or RB5 (pin 14 of PIC24H) and then
+    set RB5 to be a digital output to drive a LED through a current limiting resistor.
+    A pushbutton is connected to RB3 or pin 7 of the PIC24H. This pin will be set
+    to be a digital input.
+
+
+    Let''s briefly discuss how the switch is connected. The switch is a mini-tactile
+    pushbutton. It is called a SPST (single pole single throw) switch. The contacts
+    are showed as normally open with no electrical conduction through the switch.
+    As you press the push button, contact is made across the switch. In using this
+    switch we connect one end to ground and the other end to the RB3 digital input.
+    When the switch is depressed the input will read ground or zero condition.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_66_0.png)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_66_1.png)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_66_2.png)
+
+
+    Physical switch
+
+
+    Functional Block
+
+
+    Electrical Symbol
+
+
+    Figure 3-2: Switch Representation
+
+
+    When the switch is non-depressed it will be open and the RB3 pin will float (not
+    have any direct connection between ground or +3.3VDC). In this case, the condition
+    as read by the microcontroller will be indeterminate. To remedy this situation,
+    we need to tie +3.3VDC through a resistor to the NO terminal of the switch. In
+    this matter when not depressed RB3 will read a one or high value, when depressed
+    the switch will connect that point to ground and the RB3 reading will be zero.
+
+
+    Rather than use an external resistor to make the circuit, the PIC24H has a neat
+    feature, the capability of configuring a pull up resistor internally to the pin
+    through a 100K resistor. It is called a weak pull up in that it uses 100K so not
+    much current is available, which is ok here. The pull up control is enabled by
+    setting the appropriate bit within a SFR. In this case the SFR is CNPU1 (Change
+    Notification Pull Up). See Figure 3-3.
+
+
+    When you examine the pin out for the PIC24HJ128GP502, pin 7 RB3, it shows that
+    RB3 shares pin with CN7, so this is the control bit we want to set in the CNPU1
+    SFR. By setting it, the RB3 pin will be pulled up through an internal 100K resistor
+    to +3.3VDC, or the microcontroller supply, eliminating the need for an external
+    pull-up resistor.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: 'done without any delays. They are just not necessary here as we want to respond
+    as immediately as possible to the switch closure and report it via a LED.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_70_0.png)
+
+
+    Figure 3-6: Experiment1 Software operations
+
+
+    # Experiment 1 Execution
+
+
+    Let''s go ahead and begin debug. At this point we have a fairly good idea of what
+    will happen during execution given that the prototype hardware is configured correctly,
+    and the source code and processor configuration are in good shape. The PIC24H
+    will turn on the LED connected to pin 14 RB5 of the Microstick II while the pushbutton
+    is depressed. Simulation will not help much here as we are using an actual hardware
+    input.
+
+
+    So set debugger to starter kits. (See Figure 3-7).'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '+   1. Set breakpoint
+
+    +   2. And set watch to PORTB
+
+    +   3. Run with SW not depressed you should break with following setting (RB3=1)
+
+    +   4. Run with SW depressed you should break with following setting (RB3=0)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_72_0.png)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_72_1.png)
+
+
+    RB3 watch shows switch depression
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_72_2.png)
+
+
+    Figure 3-9: setting watch for RB3 (switch)
+
+
+    Ok, if your watch captures the results of Figure 9 your hardware is working. If
+    not go back and review schematic and assembly shown earlier, you have a hardware
+    wiring error. Assuming all is correct simply toggle the breakpoint setting off
+    using the toolbar and run. Every time you depress the pushbutton the LED should
+    light.
+
+
+    # Experiment 2 -The Hardware
+
+
+    Let''s move on to experiment 2. Here''s where we must now account for switch bounce
+    to develop an accurate count of switches closures. We will build a five stage
+    LED counter. This counter will count manual pushbutton depressions. With a 5 stage
+    counter we should count 32 push button depressions before overflow. This should
+    be good enough for this experiment. Again the push button is connected to RB3.
+    The LEDs are connected through current limiting 1K resistors to RB5, RB6, RB7,
+    RB8, and RB9. A schematic is provided.'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# Experiment 2 - The Software
+
+
+    Ok, the hardware is in place, lets discuss the software. Navigate to Chapter 3
+    code folder open exercise #2 folders, and then double click the MPLAB project
+    icon Flash_LED.MCP.
+
+
+    The application again uses a single C source file (main_led.c), as in exercise
+    1, that is a main function that references generic PIC24H headers/peripherals
+    use (#include "pic24Hxxxx.h"). This header will determine the specific PIC24H
+    processor in use. The processor configuration is set using predefined C library
+    macros (also referenced in the header file). These settings are internal CPU clock
+    selection of 8Mhz, no external oscillator, no clock switch over, no watchdog operation,
+    and finally use of RA3 as a digital/analog pin versus an external crystal pin
+    input.
+
+
+    A define statement is used to label the switch SW as PORTBbits.RB3. This is the
+    input pin connected to the pushbutton. Other defines are associated with limits
+    used in the delay function. Again we use the delay function and it will be instrumental
+    in debouncing the pushbutton.
+
+
+    In the main function the application executes I/O initialization. We initially
+    set all pins from analog to digital setting AD1PCFGL to all ones. We clear LATB
+    and initially set all of PORTB pins to digital out. Remember that RB5, RB6, RB7,
+    RB8, RB9 are tied to LEDs and will represent our binary counter. We then set TRISbits.TRISB3
+    =1 to enable RB3 as an input. The other final setting is _CN7PUE =1 to set the
+    corresponding weak pull up for RB3 input.
+
+
+    The main code then proceeds to enter a continuous loop testing whether pin 7 RB3
+    (SW) is low representing a pushbutton depression. If low we delay and increment
+    a debounce counter. If the SW is still low after 3 counts we interpret this as
+    a final stable pushbutton depression and then perform the binary count. This binary
+    count is then output to LATB to drive the LEDs. A flow diagram of this application
+    is shown in Figure 3-11.
+
+
+    The main continuous loop uses three nested decision constructs. The first IF statement
+    tests the SW condition, the second nested IF ELSE tests the debounce count and
+    then determines to increment the binary count or not. The third nested IF does
+    a check on the incremented count and resets the count if it exceeds a maximum
+    count of 1024. Note there is also a view count variable. This variable was set
+    up for debugging using watch to test if the binary count was working. The actual
+    counter "binarycount" increments by 0x2f (remember our LSB is RB5), and this seemed
+    a little too confusing to watch directly.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_77_0.png)
+
+
+    Figure 3-13: Experimenter Button Demo
+
+
+    A copy of BUTTONDEMO MAIN code is shown along with the resulting Experimenter
+    LCD displays for each pushbutton operation. Now we have #include "lcd.h" and #include
+    "button.h" at the top of the file to allow us to reference both the LCD library
+    and the BUTTON libraries. Again try to follow the code and compare against the
+    flowchart. Throughout all these demos we are incrementally building capability
+    for the Experimenter by adding and using one library function after another.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_77_1.png)
+
+
+    BUTTONDEMO MAIN Code
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_77_2.png)
+
+
+    Message display if SW1 depressed
+
+
+    Message display if SW2 depressed
+
+
+    Message display if SW3 depressed
+
+
+    Message display if SW4 depressed
+
+
+    Experimenter Display'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: 'which each depression and release we incur a number of counts.
+
+
+    +   2. Set a WATCH to view count and check the values of the binary count are
+    correct for the number of pushbutton activations that occurred.
+
+    +   3. Try to add a second button to RB2 and use this button to decrement the
+    running count.'
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: 'In Figure 4-1 the analog environment (typical of an input sensor value) is
+    shown as a continuous voltage output over time. As environment conditions change
+    the sensor output value also changes smoothly without interruption. The microcontroller,
+    however, is a digital device; it operates only with digital numbers, and can only
+    make a measurement periodically (as part of a normal processing loop). From the
+    microcontroller viewpoint the continuous sensor signal is now a discrete set of
+    values sampled at a fixed rate. The values are approximate values to true analog
+    value given the simple fact that the digital number size itself is limited in
+    resolution, or number of bits. For the PIC24H the ADC can generate a either a
+    10 or 12 bit value (user selectable).
+
+
+    A 10 bit resolution provides a 1/1024 *3.3VDC voltage resolution or 3 millivolts
+    (remember that the PIC24H is a +3.3VDC part). The 12 bits does better with 1/4096
+    * 3.3VDC or 8 millivolts. In both cases the ADC provides for a fixed resolution
+    of the input sensor value based on the size of the ADC conversion. The PIC24H
+    ADC resolution accuracy is good to +-1 LSB of the digital word size. This accuracy
+    can be improved by averaging successive reading (assuming input does not change
+    during averaging) to better than an LSB. A rule of thumb with this technology
+    is to insure that the signal (by dynamically adjusting its amplitude) gets as
+    large a signal as possible to the ADC and without exceeding full scale to achieve
+    the best signal resolution during sample measurement. In our experiments we will
+    not control any signal amplitude and only measure the raw output directly.
+
+
+    Let’s now discuss the fixed measurement rate or sample rate. As mentioned earlier,
+    by using a fixed sample rate you are measuring the signal periodically. With periodical
+    sampling the risk is that the signal may change between the periodic samples significantly
+    and the microcontroller will not “see” and therefore measure and respond to these
+    changes. A rule of thumb in engineering is that the sample rate should be high
+    enough to capture the highest frequency of the signal. To be more precise the
+    rule states that the sample rate = 2X Highest Input frequency (also known as Shannon’s
+    Rule). In most cases (outside of audio) the sensor outputs are typically very
+    low in frequency content so that a high sample rate isn’t necessary. However,
+    the highest sample rate for the PIC24H with 10 bit ADC is 1.1MSPS (million samples
+    per second) and for 12 bit ADC is 500 KSPS (500 hundred samples per second).
+
+
+    There is no free lunch in life, like everything else, there is a tradeoff for
+    the user, and you essentially can trade off voltage resolution (10 or 12 bits)
+    for conversion speed (1.1 MSPS or 500KSPS). The choices are up to you and should
+    be dictated by what is needed for highest accuracy and most timely sensor reading.
+    In our experiments we will work the 12 bit only.
+
+
+    Let’s cover some more basics a before moving on with the experiments. Figure 4-2
+    shows some of the discrete steps that are involved with an ADC operation, beyond
+    sampling rate and digital resolution. The ADC operation is broken into'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'two discrete steps: acquisition time (sampling and holding the signal) and
+    then conversion (performing the ADC process on the sampled and held signal). In
+    order to collect and hold an analog signal for conversion a sample and hold capacitor
+    is used. This capacitor is internal to the PIC24H electronics. The capacitor follows
+    the analog input signal and then upon a sample command stores a voltage capture
+    of the analog value for the conversion process. This is denoted as the sample
+    and hold process.
+
+
+    While the signal is held in the capacitor an analog to digital conversion process
+    takes place. The conversion uses an exact number of CPU clock cycles (equivalent
+    to resulting output word size), to perform the conversion. This type of conversion
+    process is known as successive approximation, where an internal comparator is
+    used to measure the difference between the analog sampled input and an internal
+    generated ramp comparator. The ramp output voltage size is dictated by the number
+    of conversion clocks. For each clock (one of the 10 or 12) a digital decision
+    is made and a digital bit value is generated and stored as part of the final digital
+    word result.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_82_0.png)
+
+
+    Figure 4-2: ADC Sampling Time
+
+
+    The PIC24H ADC peripheral is an extremely versatile part and has a number of operational
+    modes configurable by setting peripheral specific SFR (special function registers).
+    One of these modes is resolution and is selectable from 10 to 12 bit. The other
+    is the number of sample and hold (S/H) channels that you can use. With 10 bit
+    selection the number of total S/H is four, with a 12 bit ADC'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '+   - Selectable Buffer Fill modes-DMA assisted result storage
+
+
+    The ADC module has a total of ten SFR Control and Status registers, a subset of
+    which we will be using in our upcoming experiments. Let review this SFR content.
+    We want in our experiments to be able to set the ADC for 12 bit single channel
+    mode operation, no scanning, integer output, and manual mode trigger.
+
+
+    A block diagram of the ADC is shown for this type of configuration. Here only
+    one S/H is active with the 12 bit ADC using only one input channel and no scanning.
+    Our specific PIC24H, pre-configured in hardware with the Microstick II, doesn''t
+    have 16 analog channels but is limited to 8. These eight channels are AN0, AN1,
+    AN4, AN5, AN9, AN10, AN11, and AN12.
+
+
+    Using the SFR setting for integer unsigned format for 12bits, the signal digital
+    output format will vary from 0x0000 to 0x0FFF. This is typical for most single
+    voltage input sensor values where 0 represents 0.0 volts and 0X0FFF represents
+    +3.3 volts.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_84_0.png)
+
+
+    The AD1CON1, AD2CON2 and AD3CON3 SFR registers used to control the operation of
+    the ADC module are listed below.
+
+
+    # AD1CON1 SFR bits
+
+
+    +   - ADON =1 turns on the ADC
+
+    +   - AD12B =1 sets the ADC operation to 12 bits
+
+    +   - FORM bits
+
+    +     - 01 output format is signed
+
+    +     - 00 output format unsigned'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '+   - CH0NA Channel A =0 negative input of –REF
+
+    +   - CH0SB Channel B =000 –not used
+
+    +   - CH0SB Channel B =0 negative input of –REF -not used
+
+
+    # AD1CSSL SFR bits –input scan select Low
+
+
+    +   - CSS = 0x0001 for AN0
+
+
+    # AD1PCFGL SFR bits - analog input select
+
+
+    +   - PCFG =0xFFFE for ANO initially but any other available can be set as well
+    in the library
+
+
+    # Hardware description
+
+
+    The hardware schematic is given in Figure 4-4. Here we use an analog 10K potentiometer
+    to function as a settable input analog source for analog input channel 0 or AN0
+    pin 2 of PIC24HJ128GP502. The 10K potentiometer has one terminal tied to an external
+    +3.3 VDC voltage source. The Microstick II has two bare pads GND and VDD (or on
+    schematic TP1). Your options are to connect to the TP1 via on card for +3.3VDC
+    or furnish this supply voltage for this experiment. An important note in using
+    TP1 is that there is a limitation in how much current this connection can supply.
+    Remember that the microcontroller itself is also using this connection. Its needs
+    will vary based upon oscillator setting and output drive current. As a rule of
+    thumb as your prototype experiments grow beyond the 100ma mark you may want to
+    use an external supply for your power source. In this exercise, since we are only
+    using a potentiometer, we will connect to the VDD (TP1) for the +3.3VDC of the
+    potentiometer and also connect pin 8 of Microstick II ground to the ground for
+    the potentiometer. The wiper of the potentiometer is tied to the AN0 input pin
+    2. You must remove jumper J3 to disconnect the User Led from this pin. With the
+    potentiometer we can vary the input voltage to AN0 to any value between +3.3VDC
+    to ground for our ADC experiment.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# Project View
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_89_0.png)
+
+
+    Main Source Code
+
+
+    Library Source Code
+
+
+    Library Header file
+
+
+    # Main Code View
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_89_1.png)
+
+
+    Library header file referenced in main code
+
+
+    Figure 4-6: Project Code
+
+
+    The actual library functions for ADC are as follows
+
+
+    +   - Void initADC (int ANpin) –this function initializes the ADC for 12 bit manual
+    conversion using the "ANpin" as the single input pin. ANpin possible settings
+    are AN0, AN1, An4, AN5, AN9, AN10, AN11, AN12
+
+    +   - Int readADC (int ANpin) –this functions forces a manual ADC conversion on
+    the designated ANpin.
+
+    +   - Void binary_to_ASCIIconvert (int n) - this functions converts the n binary
+    value to its ASCII equivalent. The ASCII equivalent resides in BCD variables listed
+    below
+
+    +   - Int averagevalue (int ANpin) – this function is a high level function that
+    automatically does four ADC conversions successfully in a row and averages the
+    total.
+
+
+    In addition there are five variables location that the library holds the output
+    from a binary to ASCII conversion'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '+   - char bcd10000 -ASCII data value for 10,000 position
+
+    +   - char bcd1000 -ASCII data value for 1000 position
+
+    +   - char bcd100 -ASCII data value for 100 position
+
+    +   - char bcdtens -ASCII data value for 10 position
+
+    +   - char bcdunits – ASCII data value for units position
+
+
+    The complete main software flow and code is shown in Figure 4-7.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_90_0.png)
+
+
+    Figure 4-7: Main Code
+
+
+    # Running the experiment
+
+
+    Plug the Microstick II into Solderless breadboard. Add the potentiometer to circuit
+    as shown in schematic. Connect one end of the potentiometer to ground and the
+    other to +3.3VDC external power supply. Make sure ground is also connected to
+    pin 8 of Microstick II. Connect Microstick II to PC USB port.'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_91_0.png)
+
+
+    Figure 4-8: ADC Prototype
+
+
+    Navigate to the exercise 1 folder for Chapter 4. Open this folder and double click
+    on the Microchip project icon. MPLAB lab should open and the output window should
+    show that the Microstick II is connected. Build and program the Microstick II
+    under debug.
+
+
+    Open a watch window and set watch for two variables adcvalue and count array.
+    Note you can expand the count array by clicking on the + sign associated with
+    the variable. Set a break point at delay function in main, and run from reset
+    condition.
+
+
+    For a quick check the PIC24H should stop at delay function, and the watch variables
+    should be populated. Adjust the pot and run the program again, the variable should
+    change in value. If the variable is not changing check your wiring against the
+    schematic. There is an error in your wiring.
+
+
+    Let''s conduct some final verification. Compare your adcvalue against count array
+    values. You can use a hexadecimal to decimal conversion on adcvalue using a calculator,
+    or right click on adcvalue in watch window and set properties to decimal and make
+    a direct comparison.
+
+
+    Another and even more complete form of verification is to incorporate the use
+    of a voltmeter and connect this voltmeter between potentiometer wiper and grounds
+    for the voltage measurement.'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: '# Chapter 5 – Using an LCD Display with the Microstick II
+
+
+    In this chapter we will use an external LCD (Liquid Crystal Display) with the
+    Microstick II. There is both software (in the form of a library) and hardware
+    interfaces that need to be considered. An LCD really enhances the operations of
+    a microcontroller by displaying status, providing important application feedback
+    and facilitating operational control with the user.
+
+
+    The LCD we will use supports a multiple line text display of 3 row by 16 characters
+    for a total of 48 characters. The LCD has its own integrated built-in controller
+    that performs a lot of the "heavy lifting" for the more mundane aspects of display
+    operation. For instance the LCD controller drives the individual display segments
+    on the display; automatically generates the display character segments for an
+    ASCII text input, and finally, responds to a fixed command and data interface
+    to an external microcontroller (which in our case will be the Microstick II).
+
+
+    In this chapter we will incorporate a wiring scheme and software library that
+    can be easily reusable for your future projects. To solidify our understanding
+    we will conduct several experiments using this configuration. The first experiment
+    will be concerned with just setting up and operating the LCD for the first time.
+    In the second experiment, we will use the LCD in conjunction with the ADC library
+    introduced in Chapter 4 to function as a simple voltmeter; outputting and displaying
+    ADC data in a voltage format. Let''s get started!
+
+
+    # Hardware description
+
+
+    The LCD is a +3.3VDC powered 16x3 character LCD Display that is manufactured by
+    Electronic Assembly Corporation. It is very similar in control to other standard
+    LCDs but has an extended feature of built in contrast control (eliminating the
+    need for any external potentiometers). It also consumes very low power (typically
+    250 micro amps @ +3.3VDC). The LCD is designed for compact hand-held devices;
+    it is also extremely compact, ultra-flat, and also supports a "DIP-like" pin out,
+    making it ideal for breadboard prototyping.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_97_0.png)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_97_1.png)
+
+
+    Figure 5-1 EA DOGM LCD Display
+
+
+    The LCD display interface is a 4-bit data and 2- bit command digital interface.
+    The 4 bit interface is optional to the normal 8 bit interface, and requires two
+    4 bit nibble writes rather than one byte write to the LCD. This interface is selected
+    to simplify prototype wiring and pin requirements with the Microstick II. Another
+    simplification is to not have the Microstick II read from the LCD but only to
+    write to it. To facilitate this, the LCD library forces the Microstick II PIC24H
+    to delay between its command/data transactions with the LCD controller with enough
+    time to allow the LCD time to respond without having to read and check its busy
+    status.
+
+
+    A schematic that illustrates the Microstick II connection to the LCD is shown
+    in Figure 5-2.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_98_0.png)
+
+
+    # Figure 5-2: LCD and Microstick II Schematic
+
+
+    Note that a separate +3.3VDC supply is required to drive the LCD since the Microstick
+    II itself does not supply external power. Another option for +3.3VDC is to connect
+    to the TP1 via on the Microstick II, since the LCD has a very small current need.
+    The ground connection between the LCD and Microchip must be common and connected
+    to pin 8 as shown.
+
+
+    The LCD does require use of separate electronic components for its operation.
+    Both a 2.2uf and .22uf capacitors (C3, C2) are needed (see Figure 5-2) for contrast
+    control and internal voltage regulation on the LCD. Note that the 2.2uf is polarized
+    –so follow those marking assuring the positive side is connected to pin 25 and
+    26.
+
+
+    The LCD pin arrangement, as indicated earlier, is configured as a 40 pin dip (with
+    most of the bottom row pins missing). As you look at the display from its top,
+    the bottom left hand side pin is pin 1, and the bottom right is pin 20. The top
+    row of pins, from left to right are pins 40 to 21. Please follow along with all
+    the connections shown in the schematic and do a visual comparison with the picture
+    of the prototype. Also note that the Electronic Assembly LCD display comes packaged
+    with a protective film on the display side. This should be removed (peeled off)
+    for un-obstructive viewing.
+
+
+    In summary, the LCD 4 bit parallel data interface to Microstick II is as follows:
+
+
+    +   - LCD D7 to Microstick II pin RA3
+
+    +   - LCD D6 to Microstick II pin RB2'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '+   - LCD D5 to Microstick II pin RA1
+
+    +   - LCD D4 to Microstick II pin RA0
+
+
+    The command interface is facilitated with two command lines
+
+
+    +   - LCD command/data control RS to Microstick II pin RB10
+
+    +   - LCD strobe in E to Microstick II pin RB11
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_99_0.png)
+
+
+    Figure 8-3 LCD prototype
+
+
+    # Software Library Description
+
+
+    So much for hardware, now here''s the fun part. Let''s learn the software functions
+    for driving the LCD and how to use them. Here are the five we will be working
+    with. Their titles pretty much capture what they do. Remember the LCD only accepts
+    ASCII characters for data. The LCD, as mentioned earlier, is organized as a display
+    with 0-47 (48) character positions or similarly a 16x3 display matrix. Again,
+    this refers to 16 columns by 3 rows. The first row contains positions 0-15, the
+    second 16-31, the third 32 -47. The library allows complete freedom to position
+    a character anywhere in the display matrix. It also auto-increments the character
+    position when you are writing one then one character (like a string) at a time.'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '+   - LCD_Initialize () - initializes the LCD display and makes it ready for
+    output. This needs to be called before any other LCD function is called. Keep
+    in mind initialization is a two-step process, first the PIC24H must initialize
+    it ports for output connection to the LCD and then once this is achieved it then
+    executes the LCD initialization command sequence. Also keep in mind that the library
+    is written specifically to support the connections illustrated in the schematic.
+    Any deviation from this wiring will cause the LCD library not to work correctly.
+
+
+    The LCD requires specific initialization sequence for its proper operation. There
+    is also a strict command set for PIC24H to interact with the LCD for writing command
+    and data and also positioning the LCD cursor. These functions are performed by
+    using the supplied ''C'' library functions. Both an initialization sequence and
+    command interface using elements of the ''C'' library are shown for illustration.
+    You are encouraged to review this code (in project under Graphics.c) and compare
+    it against the LCD display data sheet that comes with the display (see Figure
+    5-4).
+
+
+    # Initialization Definitions in Graphics Library (Graphics.c)
+
+
+    ```
+
+    //LCD Hardware Interface
+
+    #define LCDPORT LATB
+
+    #define E LATBbits.LATB11
+
+    #define RS LATBbits.LATB10
+
+    //Table for Initialization Instructions 8 bits 3.3V
+
+    #define FUNC1 0x20 // LCD 4bits 2 lines Table select 1
+
+    #define BIAS 0x15 // BIAS 1:3 / line LCD
+
+    #define PWRCNTRL 0x95 // Power control on, booster on, contrast 64
+
+    #define FOLLOW 0xC0 // Boost converter follower and pass
+
+    #define CONTRAST 0x72 // Set contrast 0x72
+
+    #define FUNC2 0x28 // Switch back to table
+
+    #define DISPLAY 0x0F // Display on/off - Display on, cursor on, cursor blink
+
+    #define CLEAR 0x01 // Clear display - return home
+
+    #define ENTRY 0x06 // Increment automatically
+
+    ```
+
+
+    # Initialization Sequence in Graphics Library (Graphics.c)
+
+
+    ```
+
+    //FUNC1
+
+    LCDWrite(FUNC1); // 0x20
+
+    // BIAS
+
+    LCDWrite(BIAS); // 0x15
+
+    //PWRCNTRL
+
+    LCDWrite(PWRCNTRL); // 0x95
+
+    //FOLLOW
+
+    LCDWrite(FOLLOW); // 0xC0
+
+    //CONTRAST
+
+    LCDWrite(CONTRAST); // 0x72
+
+    //FUNC2
+
+    LCDWrite(FUNC2); // 0x28
+
+    //DISPLAY
+
+    LCDWrite(DISPLAY); // 0x0F
+
+    //CLEAR
+
+    LCDWrite(CLEAR); // 0x01
+
+    //ENTRY
+
+    LCDWrite(ENTRY); // 0x06
+
+    ```
+
+
+    Figure 5-4: LCD Code for Initialization'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# # 细胞能量转换
+
+
+    +   - **细胞能量转换**
+
+    +     - **能量转换**
+
+    +       - 光能
+
+    +       - 化学能
+
+    +     - **光合作用**
+
+    +       - 吸收CO₂
+
+    +       - 释放O₂
+
+    +       - 合成有机物（葡萄糖）
+
+    +       - 储存能量
+
+    +     - **细胞呼吸**
+
+    +       - 消耗O₂
+
+    +       - 释放CO₂
+
+    +       - 分解有机物
+
+    +       - 释放能量（ATP）'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: 'Chapter5. Open this folder and then open folder for voltmeter. Double click
+    on the PIC24HVOLTMETERDemo project. MPLAB lab should be opened.
+
+
+    Build and program the Microstick II under debug, and the output window should
+    show that the Microstick II is connected, click on RUN. You should get a display
+    similar to Figure 5-9 with the ADC count and voltage associated with that count
+    simultaneously displayed. Try changing the pot value to change readings ---full
+    CCW of pot should be zero count and zero volts, full CW of pot should be 4096
+    count and +3.3V. If readings are erratic you have a wiring error with pot or are
+    on the wrong analog input pin.
+
+
+    Congratulations you have a simple ADC voltmeter capability.
+
+
+    # 16 Bit Micro Experimenter (optional)
+
+
+    An example project Experimenter based LCDDEMO is supplied. No hook up diagram
+    is required as the Experimenter contains all LCD connections on-board. Because
+    of differences between the Experimenter and Microstick II LCD connections the
+    Microstick II''s experiments will not run on the Experimenter without modification.
+
+
+    For this Experimenter project we show how to use of each of the above LCD functions
+    and then how to call them from your MAIN file. Let''s walk through the flowchart
+    and then the code. LCDDEMO starts by declaring two strings message# 1 and message#
+    2. Each message is configured to be fewer than 16 characters to keep the display
+    nice and neat, that is, keeping each message to within a single display row. The
+    next step is to initialize the LCD and clear display contents before use. The
+    next step after this is to position the cursor to beginning of row one (cursor
+    position =0) and write out message #1. We then position the cursor to the beginning
+    of row two (cursor position =16) and write out message #2.
+
+
+    Just to keep things interesting we then position the cursor to the middle of line
+    three (cursor position = 36) and write out five characters. If you haven''t figured
+    it out by now, cursor positions 0 to 15 correspond to the top row, row #1, of
+    the LCD display. Positions 16-31 are row #2 and Positions 32-47 correspond to
+    the bottom row, or row #3. The LCD is initialized so that the cursor itself is
+    not visible, and the cursor position automatically advances to the next position
+    when data is written to the display. Any data that is written to the LCD and display
+    must be in ASCII (American Standard for Information Interchange) format.'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# Review of Key Application using LCD:
+
+
+    +   - LCD is a configurable intelligent device that is commanded by the PIC24H
+    during application.
+
+
+    # Review of Source Code Key Features:
+
+
+    +   - Use of include directive makes the code highly modular and it this case
+    an ADC driver library was introduced.
+
+    +   - Project contains multiple files for each driver where the explicit driver
+    function are identified in .h and the body in .c
+
+    +   - Main just includes the .h its needs and can directly access all driver code
+
+    +   - Global variable identified before main function is accessible by all code
+
+    +   - Here we introduced another library function the LCD.
+
+
+    # Exercise :
+
+
+    +   1. Try changing first experiment''s messages to your own and rerun the experiment.
+
+    +   2. Determine where BCD1000 reside in source. How is it accessible by main?
+
+    +   3. Make experiment 2 use the pot wiper to a different analog input
+
+    +   4. Try using the averaging function from the ADC library in experiment 2.
+    Note that display readings are more stable with averaging.'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'interrupt controller, and finally you must have a specific function call, which
+    is designated the interrupt service routine, that will be invoked and executed
+    once the interrupt occurs. There are some more details about specifics of the
+    service routine, its construction, and what it minimally must do. We will cover
+    this shortly.
+
+
+    Once a timer interrupt condition occurs, the current state (program counter, status
+    registers, and flags) of the CPU is saved or "pushed" onto a stack (first in first
+    out ram buffer internal to the PIC24H). The timer interrupt service is then invoked
+    for CPU execution to handle the timer interrupt condition. Once the CPU exits
+    the service routine, the CPU state prior to the interrupt is restored or "popped"
+    from the stack. The CPU then resumes its normal operations. It in a sense interrupts
+    to allow for an "on demand" peripheral processing service.
+
+
+    # Hardware description
+
+
+    We have seen this specific hardware setup in Chapter 2, here we will use it again.
+    It is the familiar blinking LED prototype, but in this experiment the software
+    is entirely new. We will be using entire new techniques with the timer. The same
+    software I/O setup will be common in all the experiments. In these experiments
+    we want to connect a single LED to bit 5 of PORTB or RB5 and set RB5 to be a digital
+    output.
+
+
+    RB5 is pin number 14 on the PIC24HJ128GP502. The device is a 28 pin DIP, so there
+    are 14 pins on each side of the chip. Looking down on the chip there is a notch
+    in the package to indicate pin 1, all the pins are numbered 1 to 28 and go counter
+    clockwise on the device. This would make pin 14 or RB5 the last pin on the bottom
+    right hand side of the chip.
+
+
+    A schematic is shown in Figure 6-2. The PIC2H digital output can drive up to 25
+    milliamps on a digital output. We don''t need all this current to turn on a LED
+    (3 milliamps is more than enough), so we use a current limiting resistor (1K)
+    in series with the LED. The circuit basically a series circuit where RB5 tied
+    to one side of the resistor, the other side of the resistor is connected to LED
+    anode, and finally the LED cathode is tied to ground. In this way when we make
+    RB5 =1 the LED will light up, if we make RB5 =0 the LED will turn off.'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_113_0.png)
+
+
+    Figure 6-3 Schematic for Timer Experiments
+
+
+    Make sure that the ground potential for your prototype circuit is the same ground
+    reference used by the Microstick II, by connecting the Solderless breadboard ground
+    to pin 8 of the Microstick II.
+
+
+    An assembled circuit is shown in Figure 6-3. Notice that ground is picked up from
+    pin 8 and connected to a common bus for ground on the prototype board. This same
+    ground is used for the LED cathode. The cathode must be grounded for the LED to
+    work. You need to be able to discern anode from cathode on the LED to be able
+    to hook it up correctly. The cathode is typically the longer lead on the device
+    and is also marked by a flat edge on the part.'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_114_0.png)
+
+
+    Figure 5-3: Assembled Circuits for Timer Experiments
+
+
+    # Timer 1 Experiment –non-Interrupt
+
+
+    There is a code snippet which shows how Timer 1 is initialized. The peripheral
+    clock is the CPU internal clock divided by 2. In our case this is 8MHz / 2 or
+    4MHz. In this snippet the control bits for T1CON are set for internal, the prescaler
+    to 256 giving us a final clock of (4MHz/256) or 15625 KHz. With preset set to
+    24999, the timer will generate interrupts every 1.6 seconds (1/15625)*24999. This
+    time delay is sufficient for a number of application uses.
+
+
+    ```
+
+    ```c
+
+    TMR1 = 0;    // clear the timer
+
+    PR1 = 25000-1;  // set the period register
+
+    T1CON = 0x8030; // TMR1 on, prescale 1:256 Tclk/2
+
+    _T1IF =0;
+
+    ```
+
+    ```
+
+
+    Figure 6-4: Timer initialization
+
+
+    Timer initialization is straightforward by writing to Timer SFR (Special Function
+    Registers). The SFR here are TMRX-- the running counter, PRX --the preset value
+    that TMRX will be compared against, and TXCON-- the timer control register. Where
+    X =1, 2, 3, 4, 5 depending on what timer you elect to use.
+
+
+    TXCON contains TCS, TON, and prescaler as well as several other controls. A snapshot
+    of TXCON is shown here. Follow along on the bit assignments and their specific
+    assignments.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# T1CON =0x8030
+
+
+    bit15  R/W-0  U-0  R/W-0  U-0  U-0  U-0  U-0  bit8
+
+    TON    —     TSIDL —    —    —    —
+
+    bit7   U-0   R/W-0 R/W-0 R/W-0 U-0  R/W-0 R/W-0 U-0
+
+    —      TGATE TCKPS<1:0> —    —    TSYNC<1> TCS —  bit0
+
+    TCKPS<1:0> Timer Input Clock Prescaler Select bits
+
+    11 = 1:256
+
+    10 = 1:64
+
+    01 = 1:32
+
+    00 = 1:1
+
+    TCS: Timer Clock Source Select bit
+
+    1 = External clock from pin T1CK on the rising edge
+
+    0 = Internal clock Fosc/2
+
+
+    Legend:
+
+    R = Readable bit    W = Writable bit    U = Unimplemented bit, read as ‘0’
+
+
+    # Figure 6-5: Timer Control
+
+
+    For our PIC24H, since we have five timers X can be 1, 2, 3, 4, and 5. Let review
+    the initialization steps
+
+
+    +   - Clear the actual timer counter TMRX
+
+    +   - Set PRX register for preset value
+
+    +   - Set TIXCON for setting needed (this also turns on the timer with TON =1).
+
+
+    Here a snapshot of the main code. It is broken down into three discrete sections
+    Initialize I/O
+
+
+    +   - Initialize analog/digital compliment for pin settings
+
+    +   - Initialize Timer 1
+
+    +     - Sets TMR, PR and TICON for timer
+
+    +   - Main Loop
+
+    +     - Wait on time out
+
+    +     - Toggle Led
+
+
+    The important point here is that the timer as used replaces the original delay
+    software functions of earlier chapters. However, in this present design we are
+    still waiting on a timing condition (timer comparison math and T1IF =1) before'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'The whole procedure should be fairly straightforward given ground covered in
+    earlier chapters (see Chapter 2).
+
+
+    Set the breakpoint at LED toggle instruction in main code. Reset the processor
+    and run. The first time through the stopwatch will capture erroneous time –in
+    that it will capture both the initialization time as well as first time through
+    the loop. Let''s zero the stopwatch and then hit run. Now the time should be exact.
+    Compare this time to what was captured earlier –they both should be in agreement.
+    Finally change the debugger from simulator to Starter kit. Rebuild the code for
+    this new debugger selection and run without breakpoint the LED should now be blinking.
+
+
+    # Timer 1 - 16 bit Experiment using Interrupt
+
+
+    Interrupts appear in the PIC24H C code as unique function declarations as shown
+    in the following template using Timer1 (see Figure 6-7). You will need to follow
+    this template in order for the MPLAB ''C'' Compiler C30 to recognize the function
+    code as a specific interrupt vector.
+
+
+    ```
+
+    void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void)
+
+
+    led = led ...
+
+    _T1IF
+
+    ...
+
+    ```
+
+
+    Figure 6-7 Interrupt Service Routine
+
+
+    Interrupt functions accept no parameters and returns no parameters (note the use
+    of void), and each interrupt source has its own specific function call. The code
+    that executes during an interrupt function is called the "interrupt service routine".
+    General recommendations for writing an interrupt service are; first, to perform
+    the minimal essential processing needed for the service (that is-- get in and
+    out quickly), and, secondly, do not call any other functions during the service.
+    Finally, an interrupt service must reset the original interrupt flag that initiated
+    the interrupt before exiting. If the interrupt service communicates with other
+    parts of the program, then this communication must occur through the use of shared
+    variables.
+
+
+    Let now view the entire main code. Here''s a snapshot. It is broken down into
+    four discrete sections for our present discussions. These sections should be compared
+    against the earlier non-interrupts section.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_120_0.png)
+
+
+    SFR controls are TXCON only
+
+
+    Figure 6-9: 32 bit Timer Block Diagram
+
+
+    The TXCON setup is shown (Figure 6-10). Note that only the X timer in the pair
+    needs to be set, but both X and Y presets need to be also initialized.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_120_1.png)
+
+
+    Legend:
+
+    R = Readable bit
+
+    W = Writable bit
+
+    U = Unimplemented bit, read as ''0''
+
+
+    Figure 6-10: 32 bit SFR initialization
+
+
+    # Timer3/4 32 Bit Operation –Non Interrupt
+
+
+    This is a similar exercise to the individual 16 bit non interrupt operation we
+    saw earlier just using Timer 1. Here however we are using Timer 2 and Timer 3
+    pairs for 32 bit operation. The end objective as earlier stated is to blink a
+    LED. In fact'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: 'the same hardware configuration is used as per the 16 bit operation. The main
+    source code is shown. Here we use the SFR structure format (see Chapter 1) to
+    set/reset different SFR bits for some of the controls.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_121_0.png)
+
+
+    Figure 6-11: 32 bit Non-Interrupt Exercise
+
+
+    Navigate to the MPLAB project icon Flash_LED.MCP in Chapter 6 folder third experiment.
+    Let''s go ahead and begin debug. Connect the Microstick II. Double click the project
+    icon to bring up the total workspace. At this point we have a fairly good idea
+    of what will happen during execution. The PIC24H will blink the LED connected
+    to pin 14 RB5 of the Microstick II. Note however the blink time is significantly
+    longer than for the 16 bit case. Let''s do the calculation.
+
+
+    The peripheral clock is the CPU internal clock divided by 2. In our case this
+    is 8MHz/2 or 4MHz. In this snippet the control bits for T2CON are set for internal,
+    the prescaler to 256 giving us the incoming final clock of (4MHz/256) or 15625
+    KHz. With preset set to 0x30000 or 196608, the timer will generate interrupts
+    every 12.6 seconds (1/15625)*196608.'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: "# Timer3/4 32 Bit Operation Interrupt\n\nThis is a similar exercise to the\
+    \ individual 32 bit non interrupt operation we saw earlier but in this case we\
+    \ will be using interrupts. The end objective as earlier is to blink a LED. In\
+    \ fact the same hardware configuration is used as per all earlier exercises. The\
+    \ main source code is shown with a critical section highlighted.\n\nNavigate to\
+    \ the MPLAB project icon Flash_LED.MCP in Chapter 6 folder fourth experiment.\
+    \ Let's go ahead and begin our debug. Connect the Microstick II. Double click\
+    \ the project icon to bring up the total workspace. At this point we have a fairly\
+    \ good idea of what will happen during execution. The PIC24H will blink the LED\
+    \ connected to pin 14 RB5 of the Microstick II.\n\nInterrupt Service Routine Timer3\n\
+    \n+   - Toggle LED\n+   - Clear flag\n\nInitialize I/O\n\nInitialize Timer2/3\
+    \ and Timer 3interrupt\n\nIdle –do nothing\n\n```\n// 1. Timer3 interrupt service\
+    \ routine\nvoid __attribute__((interrupt, no_auto_psv)) _T3Interrupt(void)\n{\n\
+    \  led = !led;    // toggle LED\n  // clear the interrupt flag\n  _T3IF = 0;\n\
+    }\n// ...\nmain entry point\nint main(void)\n{\n  // Initialize ports\n  AD1PCFG\
+    \ = 0xFFFF;\n  LATE = 0x0000;\n  TRISE = 0x0000;\n  // Set up Timer 2 and 3 for\
+    \ 32 bit operation\n  T3CONbits.TON = 0;  // Stop any 16-bit Timer3 operation\n\
+    \  T2CONbits.TON = 0;  // Stop any 16-bit Timer2 operation\n  T2CONbits.T32 =\
+    \ 1;  // Enable 32-bit Timer mode\n  T2CONbits.TCS = 0;  // Select internal instruction\
+    \ cycle clock\n  T2CONbits.TGATE = 0;\n  T2CONbits.TCKPS = 0b11;\n  TMR3 = 0;\n\
+    \  TMR2 = 0;  // Clear 32-bit Timer value\n  PR3 = 0xFFFF;  // Load 16-bit Timer3\
+    \ period value\n  PR2 = 0xFFFF;  // Load 16-bit Timer2 period value\n  IFS0bits.T3IF\
+    \ = 0;  // Clear Timer3 interrupt flag\n  IEC0bits.T3IE = 1;  // Enable Timer3\
+    \ interrupt\n  T2CONbits.TON = 1;  // Start 32-bit Timer\n  _T3IP = 1;  // Set\
+    \ priority\n  while(1)\n  {\n    // do nothing\n  }\n}\n```\n\nFigure 6-12 32\
+    \ bit Timer Operations"
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# 16 bit Micro Experimenter (optional)
+
+
+    This is timer experiment for the 16 bit Micro Experimenter. This operates in an
+    identical fashion to Experiment 1 and 2 in this chapter and in fact uses the same
+    source code. You need to build the code and use either PICKIT2/3 as debugger/programmer.
+    The Experimenter can be used with or without an external power supply if the PICKIT2
+    is used (the PICKIT2 senses power and automatically supplies power if not sensed).
+    In addition the Experimenter needs an external LED with series resistor to be
+    added to J3 PIN3 (see hookup diagram).
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_123_0.png)
+
+
+    # Review of PIC24H Timers capability:
+
+
+    +   - Five 16 bit general purpose timers/counters
+
+    +     - Similar functionality between all 5 timers
+
+    +     - Period registers for each
+
+    +     - Interrupt generation on match with period
+
+    +     - Reset on match
+
+    +   - Four of these timers ( Timer 2+3 and 4+5) can make two 32 bit timers/counters
+
+    +   - In 32 bit operations :Timer 2+3 or Timer 4+5= Least Significant Word and
+    Most Significant Word'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# Chapter 7 – Serial Communications
+
+
+    In this chapter we will introduce serial communications using a UART (Universal
+    Asynchronous Receiver Transmitter) for RS-232 and USB applications. We will apply
+    the PIC24H UART peripheral using the PIC24H configurable peripheral pin assignment
+    system designated Peripheral Pin Select (PPS). Let''s first discuss serial communications.
+
+
+    # Serial Communications Overview
+
+
+    Serial communications is performed by transmitting and receiving data bytes one
+    bit at a time. The bits transferred are specifically composed of not only the
+    full data byte but also framing bits for start, stop and error checking. This
+    type of communication is perhaps one of the oldest used by microcontrollers and
+    still very much applied. Serial communication application can exist between microcontrollers,
+    or a microcontroller to a PC or display, or even a wireless transceiver.
+
+
+    The PIC24H has two completely independent UARTs; UART1 and UART2. For our experiments
+    we will use the PIC24H UART2 to communicate with a PC. Each UART peripheral has
+    separate transmit and receive hardware. The transmit section takes in a parallel
+    data (byte) from the PIC24H CPU and transmits it as a serial bit by bit stream
+    at a fixed bit or baud rate. In this matter the transmit hardware functions as
+    a PISO (Parallel in Serial Out) digital register. The receive hardware takes in
+    serial data and forms a parallel data (byte) for transfer to the PIC24H CPU. The
+    receive section functions as a SIPO (Serial in Parallel Out) digital register.
+    The complete UART peripheral contains not only these functions but the internal
+    bit clock generator, framing logic, and data buffers necessary to perform serial
+    data transfer between two devices with or without use of a common shared clock
+    between those devices.
+
+
+    We will use a type of serial communications termed "asynchronous", when no shared
+    clock is used. If a shared clock is used then the communications is termed synchronous.
+    The concept for making asynchronous communications work is that at each (UART)
+    in the communication system is preconfigured with the same bit rate clock or baud
+    rate clock. In the PIC24H the baud rate clock is generated by using an internal
+    clock source. During system communications the transmitter side alerts the receiver
+    side that a byte is to be transferred. It does this by lowering the serial data
+    line for one bit time (this is designated the start bit). The receiver synchs
+    up its internal baud rate generator to this start bit to begin its data reception.
+    Data is then transferred from the transmitter side to the receiver side one bit
+    at a time for the 8 data bits that make up the data byte.'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: 'Besides the 8 data bits an error correction or parity can be sent (optional).
+    The final part of the communication is a stop bit which occurs when the serial
+    communication line is fixed high for one or two bits times (size is optional as
+    well), after parity. See Figure 7-1 below.
+
+
+    Note for this communication to work each transmitter output line must be tied
+    directly to a receiver input line. Specifically, side one’s transmitter must be
+    tied to side two’s receiver and side two’s transmitter must be tied to side one
+    receiver (if communication is to occur in both directions).
+
+
+    When only one UART is allowed to transmit its data traffic at a time the communications
+    is designated “half-duplex”. However, when the configuration allows for both UARTs
+    to simultaneously transmit data, the communication is termed “full-duplex”.
+
+
+    # Serial Communications
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_127_0.png)
+
+
+    Figure 7-1 UART Semi-Asynchronous Communication
+
+
+    The UART naturally extends to wireless as well as wired communications. Figure
+    7-2 shows a UART in a wireless application. Wireless transmitters typically share
+    the same carrier frequency forcing the communications to be half-duplex (only
+    one transmitter on at a time). This insures that the communication avoid data
+    collisions. Coordination of communication is done typically with use of a “higher
+    layer” software protocol that resides over this “lower layer” data link to establish
+    who can talk and when.'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# Serial Wireless Communication
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_128_0.png)
+
+
+    Always half-duplex communication
+
+
+    Figure 7-2: Example Serial Wireless Communication
+
+
+    # RS-232 and RS-485 Industry Standard Serial Communications
+
+
+    There are several legacy industry standards for connecting equipment''s that have
+    UARTs. One of these standards for point to point communication is RS-232. This
+    standard captures the connector types, baud rates, pin outs and voltage levels.
+    RS-232 dictates that the voltage level from +3.3V to 0V of the PIC24H UART output
+    must be modified to -12V to +12V to meet the standard. This means that voltage
+    level changing electronics is needed. The RS-232 standard also uses a common connector
+    set 9 PIN male and female connector pair. For RS-232 one side of the communication
+    must be configured as DCE (data communications equipment) and the other as DTE
+    (data terminal equipment). This partitioning establishes each side''s transmitted
+    and receives pin outs and connector type. The PC is pre-configured as DTE. This
+    forces the PIC24H or Microstick II to be DCE.
+
+
+    A complete end to end hookup diagram for a Microstick II connection to a PC using
+    RS-232 is shown in Figure 7-3. The PC runs a software application program known
+    as HyperTerminal which allows the serial data communications stream to be visible
+    on the PC screen. This software will be required in our'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: 'experiments. Level conversion hardware and a DCE connector for RS-232 are needed
+    for the Microstick II. We will use an ACRONAME module; it contains both in a convenient
+    pluggable board. We then incorporate a standard RS-232 cable DCE to DTE to pair
+    the connector to the PC to brainstorm. As final note the data rates and serial
+    format for communication needs to be set. This is an important for both the PIC24H
+    UART initialization software, and HyperTerminal configuration. The considerations
+    are baud rate, number of stop bits, data size, use of parity, and finally any
+    hardware handshaking. For our purposes we will use 1200 baud, 8 bits; no parity,
+    1 stop bit and no hardware handshake. The Short hand notation for this is 1200N81
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_129_0.png)
+
+
+    # American Standard Code for Information Interchange (ASCII)
+
+
+    In reality, a user can select any type of digital byte for transfer but HyperTerminal
+    can only display ASCII (American Standard Code for Information Interchange) formatted
+    data. A table is shown in Figure 7-4. The table is for 128 different characters
+    that includes control, data (upper /lower case A-Z), numerical (0-9), special
+    characters like quotes, exclamation point, question mark, and pound sign. We will
+    be using ASCII data coding for our serial communication experiments.'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: 'The class of interest to us is CDC. We will use a UART to USB Bridge that allows
+    for a UART interface on microcontroller side and USB CDC compliant device interface
+    on the PC side. ACRONAME provides a pluggable module with their S22. The S22 module
+    provides the bridge chip with the same four pin connector for the micro side and
+    a USB device connector on the other side. You connect to the PC using the familiar
+    USB Host type A to Device Type B connector cable. USB supports "plug and play".
+
+
+    Each device, when it is connected to the USB, is "enumerated" by the PC, which
+    means the device identifies to the PC its class type, operational needs, and driver
+    requirements. The PC checks that it can meet the operational needs and that the
+    identified driver for the device is present in its current software registry.
+    Only when all this is accomplished, will communications be allowed. We can then
+    open HyperTerminal on the PC and identify the COM port associated with the S22,
+    configure the COM port, and begin communications.
+
+
+    For USB CDC we will use the ACRONAME supplied registry file (.INF) to register
+    the communication port with the Operating System and the ACRONAME supplied S22
+    driver. When first connecting to the PC the system will see the S22 as "new hardware"
+    on the USB and will attempt to retrieve driver information. At this point you
+    direct the PC to the ACRONAME driver locations you stored on your PC. This is
+    a one-time configuration requirement which will then be automatic every time you
+    connect again. The USB is +5V bus, however, we only need to power up the S22 with
+    available +3.3V on the micro USB (Universal serial Bus).
+
+
+    # Serial Communications Review
+
+
+    Some important reminders and rules of thumb with serial communications:
+
+
+    +   - Message is equal in size to a Start bit, # of stop bits, # of data bits
+    , parity if present ( 10 bits shown)
+
+    +   - Baud rate
+
+    +     - Bit transfer rate during message up to 115K
+
+    +   - Data bits
+
+    +     - Number of data bits transferred in a message
+
+    +   - Parity
+
+    +     - Optional Parity error checking bit present in message'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: '+   - Five 16-bit timers (5 input pins)
+
+    +   - Five input capture –automatic pulse capture and measurement (5 input pins)
+
+    +   - Five Output Compare / PWM modules –automatic pulse generation (5 output
+    pins)
+
+    +   - Two UART ( Universal Asynchronous Receiver Transmitter) with address capability
+    (4 pins (2 in and 2 out))
+
+    +   - Two SPI (Synchronous Peripheral Interface) ( 6 pins (2 data out, 2 data
+    in, 2 clock (in/out))
+
+    +   - I2C ( Inter Circuit Communication) interface ( 2 pins (1 in and 1 out))
+
+
+    Obviously the total peripheral pin needs are large and, in fact, and with these
+    28 pin PIC24H devices, there are more internal peripherals then there are available
+    pins. As a compromise solution the PIC24HJ128GP502 28 supports PPS with 16 remappable
+    pins. These remappable pins are configurable as input or output to any of the
+    above peripheral set. These pins are designated with "RP" for reprogrammable pin.
+    This is the closest thing to having to layout of your own device.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_134_0.png)
+
+
+    | Pin | RP | Analog | Change Notification | Digital |
+
+    |---|---|---|---|---|
+
+    | 2 |  | AN0 | CN2 | RA0 |
+
+    | 3 |  | AN2 | CN3 | RA1 |
+
+    | 4 | RB0 | AN3 | CN4 | RB0 |
+
+    | 5 | RB1 | AN4 | CN5 | RB1 |
+
+    | 6 | RB2 | AN5 | CN6 | RB2 |
+
+    | 7 | RP3 |  | CN7 | RB3 |
+
+    | 8 |  |  | CN30 | RA2 |
+
+    | 9 |  |  | CN? | RA3 |
+
+    | 10 |  |  | CN20 | RA5 |
+
+    | 11 | RP4 |  | CN1 | RB4 |
+
+    | 12 |  |  | CN? | RB5 |
+
+    | 13 | RP5 |  | CN27 | RP6 |
+
+    | 14 | RP6 |  | CN24 | RB6 |
+
+    | 15 | RP7 |  | CN25 | RB7 |
+
+    | 16 | RP8 |  | CN22 | RB8 |
+
+    | 17 | RP9 |  | CN21 | RB9 |
+
+    | 18 | RP10 |  | CN? | RB10 |
+
+    | ... | ... | ... | ... | ... |
+
+
+    PIC24HJ128GP502 Pins available at bottom of Microstick
+
+    Ground pin 8/19 are also available
+
+    Fixed I/O assignment not shown
+
+
+    # Figure 7-6: PIC24HJ128GP502 PPS pin set'
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# Initializing PPS
+
+
+    Peripheral Pin Select or PPS has to be initialized, and once initialized it cannot
+    be changed accidentally. To achieve this Microchip has instituted a specific sequence
+    of steps that need to occur for PPS configuration.
+
+
+    Here''s the basic idea; at the start of the main program, you can unlock, and
+    configure the PPS for designated peripherals, first the outputs, and then the
+    inputs. Once this is done the PIC24H is locked and remains with this pin state
+    configuration. To do this the IOLOCK bit in the OSCON SFR register is set. Once
+    set the PPS cannot be undone unless reset occurs. The PPS lock and unlock controls
+    are really implemented as special code sequences to access the OSCON SFR. This
+    insures that random code reads or writes cannot access and contaminate the fixed
+    PPS settings. The general software flow is shown in Figure 7-7.
+
+
+    # Peripheral Lock and Unlock
+
+
+    +   - Initialization device after reset
+
+    +   - For Maximum Protection Device set IOL1WAY
+
+    +     PPS cannot be unlocked
+
+    +   - PPS allows flexibility while operating
+
+    +   - Device is continuously monitored for unexpected change
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_135_0.png)
+
+
+    PPS Registers cannot be unlocked with IOL1WAY set
+
+
+    Figure 7-8 Initializing PPS for peripherals
+
+
+    Figure 7-8 shows example of code required to initialize PPS to configure RP10
+    for UART2 INPUT receive and then RP11 for UART2 Output transmit. Note the use
+    of ''C'' library macro to set and reset lock in OSCON SFR. This macro executes
+    the specific PPS lock and unlocks code sequences.'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: 'peripheral code (in our case it is 5 for UART2 TX), and then set the appropriate
+    output PPS SFR register to write to. In our case for RP11 assignment with in this
+    case is RPOR5. So, we write our code into the lower bits of RPOR5 as shown. See
+    Figure 7-10.
+
+
+    # Remappable Output
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_137_0.png)
+
+
+    Figure 7-10: Remappable Output with SFR example for RP10
+
+
+    As a reminder the benefits of PPS are as follows:
+
+
+    +   - Allows optimal usage of on-chip peripherals
+
+    +   - Any digital peripheral can remap to any RP pin
+
+    +   - Pin assignment is set in software
+
+    +     - Outputs assign a peripheral to a specific pin
+
+    +     - Inputs assign a pin to a specific peripheral
+
+    +     - Multiple input peripheral functions on one pin is supported
+
+
+    # Experiment 1 "Implementing a Serial interface with a PC"
+
+
+    The first experiment will use the UART2 of the PIC24H to communicate with a PC
+    using RS-232 and the PC running HyperTerminal Software. The experiment follows
+    the connection scheme of Figure 7-3.
+
+
+    Figure 7-11, shows the total end to end communications block diagram flow between
+    User codes with microcontroller UART to RS-232 to the PC with Windows Drivers
+    using HyperTerminal. The application sends ACSII characters'
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: 'typed on the PC keyboard, and then displays these characters using the HyperTerminal
+    Display Window. The ASCII characters typed on the PC keyboard are sent via serial
+    communications to the Microstick II UART and upon reception are “echoed back”
+    (or transmitted) to the PC for HyperTerminal display.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_138_0.png)
+
+
+    Figure 7-11: Serial Communication layers for Experiment 1
+
+
+    # Software Configuration
+
+
+    The experiment has #include "CONU2.H" in MAIN and CONU2.C driver source code in
+    the project that allows use of the UART2 serial port from the user application
+    code side. The CONU2 library functions used in the serial communications are:
+
+
+    +   - initU2 () – initializes the serial port using UART2 of PIC24H for RB11 and
+    RB10 or pins 22 and 21 respectively of the Microstick II. Pin 21 is the input
+    receive (RX) for the Microstick II UART2 and pin 22 is the output transmit (TX)
+    for the Microstick II UART2. UART2 is configured for 1200 BAUD, 8 bit data, no
+    parity and 1 stop bit or short hand 12008N1.
+
+    +   - putU2( character) – writes character out to the serial port
+
+    +   - putsU2( string)- writes an entire string out to serial port'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '+   - Clrscr() – this macro clears screen using a VT100 know escape sequence
+
+    +   - Home() – positions cursor to hoe position on screen using a known VT100
+    escape sequence
+
+    +   - Character getU2 ( ) – waits for a new character to arrive to the serial
+    port and returns it.
+
+
+    # Hardware Configuration
+
+
+    The UART2 supports an RS-232 serial port with the proper physical interface. ACRONAME
+    (http://www.acroname.com/) provides the ideal physical interface and is pretty
+    inexpensive. The ACRONAME RS-232 interface is shown in Figure 7-12. Only four
+    connections are required to work with the device. They are RX and TX from UART2
+    and +3.3V and GND. A schematic diagram for the Microstick II ACRONAME side of
+    the serial interface is shown. (See Figure 7-13)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_139_0.png)
+
+
+    Figure 7-12: Experiment 11 Example'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: 'The ACRONAME interface or "Brain stem" come in two formats RS-232 and USB.
+    We will use both.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_140_0.png)
+
+
+    813—SERIAL-RXT-CONN 823-USB-SERIAL-RXT-CONN
+
+    Figure 7-13: ACRONAME Electrical Interfaces
+
+
+    The ACRONAME 4 pin interface is on .100 "centers and is a female in line connector.
+    A way to connect this to our prototype board is to use two 4 pin male headers
+    soldered together at right angle where one side plugs into the Solderless breadboard
+    and the other to the ACRONAME (see prototype Figure 7-14).
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_140_1.png)
+
+
+    Figure 7-14: RS-232 Prototype'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: 'Assemble the hardware using both connection diagram (Figure 7-12) and the prototype
+    construction shown in Figure 7-14. Note that an external power source of +3.3V
+    DC is required for the ACRONAME. Be sure that all grounds between the ACRONAME,
+    Microstick II (pin 8) and External Power are common.
+
+
+    # Executing the code
+
+
+    Navigate to Chapter 7 folders and open up UART experiment 1. Build and download
+    into Microstick II. Make sure external +3.3V is supplied. Use the ACRONAME S13
+    electrical interface and an RS-232 cable to connect to PC serial port.
+
+
+    Bring up the HyperTerminal application. Configure HyperTerminal for 12008N1 with
+    no hardware handshake. Use Figures 7-15 and 7-16 for guidance. The configuration
+    shown is COM1 1200N81. Once everything is connected and HyperTerminal is running,
+    run the Microstick II UART program and you should see a screen introduction and
+    then be able to type on the PC in the HyperTerminal window and see whatever you
+    typed echoed back (see Figure 7-17).
+
+
+    Congratulations! You have a working serial port interface.
+
+
+    # Setting up HyperTerminal on PC
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_141_0.png)
+
+
+    #1 Programs -> Accessories -> Communications -> HyperTerminal
+
+    #2 Enter TESTPC for connection -> ok
+
+    #3 Enter COM port -> COM1 -> ok
+
+    Figure 7-15 HyperTerminal Screen Shots part 1'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: '# ## 2025/26秋冬女装色彩趋势预测
+
+
+    # ### 洋红色
+
+
+    洋红色在2025/26秋冬依然保持了较高的热度，它将接替2023年度代表色Viva Magenta继续散发魅力。应用于斜纹西装、宽松呢料、精致皮衣等单品，带来强烈的视觉冲击力，醒目且充满力量，展现出自信、张扬的独立女性气质。
+
+
+    | | | | | |
+
+    |---|---|---|---|---|
+
+    | 色名 | 洋红色 | | | |
+
+    | Pantone | 19-2140 | | | |
+
+    | 应用建议 | 款式：西装、大衣、皮衣 | | | |
+
+    | | 面料：羊毛混纺、丝绸、皮革 | | | |
+
+
+    +   - **关键色彩组合**：
+
+    +     - 洋红色 + 黑色
+
+    +     - 洋红色 + 深蓝
+
+    +     - 洋红色 + 金米色
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_142_0.png)
+
+
+    # ### 刚果咖啡色
+
+
+    刚果咖啡色自带温暖优雅的特质，是2025/26秋冬重要的日常风色彩。咖色色调为日常装和正装提供了更多灵感，外套、针织衫、西装长裤等单品推荐全身同色或同色系穿搭，轻松打造冬季高级感。
+
+
+    | | | | | |
+
+    |---|---|---|---|---|
+
+    | 色名 | 刚果咖啡色 | | | |
+
+    | Pantone | 19-0916 | | | |
+
+    | 应用建议 | 款式：外套、针织衫、长裤 | | | |
+
+    | | 面料：羊毛、羊绒 | | | |
+
+
+    +   - **关键色彩组合**：
+
+    +     - 刚果咖啡色 + 米白
+
+    +     - 刚果咖啡色 + 焦糖色
+
+    +     - 刚果咖啡色 + 森林绿
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_142_1.png)
+
+
+    # ### 可可果色
+
+
+    可可果色融合了天然可可的浓郁与醇厚，相比基础棕色的保守，它更给人一种充满复古感和高级调的腔调。极具包容度，适用于男女同款的设计，在西装外套、大衣以及冬季配饰上有更多的发挥空间。'
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: "Figure 7-19 shows the main loop. The home and clear functions are shown as\
+    \ well as the setup of the initial \"splash screen\". After that the code enters\
+    \ a continuous loop that simply gathers an incoming character from the PC and\
+    \ outputs this same character back.\n\n```\n#define FCY 7372800\n#define BAUDRATE\
+    \ 1200\n#define BRGVAL (FCY/BAUDRATE/4)-1\n#define U_ENABLE 0x8000  // enable\
+    \ the UART\n#define U_TX 0x0400      // enable transmission\n\n// init the serial\
+    \ port (UART2, 1200, 8, N, 1)\nvoid initU2( void)\n{\n    U2BRG = BRGVAL; // BAUD\
+    \ Rate Setting for 9600\n    U2MODE = U_ENABLE;\n    U2STA = U_TX;\n    U2MODEbits.BRG16\
+    \ = 1; // high Speed mode\n}\n```\n\n# Figure 7-18: UART2 Initializations\n\n\
+    ```\nHyperterminal Startup Init Screen\nclrsor; // clear upper terminal screen\n\
+    home;\nputsU2(\"The MicroStick UART2 Experiment\");\nputU2 0x0a; // carriage return\
+    \ / line feed\nputU2 0x0d;\nputsU2(\"Type a character and watch the return\");\n\
+    putU2 0x0a; // carriage return / line feed\nputU2 0x0d\n\n-- endless loop --\n\
+    while (1)\n{\nrxchar = getU2();\nputU2 rxchar;\nNop;\n```\n\n# Figure 7-19 Main\
+    \ Loop"
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# Using USB instead of RS-232
+
+
+    With the proper interface a UART can still be used for USB as well as RS-232.
+    If you''re PC does not include an RS-232 port --no worries. A USB (Universal Serial
+    Bus) port can easily be adapted to your serial communication needs. Again ACRONAME
+    has a solution (S22), with an UART to USB Brainstem. All PIC24H to ACRONAME connections
+    are identical to RS-232. We need to use a host to device USB cable to connect
+    the PC to the ACRONAME.
+
+
+    Additional software configuration is needed. For USB, software INF files, and
+    USB drivers will need to be installed on your PC--- ACRONAME, again, provides
+    all software needed with their product. See Figure 7-18 for USB prototype.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_144_0.png)
+
+
+    Figure 7-20: USB prototype
+
+
+    When you first connect the USB-to-UART S22 ACRONAME interface, Windows will prompt
+    you for a driver. Navigate to the ARCONAME supplied drivers that are supplied
+    with the product and download these to your computer. Once installed it will essentially
+    represent a new COM port (see Figure 7-21), beyond the earlier COM1 selected earlier.
+    Use this new com port and then use the same HyperTerminal configuration procedure
+    given earlier with this new COM port.'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# 16 bit Micro Experimenter (optional)
+
+
+    This is the UART experiment for the 16 bit Micro Experimenter. This operates in
+    an identical fashion to Experiment 1 and 2 in this chapter and in fact uses similar
+    source code modified for a different pin set on J3 I/O connector. Use source code
+    UARTDEMO Experimenter. You need to build the code and uses either PICKIT2/3 as
+    debugger/programmer. The Experimenter can be used with or without an external
+    power supply if the PICKIT2 is used (the PICKIT2 senses power and automatically
+    supplies power if not sensed). In addition the Experimenter needs an external
+    LED with series resistor to be added to J3 PIN3 (see hookup diagram).
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_146_0.png)
+
+
+    Figure 7-23: Experimentor Uart Demo Hook up
+
+
+    # Review of PIC24H UART capability:
+
+
+    Questions:
+
+
+    +   1. Define UART
+
+    +   2. Define RS-232
+
+    +   3. Define DCE
+
+    +   4. Define DTE
+
+    +   5. What is baud?'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '+   6. What does 12008N1 mean?
+
+    +   7. What is the purpose of HyperTerminal?
+
+    +   8. How do we get the PIC which is a 0<-> +5V comply with RS-232 -12 to +12V
+    standards?
+
+    +   9. What is the highest baud rate achievable by PIC? What clock is necessary?
+
+    +   10. What is the minimal amount of RS-232 pin connections to achieve two way
+    communications?
+
+    +   11. What the purpose is of start and stop bits?
+
+    +   12. What is the purpose of parity?
+
+    +   13. How many UART does the PIC24H have?
+
+    +   14. What is meant by half duplex?
+
+    +   15. What is meant by full duplex?
+
+    +   16. How is RS-485 different from RS-232?
+
+    +   17. What are the benefits of PPS?
+
+    +   18. How many reprogrammable pins does the PIC24HJ128GP502 have?
+
+    +   19. Where does PPS occur in code?
+
+    +   20. Define USB?
+
+    +   21. Can USB be used in place of legacy RS-232 communications? If so explain
+    how.
+
+
+    # Exercise:
+
+
+    +   1. Configure an UART1 to replace UART2 in current exercise
+
+    +   2. Change baud rate to 1200'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: 'Let''s take a closer look at the SPI interface. It requires three signals:
+    SDO (serial data out), SDI (serial data in), and SCLK serial clock. The SPI is
+    typically used between a pair of communicating entities. The SDO of one entity
+    is connected to the SDI of the other. The clock originates at the “Master” side,
+    the entity that initiates and sustains communications. The “Slave” communication
+    is in response to the Master (see Figure 8-2). There is no protocol only data
+    movement. Both sides function as shift registers where the common clock is used
+    to shift data from one transmitting register (SPI BUF) into the receiving register
+    (SPI BUF). Optionally a fourth signal can also be used: CS or chip select. This
+    signal is used to enable slave peripheral for communications and can be duplicated
+    to allow the SPI communication interface to be shared between one master and many
+    slaves (however, only one slave at a time). In summary:
+
+
+    +   - Simple interface
+
+    +   - Uses 3 to four signals
+
+    +     - CS, SDO, SDI, CLK
+
+    +   - Based upon a shift register concept
+
+    +   - Very high speed ( up to 20MHZ with PIC24H)
+
+    +   - Robust and very noise immune
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_149_0.png)
+
+
+    Figure 8-2 SPI Serial Communications
+
+
+    # Introducing a Serial EEPROM
+
+
+    Our experiment will use a serial EEPROM to demonstrate SPI operation. Specifically
+    we will use a Microchip 25LC256 EEPROM device that supports 256kbits or 32Kx8
+    bytes of nonvolatile memory. The EEPROM is a memory technology that allows us
+    to store data under program control and retain the'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: 'contents even when power is turned off. This is can be real useful for user
+    applications requiring password setting, storing calibration data, or storing
+    data measurements as in a logging function. The 25LC256 uses an SPI interface
+    to talk to the Microstick II PIC24H Microcontroller. For our experiment we use
+    a software ''C'' library where a SPI communication is supported with an easy to
+    use API.
+
+
+    For this library each 25LC256 storage word is two bytes. Given the byte size of
+    the 25LC256 this means we can store up to 16K words total. The double byte storage
+    and retrieval makes sense since the PIC24H is a 16 bit machine. In general, for
+    your experiments, you need to establish what data you want to store and how that
+    data organized over 16K words. Figure 8-3 shows the physical EEPROM. It is an
+    8 pin DIP. You already can recognize the basic SPI signals /CS, SCK, SI and SO.
+    In addition for this EEPROM there are additional control signals. There is a write
+    protect (/WP) control line to physically lock out the Microcontroller from writing
+    to the EEPROM. /HOLD suspends a command/data sequence, and puts the device in
+    a suspended state that does not require restarting the sequence once /HOLD is
+    released.
+
+
+    +   - CS – Chip Select
+
+    +   - SCK – Serial Clock
+
+    +   - SI – Serial Input
+
+    +   - SO – Serial Output
+
+    +   - WP – Write Protect
+
+    +   - HOLD – Hold Enable
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_150_0.png)
+
+
+    Figure 8-3: SPI EEPROM
+
+
+    # Experiment 1- Hardware
+
+
+    The PIC24H has user programmable PPS pins to place the I/O of any internal digital
+    peripheral onto any of these pins. We will configure pins 18, 17, and 16 to function
+    as the interface for SPI2, namely, SO, CLK and SI. Pin 15 will be configured as
+    a normal digital output for /CS. /HOLD and /WP are not required and, so, wired
+    high to disable. The final hardware schematic are shown in Figure 8-4. Figure
+    5, 6, 7 shows the 25LC256 EEPROM instruction set and a read/write byte sequence
+    using SPI. Note that all addresses to the EEPROM are sixteen bit. Upon /CS becoming
+    active the microcontroller first sends the specific command (see Figure 8-5) to
+    the EEPROM, followed by address. What happens'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: 'next depends on whether the command is a read or write operation; if read the
+    EEPROM will output data to Master to read, if it is a write operation the Master
+    will output data from the EEPROM to store. Most EEPROM are not typically high
+    speed devices and a memory write cycle may take several milliseconds. The API
+    handles this.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_151_0.png)
+
+
+    +5V external power source or tap off of TP1
+
+
+    Figure 8-4 Schematic'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '| Instruction Name | Instruction Format | Description |
+
+    |---|---|---|
+
+    | READ | 0000 0011 | Read data from memory array beginning at selected address
+    |
+
+    | WRITE | 0000 0010 | Write data to memory array beginning at selected address
+    |
+
+    | WDI | 0000 0100 | Reset the write enable latch (disable write operations) |
+
+    | WREN | 0000 0110 | Set the write enable latch (enable write operations) |
+
+    | RDSR | 0000 0101 | Read STATUS register |
+
+    | WRSR | 0000 0001 | Write STATUS register |
+
+
+    Figure 8-5: Microchip 25LC256 EEPROM Instruction Set
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_152_0.png)
+
+
+    Figure 8-6: 25LC256 EEPROM Byte Read Sequence
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_152_1.png)
+
+
+    Figure 8-7: 25LC256 EEPROM Byte Write sequence
+
+
+    # Experiment 1- The Software
+
+
+    Ok, the hardware has been discussed, let''s now discuss the software. The EEPROM
+    library is fairly straightforward, and uses 16 bits of data as its argument (2
+    byte read or 2 byte write). Take a quick look at the functions listed below. Using
+    the EEPROM library function we can do the basic initialization of SPI2 to access
+    the EEPROM and then read and write from it once it is initialized.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '+   - **InitNVM ()** - initializes the EEPROM for access using SPI2. This must
+    be called first before any other EEPROM library function is called. NVM stands
+    for "Non-Volatile Memory".
+
+    +   - **iReadNVM ( address)**- SPI2 reads EEPROM at address and returns the 16
+    bit value stored at that location
+
+    +   - **iWriteNVM (address, data)** – SPI2 writes 16 bit data value fo EEPROM
+    at the designated address.
+
+
+    An example project EEPROM.MCW will be used for our experiment. It configures SPI2
+    interface for pins 18, 17, 16 using PPS. It initializes the SPI2 Special Function
+    Registers SPI2CON1(control) and SPI2STAT (status) for correct operation, finally
+    it writes a 16 bit value to an even address in EEPROM (located on a 16 bit boundary)
+    and then reads this value back from then EEPROM and compares values. A flowchart
+    is provided.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_153_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: "```\n// I/O definitions for PIC24H prototype\n#define CS EE _RB6 // select\
+    \ line for Serial EEPROM\n#define TCS EE _TRISB6 // tris control for CS EE pin\
+    \ pin 11\n#define SPI_MASTER 0x0122 // select 8-bit master mode, CKE=1, SMP=0,\
+    \ 4MHz\n#define SPI_ENABLE 0x8000 // enable SPI port, clear status\nvoid InitNVM(void)\n\
+    { // init the SPI peripheral\n CS EE = 1; // select the Serial EEPROM\n TCS EE\
+    \ = 0; // make CS EE pin output\n SPI2CON1 = SPI_MASTER; // select mode\n SPI2STAT\
+    \ = SPI_ENABLE; // enable the peripheral\n}\n//InitNVM\n```\n\nFigure 8-11: CS\
+    \ and SPI2 Initialization\n\nThe contents and setting of SPI2STAT and SPI2CON1\
+    \ are shown in Figures 8-11. SPI2CON1 is set to 0x0122 and SPI2STAT is set to\
+    \ 0x8000. These settings and their meanings are detailed in Figures 8-12 and 8-13.\n\
+    \n# SPI2STAT SFR bit map\n\n| RW0 | U-0 | RW0 | U-0 | U-0 | U-0 | U-0 | U-0 |\n\
+    | SPEN | -- | SPISIDL | -- | -- | -- | -- | -- |\n| bit 15 |  |  |  |  |  |  |\
+    \ bit 8 |\n| U-0 | R/WC-0 | U-0 | U-0 | U-0 | U-0 | R-0 | R-0 |\n| -- | SPIROV\
+    \ | -- | -- | -- | -- | SPITBF | SPIRBF |\n| bit 7 |  |  |  |  |  |  | bit 0 |\n\
+    Legend:\nC = Clearable bit   R = Readable bit   W = Writable bit   U = Unimplemented\
+    \ bit, read as '0'\n'-' = Value at POR   '1' = Bit is set   '0' = Bit is cleared\
+    \   'x' = Bit is unknown\n\nSPI2STAT = 0x8000\nSPIEN =1 enable SPI\n\nFigure 8-12:\
+    \ SPI2STAT SFR Setting and Bit Map"
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# SPI2CON1 SFR bit map
+
+
+    | U-0 | U-0 | U-0 | RW-0 | RW-0 | RW-0 | RW-0 | RW-0 |
+
+    | -- | -- | -- | DISSCK | DISSDO | MODE16 | SMP | CKE[1] |
+
+    | bit 15 | | | | | | | bit 8 |
+
+
+    | RW-0 | RW-0 | RW-0 | RW-0 | RW-0 | RW-0 | RW-0 | RW-0 |
+
+    | SSEN[?] | CKP | MSTEN | SPRE<2:0>[?] | | | PPRE<1:0>[?] | |
+
+    | bit 7 | | | | | | | bit 0 |
+
+
+    Legend:
+
+    R = Readable bit    W = Writable bit    U = Unimplemented bit, read as ''0''
+
+    -n = Value at POR    ''1'' = Bit is set    ''0'' = Bit is cleared    x = Bit is
+    unknown
+
+
+    ```
+
+    SPI2CON1 = 0x0122
+
+    MODE16 = 8 bit mode
+
+    SMP =0 (data sample control )
+
+    CKE =1 (clock edge)
+
+    CKP =0 { clock polarity}
+
+    MSTEN =1 (Master Mode Enabled)
+
+    SPRE =0 (secondary pre-scale =8:1)
+
+    PPRE =2 (primary pre-scale = 4:1)
+
+    ```
+
+
+    Figure 8-13: SPI2CON1 SFR setting and Bit Map
+
+
+    # Experiment 1 Execution
+
+
+    Build the prototype using schematic in Figure 8-4. A 10 k resistor and a 25LC256
+    8 pin DIP EEPROM are needed. In addition an external +3.3V DC power supply is
+    required to power up the EEPROM (remember that the Microstick II does not supply
+    external power). Make sure the ground for the EEPROM is common to the ground for
+    Microstick II. An example prototype assembly is shown in Figure 8-14. Connect
+    the Microstick II to the PC''s USB port.'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_157_0.png)
+
+
+    Figure 8-14: Assembled Prototypes
+
+
+    Open the folder for chapter 8 exercise 1 and double click EEPROM.MCW. Open the
+    workspace, and then build and download the code into the Microstick II. A snapshot
+    of the main code is shown.
+
+
+    ```
+
+    data1 0xAA55; //data values
+
+    data2
+
+    InitNVM();
+
+    iWriteNVM(); data1
+
+    data2 ReadNVM 0x1234;
+
+
+    if ( data1 == data0)
+
+    Nop(); //break print data compare
+
+    else
+
+    Nop(); //breakpoint data don''t compare
+
+
+    while ... //infinite compare
+
+    ```
+
+
+    Set data values
+
+
+    Initialize SPI2 Write to and then read fro location 0x1234
+
+
+    Compare Write and read values
+
+
+    Loop forever
+
+
+    Figure 8-14: Mainlines
+
+
+    Set a watch for data0 and data1 using the debugger. Set breakpoints at the two
+    points shown. The Nop () is a macro that is basically a no operation instruction.'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_159_0.png)
+
+
+    Figure 8-16: Experimenter EEPROMDEMO Flowcharts
+
+
+    To gain better understandings examine the EEPROMDEMO code shown below and some
+    of the Experimenter displays that occur as part of your EEPROMDEMO operation.
+    This program structure of updating the LCD display with live data can be an important
+    part for any of your future Experimenter applications.'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '```
+
+    EEPROM DEMO MAIN Code (code screenshot)
+
+    ```
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_160_0.png)
+
+
+    # EEPROM DEMO MAIN Code
+
+
+    # Experimenter Display
+
+
+    Figure 8-17: Experimenter EEPROM DEMO main code and results
+
+
+    # Review of SPI Key features:
+
+
+    +   - Supports four wires SDO, SDI, SCLK, /CS
+
+    +   - Data can move in both directions simultaneously
+
+    +   - Master supplies Clock and initiates data transfer
+
+    +   - Simple synchronous interface used extensively in microcontroller peripheral
+    communications
+
+    +   - Capable of high speed transfers ( clock rate dependent)
+
+    +   - SPI Peripheral functions as a digital shift register
+
+
+    # Review of EEPROM Key Features:
+
+
+    +   - EEPROM retains memory content when power is off
+
+    +   - Use in setting passwords, access code, and calibration data
+
+
+    # Review of PIC24H SPI Key Features:
+
+
+    +   - PIC24H has two available SPI peripheral #1 and #2
+
+    +   - PPS is used to configure programmable pins for SPI interface
+
+    +   - SPI is programmed through the bit setting in two SFR registers SPI2CON1
+    and SPI2STAT'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_163_0.png)
+
+
+    Figure 9-1: Output Compare Peripheral
+
+
+    The OCx module can use either the PIC24HJ64GP502 16 bit Timer 2 (TMR2) or Timer3
+    (TMR3) as a time base, and the period setting for the output pulse waveform. PR2
+    is the period setting for Timer 2 and PR3 is the period setting for Timer 3. In
+    our examples we will use Timer 2. The OCxRS and OCxR registers are loaded with
+    a 16 bit value to control the width of the pulse generated during the output period.
+    This value is compared against the Timer during each period cycle. The OCx output
+    starts high and then when a match occurs OCx logic will generate a low on output.
+    This will be repeated on a cycle by cycle basis (See Figure 9-2).
+
+
+    This is OCx Pulse Width Modulation (PWM) mode. An important notion in thinking
+    about PWM is that it allows dynamic changing of the DC voltage level to a load.
+    Wait a minute you say --- where''s the DC voltage here? Think of the DC voltage
+    as an average voltage value of the pulsed DC across the waveform period. For example,
+    if we have pulse high for 50% of the period consistently, and the pulses are +3.3V
+    then we are supplying on the average 50% of 3.3V to the load or 1.65V. In order
+    to change the pulse width while the system is running we simply write into OCxRS
+    and it automatically loads into OCxR on the next cycle.'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: '+   - Void turnon (int setting) -turn on RB2 pin output, Timer2 clock and the
+    PWM OC1 configuration on this pin. The period of Timer2 is preset to 0x7FF the
+    max value of the 12 bit ADC. Setting is any value set by the pot ADC between 0-0x7FF
+    that adjusts the PWM duty cycle. If setting is 0 then duty cycle is zero, if setting
+    is 0x3FF then duty cycle is 50%, if setting is 0x7FF then duty cycle is 100%
+
+    +   - Void setPWM (int setting) - This performs the same function of running turnoff
+    (void) and turnon (int setting) with one call. This turns PWM off first before
+    setting it.
+
+
+    There are also several ADC functions that we will use. These functions were introduced
+    in Chapter 4 and are in the ADC library. If you need to, please review chapter
+    4 to gain an understanding of ADC.
+
+
+    +   - Void initADC (int ANpin) –this function initializes the ADC for 12 bit manual
+    conversion using the "ANpin" as the single input pin. ANpin possible settings
+    are AN0, AN1, An4, AN5, AN9, AN10, AN11, and AN12. In this experiment we will
+    use AN0.
+
+    +   - Int readADC (int ANpin) –this functions forces a manual ADC conversion on
+    the designated ANpin, again we will use AN0.
+
+
+    The hook-up schematic is shown in Figure 9-4. A 10K pot, LED, 1K resistor and
+    external +3.3V supply is needed for the other side of the 10K. Assure that all
+    grounds between Microstick II and external components are common. Build up the
+    prototype per the schematic and the prototype is shown in Figure 9-5 to assist
+    you.'
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_166_0.png)
+
+
+    Figure 8-4: Schematic LED Dimmer'
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '# Running the Experiment
+
+
+    We have covered both the hardware and software so you are ready to run the prototype.
+    Connect to the USB port of the PC. Connect your external +3.3V supply for use
+    with the pot. Make the pot and LED circuit grounds are common with the Microstick
+    II ground. Open chapter 9 folder to PWM.MCP. Open workspace by doubling clicking
+    icon and do a build and download.
+
+
+    Run the program and as you turn the pot either clockwise or counter clockwise
+    you should see the LED change brightness. If this does not occur please refer
+    to schematic and prototype picture as you have a wiring error.
+
+
+    # 16 Bit Micro Experimenter (optional)
+
+
+    This is PWM experiment for the 16 bit Micro Experimenter. This operates in an
+    identical fashion to Experiment 1 and 2 in this chapter and in fact uses similar
+    source code modified for a different pin set on J3 I/O connector. Use source code
+    PWMDEMO Experimenter. You need to build the code and use either PICKIT2/3 as debugger/programmer.
+    The Experimenter can be used with or without an external power supply if the PICKIT2
+    is used (the PICKIT2 senses power and automatically supplies power if not sensed).
+    In addition the Experimenter needs an external LED with series resistor and 10K
+    to be added to J3 (see hookup diagram).'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '# Exercises:
+
+
+    +   1. What does PWM stand for?
+
+    +   2. How is it used?
+
+    +   3. Run experiment 1 by turning pot to both extreme. Capture those using watch.
+
+    +   Read and record values. What are they? Where do they originate form?
+
+    +   4. Describe an application that can use PWM
+
+    +   5. Configure exercise 1 to work with OC2 versus OC1
+
+    +   a) Change PPS for OC2 pins
+
+    +   b) Rewrite Library for operation with OC2 SFR'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: '# Chapter 10 – RTCC (Real Time Clock Calendar)
+
+
+    In this chapter we will exercise the RTCC (Real Time Clock Calendar) peripheral
+    on the PIC2H. The experiment is recommended for use only with the 16 Bit Micro
+    Experimenter (see appendix A), because all necessary support hardware i.e. clock
+    crystal, LCD, and four pushbuttons are already in place.
+
+
+    # The Real Time Clock Calendar
+
+
+    We have been talking about the Experimenter''s clock, so here it is. It is a Real-Time
+    Clock and Calendar (RTCC) function and is intended for applications where accurate
+    time must be maintained for extended periods of time with minimum to no intervention
+    from the CPU. The peripheral is optimized for low-power usage in order to provide
+    extended battery lifetime while keeping track of time. It features a 100-year
+    clock and calendar with automatic leap year detection. The range of the clock
+    is from 00:00:00 (midnight) on January 1, 2000 to 23:59:59 on December 31, 2099.
+    The hours are available in 24-hour (military time) format. The clock provides
+    a granularity of one second.
+
+
+    The RTCC internal register interface with the PIC24H Microcontroller is implemented
+    using the Binary Coded Decimal (BCD) format. This simplifies the software, when
+    reading and writing to the module, as each of the digit values is contained within
+    its own 4-bit value
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_174_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: 'the LCD and pushbuttons. To operate these you must first call library function
+    RTCCInit (). The two functions we will discuss use the RTCC library but reside
+    outside of it in the MAIN.C.
+
+
+    +   - Set_ALARM (alarm) – this function initializes the alarm functions of the
+    RTCC and sets the alarm (for the data logger we referred to this as rate) base
+    on the value passed as alarm. It is called during the rate setting menu. It sets
+    as follows:
+
+    +     - if (alarm =0) then alarm every 10 seconds
+
+    +     - if (alarm =1) then alarm every minute
+
+    +     - if (alarm =2) then alarm every 10 minutes
+
+    +     - if (alarm =3) then alarm every hour
+
+    +     - if (alarm =4) then alarm every day
+
+    +     - if (alarm =5) then alarm every week
+
+    +     - if (alarm =6) then alarm every month
+
+    +     - if (alarm =7) then alarm every year
+
+
+    Once the alarm is set this function will then enable the RTCC to interrupt the
+    PIC24H when the alarm condition occurs. The RTCC interrupt service then can perform
+    whatever function required for the alarm application. Code snippets for set alarm
+    and RTCC interrupt are shown in Figures 10-5 and 10-6. Note in the interrupt that
+    there is a comment for you to add your own code for whatever function you want
+    to perform as a result of alarm condition (the default is toggling the LED).
+
+
+    +   - clock_Setup () –This routine displays current RTCC time setting in ASCII
+    on the display and allows the operator to accept or make changes to RTCC using
+    the display and pushbuttons.
+
+    +     - Button SW1 -toggles between clock set mode and clock accept mode. Hitting
+    the SW1 twice in accept mode exits the function with RTCC set to the displayed
+    time.
+
+    +     - Button SW2 -if in clock setting mode increments current data field
+
+    +     - Button SW3 -if in clock setting mode decrements current data field
+
+    +     - Button SW4 -advance to next allowable data field
+
+
+    # Clock and Alarm Experiment
+
+
+    This experiment uses the RTCC library and clock_Setup () and set_alarm () functions
+    as part of main. The Experimenter essentially performs the clock demo'
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: "```\nvoid __attribute__((interrupt, no_auto_psv)) _RTCCInterrupt( void)\n\n\
+    \    toggle_LED(); // alarm activity LED pin 3 J3 RB5\n\n    // your alarm specific\
+    \ application code here\n\n    _RTCIF = 0;    // clear flag\n    _ALRMEN = 1;\
+    \ // reissue the alarm\n\nend of RTCC interrupt service routine\n```\n\nFigure\
+    \ 10-8: Alarm Interrupt Service Routine\n\n# Review of RTCC:\n\n+   - The RTCC\
+    \ provides the PIC24h with a real time clock and calendar capability that support\
+    \ a hundred year Calendar.\n+   - RTCC peripheral operation only requires a software\
+    \ setup and then runs independent of PIC24H in hardware.\n+   - RTCC support alarms\
+    \ through interrupt.\n+   - There are a number of RTCC SFR settings to initialize\
+    \ clock. These setting are done using BCD.\n+   - An external 32 KHz Crystal and\
+    \ two 33 pF capacitors are required to support RTCC.\n\n# Review of source code:\n\
+    \n+   - The RTCC.C and RTCC.H library functions must be included as part of project.\n\
+    +   - A larger function set in Main, clock_Setup (), can be used to initialize\
+    \ the RTTC using pushbutton and LCD.\n+   - Alarms are serviced through the RTTC\
+    \ interrupt service routine."
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Exercise
+
+
+    +   1. Explain how the RTCC performs its counting functions based upon the 32Khz
+    oscillator
+
+    +   2. Reprogram the alarm with different setting and monitor results.
+
+    +   3. What other types of application functions can be implemented to support
+    different alarm actions within the interrupt service routine?'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_183_0.png)
+
+
+    Figure 3-1: I2C Configuration
+
+
+    # Generic I2C message Protocol
+
+
+    I²C defines several basic types of message, each of which begins with a START
+    and ends with a STOP. Here are two examples:
+
+
+    +   - Single message where a master writes data to a slave;
+
+    +   - Single message where a master reads data from a slave;
+
+
+    # I2C Physical Layer
+
+
+    At the physical layer, both SCL & SDA lines are of open-drain design, thus, pull-up
+    resistors are needed. Pulling the line to ground is considered a logical zero
+    while letting the line float is a logical one. This is used as a channel access
+    method. Transitions for data bits are always performed while the clock is low;
+    transitions while it is high are "start" and "stop" markers delimiting a bus transaction.
+
+
+    When idle, both lines are high. To start a transaction, SDA is pulled low while
+    SCL remains high. After a start, so the next step is to pull SCL low. Arbitration
+    and ensures there is only one transmitter at a time. While SCL is low, the transmitter
+    (initially the master) sets SDA to the desired value and (after a small delay
+    to let the value propagate) lets SCL float high. The master then waits for SCL
+    to actually go high, when SCL is high, the receiver latches the bit, and the master
+    waits a minimum time then pulls it low again. This completes transmission of one
+    bit.
+
+
+    After every 8 data bits in one direction, an "acknowledge" bit is transmitted
+    in the other. The transmitter and receiver switch roles for one bit and the erstwhile
+    receiver transmits a single 0 bit (ACK) back. After the acknowledge bit, the master
+    may do one of several things. Here are two examples:
+
+
+    +   1. Prepare to transmit another byte of data: set SDA to the desired bit value
+    and pulse SCL high.'
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_185_0.png)
+
+
+    Figure 11-3: I2C Experiment
+
+
+    # Experiment Application Library
+
+
+    The application library supports both low density and high density EEPROM. Low
+    density refers to those devices that only require an 8 bit address and are under
+    256 Bytes. High density devices are 512 to 64K bytes and require 16 bits of address.
+    The library supports both byte read/write as well as page (multi-byte) read/write.
+    No additional libraries are required with the provided code. The firmware consists
+    of two .c files (main.c, i2c_Func.c), along with an .h file organized into nine
+    sections.
+
+
+    +   - Initialization
+
+    +   - Low Density Byte Write
+
+    +   - Low Density Byte Read
+
+    +   - Low Density Page Write
+
+    +   - Low Density Sequential Read
+
+    +   - High Density Byte Write
+
+    +   - High Density Byte Read
+
+    +   - High Density Page Write
+
+    +   - High Density Sequential Read'
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: 'In our experiment we will be using high density sequential read/write functions
+    with the 24LC256 to read/and write 32 byte page between Microstick II and EEPROM.
+
+
+    The program also includes the acknowledge polling feature for detecting the completion
+    of write cycles after the byte write and page write operations. Read operations
+    are located directly after each write operation, thus allowing for verification
+    that the data was properly written.
+
+
+    # Experiment I2C bus Activity
+
+
+    It is always a good idea to get a sense of what is transitioning on an I2C bus.
+    Some illustrative examples of bus activities are shown below for single byte write
+    and multi-byte transfers. These are only illustrative and by no means are representative
+    of possible transaction types.
+
+
+    # Single Byte Write
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_186_0.png)
+
+
+    # Multi- Byte operations
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_186_1.png)
+
+
+    Figure 11-4: I2C examples
+
+
+    # Running the Experiments
+
+
+    Build hardware prototype as shown earlier. Open Chapter eleven folders for exercise
+    1 I2C and double click on I2C workspace. Build and download code in Microstick
+    II using debugger. The Workspace should appear as follows.'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: '![](img/a9229e7b0ddd9608f171b22b52514f39_188_0.png)
+
+
+    Figure 11-6: 16 Bit Micro Experimenter Hook up
+
+
+    # Review of I2C Key features:
+
+
+    +   - Only two bus lines are required (SCL –Clock, SDA-Data)
+
+    +   - No strict baud rate requirements like for instance with RS232, the master
+    generates a bus clock
+
+    +   - I2C Communication is half-duplex, which means either a transmission or a
+    reception can occur at a time.
+
+    +   - I2C uses synchronous communication, as both communicating entities use the
+    same serial clock signal.
+
+    +   - I2C supports simple a master/slave relationship between all components on
+    the same bus interface.
+
+
+    # Exercises:
+
+
+    +   1. What does I2C stand for?
+
+    +   2. How is it used?
+
+    +   3. Configure exercise 1 to work with single byte read/write using library
+    functions
+
+    +   4. Configure the software library to run on two different I/O pins of the
+    PIC24H'
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: '# Appendix A – 16 bit Experimenter Board
+
+
+    As introduced in Chapter 1 the optional 16 bit Micro Experimenter facilitates
+    prototype exploration and testing of Microchip 16 bit PIC24HJ64GP502 Microcontroller
+    with on board power, programming/debug interface, and peripheral support capabilities.
+    The Experimenter, like the Microstick II, plugs into a Solderless Breadboard environment.
+    The 16 bit Experimenter is available both in kit form and can be purchased assembled.
+    A photo of the assembled kit and block diagram are shown. The Experimenter purchase
+    is available through www.Kibacorp.com.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_190_0.png)
+
+
+    Figure A-1: 16Bit Experimenter Mounted on Solderless Breadboard with PIC...'
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: 'Power can be applied to a DC barrel jack by a 9.1mm positive +6V to +9V wall
+    transformer or optionally through a pin set designated as raw power located in
+    lower left of the module. Incoming power is switched on/off to an on board +3V
+    linear regulator. Power on condition is indicated by a green led. The Regulator
+    +3.3V can also be made available to the Solderless environment through the upper
+    board right Pin set.
+
+
+    The Software development tool set to use is the same MPLAB Integrated Development
+    Environment (IDE) as used and explained with the Microstick II. However, different
+    hardware is required for programming and debugging the Experimenter (this capability
+    is built-in to the Microstick II).
+
+
+    The Microchip PICKIT 2 or PICKIT3 debugger and programmer are recommended low
+    cost solutions. There is an install process, but once installed, the PICKIT2 or
+    3 is integrated to the IDE programming and debugging process. A quick ''set-up''
+    guide comes with the Experimenter Kit CD-ROM. The PICKIT2/3 requires an In Circuit
+    Serial Programmer interface (ICSP). Within the Experimenter the ICSP is conveniently
+    located to the module''s far right for easy Insertion.
+
+
+    # PICkit™ 2 Debug Express
+
+
+    +   - Programmer and Debugger !
+
+    +   - Limited to one break point
+
+    +   - Low Cost
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_192_0.png)
+
+
+    *Uses the In Circuit Serial Programmer (ICSP) on Experimenter !*
+
+
+    Figure A-3: Introducing the PICKIT2/3'
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: '+   - Hook up PICKIT2 to Experimenter
+
+    +   - Set release
+
+    +   - Select programmer to be PICKIT2
+
+    +   - Output window should appear as follows
+
+    +   - If no output power is applied to Experimenter then screen will show
+
+    +   - Otherwise it will show that power is detected
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_193_0.png)
+
+
+    Figure A-4: PICKIT2/3 shown integral to IDE environment
+
+
+    Unlike the Microstick II, the Experimenter has dedicated some of the PIC24H pins
+    to support on board electronics. Those dedicated pins, and their use in the associated
+    Experimenter schematic are shown in figure A-5.
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_193_1.png)
+
+
+    Figure A-5 Schematic part (next Pins)'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: 'possible settings are AN0, AN1, AN4, AN5, AN9, AN10, AN11, and AN12.
+
+    In this experiment we will use AN0.
+
+
+    +   - Int readADC (int ANpin) –this functions forces a manual ADC conversion on
+    the designated ANpin, again we will use AN0.
+
+
+    The EEPROM library is really straightforward. Take a quick look at the functions
+    listed below.
+
+
+    +   - InitNVM () - initializes the Experimenter EEPROM for access. This must be
+    called first before any other EEPROM library function is called. NVM stands for
+    "Non-Volatile Memory".
+
+    +   - iReadNVM ( address)- reads EEPROM at address and returns the 16 bit value
+    stored at that location
+
+    +   - IWriteNVM (address, data) – writes 16 bit data value to EEPROM at the designated
+    address.
+
+
+    The UART library functions used in the data logger are:
+
+
+    +   - initU2() – initializes the serial port using UART2 of PIC24F for pins 8
+    and 9 of the Experimenter expansion Bus for 9600 BAUD, 8 bit data, no parity and
+    1 stop bit or short hand 96008N1.
+
+    +   - putU2( character) – writes character out to the serial port
+
+    +   - putsU2( string) - writes an entire string out to serial port
+
+    +   - Character getU2 () – waits for a new character to arrive to the serial port
+    and returns it.
+
+
+    Here are the five functions within the LCD driver their titles pretty much capture
+    what they do.
+
+
+    +   - LCD_Initialize () - initializes the LCD display and makes it ready for output.
+    This needs to be called before any other LCD function is called.
+
+    +   - clear_display () - clears display and places cursor at row 1 column 1 (top
+    left corner)
+
+    +   - position_cursor (position) - places cursor at designated position, a number
+    from 0-47
+
+    +   - write_string_LCD (string name) - writes a string to display at current cursor
+    position ( see explanation in text)
+
+    +   - write_character_LCD (character) -writes a single character to display at
+    current cursor position
+
+
+    Here are the two Button functions again we try to keep things as straightforward
+    as possible.'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: '+   - **RTCCProcessEvents ()** - The function grabs the current time from the
+    RTCC and translate it into strings. Must be called periodically to refresh time
+    and date strings `_time_str` and `_date_str`. Each string is 16 ASCII characters
+
+
+    The above functions work directly with the RTCC without the advantage of the LCD
+    and pushbuttons. Using the LCD and pushbuttons makes working with the RTCC a lot
+    easier, and this is covered in a chapter 10 in this book for the 16 Experimenter.
+
+
+    # *Demos that come with PIC24F*
+
+
+    The Experimenter comes with a P24FJ64GA002 that is preprogrammed with the following
+    built-in demos. The demos were written using Microchip free MPLAB and PIC24 C
+    code. The PIC24 C Compiler, MPLAB C30 v3.11b (or later), Student Edition is free
+    and was used for this demo. The link is below to download and see a full description
+    of the compiler.
+
+
+    http://www.microchip.com/C30
+
+
+    Source code and full demo description as well as kit assembly instruction are
+    included on the Experimenter''s CD-ROM that comes with the kit. The demo starts
+    as a revolving series of eleven different flash screens, each lasting about 4
+    seconds. The user invokes a specific functional demo by pushing one of the pushbuttons.
+    Two of the introductory functional demos (digital thermometer and RGB LED) that
+    come with the kit require some additional hardware and hook-up as shown. A third
+    functional demo (Clock) does not rely on any additional hardware.
+
+
+    These functional demos are intended to allow user to gain familiarity with the
+    Experimenter and insure its proper operation after kit assembly. As mentioned
+    earlier, they can be invoked using the pushbuttons anytime during the flash screen
+    displays and then can return to Flash Displays by simply pressing pushbutton S4.'
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# Digital Thermometer Demo
+
+
+    # Thermometer
+
+
+    # Thermal sensor LM34Z
+
+
+    +   - Sensor VDD -> RAW + (+5VDC)
+
+    +   - Sensor GND -> RAW - (GND)
+
+    +   - Sensor Out -> I/O bus pin 1
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_199_0.png)
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_199_1.png)
+
+
+    Figure A-6: Digital Thermometer Demo
+
+
+    You need to hook up the thermal sensor to the Experimenter as shown in figure
+    8. The PIC24F is already preprogrammed at factory for this demo. Depressing Push
+    Button S1 initializes Thermometer demo. This configures pin 1 of I/O expansion
+    bus to be an analog input and then continuously digitizing this input using the
+    PIC24F internal 10 bit ADC. The results are displayed in degrees Fahrenheit. You
+    need to connect a LM34Z sensor as shown. Please use a raw input of +5VDC for input
+    power to power the sensor. This can be done simply by applying power to the board
+    through the RAW + and - inputs rather than using a wall transformer.'
+  merge: -1
+  img_proc: true
+- pgno: 200
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 201
+  md: '# One Hundred Year Clock Calendar Demo
+
+
+    ![](img/a9229e7b0ddd9608f171b22b52514f39_201_0.png)
+
+
+    Figure A-10: Clock Demo.
+
+
+    Depressing pushbutton S3 initializes Clock demo. This demo enters a mode where
+    pushbuttons assume clock setting and control operations for internal 100 year
+    real time clock calendar. User options are: change mode from clock display to
+    clock setting and enter clock changes, stay in clock mode to simply display clock,
+    or exit clock mode back to "Flash Screens". In order for this demo to work you
+    must have a 32 KHz crystal and two 33 pF capacitors connected to pins 11 and 12
+    of the PIC24F. The Experimenter provides this functionality. Designated button
+    functions are as follows:
+
+
+    +   - Push Button S1 toggle between clock run mode and clock setting mode
+
+    +   - Push Button S2 if in clock setting mode increment current data field
+
+    +   - Push Button S3 if in clock setting mode decrement current data field
+
+    +   - Push Button S4 advance to next allowable data field if in clock setting
+    mode or if pressed in clock run mode exit to "Flash Screens"'
+  merge: -1
+  img_proc: true
+- pgno: 202
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 203
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 204
+  md: '# Index
+
+
+    +   - # include : 85
+
+    +   - #include "lcd.h" 100
+
+    +   - .HEX - 16
+
+    +   - .MCP - 16
+
+    +   - .MCW - 16
+
+    +   - 10 bit - 25, 78, 79, 80, 91, 92, 196
+
+    +   - 12 bit - 25, 78, 79, 80, 81, 82, 86, 91, 100, 162, 193, 195
+
+    +   - 16 bit timer - 25, 107
+
+    +   - 24LC256 - 181, 182, 184
+
+    +   - 25LC256 - 146, 147, 148, 149, 151, 153, 155, 158, 188
+
+    +   - 32 bit Timer - 4, 115, 117, 119
+
+    +   - 32 KHz - 174, 176, 195, 198
+
+    +   - 8MHz - 48
+
+    +   - ACK - 180
+
+    +   - acknowledge - 180, 182
+
+    +   - AD1CHS0 - 82, 92
+
+    +   - AD1C1S12 - 83, 92
+
+    +   - AD1CON1 - 81, 91
+
+    +   - AD1CSSL - 83, 92
+
+    +   - AD1PCFGL - 44, 58, 70, 83, 92
+
+    +   - AD2CON2 - 81, 91
+
+    +   - AD3CON3 - 81, 91
+
+
+    +   - ADC - 3, 25, 28, 77, 78, 79, 80, 81, 82, 83, 85, 86, 88, 89, 90, 91, 92,
+    93, 100, 101, 102, 103, 105, 121, 162, 164, 165, 193, 195, 196
+
+    +   - ADC resolution - 78
+
+    +   - Analog to Digital Converter - 77, 100
+
+    +   - anode - 39, 109, 111, 197
+
+    +   - ASCII - 4, 77, 85, 86, 93, 96, 99, 103, 126, 127, 135, 172, 173, 195
+
+    +   - ASCII data - 126
+
+    +   - asynchronous - 123
+
+    +   - Baud rate - 129
+
+    +   - BCD - 86, 171, 176
+
+    +   - Binary Coded Decimal - 171
+
+    +   - bounce - 61, 68, 74
+
+    +   - brainstem - 126
+
+    +   - breakpoint - 48, 49, 50, 52, 59, 68, 114, 121
+
+    +   - Build All - 20, 48
+
+    +   - C file - 41
+
+    +   - cathode - 39, 57, 64, 109, 111, 197
+
+    +   - CCP - 161, 164, 165, 194
+
+    +   - CDG - 128
+
+    +   - chip select - 146
+
+    +   - CN7PUE - 63, 70, 74
+
+    +   - CNPUP1 - 63
+
+    +   - Compiler - 13, 14, 22, 114
+
+    +   - Conversion speed - 80
+
+    +   - CPU - 25, 42, 43, 46, 65, 70, 79, 82, 107, 108, 111, 115, 118, 123, 171
+
+    +   - CS - 146, 147, 151, 157
+
+    +   - Data bits - 129
+
+    +   - DCE - 125, 126, 143
+
+    +   - debounce - 69, 70, 74
+
+    +   - debugger - 7, 8, 11, 17, 19, 22, 28, 45, 47, 52, 53, 56, 66, 67, 72, 90,
+    114, 120, 143, 154, 155, 167, 183, 184, 189
+
+    +   - Debugger - 22, 28, 45
+
+    +   - Delay - 43, 59
+
+    +   - DTE - 125, 126, 143
+
+    +   - duplex - 124, 127, 144, 145, 179, 185
+
+    +   - duty cycle - 159, 161, 162, 168, 195'
+  merge: -1
+  img_proc: true
+- pgno: 205
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 206
+  md: 'receiver : 123, 124, 130, 180
+
+
+    remappable pins : 25, 26, 131
+
+
+    Reset : 21
+
+
+    RS-232 : 4, 28, 123, 125, 130, 134, 136, 137, 141, 143, 144
+
+
+    RS-485 : 4, 125, 127, 130, 144
+
+
+    RTCC : 5, 25, 171, 172, 173, 176, 177, 188, 195
+
+
+    Run : 20
+
+
+    # S
+
+
+    sample and hold : 79
+
+
+    SCL : 179, 180, 181, 185
+
+
+    SCLK : 146, 157
+
+
+    SDA : 179, 180, 181, 185
+
+
+    SDI : 146, 157
+
+
+    SDO : 146, 157
+
+
+    serial clock : 146
+
+
+    Serial Communication : 123, 135
+
+
+    serial data in : 146
+
+
+    serial data out : 146
+
+
+    SFR : 39, 41, 42, 43, 44, 50, 59, 62, 63, 65, 67, 74, 79, 80, 81, 82, 83, 91,
+    108, 111, 116, 117, 118, 120, 132, 133, 134, 139, 152, 153, 157, 158, 165, 166,
+    169, 176
+
+
+    Shannon''s Rule : 78
+
+
+    simulator : 22, 52, 114
+
+
+    Single Step : 21
+
+
+    Software Library : 4, 96
+
+
+    SPI : 5, 25, 28, 131, 145, 146, 147, 157, 191
+
+
+    SPI2 : 145, 147, 149, 150, 151, 158
+
+
+    SPI2CON1 : 150, 151, 153, 158
+
+
+    SPI2STAT : 150, 151, 152, 157
+
+
+    stopwatch : 46, 49, 52, 113, 114, 121
+
+
+    successive approximation : 79
+
+
+    Switch : 3, 28, 61, 62
+
+
+    synchronous : 123, 145, 157, 179, 185
+
+
+    Synchronous Peripheral Interface : 5, 25, 131, 145
+
+
+    # T
+
+
+    T1CON : 108, 111
+
+
+    timer : 25, 27, 42, 59, 107, 108, 109, 111, 112, 113, 115, 116, 117, 118, 120,
+    121
+
+
+    Timer3 : 116, 117, 160
+
+
+    Timer3/4 : 4, 117, 160
+
+
+    TMRX : 111, 112, 119
+
+
+    transmitter : 123, 124, 180
+
+
+    TRIS : 38, 39, 43, 62
+
+
+    TRISA : 39, 58
+
+
+    TRISB : 39, 43, 45, 58
+
+
+    TRISD : 55
+
+
+    TXCON : 111, 112, 117
+
+
+    # U
+
+
+    UART : 25, 28, 123, 124, 125, 126, 127, 129, 130, 131, 134, 138, 139, 141, 143,
+    144, 145, 191, 192, 194
+
+
+    UART2 : 123, 132, 133, 134, 135, 136, 139, 140, 144, 194
+
+
+    Universal Asynchronous Receiver Transmitter : 123
+
+
+    USB : 4, 7, 17, 22, 28, 45, 52, 87, 99, 102, 123, 128, 129, 130, 137, 141, 142,
+    144, 153, 167
+
+
+    # V
+
+
+    VDD : 83'
+  merge: -1
+  img_proc: true
+- pgno: 207
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 208
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 209
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 210
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 211
+  md: '# Beginner''s Guide to Programming the PIC24/dsPIC33
+
+
+    Thomas Kibalo, who has written many articles for Nuts & Volts magazine, delivers
+    the beginner''s book many have been looking for: Beginner''s Guide to Programming
+    the PIC24/dsPIC33. Using the low cost Microchip Microstick module with PIC24HJ128GP502
+    and the free to download lite version of MPLAB C Compiler for PIC24 MCUs and dsPIC
+    MCUs, Kibalo takes you step by step through the fundamentals of programming the
+    PIC24H which can be equally applied to the dsPIC33. His clear explanation of the
+    inner workings, make learning the PIC24/dsPIC33 16 bit architecture easy. His
+    code examples demonstrate how to perform the functions most applications require.
+    The hardware is shown in simple breadboard setup so even a beginner can build
+    along with very few extra components needed.
+
+
+    +   - Driving LEDs
+
+    +   - Reading momentary switch
+
+    +   - Analog to Digial Conversion
+
+    +   - Driving an LCD display
+
+    +   - Timers and Timer Interrupts
+
+    +   - Writing to/Reading from External EEPROM
+
+    +   - Serial RS232 communication
+
+    +   - SPI communication
+
+    +   - I2C communication
+
+    +   - Pulse Width Modulation
+
+    +   - Controlling the PIC24H Real Time Clock and Calendar
+
+
+    For those that don''t want to build up the circuitry on a breadboard, Kibalo also
+    shows you how to use his Experimenter board. The Experimenter Board (Kibacorp.com)
+    is his own design with LCD, switches and other features built in. You don''t have
+    to use this hardware either. This book can be the guide for any PIC24H or even
+    dsPIC33 development board you choose. If you wanted to move on to the Microchip
+    16-bit architecture this book gives you the path to get there with ease.'
+  merge: -1
+  img_proc: true
