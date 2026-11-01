@@ -1,0 +1,55 @@
+```
+[UIView commitAnimations];
+}
+- (void)dealloc {
+[pageControl release];
+[imageView1 release];
+[imageView2 release];
+[super dealloc];
+}
+- (void)didReceiveMemoryWarning {
+// Releases the view if it doesn't have a superview.
+[super didReceiveMemoryWarning];
+}
+- (void)viewDidUnload {
+}
+@end
+```
+
+![](bbox=[0.68, 0.18, 0.92, 0.62])
+
+FIGURE 4-11
+
+10. Press Command-R to test the application on the iPhone Simulator. When you tap the Page Control located at the bottom of the screen, the image view flips to display the next one (see Figure 4-11).
+
+# How It Works
+
+When the View is first loaded, you get one of the ImageView views to display an image and then hide the other:
+
+```
+//---initialize the first imageview to display an image---
+[imageView1 setImage:[UIImage imageNamed:@"iMac_old.jpeg"]];
+tempImageView = imageView2;
+
+//---make the first imageview visible and hide the second---
+[imageView1 setHidden:NO];
+[imageView2 setHidden:YES];
+```
+
+You then wire the Page Control so that when the user taps it, an event is fired and triggers a method. In this case, the pageTurning: method is called:
+
+```
+//---add the event handler for the page control---
+[pageControl addTarget:self action:@selector(pageTurning:) forControlEvents:UIControlEventValueChanged];
+[super viewDidLoad];
+```
+
+In the pageTurning: method, you determine which image you should load based on the value of the Page Control:
+
+```
+//---when the page control's value is changed---
+- (void) pageTurning: (UIPageControl *) pageController
+{
+//---get the page number you can turning to---
+NSInteger nextPage = [pageController currentPage];
+```

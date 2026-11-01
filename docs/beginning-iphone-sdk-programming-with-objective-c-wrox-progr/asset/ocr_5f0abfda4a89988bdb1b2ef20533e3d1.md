@@ -1,0 +1,50 @@
+The nameTextField is an IBOutlet instance member of type UITextField. A good practice in iPhone programming is to expose the member variable as a property using the @property identifier:
+
+```
+```objective-c
+#import <UIKit/UIKit.h>
+
+@interface BasicUIViewController : UIViewController {
+    IBOutlet UITextField *nameTextField;
+}
+
+@property (nonatomic, retain) UITextField *nameTextField;
+
+- (IBAction)btnClicked:(id)sender;
+@end
+```
+```
+
+> **NOTE** The IBOutlet tag can also be added to the @property identifier. This syntax is common in the Apple documentation:
+> 
+> ```objective-c
+> @property (nonatomic, retain) IBOutlet UITextField *nameTextField;
+> ```
+
+> **NOTE** For the use of the nonatomic and retain identifiers, refer to Appendix D, where you can find an introduction to Objective-C. Also, the @synthesize keyword, discussed shortly, is explained in more detail there as well.
+
+When the outlet is now exposed as a property, you need to define the getters and setters for the property. A quick and easy way is to use the @synthesize keyword in the BasicUIViewController.m file, like this:
+
+```
+```objective-c
+#import "BasicUIViewController.h"
+
+@implementation BasicUIViewController
+
+@synthesize nameTextField;
+```
+```
+
+# Coding the Action
+
+As shown earlier, you connected the Touch Up Inside event of the Round Rect Button view with the btnClick: action defined in the View Controller. To implement the btnClick: method, code the following in the BasicUIViewController.m file:
+
+```
+```objective-c
+#import "BasicUIViewController.h"
+
+@implementation BasicUIViewController
+
+@synthesize nameTextField;
+```
+```

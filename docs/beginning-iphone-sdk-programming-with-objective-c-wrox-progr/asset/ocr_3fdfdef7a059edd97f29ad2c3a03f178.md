@@ -1,0 +1,46 @@
+To know the order of the various views already added, you can use the following code segment to print the value of the tag property for each view:
+
+```
+[self.view addSubview:label];
+[self.view addSubview:button];
+[self.view exchangeSubviewAtIndex:1 withSubviewAtIndex:0];
+
+for (int i=0; i<[self.view.subviews count]; ++i) {
+    UIView *view = [self.view.subviews objectAtIndex:i];
+    NSLog(@"%@", [NSString stringWithFormat:@"%d", view.tag]);
+}
+```
+
+The following method recursively prints out all the views contained in a UIView object:
+
+```
+-(void) printViews: (UIView *) view {
+    if ([view.subviews count] > 0) {
+        for (int i=0; i<[view.subviews count]; ++i) {
+            UIView *v = [view.subviews objectAtIndex:i];
+            NSLog(@"View index: %d Tag: %d", i, v.tag);
+            [self printViews:v];
+        }
+    } else
+        return;
+}
+```
+
+To remove a view from the current view hierarchy, use the removeFromSuperview method of the view you want to remove. For example, the following statement removes the label view:
+
+```
+[label removeFromSuperview];
+```
+
+# SWITCHING VIEWS
+
+When you create a View-based Application project in Xcode, you get a project with a single view with a corresponding View Controller. This is what you see when you edit the .xib file in Interface Builder. However, sometimes you may need more than one view. For example, you may get the user to enter some information in one view and then based on the information that user entered, switch to another view for some actions.
+
+The following Try It Out shows you how to switch between two views and how to wire a new view to a corresponding View Controller.
+
+# TRY IT OUT  Switching between Two UIView Views
+
+*Codefile [VCExample.zip] available for download at Wrox.com*
+
++   1. Using Xcode, create a new View-based Application project and name it `VCExample`.
++   2. Double-click the `VCExampleViewController.xib` file to edit it in Interface Builder.

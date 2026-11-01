@@ -1,0 +1,14 @@
+# WHAT YOU HAVE LEARNED IN THIS CHAPTER
+
+| TOPIC | KEY CONCEPTS |
+|---|---|
+| Using the UIAlertView | UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"This is an alert view" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil]; |
+| Handling events fired by UIAlertView | Ensure that your View Controller conforms to the UIAlertViewDelegate protocol. |
+| Using the UIActionSheet | UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:@"Title of Action Sheet" delegate:self cancelButtonTitle:@"OK" destructiveButtonTitle:@"Delete Message" otherButtonTitles:@"Option 1", @"Option 2", nil]; |
+| Handling events fired by UIActionSheet | Ensure that your View Controller conforms to the UIActionSheetDelegate protocol. |
+| Wiring up the events for the UIPageControl | [pageControl addTarget:self action:@selector(pageTurning:) forControlEvents:UIControlEventValueChanged]; |
+| Using the UIImageView | [imageView1 setImage:[[UIImage imageNamed:@"iMac_old.jpeg"]]]; |
+| Wiring the events for the UISegmentedControl | [segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged]; |
+| Using the UIWebView | NSURL *url = [NSURL URLWithString:@"http://www.apple.com"]; NSURLRequest *req = [NSURLRequest requestWithURL:url]; [webView loadRequest:req]; |
+| Animating during transitions | [UIView beginAnimations:@"flipping view" context:nil]; [UIView setAnimationDuration:1]; [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut]; [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.view cache:YES]; [self.view addSubview:secondViewController.view]; [UIView commitAnimations]; |
+| Passing data between views | Define a property in the receiving view and set its value in the calling view. |

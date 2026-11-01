@@ -1,0 +1,11 @@
+Besides getting Xcode to complete the word for you, you can also invoke the Code Sense feature by pressing the Esc key (or press F5). Code Sense displays a list of words matching whatever you have typed (see Figure B-7).
+
+![](bbox=[0.15, 0.29, 0.85, 0.55])
+
+# FIGURE B-7
+
+As you type in Xcode, Xcode automatically recognizes the code and inserts the relevant parameters’ placeholders. For example, if you invoke the methods of an object, Xcode inserts the placeholders of the various parameters. Figure B-8 shows an example of the placeholders inserted for the UIAlertView object after you type ini. To accept the placeholders for the various parameters, press the Tab key.
+
+![](bbox=[0.2, 0.8, 0.9, 0.87])
+
+# FIGURE B-8

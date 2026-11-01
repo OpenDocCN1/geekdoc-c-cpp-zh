@@ -1,0 +1,27 @@
+# How It Works
+
+To load the values of the preferences settings, you use a class known as the NSUserDefaults:
+
+```
+NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+```
+
+The preceding statement returns the one-and-only-one instance of the NSUserDefaults class. Think of NSUserDefaults as a common database that you can use to store your application preference settings.
+
+To retrieve the values of the preference settings, you use the objectForKey: method and specify the name of the preference setting you want to retrieve:
+
+```
+NSString *strLoginname = [defaults objectForKey:@"login_name"];
+NSString *strPassword = [defaults objectForKey:@"password"];
+NSString *strColor = [defaults objectForKey:@"color"];
+```
+
+# Reseting the Preference Settings Values
+
+Sometimes you may want to reset the values of the preference settings of your application. This is especially true if you have made an error in the Root.plist file and want to reset all the settings. The easiest way to do this is to remove the application from the phone or Simulator. To do so, simply tap and hold the application’s icon, and when the icons start to wiggle, tap the X button to remove the application. The preference settings associated with the application will also be removed.
+
+Another way to clear the values of the preference settings would be to navigate to the folder containing your application (on the iPhone Simulator). The applications on the iPhone Simulator are stored in the following folder: ~/Library/Application Support/iPhone Simulator/User/Applications/ (note that the tilde symbol (~) represents your home directory and not your root hard disk). Inside this folder, you need to find the folder containing your application. Within the application folder is a Library/Preferences folder. Delete the file ending with application_name.plist (see Figure 11-19) and your preferences settings will now be reset.
+
+![](bbox=[0.15, 0.667, 0.627, 0.859])
+
+FIGURE 11-19

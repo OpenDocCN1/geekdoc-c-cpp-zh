@@ -1,0 +1,15 @@
+# INTRODUCTION
+
+The iPhone SDK was officially announced by Apple on March 6, 2008, at an Apple Town Hall meeting. In the early days of the SDK, iPhone development was shrouded in secrecy because Apple has imposed a Non-Disclosure Agreement (NDA) on developers who downloaded the SDK. No one was allowed to publicly discuss the SDK and the various APIs shipped with it. Apple had presumably done this to ensure the stability of the SDK. This move caused an uproar from developers because it prevented them from posting questions on public forums and getting help quickly. Nor could books be written about it or training courses developed. The adoption of Objective-C as the programming language for the iPhone SDK did not help. In fact, that language has a steep learning curve for developers, who for the most part are coming from more mainstream languages such as Java, C++, C#, and VB.NET.
+
+With pressure from the public, Apple finally lifted the NDA in late 2008. This was welcome news to developers, albeit a little late. Overnight, discussion forums appeared and Web sites dedicated to iPhone development mushroomed.
+
+Although Web sites and discussion forums talking about iPhone development are numerous, one obstacle remains — the learning curve for getting started is simply too great. Many developers are struggling to get started with Xcode and Interface Builder. At the same time, they have to grapple with the arcane syntax of Objective-C and to constantly remember which objects to free up and which ones not to.
+
+This book was written to bridge the gap.
+
+When I first started learning about iPhone development, I went through the same journey that most iPhone developers go through: Write a Hello World application, mess with Interface Builder, try to understand what the code is doing, and repeat that process. I was also overwhelmed by the concept of a View Controller and wondered why it is needed if I simply want to display a view. My background in developing for Windows Mobile and Android did not help much, and I had to start working with this concept from scratch.
+
+This book is written to make the life of a beginning iPhone developer as easy as possible. It covers the various topics in such a manner that you will progressively learn without being overwhelmed by the details. I adopt the philosophy that the best way to learn is by doing, hence the numerous Try It Out sections in all the chapters, which first show you how to build something and then explain how things work.
+
+Although iPhone programming is a huge topic, my aim for this book is to get you started with the fundamentals, understand the underlying architecture of the SDK, and appreciate why things are done certain ways. It is beyond the scope of this book to cover everything under the sun related to iPhone programming, but I am confident that after reading this book (and doing the exercises), you will be well equipped to tackle your next iPhone programming challenge.

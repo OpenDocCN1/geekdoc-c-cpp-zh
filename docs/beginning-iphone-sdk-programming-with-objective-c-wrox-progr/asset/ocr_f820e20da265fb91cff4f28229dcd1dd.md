@@ -1,0 +1,55 @@
+# Answer to Question 2
+
+Assuming that you want to pass a string from the FlipsideViewController to the MainViewController, the following statements that appear in bold show how you can pass data from one view to another using a property:
+
+```
+```objective-c
+FLIPSIDEVIEWCONTROLLER.H
+#import "AddCountryViewController.h"
+
+@protocol FlipsideViewControllerDelegate;
+
+@interface FlipsideViewController : UIViewController
+<AddCountryViewControllerDelegate> {
+    id <FlipsideViewControllerDelegate> delegate;
+
+//---internal member---
+    NSString *str;
+}
+
+@property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
+
+//---expose the member as a property---
+@property (nonatomic, retain) NSString *str;
+
+- (IBAction)done;
+- (IBAction)add;
+@end
+
+@protocol FlipsideViewControllerDelegate
+- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+@end
+```
+```
+
+```
+```objective-c
+FLIPSIDEVIEWCONTROLLER.M
+#import "FlipsideViewController.h"
+
+@implementation FlipsideViewController
+
+@synthesize delegate;
+
+//---generates the getter and setter for the property---
+@synthesize str;
+
+- (IBAction)done {
+
+    //---set a value to the property---
+    self.str = @"Some text";
+
+    [self.delegate flipsideViewControllerDidFinish:self];
+}
+```
+```

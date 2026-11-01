@@ -1,0 +1,12 @@
+# WHAT YOU HAVE LEARNED IN THIS CHAPTER
+
+| TOPIC | KEY CONCEPTS |
+|---|---|
+| Use a SQLite3 database in your application | Need to add a reference to the `libsqlite3.dylib` to your project. |
+| Obtain a C string from a NSString object | Use the `UTF8String` method of the `NSString` class. |
+| Create and open a SQLite3 database | Use the `sqlite3_open()` C function. |
+| Execute a SQL query | Use the `sqlite3_exec()` C function. |
+| Close a database connection | Use the `sqlite3_close()` C function. |
+| Use bind variables | Create a `sqlite3_stmt` object.<br>Use the `sqlite3_prepare_v2()` C function to prepare the statement.<br>Use the `sqlite3_bind_text()` (or `sqlite3_bind_int()`, and so on) C function to insert the values into the statement.<br>Use the `sqlite3_step()` C function to execute the statement.<br>Use the `sqlite3_finalize()` C function to delete the statement from memory. |
+| Retrieve records | Use the `sqlite3_step()` C function to retrieve each individual row. |
+| Retrieve columns from a row | Use the `sqlite3_column_text()` (or `sqlite3_column_int()`, and so on) C function. |

@@ -1,0 +1,38 @@
+Save the file by pressing Command-S. To close the window, press Command-W.
+
+You now see the window for the next file — BasicViewController.m. Repeat the same steps outlined previously (though the second block of code does not seem to include anything; see Figure 3-17). Save and close the window.
+
+![](bbox=[0.18, 0.33, 0.85, 0.55])
+
+FIGURE 3-17
+
+Back in Xcode, you see the following in the BasicViewController.h file:
+
+```
+#import <UIKit/UIKit.h>
+
+@interface BasicUIViewController : UIViewController {
+    IBOutlet UITextField *nameTextField;
+}
+
+- (IBAction)btnClicked:(id)sender;
+
+@end
+```
+
+The IBOutlet identifier is used to prefix variables so that Interface Builder can synchronize the display and connection of outlets with Xcode. The IBAction identifier is used to synchronize action methods.
+
+In the BasicViewController.m file, you see the following statements inserted:
+
+```
+#import "BasicUIViewController.h"
+
+@implementation BasicUIViewController
+
+- (IBAction)btnClicked:(id)sender {
+}
+
+//...
+```
+
+Now that you know what an outlet is and does, it’s time to practice adding outlets in the following Try It Out.

@@ -1,0 +1,47 @@
+level_changes:
+- line: 2458
+  before: 2
+  after: 1
+- line: 3515
+  before: 2
+  after: 1
+- line: 5014
+  before: 2
+  after: 1
+- line: 5015
+  before: 3
+  after: 2
+- line: 7091
+  before: 2
+  after: 1
+text_changes:
+- line: 124
+  before: '1'
+  after: 1 iPhone 编程入门
+- line: 191
+  before: 影视剧投资风险提示
+  after: iPhone SDK 的安装
+- line: 4669
+  before: '13'
+  after: 13 文件处理
+- line: 6558
+  before: '17'
+  after: 17 访问硬件
+- line: 1137
+  before: 其工作原理
+  after: 工作原理
+- line: 3921
+  before: 它是如何工作的
+  after: 工作原理
+- line: 4333
+  before: 如何工作
+  after: 工作原理
+- line: 4374
+  before: 如何工作
+  after: 工作原理
+- line: 4656
+  before: 本章所学内容
+  after: 本章学到的内容
+- line: 3995
+  before: TRY IT OUT 为 Table View 添加搜索栏
+  after: 试一试 为 Table View 添加搜索栏

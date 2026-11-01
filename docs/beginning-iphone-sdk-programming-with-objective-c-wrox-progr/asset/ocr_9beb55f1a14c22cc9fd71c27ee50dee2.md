@@ -1,0 +1,10 @@
+# WHAT YOU HAVE LEARNED IN THIS CHAPTER
+
+| TOPIC | KEY CONCEPTS |
+|---|---|
+| Adding a View Controller manually | Add an instance of the UIViewController subclass item to your project. |
+| Creating a Label view by code | label = [[UILabel alloc] initWithFrame:frame];<br>label.textAlignment = UITextAlignmentCenter;<br>label.font = [UIFont fontWithName:@"Verdana" size:20];<br>label.text = @"This is a label"; |
+| Creating a Button view by code | frame = CGRectMake(10, 250, 300, 50);<br>button = [[UIButton buttonWithType:UIButtonTypeRoundedRect] initWithFrame:frame];<br>[button setTitle:@"OK" forState:UIControlStateNormal];<br>button.backgroundColor = [UIColor clearColor]; |
+| Wiring up an event with an event handler | button addTarget:self<br>action:@selector(buttonClicked:)<br>forControlEvents:<br>UIControlEventTouchUpInside]; |
+| Switching to another view | myViewController = [[MyViewController alloc]<br>initWithNibName:@"MyView"<br>bundle:nil];<br>[self.view addSubview:myViewController.view]; |
+| Animating the view transition | [UIView beginAnimations:@"flipping view"<br>context:nil];<br>[UIView setAnimationDuration:1];<br>[UIView<br>setAnimationCurve:<br>UIViewAnimationCurveEaseInOut];<br>[UIView setAnimationTransition:<br>UIViewAnimationTransitionFlipFromLeft<br>forView:self.view cache:YES];<br>[self.view addSubview:myViewController.view];<br>[UIView commitAnimations]; |

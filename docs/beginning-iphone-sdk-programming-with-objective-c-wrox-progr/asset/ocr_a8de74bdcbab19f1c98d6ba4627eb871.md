@@ -1,0 +1,9 @@
+The ageTextField outlet appears in the Class Outlets section, proving that coding directly in the .h file works as well.
+
+> NOTE If you want to remove any of the outlets listed under BasicUIViewController.h, you have to remove them manually in the .h file. This is evident when you see that the minus (-) button is grayed out.
+
+If, at this point, you add another outlet using the Identity Inspector window, the outlet you added will be listed under BasicUIViewController.xib (see Figure 3-19). After the outlet is declared in the .h file, the outlet then appears under BasicUIViewController.xib.
+
+![](bbox=[0.15, 0.47, 0.38, 0.82])
+
+# FIGURE 3-19

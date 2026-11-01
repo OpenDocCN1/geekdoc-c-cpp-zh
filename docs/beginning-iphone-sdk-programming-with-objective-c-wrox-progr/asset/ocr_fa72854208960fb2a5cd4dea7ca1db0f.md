@@ -1,0 +1,19 @@
+# Using the Web View
+
+If you want to load Web pages from within your application, you can embed a Web browser in your application through the use of the UIWebView. Using the Web view, you can send a request to load Web content, which is a very useful if you want to convert an existing Web application into a native application (such as those written using Dashboard). All you need to do is to embed all the HTML pages into your Resources folder in your Xcode project and load the HTML pages into the Web view during runtime.
+
+> NOTE Of course, depending on how complex your Web applications are, you may have to do some additional work to port your Web application to a native application if it involves server-side technologies such as CGI, PHP, or others.
+
+The following Try It Out shows how to use the Web view to load a Web page.
+
+# TRY IT OUT Loading a Web Page Using the Web View
+
+Codefile [UsingViews3.zip] available for download at Wrox.com
+
++   1. Using Xcode, create a new View-based Application project and name it UsingViews3.
++   2. Double-click the UsingViews3ViewController.xib file to edit it using Interface Builder.
++   3. In the View window, add a Web view from the Library (see Figure 4-16). In the Attributes Inspector window for the Web view, check the Scales Page to Fit property.
+
+![](bbox=[0.07, 0.75, 0.85, 0.94])
+
+FIGURE 4-16

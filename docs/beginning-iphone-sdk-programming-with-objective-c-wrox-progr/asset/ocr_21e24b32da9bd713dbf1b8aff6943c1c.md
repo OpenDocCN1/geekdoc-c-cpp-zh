@@ -1,0 +1,25 @@
+![](bbox=[0.13, 0.17, 0.52, 0.47])
+
+FIGURE 7-10
+
+![](bbox=[0.75, 0.15, 0.92, 0.52])
+
+FIGURE 7-11
+
+14. That's it! Press Command-R to test the application on the iPhone Simulator. You should now see the button appearing on the main screen of the application (see Figure 7-11).
+
+> NOTE As an exercise, you might want to create an action to display an alert view when the button is pressed.
+
+# How It Works
+
+When you create an iPhone project using the Window-based Application template, Xcode provides you with only the bare minimum number of items in your project — a MainWindow.xib file and the application delegate. You are supposed to add your own View Controller and view.
+
+In the preceding exercise, you first added a View Controller item to the MainWindow.xib window. You then added an instance of the UIViewController class (which you named MyViewController) so that it could be connected to the View Controller you just added. This controller class contains the code that you will write to handle the interactions between the view and the user.
+
+You also added a XIB file to the project (MyView.xib) representing a View in Interface Builder. Take note of the various steps that you need to perform to connect the relevant classes to the correct XIB and View Controller items.
+
+When the application has finished launching, you add the View represented by the myViewController object to the window so that it is visible using the addSubview: method of the UIWindow instance:
+
+```
+[window addSubview:myViewController.view];
+```

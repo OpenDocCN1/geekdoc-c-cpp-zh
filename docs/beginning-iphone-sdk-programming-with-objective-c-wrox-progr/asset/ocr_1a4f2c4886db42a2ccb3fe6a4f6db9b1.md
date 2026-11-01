@@ -1,0 +1,25 @@
+# Related Wrox Books
+
+# Beginning Mac OS X Snow Leopard Programming
+
+ISBN: 9780470577523
+
+This book serves as a solid guide to getting started with Mac OS X programming. You will learn how to use the free software development tools that come with all Mac OS X systems and how to efficiently start writing programs on Mac OS X Snow Leopard. The author shows you how to use all of the programming languages to use together in order to create seamless applications.
+
+# Professional Android Application Development
+
+ISBN: 04703344717
+
+Offering an open development environment, Android represents an exciting new opportunity to write innovative applications for mobile devices. This book provides you with a hands-on guide to building these applications using the Android software development kit. It takes you through a series of sample projects, each introducing new features and techniques to get the most out of Android. You'll learn all about the basic functionality as well as discover how to utilize the advanced features with the help of concise and useful examples. You'll get the grounding and knowledge that is needed to write customized mobile applications using the current Android 1.0 SDK. Plus, you'll also gain the flexibility to quickly adapt to future enhancements in order to build the most cutting-edge solutions.
+
+# Professional Xcode 3
+
+ISBN: 9780470525227
+
+The steady increase in sales of Apple computers has triggered a strong interest in gaining a thorough understanding of Xcode and its tools and what they have to offer. This book provides you with an inside look at the array of Xcode tools from top to bottom. You'll go beyond the basics and dive into such in-depth topics as installing the latest version of Xcode tools, customizing the look and behavior of Xcode, creating and managing projects, using the built-in class browser to model complex applications and structures, and more. With this book, you'll be able to take full advantage of the range of tools included with Xcode.
+
+# Safari and WebKit Development for iPhone OS 3.0
+
+ISBN: 9780470549667
+
+With the unparalleled success of iPhone and iPod touch, iPhone OS 3.0 has emerged as a compelling platform for which vast numbers of web developers are designing and building web-based mobile applications. This book explores the Safari and WebKit development platform that is built into iPhone OS 3.0 and takes you through the process of creating an iPhone web application from the ground up. You'll learn how to use existing open source frameworks to speed up your development time, imitate qualities of built-in Apple apps, cache data locally and even run in offline mode, and more. Whether you're eager to build new web applications for iPhone OS 3.0 or optimize existing web sites for this platform, you have everything you need to do so within this book.

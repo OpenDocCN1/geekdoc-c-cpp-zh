@@ -1,0 +1,46 @@
+```
+```objective-c
+[colors addObject:@"Green"];
+[colors addObject:@"Blue"];
+
+[super viewDidLoad];
+self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
+}
+
+//---number of components in the Picker view---
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
+    return 1;
+}
+
+//---number of items(rows) in the Picker view---
+- (NSInteger)pickerView:(UIPickerView *)thePickerView
+    numberOfRowsInComponent:(NSInteger)component {
+    return [colors count];
+}
+
+//---populating the Picker view---
+- (NSString *)pickerView:(UIPickerView *)thePickerView titleForRow:(NSInteger)row
+    forComponent:(NSInteger)component {
+    return [colors objectAtIndex:row];
+}
+
+//---the item selected by the user---
+- (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row
+    inComponent:(NSInteger)component {
+    favoriteColorSelected = [colors objectAtIndex:row];
+}
+
+- (void)dealloc {
+    [colors release];
+    [favoriteColorSelected release];
+    [loginName release];
+    [password release];
+    [favoriteColor release];
+    [super dealloc];
+}
+```
+```
+
+**13.** That’s it! Press Command-R to test the application on the iPhone Simulator. Figure 11-17 shows the UI of the application for the Main and Flipside views.
+
+> > **NOTE** Note that the compiler may generate a warning because you have not implemented the `loadSettings:` action in the `MainViewController.m` file yet. This is all right, as you just want to check out how the user interface looks.
