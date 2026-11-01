@@ -1,0 +1,4 @@
+```
+for (auto const& emp : employees)
+auto final_salary = calculate_salary(PayGrade::SeniorManager, emp);
+```

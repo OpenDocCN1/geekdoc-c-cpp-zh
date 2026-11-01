@@ -1,0 +1,11 @@
+As a result, weird and subtle bugs started appearing. Incorrect clamping results would propagate to unexpected parts of the code that were not necessarily catastrophic but did not properly match with the intention. Nor was this limited to results.cpp: clamp was a widely used function. Fortunately, there was plenty of time to fix all the bugs and a huge sigh of relief was heaved by all at the end of that debacle.
+
+Actually, that last sentence is not true.
+
+It was not a happy time, and it wasn’t until someone was browsing through cppreference.com that they learned of the introduction of std::clamp, noticed that the order of parameters was different, and felt a terrible realization swamping their attention. With several thousand uses of clamp scattered through the codebase, a frustrating, detailed search through the codebase was required to ensure that the intended clamp was being called, and that the engineer had got their parameters the right way round.
+
+Simply moving the using-directive out of the header file and into each source file where it was included would not have been enough: the same problem would have arisen, although at least the presence of a namespace would have advertised another source of symbols. Nor would making a using-declaration at the top of each source file have been sufficient either, since there were some places where the engineer had written code subsequent to the C++17 upgrade, inadvertently inverted the parameters, but invoked the std::clamp function rather than the maths::clamp function. Each of those uses would have been invalidated.
+
+The only defenses against this horror in the first instance were to make a using-declaration, not a using-directive, in the source file, ideally at the narrowest scope, or to fully qualify uses of clamp. When you put a using-directive in your source, you are exposing yourself to the risk of the silent introduction of new meanings to your symbols in other namespaces at inopportune moments. If you are lucky, you will get an “ambiguous symbol” compiler error. At worst, a superior overload will appear with subtle differences to the choice you were expecting.
+
+We invite you to review the first part of this chapter.

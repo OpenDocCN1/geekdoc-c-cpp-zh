@@ -1,0 +1,9 @@
+we branch to L6 where we add our word from OUT as a new entry.
+
++   11. Lines 41 and 42 compare the first 8 bytes of the word in OUT with the word in the table. The CLC (Compare Logical Character) on line 41 specifies an 8 byte length. The first operand begins at label OUT and the second operand begins at the address contained in R6. Note that there is no displacement. R6 has the address. If the words match, we branch to L7 to increment the count for this word. If they do not, we increment the contents of R6 by 12 (line 44), decrement the count in R5 and branch to look at the next entry, if any.
++   
++   12. If we find the word, lines 48 through 51 increment its count. We load into R5 the 4 bytes at offset 8 bytes from the word in the table, that is, the 4 byte binary count entry. To this we add 1 and then store the result back in the table. Then we branch to the top to process the next word (label L1A).
++   
++   13. If we have looked at every entry in the table and did not find the word, we arrive at label L6. At label L6 we know that R6 will be pointing at the first byte of the next available 12 byte slot in the table. We simply copy the first 8 bytes from OUT to the first 8 bytes of the new entry we are creating (line 53), load a 1 into R7 (line 54) and store the 4 byte binary 1 in the last 4 bytes of the 12 byte entry (line 55). We load the original value of COUNT, increment it, test it against the table limit, and store it (lines 56 through 60). The we return to the top to process the next word.
++   
++   14. Lines 64 through 77 print the table of words and counts using a similar loop to that used to search the table above.

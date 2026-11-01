@@ -1,0 +1,4995 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_2_0.png)
+
+
+    # Embedded C Programming
+
+
+    # Volume 3
+
+
+    # Creating the SimpleC Library of Functions
+
+
+    By Chuck Hellebuyck'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# Table of Contents
+
+
+    +   Introduction ........................................................ 7
+
+    +   Chapter 1 – Getting Started................................................
+    9
+
+    +     Choosing a Development Board...........................................
+    9
+
+    +     Programmer Options.....................................................13
+
+    +     HI-TECH C Compiler.....................................................15
+
+    +     Final Setup............................................................16
+
+    +   Chapter 2 – Using I2C Communication ......................................19
+
+    +     What is I2C?............................................................19
+
+    +     Inside the I2C Peripheral..............................................22
+
+    +     Project Description....................................................25
+
+    +     Hardware...............................................................26
+
+    +     Software...............................................................28
+
+    +     How it Works...........................................................33
+
+    +     Next Steps.............................................................39
+
+    +   Chapter 3 – Creating the SimpleC Library..................................41
+
+    +     SimpleC Software Description...........................................42
+
+    +     Initialization and Time Delays..........................................42
+
+    +     I/O Control............................................................44
+
+    +     LCD Character Module Control...........................................48
+
+    +     PWM Control............................................................53
+
+    +     USART Communication.....................................................53
+
+    +     SPI Communication.......................................................58
+
+    +     I2C Communication.......................................................65
+
+    +     simplec1.1.h – How it Works.............................................71
+
+    +     simplec1.1.c – How it Works.............................................75
+
+    +   Chapter 4 – SimpleC Digital Output........................................99
+
+    +     Project Creation in MPLAB..............................................99
+
+    +     Hardware...............................................................110
+
+    +     Software...............................................................111'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'Next Steps..........................................................152
+
+
+    # Chapter 9 – SimpleC Pulse Width Modulation.................. 153
+
+
+    Hardware............................................................153
+
+
+    Software............................................................156
+
+
+    How it Works..........................................................156
+
+
+    Next Steps..........................................................158
+
+
+    # Chapter 10 – SimpleC Creating Pulses........................... 159
+
+
+    Hardware............................................................159
+
+
+    Software............................................................162
+
+
+    How it Works..........................................................163
+
+
+    Next Steps..........................................................165
+
+
+    # Chapter 11 – SimpleC RS232 Communication .................. 167
+
+
+    Hardware............................................................167
+
+
+    Software............................................................172
+
+
+    How it Works..........................................................174
+
+
+    Next Steps..........................................................177
+
+
+    # Chapter 12 – SimpleC I2C........................................... 179
+
+
+    Hardware............................................................179
+
+
+    Software............................................................181
+
+
+    How it Works..........................................................182
+
+
+    Next Steps..........................................................184
+
+
+    # Conclusion ........................................................ 185
+
+
+    # Appendix A – CHIPINO Board Schematic ........................ 187
+
+
+    # Appendix B – SimpleC Quick Reference.......................... 189
+
+
+    # Index ................................................................... 191'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'clone programmer that CHIPAXE.com offers for those that want a second programmer
+    at a discount. If you want to use the new PICkit 3 you can use that as well with
+    these modules.
+
+
+    This book will show you how I created what I call the “SimpleC library” of useful
+    functions and then show several projects that demonstrate how to use the library.
+    I found this library so useful I now use it for most of my HI-TECH C projects.
+    I won’t claim this is the best C code out there but I think you’ll see that these
+    functions will save you a lot of time and effort when you are developing a quick
+    prototype or development project. They form a great library of functions that
+    are all open source so you can change them to fit your needs. Using the library
+    doesn’t take away from you using the core features of the HI-TECH compiler either.
+    All the code I taught you in the first two books can be applied to this setup
+    as well.
+
+
+    This book also covers a topic left out of the previous two and that is I2C communication.
+    The PIC16F886 has an improved communication peripheral port that makes I2C much
+    easier to control. Chapter 2 will cover this prior to the book diving deep into
+    the SimpleC library.
+
+
+    The software in this book can be downloaded from my website at www.elproducts.com/cbook3files.
+    Any error corrections can also be found posted on my website (www.elproducts.com).
+    No book is perfect despite all the attempts to edit it multiple times and catch
+    the errors but we did our best to reduce it down to a minimum. If you run into
+    a problem or just have a question on the content in this book, you can contact
+    me at chuck@elproducts.com. I try to answer all email I receive though some does
+    get caught in the spam filters. If you don’t hear back from me then send your
+    email again because I probably never saw it the first time.
+
+
+    I hope you gain even more embedded C knowledge from this book and stop by my website
+    often to see what I’m working on next. I hope to have more information added to
+    it from time to time as it’s dedicated to helping readers learn how to develop
+    their own interesting electronic products.
+
+
+    Chuck Hellebuyck'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_12_0.png)
+
+
+    Figure 1-2: 28 pin CHIPAXE Breadboard Module
+
+
+    I was introduced to an early prototype of the CHIPINO module that matched the
+    footprint of the popular Arduino module (Figure 1-3). This setup offered a plug
+    in board that contains a small breadboard on top so you can again build your circuit
+    and then unplug it for reference later. I was able to be part of the team that
+    improved this module to the present form shown at the chipaxe.com site. This board
+    has a power port with built in 5v and 3v regulator so I can easily connect a 9v
+    power adapter or 9v battery to this setup. The I/O is all brought out to the headers
+    on the edges so custom boards can be easily plugged in on top of the main board.
+    There are already many plug-in boards, or shields as they are called, for the
+    similarly styled Arduino module. Many of the Arduino shields can plug into this
+    CHIPINO board. This will make future books and projects much easier to setup since
+    the hardware is already created.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_12_1.png)
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_12_2.png)
+
+
+    Figure 1-3: CHIPINO Module and Proto-board
+
+
+    For this book though I wanted a larger breadboard space to build the circuitry
+    on. This is why I really liked the CHIPAXE style module which would plug into
+    any size breadboard. Although I also really liked the'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'CHIPINO/Arduino style pin numbers and built in fixed speed oscillator. The
+    CHIPINO-mini module shown in Figure 1-4 was the compromise and available at chipaxe.com.
+    It''s a CHIPAXE style board with the pin numbers to match the CHIPINO module.
+    The board has a 16 Mhz resonator built in along with a 10k reset pin pull-up resistor.
+    This board plugs into a large breadboard and gives me the opportunity to build
+    my circuits on independent breadboards.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_13_0.png)
+
+
+    Figure 1-4: CHIPINO-mini Breadboard Module
+
+
+    Despite the fact I chose the CHIPINO-mini doesn''t mean you are locked into any
+    of these choices. Any board that uses the 28 pin PIC16F886 can work with the projects
+    in this book.
+
+
+    No matter which one you choose, one thing they all have in common is a need for
+    a set of simple pre-written functions to make them easier to use. So I decided
+    to create a library of functions based on the code developed for Volume 1 and
+    Volume 2 of this series plus some new useful functions. It also gave me a reason
+    to improve the code to be a bit more universal.
+
+
+    Creating the SimpleC library is the focus of this book. I covered the hardware,
+    compiler and programming software setup in the first two books but realized a
+    few people may be reading this Volume 3 book first. For those readers, I''ll cover
+    the hardware programmer topic again with a little more detail so you understand
+    how to use these modules with the projects in this book.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'similar to that shown in Figure 1-8a. MPLAB will install many files and then
+    when it’s just about complete it will ask you if you want to install the HI-TECH
+    C compiler. Click on the "Yes" selection and the compiler will display the window
+    similar to the one in Figure 1-8b. The compiler for the PIC10F, 12F and 16F compiler
+    will step you through several windows as it installs. Select the lite version
+    when you are asked for installation key so you can run it for free without a key.
+    When MPLAB and the HI-TECH compiler are installed, you are ready to run the projects
+    in this book.
+
+
+    In my first book; "Beginner’s Guide to Embedded C Programming" I described how
+    to create a project with the project wizard so I won’t go into that detail again
+    here but I do cover it briefly in Chapter 4. You can also get information on using
+    MPLAB from the MPLAB IDE Users Guide available for download at www.microchip.com/mplab.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_17_0.png)
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_17_1.png)
+
+
+    Figure 1-8: MPLAB and HI-TECH Install Windows
+
+
+    # Final Setup
+
+
+    The final setup I used to create the projects is shown in Figure 1-9. The development
+    board is shown connected to a small netbook computer. This was my handy portable
+    setup that allowed me to write this book on the road while I developed code during
+    lunch or some hide-away place that my family couldn’t find me. I bought the netbook
+    refurbished for under $250 so this whole setup cost me about $275. Not bad for
+    a complete development'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_21_0.png)
+
+
+    Figure 2-1: I²C™ Bus Setup
+
+
+    # Master and Slave
+
+
+    The I²C protocol defines what a master is and what a slave is. The master has
+    control of the bus. It generates the clock signal and sends the start and stop
+    signals that frame the complete I²C message. The slave must listen to every message
+    sent and respond if its control byte was received. The slave then responds to
+    the master with data. There are systems with multiple masters but, for this book,
+    I will only focus on a single master setup.
+
+
+    As mentioned, the I²C bus has two lines—a data line and a clock line. If you are
+    familiar with how a shift register works, then this should be easy to understand.
+    The master puts a bit on the data line by pulling the line low or letting the
+    external resistor pull the line high. Then, the master pulses the clock line by
+    pulling it low and then releasing it high again. The circuitry at the slave receives
+    that bit of data the same way a shift register clocks in a bit. This pulsing of
+    data and clock lines continues until the first part of the I²C message is transmitted.
+    Figure 2-2 shows the format of the data line I²C message.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_22_0.png)
+
+
+    # Write Command Sequence
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_22_1.png)
+
+
+    # Read Command Sequence
+
+
+    # Figure 2-2: I²C Data Line Message Format
+
+
+    The signal in Figure 2-2 shows a write and a read sequence for communicating with
+    an external EEPROM device. I will use the Microchip 24LC01B EEPROM part to demonstrate
+    how to store and read back data in an external EEPROM using I²C as the communication
+    protocol.
+
+
+    The control byte is a 7-bit wide value, with the eighth bit being either zero
+    for a write or one for a read operation. As you can see, the read sequence requires
+    two control bytes, while a write only requires one. This is because a read operation
+    requires the master to first write the memory-address byte to the EEPROM so it
+    can locate the data and then read the data from the EEPROM. During the write operation,
+    the master sends both the address and data bytes to the EEPROM, therefore only
+    one write-control byte is sent. Notice also that Figure 2-2 shows an optional
+    plural Data Byte(s). This is because you can send or receive a string of bytes
+    from one read or write control-byte command.
+
+
+    The ACK bits are the acknowledge bits. The slave pulls the data line low while
+    the master is still pulsing the clock line. The master looks for that ACK bit
+    before sending the next command byte. This is the only way the slave can tell
+    the master it has successfully received the byte of information.
+
+
+    I²C is not as fast as other communication techniques such as Serial Peripheral
+    Interface (SPI) which I covered in Volume 2, but it’s still fast. Typical clock
+    speeds of 10 khz or 100 khz are common. A high-speed mode runs at 400 khz. You
+    have to make sure your slave parts can handle the speed of the master clock.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '| Bit 3-0 | SSPM<3:0>: Synchronous Serial Port Mode Select bits |
+
+    |---|---|
+
+    | 0000 | SPI Slave mode, clock = Fosc/4 |
+
+    | 0001 | SPI Master mode, clock = Fosc/16 |
+
+    | 0010 | SPI Master mode, clock = Fosc/64 |
+
+    | 0011 | SPI Master mode, clock = TMR2 output/2 |
+
+    | 0100 | SPI Slave mode, clock = SCK pin, SS pin control enabled |
+
+    | 0101 | SPI Slave mode, clock = SCK pin, SS pin control disabled, SS can be used
+    as I/O pin |
+
+    | 0110 | I²C Slave mode, 7-bit address |
+
+    | 0111 | I²C Slave mode, 10-bit address |
+
+    | 1000 | I²C Master mode, clock = Fosc / (4 * (SSPADD+1)) |
+
+    | 1001 | Load function |
+
+    | 1010 | Reserved |
+
+    | 1011 | I²C Firmware controlled Master mode (Slave idle) |
+
+    | 1100 | Reserved |
+
+    | 1101 | Reserved |
+
+    | 1110 | I²C Slave mode, 7-bit address with Start and Stop bit interrupts enabled
+    |
+
+    | 1111 | I²C Slave mode, 10-bit address with Start and Stop bit interrupts enabled
+    |
+
+
+    The bit 4 is not used in Master mode so we leave that cleared or zero. We want
+    to enable the clock so we set the SSPEN bit to 1 which is bit 5.
+
+
+    | Bit 5 | SSPEN: Synchronous Serial Port Enable bit |
+
+    |---|---|
+
+    |  | In both modes, when enabled, these pins must be properly configured as input
+    or output |
+
+    | In SPI mode |  |
+
+    | 1 | Enables serial port and configures SCK, SDO, SDI and SS as the source of
+    the serial port pins |
+
+    | 0 | Disables serial port and configures these pins as I/O port pins |
+
+    | In I²C mode |  |
+
+    | 1 | Enables the serial port and configures the SDA and SCL pins as the source
+    of the serial port pins |
+
+    | 0 | Disables serial port and configures these pins as I/O port pins |
+
+
+    | Bit 4 | CKP: Clock Polarity Select bit |
+
+    |---|---|
+
+    | In SPI mode |  |
+
+    | 1 | Idle state for clock is a high level |
+
+    | 0 | Idle state for clock is a low level |
+
+    | In I²C Slave mode |  |
+
+    |  | SCK release control |
+
+    | 1 | Enable clock |
+
+    | 0 | Holds clock low (clock stretch). (Used to ensure data setup time.) |
+
+    | In I²C Master mode |  |
+
+    |  | Unused in this mode |
+
+
+    Bit 6 and 7 are status bits so we just leave them set to zero for the setup. Add
+    this all up and you get a hex value of 0x38. Therefore in our software we will
+    set the SSPCON register to 0x38.
+
+
+    The next register is the SSPCON2 register which has many status bits and a few
+    setup bits. We initialize all of it to zeros as we will modify or read these later
+    in the process of sending data.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'then the read section will go slower and count down from 9 to 1 in binary format.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_27_0.png)
+
+
+    | Chapter 2 and 12 Schematic |
+
+    | Beginner''s Guide to Embedded C Programming Vol 3 |
+
+    | C. Halls... | Rev 1.0 | 9-16-2018 | Page 1 of 1 |
+
+
+    Figure 2-3: I2C EEPROM Project
+
+
+    # Hardware
+
+
+    The schematic for this project is shown in Figure 2-3. The schematic shows all
+    the CHIPINO module connections and then the I2C EEPROM 24LC01B along with the
+    four LEDs. The LEDs have 1k ohm resistors to limit the current. The A0, A1 and
+    A2 pins are grounded on the 24LC01B to make the address 000 of the control byte
+    for this EEPROM. If we had more than one, we could tie one of the pins, such as
+    A0, to 5v to make the address 001. This is how you could have more than one EEPROM
+    on the same I2C bus.
+
+
+    The image in Figure 2-4 shows the circuit built on the breadboard and then the
+    connections to the CHIPINO-mini module. This picture should make it easy to reproduce
+    this on your setup. The 5v and ground are supplied from the PICkit 2 programmer.
+    If you prefer the CHIPINO module with it''s on-'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: 'board voltage regulator then Figure 2-5 is your setup. This module will allow
+    you to power the circuit from a 9v power adapter.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_28_0.png)
+
+
+    # Figure 2-4: EEPROM Project Setup
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_28_1.png)
+
+
+    # Figure 2-5: EEPROM Project Using CHIPINO Module'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\n/*\n * I2C External EEPROM example using SimpleC\n * This code will write\
+    \ 10 bytes to the EEPROM and\n * then read them back and display binary value\
+    \ on LEDs.\n *\n * Connections:\n * Pin 8(B0) - LED Anode - LED Cathode - 1k ohm\
+    \ - Ground\n * Pin 9(B1) - LED Anode - LED Cathode - 1k ohm - Ground\n * Pin 10(B2)\
+    \ - LED Anode - LED Cathode - 1k ohm - Ground\n * Pin 11(B3) - LED Anode - LED\
+    \ Cathode - 1k ohm - Ground\n *\n * Pin 3(C4) - 24LC01B SDA - 10k pullup - 5v\n\
+    \ * Pin 4(C3) - 24LC01B SCL - 10k pullup - 5v\n * 24LC01B Vss - Ground\n * 24LC01B\
+    \ Vdd - 5v\n */\n\n#include <htc.h>\n#include <stdio.h>\n__CONFIG (HS & WDTDIS\
+    \ & MCLREN & UNPROTECT & LVP DIS);\n\n//***********************************************\n\
+    // Initialize Microcontroller Setup\n//***********************************************\n\
+    \nvoid init_micro(void)\n{\n    ANSEL = 0;          //Analog ports set to digital\n\
+    \    ANSELH = 0;\n    CM1CON0 = 0;        //Comparators Shut off\n    CM2CON0\
+    \ = 0;\n    INTCON=0;           // purpose of disabling the interrupts\n}\n\n\
+    /* *******************************************\n * msecbase - 1 msec pause routine\n\
+    \ * The External oscillator is set to 16 Mhz and the\n * internal instruction\
+    \ clock is 1/4 of the oscillator.\n * This makes the internal instruction clock\
+    \ 4 Mhz or\n * 0.25 usec per clock pulse.\n * Using the 1:16 prescaler on the\
+    \ clock input to Timer0\n * slows the Timer0 count increment to 1 count/4 usec.\n\
+    \ * Therefore 250 counts of the Timer0 would make a one\n * millisecond delay\
+    \ (250 * 4 usec). But there are other\n * instructions in the delay loop so using\
+    \ the MPLAB\n * stopwatch we find that we need Timer0 to overflow at\n * 243 clock\
+    \ ticks. Preset Timer0 to 13 (0D hex) to make\n * Timer0 overflow at 243 clock\
+    \ ticks (256-13 = 243).*********/\n\nvoid msecbase(void)\n{\n    OPTION = 0b00000011;\
+    \    //Set prescaler to TMRO 1:16\n    TMRO = 0xD;             //Preset TMRO to\
+    \ overflow on 243 counts\n    while(!T0IF);           //Stay until TMRO overflow\
+    \ flag equals 1\n    T0IF = 0;               //Clear the TMRO overflow flag\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "```\n{\n    i2c_start();\n    i2c_write(0xa0);\n    i2c_write(address);\n \
+    \   i2c_write(data);\n    i2c_stop();\n    pause(1);\n}\n\n// *******************************************************\n\
+    // I2C_EEIN function to read from an 8-bit address Microchip\n// EEPROM part (i.e.\
+    \ 24LC01) with 8 byte address (2K bit max)\n// *******************************************************\n\
+    \nunsigned char I2C_EEIN(unsigned char address)\n{\n    unsigned char data;\n\n\
+    \    i2c_start();\n    i2c_write(0xa0);\n    i2c_write(address);\n    i2c_repStart();\n\
+    \    i2c_write(0xa1);\n    data=i2c_read(0);\n    i2c_stop();\n    return(data);\n\
+    }\n\n// *******************************************************\n//  Main Program\
+    \ Loop\n// *******************************************************\n\nvoid\nmain(void)\n\
+    {\n    init_micro();// Initialize I/O\n    i2c_init();        // Initialize I2C\n\
+    \    PORTB=0x00;        // All LEDs off\n    TRISB=0x00;        // All PORTB outputs\n\
+    \n    unsigned char cnt=0;        // Create variable and initialize to zero\n\n\
+    \    while(cnt<=10)  /* write 10 numbers to eeprom */\n    {\n        PORTB=cnt;\
+    \              // The cnt value will display on the LEDs\n        I2C_EEOUT(cnt,10-cnt);\
+    \  // Store 9 at address 1, 8 at address 2, ...\n        cnt=cnt+1;          \
+    \    // Increment cnt variable\n        pause(255);             // Delay 255 milliseconds\n\
+    \    }\n\n    cnt=0;\n\n    while(cnt<=10)\n    {\n        PORTB = I2C_EEIN(cnt);\
+    \ // Display data read from EEPROM on LEDs in binary\n        pause (1000);  \
+    \       // Delay for 1 second to read LEDs\n        cnt=cnt + 1;           //\
+    \ Increment cnt variable\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# How it Works\n\nThe top of the program has a title block that the compiler\
+    \ recognizes as comments. The title block starts with a \"/*\" and much later\
+    \ ends with a \"*/\". This indicates that everything in-between is just comments\
+    \ and not code.\n\nThe program will send 10 data bytes to external EEPROM at a\
+    \ fast rate and display each value stored on four LEDs as a binary value. It will\
+    \ then read each byte back from the EEPROM and display the value in binary on\
+    \ the four LEDs. The write section will count up in binary from 1 to 9 quickly\
+    \ and then the read section will go slower and count down from 9 to 1 in binary\
+    \ format.\n\n```\n/*\n * I2C External EEPROM example using SimpleC\n * This code\
+    \ will write 10 bytes to the EEPROM and\n * then read them back and display binary\
+    \ value on LEDs.\n *\n * Connections:\n * Pin 8(B0) - LED Anode - LED Cathode\
+    \ - 1k ohm - Ground\n * Pin 9(B1) - LED Anode - LED Cathode - 1k ohm - Ground\n\
+    \ * Pin 10(B2) - LED Anode - LED Cathode - 1k ohm - Ground\n * Pin 11(B3) - LED\
+    \ Anode - LED Cathode - 1k ohm - Ground\n *\n * Pin 3(C4) - 24LC01B SDA - 10k\
+    \ pullup - 5v\n * Pin 4(C3) - 24LC01B SCL - 10k pullup - 5v\n * 24LC01B Vss -\
+    \ Ground\n * 24LC01B Vdd - 5v\n */\n```\n\nThe next section includes the header\
+    \ file htc.h required by the HI-TECH compiler. The stdio.h file is optional for\
+    \ this project but used for some library functions built into the HI-TECH compiler.\
+    \ The configuration settings for the CHIPINO's PIC16F886 are included next. These\
+    \ include:\n\n+   - HS – High Speed Oscillator Setting\n+   - WDTDIS – Watchdog\
+    \ Timer Disabled\n+   - MCLREN – Master Clear Pin Enabled as a Reset Pin\n+  \
+    \ - UNPROTECT – Allow the program to be read from the chip\n+   - LVPDIS – Disable\
+    \ low voltage programming\n\n```\n#include <htc.h>\n#include <stdio.h>\n__CONFIG\
+    \ (HS & WDTDIS & MCLREN & UNPROTECT & LVPDIS);\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "The next section creates a simple function that initializes the ports to digital\
+    \ mode with analog and comparators turned off. It also disables interrupts to\
+    \ start. I will include this same function in the SimpleC library.\n\n```\n```c\n\
+    /************************************************\n// Initialize Microcontroller\
+    \ Setup\n/************************************************\n\nvoid init_micro(void)\n\
+    {\n        ANSEL = 0;          //Analog ports set to digital\n        ANSELH =\
+    \ 0;\n        CM1CON0 = 0;        //Comparators Shut off\n        CM2CON0 = 0;\n\
+    \        INTCON=0;           // Disable the interrupts\n}\n```\n```\n\nThe next\
+    \ section should be familiar if you’ve read Volume 1 or 2 of this series. It’s\
+    \ a millisecond base function and then a pause function to create an easy delay.\
+    \ Timer0 is used for this and these functions will also be included in the SimpleC\
+    \ library. This version is adjusted for the 16 Mhz crystal on the CHIPINO.\n\n\
+    ```\n```c\n/************************************************\n* msecbase = 1 msec\
+    \ pause routine\n* The oscillator is set to 16 Mhz and the\n* internal instruction\
+    \ clock is 1/4 of the oscillator.\n* This makes the internal instruction clock\
+    \ 4 Mhz or\n* 0.25 usec per clock pulse.\n* Using the 1:16 prescaler on the clock\
+    \ input to Timer0\n* slows the Timer0 count increment to 4 usec.\n* Therefore\
+    \ 250 counts of the Timer0 would make a one\n* millisecond delay (250 * 4 usec).\
+    \ But there are other\n* instructions in the delay loop so using the MPLAB\n*\
+    \ stopwatch we find that we need Timer0 to overflow at\n* 243 clock ticks. Preset\
+    \ Timer0 to 13 (0D hex) to make\n* Timer0 overflow at 243 clock ticks (256-13\
+    \ = 243).\n************************************************/\n\nvoid msecbase(void)\n\
+    {\n        OPTION = 0b00000011;       //Set prescaler to TMR0 1:16\n        TMR0\
+    \ = 0x0d;               //Preset TMR0 to overflow on 243 counts\n        while(!T0IF);\
+    \              //Stay until TMR0 overflow flag equals 1\n        T0IF = 0;   \
+    \               //Clear the TMR0 overflow flag\n}\n\n/************************************************\n\
+    //Pause - millisecond delay routine 1 to 65,535 milliseconds\n/************************************************\n\
+    \nvoid pause( unsigned long usvalue )\n{\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: "```\ni2c_write(data);\ni2c_stop();\npause(11);\n}\n```\n\nThe next function\
+    \ is built from the previous building blocks to create a custom function that\
+    \ reads data from an EEPROM at a specific address.\n\n```\n// *******************************************\n\
+    // I2C_EEIN function to read from an 8-bit address Microchip\n// EEPROM part (i.e.\
+    \ 24LC01) with 8 byte address (2k bit max)\n// *******************************************\n\
+    unsigned char I2C_EEIN(unsigned char address)\n{\n    unsigned char data;\n\n\
+    \    i2c_start();\n    i2c_write(0xA0);\n    i2c_write(address);\n    i2c_repStart();\n\
+    \    i2c_write(0xA1);\n    data=i2c_read(0);\n    i2c_stop();\n    return(data);\n\
+    }\n```\n\nAll the functions prior will be part of the SimpleC library. The main\
+    \ loop of code is where it all comes together for this project. The init_micro()\
+    \ function is issued and then Port B is setup is for driving LED indicators.\n\
+    \n```\n// *******************************************\n// Main Program Loop\n\
+    // *******************************************\n\nvoid main(void)\n{\n    init_micro();\
+    \ // Initialize I/O\n    i2c_init();      // Initialize i2c\n    PORTB=0x00; \
+    \     // All LEDs off\n    TRISB=0x00;      // All PORTB outputs\n```\n\nA variable\
+    \ “cnt” is created that is used as a counter so 10 data values can be sent out\
+    \ in a while loop to the EEPROM. The value being stored is also displayed on four\
+    \ LEDs as a bainary value.\n\n```\nunsigned char cnt=0;    // Create variable\
+    \ and initialize to zero\n\nwhile(cnt<=10)  /* write 10 numbers to eeprom */\n\
+    {\n    PORTB=cnt;          // The cnt value will display on the LEDs\n    I2C_EOUT(cnt,10-cnt);\
+    \  // Store 9 at address 1, 8 at address 2, ...\n    cnt=cnt+1;          // Increment\
+    \ cnt variable\n```"
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '```
+
+    pause(255);      // Delay 255 milliseconds
+
+    }
+
+
+    cnt=0;
+
+    ```
+
+
+    The same variable “cnt” is used as a counter so 10 data values can be read from
+    the EEPROM in a while loop. The value read is displayed in binary on the LEDs.
+
+
+    ```
+
+    while(cnt<=10)
+
+    {
+
+    PORTB = I2C_EEIN(cnt); // Display data read from EEPROM on LEDs in binary
+
+    pause(1000);           // Delay for 1 second to read LEDs
+
+    cnt=cnt + 1;           // Increment cnt variable
+
+    }
+
+    ```
+
+
+    All those functions created were used to run that main loop of code that is only
+    about 16 lines of code. Putting all those functions in a library file is how SimpleC
+    makes C programming easier.
+
+
+    # Next Steps
+
+
+    This project has many options to change. You can change the data being stored
+    but depending on the data you select it may be difficult to read with four LEDs
+    as binary data. A great addition would be to replace the LEDs with an LCD display.
+    That would make it much easier to understand. I used the LEDs to make it simple
+    from a hardware perspective. Speaking of simple, SimpleC will make adding an LCD
+    to this project quite easy. The last project in this book will show how to do
+    this same project using the SimpleC library so why wait any longer. Let’s jump
+    into the creation of the SimpleC library and make Embedded C Programming even
+    easier for the beginner.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'Now it’s clear that this is only my opinion that a single library file is easier
+    for the beginner to understand and that is the audience I’ve written this book
+    series for. I’m sure I’ll get more experienced programmers or academics giving
+    me all the reasons I’m wrong and most likely as negative comments on Amazon but
+    I’m sticking to my belief that SimpleC is merely a stepping stone to helping more
+    beginners learn embedded C programming. And if I’m wrong, then the SimpleC file
+    is open sourced so any user can break it up into separate .c and .h files to optimize
+    the use of program memory space. I even modified it before finishing this book.
+    I originally started at version 1.0 but after I had handed out a few beta versions
+    I discovered some minor changes were needed so I released version 1.1 which is
+    in this book.
+
+
+    # SimpleC Software Description
+
+
+    Two files make up the Simple C library; simplec1.1.h and simplec1.1.c. The number
+    1.1 is the version level so as I add new functions in the future the version number
+    will increase from 1.1, to 1.2, to 1.3, etc. These have been opened sourced and
+    can be found as part of the books software download and at the chipino.cc download
+    page so adding to this library can be a community project where anyone can improve
+    upon the capability.
+
+
+    In this section I wanted to briefly cover how each function works so you can reference
+    this chapter if you have issues in using the library or need to modify it for
+    your specific application. Later on I’ll go deep into the actual code for each
+    function for those that want to modify it.
+
+
+    *Note: All SimpleC functions are case sensitive meaning if they are written as
+    lower case in the simplec.c file then you need to write lower case in your program.
+    Some specific functions are written in upper case so please be aware of this.*
+
+
+    # Initialization and Time Delays
+
+
+    The first set of functions in the SimpleC library address the microcontroller
+    initialization, time base and basic I/O control. The configuration settings and
+    some I/O definitions are in the simplec1.1.h file which I’ll cover later. The
+    rest of the initializations are handled by these functions so let me summarize
+    them here.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# high(pin)\n\nMake the specified pin high. pin is automatically made an output.\
+    \ pin may be a constant, 0-13, or a variable that contains a number 0-13.\n\n\
+    Examples:\n\n```\nwhile()\n{\n  high(5); // Make pin5 (C2) an output and set it\
+    \ high (~5 volts)\n}\n```\n\nor\n\n```\n#define led 8 // Define Pin 8 (RB0) as\
+    \ connected to LED\n\nwhile()\n{\n  high(led);  //Make LED pin an output and set\
+    \ it high (~5 volts)\n}\n```\n\n# low(pin)\n\nMake the specified pin low. pin\
+    \ is automatically made an output. pin may be a constant, 0-13, or a variable\
+    \ that contains a number 0-13.\n\nExamples:\n\n```\nwhile()\n{\n  low(5); // Make\
+    \ pin5 (C2) an output and set it low (~0 volts)\n}\n```\n\nor\n\n```\n#define\
+    \ led 8 // Define Pin 8 (RB0) as connected to LED\n\nwhile()\n{\n  low(led); \
+    \ //Make LED pin an output and set it low (~0 volts)\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '# input(pin)
+
+
+    Make the specified *pin* an input and return the state of the pin. The function
+    must be preceded by a variable to receive the state. *pin* may be a constant;
+    0–13, or a variable that contains a number 0–13.
+
+
+    **Example:**
+
+
+    ```
+
+    while()\n{\nchar var = input(8);  // Store a 1 (high) or 0 (low) in the variable
+    per pin 8 level\n}
+
+    ```
+
+
+    # pulseout(pin,period)
+
+
+    pulseout generates a pulse on *pin* of specified *period*. The pulse is generated
+    by toggling the pin high, delaying and then low. *pin* is automatically made an
+    output. *pin* and *period* may be a constant; 0–13, or a variable that contains
+    a number 0–13.
+
+
+    The resolution of pulseout is 10usec increments. So a *period* value of 25 creates
+    a pulse of 250 microseconds long.
+
+
+    ```
+
+    while()\n{\npulseout(5,100); // Send a pulse 1000 microseconds long (1 msec) on
+    pin5\n}
+
+    ```
+
+
+    # adcin(pin)
+
+
+    The adcin function converts a voltage sensed on an analog pin to a digital value
+    from 0 to 255 (8-bit resolution). The parameter *pin* designates which analog
+    pin to sense and convert. SimpleC supports 5 analog pins numbered 0 thru 4. This
+    correlates to the AN0 thru AN4 pins of the Microchip PIC. The function is actually
+    used in an equation that puts the result in a variable. The voltage can range
+    from 0v to 5v but never exceed this range.
+
+
+    Example
+
+
+    ```
+
+    while()\n{\nchar var = adcin(1)    // Convert voltage on AN1 pin and store in
+    variable var\n}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '# LCD Character Module Control
+
+
+    A 2x16 LCD is a common way to display messages from the microcontroller. The setup
+    and control of a 2x16 LCD is simplified with the functions in the SimpleC library.
+
+
+    # lcd_init()
+
+
+    The lcd_init function establishes the connections for a 2x16 LCD character module
+    controlled by PORTB (pins 8-13). The DB0-DB3 pins of the LCD are connected to
+    B0 thru B3 (pins 8-11) respectively. The RS pin is connected to B4 (pin 12) and
+    the EN pin is connected to B5 (pin13).
+
+
+    Before using any of the LCD commands, the lcd_init() must be issued. It''s best
+    to put it at the top of a program.
+
+
+    Example:
+
+
+    ```
+
+    void
+
+    main(void)
+
+    {
+
+    init_micro();    // Initialize I/O
+
+    lcd_init();      // Initialize LCD Display
+
+    lcd_clear();     // Clear LCD screen
+
+
+    while (1==1)
+
+    {
+
+    lcd_goto(0);            // Select first line
+
+    lcd_text("Simple C Make");  // Display Hello World
+
+    lcd_goto(0x40);         // Select second line
+
+    lcd_text("Programming Easy");// Display message between quotes
+
+    pause(1000);            // Delay for 1 second to read display
+
+    }
+
+    }
+
+    ```
+
+
+    # lcd_clear()
+
+
+    The lcd_clear function will clear the screen of a 2x16 LCD character module. The
+    cursor will also be located to the upper left corner of the display which is typically
+    called location zero.
+
+
+    The lcd_clear() function is typically placed at the top of the program to start
+    but can be used throughout the program to clear the screen before writing a new
+    message.
+
+
+    Example:
+
+
+    ```
+
+    void
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # 白内障
+
+
+    白内障是眼睛的晶状体发生混浊、透明度下降，导致光线无法正常投射到视网膜上，从而引起视力模糊甚至失明的一种常见眼科疾病。本病多见于中老年人，也可由外伤、代谢异常、药物或先天性因素引起。
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_50_0.png)
+
+
+    # ## 白内障的常见症状
+
+
+    +   - 视力进行性模糊，像隔着一层雾
+
+    +   - 出现重影或眩光，尤其夜间明显
+
+    +   - 对光线和颜色敏感度下降
+
+    +   - 佩戴眼镜度数频繁变化
+
+    +   - 暗光环境下视物困难
+
+
+    当出现上述症状时，建议及时到医院眼科就诊，通过裂隙灯等专业设备检查晶状体的混浊程度，明确诊断并制定合适的治疗方案。'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "PORTC.7). A level shifter circuit is required for proper communication. This\
+    \ can be a max232 chip or an FTDI uart to USB chip. These SimpleC commands help\
+    \ simplify the setup and communication.\n\n# init_serial (baud rate)\n\nThe init_serial\
+    \ function establishes the setup for RS232 serial communication through the on\
+    \ board UART peripheral. The Tx and Rx pin are fixed to pins 0 (C6) and pin 1\
+    \ (C7) respectively. The baud rate can be set to 2400 or 9600 in this init_serial\
+    \ function.\n\nExample:\n\n```\nvoid main(void){\n    init_micro();     // Setup\
+    \ micro ports\n    init_serial(9600); // set up the USART baud rate (2400 or 9600)\n\
+    \    // *** Serial Communication Main Loop\n    while(1)\n    {\n        // ***********\
+    \ Send a decimal numbers from 1 to 9 ***********\n        for (char count = 0x31;\
+    \ count <= 0x39; count = count +1)\n        {\n            putch(count);     //\
+    \ Send Count 1-9 in ASCII\n            pause(100);       // Delay 100 msec\n \
+    \       }\n    } //End While\n} //End Main\n```\n\n# putch (character)\n\nThe\
+    \ putch function is not necessarily a SimpleC only function. It is part of a separate\
+    \ standard library included with the HI-TECH compiler. This function is used to\
+    \ send a byte of data out of the serial port. The character can be a hexdecimal\
+    \ ASCII value of a string value."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# getch ()\n\nThe getch function is not necessarily a SimpleC only function.\
+    \ It is part of a separate standard library included with the HI-TECH compiler.\
+    \ This function is used to receive a byte of data into the serial port. The statement\
+    \ will require a variable to store the received data.\n\nExample:\n\n```\nvoid\
+    \ main(void){\n    init_micro();      // Setup micro ports\n    init_serial(9600);\
+    \ // set up the USART baud rate (2400 or 9600)\n\n    // **** Use printf command\
+    \ to ask for input and echo it back ******\n    while(1)\n    {\n        printf(\"\
+    Press a key and I will echo it back:\\r\\n\");\n        char input = getch();\
+    \ // read a response from the user\n        printf(\"I detected [%c]\\r\\n\",input);\
+    \  // echo it back\n    }\n}//end main\n```\n\n# printf (characters)\n\nThe printf\
+    \ function is not necessarily a SimpleC only function. It is part of a separate\
+    \ standard library included with the HI-TECH compiler. This function is used to\
+    \ format data sent or printed on the specified peripheral. In this SimpleC library\
+    \ it is used to format the serial port data send to a terminal program. Below\
+    \ are some of the options you can use in the printf character area.\n\nThe format\
+    \ characters and their meanings are:\n\n+   - \\\" double quote\n+   - \\\\ backslash\n\
+    +   - \\a alert (BEL)\n+   - \\b backspace"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "+   \\c produce no further output\n+   \\f form feed\n+   \\n new line\n+ \
+    \  \\r carriage return\n+   \\t horizontal tab\n+   \\v vertical tab\n+   %% a\
+    \ single %\n+   %Wd Integer \"W\" digits wide\n+   %s Character string char\n\n\
+    Example:\n\n```\nvoid main(void){\ninit_micro();    // Setup micro ports\ninit_serial(9600);\
+    \   // set up the USART baud rate (2400 or 9600)\n\n// *** Serial Communication\
+    \ Main Loop\nwhile(1)\n{\n\n// ********* Use printf command to ask for input and\
+    \ echo it back *********\n    while(1)\n    {\n    printf(\"Press a key and I\
+    \ will echo it back:\\r\\n\");\n    char input = getch();  // read a response\
+    \ from the user\n    printf(\"I detected [%c]\\r\\n\",input);    // echo it back\n\
+    \    }//end while\n}//end main\n```"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# SPI Communication
+
+
+    Serial Peripheral Interface (SPI) is often used to communicate with external circuitry.
+    The SPI port on the PIC16F886 is a hardware peripheral that runs in the background.
+    So setting it up and running it is simplified with the SimpleC library functions
+    below. The peripheral is only setup as a SPI master not a slave.
+
+
+    # spi_init()
+
+
+    The spi_init function sets up the SPI port for serial communication as a master.
+    The spi connections are preset in the peripheral. Pin 4 (C3) is the clock, pin
+    3 (C4) is the Master Out Slave In (MOSI or SDO), pin 2 (C5) is the Master In Slave
+    Out (MISO or SDI). In order to use the spi peripheral, the spi_init must be at
+    the top of your main loop.
+
+
+    Example:
+
+
+    ```
+
+    //*****Sample code to control an MCP23S08 SPI I/O Expander***
+
+    void main(void)
+
+    {
+
+    init_micro();
+
+    spi_init();
+
+    WR_MCP23S08 (IODIR, 0x01);    // Setup pins
+
+    while (1==1)
+
+    {
+
+    char y = 1;
+
+    y = RD_MCP23S08 (GPIO); // Read switch
+
+    y = y & 0x01;           // Mask all but bit 7
+
+    if (y==0)
+
+    {WR_MCP23S08 (OLAT, 0x40);} // If switch idle light LED
+
+    else
+
+    {WR_MCP23S08 (OLAT, 0x80);} // If switch pressed LED off
+
+    pause(10);
+
+    } //End While
+
+    } //End Main
+
+    ```
+
+
+    # spi_output (byte)
+
+
+    The spi_output function stores the byte value in the SPI peripheral buffer so
+    it can be sent by the peripheral to the SPI slave device. This function is also
+    used to receive a byte from the SPI slave because every time a byte is sent by
+    the SPI peripheral, it also receives a byte. Therefore this function is always
+    used to both send and receive a byte of data. If you only want to receive then
+    you send a'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "dummy or meaningless byte of data. If you only want to send then the byte you\
+    \ receive is not used.\n\nExample:\n\n```\n/*** Read a byte of data from an EEPROM\
+    \ function ****\nchar RD_BYTE ( char EE_address )\n{\n    char dummy;\n    char\
+    \ spi_received = 0;\n    CS = 0;     // Set chip select low\n    dummy = SPI_OUTPUT\
+    \ (0x03);        // Send read command\n    dummy = SPI_OUTPUT( EE_address ); //\
+    \ Send Address\n    spi_received = SPI_OUTPUT( 0x00 ); // Receive Stored Value\n\
+    \    CS = 1;                         // Bring chip select high to terminate\n\
+    \                                    // the read command\n    return spi_received;\n\
+    }\n```\n\n# WR_BYTE (address, databtye)\n\nThe WR_BYTE function uses the spi_output\
+    \ function to write a byte of data to a SPI based EEPROM chip. The byte can be\
+    \ written to a specific memory location. The address is a value from 0 to 255\
+    \ so this function is limited to a 2k bit EEPROM memory chip. A Microchip 25LC020A\
+    \ or 25AA020A are 2k bit parts that work well with this command.\n\nSpecial Note:\
+    \ Notice the function name is all capitals. This is because this function is a\
+    \ SPI specific routine for a particular component.\n\n![](img/910b145bee7ca8076318eafbe6d13997_60_0.png)\n\
+    \n```\nvoid\nmain(void)\n{\n    lcd_init();    // Initialize LCD Display\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "```\nspi_init();          // Initialize SPI Peripheral\n\n//*** Load Data in\
+    \ EEPROM ***\nwhile (1==1)\n{\n    for( addr = 0; addr < 10; addr = addr + 1 )\
+    \   // Loop 10 times\n    {\n        data = addr;                // addr value\
+    \ is data for SEEPROM\n        WR_BYTE (addr,data);        // Write to SEEPROM\n\
+    \        pause (10);                 // Delay 10ms after each write\n    } //\
+    \ End For\n\n//*** Continuous Loop to Read and Display Data ***\n    for( addr\
+    \ = 0; addr <10; addr = addr + 1 )   // Loop 10 times\n    {\n        lcd_clear();\
+    \                // Clear LCD screen\n        lcd_goto(0);                // select\
+    \ first line\n        lcd_text(\"Address / Value\"); // Display header\n     \
+    \   b0 = RD_BYTE (addr);        // Read from SEEPROM\n        lcd_goto(0x40);\
+    \             // Select second line\n        lcd_number(addr);           // Display\
+    \ address location\n        lcd_text(\" /\");\n        lcd_number(b0);       \
+    \      // Display value read from EEPROM\n        pause (250);               \
+    \ // Delay 250 msec to see count\n    } //End For\n\n} //End While\n} //End Main\n\
+    ```\n\n# RD_BYTE (address, databyte)\n\nThe RD_BYTE function uses the spi_output\
+    \ function to read a byte of data from a SPI based EEPROM chip. The byte can be\
+    \ read from a specific memory location. The address is a value from 0 to 255 so\
+    \ this function is limited to a 2k bit EEPROM memory chip. A Microchip 25LC020A\
+    \ or 25AA020A are 2k bit parts that work well with this command.\n\nSpecial Note:\
+    \ Notice the function name is all capitals. This is because this function is a\
+    \ SPI specific routine for a particular component."
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "![](img/910b145bee7ca8076318eafbe6d13997_62_0.png)\n\nCHIPINO\nMOSI - Pin11\n\
+    MISO - Pin12\nSCLK - Pin13\nSS - digital I/O\n\n```\nvoid\nmain(void)\n{\n   \
+    \ lcd_init();        // Initialize LCD Display\n    spi_init();        // Initialize\
+    \ SPI Peripheral\n\n    //*** Load Data in EEPROM ***\n    while (1==1)\n    {\n\
+    \        for(addr = 0; addr < 10; addr = addr + 1)    // Loop 10 times\n     \
+    \   {\n            data = addr;        // addr value is data for SEEEPROM\n  \
+    \          WR_BYTE(addr,data);    // Write to SEEEPROM\n            pause(10);\
+    \        // Delay 10ms after each write\n        } // End For\n\n        //***\
+    \ Continuous Loop to Read and Display Data ***\n        for(addr = 0; addr <10;\
+    \ addr = addr + 1)    // Loop 10 times\n        {\n            lcd_clear();  \
+    \          // Clear LCD screen\n            lcd_goto(0);            // select\
+    \ first line\n            lcd_text(\"Address / Value\");    // Display header\n\
+    \            char b0 = RD_BYTE(addr);    // Read from SEEEPROM\n            lcd_goto(0x40);\
+    \        // Select second line\n            lcd_number(addr);    // Display address\
+    \ location\n            lcd_text(\" / \");\n            lcd_number(b0);      \
+    \  // Display value read from EEPROM\n            pause(250);        // Delay\
+    \ 250 msec to see count\n        } //End For\n    } //End While\n} //End Main\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# WR_MCP23S08 (register, databyte)
+
+
+    The WR_MCP23S08 function uses the spi_output function to write a byte of data
+    to a SPI based Microchip I/O expander part number MCP23S08. The databyte can be
+    written to a specific register location. The register value is based on the data
+    sheet for the MCP23S08. The main registers are below:
+
+
+    **TABLE 1-2: REGISTER ADDRESSES**
+
+
+    | Address | Access to: |
+
+    |---|---|
+
+    | 00h | IODIR |
+
+    | 01h | IPOL |
+
+    | 02h | GPINTEN |
+
+    | 03h | DEFVAL |
+
+    | 04h | INTCON |
+
+    | 05h | IOCON |
+
+    | 06h | GPPU |
+
+    | 07h | INTF |
+
+    | 09h | INTCAP (Read-only) |
+
+    | 09h | GPIO |
+
+    | 0Ah | OLAT |
+
+
+    The value entered in the register location is written in hex form (i.e. 0x04 for
+    the INTCON register). The WR_MCP23S08 function also offers a few nicknames for
+    the most common three registers so you can use these names in place of the actual
+    address value:
+
+
+    +   - IODIR // Data Direction Register Address 0x00
+
+    +   - OLAT // Output Latch Register Address 0x0A
+
+    +   - GPIO // Port Register Register Address 0x09
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_63_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "Special Note: Notice the function name is all capitals. This is because this\
+    \ function is a SPI specific routine for a particular component.\n\nExample:\n\
+    \n```\nvoid main(void)\n{\n init_micro();\n spi_init();\n WR_MCP23S08 (IODIR,\
+    \ 0x01);   // Setup pins\n while (1==1)\n {\n   char y = 1;\n   y = RD_MCP23S08\
+    \ (GPIO); // Read switch\n   y = y & 0x01;           // Mask all but bit 7\n \
+    \  if (y==0)\n   {WR_MCP23S08 (OLAT, 0x40);} // If switch idle light LED\n   else\n\
+    \   {WR_MCP23S08 (OLAT, 0x80);} // If switch pressed LED off\n   pause(10);\n\
+    \ } //End While\n} //End Main\n```\n\n# RD_MCP23S08 (register)\n\nThe RD_MCP23S08\
+    \ function uses the spi_output function to read a byte of data from a register\
+    \ in the SPI based Microchip I/O expander chip number MCP23S08. The byte can be\
+    \ read from a specific register location. The register value is based on the data\
+    \ sheet for the MCP23S08. The main registers are:"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# TABLE 1-2: REGISTER ADDRESSES
+
+
+    | Address | Access to: |
+
+    |---|---|
+
+    | 00h | IODIR |
+
+    | 01h | IPOL |
+
+    | 02h | GPINTEN |
+
+    | 03h | DEFVAL |
+
+    | 04h | INTCON |
+
+    | 05h | IOCON |
+
+    | 06h | GPPU |
+
+    | 07h | INTF |
+
+    | 08h | INTCAP (Read-only) |
+
+    | 09h | GPIO |
+
+    | 0Ah | OLAT |
+
+
+    The value entered in the register location is written in hex form (i.e. 0x04 for
+    the INTCON register). The RD_MCP23508 function also offers a few nicknames for
+    the most common three registers so you can use these names in place of the actual
+    address value:
+
+
+    +   - IODIR // Data Direction Register Address 0x00
+
+    +   - OLAT // Output Latch Register Address 0x0A
+
+    +   - GPIO // Port Register Register Address 0x09
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_65_0.png)
+
+
+    *Special Note: Notice the function name is all capitals. This is because this
+    function is a SPI specific routine for a particular component.*
+
+
+    ```
+
+    Example:
+
+    void main(void)
+
+    {
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\ninit_micro();\nspi_init();\nWR_MCP23S08(IODIR, 0x01);   // Setup pins\n\
+    while (1==1)\n{\n    char y = 1;\n    y = RD_MCP23S08(GPIO);   // Read GPIO port\n\
+    \    y = y & 0x01;            // Mask all but bit 7\n    if (y==0)\n    {WR_MCP23S08(OLAT,\
+    \ 0x40);} // If switch idle light LED\n    else\n    {WR_MCP23S08(OLAT, 0x80);}\
+    \ // If switch pressed LED off\n    pause(10);\n} //End While\n} //End Main\n\
+    ```\n\n# I2C Communication\n\nAs I showed in the previous chapter, I2C communication\
+    \ is useful for communicating with external circuitry. The I2C peripheral shares\
+    \ many of its communication I/O with the SPI peripheral on the PIC16F886. Therefore\
+    \ you will use either SPI or I2C but not both at the same time. These SimpleC\
+    \ functions make it easier to use the I2C peripheral.\n\n# i2c_init()\n\nThe i2c_init\
+    \ function sets up the i2c port for serial communication as a master. The i2c\
+    \ connections are preset in the peripheral. Pin 4 (C3) is the clock, pin 3 (C4)\
+    \ is the data line. In order to use the i2c peripheral, the i2c_init must be at\
+    \ the top of your main loop.\n\nExample:\n\n```\n#include <simplec_1.0.h>\n\n\
+    void\nmain(void)\n{\ninit_micro();    // Initialize I/O\ni2c_init();      // Initialize\
+    \ i2c\nPORTB=0x00;      // All LEDs off\nTRISB=0x00;      // All PORTB outputs\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# i2c_restart()
+
+
+    The i2c_restart() function is used to send a new start bit in the i2c signal.
+    This is used at the beginning of a new i2c communication message. This is commonly
+    used when the first start bit is used to send a message requesting data to be
+    sent back. The example below shows this function used in one of the SimpleC library
+    functions.
+
+
+    Example:
+
+
+    ```
+
+    ```c
+
+    unsigned char I2C_EEIN(unsigned char address)
+
+    {
+
+    unsigned char data;
+
+    i2c_start();
+
+    i2c_write(0xa0);
+
+    i2c_write(address);
+
+    i2c_repStart();
+
+    i2c_write(0xa1);
+
+    data=i2c_read(0);
+
+    i2c_stop();
+
+    return(data);
+
+    }
+
+    ```
+
+    ```
+
+
+    # i2c_stop()
+
+
+    The i2c_stop() function is used to send a stop bit at the end of the i2c signal.
+    This is used to indicate the end of the i2c communication message. The example
+    below shows this function used in one of the SimpleC library functions.
+
+
+    Example:
+
+
+    ```
+
+    ```c
+
+    unsigned char I2C_EEIN(unsigned char address)
+
+    {
+
+    unsigned char data;
+
+    i2c_start();
+
+    i2c_write(0xa0);
+
+    i2c_write(address);
+
+    i2c_repStart();
+
+    i2c_write(0xa1);
+
+    data=i2c_read(0);
+
+    i2c_stop();
+
+    return(data);
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "```\nPORTB =I2C_EEIN(cnt); // Display data read from EEPROM on LEDs in binary\n\
+    pause (1000);           // Delay for 1 second to read LEDs\ncnt=cnt + 1;     \
+    \       // Increment cnt variable\n}\n```\n\n# I2C_EEIN ( address )\n\nThe I2C_EEIN()\
+    \ function is used to receive data from a Microchip I2C serial EEPROM. It is written\
+    \ to specifically read from those parts with an 8-bit address.\n\nExample:\n\n\
+    ```\n#include <simplec_1.1.h>\n\nvoid\nmain(void)\n{\n    init_micro();      \
+    \  // Initialize I/O\n    i2c_init();          // Initialize i2c\n    PORTB=0x00;\
+    \          // All LEDs off\n    TRISB=0x00;          // All PORTB outputs\n\n\
+    \    unsigned char cnt=0;\n\n    while(cnt<=10)  /* write 10 numbers to eeprom\
+    \ */\n    {\n        PORTB=cnt;        // The cnt value will display on the LEDs\n\
+    \        I2C_EEOUT(cnt,10-cnt);  // Store 9 at address 1, 8 at address 2, ...\n\
+    \        cnt=cnt+1;        // Increment cnt variable\n        pause(255);    \
+    \   // Delay 255 milliseconds\n    }\n\n    cnt=0;\n\n    while(cnt<=10)\n   \
+    \ {\n        PORTB=I2C_EEIN(cnt); // Display data read from EEPROM on LEDs in\
+    \ binary\n        pause (1000);        // Delay for 1 second to read LEDs\n  \
+    \      cnt=cnt + 1;         // Increment cnt variable\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "# simplec1.1.h – How it Works\n\nThe header file contains the common elements\
+    \ every project should have. Let me go through this file in detail. First a description\
+    \ of the header and then the include files. The htc.h file is included and required\
+    \ for the HI-TECH compiler. The stdio.h file which is a standard input/output\
+    \ header file for an internal HI-TECH library. The stdio library handles the printf\
+    \ function along with the getch and putch functions.\n\n```\n/*\n * Library of\
+    \ common functions\n * For the readers of the Beginner's Guide to Embedded C book\
+    \ series\n * by Chuck Hellebuyck\n * Copyright 2010\n * Version 1.1 - Written\
+    \ for Chipino with 16F886\n */\n\n#include <htc.h>\n#include <stdio.h>\n```\n\n\
+    The configuration settings for the PIC16F886 are included next. These set the\
+    \ various features for the CHIPINO module. The CHIPINO uses a 16 Mhz crystal so\
+    \ the HS mode is selected. The watchdog timer is off and the external reset is\
+    \ enabled on the MCLR pin. The code is unprotected and the low voltage programming\
+    \ mode is disabled since the CHIPINO is programmed with a PICkit 2. The PIC16F886\
+    \ can have the internal oscillator run if the 16 Mhz crystal should fail but that\
+    \ option is turned off with the config settings. The CONFIG1 register section\
+    \ of the data sheet is shown below the __CONFIG line for reference.\n\n```\n__CONFIG\
+    \ (HS & WDTDIS & MCLREN & UNPROTECT & LVPDIS & IESODIS & FCMDIS);\n```\n\nThe\
+    \ configuration settings for the PIC16F886 are listed in the data sheet and that\
+    \ is reproduced on the next page. The actual settings used by the compiler come\
+    \ from the PIC16F887.h file in the HI-TECH compiler include directory. That header\
+    \ file is called from the htc.h file included at the top of the SimpleC1.1.h file."
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: '# REGISTER 14-1: CONFIG1: CONFIGURATION WORD REGISTER 1
+
+
+    | — | DEBUG | LVP | FCMEN | IESO | BOREN1 | BOREN0 |
+
+    | bit 15 | | | | | | bit 8 |
+
+    | CPD | CP | MCLRE | PWRTE | WDT | FOSC2 | FOSC1 | FOSC0 |
+
+    | bit 7 | | | | | | | bit 0 |
+
+
+    bit 15-14 Unimplemented: Read as ‘1’
+
+    bit 13 DEBUG: In-Circuit Debugger Mode bit
+
+    1 = In-Circuit Debugger disabled, RB6/ICSPCLK and RB7/ICSPDAT are general purpose
+    I/O pins
+
+    0 = In-Circuit Debugger enabled, RB6/ICSPCLK and RB7/ICSPDAT are dedicated to
+    the debugger
+
+    bit 12 LVP: Low Voltage Programming Enable bit
+
+    1 = RB3/PGM pin has PGM function, low voltage programming enabled
+
+    0 = RB3 pin is digital I/O, HV on MCLR must be used for programming
+
+    bit 11 FCMEN: Fail-Safe Clock Monitor Enabled bit
+
+    1 = Fail-Safe Clock Monitor is disabled
+
+    0 = Fail-Safe Clock Monitor is enabled
+
+    bit 10 IESO: Internal External Switchover bit
+
+    1 = Internal External Switchover mode is disabled
+
+    0 = Internal External Switchover mode is enabled
+
+    bit 9-8 BOREN1:0 - Brown-Out Reset Selection bits
+
+    11 = BOR enabled during operation and disabled in Sleep
+
+    10 = BOR controlled by SBOREN bit of the PCON register
+
+    01 = BOR disabled
+
+    00 = BOR disabled
+
+    bit 7 CPD: Data Code Protection bit
+
+    1 = Data memory code protection is disabled
+
+    0 = Data memory code protection is enabled
+
+    bit 6 CP: Code Protection bit
+
+    1 = Program memory code protection is disabled
+
+    0 = Program memory code protection is enabled
+
+    bit 5 MCLRE: MCLR Enable bit
+
+    1 = MCLR pin function is MCLR
+
+    0 = RE3 pin is digital input, MCLR internally tied to VDD
+
+    bit 4 PWRTE: Power-up Timer Enable bit
+
+    1 = PWRT disabled
+
+    0 = PWRT enabled
+
+    bit 3 WDT: Watchdog Timer Enable bit
+
+    1 = WDT enabled
+
+    0 = WDT disabled
+
+    bit 2-0 FOSC2:0 - Oscillator Selection bits
+
+    111 = RC oscillator, CLKO function on RA6/OSC2/CLKO pin, RC on RA7/OSC1/CLKI
+
+    110 = RC oscillator, I/O function on RA6/OSC2/CLKO pin, RC on RA7/OSC1/CLKI
+
+    101 = INTOSC oscillator, CLKO function on RA6/OSC2/CLKO pin, I/O function on RA7/OSC1/CLKI
+
+    100 = INTOSC oscillator, I/O function on RA6/OSC2/CLKO pin, I/O function on RA7/OSC1/CLKI
+
+    011 = INTOSC oscillator, I/O function on RA6/OSC2/CLKO pin, I/O function on RA7/OSC1/CLKI
+
+    010 = EC oscillator, CLKO function on RA6/OSC2/CLKO pin, CLKI on RA7/OSC1/CLKI
+
+    001 = HS oscillator, High-speed crystal on RA6/OSC2/CLKO and RA7/OSC1/CLKI
+
+    000 = LP oscillator, Low-power crystal on RA6/OSC2/CLKO and RA7/OSC1/CLKI
+
+
+    The next section of the header file establishes the various nicknames for the
+    different I/O pins used in the library. Some of this section is commented out
+    such as the crystal frequency is shown set to 16 Mhz but it turns out this is
+    only needed for HI-TECH macros that need a time base setting. I didn’t use them
+    so this line is there for reference and future use but not needed for now.
+
+
+    ```
+
+    // Hardware Defines and Settings
+
+    //#define _XTAL_FREQ 16MHZ    //-- Define the crystal frequency
+
+    ```
+
+
+    The LCD pins are defined first for using PORTB. I rewrote the LCD function from
+    my Volume 2 book. The Volume 2 routines required two separate ports but I rewrote
+    it for this library to use just one. I set it to use'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '```
+
+    // SCK - RC3 SPI Clock Connection
+
+    // SDI - RC4 SPI Data Into PIC Connection
+
+    // SDO - RC5 SPI Data Out of PIC Connection
+
+    ```
+
+
+    The library function to control a Microchip MCP23S08 I/O expander uses some predefined
+    names for registers the micro will control. This set of defines is for that section
+    of code.
+
+
+    ```
+
+    // ****************************************
+
+    // External MSP23S08 I/O Expander Write
+
+    // ****************************************
+
+
+    #define IODIR 0x00  // Data Direction Register
+
+    #define OLAT  0x0A  // Output Latch Register
+
+    #define GPIO  0x09  // Port Register
+
+    ```
+
+
+    This last section of the header file has all the prototypes for the functions
+    in the SimpleC1.1.c file.
+
+
+    ```
+
+    // ****************************************
+
+    // Simple C Prototypes
+
+    // ****************************************
+
+    void init_micro(void);
+
+    void usecase(void);
+
+    void pauseus ( unsigned int usvalue );
+
+    void msecbase (void);
+
+    void pause( unsigned long usvalue );
+
+    void high(char pin);
+
+    void low(char pin);
+
+    char input(char pin);
+
+    void pulseout(char pin, unsigned long per);
+
+    void lcd_write(unsigned char c);
+
+    void lcd_clear(void);
+
+    void lcd_text(const char * s);
+
+    void lcd_symbol(char c);
+
+    void lcd_goto(unsigned char pos);
+
+    void lcd_number(char c);
+
+    void lcd_init();
+
+    void init_serial(int baud);
+
+    void putch(unsigned char byte);
+
+    unsigned char getch();
+
+    void spi_init(void);
+
+    char SPI_OUTPUT ( char spi_byte );
+
+    void WR_BYTE ( char EE_address, char EE_data );
+
+    void RD_BYTE ( char EE_address );
+
+    void WR_MCP23S08 ( char regist, char data );
+
+    char RD_MCP23S08 ( char regist );
+
+    void pwmout1 (char duty, int freq);
+
+    void pwmout2 (char duty, int freq);
+
+    char adcin (char chan);
+
+    void i2c_init();
+
+    void i2c_waitForIdle();
+
+    void i2c_start();
+
+    void i2c_repStart();
+
+    void i2c_stop();
+
+    int i2c_read( unsigned char ack );
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "```\nunsigned char i2c_write( unsigned char i2cWriteData );\nvoid I2C_EEOUT\
+    \ (unsigned char address, unsigned char data);\nunsigned char I2C_EKIN(unsigned\
+    \ char address);\n```\n\n# simplec1.1.c – How it Works\n\nI've covered the basics\
+    \ of the SimpleC library and the guts of the SimpleC.h file. For those that want\
+    \ to understand the guts of this library I'll now get into the heart of the code.\
+    \ This is where all the functions created in Volume I and Volume 2 of this series\
+    \ comes together along with some new ones I wrote for this book. I'll take each\
+    \ block and try to explain what I'm doing.\n\nThe first part of the simplec1.1.c\
+    \ file is to include the header file.\n\n```\n#include \"simplec1.1.h\"\n// Library\
+    \ Functions\n```\n\nThe first function is the init_micro (). The registers are\
+    \ set to make the analog pins digital and turn off the comparators. I also included\
+    \ the settings for using the internal oscillator but commented that out for now.\
+    \ This would require everything adjusted for the slower internal clock. The final\
+    \ uncommented step is to disable any interrupts.\n\n```\n//*******************************\n\
+    // Initialize Microcontroller Setup\n//*******************************\n\nvoid\
+    \ init_micro(void)\n{\n    ANSEL = 0;        //Analog ports set to digital\n \
+    \   ANSELH = 0;\n    CM1CON0 = 0;      //Comparators Shut off\n    CM2CON0 = 0;\n\
+    \    // IRCPF0 = 0;      // Set internal Oscillator to 4 Mhz\n    // IRCPF1 =\
+    \ 1;\n    // IRCPF2 = 1;\n    // SCS = 1;         // Config bits define clock\n\
+    \    INTCON=0;          // purpose of disabling the interrupts\n}\n```\n\nThe\
+    \ next few functions handle the time delays. I explain the calculations in the\
+    \ header. Recognize that the time delays rely on the Timer 0 so this kind of removes\
+    \ Timer 0 as an option unless you don't want to use these functions."
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "The microsecond version is similar to the millisecond version but has a minimum\
+    \ of 10 usec. This is because the code isn't fast enough to handle delays less\
+    \ than that.\n\n```\n/****************************************************\n *\
+    \ usecbase - 10 usec pause routine\n * The internal oscillator is set to 16 Mhz\
+    \ and the\n * internal instruction clock is 1/4 of the oscillator.\n * This makes\
+    \ the internal instruction clock 4 Mhz or\n * 0.25 usec per clock pulse.\n * Using\
+    \ the 1:1 prescaler on the clock input to Timer0\n * slows the Timer0 count increment\
+    \ to 1 count/.25 usec.\n * Therefore 40 counts of the Timer0 would make a ten\n\
+    \ * usec delay (25 * .25 usec). But there are other\n * instructions in the loop\
+    \ so using the MPLAB\n * stopwatch we find that we need Timer0 to overflow at\n\
+    \ * 9 clock ticks. Preset Timer0 to 247 (F7 hex) to make\n * Timer0 overflow at\
+    \ 9 clock ticks (256-9 = 247).\n * This results in a 10.0 microsecond delay.\n\
+    \ ****************************************************/\n\nvoid usecbase(void)\n\
+    {\n        OPTION = 0b00010000;       //Set prescaler to TMR0 1:1\n        TMR0\
+    \ = 0xF7;               //Preset TMR0 to overflow on 250 counts\n        while(!T0IF);\
+    \              //Stay until TMR0 overflow flag equals 1\n        T0IF = 0;   \
+    \               //Clear the TMR0 overflow flag\n}\n```\n\n```\n//****************************************************\n\
+    //pauseus - millisecond delay routine 1 to 65,535 in 10 usec steps\n//****************************************************\n\
+    \nvoid pauseus ( unsigned int usvalue )\n{\n        unsigned int x;\n\n      \
+    \  for (x=0; x<=usvalue; x++) //Loop through a delay equal to usvalue\n      \
+    \  {\n                usecbase();        // in milliseconds.\n               \
+    \                    //Jump to millisecond delay routine\n        }\n}\n```\n\n\
+    ```\n/****************************************************\n * msecbase - 1 msec\
+    \ pause routine\n * The External oscillator is set to 16 Mhz and the\n * internal\
+    \ instruction clock is 1/4 of the oscillator.\n * This makes the internal instruction\
+    \ clock 4 Mhz or\n * 0.25 usec per clock pulse.\n * Using the 1:16 prescaler on\
+    \ the clock input to Timer0\n * slows the Timer0 count increment to 1 count/4\
+    \ usec.\n * Therefore 250 counts of the Timer0 would make a one\n * millisecond\
+    \ delay (250 * 4 usec). But there are other\n * instructions in the delay loop\
+    \ so using the MPLAB\n * stopwatch we find that we need Timer0 to overflow at\n\
+    \ * 243 clock ticks. Preset Timer0 to 0D (hex) to make\n * Timer0 overflow at\
+    \ 243 clock ticks (256-13 = 243).\n ****************************************************/\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\nvoid msecbase(void)\n{\n        OPTION = 0b00000011;       //Set prescaler\
+    \ to TMR0 1:16\n        TMR0 = 0xD;                 //Preset TMR0 to overflow\
+    \ on 243 counts\n        while(!T0IF);               //Stay until TMR0 overflow\
+    \ flag equals 1\n        T0IF = 0;                   //Clear the TMR0 overflow\
+    \ flag\n}\n\n//*******************************************************\n//pause\
+    \ - millisecond delay routine 1 to 65,535 milliseconds\n//*******************************************************\n\
+    \nvoid pause( unsigned long usvalue )\n{\n        unsigned long x;\n        for\
+    \ (x=1; x<=(usvalue); x++)       //Loop through a delay equal to usvalue\n   \
+    \     {                                  // in milliseconds.\n               \
+    \ msecbase();                //Jump to millisec delay routine\n        }\n}\n\
+    ```\n\nThe high ( ) function and low ( ) are really a way of setting a port pin\
+    \ high or low for the true beginner. If you don’t want to learn or haven’t learned\
+    \ about setting the TRIS register and then the PORT register, this command handles\
+    \ it for you. It sets the individual bits for the pin you want to use. It also\
+    \ simplified the definition of the port pin to numbers that match the numbers\
+    \ on the CHIPINO board. These are handy but probably a bad habit for when you\
+    \ try to control ports outside of the CHIPINO world. Controlling the port directly\
+    \ is a preferred programming method.\n\n```\n// *******************************************************\n\
+    // High Command to set a port high\n// *******************************************************\n\
+    \nvoid high(char pin)\n{\nswitch(pin)\n{\n        case 0:\n                TRISC7\
+    \ = 0;              // Make RC7 an Output\n                RC7 = 1;          \
+    \       // Set RC7 High\n                break;\n\n        case 1:\n         \
+    \       TRISC6 = 0;              // Make RC6 an Output\n                RC6 =\
+    \ 1;                 // Set RC6 High\n                break;\n\n        case 2:\n\
+    \                TRISC5 = 0;              // Make RC5 an Output\n            \
+    \    RC5 = 1;                 // Set RC5 High\n                break;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '```
+
+    // Low Command to set a port low
+
+    // ***************************************************************
+
+    void low(char pin)
+
+    {
+
+    switch(pin)
+
+    {
+
+    case 0:
+
+    TRISC7 = 0;                  // Make RC7 an Output
+
+    RC7 = 0;                     // Set RC7 low
+
+    break;
+
+    case 1:
+
+    TRISC6 = 0;                  // Make RC6 an Output
+
+    RC6 = 0;                     // Set RC6 low
+
+    break;
+
+    case 2:
+
+    TRISC5 = 0;                  // Make RC5 an Output
+
+    RC5 = 0;                     // Set RC5 low
+
+    break;
+
+    case 3:
+
+    TRISC4 = 0;                  // Make RC4 an Output
+
+    RC4 = 0;                     // Set RC4 low
+
+    break;
+
+    case 4:
+
+    TRISC3 = 0;                  // Make RC3 an Output
+
+    RC3 = 0;                     // Set RC3 low
+
+    break;
+
+    case 5:
+
+    TRISC2 = 0;                  // Make RC2 an Output
+
+    RC2 = 0;                     // Set RC2 low
+
+    break;
+
+    case 6:
+
+    TRISC1 = 0;                  // Make RC1 an Output
+
+    RC1 = 0;                     // Set RC1 low
+
+    break;
+
+    case 7:
+
+    TRISC0 = 0;                  // Make RC0 an Output
+
+    RC0 = 0;                     // Set RC0 low
+
+    break;
+
+    case 8:
+
+    TRISB0 = 0;                  // Make RB0 an Output
+
+    RB0 = 0;                     // Set RB0 low
+
+    break;
+
+    case 9:
+
+    TRISB1 = 0;                  // Make RB1 an Output
+
+    RB1 = 0;                     // Set RB1 low
+
+    break;
+
+    case 10:
+
+    TRISB2 = 0;                  // Make RB2 an Output
+
+    RB2 = 0;                     // Set RB2 low
+
+    break;
+
+    case 11:
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '```
+
+    ```c
+
+    case 3;
+
+    TRISC4 = 1;                  // Make RC4 an input
+
+    if (RC4 == 1)                // Test RC4 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 4:
+
+    TRISC3 = 1;                  // Make RC3 an input
+
+    if (RC3 == 1)                // Test RC3 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 5:
+
+    TRISC2 = 1;                  // Make RC2 an input
+
+    if (RC2 == 1)                // Test RC2 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 6:
+
+    TRISC1 = 1;                  // Make RC1 an input
+
+    if (RC1 == 1)                // Test RC1 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 7:
+
+    TRISC0 = 1;                  // Make RC0 an input
+
+    if (RC0 == 1)                // Test RC0 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 8:
+
+    TRISB0 = 1;                  // Make RB0 an input
+
+    if (RB0 == 1)                // Test RB0 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 9:
+
+    TRISB1 = 1;                  // Make RB1 an input
+
+    if (RB1 == 1)                // Test RB1 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    break;
+
+
+    case 10:
+
+    TRISB2 = 1;                  // Make RB2 an input
+
+    if (RB2 == 1)                // Test RB2 pin
+
+    {val = 1;}
+
+    else
+
+    {val = 0;}
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: "```\n// ***************************\n// Pulseout Command to set a port high\
+    \ for period of time\n// ***************************\n\nvoid pulseout(char pin,\
+    \ unsigned long per)\n{\nswitch(pin)\n{\ncase 0:\n    TRISC7 = 0;          //\
+    \ Make RC7 an Output\n    RC7 = 1;             // Set RC7 High\n    pauseus(per);\
+    \        // delay\n    RC7 = 0;             // Set RC7 Low\n    break;\n\ncase\
+    \ 1:\n    TRISC6 = 0;          // Make RC6 an Output\n    RC6 = 1;           \
+    \  // Set RC6 High\n    pauseus(per);        // delay\n    RC6 = 0;          \
+    \   // Set RC6 Low\n    break;\n\ncase 2:\n    TRISC5 = 0;          // Make RC5\
+    \ an Output\n    RC5 = 1;             // Set RC5 High\n    pauseus(per);     \
+    \   // delay\n    RC5 = 0;             // Set RC5 Low\n    break;\n\ncase 3:\n\
+    \    TRISC4 = 0;          // Make RC4 an Output\n    RC4 = 1;             // Set\
+    \ RC4 High\n    pauseus(per);        // delay\n    RC4 = 0;             // Set\
+    \ RC4 Low\n    break;\n\ncase 4:\n    TRISC3 = 0;          // Make RC3 an Output\n\
+    \    RC3 = 1;             // Set RC3 High\n    pauseus(per);        // delay\n\
+    \    RC3 = 0;             // Set RC3 Low\n    break;\n\ncase 5:\n    TRISC2 =\
+    \ 0;          // Make RC2 an Output\n    RC2 = 1;             // Set RC2 High\n\
+    \    pauseus(per);        // delay\n    RC2 = 0;             // Set RC2 Low\n\
+    \    break;\n\ncase 6:\n    TRISC1 = 0;          // Make RC1 an Output\n    RC1\
+    \ = 1;             // Set RC1 High\n    pauseus(per);        // delay\n    RC1\
+    \ = 0;             // Set RC1 Low\n    break;\n\ncase 7:\n    TRIS C0 = 0;   \
+    \       // Make RC0 an Output\n    RC0 = 1;             // Set RC0 High\n    pauseus(per);\
+    \        // delay\n    RC0 = 0;             // Set RC0 Low\n    break;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '```
+
+    char init_value = 0x3;
+
+    pause (15);    // wait 15mSec after power applied,
+
+    char temp = init_value;
+
+    LCD_DATA = LCD_DATA & 0xF0;
+
+    LCD_DATA = LCD_DATA + temp;
+
+    LCD_STROBE();
+
+    pause(10);
+
+    pause(10);
+
+    LCD_STROBE();
+
+    pause(10);
+
+    LCD_STROBE();
+
+    pause(10);
+
+    char temp = 2;  // Four bit mode
+
+    LCD_DATA = LCD_DATA & 0xF0;
+
+    LCD_DATA = LCD_DATA + temp;
+
+    LCD_STROBE();
+
+    // lcd_write(0x28); // Set interface length
+
+    // lcd_write(0x0C); // Display On, Cursor Off, Blink Off
+
+    // lcd_write(0x0F); // Display On, Cursor On, Cursor Blink
+
+    // lcd_clear(); // Clear screen
+
+    // lcd_write(0x06); // Set entry Mode
+
+    }
+
+    ```
+
+
+    The next set of functions work on the hardware Universal Synchronous Asynchronous
+    Receiver Transmitter (USART) peripheral. Using this feature can be very confusing
+    to a beginner and sometimes even an experienced programmer so having a working
+    library function to handle it is very useful. The first function I created for
+    this is the initialization routine init_serial (). This function selects the baud
+    rate (2400 or 9600) and defines the state of the Rx and Tx pins. There are a couple
+    registers to set up; RXSTA and TXSTA, which the init_serial () routine does. All
+    you have to do is select the baud rate and place it in the parameter section.
+
+
+    ```
+
+    // *******************************************
+
+    // Initialize Hardware USART
+
+    // The serial commands all work with the hardware USART
+
+    // and is limited to 2400 baud or 9600 baud. Formula for
+
+    // baud rate calculation is FOSC/(64(SPBRG + 1)).
+
+    // *******************************************
+
+
+    void init_serial(int baud)
+
+    {
+
+    RX_PIN = 1;
+
+    TX_PIN = 0;
+
+    if (baud == 2400)
+
+    {SPBRG = 103;}          // 2400 Baud value
+
+    else                    // 9600 Baud value
+
+    {SPBRG = 25;}
+
+
+    //Continuous 8 bit asynchronous non inverted low speed communication
+
+    RCSTA = 0x90;           // SPEN and CREN bit = 1, RX9EN = 0
+
+    TXSTA = 0x20;           //TXEN = 1, BRGH = 0, SYNC = 0
+
+    BAUDCTL = 0;            //BRG16 = 0
+
+    }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: "The HI-TECH compiler already has some pre-built functions included in the stdio\
+    \ library which is automatically included during the compile time if the stdio.h\
+    \ file is included. One of those is the printf() function. This is described in\
+    \ the HI-TECH manual and can be used for all USART communication but I wanted\
+    \ a couple specific byte control functions for the SimpleC library as well. The\
+    \ first is putch() which is used to send an ASCII character out of the USART.\
+    \ The function makes sure the transmit buffer is empty and then fills it with\
+    \ the ASCII byte in the parameter section of the function header.\n\n```\n// ****************************************\n\
+    // Send ASCII Character from Hardware USART\n// ****************************************\n\
+    \nvoid\nputch(unsigned char byte)\n{\n    /* output one byte */\n    while(!TXIF);\
+    \ /* set when register is empty */\n    continue;\n    TXREG = byte;\n}\n```\n\
+    \nThe second is the receive byte getch() function that tests for data in the receive\
+    \ register and then returns the byte received from the function call. These make\
+    \ serial communication very easy.\n\n```\n// ****************************************\n\
+    // Receive ASCII Character from Hardware USART\n// ****************************************\n\
+    \nunsigned char\ngetch()\n{\n    /* retrieve one byte */\n    while(!RCIF); /*\
+    \ set when register is not empty */\n    continue;\n    return RCREG;\n}\n```\n\
+    \nAnother form of communication is through the Serial Peripheral Interface (SPI),\
+    \ which is commonly used to talk to EEPROM, temperature sensors, I/O expanders\
+    \ and many more external peripheral chips. Using the hardware SPI can also be\
+    \ a bit confusing at first so having these routines in the library is helpful.\
+    \ The first is the setup function spi_init(). This function controls the SSPCON\
+    \ and the SSPSTAT register bits for 250 Khz SPI"
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: 'communication. This is not the fastest possible SPI speed but certainly a reliable
+    SPI communication speed.
+
+
+    ```
+
+    // ****************************************
+
+    // Hardware SPI Setup
+
+    // ****************************************
+
+
+    /* SPI Peripheral Setup */
+
+    void spi_init(void)
+
+    {
+
+    // *** 16F886 Settings ***
+
+    TRISC5 = 0; // SDO pin set to output
+
+    TRISC3 = 0; // SCK pin set to output (Master Mode)
+
+    TRISA5 = 0; // CS pin set to output
+
+
+    /* SSPCON Settings */
+
+    // *** FOSC = 4Mhz ***
+
+    // SSPCON = 0b000000001; // SPI Clock Frequency set to FOSC/16 = 250khz
+
+
+    // *** FOSC = 16Mhz ***
+
+    SSPCON = 0b00000010; // SPI Clock Frequency set to FOSC/64 = 250khz
+
+    CKP = 0; // Idle state of clock is low
+
+
+    /* SSPSTAT Settings */
+
+    SMP = 1; // Sampled at end of data pulse
+
+    CKE = 1; // Data Transfered on rising edge of clock
+
+
+    /* SPI Peripheral on */
+
+    SSPEN = 1; // Enable SPI peripheral
+
+    pause(1); // Allow SPI to Stabilize
+
+    }
+
+    ```
+
+
+    The SPI peripheral will send a bit out the SDO pin (Master Out Slave In) while
+    it clocks in data at the SDI pin (Master In Slave Out). Therefore one function
+    can handle it all. SPI_OUTPUT() is that function and first stores the byte defined
+    in the parameter section of the function inside the internal SPI buffer register.
+    The SPI hardware will then automatically send out that byte and then receive a
+    byte in the receive buffer. The function returns the byte received to the routine
+    that called this function.
+
+
+    ```
+
+    // ****************************************
+
+    // Hardware SPI Output
+
+    // ****************************************
+
+
+    char SPI_OUTPUT ( char spi_byte )
+
+    {
+
+    SSPBUF = spi_byte;
+
+    do {
+
+    }
+
+    while(!IBF);
+
+    return SSPBUF;
+
+    }
+
+    ```
+
+
+    As I mentioned, SPI is often used to communicate with external EEPROM chips. The
+    WR_BYTE() function was created to talk to a SPI based'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: "```\n// External I/O Expander Write\n// ****************************************\n\
+    void WR_MCP23S08 ( char regist, char data )\n{\n    char dummy;\n    CS = 0; \
+    \                    // Select MCP23S08 by pulling CS low\n    dummy = SPI_OUTPUT\
+    \ ( 0x40 ); // Send Device Opcode, select Write mode\n    dummy = SPI_OUTPUT (\
+    \ regist ); // Send Register Address location\n    dummy = SPI_OUTPUT ( data );\
+    \ // Send Data byte\n    CS = 1;                     // Release EEPROM to allow\
+    \ byte to be written\n}\n```\n\nReading from the MCP23S08 is completed with the\
+    \ RD_MCP23S08 () function.\n\n```\n// ****************************************\n\
+    // External I/O Expander Read\n// ****************************************\n\n\
+    char RD_MCP23S08 ( char regist )\n{\n    char dummy;\n    CS = 0;            \
+    \         // Set chip select low\n    dummy = SPI_OUTPUT (0x41); // Send Device\
+    \ Opcode, select Read mode\n    dummy = SPI_OUTPUT (regist); // Send Address\n\
+    \    char data = SPI_OUTPUT ( 0x00 ); // Receive data byte\n    CS = 1;      \
+    \               // Bring chip select high to terminate\n    return data;\n}\n\
+    ```\n\n*Special Note: Notice that I used all capital letters for the special SPI\
+    \ functions. I did this to separate part specific functions from the generic library\
+    \ functions. When you use these, make sure you use capital letters.*\n\nOne of\
+    \ the more popular requests I received from the previous books was a simpler way\
+    \ to control the hardware PWM port. The PIC16F886 has two of them so I created\
+    \ two PWM functions; pwmout1 () and pwmout2 (). The parameters of the function\
+    \ define the duty cycle and the frequency. Since both PWM’s must use the same\
+    \ clock source on the PIC16F886, they have to have the same frequency. All the\
+    \ register settings are handled in the function so you don’t need to issue a pwm_init\
+    \ function. Once turned on though, the PWMs continue to run. If you want to shut\
+    \ them off you place a CCP1CON == 0 to shut off PWM 1 and CCP2CON to shut off\
+    \ PWM 2."
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "```\n// ****************************************\nchar adcin (char chan)\n\
+    {\nswitch(chan)\n{\ncase 0:\n    TRISA0 = 1;            // Make RA0/AN0 an Input\n\
+    \    ANS0 = 1;              // Configure RA0 to Analog to Digital input\n    ADCON0\
+    \ = 0b11000000;   // Configure A/D to use AN0, left justified\n    break;\n\n\
+    case 1:\n    TRISA1 = 1;            // Make RA1/AN1 an Input\n    ANS1 = 1;  \
+    \            // Configure RA1 to Analog to Digital input\n    ADCON0 = 0b11000100;\
+    \   // Configure A/D to use AN1, left justified\n    break;\n\ncase 2:\n    TRISA2\
+    \ = 1;            // Make RA2/AN2 an Input\n    ANS2 = 1;              // Configure\
+    \ RA2 to Analog to Digital input\n    ADCON0 = 0b11001000;   // Configure A/D\
+    \ to use AN2, left justified\n    break;\n\ncase 3:\n    TRISA3 = 1;         \
+    \   // Make RA3/AN3 an Input\n    ANS3 = 1;              // Configure RA3 to Analog\
+    \ to Digital input\n    ADCON0 = 0b11001100;   // Configure A/D to use AN3, left\
+    \ justified\n    break;\n\ncase 4:\n    TRISA5 = 1;            // Make RA5/AN4\
+    \ an Input\n    ANS4 = 1;              // Configure RA5 to Analog to Digital input\n\
+    \    ADCON0 = 0b11010000;   // Configure A/D to use AN4, left justified\n    break;\n\
+    \ndefault:\n    break;\n}\n\nADON = 1;                // A/D Converter on;\nGODONE\
+    \ = 1;              // Start A/D conversion on AN0\nPause (1);               //\
+    \ Sample Time\nwhile(GODONE == 1);      // Wait for conversion to complete\nchar\
+    \ value = ADRESH;\nreturn value;\n}\n```\n\nIn the first chapter I showed how\
+    \ to use the I2C peripheral. Those functions are now part of the SimpleC library.\
+    \ The first is the i2c_init ().\n\n```\n// ****************************************\n\
+    // Hardware I2C single master routines for PIC16F886\n// for HI-TECH PIC C COMPILER.\n\
+    //\n// i2c_init - initialize I2C functions\n// i2c_start - issue Start condition\n\
+    // i2c_repStart- issue Repeated Start condition\n// i2c_stop - issue Stop condition\n\
+    // i2c_read(x) - receive unsigned char - x=0,\n// don't acknowledge - x=1, acknowledge\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "```\n// i2c_write - write unsigned char - returns ACK\n//\n//**********************************************************\n\
+    void i2c_init()\n{\nTRISC3=1;      // set SCL and SDA pins as inputs\nTRISC4=1;\n\
+    SSPCON = 0x38;  // set I2C master mode\nSSPCON2 = 0x00;\n// Formula for SSPADD\
+    \ register value: SSPADD = [(Fosc/4)/BitRate] - 1\nSSPADD = 0x27;   // 100K at\
+    \ 16Mhz clock\n                 // [(16Mhz/4)/100khz]-1 = 39 or 0x27 hex\n\nSMP=1;\
+    \           // disable slew rate control for 100khz operation\nSSPIF=0;      \
+    \   // clear SSPIF interrupt flag\nBCLIF=0;         // clear bus collision flag\n\
+    }\n```\n\nYou have to make sure the I2C bus is ready for transmit or receive so\
+    \ a function to test the status bits is handled with the i2c_waitForIdle routine.\n\
+    \n```\n//**********************************************************\nvoid i2c_waitForIdle()\n\
+    {\nwhile ((SSPCON2 & 0x1F ) | RW ){}; // wait for idle and not writing\n}\n```\n\
+    \nAn I2C start bit is created with the i2c_start( ) function.\n\n```\n//**********************************************************\n\
+    void i2c_start()\n{\ni2c_waitForIdle();\nSEN=1;\n}\n```\n\nAn I2C repeat start\
+    \ bit is created with the i2c_repstart( ) function.\n\n```\n//**********************************************************\n\
+    void i2c_repStart()\n{\ni2c_waitForIdle();\nRSEN=1;\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: "A stop bit is similar using the i2c_stop() function. It waits for bus idle\
+    \ before sending the bit.\n\n```\n//***********************************************\n\
+    void i2c_stop()\n{\n    i2c_waitForIdle();\n    PEN=1;\n}\n```\n\nThe heavy work\
+    \ of the I2C is sending and receiving the bytes. The receive portion is handled\
+    \ by the i2c_read() function. It issues an ACK bit if the ack parameter is zero.\n\
+    \n```\n//***********************************************\nint i2c_read( unsigned\
+    \ char ack )\n{\n    unsigned char i2cReadData;\n    i2c_waitForIdle();\n    RCEN=1;\n\
+    \    i2c_waitForIdle();\n    i2cReadData = SSPBUF;\n    i2c_waitForIdle();\n \
+    \   if ( ack )\n    {\n        ACKDT=0;\n    }\n    else\n    {\n        ACKDT=1;\n\
+    \    }\n    ACKEN=1;      // send acknowledge sequence\n    return( i2cReadData\
+    \ );\n}\n//***********************************************\n```\n\nThe i2c_write()\
+    \ function stores the parameter byte in the I2C peripheral buffer and then sends\
+    \ that byte. If an ACK bit is received, the function returns a 1 indicating a\
+    \ proper communication occurred.\n\n```\nunsigned char i2c_write( unsigned char\
+    \ i2cWriteData )\n{\n    i2c_waitForIdle();\n```"
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: "```\nSSPPBUF = I2CwriteData;\nreturn ( ! ACKSTAT ); // function returns '1'\
+    \ if transmission is acknowledged\n}\n// ******************************************\n\
+    // I2C EEOUT function to write to an 8-bit address Microchip\n// EEPROM part (i.e.\
+    \ 24LC01) with 8 byte address (2k bit max)\n// ******************************************\n\
+    ```\n\nProbably the most common use of I2C is communicating with EEPROM so I wrote\
+    \ the I2C_EEOUT () and I2C_EEIN () functions to handle this communication using\
+    \ the functions I previously described. You can use these as the format for future\
+    \ I2C communication as they are all very familiar.\n\n```\nvoid I2C_EEOUT(unsigned\
+    \ char address, unsigned char data)\n{\n    i2c_start();\n    i2c_write(0xa0);\n\
+    \    i2c_write(address);\n    i2c_write(data);\n    i2c_stop();\n    pause(11);\n\
+    }\n```\n\n```\n// ******************************************\n// I2C EEIN function\
+    \ to read from an 8-bit address Microchip\n// EEPROM part (i.e. 24LC01) with 8\
+    \ byte address (2k bit max)\n// ******************************************\n```\n\
+    \n```\nunsigned char I2C_EEIN(unsigned char address)\n{\n    unsigned char data;\n\
+    \n    i2c_start();\n    i2c_write(0xa0);\n    i2c_write(address);\n    i2c_repStart();\n\
+    \    i2c_write(0xa1);\n    data=i2c_read(0);\n    i2c_stop();\n    return(data);\n\
+    }\n```\n\nYou should now have a basic understanding and reference of what options\
+    \ you have when using the SimpleC library. Now let me use the rest of the book\
+    \ to show you how easy this library makes programming the PIC16F886 in the CHIPINO\
+    \ module. Some of these projects are repeats of the projects in Volume 1 and Volume\
+    \ 2 of this book series but you will see they are much quicker to write and much\
+    \ easier to understand."
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# Chapter 4 – SimpleC Digital Output
+
+
+    This may seem like we are retracing our steps if you have read through Volume
+    1 of this book series but we have to start with the basics to make sure everything
+    is working correctly. The best way to do that is with a flash LED project. You
+    can easily replace the LED with a transistor driving a relay or any item that
+    can be digitally controlled. The point is to show how to drive a port pin with
+    the SimpleC library function high(). For those new to MPLAB I’ll step through
+    creating a software project in this chapter. You can use this for a reference
+    in future project chapters since I won’t bore you with this for every project.
+    Once you learn it for one project, it will work for all.
+
+
+    # Project Creation in MPLAB
+
+
+    The software is already pre-written and available to download from my website
+    at http://www.elproducts.com/ebook3files. To get started creating a project in
+    MPLAB we use the project wizard. You should have the MPLAB icon on your desktop
+    so double click on it to open MPLAB. You should see the screen below.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_100_0.png)
+
+
+    Figure 4-1: MPLAB Initial Screen'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: 'As you can see, MPLAB doesn''t have much to show but it''s where it all starts.
+    I''ll now step you through creating a project in MPLAB. Every time you want to
+    start a new software design you will create a project. That project will have
+    all your c files and header files included plus any supporting files you might
+    include. When the project is fully setup, MPLAB will save two files under the
+    suffix “.mcp” and “.mcw” (i.e. project1.mcp).
+
+
+    The “.mcp” file will link all your software files and the “.mcw” will link all
+    the windows you have open in your MPLAB setup. If you open any of the simulator
+    windows or any of the many features built into MPLAB, you won’t have to do that
+    again because all of it will be saved in the “.mcw” file so you can easily get
+    back to where you were if you have to shut down your project.
+
+
+    To make creating a project easier, MPLAB has a “wizard” feature that will step
+    you through creating a project. We’ll do that here with the first project so you
+    see how to set a project up using the wizard. Figure 4-2 shows the first step.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_101_0.png)
+
+
+    Figure 4-2: MPLAB Project Wizard Selection'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: 'Click on the “Project” menu option in the MPLAB screen to get to the Project
+    Wizard option. It will be the first item to select. Click on that Project Wizard
+    sub-menu option to open the window shown in Figure 4-3.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_102_0.png)
+
+
+    # Figure 4-3: MPLAB Project Wizard Screen 1
+
+
+    You should now have a separate window within the MPLAB environment that welcomes
+    you to the project wizard. Click on the “Next” button to move forward.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_102_1.png)
+
+
+    # Figure 4-4: MPLAB Project Wizard Screen 2'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: 'Step four of the project setup process is where you add any pre-written C files.
+    Typically you will modify an existing file to save time rather than start from
+    scratch. In the left window you scroll to find the flash LED file. Highlight that
+    file by clicking on it and then click on the “Add >>” button. It should appear
+    on the right side of the screen. If you cannot find the LED file then download
+    the files from my website and store them at a known location on your computer.
+
+
+    Next to the selected file you’ll see a big “A”. If you click on this several times
+    you will see a “C” appear next to it. The “C” will force a copy of the file to
+    be saved in the directory you created back at screen three. I like to do this
+    so I keep all my changes in one directory and leave the original files intact.
+    Figure 4-8 shows the final result.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_105_0.png)
+
+
+    Figure 4-8: MPLAB Project Wizard Screen 6
+
+
+    # SimpleC Setup
+
+
+    Here is where the SimpleC files get added. If you don’t want to use the SimpleC
+    library then you can click next to move on. If you do want to use the SimpleC
+    library then you need to add the simplec1.1h and simplec1.1.c files to the project.
+    On the left side of the step four screen, locate the SimpleC files and add them
+    to the right side. Click on the A until it changes'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: 'to C for both SimpleC files. This will save a copy of those files to the same
+    directory as your project while leaving the original SimpleC files untouched.
+
+
+    The screen in Figure 4-9 is the final screen in the project setup. When you get
+    here you have successfully created your project. Just click finish and the MPLAB
+    window will show all the files in your project.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_106_0.png)
+
+
+    Figure 4-9: Final MPLAB Project Wizard Screen
+
+
+    The project screen shown in Figure 4-10 may initially be blank so to show the
+    project and output windows click on the View>Project option from the top menu.
+    You will see a check mark appear and the window will also pop up typically in
+    the upper left corner with your project files shown.'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_107_0.png)
+
+
+    Figure 4-10: MPLAB Project Screens
+
+
+    Click on the View>Output option in the menu and the output window will appear
+    typically at the bottom of the screen. The project window will show the C file
+    you selected earlier. Double click on the C file in your project and the MPLAB
+    Editor window should open up with the code listing displayed. Figure 4-11 shows
+    the editor screen open with the program file open.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_107_1.png)
+
+
+    Figure 4-11: MPLAB Editor Window
+
+
+    You would typically modify the file in the editor window to get the program written
+    the way you want. When the file modifications are complete then you are ready
+    to compile it using the HI-TECH compiler. MPLAB makes'
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: 'this easy with a simple click of the “Build All” button located at the top
+    of the screen as shown in Figure 4-12.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_108_0.png)
+
+
+    # Figure 4-12: MPLAB Project Build All
+
+
+    If your code has any errors this is the step where they show up. The results from
+    the “Build All” will be displayed in the output window. I did it for my sample
+    project and the build was successful as shown in Figure 4-13.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_108_1.png)
+
+
+    # Figure 4-13: MPLAB Build All Success
+
+
+    Once the build is successful we want to load the code into the PIC16F886 and we
+    do that with either the CHIPAXE PK2 clone programmer or a Microchip PICkit 2 Programmer.
+    Click on the Programmer>Select Programmer>PICkit 2 menu selection to enable the
+    PICkit 2 as shown in Figure 4-14. You can also use a PICkit 3 or ICD3 if you have
+    one of those. Just select them from the drop down menu rather than the PICkit
+    2.'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_112_0.png)
+
+
+    Figure 4-19B: CHIPINO Module Setup
+
+
+    # Software
+
+
+    The software is easy to follow and understand. If you have ever used a BASIC compiler
+    for PICs it will look very familiar. The SimpleC library has a high and low function
+    for setting pins. The functions set the TRIS register and then write a 1 to the
+    port register pin if using high and writes a 0 if using a low function. The pause
+    function I’ve used in previous books is now part of the SimpleC library so the
+    delay portion is easy to implement. The program just loops through setting and
+    clearing the LED port pin.'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "```\n/*********************************\nFlash an LED example using SimpleC\n\
+    This code will drive an LED on pin 8(RB0)\nand flash it on and off at a 1 second\
+    \ rate.\nConnections:\nPIN 8(RB0) to LED Anode\nLED Cathode to 1k ohm\n1k ohm\
+    \ to Ground\n*********************************/\n```\n\n```\n#include \"simplec1.1.h\"\
+    \n```\n\n```\nvoid\nmain(void)\n{\n    init_micro();    // Initialize I/O\n  \
+    \  while (1==1)\n    {\n        high(8);\n        pause (1000);    // Delay for\
+    \ 1 second (1.0000 sec)\n        low(8);\n        pause (1000);    // Delay for\
+    \ 1 second\n    }\n}\n```\n\n# How it Works\n\nThe first part of the program just\
+    \ contains a description header indicating what the code does and then describes\
+    \ the electrical connections.\n\n```\n/*********************************\nFlash\
+    \ an LED example using SimpleC\nThis code will drive an LED on pin 8(RB0)\nand\
+    \ flash it on and off at a 1 second rate.\nConnections:\nPIN 8(RB0) to LED Anode\n\
+    LED Cathode to 1k ohm\n1k ohm to Ground\n*********************************/\n\
+    ```\n\nThe SimpleC library is setup with the inclusion of the simplec1.1.h file.\
+    \ All the configuration settings and some of the defines used by the SimpleC library\
+    \ are setup in this header file so all SimpleC files need to include it.\n\n```\n\
+    #include \"simplec1.1.h\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "The main loop of code starts off with an init_micro function. This function\
+    \ sets the analog pins to digital and turns off any comparators. This was standard\
+    \ code added to every project in my previous books so I reduced it down to one\
+    \ function in the SimpleC library. Needless to say, this should also be part of\
+    \ every SimpleC project file.\n\n```\nvoid\nmain(void)\n{\n    init_micro(); \
+    \   // Initialize I/O\n}\n```\n\nThe main loop of code contains the high and low\
+    \ functions along with two pause functions that delay for 1000 milliseconds creating\
+    \ the one second on, one second off blink. The nice feature of the high and low\
+    \ is they control the bit defined by the parameter. These were written to match\
+    \ the numbered pins of the CHIPINO modules. A value of 1 to 13 is allowed, as\
+    \ those are the pin numbers of the CHIPINO. You cannot put pin name such as RB0\
+    \ in place of the number. You have to stick with the numbering system.\n\n```\n\
+    while (1==1)\n{\n    high(8);\n    pause(1000);    // Delay for 1 second (1.0000\
+    \ sec)\n    low(8);\n    pause (1000);   // Delay for 1 second\n}\n```\n\n# Next\
+    \ Steps\n\nThe options you have for this simple project is really up to your imagination.\
+    \ The high and low functions work on one pin at a time so controlling multiple\
+    \ pins can make a program very easy to write but also very long. I find these\
+    \ functions work best when you just need a simple way to control a pin. With that\
+    \ in mind maybe change the hardware to control a relay or maybe use this simple\
+    \ blink program to create a pulse that controls a servo motor. It can be a great\
+    \ way to demonstrate how controlling a digital pin is at the heart of everything\
+    \ a micro does."
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '# # Chapter 5 – SimpleC Digital Input
+
+
+    Reading an input is not difficult to do in C as I’ve shown in my previous books
+    but I still decided to make a function that could read a port pin easily by setting
+    the TRIS or direction register and then reading the port state for a particular
+    port pin. This project shows how to do that by monitoring a momentary switch and
+    then lighting one LED when the switch is pressed and the other when the switch
+    is idle.
+
+
+    # ## Hardware
+
+
+    The circuitry for this project is shown in Figure 5-1 and has all the connections
+    to the PIC16F886 shown. The port pin names are on the schematic image of the chip
+    but the CHIPINO Mini numbered pin names are shown on the tabs. The switch is tied
+    to pin 8, which is also RB0. The switch is pulled high to V+ during its normally
+    open idle state. When the switch is pressed, the RB0/8 pin will see a low or ground
+    value. The LEDs are tied to pin 9 and 10 of the CHIPINO Mini module.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_116_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# Figure 5-1: SimpleC Input Schematic
+
+
+    The breadboard setup, in Figure 5-2A, shows the connections that you can match
+    with your own breadboard setup. The module is offset to the bottom of the breadboard
+    so all the port wires can run across the top. The power comes in through the programmer
+    connected to the CHIPINO Mini module that supplies power to the rails through
+    two jumpers. The upper rail has the negative on the outer row while the inner
+    row is the positive. On the bottom of the breadboard the inner row is negative
+    via the long jumper from top to bottom. Figure 5-2B shows the same setup using
+    the CHIPINO module.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_117_0.png)
+
+
+    # Figure 5-2A: Breadboard Setup'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: "Now that we have the state of the switch stored we can test it to perform different\
+    \ operations. If the value is 1 or switch is idle, then using the high and low\
+    \ functions we turn on one LED and turn off the other. If the switch is pressed\
+    \ then the reverse lighting of the LEDs occurs. This runs continuous so we can\
+    \ see any press or release of the switch quickly.\n\n```\nif (value == 1)\n{\n\
+    \    //*** Switch is idle ***\n    high(11);     // Pin 11 LED on\n    low(10);\
+    \      // Pin 10 LED off\n}\nelse\n{\n    //*** Switch is Pressed ***\n    low(11);\
+    \      // Pin 11 LED off\n    high(10);     // Pin 10 LED on\n}\n}\n```\n\n# Next\
+    \ Steps\n\nAn obvious next step is to change what happens when the switch is pressed.\
+    \ As you get more knowledgeable of the SimpleC library you will find it very easy\
+    \ to display something on an LCD or to send a SPI or I2C signal when the switch\
+    \ is pressed."
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# Chapter 6 – SimpleC LCD Control
+
+
+    Controlling a 2x16 LCD character module with a single command line would extremely
+    useful. I’ve seen this done in BASIC compilers that one command line had numerous
+    different parameter options. Rather than have multiple options I decided to create
+    a set of simple functions for displaying characters and numbers on a 2x16 LCD.
+    This chapter details how to use this feature of the SimpleC library with two separate
+    software projects using one common hardware setup.
+
+
+    # Hardware
+
+
+    The hardware connections are defined in the simplec1.1.h file using the PORTB
+    pins, which are pins 8 thru 13 on the CHIPINO. These six pins control the E, RS
+    and DB4-DB7 pins of the LCD module, which is all you need for 4-bit mode operation,
+    the most common LCD control. The schematic in Figure 6-1 shows the connections
+    and the breadboard layout is shown in Figure 6-2A. Figure 6-2B is for those using
+    a CHIPINO module.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_122_0.png)
+
+
+    Figure 6-1: LCD Schematic'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_123_0.png)
+
+
+    # Figure 6-2A: LCD Breadboard Setup
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_123_1.png)
+
+
+    # Figure 6-2B: CHIPINO Module with LCD
+
+
+    This hardware setup will work for both of the software projects to follow.
+
+    The Vo pin of the LCD is grounded which gives maximum contrast. On some LCD''s
+    this makes it tough to read so you may want to add a resistor divider or potentiometer
+    output on that pin so you can adjust the voltage and thus the contrast.'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# Software Project 1
+
+
+    The first project demonstrates how to use the lcd_symbol() function. This SimpleC
+    function is designed to display ASCII characters on the LCD. Any character can
+    be created as long as you know the ASCII value. This project will create a count
+    from 0 to 9 on the LCD by rotating through the ASCII values for the characters
+    0 to 9. The “How it Works” section of this chapter will describe how it’s done.
+
+
+    ```
+
+    /*
+
+    This project displays a zero to nine count on the LCD using
+
+    the lcd_symbol() function.
+
+
+    LCD
+
+    PIN 1 - Gnd
+
+    PIN 2 - 5v
+
+    PIN 3 - Gnd
+
+    PIN 4 - RB4/CHIPINO Pin 12 (RS)
+
+    PIN 5 - Gnd
+
+    PIN 6 - RB5/CHIPINO Pin 13 (EN)
+
+    PIN 7 - NC
+
+    PIN 8 - NC
+
+    PIN 9 - NC
+
+    PIN 10 - NC
+
+    PIN 11 - RB0/CHIPINO Pin 8 (DB4)
+
+    PIN 12 - RB1/CHIPINO Pin 9 (DB5)
+
+    PIN 13 - RB2/CHIPINO Pin10 (DB6)
+
+    PIN 14 - RB3/CHIPINO Pin11 (DB7)
+
+    */
+
+
+    #include "simplec1.1.h"
+
+
+    void
+
+    main(void)
+
+    {
+
+    init_micro();   // Initialize I/O
+
+    lcd_init();     // Initialize LCD Display
+
+    lcd_clear();    // Clear LCD screen
+
+
+    while (1==1)
+
+    {
+
+    for (char x=0;x<10;x=x+1)    // Create count of 0 thru 9
+
+    {
+
+    lcd_goto(0);        // Select first line
+
+    lcd_symbol(0x30+x); // Display decimal value
+
+    pause(1000);        // Delay to read display
+
+    }
+
+    } //End While
+
+    } //End Main
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: "The screen of the LCD is cleared with the lcd_clear function. This clears the\
+    \ screen and positions the cursor at the home or first character block position.\n\
+    \n```\nlcd_clear();    // Clear LCD screen\n```\n\nNow we enter the main while\
+    \ loop that actually displays the count on the LCD. The while-loop contains a\
+    \ for-loop that creates and increments an 8-bit variable. When the variable equals\
+    \ 10, the for-loop ends.\n\n```\nwhile (1==1)\n{\n    for (char x=0;x<10;x=x+1)\
+    \    // Create count of 0 thru 9\n    {\n```\n\nThe first SimpleC function in\
+    \ the for-loop is the lcd_goto function. This function has the parameter 0 so\
+    \ it positions the cursor at the first position of the LCD. This was already done\
+    \ when we cleared the screen but in the loop we need to reposition it each time.\n\
+    \n```\nlcd_goto(0);    // Select first line\n```\n\nThe next SimpleC function\
+    \ we use is the lcd_symbol function. This sends the ASCII value in the parameter\
+    \ section to the LCD. In this case we send the loop variable value (0-9) to the\
+    \ LCD but first add the hex value 30 to create the proper ASCII value to send.\
+    \ The number 1 has the ASCII value 31 hex, 32 hex is for 2, etc.\n\n```\nlcd_symbol(0x30+x);\
+    \    // Display decimal value\n```\n\nThe program then uses the SimpleC pause\
+    \ function to delay 1000 milliseconds or 1 second before incrementing the variable.\
+    \ This makes the numbers change at a one second rate. From there the while-loop\
+    \ ends and so does the main-loop so this code runs over and over again.\n\n```\n\
+    pause(1000);    // Delay to read display\n} //End While\n} //End Main\n```"
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: "# Software Project 2\n\nWriting ASCII characters to the LCD is useful but more\
+    \ often you'll probably want to display a full message of text. Sending each individual\
+    \ ASCII character could do this or you could use the lcd_text function in SimpleC.\
+    \ This next project uses that function to display a message on the first and second\
+    \ line of the 2x16 LCD.\n\n```\n/*\nThis project creates a message on a 2x16 LCD\
+    \ module\nusing the lcd_text() function.\n\nLCD\nPIN 1 - Gnd\nPIN 2 - 5v\nPIN\
+    \ 3 - Gnd\nPIN 4 - RB4/CHIPINO Pin 12 (RS)\nPIN 5 - Gnd\nPIN 6 - RB5/CHIPINO Pin\
+    \ 13 (EN)\nPIN 7 - NC\nPIN 8 - NC\nPIN 9 - NC\nPIN 10 - NC\nPIN 11 - RB0/CHIPINO\
+    \ Pin 8 (DB4)\nPIN 12 - RB1/CHIPINO Pin 9 (DB5)\nPIN 13 - RB2/CHIPINO Pin10 (DB6)\n\
+    PIN 14 - RB3/CHIPINO Pin11 (DB7)\n\n*/\n\n#include \"simplec1.1.h\"\n\nvoid main(void)\n\
+    {\n    init_micro();    // Initialize I/O\n    lcd_init();      // Initialize\
+    \ LCD Display\n    lcd_clear();     // Clear LCD screen\n\n    while (1==1)\n\
+    \    {\n        lcd_goto(0);                // Select first line\n        lcd_text(\"\
+    Simple C Makes\");    // Display Hello World\n\n        lcd_goto(0x40);      \
+    \       // Select second line\n        lcd_text(\"Programming Easy\");\n\n   \
+    \     pause (10000);              // Delay for 1 second to read display\n    }\
+    \ //End While\n} //End Main\n```"
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: 'The SimpleC lcd_text function does the work for us. The parameters of this
+    function are placed between quotes so it knows this is a string. Each letter is
+    then sent as an ASCII value to the LCD module. This displays the message “Simple
+    C Makes” on the first line of the LCD.
+
+
+    ```
+
+    ```c
+
+    lcd_text("Simple C Makes");    // Display Hello World
+
+    ```
+
+    ```
+
+
+    Now the LCD cursor is positioned on the second line with a hex value 40 as the
+    parameter. This is the value for the beginning of the second line. The lcd_goto
+    handles the code that indicates this is a command character. After this function
+    runs, the cursor will be at the beginning of the second line.
+
+
+    ```
+
+    ```c
+
+    lcd_goto(0x40);                 // Select second line
+
+    ```
+
+    ```
+
+
+    Now the lcd_text function is used to write the second message, which is “Programming
+    Easy”.
+
+
+    ```
+
+    ```c
+
+    lcd_text("Programming Easy");
+
+    ```
+
+    ```
+
+
+    We pause a second and then loop back to write the message again.
+
+
+    ```
+
+    ```c
+
+    pause (10000);           // Delay for 1 second to read display
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```c
+
+    } //End While
+
+    ```
+
+    ```
+
+
+    ```
+
+    ```c
+
+    } //End Main
+
+    ```
+
+    ```
+
+
+    # Next Steps
+
+
+    You can change the message in the second project and even play with the lcd_goto
+    functions to move the message around. The first project can count through the
+    whole ASCII library if you want by increasing the loop count and starting at a
+    lower value. You can combine the two and display a message on the first line and
+    then a number on the second line. In fact that is what the next chapter does with
+    another of the SimpleC LCD functions. Let’s move on to the next chapter and use
+    the same hardware with a few additional connections.'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_131_0.png)
+
+
+    # Figure 7-1: Project Schematic
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_131_1.png)
+
+
+    # Figure 7-2: Project Breadboard'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: "```\n*****************************/\n\n#include \"simplec1.1.h\"\n\nvoid\n\
+    main(void)\n{\n    init_micro();    // Initialize I/O\n    lcd_init();      //\
+    \ Initialize LCD Display\n    lcd_clear();     // Clear LCD screen\n\n    while\
+    \ (1==1)\n    {\n        lcd_goto(0);        // Select first line\n        lcd_text(\"\
+    ADCin Reading\");  // Display Hello World\n        char value = adcin(0);  //\
+    \ Get ADC reading and store in value\n        lcd_goto(0x40);     // Select second\
+    \ line\n        lcd_number(value);  // Display ADC reading on LCD\n        pause\
+    \ (10);         // Delay 10 millisecond between samples\n    }\n}\n```\n\n# How\
+    \ it Works\n\nThe program starts off with a header block that describes the hardware\
+    \ connections.\n\n```\n/****************************\nAnalog to Digital converter\
+    \ (ADC) example using SimpleC\nThis code will read the voltage on RA0 pin with\
+    \ the\nADC and then display it on the LCD.\n```\n\n# POT\n\n+   - PIN 1 - Gnd\n\
+    +   - PIN 2 - RA0/CHIPINO Pin AN0\n+   - PIN 3 - 5v\n\n# LCD\n\n+   - PIN 1 -\
+    \ Gnd\n+   - PIN 2 - 5v\n+   - PIN 3 - Gnd\n+   - PIN 4 - RB4/CHIPINO Pin 12 (RS)\n\
+    +   - PIN 5 - Gnd\n+   - PIN 6 - RB5/CHIPINO Pin 13 (EN)\n+   - PIN 7 - NC\n+\
+    \   - PIN 8 - NC\n+   - PIN 9 - NC\n+   - PIN 10 - NC\n+   - PIN 11 - RB0/CHIPINO\
+    \ Pin 8 (DB4)\n+   - PIN 12 - RB1/CHIPINO Pin 9 (DB5)"
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: 'hexadecimal). This function is really useful for displaying numerical values
+    on an LCD.
+
+
+    ```
+
+    lcd_goto(0x40);    // Select second line
+
+    lcd_number (value);    // Display ADC reading on LCD
+
+    ```
+
+
+    We add a pause (10) to the program to delay reading the voltage thus allowing
+    the display to look a little more stable. The potentiometer voltage is pretty
+    steady so this isn’t necessary but helps if you want to use this project to read
+    any input voltage that is cycling between 0 volts to 5 volts. This pause function
+    also ends the loop so we circle back and read the potentiometer again and do this
+    continuously within the while-loop.
+
+
+    ```
+
+    pause (10);    // Delay 10 millisecond between samples
+
+    }
+
+    ```
+
+
+    # Next Steps
+
+
+    You could replace the LCD with LEDs to create a bar graph display of light that
+    changes with the turning of the potentiometer. You could also add some other functions
+    such as the PWM library function so the potentiometer controls a motor’s speed
+    or an LED’s brightness and still show the value on the LCD. You could also replace
+    the potentiometer with a light sensor to let the light change the resistance and
+    thus the voltage. This would make a crude light meter. This project is easily
+    adapted to many different analog sensors. Having the LCD readout makes it easy
+    to see the sensor results.'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_138_0.png)
+
+
+    Figure 8-2B: CHIPINO Module Breadboard Setup
+
+
+    # Software
+
+
+    The software initially writes 10 bytes of data to the EEPROM and then it reads
+    back those 10 bytes to display them on the LCD. If the first part doesn’t work
+    then the second part will display whatever was left in those EEPROM locations.
+
+
+    ```
+
+    /* SPI_EEPROM example using the Microchip 25LC020
+
+    The program writes to the first 10 locations
+
+    and then reads back those writes and displays
+
+    them on the LCD.
+
+    ```
+
+
+    +   SPI EEPROM
+
+    +   PIN 1 - RA5 (CHIPINO AN4 pin)
+
+    +   PIN 2 - RC4 (CHIPINO PIN 3)
+
+    +   PIN 3 - V+
+
+    +   PIN 4 - Gnd
+
+    +   PIN 5 - RC5 (CHIPINO PIN 2)
+
+    +   PIN 6 - RC3 (CHIPINO PIN 4)
+
+    +   PIN 7 - V+
+
+    +   PIN 8 - V+
+
+
+    +   LCD
+
+    +   PIN 1 - Gnd
+
+    +   PIN 2 - V+
+
+    +   PIN 3 - Gnd
+
+    +   PIN 4 - RB4/CHIPINO Pin 12 (RS)
+
+    +   PIN 5 - Gnd
+
+    +   PIN 6 - RB5/CHIPINO Pin 13 (EN)
+
+    +   PIN 7 - NC
+
+    +   PIN 8 - NC
+
+    +   PIN 9 - NC
+
+    +   PIN 10 - NC
+
+    +   PIN 11 - RB0/CHIPINO Pin 8 (DB4)
+
+    +   PIN 12 - RB1/CHIPINO Pin 9 (DB5)
+
+    +   PIN 13 - RB2/CHIPINO Pin10 (DB6)'
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: "```\nPIN 14 - RB3/CHIPINO Pin11 (DB7)\n*/\n\n#include \"simplec_1.1.h\"\n#define\
+    \ number 0x30\n\nvoid\nmain(void)\n{\ninit_micro();    // Initialize PIC16F886\n\
+    spi_init();      // Initialize SPI Peripheral\nlcd_init();      // Initialize\
+    \ LCD Display\n\n//*** Load Data in EEPROM ***\nwhile (1==1)\n{\n    for( char\
+    \ addr = 0; addr < 10; addr = addr + 1) // Loop 10 times\n    {\n        char\
+    \ data = addr;      // addr value is data for SEEPROM\n        WR_BYTE (addr,data);\
+    \   // Write to SEEPROM\n        pause (10);            // Delay 10ms after each\
+    \ write\n    } // End For\n\n//*** Continuous Loop to Read and Display Data ***\n\
+    \    for( char addr = 0; addr <10; addr = addr + 1) // Loop 10 times\n    {\n\
+    \        lcd_clear();           // Clear LCD screen\n        lcd_goto(0);    \
+    \       // select first line\n        lcd_text(\"Address / Value\"); // Display\
+    \ header\n        char b0 = RD_BYTE (addr); // Read from SEEPROM\n        lcd_goto(0x40);\
+    \        // Select second line\n        lcd_symbol(addr + number); // Display\
+    \ value read from\n                           //EEPROM on LCD\n        lcd_text(\"\
+    \ / \");\n        lcd_symbol(b0 + number); // Display value read from\n      \
+    \                     //EEPROM on LCD\n        pause (250);           // Delay\
+    \ 250 msec to see count\n    } //End For\n} //End While\n} //End Main\n```\n\n\
+    # How it Works\n\nThe header block describes the project and then also describes\
+    \ the connections.\n\n```\n/* SPI_EEPROM example using the Microchip 25LC020\n\
+    The program writes to the first 10 locations\nand then reads back those writes\
+    \ and displays\n```"
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: "The first action the code does is load the data into the EEPROM. This is done\
+    \ in a for loop that cycles through 10 times.\n\n```\n//*** Load Data in EEPROM\
+    \ ***\nwhile (1==1)\n{\n    for( char addr = 0; addr < 10; addr = addr + 1) //\
+    \ Loop 10 times\n    {\n```\n\nWithin the for loop, the data to be sent to the\
+    \ EEPROM will be the same as the address and also the same as the for loop counter\
+    \ value.\n\n```\nchar data = addr;    // addr value is data for SEEPROM\n```\n\
+    \nHere is where the SimpleC library comes in. The WR_BYTE function takes the parameters\
+    \ and sends it to the EEPROM. The first parameter is the address and the second\
+    \ is the data byte. This function handles all the communication to the EEPROM.\
+    \ It takes time for the external EEPROM to complete the write so a delay of 10\
+    \ milliseconds is added. That completes the initial write to EEPROM.\n\n```\n\
+    WR_BYTE (addr,data);    // Write to SEEPROM\npause (10);             // Delay\
+    \ 10ms after each write\n} // End For\n```\n\nNow we loop through the memory to\
+    \ read each byte we just wrote to the EEPROM. We do this in a for loop again with\
+    \ the same 10 count. Most of this loop contains functions to control the LCD.\n\
+    \n```\n//*** Continuous Loop to Read and Display Data ***\nfor( char addr = 0;\
+    \ addr <10; addr = addr + 1) // Loop 10 times\n{\n```\n\nThe LCD is cleared and\
+    \ positioned at the beginning of line 1. Then the screen displays a header for\
+    \ the data “Address / Value” on the first line. These are all done with the SimpleC\
+    \ functions.\n\n```\nlcd_clear();            // Clear LCD screen\nlcd_goto(0);\
+    \            // select first line\nlcd_text(\"Address / Value\");  // Display\
+    \ header\n```\n\nNow the SimpleC function for reading the data is performed. A\
+    \ char variable b0 is created on the same line that executes the RD_BYTE function.\
+    \ This"
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "function retrieves the data from the EEPROM at the address in the address parameter.\
+    \ The byte received is stored in the b0 variable.\n\n```\nchar b0 = RD_BYTE( addr);\
+    \   // Read from SEEPROM\n```\n\nNow that we have the data and already know the\
+    \ address, we position the LCD to the second line and then display the address\
+    \ value and the data value using separate lcd_symbol functions. The values are\
+    \ added to the constant “number” so the value sent to the LCD is the ASCII value\
+    \ for the value. This method works because all the values are single digit values.\n\
+    \n```\nlcd_goto(0x40);          // Select second line\nlcd_symbol(addr + number);\
+    \   // Display value read from\n                           //EEPROM on LCD\nlcd_text(\"\
+    \ / \");\nlcd_symbol(b0 + number);   // Display value read from\n            \
+    \               //EEPROM on LCD\n```\n\nA delay is added so we can easily read\
+    \ the values displayed on the LCD.\n\n```\npause (250);          // Delay 250\
+    \ msec to see count\n} //End For\n} //End While\n} //End Main\n```\n\n# Next Steps\n\
+    \nYou can play with the first loop to change the data being stored and verify\
+    \ it works by monitoring the display. You can also expand the project to store\
+    \ more data but you’ll have to modify the way the data is displayed on the LCD\
+    \ because larger amounts of data mean address values larger than single digit."
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: '# Project 2 – Inputs from MCP23S08
+
+
+    The MCP23S08 is a SPI I/O expander and is great for adding up to eight digital
+    pins to your project by sacrificing the four SPI pins. This project doesn''t use
+    all eight but does use a few to show how to sense a switch with the MCP23S08 and
+    then control LEDs based on the state of the switch. The communication between
+    the PIC16F886 and the MCP23S08 is through the SPI peripheral. The SimpleC library
+    has functions specific for this MCP23S08 chip so the code is easier to write.
+
+
+    # Hardware
+
+
+    The schematic is shown in Figure 8-3 and shows all the connections to the PIC
+    along with the two LEDs and switch connected to the MCP23S08. The breadboard version
+    is shown in Figure 8-4A using the CHIPINO Mini and Figure 8-4B uses the CHIPINO
+    module. In this case I only show the CHIPINO Mini version of the breadboard setup.
+    Power to the rails is supplied through the CHIPINO Mini module, which gets its
+    power from the PICkit 2 programmer (not shown in picture). The upper power rail
+    has ground on the outer space while 5v is on the inner rail. The lower power rail
+    is the opposite. The two positive rails are connected together at the right side
+    of the breadboard. The 10k resistor that connects to the switch appears to share
+    the same hole as the wire, which it does in this picture. In reality the resistor
+    was one hole higher but the drawing software wouldn''t allow it so I left them
+    sharing a hole.'
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_144_0.png)
+
+
+    Figure 8-3: SPI Project 2 Schematic
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_144_1.png)
+
+
+    Figure 8-4A: SPI Project 2 Breadboard'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '```
+
+    PIN 12 to NC
+
+    PIN 13 to NC
+
+    PIN 14 to NC
+
+    PIN 15 to NC
+
+    PIN 16 to LED1 Anode
+
+    PIN 17 to LED2 Anode
+
+    PIN 18 to 5v
+
+
+    Switch connected ground and 10k resistor, 10k resistor to 5v.
+
+    LED1 and LED2 each Cathode to ground through 1k ohm resistor.
+
+    */
+
+
+    #include "simplecl1.h"
+
+
+    void
+
+    main(void)
+
+    {
+
+    init_micro();
+
+    spi_init();
+
+    WR_MCP23S08 (IODIR, 0x01);   // Setup pins
+
+    while (1==1)
+
+    {
+
+    char y = 1;
+
+    y = RD_MCP23S08 (GPIO); // Read switch
+
+    y = y & 0x01;           // Mask all but bit 7
+
+    if (y==0)
+
+    {WR_MCP23S08 (OLAT, 0x40);}  // If switch idle light LED
+
+    else
+
+    {WR_MCP23S08 (OLAT, 0x80);}  // If switch pressed LED off
+
+    pause(10);
+
+    } //End While
+
+    } //End Main
+
+    ```
+
+
+    # How it Works
+
+
+    The first part of the software is located between two comment indicators so this
+    creates an information header. The operation is described along with a description
+    of the electrical connections.
+
+
+    ```
+
+    /***********
+
+    PIC16F886 SPI - MCP23S08 I/O expander
+
+    The program reads a switch connected to the MCP23S08 GP0 pin.
+
+    It lights the LED connected to GP7 if the switch is idle and
+
+    lights the LED connected to GP6 if the switch is pressed.
+
+
+    Connections
+
+    MCP23S08
+
+    PIN 1 to CHIPINO PIN 4 (SCK/RC3)
+
+    PIN 2 to CHIPINO PIN 2 (SDO/RC5)
+
+    PIN 3 to CHIPINO PIN 3 (SDI/RC4)
+
+    PIN 4 to Gnd
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '```
+
+    PIN 5 to Gnd
+
+    PIN 6 to Vdd
+
+    PIN 7 to CHIPINO PIN SS (A5)
+
+    PIN 8 to NC
+
+    PIN 9 to Gnd
+
+    PIN 10 to Switch/Resistor Connection
+
+    PIN 11 to NC
+
+    PIN 12 to NC
+
+    PIN 13 to NC
+
+    PIN 14 to NC
+
+    PIN 15 to NC
+
+    PIN 16 to LED1 Anode
+
+    PIN 17 to LED2 Anode
+
+    PIN 18 to 5v
+
+
+    Switch connected to ground and 10k resistor, 10k resistor to 5v.
+
+    LED1 and LED 2 each Cathode to ground through 1k ohm resistor.
+
+
+    */
+
+    ```
+
+
+    The header file for SimpleC is included next using quotation marks since the file
+    is included in the same directory as our main C file.
+
+
+    ```
+
+    #include "simplec1.1.h"
+
+    ```
+
+
+    The main loop of code is next and starts off with two initialization functions
+    from the SimpleC library. The init_micro function establishes the I/O setup and
+    then the spi_init function creates the necessary settings for using the hardware
+    SPI port.
+
+
+    ```
+
+    void
+
+    main(void)
+
+    {
+
+    init_micro();
+
+    spi_init();
+
+    }
+
+    ```
+
+
+    The first function dedicated to the MCP23S08 is used to set the pins to their
+    proper input/output state by controlling the IODIR directory. This label IODIR
+    is defined in the simplec1.1.h file. The settings are similar to a PIC in that
+    a 1 is an input and a 0 is an output. So the 8 pins on the MCP23S08 are set to
+    make the GP0 pin an input and the rest are outputs.
+
+
+    ```
+
+    WR_MCP23S08 (IODIR, 0x01);    // Setup pins
+
+    ```
+
+
+    The continuous loop of code is contained in a while loop. The first step is to
+    create the local 8-bit variable y and preset it to 1.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: "```\nwhile (1==1)\n{\n    char y = 1;\n```\n\nThe RD_MCP23S08 function from\
+    \ the SimpleC library is used to test the state of the switch. It actually reads\
+    \ the state of all the pins so we have to use a binary AND function to only see\
+    \ the GP0 bit. After this the y variable will contain the state of the switch.\n\
+    \n```\ny = RD_MCP23S08 (GPIO); // Read switch\ny = y & 0x01;           // Mask\
+    \ all but bit 7\n```\n\nWe test the y variable to see if it’s zero indicating\
+    \ the switch was pressed. If the switch is pressed we use the WR_MCP23S08 function\
+    \ to write to the latch register OLAT which was defined in the simplec1.1h file.\
+    \ We set the GP6 bit to a one to light that LED if the switch is pressed. If the\
+    \ y variable in one meaning the switch is idle then the OLAT register is set to\
+    \ make the GP7 bit a one and light that LED instead.\n\n```\nif (y==0)\n    {WR_MCP23S08\
+    \ (OLAT, 0x40);}  // If switch idle light LED\nelse\n    {WR_MCP23S08 (OLAT, 0x80);}\
+    \  // If switch pressed LED off\n```\n\nWe delay for 10 milliseconds using the\
+    \ pause function from the SimpleC library and then loop back to the beginning\
+    \ of the while loop.\n\n```\n    pause(10);\n} //End While\n```\n\nFinally we\
+    \ end this short program with a bracket for the main loop.\n\n```\n} //End Main\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# Project 3 – Outputs from MCP23S08
+
+
+    This project is just a variation of the previous project as it only drives outputs
+    of the MCP23S08. We did that is the previous project based on the state of a switch.
+    This project uses the same LED connections to create a quick two-bit binary counter
+    with the LEDs as indicators.
+
+
+    # Hardware
+
+
+    The hardware is just a reduced version of the previous project. You can use the
+    same breadboard setup as before so this is a quick addition to the SPI examples.
+    The MCP23S08 can drive LEDs directly as it has a high output current drive for
+    each pin. This can be handy since the LEDs could be replaced with a transistor
+    driving a relay coil.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_149_0.png)
+
+
+    Figure 8-5: SPI Project 3 Schematic'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_150_0.png)
+
+
+    Figure 8-6A: SPI Project 3 Breadboard
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_150_1.png)
+
+
+    Figure 8-6B: SPI Project 3 with CHIPINO Module
+
+
+    # Software
+
+
+    The software is also very similar to the previous project. The software only uses
+    the WR_MCP23S08 function not the RD function. This shortens the program even more
+    and shows how easy SimpleC makes adding outputs to your project.
+
+
+    ```
+
+    /******************
+
+    PIC16F886 SPI - MCP23S08 I/O expander
+
+    The program controls two LEDs connected to the MCP23S08 GP6 and GP7 pin.
+
+    It binary counts from zero to three on the LEDs.
+
+
+    Connections
+
+    MCP23S08
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: "```\nPIN 1 to CHIPINO PIN 4 (SCK/RC3)\nPIN 2 to CHIPINO PIN 2 (SDO/RC5)\nPIN\
+    \ 3 to CHIPINO PIN 3 (SDI/RC4)\nPIN 4 to Gnd\nPIN 5 to Gnd\nPIN 6 to Vdd\nPIN\
+    \ 7 to CHIPINO PIN SS (A5)\nPIN 8 to NC\nPIN 9 to Gnd\nPIN 10 to NC\nPIN 11 to\
+    \ NC\nPIN 12 to NC\nPIN 13 to NC\nPIN 14 to NC\nPIN 15 to NC\nPIN 16 to LED1 Anode\n\
+    PIN 17 to LED2 Anode\nPIN 18 to 5v\n\nLED1 and LED 2 each Cathode to ground through\
+    \ 1k ohm resistor.\n*/\n\n#include \"simplec1.h\"\n\nvoid\nmain(void)\n{\ninit_micro();\n\
+    spi_init();\nWR_MCP23S08 (IODIR, 0x00);    // Setup pins as outputs\nwhile (1==1)\n\
+    {\n    for(char x = 0; x<4; x++)\n    {\n        WR_MCP23S08 (OLAT, x*64);   \
+    \ // Turn on LEDs\n        pause(1000);\n    }\n} //End While\n} //End Main\n\
+    ```\n\n# How it Works\n\nThe program doesn't need much explanation from the previous\
+    \ project. The header is very similar but has the different description and connections.\n\
+    \n```\n/***********************\nPIC16F886 SPI - MCP23S08 I/O expander\nThe program\
+    \ controls two LEDs connected to the MCP23S08 GP6 and GP7 pin.\nIt binary counts\
+    \ from zero to three on the LEDs.\n```"
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: 'Connections
+
+    MCP23S08
+
+    PIN 1 to CHIPINO PIN 4 (SCK/RC3)
+
+    PIN 2 to CHIPINO PIN 2 (SDO/RC5)
+
+    PIN 3 to CHIPINO PIN 3 (SDI/RC4)
+
+    PIN 4 to Gnd
+
+    PIN 5 to Gnd
+
+    PIN 6 to Vdd
+
+    PIN 7 to CHIPINO PIN SS (A5)
+
+    PIN 8 to NC
+
+    PIN 9 to Gnd
+
+    PIN 10 to NC
+
+    PIN 11 to NC
+
+    PIN 12 to NC
+
+    PIN 13 to NC
+
+    PIN 14 to NC
+
+    PIN 15 to NC
+
+    PIN 16 to LED1 Anode
+
+    PIN 17 to LED2 Anode
+
+    PIN 18 to 5v
+
+
+    LED1 and LED2 each Cathode to ground through 1k ohm resistor.
+
+    */
+
+
+    The SimpleC include file is added and then the main loop with the init functions
+    for this project.
+
+
+    ```
+
+    #include "simplec1.1.h"
+
+
+    void
+
+    main(void)
+
+    {
+
+    init_micro();
+
+    spi_init();
+
+    }
+
+    ```
+
+
+    The WR_MCP23S08 function is used to set all pins to outputs by writing all zeros
+    to the IODIR register.
+
+
+    ```
+
+    WR_MCP23S08 (IODIR, 0x00);  // Setup pins as outputs
+
+    ```
+
+
+    The while loop contains a for loop that counts through 4 cycles. Each cycle increments
+    the variable x by one. This variable is then multiplied by 64 to shift the bits
+    to the GP6 and GP7 pins of the MCP23S08. The WR_MCP23S08 function can handle the
+    math within its parameter section prior to writing the value to the OLAT register.
+    A one second delay is added to create a one second binary counter.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: "```\nwhile (1==1)\n{\n    for(char x = 0; x<4; x++)\n    {\n        WR_MCP23S08\
+    \ (OLAT, x*64);    // Turn on LEDs\n        pause(1000);\n    }\n} //End While\n\
+    } //End Main\n```\n\n# Next Steps\n\nThese projects demonstrate how easy SimpleC\
+    \ makes using the hardware SPI peripheral can be. I will be using this often and\
+    \ I've often wanted to use the MCP23S08 and its 16 I/O cousin the MCP23S16 in\
+    \ many projects but really didn't feel like reading over the data sheet and working\
+    \ through all the registers when I could just use a larger PIC to get more I/O.\
+    \ But now that I've taken the time to create a function for the MCP23S08 I will\
+    \ use them more.\n\nAs a next step you could expand the projects to control more\
+    \ I/O on the MCP23S08 and create a whole string of LEDs or multiple switches.\
+    \ This can easily be accomplished with small modifications to these projects.\
+    \ Now if you really want to go further then maybe tie in the EEPROM with a separate\
+    \ chip select (CS) control line for each. This will require you to make modifications\
+    \ to the SimpleC files but should not be difficult. Then you can control more\
+    \ than one SPI device from the PIC."
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# Chapter 9 – SimpleC Pulse Width Modulation
+
+
+    In this chapter I’ll show you how SimpleC makes using the hardware PWM peripheral
+    extremely easy to use. You’ll be able to set the frequency and duty cycle in one
+    command line. Because SimpleC was written for a fixed 16Mhz oscillator I was able
+    to do all the calculations and preset all the registers within the SimpleC PWM
+    function. Thus the only thing left for the SimpleC user to do is decide the frequency
+    and the duty cycle. If you want more detail on the inner workings of the peripheral
+    I cover this in my Volume 2 book and showed the formula used to calculate the
+    register settings. Here we’ll take the easy route and use SimpleC.
+
+
+    This project will drive two PWM outputs with a 5 Khz frequency signal. The micro
+    will read a potentiometer using an analog pin and then adjust the duty cycle of
+    PWM1 accordingly. The project will also drive the PWM2 pin at the same frequency
+    as PWM 1 but at a constant 50% duty cycle signal on PWM2. The outputs will drive
+    LEDs for visual feedback. I also captured the signal on an oscilloscope to show
+    the signal (Figure 9-3).
+
+
+    # Hardware
+
+
+    The hardware for this project is quite simple to build. The schematic in Figure
+    9-1 shows the connections. PWM 1 is on CHIPINO pin 5 (C2) and PWM 2 is on CHIPINO
+    pin 6 (C1) with LEDs connected. The potentiometer creates a variable voltage on
+    its wiper pin between V+ and V- which is somewhere between 5v and ground. The
+    analog pin AN0 will monitor the potentiometer. The CHIPINO has a 16 Mhz crystal,
+    which will drive the micro and the internal PWM signals.'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_155_0.png)
+
+
+    Chapter 9 PWM Schematic
+
+    Beginner''s Guide to Embedded C Programming Vol 3
+
+    C. Hells... | Rev. 1.0 | 9/16/2010 | Page 1 of 1
+
+
+    # Figure 9-1: PWM Project Schematic
+
+
+    The Breadboard setup is shown in Figure 9-2 and has the power from the programmer
+    fed to the rails through two jumpers. The upper rail is ground and the inner rail
+    is V+. The potentiometer plugs right into the breadboard and then the jumper wires
+    provide the power, ground and connection to the AN0 pin.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_155_1.png)
+
+
+    # Figure 9-2A: PWM Breadboard Setup'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# Software
+
+
+    The full software listing is below. You can see it''s very short. The program
+    uses the adcin function along with the pwmout functions in the SimpleC library
+    to create this project.
+
+
+    ```
+
+    /*********************************
+
+    PWM Example
+
+    This program reads the value on a potentiometer and drives
+
+    the PWM1(CHIPINO pin5/C2) with a duty cycle to match.
+
+    It also drives the PWM2(CHIPINO pin6/C1) with a 50% duty cycle
+
+    signal.
+
+    POT
+
+    PIN 1 - Gnd
+
+    PIN 2 - CHIPINO Analog pin 0 (AN0)
+
+    PIN 3 - 5v
+
+
+    CHIPINO Pin 5 - PWM1 output to 1k resistor
+
+    1k resistor to LED Anode
+
+    LED Cathode to ground
+
+
+    CHIPINO Pin 6 - PWM1 output to 1k resistor
+
+    1k resistor to LED Anode
+
+    LED Cathode to ground
+
+    *********************************/
+
+
+    #include "simplec1.1.h"
+
+
+    void main(void)
+
+    {
+
+    init_micro();       // Initialize I/O
+
+    char dc = (adcin(0)/10) * 4;  // Convert Pot value to 0-100% Duty Cycle
+
+
+    // **** Both PWM must use the same frequency!******
+
+    pwmout1 (dc, 5000);     //Drive variable duty cycle at fixed 5000hz
+
+    pwmout2 (50, 5000);     //Second PWM output 50% Duty Cycle
+
+    pause(100);                 // Pause 100msec
+
+    }
+
+    ```
+
+
+    # How it Works
+
+
+    The program begins with a comment block describing the operation and the connections
+    on the breadboard.
+
+
+    ```
+
+    /*********************************
+
+    PWM Example
+
+    This program reads the value on a potentiometer and drives
+
+    the PWM1(CHIPINO pin5/C2) with a duty cycle to match.
+
+    It also drives the PWM2(CHIPINO pin6/C1) with a 50% duty cycle
+
+    signal.
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: "POT\nPIN 1 - Gnd\nPIN 2 - CHIPINO Analog pin 0 (AN0)\nPIN 3 - 5v\n\nCHIPINO\
+    \ Pin 5 - PWM1 output to 1k resistor,\n1k resistor to LED Anode\nLED Cathode to\
+    \ ground\n\nCHIPINO Pin 6 - PWM2 output to 1k resistor,\n1k resistor to LED Anode\n\
+    LED Cathode to ground\n*****************************/\n\nThe first coding step\
+    \ is to include the simplec1.1.h file that has all the SimpleC setup such as configuration\
+    \ bits and some #defines.\n\n```\n#include \"simplec1.1.h\"\n```\n\nNow we enter\
+    \ the main loop which starts off by initializing the comparators to off and all\
+    \ the analog pins to digital with the init_micro SimpleC function.\n\n```\nvoid\
+    \ main(void)\n{\n    init_micro();            // Initialize I/O\n}\n```\n\nThe\
+    \ adcin function is used to read the potentiometer. This function automatically\
+    \ sets the selected pin to analog input mode. In this case it’s AN0 (shown as\
+    \ 0 in the parameter area). This line also shows that you can do operations on\
+    \ the reading prior to storing the result in the variable “dc” which is short\
+    \ for duty cycle. The value we read from the potentiometer will be an 8-bit resolution\
+    \ value of 0 to 255. We need to scale that to 0 - 100 for the pwmout functions\
+    \ so we divide it by 10 (yielding 0 - 25) and then take that result and multiply\
+    \ by 4. This will give us a value of 0 – 100 to be stored in the variable “dc”.\n\
+    \n```\nchar dc = (adcin(0)/10) * 4;  // Convert Pot value to 0-100% Duty Cycle\n\
+    ```\n\nThe pwmout functions are number 1 and 2 to control each PWM channel on\
+    \ the CHIPINO module. The PWM peripheral uses the internal Timer 2 clock for controlling\
+    \ the PWM peripheral. Therefore the PWMs must operate at the same frequency. The\
+    \ pwmout1 function uses the “dc” variable as the duty cycle parameter so that\
+    \ variable changes, the duty cycle will change. The frequency is set to 5000 hz\
+    \ or 5 khz. The pwmout2 function is set to a"
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: 'fixed 50% duty cycle at 5 khz. If you look at the oscilloscope plot in Figure
+    9-3 you can see a frequency reading in the lower right corner. It shows a value
+    of 4.98669 khz which is real close to 5 khz so the SimpleC code is working properly.
+
+
+    ```
+
+    // **** Both PWM must use the same frequency!*****
+
+    pwmout1 (dc, 5000);    //Drive variable duty cycle at fixed 5000hz
+
+    pwmout2 (50, 5000);    //Second PWM output 50% Duty Cycle
+
+    ```
+
+
+    A short pause is added but not really needed. It just delays how often we take
+    the next potentiometer reading.
+
+
+    ```
+
+    pause(100);            // Pause 100msec
+
+    }
+
+    ```
+
+
+    # Next Steps
+
+
+    There are many ways to take this from here. A real easy change is to adjust the
+    frequency and duty cycle to make sure you understand how the PWM function works.
+    You can also drive more than LEDs with PWM. You can use this to drive a buzzer
+    for noise or use it for controlling the speed of a DC motor if you have the PWM
+    control a transistor that grounds the motor. PWM is very handy and the SimpleC
+    library makes it easy to implement.
+
+
+    The SimpleC calculations are based on a 16 Mhz oscillator that runs the CHIPINO
+    module. The PWM peripheral at this clock speed limits the frequency range from
+    1khz to 32khz so you can adjust the frequency parameter from 1000 to 32000. You
+    could do that in a loop to get a variable frequency at a fixed duty cycle. That
+    would be a good project to try on this same setup.'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# Chapter 10 – SimpleC Creating Pulses
+
+
+    The PWM function is really useful for continuous frequency outputs, but sometimes
+    you want to create a pulse or burst of pulses and possibly run much slower than
+    the PWM peripheral is capable of. For this reason the pulseout function was created.
+    It is really useful for creating the pulses required to drive a robotic servomotor.
+    In this chapter I’ll show how to use the SimpleC pulseout command to create two
+    pulses that drive a servomotor fully counterclockwise and then fully clockwise.
+    If it’s a continuous rotation servo connected to the wheel of a robot, this project
+    could be used to drive the wheel forward and then backward. This simple motion
+    can be expanded to create a robotic drive routine. Let’s save this for the Next
+    Steps section and just look at the hardware setup.
+
+
+    # Hardware
+
+
+    The hardware used for this project includes a continuous rotation servomotor.
+    Any one will work that can operate at 4.5v. When driving a noisy electrical device
+    like a motor it is best to power the microcontroller separate from the motor.
+    For this reason we use a 4.5v battery pack made from three AA batteries. The servo
+    motor control line is connected to CHIPINO pin 0 (C7 of the PIC16F886). The CHIPINO
+    ground and the 4.5v battery pack ground are connected together to maintain a common
+    reference. The power pin of the servo connector is then connected to the positive
+    lead of the 4.5v battery pack. This is shown in Figure 10-1 as a schematic and
+    then the breadboard setup in Figure 10-2A and 10-2B.'
+  merge: -1
+  img_proc: true
+- pgno: 161
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_161_0.png)
+
+
+    | Chapter 10 Servo Schematic |
+
+    | Beginner''s Guide to Embedded C Programming Vol 3 |
+
+    | C. Helli... | Rev. 1.0 | Page 1 of 1 |
+
+    |  | 9/16/2018 |  |
+
+
+    Figure 10-1: Servo Motor Schematic
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_161_1.png)
+
+
+    Figure 10-2A: Servo Motor Breadboard Setup'
+  merge: -1
+  img_proc: true
+- pgno: 162
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_162_0.png)
+
+
+    Figure 10-2B: CHIPINO Module Breadboard Layout
+
+
+    The software will first create a two millisecond wide pulse on CHIPINO pin 0 that
+    drives the servo counterclockwise. If this is a continuous rotation servo then
+    the wheel connected to the servo will continue to drive counterclockwise while
+    this pulse is present. You can see the pulse on the oscilloscope plot in Figure
+    10-3.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_162_1.png)
+
+
+    Figure 10-3: Two Millisecond Pulse'
+  merge: -1
+  img_proc: true
+- pgno: 163
+  md: 'The software will then create a one-millisecond pulse on the CHIPINO pin 0
+    to drive the servo in a clockwise rotation thus reversing the wheel. You can see
+    the one-millisecond pulse in Figure 10-4.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_163_0.png)
+
+
+    Figure 10-4: One Millisecond Pulse
+
+
+    # Software
+
+
+    The project software is really quite short and simple and I''ll go through it
+    in the How it Works section. Here is the total code to drive the servo back and
+    forth. The heart of it is the pulseout command. It''s really just a simple high-pause-low
+    routine that creates the pulse, which you can see if you look in the simplec1.1.c
+    file. Always include the simplec1.1.h and simplec1.1.c in your MPLAB project.
+
+
+    ```
+
+    /***********************
+
+    Drive a Servo Motor example using SimpleC.
+
+    This code will drive a servo on pin 0 (RC7)
+
+    clockwise for a short time, and then
+
+    counterclockwise for a short time.
+
+
+    Connections:
+
+    CHIPINO PIN 0(RC7) to Servo Signal line
+
+    Servo + to 4.5v battery pack
+
+    Servo - to Common Ground
+
+
+    Note:
+
+    CHIPINO and Battery Pack Grounds are Connected
+
+    *************************/
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 164
+  md: "```\n#include \"simplec1.1.h\"\nvoid\nmain(void)\n{\ninit_micro();   // Initialize\
+    \ I/O\nwhile (1==1)\n{\nfor(char x=0; x<100; x++)\n{\npulseout(0,200);      //Turn\
+    \ Servo Counterclockwise\npause(10);\n}\nfor(char x=0; x<100; x++)\n{\npulseout(0,100);\
+    \      //Turn Servo Clockwise\npause(10);\n}\n}//end while\n}//end main\n```\n\
+    \n# How it Works\n\nThe overall program includes the same type of header that\
+    \ describes the operation and connections.\n\n```\n/************************************************\n\
+    \    Drive a Servo Motor example using simpleC.\n    This code will drive a servo\
+    \ on pin 0(RC7)\n    clockwise for a short time, and then\n    counterclockwise\
+    \ for a short time.\n\n    Connections:\n    CHIPINO PIN 0(RC7) to Servo Signal\
+    \ line\n    Servo + to 4.5v battery pack\n    Servo - to Common Ground\n    Note:\n\
+    \    CHIPINO and Battery Pack Grounds are Connected\n    ************************************************/\n\
+    ```\n\nThe SimpleC library header file is included along with the main functional\
+    \ loop and the SimpleC library init_micro( ) function.\n\n```\n#include \"simplec1.1.h\"\
+    \nvoid\n```"
+  merge: -1
+  img_proc: true
+- pgno: 165
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 166
+  md: "# Next Steps\n\nThe most logical next step is to expand this code to control\
+    \ two servomotors and actually drive a servo robot with them. If you are not that\
+    \ familiar with servomotors, driving the servo with a 1.5 millisecond pulse should\
+    \ pause the servomotors or make the robot stop.\n\nAnother advantage the pulseout\
+    \ function offers is the ability to drive any of the digital CHIPINO pins. With\
+    \ a little extra code, you can create a PWM signal on any digital pin. The snippet\
+    \ of code below creates a slow 100 hz signal with a duty cycle that sweeps from\
+    \ 20% to 80% and then back from 80% down to 20%. Just replace the for-loops in\
+    \ the servo code with these and you should get what I describe.\n\n```\n/*\nCreate\
+    \ a slow PWM signal on CHIPINO pin 2 using the pulseout function\n*/\n\nfor(int\
+    \ dc=200; dc<800; dc++)\n{\n    pulseout(2,dc);      //Send increasing Duty Cycle\n\
+    \    pauseus(1000-dc); //Send low delay to create 100hz\n}\n\nfor(int dc=800;\
+    \ dc>200; dc--)\n{\n    pulseout(2,dc);      //Send decreasing duty cycle\n  \
+    \  pauseus(1000-dc); //Send low delay to create 100hz\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 167
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 168
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 169
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 170
+  md: '2.61. I call it the PICkit 2 standalone programming software. It relies on
+    the Microsoft .net framework, which many PCs have installed already. The software
+    can be downloaded for free from www.microchip.com/pickit2.
+
+
+    The PICkit 2 software will look like the screen capture in Figure 11-4 when run.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_170_0.png)
+
+
+    Figure 11-4: PICkit 2 Standalone Programming Software'
+  merge: -1
+  img_proc: true
+- pgno: 171
+  md: 'One of the features of the standalone software is the built-in UART tool. This
+    is a terminal program that uses the PICkit 2 programmer as a PIC to USB communication
+    channel. You launch the software from the tools menu as shown in Figure 11-5.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_171_0.png)
+
+
+    # Figure 11-5: UART Tool Selection
+
+
+    As you can see in Figure 11-5, I ran the standalone software with the MPLAB software
+    in place. You could deselect the PICkit 2 from the MPLAB programmer menu to be
+    safe but it worked fine for me with it still selected.
+
+
+    When the UART tool is run you’ll see the screen in Figure 11-6. The upper right
+    hand corner shows the baud rate as 9600. The screen shows the software was running
+    in the CHIPINO when this was captured as it shows the text sent by the CHIPINO
+    to the UART screen through the PICkit 2 connection.'
+  merge: -1
+  img_proc: true
+- pgno: 172
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_172_0.png)
+
+
+    # Figure 11-6: UART Screen Capture
+
+
+    The last thing shown is the CHIPINO asking the user to either press a keyboard
+    key or to enter a character in the Send box in the lower middle of the screen.
+    That character will be read by the CHIPINO and then sent back demonstrating two-way
+    communications. Figure 11-7 shows the results when a capital A is sent to the
+    CHIPINO from the Send window.
+
+
+    This operation will continue until the Disconnect button is pressed in the upper
+    left corner of the screen. You can also see in the lower left the connections
+    to the PICkit 2, which is helpful if you are using this tool in the future and
+    forget the connection scheme.'
+  merge: -1
+  img_proc: true
+- pgno: 173
+  md: '![](img/910b145bee7ca8076318eafbe6d13997_173_0.png)
+
+
+    Figure 11-7: UART Response Screen to Letter A
+
+
+    # Software
+
+
+    Now I''ll show you the software that created all this and you''ll see how the
+    SimpleC library helps make this easier to write.
+
+
+    ```
+
+    /*******************************
+
+    A simple demonstration of serial communications which
+
+    incorporates the on-board hardware USART of the Microchip
+
+    PIC16F886 device.
+
+    1) The project sends ASCII numbers 1-9 out to the terminal once
+
+    followed by a carriage return and new line command.
+
+    2) Then it sends the ASCII values for A-Z once followed by
+
+    a carriage return and new line command.
+
+    3) Then it will send the word "Hello" out once.
+
+    4) Then it will use the printf command to send phrases and
+
+    ask for you to send it something via the keyboard and it will
+
+    echo it back.
+
+    The program will keep asking for input until power is lost.
+
+
+    Option 1: Hyperterminal and USB to RS232 module
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 174
+  md: "Pin 0(C7) Rx - to Tx of USB/RS232 module\nPin 1(C6) Tx - to Rx of USB/RS232\
+    \ module\n\nHyperterminal settings\nBits per second: 9600\nData bits: 8\nParity:\
+    \ None\nStop bits: 1\nFlow control: None\n\nOption 2: PICKit 2 as interface and\
+    \ running UART tool\nC7 to PICKit 2 pin 5\nC6 to PICKit 2 pin 4\nVdd to PICKit\
+    \ 2 pin 2\nGnd to PICKit 2 pin 3\n*****************************/\n\n```\n#include\
+    \ \"simplec1.1.h\"\n\nvoid main(void){\n    init_micro();    // Setup micro ports\n\
+    \    init_serial(9600); // set up the USART baud rate (2400 or 9600)\n    // ***\
+    \ Serial Communication Main Loop\n    while(1)\n    {\n        // ***********\
+    \ Send a decimal numbers from 1 to 9 ***********\n        for (char count = 0x31;\
+    \ count <= 0x39; count = count +1)\n        {\n            putch(count);     \
+    \  // Send Count 1-9 in ASCII\n            pause(100);         // Delay 100 msec\n\
+    \        }\n        putch(0x0D);        // Send ASCII value for\n            \
+    \                // carriage return\n        putch(0x0A);        // Send ASCII\
+    \ value for new\n                            // line\n        // *********** Send\
+    \ the alphabet from A to Z ***********\n        for (char count = 0x41; count\
+    \ <= 0x5A; count = count +1)\n        {\n            putch(count);       // Send\
+    \ Count 1-9 in ASCII\n            pause(100);         // Delay 100 msec\n    \
+    \    }\n        putch(0x0D);        // Send ASCII value for\n                \
+    \            // carriage return\n        putch(0x0A);        // Send ASCII value\
+    \ for new\n                            // line\n        // *********** Send a\
+    \ string of characters ***************\n        char txt[] = \"Hello\";\n    \
+    \    for (char x = 0; x<5; x++)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 175
+  md: "```\n{\n    putch (txt[x]);\n}\nputch (0x0D);    // Send ASCII value for carriage\
+    \ return\nputch (0x0A);    // Send ASCII value for new line\n\n// ****** Use printf\
+    \ command to ask for input and echo it back ******\nwhile(1)\n{\n    printf(\"\
+    Press a key and I will echo it back:\\r\\n\");\n    char input = getch();    //read\
+    \ a response from the\n                             // user\n    printf(\"I detected\
+    \ [%c]\\r\\n\",input); //echo it back\n}\n}\n```\n\n# How it Works\n\nThe header\
+    \ is very complete in the description of the operation and the connection options.\
+    \ It describes both the USB to USART connection option and the PICkit 2 option\
+    \ I chose to use.\n\n```\n/************************************************\n\
+    A simple demonstration of serial communications which\nincorporates the on-board\
+    \ hardware USART of the Microchip\nPIC16F886 device.\n1) The project sends ASCII\
+    \ numbers 1-9 out to the terminal once\n   followed by a carriage return and new\
+    \ line command.\n2) Then it sends the ASCII values for A-Z once followed by\n\
+    \   a carriage return and new line command.\n3) Then it will send the word \"\
+    Hello\" out once.\n4) Then it will use the printf command to send phrases and\n\
+    \   ask for you to send it something via the keyboard and it will\n   echo it\
+    \ back.\nThe program will keep asking for input until power is lost.\n\nOption\
+    \ 1: Hyperterminal and USB to RS232 module\n\nPin 0(C7) Rx - to Tx of USB/RS232\
+    \ module\nPin 1(C6) Tx - to Rx of USB/RS232 module\n\nHyperterminal settings\n\
+    Bits per second: 9600\nData bits: 8\nParity: None\nStop bits: 1\nFlow control:\
+    \ None\n\nOption 2: PICkit 2 as interface and running UART tool\n\nC7 to PICkit\
+    \ 2 pin 5\n```"
+  merge: -1
+  img_proc: true
+- pgno: 176
+  md: "```\nC6 to PICkit 2 pin 4\nVdd to PICkit 2 pin 2\nGnd to PICkit 2 pin 3\n*******************************/\n\
+    ```\n\nThe simplec1.1h file is included along with the usual init_micro function.\n\
+    \n```\n#include \"simplec1.1.h\"\n\nvoid main(void){\n    init_micro();    //\
+    \ Setup micro ports\n```\n\nThe first SimpleC library function for the USART is\
+    \ the init_serial function that has a parameter of 2400 or 9600 that selects the\
+    \ baud rate. These are the only two supported so far.\n\n```\ninit_serial(9600);\
+    \ // set up the USART baud rate (2400 or 9600)\n```\n\nNow the main loop of code\
+    \ begins and you’ll see some other functions used that are actually part of standard\
+    \ libraries within the HI-TECH C compiler. They work with the USART perfectly.\
+    \ The putch () sends one ASCII character as defined by the parameter. It can be\
+    \ the ASCII character or the ASCII character value. This first for-loop uses these\
+    \ to send a number and then a carriage return plus line feed.\n\n```\n// *** Serial\
+    \ Communication Main Loop\nwhile(1)\n{\n// ********** Send a decimal numbers from\
+    \ 1 to 9 **********\nfor (char count = 0x31; count <= 0x39; count = count +1)\n\
+    {\n    putch(count);        // Send Count 1-9 in ASCII\n    pause(100);      \
+    \    // Delay 100 msec\n}\nputch(0x0D);           // Send ASCII value for\n  \
+    \                     // carriage return\nputch(0x0A);           // Send ASCII\
+    \ value for new\n                       // line\n```\n\nThe second for-loop sends\
+    \ the alphabet A through Z as ASCII characters using the PUTCH function.\n\n```\n\
+    // *********** Send the alphabet from A to Z ************\nfor (char count = 0x41;\
+    \ count <= 0x5A; count = count +1)\n{\n```"
+  merge: -1
+  img_proc: true
+- pgno: 177
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 178
+  md: 'serial communication easier as well. This makes a great debug tool as well
+    if you just want to send some status data. The PICkit 2 software can also collect
+    and store characters received.
+
+
+    # Next Steps
+
+
+    I first suggest you try both the PICkit 2 and a USB to TTL converter module method
+    of communication. Even though I didn’t show how to use a USB converter method,
+    I did test it and it worked quite well. There are many different USB converter
+    boards available so I won’t single one out here.
+
+
+    Changing the messages sent is an easy next step but getting the PICkit 2 to collect
+    data and then opening that file in EXCEL or any spreadsheet program can be a great
+    use of this project. You could combine an analog sensor reading program with this
+    to create a data logger application. This is very handy and that is why the serial
+    port is still popular in the embedded world even though the PC world has decided
+    to move on.'
+  merge: -1
+  img_proc: true
+- pgno: 179
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 180
+  md: '# Chapter 12 – SimpleC I2C Communication
+
+
+    We started the projects in this book with an I2C communication project.
+
+    We''ll end it the same way only this time we''ll use the SimpleC library to make
+    the software much easier to write. The project hardware and operation will be
+    the same as Chapter 2 but will demonstrate how the SimpleC library makes this
+    same project much easier to implement in software.
+
+
+    # Hardware
+
+
+    If you happen to have the hardware still setup from Chapter 2 then you are ready
+    for software. If not, the 24LC01B chip is connected to the CHIPINO pin 3 and 4
+    (RC3 and RC3) and the LEDs connected to pins 8 thru 11 (RB0 thru RB3). The rest
+    is built into the CHIPINO.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_180_0.png)
+
+
+    Figure 12-1: EEPROM Schematic'
+  merge: -1
+  img_proc: true
+- pgno: 181
+  md: 'The breadboard layout and the CHIPINO module connections are shown in Figure
+    12-2 and 12-3 so you can choose your setup.
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_181_0.png)
+
+
+    # Figure 12-2: I2C EEPROM Breadboard Layout
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_181_1.png)
+
+
+    # Figure 12-3: I2C EEPROM CHIPINO Module Connections'
+  merge: -1
+  img_proc: true
+- pgno: 182
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 183
+  md: "```\n} //End Main\n```\n\n# How it Works\n\nThe familiar header block has a\
+    \ description of the program. After the header is the #include for the simplec.1.1.h\
+    \ file.\n\n```\n/*\n *  I2C External EEPROM example using SimpleC\n *  This code\
+    \ will write 10 bytes to the EEPROM and\n *  then read them back and display binary\
+    \ value on LEDs.\n *  Connections:\n *  Pin 8(B0) - LED Anode - LED Cathode -\
+    \ 1k ohm - Ground\n *  Pin 9(B1) - LED Anode - LED Cathode - 1k ohm - Ground\n\
+    \ *  Pin 10(B2) - LED Anode - LED Cathode - 1k ohm - Ground\n *  Pin 11(B3) -\
+    \ LED Anode - LED Cathode - 1k ohm - Ground\n *\n *  Pin 3(C4) - 24LC01B SDA -\
+    \ 10k pullup - 5v\n *  Pin 4(C3) - 24LC01B SCL - 10k pullup - 5v\n *  24LC01B\
+    \ Vss - Ground\n *  24LC01B Vdd - 5v\n */\n\n#include \"simplec1.1.h\"\n```\n\n\
+    The main loop is next and contains the init_micro function and the i2c_init that\
+    \ sets the I2C pins up for communication.\n\n```\nvoid\nmain(void)\n{\n    init_micro();\
+    \    // Initialize I/O\n    i2c_init();      // Initialize i2c\n```\n\nThe LED\
+    \ ports are setup to have all the LEDs off by driving the I/O pins low.\n\n```\n\
+    PORTB=0x00;    // All LEDs off\nTRISB=0x00;     // All PORTB outputs\n```\n\n\
+    A variable cnt is created that will be used to count the number of times through\
+    \ a while loop. It is initialized to zero at this same point in time.\n\n```\n\
+    unsigned char cnt=0;\n```"
+  merge: -1
+  img_proc: true
+- pgno: 184
+  md: "A while loop runs through ten loops and stores a downward count in the EEPROM.\
+    \ The LEDs show the value of the cnt variable in binary by making the whole port\
+    \ equal to the variable value. Since we are only using the lower four bits of\
+    \ PORTB (CHIPINO pins 8-11) this method of control also affects the state of the\
+    \ pin 12, 13, B6 and B7 of the modules. Since we have nothing hooked up to those\
+    \ pins this works fine but if you adapt this code you may want to change that\
+    \ setup to control each LED individually.\n\n```\nwhile(cnt<=10)    /* write 10\
+    \ numbers to eeprom */\n{\nPORTB=cnt;        // The cnt value will display on\
+    \ the LEDs\n```\n\nThe I2C_EEOUT function does all the EEPROM communication work.\
+    \ The first parameter is the address and the second is the data. In this case\
+    \ the variable cnt is the address and the data is the value 10 minus the value\
+    \ of the variable cnt. It stores 9 at location 1, 8 at location 2, etc.\n\n```\n\
+    I2C_EEOUT(cnt,10-cnt);// Store 9 at address 1, 8 at address 2, ...\ncnt=cnt+1;\
+    \           // Increment cnt variable\n```\n\nA pause command is added to allow\
+    \ enough time to see the value displayed on the LEDs.\n\n```\npause(255);    \
+    \      // Delay 255 milliseconds\n}\n```\n\nThe variable cnt is reset to zero\
+    \ and then the data is read back with another while loop. This time the I2C_EEIN\
+    \ function is used to read back the data. The parameter is the address and the\
+    \ data read back is sent to a variable. In this case we use PORTB label as the\
+    \ variable. The HI-TECH compiler allows this because the register names are setup\
+    \ as volatile variables in the specific header file for the PIC16F886 automatically\
+    \ included by the compiler. This line makes the LED's display the value read back\
+    \ from the EEPROM in binary form.\n\n```\ncnt=0;\nwhile(cnt<=10)\n{\nPORTB =I2C_EEIN(cnt);\
+    \ // Display data read from EEPROM on\n                       // LEDs in binary\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 185
+  md: "A pause function has the parameter 1000 to create a 1 second delay allowing\
+    \ you to read the binary value on the LED's. This is slower than the delay for\
+    \ writing to the EEPROM so you can easily tell when it's writing and when its\
+    \ reading by the speed of the LED changes.\n\n```\npause (1000);    // Delay for\
+    \ 1 second to read LEDs\n```\n\nThe cnt variable is incremented for the next test\
+    \ of the value in the while loop. When the count reaches 10, the loop is done\
+    \ and the program jumps back to the beginning of the main loop, which starts the\
+    \ whole process over again.\n\n```\ncnt=cnt + 1;    // Increment cnt variable\n\
+    } \n} //End Main\n```\n\n# Next Steps\n\nReplacing the LED's with an LCD is the\
+    \ most logical next step and I've already showed you how easy that is with SimpleC.\
+    \ You could also add an ADCIN function to read a sensor, average it against previous\
+    \ readings and then store the result in the EEPROM. This would create a simple\
+    \ data logger for just about anything you can measure with an analog sensor."
+  merge: -1
+  img_proc: true
+- pgno: 186
+  md: '# Conclusion
+
+
+    If you worked through the projects in my Beginner’s Guide to Embedded C Programming
+    Volume 2 book, then at this point you should really understand how much typing
+    the Simple C library saves you. In this book I wanted to give you a starting point
+    for using the most common functions people asked for via email responses to my
+    first two books in this series.
+
+
+    SimpleC can now help you make projects faster or prove out a concept quicker.
+    I can see where several of these projects could be combined to create more complex
+    projects. Combining the LCD, EEPROM and RS232 communication projects make a great
+    starting point to building a data logger. The ADC could be used to read a sensor
+    and the measurements displayed on the LCD while also being stored in EEPROM. Later
+    on you could retrieve that data with a computer by connecting the serial port
+    to the Rx and Tx pins of the data logger module. All that could be done in a short
+    list of SimpleC functions. This is just one example of how these can be combined
+    or at least give you a starting point for building more complex projects.
+
+
+    One thing I’ve found in talking to people who program in C is many of them rely
+    on libraries of functions to build the projects from. These could be functions
+    they created or functions they “borrowed” from another programmer. I’ve also seen
+    many code examples on the internet that you can easily modify to fit your needs.
+    The whole point of this book and my previous embedded C books are to teach you
+    enough of the basics so you can understand the functions at these various other
+    sources. By no means is there a standard approach either, therefore one persons
+    code may be very helpful while another on the same topic may be so hard to follow
+    you would be better off writing a new function yourself. That is the decision
+    you have to make as the programmer.
+
+
+    I want to thank all those who read my first two books on Embedded C and then continued
+    on with this one. It’s that loyalty that makes this long process of writing books
+    seem worth all the nights of typing and typing and typing… It’s a very long process.'
+  merge: -1
+  img_proc: true
+- pgno: 187
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 188
+  md: "# Appendix A – CHIPINO Board Schematic\n\n![](img/910b145bee7ca8076318eafbe6d13997_188_0.png)\n\
+    \nCHIPINO Schematic\nBeginner's Guide to Embedded C Programming Vol 3\nC. Hollebouck\t\
+    Rev 1.0\t9-16-2018\tPage 1 of 1"
+  merge: -1
+  img_proc: true
+- pgno: 189
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 190
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 191
+  md: '+   - pwmout1(duty cycle,frequency)
+
+    +   - pwmout2(duty cycle,frequency)
+
+    +   - RD_BYTE (address, databyte)
+
+    +   - RD_MCP23S08 (register)
+
+    +   - spi_init()
+
+    +   - spi_output (byte)
+
+    +   - usecbase()
+
+    +   - WR_BYTE (address, databyte)
+
+    +   - WR_MCP23S08 (register, databyte)'
+  merge: -1
+  img_proc: true
+- pgno: 192
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 193
+  md: 'display, 17, 28, 31, 36, 37, 43, 44, 52, 53, 54, 55, 56, 57, 73, 77, 78, 133,
+    136, 137, 139, 140, 142, 145, 146, 147, 148, 149, 151, 155, 156, 201, 202, 203,
+    204, 205
+
+    do, 112, 116, 119, 121
+
+    duty cycle, 58, 103, 168, 170, 171, 172, 173, 174, 183
+
+
+    # E
+
+
+    EEPROM, 4, 10, 21, 23, 27, 28, 29, 30, 31, 35, 36, 37, 42, 43, 44, 65, 66, 67,
+    68, 73, 76, 77, 78, 100, 101, 102, 103, 108, 109, 149, 150, 151, 152, 153, 154,
+    155, 156, 167, 199, 200, 201, 202, 203, 204, 205, 206
+
+
+    # F
+
+
+    for, 119, 120, 121
+
+
+    # G
+
+
+    getch, 61, 62, 63, 78, 83, 99, 193, 196, 197
+
+    GPIO, 64, 69, 70, 71, 72, 82, 158, 159, 161
+
+
+    # H
+
+
+    high, 21, 22, 23, 47, 48, 49, 50, 51, 58, 65, 82, 86, 89, 92, 101, 102, 103, 111,
+    123, 124, 125, 126, 128, 131, 133, 162, 170, 179
+
+    HI-TECH, 2, 3, 7, 8, 16, 17, 21, 33, 37, 39, 60, 61, 62, 78, 79, 80, 99, 106,
+    114, 119, 149, 195, 196, 197, 204
+
+    HI-TECH PICC PRO C Compiler, 17, 30
+
+
+    # I
+
+
+    I2C, 3, 5, 8, 10, 19, 21, 22, 23, 24, 27, 28, 29, 30, 31, 33, 35, 36, 37, 39,
+    40, 42, 43, 44, 72, 73, 74, 75, 76, 77, 78, 83, 106, 107, 108, 109, 133, 199,
+    200, 201, 202, 203, 204, 205
+
+    I2C_EIN, 109, 201
+
+    I2C_EEOUT, 109, 201
+
+    i2c_init, 30, 33, 35, 39, 40, 43, 72, 73, 77, 78, 83, 106, 201, 202, 203
+
+    i2c_read, 31, 33, 34, 35, 39, 41, 43, 74, 75, 76, 83, 106, 108, 109
+
+    i2c_restart, 74, 107
+
+    i2c_stop, 31, 33, 35, 39, 40, 42, 43, 73, 74, 75, 76, 83, 106, 107, 109
+
+    i2c_start, 31, 33, 35, 39, 40, 42, 43, 73, 74, 75, 76, 83, 106, 107, 109
+
+    i2c_waitforidle, 75, 76
+
+    i2c_write, 31, 33, 34, 35, 39, 42, 43, 74, 75, 76, 83, 106, 108, 109
+
+    ij, 112
+
+    In-Circuit Serial Programming, 11
+
+    init_serial, 59, 60, 61, 63, 83, 98, 192, 195, 197
+
+    Initialization, 3, 46
+
+    input, 21, 24, 32, 38, 39, 50, 51, 61, 62, 63, 78, 83, 84, 85, 89, 90, 91, 105,
+    128, 131, 132, 133, 148, 161, 172, 192, 193, 194, 196, 197
+
+    Interrupts, 128
+
+    IODIR, 64, 69, 70, 71, 72, 82, 158, 159, 161, 164, 166
+
+
+    # L
+
+
+    LCD, 3, 4, 10, 44, 47, 52, 53, 54, 55, 56, 57, 66, 67, 68, 80, 81, 94, 95, 96,
+    97, 98, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146,
+    147, 148, 155, 156, 205, 206
+
+    lcd_clear, 47, 52, 53, 54, 55, 56, 57, 66, 68, 83, 95, 98, 136, 138, 140, 141,
+    145, 147, 152, 155
+
+    lcd_goto, 47, 52, 53, 54, 55, 56, 57, 66, 68, 83, 96, 137, 138, 140, 141, 142,
+    146, 147, 148, 152, 155
+
+    lcd_init, 47, 52, 53, 54, 56, 57, 66, 67, 68, 81, 83, 94, 97, 136, 138, 140, 141,
+    145, 147, 152, 154'
+  merge: -1
+  img_proc: true
+- pgno: 194
+  md: 'lcd_number, 56,57,66,67,68,83,96,97,143,145,146,147,148
+
+    lcd_symbol, 54,55,83,96,136,137,138,139,152,155,156
+
+    lcd_text, 47,52,53,54,56,57,66,67,68,83,95,139,140,141,142,146,147,152,155,156
+
+    LED, 31,37,43,50,58,64,70,72,91,111,116,122,123,124,128,130,131,132,133,148,158,159,160,161,162,164,165,169,171,172,202,203,204,205
+
+    low, 7,10,11,15,21,22,23,38,47,48,50,51,65,79,82,86,87,88,89,92,98,100,101,102,103,123,124,125,126,128,131,133,179,183,203
+
+
+    # M
+
+
+    Master, 10,22,25,37,64,100
+
+    MCP23508, 4,64,68,70,71,72,82,83,102,103,156,157,158,159,160,161,162,163,164,165,166
+
+    MCP23516,166
+
+    Microchip,2
+
+    microcontroller,114
+
+    MPLAB,2,3,14,16,17,32,38,45,84,85,111,112,113,114,115,116,117,118,119,120,121,132,179,187,189
+
+    MPLAB Install,17
+
+    msecbase,31,32,33,38,39,47,82,85,86
+
+    MSSP,10,24,27
+
+
+    # N
+
+
+    netbook,18
+
+
+    # O
+
+
+    OLAT,64,69,70,71,72,82,158,159,161,162,164,166
+
+    output,118,119,120,121
+
+
+    # P
+
+
+    pause,31,32,35,36,38,39,42,43,44,47,48,52,53,54,55,56,57,59,60,64,66,67,68,70,72,73,77,78,81,82,84,85,86,94,95,97,98,100,101,109,123,124,125,137,139,140,142,146,148,152,155,156,159,162,164,166,171,173,179,182,192,193,195,196,202,204,205
+
+    pauseus,48,82,85,92,93,94,181,183
+
+    PIC16F690,7,10,15,119,120,121,149,168
+
+    PIC16F886,7,8,10,13,15,24,27,30,33,37,39,58,59,63,72,79,81,82,103,106,109,114,121,128,143,149,152,154,156,158,160,165,176,187,191,194,197,205
+
+    PICkit 2,7,10,11,14,15,16,18,29,79,119,120,121,157,185,187,188,189,190,192,194,197
+
+    PICkit 2 Programmer application,187
+
+    PICkit 3,8,11,14,15,18,119,185
+
+    PK2,15,16,18,119
+
+    PORTA,49
+
+    PORTB,35,36,43,44,49,52,73,77,78,80,81,134,202,203,204,205
+
+    PORTC,49,59,81
+
+    potentiometer,135,143,148,168,169,170,171,172,173
+
+    printf,61,62,63,78,99,191,193,194,196,197
+
+    programmer,7,10,11,13,14,15,16,29,98,119,120,121,129,157,169,185,187,188,189,206
+
+    Pulse Width Modulation,5,58,91,168
+
+    pulseout,51,83,91,92,176,179,182,183
+
+    putch,59,60,61,78,83,99,192,193,195,196
+
+    PWM,3,58,91,103,104,148,168,169,170,171,172,173,174,176,182,183
+
+    pwmout1,58,83,103,104,171,173
+
+    pwmout2,58,83,103,104,171,173'
+  merge: -1
+  img_proc: true
+- pgno: 195
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 196
+  md: '# Check out other great books by Chuck Hellebuyck
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_196_0.png)
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_196_1.png)
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_196_2.png)
+
+
+    ![](img/910b145bee7ca8076318eafbe6d13997_196_3.png)
+
+
+    You can purchase them direct at
+
+    www.elproducts.com'
+  merge: -1
+  img_proc: true
+- pgno: 197
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 198
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 199
+  md: '# Beginner''s Guide to Embedded C Programming
+
+    Volume 3
+
+    Creating the SimpleC Library of Functions
+
+
+    In his "Beginner''s Guide to Embedded C" and "Beginner''s Guide to Embedded C
+    – Volume 2" books Chuck Hellebuyck took the reader through the very beginning
+    of learning how to program embedded microcontrollers in the C language using a
+    Microchip PIC microcontroller and the Microchip HI-TECH C compiler.
+
+
+    In "Beginner''s Guide to Embedded C Programming – Volume 3" Chuck Hellebuyck takes
+    another leap forward by showing you the steps to create the SimpleC library of
+    functions that make programming in C even easier. This approach shows the reader
+    how they can create their own functions and expand the SimpleC library to make
+    creating microcontroller projects much quicker than writing in raw C code. This
+    book will clearly be the reference for future programmers who want to build electronic
+    gadgets without all the painstaking steps of writing every C statement while producing
+    a working project in less time and with less effort.
+
+
+    The SimpleC library will make the following functions as easy as one command line:
+
+
+    +   - Controlling Digital Outputs
+
+    +   - Reading Digital Inputs
+
+    +   - Monitoring Analog Voltages
+
+    +   - Driving Liquid Crystal Display Modules
+
+    +   - Driving Digital PWM Signals
+
+    +   - Sending/Receiving via SPI and I2C Communication
+
+    +   - Writing to/Reading from External EEPROM
+
+    +   - Writing to/Reading from External I/O Expanders
+
+    +   - And More!
+
+
+    The book uses the open source PIC16F886 based CHIPINO module for the hardware
+    and also forms the platform to make future electronic projects and gadgets easier
+    to build.'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,11 @@
+You should always prefer automatic storage duration to dynamic storage duration. You only need to use dynamic storage duration when you are creating objects whose lifetime must persist beyond the current scope. If you are reasonably new to C++ it is to be hoped that this is a little startling and somewhat curious. You may never have been introduced to the new operator and will always have used smart pointers to create large objects which can be cheaply passed around. You might have been told that you avoid memory leaks by avoiding the use of raw pointers. However, a memory leak is not the only kind of leak.
+
+# Leaking away files
+
+Windows programmers will be familiar with the function CreateFile. This function creates or opens a file or I/O device and returns a handle to that object. That handle is of type HANDLE which is an alias to a void*. The handle is used with all function calls involving the file: ReadFile, WriteFile, SetFilePointer, and so on. When the object is no longer needed, a call to CloseHandle will release the resource back to the operating system.
+
+The same is true for file handling in the standard library. If you choose to avoid the streams library, the function std::fopen creates or opens a file or I/O device and returns a pointer to an implementation-defined type called FILE. This pointer is used with all function calls involving the file: std::fread, std::fwrite, std::fseek, and so on. When the object is no longer needed, a call to std::fclose will release the resource back to the operating system.
+
+You can see a very similar set of operations here. std::fread takes the FILE pointer as the final argument while ReadFile takes it as the first argument, and std::fread reads a number of objects of a given size while ReadFile reads a number of bytes, but the principle is the same: here is a handle, given by the operating system, for you to use while you engage in file manipulation.
+
+These handles can leak, just as memory does. Returning to our example, here is the simplest possible leak:

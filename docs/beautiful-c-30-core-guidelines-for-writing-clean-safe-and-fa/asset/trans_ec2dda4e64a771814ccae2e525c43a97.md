@@ -1,0 +1,432 @@
+
+
+```cpp
+vector_sum<vector_sum<vector_f<3>, vector_f<3>>>
+```
+
+```cpp
+template <class T>
+void mem_vector<T>::resize(size_type count);
+```
+
+```cpp
+template <class Trivial>
+void mem_vector<Trivial>::resize(size_type count);
+```
+
+```cpp
+template <class T>
+void mem_vector<T>::resize(size_type count, T::trivial* = 0);
+```
+
+```cpp
+std::enable_if<std::is_trivially_constructible<T>::value>::type
+```
+
+```cpp
+if constexpr(sizeof(int) == 4)
+{
+    // ints are 32 bits wide.
+}
+```
+
+```cpp
+if constexpr(std::is_move_constructible_v<T>)
+{
+    // the function template is being specialized for a move-constructible type
+}
+```
+
+```cpp
+template <class T>
+void do_stuff()
+{
+    if constexpr(std::is_move_constructible_v<T>)
+    {
+        ...
+    }
+    else
+    {
+        ...
+    }
+}
+```
+
+```cpp
+size_t make_a_wish(int id, std::string owner) {
+    Wish* wish = new Wish(wishes[id], owner);
+    return wish->size();
+}
+```
+
+```cpp
+Wish* make_a_wish_better(int id, std::string owner) {
+    Wish* wish = new Wish(wishes[id], owner);
+    return wish;
+}
+```
+
+```cpp
+size_t measure_widget(Widget* w) {
+    return size(w); // (You guessed it...)
+}
+```
+
+```cpp
+size_t measure_widget(Widget& w) {
+    return w.size(); // (References cannot be null without evil intent)
+}
+```
+
+```cpp
+#include <gsl/gsl>
+
+gsl::owner<int*> produce()      // You will become the proud owner
+{
+    gsl::owner<int*> i = new int;  // You're the owner
+    return i;                      // Passing ownership out of the function
+}
+
+void consume(gsl::owner<int*> i) // Taking on ownership
+{
+    delete i;                      // It's yours, you can destroy it
+}
+
+void p_and_c()
+{
+    auto i = produce();            // create...
+    consume(i);                    // ...and destroy
+}
+```
+
+```cpp
+int* produce()                  // Just a raw pointer
+{
+    gsl::owner<int*> i = new int;
+    return i;
+}
+```
+
+```cpp
+template <class T,
+    class = std::enable_if_t<std::is_pointer<T>::value>>
+using owner = T;
+```
+
+```cpp
+class Manager
+{
+public:
+    static Manager& instance();
+
+private:
+    Manager();
+};
+```
+
+```cpp
+class Manager
+{
+public:
+    static int blimp_count();
+    static void add_more_blimps(int);
+    static void destroy_blimp(int);
+
+private:
+    static std::vector<Blimp> blimps;
+    static void deploy_blimp();
+};
+```
+
+```cpp
+namespace Manager
+{
+    int blimp_count();
+    void add_more_blimps(int);
+    void destroy_blimp(int);
+}
+```
+
+```cpp
+constexpr float G = 6.674e-11; // Gravitational constant
+```
+
+```cpp
+struct Agg {
+    Agg() : a{0}, b{0}, c{0} {};
+    int a;
+    int b;
+    int c;
+};
+```
+
+```asm
+main:
+    sub rsp, 24
+    mov rdi, rsp
+    mov QWORD PTR [rsp], 0   // (1)
+    mov DWORD PTR [rsp+8], 0
+    call fn(Agg&)            // (2)
+    xor eax, eax
+    add rsp, 24
+    ret
+```
+
+```asm
+main:
+    sub rsp, 40
+    mov rdi, rsp
+    mov QWORD PTR [rsp], 0    // (1)
+    mov DWORD PTR [rsp+8], 0
+    call fn(Agg&)    // (2)
+    lea rdi, [rsp+16]
+    mov QWORD PTR [rsp+16], 0    // (3)
+    mov DWORD PTR [rsp+24], 0
+    call fn(Agg&)    // (4)
+    mov rax, QWORD PTR [rsp+16]    // (5)
+    mov rdi, rsp    // (6)
+    mov QWORD PTR [rsp], rax    // (5)
+    mov eax, DWORD PTR [rsp+24]
+    mov DWORD PTR [rsp+8], eax
+    call fn(Agg&)    // (6)
+    xor eax, eax
+    add rsp, 40
+    ret
+```
+
+```cpp
+int main() {
+    auto t = Agg{};
+    fn(t);
+    std::fill(std::begin(a), std::end(a), t); // Fill the array
+}
+```
+
+```text
+10 Hertz *
+1,000 soldiers *
+18 bytes *
+8 bits =
+1,440,000 bits per second
+```
+
+```cpp
+class unit {
+public:
+    animation* current_animation() const;
+
+private:
+    animation* m_animation;
+};
+```
+
+```cpp
+float distance_from_primary_marker(soldier const& s);
+```
+
+```cpp
+float distance_from_primary_marker(soldier const& s) {
+    ...
+    const_cast<soldier&>(s).snap_to_meter_grid(); // Oh, the humanity...
+    ...
+}
+```
+
+```cpp
+class soldier {
+public:
+    commander& get_commander();
+    commander const& get_commander() const;
+};
+```
+
+```cpp
+commander& soldier::get_commander() {
+    return const_cast<commander&>(
+        static_cast<soldier const&>(*this).get_commander());
+}
+```
+
+```cpp
+class soldier {
+public:
+    commander& get_commander();
+    commander const& get_commander() const;
+
+private:
+    template <class T>
+    static auto get_commander_impl(T& t)
+    -> decltype(t.get_commander()) {
+        // do the work
+    }
+};
+```
+
+```cpp
+class unit {
+public:
+    animation* current_animation();
+    animation const* current_animation() const;
+
+private:
+    animation* m_animation;
+};
+```
+
+```cpp
+class soldier {
+public:
+    commander& get_commander();
+    commander const& get_commander() const;
+
+private:
+    commander* m_commander;
+
+    template <class T>
+    static auto get_commander_impl(T& t)
+        -> decltype(t.get_commander());
+};
+```
+
+```cpp
+class soldier {
+public:
+    commander& get_commander();
+    commander const& get_commander() const;
+
+private:
+    mutable commander* m_commander; // Immune from const constraint
+
+    template <class T>
+    static auto get_commander_impl(T& t)
+        -> decltype(t.get_commander()) {
+        if (!t.m_commander->is_alive()) {
+            ... // Find the new commander
+            t.m_commander = new_commander; // Always amenable to change
+        }
+        return *t.m_commander;
+    }
+};
+```
+
+```cpp
+class int_holder {
+public:
+    void increment() const { ++ *m_i; }
+
+private:
+    std::unique_ptr<int> m_i;
+};
+```
+
+```cpp
+class int_holder {
+public:
+    void increment() const { ++ m_i; }
+
+private:
+    int& m_i;
+};
+```
+
+```cpp
+outcome::result<double> log(double); // function prototype
+
+r = log(1.385);
+if (r)
+{
+    // Proceed as normal
+}
+else
+{
+    // Handle error
+}
+```
+
+```cpp
+// bad.h
+#include <iostream>
+using namespace std; // bad <- "You're not kidding," says Guy
+
+// user.cpp
+#include "bad.h"
+
+// some function that happens to be named copy
+bool copy(/*... some parameters ...*/);
+
+int main()
+{
+    // now overloads local ::copy and std::copy, could be ambiguous
+    copy(/*...*/);
+}
+```
+
+```cpp
+using vector_of_vectors = std::vector<gdg::maths::vector>;
+```
+
+```cpp
+namespace gdg::maths {
+    using std::inner_product;
+}
+```
+
+```cpp
+namespace World {
+  namespace Buildings {
+    namespace Municipal {}
+    namespace Business {}
+  }
+}
+```
+
+```cpp
+namespace Result {
+    struct Victory {};
+    struct DecisiveVictory : Victory {};
+    struct CrushingVictory : DecisiveVictory {};
+}
+
+namespace gdg {
+    int signal_result(Result::CrushingVictory);
+}
+namespace World {
+    int signal_result(Result::CrushingVictory);
+    namespace Buildings {
+        namespace Municipal {
+            int signal_result(Result::DecisiveVictory);
+        }
+        namespace Business {
+            int compete() {
+                using namespace Municipal;
+                using namespace gdg;
+                return signal_result(Result::CrushingVictory());
+            }
+        }
+    }
+}
+```
+
+```cpp
+// numerical_maths.h
+namespace maths {
+    float clamp(float v, float max, float min);
+}
+using namespace maths;
+
+// results.cpp
+#include "numerical_maths.h"
+#include <algorithm>
+using namespace std;
+```
+
+```cpp
+namespace BizBuild = World::Buildings::Business;
+```
+
+返回值, 标识符(输入参数, 输出参数);
+
+```cpp
+int amend_content(std::string const& format, std::string& destination);
+```
+

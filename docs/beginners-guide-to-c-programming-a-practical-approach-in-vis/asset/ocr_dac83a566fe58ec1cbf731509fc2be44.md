@@ -1,0 +1,9 @@
+C# is closely related to a concept called “.NET Framework”. .NET Framework is a platform on which various application types can be developed such as desktop applications, mobile apps or dynamic web sites. Let’s overview the .NET concept:
+
+In a computer, an operating system such as Windows manages system resources and hardware. Applications running on the computer communicate with the operating system and access the resources of the computer as the operating system directs. In .NET based applications (such as applications written in C#), .NET Framework provides a communication layer between the application and the operating system. Applications can use hardware and software resources by the help of .NET Framework. .NET Framework also includes an extensive library which makes our lives easier for developing C# applications. The programs which run on top of .NET framework are also called as “managed applications”. In managed applications, the memory management is performed by .NET framework hence the programmer does not need to deal with the memory allocation manually.
+
+.NET Framework is automatically installed in Windows therefore it is ready to be used.
+
+Another term you may hear frequently regarding the .NET Framework is the CLR. It means Common Language Runtime. It is a part of the .NET Framework which is responsible for managing runtime tasks such as memory allocation and error handling.
+
+Apart from CLR, .NET Framework also has two other main components called CLS and CTS. CLS is an acronym for Common Language Specification and CTS means Common Type System. CLS is a bunch of rules that enables various applications developed in different languages to be able to run on the same .NET platform. Similarly, CTS enables the compatibility of variable types of different languages which are based on the .NET Framework. The relation of these concepts is shown in Figure 1.1.
