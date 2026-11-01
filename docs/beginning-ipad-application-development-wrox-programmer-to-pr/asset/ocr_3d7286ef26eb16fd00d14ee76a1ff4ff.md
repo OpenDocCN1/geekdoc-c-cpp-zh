@@ -1,0 +1,20 @@
+# 2
+
+# Write Your First Hello World!
+Application
+
+# WHAT YOU WILL LEARN IN THIS CHAPTER:
+
++   - Create a new iPad project
++   - Build your first iPad application using Xcode
++   - Design the user interface (UI) of your iPad application using Interface Builder
++   - Write some simple code to allow the application to rotate its content based on the orientation of the device
++   - Add an icon to your iPad application
+
+Now that you have set up all the tools and SDK, you are ready to start developing for the iPad! For programming books, it is customary to start the chapter by showing you how to develop a "Hello World!" application. This approach allows you to use the various tools quickly without getting bogged down with the details. It also provides you with instant gratification; You see for yourself that things really work, which can be a morale booster that inspires you to learn more.
+
+# GETTING STARTED WITH XCODE
+
+Power up Xcode and you should see the Welcome screen, as shown in Figure 2-1.
+
+> NOTE The easiest way to start Xcode is to type Xcode in Spotlight and then press the Enter key to launch it.

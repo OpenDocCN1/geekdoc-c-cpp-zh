@@ -1,0 +1,23 @@
+![](bbox=[0.16, 0.1, 0.84, 0.6])
+
+# FIGURE 12-5
+
+When a pinch gesture is recognized, the handlePinchGesture: method is invoked to handle it. Recall that the pinch gesture is a continuous gesture, and hence the handlePinchGesture: method will be called repeatedly as long as the fingers are on the screen.
+
+To know whether this is a “zoom in” or “zoom out” gesture, you examine the scale property of the UIPinchGestureRecognizer object:
+
+```
+CGFloat factor = [(UIPinchGestureRecognizer *) sender scale];
+```
+
+If the fingers are moving apart, the value of scale is 1 or greater. If the fingers are moving closer, the value is smaller than 1. Every time you perform a pinch gesture, your application needs to remember the scale factor so that the next time you perform the gesture, you can resize the image based on its last drawn size. This is done when the pinch gesture ends (when the fingers are lifted off the screen). You examine the sender.state to see if the gesture has ended and then proceed to save the last scale factor:
+
+```
+if (sender.state == UIGestureRecognizerStateEnded) {
+    if (factor > 1) {
+        lastScaleFactor += (factor-1);
+    } else {
+        lastScaleFactor *= factor;
+    }
+}
+```

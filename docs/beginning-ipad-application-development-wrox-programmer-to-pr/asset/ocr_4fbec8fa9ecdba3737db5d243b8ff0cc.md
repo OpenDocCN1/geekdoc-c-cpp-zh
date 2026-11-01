@@ -1,0 +1,23 @@
+The method looks like this:
+
+```
+```objective-c
+- (void)willAnimateRotationToInterfaceOrientation:
+(UIInterfaceOrientation) interfaceOrientation
+duration: (NSTimeInterval) duration {
+
+}
+```
+```
+
+The interfaceOrientation parameter specifies the target orientation to which it is rotating.
+
+> **NOTE** If you handle this event, the willAnimateFirstHalfOfRotationToInterfaceOrientation: and willAnimateSecondHalfOfRotationFromInterfaceOrientation: events will not fire anymore.
+
+In the following Try It Out, you will reposition the views on your user interface (UI) when the device changes orientation.
+
+# **TRY IT OUT** Repositioning Views during Orientation Change
+
++   1. Using the project created earlier, double-click the ScreenRotationsViewController.xib file and add a Round Rect Button view to the View (see Figure 6-4).
+
+![](bbox=[0.111, 0.525, 0.751, 0.921])

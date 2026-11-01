@@ -1,0 +1,35 @@
+level_changes:
+- line: 1241
+  before: 1
+  after: 3
+- line: 4296
+  before: 2
+  after: 1
+- line: 8940
+  before: 2
+  after: 1
+- line: 8942
+  before: 3
+  after: 1
+- line: 8949
+  before: 3
+  after: 2
+- line: 9021
+  before: 3
+  after: 2
+- line: 9039
+  before: 3
+  after: 2
+- line: 9063
+  before: 3
+  after: 2
+- line: 9077
+  before: 3
+  after: 2
+text_changes:
+- line: 274
+  before: iPhone Simulator 不是仿真器
+  after: iPhone Simulator 不是模拟器
+- line: 181
+  before: 试试看 这些是供您实践的练习或示例
+  after: 试试看：这些是供您实践的练习或示例

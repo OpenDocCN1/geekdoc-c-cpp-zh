@@ -1,0 +1,40 @@
+6. Perform the following actions:
+
++   - Control-click the File's Owner item and drag it over the Text Field view. Select ipAddress.
++   - Control-click the File's Owner item and drag it over the Activity Indicator view. Select activityIndicator.
++   - Control-click the Round Rect Button view and drag it over the File's Owner item. Select buttonClicked:.
+
+7. Right-click the File's Owner item now and you should see the connections as shown in Figure 14-4.
+
+![](bbox=[0.12, 0.42, 0.55, 0.7])
+
+FIGURE 14-4
+
+8. In the WebServicesViewController.m file, add in the following bold statements:
+
+```
+import "WebServicesViewController.h"
+@implementation WebServicesViewController
+
+@synthesize ipAddress;
+@synthesize activityIndicator;
+```
+
+9. Next, define the buttonClicked: method, which will formulate the SOAP request packet and send it over to the Web service:
+
+```
+- (IBAction)buttonClicked:(id)sender {
+
+NSString *soapMsg = 
+[NSString stringWithFormat:
+"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
+"<soap:Envelope xmlns:xs i=\"http://www.w3.org/2001/XMLSchema-instance\" "
+"xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" "
+"xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
+"<soap:Body>"
+"<FindCountryAsXml xmlns=\"http://www.ecubicle.net/webservices/\">"
+"<v4IPAddress>%@</v4IPAddress>"
+"</FindCountryAsXml>"
+"</soap:Body>"
+"</soap:Envelope>", ipAddress.text
+```

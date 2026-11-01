@@ -1,0 +1,15 @@
+# Method 1
+
+For connecting outlets, Control-click and drag the File's Owner item to the view to which you want to connect (see Figure C-16).
+
+![](bbox=[0.1, 0.28, 0.85, 0.55])
+
+When you release the mouse button, a list appears from which you can select the correct outlet. When defining your outlets (in the Library window, or in code), remember that you can specify the type of view your outlet is referring to. When you release the mouse button, Interface Builder lists only the outlets that match the type of view you have selected. For example, if you defined `myOutlet1` as `UIButton` and you Control-click and drag the File's Owner item to a Text Field view on the View window, `myOutlet1` does not appear in the list of outlets.
+
+For connecting actions, Control-click and drag the view to the File's Owner item in the .xib window (see Figure C-17).
+
+![](bbox=[0.1, 0.7, 0.85, 0.9])
+
+When you release the mouse button, a list appears from which you can select the correct action.
+
+When you have connected the outlets and actions, a good practice is to view all the connections in the File's Owner item by right-clicking it. Figure C-18 shows that the File's Owner item is connected to the Text Field view through the `myOutlet1` outlet, and the Button's `Touch Up Inside` event is connected to the `myAction1:` action.

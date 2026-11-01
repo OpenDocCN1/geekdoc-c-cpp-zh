@@ -1,0 +1,29 @@
+```
+longitudeTextField.text]];
+[mapView addAnnotation:annotation];
+}
+}
+- (void)dealloc {
+[annotation release];
+[compass release];
+[lm release];
+[latitudeTextField release];
+[longitudeTextField release];
+[accuracyTextField release];
+[super dealloc];
+}
+```
+
+7. Press Command-R to test the application on the iPhone Simulator. You'll see the push pin inserted into the current position. When you tap on it, it displays the information in the annotation view as shown in Figure 18-21. Also observe that as you test it on a real device, the push pin will relocate on the map to represent your current location as you move.
+
+![](bbox=[0.15, 0.62, 0.5, 0.82])
+
+FIGURE 18-21
+
+# How It Works
+
+You first create the MyAnnotation class that inherits from the MKAnnotation base class. Within the MyAnnotation class, you implemented several properties (including coordinate, which specifies the center point of the annotation) and methods, in particular:
+
++   > title — Returns the title to be displayed on the annotation.
++   > subtitle — Returns the subtitle to be displayed on the annotation.
++   > moveAnnotation: — Changes the location of the annotation.

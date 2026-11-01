@@ -1,0 +1,21 @@
+# FIGURE B-2
+
+![](bbox=[0.1, 0.18, 0.8, 0.45])
+
+The Xcode window is divided into five sections:
+
++   - **Toolbar:** Displays the buttons for commonly performed actions.
++   - **Groups and Files List:** Displays the files in a project. Files are grouped into folders and categories for better management.
++   - **Status Bar:** Displays the status information about the current action.
++   - **Detail View:** Displays the files contained in the folders and groups selected in the Groups and Files List section.
++   - **Editor:** Displays the appropriate editor showing the file currently selected.
+
+To edit a code file, click the filename of a file to open the appropriate editor. For example, if you click an .h or .m file, the code editor in which you can edit your source code is displayed (see Figure B-3). Click a .plist file, and the XML Property List editor launches (see Figure B-4).
+
+# Customizing the Toolbar
+
+The Xcode window contains the toolbar section, in which you can place your favorite items for quick access. By default, the following items are placed in the toolbar:
+
++   - **Overview:** Enables you to select target settings such as the active SDK (iPhone OS version and device versus Simulator) as well as active configurations (Debug or Release).
++   - **Action:** Specifies the action you can perform with a selected item.
++   - **Breakpoints:** Toggles the Build and Run item (see next item) to Build and Debug so that you can attach a debugger to the application.

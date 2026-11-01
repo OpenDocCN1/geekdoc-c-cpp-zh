@@ -1,0 +1,53 @@
+```
+didStartElement:(NSString *) elementName
+namespaceURI:(NSString *) namespaceURI
+qualifiedName:(NSString *) qName
+attributes:(NSDictionary *) attributeDict {
+    if ([elementName isEqualToString:@"Country"]) {
+        if (![soapResults]) {
+            soapResults = [[NSMutableString alloc] init];
+        }
+        elementFound = YES;
+    }
+}
+```
+
+Here, you check to see if the tag is <Country>. If it is, you will set the Boolean variable elementFound to YES.
+
+parser:foundCharacters: — Fired when the text of an element is found:
+
+```
+-(void)parser:(NSXMLParser *) parser foundCharacters:(NSString *)string {
+    if ([elementFound]) {
+        [soapResults appendString: string];
+    }
+}
+```
+
+Here, if the <Country> tag is found, you start to extract the value of the Country element into the soapResults object.
+
+parser:didEndElement:namespaceURI:qualifiedName: — Fired when the end of an element is found:
+
+```
+//---when the end of element is found---
+-(void)parser:(NSXMLParser *)parser
+    didEndElement:(NSString *)elementName
+    namespaceURI:(NSString *)namespaceURI
+    qualifiedName:(NSString *)qName {
+    if ([[elementName isEqualToString:@"Country"]) {
+        //---displays the country---
+        NSLog(soapResults);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Country found!"
+            message:soapResults
+            delegate:self
+            cancelButtonTitle:@"OK"
+            otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+        [soapResults setString:@""];
+        elementFound = FALSE;
+    }
+}
+```
+
+Here, you simply look for the </Country> tag so that you now know that the value of the Country element has been correctly extracted. You then print out the value using a UIAlertView object.

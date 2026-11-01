@@ -1,0 +1,56 @@
+# TRY IT OUT Recognizing Panning
+
++   1. Using the same project created in the previous Try It Out, edit the GesturesViewController.m by adding the following bold statements:
+
+```
+#import "GesturesViewController.h"
+
+@implementation GesturesViewController
+
+@synthesize imageView;
+
+CGFloat lastScaleFactor = 1;
+
+CGFloat netRotation;
+
+CGPoint netTranslation;
+
+- (void)viewDidLoad {
+    //---tap gesture---
+    UITapGestureRecognizer *tapGesture =
+        [[UITapGestureRecognizer alloc]
+            initWithTarget:self
+            action:@selector(handleTapGesture:)];
+
+    tapGesture.numberOfTapsRequired = 2;
+    [self.imageView addGestureRecognizer:tapGesture];
+    [tapGesture release];
+
+    //---pinch gesture---
+    UIPinchGestureRecognizer *pinchGesture =
+        [[UIPinchGestureRecognizer alloc]
+            initWithTarget:self
+            action:@selector(handlePinchGesture:)];
+
+    [imageView addGestureRecognizer:pinchGesture];
+    [pinchGesture release];
+
+    //---rotate gesture---
+    UIRotationGestureRecognizer *rotateGesture =
+        [[UIRotationGestureRecognizer alloc]
+            initWithTarget:self
+            action:@selector(handleRotateGesture:)];
+
+    [imageView addGestureRecognizer:rotateGesture];
+    [rotateGesture release];
+
+    //---pan gesture---
+    UIPanGestureRecognizer *panGesture =
+        [[UIPanGestureRecognizer alloc]
+            initWithTarget:self
+            action:@selector(handlePanGesture:)];
+
+    [imageView addGestureRecognizer:panGesture];
+    [panGesture release];
+}
+```

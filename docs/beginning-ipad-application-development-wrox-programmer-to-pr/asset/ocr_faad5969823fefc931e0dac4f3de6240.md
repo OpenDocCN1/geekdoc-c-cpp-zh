@@ -1,0 +1,43 @@
+The application delegate is connected to the various view controllers, as you can see when you right-click on the Split View Based App App Delegate item (see Figure 4-36).
+
+![](bbox=[0.15, 0.2, 0.55, 0.45])
+
+FIGURE 4-36
+
+Let's examine the two view controllers that are contained within the Split View Controller: RootViewController and DetailViewController.
+
+Observe the content of the RootViewController.h file:
+
+```
+```objc
+#import <UIKit/UIKit.h>
+
+@class DetailViewController;
+
+@interface RootViewController : UITableViewController {
+    DetailViewController *detailViewController;
+}
+
+@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
+
+@end
+```
+```
+
+Note that the RootViewController class inherits from the UITableViewController class, not the UIViewController class you have seen earlier. The UITableViewController class is a subclass of the UIViewController class, providing the capability to display a table containing rows of data. (Chapter 7 discusses the Table view in more detail.)
+
+The content of the RootViewController.m file looks like this:
+
+```
+```objc
+#import "RootViewController.h"
+#import "DetailViewController.h"
+
+@implementation RootViewController
+
+@synthesize detailViewController;
+
+/*
+    ---Other commented out code are omitted from this code listing---
+```
+```

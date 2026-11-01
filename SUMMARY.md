@@ -211,6 +211,7 @@
 +   [C++游戏编程入门指南（第3版）](docs/beginning-c-through-game-programming-3rd-edition/README.md)
 +   [游戏编程入门 C++ 入门指南，第四版](docs/beginning-c-through-game-programming-fourth-edition/README.md)
 +   [游戏编程入门 C++ 入门指南，第三版](docs/beginning-c-through-game-programming-third-edition/README.md)
++   [iPad 应用开发入门指南](docs/beginning-ipad-application-development-wrox-programmer-to-pr/README.md)
 +   [C# 面向对象入门指南](docs/beginning-object-oriented-programming-with-c/README.md)
 +   [C++ 编程入门指南](docs/beginning-programming-with-c-for-dummies/README.md)
 +   [C 语言编程入门指南（第 4 版）](docs/beginning-programming-with-c-for-dummies-4/README.md)

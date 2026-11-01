@@ -1,0 +1,13 @@
+Interface Builder comes as part of the iPhone SDK and allows you to build the UI of iPad (and Mac) applications by using drag-and-drop.
+
+Double-click the `HelloWorldViewController.xib` file to launch Interface Builder. Figure 2-5 shows Interface Builder displaying the content of `HelloWorldViewController.xib` (which is really empty at this moment). As you can see, the Library window shows the various views that you can add to the UI of your iPad application. The View window shows the graphical layout of your UI. You will see the use of the other windows shortly.
+
+> **NOTE** Refer to Appendix C for a crash course on Interface Builder if you are not familiar with it.
+
+![](bbox=[0.15, 0.48, 0.9, 0.78])
+
+FIGURE 2-5
+
+With the View window in Landscape mode (click on the arrow at the top-right corner of the window to switch the orientation if it is not already in Landscape mode), scroll down to the Label view in the Library pane and drag and drop a Label view onto the View window (see Figure 2-6).
+
+After the Label view is added, select it and choose Tools ▸ Attributes Inspector. Enter Hello World! in the Text field. Also, next to Layout, click the center Alignment type (see Figure 2-7).

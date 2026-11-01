@@ -1,0 +1,50 @@
+```
+//---create a UIView object---
+UIView *view =
+    [[UIView alloc] initWithFrame:[[UIScreen mainScreen].applicationFrame];
+view.backgroundColor = [UIColor lightGrayColor];
+
+//---create a Label view---
+CGRect frame = CGRectMake(10, 15, 300, 20);
+UILabel *label = [[UILabel alloc] initWithFrame:frame];
+label.textAlignment = UITextAlignmentCenter;
+label.backgroundColor = [UIColor clearColor];
+label.font = [UIFont fontWithName:@"Verdana" size:20];
+label.text = @"This is a label";
+label.tag = 1000;
+
+//---create a Button view---
+frame = CGRectMake(10, 70, 300, 50);
+UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+button.frame = frame;
+
+[button setTitle:@"Click Me, Please!" forState:UIControlStateNormal];
+button.backgroundColor = [UIColor clearColor];
+button.tag = 2000;
+[button addTarget:self
+        action:@selector(buttonClicked:)
+        forControlEvents:UIControlEventTouchUpInside];
+
+[view addSubview:label];
+[view addSubview:button];
+
+self.view = view;
+[label release];
+}
+
+- (IBAction) buttonClicked: (id) sender{
+    UIAlertView *alert = [[UIAlertView alloc]
+        initWithTitle:@"Action invoked!"
+        message:@"Button clicked!"
+        delegate:self
+        cancelButtonTitle:@"OK"
+        otherButtonTitles:nil];
+
+    [alert show];
+    [alert release];
+}
+
+@end
+```
+
+3. Press Command-R to test the application in the iPhone Simulator. Figure 3-20 shows that the Label and Round Rect Button views are displayed on the view. Click the button to see an alert view displaying a message.
