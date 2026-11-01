@@ -1,0 +1,148 @@
+
+Instead of setting the Background of a button to just a single value, you can also do more. You can set the Background property to a LinearGradientBrush with a gradient color definition as shown:
+
+```
+<Style x:Key="FancyButtonStyle">
+    <Setter Property="Button.FontSize" Value="12" />
+    <Setter Property="Button.Foreground" Value="White" />
+    <Setter Property="Button.Background">
+        <Setter.Value>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Offset="0.0" Color="LightCyan" />
+                <GradientStop Offset="0.14" Color="Cyan" />
+                <GradientStop Offset="0.7" Color="DarkCyan" />
+            </LinearGradientBrush>
+        </Setter.Value>
+    </Setter>
+</Style>
+```
+
+The next button in this example has a fancy style with cyan applied as the linear gradient:
+
+```
+<Button Width="200" Content="Fancy button style" Style="{StaticResource FancyButtonStyle}" Margin="3" />
+```
+
+Styles offer a kind of inheritance. One style can be based on another one. The style AnotherButtonStyle is based on the style FancyButtonStyle. It uses all the settings defined by that style, and referenced by the BasedOn property, except the Foreground property — which is set to LinearGradientBrush:
+
+```
+<Style x:Key="AnotherButtonStyle" BasedOn="{StaticResource FancyButtonStyle}" TargetType="Button">
+    <Setter Property="Foreground">
+        <Setter.Value>
+            <LinearGradientBrush>
+                <GradientStop Offset="0.2" Color="White" />
+                <GradientStop Offset="0.5" Color="LightYellow" />
+                <GradientStop Offset="0.9" Color="Orange" />
+            </LinearGradientBrush>
+        </Setter.Value>
+    </Setter>
+</Style>
+```
+
+![](img/d7d2ffa0a76feaab821930e95daace93_1065_0.png)
+
+The last button has the AnotherButtonStyle applied:
+
+```
+<Button Width="200" Content="Style inheritance" Style="{StaticResource AnotherButtonStyle}" Margin="3" />
+```
+
+You can see the results of all these buttons styled in Figure 35-18
+
+## 资源
+
+As you have seen with the styles sample, usually styles are stored within resources. You can define any freezable element within a resource. For example, the brush created earlier for the background style of the button can itself be defined as a resource, so you can use it everywhere a brush is required.
+
+### 从代码访问资源
+
+To access resources from code-behind, the base class FrameworkElement implements the method FindResource(), so you can invoke the FindResource() method with every WPF object.
+
+To do this, button1 doesn't have a background specified, but the Click event is assigned to the method button1_Click:
+
+```
+<Button Name="button1" Width="220" Height="50" Margin="5" Click="button1_Click">
+    Apply Resource Programmatically
+</Button>
+```
+
+代码片段 StylesAndResources/ResourceDemo.xaml
+
+With the implementation of button1_Click(), the FindResource() method is used on the Button that was clicked. Then a search for the resource MyGradientBrush happens hierarchically, and the brush is applied to the Background property of the control. The resource MyGradientBrush was created previously in the resources of the StackPanel:
+
+```
+public void button1_Click(object sender, RoutedEventArgs e)
+{
+    Control ctrl = sender as Control;
+    ctrl.Background = ctrl.FindResource("MyGradientBrush") as Brush;
+}
+```
+
+代码片段 StylesAndResources/ResourceDemo.xaml.cs
+
+![](img/d7d2ffa0a76feaab821930e95daace93_1067_0.png)
+
+### 动态资源
+
+With the StaticResource markup extension, resources are searched at load time. If the resource changes while the program is running, then you should use the DynamicResource markup extension instead.
+
+The next example is using the same resource as defined previously. The earlier example used StaticResource. This button uses DynamicResource with the DynamicResource markup extension. The event handler of this button changes the resource programmatically. The handler method button2_Click is assigned to the Click event handler:
+
+```
+<Button Name="button2" Width="200" Height="50" Foreground="White" Margin="5" Background="{DynamicResource MyGradientBrush}" Content="Change Resource" Click="button2_Click" />
+```
+
+代码片段 StylesAndResources/ResourceDemo.xaml
+
+The implementation of button2_Click() clears the resources of the StackPanel and adds a new resource with the same name, MyGradientBrush. This new resource is very similar to the resource that is defined in XAML code; it just defines different colors:
+
+```
+private void button2_Click(object sender, RoutedEventArgs e)
+{
+    myContainer.Resources.Clear();
+    var brush = new LinearGradientBrush
+    {
+        StartPoint = new Point(0, 0),
+        EndPoint = new Point(0, 1)
+    };
+    brush.GradientStops = new GradientStopCollection()
+```
+
+The pack URI can be assigned as absolute, where the URI begins with pack://, or as relative, as it is used in this example. With relative syntax, the referenced assembly ResourceLib, which includes the dictionary, is first after the / followed by ;component. Component means that the dictionary is included as a resource in the assembly. After that, the name of the dictionary file Dictionary1.xaml is added. If the dictionary is added into a subfolder, the folder name must be declared as well:
+
+```
+<Application x:Class="StylesAndResources.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ResourceLib;component/Dictionary1.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+```
+
+代码片段 StylesAndResources/App.xaml
+
+Now it is possible to use the resources from the referenced assembly in the same way as local resources:
+
+```
+<Button Width="300" Height="50" Style="{StaticResource PinkButtonStyle}"
+    Content="Referenced Resource" />
+```
+
+代码片段 StylesAndResources/ResourceDemo.xaml
+
+## 触发器
+
+With triggers you can change the look and feel of your controls dynamically because of some events or some property value changes. For example, when the user moves with the mouse over a button, the button can change its look. Usually, you need to do this with the C# code. With WPF, you can also do this with XAML, as long as only the UI is influenced.
+
+There are several triggers with XAML. Property triggers are activated as soon as a property value changes. Multi-triggers are based on multiple property values. Event triggers fire when an event occurs. Data triggers happen when data that is bound is changed. In this section, property triggers, multi-triggers, and data triggers are discussed. Event triggers are explained later with animations.
+
+### 属性触发器
+
+The Style class has a Triggers property where you can assign property triggers. The following example includes a Button element inside a Grid panel. With the Window resources, a default style for Button elements is defined. This style specifies that the Background is set to LightBlue and the FontSize to 17. This is the style of the Button elements when the application is started. Using triggers, the style of the controls change. The triggers are defined within the Style.Triggers element, using the Trigger element. One trigger is assigned to the property IsMouseOver; the other trigger is assigned to the property IsPressed. Both of these properties are defined with the Button class that the style applies to. If IsMouseOver has a value of true, then the trigger fires and sets the Foreground property to Red and the FontSize property to 22. If the Button is pressed, then the property IsPressed is true, and the second trigger fires and sets the Foreground property of the Button to Yellow.
+
+![](img/d7d2ffa0a76feaab821930e95daace93_1069_0.png)

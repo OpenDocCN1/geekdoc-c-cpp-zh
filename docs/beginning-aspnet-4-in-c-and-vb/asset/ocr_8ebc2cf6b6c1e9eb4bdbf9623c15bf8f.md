@@ -1,0 +1,21 @@
+# Support for Object Orientation and Interfaces
+
+The language independence of .NET does have some practical limitations. IL is inevitably going to implement some particular programming methodology, which means that languages targeting it need to be compatible with that methodology. The particular route that Microsoft has chosen to follow for IL is that of classic object-oriented programming, with single implementation inheritance of classes.
+
+> *If you are unfamiliar with the concepts of object orientation, refer to the Web Download Chapter 53, "C#, Visual Basic, C++/CLI, and F#" for more information.*
+
+In addition to classic object-oriented programming, IL also brings in the idea of interfaces, which saw their first implementation under Windows with COM. Interfaces built using .NET produce interfaces that are not the same as COM interfaces. They do not need to support any of the COM infrastructure (for example, they are not derived from IUnknown, and they do not have associated globally unique identifiers, more commonly know as GUIDs). However, they do share with COM interfaces the idea that they provide a contract, and classes that implement a given interface must provide implementations of the methods and properties specified by that interface.
+
+You have now seen that working with .NET means compiling to IL, and that in turn means that you will need to use traditional object-oriented methodologies. However, that alone is not sufficient to give you language interoperability. After all, C++ and Java both use the same object-oriented paradigms, but they are still not regarded as interoperable. We need to look a little more closely at the concept of language interoperability.
+
+So what exactly do we mean by language interoperability?
+
+After all, COM allowed components written in different languages to work together in the sense of calling each other's methods. What was inadequate about that? COM, by virtue of being a binary standard, did allow components to instantiate other components and call methods or properties against them, without worrying about the language in which the respective components were written. To achieve this, however, each object had to be instantiated through the COM runtime, and accessed through an interface. Depending on the threading models of the relative components, there may have been large performance losses associated with marshaling data between apartments or running components or both on different threads. In the extreme case of components hosted as an executable rather than DLL files, separate processes would need to be created to run them. The emphasis was very much that components could talk to each other but only via the COM runtime. In no way with COM did components written in different languages directly communicate with each other, or instantiate instances of each other — it was always done with COM as an intermediary. Not only that, but the COM architecture did not permit implementation inheritance, which meant that it lost many of the advantages of object-oriented programming.
+
+An associated problem was that, when debugging, you would still need to debug components written in different languages independently. It was not possible to step between languages in the debugger. Therefore, what we really mean by language interoperability is that classes written in one language should be able to talk directly to classes written in another language. In particular:
+
++   - A class written in one language can inherit from a class written in another language.
++   - The class can contain an instance of another class, no matter what the languages of the two classes are.
++   - An object can directly call methods against another object written in another language.
++   - Objects (or references to objects) can be passed around between methods.
++   - When calling methods between languages, you can step between the method calls in the debugger, even when this means stepping between source code written in different languages.

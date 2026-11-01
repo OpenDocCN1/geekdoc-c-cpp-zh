@@ -201,6 +201,7 @@
 +   [Pic24／dspic33 编程初学者指南：Pic24 和 Dspic33 的 Microstick 和 Microchip C Compiler 使用指南 (第1卷)](docs/beginners-guide-to-programming-the-pic24dspic33-using-the-mi/README.md)
 +   [Android 4 应用开发入门指南](docs/beginning-android-4-application-development/README.md)
 +   [ASP.NET 安全 入门指南](docs/beginning-asp-net-security/README.md)
++   [ASP.NET 4 入门指南（C# 和 VB）](docs/beginning-aspnet-4-in-c-and-vb/README.md)
 +   [ASP.NET 4.5.1 入门指南：C# 和 VB (Wrox 程序员到程序员)](docs/beginning-aspnet-451-in-c-and-vb-wrox-programmer-to-programm/README.md)
 +   [ASP.NET 安全入门指南](docs/beginning-aspnet-security/README.md)
 +   [C# 和 .NET 入门指南](docs/beginning-c-and-net/README.md)
