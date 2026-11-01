@@ -1,0 +1,15 @@
+To give you an idea of how the validation controls work, the following exercise guides you through the process of using the RequiredFieldValidator in a contact form that is placed in a user control. The exercise is followed by an in-depth discussion of the various validation controls.
+
+> NOTE Visual Studio comes with a number of useful code snippets that enable you to quickly insert controls like the validation controls in Markup View. In the following exercise, you see how to add the necessary controls using the Toolbox, Design View, and drag and drop, but it's useful to know how to quickly add controls in Markup View as well. For example, to insert a TextBox in Markup View, type tb or textbox and then press Tab. VS completes the full control code for you. To insert a RequiredFieldValidator, type the letters req, press Ctrl+Spacebar to have VS complete the word requiredfieldvalidator for you, and then press Tab again to insert the entire tag.
+> 
+> If you do this directly below a TextBox control with its ID set, VS even sets the correct ControlToValidate attribute for you. This latter trick wouldn't work if you tried it in the next exercise because the various controls are not directly next to each other, but are placed in separate table cells. VS still inserts the code for the RequiredFieldValidator for you, but you need to set the ControlToValidate property to the ID of the associated TextBox manually.
+
+# TRY IT OUT Using the RequiredFieldValidator
+
+In this exercise, you create a user control called ContactForm.ascx. You can place it in a web page so visitors to your site can leave some feedback. In later exercises, you extend the control by sending the response by e-mail to your e-mail account.
+
++   1. Open the Planet Wrox project and add a new user control in the Controls folder. Call the control ContactForm.ascx. Make sure that it uses your programming language and a Code Behind file.
++   2. Switch to Design View and insert a table by choosing Table ⇨ Insert Table. Create a table with eight rows and three columns.
++   3. Merge the three cells of the first row. To do this, select all three cells, right-click the selection, and choose Modify ⇨ Merge Cells.
++   4. In the merged cell, type some text that tells your users they can use the contact form to get in touch with you. You could use an h1 element as a heading above the page to draw the user's attention.
++   5. In the first cell of the second row, type the word Name. Into the second cell of the same row, drag a TextBox and set its ID to Name. Into the last cell of the same row, drag a RequiredFieldValidator from the Validation category of the Toolbox. Finally, into the second cell of the last row, drag a Button. Rename the button to SendButton by setting its ID and set its Text property to Send. When you're done, your Design View looks like Figure 9-3.

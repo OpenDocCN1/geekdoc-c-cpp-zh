@@ -1,0 +1,15 @@
+To overcome this limitation, you should download and install SQL Server Management Studio (SSMS) Express, the free tools to manage all your SQL Server databases, including LocalDB, Express, and the commercial versions of SQL Server (although in the latter case you probably want to use the more feature rich version of the tools that ship with the main product.)
+
+In the next sections you see how to acquire and install SQL Server Management Studio Express. The sections that follow then show you how to use it to manage your databases and the data they contain.
+
+> NOTE Installing SQL Server and SSMS can be tricky. If you get stuck, be sure you visit this book's forum at http://p2p.wrox.com to find a helping hand.
+
+# Installing SQL Server 2012 Express
+
+You can download SQL Server Management Studio Express from the following page at the Microsoft site: http://tinyurl.com/SqlExpress2012. If this link no longer works, you can go to www.microsoft.com/express/database/ instead and click the Download button. Alternatively, you can go to the main downloads page at www.microsoft.com/downloads and search for “SQL Server 2012 Management Studio Express.”
+
+In all cases, make sure you download and install the 2012 version of Management Studio, and not an older version. Also, if you don’t have SQL Server Express installed, download the package that contains both the Express database engine and the Management Studio tools (it should have a name such as Express with Tools or something similar.) You don’t need it in the exercises in this and the next three chapters, but it’s used in Appendix B that shows you how to configure other versions of Visual Studio. It’s quite a large download (around 700 MB if you choose Express with Tools) but well worth the time downloading.
+
+After you have downloaded the Management Studio setup file (optionally with the Express database engine included), run the installer and follow the on-screen instructions. When asked for the Installation Type, choose for a New SQL Server stand-alone installation. This option enables you to choose Management Tools as a component to install later in the Setup Wizard. If you’re also installing the database engine, accept SqlExpress as the name for the instance. If that name is already taken, it means you already have SQL Server Express installed locally. If this version is SQL Server 2012 (use the Programs and Features option of the control panel in Windows to find out), you can skip installing the Database Engine Services components. If you have a different version installed, you can still install SQL Server 2012 side by side. In that case, choose a name such as Sql2012Express for the named instance. From then on, use this name whenever this book refers to SqlExpress as the named instance.
+
+Now that SQL Server Management Studio is installed, it’s time to look at ways to manage data in SQL Server database. SQL Server supports a query language called SQL that lets you do just that.

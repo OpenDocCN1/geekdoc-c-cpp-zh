@@ -1,0 +1,11 @@
+![](bbox=[0.14, 0.15, 0.88, 0.6])
+
+# FIGURE 16-19
+
+From here you can edit, enable, disable, or delete existing users. For example, if you previously set DisableCreatedUser to True in the CreateUserWizard, you can enable the user here by checking the check box in front of the username, visible in Figure 16-19. You can change the roles that are assigned to the user by clicking the Edit Roles link. Also, using the filter controls and the alphabet above the user list, you can quickly search for a specific user in case you're dealing with a lot of user accounts.
+
+9. To see where your user and role ended up, close the browser and go back to VS. On the Solution Explorer, double-click the PlanetWrox.mdf database in the App_Data folder to open it in the Database Explorer window. Then expand the Tables node, right-click the Roles table, and choose Show Table Data. The role you created in step 5 should be listed. Open up some of the other tables such as Memberships and UsersInRoles and inspect the data they contain. In the first table, you should see the user account you created in steps 6 and 7, and the latter table contains a relationship between the new role and user account.
+
+# How It Works
+
+Just like the login controls, the WSAT eventually talks to the provider you configured in the Web.config file. In the case of the Planet Wrox application, it means it talks to the DefaultMembershipProvider and the DefaultRoleProvider, which in turn talk to a SQL Server Express LocalDB database identified by your connection string. The users and roles you create are stored in various tables in the database. Users that you create using the WSAT end up in the exact same location as those created with the CreateUserWizard control. In fact, the WSAT uses a CreateUserWizard to create new user accounts. This means that any user you enter in the WSAT is able to log in using your standard Login.aspx page. In a later exercise, you use the Manager account you created in this exercise to log in to the site and access the Management folder.

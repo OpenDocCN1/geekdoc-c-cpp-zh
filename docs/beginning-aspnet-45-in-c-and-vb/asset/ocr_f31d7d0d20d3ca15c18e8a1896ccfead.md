@@ -1,0 +1,12 @@
+# ▶ WHAT YOU LEARNED IN THIS CHAPTER
+
+| Term | Definition |
+|---|---|
+| Ajax | Asynchronous JavaScript And XML, a term for a collection of techniques used to create flicker-free web pages and to interact with the server from client-side code |
+| Attribute | A code element that can be applied to other elements such as classes and methods to change their meaning or behavior |
+| Page method | A server-side static (Shared in VB.NET) method defined in a page that can be called from client script |
+| ScriptManager control | A core component of the Microsoft ASP.NET AJAX Framework that takes care of managing client script files and server-side Ajax behavior |
+| ScriptManagerProxy control | The bridge between a content page and the ScriptManager control defined in a master page |
+| UpdatePanel control | A control that helps create flicker-free pages by only updating content defined within its <ContentTemplate> element |
+| UpdateProgress control | A panel (a <div> or a <span>) that can be shown during the execution of an asynchronous Ajax operation |
+| Web service method | A method that can be called over the Internet or local network by other applications |

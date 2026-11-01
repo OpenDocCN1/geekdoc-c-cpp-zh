@@ -1,0 +1,21 @@
+![](bbox=[0.14, 0.14, 0.38, 0.33])
+
+# Displaying and Updating Data
+
+# WHAT YOU WILL LEARN IN THIS CHAPTER:
+
++   - How to display, insert, edit, and delete data using controls such as GridView, DetailsView, and SqlDataSource
++   - How to create a rich interface that enables a user to insert and edit data while maintaining data integrity with the ASP.NET validation controls
++   - The best way to store your connection strings in your application so they are easily updatable
+
+# WROX.COM CODE DOWNLOADS FOR THIS CHAPTER
+
+You can find the wrox.com code downloads for this chapter on the Download Code tab at www.wrox.com/remtitle.cgi?isbn=1118311809. The code is in the Chapter 13 download.
+
+In this chapter you learn how to display, insert, update, and delete data using the popular data controls that ship with ASP.NET. Besides working with the visual controls that are used to display and edit data in a web page, you also learn how to work with the SqlDataSource control that acts as the bridge between the database and your ASPX pages.
+
+The first things you need to look at are the available data controls, discussed in the next section.
+
+# DATA CONTROLS
+
+To enable you to work efficiently with the data in your system, ASP.NET offers two sets of data-aware controls: the data-bound controls and the data source controls.

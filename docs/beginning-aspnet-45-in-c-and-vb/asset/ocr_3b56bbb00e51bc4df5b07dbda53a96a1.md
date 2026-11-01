@@ -1,0 +1,11 @@
+# ABOUT THE AUTHOR
+
+**IMAR SPAANJAARS** graduated in Leisure Management at the Leisure Management School in the Netherlands, but he quickly changed his career path to the Internet world.
+
+After working in the Internet business at various web agencies for over twelve years, he now runs his own company called De Vier Koeden (http://devierkoeden.com), a small Internet agency specializing in consultancy and development of Internet and intranet applications with Microsoft technologies such as ASP.NET 4.5.
+
+Imar has written books on ASP.NET and Macromedia Dreamweaver, all published under the Wrox brand. He is also one of the top contributors to the Wrox Community Forum at p2p.wrox.com, where he shares his knowledge with fellow programmers.
+
+Imar has received Microsoft's Most Valuable Professional (MVP) award each year since 2008 for his contributions to the ASP.NET community. In early 2012, Imar joined the ASPInsiders, a small group of international professionals that provide feedback and direction on new features for future versions of ASP.NET.
+
+Imar lives in Utrecht, the Netherlands, with his girlfriend Fleur and his son Nick. You can contact him through his personal web site at http://imar.spaanjaars.com or by e-mail at imar@spaanjaars.com.
