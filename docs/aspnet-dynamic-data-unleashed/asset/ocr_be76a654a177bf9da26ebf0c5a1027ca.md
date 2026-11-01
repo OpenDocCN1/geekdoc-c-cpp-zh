@@ -1,0 +1,9 @@
+![](bbox=[0.117, 0.115, 0.554, 0.523])
+
+**FIGURE 7.1** Metadata API at a glance.
+
+At the highest level, the Metadata API represents a *meta model*—metadata information specific to Dynamic Data. This information is most relevant to Dynamic Data web applications and is exposed using APIs (classes, properties, and methods) designed specifically for this purpose. However, presenting *all* information required by Dynamic Data applications in special APIs would mean recreating `System.Reflection` and `System.ComponentModel` APIs, which are well designed and well known, even if not very easy to use. Instead, Dynamic Data tries to strike a balance between creating an API relevant to dynamic web applications and reusing the existing .NET framework APIs.
+
+The next level down includes the metadata information provided by the *data model*. The data access frameworks, such as LINQ to SQL and Entity Framework, provide metadata information you could use to discover entity classes and access their data. Dynamic Data wraps these APIs in a framework-agnostic *provider model* defined in the `System.Web.DynamicData.Providers` namespace. The provider model is also available through the Metadata API. However, this is an advanced topic that requires special attention. You can find a detailed discussion of this subject in Chapter 13, “Building Dynamic List Pages.”
+
+At the lowest level of abstraction is metadata information provided by the .NET runtime. The `Type` class in the `System` namespace provides information about classes, properties, methods, and attributes; it is an incredibly powerful but low-level tool. The `TypeDescriptor` class in the `System.ComponentModel` namespace works at a slightly higher level and has built-in understanding of data annotations. However, using these APIs directly in a

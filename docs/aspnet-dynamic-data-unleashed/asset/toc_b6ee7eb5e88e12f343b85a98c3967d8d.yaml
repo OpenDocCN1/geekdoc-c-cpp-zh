@@ -1,0 +1,53 @@
+level_changes:
+- line: 561
+  before: 2
+  after: 4
+- line: 2587
+  before: 2
+  after: 4
+- line: 3057
+  before: 2
+  after: 4
+- line: 5865
+  before: 3
+  after: 4
+- line: 6810
+  before: 2
+  after: 4
+- line: 9146
+  before: 2
+  after: 4
+- line: 9852
+  before: 2
+  after: 4
+- line: 10739
+  before: 2
+  after: 4
+text_changes:
+- line: 559
+  before: 第 2 章
+  after: 第 2 章 Entity Framework
+- line: 2585
+  before: 第4章
+  after: 第4章 实体模板
+- line: 3055
+  before: 第 5 章
+  after: 第 5 章 筛选模板
+- line: 5863
+  before: 第 9 章
+  after: 第 9 章 实现业务逻辑
+- line: 6808
+  before: 第 10 章
+  after: 第 10 章 构建自定义表单
+- line: 9144
+  before: 第 12 章
+  after: 第 12 章 构建自定义搜索页面
+- line: 9850
+  before: 第 13 章
+  after: 第 13 章 构建动态列表页面
+- line: 10738
+  before: 第14章
+  after: 第14章 实现安全性
+- line: 631
+  before: T恤
+  after: T-SQL

@@ -1,0 +1,11 @@
+For the Entity Framework to take advantage of this stored procedure, it needs to be added to the storage section of the entity model, similar to the GetProductsToReorder stored procedure discussed earlier. However, instead of adding it as a function import to the conceptual model, right-click the Product entity in the Entity Designer and select Stored Procedure Mapping from the context menu. You will see the Mapping Details window similar to that shown in Figure 2.18.
+
+![](bbox=[0.11, 0.32, 0.78, 0.67])
+
+FIGURE 2.18 Insert function mapping.
+
+The Functions tab of the Mapping window allows you to map the stored procedure parameters (shown on the left) to the entity properties (shown on the right). In this example, the generated ProductID value is mapped in the Result Column Bindings section.
+
+The Update stored procedures are somewhat more complex because they need to implement the optimistic locking normally performed by the Entity Framework. In addition to the primary key value required to uniquely identify the target row and the current values of all fields, the update procedure needs to provide a separate parameter for each entity property that has Concurrency Mode set to Fixed in the entity model. In the following example, the Products_Update procedure provides a separate set of parameters for all properties, one set for the new values, used to update the row, and the other set of old values, used to make sure that the entity has not been modified since it was last retrieved from the database.
+
+The update stored procedure also needs to be added to the model and used to map the Product entity as shown in Figure 2.19. Each property of the Product entity is mapped twice—first to the parameter that receives the “old” value of the entity property as it was originally retrieved from the database and then to the parameter that receives the “new” value that needs to be persisted. Notice that the @RowsAffected output parameter of the stored procedure, which returns the number of rows actually modified by the stored procedure, has a checkbox in the Rows Affected Parameter column. This parameter is used by the Entity Framework to determine if the optimistic locking was performed successfully and throw the OptimisticConcurrencyException if it returns zero.

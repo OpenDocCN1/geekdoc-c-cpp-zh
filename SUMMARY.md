@@ -169,6 +169,7 @@
 +   [ASPLOS XV：第十五届编程语言与操作系统体系结构支持国际会议，2010年3月13-17日，美国宾夕法尼亚州匹兹堡](docs/asplos-xv-fifteenth-international-conference-on-architectura/README.md)
 +   [ASP.NET Core 2.0 MVC & Razor Pages 初学者指南：网站构建指南](docs/aspnet-core-20-mvc-razor-pages-for-beginners-how-to-build-a-/README.md)
 +   [ASP.NET Core 应用开发：在四个冲刺中构建应用程序（开发者参考）](docs/aspnet-core-application-development-building-an-application-/README.md)
++   [ASP.NET Dynamic Data 完全掌握](docs/aspnet-dynamic-data-unleashed/README.md)
 +   [汇编语言编程：ARM Cortex-M3](docs/assembly-language-programming-arm-cortex-m3/README.md)
 +   [汇编语言步步进：Linux 编程 3e](docs/assembly-language-step-by-step-programming-with-linux-3e/README.md)
 +   [Professional Visual Basic 2010 and .NET 4 高级指南](docs/at-al-professional-visual-basic-2010-and-net-4/README.md)

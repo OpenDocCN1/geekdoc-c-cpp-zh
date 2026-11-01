@@ -1,0 +1,38 @@
+validation methods, accessing to original property values in, 259
+error messages, 219-221
+imperative, 245-249
+in Entity Framework, 221
+code generation, customizing, 227-230
+saving, validating entities before, 224-226
+specifying validation attributes for entity classes, 222-223
+TypeDescriptor, registering metadata provider with, 223
+multiple rules, 250-255
+null values, 247-248
+validation rules, 280
+  business rule methods, reusing entity validation in, 290-291
+  deletion rules, 289-290
+designing, 281
+  data annotations, implementing persistence validation rules with, 281
+read-only, making state properties of entities, 281
+state transitions and validation in business rule methods, implementing, 282-285
+state-specific persistence validation in separate validation methods, implementing, 285-287
+
+persistence validation, 280
+related entities, 288
+transition validation, 280
+ValidationAttribute class, 217, 220
+ValidationContext object, 218
+ValidationResult, 246-247, 250-251
+Validator class, 220, 252
+values, configuring appearance of, 360-361
+ViewName property, 185
+Vissides, John (Design Patterns: Elements of Reusable Object-Oriented Software), 287
+
+# W–Z
+
+Web Application projects, 5-6
+Web applications, invoking business rules in, 294-297
+Web Site projects, 5
+Web.config authorization rules, 458-462
+Where method, 59, 139, 145
+Zip method, 59
