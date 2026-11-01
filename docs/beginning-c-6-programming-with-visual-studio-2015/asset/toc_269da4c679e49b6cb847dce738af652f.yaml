@@ -1,0 +1,26 @@
+level_changes:
+- line: 3889
+  before: 1
+  after: 3
+- line: 226
+  before: 2
+  after: 3
+text_changes:
+- line: 226
+  before: 试试看 创建一个简单的 Windows 应用程序：WpfApplication1\MainWindow.xaml 和 WpfApplication1\MainWindow.xaml.cs
+  after: 试一试 创建一个简单的 Windows 应用程序：WpfApplication1\MainWindow.xaml 和 WpfApplication1\MainWindow.xaml.cs
+- line: 5182
+  before: TRY IT OUT 使用 List<T>：Ch12Ex02
+  after: 试一试 使用 List<T>：Ch12Ex02
+- line: 12006
+  before: TRY IT OUT 数值聚合运算符：BegVCSharp_20_7_NumericAggregates\Program.cs
+  after: 试一试 数值聚合运算符：BegVCSharp_20_7_NumericAggregates\Program.cs
+- line: 97
+  before: 拱墅区申花单元GS0404-13地块 15班幼儿园建设工程
+  after: '[OCR错误]'
+- line: 99
+  before: 施工图设计总说明（建筑）
+  after: '[OCR错误]'
+- line: 101
+  before: 一、工程概况
+  after: '[OCR错误]'

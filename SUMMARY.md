@@ -205,6 +205,7 @@
 +   [ASP.NET 4.5 入门指南：C# 与 VB](docs/beginning-aspnet-45-in-c-and-vb/README.md)
 +   [ASP.NET 4.5.1 入门指南：C# 和 VB (Wrox 程序员到程序员)](docs/beginning-aspnet-451-in-c-and-vb-wrox-programmer-to-programm/README.md)
 +   [ASP.NET 安全入门指南](docs/beginning-aspnet-security/README.md)
++   [Visual Studio 2015 C# 6 编程入门指南](docs/beginning-c-6-programming-with-visual-studio-2015/README.md)
 +   [C# 和 .NET 入门指南](docs/beginning-c-and-net/README.md)
 +   [C++游戏编程入门指南（第3版）](docs/beginning-c-through-game-programming-3rd-edition/README.md)
 +   [游戏编程入门 C++ 入门指南，第四版](docs/beginning-c-through-game-programming-fourth-edition/README.md)
