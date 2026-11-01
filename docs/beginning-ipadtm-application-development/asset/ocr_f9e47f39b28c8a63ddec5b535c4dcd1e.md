@@ -1,0 +1,21 @@
++   2. Observe its size and positioning by viewing the Size Inspector window. Here, its position is (20,20) and its size is 371 by 37 pixels.
++   3. Rotate the orientation of the View by clicking the arrow icon on the upper-right corner of the window.
++   4. Reposition the Round Rect Button view by relocating it to the bottom-right corner of the View window (see Figure 6-5). Also observe and take note of its position.
+
+![](bbox=[0.07, 0.26, 0.94, 0.76])
+
+FIGURE 6-5
+
+5. In the ScreenRotationsViewController.h file, add the following code shown in bold:
+
+```
+#import <UIKit/UIKit.h>
+
+@interface ScreenRotationsViewController : UIViewController {
+    IBOutlet UIButton *btn;
+}
+
+@property (nonatomic, retain) UIButton *btn;
+
+@end
+```

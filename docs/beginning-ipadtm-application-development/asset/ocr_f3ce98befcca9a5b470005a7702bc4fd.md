@@ -1,0 +1,20 @@
+The commands are:
+
++   - sqlite3 mydata.sql
++   - CREATE TABLE IF NOT EXISTS Contacts (email TEXT PRIMARY KEY, name TEXT);
++   - INSERT INTO Contacts (email, name) VALUES ('weimenglee@gmail.com', 'weimenglee');
++   - SELECT * FROM Contacts
+
+> **NOTE** Remember to end each command with a semicolon (;).
+> 
+> Also, by default when you launch Terminal, you are in your home directory. Hence, running the sqlite3 application will save your database file in your home directory.
+
+Even though you could use the sqlite3 application to insert records into the database, it would be much easier to use a graphical tool to do that. For this, you can use the SQLite Database Browser, which you can download for free from http://sourceforge.net/projects/sqlitebrowser/. You can use the SQLite Database Browser (see Figure 10-5) to perform a wide variety of functions with the database file.
+
+![](bbox=[0.08, 0.7, 0.65, 0.88])
+
+FIGURE 10-5
+
+# SUMMARY
+
+This chapter provides a whirlwind introduction to the SQLite3 database used in the iPad. With SQLite3, you can now store all your structured data in an efficient manner and perform complex aggregations on your data.

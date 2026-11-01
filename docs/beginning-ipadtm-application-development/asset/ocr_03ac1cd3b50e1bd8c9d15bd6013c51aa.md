@@ -1,0 +1,39 @@
+7. Right-click on the File's Owner item to verify that all the connections are made correctly (see Figure 15-3).
+
+![](bbox=[0.07, 0.22, 0.55, 0.53])
+
+FIGURE 15-3
+
+8. In Xcode, in the BluetoothViewController.m file, add in the following bold statements:
+
+```
+-(void)viewDidLoad {
+    [connect setHidden:NO];
+    [disconnect setHidden:YES];
+    [super viewDidLoad];
+}
+```
+
+```
+-(IBAction)btnConnect:(id)sender {
+    picker = [[GKPeerPickerController alloc] init];
+    picker.delegate = self;
+    picker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
+
+    [connect setHidden:YES];
+    [disconnect setHidden:NO];
+    [picker show];
+}
+```
+
+```
+-(void)peerPickerController:(GKPeerPickerController *)pk didConnectPeer:(NSString *)peerID toSession:(GKSession *)session {
+    self.currentSession = session;
+    session.delegate = self;
+    [session setDataReceiveHandler:self withContext:nil];
+
+    picker.delegate = nil;
+    [picker dismiss];
+    [picker autorelease];
+}
+```

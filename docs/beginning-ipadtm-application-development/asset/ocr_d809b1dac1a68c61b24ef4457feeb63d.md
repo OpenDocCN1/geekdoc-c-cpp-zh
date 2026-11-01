@@ -1,0 +1,41 @@
+# PART V: APPENDICES
+
+# APPENDIX A: ANSWERS TO EXERCISES 483
+
++   - **Chapter 2 Exercise Solutions** 483
++     - Answer to Question 1 483
++     - Answer to Question 2 483
++     - Answer to Question 3 483
++   - **Chapter 3 Exercise Solutions** 484
++     - Answer to Question 1 484
++     - Answer to Question 2 484
++     - Answer to Question 3 484
++     - Answer to Question 4 484
++   - **Chapter 4 Exercise Solutions** 485
++     - Answer to Question 1 485
++     - Answer to Question 2 485
++     - Answer to Question 3 486
++     - Answer to Question 4 486
++   - **Chapter 5 Exercise Solutions** 486
++     - Answer to Question 1 486
++     - Answer to Question 2 487
++     - Answer to Question 3 487
++   - **Chapter 6 Exercise Solutions** 487
++     - Answer to Question 1 487
++     - Answer to Question 2 487
++   - **Chapter 7 Exercise Solutions** 487
++     - Answer to Question 1 487
++     - Answer to Question 2 488
++     - Answer to Question 3 488
++   - **Chapter 8 Exercise Solutions** 488
++     - Answer to Question 1 488
++     - Answer to Question 2 488
++     - Answer to Question 3 488
++   - **Chapter 9 Exercise Solutions** 488
++     - Answer to Question 1 488
++     - Answer to Question 2 489
++     - Answer to Question 3 489
++   - **Chapter 10 Exercise Solutions** 489
++     - Answer to Question 1 489
++     - Answer to Question 2 489
++     - Answer to Question 3 489

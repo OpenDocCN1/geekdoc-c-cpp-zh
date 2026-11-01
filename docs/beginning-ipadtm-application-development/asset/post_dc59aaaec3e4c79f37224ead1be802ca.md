@@ -1,0 +1,103 @@
+
+| FRAMEWORK NAME | DESCRIPTION |
+| --- | --- |
+| Foundation.framework | Provides the foundation classes for Objective-C, such as NSObject, basic data types, operating system services, and so on. |
+| GameKit.framework | Provides networking capabilities to games; commonly used for peer-to-peer connectivity and in-game voice features. |
+| IOKit.framework | Provides capabilities for driver development. |
+| MapKit.framework | Provides an embedded map interface for your application. |
+| MediaPlayer.framework | Provides facilities for playing movies and audio files. |
+| MessageUI.framework | Provides a view-controller–based interface for composing e-mail messages. |
+| MobileCoreServices.framework | Provides access to standard types and constants. |
+| OpenAL.framework | Provides an implementation of the OpenAL specification. |
+| OpenGLES.framework | Provides a compact and efficient subset of the OpenGL API for 2D and 3D drawing. |
+| QuartzCore.framework | Provides ability to configure animations and effects and then render those effects in hardware. |
+| Security.framework | Provides the ability to secure your data and control access to software. |
+| StoreKit.framework | Provides in-app purchase support for applications. |
+| SystemConfiguration.framework | Provides the ability to determine network availability and state on device. |
+| UIKit.framework | Provides the fundamental objects for managing an application's UI. |
+
+## SOME USEFUL INFORMATION BEFORE YOU GET STARTED
+
+You now have a good idea of the tools involved in iPad application development. Before you go ahead and take the plunge, the following sections discuss some useful information that can make your journey more pleasant.
+
+### Versions of iPhone OS
+
+At the time of writing, the iPhone OS is in its third revision — that is, version 3.2. Its major versions are as follows:
+
+- 1.0 — Initial release of iPhone
+- 1.1 — Additional features and bug fixes for 1.0
+- 2.0 — Released with iPhone 3G; comes with App Store
+- 2.1 — Additional features and bug fixes for 2.0
+- 2.2 — Additional features and bug fixes for 2.1
+- 3.0 — Third major release of the iPhone OS
+- 3.1 — Additional features and bug fixes for 3.0
+- 3.2 — This version is a release for iPad only; see the sidebar for what is new in iPhone OS 3.2
+
+For a detailed description of the features in each release, check out http://en.wikipedia.org/wiki/iPhone_OS_version_history.
+
+### WHAT'S NEW IN IPHONE OS 3.2
+
+In January 2010, Apple announced a new device based on the existing iPhone OS — the iPad. The iPad is a tablet computer that resembles an iPod touch, except that it has a much bigger screen. The iPad comes in six different editions, three with Wi-Fi and another three with Wi-Fi and 3G networks. The iPad will be released in three storage configurations: 16GB, 32GB, and 64GB.
+
+Some of the important new features of iPhone OS 3.2 include:
+
+- Support for existing iPhone applications by running them either in their original screen size or in pixel-doubled mode.
+- New UI features such as Popovers, Split Views, and Custom Input Views.
+- Support for external displays.
+- Support for gestures detection using Gesture Recognizers.
+- Improved Text support to allow applications to have more sophisticated text-handling capabilities.
+- New File and Document support to facilitate building document-centric applications.
+
+### Testing on Real Devices
+
+One of the most common complaints that beginning iPad programmers made was about the inability to test iPad applications they have developed on their actual devices. It seems odd that as the owner of the device, they can't even test their applications on it. Turns out that for security reasons, Apple requires all applications to be signed with a valid certificate, and for testing purposes, a developer certificate is required.
+
+To test your applications on a device, you must sign up for the iPhone Developer program and request that a developer certificate be installed onto your device.
+
+## 2 Write Your First Hello World! Application
+
+### WHAT YOU WILL LEARN IN THIS CHAPTER:
+
+- Create a new iPad project
+- Build your first iPad application using Xcode
+- Design the user interface (UI) of your iPad application using Interface Builder
+- Write some simple code to allow the application to rotate its content based on the orientation of the device
+- Add an icon to your iPad application
+
+Now that you have set up all the tools and SDK, you are ready to start developing for the iPad! For programming books, it is customary to start the chapter by showing you how to develop a “Hello World!” application. This approach allows you to use the various tools quickly without getting bogged down with the details. It also provides you with instant gratification: You see for yourself that things really work, which can be a morale booster that inspires you to learn more.
+
+### GETTING STARTED WITH XCODE
+
+Power up Xcode and you should see the Welcome screen, as shown in Figure 2-1.
+
+> **NOTE** The easiest way to start Xcode is to type Xcode in Spotlight and then press the Enter key to launch it.
+
+Although there are quite a few types of iPad applications you can create, for this chapter, select the View-based Application template and click the Choose button.
+
+> **NOTE** Subsequent chapters show you how to develop some of the other types of iPad applications, such as Tab Bar Application and Split View-based Application.
+
+Name the project HelloWorld and click Save. Xcode proceeds to create the project for the template you have selected. Figure 2-3 shows the various files and folders in your project.
+
+![](img/ab1bbb3d5afcbabb6f4a47f0203b9043_60_0.png)
+
+FIGURE 2-3
+
+The left panel of Xcode shows the groups in the project. You can expand on each group or folder to reveal the files contained in it. The right panel of Xcode shows the files contained within the group or folder you have selected on the left panel. To edit a particular file, select it from the list, and the editor at the bottom of the right panel opens the file for editing. If you want a separate window for editing, simply double-click the file to edit it in a new window.
+
+### Using Interface Builder
+
+As yet, this project has had no UI. To prove this, simply press Command-R (or select Run → Run), and your application is deployed to the included iPhone Simulator. Figure 2-4 shows the blank screen displayed on the iPhone Simulator. It's good to see this now, because as you go through the chapter you will see changes occur based on your actions.
+
+Interface Builder comes as part of the iPhone SDK and allows you to build the UI of iPad (and Mac) applications by using drag-and-drop.
+
+Double-click the `HelloWorldViewController.xib` file to launch Interface Builder. Figure 2-5 shows Interface Builder displaying the content of `HelloWorldViewController.xib` (which is really empty at this moment). As you can see, the Library window shows the various views that you can add to the UI of your iPad application. The View window shows the graphical layout of your UI. You will see the use of the other windows shortly.
+
+> **NOTE** Refer to Appendix C for a crash course on Interface Builder if you are not familiar with it.
+
+![](img/ab1bbb3d5afcbabb6f4a47f0203b9043_62_0.png)
+
+FIGURE 2-5
+
+With the View window in Landscape mode (click on the arrow at the top-right corner of the window to switch the orientation if it is not already in Landscape mode), scroll down to the Label view in the Library pane and drag and drop a `Label` view onto the View window (see Figure 2-6).
+
+After the Label view is added, select it and choose Tools → Attributes Inspector. Enter Hello World! in the Text field. Also, next to Layout, click the center Alignment type (see Figure 2-7).

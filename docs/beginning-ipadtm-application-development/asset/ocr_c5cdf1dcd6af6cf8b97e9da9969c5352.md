@@ -1,0 +1,31 @@
+# HOW THIS BOOK IS STRUCTURED
+
+This book breaks down the task of learning iPad programming into several smaller chunks, allowing you to digest each topic before delving into a more advanced topic. In addition, there are a few chapters that cover topics already discussed in the previous chapter. That's because there is usually more than one way of doing things in Xcode and Interface Builder, and hence this approach allows you to learn the different techniques in developing iPad applications.
+
+If you are a total beginner to iPad programming, start with Chapters 1 and 2. Once you have gotten things moving, head on to the appendixes to read more about the tools and language you are using. Once you are ready, you can now continue with Chapter 3 and gradually move into more advanced topics.
+
+A feature of this book is that all the code samples in each chapter are independent of those discussed in previous chapters. That way, you have the flexibility to dive into the topics that interest you and start working on the Try It Out projects.
+
+# WHAT YOU NEED TO USE THIS BOOK
+
+Most of the examples in this book run on the iPhone Simulator (which comes as part of the iPhone SDK). For exercises that access the hardware (such as the accelerometer), you need a real iPad. In general, to get the most out of this book, having a real iPad device is not necessary (although it is definitely required for testing if you plan to deploy your application on the AppStore).
+
+# CONVENTIONS
+
+To help you get the most from the text and keep track of what's happening, we've used a number of conventions throughout the book.
+
+# TRY IT OUT These Are Exercises or Examples for You to Follow
+
+The Try It Out exercises appear once or more per chapter as exercises to work through as you follow the text in the book.
+
++   1. They usually consist of a set of numbered steps.
++   2. Follow the steps through with your copy of project files.
+
+# How It Works
+
+After each Try It Out, the code you've typed is explained in detail.
+
+As for other conventions in the text:
+
++   - New terms and important words are highlighted in italics when first introduced.
++   - Keyboard combinations are treated like this: Control-R.

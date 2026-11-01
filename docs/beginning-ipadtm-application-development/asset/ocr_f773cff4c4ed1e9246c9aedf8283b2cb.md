@@ -1,0 +1,50 @@
+```
+address = [[service addresses] objectAtIndex: i];
+socketAddress = (struct sockaddr_in *) [address bytes];
+ipString = [NSString stringWithFormat: @"%s",
+    inet_ntoa(socketAddress->sin_addr)];
+port = socketAddress->sin_port;
+debug.text = [debug.text stringByAppendingFormat:
+    @"Resolved: %@->%@:%hu\n", [service hostName], ipString, port];
+}
+[self.tbView reloadData];
+}
+```
+
+When services are removed from the network, the netServiceBrowser:didRemoveService: method will be called, and hence in this method you will remove the service from the services mutable array:
+
+```
+-(void)netServiceBrowser:(NSNetServiceBrowser *)aBrowser
+    didRemoveService:(NSNetService *)aService moreComing:(BOOL)more {
+    [services removeObject:aService];
+    debug.text = [debug.text stringByAppendingFormat:@"Removed: %@\n",
+        [aService hostName]];
+    [self.tbView reloadData];
+}
+```
+
+The rest of the code involves loading the Table view with the host name of the services that have been discovered. In particular, you display the host name of each service in the Table view:
+
+```
+//---display the individual rows in the TableView---
+-(UITableViewCell *)tableView:(UITableView *)tableView
+cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    static NSString *CellIdentifier = @"Cell";
+
+    UITableViewCell *cell = [tableView
+        dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]
+            initWithStyle:UITableViewCellStyleDefault
+            reuseIdentifier:CellIdentifier] autorelease];
+    }
+
+    //---display the hostname of each service---
+    cell.textLabel.text = [[services objectAtIndex:indexPath.row] hostName];
+
+    return cell;
+}
+```
+
+With peers on the network discovered, what can you do next? You can use TCP/IP to connect with your peers on the network and send messages to them. Using TCP/IP for networking is beyond the scope of this book. However, interested users can download a working application from the author's website — http://www.learn2develop.net — that illustrates how to build a chat application using Bonjour.
