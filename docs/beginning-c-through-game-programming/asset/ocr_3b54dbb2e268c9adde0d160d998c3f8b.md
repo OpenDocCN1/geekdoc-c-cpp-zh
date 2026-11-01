@@ -1,0 +1,27 @@
+The loop iterates through all of the valid positions of phrase. It starts with 0 and goes through 11. During each iteration, a character of the string object is displayed with phrase[i]. Note that I made the loop variable, i, an unsigned int because the value returned by size() is an unsigned integral type.
+
+# Real World
+
+> Iterating through a sequence is a powerful and often-used technique in games. You might, for example, iterate through hundreds of individual units in a strategy game, updating their status and order. Or you might iterate through the list of vertices of a 3D model to apply some geometric transformation.
+
+# Using the find() Member Function
+
+Next I use the member function find() to check whether either of two string literals are contained in phrase. First, I check for the string literal "Over":
+
+```
+cout << "\nThe sequence 'Over' begins at location ";
+cout << phrase.find("Over") << endl;
+```
+
+The find() member function searches the calling string object for the string supplied as an argument. The member function returns the position number of the first occurrence where the string object for which you are searching begins in the calling string object. This means that phrase.find("Over") returns the position number where the first occurrence of "Over" begins in phrase. Since phrase is "Lame Over!!!", find() returns 5. (Remember, position numbers begin at 0, so 5 means the sixth character.)
+
+But what if the string for which you are searching doesn't exist in the calling string? I tackle that situation next:
+
+```
+if (phrase.find("eggplant") == string::npos)
+{
+    cout << "'eggplant' is not in the phrase.\n\n";
+}
+```
+
+Because "eggplant" does not exist in phrase, find() returns a special constant defined in the file string, which I access with string::npos. As a result, the screen displays the message, "'eggplant' is not in the phrase."

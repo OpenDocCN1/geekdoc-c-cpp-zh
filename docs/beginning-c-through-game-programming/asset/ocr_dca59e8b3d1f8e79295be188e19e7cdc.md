@@ -1,0 +1,14 @@
+# PASSING REFERENCES FOR EFFICIENCY
+
+Passing a variable by value creates some overhead because you must copy the variable before you assign it to a parameter. When we're talking about variables of simple, built-in types, such as an `int` or a `float`, the overhead is negligible. But a large object, such as one that represents an entire 3D world, could be expensive to copy. Passing by reference, on the other hand, is efficient because you don't make a copy of an argument variable. Instead, you simply provide access to the existing object through a reference.
+
+# Introducing the Inventory Displayer Program
+
+The Inventory Displayer program creates a vector of strings that represents a hero's inventory. The program then calls a function that displays the inventory. The program passes the displayer function the vector of items as a reference, so it's an efficient call; the vector isn't copied. However, there's a new wrinkle. The program passes the vector as a special kind of reference that prohibits the displayer function from changing the vector. Figure 6.3 shows you the program.
+
+You can download the code for this program from the Course Technology website (www.courseptr.com/downloads). The program is in the Chapter 6 folder; the filename is `inventory_displayer.cpp`.
+
+![](bbox=[0.12, 0.7, 0.78, 0.9])
+
+Figure 6.3
+The vector *inventory* is passed in a safe and efficient way to the function that displays the hero's items.

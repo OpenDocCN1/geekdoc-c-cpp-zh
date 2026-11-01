@@ -1,0 +1,43 @@
+```
+func();
+
+cout << "Back in main() var is: " << var << "\n\n";
+
+{
+    cout << "In main() in a new scope var is: " << var << "\n\n";
+    
+    cout << "Creating new var in new scope.\n";
+    int var = 10;  // variable in new scope, hides other variable named var
+    cout << "In main() in a new scope var is: " << var << "\n\n";
+}
+
+cout << "At end of main() var created in new scope no longer exists.\n";
+cout << "At end of main() var is: " << var << "\n";
+
+    return 0;
+}
+
+void func()
+{
+    int var = -5;  // local variable in func()
+    cout << "In func() var is: " << var << "\n\n";
+}
+```
+
+# Working with Separate Scopes
+
+Every time you use curly braces to create a block, you create a scope. Functions are one example of this. Variables declared in a scope aren't visible outside of that scope. This means that variables declared in a function aren't visible outside of that function.
+
+Variables declared inside a function are considered local variables—they're local to the function. This is what makes functions encapsulated.
+
+You've seen many local variables in action already. I define yet another local variable in main() with:
+
+```
+int var = 5;  // local variable in main()
+```
+
+This line declares and initializes a local variable named var. I send the variable to cout in the next line of code:
+
+```
+cout << "In main() var is: " << var << "\n\n";
+```

@@ -1,0 +1,34 @@
+# Returning a Value from main()
+
+The last statement in the function returns 0 to the operating system.
+
+```
+return 0;
+```
+
+Returning 0 from main() is a way to indicate that the program ended without a problem. The operating system doesn't have to do anything with the return value. In general, you can simply return 0 like I did here.
+
+# Trick
+
+When you run the Game Over program, you might only see a console window appear and disappear just as quickly. That's because C++ is so fast that it opens a console window, displays Game Over!, and closes the window all in a split second. However, in Windows, you can create a batch file that runs your console program and pauses, keeping the console window open so you can see the results of your program. Since the compiled program is named game_over.exe, you can simply create a batch file comprised of the two lines
+
+```
+game_over.exe
+pause
+```
+
+To create a batch file:
+
++   1. Open a text editor like Notepad (not Word or WordPad).
++   2. Type your text.
++   3. Save the file with a .bat extension, such as game_over.bat.
+
+Finally, run the batch file by double-clicking its icon. You should see the results of the program since the batch file keeps the console window open.
+
+# WORKING WITH THE STD NAMESPACE
+
+Because it's so common to use elements from the std namespace, I'll show you two different methods for directly accessing these elements. This will save you the effort of using the std:: prefix all the time.
+
+# Introducing the Game Over 2.0 Program
+
+The Game Over 2.0 program produces the exact results of the original Game Over program, illustrated in Figure 1.2. But there's a difference in the way elements from the std namespace are accessed. You can download the code for

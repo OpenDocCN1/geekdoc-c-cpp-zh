@@ -1,0 +1,29 @@
+level_changes:
+- line: 716
+  before: 2
+  after: 1
+- line: 2747
+  before: 2
+  after: 1
+- line: 5797
+  before: 2
+  after: 1
+- line: 7111
+  before: 1
+  after: 3
+- line: 7450
+  before: 2
+  after: 1
+text_changes:
+- line: 138
+  before: 使用STD命名空间
+  after: 使用 std 命名空间
+- line: 1146
+  before: IRW
+  after: 现实世界
+- line: 6404
+  before: 上海市基础教育学龄人口最高峰值预测
+  after: 类成员
+- line: 9164
+  before: 微信
+  after: 第8章：类

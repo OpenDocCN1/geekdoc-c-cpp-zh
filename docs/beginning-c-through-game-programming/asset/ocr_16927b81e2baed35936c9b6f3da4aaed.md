@@ -1,0 +1,23 @@
+![](bbox=[0.12, 0.12, 0.86, 0.48])
+
+Figure 5.6
+
+Function overloading allows you to triple the values of two different types using the same function name.
+
+You can download the code for this program from the Course Technology website (www.courseptr.com/downloads). The program is in the Chapter 5 folder; the filename is triple.cpp.
+
+```
+// Triple
+// Demonstrates function overloading
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int triple(int number);
+string triple(string text);
+
+int main()
+{
+```

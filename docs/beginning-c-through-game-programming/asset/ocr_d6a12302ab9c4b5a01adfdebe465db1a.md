@@ -1,0 +1,14 @@
+![](bbox=[0.18, 0.09, 0.82, 0.42])
+
+Figure 10.7
+Inheritance hierarchy of classes for the Blackjack game. `GenericPlayer` is shaded because it turns out to be an abstract class.
+
+I see `Card` objects as real-life cards. You don't copy a card when you deal it from the deck to a hand; you move it. For me, that means `Hand` will have a data member that is a vector of pointers to `Card` objects, which will exist on the heap. When a card moves from one `Hand` to another, it's really pointers that are being copied and destroyed.
+
+I see players (the human players and the computer) as Blackjack hands with names. That's why I derive `Player` and `House` (indirectly) from `Hand`. (Another equally valid view is that players have a hand. If I had gone this route, `Player` and `House` would have had `Hand` data members instead of being derived from `Hand`.)
+
+I define `GenericPlayer` to house the functionality that `Player` and `House` share, as opposed to duplicating this functionality in both classes.
+
+Also, I see the deck as separate from the house. The deck will deal cards to the human players and the computer-controlled house in the same way. This means that `Deck` will have a member function to deal cards that is polymorphic and will work with either a `Player` or a `House` object.
+
+To really flesh things out, you can list the data members and member functions that you think the classes will have, along with a brief description of each. That's what I do next in Tables 10.2 through 10.8. For each class, I list only the members I define in it. Several classes will, of course, be inherited members from base classes.

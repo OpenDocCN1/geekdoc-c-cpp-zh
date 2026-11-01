@@ -207,6 +207,7 @@
 +   [ASP.NET 安全入门指南](docs/beginning-aspnet-security/README.md)
 +   [Visual Studio 2015 C# 6 编程入门指南](docs/beginning-c-6-programming-with-visual-studio-2015/README.md)
 +   [C# 和 .NET 入门指南](docs/beginning-c-and-net/README.md)
++   [通过游戏编程的 C++ 入门指南](docs/beginning-c-through-game-programming/README.md)
 +   [C++游戏编程入门指南（第3版）](docs/beginning-c-through-game-programming-3rd-edition/README.md)
 +   [游戏编程入门 C++ 入门指南，第四版](docs/beginning-c-through-game-programming-fourth-edition/README.md)
 +   [游戏编程入门 C++ 入门指南，第三版](docs/beginning-c-through-game-programming-third-edition/README.md)

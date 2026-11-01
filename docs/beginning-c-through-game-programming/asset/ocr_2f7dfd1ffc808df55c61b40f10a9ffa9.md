@@ -1,0 +1,30 @@
+> Hint
+> When you have a class with data members that point to memory on the heap, you should consider writing a copy constructor that allocates memory for a new object and creates a deep copy.
+
+# Overloading the Assignment Operator
+
+When both sides of an assignment statement are objects of the same class, the class’ assignment operator member function is called. Like a default copy constructor, a default assignment operator member function is supplied for you if you don’t write one of your own. Also like the default copy constructor, the default assignment operator provides only member-wise duplication.
+
+For simple classes, the default assignment operator is usually fine. However, when you have a class with a data member that points to a value on the heap, you should consider writing an overloaded assignment operator of your own. If you don’t, you’ll end up with shallow copies of objects when you assign one object to another. To avoid this problem, I overloaded the assignment operator for Critter. First, inside the class definition, I write the declaration:
+
+```
+Critter& Critter::operator=(const Critter& c); //overloaded assignment op
+```
+
+Next, outside the class definition, I write the member function definition:
+
+```
+Critter& Critter::operator=(const Critter& c)  //overloaded assignment op def
+{
+    cout << "Overloaded Assignment Operator called\n";
+    if (this != &c)
+    {
+        delete m_pName;
+        m_pName = new string(*c.m_pName);
+        m_Age = c.m_Age;
+    }
+    return *this;
+}
+```
+
+Notice that the member function returns a reference to a Critter object. For robust assignment operation, return a reference from the overloaded assignment operator member function.
