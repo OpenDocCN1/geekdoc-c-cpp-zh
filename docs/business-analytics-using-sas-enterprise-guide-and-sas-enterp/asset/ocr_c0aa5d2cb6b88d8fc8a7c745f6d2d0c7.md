@@ -1,0 +1,17 @@
+Selling additional products or services to current customers is quickly replacing new customer acquisition as one of the easiest ways to increase profits. Testing offer sequences can help to determine what the next offer should be and when to make it. This testing enables companies to carefully manage offers to avoid over-soliciting and possibly alienating their customers.
+
+# Loyalty, Attrition, and Churn
+
+A familiar mantra in marketing is, “It costs less to retain a customer than it does to replace one.” Every company benefits from loyal customers. *Loyalty*, also known as *retention*, can be thought of as the opposite of *attrition*—the loss of a customer relationship. For highly competitive industries where markets are close to saturation, these terms are particularly relevant. Industries that count on renewals, such as insurance, telecommunications, and publishing, pay close attention to retention and attrition.
+
+*Attrition* is defined as a decrease in the use of a product or service. For credit card banks, attrition is the decrease in balances on which interest is earned. It occurs when customers switch companies, usually to take advantage of a better deal. For years, credit card banks lured customers from their competitors by offering low interest rates. Telecommunications companies continue to use strategic marketing tactics to lure customers away from their competitors. Many other industries spend much effort to retain customers and steal new ones from their competitors.
+
+For several decades, credit cards have been offered to almost every segment of the population, resulting in a saturated market. This reality means that credit card banks are now forced to increase their customer base primarily by luring customers from other providers. Their tactic is to offer low introductory interest rates for anywhere from three months to one year or more on either new purchases or balances transferred from another provider, or both. Their hope is that customers will keep their balances with the bank after the interest converts to the normal rate. Many customers, though, are savvy about keeping their interest rates low by moving balances from one card to another before the rate returns to normal. These activities introduce several modeling opportunities. One kind of model predicts the customer’s reduction or ending of the use of a product or service after an account is activated.
+
+In some industries, attrition becomes cyclical and is known as *churn*, which is defined as customers’ closing of one account in conjunction with the opening of another account for the same product or service, usually at a reduced cost. Companies have learned that it is cheaper to keep a customer happy than to replace him or her. To this end, retention and attrition modeling have become popular in some industries.
+
+Businesses use social network analysis to predict churn by examining the group behavior. By measuring the density of connection in a mobile phone network, for example, cellular companies are able to predict patterns of churn and take proactive steps to retain their customers.
+
+# Risk and Approval Models
+
+*Risk models*, or *approval models*, are unique to industries that assume the potential for loss when offering a product or service. The most familiar kinds of risk occur in the banking and insurance

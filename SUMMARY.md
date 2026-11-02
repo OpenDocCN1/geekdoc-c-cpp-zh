@@ -257,6 +257,7 @@
 +   [ODP 企业系统构建指南：开放分布式处理入门指南 (Chapman & Hall／Crc 软件工程与软件开发创新)](docs/building-enterprise-systems-with-odp-an-introduction-to-open/README.md)
 +   [SPARK 高完整性应用构建指南](docs/building-high-integrity-applications-with-spark/README.md)
 +   [仿真软件构建指南：理论与算法，附 C++ 应用](docs/building-software-for-simulation-theory-and-algorithms-with-/README.md)
++   [SAS Enterprise Guide 和 SAS Enterprise Miner 商业分析使用指南：初学者指南](docs/business-analytics-using-sas-enterprise-guide-and-sas-enterp/README.md)
 +   [Beyond the C++ Standard Library 中文版](docs/byd-cpp-stdlib/README.md)
 +   [C++ 入门指南](docs/c/README.md)
 +   [C# 1：编程与 C# 语言入门指南](docs/c-1-introduction-to-programming-and-the-c-language/README.md)

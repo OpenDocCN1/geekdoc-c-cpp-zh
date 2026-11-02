@@ -1,0 +1,5 @@
+# Notes from the Field
+
+Big data is a driving force in business today. It’s only getting bigger, so the pressure to use big data to gain or maintain a competitive advantage is only going to increase. This trend and the complexity it entails make the right kind of analysis critical.
+
+When you are first introduced to a data set or you are given a new business challenge or opportunity, it’s tempting to leap ahead and build that fancy predictive model. But you should always begin by really understanding the underlying data patterns and how the different data characteristics relate to one another. If your goal is to develop a predictive model, then the initial insights gleaned from the descriptive analysis will provide clues for building your variables and data interactions. Descriptive analysis may also alert you to underlying data problems, like missing values and data biases, earlier in the process. If you are working with a client or team, you may get some benefit from sharing your early findings from the descriptive analysis with stakeholders who may have additional business insights or suggestions.
