@@ -1,0 +1,40 @@
+
+shared elements; without this, fundamental concepts are lost in a morass of technical detail. This problem, therefore, is of both academic and practical interest, and its unraveling will have a consequential and transformational effect on the theory and practice of modeling and simulation.
+
+### 7.4 OTHER FACETS OF MODELING AND SIMULATION
+
+Modeling and simulation has many dimensions; software design and programming are two of these and are certainly important for building simulators. Two other facets are discussed above: (1) simulation tools, which include special programming languages and (2) the many theories of discrete-event systems, which link simulation models with other methods of analysis. The list of important topics does not end here, however. Tuncer Ören [104], Rogers [119], and Mielke et al. [87], in their expositions of education in modeling and simulation and the emerging body of knowledge for modeling and simulation (referred to by the acronym MSBOK), identify a host of topics that are important to the field and its applications; these include
+
+- 1. The design of experiments
+- 2. Methods for the analysis of input and output data
+- 3. Methods for validation and verification of models
+- 4. Numerical analysis and mathematical topics relevant to understanding and simulating dynamic systems
+- 5. Management of engineering projects
+- 6. Computer graphics, artificial intelligence, computer networking, and other topics related to the construction of virtual environments
+- 7. Modeling methods
+
+This list might also include systems theory, a variety of model representations and their simulation techniques (e.g., algorithms and data structures for programming the classical worldviews of discrete-event simulation), and systems with dynamic structures (see, e.g., Refs. 89, 140, 154, and 156). Textbooks on modeling and simulation cover many of these aspects (see, e.g., Refs. 19, 41, 42, 73, and 143), but a broader education is required to accumulate all of the fundamental skills.
+
+Recognition of this fact has recently (at the time of this writing) spawned several PhD and master’s degree programs in modeling and simulation. These are offered by several institutions, including the University of Central Florida, the MOVES Institutes at the Naval Postgraduate School, and the Virginia Modeling, Analysis and Simulation Center (VMASC) at Old Dominion University (where an undergraduate degree might also be offered in the near future). Prompting this interest in modeling and simulation education is, at least in part, the huge investment in modeling and simulation technology by the US Department of Defense, the consequent recognition that large modeling and simulation projects are major engineering endeavors, and a hard-won realization that success requires teams of engineers with a diverse, but particular, mix of skills. It remains to be seen whether “simulation engineer” will emerge with recognition equaling that of electrical, mechanical, and the other established engineering disciplines. Regardless, affordable simulations and robust software architectures will remain inseparable for the foreseeable future.
+
+## DESIGN AND TEST OF SIMULATIONS
+
+Simulation software can persist for as long as the system it models, supporting design at first, and later test, operations, maintenance, and the design of the system’s replacement. Some models are built to satisfy specific, short-term needs, and these are designed, constructed, and tested with little or no concern for long-term maintenance. Large models, however, or families of models that will provide service for years, must be treated like any large software project. An appropriate lifecycle model, with careful attention to documentation, testing, and version control, are fundamental to success.
+
+The composition of the development team is also important, and there are two roles that every simulation project must fill in some measure. Domain experts who understand the system that is being modeled are an obvious necessity. Software engineers conversant with simulation techniques—numerical analysis, discrete-event simulation, and the other topics addressed in this book—are also needed. Models for engineering often require analysts, who (perhaps surprisingly) are not necessarily domain experts, to prepare input for and process output from the model; this is particularly important when the model has substantial random elements and, consequently, statistical rigor is needed to use it effectively.
+
+The concern of the software engineer is chiefly with the design, construction, and maintenance of the simulation program. The modular modeling framework that we have developed, and its supporting simulation architecture, encourages a piecewise approach to the design and construction of a model. After the interface to a module is established, its internal workings can be designed, refined, tested, and maintained in isolation. Modules are combined from the bottom up, thereby limiting the scope of integration at each stage to a few thoroughly tested components. Likewise, the scope of change is controlled as requirements evolve.
+
+### A.1 DECOMPOSING A MODEL
+
+As a general rule, an atomic component should be small enough that its dynamic behavior is easily understood. A simple model can be verified by inspection, its response to input easily anticipated, and manual simulation used to construct test cases. Often, a design begins from the top and works its way down. The model is initially conceived in terms of its largest parts and their interconnections. The modeler then looks for an atomic representation of these parts.
+
+Sometimes one can be constructed easily. More often, the state space of a subsystem is too large or the dynamics too intricate, and an atomic representation is futile. The modeler then looks for a way to break the complicated subsystem into parts that, when interacting, will produce the desired behavior. This proceeds as before, with the decomposition being conceived in its largest parts. Atomic models are found for these or, that being intractable, the subsystems are further decomposed. Eventually, a fine enough decomposition is found and atomic models are built. Going back up the hierarchy of decomposed systems, successively more complicated pieces are combined to realize the original goal.
+
+#### A.1.1 Bottom-Up Testing
+
+One advantage of building a complicated model from simpler atomic pieces is that testing can be done as the components are integrated. Code inspections, inspection of design documents (state transition diagrams, phase diagrams, event graphs, etc.), and small simulations that can be verified by hand calculations are all very effective ways of uncovering errors. The small simulations deserve particular attention; keep these small programs and build a script to run them and check their output.
+
+As the model develops, you should acquire a collection of test cases that are run often to help uncover a host of problems, including unintended interactions between components, problems introduced during code optimization, and to guarantee that adding new behavior to an atomic model does not alter its old behavior in an unintended way. As the model evolves, the suite of test cases must evolve with it.
+
+The set of test cases can also be used to pinpoint problems in ways that a debugger cannot. When a coupled model exhibits an unusual, unexpected, and undesired behavior, it is usually a consequence of one of two factors: (1) the component interconnections have been improperly coded or (2) some subcomponent is not behaving as expected. Factor 1 can be checked by inspecting the network's routing method. In many cases, if the coupling expressed in the code is translated into a drawing on paper, then the source of the problem becomes apparent. Complicated routing functions may require the simulation to print a trace of source-destination pairs that is (tediously) examined for unintended interactions. Try these methods first, and resort to more drastic measures, such as stepping through the code with a debugger, only if

@@ -1,0 +1,283 @@
+
+```cpp
+{
+public:
+    corrected_euler(ode_system<X>* sys, double err_tol, double h_max);
+    ~corrected_euler();
+    double integrate(double* q, double h_lim);
+    void advance(double* q, double h);
+private:
+    double *dq, // derivative
+           *qq, // trial solution
+           *t,  // temporary variable for computing k2
+           *k[2]; // k1 and k2
+    const double err_tol; // Error tolerance
+    const double h_max; // Maximum time step
+    double h_cur; // Previous timestep that satisfied error constraint
+    // Compute a step of size h, put it in qq, and return the error
+    double trial_step(double h);
+};
+
+template <typename X>
+corrected_euler<X>::corrected_euler(ode_system<X>* sys, double err_tol,
+        double h_max):
+    ode_solver<X>(sys),err_tol(err_tol),h_max(h_max),h_cur(h_max)
+{
+    for (int i = 0; i < 2; i++) k[i] = new double[sys->numVars()];
+    dq = new double[sys->numVars()];
+    qq = new double[sys->numVars()];
+    t = new double[sys->numVars()];
+}
+
+template <typename X>
+corrected_euler<X>::~corrected_euler()
+{
+    delete [] t; delete [] qq; delete [] dq;
+    for (int i = 0; i < 2; i++) delete [] k[i];
+}
+
+template <typename X>
+void corrected_euler<X>::advance(double* q, double h)
+{
+    double dt;
+    while ((dt = integrate(q,h)) < h) h -= dt;
+}
+
+template <typename X>
+double corrected_euler<X>::integrate(double* q, double h_lim)
+{
+    // Initial error estimate and step size
+    double err = DMAX, h = std::min(h_cur*1.1,std::min(h_max,h_lim));
+    for (;;) {
+        // Copy q to the trial vector
+        for (int i = 0; i < this->sys->numVars(); i++) qq[i] = q[i];
+        // Make the trial step which will be stored in qq
+        err = trial_step(h);
+        // If the error is ok, then we have found the proper step size
+        if (err <= err_tol) { // Keep h if shrunk to control the error
+            if (h_lim >= h_cur) h_cur = h;
+            break;
+        }
+        // Otherwise shrink the step size and try again
+        else {
+            double h_guess = 0.8*err_tol*h/fabs(err);
+            if (h < h_guess) h *= 0.8;
+            else h = h_guess;
+        }
+    }
+    // Put the trial solution in q and return the selected step size
+    for (int i = 0; i < this->sys->numVars(); i++) q[i] = qq[i];
+    return h;
+}
+
+template <typename X>
+double corrected_euler<X>::trial_step(double step)
+{
+    int j;
+    // Compute k1
+    this->sys->der_func(qq,dq);
+    for (j = 0; j < this->sys->numVars(); j++) k[0][j] = step*dq[j];
+    // Compute k2
+    for (j = 0; j < this->sys->numVars(); j++) t[j] = qq[j] + 0.5*k[0][j];
+    this->sys->der_func(t,dq);
+    for (j = 0; j < this->sys->numVars(); j++) k[1][j] = step*dq[j];
+    // Compute next state and approximate error
+    double err = 0.0;
+    for (j = 0; j < this->sys->numVars(); j++) {
+        qq[j] += k[1][j]; // Next state
+        err = std::max(err,fabs(k[0][j]-k[1][j])); // Maximum error
+    }
+    return err; // Return the error
+}
+
+} // end of namespace
+#endif
+```
+
+## 用于定位状态事件的线性插值法
+
+```cpp
+#ifndef _adevs_linear_event_locator_h_
+#define _adevs_linear_event_locator_h_
+#include "adevs_hybrid.h"
+#include <cmath>
+
+namespace adevs
+{
+
+template <typename X> class linear_event_locator: public event_locator<X>
+{
+	public:
+		linear_event_locator(ode_system<X>* sys, double err_tol);
+		~linear_event_locator();
+		bool find_events(bool* events, const double* qstart, double* qend,
+				ode_solver<X>* solver, double& h);
+	private:
+		double *z[2]; // State events at the start and end of [0,h]
+		const double err_tol; // Error tolerance
+};
+
+template <typename X>
+linear_event_locator<X>::linear_event_locator(ode_system<X>* sys,
+		double err_tol):
+	event_locator<X>(sys),err_tol(err_tol)
+{
+	z[0] = new double[sys->numEvents()];
+	z[1] = new double[sys->numEvents()];
+}
+
+template <typename X>
+linear_event_locator<X>::~linear_event_locator()
+{
+	delete [] z[0]; delete [] z[1];
+}
+
+template <typename X>
+bool linear_event_locator<X>::find_events(bool* events,
+		const double* qstart, double* qend, ode_solver<X>* solver, double& h)
+{
+	// Look for events at the start of the interval
+	this->sys->state_event_func(qstart,z[0]);
+	for (int i = 0; i < this->sys->numEvents(); i++) {
+		events[i] = fabs(z[0][i]) <= err_tol;
+		// If an event was found, the event time is zero
+		if (events[i]) h = 0.0;
+	}
+	// If an event was found at zero, put qstart in qend and return
+	if (h == 0.0) {
+		for (int i = 0; i < this->sys->numVars(); i++) qend[i] = qstart[i];
+		return true;
+	}
+	// Look for events inside of the interval [0,h]
+	for (;;) {
+		double tguess = h;
+		bool event_in_interval = false, found_event = false;
+		this->sys->state_event_func(qend,z[1]);
+		for (int i = 0; i < this->sys->numEvents(); i++) {
+			if ((events[i] = fabs(z[1][i]) < err_tol)) found_event = true;
+			else if (z[0][i]*z[1][i] < 0.0) {
+				double tcandidate = z[0][i]*h/(z[0][i]-z[1][i]);
+				if (tcandidate < tguess) tguess = tcandidate;
+				event_in_interval = true;
+			}
+		}
+		// Calculate a new solution at tguess if an event was found
+		if (event_in_interval) {
+			h = tguess;
+			for (int i = 0; i < this->sys->numVars(); i++)
+				qend[i] = qstart[i];
+			solver->advance(qend,h);
+		}
+		// Stop when an event is located or is not detected in the interval
+		else return found_event;
+	}
+	// Will never reach this line
+	return false;
+}
+
+} // end of namespace
+
+#endif
+```
+
+![](img/df6085a1b35edf9c9ea818a5c66ccad9_219_0.png)
+
+**图 5.7** 电路仿真。
+
+对电路（来自第5.4节）的仿真演示了如何使用 *Hybrid* 类。完整的仿真程序列于下方。它打印电压以及开关和二极管状态随时间的变化，如图5.7所示。该图与表5.2中的数据非常吻合。
+
+## 第5.4节电路的仿真器
+
+```cpp
+#include "adevs.h"
+#include <iostream>
+using namespace std;
+using namespace adevs;
+
+class Circuit: public ode_system<bool>
+{
+  public:
+    Circuit():
+      ode_system<bool>(1,1), // one state variable and event function
+      s(1),d(0), // diode and switch states
+      vs(1.0),C(1.0),Rs(1.0),R1(1.0), // device parameters
+      vop(0.5),vcl(0.25){}
+    void init(double* q) { q[0] = 0.0; }; // vc = 0
+    void der_func(const double* q, double* dq)
+    {
+      // ODE form of the differential equations
+      if (!s && !d) dq[0] = 0.0;
+      else if (!s && d) dq[0] = -q[0]/(C*R1);
+      else if (s && !d) dq[0] = (vs-q[0])/(C*Rs);
+      else dq[0] = (vs-q[0]-Rs*q[0]/R1)/(C*Rs);
+    }
+    void state_event_func(const double *q, double* z)
+    {
+      // This model uses the implicit form of the diode event
+      if (d==0) z[0] = q[0]-vop;
+      else z[0] = q[0]-vcl;
+    }
+    // As written here, this model does not have any time events
+    double time_event_func(const double* q) { return DBL_MAX; }
+    void internal_event(double* q, const bool* events)
+    {
+      assert(events[0]); // only one event type; make sure it fired
+      d = !d;
+    }
+    void external_event(double*,double,const Bag<bool>& xb)
+    {
+      s = *(xb.begin());
+    }
+    void confluent_event(double* q,const bool* events,
+                         const Bag<bool>& xb)
+    {
+        internal_event(q,events);
+        external_event(q,0.0,xb);
+    }
+    void output_func(const double* q, const bool* events,
+            Bag<bool>& yb)
+    {
+        assert(events[0]);
+        yb.insert(!d);
+    }
+    void go_output(Bag<bool>&){}
+    bool getDiode() const { return d; }
+    bool getSwitch() const { return s; }
+  private:
+    bool s, d;
+    const double vs, C, Rs, R1, vop, vcl;
+};
+
+class StateListener: public EventListener<bool>
+{
+    public:
+        StateListener(Hybrid<bool>* c1, Circuit* c2): c1(c1),c2(c2){}
+        void stateChange(Atomic<bool>*,double t)
+        {
+            cout << t << " " << c1->getState() << " " <<
+                c2->getSwitch() << " " << c2->getDiode() << endl;
+        }
+        void outputEvent(Event<bool>,double){}
+    private:
+        Hybrid<bool>* c1; Circuit* c2;
+};
+
+int main()
+{
+    // Create the model
+    Circuit* circuit = new Circuit();
+    Hybrid<bool>* hybrid_model = new Hybrid<bool>(
+        circuit,new coroutine_coupled_error<bool>(circuit,1E-5,0.01),
+            new linear_event_locator<bool>(circuit,1E-5));
+    // Create the simulator
+    Simulator<bool>* sim = new Simulator<bool>(hybrid_model);
+    sim->addEventListener(new StateListener(hybrid_model,circuit));
+    // Simulate until the switch opens
+    while (sim->nextEventTime() <= 1.0) sim->execNextEvent();
+    // Open the switch
+    Bag<Event<bool> > xb; xb.insert(Event<bool>(hybrid_model,0));
+    sim->computeNextState(xb,1.0);
+    // Simulate for another three seconds
+    while (sim->nextEventTime() <= 4.0) sim->execNextEvent();
+}
+```

@@ -1,0 +1,250 @@
+
+## Simulator 类的实现
+
+```cpp
+#ifndef __adevs_simple_simulator_h_
+#define __adevs_simple_simulator_h_
+#include "adevs_models.h"
+#include "adevs_event_listener.h"
+#include "adevs_sched.h"
+#include "adevs_bag.h"
+#include "adevs_set.h"
+#include "object_pool.h"
+#include <cassert>
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+
+namespace adevs
+{
+
+// This class implements the bottom up simulation procedure
+template <class X> class Simulator
+{
+  public:
+    // Create a simulator for the model
+    Simulator(Devs<X>* model);
+    // Add an event listener
+    void addEventListener(EventListener<X>* l) { listeners.insert(l); }
+    // Get the time of the next event
+    double nextEventTime() { return sched.minPriority(); }
+    // Execute the simulation cycle at nextEventTime()
+    void execNextEvent()
+    {
+      computeNextOutput();
+      computeNextState(bogus_input,sched.minPriority());
+    }
+    // Compute the output values of the imminent models. This will
+    // notify the EventListener of output events.
+    void computeNextOutput();
+    // Apply the input at time t and then compute the next state. This
+    // will produce output too if t == nextEventTime().
+    void computeNextState(Bag<Event<X> >& input, double t);
+    // Deletes the simulator, but leaves the model intact.
+    ~Simulator();
+  private:
+
+    Bag<Event<X> > bogus_input; // Empty bag for execNextEvent()
+    Bag<EventListener<X>*> listeners; // Registered event listeners
+    Schedule<X> sched; // The event schedule
+    // Set of imminent models and models activated by input
+    Bag<Atomic<X>*> imm, activated;
+    // Pools of preallocated, commonly used objects
+    object_pool<Bag<X> > io_pool;
+    object_pool<Bag<Event<X> > > recv_pool;
+    // Schedule an atomic model for t + ta()
+    void schedule(Atomic<X>* model, double t);
+    // Route an event from a source having the specified parent
+    void route(Network<X>* parent, Devs<X>* src, X& x);
+    // Add an event to the input bag for an atomic model. If the model's
+    // active flag is false, then this method adds the model to the
+    // activated bag and sets its active flag to true.
+    void inject_event(Atomic<X>* model, X& value);
+    // Set the model's active flag to false, delete the contents of
+    // its output bag, and return the input and output bags to the pool
+    void clean_up(Atomic<X>* model);
+    // Notify listeners of an output event.
+    void notify_output_listeners(Devs<X>* model,
+        const X& value, double t);
+    // Notify listeners of a change in state
+    void notify_state_listeners(Atomic<X>* model, double t);
+    // Put the atomic leaves of the network into the set s
+    void getAllChildren(Network<X>* model, Set<Atomic<X>*>& s);
+};
+
+template <class X>
+Simulator<X>::Simulator(Devs<X>* model)
+{
+    // Put an atomic model into the schedule
+    if (model->typeIsAtomic() != NULL)
+        schedule(model->typeIsAtomic(),0.0);
+    // Otherwise find the set of atomic components and put those into
+    // the schedule
+    else {
+        Set<Atomic<X>*> A;
+        getAllChildren(model->typeIsNetwork(),A);
+        for (typename Set<Atomic<X>*>::iterator iter = A.begin();
+            iter != A.end(); iter++)
+            schedule(*iter,0.0);
+    }
+}
+
+template <class X>
+void Simulator<X>::schedule(Atomic<X>* model, double t)
+{
+    model->tL = t; // Set the time of the last event
+    double dt = model->ta(); // Compute the time advance
+    // Schedule the model for activity at its time of next event
+    if (dt == DBL_MAX) sched.schedule(model,DBL_MAX);
+    else sched.schedule(model,t+dt);
+}
+
+template <class X>
+void Simulator<X>::getAllChildren(Network<X>* model, Set<Atomic<X>*>& s)
+{
+    Set<Devs<X>*> tmp;
+    model->getComponents(tmp); // Get the set of components
+    // Put the atomic components into s and call getAllChildren for
+    // the network components
+    typename Set<Devs<X>*>::iterator iter;
+    for (iter = tmp.begin(); iter != tmp.end(); iter++) {
+        if ((*iter)->typeIsNetwork() != NULL)
+            getAllChildren((*iter)->typeIsNetwork(),s);
+        else
+            s.insert((*iter)->typeIsAtomic());
+    }
+}
+
+
+template <class X>
+void Simulator<X>::computeNextOutput()
+{
+    // If the imminent set is up to date, then just return
+    if (imm.empty() == false) return;
+    // Get the imminent models from the schedule. This sets the active flags.
+    sched.getImminent(imm);
+    // Compute output functions and route the events. The bags of output
+    // are held for garbage collection at a later time.
+    for (typename Bag<Atomic<X>*>::iterator imm_iter = imm.begin();
+         imm_iter != imm.end(); imm_iter++) {
+        Atomic<X>* model = *imm_iter;
+        // Don't recalculate the model's output if we already have it
+        if (model->y == NULL) {
+            model->y = io_pool.make_obj();
+            model->output_func(*model->y);
+            // Route each event in y
+            for (typename Bag<X>::iterator y_iter = model->y->begin();
+                 y_iter != model->y->end(); y_iter++)
+                route(model->getParent(),model,*y_iter);
+        }
+    }
+}
+
+
+template <class X>
+void Simulator<X>::computeNextState(Bag<Event<X> >& input, double t)
+{
+    // If t is less than the next event time, make sure that
+    // computeNextOutput() has not been called
+    if (t < sched.minPriority() && !imm.empty())
+        throw exception("Input can not precede output");
+    // If the output function needs to be computed, then do it
+    else if (t == sched.minPriority() && !imm.empty())
+        computeNextOutput();
+    // Route the injected inputs
+    for (typename Bag<Event<X> >::iterator iter = input.begin();
+         iter != input.end(); iter++) {
+        Atomic<X>* amodel = (*iter).model->typeIsAtomic();
+        if (amodel != NULL) inject_event(amodel,(*iter).value);
+        else route((*iter).model->getNetwork(),(*iter).model,
+                (*iter).value);
+    }
+    // Compute the states of all atomic models.
+    for (typename Bag<Atomic<X>*>::iterator iter = imm.begin();
+         iter != imm.end(); iter++) {
+        // Compute the new state
+        if ((*iter)->x == NULL) (*iter)->delta_int();
+        else (*iter)->delta_conf((*iter)->x);
+        // Notify listeners of the change in state
+        notify_state_listeners(*iter,t);
+        // Adjust the position of the model in the schedule
+        schedule(*iter,t);
+    }
+    for (typename Bag<Atomic<X>*>::iterator iter = activated.begin();
+         iter != activated.end(); iter++) {
+        // Compute the new state
+        (*iter)->delta_ext(t-(*iter)->tL,(*iter)->x);
+        // Notify listeners of the change in state
+        notify_state_listeners(*iter,t);
+        // Adjust the position of the model in the schedule
+        schedule(*iter,t);
+    }
+    // Cleanup after the models that changed state in this iteration
+    for (typename Bag<Atomic<X>*>::iterator iter = imm.begin();
+         iter != imm.end(); iter++)
+        clean_up(*iter);
+    for (typename Bag<Atomic<X>*>::iterator iter = activated.begin();
+         iter != activated.end(); iter++)
+        clean_up(*iter);
+    // Empty the bags
+    imm.clear();
+    activated.clear();
+}
+
+template <class X>
+void Simulator<X>::clean_up(Atomic<X>* model)
+{
+    model->active = false;
+    if (model->x != NULL) {
+        model->x->clear();
+        io_pool.destroy_obj(model->x);
+    }
+    if (model->y != NULL) {
+        model->gc_output(*(model->y));
+        model->y->clear();
+        io_pool.destroy_obj(model->y);
+    }
+    model->x = model->y = NULL;
+}
+
+template <class X>
+void Simulator<X>::inject_event(Atomic<X>* model, X& value)
+{
+    if (model->active == false) activated.insert(model);
+    if (model->x == NULL) model->x = io_pool.make_obj();
+    model->active = true;
+    model->x->insert(value);
+}
+
+template <class X>
+void Simulator<X>::route(Network<X>* parent, Devs<X>* src, X& x)
+{
+    // Notify event listeners if this is an output event
+    if (parent != src) notify_output_listeners(src,x,sched.minPriority());
+    // No one to do the routing, so return
+    if (parent == NULL) return;
+    // Compute the set of receivers for this value
+    Bag<Event<X> >* recvs = recv_pool.make_obj();
+    parent->route(x,src,recvs);
+    // Deliver the event to each of its targets
+    Atomic<X>* amodel = NULL;
+    typename Bag<Event<X> >::iterator recv_iter = recvs->begin();
+    for (; recv_iter != recvs->end(); recv_iter++) {
+        // if the destination is an atomic model, then add the event to the
+        // I/O bag for that model and put the model in the list of
+        // activated models
+        amodel = (*recv_iter).model->typeIsAtomic();
+        if (amodel != NULL) inject_event(amodel,(*recv_iter).value);
+        // if this is an external output from the parent model
+        else if ((*recv_iter).model == parent)
+            route(parent->getParent(),parent,(*recv_iter).value);
+        // otherwise it is an input to a coupled model
+        else route((*recv_iter).model->typeIsNetwork(),(*recv_iter).model,
+                   (*recv_iter).value);
+    }
+    recvs->clear();
+    recv_pool.destroy_obj(recvs);
+}
+
+template <class X>
+```

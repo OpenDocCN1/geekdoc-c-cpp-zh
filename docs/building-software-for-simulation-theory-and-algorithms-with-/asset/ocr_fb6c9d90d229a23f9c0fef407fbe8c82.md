@@ -1,0 +1,11 @@
+In practice, the most important trajectories satisfy the above constraints; other types of trajectories end in stretches of inaction that are of little interest because s does not change. By restricting the allowable trajectories, the simulator cannot be started with an elapsed time other than zero. Nor can it be given a trajectory spanning, for example, [t₁, t₂) ⊃ (t(s)/2, 0) that contains only nonevents, but nothing of interest occurs in this interval or anywhere that the elapsed time is not t(s) unless, of course, an input becomes available. So the usefulness of the simulator is not diminished by these restrictions.
+
+Their chief advantage is an improvement in the computational speed of the simulator, and the importance of this improvement grows with the size of the model. For a single atomic model, these restrictions are clearly unnecessary and a simple, direct iterative algorithm derived from Equation 4.7 is more versatile. For large network models there is a noticeable benefit because we can take advantage of very efficient algorithms for event scheduling. Even greater benefits are derived when moving those simulations onto a parallel computer where the above mentioned restrictions are essential for obtaining good performance. For the moment, however, we will focus on the simple case of a single atomic model.
+
+The simulator for an atomic, discrete-event model is similar to, almost a copy of, the simulator for an atomic, discrete-time model (see Section 3.1.5). The simulator for a discrete-event model has four classes: the *Bag* class, the *Atomic* class, the *EventListener* class, and the *Simulator* class. To avoid clashes with other libraries that might be used in a simulation program, these four classes are put into the *adevs* (a discrete-event system simulator) namespace. The three main classes—*Atomic*, *Simulator*, and *EventListener*—and their relationships are shown in Figure 4.3.
+
+The *Bag* is an alias to the *multiset* class from the C++ Standard Template Library. The *EventListener* class is identical to the one used in the discrete-time simulator.
+
+![](bbox=[0.12, 0.6, 0.84, 0.875])
+
+**FIGURE 4.3** Class diagram of the simulation software for atomic, discrete event models.

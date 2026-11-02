@@ -1,0 +1,55 @@
+
+- 90. P. J. Mosterman，动态物理系统的混合建模与仿真方法，*仿真* 78(1):5–17 (2002)。
+- 91. P. J. Mosterman 和 G. Biswas，构建物理系统混合模型的综合方法，*人工智能* 121(1–2):171–209 (2000)。
+- 92. P. J. Mosterman 和 H. Vangheluwe，计算机自动化多范式建模：导论，*仿真* 80(9):433–450 (2004)。
+- 93. A. Muzy、A. Aiello、P.-A. Santoni、B. P. Zeigler、J. J. Nutaro 和 R. Jammalamadaka，大规模空间连续系统的离散事件仿真，*2005年IEEE国际系统、人与控制论会议论文集*，2005年10月，第4卷，第2991–2998页。
+- 94. A. Muzy、E. Innocenti、A. Aiello、J.-F. Santucci 和 G. Wainer，火蔓延的离散事件模型规范，*仿真* 81(2):103–117 (2005)。
+- 95. R. E. Nance，离散事件仿真编程语言史，*HOPL-II：第2届 ACM SIGPLAN 编程语言史会议论文集*，1993年，第149–175页。
+- 96. R. E. Nance，仿真编程语言：简史，*第27届冬季仿真会议（WSC ’95）论文集*，1995年，第1307–1313页。
+- 97. J. W. Nilsson，*电路*，第4版，Addison-Wesley，1993年。
+- 98. J. Nutaro 和 V. Protopopescu，市场出清时间与价格信号延迟对电力市场稳定性的影响，*IEEE 电力系统汇刊* 24(3):1337–1345（2009年8月）。
+- 99. J. Nutaro，一种二阶精确的 Adams-Bashforth 型离散事件积分方案，*第21届高级与分布式仿真原理国际研讨会（PADS’07）论文集*，2007年6月，第25–31页。
+- 100. J. Nutaro，连续系统的离散事件仿真，见 P. A. Fishwick 编，*动态系统建模手册*，Chapman & Hall/CRC，2007年，第11章。
+- 101. J. Nutaro 和 P. Hammonds，将模型/视图/控制设计模式与 DEVS 形式体系相结合，以实现分布式仿真的严谨性与可重用性，*国防建模与仿真杂志* 1(1):19–28（2004年4月）。
+- 102. J. Nutaro、T. Kuruganti 和 M. Shankar，使用离散事件软件包对混合系统进行无缝仿真，*第40届年度仿真研讨会（ANSS ’07）论文集*，2007年，第81–87页。
+- 103. J. J. Nutaro、B. P. Zeigler、R. Jammalamadaka 和 S. R. Akerkar，DEVS 框架内气体动力学的离散事件求解，见 P. M. A. Sloot、D. Abramson、A. V. Bogdanov、J. Dongarra、A. Y. Zomaya 和 Y. E. Gorbachev 编，*国际计算科学会议论文集*，*计算机科学讲义*第2660卷，Springer，2003年6月，第319–328页。
+- 104. T. I. Ören，迈向建模与仿真的知识体系（M&SBOK），*跨军种/工业培训与仿真会议（I/ITSEC）论文集*，2005年11月，第1–19页。
+- 105. C. D. Pegden、R. E. Shannon 和 R. P. Sadowski，*使用 SIMAN 进行仿真导论*，McGraw-Hill，1995年。
+- 106. K. S. Perumalla，并行与分布式仿真：传统技术与最新进展，*第38届冬季仿真会议（WSC ’06）论文集*，2006年，第84–95页。
+- 107. P. Peschlow 和 P. Martini，分布式仿真中同时事件的高效分析，*第11届IEEE国际分布式仿真与实时应用研讨会（DS-RT 2007）论文集*，2007年10月。
+- 108. M. A. Piette，*大型设施中全自动需求响应的开发与评估*，技术报告 CEC-500-2005-013，劳伦斯伯克利国家实验室/加利福尼亚能源委员会/需求响应研究中心，加州伯克利，2005年1月。
+- 109. H. Praehofer，*组合离散-连续系统仿真的系统理论形式体系*，*国际通用系统杂志* **19**(3):226–240 (1991)。
+- 110. V. S. Prat、A. Urquia 和 S. Dormido，*ARENALib：用于离散事件系统仿真的 Modelica 库*，*第5届国际 Modelica 会议（Modelica 2006）论文集*，2006年9月，第2卷，第539–548页。
+- 111. W. W. Price、H. D. Chiang、H. K. Clark、C. Concordia、D. C. Lee、J. C. Hsu、S. Ihara、C. A. King、C. J. Lin、Y. Mansour、K. Srinivasan、C. W. Taylor 和 E. Vaahedi，*用于动态性能分析的负荷表示[电力系统]*，*IEEE 电力系统汇刊* **8**(2):472–482（1993年5月）。
+- 112. A. B. Pritzker 和 J. J. O’Reilly，*使用 Visual SLAM 和 AweSim 进行仿真*，Wiley，1999年。
+- 113. S. Raczynski，*建模与仿真：幻觉的计算机科学*，Wiley，2006年。
+- 114. A. Ralston 和 P. Rabinowitz，*数值分析初阶*，第2版，Dover Publications，2001年。
+- 115. M. A. P. Remelhe，*结合离散事件模型与 Modelica——总体思考与一种特殊建模环境*，*第2届国际 Modelica 会议论文集*，2002年3月，第203–207页。
+- 116. S. V. Rice、H. M. Markowitz、A. Marjanski 和 S. M. Bailey，*用于模块化面向对象仿真的 SIMSCRIPT III 编程语言*，*第37届冬季仿真会议（WSC ’05）论文集*，2005年，第621–630页。
+- 117. G. F. Riley、M. H. Ammar、R. M. Fujimoto、A. Park、K. Perumalla 和 D. Xu，*分布式网络仿真的联邦式方法*，*ACM 建模与计算机仿真汇刊* **14**(2):116–148 (2004)。
+- 118. D. J. Roberts 和 P. M. Sharkey，*在一致、因果的分布式虚拟现实系统中最大化并发性与可扩展性，同时最小化网络延迟的影响*，*第6届协作企业基础设施使能技术研讨会（WET-ICE ’97）论文集*，1997年，第161–166页。
+- 119. R. V. Rogers，*什么使建模与仿真成为一门专业？来自一次研讨会的共识观点*，*第29届冬季仿真会议（WSC ’97）论文集*，1997年，第1375–1382页。
+- 120. T. Rohlf，*回答“在 TINI 10BaseT 接口上使用套接字时，我能预期的最大传输速率（千字节/秒）是多少？”*（在线发布，2001年3月5日，见 http://www.jguru.com/faq/view.jsp?EID=344126）。
+- 121. R. Rönngren、J. Riboe 和 R. Ayani，*惰性队列：待处理事件集的一种高效实现*，*第24届仿真年度研讨会论文集*，1991年，第194–204页。
+- 122. R. Rönngren 和 M. Liljenstam，*论并行离散事件仿真中的事件排序*，*第13届并行与分布式仿真研讨会（PADS ’99）论文集*，1999年，第38–45页。
+- 123. R. Rönngren、M. Liljenstam、R. Ayani 和 J. Montagnat，*时间扭曲并行离散事件仿真中的透明增量状态保存*，*第10届并行与分布式仿真研讨会（PADS ’96）论文集*，1996年，第70–77页。
+- 124. V. Sanz、A. Urquia 和 S. Dormido，在 Modelica 中引入消息以促进离散事件系统建模，第2届基于方程的面向对象语言与工具国际研讨会论文集，2008年7月，第83–94页。
+- 125. R. G. Sargent，过程世界观的一些最新进展，第36届冬季仿真会议（WSC '04）论文集，2004年，第293–299页。
+- 126. H. S. Sarjoughian，模型可组合性，第38届冬季仿真会议（WSC '06）论文集，2006年，第149–158页。
+- 127. H. S. Sarjoughian 和 B. P. Zeigler，DEVS 与 HLA：建模与仿真的互补范式，国际计算机仿真学会汇刊 17(4):187–197 (2000)。
+- 128. R. J. Schilling，机器人学基础：分析与控制，Prentice-Hall，1990年。
+- 129. B. Schönfisch 和 A. de Roos，元胞自动机中的同步与异步更新，生物系统 51(3)，1999年。
+- 130. T. J. Schriber 和 D. T. Brunner，离散事件仿真软件内幕：它如何工作以及为何重要，第30届冬季仿真会议论文集，1998年，第77–86页。
+- 131. L. Schruben，使用事件图进行仿真建模，ACM 通讯 26(11):957–963（1983年11月）。
+- 132. S. Schulz、T. C. Ewing 和 J. W. Rozenblit，面向嵌入式系统建模的离散事件系统规范（DEVS）与 StateCharts 等价性，第7届IEEE基于计算机系统工程国际会议研讨会论文集，2000年4月，第308–316页。
+- 133. R. A. Serway，面向科学家和工程师的物理学，第3版，更新版，Saunders College Publishing，1992年。
+- 134. R. W. Stark 和 W. H. Hughes，异步不规则自动机网络：未选择之路，生物系统 55(1–3)（2000）。
+- 135. R. H. Staunton、J. D. Kueck、B. J. Kirby 和 J. Eto，需求响应：使能技术综述，公共事业双周刊 139(20)（2001年11月）。
+- 136. G. Strang，线性代数及其应用，第3版，Brooks Cole，1988年。
+- 137. A. S. Tanenbaum，计算机网络，第3版，Prentice-Hall，1996年。
+- 138. Y. Tang、K. Perumalla、R. Fujimoto、H. Karimabadi、J. Driscoll 和 Y. Omelchenko，使用反向计算的物理系统并行离散事件仿真，ACM/IEEE/SCS 高级与分布式仿真原理研讨会（PADS）论文集，2005年6月。
+- 139. D. Trudnowski、M. Donnelly 和 E. Lightner，使用分散式智能负荷的电力系统频率与稳定性控制，2005/2006 IEEE PES 输配电会议与展览会论文集，2006年5月，第1453–1459页。
+- 140. A. M. Uhrmacher，建模与仿真中的动态结构：一种反射式方法，ACM 建模与计算机仿真汇刊 11(2):206–232 (2001)。
+- 141. H. Vangheluwe 和 I. de Lara，多范式建模与仿真的基础：计算机自动化多范式建模：元建模与图变换，第35届冬季仿真会议（WSC '03）论文集，2003年，第595–603页。
+- 142. G. A. Wainer 和 N. Giambiasi，面向复杂连续系统的 Cell-DEVS/GDEVS，仿真 81(2):137–151（2005年2月）。
+- 143. G. A. Wainer，离散事件建模与仿真：实践者方法（动态模型的计算分析、综合与设计），CRC Press，2009年。
