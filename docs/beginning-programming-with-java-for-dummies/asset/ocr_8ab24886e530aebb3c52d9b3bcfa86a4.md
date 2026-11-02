@@ -1,0 +1,39 @@
+In general, a someEnumTypeName.values() expression stands for the set of values that a particular enum type's variable can have. For example, back in Listing 10-7, you can use the expression WhoWins.values() to refer to the home, visitor, and neither values.
+
+![](bbox=[0.05, 0.25, 0.18, 0.38])
+
+The difference between a type's name (like Symbol) and the type's values (as in Symbol.values()) is really subtle. Fortunately, you don't have to worry about the difference. As a beginning programmer, you can just use the .values() suffix in an enhanced loop's RangeOfValues part.
+
+# Nesting the enhanced for loops
+
+Listing 15-5 solves a simple problem in a very elegant way. So after reading about Listing 15-5, you ask about more complicated problems. "Can I list all possible three-reel combinations of the slot machine's four symbols?" Yes, you can. Listing 15-6 shows you how to do it.
+
+# Listing 15-6: Listing the Combinations
+
+```
+```java
+import static java.lang.System.out;
+
+class ListCombinations {
+    enum Symbol {
+        cherry, lemon, kumquat, rutabaga
+    }
+
+    public static void main(String args[]) {
+        for (Symbol leftReel : Symbol.values()) {
+            for (Symbol middleReel : Symbol.values()) {
+                for (Symbol rightReel : Symbol.values()) {
+                    out.print(leftReel);
+                    out.print(" ");
+                    out.print(middleReel);
+                    out.print(" ");
+                    out.println(rightReel);
+                }
+            }
+        }
+    }
+}
+```
+```
+
+When you run the program in Listing 15-6, you get 64 lines of output. Some of those lines (from the middle of a run) are shown in Figure 15-9.

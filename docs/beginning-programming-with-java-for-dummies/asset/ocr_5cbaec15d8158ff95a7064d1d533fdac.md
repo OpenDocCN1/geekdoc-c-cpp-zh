@@ -1,0 +1,24 @@
+Figure 3-8:
+Your project appears in Eclipse's Package Explorer.
+
+![](bbox=[0.18, 0.11, 0.54, 0.35])
+
+# 4. Select your newly created project in the Package Explorer.
+
+To create Figure 3-8, I selected MyFirstProject instead of SomeOther Project.
+
+# 5. In Eclipse's main menu, choose File→New→Class.
+
+Eclipse's New Java Class dialog box appears (see Figure 3-9).
+
+Java programmers normally divide their code into one or more packages. A typical package has a name like java.util or org.allyourcode.images. In Figure 3-9, Eclipse is warning me that I'm not naming a package to contain my project's code. So the code goes into a nondescript thing called Java's default package. Java's default package is a package with no name — a catchall location for code that isn't otherwise packaged. Packages are great for managing big programming projects, but this book contains no big programming projects. So, in this example (and in all of this book's examples), I choose to ignore the warning. For more info about Java packages, see Chapter 18.
+
+# TECHNICAL STUFF
+
+Like every other windowed environment, Eclipse provides many ways to accomplish the same task. Instead of choosing File→New→Class, you can right-click MyFirstProject in the Package Explorer in Windows (or control-click MyFirstProject in the Package Explorer on a Mac). In the resulting context menu, choose New→Class. You can also start by pressing Alt+Shift+N in Windows (or Option+⌘+N on a Mac). The choice of clicks and keystrokes is up to you.
+
+# TIP
+
+# 6. In the New Java Class dialog box's Name field, type the name of your new class.
+
+In this example, I use the name MyFirstJavaClass, with no blank spaces between any of the words in the name. (Refer to Figure 3-9.)

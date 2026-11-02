@@ -1,0 +1,9 @@
+# Where to Go from Here
+
+If you've gotten this far, you're ready to start reading about computer programming. Think of me (the author) as your guide, your host, your personal assistant. I do everything I can to keep things interesting and, most importantly, help you understand.
+
+![](bbox=[0.06, 0.32, 0.18, 0.48])
+
+If you like what you read, send me an e-mail, post on my Facebook wall, or tweet me a tweet. My e-mail address, which I created just for comments and questions about this book, is BeginProg@allmycode.com. My Facebook page is /allmycode, and my Twitter handle is @allmycode. And don't forget — to get the latest information, visit one of this book's support websites. Mine is at http://allmycode.com/BeginProg, or you can visit www.dummies.com/go/beginningprogrammingwithjavafd.
+
+Occasionally, we have updates to our technology books. If this book does have technical updates, they will be posted at www.dummies.com/go/beginningprogrammingwithjavafdupdates and at http://allmycode.com/BeginProg.

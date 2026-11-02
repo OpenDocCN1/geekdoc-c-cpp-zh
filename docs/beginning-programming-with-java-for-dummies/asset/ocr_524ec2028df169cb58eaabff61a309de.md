@@ -1,0 +1,25 @@
+In Listing 10-4, I join items 1 and 2 using the && operator. I do this because both items (item 1 and item 2) must be true in order for the customer to qualify for the $2.00 discount, as illustrated in Figure 10-7.
+
+Figure 10-7:
+Both the reply and the age criteria must be true.
+
+![](bbox=[0.22, 0.26, 0.8, 0.66])
+
+# Using parentheses
+
+Listing 10-4 demonstrates something important about conditions. Sometimes, you need parentheses to make a condition work correctly. Take, for example, the following incorrect if statement:
+
+```
+//This code is incorrect:
+if (reply == 'Y' || reply == 'y' &&
+    age >= 12 && age < 65) {
+    price -= 2.00;
+}
+```
+
+Compare this code with the correct code in Listing 10-4. This incorrect code has no parentheses to group reply == 'Y' with reply == 'y', or to group age >= 12 with age < 65. The result is the bizarre pair of runs in Figure 10-8.
+
+Figure 10-8:
+A capital offense.
+
+![](bbox=[0.22, 0.82, 0.5, 0.97])

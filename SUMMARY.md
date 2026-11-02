@@ -220,6 +220,7 @@
 +   [C 语言编程入门指南（第 4 版）](docs/beginning-programming-with-c-for-dummies-4/README.md)
 +   [C++ 编程入门指南](docs/beginning-programming-with-c-for-dummies-for-dummies-compute/README.md)
 +   [C++ 零基础编程入门指南：包含索引](docs/beginning-programming-with-c-for-dummies-includes-index/README.md)
++   [Java 编程入门指南](docs/beginning-programming-with-java-for-dummies/README.md)
 +   [Dummies 的 Java 编程入门指南 第4版](docs/beginning-programming-with-java-for-dummies-4th-edition/README.md)
 +   [傻瓜的 Java 编程入门指南，第四版](docs/beginning-programming-with-java-for-dummies-fourth-edition/README.md)
 +   [Python 编程入门指南 (自ummies系列)](docs/beginning-programming-with-python-for-dummies-for-dummies-se/README.md)

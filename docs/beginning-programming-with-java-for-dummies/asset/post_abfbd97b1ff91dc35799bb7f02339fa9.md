@@ -1,0 +1,96 @@
+
+If you don't type the code exactly as it's shown in Listing 3-1, you may see jagged red underlines, tiny rectangles with X-like markings inside them, or other red marks in the Editor (see Figure 3-12).
+
+![](img/f938eba5f15e231d828a6255e7ec5523_80_0.png)
+
+The red marks in Eclipse's editor refer to compile-time errors in your Java code. A compile-time error (also known as a compiler error) is an error that prevents the computer from translating your code. (See the talk about code translation in Chapter 1.)
+
+![](img/f938eba5f15e231d828a6255e7ec5523_80_1.png)
+
+The error markers in Figure 3-12 appear on line 8 of the Java program. Line numbers appear in the editor's left margin. To make Eclipse's editor display line numbers, choose Window→Preferences (on Windows) or Eclipse→Preferences (on a Mac). Then choose General→Editors→Text Editors. Finally, put a check mark in the Show Line Numbers check box.
+
+To fix compile-time errors, you must become a dedicated detective. You join an elite squad known as Law & Order: Java Programming Unit. You seldom find easy answers. Instead, you comb the evidence slowly and carefully for clues. You compare everything you see in the editor, character by character, with my code in Listing 3-1. You don't miss a single detail, including spelling, punctuation, and uppercase versus lowercase.
+
+Eclipse has a few nice features to help you find the source of a compile-time error. For example, you can hover over the jagged red underline. When you do, you see a brief explanation of the error along with some suggestions for repairing the error — some quick fixes (see Figure 3-13).
+
+In Figure 3-13, a popup tells you that Java doesn't know what the word system means — that is, system cannot be resolved. Near the bottom of the figure, one of the quick fix options is to change system to System.
+
+When you click that Change To 'System' (java.lang) option, Eclipse's editor replaces system with System. The editor's error markers disappear, and you go from the incorrect code in Figure 3-12 to the correct code back in Figure 3-11.
+
+Figure 3-13: Eclipse offers some helpful suggestions.
+
+![](img/f938eba5f15e231d828a6255e7ec5523_81_0.png)
+
+- 10. Make any changes or corrections to the code in the Eclipse's editor.
+
+When at last you see no jagged underlines or blotches in the editor, you're ready to try running the program.
+
+- 11. Select MyFirstJavaClass either by clicking inside the editor or by clicking the MyFirstProject branch in the Package Explorer.
+
+- 12. In Eclipse's main menu, choose Run→Run As→Java Application.
+
+That does the trick. Your new Java program runs in Eclipse's Console view. If you're running the code in Listing 3-1, you see the Chocolate, royalties, sleep message in Figure 3-14. It's like being in heaven!
+
+Figure 3-14: Running the program in Listing 3-1.
+
+![](img/f938eba5f15e231d828a6255e7ec5523_81_1.png)
+
+## What can possibly go wrong?
+
+Ridding the editor of jagged underlines is cause for celebration. Eclipse likes the look of your code, so from that point on, it's smooth sailing. Right?
+
+Well, it ain't necessarily so. In addition to some conspicuous compile-time errors, your code can have other, less obvious errors.
+
+Imagine someone telling you to "go to the intersection, and then turn right." You notice immediately that the speaker made a mistake, and you respond with a polite "Huh?" The nonsensical *turn tight* phrase is like a compile-time error. Your "Huh?" is like the jagged underlines in Eclipse's editor. As a listening human being, you may be able to guess what *turn tight* means, but Eclipse's editor never dares to fix your code's mistakes.
+
+In addition to compile-time errors, some other kinds of gremlins can hide inside a Java program:
+
+**Unchecked runtime exceptions:** You have no compile-time errors, but when you run your program, the run ends prematurely. Somewhere in the middle of the run, your instructions tell Java to do something that can't be done. For example, while you're running the Mortgage program in the "Running a Canned Java Program" section, you type 1,000,000.00 instead of 1000000.00. Java doesn't like the commas in the number, so your program crashes and displays a nasty-looking message, as shown in the figure.
+
+![](img/f938eba5f15e231d828a6255e7ec5523_82_0.png)
+
+This is an example of an *unchecked runtime exception* — the equivalent of someone telling you to turn right at the intersection when the only thing to the right is a big brick wall. Eclipse's editor doesn't warn you about an unchecked runtime exception because, until you run the program, the computer can't predict that the exception will occur.
+
+**Logic errors:** You see no error markers in Eclipse's editor, and when you run your code, the program runs to completion. But the answer isn't correct. Instead of $552.20 in the figure, the output is $552,200,000.00. The program wrongly tells you to pay thousands of times what your house is worth and tells you to pay this amount each month! It's the equivalent of being told to turn right instead of turning left. You can drive in the wrong direction for a very long time.
+
+![](img/f938eba5f15e231d828a6255e7ec5523_82_1.png)
+
+Logic errors are the most challenging errors to find and to fix. And worst of all, logic errors often go unnoticed. In March 1985, I got a monthly home heating bill for $1,328,932.21. Clearly, some computer had printed the incorrect amount. When I called the gas company to complain about it, the telephone service representative said, 'Don't be upset. Pay only half that amount.'
+
+Compile-time warnings: A warning isn't as severe as an error message. So, when Eclipse notices something suspicious in your program, the editor displays a jagged yellow underline, a tiny yellow icon containing an exclamation point, and a few other not-so-intrusive clues.
+
+For example, in the figure below I add something about amount = 10 to the code from Listing 3-1. (It's that bit on line 8.) The problem is, I never make use of the amount or of the number 10 anywhere in my program. With its faint yellow markings, Eclipse effectively tells me 'Your amount = 10 code isn't bad enough to be a show-stopper. Eclipse can still manage to run your program. But are you sure you want amount = 10 (the stuff that seems to serve no purpose) in your program?'
+
+![](img/f938eba5f15e231d828a6255e7ec5523_83_0.png)
+
+Imagine being told to 'turn when you reach the intersection.' The direction may be just fine. But if you're suspicious, you ask, 'Which way should I turn? Left or right?'
+
+When you're sure that you know what you're doing, you can ignore warnings and worry about them at some later time. But a warning can be an indicator that something more serious is wrong with your code. So my sweeping recommendation is this: Pay attention to warnings. But, if you can't figure out why you're getting a particular warning, don't let the warning prevent you from moving forward.
+
+## What's All That Stuff in Eclipse's Window?
+
+Believe it or not, an editor once rejected one of my book proposals. In the margins, the editor scribbled 'This is not a word' next to things like 'can't,' 'it's,' and 'I've.' To this day, I still do not know what this editor did not like about contractions. My own opinion is that language always needs to expand. Where would we be without new words — words like dotcom, infomercial, and vaporware?
+
+Even the Oxford English Dictionary (the last word in any argument about words) grows by more than 4,000 entries each year. That's an increase of more than one percent per year. It's about 11 new words per day!
+
+The fact is, human thought is like a big high-rise building. You can't build the fiftieth floor until you've built at least part of the forty-ninth. You can't talk about spam until you have a word like e-mail. With all that goes on these days, you need verbal building blocks. That's why this section contains a bunch of new terms.
+
+In this section, each newly defined term describes an aspect of the Eclipse IDE. So before you read all this Eclipse terminology, I provide the following disclaimers:
+
+- **This section is optional reading.** Refer to this section if you have trouble understanding some of this book's instructions. But if you have no trouble navigating the Eclipse IDE, don't complicate things by fussing over the terminology in this section.
+
+- **This section provides explanations of terms, not formal definitions of terms.** Yes, my explanations are fairly precise, but no, they're not airtight. Almost every description in this section has hidden exceptions, omissions, exemptions, and exclusions. Take the paragraphs in this section to be friendly reminders, not legal contracts.
+
+- **Eclipse is a very useful tool.** But Eclipse isn't officially part of the Java ecosystem. Although I don't describe details in this book, you can write Java programs without ever using Eclipse.
+
+### Understanding the big picture
+
+Your tour of Eclipse begins with a big bird's-eye view.
+
+- **Workbench:** The Eclipse desktop (refer to Figure 3-3). The workbench is the environment in which you develop code.
+
+- **Area:** A section of the workbench. The workbench in Figure 3-3 contains five areas. To illustrate the point, I've drawn borders around each of the areas (see Figure 3-15).
+
+- **Window:** A copy of the Eclipse workbench. With Eclipse, you can have several copies of the workbench open at once. Each copy appears in its own window.
+
+- **Action:** A choice that's offered to you, typically when you click something. For example, when you choose File→New in Eclipse's main menu bar, you see a list of new things that you can create. The list usually includes Project, Folder, File, and Other, but it may also include things like Package, Class, and Interface. Each of these things (each item in the menu) is called an action.

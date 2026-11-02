@@ -1,0 +1,49 @@
+# Chapter 6: Using the Building Blocks: Variables, Values, and Types .................... 121
+
++   Using Variables .................... 121
++   Using a variable .................... 122
++   Understanding assignment statements .................... 124
++   To wrap or not to wrap? .................... 125
++   What Do All Those Zeros and Ones Mean? .................... 126
++   Types and declarations .................... 127
++   What's the point? .................... 127
++   Reading Decimal Numbers from the Keyboard .................... 128
++   Though these be methods, yet there is madness in 't. .................... 129
++   Methods and assignments .................... 129
++   Variations on a Theme .................... 131
++   Moving variables from place to place .................... 131
++   Combining variable declarations .................... 133
+
+# Chapter 7: Numbers and Types .................... 135
+
++   Using Whole Numbers .................... 135
++   Reading whole numbers from the keyboard .................... 137
++   What you read is what you get .................... 138
++   Creating New Values by Applying Operators .................... 139
++   Finding a remainder .................... 140
++   The increment and decrement operators .................... 144
++   Assignment operators .................... 147
++   Size Matters .................... 150
+
+# Chapter 8: Numbers? Who Needs Numbers? .................... 153
+
++   Characters .................... 154
++   I digress .................... 155
++   One character only, please .................... 157
++   Variables and recycling .................... 157
++   When not to reuse a variable .................... 159
++   Reading characters .................... 162
++   The boolean Type .................... 164
++   Expressions and conditions .................... 165
++   Comparing numbers; comparing characters .................... 165
++   The Remaining Primitive Types .................... 173
+
+# Part III: Controlling the Flow .................... 175
+
+# Chapter 9: Forks in the Road .................... 177
+
++   Decisions, Decisions! .................... 177
++   Making Decisions (Java if Statements) .................... 179
++   Looking carefully at if statements .................... 179
++   A complete program .................... 183
++   Indenting if statements in your code .................... 185

@@ -1,0 +1,33 @@
+You can't drag statements outside of methods. (Even though a variable declaration ends with a semicolon, a variable declaration isn't considered to be a statement. Go figure!)
+
+The advantage of putting a declaration outside of a method is illustrated in Chapter 19. While you wait impatiently to reach that chapter, notice how I added the word static to each declaration that I pulled out of the main method. I had to do this because the main method's header has the word static in it. Not all methods are static. In fact, most methods aren't static. But whenever you pull a declaration out of a static method, you have to add the word static at the beginning of the declaration. All the mystery surrounding the word static is resolved in Chapter 18.
+
+# Combining variable declarations
+
+The code in Listing 6-1 has only one variable (as if variables are in short supply). You can get the same effect with several variables.
+
+```
+class SnitSoftNew {
+    public static void main(String args[]) {
+        double cdPrice;
+        double shippingAndHandling;
+        double total;
+        
+        cdPrice = 5.95;
+        shippingAndHandling = 25.00;
+        total = cdPrice + shippingAndHandling;
+        
+        System.out.print("We will bill $");
+        System.out.print(total);
+        System.out.println(" to your credit card.");
+    }
+}
+```
+
+This new code gives you the same output as the code in Listing 6-1. (Refer to Figure 6-1.)
+
+The new code has three declarations — one for each of the program's three variables. Because all three variables have the same type (the type double), I can modify the code and declare all three variables in one fell swoop:
+
+```
+double cdPrice, shippingAndHandling, total;
+```

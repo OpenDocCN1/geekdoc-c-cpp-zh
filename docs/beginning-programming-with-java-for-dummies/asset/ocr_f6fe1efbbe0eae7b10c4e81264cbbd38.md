@@ -1,0 +1,24 @@
+5. In the New Java Project dialog box, type a name for your project.
+
+If you're following my instructions to the letter, name the project MyFirstJavaFXProject.
+
+6. In the New Java Project dialog box, select JavaSE-1.7 or JavaSE-1.8.
+
+You can run JavaFX programs with earlier versions of Java, but life is easier with Java 7 update 7 (JDK 7u7), or later.
+
+7. Click Finish to close the New Java Project dialog box.
+
+After clicking Finish, you may or may not see a dialog box warning you that Mercurial (whatever that is) is not configured correctly. If you see this dialog box, look for the box's Restore Defaults button. Click that button and then click OK.
+
+You see the Eclipse workbench with your newly created project in Eclipse's Package Explorer.
+
+![](bbox=[0.07, 0.26, 0.15, 0.38])
+
+# Running your bare-bones JavaFX project
+
+In the previous section, you use e(lx)clipse to create a brand-new JavaFX project. When you run the new project's code, you see the stuff in Figure 20-8. You see a window with nothing inside it.
+
+![](bbox=[0.18, 0.56, 0.68, 0.95])
+
+Figure 20-8:
+An empty window.

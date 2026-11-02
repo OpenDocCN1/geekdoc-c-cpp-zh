@@ -1,0 +1,27 @@
+Well, in the world of computer programming, this kind of thing happens all the time. Most five-layered loops are hidden behind method calls, but two-layered loops within loops are everyday occurrences. So this chapter tells you how to compose a loop within a loop. It’s very useful stuff.
+
+By the way, if you’re a Wiley Publishing editor, you can start reading again from this point onward.
+
+# Paying Your Old Code a Little Visit
+
+The program back in Listing 12-5 extracts a username from an e-mail address. For example, the program reads
+
+```
+John@BurdBrain.com
+```
+
+from the keyboard, and writes
+
+```
+John
+```
+
+to the screen. Let me tell you . . . in this book, I have some pretty lame excuses for writing programs, but this simple e-mail example tops the list! Why would you want to type something on the keyboard, only to have the computer display part of what you typed? There must be a better use for code of this kind.
+
+Sure enough, there is. The BurdBrain.com network administrator has a list of 10,000 employees’ e-mail addresses. More precisely, the administrator’s hard drive has a file named email.txt. This file contains 10,000 e-mail addresses, with one address on each line, as shown in Figure 14-1.
+
+![](bbox=[0.154, 0.666, 0.52, 0.786])
+
+The company’s e-mail software has an interesting feature. To send e-mail within the company, you don’t need to type an entire e-mail address. For example, to send e-mail to John, you can type the username John instead of John@BurdBrain.com. (This @BurdBrain.com part is called the host name.)
+
+So the company’s network administrator wants to distill the content of the email.txt file. She wants a new file, usernames.txt, that contains usernames with no host names, as shown in Figure 14-2.

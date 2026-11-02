@@ -1,0 +1,47 @@
+level_changes:
+- line: 74
+  before: 2
+  after: 1
+- line: 78
+  before: 2
+  after: 1
+- line: 82
+  before: 2
+  after: 1
+- line: 86
+  before: 2
+  after: 1
+- line: 92
+  before: 2
+  after: 1
+- line: 143
+  before: 2
+  after: 1
+- line: 1402
+  before: 2
+  after: 1
+- line: 4095
+  before: 2
+  after: 1
+- line: 7788
+  before: 2
+  after: 1
+- line: 9681
+  before: 2
+  after: 1
+text_changes:
+- line: 92
+  before: 第V部分：十大秘诀部分
+  after: 第V部分：十大秘诀
+- line: 5232
+  before: 📈 量化交易全攻略
+  after: 第11章：使用 switch 语句
+- line: 7863
+  before: 第三章 磁场与测量
+  after: 第16章：数组
+- line: 7865
+  before: 3.1 磁场的产生
+  after: 16.1 数组简介
+- line: 9334
+  before: 研究生学位论文答辩
+  after: 使用 JavaFX

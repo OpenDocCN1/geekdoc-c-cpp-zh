@@ -1,0 +1,88 @@
+# • T •
+
+# • U •
+
+Java versions, 222
+listing, 218–219
+overview, 217–218
+Symbol type, 302
+Symbol.values() expression, 302
+syntax coloring (syntax highlighting),
+  21, 64
+System class
+  java.lang package, 366
+  static out variable, 367
+system identifier, 84
+System Preferences, on Macs, 35–36
+System.in, defined, 106
+System.out method, 367
+System.out variable, static, 366
+System.out.println method
+  calling an object’s methods, 357
+  in complete program, 183–184
+  described, 92, 93
+  EchoLine program, 103
+  error messages, 115
+  in general, 63, 92
+  with nothing in the parentheses, 142
+  postincrement operator and, 146
+  sample code, 94
+  wrapping displayed lines, 125
+
+three-letter names, random generation
+  of, 372, 378, 379
+throws clause, 260, 266
+TicketPrice program, 196, 198–200
+toolbar, 72
+total variable, in NumberFormat
+  class, 363
+toUpperCase method, 154–156
+traditional comments, 87
+tree variable, 369
+troubleshooting problems with disk files,
+  264–266
+true (reserved word), 82
+Twenty-One card game, 238, 239,
+  243, 244
+Twitter
+  author’s handle, 7
+  author’s page, 23
+txt extension, 313
+.txt files, deleting all, 329–331
+typefaces used in this book, 2
+types (of variables)
+  defined, 123, 127
+  difference between a type’s name and
+    the type’s values, 303
+  primitive, 151
+  return, 387–390
+
+tab groups, 71–72
+tab stops, inserting, 245
+tabs, Eclipse IDE, 71
+tar.gz files, 26
+template, code, 258, 259
+Terminal window, on Linux
+  computers, 38
+“test, then print, then input” strategy,
+  249–250
+text-based programs, 53, 393
+TextEdit program, 262, 313
+TextField control, 412, 413, 417–421
+ThingsILike class, 78, 79, 83, 85, 87, 95
+ThingsILike program, 77, 78, 85, 86,
+  92, 94
+
+unchecked runtime exceptions, 67
+uncompressing a file, 26
+underscore character (_)
+  in class names, 62
+  numbers with, as literals, 85
+Unicode, 173
+UNIX For Dummies: Quick
+  Reference, 370
+unzipping a file, 26
+upper case. See capitalization
+uppercase letters, 154–156, 158
+userInput variable (string), 352, 353,
+  356, 359

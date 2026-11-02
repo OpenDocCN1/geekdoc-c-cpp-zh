@@ -1,0 +1,9 @@
+# Working with the method header (again)
+
+When you create a method or a method call, you have to be careful to use Java's types consistently. So make sure that you check for the following:
+
++   - In Listing 19-8, the getInterest method's header starts with the word double. So when the method is executed, it should send a double value back to the place that called it.
++   - Again in Listing 19-8, the last statement in the getInterest method is return interest. So the method returns whatever value is stored in the interest variable, and the interest variable has type double. So far, so good.
++   - In Listing 19-9, the value returned by the call to getInterest is assigned to a variable named yearlyInterest. Sure enough, yearlyInterest is of type double.
+
+That settles it! The use of types in the handling of method getInterest is consistent in Listings 19-8 and 19-9. I'm thrilled!

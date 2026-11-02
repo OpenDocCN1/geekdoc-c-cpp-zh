@@ -1,0 +1,23 @@
+If you don't trust Table 2-1 (and frankly, you shouldn't trust everything you find in print), you can perform tests on your computer to discover the presence of Java and (if your Mac has Java) the Java version number. Here's a test that works on older versions of the Macintosh operating system:
+
++   1. In the Spotlight's search field, type Java Preferences.
++   2. When the Spotlight's Top Hit is Java Preferences, press Enter.
+
+The Java Preferences window appears (see Figure 2-3).
+
+![](bbox=[0.18, 0.36, 0.83, 0.73])
+
+Figure 2-3:
+The Java Preferences application.
+
+3. The Java Preferences window lists versions of Java that are installed on your computer.
+
+In Figure 2-3, the computer has four versions of Java — the 32-bit (i386) versions of Java 6 and Java 7 and the 64-bit (x86_64) versions of Java 6 and Java 7.
+
+For newer versions of the Macintosh operating system, try this test:
+
++   1. In the Apple menu, select System Preferences.
++   2. In the System Preferences application window, look for a Java icon (see Figure 2-4).
++   3. Click the Java icon.
+
+The Java Control Panel appears (see Figure 2-5).

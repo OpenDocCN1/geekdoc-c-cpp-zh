@@ -1,0 +1,33 @@
+```
+`age < 4 || 8 < age`
+```
+
+The value of the age variable is less than 4 or is greater than 8. To create the or condition, you use two pipe symbols. On many U.S. English keyboards, you can find the pipe symbol immediately above the Enter key (the same key as the backslash, but shifted).
+
+In this combined condition, the value of the age variable is either less than 4 or greater than 8. For example, if a number is less than 4, the number satisfies the condition. Numbers like 1, 2, and 3 are all less than 4, so these numbers satisfy the combined condition.
+
+Also, if a number is greater than 8, the number satisfies the combined condition. Numbers like 9, 10, and 11 are all greater than 8, so these numbers satisfy the condition.
+
+```
+`!eachKidGetsTen`
+```
+
+If I weren't experienced with computer programming languages, I'd be confused by the exclamation point. I'd think that !eachKidGetsTen means, “Yes, each kid does get ten.” But that's not what this expression means. This expression says, “The variable eachKidGetsTen does not have the value true.” In Java and other programming languages, an exclamation point stands for negative, for no way, for not.
+
+Listing 8-4 (refer to Chapter 8) has a boolean variable named eachKidGetsTen. A boolean variable's value is either true or false. Because ! means not, the expressions eachKidGetsTen and !eachKidGetsTen have opposite values. So when eachKidGetsTen is true, !eachKidGetsTen is false (and vice versa).
+
+![](bbox=[0.07, 0.68, 0.18, 0.8])
+
+Java's || operator is inclusive. This means that you get true whenever the thing on the left side is true, the thing on the right side is true, or both things are true. For example, the condition 2 < 10 || 20 < 30 is true.
+
+![](bbox=[0.07, 0.81, 0.18, 0.93])
+
+In Java, you can't combine comparisons the way you do in ordinary English. In English, you may say, “We'll have between three and ten people at the dinner table.” But in Java, you get an error message if you write 3 <= people <= 10. To do this comparison, you need to something like 3 <= people && people <= 10.
+
+# Combining conditions: An example
+
+Here's a handy example of the use of logical operators. A movie theater posts its prices for admission.
+
++   - Regular price: $9.25
++   - Kids under 12: $5.25
++   - Seniors (65 and older): $5.25

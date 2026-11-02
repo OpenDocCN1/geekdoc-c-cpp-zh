@@ -1,0 +1,17 @@
+> *RoboJeeves: Too high? That's impossible. Things fall very quickly on the giant planet Mangorrrrkhongo. Now, if you wanted to know about objects falling on Earth, you should have said so in the first place.*
+
+Sometimes that robot rubs me the wrong way. The truth is, RoboJeeves does whatever I tell him to do — nothing more and nothing less. If I say "Feed the cat," then RJ says, "Feed it to whom? Which of your guests will be having cat for dinner?"
+
+# Computers Are Stupid
+
+Handy as they are, all computers do the same darn thing. They do exactly what you tell them to do, and that's sometimes very unfortunate. For example, in 1962, a Mariner spacecraft to Venus was destroyed just four minutes after its launch. Why? It was destroyed because of a missing keystroke in a FORTRAN program. Around the same time, NASA scientists caught an error that could have trashed the Mercury space flights. (Yup! These were flights with people on board!) The error was a line with a period instead of a comma. (A computer programmer wrote DO 10 I=1.10 instead of DO 10 I=1,10.)
+
+With all due respect to my buddy RoboJeeves, he and his computer cousins are all incredibly stupid. Sometimes they look as though they're second-guessing us humans, but actually they're just doing what other humans told them to do. They can toss virtual coins and use elaborate schemes to mimic creative behavior, but they never really think on their own. If you say, "Jump," they do what they're programmed to do in response to the letters J-u-m-p.
+
+So when you write a computer program, you have to imagine that a genie has granted you three wishes. Don't ask for eternal love because, if you do, then the genie will give you a slobbering, adoring mate — someone that you don't like at all. And don't ask for a million dollars unless you want the genie to turn you into a bank robber.
+
+Everything you write in a computer program has to be very precise. Take a look at an example. . . .
+
+# A Program to Echo Keyboard Input
+
+Listing 5-1 contains a small Java program. The program lets you type one line of characters on the keyboard. As soon as you press Enter, the program displays a second line that copies whatever you typed.
