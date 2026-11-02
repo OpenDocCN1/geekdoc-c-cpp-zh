@@ -1,0 +1,35 @@
+# Deleting Several Files
+
+A program in Chapter 15 deletes a file named importantData.txt. The code to delete the file looks like this:
+
+```
+new File("importantData.txt").delete();
+```
+
+In that code, the new File call refers to a single file. It's very nice code, but it doesn't tell you how to delete a bunch of files. How can you write code to deal with several files at once?
+
+Fortunately, Java provides ways to deal with bunches of files. One way uses an array of File objects. Listing 16-6 contains a program that illustrates this idea.
+
+# Listing 16-6: Deleting All .txt Files
+
+```
+import java.io.File;
+class IHateTxtFiles {
+    public static void main(String args[]) {
+        File folder = new File(".");
+        for (File file : folder.listFiles()) {
+            if (file.getName().endsWith(".txt")) {
+                file.delete();
+            }
+        }
+    }
+}
+```
+
+In many operating systems (including Windows, Mac OS, and Linux), a single dot stands for the current working directory: the place where a program starts looking for files. For a Java program running in Eclipse, this working directory is the project's root directory. For example, imagine that the code in Listing 16-6 lives in an Eclipse project named 16-06. Then your hard drive contains a folder named 16-06, which in turn, contains a folder named src; which in turn, contains the IHateTxtFiles.java file. (See Figure 16-8.) The program's working directory is the 16-06 directory. So, in Listing 16-6, the code
+
+```
+folder = new File(".")
+```
+
+makes folder refer to the directory named 16-06.

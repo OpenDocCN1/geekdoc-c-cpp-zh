@@ -1,0 +1,47 @@
+# Reading from a file
+
+All the Scanner methods can read from existing disk files. For example, to read a word from a file named mySpeech, use the code of the following kind:
+
+```
+Scanner diskScanner =
+    new Scanner(new File("mySpeech"));
+
+String oneWord = diskScanner.next();
+```
+
+To read a character from a file named letters.dat and then display the character on the screen, you can do something like this:
+
+```
+Scanner diskScanner =
+    new Scanner(new File("letters.dat"));
+
+System.out.println(
+    diskScanner.findWithinHorizon(".",0).charAt(0));
+```
+
+![](bbox=[0.116, 0.447, 0.202, 0.517])
+
+Notice how I read from a file named mySpeech, not mySpeech.txt or mySpeech.doc. Anything that you put after the dot is called a filename extension, and for a file full of numbers and other data, the filename extension is optional. Sure, a Java program must be called something.java, but a data file can be named mySpeech.ext, mySpeech.reallymine.allmine, or just mySpeech. As long as the name in your new File call is the same as the filename on your computer’s hard drive, everything is okay.
+
+# Writing to a file
+
+The print and println methods can write to disk files. Here are some examples:
+
++   - During a run of the code in Listing 13-2, the variable `total` stores the number 99.75. To deposit 99.75 onto the `cookedData.txt` file, you execute
+
+```
+diskWriter.println(total);
+```
+
+This println call writes to a disk file because of the following line in Listing 13-2:
+
+```
+PrintStream diskWriter =
+    new PrintStream("cookedData.txt");
+```
+
++   - In another version of the program, you may decide not to use a `total` variable. To write 99.75 to the `cookedData.txt` file, you can call
+
+```
+diskWriter.println(unitPrice * quantity);
+```

@@ -1,0 +1,21 @@
+You see a fork in the road. You see two signs — one pointing to the right; the other pointing to the left. One sign reads, “Storing words or sentences? True.” The other sign reads, “Storing words or sentences? False.” You evaluate the words-or-sentences situation and march on, veering right or left depending on your software situation. A diagram of this story is shown in Figure 9-1.
+
+![](bbox=[0.28, 0.27, 0.65, 0.66])
+
+Figure 9-1:
+Which way to go?
+
+Life is filled with forks in the road. Take an ordinary set of directions for heating up a frozen snack:
+
++   **Microwave cooking directions:**
++   - Place on microwave-safe plate.
++   - Microwave on high for 2 minutes.
++   - Turn product.
++   - Microwave on high for 2 more minutes.
+
++   **Conventional oven directions:**
++   - Preheat oven to 350 degrees.
++   - Place product on baking sheet.
++   - Bake for 25 minutes.
+
+Again, you choose between alternatives. If you use a microwave oven, do this. Otherwise, do that.

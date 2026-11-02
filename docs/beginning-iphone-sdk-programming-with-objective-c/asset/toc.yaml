@@ -1,0 +1,47 @@
+level_changes:
+- line: 180
+  before: 2
+  after: 1
+- line: 3460
+  before: 2
+  after: 1
+- line: 3471
+  before: 1
+  after: 2
+- line: 4863
+  before: 2
+  after: 1
+- line: 7400
+  before: 2
+  after: 1
+- line: 2596
+  before: 3
+  after: 2
+text_changes:
+- line: 826
+  before: '3'
+  after: ''
+- line: 828
+  before: Outlets、Actions 和 View Controllers
+  after: 3 Outlets、Actions 和 View Controllers
+- line: 4028
+  before: '8'
+  after: ''
+- line: 4030
+  before: 标签栏与导航应用程序
+  after: 8 标签栏与导航应用程序
+- line: 6422
+  before: '12'
+  after: ''
+- line: 6424
+  before: 使用 SQLite3 进行数据库存储
+  after: 12 使用 SQLite3 进行数据库存储
+- line: 7870
+  before: '15'
+  after: ''
+- line: 7872
+  before: 简单动画
+  after: 15 简单动画
+- line: 1441
+  before: 成人高考数学公式
+  after: 自定义视图

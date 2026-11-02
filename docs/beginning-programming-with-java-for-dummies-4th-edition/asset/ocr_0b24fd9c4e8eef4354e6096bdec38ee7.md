@@ -1,0 +1,11 @@
+characters in a string. With replaceAll, you can easily change the phrase "my fault" to "your fault" wherever "my fault" appears inside a string. And with compareTo, you can sort strings alphabetically.
+
+# StringTokenizer
+
+I often need to chop strings into pieces. For example, I have a fullName variable that stores my narcissistic "Barry A. Burd" string. From this fullName value, I need to create firstName, middleInitial, and lastName values. I have one big string ("Barry A. Burd"), and I need three little strings — "Barry", "A.", and "Burd".
+
+Fortunately, the StringTokenizer class does this kind of grunt work. Using this class, you can separate "Barry A. Burd" or "Barry, A. , Burd" or even "Barry<tab>A. <tab>Burd" into pieces. You can also treat each separator as valuable data, or you can ignore each separator as though it were trash. To do lots of interesting processing using strings, check out Java's StringTokenizer class.
+
+# System
+
+You're probably familiar with System.in and System.out. But what about System.getProperty? The getProperty method reveals all kinds of information about your computer. Some of the information you can find includes your operating system's name, your processor's architecture, your Java Virtual Machine version, your classpath, your username, and whether your system uses a backslash or a forward slash to separate folder names from one another. Sure, you may already know all this stuff. But does your Java code need to discover it on the fly?

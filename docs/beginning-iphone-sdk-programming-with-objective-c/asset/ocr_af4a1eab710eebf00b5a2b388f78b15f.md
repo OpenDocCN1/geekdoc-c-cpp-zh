@@ -1,0 +1,30 @@
+```
+{
+    ABRecordRef ref = CFArrayGetValueAtIndex(allContacts, i);
+    NSString *contactFirstName = (NSString *) ABRecordCopyValue(
+        ref, kABPersonFirstNameProperty);
+    NSString *contactLastName = (NSString *) ABRecordCopyValue(
+        ref, kABPersonLastNameProperty);
+
+    if ( [firstName isEqualToString:contactFirstName] &&
+         [lastName isEqualToString:contactLastName] )
+    {
+        ABAddressBookRemoveRecord(addressBook, ref, nil);
+        ABAddressBookSave(addressBook, nil);
+    }
+}
+```
+
+The preceding method, removeContact, takes in two parameters, firstName and lastName, and searches the Contacts application for a contact with a matching first and last name. If a contact is found, it is removed from the Contacts application.
+
+> **NOTE** For more information about the various methods used to remove a contact, refer to the ABAddressBook reference in the Apple's iPhone Reference Library. You can download the reference at http://developer.apple.com/iphone/library/documentation/AddressBook/Reference/ABAddressBookRef_iPhoneOS/ABAddressBookRef_iPhoneOS.pdf.
+
+# SUMMARY
+
+In this chapter, you saw how you could easily integrate the various built-in applications into your own iPhone applications. In particular, you saw how you can invoke the built-in SMS, Mail, Safari, and phone dialer simply by using a URL string. You also learned about accessing the Contacts and Photo Library using the classes provided by the iPhone SDK.
+
+# EXERCISES
+
++   1. Name the various URL strings for invoking the Safari, Mail, SMS, and phone dialer applications.
++   2. What is the class name for invoking the Image Picker UI in the iPhone?
++   3. What is the class name for invoking the People Picker UI in the iPhone?

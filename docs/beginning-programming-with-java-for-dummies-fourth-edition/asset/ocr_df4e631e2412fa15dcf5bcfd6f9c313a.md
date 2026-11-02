@@ -1,0 +1,39 @@
+# Creating a Class
+
+I start with a “traditional” example. The program in Listing 17-1 processes simple purchase data. Two runs of the program are shown in Figure 17-1.
+
+# Listing 17-1: Doing It the Old Fashioned Way
+
+```
+```java
+import java.util.Scanner;
+
+class ProcessData {
+
+    public static void main(String args[]) {
+        Scanner keyboard = new Scanner(System.in);
+        double amount;
+        boolean taxable;
+        double total;
+
+        System.out.print("Amount: ");
+        amount = keyboard.nextDouble();
+        System.out.print("Taxable? (true/false) ");
+        taxable = keyboard.nextBoolean();
+
+        if (taxable) {
+            total = amount * 1.05;
+        } else {
+            total = amount;
+        }
+
+        System.out.print("Total: ");
+        System.out.println(total);
+
+        keyboard.close();
+    }
+}
+```
+```
+
+![](bbox=[0.136, 0.717, 0.572, 0.846])

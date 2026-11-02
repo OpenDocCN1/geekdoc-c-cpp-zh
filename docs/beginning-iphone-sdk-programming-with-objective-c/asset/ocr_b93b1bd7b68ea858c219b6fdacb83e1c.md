@@ -1,0 +1,51 @@
+In the HelloWorldViewController.h file, add a header declaration for the btnClicked: action:
+
+```
+//
+// HelloWorldViewController.h
+// HelloWorld
+//
+// Created by Wei-Meng Lee on 3/30/09.
+// Copyright __MyCompanyName__ 2009. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface HelloWorldViewController : UIViewController {
+}
+
+//---declaration for the btnClicked: action---
+//-(IBAction) btnClicked:(id)sender;
+
+@end
+```
+
+In the HelloWorldViewController.m file, add the code that provides the implementation for the btnClicked: action:
+
+```
+- (void)dealloc {
+    [super dealloc];
+}
+
+//---implementation for the btnClicked: action---
+//-(IBAction) btnClicked:(id)sender {
+//---display an alert view---
+// UIAlertView *alert = [[UIAlertView alloc]
+// initWithTitle:@"Hello World!"
+// message:@"iPhone, here I come!"
+// delegate:self
+// cancelButtonTitle:@"OK"
+// otherButtonTitles:nil, nil];
+// [alert show];
+// [alert release];
+// }
+@end
+```
+
+![](bbox=[0.7, 0.48, 0.92, 0.82])
+
+FIGURE 2-23
+
+The preceding code displays an alert containing the sentence "iPhone, here I come!"
+
+That's it! Go back to Xcode and run the application again. This time, when you tap the button view, an alert view displays (see Figure 2-23).

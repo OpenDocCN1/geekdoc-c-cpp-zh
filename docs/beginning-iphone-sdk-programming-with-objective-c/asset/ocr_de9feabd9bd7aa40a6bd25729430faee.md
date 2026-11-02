@@ -1,0 +1,39 @@
+```
++(void) alsoDoSomething {
+    //---implementation here---
+}
+@end
+```
+
+To invoke the three instance methods, you first need to create an instance of the class and then call them using the instance created:
+
+```
+SomeClass *someClass = [SomeClass alloc];
+[someClass doSomething];
+[someClass doSomething:@"some text"];
+[someClass doSomething:@"some text" withAnotherPara:9.0f];
+```
+
+Class methods can be called directly using the class name, as the following shows:
+
+```
+[SomeClass alsoDoSomething];
+```
+
+In general, you create instance methods when you need to perform some actions that are related to the particular instance of the class (that is, the object). For example, suppose you defined a class that represents the information of an employee. You may expose an instance method that allows you to calculate the overtime wage of an employee. In this case, you use an instance method because the calculation involves data specific to a particular employee object.
+
+Class methods, on the other hand, are commonly used for defining helper methods. For example, you might have a class method called GetOvertimeRate: that returns the rates for working overtime. As all employees get the same rate for working overtime (assuming this is the case for your company), then there is no need to create instance methods and thus a class method will suffice.
+
+The next section shows how to call methods with a varying number of parameters.
+
+# Message Sending (Calling Methods)
+
+In Objective-C, you use the following syntax to call a method:
+
+```
+[object method];
+```
+
+Strictly speaking, in Objective-C you do not call a method; you send a message to an object. The message to be passed to an object is resolved during runtime and is not enforced at compile time. This is why the compiler does not stop you from running your program even though you may have misspelled the name of a method. It does try to warn you that the target object may not respond to your message, though, because the target object will simply ignore the message. Figure D-1 shows the warning by the compiler when one of the parameters for the UIAlertView's initializer is misspelled (the cancelButtonsTitle: should be cancelButtonTitle:).
+
+> NOTE For the ease of understanding, I use the more conventional term of "calling a method" to refer to Objective-C's message sending mechanism.

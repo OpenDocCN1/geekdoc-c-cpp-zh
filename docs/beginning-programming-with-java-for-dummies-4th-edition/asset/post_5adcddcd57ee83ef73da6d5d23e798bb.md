@@ -1,0 +1,130 @@
+
+## Identifiers that you or I can define
+
+I like the name Suzanne, but if you don’t like traditional names, then make up a brand new name. You’re having a new baby. Call her “Deneen” or “Chrisanta.” Name him “Belton” or “Merk.”
+
+A name is a word that identifies something, so I’ll stop calling these things names and start calling them identifiers. In computer programming, an identifier is a noun of some kind. An identifier refers to a value, a part of a program, a certain kind of structure, or any number of things.
+
+Listing 4-1 has two identifiers that you or I can define on our own. They’re the made-up words ThingsILike and args.
+
+```
+class ThingsILike {
+    public static void main(String args[]) {
+
+```
+
+Just as the names Suzanne and Chrisanta have no special meaning in English, so the names ThingsILike and args have no special meaning in Java. In Listing 4-1, I use ThingsILike for the name of my program, but I could also have used a name like GooseGrease, Enzyme, or Kalamazoo. I have to put (String someName[]) in my program, but I could use (String args[]), (String commandLineArguments[]), or (String cheese[]).
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_98_0.png)
+
+TIP
+Do as I say, not as I do. Make up sensible, informative names for the things in your Java programs. Names like GooseGrease are cute, but they don’t help you keep track of your program-writing strategy.
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_98_1.png)
+
+REMEMBER
+When I name my Java program, I can use ThingsILike or GooseGrease, but I can’t use the word public. Words like class, public, static, and void are keywords in Java.
+
+The args in (String args[]) holds anything extra that you type when you issue the command to run a Java program. For example, if you get the program to run by typing java ThingsILike won too 3, then args stores the extra values won, too, and 3. As a beginning programmer, you don’t need to think about this feature of Java. Just paste (String args[]) into each of your programs.
+
+## Identifiers with agreed-upon meanings
+
+Many people are named Suzanne, but only one country is named Canada. That’s because there’s a standard, well-known meaning for the word “Canada.” It’s the country with a red maple leaf on its flag. If you start your own country, you should avoid naming it Canada because naming it Canada would just confuse everyone. (I know, a town in Kentucky is named Canada, but that doesn’t count. Remember, you should ignore exceptions like this.)
+
+Most programming languages have identifiers with agreed-upon meanings. In Java, almost all these identifiers are defined in the Java API. Listing 4-1 has five such identifiers. They're the words main, String, System, out, and println:
+
+```
+public static void main(String args[]) {
+    System.out.println("Chocolate, royalties, sleep");
+}
+```
+
+Here's a quick rundown on the meaning of each of these names (and more detailed descriptions appear throughout this book):
+
+- **main:** The main starting point for execution in every Java program.
+- **String:** A bunch of text; a row of characters, one after another.
+- **System:** A canned program in the Java API. This program accesses some features of your computer that are outside the direct control of the Java Virtual Machine (JVM).
+- **out:** The place where a text-based program displays its text. (For a program running in Eclipse, the word out represents the Console view. To read more about text-based programs, check the first several paragraphs of Chapter 3.)
+- **println:** Display text on your computer screen.
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_99_0.png)
+
+The name println comes from the words "print a line." If you were allowed to write the name in uppercase letters, it would be PRINTLN, with a letter L near the end of the word. When the computer executes println, the computer puts some text in Eclipse's Console view and then immediately moves to the beginning of the next line in preparation for whatever else will appear in the Console view.
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_99_1.png)
+
+Strictly speaking, the meanings of the identifiers in the Java API aren't cast in stone. Although you can make up your own meanings for words like System or println, doing so isn't a good idea — because you'd confuse the dickens out of other programmers, who are used to the standard API meanings for these familiar identifier names.
+
+## Literals
+
+A literal is a chunk of text that looks like whatever value it represents. In Suzanne's sentence (refer to Figure 4-2), "eh" is a literal because "eh" refers to the word "eh."
+
+Programming languages have literals, too. For example, in Listing 4-1, the stuff in quotes is a literal:
+
+```
+System.out.println("Chocolate, royalties, sleep");
+```
+
+When you run the ThingsILike program, you see the words Chocolate, royalties, sleep on the screen. In Listing 4-1, the text "Chocolate, royalties, sleep" refers to these words, exactly as they appear on the screen (minus the quotation marks).
+
+Most of the numbers that you use in computer programs are literals. If you put the statement
+
+```
+mySalary = 1000000.00;
+```
+
+in a computer program, then 1000000.00 is a literal. It stands for the number 1000000.00 (one million).
+
+If you don't enjoy counting digits, you can put the following statement in your Java 7 program:
+
+```
+mySalary = 1_000_000.00;
+```
+
+Starting with Java 7, numbers with underscores are permissible as literals.
+
+In versions of Java before Java 7, you cannot use numbers such as 1_000_000.00 in your code.
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_100_0.png)
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_100_1.png)
+
+Different countries use different number separators and different number formats. For example, in the United States, you write 1,234,567,890.55. In France, you write 1234567890,55. In India, you group digits in sets of two and three. You can't put a statement like mySalary = 1,000,000.00 in your Java program. Java's numeric literals don't have any commas in them. But you can write mySalary = 10_00_000.00 for easy-to-read programming in India. And for a program's output, you can display numbers like 1234567890,55 using Java's Locale and NumberFormat classes. (For more on Locale and NumberFormat, check out Chapter 18.)
+
+## Punctuation
+
+A typical computer program has lots of punctuation. For example, consider the program in Listing 4-1:
+
+```
+class ThingsILike {
+    public static void main(String args[]) {
+        System.out.println("Chocolate, royalties, sleep");
+    }
+}
+```
+
+Each bracket, each brace, each squiggle of any kind plays a role in making the program meaningful.
+
+In English, you write all the way across one line and then you wrap your text to the start of the next line. In programming, you seldom work this way. Instead, the code's punctuation guides the indenting of certain lines. The indentation shows which parts of the program are subordinate to which other parts. It's as though, in English, you wrote Suzanne's sentence like this:
+
+Suzanne says "eh" because
+'
+    as you know
+'
+she lives in Canada.
+
+The diagrams in Figures 4-3 and 4-4 show you how parts of the ThingsILike program are contained inside other parts. Notice how a pair of curly braces acts like a box. To make the program's structure visible at a glance, you indent all the stuff inside of each box.
+
+Figure 4-3: A pair of curly braces acts like a box.
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_101_0.png)
+
+Figure 4-4: The ideas in a computer program are nested inside one another.
+
+![](img/bf4858233d2b2a32ff4e3991860526b3_101_1.png)
+
+REMEMBER
+I can't emphasize this point enough. If you don't indent your code or if you indent but you don't do it carefully, then your code still compiles and runs correctly. But this successful run gives you a false sense of confidence. The minute you try to update some poorly indented code, you become hopelessly confused. So take my advice: Keep your code carefully indented at every step in the process. Make your indentation precise, whether you're scratching out a quick test program or writing code for a billionaire customer.
+
+TIP
+Eclipse can indent your code automatically for you. Select the .java file whose code you want to indent. Then, in Eclipse's main menu, choose Source→Format. Eclipse rearranges your lines in the editor, indenting things that should be indented and generally making your code look good.

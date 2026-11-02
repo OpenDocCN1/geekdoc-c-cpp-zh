@@ -1,0 +1,20 @@
+# Chapter 22
+
+# Ten Useful Classes in the Java API
+
+# In This Chapter
+
++   - Finding out more about classes
++   - Discovering other helpful classes
+
+I’m proud of myself. I’ve written around 400 pages about Java using fewer than 30 classes from the Java API. The standard API has about 4,000 classes, so I think I’m doing very well.
+
+Anyway, to help acquaint you with some of my favorite Java API classes, this chapter contains a brief list. Some of the classes in this list appear in examples throughout this book. Others are so darn useful that I can’t finish the book without including them.
+
+For more information on the classes in this chapter, check Java’s online API documentation at http://docs.oracle.com/javase/8/docs/api.
+
+# Applet
+
+What Java book is complete without some mention of applets? An applet is a piece of code that runs inside a web browser window. For example, a small currency calculator running in a little rectangle on your web page can be a piece of code written in Java.
+
+At one time, Java applets were really hot stuff, but nowadays, people are much more interested in using Java for business processing. Anyway, if applets are your thing, don’t be shy. Check the Applet page of Java’s API documentation.

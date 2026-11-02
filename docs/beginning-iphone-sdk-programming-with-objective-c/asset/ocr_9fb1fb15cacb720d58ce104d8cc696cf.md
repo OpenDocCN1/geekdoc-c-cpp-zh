@@ -1,0 +1,29 @@
+![](bbox=[0.07, 0.13, 0.53, 0.54])
+
+FIGURE 7-16
+
+# How It Works
+
+First, examine the animation that is applied to the MySecondViewController. You perform the animation by first calling the beginAnimations: method of the UIView class to start the animation block:
+
+```
+[UIView beginAnimations:@"flipping view" context:nil];
+```
+
+The setAnimationDuration: method specifies the duration of the animation in seconds. Here, you set it to one second:
+
+```
+[UIView setAnimationDuration:1];
+```
+
+The setAnimationCurve: method sets the curve of the animating property changes within an animation:
+
+```
+[UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+```
+
++   You can use the following constants for the curve of the animation:
++   - UIViewAnimationCurveEaseInOut — causes the animation to begin slowly, accelerate through the middle of its duration, and then slow again before completing
++   - UIViewAnimationCurveEaseIn — causes the animation to begin slowly and then speed up as it progresses
++   - UIViewAnimationCurveEaseOut — causes the animation to begin quickly and then slow as it completes
++   - UIViewAnimationCurveLinear — causes an animation to occur evenly over its duration

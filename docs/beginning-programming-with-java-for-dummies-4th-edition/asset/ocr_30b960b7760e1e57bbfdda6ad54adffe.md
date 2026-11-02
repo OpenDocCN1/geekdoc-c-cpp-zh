@@ -1,0 +1,40 @@
+But instead of running the readymade code, I encourage you to start from scratch — to type Listing 5-1 yourself and then to test your newly created code. Just follow these steps.
+
++   1. **Launch Eclipse.**
+
++   2. **From Eclipse’s menu bar, choose File»New»Java Project.**
+
+Eclipse’s New Java Project dialog box appears.
+
++   3. **In the dialog box’s Project Name field, type** `MyNewProject`.
+
++   4. **Click Finish.**
+
+Clicking Finish brings you back to the Eclipse workbench, with MyNewProject in the Package Explorer. The next step is to create a new Java source code file.
+
++   5. **In the Package Explorer, select** `MyNewProject` **and then, in Eclipse’s main menu, choose File»New»Class.**
+
+Eclipse’s New Java Class dialog box appears.
+
++   6. **In the New Java Class dialog box’s Name field, type the name of your new class.**
+
+In this example, use the name EchoLine. Spell EchoLine exactly the way I spell it in Listing 5-1, with a capital E, a capital L, and no blank space.
+
+In Java, consistent spelling and capitalization are very important. If you’re not consistent within a particular program, the program will probably have some nasty, annoying compile-time errors.
+
+Optionally, you can put a check mark in the box labeled `public static void main(String[] args)`. If you leave the box unchecked, you’ll have a bit more typing to do when you get to Step 8. Either way (checked or unchecked), it’s no big deal.
+
+![](bbox=[0.12, 0.519, 0.208, 0.661])
+
++   7. **Click Finish.**
+
+Clicking Finish brings you back to the Eclipse workbench. An editor in this workbench has a tab named EchoLine.java.
+
++   8. **Type the program of Listing 5-1 in the EchoLine.java editor.**
+
+Copy the code exactly as you see it in Listing 5-1.
+
++   - Spell each word exactly the way I spell it in Listing 5-1.
++   - Capitalize each word exactly the way I do in Listing 5-1.
++   - Include all the punctuation symbols — the dots, the semicolons, everything.
++   - Double-check the spelling of the word `println`. Make sure that each character in the word `println` is a lowercase letter. (In particular, the l in ln is a letter, not a digit.)

@@ -1,0 +1,34 @@
+![](bbox=[0.27, 0.18, 0.55, 0.6])
+
+Figure 9-8:
+Cheer for your favorite team.
+
+# Statements and blocks
+
+An elegant way to think about if statements is to realize that you can put only one statement inside each clause of an if statement.
+
+```
+if (Condition)
+    aStatement
+else
+    anotherStatement
+```
+
+On your first reading of this one-statement rule, you're probably thinking that there's a misprint. After all, in Listing 9-4, each clause (the if clause and the else clause) seems to contain four statements, not just one.
+
+But technically, the if clause in Listing 9-4 has only one statement, and the else clause in Listing 9-4 has only one statement. The trick is, when you surround a bunch of statements with curly braces, you get what's called a block, and a block behaves, in all respects, like a single statement. In fact, the official
+
+Java documentation lists a block as a kind of statement (one of many different kinds of statements). So in Listing 9-4, the block
+
+```
+{
+    out.print("Hankees: ");
+    out.println(hankees);
+    out.print("Socks: ");
+    out.println(socks);
+}
+```
+
+is a single statement. It's a statement that has four smaller statements within it. So this big block, this single statement, serves as the one and only statement inside the if clause in Listing 9-4.
+
+That's how the one-statement rule works. In an if statement, when you want the computer to execute several statements, you combine those statements into one big statement. To do this, you make a block using curly braces.

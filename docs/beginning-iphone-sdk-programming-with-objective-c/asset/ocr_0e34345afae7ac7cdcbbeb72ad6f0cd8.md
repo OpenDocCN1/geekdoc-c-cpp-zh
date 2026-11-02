@@ -1,0 +1,50 @@
+```
+NSLog(category);
+NSLog(@"==========");
+//---return all titles in an array---
+NSArray *titles = [dict valueForKey:category];
+//---print out all the titles in that category---
+for (NSString *title in titles)
+{
+    NSLog(title);
+}
+[dict release];
+```
+
+When the application is run for the first time, the Apps.plist file is not available, so you load it from the Resources folder:
+
+```
+else {
+    //---load the property list from the Resources folder---
+    NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"Apps"
+                                                         ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc]
+                         initWithContentsOfFile:pListPath];
+    //...
+}
+```
+
+Because you are making changes to the dictionary object, you need to make a mutable copy of the dictionary object and assign it to an NSMutableDictionary object:
+
+```
+//---make a mutable copy of the dictionary object---
+NSMutableDictionary *copyOfDict = [dict mutableCopy];
+```
+
+This step is important because the NSDictionary object is immutable, meaning that after the items are populated from the property list, you cannot add content to the dictionary object. Using the mutableCopy method of the NSDictionary class allows you to create a mutable instance of the dictionary object, which is an NSMutableDictionary.
+
+You then retrieve an array containing all the keys in the mutable dictionary object:
+
+```
+//---get all the different categories---
+NSArray *categoriesArray = [[copyOfDict allKeys]
+                            sortedArrayUsingSelector:@selector(compare:)];
+```
+
+You use this array to loop through all the keys in the dictionary so that you can add some additional titles to each category:
+
+```
+//---for each category---
+for (NSString *category in categoriesArray)
+{
+```

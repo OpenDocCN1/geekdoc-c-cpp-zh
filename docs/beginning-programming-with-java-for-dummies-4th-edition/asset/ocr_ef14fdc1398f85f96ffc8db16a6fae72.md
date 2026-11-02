@@ -1,0 +1,52 @@
+This mixing of cases may slow you down when you're trying to read a program, but it's legal nonetheless.
+
+You don't need a case for each expected value of the Expression. You can leave some expected values to the default. Here's an example:
+
+```
+switch (randomNumber) {
+  case 1:
+    System.out.println("Yes. Isn't it obvious?");
+    break;
+
+  case 5:
+    System.out.println("No chance, Lance.");
+    break;
+
+  case 7:
+    System.out.print("Yes, but only if");
+    System.out.println(" you're nice to me.");
+    break;
+
+  case 10:
+    System.out.print("No, not until");
+    System.out.println(" Nell squeezes Rover.");
+    break;
+
+  default:
+    System.out.print("Sorry,");
+    System.out.println(" I just can't decide.");
+    break;
+}
+```
+
+The default clause is optional.
+
+```
+switch (randomNumber) {
+  case 1:
+    System.out.println("Yes. Isn't it obvious?");
+    break;
+
+  case 2:
+    System.out.println("No, and don't ask again.");
+    break;
+
+  case 3:
+    System.out.print("I'm too tired.");
+    System.out.println(" Go somebody else.");
+    break;
+}
+System.out.println("Goodbye");
+```
+
+If you have no default clause, and a value that's not covered by any of the cases comes up, the switch statement does nothing. For example, if randomNumber is 4, the preceding code displays Goodbye, and nothing else.

@@ -1,0 +1,42 @@
+7. Save the project in Interface Builder.
+
+8. Back in Xcode, insert the following code into the ScreenRotationsViewController.h file:
+
+```
+#import <UIKit/UIKit.h>
+
+@interface ScreenRotationsViewController : UIViewController {
+    IBOutlet UIButton *btn;
+}
+@property (nonatomic, retain) UIButton *btn;
+@end
+```
+
+9. In the ScreenRotationsViewController.m file, add the following code:
+
+```
+@implementation ScreenRotationsViewController
+
+@synthesize btn;
+
+...
+- (void)willAnimateSecondHalfOfRotationFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation duration:(NSTimeInterval)duration {
+    UIInterfaceOrientation destOrientation = self.interfaceOrientation;
+    if (destOrientation == UIInterfaceOrientationPortrait) {
+        //---if rotating to portrait mode---
+        btn.frame = CGRectMake(20,20,280,37);
+    }
+    else {
+        //---if rotating to landscape mode---
+        btn.frame = CGRectMake(180,243,280,37);
+    }
+}
+- (void)dealloc {
+    [btn release];
+    [super dealloc];
+}
+```
+
+10. Save the project and press Command-R in Xcode to deploy the application onto the iPhone Simulator.
+
+11. Observe that when the iPhone Simulator is in portrait mode, the Round Rect Button view is displayed in the top-left corner. But when you change the orientation to landscape mode, it is repositioned to the bottom-right corner (see Figure 6-12).

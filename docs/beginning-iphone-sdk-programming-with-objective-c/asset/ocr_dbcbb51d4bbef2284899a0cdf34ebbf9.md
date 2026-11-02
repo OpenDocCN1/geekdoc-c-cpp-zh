@@ -1,0 +1,44 @@
+```
+[UIView commitAnimations];
+}
+//---when the keyboard appears---
+-(void) keyboardWillShow:(NSNotification *) notification
+{
+    //---gets the size of the keyboard---
+    NSDictionary *userInfo = [notification userInfo];
+    NSValue *keyboardValue = [userInfo objectForKey:UIKeyboardBoundsUserInfoKey];
+    [keyboardValue getValue:&keyboardBounds];
+}
+//---when the keyboard disappears---
+-(void) keyboardWillHide:(NSNotification *) notification
+{
+}
+-(void) viewWillAppear:(BOOL)animated
+{
+    //---registers the notifications for keyboard---
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(keyboardWillShow:)
+     name:UIKeyboardWillShowNotification
+     object:self.view.window];
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(keyboardWillHide:)
+     name:UIKeyboardWillHideNotification
+     object:nil];
+}
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:UIKeyboardWillShowNotification
+     object:nil];
+    [[NSNotificationCenter defaultCenter]
+     removeObserver:self
+     name:UIKeyboardWillHideNotification
+     object:nil];
+}
+-(void) viewDidLoad {
+    scrollViewOriginalSize = scrollView.contentSize;
+    applicationFrame = [[UIScreen mainScreen] applicationFrame];
+```

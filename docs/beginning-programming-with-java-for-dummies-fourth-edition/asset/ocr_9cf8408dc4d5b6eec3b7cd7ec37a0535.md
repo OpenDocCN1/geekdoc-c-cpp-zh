@@ -1,0 +1,23 @@
+the standard computer keyboard.) Because gumballsPerKid is only nine, gumballsPerKid >= 10 is false. So eachKidGetsTen becomes false. Yikes! The kids will tear the house apart! (Before they do, take a look at Figure 8-10.)
+
+Figure 8-10: Assigning a value to the eachKid GetsTen variable.
+
+![](bbox=[0.26, 0.29, 0.83, 0.6])
+
+# Expressions and conditions
+
+In Listing 8-4, the code gumballsPerKid >= 10 is an expression. The expression's value depends on the value stored in the variable gumballsPerKid. On a bad day, the value of gumballsPerKid >= 10 is false. So the variable eachKidGetsTen is assigned the value false.
+
+An expression like gumballsPerKid >= 10, whose value is either true or false, is sometimes called a condition.
+
+![](bbox=[0.1, 0.7, 0.22, 0.87])
+
+Values like true and false may look as though they contain characters, but they really don't. Internally, the Java Virtual Machine doesn't store boolean values with the letters t-r-u-e or f-a-l-s-e. Instead, the JVM stores codes, like 0 for false and 1 for true. When the computer displays a boolean value (as in System.out.println(eachKidGetsTen)), the Java Virtual Machine converts a code like 0 into the five-letter word false.
+
+# Comparing numbers; comparing characters
+
+In Listing 8-4, I compare a variable's value with the number 10. I use the >= operator in the expression
+
+```
+gumballsPerKid >= 10
+```

@@ -1,0 +1,98 @@
+level_changes:
+- line: 123
+  before: 3
+  after: 2
+- line: 127
+  before: 3
+  after: 2
+- line: 134
+  before: 2
+  after: 3
+- line: 138
+  before: 2
+  after: 3
+- line: 144
+  before: 2
+  after: 3
+- line: 207
+  before: 2
+  after: 3
+- line: 333
+  before: 2
+  after: 3
+- line: 839
+  before: 2
+  after: 3
+- line: 1143
+  before: 2
+  after: 3
+- line: 2118
+  before: 2
+  after: 3
+- line: 2397
+  before: 2
+  after: 3
+- line: 2919
+  before: 2
+  after: 3
+- line: 3801
+  before: 2
+  after: 3
+- line: 4588
+  before: 2
+  after: 3
+- line: 5773
+  before: 2
+  after: 3
+- line: 6506
+  before: 2
+  after: 3
+- line: 7144
+  before: 2
+  after: 3
+- line: 7891
+  before: 2
+  after: 3
+- line: 8769
+  before: 2
+  after: 3
+- line: 9322
+  before: 2
+  after: 3
+- line: 10170
+  before: 2
+  after: 3
+text_changes:
+- line: 134
+  before: 第三部分：控制流程
+  after: 第 III 部分：控制流程
+- line: 138
+  before: 第四部分：使用程序单元
+  after: 第 IV 部分：使用程序单元
+- line: 144
+  before: 第五部分：十大秘诀
+  after: 第 V 部分：十大秘诀
+- line: 10144
+  before: 十大部分
+  after: 第十部分
+- line: 2397
+  before: 第7章
+  after: 第 7 章
+- line: 6506
+  before: 第14章
+  after: 第 14 章
+- line: 7144
+  before: 第16章
+  after: 第 16 章
+- line: 7891
+  before: 第18章
+  after: 第 18 章
+- line: 10170
+  before: 第22章
+  after: 第 22 章
+- line: 3801
+  before: 第10章 他走的是哪条路？
+  after: 第 10 章：他走的是哪条路？
+- line: 8769
+  before: 第19章：创建新的Java方法
+  after: 第 19 章：创建新的 Java 方法

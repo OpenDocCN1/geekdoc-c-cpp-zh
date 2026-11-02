@@ -1,0 +1,24 @@
+# Identifiers that you or I can define
+
+I like the name Suzanne, but if you don't like traditional names, then make up a brand new name. You're having a new baby. Call her "Deneen" or "Chrisanta." Name him "Belton" or "Merk."
+
+A name is a word that identifies something, so I'll stop calling these things names and start calling them identifiers. In computer programming, an identifier is a noun of some kind. An identifier refers to a value, a part of a program, a certain kind structure, or any number of things.
+
+Listing 4-1 has two identifiers that you or I can define on our own. They're the made-up words ThingsILike and args.
+
+```
+class ThingsILike {
+    public static void main(String args[]) {
+```
+
+Just as the names Suzanne and Chrisanta have no special meaning in English, so the names ThingsILike and args have no special meaning in Java. In Listing 4-1, I use ThingsILike for the name of my program, but I could also have used a name like GooseGrease, Enzyme, or Kalamazoo. I have to put (String someName[]) in my program, but I could use (String args[]), (String commandLineArguments[]), or (String cheese[]).
+
+Do as I say, not as I do. Make up sensible, informative names for the things in your Java programs. Names like GooseGrease are cute, but they don't help you keep track of your program-writing strategy.
+
+When I name my Java program, I can use ThingsILike or GooseGrease, but I can't use the word public. Words like class, public, static, and void are keywords in Java.
+
+The args in (String args[]) holds anything extra that you type when you issue the command to run a Java program. For example, if you get the program to run by typing java ThingsILike won too 3, then args stores the extra values won, too, and 3. As a beginning programmer, you don't need to think about this feature of Java. Just paste (String args[]) into each of your programs.
+
+# Identifiers with agreed-upon meanings
+
+Many people are named Suzanne, but only one country is named Canada. That's because there's a standard, well-known meaning for the word "Canada." It's the country with a red maple leaf on its flag. If you start your own country, you should avoid naming it Canada because naming it Canada would just confuse everyone. (I know, a town in Kentucky is named Canada, but that doesn't count. Remember, you should ignore exceptions like this.)

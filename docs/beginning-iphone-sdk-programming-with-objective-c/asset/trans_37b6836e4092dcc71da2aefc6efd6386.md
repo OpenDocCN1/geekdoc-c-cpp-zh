@@ -1,0 +1,291 @@
+
+## 应用程序 *（续）*
+- 部署到 iPhone 模拟器，28
+- 文件访问，302
+- 图标，自定义，38–40
+- iPhone 模拟器，卸载，11–12
+- 键盘，集成，115
+- 链接动态库，289
+- 基于导航的应用程序，184
+- 运行，428
+- 单窗口，19, 21
+- 股票，211
+- 标签栏应用程序，183
+- 在真实设备上测试，19
+- 第三方，限制，20
+- 工具应用程序，211
+- 视图方向，和 32
+- 天气，211
+- 内嵌网页浏览器，94–95
+- 基于窗口的，创建，162–169
+- 应用程序文件夹，302
+- 将窗口与视图控制器关联，168
+- 属性，自动调整大小，33
+- 属性检查器窗口，84, 443
+- 我的视图控制器，166
+- 文本字段视图，117
+- 自动释放对象（Objective-C），470–472
+- 自动释放池（Objective-C），472
+- 自动调整大小属性，33
+- 轴，加速度计，378–379
+
+## B
+- 返回按钮，208–209
+- 后台应用程序，19–20, 21
+- BasicUI，44
+  - 委托，47–48
+  - 创建的文件，45
+- BasicUI 应用委托，47
+- BasicUI 视图控制器，47
+- BasicUIAppDelegate 类，48
+- 电池寿命，19–20
+- becomeFirstResponder 方法，127
+- beginAnimations 方法，137
+- 绑定变量，295–296
+- 布尔变量，搜索，254
+- 弹跳球，337–342
+- 调试中的断点，432–434
+- 浏览器，Safari，315
+- 按钮视图，98
+- buttonClicked: 方法，98
+- 按钮
+  - 操作表，80–82
+  - 添加子项，270
+  - 添加同级项，269
+  - 展开按钮，258
+  - 完成，215
+  - 反馈，354
+  - 圆角矩形，123–127
+  - 分段控件，90–93
+- buttonWithType: 方法，98
+
+## C
+- C 函数，SQLite3，289
+- 调用方法（Objective-C），460–461
+- 相机，访问，358, 363–367
+- 大小写，117
+- 类别（Objective-C），477–479
+- center 属性，154
+- 证书签名请求，482–485
+- CGAffineTransform 数据结构，344
+- CGAffineTransformMakeRotation( ) 函数，347
+- CGAffineTransformMakeScale( ) 函数，347
+- CGAffineTransformMakeTranslation()
+  - 函数，344
+- CGPoint 结构，328
+- 键盘输入的字符，117
+- 复选标记，256–257
+- @class，455–457
+- 类操作，35
+- 类
+  - BasicUIAppDelegate，48
+  - CLLocationManager，393
+  - MPMoviePlayerController，367
+  - NSDictionary，308
+  - NSFileManager，306
+  - NSMutableString，65
+  - NSTimer，336
+  - NSUserDefaults，281
+  - Objective-C
+    - 声明，454–455
+    - 实现，455
+    - 实例化，457
+- RootViewController，238
+- scheduledTimerWithTimeInterval:
+  - target:selector:userInfo:repeats:，341
+- ShakeView，386
+- UIAccelerometer，381
+- UIImagePickerController，358, 361
+- UINavigationController，200
+- UIPageControl，82
+- UITabBarController，186
+- UIView，89, 98
+- ViewController，217–218
+- CLLocationManager 类，393
+- 操作系统的 Cocoa Touch 层，15–16
+- 代码
+  - 视图创建，96–99
+  - 编写，35–37
+- 代码补全，7, 426–428
+- Code Sense 功能，427
+- 编码，操作，62–64
+- commitAnimations:
+  - 方法，180
+- 连接检查器窗口，443
+- 通讯录应用程序
+  - 访问，367–372
+  - 添加联系人，372–373
+  - 显示联系人详情，368–372
+  - 删除联系人，373–374
+- 控件对象，事件，175
+- 控制器，库窗口，76
+- 控件，分段，90–93
+- 便捷方法（Objective-C），470–472
+- 坐标，检测触摸，324
+- Core Graphics，343
+- Core OS，14
+- 操作系统的 Core Services，15
+- 更正，117
+- count 方法，320
+- createTableNamed:withField1:withField2: 方法，291–292
+- 动画曲线，179
+- Dashboard 小部件，5
+- Dashcode，5
+- 数据视图，库窗口，76
+- 数据库，287。另请参阅 SQLite3
+  - 文档文件夹，291
+  - 打开，289–291
+  - 表
+    - 创建，291–292
+  - 记录
+    - 插入，293–294
+    - 检索，296–299
+- dataSource 出口，229
+- 日期选择器视图，109
+- 摇动后重置，389
+
+![](img/aab2d775c46f70cd606f2e58e2521324_532_0.png)
+
+## D
+- dealloc 关键字（Objective-C），472–473
+- 调试器控制台窗口，305
+- 调试
+  - 断点，432–434
+  - 文档，435–436
+  - 错误，429–430
+  - NSLog，434–435
+  - 运行时异常，432
+  - 警告，430–432
+- delegate 出口，229
+- 委托（Objective-C），47–48, 475–476
+- desiredAccuracy 属性，393
+- DetailsViewController，205–206
+- 检测
+  - 键盘，127–138
+  - 摇动，382
+  - Shake API，383–388
+  - 轻点，316–320
+  - 触摸，315–321
+    - 多点触摸，321–325
+- 设备旋转，响应，143–147
+- 拨号器，357
+- 指令（Objective-C），453–454
+- 展开按钮，258
+- 展开按钮，256–257
+- 展开指示器，256–257
+- 关闭键盘，119–121, 122–126
+- 关闭视图，177
+- distanceBetweenTwoPoints:toPoint: 方法，326, 328
+- distanceFilter 属性，393
+- 文档，调试，435–436
+- 文档文件夹，303–307
+  - 数据库，291
+  - 每个应用程序的数量，306
+- documentsPath 方法，305
+- done: 方法，215
+- 完成按钮，215
+- doneEditing: 方法，119–121
+- doneSearching: 方法，254–255
+- 下载，iPhone SDK，4–5
+- 拖放，Interface Builder，28
+- 拖动手势，实现，330–332
+
+## E
+- 电子邮件，发送，353–356
+- 电子邮件地址键盘类型，118
+- 仿真器，与模拟器对比，9
+- 事件处理程序
+  - 响应者链，127
+  - Touch Up Inside 事件，98
+- 事件
+  - accelerometer:didAccelerate:，382
+  - 控件对象，175
+  - locationManager:didFailWithError，393
+  - locationManager:didUpdateToLocation:fromLocation:，393
+  - 旋转，148
+  - searchBarTextDidBeginEditing:，254
+  - 触摸，315
+  - touchesBegan:withEvent:，329
+  - touchesMoved:withEvent:，326
+  - willAnimateFirstHalfOfRotationOrientation，148
+  - willAnimateRotationToInterfaceOrientation，150
+  - willAnimateSecondHalfOfRotationFromInterfaceOrientation，148
+- Exchange，353
+
+## F
+- fabsf() 函数，382
+- 反馈按钮，354
+- 字段（Objective-C），457
+- 文件名
+  - 生成，302
+  - Objective-C，453
+- filePath 方法，289
+- 文件
+  - 读取，303–307
+  - tmp 文件夹，307
+  - 写入，303–307
+- File's Owner，35, 47, 440
+- First Responder，35, 47, 440
+- 背面视图
+  - 栏按钮视图，215
+  - 导航栏视图，215
+- FlipsideView 加载，216
+- FlipsideViewController，214
+- FlipsideViewControllerDelegate
+  - 协议，214
+- flipsideViewControllerDidFinish:
+  - 方法，216
+- 浮点数，摇动检测
+  - 和，382
+- 文件夹
+  - 应用程序文件夹，301–302
+  - Applications，302
+  - Documents，303–307
+  - 文件名，生成，302
+  - Library，303–307
+  - tmp，在其中存储文件，307
+- 页脚，表视图，233
+- frame 属性，154
+- iPhone SDK 中的框架，16–17, 21
+- 自由落体，378
+- 函数
+  - CGAffineTransformMakeRotation()，347
+  - CGAffineTransformMakeScale()，347
+  - CGAffineTransformMakeTranslation()，344
+  - NSPathForDirectoriesInDomains( )，305
+  - NSTemporaryDirectory( )，307
+  - sqlite3_exec( )，294
+  - sqlite3_finalize( )，296
+  - sqlite3_open( )，290
+  - sqlite3_prepare( )，296
+  - sqlite3_step( )，296
+  - UIApplicationMain( )，46
+
+## G
+- G4/G5 Macintosh，4
+- 手势，10
+- getAllRowsFromTableNamed:
+  - 方法，296
+- getter 方法，63
+- Gmail，353
+- 谷歌地图，394–397
+- GPS 接收器，390
+- 网格线，441
+- 视图分组，90–93
+
+## H
+- 头文件（Objective-C），453
+- 页眉，表视图，233
+- 层级结构，基于导航的
+  - 应用程序，184
+- 视图层级，99–100
+- 水平翻转，218
+- HTML 页面
+  - Resources 文件夹，94
+  - Web 视图，94
+
+## I
+- IBAction，55
+  - 事件，119–120
+- IBOutlet，55
+- 图标，应用程序，自定义，38–40

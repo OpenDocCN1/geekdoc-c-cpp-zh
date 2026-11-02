@@ -1,0 +1,17 @@
+Normally, you shouldn't be ending a method header with a semicolon. But people add semicolons anyway. (Maybe, in some subtle way, a method header looks like it should end with a semicolon.)
+
+```
+//The following line is incorrect:
+public static void main(String args[]); {
+```
+
+If you add this extraneous semicolon to the code in Listing 5-1, you get the message shown in Figure 5-8.
+
+The error message and quick fixes in Figure 5-8 are a bit misleading. The message starts with This method requires a body. But the method has a body. Doesn't it?
+
+When the computer tries to compile public static void main(String args[]); (ending with a semicolon), the computer gets confused. I illustrate the confusion in Figure 5-9. Your eye sees an extra semicolon, but the computer's eye interprets this as a method without a body. So that's the error message — the computer says This method requires a body instead of a semicolon.
+
+Figure 5-9:
+What's on this computer's mind?
+
+![](bbox=[0.25, 0.6, 0.85, 0.95])

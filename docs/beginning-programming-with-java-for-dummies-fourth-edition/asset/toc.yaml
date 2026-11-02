@@ -1,0 +1,92 @@
+level_changes:
+- line: 392
+  before: 2
+  after: 3
+- line: 806
+  before: 2
+  after: 3
+- line: 1152
+  before: 2
+  after: 3
+- line: 1153
+  before: 2
+  after: 3
+- line: 2271
+  before: 2
+  after: 3
+- line: 2587
+  before: 2
+  after: 3
+- line: 3123
+  before: 2
+  after: 3
+- line: 3593
+  before: 2
+  after: 3
+- line: 4000
+  before: 2
+  after: 3
+- line: 4839
+  before: 2
+  after: 3
+- line: 5428
+  before: 2
+  after: 3
+- line: 6059
+  before: 2
+  after: 3
+- line: 6655
+  before: 2
+  after: 3
+- line: 6969
+  before: 2
+  after: 3
+- line: 7446
+  before: 2
+  after: 3
+- line: 8039
+  before: 2
+  after: 3
+- line: 8341
+  before: 2
+  after: 3
+- line: 9004
+  before: 2
+  after: 3
+- line: 9478
+  before: 2
+  after: 3
+- line: 10308
+  before: 2
+  after: 3
+- line: 10351
+  before: 2
+  after: 3
+text_changes:
+- line: 11359
+  before: ● M ●
+  after: M
+- line: 11577
+  before: ● p ●
+  after: P
+- line: 11708
+  before: • Q •
+  after: Q
+- line: 11717
+  before: • R •
+  after: R
+- line: 11763
+  before: ● S ●
+  after: S
+- line: 11823
+  before: • T •
+  after: T
+- line: 11861
+  before: • U •
+  after: U
+- line: 11875
+  before: • V •
+  after: V
+- line: 11877
+  before: • W •
+  after: W

@@ -1,0 +1,34 @@
+# Getting values for variables
+
+I almost have a working program. But if I take the code that I’ve developed for a mental test run, I face a few problems. To see what I mean, picture yourself in the computer’s shoes for a minute. (Well, a computer doesn’t have shoes. Picture yourself in the computer’s boots.)
+
+You start at the top of the code shown in the previous section (the code that starts with the Preliminary draft comment). In the code’s first statement, you display the words Card Total. So far, so good. But then you encounter the while loop and test the condition total < 21. Well, is total less than 21, or isn’t it? Honestly, I’m tempted to make up an answer because I’m embarrassed about not knowing what the total variable’s value is. (I’m sure the computer is embarrassed, too.)
+
+The variable total must have a known value before the computer reaches the top of the while loop. Because a player starts with no cards at all, the initial total value should be 0. That settles it. I declare int total = 0 at the top of the program.
+
+But what about my friend, the card variable? Should I set card to zero also? No. There’s no zero-valued card in a deck (at least, not when I’m playing fair). Besides, card should get a new value several times during the program’s run.
+
+Wait! In the previous sentence, the phrase several times tickles a neuron in my brain. It stimulates the inside a loop reflex. So I place an assignment to the card variable inside my while loop:
+
+```
+```java
+//This is a DRAFT - still NOT ready for prime time:
+int card, total = 0;
+
+System.out.println("Card    Total");
+
+while (total < 21) {
+    card = myRandom.nextInt(10) + 1;
+
+    System.out.print(card);
+    System.out.print("    ");
+    System.out.println(total);
+}
+
+if (total == 21) {
+    System.out.println("You win :-)");
+} else {
+    System.out.println("You lose :-(");
+}
+```
+```

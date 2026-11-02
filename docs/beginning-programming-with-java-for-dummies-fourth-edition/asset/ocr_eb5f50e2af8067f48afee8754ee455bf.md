@@ -1,0 +1,23 @@
+Just be sure to put these lines in the right places:
+
++   - Make the `import java.util.Scanner` line the first line in your program.
++   - Put the `Scanner keyboard = new Scanner(System.in)` line inside your main method immediately after the `public static void main(String args[]) {` line.
++   - Make the `keyboard close()` line the last line in your program.
+
+At some point in the future, you may have to be more careful about the positioning of these three lines. But for now, the rules I give will serve you well.
+
+# Expecting the Unexpected
+
+Not long ago, I met an instructor with an interesting policy. He said, “Sometimes when I'm lecturing, I compose a program from scratch on the computer. I do it right in front of my students. If the program compiles and runs correctly on the first try, I expect the students to give me a big round of applause.”
+
+At first, you may think this guy has an enormous ego, but you have to put things in perspective. It's unusual for a program to compile and run correctly the first time. There's almost always a typo or another error of some kind.
+
+So this section deals with the normal, expected errors that you see when you compile and run a program for the first time. Everyone makes these mistakes, even the most seasoned travelers. The key is keeping a cool head. Here's my general advice:
+
++   - **Don't expect a program that you type to compile the first time.**
++     Be prepared to return to your editor and fix some mistakes.
++   - **Don't expect a program that compiles flawlessly to run correctly.**
++     Even with no error markers in Eclipse's editor, your program might still contain flaws. After Eclipse compiles your program, you still have to run the program successfully. That is, your program should finish its run and display the correct output.
++     You compile and then you run. Getting a program to compile without errors is the easier of the two tasks.
++   - **Read what's in the Eclipse editor, not what you assume is in the Eclipse editor.**
++     Don't assume that you've typed words correctly, that you've capitalized words correctly, or that you've matched curly braces or parentheses correctly. Compare the code you typed with any sample code that you have. Make sure that every detail is in order.

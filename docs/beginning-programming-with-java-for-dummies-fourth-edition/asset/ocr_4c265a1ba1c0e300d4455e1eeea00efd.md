@@ -1,0 +1,30 @@
+# Name that file
+
+What if a file that contains data isn’t in your program’s project folder? If that’s the case, when you call `new File`, the file’s name must include folder names. For example, in Windows, your `TallyBudget.java` program might be in your `c:\Users\MyUserName\workspace\13-09` folder, and a file named `totals` might be in a folder named `c:\advertisements`. (See the following figure.)
+
+![](bbox=[0.281, 0.291, 0.705, 0.49])
+
+Then, to refer to the `totals` file, you include the folder name, the filename, and (to be on the safe side) the drive letter:
+
+```
+```java
+Scanner diskScanner = new Scanner
+    (new File("c:\\advertisements\\totals"));
+```
+```
+
+Notice that I use double backslashes to separate the drive letter, the folder name, and the filename. To find out why, look at the sidebar entitled “Escapism” in Chapter 12. The string `"c:\totals"` with a single backslash stands for a tab, followed by `otals`. But in this example, the file’s name is `totals`, not `otals`. With a single backslash, the name `c:\advertisements\totals` would not work correctly.
+
+Inside quotation marks, you use the double backslash to indicate what would usually be a single backslash. So the string `"c:\\advertisements\\totals"` stands for `c:\advertisements\totals`. That’s good because `c:\advertisements\totals` is the way you normally refer to a file in Windows.
+
+If you want to sidestep all this backslash confusion, you can use forward slashes to specify each file’s location. Windows responds exactly the same way to `new File("c:/advertisements/totals")` and to `new File("c:\\advertisements\\totals")`. And if you use UNIX, Linux, or a Macintosh, the double backslash nonsense doesn’t apply to you. Just write
+
+```
+```java
+Scanner diskScanner =
+    new Scanner (new File(
+    "/Users/me/advertisements/totals"));
+```
+```
+
+or something similar that reflects your system’s directory structure.

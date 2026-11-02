@@ -1,0 +1,23 @@
+# UNDERSTANDING REFERENCE COUNTING USING AN ANALOGY
+
+When you think of memory management using reference counting, it is always good to use a real-life analogy to put things into perspective.
+
+Image a room in the library that you can reserve for studying purposes. Initially, the room is empty and hence the lights are off. When you reserve the room, the librarian increases a counter to indicate the number of persons using the room. This is similar to creating an object using the alloc keyword.
+
+When you leave the room, the librarian decreases the counter, and if the counter is now 0, this means that the room is no longer being used and the lights can thus be switched off. This is similar to using the release keyword to release an object.
+
+There may be times where you have booked the room and are the only one in the room (hence, the counter is 1) until a friend of yours comes along. He may simply come and visit you and therefore doesn't register with the librarian. Hence, the counter does not increase. Because he is just visiting you and hasn't booked the room, he has no rights to decide whether the lights should be switched off. This is similar to assigning an object to another variable without using the alloc keyword. In this case, if you leave the room (release), the lights will be switched off and your friend will have to leave.
+
+Consider another situation in which you are using the room and another person also booked the room and shares it with you. In this case, the counter is now 2. If you leave the room, the counter goes down to 1, but the lights are still on because another person is in the room. This situation is similar when you create an object and assign it to another variable that uses the retain keyword. In such a situation, the object is released only when both objects release it.
+
+# Convenience Method and Autorelease
+
+So far, you learned that all objects created using the alloc or new keywords are owned by you.
+
+Consider the following case:
+
+```
+NSString *str = [NSString stringWithFormat:@"%d", 4];
+```
+
+In this statement, do you own the str object? The answer is no, you don't. This is because the object is created using one of the convenience methods — static methods that are used for allocating and initializing objects directly. In the preceding case, you create an object but you do not own it. Because you do not own it, you cannot release it manually. In fact, objects created using this method are known as autorelease objects. All autorelease objects are temporary objects and are added to an autorelease pool. When the current method exits, all the objects contained within it are released. Autorelease objects are useful for cases in which you simply want to use some temporary variables and do not want to burden yourself with allocations and de-allocations.

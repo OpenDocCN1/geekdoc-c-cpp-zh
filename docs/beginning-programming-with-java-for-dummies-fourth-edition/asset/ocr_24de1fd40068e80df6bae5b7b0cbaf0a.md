@@ -1,0 +1,79 @@
++   dice game, 234–238
++   directory, current working, 329
++   disk access facilities, Java’s, 260–261
++   disk files
++     reading from, 315
++     troubleshooting problems with, 264–266
++   disk-oriented programs
++     creating an input file, 261–262
++     Java’s disk access facilities, 260–261
++     keyboard-reading program and, 254
++     overview, 253
++     reading from disk files, 268
++     reading input from a disk, 258–259
++     running, 254–256
++     sample program
++       listing, 256–257
++       running, 261–263
++     viewing the output file, 263
++     troubleshooting problems with disk files, 264–266
++     writing a disk-oriented program, 266–267
++   writing to a file, 268–271
++   diskScanner method, 258, 260, 277, 315–317
++   diskWriter.print method, 259–261
++   display method, 372–377
++   dispose_on_close parameter, 399
++   division
++     of an int value by another int value, 139
++     finding remainders, 140–144
++     forward slash for, 139
++   do loops (do . . . while loops)
++     execution of statements inside the loop, 300
++     format of, 299
++   do statements, 294, 299
++   “do this, then do that” approach, 406
++   Document panel, Scene Builder, 414
++   do_nothing_on_close parameter, 399
++   dots (.)
++     calling an object’s methods, 357
++     to refer to an object’s parts, 341
++     in regular expressions, 161
+
++   double arrow (chevron), Eclipse IDE, 73
++   double backslash (\), inside quotation marks, 270
++   double equal sign (==), comparisons with, 166, 188, 354, 355
++   double keyword, 127
++   double quote marks, for literals, 351
++   double type
++     inaccuracies, 169
++     overview, 127, 143
++     use in this book, 380
++   double values
++     avoiding using for money, 143
++     casting, 144
++     dividing, 140
++   double variables, combined declarations and, 142
++   downloading
++     API Documentation (API Specification), 21, 30
++     Eclipse IDE for Java Developers, 24, 39–40
++     programming tools, 22, 26
++     sample programs, 24
++   DriverManager.println method, 93
++   • E •
++   eachKidGetsTen variable, 164, 165, 195
++   EchoLine program
++     code listing, 98–100
++     extra lines of code, 105–107
++   errors
++     case sensitivity, 108–110
++     diagnosing a problem, 108–111
++     expecting, 107–108
++     omitting punctuation, 110
++     runtime error messages, 117–118
++     spelling errors, 115–117
++     why computers can’t fix, 111–115
++     getting keyboard input, 104–105
++     how the program works, 103–104
++     Scanner class, 106
++     testing the code, 100–103
++     typing and running, 100–103

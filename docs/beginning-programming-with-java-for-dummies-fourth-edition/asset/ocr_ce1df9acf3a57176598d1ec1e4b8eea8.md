@@ -1,0 +1,29 @@
+You should notice a couple of things about Listing 7-2. First, you can read an int value with the nextInt method. Second, you can issue successive calls to Scanner methods. In Listing 7-2, I call nextInt twice. All I have to do is separate the numbers I type by blank spaces. In Figure 7-2, I put one blank space between my 80 and my 6, but more blank spaces would work as well.
+
+This blank space rule applies to many of the Scanner methods. For example, here's some code that reads three numeric values:
+
+```
+gumballs = keyboard.nextInt();
+costOfGumballs = keyboard.nextDouble();
+kids = keyboard.nextInt();
+```
+
+Figure 7-3 shows valid input for these three method calls.
+
+![](bbox=[0.15, 0.59, 0.6, 0.71])
+
+# What you read is what you get
+
+When you're writing your own code, you should never take anything for granted. Suppose that you accidentally reverse the order of the gumballs and kids assignment statements in Listing 7-2:
+
+```
+//This code is misleading:
+System.out.print("How many gumballs? How many kids? ");
+
+kids = keyboard.nextInt();
+gumballs = keyboard.nextInt();
+```
+
+Here, the line How many gumballs? How many kids? is very misleading. Because the kids assignment statement comes before the gumballs assignment statement, the first number you type becomes the value of kids, and the second number you type becomes the value of gumballs. It doesn't matter that your program displays the message How many gumballs? How many kids? What matters is the order of the assignment statements in the program.
+
+If the kids assignment statement accidentally comes first, you can get a strange answer, like the zero answer in Figure 7-4. That's how int division works. It just cuts off any remainder. Divide a small number (like 6) by a big number (like 80), and you get 0.
