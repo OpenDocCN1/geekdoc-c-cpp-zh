@@ -1,0 +1,47 @@
+```
+```ada
+generic
+   type Element_Type is private;
+package Bounded_Queue is
+-- Final version, generic with hidden details
+
+   type Queue_Type (Max_Size : Positive) is private;
+
+   function Full (Queue : in Queue_Type) return Boolean;
+
+   function Empty (Queue : in Queue_Type) return Boolean;
+
+   function Size (Queue : in Queue_Type) return Natural;
+
+   function First_Element (Queue : in Queue_Type) return Element_Type
+      with
+         Pre => not Empty (Queue);
+
+   function Last_Element (Queue : in Queue_Type) return Element_Type
+      with
+         Pre => not Empty (Queue);
+
+   procedure Clear (Queue : in out Queue_Type)
+      with
+         Post => Empty (Queue) and then Size (Queue) = 0;
+
+   procedure Enqueue (Queue : in out Queue_Type;
+                      Item   : in     Element_Type)
+      with
+         Pre  => not Full (Queue),
+         Post => not Empty (Queue) and then
+                 Size (Queue) = Size (Queue'Old) + 1 and then
+                 Last_Element (Queue) = Item;
+
+   procedure Dequeue (Queue : in out Queue_Type;
+                      Item   :    out Element_Type)
+      with
+         Pre  => not Empty (Queue),
+         Post => Item = First_Element (Queue'Old) and then
+                 Size (Queue) = Size (Queue'Old) - 1;
+
+private
+
+   type Queue_Array is array (Positive range <>) of Element_Type;
+```
+```

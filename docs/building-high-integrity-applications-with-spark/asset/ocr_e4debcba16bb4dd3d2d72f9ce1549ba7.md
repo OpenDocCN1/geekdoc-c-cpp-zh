@@ -1,0 +1,13 @@
+for the cases actually tested. A good tester picks the most appropriate test cases to discover faults. Industry standards such as DO-178 (RTCA, 2011a) and ISO/IEC/IEEE 29119 provide guidance on appropriate testing techniques.
+
+In Chapter 6 we looked at how to use SPARK to prove correctness properties of programs. If we can prove that our program is correct, then we have total confidence that it will work in all cases covered by the assertions. Formal verification gives stronger guarantees than testing. New verification standards provide guidance on using proof. For example, The DO-333 standard, a supplement on formal methods for the DO-178C standard, states, “Formal methods might be used in a very selective manner to partially address a small set of objectives, or might be the primary source of evidence for the satisfaction of many of the objectives concerned with development and verification” (RTCA, 2011b).
+
+In addition to providing stronger guarantees, the cost of proof can be less than the cost of testing. This is particularly true for the most critical software for which coverage criteria require a lot of testing (Moy et al., 2013). A clear example of savings was seen in the use of SPARK for the mission computer of the C130J aircraft. Lockheed reported an 80 percent savings over their projected cost for testing and certification of more than 100,000 lines of code (Amey, 2002).
+
+However, there are times when proof is not the best option:
+
++   - Our entire program is not amenable to proof. Parts of our program may need to use Ada constructs such as exceptions or access types that are not legal in SPARK. Parts of our programs may be written in another language such as a C (see Section 7.2).
++   - It may be very expensive or even impossible to provide formal descriptions of all the desired properties of a package. Interactive packages are particularly difficult to formalize.
++   - Software validation⁶ is not specifically addressed by formal contracts. Testing remains the best way to validate software.
+
+By combining proof and testing, we get the best of both worlds. We can combine methods by dividing our application into pieces (packages or subprograms) and applying either proof or testing to each separate piece. As the verification chain is only as strong as its weakest link, our goal is to obtain verification at least as good as can be accomplished with testing alone, but at a lower cost. Comar, Kanig, and Moy (2012) provide an excellent discussion of combining formal verification and testing. This paper is available through AdaCore’s GEM series.

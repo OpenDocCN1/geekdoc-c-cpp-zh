@@ -1,0 +1,13 @@
+Because this localizes state at the point of variable declaration, type packages provide a mechanism for the reduction of information flow and, hence, coupling. The INFORMED report uses the phrase “instance of a type package” for a variable of a type declared in a type package.
+
+INFORMED describes a more specialized type package called a type package declaring concrete types. This form of type package is equivalent to the definition package we described in Section 3.1.
+
+**Utility Packages.** Provide shared services to other packages. These packages never contain state (otherwise they would be variable packages). Any types declared in a utility package should be simple concrete types rather than abstract data types (otherwise they would be type packages). The INFORMED report provides examples of where utility packages are appropriate and where they are not.
+
+**Boundary Variable Packages.** Are a special kind of variable package that provide interfaces between our system and the elements outside of it. The entity to which our SPARK program communicates might be some kind of hardware sensor or actuator. Section 7.3 discusses the nature of external subsystems found commonly in embedded applications.
+
+These external subsystems make use of external variables that represent streams of data arriving from or being sent to the external system so they are characterized by a with External in their abstract state aspects.
+
+**Boundary Variable Abstraction Packages.** Are used to place an abstraction layer between the external variables of a system and their users. This approach eliminates direct exposure of any external variables, shielding the higher level units from the details of the external variables. Boundary variable abstraction packages use SPARK’s state refinements to provide this indirect access to the external variables.
+
+The abstraction may hide the fact that more than one external variable is involved in providing the inputs or may hide some other processing that is taking place. The abstraction may also hide other local state (such as previous values) that are not external variables. The INFORMED technical report provides an example of using a single boundary variable abstraction package to encapsulate two different buttons that may be pressed by a user. This package is refined into two boundary variable packages implemented as private child packages. Accompanying this example in the INFORMED report is a very important guideline concerning boundary variable abstraction packages – never mix input and output external variables in a single abstraction. This mixing leads to
