@@ -1,0 +1,7 @@
+In Figure 11-3, Figure 11-5, and Figure 11-6, the picker is invoked to select a single file. In Figure 11-7, on the other hand, it is invoked to select multiple files—which can again come from the file system, network or cloud locations, or other apps—it doesn't matter! With multiple selection, selected items are placed into what's called the *basket* on the bottom of the screen. You can see this in Figure 11-7 and also in Figure 11-8 (where the picker is using list view mode rather than thumbnails). The purpose of the basket is to let you select items from one location, navigate to a new location through the header drop-down, select a few more, and then navigate to still other locations. In short, the basket holds whatever items you select from *wherever locations*. The basket in Figure 11-8 contains the sound recording from Figure 11-7, a picture from my phone, a picture from SkyDrive, an MP3 file from my Music folder, and a couple videos from the current folder.
+
+![](bbox=[0.143, 0.326, 0.799, 0.627])
+
+**FIGURE 11-8** The file picker in multiselect mode with the selection basket at the bottom. The picker's layout here is a "list" view mode (not thumbnails) that's set independently from the selection mode.
+
+The picker can also be used to select a folder, as shown in Figure 11-9 (provider apps aren't shown from the heading drop-down in this case), or a save location and filename, as shown in Figure 11-10.

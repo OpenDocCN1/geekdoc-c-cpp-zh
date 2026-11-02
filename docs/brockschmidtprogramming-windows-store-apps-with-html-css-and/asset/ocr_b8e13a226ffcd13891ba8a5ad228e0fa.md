@@ -1,0 +1,17 @@
+other UI elements we've been using have done all that work for us. Handling such events ourselves thus arises primarily when creating your own controls or otherwise doing direct manipulation of noncontrol objects.
+
+The keyboard also remains an important consideration, and this means both hardware keyboards and the on-screen “soft” keyboard. The latter has gotten more attention in recent years for touch-only devices but actually has been around for some time for accessibility purposes. In Windows, too, the soft keyboard includes a handwriting recognizer—something apps just get for free. And when an app wants to work more closely with raw handwriting input—known as ink—those capabilities are present as well.
+
+The other topic we'll cover in this chapter is sensors. It might seem an incongruous subject to place alongside input until you come to see that sensors, like touch screens themselves, are another form of input! Sensors tell an app what's happening to the device in its relationship to the physical world: how it's positioned in space (relative to a number of reference points), how it's moving through space, how it's being held relative to its “normal” orientation, and even how much light is shining on it. Thinking of sensors in this light (pun intended), we begin to see opportunities for apps to directly integrate with the world around a device rather than requiring users to tell the app about those relationships in some more abstract way. And just to warn you, once you see just how easy it is to use the WinRT APIs for sensors, you might be shopping for a new piece of well-equipped hardware!
+
+Let me also mention that the sensors we'll cover in this chapter are those for which specific WinRT APIs exist. There might be other peripherals that can also act as input devices, but we'll come back to those in Chapter 17, “Devices and Printing.”
+
+# ## Touch, Mouse, and Stylus Input
+
+Where pointer-based input is concerned—which includes touch, mouse, and pen/stylus input—the singular message from Microsoft has been and remains, “Design for touch and get mouse and stylus for free.” This is very much the case, as we shall see, but we've also found that a phrase like “touch-first design” that sounds great to a consumer can be a terrifying proposition for developers! With all the attention around touch, consumer expectations are often very demanding, and meeting such expectations seems like it will take a lot of work.
+
+Fortunately, Windows provides a unified framework for handling pointer input—from all sources—such that you don't actually need to think about the differences until there's a specific reason to do so. In this way, touch-first design really is a design issue more than an implementation issue.
+
+We'll talk more about designing for touch in the next section. What I wanted to discuss first is how you as a developer should approach implementing those designs once you have them so that you don't make any distinctions between the types of pointer input until its necessary:
+
++   - First, use templates and standard controls and you get lots of touch support for free, along with mouse, pen, stylus, and keyboard support. If you build up your UI with standard controls, set

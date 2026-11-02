@@ -1,0 +1,16 @@
+**Caution** iframe and x-ms-webview elements are not intended to let you just build an app out of remote web pages. Section 2 of the Windows Store app certification requirements, in fact, specifically disallows this: "the primary app experience must take place within the app," meaning that it doesn't happen within hosted websites. A few key reasons for this are that many websites aren't set up well for touch interaction (which violates requirement 3.5) and often won't work well in different views (violating requirement 3.6). You also want to make sure that the user can navigate easily without getting lost in random websites and that the app still follows the design guidelines, uses the app bar, supports contracts like Share, and so on.
+
+In short, overuse of web content will likely mean that the app won't be accepted by the Store, though web content that's specifically designed for use with an app and behaves like native app content won't be so scrutinized.
+
+Requirement 3.9 also disallows dynamically downloading code or data that changes how the app interacts with the WinRT API. This is admittedly a bit of a gray area, as downloading data to configure a game level, for instance, doesn't quite fall into this category. Nevertheless, this requirement is taken seriously so be very careful about making assumptions here.
+
+# ## Local and Web Contexts (and iframe Elements)
+
+As described in Chapter 1, "The Life Story of a Windows Store App," apps written with HTML, CSS, and JavaScript are not directly executable like their compiled counterparts written in C#, Visual Basic, or C++. In our app packages, there are no EXEs, just `.html`, `.css`, and `.js` files that are, plain and simple, nothing but text. So something has to turn all this text that defines an app into something that's actually running in memory. That something is again the app host, `wwahost.exe`, which creates what we call the *hosted environment* for Store apps.
+
+Let's review what we've already learned in Chapters 1 and 2 about the characteristics of the hosted environment:
+
++   - The app host (and the apps in it) use brokered access to sensitive resources, controlled both by declared capabilities in the manifest and run-time user consent.
++   - Though the app host provides an environment very similar to that of Internet Explorer (10+), there are a number of changes to the DOM API, documented on HTML and DOM API changes list and HTML, CSS, and JavaScript features and differences. A related topic is Windows Store apps using JavaScript versus traditional web apps.
++   - HTML content in the app package can be loaded into the *local* or *web* context, depending on the hosting element. `iframe` elements can use the `ms-appx://` scheme to refer to in-package pages loaded in the local context or `ms-appx-web://` to specify the web context. (The third / again means "in the app package"; the Here My Am! app uses this to load its map.html file into a web context `iframe`.) Remote `https` content in an `iframe` and all content in a `webview` always runs in the web context.
++   - Any content within a web context can refer to in-package resources (such as images and other media) with `ms-appx-web` URIs. For example, a page loaded into a `webview` from an `http`

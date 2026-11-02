@@ -1,0 +1,11 @@
+and Format output text buttons and the *Lorem ipsum* hyperlink text. These examples illustrate that a flyout can contain a simple message with a button (scenario 1, for warnings and confirmations), can contain fields for entering information or changing settings (scenarios 2 and 3), and can have a title (scenario 4). Scenario 5, for its part, contains the example of a popup header menu with *Menu* that we'll see a little later.
+
+There are two key characteristics of flyout controls, including menus. One is that flyouts can be dismissed programmatically, like an app bar, when an appropriate control within the flyout is invoked. This is the case with the Complete Order button of scenario 1 and the Login button of scenario 2.
+
+The second characteristic, also shared with the app bar, is the light dismiss behavior: clicking or tapping outside the control dismisses it, as does the ESC key, which means light dismiss is the equivalent of pressing a Cancel or Close button in a traditional dialog box. The benefit here is that we don't need a visible button for this purpose, which helps simplify the UI. At the same time, notice in scenario 3 of Figure 9-1 that there is no OK button or other control to confirm changes you might make in the flyout. With this particular design, changes are immediately applied such that dismissing the flyout does not reverse or cancel them. If you don't want that kind of behavior, you can place something like an Apply button on the flyout and not make changes until that button is pressed. In this case, dismissing the flyout would cancel the changes.
+
+![](bbox=[0.153, 0.441, 0.87, 0.646])
+
+**Figure 9-1** Examples of flyout controls from the HTML flyout control sample.
+
+I'll again encourage you to read the *Guidelines and checklist for Flyouts* topic that goes into detail about how and when to use the different designs that are possible with this control. It also outlines when not to use the control: for example, don't use flyouts to surface errors not related to user action (use a message dialog instead), don't use them for primary commands (use the app bar), don't use them for text selection context menus, and avoid them for UI that is part of a workflow and should be

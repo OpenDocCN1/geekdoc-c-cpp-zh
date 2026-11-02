@@ -1,0 +1,11 @@
+What you'll need to do instead is set a breakpoint on the first line of each completed handler and on the first line of each error function. As each breakpoint is hit, you can step through that handler. When you reach the next async call in a completed handler, click the Continue button in Visual Studio so that the async operation can run. After that you'll hit the breakpoint in the next completed handler or the breakpoint in the error handler.
+
+When you stop at a breakpoint, or when you hit an exception within an async process, take a look at the debugger's Call Stack pane (typically in the lower right of Visual Studio), as shown here:
+
+![](bbox=[0.152, 0.249, 0.575, 0.45])
+
+Generally speaking, the Call Stack shows you the sequence of functions that lead up to the point where the debugger stopped, at which point you can double-click any of the lines and examine that function's context. With async calls, this can get really messy with all the generic handlers and other chaining that happens within WinJS and the JavaScript projection layer. Fortunately—very fortunately!—Visual Studio spares you from all that. It condenses such code into the gray `[Async Call]` and `[External Code]` markers, leaving only a clear call chain for your app's code. In this example I set a breakpoint in the completed handler for geolocation in HereMyAm3d. That completed handler is an anonymous function, as the first line of the Call Stack indicates, but the next reference to the app code clearly shows that the real context is the `ready` method within `home.js`, which itself is part of a longer chain that originated in `default.js`. Double-clicking any one of the app code references will open that code in Visual Studio and update the Locals pane to that context.
+
+The real utility of this comes when an exception occurs somewhere other than within your own handlers, because you can then easily trace the causality chain that led to that point.
+
+The other feature for async debugging is the Tasks pane, as shown below. You turn this on through the `Debug > Windows > Tasks` menu command. You'll see a full list of active and completed async operations that are part of the current call stack.

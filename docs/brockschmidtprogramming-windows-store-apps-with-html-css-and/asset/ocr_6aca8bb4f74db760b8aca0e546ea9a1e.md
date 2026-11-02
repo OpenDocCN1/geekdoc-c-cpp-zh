@@ -1,0 +1,17 @@
++   - Unless you're working with a library for which a capability exists, you'll need to have the user choose folders to include in your gallery through the Folder Picker.⁸⁷ If that set of folders is unlikely to change often, it's best for the app to have a page where the user manages the included folders—adding new ones from the Folder Picker, and removing existing ones. When the user selects a new folder, be sure to save it in the `Windows.Storage.AccessCache` so that subsequent app sessions won't need to ask again.
++   - Always, always use thumbnails from the `StorageFile.getThumbnailAsync` and `getScaledImageAsThumbnailAsync` methods. The thumbnails can be passed directly to `URL.createObjectURL` to display in `img` elements in place of the full `StorageFile`. Using thumbnails will perform much better both in terms of speed (because thumbnails are typically drawn from existing caches) and memory (because you're not loading the whole image file).
++   - Differentiate file availability based on the `StorageFile.isAvailable` flag. You can use this to provide a textual indicator and also "ghost" unavailable items by setting their opacity to something like 40%. Remember that availability means that network conditions are such that the file's contents cannot be accessed, so you typically want to disable interactivity (like invocation) on unavailable items. Furthermore, some items might be available but are represented by only a local placeholder file. Be sure, then, to show an indeterminate progress control if it takes longer than a second or two to get a file's contents, and also provide a means to cancel the operation. This gives the user control on slow networks.
++   - Very often, your gallery will involve some kind of query against the file system to create its data source. Depending on your needs, you can use a data source built on a `WinJS.Binding.List`, which you populate with the results from your queries. Alternatively, you can use the `WinJS.UI.StorageDataSource` object, which has built-in support for queries (more on this below). The caveat with `StorageDataSource` is that it doesn't support grouping.
+
+For a full end-to-end demonstration of these and other patterns, I'll refer you to the JavaScript Hilo app put together by Microsoft's Patterns & Practices team. (Note: As of the current review, the app has not yet been updated to Windows 8.1, but it shows many of these patterns nonetheless.)
+
+With the `StorageDataSource` in particular, scenario 5 of the `StorageDataSource` and `GetVirtualizedFilesVector` sample offers a demonstration of working with queries. Back in Chapter 7 we just used one of the shortcuts like this:
+
+```
+myFlipView.itemDataSource = new WinJS.UI.StorageDataSource("Pictures",
+    { requestedThumbnailSize: 480 });
+```
+
+The first argument to the constructor is actually a query object of some sort—"Pictures" here is again just a shortcut. But you can create any query you want and use it here. The sample, then, creates
+
+⁸⁷ It's generally best to work with library content through one of the `KnownFolder` objects because these will reflect all the other folders that a user might have added to those libraries. This will not be the case if you have the user select only an individual local folder. That said, one point of user frustration (which I've encountered personally) is the inability to add a folder on removable storage to a library, in which case providing a way to include such folders directly is helpful.

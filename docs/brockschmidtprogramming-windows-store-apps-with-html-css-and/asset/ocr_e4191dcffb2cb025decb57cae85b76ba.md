@@ -1,0 +1,11 @@
+# ## We Want to Hear from You
+
+At Microsoft Press, your satisfaction is our top priority, and your feedback our most valuable asset. Please tell us what you think of this book at
+
+[http://aka.ms/tellpress](http://aka.ms/tellpress)
+
+The survey is short, and we read every one of your comments and ideas. Thanks in advance for your input!
+
+# ## Stay in Touch
+
+Let’s keep the conversation going! We’re on Twitter: [http://twitter.com/MicrosoftPress](http://twitter.com/MicrosoftPress). And you can keep up with Kraig here: [http://www.kraigbrockschmidt.com/blog](http://www.kraigbrockschmidt.com/blog).

@@ -246,6 +246,7 @@
 +   [区块链、物联网与人工智能](docs/blockchain-internet-of-things-and-artificial-intelligence/README.md)
 +   [Arduino C++ 蓝牙低功耗](docs/bluetooth-low-energy-in-arduino-c/README.md)
 +   [Boost C++ 库](docs/boost-cpp-lib/README.md)
++   [HTML、CSS 和 JavaScript Windows Store 应用编程 第二版 预览](docs/brockschmidtprogramming-windows-store-apps-with-html-css-and/README.md)
 +   [BS ISO／IEC 14882：2024 编程语言 - C++](docs/bs-isoiec-148822024-programming-languages---c/README.md)
 +   [BSI 标准出版 PD ISO/IEC TS 19217：2015 信息技术 编程语言 C++ 概念扩展](docs/bsi-standards-publication-pd-isoiec-ts-192172015-information/README.md)
 +   [C++ AI增强音频插件构建指南](docs/build-ai-enhanced-audio-plugins-with-c/README.md)

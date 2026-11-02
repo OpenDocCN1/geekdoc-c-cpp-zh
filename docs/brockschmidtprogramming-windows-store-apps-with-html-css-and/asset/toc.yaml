@@ -1,0 +1,137 @@
+level_changes:
+- line: 237
+  before: 2
+  after: 3
+- line: 279
+  before: 2
+  after: 3
+- line: 502
+  before: 2
+  after: 3
+- line: 1635
+  before: 2
+  after: 3
+- line: 3143
+  before: 2
+  after: 3
+- line: 3280
+  before: 2
+  after: 3
+- line: 3770
+  before: 2
+  after: 3
+- line: 4490
+  before: 2
+  after: 3
+- line: 4518
+  before: 2
+  after: 3
+- line: 6173
+  before: 2
+  after: 3
+- line: 6776
+  before: 2
+  after: 3
+- line: 7535
+  before: 2
+  after: 3
+- line: 8810
+  before: 2
+  after: 3
+- line: 10671
+  before: 2
+  after: 3
+- line: 12543
+  before: 2
+  after: 3
+- line: 12555
+  before: 2
+  after: 3
+- line: 14557
+  before: 2
+  after: 3
+text_changes:
+- line: 622
+  before: 'QuickStart #1: Here My Am! and an Introduction to Blend for Visual Studio'
+  after: 'QuickStart #1: Here I Am! and an Introduction to Blend for Visual Studio'
+- line: 1922
+  before: Here My Am! 中的基本会话状态
+  after: Here I Am! 中的基本会话状态
+- line: 12854
+  before: Here My Am! 更新
+  after: Here I Am! 更新
+- line: 7318
+  before: 第7章
+  after: 第 7 章
+- line: 192
+  before: 侧栏：第三方库
+  after: 侧边栏：第三方库
+- line: 502
+  before: 侧栏：Visual Studio 如何运行应用？
+  after: 侧边栏：Visual Studio 如何运行应用？
+- line: 1635
+  before: 侧栏：为实现最佳启动性能而进行文件编码
+  after: 侧边栏：为实现最佳启动性能而进行文件编码
+- line: 3001
+  before: 侧栏：使用 Fiddler 调试网络流量
+  after: 侧边栏：使用 Fiddler 调试网络流量
+- line: 3005
+  before: 侧栏：Windows Azure 移动服务
+  after: 侧边栏：Windows Azure 移动服务
+- line: 3143
+  before: 侧栏：模拟计费网络
+  after: 侧边栏：模拟计费网络
+- line: 3770
+  before: 侧栏：使用本地主机
+  after: 侧边栏：使用本地主机
+- line: 3984
+  before: 侧栏：取消操作在哪里？
+  after: 侧边栏：取消操作在哪里？
+- line: 4490
+  before: 边栏：控件的重要参考资料
+  after: 侧边栏：控件的重要参考资料
+- line: 4518
+  before: 边栏：WinJS 样式表：ui-light.css、ui-dark.css 和 win-* 样式
+  after: 侧边栏：WinJS 样式表：ui-light.css、ui-dark.css 和 win-* 样式
+- line: 5670
+  before: 侧栏：在自定义控件中使用 WinJS Scheduler
+  after: 侧边栏：在自定义控件中使用 WinJS Scheduler
+- line: 6173
+  before: 侧栏：附加属性语法与绑定到 WinJS 控件
+  after: 侧边栏：附加属性语法与绑定到 WinJS 控件
+- line: 652
+  before: 侧栏：为所有尺寸变体而设计！
+  after: 侧边栏：为所有尺寸变体而设计！
+- line: 6776
+  before: 侧栏：静态的 WinJS.Binding.Template.render 方法
+  after: 侧边栏：静态的 WinJS.Binding.Template.render 方法
+- line: 8228
+  before: 侧栏：Repeater + ItemContainer = 轻量级 ListView
+  after: 侧边栏：Repeater + ItemContainer = 轻量级 ListView
+- line: 8752
+  before: 侧栏：项目点击/单击行为
+  after: 侧边栏：项目点击/单击行为
+- line: 8810
+  before: 侧栏：增量加载
+  after: 侧边栏：增量加载
+- line: 10671
+  before: 侧栏：登录和许可协议
+  after: 侧边栏：登录和许可协议
+- line: 12543
+  before: 侧栏：使用 HTML5 `sessionStorage` 和 `localStorage`
+  after: 侧边栏：使用 HTML5 `sessionStorage` 和 `localStorage`
+- line: 12555
+  before: 侧栏：HTML5 应用缓存
+  after: 侧边栏：HTML5 应用缓存
+- line: 12850
+  before: 侧栏：权限设置的更改
+  after: 侧边栏：权限设置的更改
+- line: 12970
+  before: 侧栏：企业文件保护
+  after: 侧边栏：企业文件保护
+- line: 14557
+  before: 边栏：创建全新的手势？
+  after: 侧边栏：创建全新的手势？
+- line: 9721
+  before: 'Sidebar: A Good Opportunity for Remote Debugging'
+  after: 侧边栏：远程调试的好机会

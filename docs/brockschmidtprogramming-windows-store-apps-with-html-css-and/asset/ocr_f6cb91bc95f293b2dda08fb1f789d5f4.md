@@ -1,0 +1,9 @@
+![](bbox=[0.139, 0.081, 0.905, 0.44])
+
+**FIGURE 12-1** The PointerEvents example display (screen shot cropped a bit to show detail).
+
+Within the handlers for all of the `pointer*` events, the `eventArgs` object contains a whole roster of properties. One of them, `pointerType`, identifies the type of input: "touch", "pen", or "mouse". This property lets you implement different behaviors for different input methods, if desired (and note that these changed from integer values in Windows 8 to strings in Windows 8.1). Each event object also contains a unique `pointerId` value that identifies a stroke or a path for a specific contact point, allowing you to correlate an initial `pointerdown` event with subsequent events. When we look at gestures in the next section, we’ll also see how we use the `pointerId` of `pointerdown` to associate a gesture with a pointer.
+
+The complete roster of properties that come with the event is actually far too much to show here, as it contains many of the usual [DOM properties] along with many pointer-related ones from an object type called `PointerEvent` (which is also what you get for `click`, `dblclick`, and `contextmenu` events starting with Windows 8.1). The best way to see what shows up is to run some code like the [Input DOM pointer event handling sample] (a canvas drawing app), set a breakpoint within a handler for one of the events, and examine the event object. The table on the following page describes some of the properties (and a few methods) relevant to our discussion here.
+
+**Performance tips** Pointer events are best for quick responses to input, especially to touch, because they perform more quickly than gesture events. Also, avoid using an input event to render UI directly, because input events can come in much more quickly than screen refresh rates. Instead, use `requestAnimationFrame` to call your rendering function in alignment with screen refresh.

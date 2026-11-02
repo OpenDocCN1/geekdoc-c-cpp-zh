@@ -1,0 +1,11 @@
++   * The groups are highly dissimilar—that is, it wouldn't make sense for the groups to sit side-by-side if the headers weren't there.
+
+Let me be clear that I'm not talking about *design choices* here—your designers can hand you any sort of layout they want and as a developer it's *your* job to implement it! What I'm speaking to is how you choose to approach that implementation, whether with controls like ListView and Hub or just with HTML/CSS layout.
+
+I say this because in working with the developers who created the very first apps for the Windows Store (especially before the Hub control was available in Windows 8.1), we frequently saw them trying to use ListView in situations where it just wasn't appropriate. An app's hub page, for example, might combine a news feed, a list of friends, and a calendar. An item details page might display a picture, a textual description, and a media gallery. In both cases, the page contains a limited number of sections and the sections contain very different content, which is to say that there isn't a similarity of items across the groups. Because of this, using a ListView is more complicated than just using a single pannable `div` with a CSS grid in which you can lay out whatever sections you need or than using the Hub control that was created for these scenarios.
+
+*Within those sections*, of course, you might use ListView controls to display an item collection, but for the overall page, a simple `div` is all you need. I've illustrated these choices in Figure 7-9 using an image from the *Navigation design for Windows Store apps* topic, since you'll probably receive similar images from your designers. Ignoring the navigation arrows, the hub and details pages typically use a `div` at the root, whereas a section page is often a ListView. Within the hub and details pages there might be some ListView controls, but where there is essentially fixed content (like a single *item*), the best choice is a `div`.
+
+![](bbox=[0.16, 0.52, 0.87, 0.85])
+
+**FIGURE 7-9** Breaking down typical hub-section-detail page designs into `div` elements and ListView controls. The Hub control is typically useful for pannable regions that contain different types of sections.
