@@ -1,0 +1,14 @@
+# Preface
+
+AS DATA SETS ARE being generated at an exponential rate all over the world, *Big Data* has become an indispensable issue. While organizations are capturing exponentially larger amounts of data than ever these days, they have to rethink and figure out how to digest it. The implicit meaning of data can be interpreted in reality through novel and evolving algorithms, analytics techniques, and innovative and effective use of hardware and software platforms so that organizations can harness the data, discover hidden patterns, and use newly acquired knowledge to act meaningfully for competitive advantages.
+
+This challenging vision has attracted a great deal of attention from the research community, which has reacted with a number of proposals focusing on *fundamental issues*, such as *managing Big Data*, *querying and mining Big Data*, *making Big Data privacy-preserving*, designing and running *sophisticated analytics over Big Data*, and *critical applications*, which span over a large family of cases, from *biomedical (Big) Data* to *graph (Big) Data*, from *social networks* to *sensor and spatiotemporal stream networks*, and so forth.
+
+A conceptually relevant point of result that inspired our research is recognizing that classical managing, query, and mining algorithms, even developed with very large data sets, are not suitable to cope with Big Data due to both methodological and performance issues. As a consequence, there is an emerging need for devising innovative models, algorithms, and techniques capable of managing and mining Big Data while dealing with their inherent properties, such as *volume*, *variety*, and *velocity*.
+
+Inspired by this challenging paradigm, this book covers *fundamental and realistic issues about Big Data*, including efficient algorithmic methods to process data, better analytical strategies to digest data, and representative applications in diverse fields such as medicine, science, and engineering, seeking to bridge the gap between huge amounts of data and appropriate computational methods for scientific and social discovery and to bring technologies for media/data communication, elastic media/data storage, cross-network media/data fusion, Software as a Service (SaaS), and others together. It also aims at interesting applications involving Big Data.
+
+According to this methodological vision, this book is organized into five main sections:
+
++   - “Big Data Management,” which focuses on research issues related to the effective and efficient management of Big Data, including *indexing* and *scalability* aspects.
++   - “Big Data Processing,” which moves the attention to the problem of processing Big Data in a widespread collection of resource-intensive computational settings, for

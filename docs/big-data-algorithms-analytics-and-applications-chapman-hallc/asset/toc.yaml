@@ -1,0 +1,197 @@
+level_changes:
+- line: 525
+  before: 3
+  after: 4
+- line: 531
+  before: 3
+  after: 4
+- line: 558
+  before: 3
+  after: 4
+- line: 584
+  before: 3
+  after: 4
+- line: 588
+  before: 3
+  after: 4
+- line: 734
+  before: 3
+  after: 2
+- line: 767
+  before: 3
+  after: 2
+- line: 1007
+  before: 3
+  after: 2
+- line: 1253
+  before: 3
+  after: 2
+- line: 1560
+  before: 3
+  after: 2
+- line: 1723
+  before: 3
+  after: 2
+- line: 1731
+  before: 3
+  after: 2
+- line: 1773
+  before: 3
+  after: 2
+- line: 1789
+  before: 3
+  after: 2
+- line: 2000
+  before: 3
+  after: 2
+- line: 2010
+  before: 3
+  after: 2
+- line: 2081
+  before: 3
+  after: 2
+- line: 2093
+  before: 3
+  after: 2
+- line: 2099
+  before: 3
+  after: 2
+- line: 2174
+  before: 3
+  after: 2
+- line: 2235
+  before: 2
+  after: 3
+- line: 2243
+  before: 2
+  after: 3
+- line: 2610
+  before: 3
+  after: 2
+- line: 2680
+  before: 3
+  after: 4
+- line: 2705
+  before: 2
+  after: 4
+- line: 2725
+  before: 2
+  after: 4
+- line: 2790
+  before: 2
+  after: 3
+- line: 2966
+  before: 3
+  after: 2
+- line: 3307
+  before: 3
+  after: 4
+- line: 3317
+  before: 3
+  after: 4
+- line: 3329
+  before: 3
+  after: 4
+- line: 3339
+  before: 2
+  after: 3
+- line: 3347
+  before: 3
+  after: 4
+- line: 3353
+  before: 3
+  after: 4
+- line: 3359
+  before: 3
+  after: 4
+- line: 3379
+  before: 2
+  after: 4
+- line: 3399
+  before: 3
+  after: 5
+- line: 3648
+  before: 2
+  after: 3
+- line: 3668
+  before: 2
+  after: 3
+- line: 3686
+  before: 2
+  after: 3
+- line: 3704
+  before: 2
+  after: 3
+- line: 3932
+  before: 3
+  after: 2
+- line: 4169
+  before: 3
+  after: 2
+- line: 4269
+  before: 3
+  after: 4
+- line: 4277
+  before: 3
+  after: 4
+- line: 4286
+  before: 2
+  after: 4
+- line: 4319
+  before: 2
+  after: 4
+- line: 4327
+  before: 2
+  after: 3
+- line: 5352
+  before: 2
+  after: 3
+- line: 5481
+  before: 2
+  after: 3
+- line: 5545
+  before: 2
+  after: 3
+- line: 5552
+  before: 2
+  after: 3
+- line: 5678
+  before: 2
+  after: 3
+- line: 5750
+  before: 2
+  after: 3
+- line: 5846
+  before: 3
+  after: 2
+- line: 5858
+  before: 3
+  after: 2
+text_changes:
+- line: 519
+  before: 1.4 DISTRIBUTED INDEXING
+  after: 1.4 分布式索引
+- line: 523
+  before: 1.4.1 Data Based
+  after: 1.4.1 基于数据
+- line: 525
+  before: 1.4.1.1 Indexing
+  after: 1.4.1.1 索引
+- line: 531
+  before: 1.4.1.2 Searching
+  after: 1.4.1.2 搜索
+- line: 558
+  before: 1.4.2.2 Searching
+  after: 1.4.2.2 搜索
+- line: 582
+  before: 1.4.3 Index Based
+  after: 1.4.3 基于索引
+- line: 584
+  before: 1.4.3.1 Indexing
+  after: 1.4.3.1 索引
+- line: 588
+  before: 1.4.3.2 Searching
+  after: 1.4.3.2 搜索
+- line: 594
+  before: 算法 5：基于索引的方法：搜索
+  after: 算法5：基于索引的方法：搜索

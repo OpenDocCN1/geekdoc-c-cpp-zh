@@ -1,0 +1,9 @@
+users would not request satellite images without a specific research purpose, because the requested images were usually paid out of a research grant and the payment needed to be approved by a project manager. Additionally, users were unlikely to request a substantially large number of satellite images due to the budget limitation. However, in the new system, with the “Imagery for Everyone” policy, there is no cost for users requesting satellite images. This greatly influences the characteristics of users and their behaviors. First, the number of users grows significantly. Before the new policy was announced, there were only hundreds of users, and most of them were from the United States. The new EROS system serves hundreds of thousands of global users now. Figure 21.3 shows the rapid growth of monthly download requests since September 2008. It can be observed that the workload of the EROS system (in terms of the number of requests) has been quadrupled in the first 29 months after applying the free download policy, and this growth is expected to be continuous in the future. Second, users behave rather aggressively and randomly in the new system. Figure 21.4 shows the analysis results of more than 60,000 users. We find that the number of requests sent by the top nine users account for 17.5% of the total number of requests. These users can be classified as aggressive users. On the other hand, the majority
+
+![](bbox=[0.27, 0.55, 0.8, 0.78])
+
+FIGURE 21.3 The number of monthly requests grew significantly in the first 29 months.
+
+![](bbox=[0.25, 0.85, 0.95, 0.97])
+
+FIGURE 21.4 The user download behaviors tend to be more aggressive and random.

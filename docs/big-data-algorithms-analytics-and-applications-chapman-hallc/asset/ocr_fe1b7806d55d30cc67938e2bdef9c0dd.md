@@ -1,0 +1,17 @@
+Still, the field of parallel computing belonged to computer scientists and programmers, not to organizations or individuals. Over time, these paradigms evolved still further, to the point where nonprogrammers could not only see the power of but also make use of Big Data applications by using the tools and consumer applications becoming increasingly accessible to them.
+
+Systems like Amazon Web Services (AWS), introduced in 2006, provided access to powerful clusters perfectly suited to operate on massive amounts of data. At launch, AWS offered a command-line interface, limited to highly technical entry points that were best suited to highly technical users. AWS coupled with Hadoop made parallel programming more accessible than ever.
+
+AWS and similar offerings (e.g., Rattle [24]) slowly developed graphical interfaces that made their powerful cloud computing systems more widely available. Slowly, technically minded individuals who were not expert programmers have been able to adopt the intuitive tools that enable them to create their own applications on the bank of computers in the cloud.
+
+When cloud computing and data mining applications eventually become available and accessible to any end user of any technical skill—like the consumer applications we have come to rely upon in our everyday lives, such as the layman's tool Google Analytics—for-profit companies will surely make use of Big Data algorithms and techniques in increasing breadth and depth.
+
+There remains a gap, however, between the user accessibility of these highly technical interfaces and a true for-everyone consumer application. Cloud computing and data mining applications are following the same trajectory as enterprise applications: In 5 Ways Consumer Apps are Driving the Enterprise Web, Svane asks, “Since the software I use every day at home and on my phone are so friendly and easy to use, why is my expensive business application so cumbersome and stodgy?” [25].
+
+Like enterprise applications, cloud computing and data mining applications remain seemingly impenetrable to end users who have come to expect “one-click easy” interfaces. Still, both enterprise and Big Data applications are undeniably on the same forward trajectory toward becoming more accessible over time. In the meantime, organizations rely on their technical workers and data scientists to collect and leverage the Big Data intrinsic to their businesses.
+
+# 22.5 THE GAP IN UNDERSTANDING WITHIN THE SOCIAL SECTOR
+
+Fundamental barriers inhibit NGOs from leveraging the benefits of Big Data applications and algorithms. NGOs are not, as one might assume, limited by the accessibility or relevance of Big Data—neither in the data themselves nor in accessibility to the applications and algorithms associated with Big Data. Indeed, as we have seen, over the last 10 years, Big Data entry points have become increasingly accessible to all manner of professionals, and NGOs were certainly included in the new wave.
+
+Rather, the issue at hand is the lack of incentive to overcome an innate mistrust of Big Data. New technologies are always slow to be adopted, to be sure, but this is particularly true in the social sector. In the current state, an NGO intent on using Big Data is put into

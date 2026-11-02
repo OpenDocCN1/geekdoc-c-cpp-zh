@@ -1,0 +1,7 @@
+# 17.3.3 Data Analytics
+
+As demonstrated in Sections 17.1 and 17.2, Big Data is gaining abundance in almost all levels of the financial spectrum, and financial institutions have already started leveraging Big Data to remain competitive; cater to the demands enforced by growing regulatory pressures, highly dynamic environments, evolving customer needs; seize market opportunities; and efficiently handle risk, to name a few. However, Big Data by itself does not hold much value, and not all of it may be useful at all times. It is necessary to transform the available data into actionable knowledge to realize the true potential of Big Data and extract valuable information or factual strategic insights from it. Figure 17.4 depicts the key Big Data drivers in the financial sector and shows the essential elements of a Big Data pipeline. As shown in the figure, every Big Data pipeline usually involves heterogeneous sources of data that could be intrinsic, extrinsic, or some combination of the two. The data collected from such sources subsequently go through a data ingestion and integration step. Traditional ways of data integration primarily followed an ETL data approach. As discussed in Section 17.2, the ETL approach is not always appropriate and can have many limitations, especially when it comes to Big Data. Several advancements in the last couple of years have led to the development of novel solutions and architectures that
+
+![](bbox=[0.15, 0.58, 0.95, 0.92])
+
+FIGURE 17.4 Big Data ecosystem in finance.
