@@ -1,0 +1,17 @@
+Domain=[-60 60 -60 60 0 60 ............0 360]
+[χmin χmax Ymin Ymax...........θminθmax]
+
+Fig. 3. Structure Chromosome.
+
+*Elitism:* In this case the best individual of the population at a certain time is selected like father, this reserve two slots in the next generation for the highest scoring chromosome of the current generation, without allowing that chromosome to be crossed over in the next generation. One of those slots, the elite chromosome will also not be subject to mutation in the next generation.
+
+*Regeneration Mechanism:* The investigations on some alive organisms that use strategies for their renovation in physiological conditions or before a damage, demonstrate the possibility of incorporating cells that appear and which are specialized in providing reserve cells of an adult organism, thanks to a particular hereditary mechanism and, under this condition, the algorithm can be considered like an evolutionary process within the population. Therefore, a small percentage of the population can be renewed, which allows increasing the formation of construction blocks with better possibilities of finding an optimal value, but as inconvenient the problem of premature convergence of an evolutionary algorithm explained by (Hidalgo and Lanchares, 2000) and (Wen-Jyi et al., 2003) is presented. Nevertheless, the biological evolution process and its mimetization, can validate the use of a regeneration factor and its fundamental preservation in the genetic operators of selection, crosses and mutation.
+
+*Forced Inheritance Mechanism:* Proposed by (Merchán-Cruz, 2005), is a complementary part of the regeneration mechanism as a strategy to introduce specialized chromosomes on the basis of the elitism during the crossing process and mutation. Unlike elitism, where the aptest individuals of a population pass to the following generation without no alteration, the FIM is introduced in the process of regeneration, selection, crossover and mutation, guaranteeing that the aptest individual of the previous generation undergoes a minimal change increasing its aptitude value of consistent method. This mechanism is very useful when the number of variables to solve in the problem is considerably large.
+
+In the same way that the best obtained chromosome is carried among generations in a simple GA, the best set of chromosomes is also carried to the GA search for the next trajectory parameters. By introducing the best set of chromosomes from the previous generations of the initial population of the current GA search, the required number of generations to produce a new trajectory segment is reduced, provided that the trajectory is stable in that particular instant, since the optimum or the near optimum solution is already coded into the initial population. If the mechanism has to change its trajectory due to kinematic constrains or any other circumstance, the carried set of chromosomes does not affect the search for a new optimum set since this one is evaluated and ranked accordingly to its corresponding fitness. Figure 4 illustrates this mechanism called Forced Inheritance Mechanism, FIM, (Merchán-Cruz, 2005).
+
+The necessary operations for regeneration and the forced inheritance are:
+
++   1. Percentage of the population to regenerate.
++   2. Chose again the number of individuals, the length of the chromosome and therefore the size of the population.

@@ -1,0 +1,17 @@
+as interpolations of both parents' genes:
+
+$$a_m^{1} = \lambda a_m^{1} + (1 - \lambda) a_m^{2}$$ $$a_m^{2} = (1 - \lambda) a_m^{1} + \lambda a_m^{2}$$ (38)
+
+where the parameter λ, is a randomly chosen number in the interval [0,1].
+
+There are different selection methods that can be used in the GAs algorithm. Tournament selection (Goldberg, 1989) with size 2 is one of these methods which is used as the selection mechanism in this study. An elitist strategy is also enabled during the replacement operation. Elitism usually brings about a more rapid convergence of the population and also improves the chances of locating the optimal individual. Elite count considered in this study is 5% of population size. In this study the termination criteria is reaching 500th generation, which stated that the algorithm is repeated until a predetermined number of generations is reached. It should be noted that to increase the precision of the optimal solutions accomplished by the algorithm, we used a local search function which finds the minimum of a scalar function of several variables, starting at initial estimate which is the outcome of the GA.
+
+# 5. Optimal pulse patterns for synchronous machines
+
+The characteristics of electric machines depend decisively upon the use of magnetic materials. These materials are required to form the magnetic circuit and are used by the machine designers to obtain specific desired characteristics. Striving to attain optimal usage of magnetic material, and consequently reduce its dimensions, volume and cost, has concentrated endeavors in the design of electric machines on locating machine's rated operating point near the saturation knee of magnetization curve. Furthermore, modifications in operating point, probably caused by various factors, results in substantial changes in machine's inductances. Considering the disproportion between the air gaps in d- and q-axis (q-axis air gap is larger), d-axis inductance experiences saturation region more quickly. This appreciably influences the value of L_d/L_q. Other factors, namely aging and temperature rise should also be taken into account in studying the variations of machine's inductances.
+
+Based on discussion above, online identification of machine's inductances seems indispensable. Either an optimization procedure is to be performed or pre-determined L_d/L_q s are to be used for addressing the corresponding LUT and switching patterns to control the inverter. The latter is possible only in case various LUTs are available for different values of L_d/L_q.
+
+Regarding identification algorithms for synchronous machines, unavailability of numerous machine variables, like dampers current, leads to negligence of such dynamics. As a result, bias in identified parameters, and deviation from their real values are quite possible. Considering the sensitivity of the problem to L_d/L_q, presence of bias in these parameters leads to arriving at switching patterns that are different from optimal ones. As observed, online identification procedure and offline calculation of optimal pulse patterns, both, require immoderate processing burden. Substitution in LUTs, causes transient conditions. The drawbacks associated with transient conditions can briefly be stated as follows:
+
++   1. Power losses increase during transition and reduction in THCD is not realized.

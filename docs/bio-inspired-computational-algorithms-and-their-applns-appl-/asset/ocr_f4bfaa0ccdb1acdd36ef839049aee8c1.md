@@ -1,0 +1,17 @@
+Grosso, P. 1985. Computer Simulations of Genetic Adaption: Parallel Subcompnent Interaction in a Multilocus Model. Ph.D Dissertation, University of Michigan.
+Hidalgo, J. I. & Lanchares, H. R. 2000. Partitioning and placement for multi-fpga systems using genetic algorithms. In Proceedings of the Euromicro DSD 2000.
+Holland, J. H. 1975. Adaptation in natural and artificial system. Ann Arbor, The University of Michigan Press.
+Kalnas, R. & Kota, S. 2001. Incorporating Uncertainty intoMechanism Synthesis. Mechanism and machine theory (Mech. mach. theory), 36, No.3, 843-851.
+Kunjur, A. & Krishnamurty, S. 1997. Genetic Algorithms in Mechanism Synthesis. Journal of Applied Mechanics and Robotics, 4 No. 2, 18-24.
+Kuri-Morales, A. & Galaviz-Casas, J. 2002. Algoritmos Genéticos. Instituto Politécnico Nacional, Universidad Nacional Autónoma de México, Fondo de Cultura Económica,, 202.
+Laribi, M. A., Mlika, A., Romdhane, L. & Zeghloul, S. 2004. A combined genetic algorithm-fuzzy logic method (GA-FL) in mechanisms synthesis. Mechanism and machine theory (Mech. mach. theory), 39, 717-735.
+Levitski, N. L. & Shakvazian, K. K. 1960. Synthesis of four element spatial mechanisms with lower pairs. International Journal of Mechanical Sciences 2, 76-92.
+Lima, C. A. F. 2005. Combining Competent Crossover and Mutation Operators:a Probabilistic Model Building Approach. GECCO'05.
+Lima, C. F., Sastr y, K., Goldberg, D. E. & Lobo, F. G. 2005. Combining Competent Crossover and Mutation Operators: a Probabilistic Model Building Approach. GECCO'05, ACM 1599303108/05/0006.
+Lugo-González, E., Hernández-Gómez, L. H., Ponce-Reynoso, R., Velázquez-Sánchez, A. T., Urriolagoitia-Sosa, G., Merchán-Cruz, E. A. & Ramírez-Gordillo, J. 2010. Performance Optimization of GA Based Planar Mechanism Synthesis. In Proceedings of the 2010 IEEE Electronics, Robotics and Automotive Mechanics Conference (September 28 - October 01, 2010). IEEE Computer Society, Washington, DC, 126-131.
+Lugo González, E. 2010. Diseño de mecanismos utilizando algoritmos genéticos con aplicación en prótesis para miembro inferior. Doctorado, Instituto Politécnico Nacional.
+Merchán-Cruz, E. A. 2005. Soft-programming techniques in the trajectory planning of robot manipulators sharing a common workspace. Doctor of Philosophy, Sheffield.
+Merchán-Cruz, E. A., Hernández-Gómez, L. H., Velázquez-Sánchez, A. T., Lugo-González, E. & Urriolagoitia-Sosa, G. 2007. Exploiting monotony on a genetic algorithm based trajectory planner for robot manipulators. ) F. In the 16th IASTED international Conference on Applied Simulation and Modelling (Palma de Mallorca, Spain, August 29 - 31, 2007. De Felice, Ed. ACTA Press, Anaheim, CA, 300-305.
+Merchán-Cruz, E. A., Urriolagoitia-Sosa, G., Ramírez-Gordillo, J., Rodríguez-Cañizo, R., Campos-Padilla, I. Y., Muñoz-César, J. J. & Lugo-González, E. 2008. GA Based Trajectory Planner for Robot Manipulators Sharing a Common Workspace with Adaptive Population Size. In Proceedings of the 2008 Electronics, Robotics and Automotive Mechanics Conference (September 30 - October 03, 2008). IEEE Computer Society, Washington, DC, 520-525.
+Michalewicz, Z. 1999. Genetic Algorithms + Data Structure = Evolution Programs. tercera ed. Nueva York: Springer.
+Norton, R. L. 1995. Diseño de Maquinaria, Impreso en México, Mc. Graw Hill.

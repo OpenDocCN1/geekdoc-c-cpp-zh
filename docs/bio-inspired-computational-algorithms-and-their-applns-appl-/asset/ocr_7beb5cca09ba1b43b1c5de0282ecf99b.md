@@ -1,0 +1,45 @@
+# SAMPLE: SELF-AUGMENTED MULTI-PLATFORM SPEECH BENCHMARK with spokespersons and command types
+
+Mahshad Gholami, Jiliang Zhang, Yufeng Yang, Tiantian Feng, Shrikanth Narayanan
+
+University of Southern California, Los Angeles, CA, USA
+
+mahshad@usc.edu, jiliangz@usc.edu, yufengya@usc.edu, tiantiaf@usc.edu, shri@ee.usc.edu
+
+ABSTRACT
+
+Automatic Speech Recognition (ASR) systems, especially those designed for edge AI scenarios, are limited to a specific set of speakers and platforms. The ubiquity of ASR brings an urgent need to recognize speech from a wide range of speakers and platforms. However, obtaining data from all platforms remains a significant challenge, primarily due to privacy, network, and hardware constraints. In this paper, we introduce a novel Self-Augmented Multi-Platform speech benchmark (SAMPLE) which
+
+benchmarks by (1) introducing two evaluation tasks at the platform and speaker levels, (2) leveraging the existence of user-generated content (UGC) on social media where audience comments on speech recordings from various platforms, and using self-augmented data to improve speech recognition robustness. To achieve this, we adopt Whisper and use a two-stage prompting approach to generate realistic text data. Using this generated data, we explore and examine various self-supervised training techniques to augment the training dataset and reduce recognition error rate.
+
+Index Terms: Speech recognition, edge AI, multi-platform ASR, self-augmentation, self-supervised learning
+
+# 1. INTRODUCTION
+
+In recent years, the popularity of ASR applications has increased significantly in a wide variety of platforms, ranging from mobile devices to automobiles [1, 2], requiring a robust speech recognition in noisy acoustic environments. However, the primary challenge lies in inherent variability across diverse speakers and platforms. Aside from variations among distinct speakers' dialects, accents, and physical vocal tract shape, extreme variability may occur due to platform differences. This variability profoundly impacts the performance of speech recognition systems in real-world edge AI applications [3, 4], making it imperative to enhance the generalizability of ASR systems across diverse scenarios.
+
+When these ASR systems are deployed to platforms such as Amazon Alexa, Google Home, or Apple Siri, they encounter various types of background noise, specialized accents, and speech patterns. In addition, some platforms employ beamforming or front-end speech enhancement, resulting in variations in audio quality, bandwidth, and acoustic characteristics [5, 6]. One straightforward solution is to use labeled audio data from every target platform to train and adapt the model. Yet, data collection from multiple platforms, either through data sharing or direct recording, is often prohibited by legal restrictions around user data privacy or demanding substantial efforts and costs [7, 8]. Therefore, it is desirable to reduce reliance on real recorded data from each platform.
+
+To address this challenge, different data augmentation approaches have been proposed for robust speech recognition, including adding noise [9, 10], changing speaking rates [11], or manipulating pitch [12]. Recent progress in deep generative models also opens new possibilities for self-supervised speech enhancement and augmentation. For instance, text-to-speech (TTS) systems can be used to generate data from diverse speakers. Nevertheless, these methods often fall short in recreating unique variations across different recording conditions, such as those encountered with different microphone configurations.
+
+In this paper, we present Self-Augmented Multi-Platform speech benchmark (SAMPLE), a benchmark framework designed to evaluate and improve ASR robustness in multi-platform scenarios. SAMPLE aims to answer the following two questions: (1) What is the degree of ASR performance variation across platforms and speakers? and (2) Can we augment data to improve ASR model robustness without using additional real recorded data? To answer the first question, we construct a text correction task to evaluate ASR
+
+performance across different platforms and speakers, and observe a performance gap in the error rates. To answer the second question, we propose a self-augmented framework for improving ASR, which leverages Whisper [13] as a two-stage data generation engine, and unpacks it as a speech data augmenter for ASR. The augmented data is then used to establish a unified training strategy for existing deep learning models.
+
+Our contributions in this work are summarized as follows:
+
++   1. We introduce a new evaluation framework for ASR systems in multi-platform scenarios. 2. We investigate the impact of self-augmented data on ASR robustness. 3. We provide an open-source (available at https://github.com/usc-sail/SAMPLE) implementation of the entire framework, including data generation and model training to promote reproducible research.
+
+# 2. RELATED WORK
+
+2.1. Data Augmentation for ASR
+
+Audio data augmentation methods like SpecAugment [10], noise injection [9], and speed perturbation [11] are widely adopted in ASR system training. Recent works have also explored asking pre-trained language models to generate text data to fine-tune ASR models (e.g., [14] and [15]). They propose using TTS models or pre-trained language models in textual data augmentation to enhance ASR. In contrast, our work focuses on using self-augmented data to improve ASR in multi-platform edge AI settings.
+
+2.2. ASR Benchmarking
+
+Benchmarking ASR systems across diverse conditions is crucial for understanding their capabilities and limitations. Existing benchmarks [16, 17] focus on robustness in noisy environments or various speaking styles, but not on multi-platform scenarios. Our SAMPLE framework specifically targets multi-platform ASR and introduces self-augmentation as a solution for robust recognition across different devices and acoustic environments.
+
++   1. A. Hannun et al., "Deep speech: Scaling up end-to-end speech recognition," 2014. 2. D. Amodei et al., "Deep speech 2: End-to-end speech recognition in English and Mandarin," 2016. 3. T. S. Fuchs et al., "The effect of head motion on speech recognition," 2015. 4. J. Barker et al., "The third chime speech separation and recognition challenge," 2017. 5. E. Vincent et al., "The second chime speech separation and recognition challenge," 2013. 6. J. Barker et al., "The fifth chime speech separation and recognition challenge," 2018. 7. S. E. Shepstone et al., "Privacy in distributed speech recognition," 2015. 8. A. Senior et al., "Acoustic modeling with privacy," 2018. 9. D. S. Park et al., "SpecAugment: A simple data augmentation method for automatic speech recognition," 2019. 10. D. S. Park et al., "SpecAugment on large scale datasets," 2020. 11. T. Ko et al., "Audio augmentation for speech recognition," 2015. 12. N. Jaitly et al., "Vocal tract length perturbation for text-dependent speaker recognition," 2016. 13. A. Radford et al., "Robust speech recognition via large-scale weak supervision," 2022. 14. K. Cao et al., "Improving low-resource ASR via generative data augmentation," 2022. 15. M. Chen et al., "Textual data augmentation for ASR: A comprehensive survey," 2023. 16. A. R. Vaidya et al., "Analysis of robust speech recognition benchmarks," 2022. 17. T. Kun et al., "A benchmark for robust speech recognition," 2021.
+
+REFERENCES

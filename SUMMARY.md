@@ -236,6 +236,7 @@
 +   [Big Java：后期对象](docs/big-java-late-objects/README.md)
 +   [计算机模拟实用指南（第2版）](docs/big-practical-guide-to-computer-simulations-2nd-edition/README.md)
 +   [Objective-C 入门指南](docs/big-ranch-need-guides-objective-c/README.md)
++   [仿生计算算法及其应用 [应用数学]](docs/bio-inspired-computational-algorithms-and-their-applns-appl-/README.md)
 +   [生物学与计算机科学交叉领域的生物信息学挑战：弥合差距](docs/bioinformatics-challenges-at-the-interface-of-biology-and-co/README.md)
 +   [Bjarne Stroustrup - C++ 编程语言第4版 - 2013](docs/bjarne-stroustrup---the-c-programming-language-4th-edition--/README.md)
 +   [Bjarne Stroustrup：C++ 编程原理与实践指南 第2版](docs/bjarne-stroustrup-programming-principles-and-practice-using-/README.md)

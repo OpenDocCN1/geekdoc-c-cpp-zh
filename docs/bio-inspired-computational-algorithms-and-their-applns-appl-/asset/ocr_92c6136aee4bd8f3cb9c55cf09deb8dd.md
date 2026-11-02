@@ -1,0 +1,17 @@
++   - [27] R. W. Morrison. *Designing Evolutionary Algorithms for Dynamic Environments*, Springer-Verlag, Berlin Heidelberg New York, 2004.
++   - [28] T. T. Nguyen and X. Yao. Benchmarking and solving dynamic constrained problems. In: A. Tyrrell (ed.), *Proc. Congress on Evolutionary Computation*, IEEE CEC 2009, IEEE Press, Piscataway, NJ, 690–697, 2009.
++   - [29] G. Paun, G. Rozenberg and A. Salomaa. *The Oxford Handbook of Membrane Computing*, Oxford University Press, Oxford, 2010.
++   - [30] H. Richter. A study of dynamic severity in chaotic fitness landscapes. In: D. Corne (ed.), *Proc. Congress on Evolutionary Computation*, IEEE CEC 2005, IEEE Press, Piscataway, NJ, 2824–2831, 2005.
++   - [31] H. Richter. Evolutionary optimization in spatio-temporal fitness landscapes. In: T. P. Runarsson, H. G. Beyer, E. Burke, J. J. Merelo Guervós, L. D. Whitley, X. Yao (eds.), *Parallel Problem Solving from Nature–PPSN IX*, Springer-Verlag, Berlin Heidelberg New York, 1–10, 2006.
++   - [32] H. Richter. Coupled map lattices as spatio-temporal fitness functions: Landscape measures and evolutionary optimization. *Physica*, D237: 167–186, 2008.
++   - [33] H. Richter and S. Yang. Memory based on abstraction for dynamic fitness functions. In: M. Giacobini et al. (eds.), *EvoWorkshops 2008: Applications of Evolutionary Computing*, Springer-Verlag, Berlin Heidelberg New York, 597–606, 2008.
++   - [34] H. Richter. Detecting change in dynamic fitness landscapes. In A. Tyrrell (ed.), *Proc. Congress on Evolutionary Computation*, IEEE CEC 2009, IEEE Press, Piscataway, NJ, 1613–1620, 2009.
++   - [35] H. Richter and S. Yang. Learning behavior in abstract memory schemes for dynamic optimization problems. *Soft Computing*, 13: 1163–1173, 2009.
++   - [36] H. Richter. Memory design for constrained dynamic optimization problems. In: C. Di Chio et al. (eds.), *Applications of Evolutionary Computation - EvoApplications 2010*, Springer-Verlag, Berlin Heidelberg New York, 552–561, 2010.
++   - [37] H. Richter. Evolutionary optimization and dynamic fitness landscapes: From reaction-diffusion systems to chaotic CML. In: I. Zelinka, S. Celikovsky, H. Richter, G. Chen (eds.), *Evolutionary Algorithms and Chaotic Systems*, Springer-Verlag, Berlin Heidelberg New York, 409–446, 2010.
++   - [38] D. P. Rowbottom. Models in biology and physics: What’s the difference? *Found. Sci.*, 14: 281–294, 2009.
++   - [39] A. Simões and E. Costa. Variable-size memory evolutionary algorithm to deal with dynamic environments. In: M. Giacobini et al. (eds.), *EvoWorkshops 2007: Applications of Evolutionary Computing*, Springer-Verlag, Berlin Heidelberg New York, 617–626, 2007.
++   - [40] T. Smith, P. Husbands, P. Layzell and M. O’Shea. Fitness landscapes and evolvability. *Evolut. Comput.*, 10: 1–34, 2002.
++   - [41] P. F. Stadler and C. R. Stephens. Landscapes and effective fitness. *Comm. Theor. Biol.* 8: 389–431, 2003.
++   - [42] T. Stibor, J. Timmis and C. Eckert. A comparative study of real-valued negative selection to statistical anomaly detection techniques. In: C. Jacob et al. (eds.) *Artificial Immune Systems: Proc. ICARIS-2005*, Springer-Verlag, Berlin Heidelberg New York, 262–275, 2005.
++   - [43] J. Timmis, M. Neal and J. Hunt. An artificial immune system for data analysis. *Biosystems*, 55: 143–150, 2000.
