@@ -1,0 +1,15 @@
+a business abstraction is supported, and so the change is transparent as long as the abstraction is unchanged. Business-driven change involves modification to the goals and design of the system at quite an abstract level, and the changes can trickle down to any part of the supporting infrastructure. A good design will still be quite robust because the infrastructure will offer services that are sufficiently general to support a large proportion of organizational changes, but there is less confidence that the impact can be predicted: the acid test involves extensive checking that the infrastructure is still fit for purpose.
+
+If this checking has to be done by human beings, it is tedious and error prone. However, if sufficiently powerful tooling is available, a large amount of the checking can be automated. This is the same for the subsequent implementation. In cases where the change involves the application of a well-established pattern to new abstract data structures, so as to generate appropriate storage and access mechanisms, a very high proportion of the work can be automated. It is where new logic is introduced that there tend to be more design decisions to take, and so more human intervention needed.
+
+It is here that the benefits of adopting a model-driven engineering approach (see chapter 15) really show themselves. If changes in requirements can be expressed in terms of modifications to abstract models, and transformations to merge and refine such models have been established, then a great deal of the work in creating the complete system specification can be automated.
+
+This level of automation of specification management also allows evaluating the impact of proposed changes to be made a much simpler and more efficient process, so that it is possible to associate accurate transition costs with proposed changes as part of the decision-making process.
+
+# 13.3 Making Changes to Viewpoints
+
+Some of the implications of handling system evolution in a framework of linked viewpoints can be illustrated by considering a simple example. Suppose that the PhoneMob organization decides to introduce a new business service, in which repaired phones can be collected at the airport if doing so suits the user's plans better. An agreement with an established franchise for the supply of mobile phone accessories is made to give access to suitably placed outlets.
+
+First, the changes to the business processes are expressed in the enterprise specification. This involves introducing an airport outlet role into the Phone Repair community, and adding the logic to the repair process to decide whether the logistics provider should deliver to the user directly, as at present, or to the airport agent.
+
+Supporting this change will have immediate consequences; new model elements will also need to be added to the information model, representing the new agents and extending the delivery information needed to describe a re-

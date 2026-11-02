@@ -1,0 +1,13 @@
+are many more UML tools, such as PatternWeaver, with which readers can work on ODP modelling. However, readers are advised to consult with their tool vendors to see what plug-ins are available.
+
+Many of the groups producing standards or other specifications maintain lists of known products using them, and these lists are a fruitful source of information about potential tool vendors and relevant groups in the open source community. Tool vendors usually implement standards enhanced with their own capabilities, look and feel and other special features to appeal to their customers.
+
+The open source community is a place where interested people get together to implement something of common interest to them. In the case of UML and the UML profile, OMG's UML page (http://www.uml.org/) and MDA page (http://www.omg.org/mda/) are good starting places to find such tool vendors. As a good example of an open source community, you can look at the Eclipse foundation (http://www.eclipse.org/). Within the Eclipse community, there is specific support for the creation of modelling tools in the form of the Eclipse Modelling Framework [55]. There are various implementations in the Eclipse modelling projects (http://www.eclipse.org/modeling/), including a UML 2 tooling project. You can also find implementations of different modelling styles.
+
+# ## 16.5 Comparing Enterprise Architectures
+
+A number of proposals for architectural frameworks have been made in recent years; they all target the design and evolution of enterprise systems. However, they are not easy to compare because they differ in their individual scope and emphasis. This implies that each has its own areas of strength and weakness.
+
+We can divide the proposals into two groups. First, we have those frameworks that aim to classify all the different artefacts, processes and people involved in the specification of the enterprise system and its contents. The earliest example of this style is the Zachman framework [94]. This was produced in the late 1980s and introduced the idea of an architectural framework, which soon became popular.
+
+The Zachman framework provides systematic guidance for organizing the contents of an enterprise architecture and is often used to represent a portfolio of the existing architecture artefacts within an organization. It has evolved through several different revisions, which all use a two-dimensional matrix to offer a taxonomy of architectural elements and processes; depending on the version, this requires choices to be made between as many as 36 matrix cells. However, it focuses on the categorization of the enterprise architecture

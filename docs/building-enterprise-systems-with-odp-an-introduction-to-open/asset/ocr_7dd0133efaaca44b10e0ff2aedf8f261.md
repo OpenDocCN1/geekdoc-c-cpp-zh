@@ -1,0 +1,15 @@
+the customer, which returns the customer identifier to be used during that session (the alternative behaviour that happens when the name and password provided are incorrect is not shown for the sake of simplicity). The presentation object then enquires about the pending orders for the customer and presents these to the user. The customer selects one of them (which is identified by the appropriate Repaird) and the system is queried about this specific order.
+
+It is also possible to incorporate environment contracts in the specification, expressed in terms of constraints stereotyped «CV.EnvironmentContract». For example, the duration constraint in figure 4.9 expresses the fact that the delay in receiving the response to the login operation should not exceed 1 second. This approach allows non-functional properties to be expressed so that they can be checked by supporting tools.
+
+# ### 4.6.4 Behaviour: Flows
+
+So far we have used operations to specify the interactions between the objects of our system. However, other forms of interactions are also possible. For instance, streams can be used to model continuous flows of information that are transferred from one object to another over an extended period of time.
+
+Suppose that in the PhoneMob system there is the need for a dedicated teleconference application linking the service centres and the phone manufacturers. If we make this a videoconference, it becomes possible to show the handset and its parts to the manufacturer and to get advice, saving the time, effort and money involved in dispatching the handset to the factory, waiting for them to repair it, and then bringing it back to the service centre.
+
+We will look at two ways of describing this, first by using primitive bindings, and then showing how the use of a compound binding can simplify the description.
+
+The diagram shown in figure 4.10 represents the architecture of such a videoconference system, described using just primitive bindings; it is composed of two kinds of computational object (the repairer and the adviser). Each of these has three interfaces, two for control of the session and one for multimedia exchange. The control interfaces (named “ctrl”) are like those we have seen before, and offer the operations described by the operational signature IControl.
+
+There is also a stream interface (named “media”) whose signature is specified by the interface signatures RepairerStream and AdviserStream. These stream interfaces define four flows for producing and consuming audio and video. The two interfaces form a complementary pair, with flows in the adviser stream interface being opposite in direction to those in the repairer stream interface. The repairer and adviser need separate complementary stream interfaces, so that audioIn, for example, is produced by the adviser and consumed by the repairer.

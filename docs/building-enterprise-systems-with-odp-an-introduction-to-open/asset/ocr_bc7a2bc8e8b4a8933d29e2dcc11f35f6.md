@@ -1,0 +1,13 @@
+assumptions made in this kind of modelling differ from those that are familiar in traditional software engineering. In particular, this chapter looks at specific requirements underpinning enterprise modelling. There is no room in a book of this sort for a lot of supporting theory, so we concentrate simply on giving the flavour of the issues that come up when we are designing a modelling framework.
+
+It should be remembered, however, that we are talking throughout about formal systems; that is to say, we are concerned with use of a formal language defined in terms of some symbols, their grammar, some axioms and a set of inference rules. Any formal system is self-contained and must be related where necessary to the real world by establishing correspondences between its symbols and real-world entities.
+
+The important thing here is that, being formal, their use involves manipulating a language with a clear grammar, and this is what automated tools are good at. If a problem can be stated in formal terms, then tools can check consistency and, depending on the nature of the language, verify interesting properties like termination and liveness.
+
+In building a model it is vitally important that we have a clear idea of what we are trying to cover; what is our target, what boundaries does it have and what properties are we trying to capture? In the rest of this chapter, we will look at some of the issues involved.
+
+# ## 14.2 What Is a System?
+
+If we are going to be talking about the modelling of systems, we had better know what a system is. A system can be anything that is of interest to us both as a whole and as a composition of smaller interacting parts. Where appropriate, a system may be composed hierarchically from some collection of subsystems (see figure 14.1). When we design something, we generally think of it as a system because we are interested both in how it will perform as a whole and how it is to be constructed from parts. The parts concerned are not necessarily fabricated things; a system may involve humans or natural resources.
+
+However, an ODP specification is always concerned with the creation or understanding of an ODP system. It is generally reasonably clear, at an intuitive level, what this system is, which is why we have been able to leave consideration of the question until so late in the book. The understanding of the system is the aim when writing the specification. This does not mean that the system is central to every element of the specification; some views may be concerned only with the environment in which the system is to operate, or may express the business requirements at such an abstract level that the target system is not itself visible.

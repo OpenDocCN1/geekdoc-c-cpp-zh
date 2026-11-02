@@ -1,0 +1,5 @@
+![](bbox=[0.12, 0.11, 0.89, 0.78])
+
+# FIGURE 8.2: A simplified view of the testing activity.
+
+plementation choices where the specification does not go into full detail. However, they also have various obligations to provide information about what they have done. They have to declare what specifications, and what options, they are implementing; this will often involve confirming what they have been contracted to do, but it may not be so clear for off-the-shelf offerings. Secondly, they have to declare how the conformance points can be located, in terms of the access a tester has to the physical or software artefacts being supplied. Finally, the implementer needs to say how the atomic concepts in the specification are realized. This last obligation may involve them in providing a lot of information. For example, a computational specification may be expressed

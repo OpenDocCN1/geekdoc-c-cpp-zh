@@ -1,0 +1,9 @@
+There are different approaches to designing the software architecture of the system. The first step is to select the architectural style that best suits the target application and user requirements (pipes-and-filters, client-server, multi-layer, blackboard, toaster and so on). The selection of the architectural style and the software methodology that helps the system designer make such a selection are outside the scope of this book. However, the RM-ODP is independent of these processes because it was designed to work with any of them.
+
+In the case of the PhoneMob system, we can use a simple three-layered software architecture, which is typical of many web-based and SOA systems. This is an architecture in which the interfaces to users, the business logic and the persistent data storage are separated in independent tiers (or layers). Objects in each layer offer services to the other layers, creating a natural organization of responsibilities and separation of concerns for this kind of system.
+
+However, in the enterprise specification we dealt with humans playing staff roles, and modelled their interactions with the ODP systems supporting them. We need to carry these interactions through into the computational specification, where they are refined to give more detail of the human-computer interface. To do this, we add a fourth layer to the architecture. Thus, the human interface layer represents human actors, and the presentation layer holds the software components responsible for interactions with the human users. The
+
+![](bbox=[0.18, 0.63, 0.88, 0.88])
+
+FIGURE 4.4: Division on one computational use case into the chosen tiers.

@@ -1,0 +1,7 @@
+![](bbox=[0.127, 0.089, 0.875, 0.551])
+
+FIGURE 4.3: Expressing operations and stream flows in terms of signals.
+
+The RM-ODP provides various types of interactions to enable designers to be precise at any required level. One example is the way that an operation can be refined into the set of atomic signals describing the individual interactions happening during the operation's invocation and termination. Another is the way a complex event distribution system can be modelled as a compound binding managing sequences of announcements, abstracting away from all the low-level details involved in the communications between the objects involved. The linkage of separate event management domains can then be modelled as a concatenation of compound bindings.
+
+Finally, *streams* and their component *flows* are used to model continuous transfers of information, such as those used for exchanging videos and other kinds of multimedia streams. You can think of receiving a YouTube video or an internet radio broadcast as examples of this kind of interaction. A flow is a continuous transfer of typed information in one direction over a period of time. Flows can also be used to represent regular data flows, such as monitoring reports or the continuous flow of periodic sensor readings in a process control application, without explicit modelling of the steady sequence of messages involved. Properties of various kinds of continuous media are specified by

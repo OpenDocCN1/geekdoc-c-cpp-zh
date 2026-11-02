@@ -1,0 +1,15 @@
+*Information actions* model the information processing in the system. Every action of interest for modelling purposes is associated with at least one object. Actions also have types, which characterize the sets of actions that share particular properties. An example of an information action is the request by user "Joe Smith" for the repair of the user handset with serial number "SN33433/09" at the PhoneMob service centre in downtown Amsterdam. The corresponding action type is RepairRequest, whose parameters are a user handset, a user and a PhoneMob service centre. Note that this is an abstract action, independent of the more detailed functional specification to be dealt with in the next chapter.
+
+Actions cause state changes in the objects that participate in them. For example, after a RepairRequest action the state of the information object User Handset is initialized to Broken — see figure 3.3. These state changes are described by means of dynamic schemata,¹ as discussed later.
+
+Apart from these elements, the information language also defines three kinds of structure (called a *schema*); this allows us to organize the information specification in terms of the behaviour of the information objects, described by a set of *dynamic schemata*; the constraints that apply to the objects and their behaviours, described by a set of *invariant schemata*; and a configuration of information objects at some moment in time, described by a set of *static schemata*.
+
+The different kinds of schema may apply to the whole system, or they may apply to particular domains within it.
+
+A *dynamic schema* specifies how the information evolves as the system operates, describing the allowable state changes of one or more information objects. A *dynamic schema* can, for instance, describe what happens when a valid request for repairing a handset is added to the system (figure 3.3), or express the overall behaviour of User objects. A state change involving a set of objects can be regarded as an interaction between those objects.
+
+In addition to describing state changes, a dynamic schema can also describe the creation and deletion of information objects. For example, a RepairRequest action results in the creation of a RepairOrder information object and, optionally, of a Loan object if the user is allowed to have a loan handset during the repair process and there is a free loan handset in the shop.
+
+An *invariant schema* is a set of predicates constraining one or more information objects that must always be true, for all valid behaviours of the system. It can describe the types of the information objects, their relationships, and the constraints on those types and those relationships. The predicate constrains the possible states and state changes of the objects to which it applies. The behaviour specified in any dynamic schema is subject to the constraints of the invariant schema. For instance, an invariant schema can constrain the values of a given information object, or the occurrence of an action, such as "Repair orders can only be placed by users whose companies"
+
+¹In English, the plural of schema is *schemata*.

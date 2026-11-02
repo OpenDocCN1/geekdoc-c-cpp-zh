@@ -1,0 +1,13 @@
+tions [97]. The metamodel of a transformation corresponds to the language in which the transformation is written.
+
+The initial discussions of model-driven transformations focused on transformations that are one-to-one, with each transformation linking precisely one source to one target. In general, however, the development of structured specifications leads to more intricate patterns, where the transformations are typically many-to-many. One common pattern involves weaving multiple pieces of specification together to yield a single target. Another is the derivation of a number of implementation elements from a single design, yielding, for example, both executable code and deployment control files, such as tailored sets of firewall rules.
+
+Another important use of model transformations is to define bridges between technical spaces or even semantic domains. For example, model transformations can be used to translate specifications written in UML4ODP into their corresponding specifications in Maude or in Alloy, in order to make use of the analysis facilities and tools available in these target domains. Furthermore, model transformations are extensively used nowadays to build two-way bridges between systems or applications that use disparate technologies or live in different technical spaces (such as EMF [55], CORBA, Java or RDBMS, to name but a few).
+
+Finally, it is important to mention that model transformations are not normally defined in isolation, but as part of a set of transformations that are composed together into a model transformation chain that provides a more powerful piece of functionality. This follows the typical pipelined approach used, for instance, by the Unix shells, in which several commands are chained together using pipes to form a specialized application.
+
+# ## 15.5 Languages for Transformations
+
+Having an architecture for transformations is not much good without a corresponding language for defining them. The OMG has therefore defined a recommendation known as QVT, or *Meta Object Facility (MOF) 2.0 Query/View/Transformation Specification* in full [41]. This provides a specification toolkit with a range of features for transformation specifiers with differing requirements.
+
+One of the ongoing debates about the use of transformations has been whether they should be defined in a declarative or imperative style. Some claim that a declarative style is more suited to the expression of architectural relationships because it is more abstract, while others prefer an imperative approach as being easier to write and debug. QVT supports both styles by providing two different languages, called QVT Relations and QVT Op-
