@@ -1,0 +1,11 @@
+Function main—before returning to the operating system—now calls function square in line 12 of Fig. 5.6. This causes a stack frame for square (lines 16–19) to be pushed onto the function call stack (Fig. 5.8). This stack frame contains the return address that square needs to return to main (i.e., R2) and the memory for square’s automatic variable (i.e., x).
+
+![](bbox=[0.12, 0.21, 0.9, 0.65])
+
+**Fig. 5.8** | Function call stack after main invokes square to perform the calculation.
+
+After square calculates the square of its argument, it needs to return to main—and no longer needs the memory for its automatic variable x. So the stack is popped—giving square the return location in main (i.e., R2) and losing square’s automatic variable. Figure 5.9 shows the function call stack after square’s stack frame has been popped.
+
+Function main now displays the result of calling square (line 12 in Fig. 5.6). Reaching the closing right brace of main causes its stack frame to be popped from the stack, gives main the address it needs to return to the operating system (i.e., R1 in Fig. 5.7) and causes the memory for main’s automatic variable (i.e., a) to become unavailable.
+
+You’ve now seen how valuable the stack data structure is in implementing a key mechanism that supports program execution. Data structures have many important applications in computer science. We discuss stacks, queues, lists, trees and other data structures in Chapter 12.

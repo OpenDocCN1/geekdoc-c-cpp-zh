@@ -1,0 +1,30 @@
+| C++ Standard Library header file | Explanation |
+|---|---|
+| `<algorithm>` | Contains functions for manipulating data in C++ Standard Library containers. |
+| `<cassert>` | Contains macros for adding diagnostics that aid program debugging. |
+| `<cfloat>` | Contains the floating-point size limits of the system. |
+| `<climits>` | Contains the integral size limits of the system. |
+| `<cstdio>` | Contains function prototypes for the C's standard I/O functions. |
+| `<clocale>` | Contains classes and functions normally used by stream processing to process data in the natural form for different languages (e.g., monetary formats, sorting strings, character presentation, etc.). |
+| `<limits>` | Contains classes for defining the numerical data type limits on each computer platform. |
+| `<utility>` | Contains classes and functions that are used by many C++ Standard Library headers. |
+
+**Fig. 15.2** | *C++ Standard Library header files. (Part 2 of 2.)*
+
+You can create custom header files. Programmer-defined header files should end in .h. A programmer-defined header file can be included by using the `#include` preprocessor directive. For example, the header file square.h can be included in a program by placing the directive `#include "square.h"` at the beginning of the program.
+
+# ## 15.6 Inline Functions
+
+Implementing a program as a set of functions is good from a software engineering standpoint, but function calls involve execution-time overhead. C++ provides inline functions to help reduce function call overhead—especially for small functions. Placing the qualifier `inline` before a function's return type in the function definition "advises" the compiler to generate a copy of the function's code in place (when appropriate) to avoid a function call. The trade-off is that multiple copies of the function code are inserted in the program (often making the program larger) rather than there being a single copy of the function to which control is passed each time the function is called. The compiler can ignore the `inline` qualifier and typically does so for all but the smallest functions.
+
+> **Software Engineering Observation 15.3**
+> 
+> *Changing to an inline function could require clients of the function to be recompiled. This can be significant in program development and maintenance situations.*
+
+> **Performance Tip 15.2**
+> 
+> *Using inline functions can reduce execution time but may increase program size.*
+
+> **Software Engineering Observation 15.4**
+> 
+> *The inline qualifier should be used only with small, frequently used functions.*

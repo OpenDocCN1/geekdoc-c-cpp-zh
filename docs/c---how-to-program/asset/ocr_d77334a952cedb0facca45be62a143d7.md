@@ -1,0 +1,60 @@
+# ### 5.3.1 square Function
+
+Consider a program that uses a function square to calculate and print the squares of the integers from 1 to 10 (Fig. 5.3).
+
+```
+```c
+// Fig. 5.3: fig05_03.c
+// Creating and using a programmer-defined function.
+#include <stdio.h>
+
+int square(int y); // function prototype
+
+int main(void)
+{
+   // loop 10 times and calculate and output square of x each time
+   for (int x = 1; x <= 10; ++x) {
+      printf("%d ", square(x)); // function call
+   }
+
+   puts("");
+}
+
+// square function definition returns the square of its parameter
+int square(int y) // y is a copy of the argument to the function
+{
+   return y * y; // returns the square of y as an int
+}
+```
+```
+
+| 1 | 4 | 9 | 16 | 25 | 36 | 49 | 64 | 81 | 100 |
+|---|---|---|---|---|---|---|---|---|---|
+
+**Fig. 5.3**  Creating and using a programmer-defined function.
+
+# **Calling Function square**
+
+Function square is invoked or called in main within the printf statement (line 11)
+
+```
+```c
+printf("%d ", square(x)); // function call
+```
+```
+
+Function square receives a copy of the argument x’s value in the parameter y (line 18). Then square calculates y * y and passes the result back to line 11 in main where square was invoked (line 11). Line 11 continues by passing the square result to function printf, which displays the result on the screen. This process repeats 10 times—once for each iteration of the for statement.
+
+# **square Function Definition**
+
+The definition of function square (lines 18–21) shows that square expects an integer parameter y. The keyword int preceding the function name (line 18) indicates that square returns an integer result. The return statement in square passes the value of the expression y * y (that is, the result of the calculation) back to the calling function.
+
+# **square Function Prototype**
+
+Line 5
+
+```
+```c
+int square(int y); // function prototype
+```
+```

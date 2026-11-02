@@ -1,0 +1,43 @@
+# 17.12 friend Functions and friend Classes
+
+A friend function of a class is a non-member function that has the right to access the public and non-public class members. Standalone functions, entire classes or member functions of other classes may be declared to be friends of another class.
+
+This section presents a mechanical example of how a friend function works. In Chapter 18 we'll show friend functions that overload operators for use with class objects—as you'll see, sometimes a member function cannot be used for certain overloaded operators
+
+# Declaring a friend
+
+To declare a function as a friend of a class, precede the function prototype in the class definition with keyword friend. To declare all member functions of class ClassTwo as friends of class ClassOne, place a declaration of the form
+
+```
+friend class ClassTwo;
+```
+
+in the definition of class ClassOne.
+
+Friendship is granted, not taken—for class B to be a friend of class A, class A must explicitly declare that class B is its friend. Friendship is not symmetric—if class A is a friend of class B, you cannot infer that class B is a friend of class A. Friendship is not transitive—if class A is a friend of class B and class B is a friend of class C, you cannot infer that class A is a friend of class C.
+
+# Modifying a Class's private Data with a Friend Function
+
+Figure 17.22 is a mechanical example in which we define friend function setX to set the private data member x of class Count. As a convention, we place the friend declaration (line 9) first in the class definition, even before public member functions are declared. Again, this friend declaration can appear anywhere in the class.
+
+Function setX (lines 29–32) is a standalone (global) function—it isn't a member function of class Count. For this reason, when setX is invoked for object counter, line 41 passes counter as an argument to setX rather than using a handle (such as the name of the object) to call the function, as in
+
+```
+counter.setX( 8 ); // error: setX not a member function
+```
+
+If you remove the friend declaration in line 9, you'll receive error messages indicating that function setX cannot modify class Count's private data member x.
+
+```
+// Fig. 17.22: fig17_22.cpp
+// Friends can access private members of a class.
+#include <iostream>
+using namespace std;
+
+// Count class definition
+class Count
+{
+   friend void setX( Count &, int ); // friend declaration
+```
+
+Fig. 17.22 | Friends can access private members of a class. (Part 1 of 2.)

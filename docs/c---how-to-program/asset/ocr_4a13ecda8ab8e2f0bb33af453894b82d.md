@@ -1,0 +1,23 @@
+is encountered in s2, it’s assigned to s1, and the value of the assignment becomes the value assigned to the left operand (s1). The loop terminates when the null character is assigned from s2 to s1 (false).
+
+# ### *Copying with Pointers and Pointer Arithmetic*
+
+Function copy2 uses pointers and pointer arithmetic to copy the string in s2 to the character array s1. Again, the for statement header (line 37) performs the entire copy operation. The header does not include any variable initialization. As in function copy1, the expression (*s1 = *s2) performs the copy operation. Pointer s2 is dereferenced, and the resulting character is assigned to the dereferenced pointer s1. After the assignment in the condition, the pointers are incremented to point to the next character in the array s1 and the next character in the string s2, respectively. When the null character is encountered in s2, it’s assigned to the dereferenced pointer s1 and the loop terminates.
+
+# ### *Notes Regarding Functions copy1 and copy2*
+
+*The first argument to both copy1 and copy2 must be an array large enough to hold the string in the second argument.* Otherwise, an error may occur when an attempt is made to write into a memory location that’s not part of the array. Also, the second parameter of each function is declared as `const char * const` (a constant string). In both functions, the second argument is copied into the first argument—characters are read from it one at a time, but the characters are never modified. Therefore, the second parameter is declared to point to a constant value so that the principle of least privilege is enforced—neither function requires the capability of modifying the string in the second argument.
+
+# ## 7.10 Arrays of Pointers
+
+Arrays may contain pointers. A common use of an array of pointers is to form an array of strings, referred to simply as a string array. Each entry in the array is a string, but in C a string is essentially a pointer to its first character. So each entry in an array of strings is actually a pointer to the first character of a string. Consider the definition of string array suit, which might be useful in representing a deck of cards.
+
+```
+```c
+const char *suit[4] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+```
+```
+
+The `suit[4]` portion of the definition indicates an array of 4 elements. The `char *` portion of the declaration indicates that each element of array suit is of type “pointer to char.” Qualifier `const` indicates that the strings pointed to by each element will not be modified. The four values to be placed in the array are "Hearts", "Diamonds", "Clubs" and "Spades". Each is stored in memory as a *null-terminated character string* that’s one character longer than the number of characters between the quotes. The four strings are 7, 9, 6 and 7 characters long, respectively. Although it appears these strings are being placed in the suit array, only pointers are actually stored in the array (Fig. 7.22). Each pointer points to the first character of its corresponding string. Thus, even though the suit array is *fixed in size*, it provides access to characters of *any length*. This flexibility is one example of C’s powerful data-structuring capabilities.
+
+The suits could have been placed in a two-dimensional array, in which each row would represent a suit and each column would represent a letter from a suit name. Such a data structure would have to have a fixed number of columns per row, and that number

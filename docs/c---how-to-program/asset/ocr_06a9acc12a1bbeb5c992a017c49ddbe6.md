@@ -1,0 +1,30 @@
+explained in Chapter 5, where we also provide a summary of the pow function and other math library functions.
+
+# *A Caution about Using Type float or double for Monetary Amounts*
+
+Notice that we defined the variables amount, principal and rate to be of type double. We did this for simplicity because we’re dealing with fractional parts of dollars.
+
+> **Error-Prevention Tip 4.5**
+> 
+> *Do not use variables of type float or double to perform monetary calculations. The impreciseness of floating-point numbers can cause errors that will result in incorrect monetary values. [In Exercise 4.23, we explore the use of integer numbers of pennies to perform precise monetary calculations.]*
+
+Here is a simple explanation of what can go wrong when using float or double to represent dollar amounts. Two float dollar amounts stored in the machine could be 14.234 (which with %.2f prints as 14.23) and 18.673 (which with %.2f prints as 18.67). When these amounts are added, they produce the sum 32.907, which with %.2f prints as 32.91. Thus your printout could appear as
+
+```
+      14.23
+    + 18.67
+    --------
+      32.91
+```
+
+Clearly the sum of the individual numbers as printed should be 32.90! You’ve been warned!
+
+# *Formatting Numeric Output*
+
+The conversion specifier %21.2f is used to print the value of the variable amount in the program. The 21 in the conversion specifier denotes the field width in which the value will be printed. A field width of 21 specifies that the value printed will appear in 21 print positions. The 2 specifies the precision (i.e., the number of decimal positions). If the number of characters displayed is less than the field width, then the value will automatically be right justified with leading spaces in the field. This is particularly useful for aligning floating-point values with the same precision (so that their decimal points align vertically). To left justify a value in a field, place a − (minus sign) between the % and the field width. The minus sign may also be used to left justify integers (such as in %-6d) and character strings (such as in %-8s). We’ll discuss the powerful formatting capabilities of printf and scanf in detail in Chapter 9.
+
+# 4.7 switch Multiple-Selection Statement
+
+In Chapter 3, we discussed the if single-selection statement and the if…else double-selection statement. Occasionally, an algorithm will contain a series of decisions in which a variable or expression is tested separately for each of the constant integral values it may assume, and different actions are taken. This is called multiple selection. C provides the switch multiple-selection statement to handle such decision making.
+
+The switch statement consists of a series of case labels, an optional default case and statements to execute for each case. Figure 4.7 uses switch to count the number of each different letter grade students earned on an exam.

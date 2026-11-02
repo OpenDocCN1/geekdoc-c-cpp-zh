@@ -1,0 +1,92 @@
+```
+```c
+d) if (strcmp(string1, string2)) {
+       puts("The strings are equal");
+   }
+```
+```
+
+# Answers to Self-Review Exercises
+
++   ### 8.1
++   
++   a) `c = toupper(c);`
++   
++   b) `printf("%c%s digit\\n", c, isdigit(c) ? " is a " : " is not a ");`
++   
++   c) `printf("%c%s character\\n", c, iscntrl(c) ? " is a " : " is not a ");`
++   
++   d) `fgets(s1, 100, stdin);`
++   
++   e) `puts(s1);`
++   
++   f) `ptr = strchr(s1, c);`
++   
++   g) `putchar(c);`
++   
++   h) `printf("%c%s letter\\n", c, isalpha(c) ? " is a " : " is not a ");`
++   
++   i) `c = getchar();`
++   
++   j) `ptr = strchr(s1, s2);`
++   
++   k) `printf("%c%s printable character\\n", c, isprint(c) ? " is a " : " is not a ");`
++   
++   l) `sscanf("127 10.3 9.432", "%f%f%f", &d, &e, &f);`
++   
++   m) `strcpy(s1, s2);`
++   
++   n) `ptr = strpbrk(s1, s2);`
++   
++   o) `printf("strcmp(s1, s2) = %d\\n", strcmp(s1, s2));`
++   
++   p) `ptr = strrchr(s1, c);`
++   
++   q) `sprintf(s1, "%d%d%d", x, y, z);`
++   
++   r) `strncat(s1, s2, 10);`
++   
++   s) `printf("strlen(s1) = %u\\n", strlen(s1));`
++   
++   t) `ptr = strtok(s2, ",");`
+
++   ### 8.2
++   
++   - `char vowel[] = "AEIOU";`
++   - `char vowel[] = { 'A', 'E', 'I', 'O', 'U', '\\0' };`
+
++   ### 8.3
++   
++   a) Jack
++   
++   b) jill
++   
++   c) jack and jill
++   
++   d) 8
++   
++   e) 13
+
++   ### 8.4
++   
++   a) **Error:** Function `strncpy` does not write a terminating null character to array s, because its third argument is equal to the length of the string "hello".
++   
++      **Correction:** Make the third argument of `strncpy` 6, or assign `\0` to `s[5]`.
++   
++   b) **Error:** Attempting to print a character constant as a string.
++   
++      **Correction:** Use `%c` to output the character, or replace `'a'` with `"a"`.
++   
++   c) **Error:** Character array s is not large enough to store the terminating null character.
++   
++      **Correction:** Declare the array with more elements.
++   
++   d) **Error:** Function `strcmp` returns 0 if the strings are equal; therefore, the condition in the `if` statement is false, and the `printf` will not be executed.
++   
++      **Correction:** Compare the result of `strcmp` with 0 in the condition.
+
+# Exercises
+
+### 8.5  *(Character Testing)*
+
+Write a program that inputs a character from the keyboard and tests it with each of the functions in the character-handling library. The program should print the value returned by each function.

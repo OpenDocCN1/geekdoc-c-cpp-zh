@@ -1,0 +1,266 @@
+
+- string class from the Standard Library 587
+- string comparison functions 383
+- string concatenation 405
+- string constant 367
+- string conversion functions 374
+- string copy 405
+- cstring header 627, 640
+- string is a pointer 367
+- string literal 259, 367
+- string literals separated only by whitespace 259
+- string manipulation functions of the string handling library 381, 385
+- string object
+  - empty string 632
+  - initial value 632
+- string processing 205, 257
+- cstring header file 205
+- strlen function 395, 396
+- strncat function 381, 382, 383
+- strncmp function 383, 384
+- strncpy function 381
+- Stroustrup, Bjarne 43
+- strpbrk 387
+- strpbrk function 385, 388
+- strrchr function 385, 388
+- strspn function 385, 389
+- strstr function 386, 389
+- strtod function 374
+- strtof function 386, 390
+- strtol function 374, 375
+- strtoul function 374, 376
+- struct 247, 438
+- structure 319, 437
+- structure definition 439
+- structure member () operator 440, 441, 447
+- structure member operator and structure pointer operator 441
+- structure pointer (->) operator 440, 441, 447
+- structure tag name 438, 439
+- structure type 438
+- structured programming 34, 72, 89, 102, 103, 575
+- structured programming summary 169
+- Structures 437
+- Student Inheritance Hierarchy 797
+- student poll analysis program 254
+- subclass 46, 765
+- subscript 248
+- subscripted name used as an rvalue 740
+- substr member function of class string 650
+- substr member function of string 719
+- substring 752
+- substring length 752
+- subtract an integer from a pointer 327
+- subtracting one pointer from another 327
+- subtracting two pointers 329
+- subtraction 36
+- suffix
+  - floating point 572
+  - integer 572
+- sum 96
+- sum of numbers 136
+- sum of the elements of an array 227, 253
+- superclass 46, 765
+- supermarket simulation 547
+- survey data analysis 268, 272
+- survey data analysis program 268
+- swapping values 938, 942
+- Swift 44
+- switch logic 815
+- switch multiple-selection statement 104, 156, 159
+  - with break 160
+- symbol 98, 104
+- symbol value 924
+- symbolic constant 158, 252, 551, 553
+- synchronize operation of an istream and an ostream 872
+- synchronous error 891
+- syntax error 48, 110, 127, 169
+
+## T
+
+- tab 74, 99, 105, 422, 428
+- tables of values 278
+- tabular format 249
+- tail of a queue 510, 527
+- tan 193
+- tangent 193
+- Target-Heart-Rate Calculator 143, 658
+- Tax Plan Alternatives 188
+- TCP (Transmission Control Protocol) 61
+- TCP/IP 61
+- technical publications 66
+- telephone number program 403
+- telephone-number word problem 506
+- template
+  - default type argument for a type parameter 914
+  - definition 603
+  - function 603
+  - parameter list 603
+- template keyword 603, 908
+- template parameter 908
+- temporary copy 119
+- temporary double representation 154
+- temporary object 749
+- terabyte 37
+- terminate 49
+- terminate a program 895
+- terminating null character 258, 367, 368, 378, 414
+- termination housekeeping 675
+- termination model of exception handling 886
+- termination phase 116
+- termination request 573
+- ternary operator 107, 225
+- test characters 587
+- test state bits after an I/O operation 831
+- Test-Drive: Body Mass Index Calculator 69
+- Test-Drive: Carbon Footprint Calculator 69
+- text analysis 403
+- text processing 366
+- `<tgmath.h>` 578
+- The 'Twelve Days of Christmas' 159
+- this pointer 694, 696, 704, 746
+- this pointer used explicitly 694
+- this pointer used implicitly and explicitly to access members of an object 695
+- Thompson, Ken 41
+- Thread_local storage class specifier 214
+- throw an exception 614, 663, 664, 885
+- throw expressions derived from standard exceptions 900
+- throw exceptions not derived from standard exceptions 900
+- throw keyword 887
+- throw point 886
+- throwing exceptions from a catch 905
+- throwing the result of a conditional expression 905
+- Tic-Tac-Toe Class exercise 711
+- tie an input stream to an output stream 872
+- tilde character (~) 675
+- time 205
+- Time class 710
+- Time class containing a constructor with default arguments 669
+- Time class definition 661
+- Time class definition modified to enable cascaded member-function calls 697
+- Time class member-function definitions 662
+- Time class member-function definitions, including a constructor that takes arguments 670
+- Time Class Modification 713
+- `__STDC__`, predefined symbolic constant 558
+- `__TIME__`, predefined symbolic constant 558
+- `<time.h>` 205
+- token 386, 557
+- tokenizing strings 381
+- tokens 390
+- tokens in reverse 404
+- tolower function 371
+- top 114
+- top-down, stepwise refinement 114, 116, 120, 121
+- top of a stack 510
+- top-down stepwise refinement 335, 336
+- Tortoise and the Hare 353
+- toupper function 317, 371
+- Towers of Hanoi 227, 240
+- trailing zeros 413, 861
+- transaction file 505
+- transaction-processing program 486, 493
+- transfer of control 103, 358, 362
+- translation 40
+- translator program 40
+- Transmission Control Protocol (TCP) 61
+- trap 572
+- trap a SIGINT 573
+- traversing a binary tree 534
+- tree 84, 307, 437, 533
+- trigonometric cosine 193
+- trigonometric sine 193
+- trigonometric tangent 193
+- tripleByReference 620
+- tripleCallByValue 620
+- true boolean value 85, 590
+- truncated 118
+- truth 165
+- truth table 165
+- try block 614, 885, 888, 891, 892
+  - expires 886
+- try statement 614
+- turtle graphics 300
+- Twitter 62
+- two-dimensional array 278, 282, 334
+  - representation of a deck of cards 336
+- two's complement 931, 931
+- twos position 926
+- tying an output stream to an input stream 872
+- type 80
+- type checking 198
+- type mismatch 316
+- type of this pointer 695
+- type parameter 603, 908, 914
+- type-safe linkage 592, 600
+- type_info class 838
+- typedef 443, 847
+  - ifstream 849
+  - istringstream 849
+  - iostream 847
+  - ostream 847
+  - stringstream 847
+  - fstream 849
+- typename keyword 603, 908
+- type-safe I/O 854
+- typesetting systems 366
+
+## U
+
+- u or U for an unsigned int 572
+- UML (Unified Modeling Language) 605, 608, 625
+  - attribute 625
+  - class diagram 625
+  - constructor in a class diagram 638
+  - data types 628
+  - guidelines (< and >) 638
+  - minus sign (−) 634
+  - plus sign (+) 625
+  - public operation 625
+  - String type 628
+- unary operator 119, 127, 309
+  - overload 721, 726
+  - sizeof 324
+- unary scope resolution operator (::) 598
+- unbiased shuffling algorithm 446
+- unbuffered output 849
+- unbuffered standard error stream 847
+- uncaught exceptions 905
+- unconditional branch 575
+- #undef preprocessor directive 554, 557
+- underflow_error exception 900
+- underscore (_) 77
+- unformatted I/O 846, 847, 849, 851, 854
+- Unicode character set 37, 846
+- Unified Modeling Language (UML) 605, 608
+- unincremented copy of an object 733
+- uninitialized local reference causes a syntax error 595
+- union 446, 447, 469
+- unique_ptr class 896
+  - built-in array 899
+- universal-time format 663
+- UNIX 41, 158, 564
+- unnamed bit field 460
+- unnamed bit field with a zero width 460
+- `<unordered_map>` header 587
+- `<unordered_set>` header 587
+- unresolved references 569
+- unsafe macro 585
+- unsigned decimal integer 411
+- unsigned hexadecimal integer 411
+- unsigned int 200
+- unsigned integer 448
+- unsigned long int 376
+- unsigned long long int 220, 222
+- unsigned octal integer 411
+- unsigned short 200
+- unstructured flowchart 173
+- untie an input stream from an output stream 872
+- unwinding the function call stack 889
+- uppercase letter 98, 204, 587
+- uppercase stream manipulator 861, 865, 867
+- user-defined class name 623
+- user-defined type 606, 624, 749
+- using a function template 603
+- using declaration
+  - in headers 640
+- using directive
+  - in headers 640

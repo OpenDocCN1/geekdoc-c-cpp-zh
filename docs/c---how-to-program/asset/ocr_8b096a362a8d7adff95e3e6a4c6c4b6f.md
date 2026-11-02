@@ -1,0 +1,30 @@
+# 15.8.3 Error Messages for Uninitialized References
+
+The C++ standard does not specify the error messages that compilers use to indicate particular errors. For this reason, we show in Fig. 15.7 the error messages produced by several compilers when a reference is not initialized.
+
+# 15.9 Empty Parameter Lists
+
+C++, like C, allows you to define functions with no parameters. In C++, an empty parameter list is specified by writing either void or nothing at all in parentheses. The prototypes
+
+```
+void print();
+void print( void );
+```
+
+each specify that function print does not take arguments and does not return a value. These prototypes are equivalent.
+
+> **Portability Tip 15.2**
+> 
+> *The meaning of an empty function parameter list in C++ is dramatically different than in C. In C, it means all argument checking is disabled (i.e., the function call can pass any arguments it wants). In C++, it means that the function takes no arguments. Thus, C programs using this feature might cause compilation errors when compiled in C++.*
+
+# 15.10 Default Arguments
+
+It’s not uncommon for a program to invoke a function repeatedly with the same argument value for a particular parameter. In such cases, you can specify that such a parameter has a default argument, i.e., a default value to be passed to that parameter. When a program omits an argument for a parameter with a default argument in a function call, the compiler rewrites the function call and inserts the default value of that argument to be passed as an argument in the function call.
+
+Default arguments must be the rightmost (trailing) arguments in a function’s parameter list. When calling a function with two or more default arguments, if an omitted argument is not the rightmost argument in the argument list, then all arguments to the right of that argument also must be omitted. Default arguments should be specified with the first occurrence of the function name—typically, in the function prototype. If the function prototype is omitted because the function definition also serves as the prototype, then the default arguments should be specified in the function header. Default values can be any expression, including constants, global variables or function calls. Default arguments also can be used with inline functions.
+
+Figure 15.8 demonstrates using default arguments in calculating the volume of a box. The function prototype for boxVolume (line 7) specifies that all three parameters have been given default values of 1. We provided variable names in the function prototype for readability, but these are not required.
+
+> **Common Programming Error 15.6**
+> 
+> *It’s a compilation error to specify default arguments in both a function’s prototype and header.*

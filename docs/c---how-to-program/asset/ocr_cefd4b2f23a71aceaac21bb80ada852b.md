@@ -1,0 +1,34 @@
+tion; output of integers in decimal, octal and hexadecimal formats; output of floating-point values with various precision, with forced decimal points, in scientific notation and in fixed notation; output of data justified in fields of designated widths; output of data in fields padded with specified characters; and output of uppercase letters in scientific notation and hexadecimal notation.
+
+# 21.3.1 Output of char * Variables
+
+C++ determines data types automatically—an improvement over C, but this feature sometimes “gets in the way.” For example, suppose we want to print the address stored in a char * pointer. The << operator has been overloaded to output a char * as a null-terminated C-style string. To output the address, you can cast the char * to a void * (this can be done to any pointer variable). Figure 21.3 demonstrates printing a char * variable in both string and address formats. The address prints here as a hexadecimal (base-16) number—in general, the way addresses print is implementation dependent. To learn more about hexadecimal numbers, see Appendix C. We say more about controlling the bases of numbers in Section 21.6.1 and Section 21.7.4.
+
+```
+```cpp
+// Fig. 21.3: fig21_03.cpp
+// Printing the address stored in a char * variable.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const char *const word = "again";
+
+    // display value of char *, then display value of char *
+    // after a static_cast to void *
+    cout << "Value of word is: " << word << endl
+         << "Value of static_cast< const void * >( word ) is: "
+         << static_cast< const void * >( word ) << endl;
+} // end main
+```
+```
+
+Value of word is: again
+Value of static_cast< const void * >( word ) is: 0135CC70
+
+Fig. 21.3 | Printing the address stored in a char * variable.
+
+# 21.3.2 Character Output Using Member Function put
+
+We can use the put member function to output characters. For example, the statement `cout.put( 'A' );` displays a single character A. Calls to put may be cascaded, as in the statement `cout.put( 'A' ).put( '\n' );` which outputs the letter A followed by a newline character. As with <<, the preceding statement executes in this manner, because the dot operator (.) associates from left to right,

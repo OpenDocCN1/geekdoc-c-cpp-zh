@@ -1,0 +1,35 @@
++   - Both iteration and recursion involve repetition: Iteration uses an iteration statement; recursion achieves repetition through repeated function calls.
++   - Iteration and recursion each involve a termination test: Iteration terminates when the loop-continuation condition fails; recursion terminates when a base case is recognized.
++   - Iteration and recursion can occur infinitely: An infinite loop occurs with iteration if the loop-continuation test never becomes false; infinite recursion occurs if the recursion step does not reduce the problem in a manner that converges on the base case.
++   - Recursion repeatedly invokes the mechanism, and consequently the overhead, of function calls. This can be expensive in both processor time and memory space.
+
+# ## Self-Review Exercises
+
+5.1 Answer each of the following:
+
++   a) ______ are used to modularize programs.
++   b) A function is invoked with a(n) ______.
++   c) A variable known only within the function in which it's defined is called a(n) ______.
++   d) The ______ statement in a called function is used to pass the value of an expression back to the calling function.
++   e) Keyword ______ is used in a function header to indicate that a function does not return a value or to indicate that a function contains no parameters.
++   f) The ______ of an identifier is the portion of the program in which the identifier can be used.
++   g) The three ways to return control from a called function to a caller are ______, ______ and ______.
++   h) A(n) ______ allows the compiler to check the number, types, and order of the arguments passed to a function.
++   i) The ______ function is used to produce random numbers.
++   j) The ______ function is used to set the random number seed to randomize a program.
++   k) The storage-class specifiers are ______, ______, ______ and ______.
++   l) Variables declared in a block or in the parameter list of a function are assumed to be of storage class ______ unless specified otherwise.
++   m) A non-static variable defined outside any block or function is a(n) ______ variable.
++   n) For a local variable in a function to retain its value between calls to the function, it must be declared with the ______ storage-class specifier.
++   o) The four possible scopes of an identifier are ______, ______, ______ and ______.
++   p) A function that calls itself either directly or indirectly is a(n) ______ function.
++   q) A recursive function typically has two components: one that provides a means for the recursion to terminate by testing for a(n) ______ case, and one that expresses the problem as a recursive call for a slightly simpler problem than the original call.
+
+5.2 For the following program, state the scope (either function scope, file scope, block scope or function-prototype scope) of each of the following elements.
+
++   a) The variable x in main.
++   b) The variable y in cube.
++   c) The function cube.
++   d) The function main.
++   e) The function prototype for cube.
++   f) The identifier y in the function prototype for cube.

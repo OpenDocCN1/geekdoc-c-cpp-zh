@@ -1,0 +1,45 @@
+```
+Enter three integers: 47 32 14
+Maximum is: 47
+```
+
+```
+Enter three integers: 35 8 79
+Maximum is: 79
+```
+
+Fig. 5.4 | Finding the maximum of three integers. (Part 2 of 2.)
+
+The function initially assumes that its first argument (stored in the parameter x) is the largest and assigns it to max (line 25). Next, the if statement at lines 27–29 determines whether y is greater than max and, if so, assigns y to max. Then, the if statement at lines 31–33 determines whether z is greater than max and, if so, assigns z to max. Finally, line 35 returns max to the caller.
+
+# 5.6 Function Prototypes: A Deeper Look
+
+An important C feature is the function prototype, which was borrowed from C++. The compiler uses function prototypes to validate function calls. Pre-standard C did not perform this kind of checking, so it was possible to call functions improperly without the compiler detecting the errors. Such calls could result in fatal execution-time errors or nonfatal errors that caused subtle, difficult-to-detect problems. Function prototypes correct this deficiency.
+
+**Good Programming Practice 5.4**
+
+*Include function prototypes for all functions to take advantage of C's type-checking capabilities. Use #include preprocessor directives to obtain function prototypes for the standard library functions from the headers for the appropriate libraries, or to obtain headers containing function prototypes for functions developed by you and/or your group members.*
+
+The function prototype for maximum in Fig. 5.4 (line 5) is
+
+```
+int maximum(int x, int y, int z); // function prototype
+```
+
+It states that maximum takes three arguments of type int and returns a result of type int. Notice that the function prototype is the same as the first line of maximum's definition.
+
+**Good Programming Practice 5.5**
+
+*Include parameter names in function prototypes for documentation purposes. The compiler ignores these names, so the prototype int maximum(int, int, int); is valid.*
+
+**Common Programming Error 5.5**
+
+*Forgetting the semicolon at the end of a function prototype is a syntax error.*
+
+# Compilation Errors
+
+A function call that does not match the function prototype is a compilation error. An error is also generated if the function prototype and the function definition disagree. For example, in Fig. 5.4, if the function prototype had been written
+
+```
+void maximum(int x, int y, int z);
+```

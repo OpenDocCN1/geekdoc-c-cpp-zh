@@ -1,0 +1,53 @@
+```
+52
+53 // aim base-class pointer at derived-class object and print
+54 commissionEmployeePtr = &basePlusCommissionEmployee;
+55 cout << "\nCalling virtual function print with base-class pointer"
+56 << "into derived-class object invokes derived-class "
+57 << "print function:\n";
+58
+59 // polymorphism; invokes BasePlusCommissionEmployee's print;
+60 // base-class pointer to derived-class object
+61 commissionEmployeePtr->print();
+62 cout << endl;
+63 } // end main
+```
+
+Invoking print function on base-class and derived-class objects with static binding
+commission employee: Sue Jones
+social security number: 222-22-2222
+gross sales: 1000.00
+commission rate: 0.06
+
+base-salaried commission employee: Bob Lewis
+social security number: 333-33-3333
+gross sales: 5000.00
+commission rate: 0.04
+base salary: 300.00
+
+Invoking print function on base-class and derived-class objects with dynamic binding
+Calling virtual function print with base-class pointer
+to base-class object invokes base-class print function:
+commission employee: Sue Jones
+social security number: 222-22-2222
+gross sales: 1000.00
+commission rate: 0.06
+
+Calling virtual function print with derived-class pointer
+to derived-class object invokes derived-class print function:
+base-salaried commission employee: Bob Lewis
+social security number: 333-33-3333
+gross sales: 5000.00
+commission rate: 0.04
+base salary: 300.00
+
+Calling virtual function print with base-class pointer
+to derived-class object invokes derived-class print function:
+base-salaried commission employee: Bob Lewis
+social security number: 333-33-3333
+gross sales: 5000.00
+commission rate: 0.04
+base salary: 300.00
+Notice that the base salary is now displayed
+
+Fig. 20.6 | Demonstrating polymorphism by invoking a derived-class virtual function via a base-class pointer to a derived-class object. (Part 2 of 2.)

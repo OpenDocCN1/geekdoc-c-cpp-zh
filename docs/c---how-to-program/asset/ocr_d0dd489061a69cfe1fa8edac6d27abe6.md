@@ -1,0 +1,10 @@
++   1. If the character to be deleted matches the character in the *first* node of the list (line 121), assign `*sPtr` to `tempPtr` (`tempPtr` will be used to free the unneeded memory), assign `(*sPtr)->nextPtr` to `*sPtr` (`*sPtr` now points to the *second* node in the list), free the memory pointed to by `tempPtr`, and return the character that was deleted.
++   2. Otherwise, initialize `previousPtr` with `*sPtr` and initialize `currentPtr` with `(*sPtr)->nextPtr` (lines 128–129) to advance to the second node.
++   3. While `currentPtr` is not NULL and the value to be deleted is not equal to `currentPtr->data` (line 132), assign `currentPtr` to `previousPtr` (line 133) and assign `currentPtr->nextPtr` to `currentPtr` (line 134). This locates the character to be deleted if it’s contained in the list.
++   4. If `currentPtr` is not NULL (line 138), assign `currentPtr` to `tempPtr` (line 139), assign `currentPtr->nextPtr` to `previousPtr->nextPtr` (line 140), free the node pointed to by `tempPtr` (line 141), and return the character that was deleted from the list (line 142). If `currentPtr` is NULL, return the null character ('\0') to signify that the character to be deleted was not found in the list (line 146).
+
+Figure 12.6 illustrates the deletion of the node containing the character 'C' from a linked list. Part (a) of the figure shows the linked list after the preceding insert operation. Part (b) shows the reassignment of the link element of `previousPtr` and the assignment of `currentPtr` to `tempPtr`. Pointer `tempPtr` is used to *free* the memory allocated to the node that stores 'C'. Note that in lines 124 and 141 we do free `tempPtr`. Recall that we recommended setting a freed pointer to NULL. We do not do that in these two cases, because `tempPtr` is a local automatic variable and the function returns immediately.
+
+![](bbox=[0.14, 0.55, 0.86, 0.91])
+
+**Fig. 12.6** | *Deleting a node from a list.*

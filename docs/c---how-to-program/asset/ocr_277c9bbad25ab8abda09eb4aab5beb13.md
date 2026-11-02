@@ -1,0 +1,36 @@
+arrays are automatically passed by reference, individual array elements are scalars and are ordinarily passed by value. Therefore, bubbleSort uses the address operator (&) on each of the array elements in the swap call (line 46) to effect pass-by-reference as follows
+
+```
+swap(&array[j], &array[j + 1]);
+```
+
+Function swap receives &array[j] in element1Ptr (line 54). Even though swap—because of information hiding—is not allowed to know the name array[j], swap may use *element1Ptr as a synonym for array[j]—when swap accesses *element1Ptr, it's actually referencing array[j] in bubbleSort. Similarly, when swap accesses *element2Ptr, it's actually referencing array[j + 1] in bubbleSort. Even though swap is not allowed to say
+
+```
+int hold = array[j];
+array[j] = array[j + 1];
+array[j + 1] = hold;
+```
+
+precisely the same effect is achieved by lines 56 through 58
+
+```
+int hold = *element1Ptr;
+*element1Ptr = *element2Ptr;
+*element2Ptr = hold;
+```
+
+# Function bubbleSort's Array Parameter
+
+Several features of function bubbleSort should be noted. The function header (line 34) declares array as int * const array rather than int array[] to indicate that bubbleSort receives a one-dimensional array array as an argument (again, these notations are interchangeable). Parameter size is declared const to enforce the principle of least privilege. Although parameter size receives a copy of a value in main, and modifying the copy cannot change the value in main, bubbleSort does not need to alter size to accomplish its task. The size of the array remains fixed during the execution of function bubbleSort. Therefore, size is declared const to ensure that it's not modified.
+
+# Function swap's Prototype in Function bubbleSort's Body
+
+The prototype for function swap (line 36) is included in the body of function bubbleSort because bubbleSort is the only function that calls swap. Placing the prototype in bubbleSort restricts proper calls of swap to those made from bubbleSort (or any function that appears after swap in the source code). Other functions defined before swap that attempt to call swap do not have access to a proper function prototype, so the compiler generates one automatically. This normally results in a prototype that does not match the function header (and generates a compilation warning or error) because the compiler assumes int for the return type and the parameter types.
+
+> Software Engineering Observation 7.2
+> Placing function prototypes in the definitions of other functions enforces the principle of least privilege by restricting proper function calls to the functions in which the prototypes appear.
+
+# Function bubbleSort's size Parameter
+
+Function bubbleSort receives the size of the array as a parameter (line 34). The function must know the size of the array to sort the array. When an array is passed to a function,

@@ -1,0 +1,47 @@
+# 10.12 (Packing Characters into an Integer)
+
+The left-shift operator can be used to pack four character values into a four-byte unsigned int variable. Write a program that inputs four characters from the keyboard and passes them to function packCharacters. To pack four characters into an unsigned int variable, assign the first character to the unsigned int variable, shift the unsigned int variable left by 8 bit positions and combine the unsigned variable with the second character using the bitwise inclusive OR operator. Repeat this process for the third and fourth characters. The program should output the characters in their bit format before and after they're packed into the unsigned int to prove that the characters are in fact packed correctly in the unsigned int variable.
+
+# 10.13 (Unpacking Characters from an Integer)
+
+Using the right-shift operator, the bitwise AND operator and a mask, write function unpackCharacters that takes the unsigned int from Exercise 10.12 and unpacks it into four characters. To unpack characters from a four-byte unsigned int, combine the unsigned int with the mask 4278190080 (11111111 00000000 00000000 00000000) and right shift the result 8 bits. Assign the resulting value to a char variable. Then combine the unsigned int with the mask 16711680 (00000000 11111111 00000000 00000000). Assign the result to another char variable. Continue this process with the masks 65280 and 255. The program should print the unsigned int in bits before it's unpacked, then print the characters in bits to confirm that they were unpacked correctly.
+
+# 10.14 (Reversing the Order of an Integer's Bits)
+
+Write a program that reverses the order of the bits in an unsigned int value. The program should input the value from the user and call function reverseBits to print the bits in reverse order. Print the value in bits both before and after the bits are reversed to confirm that the bits are reversed properly.
+
+# 10.15 (Portable displayBits Function)
+
+Modify function displayBits of Fig. 10.7 so it's portable between systems using 2-byte integers and systems using 4-byte integers. [Hint: Use the sizeof operator to determine the size of an integer on a particular machine.]
+
+# 10.16 (What's the Value of X?)
+
+The following program uses function multiple to determine if the integer entered from the keyboard is a multiple of some integer X. Examine the function multiple, then determine X's value.
+
+```
+1 // ex10_16.c
+2 // This program determines whether a value is a multiple of X.
+3 #include <stdio.h>
+4
+5 int multiple(int num); // prototype
+6
+7 int main(void)
+8 {
+9     int y; // y will hold an integer entered by the user
+10
+11     puts("Enter an integer between 1 and 32000: ");
+12     scanf("%d", &y);
+13
+14     // if y is a multiple of X
+15     if (multiple(y)) {
+16         printf("%d is a multiple of X\n", y);
+17     }
+18     else {
+19         printf("%d is not a multiple of X\n", y);
+20     }
+21 }
+22
+23 // determine whether num is a multiple of X
+24 int multiple(int num)
+25 {
+```

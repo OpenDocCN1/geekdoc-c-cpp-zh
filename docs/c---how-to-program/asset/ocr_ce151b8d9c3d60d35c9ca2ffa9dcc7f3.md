@@ -1,0 +1,46 @@
++   8.8.5  Function strspn ........................................ 389
++   8.8.6  Function strcspn ....................................... 389
++   8.8.7  Function strtok ........................................ 390
++   8.9    Memory Functions of the String-Handling Library ........ 391
++   8.9.1  Function memcpy ........................................ 392
++   8.9.2  Function memmove ....................................... 393
++   8.9.3  Function memcmp ........................................ 394
++   8.9.4  Function memchr ........................................ 394
++   8.9.5  Function memset ........................................ 395
++   8.10   Other Functions of the String-Handling Library .......... 395
++   8.10.1 Function strerror ...................................... 396
++   8.10.2 Function strlen ........................................ 396
++   8.11   Secure C Programming ................................... 397
+
+# 9  C Formatted Input/Output ................................ 409
+
++   9.1    Introduction .......................................... 410
++   9.2    Streams ................................................ 410
++   9.3    Formatting Output with `printf` ........................ 410
++   9.4    Printing Integers ...................................... 411
++   9.5    Printing Floating-Point Numbers ....................... 412
++     9.5.1  Conversion Specifiers e, E and f .................... 413
++     9.5.2  Conversion Specifiers g and G ......................... 413
++     9.5.3  Demonstrating Floating-Point Conversion Specifiers ... 414
++   9.6    Printing Strings and Characters ....................... 414
++   9.7    Other Conversion Specifiers ........................... 415
++   9.8    Printing with Field Widths and Precision .............. 416
++     9.8.1  Specifying Field Widths for Printing Integers ........ 416
++     9.8.2  Specifying Precisions for Integers, Floating-Point Numbers
++            and Strings .......................................... 417
++     9.8.3  Combining Field Widths and Precisions ................ 418
++   9.9    Using Flags in the printf Format Control String ........ 419
++     9.9.1  Right and Left Justification ........................ 419
++     9.9.2  Printing Positive and Negative Numbers with and without
++            the + Flag ........................................... 420
++     9.9.3  Using the Space Flag ................................ 420
++     9.9.4  Using the # Flag .................................... 421
++     9.9.5  Using the 0 Flag .................................... 421
++   9.10   Printing Literals and Escape Sequences ................ 422
++   9.11   Reading Formatted Input with `scanf` .................. 422
++     9.11.1 `scanf` Syntax ...................................... 423
++     9.11.2 `scanf` Conversion Specifiers ....................... 423
++     9.11.3 Reading Integers with `scanf` ....................... 424
++     9.11.4 Reading Floating-Point Numbers with `scanf` ........ 425
++     9.11.5 Reading Characters and Strings with `scanf` ......... 425
++     9.11.6 Using Scan Sets with `scanf` ........................ 426

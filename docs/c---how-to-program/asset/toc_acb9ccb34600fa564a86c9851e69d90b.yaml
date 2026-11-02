@@ -1,0 +1,8 @@
+level_changes: []
+text_changes:
+- line: 790
+  before: 1.1.1.3 Apple 的 Mac OS X；用于 iPhone®、iPad® 和 iPod Touch® 设备的 Apple iOS
+  after: 1.11.3 Apple 的 Mac OS X；用于 iPhone®、iPad® 和 iPod Touch® 设备的 Apple iOS
+- line: 798
+  before: 1.1.1.4 Google 的 Android
+  after: 1.11.4 Google 的 Android

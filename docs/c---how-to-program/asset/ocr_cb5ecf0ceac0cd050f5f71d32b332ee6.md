@@ -1,0 +1,29 @@
+```
+```
+merge:                  44 71
+                        88
+                        44 71 88
+split:                                58 23
+                                      58
+                                      23
+merge:                                58
+                                      23
+                                      23 58
+merge:                  44 71 88
+                                      23 58
+                                      23 44 58 71 88
+merge:      60 76 79 79 86
+                                      23 44 58 71 88
+            23 44 58 60 71 76 79 79 86 88
+Sorted array:
+23 44 58 60 71 76 79 79 86 88
+```
+```
+
+**Fig. D.3** | The merge sort algorithm. (Part 5 of 5.)
+
+Lines 83–92 in function merge loop until the program reaches the end of either subarray. Line 86 tests which element at the beginning of the arrays is smaller. If the element in the left array is smaller, line 87 places it in position in the combined array. If the element in the right array is smaller, line 90 places it in position in the combined array. When the while loop completes, one entire subarray is placed in the combined array, but the other subarray still contains data. Line 94 tests whether the left array has reached the end. If so, lines 95–97 fill the combined array with the elements of the right array. If the left array has not reached the end, then the right array must have reached the end, and lines 100–102 fill the combined array with the elements of the left array. Finally, lines 106–108 copy the combined array into the original array. The output from this program displays the splits and merges performed by merge sort, showing the progress of the sort at each step of the algorithm.
+
+# ### Efficiency of Merge Sort
+
+Merge sort is a far more efficient algorithm than either insertion sort or selection sort (although that may be difficult to believe when looking at the rather busy Fig. D.3). Consider the first (nonrecursive) call to function sortSubArray. This results in two recursive calls to function sortSubArray with subarrays each approximately half the size of the original array, and a single call to function merge. This call to function merge requires, at worst, n – 1 comparisons to fill the original array, which is O(n). (Recall that each element in the array is chosen by comparing one element from each of the subarrays.) The two calls to function sortSubArray result in four more recursive calls to function sortSubArray, each with a subarray approximately one quarter the size of the original array, along with two calls to function merge. These two calls to the function merge each require, at worst, n/2 – 1 comparisons, for a total number of comparisons of O(n). This process continues, each call

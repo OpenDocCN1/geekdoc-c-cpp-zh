@@ -260,6 +260,7 @@
 +   [SAS Enterprise Guide 和 SAS Enterprise Miner 商业分析使用指南：初学者指南](docs/business-analytics-using-sas-enterprise-guide-and-sas-enterp/README.md)
 +   [Beyond the C++ Standard Library 中文版](docs/byd-cpp-stdlib/README.md)
 +   [C++ 入门指南](docs/c/README.md)
++   [C 语言程序设计](docs/c---how-to-program/README.md)
 +   [C# 1：编程与 C# 语言入门指南](docs/c-1-introduction-to-programming-and-the-c-language/README.md)
 +   [C# 10 .NET 6 洁洁架构：构建可维护、可测试、可扩展且健壮应用的初学者指南（Python 先驱者秘籍）](docs/c-10-clean-architecture-with-net-6-a-beginners-guide-to-buil/README.md)
 +   [C# 10.0 傻瓜指南](docs/c-100-all-in-one-for-dummies-for-dummies-computertech/README.md)

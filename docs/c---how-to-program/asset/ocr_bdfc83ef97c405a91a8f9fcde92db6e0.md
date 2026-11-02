@@ -1,0 +1,27 @@
+```
+    struct example {
+        char c;
+        int i;
+    } sample1, sample2;
+```
+
+A computer with 4-byte words might require that each member of struct example be aligned on a word boundary, i.e., at the beginning of a word—this is machine dependent. Figure 10.1 shows a sample storage alignment for a variable of type struct example that has been assigned the character 'a' and the integer 97 (the bit representations of the values are shown). If the members are stored beginning at word boundaries, there’s a three-byte hole (bytes 1–3 in the figure) in the storage for variables of type struct example. The value in the three-byte hole is undefined. Even if the member values of sample1 and sample2 are in fact equal, the structures are not necessarily equal, because the undefined three-byte holes are not likely to contain identical values.
+
+![](bbox=[0.13, 0.37, 0.91, 0.49])
+
+> > **Portability Tip 10.1**
+> > Because the size of data items of a particular type is machine dependent and because storage alignment considerations are machine dependent, so too is the representation of a structure.
+
+# ### 10.3 Initializing Structures
+
+Structures can be initialized using initializer lists as with arrays. To initialize a structure, follow the variable name in the definition with an equals sign and a brace-enclosed, comma-separated list of initializers. For example, the declaration
+
+```
+    struct card aCard = { "Three", "Hearts" };
+```
+
+creates variable aCard to be of type struct card (as defined in Section 10.2) and initializes member face to "Three" and member suit to "Hearts". If there are fewer initializers in the list than members in the structure, the remaining members are automatically initialized to 0 (or NULL if the member is a pointer). Structure variables defined outside a function definition (i.e., externally) are initialized to 0 or NULL if they’re not explicitly initialized in the external definition. Structure variables may also be initialized in assignment statements by assigning a structure variable of the *same* type, or by assigning values to the *individual* members of the structure.
+
+# ### 10.4 Accessing Structure Members with . and ->
+
+Two operators are used to access members of structures: the structure member operator (.)—also called the dot operator—and the structure pointer operator (->)—also called the arrow operator. The structure member operator accesses a structure member via the

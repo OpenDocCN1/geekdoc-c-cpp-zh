@@ -1,0 +1,96 @@
+
+and destructors are called for objects of classes that are part of an inheritance hierarchy. Finally, we explained the three types of inheritance—public, protected and private—and the accessibility of base-class members in a derived class when using each type.
+
+In Chapter 20, Object-Oriented Programming: Polymorphism, we build on our discussion of inheritance by introducing polymorphism—an object-oriented concept that enables us to write programs that handle, in a more general manner, objects of a wide variety of classes related by inheritance. After studying Chapter 20, you'll be familiar with classes, objects, encapsulation, inheritance and polymorphism—the essential concepts of object-oriented programming.
+
+## Summary
+
+### Section 19.1 Introduction
+- Software reuse reduces program development time and cost.
+- Inheritance (p. 765) is a form of software reuse in which you create a class that absorbs an existing class's capabilities, then customizes or enhances them. The existing class is called the base class (p. 765), and the new class is referred to as the derived class (p. 765).
+- Every object of a derived class is also an object of that class's base class. However, a base-class object is not an object of that class's derived classes.
+- The *is-a* relationship (p. 765) represents inheritance. In an *is-a* relationship, an object of a derived class also can be treated as an object of its base class.
+- The *has-a* relationship (p. 765) represents composition—an object contains one or more objects of other classes as members, but does not disclose their behavior directly in its interface.
+
+### Section 19.2 Base Classes and Derived Classes
+- A direct base class (p. 767) is the one from which a derived class explicitly inherits. An indirect base class (p. 767) is inherited from two or more levels up the class hierarchy (p. 766).
+- With single inheritance (p. 767), a class is derived from one base class. With multiple inheritance (p. 767), a class inherits from multiple (possibly unrelated) base classes.
+- A derived class represents a more specialized group of objects.
+- Inheritance relationships form class hierarchies.
+- It's possible to treat base-class objects and derived-class objects similarly; the commonality shared between the object types is expressed in the base class's data members and member functions.
+
+### Section 19.4 Constructors and Destructors in Derived Classes
+- When an object of a derived class is instantiated, the base class's constructor is called immediately to initialize the base-class data members in the derived-class object, then the derived-class constructor initializes the additional derived-class data members.
+- When a derived-class object is destroyed, the destructors are called in the reverse order of the constructors—first the derived-class destructor is called, then the base-class destructor is called.
+- A base class's public members are accessible anywhere that the program has a handle to an object of that base class or to an object of one of that base class's derived classes—or, when using the scope resolution operator, whenever the class name is in scope.
+- A base class's private members are accessible only within the base class or from its friends.
+- A base class's protected members can be accessed by members and friends of that base class and by members and friends of any classes derived from that base class.
+- In C++11, a derived class can inherit constructors from its base class by including anywhere in the derived-class definition a `using` declaration of the form:
+```cpp
+using BaseClass::BaseClass;
+```
+
+### Section 19.5 public, protected and private Inheritance
+- Declaring data members private, while providing non-private member functions to manipulate and perform validity checking on this data, enforces good software engineering.
+- When deriving a class, the base class may be declared as either public, protected or private.
+- When deriving a class with public inheritance (p. 793), public members of the base class become public members of the derived class, and protected members of the base class become protected members of the derived class.
+- When deriving a class with protected inheritance (p. 794), public and protected members of the base class become protected members of the derived class.
+- When deriving a class with private inheritance (p. 794), public and protected members of the base class become private members of the derived class.
+
+## Self-Review Exercises
+
+**19.1** Fill in the blanks in each of the following statements:
+a) `__________` is a form of software reuse in which new classes absorb the data and behaviors of existing classes and embellish these classes with new capabilities.
+
+b) A base class’s `__________` members can be accessed in the base-class definition, in derived-class definitions and in friends of the base class and its derived classes.
+
+c) In a(n) `__________` relationship, an object of a derived class also can be treated as an object of its base class.
+
+d) In a(n) `__________` relationship, a class object has one or more objects of other classes as members.
+
+e) In single inheritance, a class exists in a(n) `__________` relationship with its derived classes.
+
+f) A base class’s `__________` members are accessible within that base class and anywhere that the program has a handle to an object of that class or one of its derived classes.
+
+g) A base class’s protected access members have a level of protection between those of public and `__________` access.
+
+h) C++ provides for `__________`, which allows a derived class to inherit from many base classes, even if the base classes are unrelated.
+
+i) When an object of a derived class is instantiated, the base class’s `__________` is called implicitly or explicitly to do any necessary initialization of the base-class data members in the derived-class object.
+
+j) When deriving a class with public inheritance, public members of the base class become `__________` members of the derived class, and protected members of the base class become `__________` members of the derived class.
+
+k) When deriving a class with protected inheritance, public members of the base class become `__________` members of the derived class, and protected members of the base class become `__________` members of the derived class.
+
+**19.2** State whether each of the following is true or false. If false, explain why.
+a) Base-class constructors are not inherited by derived classes.
+
+b) A has-a relationship is implemented via inheritance.
+
+c) A Car class has an is-a relationship with the Steeringwheel and Brakes classes.
+
+d) Inheritance encourages the reuse of proven high-quality software.
+
+e) When a derived-class object is destroyed, the destructors are called in the reverse order of the constructors.
+
+## Answers to Self-Review Exercises
+
+19.1 a) Inheritance. b) protected. c) is-a or inheritance (for public inheritance). d) has-a or composition or aggregation. e) hierarchical. f) public. g) private. h) multiple inheritance. i) constructor. j) public, protected. k) protected, protected.
+
+19.2 a) True. b) False. A has-a relationship is implemented via composition. An is-a relationship is implemented via inheritance. c) False. This is an example of a has-a relationship. Class Car has an is-a relationship with class Vehicle. d) True. e) True.
+
+## Exercises
+
+19.3 (Composition as an Alternative to Inheritance) Many programs written with inheritance could be written with composition instead, and vice versa. Rewrite class BasePlusCommissionEmployee of the CommissionEmployee-BasePlusCommissionEmployee hierarchy to use composition rather than inheritance. After you do this, assess the relative merits of the two approaches for designing classes CommissionEmployee and BasePlusCommissionEmployee, as well as for object-oriented programs in general. Which approach is more natural? Why?
+
+19.4 (Inheritance Advantage) Discuss the ways in which inheritance promotes software reuse, saves time during program development and helps prevent errors.
+
+19.5 (Protected vs. Private Base Classes) Some programmers prefer not to use protected access because they believe it breaks the encapsulation of the base class. Discuss the relative merits of using protected access vs. using private access in base classes.
+
+19.6 (Student Inheritance Hierarchy) Draw an inheritance hierarchy for students at a university similar to the hierarchy shown in Fig. 19.2. Use Student as the base class of the hierarchy, then include classes UndergraduateStudent and GraduateStudent that derive from Student. Continue to extend the hierarchy as deep (i.e., as many levels) as possible. For example, Freshman, Sophomore, Junior and Senior might derive from UndergraduateStudent, and DoctoralStudent and Master'sStudent might derive from GraduateStudent. After drawing the hierarchy, discuss the relationships that exist between the classes. [Note: You do not need to write any code for this exercise.]
+
+19.7 (Richer Shape Hierarchy) The world of shapes is much richer than the shapes included in the inheritance hierarchy of Fig. 19.3. Write down all the shapes you can think of—both two-dimensional and three-dimensional—and form them into a more complete Shape hierarchy with as many levels as possible. Your hierarchy should have the base class Shape from which class TwoDimensionalShape and class ThreeDimensionalShape are derived. [Note: You do not need to write any code for this exercise.] We'll use this hierarchy in the exercises of Chapter 20 to process a set of distinct shapes as objects of base-class Shape. (This technique, called polymorphism, is the subject of Chapter 20.)
+
+19.8 (Quadrilateral Inheritance Hierarchy) Draw an inheritance hierarchy for classes Quadrilateral, Trapezoid, Parallelogram, Rectangle and Square. Use Quadrilateral as the base class of the hierarchy. Make the hierarchy as deep as possible.
+
+19.9 (Package Inheritance Hierarchy) Package-delivery services, such as FedEx®, DHL® and UPS®, offer a number of different shipping options, each with specific costs associated. Create an inheritance hierarchy to represent various types of packages. Use class Package as the base class of the hierarchy, then include classes TwoDayPackage and OvernightPackage that derive from Package. Base class Package should include data members representing the name, address, city, state and ZIP code for both the sender and the recipient of the package, in addition to data members that store the weight (in ounces) and cost per ounce to ship the package. Package's constructor should initialize these data members. Ensure that the weight and cost per ounce contain positive values. Package should provide a public member function calculateCost that returns a double indicating the cost
