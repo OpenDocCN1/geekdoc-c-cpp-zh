@@ -1,0 +1,13 @@
+mathematics or computer science, and corresponding subsections. Similar to a conventional literature database, you can search the database, eventually restricted to a section, for author names, publication years or keywords in the title/abstract. After you have found an interesting article, you can download it and print it immediately. File formats are *postscript* and *pdf*. The submission should be usually in TeX/LaTeX (see Sec. 9.3).
+
+Please note that there is no editorial processing at all, that means you do not have any guarantee on the quality of a paper. If you like, you can submit a poem describing the beauty of your garden. Nevertheless, the aim of the server is to make important scientific results available very quickly. Thus, before submitting an article, you should be sure that it is correct and interesting, otherwise you might get a poor reputation.
+
+The preprint server also offers access via email. It is possible to subscribe to a certain subject. Then every working day you will receive a list of all new papers which have been submitted. This is a very convenient way of keeping track of recent developments. But be careful, not everyone submits to the preprint server. Hence, you still have to read scientific journals regularly.
+
+# Literature databases
+
+In case you want to obtain a list of all articles written by a specific author or of all articles on a certain subject, you should consult a literature database. Unfortunately, the access to these data bases is usually not free of charge. But usually your library should provide access to the most important ones via the Internet. If your library/university does not offer an access to the data base you are interested in, you should complain.
+
+There are many specialized data bases. In technical sciences and engineering, the *INSPEC* [*INSPEC*] data base is the appropriate source of information. *INSPEC* frequently surveys almost all scientific journals in the areas of physics, electronics and computers. For each paper that appears, all bibliographic information along with the abstract are stored. You can search the data base, for example, for author names, keywords (in the abstract or title), publication years or journals. Via *INSPEC* it is possible to keep track of recent developments in a certain field.
+
+Depending on your field of research, a different data base might suit you better. You should consult the web page of your library to find out which of them you can access. Modern scientific work is not possible

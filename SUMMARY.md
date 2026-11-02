@@ -234,6 +234,7 @@
 +   [Big C++：后期对象，增强电子版](docs/big-c-late-objects-enhanced-etext/README.md)
 +   [大数据：算法、分析与应用 (Chapman & Hall／CRC 大数据系列)](docs/big-data-algorithms-analytics-and-applications-chapman-hallc/README.md)
 +   [Big Java：后期对象](docs/big-java-late-objects/README.md)
++   [计算机模拟实用指南（第2版）](docs/big-practical-guide-to-computer-simulations-2nd-edition/README.md)
 +   [Objective-C 入门指南](docs/big-ranch-need-guides-objective-c/README.md)
 +   [生物学与计算机科学交叉领域的生物信息学挑战：弥合差距](docs/bioinformatics-challenges-at-the-interface-of-biology-and-co/README.md)
 +   [Bjarne Stroustrup - C++ 编程语言第4版 - 2013](docs/bjarne-stroustrup---the-c-programming-language-4th-edition--/README.md)

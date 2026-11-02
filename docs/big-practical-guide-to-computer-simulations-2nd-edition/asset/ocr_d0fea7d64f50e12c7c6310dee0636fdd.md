@@ -1,0 +1,13 @@
+Certainly, the first version is much more readable than the second, so you should follow some formatting rules. This is discussed in Sec. 3.2. Note that concerning the #include directive, which is only a kind of command passed to the compiler but not a true C command, the syntax is more strict. Basically, each #include directive must be written in exactly one line (unless one explicitly uses several lines via the \ symbol at the end of a line). Also, only one directive is allowed per line. More information on the compiler directives and the related macros is given in Sec. 1.6.
+
+The code describing the functionality of main() comprises the two lines 5-6 here. First, the printf() subroutine prints the string given as argument to the screen, i.e. here the string "My first program". The \n symbol is a formatting symbol. It indicates that after printing the string a new line is inserted. Consequently, any subsequent output, if also performed using printf() occurring during the execution of a program, will be printed starting at the next line. One can print many different things using printf(), more details are explained in Sec. 1.3. Note that formally the subroutine printf() is a function, since in C all subroutines are functions. Functions can have side effects, like printing out information or changing content of variables. Also, all functions calculate or return a value, which is often less important than the side effects, like in this case. The function call, together with the terminating semicolon, makes a statement. Each statement must close with a semicolon, even if it is the last statement of a function or the last statement of a block (see page 20) of statements.
+
+In line 6, return(0) states by the value the function returns. Here it is just 0, which means for main() by convention that everything was OK. In general, one can return arbitrary complex objects. Simple mathematical functions will return a real number, e.g. the square root of the argument, but also more complex objects like strings, arrays, lists or graphs are possible. More on functions in C is given in Sec. 1.2.
+
+To actually execute the command, one types into the shell the name of the program, i.e.
+
+```
+first
+```
+
+Note that this assumes that the current directory is part of the search path contained in the environment variable PATH. If this is not the case, one has to type in "./first". As a result of the program execution, the message "My first program" will appear on the screen (inside the shell, just in the line after where you have called the program), the program will terminate and the shell will wait for your next command.

@@ -1,0 +1,221 @@
+level_changes:
+- line: 9
+  before: 2
+  after: 1
+- line: 38
+  before: 2
+  after: 1
+- line: 226
+  before: 2
+  after: 3
+- line: 336
+  before: 2
+  after: 3
+- line: 395
+  before: 2
+  after: 3
+- line: 1419
+  before: 1
+  after: 3
+- line: 1422
+  before: 1
+  after: 3
+- line: 1426
+  before: 1
+  after: 3
+- line: 1434
+  before: 1
+  after: 3
+- line: 1537
+  before: 2
+  after: 1
+- line: 1543
+  before: 3
+  after: 2
+- line: 1563
+  before: 2
+  after: 3
+- line: 1573
+  before: 2
+  after: 3
+- line: 1599
+  before: 2
+  after: 3
+- line: 2082
+  before: 1
+  after: 2
+- line: 2159
+  before: 2
+  after: 1
+- line: 2195
+  before: 3
+  after: 2
+- line: 2324
+  before: 3
+  after: 2
+- line: 2637
+  before: 1
+  after: 2
+- line: 2645
+  before: 2
+  after: 3
+- line: 3149
+  before: 2
+  after: 3
+- line: 3192
+  before: 2
+  after: 3
+- line: 3505
+  before: 2
+  after: 3
+- line: 3528
+  before: 2
+  after: 1
+- line: 3540
+  before: 3
+  after: 2
+- line: 3595
+  before: 3
+  after: 2
+- line: 4038
+  before: 2
+  after: 1
+- line: 4048
+  before: 3
+  after: 2
+- line: 4110
+  before: 2
+  after: 3
+- line: 4174
+  before: 2
+  after: 3
+- line: 4184
+  before: 2
+  after: 3
+- line: 4197
+  before: 2
+  after: 3
+- line: 4210
+  before: 2
+  after: 3
+- line: 4224
+  before: 2
+  after: 3
+- line: 4230
+  before: 2
+  after: 3
+- line: 4971
+  before: 1
+  after: 3
+- line: 4972
+  before: 1
+  after: 3
+- line: 5352
+  before: 2
+  after: 3
+- line: 5404
+  before: 2
+  after: 3
+- line: 5545
+  before: 2
+  after: 3
+- line: 6092
+  before: 2
+  after: 3
+- line: 6451
+  before: 2
+  after: 3
+- line: 6487
+  before: 2
+  after: 3
+- line: 6500
+  before: 2
+  after: 3
+- line: 6534
+  before: 2
+  after: 3
+- line: 6560
+  before: 2
+  after: 3
+- line: 6580
+  before: 2
+  after: 1
+- line: 6630
+  before: 3
+  after: 2
+- line: 6961
+  before: 3
+  after: 4
+- line: 7038
+  before: 2
+  after: 4
+- line: 7062
+  before: 3
+  after: 4
+- line: 7109
+  before: 3
+  after: 4
+- line: 7321
+  before: 2
+  after: 4
+- line: 7407
+  before: 2
+  after: 4
+- line: 7488
+  before: 2
+  after: 4
+- line: 7640
+  before: 2
+  after: 1
+- line: 7661
+  before: 2
+  after: 1
+- line: 7774
+  before: 2
+  after: 1
+text_changes:
+- line: 1214
+  before: (6) **函数积分**
+  after: (6) 函数积分
+- line: 1247
+  before: (7) **通过编译器优化代码**
+  after: (7) 通过编译器优化代码
+- line: 2637
+  before: 归纳学习中知识的效用
+  after: 6.3 归纳学习中知识的效用
+- line: 2645
+  before: 1 引言
+  after: 6.3.1 引言
+- line: 3459
+  before: 6. 链表的归并排序
+  after: (6) 链表的归并排序
+- line: 3479
+  before: 7. 在树中查找值
+  after: (7) 在树中查找值
+- line: 3528
+  before: 第 7 章
+  after: 第 7 章 库
+- line: 3530
+  before: 库
+  after: ''
+- line: 4309
+  before: 8.2.1 *均匀（伪）随机数*
+  after: 8.2.1 均匀（伪）随机数
+- line: 4668
+  before: 4.1.3 Markdown 轻量标记语言
+  after: 8.3.1 Markdown 轻量标记语言
+- line: 6580
+  before: Chapter 9
+  after: Chapter 9 Information Retrieval, Publishing and Presentations
+- line: 6582
+  before: Information Retrieval, Publishing and Presentations
+  after: ''
+- line: 6638
+  before: 9.2.1 *使用 gnuplot 生成可用于出版的图表*
+  after: 9.2.1 使用 gnuplot 生成可用于出版的图表
+- line: 7640
+  before: 附录A
+  after: 附录A 补充材料
+- line: 7641
+  before: 补充材料
+  after: ''

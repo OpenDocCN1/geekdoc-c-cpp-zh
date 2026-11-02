@@ -1,0 +1,9 @@
+# Preface to the 2nd edition
+
+After the first edition of this book was published, I received a lot of supporting comments from various people. Nevertheless, many readers recommended some further subjects to be included in the book, in particular related to new developments or tools. Furthermore, several misprints and little mistakes were reported by them. Also, for some paragraphs, I decided to rewrite them a bit or expand them by including more examples. Hence, I did not hesitate for long, when World Scientific asked me to write a second edition. You are holding the result of this effort in your hands.
+
+The main extensions of the second edition are as follows:
+
++   - An introduction to the programming language *Python* has been added, see Sec. 2.3. This language is half-way between a script language (since it is interpreted) and a full high-level programming language (it offers, e.g. complex data structures, object-oriented elements and many libraries for various purposes). Thus, when using *Python*, on the one hand it is easy to write scripts for various tasks like data analysis. On the other hand, small to medium size simulation project can be implemented rapidly.
++   - Since simulation and analysis of *networks and graphs* has become more and more important in various fields of science, the Sec. 6.8 on graphs has been extended by a subsection (6.8.4) on the calculation of the *connected component*. This is one of the most-often performed analyses for graphs and the basis of many complex algorithms, e.g. to obtain shortest paths, diameters, or centrality measures.
++   - The Sec. 8.1.1 on how to *draw random numbers* for discrete random variables now includes the fastest available algorithm. It allows one to draw each random number according to the given distribution in
