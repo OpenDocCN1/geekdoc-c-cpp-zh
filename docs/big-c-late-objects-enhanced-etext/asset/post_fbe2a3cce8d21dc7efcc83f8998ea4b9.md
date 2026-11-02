@@ -1,0 +1,302 @@
+
+- random access, 281–282
+- sequential access, 281, 281f
+- steps in, 278–281
+- from strings, 52, 273–274
+- white space, 265, 266, 266t
+- words, 265
+- read_int between function, 155
+- reallocation, vectors, 474–475. See also vector(s)
+- recursion, 170–174, 363–392
+  - backtracking, 383–389
+  - binary search, 410–412
+  - common errors, 367–368
+  - computing as loop, 366
+  - degenerate inputs, 370
+  - efficiency, 373–377
+  - Fibonacci sequence, 373–377
+  - finding files, 372
+  - functions, 170–174, 364–368
+  - infinite, 368
+  - loops, 366, 376–377, 378, 379
+  - mutual, 380–383
+  - palindrome test, 369–373, 376–377
+  - partial solutions, 383–389
+  - permutations, 377–380
+  - sample programs, 366–367, 371
+  - speed of, 373–377
+  - stacks, 478
+  - steps in, 173–174, 369–371
+  - substrings, 372–373
+  - syntax diagrams, 380–381
+  - terminating, 365–366, 367, 368, 382
+  - Towers of Hanoi, 389
+  - trees, 523, 527–528, 539–540, 542
+  - triangle numbers, 364–371
+  - vs. iteration, 375–377, 379
+- recursive functions
+  - calling, 364–368
+  - call stack, 368
+  - stack fault, 368
+  - common errors, 367–368
+  - debugging, 367–368
+  - helper, 372–373, 523, 528
+  - size, 523
+  - tracing through, 367
+- red-black trees, 544–551
+  - bubbling up, 548–551
+  - efficiency, 546, 548, 551
+  - “equal exit cost” rule, 545–546, 547, 548–549, 551
+  - height, 546, 548
+  - implementing, 547, 551
+  - “no double blacks” rule, 549
+  - “no double reds” rule, 544–548, 550
+  - nodes, 544–546
+  - black height, 546
+  - charge, 548, 549
+  - double-black, 549–551
+  - finding, 551
+  - inserting, 546–548, 551
+  - leaves, 546, 548
+  - negative-red, 549
+  - removing, 548–551
+  - O(log n) operations, 544, 546, 551
+  - properties, 544
+  - rebalancing, 544, 546, 547
+  - unbalanced, 546
+- reference parameter(s), 165–170, 440
+  - array parameters as, 195
+  - array size modification, 196
+  - defined, 165
+  - file streams, 264
+  - pointers, 229–230
+  - vectors as, 216
+  - vs. copy constructors and destructors, 440, 441–442
+  - vs. return values, 169–170
+  - vs. value parameters, 166–167, 167f
+  - when to use, 166, 169–170
+- reference parameter indicator (&), 165, 195
+- reference variables, vs. parameter variables, 440
+- references, returning, 429–430
+- registerdemo2.cpp, 321
+- relational model, database, 286
+- relational operators, 66–68, 66t, 67f, 67t
+  - combining multiple, 88
+  - common errors, 88
+- remainder, 36–37
+- remainder operation, for compressing hash code, 506
+- repeat function, 438, 440
+- reserved words, A–1–A–2.
+  - as variable names, 29
+- return (reserved word), A–2
+- return statements, 144, 148–149
+  - displaying on screen, 12, 13
+  - functions, 144, 153
+  - return 0, 11
+- return values, 142–143, 148–154
+  - absent, 153–154
+  - arrays, 195
+  - copying, 440. See also copy constructors
+  - missing, 149–150, 153–154
+  - return 0, 11
+  - structures, 252
+  - vectors as, 216
+  - vs. reference parameters, 169–170
+- reusable functions, 155
+- setprecision manipulator, 45, 46, 47c, 271, 271t
+- setw manipulator, 45–46, 47t, 270, 271t
+- Shamir, Adi, 277
+- shared pointers, 445–446
+  - shared_ptr type, 256
+- Shell sort algorithm, 418
+- shipping charges simulation, 82–83, 89–90
+- short, 34, 35t, A-2
+- short-circuit evaluation, 89
+- sibling, 521. See also tree nodes
+- simulations. See applications: programs and simulations
+- sin function, 39t
+- single quotation mark ('). See quotation marks ('...','...')
+- singly-linked list, 455, 459
+- size function
+  - trees, 523
+  - vectors, 214
+- slash. See backslash (\); forward slash (/)
+- slicing problem, 346–347, 347f, 352–353
+- smallest value, computing, 121–122
+- smart pointers, 256
+- Social Security baby names program, 262–265
+- Social Security numbers, database privacy and, 286
+- software, 2
+  - open source, 329–330
+  - unauthorized use, 138
+- solve function, 386
+- sort function, 192, 193, 412–413, 425
+- sorting algorithms, 192–194, 394–408
+  - binary search, 528–529. See also tree(s): binary, search trees
+  - comparing elements, 413
+  - comparison operator, 413
+  - estimating running time, 397–408. See also running time estimation/measurement
+  - heapsort, 567–572
+  - insertion sort, 400–401, 418
+  - library functions, 412–413
+  - merge sort, 402–407. See also merge sort algorithm
+  - notation
+    - big-Oh, 399–400, 401, 405–407, 408. See also big-Oh notation
+    - omega, 400
+    - theta, 400
+  - for partially sorted data, 401
+  - partitioning the range, 407–408
+  - quicksort, 407–408
+  - selection sort, 394–401
+  - Shell sort, 418
+- source code, 9, 9f
+- source files, 318–322
+  - contents of, 319–320
+  - language coding guidelines, A-13
+  - multiple, compiling from, 318–322
+  - single vs. multiple, 318
+- spaces, around operators, 42
+- spaghetti code, 82–83, 112
+- spell checking, with sets, 498
+- spreadsheets, VisiCalc, 175, 175f
+- square brackets ([ ])
+  - accessing arrays, 230, 232–233
+  - accessing pointer variables, 249
+  - accessing string characters, 238
+  - delete operator, 240
+  - vector or array index operator, A-3
+- square roots, calculating, 38–39
+- stack(s), 476–482
+  - as abstract data types, 479
+  - applications
+    - backtracking, 490–492
+    - detecting unbalanced parentheses, 484–485
+    - evaluating algebraic expressions, 487–490, 540
+    - evaluating reverse Polish notation, 540, 484–485
+    - as postorder traversal of binary tree, 540
+  - as arrays, 482
+  - defined, 476
+  - depth-first search, 542–543
+  - efficiency, 484
+  - implementing, 479–482
+  - LIFO order, 476, 478–479
+  - as linked lists, 479–482
+  - operations, 476
+    - pop function, 476, 480–481
+    - push function, 476–477, 480–481
+  - sample programs, 478–479, 480–482, 486–487
+  - templates, 476
+  - uses, 477–478
+  - vs. queues, 477
+- stack fault, 368
+- \<string> library, A-11
+- stack-based calculator, 485–487, 540
+- stack.cpp, 481
+- stackdemo.cpp, 481–482
+- stack.h, 480–481
+- Stallman, Richard, 329–330
+- standard code libraries, 9, 260, A-8–A-11
+- standards organizations, 7
+- state, of class objects, 292
+- static cast (reserved word), 42, A-2
+- stepwise refinement, 156–163
+- stod function, 273
+- stoi function, 273
+- storage, secondary, 3, 4, 4f
+- storyboards, 117–119
+- str function, 273
+- strcat function, 239, 239t
+- strcmp function, 239t
+- strcpy function, 239, 239t
+- stream(s), 259–287
+  - file, 260–272. See also file streams
+  - string, 273–274
+  - stream classes, inheritance hierarchy of, 335–336, 335f, 336f, 352
+  - stream input/output, 11
+- street address program, 250–256
+- string(s), 12, 51–56, 52–54, 55t, 235–239
+  - building, 54, 55t
+  - C, 236–239
+  - converting to/from C++, 236–239, 261
+  - functions, 239t
+  - null terminator, 236–237
+  - working with, 238–239
+  - char type, 235–237
+  - command line arguments, 274–281
+  - comparing, 66–70
+  - concatenation, 52, 54, 54f
+  - operator overloading, 422–430. See also operator overloading
+  - converting floating-point numbers to, 273–274
+  - converting integers to, 273–274
+  - definition, 51
+  - initializing, 237
+  - length of, 52–53
+  - lexicographic order of, 69–70
+  - modifying characters, 237
+  - object-oriented programming, 290
+  - operators, 55t
+  - as options vs. file names, 274
+  - parsing and formatting, 273–274
+  - position number, 53–54
+  - priority queues, 554–556
+  - reading from console, 52
+  - recursion, 372–373
+  - stream, 273–274
+  - substrings, 53–54
+    - extracting, 53–54, 265–269, 279
+    - recursion, 372–373
+  - Unicode, 56, 272, 505, A-5, A-7
+  - string class, 235, 238–239, 290
+    - constructors, 305, 430–432, 433. See also constructors
+    - destructors, 432–433, 437
+  - string functions, 52–54, 55t
+  - string input, 52
+  - \<string> library, 51, A-8–A-9
+  - string literal, 51–52, 236, 237
+    - backslash inside, 261
+    - file name as, 261
+  - string streams, 273–274. See also file streams
+  - string type, 51
+  - String&& type, 444
+  - string variables, 51–52
+    - copy constructors, 437–440
+    - name inside, 261
+- strlen function, 236–237, 239t
+- Stroustrup, Bjarne, 6, 6f
+- \<strstream> library, A-9–A-10
+- struct (reserved word), 250, A-2
+- structures, 250–256
+  - arrays, 252–253, 252f, 253f
+  - assigning values, 251–252
+  - comparing, 252
+  - defining, 250–251
+  - dot notation, 251, 253, 255
+  - dynamic memory allocation, 254–255, 256
+  - functions and, 252
+  - nested, 253–254
+  - pointers, 254–256, 254f, 255f
+  - return values, 252
+  - shared information, 255–256
+  - syntax, 251
+  - uses, 250
+- stub, 162–163
+- style guide. See C++ language coding guidelines
+- substitution principle, 335
+- substr function, 53–54, 238, 273, 290
+- substrings, 53–54
+  - extracting, 53–54, 265–269, 279
+  - recursion, 372–373
+- subtraction, 36
+- subtraction operator (−), 36, A-4
+- subtrees, 521, 523
+  - heaps, 558, 567–569
+  - traversing, 538–544. See also tree(s), traversal
+- sum
+  - elements in array, 186–187, 194–195
+  - inputs, 119
+- sum and average value algorithm
+  - for arrays, 186–187
+  - with loops, 119
+- switch (reserved word), A-2
+- switch statements, 75–76
+- symmetric bounds, 110

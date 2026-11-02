@@ -1,0 +1,48 @@
+# P8.17 Write a program that edits an image file, turning it into grayscale.
+
+![](bbox=[0.35, 0.16, 0.75, 0.31])
+
+© Cay Horstmann.
+
+Replace each pixel with a pixel that has the same grayness level for the blue, green, and red component. The grayness level is computed by adding 30 percent of the red level, 59 percent of the green level, and 11 percent of the blue level. (The color-sensing cone cells in the human eye differ in their sensitivity for red, green, and blue light.)
+
+# P8.18 Junk mail.
+
+Write a program that reads in two files: a template and a database. The template file contains text and tags. The tags have the form [1] [2] [3]... and need to be replaced with the first, second, third,... field in the current database record. Your program should print out copies of the template with the tag fields replaced with database entries.
+
+A typical database looks like this:
+
+```
+Mr. [Harry|Morgan]1105 Torre Ave. [Cupertino|CA]95014
+Dr. [John|Lee]702 Ninth Street Apt. 4[San Jose|CA]95109
+Miss [Evelyn|Garcia]1101 S. University Place[Ann Arbor|MI]48105
+```
+
+And here is a typical template:
+
+```
+To:
+[1] [2] [3]
+[4]
+[5], [6] [7]
+
+Dear [1] [3]:
+
+You and the [3] family may be the lucky winners of $10,000,000 in the C++ compiler clearinghouse sweepstakes! . . .
+```
+
+# P8.19
+
+Write a program that manipulates three database files. The first file contains the names and telephone numbers of a group of people. The second file contains the names and Social Security numbers of a group of people. The third file contains the Social Security numbers and annual income of a group of people. The groups of people should overlap but need not be completely identical. Your program should ask the user for a telephone number and then print the name, Social Security number, and annual income, if it can determine that information.
+
+# P8.20 Write a program that prints out a student grade report. There is a file, classes.txt, that contains the names of all classes taught at a college, such as
+
+```
+classes.txt
+CSC1
+CSC2
+CSC46
+CSC151
+MTH121
+...
+```

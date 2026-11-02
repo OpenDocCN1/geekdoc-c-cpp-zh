@@ -1,0 +1,289 @@
+
+- copy constructors, 437–442. See also constructors
+  - Big 3 memory management functions, 440–441
+  - default, 438
+  - function arguments, 440
+  - return values, 440
+  - vs. reference parameters, 440, 441–442
+  - when to use, 438
+- copying algorithm
+  - for arrays, 186
+  - for vectors, 217
+- cos function, 39t
+- count function, 498, 499
+- count-controlled loops, 106, 124
+- counter++, 36
+- counter--, 36
+- counters, in member functions, 325–326
+- counting matches
+  - for arrays, 187
+  - for loops, 120
+- cout <<, 12, 13, 13f. See also output
+  - random access, 281
+  - stream files, 262
+- CPU (central processing unit), 3, 3t, 4, 4f
+  - microprocessors and, 174–175
+- <cstdlib> library, A–8
+- c_str function, 237, 261
+- <ctime> library, A–8
+- cube, volume calculation, 147–150
+- cube.cpp, 145, 322
+- cube.h, 322
+- cubic time, 400. See also running time
+
+### D
+- dangling else, 79
+- dangling pointers, 242
+- data members, of class objects, 292–294, 293f
+- data, private
+  - accessing with public interface, 293–299, 303, 339, 341
+  - inheritance, 339, 341
+- databases
+  - privacy concerns, 286
+  - relational model, 286
+- De Morgan's Law, 89–90
+- debugging, 84, 101
+  - recursive functions, 367–368
+  - worked example, 152
+- decision trees, 524. See also tree(s): binary
+- decisions, 59–94
+  - comparing numbers and strings, 66–72
+  - if statements, 60–94. See also if statements
+  - with multiple alternatives, 73–76, 73t
+  - nested, 76–82. See also nested branches
+  - test cases, 83–85
+- declarations, 150
+  - member functions, 295–296
+- decrement operator (--), 36, A–3
+  - overloading, 427–428. See also operator overloading
+  - prefix form, 427
+- default (reserved word), A–1, 76
+- default constructors, 305, 306, 431–432
+  - copy constructors and, 438
+- default floating-point format, 270
+- default float manipulator, 271t
+- Defense Advanced Research Projects Agency (DARPA), 93
+- definite loops, 106
+- delete operator, 240, 323, 432–433, 437, 440–441, 442, 443, A–3
+  - reserved word, A–1
+- delete[] operator, 240
+- erasing list nodes, 466
+- delimiters, 31–32
+- demo.cpp, 336, 344, 351
+- depth-first search, 542–543
+- dereference and access member, A–3
+- dereferencing (indirection) operator (*), 225, A–3
+- derived class. See inheritance, derived class
+- descendants, 521. See also tree nodes
+- design patterns, 541
+- destructors, 432–433, 437. See also memory allocation
+  - alternatives to, 442
+  - Big 3 memory management functions, 440–441
+  - defining, 442
+  - virtual, 443
+  - vs. reference parameters, 440, 441–442
+  - when to use, 442
+- Deutsch, L. Peter, 377
+- diagrams. See also drawing
+  - classes, 316
+  - pointer, 246–249
+  - syntax, 380–381
+- dice.cpp, 135
+- die toss simulation, 135–136
+- Difference Engine, 418
+- digital piracy, 138
+- directories, 10
+- directory trees, 522. See also tree(s)
+- display
+  - escape sequences and, 13–14
+  - of literals, 13–14
+  - of values, 12, 13f
+- division, 36–37
+  - common errors, 39–40
+- division operator (/), 36, 39–40, A–3
+- do (reserved word), A–1
+- do loops, 111–112, 124. See also loop(s)
+- dongles, 138
+- dot notation, 52–53
+  - member functions, 53, 296, 301, 323
+  - streams, 260
+  - structures, 251, 253, 255
+- dot operator (.), 52–53, 251, 255, 323, A–3
+- double (reserved word), A–1
+- double number type, 28–29, 28t, 34, 35, 35t
+  - comparisons, 69
+- double quotation marks ("). See quotation marks ('...'/"...")
+- double-black nodes, 549–551
+- doubleInv.cpp, 98
+- doubly-linked list, 455, 459
+- Doxygen tool, 146
+- drawing, See also diagrams; hand-tracing
+  - flowcharts, 81–83
+  - pictures, 246–249
+- duplication, in if statements, 65
+- dynamic memory allocation. See memory allocation, dynamic
+- dysfunctional computer systems, 72
+
+### E
+- editor, 7
+- eightqueens.cpp, 386–389
+- electronic voting machines, 314–315
+- elements. See array(s), elements; vector(s), elements
+- elevator floor simulation, 60–68, 90–92
+- elevator1.cpp, 62
+- elevator2.cpp, 91
+- else (reserved word), A–1
+- else branch, 61, 61f, 62, 75
+  - dangling, 79
+- embedded systems, 250
+- empty list, 523
+- empty string literal, 51
+- empty tree, 523
+- encapsulation, 291, 294, 309
+- encryption, 275–277
+  - algorithms, 277
+  - Caesar cipher, 275–276, 275f
+  - command line arguments, 275–277
+  - PGP, 277
+  - public key, 277
+  - RSA, 277
+- end function, 456–457, 460
+- endl (end of line marker), 12, 13f, 44
+- ENIAC, 5, 5f
+- Enigma machine, 260
+- epsilon (ε), in comparisons, 69
+- "equal exit cost" rule, 545–546, 547, 548–549, 551
+- equal sign (=), assignment operator, 50, 31f, 66, 68, 251–252, 434–437, A–4
+- equal signs (==)
+  - comparison operator, 425
+- equality relational operator, 66–70, 66t, 67f, 67t, 251–252, 515, A–4
+- equality testing, 66–70
+  - hash tables, 507
+- equals function, 460, 462
+- erase function
+  - key/value pairs, 500, 504
+  - linked lists, 457, 465–466
+- errors, 14–16. See also specific errors
+  - arithmetic, 39–43
+  - capitalization, 15–16
+  - checking for, 83, 84
+  - compile-time, 14–15
+  - hand-tracing revealing, 105
+  - logic, 15
+  - misspellings, 15–16
+  - off-by-one, 101
+  - roundoff, 35, 41–42
+  - floating-point numbers, 68–69
+  - run-time, 15
+  - syntax, 14–15
+  - vs. warnings, 69
+- escape character, 13–14, 261
+- escape sequences, 13–14, 261, A–5
+- eval.cpp, 382–383
+- even numbers, testing for with %, 37
+- event-controlled loops, 106, 124
+- exclamation point (!), not Boolean operator, 86, A–3
+- exclamation point and equal sign (!=)
+  - comparison operator, 425
+  - not equal operator, 86t
+- executable file, 9, 9f
+- execution time. See running time
+- expert-system program, 92
+- explicit (with constructor), 429
+- explicit parameters, member functions, 299–301, 300f
+- exponential time, 400
+- expression trees, 525, 540. See also tree(s): binary
+- expressions. See also arithmetic
+  - in syntax diagrams, 380–382
+- expression value function, 381–382
+- extensions, 9
+- extraction operator (>>), 44, 52, 265–269, 279, 282, A–4
+  - binary files, 282
+  - chaining, 425–426, 429
+  - as member function, 290
+  - overloading, 426
+  - reading characters, 266
+  - reading string from console, 52
+  - reading words, 265, 268
+  - vs. getline function, 268
+
+### F
+- factorial time, 400. See also running time
+- factors, in syntax diagrams, 380–382
+- factor value function, 381–382
+- fail function
+  - input validation for if statements, 91–92
+  - reading input from file, 261–262, 269
+- false (Boolean value), 86, 87f, 87t, 88, A–1
+- fib function, 374–377
+- fibdemo.cpp, 373–374
+- fibloop.cpp, 376
+- Fibonacci sequence, 373–377
+- fibtrace.cpp, 374–375
+- FIFO order, for queues, 476, 478–479, 554
+- fifoLife.cpp, 478–479
+- file(s), 9–10. See also specific types
+  - backing up, 10
+  - binary, 282
+  - executable, 9, 9f
+  - finding with recursion, 372
+  - header, 38, 39, 40–41, 41f, 45, 318–322
+  - multiple, compiling from, 318–322
+  - source, 9, 318–322, A–12
+  - splitting, 318
+- file extensions, 9
+- file folders and directories, 10, 10f
+- file names, 8, 9, 260–261. See also names/naming
+- file pointer, 281–282. See also pointer(s)
+- file streams. See also string streams
+  - C++ libraries and, 9, 260, A–8–A–11
+  - closing, 261
+  - failed state, 261–262, 269
+  - file name, 260
+  - get position, 281–282, 281f
+  - inheritance hierarchy, 335
+  - input, 260
+  - fail function, 91–92, 261–262, 269
+  - fstream variable, 260
+  - ifstream variable, 260
+  - reading, 261–262, 265–269, 278–281. See also reading input
+  - manipulators, 45–46, 47t, 270–271, 271t. See also manipulators
+  - opening, 260–261
+  - output, 260
+  - formatting, 45–47, 47t, 270–273, 279
+  - fstream variable, 260
+  - ofstream variable, 260
+  - writing, 270–273, 278–281. See also writing output
+  - processing example, 262–265, 263f
+  - public interface, 273
+  - put position, 281–282, 281f
+  - random access, 281–282
+  - reference parameters, 264
+  - syntax, 262
+  - types, 260
+- filling algorithm, for arrays, 186
+- find function, for maps, 500
+- first (data member), key/value pairs, 500
+- first in, first out (FIFO) order, for queues, 476, 478–479, 554
+- fixed manipulator, 45, 47t, 271, 271t
+- fix_heap function, 567, 569
+- flags, 12. See also Boolean variables
+- float (reserved word), 34, 35t, A–1
+- floating-point numbers, 28–29, 28t, 34, 34t–35t
+  - comparing, 68–69
+  - converting to integers, 37–38, 42, 428–429
+  - converting to strings, 273–274
+  - division, 36, 39–40
+  - fractional parts, 28, 37–38
+  - Pentium bug, 43
+  - random, 137
+  - rounding, 38
+  - roundoff errors, 35, 41–42, 68–69
+  - vs. integers, 28–29, 28t
+  - vs. truth values, 88
+- floor tiling simulation, 21–22, 47–48
+- flowcharts, 81–83
+  - avoiding spaghetti code, 82–83
+  - Boolean operators, 87f
+  - constructing, 81–83
+  - elements of, 81, 81f

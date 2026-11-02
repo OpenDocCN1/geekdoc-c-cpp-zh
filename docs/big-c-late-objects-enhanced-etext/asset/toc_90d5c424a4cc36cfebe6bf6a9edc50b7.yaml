@@ -1,0 +1,44 @@
+level_changes:
+- line: 5890
+  before: 1
+  after: 4
+- line: 21428
+  before: 1
+  after: 4
+- line: 492
+  before: 2
+  after: 3
+- line: 543
+  before: 2
+  after: 3
+- line: 655
+  before: 2
+  after: 3
+- line: 477
+  before: 2
+  after: 3
+- line: 529
+  before: 2
+  after: 3
+- line: 585
+  before: 2
+  after: 4
+- line: 613
+  before: 2
+  after: 4
+- line: 637
+  before: 2
+  after: 4
+text_changes:
+- line: 4048
+  before: Programming Tip 3.7
+  after: 编程提示 3.7
+- line: 4070
+  before: 3.7 Boolean Variables and Operators
+  after: 3.7 布尔变量与运算符
+- line: 4156
+  before: Figure 8 Boolean Truth Tables
+  after: 图8 布尔真值表
+- line: 1450
+  before: 表 2 C++ 中的数字字面量
+  after: 表 3 C++ 中的变量名

@@ -231,6 +231,7 @@
 +   [Visual C# Express 入门指南：计算机编程教程](docs/beginning-visual-c-express-a-computer-programming-tutorial/README.md)
 +   [Windows 8 应用开发入门指南](docs/beginning-windows-8-application-development/README.md)
 +   [超越 C++ 标准库：Boost 入门指南](docs/beyond-the-c-standard-library-an-introduction-to-boost/README.md)
++   [Big C++：后期对象，增强电子版](docs/big-c-late-objects-enhanced-etext/README.md)
 +   [Big Java：后期对象](docs/big-java-late-objects/README.md)
 +   [Objective-C 入门指南](docs/big-ranch-need-guides-objective-c/README.md)
 +   [生物学与计算机科学交叉领域的生物信息学挑战：弥合差距](docs/bioinformatics-challenges-at-the-interface-of-biology-and-co/README.md)
