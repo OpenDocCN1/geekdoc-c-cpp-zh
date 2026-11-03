@@ -1,0 +1,36 @@
+First the program compares a[0] to a[1], then a[1] to a[2], then a[2] to a[3], and so on until it completes the pass by comparing a[8] to a[9]. Although there are 10 elements, only nine comparisons are performed. Because of the way the successive comparisons are made, a large value may move down the array many positions on a single pass, but a small value may move up only one position.
+
+On the first pass, the largest value is guaranteed to sink to the bottom element of the array, a[9]. On the second pass, the second-largest value is guaranteed to sink to a[8]. On the ninth pass, the ninth-largest value sinks to a[1]. This leaves the smallest value in a[0], so only nine passes of the array are needed to sort the array, even though there are ten elements.
+
+The sorting is performed by the nested for loops (lines 21–34). If a swap is necessary, it's performed by the three assignments
+
+```
+hold = a[i];
+a[i] = a[i + 1];
+a[i + 1] = hold;
+```
+
+where the extra variable hold temporarily stores one of the two values being swapped. The swap cannot be performed with only the two assignments
+
+```
+a[i] = a[i + 1];
+a[i + 1] = a[i];
+```
+
+If, for example, a[i] is 7 and a[i + 1] is 5, after the first assignment both values will be 5 and the value 7 will be lost—hence the need for the extra variable hold.
+
+The chief virtue of the bubble sort is that it's easy to program. However, it runs slowly because every exchange moves an element only one position closer to its final destination. This becomes apparent when sorting large arrays. In the exercises, we'll develop more efficient versions of the bubble sort. Far more efficient sorts than the bubble sort have been developed. We'll investigate other algorithms in Appendix D. More advanced courses investigate sorting and searching in greater depth.
+
+# 6.9 Case Study: Computing Mean, Median and Mode Using Arrays
+
+We now consider a larger example. Computers are commonly used for survey data analysis to compile and analyze the results of surveys and opinion polls. Figure 6.16 uses array response initialized with 99 responses to a survey. Each response is a number from 1 to 9. The program computes the mean, median and mode of the 99 values. Figure 6.17 contains a sample run of this program. This example includes most of the common manipulations usually required in array problems, including passing arrays to functions.
+
+```
+1 // Fig. 6.16: fig06_16.c
+2 // Survey data analysis with arrays:
+3 // computing the mean, median and mode of the data.
+4 #include <stdio.h>
+5 #define SIZE 99
+```
+
+Fig. 6.16 | Survey data analysis with arrays: computing the mean, median and mode of the data. (Part 1 of 4.)

@@ -1,0 +1,272 @@
+
+- business publications 66
+- byte 36, 37, 448
+- C
+- C compiler 72
+- C development environment 47
+- C Environment 47
+- C language 41
+- C preprocessor 48, 73, 551
+- C program and sample execution for the class average problem with counter-controlled iteration 112
+- C program and sample execution for the class average problem with sentinel-controlled iteration 117
+- C program and sample executions for examination results problem 122
+- C Resource Center 48
+- C standard document (INCITS/ISO/IEC 9899:1999) 42
+- C Standard Library 43, 47, 190, 206, 316
+- C# programming language 44
+- C++ 198
+- C++ Standard Library 586
+  - `<string>` file 627
+  - class template vector 609
+  - header files 586
+  - header location 641
+  - string class 627
+- C++11
+  - default type arguments for function template type parameters 914
+  - delegating constructor 674
+  - in-class initializer 663
+  - list initializer 674
+  - noexcept 892
+  - override 809
+  - unique_ptr class template 896, 899
+- C11 957
+- C11 headers 970
+- C95 958
+- C95 headers 958
+- C99 42, 957
+- C99 headers 958
+- calculations 37, 79, 89
+- call a function 191, 194, 626
+- call-by-reference 442
+- call-by-value 442
+- caller 191
+- calling function (caller) 191, 624, 632
+- calloc 575
+- camel case 623
+- capital letter 77
+- Carbon Footprint Calculator 69
+  - Test Drive 69
+- card games 351
+- Card Shuffling and Dealing 335, 338, 443, 713, 714
+- caret (^) 427
+- carriage return ('\r') 309
+- carry bit 931
+- cascading member function calls 696, 697, 699
+- cascading stream insertion operations 585
+- case label 159, 160, 216
+- case sensitive 77, 113
+- casino 210
+- `<cassert>` header 588
+- cast 555
+  - downcast 807
+- cast operator 117, 118, 200, 749, 750
+  - (float) 118
+- cast operator function 749
+- catch a base class object 899
+- catch all exceptions 900
+- catch block 614
+- catch clause (or handler) 887, 891
+- catch handler 885
+- catch related errors 893
+- catch(...) 900
+- Catching All Exceptions 905
+- Catching Derived-Class Exceptions 905
+- cbrt function 192
+- `<cctype>` header 587
+- ceil function 192
+- Celsius 434
+- central processing unit (CPU) 37
+- cerr (standard error stream) 650, 847, 848
+- `<cfloat>` header 588
+- chaining stream insertion operations 585
+- char * 415
+- char ** 374
+- char primitive type 157, 200, 367
+- CHAR_BIT symbolic constant 451
+- char16_t 847
+- char32_t 847
+- character 37
+- character and string conversion specifiers 415
+- character array 258, 259
+- character constant 317, 367, 415
+- character handling library 368, 369
+- character presentation 588
+- character set 37, 98, 158, 367
+- character string 74, 249
+- check if a string is a palindrome 227
+- check protection 406
+- checkerboard 98, 142
+- chess 301
+- child 533
+- chrono library 712
+- cin (standard input stream) 584, 847, 848
+- cin.clear 871
+- cin.eof 851, 871
+- cin.get function 852
+- cin.tie function 872
+- circumference of a circle 143
+- class 45, 586, 605, 606
+  - attribute 629
+  - client-code programmer 646
+  - constructor 634
+  - data member 629
+  - default constructor 635, 637
+  - define a constructor 636
+  - define a member function 622
+  - implementation programmer 646
+  - instance of 630
+  - instance variable 46
+  - interface 642
+  - interface described by function prototypes 642
+  - member function 622
+  - member-function implementations in a separate source-code file 643
+  - naming convention 623
+  - object of 630
+  - public services 642
+  - services 633
+- class averaging problem 111, 116, 117
+- class definition 623
+- class development 736
+- class diagram (UML) 625
+- class hierarchy 766, 814, 816
+- class-implementation programmer 646
+- class keyword 603, 908
+- class library 794
+- class scope 664, 667
+- class-scope variable is hidden 668
+- class template 907
+  - auto_ptr 896
+  - definition 907
+  - scope 910
+  - specialization 907
+  - Stack 908, 910
+- class-average problem with counter-controlled iteration 112
+- class-average program with sentinel-controlled iteration 117
+- Classes 87
+  - Array 736
+  - Complex 758
+  - exception 883
+  - HugeInt 760
+  - invalid_argument 899
+  - out_of_range exception class 761
+  - Polynomial 763
+  - RationalNumber 763
+  - runtime_error 883, 891
+  - string 627
+  - unique_ptr 896
+  - vector 608
+- classic stream libraries 846
+- clear function of ios_base 871
+- client code 801
+- client-code programmer 646
+- client of a class 606
+- client of an object 633
+- cstring header 588
+- clock 210
+- clog (standard error buffered) 847, 848
+- cloud computing 65
+- cmath header 587
+- coefficient 763
+- coercion of arguments 199
+- coin tossing 239
+- colon (:) 689
+- column 278
+- combining Class Time and Class Date exercise 711
+- comma operator (,) 150, 225
+- comma-separated list 150
+- comment 73, 583
+- commission 138, 297
+- CommissionEmployee class header 824
+- CommissionEmployee class implementation file 825
+- CommissionEmployee class represents an employee paid a percentage of gross sales 769
+- CommissionEmployee class test program 772
+- CommissionEmployee class uses member functions to manipulate its private data 787
+- Common Programming Errors overview 28
+- Communications of the ACM 103
+- commutative operation 748
+- comparing strings 381
+- comparison expressions 327
+- comparison function 48
+- comparison operator 485
+- compiler 7
+- compile phase 48
+- compile-time error 48
+- compiler 40, 48, 72, 73, 74
+- compiling
+  - multiple-source-file program 647
+- complement operator (~) 449
+- complex algorithm 104
+- _Complex 965
+- complex class 710, 758, 880
+  - exercise 710
+  - member-function definitions 758
+- complex numbers 710, 758, 964
+- complex.h 965
+- components (software) 43, 44
+- composition 667, 686, 690, 765, 768
+  - as an Alternative to Inheritance 797
+- compound interest 153, 183
+- compound literal 960
+- compound statement 109
+- computer dump 361
+- computer program 35
+- computer simulator 360
+- Computer-Assisted Instruction (CAI) 244, 245
+- Computer-Assisted Instruction (CAI): Difficulty Levels 245
+- Computer-Assisted Instruction (CAI): Monitoring Student Performance 244
+- Computer-Assisted Instruction (CAI): Reducing Student Fatigue 244
+- Computer-Assisted Instruction (CAI): Varying the Types of Problems 245
+- Computerization of Health Records 471, 658
+- computers in education 244
+- computing the sum of the elements of an array 253
+- concatenate stream insertion operations 585
+- concatenating strings 381
+- concrete class 815
+- concrete derived class 820
+- condition 85, 164
+- conditional compilation 551, 555
+- conditional execution of preprocessor directives 551
+- conditional expression 107
+- conditional operator (?:) 107, 127
+- conditional symbol 550
+- consistent state 864
+- const 316, 319, 323, 334, 684, 725
+- const keyword 265, 589
+- const member function 624, 684
+- const member function on a const object 685
+- const member function on a non-const object 685
+- const object 685
+- const objects and const member functions 685
+- const pointer 609
+- const qualifier 315
+- const qualifier before type specifier in parameter declaration 593
+- const type qualifier 266
+- const version of operator[] 747
+- constant 544
+- constant integral expression 161
+- constant pointer 320, 330
+- constant pointer to constant data 316, 320
+- constant pointer to non-constant data 316, 319, 320
+- constant reference 746
+- constant reference parameter 593
+- constant run time 937
+- constant string 334
+- constructed inside out 691
+- constructor 634
+  - call order 677
+  - conversion 749, 751
+  - copy 744
+  - default 637
+  - default arguments 672
+  - defining 636
+  - explicit 751
+  - function prototype 643
+  - in a UML class diagram 638
+  - inherit 792
+  - naming 636
+  - parameter list 686
+  - single argument 751, 752
+- constructors
+  - inherit from base class 792
+- constructors and destructors called automatically 675
+- constructors cannot be virtual 814

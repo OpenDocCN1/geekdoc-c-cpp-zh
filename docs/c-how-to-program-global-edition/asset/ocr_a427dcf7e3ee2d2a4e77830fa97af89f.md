@@ -1,0 +1,36 @@
+# Common Programming Error 3.8
+
+Attempting to use the increment or decrement operator on an expression other than a simple variable name is a syntax error, e.g., writing ++(x + 1).
+
+# Error-Prevention Tip 3.7
+
+C generally does not specify the order in which an operator's operands will be evaluated (although we'll see exceptions to this for a few operators in Chapter 4). Therefore you should use increment or decrement operators only in statements in which one variable is incremented or decremented by itself.
+
+Figure 3.14 lists the precedence and associativity of the operators introduced to this point. The operators are shown top to bottom in decreasing order of precedence. The second column indicates the associativity of the operators at each level of precedence. Notice that the conditional operator (?:), the unary operators increment (++), decrement (--), plus (+), minus (-), and casts, and the assignment operators =, +=, -=, *=, /= and %= associate from right to left. The third column names the various groups of operators. All other operators in Fig. 3.14 associate from left to right.
+
+| Operators | Associativity | Type |
+|---|---|---|
+| ++ (postfix) -- (postfix) | right to left | postfix |
+| + - (type) ++ (prefix) -- (prefix) | right to left | unary |
+| * / % | left to right | multiplicative |
+| + - | left to right | additive |
+| < <= > >= | left to right | relational |
+| == != | left to right | equality |
+| ?: | right to left | conditional |
+| = += -= *= /= %= | right to left | assignment |
+
+Fig. 3.14 | Precedence and associativity of the operators encountered so far in the text.
+
+# 3.13 Secure C Programming
+
+# Arithmetic Overflow
+
+Figure 2.5 presented an addition program which calculated the sum of two int values (line 18) with the statement
+
+```
+sum = integer1 + integer2; // assign total to sum
+```
+
+Even this simple statement has a potential problem—adding the integers could result in a value that's too large to store in an int variable. This is known as arithmetic overflow and can cause undefined behavior, possibly leaving a system open to attack.
+
+The platform-specific maximum and minimum values that can be stored in an int variable are represented by the constants INT_MAX and INT_MIN, respectively, which are defined in the header <limits.h>. There are similar constants for the other integral types that we'll be introducing in Chapter 4. You can see your platform's values for these constants by opening the header <limits.h> in a text editor.

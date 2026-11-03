@@ -1,0 +1,122 @@
+
+Function **strncmp** (p. 383) is equivalent to **strcmp**, except that **strncmp** compares a specified number of characters. If one of the strings is shorter than the number of characters specified, **strncmp** compares characters until the null character in the shorter string is encountered.
+
+### Section 8.8 Search Functions of the String-Handling Library
+- Function **strchr** (p. 386) searches for the first occurrence of a character in a string. If the character is found, **strchr** returns a pointer to the character in the string; otherwise, **strchr** returns NULL.
+- Function **strcspn** (p. 387) determines the length of the initial part of the string in its first argument that does not contain any characters from the string in its second argument. The function returns the length of the segment.
+- Function **strpbrk** (p. 387) searches for the first occurrence in its first argument of any character in its second argument. If a character from the second argument is found, **strpbrk** returns a pointer to the character; otherwise, **strpbrk** returns NULL.
+- Function **strrchr** (p. 388) searches for the last occurrence of a character in a string. If the character is found, **strrchr** returns a pointer to the character in the string; otherwise, **strrchr** returns NULL.
+- Function **strspn** (p. 389) determines the length of the initial part of the string in its first argument that contains only characters from the string in its second argument. The function returns the length of the segment.
+- Function **strstr** (p. 389) searches for the first occurrence of its second string argument in its first string argument. If the second string is found in the first string, a pointer to the location of the string in the first argument is returned.
+- A sequence of calls to **strtok** (p. 390) breaks the first string **s1** into tokens (p. 390) that are separated by characters contained in the second string **s2**. The first call contains **s1** as the first argument, and subsequent calls to continue tokenizing the same string contain NULL as the first argument. A pointer to the current token is returned by each call. If there are no more tokens when the function is called, a NULL pointer is returned.
+
+### Section 8.9 Memory Functions of the String-Handling Library
+- Function **memcpy** (p. 392) copies a specified number of bytes from the object to which its second argument points into the object to which its first argument points. The function can receive a pointer to any type of object.
+- Function **memmove** (p. 393) copies a specified number of bytes from the object pointed to by its second argument to the object pointed to by its first argument. Copying is accomplished as if the bytes were copied from the second argument to a temporary array and then copied from the temporary array to the first argument.
+- Function **memcmp** (p. 394) compares the specified number of bytes of its first and second arguments.
+- Function **memchr** (p. 394) searches for the first occurrence of a byte, represented as `unsigned char`, in the specified number of bytes of an object. If the byte is found, a pointer to the byte is returned; otherwise, a NULL pointer is returned.
+- Function **memset** (p. 395) copies its second argument, treated as an `unsigned char`, to a specified number of bytes of the object pointed to by its first argument.
+
+### Section 8.10 Other Functions of the String-Handling Library
+- Function **strerror** (p. 396) maps an integer error number into a full text string in a locale-specific manner. A pointer to the string is returned.
+- Function **strlen** (p. 396) takes a string as an argument and returns the number of characters in the string—the terminating null character is not included in the length of the string.
+
+## Self-Review Exercises
+
+8.1    Write a single statement to accomplish each of the following. Assume that variables c (which stores a character), x, y and z are of type int, variables d, e and f are of type double, variable ptr is of type char * and arrays s1[100] and s2[100] are of type char.
+- a) Convert the character stored in variable c to an uppercase letter. Assign the result to variable c.
+- b) Determine whether the value of variable c is a digit. Use the conditional operator as shown in Figs. 8.2–8.4 to print " is a " or " is not a " when the result is displayed.
+- c) Determine whether the value of variable c is a control character. Use the conditional operator to print " is a " or " is not a " when the result is displayed.
+- d) Read a line of text into array s1 from the keyboard. Do not use scanf.
+- e) Print the line of text stored in array s1. Do not use printf.
+- f) Assign ptr the location of the last occurrence of c in s1.
+- g) Print the value of variable c. Do not use printf.
+- h) Determine whether the value of c is a letter. Use the conditional operator to print " is a " or " is not a " when the result is displayed.
+- i) Read a character from the keyboard and store the character in variable c.
+- j) Assign ptr the location of the first occurrence of s2 in s1.
+- k) Determine whether the value of variable c is a printing character. Use the conditional operator to print " is a " or " is not a " when the result is displayed.
+- l) Read three double values into variables d, e and f from the string "1.27 10.3 9.432".
+- m) Copy the string stored in array s2 into array s1.
+- n) Assign ptr the location of the first occurrence in s1 of any character from s2.
+- o) Compare the string in s1 with the string in s2. Print the result.
+- p) Assign ptr the location of the first occurrence of c in s1.
+- q) Use sprintf to print the values of integer variables x, y and z into array s1. Each value should be printed with a field width of 7.
+- r) Append 10 characters from the string in s2 to the string in s1.
+- s) Determine the length of the string in s1. Print the result.
+- t) Assign ptr to the location of the first token in s2. Tokens in the string s2 are separated by commas (,).
+
+8.2    Show two different ways to initialize character array vowel with the string of vowels "AEIOU".
+
+8.3    What, if anything, prints when each of the following C statements is performed? If the statement contains an error, describe the error and indicate how to correct it. Assume the following variable definitions:
+```
+char s1[50] = "jack", s2[50] = "jill", s3[50];
+```
+- a) `printf("%c%s", toupper(s1[0]), &s1[1]);`
+- b) `printf("%s", strcpy(s3, s2));`
+- c) `printf("%s", strcat(strcat(strcpy(s3, s1), " and "), s2));`
+- d) `printf("%u", strlen(s1) + strlen(s2));`
+- e) `printf("%u", strlen(s3));` // using s3 after part (c) executes
+
+8.4    Find the error in each of the following program segments and explain how to correct it:
+- a) `char s[10];`
+  `strcpy(s, "hello", 5);`
+  `printf("%s\n", s);`
+- b) `printf("%s", 'a');`
+- c) `char s[12];`
+  `strcpy(s, "Welcome Home");`
+```
+d) if (strcmp(string1, string2)) {
+       puts("The strings are equal");
+   }
+```
+
+## Answers to Self-Review Exercises
+
+### 8.1
+- a) c = toupper(c);
+- b) printf("%c %sdigit\n", c, isdigit(c) ? " is a " : " is not a ");
+- c) printf("%c %scontrol character\n",
+            c, iscntrl(c) ? " is a " : " is not a ");
+- d) fgets(s1, 100, stdin);
+- e) puts(s1);
+- f) ptr = strrchr(s1, c);
+- g) putchar(c);
+- h) printf("%c %sletter\n", c, isalpha(c) ? " is a " : " is not a ");
+- i) c = getchar();
+- j) ptr = strstr(s1, s2);
+- k) printf("%c %sprinting character\n",
+            c, isprint(c) ? " is a " : " is not a ");
+- l) sscanf("1.27 10.3 9.432", "%f%f%f", &d, &e, &f);
+- m) strcpy(s1, s2);
+- n) ptr = strpbrk(s1, s2);
+- o) printf("strcmp(s1, s2) = %d\n", strcmp(s1, s2));
+- p) ptr = strchr(s1, c);
+- q) sprintf(s1, "%7d%7d%7d", x, y, z);
+- r) strncat(s1, s2, 10);
+- s) printf("strlen(s1) = %u\n", strlen(s1));
+- t) ptr = strtok(s2, " ");
+
+### 8.2
+- char vowel[] = "AEIOU";
+- char vowel[] = { 'A', 'E', 'I', 'O', 'U', '\0' };
+
+### 8.3
+- a) Jack
+- b) jill
+- c) Jack and jill
+- d) 8
+- e) 13
+
+### 8.4
+- a) Error: Function strncpy does not write a terminating null character to array s, because its third argument is equal to the length of the string "hello".
+  Correction: Make the third argument of strncpy 6, or assign '\0' to s[5].
+- b) Error: Attempting to print a character constant as a string.
+  Correction: Use %c to output the character, or replace 'a' with "a".
+- c) Error: Character array s is not large enough to store the terminating null character.
+  Correction: Declare the array with more elements.
+- d) Error: Function strcmp returns 0 if the strings are equal; therefore, the condition in the if statement is false, and the printf will not be executed.
+  Correction: Compare the result of strcmp with 0 in the condition.
+
+## Exercises
+
+8.5 (Character Testing) Write a program that inputs a character from the keyboard and tests it with each of the functions in the character-handling library. The program should print the value returned by each function.

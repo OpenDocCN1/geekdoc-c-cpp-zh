@@ -1,0 +1,38 @@
++   2. Inputting specific characters from an input stream.
++   3. Skipping specific characters in the input stream.
+
+# 9.11.1 scanf Syntax
+
+Function scanf is written in the following form:
+
+```
+scanf(format-control-string, other-arguments);
+```
+
+format-control-string describes the formats of the input, and other-arguments are pointers to variables in which the input will be stored.
+
+> **Good Programming Practice 9.1**
+> 
+> *When inputting data, prompt the user for one data item or a few data items at a time. Avoid asking the user to enter many data items in response to a single prompt.*
+
+> **Good Programming Practice 9.2**
+> 
+> *Always consider what the user and your program will do when (not if) incorrect data is entered—for example, a value for an integer that’s nonsensical in a program’s context, or a string with missing punctuation or spaces.*
+
+# 9.11.2 scanf Conversion Specifiers
+
+Figure 9.17 summarizes the conversion specifiers used to input all types of data. The remainder of this section provides programs that demonstrate reading data with the various scanf conversion specifiers. Note that the d and i conversion specifiers have different meanings for input with scanf, whereas they’re interchangeable for output with printf.
+
+| Conversion specifier | Description |
+|---|---|
+| *Integers* | |
+| d | Read an optionally signed decimal integer. The corresponding argument is a pointer to an int. |
+| i | Read an optionally signed decimal, octal or hexadecimal integer. The corresponding argument is a pointer to an int. |
+| o | Read an octal integer. The corresponding argument is a pointer to an unsigned int. |
+| u | Read an unsigned decimal integer. The corresponding argument is a pointer to an unsigned int. |
+| x or X | Read a hexadecimal integer. The corresponding argument is a pointer to an unsigned int. |
+| h, l and ll | Place before any of the integer conversion specifiers to indicate that a short, long or long long integer is to be input, respectively. |
+| *Floating-point numbers* | |
+| e, E, f, g or G | Read a floating-point value. The corresponding argument is a pointer to a floating-point variable. |
+
+Fig. 9.17 | Conversion specifiers for scanf. (Part 1 of 2.)

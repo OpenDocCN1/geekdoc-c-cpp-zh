@@ -1,0 +1,16 @@
+# 12.6 Queues
+
+Another common data structure is the queue. A queue is similar to a checkout line in a grocery store—the first person in line is serviced first, and other customers enter the line only at the end and wait to be serviced. Queue nodes are removed only from the head of the queue and are inserted only at the tail of the queue. For this reason, a queue is referred to as a first-in, first-out (FIFO) data structure. The insert and remove operations are known as enqueue (pronounced “en-cue”) and dequeue (pronounced “dee-cue”), respectively.
+
+Queues have many applications in computer systems. For computers that have only a single processor, only one user at a time may be serviced. Entries for the other users are placed in a queue. Each entry gradually advances to the front of the queue as users receive service. The entry at the front of the queue is the next to receive service. Similarly, for today’s multicore systems, there could be more users than there are processors, so the users not currently running are placed in a queue until a currently busy processor becomes available. In Appendix E, we discuss multithreading. When a user’s work is divided into multiple threads capable of executing in parallel, there could be more threads than there are processors, so the threads not currently running need to be waiting in a queue.
+
+Queues are also used to support print spooling. A multiuser environment may have only a single printer. Many users may be generating outputs to be printed. If the printer is busy, other outputs may still be generated. These are spooled (just as sewing thread is wrapped around a spool until it’s needed) to disk where they wait in a queue until the printer becomes available.
+
+Information packets also wait in queues in computer networks. Each time a packet arrives at a network node, it must be routed to the next node on the network along the path to its final destination. The routing node routes one packet at a time, so additional packets are enqueued until the router can route them. Figure 12.12 illustrates a queue with several nodes. Note the pointers to the head of the queue and the tail of the queue.
+
+> Common Programming Error 12.6
+> Not setting the link in the last node of a queue to NULL can lead to runtime errors.
+
+Figure 12.13 (output in Fig. 12.14) performs queue manipulations. The program provides several options: insert a node in the queue (function enqueue), remove a node from the queue (function dequeue) and terminate the program.
+
+![](bbox=[0.22, 0.9, 0.8, 0.98])

@@ -1,0 +1,56 @@
+# 10.2
+
+a) False. A structure can contain variables of many data types.
+b) False. Unions cannot be compared, because there might be bytes of undefined data with different values in union variables that are otherwise identical.
+c) True.
+d) False. The members of separate structures can have the same names, but the members of the same structure must have unique names.
+e) False. Keyword typedef is used to define new names (synonyms) for previously defined data types.
+f) False. Structures are always passed to functions by value.
+g) True, because of alignment problems.
+
+# 10.3
+
+```
+struct part {
+    unsigned int partNumber;
+    char partName[25];
+};
+```
+
+a) struct part {
+    unsigned int partNumber;
+    char partName[25];
+};
+b) typedef struct part Part;
+c) Part a, b[10], *ptr;
+d) scanf("%d%24s", &a.partNumber, a.partName);
+e) b[3] = a;
+f) ptr = b;
+g) printf("%d %s\n", (ptr + 3)->partNumber, (ptr + 3)->partName);
+
+# 10.4
+
+a) The parentheses that should enclose *cPtr have been omitted, causing the order of evaluation of the expression to be incorrect. The expression should be cPtr->face or (*cPtr).face
+b) The array index has been omitted. The expression should be hearts[10].face
+c) A union can be initialized only with a value that has the same type as the union's first member.
+d) A semicolon is required to end a structure definition.
+e) Keyword struct was omitted from the variable declaration. The declaration should be struct person d;
+f) Variables of different structure types cannot be assigned to one another.
+
+# Exercises
+
+# 10.5
+
+Provide the definition for each of the following structures and unions:
+a) Structure inventory containing character array partName[30], integer partNumber, floating-point price, integer stock and integer reorder.
+b) Union data containing char c, short s, long b, float f and double d.
+c) A structure called address that contains character arrays streetAddress[25], city[20], state[3] and zipCode[6].
+d) Structure student that contains arrays firstName[15] and lastName[15] and variable homeAddress of type struct address from part (c).
+e) Structure test containing 16 bit fields with widths of 1 bit. The names of the bit fields are the letters a to p.
+
+# 10.6
+
+```
+struct customer {
+    char lastName[15];
+```

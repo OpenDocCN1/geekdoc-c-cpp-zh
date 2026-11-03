@@ -1,0 +1,54 @@
+```
+33 delete [] ptr; // release pointer-based array space
+34 } // end destructor
+35
+36 // return number of elements of Array
+37 size_t Array::getSize() const
+38 {
+39   return size; // number of elements in Array
+40 } // end function getSize
+41
+42 // overloaded assignment operator;
+43 // const return avoids: ( a1 = a2 ) = a3
+44 const Array &Array::operator=( const Array &right )
+45 {
+46   if ( &right != this ) // avoid self-assignment
+47   {
+48     // for Arrays of different sizes, deallocate original
+49     // left-side Array, then allocate new left-side Array
+50     if ( size != right.size )
+51     {
+52       delete [] ptr; // release space
+53       size = right.size; // resize this object
+54       ptr = new int[ size ]; // create space for Array copy
+55     } // end inner if
+56
+57     for ( size_t i = 0; i < size; ++i )
+58       ptr[ i ] = right.ptr[ i ]; // copy array into object
+59   } // end outer if
+60
+61   return *this; // enables x = y = z, for example
+62 } // end function operator=
+63
+64 // determine if two Arrays are equal and
+65 // return true, otherwise return false
+66 bool Array::operator==( const Array &right ) const
+67 {
+68   if ( size != right.size )
+69     return false; // arrays of different number of elements
+70
+71   for ( size_t i = 0; i < size; ++i )
+72     if ( ptr[ i ] != right.ptr[ i ] )
+73       return false; // Array contents are not equal
+74
+75   return true; // Arrays are equal
+76 } // end function operator==
+77
+78 // overloaded subscript operator for non-const Arrays;
+79 // reference return creates a modifiable lvalue
+80 int &Array::operator[]( int subscript )
+81 {
+82   // check for subscript out-of-range error
+83   if ( subscript < 0 || subscript >= size )
+84     throw out_of_range( "Subscript out of range" );
+```

@@ -1,0 +1,136 @@
++   - nothrow_t type 894
++   - nouns in a system specification 606
++   - nonupper-case stream manipulator 867, 868
++   - NULL 308, 330, 334, 477, 511, 518
++   - null character ('\0') 257, 318, 333, 367, 546, 855
++   - NULL pointer 375
++   - null-terminated string 850, 334
++   - Number Systems Appendix 923
++   - numeric codes 385
++   - numeric data type limits 588
+
+# O
+
++   - O(1) 937
++   - O(log n) time 951
++   - O(n) time 937
++   - O(n²) time 938, 941, 945
++   - object 43, 44
++   - object (or instance) 605
++   - object code 48, 646
++   - object leaves scope 675
++   - Object Management Group (OMG) 608
++   - object of a derived class 802, 805
++   - object of a derived class is instantiated 791
++   - object orientation 605
++   - object-oriented analysis and design (OOAD) 608, 607
++   - object-oriented design (OOD) 43, 605
++   - object-oriented language 606
++   - object-oriented programming (OOP) 60, 193, 582, 606, 608, 661, 765
++   - object program 75
++   - object's 'handle' pointer 835
++   - Objective-C 43, 60
++   - objects contain only data 667
++   - oct stream manipulator 856, 861, 865
++   - octal (base-8) number system 856, 861, 924
++   - octal number 185, 369, 376, 411, 850, 865
++   - off-by-one error 149
++   - offset 330, 490, 835
++   - "old-style" header files 586
++   - OMG (Object Management Group) 608
++   - one-dimensional array 316, 323, 335
++   - one-dimensional array problem 300
++   - one's complement 454, 931
+
++   - ones position 924
++   - OOAD (object-oriented analysis and design) 607, 608
++   - OOD (object-oriented design) 605
++   - OOP (object-oriented programming) 606, 608, 765
++   - open file 47
++   - open file table 475
++   - Open Handset Alliance 60
++   - Open source 59, 60
++   - operand 79, 358
++   - operating system 41, 59, 60
++   - operation (UML) 625
++   - operation in the UML 606, 625
++   - operations parameter in the UML 628
++   - operator keywords 720
++   - operator overloading 582, 605, 716, 845
++     - decrement operators 727
++     - increment operators 727
++   - operator precedence 88
++     - rules 82
++   - operator precedence chart 918
++   - operator sizeof when applied to an array name returns the number of bytes in the array 325
++   - operator void* member function 871
++   - operator! member function 726, 871
++   - operator!= 746
++   - operator() 757
++   - operator[]
++     - const version 747
++     - non-const version 747
++   - operator+ 720
++   - operator++ 727, 733
++   - operator++(int) 727
++   - operator+= 725, 743
++   - operator- 745
++   - operator-= 746
++   - operator-> 724, 743
++   - operators 124
++     - arrow member selection (->) 668
++     - delete 733
++     - dot (.) 625
++     - member selection (.) 668
++     - new 733
++     - scope resolution (::) 644
++     - stream insertion operator, << 585
++     - typeid 838
++     - unary scope resolution, :: 598
+
++   - optimizations on constants 684
++   - order 102, 103
++   - order of evaluation of operands 225
++   - order of exception handlers 905
++   - order of operands of operators 225
++   - orientation information 36
++   - orientation of stream settings 869
++   - OS X 60
++   - ostream class 847
++   - out-of-range array subscript 891
++   - out-of-range element 740
++   - out-of-range exception 747, 899
++   - erase/delete to prevent errors in GNU C++ 614
++   - out_of_range exception class 614
++   - outer block 216
++   - out-of-bounds array elements 288
++   - output a floating-point value 861
++   - output buffering 872
++   - output data items of built-in type 848
++   - output device 36
++   - output format of floating-point numbers 866
++   - output of char * variables 850
++   - output of characters 849
++   - output of floating-point values 850
++   - output of integers 850
++   - output of standard data types 849
++   - output of uppercase letters 850
++   - output to string in memory 587
++   - output unit 36
++   - oval symbol 104
++   - overflow 573, 891
++   - overflow_error exception 899
++   - overload the addition operator (+) 720
++   - overload unary operator ! 726
++   - overloaded [] operator 740
++   - overloaded << operator 726
++   - overloaded addition assignment operator (+=) 728
++   - overloaded assignment (=) operator 739, 745
++   - overloaded binary operators 721
++   - overloaded cast operator function 749
++   - overloaded constructors 792
++   - overloaded equality operator (==) 739, 746
++   - overloaded function 915
++   - overloaded function call operator () 752
++   - overloaded increment operator 728
++   - overloaded inequality operator 739, 746

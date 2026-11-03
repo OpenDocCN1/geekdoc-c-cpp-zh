@@ -1,0 +1,24 @@
+tion code, which specifies the operation to be performed. SML operation codes are summarized in Fig. 7.32.
+
+| Operation code | Meaning |
+|---|---|
+| *Input/output operations:* | |
+| `#define READ 10` | Read a word from the terminal into a specific location in memory. |
+| `#define WRITE 11` | Write a word from a specific location in memory to the terminal. |
+| *Load/store operations:* | |
+| `#define LOAD 20` | Load a word from a specific location in memory into the accumulator. |
+| `#define STORE 21` | Store a word from the accumulator into a specific location in memory. |
+| *Arithmetic operations:* | |
+| `#define ADD 30` | Add a word from a specific location in memory to the word in the accumulator (leave result in accumulator). |
+| `#define SUBTRACT 31` | Subtract a word from a specific location in memory from the word in the accumulator (leave result in accumulator). |
+| `#define DIVIDE 32` | Divide a word from a specific location in memory into the word in the accumulator (leave result in accumulator). |
+| `#define MULTIPLY 33` | Multiply a word from a specific location in memory by the word in the accumulator (leave result in accumulator). |
+| *Transfer-of-control operations:* | |
+| `#define BRANCH 40` | Branch to a specific location in memory. |
+| `#define BRANCHNEG 41` | Branch to a specific location in memory if the accumulator is negative. |
+| `#define BRANCHZERO 42` | Branch to a specific location in memory if the accumulator is zero. |
+| `#define HALT 43` | Halt—i.e., the program has completed its task. |
+
+Fig. 7.32 | Simpletron Machine Language (SML) operation codes.
+
+The last two digits of an SML instruction are the operand, which is the address of the memory location containing the word to which the operation applies. Now let's consider several simple SML programs. The following SML program reads two numbers from the keyboard, and computes and prints their sum. The instruction +1007 reads the first number from the keyboard and places it into location 07 (which has been initialized to zero). Then +1008 reads the next number into location 08. The load instruction, +2007, puts the first number into the accumulator, and the add instruction, +3008, adds the second number to the number in the accumulator. All SML arithmetic instructions leave their results in the accumulator. The store instruction, +2109, places the result back into memory location 09, from which the write instruction, +1109, takes the number and prints it (as a signed four-digit decimal number). The halt instruction, +4300, terminates execution.

@@ -1,0 +1,52 @@
+```
+// Fig. 18.13: fig18_13.cpp
+// Demonstrating an explicit constructor.
+#include <iostream>
+#include "Array.h"
+using namespace std;
+
+void outputArray( const Array & ); // prototype
+
+int main()
+{
+ Array integers1( 7 ); // 7-element Array
+ outputArray( integers1 ); // output Array integers1
+ outputArray( 3 ); // convert 3 to an Array and output Array's contents
+ outputArray( Array( 3 ) ); // explicit single-argument constructor call
+} // end main
+
+// print Array contents
+void outputArray( const Array &arrayToOutput )
+{
+ cout << "The Array received has " << arrayToOutput.getSize()
+ << " elements. The contents are:\n" << arrayToOutput << endl;
+} // end outputArray
+```
+
+> c:\examples\ch18\fig18_13\fig18_13.cpp(13): error C2664: 'outputArray' : cannot convert parameter 1 from 'int' to 'const Array &'
+> Reason: cannot convert from 'int' to 'const Array'
+> Constructor for class 'Array' is declared 'explicit'
+
+Fig. 18.13 | Demonstrating an explicit constructor.
+
+![](bbox=[0.07, 0.63, 0.14, 0.69])
+
+# C++11: explicit Conversion Operators
+
+As of C++11, similar to declaring single-argument constructors explicit, you can declare conversion operators explicit to prevent the compiler from using them to perform implicit conversions. For example, the prototype:
+
+```
+explicit MyClass::operator char *() const;
+```
+
+declares MyClass's char * cast operator explicit.
+
+# 18.14 Overloading the Function Call Operator ()
+
+Overloading the function call operator () is powerful, because functions can take an arbitrary number of comma-separated parameters. In a customized String class, for example, you could overload this operator to select a substring from a String—the operator's two integer parameters could specify the start location and the length of the substring to be selected. The operator() function could check for such errors as a start location out of range or a negative substring length.
+
+The overloaded function call operator must be a non-static member function and could be defined with the first line:
+
+```
+String String::operator()( size_t index, size_t length ) const
+```

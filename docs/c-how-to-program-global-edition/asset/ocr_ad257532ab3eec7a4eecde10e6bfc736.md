@@ -1,0 +1,29 @@
+er.] Once again, keep a table of the number of tours of each length and print this table when the first full tour is found. How many tours did your program attempt before producing a full tour? How much time did it take?
+
++   d) Compare the brute-force version of the Knight's Tour with the accessibility-heuristic version. Which required a more careful study of the problem? Which algorithm was more difficult to develop? Which required more computer power? Could we be certain (in advance) of obtaining a full tour with the accessibility-heuristic approach? Could we be certain (in advance) of obtaining a full tour with the brute-force approach? Argue the pros and cons of brute-force problem solving in general.
+
+# **6.26 (Eight Queens)**
+
+Another puzzle for chess buffs is the Eight Queens problem. Simply stated: Is it possible to place eight queens on an empty chessboard so that no queen is “attacking” any other—that is, so that no two queens are in the same row, the same column, or along the same diagonal? Use the kind of thinking developed in Exercise 6.24 to formulate a heuristic for solving the Eight Queens problem. Run your program. [Hint: It’s possible to assign a numeric value to each square of the chessboard indicating how many squares of an empty chessboard are “eliminated” once a queen is placed in that square. For example, each of the four corners would be assigned the value 22, as in Fig. 6.27.]
+
+Once these “elimination numbers” are placed in all 64 squares, an appropriate heuristic might be: Place the next queen in the square with the smallest elimination number. Why is this strategy intuitively appealing?
+
+# **6.27 (Eight Queens: Brute-Force Approaches)**
+
+In this problem you’ll develop several brute-force approaches to solving the Eight Queens problem introduced in Exercise 6.26.
+
++   a) Solve the Eight Queens problem, using the random brute-force technique developed in Exercise 6.25.
+
+![](bbox=[0.389, 0.585, 0.71, 0.768])
+
+**Fig. 6.27** | The 22 squares eliminated by placing a queen in the upper-left corner.
+
++   b) Use an exhaustive technique (i.e., try all possible combinations of eight queens on the chessboard).
+
++   c) Why do you suppose the exhaustive brute-force approach may not be appropriate for solving the Eight Queens problem?
+
++   d) Compare and contrast the random brute-force and exhaustive brute-force approaches in general.
+
+# **6.28 (Duplicate Elimination)**
+
+In Chapter 12, we explore the high-speed binary search tree data structure. One feature of a binary search tree is that duplicate values are discarded when insertions are made into the tree. This is referred to as duplicate elimination. Write a program that produces 20 random numbers between 1 and 20. The program should store all nonduplicate values in an array. Use the smallest possible array to accomplish this task.

@@ -1,0 +1,56 @@
+```
+8 // function main begins program execution
+9 int main(void)
+10 {
+11     puts("Sequential calls to fibonacci(50) and fibonacci(49)");
+12
+13     // calculate fibonacci value for 50
+14     time_t startTime1 = time(NULL);
+15     puts("Calculating fibonacci(50)");
+16     unsigned long long int result1 = fibonacci(50);
+17     time_t endTime1 = time(NULL);
+18
+19     printf("fibonacci(%u) = %llu\n", 50, result1);
+20     printf("Calculation time = %f minutes\n\n",
+21     difftime(endTime1, startTime1) / 60.0);
+22
+23     time_t startTime2 = time(NULL);
+24     puts("Calculating fibonacci(49)");
+25     unsigned long long int result2 = fibonacci(49);
+26     time_t endTime2 = time(NULL);
+27
+28     printf("fibonacci(%u) = %llu\n", 49, result2);
+29     printf("Calculation time = %f minutes\n\n",
+30     difftime(endTime2, startTime2) / 60.0);
+31
+32     printf("Total calculation time = %f minutes\n",
+33     difftime(endTime2, startTime1) / 60.0);
+34 }
+35
+36 // Recursively calculates fibonacci numbers
+37 unsigned long long int fibonacci(unsigned int n)
+38 {
+39     // base case
+40     if (0 == n || 1 == n) {
+41         return n;
+42     }
+43     else { // recursive step
+44         return fibonacci(n - 1) + fibonacci(n - 2);
+45     }
+46 }
+```
+
+# a) Output on a Dual-Core Windows Computer
+
+Sequential calls to fibonacci(50) and fibonacci(49)
+Calculating fibonacci(50)
+fibonacci(50) = 12586269025
+Calculation time = 1.366667 minutes
+
+Calculating fibonacci(49)
+fibonacci(49) = 7778742049
+Calculation time = 0.883333 minutes
+
+Total calculation time = 2.250000 minutes
+
+Fig. E.11 | Fibonacci calculations performed sequentially. (Part 2 of 3.)

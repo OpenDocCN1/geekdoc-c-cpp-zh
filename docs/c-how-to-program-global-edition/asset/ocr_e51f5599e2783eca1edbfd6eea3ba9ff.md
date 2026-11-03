@@ -1,0 +1,50 @@
+```
+```c
+194 // display error if account already exists
+195 if (client.acctNum != 0) {
+196     printf("Account #%d already contains information.\n",
+197         client.acctNum);
+198 }
+199 else { // create record
+200     // user enters last name, first name and balance
+201     printf("%s", "Enter lastname, firstname, balance?\n ");
+202     scanf("%14s%9s%f", &client.lastName, &client.firstName,
+203         &client.balance);
+204
+205     client.acctNum = accountNum;
+206
+207     // move file pointer to correct record in file
+208     fseek(fPtr, (client.acctNum - 1) *
+209         sizeof(struct clientData), SEEK_SET);
+210
+211     // insert record in file
+212     fwrite(&client,
+213         sizeof(struct clientData), 1, fPtr);
+214 }
+215
+216 // enable user to input menu choice
+217 unsigned int enterChoice(void)
+218 {
+219     // display available options
+220     printf("%s", "\nEnter your choice\n"
+221         "1 - store a formatted text file of accounts called\n"
+222         "\"accounts.txt\" for printing\n"
+223         "2 - update an account\n"
+224         "3 - add a new account\n"
+225         "4 - delete an account\n"
+226         "5 - end program\n? ");
+227
+228     unsigned int menuChoice; // variable to store user's choice
+229     scanf("%u", &menuChoice); // receive choice from user
+230     return menuChoice;
+231 }
+```
+```
+
+Fig. 11.15 | Transaction-processing program. (Part 5 of 5.)
+
+# 11.10 Secure C Programming
+
+# *fprintf_s and fscanf_s*
+
+The examples in Sections 11.3–11.4 used functions fprintf and fscanf to write text to and read text from files, respectively. The new standard’s Annex K provides more secure versions of these functions named fprintf_s and fscanf_s that are identical to the printf_s and scanf_s functions we’ve previously introduced, except that you also specify a FILE pointer argument indicating the file to manipulate. If your C compiler’s standard libraries include these functions, you should use them instead of fprintf and fscanf. As with scanf_s and printf_s, Microsoft’s versions of fprintf_s and fscanf_s differ from those in Annex K.

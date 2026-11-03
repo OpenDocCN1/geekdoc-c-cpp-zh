@@ -1,0 +1,47 @@
+level_changes:
+- line: 274
+  before: 2
+  after: 3
+- line: 450
+  before: 2
+  after: 3
+- line: 454
+  before: 2
+  after: 3
+- line: 460
+  before: 2
+  after: 3
+- line: 464
+  before: 2
+  after: 3
+- line: 516
+  before: 2
+  after: 3
+- line: 801
+  before: 3
+  after: 4
+- line: 859
+  before: 3
+  after: 4
+- line: 862
+  before: 3
+  after: 4
+text_changes:
+- line: 767
+  before: 1.1.3 Apple 的 Mac OS X；Apple 面向 iPhone®、iPad® 和 iPod Touch® 设备的 iOS
+  after: 1.11.3 Apple 的 Mac OS X；Apple 面向 iPhone®、iPad® 和 iPod Touch® 设备的 iOS
+- line: 775
+  before: 1.1.4 Google 的 Android
+  after: 1.11.4 Google 的 Android
+- line: 801
+  before: 1.1.2.3 Web 服务
+  after: 1.12.2.3 Web 服务
+- line: 859
+  before: 1.1.2.4 Ajax
+  after: 1.12.2.4 Ajax
+- line: 862
+  before: 1.1.2.5 物联网
+  after: 1.12.2.5 物联网
+- line: 865
+  before: 1.1.3 一些关键软件术语
+  after: 1.12.3 一些关键软件术语

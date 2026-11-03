@@ -1,0 +1,48 @@
+Total of array element values is 383
+
+Fig. 6.6 | Computing the sum of the elements of an array. (Part 2 of 2.)
+
+# 6.4.5 Using Arrays to Summarize Survey Results
+
+Our next example uses arrays to summarize the results of data collected in a survey. Consider the problem statement.
+
+> Forty students were asked to rate the quality of the food in the student cafeteria on a scale of 1 to 10 (1 means awful and 10 means excellent). Place the 40 responses in an integer array and summarize the results of the poll.
+
+This is a typical array application (Fig. 6.7). We wish to summarize the number of responses of each type (i.e., 1 through 10). The 40-element array responses (lines 14–16) contains the students' responses. We use an 11-element array frequency (line 11) to count the number of occurrences of each response. We ignore frequency[0] because it's logical to have response 1 increment frequency[1] rather than frequency[0]. This allows us to use each response directly as the index in the frequency array.
+
+```
+// Fig. 6.7: fig06_07.c
+// Analyzing a student poll.
+#include <stdio.h>
+#define RESPONSES_SIZE 40 // define array sizes
+#define FREQUENCY_SIZE 11
+
+// function main begins program execution
+int main(void)
+{
+    // initialize frequency counters to 0
+    int frequency[FREQUENCY_SIZE] = {0};
+
+    // place the survey responses in the responses array
+    int responses[RESPONSES_SIZE] = {1, 2, 6, 4, 8, 5, 9, 7, 8, 10,
+        1, 6, 3, 8, 6, 10, 3, 2, 7, 6, 5, 8, 6, 7, 5, 6, 6,
+        5, 6, 7, 5, 6, 4, 8, 6, 8, 10};
+
+    // for each answer, select value of an element of array responses
+    // and use that value as an index in array frequency to
+    // determine element to increment
+    for (size_t answer = 0; answer < RESPONSES_SIZE; ++answer) {
+        ++frequency[responses[answer]];
+    }
+
+    // display results
+    printf("%s\t%s\n", "Rating", "Frequency");
+
+    // output the frequencies in a tabular format
+    for (size_t rating = 1; rating < FREQUENCY_SIZE; ++rating) {
+        printf("%6d%7d\n", rating, frequency[rating]);
+    }
+}
+```
+
+Fig. 6.7 | Analyzing a student poll. (Part 1 of 2.)
