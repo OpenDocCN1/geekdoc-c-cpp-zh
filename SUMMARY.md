@@ -473,6 +473,7 @@
 +   [C 编程语言与 C++ 编程语言完全覆盖指南](docs/c-programming-language-c-programming-language-all-topics-cov/README.md)
 +   [C 语言编程基础（基础知识学习指南）](docs/c-programming-language-essentials-essentials-study-guides/README.md)
 +   [C++ 语言初学者指南](docs/c-programming-language-for-beginners-with-easy-tips/README.md)
++   [C 编程语言快速启动指南：初学者的简化 C 编程（C 编程，C 编程语言，绝对初学者的 C 编程，... 初学者，C 编程）](docs/c-programming-language-quick-start-guide-simplified-c-progra/README.md)
 +   [C 语言编程快速启动指南：初学者简化指南](docs/c-programming-language-quickstart-guide-simplified-guide-for/README.md)
 +   [C++ 语言编程：简单快捷直接的 C++ 编程学习方法](docs/c-programming-language-simple-short-and-straightforward-way-/README.md)
 +   [C++ 语言编程：有效设计、开发与实现健壮系统的分步指南](docs/c-programming-language-step-by-step-guide-for-effectively-de/README.md)

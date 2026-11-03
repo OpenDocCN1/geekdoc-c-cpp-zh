@@ -1,0 +1,5 @@
+# 2.2 Variables
+
+A variable name, also known as an identifier, consists of a sequence of letters, digits, and underscores, but may not start with a digit. These variables are usually declared at the start of program but you can declare one anywhere in your program before using it. You can store values in these variables depending upon their data types and “vary” them at any stage of your program. Identifiers should be chosen to reflect their use in the program. In this way, they serve as documentation, making the program more readable.
+
+There is a code for everything we do in life. Similarly, we have rules for writing variable name in C. Variable name can be composed of uppercase and/or lowercase letters, digits and only one special character that is ‘_’. The first letter of a variable must be either a letter or an underscore. But, it is discouraged to start variable name with an underscore though it is legal because, variable name that starts with underscore can conflict with system names and compiler may complain. The length of a variable name has no
