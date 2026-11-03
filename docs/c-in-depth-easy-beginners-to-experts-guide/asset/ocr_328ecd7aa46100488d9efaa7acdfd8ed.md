@@ -1,0 +1,41 @@
+```
+scanf("%d",&a[i][j]);
+}
+}
+Printf("\n Enter elements of second matrix");
+For (i=0;i<3;i++)
+{
+for (j=0; j<3;j++)
+{
+scanf("%d",&b[i][j]);
+}
+}
+/* Subtraction of matrix*/
+for (i=0;i<3;i++)
+    for(j=0;j<3;j++)
+c[i][j]=a[i][j]-b[i][j];
+printf("\n Subtraction of first and second matrix \n");
+For (i=0;i<3;i++)
+{
+for (j=0; j<3;j++)
+{
+printf("%d",c[i][j]);
+}
+printf("\n");
+}
+getch();
+}
+```
+
+# 74. Wap to read two 3*3 matrix and multiply there values and store them in third matrix.
+
+```
+#include<stdio.h>
+#include<conio.h>
+Void main()
+{
+Int a[3][3],b[3][3],c[3][3],i,j,k;
+Clrscr();
+Printf("\n\n Enter elements of first matrix");
+For (i=0;i<3;i++)
+```

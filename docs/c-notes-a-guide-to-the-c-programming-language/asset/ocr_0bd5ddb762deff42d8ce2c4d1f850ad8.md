@@ -1,0 +1,5 @@
+access links between items of data. The arrays, structures, unions, and pointers of C do just that.
+
+Besides the major issues just discussed, a program benefits greatly by being maintainable, portable, and efficient. Programs in C can be made more maintainable by use of defined parameters instead of literals, by use of macros [e.g., swap (a,b)] instead of replicated code, and through the definition of often-used data types (via typedef). Since most of the C language is independent of machine and operating system, programs in C can be very portable. Finally, the basic data types and operators of C are available directly in most machines, thus enabling quite efficient code to be generated.
+
+The reader is encouraged to use this summary as an introduction to rereading C Notes – this time, viewing the language as a tool for good program design and practicing how to use it this way.

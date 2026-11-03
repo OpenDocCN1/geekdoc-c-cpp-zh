@@ -1,0 +1,74 @@
+level_changes:
+- line: 36
+  before: 2
+  after: 1
+- line: 241
+  before: 2
+  after: 1
+- line: 653
+  before: 2
+  after: 1
+- line: 1344
+  before: 2
+  after: 1
+- line: 2515
+  before: 2
+  after: 1
+- line: 4871
+  before: 2
+  after: 1
+- line: 8906
+  before: 2
+  after: 1
+- line: 11508
+  before: 2
+  after: 1
+- line: 13296
+  before: 2
+  after: 1
+- line: 17549
+  before: 2
+  after: 1
+- line: 19146
+  before: 2
+  after: 1
+- line: 20353
+  before: 2
+  after: 1
+- line: 21828
+  before: 2
+  after: 1
+- line: 22973
+  before: 2
+  after: 1
+- line: 23354
+  before: 2
+  after: 1
+- line: 23826
+  before: 2
+  after: 1
+- line: 24450
+  before: 2
+  after: 1
+- line: 24545
+  before: 2
+  after: 1
+- line: 24587
+  before: 2
+  after: 1
+- line: 24691
+  before: 2
+  after: 1
+- line: 25127
+  before: 2
+  after: 1
+text_changes:
+- line: 0
+  before: C 深度
+  after: C 语言深入解析
+- line: 9605
+  before: C 深入
+  after: C 语言深入解析
+- line: 14092
+  before: C in D
+  after: C 语言深入解析

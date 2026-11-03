@@ -1,0 +1,65 @@
+level_changes:
+- line: 618
+  before: 2
+  after: 3
+- line: 1114
+  before: 2
+  after: 3
+- line: 1150
+  before: 2
+  after: 3
+- line: 1165
+  before: 2
+  after: 3
+- line: 4196
+  before: 2
+  after: 3
+- line: 4224
+  before: 2
+  after: 3
+- line: 4471
+  before: 2
+  after: 3
+- line: 9206
+  before: 1
+  after: 3
+- line: 9209
+  before: 1
+  after: 3
+text_changes:
+- line: 42
+  before: ∞ 必备 C 编程技能——轻松掌握！∞
+  after: 必备 C 编程技能——轻松掌握！
+- line: 4093
+  before: 第 ∞ 6 ∞ 章（二维数组（矩阵））
+  after: 第 6 章（二维数组（矩阵））
+- line: 7318
+  before: CHAPTER ∞ 10 ∞
+  after: 第 10 章
+- line: 8675
+  before: ∞ 12 ∞
+  after: 第 12 章
+- line: 10337
+  before: ∞ 17- 第 II 部分 ∞
+  after: 第 17 章 - 第 II 部分
+- line: 13717
+  before: ∞ 18- 部分 –II ∞
+  after: 第 18 章 - 第 II 部分
+- line: 13847
+  before: ∞ 19- 部分 –II ∞
+  after: 第 19 章 - 第 II 部分
+- line: 14026
+  before: ∞ 第 20 章·第二部分 ∞
+  after: 第 20 章 - 第二部分
+- line: 14214
+  before: Chapter ∞ 21—Part II ∞ (Programming Guidelines)
+  after: 第 21 章 - 第 II 部分 (编程指南)
+- line: 14481
+  before: ∞ 22- 第 II 部分 ∞
+  after: 第 22 章 - 第 II 部分
+- line: 15043
+  before: ∞ 23- 部分 –II ∞
+  after: 第 23 章 - 第 II 部分
+- line: 9206
+  before: define PI 3.14
+  after: '#define PI 3.14'
