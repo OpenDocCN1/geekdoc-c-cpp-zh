@@ -412,6 +412,7 @@
 +   [C++ 编程：下班自学 C++ 指南。构建你的编程技能并学习解决常见问题。将你的热情转化为计算机程序员职业生涯。](docs/c-programming-after-work-guide-to-master-c-on-your-own-build/README.md)
 +   [C++ 编程：面向对象方法](docs/c-programming-an-object-oriented-approach-editable/README.md)
 +   [C 语言与编程题库：强化你的编程能力，第 2 版](docs/c-programming-and-coding-question-bank-with-solution-make-yo/README.md)
++   [C 编程与数据结构（JNTU）](docs/c-programming-and-data-structures-jntu/README.md)
 +   [C 语言：现代代码的构建模块（精通编程语言系列）](docs/c-programming-building-blocks-of-modern-code-mastering-progr/README.md)
 +   [C++ 编程：7 天掌握 C++ 编程基础完整指南](docs/c-programming-complete-guide-to-learn-the-basics-of-c-progra/README.md)
 +   [C# 编程：计算机编程初学者指南：学习 C# 基础 (Coding, C 编程, Java 编程, C# 编程, JavaScript, Python, PHP)](docs/c-programming-computer-programming-for-beginners-learn-the-b/README.md)
