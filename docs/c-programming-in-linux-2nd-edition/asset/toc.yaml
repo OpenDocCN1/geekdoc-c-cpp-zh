@@ -1,0 +1,68 @@
+level_changes:
+- line: 152
+  before: 3
+  after: 4
+- line: 178
+  before: 3
+  after: 4
+- line: 242
+  before: 3
+  after: 4
+- line: 449
+  before: 2
+  after: 4
+- line: 756
+  before: 1
+  after: 4
+- line: 901
+  before: 2
+  after: 3
+- line: 1371
+  before: 3
+  after: 4
+- line: 1467
+  before: 2
+  after: 3
+- line: 1530
+  before: 2
+  after: 3
+- line: 1536
+  before: 3
+  after: 4
+- line: 1554
+  before: 3
+  after: 4
+- line: 1582
+  before: 3
+  after: 4
+- line: 1595
+  before: 3
+  after: 4
+- line: 1619
+  before: 2
+  after: 4
+- line: 1642
+  before: 2
+  after: 4
+- line: 1656
+  before: 2
+  after: 4
+text_changes:
+- line: 449
+  before: 关于 **make** 这一实用工具的说明
+  after: 关于 make 这一实用工具的说明
+- line: 1467
+  before: 6.2 使用 TRUETYPE 字体
+  after: 6.2 使用 TrueType 字体
+- line: 1619
+  before: 颜色处理函数
+  after: 颜色处理函数：
+- line: 1642
+  before: 图像缩放函数
+  after: 图像缩放函数：
+- line: 1656
+  before: 杂项函数
+  after: 杂项函数：
+- line: 1979
+  before: 12 结论
+  after: 9 结论

@@ -461,6 +461,7 @@
 +   [C++ 编程入门指南，第 6 版](docs/c-programming-in-easy-steps-6th-edition/README.md)
 +   [C++ 编程入门，第五版](docs/c-programming-in-easy-steps-fifth-edition/README.md)
 +   [C 语言编程轻松入门：更新至 GNU 编译器 6.3.0 和 Windows 10](docs/c-programming-in-easy-steps-updated-for-the-gnu-compiler-ver/README.md)
++   [Linux C 编程（第2版）](docs/c-programming-in-linux-2nd-edition/README.md)
 +   [C 语言 Linux 编程指南](docs/c-programming-in-linux-learn-how-to-program-in-linux/README.md)
 +   [C语言一日一小时自学指南 第七版](docs/c-programming-in-one-hour-a-day-sams-teach-yourself-seventh-/README.md)
 +   [C 语言](docs/c-programming-language/README.md)
