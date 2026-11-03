@@ -1,0 +1,89 @@
+level_changes:
+- line: 94
+  before: 2
+  after: 3
+- line: 168
+  before: 2
+  after: 3
+- line: 172
+  before: 2
+  after: 3
+- line: 178
+  before: 2
+  after: 3
+- line: 190
+  before: 2
+  after: 3
+- line: 266
+  before: 2
+  after: 3
+- line: 369
+  before: 2
+  after: 3
+- line: 982
+  before: 2
+  after: 3
+- line: 1024
+  before: 2
+  after: 3
+- line: 1334
+  before: 2
+  after: 3
+- line: 1598
+  before: 2
+  after: 3
+- line: 1630
+  before: 2
+  after: 3
+- line: 1677
+  before: 2
+  after: 3
+- line: 1851
+  before: 2
+  after: 3
+- line: 1947
+  before: 2
+  after: 3
+- line: 2040
+  before: 2
+  after: 3
+- line: 2084
+  before: 2
+  after: 3
+- line: 2727
+  before: 2
+  after: 3
+- line: 2790
+  before: 2
+  after: 3
+- line: 4334
+  before: 2
+  after: 3
+- line: 4474
+  before: 2
+  after: 3
+text_changes:
+- line: 266
+  before: Puts 函数
+  after: puts 函数
+- line: 635
+  before: 'Chapter 4: The C Language Variables'
+  after: ''
+- line: 1677
+  before: Switch/Else 语句
+  after: Switch/Case 语句
+- line: 2909
+  before: Strlen
+  after: strlen()
+- line: 2951
+  before: Strcat / 字符串拼接
+  after: strcat() / 字符串拼接
+- line: 3016
+  before: Strcmp / 字符串比较
+  after: strcmp() / 字符串比较
+- line: 3068
+  before: 'Chapter 10: C Language Constants'
+  after: 第 10 章：C 语言常量
+- line: 3797
+  before: 数字时代下的阅读之变
+  after: ''

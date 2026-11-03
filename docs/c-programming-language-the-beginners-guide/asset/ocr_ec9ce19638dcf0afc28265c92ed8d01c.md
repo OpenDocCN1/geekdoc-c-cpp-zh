@@ -1,0 +1,3 @@
+# Chapter 1: Introduction to C Programming Language
+
+Like anything new when you set out to do programming, you find yourself surrounded with strange and potentially weird terms, and fancied jargon. In this book, we’ll review those terms as well as present an overview of the entire programming process. It is very likely that you’re eager to get started with writing codes, and you may have already viewed a later chapter in this book. It is important to know a few key terms and programming concepts.
