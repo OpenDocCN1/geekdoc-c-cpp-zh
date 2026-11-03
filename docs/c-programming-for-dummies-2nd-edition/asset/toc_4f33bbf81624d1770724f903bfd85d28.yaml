@@ -1,0 +1,155 @@
+level_changes:
+- line: 401
+  before: 2
+  after: 3
+- line: 621
+  before: 2
+  after: 3
+- line: 1019
+  before: 2
+  after: 3
+- line: 1423
+  before: 2
+  after: 3
+- line: 1699
+  before: 2
+  after: 3
+- line: 2191
+  before: 2
+  after: 3
+- line: 2683
+  before: 2
+  after: 3
+- line: 3282
+  before: 2
+  after: 3
+- line: 3841
+  before: 2
+  after: 3
+- line: 4440
+  before: 2
+  after: 3
+- line: 5075
+  before: 2
+  after: 3
+- line: 5732
+  before: 2
+  after: 3
+- line: 6319
+  before: 2
+  after: 3
+- line: 6648
+  before: 2
+  after: 3
+- line: 6963
+  before: 2
+  after: 3
+- line: 7502
+  before: 2
+  after: 3
+- line: 8038
+  before: 2
+  after: 3
+- line: 8519
+  before: 2
+  after: 3
+- line: 9162
+  before: 2
+  after: 3
+- line: 9989
+  before: 2
+  after: 3
+- line: 10231
+  before: 2
+  after: 3
+- line: 10897
+  before: 2
+  after: 3
+- line: 11243
+  before: 2
+  after: 3
+- line: 11551
+  before: 2
+  after: 3
+- line: 11908
+  before: 2
+  after: 3
+- line: 12166
+  before: 2
+  after: 3
+- line: 1664
+  before: 1
+  after: 3
+- line: 1672
+  before: 1
+  after: 3
+- line: 7196
+  before: 1
+  after: 3
+- line: 7211
+  before: 1
+  after: 3
+- line: 10383
+  before: 1
+  after: 3
+- line: 10387
+  before: 1
+  after: 3
+- line: 10401
+  before: 1
+  after: 3
+text_changes:
+- line: 26
+  before: 《C 编程达人迷》的方法
+  after: 《C 编程傻瓜书》的方法
+- line: 401
+  before: 第 2 章
+  after: 第 2 章：编程这件事
+- line: 998
+  before: '2'
+  after: 第 2 部分：C 编程 101
+- line: 1699
+  before: 第 6 章
+  after: 第 6 章：存放东西的地方
+- line: 3282
+  before: 第 9 章
+  after: 第 9 章：循环，循环，循环
+- line: 3841
+  before: 第10章
+  after: 第10章：与函数同乐
+- line: 4440
+  before: 第 11 章
+  after: 第 11 章：不可避免的数学章节
+- line: 5075
+  before: 第 12 章
+  after: 第 12 章：给我数组
+- line: 5732
+  before: 第 13 章
+  after: 第 13 章：玩转文本
+- line: 6963
+  before: 第 16 章
+  after: 第 16 章：变量杂谈
+- line: 8038
+  before: 第 18 章
+  after: 第 18 章：指针简介
+- line: 9162
+  before: 第 20 章
+  after: 第 20 章：内存块与链表
+- line: 9989
+  before: 第 21 章
+  after: 第 21 章：关于时间
+- line: 10231
+  before: Chapter 22
+  after: 第 22 章：永久存储函数
+- line: 10897
+  before: 第23章
+  after: 第23章：文件管理
+- line: 11551
+  before: 第 25 章
+  after: 第 25 章：滚开，Bug！
+- line: 11908
+  before: 第26章
+  after: 第26章：十种常见错误
+- line: 12166
+  before: 第 27 章
+  after: 第 27 章：十条提醒与建议

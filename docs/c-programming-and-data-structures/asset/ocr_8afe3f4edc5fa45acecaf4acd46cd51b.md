@@ -1,0 +1,28 @@
+# Primary Memory
+
+The primary memory is available in the computer as a built-in unit of the computer. The primary memory is represented as a set of locations with each location occupying 8 bits. Each bit in the memory is identified by a unique address. The data is stored in the machine-understandable binary form in these memory locations.
+
++   - **ROM** ROM represents Read Only Memory that stores data and instructions, even when the computer is turned off. It is the permanent memory of the computer where the contents cannot be modified by an end user. ROM is a chip that is inserted into the motherboard. It is generally used to store the Basic Input/Output system (BIOS), which performs the Power On Self Test (POST).
++   - **RAM** RAM is the read/write memory unit in which the information is retained only as long as there is a regular power supply. When the power supply is interrupted or switched off, the information stored in the RAM is lost. RAM is a volatile memory that temporarily stores data and applications as long as they are in use. When the use of data or the application is over, the content in RAM is erased.
++   - **Cache memory** Cache memory is used to store the data and the related application that was last processed by the CPU. When the processor performs processing, it first searches the cache memory and then the RAM, for an instruction. The cache memory is always placed between CPU and the main memory of the computer system.
+
+![](bbox=[0.58, 0.38, 0.93, 0.62])
+
+Table 1.1 depicts some of the key differences between RAM and ROM:
+
+Table 1.1
+| RAM | ROM |
+|---|---|
+| It is a read/write memory | It is a read only memory |
+| It is volatile storage device | It is a permanent storage device |
+| Data is erased as soon as power supply is turned off | Data remains stored even after power supply has been turned off |
+| It is used as the main memory of a computer system | It is used to store Basic input output system (BIOS). |
+
+# Secondary Memory
+
+Secondary memory represents the external storage devices that are connected to the computer. They provide a non-volatile memory source used to store information that is not in use currently. A storage device is either located in the CPU casing of the computer or is connected externally to the computer. The secondary storage devices can be classified as:
+
++   - **Magnetic storage device** The magnetic storage devices store information that can be read, erased and rewritten a number of times. These include floppy disk, hard disk and magnetic tapes.
++   - **Optical storage device** The optical storage devices are secondary storage devices that use laser beams to read the stored data. These include
+
+![](bbox=[0.58, 0.78, 0.93, 0.95])

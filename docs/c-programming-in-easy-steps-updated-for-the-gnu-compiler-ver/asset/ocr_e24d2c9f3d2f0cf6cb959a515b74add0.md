@@ -1,0 +1,28 @@
+# Defining constants
+
+The preprocessor #define directive can be used to specify constant text values that can be used in a program with this syntax:
+
+```
+#define CONSTANT-NAME "text-string"
+```
+
+Like the #include directive, these should appear at the very start of the program code. Any occurrences of the specified constant name in the program code will be substituted for the associated text string by the preprocessor before compilation.
+
+A conditional preprocessor #ifdef directive can also be used to evaluate whether a definition currently exists. Depending on the result of the evaluation it may be followed by a #define directive to specify a constant text value. This preprocessor routine is known as a "macro" and each macro must end with an #endif directive.
+
+Usefully, a preprocessor macro can examine compiler-defined constants to determine the host operating system. These will vary from machine to machine, but on the Windows platform there will typically be a constant named __WIN32, and on the Linux platform there will typically be a linux constant. An #ifdef preprocessor directive can apply an appropriate text string to identify the host platform.
+
+![](bbox=[0.18, 0.58, 0.32, 0.8])
+
++   1. Begin a new program with a preprocessor instruction to include the standard input/output library functions
++   #include <stdio.h>
++   
++   2. Add three further preprocessor directives that specify text strings for substitution in the source code
++   #define LINE ""
++   #define TITLE "C Programming in easy steps"
++   #define AUTHOR "Mike McGrath"
++   
++   3. Next, add a conditional macro that specifies a text string to identify the Windows host platform
++   #ifdef __WIN32
++   #define SYSTEM "Windows"
++   #endif

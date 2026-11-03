@@ -1,0 +1,1 @@
+Notice that this program returns a value of 1 to the system when the attempt to open the file fails – this tells the system that all did not go well.

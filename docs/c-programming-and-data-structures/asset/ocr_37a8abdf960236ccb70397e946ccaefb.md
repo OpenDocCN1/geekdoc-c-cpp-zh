@@ -1,0 +1,44 @@
++   2. The structure variable used as the actual argument and the corresponding formal argument in the called function must be of the same struct type.
++   3. The return statement is necessary only when the function is returning some data back to the calling function. The expression may be any simple variable or structure variable or an expression using simple variables.
++   4. When a function returns a structure, it must be assigned to a structure of identical type in the calling function.
++   5. The called functions must be declared in the calling function appropriately.
+
+# EXAMPLE 7.5 Write a simple program to illustrate the method of sending an entire structure as a parameter to a function.
+
+A program to update an item is shown in Fig. 7.6. The function update receives a copy of the structure variable item as one of its parameters. Note that both the function update and the formal parameter product are declared as type struct stores. It is done so because the function uses the parameter product to receive the structure variable item and also to return the updated values of item.
+
+The function mul is of type float because it returns the product of price and quantity. However, the parameter stock, which receives the structure variable item is declared as type struct stores.
+
+The entire structure returned by update can be copied into a structure of identical type. The statement
+
+item = update(item, p_increment, q_increment);
+
+replaces the old values of item by the new ones.
+
+```
+Program
+/*      Passing a copy of the entire structure      */
+struct stores
+{
+    char name[20];
+    float price;
+    int quantity;
+};
+struct stores update (struct stores product, float p, int q);
+float mul (struct stores stock);
+main()
+{
+    float    p_increment, value;
+    int      q_increment;
+
+    struct stores item = {"XYZ", 25.75, 12};
+
+    printf("\nInput increment values:");
+    printf("\n price increment and quantity increment\n");
+    scanf("%f %d", &p_increment, &q_increment);
+
+    /* ----------------------------- */
+    /* item = update(item, p_increment, q_increment); */
+    /* ----------------------------- */
+    printf("Updated values of item\n\n");
+```

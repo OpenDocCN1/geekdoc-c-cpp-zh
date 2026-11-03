@@ -1,0 +1,47 @@
+```
+Program
+main()
+{
+    int year, period ;
+    float amount, inrate, value ;
+    printf("Input amount, interest rate, and period\n\n") ;
+    scanf("%f %f %d", &amount, &inrate, &period) ;
+    printf("\n") ;
+    year = 1 ;
+    while( year <= period )
+    {
+        value = amount + inrate * amount ;
+        printf("%2d Rs %8.2f\n", year, value) ;
+        amount = value ;
+        year = year + 1 ;
+    }
+}
+Output
+Input amount, interest rate, and period
+10000 0.14 5
+ 1 Rs 11400.00
+ 2 Rs 12996.00
+ 3 Rs 14815.44
+ 4 Rs 16889.60
+ 5 Rs 19254.15
+Input amount, interest rate, and period
+20000 0.12 7
+ 1 Rs 22400.00
+ 2 Rs 25088.00
+ 3 Rs 28098.56
+ 4 Rs 31470.39
+ 5 Rs 35246.84
+ 6 Rs 39476.46
+ 7 Rs 44213.63
+```
+
+Fig. 1.75 Interactive investment program
+
+Note that the scanf function contains three variables. In such cases, care should be exercised to see that the values entered match the order and type of the variables in the list. Any mismatch might lead to unexpected results. The compiler may not detect such errors.
+
+# 1.35 DEFINING SYMBOLIC CONSTANTS
+
+We often use certain unique constants in a program. These constants may appear repeatedly in a number of places in the program. One example of such a constant is 3.142, representing the value of the mathematical constant "pi". Another example is the total number of students whose mark-sheets are analysed by a 'test analysis program'. The number of students, say 50, may be used for calculating the class total, class average, standard deviation, etc. We face two problems in the subsequent use of such programs. These are
+
++   1. problem in modification of the program and
++   2. problem in understanding the program.

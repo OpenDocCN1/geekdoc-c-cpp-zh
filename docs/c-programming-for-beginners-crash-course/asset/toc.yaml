@@ -1,0 +1,32 @@
+level_changes:
+- line: 286
+  before: 2
+  after: 3
+- line: 687
+  before: 2
+  after: 3
+- line: 697
+  before: 2
+  after: 3
+text_changes:
+- line: 72
+  before: 函数：
+  after: 函数
+- line: 146
+  before: 第三章：C 编程语言中的语言比较
+  after: 第三章：C 编程语言中的条件语句
+- line: 152
+  before: 使用比较
+  after: 比较运算符
+- line: 286
+  before: switch 语句在代码中是什么样子，以及它如何同时处理多种决策：
+  after: switch 语句示例
+- line: 405
+  before: for 关键字
+  after: for 循环
+- line: 687
+  before: 描述
+  after: 附录
+- line: 697
+  before: 描述
+  after: 参考文献

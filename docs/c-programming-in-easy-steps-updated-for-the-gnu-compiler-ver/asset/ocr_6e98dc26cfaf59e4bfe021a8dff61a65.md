@@ -1,0 +1,27 @@
+# Finding substrings
+
+A string can be searched to determine if it contains a specified “substring” sequence of characters with a function named strstr(). This is part of the standard library string.h header file, which must be added with an #include directive at the start of the program to make strstr() available.
+
+The strstr() function takes two arguments – the first specifies the string to be searched, and the second specifies the substring to seek. If the substring is not found, the function returns a NULL value. When the substring is found, the function returns a pointer to the first character of the first occurrence of the substring.
+
+The array index number of the element containing the first character of a located substring can be easily calculated using pointer arithmetic. Subtracting the address of the first character of the substring, returned by the strstr() function, from the address of the searched string’s first character (to which the character array name points) can produce an integer value that is the index number of the first substring character within the searched string.
+
+In C programming, the == and != comparison operators can be used to compare a result against a NULL value but cannot be used to compare two strings. Instead, the string.h standard library header file provides a function named strcmp() for that purpose. This function takes two arguments that are the strings to be compared. The comparison is made upon the numerical ASCII code value of each character and their position. When the strings are identical in every respect, including matching case, the strcmp() function returns zero. Otherwise, the function returns a positive or negative integer depending on the string values.
+
+The strstr() function stops searching when it finds the first occurrence of a substring. Subsequent occurrences of that substring within the searched string will not be recognized.
+
+![](bbox=[0.08, 0.15, 0.18, 0.28])
+
+![](bbox=[0.2, 0.78, 0.3, 0.9])
+
++   1. Begin a new program with a preprocessor instruction to include the standard input/output and string functions
++      `#include <stdio.h>`
++      `#include <string.h>`
++   2. Add a main function that declares and initializes two character array variables with strings
++      ```c
++      int main()
++      {
++        char str[] = "No Time Like the Present.";
++        char sub[] = "Time";
++      }
++      ```
