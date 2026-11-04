@@ -1,0 +1,107 @@
+level_changes:
+- line: 2
+  before: 2
+  after: 1
+- line: 934
+  before: 2
+  after: 1
+- line: 1738
+  before: 2
+  after: 1
+- line: 2493
+  before: 2
+  after: 1
+- line: 4382
+  before: 2
+  after: 1
+- line: 5504
+  before: 2
+  after: 1
+- line: 6589
+  before: 2
+  after: 1
+- line: 8078
+  before: 2
+  after: 1
+- line: 10480
+  before: 2
+  after: 1
+- line: 10831
+  before: 2
+  after: 1
+- line: 11315
+  before: 2
+  after: 1
+- line: 11769
+  before: 2
+  after: 1
+- line: 9247
+  before: 2
+  after: 1
+- line: 9670
+  before: 2
+  after: 1
+- line: 9734
+  before: 1
+  after: 2
+- line: 9763
+  before: 1
+  after: 2
+- line: 9816
+  before: 1
+  after: 2
+- line: 9822
+  before: 1
+  after: 2
+- line: 11317
+  before: 3
+  after: 2
+- line: 11771
+  before: 3
+  after: 2
+text_changes:
+- line: 2639
+  before: Note
+  after: 注意
+- line: 5582
+  before: 注
+  after: 注意
+- line: 5448
+  before: 'Listing 5.15: Adding Code on the button1_Click Event'
+  after: 清单 5.15：在 button1_Click 事件上添加代码
+- line: 5459
+  before: 'Listing 5.16: Adding Code on timer1_Tick Event'
+  after: 清单 5.16：在 timer1_Tick 事件上添加代码
+- line: 5471
+  before: 'Listing 5.17: Adding Code on button2_Click Event'
+  after: 清单 5.17：在 button2_Click 事件上添加代码
+- line: 5496
+  before: Summary
+  after: 小结
+- line: 5504
+  before: Chapter 6
+  after: 第 6 章
+- line: 6589
+  before: 第7章
+  after: 第 7 章
+- line: 6865
+  before: 图 C*7.17
+  after: 图 7.17
+- line: 8756
+  before: 图 C#-8.31
+  after: 图 8.31
+- line: 8835
+  before: 图 C#-8.32
+  after: 图 8.32
+- line: 10772
+  before: 'Listing 11.4: 创建 ExpandoObject 类的实例'
+  after: 清单 11.4：创建 ExpandoObject 类的实例
+- line: 11305
+  before: Summary
+  after: 小结
+- line: 11315
+  before: Chapter 13
+  after: 第 13 章
+- line: 11707
+  before: 注
+  after: 注意

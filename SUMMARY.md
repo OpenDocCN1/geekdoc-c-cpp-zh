@@ -270,6 +270,7 @@
 +   [C# 2008 编程：涵盖 .Net 3.5，黑书，初学者版（附 CD）](docs/c-2008-programming-covers-net-35-black-book-beginners-ed-wcd/README.md)
 +   [C# 2010 综合指南：8 本合一](docs/c-2010-all-in-one-for-dummies-8-books-in-1/README.md)
 +   [C# 2010 程序员指南 (第4版) (Deitel 开发者系列)](docs/c-2010-for-programmers-4th-edition-deitel-developer-series/README.md)
++   [C# 2010 简明教程](docs/c-2010-in-simple-steps/README.md)
 +   [C# 2010 编程：涵盖 .Net 4.0 黑皮书（附 CD）](docs/c-2010-programming-covers-net-40-black-book-with-cd/README.md)
 +   [C# 2012 编程指南：涵盖 .NET 4.5](docs/c-2012-programming-black-book-covers-net-45/README.md)
 +   [C# 24 小时训练营，第 2 版](docs/c-24-hour-trainer-2nd-edition/README.md)
