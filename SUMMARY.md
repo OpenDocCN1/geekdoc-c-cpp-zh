@@ -265,6 +265,7 @@
 +   [C# 10 .NET 6 洁洁架构：构建可维护、可测试、可扩展且健壮应用的初学者指南（Python 先驱者秘籍）](docs/c-10-clean-architecture-with-net-6-a-beginners-guide-to-buil/README.md)
 +   [C# 10.0 傻瓜指南](docs/c-100-all-in-one-for-dummies-for-dummies-computertech/README.md)
 +   [C++：二合一 - 精通 C++ 终极初学者指南](docs/c-2-books-in-1---the-ultimate-beginners-guide-to-mastering-c/README.md)
++   [C# 2008 程序员参考手册](docs/c-2008-programmers-reference/README.md)
 +   [C# 2008 编程黑书：涵盖 .NET 3.5，铂金版](docs/c-2008-programming-black-book-covers-net-35-platinum-ed/README.md)
 +   [C# 2008 编程：涵盖 .Net 3.5，黑书，初学者版（附 CD）](docs/c-2008-programming-covers-net-35-black-book-beginners-ed-wcd/README.md)
 +   [C# 2010 综合指南：8 本合一](docs/c-2010-all-in-one-for-dummies-8-books-in-1/README.md)

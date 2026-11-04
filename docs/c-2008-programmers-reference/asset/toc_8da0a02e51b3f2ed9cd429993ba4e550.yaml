@@ -1,0 +1,38 @@
+level_changes:
+- line: 12242
+  before: 1
+  after: 3
+- line: 12420
+  before: 1
+  after: 3
+text_changes:
+- line: 6
+  before: '提升你的知识  '
+  after: 提升你的知识
+- line: 151
+  before: 第II部分：使用 C# 进行应用程序开发
+  after: 第二部分：使用 C# 进行应用程序开发
+- line: 163
+  before: 第III部分：附录
+  after: 第三部分：附录
+- line: 460
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
+- line: 481
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
+- line: 508
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
+- line: 538
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
+- line: 582
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
+- line: 615
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
+- line: 639
+  before: 第 I 部分：C# 基础
+  after: 第一部分：C# 基础
