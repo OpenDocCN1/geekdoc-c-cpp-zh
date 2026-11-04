@@ -293,6 +293,7 @@
 +   [C++ 最佳实践：提升 C++  de 45 条简单规则与具体行动项](docs/c-best-practices-45ish-simple-rules-with-specific-action-ite/README.md)
 +   [C++ 脑筋急转弯](docs/c-brain-teasers/README.md)
 +   [C++ 脑筋急转弯：锻炼你的思维](docs/c-brain-teasers-exercise-your-mind/README.md)
++   [C# & C++：5合1：从零到高薪工作：秘籍 最新速成指南 一周学会 C# & C++ + 50 个动手练习](docs/c-c-5-in-1-from-zero-to-high-paying-jobs-the-updated-crash-c/README.md)
 +   [C++：C++ 初学者指南，C++ 24小时实战，快速学习 C++！一种学习 C++ 的智能方法。简单易懂。C++ 步骤指南，C++ 编程，从今天开始编码](docs/c-c-for-beginners-c-in-24-hours-learn-c-fast-a-smart-way-to-/README.md)
 +   [C, C++, Java, Python, PHP, JavaScript 和 Linux 初学者指南](docs/c-c-java-python-php-javascript-and-linux-for-beginners/README.md)
 +   [C++：初学者 C++ 编程 - 24 小时内掌握 C++ 基础的极速成课指南！](docs/c-c-programming-for-beginners---the-ultimate-crash-course-to/README.md)
