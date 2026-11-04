@@ -1,0 +1,5 @@
+U.6.25 Write a program that reads an integer and displays the prime numbers that are less than or equal to it. You are reminded that a prime number is any integer greater than 1 with no divisor other than 1 and itself.
+
+U.6.26 Write a program that reads an integer and displays its digits in words. If the number is negative, it should begin with the word minus. The program should accept integers up to five digits. For example, if the user enters -12, the program should display minus one two.
+
+U.6.27 Write a program that reads a positive integer and checks if it is an Armstrong number. An Armstrong number is a number that it is equal to the sum of its digits raised to the power of the number of digits. For example, the three-digit number 153 is an Armstrong number, because 1³ + 5³ + 3³ = 1 + 125 + 27 = 153.

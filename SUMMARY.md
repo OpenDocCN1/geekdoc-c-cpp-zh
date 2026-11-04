@@ -347,6 +347,7 @@
 +   [量化金融的 C++](docs/c-for-quantitative-finance/README.md)
 +   [工程师与科学家家的 C++ 第四版](docs/c-fourth-edition-for-engineers-and-scientists/README.md)
 +   [C：从理论到实践](docs/c-from-theory-to-practice/README.md)
++   [C：从理论到实践（第二版）](docs/c-from-theory-to-practice-second-edition/README.md)
 +   [C# 泛式编程：从入门到精通 Monads](docs/c-functional-monads-from-zero-to-hero/README.md)
 +   [Unity 3D C# 游戏编程秘籍](docs/c-game-programming-cookbook-for-unity-3d/README.md)
 +   [C# 游戏编程：面向严肃游戏创作](docs/c-game-programming-for-serious-game-creation-c-sharp-game-pr/README.md)

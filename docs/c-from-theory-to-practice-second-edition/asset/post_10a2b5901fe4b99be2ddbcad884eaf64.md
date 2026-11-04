@@ -1,0 +1,404 @@
+
+- constant, 14
+- one-dimensional arrays, 154–155
+- pointers, 189
+- static variable, 328–329
+- structures, 410–412
+- two-dimensional array, 172–173
+- variable, 13
+- Inner loop, iterations, 125, 126, 127, 133
+- Input stream, 508
+- Insertion sort algorithm, 392–394, 393f
+- insert_sort() function, 392, 393–394
+- int array, 204, 224
+- int bit field, 417
+- int data type, 11, 11t, 12, 239, 299, 300
+  - function call, 308
+  - getchar() function, 245
+  - one-dimensional array, 151
+  - *ptr, 187–188
+- Integers
+  - pointers and, 199–200
+- Integrated development environment (IDE), 3, 6
+- Integrated Services Digital Network (ISDN)
+  - network, 571, 573
+- interface keyword, Java, 626
+- Interfaces, Java, 626–629
+- Internal linkage, of variables, 321
+- International Mobile Equipment Identifier (IMEI), 249–251
+- International Obfuscated C Code Contest, 2
+- The International Obfuscated C Code Contest, 242
+- International Standards Organization (ISO), 1
+- Internet Engineering Task Force (IETF)
+  - organization, 571
+- Internet Protocol (IP) network, 571
+  - local network, 354–357, see also Medium Access Control (MAC)
+  - subnets, 649–652
+- Internet Protocol (IP) version 4 address (IPv4), 248–249
+- firewall, 638
+- header format, 635f
+- TCP segment, 635–638, 635f–636f
+- int main(), 4, 5
+- int variable, 246
+- iostream file, 579
+- isdigit() function, 240
+- isdn_msg, 443
+- ISDN protocol, 442
+- islower(), 354
+- ISO, see International Standards Organization (ISO)
+- ISO/IEC 9899:1990, 1
+- isspace(), 354
+- isupper(), 354
+- iteration loop, 105
+- iterations
+  - exercises, 114, 116, 118, 126, 127, 132–133
+  - inner loop, 125, 126, 127, 133
+  - for loop, 645
+  - outer loop, 125, 126, 127, 133
+  - pointers, 215–216
+  - for statement, 107, 110, 114, 116
+- strlen() function, 273–274
+- ITU-T E.161 international standard, 246–247
+- ITU-T Q.931 signaling protocol, 571
+
+## J
+- Java, 611–629
+  - abstract interface, 626
+  - abstract modifier, 619
+  - access modifiers, 612, 616–620, 617t
+  - advantages, 611
+  - background, 611
+  - classes, 611–614
+  - constructor overloading, 623
+  - constructors, 614–616
+  - doc comments, 613
+  - final, 617
+  - garbage collector mechanism, 614
+  - inheritance, 620–623
+  - instances, 613
+  - interfaces, 626–629
+  - javac, 612
+  - main() function, 612, 627
+  - nonaccess modifiers, 612, 616–620
+  - objects, 611–614
+  - overview, 611
+  - packages, 614
+  - polymorphism, 623–626
+    - dynamic, 623
+  - method overloading, 624–625
+  - method overriding, 625–626
+  - static, 623
+  - source files, 611
+  - subpackages, 614
+  - vs. C/C++, 612–613
+- java, 611
+- javac compiler, 612
+- javac MainClass.java, 612
+- Java Virtual Machine (JVM), 611
+- JDK (javadoc) tool, 613
+- JVM (Java Virtual Machine), 611
+
+## K
+- Kernighan, Brian, 1
+- Keywords, see specific keywords
+- K&R book, 1
+- K&R style, 74
+
+## L
+- Large programs; see also Program
+  - Build command, 577
+  - callback mechanism, 571
+  - call_sim, 578
+  - commands, 577
+  - development, 571–578
+  - file name, selection of, 572
+  - fsm.c, 572, 573, 574, 576–577
+  - function definitions and declarations, 572
+  - gcc compiler, 577
+  - header file, 572
+    - general.h, 572–573
+    - information in, 572–573
+    - #ifndef directive, 572–573
+  - implementation, 572–578
+  - loopback testing, 576
+  - makefile, 577–578
+  - make tool, 578
+  - modules, interactions between, 571
+  - network protocol, 571
+  - overview, 571–572
+  - prtcl.c, 572, 573
+  - rcv.c, 576
+  - rcv_msg() function, 573
+  - recv.c, 572
+  - send.c, 572, 575
+  - source file, 572
+    - module, 572
+  - switch statement, 574–576
+- Last In First Out (LIFO) stack, 473
+- Library functions, 5, 667–675; see also specific functions
+  - bsearch() function, 400–402
+    - exercise, 401–402
+  - qsort(), 400–402
+- Life cycle, of C program, 3
+- LIFO (Last In First Out) stack, 473
+- __LINE__, 552
+- Linear search algorithm, 381–383
+  - exercises, 381–383
+- linear search() function, 381
+- #line directive, 562
+- Linkage, of variables, 321
+- Linked list, 471–473, 471f
+  - implementing, 473, 481–483
+  - nodes, 471
+    - deletion, 472, 473f
+    - insertion, 472, 472f
+  - vs. arrays, 471
+- Linking, program, 7–8
+- locale.h, 667
+- Local variable, 322–325
+  - as automatic variable, 323
+  - memory, 324
+  - program, 323–324
+  - register class, 323
+  - returning address of, 324
+  - storage class, 323
+- Logical operators, 51–55
+  - exercises, 53–55
+  - ! operator, 51, 52
+  - && operator, 52
+  - || operator, 53
+- long bit field, 417
+- long data type, 11, 11t, 12
+- long double data type, 11t, 12, 13
+- long double variable
+  - scanf() function, 36
+- LOOPBACK_MODE macro, 576
+- Loopback testing, 576
+- Loops, 105–145
+  - break statement, 111–113
+  - continue statement, 113–114
+  - do-while statement, 140–143
+  - exercises, 114–124
+  - goto statement, 144–145
+  - iterations, 105, 125, 126, 127, 133
+  - nested, 124–129
+  - overview, 105
+  - for statement, 105–110
+  - while statement, 129–140
+- Loop statements, 74
+- Luhn digit, 249–251
+- lvalue, 45
+
+## M
+- MAC, see Medium Access Control (MAC)
+- macro_name, 549
+- Macros
+  - defined, 550
+  - #define directive, 19–20
+  - exercises, 563–567
+  - extending, 551
+  - LOOPBACK_MODE, 576
+  - with parameters, 554–555
+  - predefined, 552, 552t
+  - simple, 549–553
+- Mail class, 580
+- MainClass class, 612
+- MainClass.java file, 611, 612, 629
+- main() function, 4–5, 299, 301, 302
+  - C++, 579
+  - Java, 612, 627
+  - large program, 572
+  - local variable, 322–325
+  - passing data in, 364–365
+    - exercises, 365–366
+  - recursive, 371
+- Makefile
+  - advantage, 577
+  - concept, 577
+  - example, 577–578
+- Make tool, 578
+- malloc() function, 46, 359
+  - dynamic memory allocation, 452–455
+    - exercises, 460–461
+- Master-mind game, program for, 652–655
+- math.h, 668
+- max() function, 342
+- Maximum common divisor (MCD), 346–347
+- Medium Access Control (MAC), 354–357, 638
+  - ARP packet structure, 355–357, 356f
+  - frame structure, 355, 355f
+- memcmp() function, 458, 459–460
+  - exercises, 462–463
+  - vs. strncmp() function, 458–459
+- memcpy(), 153
+- memcpy() function, 458
+  - vs. strcpy() function, 458–459
+- memmove() function, 458, 459
+- Memory
+  - blocks, 449–450
+  - code segment, 449
+  - data segment, 449
+  - distribution model, 449–450
+  - fixed, 471
+  - heap segment, 449
+  - layout, 188f
+  - local variable, 324
+  - pointers and, 187, 188f
+  - stack segment, 449
+- Memory address, 187, 188f
+- Memory allocation; see also Memory management
+  - command line arguments and, 631, 634–635
+  - dynamic, 451–458
+    - exercises, 460–471
+    - free() function, 455–458
+    - malloc() function, 452–455
+    - size, 451–452
+    - sizeof operator, 453
+  - overview, 449
+  - static, 450–451
+    - actions, 450–451
+    - example, 451
+    - size, 450
+    - variables, 450, 451
+- Memory management; see also Data structures; Memory allocation
+  - functions, 458–460
+    - memcmp(), 458, 459–460
+    - memcpy(), 458
+    - memmove(), 458
+  - implementation examples, 473–488
+    - linked list, 481–488
+    - queue, 478–480
+    - stack, 473–478
+  - overview, 449
+- memset(), 633
+- Method overloading, 624–625
+- Method overriding, 625–626
+- MIN macro, 554
+- mk_time() function, 426–427
+- mobile phone
+  - IMEI, 249–251
+  - wireless networks, 249–251
+- Modules, interactions between, 571
+- Multidimensional arrays, 171; see also One-dimensional arrays; Two-dimensional arrays
+  - function, 358
+- Multiple inheritance, Java, 622
+
+## N
+- Naming variables, 9–10
+- native modifier, Java, 617
+- Naughton, Patrick, 611
+- NDEBUG, 553
+- near, 10
+- Nested if statements, 76–79
+- Nested loops, 124–129; see also Loops
+  - do-while, 124
+  - iteration, 133
+  - for statement, 108
+  - while, 124
+- Nested structures, 415–417
+- Network communications, bitwise operators and, 66–67, 666
+- Network protocol, 571; see also Internet Protocol (IP) network
+  - described, 571
+  - development of, 571
+  - implementation, 571
+  - Q.931 protocol, 571
+- New-line character, 5, 35, 241
+- new operator, C++, 602–603
+- Nodes, 471, 471f; see also Linked list
+  - deletion, 472, 473f
+  - insertion, 472, 472f
+- No linkage, variables with, 321
+- Nonaccess modifiers (N_A_M), Java, 612, 616–620
+  - abstract, 617, 619–620
+  - final, 617, 618
+  - native, 617
+  - static, 617–618
+  - strictfp, 617
+  - synchronized, 617
+  - transient, 617
+  - volatile, 617
+- Nonsorted array, 381
+- non-void function, 305
+- Null character, 253, 254; see also Characters
+- NULL macro, 189, 190
+- Null pointers, 189–190
+- Null statement, 74
+- Numeric escapes, 20
+
+## O
+- .o, 6
+- .obj, 6
+- Object-oriented programming, 578, 581, 611; see also C++; Java
+- Object(s), 578
+  - C++, 579–582
+  - Java, 611–614
+- Octal constant, 14
+- offsetof, 408
+- one default constructor, 583–584
+- One-dimensional arrays; see also Two-dimensional arrays
+  - as argument of function, 330–336, 359
+  - data_type, 151–152
+  - declaration, 151, 152, 155–158
+  - elements, accessing, 152–154
+  - error, 164
+  - example, 152
+  - exercises, 155–170
+  - frequency array (freq), 159–160
+  - 100 integers, program, 166–167
+  - initialization, 154–155
+  - shift operator, using, 164–165
+  - 10 integers, program, 162–163, 167–168
+  - 20 integers, program, 160–161
+- open_file(), 514
+- Opening, file, 508–510
+  - exercise, 513–514
+  - fopen() function, 508, 509, 510
+  - open modes, 508t
+- Open modes, file, 508t
+- Open Systems Interconnection (OSI) model, 572
+- ! operator, 51, 52t
+- # operator, 556–557
+- ## operator, 556–557
+- & operator, 35, 36, 37, 61
+- && operator, 52
+- ^ operator, 61
+  - in data encryption, 63–64
+- | operator, 61
+- || operator, 53, 561
+- == (equality) operator, 12, 49, 50, 74
+- ++ (increment) operator, 47–49
+- Operators, 45–71; see also specific operators
+  - , 62
+  - >>, 420
+  - &, 61
+  - &&, 52
+  - ^, 70
+  - *, 61
+  - |, 61
+  - ||, 53, 561
+  - address, 35
+  - address of (&), 189
+  - arithmetic, 46–47
+  - assignment, 13–14
+  - assignment (=), 45–46
+  - associativity, 70
+  - binary, 15, 47
+  - bitwise, 60–69; see also Bitwise operators
+  - cast, 16
+  - explicit arithmetic conversion, 17–18
+  - implicit arithmetic conversion, 16–17
+  - comma (,), 56–57
+  - compound, 70
+  - compound assignment, 50–51
+  - conditional (?), 88–89
+  - decrement (--), 47–49
+  - enum type, 59–60
+  - equality (=), 12, 49, 50, 74
+  - increment (++), 47–49
+  - logical, 51–55
+  - not !, 52
+  - overloading, in C++, 584–589
+  - overview, 45
+  - precedence, 70–71, 663, 663t
+  - relational, 49–50
+  - shift, 62–63

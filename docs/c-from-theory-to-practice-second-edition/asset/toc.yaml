@@ -1,0 +1,59 @@
+level_changes:
+- line: 19729
+  before: 3
+  after: 2
+- line: 24604
+  before: 3
+  after: 2
+text_changes:
+- line: 246
+  before: '2'
+  after: 2 Data Types, Variables, and Data Output
+- line: 2268
+  before: '5'
+  after: 5 程序控制
+- line: 14654
+  before: '12'
+  after: 12 搜索和排序数组
+- line: 19728
+  before: '15'
+  after: 15 文件
+- line: 21364
+  before: '16'
+  after: 16 预处理器
+- line: 23811
+  before: '19'
+  after: 19 Java 简介
+- line: 24602
+  before: '20'
+  after: 20 复习题
+- line: 2498
+  before: C.53 编写一个程序，读取两个整数并在不使用 else 语句的情况下显示它们的关系。
+  after: C.5.3 编写一个程序，读取两个整数并在不使用 else 语句的情况下显示它们的关系。
+- line: 2519
+  before: C.54 以下程序的输出是什么？
+  after: C.5.4 以下程序的输出是什么？
+- line: 5264
+  before: C.71 在以下程序中，数组 arr 的值会是什么？
+  after: C.7.1 在以下程序中，数组 arr 的值会是什么？
+- line: 5280
+  before: C.72 以下程序的输出是什么？
+  after: C.7.2 以下程序的输出是什么？
+- line: 5302
+  before: C.73
+  after: C.7.3
+- line: 5328
+  before: C.74
+  after: C.7.4
+- line: 5349
+  before: C.75
+  after: C.7.5
+- line: 5372
+  before: C.78 下列程序中数组 a 的值会是什么？
+  after: C.7.8 下列程序中数组 a 的值会是什么？
+- line: 5394
+  before: C.79
+  after: C.7.9
+- line: 6448
+  before: C7.30 编写一个程序，模拟电影院售票处。假设电影院有30排，每排20个座位。程序应显示一个菜单，用于执行以下操作：
+  after: C.7.30 编写一个程序，模拟电影院售票处。假设电影院有30排，每排20个座位。程序应显示一个菜单，用于执行以下操作：
