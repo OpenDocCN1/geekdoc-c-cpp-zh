@@ -1,0 +1,54 @@
+# *Analysis of output*
+
+In this case we need to take care of printing two different types of characters at a particular column in a particular row:
+
++   1) Space character
++   2) Numeric character
+
+| row | 1 |  |  |  |  |
+|---|---|---|---|---|---|
+| Col | 1 | 2 | 3 | 4 | 5 |
+| Output | space | space | space | space | 1 |
+
+For row =1, 1 <=spaces<=4, 1>=num>=1
+
+| row | 2 |  |  |  |  |
+|---|---|---|---|---|---|
+| Col | 1 | 2 | 3 | 4 | 5 |
+| Output | space | space | space | 3 | 2 |
+
+For row =2, 1 <=spaces<=3, 3>=num>=2
+
+| row | 3 |  |  |  |  |
+|---|---|---|---|---|---|
+| Col | 1 | 2 | 3 | 4 | 5 |
+| Output | space | space | 5 | 4 | 3 |
+
+For row =3, 1 <=spaces<=2, 5>=num>=3
+
+| row | 4 |  |  |  |  |
+|---|---|---|---|---|---|
+| Col | 1 | 2 | 3 | 4 | 5 |
+| Output | space | 7 | 6 | 5 | 4 |
+
+For row =4, 1 <=spaces<=1, 7>=num>=4
+
+| row | 5 |  |  |  |  |
+|---|---|---|---|---|---|
+| Col | 1 | 2 | 3 | 4 | 5 |
+| Output | 9 | 8 | 7 | 6 | 5 |
+
+For row =5, 9>=num>=5
+
+# *Observations*
+
++   1) There is repetition at row level vertically, i.e., Row = 1 to 5.
++   2) There is repetition at col level horizontally., i.e., Col = 1 to 5.
+
+This gets divided into two parts .One for repetitively printing spaces and remaining column for printing numeric characters.
+
+| For Loop | Lower limit | Upper limit |
+|---|---|---|
+| Outer loop | row=1 | row<=5 |
+| Inner Loop - spaces | col=1 | col <= ?(Unknown) |
+| Inner Loop - Number | num = ?(Unknown) | num = 1 |
