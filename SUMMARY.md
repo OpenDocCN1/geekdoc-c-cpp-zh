@@ -277,6 +277,7 @@
 +   [C# 24小时训练营：在线视频教程 完整学习包](docs/c-24-hour-trainer-complete-learning-package-with-online-vide/README.md)
 +   [C++：三合一-初学者指南+简单有效的技巧+高效学习 C++ 编程高级指南](docs/c-3-in-1--beginners-guide-simple-and-effective-tips-and-tric/README.md)
 +   [C# 3.0 完全参考手册（第3版）](docs/c-30-the-complete-reference-3rd-edition/README.md)
++   [Visual Studio 2010 快速启动：C# 4、ASP.NET 4 和 WPF](docs/c-4-aspnet-4-and-wpf-with-visual-studio-2010-jump-start/README.md)
 +   [C# 5.0 傻学者指南](docs/c-50-all-in-one-for-dummies/README.md)
 +   [C++ 入门指南，第二版（McGraw-Hill 初学者指南）](docs/c-a-beginners-guide-second-edition-beginners-guides-mcgraw-h/README.md)
 +   [C++ 高级编程：构建高性能应用指南](docs/c-advanced-programming-building-high-performance-application/README.md)
