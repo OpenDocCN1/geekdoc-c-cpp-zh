@@ -1,0 +1,25 @@
+The following sections explain the basic concepts involved in creating your own class libraries. Don't worry: C# does the heavy lifting. Your end of it is quite simple.
+
+![](bbox=[0.153, 0.173, 0.232, 0.246])
+
+Even the free Visual C# 2012 Express Edition can now create class libraries. It used to require a small hack to make it work.
+
+# Creating the projects for a class library
+
+You can create the files for a new class library project and its driver in either of two ways:
+
++   - **Create the class library project first and then add the driver project to its solution.** You might take this approach if you were writing a stand-alone class library assembly. I describe how to create the class library project in the next section.
++   - **Create a driver program first and then add one or more library projects to its solution.** Thus you might first create the driver program as a console application or a graphical Windows Forms (or Windows Presentation Foundation) application. Then you would add class library projects to that solution.
+
+This approach is the one to take if you want to add a supporting library to an ongoing application. In that case, the “driver” could be either the ongoing program or a special driver project added to the solution just to test the library. For testing, you set the driver project as the start-up project as described in the earlier section “Executables.”
+
+# Creating a stand-alone class library
+
+If your whole purpose is to develop a stand-alone class library that can be used in various other programs, you can create a solution that contains a class library project from scratch — here’s how simple it is:
+
++   1. **Create a new project.**
++   2. **When you pick the template to base it on in the New Project dialog box, select Class Library (rather than, say, Console Application).**
+
+Figure 10-1 shows what Solution Explorer looks like at this point.
+
+After you have a class library project, you can add a driver project (or a unit test project or both) using the approach described in the next section.

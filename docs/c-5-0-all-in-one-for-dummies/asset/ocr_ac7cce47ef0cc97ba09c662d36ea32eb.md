@@ -1,0 +1,20 @@
+# Chapter 3: Controlling Your Development Experience
+
+# In This Chapter
+
++   - ✓ Interacting with the user
++   - ✓ Connecting to data
++   - ✓ Using Stylesheets to make the site look better
++   - ✓ Building and using User Controls
+
+ASP.NET is a rendering engine. It takes preset batches of functionality and renders it into HTML. For instance, ASP.NET can take a database table and a little bit of layout information and make a nice, dynamic HTML table.
+
+Rendering engines are a good idea in the web world. With a bunch of different implementations and versions, your rendering engine can produce different user markup out of the same effective code base.
+
+ASP.NET does this well. You can tell it to make mobile-device markup and text-only markup and rich Internet Explorer markup from the same ASP.NET file, and it will do an okay job.
+
+This is possible because of *web controls*. Web controls are controls that ASP.NET renders into client-side markup, like HTML, CSS, and JavaScript. Well-programmed controls protect the developer from the implementation details but can still do what is needed to be done when the time comes.
+
+Web controls aren't anything special. Basically, they show a pretty text box in the designer pane of Visual Studio and then emit text — an `<input>` tag — when called upon to do so.
+
+ASP.NET has a lot of included controls, many other controls are available from third-party providers, and you can even build your own and base them on existing controls. It's a good system.

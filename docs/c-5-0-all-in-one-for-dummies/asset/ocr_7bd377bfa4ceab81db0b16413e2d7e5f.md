@@ -1,0 +1,62 @@
+```
+Student[] students = new Student[names.Length];
+for (int i = 0; i < names.Length; i++)
+{
+    students[i] = new Student(names[i], grades[i]);
+}
+return students;
+
+// Access read-only properties.
+public string Name { get; private set; }
+public double Grade { get; private set; }
+
+// Implement the IComparable interface:
+// CompareTo - Compare another object (in this case, Student objects)
+// and decide which one comes after the other in the sorted array.
+public int CompareTo(Student rightStudent)
+{
+    // Compare the current Student (let's call her 'left') against
+    // the other student (we'll call her 'right').
+    Student leftStudent = this;
+
+    // Now generate a -1, 0 or 1 based upon the Sort criteria (the student's
+    // grade). Double's CompareTo() method would work too.
+    if (rightStudent.Grade < leftStudent.Grade)
+    {
+        return -1;
+    }
+    if (rightStudent.Grade > leftStudent.Grade)
+    {
+        return 1;
+    }
+    return 0;
+}
+
+// Implement the IDisplayable interface:
+// Display - Return a representation of the student.
+public string Display()
+{
+    string padName = Name.PadRight(9);
+    return String.Format("{0,-1:N0}", padName, Grade);
+}
+
+// ----------Birds - Sort birds by their names----------
+// Bird - Just an array of bird names.
+class Bird : IComparable<Bird>, IDisplayable
+{
+    // Constructor - initialize a new Bird object.
+    public Bird(string name) { Name = name; }
+
+    // CreateBirdList - Return a list of birds to the caller;
+    // Use a canned list here to save space.
+    static string[] birdNames = { "Oriole", "Hawk", "Robin", "Cardinal", "Bluejay", "Finch", "Sparrow" };
+
+    public static Bird[] CreateBirdList()
+    {
+        Bird[] birds = new Bird[birdNames.Length];
+        for(int i = 0; i < birds.Length; i++)
+        {
+            birds[i] = new Bird(birdNames[i]);
+        }
+    }
+```

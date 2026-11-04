@@ -1,0 +1,42 @@
+```
+{
+    // Return a randomly selected package priority;
+    // need a 0, 1, or 2 (values less than 3).
+    int rand = randGen.Next(3);
+    // Use that to generate a new package.
+    // Casting int to enum is clunky, but it saves
+    // having to use ifs or a switch statement.
+    return new Package((Priority)rand);
+}
+```
+
+Class PackageFactory has one data member and one method. (You can just as easily implement a simple factory as a method rather than as a class — for example, a method in class Program.) When you instantiate a PackageFactory object, it creates an object of class Random and stores it in the data member rand. Random is a .NET library class that generates random numbers.
+
+Take a look at the PackageFactoryWithIterator example on csharp102.info.
+
+![](bbox=[0.1, 0.45, 0.22, 0.6])
+
+# Using PackageFactory
+
+To generate a randomly prioritized Package object, you call your factory object's CreatePackage() method this way:
+
+```
+PackageFactory fact = new PackageFactory();
+IPrioritizable pack = fact.CreatePackage(); // Note the interface here.
+```
+
+CreatePackage() tells its random-number generator to generate a number from 0 to 2 (inclusive) and uses the number to set the priority of a new Package, which the method returns (to a Package or, better, to an IPrioritizable variable).
+
+![](bbox=[0.1, 0.7, 0.22, 0.85])
+
+Note that I have CreatePackage return a reference to IPrioritizable, which is more general than returning a reference to Package. This example shows indirection — Main() refers to a Package indirectly, through an interface that Package implements. Indirection insulates Main() from the details of what CreatePackage returns. You then have greater freedom to alter the underlying implementation of the factory without affecting Main().
+
+# More about factories
+
+Factories are helpful for generating lots of test data. (A factory needn't use random numbers — that's just what was needed for the PriorityQueue example.)
+
+![](bbox=[0.1, 0.88, 0.22, 0.97])
+
+Factories improve programs by isolating object creation. Every time you mention a specific class by name in your code, you create a dependency on that class. The more such dependencies you have, the more tightly coupled (bound together) your classes become.
+
+![](bbox=[0.1, 0.95, 0.22, 1.0])

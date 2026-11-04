@@ -1,0 +1,59 @@
+```
+```csharp
+//This doesn't work in C#3!!
+public static void MessagesToYou(IEnumerable<object> theMessages)
+{
+    foreach (var item in theMessages)
+    {
+        Console.WriteLine(item);
+    }
+}
+```
+```
+
+it will fail. Generics are invariant in C# 3.0. But, in Visual Studio 2010 and later this compiles because IEnumerable<T> is covariant — you can use a more derived type as a substitute for a higher-order type. The next section shows a real example.
+
+# Contravariance
+
+In my scheduling application, I have Events, which have a date, and then a set of subclasses, one of which is Course. A Course is an Event. Courses know their own number of students.
+
+Anyway, back at the ranch, I have a method called MakeCalendar:
+
+```
+```csharp
+public void MakeCalendar(IEnumerable<Event> theEvents)
+{
+    foreach (Event item in theEvents)
+    {
+        Console.WriteLine(item.WhenItIs.ToString());
+    }
+}
+```
+```
+
+Pretend it makes a calendar; for now, all it does is print the date to the console. MakeCalendar is systemwide, so it expects some enumerable list of events.
+
+I also have a Sort algorithm at the main system, called EventSorter. This is used to pass into the Sort method of collections. It expects to be called from a list of Events. Here is the EventSorter class:
+
+```
+```csharp
+class EventSorter : IComparer<Event>
+{
+    public int Compare(Event x, Event y)
+    {
+        return x.WhenItIs.CompareTo(y.WhenItIs);
+    }
+}
+```
+```
+
+I am writing the Instructor-Led Training section of the event manager, and I need to make a list of courses, sort them, and then make a calendar. So I make my list of courses in ScheduleCourses and then I call sort and pass in the EventSorter:
+
+```
+```csharp
+public void ScheduleCourses()
+{
+    List<Course> courses = new List<Course>()
+    {
+```
+```

@@ -1,0 +1,27 @@
+That concept is immensely powerful because it lets the RecordShopping List() method be highly general — and thus possibly reusable in other programs. The method is even more general than using a base class such as ElectronicDevice for the argument type, because the interface lets you pass almost arbitrary objects that don't necessarily have anything in common other than implementing the interface. They don't even have to come from the same class hierarchy, which truly simplifies the designing of hierarchies, for example.
+
+![](bbox=[0.12, 0.33, 0.22, 0.44])
+
+Overworked word alert: Programmers use the term interface in more than one way. You can see the C# keyword interface and how it's used. People also talk about a class's public interface, or the public methods and properties that it exposes to the outside world. I keep the distinction clear by saying C# interface most of the time when that's what I mean, and saying public interface when I refer to a set of public methods.
+
+![](bbox=[0.12, 0.47, 0.22, 0.58])
+
+C# structures can implement interfaces just as classes can.
+
+# Using an Interface
+
+In addition to your being able to use a C# interface for a parameter type, an interface is useful as
+
++   ♦ A method return type
++   ♦ The base type of a highly general array or collection
++   ♦ A more general kind of object reference for variable types
+
+I explain the advantage of using a C# interface as a method parameter type in the previous section. Now I can tell you about other interface uses.
+
+# As a method return type
+
+I like to farm out to a factory method the task of creating the key objects I need. Suppose that I have a variable like this one:
+
+```
+IRecordable recorder = null; // Yes, you can have interface-type variables.
+```

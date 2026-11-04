@@ -1,0 +1,47 @@
+![](bbox=[0.07, 0.22, 0.22, 0.34])
+
+![](bbox=[0.07, 0.38, 0.22, 0.5])
+
+![](bbox=[0.07, 0.55, 0.22, 0.68])
+
++   ♦ **Don't use exceptions as part of the normal flow of execution.** For example, don't throw an exception as a way to get out of a loop or exit a method.
++   ♦ **Consider writing your own custom exception classes** if they bring something to the table — such as more information to help in debugging or more meaningful error messages for users. We introduce custom exceptions in an article on http://csharp102.info.
+
+The rest of this chapter (along with the articles on csharp102.info) gives you the tools needed to follow those guidelines. For more information, look up exception handling, design guidelines in the Help system, but be prepared for some technical reading.
+
+If a public method throws any exceptions that the caller may need to catch, those exceptions are part of your class's public interface. You need to document them, preferably with the XML documentation comments discussed in Chapter 1 of Book IV.
+
+# How to analyze a method for possible exceptions
+
+In the following method, which is Step 1 in setting up exception handlers, consider which exceptions it can throw:
+
+```
+```csharp
+public string FixNamespaceLine(string line)
+{
+    const string COMPANY_PREFIX = "CMSCO*";
+    int spaceIndex = line.IndexOf(' ');
+    int nameStart = GetNameStartAfterNamespaceKeyword(line, spaceIndex);
+    string newline = string.Empty;
+    newline = PlugInNamespaceCompanyQualifier(line, COMPANY_PREFIX, nameStart);
+    return newline.Trim();
+}
+```
+```
+
+Given a C# file, this method is part of some code intended to find the namespace keyword in the file and insert a string representing a company name (one of ours) as a prefix on the namespace name. (See Book II, Chapter 10 for information about namespaces.) The following example illustrates where the namespace keyword is likely to be found in a C# file:
+
+```
+```csharp
+using System;
+namespace SomeName
+{
+    // Code within the namespace . . .
+}
+```
+```
+
+The result of running the FixNamespaceLine() method on this type of file should convert the first line into the second:
+
+namespace SomeName
+namespace CmSo.SomeName

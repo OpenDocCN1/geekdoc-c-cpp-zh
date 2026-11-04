@@ -1,0 +1,57 @@
+If I’m at lunch with coworkers and the other two Bills aren’t present, the name Bill clearly refers to me. Back in the trenches (or cubicles), shouting “Bill” is ambiguous because it can refer to any one of us. In that context, you need to yell out “Bill Sempf” as opposed to “Bill Davis” or “Bill Rogers.”
+
+Thus, you can consider `Address()` to be the first name or nickname of a method, with its class as the family name.
+
+# # Accessing the Current Object
+
+Consider the following `Student.SetName()` method:
+
+> > **Let Me Say This About This**
+> >
+> > Book II Chapter 4
+
+```
+```csharp
+class Student
+{
+    // The name information to describe a student
+    public string firstName;
+    public string lastName;
+    // SetName -- Save name information.
+    public void SetName(string firstName, string lastName)
+    {
+        firstName = firstName;
+        lastName = lastName;
+    }
+}
+public class Program
+{
+    public static void Main()
+    {
+        Student student1 = new Student();
+        student1.SetName("Joseph", "Smith");
+        Student student2 = new Student();
+        student2.SetName("John", "Davis");
+    }
+}
+```
+```
+
+The method `Main()` uses the `SetName()` method to update first `student1` and then `student2`. But you don’t see a reference to either `Student` object within `SetName()` itself. In fact, no reference to a `Student` object exists. A method is said to operate on “the current object.” How does a method know which one is the current object? Will the real current object please stand up?
+
+The answer is simple. The current object is passed as an implicit argument in the call to a method — for example:
+
+```
+```csharp
+student1.SetName("Joseph", "Smith");
+```
+```
+
+This call is equivalent to the following:
+
+```
+```csharp
+Student.SetName(student1, "Joseph", "Smith"); // Equivalent call.
+// (but this won't build properly).
+```
+```

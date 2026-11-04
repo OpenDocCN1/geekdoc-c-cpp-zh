@@ -1,0 +1,23 @@
+# Designing Secure Software
+
+Security takes a fair amount of work to accurately design. If you break the process into pieces, you find that it's a lot easier to accomplish. The Patterns and Practices team (a group of software architects at Microsoft who devise programming best practices) have created a systematic approach to designing secure programs that I think you will find straightforward, so I describe it in the following sections.
+
+# Determining what to protect
+
+Different applications have different artifacts that need protection, but all applications share something that needs protection. If you have a database in your application, that is the most important item to protect. If your application is a server-based application, the server should rate fairly high when you're determining what to protect.
+
+Even if your program is just a little single-user application, the software should do no wrong — an outsider shouldn't be able to use the application to break into the user's computer.
+
+# Documenting the components of the program
+
+If you think this section's title sounds similar to part of the design process, you're right. A lot of threat modeling is just understanding how the application works and describing it well.
+
+First, describe what the application does. This description becomes a functional overview. If you follow the commonly accepted Software Development Life Cycle (SDLC), then the use cases, requirements, or user stories document (depending on your personal methodology) should give you a good starting point.
+
+Next, describe how the application accomplishes all those tasks at the highest level. A Software Architecture Overview (SAO) diagram is a useful way to do it. This diagram shows which machines and services do what in your software.
+
+![](bbox=[0.15, 0.78, 0.3, 0.9])
+
+If you happen to be using Visual Studio Team System, building a diagram in the Enterprise Architect version is the ultimate SAO diagram and is a good model.
+
+Sometimes the SAO is a simple diagram — if you have a stand-alone Windows Forms program like a game, that's all there is! A stand-alone program has no network connection, and no communication between software parts. Therefore, the software architecture diagram contains only one instance.

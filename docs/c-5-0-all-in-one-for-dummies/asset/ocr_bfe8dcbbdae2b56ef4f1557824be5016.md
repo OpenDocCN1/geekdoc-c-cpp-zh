@@ -1,0 +1,43 @@
+Look again at the SetName() method, which updates the first and last name fields in the Student object. To see which object SetName() modifies, consider this example:
+
+```
+Student christa = new Student();    // Here's one student.
+Student sarah = new Student();      // And here's a completely different one.
+christa.SetName("Christa", "Smith");
+sarah.SetName("Sarah", "Jones");
+```
+
+The first call to SetName() updates the first and last name of the christa object. The second call updates the sarah object.
+
+![](bbox=[0.154, 0.292, 0.23, 0.364])
+
+Thus, C# programmers say that a method operates on the current object. In the first call, the current object is christa; in the second, it’s sarah.
+
+# Expanding a method’s full name
+
+A subtle but important problem exists with my description of method names. To see the problem, consider this sample code snippet:
+
+```
+public class Person
+{
+    public void Address()
+    {
+        Console.WriteLine("Hi");
+    }
+}
+public class Letter
+{
+    string address;
+    // Store the address.
+    public void Address(string newAddress)
+    {
+        address = newAddress;
+    }
+}
+```
+
+Any subsequent discussion of the Address() method is now ambiguous. The Address() method within Person has nothing to do with the Address() method in Letter. If my programmer friend tells me to access the Address() method, which Address() does he mean?
+
+The problem lies not with the methods themselves, but, rather, with my description. In fact, no Address() method exists as an independent entity — only a Person.Address() and a Letter.Address() method. Attaching the class name to the beginning of the method name clearly indicates which method is intended.
+
+This description is quite similar to people’s names. Within my family, I am known as Bill. (Actually, my family usually just yells, “Hey you,” but this is just an example.) No other Bills are within my family (at least not within my close family). However, two other Bills work where I do.

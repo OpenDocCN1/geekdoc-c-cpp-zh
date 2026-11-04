@@ -1,0 +1,60 @@
+```
+~~~csharp
+{
+    _accountNumber = ++_nextAccountNumber;
+    balance = 0.0;
+}
+// ... other members . . .
+}
+~~~
+```
+
+The contents of the BankAccount constructor are the same as those of the original Init(...) method. However, the way you declare and use the constructor differs:
+
++   - The constructor always carries the same name as the class.
++   - The constructor can take parameters (or not).
++   - The constructor never has a return type, not even void.
++   - `Main()` doesn't need to invoke any extra method to initialize the object when it's created; no `Init()` is necessary.
+
+![](bbox=[0.134, 0.392, 0.22, 0.462])
+
+If you provide your own constructor, C# no longer supplies a default constructor. Your constructor replaces the default and becomes the only way to create an instance of your class.
+
+# ## Constructing something
+
+Try out a constructor thing. Consider the following program, DemonstrateCustomConstructor:
+
+![](bbox=[0.134, 0.576, 0.22, 0.645])
+
+```
+~~~csharp
+// DemonstrateCustomConstructor -- Demonstrate how you can replace the
+//    C# default constructor with your own, custom constructor.
+// Creates a class with a constructor and then steps through a few scenarios.
+using System;
+namespace DemonstrateCustomConstructor
+{
+    // MyObject -- Create a class with a noisy custom constructor
+    //    and an internal data object.
+    public class MyObject
+    {
+        // This data member is a property of the class (it's a static).
+        private static MyOtherObject _staticObj = new MyOtherObject();
+        // This data member is a property of each instance.
+        private MyOtherObject _dynamicObj;
+        // Constructor (a real chatterbox)
+        public MyObject()
+        {
+            Console.WriteLine("MyObject constructor starting");
+            Console.WriteLine("(Static data member constructed before " +
+                              "this constructor)");
+            Console.WriteLine("Now create nonstatic data member dynamically:");
+            _dynamicObj = new MyOtherObject();
+            Console.WriteLine("MyObject constructor ending");
+        }
+    }
+    // MyOtherObject -- This class also has a noisy constructor but
+    //    no internal members.
+}
+~~~
+```

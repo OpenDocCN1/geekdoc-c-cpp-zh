@@ -1,0 +1,21 @@
+# Preparing object-oriented nachos
+
+In an object-oriented approach to making nachos, you first identify the types of objects in the problem: chips, beans, cheese, jalapeños, and a microwave oven. Then you begin the task of modeling those objects in software, without regard for the details of how they might be used in the final program. For example, you can model cheese as an object in isolation from the other objects and then combine it with the beans, the chips, the jalapeños, and the oven and make them interact. (And you might decide that some of these objects don't need to be objects in the software: cheese, for instance.)
+
+While you do that, you're said to be working (and thinking) at the level of the basic objects. You need to think about making a useful oven, but you don't have to think about the logical process of making nachos — yet. After all, the microwave designers didn't think about the specific problem of you making a snack. Rather, they set about solving the problem of designing and building a useful microwave.
+
+After you successfully code and test the objects you need, you can ratchet up to the next level of abstraction and start thinking at the nacho-making level rather than at the microwave-making level.
+
+(And, at this point, I can translate my son's instructions directly into C# code.)
+
+# Object-Oriented Concept #2: Classification
+
+Critical to the concept of abstraction is that of classification. If I were to ask my son, "What's a microwave?" he might say, "It's an oven that..." If I then ask, "What's an oven?" he might reply "It's a kitchen appliance that..." If I ask "What's a kitchen appliance?" he would probably say "Why are you asking so many stupid questions?"
+
+The answers my son might give stem from his understanding of this particular microwave as an example of the type of item known as a microwave oven. In addition, he might see a microwave oven as just a special type of oven, which itself is just a special type of kitchen appliance.
+
+![](bbox=[0.12, 0.88, 0.2, 0.98])
+
+In object-oriented computereese, the microwave is an instance of the class microwave. The class microwave is a subclass of the class oven, and the class oven is a subclass of the class kitchen appliance.
+
+Humans classify. Everything about the world is ordered into taxonomies. Humans do this to reduce the number of items they have to remember. For example, the first time you saw an SUV, the advertisement probably referred to the SUV as "revolutionary, the likes of which have never been seen." But you and I know that it just isn't so. I like the looks of certain SUVs (others need to go back to take another crack at it), but hey, an SUV is a car. As

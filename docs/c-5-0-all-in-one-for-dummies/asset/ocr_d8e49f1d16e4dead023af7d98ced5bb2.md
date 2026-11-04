@@ -1,0 +1,17 @@
+CIA can still keep its deepest, darkest secrets ultra-hush-hush by declaring them private inside their own class. That strategy makes them accessible only in that class.
+
+# ## Protected: Sharing with subclasses
+
+The main purpose of *private* is to hide information. In particular, *private* hides a class's internal implementation details. (Classes who know classes too intimately aren't the luckiest classes in the world. In fact, they're the unluckiest.) Classes with a lot of implementation details are said to be "too tightly coupled" with the classes they know too much about. If class A is aware of the internal workings of class B, A can come to rely too much on those details. If they ever change, you end up having to modify both classes.
+
+The less the other classes — and assemblies — know about how class B performs its magic, the better. In Chapter 5 of this minibook, I use the example of a *BankAccount* class. The bank doesn't want forgetful folks like me — or forgetful classes such as class A — to be able to change a balance directly. That balance is properly part of the *BankAccount* class's implementation. It's *private*. *BankAccount* provides access to the balance — but only through a carefully controlled public interface. In the *BankAccount* class, the public interface consists of three public methods:
+
++   * **Balance**: Provides a read-only way to find out the current balance. You can't use *Balance* to modify the underlying balance.
++   * **Deposit()**: Lets someone outside the class add to the balance in a controlled way.
++   * **Withdraw()**: Lets someone (presumably the account owner) subtract from the balance, but within carefully controlled limits. *Withdraw()* enforces the *business rule* that you can't withdraw more than you have.
+
+Access control considerations other than *private* and *public* arise in programming. I explain in the previous section how the *internal* keyword opens a class — but only to other classes in its own assembly.
+
+However, suppose that the *BankAccount* class has a subclass, *SavingsAccount*. Methods in *SavingsAccount* need access to that balance defined in the base class, of course, although other classes, even in the same assembly, probably don't. Luckily, *SavingsAccount* can use the same public interface, the same access, as outsiders: using *Balance*, *Deposit()*, and *Withdraw().*
+
+Sometimes, though, the base class doesn't supply such access methods for its subclasses (and others) to use. What if the _balance data member in *BankAccount* is *private* and the class doesn't provide the *Balance* property?

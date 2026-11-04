@@ -1,0 +1,48 @@
+![](bbox=[0.1, 0.14, 0.22, 0.32])
+
+What you're passing in the instantiation is just the method's name, no parameters. What you pass to DoSomethingLengthy() is the delegate instance, callback (which points to the method).
+
+3. Your DoSomethingLengthy() method does some "lengthy processing" and periodically pauses to call back to the form so that it can update its progress bar.
+
+Invoking the delegate inside DoSomethingLengthy() looks like calling a method, complete with parameters, if any;
+
+```
+updateProgress(); // Invoke the delegate instance passed in.
+```
+
+DoSomethingLengthy() looks like this:
+
+```
+private void DoSomethingLengthy(UpdateProgressCallback updateProgress)
+{
+    int duration = 2000;
+    int updateInterval = duration / 10; // Every 200 milliseconds
+    for (int i = 0; i < duration; i++)
+    {
+        Console.WriteLine("Something or other");
+        // Update the form periodically.
+        if ((i % updateInterval) == 0 && updateProgress != null)
+        {
+            updateProgress(); // Invoke the delegate.
+        }
+        if (updateProgress != null) updateProgress();
+    }
+}
+```
+
+The "lengthy process" doesn't do much. It sets the duration variable to 2,000 loop iterations — a few seconds at runtime, which is more than enough for this demo. Next, the method computes an "update interval" of 200 iterations by dividing the overall duration into tenths. Then the for loop ticks off those 2,000 iterations. For each one, it checks whether it's time to update the user interface, or UI. Most times through the loop, no update occurs. But whenever the if condition is true, the method invokes the UpdateProgressCallback instance that was passed to its updateProgress parameter. That modulo expression, i % update Interval, comes out only with a 0 remainder, thus satisfying the if condition, once every 200 iterations.
+
+![](bbox=[0.1, 0.77, 0.22, 0.95])
+
+Always check a newly instantiated delegate for null before invoking it.
+
+4. When DoSomethingLengthy() invokes the delegate, the delegate in turn invokes the method you pointed it at — in this case, the DoUpdate() method on the Form1 class.
+
+5. When called via the delegate, DoUpdate() carries out the update by calling a method on the ProgressBar class named PerformStep():
+
+```
+private void DoUpdate()
+{
+    progressBar1.PerformStep();
+}
+```

@@ -1,0 +1,41 @@
+But not so, my friend. Sort() sees that the array passed in consists of objects that implement IComparable<something> and simply calls CompareTo() on each Student object to sort them. Great, eh?
+
+The sorted array of Student objects is then passed to the locally defined DisplayArray() method. DisplayArray() uses foreach to iterate through an array of objects that implement a Display() method (guaranteed by the objects' having implemented IDisplayable). In the loop, it calls Display() on each object and displays the result to the console using WriteLine().
+
+The program in Main() continues by sorting and displaying birds! I think everyone can agree that birds have nothing to do with students. Yet the same Sort() and DisplayArray() methods work on Bird as on Student.
+
+The output from the program appears:
+
+```
+Sorting the list of students
+Lisa : 100
+Marge : 85
+Bart : 50
+Maggie : 30
+Homer : 0
+
+Sorting the list of birds
+Bluejay
+Cardinal
+Finch
+Hawk
+Oriole
+Robin
+Sparrow
+Press Enter to terminate...
+```
+
+# Unifying Class Hierarchies
+
+Figure 8-1 shows the Robot and Animal hierarchies. Some, but not all, of the classes in each hierarchy not only inherit from the base classes, Robot or Animal, but they also implement the IPet interface (not all animals are pets, you see), as shown in the following code — I skipped lots of details:
+
+```
+// Two abstract base classes and one interface
+abstract class Animal
+{
+    abstract public void Eat(string food);
+    abstract public void Sleep(int hours);
+    abstract public int NumberOfLegs { get; }
+    public void Breathe() { ... } // Nonabstract, implementation not shown.
+}
+```

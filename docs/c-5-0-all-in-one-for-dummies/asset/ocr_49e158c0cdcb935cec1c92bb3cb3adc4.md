@@ -1,0 +1,48 @@
+```
+principal < 0 || principal > maximumInterest
+```
+
+This test changes to this:
+
+```
+interest >= 0 && interest <= maximumInterest
+```
+
+Clearly, interest >= 0 is the opposite of interest < 0. What may not be as obvious is that the OR (| |) operator is replaced with an AND (&&) operator. It says, "Exit the loop if the interest is greater than zero AND less than the maximum amount (in other words, if it is correct)."
+
+By the way, how could you revise CalculateInterestTableMore Forgiving to let the user run calculation after calculation and enter new principal and interest figures every time until she wants to quit? Hint: Use another while(true) loop with its own exit condition.
+
+Note that the principal variable must be declared outside the loop because of scope rules, which I explain in the next section.
+
+![](bbox=[0.15, 0.6, 0.22, 0.73])
+
+It may sound obvious, but the expression true evaluates to true. Therefore, while(true) is your archetypical infinite loop. It's the embedded break command that exits the loop. Therefore, if you use the while(true) loop, make sure that your break condition can occur.
+
+The output from a sample execution of this program (showing the author's ignorance) appears this way:
+
+```
+Enter principal: -1000
+Principal cannot be negative
+Try again
+
+Enter principal: 1000
+Enter interest: -10
+Interest cannot be negative or greater than 50
+Try again
+
+Enter interest: 10
+Enter number of years: 5
+
+Principal      = 1000
+Interest       = 10%
+Duration       = 5 years
+
+1-1100.00
+2-1210.00
+3-1331.00
+4-1464.10
+5-1610.51
+Press Enter to terminate . . .
+```
+
+The program refuses to accept a negative principal or interest amount and patiently explains the mistake on each loop.

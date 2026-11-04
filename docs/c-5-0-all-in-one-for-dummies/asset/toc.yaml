@@ -1,0 +1,50 @@
+level_changes:
+- line: 212
+  before: 3
+  after: 2
+- line: 216
+  before: 3
+  after: 2
+- line: 220
+  before: 3
+  after: 2
+- line: 232
+  before: 2
+  after: 3
+- line: 236
+  before: 2
+  after: 3
+- line: 244
+  before: 2
+  after: 3
+- line: 248
+  before: 2
+  after: 3
+text_changes:
+- line: 232
+  before: 第四册：Visual Studio 之旅
+  after: 第 IV 册：Visual Studio 之旅
+- line: 236
+  before: 第五册：使用 WPF 进行 Windows 开发
+  after: 第 V 册：使用 WPF 进行 Windows 开发
+- line: 244
+  before: 第六册：使用 ASP.NET 进行 Web 开发
+  after: 第 VI 册：使用 ASP.NET 进行 Web 开发
+- line: 248
+  before: 第七册：面向服务的开发
+  after: 第 VII 册：面向服务的开发
+- line: 12930
+  before: 346 隐藏在接口背后
+  after: 隐藏在接口背后
+- line: 14793
+  before: 第三册
+  after: 第 III 册
+- line: 15839
+  before: 第三部
+  after: 第 III 册
+- line: 17467
+  before: 第 IV 部分
+  after: 第 IV 册
+- line: 21552
+  before: 第六部分
+  after: 第 VI 册
