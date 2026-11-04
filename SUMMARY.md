@@ -407,6 +407,7 @@
 +   [C 语言：学习 C 语言基础的权威方法](docs/c-programming-a-definitive-method-for-learning-the-basics-of/README.md)
 +   [C 语言入门自学指南](docs/c-programming-a-self-teaching-introduction/README.md)
 +   [C++ 编程：学习多范式编程语言基础并开始数据管理的初学者指南：第一个程序（计算机科学系列 3）](docs/c-programming-a-step-by-step-beginners-guide-to-learn-the-fu/README.md)
++   [C 编程 绝对初学者指南](docs/c-programming-absolute-beginners-guide/README.md)
 +   [C 语言初学者指南 3](docs/c-programming-absolute-beginners-guide-3/README.md)
 +   [C 语言编程初学者指南 (第3版)](docs/c-programming-absolute-beginners-guide-3rd-edition/README.md)
 +   [C++ 编程：下班自学 C++ 指南。构建你的编程技能并学习解决常见问题。将你的热情转化为计算机程序员职业生涯。](docs/c-programming-after-work-guide-to-master-c-on-your-own-build/README.md)
