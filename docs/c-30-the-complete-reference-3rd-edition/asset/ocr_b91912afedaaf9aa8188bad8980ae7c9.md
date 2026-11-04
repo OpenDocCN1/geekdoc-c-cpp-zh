@@ -1,0 +1,12 @@
+| Method | Description |
+|---|---|
+| public int IndexOf(char ch, int start, int count) | Returns the index of the first occurrence of ch within the invoking string. Searching begins at the index specified by start and runs for count elements. Returns -1 if ch is not found. |
+| public int IndexOf(string str, int start, int count) | Returns the index of the first occurrence of str within the invoking string. Searching begins at the index specified by start and runs for count elements. Returns -1 if str is not found. |
+| public int IndexOf(string str, StringComparison how) | Returns the index of the first occurrence of str within the invoking string. How the search is performed is specified by how. Returns -1 if str is not found. |
+| public int IndexOf(string str, int start, StringComparison how) | Returns the index of the first occurrence of str within the invoking string. Searching begins at the index specified by start. How the search is performed is specified by how. Returns -1 if str is not found. |
+| public int IndexOf(string str, int start, int count, StringComparison how) | Returns the index of the first occurrence of str within the invoking string. Searching begins at the index specified by start and runs for count elements. How the search is performed is specified by how. Returns -1 if ch is not found. |
+| public int LastIndexOf(char ch) | Returns the index of the last occurrence of ch within the invoking string. Returns -1 if ch is not found. |
+| public int LastIndexOf(string str) | Returns the index of the last occurrence of str within the invoking string. Returns -1 if str is not found. |
+| public int LastIndexOf(char ch, int start) | Returns the index of the last occurrence of ch within a range of the invoking string. The search proceeds in reverse order, beginning at the index specified by start and stopping at 0. Returns -1 if the ch is not found. |
+| public int LastIndexOf(string str, int start) | Returns the index of the last occurrence of str within a range of the invoking string. The search proceeds in reverse order, beginning at the index specified by start and stopping at 0. Returns -1 if str is not found. |
+| public int LastIndexOf(char ch, int start, int count) | Returns the index of the last occurrence of ch within the invoking string. The search proceeds in reverse order, beginning at the index specified by start and running for count elements. Returns -1 if ch is not found. |

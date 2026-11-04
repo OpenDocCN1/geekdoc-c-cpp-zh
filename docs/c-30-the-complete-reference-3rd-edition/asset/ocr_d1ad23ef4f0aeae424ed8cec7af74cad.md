@@ -1,0 +1,11 @@
+# Data Types, Literals, and Variables
+
+This chapter examines three fundamental elements of C#: data types, literals, and variables. In general, the types of data that a language provides define the kinds of problems to which the language can be applied. As you might expect, C# offers a rich set of built-in data types, which makes C# suitable for a wide range of applications. You can create variables of any of these types, and you can specify constants of each type, which in the language of C# are called literals.
+
+# Why Data Types Are Important
+
+Data types are especially important in C# because it is a strongly typed language. This means that all operations are type-checked by the compiler for type compatibility. Illegal operations will not be compiled. Thus, strong type-checking helps prevent errors and enhances reliability. To enable strong type-checking, all variables, expressions, and values have a type. There is no concept of a “typeless” variable, for example. Furthermore, a value’s type determines what operations are allowed on it. An operation allowed on one type might not be allowed on another.
+
+# C#'s Value Types
+
+C# contains two general categories of built-in data types: value types and reference types. The difference between the two types is what a variable contains. For a value type, a variable holds an actual value, such 3.1416 or 212. For a reference type, a variable holds a reference to the value. The most commonly used reference type is the class, and a discussion of classes and reference types is deferred until later in this book. The value types are described here. At the core of C# are the 13 value types shown in Table 3-1. Collectively, these are referred to as the simple types. They are called simple types because they consist of a single value. (In other words, they are not a composite of two or more values.) They form the foundation of C#’s type system, providing the basic, low-level data elements upon which a program operates. The simple types are also sometimes referred to as primitive types.
