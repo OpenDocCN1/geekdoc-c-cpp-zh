@@ -1,0 +1,11 @@
+when dealing with operator overloading is understanding that all abbreviated forms should be made implicit, that is, anyone who references it should inherently know any action implied by an overloaded operator. To accomplish this we need only to take note of the implied meaning before the operator is expanded. For example when working with simple addition, we might conclude that the equation x = 4 + 2 returns the value 6. This observation would be based on the implied understanding of the "+" symbol. If we were to abuse the overloading process to include x = 4/2 (equaling 6) this would not be inherently implied, thus it could potentially confuse the programmer.
+
+To understand the reasoning behind the application of overloaded operators, simply redefine the task to meet the need. For example, by converting the first value, 4, into a public class member, (Class.number = 4; and X = Class.number + 2;), the numeric calculations would not be altered and operator overloading would not be necessary. In addition, by converting that value into a private class member using a get or read function to retrieve that value (short Class.ReadValue() {return(this.number); } "X = Class.ReadValue() + 2;", overloading would remain unnecessary. Further, if we express the object Class to imply Class.number, but replace the cumbersome operation of relaying that value through a get or read function with that of a nested class component, the same implicit reasoning still applies ("X = Class.ComponentNumber + 2;"). However, while this is mathematically sound, it is not inherently understood by the computer. Thus, in order to define the action of adding an implied class member to that of a numeric value, it is necessary to build a secondary application for the "+" operator, which, of course, is an overloaded version of that operator, hence the term operator overloading.
+
+| + | - | * | / | % | ^ |
+|---|---|---|---|---|---|
+| > | < | >= | <= | == | != |
+| >> | << | ! | ++ | — | ~ |
+| true | false | | | & | |
+
+Table 5.1. C# overload operators.

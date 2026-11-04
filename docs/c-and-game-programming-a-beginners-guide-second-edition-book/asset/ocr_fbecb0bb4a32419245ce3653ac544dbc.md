@@ -1,0 +1,10 @@
+Each player begins with sixteen characters: one King, one Queen, two Rooks, two Bishops, two Knights and eight Pawns. The players are lined up on opposite sides of the board with the lighter side placing its right-hand, or King-side Rook, on a lighter square. The arrangement of the key pieces is from left to right and is listed as follows: Queen-side Rook, Queen-side Knight, Queen-side Bishop, The Queen, The King, King-side Bishop, King-side Knight, and King-side Rook. The Pawns are then placed in the squares directly in front of them with their positions defining their identities, i.e., Queen-Rook's Pawn, Queen-Knight's Pawn, Queen-Bishop's Pawn, Queen's Pawn, King's Pawn, King-Bishop's Pawn, King-Knight Pawn, King-Rook's Pawn. The darker side mirrors these positions (see Figure H.2). Note: The Queen's of each side should be lined up vertically with the lighter Queen placed on a lighter square and the darker Queen placed on a darker square.
+
+# Figure
+H.2.
+
+![](bbox=[0.35, 0.38, 0.75, 0.75])
+
+Each player is only allowed one move per turn; no two pieces may occupy the same square at any one time; and a player can only capture pieces form the opponent's side. Once a piece is captured, the attacking piece takes that square and the turn is complete. At the beginning of the game, each player is instructed to secretly choose a piece from their own set of characters which will represent them. The King is not considered a valid choice, nor are any of the opponent's pieces; if a player fails to select a valid character, he automatically forfeits the game.
+
+Once the game is in play, it can only be terminated by one of six situations: 1) A player's chosen piece is captured, which immediately ends the game giving the win to the player that captured the piece; 2) A King is placed in checkmate, which also immediately terminates the game, but this time it is considered to be a draw; 3) A player cannot

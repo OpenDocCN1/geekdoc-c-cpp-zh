@@ -1,0 +1,41 @@
+level_changes:
+- line: 14
+  before: 2
+  after: 3
+- line: 18
+  before: 2
+  after: 3
+- line: 22
+  before: 2
+  after: 3
+- line: 26
+  before: 2
+  after: 3
+- line: 55
+  before: 2
+  after: 3
+- line: 69
+  before: 2
+  after: 3
+- line: 73
+  before: 2
+  after: 3
+- line: 150
+  before: 2
+  after: 3
+- line: 180
+  before: 2
+  after: 3
+- line: 190
+  before: 2
+  after: 3
+text_changes:
+- line: 119
+  before: 关于 Cs 的一点历史
+  after: 关于 C# 的一点历史
+- line: 134
+  before: 什么是 .Net 框架？
+  after: 什么是 .NET 框架？
+- line: 228
+  before: 示例 1.2 详解
+  after: 示例 1.2. 详解
