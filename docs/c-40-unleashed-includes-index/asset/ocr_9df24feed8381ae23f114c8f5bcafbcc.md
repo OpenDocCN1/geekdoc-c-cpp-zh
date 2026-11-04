@@ -1,0 +1,15 @@
+# Native Image Generation
+
+Having to pay the price to JIT-compile application code and the class library assemblies on which it depends doesn't sound like a great idea. After all, once an assembly has been deployed to a target machine, the processor architecture is certain, and all repeated JIT compilations of the code in those assemblies will result in the same corresponding native code. It seems we want a mechanism where we can still deploy IL-based assemblies (for all the benefits previously mentioned) but go through the burden of JIT compilation only once.
+
+To counter this concern, the CLR has the concept of “native image generation,” or NGEN. The simplest way to think about NGEN is as an offline version of the JIT compiler that can be invoked on whole assemblies, to translate them into native code and store the result in a central location where the assembly loader will find them. (In practice, this is a folder underneath the GAC location). From that point on, no runtime cost for JIT compilation has to be paid anymore, resulting in fast startup times for applications. In addition, a reduction in memory use can result if assemblies are loaded multiple times in the same application (in different application domains, that is) because the native code image can be memory-mapped.
+
+# GETTING TO KNOW NGEN THE HARD WAY
+
+Users of Windows PowerShell 1.0, which is a managed code application, will have experienced the cost incurred by JIT compilations. Because of an issue with the setup package, assemblies didn't get NGEN'ed. A manual workaround to trigger NGEN was published to the PowerShell blog. This workaround results in significant startup performance improvements.
+
+Windows PowerShell 2.0 will have proper NGEN'ing carried out by its installer.
+
+NGEN can be used in two modes: interactive and background. In interactive mode, NGEN compilation of the specified assembly is carried out immediately. When running an NGEN task in background mode, its compilation is queued up for a background service known as the NGEN optimization service (mscorscw.exe) to do the work later. This queue is prioritized so that important assemblies can take precedence over less frequently used ones. To carry out NGEN administration tasks, a command-line utility called ngen.exe exists, although most NGEN tasks are performed by software installers (for example, to queue up background compilation jobs for the installer to finish more quickly).
+
+All this sounds great, but there are some flip sides to NGEN. One potential issue is for assemblies and their NGEN'ed counterparts to get out of sync when updates happen. Command-line switches exist on ngen.exe to force updates when this is the case. Contrary to what you might think, the performance of an NGEN'ed assembly is potentially slower than for a JIT-compiled one. The native image compiler can't make as many assumptions about the runtime environment as its online friend, the JIT compiler. Therefore, NGEN needs to be conservative, sometimes resulting in inferior code generation compared to the JIT equivalent. Another potential performance regression comes from the potential image

@@ -1,0 +1,103 @@
+
+The managed code abstraction that sits the closest to operating system primitives for thread-local storage is known as *data slots*. Management of data slots is done in a way that feels quite native, due to the `Allocate/Free` methods that are used:
+
+```
+var slot = Thread.AllocateNamedDataSlot("logger");
+```
+
+```
+// Use the slot throughout the program with GetData and SetData calls.
+```
+
+```
+Thread.FreeNamedDataSlot("logger");
+```
+
+As a result of calling `AllocateNamedDataSlot`, we get a `LocalDataStoreSlot` object that acts as a handle to access the data contained in the slot. This is achieved by means of the static `GetData` and `SetData` methods on the `Thread` class. Instead of holding on to the slot object, it can also be retrieved by means of its name:
+
+```
+// Initialization code.
+var slot = Thread.AllocateNamedDataSlot("logger");
+Thread.SetData(slot, new Logger() /* type definition omitted for brevity */);
+```
+
+Assuming the slot was allocated here, we can now use the `GetData` method to obtain the logger object. Each thread will have its own slot (requiring per-thread initialization as shown earlier), resulting in a separate logger per thread. This technique is typically used to avoid synchronization code for fundamental activities such as logging:
+
+```
+var slot = Thread.GetNamedDataSlot("logger");
+var logger = (Logger)Thread.GetData(slot);
+logger.WriteLine("Diagnostic message");
+```
+
+With this, we conclude our discussion of techniques that can be used to allocate per-thread state.
+
+## SHALLOW VERSUS DEEP
+
+Beware of a false sense of security when using thread-local storage techniques. It’s not because you’re differentiating state on a per-thread basis (for example, to avoid synchronization issues) that all the associated state is partitioned as well.
+
+For example, you might have multiple threads, each of which has its own logger object. But if those logger instances happen to contain a reference to the same underlying resource (by means of aliasing of object references), you’re still in trouble. All you’ve done is segregated state on a shallow basis (such as the top-level logger), forgetting about the deep object graph underneath.
+
+Moral of the story: Beware of any kind of shared state. If multiple parties need to access that state, you better read up on synchronization primitives.
+
+## Essential Threading Debugging Techniques
+
+Debugging multithreaded programs can be a true challenge. After all, different parts of the program are running simultaneously, each of which can be changing state. The lack of proper synchronization around shared resources will make things go really bad, posing a true debugging challenge.
+
+### When Threads Are Frozen
+
+Debuggers pause a program's threads when you're inspecting program state from the debugger, and resuming the program unfreezes all threads again. The notion of resuming should be understood in the broadest sense possible, including single-stepping (using F10). To illustrate this effect, consider the following piece of code:
+
+```csharp
+class Program
+{
+    static void Main()
+    {
+        // Background thread.
+        new Thread(() =>
+        {
+            while (true)
+            {
+                Thread.Sleep(30);
+                Console.WriteLine("{0} - {1:hh:mm:ss:fff}",
+                    Thread.CurrentThread.ManagedThreadId,
+                    DateTime.Now);
+            }
+        }).Start();
+
+        // Main thread's code.
+        while (true)
+        {
+            Thread.Sleep(100);
+            Console.WriteLine("{0} - {1:hh:mm:ss:fff}",
+                Thread.CurrentThread.ManagedThreadId,
+                DateTime.Now);
+        }
+    }
+}
+```
+
+Set a breakpoint on the main thread's Console.WriteLine call. By the time we hit this breakpoint, the background thread will (likely) have printed some messages already. Once you're broken in the debugger, notice how all threads have been frozen. The background thread doesn't get a chance to make progress at this point. This is a good thing. Think about what would happen when you're analyzing state in the debugger while other threads can still modify things.
+
+To see the effect of resuming execution, press F10 to single-step from the point where we hit the breakpoint. This moves the main thread to the closing curly brace on its for loop. Notice, though, the background thread also got unfrozen, and there's a chance (because you're dealing with timing, there are no certainties) the background thread made progress while execution was resumed for the very short time it took to single-step over the Console.WriteLine call. Figure 29.12 shows this effect, where it's clear the background thread made progress during the single-stepping we've done.
+
+![](img/a16f85e62ce9bdc527f4b09dbfe26092_1490_0.png)
+
+FIGURE 29.12 Analyzing debugger behavior with regard to thread execution.
+
+Why do I consider this to clearly be the case? Just look at the time deltas in the output for the thread with ID 9. From this, you can see that I stayed in the debugger for about 14 seconds after hitting the breakpoint. During that time, the background thread didn't make any progress. However, upon hitting F10, this background thread had a chance to run and printed another message. This all happened while the debugger was waiting for the main thread (with ID 8) to complete the single-stepping, which took us beyond the Console.WriteLine call, explaining the last message.
+
+### Freeze and Thaw
+
+While debugging multithreaded issues, you often want to do some “what if” analysis to get to the bottom of the observed behavior. Suppose, for example, that a whole bunch of threads are dealing with the same underlying resource and you observe that resource going bad one way or another. To pinpoint the source of the problem, you want to narrow down the problem to the thread that's improperly doing its synchronization duties.
+
+Although there’s no perfect way to do such analysis, I want to point out some tools that can help. One is the debugger’s capability to freeze and thaw threads. When you freeze a thread, it remains suspended until you issue the thaw command on the thread, which enables you to eliminate a thread from the global picture you’re trying to get to of the misbehaving program. If the problem you’re debugging suddenly disappears, that can be a pretty good indication of the frozen thread being at fault.
+
+Another reason to freeze a thread is to reduce debugging noise. For example, if you have some thread sitting around to perform periodic maintenance activities, you might want to freeze that thread temporarily while you're performing your analysis. This is especially true if you've set a breakpoint in code that's run by multiple threads but you want to break into the debugger only when a relevant thread hits that code path. Although alternative techniques exist (for example, using a conditional breakpoint based on the thread ID property), the use of freeze and thaw can be appropriate here.
+
+Figure 29.13 shows the use of the Freeze option from the context menu in the Threads window. Using the example from the previous section, we're about to freeze the thread that prints a message every 30 milliseconds. Pressing F10 to single-step the main thread will no longer permit the background thread from making progress, as long as Thaw isn't used on it to "unfreeze" it.
+
+![](img/a16f85e62ce9bdc527f4b09dbfe26092_1491_0.png)
+
+FIGURE 29.13 Freeze and Thaw options for a thread.
+
+Yet another scenario is when you want to freeze a thread that will only make matters worse. Basically, you might want to prevent the program from accepting more work that causes more concurrency, thus making the analysis of program state harder. As usual, debugging a minimum repro of an issue is much more convenient than having to dissect a more complex problem state—for example, due to many concurrent users in the system. An example of this scenario is to block the thread that runs a procedure to receive work, such as a listener, to accept incoming calls from the network. Freezing that thread prevents more request workers (typically run on separate threads) from entering the picture.

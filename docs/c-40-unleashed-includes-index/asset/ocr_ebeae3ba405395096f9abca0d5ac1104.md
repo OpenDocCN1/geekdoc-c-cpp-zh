@@ -1,0 +1,9 @@
+runtime (typically aided by the operating system underneath) is allowed to context switch threads at any point. One example is shown in Figure 8.26.
+
+![](bbox=[0.15, 0.18, 0.88, 0.6])
+
+FIGURE 8.26 Interleaved execution of two threads.
+
+Every managed thread of execution has its own evaluation stack. In the figure, right after the field is read by the first thread (~1), a context switch occurs, giving the second thread some time to execute (~2). That thread reads the field as well and subtracts and stores the resulting value. However, the first thread has a copy of the original value on its evaluation stack, and when a switch occurs back to the first thread, it proceeds under the assumption the field hasn't changed in the meantime. It increments the original value and stores the resulting value, effectively overwriting the second thread's update. In the world of database transactions, terminology such as “nonrepeatable reads” would apply to describe this circumstance.
+
+Most likely, the time a thread gets to execute (known as a quantum at the OS level) will exceed more than four IL instructions by far. However, a context switch could occur in the middle of each thread. As such, the code is flawed, and observing this multithreading issue can take some time (likely it fails for the first time during a presentation to your manager). What we need to enforce here is atomicity of the increment and decrement operations by making sure the four instructions that read, calculate, and store are not interrupted by context switches. Or more accurately, during that critical section, no other thread should get a chance to touch the same state.

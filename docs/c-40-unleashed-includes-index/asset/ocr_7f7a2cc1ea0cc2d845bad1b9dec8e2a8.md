@@ -1,0 +1,11 @@
+The way this virtual dispatch mechanism works at runtime is quite involved, but we’ll do our best to boil it down to its essence. At runtime, when loading types, the CLR builds a so-called v-table, which stands for virtual dispatch table. This table contains a mapping from virtual methods to their code location. Given an object instance, it’s an easy step to get to the object type’s v-table, simply by computing some offset in memory. When the callvirt instruction is used, the runtime finds the v-table, grabs the entry at the offset corresponding to the virtual method, and invokes the code at the location the entry points at.
+
+Essentially, from an object, we can find its type information, and from that we can find the v-table (which is like a telephone book) from which we can find the method target to be called (which is like an address for a given name in a telephone book). Figure 14.15 shows the v-table for the Circle, Shape, and Object types. The dark gray areas indicate virtual method slots. Notice that the order is preserved through subtyping. When a call is made to the get_Area property getter defined on Shape, the runtime looks at v-table slot 4 on the target object. That slot will always point at the code that takes up the role of executing the virtual method. For a Circle object, get_Area will refer to the code we wrote on the Circle class, using the override keyword to specialize the Area getter defined on the Shape base class.
+
+![](bbox=[0.1, 0.62, 0.88, 0.89])
+
+FIGURE 14.15 v-tables for different types, related through subtyping.
+
+Because we didn’t override ToString, Equals, or GetHashCode, however, entries in those slots will refer to the implementation defined by System.Object. If Shape were to have an override for, say, ToString, the v-table slot for ToString on Circle would refer to that implementation because it’s the “best one” available.
+
+Figure 14.16 shows how the v-table is laid out for our Person class where we override the ToString method but leave the Equals, GetHashCode, and Finalize methods in place by

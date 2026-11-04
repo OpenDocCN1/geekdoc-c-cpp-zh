@@ -1,0 +1,8 @@
+![](bbox=[0.05, 0.15, 0.52, 0.56])
+
+FIGURE 23.13 The System.Exception base class.
+
++   - HelpLink is used to specify a URI where additional information can be found about the exception. We need to emphasize this is an instance property, and therefore it can provide a different URI for each instance of an exception type. After all, for information about the exception type, XML documentation should be around somewhere. An example of a HelpLink use is for a ParserException that supplies a different HelpLink for different parse failures (for example, pointing to documentation about the specific grammar rule that was violated).
++   - HResult is important when the managed code component that's throwing the exception is used from a COM-based client. An example where this is the case is when writing Office add-ins. The managed exception can then be converted into an HRESULT for the COM client to detect. In the opposite direction, a failure originating from a COM component gets surfaced as an exception that contains the HRESULT of the failed call.
++   - InnerException allows wrapping exceptions into one another. When defining a contract between multiple components in the system (for example, using interfaces), you likely want to surface a whole set of known failures as one single exception type. At the same time, different root causes may lie at the heart of the failure. This is where InnerException comes in, providing a way to capture detailed exception information.
++   - Message is easy to understand: It provides a message about what went wrong. Internationalized applications should localize this property because it's meant to be used as a way to display meaningful information to the end user of an application.

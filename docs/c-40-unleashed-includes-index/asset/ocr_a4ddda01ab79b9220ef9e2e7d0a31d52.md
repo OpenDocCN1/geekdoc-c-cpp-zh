@@ -1,0 +1,1 @@
+In the next chapter, we take a look behind the scenes of LINQ. We focus on the query pattern, how LINQ to Objects works using iterators, and how query expressions can be turned into expression trees for runtime translation into domain-specific query languages like SQL.

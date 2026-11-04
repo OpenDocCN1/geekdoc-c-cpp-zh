@@ -1,0 +1,13 @@
+2.0 runtime. And while certain versions of programming languages are in use, many more framework libraries appear, some of which are part of out-of-band releases. For example, the Managed Extensibility Framework (MEF) could do everything it had to without requiring changes to the runtime, any of the languages, or even essential base class libraries.
+
+Figure 26.1 shows a conceptual diagram of layering of runtimes, languages, and libraries. Obviously, applications are written to make use of all of those, but the amount of library features used significantly outnumbers the language features. This book tends to focus on the two bottom layers of the diagram: mastering the C# programming language and knowing fundamentals about the runtime that underpins language features (for example, generics, DLR, reflection).
+
+![](bbox=[0.15, 0.43, 0.8, 0.67])
+
+FIGURE 26.1 Runtimes, languages, and libraries.
+
+Good layers of abstraction supported by language features such as code patterns (for example, foreach loops, using blocks, query syntax), object orientation, namespaces, and so on provide a win-win situation in this jungle of libraries. From the library writer's point of view, an API can be given, by obeying good design principles, a natural feeling for users in various languages. At the same time, users' skill sets can be reused to target all those libraries. Language design principles, such as static typing, together with runtime facilities, such as rich metadata support, tend to aid users in exploring APIs. A good example of tooling features leveraging this can be found in IntelliSense and the Object Browser (which should really be called Type Browser).
+
+Doing justice to all the framework libraries just by reviewing them in a shallow manner is nearly impossible, so refer to specialized titles for deep coverage of things such as UI programming (for example, using Windows Presentation Foundation [WPF]), targeting the Web (for example, using ASP.NET and Silverlight), communication and services (for example, using WCF), and so forth. Often, the number of auxiliary concepts introduced by those technology pillars is way too high to familiarize you within a limited space. Examples of this include configuration and installation aspects (for example, deploying a web application), various designer tools (for example, designing a WPF application), and specialized debugging (for example, when using T-SQL stored procedures in a database).
+
+Instead, we focus on a common set of foundational libraries that can truly be regarded as base class libraries and emphasize a couple of essential patterns that will help you explore various libraries.

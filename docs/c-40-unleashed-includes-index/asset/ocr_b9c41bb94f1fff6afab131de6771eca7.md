@@ -1,0 +1,13 @@
+libraries to be called from managed code, as well as the opposite where managed assemblies are exposed to COM. Two tools make both directions possible; they're respectively called Type Library Importer (tlbimp.exe) and Type Library Exporter (tblexp.exe). To reduce the burden of having to make such mappings for popular libraries, a set of primary interop assemblies (PIAs) are provided by Microsoft (for example, to bridge with the Office automation libraries).
+
+# NO PIA
+
+Right after mentioning PIAs, I should point out the .NET 4.0 release provides a "no PIA" feature. An obvious question is why we want to do away with something that looks like (and is) a very powerful bridging mechanism to big COM automation libraries, like Office’s. The truth is, PIAs are not disappearing completely, but their immediate use gets restricted to compile time. Instead of having to deploy the PIAs—which can be quite big—"no PIA" allows the used portions of a PIA to be linked in with the assembly that’s using them. This way, deployment of the application becomes simpler, and code size is reduced significantly.
+
+A key part of these interoperability facilities is their capability to marshal types back and forth. This process transparently maps between managed types and their native counterparts whenever required. Everyone who’s dealt with COM and native code knows how much string representations exist in those worlds. By using the interoperability marshaling functionality, all of those can be exposed to the managed code world as the BCL string type (or, to be precise, the StringBuilder type if mutation is required). To guide this marshaling, custom attributes are often used to provide the necessary information about the native types that are involved.
+
+# THE COM DINOSAUR
+
+Nobody knows how the dinosaurs came to their end. Today’s question is the opposite: We don’t know when (if ever) the COM dinosaur will vanish from the developer’s universe. Although rich interoperability capabilities were added to the .NET platform from day one, optimists hoped to see the use of COM decline rapidly after the new platform was introduced. Although progress has been made in this area and the number of new COM libraries has dropped, giants like the Office automation libraries will be around for the foreseeable future.
+
+.NET 4.0 recognizes this fact and significantly reduces the number of pain points developers dealing with COM interop have been complaining about. It’s funny, though, that the advent of the brand new dynamic language runtime has been one of the vehicles that makes this mission easier to achieve. COM programming has always been a dynamic experience (those familiar with COM will think of IDispatch instantaneously),

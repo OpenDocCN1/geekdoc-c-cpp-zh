@@ -1,0 +1,3 @@
+Finalizers (sometimes referred to as destructors) deal with cleanup logic that's executed upon destruction of an object. Although not necessary for pure managed code, the use of finalizers is important when native resources need to be released because they are beyond the control of the garbage collector. To enable the user to clean up an object prior to its automatic destruction by the garbage collector, the IDisposable interface can be implemented.
+
+In Chapter 13, you look at a last set of members that can be declared on a type. In partic-ular, you explore the concept of operator overloading and user-defined conversions between objects of different types.
