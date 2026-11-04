@@ -1,0 +1,71 @@
+level_changes:
+- line: 178
+  before: 2
+  after: 1
+- line: 3936
+  before: 2
+  after: 1
+- line: 6802
+  before: 2
+  after: 1
+- line: 8515
+  before: 2
+  after: 1
+- line: 11411
+  before: 2
+  after: 1
+- line: 12265
+  before: 2
+  after: 1
+- line: 12889
+  before: 2
+  after: 1
+- line: 4065
+  before: 1
+  after: 3
+- line: 4160
+  before: 1
+  after: 3
+text_changes:
+- line: 240
+  before: 谈谈我们的“代”
+  after: 谈谈我们的“代码”
+- line: 2446
+  before: '7'
+  after: 7 使用 RichTextBox 控件
+- line: 3257
+  before: '9'
+  after: 9 创建和显示新窗体
+- line: 4892
+  before: '12'
+  after: 12 调试代码
+- line: 5212
+  before: '13'
+  after: 13 理解作用域
+- line: 5632
+  before: 使用字符串
+  after: 14 使用字符串
+- line: 6080
+  before: '16'
+  after: 16 使用数组和集合
+- line: 6505
+  before: '17'
+  after: 17 使用枚举和结构
+- line: 6820
+  before: '18'
+  after: 18 做出选择
+- line: 7531
+  before: '20'
+  after: 20 用方法重用代码
+- line: 8533
+  before: '23'
+  after: 23 定义类
+- line: 10640
+  before: '27'
+  after: 27 使用接口
+- line: 11780
+  before: '30'
+  after: 30 打印
+- line: 13810
+  before: '36'
+  after: 36 LINQ to Objects

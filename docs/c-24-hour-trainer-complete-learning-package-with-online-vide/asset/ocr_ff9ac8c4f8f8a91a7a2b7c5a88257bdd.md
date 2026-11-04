@@ -1,0 +1,10 @@
++   - Give the `Ball` class an `Initialize` method that randomizes the `Ball`'s properties. Hints:
++     - Pass the main form's `ClientSize` into the `Initialize` method. Make the method save it in the `Ball`'s `ClientSize` field.
++     - Make a `private static` array called `brushes` that lists the brushes from which to pick randomly. (Making the array `private` means code outside of the `Ball` class cannot see it. Making it `static` means all instances of the `Ball` class share the same array, so they don't waste space by creating a new array for each `Ball` object.)
++     - Make a `private static Random` object for the `Ball` instances to share. (This solves a tricky problem. When a program makes a `Random` object, it uses the system time to initialize itself by default. This program makes all of the balls at the same time. That means if each `Ball` made its own `Random` object, they would all be initialized at almost exactly the same time so the `Random` objects would all produce the same sequence of "random" values. The result would be a bunch of balls with the same positions, velocities, and colors. Using the `static` keyword makes all of the balls share the same `Random` object so they get different "random" values. To see the problem, just remove the `static` keyword from the `Random` object's declaration.)
++   - Give the `Ball` class a `Move` method that updates the `Ball`'s position. If the `Ball` hits a wall, raise a `HitWall` event.
++   - Give the `Ball` class a `Draw` method that takes a `Graphics` object as a parameter and draws the ball on it.
++   - Make the form's code use the `Ball` methods to initialize, move, and draw the balls. (This should make the form's code much simpler.)
++   - Make the form's code catch the `Balls`' `HitWall` events and play the appropriate sound.
+
+> > **NOTE** *Please select the videos for Lesson 23 online at www.wrox.com/go/csharp24hourtrainer2evideos.*

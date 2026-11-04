@@ -1,0 +1,289 @@
+
+- 声明
+- 常量的声明，179
+- 接口属性的声明，389
+- 重载运算符的声明，372
+- 公共字段的声明，205
+- 变量的声明，136，138–139，164–165
+- 减小字号命令，用于 RichTextBox 控件，109
+- 递减运算符，172
+- 解密方法
+- File 类的解密方法，414
+- FileInfo 类的解密方法，412
+- DefaultExt 属性，用于 OpenFileDialog，122
+- 默认语句，在 switch 语句中，267–269，271
+- 延迟执行，499
+- 委托数据类型，332–333
+- delegate 关键字，332
+- 删除命令，用于 RichTextBox 控件，109
+- 删除方法
+- Directory 类的删除方法，412
+- DirectoryInfo 类的删除方法，411
+- File 类的删除方法，414
+- FileInfo 类的删除方法，412
+- 删除下一个词命令，用于 RichTextBox 控件，109
+- 删除上一个词命令，用于 RichTextBox 控件，109
+- 依赖属性，448
+- 部署，用于 Windows Store 应用，444–446
+- 出队方法，属于 Queue 类，242
+- descending 关键字，504
+- DeselectAll 方法，属于 RichTextBox 控件，106
+- 取消选择控件，23
+- 析构函数，350–352，355–356
+- 开发环境，5
+
+- DialogResult 属性，148
+- 确定按钮的 DialogResult 属性，308
+- 对话框
+- 关闭，148–149
+- 其中的文件筛选器，123–124
+- 帮助，120
+- 模态与非模态，118
+- 处理结果，119–120
+- 属性，120–123
+- 在 WPF 中，124–126
+- 另请参见自定义对话框；标准对话框
+- Dictionary 类，238–239，242，243–245
+- 目录
+- 用于打开文件和保存文件对话框，118
+- 用于文件，416
+- Directory 类，412
+- DirectoryInfo 类，410–411
+- GetFiles 方法，508
+- FileInfo 类的 Directory 属性，413
+- SplitButton 控件的 DisplayStyle 属性，90
+- Dispose 方法，351–352
+- DivideByZeroException，303
+- 除法 (/) 运算符，172
+- 可停靠窗口，15
+- 停靠为选项卡式文档窗口，15
+- 停靠菜单，48
+- DockPanel 容器控件（WPF），49
+- Dock 属性，27，47–48
+- Document 属性
+- 用于 PrintDialog，122
+- 用于 PrintPreviewDialog，123
+- do 循环，279–280
+- 与 while 循环的比较，280
+- 主导控件，32
+- double 数据类型，163–164，165
+- 双引号（"），转义序列，166
+- 用于字面字符串，29
+- 用于字符串，166
+- DrawEllipse 方法，365
+- 绘制
+- 形状，423–424
+- 文本，424–425
+- Shape 类的 Draw 方法，365
+- DrawString 方法，424–425
+- DriveInfo 类的 DriveFormat 属性，410
+- DriveInfo 类，410
+- DriveInfo 类的 DriveType 属性，410
+- DropDownButton 控件，90
+- DropDownStyle 控件的 DropDownList 值，35
+- DropDownStyle 属性，35
+- DropDownStyle 控件的 DropDown 值，35
+- DropShadowEffect，428
+- 放置目标，用于窗口，15
+
+## E
+- 调试器中的编辑并继续，188
+- Visual Studio IDE 中的编辑区，14
+- 菜单项中的省略号，75
+- else 关键字，265
+- 在 if 语句中，151
+- 空构造函数，349–350
+- 模拟器，用于运行应用，457
+- Enabled 属性，27
+- 用于 ToolStripMenuItem 控件，75
+- 封装，140，326
+- 用于封装的方法，291
+- 属性与封装，329
+- Encrypt 方法
+- File 类的 Encrypt 方法，414
+- FileInfo 类的 Encrypt 方法，413
+- StreamReader 类的 EndOfStream 属性，417
+- EndPrint 事件，422
+- String 类的 EndsWith 方法，211，212
+- Queue 类的 Enqueue 方法，242
+- 实体数据模型，479
+- 实体关系设计器，517
+- 枚举，249–250，251
+- 用于地址簿，254–257
+- 用于枚举的 switch 语句，268–269
+- 事件处理程序的 e 参数，334
+- Button Click 的 e 参数，59
+- PrintPage 的 e 参数，422
+- 等于 (==) 比较运算符，175
+- 等于 (=) 运算符
+- 用于给变量赋值，164
+- 用于筛选器，494
+- Equals 方法，379
+- Object 类的 Equals 方法，374
+- 错误，301
+- 错误处理，301–311
+- 错误窗口，62
+- 转义字符，217
+- C# 中的转义序列，166
+- 欧几里得算法，280
+- EventArgs 数据类型，59
+- 事件处理程序，135
+- 在代码中添加和移除，62–63
+- 附加到 Click 事件，63
+- 构建，57–58
+- 崩溃，130
+- 委托，333–336
+- 显示颜色示例，65–66
+- 移除，62，336
+- sender 参数，145
+- 用于在代码中设置属性，28
+- 变量在外部是否存在，138–139
+- 事件，22–23，57–72，332–336
+- 类与事件，327
+- 参数，59–61
+
+## F
+- 示例程序 FollowMouse，59，66–67
+- 异常，302
+- 抛出，305–306
+- Exception 对象，303
+- 异或运算符，173
+- 可执行文件，12
+- 练习解答，在书籍网站上，17
+- exists 方法
+  Directory 类的 exists 方法，412
+  File 类的 exists 方法，414，417
+- exists 属性
+  DirectoryInfo 类的 exists 属性，411
+  FileInfo 类的 exists 属性，413
+- Exit 命令，81
+- C# 的 Express 版，4–5
+- Visual Studio 的 Express for Web 版本，4
+- Visual Studio 的 Express for Windows Desktop 版本，4
+- Visual Studio 的 Express for Windows 版本，4
+- 可扩展应用程序标记语言。参见 XAML 代码
+- FileInfo 类的 Extension 属性，413
+- Factorial 方法，313
+- 带断言，314
+- 定义，292–293
+- 其中的 try-catch 块，306
+- 阶乘，292–293
+- 计算，276
+- 华氏度，转换温度，319
+- 字段，199，327
+- 支持字段，328–329
+- FIFO（先进先出顺序），242
+- File 类，413–414
+- 文件资源管理器，显示隐藏文件，12
+- 文件筛选器，129
+- 在对话框中，123–124
+- FileInfo 类，412–413
+- 文件菜单，创建，51
+- OpenFileDialog 的 FileName 属性，122
+- 文件，409–420
+- 加载已保存的文件，112
+- 读取，417
+- 将 Textbox 内容保存到文件，417
+- 将文本保存到文件，112
+- 搜索匹配模式的文件，418–419
+- 使用 LINQ 搜索，508
+- 写入，416–417
+- 文件系统类，409–414
+- Directory 类，412
+- DirectoryInfo 类，410–411
+- DriveInfo 类，410
+- File 类，413–414
+- FileInfo 类，412–413
+- Path 类，414–415
+- 文件系统布局，用于项目，9
+- FillEllipse 方法，365
+- Dock 属性的 Fill 值，47
+- FilterIndex 属性，123
+- 用于 OpenFileDialog，122
+- 筛选数据库记录，494–495
+- 相关代码，498
+- Filter 属性，123
+- 用于 OpenFileDialog，122
+- try-catch 块中的 Finally 块，304
+- Find Customers 示例程序，502–504，518–519，521，524–525
+- Find Primes 程序，501
+- Find Students 示例程序，505–506
+- 先进先出顺序（FIFO），242
+- FixedDocuments 对象，430
+- FontDialog 的 FixedPitchOnly 属性，121
+- 定点数字格式，215
+- 闪烁，与 DoubleBuffered 属性有关，286
+- float 数据类型，161，163–164，165
+- 浮点除法，强制使用，171
+- 浮动窗口，15
+- FlowDocuments 对象，430
+- FlowLayoutPanel 控件，49
+- FolderBrowserDialog，118，128
+- 属性，121
+- 文件夹，用于项目，9
+- FontDialog，25，117，118
+- 属性，121
+- FontFeatures 示例程序，104
+- FontDialog 的 FontMustExist 属性，121
+- Font 属性，27
+- 用于 FontDialog，121
+- 子属性，24
+- TextBox 控件的 Font 属性，22
+- 字体
+- 用于打印，433
+- 控件中的示例，81
+- 选择颜色，128
+- 用于设置 TextBlock 控件大小的样式，447
+- foreach 循环，277
+- ForeColor 属性，27，96
+- 控件的 ForeColor 属性，29
+- TextBox 控件的 ForeColor 属性，22
+- for 循环，275–276
+- 与 while 循环的比较，279
+- Form1.cs 文件，14
+- 格式菜单，31–32
+- string 类的 Format 方法，213
+- FormBorderStyle 属性，34，148，205
+- FormClosing 事件，64
+- FormClosing 事件处理程序，486，487
+- 窗体设计器
+- 其中的 ContextMenuStrip 控件，77
+- 其中的菜单，73
+- 在其中选择控件，23
+- 其中显示对齐线，30
+- 用于 ToolStrip，90
+- 换页符，转义序列，166
+- Form 布局控件，49
+- 窗体
+- AcceptButton 和 CancelButton 属性，147
+- 向窗体添加对话框，117
+- 添加新窗体，133–134
+- BackColor 属性，127
+- 窗体的取消按钮，36–37
+- 关闭，81
+- 关闭与崩溃，143
+- 调整大小时控件的变化，46
+- 控制远程窗体，138–140
+- 显示，135–137
+- 窗体的 Load 事件，60
+- 窗体的 Localizable 属性，473
+- 窗体的确定按钮，36–37
+- 创建窗体的程序，11
+- 窗体的 Resize 事件，60
+- 限制大小，44
+- Windows 控件，48–49
+- 另请参见控件
+- Color 类的 FromArgb 方法，65
+- FullName 属性
+- DirectoryInfo 类的 FullName 属性，411
+- FileInfo 类的 FullName 属性，413
+- 函数，290。另请参见方法
+
+## G
+- 垃圾回收器，351
+- 泛型类，239–240，397–406
+- 定义，397–399
+- 泛型约束，399–400
+- 泛型方法，400–401
+- 泛型 Randomize 方法，401–403
+- 手势，分配给命令，79–80

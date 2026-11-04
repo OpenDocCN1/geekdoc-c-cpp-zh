@@ -1,0 +1,273 @@
+
+- methods, 106–107
+- properties, 103–105
+- SelectionLength property, 105–106
+- SelectionStart property, 105–106
+- RootDirectory property, of DriveInfo class, 410
+- RootFolder property, for FolderBrowserDialog, 121
+- Root property, of DirectoryInfo class, 411
+- rotating objects, 70–71
+- rounding errors, and float comparison, 163
+- routines, 290. See also methods
+- Rtf property, of RichTextBox control, 105
+- Rule of 72, 197–198
+
+## S
+
+- Sales Tax Calculator program, 189–190
+- Save command, placeholder message for, 58
+- saved file, loading, 112
+- SaveFileDialog, 118, 123, 129
+  - properties, 122
+- SaveFileDialog class, 116
+- SaveFile method, of RichTextBox control, 107, 108
+- saving
+  - in BindingNavigator, 485
+  - TextBox contents to file, 417
+  - text into file, 112
+- sbyte data type, 162, 166
+- scientific notation, 215, 217
+- scope, 199–210
+  - accessibility and, 203–204
+  - within class, 199–203
+  - restricting, 204
+- scrollbar
+  - properties, 60
+  - Value property of, 65
+- Scroll event, of control, 64, 66
+
+- search
+  - for database records, 493–494
+  - for files matching pattern, 418–419
+- Second property, of DateTime type, 228
+- Seconds property, of TimeSpan, 229
+- section separator, 217–218
+- SelectAll method, of RichTextBox control, 107
+- SelectedIndexChanged event, 64
+- SelectedIndex property, of ComboBox control, 246
+- SelectedIndices property, of ListView control, 208
+- SelectedPath property, for FolderBrowserDialog, 121
+- SelectedRtf property, of RichTextBox control, 105
+- SelectedText property, of RichTextBox control, 105
+- selecting
+  - controls, in Form Designer, 23
+  - text, 103
+- SelectionAlignment property, of RichTextBox control, 104
+- SelectionBackColor property, of RichTextBox control, 104
+- SelectionBullet property, of RichTextBox control, 104
+- SelectionColor property, of RichTextBox control, 104
+- SelectionFont property, of RichTextBox control, 104
+- SelectionHangingIndent property, of RichTextBox control, 104
+- SelectionIndent property, of RichTextBox control, 104
+- SelectionLength property, of RichTextBox control, 103, 105–106
+- SelectionProtected property, of RichTextBox control, 104
+- SelectionRightIndent property, of RichTextBox control, 104
+- SelectionStart property, of RichTextBox control, 103, 105–106
+- semicolon (;), to end line of code, 28
+- sender parameter
+  - for Button Click event handler, 59
+  - for event handlers, 145, 334
+- Send to Back command, 47
+- Separators, in menus, 74
+- Server Explorer, 511–512
+  - building database with, 514
+- SetAttributes method, of File class, 414
+- SetCaption method, 140
+- SetControlCulture method, 475
+- SetCreationTime method
+  - of Directory class, 412
+  - of File class, 414
+- SetFormCulture method, 474
+- set keyword, 328, 329
+- SetLastAccessTime method
+  - of Directory class, 412
+  - of File class, 414
+- SetLastWriteTime method, of Directory class, 412
+- Setter object, in style, 447
+- SetTextProperties example program, 106
+- shapes, drawing, 423–424
+- shift operators, 176, 373
+- short-circuit operators, 174
+- ShortcutKeys property, for ToolStripMenuItem control, 75
+- shortcuts, 76
+- short data type, 162, 166
+- ShowColor property
+  - of dialog, 128
+  - for FontDialog, 121
+- ShowDialog method, 118, 136–137, 148, 423
+  - of PrintDialog object, 426
+- ShowEffects property, for FontDialog, 121
+- ShowInTaskbar property, 140
+  - of dialog, 148
+- Show method, for modeless dialog display, 137
+- ShowReadOnly property, for OpenFileDialog, 122
+- Simple value, for DropDownStyle control, 35
+- single quotation mark, escape sequence, 166
+- size
+  - of controls, 27
+  - of form, restricting, 44
+- SizeMode property, of PictureBox control, 52
+- Size property, 28
+  - of Label control, 36
+- smart tags, 91–92
+- SmoothingMode method, 365
+- SmoothingMode property, of Graphics object, 424
+- snap lines, for managing controls, 30–31
+- Solution Explorer, 14
+  - for attaching images to project, 460
+  - CustomerClassesDataContext entry, 517
+  - new form in, 133–134
+- solutions, 10. See also Try It solutions
+- SortedDictionary class, 242
+- SortedList class, 240–241
+- sorting
+  - LINQ query results, 504
+  - text file, 419
+- Sort method, of Array class, 237–238
+- special characters, 166
+- SplitButton control, 90
+- SplitContainer control, 54
+- Split method, of String class, 212
+- Split template, for Windows Store apps, 440
+- sprite, 345
+- SQL. See also LINQ to SQL
+- SQL Server, 482, 512
+- SQL Server Express Edition, 482, 512, 514, 514
+- square brackets ([ ])
+  - for array, 234
+  - for formatting field, 213
+  - for List entries, 240
+- stacking order of controls, 47–48
+- StackPanel container control (WPF), 49
+- Stack class, 242–243
+- standard dialogs, 115–131
+  - adding to form, 117
+  - basics, 116–120
+  - displaying, and checking return result, 118–119
+  - initializing, 117–118
+  - properties for, 117–118
+- Start screen, pinning app to, 457
+- StartsWith method, of String class, 212
+- static keyword, 346
+- static method, 213
+- StaticResource keyword, 447
+- StatusLabel control, 92
+- StatusStrip control, 51
+- StatusStrip, creating, 52
+- StatusStrip control, 73, 90, 91
+  - using, 92–93
+- Step Into command (Debug menu), 190
+- Step Out command (Debug menu), 190
+- Step Over command (Debug menu), 190
+- stepping through code, 190–191
+- Stop Debugging command, 457
+- Stream class, 415
+- StreamReader class, 416, 417
+- streams, 415–417
+- StreamWriter class, 416
+  - Write method, 417
+- Strikeout property, of font, 25
+- StringBuilder class, 175
+- String class, EndsWith method, 211
+- string data type, 163
+- strings, 161, 211–224
+  - concatenating, 174–175
+  - double quotes (") for, 166
+  - literal, 217
+  - methods, 211–212
+- structure (struct), 249, 250–251, 326
+  - for address book, 254–257
+  - vs. classes, 251–254
+  - location for definition, 254
+- Structure Versus Class example program, 253
+- styles
+  - for setting FontSize property, 462
+  - for Windows Phone apps, 458
+  - for Windows Store apps, 440, 446–447
+- submenus, creating, 78
+- subprocedures, 290. See also methods
+- subroutines, 290. See also methods
+- Subscript command, for RichTextBox control, 109
+- Substring method, of String class, 212
+- subtraction (-) operator, 172
+- Subtract method, of DateTime type, 227
+- suffix characters, for data type, 165
+- Superscript command, for RichTextBox control, 109
+- System.Diagnostics namespace, 314
+- System.Diagnostics.Stopwatch class, 231
+- System.IO namespace, 409, 416
+- System.Windows.Media.Effects namespace, 428
+
+## T
+
+- table adapter manager, 484
+- TableLayoutPanel control, 49, 71–72
+- tab order, in dialogs, 148
+- Tag property, 28
+- tail of stack, 243
+- Tapped events, 439
+- TargetType property, 447
+- taskbar clock, 92
+- Team Foundation Server Express version of Visual Studio, 4
+- temperatures, converting between scales, 319
+- templates
+  - for projects, 8
+  - for Windows Phone apps, 455–456
+  - for Windows Store apps, 440
+- terabyte, 162
+- text
+  - drawing, 424–425
+  - saving into file, 112
+  - selecting, 103
+- TextAlign property, 28
+  - of Label control, 56
+  - of TextBox control, 34
+- TextBlock control, style to set font size, 447
+- TextBox control, 22, 103
+  - Anchor property, 52
+  - change from resizing form, 46
+  - creating, 34
+  - GroupBox size and, 51
+  - in menus, 74
+  - Modifiers property, 144
+  - MultiLine property, 45, 54
+  - Properties window for, 24
+  - saving contents to file, 417
+  - TextChanged event, 23, 64
+- text file, sorting, 419
+- Text property, 28
+  - of RichTextBox control, 105
+  - of TextBox control, 34
+  - of ToolStripMenuItem control, 75
+- text settings, user management of, 105–106
+- this keyword, 82, 201
+  - and constructor, 352–353
+- thousands separator, 217
+- thumbtack icon, 15
+- Tick event, 64
+- tile for app
+  - background color, 460
+  - changing size, 442
+  - sizes, 440
+- time, 225–232
+  - custom formats, 219–222
+  - local and UTC, 226
+  - standard formats, 218–219
+- TimeOfDay property, of DateTime type, 228
+- Timer component, 22
+- Timer control, 230
+- TimeSpan, 228–229
+- time zone offset from UTC, 221
+- tip calculator, 463
+- Title property, for OpenFileDialog, 122
+- ToArray method, 504
+- ToBoolean method, 169
+- Today property, of DateTime type, 228
+- Toggle bold command, for RichTextBox control, 109
+- Toggle insert command, for RichTextBox control, 109
+- Toggle italic command, for RichTextBox control, 109
+- Toggle underline command, for RichTextBox control, 109
+- ToInt32 method, 169
+- ToLocalTime method, of DateTime class, 226, 227
+- ToLongDateString method, of DateTime class, 219, 227
+- ToLongTimeString method, of DateTime class, 219, 227

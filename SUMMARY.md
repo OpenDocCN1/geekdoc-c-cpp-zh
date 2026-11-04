@@ -274,6 +274,7 @@
 +   [C# 2010 编程：涵盖 .Net 4.0 黑皮书（附 CD）](docs/c-2010-programming-covers-net-40-black-book-with-cd/README.md)
 +   [C# 2012 编程指南：涵盖 .NET 4.5](docs/c-2012-programming-black-book-covers-net-45/README.md)
 +   [C# 24 小时训练营，第 2 版](docs/c-24-hour-trainer-2nd-edition/README.md)
++   [C# 24小时训练营：在线视频教程 完整学习包](docs/c-24-hour-trainer-complete-learning-package-with-online-vide/README.md)
 +   [C++：三合一-初学者指南+简单有效的技巧+高效学习 C++ 编程高级指南](docs/c-3-in-1--beginners-guide-simple-and-effective-tips-and-tric/README.md)
 +   [C# 5.0 傻学者指南](docs/c-50-all-in-one-for-dummies/README.md)
 +   [C++ 入门指南，第二版（McGraw-Hill 初学者指南）](docs/c-a-beginners-guide-second-edition-beginners-guides-mcgraw-h/README.md)
