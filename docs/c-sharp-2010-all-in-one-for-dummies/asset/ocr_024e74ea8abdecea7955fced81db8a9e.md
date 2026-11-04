@@ -1,0 +1,48 @@
+I can change the example in one minor way:
+
+```
+string myString = "Hello";
+Output(myString);
+```
+
+This code snippet assigns the variable myString to reference the string "Hello". The call Output(myString) passes the object referenced by myString, which is your old friend "Hello". Figure 3-1 depicts this process. From there, the effect is the same as before.
+
+Figure 3-1:
+Copying the value of my String to some String.
+
+![](bbox=[0.22, 0.42, 0.52, 0.58])
+
+![](bbox=[0.04, 0.6, 0.15, 0.73])
+
+The placeholders you specify for arguments when you write a method — for example, someString in Output() — are parameters. The values you pass to a method via a parameter are arguments. I use the terms more or less interchangeably in this book.
+
+A similar idea is passing arguments to a program. For example, you may have noticed that Main() usually takes an array argument.
+
+# Passing multiple arguments to methods
+
+When I ask my daughter to wash the car, she usually gives me more than just a single argument. Because she has lots of time on the couch to think about it, she can keep several at the ready.
+
+You can define a method with multiple arguments of varying types. Consider the following sample method AverageAndDisplay():
+
+![](bbox=[0.04, 0.88, 0.15, 0.98])
+
+```
+```csharp
+// AverageAndDisplay -- Demonstrate argument passing.
+using System;
+namespace Example
+{
+  public class Program
+  {
+    public static void Main(string[] args)
+    {
+      // Across the member method.
+      AverageAndDisplay("grade 1", 3.5, "grade 2", 4.0);
+      // Wait for user to acknowledge.
+      Console.WriteLine("Press Enter to terminate...");
+      Console.Read();
+    }
+  }
+}
+```
+```

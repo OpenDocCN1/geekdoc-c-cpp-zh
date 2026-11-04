@@ -1,0 +1,169 @@
+
+## Chapter 5: Holding a Class Responsible
+
+### In This Chapter
+
+- Letting the class protect itself through access control
+- Introducing the property, a specialized kind of method
+- Allowing an object to initialize itself via the constructor
+- Defining multiple constructors for the same class
+- Constructing static or class members
+
+A class must be held responsible for its actions. Just as a microwave oven shouldn't burst into flames if you press the wrong key, a class shouldn't allow itself to roll over and die when presented with incorrect data.
+
+To be held responsible for its actions, a class must ensure that its initial state is correct and then control its subsequent state so that it remains valid. C# provides both these capabilities.
+
+### Restricting Access to Class Members
+
+Simple classes define all their members as `public`. Consider a `BankAccount` program that maintains a `balance` data member to retain the balance in each account. Making that data member `public` puts everyone on the honor system.
+
+I don't know about your bank, but my bank isn't nearly so forthcoming as to leave a pile of money and a register for me to mark down every time I add money to or take money away from the pile. After all, I may forget to mark my withdrawals in the register.
+
+Controlling access avoids little mistakes, such as forgetting to mark a withdrawal here or there, and manages to avoid some truly big mistakes with withdrawals.
+
+I know exactly what you procedural types out there are thinking: “Just make a rule that other classes can't access the `balance` data member directly, and that's that.” That approach may work in theory, but in practice it never does. People start out with good intentions (like my intentions to work out every day), but those good intentions get crushed under the weight of schedule pressures to get the product out the door. Speaking of weight. . .
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_286_0.png)
+
+### A public example of public BankAccount
+
+The following BankAccount class example declares all its methods public but declares its data members, including _accountNumber and _balance, to be private. Note that I've left it in an incorrect state to make a point. The following code chunk doesn't compile correctly yet:
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_287_0.png)
+
+```csharp
+// BankAccount -- Create a bank account using a double variable
+// to store the account balance (keep the balance in a private
+// variable to hide its implementation from the outside world).
+// Note: Until you correct it, this program fails to compile
+// because Main() refers to a private member of class BankAccount.
+using System;
+namespace BankAccount
+{
+ public class Program
+ {
+ public static void Main(string[] args)
+ {
+ Console.WriteLine("This program doesn't compile in its present state.");
+ // Open a bank account.
+ Console.WriteLine("Create a bank account object");
+ BankAccount ba = new BankAccount();
+ ba.InitBankAccount();
+ // Accessing the balance via the Deposit() method is okay --
+ // Deposit() has access to all the data members.
+ ba.Deposit(10);
+ // Accessing the data member directly is a compile-time error.
+ Console.WriteLine("Just in case you get this far the following is "
+ + "supposed to generate a compile error");
+ ba._balance += 10;
+ // Wait for user to acknowledge the results.
+ Console.WriteLine("Press Enter to terminate...");
+ Console.Read();
+ }
+ }
+
+ // BankAccount -- Define a class that represents a simple account.
+public class BankAccount
+{
+ private static int _nextAccountNumber = 1000;
+ private int _accountNumber;
+ // Maintain the balance as a double variable.
+ private double _balance;
+ // Init -- Initialize a bank account with the next
+ // account id and a balance of 0.
+ public void InitBankAccount()
+ {
+ _accountNumber = ++_nextAccountNumber;
+ _balance = 0.0;
+ }
+ // GetBalance -- Return the current balance.
+ public double GetBalance()
+ {
+ return _balance;
+ }
+}
+```
+
+```
+// AccountNumber
+public int GetAccountNumber()
+{
+    return _accountNumber;
+}
+public void SetAccountNumber(int accountNumber)
+{
+    this._accountNumber = accountNumber;
+}
+// Deposit -- Any positive deposit is allowed.
+public void Deposit(double amount)
+{
+    if (amount > 0.0)
+    {
+        _balance += amount;
+    }
+}
+// Withdraw -- You can withdraw any amount up to the
+// balance. Return the amount withdrawn.
+public double Withdraw(double withdrawal)
+{
+    if (_balance <= withdrawal)
+    {
+        withdrawal = _balance;
+    }
+    _balance -= withdrawal;
+    return withdrawal;
+}
+// GetString -- Return the account data as a string.
+public string GetString()
+{
+    string s = String.Format("{0} {1:C}", GetAccountNumber(), GetBalance());
+    return s;
+}
+}
+```
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_288_0.png)
+
+In this code example, _balance -= withdrawal is the same as _balance = _balance - withdrawal. (C# programmers tend to use the shortest notation available.)
+
+Marking a member public makes that member available to any other code within your program.
+
+The BankAccount class provides an InitBankAccount() method to initialize the members of the class, a Deposit() method to handle deposits, and a Withdraw() method to perform withdrawals. The Deposit() and Withdraw() methods even provide some rudimentary rules, such as "You can't deposit a negative number" and "You can't withdraw more than you have in your account" (both good rules for a bank, as I'm sure you'll agree). However, everyone's on the honor system as long as _balance is accessible to external methods. (In this context, external means "external to the class but within the same program.") The honor system can be a problem on big programs written by teams of programmers. It can even be a problem for you (and me), given general human fallibility.
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_289_0.png)
+
+Well-written code with rules that the compiler can enforce saves everyone from the occasional bullet to the big toe.
+
+Before you get too excited, however, notice that the program doesn't build. Attempts to do so generate this error message:
+
+```
+'BankAccount.BankAccount._balance' is inaccessible due to its protection level.
+```
+
+I don't know why it doesn't just come out and say, "Hey, this is private, so keep your mitts off." The statement ba._balance += 10; is illegal because _balance isn't accessible to Main(), a method outside the BankAccount class. Replacing this line with ba.Deposit(10) solves the problem. The BankAccount.Deposit() method is public and therefore accessible to Main() and other parts of your program.
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_289_1.png)
+
+Not declaring a class member's access type explicitly is the same as declaring it private.
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_289_2.png)
+
+The default access type is private. However, you should include the private keyword to remove any doubt. Good programmers make their intentions explicit, which is another way to reduce errors.
+
+### Jumping ahead — other levels of security
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_289_3.png)
+
+Understanding this section depends on your having some knowledge of inheritance (see Chapter 6 in this minibook) and namespaces (Chapter 10 in this minibook). You can skip this section for now if you want, but just know that it's here when you need it.
+
+C# provides these levels of security:
+
+- A `public` member is accessible to any class in the program.
+- A `private` member is accessible only from the current class.
+- A `protected` member is accessible from the current class and any of its subclasses.
+- An `internal` member is accessible from any class within the same program module or assembly.
+- An `internal protected` member is accessible from the current class and any subclass, and from classes within the same module.
+
+![](img/1b3d2e7c2a257973c8a9dd11ef5f13cd_289_4.png)
+
+A C# "module," or assembly, is a separately compiled piece of code, either an executable program in an .EXE file or a supporting library module in a .DLL file. A single namespace can extend across multiple assemblies. (Chapter 10 in this minibook explains C# assemblies and namespaces and discusses access levels other than public and private.)

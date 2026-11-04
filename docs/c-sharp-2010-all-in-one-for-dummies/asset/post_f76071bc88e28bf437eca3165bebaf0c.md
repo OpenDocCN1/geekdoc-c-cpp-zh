@@ -1,0 +1,317 @@
+
+- naming conventions, 38
+- nesting
+  - if statement, 90–92
+- namespaces, 394
+- .NET Common Language Runtime (CLR), 3
+- .NET dictionaries, 127
+- .NET framework
+  - cookies
+    - ASP.NET manages, 699
+    - coding for client-side storage, 697–698
+    - overview, 696–697
+    - on server, 698–699
+  - managing files, 695–696
+  - navigating with site maps
+    - adding site map, 692–694
+    - navigating site with SiteMap, 694–695
+    - overview, 685
+  - securing with ASP.NET
+    - changing trusts, 691–692
+    - fixing problems, 692
+    - overview, 690–691
+  - surfing Web streams
+    - altering content sent to clients, 689–690
+    - intercepting request, 686–689
+  - tracing with TraceContext, 699–701
+- .NET language, 13–14
+- .NET Software Development Kit (SDK), 3, 380
+- network activity, logging, 465–468
+- network status, checking, 459–460
+- NetworkCredential class, 457
+- NetworkInformation function, System.Net namespace, 458, 460
+- networking, 455 See also Internet
+- NetworkStream class, 454
+- new() constraint, 185
+- New line character (`\n`), 35
+- New Project dialog box, Visual Studio, 383, 395, 488–489, 548
+- New Project window, Visual Studio 2010, 15
+- newline character (`\n`), 220
+- NextAccountNumber property, 271
+- nondeterministic destruction, 305
+- noninteger index, 148
+- nonrecursive algorithm, 196
+- nonstatic methods, 228
+- nonvoid methods, 244
+- not (!) operator, 79
+- not equal to (!=) operator, 77
+- notational C#, 48
+- NotifyPropertyChanged method, 616
+- n-tier code, 655–656
+- Null character (`\0`), 35
+- null keyword, 186
+- null object, 221
+- null value
+  - determining for data type ?, 186
+  - strings, 55
+- num variable, 217
+- numberInput variable, 68
+- numeric constants, 40
+- numeric input, parsing, 56–58
+- NUnit testing tool, 7
+
+## O
+
+- obfuscation, 401
+- object class, 297–298
+- object properties, 224
+- object role modelers, 431
+- Object-based rearrangement, 134
+- object-based languages, 317
+- ObjectInitializers program example, 284
+- object-oriented (OO) programming
+  - abstraction concept overview, 207–208
+  - preparing object-oriented programming, 209
+  - preparing procedural programming, 208
+  - access control concept, 212
+  - C# support, 212–213
+  - classification concept, 209–210
+  - classifying, 210–211
+  - managing changes with interface
+    - abstract class, 353–354
+    - concrete class, 353–354
+
+- Pad() method, 61-62
+- PadRight() method, AlignOutput program, 62
+- PaintBoard method, 477
+- paired brackets [], 110-111
+- panels
+  - multiviews and, 663
+  - Toolbox, 505-506
+  - Visual Studio
+    - Class View, 508-509
+    - Properties, 504-505
+    - Server Explorer, 506-508
+    - Solution Explorer, 502-504
+  - WPF, 556
+- parameters
+  - defined, 236-237
+  - named, 235, 786-787
+  - optional
+    - output parameters, 785-786
+    - overview, 782-784
+    - reference types, 784-785
+  - overload resolution, 787
+  - WPF custom commands, 607-608
+- parent Grid, IsSharedSizeScope property, 565
+- parent/child form, 426-428
+- parentheses
+  - constructors, 284
+  - operating orders, 75
+- ParseSequenceWithSplit program, 59-60
+- parsing numeric input, 56-58
+- Pascal-cased names, 38
+- PasswordBox input control, 572
+- Path class, 444
+- Path.Combine() method, 444
+- pens, System.Drawing namespace, 470-471
+- Permissions namespace, 413
+- persisting objects, 438
+- Phone Number control, 681-684
+- PIAs (Primary Interop Assemblies), 791-793
+- Pixel definition, Grid Panel, 562
+- plain old text, 660-661
+- Policy namespace, 413
+- PolymorphicInheritance program, 319-321
+- polymorphism
+  - abstract class
+    - BankAccount class example, 327-328
+    - defined, 328-330
+    - factoring, 322-327
+    - objects and, 330
+  - declaring method virtual and overriding it, 319-321
+  - "do-to-each" trick, 321
+  - generics, 171
+  - overloading inherited method
+    - calling back to base, 313-314
+    - hiding base class method, 309-313
+    - overview, 308-309
+  - overview, 213, 314-316
+  - sealed class, 330-331
+  - ToString() method, 321-322
+  - using declared type, 316-317
+  - using is keyword to access hidden method polymorphically, 318
+- Pop() method, 142
+- popping operation, 133
+- Portable .NET, 1
+- PostBack, Web servers, 636-639
+- postincrement operator, 76, 106
+- PowerPoint 2007 Add-in project, 493
+- prefixed delegate, 368
+- preincrement operator, 76, 106
+- preventing
+  - script exploits, 410-411
+  - SQL Injection attacks, 410
+- Preview Changes window, Visual Studio, 232
+- Preview Method Signature box, Visual Studio, 232
+- Primary Interop Assemblies (PIAs), 791-793
+- Principal namespace, 413
+- PrintForm component, Toolbox, 472
+- Priority enum, Package class, 177
+- PriorityQueue class
+  - Deque() method, 181
+  - Enqueue() method, 180–181
+  - remaining members, 182
+  - TopQueue() utility method, 182
+  - underlying queues, 180
+- PriorityQueue's Enqueue() method, 180–181
+- private access specifier, 335
+- private members
+  - access to, 264–265
+  - BankAccount class example, 263–264
+  - Unified Modeling Language (UML), 323
+- procedural programming
+  - object-oriented programming versus, 210–211
+  - overview, 208
+- ProcessAmount() method, SimpleSavingsAccount program, 295–296
+- processor upchuck, 245
+- Professional version, Visual Studio, 483
+- program
+  - single, 378–381
+  - using class library from, 386
+- program flow
+  - goto statement, 107–108
+  - if statement
+    - else statement, 89–90
+    - nesting, 90–92
+    - overview, 86–89
+  - looping
+    - break command, 99–100
+    - do . . . while loop, 99
+    - scope rules, 103–104
+    - specified number of times with for loop, 104–106
+    - until you get it right, 100–103
+    - while, 95–99
+    - nesting loops, 106–107
+  - overview, 85–86
+  - switch statement, 92–94
+- program framework, console application, 20–21
+- program.cs file, ConsoleApplication project, 528
+- programming by intention, 230
+- ProgrammingToAnInterface program, 186
+- ProgressBar control, 572
+- Project 2007 Add-in project, 493
+- Project Dependencies tool, Solution Explorer, 503
+- project file
+  - defined, 379
+  - Solution Explorer, 504
+- projects
+  - creating for class library, 382
+  - defined, 15
+  - hacking
+    - item templates, 530–532
+    - project templates, 527–530
+  - Visual Studio
+    - categories, 491–494
+    - New Project dialog box, 488–489
+    - Solution Explorer panel, 503–504
+    - solutions and, 489–491
+- Promote Local Variable to Parameter refactoring, Visual Studio, 233
+- properties
+  - classes
+    - accessors with access levels, 273
+    - letting compiler write properties, 272–273
+    - overview, 270–271
+    - side effects, 272
+    - static properties, 271
+    - syntax, 271
+- Properties panel, Visual Studio, 504–505
+- Property Element tag, 550
+- Property Pages tool, Solution Explorer, 503
+- PropertyChanged event, INotifyPropertyChanged interface, 587
+- protected access keyword, 390–392
+- protected internal access keyword, 392
+- protected keyword, 380
+- protected methods, 616
+- ProtectedInternalLimitsAccess example, 392
+- protocols, 455
+- pseudocode, 48
+- public access specifier, 335
+- public interface, 338
+- public members
+  - access to, 264-265
+  - Unified Modeling Language (UML), 323
+- public method, 390
+- public modifier, 217
+- publishing C# events, 372
+- Publish/Subscribe pattern, 370
+- pulling strings. See strings
+- Push() method, 142
+- pushing operation, 133
+
+## Q
+
+- questioning client
+  - getting information back from client, 633-634
+  - overview, 632-633
+  - scripting client, 633
+  - understanding weaknesses of browser, 634-636
+- Queue class, 173
+- queue data structure, 172
+- `Queue<T>` class, 123
+- queues, 109
+
+## R
+
+- RAD (Rapid Application Development)
+  - data tools, 425
+- RadioButton input control, 573
+- raising events, 372
+- Random class, 183
+- Rapid Application Development (RAD)
+  - data tools, 425
+- reachable objects, 222
+- read() call, synchronous I/O, 437
+- Read() method, 220
+- readers, FileStream class, 436-437, 452-453
+- ReadFileToConsole() method, FileRead program, 451
+- ReadLine() command, Calculate Interest program, 88
+- ReadLine() method
+  - comparing strings, 50
+  - parsing numeric input, 56
+  - Read() method versus, 220
+  - StreamReader class, 437
+- readonly data member, 225-226
+- ReadToEnd() method, StreamReader class, 437
+- real number, 29
+- Rebuild option, Build and Debug menus, 515
+- recursive algorithm, 196, 313
+- RedisplayDocument() method, 234
+- ref keyword, 248
+- Ref statement, Interop, 793-794
+- Refactor menu, Visual Studio, 232, 515-516
+- refactoring
+  - defined, 229
+  - InputInterestData() method, 235
+  - OutputInterestTable() method, 232-233
+- reference types
+  - generics, 170
+  - optional parameters, 784-785
+- references
+  - class, 221-222
+  - defined, 36
+- ReferencingThisExplicitly program, 256-257
+- Reflector tool, 7, 380
+- regions, 18
+- registration service, WCF, 750-752
+- relational databases, 350
+- relative values, WPF layout, 556
+- relaying, 462
+- Remember icon, 6
+- Remove button, Visual Studio, 525
+- Remove Parameters tool, Visual Studio, 516
+- RemoveWhiteSpace sample program, 63-64
+- removing
+  - element from array, 121
+  - white space, 121
+- Rename tool, Visual Studio, 515

@@ -1,0 +1,59 @@
+```
+```csharp
+// A revised SetName():
+public static void SetName(Student student, string name)
+{
+    student = new Student(); // Doesn't replace student outside SetName().
+    student.Name = name;
+}
+```
+```
+
+# # Defining Methods
+
+A class is supposed to collect the elements that describe a real-world object or concept. For example, a Vehicle class may contain data elements for maximum velocity, weight, and carrying capacity, for example. However, a Vehicle has active properties — behaviors — as well: the ability to start and stop and the like. These active properties are described by the methods related to that vehicular data. These methods are just as much a part of the Vehicle class as the data elements.
+
+# ## Defining a static method
+
+For example, you could rewrite the program from the previous section in a slightly better way:
+
+![](bbox=[0.045, 0.565, 0.142, 0.632])
+
+```
+```csharp
+// StudentClassWithMethods -- Demonstrate putting methods that
+//   operate on a class's data inside the class. A class is
+//   responsible for its own data and any operations on it.
+using System;
+namespace StudentClassWithMethods
+{
+  // Now the OutputName and SetName methods are members of
+  // class Student, not class Program.
+  public class Student
+  {
+    public string name;
+
+    // OutputName -- Output the student's name.
+    public static void OutputName(Student student)
+    {
+      // Output current student's name.
+      Console.WriteLine("Student's name is {0}", student.name);
+    }
+
+    // SetName -- Modify the student object's name.
+    public static void SetName(Student student, string name)
+    {
+      student.name = name;
+    }
+  }
+
+  public class Program
+  {
+    public static void Main(string[] args)
+    {
+      Student student = new Student();
+      // Set the name by accessing it directly.
+      Console.WriteLine("The first time:");
+      student.name = "Madeleine";
+```
+```

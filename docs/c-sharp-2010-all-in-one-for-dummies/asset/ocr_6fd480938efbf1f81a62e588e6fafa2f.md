@@ -1,0 +1,52 @@
+![](bbox=[0.05, 0.12, 0.18, 0.24])
+
+The word user doesn't always refer to the user of a program. References to the user of a method often mean, in practice, the programmer who is making use of the method. Another term is client (which is often you).
+
++   - **Acceptable (if somewhat bland):** Assumes default values for certain arguments.
+
+You can easily implement default arguments using method overloading. Consider this pair of DisplayRoundedDecimal() methods:
+
+![](bbox=[0.05, 0.35, 0.18, 0.5])
+
+```
+// MethodsWithDefaultArguments -- Provide variations of the same methods,
+// some with default arguments, by overloading the method name.
+using System;
+namespace MethodsWithDefaultArguments
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            // Access the member method.
+            Console.WriteLine(DisplayRoundedDecimal(12.345678M, 3));
+            // Wait for user to acknowledge.
+            Console.WriteLine("Press Enter to terminate...");
+            Console.Read();
+        }
+        // DisplayRoundedDecimal -- Convert a decimal value into a string
+        // with the specified number of significant digits.
+        public static string DisplayRoundedDecimal(decimal value,
+            int numberOfSignificantDigits)
+        {
+            // First round off the number to the specified number
+            // of significant digits.
+            decimal roundedValue =
+                decimal.Round(value,
+                    numberOfSignificantDigits);
+            // Convert that to a string.
+            string s = Convert.ToString(roundedValue);
+            return s;
+        }
+        public static string DisplayRoundedDecimal(decimal value)
+        {
+            // Invoke DisplayRoundedDecimal(decimal, int) specifying
+            // the default number of digits.
+            string s = DisplayRoundedDecimal(value, 2);
+            return s;
+        }
+    }
+}
+```
+
+The DisplayRoundedDecimal(decimal, int) method converts the decimal value that's provided into a string with the specified number of digits after the decimal point. Because decimals are often used to display monetary values, the most common choice is to place two digits after the decimal point. Therefore, the DisplayRoundedDecimal(decimal) method provides the same conversion service -- but defaults the number of significant digits to two, thereby removing any worry about the meaning of the second argument.

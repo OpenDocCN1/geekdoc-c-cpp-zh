@@ -1,0 +1,28 @@
+**Table 6-1 The Most Common Collection "Shapes"**
+
+| Class | Description |
+|---|---|
+| List<T> | This dynamic array contains objects of type T. |
+| LinkedList<T> | This is a linked list of objects of type T. |
+| Queue<T> | Start at the back end of the line and end up at the front. |
+| Stack<T> | Always add or delete items at the "top" of the list, like a stack of cafeteria trays. |
+| Dictionary<TKey, TValue> | This structure works like a dictionary. Look up a key (a word, for example) and retrieve its corresponding value (for example, definition). |
+| HashSet<T> | This structure resembles a mathematical set, with no duplicate items. It works much like a list but provides mathematical set operations, such as union and intersection. |
+
+# Figuring out <T>
+
+In the mysterious-looking <T> notation you see in Table 6-1, <T> is a placeholder for a particular data type. To bring this symbolic object to life, instantiate it by inserting a real type, like this:
+
+```
+List<int> intList = new List<int>(); // Instantiating for Int
+```
+
+*Instantiate is geekspeak for "Create an object (instance) of this type."*
+
+For example, you might create different List<T> instantiations for types int, string, and Student, for example. By the way, T isn't a sacred name. You can use anything you like — for instance, <dummy> or <aType>. It's common to use T, U, V, and so on.
+
+Notice how I express the Dictionary<TKey, TValue> collection in Table 6-1. Here, two types are needed: one for the dictionary's keys and one for the values associated with the keys. I cover dictionaries later, in the section "Using Dictionaries."
+
+If this notation seems a bit forbidding, don't worry. You get used to it.
+
+![](bbox=[0.07, 0.8, 0.18, 0.92])

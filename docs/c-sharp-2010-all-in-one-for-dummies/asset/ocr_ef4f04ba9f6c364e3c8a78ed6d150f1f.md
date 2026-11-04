@@ -1,0 +1,32 @@
+# Chapter 2: Living with Variability — Declaring Value-Type Variables
+
+# In This Chapter
+
++   - Visiting the train station — the C# variable as storage locker
++   - Using integers — you can count on it
++   - Handling fractional values — what’s half a duck?
++   - Declaring other types of variables — dates, characters, strings
++   - Handling numeric constants — π in the sky
++   - Changing types — cast doesn’t mean toss
++   - Letting the compiler figure out the type — var magic
+
+The most fundamental of all concepts in programming is that of the variable. A C# variable is like a small box in which you can store things, particularly numbers, for later use. (The term variable is borrowed from the world of mathematics.)
+
+Unfortunately for programmers, C# places several limitations on variables — limitations that mathematicians don’t have to consider. This chapter takes you through the steps for declaring, initializing, and using variables. It also introduces several of the most basic data types in C#.
+
+# Declaring a Variable
+
+When the mathematician says, “n is equal to 1,” that means the term n is equivalent to 1 in some ethereal way. The mathematician is free to introduce variables in a willy-nilly fashion. For example, the mathematician may say this:
+
+```
+x = y² + 2y + y
+if k = y + 1 then
+x = k²
+```
+
+Programmers must define variables in a particular way that’s more demanding than the mathematician’s looser style. For example, a C# programmer may write the following bit of code:
+
+```
+int n;
+n = 1;
+```

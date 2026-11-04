@@ -1,0 +1,33 @@
+# # *Chapter 8: Interfacing with the Interface*
+
+# ### *In This Chapter*
+
++   - Beyond IS_A and HAS_A: The C# interface
++   - Creating your own interface or using one provided by .NET
++   - Unifying separate class hierarchies with interfaces
++   - Hiding part of your class's public interface behind an interface
++   - Managing software change — flexibility via interfaces
+
+A class can *contain* a reference to another class; this statement describes the simple HAS_A relationship. One class can *extend* another class by way of the marvel of inheritance — that's the IS_A relationship. The C# interface implements another, equally important association: the CAN_BE_USED_AS relationship.
+
+This chapter introduces C# *interfaces* and shows some of the numerous ways they increase the power and flexibility of object-oriented programming.
+
+# ## *Introducing CAN_BE_USED_AS*
+
+If you want to jot a note, you can scribble it with a pen, type it into your smartphone, or pound it out on your laptop's keyboard. You can fairly say that all three objects — pen, smartphone, and computer — implement the TakeANote operation. Suppose that you use the magic of inheritance to implement this concept in C#:
+
+```
+~~~csharp
+abstract class ThingsThatRecord      // The base class
+{
+    abstract public void TakeANote(string note);
+}
+public class Pen : ThingsThatRecord   // A subclass
+{
+    override public void TakeANote(string note)
+    {
+        // ... scribble a note with a pen ...
+    }
+}
+~~~
+```

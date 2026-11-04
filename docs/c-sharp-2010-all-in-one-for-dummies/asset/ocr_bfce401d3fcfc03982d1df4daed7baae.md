@@ -1,0 +1,42 @@
+# Yield return: Okay, I give up
+
+The yield return syntax works this way:
+
++   1. The first time it’s called, it returns the first value in the collection.
++   2. The next time it’s called, it returns the second value.
++   3. And so on . . .
+
+Using yield is much like calling an old-fashioned iterator’s MoveNext() method explicitly, as in the LinkedList code. Each MoveNext() call produces a new item from the collection. But here you don’t need to call MoveNext(). You can bet, though, that’s being done for you somewhere behind that yield return syntax, and that’s the fine with us.
+
+You might wonder what I mean by “the next time it’s called”? Here again, the foreach loop is used to iterate the StringChunks collection:
+
+```
+foreach (string chunk in sc)
+{
+    Console.WriteLine(chunk);
+}
+```
+
+Each time the loop obtains a new chunk from the iterator (on each pass through the loop), the iterator stores the position it has reached in the collection (as all iterators do). On the next pass through the foreach loop, the iterator returns the next value in the collection, and so on.
+
+# Yield break: I want out of here!
+
+I need to mention one bit of syntax related to yield. You can stop the progress of the iterator at some point by specifying the yield break statement in the iterator. Say a threshold is reached after testing a condition in the collection’s iterator block, and you want to stop the iteration at that point. Here’s a brief example of an iterator block that uses yield break in just that way:
+
+```
+//YieldBreakEx -- Another example of the yield break keyword
+class YieldBreakEx
+{
+    int[] primes = { 2, 3, 5, 7, 11, 13, 17, 19, 23 };
+    //GetEnumerator -- Returns a sequence of prime numbers
+    //    Demonstrates yield return and yield break
+    public System.Collections.IEnumerator GetEnumerator()
+    {
+        foreach (int prime in primes)
+        {
+            if (prime > 13) yield break;
+            yield return prime;
+        }
+    }
+}
+```

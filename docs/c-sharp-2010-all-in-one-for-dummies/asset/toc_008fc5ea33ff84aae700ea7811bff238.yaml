@@ -1,0 +1,38 @@
+level_changes:
+- line: 223
+  before: 3
+  after: 2
+- line: 227
+  before: 3
+  after: 2
+- line: 231
+  before: 3
+  after: 2
+- line: 10436
+  before: 1
+  after: 3
+- line: 10470
+  before: 1
+  after: 3
+text_changes:
+- line: 223
+  before: 第六册：使用 ASP.NET 进行 Web 开发
+  after: 第 VI 册：使用 ASP.NET 进行 Web 开发
+- line: 227
+  before: 第七册：面向服务的开发
+  after: 第 VII 册：面向服务的开发
+- line: 231
+  before: 第八册：C# 4.0 中的新功能
+  after: 第 VIII 册：C# 4.0 中的新功能
+- line: 10436
+  before: 使用 *is* 以多态方式访问隐藏方法
+  after: 使用 is 以多态方式访问隐藏方法
+- line: 10873
+  before: '*第 8 章：与接口交互*'
+  after: 第 8 章：与接口交互
+- line: 10875
+  before: '*本章内容*'
+  after: 本章内容
+- line: 10887
+  before: '*介绍 CAN_BE_USED_AS*'
+  after: 介绍 CAN_BE_USED_AS

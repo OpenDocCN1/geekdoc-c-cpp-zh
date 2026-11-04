@@ -1,0 +1,19 @@
+![](bbox=[0.04, 0.14, 0.16, 0.27])
+
+The Withdraw() method is flagged as virtual in the base class BankAccount, and the withdraw() method in the subclass is flagged with the keyword override. The MakeAWithdrawal() method is unchanged, yet the output of the program is different because the call ba.Withdraw() is resolved based on the ba runtime type.
+
+![](bbox=[0.04, 0.3, 0.16, 0.43])
+
+To get a good feel for how this works, step through the program in the Visual Studio 2005 debugger. Just build the program as normal and then repeatedly press F11 to watch the program walk through its paces. Watch the Withdraw() calls carefully. Watching the same call end up in two different methods at two different times is impressive.
+
+![](bbox=[0.04, 0.48, 0.16, 0.61])
+
+Choose sparingly which methods to make virtual. Each one has a cost, so use the virtual keyword only when necessary. It's a trade-off between a class that's highly flexible and can be overridden (lots of virtual methods) and a class that isn't flexible enough (hardly any virtuals).
+
+# Getting the most benefit from polymorphism — the do-to-each trick
+
+Much of the power of polymorphism springs from polymorphic objects sharing a common interface. For example, given a hierarchy of shape objects — Circles, Squares, and Triangles, for example — you can count on all shapes having a Draw() method. Each object's Draw() method is implemented quite differently, of course. But the point is that, given a collection of these objects, you can freely use a foreach loop to call Draw() or any other method in the polymorphic interface on the objects. I call it the "do-to-each" trick.
+
+# The Class Business Card: ToString()
+
+All classes inherit from a common base class that carries the clever name Object. However, it's worth mentioning here that Object includes a method, ToString(), that converts the contents of the object into a string. The idea is that each class should override the ToString() method to display itself in a meaningful way. I used the method GetString() until now because I didn't want to begin discussing inheritance issues until Chapter 6 of this minibook. After you understand inheritance, the virtual keyword, and overriding, we can describe ToString(). By overriding ToString() for each class, you give each class the ability to display itself in its own way. For example, a useful, appropriate Student.ToString() method may display the student's name and ID.
