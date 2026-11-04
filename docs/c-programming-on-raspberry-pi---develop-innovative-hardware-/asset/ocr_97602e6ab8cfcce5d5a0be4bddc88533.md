@@ -1,0 +1,13 @@
+# Chapter 6 • LCD Projects
+
+# 6.1 • Overview
+
+In microcontroller-based systems, we usually want to interact with the system: For example, to enter a parameter, change its value, or display the output of a measured variable. Data is usually entered into a system using a switch, small keypad, or keyboard. Data is usually displayed using an indicator such as one or more LEDs, 7-segment displays, or LCDs. LCDs have the advantage that they can display alphanumeric as well as graphical data. Some LCDs have 40 or more character lengths with the capability to display data in several lines. Other LCDs can be used to display graphical images (Graphical LCDs, or simply GLCDs), such as animation. Some displays are in single or in multi-colour, while some others incorporate backlighting and so can be viewed in dimly lit conditions.
+
+LCDs can be connected to a microcontroller in parallel or through I2C. Parallel LCDs (e.g. Hitachi HD44780) are connected using more than one data line and several control lines. The data is transferred in parallel. It is common to use either 4 or 8 data lines and two or more control lines. Using a 4 wire connection saves I/O pins but is slower due to data being transferred in two stages. I2C based LCDs on the other hand are connected to a microcontroller using only 2 wires, data, and a clock. In general, I2C based LCDs are much easier to use and require less wiring. However, they cost more than parallel types. In this chapter, we will be using 4 wire connections to LCDs.
+
+The programming of LCDs is a complex task and requires a good understanding of the internal operations of LCD controllers, including knowledge of their exact timing requirements. Fortunately, several libraries can be used to simplify the use of both parallel and serial LCDs. In this chapter, we will be developing projects using LCDs with Raspberry Pi. The C language will be used in all projects.
+
+# 6.2 • HD44780 LCD module
+
+Although there are several types of LCDs, the HD44780 is one of the most popular LCD modules currently used in industry and by hobbyists (Figure 6.1). This module is an alphanumeric monochrome display and comes in different sizes. Modules with 16 columns are popular in most small applications, but other modules with 8, 20, 24, 32, or 40 columns are also available. Although most LCDs have two lines (or rows) as standard, it is possible to purchase models with 1 or 4 lines. LCDs are available with standard 14-pin connectors, although 16-pin modules are also available, providing terminals for backlighting. Table 6.1 gives the pin configuration and corresponding functions of a 16-pin LCD module. A summary of the pin functions is given below:

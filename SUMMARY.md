@@ -482,6 +482,7 @@
 +   [C 语言：学习编程，第 1 版](docs/c-programming-learn-to-code-1st-edition/README.md)
 +   [C++ 编程简明指南：编程初学者指南](docs/c-programming-made-simple-a-beginners-guide-to-programming/README.md)
 +   [C 编程 新版](docs/c-programming-new-edition/README.md)
++   [树莓派上的 C 编程——用 C 开发创新的硬件项目](docs/c-programming-on-raspberry-pi---develop-innovative-hardware-/README.md)
 +   [C 编程模式](docs/c-programming-patterns0/README.md)
 +   [C 编程高级轻松学（第2版）：任何计算机用户都能一日掌握专家级 C 语言！(C 编程, C++  编程,...开发者，编码 , CSS、Java、PHP)](docs/c-programming-professional-made-easy-2nd-edition-expert-c-pr/README.md)
 +   [C++ 编程高级指南与 CSS 编程高级指南](docs/c-programming-professional-made-easy-and-css-programming-pro/README.md)

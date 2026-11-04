@@ -1,0 +1,48 @@
+```
+{
+    int counter = 0;
+    while(digitalRead(DHT_PIN) == mode)
+    {
+        counter++;
+        delayMicroseconds(1);
+        if(counter == 255)return 1;
+    }
+    return 0;
+}
+
+// This function reads the temperature and humidity from DHT11
+// and returns the readings to the calling program
+//
+void Read_DHT11(int *T, int *H)
+{
+    char res, i, state, counter,indx = 0;
+    int data[5];
+
+    for(i = 0; i < 5; i++)data[i] = 0;
+    pinMode(DHT_PIN, OUTPUT);
+    digitalWrite(DHT_PIN, LOW);
+    delay(18);
+    digitalWrite(DHT_PIN, HIGH);
+    delayMicroseconds(40);
+    pinMode(DHT_PIN, INPUT);
+
+    res = WaitEdge(0);
+    res = res *WaitEdge(1);
+
+    i = 0;
+    while(i < 80 && res == 0)
+    {
+        counter = 0;
+        if(WaitEdge(0) == 1)break;
+        while(digitalRead(DHT_PIN) == HIGH)
+        {
+            counter++;
+            delayMicroseconds(1);
+            if(counter == 255)break;
+        }
+
+        data[indx/8] <<= 1;
+        if(counter > 28)data[indx/8] |= 1;
+        indx++;
+
+```

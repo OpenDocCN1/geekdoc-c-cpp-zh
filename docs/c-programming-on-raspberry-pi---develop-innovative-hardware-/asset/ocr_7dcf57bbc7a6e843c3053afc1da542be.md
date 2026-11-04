@@ -1,0 +1,1 @@
+In the next chapter, we will make an introduction to C. Readers who are familiar with C can skip most sections.
