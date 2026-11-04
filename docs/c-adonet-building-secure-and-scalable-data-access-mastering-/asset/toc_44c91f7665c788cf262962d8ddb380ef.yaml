@@ -1,0 +1,149 @@
+level_changes:
+- line: 12
+  before: 3
+  after: 2
+- line: 16
+  before: 3
+  after: 2
+- line: 20
+  before: 4
+  after: 3
+- line: 24
+  before: 4
+  after: 3
+- line: 33
+  before: 4
+  after: 3
+- line: 42
+  before: 4
+  after: 3
+- line: 80
+  before: 2
+  after: 1
+- line: 248
+  before: 2
+  after: 1
+- line: 378
+  before: 2
+  after: 1
+- line: 652
+  before: 2
+  after: 1
+- line: 1037
+  before: 2
+  after: 1
+- line: 1041
+  before: 3
+  after: 2
+- line: 1045
+  before: 3
+  after: 2
+- line: 1049
+  before: 3
+  after: 2
+- line: 1053
+  before: 3
+  after: 2
+- line: 1447
+  before: 2
+  after: 1
+- line: 1678
+  before: 2
+  after: 1
+- line: 1920
+  before: 2
+  after: 1
+- line: 2045
+  before: 2
+  after: 1
+- line: 2202
+  before: 2
+  after: 1
+- line: 2667
+  before: 2
+  after: 1
+- line: 2876
+  before: 2
+  after: 1
+- line: 3106
+  before: 2
+  after: 1
+- line: 3234
+  before: 2
+  after: 1
+- line: 3576
+  before: 2
+  after: 1
+- line: 3778
+  before: 2
+  after: 1
+- line: 4014
+  before: 2
+  after: 1
+- line: 4136
+  before: 2
+  after: 1
+- line: 4246
+  before: 2
+  after: 1
+- line: 4369
+  before: 2
+  after: 1
+- line: 4494
+  before: 2
+  after: 1
+text_changes:
+- line: 80
+  before: Module 1：
+  after: 模块 1：
+- line: 497
+  before: Read Operation (SELECT)
+  after: 读取操作（SELECT）
+- line: 507
+  before: Update Operation (UPDATE)
+  after: 更新操作（UPDATE）
+- line: 519
+  before: Delete Operation (DELETE)
+  after: 删除操作（DELETE）
+- line: 532
+  before: Advanced SQL Techniques
+  after: 高级 SQL 技术
+- line: 596
+  before: Using SQL in C# Applications
+  after: 在 C# 应用程序中使用 SQL
+- line: 652
+  before: 'Module 4: Introduction to ADO.NET Core'
+  after: 模块 4：ADO.NET Core 简介
+- line: 656
+  before: Overview of ADO.NET Core
+  after: ADO.NET Core 概述
+- line: 660
+  before: Key Features and Improvements
+  after: 主要功能和改进
+- line: 664
+  before: Comparing ADO.NET Core with ADO.NET
+  after: 将 ADO.NET Core 与 ADO.NET 进行比较
+- line: 1678
+  before: 第 9 模块：使用 DataSets 和 DataTables
+  after: 模块 9：使用 DataSets 和 DataTables
+- line: 2045
+  before: 第 11 模块：处理事务
+  after: 模块 11：处理事务
+- line: 2202
+  before: 模块 12：
+  after: 模块 12：使用存储过程
+- line: 2261
+  before: '**向存储过程传递参数**'
+  after: 向存储过程传递参数
+- line: 2278
+  before: '**创建和执行存储过程**'
+  after: 创建和执行存储过程
+- line: 3576
+  before: 模块 18：
+  after: 模块 18：Entity Framework 简介
+- line: 3778
+  before: 模块 19：
+  after: 模块 19：Dapper 简介
+- line: 4494
+  before: 模块24：结论与未来趋势
+  after: 模块 24：结论与未来趋势
