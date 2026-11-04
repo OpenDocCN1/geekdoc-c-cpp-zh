@@ -281,6 +281,7 @@
 +   [C# 4.0 完全手册](docs/c-40-unleashed-includes-index/README.md)
 +   [C# 5.0 一站式傻瓜书](docs/c-5-0-all-in-one-for-dummies/README.md)
 +   [C# 5.0 傻学者指南](docs/c-50-all-in-one-for-dummies/README.md)
++   [程序员的 C# 6](docs/c-6-for-programmers/README.md)
 +   [C++ 入门指南，第二版（McGraw-Hill 初学者指南）](docs/c-a-beginners-guide-second-edition-beginners-guides-mcgraw-h/README.md)
 +   [C++ 高级编程：构建高性能应用指南](docs/c-advanced-programming-building-high-performance-application/README.md)
 +   [C++ 初学者全能指南](docs/c-all-in-one-desk-reference-for-dummies/README.md)

@@ -1,0 +1,38 @@
+level_changes:
+- line: 561
+  before: 3
+  after: 2
+- line: 567
+  before: 3
+  after: 2
+- line: 766
+  before: 3
+  after: 2
+- line: 770
+  before: 3
+  after: 2
+- line: 864
+  before: 3
+  after: 2
+- line: 868
+  before: 3
+  after: 2
+- line: 1267
+  before: 2
+  after: 1
+- line: 3073
+  before: 2
+  after: 1
+- line: 4019
+  before: 2
+  after: 1
+text_changes:
+- line: 1267
+  before: C# 应用编程简介
+  after: 3 C# 应用编程简介
+- line: 3073
+  before: 控制语句：第一部分
+  after: 5 控制语句：第一部分
+- line: 4019
+  before: 控制语句：第 2 部分
+  after: 6 控制语句：第 2 部分

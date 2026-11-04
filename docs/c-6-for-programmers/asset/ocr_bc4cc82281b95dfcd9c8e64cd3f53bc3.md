@@ -1,0 +1,17 @@
+nerically. The only parts of an app that must be altered to accommodate new classes are those that require direct knowledge of the new classes that you add to the hierarchy. For example, if we extend class Animal to create class Tortoise (which might respond to a Move message by crawling one inch), we need to write only the Tortoise class and the part of the simulation that instantiates a Tortoise object. The portions of the simulation that process each Animal generically can remain the same.
+
+This chapter has several parts. First, we discuss common examples of polymorphism. As you'll soon see, you'll use base-class references to manipulate both base-class objects and derived-class objects polymorphically.
+
+# Polymorphic Employee Inheritance Hierarchy
+
+We then present a case study that revisits the Employee hierarchy of Section 11.4.5. We develop a simple payroll app that polymorphically calculates the weekly pay of several different types of employees using each employee's Earnings method. Though the earnings of each type of employee are calculated in a specific way, polymorphism allows us to process the employees “in the general.” In the case study, we enlarge the hierarchy to include two new classes—SalariedEmployee (for people paid a fixed weekly salary) and HourlyEmployee (for people paid an hourly salary and “time-and-a-half” for overtime). We declare a common set of functionality for all the classes in the updated hierarchy in a base class Employee (Section 12.5.1) from which classes SalariedEmployee, HourlyEmployee and CommissionEmployee inherit directly and class BasePlusCommissionEmployee inherits directly. As you'll soon see, when we invoke each employee's Earnings method via a base-class Employee reference, the correct earnings calculation is performed due to C#'s polymorphic capabilities.
+
+# Determining the Type of an Object at Execution Time
+
+Occasionally, when performing polymorphic processing, we need to program “in the specific.” Our Employee case study demonstrates that an app can determine the type of an object at execution time and act on that object accordingly. In the case study, we use these capabilities to determine whether a particular employee object is a BasePlusCommissionEmployee. If so, we increase that employee's base salary by 10%.
+
+# Interfaces
+
+The chapter continues with an introduction to C# interfaces. An interface describes a set of methods and properties that can be called on an object, but does not provide concrete implementations for them. You can declare classes that implement (i.e., provide concrete implementations for the methods and properties of) one or more interfaces. Each interface member must be defined for all the classes that implement the interface. Once a class implements an interface, all objects of that class have an is-a relationship with the interface type, and all objects of the class are guaranteed to provide the functionality described by the interface. This is true of all derived classes of that class as well.
+
+Interfaces are particularly useful for assigning common functionality to possibly unrelated classes. This allows objects of unrelated classes to be processed polymorphically—objects of classes that implement the same interface can respond to the same method calls. To demonstrate creating and using interfaces, we modify our payroll app to create a general accounts-payable app that can calculate payments due for the earnings of company

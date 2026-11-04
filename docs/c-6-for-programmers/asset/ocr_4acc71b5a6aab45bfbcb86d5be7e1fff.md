@@ -1,0 +1,13 @@
+![](bbox=[0.15, 0.1, 0.85, 0.35])
+
+Fig. 17.4 | Creating a sequential-access file. (Part 5 of 5.)
+
+Class CreateFileForm either creates or opens a file (depending on whether one exists), then allows the user to write records to it. The using directive in line 6 enables us to use the classes of the BankLibrary namespace; this namespace contains class BankUIForm, from which class CreateFileForm inherits (line 10). Class CreateFileForm's GUI enhances that of class BankUIForm with buttons Save As, Enter and Exit.
+
+# Method saveButton_Click
+
+When the user clicks the Save As button, the program invokes the event handler saveButton_Click (lines 21–67). Line 27 instantiates an object of class SaveFileDialog (namespace System.Windows.Forms). By placing this object in a using statement (lines 27–32), we ensure that the dialog's Dispose method is called to release its resources as soon as the program has retrieved the user's input. SaveFileDialog objects are used for selecting files (see the second screen in Fig. 17.4). Line 29 indicates that the dialog should not check if the filename specified by the user already exists (this is actually the default). Line 30 calls SaveFileDialog method ShowDialog to display the dialog.
+
+When displayed, a SaveFileDialog prevents the user from interacting with any other window in the program until the user closes the SaveFileDialog by clicking either Save or Cancel. Dialogs that behave in this manner are called modal dialogs. The user selects the appropriate drive, directory and filename, then clicks Save. Method ShowDialog returns a DialogResult specifying which button (Save or Cancel) the user clicked to close the dialog. This is assigned to DialogResult variable result (line 30). Line 31 gets the filename from the dialog. Line 35 tests whether the user clicked OK by comparing this value to DialogResult.OK. If the values are equal, method saveButton_Click continues.
+
+You can open files to perform text manipulation by creating objects of class FileStream. In this example, we want the file to be opened for output, so lines 49–50 create a FileStream object. The FileStream constructor that we use receives three arguments—a string containing the path and name of the file to open, a constant describing how to open the file and a constant describing the file read-write permissions. The constant FileMode.OpenOrCreate (line 50) indicates that the FileStream object should open the file if it exists or create the file if it does not exist.

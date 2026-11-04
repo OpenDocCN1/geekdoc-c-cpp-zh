@@ -1,0 +1,339 @@
+
+- Jacopini, G. 97
+- jagged array 225, 226, 227
+- JIT (just-in-time) compilation 8
+- joining database tables 635, 658
+- LINQ to Entities 655
+- Joint Photographic Experts Group (JPEG) 36
+- JPEG (Joint Photographic Experts Group) 36
+- just-in-time (JIT) compiler 8
+
+## K
+- key code 436
+- key data 436
+- key event 433, 434
+- key value 436
+- keyboard 56, 396
+- keyboard shortcuts 439
+- KeyChar property of class KeyPressEventArgs 433
+- KeyCode property of class KeyEventArgs 434
+- KeyData property of class KeyEventArgs 434
+- KeyDown event of class Control 433, 434
+- KeyEventArgs class 433
+  - Alt property 434, 436
+  - Control property 434, 436
+  - KeyCode property 434
+  - KeyData property 434
+  - KeyValue property 434
+  - Modifiers property 434
+  - properties 434
+  - Shift property 434, 436
+- KeyNotFoundException class 602
+- KeyPress event of class Control 433, 434
+- KeyPressEventArgs class 433
+  - KeyChar property 433, 434
+  - properties 434
+- keys
+  - function 436
+  - modifier 433
+- Keys enumeration 433
+- keys property
+  - of Dictionary 565
+  - of SortedDictionary<K,V> 602
+- KeyUp event of class Control 433, 434
+- KeyValue property of class KeyEventArgs 434
+- KeyValuePair<K,V> structure 602
+- Keywords 44, 98
+  - abstract 316, 334
+  - as 349, 391
+  - async 674, 675, 678
+  - await 675, 679
+  - base 303, 316, 323, 324
+  - break 136
+  - case 136
+  - char 57
+  - class 44
+  - const 139, 154, 202, 288
+  - continue 141
+  - decimal 57, 87
+  - default 136
+  - delegate 403, 610
+  - do 132
+  - else 100
+  - enum 172
+  - float 57
+  - for 125
+  - get 82
+  - if 61, 99, 100
+  - int 57
+  - interface 352
+  - is 349
+  - nameof 276
+  - namespace 493
+  - new 70, 198, 226
+  - null 173, 121, 189, 198
+  - operator 293
+  - out 191
+  - override 213, 308, 316
+  - params 236
+  - partial 401
+  - private 75, 270, 303
+  - protected 75, 270, 303
+  - public 75, 267, 270, 303
+  - readonly 288
+  - ref 191, 217
+  - return 75, 160
+  - sealed 351
+  - set 82
+  - static 130, 157
+  - struct 292
+  - this 271, 285
+- Keywords (cont.)
+  - value (contextual) 82
+  - var 206
+  - virtual 316
+  - void 46, 73
+  - while 106, 132
+
+## L
+- Label 33
+- label 410
+- Label class 20, 29, 32
+- Label control 396, 410
+- label in a switch 136, 137
+- lambda expression 611, 621, 650, 655, 675, 679
+- lambda expression 613
+- lambda operator (=>) 613, 650
+- statement lambda 614
+- lambda operator 613
+- language independence 8
+- Language Integrated Query (LINQ) 246
+- language interoperability 8
+- LargeImageList property of class ListView 475
+- last-in first-out (LIFO) order 584
+- Last property of class LinkedList 607
+- last-in, first-out (LIFO) 177
+- LastIndexOf method of class Array 597
+- LastIndexOf method of class string 511, 513
+- LastIndexOfAny method of class string 511
+- LastNode property of class TreeNode 469
+- late binding 348
+- layout, control 406
+- LayoutMdi method of class Form 486, 487
+- leading 0 206
+- left align output 131
+- left brace ({ ) 45, 46, 57
+- legacy code 590
+- Length property
+  - of an array 198, 198
+  - of class string 506, 507
+  - of class StringBuilder 518
+- let clause of a LINQ query 263
+- LIFO (last-in, first-out) 177, 584
+- line numbers xxxv
+- LinkArea property of class LinkLabel 453
+- LinkBehavior property of class LinkLabel 454
+- LinkClicked event of class LinkLabel 453, 454
+- LinkColor property of class LinkLabel 454
+- LinkLabel class 592
+- LinkLabel<T> generic class 603
+- LinkLabel class 439, 453
+  - ActiveLinkColor property 453
+  - LinkArea property 453
+  - LinkBehavior property 454
+  - LinkClicked event 453, 454
+  - LinkColor property 454
+  - LinkVisited property 454
+  - Text property 454
+  - UseMnemonic property 454
+  - VisitedLinkColor property 454
+- LinkLabel properties and an event 453
+- LinkLabel.Visited property of class LinkLabel 454
+- LINQ (Language Integrated Query) 246, 561, 615
+  - anonymous type 256
+  - ascending modifier 250
+  - Count method 565
+  - deferred execution 263
+  - descending modifier 250
+- LINQ (Language Integrated Query) (contd.)
+  - extension method 616
+  - extension method Aggregate 619
+  - extension method Max 619
+  - extension method Min 619
+  - extension method Select 622
+  - extension method Sum 619
+  - extension method Where 621
+  - extension methods for arithmetic 619
+  - from clause 249
+  - group by 565
+  - let clause 263
+  - LINQ to Entities 247, 631
+  - LINQ to Objects 246, 561, 631
+  - LINQ to XML 247
+  - orderby clause 250
+  - provider 247
+  - query expression 246
+  - query syntax 616, 637
+  - range variable 249
+  - Resource Center 671
+  - select clause 250
+  - usage throughout the book 247
+  - where clause 250
+- LINQ to Entities 247, 631, 632, 649
+  - data binding 637
+  - DbContext class 637, 643
+  - extension methods 649
+  - Object data source 645
+  - primary keys 631
+  - saving changes back to a database 650
+- LINQ to Objects 246, 247, 588, 590, 623, 631, 637
+  - using a List<T> 261
+  - using an array of Employee objects 252
+  - using an int array 248
+- LINQ to XML 247, 687, 691
+- LINQPad (www.linqpad.net) 671
+- Linux 9
+- List class 592
+- list, editable 465
+- List<T> generic class 256, 592
+  - Add method 260
+  - AddRange method 257
+  - Capacity property 257
+  - Clear method 257
+  - Contains method 257, 260
+  - Count property 257
+  - IndexOf method 257
+  - Insert method 260
+  - method 257
+  - Remove method 257, 260
+  - RemoveAt method 257, 260
+  - RemoveRange method 257
+  - Sort method 257
+  - TrimExcess method 257
+- ListBox control 396, 439, 456
+  - ClearSelected method 458
+  - GetSelected method 458
+  - Items property 458
+  - MultiColumn property 457
+  - properties, method and event 457
+  - SelectedIndex property 458
+  - SelectedIndexChanged event 457
+  - SelectedIndices property 458
+  - SelectedItem property 458
+  - SelectedItems property 458
+  - SelectionMode property 457
+  - Sorted property 458
+- ListBox.ObjectCollection class 458
+- ListView control 474
+  - Activation property 474
+  - CheckBoxes property 474
+  - ItemActivate event 474
+  - Items property 474
+  - LargeImageList property 475
+  - MultiSelect property 474
+  - SelectedItems property 474
+  - SmallImageList property 475
+  - View property 474
+- ListView displaying files and folders 475
+- ListView properties and events 474
+- Message property of Exception 211, 379, 382
+- method 3, 46
+  - local variable 74
+  - parameter 74
+  - parameter list 74
+  - static 130
+- method call 3, 157
+- method-call stack 177, 382
+- method declaration 157
+- method header 73
+- method overloading 181
+- method parameter list 236
+- MethodInvoker delegate 686
+- methods implicitly sealed 351
+- methods of class List<T> 257
+- Metro 9
+- Microsoft
+  - SQL Server 630
+- Microsoft Developer Network (MSDN) 18
+- Microsoft Intermediate Language (MSIL) 8, 51
+- Microsoft Visual Studio Community edition xxxiii
+- Min IEnumerable<T> extension method 619, 625
+- Min LINQ extension method
+- Min method of Math 154
+- Min ParallelQuery<T> extension method 625
+- MinDate property of class DateTimePicker 450, 453
+- MinDate property of class MonthCalendar 449
+- minimized and maximized child window 486
+- Minimum property of class NumericUpDown 428
+- MinimumSize property of class Control 409
+- MinimumSize property of class Form 409
+- mobile application 2
+- modal dialog 538
+- model class 609
+- model designer 642
+- modifier key 433
+- Modifiers property of class KeyEventArgs 434
+- modulus operator (%) 59
+- monetary amount 87
+- monetary calculations 131
+- monetizing your apps 10
+- Mono Project xxxv, 6
+- MonthCalendar class 449
+  - DateChanged event 449
+  - FirstDayOfWeek property 449
+- MaxDate property 449
+- MaxSelectionCount property 449
+- MinDate property 449
+- MonthlyBoldedDates property of class MonthCalendar 449
+- More Windows... option in Visual Studio .NET 487
+- mouse 396
+  - pointer 23
+  - mouse click 430
+  - mouse event 430, 431
+  - mouse move 430
+- MouseDown event of class Control 431
+- MouseEnter event of class Control 431
+- MouseEventArgs class 430
+  - Button property 431
+  - Clicks property 431
+  - X property 431
+  - Y property 431
+- MouseEventArgs property 431
+- MouseEventHandler delegate 430
+- MouseHover event of class Control 431
+- MouseLeave event of class Control 431
+- MouseMove event of class Control 431
+- MouseUp event of class Control 431
+- Mousewheel event of class Control 431
+- Move method of class Directory 558
+- Move method of class File 557
+- MoveFirst method of class BindingSource 654
+- MoveNext method of IEnumerator 596
+- MSDN (Microsoft Developers Network) 18
+- MSIL (Microsoft Intermediate Language) 8
+- multicast delegate 404
+- multicast event 404
+- MulticastDelegate class 404
+- MultiColumn property of class ListBox 457
+- multidimensional array 225
+- MultiExtended value of enumeration SelectionMode 457
+- Multiline property of class TabControl 481
+- Multiline property of class TextBox 411
+- multiple document interface (MDI) 396, 484
+- multiple-selection statement 98
+- multiplication * 59
+- MultiSelect property of class ListView 474
+- MultiSimple value of enumeration SelectionMode 457
+- multithreading 674
+- mutual exclusion 419
+- mutually exclusive options 419
+- MySQL 630
+
+## N
+- N format specifier 92
+- name collision 399, 494
+- name conflict 399, 494
+- Name property of class DirectoryInfo 479
+- Name property of class FileInfo 479
+- named constant 202
+- named parameter 185

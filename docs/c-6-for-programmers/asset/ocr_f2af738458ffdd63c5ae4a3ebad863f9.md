@@ -1,0 +1,9 @@
+# ## 7.19 Wrap-Up
+
+In this chapter, we discussed the difference between non-static and static methods, and we showed how to call static methods by preceding the method name with the name of the class in which it appears and the member-access operator (.). You saw that the Math class in the .NET Framework Class Library provides many static methods to perform mathematical calculations. We also discussed static class members and why method Main is declared static.
+
+We presented several commonly used Framework Class Library namespaces. You learned how to use operator + to perform string concatenations. You also learned how to declare constants with the const keyword and how to define sets of named constants with enum types. We demonstrated simulation techniques and used class Random to generate sets of random numbers. We discussed the scope of fields and local variables in a class. You saw how to overload methods in a class by providing methods with the same name but different signatures. You learned how to use optional and named parameters.
+
+We showed the concise notation of C# 6's expression-bodied methods and read-only properties for implementing methods and read-only property get accessors that contain only a return statement. We discussed how recursive methods call themselves, breaking larger problems into smaller subproblems until eventually the original problem is solved. You learned the differences between value types and reference types with respect to how they're passed to methods, and how to use the ref and out keywords to pass arguments by reference.
+
+In Chapter 8, you'll maintain lists and tables of data in arrays. You'll see a more elegant implementation of the app that rolls a die 60,000,000 times and two versions of a GradeBook case study. You'll also access an app's command-line arguments that are passed to method Main when a console app begins execution.
