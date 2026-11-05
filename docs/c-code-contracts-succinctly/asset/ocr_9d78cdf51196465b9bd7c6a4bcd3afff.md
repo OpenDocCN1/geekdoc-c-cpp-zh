@@ -1,0 +1,7 @@
+![](bbox=[0.118, 0.091, 0.881, 0.576])
+
+*Figure 14: Assume Passed*
+
+When we use **Contract.Assume**, we are telling the static checker that it needs to assume that the condition under contract is true. Why would we want to do this? Well, the previous code in Code Listing 11 was calling a method he had no control over. We could logically add a **Contract.Ensures** to the **BinQtyAvailable** method to guarantee that it will conform to the Code Contract. Consider for a minute, however, that we are calling a method in another external library. We do not have control over the code contained in that DLL and the developers didn’t implement Code Contracts. They do, however, guarantee that the value returned will always take the required quantity into account and return a bin with a sufficient quantity available. We can therefore tell the static checker to assume that this contract condition passes.
+
+Note that the previous examples regarding **Assert** and **Assume** only apply to the static checker. Because we have **Perform Runtime Code Contract Checking** on and set to **Full**, the **Contract.Assume** will still fail during run-time if the condition being checked fails (the external library returns an invalid value for the available bin quantity).

@@ -1,0 +1,129 @@
+
+The preceding example shows how developers can bullet-proof code against certain issues that logically could adversely affect the integration.
+
+## The Code Contract invariant
+
+Code Contracts allow for the verification of a class's internal state. It does this via the use of Code Contract invariants. As the name suggests, an invariant is something that can never change. It will always be as it is specified in the class under contract.
+
+We now know that our **AddSerializedItem** method must be supplied with a valid serial number. Valid serial numbers fall within a specific range.
+
+```csharp
+Contract.Requires<SerialNumberException>
+    (serialNumber >= 10000001, "Invalid Serial number");
+```
+
+*代码清单 7：契约要求条件*
+
+We also know that the method under contract guarantees the calling code that a non-null **Warehouse** object will be returned when the valid serial number precondition is met.
+
+```csharp
+Contract.Ensures(Contract.Result<Warehouse>() != null);
+```
+
+*代码清单 8：契约确保条件*
+
+Let us now assume that additional logic has to be added that needs to check the validity of the production date. This date can be in the future as well, so this needs to be supplied by an external data store, user entry, or lookup.
+
+This is quite easy, and accomplished by adding a new private method to the class that has the **[ContractInvariantMethod]** attribute applied to it. If we had to add this check on the **Warehouse** class, we would need to add the following code to it.
+
+```csharp
+[ContractInvariantMethod]
+private void Invariants()
+{
+    Contract.Invariant(this.ProductionYear >= 0);
+    Contract.Invariant(this.ProductionMonth >= 0);
+    Contract.Invariant(this.ProductionMonth <= 12);
+    Contract.Invariant(this.ProductionDay >= 0);
+    Contract.Invariant(this.ProductionDay <= 30);
+}
+```
+
+*代码清单 9：契约不变量方法*
+
+This tells the Code Contracts that the following properties for the production date have to fall within the following ranges. None of them can be zero, the number of months can't be greater than **12**, and the days can have a maximum value of **30** (assume we're working with 30-day months).
+
+Usually, you can call the contract invariant method anything you like, but many prefer to call it **ObjectInvariant**. Another point to note regarding the preceding code listing is that the method must have a void return type and be scoped as **private** or **protected**.
+
+Code Contract invariant methods allow us to specify the state of a class that is not allowed to change. The code is short and easy to understand and implement.
+
+## Other Code Contract methods
+
+Code Contracts also contain various other methods for use in your code. Let us have a look at these examples in the following sections.
+
+### Contract Assert and Assume
+
+Some of you might be wondering what the difference is between **Debug.Assert** and **Contract.Assert** when used in your code. **Debug.Assert** is only executed when your code is compiled in **Debug** mode. The **Contract.Assert** method, however, is executed when you debug your code in **Debug** or **Release** mode.
+
+The **Assert** method in Code Contracts can also easily be confused with the **Contract.Requires** method. As we saw in previous code listings, the **Requires** method is a precondition and must always be called at the start of a specific method. This is because **Contract.Requires** contains information regarding the method it resides in. **Contract.Assert** and **Contract.Assume**, on the other hand, are specific to a certain bit of code at some point in time within the method under contract.
+
+So when do we use which method? With **Assert**, the static checker runs and will try to prove the assertion at that specific line of code. **Assume** will let the static checker simply assume that whatever the check is it needs to prove, is true. So why have both? Consider the next code listing.
+
+```csharp
+public void CompleteBinPreparation(int quantityRequired)
+{
+    QuantityRequired = quantityRequired;
+    int available = BinQtyAvailable();
+    Contract.Assert(QuantityRequired <= available, "Quantity required exceeds available bin quantity");
+}
+
+public int BinQtyAvailable()
+{
+    MaxBinQuantity = 75;
+    CurrentBinQuantity = 50;
+    int QtyAvailable = MaxBinQuantity - CurrentBinQuantity;
+    return QtyAvailable;
+}
+```
+
+*代码清单 10：Assert 静态检查*
+
+The code in Code Listing 10 checks to see if the Bin containing the parts has enough space to contain the required quantity. With the Assert method, we are letting the static checker inspect the value of the QuantityRequired variable. If we had to pass through a value of 77 for QuantityRequired, we would see the static checker emit a warning and fail the build (remember, we turned on Fail build on warnings in the Code Contracts property page).
+
+![](img/0a07386735fd4e6427d20aa9bc165f5d_24_0.png)
+
+*图 13：Assert 失败*
+
+If we had to modify the code in Code Listing 10 to contain an Assume, the output would be quite different indeed. Consider the code in the following listing.
+
+```csharp
+public void CompleteBinPreparation(int quantityRequired)
+{
+    QuantityRequired = quantityRequired;
+    int available = BinQtyAvailable();
+    Contract.Assume(QuantityRequired <= available, "Quantity required exceeds available bin quantity");
+}
+
+public int BinQtyAvailable()
+{
+    MaxBinQuantity = 75;
+    CurrentBinQuantity = 50;
+    int QtyAvailable = MaxBinQuantity - CurrentBinQuantity;
+    return QtyAvailable;
+}
+```
+
+*代码清单 11：Assume 静态检查*
+
+![](img/0a07386735fd4e6427d20aa9bc165f5d_25_0.png)
+
+*图 14：Assume 通过*
+
+When we use **Contract.Assume**, we are telling the static checker that it needs to assume that the condition under contract is true. Why would we want to do this? Well, the previous code in Code Listing 11 was calling a method we had no control over. We could logically add a **Contract.Ensures** to the **BinQtyAvailable** method to guarantee that it will conform to the Code Contract. Consider for a minute, however, that we are calling a method in another external library. We do not have control over the code contained in that DLL and the developers didn't implement Code Contracts. They do, however, guarantee that the value returned will always take the required quantity into account and return a bin with a sufficient quantity available. We can therefore tell the static checker to assume that this contract condition passes.
+
+Note that the previous examples regarding **Assert** and **Assume** only apply to the static checker. Because we have **Perform Runtime Code Contract Checking** on and set to **Full**, the **Contract.Assume** will still fail during run-time if the condition being checked fails (the external library returns an invalid value for the available bin quantity).
+
+![](img/0a07386735fd4e6427d20aa9bc165f5d_26_0.png)
+
+*图 15：运行时 Assume 失败*
+
+Assert and Assume make for a very powerful combination when dealing with external code and making sure that what you are expecting is returned and valid in the way you require.
+
+Lastly, you can change the Warning Level in the Code Contracts property page. If you are expecting to see certain warnings in your Output window but are not, be sure to change the Warning Level to high.
+
+### Contract.ForAll
+
+Before I continue to explain the Contract.ForAll logic, I have to point out that it currently fails to validate statically in Visual Studio 2015. Issue 177 has been logged on GitHub for this problem, and there is a workaround provided in the thread. To read more, go to github.com/Microsoft/CodeContracts/issues/177.
+
+For now, I will need to disable static checking to illustrate the use of the Contract.ForAll method. To disable static checking, right-click your project in Visual Studio's Solution Explorer and select Properties. The Code Contracts property page will open. Click on the Code Contracts tab.
+
+This is the same page we accessed previously. Under the Static Checking group, clear the Perform Static Contract Checking option.

@@ -1,0 +1,2696 @@
+- pgno: 0
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_0_0.png)
+
+
+    # # C# Code Contracts
+
+    ## Succinctly
+
+
+    by Dirk Strauss'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# C# Code Contracts Succinctly
+
+
+    By
+
+    Dirk Strauss
+
+
+    Foreword by Daniel Jebaraj
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_1_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'Copyright © 2016 by Syncfusion, Inc.
+
+    2501 Aerial Center Parkway
+
+    Suite 200
+
+    Morrisville, NC 27560
+
+    USA
+
+    All rights reserved.
+
+
+    # # Important licensing information. Please read.
+
+
+    This book is available for free download from [www.syncfusion.com](https://www.syncfusion.com)
+    on completion of a registration form.
+
+
+    If you obtained this book from any other source, please register and download
+    a free copy from [www.syncfusion.com](https://www.syncfusion.com).
+
+
+    This book is licensed for reading only if obtained from [www.syncfusion.com](https://www.syncfusion.com).
+
+
+    This book is licensed strictly for personal or educational use.
+
+
+    Redistribution in any form is prohibited.
+
+
+    The authors and copyright holders provide absolutely no warranty for any information
+    provided.
+
+
+    The authors and copyright holders shall not be liable for any claim, damages,
+    or any other liability arising from, out of, or in connection with the information
+    in this book.
+
+
+    Please do not use this book if the listed terms are unacceptable.
+
+
+    Use shall constitute acceptance of the terms listed.
+
+
+    SYNCFUSION, SUCCINCTLY, DELIVER INNOVATION WITH EASE, ESSENTIAL, and .NET ESSENTIALS
+    are the registered trademarks of Syncfusion, Inc.
+
+
+    **Technical Reviewer:** James McCaffrey
+
+    **Copy Editor:** Courtney Wright
+
+    **Acquisitions Coordinator:** Hillary Bowling, marketing coordinator, Syncfusion,
+    Inc.
+
+    **Proofreader:** Graham High, content producer, Syncfusion, Inc.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table of Contents
+
+
+    The Story behind the Succinctly Series of Books 5
+
+
+    About the Author 7
+
+
+    Chapter 1 Getting Started 8
+
+
+    What are Code Contracts? 8
+
+
+    Download and installation 8
+
+
+    Visual Studio integration 11
+
+
+    Chapter 2 Using Code Contracts 15
+
+
+    A real-world example 15
+
+
+    The Code Contract precondition 16
+
+
+    The Code Contract precondition in action 17
+
+
+    Fail build on warnings 18
+
+
+    The Code Contract postcondition 20
+
+
+    The Code Contract invariant 23
+
+
+    Other Code Contract methods 24
+
+
+    Chapter 3 Some Useful Tips 40
+
+
+    Using code snippets 40
+
+
+    Extending code snippets 42
+
+
+    Code Contract documentation generation 46
+
+
+    Abstract classes and interfaces 55
+
+
+    Method purity 60
+
+
+    Contract abbreviator methods 65
+
+
+    Chapter 4 Testing Code Contracts 69
+
+
+    Pex evolves into IntelliTest 69
+
+
+    Getting started: Create IntelliTest 69
+
+
+    Run IntelliTest 73
+
+
+    Fixing test failures 76
+
+
+    IntelliTest warnings 81
+
+
+    Installing third-party frameworks 82
+
+
+    Chapter 5 Code Contracts Editor Extensions 84
+
+
+    Making Code Contracts more useful 84
+
+
+    Chapter 6 Conclusion 89
+
+
+    Chapter 7 Tools and Resources 90'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# The Story behind the *Succinctly Series* of Books
+
+
+    Daniel Jebaraj, Vice President
+
+    Syncfusion, Inc.
+
+
+    # Staying on the cutting edge
+
+
+    As many of you may know, Syncfusion is a provider of software components for the
+    Microsoft platform. This puts us in the exciting but challenging position of always
+    being on the cutting edge.
+
+
+    Whenever platforms or tools are shipping out of Microsoft, which seems to be about
+    every other week these days, we have to educate ourselves, quickly.
+
+
+    # Information is plentiful but harder to digest
+
+
+    In reality, this translates into a lot of book orders, blog searches, and Twitter
+    scans.
+
+
+    While more information is becoming available on the Internet and more and more
+    books are being published, even on topics that are relatively new, one aspect
+    that continues to inhibit us is the inability to find concise technology overview
+    books.
+
+
+    We are usually faced with two options: read several 500+ page books or scour the
+    web for relevant blog posts and other articles. Just as everyone else who has
+    a job to do and customers to serve, we find this quite frustrating.
+
+
+    # The *Succinctly* series
+
+
+    This frustration translated into a deep desire to produce a series of concise
+    technical books that would be targeted at developers working on the Microsoft
+    platform.
+
+
+    We firmly believe, given the background knowledge such developers have, that most
+    topics can be translated into books that are between 50 and 100 pages.
+
+
+    This is exactly what we resolved to accomplish with the *Succinctly* series. Isn''t
+    everything wonderful born out of a deep desire to change things for the better?
+
+
+    # The best authors, the best content
+
+
+    Each author was carefully chosen from a pool of talented experts who shared our
+    vision. The book you now hold in your hands, and the others available in this
+    series, are a result of the authors'' tireless work. You will find original content
+    that is guaranteed to get you up and running in about the time it takes to drink
+    a few cups of coffee.
+
+
+    # Free forever
+
+
+    Syncfusion will be working to produce books on several topics. The books will
+    always be free. Any updates we publish will also be free.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Free? What is the catch?
+
+
+    There is no catch here. Syncfusion has a vested interest in this effort.
+
+
+    As a component vendor, our unique claim has always been that we offer deeper and
+    broader frameworks than anyone else on the market. Developer education greatly
+    helps us market and sell against competing vendors who promise to "enable AJAX
+    support with one click," or "turn the moon to cheese!"
+
+
+    # Let us know what you think
+
+
+    If you have any topics of interest, thoughts, or feedback, please feel free to
+    send them to us at [succinctly-series@syncfusion.com](mailto:succinctly-series@syncfusion.com).
+
+
+    We sincerely hope you enjoy reading this book and that it helps you better understand
+    the topic of study. Thank you for reading.
+
+
+    Please follow us on Twitter and "Like" us on Facebook to help us spread the word
+    about the *Succinctly* series!
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_5_0.png)
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_5_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# About the Author
+
+
+    Dirk Strauss is a Microsoft .NET MVP with over 13 years of programming experience.
+    He uses his love for code and technology in general as inspiration to learn and
+    share as much as he can. He has extensive experience in ERP systems (specifically
+    SYSPRO), with warehousing and inventory being the areas that interest him most.
+
+
+    He currently works for Evolution Software (the best company in the universe),
+    which is situated in Cape Town, South Africa. Learning from such skilled individuals
+    who are passionate about technology is the perfect environment where he can live
+    out his passion and creativity.
+
+
+    He is married to Adele, the most stunningly wonderful woman, who gave him two
+    beautiful children, Irénée and Tristan. They are his rock upon which the troubles
+    of this world founder and break.
+
+
+    He is always busy after hours tinkering with something or other, being interested
+    in too many things when it comes to technology. Blogging and writing are creational
+    outlets for him; you can find him on Twitter at [@DirkStrauss](https://twitter.com/DirkStrauss),
+    and at his blog, [Dirkstrauss.com](https://dirkstrauss.com).
+
+
+    > > “There is a different breed of person that can be found in the lonely hours
+    of the night, faces illuminated by the glow of a computer screen, yapping on technology.”
+    ~ Dirk Strauss'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# Chapter 1 Getting Started
+
+
+    # What are Code Contracts?
+
+
+    Many developers might have an idea what Code Contracts are, but they don''t have
+    an understanding of the benefits they provide or how to implement them. I have
+    to mention, though, that I''ve found the attitude toward Code Contracts and their
+    use in development is somewhat divided. There is a group of staunch supporters
+    on the one hand, and on the opposite end of that spectrum, there is a group of
+    opponents. In the middle, however, is a broad group of developers who are unfamiliar
+    with Code Contracts and their uses. It is here that I suspect many of you will
+    find yourself. After working with Code Contracts for a while, I would expect that
+    many of you will naturally migrate to one end of this love-hate spectrum.
+
+
+    Created by RiSE (Research in Software Engineering) at Microsoft, Code Contracts
+    have been around for a number of years. As a matter of fact, the release notes
+    on the RiSE website start at release 1.1.20215 on February 23, 2009. Code Contracts
+    have gone through various revisions throughout the years, and have now found a
+    new home on GitHub after being open-sourced by Microsoft.
+
+
+    Before we continue, let''s define what Code Contracts are exactly. The goal of
+    Code Contracts is to provide a language-agnostic way to convey code assumptions
+    in your .NET applications. Let us use the analogy of an actual contract between
+    yourself and a third-party (for example, a bank). It is an agreement between the
+    two of you to ensure both parties act in a specific manner. This is at the heart
+    of Code Contracts. We are assuming certain logic within code, and we define contracts
+    within that code in order to maintain those assumptions. These assumptions can
+    take the form of preconditions, postconditions, and state invariants. If at any
+    time those contractual conditions are broken, we will know about it. This is especially
+    valuable when working in teams.
+
+
+    # Download and installation
+
+
+    For the rest of this book, I will be referring to Visual Studio Enterprise 2015
+    (.NET Framework 4.6) and Code Contracts version 1.9.10714.2. Code Contracts will
+    also work with Visual Studio 2015 Professional, but unfortunately, at the time
+    of this writing, Code Contracts do not work with the free Visual Studio 2015 Community
+    edition. Getting started with Code Contracts in Visual Studio is very easy. From
+    the **Tools** menu in Visual Studio, click **Extensions and Updates**.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_8_0.png)
+
+
+    *Figure 1: Extensions and Updates Menu Item*
+
+
+    This will open the **Extensions and Updates** window (Figure 2), from which you
+    can search the Visual Studio Gallery. Incidentally, you are also able to include
+    Code Contracts in your project via NuGet (more on that later).
+
+
+    In the search box to the right of the screen, enter **Code Contracts** and be
+    sure to have the **Online** section selected in the tree view to the left. When
+    your search results are returned, Code Contracts should be one of the top results.
+    From here it is easy to install Code Contracts. Simply click the **Download**
+    button, which will download an .msi installer that you can run to install Code
+    Contracts.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_9_0.png)
+
+
+    # ## NuGet
+
+
+    The NuGet package manager can also be used to download and include Code Contracts
+    in your solution. You can use the NuGet Package Manager (Figure 3) to search for
+    Code Contracts, or you can use the Package Manager Console from the Tools > NuGet
+    Package Manager option to run the following command to install Code Contracts.
+
+
+    ```
+
+    ```powershell
+
+    PM> Install-Package CodeContracts
+
+    ```
+
+    ```
+
+
+    You will also find a portable version (for use with Windows Mobile applications)
+    of the Code Contracts package on NuGet. It doesn’t really matter which method
+    you use to install Code Contracts; it’s just a matter which method you prefer.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_10_0.png)
+
+
+    *Figure 3: NuGet Package Manager*
+
+
+    # Visual Studio integration
+
+
+    You will need to restart Visual Studio for the Code Contracts item in the Properties
+    page to become visible. The Code Contracts integration can be found by right-clicking
+    on your project and selecting **Properties** from the context menu. You can also
+    find the Code Contracts integration by selecting **Project** from the Visual Studio
+    toolbar (be sure that you have selected your project in the Solution Explorer),
+    and clicking the *ProjectName Properties* menu item (Figure 4).
+
+
+    I have called my Visual Studio project **CodeContractsDemo**, so the item in the
+    **Projects** menu in Visual Studio will be called **CodeContractsDemo Properties**.
+    The familiar Property page opens for your project, and at the bottom of the list
+    on the left of the Property page you will see a new property pane called **Code
+    Contracts**.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'Clicking on this will display a smorgasbord of settings for you to select.
+    Don''t let the number of settings intimidate you; we will go through these in
+    the next section. Only know that many of the settings are defaulted, and you can
+    leave them that way should you wish to.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_11_0.png)
+
+
+    *Figure 4: Project Properties*
+
+
+    # Code Contracts property page
+
+
+    The Code Contracts properties will expose many options and settings to you initially.
+    The properties under Code Contracts are separated into three groups: Runtime Checking,
+    Static Checking, and Contract Reference Assembly.
+
+
+    Enable Code Contracts by selecting either **Perform Runtime Contract Checking**
+    or **Perform Static Contract Checking**.
+
+
+    At minimum, you need to ensure that one of these options is selected in order
+    to enable Code Contracts in your project. Without selecting either of these options,
+    Code Contracts will not be enabled in your project, and you will not be able to
+    benefit from the value they add to your system.
+
+
+    Runtime Contract Checking, as the name suggests, will work its magic during run-time.
+    Static Contract Checking, however, is a different animal altogether. It lets Code
+    Contracts analyze'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'your code while you’re typing code or building your project. This is where
+    Code Contracts become interesting and add the most value for me.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_12_0.png)
+
+
+    *Figure 5: Code Contracts Property Page*
+
+
+    # Static checking
+
+
+    If you enable static checking, it is advisable to keep the **Check in background**
+    option selected in the Properties page. This is because analysis can take some
+    time to perform. Another advisable option is to select the parallel build option
+    in Visual Studio. From the **Tools** menu in Visual Studio, select **Options**.
+    In the tree-view on the left of the Options screen (Figure 6), expand the **Projects
+    and Solutions** node. You will notice a node called **Build and Run**. Select
+    that, and you will see the option to enable parallel builds.
+
+
+    Any value greater than **1** will enable the parallel builds option in Visual
+    Studio. The default value on my machine is **8**. Entering the value **1** in
+    this text box will effectively switch off parallel builds in Visual Studio. By
+    enabling parallel builds in Visual Studio, you enable Code Contracts to'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'analyze several projects in parallel. According to RiSE, the Visual Studio
+    extension is thread-safe. There are many other options available in the Code Contracts
+    property page, but you can now start to use Code Contracts without having to configure
+    these settings any further.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_13_0.png)
+
+
+    Figure 6: Visual Studio Parallel Builds Option'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "You will notice that Visual Studio 2015 suggests a few corrections. In Figure\
+    \ 7, you see that the **using** statement is the first suggestion, and is the\
+    \ fix we need to apply in this instance.\n\n# ## Visual Studio 2015 light bulbs\n\
+    \nThis productivity feature is new in Visual Studio 2015. Light bulbs appear automatically\
+    \ in the Visual Studio editor and provide error-fixing and refactoring suggestions\
+    \ to the developer on the current line of code being typed. Light bulbs can also\
+    \ manually be invoked by pressing **Ctrl+Period** on a line of code to see a list\
+    \ of potential fixes.\n\n# ## The Code Contract precondition\n\nConsider the following\
+    \ code listing, which checks the value of the serial number being passed to the\
+    \ method. This method is used to add a serialized stock item to the inventory\
+    \ table of the new ERP system.\n\n```\n```csharp\npublic static class ERPIntegration\n\
+    {\n    public static void AddSerializedItem(string productCode, int\nserialNumber,\
+    \ int qty)\n    {\n        Contract.Requires<SerialNumberException>\n        \
+    \    (serialNumber >= 10000001, \"Invalid Serial number\");\n    }\n}\n\npublic\
+    \ class SerialNumberException : Exception\n{\n    public SerialNumberException()\n\
+    \    {\n    }\n\n    public SerialNumberException(string message)\n        : base(message)\n\
+    \    {\n    }\n\n    public SerialNumberException(string message, Exception inner)\n\
+    \        : base(message, inner)\n    {\n    }\n}\n```\n```\n\n*Code Listing 2:\
+    \ Code Contract Precondition*"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "The Contract.Requires statement denotes a precondition. Preconditions are the\
+    \ first statements in the method body. In the previous code listing, the precondition\
+    \ checks the value of the serial number passed to the method and determines if\
+    \ it is a valid serial number.\n\nNow let us take a closer look at the actual\
+    \ Code Contract. The Code Contract is put together as follows: Contract.Requires<TException>(bool\
+    \ condition, string errorMessage) where TException : Exception. The Boolean condition\
+    \ is validated, and if it fails, the Code Contract will throw an exception with\
+    \ the message provided. Note that I have added a custom exception to the contract\
+    \ called SerialNumberException. It is derived from the Exception class, but you\
+    \ can add any applicable exception here to suit your requirements.\n\nThe format\
+    \ of the Code Contract in the preceding code listing is but one implementation.\
+    \ The following list illustrates the valid syntax for the Code Contract preconditions:\n\
+    \n+   - Contract.Requires(bool condition)\n+   - Contract.Requires(bool condition,\
+    \ string errorMessage)\n+   - Contract.Requires<TException>(bool condition)\n\
+    +   - Contract.Requires<TException>(bool condition, string errorMessage)\n\nPersonally,\
+    \ I prefer the combination of a specified exception class and the user-defined\
+    \ error message thrown if the condition expressed in the Code Contract fails.\
+    \ This provides the developer with a very powerful mechanism to ensure that the\
+    \ values passed to the method are valid. It also frees the developer from having\
+    \ to defensively code for every eventuality that might break the system. Knowing\
+    \ that the method under contract will always answer to the predetermined rules\
+    \ you specified gives you more peace of mind as a developer.\n\n# The Code Contract\
+    \ precondition in action\n\nTo illustrate the failure of the precondition defined\
+    \ in the Code Contract, I hard-coded an invalid serial number in the method call.\
+    \ Being a console application, the call to the method is wrapped in a try/catch\
+    \ statement that outputs the error to the console. Consider the following code\
+    \ listing.\n\n```\nstatic void Main(string[] args)\n{\n    try\n    {\n      \
+    \  ERPIntegration.AddSerializedItem(\"BC32WL\", 70012, 1);\n    }\n    catch (Exception\
+    \ ex)\n    {\n        Console.Write(ex.Message);\n        Console.ReadLine();\n\
+    \    }\n}\n```\n\nCode Listing 3: The Code Contract Precondition in Action"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'When the console application is run, the exception is thrown and displayed
+    in the console window. When using a Code Contract that has a custom exception,
+    such as the one shown in Code Listing 2, you must set the Code Contracts Assembly
+    Mode property to **Standard Contract Requires**.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_17_0.png)
+
+
+    *Figure 8: Precondition Failed*
+
+
+    This preceding example is a rather simple way to illustrate the power of Code
+    Contracts. In a production system, however, one would obviously not have hard-coded
+    values in the method call. The possibility that these values would come from a
+    database or from user input is very high. As we all know, all input (user or data
+    store) is something beyond our control, and we should treat it as such. Code Contracts
+    mitigate the negative effects of bad data.
+
+
+    While the preceding example is functional, I want more from my Code Contract.
+    I do not want to run my application and then realize that there are sections of
+    code that cause my contracts to fail. Personally, I would like to see any failures
+    at the moment I build my project. This project is small enough, so I can be a
+    bit cavalier with the Code Contract properties as specified in the Project Properties
+    window.
+
+
+    # Fail build on warnings
+
+
+    Return to the Code Contracts property page, and if you haven''t already done so,
+    enable **Perform Static Contract Checking**. Next, you need to clear the **Check
+    in background** option. Then you will see that the **Fail build on warnings**
+    option is enabled. Select this option.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_17_1.png)
+
+
+    *Figure 9: Enable Fail Build on Warnings*'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'Go ahead and build your project. Static Contract Checking kicks in immediately,
+    and because your Code Contract does not pass, your build will fail, as shown in
+    Figure 10. There is, however, a problem. Your Error List is empty even though
+    your build failed. Because we only have a single Code Contract, we know where
+    to look. This, however, isn''t feasible when we have several code contracts.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_18_0.png)
+
+
+    Figure 10: Visual Studio 2015 Build Failed
+
+
+    So what went wrong? To find the issue causing the build failure, head over to
+    the Output window. If you don''t see the Output window, press Ctrl+W, O to bring
+    it into view. You will then see the results of the build and the Code Contract
+    that failed.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_18_1.png)
+
+
+    Figure 11: Visual Studio Output Window'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "With the current version 1.9.10714.2 of Code Contracts, the build errors not\
+    \ being output to the Error List has been identified as a bug in the release for\
+    \ Visual Studio 2015. This bug has been fixed and will be included in the next\
+    \ release of Code Contracts. For more information on this issue relating to Code\
+    \ Contracts for Visual Studio 2015, have a look at pull request 166 and issue\
+    \ 137 on GitHub. If you want to view all the open issues regarding Code Contracts,\
+    \ have a look at the Issues on the Code Contracts GitHub page.\n\nCode Contracts\
+    \ is the result of a handful of dedicated individuals who continually work to\
+    \ improve the current version. It's up to users like us to report issues we come\
+    \ across, and in doing so, build a healthy community of influencers and a more\
+    \ stable product. Lastly, since it's open source, you can contribute to Code Contracts\
+    \ and be a part of this incredible Visual Studio extension.\n\n# The Code Contract\
+    \ postcondition\n\nThe Code Contract postcondition is the method under contract's\
+    \ way of guaranteeing to the calling code that it will return a specific result\
+    \ if all the preconditions are met. Let us go back to the analogy of a bank and\
+    \ a loan for which a contract is drawn up. The bank ensures that the loan will\
+    \ have a fixed interest rate, but only if the repayments are made on time and\
+    \ for the amount due. The payments made by you can be equated to the preconditions\
+    \ of the Code Contract. The fact that the bank ensures a fixed interest rate can\
+    \ be equated to the postcondition.\n\nIt is therefore no surprise that the syntax\
+    \ of Code Contract postconditions use the Ensures method. Another interesting\
+    \ point to take note of is that while the postcondition validates the result of\
+    \ the method under contract, it must appear immediately after the preconditions\
+    \ in the method. Consider the following code sample:\n\n```\n```csharp\npublic\
+    \ static Warehouse AddSerializedItem(string productCode, int serialNumber, int\
+    \ qty)\n{\n    Contract.Requires<SerialNumberException>\n        (serialNumber\
+    \ >= 10000001, \"Invalid Serial number\");\n    Contract.Ensures(Contract.Result<Warehouse>()\
+    \ != null);\n\n    ProductCode = productCode;\n    SerialNumber = serialNumber;\n\
+    \    Quantity = qty;\n\n    return CreateItem();\n}\n```\n```\n\nCode Listing\
+    \ 4: Contract Postcondition\n\nAs you can see from the previous code listing,\
+    \ I have expanded our method slightly. I have added the postcondition that tells\
+    \ the calling code that the return value of this method will be of type Warehouse\
+    \ and that it will not be null. The calling code therefore does not need to check\
+    \ if"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "the object being returned to it is valid or not. The contract specifies that\
+    \ it will return a **Warehouse** object to it.\n\n```\nContract.Ensures(Contract.Result<Warehouse>()\
+    \ != null);\n```\n\n*Code Listing 5: The Code Contract Ensures a Result*\n\nIn\
+    \ the real-world example, this basically means that the created stock item will\
+    \ be issued to a specific warehouse based on a certain condition (the product\
+    \ code). The product code identifies the product as a fast mover, raw material,\
+    \ finished good, etc., and has to be issued to the correct warehouse upon creation.\
+    \ Our **AddSerializedItem** method under contract tells the calling code that\
+    \ it ensures the result of this warehouse issue will be stored in the **Warehouse**\
+    \ object. If anything goes wrong, the product code will be issued to a default\
+    \ warehouse. Users of the ERP system can inspect items stored in the default warehouse\
+    \ and manually issue the product codes to the correct warehouse at a later stage.\n\
+    \n![](img/0a07386735fd4e6427d20aa9bc165f5d_20_0.png)\n\n*Figure 12: Code Contract\
+    \ Postcondition Result*\n\nI have included the **CreateItem()** method's code\
+    \ in the following code listing. While this code sample is shown merely to explain\
+    \ a concept, the logic is sound. The **switch** statement will have a fixed set\
+    \ of cases it examines, as shown in Code Listing 5. It would not, however, have\
+    \ hard-coded values for the **Warehouse** object it returns. These would be read\
+    \ from a database or other object as the code interacts with the ERP to create\
+    \ the product code entry and issue it to a warehouse. What the code logic does\
+    \ ensure is that the method will always return a **Warehouse** object, and that\
+    \ object will always be a valid warehouse in the system.\n\n```\nprivate static\
+    \ Warehouse CreateItem()\n{\n    // Add Stocked Item code goes here\n    Warehouse\
+    \ IssuedToWarehouse = new Warehouse();\n    switch (ProductCode.Substring(0,1))\n\
+    \    {\n        case \"A\":\n            IssuedToWarehouse.Code = \"FM\";\n  \
+    \  }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "```\n```csharp\nIssuedToWarehouse.Name = \"Fast movers\";\nIssuedToWarehouse.Bin\
+    \ = \"A\";\nIssuedToWarehouse.BinReorderLevel = 10000;\nIssuedToWarehouse.LastStockTake\
+    \ = Convert.ToDateTime(\"2015-09-01\");\nbreak;\ncase \"B\":\n    IssuedToWarehouse.Code\
+    \ = \"FG\";\n    IssuedToWarehouse.Name = \"Finished Goods\";\n    IssuedToWarehouse.Bin\
+    \ = \"B\";\n    IssuedToWarehouse.BinReorderLevel = 500;\n    IssuedToWarehouse.LastStockTake\
+    \ = Convert.ToDateTime(\"2015-09-04\");\n    break;\ncase \"C\":\n    IssuedToWarehouse.Code\
+    \ = \"RM\";\n    IssuedToWarehouse.Name = \"Raw Materials\";\n    IssuedToWarehouse.Bin\
+    \ = \"AD\";\n    IssuedToWarehouse.BinReorderLevel = 7500;\n    IssuedToWarehouse.LastStockTake\
+    \ = Convert.ToDateTime(\"2015-09-02\");\n    break;\ndefault:\n    IssuedToWarehouse.Code\
+    \ = \"GS\";\n    IssuedToWarehouse.Name = \"General Stock\";\n    IssuedToWarehouse.Bin\
+    \ = \"SS\";\n    IssuedToWarehouse.BinReorderLevel = 5000;\n    IssuedToWarehouse.LastStockTake\
+    \ = Convert.ToDateTime(\"2015-09-09\");\n    break;\n}\nreturn IssuedToWarehouse;\n\
+    }\n```\n```\n\n*Code Listing 6: Warehouse Issue Logic*\n\nYou can see how postconditions\
+    \ can be used in Code Contracts to create highly robust code. Think of a developer\
+    \ working in a distributed team. Being able to work from anywhere in the world\
+    \ has many advantages and disadvantages (depending on your point of view). The\
+    \ absence of personal, one-to-one communication can be construed as a distinct\
+    \ disadvantage. Not being able to sit in a boardroom where developers can flesh\
+    \ out a problem together remains a challenge. Your brain can subconsciously infer\
+    \ feelings, meanings, and viewpoints based on the multitude of other signals (such\
+    \ as body language, eye movement, or breathing) that we tend to give out.\n\n\
+    Communication is more than just the act of speaking. Therefore, as developers,\
+    \ we need to become sharper and heighten our effectiveness in other areas. A great\
+    \ place to start is at the code. With Code Contracts, we are able to defensively\
+    \ preempt certain conditions that may occur. Just because the specification doesn’t\
+    \ explicitly mention that a null condition would break the integration, that doesn’t\
+    \ mean we don’t need to defend against it."
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: "The preceding example shows how developers can bullet-proof code against certain\
+    \ issues that logically could adversely affect the integration.\n\n# The Code\
+    \ Contract invariant\n\nCode Contracts allow for the verification of a class’\
+    \ internal state. It does this via the use of Code Contract invariants. As the\
+    \ name suggests, an invariant is something that can never change. It will always\
+    \ be as it is specified in the class under contract.\n\nWe now know that our **AddSerializedItem**\
+    \ method must be supplied with a valid serial number. Valid serial numbers fall\
+    \ within a specific range.\n\n```\n```csharp\nContract.Requires<SerialNumberException>\n\
+    \    (serialNumber >= 10000001, \"Invalid Serial number\");\n```\n```\n\n*Code\
+    \ Listing 7: Contract Requires Condition*\n\nWe also know that the method under\
+    \ contract guarantees the calling code that a non-null **Warehouse** object will\
+    \ be returned when the valid serial number precondition is met.\n\n```\n```csharp\n\
+    Contract.Ensures(Contract.Result<Warehouse>() != null);\n```\n```\n\n*Code Listing\
+    \ 8: Contract Ensures Condition*\n\nLet us now assume that additional logic has\
+    \ to be added that needs to check the validity of the production date. This date\
+    \ can be in the future as well, so this needs to be supplied by an external data\
+    \ store, user entry, or lookup.\n\nThis is quite easy, and accomplished by adding\
+    \ a new private method to the class that has the **[ContractInvariantMethod]**\
+    \ attribute applied to it. If we had to add this check on the **Warehouse** class,\
+    \ we would need to add the following code to it.\n\n```\n```csharp\n[ContractInvariantMethod]\n\
+    private void Invariants()\n{\n    Contract.Invariant(this.ProductionYear >= 0);\n\
+    \    Contract.Invariant(this.ProductionMonth >= 0);\n    Contract.Invariant(this.ProductionMonth\
+    \ <= 12);\n    Contract.Invariant(this.ProductionDay >= 0);\n    Contract.Invariant(this.ProductionDay\
+    \ <= 30);\n}\n```\n```\n\n*Code Listing 9: Contract Invariant Method*\n\nThis\
+    \ tells the Code Contracts that the following properties for the production date\
+    \ have to fall within the following ranges. None of them can be zero, the number\
+    \ of months can’t be greater"
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "than **12**, and the days can have a maximum value of **30** (assume we’re\
+    \ working with 30-day months).\n\nUsually, you can call the contract invariant\
+    \ method anything you like, but many prefer to call it **ObjectInvariant**. Another\
+    \ point to note regarding the preceding code listing is that the method must have\
+    \ a void return type and be scoped as **private** or **protected**.\n\nCode Contract\
+    \ invariant methods allow us to specify the state of a class that is not allowed\
+    \ to change. The code is short and easy to understand and implement.\n\n# Other\
+    \ Code Contract methods\n\nCode Contracts also contain various other methods for\
+    \ use in your code. Let us have a look at these examples in the following sections.\n\
+    \n# Contract Assert and Assume\n\nSome of you might be wondering what the difference\
+    \ is between **Debug.Assert** and **Contract.Assert** when used in your code.\
+    \ **Debug.Assert** is only executed when your code is compiled in **Debug** mode.\
+    \ The **Contract.Assert** method, however, is executed when you debug your code\
+    \ in **Debug** or **Release** mode.\n\nThe **Assert** method in Code Contracts\
+    \ can also easily be confused with the **Contract.Requires** method. As we saw\
+    \ in previous code listings, the **Requires** method is a precondition and must\
+    \ always be called at the start of a specific method. This is because **Contract.Requires**\
+    \ contains information regarding the method it resides in. **Contract.Assert**\
+    \ and **Contract.Assume**, on the other hand, are specific to a certain bit of\
+    \ code at some point in time within the method under contract.\n\nSo when do we\
+    \ use which method? With **Assert**, the static checker runs and will try to prove\
+    \ the assertion at that specific line of code. **Assume** will let the static\
+    \ checker simply assume that whatever the check is it needs to prove, is true.\
+    \ So why have both? Consider the next code listing.\n\n```\n```csharp\npublic\
+    \ void CompleteBinPreparation(int quantityRequired)\n{\n    QuantityRequired =\
+    \ quantityRequired;\n    int available = BinQtyAvailable();\n    Contract.Assert(QuantityRequired\
+    \ <= available, \"Quantity required exceeds available bin quantity\");\n}\n\n\
+    public int BinQtyAvailable()\n{\n    MaxBinQuantity = 75;\n    CurrentBinQuantity\
+    \ = 50;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "```\n```\nint QtyAvailable = MaxBinQuantity - CurrentBinQuantity;\nreturn QtyAvailable;\n\
+    }\n```\n```\n\n*Code Listing 10: Assert Static Check*\n\nThe code in Code Listing\
+    \ 10 checks to see if the Bin containing the parts has enough space to contain\
+    \ the required quantity. With the Assert method, we are letting the static checker\
+    \ inspect the value of the QuantityRequired variable. If we had to pass through\
+    \ a value of 77 for QuantityRequired, we would see the static checker emit a warning\
+    \ and fail the build (remember, we turned on Fail build on warnings in the Code\
+    \ Contracts property page).\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_24_0.png)\n\
+    \n*Figure 13: Assert Failed*\n\nIf we had to modify the code in Code Listing 10\
+    \ to contain an Assume, the output would be quite different indeed. Consider the\
+    \ code in the following listing.\n\n```\n```\npublic void CompleteBinPreparation(int\
+    \ quantityRequired)\n{\n    QuantityRequired = quantityRequired;\n    int available\
+    \ = BinQtyAvailable();\n    Contract.Assume(QuantityRequired <= available, \"\
+    Quantity required exceeds available bin quantity\");\n}\n\npublic int BinQtyAvailable()\n\
+    {\n    MaxBinQuantity = 75;\n    CurrentBinQuantity = 50;\n    int QtyAvailable\
+    \ = MaxBinQuantity - CurrentBinQuantity;\n    return QtyAvailable;\n}\n```\n```\n\
+    \n*Code Listing 11: Assume Static Check*"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_25_0.png)
+
+
+    *Figure 14: Assume Passed*
+
+
+    When we use **Contract.Assume**, we are telling the static checker that it needs
+    to assume that the condition under contract is true. Why would we want to do this?
+    Well, the previous code in Code Listing 11 was calling a method he had no control
+    over. We could logically add a **Contract.Ensures** to the **BinQtyAvailable**
+    method to guarantee that it will conform to the Code Contract. Consider for a
+    minute, however, that we are calling a method in another external library. We
+    do not have control over the code contained in that DLL and the developers didn’t
+    implement Code Contracts. They do, however, guarantee that the value returned
+    will always take the required quantity into account and return a bin with a sufficient
+    quantity available. We can therefore tell the static checker to assume that this
+    contract condition passes.
+
+
+    Note that the previous examples regarding **Assert** and **Assume** only apply
+    to the static checker. Because we have **Perform Runtime Code Contract Checking**
+    on and set to **Full**, the **Contract.Assume** will still fail during run-time
+    if the condition being checked fails (the external library returns an invalid
+    value for the available bin quantity).'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_26_0.png)
+
+
+    Figure 15: Assume Failed at Runtime
+
+
+    Assert and Assume make for a very powerful combination when dealing with external
+    code and making sure that what you are expecting is returned and valid in the
+    way you require.
+
+
+    Lastly, you can change the Warning Level in the Code Contracts property page.
+    If you are expecting to see certain warnings in your Output window but are not,
+    be sure to change the Warning Level to high.
+
+
+    # Contract.ForAll
+
+
+    Before I continue to explain the Contract.ForAll logic, I have to point out that
+    it currently fails to validate statically in Visual Studio 2015. Issue 177 has
+    been logged on GitHub for this problem, and there is a workaround provided in
+    the thread. To read more, go to github.com/Microsoft/CodeContracts/issues/177.
+
+
+    For now, I will need to disable static checking to illustrate the use of the Contract.ForAll
+    method. To disable static checking, right-click your project in Visual Studio''s
+    Solution Explorer and select Properties. The Code Contracts property page will
+    open. Click on the Code Contracts tab.
+
+
+    This is the same page we accessed previously. Under the Static Checking group,
+    clear the Perform Static Contract Checking option.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "![](img/0a07386735fd4e6427d20aa9bc165f5d_27_0.png)\n\n*Figure 16: Disable Static\
+    \ Contract Checking*\n\nOnce this is done, you should be able to have the Code\
+    \ Contract perform the required action and validate the condition you specified.\n\
+    \nWith that out of the way, let’s modify our **CompleteBinPreparation** method.\
+    \ The business rules require that before a bin can be processed, the quantity\
+    \ needs to be greater than 5. Let's build this contract by requiring that the\
+    \ **binQuantities** array never be null. As explained previously, this is easily\
+    \ done by adding the **Contract.Requires** method.\n\nNext, we need to add **Contract.Assert**\
+    \ to include the **Contract.ForAll** method. This will then use a lambda expression\
+    \ to check that all the quantities are greater than 5. The implementation is shown\
+    \ in the following code listing.\n\n```\n```csharp\npublic void CompleteBinPreparation(int[]\
+    \ binQuantities)\n{\n    Contract.Requires(binQuantities != null);\n    Contract.Assert(Contract.ForAll(binQuantities,\
+    \ x => x > 5),\n        \"Some Bins contain invalid quantities\");\n\n    // Process\
+    \ bin quantities\n    BinCount = binQuantities.Length;\n}\n```\n```\n\n*Code Listing\
+    \ 12: Contract.ForAll Example*"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "If our method under contract passes the validation, it will simply return the\
+    \ bin count in the array. If, for example, the array contains invalid bin quantities,\
+    \ an exception will be displayed.\n\nIn our calling code, we will now add an array\
+    \ that contains a few invalid bin quantities. We can see that the quantities 4\
+    \ and 3 are less than 5, and therefore invalid.\n\n```\nstatic void Main(string[]\
+    \ args)\n{\n    try\n    {\n        int[] iBins = { 4, 3, 61, 51, 88, 55 };\n\
+    \        ERPWarehouseIntegration oWhi = new ERPWarehouseIntegration();\n     \
+    \   oWhi.CompleteBinPreparation(iBins);\n\n        Console.Write(\"Bin Count:\
+    \ \" + oWhi.BinCount);\n        Console.ReadLine();\n    }\n    catch (Exception\
+    \ ex)\n    {\n        Console.Write(ex.Message);\n        Console.ReadLine();\n\
+    \    }\n}\n```\n\nCode Listing 13: Calling Contract.ForAll Method\n\nIf we run\
+    \ the code, the console application will throw the exception and display the error\
+    \ message to the user.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_28_0.png)\n\
+    \nFigure 17: Invalid Bin Quantities\n\nLet us now modify our calling code to contain\
+    \ only valid bin quantities in the iBins array. You will see that I have changed\
+    \ the invalid bin quantities of 4 and 3 to 32 and 19, respectively.\n\nIf you\
+    \ run the application a second time, it will cause the Code Contract to pass validation\
+    \ and display the bin count in the console application.\n\n```\nstatic void Main(string[]\
+    \ args)\n{\n    try\n    {\n\n```"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\n```csharp\nint[] iBins = { 32, 19, 61, 51, 88, 55 };\nERPWarehouseIntegration\
+    \ oWhi = new ERPWarehouseIntegration();\noWhi.CompleteBinPreparation(iBins);\n\
+    \nConsole.Write(\"Bin Count: \" + oWhi.BinCount);\nConsole.ReadLine();\n}\ncatch\
+    \ (Exception ex)\n{\n    Console.Write(ex.Message);\n    Console.ReadLine();\n\
+    }\n}\n```\n```\n\n*Code Listing 14: Modified Calling Code*\n\nThe console application\
+    \ now displays the count of valid bins, which means the Code Contract passed validation.\n\
+    \n![](img/0a07386735fd4e6427d20aa9bc165f5d_29_0.png)\n\n*Figure 18: Valid Bin\
+    \ Quantities*\n\nAs you can see, the **Contract.ForAll** method provides a fantastic\
+    \ way to check arrays of values for entries that could cause problems further\
+    \ down the path of execution if they contravene a business rule. The **Contract.ForAll**\
+    \ method can also be used with **List** collections, or any **IEnumerable** collection.\n\
+    \n# Contract.Exists\n\nFor a moment, let’s assume a bin number that needs to be\
+    \ processed goes into a batch of processed bins for 30 days. The system does not\
+    \ know when a bin enters a process phase, and therefore needs to check each bin\
+    \ number before it’s processed to ensure that it doesn’t already exist in the\
+    \ process queue. Code Contracts provide a nice solution here, too.\n\nCreate a\
+    \ method called ProcessBin and add the **Contract.Requires** method to check that\
+    \ the parameter passed to the method is not null. Then add the **Contract.Assert**\
+    \ method to include the **Contract.Exists** method. This checks to see if the\
+    \ processed queue **ProcessedBins** contains the bin we want to process. The following\
+    \ code listing illustrates this implementation.\n\n```\n```csharp\npublic void\
+    \ ProcessBin(string bin)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "```\n```csharp\n{\n    Contract.Requires(bin != null);\n    Contract.Assert(!Contract.Exists(ProcessedBins(),\n\
+    \        x => string.Compare(x, bin, true) == 0),\n        \"Bin \" + bin + \"\
+    \ already processed\");\n\n    // Process bin and add to ProcessedBins collection\n\
+    }\n\nprivate List<string> ProcessedBins()\n{\n    List<string> oBinsProcessed\
+    \ = new List<string>();\n    oBinsProcessed.Add(\"A12\");\n    oBinsProcessed.Add(\"\
+    CD25\");\n    oBinsProcessed.Add(\"ZX4R\");\n    oBinsProcessed.Add(\"A11\");\n\
+    \n    return oBinsProcessed;\n}\n```\n```\n\n*Code Listing 15: Contract.Exists\
+    \ Implementation*\n\nIn the calling code, we will just use a hard-coded value\
+    \ for the bin number to check. Call the method under contract and pass it a bin\
+    \ that is already in the process queue.\n\n```\n```csharp\nstatic void Main(string[]\
+    \ args)\n{\n    try\n    {\n        string BinToProcess = \"ZX4R\";\n        ERPWarehouseIntegration\
+    \ oWhi = new ERPWarehouseIntegration();\n        oWhi.ProcessBin(BinToProcess);\n\
+    \n        Console.Write(\"Bin \" + BinToProcess + \" processed\");\n        Console.ReadLine();\n\
+    \    }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n\
+    \        Console.ReadLine();\n    }\n}\n```\n```\n\n*Code Listing 16: Calling\
+    \ Contract.Exists Method*\n\nThe Code Contract validates if the bin exists in\
+    \ the process queue and displays the output to the user in the console application."
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "![](img/0a07386735fd4e6427d20aa9bc165f5d_31_0.png)\n\nFigure 19: Bins Exist\
+    \ in Process Queue\n\nGoing back to our calling code, let us change the bin number\
+    \ to one that doesn't exist in the process queue.\n\n```\nstatic void Main(string[]\
+    \ args)\n{\n    try\n    {\n        string BinToProcess = \"SSX4R\";\n       \
+    \ ERPWarehouseIntegration owhi = new ERPWarehouseIntegration();\n        owhi.ProcessBin(BinToProcess);\n\
+    \n        Console.Write(\"Bin \" + BinToProcess + \" processed\");\n        Console.ReadLine();\n\
+    \    }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n\
+    \        Console.ReadLine();\n    }\n}\n```\n\nCode Listing 17: Modified Calling\
+    \ Code\n\nIf we run the application a second time, the bin will be processed and\
+    \ a confirmation message will be displayed to the user in the console application.\n\
+    \n![](img/0a07386735fd4e6427d20aa9bc165f5d_31_1.png)\n\nFigure 20: Bin Does Not\
+    \ Exist in Process Queue\n\nContract.Exists allows developers to easily verify\
+    \ the existence of an item based on certain business rules in the system you design."
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# Contract.OldValue<>\n\nA couple of years ago, I worked on a project for a\
+    \ steel manufacturer. They had a very specific scrap process to follow when off-cuts\
+    \ were produced by cutting steel plates into specific sizes. Another project I\
+    \ worked on had a specific scrap workflow to process. Scrap is something many\
+    \ companies take very seriously, and they need to manage the process carefully.\n\
+    \nFor the next example of Code Contracts, I will use the scrap process to illustrate\
+    \ the use of the Contract.OldValue<> method. I have to mention, though, that the\
+    \ Contract.OldValue<> method can only be used in the conditional expression for\
+    \ the Ensures contract.\n\nLet us assume that the steel manufacturer needs to\
+    \ minimize the amount of off-cuts produced by the cutting process. To do this,\
+    \ they use a calculation that takes the volume of steel to be cut, and calculate\
+    \ the amount of steel that can be used based on the cutting factor. A perfect\
+    \ cut means that if the volume of steel is 10 m³, then the resulting cut of steel\
+    \ will also be equal to 10 m³. All of the steel has therefore been consumed and\
+    \ resulted in zero off-cuts.\n\nAn imperfect cut would result in less than the\
+    \ original volume of steel, and this would mean that the user will need to change\
+    \ the cutting factor until they can ensure a near-perfect cut. Without going into\
+    \ more detailed specifics regarding thresholds and limits, let us assume that\
+    \ if anything other than a perfect cut is returned, the cutting process is not\
+    \ approved.\n\nConsider the following code listing.\n\n```\npublic void CutSteelNoScrap(int\
+    \ volumeSteel, int factor)\n{\n    Contract.Ensures(volumeSteel != 0, \"The volume\
+    \ of steel can't be zero\");\n    Contract.Ensures(Contract.OldValue<int>(volumeSteel)\n\
+    \        == CutSteel(volumeSteel, factor) + volumeSteel,\n        \"The factor\
+    \ used will result in scrap. Please modify the cutting factor.\");\n    // Process\
+    \ steel to cut\n}\n\nprivate int CutSteel(int volumeToCut, int factor)\n{\n  \
+    \  return volumeToCut % factor;\n}\n```\n\n*Code Listing 18: Contract.OldValue<>\
+    \ Implementation*\n\nAs you can see, I have simply used a modulus operator to\
+    \ simulate the existence of off-cuts based on the incorrect factor. The modulus\
+    \ operator simply returns the remainder of a division and is denoted by the %\
+    \ operator. Therefore, the following is true:\n\n19 % 5 = 4\n\n12 % 4 = 0"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "It’s crude, but it’s effective in illustrating the point I need to make. In\
+    \ the calling code, we call the **CutSteelNoScrap** method to perform the calculation\
+    \ and tell us if the factor used is incorrect and generates scrap.\n\n```\n```csharp\n\
+    static void Main(string[] args)\n{\n    try\n    {\n        int steelVolume =\
+    \ 4;\n        int cutFactor = 3;\n        ERPWarehouseIntegration oWhi = new ERPWarehouseIntegration();\n\
+    \        oWhi.CutSteelNoScrap(steelVolume, cutFactor);\n\n        Console.Write(\"\
+    Steel fully consumed by cutting process\");\n        Console.ReadLine();\n   \
+    \ }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n   \
+    \     Console.ReadLine();\n    }\n}\n```\n```\n\n*Code Listing 19: Calling Code*\n\
+    \nThe **Contract.OldValue** method will inspect the value of the variable **volumeSteel**\
+    \ and see if the new value returned by the **CutSteel** method is zero. If it\
+    \ is zero, the sum of **volumeSteel** and **CutSteel** will equal zero. We therefore\
+    \ know that the factor resulted in no off-cuts.\n\nIf, however, the sum of **volumeSteel**\
+    \ and **CutSteel** is not equal to **volumeSteel**, then the factor resulted in\
+    \ off-cuts being generated by the cutting process. Running the console application\
+    \ with a steel volume value of 4 m³ and a factor of 3 results in off-cuts.\n\n\
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_33_0.png)\n\n*Figure 21: Contract.OldValue<>\
+    \ Fails*\n\nGo ahead and modify the previous code listing so that the factor is\
+    \ changed to a value that will not produce a remainder when used in the modulus\
+    \ calculation. Change it to a value of **2** and run the console application again.\n\
+    \n```\n```csharp\nstatic void Main(string[] args)\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\n{\n    try\n    {\n        int steelVolume = 4;\n        int cutFactor\
+    \ = 2;\n        ERPWarehouseIntegration oWhi = new ERPWarehouseIntegration();\n\
+    \        oWhi.CutSteelNoScrap(steelVolume, cutFactor);\n\n        Console.Write(\"\
+    Steel fully consumed by cutting process\");\n        Console.ReadLine();\n   \
+    \ }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n   \
+    \     Console.ReadLine();\n    }\n}\n```\n\n*Code Listing 20: Modified Calling\
+    \ Code*\n\nThe console application now returns a perfect cut for the given factor\
+    \ and steel volume.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_34_0.png)\n\n\
+    *Figure 22: Contract.OldValue<> Passes*\n\nWhile the preceding code listing is\
+    \ an extremely simple way to illustrate the use of the Contract.OldValue<> method,\
+    \ it can be expanded to provide much more benefit in validating that methods conform\
+    \ to certain business rules.\n\n# Contract.Result<>\n\nIt is prudent to note that\
+    \ the Contract.Result<> method cannot be used in a method that has a void return\
+    \ type. To illustrate the use of this contract, we can reuse the previous code\
+    \ listings and modify them slightly.\n\n```\npublic int ProductionVolumePerBin(int\
+    \ binVolume, int factor)\n{\n    Contract.Ensures(Contract.Result<int>() == binVolume,\n\
+    \        \"The factor used will result in scrap. Please modify the cutting factor.\"\
+    );\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\nint remainder = CutSteel(binVolume, factor);\n    return binVolume - remainder;\n\
+    }\nprivate int CutSteel(int volumeToCut, int factor)\n{\n    return volumeToCut\
+    \ % factor;\n}\n```\n\n# Code Listing 21: Contract.Result<>\n\nWe can see that\
+    \ the preceding code listing tells the calling method that the method under contract\
+    \ will result in the cut volume always equaling the bin volume. This means that\
+    \ all the steel has been cut perfectly and no off-cuts were made by using the\
+    \ specific factor.\n\nThe calling code also doesn't differ much either.\n\n```\n\
+    static void Main(string[] args)\n{\n    try\n    {\n        int binVolume = 4;\n\
+    \        int cutFactor = 2;\n        ERPWarehouseIntegration oWhi = new ERPWarehouseIntegration();\n\
+    \        oWhi.ProductionVolumePerBin(binVolume, cutFactor);\n\n        Console.Write(\"\
+    Steel fully consumed by cutting process\");\n        Console.ReadLine();\n   \
+    \ }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n   \
+    \     Console.ReadLine();\n    }\n}\n```\n\n# Code Listing 22: Calling Code\n\n\
+    If we ran the preceding code with the factor of 2 and the volume of 4, we would\
+    \ get a perfect cut.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_35_0.png)\n\n\
+    # Figure 23: Contract Results in Perfect Cut"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "If, however, we had to modify the calling code again to a factor that would\
+    \ not satisfy the **contract.Result<>** condition, the following would be output\
+    \ to the console application.\n\n```\n```csharp\nstatic void Main(string[] args)\n\
+    {\n    try\n    {\n        int binVolume = 9;\n        int cutFactor = 2;\n  \
+    \      ERPWarehouseIntegration oWhi = new ERPWarehouseIntegration();\n       \
+    \ oWhi.ProductionVolumePerBin(binVolume, cutFactor);\n\n        Console.Write(\"\
+    Steel fully consumed by cutting process\");\n        Console.ReadLine();\n   \
+    \ }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n   \
+    \     Console.ReadLine();\n    }\n}\n```\n```\n\n*Code Listing 23: Modified Calling\
+    \ Code*\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_36_0.png)\n\n*Figure 24: Contract.Result<>\
+    \ Failed*\n\nCode Contracts allow us to define exactly what needs to be validated\
+    \ in order for a specific method to pass the contract conditions. Being able to\
+    \ add several contract methods in a single method makes your code more robust\
+    \ and bug-free.\n\n# Contract.ValueAtReturn<>\n\nSometimes you might need to use\
+    \ *out* parameters in your methods. Code Contracts can easily be applied here,\
+    \ too. Let us use a slightly modified example of **Contract.Result<>** to illustrate\
+    \ this concept.\n\nKeeping with the steel manufacturing code demo, assume that\
+    \ we need to ensure that all bins are filled to capacity given a specific volume\
+    \ of steel. Our *out* parameter is a bin over count. If this value is greater\
+    \ than zero, it means that the steel volume exceeds the maximum volume that the\
+    \ bins can hold. To achieve this logic, I will use the modulus operator again."
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "```\npublic void EnsureAllBinsFilled(out int binOverCount, int binVol, int\
+    \ steelVol)\n{\n    Contract.Ensures(Contract.ValueAtReturn<int>(out binOverCount)\
+    \ == 0,\n        \"The steel volume exceeds the bin volume\");\n\n    binOverCount\
+    \ = steelVol % binVol;\n}\n```\n\n# Code Listing 24: Contract.ValueAtReturn\n\n\
+    Our method under contract needs to specify that the out parameter binOverCount\
+    \ never be greater than zero. To achieve this, we need to use the Contract.Ensures\
+    \ method along with the Contract.ValueAtReturn<> method.\n\nIn Code Listing 24,\
+    \ you will notice that the Contract.ValueAtReturn<> references the out parameter\
+    \ binOverCount and specifies that it must always equal zero.\n\nTo implement the\
+    \ method, refer to the following code sample.\n\n```\nstatic void Main(string[]\
+    \ args)\n{\n    try\n    {\n        int steelVolume = 10;\n        int binVolume\
+    \ = 3;\n        int binWastedSpace = 0; // This must always equal zero\n     \
+    \   ERPWarehouseIntegration oWhi = new ERPWarehouseIntegration();\n        oWhi.EnsureAllBinsFilled(out\
+    \ binWastedSpace, binVolume,\n            steelVolume);\n\n        Console.Write(\"\
+    All bins filled\");\n        Console.ReadLine();\n    }\n    catch (Exception\
+    \ ex)\n    {\n        Console.Write(ex.Message);\n        Console.ReadLine();\n\
+    \    }\n}\n```\n\n# Code Listing 25: Calling Code\n\nThe value of binWastedSpace\
+    \ will need to remain equal to zero for the method under contract to pass validation.\
+    \ If we ran this code, we would see that the values provided for steelVolume and\
+    \ binVolume cause the application to throw an exception.\n\nThe exception notifies\
+    \ the user that the steel volume exceeds the maximum volume of the bins provided\
+    \ for the operation."
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "![](img/0a07386735fd4e6427d20aa9bc165f5d_38_0.png)\n\nFigure 25: Contract.ValueAtReturn<>\
+    \ Failed\n\nIf we had to modify the calling code to provide valid values for the\
+    \ parameters **steelVolume** and **binVolume**, our application would pass validation.\n\
+    \n```\n```csharp\nstatic void Main(string[] args)\n{\n    try\n    {\n       \
+    \ int steelVolume = 10;\n        int binVolume = 2;\n        int binWastedSpace\
+    \ = 0; // This must always equal zero\n        ERPWarehouseIntegration oWhi =\
+    \ new ERPWarehouseIntegration();\n        oWhi.EnsureAllBinsFilled(out binWastedSpace,\
+    \ binVolume, steelVolume);\n\n        Console.Write(\"All bins filled\");\n  \
+    \      Console.ReadLine();\n    }\n    catch (Exception ex)\n    {\n        Console.Write(ex.Message);\n\
+    \        Console.ReadLine();\n    }\n}\n```\n```\n\nCode Listing 26: Modified\
+    \ Calling Code\n\nAll I have done is change the value of the bin volume to 2.\
+    \ Running the application results in a successful validation of the bin logic.\n\
+    \n![](img/0a07386735fd4e6427d20aa9bc165f5d_38_1.png)\n\nFigure 26: Contract.ValueAtReturn<>\
+    \ Succeeded\n\nWithout having to write extensive code logic to validate incoming\
+    \ and return values, we have provided a lot of validation code in the form of\
+    \ Code Contracts."
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# # Chapter 3 Some Useful Tips
+
+
+    # ## Using code snippets
+
+
+    You are likely already familiar with code snippets in Visual Studio; Code Contracts
+    also provide this feature. When installing Code Contracts, the snippets are added.
+    If you are using C#, you simply type the shortcut and press the Tab key twice.
+
+
+    In Visual Basic, the use of code snippets is slightly different. Type the shortcut
+    and press the Tab key. There are subtle differences between the shortcut keys
+    in C# and Visual Basic. The **Contract.Requires** shortcut, for example, is invoked
+    in C# by typing **cr**, but in Visual Basic, it is invoked by typing **creq**.
+
+
+    # ## C# Code Snippets
+
+
+    The following code listings illustrate the C# code snippet shortcuts. The shortcut
+    used is the first line that is commented out followed by the code generated by
+    the snippet.
+
+
+    ```
+
+    ```csharp
+
+    //cr
+
+    Contract.Requires(false);
+
+    ```
+
+    ```
+
+
+    *Code Listing 27: Contract.Requires Snippet*
+
+
+    ```
+
+    ```csharp
+
+    //ce
+
+    Contract.Ensures();
+
+    ```
+
+    ```
+
+
+    *Code Listing 28: Contract.Ensures Snippet*
+
+
+    ```
+
+    ```csharp
+
+    //ci
+
+    Contract.Invariant(false);
+
+    ```
+
+    ```
+
+
+    *Code Listing 29: Contract.Invariant Snippet*
+
+
+    ```
+
+    ```csharp
+
+    //crr
+
+    Contract.Result<int>()
+
+    ```
+
+    ```
+
+
+    *Code Listing 30: Contract.Result Snippet*
+
+
+    ```
+
+    ```csharp
+
+    //co
+
+    Contract.OldValue(x)
+
+    ```
+
+    ```
+
+
+    *Code Listing 31: Contract.OldValue Snippet*
+
+
+    ```
+
+    ```csharp
+
+    //cim
+
+    [ContractInvariantMethod]
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "```\n```csharp\n[System.Diagnostics.CodeAnalysis.SuppressMessage(\n    \"Microsoft.Performance\"\
+    , \"CA1822:MarkMembersAsStatic\",\n    Justification = \"Required for code contracts.\"\
+    )]\nprivate void ObjectInvariant()\n{\n    Contract.Invariant(false);\n}\n```\n\
+    ```\n\n*Code Listing 32: Contract.Invariant Method Snippet*\n\n```\n```csharp\n\
+    //crn\nContract.Requires(arg != null);\n```\n```\n\n*Code Listing 33: Contract.Requires\
+    \ Not Null Snippet*\n\n```\n```csharp\n//cen\nContract.Ensures(Contract.Result<string>()\
+    \ != null);\n```\n```\n\n*Code Listing 34: Contract.Ensures Contract.Result Snippet*\n\
+    \n```\n```csharp\n//crsn\nContract.Requires(!String.IsNullOrEmpty(arg));\n```\n\
+    ```\n\n*Code Listing 35: Contract.Requires String with Value Snippet*\n\n```\n\
+    ```csharp\n//cesn\nContract.Ensures(!String.IsNullOrEmpty(Contract.Result<string>()));\n\
+    ```\n```\n\n*Code Listing 36: Contract.Ensures Contract Result with String Value\
+    \ Snippet*\n\n```\n```csharp\n//cca\nContract.Assert(false);\n```\n```\n\n*Code\
+    \ Listing 37: Contract.Assert Snippet*\n\n```\n```csharp\n//cam\nContract.Assume(false);\n\
+    ```\n```\n\n*Code Listing 38: Contract.Assume Snippet*\n\n```\n```csharp\n//cre\n\
+    Contract.Requires<ArgumentException>(false);\n```\n```\n\n*Code Listing 39: Contract.Requires\
+    \ with ArgumentException Snippet*"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '```
+
+    ```csharp
+
+    //cren
+
+    Contract.Requires<ArgumentNullException>(arg != null, "arg");
+
+    ```
+
+    ```
+
+
+    Code Listing 40: Contract Requires Argument Not Null Snippet
+
+
+    ```
+
+    ```csharp
+
+    //cresn
+
+    Contract.Requires<ArgumentException>(!String.IsNullOrEmpty(arg));
+
+    ```
+
+    ```
+
+
+    Code Listing 41: Contract.Requires String Parameter with Value
+
+
+    ```
+
+    ```csharp
+
+    //cintf
+
+    #region IFoo contract binding
+
+    [ContractClass(typeof(IFooContract))]
+
+    public partial interface IFoo
+
+    {
+
+
+    }
+
+
+
+    [ContractClassFor(typeof(IFoo))]
+
+    abstract class IFooContract : IFoo
+
+    {
+
+    }
+
+    #endregion
+
+    ```
+
+    ```
+
+
+    Code Listing 42: Interface Template and Associated Contract Class Snippet
+
+
+    # Extending code snippets
+
+
+    This next section is not, strictly speaking, exclusive to Code Contracts, but
+    I would be remiss if I didn''t mention the ability you have to extend your code
+    snippets. I have always found that extending code snippets is a bit of a hassle.
+    Luckily for developers, there are some really generous community members out there
+    that create excellent extensions for Visual Studio. Snippet Designer is one such
+    extension.
+
+
+    Before you can use it, you will need to install Snippet Designer from the **Extensions
+    and Updates** under the **Tools** menu.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_42_0.png)
+
+
+    *Figure 27: Visual Studio Extensions and Updates Menu Item*
+
+
+    Once you have installed Snippet Designer, it will appear under your installed
+    extensions.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_42_1.png)
+
+
+    *Figure 28: Snippet Designer Extension*'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "At its most basic, Snippet Designer gives you the ability to generate code\
+    \ snippets on the fly. Regarding Code Contracts, there are a set few that I always\
+    \ want to include within my methods. I want to be able to chain them together\
+    \ under a single code snippet, and for this, Snippet Designer is very well suited.\n\
+    \nHighlight the Code Contracts you want to create a snippet of, open the context\
+    \ menu, and click Export as Snippet.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_43_0.png)\n\
+    \nFigure 29: Export as Snippet\n\nThe Snippet Designer window is now displayed\
+    \ in a new tab within the Visual Studio 2015 IDE.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_43_1.png)\n\
+    \nFigure 30: Snippet Designer Editor\n\n```\npublic int MethodToRun(int param)\n\
+    {\n    Contract.Requires(param > 0, \"\");\n    Contract...\n    return\n}\n```\n\
+    \n```\nContract.Requires(param > 0, \"\");\nContract.Ensures(Contract.Result<int>()\
+    \ >= 0, \"\");\n```"
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'Please note that the pink highlight is not a feature of Snippet Designer; it’s
+    another great extension called Heat Margin. This, however, is beyond the scope
+    of this book.
+
+
+    In the Snippet Designer window, you can see the code you highlighted in the editor
+    window.
+
+
+    Select the section of code that you want replaced at the time of generation. Then,
+    right-click and select **Make Replacement** from the context menu.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_44_0.png)
+
+
+    *Figure 31: Make Replacement*
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_44_1.png)
+
+
+    *Figure 32: Completed New Snippet*'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: "You will see that the parameter is replaced by a placeholder and the properties\
+    \ of that placeholder are defined in the Replacements grid. All that is left to\
+    \ do is give the shortcut a name (I called mine **ccre** for “Code Contract Requires\
+    \ Ensures”) and save your code snippet.\n\nIn the code editor of Visual Studio,\
+    \ type the **ccre** shortcut and press the Tab key twice. My code snippet is inserted\
+    \ for me with the parameter identified as a replacement highlighted so that I\
+    \ can edit it immediately.\n\n```\n```csharp\n@references\npublic int MethodToRun(int\
+    \ parameter)\n{\n    Contract.Requires(param > 0, \"\");\n    Contract.Ensures(Contract.Result<int>()\
+    \ >= 0, \"\");\n\n    return parameter;\n}\n```\n```\n\n*Figure 33: Code Snippet\
+    \ Inserted*\n\nThis is an extremely easy tool to use, and I have not even begun\
+    \ to explore the possibilities it provides developers. My focus here is simply\
+    \ to illustrate that code snippets can be extremely useful to developers and can\
+    \ be extended to suit your specific needs during development.\n\n# Code Contract\
+    \ documentation generation\n\nOne thing that I am sure most (if not all) developers\
+    \ dislike is creating documentation. It has become somewhat of the elephant in\
+    \ the room in many project meetings. Everybody knows that documentation is essential,\
+    \ and I am sure that there are a lot of developers out there that do create concise\
+    \ and rich documentation. This has obviously led to many tools and extensions\
+    \ that aim to make this process easier.\n\nIt therefore makes sense that Code\
+    \ Contracts can also integrate documentation of the included contracts. To enable\
+    \ the documentation generation, you need to open the **Build** tab of your project\
+    \ properties."
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_46_0.png)
+
+
+    Figure 34: Enable XML Documentation File
+
+
+    Here, you need to select the XML documentation file option. If you don''t enable
+    this option, the documentation XML file will not be created. Here you can also
+    specify an output path and a name for the documentation file.
+
+
+    The next option you need to modify is in the Code Contracts tab. If you scroll
+    to the bottom of the Code Contracts tab, you will see that the Contract Reference
+    Assembly value is not specified. Change this to Build.
+
+
+    Lastly, you must ensure that the Emit contracts into XML doc file option is selected.
+    This will make the Code Contract comments part of the generated documentation
+    file.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_46_1.png)
+
+
+    Figure 35: Enable Code Contracts Documentation'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "You then need to ensure that you have added good comments to your code. It's\
+    \ a habit you need to get into as soon as you create a new method or line of code\
+    \ where the logic isn't obvious. On the flip side, having too many comments in\
+    \ your code is also not a good idea. So when should you comment, and when should\
+    \ you not? A good rule of thumb is to only comment code when the logic behind\
+    \ the code isn't obvious.\n\nIn the following code listings, the logic is obvious\
+    \ in the first one (Code Listing 43), so commenting is not actually needed. In\
+    \ Code Listing 44, however, the use of the modulus operator should be explained\
+    \ in a comment because the reason for doing this isn't obvious.\n\n```\n```csharp\n\
+    //Bad comment: Calculate the available quantity\nint QtyAvailable = MaxBinQuantity\
+    \ - CurrentBinQuantity;\n```\n```\n\n*Code Listing 43: Unnecessary Code Comment*\n\
+    \n```\n```csharp\n//Good comment: Use modulus to determine if the factor produces\
+    \ any scrap\nreturn volumeToCut % factor;\n```\n```\n\n*Code Listing 44: Comment\
+    \ Clearly Explains Logic*\n\nA well-commented method might look as follows.\n\n\
+    ```\n```csharp\n/// <summary>\n/// Calculate any remainder after the modulus operation\
+    \ between volume\nand factor\n/// </summary>\n/// <param name=\"volumeToCut\"\
+    ></param>\n/// <param name=\"factor\"></param>\n/// <returns>Remainder after cutting</returns>\n\
+    private int CutSteel(int volumeToCut, int factor)\n{\n    // Use modulus to determine\
+    \ if the factor produces any scrap\n    return volumeToCut % factor;\n}\n```\n\
+    ```\n\n*Code Listing 45: Well-Commented Method*\n\nAfter adding relevant comments,\
+    \ you need to build your solution. You need to be aware of any warnings you might\
+    \ receive during your build when the documentation file is being generated. These\
+    \ will usually be related to missing XML comments in your source code. It's a\
+    \ good idea to go ahead and fix these by adding clear and relevant code comments\
+    \ to your methods and properties.\n\nAfter the build has completed, your XML document\
+    \ will be found in the path you specified when you configured your build settings.\
+    \ In this example, the XML document generated includes the Code Contract descriptions."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "```\n```xml\n<?xml version=\"1.0\"?>\n<doc>\n    <assembly>\n        <name>CodeContractsDemo</name>\n\
+    \    </assembly>\n    <members>\n        <member name=\"T:ERPWarehouseIntegration\"\
+    >\n            <summary>\n                ERP Warehouse Integration class to manage\
+    \ the cutting of steel volume and available bin quantities\n            </summary>\n\
+    \        </member>\n        <member name=\"P:ERPWarehouseIntegration.MaxBinQuantity\"\
+    >\n            <summary>\n                The maximum bin quantity for bins\n\
+    \            </summary>\n        </member>\n        <member name=\"P:ERPWarehouseIntegration.CurrentBinQuantity\"\
+    >\n            <summary>\n                The current bin quantity available\n\
+    \            </summary>\n        </member>\n        <member name=\"M:ERPWarehouseIntegration.ProductionVolumePerBin(System.Int32,System.Int32)\"\
+    >\n            <summary>\n                Calculate the production volume of steel\
+    \ per bin\n            </summary>\n            <param name=\"binVolume\" />\n\
+    \            <param name=\"factor\" />\n            <returns>Bin Volume less Remainder</returns>\n\
+    \            <ensures description=\"The factor used will result in scrap. Please\
+    \ modify the cutting factor.\" csharp=\"result == binVolume\" vb=\"result = binVolume\"\
+    >result == binVolume</ensures>\n        </member>\n        <member name=\"M:ERPWarehouseIntegration.CutSteel(System.Int32,System.Int32)\"\
+    >\n            <summary>\n                Calculate any remainder after the modulus\
+    \ operation between volume and factor\n            </summary>\n            <param\
+    \ name=\"volumeToCut\" />\n            <param name=\"factor\" />\n           \
+    \ <returns>Remainder after cutting</returns>\n        </member>\n        <member\
+    \ name=\"M:ERPWarehouseIntegration.BinQtyAvailable\">\n            <summary>\n\
+    \                Ensure that a non-negative value is returned for available bin\
+    \ quantity\n            </summary>\n        </member>\n    </members>\n</doc>\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '```
+
+    </summary>
+
+    <returns>Available bin quantity</returns>
+
+    <ensures csharp="result &gt;= 0" vb="result &gt;= 0">result &gt;= 0</ensures>
+
+    </member>
+
+    <member name="M:ERPWarehouseIntegration.EnsureAllBinsFilled(System.Int32@,System.Int32,System.Int32)">
+
+    <summary>
+
+    Ensure that all bins are filled and that the steel volume does not exceed the
+    maximum bin volume
+
+    </summary>
+
+    <param name="binOverCount" />
+
+    <param name="binVol" />
+
+    <param name="steelVol" />
+
+    <ensures description="The steel volume exceeds the bin volume" csharp="binOverCount
+    == 0" vb="binOverCount = 0">binOverCount == 0</ensures>
+
+    </member>
+
+    </members>
+
+    </doc>
+
+    ```
+
+
+    Code Listing 46: Generated XML Document File
+
+
+    We have easily generated concise XML documentation for our code without any heavy
+    lifting. If you comment your code regularly, your generated documentation will
+    be up-to-date and a true reflection of the state of your code.
+
+
+    # Creating user-friendly documents
+
+
+    The generated XML file is great, but it needs another step to create well-formatted,
+    human-readable, HTML-type documentation. For this task, I will use Sandcastle
+    Help File Builder, which you can download from GitHub at github.com/EWSoftware/SHFB.
+    During the guided installation, make a point of reading through each screen''s
+    instructions and notes, as these contain important information you need to be
+    aware of.
+
+
+    I would suggest reading more tutorials on using Sandcastle Help File Builder.
+    The tool has so much to offer that one needs to really get under the hood of this
+    excellent tool. For the purposes of this book, however, I will not go into any
+    further detail other than showing you how to create a basic .chm help file.
+
+
+    Before you use Sandcastle Help File Builder, you have to ensure that your project
+    has a namespace. Otherwise, you will see the following error displayed on the
+    help file build.'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "![](img/0a07386735fd4e6427d20aa9bc165f5d_50_0.png)\n\n*Figure 36: Build Output\
+    \ Error*\n\n```\nSHFB: Error BE0033: No APIs found to document. See error topic\
+    \ in\nhelp file for details.\n    at SandcastleBuilder.Utils.BuildEngine.BuildProcess.Build()\n\
+    ```\n\n*Code Listing 47: Sandcastle Help File Builder Error*\n\nI simply added\
+    \ a namespace to my class, as illustrated in Code Listing 48.\n\n```\nnamespace\
+    \ CodeContractsDemoProject\n{\n    /// <summary>\n    /// ERP Warehouse Integration\
+    \ class to manage the cutting of steel\n    /// volume and available bin quantities\n\
+    \    /// </summary>\n    public class ERPWarehouseIntegration\n    {\n```\n\n\
+    *Code Listing 48: Namespace Added to Class*"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: 'Once you have done that, open **Sandcastle Help File Builder** if it''s not
+    already open. In the **Project Explorer**, right-click the **Documentation Sources**
+    node and add the .dll or .exe where your project built to (usually your bin folder).
+    I opted to have my XML document output to my bin folder.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_51_0.png)
+
+
+    *Figure 37: Project Bin Folder*
+
+
+    Once I have selected the .exe file, the XML documentation file is also automatically
+    picked up and added as a documentation source by Sandcastle Help File Builder.
+    The added files will be displayed in the **Project Explorer** under the **Documentation
+    Sources** node.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_51_1.png)
+
+
+    *Figure 38: Documentation Sources and Summary*'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'There are various other sections in the **Project Properties** tab that you
+    can modify and set. One that''s important to remember to configure is the **Summaries**
+    section. You need to ensure that you have added a namespace summary comment in
+    the **Summaries** page of the **Project Properties** tab. Click the **Edit Namespace
+    Summaries** button to open the **Namespace Summaries** window.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_52_0.png)
+
+
+    *Figure 39: Namespace Summaries Window*
+
+
+    Select the namespace you want to add a summary for and enter the summary description
+    in the **Edit the summary for the selected namespace** text box. When you are
+    done, click the **Close** button and save your project.
+
+
+    You are now ready to build your Sandcastle Help File Builder project, which will
+    produce the help files as specified by you.
+
+
+    Types of help file formats supported:
+
+
+    +   - HTML Help 1 (chm)
+
+    +   - MS Help Viewer (mshc)
+
+    +   - Open XML (docx)
+
+    +   - Markdown (md)
+
+    +   - Website (HTML/ASP.NET)'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_53_0.png)
+
+
+    Figure 40: Sandcastle Help File Builder Successful Build
+
+
+    When the build has completed, navigate to the output directory for the generated
+    help file. Mine defaulted to the path Documents\Sandcastle\Help.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_53_1.png)
+
+
+    Figure 41: Help File Output Path'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: 'Opening the generated help file, you will see that the compilation took the
+    namespace summary added in the **Summaries** section earlier and added it as the
+    summary text for the generated help file.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_54_0.png)
+
+
+    *Figure 42: Generated Help File*
+
+
+    Creating documentation from your code contract comments is really easy once you
+    know how to do it. With superb tools such as **Sandcastle Help File Builder**
+    and the tight integration Code Contracts offer with the output of comments into
+    your generated XML file, developers have everything they need to create rich documentation
+    for their projects.
+
+
+    # ## Abstract classes and interfaces
+
+
+    Creating Code Contracts for abstract classes and interfaces needs to be approached
+    slightly differently, as you might expect. This is because abstract classes and
+    interfaces cannot contain method bodies. Many developers still wonder what the
+    difference is between abstract classes and interfaces. One of the best explanations
+    I have heard to distinguish when to use an abstract class and when to use an interface
+    is the following.
+
+
+    # ### Abstract Class
+
+
+    If you have many classes that can be grouped together and described by a single
+    noun, you are most likely dealing with an abstract class. The abstract class is
+    then named as this noun. Another very important thing to take into consideration
+    is that these inherited classes share some sort of functionality, and that you
+    would never create an instance of the noun (abstract class).'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "Think about the following example, where you have an abstract class of type\
+    \ Human. You will never instantiate just a Human, but rather a kind of Human,\
+    \ such as a Female or Male. Therefore, Male and Female both inherit from the abstract\
+    \ class Human. The abstract class will then implement a method void Sleep(), which\
+    \ all humans must do (shared functionality).\n\nTo implement Code Contracts on\
+    \ abstract classes, you need to create a separate ContractClass class and associate\
+    \ the contract class with the abstract class via the use of attributes.\n\n```\n\
+    using System.Diagnostics.Contracts;\n\n/// <summary>\n/// Human Abstract Class\n\
+    /// </summary>\n[ContractClass(typeof(HumanContract))]\npublic abstract class\
+    \ Human\n{\n    public abstract void Run(int distance);\n    public abstract void\
+    \ Sleep(int hours);\n}\n\n/// <summary>\n/// Human Contract Class\n/// </summary>\n\
+    [ContractClassFor(typeof(Human))]\npublic abstract class HumanContract : Human\n\
+    {\n    public override void Sleep(int hours)\n    {\n        Contract.Requires(hours\
+    \ >= 8,\n            \"You need more than 8 hours of sleep each night.\");\n \
+    \   }\n}\n```\n\nCode Listing 49: Abstract Class and Contract Class\n\nThe abstract\
+    \ class Human uses the attribute [ContractClass(typeof(HumanContract))] and the\
+    \ contract class HumanContract uses the attribute [ContractClassFor(typeof(Human))].\n\
+    \nThe abstract class Human basically specifies that all humans will sleep and\
+    \ run. In the contract for the Sleep() method (defined in HumanContract), we are\
+    \ defining that all humans must sleep for a minimum of eight hours every night.\n\
+    \nLet's create a Male class that inherits from our Human abstract class.\n\n```\n\
+    public class Male : Human\n{\n    public override void Run(int distance)\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\n{\n    Console.Write(\"The distance run was \" + distance);\n    Console.ReadLine();\n\
+    }\npublic override void Sleep(int hours)\n{\n    Console.Write(\"The hours slept\
+    \ were \" + hours);\n    Console.ReadLine();\n}\n```\n\n*Code Listing 50: Male\
+    \ Class Inheriting From Human*\n\nFrom the Male class we can see that it contains\
+    \ no Code Contracts at all. All it does is inherit from the Human abstract class.\n\
+    \n```\nnamespace CodeContractsDemo\n{\n    class Program\n    {\n        static\
+    \ void Main(string[] args)\n        {\n            try\n            {\n      \
+    \          Male oMan = new Male();\n                oMan.Sleep(5);\n         \
+    \   }\n            catch (Exception ex)\n            {\n                Console.Write(ex.Message);\n\
+    \                Console.ReadLine();\n            }\n        }\n    }\n}\n```\n\
+    \n*Code Listing 51: Instantiation of Male Class with Five Hours of Sleep*\n\n\
+    If we had to instantiate the Male class and call the Sleep method with five hours,\
+    \ our Code Contract would kick in and tell us that humans need eight hours of\
+    \ sleep each night."
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "![](img/0a07386735fd4e6427d20aa9bc165f5d_57_0.png)\n\n*Figure 43: Male Class\
+    \ Sleep Method Contract Violated*\n\nModifying our calling code to specify a nice\
+    \ Saturday morning snooze of nine hours, paints a different picture.\n\n```\n\
+    namespace CodeContractsDemo\n{\n    class Program\n    {\n        static void\
+    \ Main(string[] args)\n        {\n            try\n            {\n           \
+    \     Male oMan = new Male();\n                oMan.Sleep(9);\n            }\n\
+    \            catch (Exception ex)\n            {\n                Console.Write(ex.Message);\n\
+    \                Console.ReadLine();\n            }\n        }\n    }\n}\n```\n\
+    \n*Code Listing 52: Instantiation of Male Class with Nine Hours of Sleep*\n\n\
+    The Code Contract is validated and the Sleep() method passes validation.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_57_1.png)\n\
+    \n*Figure 44: Male Class Sleep Method Contract Passed*\n\nCode Contracts and abstract\
+    \ classes work together beautifully to create a truly stable and robust code base\
+    \ for a team of developers."
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# Interfaces\n\nLet's use the previous example of **Male** and **Female** classes.\
+    \ Fast forward 20 years from now, and we discover aliens on Mars. They are surprisingly\
+    \ similar to us, making them human, but they are neither male nor female. We now\
+    \ have a new type, **Alien**, which inherits from the abstract class **Human**.\n\
+    \nNow think of interfaces as verbs. Which verb can be applied to my classes in\
+    \ general? All humans need to learn new things and can be taught, so now we can\
+    \ create an interface called **ITeachable**. We will implement the **ITeachable**\
+    \ interface on the **Human** abstract class, because all humans are teachable.\
+    \ The aliens, however, are slightly more advanced than **Male** or **Female**,\
+    \ and can rearrange their molecules into different structures, making aliens able\
+    \ to shape-shift. Therefore, we can create an interface called **IShapeShiftable**,\
+    \ which only applies to **Alien**.\n\nCreating the interface is much like the\
+    \ abstract class. It also needs to contain a contract class, and the interface\
+    \ and contract class both need to point to each other via their attributes.\n\n\
+    ```\n```csharp\nusing System.Diagnostics.Contracts;\n\n[ContractClass(typeof(IShapeShiftableContract))]\n\
+    public interface IShapeShiftable\n{\n    void Man(int shapeDuration);\n    void\
+    \ Woman(int shapeDuration);\n    void InanimateObject(int shapeDuration);\n}\n\
+    \n[ContractClassFor(typeof(IShapeShiftable))]\nabstract class IShapeShiftableContract\
+    \ : IShapeShiftable\n{\n    void IShapeShiftable.InanimateObject(int shapeDuration)\n\
+    \    {\n        Contract.Requires(shapeDuration <= 12);\n    }\n\n    void IShapeShiftable.Man(int\
+    \ shapeDuration)\n    {\n        Contract.Requires(shapeDuration <= 4);\n    }\n\
+    \n    void IShapeShiftable.Woman(int shapeDuration)\n    {\n        Contract.Requires(shapeDuration\
+    \ <= 4);\n    }\n}\n```\n```\n\nCode Listing 53: Interface Implementing Code Contract\
+    \ Class"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "We can now create contracts for the interface via the contract class **IShapeShiftableContract**,\
+    \ exactly like we did earlier for abstract classes.\n\n# ## Abstract classes versus\
+    \ interface\n\nTo conclude the examples of abstract classes and interfaces, it\
+    \ all boils down to where you want your implementation. If you want to share implementation\
+    \ among all derived classes, you will be creating an abstract class. If you need\
+    \ your implementation specific to a single class or several classes, but not all\
+    \ classes, use an interface.\n\nCode Contracts easily cater to both.\n\n# ## Method\
+    \ purity\n\nA book on Code Contracts would not be complete without mentioning\
+    \ purity. When referring to Code Contracts, what exactly does method purity mean?\
+    \ Well, Code Contracts have an attribute called **[Pure]** that you can decorate\
+    \ methods with. This is basically an expression of the quality of the method,\
+    \ and that the method can’t change the state of any objects seen by callers. In\
+    \ other words, pure methods are only allowed to change objects created after the\
+    \ method has been entered.\n\nCode Contracts require all methods called inside\
+    \ a contract to be pure. The reasons for this are simply:\n\n+   - To avoid side\
+    \ effects in methods used in preconditions and postconditions.\n+   - To make\
+    \ the task of the static checker easier because it can assume object states will\
+    \ be the same after the method is called.\n+   - To improve design by specifically\
+    \ clarifying your intent that the method will not alter the state of objects after\
+    \ the method call has ended.\n\nTo illustrate the effect that a non-pure method\
+    \ has on the static checker, consider the following code listing.\n\n```\n```csharp\n\
+    public class DemoPurity\n{\n    /// <summary>\n    /// Property for cutting factor\n\
+    \    /// </summary>\n    public int CutFactor { get; private set; }\n\n    ///\
+    \ <summary>\n    /// Public Constructor\n    /// </summary>\n    /// <param name=\"\
+    cutFactor\"></param>\n    public DemoPurity(int cutFactor)\n    {\n        CutFactor\
+    \ = cutFactor;\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "```\n```\n}\n\n/// <summary>\n/// Calculate the volume cut\n/// </summary>\n\
+    /// <param name=\"volumeSteel\"></param>\n/// <param name=\"factorModifier\"></param>\n\
+    /// <returns></returns>\npublic int VolumeCut(int volumeSteel, int factorModifier)\n\
+    {\n    Contract.Requires(CalculatedCutFactor(factorModifier) >= 0);\n\n    return\
+    \ volumeSteel / (CutFactor * factorModifier);\n}\n\n/// <summary>\n/// This is\
+    \ not a pure method\n/// </summary>\n/// <param name=\"factorModifier\"></param>\n\
+    /// <returns></returns>\npublic int CalculatedCutFactor(int factorModifier)\n\
+    {\n    CutFactor = CutFactor * factorModifier;\n    return CutFactor;\n}\n```\n\
+    ```\n\n*Code Listing 54: Method Failing Purity*\n\nThe property **CutFactor**\
+    \ is specified in the constructor for **DemoPurity**. The method **VolumeCut**\
+    \ includes a required contract on the **CalculatedCutFactor** method. As you can\
+    \ see, the **CalculatedCutFactor** method is definitely not pure because it modifies\
+    \ the **CutFactor** property. It is also sloppy code. The static checker will\
+    \ fail on the build because the method is not pure.\n\n```\n```\n1>------ Rebuild\
+    \ All started: Project: CodeContractsDemo, Configuration:\nDebug Any CPU ------\n\
+    1>C:\\z\\[]sc 2015\\Code Contracts\\CodeContractsDemo\\ERPIntegration.cs(197,9):\
+    \ warning CC1036: Detected call to method 'DemoPurity.CalculatedCutFactor(System.Int32)'\
+    \ without [Pure] in contracts of method 'DemoPurity.VolumeCut(System.Int32,System.Int32)'.\n\
+    CodeContracts: CodeContractsDemo: Run static contract analysis.\nC:\\z\\[]sc 2015\\\
+    Code Contracts\\CodeContractsDemo\\ERPIntegration.cs(197,9): warning CC1036: Code\
+    \ Contracts: Detected call to method 'DemoPurity.CalculatedCutFactor(System.Int32)'\
+    \ without [Pure] in contracts of method 'DemoPurity.VolumeCut(System.Int32,System.Int32)'.\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "```\n14.0\\Common7\\IDE\\CodeContractsDemo.exe(1,1): message : CodeContracts:\n\
+    Checked 15 assertions: 13 correct (2 masked)\nCodeContracts: CodeContractsDemo:\n\
+    CodeContracts: CodeContractsDemo: Static contract analysis done.\n======== Rebuild\
+    \ All: 0 succeeded, 1 failed, 0 skipped ========\n```\n\n# Code Listing 55: Shortened\
+    \ Output Results\n\nI have removed all the extra lines not relevant to this discussion\
+    \ on purity from the output text. You can see that the static checker is not happy\
+    \ with the CalculatedCutFactor not being pure. We can obviously go ahead and just\
+    \ add the [Pure] attribute to the CalculatedCutFactor method, but that would not\
+    \ be good programming practice. If we did this, it would result in a successful\
+    \ build because we have basically told the static checker that our method CalculatedCutFactor\
+    \ is pure. If we therefore modified our code, as shown in Code Listing 56, the\
+    \ static checker would assume that the method is pure.\n\n```\npublic class DemoPurity\n\
+    {\n    /// <summary>\n    /// Property for cutting factor\n    /// </summary>\n\
+    \    public int CutFactor { get; private set; }\n\n    /// <summary>\n    ///\
+    \ Public constructor\n    /// </summary>\n    /// <param name=\"cutFactor\"></param>\n\
+    \    public DemoPurity(int cutFactor)\n    {\n        CutFactor = cutFactor;\n\
+    \    }\n\n    /// <summary>\n    /// Calculate the volume cut\n    /// </summary>\n\
+    \    /// <param name=\"volumeSteel\"></param>\n    /// <param name=\"factorModifier\"\
+    ></param>\n    /// <returns></returns>\n    public int VolumeCut(int volumeSteel,\
+    \ int factorModifier)\n    {\n        Contract.Requires(CalculatedCutFactor(factorModifier)\
+    \ >= 0);\n\n        return volumeSteel / (CutFactor * factorModifier);\n    }\n\
+    \n    /// <summary>\n    /// This is still not a pure method\n    /// </summary>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "```\n/// <param name=\"factorModifier\"></param>\n/// <returns></returns>\n\
+    [Pure]\npublic int CalculatedCutFactor(int factorModifier)\n{\n    CutFactor =\
+    \ CutFactor * factorModifier;\n    return CutFactor;\n}\n}\n```\n\nCode Listing\
+    \ 56: Add Pure Attribute to Method\n\nIf we had to build our project, the resulting\
+    \ output would indicate a successful build.\n\n```\n1>------ Rebuild All started:\
+    \ Project: CodeContractsDemo, Configuration:\nDebug Any CPU ------\n1>  elapsed\
+    \ time: 886,9984ms\n1>  elapsed time: 177,9426ms\n1>  elapsed time: 1120,0034ms\n\
+    CodeContracts: CodeContractsDemo: Run static contract analysis.\n1>  CodeContractsDemo\
+    \ -> C:\\z\\[]sc 2015\\Code\nContracts\\CodeContractsDemo\\bin\\Debug\\CodeContractsDemo.exe\n\
+    CodeContracts: CodeContractsDemo: Validated: 100,0%\nCodeContracts: CodeContractsDemo:\
+    \ Checked 15 assertions: 13 correct (2 masked)\nCodeContracts: CodeContractsDemo:\
+    \ Contract density: 0,98\nCodeContracts: CodeContractsDemo: Total methods analyzed\
+    \ 6\nCodeContracts: CodeContractsDemo: Methods analyzed with a faster abstract\
+    \ domain 0\nCodeContracts: CodeContractsDemo: Methods with 0 warnings 5\nCodeContracts:\
+    \ CodeContractsDemo: Time spent in internal, potentially costly, operations\n\
+    CodeContracts: CodeContractsDemo: Overall time spent performing action #KarrPutIntoRowEchelonForm:\
+    \ 00:00:00.0140007 (invoked 784 times)\nOverall time spent performing action #KarrIsBottom:\
+    \ 00:00:00.0120029 (invoked 1515 times)\nOverall time spent performing action\
+    \ #WP: 00:00:00.2000032 (invoked 5 times)\nOverall time spent performing action\
+    \ #CheckIfEqual: 00:00:00.0080005 (invoked 29 times)\nOverall time spent performing\
+    \ action #ArraysAssignInParallel: 00:00:00.1430061 (invoked 1 times)\nOverall\
+    \ time spent performing action #Simplex: 00:00:00.0810009 (invoked 19 times)\n\
+    CodeContracts: CodeContractsDemo: Total time 7,821sec. 1303ms/method\nCodeContracts:\
+    \ CodeContractsDemo: Generated 2 callee assume(s)\nCodeContracts: CodeContractsDemo:\
+    \ Retained 0 preconditions after filtering\n```"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "```\n```\nCodeContracts: CodeContractsDemo: Inferred 0 object invariants\n\
+    CodeContracts: CodeContractsDemo: Retained 0 object invariants after filtering\n\
+    CodeContracts: CodeContractsDemo: Discovered 3 postconditions to suggest\nCodeContracts:\
+    \ CodeContractsDemo: Retained 1 postconditions after filtering\nCodeContracts:\
+    \ CodeContractsDemo: Detected 1 code fixes\nCodeContracts: CodeContractsDemo:\
+    \ Proof obligations with a code fix: 3\nC:\\\\Program Files (x86)\\\\Microsoft\
+    \ Visual Studio 14.0\\\\Common7\\\\IDE\\\\CodeContractsDemo.exe(1,1): message\
+    \ : CodeContracts:\nChecked 15 assertions: 13 correct (2 masked)\nCodeContracts:\
+    \ CodeContractsDemo:\nCodeContracts: CodeContractsDemo: Static contract analysis\
+    \ done.\n========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========\n\
+    ```\n```\n\n*Code Listing 57: Successful Build*\n\nThe problem here is that simply\
+    \ adding the [Pure] attribute to the CalculatedCutFactor method does not make\
+    \ it pure. This is the point I am trying to make with this section on method purity.\
+    \ We need to ensure that methods called inside a contract are pure because they\
+    \ are so by design, not because we have decorated them with the [Pure] attribute.\
+    \ Let's have a look at our CalculatedCutFactor method again and modify it slightly\
+    \ so that we are not violating the rules specified for method purity.\n\n```\n\
+    ```csharp\npublic class DemoPurity\n{\n    /// <summary>\n    /// Property for\
+    \ cutting factor\n    /// </summary>\n    public int CutFactor { get; private\
+    \ set; }\n\n    /// <summary>\n    /// Public Constructor\n    /// </summary>\n\
+    \    /// <param name=\"cutFactor\"></param>\n    public DemoPurity(int cutFactor)\n\
+    \    {\n        CutFactor = cutFactor;\n    }\n\n    /// <summary>\n    /// Calculate\
+    \ the volume cut\n    /// </summary>\n    /// <param name=\"volumeSteel\"></param>\n\
+    \    /// <param name=\"factorModifier\"></param>\n    /// <returns></returns>\n\
+    \    public int VolumeCut(int volumeSteel, int factorModifier)\n    {\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "```\nContract.Requires(CalculatedCutFactor(factorModifier) >= 0);\n    return\
+    \ volumeSteel / (CutFactor * factorModifier);\n}\n\n/// <summary>\n/// This is\
+    \ a pure method\n/// </summary>\n/// <param name=\"factorModifier\"></param>\n\
+    /// <returns></returns>\n[Pure]\npublic int CalculatedCutFactor(int factorModifier)\n\
+    {\n    return CutFactor * factorModifier;\n}\n}\n```\n\nCode Listing 58: Pure\
+    \ Method Marked as Pure\n\nThe CalculatedCutFactor method is now a pure method\
+    \ because it does not change the values of CutFactor or factorModifier. It can\
+    \ now suitably be decorated with the [Pure] attribute. Our Contract.Requires in\
+    \ the VolumeCut method can now use this pure method to check that the result of\
+    \ CalculatedCutFactor will not be zero, because this would result in a divide\
+    \ by zero exception on the return.\n\nMethod purity is a really good practice\
+    \ to follow, not only when using Code Contracts, but in every method you write.\n\
+    \n# Contract abbreviator methods\n\nI am sure that those of you who use Code Contracts\
+    \ on a regular basis have run into the issue of repeating similar sets of Code\
+    \ Contracts across multiple methods. Code Contracts have a solution for this,\
+    \ and they are called abbreviator methods. The concept is really simple. You can\
+    \ see that the code in Code Listing 59 contains repeated sets of Code Contracts.\n\
+    \n```\npublic class AbbreviatorDemo\n{\n    /// <summary>\n    /// The factor\
+    \ for the cutting volume\n    /// </summary>\n    public int Factor { get; private\
+    \ set; }\n    /// <summary>\n    /// The maximum volume a bin can contain\n  \
+    \  /// </summary>\n    public int MaxVolume { get; private set; }\n\n    /// <summary>\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: "```\n```csharp\n    /// Fill the bin with the volume of steel\n    /// </summary>\n\
+    \    /// <param name=\"steelVolume\"></param>\n    public void FillBin(int steelVolume)\n\
+    \    {\n        Contract.Requires(steelVolume > 0);\n        Contract.Ensures(steelVolume\
+    \ <= this.MaxVolume);\n    }\n\n    /// <summary>\n    /// Empty the bin of all\
+    \ steel contained\n    /// </summary>\n    /// <param name=\"steelVolume\"></param>\n\
+    \    /// <returns></returns>\n    public bool PurgeBin(int steelVolume)\n    {\n\
+    \        Contract.Requires(steelVolume > 0);\n        Contract.Ensures(steelVolume\
+    \ <= this.MaxVolume);\n        Contract.Ensures(Contract.Result<bool>() == true);\n\
+    \n        // Purge bin and return successful result\n        return true;\n  \
+    \  }\n\n    /// <summary>\n    /// Perform a partial bin fill\n    /// </summary>\n\
+    \    /// <param name=\"steelVolume\"></param>\n    /// <returns></returns>\n \
+    \   public bool FillBinPartially(int steelVolume)\n    {\n        Contract.Requires(steelVolume\
+    \ > 0);\n        Contract.Ensures(steelVolume < this.MaxVolume);\n        Contract.Ensures(Contract.Result<bool>()\
+    \ == true);\n\n        return true;\n    }\n}\n```\n```\n\n*Code Listing 59: Repeated\
+    \ Contracts*\n\nWe can now make use of **Abbreviator** methods to simplify the\
+    \ code and reference them in multiple methods. Using **Abbreviator** methods,\
+    \ the code can be refactored as follows.\n\n```\n```csharp\n    public class AbbreviatorDemo\n\
+    \    {\n        /// <summary>\n        /// The factor for the cutting volume\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: "```\n```csharp\n/// </summary>\npublic int Factor { get; private set; }\n///\
+    \ <summary>\n/// The maximum volume a bin can contain\n/// </summary>\npublic\
+    \ int MaxVolume { get; private set; }\n\n/// <summary>\n/// Fill the bin with\
+    \ the volume of steel\n/// </summary>\n/// <param name=\"steelVolume\"></param>\n\
+    public void FillBin(int steelVolume)\n{\n    ValidSteelAndMaxVolume(steelVolume);\n\
+    }\n\n/// <summary>\n/// Empty the bin of all steel contained\n/// </summary>\n\
+    /// <param name=\"steelVolume\"></param>\n/// <returns></returns>\npublic bool\
+    \ PurgeBin(int steelVolume)\n{\n    ValidSteelAndMaxVolume(steelVolume);\n   \
+    \ EnsurePositiveResult();\n\n    // Purge bin and return successful result\n \
+    \   return true;\n}\n\n/// <summary>\n/// Perform a partial bin fill\n/// </summary>\n\
+    /// <param name=\"steelVolume\"></param>\n/// <returns></returns>\npublic bool\
+    \ FillBinPartially(int steelVolume)\n{\n    ValidSteelAndMaxVolume(steelVolume);\n\
+    \    EnsurePositiveResult();\n\n    return true;\n}\n\n/// <summary>\n/// Abbreviator\
+    \ method for steel and max volume\n/// </summary>\n/// <param name=\"steelVolume\"\
+    ></param>\n[ContractAbbreviator]\nprivate void ValidSteelAndMaxVolume(int steelVolume)\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: "```\n{\n    Contract.Requires(steelVolume > 0);\n    Contract.Ensures(steelVolume\
+    \ <= this.MaxVolume);\n}\n\n/// <summary>\n/// Abbreviator method for successful\
+    \ result\n/// </summary>\n[ContractAbbreviator]\nprivate void EnsurePositiveResult()\n\
+    {\n    Contract.Ensures(Contract.Result<bool>() == true);\n}\n```\n\nCode Listing\
+    \ 60: Using Abbreviator Methods\n\nI have added two new methods, ValidSteelAndMaxVolume\
+    \ and EnsurePositiveResult, and added the [ContractAbbreviator] attribute to them.\
+    \ This enables me to cut down on the repeated sets of Code Contracts in my methods.\
+    \ It makes for easier reading and clearer functionality when looking at the methods\
+    \ under contract. Another point to keep in mind is that Abbreviator methods can\
+    \ contain calls to other Abbreviator methods if needed."
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: "# Chapter 4 Testing Code Contracts\n\n# Pex evolves into IntelliTest\n\nMany\
+    \ of you might be familiar with Pex, and it probably will not come as a surprise\
+    \ that Pex has evolved into IntelliTest. IntelliTest is an integrated feature\
+    \ in Visual Studio Enterprise 2015. Code Contracts and IntelliTest integrate well,\
+    \ and it is really easy to get started with IntelliTest.\n\n# Getting started:\
+    \ Create IntelliTest\n\nAs mentioned previously, IntelliTest is integrated into\
+    \ Visual Studio Enterprise 2015. If you want IntelliTest integration in other\
+    \ versions of Visual Studio 2015, you can make your voice heard at the Visual\
+    \ Studio 2015 UserVoice site. The folks over at Microsoft in the Visual Studio\
+    \ team do keep a careful eye on this site—your vote will never be cast in vain.\n\
+    \nGetting started with IntelliTest is really simple. Let us revisit one of the\
+    \ methods we worked with in a previous chapter.\n\n```\n```csharp\n/// <summary>\n\
+    /// Calculate the production volume of steel per bin\n/// </summary>\n/// <param\
+    \ name=\"binVolume\"></param>\n/// <param name=\"factor\"></param>\n/// <returns>Bin\
+    \ Volume less Remainder</returns>\npublic int ProductionVolumePerBin(int binVolume,\
+    \ int factor)\n{\n    Contract.Ensures(Contract.Result<int>() == binVolume,\n\"\
+    The factor used will result in scrap. Please modify the cutting\nfactor.\");\n\
+    \n    int remainder = CutSteel(binVolume, factor);\n    return binVolume - remainder;\n\
+    }\n\n/// <summary>\n/// Calculate any remainder after the modulus operation between\
+    \ volume\nand factor\n/// </summary>\n/// <param name=\"volumeToCut\"></param>\n\
+    /// <param name=\"factor\"></param>\n/// <returns>Remainder after cutting</returns>\n\
+    private int CutSteel(int volumeToCut, int factor)\n{\n    // Use modulus to determine\
+    \ if the factor produces any scrap\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '```
+
+    return volumeToCut % factor;
+
+    }
+
+    ```
+
+
+    *Code Listing 61: Create IntelliTest for method*
+
+
+    As before, the preceding code listing tells the calling method that the method
+    under contract will result in the cut volume always equaling the bin volume. This
+    means that all the steel has been cut perfectly and no off-cuts resulted by using
+    the specific factor.
+
+
+    To generate a new IntelliTest for the ProductionVolumePerBin() method, right-click
+    on the method and select Create IntelliTest from the context menu.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_69_0.png)
+
+
+    *Figure 45: Create IntelliTest*
+
+
+    Visual Studio will now display the Create IntelliTest window where you can configure
+    additional settings for your generated IntelliTest.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '![](img/0a07386735fd4e6427d20aa9bc165f5d_70_0.png)
+
+
+    Figure 46: Create IntelliTest Settings
+
+
+    If this is your first time creating an IntelliTest, you will see that **MSTest**
+    is the only option listed under **Test Framework**. You can, however, install
+    third-party unit test frameworks if desired (more on this later). When you are
+    done, click **OK**.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_70_1.png)
+
+
+    Figure 47: Test Project Added to Solution'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: "Visual Studio will now create your test project for you. When it has completed\
+    \ the process, the new project will be visible in the Solution Explorer window.\n\
+    \n![](img/0a07386735fd4e6427d20aa9bc165f5d_71_0.png)\n\nFigure 48: IntelliTest\
+    \ Created\n\nExpanding the ERPWarehouseIntegrationTest.cs file, you will see that\
+    \ a test called ProductionVolumePerBinTest has been created.\n\n```\n```csharp\n\
+    // <copyright file=\"ERPWarehouseIntegrationTest.cs\">Copyright © 2015</copyright>\n\
+    using System;\nusing Microsoft.Pex.Framework;\nusing Microsoft.Pex.Framework.Validation;\n\
+    using Microsoft.VisualStudio.TestTools.UnitTesting;\n\nnamespace CodeContractsDemoProject.Tests\n\
+    {\n    /// <summary>This class contains parameterized unit tests for ERPWarehouseIntegration</summary>\n\
+    \    [PexClass(typeof(ERPWarehouseIntegration))]\n    [PexAllowedExceptionFromTypeUnderTest(typeof(InvalidOperationException))]\n\
+    \    [PexAllowedExceptionFromTypeUnderTest(typeof(ArgumentException), AcceptExceptionSubtypes\
+    \ = true)]\n    [TestClass]\n    public partial class ERPWarehouseIntegrationTest\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "Visual Studio will proceed to build your project and then launch the **IntelliTest\
+    \ Exploration Results** window. This window displays all the possible method parameters\
+    \ that would result in the maximum coverage of code for the method being tested.\
+    \ You can now get an overview of how the method fared under test.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_73_0.png)\n\
+    \nFigure 50: IntelliTest Exploration Results\n\nImmediately we can see that three\
+    \ tests failed and one passed. To the right of the **IntelliTest Exploration Results**\
+    \ windows, the **Details** and **Stack trace** are displayed in collapsible nodes.\
+    \ Let's have a closer look at the test results.\n\n# Test 2: Passed\n\nThe **ProductionVolumePerBin()**\
+    \ method must always result in a cut volume equal to the bin volume. From the\
+    \ variables used in Test 2, we can see that it passed because the bin volume was\
+    \ **0** and the result of the method was also **0**.\n\n```\n[TestMethod]\n[PexGeneratedBy(typeof(ERPWarehouseIntegrationTest))]\n\
+    public void ProductionVolumePerBinTest33()\n{\n    ERPWarehouseIntegration eRPWarehouseIntegration;\n\
+    \    int i;\n    eRPWarehouseIntegration = new ERPWarehouseIntegration();\n  \
+    \  i = this.ProductionVolumePerBinTest(eRPWarehouseIntegration, 0, 1);\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '```
+
+    ~~~csharp
+
+    Assert.AreEqual<int>(0, i);
+
+    Assert.IsNotNull((object)eRPWarehouseIntegration);
+
+    Assert.AreEqual<int>(0, eRPWarehouseIntegration.MaxBinQuantity);
+
+    Assert.AreEqual<int>(0, eRPWarehouseIntegration.CurrentBinQuantity);
+
+    }
+
+    ~~~
+
+    ```
+
+
+    *Code Listing 63: Generated Code in Details*
+
+
+    Looking at the **Details** node, we can see the generated code for the unit test.
+
+
+    # Test 1: Failed, DivideByZeroException
+
+
+    Looking at Test 1, we can see that it failed because it tried to divide by zero.
+
+
+    IntelliTest Exploration Results - stopped
+
+
+    ERPWarehouseIntegrationTest.Pro — 1 Warnings — 10/15 blocks, 1/1 asserts, 4 runs
+
+
+    | # | target | binVolume | factor | result(target) | result | Summary / Exception
+    | Error Message |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 1 | new ERPWa... | 0 | 0 |  |  | DivideByZeroException | Attempted to divide
+    by zero. |
+
+    | 2 | new ERPWa... | 0 | 1 | new ERPWar... | 0 | ContractException | Postcondition
+    failed: Contract.Result<int>() ... |
+
+    | 3 | new ERPWa... | 1 | 386 |  |  | ContractException | Arithmetic operation
+    resulted in an overflow. |
+
+    | 4 | new ERPWa... | int.MinValue | -1 |  |  | OverflowException | Arithmetic
+    operation resulted in an overflow. |
+
+
+    *Figure 51: Divide by Zero Exception*
+
+
+    This means that we forgot to take care of a factor value of zero. If you look
+    at the **CutSteel()** method you will see that we are dealing with a modulus and
+    not a divisor. So how can we have a divide by zero exception? Well the rule of
+    thumb is that if the second operand of a / or a % is zero, we will have a divide
+    by zero exception.
+
+
+    # Test 3: Failed, ContractException
+
+
+    Test 3 failed because the Code Contract ensures a result that the method isn''t
+    adhering to. Remember, the **ProductionVolumePerBin()** method ensures that the
+    bin volume is returned to the calling code, which signifies that we have produced
+    a perfect cut with zero scrap. The test failed, and in a production environment
+    this situation will happen. Our Code Contract ensures that the result returned
+    by the method will always equal the bin volume. This means that we need to deal
+    with the eventuality of an imperfect cut.
+
+
+    # Test 4: Failed, OverflowException
+
+
+    The last failed test is rather interesting. We can see that the test was passed
+    **int.MinValue** for **binVolume**. According to the MSDN documentation, **int.MinValue**
+    represents the smallest possible value for **Int32**. It is also a constant with
+    a value of **-2,147,483,648**. The factor has a value of **-1** and the modulus
+    results in an **OverflowException**. This means that our code in the **CutSteel()**
+    method will effectively be **int.MinValue % -1**; and this fails our test.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "The reason that this happens is because the C# language specification implements\
+    \ it as such. In **7.8.3 Remainder operator** of the **C# Language Specification**\
+    \ it states: \"If the left operand is the smallest int or long value and the right\
+    \ operand is -1, a System.OverflowException is thrown.\"\n\n> **Note:** If you\
+    \ would like to dig a little deeper, you can view this thread on StackOverflow\
+    \ for a very good explanation on why this is implemented this way in C#.\n\n#\
+    \ ## Fixing test failures\n\nWe can see from the previous IntelliTests that there\
+    \ are some loopholes in our **ProductionVolumePerBin()** method. These need fixing,\
+    \ and the most obvious one to fix is the divide by zero exception. Let's add a\
+    \ **Contract.Requires()** to our method to only allow factor values greater than\
+    \ 1.\n\n```\n```csharp\n/// <summary>\n/// Calculate the production volume of\
+    \ steel per bin\n/// </summary>\n/// <param name=\"binVolume\"></param>\n/// <param\
+    \ name=\"factor\"></param>\n/// <returns>Bin Volume less Remainder</returns>\n\
+    public int ProductionVolumePerBin(int binVolume, int factor)\n{\n    Contract.Requires(factor\
+    \ > 1,\n        \"The supplied cutting factor must be more than the value 1.\"\
+    );\n    Contract.Ensures(Contract.Result<int>() == binVolume,\n        \"The factor\
+    \ used will result in scrap. Please modify the cutting factor.\");\n\n    int\
+    \ remainder = CutSteel(binVolume, factor);\n    return binVolume - remainder;\n\
+    }\n```\n```\n\n*Code Listing 64: Modified Code to Ensure Valid Integers*\n\nAfter\
+    \ adding the **Contract.Requires()** precondition, the method will only allow\
+    \ valid cutting factor values. Run the IntelliTest again by right-clicking on\
+    \ the **ProductionVolumePerBin()** method and selecting **Run IntelliTest** from\
+    \ the context menu.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_75_0.png)\n\n\
+    *Figure 52: IntelliTest Results after Valid Integer Change*"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "The results of the test are quite different. Our contract preconditions are\
+    \ working correctly and limiting the erroneous values from being passed to our\
+    \ method. However, we can see that the IntelliTest passed a **binVolume** value\
+    \ significantly smaller than the **factor** value. Let us work on this issue first\
+    \ by requiring the **binVolume** value to never be smaller than the **factor**\
+    \ value.\n\n```\n```csharp\n/// <summary>\n/// Calculate the production volume\
+    \ of steel per bin\n/// </summary>\n/// <param name=\"binVolume\"></param>\n///\
+    \ <param name=\"factor\"></param>\n/// <returns>Bin Volume less Remainder</returns>\n\
+    public int ProductionVolumePerBin(int binVolume, int factor)\n{\n    Contract.Requires(factor\
+    \ > 1,\n        \"The supplied cutting factor must be more than the value 1.\"\
+    );\n    Contract.Requires(binVolume > factor,\n        \"The cutting factor cannot\
+    \ be greater than the bin volume\");\n    Contract.Ensures(Contract.Result<int>()\
+    \ == binVolume,\n        \"The factor used will result in scrap. Please modify\
+    \ the cutting factor.\");\n\n    int remainder = CutSteel(binVolume, factor);\n\
+    \    return binVolume - remainder;\n}\n```\n```\n\n*Code Listing 65: Modified\
+    \ Code to Ensure Valid Cutting Factor*\n\nTo achieve this, we need to add another\
+    \ **Contract.Requires()** pre-condition that will require that the **binVolume**\
+    \ value is always greater than the **factor** value. Run the IntelliTest again\
+    \ from the context menu.\n\n![](img/0a07386735fd4e6427d20aa9bc165f5d_76_0.png)\n\
+    \n*Figure 53: IntelliTest Results after Valid Cutting Factor Change*\n\nThe results\
+    \ returned from this test tell us that the only issue we are experiencing with\
+    \ the **ProductionVolumePerBin()** method is that it still fails on the value\
+    \ being returned. Our method guarantees the calling code that it will return a\
+    \ perfect cut every time, and it is failing this contract. We might want to consider\
+    \ adding a bit more intelligence to this method by letting our code suggest a\
+    \ valid cutting factor to the user if the supplied one is not valid."
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: "```\n/// <summary>\n/// The new valid cutting factor calculated by ProductionVolumePerBin\n\
+    /// </summary>\npublic int CalculatedCuttingFactor { get; private set; } = 0;\n\
+    \n/// <summary>\n/// Calculate the production volume of steel per bin\n/// </summary>\n\
+    /// <param name=\"binVolume\"></param>\n/// <param name=\"factor\"></param>\n\
+    /// <returns>Bin Volume less Remainder</returns>\npublic int ProductionVolumePerBin(int\
+    \ binVolume, int factor)\n{\n    Contract.Requires(IsEven(binVolume),\n      \
+    \  \"Invalid bin volume entered\");\n    Contract.Requires(factor > 1,\n     \
+    \   \"The supplied cutting factor must be more than the value 1.\");\n    Contract.Requires(binVolume\
+    \ > factor,\n        \"The cutting factor cannot be greater than the bin volume\"\
+    );\n    Contract.Ensures(Contract.Result<int>() == binVolume,\n        \"The factor\
+    \ used will result in scrap. Please modify the cutting factor.\");\n\n    int\
+    \ remainder = CutSteel(binVolume, factor);\n    while ((binVolume - remainder)\
+    \ != binVolume)\n    {\n        CalculatedCuttingFactor = CalculateNewCutFactor(binVolume);\n\
+    \        remainder = CutSteel(binVolume, CalculatedCuttingFactor);\n    }\n\n\
+    \    return binVolume - remainder;\n}\n\n/// <summary>\n/// Calculate any remainder\
+    \ after the modulus operation between volume and factor\n/// </summary>\n/// <param\
+    \ name=\"volumeToCut\"></param>\n/// <param name=\"factor\"></param>\n/// <returns>Remainder\
+    \ after cutting</returns>\nprivate int CutSteel(int volumeToCut, int factor)\n\
+    {\n    // Use modulus to determine if the factor produces any scrap\n    return\
+    \ volumeToCut % factor;\n}\n\n/// <summary>\n```"
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "```\n```csharp\n/// Calculate a new cutting factor\n/// r.Next(1, 7); returns\
+    \ a random number between 1 and 6\n/// </summary>\n/// <param name=\"binVol\"\
+    >Upper range value of random (bin volume + 1)</param>\n/// <returns>\n/// A new\
+    \ cutting factor greater than 1 and equal to the bin volume\n/// </returns>\n\
+    private int CalculateNewCutFactor(int binVol)\n{\n    Random r = new Random();\n\
+    \    return r.Next(2, binVol + 1);\n}\n\n/// <summary>\n/// Ensure that the passed\
+    \ volume is even\n/// </summary>\n/// <param name=\"volume\">The volume to verify</param>\n\
+    /// <returns>boolean</returns>\npublic bool IsEven(int volume)\n{\n    return\
+    \ volume % 2 == 0;\n}\n```\n```\n\n*Code Listing 66: Intelligent ProductionVolumePerBin\
+    \ Method*\n\nAs you can see from the previous modified code listing, I have done\
+    \ a few things. Business rules state that the bin volume will always be an even\
+    \ number. I have therefore added a **Contract.Requires()** pre-condition to ensure\
+    \ that only even integers are passed to the **ProductionVolumePerBin()** method.\n\
+    \nAnother addition to our code is a **CalculatedCuttingFactor** property that\
+    \ will hold the newly calculated cutting factor if the supplied factor is invalid.\
+    \ For this I have included a new method called **CalculateNewCutFactor** that\
+    \ will try alternate values for the cutting factor in order to produce the perfect\
+    \ cut.\n\nThe **ProductionVolumePerBin()** method will determine if the cutting\
+    \ factor is valid. If not, it will run the while loop until a valid cutting factor\
+    \ is returned and a perfect cut is achieved. In a production environment, however,\
+    \ you might want to consider using a sanity loop counter variable to create an\
+    \ exit condition or throw an exception when some maximum number of iterations\
+    \ is reached. There is still a lot of fine-tuning that can be done to the **ProductionVolumePerBin()**\
+    \ method, which I will not go into here as I simply want to illustrate a concept.\n\
+    \nAfter the code is modified, run the IntelliTest again."
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "![](img/0a07386735fd4e6427d20aa9bc165f5d_79_0.png)\n\nFigure 54: All IntelliTest\
+    \ Tests Passed\n\nFrom the test result we can see that the ProductionVolumePerBin()\
+    \ method has held up to the requirements imposed by our Code Contracts. It has\
+    \ also generated six warnings, which I'll discuss shortly.\n\nThe calling code\
+    \ can now implement the ProductionVolumePerBin() method without needing to cater\
+    \ for invalid values being returned. It knows that the method will return a perfect\
+    \ cut every time. The only check that needs to be done is to see whether a new\
+    \ factor has been suggested or if the supplied factor is valid.\n\n```\nint binVol\
+    \ = 20;\nint factor = 3;\nCodeContractsDemoProject.ERPWarehouseIntegration owhi\
+    \ =\n    new CodeContractsDemoProject.ERPWarehouseIntegration();\nint result =\
+    \ owhi.ProductionVolumePerBin(binVol, factor);\nif (owhi.CalculatedCuttingFactor\
+    \ != factor &&\n    owhi.CalculatedCuttingFactor != 0)\n{\n    Console.Write($\"\
+    The supplied cutting factor of {factor} resulted in \"\n        + \"an imperfect\
+    \ cut. The system suggests using the following \"\n        + $\"cutting factor:\
+    \ {owhi.CalculatedCuttingFactor}\");\n}\nelse\n    Console.Write($\"The cutting\
+    \ factor of {factor} resulted in 0 scrap\");\n\nConsole.ReadLine();\n```\n\nCode\
+    \ Listing 67: Code Calling ProductionVolumePerBin\n\nYou will notice that I am\
+    \ using string interpolation in the Console.Write each time. This is one of the\
+    \ new features in C# 6. The preceding code only needs to check the CalculatedCuttingFactor\
+    \ property to see if the cutting factor has changed. It knows that under contract,\
+    \ the ProductionVolumePerBin() method will always result in a perfect cut.\n\n\
+    We can further improve the preceding code, but the concept I wanted to illustrate\
+    \ is clear. Code Contracts lend themselves very well to tests created with IntelliTest\
+    \ in Visual Studio Enterprise 2015. You can combine the power of both technologies\
+    \ to create highly robust code and highly enforced business rules to make your\
+    \ applications perform well in a production environment."
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# # IntelliTest warnings
+
+
+    A discussion of IntelliTest would not be complete without discussing the Warnings
+    output screen.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_80_0.png)
+
+
+    *Figure 55: IntelliTest Warnings*
+
+
+    You will notice that the **IntelliTest Exploration Results** screen generated
+    six warnings. These are mostly normal warnings that might require your attention.
+    To be on the safe side, review these for any obvious issues. While this is somewhat
+    beyond the scope of this book, I will briefly mention two warning types seen in
+    **Testability** and **Boundary**.
+
+
+    # ## Testability
+
+
+    The warning we see is that an uninstrumented method was detected in our code.
+    This is specific to the `Random()` method used in the `CalculateNewCutFactor()`
+    method. This simply means that IntelliTest cannot dig down into all the paths
+    in my code in order to generate the required outputs it needs in order to test.
+
+
+    # ## Boundary
+
+
+    IntelliTest imposes certain limits on paths it executes in order to prevent it
+    from getting stuck in the event that the application goes into an infinite loop.
+    These limits can be modified by clicking the **Fix** icon on the menu bar.'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# ## Code coverage
+
+
+    Ideally you would want to see 100 percent code coverage (33/33 blocks). Our tests
+    only covered 28/33 blocks. Further reading on IntelliTests would allow you to
+    understand how to ensure good code coverage and which warnings can be suppressed
+    safely.
+
+
+    # # Installing third-party frameworks
+
+
+    As mentioned previously, you are able to get additional extensions for the test
+    framework to use when creating IntelliTests. To do this, you can use the Visual
+    Studio Extension Manager or go to the Visual Studio Gallery on the MSDN website.
+
+
+    Here''s how to install third-party frameworks from Visual Studio Extensions:
+
+
+    +   1. Navigate to **Tools** and select **Extensions and Updates**.
+
+    +   2. Expand **Online > Visual Studio Gallery > Tools**, and select **Testing**.
+
+    +   3. Browse the results and select the framework you require.
+
+    +   4. Click **Download**.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_81_0.png)
+
+
+    *Figure 56: Installing Third-Party Frameworks from Visual Studio*'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'Installing third-party frameworks from the Visual Studio Gallery:
+
+
+    +   1. Go to the Visual Studio Gallery.
+
+    +   2. Enter the framework name in the **Find** text box.
+
+    +   3. Select the framework from the search results to download.
+
+
+    If you are not sure which framework you want or don''t know the name of the framework
+    you are looking for, you can browse a list of frameworks on the Visual Studio
+    Gallery:
+
+
+    +   1. Go to the Visual Studio Gallery.
+
+    +   2. Click the Browse link.
+
+    +   3. Under **Categories**, expand **Tools** and choose **Testing**.
+
+    +   4. Choose the framework you want and download the tool.'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# # Chapter 5  Code Contracts Editor Extensions
+
+
+    # ## Making Code Contracts more useful
+
+
+    So far we have seen a lot of what Code Contracts can do. Here’s a tip on how to
+    make the contracts you create more useful to developers using your classes and
+    methods. Using Code Contracts Editor Extensions will allow you to see what the
+    method you’re calling into requires with regard to the contracts defined in that
+    method. It will do this without requiring you to drill down into the method and
+    see what Code Contracts it implements.
+
+
+    ```
+
+    ProductionVolumePerBin(binVol, factor);
+
+    ```
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_83_0.png)
+
+
+    *Figure 57: ProductionVolumePerBin Quick Info*
+
+
+    The method we used in Chapter 4 displays the comments you provided in the XML
+    comments for that method in the Quick Info window when the pointer hovers over
+    the method. This is expected behavior, but I have no idea from that Quick Info
+    window what contracts the method implements. Code Contracts Editor Extensions
+    changes this. To install it, go to the Tools menu in Visual Studio and click Extensions
+    and Updates.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_83_1.png)
+
+
+    *Figure 58: Extensions and Updates*'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: 'From the **Extensions and Updates** window, select the **Online** tab and search
+    for **Code Contracts Editor Extensions**. The results returned should be fairly
+    limited. From here, click **Download** to download and install the extension.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_84_0.png)
+
+
+    Figure 59: Install Code Contracts Editor Extensions
+
+
+    Once Code Contracts Editor Extensions have been installed, you will need to restart
+    Visual Studio. The beauty of this extension is that you now get a peek inside
+    the methods you create, which will display the contracts for that method.
+
+
+    Before this will work though, you need to ensure that the **Contract Reference
+    Assembly** is set to **Build** in the Code Contracts settings.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_84_1.png)
+
+
+    Figure 60: Contract Reference Assembly'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "Now if you hover over the **ProductionVolumePerBin()** method, you will see\
+    \ that the Quick Info window is rich with information regarding the contracts\
+    \ it implements.\n\n```\n.ProductionVolumePerBin(binVol, factor);\n\nint CodeContractsDemoProject.ERP\
+    \ WarehouseIntegration.ProductionVolumePerBin(int binVolume, int factor)\nCalculate\
+    \ the production volume of steel per bin\n\nContracts:\nrequires IsEven(binVolume)\n\
+    requires factor > 1\nrequires binVolume > factor\nensures result == binVolume\n\
+    ```\n\n*Figure 61: Method Tooltip Enhanced with Contracts*\n\nThis allows me to\
+    \ be able to use the method without having to see inside the method, and pass\
+    \ it valid parameters that will validate successfully. I now have much more information\
+    \ regarding the method I'm calling.\n\nAnother gem when using Code Contracts Editor\
+    \ Extensions is the ability to see which Code Contracts a base class implements.\
+    \ Have another look at our **CalculateNewCutFactor()** method.\n\n```\n/// <summary>\n\
+    /// Calculate a new cutting factor\n/// r.Next(1, 7); returns a random number\
+    \ between 1 and 6\n/// </summary>\n/// <param name=\"binVol\">Upper range value\
+    \ of random (bin volume + 1)</param>\n/// <returns>\n/// A new cutting factor\
+    \ greater than 1 and equal to the bin volume\n/// </returns>\nprivate int CalculateNewCutFactor(int\
+    \ binVol)\n{\n    Random r = new Random();\n    return r.Next(2, binVol + 1);\n\
+    }\n```\n\n*Code Listing 68: Random() Method*\n\nHovering over the **Next()** method,\
+    \ we can peer into the contracts it requires. The Code Contracts Editor Extensions\
+    \ do this by mining the base classes and displaying the contracts implemented."
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: "```\n```csharp\nprivate int CalculateNewCutFactor(int binVol, int factor)\n\
+    {\n    Random r = new Random();\n    return r.Next(2, binVol + 1);\n}\n```\n```\n\
+    \n```\n```\nint Random.Next(int minValue, int maxValue) (+ 2 overloads)\n\nContracts:\n\
+    \    requires minValue <= maxValue\n    ensures result >= minValue\n    ensures\
+    \ result < maxValue || maxValue == minValue && result == minValue\n```\n```\n\n\
+    Figure 62: Random Next Method Contracts\n\nWe can see that one of the Code Contracts\
+    \ implemented by the Next() method is that the minValue must be less than or equal\
+    \ to the maxValue. For our requirements, I want to ensure that the minValue is\
+    \ always greater than or equal to 2. Using the information we were able to glean\
+    \ regarding the Code Contracts implemented by the Next() method, we can now go\
+    \ ahead and create our own GetRandom() method that will conform to our Code Contract\
+    \ requirements.\n\n```\n```csharp\n/// <summary>\n/// Calculate a new cutting\
+    \ factor\n/// r.Next(1, 7); returns a random number between 1 and 6\n/// </summary>\n\
+    /// <param name=\"binVol\">Upper range value of random (bin volume +\n1)</param>\n\
+    /// <returns>\n/// A new cutting factor greater than 1 and equal to the bin volume\n\
+    /// </returns>\nprivate int CalculateNewCutFactor(int binVol)\n{\n    return GetRandom(2,\
+    \ binVol + 1);\n}\n\n/// <summary>\n/// Get a random number\n/// </summary>\n\
+    /// <param name=\"minValue\">Value not less than 2</param>\n/// <param name=\"\
+    maxValue\">Upper range value of the random number to\ngenerate</param>\n/// <returns>A\
+    \ random integer</returns>\nstatic int GetRandom(int minValue, int maxValue)\n\
+    {\n    Contract.Requires(minValue >= 2,\n        \"minValue cannot be less than\
+    \ 2\");\n    Random r = new Random();\n    return r.Next(minValue, maxValue);\n\
+    }\n```\n```\n\nCode Listing 69: Custom GetRandom() Method"
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'Using Code Contracts and Code Contracts Editor Extensions allows us to write
+    more robust code and fine-tune our code to easily conform to the required business
+    rules.
+
+
+    ![](img/0a07386735fd4e6427d20aa9bc165f5d_87_0.png)
+
+
+    Tip: You need to keep in mind that the Random class isn''t a true random number
+    generator. When you call Next(), for example, the Random class uses some internal
+    state to return a number that appears to be random. It then changes its internal
+    state so that the next time you call Next(), it returns another apparently random
+    number. Generating true random numbers is beyond the scope of this book; if you
+    require true randomness, you will need to do a bit more research.'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# Chapter 6  Conclusion
+
+
+    So far, we have looked at setting up Code Contracts and using them to validate
+    logical correctness by using the various contract methods. We looked at how Code
+    Snippets make life easier for developers who use Code Contracts extensively. We
+    also saw how to integrate Code Contracts into your documentation output and how
+    to generate user-friendly documentation using Sandcastle Help File Builder.
+
+
+    Moving on to more advanced topics and tips, we looked at how to integrate Code
+    Contracts with abstract classes and interfaces, and we saw that Code Contracts
+    lend themselves very well to testing your methods with IntelliTest. We explored
+    how another tool called Code Contracts Editor Extensions expose base classes and
+    your custom Code Contracts to calling code right there in the Quick Info window.
+
+
+    From here, I would suggest checking out the [Code Contracts GitHub page](https://github.com/microsoft/CodeContracts)
+    and starting to integrate Code Contracts into your projects. The more you use
+    Code Contracts, the easier it will become to create well documented, robust code.'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# Chapter 7 Tools and Resources
+
+
+    # Code Contracts on GitHub
+
+
+    To have a look at the source code for Code Contracts, contribute some code, or
+    familiarize yourself with certain aspects on Code Contracts, visit the project
+    on GitHub. There is also a forum and FAQ that could be a great help.
+
+
+    # Code Contracts at Microsoft Research
+
+
+    For more on the background of Code Contracts, go to the Microsoft Research website.
+
+
+    # Code Contracts User Manual
+
+
+    For more background knowledge and to solidify certain concepts, I suggest you
+    read through the Code Contracts User Manual.
+
+
+    # Hottest Code Contract answers on Stack Overflow
+
+
+    Stack Overflow is one of the best sources on the web for answers and solutions
+    to your Code Contract questions.
+
+
+    # Code Contracts Editor Extensions
+
+
+    See the Visual Studio Gallery for the Code Contracts Editor Extensions.
+
+
+    # Sandcastle Help File Builder
+
+
+    To generate great documentation from your XML comments, grab a free copy of Sandcastle
+    Help File Builder on GitHub.'
+  merge: -1
+  img_proc: true

@@ -1,0 +1,89 @@
+level_changes:
+- line: 121
+  before: 2
+  after: 3
+- line: 135
+  before: 2
+  after: 3
+- line: 147
+  before: 2
+  after: 3
+- line: 161
+  before: 2
+  after: 3
+- line: 173
+  before: 2
+  after: 3
+- line: 177
+  before: 2
+  after: 3
+- line: 225
+  before: 2
+  after: 3
+- line: 259
+  before: 2
+  after: 3
+- line: 283
+  before: 2
+  after: 3
+- line: 372
+  before: 2
+  after: 3
+- line: 417
+  before: 2
+  after: 3
+- line: 592
+  before: 2
+  after: 3
+- line: 685
+  before: 2
+  after: 3
+- line: 788
+  before: 2
+  after: 3
+- line: 872
+  before: 2
+  after: 3
+- line: 1312
+  before: 2
+  after: 3
+- line: 1393
+  before: 2
+  after: 3
+- line: 1522
+  before: 2
+  after: 3
+- line: 1571
+  before: 2
+  after: 3
+- line: 1790
+  before: 2
+  after: 3
+- line: 2056
+  before: 2
+  after: 3
+- line: 2075
+  before: 2
+  after: 3
+- line: 2079
+  before: 2
+  after: 3
+- line: 2087
+  before: 2
+  after: 3
+- line: 2267
+  before: 2
+  after: 3
+- line: 2289
+  before: 2
+  after: 3
+text_changes:
+- line: 839
+  before: 图 23：协定的结果是完美切割
+  after: 图 23：契约的结果是完美切割
+- line: 966
+  before: 第三章 有用的提示
+  after: 第 3 章 有用的提示
+- line: 2317
+  before: 第 5 章  代码契约编辑器扩展
+  after: 第 5 章 代码契约编辑器扩展

@@ -310,6 +310,7 @@
 +   [C++：初学者 C++ 编程 - 24 小时内掌握 C++ 基础的极速成课指南！](docs/c-c-programming-for-beginners---the-ultimate-crash-course-to/README.md)
 +   [C++：8 小时学会 C++ 编程，初学者指南，快速学习编码](docs/c-c-programming-in-8-hours-for-beginners-learn-coding-fast/README.md)
 +   [C++ 速查表，语法快速参考手册（表格与图表）：语法快速学习指南](docs/c-cheat-sheet-syntax-quick-reference-handbook-by-table-and-c/README.md)
++   [C# 代码契约简明指南](docs/c-code-contracts-succinctly/README.md)
 +   [C++ 编码：易于理解的编程练习与解决方案](docs/c-coding-easy-to-follow-programming-exercises-and-solutions/README.md)
 +   [C 语言：快速学习 C 语言的终极分步指南](docs/c-coding-ultimate-step-by-step-guide-to-learning-c-programmi/README.md)
 +   [C++ 编译器构建：精通语言处理（计算机科学基础）](docs/c-compiler-construction-mastering-language-processing-comput/README.md)
