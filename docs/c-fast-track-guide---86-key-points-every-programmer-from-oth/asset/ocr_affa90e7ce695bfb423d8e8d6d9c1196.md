@@ -1,0 +1,23 @@
++   41. Providing Fallback Values with ??
++   42. Easier String Formatting with Interpolated Strings
++   43. Concise Pattern Matching with switch Expressions
++   44. Smart Type Checking with is Keyword
++   45. Getting String Names of Variables and Members with nameof
++   46. Limiting Property Assignment to Initialization with init
++   47. Preventing Inheritance with sealed
++   48. Working with Pointers using unsafe
++   49. High-Performance Stack Memory Allocation with stackalloc
++   50. Calling Native Code with DllImport and P/Invoke
++   51. Reading and Writing Files with System.IO
++   52. Efficient Memory Access with Span<T>
++   53. Built-in JSON Serialization with System.Text.Json
++   54. Native Dependency Injection Support in .NET
++   55. Using [Obsolete] to Mark Deprecated Code
++   56. Intro to Unit Testing: MSTest, xUnit, and NUnit
++   57. Strong Naming and Assembly Versioning for Safe Execution
++   58. Organizing Code with Namespaces
++   59. Splitting One Class into Multiple Files Using Partial Classes
++   60. Using Lambda Expressions for Short Function Definitions
++   61. Defining Helper Methods Inside Methods (Local Functions)
++   62. Using Func<> and Action<> for Functional Programming
++   63. Running Tasks in Parallel with System.Threading.Tasks.Parallel

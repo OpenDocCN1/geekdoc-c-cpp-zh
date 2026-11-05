@@ -329,6 +329,7 @@
 +   [C 示例：50 个以上示例](docs/c-examples-over-50-examples/README.md)
 +   [C 示例：50 多个示例 (C 教程书籍 1)](docs/c-examples-over-50-examples-c-tutorials-book-1/README.md)
 +   [C++ 示例：超过 60 个示例](docs/c-examples-over-60-examples/README.md)
++   [C# 快速指南——其他语言程序员应掌握的 86 个关键要点](docs/c-fast-track-guide---86-key-points-every-programmer-from-oth/README.md)
 +   [C# 特性精要](docs/c-features-succinctly/README.md)
 +   [C++ 入门指南](docs/c-for-beginners/README.md)
 +   [C++ 入学者指南：将热情转化为编程精通的全面指南](docs/c-for-beginners-a-comprehensive-guide-to-transform-your-pass/README.md)

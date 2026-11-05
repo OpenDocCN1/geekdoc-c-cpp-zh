@@ -1,0 +1,1 @@
+Always double-check pointer logic to avoid memory corruption or crashes.
