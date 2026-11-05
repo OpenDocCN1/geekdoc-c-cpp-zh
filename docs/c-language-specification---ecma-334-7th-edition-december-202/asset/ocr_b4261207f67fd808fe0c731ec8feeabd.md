@@ -1,0 +1,56 @@
+Only by including an override modifier can a method override another method. In all other cases, a method with the same signature as an inherited method simply hides the inherited method.
+
+Example: In the following code
+
+```
+class A
+{
+    public virtual void F() {}
+}
+
+class B : A
+{
+    public virtual void F() {} // Warning, hiding inherited F()
+}
+```
+
+the F method in B does not include an override modifier and therefore does not override the F method in A. Rather, the F method in B hides the method in A, and a warning is reported because the declaration does not include a new modifier.
+
+end example
+
+Example: In the following code
+
+```
+class A
+{
+    public virtual void F() {}
+}
+
+class B : A
+{
+    private new void F() {} // Hides A.F within body of B
+}
+
+class C : B
+{
+    public override void F() {} // Ok, overrides A.F
+}
+```
+
+the F method in B hides the virtual F method inherited from A. Since the new F in B has private access, its scope only includes the class body of B and does not extend to C. Therefore, the declaration of F in C is permitted to override the F inherited from A.
+
+end example
+
+# 15.6.6 Sealed methods
+
+When an instance method declaration includes a sealed modifier, that method is said to be a sealed method. A sealed method overrides an inherited virtual method with the same signature. A sealed method shall also be marked with the override modifier. Use of the sealed modifier prevents a derived class from further overriding the method.
+
+Example: The example
+
+```
+class A
+{
+    public virtual void F() => Console.WriteLine("A.F");
+    public virtual void G() => Console.WriteLine("A.G");
+}
+```

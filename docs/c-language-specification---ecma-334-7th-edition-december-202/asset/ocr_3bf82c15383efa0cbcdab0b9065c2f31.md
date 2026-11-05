@@ -1,0 +1,64 @@
+```
+```csharp
+interface IListCounter : IList, ICounter {
+
+class C
+{
+    void Test(IListCounter x)
+    {
+        x.Count(1);             // Error
+        x.Count = 1;            // Error
+        ((IList)x).Count = 1;   // Ok, invokes IList.Count.set
+        ((ICounter)x).Count(1); // Ok, invokes ICounter.Count
+    }
+}
+```
+```
+
+the first two statements cause compile-time errors because the member lookup (§12.5) of Count in IListCounter is ambiguous. As illustrated by the example, the ambiguity is resolved by casting x to the appropriate base interface type. Such casts have no run-time costs—they merely consist of viewing the instance as a less derived type at compile-time.
+
+*end example*
+
+*Example: In the following code*
+
+```
+```csharp
+interface IInteger
+{
+    void Add(int i);
+}
+
+interface IDouble
+{
+    void Add(double d);
+}
+
+interface INumber : IInteger, IDouble {}
+
+class C
+{
+    void Test(INumber n)
+    {
+        n.Add(1);                  // Invokes IInteger.Add
+        n.Add(1.0);                // Only IDouble.Add is applicable
+        ((IInteger)n).Add(1);      // Only IInteger.Add is a candidate
+        ((IDouble)n).Add(1);       // Only IDouble.Add is a candidate
+    }
+}
+```
+```
+
+the invocation n.Add(1) selects IInteger.Add by applying overload resolution rules of §12.6.4. Similarly, the invocation n.Add(1.0) selects IDouble.Add. When explicit casts are inserted, there is only one candidate method, and thus no ambiguity.
+
+*end example*
+
+*Example: In the following code*
+
+```
+```csharp
+interface IBase
+{
+    void F(int i);
+}
+```
+```

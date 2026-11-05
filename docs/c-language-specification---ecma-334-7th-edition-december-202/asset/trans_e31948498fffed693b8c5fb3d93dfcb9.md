@@ -1,0 +1,445 @@
+
+## A 语法
+
+```text
+;
+interface_type_list
+  : interface_type (',' interface_type)*
+  ;
+
+// Source: §15.2.5 Type parameter constraints
+type_parameter_constraints_clauses
+  : type_parameter_constraints_clause
+  | type_parameter_constraints_clauses type_parameter_constraints_clause
+  ;
+
+type_parameter_constraints_clause
+  : 'where' type_parameter ':' type_parameter_constraints
+  ;
+
+type_parameter_constraints
+  : primary_constraint
+  | secondary_constraints
+  | constructor_constraint
+  | primary_constraint ',' secondary_constraints
+  | primary_constraint ',' constructor_constraint
+  | secondary_constraints ',' constructor_constraint
+  | primary_constraint ',' secondary_constraints ',' constructor_constraint
+  ;
+
+primary_constraint
+  : class_type
+  | 'class'
+  | 'struct'
+  | 'unmanaged'
+  ;
+
+secondary_constraints
+  : interface_type
+  | type_parameter
+  | secondary_constraints ',' interface_type
+  | secondary_constraints ',' type_parameter
+  ;
+
+constructor_constraint
+  : 'new' '(' ')'
+  ;
+
+// Source: §15.2.6 Class body
+class_body
+  : '{' class_member_declaration* '}'
+  ;
+
+// Source: §15.3.1 General
+class_member_declaration
+  : constant_declaration
+  | field_declaration
+  | method_declaration
+  | property_declaration
+  | event_declaration
+  | indexer_declaration
+  | operator_declaration
+  | constructor_declaration
+  | finalizer_declaration
+  | static_constructor_declaration
+  | type_declaration
+  ;
+
+// Source: §15.4 Constants
+constant_declaration
+  : attributes? constant_modifier* 'const' type constant_declarators ';'
+  ;
+
+constant_modifier
+  : 'new'
+  | 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  ;
+
+// Source: §15.5.1 General
+field_declaration
+  : attributes? field_modifier* type variable_declarators ';'
+  ;
+
+field_modifier
+  : 'new'
+  | 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'static'
+  | 'readonly'
+  | 'volatile'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+variable_declarators
+  : variable_declarator (',' variable_declarator)*
+  ;
+
+variable_declarator
+  : identifier ('=' variable_initializer)?
+  ;
+
+// Source: §15.6.1 General
+method_declaration
+  : attributes? method_modifiers return_type method_header method_body
+  | attributes? ref_method_modifiers ref_kind ref_return_type method_header
+    ref_method_body
+  ;
+
+method_modifiers
+  : method_modifier* 'partial'?
+  ;
+
+ref_kind
+  : 'ref'
+  | 'ref' 'readonly'
+  ;
+
+ref_method_modifiers
+  : ref_method_modifier*
+  ;
+
+method_header
+  : member_name '(' formal_parameter_list? ')'
+  | member_name type_parameter_list '(' formal_parameter_list? ')'
+    type_parameter_constraints_clause*
+  ;
+
+method_modifier
+  : ref_method_modifier
+  | 'async'
+  ;
+
+ref_method_modifier
+  : 'new'
+  | 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'static'
+  | 'virtual'
+  | 'sealed'
+  | 'override'
+  | 'abstract'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+return_type
+  : ref_return_type
+  | 'void'
+  ;
+
+ref_return_type
+  : type
+  ;
+
+member_name
+  : identifier
+  | interface_type '.' identifier
+  ;
+
+method_body
+  : block
+  | '=>' null_conditional_invocation_expression ';'
+  | '=>' expression ';'
+  | ';'
+  ;
+
+ref_method_body
+  : block
+  | '=>' 'ref' variable_reference ';'
+  | ';'
+  ;
+
+// Source: §15.6.2.1 General
+formal_parameter_list
+  : fixed_parameters
+  | fixed_parameters ',' parameter_array
+  | parameter_array
+  ;
+
+fixed_parameters
+  : fixed_parameter (',' fixed_parameter)*
+  ;
+
+fixed_parameter
+  : attributes? parameter_modifier? type identifier default_argument?
+  ;
+
+default_argument
+  : '=' expression
+  ;
+
+parameter_modifier
+  : parameter_mode_modifier
+  | 'this'
+  ;
+
+parameter_mode_modifier
+  : 'ref'
+  | 'out'
+  | 'in'
+  ;
+
+parameter_array
+  : attributes? 'params' array_type identifier
+  ;
+
+// Source: §15.7.1 General
+property_declaration
+  : attributes? property_modifier* type member_name property_body
+  | attributes? property_modifier* ref_kind type member_name ref_property_body
+  ;
+
+property_modifier
+  : 'new'
+  | 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'static'
+  | 'virtual'
+  | 'sealed'
+  | 'override'
+  | 'abstract'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+property_body
+  : '{' accessor_declarations '}' property_initializer?
+  | '=>' expression ';'
+  ;
+
+property_initializer
+  : '=' variable_initializer ';'
+  ;
+
+ref_property_body
+  : '{' ref_get_accessor_declaration '}'
+  | '=>' 'ref' variable_reference ';'
+  ;
+
+// Source: §15.7.3 Accessors
+accessor_declarations
+  : get_accessor_declaration set_accessor_declaration?
+  | set_accessor_declaration get_accessor_declaration?
+  ;
+
+get_accessor_declaration
+  : attributes? accessor_modifier? 'get' accessor_body
+  ;
+
+set_accessor_declaration
+  : attributes? accessor_modifier? 'set' accessor_body
+  ;
+
+accessor_modifier
+  : 'protected'
+  | 'internal'
+  | 'private'
+  | 'protected' 'internal'
+  | 'internal' 'protected'
+  | 'protected' 'private'
+  | 'private' 'protected'
+  ;
+
+accessor_body
+  : block
+  | '=>' expression ';'
+  | ';'
+  ;
+
+ref_get_accessor_declaration
+  : attributes? accessor_modifier? 'get' ref_accessor_body
+  ;
+
+ref_accessor_body
+  : block
+  | '=>' 'ref' variable_reference ';'
+  | ';'
+  ;
+
+// Source: §15.8.1 General
+event_declaration
+  : attributes? event_modifier* 'event' type variable_declarators ';'
+  | attributes? event_modifier* 'event' type member_name
+    '{' event_accessor_declarations '}'
+  ;
+
+event_modifier
+  : 'new'
+  | 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'static'
+  | 'virtual'
+  | 'sealed'
+  | 'override'
+  | 'abstract'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+event_accessor_declarations
+  : add_accessor_declaration remove_accessor_declaration
+  | remove_accessor_declaration add_accessor_declaration
+  ;
+
+add_accessor_declaration
+  : attributes? 'add' block
+  ;
+
+remove_accessor_declaration
+  : attributes? 'remove' block
+  ;
+
+// Source: §15.9.1 General
+indexer_declaration
+  : attributes? indexer_modifier* indexer_declarator indexer_body
+  | attributes? indexer_modifier* ref_kind indexer_declarator ref_indexer_body
+  ;
+
+indexer_modifier
+  : 'new'
+  | 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'virtual'
+  | 'sealed'
+  | 'override'
+  | 'abstract'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+indexer_declarator
+  : type 'this' '[' formal_parameter_list ']'
+  | type interface_type '.' 'this' '[' formal_parameter_list ']'
+  ;
+
+indexer_body
+  : '{' accessor_declarations '}'
+  | '=>' expression ';'
+  ;
+
+ref_indexer_body
+  : '{' ref_get_accessor_declaration '}'
+  | '=>' 'ref' variable_reference ';'
+  ;
+
+// Source: §15.10.1 General
+operator_declaration
+  : attributes? operator_modifier+ operator_declarator operator_body
+  ;
+
+operator_modifier
+  : 'public'
+  | 'static'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+operator_declarator
+  : unary_operator_declarator
+  | binary_operator_declarator
+  | conversion_operator_declarator
+  ;
+
+unary_operator_declarator
+  : type 'operator' overloadable_unary_operator '(' fixed_parameter ')'
+  ;
+
+overloadable_unary_operator
+  : '+' | '-' | '!' | '~' | '++' | '--' | 'true' | 'false'
+  ;
+
+binary_operator_declarator
+  : type 'operator' overloadable_binary_operator
+    '(' fixed_parameter ',' fixed_parameter ')'
+  ;
+
+overloadable_binary_operator
+  : '+' | '-' | '*' | '/' | '%' | '&' | '|' | '^' | '<<'
+  | right_shift | '==' | '!=' | '>' | '<' | '>=' | '<='
+  ;
+
+conversion_operator_declarator
+  : 'implicit' 'operator' type '(' fixed_parameter ')'
+  | 'explicit' 'operator' type '(' fixed_parameter ')'
+  ;
+
+operator_body
+  : block
+  | '=>' expression ';'
+  | ';'
+  ;
+
+// Source: §15.11.1 General
+constructor_declaration
+  : attributes? constructor_modifier* constructor_declarator constructor_body
+  ;
+
+constructor_modifier
+  : 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+constructor_declarator
+  : identifier '(' formal_parameter_list? ')' constructor_initializer?
+  ;
+
+constructor_initializer
+  : ':' 'base' '(' argument_list? ')'
+  | ':' 'this' '(' argument_list? ')'
+  ;
+
+constructor_body
+  : block
+  | '=>' expression ';'
+  | ';'
+  ;
+
+// Source: §15.12 Static constructors
+static_constructor_declaration
+  : attributes? static_constructor_modifiers identifier '(' ')'
+    static_constructor_body
+  ;
+
+static_constructor_modifiers
+  : 'static'
+  | 'static' 'extern' unsafe_modifier?
+  | 'static' unsafe_modifier 'extern'?
+  ;
+```

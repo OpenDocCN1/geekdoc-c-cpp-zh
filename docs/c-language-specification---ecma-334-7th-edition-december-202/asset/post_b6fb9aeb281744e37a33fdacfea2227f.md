@@ -1,0 +1,150 @@
+
+- 12.6.4 Overload resolution 175
+  - 12.6.4.1 General 175
+  - 12.6.4.2 Applicable function member 175
+  - 12.6.4.3 Better function member 177
+  - 12.6.4.4 Better parameter-passing mode 178
+  - 12.6.4.5 Better conversion from expression 178
+  - 12.6.4.6 Exactly matching expression 178
+  - 12.6.4.7 Better conversion target 179
+  - 12.6.4.8 Overloading in generic classes 179
+- 12.6.5 Compile-time checking of dynamic member invocation 180
+- 12.6.6 Function member invocation 181
+  - 12.6.6.1 General 181
+  - 12.6.6.2 Invocations on boxed instances 182
+- 12.7 Deconstruction 182
+- 12.8 Primary expressions 183
+  - 12.8.1 General 183
+  - 12.8.2 Literals 184
+  - 12.8.3 Interpolated string expressions 184
+  - 12.8.4 Simple names 189
+  - 12.8.5 Parenthesized expressions 190
+  - 12.8.6 Tuple expressions 190
+  - 12.8.7 Member access 192
+    - 12.8.7.1 General 192
+    - 12.8.7.2 Identical simple names and type names 194
+  - 12.8.8 Null Conditional Member Access 195
+  - 12.8.9 Invocation expressions 196
+    - 12.8.9.1 General 196
+    - 12.8.9.2 Method invocations 197
+    - 12.8.9.3 Extension method invocations 198
+    - 12.8.9.4 Delegate invocations 200
+  - 12.8.10 Null Conditional Invocation Expression 201
+  - 12.8.11 Element access 202
+    - 12.8.11.1 General 202
+    - 12.8.11.2 Array access 202
+    - 12.8.11.3 Indexer access 203
+  - 12.8.12 Null Conditional Element Access 204
+  - 12.8.13 This access 205
+  - 12.8.14 Base access 205
+  - 12.8.15 Postfix increment and decrement operators 206
+  - 12.8.16 The new operator 207
+    - 12.8.16.1 General 207
+    - 12.8.16.2 Object creation expressions 208
+    - 12.8.16.3 Object initializers 209
+    - 12.8.16.4 Collection initializers 212
+    - 12.8.16.5 Array creation expressions 213
+    - 12.8.16.6 Delegate creation expressions 216
+    - 12.8.16.7 Anonymous object creation expressions 217
+  - 12.8.17 The typeof operator 219
+  - 12.8.18 The sizeof operator 221
+  - 12.8.19 The checked and unchecked operators 222
+- 12.8.20 Default value expressions 224
+- 12.8.21 Stack allocation 224
+- 12.8.22 Nameof expressions 226
+- 12.8.23 Anonymous method expressions 228
+- 12.9 Unary operators 228
+  - 12.9.1 General 228
+  - 12.9.2 Unary plus operator 229
+  - 12.9.3 Unary minus operator 229
+  - 12.9.4 Logical negation operator 230
+  - 12.9.5 Bitwise complement operator 230
+  - 12.9.6 Prefix increment and decrement operators 230
+  - 12.9.7 Cast expressions 231
+  - 12.9.8 Await expressions 232
+    - 12.9.8.1 General 232
+    - 12.9.8.2 Awaitable expressions 233
+    - 12.9.8.3 Classification of await expressions 233
+    - 12.9.8.4 Run-time evaluation of await expressions 233
+- 12.10 Arithmetic operators 234
+  - 12.10.1 General 234
+  - 12.10.2 Multiplication operator 234
+  - 12.10.3 Division operator 235
+  - 12.10.4 Remainder operator 237
+  - 12.10.5 Addition operator 238
+  - 12.10.6 Subtraction operator 240
+- 12.11 Shift operators 242
+- 12.12 Relational and type-testing operators 243
+  - 12.12.1 General 243
+  - 12.12.2 Integer comparison operators 244
+  - 12.12.3 Floating-point comparison operators 245
+  - 12.12.4 Decimal comparison operators 246
+  - 12.12.5 Boolean equality operators 246
+  - 12.12.6 Enumeration comparison operators 246
+  - 12.12.7 Reference type equality operators 247
+  - 12.12.8 String equality operators 249
+  - 12.12.9 Delegate equality operators 249
+  - 12.12.10 Equality operators between nullable value types and the null literal 250
+  - 12.12.11 Tuple equality operators 250
+  - 12.12.12 The is operator 251
+    - 12.12.12.1 The is-type operator 251
+    - 12.12.12.2 The is-pattern operator 252
+  - 12.12.13 The as operator 252
+- 12.13 Logical operators 253
+  - 12.13.1 General 253
+  - 12.13.2 Integer logical operators 254
+  - 12.13.3 Enumeration logical operators 254
+  - 12.13.4 Boolean logical operators 255
+  - 12.13.5 Nullable Boolean & and | operators 255
+- 12.14 Conditional logical operators 256
+  - 12.14.1 General 256
+  - 12.14.2 Boolean conditional logical operators 257
+  - 12.14.3 User-defined conditional logical operators 257
+- 12.15 The null coalescing operator 257
+- 12.16 The throw expression operator 258
+- 12.17 Declaration expressions 259
+- 12.18 Conditional operator 260
+- 12.19 Anonymous function expressions 262
+  - 12.19.1 General 262
+  - 12.19.2 Anonymous function signatures 264
+  - 12.19.3 Anonymous function bodies 265
+  - 12.19.4 Overload resolution 266
+  - 12.19.5 Anonymous functions and dynamic binding 267
+  - 12.19.6 Outer variables 267
+    - 12.19.6.1 General 267
+    - 12.19.6.2 Captured outer variables 267
+    - 12.19.6.3 Instantiation of local variables 268
+  - 12.19.7 Evaluation of anonymous function expressions 271
+  - 12.19.8 Implementation Example 271
+- 12.20 Query expressions 275
+  - 12.20.1 General 275
+  - 12.20.2 Ambiguities in query expressions 276
+  - 12.20.3 Query expression translation 277
+    - 12.20.3.1 General 277
+    - 12.20.3.2 Query expressions with continuations 277
+    - 12.20.3.3 Explicit range variable types 278
+    - 12.20.3.4 Degenerate query expressions 278
+    - 12.20.3.5 From, let, where, join and orderby clauses 279
+    - 12.20.3.6 Select clauses 283
+    - 12.20.3.7 Group clauses 283
+    - 12.20.3.8 Transparent identifiers 283
+  - 12.20.4 The query-expression pattern 285
+- 12.21 Assignment operators 286
+  - 12.21.1 General 286
+  - 12.21.2 Simple assignment 287
+  - 12.21.3 Ref assignment 290
+  - 12.21.4 Compound assignment 291
+  - 12.21.5 Event assignment 292
+- 12.22 Expression 292
+- 12.23 Constant expressions 293
+- 12.24 Boolean expressions 294
+- 13. Statements 297
+  - 13.1 General 297
+  - 13.2 End points and reachability 298
+  - 13.3 Blocks 299
+    - 13.3.1 General 299
+    - 13.3.2 Statement lists 300
+  - 13.4 The empty statement 300
+  - 13.5 Labeled statements 301
+  - 13.6 Declaration statements 302
+    - 13.6.1 General 302

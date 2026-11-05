@@ -1,0 +1,46 @@
+If namespaces imported by using namespace directives in the given namespace or compilation unit directly contain non-generic type declarations C_i with eligible extension methods M_e, then the set of those extension methods is the candidate set.
+
++   - If no candidate set is found in any enclosing namespace declaration or compilation unit, a compile-time error occurs.
++   - Otherwise, overload resolution is applied to the candidate set as described in §12.6.4. If no single best method is found, a compile-time error occurs.
++   - C is the type within which the best method is declared as an extension method.
+
+Using C as a target, the method call is then processed as a static method invocation (§12.6.6).
+
+> Note: Unlike an instance method invocation, no exception is thrown when expr evaluates to a null reference. Instead, this null value is passed to the extension method as it would be via a regular static method invocation. It is up to the extension method implementation to decide how to respond to such a call. end note
+
+The preceding rules mean that instance methods take precedence over extension methods, that extension methods available in inner namespace declarations take precedence over extension methods available in outer namespace declarations, and that extension methods declared directly in a namespace take precedence over extension methods imported into that same namespace with a using namespace directive.
+
+Example:
+
+```
+public static class E
+{
+    public static void F(this object obj, int i) { }
+    public static void F(this object obj, string s) { }
+}
+
+class A { }
+
+class B
+{
+    public void F(int i) { }
+}
+
+class C
+{
+    public void F(object obj) { }
+}
+
+class X
+{
+    static void Test(A a, B b, C c)
+    {
+        a.F(1);          // E.F(object, int)
+        a.F("hello");    // E.F(object, string)
+        b.F(1);          // B.F(int)
+        b.F("hello");    // E.F(object, string)
+        c.F(1);          // C.F(object)
+        c.F("hello");    // C.F(object)
+    }
+}
+```

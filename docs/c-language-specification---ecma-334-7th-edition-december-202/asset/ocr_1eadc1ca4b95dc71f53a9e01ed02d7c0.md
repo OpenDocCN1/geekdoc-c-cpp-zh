@@ -1,0 +1,7 @@
+and execute such programs. (The ability to have extensions implies that a conforming implementation reserves no identifiers other than those explicitly reserved in this specification.)
+
+A conforming implementation of C# shall be accompanied by a document that defines all implementation-defined characteristics, and all extensions.
+
+A conforming implementation of C# shall support the class library documented in Annex C. This library is included by reference in this specification.
+
+A conforming program is one that is acceptable to a conforming implementation. (Such a program is permitted to contain extensions or conditionally normative features.)

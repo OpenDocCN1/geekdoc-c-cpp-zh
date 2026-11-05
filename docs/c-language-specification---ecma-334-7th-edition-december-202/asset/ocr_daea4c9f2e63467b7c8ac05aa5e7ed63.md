@@ -1,0 +1,54 @@
+Values of a constrained type parameter type can be used to access the instance members implied by the constraints.
+
+Example: In the following:
+
+```
+interface IPrintable
+{
+    void Print();
+}
+```
+
+```
+class Printer<T> where T : IPrintable
+{
+    void PrintOne(T x) => x.Print();
+}
+```
+
+the methods of IPrintable can be invoked directly on x because T is constrained to always implement IPrintable.
+
+end example
+
+When a partial generic type declaration includes constraints, the constraints shall agree with all other parts that include constraints. Specifically, each part that includes constraints shall have constraints for the same set of type parameters, and for each type parameter, the sets of primary, secondary, and constructor constraints shall be equivalent. Two sets of constraints are equivalent if they contain the same members. If no part of a partial generic type specifies type parameter constraints, the type parameters are considered unconstrained.
+
+Example:
+
+```
+partial class Map<K,V>
+    where K : IComparable<K>
+    where V : IKeyProvider<K>, new()
+{
+    ...
+}
+
+partial class Map<K,V>
+    where V : IKeyProvider<K>, new()
+    where K : IComparable<K>
+{
+    ...
+}
+
+partial class Map<K,V>
+{
+    ...
+}
+```
+
+is correct because those parts that include constraints (the first two) effectively specify the same set of primary, secondary, and constructor constraints for the same set of type parameters, respectively.
+
+end example
+
+# 15.2.6 Class body
+
+The class_body of a class defines the members of that class.

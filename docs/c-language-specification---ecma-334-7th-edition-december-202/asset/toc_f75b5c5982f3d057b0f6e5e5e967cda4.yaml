@@ -1,0 +1,101 @@
+level_changes:
+- line: 54
+  before: 2
+  after: 1
+- line: 64
+  before: 2
+  after: 1
+- line: 97
+  before: 2
+  after: 1
+- line: 117
+  before: 2
+  after: 1
+- line: 154
+  before: 2
+  after: 1
+- line: 1663
+  before: 2
+  after: 1
+- line: 3295
+  before: 2
+  after: 1
+- line: 4517
+  before: 2
+  after: 1
+- line: 5584
+  before: 2
+  after: 1
+- line: 5762
+  before: 2
+  after: 1
+- line: 11942
+  before: 2
+  after: 1
+- line: 13846
+  before: 2
+  after: 1
+- line: 14719
+  before: 2
+  after: 1
+- line: 19803
+  before: 2
+  after: 1
+- line: 20355
+  before: 2
+  after: 1
+- line: 20615
+  before: 2
+  after: 1
+- line: 21769
+  before: 2
+  after: 1
+- line: 22275
+  before: 2
+  after: 1
+- line: 23035
+  before: 2
+  after: 1
+- line: 24137
+  before: 2
+  after: 1
+- line: 26842
+  before: 2
+  after: 1
+- line: 26909
+  before: 2
+  after: 1
+- line: 27532
+  before: 2
+  after: 1
+- line: 427
+  before: 2
+  after: 3
+- line: 678
+  before: 2
+  after: 3
+- line: 728
+  before: 2
+  after: 3
+- line: 947
+  before: 2
+  after: 4
+- line: 1022
+  before: 2
+  after: 4
+text_changes:
+- line: 3060
+  before: 8.3.9 Bool 类型
+  after: 8.3.9 bool 类型
+- line: 15290
+  before: 15.2.6 Class body
+  after: 15.2.6 类主体
+- line: 15300
+  before: 15.2.7 Partial declarations
+  after: 15.2.7 部分声明
+- line: 15359
+  before: 15.3 Class members
+  after: 15.3 类成员
+- line: 15361
+  before: 15.3.1 General
+  after: 15.3.1 概述

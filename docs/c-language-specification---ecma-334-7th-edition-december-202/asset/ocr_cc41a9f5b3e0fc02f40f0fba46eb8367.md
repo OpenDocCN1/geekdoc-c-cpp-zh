@@ -1,0 +1,49 @@
+# 14.3 Namespace declarations
+
+A *namespace_declaration* consists of the keyword namespace, followed by a namespace name and body, optionally followed by a semicolon.
+
+```
+namespace_declaration
+  : 'namespace' qualified_identifier namespace_body ';'?
+  ;
+
+qualified_identifier
+  : identifier ('.' identifier)*
+  ;
+
+namespace_body
+  : '{' extern_alias_directive* using_directive*
+    namespace_member_declaration* '}'
+  ;
+```
+
+A *namespace_declaration* may occur as a top-level declaration in a *compilation_unit* or as a member declaration within another *namespace_declaration*. When a *namespace_declaration* occurs as a top-level declaration in a *compilation_unit*, the namespace becomes a member of the global namespace. When a *namespace_declaration* occurs within another *namespace_declaration*, the inner namespace becomes a member of the outer namespace. In either case, the name of a namespace shall be unique within the containing namespace.
+
+Namespaces are implicitly *public* and the declaration of a namespace cannot include any access modifiers.
+
+Within a *namespace_body*, the optional *using_directives* import the names of other namespaces, types and members, allowing them to be referenced directly instead of through qualified names. The optional *namespace_member_declarations* contribute members to the declaration space of the namespace. Note that all *using_directives* must appear before any member declarations.
+
+The *qualified_identifier* of a *namespace_declaration* may be a single identifier or a sequence of identifiers separated by "." tokens. The latter form permits a program to define a nested namespace without lexically nesting several namespace declarations.
+
+*Example:*
+
+```
+namespace N1.N2
+{
+    class A {}
+    class B {}
+}
+
+is semantically equivalent to
+
+namespace N1
+{
+    namespace N2
+    {
+        class A {}
+        class B {}
+    }
+}
+```
+
+*end example*

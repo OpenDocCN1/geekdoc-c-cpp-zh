@@ -1,0 +1,177 @@
+
+二元运算符由运算符标记（+、-、*、/、%、&、|、^、<<、>>、==、!=、>、<、>= 或 <=）和两个形参的类型组成。返回类型和形参的名称不属于二元运算符签名的一部分。
+
+某些二元运算符要求成对声明。对于一对运算符中任一运算符的每个声明，都应当存在该对中另一运算符的匹配声明。如果两个运算符声明的返回类型之间以及相应参数类型之间存在恒等转换，则这两个运算符声明匹配。以下运算符要求成对声明：
+
+- 运算符 == 和运算符 !=
+- 运算符 > 和运算符 <
+- 运算符 >= 和运算符 <=
+
+## 15.10.4 转换运算符
+
+转换运算符声明引入用户定义转换（§10.5），它扩充预定义的隐式和显式转换。
+
+包含 implicit 关键字的转换运算符声明引入用户定义隐式转换。隐式转换可发生在多种情况下，包括函数成员调用、强制转换表达式和赋值。§10.2 对此作了进一步描述。
+
+包含 explicit 关键字的转换运算符声明引入用户定义显式转换。显式转换可发生在强制转换表达式中，§10.3 对此作了进一步描述。
+
+转换运算符从源类型（由转换运算符的参数类型指示）转换为目标类型（由转换运算符的返回类型指示）。
+
+对于给定的源类型 S 和目标类型 T，如果 S 或 T 是可空值类型，则令 S0 和 T0 指代其基础类型；否则，S0 和 T0 分别等于 S 和 T。仅当以下所有条件均成立时，才允许类或结构声明从源类型 S 到目标类型 T 的转换：
+
+- S0 和 T0 是不同的类型。
+- S0 或 T0 是包含该运算符声明的类或结构的实例类型。
+- S0 和 T0 都不是接口类型。
+- 除用户定义转换外，不存在从 S 到 T 或从 T 到 S 的转换。
+
+为这些规则的目的，与 S 或 T 关联的任何类型参数均被视为唯一类型，与其他类型没有继承关系，并且忽略对这些类型参数的任何约束。
+
+示例：在以下内容中：
+
+```
+class C<T> { ... }
+
+class D<T> : C<T>
+{
+    public static implicit operator C<int>(D<T> value) {...}  // Ok
+    public static implicit operator C<string>(D<T> value) {...}  // Ok
+    public static implicit operator C<T>(D<T> value) {...}  // Error
+}
+```
+
+前两个运算符声明是允许的，因为 T 与 int 和 string 分别被视为没有关系的唯一类型。然而，第三个运算符是错误的，因为 C<T> 是 D<T> 的基类。
+
+*示例结束*
+
+由第二条规则可知，转换运算符必须转换到声明该运算符的类或结构类型，或者从该类型转换。
+
+*示例：* 类或结构类型 C 可以定义从 C 到 int 以及从 int 到 C 的转换，但不能定义从 int 到 bool 的转换。*示例结束*
+
+无法直接重新定义预定义转换。因此，不允许转换运算符从 object 转换或转换为 object，因为 object 与所有其他类型之间已经存在隐式和显式转换。同样，转换的源类型和目标类型都不能是对方的基础类型，因为此时转换已经存在。然而，可以在泛型类型上声明运算符，这些运算符对于特定类型实参指定已经作为预定义转换存在的转换。
+
+*示例：*
+
+```
+struct Convertible<T>
+{
+    public static implicit operator Convertible<T>(T value) {...}
+    public static explicit operator T(Convertible<T> value) {...}
+}
+```
+
+当类型 object 被指定为 T 的类型实参时，第二个运算符声明了一个已经存在的转换（存在从任何类型到类型 object 的隐式转换，因此也存在显式转换）。
+
+*示例结束*
+
+如果两个类型之间存在预定义转换，则忽略这些类型之间的任何用户定义转换。具体而言：
+
+- 如果存在从类型 S 到类型 T 的预定义隐式转换（§10.2），则忽略从 S 到 T 的所有用户定义转换（隐式或显式）。
+- 如果存在从类型 S 到类型 T 的预定义显式转换（§10.3），则忽略从 S 到 T 的任何用户定义显式转换。此外：
+  - 如果 S 或 T 是接口类型，则忽略从 S 到 T 的用户定义隐式转换。
+  - 否则，仍考虑从 S 到 T 的用户定义隐式转换。
+
+对于除 object 之外的所有类型，上述 Convertible<T> 类型声明的运算符不会与预定义转换冲突。
+
+*示例：*
+
+```
+void F(int i, Convertible<int> n)
+{
+    i = n;                     // Error
+    i = (int)n;                // User-defined explicit conversion
+    n = i;                     // User-defined implicit conversion
+    n = (Convertible<int>)i;   // User-defined implicit conversion
+}
+```
+
+然而，对于类型 object，预定义转换在除一种情况外的所有情况下都会隐藏用户定义转换：
+
+```
+void F(object o, Convertible<object> n)
+{
+    o = n;                // Pre-defined boxing conversion
+    o = (object)n;        // Pre-defined boxing conversion
+    n = o;                // User-defined implicit conversion
+    n = (Convertible<object>)o; // Pre-defined unboxing conversion
+}
+```
+
+示例结束
+
+不允许用户定义转换从接口类型转换或转换为接口类型。特别地，此限制确保在转换为接口类型时不会发生用户定义转换，并且仅当被转换的对象实际实现指定接口类型时，到接口类型的转换才成功。
+
+转换运算符的签名由源类型和目标类型组成。（这是返回类型参与签名的唯一成员形式。）转换运算符的隐式或显式分类不属于该运算符的签名。因此，类或结构不能声明具有相同源类型和目标类型的隐式转换运算符和显式转换运算符。
+
+注意：通常，用户定义隐式转换应设计为从不引发异常且从不丢失信息。如果用户定义转换可能引发异常（例如，因为源参数超出范围）或丢失信息（例如丢弃高位），则该转换应定义为显式转换。注意结束
+
+示例：在以下代码中
+
+```
+public struct Digit
+{
+    byte value;
+
+    public Digit(byte value)
+    {
+        if (value < 0 || value > 9)
+        {
+            throw new ArgumentException();
+        }
+        this.value = value;
+    }
+
+    public static implicit operator byte(Digit d) => d.value;
+    public static explicit operator Digit(byte b) => new Digit(b);
+}
+```
+
+从 Digit 到 byte 的转换是隐式的，因为它从不引发异常或丢失信息；而从 byte 到 Digit 的转换是显式的，因为 Digit 只能表示 byte 可能值的一个子集。
+
+示例结束
+
+## 15.11 实例构造函数
+
+### 15.11.1 概述
+
+*实例构造函数*是一种成员，它实现初始化类实例所需的行为。实例构造函数使用*构造函数声明*来声明：
+
+```
+constructor_declaration
+  : attributes? constructor_modifier* constructor_declarator constructor_body
+  ;
+
+constructor_modifier
+  : 'public'
+  | 'protected'
+  | 'internal'
+  | 'private'
+  | 'extern'
+  | unsafe_modifier  // unsafe code support
+  ;
+
+constructor_declarator
+  : identifier '(' formal_parameter_list? ')' constructor_initializer?
+  ;
+
+constructor_initializer
+  : ':' 'base' '(' argument_list? ')'
+  | ':' 'this' '(' argument_list? ')'
+  ;
+
+constructor_body
+  : block
+  | '=>' expression ';'
+  | ';'
+  ;
+```
+
+*不安全修饰符*（§23.2）仅在不安全代码（§23）中可用。
+
+*构造函数声明*可以包含一组*特性*（§22）、任一允许种类的已声明*可访问性*（§15.3.6）以及 *extern*（§15.6.8）修饰符。不允许构造函数声明多次包含同一修饰符。
+
+*构造函数声明符*的*标识符*应当命名声明该实例构造函数的类。如果指定任何其他名称，则发生编译时错误。
+
+实例构造函数的可选*形参列表*遵循与方法的*形参列表*相同的规则（§15.6）。由于参数的 *this* 修饰符仅适用于扩展方法（§15.6.10），构造函数*形参列表*中的任何参数都不得包含 *this* 修饰符。形参列表定义实例构造函数的签名（§7.6），并支配重载决策（§12.6.4）在调用中选择特定实例构造函数的过程。
+
+实例构造函数*形参列表*中引用的每个类型都应当至少与构造函数本身一样可访问（§7.5.5）。
+

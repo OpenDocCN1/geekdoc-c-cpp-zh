@@ -1,0 +1,50 @@
+# 12.10.4 Remainder operator
+
+For an operation of the form x % y, binary operator overload resolution (§12.4.5) is applied to select a specific operator implementation. The operands are converted to the parameter types of the selected operator, and the type of the result is the return type of the operator.
+
+The predefined remainder operators are listed below. The operators all compute the remainder of the division between x and y.
+
++   - Integer remainder:
++   
++   ```
++   int operator %(int x, int y);
++   uint operator %(uint x, uint y);
++   long operator %(long x, long y);
++   ulong operator %(ulong x, ulong y);
++   ```
+
+The result of x % y is the value produced by x - (x / y) * y. If y is zero, a System.DivideByZeroException is thrown.
+
+If the left operand is the smallest int or long value and the right operand is -1, a System.OverflowException is thrown if and only if x / y would throw an exception.
+
++   - Floating-point remainder:
++   
++   ```
++   float operator %(float x, float y);
++   double operator %(double x, double y);
++   ```
+
+The following table lists the results of all possible combinations of nonzero finite values, zeros, infinities, and NaNs. In the table, x and y are positive finite values. z is the result of x % y and is computed as x - n * y, where n is the largest possible integer that is less than or equal to x / y. This method of computing the remainder is analogous to that used for integer operands, but differs from the IEC 60559 definition (in which n is the integer closest to x / y).
+
+| | +y | -y | +0 | -0 | +∞ | -∞ | NaN |
+|---|---|---|---|---|---|---|---|
+| +x | +z | +z | NaN | NaN | +x | +x | NaN |
+| -x | -z | -z | NaN | NaN | -x | -x | NaN |
+| +0 | +0 | +0 | NaN | NaN | +0 | +0 | NaN |
+| -0 | -0 | -0 | NaN | NaN | -0 | -0 | NaN |
+| +∞ | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
+| -∞ | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
+| NaN | NaN | NaN | NaN | NaN | NaN | NaN | NaN |
+
++   - Decimal remainder:
++   
++   ```
++   decimal operator %(decimal x, decimal y);
++   ```
+
+If the value of the right operand is zero, a System.DivideByZeroException is thrown. It is implementation-defined when a System.ArithmeticException (or a subclass thereof) is thrown. A conforming implementation shall not throw an exception for x % y in any case where x / y does not throw an exception. The scale of the result, before any rounding, is the larger of the scales of the two operands, and the sign of the result, if non-zero, is the same as that of x.
+
+Decimal remainder is equivalent to using the remainder operator of type System.Decimal.
+
+Note: These rules ensure that for all types, the result never has the opposite sign of the left operand.
+end note

@@ -1,0 +1,28 @@
+# 12.6.4 Overload resolution
+
+# 12.6.4.1 General
+
+Overload resolution is a binding-time mechanism for selecting the best function member to invoke given an argument list and a set of candidate function members. Overload resolution selects the function member to invoke in the following distinct contexts within C#:
+
++   - Invocation of a method named in an invocation_expression (§12.8.9).
++   - Invocation of an instance constructor named in an object_creation_expression (§12.8.16.2).
++   - Invocation of an indexer accessor through an element_access (§12.8.11).
++   - Invocation of a predefined or user-defined operator referenced in an expression (§12.4.4 and §12.4.5).
+
+Each of these contexts defines the set of candidate function members and the list of arguments in its own unique way. For instance, the set of candidates for a method invocation does not include methods marked override (§12.5), and methods in a base class are not candidates if any method in a derived class is applicable (§12.8.9.2).
+
+Once the candidate function members and the argument list have been identified, the selection of the best function member is the same in all cases:
+
++   - First, the set of candidate function members is reduced to those function members that are applicable with respect to the given argument list (§12.6.4.2). If this reduced set is empty, a compile-time error occurs.
++   - Then, the best function member from the set of applicable candidate function members is located. If the set contains only one function member, then that function member is the best function member. Otherwise, the best function member is the one function member that is better than all other function members with respect to the given argument list, provided that each function member is compared to all other function members using the rules in §12.6.4.3. If there is not exactly one function member that is better than all other function members, then the function member invocation is ambiguous and a binding-time error occurs.
+
+The following subclauses define the exact meanings of the terms applicable function member and better function member.
+
+# 12.6.4.2 Applicable function member
+
+A function member is said to be an applicable function member with respect to an argument list A when all of the following are true:
+
++   - Each argument in A corresponds to a parameter in the function member declaration as described in §12.6.2.2, at most one argument corresponds to each parameter, and any parameter to which no argument corresponds is an optional parameter.
++   - For each argument in A, the parameter-passing mode of the argument is identical to the parameter-passing mode of the corresponding parameter, and
++     - for a value parameter or a parameter array, an implicit conversion (§10.2) exists from the argument expression to the type of the corresponding parameter, or
++     - for a ref or out parameter, there is an identity conversion between the type of the argument expression (if any) and the type of the corresponding parameter

@@ -1,0 +1,33 @@
+```
+[DllImport("kernel32", SetLastError=true)]
+static extern bool RemoveDirectory(string name);
+
+[DllImport("kernel32", SetLastError=true)]
+static extern int GetCurrentDirectory(int bufsize, StringBuilder buf);
+
+[DllImport("kernel32", SetLastError=true)]
+static extern bool SetCurrentDirectory(string name);
+}
+```
+
+*end example*
+
+# 15.6.9 Partial methods
+
+When a method declaration includes a *partial* modifier, that method is said to be a *partial method*. Partial methods may only be declared as members of partial types (§15.2.7), and are subject to a number of restrictions.
+
+Partial methods may be defined in one part of a type declaration and implemented in another. The implementation is optional; if no part implements the partial method, the partial method declaration and all calls to it are removed from the type declaration resulting from the combination of the parts.
+
+Partial methods shall not define access modifiers; they are implicitly *private*. Their return type shall be *void*, and their parameters shall not have the *out* modifier. The identifier *partial* is recognized as a contextual keyword (§6.4.4) in a method declaration only if it appears immediately before the *void* keyword. A partial method cannot *explicitly implement interface methods*.
+
+There are two kinds of partial method declarations: If the body of the method declaration is a semicolon, the declaration is said to be a *defining partial method declaration*. If the body is other than a semicolon, the declaration is said to be an *implementing partial method declaration*. Across the parts of a type declaration, there may be only one defining partial method declaration with a given signature, and there may be only one implementing partial method declaration with a given signature. If an implementing partial method declaration is given, a corresponding defining partial method declaration shall exist, and the declarations shall match as specified in the following:
+
++   - The declarations shall have the same modifiers (although not necessarily in the same order), method name, number of type parameters and number of parameters.
++   - Corresponding parameters in the declarations shall have the same modifiers (although not necessarily in the same order) and the same types (modulo differences in type parameter names).
++   - Corresponding type parameters in the declarations shall have the same constraints (modulo differences in type parameter names).
+
+An implementing partial method declaration can appear in the same part as the corresponding defining partial method declaration.
+
+Only a defining partial method participates in overload resolution. Thus, whether or not an implementing declaration is given, invocation expressions may resolve to invocations of the partial method. Because a partial method always returns *void*, such invocation expressions will always be expression statements. Furthermore, because a partial method is *implicitly private*, such statements will always occur within one of the parts of the type declaration within which the partial method is declared.
+
+*Note:* The definition of matching defining and implementing partial method declarations does not require parameter names to match. This can produce *surprising*, albeit *well defined*, behaviour when

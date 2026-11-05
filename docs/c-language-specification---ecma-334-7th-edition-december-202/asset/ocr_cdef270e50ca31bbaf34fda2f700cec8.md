@@ -1,0 +1,53 @@
+```
+extern alias X;
+
+using R1 = X::N; // OK
+using R2 = N1; // OK
+using R3 = N1.N2; // OK
+using R4 = R2.N2; // Error, R2 unknown
+}
+```
+
+the last using_alias_directive results in a compile-time error because it is not affected by the previous using_alias_directive. The first using_alias_directive does not result in an error since the scope of the extern alias X includes the using_alias_directive.
+
+*end example*
+
+A using_alias_directive can create an alias for any namespace or type, including the namespace within which it appears and any namespace or type nested within that namespace.
+
+Accessing a namespace or type through an alias yields exactly the same result as accessing that namespace or type through its declared name.
+
+*Example: Given*
+
+```
+namespace N1.N2
+{
+    class A {}
+}
+
+namespace N3
+{
+    using R1 = N1;
+    using R2 = N1.N2;
+
+    class B
+    {
+        N1.N2.A a; // refers to N1.N2.A
+        R1.N2.A b; // refers to N1.N2.A
+        R2.A c; // refers to N1.N2.A
+    }
+}
+```
+
+the names N1.N2.A, R1.N2.A, and R2.A are equivalent and all refer to the class declaration whose fully qualified name is N1.N2.A.
+
+*end example*
+
+Although each part of a partial type (§15.2.7) is declared within the same namespace, the parts are typically written within different namespace declarations. Thus, different extern_alias_directives and using_directives can be present for each part. When interpreting simple names (§12.8.4) within one part, only the extern_alias_directives and using_directives of the namespace bodies and compilation unit enclosing that part are considered. This may result in the same identifier having different meanings in different parts.
+
+*Example:*
+
+```
+namespace N
+{
+    using List = System.Collections.ArrayList;
+```

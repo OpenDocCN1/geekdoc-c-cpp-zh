@@ -398,6 +398,7 @@
 +   [C 语言编程入门指南](docs/c-language-programming/README.md)
 +   [C# 语言规范 - ECMA-334，第 5 版，2017 年 12 月](docs/c-language-specification---ecma-334-5th-edition-december-201/README.md)
 +   [C# 语言规范——ECMA-334，第 6 版，2022 年 6 月](docs/c-language-specification---ecma-334-6th-edition-june-2022/README.md)
++   [C# 语言规范 - ECMA-334，第7版，2023年12月](docs/c-language-specification---ecma-334-7th-edition-december-202/README.md)
 +   [C++：一天学会 C++！快速掌握 C++ 基础的终极速课程 (C++、C++ 课程、C++ 开发、C++ 书籍、初学者 C++)](docs/c-learn-c-in-a-day---the-ultimate-crash-course-to-learning-t/README.md)
 +   [C 编程语言学习：初学者指南步步进阶（初学者的 C 编程实用指南：快速学习编码）](docs/c-learn-c-programming-language-the-absolute-beginner-guide-s/README.md)
 +   [C++ 低延迟：多线程与热点优化](docs/c-low-latency-multithreading-and-hotpath-optimizations/README.md)
