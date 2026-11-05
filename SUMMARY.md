@@ -342,6 +342,7 @@
 +   [C# 入学者指南：战术指南 - 通过编码学习 CSharp](docs/c-for-beginners-the-tactical-guidebook---learn-csharp-by-cod/README.md)
 +   [C++ 初学者指南：全面分步学习 C++ 指南](docs/c-for-beginners-your-comprehensive-step-by-step-guide-to-lea/README.md)
 +   [C++ 并发与并行编程指南](docs/c-for-concurrency-and-parallel-programming/README.md)
++   [数据处理的 C#](docs/c-for-data-processing/README.md)
 +   [C++ 入门指南，第6版](docs/c-for-dummies-6th-edition/README.md)
 +   [C++ 入学者指南，第 7 版](docs/c-for-dummies-7th-edition/README.md)
 +   [C++ 入学者指南](docs/c-for-dummies-for-dummies-computers/README.md)
