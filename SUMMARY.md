@@ -409,6 +409,7 @@
 +   [C++ 多线程秘籍](docs/c-multithreading-cookbook/README.md)
 +   [C 笔记：C 编程语言指南](docs/c-notes-a-guide-to-the-c-programming-language/README.md)
 +   [C 语言专业指南指南](docs/c-notes-for-professionals/README.md)
++   [专业人士的 C# 笔记：700 多页专业提示与技巧](docs/c-notes-for-professionals-700-pages-of-professional-hints-an/README.md)
 +   [C++ 数据结构第 6 版](docs/c-plus-data-structures-6th-edition/README.md)
 +   [C++ 入门指南](docs/c-plus-plus-primer/README.md)
 +   [C++ 模板：完全指南](docs/c-plus-plus-templates-the-complete-guide/README.md)

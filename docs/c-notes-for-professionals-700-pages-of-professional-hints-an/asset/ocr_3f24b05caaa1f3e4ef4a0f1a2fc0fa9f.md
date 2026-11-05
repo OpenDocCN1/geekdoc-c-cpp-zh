@@ -1,0 +1,1 @@
+Note: event handlers are the only place where async void should be used (because you can't await an async void method).

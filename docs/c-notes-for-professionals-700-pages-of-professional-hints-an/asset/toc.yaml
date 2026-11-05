@@ -1,0 +1,89 @@
+level_changes:
+- line: 719
+  before: 2
+  after: 3
+- line: 762
+  before: 2
+  after: 3
+- line: 825
+  before: 2
+  after: 3
+- line: 878
+  before: 2
+  after: 3
+- line: 956
+  before: 2
+  after: 3
+- line: 974
+  before: 2
+  after: 3
+- line: 989
+  before: 2
+  after: 3
+- line: 1012
+  before: 2
+  after: 3
+- line: 1019
+  before: 2
+  after: 3
+- line: 1053
+  before: 2
+  after: 3
+- line: 1069
+  before: 2
+  after: 3
+- line: 1085
+  before: 2
+  after: 3
+- line: 1141
+  before: 2
+  after: 3
+- line: 1150
+  before: 2
+  after: 3
+- line: 1158
+  before: 2
+  after: 3
+- line: 1191
+  before: 2
+  after: 3
+- line: 1212
+  before: 2
+  after: 3
+- line: 1234
+  before: 2
+  after: 3
+- line: 1245
+  before: 2
+  after: 3
+- line: 1250
+  before: 2
+  after: 3
+- line: 1255
+  before: 2
+  after: 3
+text_changes:
+- line: 1545
+  before: 6.4 节：IEqualityComparer 中的 Equals 和 GetHashCode
+  after: 第 6.4 节：IEqualityComparer 中的 Equals 和 GetHashCode
+- line: 1592
+  before: 7.1 节：基本用法
+  after: 第 7.1 节：基本用法
+- line: 1624
+  before: 7.2 节：Null 穿透与链式调用
+  after: 第 7.2 节：Null 穿透与链式调用
+- line: 1688
+  before: 7.3 节：带方法调用的 null 合并运算符
+  after: 第 7.3 节：带方法调用的 null 合并运算符
+- line: 1704
+  before: 7.4 节：使用现有对象或创建新对象
+  after: 第 7.4 节：使用现有对象或创建新对象
+- line: 1713
+  before: 7.5 节：使用 null 合并运算符延迟初始化属性
+  after: 第 7.5 节：使用 null 合并运算符延迟初始化属性
+- line: 1752
+  before: 8.1 节：Null 条件运算符
+  after: 第 8.1 节：Null 条件运算符
+- line: 1803
+  before: 8.2 节：Null 条件索引
+  after: 第 8.2 节：Null 条件索引
