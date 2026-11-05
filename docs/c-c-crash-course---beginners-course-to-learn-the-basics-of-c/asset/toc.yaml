@@ -1,0 +1,110 @@
+level_changes:
+- line: 136
+  before: 2
+  after: 3
+- line: 140
+  before: 2
+  after: 3
+- line: 166
+  before: 2
+  after: 3
+- line: 194
+  before: 2
+  after: 3
+- line: 221
+  before: 2
+  after: 3
+- line: 244
+  before: 2
+  after: 3
+- line: 250
+  before: 2
+  after: 3
+- line: 254
+  before: 2
+  after: 3
+- line: 262
+  before: 2
+  after: 3
+- line: 276
+  before: 2
+  after: 3
+- line: 280
+  before: 2
+  after: 3
+- line: 284
+  before: 2
+  after: 3
+- line: 288
+  before: 2
+  after: 3
+- line: 295
+  before: 2
+  after: 3
+- line: 301
+  before: 2
+  after: 3
+- line: 314
+  before: 2
+  after: 3
+- line: 322
+  before: 2
+  after: 3
+- line: 517
+  before: 2
+  after: 3
+- line: 1009
+  before: 2
+  after: 3
+- line: 1017
+  before: 2
+  after: 3
+- line: 1081
+  before: 2
+  after: 3
+- line: 1102
+  before: 2
+  after: 3
+- line: 1191
+  before: 2
+  after: 3
+- line: 1391
+  before: 2
+  after: 3
+- line: 1551
+  before: 2
+  after: 3
+- line: 1559
+  before: 2
+  after: 3
+- line: 1597
+  before: 2
+  after: 3
+- line: 1607
+  before: 2
+  after: 3
+- line: 1639
+  before: 2
+  after: 3
+text_changes:
+- line: 517
+  before: 运算符 – 基础
+  after: 第 3 章：运算符
+- line: 715
+  before: 第5章：控制台
+  after: 第 5 章：控制台
+- line: 769
+  before: 第5章：控制台
+  after: 第 5 章：控制台
+- line: 823
+  before: 第5章：控制台
+  after: 第 5 章：控制台
+- line: 877
+  before: 第5章：控制台
+  after: 第 5 章：控制台
+- line: 931
+  before: 第5章：控制台
+  after: 第 5 章：控制台
+- line: 1307
+  before: 第7章：循环语句
+  after: 第 7 章：循环语句
