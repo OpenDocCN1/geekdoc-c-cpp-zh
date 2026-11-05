@@ -1,0 +1,31 @@
++   - The definite assignment state of v at the beginning of expr is the same as the definite assignment state of v at the beginning of stmt.
++   - If v is an output parameter, then it must be definitely assigned either
++     - After expr or
++     - At the end of the finally block of a try-finally or try-catch-finally that encloses the return statement.
+
+For a statement stmt of the form:
+
+```
+return ;
+```
+
++   - If v is an output parameter, then it must be definitely assigned either
++     - Before stmt or
++     - At the end of the finally block of a try-finally or try-catch-finally that encloses the return statement.
+
+# 5.3.3.13 try-catch Statements
+
+> > **BILL WAGNER** Starting here, you see how any of the nonstructured statements (e.g., throw, catch, goto, finally) can complicate both the compiler’s analysis and your own understanding. Be careful how you use these statements in your regular logic. The try/finally statement is a simplified special case, but the general cases can greatly decrease program readability.
+
+For a statement stmt of the form:
+
+```
+try try-block
+catch(...) catch-block-1
+...
+catch(...) catch-block-n
+```
+
++   - The definite assignment state of v at the beginning of try-block is the same as the definite assignment state of v at the beginning of stmt.
++   - The definite assignment state of v at the beginning of catch-block-i (for any i) is the same as the definite assignment state of v at the beginning of stmt.
++   - The definite assignment state of v at the end point of stmt is definitely assigned if (and only if) v is definitely assigned at the end point of try-block and every catch-block-i (for every i from 1 to n).

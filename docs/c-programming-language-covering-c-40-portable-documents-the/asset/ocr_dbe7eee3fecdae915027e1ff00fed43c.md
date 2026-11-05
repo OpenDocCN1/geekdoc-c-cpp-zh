@@ -1,0 +1,34 @@
+# hexadecimal-integer-literal:
+
+0x hex-digits integer-type-suffix_opt
+0X hex-digits integer-type-suffix_opt
+
+# hex-digits:
+
+hex-digit
+hex-digits hex-digit
+
+# hex-digit: one of
+
+0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f
+
+> **ERIC LIPPERT** C# does not support octal literals, for two reasons. First, hardly anyone uses octal literals these days. Second, if C# supported octal in the standard “leading zero means octal” format, then it would be a potential source of errors. Consider this code:
+> 
+> `FlightNumber = 0541;`
+> 
+> Clearly this expression is intended as a decimal literal, not an octal literal.
+
+The type of an integer literal is determined as follows:
+
++   - If the literal has no suffix, it has the first of these types in which its value can be represented: int, uint, long, ulong.
++   - If the literal is suffixed by U or u, it has the first of these types in which its value can be represented: uint, ulong.
++   - If the literal is suffixed by L or l, it has the first of these types in which its value can be represented: long, ulong.
++   - If the literal is suffixed by UL, uL, uL, uL, LU, Lu, 1U, or 1u, it is of type ulong.
+
+If the value represented by an integer literal is outside the range of the ulong type, a compile-time error occurs.
+
+As a matter of style, it is suggested that “L” be used instead of “l” when writing literals of type long, since it is easy to confuse the letter “l” with the digit “1”.
+
+To permit the smallest possible int and long values to be written as decimal integer literals, the following two rules exist:
+
++   - When a decimal-integer-literal with the value 2147483648 (2^31) and no integer-type-suffix appears as the token immediately following a unary minus operator token (§7.7.2), the

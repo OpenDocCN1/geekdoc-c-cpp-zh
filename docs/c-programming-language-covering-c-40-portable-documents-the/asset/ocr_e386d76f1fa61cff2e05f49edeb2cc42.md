@@ -1,0 +1,42 @@
+warning-action:
+  disable
+  restore
+
+warning-list:
+  decimal-digits
+  warning-list whitespace_opt , whitespace_opt decimal-digits
+
+# B.2 Syntactic Grammar
+
+# B.2.1 Basic Concepts
+
+namespace-name:
+  namespace-or-type-name
+
+type-name:
+  namespace-or-type-name
+
+namespace-or-type-name:
+  identifier type-argument-list_opt
+  namespace-or-type-name . identifier type-argument-list_opt
+  qualified-alias-member
+
+# B.2.2 Types
+
+type:
+  value-type
+  reference-type
+  type-parameter
+
+value-type:
+  struct-type
+  enum-type
+
+struct-type:
+  type-name
+  simple-type
+  nullable-type
+
+simple-type:
+  numeric-type
+  bool

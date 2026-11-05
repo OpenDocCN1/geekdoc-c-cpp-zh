@@ -1,0 +1,56 @@
+# A.2.3 <example>
+
+This tag allows example code within a comment to specify how a method or other library member may be used. Ordinarily, this would also involve use of the tag <code> (§A.2.2).
+
+Syntax:
+
+```
+<example>description</example>
+```
+
+Example:
+
+See <code> (§A.2.2) for an example.
+
+# A.2.4 <exception>
+
+This tag provides a way to document the exceptions a method can throw.
+
+Syntax:
+
+```
+<exception cref="member">description</exception>
+```
+
+where
+
+```
+cref="member"
+```
+
+The name of a member. The documentation generator checks that the given member exists and translates member to the canonical element name in the documentation file.
+
+description
+
+A description of the circumstances in which the exception is thrown.
+
+Example:
+
+```
+public class DataBaseOperations
+{
+    // <exception cref="MasterFileFormatCorruptException"></exception>
+    // <exception cref="MasterFileLockedOpenException"></exception>
+    public static void ReadRecord(int flag) {
+        if (flag == 1)
+            throw new MasterFileFormatCorruptException();
+        else if (flag == 2)
+            throw new MasterFileLockedOpenException();
+        // ...
+    }
+}
+```
+
+# A.2.5 <include>
+
+This tag allows including information from an XML document that is external to the source code file. The external file must be a well-formed XML document, and an XPath expression is applied to that document to specify which XML from that document to include. The <include> tag is then replaced with the selected XML from the external document.

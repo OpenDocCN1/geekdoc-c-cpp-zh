@@ -1,0 +1,47 @@
+The following example demonstrates how the overriding rules work for generic classes:
+
+```
+abstract class C<T>
+{
+    public virtual T F() {...}
+    public virtual C<T> G() {...}
+    public virtual void H(C<T> x) {...}
+}
+
+class D: C<string>
+{
+    public override string F() {...}      // Okay
+    public override C<string> G() {...}   // Okay
+    public override void H(C<T> x) {...}  // Error: should be C<string>
+}
+
+class E<T,U>: C<U>
+{
+    public override U F() {...}           // Okay
+    public override C<U> G() {...}        // Okay
+    public override void H(C<T> x) {...}  // Error: should be C<U>
+}
+```
+
+An override declaration can access the overridden base method using a base-access (§7.6.8). In the example
+
+```
+class A
+{
+    int x;
+    public virtual void PrintFields() {
+        Console.WriteLine("x = {0}", x);
+    }
+}
+
+class B: A
+{
+    int y;
+    public override void PrintFields() {
+        base.PrintFields();
+        Console.WriteLine("y = {0}", y);
+    }
+}
+```
+
+the base.PrintFields() invocation in B invokes the PrintFields method declared in A. A base-access disables the virtual invocation mechanism and simply treats the base method as a non-virtual method. Had the invocation in B been written ((A)this).PrintFields(), it

@@ -1,0 +1,41 @@
+Otherwise, when ResourceType is a nullable value type or a reference type other than dynamic, the expansion is
+
+```
+{
+    ResourceType resource = expression;
+    try {
+        statement;
+    }
+    finally {
+        if (resource != null) ((IDisposable)resource).Dispose();
+    }
+}
+```
+
+Otherwise, when ResourceType is dynamic, the expansion is
+
+```
+{
+    ResourceType resource = expression;
+    IDisposable d = (IDisposable)resource;
+    try {
+        statement;
+    }
+    finally {
+        if (d != null) d.Dispose();
+    }
+}
+```
+
+In either expansion, the resource variable is read-only in the embedded statement, and the d variable is inaccessible in, and invisible to, the embedded statement.
+
+> **PETER SESTOFT** Thanks to the above rule, the using statement could also be (ab) used to declare read-only local variables, in this style:
+> 
+> ```csharp
+> using (MyClass v = ...)
+> using (MyStruct s = ...) {
+> ...
+> }
+> ```
+> 
+> In fact, this is the only way to declare an immutable local variable in C#, but it is ugly and strange. Moreover, it works only for types MyClass and MyStruct that implement interface IDisposable, and not for int and string, for example. What is perhaps puzzling from a language design point of view is that unlike a read-only field (§10.5.2 and §7.6.4) of struct type, an immutable resource variable s of struct type MyStruct is treated like a variable, not a value. Thus a method call s.SetX() acts on the struct stored in s, not on a copy of it. All in all, this behavior shows that the machinery for declaring immutable local variables and parameters in C# exists, but alas not in a usable form.

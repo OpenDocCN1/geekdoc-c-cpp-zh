@@ -1,0 +1,199 @@
+
+```
+indexer-declaration:
+    attributes_opt indexer-modifiers_opt indexer-declarator { accessor-declarations }
+```
+
+```
+indexer-modifiers:
+    indexer-modifier
+    indexer-modifiers indexer-modifier
+```
+
+```
+indexer-modifier:
+    new
+    public
+    protected
+    internal
+    private
+    virtual
+    sealed
+    override
+    abstract
+    extern
+```
+
+```
+indexer-declarator:
+    type this [ formal-parameter-list ]
+    type interface-type . this [ formal-parameter-list ]
+```
+
+An indexer-declaration may include a set of attributes (§17), a valid combination of the four access modifiers (§10.3.5), and the new (§10.3.4), virtual (§10.6.3), override (§10.6.4), sealed (§10.6.5), abstract (§10.6.6), and extern (§10.6.7) modifiers.
+
+Indexer declarations are subject to the same rules as method declarations (§10.6) with regard to valid combinations of modifiers, with the one exception being that the static modifier is not permitted on an indexer declaration.
+
+The modifiers virtual, override, and abstract are mutually exclusive except in one case. The abstract and override modifiers may be used together so that an abstract indexer can override a virtual one.
+
+The type of an indexer declaration specifies the element type of the indexer introduced by the declaration. Unless the indexer is an explicit interface member implementation, the type is followed by the keyword this. For an explicit interface member implementation, the type is followed by an interface-type, a ".", and the keyword this. Unlike other members, indexers do not have user-defined names.
+
+The formal-parameter-list specifies the parameters of the indexer. The formal parameter list of an indexer corresponds to that of a method (§10.6.1), except that at least one parameter must be specified, and that the ref and out parameter modifiers are not permitted.
+
+The type of an indexer and each of the types referenced in the formal-parameter-list must be at least as accessible as the indexer itself (§3.5.4).
+
+The accessor-declarations (§10.7.2), which must be enclosed in “{” and “}” tokens, declare the accessors of the indexer. The accessors specify the executable statements associated with reading and writing indexer elements.
+
+Even though the syntax for accessing an indexer element is the same as that for an array element, an indexer element is not classified as a variable. Thus it is not possible to pass an indexer element as a ref or out argument.
+
+The formal parameter list of an indexer defines the signature (§3.6) of the indexer. Specifically, the signature of an indexer consists of the number and types of its formal parameters. The element type and names of the formal parameters are not part of an indexer’s signature.
+
+The signature of an indexer must differ from the signatures of all other indexers declared in the same class.
+
+Indexers and properties are very similar in concept, but differ in the following ways:
+
+- A property is identified by its name, whereas an indexer is identified by its signature.
+- A property is accessed through a simple-name (§7.6.2) or a member-access (§7.6.4), whereas an indexer element is accessed through an element-access (§7.6.6.2).
+- A property can be a static member, whereas an indexer is always an instance member.
+- A get accessor of a property corresponds to a method with no parameters, whereas a get accessor of an indexer corresponds to a method with the same formal parameter list as the indexer.
+- A set accessor of a property corresponds to a method with a single parameter named value, whereas a set accessor of an indexer corresponds to a method with the same formal parameter list as the indexer, plus an additional parameter named value.
+- It is a compile-time error for an indexer accessor to declare a local variable with the same name as an indexer parameter.
+- In an overriding property declaration, the inherited property is accessed using the syntax base.P, where P is the property name. In an overriding indexer declaration, the inherited indexer is accessed using the syntax base[E], where E is a comma-separated list of expressions.
+
+Aside from these differences, all rules defined in §10.7.2 and §10.7.3 apply to indexer accessors as well as to property accessors.
+
+> **JON SKEET** I find it odd that events can be static (but almost never are) but indexers can't. For example, it might have made sense for Encoding.GetEncoding(string) to be present as a static indexer. Indeed, I'd expect static indexers to primarily act as factory members for the type they're declared in. A method is a perfectly adequate alternative in most places, but the prohibition is a little strange.
+
+When an indexer declaration includes an extern modifier, the indexer is said to be an external indexer. Because an external indexer declaration provides no actual implementation, each of its accessor-declarations consists of a semicolon.
+
+The example below declares a BitArray class that implements an indexer for accessing the individual bits in the bit array.
+
+```
+using System;
+class BitArray
+{
+    int[] bits;
+    int length;
+    public BitArray(int length) {
+        if (length < 0) throw new ArgumentException();
+        bits = new int[((length - 1) >> 5) + 1];
+        this.length = length;
+    }
+    public int Length {
+        get { return length; }
+    }
+    public bool this[int index] {
+        get {
+            if (index < 0 || index >= length) {
+                throw new IndexOutOfRangeException();
+            }
+            return (bits[index >> 5] & 1 << index) != 0;
+        }
+        set {
+            if (index < 0 || index >= length) {
+                throw new IndexOutOfRangeException();
+            }
+            if (value) {
+                bits[index >> 5] |= 1 << index;
+            } else {
+                bits[index >> 5] &= ~(1 << index);
+            }
+        }
+    }
+}
+```
+
+An instance of the BitArray class consumes substantially less memory than a corresponding bool[] (since each value of the former occupies only one bit instead of the latter’s one byte), but it permits the same operations as a bool[].
+
+The following CountPrimes class uses a BitArray and the classical “sieve” algorithm to compute the number of primes between 1 and a given maximum:
+
+```csharp
+class CountPrimes
+{
+    static int Count(int max) {
+        BitArray flags = new BitArray(max + 1);
+        int count = 1;
+        for (int i = 2; i <= max; i++) {
+            if (!flags[i]) {
+                for (int j = i * 2; j <= max; j += i) flags[j] = true;
+                count++;
+            }
+        }
+        return count;
+    }
+
+    static void Main(string[] args) {
+        int max = int.Parse(args[0]);
+        int count = Count(max);
+        Console.WriteLine("Found {0} primes between 1 and {1}", count, max);
+    }
+}
+```
+
+Note that the syntax for accessing elements of the BitArray is precisely the same as for a bool[].
+
+The following example shows a 26 × 10 grid class that has an indexer with two parameters. The first parameter is required to be an uppercase or lowercase letter in the range A–Z, and the second is required to be an integer in the range 0–9.
+
+```csharp
+using System;
+
+class Grid
+{
+    const int NumRows = 26;
+    const int NumCols = 10;
+
+    int[,] cells = new int[NumRows, NumCols];
+
+    public int this[char c, int col] {
+        get {
+            c = Char.ToUpper(c);
+            if (c < 'A' || c > 'Z') {
+                throw new ArgumentException();
+            }
+            if (col < 0 || col >= NumCols) {
+                throw new IndexOutOfRangeException();
+            }
+            return cells[c - 'A', col];
+        }
+        set {
+            c = Char.ToUpper(c);
+            if (c < 'A' || c > 'Z') {
+                throw new ArgumentException();
+            }
+            if (col < 0 || col >= NumCols) {
+                throw new IndexOutOfRangeException();
+            }
+            cells[c - 'A', col] = value;
+        }
+    }
+}
+```
+
+### 10.9.1 Indexer Overloading
+
+The indexer overload resolution rules are described in §7.5.2.
+
+## 10.10 Operators
+
+An *operator* is a member that defines the meaning of an expression operator that can be applied to instances of the class. Operators are declared using *operator-declarations*:
+
+```
+~~~
+operator-declaration:
+    attributes_opt operator-modifiers operator-declarator operator-body
+
+operator-modifiers:
+    operator-modifier
+    operator-modifiers operator-modifier
+
+operator-modifier:
+    public
+    static
+    extern
+
+operator-declarator:
+    unary-operator-declarator
+    binary-operator-declarator
+    conversion-operator-declarator
+~~~
+```

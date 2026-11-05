@@ -1,0 +1,41 @@
+# #### 7.5.5.1 Invocations on Boxed Instances
+
+A function member implemented in a *value-type* can be invoked through a boxed instance of that *value-type* in the following situations:
+
++   - When the function member is an override of a method inherited from type object and is invoked through an instance expression of type object.
++   - When the function member is an implementation of an interface function member and is invoked through an instance expression of an *interface-type*.
++   - When the function member is invoked through a delegate.
+
+In these situations, the boxed instance is considered to contain a variable of the *value-type*, and this variable becomes the variable referenced by *this* within the function member invocation. In particular, when a function member is invoked on a boxed instance, it is possible for the function member to modify the value contained in the boxed instance.
+
+# ## 7.6 Primary Expressions
+
+Primary expressions include the simplest forms of expressions.
+
+```
+```
+primary-expression:
+    primary-no-array-creation-expression
+    array-creation-expression
+
+primary-no-array-creation-expression:
+    literal
+    simple-name
+    parenthesized-expression
+    member-access
+    invocation-expression
+    element-access
+    this-access
+    base-access
+    post-increment-expression
+    post-decrement-expression
+    object-creation-expression
+    delegate-creation-expression
+    anonymous-object-creation-expression
+    typeof-expression
+    checked-expression
+    unchecked-expression
+    default-value-expression
+    anonymous-method-expression
+```
+```

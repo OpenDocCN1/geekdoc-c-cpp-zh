@@ -1,0 +1,32 @@
+A *non-nullable value type*, conversely, is any value type other than `System.Nullable<T>` and its shorthand `T?` (for any `T`), plus any type parameter that is constrained to be a non-nullable value type (that is, any type parameter with a `struct` constraint). The `System.Nullable<T>` type specifies the value type constraint for `T` (§10.1.5), which means that the underlying type of a nullable type can be any non-nullable value type. The underlying type of a nullable type cannot be a nullable type or a reference type. For example, `int??` and `string?` are invalid types.
+
+An instance of a nullable type `T?` has two public read-only properties:
+
++   - A `HasValue` property of type `bool`
++   - A `Value` property of type `T`
+
+An instance for which `HasValue` is true is said to be non-null. A non-null instance contains a known value and `Value` returns that value.
+
+An instance for which `HasValue` is false is said to be null. A null instance has an undefined value. Attempting to read the `Value` of a null instance causes a `System.InvalidOperationException` to be thrown. The process of accessing the `Value` property of a nullable instance is referred to as *unwrapping*.
+
+In addition to the default constructor, every nullable type `T?` has a public constructor that takes a single argument of type `T`. Given a value `x` of type `T`, a constructor invocation of the form
+
+```
+    new T?(x)
+```
+
+creates a non-null instance of `T?` for which the `Value` property is `x`. The process of creating a non-null instance of a nullable type for a given value is referred to as *wrapping*.
+
+Implicit conversions are available from the `null` literal to `T?` (§6.1.5) and from `T` to `T?` (§6.1.4).
+
+# ## 4.2 Reference Types
+
+A reference type is a class type, an interface type, an array type, or a delegate type.
+
+```
+    reference-type:
+        class-type
+        interface-type
+        array-type
+        delegate-type
+```

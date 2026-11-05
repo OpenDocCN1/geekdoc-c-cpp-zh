@@ -1,0 +1,43 @@
+# 8.9.5 The throw Statement
+
+The throw statement throws an exception.
+
+*throw-statement:*
+
+    *throw expression<sub>opt</sub> ;*
+
+A throw statement with an expression throws the value produced by evaluating the expression. The expression must denote a value of the class type System.Exception, of a class type that derives from System.Exception or of a type parameter type that has System.Exception (or a subclass thereof) as its effective base class. If evaluation of the expression produces null, a System.NullReferenceException is thrown instead.
+
+> > **PETER SESTOFT**  
+> > For this reason, an exception thrown in C# is never null and, therefore, the try-catch matching of an exception (on its class) described in §8.10 makes sense. In fact, the .NET/CLI intermediate language instruction called throw behaves like the C# throw statement in this respect. Thus, even if the exception was thrown by code written in another .NET/CLI language, it would be non-null when handled by the try-catch statement.
+
+A throw statement with no expression can be used only in a catch block, in which case that statement rethrows the exception that is currently being handled by that catch block.
+
+> > **VLADIMIR RESHETNIKOV**  
+> > A throw statement with no expression is not allowed in a finally block or anonymous function that is nested inside the nearest enclosing catch block:
+
+```
+```csharp
+delegate void F();
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+        }
+        catch
+        {
+            F f = () => { throw; }; // Error CS0156
+            try
+            {
+            }
+            finally
+            {
+                throw;        // Error CS0724
+            }
+        }
+    }
+}
+```
+```

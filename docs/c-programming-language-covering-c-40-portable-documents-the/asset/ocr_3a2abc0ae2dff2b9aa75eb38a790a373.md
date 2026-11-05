@@ -1,0 +1,88 @@
+Events, 4
+access to, 253
+accessors, 564–565
+assignment operator, 394–395
+declarations, 559–562
+example, 42
+field-like, 562–564
+in ID string format, 754, 758–759
+instance and static, 565
+interface, 642
+member names reserved for, 506
+overview, 47–49
+Exact parameter type inferences, 264
+<example> tag, 745
+Exception class, 436, 438, 682–684
+Exception propagation, 437
+<exception> tag, 745
+Exception variables, 438
+Exceptions
+causes, 683
+classes for, 685–686
+for delegates, 677
+handling, 1, 684–685
+overview, 681–682
+throwing, 436–437
+try statement for, 438–443
+Exclamation points (!)
+comparisons, 345
+definite assignment rules, 190
+logical negation, 327
+operator !=, 49
+pointers, 726
+preprocessing expressions, 87
+Execution
+instance constructors, 582–584
+order of, 137–138
+Exiting blocks, 430
+Exogenous exceptions, 686
+Expanded form function members, 272
+Explicit base interfaces, 637
+Explicit conversions, 204–205
+dynamic, 210
+enumerations, 207
+nullable types, 207–208
+numeric, 205–207
+
+reference, 208–210
+standard, 214
+type parameters, 211–212
+unboxing, 210
+user-defined, 213, 218–219
+Explicit interface member implementations, 57, 647–650
+explicit keyword, 576–578
+Explicit parameter type inferences, 264
+Expression class, 35–37
+Expression statements, 17, 179, 412–413
+Expressions, 231
+anonymous function. See Anonymous functions
+binding, 234–237
+boolean, 397
+cast, 330–331
+classifications, 231–234
+constant, 203, 395–397
+constituent, 237
+definite assignment rules, 186–191
+dynamic, 166
+fixed-size buffers in, 735–736
+function members
+argument lists, 254–259
+categories, 250–254
+invocation, 276–278
+overload resolution, 270–275
+type inference, 259–270
+member lookup, 247–250
+operators for, 238
+arithmetic. See Arithmetic operators
+assignment, 389–395
+logical, 355–357
+numeric promotions, 244–246
+overloading, 240–243
+precedence and associativity, 238–240
+relational, 345
+shift, 343–344
+unary, 326–331
+overview, 13–16
+pointers in, 720–727
+preprocessing, 87–88
+primary. See Primary expressions

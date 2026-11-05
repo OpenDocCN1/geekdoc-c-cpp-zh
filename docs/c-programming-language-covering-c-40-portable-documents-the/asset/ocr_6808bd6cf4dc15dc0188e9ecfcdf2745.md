@@ -1,0 +1,35 @@
+```
+public static int Count {
+    get { return count; }
+}
+}
+```
+
+```
+class Application
+{
+    static void Main() {
+        C<int> x1 = new C<int>();
+        Console.WriteLine(C<int>.Count);        // Prints 1
+        C<double> x2 = new C<double>();
+        Console.WriteLine(C<int>.Count);        // Prints 1
+        C<int> x3 = new C<int>();
+        Console.WriteLine(C<int>.Count);        // Prints 2
+    }
+}
+```
+
+An instance field belongs to an instance. Specifically, every instance of a class contains a separate set of all the instance fields of that class.
+
+When a field is referenced in a member-access (§7.6.4) of the form E.M, if M is a static field, E must denote a type containing M; if M is an instance field, E must denote an instance of a type containing M.
+
+The differences between static and instance members are discussed further in §10.3.7.
+
+# 10.5.2 Read-only Fields
+
+When a field-declaration includes a readonly modifier, the fields introduced by the declaration are read-only fields. Direct assignments to readonly fields can occur only as part of that declaration or in an instance constructor or static constructor in the same class. (A readonly field can be assigned to multiple times in these contexts.) Specifically, direct assignments to a readonly field are permitted only in the following contexts:
+
++   * In the variable-declarator that introduces the field (by including a variable-initializer in the declaration).
++   * For an instance field, in the instance constructors of the class that contains the field declaration; for a static field, in the static constructor of the class that contains the field declaration. These are also the only contexts in which it is valid to pass a readonly field as an out or ref parameter.
+
+Attempting to assign to a readonly field or pass it as an out or ref parameter in any other context is a compile-time error.

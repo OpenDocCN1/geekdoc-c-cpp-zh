@@ -1,0 +1,15 @@
+> **ERIC LIPPERT** The type dynamic is a bizarre type, but it is important to note that, from the compiler's perspective, it is a type. Unlike with var, you can use it in most of the situations that call for a type: return types, parameter types, type arguments, and so on.
+
+> **PETER SESTOFT** Actually, var is a reserved word, not a compile-time type, whereas dynamic is a compile-time type. The var keyword tells the compiler, "Please infer the compile-time type of this variable from its initializer expression." The dynamic type essentially tells the compiler, "Do not worry about compile-time type checking of expressions in which this variable appears; the runtime system will do the right thing based on the runtime type of the value of the variable (or throw an exception, where the compiler would have reported a type error)." The type dynamic cannot be used as receiver (this) of an extension method, as base type of a class, or as type bound for a generic type parameter, but otherwise it can be used pretty much like any other type.
+
+> **MAREK SAFAR** Method signatures are considered to be same when using the dynamic and object types. This allows use of a nice trick: The interface method declared using type object can be directly implemented using a method with type dynamic.
+
+> **CHRIS SELLS** I begin to wonder about any language where the following string of characters is both valid and meaningful:
+> 
+> ```
+> class Foo {
+>   public static dynamic DoFoo() {...}
+> }
+> ```
+> 
+> Of course, this means that the DoFoo method is a type method (as opposed to an instance method) and that the type of the return value is unknown until runtime, but it's hard not to read DoFoo as both static and dynamic at the same time and worry about an occurrence of a singularity.

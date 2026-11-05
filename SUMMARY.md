@@ -497,6 +497,7 @@
 +   [C 语言初学者指南](docs/c-programming-language--for-the-beginners/README.md)
 +   [C语言编程：7天入门循序渐进指南](docs/c-programming-language-a-step-by-step-beginners-guide-to-lea/README.md)
 +   [C 编程语言与 C++ 编程语言完全覆盖指南](docs/c-programming-language-c-programming-language-all-topics-cov/README.md)
++   [C# 编程语言（涵盖 C# 4.0）](docs/c-programming-language-covering-c-40-portable-documents-the/README.md)
 +   [C 语言编程基础（基础知识学习指南）](docs/c-programming-language-essentials-essentials-study-guides/README.md)
 +   [C++ 语言初学者指南](docs/c-programming-language-for-beginners-with-easy-tips/README.md)
 +   [C 编程语言快速启动指南：初学者的简化 C 编程（C 编程，C 编程语言，绝对初学者的 C 编程，... 初学者，C 编程）](docs/c-programming-language-quick-start-guide-simplified-c-progra/README.md)

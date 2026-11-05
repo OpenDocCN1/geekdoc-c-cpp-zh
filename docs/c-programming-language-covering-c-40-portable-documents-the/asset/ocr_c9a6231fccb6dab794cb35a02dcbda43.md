@@ -1,0 +1,36 @@
+Two things are important to make explicit:
+
++   * Not all anonymous functions can be represented as expression trees. For instance, anonymous functions with statement bodies and anonymous functions containing assignment expressions cannot be represented. In these cases, a conversion still exists, but will fail at compile time.
++   * Expression<D> offers an instance method Compile that produces a delegate of type D:
+
+```
+Func<int,int> del2 = exp.Compile();
+```
+
+Invoking this delegate causes the code represented by the expression tree to be executed. Thus, given the definitions above, del1 and del2 are equivalent, and the following two statements will have the same effect:
+
+```
+int i1 = del1(1);
+int i2 = del2(1);
+```
+
+After executing this code, i1 and i2 will both have the value 2.
+
+# 4.7 The dynamic Type
+
+The type dynamic has special meaning in C#. Its purpose is to allow dynamic binding, which is described in detail in §7.2.2.
+
+The dynamic type is considered identical to the object type except in the following respects:
+
++   * Operations on expressions of type dynamic can be dynamically bound (§7.2.2).
++   * Type inference (§7.5.2) will prefer dynamic over object if both are candidates.
+
+Because of this equivalence, the following statements hold:
+
++   * There is an implicit identity conversion between object and dynamic, and between constructed types that are the same when replacing dynamic with object.
++   * Implicit and explicit conversions to and from object also apply to and from dynamic.
++   * Method signatures that are the same when replacing dynamic with object are considered the same signature.
+
+The type dynamic is indistinguishable from object at runtime.
+
+*An expression of the type dynamic is referred to as a dynamic expression.*

@@ -1,0 +1,45 @@
+event-modifier:
+...
+unsafe
+
+indexer-modifier:
+...
+unsafe
+
+operator-modifier:
+...
+unsafe
+
+constructor-modifier:
+...
+unsafe
+
+destructor-declaration:
+attributes_opt extern_opt unsafe_opt ~ identifier ( ) destructor-body
+attributes_opt unsafe_opt extern_opt ~ identifier ( ) destructor-body
+
+static-constructor-modifiers:
+extern_opt unsafe_opt static
+unsafe_opt extern_opt static
+extern_opt static unsafe_opt
+unsafe_opt static extern_opt
+static extern_opt unsafe_opt
+static unsafe_opt extern_opt
+
+embedded-statement:
+...
+unsafe-statement
+
+unsafe-statement:
+unsafe block
+
+In the example
+
+```
+public unsafe struct Node
+{
+    public int Value;
+    public Node* Left;
+    public Node* Right;
+}
+```

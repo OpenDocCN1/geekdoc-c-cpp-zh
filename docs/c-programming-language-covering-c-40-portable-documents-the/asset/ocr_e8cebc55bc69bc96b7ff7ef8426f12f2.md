@@ -1,0 +1,23 @@
+Attempting to invoke a delegate instance whose value is null results in an exception of type System.NullReferenceException.
+
+> **JON SKEET** In some ways, this outcome makes perfect sense; in other ways, it's inconsistent with a null reference's status as the normal representation of an empty invocation list. This confusion could perhaps have been avoided by each delegate type having a static Invoke method—perhaps even an extension method—that could have performed the appropriate nullity check. This solution would be more elegant than the C# compiler automatically performing a null check on each invocation expression. Admittedly, things get more complicated when the delegate type has a non-void return type or uses an out parameter.
+> 
+> Whatever the best solution would have been, it's undeniably a pain in the neck to have to check for nullity everywhere that you want to invoke a delegate.
+
+> **ERIC LIPPERT** A common pattern for “thread-safe” delegates is to do something like this:
+> 
+> var temp = this.mydelegate;
+> if (temp != null) temp();
+> 
+> instead of the more obvious solution:
+> 
+> if (this.mydelegate != null) this.mydelegate();
+> 
+> The former is safer because if mydelegate can be changed on another thread, then it might be changed to null between the test and the invocation. Moreover, this approach eliminates only one race. Suppose we are using the former code. The temporary caches the current value of mydelegate. On that other thread, mydelegate is set to null, and the global state that the previous contents of mydelegate needs to execute successfully is destroyed. But it is the previous contents that are about to be invoked! If your delegates (particularly delegates associated with events) are susceptible to this problem, then some other mechanism must be implemented to ensure that nothing bad happens if this race occurs. Probably the best thing to do is to write the code to ensure that if a “stale” delegate is invoked, nothing bad happens.
+
+The following example shows how to instantiate, combine, remove, and invoke delegates:
+
+```
+using System;
+delegate void D(int x);
+```

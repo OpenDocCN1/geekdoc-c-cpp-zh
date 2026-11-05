@@ -1,0 +1,31 @@
+The statement
+
+`x ≠ F<A> + y;`
+
+will be interpreted as including a less than operator, greater than operator, and unary plus operator, as if the statement had been written `x = (F < A) > (+y)`, instead of as a *simple-name* with a *type-argument-list* followed by a binary plus operator. In the statement
+
+`x = y is C<T> + z;`
+
+the tokens `C<T>` are interpreted as a *namespace-or-type-name* with a *type-argument-list*.
+
+# 7.6.5 Invocation Expressions
+
+An *invocation-expression* is used to invoke a method.
+
+```
+invocation-expression:
+    primary-expression ( argument-list<sub>opt</sub> )
+```
+
+An *invocation-expression* is dynamically bound (§7.2.2) if at least one of the following holds:
+
++   - The primary-expression has compile-time type dynamic.
++   - At least one argument of the optional argument-list has compile-time type dynamic and the primary-expression does not have a delegate type.
+
+> **VLADIMIR RESHETNIKOV**  One exception to this rule: `ref`/`out` arguments of type dynamic do not cause dynamic binding.
+> 
+> If an *invocation-expression* is dynamically bound and its *primary-expression* denotes a method group that resulted from a *base-access*, then a compile-time error (CS1971) occurs.
+
+In this case the compiler classifies the *invocation-expression* as a value of type dynamic. The rules below to determine the meaning of the *invocation-expression* are then applied at run-time, using the runtime type instead of the compile-time type of those of the *primary-expression* and arguments that have the compile-time type dynamic. If the *primary-expression* does not have compile-time type dynamic, then the method invocation undergoes a limited compile-time check as described in §7.5.4.
+
+The *primary-expression* of an *invocation-expression* must be a method group or a value of a *delegate-type*. If the *primary-expression* is a method group, the *invocation-expression* is a method invocation (§7.6.5.1). If the *primary-expression* is a value of a *delegate-type*, the *invocation-expression* is a delegate invocation (§7.6.5.3). If the *primary-expression* is neither a method group nor a value of a *delegate-type*, a binding-time error occurs.

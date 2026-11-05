@@ -1,0 +1,23 @@
++   - A single method M is selected corresponding to a method invocation (§7.6.5.1) of the form E(A), with the following modifications:
++     - The argument list A is a list of expressions, each classified as a variable and with the type and modifier (ref or out) of the corresponding parameter in the formal-parameter-list of D.
++     - The candidate methods considered are only those methods that are applicable in their normal form (§7.5.3.1), not those applicable only in their expanded form.
++   - If the algorithm of §7.6.5.1 produces an error, then a compile-time error occurs. Otherwise, the algorithm produces a single best method M having the same number of parameters as D and the conversion is considered to exist.
++   - The selected method M must be compatible (§15.2) with the delegate type D; otherwise, a compile-time error occurs.
++   - If the selected method M is an instance method, the instance expression associated with E determines the target object of the delegate.
++   - If the selected method M is an extension method, which is denoted by means of a member access on an instance expression, that instance expression determines the target object of the delegate.
++   - The result of the conversion is a value of type D—namely, a newly created delegate that refers to the selected method and target object.
+
+Note that this process can lead to the creation of a delegate to an extension method, if the algorithm of §7.6.5.1 fails to find an instance method but succeeds in processing the invocation of E(A) as an extension method invocation (§7.6.5.2). A delegate thus created captures the extension method as well as its first argument.
+
+> VLADIMIR RESHETNIKOV If the first parameter of an extension method converted to a delegate type is of a value type or type parameter not known to be a reference type (§10.1.5), a compile-time error occurs.
+> 
+> If an instance method declared in System.Nullable<T> is converted to a delegate type, a compile-time error occurs as well.
+
+The following example demonstrates method group conversions:
+
+```
+delegate string D1(object o);
+delegate object D2(string s);
+delegate object D3();
+delegate string D4(object o, params object[] a);
+```

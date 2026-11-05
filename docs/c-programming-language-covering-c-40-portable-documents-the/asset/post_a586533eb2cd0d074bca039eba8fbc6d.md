@@ -1,0 +1,363 @@
+
+- lock statement
+  - definite assignment rules, 186
+  - example, 21
+  - overview, 443–445
+- Logical operators
+  - AND, 15
+  - for boolean values, 357
+  - conditional, 358–360
+  - for enumerations, 356–357
+  - for integers, 356
+  - negation, 327–328
+  - OR, 15
+  - overview, 356–357
+  - shift, 344
+  - XOR, 15
+- LoginDialog class, 561
+- long type, 9–10
+- Lookup, member, 247–250
+- Lower-bound type inferences, 264–265
+- lvalues, 193
+
+## M
+
+- Main method
+  - for startup, 99–100
+  - for static constructors, 587–588
+- Mappings
+  - interface, 653–656
+  - pointers and integers, 719
+- Math class, 334
+- Members, 4, 22–23, 105
+  - access to, 23, 107, 496
+  - accessibility domains, 110–113
+  - constraints, 116–117
+  - declared accessibility, 107–109
+  - interface, 642–644
+  - pointer, 721–722
+  - in primary expressions, 283–288
+  - protected, 113–116
+  - accessibility of, 23–24
+  - array, 106, 628
+  - class, 106, 490–492
+    - access modifiers for, 496
+    - constituent types, 496
+    - constructed types, 493–494
+    - inheritance of, 494–496
+    - instance types, 492
+    - nested types, 498–504
+    - new modifier for, 496
+    - reserved names for, 504–506
+    - static and instance, 496–498
+  - delegate, 107
+  - enumeration, 106, 665–668
+  - function. See Function members
+  - inherited, 102, 105, 125–127, 494–496
+  - interface, 106, 639–640
+    - access to, 642–644
+    - events, 642
+    - explicit implementations, 57, 647–650
+    - fully qualified names, 645
+    - indexers, 642
+    - methods, 640–641
+    - properties, 641–642
+  - lookup, 247–250
+  - namespaces, 105, 463–464
+  - partial types, 485
+  - pointer, 721–722
+  - struct, 105–106, 609
+- Memory
+  - automatic management of, 132–137, 176
+  - dynamic allocation of, 738–740
+- Memory class, 738–740
+- Memory leaks from events, 561
+- Message property, 683
+- Metadata, 5
+- Method group conversions
+  - implicit, 204
+  - overview, 226–229
+  - type inference, 269
+- Methods, 4, 28
+  - abstract, 35, 539–540
+  - bodies, 32–33, 544
+  - conditional, 701–703
+  - declarations, 520–522
+  - extension, 541–543
+  - external, 539–540
+  - in ID string format, 754, 757–758
+  - instance, 28, 33–34, 531
+  - interface, 640–641
+  - invocations, 251, 288–298
+  - in List, 42
+  - overloading, 38–40
+  - overriding, 35, 535–537
+  - parameters, 29–32
+    - arrays, 528–531
+    - declarations, 522–525
+    - output, 526–527
+    - reference, 525–526
+    - value, 525
+  - partial, 486–490, 541
+  - sealed, 537–538
+  - static, 28, 33–34, 531
+  - virtual, 35–38, 532–534
+- Minus (-) operator, 327
+- Minus signs (-)
+  - assignment operators, 389
+  - decrement operator, 303–305, 328–330
+  - pointers, 716, 721–722, 725
+  - subtraction, 340–342
+- Modifiers
+  - class, 467–471
+  - enums, 664–665
+  - interface, 634
+  - partial types, 483
+  - struct, 609
+- Modulo operator, 336–337
+- Most derived method implementation, 532–533
+- Most encompassing types, 216
+- Most specific operators, 215
+- Move method, 760–761
+- Moveable variables
+  - described, 716–717
+  - fixed addresses for, 728–733
+- MoveNext method, 426
+  - enumerator objects, 451, 593–595
+  - Stack, 599
+  - Tree, 603–604
+- Multi-dimensional arrays, 11, 54, 625, 631–632
+- Multi-use attribute classes, 688
+- Multiple inheritance, 56–57, 644
+- Multiple statements, 402–403
+- Multiplication operator, 15, 332–333
+- Multiplicative operators, 15
+- Multiplier class, 60–61
+- Multiply method, 60
+- Mutual-exclusion locks, 443–445
+
+## N
+
+- \n escape sequence, 81
+- Named constants. See Enumerations and enum types
+- Named parameters, 690–691
+- Names
+  - anonymous types, 318–319
+  - binding, 490
+  - fully qualified, 131
+  - interface members, 645
+  - nested types, 499
+  - hiding, 124–127
+  - methods, 521
+  - reserved, 504–506
+  - simple
+    - in primary expressions, 279–283
+    - and type names, 286–287
+    - variables, 170
+- namespace keyword, 454
+- Namespaces, 3–4, 453
+  - aliases, 456–461, 464–466
+  - compilation units, 453–454
+  - declarations, 103, 454–456
+  - using directives in, 457–463
+  - fully qualified names in, 131
+  - in ID string format, 754
+  - members, 105, 463–464
+  - overview, 127–130
+  - purpose, 104
+  - syntactic grammar, 793–794
+  - type declarations, 464
+- NaN (Not-a-Number) value
+  - causes, 147, 149
+  - exceptions, 682
+  - in floating point comparisons, 347
+  - payload results, 333–334
+- Negation
+  - logical, 327–328
+  - numeric, 327
+- Nested array initializers, 631–632
+- Nested blocks, 104
+- Nested classes, 468
+- Nested members, 110–111
+- Nested scopes, 120
+- Nested types, 498–499
+  - accessibility, 499–503
+  - description, 464
+  - fully qualified names for, 499
+  - in generic classes, 503
+  - member access contained by, 502–503
+  - partial, 482
+  - this access to, 500–501
+- Nesting
+  - aliases, 460
+  - with break, 431
+  - comments, 70
+  - hiding through, 124–125, 500
+  - object initializers, 308
+- New line escape sequence, 81
+- new modifier
+  - class members, 496
+  - classes, 468
+  - delegates, 672
+  - interface members, 640
+  - interfaces, 634
+- new operator
+  - anonymous objects, 317–319
+  - arrays, 53, 55, 312–315
+  - collection initializers, 310–312
+  - constructors, 43
+  - delegates, 315–317
+  - hidden methods, 126
+  - object initializers, 307–310
+  - objects, 305
+  - structs, 52
+- No fall through rule, 416–417
+- No side effects convention, 552
+- Non-nested types, 498
+- Non-nullable value type, 152
+- Non-virtual methods, 35
+- Nonterminal symbols, 65–66
+- Normal form function members, 272
+- Normalization Form C, 73
+- Not-a-Number (NaN) value
+  - causes, 147, 149
+  - exceptions, 682
+  - in floating point comparisons, 347
+  - payload results, 333–334
+- Notation, grammar, 65–67
+- NotSupportedException class, 593
+- Null coalescing operator, 360–361
+- Null field for events, 48
+- Null literals, 84, 152, 199
+- Null pointers, 714
+- Null-termination of strings, 733
+- Null values
+  - for array elements, 54
+  - in classes vs. structs, 613
+  - escape sequence for, 81
+  - garbage collector for, 134
+- Nullable boolean logical operators, 357
+- Nullable types, 11–12
+  - contents, 13
+  - conversions
+    - explicit, 207–208
+    - implicit, 198–199
+    - operators, 353–355
+  - description, 8
+  - equality operators with, 352
+  - overview, 151–152
+- NullReferenceException class
+  - array access, 300
+  - with as operator, 355
+  - delegate creation, 316
+  - delegate invocation, 678
+  - description, 685
+  - foreach statement, 427
+  - throw statement, 436
+  - unboxing conversions, 159
+- Numeric conversions
+  - explicit, 205–207
+  - implicit, 197
+- Numeric promotions, 244–246
+
+## O
+
+- object class, 141, 154
+- Object variables, 12–13
+- Objects
+  - creation expressions for
+    - definite assignment rules, 187
+    - new operator, 305–307
+  - deallocating, 22
+  - description, 139
+  - initializers, 307–310
+  - as instance types, 153
+- Obsolete attribute, 705–706
+- Octal literals, 77
+- OnChanged method, 42, 48
+- One-dimensional arrays, 54
+- Open types, 162
+- Operands, 13, 238
+- Operation class, 35–36
+- Operator notation, 241
+- Operators, 13, 42, 49, 84–85
+  - arithmetic. See Arithmetic operators
+  - assignment operators, 16, 389
+    - compound, 393–394
+    - event, 394–395
+    - simple, 390–393
+  - binary. See Binary operators
+  - conditional, 361–363
+  - conversion, 575–578, 759
+  - declaration, 571–573
+  - enums, 668–669
+  - in ID string format, 759
+  - invocation, 254
+  - lexical grammar, 773
+  - lifted, 246–247
+  - logical, 355–357
+  - null coalescing, 360–361
+  - numeric promotions, 244–246
+  - operator !=, 49
+  - operator ==, 49–50
+  - overloading, 240–243
+  - overview, 238
+  - precedence and associativity, 238–240
+  - relational. See Relational operators
+  - shift, 343–344
+  - type-testing, 352–353
+  - unary. See Unary operators
+- Optional parameters, 522, 585–586
+- Optional symbols in grammar notation, 66
+- OR operators, 15
+- Order
+  - declaration, 103
+  - execution, 137–138
+- orderby clauses, 375, 380–384
+- Out property, 553
+- Outer variables, 369–373
+- OutOfMemoryException class, 313, 316, 339, 685
+- Output parameters, 30, 173, 526–527
+- Output-safe types, 636
+- Output types in type inference, 263
+- Output-unsafe types, 636
+- Overflow checking context, 322–325, 443
+- OverflowException class
+  - addition, 338
+  - arrays, 313
+  - checked operator, 323–324
+  - decimal type, 150
+  - description, 686
+  - division, 335
+  - increment and decrement operators, 329
+  - multiplication, 332–333
+  - remainder operator, 336
+- Overload resolution
+  - anonymous functions, 368
+  - function members, 270–275
+- Overloaded operators, 13
+  - purpose, 238
+  - shift, 343
+- Overloading
+  - indexers, 47
+  - methods, 38–40
+  - operators, 240–243
+  - signatures in, 38, 117–120
+- Overridden base methods, 535
+- Override events, 566
+- Override indexers, 567
+- Override methods, 535–537
+- Overriding
+  - event declarations, 566
+  - methods, 35
+  - property accessors, 46, 557
+  - property declarations, 557–558
+
+## P
+
+- Padding for pointers, 727
+- Paint method, 56, 539
+- Pair class, 24
+- Pair-wise declarations, 575
+- <para> tag, 748
+- Paragraph-separator characters, 69

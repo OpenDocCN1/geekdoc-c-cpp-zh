@@ -1,0 +1,17 @@
+| Construct | Example | Description |
+|---|---|---|
+| Operator invocation | -x | Overload resolution is applied to select the best unary operator in the class or struct given by the type of x. The selected operator is invoked with the argument list (x). |
+| Operator invocation | x + y | Overload resolution is applied to select the best binary operator in the classes or structs given by the types of x and y. The selected operator is invoked with the argument list (x, y). |
+| Instance constructor invocation | new T(x, y) | Overload resolution is applied to select the best instance constructor in the class or struct T. The instance constructor is invoked with the argument list (x, y). |
+
+# 7.5.1 Argument Lists
+
+Every function member and delegate invocation includes an argument list that provides actual values or variable references for the parameters of the function member. The syntax for specifying the argument list of a function member invocation depends on the function member category:
+
++   - For instance constructors, methods, indexers, and delegates, the arguments are specified as an argument-list, as described below. For indexers, when invoking the set accessor, the argument list additionally includes the expression specified as the right operand of the assignment operator.
+
+> > VLADIMIR RESHETNIKOV This additional argument does not participate in overload resolution for indexers.
+
++   - For properties, the argument list is empty when invoking the get accessor, and consists of the expression specified as the right operand of the assignment operator when invoking the set accessor.
++   - For events, the argument list consists of the expression specified as the right operand of the += or -= operator.
++   - For user-defined operators, the argument list consists of the single operand of the unary operator or the two operands of the binary operator.

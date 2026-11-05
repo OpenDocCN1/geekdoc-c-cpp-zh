@@ -1,0 +1,13 @@
+> BILL WAGNER Read those last two paragraphs again. They describe the most important design differences between structs and classes. If you don’t want value semantics in all cases, you must use a class. Classes can implement value semantics in some situations (string is a good example), but by default they obey reference semantics. That difference is more important for your designs than size or stack versus heap allocations.
+
+# 1.8 Arrays
+
+An array is a data structure that contains a number of variables that are accessed through computed indices. The variables contained in an array, also called the elements of the array, are all of the same type, and this type is called the element type of the array.
+
+Array types are reference types, and the declaration of an array variable simply sets aside space for a reference to an array instance. Actual array instances are created dynamically at runtime using the new operator. The new operation specifies the length of the new array instance, which is then fixed for the lifetime of the instance. The indices of the elements of an array range from 0 to Length - 1. The new operator automatically initializes the elements of an array to their default value, which, for example, is zero for all numeric types and null for all reference types.
+
+> ERIC LIPPERT The confusion resulting from some languages indexing arrays starting with 1 and some others starting with 0 has befuddled multiple generations of novice programmers. The idea that array “indexes” start with 0 comes from a subtle misinterpretation of the C language’s array syntax.
+> 
+> In C, when you say myArray[x], what this means is “start at the beginning of the array and refer to the thing x steps away.” Therefore, myArray[1] refers to the second element, because that is what you get when you start at the first element and move one step.
+> 
+> Really, these references should be called array offsets rather than indices. But because generations of programmers have now internalized that arrays are “indexed” starting at 0, we’re stuck with this terminology.

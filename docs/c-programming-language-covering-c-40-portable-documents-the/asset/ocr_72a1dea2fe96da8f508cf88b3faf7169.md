@@ -1,0 +1,44 @@
+# 2.5.4 Conditional Compilation Directives
+
+The conditional compilation directives are used to conditionally include or exclude portions of a source file.
+
+```
+pp-conditional:
+  pp-if-section pp-elif-sections_opt pp-else-section_opt pp-endif
+
+pp-if-section:
+  whitespace_opt # whitespace_opt if whitespace pp-expression pp-new-line
+  conditional-section_opt
+
+pp-elif-sections
+  pp-elif-section
+  pp-elif-sections pp-elif-section
+
+pp-elif-section:
+  whitespace_opt # whitespace_opt elif whitespace pp-expression pp-new-line
+  conditional-section_opt
+
+pp-else-section:
+  whitespace_opt # whitespace_opt else pp-new-line conditional-section_opt
+
+pp-endif:
+  whitespace_opt # whitespace_opt endif pp-new-line
+
+conditional-section:
+  input-section
+  skipped-section
+
+skipped-section:
+  skipped-section-part
+  skipped-section skipped-section-part
+
+skipped-section-part:
+  skipped-characters_opt new-line
+  pp-directive
+
+skipped-characters:
+  whitespace_opt not-number-sign input-characters_opt
+
+not-number-sign:
+  Any input-character except #
+```

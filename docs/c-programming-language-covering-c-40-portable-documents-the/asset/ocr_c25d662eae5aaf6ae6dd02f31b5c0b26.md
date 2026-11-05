@@ -1,0 +1,23 @@
+An *interface-declaration* creates a new declaration space (§3.3), and the *interface-member-declarations* immediately contained by the *interface-declaration* introduce new members into this declaration space. The following rules apply to *interface-member-declarations*:
+
++   - The name of a method must differ from the names of all properties and events declared in the same interface. In addition, the signature (§3.6) of a method must differ from the signatures of all other methods declared in the same interface, and two methods declared in the same interface may not have signatures that differ solely by ref and out.
++   - The name of a property or event must differ from the names of all other members declared in the same interface.
++   - The signature of an indexer must differ from the signatures of all other indexers declared in the same interface.
+
+The inherited members of an interface are specifically not part of the declaration space of the interface. Thus an interface is allowed to declare a member with the same name or signature as an inherited member. When this occurs, the derived interface member is said to *hide* the base interface member. Hiding an inherited member is not considered an error, but it does cause the compiler to issue a warning. To suppress the warning, the declaration of the derived interface member must include a *new* modifier to indicate that the derived member is intended to hide the base member. This topic is discussed further in §3.7.1.2.
+
+If a *new* modifier is included in a declaration that doesn't hide an inherited member, a warning is issued to that effect. This warning is suppressed by removing the *new* modifier.
+
+Note that the members in class object are not, strictly speaking, members of any interface (§13.2). However, the members in class object are available via member lookup in any interface type (§7.4).
+
+# ### 13.2.1 Interface Methods
+
+Interface methods are declared using *interface-method-declarations*:<sup>7</sup>
+
+```
+    interface-method-declaration:
+        attributes_opt new_opt return-type identifier type-parameter-list
+            ( formal-parameter-list_opt ) type-parameter-constraints-clauses_opt ;
+```
+
+The *attributes*, *return-type*, *identifier*, and *formal-parameter-list* of an interface method declaration have the same meaning as those of a method declaration in a class (§10.6). An interface method declaration is not permitted to specify a method body, so the declaration always ends with a semicolon.

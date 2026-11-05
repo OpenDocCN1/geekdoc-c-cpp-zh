@@ -1,0 +1,31 @@
+in the same program, these string literals refer to the same string instance. For instance, the output produced by
+
+```
+class Test
+{
+    static void Main() {
+        object a = "hello";
+        object b = "hello";
+        System.Console.WriteLine(a == b);
+    }
+}
+```
+
+is True because the two literals refer to the same string instance.
+
+> JOSEPH ALBAHARI This optimization is called interning. One of the benefits of interning is that it reduces the size of the compiled assembly because duplicate string literals are factored out.
+> 
+> In the preceding example, a and b are declared of type object, which forces the subsequent comparison to use object's reference-type equality semantics. If a and b were declared of type string, the comparison would bind to string's == operator, which evaluates to true if the strings have identical content—even if they refer to different underlying objects.
+
+# 2.4.4.6 The null Literal
+
+null-literal:
+null
+
+The null-literal can be implicitly converted to a reference type or nullable type.
+
+> ERIC LIPPERT The null literal expression itself does not have a type.
+
+# 2.4.5 Operators and Punctuators
+
+There are several kinds of operators and punctuators. Operators are used in expressions to describe operations involving one or more operands. For example, the expression a + b uses the + operator to add the two operands a and b. Punctuators are for grouping and separating.

@@ -1,0 +1,52 @@
+```
+public static void F()
+{
+    Console.WriteLine("B.F");
+}
+```
+
+must produce the output
+
+```
+Init A
+A.F
+Init B
+B.F
+```
+
+because the execution of A's static constructor is triggered by the call to A.F, and the execution of B's static constructor is triggered by the call to B.F.
+
+It is possible to construct circular dependencies that allow static fields with variable initializers to be observed in their default value state.
+
+# The example
+
+```
+using System;
+
+class A
+{
+    public static int X;
+    static A()
+    {
+        X = B.Y + 1;
+    }
+}
+
+class B
+{
+    public static int Y = A.X + 1;
+    static B() { }
+    static void Main()
+    {
+        Console.WriteLine("X = {0}, Y = {1}", A.X, B.Y);
+    }
+}
+```
+
+produces the following output:
+
+```
+X = 1, Y = 2
+```
+
+To execute the Main method, the system first runs the initializer for B.Y, prior to class B's static constructor. Y's initializer causes A's static constructor to be run because the value of A.X is referenced. The static constructor of A, in turn, proceeds to compute the value of X, and in doing so fetches the default value of Y, which is zero. A.X is thus initialized to 1. The

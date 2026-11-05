@@ -1,0 +1,42 @@
+> VLADIMIR RESHETNIKOV In contrast to class or struct method declarations, the identifier of an interface-method-declaration can be the same as the name of the enclosing interface declaration. The same applies to interface-property-declarations and interface-event-declarations.
+
+Each formal parameter type of an interface method must be input-safe (§13.1.3.1), and the return type must be either void or output-safe. Furthermore, each class type constraint, interface type constraint, and type parameter constraint on any type parameter of the method must be input-safe.
+
+These rules ensure that any covariant or contravariant usage of the interface remains type-safe. For example,
+
+```
+interface ICout<T> { void M<U>() where U : T; }
+```
+
+is illegal because the usage of T as a type parameter constraint on U is not input-safe.
+
+Were this restriction not in place, it would be possible to violate type safety in the following manner:
+
+```
+class B {}
+class D : B {}
+class E : B {}
+class C : I<D> { public void M<U>() {...} }
+...
+I<B> b = new C();
+b.M<E>();
+```
+
+This is actually a call to C.M<E>. That call requires that E derive from D, however, so type safety would be violated here.
+
+# 13.2.2 Interface Properties
+
+Interface properties are declared using interface-property-declarations:
+
+```
+interface-property-declaration:
+    attributes_opt new_opt type identifier { interface-accessors }
+
+interface-accessors:
+    attributes_opt get ;
+    attributes_opt set ;
+    attributes_opt get ; attributes_opt set ;
+    attributes_opt set ; attributes_opt get ;
+```
+
+The attributes, type, and identifier of an interface property declaration have the same meaning as those of a property declaration in a class (§10.7).

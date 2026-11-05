@@ -1,0 +1,38 @@
+the base class declaration, the corresponding type-argument of the constructed type. Given the generic class declarations
+
+```
+class B<U,V> { ... }
+class G<T> : B<string,T[]> { ... }
+```
+
+the base class of the constructed type G<int> would be B<string,int[]>.
+
+The direct base class of a class type must be at least as accessible as the class type itself (§3.5.2). For example, it is a compile-time error for a public class to derive from a private or internal class.
+
+The direct base class of a class type must not be any of the following types: System.Array, System.Delegate, System.MulticastDelegate, System.Enum, or System.ValueType. Furthermore, a generic class declaration cannot use System.Attribute as a direct or indirect base class.
+
+While determining the meaning of the direct base class specification A of a class B, the direct base class of B is temporarily assumed to be object. Intuitively, this ensures that the meaning of a base class specification cannot recursively depend on itself. The example
+
+```
+class A<T> {
+    public class B{}
+}
+class C : A<C,B> {}
+```
+
+is in error since in the base class specification A<C,B>, the direct base class of C is considered to be object; hence (by the rules of §3.8), C is not considered to have a member B.
+
+The base classes of a class type are the direct base class and its base classes. In other words, the set of base classes is the transitive closure of the direct base class relationship. Referring to the example above, the base classes of B are A and object. In the example
+
+```
+class A { ... }
+class B<T> : A { ... }
+class C<T> : B<IComparable<T>> { ... }
+class D<T> : C<T[]> { ... }
+```
+
+the base classes of D<int> are C<int[]>, B<IComparable<int[]>>, A, and object.
+
+Except for class object, every class type has exactly one direct base class. The object class has no direct base class and is the ultimate base class of all other classes.
+
+When a class B derives from a class A, it is a compile-time error for A to depend on B. A class directly depends on its direct base class (if any) and directly depends on the class within which it is immediately nested (if any). Given this definition, the complete set of classes

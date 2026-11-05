@@ -1,0 +1,49 @@
+The get and set accessors of a property are not distinct members, and it is not possible to declare the accessors of a property separately. As such, it is not possible for the two accessors of a read-write property to have different accessibility. The example
+
+```
+```csharp
+class A
+{
+    private string name;
+    public string Name {          // Error: duplicate member name
+        get { return name; }
+    }
+    public string Name {          // Error: duplicate member name
+        set { name = value; }
+    }
+}
+```
+```
+
+does not declare a single read-write property. Rather, it declares two properties with the same name, one read-only and one write-only. Since two members declared in the same class cannot have the same name, the example causes a compile-time error to occur.
+
+When a derived class declares a property by the same name as an inherited property, the derived property hides the inherited property with respect to both reading and writing. In the example
+
+```
+```csharp
+class A
+{
+    public int P {
+        set {...}
+    }
+}
+class B: A
+{
+    new public int P {
+        get {...}
+    }
+}
+```
+```
+
+the P property in B hides the P property in A with respect to both reading and writing. Thus, in the statements
+
+```
+```csharp
+B b = new B();
+b.P = 1;          // Error: B.P is read-only
+((A)b).P = 1;     // Okay: reference to A.P
+```
+```
+
+the assignment to b.P causes a compile-time error to be reported, since the read-only P property in B hides the write-only P property in A. Note, however, that a cast can be used to access the hidden P property.

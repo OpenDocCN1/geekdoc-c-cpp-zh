@@ -1,0 +1,39 @@
+An array creation expression permits instantiation of an array with elements of an array type, but the elements of such an array must be manually initialized. For example, the statement
+
+```
+int[][] a = new int[100][];
+```
+
+creates a single-dimensional array with 100 elements of type int[]. The initial value of each element is null. It is not possible for the same array creation expression to also instantiate the subarrays, and the statement
+
+```
+int[][] a = new int[100][5];    // Error
+```
+
+results in a compile-time error. Instantiation of the subarrays must instead be performed manually, as in
+
+```
+int[][] a = new int[100][];
+for (int i = 0; i < 100; i++) a[i] = new int[5];
+```
+
+> BILL WAGNER The comment below violates an FxCop rule, but does explain under which conditions you should violate that rule.
+
+When an array of arrays has a “rectangular” shape—that is, when the subarrays are all of the same length—it is more efficient to use a multi-dimensional array. In the example above, instantiation of the array of arrays creates 101 objects—one outer array and 100 subarrays. In contrast,
+
+```
+int[,] = new int[100, 5];
+```
+
+creates only a single object—that is, a two-dimensional array—and accomplishes the allocation in a single statement.
+
+> PETER SESTOFT It is somewhat dubious for a language specification to contain statements about efficiency, which is a matter dealing with implementation, not semantics. Indeed, whereas it may be faster to allocate (and subsequently manage) a single block of 500 integers than 100 blocks of 5 integers, a matrix multiplication algorithm that works on the “slow” array-of-arrays representation may be faster than one that works on the “efficient” rectangular array representation—probably thanks to a combination of JIT-compiler cleverness and modern CPU architecture.
+
+The following are examples of implicitly typed array creation expressions:
+
+```
+var a = new[] { 1, 10, 100, 1000 };          // int[]
+var b = new[] { 1, 1.5, 2, 2.5 };            // double[]
+var c = new[,] { { "hello", null }, { "world", "!" } }; // string[,]
+var d = new[] { 1, "one", 2, "two" };        // Error
+```
