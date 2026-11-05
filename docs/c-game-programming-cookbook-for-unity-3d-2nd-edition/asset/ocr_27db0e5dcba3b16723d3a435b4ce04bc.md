@@ -1,0 +1,9 @@
+# 14 Racing Game
+
+In this chapter, we will be building out a racing game (Figure 14.1) and it will have almost everything a no-nonsense racer might need – AI opponents, a respawning system, wrong way detection, and modern video game car physics using Unity’s Wheel Colliders for suspension and car control.
+
+The focus for this chapter is on the scripts, which means it will not be the same step by step tutorial format used in Chapter 2 for the RunMan example. There may be some work on the Unity side that will not be covered. You are expected to open up the example project and use this chapter as a guide to find out how it all works, but there will be full script breakdowns and enough information for you to be able to make your own game – this is just a heads up that in this chapter we focus on the programming a lot more than steps on how to use Unity.
+
+The overall structure of our racing game is shown in Figure 14.2. At its core is a Game Manager to deal with overall game states, which will be talking to a Global Race Controller script. The Global Race Controller acts to wrangle all the player information into coherent racing info such as current lap, who has finished the race and so on. The structure for vehicles (Figure 14.3) uses a Race Player Controller Component to provide information to, and communicate with, the Global Race Controller. The scripts used to calculate and monitor race information (current lap, race position and so on) work independently, meaning it does not matter what type of vehicle or avatar the player is – it could be a vehicle, a humanoid running, a space ship, or a rolling ball – as long as Race Player Controller is provided with what it needs, the racing specific logic will work.
+
+This game may be found in the example games project. The files for this game can be found in the Assets/Games/Racing Game folder. If you want to play

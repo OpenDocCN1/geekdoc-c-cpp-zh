@@ -366,6 +366,7 @@
 +   [C：从理论到实践（第二版）](docs/c-from-theory-to-practice-second-edition/README.md)
 +   [C# 泛式编程：从入门到精通 Monads](docs/c-functional-monads-from-zero-to-hero/README.md)
 +   [Unity 3D C# 游戏编程秘籍](docs/c-game-programming-cookbook-for-unity-3d/README.md)
++   [Unity 3D 的 C# 游戏编程秘籍（第2版）](docs/c-game-programming-cookbook-for-unity-3d-2nd-edition/README.md)
 +   [C# 游戏编程：面向严肃游戏创作](docs/c-game-programming-for-serious-game-creation-c-sharp-game-pr/README.md)
 +   [C++ 游戏编程：初学者轻松学习 C++ 游戏开发](docs/c-game-programming-learn-c-games-very-easy-for-beginners/README.md)
 +   [C++ 游戏编程：通过 C++ 循序渐进学习游戏编程](docs/c-game-programming-learn-game-programming-with-c-step-by-ste/README.md)
