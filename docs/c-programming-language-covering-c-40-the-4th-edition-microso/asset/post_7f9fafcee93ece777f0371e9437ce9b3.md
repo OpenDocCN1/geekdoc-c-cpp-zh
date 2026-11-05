@@ -1,0 +1,209 @@
+
+A delegate can reference either a static method (such as Square or Math.Sin in the previous example) or an instance method (such as m.Multiply in the previous example). A delegate that references an instance method also references a particular object, and when the instance method is invoked through the delegate, that object becomes this in the invocation.
+
+Delegates can also be created using anonymous functions, which are “in-line methods” that are created on the fly. Anonymous functions can see the local variables of the surrounding methods. Thus the multiplier example above can be written more easily without using a Multiplier class:
+
+```
+double[] doubles = Apply(a, (double x) => x * 2.0);
+```
+
+An interesting and useful property of a delegate is that it does not know or care about the class of the method it references; all that matters is that the referenced method has the same parameters and return type as the delegate.
+
+> BILL WAGNER  This property of delegates make them an excellent tool for providing interfaces between components with the lowest possible coupling.
+
+## 1.12 Attributes
+
+Types, members, and other entities in a C# program support modifiers that control certain aspects of their behavior. For example, the accessibility of a method is controlled using the public, protected, internal, and private modifiers. C# generalizes this capability such that user-defined types of declarative information can be attached to program entities and retrieved at runtime. Programs specify this additional declarative information by defining and using attributes.
+
+The following example declares a HelpAttribute attribute that can be placed on program entities to provide links to their associated documentation.
+
+```
+using System;
+
+public class HelpAttribute: Attribute
+{
+    string url;
+    string topic;
+
+    public HelpAttribute(string url) {
+        this.url = url;
+    }
+
+    public string Url {
+        get { return url; }
+    }
+}
+```
+```csharp
+public string Topic {
+    get { return topic; }
+    set { topic = value; }
+}
+```
+
+All attribute classes derive from the System.Attribute base class provided by the .NET Framework. Attributes can be applied by giving their name, along with any arguments, inside square brackets just before the associated declaration. If an attribute's name ends in Attribute, that part of the name can be omitted when the attribute is referenced. For example, the HelpAttribute attribute can be used as follows.
+
+```
+```csharp
+[Help("http://msdn.microsoft.com/.../MyClass.htm")]
+public class Widget
+{
+    [Help("http://msdn.microsoft.com/.../MyClass.htm", Topic = "Display")]
+    public void Display(string text) { }
+}
+```
+```
+
+This example attaches a HelpAttribute to the Widget class and another HelpAttribute to the Display method in the class. The public constructors of an attribute class control the information that must be provided when the attribute is attached to a program entity. Additional information can be provided by referencing public read-write properties of the attribute class (such as the reference to the Topic property previously).
+
+The following example shows how attribute information for a given program entity can be retrieved at runtime using reflection.
+
+```
+```csharp
+using System;
+using System.Reflection;
+class Test
+{
+    static void ShowHelp(MemberInfo member) {
+        HelpAttribute a = Attribute.GetCustomAttribute(member,
+            typeof(HelpAttribute)) as HelpAttribute;
+        if (a == null) {
+            Console.WriteLine("No help for {0}", member);
+        }
+        else {
+            Console.WriteLine("Help for {0}:", member);
+            Console.WriteLine(" Url={0}, Topic={1}",
+                a.Url, a.Topic);
+        }
+    }
+    static void Main() {
+        ShowHelp(typeof(Widget));
+        ShowHelp(typeof(Widget).GetMethod("Display"));
+    }
+}
+```
+```
+
+When a particular attribute is requested through reflection, the constructor for the attribute class is invoked with the information provided in the program source, and the resulting attribute instance is returned. If additional information was provided through properties, those properties are set to the given values before the attribute instance is returned.
+
+> **BILL WAGNER** The full potential of attributes will be realized when some future version of the C# compiler enables developers to read attributes and use them to modify the code model before the compiler creates IL. I've wanted to be able to use attributes to change the behavior of code since the first release of C#.
+
+*This page intentionally left blank*
+
+## 2. Lexical Structure
+
+### 2.1 Programs
+
+A C# program consists of one or more source files, known formally as compilation units (§9.1). A source file is an ordered sequence of Unicode characters. Source files typically have a one-to-one correspondence with files in a file system, but this correspondence is not required. For maximal portability, it is recommended that files in a file system be encoded with the UTF-8 encoding.
+
+Conceptually speaking, a program is compiled using three steps:
+
+- 1. Transformation, which converts a file from a particular character repertoire and encoding scheme into a sequence of Unicode characters.
+- 2. Lexical analysis, which translates a stream of Unicode input characters into a stream of tokens.
+- 3. Syntactic analysis, which translates the stream of tokens into executable code.
+
+### 2.2 Grammars
+
+This specification presents the syntax of the C# programming language using two grammars. The lexical grammar (§2.2.2) defines how Unicode characters are combined to form line terminators, white space, comments, tokens, and preprocessing directives. The syntactic grammar (§2.2.3) defines how the tokens resulting from the lexical grammar are combined to form C# programs.
+
+### 2.2.1 Grammar Notation
+
+The lexical and syntactic grammars are presented using grammar productions. Each grammar production defines a nonterminal symbol and the possible expansions of that nonterminal symbol into sequences of nonterminal or terminal symbols. In grammar productions, nonterminal symbols are shown in italic type, and terminal symbols are shown in a fixed-width font.
+
+The first line of a grammar production is the name of the nonterminal symbol being defined, followed by a colon. Each successive indented line contains a possible expansion of the nonterminal given as a sequence of nonterminal or terminal symbols. For example, the production
+
+```
+```
+while-statement:
+    while ( boolean-expression ) embedded-statement
+```
+```
+
+defines a while-statement to consist of the token while, followed by the token “(”, followed by a boolean-expression, followed by the token “)”, followed by an embedded-statement.
+
+When there is more than one possible expansion of a nonterminal symbol, the alternatives are listed on separate lines. For example, the production
+
+```
+```
+statement-list:
+    statement
+    statement-list statement
+```
+```
+
+defines a statement-list to either consist of a statement or consist of a statement-list followed by a statement. In other words, the definition is recursive and specifies that a statement list consists of one or more statements.
+
+A subscripted suffix “_opt” is used to indicate an optional symbol. The production
+
+```
+```
+block:
+    { statement-list_opt }
+```
+```
+
+is shorthand for
+
+```
+```
+block:
+    {   }
+    { statement-list }
+```
+```
+
+and defines a block to consist of an optional statement-list enclosed in “{” and “}” tokens.
+
+Alternatives are normally listed on separate lines, though in cases where there are many alternatives, the phrase “one of” may precede a list of expansions given on a single line. This is simply shorthand for listing each of the alternatives on a separate line. For example, the production
+
+```
+```
+real-type-suffix: one of
+    F f D d M m
+```
+```
+
+is shorthand for
+
+```
+```
+real-type-suffix:
+    F
+    f
+    D
+    d
+    M
+    m
+```
+```
+
+### 2.2.2 Lexical Grammar
+
+The lexical grammar of C# is presented in §2.3, §2.4, and §2.5. The terminal symbols of the lexical grammar are the characters of the Unicode character set, and the lexical grammar specifies how characters are combined to form tokens (§2.4), white space (§2.3.3), comments (§2.3.2), and preprocessing directives (§2.5).
+
+Every source file in a C# program must conform to the *input* production of the lexical grammar (§2.3).
+
+### 2.2.3 Syntactic Grammar
+
+The syntactic grammar of C# is presented in the chapters and appendices that follow this chapter. The terminal symbols of the syntactic grammar are the tokens defined by the lexical grammar, and the syntactic grammar specifies how tokens are combined to form C# programs.
+
+Every source file in a C# program must conform to the *compilation-unit* production of the syntactic grammar (§9.1).
+
+### 2.3 Lexical Analysis
+
+The *input* production defines the lexical structure of a C# source file. Each source file in a C# program must conform to this lexical grammar production.
+
+```
+```
+input:
+    input-section_opt
+
+input-section:
+    input-section-part
+    input-section input-section-part
+
+input-section-part:
+    input-elements_opt new-line
+    pp-directive
+```
+```

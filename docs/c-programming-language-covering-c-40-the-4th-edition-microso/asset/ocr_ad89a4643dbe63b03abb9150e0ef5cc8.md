@@ -1,0 +1,36 @@
+```
+[DllImport("kernel32")]
+static extern void* HeapReAlloc(int hHeap, int flags,
+    void* block, int size);
+[DllImport("kernel32")]
+static extern int HeapSize(int hHeap, int flags, void* block);
+}
+```
+
+An example that uses the Memory class is given below:
+
+```
+class Test
+{
+    static void Main()
+    {
+        unsafe
+        {
+            byte* buffer = (byte*)Memory.Alloc(256);
+            try
+            {
+                for (int i = 0; i < 256; i++) buffer[i] = (byte)i;
+                byte[] array = new byte[256];
+                fixed (byte* p = array) Memory.Copy(buffer, p, 256);
+            }
+            finally
+            {
+                Memory.Free(buffer);
+            }
+            for (int i = 0; i < 256; i++) Console.WriteLine(array[i]);
+        }
+    }
+}
+```
+
+This example allocates 256 bytes of memory through Memory.Alloc and initializes the memory block with values increasing from 0 to 255. It then allocates a 256-element byte array and uses Memory.Copy to copy the contents of the memory block into the byte array. Finally, the memory block is freed using Memory.Free and the contents of the byte array are output on the console.

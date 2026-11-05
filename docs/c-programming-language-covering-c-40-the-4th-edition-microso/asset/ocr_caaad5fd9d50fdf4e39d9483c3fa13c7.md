@@ -1,0 +1,47 @@
+```
+```
+exclusive-or-expression:
+    and-expression
+    exclusive-or-expression ^ and-expression
+
+inclusive-or-expression:
+    exclusive-or-expression
+    inclusive-or-expression | exclusive-or-expression
+
+conditional-and-expression:
+    inclusive-or-expression
+    conditional-and-expression && inclusive-or-expression
+
+conditional-or-expression:
+    conditional-and-expression
+    conditional-or-expression || conditional-and-expression
+
+null-coalescing-expression:
+    conditional-or-expression
+    conditional-or-expression ?? null-coalescing-expression
+
+conditional-expression:
+    null-coalescing-expression
+    null-coalescing-expression ? expression : expression
+
+lambda-expression:
+    anonymous-function-signature => anonymous-function-body
+
+anonymous-method-expression:
+    delegate explicit-anonymous-function-signature_opt block
+
+anonymous-function-signature:
+    explicit-anonymous-function-signature
+    implicit-anonymous-function-signature
+
+explicit-anonymous-function-signature:
+    ( explicit-anonymous-function-parameter-list_opt )
+
+explicit-anonymous-function-parameter-list:
+    explicit-anonymous-function-parameter
+    explicit-anonymous-function-parameter-list , explicit-anonymous-function-parameter
+
+explicit-anonymous-function-parameter:
+    anonymous-function-parameter-modifier_opt type identifier
+```
+```

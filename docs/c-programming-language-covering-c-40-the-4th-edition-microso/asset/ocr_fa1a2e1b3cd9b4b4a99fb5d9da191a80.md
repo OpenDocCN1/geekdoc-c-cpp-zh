@@ -1,0 +1,41 @@
+The example above illustrates a common pattern of using the names of fields as parameter names in an instance constructor. In the example, the simple names x and y refer to the parameters, but that does not prevent the member access expressions this.x and this.y from accessing the fields.
+
+# ### 7.6.3 Parenthesized Expressions
+
+A *parenthesized-expression* consists of an *expression* enclosed in parentheses.
+
+```
+```text
+    *parenthesized-expression*:
+        ( *expression* )
+```
+```
+
+A *parenthesized-expression* is evaluated by evaluating the *expression* within the parentheses. If the *expression* within the parentheses denotes a namespace or type, a compile-time error occurs. Otherwise, the result of the *parenthesized-expression* is the result of the evaluation of the contained *expression*.
+
+# ### 7.6.4 Member Access
+
+A *member-access* consists of a *primary-expression*, a *predefined-type*, or a *qualified-alias-member*, followed by a “.” token, followed by an identifier, optionally followed by a *type-argument-list*.
+
+```
+```text
+    *member-access*:
+        *primary-expression*    . *identifier* *type-argument-list*_opt
+        *predefined-type*    . *identifier* *type-argument-list*_opt
+        *qualified-alias-member* . *identifier* *type-argument-list*_opt
+```
+```
+
+```
+```text
+    *predefined-type*: one of
+        bool    byte    char    decimal double  float   int     long
+        object  sbyte   short   string  uint    ulong   ushort
+```
+```
+
+The *qualified-alias-member* production is defined in §9.7.
+
+A *member-access* is either of the form E.I or of the form E.I<A₁, ..., Aₖ>, where E is a *primary-expression*, I is a single identifier, and <A₁, ..., Aₖ> is an optional *type-argument-list*. When no *type-argument-list* is specified, consider K to be zero.
+
+A *member-access* with a *primary-expression* of type dynamic is dynamically bound (§7.2.2). In this case the compiler classifies the member access as a property access of type dynamic. The rules below to determine the meaning of the *member-access* are then applied at runtime, using the runtime type instead of the compile-time type of the *primary-expression*. If this runtime classification leads to a method group, then the member access must be the *primary-expression* of an *invocation-expression*.

@@ -1,0 +1,161 @@
+
+## 9. Namespaces
+
+C# programs are organized using namespaces. Namespaces are used both as an “internal” organization system for a program and as an “external” organization system—a way of presenting program elements that are exposed to other programs.
+
+Using directives (§9.4) are provided to facilitate the use of namespaces.
+
+> BILL WAGNER As you read this, remember that namespaces are a logical organization: Multiple namespaces can, and often do, occur in one assembly, and a single namespace may be declared in many different assemblies.
+
+### 9.1 Compilation Units
+
+A compilation-unit defines the overall structure of a source file. A compilation unit consists of zero or more using-directives followed by zero or more global-attributes followed by zero or more namespace-member-declarations.
+
+```
+compilation-unit:
+    extern-alias-directives_opt using-directives_opt global-attributes_opt
+    namespace-member-declarations_opt
+```
+
+A C# program consists of one or more compilation units, each contained in a separate source file. When a C# program is compiled, all of the compilation units are processed together. Thus compilation units can depend on each other, possibly in a circular fashion.
+
+> CHRIS SELLS This feature alone makes C# about ten times easier to work with than either C or C++.
+
+The using-directives of a compilation unit affect the global-attributes and namespace-member-declarations of that compilation unit, but have no effect on other compilation units.
+
+> **JON SKEET** Most of the time I think I like this feature—but just occasionally, when I want to whip up a quick program to test just a few lines of code, I'd rather not have to import a bunch of namespaces. It would be interesting to know what the effect of having "project-level" using directives (like assembly references) would have been in an alternative reality.
+
+> **ERIC LIPPERT** Jon's point is well taken: The "ceremony" needed to write any C# program is disproportionately large if the program is very short. Although C# is not intended to be a "scripting" language per se, there is something nice about the property that a one-line program is actually one line in, say, JScript.
+
+The *global-attributes* (§17) of a compilation unit permit the specification of attributes for the target assembly and module. Assemblies and modules act as physical containers for types. An assembly may consist of several physically separate modules.
+
+The *namespace-member-declarations* of each compilation unit of a program contribute members to a single declaration space called the global namespace. For example:
+
+```
+File A.cs:
+    class A {}
+
+File B.cs:
+    class B {}
+```
+
+The two compilation units contribute to the single global namespace—in this case, declaring two classes with the fully qualified names A and B. Because the two compilation units contribute to the same declaration space, it would have been an error if each contained a declaration of a member with the same name.
+
+### 9.2 Namespace Declarations
+
+A *namespace-declaration* consists of the keyword namespace, followed by a namespace name and body, optionally followed by a semicolon.
+
+```
+namespace-declaration:
+    namespace qualified-identifier namespace-body ;opt
+
+qualified-identifier:
+    identifier
+    qualified-identifier . identifier
+
+namespace-body:
+    { extern-alias-directives_opt using-directives_opt namespace-member-declarations_opt }
+```
+
+A namespace-declaration may occur as a top-level declaration in a compilation-unit or as a member declaration within another namespace-declaration. When a namespace-declaration occurs as a top-level declaration in a compilation-unit, the namespace becomes a member of the global namespace. When a namespace-declaration occurs within another namespace-declaration, the inner namespace becomes a member of the outer namespace. In either case, the name of a namespace must be unique within the containing namespace.
+
+Namespaces are implicitly public and the declaration of a namespace cannot include any access modifiers.
+
+Within a namespace-body, the optional using-directives import the names of other namespaces and types, allowing them to be referenced directly instead of through qualified names. The optional namespace-member-declarations contribute members to the declaration space of the namespace. Note that all using-directives must appear before any member declarations.
+
+The qualified-identifier of a namespace-declaration may be a single identifier or a sequence of identifiers separated by “.” tokens. The latter form permits a program to define a nested namespace without lexically nesting several namespace declarations. For example,
+
+```
+namespace N1.N2
+{
+    class A { }
+    class B { }
+}
+```
+
+is semantically equivalent to
+
+```
+namespace N1
+{
+    namespace N2
+    {
+        class A { }
+        class B { }
+    }
+}
+```
+
+Namespaces are open-ended, and two namespace declarations with the same fully qualified namespace name contribute to the same declaration space (§3.3). In the example
+
+```
+namespace N1.N2
+{
+    class A { }
+}
+
+namespace N1.N2
+{
+    class B { }
+}
+```
+
+the two namespace declarations contribute to the same declaration space—in this case declaring two classes with the fully qualified names N1.N2.A and N1.N2.B. Because the two declarations contribute to the same declaration space, it would have been an error if each contained a declaration of a member with the same name.
+
+### 9.3 Extern Aliases
+
+An *extern-alias-directive* introduces an identifier that serves as an alias for a namespace. The specification of the aliased namespace is external to the source code of the program and also applies to nested namespaces of the aliased namespace.
+
+```
+extern-alias-directives:
+    extern-alias-directive
+    extern-alias-directives  extern-alias-directive
+
+extern-alias-directive:
+    extern  alias  identifier  ;
+```
+
+The scope of an *extern-alias-directive* extends over the *using-directives*, *global-attributes*, and *namespace-member-declarations* of its immediately containing compilation unit or namespace body.
+
+Within a compilation unit or namespace body that contains an *extern-alias-directive*, the identifier introduced by the *extern-alias-directive* can be used to reference the aliased namespace. It is a compile-time error for the identifier to be the word global.
+
+An *extern-alias-directive* makes an alias available within a particular compilation unit or namespace body, but it does not contribute any new members to the underlying declaration space. In other words, an *extern-alias-directive* is not transitive, but rather affects only the compilation unit or namespace body in which it occurs.
+
+The following program declares and uses two extern aliases, X and Y, each of which represents the root of a distinct namespace hierarchy:
+
+```
+extern alias X;
+extern alias Y;
+
+class Test
+{
+    X::N.A a;
+    X::N.B b1;
+    Y::N.B b2;
+    Y::N.C c;
+}
+```
+
+The program declares the existence of the extern aliases X and Y, but the actual definitions of the aliases are external to the program. The identically named N.B classes can now be referenced as X.N.B and Y.N.B, or, using the namespace alias qualifier, X::N.B and Y::N.B. An error occurs if a program declares an extern alias for which no external definition is provided.
+
+### 9.4 Using Directives
+
+***Using directives*** facilitate the use of namespaces and types defined in other namespaces. Using directives impact the name resolution process of *namespace-or-type-names* (§3.8) and *simple-names* (§7.6.2), but unlike declarations, using directives do not contribute new members to the underlying declaration spaces of the compilation units or namespaces within which they are used.
+
+```
+using-directives:
+    using-directive
+    using-directives   using-directive
+```
+
+```
+using-directive:
+    using-alias-directive
+    using-namespace-directive
+```
+
+A *using-alias-directive* (§9.4.1) introduces an alias for a namespace or type.
+
+A *using-namespace-directive* (§9.4.2) imports the type members of a namespace.
+
+The scope of a *using-directive* extends over the *namespace-member-declarations* of its immediately containing compilation unit or namespace body. The scope of a *using-directive* specifically does not include its peer *using-directives*. Thus peer *using-directives* do not affect one another, and the order in which they are written is insignificant.

@@ -1,0 +1,99 @@
+
+**VLADIMIR RESHETNIKOV** One exception to the uniqueness requirement for indexer signatures: If an indexer is an explicit implementation of an interface, its signature is checked for uniqueness only within that interface's explicitly implemented indexers:
+
+```csharp
+class A : IIndexable
+{
+    int IIndexable.this[int x]
+    {
+        get { /* ... */ }
+    }
+
+    public int this[int x] // Okay
+    {
+        get { /* ... */ }
+    }
+}
+```
+
+- Overloading of operators permits a class or struct to declare multiple operators with the same name, provided their signatures are unique within that class or struct.
+
+Although `out` and `ref` parameter modifiers are considered part of a signature, members declared in a single type cannot differ in signature solely by `ref` and `out`. A compile-time error occurs if two members are declared in the same type with signatures that would be the same if all parameters in both methods with `out` modifiers were changed to `ref` modifiers. For other purposes of signature matching (e.g., hiding or overriding), `ref` and `out` are considered part of the signature and do not match each other. (This restriction is to allow C# programs to be easily translated to run on the Common Language Infrastructure [CLI], which does not provide a way to define methods that differ solely in `ref` and `out`.)
+
+For the purposes of signatures, the types `object` and `dynamic` are considered the same. Members declared in a single type cannot, therefore, differ in signature solely by `object` and `dynamic`.
+
+The following example shows a set of overloaded method declarations along with their signatures.
+
+```csharp
+interface ITest
+{
+    void F();
+    void F(int x);                  // F(int)
+    void F(ref int x);              // F(ref int)
+    void F(out int x);              // F(out int)      error
+}
+```
+
+```cpp
+void F(int x, int y);            // F(int, int)
+int  F(string s);                // F(string)
+int  F(int x);                   // F(int)        error
+void F(string[] a);              // F(string[])
+void F(params string[] a);       // F(string[])   error
+}
+```
+
+Note that any `ref` and `out` parameter modifiers (§10.6.1) are part of a signature. Thus `F(int)` and `F(ref int)` are unique signatures. However, `F(ref int)` and `F(out int)` cannot be declared within the same interface because their signatures differ solely by `ref` and `out`. Also, note that the return type and the `params` modifier are not part of a signature, so it is not possible to overload solely based on return type or on the inclusion or exclusion of the `params` modifier. As such, the declarations of the methods `F(int)` and `F(params string[])` identified above result in compile-time error.
+
+## 3.7 Scopes
+
+The *scope* of a name is the region of program text within which it is possible to refer to the entity declared by the name without qualification of the name. Scopes can be *nested*, and an inner scope may redeclare the meaning of a name from an outer scope (this does not, however, remove the restriction imposed by §3.3 that within a nested block it is not possible to declare a local variable with the same name as a local variable in an enclosing block). The name from the outer scope is then said to be *hidden* in the region of program text covered by the inner scope, and access to the outer name is possible only by qualifying the name.
+
+- The scope of a namespace member declared by a *namespace-member-declaration* (§9.5) with no enclosing *namespace-declaration* is the entire program text.
+- The scope of a namespace member declared by a *namespace-member-declaration* within a *namespace-declaration* whose fully qualified name is N is the *namespace-body* of every *namespace-declaration* whose fully qualified name is N or starts with N, followed by a period.
+- The scope of a name defined by an *extern-alias-directive* extends over the *using-directives*, *global-attributes*, and *namespace-member-declarations* of its immediately containing compilation unit or namespace body. An *extern-alias-directive* does not contribute any new members to the underlying declaration space. In other words, an *extern-alias-directive* is not transitive, but rather affects only the compilation unit or namespace body in which it occurs.
+- The scope of a name defined or imported by a *using-directive* (§9.4) extends over the *namespace-member-declarations* of the *compilation-unit* or *namespace-body* in which the using-directive occurs. A using-directive may make zero or more namespace or type names available within a particular compilation-unit or namespace-body, but does not contribute any new members to the underlying declaration space. In other words, a using-directive is not transitive, but rather affects only the compilation-unit or namespace-body in which it occurs.
+- The scope of a type parameter declared by a type-parameter-list on a class-declaration (§10.1) is the class-base, type-parameter-constraints-clauses, and class-body of that class-declaration.
+- The scope of a type parameter declared by a type-parameter-list on a struct-declaration (§11.1) is the struct-interfaces, type-parameter-constraints-clauses, and struct-body of that struct-declaration.
+- The scope of a type parameter declared by a type-parameter-list on an interface-declaration (§13.1) is the interface-base, type-parameter-constraints-clauses, and interface-body of that interface-declaration.
+- The scope of a type parameter declared by a type-parameter-list on a delegate-declaration (§15.1) is the return-type, formal-parameter-list, and type-parameter-constraints-clauses of that delegate-declaration.
+- The scope of a member declared by a class-member-declaration (§10.1.6) is the class-body in which the declaration occurs. In addition, the scope of a class member extends to the class-body of those derived classes that are included in the accessibility domain (§3.5.2) of the member.
+- The scope of a member declared by a struct-member-declaration (§11.2) is the struct-body in which the declaration occurs.
+- The scope of a member declared by an enum-member-declaration (§14.3) is the enum-body in which the declaration occurs.
+- The scope of a parameter declared in a method-declaration (§10.6) is the method-body of that method-declaration.
+- The scope of a parameter declared in an indexer-declaration (§10.9) is the accessor-declarations of that indexer-declaration.
+- The scope of a parameter declared in an operator-declaration (§10.10) is the block of that operator-declaration.
+- The scope of a parameter declared in a constructor-declaration (§10.11) is the constructor-initializer and block of that constructor-declaration.
+- The scope of a parameter declared in a lambda-expression (§7.15) is the lambda-expression-body of that lambda-expression.
+- The scope of a parameter declared in an anonymous-method-expression (§7.15) is the block of that anonymous-method-expression.
+- The scope of a label declared in a labeled-statement (§8.4) is the block in which the declaration occurs.
+- The scope of a local variable declared in a local-variable-declaration (§8.5.1) is the block in which the declaration occurs.
+- The scope of a local variable declared in a switch-block of a switch statement (§8.7.2) is the switch-block.
+- The scope of a local variable declared in a for-initializer of a for statement (§8.8.3) is the for-initializer, the for-condition, the for-iterator, and the contained statement of the for statement.
+- The scope of a local constant declared in a local-constant-declaration (§8.5.2) is the block in which the declaration occurs. It is a compile-time error to refer to a local constant in a textual position that precedes its constant-declarator.
+- The scope of a variable declared as part of a foreach-statement, using-statement, lock-statement, or query-expression is determined by the expansion of the given construct.
+
+> **JESSE LIBERTY** This list is a classic, almost iconic example of the difference between what is possible and what is advisable. Scope, like method names, and nearly everything else in your program should be as self-revealing and unambiguous as possible—but no more so!
+
+Within the scope of a namespace, class, struct, or enumeration member, it is possible to refer to the member in a textual position that precedes the declaration of the member. For example, in
+
+```csharp
+class A
+{
+    void F()
+    {
+        i = 1;
+    }
+    int i = 0;
+}
+```
+
+it is valid for F to refer to i before it is declared.
+
+Within the scope of a local variable, it is a compile-time error to refer to the local variable in a textual position that precedes the local-variable-declarator of the local variable. For example:
+
+```csharp
+class A
+{
+    int i = 0;
+```

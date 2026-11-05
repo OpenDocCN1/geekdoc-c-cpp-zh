@@ -1,0 +1,42 @@
+The NaN payload preservation is important for efficient scientific computing. For this approach to really work, in addition to the arithmetic operators, the mathematical functions in System.Math should respect IEEE binary floating point as well. In the current implementations, they mostly do so.
+
+The .NET library provides a method System.Double.IsNan(d) to test whether a double is a NaN.
+
+For type double, it also provides methods DoubleToInt64Bits and Int64BitsToDouble that can be used to get and set NaN payload bits:
+
+```
+```
+public static long GetNanPayload(double d) {
+    return System.BitConverter.DoubleToInt64Bits(d) & 0x0007FFFFFFFFFFFF;
+}
+
+public static double MakeNanPayload(long nanbits) {
+    nanbits &= 0x0007FFFFFFFFFFFF;
+    nanbits |= System.BitConverter.DoubleToInt64Bits(Double.NaN);
+    return System.BitConverter.Int64BitsToDouble(nanbits);
+}
+```
+```
+
+Strangely, the .NET library has no corresponding methods for type float, but one can use unsafe pointer conversions to achieve the same effect. For the gory details, see an annotation on §18.4.
+
+# ### 7.8.2 Division Operator
+
+For an operation of the form x / y, binary operator overload resolution (§7.3.4) is applied to select a specific operator implementation. The operands are converted to the parameter types of the selected operator, and the type of the result is the return type of the operator.
+
+The predefined division operators are listed below. The operators all compute the quotient of x and y.
+
++   - Integer division:
+
+```
+```
+int operator /(int x, int y);
+uint operator /(uint x, uint y);
+long operator /(long x, long y);
+ulong operator /(ulong x, ulong y);
+```
+```
+
+If the value of the right operand is zero, a System.DivideByZeroException is thrown.
+
+The division rounds the result toward zero. Thus the absolute value of the result is the largest possible integer that is less than or equal to the absolute value of the quotient of the two operands. The result is zero or positive when the two operands have the same sign and zero or negative when the two operands have opposite signs.

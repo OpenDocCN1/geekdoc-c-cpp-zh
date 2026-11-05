@@ -1,0 +1,33 @@
+# 18.5.8 The sizeof Operator
+
+The sizeof operator returns the number of bytes occupied by a variable of a given type. The type specified as an operand to sizeof must be an unmanaged-type (§18.2).
+
+```
+sizeof-expression:
+    sizeof ( unmanaged-type )
+```
+
+The result of the sizeof operator is a value of type int. For certain predefined types, the sizeof operator yields a constant value as shown in the table below.
+
+| Expression | Result |
+|---|---|
+| sizeof(sbyte) | 1 |
+| sizeof(byte) | 1 |
+| sizeof(short) | 2 |
+| sizeof(ushort) | 2 |
+| sizeof(int) | 4 |
+| sizeof(uint) | 4 |
+| sizeof(long) | 8 |
+| sizeof(ulong) | 8 |
+| sizeof(char) | 2 |
+| sizeof(float) | 4 |
+| sizeof(double) | 8 |
+| sizeof(bool) | 1 |
+
+For all other types, the result of the sizeof operator is implementation-defined and is classified as a value, not a constant.
+
+The order in which members are packed into a struct is unspecified.
+
+For alignment purposes, there may be unnamed padding at the beginning of a struct, within a struct, and at the end of the struct. The contents of the bits used as padding are indeterminate.
+
+When applied to an operand that has struct type, the result is the total number of bytes in a variable of that type, including any padding.

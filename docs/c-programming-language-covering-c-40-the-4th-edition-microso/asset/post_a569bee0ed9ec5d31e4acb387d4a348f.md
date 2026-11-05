@@ -1,0 +1,346 @@
+
+- operators, 575–578,759
+- for pointers, 717–720
+- reference, 199–201, 208–210
+- standard, 213–214
+- type parameters, 203–204, 211–212
+- unboxing, 158–160, 210
+- user-defined. See User-defined conversions
+  - variance, 636
+- Convert class, 207
+- Copy method,739
+- Counter class,552
+- Counter struct,614
+- CountPrimes class,570
+- Covariance
+  - array, 200, 629–630
+  - type parameters,635
+- cref attribute,742
+- Critical execution points,137
+- .cs extension,3
+- Curly braces ({})
+  - arrays,55
+  - collection initializers,310
+  - grammar notation,66
+  - object initializers,307
+- Currency type,150
+- Current property,595
+- Customer class,488–489
+## D
+- Database structure example
+  - boolean type,622–623
+  - integer type,619–621
+- DBBool struct,622–623
+- DBInt struct,619–621
+- Decimal numbers and type,9–10
+  - addition,338–339
+  - comparison operators,348
+  - division,335
+  - multiplication,333
+  - negation,327
+  - remainder operator,337
+  - subtraction,341
+  - working with,149–150
+- decimal128 type,149
+- Declaration directives,88–89
+- Declaration space,101
+- Declaration statements,407–412
+- Declarations
+  - classes,467
+    - base specifications,472–475
+    - bodies,481
+    - modifiers,467–471
+    - partial type,471
+    - type parameter constraints,475–481
+    - type parameters,471–472
+  - constants,411–412,506–508
+  - definite assignment rules,180
+  - delegates,672–675
+  - enums,59,663–664
+  - events,559–562
+  - fields,509–510
+  - fixed-size buffers,733–735
+  - indexer,566–571
+  - instance constructors,579–580
+  - interfaces,633–638
+  - methods,520–522
+  - namespaces,103,454–456
+  - operators,571–573
+  - order,6,103
+  - overview,101–104
+  - parameters,522–525
+  - pointers,714
+  - properties,545–546
+  - property accessors,547
+  - static constructors,586–589
+  - struct members,609
+  - structs,608–609
+  - types,10,464
+  - variables,175,407–411
+- Declared accessibility
+  - nested types,499–500
+  - overview,107–109
+- Decrement operators
+  - pointers,725
+  - postfix,303–305
+  - prefix,328–330
+- default expressions,142
+- Defaults
+  - constructors, 141–142, 584
+  - switch statement labels, 415-416
+  - values, 141, 175-176
+    - classes vs. structs, 612-613
+    - expressions, 325
+  - member names reserved for, 506
+  - members, 23
+- #define directive, 87, 89
+- Defining partial method declarations, 486
+- Definite assignment, 33, 169, 176-177
+  - fixed size buffers, 736
+  - initially assigned variables, 177
+  - initially unassigned variables, 177
+  - rules for, 178-192
+- Degenerate query expressions, 379-380
+- Delegate class, 671
+- Delegates and delegate type, 671-672
+  - combining, 340, 675
+  - compatible, 676
+  - contents, 13
+  - conversions, 165-166, 221-222
+  - declarations, 672-675
+  - description, 8, 11, 155
+  - equality, 351-352
+  - instantiation, 676-677
+  - invocations, 298, 677-680
+  - members of, 107
+  - new operator for, 315-317
+  - overview, 60-61
+  - removing, 342
+  - syntactic grammar, 807
+- Delimited comments, 69-70, 741-742
+- Dependence
+  - on base classes, 473-474
+  - in structures, 611
+  - type inference, 263
+- Depends on relationships, 473-474, 611
+- Derived classes, 22, 25-26
+- Destructors
+  - for classes, 50, 589-591
+  - for classes vs. structs, 619
+  - exceptions for, 685
+  - garbage collection, 132-137
+  - in ID string format, 757
+- Diagnostic directives, 93-94
+- Digit struct, 578
+- Dimensions, array, 11, 54, 625, 631-632
+- Direct base classes, 472-473
+- Directives
+  - preprocessing, See Preprocessing directives
+  - using, See Using directives
+- Directly depends on relationships, 473-474, 611
+- Disposal in using statement, 446
+- Dispose method, 591
+  - for enumerator objects, 596, 604-605
+  - for resources, 445-446
+- Divide method, 30
+- DivideByZeroException class, 333-334, 683, 685
+- Division operator, 334-335
+- DllImport attribute, 541
+- DLLs (Dynamic Link Libraries), 541
+- do statement
+  - definite assignment rules, 181-182
+  - example, 18
+  - overview, 421
+- Documentation comments, 741
+  - documentation files for, 741, 754
+    - ID string examples, 755-759
+    - ID string format, 754-756
+  - example, 760-766
+  - overview, 741-743
+  - tags for, 743-753
+  - XML files for, 741-742, 762-765
+- Documentation generators, 741
+- Documentation viewers, 741
+- Domains
+  - accessibility, 110-113
+  - application, 99
+- Double quotes (")
+  - characters, 80
+  - strings, 80
+- double type, 9-10, 146-149
+- DoubleToInt64Bits method, 334
+- Dynamic binding
+  - anonymous functions, 369
+  - overview, 234-237
+- Dynamic Link Libraries (DLLs), 541
+- Dynamic memory allocation, 738-740
+- Dynamic overload resolution, 275-276
+- dynamic type, 154
+  - conversions, 202, 210
+  - identity conversions, 197
+  - overview, 166-167
+## E
+- ECMA-334 standard, 1
+- EdiBox class, 56-57
+- Effective base classes, 480
+- Effective interface sets, 480
+- Elements
+  - array, 53, 171, 628
+  - foreach, 425-427
+  - pointer, 723
+  - primary expression, 298-301
+- #elif directive, 87-88, 91
+- Ellipse class, 539
+- #else directive, 87, 90-93
+- Embedded statements and expressions
+  - general rules, 186-187
+  - in grammar notation, 66
+- Empty statements, 404-406
+- Encompassed types, 216
+- Encompassing types, 216
+- End-of-file markers, 68
+- End points, 400-402
+- #endif directive, 91
+- #endregion directive, 94
+- Entity class, 33-34
+- Entry class, 5
+- Entry points, 99
+- Enumerable interfaces, 592
+- Enumerable objects for iterators, 596-597
+- Enumerations and enum types
+  - addition of, 339
+  - comparison operators, 348
+  - conversions
+    - explicit, 207
+    - implicit, 198
+  - declarations, 663-664
+  - description, 8, 11, 663-668
+  - logical operators, 356-357
+  - members, 106, 665-668
+  - modifiers, 664-665
+  - overview, 58-59
+  - subtraction of, 341
+  - syntactic grammar, 806-807
+  - types for, 151
+  - values and operations, 668-669
+- Enumerator interfaces, 592
+- Enumerator objects for iterators, 593-596
+- Enumerator types for foreach, 425-426
+- Equal signs (=)
+  - assignment operators, 389
+  - comparisons, 345
+  - operator ==, 49-50
+  - pointers, 726
+  - preprocessing expressions, 87
+- Equality operators, 15
+  - boolean values, 348
+  - delegates, 351-352
+  - lifted, 246-247
+  - and null, 352
+  - reference types, 349-351
+  - strings, 351
+- Equals method
+  - on anonymous types, 319
+  - DBBool, 623
+  - DBInt, 621
+  - List, 42
+    - with NaN values, 347
+  - Point, 761
+- #error directive, 94
+- Error property, 553
+- Error strings in ID string format, 754
+- Escape sequences
+  - characters, 81
+  - lexical grammar, 769
+  - strings, 81
+  - unicode character, 71-72
+- Evaluate method, 37
+- Evaluation of user-defined conversions, 215-216
+- Event handlers, 48, 559, 562
+- Events, 4
+  - access to, 253
+  - accessors, 564-565
+  - assignment operator, 394-395
+  - declarations, 559-562
+  - example, 42
+  - field-like, 562-564
+  - in ID string format, 754, 758-759
+  - instance and static, 565
+  - interface, 642
+  - member names reserved for,506
+  - overview, 47-49
+- Exact parameter type inferences,264
+- <example> tag, 745
+- Exception class, 436, 438, 682-684
+- Exception propagation, 437
+- <exception> tag, 745
+- Exception variables, 438
+- Exceptions
+  - causes, 683
+  - classes for, 685-686
+  - for delegates, 677
+  - handling, 1, 684-685
+  - overview, 681-682
+  - throwing, 436-437
+  - try statement for, 438-443
+- Exclamation points (!)
+  - comparisons, 345
+  - definite assignment rules, 190
+  - logical negation, 327
+  - operator !=, 49
+  - pointers, 726
+  - preprocessing expressions, 87
+- Execution
+  - instance constructors, 582-584
+  - order of, 137-138
+- Exiting blocks, 430
+- Exogenous exceptions, 686
+- Expanded form function members,272
+- Explicit base interfaces, 637
+- Explicit conversions, 204-205
+  - dynamic, 210
+  - enumerations, 207
+  - nullable types, 207-208
+  - numeric, 205-207
+  - reference, 208-210
+  - standard, 214
+  - type parameters, 211-212
+  - unboxing, 210
+  - user-defined, 213, 218-219
+- Explicit interface member implementations, 57, 647-650
+- explicit keyword, 576-578
+- Explicit parameter type inferences,264
+- Expression class, 35-37
+- Expression statements, 17, 179, 412-413
+- Expressions, 231
+  - anonymous function. See Anonymous functions
+  - binding, 234-237
+  - boolean, 397
+  - cast, 330-331
+  - classifications, 231-234
+  - constant, 203, 395-397
+  - constituent, 237
+  - definite assignment rules, 186-191
+  - dynamic, 166
+  - fixed-size buffers in, 735-736
+  - function members
+    - argument lists, 254-259
+    - categories, 250-254
+    - invocation, 276-278
+    - overload resolution, 270-275
+    - type inference, 259-270
+  - member lookup, 247-250
+  - operators for, 238
+    - arithmetic. See Arithmetic operators
+    - assignment, 389-395
+    - logical, 355-357
+    - numeric promotions, 244-246
+    - overloading, 240-243
+    - precedence and associativity, 238-240
+    - relational, 345
+    - shift, 343-344
+    - unary, 326-331
+  - overview, 13-16
+  - pointers in, 720-727
+  - preprocessing, 87-88
+  - primary. See Primary expressions

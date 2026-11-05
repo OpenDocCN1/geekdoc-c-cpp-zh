@@ -1,0 +1,53 @@
+The example
+
+```
+class Test
+{
+    static int x;
+    int y;
+    unsafe static void F(int* p)
+    {
+        *p = 1;
+    }
+    static void Main()
+    {
+        Test t = new Test();
+        int[] a = new int[10];
+        unsafe
+        {
+            fixed (int* p = &x) F(p);
+            fixed (int* p = &t.y) F(p);
+            fixed (int* p = &a[0]) F(p);
+            fixed (int* p = a) F(p);
+        }
+    }
+}
+```
+
+demonstrates several uses of the fixed statement. The first statement fixes and obtains the address of a static field, the second statement fixes and obtains the address of an instance field, and the third statement fixes and obtains the address of an array element. In each case it would have been an error to use the regular & operator since the variables are all classified as moveable variables.
+
+The fourth fixed statement in the example above produces a similar result to the third.
+
+This example of the fixed statement uses string:
+
+```
+class Test
+{
+    static string name = "xx";
+    unsafe static void F(char* p)
+    {
+        for (int i = 0; p[i] != '\0'; ++i)
+        {
+            Console.WriteLine(p[i]);
+        }
+    }
+    static void Main()
+    {
+        unsafe
+        {
+            fixed (char* p = name) F(p);
+            fixed (char* p = "xx") F(p);
+        }
+    }
+}
+```

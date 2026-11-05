@@ -1,0 +1,50 @@
+# 1. Introduction
+
+The previous four classes can be used to model arithmetic expressions. For example, using instances of these classes, the expression x + 3 can be represented as follows.
+
+```
+~~~
+Expression e = new Operation(
+    new VariableReference("x"),
+    '+',
+    new Constant(3));
+~~~
+```
+
+The Evaluate method of an Expression instance is invoked to evaluate the given expression and produce a double value. The method takes as an argument a Hashtable that contains variable names (as keys of the entries) and values (as values of the entries). The Evaluate method is a virtual abstract method, meaning that non-abstract derived classes must override it to provide an actual implementation.
+
+A Constant’s implementation of Evaluate simply returns the stored constant. A VariableReference’s implementation looks up the variable name in the hashtable and returns the resulting value. An Operation’s implementation first evaluates the left and right operands (by recursively invoking their Evaluate methods) and then performs the given arithmetic operation.
+
+The following program uses the Expression classes to evaluate the expression x * (y + 2) for different values of x and y.
+
+```
+~~~
+using System;
+using System.Collections;
+
+class Test
+{
+    static void Main() {
+        Expression e = new Operation(
+            new VariableReference("x"),
+            '*',
+            new Operation(
+                new VariableReference("y"),
+                '+',
+                new Constant(2)
+            )
+        );
+
+        Hashtable vars = new Hashtable();
+
+        vars["x"] = 3;
+        vars["y"] = 5;
+        Console.WriteLine(e.Evaluate(vars));    // Outputs "21"
+
+        vars["x"] = 1.5;
+        vars["y"] = 9;
+        Console.WriteLine(e.Evaluate(vars));    // Outputs "16.5"
+    }
+}
+~~~
+```

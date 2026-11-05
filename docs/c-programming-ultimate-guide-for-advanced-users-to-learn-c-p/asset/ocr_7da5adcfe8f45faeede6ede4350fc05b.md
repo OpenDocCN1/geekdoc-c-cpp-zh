@@ -1,0 +1,27 @@
+Posting 3-3, lines 58 to 64, tells the best way to use the Graphics thing went to the Paint event handler in the PaintEventArgs parameter. Posting 3-4 displays how to request a Graphics object each time a paint action is performed.
+
+Completing a Paint Event Handler   The Paint event handler gets two disputes. The essential conflict is an article, and the ensuing dispute is an event of the PaintEventArgs class.
+
+Right when you need to perform custom painting, you can complete a Paint event handler. For the inspirations driving our exchange, there are two custom effects that are applied genuinely to the PlayControl. The Paint event handler for the PlayControl seeks after:
+
+```
+```csharp
+private void PlayControl_Paint(
+object sender, System.Windows.Forms.PaintEventArgs e)
+
+{
+OutlineControl(e.Graphics); DrawTrademark(e.Graphics);
+
+}
+```
+```
+
+The Refactored systems depict the endeavor each performs. The fundamental clarification follows the PlayControl to give a not too bad perfect edge. This is principal since we are not using the standard structure shape.
+
+OutlineControl on lines 17 to 24 uses the Graphics thing went to the PlayControl's Paint event handler and sets the SmoothingMode to AntiAlias. Against partner will help make a smoother line by covering a bit of the pixels in the polygon to blend pixels, realizing a smoother-looking appearance. Drawing the polygon with comparative centers—returned by
+
+GetPoints—used to describe the condition of the structure realizes an unblemished, plot edge for the structure.
+
+DrawTrademark uses a second system that I named DrawShadowText.
+
+DrawShadowText draws the substance twice using two brushes. By adjusting the

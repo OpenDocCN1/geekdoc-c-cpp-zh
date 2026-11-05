@@ -1,0 +1,36 @@
+Although it is bad programming style, a type parameter in a nested type can hide a member or type parameter declared in the outer type:
+
+```
+class Outer<T>
+{
+    class Inner<T>    // Valid: hides Outer's T
+    {
+        public T t;   // Refers to Inner's T
+    }
+}
+```
+
+# 10.3.9 Reserved Member Names
+
+To facilitate the underlying C# runtime implementation, for each source member declaration that is a property, event, or indexer, the implementation must reserve two method signatures based on the kind of the member declaration, its name, and its type. It is a compile-time error for a program to declare a member whose signature matches one of these reserved signatures, even if the underlying runtime implementation does not make use of these reservations.
+
+The reserved names do not introduce declarations; thus they do not participate in member lookup. However, a declaration's associated reserved method signatures do participate in inheritance (§10.3.3) and can be hidden with the new modifier (§10.3.4).
+
+The reservation of these names serves three purposes:
+
++   - It allows the underlying implementation to use an ordinary identifier as a method name for get or set access to the C# language feature.
++   - It allows other languages to interoperate use of an ordinary identifier as a method name for get or set access to the C# language feature.
++   - It helps ensure that the source accepted by one conforming compiler is accepted by another, by making the specifics of reserved member names consistent across all C# implementations.
+
+The declaration of a destructor (§10.13) also causes a signature to be reserved (§10.3.9.4).
+
+# 10.3.9.1 Member Names Reserved for Properties
+
+For a property P (§10.7) of type T, the following signatures are reserved:
+
+```
+T get_P();
+void set_P(T value);
+```
+
+Both signatures are reserved, even if the property is read-only or write-only.

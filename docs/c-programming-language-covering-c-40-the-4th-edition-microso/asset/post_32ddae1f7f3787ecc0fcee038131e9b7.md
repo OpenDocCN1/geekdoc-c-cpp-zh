@@ -1,0 +1,129 @@
+
+produces the output
+
+```
+B's destructor
+A's destructor
+```
+
+since destructors in an inheritance chain are called in order, from most derived to least derived.
+
+> ERIC LIPPERT Traditionally, the term “destructor” refers to a deterministic cleanup method and a “finalizer” refers to a nondeterministic cleanup method called by a garbage collector. “Destructor” is a bit of an unfortunate misnomer in C#; ideally these methods would be called “finalizers” and the Dispose method of IDisposable would be called a “destructor.”
+
+Destructors are implemented by overriding the virtual method Finalize on System.Object. C# programs are not permitted to override this method or call it (or overrides of it) directly. For instance, the program
+
+```
+class A
+{
+    protected override void Finalize() { }    // Error
+    public void F()
+    {
+        this.Finalize();    // Error
+    }
+}
+```
+
+contains two errors.
+
+The compiler behaves as if this method, and overrides of it, do not exist at all. Thus the program
+
+```
+class A
+{
+    void Finalize() { }    // Permitted
+}
+```
+
+is valid, and the method shown hides System.Object's Finalize method.
+
+For a discussion of the behavior when an exception is thrown from a destructor, see §16.3.
+
+## 10.14 Iterators
+
+A function member (§7.5) implemented using an iterator block (§8.2) is called an *iterator*.
+
+An iterator block may be used as the body of a function member as long as the return type of the corresponding function member is one of the enumerator interfaces (§10.14.1) or one of the enumerable interfaces (§10.14.2). It can occur as a *method-body*, *operator-body*, or *accessor-body*, whereas events, instance constructors, static constructors, and destructors cannot be implemented as iterators.
+
+When a function member is implemented using an iterator block, it is a compile-time error for the formal parameter list of the function member to specify any *ref* or *out* parameters.
+
+### 10.14.1 Enumerator Interfaces
+
+The *enumerator interfaces* are the nongeneric interface `System.Collections.IEnumerator` and all instantiations of the generic interface `System.Collections.Generic.IEnumerator<T>`. For the sake of brevity, in this chapter these interfaces are referenced as `IEnumerator` and `IEnumerator<T>`, respectively.
+
+> **JON SKEET** I wish the “enumerable” and “enumerator” terminology had been “iterable” and “iterator,” including `IEnumerable<T>` and `IIterator<T>` interfaces. Admittedly, the double-I part is ugly, but it would have kept more lexical space between iterators and enumerations. It’s bizarrely long-winded to enumerate over an enumeration.
+
+### 10.14.2 Enumerable Interfaces
+
+The *enumerable interfaces* are the nongeneric interface `System.Collections.IEnumerable` and all instantiations of the generic interface `System.Collections.Generic.IEnumerable<T>`. For the sake of brevity, in this chapter these interfaces are referenced as `IEnumerable` and `IEnumerable<T>`, respectively.
+
+### 10.14.3 Yield Type
+
+An iterator produces a sequence of values, all of the same type. This type is called the *yield type* of the iterator.
+
+- The yield type of an iterator that returns `IEnumerator` or `IEnumerable` is `object`.
+- The yield type of an iterator that returns `IEnumerator<T>` or `IEnumerable<T>` is `T`.
+
+### 10.14.4 Enumerator Objects
+
+When a function member returning an enumerator interface type is implemented using an iterator block, invoking the function member does not immediately execute the code in the iterator block. Instead, an *enumerator object* is created and returned. This object encapsulates the code specified in the iterator block, and execution of the code in the iterator block occurs when the enumerator object's MoveNext method is invoked. An enumerator object has the following characteristics:
+
+- It implements IEnumerator and IEnumerator<T>, where T is the yield type of the iterator.
+- It implements System.IDisposable.
+- It is initialized with a copy of the argument values (if any) and instance value passed to the function member.
+- It has four potential states—*before*, *running*, *suspended*, and *after*—and is initially in the *before* state.
+
+> > **JON SKEET** The fact that *none* of the code within an iterator block runs until the first call to MoveNext() is irritating. It means that if you need to check any parameter values, you should really use two methods: a normal method that performs the appropriate validation and calls the second method, which is then implemented with an iterator block. Ideally, some construct would be available to indicate a section of the iterator block that should be executed immediately, before constructing the state machine.
+
+An enumerator object is typically an instance of a compiler-generated enumerator class that encapsulates the code in the iterator block and implements the enumerator interfaces, but other methods of implementation are possible. If an enumerator class is generated by the compiler, that class will be nested, directly or indirectly, in the class containing the function member; it will have private accessibility; and it will have a name reserved for compiler use (§2.4.2).
+
+An enumerator object may implement more interfaces than those specified above.
+
+The following sections describe the exact behavior of the MoveNext, Current, and Dispose members of the IEnumerable and IEnumerable<T> interface implementations provided by an enumerator object.
+
+Note that enumerator objects do not support the IEnumerator.Reset method. Invoking this method causes a System.NotSupportedException to be thrown.
+
+### 10.14.4.1 The MoveNext Method
+
+The MoveNext method of an enumerator object encapsulates the code of an iterator block. Invoking the MoveNext method executes code in the iterator block and sets the Current property of the enumerator object as appropriate. The precise action performed by MoveNext depends on the state of the enumerator object when MoveNext is invoked:
+
+- If the state of the enumerator object is *before*, invoking MoveNext:
+  - Changes the state to *running*.
+  - Initializes the parameters (including this) of the iterator block to the argument values and instance value saved when the enumerator object was initialized.
+  - Executes the iterator block from the beginning until execution is interrupted (as described below).
+- If the state of the enumerator object is *running*, the result of invoking MoveNext is unspecified.
+- If the state of the enumerator object is *suspended*, invoking MoveNext:
+  - Changes the state to *running*.
+  - Restores the values of all local variables and parameters (including this) to the values saved when execution of the iterator block was last suspended. Note that the contents of any objects referenced by these variables may have changed since the previous call to MoveNext.
+  - Resumes execution of the iterator block immediately following the yield return statement that caused the suspension of execution and continues until execution is interrupted (as described below).
+- If the state of the enumerator object is *after*, invoking MoveNext returns false.
+
+When MoveNext executes the iterator block, execution can be interrupted in four ways: by a yield return statement, by a yield break statement, by encountering the end of the iterator block, and by an exception being thrown and propagated out of the iterator block.
+
+- When a yield return statement is encountered (§8.14):
+  - The expression given in the statement is evaluated, implicitly converted to the yield type, and assigned to the Current property of the enumerator object.
+  - Execution of the iterator body is suspended. The values of all local variables and parameters (including this) are saved, as is the location of this yield return statement.
+  - If the yield return statement is within one or more try blocks, the associated finally blocks are not executed at this time.
+  - The state of the enumerator object is changed to suspended.
+  - The MoveNext method returns true to its caller, indicating that the iteration successfully advanced to the next value.
+
+- When a yield break statement is encountered (§8.14):
+  - If the yield break statement is within one or more try blocks, the associated finally blocks are executed.
+  - The state of the enumerator object is changed to after.
+  - The MoveNext method returns false to its caller, indicating that the iteration is complete.
+
+- When the end of the iterator body is encountered:
+  - The state of the enumerator object is changed to after.
+  - The MoveNext method returns false to its caller, indicating that the iteration is complete.
+
+- When an exception is thrown and propagated out of the iterator block:
+  - Appropriate finally blocks in the iterator body will have been executed by the exception propagation.
+  - The state of the enumerator object is changed to after.
+  - The exception propagation continues to the caller of the MoveNext method.
+
+### 10.14.4.2 The Current Property
+
+An enumerator object's Current property is affected by yield return statements in the iterator block.
+
+When an enumerator object is in the suspended state, the value of Current is the value set by the previous call to MoveNext. When an enumerator object is in the before, running, or after states, the result of accessing Current is unspecified.
+
+For an iterator with a yield type other than object, the result of accessing Current through the enumerator object's IEnumerable implementation corresponds to accessing Current through the enumerator object's IEnumerator<T> implementation and casting the result to object.

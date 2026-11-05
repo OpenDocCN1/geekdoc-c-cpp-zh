@@ -1,0 +1,35 @@
+In the example
+
+```
+```csharp
+class A
+{
+    static void G(int x, int y)
+    {
+        int i;
+        if (x >= 0 || (i = y) >= 0)
+        {
+            // i not definitely assigned
+        }
+        else
+        {
+            // i definitely assigned
+        }
+        // i not definitely assigned
+    }
+}
+```
+```
+
+the variable *i* is considered definitely assigned in one of the embedded statements of an `if` statement but not in the other. In the `if` statement in method `G`, the variable *i* is definitely assigned in the second embedded statement because execution of the expression `(i = y)` always precedes execution of this embedded statement. In contrast, the variable *i* is not definitely assigned in the first embedded statement, because `x >= 0` might have tested true, resulting in the variable `i` being unassigned.
+
+# ### 5.3.3.26 !Expressions
+
+For an expression *expr* of the form `!` *expr-operand*:
+
++   - The definite assignment state of *v* before *expr-operand* is the same as the definite assignment state of *v* before *expr*.
++   - The definite assignment state of *v* after *expr* is determined by:
++     - If the state of *v* after *expr-operand* is definitely assigned, then the state of *v* after *expr* is definitely assigned.
++     - If the state of *v* after *expr-operand* is not definitely assigned, then the state of *v* after *expr* is not definitely assigned.
++     - If the state of *v* after *expr-operand* is “definitely assigned after false expression,” then the state of *v* after *expr* is “definitely assigned after true expression.”
++     - If the state of *v* after *expr-operand* is “definitely assigned after true expression,” then the state of *v* after *expr* is “definitely assigned after false expression.”

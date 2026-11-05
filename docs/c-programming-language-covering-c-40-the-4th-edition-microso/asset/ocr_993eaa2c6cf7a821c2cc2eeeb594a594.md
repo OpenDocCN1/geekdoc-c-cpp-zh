@@ -1,0 +1,51 @@
+```
+class Dictionary<K,V>
+    where K: IComparable<K>
+    where V: IPrintable, IKeyProvider<K>, new()
+{
+    ...
+}
+```
+
+The following example is in error because it causes a circularity in the dependency graph of the type parameters:
+
+```
+class Circular<S,T>
+    where S: T
+    where T: S    // Error: circularity in dependency graph
+{
+    ...
+}
+```
+
+The following examples illustrate additional invalid situations:
+
+```
+class Sealed<S,T>
+    where S: T
+    where T: struct    // Error: T is sealed
+{
+    ...
+}
+class A {...}
+class B {...}
+class Incompat<S,T>
+    where S: A, T
+    where T: B    // Error: incompatible class-type constraints
+{
+    ...
+}
+class StructWithClass<S,T,U>
+    where S: struct, T
+    where T: U
+    where U: A    // Error: A incompatible with struct
+{
+    ...
+}
+```
+
+The effective base class of a type parameter T is defined as follows:
+
++   - If T has no primary constraints or type parameter constraints, its effective base class is object.
++   - If T has the value type constraint, its effective base class is System.ValueType.
++   - If T has a class-type constraint C but no type-parameter constraints, its effective base class is C.

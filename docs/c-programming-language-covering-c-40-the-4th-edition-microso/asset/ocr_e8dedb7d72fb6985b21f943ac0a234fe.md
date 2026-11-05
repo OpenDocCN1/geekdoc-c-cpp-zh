@@ -1,0 +1,58 @@
+# A.2.9 <paramref>
+
+This tag is used to indicate that a word is a parameter. The documentation file can be processed to format this parameter in some distinct way.
+
+# Syntax:
+
+```
+<paramref name="name"/>
+```
+
+where
+
+name
+
+The name of the parameter.
+
+# Example:
+
+```
+/// <summary>This constructor initializes the new point to
+/// <paramref name="xor"></paramref>,<paramref name="yor"></paramref>.</summary>
+/// <param name="xor">the new point's x-coordinate.</param>
+/// <param name="yor">the new point's y-coordinate.</param>
+public Point(int xor, int yor) {
+    X = xor;
+    Y = yor;
+}
+```
+
+# A.2.10 <permission>
+
+This tag allows the security accessibility of a member to be documented.
+
+# Syntax:
+
+```
+<permission cref="member">description</permission>
+```
+
+where
+
+cref="member"
+
+The name of a member. The documentation generator checks that the given code element exists and translates member to the canonical element name in the documentation file.
+
+description
+
+A description of the access to the member.
+
+# Example:
+
+```
+/// <permission cref="System.Security.PermissionSet">Everyone can
+/// access this method.</permission>
+public static void Test() {
+    // ...
+}
+```

@@ -1,0 +1,57 @@
+The example
+
+```
+```
+class Test
+{
+    double x;
+
+    void f(bool b) {
+        x = 1.0;
+        if (b) {
+            int x;
+            x = 1;
+        }
+    }
+}
+```
+```
+
+results in a compile-time error because x refers to different entities within the outer block (the extent of which includes the nested block in the if statement). In contrast, the example
+
+```
+```
+class Test
+{
+    double x;
+
+    void f(bool b) {
+        if (b) {
+            x = 1.0;
+        }
+        else {
+            int x;
+            x = 1;
+        }
+    }
+}
+```
+```
+
+is permitted because the name x is never used in the outer block.
+
+Note that the rule of invariant meaning applies only to simple names. It is perfectly valid for the same identifier to have one meaning as a simple name and another meaning as the right operand of a member access (§7.6.4). For example:
+
+```
+```
+struct Point
+{
+    int x, y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+```
+```

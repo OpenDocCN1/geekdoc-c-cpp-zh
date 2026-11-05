@@ -1,0 +1,11 @@
+supporting abilities. For instance, stereo hardware in a vehicle may have handles that enable you to tune radio stations or pick tracks on a CD. In any case, imagine a scenario in which that equivalent stereo gear enables you to tune a FM station without contacting the handles legitimately on the gadget. We could state that stereo prepare ment that supports tuning by and large has a tuning interface. Thus we can attach different controls that tap into the stereo interface. Maybe an infrared gadget or controls on the guiding section could utilize the interface to play out a similar capacity as the controls physically on the stereo hardware.
+
+The handle on the stereo is a physical control on the sound system. The volume is a trait. The capacity to change the volume can be executed as a strategy or property technique, both of which thusly could be utilized to help an interface for evolving volume. Different gadgets execute a similar interface, which we'll call Audio. Other disconnected gadgets could bolster the Audio interface: TVs, CB radios, phones, phone, sound system, or correspondences gear in a plane. Assume we make a widespread remote control that can converse with any gadget that executes the Audio interface. Any gadget that upheld the sound interface could be balanced—made stronger or calmer—with a similar remote control. Presently, your encompass sound, extra large flat screen television, and tuner could be constrained by a similar gadget.
+
+The essential sentence structure for characterizing an interface is like that for characterizing a class. The following code section shows the fundamental punctuation by executing the Audio interface. (By show we will name the interface with an I prefix.)
+
+The interface definition has an entrance modifier; in the model the entrance modifier is open. The catchphrase interface pursues the entrance modifier, and the name of the interface finishes the interface header. Individuals from an interface don't utilize an entrance modifier yet have a system heading for every individual from the interface. Each class that executes an interface should actualize the entirety of the strategies characterized by the interface.
+
+# ## Executing Interfaces
+
+Assume you have characterized an interface or need to execute a current interface.

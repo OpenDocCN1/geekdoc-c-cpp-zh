@@ -1,0 +1,21 @@
+# 1. Introduction
+
+> > **VLADIMIR RESHETNIKOV** Structs inherit from object indirectly. Their implicit direct base class is `System.ValueType`, which in turn directly inherits from `object`.
+
+An interface type defines a contract as a named set of public function members. A class or struct that implements an interface must provide implementations of the interface's function members. An interface may inherit from multiple base interfaces, and a class or struct may implement multiple interfaces.
+
+A delegate type represents references to methods with a particular parameter list and return type. Delegates make it possible to treat methods as entities that can be assigned to variables and passed as parameters. Delegates are similar to the concept of function pointers found in some other languages, but unlike function pointers, delegates are object-oriented and type-safe.
+
+Class, struct, interface, and delegate types all support generics, whereby they can be parameterized with other types.
+
+An enum type is a distinct type with named constants. Every enum type has an underlying type, which must be one of the eight integral types. The set of values of an enum type is the same as the set of values of the underlying type.
+
+> > **VLADIMIR RESHETNIKOV** Enum types cannot have type parameters in their declarations. Even so, they can be generic if nested within a generic class or struct type. Moreover, C# supports pointers to generic enum types in unsafe code.
+> >
+> > Sometimes enum types are called “enumeration types” in this specification. These two names are completely interchangeable.
+
+C# supports single- and multi-dimensional arrays of any type. Unlike the types listed above, array types do not have to be declared before they can be used. Instead, array types are constructed by following a type name with square brackets. For example, int[] is a single-dimensional array of int, int[,] is a two-dimensional array of int, and int[][] is a single-dimensional array of single-dimensional arrays of int.
+
+Nullable types also do not have to be declared before they can be used. For each non-nullable value type T there is a corresponding nullable type T?, which can hold an additional value null. For instance, int? is a type that can hold any 32 bit integer or the value null.
+
+> > **CHRISTIAN NAGEL** `T?` is the C# shorthand notation for the `Nullable<T>` structure.

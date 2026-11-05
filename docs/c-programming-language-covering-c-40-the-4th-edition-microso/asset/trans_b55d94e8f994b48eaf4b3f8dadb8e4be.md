@@ -1,0 +1,151 @@
+
+## 1. 引言
+
+### 1.1 Hello, World
+
+“Hello, World”程序传统上用于介绍一种编程语言。下面是 C# 中的写法：
+
+```csharp
+using System;
+class Hello
+{
+    static void Main() {
+        Console.WriteLine("Hello, World");
+    }
+}
+```
+
+C# 源文件通常具有 .cs 文件扩展名。假设“Hello, World”程序存储在文件 hello.cs 中，则可以使用以下命令行通过 Microsoft C# 编译器编译该程序
+
+```
+csc hello.cs
+```
+
+这会生成一个名为 hello.exe 的可执行程序集。此应用程序运行时产生的输出为
+
+```
+Hello, World
+```
+
+“Hello, World”程序以引用 System 命名空间的 using 指令开头。命名空间提供了一种分层方式来组织 C# 程序和库。命名空间包含类型和其他命名空间——例如，System 命名空间包含若干类型，如程序中引用的 Console 类，还包含若干其他命名空间，如 IO 和 Collections。引用给定命名空间的 using 指令允许非限定地使用属于该命名空间的类型。由于有 using 指令，程序可以使用 Console.WriteLine 作为 System.Console.WriteLine 的简写。
+
+“Hello, World”程序声明的 Hello 类只有一个成员，即名为 Main 的方法。Main 方法使用 static 修饰符声明。实例方法可以使用关键字 this 引用特定的包含对象实例，而静态方法运行时不需要引用特定对象。按照约定，名为 Main 的静态方法用作程序的入口点。
+
+程序的输出由 System 命名空间中 Console 类的 WriteLine 方法产生。该类由 .NET Framework 类库提供，默认情况下，Microsoft C# 编译器会自动引用这些类库。请注意，C# 本身没有单独的运行时库。相反，.NET Framework 就是 C# 的运行时库。
+
+> **BRAD ABRAMS** 有趣的是，Console.WriteLine() 只是 Console.Out.WriteLine 的快捷方式。Console.Out 是一个属性，它返回 System.IO.TextWriter 基类的一个实现，该基类旨在输出到控制台。前面的示例同样可以正确地写成如下形式：
+> 
+> ```csharp
+> using System;
+> class Hello
+> {
+>     static void Main() {
+>         Console.Out.WriteLine("Hello, World");
+>     }
+> }
+> ```
+> 
+> 在框架设计的早期，我们密切关注 C# 语言规范这一部分究竟必须如何编写，以此作为语言复杂度的风向标。我们选择在 Console 上添加这个便利重载，使“Hello, World”的编写容易得多。从各方面来看，这似乎已经得到了回报。事实上，如今几乎看不到对 Console.Out.WriteLine() 的调用。
+
+### 1.2 程序结构
+
+C# 中的关键组织概念是*程序*、*命名空间*、*类型*、*成员*和*程序集*。C# 程序由一个或多个源文件组成。程序声明类型，类型包含成员，并且可以组织到命名空间中。类和接口是类型的示例。字段、方法、属性和事件是成员的示例。编译 C# 程序时，它们会在物理上打包到程序集中。程序集通常具有文件扩展名 *.exe* 或 *.dll*，具体取决于它们实现的是*应用程序*还是*库*。
+
+下面的示例
+
+```csharp
+using System;
+
+namespace Acme.Collections
+{
+    public class Stack
+    {
+        Entry top;
+
+        public void Push(object data) {
+            top = new Entry(top, data);
+        }
+
+        public object Pop() {
+            if (top == null) throw new InvalidOperationException();
+            object result = top.data;
+            top = top.next;
+            return result;
+        }
+
+        class Entry
+        {
+            public Entry next;
+            public object data;
+            public Entry(Entry next, object data) {
+                this.next = next;
+                this.data = data;
+            }
+        }
+    }
+}
+```
+
+在名为 Acme.Collections 的命名空间中声明一个名为 Stack 的类。此类的完全限定名为 Acme.Collections.Stack。该类包含若干成员：一个名为 top 的字段、两个名为 Push 和 Pop 的方法，以及一个名为 Entry 的嵌套类。Entry 类还包含三个成员：一个名为 next 的字段、一个名为 data 的字段和一个构造函数。假设该示例的源代码存储在文件 acme.cs 中，则以下命令行将示例编译为库（没有 Main 入口点的代码），并生成名为 acme.dll 的程序集。
+
+```
+csc /t:library acme.cs
+```
+
+程序集包含以中间语言（IL）指令形式存在的可执行代码，以及以元数据形式存在的符号信息。在执行之前，程序集中的 IL 代码会由 .NET 公共语言运行时的实时（JIT）编译器自动转换为特定于处理器的代码。
+
+由于程序集是一个自描述的功能单元，同时包含代码和元数据，因此 C# 中不需要 #include 指令和头文件。特定程序集中包含的公共类型和成员只需在编译程序时引用该程序集，即可在 C# 程序中使用。例如，下面的程序使用 acme.dll 程序集中的 Acme.Collections.Stack 类：
+
+```csharp
+using System;
+using Acme.Collections;
+class Test
+{
+    static void Main() {
+        Stack s = new Stack();
+        s.Push(1);
+        s.Push(10);
+        s.Push(100);
+        Console.WriteLine(s.Pop());
+        Console.WriteLine(s.Pop());
+        Console.WriteLine(s.Pop());
+    }
+}
+```
+
+如果该程序存储在文件 test.cs 中，则在编译 test.cs 时，可以使用编译器的 /r 选项引用 acme.dll 程序集：
+
+```
+csc /r:acme.dll test.cs
+```
+
+这会创建一个名为 test.exe 的可执行程序集；运行该程序集时，将产生以下输出：
+
+```
+100
+10
+1
+```
+
+C# 允许将程序的源文本存储在多个源文件中。编译多文件 C# 程序时，所有源文件会一起处理，并且源文件可以自由地相互引用——从概念上讲，就好像所有源文件在被处理之前已串联成一个大文件。C# 中永远不需要前向声明，因为除极少数例外情况外，声明顺序无关紧要。C# 不限制一个源文件只能声明一个公共类型，也不要求源文件的名称与源文件中声明的类型相匹配。
+
+> > **ERIC LIPPERT** 这与 Java 语言不同。另外，C# 中声明顺序无关紧要这一点也与 C++ 语言不同。
+>
+> > **CHRIS SELLS** 请注意前一个示例中的 using Acme.Collections 语句，它看起来像 C 风格的 #include 指令，但其实不是。它只是一种命名上的便利，使编译器在遇到 Stack 时，有一组命名空间可以在其中查找该类。如果此示例使用完全限定名，编译器也会采取相同的操作：
+> >
+> > `Acme.Collections.Stack s = new Acme.Collections.Stack();`
+
+### 1.3 类型和变量
+
+C# 中有两种类型：*值类型*和*引用类型*。值类型的变量直接包含其数据，而引用类型的变量存储对其数据的引用，后者称为对象。使用引用类型时，两个变量可以引用同一个对象，因此对一个变量执行的操作可能会影响另一个变量所引用的对象。使用值类型时，每个变量都有自己的数据副本，对一个变量执行的操作不可能影响另一个变量（ref 和 out 参数变量除外）。
+
+> **JON SKEET** 为引用类型选择“reference”这个词也许并不幸运。在考虑参数传递的按引用传递和按值传递语义之间的区别时，它导致了大量混淆（或至少是沟通不畅）。
+> 
+> 值类型和引用类型之间的区别可能是教 C# 初学者时最重要的一点：在理解这一点之前，几乎其他所有内容都说不通。
+
+> **ERIC LIPPERT** 关于值类型最常见的误解大概是：它们“存储在栈上”，而引用类型“存储在堆上”。首先，这种行为是运行时的实现细节，而不是语言本身的事实。其次，这并不能向初学者说明什么。第三，这是错误的：是的，与引用类型实例关联的数据存储在堆上，但这些数据可以包含值类型的实例，因此值类型有时也存储在堆上。第四，如果值类型和引用类型之间的区别在于它们的存储细节，那么 CLR 团队就会把它们称为“栈类型”和“堆类型”。真正的区别在于：值类型按值复制，引用类型按引用复制；运行时如何分配存储来实现生存期规则，在绝大多数主流编程场景中并不重要。
+
+> **BILL WAGNER** C# 强制你为类型做出值语义与引用语义这一重要决定。使用你的类型的开发者不能在每次使用时做出该决定（不像在 C++ 中那样）。你需要考虑类型的用法模式，并在这两种类型之间做出谨慎决定。
+
+> **VLADIMIR RESHETNIKOV** C# 还支持不安全指针类型，本规范末尾将对此进行描述。它们被称为“不安全”，是因为疏忽使用它们可能以编译器无法捕获的方式破坏类型安全。
+

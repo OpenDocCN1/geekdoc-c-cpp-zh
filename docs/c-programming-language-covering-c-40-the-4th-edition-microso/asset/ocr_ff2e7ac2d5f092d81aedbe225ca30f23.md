@@ -1,0 +1,15 @@
+- A method group, which is a set of overloaded methods resulting from a member lookup (§7.4). A method group may have an associated instance expression and an associated type argument list. When an instance method is invoked, the result of evaluating the instance expression becomes the instance represented by this (§7.6.7). A method group is permitted in an invocation-expression (§7.6.5), in a delegate-creation-expression (§7.6.10.5), and as the left-hand side of an is operator, and can be implicitly converted to a compatible delegate type (§6.6). In any other context, an expression classified as a method group causes a compile-time error.
+
+> **ERIC LIPPERT** That a method group is legal on the left-hand side of an is operator is a bit of a misleading feature. The result of the is evaluation will always be false, even if the method group is convertible to the type on the right-hand side.
+
+> **VLADIMIR RESHETNIKOV** A method group on the left-hand side of an is operator cannot be used in expression trees.
+
+- A null literal. An expression with this classification can be implicitly converted to a reference type or nullable type.
+
+- An anonymous function. An expression with this classification can be implicitly converted to a compatible delegate type or expression tree type.
+
+> **ERIC LIPPERT** Method groups, anonymous functions, and the null literal are all expressions that have no type. These unusual expressions can be used only when the type can be figured out from the context.
+
+- A property access. Every property access has an associated type—namely, the type of the property. Furthermore, a property access may have an associated instance expression. When an accessor (the get or set block) of an instance property access is invoked, the result of evaluating the instance expression becomes the instance represented by this (§7.6.7).
+
+- An event access. Every event access has an associated type—namely, the type of the event. Furthermore, an event access may have an associated instance expression. An event access may appear as the left-hand operand of the += and -= operators (§7.17.3). In any other context, an expression classified as an event access causes a compile-time error.

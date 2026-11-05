@@ -1,0 +1,22 @@
+# 1. Introduction
+
+> **ERIC LIPPERT**  The takeaway message here is that certain specific data-intensive applications, which would otherwise be gated on heap allocation performance, benefit greatly from using structs. The takeaway message is emphatically *not* “Always use structs because they make your program faster.”
+> 
+> The performance benefit here is a tradeoff: Structs can in some scenarios take less time to allocate and deallocate, but because every assignment of a struct is a value copy, they can take more time to copy than a reference copy would take.
+> 
+> Always remember that it makes little sense to optimize anything other than the slowest thing. If your program is not gated on heap allocations, then pondering whether to use structs or classes for performance reasons is not an effective use of your time. Find the slowest thing, and then optimize it.
+
+Struct constructors are invoked with the `new` operator, but that does not imply that memory is being allocated. Instead of dynamically allocating an object and returning a reference to it, a struct constructor simply returns the struct value itself (typically in a temporary location on the stack), and this value is then copied as necessary.
+
+With classes, it is possible for two variables to reference the same object and thus possible for operations on one variable to affect the object referenced by the other variable. With structs, the variables each have their own copy of the data, and it is not possible for operations on one to affect the other. For example, the output produced by the following code fragment depends on whether `Point` is a class or a struct.
+
+```
+Point a = new Point(10, 10);
+Point b = a;
+a.X = 20;
+Console.WriteLine(b.X);
+```
+
+If Point is a class, the output is 20 because a and b reference the same object. If Point is a struct, the output is 10 because the assignment of a to b creates a copy of the value, and this copy is unaffected by the subsequent assignment to a.x.
+
+The previous example highlights two of the limitations of structs. First, copying an entire struct is typically less efficient than copying an object reference, so assignment and value parameter passing can be more expensive with structs than with reference types. Second, except for `ref` and `out` parameters, it is not possible to create references to structs, which rules out their usage in a number of situations.

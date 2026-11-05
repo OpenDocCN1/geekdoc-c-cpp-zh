@@ -1,0 +1,41 @@
+**ERIC LIPPERT** A standard “best practice” is to always expose field-like data as properties with getters and setters rather than exposing the field. That way, if you ever want to add functionality to your getter and setter (e.g., logging, data binding, security checking), you can easily do so without “breaking” any consumer of the code that might rely on the field always being there.
+
+Although in some sense this practice is a violation of another bit of good advice (“Avoid premature generalization”), the new “automatically implemented properties” feature makes it very easy and natural to use properties rather than fields as part of the public interface of a type.
+
+**CHRIS SELLS** Eric makes such a good point that I wanted to show an example.
+
+Don't ever make a field public:
+
+```
+class Cow
+{
+    public int Milk; // BAD!
+}
+```
+
+If you don't want to layer in anything besides storage, let the compiler implement the property for you:
+
+```
+class Cow
+{
+    public int Milk { get; set; } // Good
+}
+```
+
+That way, the client binds to the property getter and setter so that later you can take over the compiler’s implementation to do something fancy:
+
+```
+class Cow {
+    bool gotMilk = false;
+    int milk;
+    public int Milk {
+        get {
+            if( !gotMilk ) {
+                milk = ApplyMilkingMachine();
+            }
+            gotMilk = true;
+        }
+        return milk;
+    }
+    set {
+```

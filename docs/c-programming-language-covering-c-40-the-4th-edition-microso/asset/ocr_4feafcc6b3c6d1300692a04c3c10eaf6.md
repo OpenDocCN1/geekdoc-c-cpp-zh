@@ -1,0 +1,51 @@
+```
+```csharp
+public class Color
+{
+    public static readonly Color Black = new Color(0, 0, 0);
+    public static readonly Color White = new Color(255, 255, 255);
+    public static readonly Color Red = new Color(255, 0, 0);
+    public static readonly Color Green = new Color(0, 255, 0);
+    public static readonly Color Blue = new Color(0, 0, 255);
+
+    private byte r, g, b;
+
+    public Color(byte r, byte g, byte b)
+    {
+        this.r = r;
+        this.g = g;
+        this.b = b;
+    }
+}
+```
+```
+
+As shown in the previous example, *read-only fields* may be declared with a readonly modifier. Assignment to a readonly field can occur only as part of the field's declaration or in a constructor in the same class.
+
+> **BRAD ABRAMS** readonly protects the location of the field from being changed outside the type's constructor, but does not protect the value at that location. For example, consider the following type:
+> 
+> ```csharp
+> public class Names
+> {
+>     public static readonly StringBuilder FirstBorn = new StringBuilder("Joe");
+>     public static readonly StringBuilder SecondBorn = new StringBuilder("Sue");
+> }
+> ```
+> 
+> Outside of the constructor, directly changing the FirstBorn instance results in a compiler error:
+> 
+> ```csharp
+> Names.FirstBorn = new StringBuilder("Biff");
+> // Compile error
+> ```
+> 
+> However, I am able to accomplish exactly the same results by modifying the StringBuilder instance:
+> 
+> ```csharp
+> Names.FirstBorn.Remove(0,6).Append("Biff");
+> Console.WriteLine(Names.FirstBorn);    // Outputs "Biff"
+> ```
+> 
+> It is for this reason that we strongly recommend that read-only fields be limited to immutable types. Immutable types do not have any publicly exposed setters, such as int, double, or String.
+
+1. Introduction

@@ -1,0 +1,35 @@
+# 13. Interfaces
+
+# 13.1.3.1 *Variance Safety*
+
+The occurrence of variance annotations in the type parameter list of a type restricts the places where types can occur within the type declaration.
+
+A type T is *output-unsafe* if one of the following holds:
+
++   - T is a contravariant type parameter.
++   - T is an array type with an output-unsafe element type.
++   - T is an interface or delegate type S<A₁, . . . Aₖ> constructed from a generic type S<X₁, . . . Xₖ> where for at least one Aᵢ one of the following holds:
++     - Xᵢ is covariant or invariant and Aᵢ is output-unsafe.
++     - Xᵢ is contravariant or invariant and Aᵢ is input-safe.
+
+A type T is *input-unsafe* if one of the following holds:
+
++   - T is a covariant type parameter.
++   - T is an array type with an input-unsafe element type.
++   - T is an interface or delegate type S<A₁, . . . Aₖ> constructed from a generic type S<X₁, . . . Xₖ> where for at least one Aᵢ one of the following holds:
++     - Xᵢ is covariant or invariant and Aᵢ is input-unsafe.
++     - Xᵢ is contravariant or invariant and Aᵢ is output-unsafe.
+
+Intuitively, an output-unsafe type is prohibited in an output position, and an input-unsafe type is prohibited in an input position.
+
+A type is *output-safe* if it is not output-unsafe, and *input-safe* if it is not input-unsafe.
+
+# 13.1.3.2 *Variance Conversion*
+
+The purpose of variance annotations is to provide for more lenient (but still type-safe) conversions to interface and delegate types. To this end, the definitions of implicit (§6.1) and explicit conversions (§6.2) make use of the notion of variance convertibility, which is defined as follows:
+
+A type T<A₁, . . . , Aₙ> is variance convertible to a type T<B₁, . . . , Bₙ> if T is either an interface or a delegate type declared with variant type parameters T<X₁, . . . , Xₙ>, and for each variant type parameter Xᵢ one of the following holds:
+
++   - Xᵢ is covariant and an implicit reference or identity conversion exists from Aᵢ to Bᵢ.
++   - Xᵢ is contravariant and an implicit reference or identity conversion exists from Bᵢ to Aᵢ.
++   - Xᵢ is invariant and an identity conversion exists from Aᵢ to Bᵢ.

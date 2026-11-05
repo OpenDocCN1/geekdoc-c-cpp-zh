@@ -1,0 +1,24 @@
+# 10.14 Iterators
+
+A function member (§7.5) implemented using an iterator block (§8.2) is called an *iterator*.
+
+An iterator block may be used as the body of a function member as long as the return type of the corresponding function member is one of the enumerator interfaces (§10.14.1) or one of the enumerable interfaces (§10.14.2). It can occur as a *method-body*, *operator-body*, or *accessor-body*, whereas events, instance constructors, static constructors, and destructors cannot be implemented as iterators.
+
+When a function member is implemented using an iterator block, it is a compile-time error for the formal parameter list of the function member to specify any *ref* or *out* parameters.
+
+# 10.14.1 Enumerator Interfaces
+
+The *enumerator interfaces* are the nongeneric interface `System.Collections.IEnumerator` and all instantiations of the generic interface `System.Collections.Generic.IEnumerator<T>`. For the sake of brevity, in this chapter these interfaces are referenced as `IEnumerator` and `IEnumerator<T>`, respectively.
+
+> **JON SKEET** I wish the “enumerable” and “enumerator” terminology had been “iterable” and “iterator,” including `IEnumerable<T>` and `IIterator<T>` interfaces. Admittedly, the double-I part is ugly, but it would have kept more lexical space between iterators and enumerations. It’s bizarrely long-winded to enumerate over an enumeration.
+
+# 10.14.2 Enumerable Interfaces
+
+The *enumerable interfaces* are the nongeneric interface `System.Collections.IEnumerable` and all instantiations of the generic interface `System.Collections.Generic.IEnumerable<T>`. For the sake of brevity, in this chapter these interfaces are referenced as `IEnumerable` and `IEnumerable<T>`, respectively.
+
+# 10.14.3 Yield Type
+
+An iterator produces a sequence of values, all of the same type. This type is called the *yield type* of the iterator.
+
++   - The yield type of an iterator that returns `IEnumerator` or `IEnumerable` is `object`.
++   - The yield type of an iterator that returns `IEnumerator<T>` or `IEnumerable<T>` is `T`.

@@ -1,0 +1,346 @@
+
+- query, 373–375
+  - ambiguities in, 376
+  - patterns, 387–389
+  - translations in, 376–387
+  - syntactic grammar, 779–788
+  - tree types, 165–166, 222
+  - values of, 233
+- Extensible Markup Language (XML), 741–742, 762–765
+- Extension methods
+  - example, 541–543
+  - invocation, 293–297
+- Extensions class, 542
+- extern aliases, 456–457
+- External constructors, 580, 586
+- External destructors, 589
+- External events, 560
+- External indexers, 569
+- External methods, 539–540
+- External operators, 572
+- External properties, 546
+
+## F
+
+- `\f` escape sequence, 81
+- False value, 76
+- Fatal exceptions, 686
+- Field-like events, 562–564
+- Fields, 4
+  - declarations, 509–510
+  - example, 41
+  - in ID string format, 754, 756–757
+  - initializing, 515, 516, 616–617
+  - instance, 26–27, 510–511
+  - overview, 26–27
+  - read-only, 27–28, 511–513
+  - static, 510–511
+  - variable initializers, 516–519
+  - volatile, 514–515
+- Fill method, 629
+- Filters, 442
+- Finalize method, 591
+- Finalizers, 50
+- finally blocks
+  - definite assignment rules, 184–185
+  - for exceptions, 684
+  - execution, 682
+  - with goto, 434
+  - with try, 438–443
+- Fixed-size buffers
+  - declarations, 733–735
+  - definite assignment, 736
+  - in expressions, 735–736
+  - fixed statement, 716, 728–733
+- Fixed variables, 716–717
+- Fixing type inferences, 266–267
+- float type, 9–10, 146–149
+- Floating point numbers
+  - addition, 338
+  - comparison operators, 346–347
+  - division, 334–335
+  - multiplication, 332
+  - NaN payload, 333–334
+  - negation, 327
+  - remainder operator, 336
+  - subtraction, 340–341
+  - types, 9–10, 146–149
+- for statement
+  - definite assignment rules, 182
+  - example, 19
+  - overview, 422–423
+- foreach statement
+  - definite assignment rules, 185
+  - example, 19
+  - overview, 423–429
+- Form feed escape sequence, 81
+- Forward declarations, 6
+- Fragmentation, heap, 729
+- Free method, 739
+- from clauses, 375, 379–387
+- FromTo method, 599–600
+- Fully qualified names
+  - described, 1, 31
+  - interface members, 645
+  - nested types, 499
+- Function members
+  - argument lists, 254–259
+  - in classes, 40–50
+  - dynamic overload resolution checking, 275–276
+  - overload resolution, 270–275
+  - overview, 250–254
+  - type inference, 259–270
+- Function pointers, 671
+- Functional notation, 241
+- Functions, anonymous. See Anonymous functions
+
+## G
+
+- Garbage collection, 1
+  - at application termination, 101
+  - for destructors, 50
+  - in memory management, 132–137, 176
+  - and pointers, 713
+  - for variables, 716
+- GC class, 133, 136
+- Generic classes and types, 25, 139
+  - anonymous objects, 318
+  - boxing, 156, 613
+  - constraints, 162, 475–477, 483
+  - declarations, 467, 473
+  - delegates, 220
+  - instance type, 492
+  - interfaces, 650–651
+  - member lookup, 247
+  - methods, 521, 532, 652–653
+  - nested, 247, 503
+  - overloading, 275
+  - overriding, 536
+  - query expression patterns, 387
+  - signatures, 28
+  - static fields, 26
+  - type inference, 259–261, 267
+  - unbound, 160
+- Generic interface, 627–628
+- get accessors
+  - for attributes, 695
+  - defined, 45
+  - description, 557
+  - working with, 547–553
+- GetEnumerator method
+  - for foreach, 425
+  - for iterators, 596–603
+- GetEventHandler method, 565
+- GetHashCode method
+  - on anonymous types, 319
+  - comparisons, 347
+  - DBBool, 623
+  - DBInt, 621
+- GetHourlyRate method, 38
+- GetInvocationList method, 677
+- GetNextSerialNo method, 34
+- GetProcessHeap method, 739
+- Global declaration space, 101
+- Global namespace, 105
+- goto statement
+  - definite assignment rules, 182
+  - example, 19
+  - for switch, 416–417, 419
+  - working with, 433–434
+- Governing types of switch statements, 415, 418
+- Grammars, 65
+  - ambiguities, 287–288
+  - lexical. See Lexical grammar
+  - notation, 65–67
+  - syntactic. See Syntactic grammar
+  - for unsafe code, 809–812
+- Greater than signs (>)
+  - assignment operators, 389
+  - comparisons, 345
+  - pointers, 716, 721–722, 726
+  - shift operators, 343–344
+- Grid class, 570–571
+- group clauses, 375, 378, 385
+
+## H
+
+- Handlers, event, 48, 559, 562
+- HasValue property, 152
+- Heap, 7
+  - accessing functions of, 738–740
+  - fragmentation, 729
+- HeapAlloc method, 739
+- HeapFree method, 739
+- HeapReAlloc method, 740
+- HeapSize method, 740
+- Hello, World program, 3
+- Hello class, 93
+- HelpAttribute class, 61–62, 690
+- HelpStringAttribute class, 697
+- Hexadecimal escape sequences
+  - for characters, 80
+  - for strings, 83
+- Hiding
+  - inherited members, 102, 125–127, 495
+  - in multiple-inheritance interfaces, 644
+  - in nesting, 124–127, 500
+  - properties, 550
+  - in scope, 120
+- Hindley-Milner-style algorithms, 261
+- Horizontal tab escape sequence, 81
+
+## I
+
+- IBase interface, 644, 655, 660
+- ICloneable interface, 645–646, 649, 654
+- IComboBox interface, 56, 638
+- IComparable interface, 646
+- IControl interface, 56–57, 638
+  - implementations, 646
+  - inheritance, 657–659
+  - mapping, 654–656
+  - member implementations, 650
+  - member names, 645
+  - reimplementations, 659–660
+- ICounter interface, 643
+- ICounter struct, 615
+- ID string format
+  - for documentation files, 754–756
+  - examples, 755–759
+- IDataBound interface, 56–57
+- Identical simple names and type names, 286–287
+- Identifiers
+  - interface, 634
+  - lexical grammar, 769–770
+  - rules for, 72–74
+- Identity conversions, 196–197
+- IDerived interface, 655
+- IDictionary interface, 648
+- IDisposable interface, 136, 428, 445–447, 591, 648
+- IDouble interface, 644
+- IEnumerable interface, 311, 427–428, 596–597
+- IEnumerator interface, 592
+- #if directive, 87–88, 90–93
+- if statement
+  - definite assignment rules, 180
+  - example, 18
+  - working with, 413–414
+- IForm interface, 655
+- IInteger interface, 643–644
+- IL (Intermediate Language) instructions, 5
+- IList interface, 627–628, 643, 647
+- IListBox interface, 56, 638, 656
+- IListCounter interface, 643
+- IMethods interface, 659–661
+- Implementing partial method declarations, 486
+- Implicit conversions, 195–196
+  - anonymous functions and method groups, 204
+  - boxing, 201
+  - constant expression, 203
+  - dynamic, 202
+  - enumerations, 198
+  - identity, 196
+  - null literal, 199
+  - nullable, 198–199
+  - numeric, 197
+  - operator for, 575–578
+  - standard, 213
+  - type parameters, 203–204
+  - user-defined, 204, 217
+  - implicit keyword, 575–578
+- Implicitly typed array creation expressions, 313
+- Implicitly typed iteration variables, 423, 427
+- Implicitly typed local variable declarations, 408–409
+- Importing types, 461–463
+- In-line methods, 61
+- In property, 553
+- Inaccessible members, 107
+- <include> tag, 742, 745–746
+- Increment operators
+  - for pointers, 725
+  - postfix, 303–305
+  - prefix, 328–330
+- IndexerNameAttribute, 707
+- Indexers
+  - access to, 253, 300–301
+  - declarations, 566–571
+  - example, 42
+  - in ID string format, 758
+  - interface, 642
+  - member names reserved for, 506
+  - overview, 46–47
+  - signatures in, 119
+- IndexOf method, 39–40
+- IndexOutOfRangeException class, 300, 685
+- Indices, array, 53
+- Indirection, pointer, 716, 721
+- Inference, type, 259–270
+- Infinity values, 147–148
+- Inheritance, 22
+  - from base interfaces, 637–638
+  - in classes, 25–26, 105, 494–496
+  - in classes vs. structs, 612
+  - hiding through, 102, 125–127, 495
+  - interface, 640, 657–659
+  - parameters, 689
+  - properties, 550
+- Initializers
+  - array, 55, 630–632
+  - field, 515–516, 616–617
+  - in for statements, 422
+  - instance constructors, 580–581
+  - stack allocation, 736–738
+  - variables, 516–519, 581
+- Initially assigned variables, 169, 177
+- Initially unassigned variables, 169, 177
+- Inlining process, 552
+- InnerException property, 683
+- Input production, 67
+- Input-safe types, 636
+- Input types in type inference, 263
+- Input-unsafe types, 636
+- Instance constructors
+  - declarations, 579–580
+  - default, 584
+  - description, 42
+  - execution, 582–584
+  - initializers, 580–581
+  - invocation, 254
+  - optional parameters, 585–586
+  - private, 584–585
+- Instance events, 565
+- Instance fields
+  - class, 510–511
+  - example, 26–27
+  - initialization, 515–516, 519
+  - read-only, 511–513
+- Instance members
+  - class, 496–498
+  - description, 22
+  - protected access for, 113–116
+- Instance methods, 28, 33–34, 531
+- Instance properties, 546
+- Instance types, 492
+- Instance variables, 170–171, 510–511
+- Instances, 21–22
+  - attribute, 698–699
+  - type, 153
+- Instantiation
+  - delegates, 676–677
+  - local variables, 370–373
+  - int type, 9–10
+- Int64BitsToDouble method, 334
+- Integers
+  - addition, 338
+  - comparison operators, 346
+  - division, 334
+  - literals, 76–78
+  - logical operators, 356
+  - multiplication, 332
+  - negation, 327
+  - remainder, 336
+  - in struct example, 619–621
+  - subtraction, 340
+- Integral types, 9–10, 145–146
+- interface keyword, 634
+- Interface sets, 480

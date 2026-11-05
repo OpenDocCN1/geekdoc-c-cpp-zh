@@ -1,0 +1,29 @@
+```
+parameter-modifier:
+    ref
+    out
+    this
+```
+
+```
+parameter-array:
+    attributes_opt params array-type identifier
+```
+
+The formal parameter list consists of one or more comma-separated parameters, of which only the last may be a parameter-array.
+
+A fixed-parameter consists of an optional set of attributes (§17); an optional ref, out, or this modifier; a type; an identifier; and an optional default-argument. Each fixed-parameter declares a parameter of the given type with the given name. The this modifier designates the method as an extension method and is allowed only on the first parameter of a static method. Extension methods are further described in §10.6.9.
+
+A fixed-parameter with a default-argument is known as an optional parameter, whereas a fixed-parameter without a default-argument is a required parameter. A required parameter may not appear after an optional parameter in a formal-parameter-list.
+
+> CHRISTIAN NAGEL Attention must be paid to optional parameters in regard to versioning. The compiler takes default arguments and adds them to the caller in the assembly of the caller. If the default argument changes to a new value with a new version of the code, the caller still contains the old value if the code is not recompiled.
+
+A ref or out parameter cannot have a default-argument. The expression in a default-argument must be one of the following:
+
++   - A constant-expression.
++   - An expression of the form new S(), where S is a value type.
++   - An expression of the form default(S), where S is a value type.
+
+The expression must be implicitly convertible by an identity or nullable conversion to the type of the parameter.
+
+If optional parameters occur in an implementing partial method declaration (§10.2.7), in an explicit interface member implementation (§13.4.1), or in a single-parameter indexer declaration (§10.9), the compiler should give a warning, since these members can never be invoked in a way that permits arguments to be omitted.

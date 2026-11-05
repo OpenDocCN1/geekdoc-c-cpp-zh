@@ -1,0 +1,14 @@
+behavior of the fixed statement is implementation-defined if the array expression is null or if the array has zero elements.
+
++   - An expression of type string, provided the type char* is implicitly convertible to the pointer type given in the fixed statement. In this case, the initializer computes the address of the first character in the string, and the entire string is guaranteed to remain at a fixed address for the duration of the fixed statement. The behavior of the fixed statement is implementation-defined if the string expression is null.
++   - A simple-name or member-access that references a fixed size buffer member of a moveable variable, provided the type of the fixed size buffer member is implicitly convertible to the pointer type given in the fixed statement. In this case, the initializer computes a pointer to the first element of the fixed size buffer (§18.7.2), and the fixed size buffer is guaranteed to remain at a fixed address for the duration of the fixed statement.
+
+> **ERIC LIPPERT** This point demonstrates a potentially confusing conflation: The keyword fixed is used to mean both “fixed in location” and “fixed in size.” Adding to the confusion is the fact that a fixed-in-size array member must be fixed-in-location to be used. Try to keep in mind that a fixed-in-size block is not automatically fixed-in-place.
+
+For each address computed by a fixed-pointer-initializer, the fixed statement ensures that the variable referenced by the address is not subject to relocation or disposal by the garbage collector for the duration of the fixed statement. For example, if the address computed by a fixed-pointer-initializer references a field of an object or an element of an array instance, the fixed statement guarantees that the containing object instance will not be relocated or disposed of during the lifetime of the statement.
+
+It is the programmer’s responsibility to ensure that pointers created by fixed statements do not survive beyond execution of those statements. For example, when pointers created by fixed statements are passed to external APIs, it is the programmer’s responsibility to ensure that the APIs retain no memory of these pointers.
+
+> **ERIC LIPPERT** If you are in the unfortunate position of having to keep a block of managed memory fixed in place for longer than the duration of a fixed statement, then you can do so via the GCHandle type. That said, it is best to avoid getting into that situation in the first place.
+
+Fixed objects may cause fragmentation of the heap (because they cannot be moved). For that reason, objects should be fixed only when absolutely necessary, and then only for the shortest amount of time possible.

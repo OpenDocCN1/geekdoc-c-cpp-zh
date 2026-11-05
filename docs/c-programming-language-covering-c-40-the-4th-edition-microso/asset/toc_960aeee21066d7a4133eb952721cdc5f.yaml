@@ -1,0 +1,86 @@
+level_changes:
+- line: 392
+  before: 2
+  after: 3
+- line: 402
+  before: 3
+  after: 4
+- line: 457
+  before: 2
+  after: 3
+- line: 618
+  before: 2
+  after: 4
+- line: 655
+  before: 2
+  after: 4
+- line: 726
+  before: 2
+  after: 4
+- line: 739
+  before: 3
+  after: 5
+- line: 874
+  before: 2
+  after: 5
+- line: 902
+  before: 2
+  after: 5
+- line: 1205
+  before: 2
+  after: 3
+- line: 1953
+  before: 2
+  after: 1
+- line: 3235
+  before: 2
+  after: 1
+- line: 4351
+  before: 2
+  after: 1
+- line: 5159
+  before: 2
+  after: 1
+- line: 5931
+  before: 2
+  after: 1
+- line: 6904
+  before: 2
+  after: 1
+- line: 12348
+  before: 2
+  after: 1
+- line: 14181
+  before: 2
+  after: 1
+- line: 14696
+  before: 2
+  after: 1
+- line: 19890
+  before: 2
+  after: 1
+text_changes:
+- line: 902
+  before: 1.6.6.3 *静态方法和实例方法*
+  after: 1.6.6.3 静态方法和实例方法
+- line: 1357
+  before: 1.6.7.4 *事件*
+  after: 1.6.7.4 事件
+- line: 1448
+  before: 1.6.7.5 *运算符*
+  after: 1.6.7.5 运算符
+- line: 1475
+  before: 1.6.7.6 *析构函数*
+  after: 1.6.7.6 析构函数
+- line: 5495
+  before: 5.3.3.7 *while* 语句
+  after: 5.3.3.7 while 语句
+- line: 5508
+  before: 5.3.3.8 *do* 语句
+  after: 5.3.3.8 do 语句
+- line: 2046
+  before: 2.2.3 语法语法
+  after: 2.2.3 语法规则
+- line: 7381
+  before: 10 表达式
+  after: 7. 表达式

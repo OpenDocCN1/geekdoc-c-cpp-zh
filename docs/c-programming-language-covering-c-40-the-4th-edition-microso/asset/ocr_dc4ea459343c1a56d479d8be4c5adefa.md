@@ -1,0 +1,25 @@
++   - Otherwise, if b has a type B and an implicit conversion exists from a to B, the result type is B. At runtime, a is first evaluated. If a is not null, a is unwrapped to type A₀ (if A exists and is nullable) and converted to type B, and it becomes the result. Otherwise, b is evaluated and becomes the result.
++   - Otherwise, a and b are incompatible, and a compile-time error occurs.
+
+> ERIC LIPPERT These conversion rules considerably complicate the transformation of a null coalescing operator into an expression tree. In some cases, the compiler must emit an additional expression tree lambda specifically to handle the conversion logic.
+
+> CHRIS SELLS The ?? operator is useful for setting default values for reference types or nullable value types. For example:
+> 
+> Foo f1 = ...;
+> Foo f2 = f1 ?? new Foo(...);
+> int? i1 = ...;
+> int i2 = i1 ?? 452;
+
+# 7.14 Conditional Operator
+
+The ?: operator is called the conditional operator or, sometimes, the ternary operator.
+
+```
+conditional-expression:
+  null-coalescing-expression
+  null-coalescing-expression ? expression : expression
+```
+
+A conditional expression of the form b ? x : y first evaluates the condition b. Then, if b is true, x is evaluated and becomes the result of the operation. Otherwise, y is evaluated and becomes the result of the operation. A conditional expression never evaluates both x and y.
+
+The conditional operator is right-associative, meaning that operations are grouped from right to left. For example, an expression of the form a ? b : c ? d : e is evaluated as a ? b : (c ? d : e).

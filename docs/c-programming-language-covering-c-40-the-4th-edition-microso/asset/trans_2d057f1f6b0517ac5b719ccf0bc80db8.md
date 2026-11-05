@@ -1,0 +1,169 @@
+
+设置访问器对应于一个具有名为 value 的单一参数且没有返回类型的方法。当属性作为赋值的目标或作为 ++ 或 -- 的操作数被引用时，将使用提供新值的参数调用设置访问器。
+
+List<T> 类声明了两个属性，Count 和 Capacity，它们分别是只读和读写的。以下是使用这些属性的示例。
+
+```csharp
+List<string> names = new List<string>();
+names.Capacity = 100;            // Invokes set accessor
+int i = names.Count;             // Invokes get accessor
+int j = names.Capacity;          // Invokes get accessor
+```
+
+与字段和方法类似，C# 支持实例属性和静态属性。静态属性使用 static 修饰符声明，而实例属性声明时不使用它。
+
+属性的访问器可以是虚拟的。当属性声明包含 virtual、abstract 或 override 修饰符时，它应用于该属性的访问器。
+
+> **VLADIMIR RESHETNIKOV** 如果虚拟属性碰巧有一个私有访问器，则该访问器在 CLR 中实现为非虚拟方法，并且不能在派生类中重写。
+
+### 1.6.7.3 索引器
+
+索引器是一种成员，它使对象能够像数组一样被索引。索引器的声明类似于属性，不同之处在于成员名称是 this，后跟一个写在分隔符 [ 和 ] 之间的参数列表。这些参数可在索引器的访问器中使用。与属性类似，索引器可以是读写、只读和只写的，并且索引器的访问器可以是虚拟的。
+
+List<T> 类声明了一个接受 int 参数的读写索引器。该索引器使得可以使用 int 值来索引 List<T> 实例。例如：
+
+```csharp
+List<string> names = new List<string>();
+names.Add("Liz");
+names.Add("Martha");
+names.Add("Beth");
+for (int i = 0; i < names.Count; i++) {
+    string s = names[i];
+    names[i] = s.ToUpper();
+}
+```
+
+索引器可以重载，这意味着只要参数的数量或类型不同，一个类就可以声明多个索引器。
+
+### 1.6.7.4 *事件*
+
+*事件*是一种成员，它使类或对象能够提供通知。事件的声明类似于字段，不同之处在于声明包含 event 关键字，并且类型必须是委托类型。
+
+> **JESSE LIBERTY** 实际上，event 只是一个关键字，它指示 C# 限制委托的使用方式，从而防止客户端直接调用事件，或通过分配处理程序而不是添加处理程序来劫持事件。简而言之，event 关键字使委托的行为符合你对事件行为的预期。
+
+> **CHRIS SELLS** 如果没有 event 关键字，你可以这样做：
+
+```
+delegate void WorkCompleted();
+
+class Worker {
+  public WorkCompleted Completed;  // Delegate field, not event
+  ...
+}
+
+class Boss {
+  public void WorkCompleted() { ... }
+}
+
+class Program {
+  static void Main() {
+    Worker peter = new Worker();
+    Boss boss = new Boss();
+
+    peter.Completed += boss.WorkCompleted;  // This is what you want to happen
+    peter.Completed = boss.WorkCompleted;  // This is what the compiler allows
+    ...
+  }
+}
+```
+
+不幸的是，使用 event 关键字时，Completed 只是一个委托类型的公共字段，任何想这样做的人都可以践踏它——而编译器对此没有问题。通过添加 event 关键字，你将操作限制为 += 和 -=，如下所示：
+
+```
+class Worker {
+    public event WorkCompleted Completed;
+    ...
+}
+...
+peter.Completed += boss.WorkCompleted;  // Compiler still okay
+peter.Completed -= boss.WorkCompleted;  // Compiler error
+```
+
+使用 event 关键字是唯一可以公开字段的场合，因为编译器将使用范围缩小到安全操作。此外，如果你想接管事件的 += 和 -= 的实现，也可以这样做。
+
+在声明事件成员的类中，可以像访问委托类型的字段一样访问该事件（前提是该事件不是抽象的，并且未声明访问器）。该字段存储一个委托引用，该委托表示已添加到事件的事件处理程序。如果不存在事件处理程序，则该字段为 null。
+
+List<T> 类声明了一个名为 Changed 的事件成员，它指示已向列表添加了新项。Changed 事件由 OnChanged 虚拟方法引发，该方法首先检查事件是否为 null（意味着不存在处理程序）。引发事件的概念完全等同于调用该事件所表示的委托——因此，没有用于引发事件的特殊语言构造。
+
+客户端通过事件处理程序对事件作出反应。事件处理程序使用 += 运算符附加，并使用 -= 运算符移除。以下示例将事件处理程序附加到 List<string> 的 Changed 事件。
+
+```
+using System;
+
+class Test
+{
+    static int changeCount;
+    static void ListChanged(object sender, EventArgs e) {
+        changeCount++;
+    }
+}
+```
+
+```csharp
+static void Main() {
+    List<string> names = new List<string>();
+    names.Changed += new EventHandler(ListChanged);
+    names.Add("Liz");
+    names.Add("Martha");
+    names.Add("Beth");
+    Console.WriteLine(changeCount);        // Outputs "3"
+}
+```
+
+对于希望控制事件底层存储的高级场景，事件声明可以显式提供 add 和 remove 访问器，它们与属性的设置访问器有些类似。
+
+> **CHRIS SELLS** 从 C# 2.0 开始，不再需要显式创建委托实例来包装方法。因此，代码
+
+```csharp
+names.Changed += new EventHandler(ListChanged);
+```
+
+可以更简洁地写成
+
+```csharp
+names.Changed += ListChanged;
+```
+
+这种缩短形式不仅需要更少的输入，而且更易于阅读。
+
+### 1.6.7.5 *运算符*
+
+*运算符*是一种成员，它定义将特定表达式运算符应用于类实例的含义。可以定义三种运算符：一元运算符、二元运算符和转换运算符。所有运算符都必须声明为 public 和 static。
+
+List<T> 类声明了两个运算符，operator == 和 operator !=，从而为将这些运算符应用于 List 实例的表达式赋予了新含义。具体而言，这些运算符将两个 List<T> 实例的相等性定义为使用每个所含对象的 Equals 方法进行比较。以下示例使用 == 运算符比较两个 List<int> 实例。
+
+```csharp
+using System;
+
+class Test
+{
+    static void Main() {
+        List<int> a = new List<int>();
+        a.Add(1);
+        a.Add(2);
+        List<int> b = new List<int>();
+        b.Add(1);
+        b.Add(2);
+        Console.WriteLine(a == b);      // Outputs "True"
+        b.Add(3);
+        Console.WriteLine(a == b);      // Outputs "False"
+    }
+}
+```
+
+第一个 Console.WriteLine 输出 True，因为两个列表包含相同数量的对象，且这些对象的值相同、顺序相同。如果 List<T> 未定义 operator ==，则第一个 Console.WriteLine 将输出 False，因为 a 和 b 引用不同的 List<int> 实例。
+
+### 1.6.7.6 *析构函数*
+
+*析构函数*是一种成员，它实现销毁类实例所需执行的操作。析构函数不能有参数，不能有可访问性修饰符，也不能被显式调用。实例的析构函数在垃圾回收期间自动调用。
+
+垃圾回收器在决定何时回收对象和运行析构函数方面拥有很大的自由度。具体而言，析构函数调用的时机不是确定性的，并且析构函数可能在任何线程上执行。由于这些原因及其他原因，类应仅在没有其他可行解决方案时才实现析构函数。
+
+> **VLADIMIR RESHETNIKOV** 析构函数有时被称为“终结器”。这个名称也出现在垃圾回收器 API 中——例如，GC.WaitForPendingFinalizers。
+
+using 语句提供了一种更好的对象销毁方法。
+
+## 1.7 结构
+
+与类一样，*结构*是可以包含数据成员和函数成员的数据结构，但与类不同，结构是值类型，不需要堆分配。结构类型的变量直接存储结构的数据，而类类型的变量存储对动态分配对象的引用。结构类型不支持用户指定的继承，并且所有结构类型都隐式继承自 object 类型。
+

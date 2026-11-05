@@ -1,0 +1,56 @@
+# ## 2. Lexical Structure
+
+The first line of a grammar production is the name of the nonterminal symbol being defined, followed by a colon. Each successive indented line contains a possible expansion of the nonterminal given as a sequence of nonterminal or terminal symbols. For example, the production
+
+```
+```
+while-statement:
+    while ( boolean-expression ) embedded-statement
+```
+```
+
+defines a while-statement to consist of the token while, followed by the token “(”, followed by a boolean-expression, followed by the token “)”, followed by an embedded-statement.
+
+When there is more than one possible expansion of a nonterminal symbol, the alternatives are listed on separate lines. For example, the production
+
+```
+```
+statement-list:
+    statement
+    statement-list statement
+```
+```
+
+defines a statement-list to either consist of a statement or consist of a statement-list followed by a statement. In other words, the definition is recursive and specifies that a statement list consists of one or more statements.
+
+A subscripted suffix “_opt” is used to indicate an optional symbol. The production
+
+```
+```
+block:
+    { statement-list_opt }
+```
+```
+
+is shorthand for
+
+```
+```
+block:
+    {   }
+    { statement-list }
+```
+```
+
+and defines a block to consist of an optional statement-list enclosed in “{” and “}” tokens.
+
+Alternatives are normally listed on separate lines, though in cases where there are many alternatives, the phrase “one of” may precede a list of expansions given on a single line. This is simply shorthand for listing each of the alternatives on a separate line. For example, the production
+
+```
+```
+real-type-suffix: one of
+    F f D d M m
+```
+```
+
+is shorthand for

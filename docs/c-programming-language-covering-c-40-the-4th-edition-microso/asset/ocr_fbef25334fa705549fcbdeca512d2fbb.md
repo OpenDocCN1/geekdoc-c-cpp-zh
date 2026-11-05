@@ -1,0 +1,43 @@
+The location to which a jump statement transfers control is called the *target* of the jump statement.
+
+When a jump statement occurs within a block, and the target of that jump statement is outside that block, the jump statement is said to *exit* the block. While a jump statement may transfer control out of a block, it can never transfer control into a block.
+
+Execution of jump statements is complicated by the presence of intervening *try* statements. In the absence of such *try* statements, a jump statement unconditionally transfers control from the jump statement to its target. In the presence of such intervening *try* statements, execution is more complex. If the jump statement exits one or more *try* blocks with associated *finally* blocks, control is initially transferred to the *finally* block of the innermost *try* statement. When and if control reaches the end point of a *finally* block, control is transferred to the *finally* block of the next enclosing *try* statement. This process is repeated until the *finally* blocks of all intervening *try* statements have been executed.
+
+In the example
+
+```
+```csharp
+using System;
+class Test
+{
+    static void Main()
+    {
+        while (true)
+        {
+            try
+            {
+                try
+                {
+                    Console.WriteLine("Before break");
+                    break;
+                }
+                finally
+                {
+                    Console.WriteLine("Innermost finally block");
+                }
+            }
+            finally
+            {
+                Console.WriteLine("Outermost finally block");
+            }
+            Console.WriteLine("After break");
+        }
+    }
+}
+```
+```
+
+the *finally* blocks associated with two *try* statements are executed before control is transferred to the target of the jump statement.
+
+The output produced is as follows:

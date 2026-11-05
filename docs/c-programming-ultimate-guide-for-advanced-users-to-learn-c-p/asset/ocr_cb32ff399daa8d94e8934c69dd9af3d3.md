@@ -1,0 +1,1 @@
+and brands within this book are for clarifying purposes only and are owned by the owners themselves, not affiliated with this document.

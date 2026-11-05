@@ -1,0 +1,20 @@
++   - Neither S₀ nor T₀ is an *interface-type*.
++   - Excluding user-defined conversions, a conversion does not exist from S to T or from T to S.
+
+The restrictions that apply to user-defined conversions are discussed further in §10.10.3.
+
+# 6.4.2 Lifted Conversion Operators
+
+Given a user-defined conversion operator that converts from a non-nullable value type S to a non-nullable value type T, a *lifted conversion operator* exists that converts from S? to T?. This lifted conversion operator performs an unwrapping from S? to S, followed by the user-defined conversion from S to T, followed by a wrapping from T to T?, except that a null-valued S? converts directly to a null-valued T?.
+
+A lifted conversion operator has the same implicit or explicit classification as its underlying user-defined conversion operator. The term “user-defined conversion” applies to the use of both user-defined and lifted conversion operators.
+
+# 6.4.3 Evaluation of User-Defined Conversions
+
+A user-defined conversion converts a value from its type, called the *source type*, to another type, called the *target type*. Evaluation of a user-defined conversion centers on finding the *most specific* user-defined conversion operator for the particular source and target types. This determination is broken into several steps:
+
++   - Finding the set of classes and structs from which user-defined conversion operators will be considered. This set consists of the source type and its base classes and the target type and its base classes (with the implicit assumptions that only classes and structs can declare user-defined operators, and that non-class types have no base classes). For the purposes of this step, if either the source or target type is a *nullable-type*, their underlying type is used instead.
++   - From that set of types, determining which user-defined and lifted conversion operators are applicable. For a conversion operator to be applicable, it must be possible to perform a standard conversion (§6.3) from the source type to the operand type of the operator, and it must be possible to perform a standard conversion from the result type of the operator to the target type.
++   - From the set of applicable user-defined operators, determining which operator is unambiguously the most specific. In general terms, the most specific operator is the operator whose operand type is “closest” to the source type and whose result type is “closest” to the target type. User-defined conversion operators are preferred over lifted conversion operators. The exact rules for establishing the most specific user-defined conversion operator are defined in the following sections.
+
+# 6. Conversions
