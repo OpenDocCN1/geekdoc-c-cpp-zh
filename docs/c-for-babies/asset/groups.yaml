@@ -1,0 +1,829 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # C#
+
+
+    # For Babies
+
+
+    Written by Khalid Abuhakmeh and Maarten Balliauw
+
+    Illustrated by Arina Kovrizhkina
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_0_0.png)'
+  - '[PAGE 1]
+
+
+    # # Aa
+
+
+    # A is for Abstract
+
+
+    Abstract tells you that you’ve yet to implement a thing. Like having a bowl without
+    cereal.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_1_0.png)'
+  - '[PAGE 2]
+
+
+    # Bb
+
+
+    # B is for Boolean
+
+
+    Booleans can be either true or false. Ponies existing is true, while unicorns
+    are real is false.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_2_0.png)'
+  - '[PAGE 3]
+
+
+    Cc
+
+
+    C is for Class
+
+
+    A class is a container for important information, just like your backpack.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_3_0.png)'
+  - '[PAGE 4]
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_4_0.png)
+
+
+    # D is for .NET
+
+
+    .NET is where C# lives, along with VB.NET and F#. A big happy family.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_4_1.png)'
+  - '[PAGE 5]
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_0.png)
+
+
+    # E is for Enum
+
+
+    An enum is a set of values, just like the colors in a rainbow. Red, Orange, Yellow,
+    Green, Blue, Indigo, and Violet.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_1.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_2.png)
+
+
+    RAINBOW
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_3.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_4.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_5.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_6.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_7.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_8.png)'
+  - '[PAGE 6]
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_6_0.png)
+
+
+    # F is for Foreach
+
+
+    Foreach loops help us repeat things\nin order, like counting our fingers\none
+    at a time.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_6_1.png)'
+  - '[PAGE 7]
+
+
+    # Gg
+
+
+    # G is for Goto
+
+
+    Goto transfers control to a statement marked by a label, just like kicking the
+    ball to a friend.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_7_0.png)'
+  - '[PAGE 8]
+
+
+    <!-- no content -->'
+  - '[PAGE 9]
+
+
+    # Ii
+
+
+    # I is for Interface
+
+
+    Interfaces are like little agreements, just like when you agree to brush your
+    teeth.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_9_0.png)'
+  - '[PAGE 10]
+
+
+    # Jj
+
+
+    # J is for Join
+
+
+    We can join words together by
+
+    calling string.Join ("I","♥","You").
+
+    What does that say?
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_10_0.png)'
+  - '[PAGE 11]
+
+
+    # Kk
+
+
+    # K is for Keyword
+
+
+    C# has special words that you can use to make programs happy. They''re like the
+    please and thank you of programming.
+
+
+    Thank you
+
+
+    Please
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_11_0.png)'
+  - '[PAGE 12]
+
+
+    # L is for Lock
+
+
+    Lock makes sure you''re the only one playing with a toy, just like your favorite
+    teddy bear.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_12_0.png)'
+  - '[PAGE 13]
+
+
+    # # Mm
+
+
+    # ## M is for Method
+
+
+    A method calls to something special, just like when you call for your blanky.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_13_0.png)'
+  - '[PAGE 14]
+
+
+    # Nn
+
+
+    # N is for Null
+
+
+    Null is nothing, like your empty toy box when all your toys are scattered on the
+    floor.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_0.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_1.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_2.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_3.png)'
+  - '[PAGE 15]
+
+
+    # Oo
+
+
+    # O is for Operator
+
+
+    Operators help you add, subtract, multiply, and divide, just like adding more
+    candies to your pockets.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_15_0.png)'
+  - '[PAGE 16]
+
+
+    <!-- no content -->'
+  - '[PAGE 17]
+
+
+    # Qq
+
+
+    # Q is for Queue
+
+
+    A queue is a special container that accesses information in order, just like the
+    cars in your favorite toy train. Choo Choo!
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_17_0.png)'
+  - '[PAGE 18]
+
+
+    # Rr
+
+
+    # R is for Return
+
+
+    Return allows you to send something back, like the peas mommy wants you to eat.
+    Ewww...
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_18_0.png)'
+  - '[PAGE 19]
+
+
+    # Ss
+
+
+    # S is for String
+
+
+    Strings are for words, letting us express ourselves and communicate with others.
+    What’s that you said?
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_19_0.png)'
+  - '[PAGE 20]
+
+
+    # Tt
+
+
+    # T is for Types
+
+
+    All types are different and special, just like fruit, with bananas, apples, oranges,
+    and mangoes.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_20_0.png)'
+  - '[PAGE 21]
+
+
+    # Uu
+
+
+    # U is for Using
+
+
+    Using lets us clean up after ourselves, like after eating a big messy bowl of
+    spaghetti.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_21_0.png)'
+  - '[PAGE 22]
+
+
+    # Vv
+
+
+    # V is for Variable
+
+
+    Variables let us put things in them, like putting the cat in a box. Meooooooow!
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_22_0.png)'
+  - '[PAGE 23]
+
+
+    # Ww
+
+
+    # W is for While
+
+
+    While loops will go until we tell them to stop, we wouldn’t want to eat ice cream
+    forever…
+
+    or would we?
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_23_0.png)'
+  - '[PAGE 24]
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_24_0.png)
+
+
+    # X is for XOR
+
+
+    XOR (exclusive or) uses a caret symbol that allows us to create complex expressions,
+    and bunnies love them too!
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_24_1.png)'
+  - '[PAGE 25]
+
+
+    # # Yy
+
+
+    # ## Y is for Yield
+
+
+    Yield lets us pause and come back,
+
+    like pausing our favorite TV show
+
+    and watching it later.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_25_0.png)'
+  - '[PAGE 26]
+
+
+    # Zz
+
+
+    # Z is for Zip
+
+
+    LINQ’s Zip lets us combine two collections into one result. Like two big hugs
+    to make you happy!
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_26_0.png)'
+  - '[PAGE 27]
+
+
+    When you grow up, you can use these fantastic tools for .NET development. Visit
+    jb.gg/babies to learn more.
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_27_0.png)'
+  md: "\n## C# For Babies\n\nWritten by Khalid Abuhakmeh and Maarten Balliauw  \n\
+    Illustrated by Arina Kovrizhkina\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_0_0.png)\n\
+    \n## Aa\n\n### A is for Abstract\n\nAbstract tells you that you’ve yet to implement\
+    \ a thing. Like having a bowl without cereal.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_1_0.png)\n\
+    \n## Bb\n\n### B is for Boolean\n\nBooleans can be either true or false. Ponies\
+    \ existing is true, while unicorns are real is false.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_2_0.png)\n\
+    \n## Cc\n\n### C is for Class\n\nA class is a container for important information,\
+    \ just like your backpack.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_3_0.png)\n\
+    \n## Dd\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_4_0.png)\n\n### D is for .NET\n\
+    \n.NET is where C# lives, along with VB.NET and F#. A big happy family.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_4_1.png)\n\
+    \n## Ee\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_5_0.png)\n\n### E is for Enum\n\
+    \nAn enum is a set of values, just like the colors in a rainbow. Red, Orange,\
+    \ Yellow, Green, Blue, Indigo, and Violet.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_5_1.png)\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_5_2.png)\n\nRAINBOW\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_5_3.png)\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_5_4.png)\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_5_5.png)\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_5_6.png)\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_5_7.png)\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_5_8.png)\n\n## Ff\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_6_0.png)\n\
+    \n### F is for Foreach\n\nForeach loops help us repeat things in order, like counting\
+    \ our fingers one at a time.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_6_1.png)\n\
+    \n## Gg\n\n### G is for Goto\n\nGoto transfers control to a statement marked by\
+    \ a label, just like kicking the ball to a friend.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_7_0.png)\n\
+    \n## Ii\n\n### I is for Interface\n\nInterfaces are like little agreements, just\
+    \ like when you agree to brush your teeth.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_9_0.png)\n\
+    \n## Jj\n\n### J is for Join\n\nWe can join words together by calling `string.Join(\"\
+    I\",\"♥\",\"You\")`. What does that say?\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_10_0.png)\n\
+    \n## Kk\n\n### K is for Keyword\n\nC# has special words that you can use to make\
+    \ programs happy. They're like the please and thank you of programming.\n\nThank\
+    \ you\n\nPlease\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_11_0.png)\n\n## Ll\n\
+    \n### L is for Lock\n\nLock makes sure you're the only one playing with a toy,\
+    \ just like your favorite teddy bear.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_12_0.png)\n\
+    \n## Mm\n\n### M is for Method\n\nA method calls to something special, just like\
+    \ when you call for your blanky.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_13_0.png)\n\
+    \n## Nn\n\n### N is for Null\n\nNull is nothing, like your empty toy box when\
+    \ all your toys are scattered on the floor.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_14_0.png)\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_14_1.png)\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_14_2.png)\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_14_3.png)\n\n## Oo\n\n### O is for\
+    \ Operator\n\nOperators help you add, subtract, multiply, and divide, just like\
+    \ adding more candies to your pockets.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_15_0.png)\n\
+    \n## Qq\n\n### Q is for Queue\n\nA queue is a special container that accesses\
+    \ information in order, just like the cars in your favorite toy train. Choo Choo!\n\
+    \n![](img/09191ed26e24d83f9d7b181200c7deb5_17_0.png)\n\n## Rr\n\n### R is for\
+    \ Return\n\nReturn allows you to send something back, like the peas mommy wants\
+    \ you to eat. Ewww...\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_18_0.png)\n\n\
+    ## Ss\n\n### S is for String\n\nStrings are for words, letting us express ourselves\
+    \ and communicate with others. What’s that you said?\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_19_0.png)\n\
+    \n## Tt\n\n### T is for Types\n\nAll types are different and special, just like\
+    \ fruit, with bananas, apples, oranges, and mangoes.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_20_0.png)\n\
+    \n## Uu\n\n### U is for Using\n\nUsing lets us clean up after ourselves, like\
+    \ after eating a big messy bowl of spaghetti.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_21_0.png)\n\
+    \n## Vv\n\n### V is for Variable\n\nVariables let us put things in them, like\
+    \ putting the cat in a box. Meooooooow!\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_22_0.png)\n\
+    \n## Ww\n\n### W is for While\n\nWhile loops will go until we tell them to stop,\
+    \ we wouldn’t want to eat ice cream forever… or would we?\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_23_0.png)\n\
+    \n## Xx\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_24_0.png)\n\n### X is for\
+    \ XOR\n\nXOR (exclusive or) uses a caret symbol that allows us to create complex\
+    \ expressions, and bunnies love them too!\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_24_1.png)\n\
+    \n## Yy\n\n### Y is for Yield\n\nYield lets us pause and come back, like pausing\
+    \ our favorite TV show and watching it later.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_25_0.png)\n\
+    \n## Zz\n\n### Z is for Zip\n\nLINQ’s Zip lets us combine two collections into\
+    \ one result. Like two big hugs to make you happy!\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_26_0.png)\n\
+    \nWhen you grow up, you can use these fantastic tools for .NET development. Visit\
+    \ jb.gg/babies to learn more.\n\n![](img/09191ed26e24d83f9d7b181200c7deb5_27_0.png)\n"
+  mdcn: '
+
+    ## 给宝宝的 C#
+
+
+    作者：Khalid Abuhakmeh 和 Maarten Balliauw
+
+    插图由 Arina Kovrizhkina 绘制
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_0_0.png)
+
+
+    ## Aa
+
+
+    ### A 代表 抽象
+
+
+    抽象告诉你你还没有实现某样东西。就像有一个碗却没有麦片。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_1_0.png)
+
+
+    ## Bb
+
+
+    ### B 代表 布尔
+
+
+    布尔值可以是 true 或 false。小马存在是 true，而独角兽是真实的则是 false。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_2_0.png)
+
+
+    ## Cc
+
+
+    ### C 代表 类
+
+
+    类是重要信息的容器，就像你的书包一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_3_0.png)
+
+
+    ## Dd
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_4_0.png)
+
+
+    ### D 代表 .NET
+
+
+    .NET 是 C# 居住的地方，还有 VB.NET 和 F#。一个大家庭。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_4_1.png)
+
+
+    ## Ee
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_0.png)
+
+
+    ### E 代表 枚举
+
+
+    枚举是一组值，就像彩虹中的颜色。红、橙、黄、绿、蓝、靛、紫。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_1.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_2.png)
+
+
+    彩虹
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_3.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_4.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_5.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_6.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_7.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_5_8.png)
+
+
+    ## Ff
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_6_0.png)
+
+
+    ### F 代表 Foreach
+
+
+    Foreach 循环帮助我们按顺序重复事物，就像一次数一个手指一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_6_1.png)
+
+
+    ## Gg
+
+
+    ### G 代表 Goto
+
+
+    Goto 将控制权转移到由标签标记的语句，就像把球踢给朋友一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_7_0.png)
+
+
+    ## Ii
+
+
+    ### I 代表 接口
+
+
+    接口就像小小的协议，就像你同意刷牙时一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_9_0.png)
+
+
+    ## Jj
+
+
+    ### J 代表 Join
+
+
+    我们可以通过调用 `string.Join("I","♥","You")` 来连接单词。这说了什么？
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_10_0.png)
+
+
+    ## Kk
+
+
+    ### K 代表 关键字
+
+
+    C# 有一些特殊单词可以用来让程序开心。它们就像编程中的请和谢谢。
+
+
+    谢谢
+
+
+    请
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_11_0.png)
+
+
+    ## Ll
+
+
+    ### L 代表 锁
+
+
+    锁确保你是唯一一个玩玩具的人，就像你最喜欢的泰迪熊一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_12_0.png)
+
+
+    ## Mm
+
+
+    ### M 代表 方法
+
+
+    方法调用某件特别的事，就像你呼唤你的小毯子时一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_13_0.png)
+
+
+    ## Nn
+
+
+    ### N 代表 空值
+
+
+    空值就是什么都没有，就像当你所有的玩具都散落在地板上时，你的空玩具箱一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_0.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_1.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_2.png)
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_14_3.png)
+
+
+    ## Oo
+
+
+    ### O 代表 运算符
+
+
+    运算符帮助你加、减、乘、除，就像往口袋里再加更多糖果一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_15_0.png)
+
+
+    ## Qq
+
+
+    ### Q 代表 队列
+
+
+    队列是一个特殊容器，按顺序访问信息，就像你最喜欢的玩具火车里的车厢一样。呜呜！
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_17_0.png)
+
+
+    ## Rr
+
+
+    ### R 代表 返回
+
+
+    返回允许你把东西送回去，就像妈妈想让你吃的豌豆。呕...
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_18_0.png)
+
+
+    ## Ss
+
+
+    ### S 代表 字符串
+
+
+    字符串用于单词，让我们表达自己并与他人交流。你刚才说什么？
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_19_0.png)
+
+
+    ## Tt
+
+
+    ### T 代表 类型
+
+
+    所有类型都不同且特别，就像水果，有香蕉、苹果、橙子和芒果。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_20_0.png)
+
+
+    ## Uu
+
+
+    ### U 代表 Using
+
+
+    Using 让我们清理自己，就像吃完一大碗乱七八糟的意大利面之后一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_21_0.png)
+
+
+    ## Vv
+
+
+    ### V 代表 变量
+
+
+    变量让我们把东西放进去，就像把猫放进盒子里。喵~~~~！
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_22_0.png)
+
+
+    ## Ww
+
+
+    ### W 代表 While
+
+
+    While 循环会一直进行直到我们告诉它停止，我们不想永远吃冰淇淋……还是想呢？
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_23_0.png)
+
+
+    ## Xx
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_24_0.png)
+
+
+    ### X 代表 XOR
+
+
+    XOR（异或）使用一个插入符号，让我们能够创建复杂的表达式，兔子们也很喜欢它们！
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_24_1.png)
+
+
+    ## Yy
+
+
+    ### Y 代表 Yield
+
+
+    Yield 让我们暂停并回来，就像暂停我们最喜欢的电视节目稍后再看一样。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_25_0.png)
+
+
+    ## Zz
+
+
+    ### Z 代表 Zip
+
+
+    LINQ 的 Zip 让我们将两个集合合并成一个结果。就像两个大拥抱让你开心！
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_26_0.png)
+
+
+    当你长大后，你可以用这些很棒的工具进行 .NET 开发。访问 jb.gg/babies 了解更多。
+
+
+    ![](img/09191ed26e24d83f9d7b181200c7deb5_27_0.png)
+
+    '
+  merge: -1

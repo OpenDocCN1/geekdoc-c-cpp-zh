@@ -331,6 +331,7 @@
 +   [C++ 示例：超过 60 个示例](docs/c-examples-over-60-examples/README.md)
 +   [C# 快速指南——其他语言程序员应掌握的 86 个关键要点](docs/c-fast-track-guide---86-key-points-every-programmer-from-oth/README.md)
 +   [C# 特性精要](docs/c-features-succinctly/README.md)
++   [婴儿的 C#](docs/c-for-babies/README.md)
 +   [C++ 入门指南](docs/c-for-beginners/README.md)
 +   [C++ 入学者指南：将热情转化为编程精通的全面指南](docs/c-for-beginners-a-comprehensive-guide-to-transform-your-pass/README.md)
 +   [C++ 初学者指南：通过实用示例循易学习 C++ 编程语言基础的逐步指南指南](docs/c-for-beginners-a-step-by-step-guide-to-learn-in-an-easy-way/README.md)

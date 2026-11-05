@@ -1,0 +1,17 @@
+level_changes: []
+text_changes:
+- line: 67
+  before: F 代表 Foreach
+  after: F 代表 foreach
+- line: 75
+  before: G 代表 Goto
+  after: G 代表 goto
+- line: 181
+  before: U 代表 Using
+  after: U 代表 using
+- line: 197
+  before: W 代表 While
+  after: W 代表 while
+- line: 215
+  before: Y 代表 Yield
+  after: Y 代表 yield
