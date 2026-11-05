@@ -1,0 +1,21 @@
+![](bbox=[0.22, 0.14, 0.88, 0.35])
+
+# FIGURE 7-1 Creation of an array
+
+The arrow in Figure 7-1 is used to indicate that the identifier, score, actually references the first element in the array, score[0], by containing the address in which score[0] is located. Array elements are normally stored in contiguous, side-by-side, memory locations. The first index in all arrays is 0.
+
+> NOTE
+> Java and all C-style languages use zero-based arrays—meaning the first element is indexed by 0.
+
+Notice that the last element of all arrays is always referenced by an index with a value of the length of the array minus one. Length of score is 14; first element is score[0]; last element is score[13].
+
+> NOTE
+> In C#, when creating an array, the location of the square bracket is different from C++, which includes the square brackets after the identifier. Java allows you to place the square bracket before or after the identifier when you declare an array.
+
+C# allows you to declare an array without instantiating it. The general form of the declaration is:
+
+```
+type [ ] identifier;
+```
+
+No value is placed inside the square bracket [ ]. As shown in Figure 7-2, this does not create the array. It simply defines the base type for the array and associates an identifier with it. No values are referenced. When you look at Figure 7-2, remember that arrays are reference types. The identifier score declares an array that has no values to reference.

@@ -1,0 +1,16 @@
+# Web Forms Page
+
+The System.Web.UI namespace organizes the classes that are used to create .NET Web applications. This namespace includes a Control class, inherited by the HTMLControl and WebControl classes. Like the Control class in the System.Windows.Forms namespace, Control provides some common functionality for all classes that are derived from it. The System.Web.UI namespace also includes a Page class, which is instantiated when you create a Web application using Visual Studio.
+
+Building ASP.NET Web applications using the Web Forms model involves many of the same concepts you learned when you built Windows applications. They are designed with the event-driven model, but there are fewer events. Web sites are created using a Web Forms page. As opposed to dragging and dropping controls onto a Windows form, controls are dropped onto a Web Forms page. There are, however, some significant differences between a Windows and Web application.
+
+When you build an ASP.NET Web application, two separate files are created. Both of these files must be available to the Web server for the page to be displayed. One of the files contains the visual HTML components, and the other contains the logic.
+
+The file storing the logic is referred to as the **code-behind file**. The actual file storing the visual elements is the one referred to as the Web Forms page. This is the container file from which the controls are displayed. The Web Forms page contains static HTML tags and any ASP.NET server controls that have been added to the application. The programming logic resides in a separate file from the file containing the HTML tags. All the event-handler methods are stored in this code-behind file. This file contains the code that enables the user to interact with the page. The next section examines how these two files function when an application is built using Visual Studio.
+
+> > **NOTE**  
+> > You will need Visual Studio Express for Web or Visual Studio Professional to create ASP.NET forms.
+
+# Creating an ASP.NET Web Forms Site
+
+Use the **ASP.NET Web Forms Site** template to create a Web user interface. Instead of selecting **FILE, New, Project** as was used with Windows applications, you select **New, Web Site** from the FILE menu. You will notice there are several installed templates shown in the middle pane in Figure 15–3. For this first example, the **ASP.NET Web Forms Site** template is selected. Notice the custom of the **New Web Site** dialog window, three options are listed for **Web Locations**. **File System** is used for examples in this chapter. However, note that if you select **FTP**, the last option, you would identify a remote server that you gain access to using File Transfer Protocol. If you select **HTTP** for the File Location, the project is created at http://localhost. Whatever name you select for your project name following “http://” becomes the virtual directory name for the Web site. The files are physically stored at the default home directory for the Web application. Unless you change the default home

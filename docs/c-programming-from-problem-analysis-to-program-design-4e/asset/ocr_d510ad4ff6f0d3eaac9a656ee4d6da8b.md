@@ -1,0 +1,7 @@
+**Configuration Wizard.** As you saw in Chapter 14, this tool could be opened a number of different ways. You could view the **Server Explorer** window and add a connection from there or select **New data source** and open the **Data Source Configuration Wizard** that way. As shown in Figure 15–27, selecting **Configure Data Source** enables you to identify where the application should get its data.
+
+![](bbox=[0.1856, 0.2252, 0.9133, 0.6877])
+
+**FIGURE 15–27**  Connecting to Access Database
+
+The **Browse** button shown in Figure 15–27 enables you to select an Access Database. When the application was first created a Web folder was added, **App_Data**, to hold the database. This is where **members.accdb** is stored. Recall that this application was started as an **ASP.NET Empty Web Site**. From the **Solution Explorer** window, a **Web Form** was added, **Default.aspx**, and then using the **Solution Explorer** window, **App_Data** was added using the **Add, Add ASP.NET Web Folder** option. The member.accdb was then moved into that directory. This makes it easy to locate when you **Select the Microsoft Access Database** to connect to the Web site, as shown in Figure 15–28. If you select the Access Database, you do not have to set the

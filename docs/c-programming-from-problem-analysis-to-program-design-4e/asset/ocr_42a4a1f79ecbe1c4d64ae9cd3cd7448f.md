@@ -1,0 +1,9 @@
+You are accustomed to seeing separators between menu options. These are easily created in Visual Studio by right-clicking on the text label below the needed separator and selecting **Insert, Separator**, as illustrated in Figure 10-11. When launched, a separator appears between the **Font** and **Color** options.
+
+![](bbox=[0.1856, 0.1929, 0.9119, 0.5689])
+
+**FIGURE 10-11** Adding a separator
+
+If you are using the `MainMenu` control as opposed to the `MenuStrip` control, after you type the text that will appear on the menu, you must set the Menu property on the form to the name of the `MainMenu` object. Otherwise, the menu does not display when you launch the application. If you use the `MenuStrip` control you do not have to set this property. The association is made automatically for you.
+
+You can assign a tool tip to controls, such as text boxes or menu items, so that text is displayed when the cursor is rested on top of the component. To create a tool tip, drag the `ToolTip` control from the **Toolbox** and drop it anywhere on the form. It will rest in the **Component Tray** below the form. The `ToolTip` is not associated with any specific control object. After it is placed on the form, controls have a new property available in the **Properties** window. To define a tool tip for a specific control, select the control and type what you want to have displayed into the ToolTip property in the **Properties** window. For example, to alert the user that multiple selections could be made from the list box holding the tree names, the `ToolTip` property for the `lstBxTrees` control was set to "Press and Hold the Ctrl Key for Multiple Selections!", as shown in Figure 10-12.

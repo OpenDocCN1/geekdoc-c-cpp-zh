@@ -1,0 +1,34 @@
+> NOTE
+> C# initializes array elements to the null value when you create them with the new keyword. One way to test to see if a value has been stored is to test for null. The following returns true when no values have been referenced by the array.
+> 
+> string [] name = new string[10];
+> if (name[0] == null)
+
+# Jagged Array
+
+When the number of columns in the rows must differ, a jagged, or ragged array, can be created. Jagged arrays differ from rectangular arrays in that rectangular arrays always have a rectangular shape, like a table. Jagged arrays are called "arrays of arrays." One row might have five columns; another row 50 columns. To create a jagged array, you can create a one-dimensional array of type Array, and initialize each of the one-dimensional arrays separately. Example 8-11 illustrates the creation of a jagged array.
+
+# EXAMPLE 8.11
+
+```
+int[] [] anArray = new int[4] [];
+anArray[0] = new int [] {100, 200};
+anArray[1] = new int [] {11, 22, 37};
+anArray[2] = new int [] {16, 72, 83, 99, 106};
+anArray[3] = new int [] {1, 2, 3, 4};
+```
+
+The GetLength(), GetUpperBound(), and GetLowerBound() methods can be used with jagged arrays. Jagged arrays are used exactly like rectangular arrays, except that rows may have a different number of elements.
+
+# Multidimensional Arrays
+
+You are really only limited by your imagination as far as the number of dimensions for which you can allocate arrays in C#. The major requirement is that all data values placed in an array must be of the same base type. A two-dimensional array is actually a multidimensional array; however, it is such a common type of structure that it often is put in its own category.
+
+To declare a three-dimensional array, three integral values are used. They specify the number of planes, rows, and columns to set aside for the array. As with single-dimensional arrays, three-dimensional arrays are referenced by the identifier name.
+
+The format for creating a three-dimensional array is:
+
+```
+type [ , , ] identifier =
+    new type [integral value, integral value, integral value];
+```

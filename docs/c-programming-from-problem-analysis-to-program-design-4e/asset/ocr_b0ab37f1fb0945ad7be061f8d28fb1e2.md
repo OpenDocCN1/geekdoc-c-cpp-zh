@@ -1,0 +1,43 @@
+# EXAMPLE 11.7
+
+```
+```cpp
+// Student object might be instantiated in a different class
+// such as a PresentationGUI class.
+Student aStudent = new Student("123456789", "Maria", "Woo", "CS", "1111");
+```
+```
+
+The first three arguments, "123456789", "Maria", and "Woo", are sent to the constructor for the Person class. Remember that this occurred because the Student constructor included as part of its constructor heading the following code:
+
+```
+```cpp
+:base (id, lname, fname)  // Appears in Student constructor heading
+```
+```
+
+The last two arguments ("CS", "1111") are used by the Student class constructor.
+
+The order of the arguments being sent to the base constructor is extremely important. Notice how lname is listed before fname in Example 11–7. The names selected for the identifier do not matter; however, their position does. There must be a constructor accepting three string arguments. The placement of the arguments in the parameter list for the constructor determines the order that must be used by derived classes. Review the constructors for the Person class in Example 11–1. Notice the three arguments the constructor expects. The constructor expects the first argument to be an identification number, the second argument to be the last name, and the last argument to be the first name.
+
+Objects created using the default constructor do not send any arguments to the Person constructor. Both the Person default constructor and the Student default constructor with no parameters are called when a Student object is instantiated with no arguments, as follows:
+
+```
+```cpp
+Student anotherStudent = new Student();
+```
+```
+
+# USING MEMBERS OF THE BASE CLASS
+
+After objects are instantiated from the Student class, any of the public methods or properties from both the Person class and the Student class can be used with a Student object. You do not have to do anything special to use the public access members of either class. If, in the class that instantiates the anotherStudent object, you want to set a value representing a last name, you can use the property for LastName defined in the Person class as follows:
+
+```
+```cpp
+anotherStudent.LastName = "Garcia";
+```
+```
+
+# CALLING OVERRIDDEN METHODS OF THE BASE CLASS
+
+When you have a method that has the same name in both the base and the derived class, the keyword base can be used in the derived class to refer to methods in the base class that are overridden in the derived class. Example 11–8 shows a method

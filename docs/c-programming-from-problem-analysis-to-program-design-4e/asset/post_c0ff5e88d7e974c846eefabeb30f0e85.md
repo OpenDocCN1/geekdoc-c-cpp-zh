@@ -1,0 +1,58 @@
+
+- **GUI** — See graphical user interface.
+- **hardware** — The physical devices of a computer system that you can touch.
+- **hashing** — Technique used where data is coded or encrypted following some type of algorithm. The same algorithm is used to decrypt or convert the message back to a readable form.
+- **hash table** — A collection of key/value pairs that are organized based on the hash code of the key.
+- **HCI** — See human-computer interaction.
+- **heading** — The first line of a method. It includes the visibility modifier, return type, and the identifier along with the parameter list enclosed in parentheses.
+- **hexadecimal numbering system** — The Base 16 number system with powers of 16. Uses the symbols 0–9 and A–F.
+- **high-level programming language** — A modern programming language that is designed to be easy to read and write because it is written in English-like statements. High-level programming languages include C#, Visual Basic, FORTRAN, Pascal, C++, Java, and J#.
+- **HTML** — See Hypertext Markup Language.
+- **HTML controls** — Controls added to a Web page that are rendered by the browser when the page is displayed. When added to a Web page, they map straight to HTML formatting tags. HTML controls are also called client-side controls.
+- **human-computer interaction (HCI)** — A field of research that concentrates on the design and implementation of interactive computing systems for human use.
+- **Hungarian notation** — See camel case.
+- **Hypertext Markup Language (HTML)** — HTML tags tell the browser how to display data in different formats, for example, in bold or italics or in different fonts or font sizes.
+- **IDE** — See Integrated Development Environment.
+- **identifiers** — The names of elements that appear in a program, such as the names of data items, variables, objects, classes, or methods. Some identifiers are predefined; others are user defined.
+- **if statement** — The selection statement, classified as one-way, two-way, or nested, which is used in combination with a conditional expression to facilitate specifying alternate paths based on the result of the conditional expression.
+- **IL** — See Intermediate Language.
+- **ILDASM** — See Intermediate Language Disassembler.
+- **immutable** — Something that cannot be changed. Objects of the string class store an immutable series of characters. They are considered immutable because the value given to a string cannot be modified.
+- **implicit type coercion** — Automatic conversion, without using casting, from one type to another. Normally conversion occurs from less precise to more precise data types. For example, if a binary operation involves a double and an int, implicit type coercion is performed so that both operands are treated as double.
+- **increment/decrement operator** — The operator used for the common arithmetic operation of adding or subtracting the number one (1) to or from a memory location. To add or subtract one from an operand, place either two plus (++) or two minus symbols (--) before or after the identifier. Both are considered unary operators.
+- **indefinite loop** — See sentinel-controlled loop.
+- **index** — The index, also called the subscript of an array, references the location of the variable relative to the first element in the array. In C#, the index of the first element is always 0.
+- **indexed variable** — See element.
+- **infinite loop** — A loop that has no provisions for termination. Placing a semicolon at the end of the conditional expression can create an infinite loop situation.
+- **information hiding** — Making data private and only accessible to the class.
+- **inheritance** — The concept of defining subclasses of data objects that share some or all of the parent's class characteristics.
+- **inline comment** — Single-line comment indicated by two forward slashes.
+- **instance** — An example of something. An object is an instance of a class.
+- **instantiate** — To create an instance of a class. If you define a template (blueprint) for a class (house), you instantiate the class when you create an object (construct the building).
+- **integer (int)** — One of the types of numbers in C#. A whole number, between a certain range of values that contains no decimal point and can be positive or negative.
+- **Integrated Development Environment (IDE)** — A program environment, such as Visual Studio .NET, in which you type your source code statements, debug, compile, and run your application. IDEs include a number of useful development tools: IntelliSense (pop-up windows with completion options), color coding of different program sections, and online help and documentation.
+- **IntelliSense** — A feature of the Integrated Development Environment (IDE) that attempts to sense what you are going to type before you type it. When the IntelliSense window pops up, you can quickly select from the pull-down menu without having to complete the typing.
+- **interface** — The front end of a program. It is the visual image you see when you run a program, and it allows users to interact with programs.
+- **interface keyword** — A type similar to a class that is totally abstract. Interfaces contain no implementation details for any of their members; all their members are considered abstract. Classes that implement the interface must define details for all of the interface’s methods.
+- **Intermediate Language (IL)** — When no syntax errors are found during compilation, .NET source code is converted into the Intermediate Language (IL). All languages targeting the .NET platform compile into an IL. IL code must be compiled a second time before results are seen.
+- **Intermediate Language Disassembler (ILDASM)** — A developer tool used for parsing machine-readable .exe and .dll files into human-readable format.
+- **interpreter** — Software that checks computer programs line-by-line for rule violations before translating statements into machine-readable format.
+- **iteration structure** — A looping structure in C#. Iteration enables you to identify and block together one or more statements to be repeated based on a predetermined condition. Also called repetition.
+- **iterative approach** — An approach used by programmers, which calls for frequent return to the design and/or analysis phases to make modifications as a program is being developed.
+- **jagged array** — See ragged array.
+- **Java** — High-level programming language introduced in 1995, originally called Oak.
+- **JavaScript** — A scripting language that Web developers use to create interactive Web sites. The script is embedded in the file that contains the HTML tags.
+- **JIT** — See just-in-time.
+- **JITter** — The Common Language Runtime tool used for a just-in-time compilation, which converts the IL code to CPU specific code.
+- **JScript** — The Microsoft implementation of JavaScript.
+- **jump statement** — A statement that changes the sequential order of statement execution by transferring control to a different point in the program. The break statement is one jump statement. When encountered inside a switch statement, control is redirected to the statement on the outside of the switch block.
+- **just-in-time (JIT)** — The second compilation. JIT converts the intermediate language code into the platform’s native code.
+- **keywords** — Predefined reserved identifiers that have specially defined meanings for the compiler.
+- **kilobyte** — Approximately 1 thousand. 2¹⁰ (1,024) bytes abbreviated as KB.
+- **Language Integrated Query** — .NET component that defines a set of query operators that can be applied to a number of different data sources including arrays, databases, and XML data sources.
+- **language specifications** — See C# Language Specifications.
+- **left-associative** — Mathematical term used to describe the order of operations in an expression. Expressions are performed from left to right. All binary operators, except the equality operators and the conditional operator (?:), are left-associative.
+- **length of an array** — The number of elements of an array; the size of the array.
+- **LINQ** — See Language Integrated Query.
+- **lining up** — Rule related to space alignment with nested `if...else` statements. The rule for matching `else` is that an `else` goes with the closest previous `if` that does not have its own `else`.
+- **literal** — The numbers, characters, and combinations of characters used in a program. They can be

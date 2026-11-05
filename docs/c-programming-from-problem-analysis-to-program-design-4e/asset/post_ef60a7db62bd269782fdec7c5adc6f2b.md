@@ -1,0 +1,57 @@
+
+- **Database Management System (DBMS)** — A computer program used to manage and query a database.
+- **data file** — A computer file that can be processed, manipulated, or used as input or output by a computer program.
+- **data provider** — Used for connecting to a database executing commands, and retrieving results. Each data provider includes a collection of classes. .NET includes data providers for SQL server, OLE DB (Access), ODBC, and Oracle.
+- **dataset** — An in-memory cache or representation of data from a database.
+- **debugging** — Methodical process of finding and reducing bugs or defects in a computer program.
+- **decimal system** — Base-10 numbering system that uses 10 symbols.
+- **decimal value type** — A value type appropriate for storing monetary data items because it allows both integral (whole) numbers and a fractional portion.
+- **decision tree** — Design tool used when several options are available. It has nodes representing decision points, lines that branch out to represent further conditions, and shows actions based on which route is selected.
+- **declare a variable** — The act of allocating memory for a data item in a program. To declare a variable you select an identifier and determine what type of data will appear in the memory cell.
+- **delegate** — Special types of .NET class whose instances store references (addresses) to methods as opposed to storing actual data.
+- **derived** — When a class is derived from another class, the new class inherits all the functionality of the base class.
+- **design method** — An approach used by programmers to plan and structure computer programs. Procedural and object-oriented design methodologies are the two most commonly used design methods.
+- **desk check** — The use of sample data to verify programming algorithms by mimicking or walking through each step the computer will take to solve the algorithm.
+- **dimension an array** — To instantiate an array by indicating how many elements to allocate.
+- **distributed computing** — Computing that takes place when applications are spread over more than one computer system.
+- **divide and conquer design** — See top-down design.
+- **DLink (LINQ to SQL)** — Version of LINQ that focuses on querying data from relational sources.
+- **domain** — A range of the values that a data item can store. For example, the domain of letterGrades awarded in most college courses is “A” through “D”, and “F”.
+- **dynamic binding** — The determination of which method to call is done at execution time or run time, not during the compile phase. The decision about which method to call is based on what type of data is sent as the argument.
+- **dynamic data type** — A type, or class, created at run time that can hold any kind of data.
+- **dynamic Web pages** — Web pages that involve processing in addition to rendering the formatting of HTML tags.
+- **dynamic Web site** — Web pages that enable users to interact and see the results of their interactions.
+- **element** — An individual variable in an array is called an element of the array and is accessed through an index. Elements in an array are sometimes referred to as indexed or subscripted variables.
+- **empty bodied loop** — A loop that has no statements to be performed. Placing the semicolon at the end of a conditional expression produces a loop that has no body, or an empty bodied loop.
+- **emulator** — A device that simulates the operation of some type of hardware, such as a personal digital assistant (PDA).
+- **encapsulate** — Used in object-oriented programming, the act of combining the attributes and behaviors (characteristics and actions) of data to form a class.
+- **encapsulation** — One of the four major concepts that form the basis of an object-oriented programming language. With encapsulation, the language provides support for packaging data attributes and behaviors into a single unit, thus hiding implementation details.
+- **entity** — Classes define entities. An entity is usually associated with a person, place, or thing; it is normally
+- **enumeration** — A type consisting of a set of named constants.
+- **equality operator** — Two equal symbol characters (==) used as part of a conditional expression for comparing operands. Char and string operands are compared using the dictionary order. No space is inserted between the two equal symbols.
+- **error** — Programs may experience an error caused by a user action that may cause an exception to be thrown. Entering the wrong type of data from the keyboard is an example of a common error.
+- **escape character** — The backslash (\\).
+- **escape sequence** — Combination of the escape character (\\') followed by another letter to represent an action.
+- **event** — An event is a notification from the operating system that an action, such as the user clicking the mouse or pressing a key, has occurred.
+- **event-driven model** — The model used by Windows and Web applications wherein, once the program is executed, it sits in a process loop waiting for an event, such as mouse clicks, to occur.
+- **event firing** — When a user clicks a button, an event is fired that causes the operating system to send a message to a program indicating that a registered event has occurred.
+- **event handler** — Method that defines what should happen when an event such as a mouse click on a button or a click on the keyboard occurs.
+- **event wiring** — Associating a method in a program to an event, such as the user clicking a button. The method is automatically called when the event occurs.
+- **exception** — An unexpected condition in a computer program that occurs infrequently and is usually associated with error conditions that cause abnormal terminations if they are not handled.
+- **exception handler** — A block of code that is executed when an exception occurs.
+- **explicit type coercion** — Forcing a variable to be a different type. Explicit type coercion is performed using casting in C#. For example to store only the integer portion of the following value, an explicit coercion would take the form: int answer = (int) 53.77.
+- **Extensible Markup Language (XML)** — A markup language that provides a format for describing data using tags similar to HTML tags.
+- **fall through** — A feature associated with switch statements in some languages in which the break statement(s) are optional. Once a match is made, all remaining statements are executed until a break or the end is encountered. C# enforces a "no fall through" rule with switch statements.
+- **flag-controlled loop** — A loop that uses a Boolean variable in the conditional expression to control the loop. The variable is initialized to a value before entering the loop. When a condition changes, the variable is changed and then the next test of the conditional expression causes the loop to terminate.
+- **floating-point value** — One of the types of numbers in C# that may contain a fractional portion. C# supports two types of floating-point values: float and double.
+- **focus** — When a control is being selected for the next activity in a Windows or Web application.
+- **foreign key** — A common column found in two or more tables used to link data in the tables.
+- **formal parameter** — The paired group(s) of identifier and type that appears in the heading of a method.
+- **FORTRAN** — (Formula Translator) High-level programming language introduced in the 1950s.
+- **general-purpose computer systems** — Electronic devices that process data under the control of a program.
+- **generic catch** — No specific exception type is listed. Any exception that is thrown is handled by executing the code within that catch block.
+- **generics** — A feature that allows classes and methods to use placeholders, instead of specific types, for the data type.
+- **getters** — See accessor.
+- **gigabyte** — Approximately 1 billion, 2^30 (1,073,741,824) bytes abbreviated as GB.
+- **Global Assembly Cache (GAC)** — Machine wide storage location used to store assemblies. It is available on every machine that has a common language runtime installed.
+- **graphical user interface (GUI)** — The menus, tabs, buttons, pictures, and text that enable users to interact with applications.

@@ -1,0 +1,27 @@
+# ANALYZE THE PROBLEM
+
+You should review the problem specification in Figure 11-18 to ensure that you understand the problem definition. Objects should be able to be instantiated for the following types of groups:
+
++   - Club
++   - Fraternity and sorority
++   - Intramural
+
+These groups share some common characteristics. Each has a unique name and a contact person. Two of the groups (clubs, fraternities and sororities) may receive funding from the Student Government Association. Fraternities and sororities that are chartered receive funding; others cannot.
+
+Unique information regarding clubs include the date, time, and place they hold their meetings. The type of sport associated with the intramural group is unique to the Intramural classification. Distinctive characteristics for the fraternity or sorority classification include whether the group is chartered and their house address. After you understand the problem definition, you can begin to abstract out the characteristics for each of the classes. Table 11-1 shows the data fields organized by group. The common data is included with the Organization category.
+
+# DATA
+
+**TABLE 11-1** Data fields organized by class
+
+| Class | Identifier | Data type |
+| --- | --- | --- |
+| Organization | orgName | string |
+| Organization | primaryContact | string |
+| Organization | fundedAmt | decimal |
+| Club | meetingDay | string |
+| Club | meetingTime | string |
+| Club | meetingLocation | string |
+| FratSorority | chartered | bool |
+| FratSorority | houseAddress | string |
+| Intramural | sportType | string |

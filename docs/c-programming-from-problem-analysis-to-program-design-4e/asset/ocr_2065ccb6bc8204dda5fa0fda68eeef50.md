@@ -1,0 +1,11 @@
+**NOTE.** Operating systems are one type of system software. They are utility programs that make it easier for you to use the hardware.
+
+Another type of system software includes compilers, interpreters, and assemblers. As you begin learning software development, you will write instructions for the computer using a **programming language**. Modern programming languages are designed to be easy to read and write. They are called **high-level languages** because they are written in English-like statements. The programming language you will be using is **C#** (pronounced *see sharp*). Other high-level computer programming languages include Visual Basic, FORTRAN, Pascal, C, C++, and Java.
+
+Before the computer can execute the instructions written in a programming language such as C#, the instructions must be translated into machine-readable format. A **compiler** makes this conversion. Figure 1–1 shows what a machine language instruction looks like.
+
+![](bbox=[0.186, 0.427, 0.913, 0.692])
+
+**FIGURE 1-1**  A machine language instruction
+
+Just as the English language has rules for sentence construction, programming languages such as C# have a set of rules, called **syntax**, that must be followed. Before translating code into machine-readable form, a compiler checks for rule violations. Compilers do not convert any statements into machine language until all syntax errors are removed. Code can be interpreted as well as compiled. Interpreters translate one statement of code into machine-readable form and then they execute that line. They then translate the next instruction, execute it, and so on. Unlike compilers, which look at entire pieces of code, **interpreters** check for rule violations line by line. If the line does not contain an error, it is converted to machine language. Interpreters are normally slower than compilers. Many languages offer both compilers and interpreters, including C, BASIC, Python, and Lisp. **Assemblers** convert the assembly programming language, which is a low-level

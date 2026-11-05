@@ -1,0 +1,15 @@
+> > **NOTE**
+> >
+> > The static page example conforms to XHTML standards. One of the tags used in the example to produce Figure 15-1 is center. The center tag was used to center the heading and image. The center tag is not included in the list of common tags because it is on the deprecated list, which means that on future XHTML versions it may be dropped. Recommendations are included in HTML 4.01 and later versions that Cascading Style Sheets (CSS) be used to format objects that should be centered. You will read more about CSS later in this chapter.
+
+Some Web applications require processing before pages are displayed. Sometimes information need to be pulled from a database before the page is rendered. One common way to add functionality to a page is to include code written in a scripting language as part of the HTML file. This creates **dynamic Web sites**—pages that enable the user to interact and see the result of their interaction. Dynamic Web sites are discussed next.
+
+# ### Dynamic Pages
+
+**Dynamic Web pages** involve processing in addition to rendering the formatting of HTML tags. One programming model for creating dynamic Web pages is to use traditional or classic **Active Server Pages (ASP)**. The **ASP** model extends the HTML file by including script code in the same file. The file may still be able to be executed on the client machine, without additional processing at the server level. In this case, the code that is embedded in the HTML document is called a **client-side script**, and it involves only **client-side processing**. **Server-side scripts** require the processing to be done at the server level before the page is delivered. A number of scripting languages are used to write this code for the HTML document. Two scripting languages used for implementing client-side scripts are VBScript and JavaScript. **VBScript**, which was modeled on Microsoft Visual Basic 6.0, has been very popular. The only Web browser, however, with built-in support for VBScript is Internet Explorer. Thus, for the VBScript scripts to be executed on the client computer, the pages must be viewed using Internet Explorer.
+
+> > **NOTE**
+> >
+> > With the introduction of Visual Basic .NET, no update was included for VBScript as part of .NET.
+
+JavaScript is also a popular scripting language used primarily for client-side processing. **JavaScript** is not a subset of Java. There are some syntax similarities to Java, but it is not a full-featured programming language like Java. **JScript** is Microsoft's implementation of JavaScript. Using these scripting languages, developers are able to take static pages and add functionality—creating dynamic Web pages. JavaScript is one of the components of **Ajax** (sometimes called **Asynchronous JavaScript and XML**). Ajax combines several programming and development technologies to create dynamic and interactive Web content. **AJAX** combines JavaScript with XHTML and Cascading Style Sheet (CSS) standards using XML.

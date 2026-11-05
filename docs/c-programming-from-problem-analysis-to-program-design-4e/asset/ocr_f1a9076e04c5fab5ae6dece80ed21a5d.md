@@ -1,0 +1,7 @@
+![](bbox=[0.198, 0.095, 0.923, 0.455])
+
+**FIGURE 15-25** Calendar showing different dates selected
+
+The SelectedDate property of the Calendar control is set in the btnShowNextMeeting_Click( ) method. This method instantiates the object of the DateTime class (meetingDate), initializing it using the current year (Today.Year), current month (Today.Month), and current day (Today.Day). As shown in Table 15-3, Today is a static member of the DateTime class; thus, it must be referenced with the class name, as opposed to an object. When the meetingDate object is instantiated, the constructor for six arguments is used. The last three arguments (8, 0, 0) set the Hour, Minute, and Second properties. It displays P.M. because that string literal is concatenated onto the end of the value returned from the Hour property, as shown in the last line for Example 15-12.
+
+The date of the next Computer Club meeting is seven days from today's date—unless that date falls on a Sunday. If it does, the meeting date is the following Monday. This is what the code in Example 15-12 accomplishes. In the example, the AddDays( ) method is used to set the meetingDate object's new Day, Month, and Year, if necessary. The value of 7 is sent as an argument to the method. The selection statement, shown again in Example 15-13, checks to see if the date falls on Sunday.

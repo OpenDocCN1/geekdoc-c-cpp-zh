@@ -474,6 +474,7 @@
 +   [C++ 编程：从新手到专家的进阶指南](docs/c-programming-from-novice-to-expert-in-a-step-by-step-journe/README.md)
 +   [C++ 编程：从问题分析到程序设计](docs/c-programming-from-problem-analysis-to-program-design/README.md)
 +   [C# 编程：从问题分析到程序设计，第3版](docs/c-programming-from-problem-analysis-to-program-design-3rd-ed/README.md)
++   [C# 编程：从问题分析到程序设计 第4版](docs/c-programming-from-problem-analysis-to-program-design-4e/README.md)
 +   [C++ 编程：从问题分析到程序设计 [第5版]](docs/c-programming-from-problem-analysis-to-program-design-5th-ed/README.md)
 +   [C++ 编程：从问题分析到程序设计，第四版](docs/c-programming-from-problem-analysis-to-program-design-fourth/README.md)
 +   [C#编程：从问题分析到程序设计（国际版）](docs/c-programming-from-problem-analysis-to-program-design-intern/README.md)

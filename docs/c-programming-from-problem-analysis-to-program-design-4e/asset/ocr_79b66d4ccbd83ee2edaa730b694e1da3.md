@@ -1,0 +1,18 @@
+The BinaryReader and BinaryWriter classes offer streaming functionality that is oriented toward particular data types. As you review the BinaryReader methods shown in Table 13-8, you will notice several Read( ) methods. Each is focused on the type of data that it would be retrieving from a file.
+
+# TABLE 13-8 BinaryReader members
+
+| Method | Description |
+|---|---|
+| Close( ) | Closes the current BinaryReader and the underlying stream |
+| PeekChar( ) | Returns the next available character and does not advance the byte or character position |
+| Read( ) | Reads characters from the underlying stream and advances the current position of the stream |
+| ReadBoolean( ) | Reads a Boolean value from the current stream and advances the current position of the stream by 1 byte |
+| ReadByte( ) | Reads the next byte from the current stream and advances the current position of the stream by 1 byte |
+| ReadBytes( ) | Reads count bytes from the current stream into a byte array and advances the current position by count bytes |
+| ReadChar( ) | Reads the next character from the current stream and advances the current position of the stream |
+| ReadChars( ) | Reads count characters from the current stream, returns the data in a character array, and advances the current position |
+| ReadDecimal( ) | Reads a decimal value from the current stream and advances the current position of the stream by 16 bytes |
+| ReadDouble( ) | Reads an 8-byte floating-point value from the current stream and advances the current position of the stream by 8 bytes |
+| ReadInt32( ) | Reads a 4-byte signed integer from the current stream and advances the current position of the stream by 4 bytes |
+| ReadString( ) | Reads a string from the current stream; the string is prefixed with the length |

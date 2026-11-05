@@ -1,0 +1,35 @@
+# Methods
+
++   - Use Pascal case to name methods.
++   - Use verbs or verb phrases as part of the name to tell what the method does. Avoid writing long methods. Each method should focus on a single theme. Typically, methods should not have more than 25 lines of code.
+
+# Constructor Guidelines
+
++   - Constructors use the same identifier as the class.
++   - Use a consistent ordering for constructors. A common practice is to list constructor methods with the fewest parameters first and the most parameters last. This enables you to provide more details as parameters are added.
++   - Provide a default constructor if you define even one other constructor.
++   - Minimize the amount of work done in the constructor. Constructors should not do more than capture the constructor parameter or parameters.
+
+# Spacing Conventions
+
++   - Use tabs instead of spaces for indentation.
++   - Use white space (one blank line) to separate and organize logical groups of code within methods. There should be one and only one single blank line between each method inside the class.
++   - Use white space (one blank line) to separate properties and instance methods.
++   - Place curly braces ( { } ) at the same level as the method name, but on a new line.
++   - Avoid writing long instance methods.
+
+# Resources
+
+Additional sites you might want to explore:
+
+C# Coding Standards and Best Practices —
+http://www.dotnetspider.com/tutorials/BestPractices.aspx
+
+C# Station Tutorial - Introduction to Classes —
+http://www.csharp-station.com/Tutorials/Lesson07.aspx
+
+Object-Oriented Programming —
+http://msdn.microsoft.com/en-us/library/dd406654.aspx
+
+Introduction to Objects and Classes in C# —
+http://www.devarticles.com/c/a/C-Sharp/Introduction-to-Objects-and-Classes-in-C-sharp/

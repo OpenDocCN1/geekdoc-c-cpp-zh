@@ -1,0 +1,7 @@
+When the TabControl object is placed on the form, as shown in Figure 10–22, two tabs are included by default. Additional tabs can be added or removed by right-clicking on a tab and selecting the **Add Tab** option. The most important property the TabControl has is the TabPages property. The TabPages property enables you to format individual tabs. Clicking the ellipsis beside the Collection value displays the **TabPage Collection Editor** shown in Figure 10–23.
+
+![](bbox=[0.1856, 0.2451, 0.9119, 0.603])
+
+**FIGURE 10–23** TabControl’s TabPage Collection Editor
+
+You change the appearance of the tabs using the **TabPage Collection Editor**. You can display images on tabs, change the background or foreground colors, or change the text using the Text property. You also change the order of the tabs using the Collection Editor by selecting the tab and using the arrows to the right of the member name to move the tab to its preferred position. Tabs can be displayed vertically instead of horizontally using the Alignment property. Multiple rows of tabs can be displayed by setting the MultiLine property to true. You can also register Click events for each of the tabs so that when an individual tab is selected, its Click event method is executed. If you want to control which tab appears on top, use the SelectedTab property. For example, if you had not changed default names, to indicate tabPage2 should be on top, your program statement would read: tabControl1.SelectedTab = tabPage2;

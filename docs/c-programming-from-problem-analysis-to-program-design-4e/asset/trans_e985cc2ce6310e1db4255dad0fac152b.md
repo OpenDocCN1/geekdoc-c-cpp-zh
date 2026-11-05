@@ -1,0 +1,344 @@
+
+- 事件处理程序, 494-495, 584, 605-606, 623
+- 事件处理, 583-684, 810
+- 事件处理网站, 902
+- 事件, 494-495
+  - 响应代码, 515
+  - 委托, 583
+  - 显示, 533
+  - 触发, 495, 517
+  - 接口, 727
+  - 方法, 583
+  - 已注册事件处理程序, 584
+- 正则表达式, 619-621, 624-625, 623
+- 服务器控件, 1010-1012
+- 标准控件, 1015
+- Windows 窗体, 515-516, 1015
+- 将方法连接到, 609-610
+- 事件绑定, 583
+- Exception Message 属性, 810
+- 异常对象, 809-810
+- ExceptionApp.cs 文件, 810, 820, 826
+- 异常类, 799-811
+- 异常处理程序, 790-794
+- 异常处理, 793-799, 828, 884
+- 异常对象, 798-799, 809-810
+- 异常, 786-786, 786-793, 828, 811
+  - 自定义, 806-809
+  - 数据库, 900
+  - 除零, 790, 797
+  - 过滤多个, 802-809
+  - 输入输出 (IO), 810-811
+  - 引发, 790-791
+  - 运行时, 791
+  - 系统定义, 800
+  - 抛出, 268, 788, 790-791, 796-798, 801, 809-810
+  - 未处理, 787-788, 791
+  - 用户定义, 800
+- ExecuteReader() 方法, 719
+- .exe 文件扩展名, 39, 707, 719
+- Exists() 方法, 841-842, 844, 856, 865
+- Exit() 方法, 499
+- 显式转换, 444
+- 显式类型强制转换, 103-104
+- Expression Blend, 1061-1062
+- 表达式, 101-103, 265, 285-287
+- Extension 属性, 846
+
+## F
+- F() 方法, 352
+- Faculty 类, 694
+- 贯穿, 280
+- false 关键字, 87
+- FieldCount 属性, 907
+- 字段, 408, 934
+- 第五代计算机, 3-4
+- FileAccessApp.cs 文件, 857-858
+- FileAccessApp.Designer.cs 文件, 857, 862
+- FileAccessAppDialogs.cs 文件, 872-873
+- FileAccessAppFormUsing.cs 文件, 861-862
+- FileAccess.Read 枚举类型, 869
+- FileAttributes 枚举, 843-844
+- File 类, 838, 840-846, 865
+- FileDialog 类, 870-874
+- File.Exists() 方法, 856
+- 文件扩展名, 38
+- FileInfo 类, 839-840, 845, 868
+- FileNotFoundException 类, 884
+- FileLoadException 类, 811, 839
+- FileNode 枚举类型, 866
+- FileMode.Open 枚举类型, 869
+- FileName 属性, 871, 874
+- FileNotFoundException 类, 811, 839, 850, 862
+- 文件, 838-839
+  - 备份或删除, 843
+  - 检查可用性, 842
+  - 关闭, 858, 861
+  - 异常类, 811
+  - 格式化名称, 847
+  - 完整路径, 849
+  - 操作, 840-844
+  - 随机访问, 870
+  - 读取, 849
+  - 限制为一个类, 33
+  - 标准, 845-846, 873
+  - 存储数据, 848-863, 875
+  - 写入, 849, 851-856
+- FileStream 类, 839, 863, 866, 870, 872, 873
+- 文件流, 848-863
+- FileSystemInfo 类, 840, 845
+- FillLastName() 方法, 952
+- Fill() 方法, 913, 949, 951, 954, 1036
+- FillPointsScoreArray() 方法, 409
+- Finalize() 方法, 88
+- finally 块, 794-795, 805
+- FindString() 方法, 600
+- 第一代计算机, 3
+- firstWindow 属性, 697-698
+- lstBtnsSelectedIndexChanged() 事件处理程序方法, 679
+- lstExercises 控件对象, 213-214
+- FirstWindows.Form1.cs 文件, 509
+- FirstWindows.Form1.Designer.cs 文件, 510
+- FirstWindows.Program.cs 文件, 511
+- 定点格式说明符, 105-106
+- 定点数字说明符, 107
+- 标志控制循环, 333, 846
+- 标志控制循环, 77, 80, 246, 85-86, 95, 133, 105, 205, 403, 926
+- 浮点值, 77, 85, 214, 827, 832, 848, 865
+- 浮点变量, 341, 808
+- FloatingPointDivisionException 类, 807, 809-810
+- FlowLayout 控件, 152
+- 流程图, 14, 274
+- Flush() 方法, 850, 863
+- 焦点, 532
+- Focused 属性, 522, 534
+- Focus 属性, 532
+- FontDialog 控件, 611
+- Font 属性, 499, 508, 522, 527, 827, 832, 848, 865, 598, 601, 612, 616, 622, 636, 757, 1017
+- 字体, 585
+- FontSize 属性, 1056
+- ForeColor 属性, 549
+- 前台语句, 314, 342-343, 355-356, 403, 395-396, 399-400, 403, 466, 868, 870, 872, 873
+- ForeColor 属性, 508, 522, 527, 533, 548, 550-551, 585, 598, 601
+- FindString() 方法, 600
+- 第一代计算机, 3
+- firstWindow 属性, 697-698
+- FormClosing 事件, 515-516
+- FormClosing 事件, 362
+- Form1.cs 文件, 509, 513, 515, 537, 541
+- Form1.Designer.cs 文件, 513-541
+- Form 设计器窗口, 503-504, 515-516, 518-521, 531, 533, 537, 587, 609
+- Form_FormClosing() 方法, 516
+- Form_Load 事件处理程序方法, 645, 1025
+- Form_Load() 事件处理程序方法, 585, 967
+- Form_Load() 事件处理程序方法, 590
+- Form_Load() 方法, 531
+- Form 对象, 518, 521, 525, 537, 542, 597, 601, 646, 675
+- FormClosing, 505-508, 515, 585
+- 窗体, 329, 505
+  - 背景颜色, 585
+  - 将控件绑定到数据, 933, 940-941
+  - 在运行时构建, 513
+  - 按钮, 531-537, 934
+  - 复选框, 618-622
+  - 多个, 520, 601
+  - 控件, 520, 525, 608, 645, 960-961
+  - 默认字体, 585
+- FrmPriority.cs 文件, 755-756
+- FrmSavingGUI.cs 文件, 852-853
+- FrmSavingGUI.Designer.cs 文件, 851
+- FrmSavingGUI_FormClosing() 方法, 856
+- FrmSavingGUI_Load() 方法, 854-856
+- FrmWaterDepth 类, 813-814, 828, 875-876, 879
+- FrmWaterDepth.cs 文件, 821-823, 879-882
+- FrmWaterDepth.Designer.cs 文件, 818, 821-823, 879
+- FrmWaterDepth.Designer.cs 文件, 824
+- FrmWaterDepth_FormClosing() 方法, 883
+- from 子句, 963
+- from 查询上下文关键字, 963
+- From SQL 子句, 904
+- Frozen 属性, 936
+- FTP (文件传输协议), 988
+- FullName 属性, 846
+- 基本数据类型, 80
+- GardeningForm 应用程序, 616-618
+- GardeningForm.cs 文件, 613-615
+- GardeningForm.Designer.cs 文件, 618
+- 通用类, 694
+- 通用数字格式说明符, 107
+- 通用编程语言, 248
+- 通用捕获, 794-797
+- GenericClass 类, 740
+- 泛型类, 737-741
+- 泛型集合类, 457
+- 泛型方法, 737, 741
+- 泛型类型, 737-740
+- GetAttributes() 方法, 843-844
+- GetBoolean() 方法, 907
+- GetChar() 方法, 907
+- get 上下文关键字, 204, 499, 697-698
+- GetCreationTime() 方法, 841, 844
+- GetCurrentDate() 方法, 844, 847
+- GetDecimal() 方法, 907
+- GetDestination() 方法, 733
+- GetDimension() 方法, 161
+- GetDirectories() 方法, 845
+- GetDouble() 方法, 907
+
+## G
+- GetEnumerator() 方法, 734
+- GetHashCode() 方法, 724, 729
+- GetExpenses() 方法, 228
+- GetFiles() 方法, 845
+- GetHashCode() 方法, 88, 204, 468
+- GetInt16() 方法, 907
+- GetInt32() 方法, 907
+- GetInt64() 方法, 907
+- GetLastWriteTime() 方法, 845
+- Length() 方法, 4
+- GetMethod() 方法, 159-160, 442, 444, 450, 452
+- GetMove() 方法, 884, 445, 450
+- GetNumberOfObjects() 方法, 951
+- Get() 方法, 907
+- GetNoOfSqlgyrds() 方法, 201
+- GetNumberStrides() 方法, 176
+- GetOrdinal() 方法, 907
+- GetParent() 方法, 845
+- GetRange() 方法, 456
+- GetResults() 方法, 808-810
+- GetSalesData() 方法, 474
+- GetScores() 方法, 410
+- GetSleep() 方法, 697-700, 710
+- GetStartLocation() 方法, 733
+- GetString() 方法, 907
+- 获取器, 200
+- GetType() 方法, 204, 907
+- GetUpperBound() 方法, 443, 450
+- GetValue() 方法, 398
+- (GAC), 720-721
+- GoFocus() 事件, 600
+- Goto 语句, 656
+- 研究生类, 19
+- 图形用户界面 (GUI), 3, 23, 26, 324, 496-501, 542, 544, 547, 634, 639, 646, 674
+- 图形文件类型, 675
+- 大于 (>) 运算符, 252-253
+- 大于或等于 (>=) 运算符, 252-253
+- GridColor 属性, 937
+- Grid 控件, 1031
+- GridView 控件, 1021, 1033-1039, 1046-1048
+- GridView 对象, 1033, 1040, 1043-1044, 1046-1047
+- GroupBox 控件, 622-623
+- GroupBox 对象, 622, 624, 634, 757
+- Group 子句, 963
+- GroupName 属性, 1019, 1057
+- group 查询上下文关键字, 963
+- Happy.jpg 文件, 1006
+- has a 关系, 694
+- 哈希, 467-469
+- Hashtable 类, 467-469, 733-734
+- 哈希表, 468-469, 472
+- Header 属性, 634
+- HeaderText 属性, 936, 958
+- 标题, 134
+- Height 属性, 1064
+- HelloWorld 类, 33, 71
+- HelloWorld.cs 文件, 42
+- HelloWorld 程序, 27-28, 41
+- HelloWorldProgram 命名空间, 32, 71
+- HelloWorldProgram 项目, 39, 42, 44
+- 帮助文件, 801
+- HelpLink 属性, 801
+- 十六进制计数系统, 68-69
+- hiddenField.class, 1049
+- Hide() 方法, 523
+- 高级编程语言, 5, 20
+- HorizontalAlignment 属性, 1064
+- hour 属性, 1030, 1032
+- HTML 控件类, 988
+- HTML 控件, 1004-1010, 1013
+- HTML 文档文件, 1002-1003
+- HTMLExample 程序, 1009
+- HTML 文件, 981-983
+- HTML (超文本标记语言), 23, 635, 980, 1003, 1006
+- HTML 服务器控件, 1008-1012
+- HTML 标签, 1013-1014, 1051
+- HTTP (超文本传输协议), 980, 985, 1051, 1052
+- 人机交互 (HCI), 500
+- HyperLink 类, 1049
+- Hyper-V 虚拟机, 1068
+
+## I
+- IBM 3, 66, 901
+- ICloneable 接口, 733-734
+- .ico 文件扩展名, 675
+- ICollection 接口, 733-734
+- Icp 属性, 606, 674
+- 图标, 331-332, 675
+- IDataAdapter 接口, 898
+- IDataReader 接口, 898
+- IDataRecord 接口, 898
+- IDbCommand 接口, 898
+- IDbConnection 接口, 898
+- IDbDataAdapter 接口, 898
+- IDbDataAdapter 接口, 898
+- IDbCommand 接口, 898
+- IDbConnection 接口, 898
+- IDbDataAdapter 接口, 898
+- IDbDataAdapter 接口, 898
+- IDbDataAdapter 接口, 898
+- IDbDataAdapter 接口, 898
+- 标识符, 71-75, 138
+  - 数组, 388
+  - 基本类型, 386
+  - 构造函数, 197, 200
+  - 控件, 637
+  - 数据字段, 720
+  - 数据类型, 115
+  - 内联注释, 84
+  - 关键字, 71-73, 465
+  - 局部变量, 159-160
+  - 方法, 138
+  - 名称, 73-74
+  - 命名空间, 32
+  - .NET, 143
+  - Pascal 大小写, 73, 138
+  - 属性, 720
+  - 行和列索引, 446
+  - 规则, 75
+  - 作用域, 159-160
+  - 自文档化, 84
+  - 标准控件, 1014
+  - @ 符号, 73
+  - 大写, 73
+  - 用户定义, 71, 143, 849
+  - 可见, 159
+- IDeserializationCallback 接口, 734
+- ID 属性, 1001, 1015, 1019
+- IEnumerable 接口, 733-734, 963, 965
+- if...else 选择, 278
+- 语句, 261-279, 828
+  - 嵌套, 273-279
+  - 单向 if 语句, 261
+  - 266-273
+- if 选择语句, 261
+- if 语句, 333, 355, 400, 612, 862
+  - break 语句, 354-355
+  - 检查输入值, 786
+  - 大括号, 279-280
+  - else 子句, 261-278, 283
+  - 表达式, 261-266, 273
+  - 缩进, 278
+  - 内部表达式, 268-273
+  - 局部变量, 268
+- ImageButton 类, 1049
+- Image 类, 1049
+- Image 控件, 1056, 1066
+- ImageIndex 属性, 523
+- ImageList 属性, 523
+- ImageMap 类, 1049
+- Image 对象, 1006
+- Image 属性, 523, 646, 952
+- 图像, 646, 1066
+- 不可变, 460
+- 隐式转换, 155, 228, 388
+- 隐式类型强制转换, 102-103

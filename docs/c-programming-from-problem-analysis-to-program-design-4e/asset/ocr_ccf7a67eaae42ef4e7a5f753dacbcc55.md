@@ -1,0 +1,9 @@
+![](bbox=[0.188, 0.128, 0.919, 0.468])
+
+**FIGURE A-8** Text Editor display option
+
+You also specify whether you have **Statement completion** to **Auto list members** and/or have **Statement completion** with **Parameter information** displayed from the **Text Editor**, **C#**, **General** option. When you select **Display**, **Line numbers**, the line numbers are displayed to the left of the source code in the IDE.
+
+The **Tabs** node, which is immediately below the **General** option, enables you to specify the amount of space inserted when a tab or indent is set and whether tabs or spaces are inserted for tabs. From this option, you can also set **Smart indenting** so that it automatically indents the next line, if a statement doesn't fit on a single line. Smart indenting does not always work the way you think it should. As the name implies, it tries to be smart and sometimes you have to override it.
+
+The **Formatting** option under the **Text Editor** expands to reveal a number of features grouped under **General**, **Indentation**, **New Lines**, **Spacing**, and **Wrapping**. As shown in Figure A-9, from the **Text Editor**, **C#**, **Formatting**, **New Lines** option you can decide whether you prefer to place your braces on a new line for types, methods, and control blocks. This is how braces have been displayed in this book.

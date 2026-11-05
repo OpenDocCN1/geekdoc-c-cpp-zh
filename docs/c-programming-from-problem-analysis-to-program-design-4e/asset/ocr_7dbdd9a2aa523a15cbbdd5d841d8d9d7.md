@@ -1,0 +1,28 @@
+method (class method) that returns a filled array. An assumption that no player would play more than 1000 games is made. A reference variable, scoreCnt, is included as an argument so that the actual number of games is available when an object of the Player class is constructed.
+
+You will remember that a method can return a single type. A decision had to be made whether to return the array or to return the variable storing gameCnt. The choice was made to use the array as a return type to demonstrate how an array type can be returned. However, a more efficient solution is to send the array into the method as an argument and return gameCnt through the method name. The reason the last option is a better choice is based on the following. To return an array through the return type of the method, another array must be declared and space allocated locally for it in the method. This additional space for the size of the array is unnecessary if the array is sent as an argument because arrays are always passed by reference. Sending the array as an argument passes the address of the one declared in the calling method and eliminates the need to declare a local array.
+
+Example 7-15 contains a listing of the Player application. It consists of two files. The first file describes characteristics of a Player. The second file is an application instantiating an array of Player objects. Recall that you can add a second class to your application in Visual Studio using the Add Class option from the PROJECT menu. In addition to storing information about multiple Player objects, this file contains code to access the Player members. Player class is listed first.
+
+# EXAMPLE 7.15
+
+```
+/* Player.cs Author: Doyle
+ * Creates class with characteristics about one player. Includes
+ * name and ID fields, plus points scored. Any number of games
+ * can be used to instantiate an object of this class. Average calculated
+ * based on the number of points associated with one player.
+ */
+
+using System;
+
+namespace PlayerApp
+{
+    public class Player
+    {
+        private string lname;
+        private string fname;
+        private string id;
+        private int[] pointsScored;
+        private int numberOfGames;
+```

@@ -1,0 +1,130 @@
+
+- 5. The type of software most often associated with system software is the operating system. The operating system software is loaded when you turn on the computer. Other types of system software are compilers, interpreters, and assemblers.
+- 6. Programming is a process of problem solving. The hardest part is coming up with a plan to solve the problem.
+- 7. The five problem-solving steps for software development introduced in this chapter include analyzing, designing, coding, implementing, and testing and debugging the solution.
+- 8. Procedural programming is process oriented and focuses on the processes that data undergoes from input until meaningful output is produced.
+- 9. The underlying theme of top-down design or stepwise refinement is that given any problem definition, the logic can be refined by using the divide-and-conquer approach.
+- 10. Software maintenance refers to upgrading or changing applications.
+- 11. Using an object-oriented analysis approach, the focus is on determining the objects you want to manipulate rather than the logic required to manipulate them.
+- 12. Encapsulation refers to combining attributes and actions or characteristics and behaviors to form a class.
+- 13. An object is an instance of a class.
+- 14. Through inheritance, it is possible to define subclasses of data objects that share some or all of the main class characteristics of their parents or superclasses. Inheritance enables reuse of code.
+- 15. C# was designed from scratch to work with the new programming paradigm, .NET, and was the language used for development of much of .NET.
+- 16. .NET is a software environment in which programs run. It is not the operating system. It is a layer between the operating system and other applications, providing an easier framework for developing and running code.
+- 17. Through using Visual Studio (which is an IDE) and the .NET Framework classes, C# provides an easy way to create graphical user interfaces.
+- 18. Originally, development with C# was possible only for the Windows platform; however, a number of projects are in development that are porting C# to other platforms such as Linux.
+- 19. C# can be used to create Web, Windows, and console applications.
+- 20. Web pages are created using Web forms, which are part of the ASP.NET technology.
+- 21. Windows applications are considered desktop bound and designed for a single platform.
+- 22. Console applications are the easiest to create. Values can be entered and produced with minimal overhead.
+- 23. C# programs usually begin with a comment or using directives, followed by an optional namespace grouping and then the required class definition.
+- 24. All C# programs must define a class.
+- 25. Comments are written as notes to yourself or to readers of your program. The compiler ignores comments.
+- 26. It is not necessary to end single inline comments (`//`); they end when the Enter key is pressed. Comments that span more than one line should be enclosed between `/* */`. These are considered block or multiline comments.
+- 27. Over 2000 classes make up the Framework class library. A class contains data members and methods or behaviors that can be reused.
+- 28. The using-namespace-directive imports all the types contained in the given namespace. By specifying the namespace around which you are building an application, you can eliminate the need of preceding a class with a dot (`.`) and the name of the namespace.
+- 29. Everything in C# is designed around a class. Every program must have at least one class.
+- 30. A method is a collection of one or more statements taken together that perform an action. In other words, a method is a small block of code that performs an action.
+- 31. The Main() method is the entry point for every C# console application. It is the point at which execution begins.
+- 32. The keyword static indicates that a single copy of the method is created.
+- 33. The keyword void is included to signal that no value is returned. The complete signature of a method starts with the return type, followed by the name of the method, and finally a parenthesized list of arguments. One signature for Main() is `void static Main()`.
+- 34. WriteLine() writes a string message to the monitor or a standard output device.
+- 35. Methods communicate with each other through arguments placed inside parentheses.
+- 36. Readability is important. Indenting is not required, but it is a good practice because it makes the code easier to read.
+- 37. To see the results of a program, you must type the statements (source code) into a file, compile that code, and then execute the application.
+- 38. Visual Studio integrated development environment (IDE) is an interactive development environment that enables you to type the source code, compile, and execute without leaving the IDE program.
+- 39. One way to document your desired output is to construct a prototype, or mock-up, of your output.
+- 40. The Read() method accepts any character from a standard input device, such as a keyboard. It does nothing with the character.
+
+## EXERCISES
+
+- 1. You run a program and it gives you the difference of two values as the output, instead of the sum of the values, as intended. This is what type of error?
+  - a. syntax
+  - b. analysis
+  - c. coding
+  - d. design
+  - e. logic
+- 2. The program that translates high-level programming language into machine-readable form is a(n):
+  - a. application
+  - b. operating system
+  - c. C# program
+  - d. compiler
+  - e. machine language utility
+- 3. The following strategy reduces the amount of time in development and produces more efficient solutions:
+  - a. Code the solution as soon as possible.
+  - b. Design the solution before coding.
+  - c. Analyze the solution before testing and debugging.
+  - d. Build a prototype during testing.
+  - e. Use a simple, low-level language for development.
+- 4. In which phase of the software development process would probing questions be used to verify the problem definition?
+  - a. analysis
+  - b. design
+  - c. coding
+  - d. implementation
+  - e. testing
+- 5. Cycling back to previous phases as potential problems are uncovered is an example of:
+  - a. object-oriented programming
+  - b. stepwise refinement
+  - c. Intermediate Language
+  - d. iterative development
+  - e. structured programming
+- 6. After designing your solution, you should ________ before typing any code.
+  - a. analyze the problem definition
+  - b. check for run-time errors
+  - c. do maintenance on the solution
+  - d. desk check the solution
+  - e. determine what .NET class to use
+- 7. With the object-oriented methodology, the data members are referred to as:
+  - a. attributes or characteristics
+  - b. characteristics or behaviors
+  - c. methods or attributes
+  - d. behaviors or methods
+  - e. attributes or behaviors
+- 8. .NET is considered a powerful development environment because:
+  - a. It contains over 2000 classes.
+  - b. Solutions can be developed using different programming languages.
+  - c. Windows applications can be developed easily.
+  - d. Component-based development is possible.
+  - e. All of the above.
+- 9. ASP.NET creates which type of application?
+  - a. Windows
+  - b. console
+  - c. command
+  - d. Web
+  - e. services
+- 10. Which beginning symbol(s) indicates the following lines will be comments?
+  - a. /*
+  - b. **
+  - c. //
+  - d. ///
+  - e. */
+- 11. System is an example of a(n):
+  - a. object
+  - b. class
+  - c. method
+  - d. namespace
+  - e. directive
+- 12. A(n) __________ groups semantically related types under a single name.
+  - a. object
+  - b. class
+  - c. method
+  - d. namespace
+  - e. directive
+- 13. To mark the beginning and end of a block of code, C# programmers use:
+  - a. [ ]
+  - b. { }
+  - c. ( )
+  - d. begin end
+  - e. start stop
+- 14. Which of the following is a keyword?
+  - a. Main( )
+  - b. System
+  - c. using
+  - d. WriteLine
+  - e. all of the above
+- 15. The fully qualified call to the method that allows the user to input a single character is:
+  - a. Console.System.Read( )
+  - b. System.Console.Read( )
+  - c. Console.System.Write( )
+  - d. System.Console.Write( )
+  - e. System.Console.ReadLine( )

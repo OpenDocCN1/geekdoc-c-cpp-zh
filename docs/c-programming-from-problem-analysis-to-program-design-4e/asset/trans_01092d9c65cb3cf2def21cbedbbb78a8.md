@@ -1,0 +1,369 @@
+
+- ReadChars() 方法, 864
+- ReadDecimal() 方法, 864, 869
+- ReadDouble() 方法, 864
+- ReadInt32() 方法, 864, 869
+- ReadKey() 方法, 35–37, 44, 51–52, 149
+- ReadLine() 方法, 35–37, 135, 145, 147–148, 323, 384, 395, 494, 496, 848–849, 851, 856, 860
+- Read() 方法, 35–38, 44, 132, 145–147, 848, 850, 864, 870, 906–907
+- 只读属性, 204, 692, 697–698
+- ReadOnly 属性, 529
+- ReadString() 方法, 864, 869
+- ReadToEnd() 方法, 851
+- RealEstateApp.cs 文件, 230–231
+- RealEstateDb.mdf 文件, 900
+- RealEstateInvestment 类, 228, 230, 234
+- RealEstateInvestment.cs 文件, 231–234
+- RealEstateInvestment 示例, 224–229, 230–234, 234
+- 记录, 894
+- 矩形二维数组, 440–450
+- 另见 二维数组
+- 递归, 351–354
+- 可再发行版本, 39
+- 参考管理器, 327, 580
+- 引用参数, 165
+- 引用类型, 79, 88, 459
+- 引用变量, 401–405
+- ref 关键字, 165, 167, 169, 268–270, 742
+- RegDForm.cs 文件, 632–633
+- RegForm.Designer.cs 文件, 625–631
+- RegForm 示例, 635–637
+- #region 预处理器指令, 512
+- 注册事件, 619–621
+- RegistrationApp 应用程序, 635
+- RegularExpressionValidator 控件, 1022, 1024
+- 关系数据库, 894–895
+- 关系运算符, 252–255, 285, 903
+- 关系, 409, 922
+- 相对路径, 848
+- 发布版本, 848
+- 余数运算符。另见 Modulus 运算符 (%)
+- RemoveAt() 方法, 456
+- Remove() 方法, 456, 463, 469, 525, 535, 734
+- RemoveRange() 方法, 456
+- 渲染, 980
+- Repeat() 方法, 457
+- 重复结构, 314
+- Replace() 方法, 463
+- RequiredFieldValidator 控件, 1022–1023
+- Resharper, 28
+- 结果字符串, 590–591
+- Result 文本框, 588
+- return 关键字, 137, 157, 159
+- ReturnsSimpleString 委托, 578, 580
+- return 语句, 159, 175–176, 200, 356
+- 返回类型, 137–138, 143, 157, 165, 410–411, 578
+- Reverse() 方法, 398–399, 457
+- 右结合, 286
+- 右结合运算符, 101
+- RightToLeft 属性, 623
+- Ritchie, Dennis, 20
+- Root 属性, 846
+- Round() 方法, 154
+- 往返服务器, 980
+- RHeadersDefaultCellStyle BackColor 属性, 937
+- 行主语言, 441, 445
+- 行, 894
+- Ruby on Rails, 985
+- Run() 方法, 499, 514–515
+- 运行时错误, 13, 47, 777–778
+- 运行时异常, 801
+- S 变量, 444–446
+- S 数组, 409
+- SaveFileDialog 类, 871
+- SaveFileDialog 对象, 874
+- sbyte 数据类型, 81, 83, 403
+- 科学计数法, 85
+- 科学计数法数字格式说明符, 107
+- 作用域, 159, 338, 861
+- score 数组, 390, 396
+- score.Length 属性, 393
+- Score1 属性, 209–210
+- Score2 属性, 209–210
+- Score3 属性, 209–210
+- 脚本语言, 984–985
+- ScrollableControl 类, 518
+- ScrollBars 属性, 528–529, 617
+- sealed 类, 724–725
+- SealedClassExample 类, 725
+- sealed 关键字, 724
+- sealed 方法, 725
+- sealed 修饰符, 724–725
+- 第二代计算机, 3
+- 二级地址转换 (SLAT), 1068
+- Second 属性, 1032
+- 分隔符自定义数字格式说明符, 108
+- Seek() 方法, 863, 870
+- select 子句, 963, 965
+- SelectCommand 属性, 915, 942–944, 946, 955–957, 1036
+- SelectedDate 属性, 1027, 1029, 1032
+- SelectedIndexChanged() 事件, 587–588, 600, 981
+- SelectedIndexChanged() 事件处理程序方法, 603–605, 618
+- SelectedIndexChanged() 事件, 618
+- SelectedIndex 属性, 599
+- SelectedIndices 属性, 599, 604
+- SelectedItem 属性, 588, 591, 599
+- SelectedItems 属性, 591, 599, 604
+- SelectedIndexChanged() 事件, 641, 699, 694
+- SelectedTab 属性, 641
+- selectionMode 属性, 789
+- Select() 方法, 523
+- 选择器, 279
+- select 查询概念关键字, 963
+- SELECT SQL 语句, 901–903, 942, 946, 953–954, 957, 1046
+- 自文档化标识符, 84
+- 语义含义, 24
+- 哨兵控制访问, 394–395
+- 哨兵控制循环, 321–324, 346, 357
+- 哨兵值, 322, 324, 394
+- 服务器控件, 1008–1012
+- 服务器, 980–981
+- 服务器端脚本, 984
+- SetAccessControl 类, 841
+- SetAll() 方法, 466
+- set 上下文关键字, 204, 499, 697–698, 748
+- SetCreationTime 类, 841
+- SetCurrentDirectory() 方法, 845
+- SetFile() 方法, 291, 783
+- SetFirstName() 修改器方法, 697
+- SetFunding() 方法, 755
+- SetLastAccessTime 类, 841
+- SetLastWriteTime 类, 841
+- Set() 方法, 466
+- SetNoOfSgdVars() 方法, 201, 208, 222
+- SetSelected() 方法, 600
+- SET SQL 子句, 904
+- 设置器, 201
+- 设置文件, 961
+- SetValue() 方法, 398
+- setVisibility() 方法, 551
+- SharePoint 数据源, 922
+- ShareArea 类, 812–815, 818, 821, 875–876, 882
+- ShareArea.cs 文件, 818–820, 876–879
+- ShowArea 对象, 814, 826
+- ShowAreaRecord 属性, 879, 883
+- 短路求值, 258–260, 300
+- 短路逻辑运算符, 258
+- short 数据类型, 82–83, 279, 403
+- ShowColor 属性, 613
+- ShowDialog() 方法, 872–873
+- ShowEffects 属性, 613
+- ShowForm1(Construction) 方法, 192
+- Show() 方法, 324–325, 328–331, 523, 580–581
+- SightDate 属性, 420
+- 签名, 34, 143–144, 199–200, 228, 578, 582, 584
+- Sign() 方法, 154
+- Silverlight, 1053–1054
+- Silverlight for Windows Phone 模板, 1054
+- 简单序列, 248
+- 单入口单出口准则, 356
+- 单继承, 498, 724, 736
+- Sin() 方法, 154
+- Site.cs 文件, 996, 998, 1001
+- SiteMapPath 类, 1049
+- SiteMapPath 控件, 1047
+- Site.master 文件, 993–994
+- Sites.css 文件, 998–999
+- 数组大小, 385
+- Size 属性, 499, 508, 520, 522, 525, 601, 816, 847
+- .sln 文件扩展名, 42, 989
+- Smalltalk, 20
+- 智能设备应用程序, 1054–1058
+- Smart Device 应用程序模板, 1052–1053
+- 智能标记, 1039
+- Snorkel Checkbox 对象, 621
+- SOAP 请求, 1051
+- SOAP 响应, 1051
+- SOAP (简单对象访问协议), 23, 1051
+- 软件, 4–6
+- 软件开发过程, 6–16
+- 软件维护, 16
+- 解决方案资源管理器窗口, 38, 42, 194, 234, 340, 401, 504, 511, 515, 580, 582, 613, 712–728, 749, 761, 961, 1001, 1043, 1063
+- 解决方案文件, 42
+- 解决方案, 9–11, 192–194, 778
+- Sorted 属性, 586, 588, 598–599
+- Sort() 方法, 306-309, 457
+- 源代码, 11, 24, 511
+- 更改文件名, 42
+- 比较 Visual Studio 和 Visual C++, 515-516
+- 编译为 dll 文件, 705
+- 使用 Visual Studio IDE 编译, 39-45
+- 展开或折叠, 7-8
+- 预处理器指令, 512
+- 重命名, 43, 50
+- 规则违规, 39
+- 分离到文件, 509
+- 拼接对象, 783-784
+- Source 属性, 801, 1066
+- 源视图, 1026
+- 间距约定, 119-120
+- 特殊转义序列, 91
+- 专用类, 694
+- 规范, 7-8
+- SpeedingTicket 示例, 180, 236, 309
+- Split() 方法, 463
+- SqlCommand 类, 897
+- SqlConnection 类, 897
+- SqlConnection 对象, 900
+- SqlConnectionStringBuilder 类, 900
+- SqlDataAdapter 类, 897
+- SQL 数据提供程序, 897
+- SQL 注入攻击, 897, 905
+- SqlDataSource 类, 1039, 1049
+- SqlDataSource 控件, 1034
+- SQL 窗格, 945-946, 954
+- SQL 查询, 901-905, 942-944, 1039-1040
+- SQL Server, 899-926
+- SQL Server Express, 925
+- SQL Server Express LocalDB, 925
+- SQL Server 对象资源管理器, 926
+- SQL 语句, 942, 944-945, 947
+- SQL (结构化查询语言), 897, 915, 901-903, 915, 969
+- Sqrt() 方法, 135, 154
+- SquareValues.cs 文件, 149
+- SquareInputValue.cs 文件, 149
+- Stack 类, 471-471, 733, 740, 741, 740-741
+- 栈数据类型, 470
+- 堆栈跟踪, 470
+- StackExample.cs 文件, 471
+- StackPanel, 1067
+- 栈, 471-471, 737-738, 740, 741
+- 堆栈跟踪, 792-793
+- StackTrace 属性, 801
+- 独立组件, 705-715
+- 标准控件, 1012
+- .sps 文件, 1015
+- 自动后缀, 1017
+- 常见窗体类型控件, 1018-1021
+- 事件处理程序方法, 1019-1021
+- 事件, 1015, 1017
+- HTML 标签, 1013-1014
+- 标识符, 1014
+- 命名, 1015
+- 属性, 1015
+- 设置属性, 1019
+- 工具箱, 1013-1014
+- Visual Studio, 1012-1017
+- 标准十进制表示法, 85
+- 标准文件, 843
+- 标准查询运算符, 963
+- Start() 方法, 192
+- StartPosition 属性, 506, 511
+- StartWith() 方法, 463
+- StateControlled.cs 文件, 333-334
+- 状态控制循环, 332-334, 357
+- 无状态, 981, 1007
+- 状态管理, 1017-1018
+- 语句, 37, 28
+- 条件表达式, 793
+- 重复, 351-354
+- 规则违规, 39
+- 语义含义, 24
+- 用逗号分隔, 336
+- SqlParameter.cs 文件, 281
+- static 关键字, 34, 135, 157-158, 160, 213, 724
+- static 方法, 135, 150, 155, 518, 410-411, 499
+- StaticMethods 类, 403
+- StaticMethods.cs 文件, 302-403
+- static 修饰符, 134-135
+- 静态 Web 页面, 981-984
+- 单步执行源代码, 783-784
+- 逐步细化, 16
+- Step() 方法, 192
+- StoreDataInFile() 方法, 883
+- Stream 类, 839, 848
+- StreamReader 类, 839-840, 848-849, 850-851, 856-857
+- StreamReader 对象, 961-962
+- 流, 838-839, 851-870
+- StreamWriter 类, 839-840, 848-851, 854, 875, 882-883
+- StreamWriter 属性, 227
+- 字符串参数, 104, 149-151
+- 字符串数组, 409, 454, 472
+- StringBuilder 类, 461
+- String 类, 253, 459-466
+- 字符串数据类型, 78-79, 88, 105, 279, 459-460, 464, 534, 739
+- String.Format() 方法, ...
+- 字符串字面量, 91, 144, 465
+- 字符串对象, 465
+- 字符串处理方法, 335
+- 字符串, 355, 88, 204-206
+- StringBuilder 类, 461, 466
+- 访问其中的元素, 460
+- 比较, 251-252, 460
+- 连接, 94, 105
+- 长度, 7, 90, 605, 735
+- 转换, 266, 735, 791-792
+- 格式说明符, 106
+- 不可修改, 460
+- 字面值, 106
+- 可变字符序列, 460
+- 字符数, 535
+- 表示对象, 588
+- 作为查询, 962
+- 关系比较, 253
+- 删除字符, 335
+- 返回, 699-700
+- 单个字符, 150
+- switch 语句, 29-30
+- 测试其中的字符, 786-787
+- Unicode 字符, 459
+- 有效数据类型, 151, 268-270
+- 逐字, 849, 899
+- StringToNumber() 方法, ...
+- 字符串变量, 94, 172, 224, 252, 265, 279, 460, 787, 791
+- Stromquist, Bjorne, 20
+- 结构化英语, 114-115, 174, 228
+- 结构化过程编程, 14-16
+- 结构, 88
+- StudentApp 类, 210-212
+- StudentApp 示例, 214
+- Student.cs 文件, 194-194
+- Student.cs 文件, 198-198, 210, 213, 215-217, 694, 706-708, 709-717, 721, 727-729
+- Student() 构造函数, 197
+- Student for, 711-712
+- StudentDatabase ConnectionString 连接字符串, 930
+- StudentDataSet.cs 文件, 952, 943, 954
+- Student.dll 文件, 719
+- StudentDemo 示例, 745-754
+- StringBuilder 主键, 1047
+- StudentNamespace 命名空间, 710, 716
+- Student 对象, 197-198, 717, 735
+- StudentTableAdapter 子类, 943
+- style 属性, 998, 1002
+- 样式表, 997-998
+- StylesheetTheme 属性, 1002
+- 子类, 700
+- 子目录, 846
+- 下标变量, 385
+- 下标, 385, 390, 787
+- Subscript() 方法, 464
+- 减法运算符 (-), 98, 92
+- 减法运算符 (-), 93
+- Subtract() 方法, 1030
+- Subtract.cs 文件, 316-317
+- .suo 文件扩展名, 989
+- 超类, 19, 696
+- switch 方法, 742
+- Swim CheckBox 对象, 620-621
+- switch 语句, 279-283, 299-300, 354, 356, 821
+- @ 符号, 943
+- 语法错误, 5, 11, 24, 50
+- 语法错误, 5, 11, 13, 45-47, 610
+- System.ApplicationException 类, 800
+- System.ArgumentException 类, 801
+- System.ArithmeticException 类, 801
+- System.Array 类, 393
+- System.ArrayTypeMismatchException 类, 901
+- System.Collections.Generic 命名空间, 472, 513
+- System.ComponentModel ComponentException 类, 800
+- System.ComponentModel 命名空间, 513
+- System.Configuration Settings Property IsReadOnly Exception 类, 800
+- System.Console
+- System.Console.WriteLine() 方法, 861
+- System.Data.Common 命名空间, 899
+- System.Data 命名空间, 513, 899
+- System.Data.Odbc 命名空间, 897
+- System.Data.Odbc OleDbConnection 类, 898
+- System.Data.OleDb 命名空间, 897, 899
+- System.Data.OleDb OleDbConnection 类, 898
+- System.Data.OracleClient 命名空间, 897

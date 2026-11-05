@@ -1,0 +1,41 @@
+level_changes:
+- line: 3197
+  before: 1
+  after: 2
+- line: 20008
+  before: 1
+  after: 2
+text_changes:
+- line: 3862
+  before: EXAMPLE 3.12
+  after: 示例 3.12
+- line: 8477
+  before: EXERCISES
+  after: 练习
+- line: 15295
+  before: 例9.4
+  after: 示例 9.4
+- line: 15319
+  before: 例9.5
+  after: 示例 9.5
+- line: 15330
+  before: 例9.6
+  after: 示例 9.6
+- line: 15339
+  before: 例9.7
+  after: 示例 9.7
+- line: 15357
+  before: 例9.8
+  after: 示例 9.8
+- line: 17481
+  before: '**示例 10.18**'
+  after: 示例 10.18
+- line: 18404
+  before: 示例 10–24
+  after: 示例 10-24
+- line: 21548
+  before: 编程示例：**StudentGov 应用程序**
+  after: 编程示例：StudentGov 应用程序
+- line: 29687
+  before: INDEX
+  after: 索引

@@ -1,0 +1,11 @@
+You will recall that the location or path of the member.accdb database was hard-coded in the earlier example. Using the AccessDataSource control object, you can provide a relative path to the database. This makes deploying or moving the data-driven Web site easier. You no longer have to change the code to reflect physically where the database is stored. You should create a folder named App_Data when a new Web site is first constructed. The App_Data folder is reserved by ASP.NET for storing data files. This is the location where you should store your Access database files.
+
+# Using Visual Tools to Connect
+
+To illustrate use of the visual configuration tools, a copy of the WebControls Web site application that was just completed was created. The original GridView object was deleted. The btnShowMembers_Click() event-handler method was removed from the code-behind file (Default.aspx.cs). One additional change was made to the file before using the configuration tools. On the btnShowMembers tag in the Default.aspx source code file, the OnClick="btnShowMembers_Click" attribute was removed. Once those items were removed from the application, an AccessDataSource object was selected in the Data Toolbox and dragged onto the form. Then a GridView object is selected in the Data Toolbox and placed on the page. Using the FORMAT menu, the Set Position attribute was set to Absolute. This was done prior to attempting to move any of the controls on the form to facilitate placement of the controls. When the control object is placed on a page, its smart tag reveals an option to Choose Data Source, as shown in Figure 15-26.
+
+![](bbox=[0.22, 0.7, 0.88, 0.84])
+
+FIGURE 15-26 Binding data source to the GridView
+
+Since the AccessDataSource was placed on the form from the Data Toolbox, selecting AccessDataSource1 from the dropdown list in the Choose Data Source enables you to begin the process of connecting to an Access database. From the smart tag on the GridView control, the Configure Data Source opens the Data Source

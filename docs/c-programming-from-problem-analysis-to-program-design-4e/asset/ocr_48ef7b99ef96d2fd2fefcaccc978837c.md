@@ -1,0 +1,19 @@
+As you review the statements in Example 13-3, notice that three event-handler methods are included in the Windows application. In the form-loading event handler, an object of the `StreamWriter` class is instantiated. This is included in a `try...catch` clause. The button click event-handler method retrieves the string from the text box and writes the text to the file. It is also enclosed in a `try...catch` clause. The third event-handler method is an on form-closing event. In this event-handler method, the file is closed inside another `try...catch` block. Using the data input from Figure 13-5, the contents of the file created from this run of the application are shown in Figure 13-6.
+
+![](bbox=[0.185, 0.261, 0.913, 0.488])
+
+**FIGURE 13-6** Contents of text file created by SayingGUI application
+
+In Visual Studio, when you create a file (or attempt to access one), if a path is not specified for the filename, the `bin\Debug` subdirectory for the current project is used. If an invalid path is listed in the constructor for the `StreamWriter` object, an `IOException` exception is thrown as soon as the application launches and the form is loaded. To demonstrate this, the call to the constructor was changed in Example 13-3. On the system on which this application is run, there is no `C:\Bob` subdirectory. Thus, replacing the object constructor in the `FrmSayingsGUI_Load()` method from:
+
+```
+fil = new StreamWriter("saying.txt");
+```
+
+to:
+
+```
+fil = new StreamWriter(@"C:\Bob\saying.txt");
+```
+
+throws an exception as soon as the form is loaded. When the user interface was designed for Example 13-3, a label, initialized with "" (an empty string), was placed on the form to display error messages. Figure 13-7 shows the message displayed when the `DirectoryNotFoundException` exception is thrown.

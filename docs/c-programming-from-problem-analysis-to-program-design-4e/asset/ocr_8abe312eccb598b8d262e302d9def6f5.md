@@ -1,0 +1,11 @@
++   5. Write a WeightConverter class that can be used to convert standard weight measurements. In your list of options, include as a minimum grams, kilograms, pounds, and ounces. If the user enters a negative number or a nonnumeric value, throw and handle an exception. Create an application class to test the WeightConverter class.
++   
++   6. Write an application that lets users enter their weight and height in feet and inches. Calculate their body mass index (BMI). Create a multiclass solution that has exception-handling techniques.
++   
++   7. Create a Windows application that has the functionality of a calculator and works with integral values. Allow the user to select buttons representing numeric values. If the user attempts to divide by zero, throw and handle an exception.
++   
++   8. Create a Windows application that has the functionality of a calculator but works with decimal values. Because division by zero is not thrown by the CLR, when the operands are nonintegral, create a custom exception class that can be thrown if division by zero is attempted. Instead of doing the division, display a message indicating that division by zero is not possible.
++   
++   9. Write an application that can be used to count the frequency of characters in a paragraph. Allow the user to input several sentences using a graphical user interface. Display the count for nonzero characters. Use an array as part of your solution. Include appropriate exception-handling techniques so that if the program attempts to access an element outside of the bounds of the array, the exception is handled.
++   
++   10. Create a BankAccount class that can be used to maintain a bank account balance. Include appropriate constructors, properties, and methods to enable the account to be originally created and for amounts to be deposited and withdrawn for the account. Write the NegativeException class to extend the ApplicationException class to include the additional functionality of a new message detailing the error being sent when the exception is thrown. Throw the NegativeException when a negative value is entered to initially create the account or if a negative value is entered for a deposit or withdrawal. Include additional exception-handling techniques. Write an application class and test the exception-handling techniques.
