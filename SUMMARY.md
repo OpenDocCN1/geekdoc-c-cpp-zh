@@ -294,6 +294,7 @@
 +   [C++ 与计算机黑客及移动黑客三合集：学习 C++ 编程、计算机黑客与移动黑客初学者指南](docs/c-and-computer-hacking-mobile-hacking-3-bundle-manuscript-be/README.md)
 +   [C# 与 游戏编程：初学者指南，第二版 (书与光盘)](docs/c-and-game-programming-a-beginners-guide-second-edition-book/README.md)
 +   [C++ 与 Linux 操作系统初学者指南：提升你的 C++ 编程技能并学习 Linux 操作系统](docs/c-and-linux-operating-system-2-bundle-manuscript-essential-b/README.md)
++   [C# 与 .NET 编程](docs/c-and-net-programming/README.md)
 +   [C++ 与 Node.js 集成](docs/c-and-nodejs-integration/README.md)
 +   [C++ 与 Python 编程合集：学习 C++ 编程与 Python 编程入门初学者指南](docs/c-and-python-programming-2-bundle-manuscript-introductory-be/README.md)
 +   [C++ 注释 (A4格式)](docs/c-annotations-a4-format/README.md)

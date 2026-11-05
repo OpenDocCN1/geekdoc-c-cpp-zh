@@ -1,0 +1,15 @@
++   - There are two different methods of performing PNRP name resolution based on the version of PNRP. PNRP version 1 was included in Windows XP Service Pack 2 (SP2), Windows XP Professional x64 Edition, and Windows XP with Service Pack 1 (SP1) and the Advanced Networking Pack for Windows XP. It used a recursive system for name resolution, and is not discussed in this paper. PNRP version 2 was redesigned in for Windows Vista and Windows XP Service Pack 3 to reduce network bandwidth by using an iterative approach to name resolution. The two versions of PNRP are not compatible.
+
+# 18.6.4 PNRP Name Resolution - Searching for a Peer Name
+
+PNRP name resolution uses the following two phases as describe below,
+
++   - **Endpoint determination** : In this phase, a peer that is attempting to resolve the PNRP ID of a service on a peer computer first determines the IPv6 address of the peer that published the PNRP ID of the PNRP service running on that peer.
++   - **PNRP ID resolution** : After locating and confirming the availability of the peer with the PNRP ID corresponding to the PNRP service of the desired endpoint, the requesting peer sends a PNRP Request message to that peer for the PNRP ID of the desired service. The endpoint sends a reply confirming the PNRP ID of the requested service, a comment, and up to 4 kilobytes of additional information that the requesting peer can use for future communication. For example, if the desired endpoint is a gaming server, the additional data can contain information about the game, the level of play, and the current number of players.
+
+During endpoint determination, PNRP uses an iterative process for locating the node that published the PNRP ID, in which the node performing the resolution is responsible for contacting nodes that are successively closer to the target PNRP ID.
+
+To perform name resolution in PNRP, the peer examines the entries in its own cache for an entry that matches the target PNRP ID. If found, the requesting peer sends a PNRP Request message to the peer- to be connected and waits for a response. If an entry for the PNRP ID is not found, the peer sends a PNRP Request message to the peer that corresponds to the entry that has a PNRP ID that most closely matches the target PNRP ID. The node that receives the PNRP Request message examines its own cache and does the following :
+
++   - If the PNRP ID is found, the requested peer replies directly to the requesting peer.
++   - If the PNRP ID is not found and a PNRP ID in the cache is closer to the target PNRP ID, the requested peer sends a response to the requesting peer containing the IPv6 address of the peer that corresponds to the entry that has a PNRP ID that most closely matches the target PNRP ID. From the IP address in the response, the requesting node sends another query to the IPv6 address referred to by the first node.
