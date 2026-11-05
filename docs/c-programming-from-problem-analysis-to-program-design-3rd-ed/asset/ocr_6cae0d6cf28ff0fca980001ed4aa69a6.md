@@ -1,0 +1,18 @@
+The standard query operators defined in the `System.Linq` namespace enable you to select, filter, aggregate, and partition data from any type that implements the `IEnumerable` interface. These operators form the backbone for the query functions. Table 14-9 provides a short description of some of the operators. Some are the same as the contextual keywords, but there are additional operators listed.
+
+**Table 14-9** Some of the LINQ query operators
+
+| Object | Description |
+|---|---|
+| select | Does a projection on the collection retrieving specific data members that make up the object. If no data members are identified, all are returned. Selection creates an object of a different type, which has either some or as many data members as the original class. In a tabular format, select picks specific columns. |
+| where | Selects specific objects that meet a set of predicate rules. Objects that do not match the rule are filtered away. In a tabular format, select picks specific columns. |
+| sum/min/max/average/aggregate | Retrieves a certain numeric value from each element in the collection and uses it to find the sum, minimum, maximum, average, or aggregate values of all the elements in the collection, respectively. |
+| join/groupjoin | Performs an inner join on two collections by using matching keys for objects in each collection. Like the Select operator, the results are instantiations of a different class. |
+| take/takewhile | Take retrieves the first n objects from a collection. TakeWhile uses a predicate to select those objects that match the predicate. |
+| skip/skipwhile | Does the opposite of Take and TakeWhile. They both skip the first n objects from a collection, or those objects that match a predicate. |
+| orderby/thenby | Used to specify the sort ordering of the elements in a collection according to some key. The default is ascending order. To specify descending order, use the OrderByDescending operator. ThenBy and ThenByDescending enables you to do a second sort within the first ordering. |
+| reverse | Reverses a collection. |
+| groupby | Takes a delegate that extracts a key value and returns a collection of IGrouping<Key, Values> objects, for each distinct key value. The IGrouping objects can then be used to enumerate all the objects for a particular key value. |
+| distinct | Removes duplicate instances of a key value from a collection. |
+| union/intersect/except | Used to perform a union, intersection, and difference operation on two sequences, respectively. |
+| count | Retrieves the number of elements in the given collection. |

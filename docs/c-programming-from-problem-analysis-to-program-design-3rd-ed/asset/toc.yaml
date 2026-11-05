@@ -1,0 +1,110 @@
+level_changes:
+- line: 219
+  before: 2
+  after: 1
+- line: 362
+  before: 2
+  after: 3
+- line: 383
+  before: 2
+  after: 3
+- line: 394
+  before: 2
+  after: 3
+- line: 1344
+  before: 2
+  after: 1
+- line: 4613
+  before: 2
+  after: 1
+- line: 6173
+  before: 2
+  after: 1
+- line: 8148
+  before: 2
+  after: 1
+- line: 9949
+  before: 2
+  after: 1
+- line: 11505
+  before: 2
+  after: 1
+- line: 11507
+  before: 2
+  after: 1
+- line: 12865
+  before: 2
+  after: 1
+- line: 14763
+  before: 2
+  after: 1
+- line: 17820
+  before: 2
+  after: 1
+- line: 17822
+  before: 2
+  after: 1
+- line: 19875
+  before: 2
+  after: 1
+- line: 21244
+  before: 2
+  after: 1
+- line: 22811
+  before: 2
+  after: 1
+- line: 24512
+  before: 2
+  after: 1
+- line: 26032
+  before: 2
+  after: 1
+- line: 26168
+  before: 2
+  after: 1
+- line: 26316
+  before: 2
+  after: 1
+- line: 26343
+  before: 2
+  after: 1
+- line: 26369
+  before: 2
+  after: 1
+- line: 26401
+  before: 2
+  after: 1
+- line: 26953
+  before: 2
+  after: 1
+- line: 8078
+  before: 2
+  after: 3
+- line: 8088
+  before: 2
+  after: 3
+- line: 8115
+  before: 2
+  after: 3
+- line: 8122
+  before: 2
+  after: 3
+text_changes:
+- line: 1903
+  before: 示例 2–10
+  after: 示例 2-10
+- line: 8928
+  before: 示例 6–12
+  after: 示例 6-12
+- line: 15920
+  before: 示例 10–21
+  after: 示例 10-21
+- line: 18685
+  before: 示例 11–18
+  after: 示例 11-18
+- line: 18944
+  before: 示例 11–25
+  after: 示例 11-25
+- line: 23253
+  before: 示例14–12
+  after: 示例14-12

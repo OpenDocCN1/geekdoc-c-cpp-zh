@@ -1,0 +1,165 @@
+
+`BinaryReader` 和 `BinaryWriter` 类提供面向特定数据类型的流式功能。当你查看表 13-8 中所示的 `BinaryReader` 方法时，会注意到多个 `Read( )` 方法。每个方法都专注于它将从文件中检索的数据类型。
+
+**表 13-8 BinaryReader 成员**
+
+| 方法 | 描述 |
+|---|---|
+| `Close( )` | 关闭当前 BinaryReader 以及基础流 |
+| `PeekChar( )` | 返回下一个可用字符，并且不推进字节或字符位置 |
+| `Read( )` | 从基础流读取字符，并推进流的当前位置 |
+| `ReadBoolean( )` | 从当前流读取一个布尔值，并将流的当前位置推进 1 个字节 |
+| `ReadByte( )` | 从当前流读取下一个字节，并将流的当前位置推进 1 个字节 |
+| `ReadBytes( )` | 从当前流读取 count 个字节到字节数组中，并将当前位置推进 count 个字节 |
+| `ReadChar( )` | 从当前流读取下一个字符，并推进流的当前位置 |
+| `ReadChars( )` | 从当前流读取 count 个字符，以字符数组返回数据，并推进当前位置 |
+| `ReadDecimal( )` | 从当前流读取一个 decimal 值，并将流的当前位置推进 16 个字节 |
+| `ReadDouble( )` | 从当前流读取一个 8 字节浮点值，并将流的当前位置推进 8 个字节 |
+| `ReadInt32( )` | 从当前流读取一个 4 字节有符号整数，并将流的当前位置推进 4 个字节 |
+| `ReadString( )` | 从当前流读取一个字符串；该字符串以长度为前缀 |
+
+示例 13-8 演示使用 `BinaryWriter` 类创建一个存储整数、decimal 值和字符串数据类型的二进制文件。
+
+### 示例 13-8
+
+```csharp
+// BinaryFiles.cs
+// Illustrates creating a binary file
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
+namespace BinaryFiles
+{
+    class BinaryExample
+    {
+        public static void Main( )
+        {
+            FileStream filStream;
+            BinaryWriter binWriter;
+
+            Console.Write("Enter name of the file: ");
+            string fileName = Console.ReadLine( );
+            if (File.Exists(fileName))
+            {
+                Console.WriteLine("File - {0} already exists!",
+                                  fileName);
+            }
+            else
+            {
+                filStream = new FileStream(fileName,
+                                           FileMode.CreateNew);
+                binWriter = new BinaryWriter(filStream);
+                decimal aValue = 2.16M;
+
+                binWriter.Write("Sample Run");
+                for (int i = 0; i < 11; i++)
+                {
+                    binWriter.Write(i);
+                }
+                binWriter.Write(aValue);
+
+                binWriter.Close( );
+                filStream.Close( );
+                Console.WriteLine("File Created successfully");
+            }
+            Console.ReadLine( );
+        }
+    }
+}
+```
+
+示例 13-8 首先检查用户输入的文件名是否已存在。这是通过 **File** 类的 **静态 Exists()** 方法完成的。当输入的名称是一个新文件时，会实例化 **FileStream** 和 **BinaryWriter** 类的对象。注意，**FileStream** 构造函数的第二个参数是一个枚举。**FileMode** 枚举类型指定操作系统应如何打开文件。如图 13-10 所示，名为 **CreateNew** 的字段值成员指示操作系统应创建一个新文件。IntelliSense 指出，如果文件已存在，则会引发 **System.IO.IOException**。
+
+![](img/e33ae760e23d89eac66541252ad65de8_837_0.png)
+
+**图 13-10** 枚举 FileMode
+
+**BinaryWriter 对象**基于 **FileStream 对象**，或包装在 **FileStream 对象**之上。**FileStream 对象**作为参数传入 **BinaryWriter** 构造函数。
+
+在示例 13-8 中，首先将一个字符串参数写入文件。随后是几个整数和一个 decimal 值。最后，为了正确创建文件，必须关闭这两个文件对象。图 13-11 显示了生成的控制台输出。在图的前景中，你会看到新创建的文件。
+
+![](img/e33ae760e23d89eac66541252ad65de8_838_0.png)
+
+**图 13-11** 已创建 TestBinaryCreation.txt 文件
+
+从图 13-11 可以看出，由于未指定路径，文件存储在项目的 `bin\debug` 目录中。
+
+创建二进制文件后，不能简单地在记事本中打开该文件并查看其内容。如果这样做，你会发现许多不可打印字符。可以编写使用 **BinaryReader** 类的程序语句来检索结果。示例 13-9 对此进行了演示。
+
+### 示例 13-9
+
+```csharp
+// BinaryFileAccess.cs
+// Illustrates retrieving data from a binary file.
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
+namespace BinaryFileAccess
+{
+    class BinaryInput
+    {
+        public static void Main( )
+        {
+            FileStream filStream;
+            BinaryReader binReader;
+
+            Console.Write("Enter name of the file: ");
+            string fileName = Console.ReadLine( );
+            try
+            {
+                filStream = new FileStream(fileName, FileMode.Open,
+                                            FileAccess.Read);
+                binReader = new BinaryReader(filStream);
+
+                RetrieveAndDisplayData(binReader);
+
+                binReader.Close( );
+                filStream.Close( );
+            }
+            catch (FileNotFoundException exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+            catch (InvalidDataException exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+            catch (EndOfStreamException exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+            catch (IOException exc)
+            {
+                Console.WriteLine(exc.Message);
+            }
+            Console.ReadLine( );
+        }
+
+        public static void RetrieveAndDisplayData(BinaryReader binReader)
+        {
+            // Read string data from the file.
+            Console.WriteLine(binReader.ReadString( ));
+            // Read integer data from the file.
+            for (int i = 0; i < 11; i++)
+            {
+                Console.WriteLine(binReader.ReadInt32( ));
+            }
+            // Read decimal data from the file.
+            Console.WriteLine(binReader.ReadDecimal( ));
+        }
+    }
+}
+```
+
+示例 13-9 中所示的代码用于检索先前应用程序 BinaryFiles 存储在二进制文件中的值。BinaryFiles 的代码已在示例 13-8 中展示。在示例 13-9 中，用户输入文件名后，会实例化 FileStream 和 BinaryReader 类的对象。这是在 try...catch 子句中完成的。FileStream 对象的构造函数包含两个枚举类型的值（FileMode.Open 和 FileAccess.Read）。图 13-12 显示了运行生成的输出。
+
+![](img/e33ae760e23d89eac66541252ad65de8_840_0.png)
+
+**图 13-12** 从二进制文件读取字符串、整数和 decimal 数据
+
+调用了三种不同的方法来从文件中读取数据。ReadInt32( ) 方法检索了这 10 个整数。ReadDecimal( ) 读取放入文件中的 decimal 值，而调用 ReadString( ) 来检索字符串值。你可能想知道，在调用 ReadString( ) 方法时，它如何知道只检索字母字符“Sample Run”。ReadString( ) 方法是第一个被调用的方法。如表 13-8 所示，字符串在文件中存储时会以长度为前缀。ReadString( ) 方法使用该值来确定要检索多少个字符。其中包含了几个 catch 子句。IOException 的所有派生类都放在 IOException catch 之前，因为放置顺序很重要。

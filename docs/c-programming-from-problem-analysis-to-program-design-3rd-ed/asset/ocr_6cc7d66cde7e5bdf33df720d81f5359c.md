@@ -1,0 +1,5 @@
+![](bbox=[0.171, 0.096, 0.91, 0.38])
+
+**Figure 15-33** Using .NET 3.5 installed templates
+
+If you want to create a Web Service application using .NET 4.0, classes are available as part of the WCF application program interface. The advantage WCF offers is it provides class libraries and tools for enabling software entities to communicate using any protocol, including those used by Web services. WCF supports more protocols for transporting messages than ASP.NET Web services. ASP.NET Web services, illustrated in Figure 15–33, only support sending messages by using the Hypertext Transfer Protocol (HTTP). WCF supports sending messages by using HTTP, as well as the Transmission Control Protocol (TCP), named pipes, and Microsoft Message Queuing (MSMQ). Figure 15–34 illustrates how a WCF service application is created using the .NET 4.0 framework. Software developed using WCF can be adapted to work together with a wide variety of other software. You are encouraged to explore WCF and the many resources available on the Internet detailing how to create and consume Web Services.

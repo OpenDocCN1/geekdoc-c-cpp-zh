@@ -1,0 +1,38 @@
+```
+```csharp
+{600, 1100, 1100, 0},
+{575, 1150, 1750, 0},
+{575, 1500, 2100, 0} } };
+AccumulateCalories(calories);
+DisplayTotals(calories);
+}
+
+public static void AccumulateCalories(int[,,] calories)
+{
+    for (int wk = 0; wk < calories.GetLength(0); wk++)
+        for (int da = 0; da < calories.GetLength(1); da++)
+            for (int ml = 0;
+                 ml < calories.GetLength(2) - 1; ml++)
+                calories[wk, da, 3] +=
+                    calories[wk, da, ml];
+}
+
+public static void DisplayTotals(int[,,] calories)
+{
+    string[] dayName = {"Sun", "Mon", "Tue",
+                        "Wed", "Thr", "Fri",
+                        "Sat"};
+
+    Console.WriteLine("Week#\tDay#\tTotalCalories");
+    for (int wk = 0; wk < calories.GetLength(0); wk++)
+        for (int da = 0; da < calories.GetLength(1); da++)
+            Console.WriteLine("{0}\t{1}\t{2}",
+                              wk + 1,
+                              dayName[da],
+                              calories[wk, da, 3]);
+}
+}
+```
+```
+
+The display from this listing includes the name of the day instead of the day number. A selection statement could have been used to test the day number and print the value. A much more efficient solution is to use the index from the calories array for the day number as the index to another one-dimensional string array holding the day names. This is illustrated in Example 8-13. Figure 8-5 shows the output.

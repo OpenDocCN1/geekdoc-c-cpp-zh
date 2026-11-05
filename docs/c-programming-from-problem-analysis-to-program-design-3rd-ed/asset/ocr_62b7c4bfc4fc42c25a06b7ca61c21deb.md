@@ -1,0 +1,13 @@
+These characteristics are placed in a class diagram. Figure 1–7 contains a class diagram for the problem specification given in Figure 1–5.
+
+Figure 1–7 is a class diagram divided into three sections with the top portion identifying the name of the class. The middle portion of a class diagram always lists the data characteristics. Data representing the type of vehicle to rent and the number of days for the rental are important to a rental car agency. The bottom portion of the class diagram shown in Figure 1–7 shows what actions are to be performed with the data items. `ComputeCharges()` is used to determine the cost of the rental using the type of vehicle and the number of rental days. You will learn more about class diagrams later in this chapter. Procedural designs, which are appropriate for simpler problem definitions, use structure charts to show the hierarchy of modules, and flowcharts or pseudocode listings to detail the steps for each of the modules.
+
+Algorithms for the behaviors (object-oriented) or processes (procedural) should be developed for both of these methodologies. An **algorithm** is a clear, unambiguous, step-by-step process for solving a problem. These steps must be expressed so completely and so precisely that all details are included. The instructions in the algorithm should be both simple to perform and capable of being carried out in a finite amount of time. Following the steps blindly should result in the same results every time.
+
+![](bbox=[0.175, 0.505, 0.414, 0.613])
+
+**Figure 1–7**  Class diagram of car rental agency
+
+An algorithm for `ComputeCharges()` multiplies the number of rental days by the rate associated with the type of vehicle rented to produce the rental charge. After the algorithm is developed, the design should be checked for correctness. One way to do this is to use sample data and **desk check** your algorithms by mimicking the computer; in other words, walking through the computer’s steps. Follow each step precisely, one step at a time. If the problem involves calculations, use a calculator, and follow your design statements exactly. It is important when you desk check not to add any additional steps, unless you go back and revise the algorithm.
+
+During this phase, it might also be helpful to plan and design the look of the desired output by developing a prototype. A **prototype** is a mock-up of screens depicting the look of the final output.

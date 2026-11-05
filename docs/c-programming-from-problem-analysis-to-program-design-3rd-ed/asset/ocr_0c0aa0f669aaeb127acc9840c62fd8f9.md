@@ -1,0 +1,5 @@
+![](bbox=[0.176, 0.095, 0.358, 0.582])
+
+Figure 15-14 HTML controls
+
+To illustrate their usage, Input, Text and Image objects were added to the HtmlExample Web application. Prior to adding the image, a new Images folder was added from the Solution Explorer window. Happy.jpg was placed in the folder. As you review Figure 15-14, you will notice that there are three HTML button type controls listed: Input (Button), Input (Submit), and Input (Reset). You cannot double click and register an event handler with these three buttons like you would have done with a Windows application. In order to do that, a Button from the Standard section in the ToolBox is added. Like a Windows application, the application can be executed from within Visual Studio. Or, after being built, the page can be opened within a Web browser using the application name—because Visual Studio created a virtual directory for it. Figure 15-15 shows the Web application after values are entered and the Submit button is clicked.

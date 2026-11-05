@@ -1,0 +1,28 @@
+# Analyze the Problem
+
+You should review the problem specification in Figure 5-8 and make sure you understand the problem definition. The purpose of the application is to calculate a fine based on the reported speed, speed limit, and classification of a student.
+
+Two separate classes are developed. One `class` is designed to include characteristics of the ticket. The other `class` instantiates objects of the Ticket `class` and is used to test the Ticket `class` to ensure that all possible situations have been taken into consideration. Several different conditional expressions must be constructed to determine the fine.
+
+The application or client `class` should test for each classification type and for speeds over and under 20 miles over the speed limit. This `class` produces an output listing showing the ticket cost given a number of test cases.
+
+Variables  Tables 5-8 and 5-9 list the data items needed for the SpeedingTicket example.
+
+**Table 5-8** Instance variables for the Ticket class
+
+| Data item description | Data type | Identifier |
+|---|---|---|
+| Street speed limit | `int` | `speedLimit` |
+| Speed over the speed limit | `int` | `speed` |
+| Fine associated with ticket | `decimal` | `fine` |
+
+The application `class` that is using the Ticket `class` also needs data. The application `class` allows the user to enter values for the speed limit, the speed at which the speeder was traveling, and the speeder’s classification. Table 5-9 identifies some of the local variables needed by the application `class`.
+
+**Table 5-9** Local variables for the SpeedingTicket application class
+
+| Data item description | Data type | Identifier |
+|---|---|---|
+| Year in school—classification | `char` | `classif` |
+| Street speed limit | `int` | `speedLimit` |
+| Speed traveling when ticketed | `int` | `speed` |
+| `string` input value | `string` | `inValue` |

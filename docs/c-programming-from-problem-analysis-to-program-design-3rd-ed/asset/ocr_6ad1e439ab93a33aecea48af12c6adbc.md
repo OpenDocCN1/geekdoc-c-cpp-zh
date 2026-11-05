@@ -1,0 +1,9 @@
+Figure 6-14 shows the output of running the program for Example 6-15 with 9, 5, and 3. To exit the outer loop, the character n was entered when the user was prompted to “Enter y for another calculation...” beginning on Line 45. Any character value, other than the character y, is entered to exit the loop.
+
+![](bbox=[0.177, 0.181, 0.676, 0.527])
+
+Figure 6-14  Nested loop output
+
+Notice that the `CalculateNFactorialIteratively(int n, out int result)` method shown on Lines 19–26 contains the `for` statement used as the inner nested loop. This is where n! is calculated. It produces result by initializing the loop control variable, i, to n on Line 22. The variable n stores the user-inputted entry that represents the factorial to be calculated. With each iteration of the loop, the loop control variable is multiplied by result. The out keyword is included in the method call and method heading for the variable result, indicating result does not contain a value on entry into the method.
+
+The first statement in the `CalculateNFactorialIteratively( )` method initializes result to 1. During each iteration through the loop, the update portion of the for statement decrements the loop counter. The conditional expression is reevaluated to determine whether the calculations are finished. This cycle of execute body, update loop control variable, and evaluate expression continues until the loop control variable reaches 0. When this occurs, the innermost for statement is completed. This also completes the `CalculateNFactorialIteratively( )` method. Control transfers back to the outer loop at Line 9, which calls another method `DisplayNFactorial( )`, to display the original value of n and result, the product of the calculations. After control returns to the `Main( )` method, the `PromptForMoreCalculations( )` method found on Lines 40–51 is called next. It returns a value indicating whether the loop body should be executed again.
