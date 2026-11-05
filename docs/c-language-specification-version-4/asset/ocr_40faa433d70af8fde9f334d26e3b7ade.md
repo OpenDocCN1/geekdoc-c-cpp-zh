@@ -1,0 +1,22 @@
+The floating-point operators, including the assignment operators, never produce exceptions. Instead, in exceptional situations, floating-point operations produce zero, infinity, or NaN, as described below:
+
++   - If the result of a floating-point operation is too small for the destination format, the result of the operation becomes positive zero or negative zero.
++   - If the result of a floating-point operation is too large for the destination format, the result of the operation becomes positive infinity or negative infinity.
++   - If a floating-point operation is invalid, the result of the operation becomes NaN.
++   - If one or both operands of a floating-point operation is NaN, the result of the operation becomes NaN.
+
+Floating-point operations may be performed with higher precision than the result type of the operation. For example, some hardware architectures support an “extended” or “long double” floating-point type with greater range and precision than the double type, and implicitly perform all floating-point operations using this higher precision type. Only at excessive cost in performance can such hardware architectures be made to perform floating-point operations with less precision, and rather than require an implementation to forfeit both performance and precision, C# allows a higher precision type to be used for all floating-point operations. Other than delivering more precise results, this rarely has any measurable effects. However, in expressions of the form x * y / z, where the multiplication produces a result that is outside the double range, but the subsequent division brings the temporary result back into the double range, the fact that the expression is evaluated in a higher range format may cause a finite result to be produced instead of an infinity.
+
+# 4.1.7 The decimal type
+
+The decimal type is a 128-bit data type suitable for financial and monetary calculations. The decimal type can represent values ranging from 1.0 × 10⁻²⁸ to approximately 7.9 × 10²⁸ with 28-29 significant digits.
+
+The finite set of values of type decimal are of the form (−1)ˢ × c × 10ᵉ, where the sign s is 0 or 1, the coefficient c is given by 0 ≤ c < 2²⁶, and the scale e is such that 0 ≤ e ≤ 28. The decimal type does not support signed zeros, infinities, or NaN's. A decimal is represented as a 96-bit integer scaled by a power of ten. For decimals with an absolute value less than 1.0m, the value is exact to the 28th decimal place, but no further. For decimals with an absolute value greater than or equal to 1.0m, the value is exact to 28 or 29 digits. Contrary to the float and double data types, decimal fractional numbers such as 0.1 can be represented exactly in the decimal representation. In the float and double representations, such numbers are often infinite fractions, making those representations more prone to round-off errors.
+
+If one of the operands of a binary operator is of type decimal, then the other operand must be of an integral type or of type decimal. If an integral type operand is present, it is converted to decimal before the operation is performed.
+
+The result of an operation on values of type decimal is that which would result from calculating an exact result (preserving scale, as defined for each operator) and then rounding to fit the representation. Results are rounded to the nearest representable value, and, when a result is equally close to two representable values, to the value that has an even number in the least significant digit position (this is known as “banker’s rounding”). A zero result always has a sign of 0 and a scale of 0.
+
+If a decimal arithmetic operation produces a value less than or equal to 5 × 10⁻²⁹ in absolute value, the result of the operation becomes zero. If a decimal arithmetic operation produces a result that is too large for the decimal format, a System.OverflowException is thrown.
+
+The decimal type has greater precision but smaller range than the floating-point types. Thus, conversions from the floating-point types to decimal might produce overflow exceptions, and conversions from decimal to the floating-point types might cause loss of precision. For these reasons, no implicit conversions exist between the floating-point types and decimal, and without explicit casts, it is not possible to mix floating-point and decimal operands in the same expression.

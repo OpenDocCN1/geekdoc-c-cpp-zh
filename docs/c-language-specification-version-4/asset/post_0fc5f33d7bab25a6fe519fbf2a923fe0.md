@@ -1,0 +1,150 @@
+
+- 7.10.3 Decimal comparison operators 199
+- 7.10.4 Boolean equality operators 199
+- 7.10.5 Enumeration comparison operators 199
+- 7.10.6 Reference type equality operators 199
+- 7.10.7 String equality operators 201
+- 7.10.8 Delegate equality operators 201
+- 7.10.9 Equality operators and null 202
+- 7.10.10 The is operator 202
+- 7.10.11 The as operator 202
+- 7.11 Logical operators 203
+- 7.11.1 Integer logical operators 204
+- 7.11.2 Enumeration logical operators 204
+- 7.11.3 Boolean logical operators 204
+- 7.11.4 Nullable boolean logical operators 204
+- 7.12 Conditional logical operators 205
+- 7.12.1 Boolean conditional logical operators 206
+- 7.12.2 User-defined conditional logical operators 206
+- 7.13 The null coalescing operator 206
+- 7.14 Conditional operator 207
+- 7.15 Anonymous function expressions 208
+- 7.15.1 Anonymous function signatures 210
+- 7.15.2 Anonymous function bodies 210
+- 7.15.3 Overload resolution 211
+- 7.15.4 Anonymous functions and dynamic binding 211
+- 7.15.5 Outer variables 211
+- 7.15.5.1 Captured outer variables 212
+- 7.15.5.2 Instantiation of local variables 212
+- 7.15.6 Evaluation of anonymous function expressions 214
+- 7.16 Query expressions 215
+- 7.16.1 Ambiguities in query expressions 216
+- 7.16.2 Query expression translation 216
+- 7.16.2.1 Select and groupby clauses with continuations 217
+- 7.16.2.2 Explicit range variable types 217
+- 7.16.2.3 Degenerate query expressions 218
+- 7.16.2.4 From, let, where, join and orderby clauses 218
+- 7.16.2.5 Select clauses 221
+- 7.16.2.6 Groupby clauses 222
+- 7.16.2.7 Transparent identifiers 222
+- 7.17 Assignment operators 224
+- 7.17.1 Simple assignment 225
+- 7.17.2 Compound assignment 227
+- 7.17.3 Event assignment 228
+- 7.18 Expression 228
+- 7.19 Constant expressions 228
+- 7.20 Boolean expressions 230
+- 8. Statements 231
+- 8.1 End points and reachability 231
+- 8.2 Blocks 233
+- 8.2.1 Statement lists 233
+- 8.3 The empty statement ... 234
+- 8.4 Labeled statements ... 234
+- 8.5 Declaration statements ... 235
+- 8.5.1 Local variable declarations ... 235
+- 8.5.2 Local constant declarations ... 236
+- 8.6 Expression statements ... 237
+- 8.7 Selection statements ... 237
+- 8.7.1 The if statement ... 237
+- 8.7.2 The switch statement ... 238
+- 8.8 Iteration statements ... 241
+- 8.8.1 The while statement ... 242
+- 8.8.2 The do statement ... 242
+- 8.8.3 The for statement ... 243
+- 8.8.4 The foreach statement ... 244
+- 8.9 Jump statements ... 246
+- 8.9.1 The break statement ... 247
+- 8.9.2 The continue statement ... 248
+- 8.9.3 The goto statement ... 248
+- 8.9.4 The return statement ... 250
+- 8.9.5 The throw statement ... 250
+- 8.10 The try statement ... 251
+- 8.11 The checked and unchecked statements ... 254
+- 8.12 The lock statement ... 254
+- 8.13 The using statement ... 255
+- 8.14 The yield statement ... 257
+## 9. Namespaces ... 259
+- 9.1 Compilation units ... 259
+- 9.2 Namespace declarations ... 259
+- 9.3 Extern aliases ... 260
+- 9.4 Using directives ... 261
+- 9.4.1 Using alias directives ... 262
+- 9.4.2 Using namespace directives ... 264
+- 9.5 Namespace members ... 266
+- 9.6 Type declarations ... 266
+- 9.7 Namespace alias qualifiers ... 267
+- 9.7.1 Uniqueness of aliases ... 268
+## 10. Classes ... 269
+- 10.1 Class declarations ... 269
+- 10.1.1 Class modifiers ... 269
+- 10.1.1.1 Abstract classes ... 270
+- 10.1.1.2 Sealed classes ... 270
+- 10.1.1.3 Static classes ... 270
+- 10.1.2 Partial modifier ... 271
+- 10.1.3 Type parameters ... 271
+- 10.1.4 Class base specification ... 272
+- 10.1.4.1 Base classes ... 272
+- 10.1.4.2 Interface implementations ... 274
+- 10.1.5 Type parameter constraints ... 274
+- 10.1.6 Class body ... 278
+## C# LANGUAGE SPECIFICATION
+- 10.6.7 External methods ........................................................... 316
+- 10.6.8 Partial methods ........................................................... 317
+- 10.6.9 Extension methods ......................................................... 317
+- 10.6.10 Method body .............................................................. 318
+- 10.6.11 Method overloading ........................................................ 318
+- 10.7 Properties ................................................................... 318
+- 10.7.1 Static and instance properties ............................................. 320
+- 10.7.2 Accessors .................................................................. 320
+- 10.7.3 Automatically implemented properties ....................................... 325
+- 10.7.4 Accessibility .............................................................. 325
+- 10.7.5 Virtual, sealed, override, and abstract accessors ........................... 327
+- 10.8 Events ...................................................................... 328
+- 10.8.1 Field-like events .......................................................... 330
+- 10.8.2 Event accessors ............................................................ 332
+- 10.8.3 Static and instance events ................................................. 333
+- 10.8.4 Virtual, sealed, override, and abstract accessors ........................... 333
+- 10.9 Indexers .................................................................... 333
+- 10.9.1 Indexer overloading ........................................................ 337
+- 10.10 Operators .................................................................. 337
+- 10.10.1 Unary operators ........................................................... 339
+- 10.10.2 Binary operators .......................................................... 339
+- 10.10.3 Conversion operators ...................................................... 340
+- 10.11 Instance constructors ....................................................... 342
+- 10.11.1 Constructor initializers .................................................. 343
+- 10.11.2 Instance variable initializers ............................................ 344
+- 10.11.3 Constructor execution ..................................................... 344
+- 10.11.4 Default constructors ...................................................... 346
+- 10.11.5 Private constructors ...................................................... 346
+- 10.11.6 Optional instance constructor parameters .................................. 347
+- 10.12 Static constructors ....................................................... 347
+- 10.13 Destructors ............................................................... 349
+- 10.14 Iterators ............................................................... 351
+- 10.14.1 Enumerable interfaces .................................................... 351
+- 10.14.2 Enumerable interfaces .................................................... 351
+- 10.14.3 Yield type .............................................................. 351
+- 10.14.4 Enumerator objects ...................................................... 351
+- 10.14.4.1 The MoveNext method ................................................... 352
+- 10.14.4.2 The Current property ................................................... 353
+- 10.14.4.3 The Dispose method ..................................................... 353
+- 10.14.5 Enumerable objects ...................................................... 353
+- 10.14.5.1 The GetEnumerator method .............................................. 354
+- 10.14.6 Implementation example .................................................. 354
+- 11. Structs ..................................................................... 361
+- 11.1 Struct declarations ....................................................... 361
+- 11.1.1 Struct modifiers ........................................................ 361
+- 11.1.2 Partial modifier ........................................................ 362
+- 11.1.3 Struct interfaces ....................................................... 362
+- 11.1.4 Struct body ............................................................. 362
+- 11.2 Struct members ............................................................ 362
+- 11.3 Class and struct differences ............................................... 362

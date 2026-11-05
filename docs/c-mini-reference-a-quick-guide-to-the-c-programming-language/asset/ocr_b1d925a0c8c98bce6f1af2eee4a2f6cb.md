@@ -1,0 +1,1 @@
+Used to specify predefined compilation symbols by the compiler.

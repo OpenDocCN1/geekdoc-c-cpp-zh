@@ -1,0 +1,13 @@
+```
+}
+    finally {
+        __state = 4;
+    }
+}
+    void IEnumerator.Reset() {
+        throw new NotSupportedException();
+    }
+}
+```
+
+The compiler generated temporaries used in the foreach statements are lifted into the __left and __right fields of the enumerator object. The __state field of the enumerator object is carefully updated so that the correct Dispose() method will be called correctly if an exception is thrown. Note that it is not possible to write the translated code with simple foreach statements.

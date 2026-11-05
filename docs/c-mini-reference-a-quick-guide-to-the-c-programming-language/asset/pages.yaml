@@ -1,0 +1,3442 @@
+- pgno: 0
+  md: '# Table of Contents
+
+
+    Copyright
+
+
+    Preface
+
+
+    Dear Readers:
+
+
+    1. Introduction
+
+
+    1.1. C# and .NET
+
+
+    1.2. Nullable Context
+
+
+    1.3. Book Organization
+
+
+    2. C# Programs
+
+
+    2.1. Main Methods
+
+
+    2.2. Top-Level Statements
+
+
+    2.3. Declarations
+
+
+    2.4. Access Control'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# 3.3.2. Boolean literals
+
+
+    # 3.3.3. Integer literals
+
+
+    # 3.3.4. Real literals
+
+
+    # 3.3.5. Character literals
+
+
+    # 3.3.6. String literals
+
+
+    # 3.4. Compiler Directives
+
+
+    # 4. Namespaces
+
+
+    # 4.1. Namespace Declarations
+
+
+    # 4.2. extern Alias Directives
+
+
+    # 4.3. using Directives
+
+
+    # 4.3.1. The using namespace directive
+
+
+    # 4.3.2. The using static directive
+
+
+    # 4.3.3. The using alias directive
+
+
+    # 4.4. Global using'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 4.5. Implicit using
+
+
+    # 4.6. Member Declarations
+
+
+    # 5. C# Type System
+
+
+    # 5.1. Value Types
+
+
+    # 5.1.1. The System.ValueType type
+
+
+    # 5.1.2. Default constructors
+
+
+    # 5.1.3. Boxing and Unboxing
+
+
+    # 5.1.4. Nullable value types
+
+
+    # 5.2. Reference Types
+
+
+    # 5.2.1. Nullable reference types
+
+
+    # 5.3. Dynamic Types
+
+
+    # 6. Constants
+
+
+    # 7. Variables
+
+
+    # 7.1. Variable Categories'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# 7.2. Local Variable Declarations
+
+
+    # 7.2.1. Local variables
+
+
+    # 7.2.2. Ref local variables
+
+
+    # 7.2.3. Ref readonly local variables
+
+
+    # 8. Local Functions
+
+
+    # 8.1. Local Functions
+
+
+    # 8.2. Static Local Functions
+
+
+    # 9. Formal Parameters
+
+
+    # 9.1. Parameter List
+
+
+    # 9.2. Argument List
+
+
+    # 9.3. The params Parameter
+
+
+    # 9.4. Value Parameters
+
+
+    # 9.5. in Parameters'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# 9.6. out Parameters
+
+
+    # 9.7. ref Parameters
+
+
+    # 9.8. Returns by Reference
+
+
+    # 9.8.1. Ref returns
+
+
+    # 9.8.2. Ref readonly returns
+
+
+    # 10. Builtin Value Types
+
+
+    # 10.1. The bool Type
+
+
+    # 10.1.1. The nullable bool? type
+
+
+    # 10.2. The char Type
+
+
+    # 10.2.1. Char literals
+
+
+    # 10.3. Integral Types
+
+
+    # 10.4. Native Integer Types
+
+
+    # 10.5. Floating Point Types
+
+
+    # 10.6. The decimal Type'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# 12.2. Type Parameter Constraints
+
+
+    # 12.2.1. The notnull constraint
+
+
+    # 12.2.2. The default constraint
+
+
+    # 12.2.3. The new() constraint
+
+
+    # 12.2.4. The enum constraint
+
+
+    # 12.2.5. The delegate constraints
+
+
+    # 12.2.6. The struct constraint
+
+
+    # 12.2.7. The class constraint
+
+
+    # 12.2.8. The class? constraint
+
+
+    # 12.2.9. Interface type constraints
+
+
+    # 12.2.10. Base class type constraints
+
+
+    # 12.2.11. Specific type constraints
+
+
+    # 12.3. Type Variance in Generics
+
+
+    # 12.3.1. Covariance'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# 12.3.2. Contravariance
+
+
+    # 13. Interfaces
+
+
+    # 13.1. Interface Declarations
+
+
+    # 13.1.1. Interface modifiers
+
+
+    # 13.1.2. Type parameter variance
+
+
+    # 13.1.3. Base interfaces
+
+
+    # 13.2. Interface Members
+
+
+    # 13.2.1. Interface method declarations
+
+
+    # 13.2.2. Interface property declarations
+
+
+    # 13.2.3. Interface indexer declarations
+
+
+    # 13.2.4. Interface event declarations
+
+
+    # 13.2.5. Other member types
+
+
+    # 13.2.6. Interface member access'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 13.3. Interface Static Members
+
+
+    # 13.3.1. Static abstract and virtual members
+
+
+    # 13.3.2. Accessing static abstract interface members
+
+
+    # 13.3.3. An example and an informal explanation
+
+
+    # 13.4. Default Implementations
+
+
+    # 13.5. Interface Implementations
+
+
+    # 14. Objects
+
+
+    # 15. Arrays
+
+
+    # 15.1. Array Types
+
+
+    # 15.1.1. System.Array
+
+
+    # 15.1.2. Generic collection interfaces
+
+
+    # 15.1.3. Multidimensional arrays
+
+
+    # 15.2. Array Creation
+
+
+    # 15.3. Array Elements'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# 15.3.1. Indexing
+
+
+    # 15.3.2. Slicing
+
+
+    # 16. Spans and ReadOnlySpans
+
+
+    # 16.1. System.Span
+
+
+    # 16.2. System.ReadOnlySpan
+
+
+    # 17. Tuples
+
+
+    # 17.1. Tuple Fields
+
+
+    # 17.2. Tuple Equality
+
+
+    # 17.3. Tuple Deconstruction
+
+
+    # 17.3.1. Assignment and declaration in the same deconstruction
+
+
+    # 17.3.2. Discard variables
+
+
+    # 17.3.3. Deconstruct method
+
+
+    # 18. Enums'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   - 18.1. Enum Declarations
+
+    +   - 18.2. Underlying Types
+
+    +   - 18.3. Enum Modifiers
+
+    +   - 18.4. Enum Members
+
+    +   - 18.5. Enum Operations
+
+    +   - 18.5.1. Extension methods on enums
+
+    +   - 19. Classes
+
+    +   - 19.1. Class Declarations
+
+    +   - 19.1.1. Class modifiers
+
+    +   - 19.1.2. Abstract classes
+
+    +   - 19.1.3. Sealed classes
+
+    +   - 19.1.4. Static classes
+
+    +   - 19.2. Type Parameters
+
+    +   - 19.3. Base Classes'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# 19.3.1. Inheritance
+
+
+    # 19.3.2. Interface implementations
+
+
+    # 19.4. Static Constructors
+
+
+    # 19.5. Instance Constructors
+
+
+    # 19.6. Finalizers
+
+
+    # 19.7. Class Members
+
+
+    # 19.8. Constants
+
+
+    # 19.9. Class Fields
+
+
+    # 19.10. Methods
+
+
+    # 19.10.1. Method member declarations
+
+
+    # 19.10.2. Method parameters
+
+
+    # 19.10.3. Static and instance methods
+
+
+    # 19.10.4. Virtual methods'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '+   - 19.10.5. Override methods
+
+    +   - 19.10.6. Sealed methods
+
+    +   - 19.10.7. Abstract methods
+
+    +   - 19.10.8. External methods
+
+    +   - 19.10.9. Method body
+
+    +   - 19.11. Properties
+
+    +   - 19.11.1. Expression-bodied properties
+
+    +   - 19.11.2. Auto properties
+
+    +   - 19.11.3. Accessor body
+
+    +   - 19.12. Indexers
+
+    +   - 19.13. Events
+
+    +   - 19.14. Operators
+
+    +   - 19.15. Operator Overloading
+
+    +   - 19.16. Nested Types'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# 20. Records
+
+
+    # 20.1. Record Declaration
+
+
+    # 20.2. Inheritance
+
+
+    # 20.3. Primary Constructors
+
+
+    # 20.4. Immutability
+
+
+    # 20.5. Value Equality
+
+
+    # 20.6. Record Deconstruction
+
+
+    # 20.7. Non-Destructive Mutations
+
+
+    # 21. Structs
+
+
+    # 21.1. Struct Declarations
+
+
+    # 21.2. Struct Members
+
+
+    # 21.2.1. Struct constructors
+
+
+    # 21.2.2. Auto default structs'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '21.2.3. Struct members
+
+
+    21.2.4. Readonly instance members
+
+
+    21.3. Ref Structs
+
+
+    21.4. Record Structs
+
+
+    22. Extension Methods
+
+
+    22.1. this Extension Methods
+
+
+    22.2. ref this Extension Methods
+
+
+    22.3. in this Extension Methods
+
+
+    23. The new Operator
+
+
+    23.1. New Array Expressions
+
+
+    23.2. New Object Expressions
+
+
+    23.3. Object Initializers
+
+
+    23.4. Collection Initializers
+
+
+    23.5. Anonymous Object Initializers'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '23.6. New Delegate Expressions
+
+
+    24. Expressions
+
+
+    24.1. Expression Statements
+
+
+    24.2. The checked and unchecked Statements
+
+
+    24.3. Classifications of C# Expressions
+
+
+    24.4. The Operator Precedence
+
+
+    24.5. The checked Operators
+
+
+    24.6. Arithmetic Operators
+
+
+    24.6.1. Unary plus operator
+
+
+    24.6.2. Unary minus operator
+
+
+    24.6.3. Prefix increment and prefix decrement
+
+
+    24.6.4. Postfix increment and postfix decrement
+
+
+    24.6.5. Multiplication operator'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# 24.6.6. Division operator
+
+
+    # 24.6.7. Remainder operator
+
+
+    # 24.6.8. Addition operator
+
+
+    # 24.6.9. Subtraction operator
+
+
+    # 24.7. Relational Operators
+
+
+    # 24.8. Assignment Operators
+
+
+    # 24.9. Logical Operators
+
+
+    # 24.9.1. Logical operators
+
+
+    # 24.9.2. Conditional logical operators
+
+
+    # 24.10. Bitwise Operators
+
+
+    # 24.10.1. Logical negation operator
+
+
+    # 24.10.2. Bitwise complement operator
+
+
+    # 24.11. Shift operators
+
+
+    # 24.12. True and False Operators'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '+   - 24.13. Conditional Operator
+
+    +   - 24.14. The Index and Range Operators
+
+    +   - 24.14.1. System.Index
+
+    +   - 24.14.2. System.Range
+
+    +   - 24.15. Default Value Operator
+
+    +   - 24.16. Null-Testing Expressions
+
+    +   - 24.16.1. Null conditional member access
+
+    +   - 24.16.2. Null conditional element access
+
+    +   - 24.16.3. Null conditional invocation expression
+
+    +   - 24.16.4. The null coalescing operator
+
+    +   - 24.16.5. Null forgiving operator (postfix
+
+    +   - 24.17. The nameof Operator
+
+    +   - 24.18. The sizeof Operator
+
+    +   - 24.19. The typeof Operator'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# 24.20. The as Operator
+
+
+    # 24.21. The is Expression
+
+
+    # 24.21.1. Pattern matching
+
+
+    # 24.22. The switch Expression
+
+
+    # 25. Lambda Expressions
+
+
+    # 25.1. Lambda Functions
+
+
+    # 25.1.1. Expression lambdas
+
+
+    # 25.1.2. Statement lambdas
+
+
+    # 25.2. Static Lambda Functions
+
+
+    # 25.3. Closures
+
+
+    # 26. Statements
+
+
+    # 26.1. Empty Statement
+
+
+    # 26.2. Declaration Statement'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# 26.3. The for Statement
+
+
+    # 26.4. The foreach Statement
+
+
+    # 26.5. The do Statement
+
+
+    # 26.6. The while Statement
+
+
+    # 26.7. The if Statement
+
+
+    # 26.8. The switch Statement
+
+
+    # 26.8.1. Pattern matching
+
+
+    # 26.9. Labeled Statements
+
+
+    # 26.10. The goto Statement
+
+
+    # 26.11. The break Statement
+
+
+    # 26.12. The continue Statement
+
+
+    # 26.13. The return Statement
+
+
+    # 26.14. The lock Statement
+
+
+    # 27. Pattern Matching'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '+   - 30.2. Attribute Parameters
+
+    +   - 30.2.1. Attribute parameter types
+
+    +   - 30.3. Attribute Specification
+
+    +   - 30.3.1. Attribute sections
+
+    +   - 30.3.2. Attribute targets
+
+    +   - About the Author
+
+    +   - About the Series
+
+    +   - Community Support'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # Copyright
+
+
+    # # C# Mini Reference: A Quick Guide to the C# Programming Language
+
+
+    © 2023 Coding Books Press
+
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted in any form or by any means, without the prior written
+    permission of the publisher, except in the case of brief quotations embedded in
+    critical articles or reviews.
+
+
+    Every effort has been made in the preparation of this book to ensure the accuracy
+    of the information presented. However, the information contained in this book
+    is sold without warranty, either express or implied. Neither the author, nor its
+    dealers and distributors will be held liable for any damages caused or alleged
+    to be caused directly or indirectly by this book.
+
+
+    Published: January 2023
+
+
+    Harry Yoon
+
+    San Diego, California'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# Preface
+
+
+    C# was originally created based on the Java programming language, circa 2000~2002,
+    partly because Microsoft wanted to lure programmers who were familiar with Java
+    at the time.
+
+
+    Java had been created a few years earlier when the object-oriented programming
+    (OOP) was becoming the most dominant programming paradigm in the industry. Java
+    became wildly popular. In Java, everything was a Functions were demoted to the
+    "methods" of a class. Even the functions that do not really belong to an object
+    needed to be part of a class, e.g., as "static" methods. You couldn’t program
+    in Java without creating a class first, at least syntactically.
+
+
+    C# initially followed this "everything is a class" design. Now, for the past 20+
+    years, C# has been trying to liberate itself from the ghost of Java.
+
+
+    In recent years, people have been realizing the limitations of the OOP, especially
+    as a one-size-fits-all programming paradigm. Most modern programming languages
+    like Go, Rust, Swift, and even other JVM languages like Scala and Kotlin do not
+    impose such constraints. In fact, Java and C# are the only two widely used languages
+    that have such built-in class-first constraints.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'C# has been constantly evolving. But, it went through major changes between
+    C# 6 and C# 7. And, ever since. Now, C# releases a new major version every year.
+    As of this writing, C# 11 is the most current version.
+
+
+    Although there have been many (small and big) updates over the years, the recent
+    changes are really about C# becoming free of Java. C# is now officially a "multi-paradigm"
+    programming language, and not just an OOP language. The modern C# encourages the
+    functional programming styles, among other things. For example, a lot of constructs
+    in C# are now expressions rather than statements. (Also, it should be noted that
+    many new features of C# are borrowed from F#, another .NET programming language,
+    which is primarily functional.) Since C# 9, we can use the top-level statements,
+    at least in no more than one source code file in a program. This kind of (cosmetic)
+    changes allow us to do away with much of the boilerplate code in the modern C#.
+
+
+    C# 11 now supports so-called "static abstract methods" in interfaces. Although
+    its full implications are not entirely clear, this change makes C# more on a par
+    with other (more modern) languages. C# 11’s interface is comparable, in terms
+    of its capabilities, to Go’s interface, Rust’s trait, and Swift’s protocol, among
+    others.
+
+
+    This book primarily focuses on the syntax of the C# language. But we encourage
+    the readers to read beyond the syntax. In particular, we will need to adjust our
+    programming styles, rather than sticking with the old "everything is a class"
+    paradigm, to take advantage of the new modern features and to program more effectively
+    in C#.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Having said that, you can read the book more or less from beginning to end,
+    if you’d like, and you will get the full picture of the C# language.
+
+
+    One thing to note is that there’s a fair amount of cross references, and if you
+    have no prior experience with programming in C#, or other similar languages like
+    C++ or Java, you may have a little difficulty following some parts of the book.
+    We also skip some basics of C# so that we can cover more modern features in more
+    detail in the limited space. The book’s intended audience is advanced beginners
+    to intermediate-level programmers. Advanced C# developers can also benefit from
+    this book by selectively going through more advanced, and modern, features.
+
+
+    It should be noted that this book is not an authoritative language reference.
+    If there are any inconsistencies or confusing, or seemingly incorrect, explanations
+    in the book, we recommend the readers to refer to the official language specification.'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# Dear Readers:
+
+
+    Please read this before you purchase, or start reading and investing your time
+    on, this book.
+
+
+    This book is a language reference, written in an informal style. It is one of
+    the books in a series which cover different programming languages that are widely
+    used. These books are not meant to teach you how to program in those languages
+    in a tutorial style, however.
+
+
+    Going through this kind of language reference-style books once in a while, at
+    various stages of your learning, can boost your programming skills dramatically.
+    But, you will only learn so much based on what you already know. We learn incrementally.
+    Do not try to boil the ocean at your first reading unless you are a truly experienced
+    developer.
+
+
+    These mini references are intended to be read quickly, or even just browsed, in
+    a few hours or a few days. If you feel like you are struggling with every paragraph,
+    on the other hand, then this book is clearly not a right one for you. We suggest
+    you look for an alternative book that is more suitable to you. If you have already
+    purchased this book, you can return it if it’s still within the return time window.
+
+
+    Otherwise, here’s a quick suggestion. First of all, you do not have to understand
+    or remember Just quickly go through the book from beginning to end, and see which
+    parts you are more familiar with and which parts'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'you are not. Then, come back to this book later, say, after practicing programming
+    for a little while, and read it again. Do you find the book a bit easier to read?
+
+
+    You can repeat these steps once in a while. We all tend to forget things, and
+    a quick refresher is always a good idea. You will learn, or re-learn, something
+    "new" every time.
+
+
+    Good luck!'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# 1. Introduction
+
+
+    C# is a rather complex language. In fact, depending on how you measure the complexity
+    of a programming language, C# could be the most complex language among some of
+    the widely used languages. No one likes complexity. And yet, C# is one of the
+    most popular and favorite languages for many developers. Why?
+
+
+    A programming language is a tool. Sometimes, having a complex and flexible tool
+    can make doing a real task much simpler and easier. Using a chainsaw can make
+    the task of cutting a tree easier, for example. That’s the case with C#.
+
+
+    There are a few implications for this. On the one hand, C# is not generally considered
+    a beginner-friendly language. There is an upfront investment you need to make
+    before you can reap the benefits. On the other hand, C# can be a powerful tool
+    for building a large, enterprise-grade software once you master the tool.
+
+
+    In general, you will end up with "simpler" programs using "more complex" languages
+    like C#. At least, that''s the idea. Hence, it is rather important to use C# correctly
+    and Otherwise, the downside of using a heavyweight language, if you will, will
+    be bigger than the benefits of using such a language.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'This book provides a bird’s eye view of the C# language grammar. It is organized
+    into a few dozen semi-independent chapters, covering most of the important features
+    of C#.
+
+
+    A programming language is not just a sum of its features. In order to be able
+    to use a language like C# most effectively, however, you will need to know what
+    features are available at your disposal. You will need to have a thorough high-level
+    understanding of each of these features. As stated in the preface, the readers
+    are encouraged not to lose the sight of the forest while going through each of
+    these trees.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# 1.1. C# and .NET
+
+
+    At the risk of oversimplifying, there are three aspects to a programming language,
+    and programming in that language:
+
+
+    +   - The language itself, e.g., the grammar and the standard library,
+
+    +   - The runtime, and
+
+    +   - The tooling (e.g., the language compiler).
+
+
+    As an example, the C++ programming language specification is managed by the ISO.
+    On the other hand, toolings are provided by various tool vendors like Microsoft,
+    GNU/gcc, and clang. C++ has no separate runtime per se, other than the standard
+    library support at run time. C++ programs are directly compiled to a machine code.
+
+
+    In case of C# and .NET, Microsoft more or less owns a whole ecosystem comprising
+    all three parts of the C# language. (We do not discuss other implementations of
+    C# such as those used in Unity, etc.) The .NET system defines a set of standard
+    libraries and their run time support. .NET is also a runtime, or a virtual machine,
+    that runs the byte code compiled from C# programs.'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: 'Microsoft’s .NET has a very complicated history, with many different versions
+    and manifestations, and with many different (and ever-changing) names. The framework,
+    and the version, that we use in this book is simply called .NET 7 (which was originally
+    called .NET Core). This is a cross-platform version of the .NET framework. That
+    is, once you create a C# program targeting .NET 7, you can run it on any system
+    that is supported by .NET 7. (In addition, .NET, in general, supports multiple
+    programming languages.)
+
+
+    Another implication of this rather tightly integrated ecosystem is that C# does
+    not stand by itself. In fact, at least in principle, you will not be able to read
+    and interpret C# programs precisely without knowing what their associated .NET
+    framework is.
+
+
+    This is not necessarily unique to C#, with all programming languages evolving
+    over time, etc. But, in case of C# and .NET, the interdependency is much tighter.
+
+
+    C# uses a project file to manage build configurations and what not. The default
+    version of C# for .NET 7 is C# 11. That is, if you plan to use a different version
+    of C# on .NET 7, for instance, then you will need to explicitly specify that in
+    the project file.
+
+
+    When you scaffold an empty C# project on .NET 7, e.g., using Visual Studio or
+    dotnet CLI, it creates the following placeholder project file:
+
+
+    Listing 1. SampleProject.csproj
+
+
+    ```
+
+    ~~~xml
+
+    <Project Sdk="Microsoft.NET.Sdk">
+
+    ~~~
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "```\n```xml\n<PropertyGroup>\n  <OutputType>Exe</OutputType>\n  <TargetFramework>net7.0</TargetFramework>\n\
+    \  <ImplicitUsings>enable</ImplicitUsings>\n  <Nullable>enable</Nullable>\n</PropertyGroup>\n\
+    \n</Project>\n```\n```\n\nThere are four properties set by the tool in this file.\
+    \ The OutputType property indicates the type of the target binary, e.g., Exe (executable)\
+    \ vs Lib (library). We are targeting .NET 7 via TargetFramework (which is a natural\
+    \ value if you use the tooling based on .NET 7).\n\nThe last two properties, ImplicitUsings\
+    \ and are rather significant. C# went through a few backward incompatible changes\
+    \ in the past. In the original C#, the values of both these properties would have\
+    \ been Now, moving forward, the majority of the C# community will likely use the\
+    \ enable value, and hence, C# has become effectively backward incompatible.\n\n\
+    We will always assume in this book that these two values are set to Strictly speaking,\
+    \ some of the information provided in this book might be \"incorrect\", e.g.,\
+    \ when using different values for these properties (and, possibly for some others\
+    \ as well).\n\nUnless you have a legacy code, etc., we recommend the readers do\
+    \ the same: Always use enable and ImplicitUsings has a relatively small impact,\
+    \ but Nullable completely changes how C# program works. We discuss this in the\
+    \ next section."
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# 1.2. Nullable Context
+
+
+    A variable of a reference type can be The null value simply means that the variable
+    points to nothing. That it points to no real data in memory. The default value
+    of a reference variable is
+
+
+    This is true across all different C-style programming languages which support
+    the reference types or pointer types. Accessing these variables when they are
+    null has been the cause of so many (potentially preventable) errors, called the
+    null-pointer exceptions.
+
+
+    C# has a compile time support to address this problem. This feature is called
+    the "nullable context". It is disabled by default, which means that all reference
+    variables are nullable, as they always have been. In the enabled nullable context,
+    the traditional (nullable) reference variables become non-nullable. Setting these
+    variables to null will cause a compile time error. In addition, one can use a
+    new kind of reference variables within the enabled nullable context, called the
+    "nullable reference variables". All nullable reference variables should be checked
+    for nullability before using. Otherwise, the compiler will likely throw compile-time
+    errors or warnings.
+
+
+    You can set the nullable context in the C# project file as we discussed in the
+    previous In addition, you can selectively enable or disable the nullable context
+    in certain parts of the code using the C#''s compiler To enable, you can put this
+    in your source code file:'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '```
+
+    #nullable enable
+
+    ```
+
+
+    This is in effect until the end of the source file, or until the next #nullable
+    directive is used, if any. To disable, use the following:
+
+
+    ```
+
+    #nullable disable
+
+    ```
+
+
+    You can also restore the previous context value using the following directive:
+
+
+    ```
+
+    #nullable restore
+
+    ```
+
+
+    The nullable context is purely a compile time support. The .NET runtime does not
+    know anything about the nullable context, and as far as it is concerned, all reference
+    variables are nullable.
+
+
+    Here’s a list of valid values for the nullable setting:
+
+
+    setting: setting: setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting: setting: setting:
+
+    setting:
+
+    setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting:
+
+    setting: setting: setting: setting: setting: setting: setting: setting:'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# 1.3. Book Organization
+
+
+    We start from the top, in terms of the general C# program. A C# program is essentially
+    a collection of C# source files that are (to be) compiled together. An executable
+    C# program has one and only entry point, which could be a Main method of a startup
+    class or the top-level statements in one source code file. We also describe the
+    basic concepts of access e.g., public vs namespaces, and blocks and scopes in
+    this chapter.
+
+
+    A source code file is essentially a sequence of characters. We next go through
+    some basic process of converting an input sequence of characters to a sequence
+    of "tokens" which the compiler understands. This is generally known as "lexing".
+    C#''s lexical structure is rather similar to those of other C-style programming
+    languages.
+
+
+    A C# program logically consists of one or more A namespace can include other namespaces
+    or declarations of custom types, e.g., using and etc., which can in turn include
+    other member declarations. In C#, the using directives are used to import names
+    from other namespaces. Namespaces themselves do not participate in access control.
+
+
+    C# types are organized in a hierarchy with the base class object at its root.
+    As with many C-style languages, C# has values and references (or, pointers), with
+    different characteristics. C# supports two distinct, and mutually exclusive, categories
+    of types, namely, value types and reference In addition, C# includes the dynamic
+    which is sort of an escape hatch when static typing is too limiting in certain
+    cases.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "Among the many (important) recent changes, there are a few that’s noteworthy.\
+    \ First, methods in an interface can now have default implementations, which can\
+    \ be inherited by an implementing class (and, record and struct). Second, static\
+    \ methods have become an integral part of and not just supporting actors, if you\
+    \ will. Third, static methods can now even participate in defining the \"behavior\"\
+    \ part of an interface, as of C# 11. For example, C# 11’s new generic math support\
+    \ includes the INumber interface in the Systems.Numerics namespace:\n\n```\npublic\
+    \ interface INumber<TSelf> : IComparable<TSelf>, ... where TSelf : INumber<TSelf>\
+    \ {\n    public static virtual int Sign (TSelf value);\n    // ...\n}\n```\n\n\
+    All types implementing INumber will need to implement this Sign virtual static\
+    \ method, for instance. (This partial example also illustrate the use of generic\
+    \ type. In the Interfaces chapter, we go through some essential elements of the\
+    \ modern C# interface, including these recent changes.\n\nC# has a unified type\
+    \ system. Every (non-interface) type inherits from the object This was a core\
+    \ part of C# 1.0, and it remains so even after two decades of language transformations.\n\
+    \nArrays are arguably the most important data structures beyond the primitive\
+    \ types in any programming languages. C#’s array is a generic type, which supports\
+    \ all common array operations such as indexing, in a type safe way. Arrays, and\
+    \ other collection types, now support range-based slicing syntax as well, using\
+    \ the relatively new Index and Range .NET types."
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: 'Another important, and relatively new, pair of types in .NET are Spans and
+    which are also tightly integrated into the C# language. These types provide a
+    safe way to access and manipulate the objects in memory, and their elements or
+    members, without having to rely on expensive memory operations.
+
+
+    Designing and implementing a well-behaved type entails a lot of work. It sometimes
+    requires writing a lot of boilerplate code just to create a simple type in many
+    OOP-focused languages like Java and C#. The virtual methods defined in the object
+    class are some of those examples. In principle, but not necessarily in practice,
+    many of these methods need to be overridden, among many other methods, which makes
+    creating a new type tedious, above everything else.
+
+
+    One of the biggest trends or themes in C#''s evolution has been to make this task
+    of creating custom types easier. For example, which has been a part of C# since
+    version 1.0, is just a special kind of with some compiler-generated code, so that
+    they do not need to be manually implemented by developers. The recent additions,
+    records and record are another example of such a trend in C#.
+
+
+    In the .NET world, tuples (or, value tuples) are the easiest compound types to
+    create and use. These are really "lightweight" classes, whose use should be preferred
+    over creating more formal types in many cases. An enum type also allows creating
+    a simple, special kind of, type that is based on a set of constant values.
+
+
+    Despite all the recent changes, class is still the most important construct in
+    C#. Programming in C# is fundamentally about defining types, e.g., using class
+    (and, its cousins like record and In the Classes chapter, we go'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'through the essential elements of C# It should be noted that a lot of what
+    we describe in the context of class also apply to record and
+
+
+    Records are used to create immutable reference types, which are primarily for
+    simple data storage. C# provides a concise syntax for creating and using records.
+    In particular, it supports the positional parameters for creating record types.
+    For example, creating a type is now as simple as just declaring a record constructor.
+    Compiler automatically generates an entire class and a number of methods.
+
+
+    ```
+
+    ```csharp
+
+    record Book(string Title, string Author);
+
+    ```
+
+    ```
+
+
+    Structs are value types, based on the base class which in turn inherits from Struct
+    types themselves do not support inheritance. There are also special kinds of structs
+    such as readonly ref and record
+
+
+    C# supports extension which are static methods associated with other existing
+    types. Extension methods can be called as if they were instance methods of the
+    target types.
+
+
+    In the first part of the book, we primarily focus on the types. In the rest of
+    the book, we cover the rest of the important constructs in C#, such as expressions
+    and and
+
+
+    The new operator is one of the most important components of C# expressions. They
+    are used to create an array, or a new value or object of a specified type, e.g.,
+    class or We also go through the object initializer and collection initializer
+    syntax in this chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'There are many different kinds of expressions in C#, in addition to those commonly
+    found in other programming language. Expressions, and operators, are discussed
+    throughout the book, but some of the more common expressions are collected in
+    the Expressions chapter. A lambda expression is an anonymous function. They are
+    defined using the "fat arrow" => operator. Lambda functions can be passed as an
+    argument to other methods.
+
+
+    C#''s statements are more or less the same as those found in other C-style languages,
+    with some minor differences. We quickly go through all statements in C# in the
+    Statements chapter, mainly for completeness.
+
+
+    One of the notable changes with the switch which was originally based on C''s
+    switch - case statement, is that it now supports pattern along with is and switch
+    expressions. Pattern matching was initially popularized by functional programming
+    languages like Haskell, and it is now an integral part of many (functional or
+    imperative) programming languages, including C#.
+
+
+    The using statements, and are used to manage resources that require cleanup after
+    use, such as file handles or database connections. When an object which implements
+    the IDisposable interface goes out of scope, its Dispose method is automatically
+    called.
+
+
+    Finally, we conclude this Mini Reference with some quick descriptions of C# exceptions
+    and Exceptions are thrown using the throw and they indicate unusual or exceptional
+    situations during the execution of a program. In C#, exception handling is implemented
+    using the try. An attribute is a declarative tag that is used to convey information
+    to runtime about the behavior of various elements in your code, such as classes,'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: 'methods, and properties. C# attributes are just regular classes inherited from
+
+
+    One thing to note is that, although we cover a broad range of topics in this book,
+    we still leave out some important parts of C#, to keep the book to a manageable
+    size in the spirit of the "mini reference".
+
+
+    These include LINQ (language-integrated query), expression trees, reflection,
+    async programming, iterators and async stream, generic math, and delegates and
+    .NET Func and Action types, among other things. We also leave out many commonly
+    used .NET types such as Lists, Sets, and Dictionaries, which are really a core
+    part of C#. The readers are encouraged to consult other resources for these topics
+    and beyond. Furthermore, we do not discuss unsafe code in this book.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# 2. C# Programs
+
+
+    A C# program can comprise one or more source code files (called the compilation
+    units), e.g., in one or more directories on file system. All source files in a
+    program (executable or library) are compiled together, and hence there are no
+    particular orders among the source files.
+
+
+    Each source code file may contain a set of special declarations and custom type
+    definitions. Type definitions may be included in zero or more nested namespaces.
+    A namespace in C# is a logical organizational unit, which is primarily used to
+    reduce the chance of name collisions.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '# 2.1. Main Methods
+
+
+    An executable C# program, or an "application", should either include a type declaration
+    (e.g., class or interface) that has a Main() static method or include a source
+    file which includes the "top-level statements". This is the entry point to the
+    program.
+
+
+    The Main() static method can return a value of type or it may not return any value
+    (indicated by the void return type). They can accept an argument of type or they
+    may be defined without any method parameters. The Main() methods may be synchronous,
+    or they can be declared as async and return Task or
+
+
+    The valid signatures for the Main() static methods are, therefore, the following
+    eight combinations:
+
+
+    ```
+
+    ```csharp
+
+    static void Main() { /* ... */ }
+
+    static int Main() { /* ... */ }
+
+    static void Main(string[] args) { /* ... */ }
+
+    static int Main(string[] args) { /* ... */ }
+
+    static async Task Main() { /* ... */ }
+
+    static async Task<int> Main() { /* ... */ }
+
+    static async Task Main(string[] args) { /* ... */ }
+
+    static async Task<int> Main(string[] args) { /* ... */ }
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# 2.2. Top-Level Statements\n\nSince C# 9, one source file in a program may\
+    \ use top-level statements as long as the program does not include any other entry\
+    \ point methods. It is a syntactic sugar to help remove some boilerplate code.\
+    \ The top-level statements are automatically wrapped in the Main method of an\
+    \ implicitly defined startup class.\n\nTop-level statements can access the command\
+    \ line arguments using the implicitly defined variable args of type\n\nIf the\
+    \ top-level statements return an integer value, that value becomes the integer\
+    \ return code to the operating system/runtime.\n\nThe top-level statements may\
+    \ contain async expressions.\n\nFor example,\n\n```\nConsole.WriteLine(\"Hello\
+    \ World\");\n```\n\nA file including this one line of code, using the implicit\
+    \ global using feature available since C# 10, is more or less equivalent to something\
+    \ like the following:\n\n```\nnamespace Namespacel {\n    class Program {\n```"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "```\n```csharp\nstatic void Main(string[] args) {\n    Console.WriteLine(\"\
+    Hello World!\");\n}\n}\n```\n```\n\nAs of C# 11, there are some restrictions:\n\
+    \nOnly one file in your application may use top-level statements.\n\nAll top-level\
+    \ statements in that file should be placed before any other namespace members\
+    \ such as type declarations.\n\nA program cannot have both top-level statements\
+    \ and an explicit entry point, e.g., a Main method."
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# 2.3. Declarations
+
+
+    A C# program comprises a series of namespace. A namespace can include other declarations,
+    or "members". When the non-namespace member declarations are included in a program
+    with no explicitly specified enclosing namespace, they belong to the "global namespace".
+
+
+    Namespace members can be type declarations or other (nested) namespace declarations.
+    Type declarations are used to define classes, structs, records, enums, interfaces,
+    and delegates. A type declaration can include other members. For instance, class
+    declarations can contain declarations for constants, fields, properties, events,
+    indexers, operators, methods, instance and static constructors, finalizers, and
+    other nested types.'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# 2.4. Access Control
+
+
+    Access of the top-level type declarations (e.g., within a namespace) can be controlled
+    using one of the following accessibility declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+    declarations: declarations: declarations: declarations: declarations:
+
+
+    Note that namespaces do not provide access limitations. That is, they are all
+    implicitly
+
+
+    Access of the members of the type declarations (top-level or nested) is largely
+    limited by the accessibility of their containing types, and it can be additionally
+    controlled using some of the following access modifiers, depending on the types:
+
+    types: types: types:
+
+    types: types: types: types: types: types: types: types: types: types: types:
+
+    types: types:
+
+    types: types: types: types: types: types:'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'types: types: types: types: types: types: types: types: types: types: types:
+
+    types: types: types:
+
+    types: types: types: types: types: types: types: types: types: types: types:
+
+    types: types: types: types:
+
+    types: types: types: types: types: types:
+
+
+    Note that
+
+
+    All members of an interface or an enum are public by default, and access modifiers
+    cannot be used.
+
+
+    Any access modifiers can be used for the members of a class.
+
+
+    Only and private can be used for the members of a struct.
+
+
+    The default access level is private for the members of a class, record, and struct.'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# 2.5. Blocks and Scopes'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '# 2.5.1. Scopes
+
+
+    C# is a lexically scoped language. The scope of a name is statically determined
+    to be a particular region of program text, within which the entity declared by
+    the name can be referred to without qualification of the name.
+
+
+    Scopes can be nested, and an inner scope may redeclare the meaning of a name from
+    an outer scope. The name from the outer scope is then said to be "hidden" in the
+    region of program text covered by the inner scope, and access to the hidden name
+    is only possible by using the qualified name.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# 2.5.2. Blocks\n\nA block statement permits multiple statements to be written\
+    \ in contexts where a single statement is allowed. A block consists of zero, one,\
+    \ or more statements written between the delimiters { and For example,\n\n```\n\
+    {\n  STATEMENTS\n}\n```\n\n①\nThe STATEMENTS consists of zero, one, or more statements.\n\
+    \nNote that the scope of a local variable or constant declared in a block is effectively\
+    \ the same block."
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '# 3. Lexical Analysis
+
+
+    C# uses a 16-bit encoding of Unicode code points in character and string values.
+    A Unicode escape sequence, \U or \u followed by a hexadecimal number, can be used
+    to represent a Unicode code point in certain lexical contexts. That is, the Unicode
+    escape sequences are processed in character literals, string literals, interpolated
+    string expressions, and identifiers (but, not in keywords). For example, the sequence
+    \u0061 in a string literal "\u0061pple" represents a lowercase Alphabet Hence
+    this string literal is equivalent to'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# 3.1. Lexical Elements
+
+
+    The following 5 elements make up the lexical structure of a C# program:
+
+
+    +   - Line terminators,
+
+    +   - White space,
+
+    +   - Comments,
+
+    +   - Compiler, or pre-processing, directives, and
+
+    +   - Tokens such as keywords and literals.
+
+
+    Compiler directives allow selective compilation of a program text, but otherwise
+    they have no impact on its syntactic structure.'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# 3.1.1. Line terminators
+
+
+    Line terminator elements divide the characters of a C# compilation unit into lines.
+    Line terminators are:
+
+
+    +   - Carriage return
+
+    +   - Line feed
+
+    +   - Next line character
+
+    +   - Line separator and
+
+    +   - Paragraph separator'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# 3.1.2. White space
+
+
+    White space in C# is defined as
+
+
+    +   - Any character with Unicode class Zs, including the ASCII space character
+
+    +   - The horizontal tab character
+
+    +   - The vertical tab character and
+
+    +   - The form feed character'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# ### 3.1.3. Comments\n\nC# supports two forms of comments, the C-style delimited\
+    \ comments and the C++-style single-line comments.\n\nA delimited comment begins\
+    \ and ends with the character sequences `/*` and `*/` respectively.\n\nA single-line\
+    \ comment begins with the character sequence `//` and extends to the end of the\
+    \ same line.\n\n```\n    /* Delimited comment can span\n    multiple lines */\n\
+    \    using /*or, even just a portion of a line */ System;\n\n    // A single line\
+    \ comment.\n    Console.WriteLine(\"Hello /* Not a comment */ World.\");\n```\n\
+    \nNote that comments cannot be included in the <u>string</u>.White spaces and\
+    \ comments act as separators for tokens."
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: '# 3.2. Tokens
+
+
+    Of the 5 basic [lexical elements] listed in the previous section, only tokens
+    are significant in the syntactic grammar of a C# program. Tokens can be classified
+    into identifiers, keywords, literals, operators, and other punctuation symbols.
+    [Literals] are explained in the next section.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# 3.2.1. Identifiers
+
+
+    The C# identifiers comprise Unicode characters, and the rules of identifiers are
+    generally similar to those found in other C-style languages. For example, an identifier
+    can start with a letter or an underscore _ and it can include other letters and
+    numbers, etc. There are a few things to note:
+
+
+    Unicode escape sequences are permitted in identifiers.
+
+
+    Use of more than one consecutive underscores (e.g., is, although legal, discouraged.
+
+
+    An identifier can be optionally preceded with a single @ character.
+
+
+    The verbatim identifiers are typically used to "escape" the C# keywords, and otherwise
+    its use is discouraged.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# 3.2.2. Keywords
+
+
+    Keywords are a set of reserved names in C# which cannot be used as identifiers
+    in a program (except as verbatim identifiers).
+
+
+    | abstract | as | base | bool | break |
+
+    | byte | case | catch | char | checked |
+
+    | class | const | continue | decimal | default |
+
+    | delegate | do | double | else | enum |
+
+    | event | explicit | extern | false | finally |
+
+    | fixed | float | for | foreach | goto |
+
+    | if | implicit | in | int | interface |
+
+    | internal | is | lock | long | namespace |
+
+    | new | null | object | operator | out |
+
+    | override | params | private | protected | public |
+
+    | readonly | ref | return | sbyte | sealed |
+
+    | short | sizeof | stackalloc | static | string |
+
+    | struct | switch | this | throw | true |
+
+    | try | typeof | uint | ulong | unchecked |
+
+    | unsafe | ushort | using | virtual | void |
+
+    | volatile | while |  |  |  |
+
+
+    Contextual keywords are another set of names in C# which have special meanings
+    only in certain contexts. These contextual keywords cannot be used as identifiers
+    in those special contexts (again, except as verbatim identifiers).
+
+
+    | add | alias | and | ascending | async |
+
+    | await | by | descending | dynamic | equals |
+
+    | file | from | get | global | group |
+
+    | into | join | let | nameof | nint |
+
+    | not | on | or | orderby | partial |
+
+    | remove | select | set | uint | value |
+
+    | var | when | where | yield |  |'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# 3.2.3. Operators and other punctuations\n\nOperators are used to indicate\
+    \ the operations involving one or more operands in Punctuations are used for grouping\
+    \ and separating.\n\n```\n{ } [ ] ( ) . , : ;\n+ - * / § & | ! ~\n= < > ? ?? ::\
+    \ ++ -- &&\n-> == != <= >= += -= *= /=\nδ = ^ << <<= => >> >>= \n```"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '# 3.3. Literals
+
+
+    Another important class of tokens is literals, which textually represent (constant)
+    values of certain builtin types. For example, the default literal represents the
+    default value of a type, which is discussed Interpolated strings are also lexically
+    literals, but they are (non-constant) expressions in general.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 3.3.1. The null literal
+
+
+    The null literal represents a null value. The null value itself does not have
+    a type, but it can be converted to any nullable reference type or nullable value
+    type through a null literal conversion.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# 3.3.2. Boolean literals
+
+
+    There are two Boolean literal values in C#, true and The type of these bool literals
+    is'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# 3.3.3. Integer literals
+
+
+    Integer literals are used to write values of and They have three possible forms:
+    decimal, hexadecimal, and binary.
+
+
+    ```
+
+    1_234
+
+    5678u
+
+    -10000000L
+
+    10_000_000uL
+
+    ```
+
+
+    ①
+
+    An int integer literal.
+
+
+    ②
+
+    A uint integer literal. Uses the suffix, u or
+
+
+    ③
+
+    A long integer literal. Uses the suffix, l or
+
+
+    ④
+
+    A ulong integer literal. Uses a combination of u/U and
+
+
+    Note that (semantically insignificant) underscores _ can be used in the integer
+    literals except for the beginning and ending positions. Underscores cannot be
+    repeated one after another.'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '# 3.3.4. Real literals
+
+
+    Real literals are used to write values of floating point types float and double
+    as well as
+
+
+    ```
+
+    1_234.567
+
+    1000d
+
+    10.5e5f
+
+    19.99m
+
+    ```
+
+
+    ①
+
+    A double literal.
+
+
+    ②
+
+    A double literal. Can use the suffix, d or
+
+
+    ③
+
+    A float literal. Uses the suffix, f or
+
+
+    ④
+
+    A decimal literal. Uses the suffix, m or
+
+
+    Non-consecutive underscores _ can be used in the real literals as well, except
+    for the beginning and ending positions of both integer and fraction parts. Underscores
+    do not affect the values of the real literals.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# 3.3.6. String literals
+
+
+    C# supports a few different forms of string literals. They are discussed in detail
+    in the [strings](strings) chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '# ### 3.4. Compiler Directives
+
+
+    In C#, the compiler directives, also known as "pre-processing directives", are
+    processed as part of the lexical analysis phase (e.g., and not as a separate pre-processing
+    step). They can be used to conditionally skip sections of compilation units, to
+    report error and warning conditions, or to mark certain regions of source code.
+
+
+    The following pre-processing directives are available:
+
+
+    +   - `#undef` — Used to define and undefine conditional compilation symbols.
+
+    +   - `#endif` — Used to skip sections of code based on the compilation symbols.
+
+    +   - `#line` — Used to control line numbers emitted for errors and warnings.
+    Since C# 10, the `#line` directive can accept up to 5 decimal numbers as arguments,
+    e.g., the start line, start character, end line, end character, and character
+    offset.
+
+    +   - `#error` — Used to issue errors or warnings.
+
+    +   - `#nullable` — Used to enable or disable the [nullable](#).
+
+    +   - `#endregion` — Used to explicitly mark the beginning and end of a section
+    of source code, respectively. Primarily to be used by IDEs.
+
+    +   - `#pragma`'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: Used to specify predefined compilation symbols by the compiler.
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# 4. Namespaces
+
+
+    A compilation unit, e.g., a C# source code file, is organized according to the
+    following linear structure:
+
+
+    +   - Zero or more extern alias directives,
+
+    +   - Zero or more global using directives (which affect all compilation units
+    in the program),
+
+    +   - Zero or more (source file-specific) using directives,
+
+    +   - Zero or more global and
+
+    +   - Zero or more namespaces and their member declarations, or
+
+    +   - A file-scoped namespace and its member declarations.
+
+
+    C# programs use, by default, the (anonymous) global namespace unless the member
+    declarations are included in an explicit namespace declaration (file-scoped or
+    otherwise).'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: "# 4.1. Namespace Declarations\n\nAs of C# 10 and later, a namespace can be\
+    \ declared with or without an explicit block. The scope of the namespace without\
+    \ a block extends to the entire compilation unit/file. The \"normal\" block-scoped\
+    \ namespace consists of the keyword a namespace name and body, and an optional\
+    \ semicolon For example,\n\n```\nnamespace War {\n    // Any member declarations\n\
+    }\n```\n\n①\n\nThe name of this namespace is Note that multiple (possibly nested)\
+    \ namespaces with explicit blocks can be included in a single compilation unit.\n\
+    \nThe file-scoped namespace, on the other hand, starts with the keyword a name,\
+    \ and a semicolon The rest of the compilation unit follows the same general structure,\
+    \ e.g., zero or more extern alias directives, using directives (but, not global\
+    \ using directives), followed by any member type declarations, and they all belong\
+    \ to this namespace. For instance,\n\n```\nnamespace Peace;\n// ...\n```"
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: "①\n\nThis namespace declaration extends to the end of the source file. If a\
+    \ source file includes a (possibly-nested) file-scoped namespace declaration,\
+    \ it cannot include any other namespace declarations in the same compilation unit.\n\
+    \nNested file-scoped namespaces can be declared with the dot qualified names.\
+    \ For example,\n\n```\nnamespace Crime.Punishment;\n// ...\n```\n\nThe above declaration\
+    \ is equivalent to the following, for instance:\n\n```\nnamespace Crime {\n  namespace\
+    \ Punishment {\n    // ...\n  }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '# 4.2. extern Alias Directives
+
+
+    An extern alias directive introduces an alias for an external namespace.
+
+    For example,
+
+
+    ```
+
+    extern alias Fruit;
+
+    Fruit::Apple apple;
+
+    ```
+
+
+    ①
+
+
+    It introduces an external alias
+
+
+    ②
+
+
+    Apple is a type declared within the namespace The namespace/type names can be
+    used in this compilation unit as if they are locally declared.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: '# 4.3. using Directives
+
+
+    Using the using directives, one can use namespaces and types defined in other
+    namespaces without having to fully qualify them. The scope of a (non-global) using
+    directive extends over the member declarations within the innermost enclosing
+    namespace (including a file-scoped namespace), if any, or within the whole compilation
+    unit otherwise.'
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "# 4.3.1. The using namespace directive\n\nA using namespace directive imports\
+    \ the types of a given namespace into the current namespace body (or, the compilation\
+    \ unit). The types contained in the using-declared namespace can be referenced\
+    \ directly.\n\n```\nusing NAMESPACE_NAME ;\n```\n\nFor example,\n\n```\nnamespace\
+    \ Olympic.Soccer { class Match (); }\nnamespace Stats {\n    using Olympic.Soccer;\n\
+    \    class SoccerStats {\n        IList<Match> Matches { get; set; }\n    }\n\
+    }\n```"
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: "# ### 4.3.2. The using static directive\n\nA using static directive imports\
+    \ the nested types and static members of a type so that the names of the members\
+    \ and types can be used without qualification.\n\n```\n```csharp\nusing static\
+    \ TYPE_NAME;\n```\n```\n\nFor example,\n\n```\n```csharp\nnamespace Arithmetic\
+    \ {\n    public class Adder {\n        public static void Add(int a, int b) =>\
+    \ a + b;\n    }\n}\nnamespace App {\n    using static Arithmetic.Adder;\n    class\
+    \ Calculator {\n        public int Sum(int a, int b) => Add(a, b);\n    }\n}\n\
+    ```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: "# 4.3.3. The using alias directive\n\nA using alias directive introduces an\
+    \ identifier, or an alias, for a namespace or type within the innermost containing\
+    \ namespace (or, within the compilation unit). The identifiers introduced by the\
+    \ using alias directive can be used to reference the given namespace or type.\n\
+    \n```\nusing IDENTIFIER = NAMESPACE_OR_TYPE_NAME ;\n```\n\nFor instance,\n\n```\n\
+    namespace Europe.Ukraine {\n    public class Citizen ()\n}\nnamespace World {\n\
+    \    using Person = Europe.Ukraine.Citizen;\n    class Farmer: Person ()\n}\n\
+    ```"
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: '# 4.4. Global using
+
+
+    The using declarations can be made effective across an entire program, using the
+    keyword The global using declarations can be used for any of the three using declaration
+    types, using namespace, using and using alias. But, global using can only be used
+    in a compilation unit, but not within an explicitly declared namespace, and its
+    scope extends over the entire program. For example,
+
+
+    ```
+
+    global using Machine;
+
+    global using static Robot.Arm;
+
+    global using Orange = Modern.Black;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: '# 4.5. Implicit using
+
+
+    Starting with C# 10, one can automatically add common global using directives
+    for the C# project you are building, using the implicit usings feature. The "implicit"
+    aspect refers to the fact that the global using directives are added to a generated
+    file in the project’s obj directory.
+
+
+    In case of the for example, the following namespaces are implicitly declared with
+    global
+
+
+    +   - System
+
+    +   - System.Collections.Generic
+
+    +   - System.IO
+
+    +   - System.Linq
+
+    +   - System.Net.Http
+
+    +   - System.Threading
+
+    +   - System.Threading.Tasks'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '# 4.6. Member Declarations
+
+
+    As indicated before, as of C# 9 and later, top-level statements can be used in
+    one of the source code files in a program in liu of a type that includes the Main
+    method, e.g., as an entry point to the program. With this exception (which is
+    merely a syntactic sugar), all statements in a namespace (explicitly declared
+    or otherwise) must be either other (nested) namespace declarations or type declarations.
+
+
+    A type declaration is
+
+
+    +   - A class declaration,
+
+    +   - A struct declaration,
+
+    +   - A record declaration,
+
+    +   - An enum declaration,
+
+    +   - An interface declaration, or
+
+    +   - A delegate declaration.
+
+
+    Access to these namespace top-level type declarations can be explicitly controlled
+    using the access. Otherwise, their default access level is'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '# 5. C# Type System
+
+
+    C#, and .NET, has a unified type system. Every type in the C# language inherits,
+    either directly or indirectly, from the object base type on .NET).
+
+
+    The types in C# are divided into two main categories, reference types and value
+    types. Variables of the value types may directly contain their data, whereas variables
+    of the reference types store references to their data. Values of reference types
+    are treated as objects simply by viewing the values as type On the other hand,
+    values of value types are treated as objects by performing boxing and unboxing
+    operations.
+
+
+    Generic types are discussed later. Generic type parameters can designate either
+    a value type or a reference type.'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '# 5.1. Value Types
+
+
+    C#''s value types can be divided into simple enum struct types (including record
+    structs), and nullable types. Simple types comprise the builtin bool type and
+    other numeric types. Nullable value types can contain a null value.
+
+
+    By default, when assigning a value, passing an argument to a method, or returning
+    a method result, the values are copied. Note, however, that if a value type contains
+    a data member of a reference type, the reference to the instance of the reference
+    type is copied.'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# 5.1.1. The System.ValueType type
+
+
+    A value type cannot explicitly derive from other types. All value types implicitly
+    inherit from the class which itself is not a value type. in turn, inherits from
+    the ultimate base class,'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '# 5.1.2. Default constructors
+
+
+    All value types implicitly declare a public parameterless instance constructor
+    called the default constructor. The default constructor returns a zero-initialized
+    instance known as the type’s default value'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: '# 5.1.3. Boxing and Unboxing
+
+
+    Through boxing and unboxing, a value of any type, value type or reference type,
+    can be treated as This provides a unified view of the C# type system. Boxing a
+    value of a value type creates an object on the heap, which can be referenced via
+    a reference variable. Unboxing does the reverse operation. That is, it returns
+    the value contained in the object referenced by the given variable.'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '# 5.1.4. Nullable value types
+
+
+    A nullable value type T? can represent a null value in addition to all values
+    of its underlying (non-nullable) value type This syntax T? is shorthand for the
+    generic System.Nullable struct. For example, you can assign any of the following
+    three values to a bool? variable: or An instance of a nullable value type T? has
+    two public readonly properties:
+
+
+    ```
+
+    public bool HasValue { get; }
+
+    public T Value { get; }
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# ## 5.2. Reference Types
+
+
+    All types in C#, including reference types, derive from the .NET base class. With
+    value types, each variable has its own copy of the data. With reference types,
+    on the other hand, two variables can reference the same object. Operations on
+    one variable can therefore affect the object referenced by other variables.
+
+
+    C# provides three built-in reference types, and Furthermore, custom reference
+    types can be declared with the following keywords:
+
+
+    record (or, record
+
+
+    and
+
+
+    Array types are somewhat special in that they do not have to be declared before
+    they are used. Array types are constructed by appending square brackets to a type
+    name. For example, int[] is a (single-dimensional) array of int[,] is a two-dimensional
+    array of and int[][] is an array of arrays of'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '# 5.2.1. Nullable reference types
+
+
+    In the nullable all variables of a reference type are non-nullable. You can explicitly
+    declare a nullable variable by appending the type name with the ? symbol, which
+    denotes a nullable reference type. For example,
+
+
+    ```
+
+    string firstName = "Pele";
+
+    string? middleName = null;
+
+    ```
+
+
+    ①
+
+
+    The variable firstName is non-nullable.
+
+
+    ②
+
+
+    string? is a nullable counterpart of the reference type The variable middleName
+    is nullable.
+
+
+    For nullable reference types, the compiler uses flow analysis to ensure that any
+    variable of a nullable reference type is checked against null before it’s accessed
+    or assigned to a non-nullable reference type.'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# 5.3. Dynamic Types
+
+
+    All C# types, builtin or user-defined, use static binding. That is, the type of
+    a variable or an expression is determined at compile time. The dynamic type is
+    an exception. It uses dynamic binding at run time. In most cases, dynamic can
+    be considered identical to object (since all types ultimately inherit from
+
+
+    For example,
+
+
+    ```
+
+    dynamic theSecret = 42;
+
+    dynamic theGreatestUnknown = "meh";
+
+    ```
+
+
+    Syntactically, an expression of the dynamic type can be implicitly converted to
+    any type at run time. If the conversion fails, however, a runtime exception is
+    thrown. If dynamic binding is not desired, the expression can be converted to
+    object first, and then to the desired type. For instance,
+
+
+    ```
+
+    dynamic realSecret = 42 * 42 * 42;
+
+    int huh = realSecret;
+
+    string cops = realSecret;
+
+    ```
+
+
+    ①
+
+
+    This implicit conversion will succeed at run time.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: '# 6. Constants
+
+
+    A constant is a variable representing a constant value, that is, a value that
+    can be computed at compile time. Constant members are discussed later, e.g., in
+    the class constant member section.
+
+
+    Local constants can be declared using a local constant declaration statement.
+
+
+    ```
+
+    const TYPE NAME = EXPR ;
+
+    ```
+
+
+    ①
+
+
+    A constant is declared with the keyword The words with all upper case letters,
+    in notations like this, are placeholders. That is, and EXPR will need to be replaced
+    with a type, name (or, identifier), and expression in a real statement. In the
+    local constant declaration, the right hand side EXPR must be a constant expression.
+
+
+    More than one constant can be declared in a single statement. For example,
+
+
+    ```
+
+    const TYPE NAME1 = EXPR1 , NAME2 = EXPR2 ;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'The above statement is equivalent to the following two declarations:
+
+
+    ```
+
+    const TYPE NAME1 = EXP1 ;
+
+    const TYPE NAME2 = EXP2 ;
+
+    ```
+
+
+    The scope of a local constant is the block in which the declaration occurs, similar
+    to local. Within the scope of a local constant, it is a compile-time error to
+    declare another local variable or constant with the same name.'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: '# 7. Variables
+
+
+    Variables represent storage locations. Every variable has a type that determines
+    what values can be stored in the variable.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# 7.1. Variable Categories
+
+
+    Variables belong to a few different categories:
+
+
+    +   - Local variables,
+
+    +   - Static variables,
+
+    +   - Instance variables, and
+
+    +   - Array elements.
+
+
+    In addition, function parameters are also variables.
+
+
+    # Local Variables
+
+
+    A local variable can be declared with a local variable declaration in a block.
+    A local variable declared this way is not automatically initialized and thus has
+    no initial value.
+
+
+    # Static Variables
+
+
+    A field declared with the static modifier is a static variable. The initial value
+    of a static variable is the default value of its type.
+
+
+    # Instance Variables
+
+
+    A non-static field is an instance variable. The initial value of an instance variable
+    of a class (or, record or struct) is the default value of the variable’s type.
+
+
+    # Array Elements'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: The initial value of each of the elements of an array is the default value of
+    the type of the array elements.
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# 7.2. Local Variable Declarations'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# 7.2.1. Local variables
+
+
+    A local variable declaration declares one or more local variables, similar to
+    a local constant
+
+
+    ```
+
+    TYPE NAME ;
+
+    TYPE NAME1 , NAME2 ;
+
+    ```
+
+
+    ①
+
+    As indicated, we use this somewhat unusual notation to represent C# syntax in
+    this book. TYPE and NAME need to be replaced with a proper type and a valid variable
+    name in a real statement, respectively. The statement ends with a semicolon
+
+
+    ②
+
+    More than one variable can be declared in one statement with the same type. This
+    particular example only includes two variables, but it illustrates that the variables
+    are separated by commas
+
+
+    Variables can be declared with initializers.
+
+
+    ```
+
+    TYPE NAME = EXPR ;
+
+    TYPE NAME1 = EXPR1 , NAME2 = EXPR2 ;
+
+    ```
+
+
+    When all variables have initializers, the explicit type name can be omitted in
+    lieu of For example,'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '```
+
+    var NAME = EXPR;
+
+    var NAME1 = EXPR1, NAME2 = EXPR2;
+
+    ```
+
+
+    The identifier var is a contextual keyword in the context of local variable declarations.
+    The type of an implicitly typed local variable is inferred from the type of the
+    associated initializer expression.
+
+
+    A discard variable _ may be used as an implicitly declared variable, for example,
+    when you intend to ignore the result of an expression. Discard variables are often
+    used in or in pattern matching. Here’s a trivial example.
+
+
+    ```
+
+    var _ = 1 + 2;
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: '# 7.2.2. Ref local variables
+
+
+    A ref local variable is used to refer to values returned using return
+
+
+    ```
+
+    ref TYPE NAME = REF_EXPRESSION ;
+
+    ref var NAME = REF_EXPRESSION ;
+
+    ```
+
+
+    You define a ref local by using the ref keyword in two places:
+
+
+    Before the variable declaration.
+
+
+    Immediately before the call to the method that returns the value by reference.'
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# 7.2.3. Ref readonly local variables
+
+
+    A ref readonly local variable is similar to a ref local variable, but they are
+    not writeable.
+
+
+    ```
+
+    ```csharp
+
+    ref readonly TYPE NAME = REF EXPRESSION ;
+
+    ref readonly var NAME = REF_EXPRESSION ;
+
+    ```
+
+    ```
+
+
+    Note that you cannot declare "readonly local" variables in C# (which some people
+    might consider a serious limitation considering that the C# language provides
+    so much support for immutability everywhere'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: '# 8.1. Local Functions
+
+
+    A local function is declared as follows:
+
+
+    Local function header, comprising
+
+
+    Optional and optional local function modifiers,
+
+
+    The return type or
+
+
+    The function name,
+
+
+    A type parameter in case of a generic local function,
+
+
+    A formal parameter list in a pair of parentheses, followed by
+
+
+    An optional type parameter constraint and
+
+
+    Local function body, comprising
+
+
+    A function body block, or
+
+
+    An expression body ending with a semicolon
+
+
+    For example,'
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "```\n~~~csharp\nstatic (int, int) DoAdditionTwice(int a, int b) {\n    var\
+    \ fstTime = LocalAdd();\n    var sndTime = LocalAdd();\n    return (fst, snd);\n\
+    \n    void LocalAdd() => a + b; ①\n}\n~~~\n```\n\n①\n\nThe LocalAdd local function\
+    \ uses the local variables of the enclosing scope, namely, the two parameters\
+    \ of\n\nLocal functions are closures just like lambda functions. Local function\
+    \ modifiers can be either async or or both."
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "# 8.2. Static Local Functions\n\nStatic local functions are a special form\
+    \ of local functions. They are explicitly prohibited from using, or capturing,\
+    \ local variables, parameters, and this from the enclosing scope. They cannot\
+    \ use instance members of the type. Syntactically, a static local function declaration\
+    \ includes the static modifier. For example,\n\n```\n```\nstatic int AbsoluteValue(int\
+    \ a) {\n    return LocalAbs(a);\n    static void LocalAbs(int x) =>\n        x\
+    \ > 0 ? x : -x;\n}\n```\n```\n\n①\n\nThe LocalAbs local function does not use\
+    \ any variables of the enclosing scope, and hence it can be declared as"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# 9. Formal Parameters
+
+
+    Function parameters are also variables. A parameter comes into existence when
+    we invoke an anonymous function or a function member (e.g., method, constructor,
+    accessor, or operator). Parameters may be initialized with values of the arguments
+    given in the invocation. Function arguments are normally passed by value. But,
+    they can use pass-by-reference semantics using the keywords, or'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '# 9.1. Parameter List
+
+
+    The formal parameter list consists of comma-separated fixed parameters and an
+    optional params array parameter at the end. A fixed parameter consists of
+
+
+    Optional
+
+
+    An optional modifier, in or ref
+
+
+    The parameter type,
+
+
+    The parameter name, followed by
+
+
+    An optional default argument
+
+
+    Each fixed parameter declares a variable of the given type with the given name,
+    which is local to the function body.
+
+
+    A fixed parameter with a default value is known as optional parameter. Arguments
+    are required for non-optional parameters. Optional parameters, if any, can only
+    be placed after any required parameters, before the optional params array. Parameters
+    with in or ref this modifiers cannot have default arguments.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: The this modifiers, namely, in or ref are only allowed on the first parameter
+    of a static method in a non-generic, non-nested static class. Such a method is
+    called an extension
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "# 9.2. Argument List\n\nInvocation of a function or method is an expression.\n\
+    \n```\nEXPRESSION ( ARGUMENT_LIST )\n```\n\nEXPRESSION should be \"callable\"\
+    , e.g., a method or a value of a delegate type. ARGUMENT_LIST can be empty. It\
+    \ follows more or less the same structure as the parameter and each given argument\
+    \ must have a corresponding parameter in the parameter list.\n\nC# supports two\
+    \ kinds of argument syntax, positional arguments and named A named argument has\
+    \ a form PARAMETER_NAME : whereas only VALUE is specified for a positional argument.\
+    \ When an argument is in the same position in the argument list as the corresponding\
+    \ parameter in the parameter list, it can use either named or positional argument\
+    \ syntax. Otherwise, only the named argument syntax is allowed. For example, given\
+    \ the following function,\n\n```\nstatic void Metodo(int a = 1, char b = 'b')\
+    \ {\n    Console.WriteLine($\"a = {a}; b = {b}\");\n}\n```\n\nWe can call this\
+    \ function in any of the following ways:"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '```
+
+    Metodo();
+
+    ```
+
+
+    ```
+
+    Metodo(2);
+
+    Metodo(a: 2);
+
+    ```
+
+
+    ```
+
+    Metodo(b: ''c'');
+
+    ```
+
+
+    ```
+
+    Metodo(4, ''d'');
+
+    Metodo(a: 4, ''d'');
+
+    Metodo(4, b: ''d'');
+
+    Metodo(a: 4, b: ''a'');
+
+    Metodo(b: ''a'', a: 4);
+
+    ```
+
+
+    ①
+
+    Both parameters are optional, hence a:1 and b:''b'' in this call.
+
+
+    ②
+
+    Positional vs name argument syntax. These two method invocations are equivalent
+    to each other, with a:2 and
+
+
+    ③
+
+    The position of this argument is 0 whereas the position of its corresponding parameter
+    is Hence, this particular method call cannot use the positional syntax for the
+    parameter This call is equivalent to Metodo(1, b: ''c'') or Metodo(a: 1, b:
+
+
+    ④
+
+    All following five method calls are equivalent, with a:4 and'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: '⑤
+
+    The method argument a in this call is called the "non-trailing named argument"
+    because it precedes a positional argument, ''d'' (for
+
+
+    ⑥
+
+    Both a and b in this call must use the named argument syntax.'
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# 9.3. The params Parameter
+
+
+    The last parameter in a formal parameter list in C# can be a params array parameter,
+    which consists of
+
+
+    +   - Optional
+
+    +   - The keyword
+
+    +   - A one-dimensional array type, and
+
+    +   - A parameter name.
+
+
+    The params parameter is a value (But, note that array is a reference type.) In
+    a method invocation, an argument for the params parameter can be specified either
+    as an array value or as zero, one, or more arguments of the array’s element type.
+    For example, given the following function,
+
+
+    ```
+
+    static int AddAll(params int[] operands) => operands.Sum();
+
+    ```
+
+
+    It can be called with an int array argument,
+
+
+    ```
+
+    var ints = new int[] { 1, 2, 3 };
+
+    var sum1 = AddAll(ints);
+
+    Console.WriteLine($"sum = {sum1}");
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: '# 9.4. Value Parameters
+
+
+    A formal parameter declared without any parameter modifiers is a value parameter
+    by default. A value parameter corresponds to a local variable that gets its initial
+    value from the corresponding argument supplied in the function. The argument therefore
+    should be an expression that is implicitly convertible to the parameter type.'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: "# 9.5. in Parameters\n\nParameters with the or ref modifiers are passed by\
+    \ reference. The in keyword specifies that the called method does not modify the\
+    \ value. An in parameter corresponds to a local ref readonly. The in parameter\
+    \ is declared using the in modifier in the parameter specification, and it can\
+    \ include a default value. For example,\n\n```\nstatic void PrintCoord(in Coord\
+    \ cord) => ①\n    Console.WriteLine($\"lat = {cord.Lat}; Lon = {cord.Lon}\");\n\
+    record struct Coord(float Lat, float Lon);\n```\n\n①\n\nThe in parameter cord\
+    \ uses the call-by-reference semantics. The PrintCoord function cannot modify\
+    \ its value.\n\nThis function can be called with or without the in keyword.\n\n\
+    ```\nvar coord = new Coord(40.0f, -100.0f);\nPrintCoord(coord);\nPrintCoord(in\
+    \ coord);\n```\n\nAlthough it uses reference semantics, it cannot change the value\
+    \ of the in argument. Therefore, one can expect certain performance increase without\
+    \ having to worry about data mutability."
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "# 9.6. out Parameters\n\nA parameter declared with the out modifier is an output\
+    \ parameter. The corresponding argument is passed by reference. For example,\n\
+    \n```\nstatic void SetCoord(out Coord c) =>\n    c = new(0.0f, 0.0f);\n```\n\n\
+    ①\n\nThe out parameter cannot be referenced before it is assigned, and it must\
+    \ be assigned a value before the function returns.\n\nTo use an out parameter,\
+    \ both the method definition and the calling method must explicitly use the out\
+    \ keyword. You can declare a new out variable in the argument list of a method\
+    \ invocation. For instance,\n\n```\nSetCoord(out var c);\nConsole.WriteLine($\"\
+    Lat = {c.Lat}; Lon = {c.Lon}\");\n```\n\n①\n\nWe can also use the explicit type,\
+    \ e.g., SetCoord(out Coord This is more or less equivalent to Coord c; SetCoord(out"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# 9.8. Returns by Reference'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '# 9.8.1. Ref returns
+
+
+    C# methods, by default, return values in the similar way that arguments are passed
+    by value. In contrast, ref returns are values that a method returns by reference
+    to the caller. That is, instead of copying the value returned by a method, its
+    reference is returned. (Or, more precisely, its reference is copied.) There are
+    three aspects for the ref returns to work.
+
+
+    The return type in the method signature needs to be prefixed with For example,
+    public ref MyStruct
+
+
+    The expression of the return statement in the method body needs to by marked as
+    For example, return ref
+
+
+    In order for the caller to modify the object''s state, the ref return value needs
+    to be assigned to a ref local'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: "# 9.8.2. Ref readonly returns\n\nThe called method may also declare the return\
+    \ value as ref readonly to return the value by reference, and at the same time\
+    \ enforce that the calling code cannot modify the returned value. The calling\
+    \ method can avoid copying the returned value by storing the value in a local\
+    \ ref readonly. For example,\n\n```\nstatic class RefReturnDemo {\n    static\
+    \ ref readonly Coord Move(ref Coord moving) =>\n        ref moving; // return\
+    \ ref\n    public static void PrintAfterMove(Coord here) {\n        ref readonly\
+    \ var t = ref Move(ref here);\n        Console.WriteLine($\"Lat = {t.Lat}; Lon\
+    \ = {t.Lon}\");\n    }\n}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: '# 10. Builtin Value Types
+
+
+    We will go through a few simple types in this chapter. The builtin string type
+    is discussed in the next chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '# 10.1. The bool Type
+
+
+    The C# bool type is an alias for the .NET System.Boolean struct type, whose value
+    can be either true or The default value of the bool type is That is, default(bool)
+    returns'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '# 10.1.1. The nullable bool? type
+
+
+    The nullable bool? type can be used for the three-valued logic, for example, when
+    you work with databases that support a three-valued Boolean type. The predefined
+    & and | operators support the three-valued logic for the bool? operands.'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# 10.2. The char Type
+
+
+    The C# char type is an alias for the .NET System.Char struct type, which represents
+    a Unicode character in UTF-16 encoding. The default value of the char type is
+    that is,'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# 10.2.1. Char literals
+
+
+    You can specify a char value with:
+
+
+    +   - A character literal.
+
+    +   - A [Unicode escape]() or
+
+    +   - A hexadecimal escape sequence, e.g., \x followed by the hexadecimal representation
+    of a character code.'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# 10.3. Integral Types
+
+
+    C# supports 11 integral types: Four unsigned integer types, and and four signed
+    integer types, and which are represented using two’s complement format. The char
+    type is also an integral type. In addition, C# includes two native integer types,
+    nint and
+
+
+    +   - byte
+
+    +     Unsigned 8-bit integers with values from 0 to 255
+
+    +   - sbyte
+
+    +     Signed 8-bit integers with values from -128 to 127
+
+    +   - ushort
+
+    +     Unsigned 16-bit integers with values from 0 to 65535.
+
+    +   - short
+
+    +     Signed 16-bit integers with values from -32768 to 32767.
+
+    +   - uint
+
+    +     Unsigned 32-bit integers with values from 0 to 4294967295.
+
+    +   - int
+
+    +     Signed 32-bit integers with values from -2147483648 to 2147483647.
+
+    +   - ulong
+
+    +     Unsigned 64-bit integers with values from 0 to 18446744073709551615.
+
+    +   - long
+
+    +     Signed 64-bit integers with values from -9223372036854775808 to 9223372036854775807.
+
+
+    The checked and unchecked operators and statements are used to control overflow
+    checking for integral-type arithmetic operations and'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: conversions.
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# ### 10.4. Native Integer Types
+
+
+    C# now include two new new contextual keywords, nint and which represent native
+    signed and native unsigned integer types, respectively, which are intended for
+    use in low-level libraries. These [contextual keywords](#) are only treated as
+    keywords when name lookup does not find a viable result at that program location.
+
+
+    The C# types nint and nuint correspond to the underlying .NET types System.IntPtr
+    and respectively, with compiler support for additional conversions and operations
+    for those types as native integer types on a specific platform, or operating system.'
+  merge: -1
+  img_proc: true
+- pgno: 132
+  md: '# 10.5. Floating Point Types
+
+
+    C# supports two floating-point types, float and which are represented using the
+    32-bit single-precision and 64-bit double-precision IEC 60559 formats, respectively.
+    Floating point number literals are described in the Lexical Analysis chapter.'
+  merge: -1
+  img_proc: true
+- pgno: 133
+  md: '# 10.6. The decimal Type
+
+
+    The decimal type is a 128-bit real number type, suitable for high-precision calculations.
+    Internally a decimal is represented as an integer scaled by a power of ten. Decimal
+    numbers are guaranteed to have at least 28-digit precision. The decimal type has
+    greater precision but may have a smaller range than the floating-point types.
+
+
+    If a decimal arithmetic operation produces a result whose magnitude is too large
+    for a System.OverflowException is thrown.'
+  merge: -1
+  img_proc: true
+- pgno: 134
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 135
+  md: '# 11.1. Quoted String Literals
+
+
+    String literals can be written in three different forms in C#, namely, quoted,
+    verbatim, and raw string literals. In addition, there is a special literal syntax
+    for "UTF-8 encoded which is new in C# 11. Quoted string literals start and end
+    with double quotation marks A quoted string literal must escape certain special
+    characters, e.g., \n for a newline and \t for a tab, etc.'
+  merge: -1
+  img_proc: true
+- pgno: 136
+  md: "# 11.2. Verbatim String Literals\n\nVerbatim string literals start with @ and\
+    \ they are also enclosed in double quote characters. They are sometimes called\
+    \ \"@-quoted strings\". Special characters in verbatim string literals need not,\
+    \ and should not, be escaped, which make them easier to write. In particular,\
+    \ verbatim string literals preserve new line characters as part of the string\
+    \ text. Hence, verbatim strings are convenient for multi-line strings, or strings\
+    \ that contain many backslash etc. A double quotation mark in an @-quoted string\
+    \ can be escaped as two quotation marks\n\nFor example,\n\n```\nConsole.WriteLine(@\"\
+    \"\"Hello world\"\" is\n    really a cliche now.\");\n```\n\nThis statement will\
+    \ print out\n\n```\n\"Hello world\" is\n    really a cliche now.\n```\n\n①\n\n\
+    Notice that the leading white space characters as well as the newline at the end\
+    \ of the first line are included in the output."
+  merge: -1
+  img_proc: true
+- pgno: 137
+  md: "# 11.3. Raw String Literals\n\nA new form of raw string literal has been introduced\
+    \ in C# 11, which starts with a three or more double-quote character sequence,\
+    \ e.g., and ends with the same character sequence, e.g., with the same number\
+    \ of double quotes.\n\nThe opening double-quote sequence can be immediately followed\
+    \ by an optional new line, in which case the enclosed string content should also\
+    \ end with a new line. These new lines are not part of the string literal. When\
+    \ the opening double-quote sequence is not followed by a new line, the raw string\
+    \ literal cannot include new lines, and the closing double quote sequence should\
+    \ be on the same line.\n\nFor a multiline raw string the starting position of\
+    \ the ending double-quote sequence sets the \"trim line\" for the enclosed string\
+    \ literal content. That is, the spaces before that position in the string literal\
+    \ are not considered part of the string. For example,\n\n```\nvar xml = \"\"\"\
+    \n    <element attr=\"content\">\n        <body>My body</body>\n    </element>\n\
+    \"\"\";\n```"
+  merge: -1
+  img_proc: true
+- pgno: 138
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 139
+  md: '# 11.5. String Interpolation
+
+
+    Interpolated strings are identified by the $ prefix and they can include (to-be-)interpolated
+    expressions in braces String interpolation achieves the same results as the String.Format
+    method, but it is generally preferred because it often improves the readability
+    and maintainability of code.'
+  merge: -1
+  img_proc: true
+- pgno: 140
+  md: '# 11.5.1. Constant interpolated strings
+
+
+    Since C# 10, when all interpolated expressions in an interpolated string are constant,
+    it is considered a constant expression.
+
+
+    ```
+
+    ```csharp
+
+    const int year = 2022;
+
+    const string wc = $"World Cup {year}";
+
+    const string greeting = $"Welcome to {wc}!";
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 141
+  md: '# 11.5.2. Verbatim string interpolation
+
+
+    C# also allows verbatim string interpolation, that is, string interpolation over
+    verbatim string literals, using the $@ or @$ syntax. For instance,
+
+
+    ```
+
+    var myAnswer = "Huh?";
+
+    var conversation = $@"Tom: What do you say?
+
+    Me: {myAnswer} {myAnswer}";
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 142
+  md: "# 11.5.3. Raw string interpolation\n\nString interpolation can be used with\
+    \ (single-line or multi-line) raw string literals as well. In such a case, the\
+    \ number of dollar signs present at the start of the literal determines the number\
+    \ of braces needed to start an interpolation expression. Any brace sequence with\
+    \ fewer braces than that is just treated as content, and they are included in\
+    \ the output. For example,\n\n```\nvar json = $\"\"\"\n{\n  \"content\": { \"\
+    title\": \"Raw Oyster\" },\n  \"length\" : {{value,Length}}\n};\n\"\"\"\n```"
+  merge: -1
+  img_proc: true
+- pgno: 143
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 144
+  md: '# 12.1. Generic Type Parameters'
+  merge: -1
+  img_proc: true
+- pgno: 145
+  md: '# 12.1.1. Type parameters
+
+
+    A generic type (and, a generic method, etc.) includes one or more type parameters
+    (within angular brackets By declaring particular types for these type parameters,
+    a specific constructed type is created.
+
+
+    A type parameter is an identifier designating a value type or reference type that
+    the parameter is to be bound to. Since a type parameter can be instantiated with
+    many different type arguments, type parameters have slightly different operations
+    and restrictions than other (real) types. For example, a type parameter cannot
+    be used directly to declare a base class or interface in a generic type declaration.
+
+
+    As a type, type parameters are purely a compile-time construct. At run time, each
+    type parameter is bound to a run-time type that was specified by supplying a type
+    argument to the generic type declaration. The run-time execution of all statements
+    and expressions involving type parameters uses the type that was supplied as the
+    type argument for that parameter.'
+  merge: -1
+  img_proc: true
+- pgno: 146
+  md: '# 12.1.2. Constraints on type parameters
+
+
+    Type constraints indicate what capabilities a type argument should have. Constraints
+    are specified using a contextual keyword, If a type argument is used that does
+    not satisfy the given constraint, the compiler will issue an error (or, a warning
+    in some cases).'
+  merge: -1
+  img_proc: true
+- pgno: 147
+  md: '# 12.2. Type Parameter Constraints
+
+
+    The support for generic type constraints, both in terms of syntax and semantics,
+    has been greatly extended over the past few C# releases. The following types of
+    type parameter constraints are currently supported as of C# 11.'
+  merge: -1
+  img_proc: true
+- pgno: 148
+  md: '# 12.2.1. The notnull constraint
+
+
+    ```
+
+    class <T> where T : notnull { }
+
+    ```
+
+
+    The type argument T must be a non-nullable type. You can use the notnull constraint
+    to specify that the type argument must be a non-nullable value type or non-nullable
+    reference type. Unlike most other constraints, if a type argument violates the
+    notnull constraint, the compiler generates a warning instead of an error.'
+  merge: -1
+  img_proc: true
+- pgno: 149
+  md: '# 12.2.2. The default constraint
+
+
+    ```
+
+    class <T> where T : default { }
+
+    ```
+
+
+    The default constraint implies that the base method does not have a class or struct
+    constraint. This constraint resolves the ambiguity when you need to specify an
+    unconstrained type parameter when you override a method or provide an explicit
+    interface implementation.'
+  merge: -1
+  img_proc: true
+- pgno: 150
+  md: '# 12.2.3. The new() constraint
+
+
+    ```
+
+    class <T> where T : new() {}
+
+    ```
+
+
+    The new() constraint asserts that T must have a public parameterless constructor.
+    When used together with other constraints, the new() constraint must be specified
+    last.'
+  merge: -1
+  img_proc: true
+- pgno: 151
+  md: '# 12.2.4. The enum constraint
+
+
+    ```
+
+    class `<T>` where `T` : System.Enum { }
+
+    ```
+
+
+    You can use any System.Enum types as a base class. With the enum constraint, the
+    type parameter T can be used with the System.Enum static methods. T can also be
+    used in a context where a specific enum type is expected.'
+  merge: -1
+  img_proc: true
+- pgno: 152
+  md: '# 12.2.5. The delegate constraints
+
+
+    ```
+
+    ```csharp
+
+    class C1<T> where T : System.Delegate { }
+
+    class C2<T> where T : System.MulticastDelegate { }
+
+    ```
+
+    ```
+
+
+    The generic type argument T must be a System.Delegate or System.MulticastDelegate
+    type. The delegate constraint enables you to write code that works with delegates
+    in a type-safe manner.'
+  merge: -1
+  img_proc: true
+- pgno: 153
+  md: '# 12.2.6. The struct constraint
+
+
+    ```
+
+    class <T> where T : struct { }
+
+    ```
+
+
+    The type argument T must be a non-nullable value type. Because all value types
+    have an accessible parameterless constructor, the struct constraint implies the
+    new() constraint, and they cannot be combined.'
+  merge: -1
+  img_proc: true
+- pgno: 154
+  md: '# 12.2.7. The class constraint
+
+
+    ```
+
+    class<T> where T : class { }
+
+    ```
+
+
+    This constraint asserts that T must be a non-nullable reference type. It applies
+    to or When a type argument is a nullable reference type, a warning is issued.'
+  merge: -1
+  img_proc: true
+- pgno: 155
+  md: '# 12.2.8. The class? constraint
+
+
+    ```
+
+    class<T> where T : class? { }
+
+    ```
+
+
+    It asserts that T must be a reference type, either nullable or non-nullable.'
+  merge: -1
+  img_proc: true
+- pgno: 156
+  md: '# 12.2.9. Interface type constraints
+
+
+    ```
+
+    class <T> where T : I1, I2, I3<T> { }
+
+    ```
+
+
+    Specific interfaces, one or more, can be specified as part of a type constraint.
+    In such a case, the type argument must be either an interface that inherits, or
+    a non-nullable type that implements, the given interfaces, e.g., and I3 in this
+    example.
+
+
+    As shown, the constraining interfaces can be generic. it must be a non-nullable
+    type that implements the specified interface,
+
+
+    ```
+
+    class <T> where T : I1, I2, I3<T?> { }
+
+    ```
+
+
+    This constraint is equivalent to the previous example, T : I1, I2, except that
+    T can be a nullable or non-nullable reference type as well as a non-nullable value
+    type.'
+  merge: -1
+  img_proc: true
+- pgno: 157
+  md: '# 12.2.10. Base class type constraints
+
+
+    ```
+
+    class <T> where T : B1 { }
+
+    ```
+
+
+    The type argument must be, or derive, from the specified base class, e.g., T must
+    be a non-nullable reference type derived from
+
+
+    ```
+
+    class <T> where T : B1? { }
+
+    ```
+
+
+    Likewise, the type argument must be, or derive, from the specified base class,
+    T may be a nullable or non-nullable type.'
+  merge: -1
+  img_proc: true
+- pgno: 158
+  md: '# 12.2.11. Specific type constraints
+
+
+    ```
+
+    ```
+
+    class <T, U> where T : U { }
+
+    ```
+
+    ```
+
+
+    The type argument T must be, or derive from, the type
+
+
+    If U is a non-nullable reference type, T must be non-nullable reference type.
+
+
+    If U is a nullable reference type, T may be nullable or non-nullable.'
+  merge: -1
+  img_proc: true
+- pgno: 159
+  md: '# 12.3. Type Variance in Generics
+
+
+    In C#, type variance enables implicit reference conversion for array types, delegate
+    types, and generic type parameters so that broader, or more specific, types can
+    be used. Variances, either covariance or contravariance, are supported for reference
+    types, but they are not supported for value types.'
+  merge: -1
+  img_proc: true
+- pgno: 160
+  md: '# 12.3.1. Covariance
+
+
+    Covariance enables you to use a more derived type than that specified by the generic
+    parameter. This allows for implicit conversion of classes that implement covariant
+    interfaces and implicit conversion of delegate types. An [interface](#) that has
+    a covariant type parameter enables its methods to return more derived types than
+    those specified by the type parameter.
+
+
+    As an example, because [type T is covariant in IEnumerable](#) and string inherits
+    from an object of the IEnumerable type, for instance, can be implicitly assigned
+    to an object of the IEnumerable'
+  merge: -1
+  img_proc: true

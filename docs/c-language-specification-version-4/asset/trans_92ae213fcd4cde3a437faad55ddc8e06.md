@@ -1,0 +1,128 @@
+
+```
+null-coalescing-expression:
+    conditional-or-expression
+    conditional-or-expression   ??   null-coalescing-expression
+```
+
+空合并表达式的形式为 a ?? b 要求 a 为可空类型或引用类型。如果 a 为非空，则 a ?? b 的结果为 a；否则结果为 b。该操作仅在 a 为 null 时才求值 b。
+
+空合并运算符是右结合的，这意味着操作是从右到左分组的。例如，形式为 a ?? b ?? c 的表达式被求值为 a ?? (b ?? c)。一般来说，形式为 E₁ ?? E₂ ?? ... ?? E_N 的表达式返回第一个非空的操作数，如果所有操作数都为 null，则返回 null。
+
+表达式 a ?? b 的类型取决于操作数上可用的隐式转换。按优先顺序，a ?? b 的类型为 A₀、A 或 B，其中 A 为 a 的类型（前提是 a 有类型），B 为 b 的类型（前提是 b 有类型），A₀ 为 A 的底层类型，如果 A 是可空类型，否则为 A。具体来说，a ?? b 按如下方式处理：
+
+- 如果 A 存在且不是可空类型或引用类型，则发生编译时错误。
+- 如果 b 是 dynamic 表达式，则结果类型为 dynamic。运行时，首先求值 a。如果 a 不为 null，则 a 转换为 dynamic，这成为结果。否则，求值 b，这成为结果。
+- 否则，如果 A 存在且为可空类型，并且存在从 b 到 A₀ 的隐式转换，则结果类型为 A₀。运行时，首先求值 a。如果 a 为非空，则 a 解包为类型 A₀，这成为结果。否则，求值 b 并转换为类型 A₀，这成为结果。
+- 否则，如果 A 存在并且存在从 b 到 A 的隐式转换，则结果类型为 A。运行时，首先求值 a。如果 a 为非空，则 a 成为结果。否则，求值 b 并转换为类型 A，这成为结果。
+- 否则，如果 b 有类型 B 并且存在从 a 到 B 的隐式转换，则结果类型为 B。运行时，首先求值 a。如果 a 为非空，则 a 解包为类型 A₀（如果 A 存在且为可空）并转换为类型 B，这成为结果。否则，求值 b 并成为结果。
+- 否则，a 和 b 不兼容，发生编译时错误。
+
+## 7.14 条件运算符
+
+?: 运算符称为条件运算符。有时也称为三元运算符。
+
+```
+conditional-expression:
+    null-coalescing-expression
+    null-coalescing-expression   ?   expression   :   expression
+```
+
+形式为 b ? x : y 的条件表达式首先求值条件 b。然后，如果 b 为 true，则求值 x 并成为操作的结果。否则，求值 y 并成为操作的结果。条件表达式永远不会同时求值 x 和 y。
+
+条件运算符是右结合的，这意味着操作是从右到左分组的。例如，形式为 a ? b : c ? d : e 的表达式被求值为 a ? b : (c ? d : e)。
+
+?: 运算符的第一个操作数必须是可隐式转换为 bool 的表达式，或实现 operator true 的类型的表达式。如果不满足这两个要求中的任何一个，则发生编译时错误。
+
+?: 运算符的第二个和第三个操作数 x 和 y 控制条件表达式的类型。
+
+- 如果 x 的类型为 X 且 y 的类型为 Y 则
+  - 如果存在从 X 到 Y 的隐式转换 (§6.1)，但不存在从 Y 到 X 的隐式转换，则 Y 为条件表达式的类型。
+- 如果存在从 Y 到 X 的隐式转换 (§6.1)，但不存在从 X 到 Y 的隐式转换，则 X 为条件表达式的类型。
+- 否则，无法确定表达式类型，发生编译时错误。
+- 如果只有 x 和 y 中的一个有类型，并且 x 和 y 都可隐式转换为该类型，则该类型为条件表达式的类型。
+- 否则，无法确定表达式类型，发生编译时错误。
+
+形式为 b ? x : y 的条件表达式的运行时处理包括以下步骤：
+
+- 首先，求值 b，并确定其 bool 值：
+  - 如果存在从 b 的类型到 bool 的隐式转换，则执行此隐式转换以生成 bool 值。
+  - 否则，调用 b 的类型定义的 operator true 以生成 bool 值。
+- 如果上一步产生的 bool 值为 true，则求值 x 并转换为条件表达式的类型，这成为条件表达式的结果。
+- 否则，求值 y 并转换为条件表达式的类型，这成为条件表达式的结果。
+
+## 7.15 匿名函数表达式
+
+匿名函数是一个表示“内联”方法定义的表达式。匿名函数本身没有值或类型，但可转换为兼容的委托或表达式树类型。匿名函数转换的求值取决于转换的目标类型：如果目标类型为委托类型，则转换求值为引用匿名函数定义的方法的委托值。如果目标类型为表达式树类型，则转换求值为表示方法结构为对象结构的表达式树。
+
+出于历史原因，匿名函数有两种语法形式，即 lambda 表达式和匿名方法表达式。对于几乎所有目的而言，lambda 表达式比匿名方法表达式更简洁、更具表达力，而匿名方法表达式保留在语言中以保持向后兼容。
+
+```
+lambda-expression:
+    anonymous-function-signature => anonymous-function-body
+anonymous-method-expression:
+    delegate explicit-anonymous-function-signature_opt block
+anonymous-function-signature:
+    explicit-anonymous-function-signature
+    implicit-anonymous-function-signature
+explicit-anonymous-function-signature:
+    ( explicit-anonymous-function-parameter-list_opt )
+explicit-anonymous-function-parameter-list:
+    explicit-anonymous-function-parameter
+    explicit-anonymous-function-parameter-list , explicit-anonymous-function-parameter
+explicit-anonymous-function-parameter:
+    anonymous-function-parameter-modifier_opt type identifier
+anonymous-function-parameter-modifier:
+    ref
+    out
+```
+
+```
+implicit-anonymous-function-signature:
+    ( implicit-anonymous-function-parameter-list_opt )
+    implicit-anonymous-function-parameter
+implicit-anonymous-function-parameter-list:
+    implicit-anonymous-function-parameter
+    implicit-anonymous-function-parameter-list , implicit-anonymous-function-parameter
+implicit-anonymous-function-parameter:
+    identifier
+anonymous-function-body:
+    expression
+    block
+```
+
+=> 运算符的优先级与赋值 (=) 相同并且是右结合的。
+
+lambda 表达式形式的匿名函数的参数可以显式或隐式键入。在显式类型参数列表中，每个参数的类型被显式声明。在隐式类型参数列表中，参数的类型从匿名函数出现的上下文中推断——具体来说，当匿名函数转换为兼容的委托类型或表达式树类型时，该类型提供参数类型 (§6.5)。
+
+在具有单个隐式类型参数的匿名函数中，参数列表的括号可以省略。换句话说，形式为
+
+```
+( param ) => expr
+```
+
+的匿名函数可以缩写为
+
+```
+param => expr
+```
+
+匿名方法表达式形式的匿名函数的参数列表是可选的。如果给出，参数必须显式键入。如果没有给出，匿名函数可转换为不包含 out 参数的任意参数列表的委托。
+
+下面是一些匿名函数的示例：
+
+```
+x => x + 1                     // Implicitly typed, expression body
+x => { return x + 1; }          // Implicitly typed, statement body
+(int x) => x + 1                // Explicitly typed, expression body
+(int x) => { return x + 1; }    // Explicitly typed, statement body
+(x, y) => x * y                 // Multiple parameters
+() => Console.WriteLine()       // No parameters
+delegate (int x) { return x + 1; } // Anonymous method expression
+delegate { return 1 + 1; }      // Parameter list omitted
+```
+
+lambda 表达式和匿名方法表达式的行为相同，除了以下几点：
+
+- 匿名方法表达式允许完全省略参数列表，从而可转换为任意值参数列表的委托类型。
+- lambda 表达式允许省略参数类型并推断，而匿名方法表达式要求参数类型必须显式声明。

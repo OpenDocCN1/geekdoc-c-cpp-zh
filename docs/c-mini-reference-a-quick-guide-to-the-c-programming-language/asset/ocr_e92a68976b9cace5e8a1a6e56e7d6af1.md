@@ -1,0 +1,9 @@
+Another important, and relatively new, pair of types in .NET are Spans and which are also tightly integrated into the C# language. These types provide a safe way to access and manipulate the objects in memory, and their elements or members, without having to rely on expensive memory operations.
+
+Designing and implementing a well-behaved type entails a lot of work. It sometimes requires writing a lot of boilerplate code just to create a simple type in many OOP-focused languages like Java and C#. The virtual methods defined in the object class are some of those examples. In principle, but not necessarily in practice, many of these methods need to be overridden, among many other methods, which makes creating a new type tedious, above everything else.
+
+One of the biggest trends or themes in C#'s evolution has been to make this task of creating custom types easier. For example, which has been a part of C# since version 1.0, is just a special kind of with some compiler-generated code, so that they do not need to be manually implemented by developers. The recent additions, records and record are another example of such a trend in C#.
+
+In the .NET world, tuples (or, value tuples) are the easiest compound types to create and use. These are really "lightweight" classes, whose use should be preferred over creating more formal types in many cases. An enum type also allows creating a simple, special kind of, type that is based on a set of constant values.
+
+Despite all the recent changes, class is still the most important construct in C#. Programming in C# is fundamentally about defining types, e.g., using class (and, its cousins like record and In the Classes chapter, we go

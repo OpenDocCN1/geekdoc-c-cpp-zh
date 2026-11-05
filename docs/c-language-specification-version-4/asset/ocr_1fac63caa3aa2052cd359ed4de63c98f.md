@@ -1,0 +1,51 @@
+# C# LANGUAGE SPECIFICATION
+
++   - If the variable given by x is an array element of a reference-type, a run-time check is performed to ensure that the value computed for y is compatible with the array instance of which x is an element. The check succeeds if y is null, or if an implicit reference conversion (§6.1.6) exists from the actual type of the instance referenced by y to the actual element type of the array instance containing x. Otherwise, a System.ArrayTypeMismatchException is thrown.
++   - The value resulting from the evaluation and conversion of y is stored into the location given by the evaluation of x.
+
++   - If x is classified as a property or indexer access:
++     - The instance expression (if x is not static) and the argument list (if x is an indexer access) associated with x are evaluated, and the results are used in the subsequent set accessor invocation.
++     - y is evaluated and, if required, converted to the type of x through an implicit conversion (§6.1).
++     - The set accessor of x is invoked with the value computed for y as its value argument.
+
+The array co-variance rules (§12.5) permit a value of an array type A[] to be a reference to an instance of an array type B[], provided an implicit reference conversion exists from B to A. Because of these rules, assignment to an array element of a reference-type requires a run-time check to ensure that the value being assigned is compatible with the array instance. In the example
+
+```
+string[] sa = new string[10];
+object[] oa = sa;
+
+oa[0] = null;    // Ok
+oa[1] = "Hello"; // Ok
+oa[2] = new ArrayList(); // ArrayTypeMismatchException
+```
+
+the last assignment causes a System.ArrayTypeMismatchException to be thrown because an instance of ArrayList cannot be stored in an element of a string[].
+
+When a property or indexer declared in a struct-type is the target of an assignment, the instance expression associated with the property or indexer access must be classified as a variable. If the instance expression is classified as a value, a binding-time error occurs. Because of §7.6.4, the same rule also applies to fields.
+
+Given the declarations:
+
+```
+struct Point
+{
+    int x, y;
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int X {
+        get { return x; }
+        set { x = value; }
+    }
+
+    public int Y {
+        get { return y; }
+        set { y = value; }
+    }
+}
+struct Rectangle
+{
+    Point a, b;
+}
+```

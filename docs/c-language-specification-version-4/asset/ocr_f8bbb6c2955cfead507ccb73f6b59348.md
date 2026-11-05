@@ -1,0 +1,59 @@
+# C# LANGUAGE SPECIFICATION
+
+```
+member-initializer-list:
+    member-initializer
+    member-initializer-list , member-initializer
+member-initializer
+    identifier = initializer-value
+initializer-value:
+    expression
+    object-or-collection-initializer
+```
+
+An object initializer consists of a sequence of member initializers, enclosed by { and } tokens and separated by commas. Each member initializer must name an accessible field or property of the object being initialized, followed by an equals sign and an expression or an object initializer or collection initializer. It is an error for an object initializer to include more than one member initializer for the same field or property. It is not possible for the object initializer to refer to the newly created object it is initializing.
+
+A member initializer that specifies an expression after the equals sign is processed in the same way as an assignment (§7.17.1) to the field or property.
+
+A member initializer that specifies an object initializer after the equals sign is a nested object initializer, i.e. an initialization of an embedded object. Instead of assigning a new value to the field or property, the assignments in the nested object initializer are treated as assignments to members of the field or property. Nested object initializers cannot be applied to properties with a value type, or to read-only fields with a value type.
+
+A member initializer that specifies a collection initializer after the equals sign is an initialization of an embedded collection. Instead of assigning a new collection to the field or property, the elements given in the initializer are added to the collection referenced by the field or property. The field or property must be of a collection type that satisfies the requirements specified in §7.6.10.3.
+
+The following class represents a point with two coordinates:
+
+```
+public class Point
+{
+    int x, y;
+    public int X { get { return x; } set { x = value; } }
+    public int Y { get { return y; } set { y = value; } }
+}
+```
+
+An instance of Point can be created and initialized as follows:
+
+```
+Point a = new Point { X = 0, Y = 1 };
+```
+
+which has the same effect as
+
+```
+Point __a = new Point();
+__a.X = 0;
+__a.Y = 1;
+Point a = __a;
+```
+
+where __a is an otherwise invisible and inaccessible temporary variable. The following class represents a rectangle:
+
+```
+public class Rectangle
+{
+    Point p1, p2;
+    public Point P1 { get { return p1; } set { p1 = value; } }
+    public Point P2 { get { return p2; } set { p2 = value; } }
+}
+```
+
+An instance of Rectangle can be created and initialized as follows:

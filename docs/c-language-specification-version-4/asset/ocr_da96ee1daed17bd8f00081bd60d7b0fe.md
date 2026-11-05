@@ -1,0 +1,58 @@
+```
+event-modifiers:
+  event-modifier
+  event-modifiers  event-modifier
+
+event-modifier:
+  new
+  public
+  protected
+  internal
+  private
+  static
+  virtual
+  sealed
+  override
+  abstract
+  extern
+
+event-accessor-declarations:
+  add-accessor-declaration  remove-accessor-declaration
+  remove-accessor-declaration  add-accessor-declaration
+
+add-accessor-declaration:
+  attributes_opt  add  block
+
+remove-accessor-declaration:
+  attributes_opt  remove  block
+
+indexer-declaration:
+  attributes_opt  indexer-modifiers_opt  indexer-declarator  {  accessor-declarations  }
+
+indexer-modifiers:
+  indexer-modifier
+  indexer-modifiers  indexer-modifier
+
+indexer-modifier:
+  new
+  public
+  protected
+  internal
+  private
+  virtual
+  sealed
+  override
+  abstract
+  extern
+
+indexer-declarator:
+  type  this  [  formal-parameter-list  ]
+  type  interface-type  .  this  [  formal-parameter-list  ]
+
+operator-declaration:
+  attributes_opt  operator-modifiers  operator-declarator  operator-body
+
+operator-modifiers:
+  operator-modifier
+  operator-modifiers  operator-modifier
+```
