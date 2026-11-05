@@ -307,6 +307,7 @@
 +   [C# & C++：5合1：从零到高薪工作：秘籍 最新速成指南 一周学会 C# & C++ + 50 个动手练习](docs/c-c-5-in-1-from-zero-to-high-paying-jobs-the-updated-crash-c/README.md)
 +   [C#：C# 速成课程——学习 C# 编程语言基础的初学者课程（c#、c 编程、c、java、python、angularjs、c++ 编程）](docs/c-c-crash-course---beginners-course-to-learn-the-basics-of-c/README.md)
 +   [C++：C++ 初学者指南，C++ 24小时实战，快速学习 C++！一种学习 C++ 的智能方法。简单易懂。C++ 步骤指南，C++ 编程，从今天开始编码](docs/c-c-for-beginners-c-in-24-hours-learn-c-fast-a-smart-way-to-/README.md)
++   [C#：初学者的 C# 速成课程：今天快速轻松掌握 C# 编程（计算机编程，初学者编程）（第 2 卷）](docs/c-c-for-beginners-crash-course-master-c-programming-fast-and/README.md)
 +   [C, C++, Java, Python, PHP, JavaScript 和 Linux 初学者指南](docs/c-c-java-python-php-javascript-and-linux-for-beginners/README.md)
 +   [C++：初学者 C++ 编程 - 24 小时内掌握 C++ 基础的极速成课指南！](docs/c-c-programming-for-beginners---the-ultimate-crash-course-to/README.md)
 +   [C++：8 小时学会 C++ 编程，初学者指南，快速学习编码](docs/c-c-programming-in-8-hours-for-beginners-learn-coding-fast/README.md)

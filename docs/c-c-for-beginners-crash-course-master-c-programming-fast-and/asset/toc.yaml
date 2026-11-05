@@ -1,0 +1,389 @@
+level_changes:
+- line: 29
+  before: 3
+  after: 4
+- line: 42
+  before: 3
+  after: 4
+- line: 51
+  before: 2
+  after: 4
+- line: 56
+  before: 2
+  after: 4
+- line: 60
+  before: 2
+  after: 4
+- line: 97
+  before: 3
+  after: 4
+- line: 103
+  before: 3
+  after: 4
+- line: 107
+  before: 3
+  after: 4
+- line: 113
+  before: 3
+  after: 4
+- line: 144
+  before: 3
+  after: 4
+- line: 154
+  before: 3
+  after: 4
+- line: 169
+  before: 3
+  after: 4
+- line: 177
+  before: 3
+  after: 4
+- line: 185
+  before: 3
+  after: 4
+- line: 193
+  before: 3
+  after: 4
+- line: 201
+  before: 3
+  after: 4
+- line: 577
+  before: 3
+  after: 5
+- line: 583
+  before: 3
+  after: 5
+- line: 600
+  before: 3
+  after: 5
+- line: 764
+  before: 2
+  after: 3
+- line: 768
+  before: 3
+  after: 4
+- line: 783
+  before: 3
+  after: 4
+- line: 787
+  before: 3
+  after: 4
+- line: 789
+  before: 3
+  after: 4
+- line: 815
+  before: 3
+  after: 4
+- line: 819
+  before: 3
+  after: 4
+- line: 840
+  before: 3
+  after: 4
+- line: 877
+  before: 2
+  after: 3
+- line: 881
+  before: 3
+  after: 4
+- line: 894
+  before: 3
+  after: 4
+- line: 896
+  before: 3
+  after: 4
+- line: 928
+  before: 2
+  after: 3
+- line: 932
+  before: 3
+  after: 4
+- line: 962
+  before: 3
+  after: 4
+- line: 966
+  before: 3
+  after: 4
+- line: 968
+  before: 3
+  after: 4
+- line: 1005
+  before: 2
+  after: 3
+- line: 1009
+  before: 3
+  after: 4
+- line: 1029
+  before: 3
+  after: 4
+- line: 1031
+  before: 3
+  after: 4
+- line: 1064
+  before: 3
+  after: 4
+- line: 1113
+  before: 3
+  after: 4
+- line: 1121
+  before: 3
+  after: 4
+- line: 1124
+  before: 3
+  after: 4
+- line: 1125
+  before: 3
+  after: 4
+- line: 1151
+  before: 3
+  after: 4
+- line: 1165
+  before: 3
+  after: 4
+- line: 1168
+  before: 3
+  after: 4
+- line: 1169
+  before: 3
+  after: 4
+- line: 1197
+  before: 3
+  after: 4
+- line: 1205
+  before: 3
+  after: 4
+- line: 1208
+  before: 3
+  after: 4
+- line: 1209
+  before: 3
+  after: 4
+- line: 1214
+  before: 3
+  after: 4
+- line: 1219
+  before: 3
+  after: 4
+- line: 1222
+  before: 3
+  after: 4
+- line: 1255
+  before: 3
+  after: 4
+- line: 1260
+  before: 3
+  after: 4
+- line: 1263
+  before: 3
+  after: 4
+- line: 1264
+  before: 3
+  after: 4
+- line: 1301
+  before: 3
+  after: 4
+- line: 1304
+  before: 3
+  after: 4
+- line: 1335
+  before: 3
+  after: 4
+- line: 1382
+  before: 2
+  after: 3
+- line: 1386
+  before: 3
+  after: 4
+- line: 1426
+  before: 3
+  after: 4
+- line: 1482
+  before: 2
+  after: 3
+- line: 1493
+  before: 3
+  after: 4
+- line: 1539
+  before: 2
+  after: 3
+- line: 1576
+  before: 2
+  after: 3
+- line: 1580
+  before: 3
+  after: 4
+- line: 1582
+  before: 3
+  after: 4
+- line: 1609
+  before: 2
+  after: 3
+- line: 1613
+  before: 3
+  after: 4
+- line: 1650
+  before: 2
+  after: 3
+- line: 1654
+  before: 3
+  after: 4
+- line: 1658
+  before: 3
+  after: 4
+- line: 1683
+  before: 3
+  after: 4
+- line: 1718
+  before: 3
+  after: 4
+- line: 2058
+  before: 2
+  after: 3
+- line: 2062
+  before: 3
+  after: 4
+- line: 2070
+  before: 2
+  after: 3
+- line: 2074
+  before: 3
+  after: 4
+- line: 2081
+  before: 3
+  after: 4
+- line: 2090
+  before: 3
+  after: 4
+- line: 2142
+  before: 3
+  after: 4
+- line: 2198
+  before: 3
+  after: 4
+- line: 2203
+  before: 3
+  after: 4
+- line: 2238
+  before: 3
+  after: 4
+- line: 2269
+  before: 3
+  after: 4
+- line: 2298
+  before: 3
+  after: 4
+- line: 2650
+  before: 2
+  after: 3
+- line: 2657
+  before: 3
+  after: 4
+- line: 2661
+  before: 3
+  after: 4
+- line: 2668
+  before: 3
+  after: 4
+- line: 2713
+  before: 3
+  after: 4
+- line: 2719
+  before: 3
+  after: 4
+- line: 2826
+  before: 3
+  after: 4
+- line: 2828
+  before: 3
+  after: 4
+- line: 2937
+  before: 2
+  after: 3
+- line: 2941
+  before: 3
+  after: 4
+- line: 2945
+  before: 3
+  after: 4
+- line: 2954
+  before: 3
+  after: 4
+- line: 2956
+  before: 3
+  after: 4
+- line: 3035
+  before: 3
+  after: 4
+- line: 3310
+  before: 2
+  after: 3
+text_changes:
+- line: 6
+  before: 第1章 C# 简介
+  after: 第 1 章 C# 简介
+- line: 252
+  before: 第3章 语法、数据类型和转换
+  after: 第 3 章 语法、数据类型和转换
+- line: 422
+  before: 第4章 变量和常量
+  after: 第 4 章 变量和常量
+- line: 577
+  before: Floating point literals
+  after: 浮点字面量
+- line: 583
+  before: Character Literals
+  after: 字符字面量
+- line: 600
+  before: String Literals
+  after: 字符串字面量
+- line: 614
+  before: Chapter 5 Operators in C#
+  after: 第 5 章 C# 中的运算符
+- line: 616
+  before: 5.1 Introduction to operators
+  after: 5.1 运算符简介
+- line: 620
+  before: 5.2 Arithmetic operators
+  after: 5.2 算术运算符
+- line: 634
+  before: 5.3 Relational operators
+  after: 5.3 关系运算符
+- line: 647
+  before: 5.4 Logical operators
+  after: 5.4 逻辑运算符
+- line: 658
+  before: 5.5 Bitwise operators
+  after: 5.5 位运算符
+- line: 669
+  before: 5.6 Assignment operators
+  after: 5.6 赋值运算符
+- line: 687
+  before: 5.7 Miscellaneous operators
+  after: 5.7 其他运算符
+- line: 698
+  before: Chapter 6 C# Decision making statements
+  after: 第 6 章 C# 决策语句
+- line: 715
+  before: 6.1 If Statement
+  after: 6.1 if 语句
+- line: 815
+  before: else if else 语句
+  after: else if 语句
+- line: 840
+  before: else if else 语句示例
+  after: else if 语句示例
+- line: 1103
+  before: 第7章 C#中的循环
+  after: 第 7 章 C# 中的循环
+- line: 1297
+  before: 第8章 C#中的类和方法
+  after: 第 8 章 C# 中的类和方法
+- line: 2324
+  before: 第11章 封装与多态
+  after: 第 11 章 封装与多态
+- line: 2792
+  before: 第12章 继承与接口
+  after: 第 12 章 继承与接口
+- line: 3368
+  before: 第14章 多线程
+  after: 第 14 章 多线程
