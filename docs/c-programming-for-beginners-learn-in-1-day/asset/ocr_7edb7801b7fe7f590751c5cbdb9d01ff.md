@@ -1,0 +1,7 @@
+# C#
+PROGRAMMING
+BEGINNERS
+
+# LEARN IN 1 DAY
+
+![](bbox=[0.05, 0.4, 0.95, 0.88])

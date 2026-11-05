@@ -456,6 +456,7 @@
 +   [初学者 C 语言编程指南](docs/c-programming-for-beginners-by-sett-john/README.md)
 +   [初学者的 C 编程：速成课程](docs/c-programming-for-beginners-crash-course/README.md)
 +   [C 编程入门指南：速成课程（Java、Python、C++、R、C）](docs/c-programming-for-beginners-crash-course-java-python-c-r-c/README.md)
++   [初学者的 C# 编程 1天学会](docs/c-programming-for-beginners-learn-in-1-day/README.md)
 +   [C++ 编程入门指南：从零开始创建健壮程序的逐步指令](docs/c-programming-for-beginners-step-by-step-instructions-for-cr/README.md)
 +   [C++ 初学者编程指南：自学掌握 C++ 的速成课程](docs/c-programming-for-beginners-the-complete-crash-course-to-mas/README.md)
 +   [C 语言：初学者精通指南](docs/c-programming-for-beginners-to-master/README.md)

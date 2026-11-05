@@ -1,0 +1,194 @@
+level_changes:
+- line: 100
+  before: 2
+  after: 3
+- line: 131
+  before: 2
+  after: 3
+- line: 162
+  before: 2
+  after: 3
+- line: 221
+  before: 2
+  after: 3
+- line: 235
+  before: 2
+  after: 3
+- line: 313
+  before: 2
+  after: 3
+- line: 336
+  before: 2
+  after: 3
+- line: 392
+  before: 2
+  after: 3
+- line: 405
+  before: 2
+  after: 3
+- line: 434
+  before: 2
+  after: 3
+- line: 533
+  before: 2
+  after: 3
+- line: 604
+  before: 2
+  after: 3
+- line: 686
+  before: 2
+  after: 3
+- line: 694
+  before: 2
+  after: 3
+- line: 701
+  before: 2
+  after: 3
+- line: 760
+  before: 2
+  after: 3
+- line: 766
+  before: 2
+  after: 3
+- line: 812
+  before: 2
+  after: 3
+- line: 878
+  before: 2
+  after: 3
+- line: 967
+  before: 2
+  after: 3
+- line: 1035
+  before: 2
+  after: 3
+- line: 1066
+  before: 2
+  after: 3
+- line: 1087
+  before: 2
+  after: 3
+- line: 1107
+  before: 2
+  after: 3
+- line: 1192
+  before: 2
+  after: 3
+- line: 1254
+  before: 2
+  after: 3
+- line: 1349
+  before: 2
+  after: 3
+- line: 1441
+  before: 2
+  after: 3
+- line: 1473
+  before: 2
+  after: 3
+- line: 1603
+  before: 2
+  after: 3
+- line: 1798
+  before: 2
+  after: 3
+- line: 1860
+  before: 2
+  after: 3
+- line: 1970
+  before: 2
+  after: 3
+- line: 2032
+  before: 2
+  after: 3
+- line: 2082
+  before: 2
+  after: 3
+- line: 2136
+  before: 2
+  after: 3
+- line: 2199
+  before: 2
+  after: 3
+- line: 2249
+  before: 2
+  after: 3
+- line: 2278
+  before: 2
+  after: 3
+- line: 2290
+  before: 2
+  after: 3
+- line: 2295
+  before: 2
+  after: 3
+- line: 2304
+  before: 2
+  after: 3
+- line: 2405
+  before: 2
+  after: 3
+- line: 2433
+  before: 2
+  after: 3
+- line: 2446
+  before: 2
+  after: 3
+- line: 2464
+  before: 2
+  after: 3
+- line: 2495
+  before: 2
+  after: 3
+- line: 2519
+  before: 2
+  after: 3
+- line: 2634
+  before: 2
+  after: 3
+- line: 2711
+  before: 2
+  after: 3
+- line: 2757
+  before: 2
+  after: 3
+- line: 2765
+  before: 2
+  after: 3
+- line: 2771
+  before: 2
+  after: 3
+text_changes:
+- line: 0
+  before: 初学者的 C# 编程 1天学会
+  after: 初学者的 C# 编程 1 天学会
+- line: 12
+  before: .Net 框架架构
+  after: .NET 框架架构
+- line: 63
+  before: .Net 框架的不同版本
+  after: .NET 框架的不同版本
+- line: 106
+  before: 第 2 章：下载和安装 Visual Studio
+  after: 第2章：下载和安装 Visual Studio
+- line: 168
+  before: 第 3 章：数据类型
+  after: 第3章：数据类型
+- line: 221
+  before: 步骤 4) 运行你的 .Net 程序。
+  after: 步骤 4) 运行你的 .NET 程序。
+- line: 614
+  before: 第 4 章：类和对象
+  after: 第4章：类和对象
+- line: 1451
+  before: 第 6 章：Windows Forms 应用程序
+  after: 第6章：Windows Forms 应用程序
+- line: 1936
+  before: 第 7 章：数据库访问
+  after: 第7章：数据库访问
+- line: 1970
+  before: .Net 中的连接
+  after: .NET 中的连接
+- line: 2505
+  before: 第 8 章：文件操作
+  after: 第8章：文件操作
