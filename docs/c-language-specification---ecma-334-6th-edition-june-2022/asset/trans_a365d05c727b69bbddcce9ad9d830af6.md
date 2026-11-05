@@ -1,0 +1,94 @@
+
+为简洁起见，在本小节及其姊妹小节中，这些接口分别称为 IEnumerator 和 IEnumerator<T>。
+
+## 14.14.3 Enumerable interfaces
+
+可枚举接口是非泛型接口 System.Collections.IEnumerable 以及泛型接口 System.Collections.Generic.IEnumerable<T> 的所有实例化。为简洁起见，在本小节及其姊妹小节中，这些接口分别称为 IEnumerable 和 IEnumerable<T>。
+
+## 14.14.4 Yield type
+
+迭代器产生一系列值，所有值类型相同。此类型称为迭代器的 yield 类型。
+
+- 返回 IEnumerator 或 IEnumerable 的迭代器的 yield 类型是 object。
+- 返回 IEnumerator<T> 或 IEnumerable<T> 的迭代器的 yield 类型是 T。
+
+## 14.14.5 Enumerator objects
+
+### 14.14.5.1 General
+
+当使用迭代器块实现返回枚举器接口类型的函数成员时，调用该函数成员不会立即执行迭代器块中的代码。相反，会创建一个枚举器对象并返回。该对象封装了迭代器块中指定的代码，并且迭代器块中的代码执行发生在调用枚举器对象的 MoveNext 方法时。枚举器对象具有以下特征：
+
+- 它实现 IEnumerator 和 IEnumerator<T>，其中 T 是迭代器的 yield 类型。
+- 它实现 System.IDisposable。
+- 它使用传递给函数成员的参数值（如果有）和实例值的副本进行初始化。
+- 它有四个可能的状态，before、running、suspended 和 after，并且初始处于 before 状态。
+
+枚举器对象通常是编译器生成的枚举器类的实例，该类封装了迭代器块中的代码并实现枚举器接口，但也可能有其他实现方法。如果枚举器类由编译器生成，则该类将直接或间接嵌套在包含函数成员的类中，它将具有私有访问性，并且其名称保留供编译器使用（§6.4.3）。
+
+枚举器对象可能实现比上述更多的接口。
+
+以下小节描述了枚举器对象提供的 IEnumerator 和 IEnumerator<T> 接口实现中 MoveNext、Current 和 Dispose 成员的必需行为。枚举器对象不支持 IEnumerator.Reset 方法。调用此方法会导致抛出 System.NotSupportedException。
+
+### 14.14.5.2 The MoveNext method
+
+枚举器对象的 MoveNext 方法封装了迭代器块的代码。调用 MoveNext 方法会执行迭代器块中的代码并相应地设置枚举器对象的 Current 属性。MoveNext 执行的确切操作取决于调用 MoveNext 时枚举器对象的状态：
+
+- 如果枚举器对象的状态为 **before**，调用 MoveNext：
+  - 将状态更改为 **running**。
+  - 将迭代器块的参数（包括 `this`）初始化为枚举器对象初始化时保存的参数值和实例值。
+  - 从开头执行迭代器块，直到执行被中断（如下所述）。
+- 如果枚举器对象的状态为 **running**，调用 MoveNext 的结果是不确定的。
+- 如果枚举器对象的状态为 **suspended**，调用 MoveNext：
+  - 将状态更改为 **running**。
+  - 将所有局部变量和参数（包括 `this`）的值恢复为上次暂停迭代器块执行时保存的值。
+  - *Note:* 这些变量引用的任何对象的内容可能自上次调用 MoveNext 以来已发生变化。 end note
+  - 从导致执行暂停的 yield return 语句之后立即恢复迭代器块的执行，并继续执行直到执行被中断（如下所述）。
+- 如果枚举器对象的状态为 **after**，调用 MoveNext 返回 false。
+
+当 MoveNext 执行迭代器块时，执行可能以四种方式被中断：通过 yield return 语句，通过 yield break 语句，通过遇到迭代器块的末尾，以及通过异常被抛出并从迭代器块传播出去。
+
+- 当遇到 yield return 语句时（§9.4.4.20）：
+  - 语句中给出的表达式被求值，隐式转换为 yield 类型，并赋给枚举器对象的 Current 属性。
+  - 迭代器体的执行被挂起。所有局部变量和参数（包括 `this`）的值被保存，yield return 语句的位置也被保存。如果 yield return 语句位于一个或多个 try 块内，则相关联的 finally 块此时不会执行。
+  - 枚举器对象的状态更改为 **suspended**。
+  - MoveNext 方法向其调用者返回 true，表示迭代成功推进到下一个值。
+- 当遇到 yield break 语句时（§9.4.4.20）：
+  - 如果 yield break 语句位于一个或多个 try 块内，则相关联的 finally 块将被执行。
+  - 枚举器对象的状态更改为 **after**。
+  - MoveNext 方法向其调用者返回 false，表示迭代已完成。
+- 当遇到迭代器体的末尾时：
+  - 枚举器对象的状态更改为 **after**。
+  - MoveNext 方法向其调用者返回 false，表示迭代已完成。
+- 当异常被抛出并从迭代器块传播出去时：
+  - 异常传播将已执行迭代器体中的适当 finally 块。
+  - 枚举器对象的状态更改为 after。
+  - 异常传播继续到 MoveNext 方法的调用者。
+
+### 14.14.5.3 The Current property
+
+枚举器对象的 Current 属性受迭代器块中 yield return 语句的影响。
+
+当枚举器对象处于 suspended 状态时，Current 的值是上一次调用 MoveNext 时设置的值。当枚举器对象处于 before、running 或 after 状态时，访问 Current 的结果是不确定的。
+
+对于 yield 类型不是 object 的迭代器，通过枚举器对象的 IEnumerable 实现访问 Current 的结果对应于通过枚举器对象的 IEnumerator<T> 实现访问 Current 并将结果强制转换为 object。
+
+### 14.14.5.4 The Dispose method
+
+Dispose 方法用于通过将枚举器对象带到 after 状态来清理迭代。
+
+- 如果枚举器对象的状态为 before，调用 Dispose 会将状态更改为 after。
+- 如果枚举器对象的状态为 running，调用 Dispose 的结果是不确定的。
+- 如果枚举器对象的状态为 suspended，调用 Dispose：
+  - 将状态更改为 running。
+  - 执行任何 finally 块，就好像最后执行的 yield return 语句是 yield break 语句一样。如果这导致异常被抛出并从迭代器体传播出去，则枚举器对象的状态设置为 after，并且异常传播到 Dispose 方法的调用者。
+  - 将状态更改为 after。
+- 如果枚举器对象的状态为 after，调用 Dispose 没有任何效果。
+
+## 14.14.6 Enumerable objects
+
+### 14.14.6.1 General
+
+当使用迭代器块实现返回可枚举接口类型的函数成员时，调用该函数成员不会立即执行迭代器块中的代码。相反，会创建一个可枚举对象并返回。可枚举对象的 GetEnumerator 方法返回一个封装了迭代器块中指定代码的枚举器对象，并且迭代器块中的代码执行发生在调用枚举器对象的 MoveNext 方法时。可枚举对象具有以下特征：
+
+- 它实现 IEnumerable 和 IEnumerable<T>，其中 T 是迭代器的 yield 类型。
+- 它使用传递给函数成员的参数值（如果有）和实例值的副本进行初始化。

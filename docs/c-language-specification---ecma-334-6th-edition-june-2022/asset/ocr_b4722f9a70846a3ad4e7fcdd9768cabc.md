@@ -1,0 +1,67 @@
+# D.3.3 <code>
+
+This tag is used to set one or more lines of source code or program output in some special font. For small code fragments in narrative, use << (§D.3.2).
+
+Syntax:
+
+```
+<code>source code or program output</code>
+```
+
+Example:
+
+```
+// <summary>
+// This method changes the point's location by the given x- and y-offsets.
+// <example>
+// For example:
+// <code>
+// Point p = new Point(3,5);
+// p.Translate(-1,3);
+// </code>
+// results in <p></c>'s having the value (2,8).
+// </example>
+// </summary>
+public void Translate(int dx, int dy)
+{
+    X += dx;
+    Y += dy;
+}
+```
+
+# D.3.4 <example>
+
+This tag allows example code within a comment, to specify how a method or other library member might be used. Ordinarily, this would also involve use of the tag <code> (§D.3.3) as well.
+
+Syntax:
+
+```
+<example>description</example>
+```
+
+Example:
+
+See <code> (§D.3.3) for an example.
+
+# D.3.5 <exception>
+
+This tag provides a way to document the exceptions a method can throw.
+
+Syntax:
+
+```
+<exception cref="member">description</exception>
+```
+
+where
+
++   - cref="member" is the name of a member. The documentation generator checks that the given member exists and translates member to the canonical element name in the documentation file.
++   - description is a description of the circumstances in which the exception is thrown.
+
+Example:
+
+```
+public class DataBaseOperations
+{
+    // <exception cref="MasterFileFormatCorruptException">
+```

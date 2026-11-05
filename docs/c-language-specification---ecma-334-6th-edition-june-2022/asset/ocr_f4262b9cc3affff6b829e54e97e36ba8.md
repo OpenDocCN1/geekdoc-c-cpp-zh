@@ -1,0 +1,3 @@
+The *Input_Characters* in the *PP_Pragma_Text* are interpreted by the compiler in an implementation-defined manner. The information supplied in a `#pragma` directive shall not change program semantics. A `#pragma` directive shall only change compiler behavior that is outside the scope of this language specification. If the compiler cannot interpret the *Input_Characters*, the compiler can produce a warning; however, it shall not produce a compile-time error.
+
+*Note:* *PP_Pragma_Text* can contain arbitrary text; specifically, it need not contain well-formed tokens. *end note*

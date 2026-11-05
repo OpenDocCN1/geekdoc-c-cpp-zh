@@ -1,0 +1,62 @@
+```
+int x;
+for (int i = 0; i < 3; i++)
+{
+    x = i * 2 + 1;
+    result[i] = () => Console.WriteLine(x);
+}
+return result;
+}
+```
+
+the output is:
+
+5
+5
+5
+
+Note that the compiler is permitted (but not required) to optimize the three instantiations into a single delegate instance (§10.7.2).
+
+*end example*
+
+If a for-loop declares an iteration variable, that variable itself is considered to be declared outside of the loop.
+
+*Example:* Thus, if the example is changed to capture the iteration variable itself:
+
+```
+static D[] F()
+{
+    D[] result = new D[3];
+    for (int i = 0; i < 3; i++)
+    {
+        result[i] = () => Console.WriteLine(i);
+    }
+    return result;
+}
+```
+
+only one instance of the iteration variable is captured, which produces the output:
+
+3
+3
+3
+
+*end example*
+
+It is possible for anonymous function delegates to share some captured variables yet have separate instances of others.
+
+*Example:* For example, if F is changed to
+
+```
+static D[] F()
+{
+    D[] result = new D[3];
+    int x = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        int y = 0;
+        result[i] = () => Console.WriteLine($"{+x} {+y}");
+    }
+    return result;
+}
+```

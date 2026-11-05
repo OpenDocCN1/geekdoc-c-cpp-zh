@@ -1,0 +1,50 @@
+# A. Grammar
+
+This clause is informative.
+
+# A.1 General
+
+This annex contains the grammar productions found in the specification, including the optional ones for unsafe code. Productions appear here in the same order in which they appear in the specification.
+
+# A.2 Lexical grammar
+
+```
+// Source: $6.3.1 General
+DEFAULT  : 'default' ;
+NULL     : 'null' ;
+TRUE     : 'true' ;
+FALSE    : 'false' ;
+ASTERISK : '*' ;
+SLASH    : '/' ;
+
+// Source: $6.3.1 General
+input
+    : input_section?
+    ;
+
+input_section
+    : input_section_part+
+    ;
+
+input_section_part
+    : input_element* New_Line
+    | PP_Directive
+    ;
+
+input_element
+    : Whitespace
+    | Comment
+    | token
+    ;
+
+// Source: $6.3.2 Line terminators
+New_Line
+    : New_Line Character
+    | '\u000D\u000A'  // carriage return, line feed
+    ;
+
+// Source: $6.3.3 Comments
+Comment
+    : Single_Line_Comment
+    | Delimited_Comment
+```

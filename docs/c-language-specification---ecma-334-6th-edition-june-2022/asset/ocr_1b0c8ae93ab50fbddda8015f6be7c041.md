@@ -1,0 +1,57 @@
+```
+```csharp
+/// <value>
+/// Property <c>Y</c> represents the point's y-coordinate.
+/// </value>
+public int Y
+{
+    get { return y; }
+    set { y = value; }
+}
+
+/// <summary>
+/// This constructor initializes the new Point to (0,0).
+/// </summary>
+public Point() : this(0, 0) {}
+
+/// <summary>
+/// This constructor initializes the new Point to
+/// (<paramref name="xPosition"/>,<paramref name="yPosition"/>).
+/// </summary>
+/// <param><c>xPosition</c> is the new Point's x-coordinate.</param>
+/// <param><c>yPosition</c> is the new Point's y-coordinate.</param>
+public Point(int xPosition, int yPosition)
+{
+    X = xPosition;
+    Y = yPosition;
+}
+
+/// <summary>
+/// This method changes the point's location to
+/// the given coordinates. <see cref="Translate"/>
+/// </summary>
+/// <param><c>xPosition</c> is the new x-coordinate.</param>
+/// <param><c>yPosition</c> is the new y-coordinate.</param>
+public void Move(int xPosition, int yPosition)
+{
+    X = xPosition;
+    Y = yPosition;
+}
+
+/// <summary>
+/// This method changes the point's location by
+/// the given x- and y-offsets.
+/// <example>For example:
+/// <code>
+/// Point p = new Point(3, 5);
+/// p.Translate(-1, 3);
+/// </code>
+/// results in <c>p</c>'s having the value (2, 8).
+/// </example>
+/// </summary>
+/// <param><c>dx</c> is the relative x-offset.</param>
+/// <param><c>dy</c> is the relative y-offset.</param>
+public void Translate(int dx, int dy)
+{
+```
+```

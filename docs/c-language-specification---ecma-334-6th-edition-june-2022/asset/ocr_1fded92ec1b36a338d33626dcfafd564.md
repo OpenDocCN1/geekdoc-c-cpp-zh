@@ -1,0 +1,35 @@
++   - If N is the identifier global, then the global namespace is searched for I:
++     - If the global namespace contains a namespace named I and e is zero, then the qualified_alias_member refers to that namespace.
++     - Otherwise, if the global namespace contains a non-generic type named I and e is zero, then the qualified_alias_member refers to that type.
++     - Otherwise, if the global namespace contains a type named I that has e type parameters, then the qualified_alias_member refers to that type constructed with the given type arguments.
++     - Otherwise, the qualified_alias_member is undefined and a compile-time error occurs.
++   - Otherwise, starting with the namespace declaration (§13.3) immediately containing the qualified_alias_member (if any), continuing with each enclosing namespace declaration (if any), and ending with the compilation unit containing the qualified_alias_member, the following steps are evaluated until an entity is located:
++     - If the namespace declaration or compilation unit contains a using_alias_directive that associates N with a type, then the qualified_alias_member is undefined and a compile-time error occurs.
++     - Otherwise, if the namespace declaration or compilation unit contains an extern_alias_directive or using_alias_directive that associates N with a namespace, then:
++       - If the namespace associated with N contains a namespace named I and e is zero, then the qualified_alias_member refers to that namespace.
++       - Otherwise, if the namespace associated with N contains a non-generic type named I and e is zero, then the qualified_alias_member refers to that type.
++       - Otherwise, if the namespace associated with N contains a type named I that has e type parameters, then the qualified_alias_member refers to that type constructed with the given type arguments.
++       - Otherwise, the qualified_alias_member is undefined and a compile-time error occurs.
++   - Otherwise, the qualified_alias_member is undefined and a compile-time error occurs.
+
+Example: In the code:
+
+```
+using S = System.Net.Sockets;
+
+class A
+{
+    public static int x;
+}
+
+class C
+{
+    public void F(int A, object S)
+    {
+        // Use global::A.x instead of A.x
+        global::A.x += A;
+        // Use S::Socket instead of S.Socket
+        S::Socket s = S as S::Socket;
+    }
+}
+```

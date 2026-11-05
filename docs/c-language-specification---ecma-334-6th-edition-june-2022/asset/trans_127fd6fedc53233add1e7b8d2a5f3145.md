@@ -1,0 +1,332 @@
+
+
+```
+int x;
+static int y;
+void F()
+{
+    x = 1;    // Ok, same as this.x = 1
+    y = 1;    // Ok, same as Test.y = 1
+}
+
+static void G()
+{
+    x = 1;    // Error, cannot access this.x
+    y = 1;    // Ok, same as Test.y = 1
+}
+
+static void Main()
+{
+    Test t = new Test();
+    t.x = 1;    // Ok
+    t.y = 1;    // Error, cannot access static member through instance
+    Test.x = 1; // Error, cannot access instance member through type
+    Test.y = 1; // Ok
+}
+```
+
+F 方法表明，在实例函数成员中，可以使用 simple_name (§11.7.4) 访问实例成员和静态成员。G 方法表明，在静态函数成员中，通过 simple_name 访问实例成员是编译时错误。Main 方法表明，在 member_access (§11.7.6) 中，实例成员应通过实例访问，而静态成员应通过类型访问。
+
+*结束示例*
+
+## 14.3.9 嵌套类型
+
+### 14.3.9.1 通用
+
+在类或结构中声明的类型称为嵌套类型。在编译单元或命名空间中声明的类型称为非嵌套类型。
+
+*示例：* 如下例所示：
+
+```
+using System;
+
+class A
+{
+    class B
+    {
+        static void F()
+        {
+            Console.WriteLine("A.B.F");
+        }
+    }
+}
+```
+
+class B 是嵌套类型，因为它在 class A 内声明，而 class A 是非嵌套类型，因为它在编译单元内声明。
+
+*结束示例*
+
+### 14.3.9.2 完全限定名
+
+嵌套类型声明的完全限定名 (§7.8.3) 为 S.N，其中 S 是声明类型 N 的类型声明的完全限定名，而 N 是嵌套类型声明的非限定名 (§7.8.2)（包括任何 generic_dimension_specifier (§11.7.16)）。
+
+### 14.3.9.3 声明的可访问性
+
+非嵌套类型可以具有 public 或 internal 声明的可访问性，默认具有 internal 声明的可访问性。嵌套类型也可以具有这些形式的可访问性，另外根据包含类型是类还是结构，还可以具有一种或多种额外的可访问性形式：
+
+- 在类中声明的嵌套类型可以具有五种可访问性形式中的任意一种（public、protected internal、protected、internal 或 private），并且与其它类成员一样，默认的可访问性为 private。
+- 在结构中声明的嵌套类型可以具有三种可访问性形式中的任意一种（public、internal 或 private），并且与其它结构成员一样，默认的可访问性为 private。
+
+*示例：* 该示例
+
+```
+```csharp
+public class List
+{
+    // Private data structure
+    private class Node
+    {
+        public object Data;
+        public Node Next;
+
+        public Node(object data, Node next)
+        {
+            this.Data = data;
+            this.Next = next;
+        }
+    }
+
+    private Node first = null;
+    private Node last = null;
+
+    // Public interface
+    public void AddToFront(object o) {...}
+    public void AddToBack(object o) {...}
+    public object RemoveFromFront() {...}
+    public object RemoveFromBack() {...}
+    public int Count { get {...} }
+}
+```
+```
+
+声明了一个私有嵌套类 Node。
+
+*结束示例*
+
+### 14.3.9.4 隐藏
+
+嵌套类型可能会隐藏 (§7.7.2.2) 基成员。new 修饰符 (§14.3.5) 允许用于嵌套类型声明，以便显式表达隐藏。
+
+示例： 该示例
+
+```
+using System;
+class Base
+{
+    public static void M()
+    {
+        Console.WriteLine("Base.M");
+    }
+}
+
+class Derived: Base
+{
+    public new class M
+    {
+        public static void F()
+        {
+            Console.WriteLine("Derived.M.F");
+        }
+    }
+}
+
+class Test
+{
+    static void Main()
+    {
+        Derived.M.F();
+    }
+}
+```
+
+显示了一个嵌套类 M，它隐藏了在 Base 中定义的方法 M。
+
+结束示例
+
+### 14.3.9.5 this 访问
+
+嵌套类型与其包含类型在 this_access (§11.7.12) 方面没有特殊关系。具体来说，嵌套类型中的 this 不能用于引用包含类型的实例成员。在嵌套类型需要访问其包含类型的实例成员的情况下，可以通过将包含类型实例的 this 作为嵌套类型的构造函数参数来提供访问。
+
+示例： 以下示例
+
+```
+using System;
+
+class C
+{
+    int i = 123;
+    public void F()
+    {
+        Nested n = new Nested(this);
+        n.G();
+    }
+
+    public class Nested
+{
+```
+
+```
+~~~csharp
+        C this_c;
+
+        public Nested(C c)
+        {
+            this_c = c;
+        }
+
+        public void G()
+        {
+            Console.WriteLine(this_c.i);
+        }
+    }
+
+    class Test
+    {
+        static void Main()
+        {
+            C c = new C();
+            c.F();
+        }
+    }
+~~~
+```
+
+显示了此技术。C 的一个实例创建 Nested 的一个实例，并将自己的 this 传递给 Nested 的构造函数，以便随后访问 C 的实例成员。
+
+*结束示例*
+
+### 14.3.9.6 访问包含类型的私有和受保护成员
+
+嵌套类型可以访问其包含类型可访问的所有成员，包括具有 private 和 protected 声明的可访问性的包含类型的成员。
+
+*示例：* 该示例
+
+```
+~~~csharp
+using System;
+
+class C
+{
+    private static void F() => Console.WriteLine("C.F");
+
+    public class Nested
+    {
+        public static void G() => F();
+    }
+}
+
+class Test
+{
+    static void Main() => C.Nested.G();
+}
+~~~
+```
+
+显示了一个包含嵌套类 Nested 的类 C。在 Nested 内部，方法 G 调用了在 C 中定义的静态方法 F，而 F 具有 private 声明的可访问性。
+
+*结束示例*
+
+嵌套类型也可以访问其包含类型的基类型中定义的受保护成员。
+
+示例： 在以下代码中
+
+```
+using System;
+class Base
+{
+    protected void F() => Console.WriteLine("Base.F");
+}
+
+class Derived: Base
+{
+    public class Nested
+    {
+        public void G()
+        {
+            Derived d = new Derived();
+            d.F(); // ok
+        }
+    }
+}
+
+class Test
+{
+    static void Main()
+    {
+        Derived.Nested n = new Derived.Nested();
+        n.G();
+    }
+}
+```
+
+嵌套类 Derived.Nested 通过 Derived 的一个实例调用，访问了在 Derived 的基类 Base 中定义的受保护方法 F。
+
+结束示例
+
+### 14.3.9.7 泛型类中的嵌套类型
+
+泛型类声明可能包含嵌套类型声明。外围类的类型参数可在嵌套类型中使用。嵌套类型声明可能包含仅适用于该嵌套类型的额外类型参数。
+
+泛型类声明中包含的每个类型声明都是隐式的泛型类型声明。在编写对泛型类型中嵌套类型的引用时，必须命名包含的构造类型，包括其类型参数。然而，从外部类内部，嵌套类型可以不加限定地使用；在构造嵌套类型时，外部类的实例类型可以被隐式使用。
+
+示例： 以下显示了引用从 Inner 创建的构造类型的三种不同正确方法；前两种是等价的：
+
+```
+class Outer<T>
+{
+    class Inner<U>
+    {
+        public static void F(T t, U u) {...}
+    }
+
+    static void F(T t)
+```
+
+```
+{
+    Outer<T>.Inner<string>.F(t, "abc");    // These two statements have
+    Inner<string>.F(t, "abc");            // the same effect
+    Outer<int>.Inner<string>.F(3, "abc"); // This type is different
+    Outer.Inner<string>.F(t, "abc");      // Error, Outer needs type arg
+}
+```
+
+*结束示例*
+
+尽管这是不良的编程风格，但嵌套类型中的类型参数可以隐藏在外部类型中声明的成员或类型参数。
+
+*示例：*
+
+```
+class Outer<T>
+{
+    class Inner<T>                     // Valid, hides Outer's T
+    {
+        public T t;                    // Refers to Inner's T
+    }
+}
+```
+
+*结束示例*
+
+## 14.3.10 保留的成员名称
+
+### 14.3.10.1 通用
+
+为了便于底层的 C# 运行时实现，对于每个源成员声明为属性、事件或索引器的情况，实现应根据成员声明的种类、其名称和类型 (§14.3.10.2、§14.3.10.3、§14.3.10.4) 保留两个方法签名。如果程序声明的成员签名与同一作用域中声明的成员保留的签名匹配，则为编译时错误，即使底层的运行时实现未使用这些保留。
+
+保留的名称不引入声明，因此它们不参与成员查找。然而，声明的关联保留方法签名确实参与继承 (§14.3.4)，并且可以用 new 修饰符 (§14.3.5) 隐藏。
+
+*注意：* 这些名称的保留服务于三个目的：
+
+1. 允许底层实现使用普通标识符作为方法名，以便对 C# 语言特性进行 get 或 set 访问。
+2. 允许其他语言使用普通标识符作为方法名，以便对 C# 语言特性进行 get 或 set 访问，从而实现互操作。
+3. 通过使所有 C# 实现中的保留成员名称的细节保持一致，帮助确保一个符合规范的编译器接受的源代码会被另一个接受。
+
+*结束注释*
+
+析构函数的声明 (§14.13) 也会导致一个签名被保留 (§14.3.10.5)。
+
+### 14.3.10.2 为属性保留的成员名称
+
+对于类型为 T 的属性 P (§14.7)，以下签名被保留：

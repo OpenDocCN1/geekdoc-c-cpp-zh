@@ -1,0 +1,77 @@
+```
+```
+            }
+        }
+```
+```
+
+Otherwise, the expansion is
+
+```
+```csharp
+    {
+        ResourceType resource = «expression»;
+        try
+        {
+            «statement»;
+        }
+        finally
+        {
+            IDisposable d = (IDisposable)resource;
+            if (d != null)
+            {
+                d.Dispose();
+            }
+        }
+    }
+```
+```
+
+In any expansion, the `resource` variable is read-only in the embedded statement, and the `d` variable is inaccessible in, and invisible to, the embedded statement.
+
+An implementation is permitted to implement a given `using_statement` differently, e.g., for performance reasons, as long as the behavior is consistent with the above expansion.
+
+A using statement of the form:
+
+```
+```csharp
+    using («expression») «statement»
+```
+```
+
+has the same three possible expansions. In this case `ResourceType` is implicitly the compile-time type of the `expression`, if it has one. Otherwise the interface `IDisposable` itself is used as the `ResourceType`. The `resource` variable is inaccessible in, and invisible to, the embedded statement.
+
+When a `resource_acquisition` takes the form of a `local_variable_declaration`, it is possible to acquire multiple resources of a given type. A using statement of the form
+
+```
+```csharp
+    using (ResourceType r1 = e1, r2 = e2, ..., rN = eN) «statement»
+```
+```
+
+is precisely equivalent to a sequence of nested using statements:
+
+```
+```csharp
+    using (ResourceType r1 = e1)
+    using (ResourceType r2 = e2)
+    ...
+    using (ResourceType rN = eN)
+    «statement»
+```
+```
+
+Example: The example below creates a file named `log.txt` and writes two lines of text to the file. The example then opens that same file for reading and copies the contained lines of text to the console.
+
+```
+```csharp
+using System;
+using System.IO;
+
+class Test
+{
+    static void Main()
+    {
+        using (TextWriter w = File.CreateText("log.txt"))
+```
+```
