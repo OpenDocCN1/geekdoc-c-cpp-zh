@@ -1,0 +1,43 @@
+```
+overloadable-binary-operator: one of
+  +  -  *  /  %  &  |  ^  <<  right-shift
+  ==  !=  >  <  >=  <=
+
+conversion-operator-declarator:
+  implicit operator type ( fixed-parameter )
+  explicit operator type ( fixed-parameter )
+
+operator-body:
+  block
+  ;
+```
+
+There are three categories of overloadable operators: Unary operators (§15.10.2), binary operators (§15.10.3), and conversion operators (§15.10.4).
+
+When an operator declaration includes an extern modifier, the operator is said to be an external operator. Because an external operator provides no actual implementation, its operator-body consists of a semi-colon. For all other operators, the operator-body consists of a block, which specifies the statements to execute when the operator is invoked. The block of an operator shall conform to the rules for value-returning methods described in §15.6.11.
+
+The following rules apply to all operator declarations:
+
++   - An operator declaration shall include both a public and a static modifier.
++   - The parameter(s) of an operator shall have no modifiers.
++   - The signature of an operator (§15.10.2, §15.10.3, §15.10.4) shall differ from the signatures of all other operators declared in the same class.
++   - All types referenced in an operator declaration shall be at least as accessible as the operator itself (§8.5.5).
++   - It is an error for the same modifier to appear multiple times in an operator declaration.
+
+Each operator category imposes additional restrictions, as described in the following subclauses.
+
+Like other members, operators declared in a base class are inherited by derived classes. Because operator declarations always require the class or struct in which the operator is declared to participate in the signature of the operator, it is not possible for an operator declared in a derived class to hide an operator declared in a base class. Thus, the new modifier is never required, and therefore never permitted, in an operator declaration.
+
+Additional information on unary and binary operators can be found in §12.4.
+
+Additional information on conversion operators can be found in §11.5.
+
+# 15.10.2 Unary operators
+
+The following rules apply to unary operator declarations, where T denotes the instance type of the class or struct that contains the operator declaration:
+
++   - A unary +, -, !, ~ or ~ operator shall take a single parameter of type T or T? and can return any type.
++   - A unary ++ or -- operator shall take a single parameter of type T or T? and shall return that same type or a type derived from it.
++   - A unary true or false operator shall take a single parameter of type T or T? and shall return type bool.
+
+The signature of a unary operator consists of the operator token (+, -, !, ~, ++, --, true, or false) and the type of the single formal parameter. The return type is not part of a unary operator's signature, nor is the name of the formal parameter.

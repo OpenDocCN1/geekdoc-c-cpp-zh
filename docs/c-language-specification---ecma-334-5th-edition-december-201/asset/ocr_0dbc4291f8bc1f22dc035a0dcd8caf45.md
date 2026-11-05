@@ -1,0 +1,61 @@
+[Example: The example
+
+```
+using System;
+enum Color
+{
+    Red,
+    Green = 10,
+    Blue
+}
+class Test
+{
+    static void Main() {
+        Console.WriteLine(StringFromColor((Color.Red)));
+        Console.WriteLine(StringFromColor((Color.Green)));
+        Console.WriteLine(StringFromColor((Color.Blue)));
+    }
+    static string StringFromColor(Color c) {
+        switch (c) {
+            case Color.Red:
+                return String.Format("Red = {0}", (int) c);
+            case Color.Green:
+                return String.Format("Green = {0}", (int) c);
+            case Color.Blue:
+                return String.Format("Blue = {0}", (int) c);
+            default:
+                return "Invalid color";
+        }
+    }
+}
+```
+
+prints out the enum member names and their associated values. The output is:
+
+```
+Red = 0
+Green = 10
+Blue = 11
+```
+
+for the following reasons:
+
++   - the enum member Red is automatically assigned the value zero (since it has no initializer and is the first enum member);
++   - the enum member Green is explicitly given the value 10;
++   - and the enum member Blue is automatically assigned the value one greater than the member that textually precedes it.
+
+end example]
+
+The associated value of an enum member may not, directly or indirectly, use the value of its own associated enum member. Other than this circularity restriction, enum member initializers may freely refer to other enum member initializers, regardless of their textual position. Within an enum member initializer, values of other enum members are always treated as having the type of their underlying type, so that casts are not necessary when referring to other enum members.
+
+[Example: The example
+
+```
+enum Circular
+{
+    A = B,
+    B
+}
+```
+
+results in a compile-time error because the declarations of A and B are circular. A depends on B explicitly, and B depends on A implicitly. end example]

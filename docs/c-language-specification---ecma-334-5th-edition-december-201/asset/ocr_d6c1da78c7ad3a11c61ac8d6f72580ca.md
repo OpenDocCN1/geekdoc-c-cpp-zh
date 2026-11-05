@@ -1,0 +1,35 @@
+```
++  -  !  ~  ++  --  true  false
+```
+
+[Note: Although true and false are not used explicitly in expressions (and therefore are not included in the precedence table in §12.4.2), they are considered operators because they are invoked in several expression contexts: Boolean expressions (§12.21) and expressions involving the conditional (§12.15) and conditional logical operators (§12.13). end note]
+
+The **overloadable binary operators** are:
+
+```
++  -  *  /  %  &  |  ^  <<  >>  ==  !=  >  <  >=  <=
+```
+
+Only the operators listed above can be overloaded. In particular, it is not possible to overload member access, method invocation, or the =, &&, ||, ??, ?., =>, checked, unchecked, new, typeof, default, as, and is operators.
+
+When a binary operator is overloaded, the corresponding compound assignment operator, if any, is also implicitly overloaded. [Example: An overload of operator * is also an overload of operator *=. This is described further in §12.18. end example] The assignment operator itself (=) cannot be overloaded. An assignment always performs a simple store of a value into a variable (§12.18.2).
+
+Cast operations, such as (T)x, are overloaded by providing user-defined conversions (§11.5). [Note: User-defined conversions do not affect the behavior of the is or as operators. end note]
+
+Element access, such as a[x], is not considered an overloadable operator. Instead, user-defined indexing is supported through indexers (§15.9).
+
+In expressions, operators are referenced using operator notation, and in declarations, operators are referenced using functional notation. The following table shows the relationship between operator and functional notations for unary and binary operators. In the first entry, op denotes any overloadable unary prefix operator. In the second entry, op denotes the unary postfix ++ and -- operators. In the third entry, op denotes any overloadable binary operator. [Note: For an example of overloading the ++ and -- operators see §15.10.2. end note]
+
+| Operator notation | Functional notation |
+|---|---|
+| op x | operator op(x) |
+| x op | operator op(x) |
+| x op y | operator op(x, y) |
+
+User-defined operator declarations always require at least one of the parameters to be of the class or struct type that contains the operator declaration. [Note: Thus, it is not possible for a user-defined operator to have the same signature as a predefined operator. end note]
+
+User-defined operator declarations cannot modify the syntax, precedence, or associativity of an operator. [Example: The / operator is always a binary operator, always has the precedence level specified in §12.4.2, and is always left-associative. end example]
+
+[Note: While it is possible for a user-defined operator to perform any computation it pleases, implementations that produce results other than those that are intuitively expected are strongly discouraged. For example, an implementation of operator == should compare the two operands for equality and return an appropriate bool result. end note]
+
+The descriptions of individual operators in §12.8 through §12.18 specify the predefined implementations of the operators and any additional rules that apply to each operator. The descriptions make use of the terms unary operator overload resolution, binary operator overload resolution, numeric promotion, and lifted operators definitions of which are found in the following subclauses.
