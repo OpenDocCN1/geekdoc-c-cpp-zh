@@ -1,0 +1,3 @@
+# Application
+
+After you guess the correct number, the application asks if you’d like to play another game. At the `"Would you like to play again (y or n)?"` prompt, entering the character `y` causes the application to choose a new number and displays the message `"Please type your first guess."` followed by a question-mark prompt so you can make your first guess in the new game. Entering the character `n` terminates the application. Each time you execute this application from the beginning (*Step 6*), it will choose the same numbers for you to guess.

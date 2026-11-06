@@ -1,0 +1,1 @@
+easier to work with monetary values. Various C++ libraries have classes for this purpose, but they tend to be complex and beyond our scope. Boost’s C++ multiprecision library is one such example.

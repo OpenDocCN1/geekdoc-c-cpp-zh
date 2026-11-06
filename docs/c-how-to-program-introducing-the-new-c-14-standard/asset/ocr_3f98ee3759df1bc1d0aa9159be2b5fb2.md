@@ -1,0 +1,6 @@
+As of 2008 there were more than a billion general-purpose computers in use. Today, various websites say that number is approximately two billion, and according to the real-time tracker at [gsmantelligence.com](http://gsmantelligence.com), there are now more mobile devices than there are people in the world. According to the International Data Corporation (IDC), the number of mobile Internet users will top two billion in 2016.[^1] Smartphone sales surpassed personal computer sales in 2011.[^2] Tablet sales were expected to overtake personal-computer sales by 2015.[^3] By 2017, the smartphone/tablet app market is expected to exceed $77 billion.[^4] This explosive growth is creating significant opportunities for programming mobile applications.
+
++   1. https://www.idc.com/getdoc.jsp?containerId=prUS40855515
++   2. http://www.mashable.com/2012/02/03/smartphone-sales-overtake-pcs/
++   3. http://www.forbes.com/sites/louiscolumbus/2014/07/18/gartner-forecasts-tablet-shipments-will-overtake-pcs-in-2015/
++   4. http://www.entrepreneur.com/article/236832

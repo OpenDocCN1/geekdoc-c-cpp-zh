@@ -1,0 +1,3 @@
+# `DollarAmount` Constructor
+
+For simplicity, class `DollarAmount`’s constructor (Fig. 5.8, line 9) receives a whole number of pennies and uses this value to initialize the data member `amount`. In Exercises 5.30, you’ll define a `DollarAmount` constructor that receives two parameters representing the whole number of dollars and whole number of cents, then uses those values to calculate and store the appropriate number of pennies. (Exercises 5.30–5.34 are related to enhancing and using class `DollarAmount`.)

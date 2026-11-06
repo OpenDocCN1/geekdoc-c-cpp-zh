@@ -1,0 +1,3 @@
+# 13.4.3 Type-Safe I/O
+
+C++ offers **type-safe I/O**. The `<<` and `>>` operators are overloaded to accept data items of specific types. If unexpected data is processed, various error bits are set, which the user may query to determine whether an I/O operation succeeded or failed. If operators `<<` and `>>` have not been overloaded for a user-defined type and you attempt to use those operators to input into or output the contents of an object of that user-defined type, the compiler reports an error. This enables the program to “stay in control.” We discuss this more in **Section 13.8**.

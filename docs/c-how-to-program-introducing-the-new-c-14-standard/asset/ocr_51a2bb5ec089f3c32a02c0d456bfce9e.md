@@ -1,0 +1,3 @@
+You learned reasons for implementing overloaded operators as member functions or as non-member functions. The chapter concluded with discussions of converting between types (including class types), problems with certain implicit conversions defined by single-argument constructors and how to prevent those problems by using `explicit` constructors.
+
+In the next chapter, we continue our discussion of classes by introducing inheritance. We’ll see that when classes share common attributes and behaviors, it’s possible to define those attributes and behaviors in a common “base” class and “inherit” those capabilities into new class definitions, enabling you to create the new classes with a minimal amount of code.

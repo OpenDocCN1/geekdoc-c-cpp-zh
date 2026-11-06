@@ -1,0 +1,1 @@
+When a derived class chooses not to override a `virtual` function from its base class, the derived class simply inherits its base class’s `virtual` function implementation.

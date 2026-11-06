@@ -1,0 +1,216 @@
+
+- scientific notation **130**, **581**, **598**
+- `scientific` stream manipulator **593**, **597**
+- scope **233**
+  - class **233**
+  - file **233**
+  - function **233**
+  - function prototype **233**
+  - namespace **233**
+  - of a symbolic constant or macro **985**
+  - of a variable **164**
+  - of an identifier **86**
+- scope resolution operator (`::`) **230**
+- scope resolution operator (`::`) **391**, **430**, **788**
+- scoped enumeration (`enum class`) **230**
+- scoping example **235**
+- screen **5**, **6**, **19**, **46**
+- screen-manager program **533**
+- scripting language **10**
+- scrutinize data 392
+- SDK (Software Development Kit) 37
+- search a linked list 802, 839
+- `search` algorithm 748
+- search algorithms 842
+  - binary search 846
+  - linear search 843
+  - recursive binary search 866
+  - recursive linear search 866
+- search functions of the string-handling library 935
+- search key 681, 842, 843, 846
+- `search_n` algorithm 748
+- searching 657, 726, 798
+- searching `array`s 306
+- searching blocks of memory 939
+- searching data 842
+- Searching for Characters exercise **951**
+- Searching for Substrings exercise **951**
+- searching performance **839**
+- searching strings **923, 930**
+- `second` data member of `pair` **685**
+- second-degree polynomial **58**
+- second refinement in top-down, stepwise refinement **133**
+- secondary storage **6**
+- secondary storage devices **616**
+  - CD **616**
+  - DVD **616**
+  - flash drive **616**
+  - hard disk **616**
+  - tape **616**
+- secondary storage unit 7
+- second-degree polynomial **58**
+- security flaws **295**
+- seed **227**
+  - nondeterministic **725**
+- seed function `rand` **226**
+- seed the random-number generator **725**
+- seek direction **623**
+- seek get **623**
+- seek put **623**
+- `seekg` function of `istream` **623, 642**
+- `seekp` function of `ostream` **623, 633**
+- select a substring **485**
+- selection **109, 124, 197, 198**
+- selection sort **851, 855, 861, 862**
+- selection sort algorithm **853**
+- selection sort efficiency **853**
+- selection sort with call-by-reference **853**
+- selection statement **106, 108**
+  - `if` **108, 110, 198, 199**
+  - `if...else` **108, 110, 111, 128, 198**
+  - `switch` **108, 185, 198**
+- self assignment **425, 478**
+- self documenting **52**
+- self-referential class **799, 800**
+- semicolon (`;`) **47, 62, 982**
+- semicolon that terminates a structure definition **901**
+- send a message to an object **15**
+- sentinel-controlled iteration **207**
+- sentinel-controlled repetition **124, 125, 127, 128**
+- sentinel value **123, 125, 128**
+- separate interface from implementation **388**
+- Separating Digits exercise **275**
+- sequence **106, 109, 196, 198, 307, 662, 732, 734**
+- sequence container **658**, 665, 667, 675, 678
+  - `back` function **674**
+  - `empty` function **675**
+  - `front` function **674**
+  - `insert` function **675**
+- sequence of random numbers 226
+- sequence-structure activity diagram 107
+- sequential execution **106**
+- sequential file 616, 617, 621, 627, 628
+- serialized object **644**
+- `<set>` header 221
+- `set` associative container 681, 685
+- `set` function 421
+- `<set>` header 682, 685
+- `set_intersection` 739
+- `set_new_handler` function **769**, **771**
+- set of recursive calls to method `Fibonacci` 259
+- `set` operations of the Standard Library **737**
+- `set_difference` algorithm **737, 739, 748**
+- `set_intersection` algorithm **737, 739, 748**
+- `set_new_handler` specifying the function to call when `new` fails **771**
+- `set_symmetric_difference` algorithm **737, 739, 748**
+- `set_union` algorithm **737, 739, 748**
+- `setbase` stream manipulator **588**
+- `setfill` stream manipulator **381, 392, 594, 595**
+- `setprecision` stream manipulator **130, 588**
+- `setw` parameterized stream manipulator **169, 287, 366, 458, 590, 594**
+- shadow **423**
+- Shakespeare, William **953**
+- `shape` class hierarchy **500, 529**
+- shape of a tree **839**
+- shell prompt on Linux **20**
+- shift a range of numbers **223**
+- shifted, scaled integers **224**
+- shifted, scaled integers produced by `1 + rand() % 6` **223**
+- Shifting and Printing an Integer exercise **948**
+- shiftingValue **227**
+- “shipping” section of the computer **6**
+- shopping list **117**
+- short-circuit evaluation **190**
+- `showbase` stream manipulator **593**, **597**
+- `showpoint` stream manipulator **130**, **593**
+- `showpos` stream manipulator **381**, **593**, **595**
+- `shrink_to_fit` member function of classes `vector` and `deque` **672**
+- `shuffle` algorithm 723, 725, 748
+- shuffle cards 948
+- shuffling algorithm 903
+- sibling 823
+- side effect 242
+  - of an expression 234, 242, 259
+- sides of a right triangle 156
+- sides of a triangle 155
+- Sieve of Eratosthenes exercise 335, 706
+- sign extension 906
+- sign left justified 592
+- signal value 123
+- signature 219, 249, 460
+- signatures of overloaded prefix and postfix increment operators 461
+- significant digits **593**
+- simple condition **188**
+- Simple Decryption **897**
+- simplest activity diagram **194, 196**
+- Simpletron Machine Language (SML) **382, 799**
+- Simpletron Simulator exercise **382, 799**
+- simulation **379**
+- Simulation: Tortoise and the Hare exercise **374**
+- `sin` function **215**
+- sine **215**
+- single-argument constructor **483, 484**
+- single entry point **194**
+- single-entry/single-exit control statements **109, 194**
+- single exit point **194**
+- single inheritance **499**
+- single-line comment **46**
+- single-precision floating-point number **169**
+- single quote **48**
+- single quote (`'`) **364**
+- single-selection statement **108**, **110**, **198**
+  - `if` **110**
+- singly linked list **658**, **676**, **813**
+- six-sided die **223**
+- `size` function of `string` **632**
+- `size` member function of `array` **285**
+- `size` member function of class `string` **178**, **871**
+- `size` member function of containers **659**
+- `size` member function of `priority_queue` **694**
+- `size` member function of `queue` 693
+- `size` member function of `stack` 691
+- `size` member function of `vector` 320
+- size of a `string` 877
+- size of a variable 54
+- size of an array 356
+- `size_t` 287, 629
+- `size_t` type 356
+- `size_type` 661
+- `sizeof` 935, 985
+- `sizeof` operator 356, 357, 423, 635, 652
+  - used to determine standard data type sizes 357
+- `sizeof` operator when applied to an array name returns the number of bytes in the array 356
+- sizes of the built-in data types 652
+- skipping whitespace **587, 592**
+- `skips` stream manipulator **592**
+- small circles in the UML **107**
+- `smallest` **269**
+- smallest of several integers **206**
+- smart pointer **xxvi, 39**
+  - `make_unique` function template **773, 775**
+- smartphone **3, 34**
+- SML **377**
+- SML operation code **377**
+- SMS Language exercise **898**
+- software **2, 5**
+- Software as a Service (SaaS) **37**
+- Software Development Kit (SDK) **37**
+- software engineering
+- data hiding **82**
+- reuse 76, 387
+- separate interface from implementation **388**
+- software reuse 12, 213, 785
+- solid circle in the UML **107**
+- solid circle surrounded by a hollow circle in the UML **107**
+- solution **21**
+- **Solution Explorer** 23
+- `sort` algorithm 306, 726, 730, 748, 850
+- sort algorithms
+  - bubble sort **865**
+  - bucket sort **865**
+  - insertion sort **851, 853**
+  - merge sort **855**
+  - quicksort **866**
+  - selection sort **853**
+- sort key **842**
+- `sort` member function of `list` **679**

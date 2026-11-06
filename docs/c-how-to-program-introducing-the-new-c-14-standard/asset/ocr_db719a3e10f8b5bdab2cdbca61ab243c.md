@@ -1,0 +1,3 @@
+67.543 are output as 87.95 and 67.54, respectively. It’s also possible to *force* a decimal point to appear by using stream manipulator `showpoint`. If `showpoint` is specified without `fixed`, then trailing zeros will not print. Like `endl`, the nonparameterized stream manipulators `fixed` and `showpoint` require the header `<iostream>`.
+
+Together, lines 37 and 38 of Fig. 4.12 output the class average *rounded* to the nearest hundredth and with exactly two digits to the right of the decimal point. The three grades entered during the execution of the program in Fig. 4.12 total 257, which yields the average 85.666... and prints with rounding as 85.67.

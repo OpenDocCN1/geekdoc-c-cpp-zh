@@ -1,0 +1,6 @@
++   - Random-number generation, simulation and game playing. To help make programs more secure, we include a treatment of C++11’s non-deterministic random-number generation capabilities.
++   - Pointers. We provide thorough coverage of the built-in pointer capabilities and the intimate relationship among built-in pointers, C strings and built-in arrays.
++   - Visual presentation of searching and sorting, with a simple explanation of Big O.
++   - Printed book contains core content; additional content is online. Several online chapters and appendices are included. These are available in searchable PDF format on the book’s password-protected Companion Website—see the access card information on the inside front cover.
++   - Getting Started Videos. At [http://www.deitel.com/books/cpphtp10](http://www.deitel.com/books/cpphtp10), we provide links to our getting-started videos that help readers begin using Microsoft Visual Studio 2015 Community edition on Windows, Apple Xcode on OS X and GNU C++ on Linux.
++   - Debugger appendices. On the book’s Companion Website we provide Appendix H, Using the Visual Studio Debugger, Appendix I, Using the GNU C++ Debugger and Appendix J, Using the Xcode Debugger.

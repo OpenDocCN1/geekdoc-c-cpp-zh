@@ -1,0 +1,7 @@
+# Section 22.9 C String-Conversion Functions
+
++   - Function `atof` (p. **931**) converts its argument—a string beginning with a series of digits that represents a floating-point number—to a `double` value.
++   - Function `atoi` (p. **931**) converts its argument—a string beginning with a series of digits that represents an integer—to an `int` value.
++   - Function `atol` (p. **932**) converts its argument—a string beginning with a series of digits that represents a long integer—to a `long` value.
++   - Function `strtod` (p. **932**) converts a sequence of characters representing a floating-point value to `double`. The function receives two arguments—a string (`char*`) and the address of a `char*` pointer. The string contains the character sequence to be converted, and the pointer to `char*` is assigned the remainder of the string after the conversion.
++   - Function `strtol` (p. **933**) converts a sequence of characters representing an integer to `long`. It receives a string (`char*`), the address of a `char*` pointer and an integer. The string contains the character sequence to be converted, the pointer to `char*` is assigned the location of the first character after the converted value and the integer specifies the base of the value being converted.

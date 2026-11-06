@@ -1,0 +1,7 @@
+# 17.8.3 Handling `new` Failures Using Function `set_new_handler`
+
+An additional feature for handling `new` failures is function `set_new_handler` (prototyped in standard header `<new>`). This function takes as its argument a pointer to a function that takes no arguments and returns `void`—in Fig. 17.6, we use function `customNewHandler`, but the argument could be a lambda. This pointer points to the function that will be called if `new` fails. This provides you with a uniform approach to handling all `new` failures, regardless of where a failure occurs in the program. Once `set_new_handler` registers a `new` handler in the program, operator `new` does not throw `bad_alloc` on failure; rather, it delegates the error handling to the `new`-handler function.
+
+If `new` allocates memory successfully, it returns a pointer to that memory. If `new` fails to allocate memory and `set_new_handler` did not register a `new`-handler function, `new` throws a `bad_alloc` exception. If `new` fails to allocate memory and a `new`-handler function has been registered, the `new`-handler function is called. The `new`-handler function should perform one of the following tasks:
+
++   1. Make more memory available by deleting other dynamically allocated memory (or telling the user to close other

@@ -1,0 +1,3 @@
+# *A Note About Arithmetic Operators and Modifying Operands*
+
+Lines 14 and 20 modify the `DollarAmount` object when performing arithmetic calculations. This is different from how the arithmetic operators work with fundamental types. For example, the expression `value1 + value2` adds two values and produces a temporary result, but the `+` operator does not modify its left or right operands. In **Chapter 10**, we’ll demonstrate C++’s operator overloading capabilities that enable you to define operators for use with your own types.

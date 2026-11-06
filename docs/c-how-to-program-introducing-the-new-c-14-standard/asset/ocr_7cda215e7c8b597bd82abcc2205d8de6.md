@@ -1,0 +1,3 @@
+# 15.6.2 `set` Associative Container
+
+The `set` *associative container* (from header `<set>`) is used for fast storage and retrieval of *unique* keys. The implementation of a `set` is identical to that of a `multiset`, except that a `set` must have unique keys. Therefore, if an attempt is made to insert a *duplicate* key into a `set`, the duplicate is ignored—this is the intended mathematical behavior of a set, so it’s not considered an error. A `set` supports *bidirectional iterators* (but not *random-access iterators*). If the order of the keys is not important, you can use `unordered_set` (header `<unordered_set>`) instead. **Figure 15.16** demonstrates a `set` of `double`s.

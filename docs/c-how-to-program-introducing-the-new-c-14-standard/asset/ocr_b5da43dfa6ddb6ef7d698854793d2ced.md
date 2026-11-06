@@ -1,0 +1,5 @@
+# Observation 11.6
+
+*When a program creates a derived-class object, the derived-class constructor immediately calls the base-class constructor, the base-class constructor’s body executes, then the derived class’s member initializers execute and finally the derived-class constructor’s body executes. This process cascades up the hierarchy if it contains more than two levels.*
+
+When a derived-class object is destroyed, the program calls that object’s destructor. This begins a chain (or cascade) of destructor calls in which the derived-class destructor and the destructors of the direct and indirect base classes and the classes’ members execute in *reverse* of the order in which the constructors executed. When a derived-class object’s destructor is called, the destructor performs its task, then invokes the destructor of the next base class up the hierarchy. This process repeats until the destructor of the final base class at the top of the hierarchy is called. Then the object is removed from memory.

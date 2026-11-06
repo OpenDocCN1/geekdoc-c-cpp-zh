@@ -1,0 +1,3 @@
+# # 7.10 Introduction to C++ Standard Library Class Template `vector`
+
+We now introduce C++ Standard Library class template `vector`, which is similar to class template `array`, but also supports *dynamic resizing*. Except for the features that modify a vector, the other features shown in **Fig. 7.21** also work for `arrays`. Standard class template `vector` is defined in header `<vector>` (line 5) and belongs to namespace `std`. **Chapter 15** discusses the full functionality of `vector`. At the end of this section, we’ll demonstrate class `vector`’s *bounds checking* capabilities and introduce C++’s *exception-handling* mechanism, which can be used to detect and handle an out-of-bounds `vector` index.

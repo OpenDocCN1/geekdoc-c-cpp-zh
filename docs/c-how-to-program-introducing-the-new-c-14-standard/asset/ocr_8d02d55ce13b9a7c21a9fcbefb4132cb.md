@@ -1,0 +1,1 @@
+Fig. 20.2 Linear search of an array.

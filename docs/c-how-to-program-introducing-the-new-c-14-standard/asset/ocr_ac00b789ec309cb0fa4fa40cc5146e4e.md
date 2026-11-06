@@ -1,0 +1,3 @@
+# 8.2.3 Null Pointers Prior to C++11
+
+In earlier versions of C++, the value specified for a null pointer was `0` or `NULL`. `NULL` is defined in several standard library headers to represent the value `0`. Initializing a pointer to `NULL` is equivalent to initializing a pointer to `0`, but prior to C++11, `0` was used by convention. The value `0` is the *only* integer value that can be assigned directly to a pointer variable without first *casting* the integer to a pointer type (normally via a `reinterpret_cast`; **Section 14.8**).

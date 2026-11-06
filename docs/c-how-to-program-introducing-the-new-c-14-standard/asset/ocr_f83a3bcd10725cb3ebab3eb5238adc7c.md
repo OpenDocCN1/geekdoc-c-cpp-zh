@@ -1,0 +1,4 @@
+# 13.6.4 User-Defined Output
+Stream Manipulators
+
+You can create your own stream manipulators. **Figure 13.9** shows how to create and use *new* nonparameterized stream manipulators `bell` (lines 8–10), `carriageReturn` (lines 13–15), `tab` (lines 18–20) and `endLine` (lines 24–26). For output stream manipulators, the return type and parameter must be of type `ostream&`. When line 30 inserts the `endLine` manipulator in the output stream, function `endLine` is called and line 25 outputs the escape sequence `\n` and the `flush` manipulator (which flushes the output buffer) to the standard output stream `cout`. Similarly, when lines 31–39 insert the manipulators `tab`, `bell` and `carriageReturn` in the output stream, their corresponding functions—`tab`, `bell` and `carriageReturn`—are called, which in turn output various escape sequences.

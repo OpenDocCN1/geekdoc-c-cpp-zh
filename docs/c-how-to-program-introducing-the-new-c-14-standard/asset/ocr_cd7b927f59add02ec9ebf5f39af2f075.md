@@ -1,0 +1,5 @@
+Line 30 uses the `equal_range` algorithm to return a *pair* of *forward iterators* containing the results of performing both a `lower_bound` and an `upper_bound` operation. The first two arguments must be at least *forward iterators*. The third is the value for which to locate the equal range. The algorithm returns a *pair* of *forward iterators* for the lower bound (`eq.first`) and upper bound (`eq.second`), respectively.
+
+# # Locating Insertion Points in Sorted Sequences
+
+Algorithms `lower_bound`, `upper_bound` and `equal_range` are often used to locate *insertion points* in sorted sequences. Line 39 uses `lower_bound` to locate the first point at which `5` can be inserted in order in `a`. Line 46 uses `upper_bound` to locate the last point at which `7` can be inserted in order in `a`. Line 54 uses `equal_range` to locate the first and last points at which `5` can be inserted in order in `a`.

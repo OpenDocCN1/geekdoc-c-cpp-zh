@@ -1,0 +1,5 @@
+# 14.13 Wrap-Up
+
+In this chapter, we presented various file-processing techniques to manipulate persistent data. We discussed both character-based and byte-based streams, and considered various file-processing class templates in header `<fstream>`. You learned how to use sequential file processing to manipulate records stored in order, by a record-key field. You also learned how to use random-access files to “instantly” retrieve and manipulate fixed-length records. We presented a substantial transaction-processing program using a random-access file to achieve “instant-access” processing. Finally, we discussed the basic concepts of object serialization.
+
+We introduced the Standard Library `array` and `vector` classes in **Chapter 7.** In the next chapter, you’ll learn about the Standard Library’s other predefined data structures (known as containers) as well as the basics of iterators, which are used to manipulate container elements.

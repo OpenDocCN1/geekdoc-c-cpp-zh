@@ -396,6 +396,7 @@
 +   [C 编程指南，第 9 全球版](docs/c-how-to-program-9th-global-edition/README.md)
 +   [C++ 编程程序（早期对象版），全球版](docs/c-how-to-program-early-objects-version-global-edition/README.md)
 +   [C 如何编程 全球版](docs/c-how-to-program-global-edition/README.md)
++   [C++ 如何编程：新 C++14 标准介绍](docs/c-how-to-program-introducing-the-new-c-14-standard/README.md)
 +   [C 编程：C++ 入门指南](docs/c-how-to-program-with-an-introduction-to-c/README.md)
 +   [C 语言编程：C++ 入门指南，全球版](docs/c-how-to-program-with-an-introduction-to-c-global-edition/README.md)
 +   [C 语言编程：应用与系统编程案例分析，全球版](docs/c-how-to-program-with-case-studies-in-applications-and-syste/README.md)

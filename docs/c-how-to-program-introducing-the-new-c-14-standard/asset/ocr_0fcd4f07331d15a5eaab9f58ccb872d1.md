@@ -1,0 +1,2 @@
++   - `string` member function `size` (p. 178) returns the number of characters in the `string`.
++   - Half-up rounding is a biased technique, because fewer values round down than up—fractional amounts of .1, .2, .3 and .4 round down, and .5, .6, .7, .8 and .9 round up. **Banker's rounding** (p. 179) fixes this problem by rounding .5 to the nearest *even* integer.

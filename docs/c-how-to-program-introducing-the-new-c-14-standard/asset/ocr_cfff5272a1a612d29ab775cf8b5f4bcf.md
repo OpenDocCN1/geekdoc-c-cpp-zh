@@ -1,0 +1,7 @@
+# 8.6 Using `const` with Pointers
+
+Recall that `const` enables you to inform the compiler that the value of a particular variable should *not* be modified. Many possibilities exist for using (or *not* using) `const` with function parameters, so how do you choose the most appropriate? Let the principle of least privilege be your guide. Always give a function *enough* access to the data in its parameters to accomplish its specified task, *but no more*. This section discusses how to combine `const` with pointer declarations to enforce the principle of least privilege.
+
+**Chapter 6** explained that when an argument is passed by value, a *copy* of the argument is passed to the function. If the copy is *modified* in the *called* function, the original value in the caller does *not* change. In some instances, even the copy of the argument’s value should *not* be altered in the called function.
+
+Consider a function that takes a pointer to the initial element of a built-in array and the array’s size as arguments and subsequently displays the built-in array’s elements. Such a function should loop through the elements and output each individually. The built-in array’s size is used in the function’s body to determine the highest subscript so the loop can terminate when the displaying completes. The size does not need to change in the function body, so it should be declared `const` to *ensure* that it will not change. Because the built-in array is only being

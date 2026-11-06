@@ -1,0 +1,3 @@
+# 14.4.2 Reading from the File
+
+Line 30 reads a set of data (i.e., a record) from the file. After line 30 executes the first time, `account` has the value `100`, `name` has the value `"Jones"` and `balance` has the value `24.98`. Each time line 30 executes, it reads another record into the variables `account`, `name` and `balance`. Line 31 displays the records, using function `outputLine` (lines 36–39), which uses parameterized stream manipulators to format the data for display. When the end of file is reached, the implicit call to `operator bool` in the `while` condition returns `false`, the `ifstream` destructor closes the file and the program terminates.

@@ -1,0 +1,4 @@
++   1. The program must process test results for 10 students. A counter-controlled loop can be used, because the number of test results is known in advance.
++   2. Each test result has a numeric value—either a 1 or a 2. Each time it reads a test result, the program must determine whether it’s a 1 or a 2. We test for a 1 in our algorithm. If the number is not a 1, we assume that it’s a 2. ([Exercise 4.20](#) considers the consequences of this assumption.)
++   3. Two counters are used to keep track of the exam results—one to count the number of students who passed the exam and one to count the number who failed.
++   4. After the program has processed all the results, it must decide whether more than eight students passed the exam.

@@ -1,0 +1,8 @@
+# Section 9.3 Compilation and Linking Process
+
++   - Often a class’s interface and implementation will be created and compiled by one programmer and used by a separate programmer who implements the client code that uses the class.
++   - A class-implementation programmer responsible for creating a reusable class creates the header and the source-code file that `#include`s the header, then compiles the source-code file to create the class’s object code.
++   - To hide the class’s member-function implementation details, the class-implementation programmer would provide the client-code programmer with the class’s header (which specifies the class’s interface and data members) and the class’s object code (i.e., the machine-code instructions that represent the class’s member functions).
++   - The client-code programmer is not given the source-code file with the class’s member function definitions, so the client remains unaware of how the class’s member functions are implemented.
++   - The client-code programmer needs to know only the class’s interface to use the class and must be able to link its object code. Since the interface of the class is part of the class definition in the class’s header, the client-code programmer must have access to this file and must `#include` it in the client’s source-code file.
++   - To create the executable application, the last step is to link the object code for the client code, the object code for the member-

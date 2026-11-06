@@ -1,0 +1,3 @@
+# 10.8 Case Study: A Date Class
+
+The program of **Figs. 10.6–10.8** demonstrates a `Date` class, which uses overloaded prefix and postfix increment operators to add 1 to the day in a `Date` object, while causing appropriate increments to the month and year if necessary. The `Date` header (**Fig. 10.6**) specifies that `Date`’s `public` interface includes an overloaded stream insertion operator (line 10), a default constructor (line 12), a `setDate` function (line 13), an overloaded prefix increment operator (line 14), an overloaded postfix increment operator (line 15), an overloaded `+=` addition assignment operator (line 16), a function to test for leap years (line 17) and a function to determine whether a day is the last day of the month (line 18).

@@ -1,0 +1,5 @@
+# # 12.9 Case Study: Payroll System Using Polymorphism and Runtime Type Information with Downcasting, `dynamic_cast`, `typeof` and `type_info`
+
+Recall from the problem statement at the beginning of **Section 12.7** that, for the current pay period, our fictitious company has decided to reward `BasePlusCommissionEmployees` by adding 10 percent to their base salaries. When processing `Employee` objects polymorphically in **Section 12.7.5**, we did not need to worry about the “specifics.” Now, however, to adjust the base salaries of `BasePlusCommissionEmployees`, we have to determine the *specific type* of each `Employee` object *at execution time*, then act appropriately. This section demonstrates the powerful capabilities of **runtime type information (RTTI)** and **dynamic casting**, which enable a program to determine an object’s type at execution time and act on that object accordingly.^1
+
+1. Some compilers require that RTTI be enabled before it can be used in a program. The compilers we used for testing this book’s examples

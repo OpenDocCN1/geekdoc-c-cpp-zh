@@ -1,0 +1,8 @@
+# *Section 14.8 Creating a Random-Access File*
+
++   - The `ostream` member function `write` outputs a fixed number of bytes, beginning at a specific location in memory, to the specified stream. Function `write` writes the data at the location in the file specified by the “put” file-position pointer.
++   - The `istream` member function `read` (p. **629**) inputs a fixed number of bytes from the specified stream to an area in memory beginning at a specified address. If the stream is associated with a file, function `read` inputs bytes at the location in the file specified by the “get” file-position pointer.
++   - Function `write` treats its first argument as a group of bytes by viewing the object in memory as a `const char*`, which is a pointer to a byte (remember that a `char` is one byte). Starting from that location, function `write` outputs the number of bytes specified by its second argument. The `istream` function `read` can subsequently be used to read the bytes back into memory.
++   - The `reinterpret_cast` operator (p. **629**) converts a pointer of one type to a pointer of an unrelated type.
++   - A `reinterpret_cast` is performed at compile time and does not change the value of the object to which its operand points.
++   - A program that reads unformatted data must be compiled and executed on a system compatible with the program that wrote the data—different systems may represent internal data differently.

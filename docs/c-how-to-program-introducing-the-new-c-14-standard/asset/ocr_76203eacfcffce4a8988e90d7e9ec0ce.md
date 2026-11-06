@@ -1,0 +1,7 @@
+performed by explicit function calls, but operator notation is often more natural.
+
+Our examples start by demonstrating the C++ Standard Library’s class `string`, which has lots of overloaded operators. This enables you to see overloaded operators in use before implementing your own. Next, we create a `PhoneNumber` class that enables us to use overloaded operators >> and << to conveniently input and output fully formatted, 10-digit phone numbers, such as (555) 555-5555. We then present a `Date` class that overloads the prefix and postfix increment (++) operators to add one day to the value of a `Date`. The class also overloads the += operator to allow a program to increment a `Date` by the number of days specified on the right side of the operator.
+
+Next, we present a capstone case study—an `Array` class that uses overloaded operators and other capabilities to solve various problems with pointer-based arrays. This is one of the most important case studies in the book. Many of our students have indicated that the `Array` case study is their “light bulb moment,” helping them truly understand what classes and object technology are all about. As part of this class, we’ll overload the stream insertion, stream extraction, assignment, equality, relational and subscript operators. Once you master this `Array` class, you’ll indeed understand the essence of object technology—crafting, using and reusing valuable classes.
+
+The chapter concludes with discussions of how you can convert between types (including class types), problems with certain implicit

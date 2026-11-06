@@ -1,0 +1,5 @@
+values and should not be used. Line 41 outputs the elements of `a3` from `a3.begin()` up to but not including `newEnd`.
+
+# `remove_copy_if` *Algorithm*
+
+Lines 51–52 use the `remove_copy_if` algorithm to *copy* the elements from `a4` in the range from `a4.cbegin()` up to, but *not including*, `a4.cend()` for which a *unary predicate function* (the lambda at line 52) returns `true`. The elements are placed in the `array c2`, starting at `c2.cbegin()`. The iterators supplied as the first two arguments must be *input iterators*. The iterator supplied as the third argument must be an *output iterator* so that the element being copied can be *written into* to the destination container. This algorithm returns an iterator positioned after the *last* element copied into `c2`. Line 55 outputs the entire contents of `c2`.

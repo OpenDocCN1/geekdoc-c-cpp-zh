@@ -1,0 +1,5 @@
+# Outputting `vector` Contents with Iterators
+
+Line 33 calls function `printVector` (defined in lines 46–52) to output the contents of a `vector` using iterators. The function receives a reference to a `const vector`. The `for` statement in lines 48–51 initializes control variable `constiterator` using `vector` member function `cbegin` (added in C++11), which returns a `const_iterator` to the `vector`’s first element. We infer the control variable’s type (`vector<int>::const_iterator`) using the `auto` keyword.
+
+The loop continues as long as `constiterator` has not reached the end of the `vector`. This is determined by comparing `constiterator` to the result of calling the `vector`’s `cend` member function (also added in C++11), which returns a `const_iterator` indicating the *location past the last element* of the `vector`. If `constiterator` is equal to this value, the end of the `vector` has been reached. Prior to C++11, you would have used the overloaded `end` member function to get the `const_iterator`. Functions `cbegin`, `begin`, `cend` and `end` are available for all first-class containers.

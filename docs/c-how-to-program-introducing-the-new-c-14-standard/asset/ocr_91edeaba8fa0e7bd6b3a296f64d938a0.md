@@ -1,0 +1,3 @@
+# 9.2.4 `Time` Class Member Functions
+
+The source-code file `Time.cpp` (**Fig. 9.2**) defines class `Time`’s member functions, which were *declared* in lines 13–15 of **Fig. 9.1**. Note that for the `const` member functions `toUniversalString` and `toStandardString`, the `const` keyword *must* appear in *both* the function prototypes (**Fig. 9.1**, lines 14–15) and the function definitions (**Fig. 9.2**, lines 26 and 34).

@@ -1,0 +1,3 @@
+# `list` *Member Function* `merge`
+
+After inserting more elements in `otherValues` and *sorting* both `values` and `otherValues`, line 52 uses `list` member function `merge` to remove all elements of `otherValues` and insert them in sorted order into `values`. Both `list`s must be *sorted* in the same order before this operation is performed. A second version of `merge` enables you to supply a *binary predicate function* that takes two arguments (values in the list) and returns a `bool` value. The predicate function specifies the sorting order used by `merge`.

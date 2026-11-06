@@ -1,0 +1,8 @@
+# Section 18.2 Class Templates
+
++   - Class templates provide the means for describing a class generically and for instantiating classes that are type-specific versions of this generic class.
++   - Class templates are called **parameterized types** (p. 785); they require type parameters to specify how to customize a generic class template to form a specific class-template specialization.
++   - To use class-template specializations you write one class template. When you need a new type-specific class, the compiler writes the source code for the class-template specialization.
++   - A **class-template definition** (p. 785) looks like a conventional class definition, but it’s preceded by `template<typename T>` (or `template<class T>`) to indicate this is a class-template definition. `T` is a type parameter that acts as a placeholder for the type of the class to create. The type `T` is mentioned throughout the class definition and member-function definitions as a generic type name.
++   - The names of template parameters must be unique inside a template definition.
++   - Member-function definitions outside a class template each begin with the same `template` declaration as their class. Then, each function definition resembles a conventional function definition, except that the generic data in the class always is listed generically as type parameter `T`. The binary scope-resolution operator is used

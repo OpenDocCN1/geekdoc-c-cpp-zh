@@ -1,0 +1,3 @@
+# 22.12 Wrap-Up
+
+This chapter introduced `struct` definitions, initializing `struct`s and using them with functions. We discussed `typedef`, using it to create aliases to help promote portability. We also introduced bitwise operators to manipulate data and bit fields for storing data compactly. You learned about the string-conversion functions in `<stdlib>` and the string-processing functions in `<cstring>`.

@@ -1,0 +1,1 @@
++   - Objects of class `string` do not have uniform size, rather they use dynamically allocated memory to accommodate strings of various lengths.

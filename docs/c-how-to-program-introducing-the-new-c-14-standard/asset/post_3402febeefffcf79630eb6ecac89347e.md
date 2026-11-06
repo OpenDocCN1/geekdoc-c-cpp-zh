@@ -1,0 +1,231 @@
+
+- Displaying Characters for Given ASCII Codes exercise **951**
+- Distance Between Points exercise **278**
+- distribution pass in bucket sort **865**
+- divide-and-conquer approach **212**
+- divide by zero **19, 125**
+- `DivideByZeroException` **764**
+- `divides` function object **745**
+- division **7, 55, 56**
+- division compound assignment operator, `/=` **137**
+- `do...while` iteration statement **179, 180, 198**
+- `do...while` repetition statement **108**
+- dot (`.`) operator **76**
+- dot operator (`.`) **398, 399, 425, 541, 774**
+- dotted line in the UML **107**
+- `double` 51
+- double-array subscripting 490
+- `double` data type 126, 219
+- double-ended queue (`deque`) 680
+- double-precision floating-point number 169
+- double quote 48
+- double selection 198
+- double-selection statement 108, 132
+- double-word boundary 901
+- “doubly initializing” member objects 421
+- doubly linked list 658, 676, 814
+- downcasting 540
+- driver program 75
+- dual-core processor 7
+- dummy value **123**
+- duplicate elimination **830**, 837
+  - exercise 330, 755
+- duplicate keys 682, 687
+- duplicate node values 824
+- DVD 616
+- dynamic binding **541**, 563, 567
+- dynamic casting **567**
+- dynamic data structure 340, 798
+- dynamic memory 772
+- dynamic memory management **466**
+- `dynamic_cast` **569**, 776
+- dynamically allocate array of integers 473
+- dynamically allocated memory 412, 413, 477, 546, 772
+  - allocate and deallocate storage 405
+- dynamically allocated storage 477
+- dynamically determine function to execute 540
+
+## E
+
+- eBay **3**
+- Eclipse **17**
+- Eclipse Foundation **32**
+- edit a program **17**
+- editor **17**
+- **Editor** area (Xcode) **29**
+- efficiency of
+  - binary search **850**
+  - bubble sort **865**
+  - insertion sort **853**
+  - linear search **845**
+  - merge sort **861**
+  - selection sort **855**
+- Eight Queens
+  - Brute force approaches exercise **335**
+  - exercise **334**
+  - with recursion exercise **336**
+- electronic mail (e-mail) **34**
+- element of an `array` **284**
+- `#elif` **986**
+- `else` keyword **111**
+- `emacs` **17**
+- e-mail **4**
+- e-mail (electronic mail) **34**
+- embedded parentheses **56**
+- embedded system **33**
+- `Employee` class **416**
+  - definition showing composition **417**
+  - definition with a `static` data member to track the number of `Employee` objects in memory **430**
+  - enhanced **897**
+  - exercise **100**
+  - header **552**
+  - implementation file **553**
+  - member-function definitions **418, 431**
+- employee identification number **9**
+- `empty` member function of containers **659**
+  - of `priority_queue` **694**
+  - of `queue` **693**
+  - of sequence container **675**
+  - of `stack` **691**
+  - of `string` **879**
+- `empty` member function of `string` **452**
+- empty statement (a semicolon, `;`) **114**
+- empty `string` **80**
+- empty string **879**
+- encapsulate **82**
+- encapsulation **16, 393, 411, 421**
+- encrypt **156**
+- encrypter **895**
+- encryption **895, 897**
+- `end` library function **351**, **670**, **671**
+- end line **54**
+- `end` member function
+  - of class `string` **886**
+  - of containers **660**
+  - of first-class container **662**
+- end of a sequence **729**
+- end of a stream **623**
+- “end of data entry” **123**
+- end-of-file
+  - indicator **183**, **366**, **603**, **616**, **620**
+  - key combination **620**
+- `#endif` preprocessor directive **389**, **986**
+- `endl` stream manipulator **54**, **130**
+- Enforcing Privacy with Cryptography exercise **156**
+- English-like abbreviations **10**
+- Enhancing Class `Date` exercise **441**
+- Enhancing Class `Rectangle` exercise **442**
+- Enhancing Class `Time` exercise **440, 441**
+- `enqueue` function **819**
+- *Enter key* **53**
+- entry point **194**
+- `enum`
+  - keyword **231**
+  - specifying underlying integral type **232**
+- `enum` `class` (scoped enum) **230**
+- enumeration **230, 983**
+  - constant **230, 985**
+- `EOF` (end of file) **583, 586, 918**
+- `eof` member function **583**
+- `eofbit` of stream **603**
+- `equal` algorithm **717, 748**
+- equal to 59
+- `equal_range` algorithm 740, 742, 748
+- `equal_range` function of associative container 685
+- `equal_to` function object 745
+- equality and relational operators 60
+- equality operator 59, 60
+  - `!=` 110
+  - `==` 110, 469, 661
+- equation of straight line 57
+- `erase` algorithm
+  - with iterator arguments 897
+- `erase` member function
+  - of class `string` 881, 882
+  - of containers 660
+  - of first-class containers 675
+- Erasing Characters from a `string` exercise 896
+- e-reader device 34
+- `#error` preprocessing directive 987
+- error bits 586
+- error checking 213
+- error detected in a constructor 768
+- Error-Prevention Tips overview xxxiii
+- error state of a stream 601, 602
+- escape character 48
+- escape sequences 48, 49
+  - `\'` (single-quote character) 48
+  - `\"` (double-quote character) 48
+  - `\\` (backslash character) 48
+  - `\a` (alert) 48
+  - `\n` (newline) 48
+  - `\r` (carriage return) 48
+  - `\t` (tab) 48
+- evaluating a postfix expression 836
+- evaluating expressions 815, 835
+- even integer **205**
+- Even Numbers exercise **274**
+- examination-results problem **133**
+- `<exception>` header **221**
+- exception **321**, **322**, **758**
+  - `bad_alloc` **769**
+  - `bad_cast` **776**
+  - `bad_typeid` **776**
+  - handler **321**
+  - handling **317**
+  - `length_error` **776**
+  - `logic_error` **776**
+  - `out_of_range` **322**, **776**
+  - `overflow_error` **776**
+  - parameter **322**
+  - `underflow_error` **776**
+  - `what` virtual function **322**
+- `exception` class **759**, **775**
+  - `what` virtual function **759**
+- exception handling **221**, **758**
+- `<exception>` header **759**, **775**
+- exception object **764**
+- exception parameter **762**
+- executable image **18**
+- executable program **18**
+- execute a program **17**, **18**
+- execution-time error **20**
+- execution-time overhead **563**
+- exit a function **49**
+- `exit` function **406**, **619**, **771**
+- exit point **194**
+  - of a control statement **109**
+- `EXIT_FAILURE` **620**
+- `EXIT_SUCCESS` **620**
+- exiting a `for` statement **187**
+- `exp` function **214**
+- expand a macro **984**
+- `explicit` constructor **484**
+- explicit conversion **129**
+- `explicit` keyword **86, 484**
+  - conversion operators **484**
+- exponent **495**
+- exponential “explosion” of calls **260**
+- exponential complexity **260**
+- exponential function **214**
+- exponentiation **58, 169**
+  - exercise **274**
+- expression **110, 129**
+- extensibility **459, 533**
+- extensible markup language (XML) **644**
+- extensible programming language 74
+
+## F
+
+- `fabs` function **215**
+- Facebook **3**, **33**
+- factorial **156**, **206**, **255**, **256**, **257**
+- Factorial exercise **156**
+- `fail` member function **603**
+- `failbit` of stream **586**, **601**, **603**, **619**
+- FairTax exercise **210**
+- `false` **60**, **110**, **261**, **599**
+- fatal error **114**, **382**
+- fatal logic error **59**, **114**
+- fatal runtime error **20**
+- fault-tolerant programs **321**, **758**

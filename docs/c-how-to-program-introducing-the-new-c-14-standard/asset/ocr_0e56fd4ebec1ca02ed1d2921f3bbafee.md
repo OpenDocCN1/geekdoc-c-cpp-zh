@@ -1,0 +1,5 @@
+# Function `main`
+
+Lines 64–66 set up a random-number generator for `int` values from `10`–`99`. Lines 68–74 create an `array` and fill it with random `int`s. Recall that the binary search algorithm requires a *sorted* `array`, so line 76 calls the Standard Library function `sort` to sort `arrayToSearch`’s elements into ascending order. Line 78 displays `arrayToSearch`’s sorted contents.
+
+Lines 88–105 loop until the user enters the value `-1`. For each search key the user enters, the program performs a binary search of `arrayToSearch` to determine whether it contains the search key. The first line of output from this program shows `arrayToSearch`’s contents in ascending order. When the user instructs the program to search for `48`, the program first tests the middle element, which is `60` (as indicated by `*`). The search key is less than `60`, so the program eliminates the second half of the `array` and tests the middle element from the first half of the `array`. The search key equals `48`, so the program returns the index `3` after performing just *two* comparisons. The output also shows the results of searching for the values `92` and `22`.

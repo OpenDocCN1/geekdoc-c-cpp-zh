@@ -1,0 +1,1 @@
+Fig. 13.14 Using member function `fill` and stream manipulator `setfill` to change the padding character for fields larger than the printed values.

@@ -1,0 +1,3 @@
+# *C++11: Managing Dynamically Allocated Memory with `unique_ptr`*
+
+In this case study, class `Array`’s destructor used `delete[]` to return the dynamically allocated built-in array to the free store. C++11 enables you to use `unique_ptr` to ensure that this dynamically allocated memory is deleted automatically when the `Array` object goes out of scope. In **Chapter 17**, we introduce `unique_ptr` and show how to use it to manage dynamically allocated objects or dynamically allocated built-in arrays.

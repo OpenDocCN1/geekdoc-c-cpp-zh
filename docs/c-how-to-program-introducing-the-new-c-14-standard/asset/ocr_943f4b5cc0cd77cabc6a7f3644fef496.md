@@ -1,0 +1,5 @@
+Line 7 declares and initializes control variable `counter`. Upon entering the `do...while` statement, line 10 outputs `counter`’s value and line 11 increments `counter`. Then the program evaluates the loop-continuation test at the *bottom* of the loop (line 12). If the condition is *true*, the loop continues at the first body statement (line 10). If the condition is *false*, the loop terminates and the program continues at the next statement after the loop.
+
+# ## *UML Activity Diagram for the `do...while` Iteration Statement*
+
+**Figure 5.10** contains the UML activity diagram for the `do...while` statement. This diagram makes it clear that the loop-continuation condition is not evaluated until *after* the loop performs the action state *at least once*. Compare this activity diagram with that of the `while` statement (**Fig. 4.8**).

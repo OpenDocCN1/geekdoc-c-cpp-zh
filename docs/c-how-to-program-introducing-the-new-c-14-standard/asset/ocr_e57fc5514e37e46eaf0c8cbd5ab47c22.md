@@ -1,0 +1,7 @@
++   - Removed extra spaces inside `[]`, `()`, `<>` and `{}` delimiters.
++   - Replaced most `print` member functions with `toString` member functions to make classes more flexible—for example, returning a `string` gives the client code the option of displaying it on the screen, writing it to a file, concatenating it with other `strings`, etc.
++   - Now using `ostringstream` to create formatted `string`s for items like the `string` representations of a `Time`, rather than outputting formatted data directly to the standard output.
++   - For simplicity, we deferred using the three-file architecture from **Chapter 3** to **Chapter 9**, so all early class examples define the entire class in a header.
++   - We reimplement **Chapter 10**’s `Array` class operator-overloading example with `unique_ptr`s in Chapter 24. Using raw pointers and dynamic-memory allocation with `new` and `delete` is a source of subtle programming errors, especially “memory leaks”—`unique_ptr` and the other smart pointer types help prevent such errors.
++   - Using lambdas rather than function pointers in **Chapter 16**, Standard Library Algorithms. This will get readers comfortable with lambdas, which can be combined with various Standard Library algorithms to perform functional programming in C++. We’re planning a more in-depth treatment of functional programming for *C++ How to Program, 11/e*.
++   - Enhanced Chapter 24 with additional C++14 features.

@@ -1,0 +1,7 @@
+0–100. A grade in the range 90–100 represents A, 80–89 represents B, 70–79 represents C, 60–69 represents D and 0–59 represents F.
+
+The `switch` statement consists of a block that contains a sequence of `case` labels and an optional `default` case. These are used in this example to determine which counter to increment based on the grade.
+
+When the flow of control reaches the `switch`, the program evaluates the expression in the parentheses (`grade / 10`) following keyword `switch`. This is the `switch`’s **controlling expression**. The program compares this expression’s value with each `case` label. The expression must have a signed or unsigned integral type—`bool`, `char`, `char16_t`, `char32_t`, `wchar_t`, `int`, `long` or `long long`. The expression can also use the C++11 signed or unsigned integral types, such as `int64_t` and `uint64_t`—see the `<cstdint>` header for a complete list of these type names.
+
+The controlling expression in line 29 performs integer division, which *truncates the fractional part* of the result. When we divide a value from 0 to 100 by 10, the result is always a value from 0 to 10. We use several of these values in our `case` labels. If the user enters the integer `85`, the controlling expression evaluates to 8. The `switch` compares `8` with each `case` label. If a match occurs (`case 8:` at line 35), that `case`’s statements execute. For `8`, line 36 increments `bCount`, because a grade in the 80s is a B. The **break statement** (line 37)
