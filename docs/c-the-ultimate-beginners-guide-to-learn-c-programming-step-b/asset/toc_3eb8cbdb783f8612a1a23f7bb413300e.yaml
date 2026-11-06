@@ -1,0 +1,320 @@
+level_changes:
+- line: 134
+  before: 2
+  after: 3
+- line: 203
+  before: 2
+  after: 3
+- line: 207
+  before: 3
+  after: 4
+- line: 224
+  before: 3
+  after: 4
+- line: 234
+  before: 3
+  after: 4
+- line: 251
+  before: 3
+  after: 4
+- line: 269
+  before: 2
+  after: 3
+- line: 282
+  before: 2
+  after: 3
+- line: 286
+  before: 2
+  after: 3
+- line: 294
+  before: 3
+  after: 4
+- line: 298
+  before: 3
+  after: 4
+- line: 306
+  before: 3
+  after: 4
+- line: 310
+  before: 3
+  after: 4
+- line: 375
+  before: 3
+  after: 4
+- line: 379
+  before: 3
+  after: 4
+- line: 386
+  before: 3
+  after: 4
+- line: 392
+  before: 3
+  after: 4
+- line: 405
+  before: 3
+  after: 4
+- line: 461
+  before: 3
+  after: 4
+- line: 466
+  before: 3
+  after: 4
+- line: 627
+  before: 2
+  after: 3
+- line: 631
+  before: 3
+  after: 4
+- line: 639
+  before: 3
+  after: 4
+- line: 645
+  before: 3
+  after: 4
+- line: 668
+  before: 3
+  after: 4
+- line: 719
+  before: 2
+  after: 3
+- line: 723
+  before: 2
+  after: 3
+- line: 781
+  before: 2
+  after: 3
+- line: 825
+  before: 3
+  after: 4
+- line: 838
+  before: 2
+  after: 3
+- line: 897
+  before: 2
+  after: 3
+- line: 978
+  before: 2
+  after: 3
+- line: 1084
+  before: 3
+  after: 4
+- line: 1316
+  before: 3
+  after: 4
+- line: 1355
+  before: 3
+  after: 4
+- line: 1517
+  before: 3
+  after: 4
+- line: 1532
+  before: 3
+  after: 4
+- line: 1545
+  before: 3
+  after: 4
+- line: 1558
+  before: 3
+  after: 4
+- line: 1634
+  before: 3
+  after: 4
+- line: 1640
+  before: 3
+  after: 4
+- line: 1646
+  before: 2
+  after: 4
+- line: 1650
+  before: 2
+  after: 3
+- line: 1669
+  before: 2
+  after: 4
+- line: 1683
+  before: 3
+  after: 5
+- line: 1697
+  before: 3
+  after: 5
+- line: 1707
+  before: 2
+  after: 4
+- line: 1711
+  before: 3
+  after: 5
+- line: 1717
+  before: 2
+  after: 4
+- line: 1741
+  before: 3
+  after: 5
+- line: 1749
+  before: 3
+  after: 5
+- line: 1787
+  before: 2
+  after: 3
+- line: 1791
+  before: 3
+  after: 4
+- line: 1842
+  before: 3
+  after: 4
+- line: 2138
+  before: 2
+  after: 3
+- line: 2169
+  before: 2
+  after: 3
+- line: 2476
+  before: 2
+  after: 3
+- line: 2525
+  before: 2
+  after: 3
+- line: 2720
+  before: 2
+  after: 3
+- line: 2732
+  before: 2
+  after: 3
+- line: 2910
+  before: 2
+  after: 3
+- line: 2914
+  before: 2
+  after: 3
+- line: 3174
+  before: 2
+  after: 3
+- line: 3705
+  before: 2
+  after: 3
+- line: 3752
+  before: 2
+  after: 3
+- line: 3761
+  before: 2
+  after: 3
+- line: 3814
+  before: 2
+  after: 3
+- line: 3857
+  before: 2
+  after: 3
+- line: 3909
+  before: 2
+  after: 3
+- line: 4203
+  before: 2
+  after: 4
+- line: 4228
+  before: 2
+  after: 3
+- line: 4230
+  before: 3
+  after: 4
+- line: 4240
+  before: 3
+  after: 4
+- line: 4250
+  before: 2
+  after: 3
+- line: 4254
+  before: 3
+  after: 4
+- line: 4288
+  before: 2
+  after: 3
+- line: 4292
+  before: 3
+  after: 4
+- line: 4333
+  before: 2
+  after: 3
+- line: 4337
+  before: 3
+  after: 4
+text_changes:
+- line: 89
+  before: 第2章：详细概述
+  after: 第 2 章：详细概述
+- line: 203
+  before: C# 中不同关键字[4]的细分
+  after: C# 中不同关键字的细分
+- line: 327
+  before: '*属性*'
+  after: 属性
+- line: 335
+  before: '*C# 中的不同数据类型*'
+  after: C# 中的不同数据类型
+- line: 405
+  before: '*字符串*'
+  after: 字符串
+- line: 509
+  before: 变量的默认值[9]
+  after: 变量的默认值
+- line: 719
+  before: 隐式转换[1]
+  after: 隐式转换
+- line: 1180
+  before: switch 语句[15]
+  after: switch 语句
+- line: 1316
+  before: switch 中的 Goto[16]
+  after: switch 中的 Goto
+- line: 1413
+  before: while 循环[47]
+  after: while 循环
+- line: 1589
+  before: “Foreach” 循环[20]
+  after: “Foreach” 循环
+- line: 1650
+  before: 声明、实现和调用 C# 方法[21]
+  after: 声明、实现和调用 C# 方法
+- line: 1749
+  before: 递归方法调用[23]
+  after: 递归方法调用
+- line: 1787
+  before: 向方法传递参数[25]
+  after: 向方法传递参数
+- line: 1938
+  before: 第10章：数组世界^[27]
+  after: 第 10 章：数组世界
+- line: 1944
+  before: 声明数组^[29]
+  after: 声明数组
+- line: 2084
+  before: 使用 *foreach* 循环
+  after: 使用 foreach 循环
+- line: 2275
+  before: 第 11 章：类[30]
+  after: 第 11 章：类
+- line: 2607
+  before: 第12章：结构
+  after: 第 12 章：结构
+- line: 3368
+  before: 第 16 章：正则表达式[38]
+  after: 第 16 章：正则表达式
+- line: 3671
+  before: 第18章：文件 I/O[40]
+  after: 第 18 章：文件 I/O
+- line: 3857
+  before: '**StreamWriter 类**[43]'
+  after: StreamWriter 类
+- line: 3909
+  before: BinaryReader 类[44]
+  after: BinaryReader 类
+- line: 3922
+  before: BinaryWriter 类<sup>[45]</sup>
+  after: BinaryWriter 类
+- line: 4001
+  before: 第19章：委托
+  after: 第 19 章：委托
+- line: 4230
+  before: 属性[^50]
+  after: 属性
+- line: 4250
+  before: 创建和管理线程<sup>[32]</sup>
+  after: 创建和管理线程

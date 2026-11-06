@@ -1,0 +1,27 @@
+# Creating an identifier
+
+If you look through some of the suggestions that come with Microsoft, you will find that they will recommend that you use a Camel notation when you are working with the variables, and it will recommend that you work with the Pascal notation when you want to work with the methods. Working with the Camel notation will mean that you will keep the first letter of your name as lower case. If you are creating an identifier that has a compound word then you will make sure that the first letter of your second word will start with an uppercase letter:
+
++   payment		completePayment
++   mathematics		firstClass
+
+The Pascal notation will take things a bit differently. This notation style requires you to start the first word using an uppercase letter. The first letter in all of the other words in the sequence should also be written in uppercase as well. Some examples of using the Pascal notation include:
+
++   WriteLine()		ReadLine()
++   Start()		Main()
+
+When it comes to naming these identifiers, you can work with numbers and underscores as well. But, if for some reason you can’t begin the name of these identifiers with a number, you can write out something like seven books, but you can’t write out “7books.”
+
+Now, these notations are not required, and you can change them around as much as you would like. But this is considered a proper coding practice if you’re working with C# so it is best to follow these rules so the code will work exactly the way that you want it.
+
+As you can see, C# is a pretty easy language to learn. You do not need to worry about a lot of rules that are too complicated to remember like the other programming languages, and yet you will still have a lot of the power and the flexibility to get the most out of coding.
+
+# Definite Assignment
+
+C# enforces a definite assignment policy. This means that you will need to initialize the local variable with the value before using it. Suppose the following is written:
+
+```
+Console.WriteLine(name);
+```
+
+**Error:** Use of unassigned local variable ‘name’

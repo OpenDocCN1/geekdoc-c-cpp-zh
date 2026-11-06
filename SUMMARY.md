@@ -558,6 +558,7 @@
 +   [C++：初学者指南，通过真实示例快速轻松掌握 C++ 编程基础（C++ 编程步步阶指南）](docs/c-the-crash-course-for-beginners-to-learn-the-basics-of-c-pr/README.md)
 +   [C++：新手硬核 C++ 速成课 - 8 小时学会在 C++ 编程！（编程系列丛 1）](docs/c-the-no-bs-c-crash-course-for-newbies---learn-c-programming/README.md)
 +   [C++：终极初学者指南！](docs/c-the-ultimate-beginners-guide/README.md)
++   [C#：循序渐进学习 C# 编程的终极初学者指南](docs/c-the-ultimate-beginners-guide-to-learn-c-programming-step-b/README.md)
 +   [C++：学习 C++ 基础终极速成课程（C 编程、易易上手 C++、C++ 编程、今天开始编码）](docs/c-the-ultimate-crash-course-to-larning-the-basics-of-c-c-pro/README.md)
 +   [C++：学习 C++ 的终极快速课程（从基础到高级）（指南、C 编程、HTML、Javascript、编程、全部、互联网、编码、CSS、Java、PHP 书籍 2）](docs/c-the-ultimate-crash-course-to-learning-c-from-basics-to-adv/README.md)
 +   [C++：学习 C++ 基础与 Python 编程语言的终极课程 (C++，C++ 初学者指南，如何编程, C ... 编码, Web 开发,编码) (第 1 卷)](docs/c-the-ultimate-crash-course-to-learning-the-basics-of-c-and-/README.md)
