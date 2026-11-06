@@ -1,0 +1,26 @@
+level_changes:
+- line: 104
+  before: 3
+  after: 2
+- line: 209
+  before: 2
+  after: 3
+- line: 543
+  before: 2
+  after: 3
+- line: 581
+  before: 1
+  after: 2
+- line: 622
+  before: 2
+  after: 3
+- line: 640
+  before: 2
+  after: 3
+- line: 660
+  before: 2
+  after: 3
+text_changes:
+- line: 209
+  before: 最好按如下方式定义：
+  after: 定义变量

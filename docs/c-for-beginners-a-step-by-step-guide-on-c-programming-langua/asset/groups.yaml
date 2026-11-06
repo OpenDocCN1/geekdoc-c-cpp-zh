@@ -1,0 +1,2906 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # C++
+
+
+    # # FOR BEGINNERS
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_0_0.png)
+
+
+    BUD TENNY'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    to construct anything online to aid with a website or an app. Some may operate
+    well with a certain operating system, while others will be better suited for games.
+    Still, others may be utilized to assist with phone and mobile demands. When it
+    comes to coding languages, you have a lot of options when it comes to getting
+    things done. Knowing what tasks, you want to finish and how they will help you
+    achieve your goals can make your life a lot simpler. However, in this handbook,
+    we will spend some time looking at the C++ language and what we can do to make
+    it function effectively for us. When it comes to working with a wonderful coding
+    language that has a lot of history, the C++ language is the best one to begin
+    started with. In reality, this will be regarded as one of the very first languages
+    available, one of the first to be designed to assist us in learning how to code
+    in the first place. Because this language has been around for a long time, there
+    will be a lot of serious programmers and coders who will learn how to use it and
+    grasp the fundamentals of this coding language to make it work for them. As we
+    can see from the name, C++ is a programming language that is designed to write
+    down various sections of the code and the various apps that you are trying to
+    build. C++, like many other coding languages available today, is an OOP (object-oriented
+    programming) language. This implies that this language may focus on classes and
+    objects rather than the abstracts that come with some other options. This makes
+    it easy for us to lay down some of the various codes that we want, and you can
+    utilize it to avoid some of the frequent challenges that these languages have.
+    C++ will be a wonderful coding language to learn since it has been intended to
+    provide you with all of the flexibility you need to get things done. There will
+    be a lot more speed with this one, which will make it an even better coding language
+    to work with.
+
+
+    **There are several methods in which we may work with C++, including:**
+
+
+    +   1. **Prepackaged scripts:** These will be very useful to you as a novice since
+    they will allow you to practice some of the hacking methods that we will discuss
+    in this handbook. These are pre-packaged so that you may study without having
+    to set everything up on your own.'
+  - '[PAGE 4]
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_4_0.png)
+
+
+    2. **Video games:** C++ is the programming language that powers many of today''s
+    most popular video games.
+
+    While this handbook will not go into such detail that you will be able to make
+    your own video game when you are through, it is something that you can surely
+    learn how to accomplish using this language.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_4_1.png)'
+  - '[PAGE 5]
+
+
+    +   3. **Web pages:** Many web pages will depend on C++ since it is a very straightforward
+    language to handle and will ensure that any websites you establish with it are
+    swift and simple to use. You can even utilize this language to create some fascinating
+    interactive features. This kind of terminology is used on popular websites such
+    as eBay and Amazon.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_5_0.png)
+
+
+    +   4. **Apps for smartphones:**
+
+    +   If you like using your smartphone and experimenting with the many applications
+    available, you may discover that working with C++ may enhance your experience.
+
+    +   This language may let you quickly construct your smartphone applications.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_5_1.png)'
+  - '[PAGE 6]
+
+
+    # # C++''s Brief History
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_6_0.png)
+
+
+    The next thing we need to look at is some of the histories that come with C++.
+    Because it was one of the original coding languages, this will be a coding language
+    with a long and illustrious history. It began before anything was understood about
+    computer programming in the first place, and long before individuals considered
+    doing this for a job. Consider the year 1979, when activities like telephone hacking
+    were becoming popular. That is how far back we must go to understand the origins
+    of this coding language.
+
+
+    And you''ll see that there aren''t many other programming languages that are still
+    in use that can be traced back this far.
+
+
+    Bjarne Stroustrup was working on his doctoral thesis at the time, and he chose
+    to use the Simula programming language. This is one of the earliest programming
+    languages used in the computer era. However, it was very sluggish and riddled
+    with errors.
+
+
+    Stroustrup devised the concept of C with Classes. A much quicker programming language
+    than Simula. C with classes evolved into Cfront, which accelerated the process
+    of designing a language.
+
+
+    Cfront, on the other hand, was left in the dust when C++ arrived, since it had
+    compilers in the language, making it far simpler and quicker to use than any other
+    project language at the time.
+
+
+    Since then, there have been annotated reference manuals and language modifications
+    to make it better, quicker, and simpler to use. C++ for Dummies is a popular introduction
+    to the language.
+
+
+    C++ is one of the most popular coding languages available today. This language
+    is going to be the best to use for a lot of industries, so rather than of spending
+    the time and effort to create a new language to use, they opt to use C++ and then
+    modify it to some of the various sections and projects they want to undertake
+    because of its adaptability.
+
+
+    # ## Why do programmers choose this language?'
+  - '[PAGE 7]
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_7_0.png)
+
+
+    As previously said, there are a variety of programming languages available for
+    usage, and you may be wondering why programmers choose the C++ language over others.
+    To begin with, many programmers choose C++ because of its versatility and speed.
+
+
+    This is one of the oldest languages available, but it can stay up with your demands
+    and will offer us all of the codes and more that we need to complete our programs
+    and applications. It is also seen to be a useful language for novices to utilize
+    since once you master the fundamentals, you can use them to help you with other
+    coding languages. Furthermore, if you want to learn more about how to utilize
+    a coding language that can handle tasks other than simply working on a computer,
+    C++ is a wonderful place to start. It will work well with some of the codes that
+    would be used on websites, mobile applications, and so much more. Of fact, some
+    of the choices discussed above are just the beginning of why programmers would
+    like working with C++ so much. Other advantages that will help us fall in love
+    with this programming language are as follows:
+
+
+    # **1. It has a very huge library:**
+
+
+    Because C++ has been around for a long time, it will also have a very large library.
+    This is a library that every programmer of this language may use to make picking
+    our codes and proceeding with the proper functions simpler, as well as save time.
+    You may even take this a step further and write your own code, if necessary, but
+    for a newbie, this library will get you started on the right foot.
+
+
+    # **2. It is compatible with some of the other languages.**
+
+
+    There may be times when you need to use another coding language in addition to
+    C++. And when you''re working with C++, this is a piece of cake. This guarantees
+    that you can complete all of your code in a timely manner, and may make it much
+    simpler to manage a lot of the work that you need to do, whether your coding requirements
+    are basic or complicated.
+
+
+    # **3. It can manage a large number of coding tasks.**
+
+
+    Other programming languages that you may use are often designed to handle just
+    a small number'
+  - '[PAGE 8]
+
+
+    <!-- no content -->'
+  - '[PAGE 9]
+
+
+    C++''s portability will enable us to write part of the programming that we need,
+    regardless of the kind of hardware we intend to utilize. It will also enable us
+    to switch the development of all our programming from one platform to another
+    if this becomes a worry for us. These are just a handful of the benefits of using
+    the C++ programming language.
+
+
+    It has all of the compatibility, power, capabilities, and more that we need to
+    handle the coding tasks that we have, and it can truly assure that we get the
+    job done.
+
+
+    It is often criticized for being more difficult to learn than some of the other
+    alternatives, such as Python, but it includes all of the pieces that you need
+    and can get things done quickly.
+
+
+    As we can see above, there are several advantages to working with the C++ programming
+    language.
+
+
+    It may not be the first language that comes to mind when attempting to learn a
+    new coding language, but it is one of the greatest, and it will be a wonderful
+    alternative to guarantee that we achieve the results that we want in the process.
+
+
+    Whether you are looking for a language that can handle a large number of powerful
+    programs that you want to create, such as games, or you simply want to add something
+    new to your toolbelt of coding languages that you want to learn along the way,
+    you will find that the C++ language is the right choice for you.
+
+
+    Now, we must keep in mind that, although the C++ language has a plethora of advantages,
+    there are a lot of disadvantages to working with it, which is why not every programmer
+    would select it for their purposes.
+
+
+    # The primary disadvantage of this language is that it lacks security.
+
+
+    In an increasingly interconnected world where exploitation may occur at any time,
+    a lack of security will be a major turnoff for many programmers.
+
+
+    **Some of the additional disadvantages of utilizing the C++ programming language
+    are as follows:**
+
+
+    +   1. It will be difficult to deal with when we wish to integrate or utilize
+    it in a high-level application, particularly one that is vast.
+
+    +   2. It is often utilized just for a few application-specific platforms.
+
+    +   3. It is often restricted to a single platform or operating system. It could
+    be changed to anything other if we wanted, but the library will latch on to one
+    and will be hard to transfer in certain circumstances.
+
+    +   4. When we attempt to work with C++ for some of our web apps, the code may
+    be a little tough to manage, and there are typically a lot of issues when it comes
+    time to debug it.
+
+    +   5. This language will not support the trash collection procedure.'
+  md: '
+
+    ## C++
+
+
+    ### FOR BEGINNERS
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_0_0.png)
+
+
+    BUD TENNY
+
+
+    to construct anything online to aid with a website or an app. Some may operate
+    well with a certain operating system, while others will be better suited for games.
+    Still, others may be utilized to assist with phone and mobile demands. When it
+    comes to coding languages, you have a lot of options when it comes to getting
+    things done. Knowing what tasks you want to finish and how they will help you
+    achieve your goals can make your life a lot simpler.
+
+
+    However, in this handbook, we will spend some time looking at the C++ language
+    and what we can do to make it function effectively for us. When it comes to working
+    with a wonderful coding language that has a lot of history, the C++ language is
+    the best one to get started with. In reality, this will be regarded as one of
+    the very first languages available, one of the first to be designed to assist
+    us in learning how to code in the first place.
+
+
+    Because this language has been around for a long time, there will be a lot of
+    serious programmers and coders who will learn how to use it and grasp the fundamentals
+    of this coding language to make it work for them.
+
+
+    As we can see from the name, C++ is a programming language that is designed to
+    write down various sections of the code and the various apps that you are trying
+    to build. C++, like many other coding languages available today, is an OOP (object-oriented
+    programming) language. This implies that this language may focus on classes and
+    objects rather than the abstracts that come with some other options. This makes
+    it easy for us to lay down some of the various codes that we want, and you can
+    utilize it to avoid some of the frequent challenges that these languages have.
+
+
+    C++ will be a wonderful coding language to learn since it has been intended to
+    provide you with all of the flexibility you need to get things done. There will
+    be a lot more speed with this one, which will make it an even better coding language
+    to work with.
+
+
+    **There are several methods in which we may work with C++, including:**
+
+
+    - 1. **Prepackaged scripts:** These will be very useful to you as a novice since
+    they will allow you to practice some of the hacking methods that we will discuss
+    in this handbook. These are pre-packaged so that you may study without having
+    to set everything up on your own.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_4_0.png)
+
+
+    - 2. **Video games:** C++ is the programming language that powers many of today''s
+    most popular video games. While this handbook will not go into such detail that
+    you will be able to make your own video game when you are through, it is something
+    that you can surely learn how to accomplish using this language.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_4_1.png)
+
+
+    - 3. **Web pages:** Many web pages will depend on C++ since it is a very straightforward
+    language to handle and will ensure that any websites you establish with it are
+    swift and simple to use. You can even utilize this language to create some fascinating
+    interactive features. This kind of terminology is used on popular websites such
+    as eBay and Amazon.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_5_0.png)
+
+
+    - 4. **Apps for smartphones:** If you like using your smartphone and experimenting
+    with the many applications available, you may discover that working with C++ may
+    enhance your experience. This language may let you quickly construct your smartphone
+    applications.
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_5_1.png)
+
+
+    ## C++''s Brief History
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_6_0.png)
+
+
+    The next thing we need to look at is some of the histories that come with C++.
+    Because it was one of the original coding languages, this will be a coding language
+    with a long and illustrious history. It began before anything was understood about
+    computer programming in the first place, and long before individuals considered
+    doing this for a job. Consider the year 1979, when activities like telephone hacking
+    were becoming popular. That is how far back we must go to understand the origins
+    of this coding language.
+
+
+    And you''ll see that there aren''t many other programming languages that are still
+    in use that can be traced back this far.
+
+
+    Bjarne Stroustrup was working on his doctoral thesis at the time, and he chose
+    to use the Simula programming language. This is one of the earliest programming
+    languages used in the computer era. However, it was very sluggish and riddled
+    with errors.
+
+
+    Stroustrup devised the concept of C with Classes. A much quicker programming language
+    than Simula. C with classes evolved into Cfront, which accelerated the process
+    of designing a language.
+
+
+    Cfront, on the other hand, was left in the dust when C++ arrived, since it had
+    compilers in the language, making it far simpler and quicker to use than any other
+    programming language at the time.
+
+
+    Since then, there have been annotated reference manuals and language modifications
+    to make it better, quicker, and simpler to use. C++ for Dummies is a popular introduction
+    to the language.
+
+
+    C++ is one of the most popular coding languages available today. This language
+    is going to be the best to use for a lot of industries, so rather than spending
+    the time and effort to create a new language to use, they opt to use C++ and then
+    modify it to some of the various sections and projects they want to undertake
+    because of its adaptability.
+
+
+    ### Why do programmers choose this language?
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_7_0.png)
+
+
+    As previously said, there are a variety of programming languages available for
+    usage, and you may be wondering why programmers choose the C++ language over others.
+    To begin with, many programmers choose C++ because of its versatility and speed.
+
+
+    This is one of the oldest languages available, but it can stay up with your demands
+    and will offer us all of the codes and more that we need to complete our programs
+    and applications.
+
+
+    It is also seen to be a useful language for novices to utilize since once you
+    master the fundamentals, you can use them to help you with other coding languages.
+
+
+    Furthermore, if you want to learn more about how to utilize a coding language
+    that can handle tasks other than simply working on a computer, C++ is a wonderful
+    place to start. It will work well with some of the codes that would be used on
+    websites, mobile applications, and so much more.
+
+
+    Of course, some of the choices discussed above are just the beginning of why programmers
+    would like working with C++ so much. Other advantages that will help us fall in
+    love with this programming language are as follows:
+
+
+    - **1. It has a very huge library:** Because C++ has been around for a long time,
+    it will also have a very large library. This is a library that every programmer
+    of this language may use to make picking our codes and proceeding with the proper
+    functions simpler, as well as save time. You may even take this a step further
+    and write your own code, if necessary, but for a newbie, this library will get
+    you started on the right foot.
+
+
+    - **2. It is compatible with some of the other languages.** There may be times
+    when you need to use another coding language in addition to C++. And when you''re
+    working with C++, this is a piece of cake. This guarantees that you can complete
+    all of your code in a timely manner, and may make it much simpler to manage a
+    lot of the work that you need to do, whether your coding requirements are basic
+    or complicated.
+
+
+    - **3. It can manage a large number of coding tasks.** Other programming languages
+    that you may use are often designed to handle just a small number
+
+
+    C++''s portability will enable us to write part of the programming that we need,
+    regardless of the kind of hardware we intend to utilize. It will also enable us
+    to switch the development of all our programming from one platform to another
+    if this becomes a worry for us. These are just a handful of the benefits of using
+    the C++ programming language.
+
+
+    It has all of the compatibility, power, capabilities, and more that we need to
+    handle the coding tasks that we have, and it can truly assure that we get the
+    job done.
+
+
+    It is often criticized for being more difficult to learn than some of the other
+    alternatives, such as Python, but it includes all of the pieces that you need
+    and can get things done quickly.
+
+
+    As we can see above, there are several advantages to working with the C++ programming
+    language.
+
+
+    It may not be the first language that comes to mind when attempting to learn a
+    new coding language, but it is one of the greatest, and it will be a wonderful
+    alternative to guarantee that we achieve the results that we want in the process.
+
+
+    Whether you are looking for a language that can handle a large number of powerful
+    programs that you want to create, such as games, or you simply want to add something
+    new to your toolbelt of coding languages that you want to learn along the way,
+    you will find that the C++ language is the right choice for you.
+
+
+    Now, we must keep in mind that, although the C++ language has a plethora of advantages,
+    there are a lot of disadvantages to working with it, which is why not every programmer
+    would select it for their purposes.
+
+
+    ### The primary disadvantage of this language is that it lacks security.
+
+
+    In an increasingly interconnected world where exploitation may occur at any time,
+    a lack of security will be a major turnoff for many programmers.
+
+
+    **Some of the additional disadvantages of utilizing the C++ programming language
+    are as follows:**
+
+
+    - 1. It will be difficult to deal with when we wish to integrate or utilize it
+    in a high-level application, particularly one that is vast.
+
+    - 2. It is often utilized just for a few application-specific platforms.
+
+    - 3. It is often restricted to a single platform or operating system. It could
+    be changed to anything else if we wanted, but the library will latch on to one
+    and will be hard to transfer in certain circumstances.
+
+    - 4. When we attempt to work with C++ for some of our web apps, the code may be
+    a little tough to manage, and there are typically a lot of issues when it comes
+    time to debug it.
+
+    - 5. This language will not support the garbage collection procedure.
+
+    '
+  mdcn: '
+
+    ## C++
+
+
+    ### 初学者
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_0_0.png)
+
+
+    BUD TENNY
+
+
+    用于在网上构建任何内容，以支持网站或应用程序。有些可能在某些操作系统上运行良好，而另一些则更适合游戏。不过，还有一些可能用于满足手机和移动设备的需求。谈到编程语言，在完成任务方面你有很多选择。了解你想要完成哪些任务，以及它们将如何帮助你实现目标，可以让你的生活简单得多。
+
+
+    然而，在本手册中，我们将花一些时间了解 C++ 语言，以及我们可以做些什么来让它有效地为我们服务。当涉及使用一门有着悠久历史的出色编程语言时，C++ 语言是最适合入门的选择。事实上，它将被视为最早可用的语言之一，也是最早被设计用来帮助我们学习如何编程的语言之一。
+
+
+    由于这门语言已经存在很长时间，会有许多严肃的程序员和编码人员学习如何使用它，并掌握这门编程语言的基础知识，让它为他们所用。
+
+
+    从名称可以看出，C++ 是一种编程语言，旨在编写代码的各个部分以及你试图构建的各种应用程序。与当今许多其他可用的编程语言一样，C++ 是一种 OOP（面向对象编程）语言。这意味着这门语言可能侧重于类和对象，而不是其他一些选项所伴随的抽象概念。这使我们很容易编写我们想要的各种代码，你可以利用它来避免这些语言常见的某些挑战。
+
+
+    C++ 将是一门值得学习的出色编程语言，因为它旨在为你提供完成工作所需的全部灵活性。它的速度会快得多，这将使它成为一门更适合使用的编程语言。
+
+
+    **我们可以通过以下几种方式使用 C++：**
+
+
+    - 1. **预打包脚本：** 这些对作为新手的你会非常有用，因为它们将让你练习本手册中将要讨论的一些黑客方法。这些是预先打包好的，因此你可以直接学习，而不必自己完成所有设置。
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_4_0.png)
+
+
+    - 2. **电子游戏：** C++ 是当今许多最流行电子游戏背后的编程语言。虽然本手册不会详细到让你读完后就能制作自己的电子游戏，但你可以肯定学会如何使用这门语言实现这一点。
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_4_1.png)
+
+
+    - 3. **网页：** 许多网页会依赖 C++，因为它是一门非常直观易处理的编程语言，并能确保你用其建立的任何网站都快速且易于使用。你甚至可以利用这门语言创建一些引人入胜的交互功能。eBay
+    和 Amazon 等热门网站就使用这类术语。
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_5_0.png)
+
+
+    - 4. **智能手机应用：** 如果你喜欢使用智能手机并尝试各种可用的应用程序，你可能会发现使用 C++ 可以提升你的体验。这门语言可以让你快速构建自己的智能手机应用程序。
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_5_1.png)
+
+
+    ## C++ 简史
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_6_0.png)
+
+
+    下一件我们需要了解的事情是 C++ 的一些历史。由于它是最初的编程语言之一，这将是一门有着悠久而辉煌历史的编程语言。它出现于人们对计算机编程还一无所知之前，也远早于人们考虑以此作为职业。想想
+    1979 年，当时电话黑客之类的活动正变得流行。我们必须追溯到那么久远，才能理解这门编程语言的起源。
+
+
+    而且你会发现，没有多少其他仍在使用中的编程语言可以追溯到这么久远。
+
+
+    Bjarne Stroustrup 当时正在撰写博士论文，他选择使用 Simula 编程语言。这是计算机时代最早使用的编程语言之一。然而，它非常缓慢，而且错误百出。
+
+
+    Stroustrup 提出了“带类的 C”（C with Classes）的概念。这是一种比 Simula 快得多的编程语言。“带类的 C”演变为 Cfront，它加速了语言的设计过程。
+
+
+    另一方面，当 C++ 出现时，Cfront 便被甩在了后面，因为 C++ 在语言中内置了编译器，使其比当时任何其他编程语言都更简单、更快捷。
+
+
+    从那以后，出现了带注释的参考手册和语言修改，使其更好、更快、更易于使用。《C++ for Dummies》是对这门语言的流行入门读物。
+
+
+    C++ 是当今最流行的编程语言之一。这门语言将是许多行业最适合使用的语言，因此，他们不是花费时间和精力创建一门新语言来使用，而是选择使用 C++，然后由于其适应性，将其修改用于他们想要开展的各种不同部分和项目。
+
+
+    ### 程序员为什么选择这门语言？
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_7_0.png)
+
+
+    如前所述，有多种编程语言可供使用，你可能会想知道为什么程序员选择 C++ 语言而不是其他语言。首先，许多程序员选择 C++ 是因为它的多功能性和速度。
+
+
+    这是现有最古老的语言之一，但它可以跟上你的需求，并将为我们提供完成程序和应用程序所需的所有代码甚至更多内容。
+
+
+    它也被视为新手可以使用的一种有用语言，因为一旦你掌握了基础知识，就可以用它们来帮助你学习其他编程语言。
+
+
+    此外，如果你想进一步了解如何使用一门不仅能处理在计算机上工作，还能处理其他任务的编程语言，C++ 是一个很好的起点。它将很好地适用于网站、移动应用程序等中使用的一些代码。
+
+
+    当然，上面讨论的一些选择只是程序员如此喜欢使用 C++ 的部分原因。以下其他优势也将帮助我们爱上这门编程语言：
+
+
+    - **1. 它有一个非常庞大的库：** 由于 C++ 已经存在很长时间，它也会有一个非常庞大的库。这是这门语言的每位程序员都可以使用的库，它能让挑选代码并继续执行适当功能变得更简单，同时节省时间。如有必要，你甚至可以更进一步编写自己的代码，但对于新手来说，这个库会让你有一个正确的起点。
+
+
+    - **2. 它与一些其他语言兼容。** 有时，除了 C++ 之外，你可能还需要使用另一种编程语言。而在使用 C++ 时，这简直是小菜一碟。这保证你可以及时完成所有代码，并且无论你的编码需求是简单还是复杂，都可能让管理你需要完成的许多工作变得简单得多。
+
+
+    - **3. 它可以管理大量编码任务。** 你可能使用的其他编程语言通常只设计用于处理少量
+
+
+    C++ 的可移植性将使我们能够编写所需的部分程序，而无论我们打算使用何种硬件。如果这成为我们的顾虑，它还将使我们能够将所有程序的开发从一个平台转移到另一个平台。这些只是使用
+    C++ 编程语言的少数好处。
+
+
+    它具备我们处理手头编码任务所需的全部兼容性、强大能力、功能等，并且它确实能保证我们完成工作。
+
+
+    它经常被批评为比 Python 等其他一些替代方案更难学习，但它包含你需要的所有部分，并且可以快速完成工作。
+
+
+    如上所示，使用 C++ 编程语言有许多优点。
+
+
+    在尝试学习一门新的编程语言时，它可能不是你首先想到的语言，但它是最佳选择之一，也将是一个极好的替代方案，可确保我们在此过程中取得想要的结果。
+
+
+    无论你是在寻找一门能够处理你想要创建的大量强大程序（例如游戏）的语言，还是只想为你沿途想学习的编程语言工具箱添加一些新内容，你都会发现 C++ 语言是适合你的正确选择。
+
+
+    现在，我们必须记住，尽管 C++ 语言有大量优点，但使用它也有很多缺点，这就是为什么并非每位程序员都会为自己的目的选择它。
+
+
+    ### 这门语言的主要缺点是缺乏安全性。
+
+
+    在一个日益互联、利用漏洞可能随时发生的世界里，缺乏安全性会让许多程序员望而却步。
+
+
+    **使用 C++ 编程语言的其他一些缺点如下：**
+
+
+    - 1. 当我们希望将其集成或用于高级应用程序时，尤其是大型应用程序，处理起来会很困难。
+
+    - 2. 它通常只用于少数特定于应用程序的平台。
+
+    - 3. 它通常仅限于单一平台或操作系统。如果我们愿意，它可以被改成其他任何东西，但库会依附于某一个平台，在某些情况下将难以迁移。
+
+    - 4. 当我们尝试将 C++ 用于某些 Web 应用程序时，代码可能会有点难以管理，并且在调试时通常会有很多问题。
+
+    - 5. 这门语言将不支持垃圾回收过程。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 10]
+
+
+    +   6. C++ will not be secure since it has many components that hinder this, most
+    notably the global variable, friend function, and pointer.
+
+    +   7. There will also be no support for the threads that are built into everything
+
+
+    While we can frequently work around some of the disadvantages that may arise as
+    a result of these challenges, we must remember them and consider whether they
+    are vital to the job that we want to achieve in our code. Weighing the pros and
+    cons is the greatest method to ensure that we end up with the ideal coding language,
+    such as C++, for all of our requirements.
+
+
+    # # Chapter 2
+
+
+    # ## Steps to Creating Your First Program
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_10_0.png)
+
+
+    Now that we''ve covered some of the fundamentals of C++ programming and why so
+    many programmers desire to spend their time studying how to make it work, it''s
+    time to move on. In this chapter, we''ll look at some of the actions we''ll need
+    to do to develop our code.'
+  - '[PAGE 11]
+
+
+    To do this, we must first focus on the fundamentals, which you will then use to
+    develop part of your code at a later date. The first step in the process, before
+    we can create any code, is to familiarize ourselves with the C++ environment.
+    The environment is a location where we can write some of our code and then set
+    it up to run, which is why we must ensure that it is ready to use and that we
+    utilize the correct one. The good news is that there are several C++ environments
+    available, albeit the best one is generally found on the official C++ website.
+    Once the environment for this coding language has been downloaded and is ready
+    to use, it is time to learn how to write our first code. In this chapter, we will
+    develop code that displays the message "Try this" on the screen of our computer.
+    This will just take a few lines to complete, but it includes a lot of the syntax
+    that we need in our scripts to get the greatest outcomes. Just because it''s easy
+    doesn''t mean it won''t operate the way we want it to. With that in mind, the
+    code we''ll need to utilize to get this one to work properly includes
+
+
+    ```
+
+    `#include <iostream> with namespace std; int main () cout "Use This One!"; return
+    0;`
+
+    ```
+
+
+    When it comes to writing things down, you have a few possibilities. You have the
+    option of writing this out in your compiler, which will be accessible in your
+    environment, or writing it out and saving it to your computer. The second approach
+    is sometimes preferable since you will have the code stored and will be able to
+    simply copy and paste it whenever you need it in your code. In any case, you should
+    carefully assess the sort of text editor you intend to use. The majority of them
+    will be device-specific, so seek the one that corresponds to your personal computer.
+    Windows Notepad, vim , vi, Brief, and EMACS are some of the alternatives available.
+    If you want an editor that can work on more than one platform, the vim and vi
+    choices are your best bet. When you''re working on any C++ code, you should make
+    sure that you write it down in a text editor. This will give you a nice preliminary
+    draft of the program, which can then be executed by the compiler when finished.
+    This makes your life simpler since you can examine the code before executing it
+    to ensure that there are no longer any problems inside of it.
+
+
+    # ## Compilers for C++
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_11_0.png)
+
+
+    While we''re here, we should have a look at the C++ compiler and see what it can
+    do for us. Similarly to how we discussed the environment and text editors, there
+    will be a huge variety of'
+  - '[PAGE 12]
+
+
+    compilers with which you may operate.
+
+    The issue with all of this is that, although you do have a lot of options to work
+    with on these, you will soon find that a lot of the compilers are going to be
+    quite costly to utilize. The major reason for this is because they will be kept
+    for skilled hackers or will have unique features for them. These are the people
+    who have mastered the lower level compilers available and are seeking for the
+    steps necessary to advance to the next level. Many C++ compilers will cater to
+    this group, albeit at a cost, of course. But the good news is that all hope is
+    not gone. There are various excellent C++ compilers available that are both safe
+    and secure, as well as free.
+
+    You just need to be cautious and observe what you''re doing to ensure that you''re
+    discovering the greatest ones that still have all of the characteristics that
+    we want to work with.
+
+    GNU is one of the several compilers that may assist us with our C++ writing and
+    will have certain capabilities that are suitable for novices. It will be the best
+    one to utilize with the Linux system, and if this is the operating system you
+    wish to work with, it is already available. To check whether the GNU compiler
+    is already installed on your machine, enter the following code:
+
+
+    ```
+
+    g++ -v
+
+    ```
+
+
+    If the compiler is installed, the following message should appear on the screen:
+
+
+    ```
+
+    Using built-in specifications.
+
+    i386-redhat-linux is the target.
+
+    Configured using: ../configure --prefix=/usr......
+
+    Thread model: posix gcc 4.1.2 (20080704) (Red Hat 4.1.2-46)
+
+    ```
+
+
+    If you entered the code above and did not see that notice, it implies you either
+    did not download the compiler correctly or you do not have it on your machine
+    in the first place.
+
+
+    # Some Basic Syntax to Be Aware Of
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_12_0.png)
+
+
+    Before we wrap off this chapter, let''s have a look at some of the fundamental
+    syntaxes that will be included with the C++ language. This will be necessary to
+    guarantee that when the time comes to move on to our write our code, we can complete
+    it all. The C++ language may be defined as a program that will employ a lot of
+    objects, objects that will help us keep things organized and will enable our code
+    to interact as well as call some of the other available methods. Four major aspects
+    will appear with this kind of language and will be viewed as an essential part
+    of the syntax that we are dealing with.'
+  - '[PAGE 13]
+
+
+    <!-- no content -->'
+  - "[PAGE 14]\n\n```\n~~~\n}\nEXPORT_SYMBOL(symbol_name);\n\n/* export the symbol\
+    \ to a user space using */\nstatic int __init symbol_init(void)\n{\n    int i;\n\
+    \    unsigned int count = 0;\n    ...\n}\n~~~\n```\n\nWe spent some time in the\
+    \ last chapter becoming acquainted with what we can accomplish with some of our\
+    \ C++ code.\n\nYou can see that creating code is not meant to be that difficult\
+    \ when it comes to dealing with this language as a whole, but there are a lot\
+    \ more intricate things we can do with this language, and we will get into that\
+    \ a little more as we move through this handbook. However, we must now choose\
+    \ a new course of action.\n\nThis chapter will spend more time looking at how\
+    \ the syntax of the C++ language is supposed to operate, as well as some of the\
+    \ various pieces that must appear for us to have this language behave in the way\
+    \ that we want it to. Take some notes on what we're doing here as we go through\
+    \ this chapter, and then keep an eye out for when these components appear and\
+    \ how often they're utilized in some of the coding's that we want to accomplish.\n\
+    \nRemember that previously we looked at an excellent example of how we might create\
+    \ code in the C++ language, as well as some of the important sections that would\
+    \ appear in the code.\n\nNow that we've completed all of this, it's time to go\
+    \ a little further into some of the things we can accomplish with the C++ syntax.\n\
+    \nThe syntax of any language, whether C++ or not, is critical since it ensures\
+    \ that the code is understandable and executable by our compiler in the long term.\n\
+    \nWith this in mind, it is necessary to study more about the grammar of the C++\
+    \ programming language so that we can utilize it effectively.\n\n# ### In C++,\
+    \ comments\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_14_0.png)"
+  - '[PAGE 15]
+
+
+    The comments are the first aspect of the syntax that we will examine in the C++
+    language. These will be useful to learn about since they will allow us to put
+    a little message or a note in the code that we are creating without altering how
+    the code will function.
+
+
+    These comments will assist us, and others who look at the code, in understanding
+    what you want to do with it. As a newbie, you will notice that many scripts will
+    contain this kind of comments to help you understand what is going on.
+
+
+    The comments will serve to guide you with what you are wanting to accomplish in
+    the code, and we are theoretically allowed to include as many of these as we like
+    in our programs. The rule of thumb here is to restrict the comments to just those
+    that are required so that the scripts do not get jumbled.
+
+
+    **To create comments in this language, use the (//) sign before the comment.**
+
+
+    This will notify the compiler that you are creating one of these comments, and
+    it should just skip over this section and not include it in the execution that
+    you deal with here.
+
+
+    You may put them in any area of the code you choose, and the compiler will understand
+    what is going on. Even in this language, we may make a remark that is longer than
+    one line or takes up more than one line. This is something that is difficult to
+    do in other languages but is unique to the C++ programming language.
+
+
+    When you want to continue through and have a code that takes on more than one
+    line, add the /* symbol to the beginning of the comment, and then use the */ symbol
+    wherever it ends. When the compiler encounters this, it will know that it should
+    continue through the code without reading any of this.
+
+
+    # The Various Data Types
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_15_0.png)
+
+
+    Each coding language that we wish to spend time on will focus their efforts on
+    the concept of data kinds. These will aid with the advancement of the code and
+    make it simpler for you to save the facts'
+  md: "\n- 6. C++ will not be secure since it has many components that hinder this,\
+    \ most notably the global variable, friend function, and pointer.\n- 7. There\
+    \ will also be no support for the threads that are built into everything\n\nWhile\
+    \ we can frequently work around some of the disadvantages that may arise as a\
+    \ result of these challenges, we must remember them and consider whether they\
+    \ are vital to the job that we want to achieve in our code. Weighing the pros\
+    \ and cons is the greatest method to ensure that we end up with the ideal coding\
+    \ language, such as C++, for all of our requirements.\n\n## Chapter 2\n\n### Steps\
+    \ to Creating Your First Program\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_10_0.png)\n\
+    \nNow that we've covered some of the fundamentals of C++ programming and why so\
+    \ many programmers desire to spend their time studying how to make it work, it's\
+    \ time to move on. In this chapter, we'll look at some of the actions we'll need\
+    \ to do to develop our code. To do this, we must first focus on the fundamentals,\
+    \ which you will then use to develop part of your code at a later date. The first\
+    \ step in the process, before we can create any code, is to familiarize ourselves\
+    \ with the C++ environment. The environment is a location where we can write some\
+    \ of our code and then set it up to run, which is why we must ensure that it is\
+    \ ready to use and that we utilize the correct one. The good news is that there\
+    \ are several C++ environments available, albeit the best one is generally found\
+    \ on the official C++ website. Once the environment for this coding language has\
+    \ been downloaded and is ready to use, it is time to learn how to write our first\
+    \ code. In this chapter, we will develop code that displays the message \"Try\
+    \ this\" on the screen of our computer. This will just take a few lines to complete,\
+    \ but it includes a lot of the syntax that we need in our scripts to get the greatest\
+    \ outcomes. Just because it's easy doesn't mean it won't operate the way we want\
+    \ it to. With that in mind, the code we'll need to utilize to get this one to\
+    \ work properly includes\n\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    int main() {\n    cout << \"Use This One!\";\n    return 0;\n}\n```\n\nWhen it\
+    \ comes to writing things down, you have a few possibilities. You have the option\
+    \ of writing this out in your compiler, which will be accessible in your environment,\
+    \ or writing it out and saving it to your computer. The second approach is sometimes\
+    \ preferable since you will have the code stored and will be able to simply copy\
+    \ and paste it whenever you need it in your code. In any case, you should carefully\
+    \ assess the sort of text editor you intend to use. The majority of them will\
+    \ be device-specific, so seek the one that corresponds to your personal computer.\
+    \ Windows Notepad, vim, vi, Brief, and EMACS are some of the alternatives available.\
+    \ If you want an editor that can work on more than one platform, the vim and vi\
+    \ choices are your best bet. When you're working on any C++ code, you should make\
+    \ sure that you write it down in a text editor. This will give you a nice preliminary\
+    \ draft of the program, which can then be executed by the compiler when finished.\
+    \ This makes your life simpler since you can examine the code before executing\
+    \ it to ensure that there are no longer any problems inside of it.\n\n### Compilers\
+    \ for C++\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_11_0.png)\n\nWhile we're\
+    \ here, we should have a look at the C++ compiler and see what it can do for us.\
+    \ Similarly to how we discussed the environment and text editors, there will be\
+    \ a huge variety of compilers with which you may operate.\n\nThe issue with all\
+    \ of this is that, although you do have a lot of options to work with on these,\
+    \ you will soon find that a lot of the compilers are going to be quite costly\
+    \ to utilize. The major reason for this is because they will be kept for skilled\
+    \ hackers or will have unique features for them. These are the people who have\
+    \ mastered the lower level compilers available and are seeking the steps necessary\
+    \ to advance to the next level. Many C++ compilers will cater to this group, albeit\
+    \ at a cost, of course. But the good news is that all hope is not gone. There\
+    \ are various excellent C++ compilers available that are both safe and secure,\
+    \ as well as free.\n\nYou just need to be cautious and observe what you're doing\
+    \ to ensure that you're discovering the greatest ones that still have all of the\
+    \ characteristics that we want to work with.\n\nGNU is one of the several compilers\
+    \ that may assist us with our C++ writing and will have certain capabilities that\
+    \ are suitable for novices. It will be the best one to utilize with the Linux\
+    \ system, and if this is the operating system you wish to work with, it is already\
+    \ available. To check whether the GNU compiler is already installed on your machine,\
+    \ enter the following code:\n\n```bash\ng++ -v\n```\n\nIf the compiler is installed,\
+    \ the following message should appear on the screen:\n\n```text\nUsing built-in\
+    \ specifications.\ni386-redhat-linux is the target.\nConfigured using: ../configure\
+    \ --prefix=/usr......\nThread model: posix gcc 4.1.2 (20080704) (Red Hat 4.1.2-46)\n\
+    ```\n\nIf you entered the code above and did not see that notice, it implies you\
+    \ either did not download the compiler correctly or you do not have it on your\
+    \ machine in the first place.\n\n### Some Basic Syntax to Be Aware Of\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_12_0.png)\n\
+    \nBefore we wrap up this chapter, let's have a look at some of the fundamental\
+    \ syntaxes that will be included with the C++ language. This will be necessary\
+    \ to guarantee that when the time comes to move on to write our code, we can complete\
+    \ it all. The C++ language may be defined as a program that will employ a lot\
+    \ of objects, objects that will help us keep things organized and will enable\
+    \ our code to interact as well as call some of the other available methods. Four\
+    \ major aspects will appear with this kind of language and will be viewed as an\
+    \ essential part of the syntax that we are dealing with.\n\n```c\n}\nEXPORT_SYMBOL(symbol_name);\n\
+    \n/* export the symbol to a user space using */\nstatic int __init symbol_init(void)\n\
+    {\n    int i;\n    unsigned int count = 0;\n    ...\n}\n```\n\nWe spent some time\
+    \ in the last chapter becoming acquainted with what we can accomplish with some\
+    \ of our C++ code.\n\nYou can see that creating code is not meant to be that difficult\
+    \ when it comes to dealing with this language as a whole, but there are a lot\
+    \ more intricate things we can do with this language, and we will get into that\
+    \ a little more as we move through this handbook. However, we must now choose\
+    \ a new course of action.\n\nThis chapter will spend more time looking at how\
+    \ the syntax of the C++ language is supposed to operate, as well as some of the\
+    \ various pieces that must appear for us to have this language behave in the way\
+    \ that we want it to. Take some notes on what we're doing here as we go through\
+    \ this chapter, and then keep an eye out for when these components appear and\
+    \ how often they're utilized in some of the coding that we want to accomplish.\n\
+    \nRemember that previously we looked at an excellent example of how we might create\
+    \ code in the C++ language, as well as some of the important sections that would\
+    \ appear in the code.\n\nNow that we've completed all of this, it's time to go\
+    \ a little further into some of the things we can accomplish with the C++ syntax.\n\
+    \nThe syntax of any language, whether C++ or not, is critical since it ensures\
+    \ that the code is understandable and executable by our compiler in the long term.\n\
+    \nWith this in mind, it is necessary to study more about the grammar of the C++\
+    \ programming language so that we can utilize it effectively.\n\n### In C++, comments\n\
+    \n![](img/07ace230f2e8f42cdd9a921c63a03aa7_14_0.png)\n\nThe comments are the first\
+    \ aspect of the syntax that we will examine in the C++ language. These will be\
+    \ useful to learn about since they will allow us to put a little message or a\
+    \ note in the code that we are creating without altering how the code will function.\n\
+    \nThese comments will assist us, and others who look at the code, in understanding\
+    \ what you want to do with it. As a newbie, you will notice that many scripts\
+    \ will contain this kind of comments to help you understand what is going on.\n\
+    \nThe comments will serve to guide you with what you are wanting to accomplish\
+    \ in the code, and we are theoretically allowed to include as many of these as\
+    \ we like in our programs. The rule of thumb here is to restrict the comments\
+    \ to just those that are required so that the scripts do not get jumbled.\n\n\
+    **To create comments in this language, use the (//) sign before the comment.**\n\
+    \nThis will notify the compiler that you are creating one of these comments, and\
+    \ it should just skip over this section and not include it in the execution that\
+    \ you deal with here.\n\nYou may put them in any area of the code you choose,\
+    \ and the compiler will understand what is going on. Even in this language, we\
+    \ may make a remark that is longer than one line or takes up more than one line.\
+    \ This is something that is difficult to do in other languages but is unique to\
+    \ the C++ programming language.\n\nWhen you want to continue through and have\
+    \ a code that takes on more than one line, add the /* symbol to the beginning\
+    \ of the comment, and then use the */ symbol wherever it ends. When the compiler\
+    \ encounters this, it will know that it should continue through the code without\
+    \ reading any of this.\n\n### The Various Data Types\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_15_0.png)\n\
+    \nEach coding language that we wish to spend time on will focus their efforts\
+    \ on the concept of data kinds. These will aid with the advancement of the code\
+    \ and make it simpler for you to save the facts\n"
+  mdcn: "\n- 6. C++ 将不会安全，因为它有许多阻碍这一点的组成部分，最显著的是全局变量、友元函数和指针。\n- 7. 对于内置于一切之中的线程，也将不会提供支持\n\
+    \n尽管我们经常可以绕过这些挑战可能带来的一些缺点，但我们必须记住它们，并考虑它们对于我们希望在代码中完成的工作是否至关重要。权衡利弊是确保我们最终获得满足所有需求的理想编码语言（例如\
+    \ C++）的最佳方法。\n\n## 第2章\n\n### 创建第一个程序的步骤\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_10_0.png)\n\
+    \n既然我们已经介绍了 C++ 编程的一些基础知识，以及为什么这么多程序员愿意花时间研究如何让它工作，那么是时候继续前进了。在本章中，我们将看看开发代码时需要采取的一些行动。为此，我们必须首先关注基础知识，然后你将在以后使用这些基础知识来开发部分代码。在创建任何代码之前，这个过程的第一步是熟悉\
+    \ C++ 环境。环境是我们编写一些代码并设置其运行的位置，这就是为什么我们必须确保它已准备好使用，并且我们使用的是正确的环境。好消息是有多种 C++ 环境可用，尽管最好的环境通常可以在\
+    \ C++ 官方网站上找到。一旦这种编码语言的环境已下载并准备好使用，就该学习如何编写我们的第一段代码了。在本章中，我们将开发在计算机屏幕上显示消息“Try\
+    \ this”的代码。这只需几行即可完成，但它包含我们的脚本中所需的许多语法，以获得最佳结果。简单并不意味着它不会按照我们希望的方式运行。考虑到这一点，我们需要用来让这个程序正常工作的代码包括\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    cout <<\
+    \ \"Use This One!\";\n    return 0;\n}\n```\n\n在编写内容时，你有几种可能。你可以选择在编译器中编写它（这将在你的环境中可访问），或者编写出来并将其保存到计算机上。第二种方法有时更可取，因为代码将被存储起来，并且你可以在代码中需要它时轻松复制和粘贴它。无论如何，你应该仔细评估你打算使用的文本编辑器类型。大多数编辑器都是特定于设备的，因此请寻找与你的个人计算机相对应的那个。Windows\
+    \ 记事本、vim、vi、Brief 和 EMACS 是可用的一些替代品。如果你想要一个可以在多个平台上工作的编辑器，vim 和 vi 是你的最佳选择。当你处理任何\
+    \ C++ 代码时，你应该确保在文本编辑器中编写它。这将为你提供程序的一个不错的初步草稿，完成后可由编译器执行。这使你的生活更简单，因为你可以在执行代码之前检查它，以确保其中不再有任何问题。\n\
+    \n### C++ 的编译器\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_11_0.png)\n\n既然我们在这里，我们应该看看\
+    \ C++ 编译器，看看它能为我们做什么。与讨论环境和文本编辑器类似，你将可以使用种类繁多的编译器。\n\n所有这一切的问题在于，尽管你确实有很多选项可以使用，但你很快会发现许多编译器的使用成本相当高。主要原因在于它们将保留给熟练的黑客，或者为他们提供独特功能。这些人已经掌握了可用的较低级编译器，并正在寻找进入下一层次所需的步骤。许多\
+    \ C++ 编译器会迎合这一群体，当然，这需要付出代价。但好消息是，并非所有希望都破灭了。有多种优秀的 C++ 编译器可用，它们既安全可靠，而且免费。\n\n\
+    你只需要谨慎并观察你正在做什么，以确保你发现最好的编译器，它们仍然具有我们想要使用的所有特性。\n\nGNU 是可能帮助我们进行 C++ 编写的几种编译器之一，并且将具有某些适合新手的功能。它将是与\
+    \ Linux 系统配合使用的最佳选择，如果这是你希望使用的操作系统，它已经可用。要检查 GNU 编译器是否已安装在你的机器上，请输入以下代码：\n\n```bash\n\
+    g++ -v\n```\n\n如果编译器已安装，屏幕上应出现以下消息：\n\n```text\nUsing built-in specifications.\n\
+    i386-redhat-linux is the target.\nConfigured using: ../configure --prefix=/usr......\n\
+    Thread model: posix gcc 4.1.2 (20080704) (Red Hat 4.1.2-46)\n```\n\n如果你输入了上面的代码却没有看到该提示，这意味着你要么没有正确下载编译器，要么你的机器上根本没有它。\n\
+    \n### 需要了解的一些基本语法\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_12_0.png)\n\n在本章结束之前，让我们看看\
+    \ C++ 语言中将包含的一些基本语法。这对于确保当需要继续编写代码时，我们能够完成所有工作是有必要的。C++ 语言可以定义为一个将使用大量对象的程序，这些对象将帮助我们保持事物井然有序，并使我们的代码能够交互以及调用一些其他可用方法。这种语言将出现四个主要方面，并将被视为我们所处理语法的重要组成部分。\n\
+    \n```c\n}\nEXPORT_SYMBOL(symbol_name);\n\n/* export the symbol to a user space\
+    \ using */\nstatic int __init symbol_init(void)\n{\n    int i;\n    unsigned int\
+    \ count = 0;\n    ...\n}\n```\n\n在上一章中，我们花了一些时间了解我们能用一些 C++ 代码完成什么。\n\n你可以看到，就整体处理这种语言而言，创建代码并不应该那么困难，但我们可以用这种语言做更多复杂的事情，随着我们通读本手册，我们会更多地讨论这一点。然而，我们现在必须选择一个新的行动方案。\n\
+    \n本章将花更多时间研究 C++ 语言的语法应该如何运作，以及为了使这种语言以我们希望的方式运行而必须出现的一些不同部分。在我们通读本章时，对我们在这里所做的事情做些笔记，然后留意这些组件何时出现，以及它们在我们想要完成的一些编码中被使用的频率。\n\
+    \n请记住，之前我们看了一个很好的例子，说明我们如何用 C++ 语言创建代码，以及代码中将出现的一些重要部分。\n\n既然我们已经完成了所有这些，是时候进一步深入了解我们能用\
+    \ C++ 语法完成的一些事情了。\n\n任何语言的语法，无论是不是 C++，都至关重要，因为它能确保代码从长远来看可被我们的编译器理解和执行。\n\n考虑到这一点，有必要更多地学习\
+    \ C++ 编程语言的语法，以便我们能够有效地使用它。\n\n### 在 C++ 中，注释\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_14_0.png)\n\
+    \n注释是我们在 C++ 语言中要检查的语法的第一个方面。了解这些将很有用，因为它们允许我们在正在创建的代码中放置小消息或注释，而不改变代码的功能方式。\n\
+    \n这些注释将帮助我们以及查看代码的其他人理解你想用它做什么。作为新手，你会注意到许多脚本会包含这种注释，以帮助你理解正在发生的事情。\n\n注释将用于指导你完成代码中想要实现的目标，理论上我们可以在程序中包含任意多的注释。这里的经验法则是将注释限制为仅必需的注释，以免脚本变得混乱。\n\
+    \n**要在此语言中创建注释，请在注释前使用 (//) 符号。**\n\n这将通知编译器你正在创建此类注释之一，它应该直接跳过这一部分，并且不将其包含在你在此处处理的执行中。\n\
+    \n你可以将它们放在你选择的代码的任何区域，编译器会理解发生了什么。即使在这种语言中，我们也可以做出超过一行或占用多行的注释。这是在其他语言中难以做到的事情，但却是\
+    \ C++ 编程语言所独有的。\n\n当你想要继续并拥有一个跨多行的代码时，在注释开头添加 /* 符号，然后在注释结束处使用 */ 符号。当编译器遇到这种情况时，它会知道应该继续处理代码而不读取其中的任何内容。\n\
+    \n### 各种数据类型\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_15_0.png)\n\n我们希望花时间学习的每种编码语言都会将精力集中在数据类型的概念上。这些将有助于代码的推进，并使你更轻松地保存事实\n"
+  merge: 0
+- raw:
+  - '[PAGE 16]
+
+
+    <!-- no content -->'
+  - '[PAGE 17]
+
+
+    <!-- no content -->'
+  - '[PAGE 18]
+
+
+    arguments that will be sent to the function, and the return type that will be
+    returned.
+
+    The definition of a function, on the other hand, will be supplied in the body
+    of any function that we want to build. The standard library that we encounter
+    with this language will supply us with several already useable and callable functions.
+
+    For example, one of them is the strcat() method, which can be used to concatenate
+    two strings, and then you may use the memcpy() function to assist us move memory
+    from one area to another. These are only a handful of the functions you may use,
+    and they all operate in the same manner. So, let''s have a look at how C++ functions
+    will operate.
+
+
+    # **It is best defined as follows:**
+
+
+    function name return type (parameter list ) The body of the function
+
+    The definition of the functions we have here will include a header for the function
+    as well as its body.
+
+    Some of the several function aspects that we will need to examine are as follows:
+
+
+    +   1. **The return type:** In certain circumstances, when we use a function,
+    it will return some kind of value to us. When this occurs, we will use the return
+    type to ensure that something is returned to us. Some of our functions will be
+    able to do the activities you want without delivering value to you. With the syntax
+    we described above, you would receive a value back, however, it would be "void."
+
+    +   2. **Function name:** Now we may deal with the function name. When you''re
+    finished, you''ll be able to give your function a name and a parameter. You will
+    also get what is known as the function signature.
+
+    +   3. **Parameters:** The parameters will just serve as a type of placeholder
+    to deal with. When you''re ready to call one of your functions, just assign the
+    value to one of the arguments. This value will be referred to as the argument
+    or real parameter. The parameter list may then refer to the order, number, and
+    type of arguments that are sent to the function. In rare circumstances, it is
+    feasible to operate with a function that lacks these arguments entirely.'
+  - '[PAGE 19]
+
+
+    **4. Body of function:** Finally, let''s have a look at the function body. This
+    will have a decent collection of statements that will inform us what the function
+    is capable of doing. While we''re here, we may as well go through this and deal
+    with something called function overloading. This implies that the C++ language
+    will enable us to assign two or more definitions to the name of a function or
+    one of our operators inside the same score.
+
+
+    Depending on which one we do this too, this will be termed as operator overloading
+    or function overloading.
+
+
+    An overloaded declaration is just one that is declared with the same name as the
+    previous declaration, as long as they are in the same scope. The exception to
+    this is that both of the declarations we have here will be from distinct arguments
+    and will have different definitions and implementations from one another. When
+    we call one of the overloaded operators or functions, the compiler will be able
+    to look at all of the definitions and decide which one is the best to utilize.
+    It does this by comparing the various kinds of arguments used to invoke the operator
+    or function, and it can also operate with the types of parameters stated in the
+    definitions. This is a large procedure that the compiler will have to deal with.
+    The good news is that we will be able to see the correct results each time, as
+    long as we set up the software correctly.
+
+
+    Overload resolution is the process of identifying the most suitable function that
+    has been overloaded. As previously stated, we may go through and have many definitions
+    for the same function even though we are using the same scope. Our function definitions
+    must vary from one another, either in terms of the type or the number of parameters
+    present in one of our lists of arguments. Remember that overloading the declaration
+    of our function is not permitted if the only difference is the return type.
+
+
+    Even though it may seem to be tough at first, working with this overloading of
+    functions is rather simple.
+
+
+    A nice example of the code that we can use to make this happen is seen below,
+    where the print() function is used to assist us to print out all of the various
+    forms of data.
+
+
+    ```
+
+    ```
+
+    #include iostream> from the namespace std; class void printData public: void print
+    (int i) cout
+
+    "Printing int: " I endl; void print (double f) cout "Printing float: " f endl;
+    void print(char* c) cout
+
+    "Printing character: " c endl; int main(void) printData pd; / Call print to print
+    integer pd.print(5);
+
+    / Call print to print float pd.print(500.263); / Call print to print character
+    pd.print(500.263);
+
+    return 0; pd.print("Hello C++");
+
+    ```
+
+    ```
+
+
+    When we finish compiling this one and can go through and run it properly, it will
+    provide us with some results based on the sorts of data that we contributed to
+    it. When dealing with operator overloading in C++, we may use a similar procedure.
+    We can go through and overload or rewrite several of the C++ language''s built-in
+    operators.
+
+
+    As a result, the application will be allowed to employ operators with certain
+    of their user-defined types if that is their preference. To make things simple,
+    the overloaded operators will be functions with unique names. Typically, this
+    will contain the term "operator," followed by the symbol corresponding to the
+    operator that you want to specify here.
+
+
+    The operator that you are attempting to overload, like any of the other functions
+    that you are utilizing, will come with both the return type and our parameter
+    list.'
+  - '[PAGE 20]
+
+
+    <!-- no content -->'
+  - '[PAGE 21]
+
+
+    # **How to Deal with Exceptions**
+
+
+    One of the cool things about what we can accomplish with the C++ language is that
+    it is designed to manage things like exceptions. This is a little more difficult,
+    but you''ll be astonished at some of the various codes we can use with it.
+
+
+    An exception, as we shall define it here, is an issue that will appear when you
+    are ready to run your program, indicating that it will not operate correctly.
+
+
+    When we look into exceptions in C++, we will see that this is what will happen
+    in response to an uncommon scenario in the code, which will often appear when
+    we execute and run the program. The most typical form of exception that we will
+    see in our code and programs is when someone attempts to divide by zero. Exceptions
+    will be a valuable component to have in your code since they will assist us in
+    transferring some of the control that is present in one part of the program and
+    ensuring that it is transferred to one of the other sections.
+
+
+    The C++ exception handling is going to be based on some of the core keywords,
+    namely a try, throw, and catch. Let''s look at what these terms signify to gain
+    a better grasp of why they''re essential and what we can do with them:
+
+
+    +   1. **Throw:** The first of these keywords will be referred to as a throw.
+    When an issue occurs, the software will throw an exception. When we use the toss
+    keyword, this will happen automatically.
+
+    +   2. **The catch:** A program will be able to detect one of the exceptions with
+    the aid of an exception handler, which will allow the program to address some
+    of the issues on its own.If you use the catch keyword, it will take some time
+    to inform your application that you want it to catch that exception.
+
+    +   3. **Try:** When we are ready to use the try keyword, we will do so to assist
+    us to find and identify the blocks of code where a specific exception will be
+    triggered.
+
+
+    If you use this keyword, it will contain at least one catch block to ensure that
+    it works.
+
+    We will then assume that your present block may throw an exception and that a
+    method will be able to catch the exception using a combination of the catch and
+    try keywords. These will then be included in the code, allowing it to catch the
+    exception and handle it for you. This is not a guarantee that an exception will
+    occur, but if it is possible, putting these in will ensure that the code continues
+    to behave as it should. As we can see, many distinct pieces will come together
+    to help us build the fundamental grammar of our C++ code. You may utilize as many
+    of these sections as you like along the way to ensure that the coding works properly,
+    even though some of the fundamental codes you start with may only require one
+    or two of them to function properly. Learning these fundamentals and how to write
+    programs correctly will make all the difference as we go through this manual and
+    beyond with this coding language.'
+  md: "\nArguments that will be sent to the function, and the return type that will\
+    \ be returned. The definition of a function, on the other hand, will be supplied\
+    \ in the body of any function that we want to build. The standard library that\
+    \ we encounter with this language will supply us with several already usable and\
+    \ callable functions.\n\nFor example, one of them is the strcat() method, which\
+    \ can be used to concatenate two strings, and then you may use the memcpy() function\
+    \ to assist us in moving memory from one area to another. These are only a handful\
+    \ of the functions you may use, and they all operate in the same manner. So, let's\
+    \ have a look at how C++ functions will operate.\n\n## It is best defined as follows:\n\
+    \n```cpp\nreturn_type function_name(parameter list)\n{\n    body of the function\n\
+    }\n```\n\nThe definition of the functions we have here will include a header for\
+    \ the function as well as its body.\n\nSome of the several function aspects that\
+    \ we will need to examine are as follows:\n\n- **1. The return type:** In certain\
+    \ circumstances, when we use a function, it will return some kind of value to\
+    \ us. When this occurs, we will use the return type to ensure that something is\
+    \ returned to us. Some of our functions will be able to do the activities you\
+    \ want without delivering value to you. With the syntax we described above, you\
+    \ would receive a value back, however, it would be \"void.\"\n- **2. Function\
+    \ name:** Now we may deal with the function name. When you're finished, you'll\
+    \ be able to give your function a name and a parameter. You will also get what\
+    \ is known as the function signature.\n- **3. Parameters:** The parameters will\
+    \ just serve as a type of placeholder to deal with. When you're ready to call\
+    \ one of your functions, just assign the value to one of the arguments. This value\
+    \ will be referred to as the argument or real parameter. The parameter list may\
+    \ then refer to the order, number, and type of arguments that are sent to the\
+    \ function. In rare circumstances, it is feasible to operate with a function that\
+    \ lacks these arguments entirely.\n- **4. Body of function:** Finally, let's have\
+    \ a look at the function body. This will have a decent collection of statements\
+    \ that will inform us what the function is capable of doing. While we're here,\
+    \ we may as well go through this and deal with something called function overloading.\
+    \ This implies that the C++ language will enable us to assign two or more definitions\
+    \ to the name of a function or one of our operators inside the same scope.\n\n\
+    Depending on which one we do this to, this will be termed as operator overloading\
+    \ or function overloading.\n\nAn overloaded declaration is just one that is declared\
+    \ with the same name as the previous declaration, as long as they are in the same\
+    \ scope. The exception to this is that both of the declarations we have here will\
+    \ have distinct arguments and will have different definitions and implementations\
+    \ from one another. When we call one of the overloaded operators or functions,\
+    \ the compiler will be able to look at all of the definitions and decide which\
+    \ one is the best to utilize. It does this by comparing the various kinds of arguments\
+    \ used to invoke the operator or function, and it can also operate with the types\
+    \ of parameters stated in the definitions. This is a large procedure that the\
+    \ compiler will have to deal with. The good news is that we will be able to see\
+    \ the correct results each time, as long as we set up the software correctly.\n\
+    \nOverload resolution is the process of identifying the most suitable function\
+    \ that has been overloaded. As previously stated, we may go through and have many\
+    \ definitions for the same function even though we are using the same scope. Our\
+    \ function definitions must vary from one another, either in terms of the type\
+    \ or the number of parameters present in one of our lists of arguments. Remember\
+    \ that overloading the declaration of our function is not permitted if the only\
+    \ difference is the return type.\n\nEven though it may seem to be tough at first,\
+    \ working with this overloading of functions is rather simple.\n\nA nice example\
+    \ of the code that we can use to make this happen is seen below, where the print()\
+    \ function is used to assist us to print out all of the various forms of data.\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n\nclass printData {\n   public:\n\
+    \      void print(int i) {\n         cout << \"Printing int: \" << i << endl;\n\
+    \      }\n      void print(double f) {\n         cout << \"Printing float: \"\
+    \ << f << endl;\n      }\n      void print(char* c) {\n         cout << \"Printing\
+    \ character: \" << c << endl;\n      }\n};\n\nint main(void) {\n   printData pd;\n\
+    \n   // Call print to print integer\n   pd.print(5);\n\n   // Call print to print\
+    \ float\n   pd.print(500.263);\n\n   // Call print to print character\n   pd.print(\"\
+    Hello C++\");\n\n   return 0;\n}\n```\n\nWhen we finish compiling this one and\
+    \ can go through and run it properly, it will provide us with some results based\
+    \ on the sorts of data that we contributed to it. When dealing with operator overloading\
+    \ in C++, we may use a similar procedure. We can go through and overload or rewrite\
+    \ several of the C++ language's built-in operators.\n\nAs a result, the application\
+    \ will be allowed to employ operators with certain of their user-defined types\
+    \ if that is their preference. To make things simple, the overloaded operators\
+    \ will be functions with unique names. Typically, this will contain the term \"\
+    operator,\" followed by the symbol corresponding to the operator that you want\
+    \ to specify here.\n\nThe operator that you are attempting to overload, like any\
+    \ of the other functions that you are utilizing, will come with both the return\
+    \ type and our parameter list.\n\n## How to Deal with Exceptions\n\nOne of the\
+    \ cool things about what we can accomplish with the C++ language is that it is\
+    \ designed to manage things like exceptions. This is a little more difficult,\
+    \ but you'll be astonished at some of the various codes we can use with it.\n\n\
+    An exception, as we shall define it here, is an issue that will appear when you\
+    \ are ready to run your program, indicating that it will not operate correctly.\n\
+    \nWhen we look into exceptions in C++, we will see that this is what will happen\
+    \ in response to an uncommon scenario in the code, which will often appear when\
+    \ we execute and run the program. The most typical form of exception that we will\
+    \ see in our code and programs is when someone attempts to divide by zero. Exceptions\
+    \ will be a valuable component to have in your code since they will assist us\
+    \ in transferring some of the control that is present in one part of the program\
+    \ and ensuring that it is transferred to one of the other sections.\n\nThe C++\
+    \ exception handling is going to be based on some of the core keywords, namely\
+    \ a try, throw, and catch. Let's look at what these terms signify to gain a better\
+    \ grasp of why they're essential and what we can do with them:\n\n- **1. Throw:**\
+    \ The first of these keywords will be referred to as a throw. When an issue occurs,\
+    \ the software will throw an exception. When we use the throw keyword, this will\
+    \ happen automatically.\n- **2. The catch:** A program will be able to detect\
+    \ one of the exceptions with the aid of an exception handler, which will allow\
+    \ the program to address some of the issues on its own. If you use the catch keyword,\
+    \ it will take some time to inform your application that you want it to catch\
+    \ that exception.\n- **3. Try:** When we are ready to use the try keyword, we\
+    \ will do so to assist us to find and identify the blocks of code where a specific\
+    \ exception will be triggered.\n\nIf you use this keyword, it will contain at\
+    \ least one catch block to ensure that it works.\n\nWe will then assume that your\
+    \ present block may throw an exception and that a method will be able to catch\
+    \ the exception using a combination of the catch and try keywords. These will\
+    \ then be included in the code, allowing it to catch the exception and handle\
+    \ it for you. This is not a guarantee that an exception will occur, but if it\
+    \ is possible, putting these in will ensure that the code continues to behave\
+    \ as it should. As we can see, many distinct pieces will come together to help\
+    \ us build the fundamental grammar of our C++ code. You may utilize as many of\
+    \ these sections as you like along the way to ensure that the coding works properly,\
+    \ even though some of the fundamental codes you start with may only require one\
+    \ or two of them to function properly. Learning these fundamentals and how to\
+    \ write programs correctly will make all the difference as we go through this\
+    \ manual and beyond with this coding language.\n"
+  mdcn: "\n将发送给函数的参数，以及将要返回的返回类型。另一方面，函数的定义将提供在我们想要构建的任何函数体中。我们在这门语言中遇到的标准库将为我们提供若干已经可用且可调用的函数。\n\
+    \n例如，其中之一是 `strcat()` 方法，它可用于连接两个字符串，然后你可以使用 `memcpy()` 函数来协助我们将内存从一个区域移动到另一个区域。这些只是你可以使用的少数函数，而且它们都以相同的方式运行。那么，让我们看看\
+    \ C++ 函数将如何运行。\n\n## 最好按如下方式定义：\n\n```cpp\nreturn_type function_name(parameter\
+    \ list)\n{\n    body of the function\n}\n```\n\n我们这里的函数定义将包括函数头以及函数体。\n\n我们需要考察的几个函数方面如下：\n\
+    \n- **1. 返回类型：** 在某些情况下，当我们使用函数时，它会向我们返回某种值。发生这种情况时，我们将使用返回类型来确保有内容返回给我们。我们的一些函数能够完成你想要的活动，而不会向你传递值。使用我们上面描述的语法，你会收到一个返回值，不过它会是“void”。\n\
+    - **2. 函数名：** 现在我们可以处理函数名。完成后，你将能够为函数指定名称和参数。你还会得到所谓的函数签名。\n- **3. 参数：** 参数将仅作为一种占位符来处理。当你准备好调用某个函数时，只需将值赋给其中一个实参。这个值将被称为实参或实际参数。然后，参数列表可以指代发送给函数的实参的顺序、数量和类型。在少数情况下，可以完全使用不带这些参数的函数。\n\
+    - **4. 函数体：** 最后，让我们看看函数体。它将包含一组适当的语句，告诉我们该函数能够做什么。既然说到这里，我们不妨也过一遍并处理所谓的函数重载。这意味着\
+    \ C++ 语言将使我们能够在同一作用域内为一个函数名或某个运算符指定两个或更多定义。\n\n根据我们是对函数名还是运算符这样做，这将被称为运算符重载或函数重载。\n\
+    \n重载声明只是与先前的声明同名且处于同一作用域内的声明。例外情况是，我们这里的两个声明都将具有不同的实参，并且彼此具有不同的定义和实现。当我们调用某个重载运算符或函数时，编译器将能够查看所有定义，并决定哪一个最适合使用。它通过比较用于调用该运算符或函数的各类实参来做到这一点，并且还可以处理定义中声明的参数类型。这是编译器必须处理的一个大型过程。好消息是，只要我们正确设置软件，每次都能看到正确的结果。\n\
+    \n重载解析是识别最合适的重载函数的过程。如前所述，即使在同一作用域内，我们也可以为同一个函数提供多个定义。我们的函数定义必须在彼此之间有所不同，要么在于某个参数列表中所含参数的类型，要么在于参数的数量。请记住，如果唯一区别是返回类型，则不允许重载函数声明。\n\
+    \n尽管一开始可能看起来很难，但使用这种函数重载其实相当简单。\n\n下面是一个很好的代码示例，我们可以用它来实现这一点；其中 `print()` 函数用于帮助我们打印出所有各种形式的数据。\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n\nclass printData {\n   public:\n\
+    \      void print(int i) {\n         cout << \"Printing int: \" << i << endl;\n\
+    \      }\n      void print(double f) {\n         cout << \"Printing float: \"\
+    \ << f << endl;\n      }\n      void print(char* c) {\n         cout << \"Printing\
+    \ character: \" << c << endl;\n      }\n};\n\nint main(void) {\n   printData pd;\n\
+    \n   // Call print to print integer\n   pd.print(5);\n\n   // Call print to print\
+    \ float\n   pd.print(500.263);\n\n   // Call print to print character\n   pd.print(\"\
+    Hello C++\");\n\n   return 0;\n}\n```\n\n当我们完成编译并能够正确运行它时，它将根据我们提供给它的数据类型为我们提供一些结果。在处理\
+    \ C++ 中的运算符重载时，我们可以使用类似的过程。我们可以继续重载或重写 C++ 语言中的若干内置运算符。\n\n因此，如果应用程序愿意，将允许其将运算符用于某些用户定义类型。为简单起见，重载运算符将是具有唯一名称的函数。通常，这将包含“operator”一词，后跟与你要在此指定的运算符相对应的符号。\n\
+    \n你试图重载的运算符，与你正在使用的任何其他函数一样，将同时带有返回类型和参数列表。\n\n## 如何处理异常\n\n使用 C++ 语言所能完成的事情中，有一件很酷的事：它被设计用来管理异常之类的情况。这稍微困难一些，但你会对我们可与之配合使用的各种代码感到惊讶。\n\
+    \n按照我们在此的定义，异常是当你准备运行程序时会出现的问题，表明程序将无法正确运行。\n\n当我们研究 C++ 中的异常时，我们会发现，这是对代码中不常见场景的响应，而这种场景通常会在我们执行并运行程序时出现。我们在代码和程序中最常看到的异常形式是有人试图除以零。异常将是代码中一个有价值的组成部分，因为它们将协助我们转移程序某一部分中存在的部分控制权，并确保将其转移到其他部分之一。\n\
+    \nC++ 异常处理将基于一些核心关键字，即 try、throw 和 catch。让我们看看这些术语的含义，以便更好地理解它们为何重要以及我们可以用它们做什么：\n\
+    \n- **1. throw：** 这些关键字中的第一个将被称为 throw。当问题发生时，软件将抛出异常。当我们使用 throw 关键字时，这将自动发生。\n\
+    - **2. catch：** 程序将能够借助异常处理器检测到某个异常，这将允许程序自行处理一些问题。如果你使用 catch 关键字，则需要一些时间告知应用程序你希望它捕获该异常。\n\
+    - **3. try：** 当我们准备使用 try 关键字时，我们会这样做，以帮助我们找到并识别将触发特定异常的代码块。\n\n如果你使用此关键字，它将至少包含一个\
+    \ catch 块，以确保其正常工作。\n\n然后，我们将假设你当前的代码块可能抛出异常，并且某个方法将能够使用 catch 和 try 关键字的组合来捕获该异常。然后，这些内容将被包含在代码中，使其能够捕获异常并为你处理。这并不保证一定会发生异常，但如果可能发生，加入这些内容将确保代码继续按应有的方式运行。正如我们所看到的，许多不同的部分将汇集在一起，帮助我们构建\
+    \ C++ 代码的基本语法。在此过程中，你可以根据需要尽可能多地使用这些部分，以确保编码正常工作，尽管你开始时的一些基础代码可能只需要其中一两个部分即可正常运行。学习这些基础知识以及如何正确编写程序，将在我们学习本手册以及进一步使用这门编程语言的过程中产生重大影响。\n"
+  merge: 1
+- raw:
+  - '[PAGE 22]
+
+
+    <!-- no content -->'
+  - '[PAGE 23]
+
+
+    Now that we''ve learned a little bit more about these variables and what they''re
+    all about, it''s time to take a look at some of the steps that we''ll need to
+    do in order to establish some of our own variables.
+
+
+    These definitions are crucial because they tell the compiler how much storage
+    we want it to utilize and where we want the variables to be stored. This specification
+    will also assist us to go through and identify the kind of data that we want to
+    deal with. We could put something like "type variable list," and then you could
+    choose one of the variable types given above and write it out in the same way
+    if necessary. These will eventually inform the compiler to generate the sort of
+    carrier that you have gone through and mentioned, and then get the code to operate
+    properly.
+
+
+    This is going to seem a little hard when we attempt to write it out and explain
+    how to make it work, so let''s look at a coding example so we can see it in action
+    in C++:
+
+
+    ```
+
+    ```cpp
+
+    #include iostream> with namespace std; int. main () int j=10, int k=5, int l=j+k
+    cout l>> return 0; endl
+
+    ```
+
+    ```
+
+
+    You should have the answer 15 by now. You can also go through and define and declare
+    the variables in your program, but that is something we can work on after we have
+    more experience with this language.
+
+
+    It''s a good idea to start the compiler and run the code above. This allows you
+    to get more acquainted with coding and may assist you in identifying when you
+    will encounter these variables.
+
+
+    While we''re at it, we should also spend some time assigning some type of value
+    to our variable. This is critical, otherwise we will just be reserving an empty
+    area in our computer''s memory.
+
+
+    The variable will not perform anything on its own and will just take up space
+    in your computer''s RAM for all of the work that we are attempting to do here.
+
+
+    It is your responsibility to give the essential value so that the memory can hold
+    onto stuff as well. The value associated with a certain variable will be stored
+    in the same location in memory as your variable. You may potentially go this a
+    step further by assigning several values to the same variable in your application
+    if desired. You may potentially add as many of these values to the same variable
+    as you like, as long as it is correctly formatted. However, we should maintain
+    the ratio of our value to a variable as low as one or two to make the code as
+    easy to deal with as feasible. All we need to deal with is the equal sign to give
+    a new value to one of your variables.
+
+
+    This is there to notify the compiler that your variable, or the space you''ve
+    been reserving in your computer''s memory, will belong with that exact value when
+    the code executes. When the variable is called later, while the program is running,
+    it will return the value that you desire.
+
+
+    As you can see, variables in C++ are not difficult to understand, but it is critical
+    to learn how to do this in order to guarantee that your code works properly and
+    that all of the values you want to use in your code appear when the code is executed.
+
+
+    There may be many occasions when you will wish to bring in variables that operate
+    with C++. And they will be important in ensuring that you can really store all
+    of the data that you want within the code.
+
+
+    Getting everything, all set up and ready to go will be critical here, so making
+    sure that we take the time to work with our variables in the appropriate way will
+    be critical to seeing the outcomes that we want in the process as well.
+
+
+    # Chapter 5
+
+
+    # Loops and arrays'
+  - '[PAGE 24]
+
+
+    Now it''s time to go a little more into some of the coding that we might use while
+    writing programs in C++. When we operate with arrays and loops, we may really
+    produce some wonderful diverse programs, therefore it is critical that we understand
+    the best procedures in order to have this all under control as we need.
+
+
+    In this chapter, we will learn more about two of the processes that we may use
+    when building our own C++ code, including arrays and loops, as well as what they
+    signify and what we can do with them in our code.
+
+
+    ```
+
+    ~~~cpp
+
+    1 for (int i = 0; i < arr.size(); ++i){
+
+    2 //use if we explicitly need the value of i
+
+    3 cout << i << ":\t" << arr[i] << endl;
+
+    4 }
+
+    5 for (int element : arr){
+
+    6 //modifying element will not affect the array
+
+    7 cout << element << endl;
+
+    8 }
+
+    9 for (int &element : arr){
+
+    10 //modifying element will affect the array
+
+    11 cout << element << endl;
+
+    12 }
+
+    ~~~
+
+    ```
+
+
+    # The Arrays
+
+
+    The arrays are the first thing we''re going to look at. Arrays are one of the
+    data structures available in C++ that will allow us to store items that are essentially
+    the same type and have the same fixed size. These will be essentially a collection
+    of the same sort of variable that we wish to deal with.
+
+
+    However, rather than going through and utilizing some of the individual variables
+    to complete the task, you will need to deal with a single array, such as an array
+    of integers. To make these arrays function, you''d need to stick with integers
+    ranging from 0 to 99, and then you''d be able to access each one using the array''s
+    index. However, it is feasible to deal with arrays that are not just about numbers.
+
+
+    If we like, we may stay with ones that are for both characters and words. The
+    arrays will be comparable to some of the variables we discussed before in that
+    they will represent places in our computer''s memory. They will, however, be more
+    continuous than the variables can supply. The first element will be known as the
+    lowest, and the final element will be known as the highest. When it comes to working
+    with these arrays, you do have a few distinct alternatives. You can either go
+    through and initialize them one by one, or you can go to the sing statement and
+    deal with it.
+
+
+    The following is a nice example of how to achieve this:
+
+
+    [5]=1000.0, 2.0, 3.4, 17.0, 50.0;
+
+
+    The numbers in the bracket that we put should never be more than the number of
+    items that you want to utilize.
+
+
+    This implies that if you put a five in the brackets, as we did above, and then
+    put six numbers into'
+  - '[PAGE 25]
+
+
+    <!-- no content -->'
+  - '[PAGE 26]
+
+
+    The while loop is the first loop we''ll look at here. The while loop is the option
+    that will continue our loop and repeat the appropriate lines as long as the requirements
+    you specified are satisfied. Each time the program runs the loop, it will read
+    over the information and then test for that condition. If the loop detects that
+    the criteria have been satisfied, it will resume. If the loop reaches the point
+    where the condition is no longer true, it will halt and go to the next section
+    of code if your program has more to it. With that in mind, the while loop will
+    be a breeze to deal with. To create a basic while loop, just a few lines of code
+    are required. The syntax that we may use to operate on the while loop is as follows:
+    While(condition) ''\s{ ''\sStatement(s); ''\s}
+
+
+    # Foreach Loop
+
+
+    It is now time to move on to the second form of a loop that we may use, known
+    as the ''for a loop.''
+
+
+    This for loop only repeats itself after first ensuring that the requirements are
+    met. The while loop that we created above will cycle through and then test the
+    criteria.
+
+
+    The loop tests the conditions first, and then the loop continues. This implies
+    that depending on the input supplied to the computer or software, it is conceivable
+    that the program may test the condition, determine it to be false, and the ''for
+    a loop'' will not occur even once inside the program. If you''re writing a program
+    in which the loop must occur at least once, the while loop is the way to go.
+
+
+    If it isn''t too critical, or if the code will be all right if the loop doesn''t
+    run if the requirements aren''t satisfied, then the for loop might be a decent
+    choice. If you''re working on a program and decide that the ''for loop'' is the
+    best option for you, you''ll need to go through and create some code to implement
+    it. It''s comparable to the while loop we performed before, so it''ll be simpler
+    to manage overall.
+
+
+    The following code must be used to make the ''for loop'' operate correctly: Statement(s);
+    For (iit: conditions: increment)
+
+
+    # The If-Then-Else Loop
+
+
+    The third form of loop is a unique one that works well in the C++ language but
+    is not as extensively documented in some of the other coding languages that you
+    will be able to handle along the route. This is going to be a lot of fun to work
+    with, so we''ll spend some time looking at it here.
+
+
+    The do-while loop is a little different, but you''ll see some parallels to the
+    while statement you''re dealing with. It will, however, be different in that it
+    will be able to wait until the conclusion of the statement to check on the condition,
+    rather than doing so from the beginning. This causes it to behave somewhat differently
+    in the software you''re building.
+
+
+    The syntax that we may use to lay down the do-while loop is as follows: Do Statement(s):
+    while (condition):
+
+
+    # The Nested Loops
+
+
+    The nested loop is the next item on the list that we need to concentrate on here.
+
+
+    These will be a little more involved than some of the previous loops we''ve done
+    here, but they''ll be helpful and can help us get a lot of things done in a short
+    period.
+
+
+    The nested loop occurs when we have one loop running within of another loop, and
+    both of these loops will continue to run at the same time until their conditions
+    are fulfilled, at which point they'
+  md: "\nNow that we've learned a little bit more about these variables and what they're\
+    \ all about, it's time to take a look at some of the steps that we'll need to\
+    \ do in order to establish some of our own variables.\n\nThese definitions are\
+    \ crucial because they tell the compiler how much storage we want it to utilize\
+    \ and where we want the variables to be stored. This specification will also assist\
+    \ us to go through and identify the kind of data that we want to deal with. We\
+    \ could put something like \"type variable list,\" and then you could choose one\
+    \ of the variable types given above and write it out in the same way if necessary.\
+    \ These will eventually inform the compiler to generate the sort of carrier that\
+    \ you have gone through and mentioned, and then get the code to operate properly.\n\
+    \nThis is going to seem a little hard when we attempt to write it out and explain\
+    \ how to make it work, so let's look at a coding example so we can see it in action\
+    \ in C++:\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int j = 10, k = 5, l = j + k;\n    cout << l << endl;\n    return 0;\n}\n\
+    ```\n\nYou should have the answer 15 by now. You can also go through and define\
+    \ and declare the variables in your program, but that is something we can work\
+    \ on after we have more experience with this language.\n\nIt's a good idea to\
+    \ start the compiler and run the code above. This allows you to get more acquainted\
+    \ with coding and may assist you in identifying when you will encounter these\
+    \ variables.\n\nWhile we're at it, we should also spend some time assigning some\
+    \ type of value to our variable. This is critical; otherwise, we will just be\
+    \ reserving an empty area in our computer's memory.\n\nThe variable will not perform\
+    \ anything on its own and will just take up space in your computer's RAM for all\
+    \ of the work that we are attempting to do here.\n\nIt is your responsibility\
+    \ to give the essential value so that the memory can hold onto stuff as well.\
+    \ The value associated with a certain variable will be stored in the same location\
+    \ in memory as your variable. You may potentially go this a step further by assigning\
+    \ several values to the same variable in your application if desired. You may\
+    \ potentially add as many of these values to the same variable as you like, as\
+    \ long as it is correctly formatted. However, we should maintain the ratio of\
+    \ our value to a variable as low as one or two to make the code as easy to deal\
+    \ with as feasible. All we need to deal with is the equal sign to give a new value\
+    \ to one of your variables.\n\nThis is there to notify the compiler that your\
+    \ variable, or the space you've been reserving in your computer's memory, will\
+    \ belong with that exact value when the code executes. When the variable is called\
+    \ later, while the program is running, it will return the value that you desire.\n\
+    \nAs you can see, variables in C++ are not difficult to understand, but it is\
+    \ critical to learn how to do this in order to guarantee that your code works\
+    \ properly and that all of the values you want to use in your code appear when\
+    \ the code is executed.\n\nThere may be many occasions when you will wish to bring\
+    \ in variables that operate with C++. And they will be important in ensuring that\
+    \ you can really store all of the data that you want within the code.\n\nGetting\
+    \ everything all set up and ready to go will be critical here, so making sure\
+    \ that we take the time to work with our variables in the appropriate way will\
+    \ be critical to seeing the outcomes that we want in the process as well.\n\n\
+    ## Chapter 5\n\n## Loops and Arrays\n\nNow it's time to go a little more into\
+    \ some of the coding that we might use while writing programs in C++. When we\
+    \ operate with arrays and loops, we may really produce some wonderful diverse\
+    \ programs; therefore, it is critical that we understand the best procedures in\
+    \ order to have this all under control as we need.\n\nIn this chapter, we will\
+    \ learn more about two of the processes that we may use when building our own\
+    \ C++ code, including arrays and loops, as well as what they signify and what\
+    \ we can do with them in our code.\n\n```cpp\nfor (int i = 0; i < arr.size();\
+    \ ++i) {\n    // Use if we explicitly need the value of i\n    cout << i << \"\
+    :\\t\" << arr[i] << endl;\n}\nfor (int element : arr) {\n    // Modifying element\
+    \ will not affect the array\n    cout << element << endl;\n}\nfor (int &element\
+    \ : arr) {\n    // Modifying element will affect the array\n    cout << element\
+    \ << endl;\n}\n```\n\n### The Arrays\n\nThe arrays are the first thing we're going\
+    \ to look at. Arrays are one of the data structures available in C++ that will\
+    \ allow us to store items that are essentially the same type and have the same\
+    \ fixed size. These will be essentially a collection of the same sort of variable\
+    \ that we wish to deal with.\n\nHowever, rather than going through and utilizing\
+    \ some of the individual variables to complete the task, you will need to deal\
+    \ with a single array, such as an array of integers. To make these arrays function,\
+    \ you'd need to stick with integers ranging from 0 to 99, and then you'd be able\
+    \ to access each one using the array's index. However, it is feasible to deal\
+    \ with arrays that are not just about numbers.\n\nIf we like, we may stay with\
+    \ ones that are for both characters and words. The arrays will be comparable to\
+    \ some of the variables we discussed before in that they will represent places\
+    \ in our computer's memory. They will, however, be more continuous than the variables\
+    \ can supply. The first element will be known as the lowest, and the final element\
+    \ will be known as the highest. When it comes to working with these arrays, you\
+    \ do have a few distinct alternatives. You can either go through and initialize\
+    \ them one by one, or you can go to the single statement and deal with it.\n\n\
+    The following is a nice example of how to achieve this:\n\n```cpp\ndouble arr[5]\
+    \ = {1000.0, 2.0, 3.4, 17.0, 50.0};\n```\n\nThe numbers in the bracket that we\
+    \ put should never be more than the number of items that you want to utilize.\n\
+    \nThis implies that if you put a five in the brackets, as we did above, and then\
+    \ put six numbers into\n\nThe while loop is the first loop we'll look at here.\
+    \ The while loop is the option that will continue our loop and repeat the appropriate\
+    \ lines as long as the requirements you specified are satisfied. Each time the\
+    \ program runs the loop, it will read over the information and then test for that\
+    \ condition. If the loop detects that the criteria have been satisfied, it will\
+    \ resume. If the loop reaches the point where the condition is no longer true,\
+    \ it will halt and go to the next section of code if your program has more to\
+    \ it. With that in mind, the while loop will be a breeze to deal with. To create\
+    \ a basic while loop, just a few lines of code are required. The syntax that we\
+    \ may use to operate on the while loop is as follows:\n\n```cpp\nwhile (condition)\
+    \ {\n    statement(s);\n}\n```\n\n### For Loop\n\nIt is now time to move on to\
+    \ the second form of a loop that we may use, known as the \"for loop.\"\n\nThis\
+    \ for loop only repeats itself after first ensuring that the requirements are\
+    \ met. The while loop that we created above will cycle through and then test the\
+    \ criteria.\n\nThe loop tests the conditions first, and then the loop continues.\
+    \ This implies that depending on the input supplied to the computer or software,\
+    \ it is conceivable that the program may test the condition, determine it to be\
+    \ false, and the \"for loop\" will not occur even once inside the program. If\
+    \ you're writing a program in which the loop must occur at least once, the while\
+    \ loop is the way to go.\n\nIf it isn't too critical, or if the code will be all\
+    \ right if the loop doesn't run if the requirements aren't satisfied, then the\
+    \ for loop might be a decent choice. If you're working on a program and decide\
+    \ that the \"for loop\" is the best option for you, you'll need to go through\
+    \ and create some code to implement it. It's comparable to the while loop we performed\
+    \ before, so it'll be simpler to manage overall.\n\nThe following code must be\
+    \ used to make the \"for loop\" operate correctly:\n\n```cpp\nfor (initialization;\
+    \ condition; increment) {\n    statement(s);\n}\n```\n\n### The Do-While Loop\n\
+    \nThe third form of loop is a unique one that works well in the C++ language but\
+    \ is not as extensively documented in some of the other coding languages that\
+    \ you will be able to handle along the route. This is going to be a lot of fun\
+    \ to work with, so we'll spend some time looking at it here.\n\nThe do-while loop\
+    \ is a little different, but you'll see some parallels to the while statement\
+    \ you're dealing with. It will, however, be different in that it will be able\
+    \ to wait until the conclusion of the statement to check on the condition, rather\
+    \ than doing so from the beginning. This causes it to behave somewhat differently\
+    \ in the software you're building.\n\nThe syntax that we may use to lay down the\
+    \ do-while loop is as follows:\n\n```cpp\ndo {\n    statement(s);\n} while (condition);\n\
+    ```\n\n### The Nested Loops\n\nThe nested loop is the next item on the list that\
+    \ we need to concentrate on here.\n\nThese will be a little more involved than\
+    \ some of the previous loops we've done here, but they'll be helpful and can help\
+    \ us get a lot of things done in a short period.\n\nThe nested loop occurs when\
+    \ we have one loop running within another loop, and both of these loops will continue\
+    \ to run at the same time until their conditions are fulfilled, at which point\
+    \ they\n"
+  mdcn: "\n现在我们已经对这些变量有了更多了解，也知道了它们大致是怎么回事，接下来该看看为了建立一些自己的变量，我们需要完成哪些步骤。\n\n这些定义至关重要，因为它们会告诉编译器我们希望它使用多少存储空间，以及我们希望变量存放在哪里。这种说明还会帮助我们逐一确定想要处理的数据类型。我们可以写类似“类型\
+    \ 变量列表”这样的内容，然后你可以从上面给出的变量类型中选择一种，并在需要时以同样的方式写出来。这些最终会告知编译器生成你所提到的那种载体，然后让代码正常运行。\n\
+    \n当我们尝试把它写出来并解释如何让它工作时，这看起来会有点难，所以让我们看一个编码示例，以便在 C++ 中看到它的实际运行：\n\n```cpp\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n    int j = 10, k = 5, l =\
+    \ j + k;\n    cout << l << endl;\n    return 0;\n}\n```\n\n你现在应该得到答案 15 了。你也可以继续在程序中定义和声明变量，但那是我们在对这门语言更有经验之后可以处理的事情。\n\
+    \n启动编译器并运行上面的代码是个好主意。这可以让你更熟悉编码，也可能帮助你在遇到这些变量时识别出它们。\n\n既然说到这里，我们也应该花些时间给变量赋予某种值。这一点很关键；否则，我们只是在计算机内存中保留了一块空区域。\n\
+    \n变量不会自行执行任何操作，它只会占用计算机 RAM 中的空间，用于我们在这里尝试完成的所有工作。\n\n你有责任给出必要的值，以便内存也能保存内容。与某个变量关联的值会存储在内存中与你的变量相同的位置。如果你愿意，还可以更进一步，在应用程序中给同一个变量赋多个值。只要格式正确，你可以给同一个变量添加任意多个这样的值。不过，我们应该尽量把每个变量对应的值数量保持在较低水平，比如一到两个，以便让代码尽可能容易处理。我们只需要使用等号，就能给你的某个变量赋予新值。\n\
+    \n它的作用是通知编译器：当代码执行时，你的变量，或者说你在计算机内存中一直保留的那块空间，将属于那个确切的值。当程序运行期间稍后调用该变量时，它将返回你想要的值。\n\
+    \n如你所见，C++ 中的变量并不难理解，但学会如何做到这一点至关重要，这样才能保证你的代码正常工作，并确保代码执行时，你想在代码中使用的所有值都会出现。\n\
+    \n你可能会在很多场合希望引入能在 C++ 中运行的变量。它们在确保你能够真正在代码中存储所有想要的数据方面将非常重要。\n\n在这里，把一切设置好并准备就绪将至关重要，因此确保我们花时间以适当的方式处理变量，对于在此过程中看到我们想要的结果也同样至关重要。\n\
+    \n## 第5章\n\n## 循环与数组\n\n现在该更深入地了解一些我们在编写 C++ 程序时可能会用到的编码内容了。当我们使用数组和循环进行操作时，确实可以编写出一些奇妙而多样的程序；因此，理解最佳做法以便按需要把这一切都掌控好，是至关重要的。\n\
+    \n在本章中，我们将进一步了解在构建自己的 C++ 代码时可能会用到的两种流程，包括数组和循环，以及它们意味着什么、我们可以在代码中用它们做什么。\n\n\
+    ```cpp\nfor (int i = 0; i < arr.size(); ++i) {\n    // Use if we explicitly need\
+    \ the value of i\n    cout << i << \":\\t\" << arr[i] << endl;\n}\nfor (int element\
+    \ : arr) {\n    // Modifying element will not affect the array\n    cout << element\
+    \ << endl;\n}\nfor (int &element : arr) {\n    // Modifying element will affect\
+    \ the array\n    cout << element << endl;\n}\n```\n\n### 数组\n\n数组是我们要看的第一个内容。数组是\
+    \ C++ 中可用的数据结构之一，它允许我们存储本质上类型相同、固定大小也相同的项。它们本质上是我们希望处理的那种变量的集合。\n\n不过，与其逐一使用某些单独的变量来完成任务，你需要处理单个数组，比如一个整数数组。要让这些数组发挥作用，你需要使用\
+    \ 0 到 99 的整数，然后就可以通过数组的索引访问每一个元素。不过，处理不只是与数字有关的数组也是可行的。\n\n如果愿意，我们也可以使用同时用于字符和单词的数组。数组将与我们之前讨论过的一些变量类似，因为它们表示计算机内存中的位置。不过，它们会比变量所能提供的更加连续。第一个元素被称为最低元素，最后一个元素被称为最高元素。在处理这些数组时，你确实有几种不同的选择。你可以逐一初始化它们，也可以使用单条语句来处理。\n\
+    \n下面是一个很好的示例，说明如何实现这一点：\n\n```cpp\ndouble arr[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};\n\
+    ```\n\n我们在括号中填入的数字绝不应超过要使用的元素数量。\n\n这意味着，如果你像上面那样在括号中填入 5，然后向其中放入六个数字\n\nwhile\
+    \ 循环是我们这里要看的第一个循环。while 循环是一种只要满足你指定的要求，就会继续我们的循环并重复相应行的选项。程序每次运行该循环时，都会读取信息，然后测试该条件。如果循环检测到条件已满足，它就会继续。如果循环到达条件不再成立的程度，它就会停止，并且如果你的程序还有更多内容，就会转到下一段代码。考虑到这一点，while\
+    \ 循环处理起来将轻而易举。要创建一个基本的 while 循环，只需要几行代码。我们可以用来操作 while 循环的语法如下：\n\n```cpp\nwhile\
+    \ (condition) {\n    statement(s);\n}\n```\n\n### for 循环\n\n现在该继续介绍我们可以使用的第二种循环形式，即“for\
+    \ 循环”。\n\n这种 for 循环只有在首先确保条件满足之后，才会重复自身。我们上面创建的 while 循环会先循环一遍，然后测试条件。\n\n循环会先测试条件，然后循环继续。这意味着，根据提供给计算机或软件的输入，程序可能会测试条件、判定其为假，而“for\
+    \ 循环”在程序中甚至一次都不会发生。如果你编写的程序要求循环至少发生一次，那么 while 循环就是正确选择。\n\n如果它不那么关键，或者如果条件不满足时循环不运行、代码也没问题，那么\
+    \ for 循环可能是个不错的选择。如果你正在处理一个程序，并决定“for 循环”对你来说是最佳选择，那么你需要继续编写一些代码来实现它。它与我们之前执行的\
+    \ while 循环类似，所以总体上会更容易管理。\n\n必须使用以下代码来让“for 循环”正确运行：\n\n```cpp\nfor (initialization;\
+    \ condition; increment) {\n    statement(s);\n}\n```\n\n### do-while 循环\n\n第三种循环形式很独特，它在\
+    \ C++ 语言中运行良好，但在你沿途可能处理的其他一些编码语言中并没有那么广泛的文档记载。使用它会非常有趣，所以我们会在这里花些时间看看它。\n\ndo-while\
+    \ 循环略有不同，但你会看到它与正在处理的 while 语句有一些相似之处。不过，它的不同之处在于，它能够等到语句结束时才检查条件，而不是从一开始就检查。这使它在你要构建的软件中表现得有些不同。\n\
+    \n我们可以用来写出 do-while 循环的语法如下：\n\n```cpp\ndo {\n    statement(s);\n} while (condition);\n\
+    ```\n\n### 嵌套循环\n\n嵌套循环是列表中我们需要在这里关注的下一项。\n\n这些会比我们这里做过的一些先前循环稍微复杂一些，但它们会很有帮助，能帮助我们在短时间内完成很多事情。\n\
+    \n嵌套循环发生在一个循环运行在另一个循环内部时，并且这两个循环会同时继续运行，直到它们的条件都得到满足，此时它们\n"
+  merge: 0
+- raw:
+  - '[PAGE 27]
+
+
+    <!-- no content -->'
+  - '[PAGE 28]
+
+
+    <!-- no content -->'
+  - '[PAGE 29]
+
+
+    ```
+
+    Value at ptr = 0x72fe34
+
+    Value at var = 17
+
+    Value at *ptr = 17
+
+
+    ----------------------------
+
+    (program exited with code: 0)
+
+
+    Press any key to continue . . . _
+
+    ```
+
+
+    Another subject that we will touch on briefly in this chapter that is related
+    to the arrays and loops that we are covering and will be mentioned many times
+    throughout this handbook is the concept of pointers.
+
+
+    These are simple sections of code to understand, and some programmers may find
+    them enjoyable as well. When you utilize pointers, certain of the activities you
+    wish to do in C++ will be simpler to complete. There are also certain operations,
+    like dynamic memory allocation, that we cannot execute without these pointers.
+
+
+    As we have previously learned through our work through this handbook, each variable
+    is going to be a position in our computer''s memory, and each of these locations
+    in memory will have an address assigned to it. We can then use the & operator
+    to access this exact address whenever we want. With that in mind, we can get started
+    using some of the tasks we wish to perform with these suggestions. The pointer
+    is just a variable type, but it is a variable type whose value is the address
+    of one of the other variables.
+
+
+    You must declare the pointer, just like any other constant or variable, before
+    you may use it.
+
+    This is rather straightforward to implement, and the following code will enable
+    it:
+
+    "*var" -- name; Here, the "type" component of the code will be the pointer''s
+    base type.
+
+
+    We must ensure that it is a valid C++ type, or else this would not function. The
+    var-name component of the code will then tell us the name of our pointer. The
+    asterisk appended to that will be utilized to aid designate our pointer, and it
+    is the same symbol that we will use when dealing with multiplication. We will
+    utilize the asterisk to assist us to take our variable and then identify it as
+    a pointer for this code when dealing with this statement in specific. The data
+    type that we will use for the pointers in question will be the same whether we
+    are working with a'
+  - '[PAGE 30]
+
+
+    <!-- no content -->'
+  - '[PAGE 31]
+
+
+    there is a tight link between arrays and pointers in this language.
+
+
+    +   5. **An array of pointers:** We can also go through and create our arrays
+    so that they may contain the pointers that we desire.
+
+    +   6. **Pointer to pointer:** C++ will let us have some fun here by enabling
+    us to have a pointer on a pointer, and even more layers if necessary.
+
+    +   7. **How to send pointers to functions:** The ability to supply arguments
+    will be critical here.
+
+
+    And giving this argument as one of the addresses or references will cause certain
+    modifications to occur, allowing the argument to call up the function that we
+    want along the way.
+
+
+    Return pointer from your functions: The C++ language will enable us to utilize
+    our functions to come through and return one of these pointers to our local variable,
+    dynamically allocated memory, and static variables.
+
+
+    As we can see, there are several methods to work with our pointers, and they may
+    complement some of the other themes covered in this handbook.
+
+
+    As we go and learn more about our operators, variables, and even the arrays and
+    loops that will comprise our code, we will be able to see how we can bring this
+    all together and achieve some nice results with our code, without it being too
+    complicated to work with along the way.
+
+
+    # Chapter 6:
+
+
+    # The C++ Operators and When to Use Them
+
+
+    The operators are the next subject with which we may experiment.
+
+
+    These will be significant because, although they are basic, they will provide
+    a lot of power to the scripts that we wish to employ.
+
+
+    There are many various sorts of operators that we may concentrate on, and it is
+    critical to understand how each one can be incorporated into some of the codes
+    that we wish to work with. These operators will be seen as a basic or simple component
+    of the code to work with, but they are still capable of adding a significant amount
+    of power to some of the programs that we want to develop. These are important
+    to understand whether we are working with the C++ language or'
+  - "[PAGE 32]\n\nanother form of coding. It is critical to understand the various\
+    \ sorts of operators when working with any programming language since they will\
+    \ inform the program what you want to see happen. They are basic symbols that\
+    \ we can manage, but they have the potential to offer greater power.\n\nWhile\
+    \ there are several operators to choose from, we will focus on the four most prevalent\
+    \ ones that function well with the C++ programming language. Each of them will\
+    \ be in charge of assisting our code to act differently.\n\nAs we go through this,\
+    \ you'll be able to see how well each one works and what they're capable of relatively\
+    \ fast. In this language, we must focus on four sorts of operators: logical operators,\
+    \ assignment operators, arithmetic operators, and relationship operators. With\
+    \ this in mind, we need to go through and spend some time on each of the operator\
+    \ types on which we have time. This will allow us to understand more about the\
+    \ operators and how they will behave inside your own code.\n\n# **Operators Logical**\n\
+    \nWe'll spend some time on the logical operators to assist us to get started on\
+    \ this process.\n\nThese logical operators will be the ones that you want to use\
+    \ to compare the various parts of the code that you want to add to the system\
+    \ and can help you figure out whether those parts are going to be considered true\
+    \ or false, whether they go together, and more based on the conditions that you\
+    \ can work with here.\n\nWhen working with the C++ language, you will most likely\
+    \ encounter the following logical operators:\n\n+   1.  (!): This is known as\
+    \ the logical NOT operator.\n+   \n+   This is going to be utilized whenever you\
+    \ want to reverse the operand's declared status. So, if you have a condition that\
+    \ is false, you may use this operator to make the condition true.\n\n+   2.  (&&):\
+    \ This is known as the logical AND operator.\n+   \n+   If you have two operands\
+    \ that do not equal zero, this will be utilized. If this occurs, the condition\
+    \ will be fulfilled.\n\n+   3.  (||): This is known as the logical OR operator.\n\
+    +   \n+   When dealing with this one, the condition is true if at least one of\
+    \ the operands is equal to zero.\n\n# **Operators for Arithmetic**\n\nThe arithmetic\
+    \ operators are the second sort of operator on which we will focus.\nThese are\
+    \ often regarded as the simplest of all C++ operators to deal with, and you will"
+  - '[PAGE 33]
+
+
+    frequently use them, along with the assignment operators, inside your code. If
+    you recall any of your previous math lessons, you should be able to identify some
+    of these operators and understand what they are and how they operate. Based on
+    what you want the software to accomplish, these arithmetic operators will be used
+    for addition, subtraction, division, and multiplication.
+
+
+    Some of the arithmetic operators that will occur in C++ that fall into this category
+    and may function well in your code include the following.
+
+
+    +   - (+): The addition operator that will combine two operands of your choice.
+
+    +   - (-): The subtraction operator is denoted by (-). It is going to subtract
+    the right-hand operand from the left-hand operand.
+
+    +   - (*): In the C++ programming language, this is the operator that allows for
+    multiplication.
+
+    +   - (/): This operator is useful for dividing C++.
+
+
+    The increment operator is denoted by (++). It will raise the value of your operand
+    by one. This is the decrement operator (--). It will only reduce the operand value
+    by one. When dealing with these arithmetic operators, you will see that we have
+    a plethora of possibilities to pick from. The first is that we have the option
+    of working with as many of these operators as we like at the same time. That,
+    if we have a string of 10 digits that we wish to put together, we can do so as
+    well.
+
+
+    You may also operate with a couple of these operators at a time, such as multiplying
+    and dividing the parts as you go. You only need to work with the operator in order
+    to ensure that you perform them in the correct sequence and obtain the correct
+    results.
+
+
+    # ### Operators for Assigning
+
+
+    It is now time to move on to the third operator that works well in the C++ programming
+    language.
+
+
+    The assignment operator will be in this category.
+
+
+    This is the most often utilized operator in order to make your scripts operate
+    correctly, and it is frequently used to aid assign the value over to the variable
+    so that it works properly.
+
+
+    This assignment operator will be crucial since it will be in charge of making
+    it simpler to assign a value or a name to your variable. It is also an excellent
+    choice to utilize while storing, finding, and doing so much more inside any of
+    the scripts that you are working on. Outside of the equal sign, some of the other
+    sorts of assignment operators that we may use to assign a value to a variable
+    include the following:
+
+
+    +   - (=): This is the basic assignment operator.
+
+
+    It will transfer the value of the operand on the right hand to the operand on
+    the left.'
+  md: "\n```\nValue at ptr = 0x72fe34\nValue at var = 17\nValue at *ptr = 17\n\n----------------------------\n\
+    (program exited with code: 0)\n\nPress any key to continue . . . _\n```\n\nAnother\
+    \ subject that we will touch on briefly in this chapter that is related to the\
+    \ arrays and loops that we are covering and will be mentioned many times throughout\
+    \ this handbook is the concept of pointers.\n\nThese are simple sections of code\
+    \ to understand, and some programmers may find them enjoyable as well. When you\
+    \ utilize pointers, certain of the activities you wish to do in C++ will be simpler\
+    \ to complete. There are also certain operations, like dynamic memory allocation,\
+    \ that we cannot execute without these pointers.\n\nAs we have previously learned\
+    \ through our work through this handbook, each variable is going to be a position\
+    \ in our computer's memory, and each of these locations in memory will have an\
+    \ address assigned to it. We can then use the & operator to access this exact\
+    \ address whenever we want. With that in mind, we can get started using some of\
+    \ the tasks we wish to perform with these suggestions. The pointer is just a variable\
+    \ type, but it is a variable type whose value is the address of one of the other\
+    \ variables.\n\nYou must declare the pointer, just like any other constant or\
+    \ variable, before you may use it. This is rather straightforward to implement,\
+    \ and the following code will enable it:\n\"*var\" -- name; Here, the \"type\"\
+    \ component of the code will be the pointer's base type.\n\nWe must ensure that\
+    \ it is a valid C++ type, or else this would not function. The var-name component\
+    \ of the code will then tell us the name of our pointer. The asterisk appended\
+    \ to that will be utilized to aid in designating our pointer, and it is the same\
+    \ symbol that we will use when dealing with multiplication. We will utilize the\
+    \ asterisk to assist us to take our variable and then identify it as a pointer\
+    \ for this code when dealing with this statement in specific. The data type that\
+    \ we will use for the pointers in question will be the same whether we are working\
+    \ with a\n\nThere is a tight link between arrays and pointers in this language.\n\
+    \n- 5. **An array of pointers:** We can also go through and create our arrays\
+    \ so that they may contain the pointers that we desire.\n- 6. **Pointer to pointer:**\
+    \ C++ will let us have some fun here by enabling us to have a pointer on a pointer,\
+    \ and even more layers if necessary.\n- 7. **How to send pointers to functions:**\
+    \ The ability to supply arguments will be critical here.\n\n  And giving this\
+    \ argument as one of the addresses or references will cause certain modifications\
+    \ to occur, allowing the argument to call up the function that we want along the\
+    \ way.\n\nReturn pointers from your functions: The C++ language will enable us\
+    \ to utilize our functions to come through and return one of these pointers to\
+    \ our local variable, dynamically allocated memory, and static variables.\n\n\
+    As we can see, there are several methods to work with our pointers, and they may\
+    \ complement some of the other themes covered in this handbook.\n\nAs we go and\
+    \ learn more about our operators, variables, and even the arrays and loops that\
+    \ will comprise our code, we will be able to see how we can bring this all together\
+    \ and achieve some nice results with our code, without it being too complicated\
+    \ to work with along the way.\n\n## Chapter 6: The C++ Operators and When to Use\
+    \ Them\n\nThe operators are the next subject with which we may experiment.\n\n\
+    These will be significant because, although they are basic, they will provide\
+    \ a lot of power to the scripts that we wish to employ.\n\nThere are many various\
+    \ sorts of operators that we may concentrate on, and it is critical to understand\
+    \ how each one can be incorporated into some of the codes that we wish to work\
+    \ with. These operators will be seen as a basic or simple component of the code\
+    \ to work with, but they are still capable of adding a significant amount of power\
+    \ to some of the programs that we want to develop. These are important to understand\
+    \ whether we are working with the C++ language or another form of coding. It is\
+    \ critical to understand the various sorts of operators when working with any\
+    \ programming language since they will inform the program what you want to see\
+    \ happen. They are basic symbols that we can manage, but they have the potential\
+    \ to offer greater power.\n\nWhile there are several operators to choose from,\
+    \ we will focus on the four most prevalent ones that function well with the C++\
+    \ programming language. Each of them will be in charge of assisting our code to\
+    \ act differently.\n\nAs we go through this, you'll be able to see how well each\
+    \ one works and what they're capable of relatively fast. In this language, we\
+    \ must focus on four sorts of operators: logical operators, assignment operators,\
+    \ arithmetic operators, and relational operators. With this in mind, we need to\
+    \ go through and spend some time on each of the operator types on which we have\
+    \ time. This will allow us to understand more about the operators and how they\
+    \ will behave inside your own code.\n\n### Logical Operators\n\nWe'll spend some\
+    \ time on the logical operators to assist us to get started on this process.\n\
+    \nThese logical operators will be the ones that you want to use to compare the\
+    \ various parts of the code that you want to add to the system and can help you\
+    \ figure out whether those parts are going to be considered true or false, whether\
+    \ they go together, and more based on the conditions that you can work with here.\n\
+    \nWhen working with the C++ language, you will most likely encounter the following\
+    \ logical operators:\n\n- 1. (!): This is known as the logical NOT operator.\n\
+    \n  This is going to be utilized whenever you want to reverse the operand's declared\
+    \ status. So, if you have a condition that is false, you may use this operator\
+    \ to make the condition true.\n\n- 2. (&&): This is known as the logical AND operator.\n\
+    \n  If you have two operands that do not equal zero, this will be utilized. If\
+    \ this occurs, the condition will be fulfilled.\n\n- 3. (||): This is known as\
+    \ the logical OR operator.\n\n  When dealing with this one, the condition is true\
+    \ if at least one of the operands is equal to zero.\n\n### Operators for Arithmetic\n\
+    \nThe arithmetic operators are the second sort of operator on which we will focus.\
+    \ These are often regarded as the simplest of all C++ operators to deal with,\
+    \ and you will frequently use them, along with the assignment operators, inside\
+    \ your code. If you recall any of your previous math lessons, you should be able\
+    \ to identify some of these operators and understand what they are and how they\
+    \ operate. Based on what you want the software to accomplish, these arithmetic\
+    \ operators will be used for addition, subtraction, division, and multiplication.\n\
+    \nSome of the arithmetic operators that will occur in C++ that fall into this\
+    \ category and may function well in your code include the following.\n\n- (+):\
+    \ The addition operator that will combine two operands of your choice.\n- (-):\
+    \ The subtraction operator is denoted by (-). It is going to subtract the right-hand\
+    \ operand from the left-hand operand.\n- (*): In the C++ programming language,\
+    \ this is the operator that allows for multiplication.\n- (/): This operator is\
+    \ useful for dividing C++.\n\nThe increment operator is denoted by (++). It will\
+    \ raise the value of your operand by one. This is the decrement operator (--).\
+    \ It will only reduce the operand value by one. When dealing with these arithmetic\
+    \ operators, you will see that we have a plethora of possibilities to pick from.\
+    \ The first is that we have the option of working with as many of these operators\
+    \ as we like at the same time. That is, if we have a string of 10 digits that\
+    \ we wish to put together, we can do so as well.\n\nYou may also operate with\
+    \ a couple of these operators at a time, such as multiplying and dividing the\
+    \ parts as you go. You only need to work with the operator in order to ensure\
+    \ that you perform them in the correct sequence and obtain the correct results.\n\
+    \n### Operators for Assigning\n\nIt is now time to move on to the third operator\
+    \ that works well in the C++ programming language.\n\nThe assignment operator\
+    \ will be in this category.\n\nThis is the most often utilized operator in order\
+    \ to make your scripts operate correctly, and it is frequently used to help assign\
+    \ the value over to the variable so that it works properly.\n\nThis assignment\
+    \ operator will be crucial since it will be in charge of making it simpler to\
+    \ assign a value or a name to your variable. It is also an excellent choice to\
+    \ utilize while storing, finding, and doing so much more inside any of the scripts\
+    \ that you are working on. Outside of the equal sign, some of the other sorts\
+    \ of assignment operators that we may use to assign a value to a variable include\
+    \ the following:\n\n- (=): This is the basic assignment operator.\n\n  It will\
+    \ transfer the value of the operand on the right-hand to the operand on the left.\n"
+  mdcn: "\n\n```\nptr 处的值 = 0x72fe34\nvar 处的值 = 17\n*ptr 处的值 = 17\n\n----------------------------\n\
+    （程序以代码 0 退出）\n\n按任意键继续 . . . _\n```\n\n本章还会简要介绍一个与我们正在讲解的数组和循环有关，并且在本手册中会多次提及的主题：指针。\n\
+    \n这些代码段很容易理解，一些程序员可能也会觉得它们很有趣。使用指针时，你希望在 C++ 中完成的某些操作会变得更加简单。此外，有些操作（例如动态内存分配）如果没有指针就无法执行。\n\
+    \n正如我们在学习本手册的过程中已经了解到的，每个变量都对应计算机内存中的一个位置，而每个内存位置都有一个分配给它的地址。之后，我们可以随时使用 & 运算符访问这个确切的地址。了解这一点后，我们就可以开始使用这些方法来完成一些想要执行的任务。指针只是一种变量类型，但它的值是其他某个变量的地址。\n\
+    \n与其他常量或变量一样，使用指针之前必须先声明它。实现起来相当简单，下面的代码就可以做到这一点：\n“*var” -- 名称；其中，代码中的“type”部分是指针的基类型。\n\
+    \n我们必须确保它是有效的 C++ 类型，否则代码将无法运行。代码中的 var-name 部分则表示指针的名称。后面附加的星号用于标识指针，它也是我们进行乘法运算时使用的符号。特别是在处理这条语句时，我们会用星号将变量标识为指针。无论我们处理的是哪种情况，相关指针所使用的数据类型都相同，无论我们处理的是一个……\n\
+    \n在这门语言中，数组与指针之间有着密切的联系。\n\n- 5. **指针数组：**我们也可以创建数组，使其包含我们需要的指针。\n- 6. **指向指针的指针：**C++\
+    \ 允许我们在指针上再添加一个指针，必要时还可以增加更多层级。\n- 7. **如何将指针传递给函数：**传递实参的能力在这里至关重要。\n\n  将这个实参作为地址或引用之一传递，会导致某些修改发生，从而使该实参能够在此过程中调用我们想要的函数。\n\
+    \n从函数返回指针：C++ 语言允许我们通过函数返回指针，这些指针可以指向局部变量、动态分配的内存以及静态变量。\n\n我们可以看到，使用指针的方法有很多，它们还可以与本手册中介绍的其他主题相辅相成。\n\
+    \n随着我们继续学习运算符、变量，以及组成代码的数组和循环，我们将能够了解如何将这些内容整合起来，在不增加操作复杂度的情况下，让代码实现不错的效果。\n\n\
+    ## 第 6 章：C++ 运算符及其使用方法\n\n接下来要探讨的主题是运算符。\n\n运算符十分重要，因为尽管它们很基础，却能为我们编写的脚本带来强大的功能。\n\
+    \n我们可以关注许多不同类型的运算符，而了解每种运算符如何融入我们要编写的代码至关重要。运算符看似是代码中基础或简单的组成部分，但仍能为我们想要开发的一些程序增添强大的功能。无论我们使用\
+    \ C++ 还是其他编程语言，都需要了解这些内容。在使用任何编程语言时，了解各种运算符的类型都至关重要，因为它们会告诉程序你希望发生什么。它们只是一些简单的符号，但能提供更强大的功能。\n\
+    \n虽然有多种运算符可供选择，但我们将重点介绍最常见、且适用于 C++ 编程语言的四种运算符。它们各自负责帮助代码以不同的方式运行。\n\n学习过程中，你很快就能了解每种运算符的效果及其功能。在这门语言中，我们需要重点关注四种运算符：逻辑运算符、赋值运算符、算术运算符和关系运算符。了解这一点后，我们需要逐一花些时间学习这些运算符类型。这样我们就能进一步了解运算符，以及它们在你自己的代码中的行为方式。\n\
+    \n### 逻辑运算符\n\n我们先花些时间学习逻辑运算符，以便开始这个过程。\n\n逻辑运算符用于比较你想要添加到系统中的代码的不同部分，可以帮助你判断这些部分在当前条件下会被视为真还是假、彼此是否符合条件等。\n\
+    \n使用 C++ 语言时，你最可能遇到以下逻辑运算符：\n\n- 1. (!)：这称为逻辑非运算符。\n\n  当你想要反转操作数声明的状态时，就会使用它。因此，如果某个条件为假，你可以使用这个运算符将其变为真。\n\
+    \n- 2. (&&)：这称为逻辑与运算符。\n\n  如果有两个操作数都不等于零，就会使用它。此时，条件将成立。\n\n- 3. (||)：这称为逻辑或运算符。\n\
+    \n  使用该运算符时，只要至少一个操作数等于零，条件就为真。\n\n### 算术运算符\n\n算术运算符是我们将要关注的第二类运算符。它们通常被认为是所有\
+    \ C++ 运算符中最容易使用的，而且你会经常在代码中使用它们和赋值运算符。如果你还记得以前学过的数学知识，应该能认出其中一些运算符，并了解它们是什么以及如何运作。根据你希望软件完成的任务，这些算术运算符可用于加法、减法、除法和乘法。\n\
+    \nC++ 中属于此类别、并且可能适用于代码的算术运算符包括以下几种：\n\n- (+)：加法运算符，用于将你选择的两个操作数相加。\n- (-)：减法运算符以\
+    \ (-) 表示，用于从左操作数中减去右操作数。\n- (*)：在 C++ 编程语言中，这是用于乘法的运算符。\n- (/)：此运算符可用于在 C++ 中进行除法。\n\
+    \n递增运算符用 (++) 表示，它会使操作数的值增加 1。递减运算符用 (--) 表示，它只会使操作数的值减少 1。使用这些算术运算符时，你会发现有很多种选择。首先，我们可以根据需要同时使用任意多个运算符。也就是说，如果我们有一串想要组合起来的\
+    \ 10 个数字，也可以做到。\n\n你也可以一次使用几个运算符，例如在处理过程中对各部分进行乘除运算。你只需要使用运算符，并确保按照正确的顺序执行运算，从而得到正确的结果。\n\
+    \n### 赋值运算符\n\n现在该讲解第三种适用于 C++ 编程语言的运算符了。\n\n赋值运算符属于这一类别。\n\n这是最常用的运算符，用于确保脚本正确运行。它常用于将值赋给变量，使其正常工作。\n\
+    \n赋值运算符至关重要，因为它能让你更轻松地为变量赋值或命名。在你编写的任何脚本中，它也非常适合用于存储、查找以及执行许多其他操作。除了等号之外，我们还可以使用以下几种赋值运算符为变量赋值：\n\
+    \n- (=)：这是基本赋值运算符。\n\n  它会将右侧操作数的值传递给左侧操作数。\n\n"
+  merge: 1
+- raw:
+  - '[PAGE 34]
+
+
+    +   * **(+): This is known as the Add AND operator.**
+
+
+    It will add the values from both operands and then assign the total of these to
+    the operand on the left side.
+
+
+    +   * **(*=): This is the Multiply AND operator.**
+
+
+    It will multiply both operands and then pass the results to the operand on the
+    left side.
+
+
+    +   * **(-=):** This is the operator that subtracts the value of your operand
+    on the right from the one on the left and then returns the difference to the left
+    operand.
+
+
+    +   * **(/=): This is the divide and operator**
+
+
+    It will divide the value on the left side by the value on the right side and then
+    assign this amount to the left side.
+
+
+    One of the things we need to look at here is how the assignment operators will
+    appear in many of the C++ programs that we wish to employ. Some will be used on
+    a frequent basis, such as the equal sign when dealing with variables and giving
+    a value to them.
+
+
+    Then there will be some of the above choices that are not very popular, and you
+    are unlikely to utilize them until you have advanced quite a bit in your coding.
+
+
+    Most of the time, though, the assignment operator that you will use is the equal
+    sign. This allows us to assign the correct value to the variable we want to work
+    with, but there may be instances when we want to use some of the other assignment
+    operators to assist move our code ahead.
+
+
+    # **Operators for Relationships**
+
+
+    The relational operators are the next item on the list that we need to look at.
+
+
+    These will be a little different from what we did with some of the other possibilities,
+    but they will guarantee that we are able to check out a few of the other options
+    that we can handle along the road.
+
+
+    When it comes to relational operators, some of the possibilities available to
+    you include:
+
+
+    +   * **(==):** This is the operator that will determine whether your two operands
+    are equal.
+
+
+    The requirements will be met if they are equal.
+
+
+    +   * **(>):** this operator will compare the values of your operands.
+
+
+    The condition will be true if the operand on the left side is greater than the
+    one on the right.'
+  - '[PAGE 35]
+
+
+    <!-- no content -->'
+  - '[PAGE 36]
+
+
+    response if the input satisfies the requirements you provide. There are also conditional
+    statements that may contain a list of alternative replies and pick the one that
+    makes the most sense depending on the information provided by the user. There
+    is even a third form of conditional statement that we can use, one that will list
+    all the alternatives that the user may choose from using a menu style and then
+    return the appropriate result depending on what the user chose. These are only
+    a handful of the things we can perform using decision control statements. So,
+    with that in mind, let''s go through the alternatives you have when working on
+    these conditional expressions.
+
+
+    # ## The Switch Statements and How to Use Them
+
+
+    So, the first of these conditional statements on which we may concentrate our
+    attention will be called the switch statements. These are useful conditional statements
+    to work with since they can help us check for equality in our variables, which
+    will be tested against the cases or values that you put up in your code. The variable
+    that you are verifying here will then be compared to a variety of scenarios to
+    determine whether or not it is accurate. This is simpler to work with than it
+    may seem at first, so let''s dig in and look at the syntax that we can use with
+    the switch statement below:
+
+
+    ```
+
+    ~~~
+
+    Switch(expression) if constant-expression: statement(s); break; /optional if constant-expression:
+
+    statement(s); break; /optional
+
+    You may include as many of these case statements as you like.
+
+    Default: /Other statement(s);
+
+    ~~~
+
+    ```
+
+
+    When we bring out these switch statements, there are a few guidelines that we
+    must follow to ensure that they perform properly in our code. First, the phrase
+    we''ll use with the switch statement will be either an integral or an enumerated
+    class type. In addition to this, it may be a member of a class that contains a
+    conversion function. The good thing is that when we deal with the C++ language,
+    there are no restrictions to the number of case statements that you can put into
+    the syntax above, so you can make the switch statements as long or as short as
+    you like along the way dependent on your code. The important thing to remember
+    here is that a colon must be appended to all of the values at the end of the right
+    portions for the code to operate properly. After the variable has had some time
+    to locate a value that is equal to it, it is time for the variable to continue
+    running until it finds the break statement. When this break statement is discovered,
+    the switch will be able to cease what it is doing. The control flow from this
+    section will also be allowed to carry on to the next section of our code. You
+    do not need to go through and add a break statement to the cases if it is not
+    required. If you forget about it or decide not to include it, the control flow
+    will simply go on to the next section.'
+  - '[PAGE 37]
+
+
+    # (Chapter 8)
+
+
+    # Working With Inheritances
+
+
+    ![](img/07ace230f2e8f42cdd9a921c63a03aa7_37_0.png)
+
+
+    The inheritances will be the subject of our next discussion here. These are a
+    little more complicated than some of the other things in this manual, but at this
+    time, you''re ready to take on the challenge and truly work with something more
+    difficult. When these inheritances are exposed, we will see some of the beauty
+    that exists in the OOP languages that we discussed before, and we will be able
+    to walk through and reuse sections of the code that we want to work with. The
+    inheritance idea is one of the most significant of all the concepts that come
+    with OOP languages. This concept will make it easy for us to create a class in
+    our code depending on the terms of another class. This is helpful since it makes
+    it simpler to construct and manage one of the apps with which we wish to work.
+    It will also be important in allowing us to reuse the functionality of the code
+    and complete the implementation quicker than ever before. Instead of having to
+    go through and write out brand new members of data and members of functions each
+    time we want to build a class, the programmer may specify that the new class is
+    expected to inherit the members of a class that is already present in the code.
+    This may be far more convenient than having to redefine the members and functions
+    as you walk through the code time and again. The class on which we are based our
+    work, or the existing class, will be referred to as the base class. The derived
+    class is a new class that we are attempting to construct, and it is the one that
+    will take that information, data, or functions from the base class. The inheritance
+    concept will be shown by implementing the "is a" connection. It may, for example,
+    work with the premise that a mammal is an animal; the dog is a mammal, and so
+    the dog is an animal as well. This will simplify the method we''re dealing with
+    here while still giving us a solid picture of what we''re up against along the
+    road.'
+  - '[PAGE 38]
+
+
+    <!-- no content -->'
+  - "[PAGE 39]\n\n```\n```cpp\nvoid setHeight(int h) {\n    height = h;\n} protected:\n\
+    int width; int height;\n};\n// Derived class\nclass Rectangle: public Shape {\n\
+    public:\nint getArea() {\nreturn (width * height);\n}\n};\nint main(void)\n{ Rectangle\
+    \ Rect;\nRect.setWidth(5);\nRect.setHeight(7);\n// Print the area of the object.\n\
+    cout << \"Total area: \" << Rect.getArea() << endl;\nreturn 0; }\n```\n```\n\n\
+    Take some time to enter this code into your compiler and observe what happens.\n\
+    You should figure out that the entire area of it all will be, and then proceed\
+    \ from there. As we can see, while we did work with an inheritance example, it\
+    \ was not that difficult to handle, and it is a great option that will ensure\
+    \ that we can reuse parts of the code, make the implementation of the code easier,\
+    \ and ensure that we get a chance to work with the code without wasting a lot\
+    \ of time in the process.\n\n# Our Inheritance's Access Control\n\nThe next topic\
+    \ to consider is access control and inheritance.\nA derived class has access to\
+    \ all sections of the base class that are not already private. This implies that\
+    \ when we do this, the members of the base class that should not be available\
+    \ to all of the member functions of the derived classes will be designated as\
+    \ private for the base class. As we go through this, you'll note that the derived\
+    \ class will be able to inherit all of the base class's methods.\n\nThere will\
+    \ be a few alternative exceptions that we may utilize with this one depending\
+    \ on the effects we want to achieve. Some of the exceptions to this rule are as\
+    \ follows:\n\n+   1. The friend functions are contained in our base class.\n+\
+    \   2. The overloaded operators included with our base class.\n+   3. The destructors,\
+    \ constructors, and any copy constructors that will occur with our base class.\n\
+    \nWe must pay close attention to some of the many components that appear with\
+    \ our access control. If there are any constraints in our base class, this will\
+    \ create some complications with the inheritance that we are dealing with. And\
+    \ the kind of derived class will be aware of this along the way."
+  md: "\n- **(+=)：**加法赋值运算符。\n\n  它会将两个操作数的值相加，然后将总和赋给左侧操作数。\n\n- **(*=)：**乘法赋值运算符。\n\
+    \n  它会将两个操作数相乘，然后将结果赋给左侧操作数。\n\n- **(-=)：**减法赋值运算符。\n\n  它会用左侧操作数减去右侧操作数的值，然后将差值赋给左侧操作数。\n\
+    \n- **(/=)：**除法赋值运算符。\n\n  它会用左侧操作数的值除以右侧操作数的值，然后将结果赋给左侧操作数。\n\n我们需要了解的一点是，赋值运算符会以何种形式出现在许多我们打算使用的\
+    \ C++ 程序中。有些运算符会频繁使用，例如在处理变量并为其赋值时使用的等号。\n\n还有一些上述运算符并不常用，在编程水平提高不少之前，你可能不太会用到它们。\n\
+    \n不过，大多数时候你会使用的赋值运算符是等号。它允许我们为要处理的变量赋予正确的值，但有时我们也会使用其他赋值运算符来帮助推进代码的编写。\n\n## 关系运算符\n\
+    \n关系运算符是我们接下来需要了解的内容。\n\n它们与我们之前讨论的一些其他选项略有不同，但可以帮助我们检查沿途需要处理的其他一些情况。\n\n关系运算符包括以下几种：\n\
+    \n- **(==)：**用于判断两个操作数是否相等的运算符。\n\n  如果它们相等，则条件成立。\n\n- **(>)：**用于比较操作数值的运算符。\n\
+    \n  如果左侧操作数大于右侧操作数，则条件为真。\n\n如果输入满足你提供的要求，就会返回相应的结果。还有一些条件语句可以包含一系列备选回复，并根据用户提供的信息选择最合适的回复。我们还可以使用第三种形式的条件语句，以菜单形式列出用户可以选择的所有选项，然后根据用户的选择返回相应结果。这些只是我们可以通过决策控制语句完成的部分任务。考虑到这一点，下面让我们来了解使用这些条件表达式时有哪些选择。\n\
+    \n## Switch 语句及其用法\n\n我们首先要讨论的条件语句称为 switch 语句。它们很有用，因为可以帮助我们检查变量是否相等，并将变量与代码中设置的\
+    \ case 值进行比较。要验证的变量会与多个情形进行比较，以确定是否匹配。这比乍看起来要简单，让我们来看看 switch 语句可以使用的语法：\n\n```cpp\n\
+    switch (expression) {\n    case constant-expression:\n        statement(s);\n\
+    \        break; // 可选\n    case constant-expression:\n        statement(s);\n\
+    \        break; // 可选\n    // 可以包含任意数量的 case 语句\n    default:\n        statement(s);\n\
+    }\n```\n\n使用 switch 语句时，我们必须遵循一些规则，以确保它们在代码中正常运行。首先，switch 语句中的表达式必须是整数类型或枚举类型。此外，它也可以是具有转换函数的类的成员。好在\
+    \ C++ 语言对上述语法中可以添加的 case 语句数量没有限制，因此你可以根据代码需要，让 switch 语句变长或变短。需要记住的重要一点是，所有值的后面都必须加上冒号，代码才能正常运行。变量找到与自身相等的值后，会继续执行，直到遇到\
+    \ break 语句。找到 break 语句后，switch 就会停止执行，程序控制流也会继续进入代码的下一部分。如果不需要，可以不在每个 case 中都添加\
+    \ break 语句。如果忘记添加或决定不添加，控制流就会继续执行下一部分。\n\n# 第 8 章\n\n## 继承\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_37_0.png)\n\
+    \n接下来我们要讨论继承。继承比本手册中的一些其他内容更复杂一些，但现在你已经准备好迎接挑战，真正学习更难的内容。了解继承后，我们就能看到之前讨论过的面向对象编程语言（OOP）的许多优点，并能够重用我们想要使用的代码片段。继承是面向对象编程中最重要的概念之一。它使我们能够根据另一个类的定义来创建一个类。这很有用，因为它让我们更容易构建和管理想要开发的应用程序。继承还有助于重用代码功能，从而比以往更快地完成实现。程序员不必每次创建类时都重新编写数据成员和函数成员，而可以指定新类继承代码中已有类的成员。这比在编写代码时一遍又一遍地重新定义成员和函数方便得多。我们工作的基础类，或已有的类，称为基类。我们尝试构建的新类称为派生类，它会从基类中获取信息、数据或函数。继承概念体现了“是一个”（is\
+    \ a）关系。例如，哺乳动物是一种动物；狗是哺乳动物，因此狗也是一种动物。这能简化我们处理问题的方法，同时帮助我们清楚地了解接下来要做的事情。\n\n```cpp\n\
+    void setHeight(int h) {\n    height = h;\n}\n\nprotected:\nint width;\nint height;\n\
+    };\n\n// 派生类\nclass Rectangle : public Shape {\npublic:\n    int getArea() {\n\
+    \        return width * height;\n    }\n};\n\nint main(void) {\n    Rectangle\
+    \ Rect;\n    Rect.setWidth(5);\n    Rect.setHeight(7);\n\n    // 输出对象的面积。\n  \
+    \  cout << \"Total area: \" << Rect.getArea() << endl;\n    return 0;\n}\n```\n\
+    \n请花些时间将这段代码输入编译器并观察运行结果。\n\n你应该能算出它的总面积，然后继续完成后续内容。正如我们所见，虽然这个例子使用了继承，但并不难理解。继承是一个很好的选择，它能帮助我们重用代码、简化代码实现，并让我们有机会在不浪费大量时间的情况下处理代码。\n\
+    \n## 继承中的访问控制\n\n接下来要考虑的主题是访问控制与继承。\n\n派生类可以访问基类中除私有部分以外的所有内容。这意味着，基类中不应向派生类的所有成员函数开放的成员，应在基类中声明为私有。继续学习时你会发现，派生类可以继承基类的所有方法。\n\
+    \n根据我们希望实现的效果，有一些例外情况需要考虑，包括：\n\n1. 基类中的友元函数。\n2. 基类中的重载运算符。\n3. 基类的析构函数、构造函数以及可能存在的复制构造函数。\n\
+    \n我们必须密切关注访问控制中的各个组成部分。如果基类中存在任何限制，就可能给继承带来一些复杂情况。派生类的类型也会受到这些限制的影响。\n"
+  mdcn: "\n- **(+=)：**加法赋值运算符。\n\n  它会将两个操作数的值相加，然后将总和赋给左侧操作数。\n\n- **(*=)：**乘法赋值运算符。\n\
+    \n  它会将两个操作数相乘，然后将结果赋给左侧操作数。\n\n- **(-=)：**减法赋值运算符。\n\n  它会用左侧操作数减去右侧操作数的值，然后将差值赋给左侧操作数。\n\
+    \n- **(/=)：**除法赋值运算符。\n\n  它会用左侧操作数的值除以右侧操作数的值，然后将结果赋给左侧操作数。\n\n我们需要了解的一点是，赋值运算符会以何种形式出现在许多我们打算使用的\
+    \ C++ 程序中。有些运算符会频繁使用，例如在处理变量并为其赋值时使用的等号。\n\n还有一些上述运算符并不常用，在编程水平提高不少之前，你可能不太会用到它们。\n\
+    \n不过，大多数时候你会使用的赋值运算符是等号。它允许我们为要处理的变量赋予正确的值，但有时我们也会使用其他赋值运算符来帮助推进代码的编写。\n\n## 关系运算符\n\
+    \n关系运算符是我们接下来需要了解的内容。\n\n它们与我们之前讨论的一些其他选项略有不同，但可以帮助我们检查沿途需要处理的其他一些情况。\n\n关系运算符包括以下几种：\n\
+    \n- **(==)：**用于判断两个操作数是否相等的运算符。\n\n  如果它们相等，则条件成立。\n\n- **(>)：**用于比较操作数值的运算符。\n\
+    \n  如果左侧操作数大于右侧操作数，则条件为真。\n\n如果输入满足你提供的要求，就会返回相应的结果。还有一些条件语句可以包含一系列备选回复，并根据用户提供的信息选择最合适的回复。我们还可以使用第三种形式的条件语句，以菜单形式列出用户可以选择的所有选项，然后根据用户的选择返回相应结果。这些只是我们可以通过决策控制语句完成的部分任务。考虑到这一点，下面让我们来了解使用这些条件表达式时有哪些选择。\n\
+    \n## Switch 语句及其用法\n\n我们首先要讨论的条件语句称为 switch 语句。它们很有用，因为可以帮助我们检查变量是否相等，并将变量与代码中设置的\
+    \ case 值进行比较。要验证的变量会与多个情形进行比较，以确定是否匹配。这比乍看起来要简单，让我们来看看 switch 语句可以使用的语法：\n\n```cpp\n\
+    switch (expression) {\n    case constant-expression:\n        statement(s);\n\
+    \        break; // 可选\n    case constant-expression:\n        statement(s);\n\
+    \        break; // 可选\n    // 可以包含任意数量的 case 语句\n    default:\n        statement(s);\n\
+    }\n```\n\n使用 switch 语句时，我们必须遵循一些规则，以确保它们在代码中正常运行。首先，switch 语句中的表达式必须是整数类型或枚举类型。此外，它也可以是具有转换函数的类的成员。好在\
+    \ C++ 语言对上述语法中可以添加的 case 语句数量没有限制，因此你可以根据代码需要，让 switch 语句变长或变短。需要记住的重要一点是，所有值的后面都必须加上冒号，代码才能正常运行。变量找到与自身相等的值后，会继续执行，直到遇到\
+    \ break 语句。找到 break 语句后，switch 就会停止执行，程序控制流也会继续进入代码的下一部分。如果不需要，可以不在每个 case 中都添加\
+    \ break 语句。如果忘记添加或决定不添加，控制流就会继续执行下一部分。\n\n# 第 8 章\n\n## 继承\n\n![](img/07ace230f2e8f42cdd9a921c63a03aa7_37_0.png)\n\
+    \n接下来我们要讨论继承。继承比本手册中的一些其他内容更复杂一些，但现在你已经准备好迎接挑战，真正学习更难的内容。了解继承后，我们就能看到之前讨论过的面向对象编程语言（OOP）的许多优点，并能够重用我们想要使用的代码片段。继承是面向对象编程中最重要的概念之一。它使我们能够根据另一个类的定义来创建一个类。这很有用，因为它让我们更容易构建和管理想要开发的应用程序。继承还有助于重用代码功能，从而比以往更快地完成实现。程序员不必每次创建类时都重新编写数据成员和函数成员，而可以指定新类继承代码中已有类的成员。这比在编写代码时一遍又一遍地重新定义成员和函数方便得多。我们工作的基础类，或已有的类，称为基类。我们尝试构建的新类称为派生类，它会从基类中获取信息、数据或函数。继承概念体现了“是一个”（is\
+    \ a）关系。例如，哺乳动物是一种动物；狗是哺乳动物，因此狗也是一种动物。这能简化我们处理问题的方法，同时帮助我们清楚地了解接下来要做的事情。\n\n```cpp\n\
+    void setHeight(int h) {\n    height = h;\n}\n\nprotected:\nint width;\nint height;\n\
+    };\n\n// 派生类\nclass Rectangle : public Shape {\npublic:\n    int getArea() {\n\
+    \        return width * height;\n    }\n};\n\nint main(void) {\n    Rectangle\
+    \ Rect;\n    Rect.setWidth(5);\n    Rect.setHeight(7);\n\n    // 输出对象的面积。\n  \
+    \  cout << \"Total area: \" << Rect.getArea() << endl;\n    return 0;\n}\n```\n\
+    \n请花些时间将这段代码输入编译器并观察运行结果。\n\n你应该能算出它的总面积，然后继续完成后续内容。正如我们所见，虽然这个例子使用了继承，但并不难理解。继承是一个很好的选择，它能帮助我们重用代码、简化代码实现，并让我们有机会在不浪费大量时间的情况下处理代码。\n\
+    \n## 继承中的访问控制\n\n接下来要考虑的主题是访问控制与继承。\n\n派生类可以访问基类中除私有部分以外的所有内容。这意味着，基类中不应向派生类的所有成员函数开放的成员，应在基类中声明为私有。继续学习时你会发现，派生类可以继承基类的所有方法。\n\
+    \n根据我们希望实现的效果，有一些例外情况需要考虑，包括：\n\n1. 基类中的友元函数。\n2. 基类中的重载运算符。\n3. 基类的析构函数、构造函数以及可能存在的复制构造函数。\n\
+    \n我们必须密切关注访问控制中的各个组成部分。如果基类中存在任何限制，就可能给继承带来一些复杂情况。派生类的类型也会受到这些限制的影响。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 40]
+
+
+    # **Inheritance Types**
+
+
+    While we''re here, let''s take a closer look at the sorts of inheritances we can
+    deal with. When we attempt to derive a class from one of our base classes in the
+    first place, the base class may be inherited through a private, protected, or
+    public inheritance.
+
+
+    The access specifier, which we discussed before, will be used to specify the kind
+    of inheritance that you utilize. Now, you will see that it is uncommon for us
+    to deal with a private or protected inheritance, while it is feasible. Just be
+    aware that there may be some challenges along the road that will be difficult
+    to deal with.
+
+
+    Public inheritance is the technique that we are most likely to use here. Even
+    though the public option will be the most usual for us to deal with, we must consider
+    some of the rules that will apply when we work with the various forms of inheritance.
+
+
+    The several guidelines that we must remember while dealing with this one are as
+    follows:
+
+
+    +   1. **The public inheritance:** When we derive a new class from a public base
+    class, the public members contained in our base, or original, class become public
+    members of the derived class. The protected members contained in our base class
+    will subsequently become protected members of some of the derived classes that
+    we create from it.
+
+
+    +   a. We will discover that the private members present in our base class are
+    never immediately available from the derived class.
+
+
+    We can go to them from here. To make this happen, we just need to make some calls
+    to the protected and public members of our basic class.
+
+
+    +   2. **The safeguarded inheritance:** The second option is protected inheritance,
+    which we can deal with. When we wish to derive a new class from a protected base
+    class, the protected and public members of the base class will become protected
+    members of the derived class that we want to work with.
+
+
+    +   3. **Private inheritance:** The last sort of inheritance we''ll look at is
+    private inheritance. When we attempt to derive a new class from a private base
+    class, both the protected and public members of our base class will be transferred
+    to the derived class, but they will be converted into some of the private members
+    instead. As we can see, each of them will be distinct from the others.
+
+
+    And it is for this reason that we must be cautious about the kind of inheritances
+    with which we will be working. If you have a different form of inheritance, the
+    members will not always operate the way you want them to. Check what you''re in
+    and make sure it''s set to the appropriate sort so that it operates the way you
+    want it to.
+
+
+    # **Carrying out a Multiple Inheritance**
+
+
+    The notion of managing multiple inheritances is the final thing we want to look
+    at when it comes to some of the inheritances that we can perform with the C++
+    language. One of the classes in this language can pass through and inherit members
+    from many classes. The enhanced syntax that we'
+  - '[PAGE 41]
+
+
+    may use with this one is as follows:
+
+    derived-class; access baseA, access based, We can go over this and bring in as
+    many of the basic
+
+    classes as we like, but be sure to just utilize the ones that are required, otherwise
+    you''ll end up
+
+    with a large mess. The same restrictions that apply to access that we discussed
+    before will apply
+
+    to this phase of the procedure as well. Where the access is one of private, protected,
+    or public
+
+    and is supplied for each base class, and they are also separated by a comma, using
+    the same
+
+    syntax as we discussed earlier.
+
+
+    A nice method to see how these various inheritances will operate is to experiment
+    with them as
+
+    well. Look at the code below to see how we can make one of them, or at least a
+    new derived
+
+    class based on a few distinct base classes:
+
+
+    ```
+
+    ```cpp
+
+    #include<iostream>
+
+    using namespace std;
+
+    // Base class Shape
+
+    class Shape {
+
+    public:
+
+    void setWidth(int w) {
+
+    width = w;
+
+    }
+
+    void setHeight(int h) {
+
+    height = h;
+
+    }
+
+    protected:
+
+    int width;
+
+    int height;
+
+    };
+
+    // Base class PaintCost
+
+    class PaintCost {
+
+    public:
+
+    int getCost(int area) {
+
+    return area * 70;
+
+    }
+
+    };
+
+    // Derived class
+
+    class Rectangle: public Shape, public PaintCost {
+
+    public:
+
+    int getArea() {
+
+    return (width * height);
+
+    }
+
+    };
+
+    int main(void) {
+
+    Rectangle Rect;
+
+    int area;
+
+    Rect.setWidth(5);
+
+    Rect.setHeight(7);
+
+    area = Rect.getArea();
+
+    // Print the area of the object.
+
+    ```
+
+    ```'
+  - '[PAGE 42]
+
+
+    <!-- no content -->'
+  - "[PAGE 43]\n\nthat will be used to activate the function.\nConsider the following\
+    \ example to understand how all of this polymorphism is meant to operate in our\
+    \ code. The following example demonstrates how a base class may be generated from\
+    \ two additional classes:\n\n```\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\nclass Shape {\nprotected:\n    int width, height;\npublic:\n    Shape(\
+    \ int a = 0, int b = 0){\n        width = a;\n        height = b;\n    }\n   \
+    \ int area() {\n        cout << \"Parent class area :\" << endl;\n        return\
+    \ 0;\n    }\n};\nclass Rectangle: public Shape {\npublic:\n    Rectangle( int\
+    \ a = 0, int b = 0):Shape(a, b) { }\n    int area () {\n        cout << \"Rectangle\
+    \ class area :\" << endl;\n        return (width * height);\n    }\n};\nclass\
+    \ Triangle: public Shape {\npublic:\n    Triangle( int a = 0, int b = 0):Shape(a,\
+    \ b) { }\n    int area () {\n        cout << \"Triangle class area :\" << endl;\n\
+    \        return (width * height / 2);\n    }\n};\n// Main function for the program\n\
+    int main() {\n    Shape *shape;\n    Rectangle rec(10,7);\n    Triangle tri(10,5);\n\
+    \    // store the address of Rectangle\n    shape = &rec;\n```\n```"
+  - '[PAGE 44]
+
+
+    ```
+
+    ```cpp
+
+    // call rectangle area.
+
+    shape->area();
+
+    // store the address of Triangle
+
+    shape = &tri;
+
+    // call triangle area.
+
+    shape->area();
+
+    return 0;
+
+    }
+
+    ```
+
+    ```
+
+
+    When you''ve completed compiling the code above and given it some time to run,
+    you should see the parent class area''s result there. However, both portions will
+    be kept blank.
+
+
+    The compiler will set the call of the function area once as the version that is
+    declared in our base class, resulting in this erroneous output. This is known
+    as the static linkage or the static resolution of the function call. What this
+    implies for us is that the function call will be corrected before we even start
+    working with the software. Because the area() function is set during the compilation
+    of the program, this may also be referred to as the early binding. However, we
+    must now take a different path and make some minor changes to our software. In
+    this case, we''ll use the virtual keyword to precede the definition of the area()
+    method in our Shape class.
+
+
+    The following is how this code will appear:
+
+
+    ```
+
+    ```cpp
+
+    Shape as a class
+
+    protected:
+
+
+    class Shape {
+
+    protected:
+
+    int width, height;
+
+    public:
+
+    Shape( int a = 0, int b = 0) {
+
+    width = a;
+
+    height = b;
+
+    }
+
+    virtual int area() {
+
+    cout << "Parent class area :" <<endl;
+
+    return 0;
+
+    }
+
+    }
+
+    ```
+
+    ```
+
+
+    It will give us a little different outcome in the process once we can make this
+    minor alteration, compile, and then run the code again. Instead, we''ll obtain
+    the Triangle class area and the Rectangle class area.
+
+
+    Instead of looking at the type of the pointer, the compiler will look at the contents
+    of the pointer. Because the addresses of our rec and tri objects will be kept
+    in the *shape, here is where the appropriate region of our function will be called
+    up. As you can see, each of the child classes with which we will work will have
+    a different implementation of our function area. We are typically able to deal
+    with polymorphism in this manner. You may also create several classes with the
+    same function name and even the same arguments, but to make this work, you''ll
+    need to use a different implementation. Another thing we''ll be able to do here
+    is work with the virtual function. This will be a function from a base class that
+    may be defined with the "virtual" keyword, as we'
+  - '[PAGE 45]
+
+
+    <!-- no content -->'
+  - '[PAGE 46]
+
+
+    on Amazon'
+  md: "\n## Inheritance Types\n\nWhile we're here, let's take a closer look at the\
+    \ sorts of inheritances we can deal with. When we attempt to derive a class from\
+    \ one of our base classes in the first place, the base class may be inherited\
+    \ through a private, protected, or public inheritance.\n\nThe access specifier,\
+    \ which we discussed before, will be used to specify the kind of inheritance that\
+    \ you utilize. Now, you will see that it is uncommon for us to deal with a private\
+    \ or protected inheritance, while it is feasible. Just be aware that there may\
+    \ be some challenges along the road that will be difficult to deal with.\n\nPublic\
+    \ inheritance is the technique that we are most likely to use here. Even though\
+    \ the public option will be the most usual for us to deal with, we must consider\
+    \ some of the rules that will apply when we work with the various forms of inheritance.\n\
+    \nThe several guidelines that we must remember while dealing with this one are\
+    \ as follows:\n\n- **The public inheritance:** When we derive a new class from\
+    \ a public base class, the public members contained in our base, or original,\
+    \ class become public members of the derived class. The protected members contained\
+    \ in our base class will subsequently become protected members of some of the\
+    \ derived classes that we create from it.\n    - We will discover that the private\
+    \ members present in our base class are never immediately available from the derived\
+    \ class.\n\nWe can go to them from here. To make this happen, we just need to\
+    \ make some calls to the protected and public members of our basic class.\n\n\
+    - **The protected inheritance:** The second option is protected inheritance, which\
+    \ we can deal with. When we wish to derive a new class from a protected base class,\
+    \ the protected and public members of the base class will become protected members\
+    \ of the derived class that we want to work with.\n- **Private inheritance:**\
+    \ The last sort of inheritance we'll look at is private inheritance. When we attempt\
+    \ to derive a new class from a private base class, both the protected and public\
+    \ members of our base class will be transferred to the derived class, but they\
+    \ will be converted into some of the private members instead. As we can see, each\
+    \ of them will be distinct from the others.\n\nAnd it is for this reason that\
+    \ we must be cautious about the kind of inheritances with which we will be working.\
+    \ If you have a different form of inheritance, the members will not always operate\
+    \ the way you want them to. Check what you're in and make sure it's set to the\
+    \ appropriate sort so that it operates the way you want it to.\n\n## Carrying\
+    \ out a Multiple Inheritance\n\nThe notion of managing multiple inheritances is\
+    \ the final thing we want to look at when it comes to some of the inheritances\
+    \ that we can perform with the C++ language. One of the classes in this language\
+    \ can pass through and inherit members from many classes. The enhanced syntax\
+    \ that we may use with this one is as follows:\n\n```cpp\nclass derived-class\
+    \ : access baseA, access baseB\n```\n\nWe can go over this and bring in as many\
+    \ of the basic classes as we like, but be sure to just utilize the ones that are\
+    \ required, otherwise you'll end up with a large mess. The same restrictions that\
+    \ apply to access that we discussed before will apply to this phase of the procedure\
+    \ as well. Where the access is one of private, protected, or public and is supplied\
+    \ for each base class, and they are also separated by a comma, using the same\
+    \ syntax as we discussed earlier.\n\nA nice method to see how these various inheritances\
+    \ will operate is to experiment with them as well. Look at the code below to see\
+    \ how we can make one of them, or at least a new derived class based on a few\
+    \ distinct base classes:\n\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    // Base class Shape\nclass Shape {\npublic:\n    void setWidth(int w) {\n    \
+    \    width = w;\n    }\n    void setHeight(int h) {\n        height = h;\n   \
+    \ }\nprotected:\n    int width;\n    int height;\n};\n// Base class PaintCost\n\
+    class PaintCost {\npublic:\n    int getCost(int area) {\n        return area *\
+    \ 70;\n    }\n};\n// Derived class\nclass Rectangle: public Shape, public PaintCost\
+    \ {\npublic:\n    int getArea() {\n        return (width * height);\n    }\n};\n\
+    int main(void) {\n    Rectangle Rect;\n    int area;\n    Rect.setWidth(5);\n\
+    \    Rect.setHeight(7);\n    area = Rect.getArea();\n    // Print the area of\
+    \ the object.\n```\n\nthat will be used to activate the function.\n\nConsider\
+    \ the following example to understand how all of this polymorphism is meant to\
+    \ operate in our code. The following example demonstrates how a base class may\
+    \ be generated from two additional classes:\n\n```cpp\n#include <iostream>\nusing\
+    \ namespace std;\nclass Shape {\nprotected:\n    int width, height;\npublic:\n\
+    \    Shape( int a = 0, int b = 0){\n        width = a;\n        height = b;\n\
+    \    }\n    int area() {\n        cout << \"Parent class area :\" << endl;\n \
+    \       return 0;\n    }\n};\nclass Rectangle: public Shape {\npublic:\n    Rectangle(\
+    \ int a = 0, int b = 0):Shape(a, b) { }\n    int area () {\n        cout << \"\
+    Rectangle class area :\" << endl;\n        return (width * height);\n    }\n};\n\
+    class Triangle: public Shape {\npublic:\n    Triangle( int a = 0, int b = 0):Shape(a,\
+    \ b) { }\n    int area () {\n        cout << \"Triangle class area :\" << endl;\n\
+    \        return (width * height / 2);\n    }\n};\n// Main function for the program\n\
+    int main() {\n    Shape *shape;\n    Rectangle rec(10,7);\n    Triangle tri(10,5);\n\
+    \    // store the address of Rectangle\n    shape = &rec;\n    // call rectangle\
+    \ area.\n    shape->area();\n    // store the address of Triangle\n    shape =\
+    \ &tri;\n    // call triangle area.\n    shape->area();\n    return 0;\n}\n```\n\
+    \nWhen you've completed compiling the code above and given it some time to run,\
+    \ you should see the parent class area's result there. However, both portions\
+    \ will be kept blank.\n\nThe compiler will set the call of the function area once\
+    \ as the version that is declared in our base class, resulting in this erroneous\
+    \ output. This is known as the static linkage or the static resolution of the\
+    \ function call. What this implies for us is that the function call will be corrected\
+    \ before we even start working with the software. Because the area() function\
+    \ is set during the compilation of the program, this may also be referred to as\
+    \ the early binding. However, we must now take a different path and make some\
+    \ minor changes to our software. In this case, we'll use the virtual keyword to\
+    \ precede the definition of the area() method in our Shape class.\n\nThe following\
+    \ is how this code will appear:\n\n```cpp\nclass Shape {\nprotected:\n    int\
+    \ width, height;\npublic:\n    Shape( int a = 0, int b = 0) {\n        width =\
+    \ a;\n        height = b;\n    }\n    virtual int area() {\n        cout << \"\
+    Parent class area :\" << endl;\n        return 0;\n    }\n};\n```\n\nIt will give\
+    \ us a little different outcome in the process once we can make this minor alteration,\
+    \ compile, and then run the code again. Instead, we'll obtain the Triangle class\
+    \ area and the Rectangle class area.\n\nInstead of looking at the type of the\
+    \ pointer, the compiler will look at the contents of the pointer. Because the\
+    \ addresses of our rec and tri objects will be kept in the *shape, here is where\
+    \ the appropriate region of our function will be called up. As you can see, each\
+    \ of the child classes with which we will work will have a different implementation\
+    \ of our function area. We are typically able to deal with polymorphism in this\
+    \ manner. You may also create several classes with the same function name and\
+    \ even the same arguments, but to make this work, you'll need to use a different\
+    \ implementation. Another thing we'll be able to do here is work with the virtual\
+    \ function. This will be a function from a base class that may be defined with\
+    \ the \"virtual\" keyword, as we\n\non Amazon\n"
+  mdcn: "\n\n## 继承类型\n\n既然说到这里，让我们更仔细地看看我们可以处理的继承类型。当我们首先尝试从某个基类派生一个类时，基类可以通过私有继承、保护继承或公有继承来继承。\n\
+    \n我们之前讨论过的访问说明符，将用于指定你所使用的继承类型。现在你会看到，虽然私有继承或保护继承是可行的，但我们处理它们并不常见。只需注意，沿途可能会遇到一些难以处理的挑战。\n\
+    \n公有继承是我们在这里最可能使用的技术。尽管公有选项将是我们最常处理的，但我们必须考虑在处理各种形式的继承时所适用的一些规则。\n\n在处理这一继承时我们必须记住的几条准则如下：\n\
+    \n- **公有继承：** 当我们从公有基类派生新类时，基类（或原始类）中包含的公有成员会成为派生类的公有成员。我们基类中包含的保护成员随后会成为我们由此创建的某些派生类的保护成员。\n\
+    \    - 我们会发现，基类中存在的私有成员永远不能直接从派生类访问。\n\n我们可以从这里访问它们。要做到这一点，我们只需调用基类的保护成员和公有成员。\n\
+    \n- **保护继承：** 第二个选项是保护继承，我们可以处理它。当我们希望从保护基类派生新类时，基类的保护成员和公有成员将成为我们想要使用的派生类的保护成员。\n\
+    - **私有继承：** 我们要看的最后一种继承是私有继承。当我们尝试从私有基类派生新类时，基类的保护成员和公有成员都会被转移到派生类中，但它们会被转换为一些私有成员。如我们所见，它们每一个都会与其他成员不同。\n\
+    \n正是因为这个原因，我们必须谨慎对待我们将要使用的继承类型。如果你使用不同形式的继承，成员并不总是会按你希望的方式运作。检查你处于哪种情况，并确保它被设置为适当的类型，以便它按你希望的方式运作。\n\
+    \n## 实现多重继承\n\n管理多重继承的概念，是我们考察 C++ 语言中可以执行的某些继承时要看的最后一项内容。这种语言中的一个类可以穿过并从多个类继承成员。我们可以用于这一点的扩展语法如下：\n\
+    \n```cpp\nclass derived-class : access baseA, access baseB\n```\n\n我们可以检查这一点，并引入任意多个基类，但一定要只使用所需的那些，否则最终会变得一团糟。我们之前讨论过的适用于访问的限制，也同样适用于过程的这一阶段。其中访问权限为\
+    \ private、protected 或 public 之一，并且为每个基类提供，它们也用逗号分隔，使用我们之前讨论过的相同语法。\n\n了解这些不同继承如何运作的一个好方法，同样是亲自试验它们。看看下面的代码，了解我们如何创建其中一种继承，或者至少基于几个不同的基类创建一个新的派生类：\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n// Base class Shape\nclass\
+    \ Shape {\npublic:\n    void setWidth(int w) {\n        width = w;\n    }\n  \
+    \  void setHeight(int h) {\n        height = h;\n    }\nprotected:\n    int width;\n\
+    \    int height;\n};\n// Base class PaintCost\nclass PaintCost {\npublic:\n  \
+    \  int getCost(int area) {\n        return area * 70;\n    }\n};\n// Derived class\n\
+    class Rectangle: public Shape, public PaintCost {\npublic:\n    int getArea()\
+    \ {\n        return (width * height);\n    }\n};\nint main(void) {\n    Rectangle\
+    \ Rect;\n    int area;\n    Rect.setWidth(5);\n    Rect.setHeight(7);\n    area\
+    \ = Rect.getArea();\n    // Print the area of the object.\n```\n\n它将用于激活该函数。\n\
+    \n考虑以下示例，以理解所有这些多态在我们的代码中应如何运作。以下示例演示了如何从另外两个类生成一个基类：\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\nclass Shape {\nprotected:\n    int width, height;\npublic:\n\
+    \    Shape( int a = 0, int b = 0){\n        width = a;\n        height = b;\n\
+    \    }\n    int area() {\n        cout << \"Parent class area :\" << endl;\n \
+    \       return 0;\n    }\n};\nclass Rectangle: public Shape {\npublic:\n    Rectangle(\
+    \ int a = 0, int b = 0):Shape(a, b) { }\n    int area () {\n        cout << \"\
+    Rectangle class area :\" << endl;\n        return (width * height);\n    }\n};\n\
+    class Triangle: public Shape {\npublic:\n    Triangle( int a = 0, int b = 0):Shape(a,\
+    \ b) { }\n    int area () {\n        cout << \"Triangle class area :\" << endl;\n\
+    \        return (width * height / 2);\n    }\n};\n// Main function for the program\n\
+    int main() {\n    Shape *shape;\n    Rectangle rec(10,7);\n    Triangle tri(10,5);\n\
+    \    // store the address of Rectangle\n    shape = &rec;\n    // call rectangle\
+    \ area.\n    shape->area();\n    // store the address of Triangle\n    shape =\
+    \ &tri;\n    // call triangle area.\n    shape->area();\n    return 0;\n}\n```\n\
+    \n当你完成编译上述代码并给它一些运行时间后，你应该会在那里看到父类面积的结果。然而，两部分都会保持空白。\n\n编译器会把对 area 函数的调用设置为基类中声明的版本，从而导致这种错误输出。这被称为函数调用的静态链接或静态解析。这对我们意味着，函数调用会在我们甚至开始使用软件之前就被修正。由于\
+    \ area() 函数在程序编译期间就被确定，这也可能被称为早期绑定。然而，我们现在必须走另一条路，并对软件做一些小改动。在这种情况下，我们将在 Shape\
+    \ 类中 area() 方法定义之前使用 virtual 关键字。\n\n这段代码将如下所示：\n\n```cpp\nclass Shape {\nprotected:\n\
+    \    int width, height;\npublic:\n    Shape( int a = 0, int b = 0) {\n       \
+    \ width = a;\n        height = b;\n    }\n    virtual int area() {\n        cout\
+    \ << \"Parent class area :\" << endl;\n        return 0;\n    }\n};\n```\n\n一旦我们做出这个小改动、编译并再次运行代码，它将在过程中给我们略有不同的结果。相反，我们将获得\
+    \ Triangle 类的面积和 Rectangle 类的面积。\n\n编译器将不再查看指针的类型，而是查看指针的内容。因为我们的 rec 和 tri 对象的地址将保存在\
+    \ *shape 中，所以这里将调用我们函数的相应部分。如你所见，我们将要使用的每个子类都会有不同的 area 函数实现。我们通常能够以这种方式处理多态。你也可以创建多个具有相同函数名甚至相同参数的类，但要使这可行，你需要使用不同的实现。我们在这里还能做的另一件事是使用虚函数。这将是一个来自基类的函数，可以用\
+    \ \"virtual\" 关键字定义，正如我们\n\n在亚马逊上\n\n"
+  merge: 0
