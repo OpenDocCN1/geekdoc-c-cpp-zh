@@ -1,0 +1,11 @@
+# **Introduction**
+
+If you are looking for ways to lose weight by reducing fat, you have probably heard of the Ketogenic diet. The ketogenic diet is a low carb diet, with a high amount of proteins and a lot of fats. This diet is so effective because it forces your body to burn fats for energy, instead of glucose from carbs. This is a must try diet that I guarantee will help you achieve your goals and make you feel amazing in doing so.
+
+The way the Ketogenic diet works is that it forces the body to convert fat into energy instead of using carbs for energy. This provides your organs with energy to function, and is also very good for their health.
+
+It has been a concern of many people that if your body burns too much fat for energy production, being on a low carb diet will result in inadequate glucose levels. This is actually false and has been proven in numerous studies with people on low carb diets. It is important to understand that even though your body converts glucose to fat, the opposite is not true. Your body however, can use the protein you consume and covert some of it into glucose, and glucose is needed by your body.
+
+One of the major benefits of the ketogenic diet is that it gives you a full feeling for much longer, and this is one of the biggest reasons people avoid different diets. In addition, being on the ketogenic diet results in a low consumption of carbohydrates, which results in greater weight loss. This is because low carb diets help eliminate excess water from your body, which increases the speed your kidney’s get rid of sodium.
+
+You may be thinking, how can a high amount of fat be good for you? Many people are unaware that there are two different kinds of fats. There are “bad” fats, which have the tendency to attach to the abdominal organs, and this is some of the hardest fat to lose. Low carb diets help to reduce these fats, and this is important because these fats can cause inflammation, and increase insulin resistance, which will result in long term health issues.

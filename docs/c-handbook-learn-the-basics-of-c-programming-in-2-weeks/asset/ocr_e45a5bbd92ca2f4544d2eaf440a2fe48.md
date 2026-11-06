@@ -1,0 +1,5 @@
+# What is the website of [company name]?
+
+Lastly, people use search engines to go to specific areas on the web. Some people for example, want to go to the website of their local newspaper. They do not know the exact website address so they ask google to lead them there.
+
+The search engine has become the primary source of answers for most people in developed countries. The majority of users of search engines like Google trust the search results compiled by the algorithm. Most people expect to find the answer to their query in top result. If the first five results do not seem to have the answer to their question, people tend to think that there must be something wrong with the phrase they used in the query. Most people refine their search just like the guy looking for a second-hand Lexus in New York.

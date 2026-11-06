@@ -1,0 +1,1 @@
+lipolysis in the body. This process involves breakdown of body fat and proteins, which contributes to weight loss.

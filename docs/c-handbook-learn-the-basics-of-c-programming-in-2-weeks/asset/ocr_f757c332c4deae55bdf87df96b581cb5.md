@@ -1,0 +1,1 @@
+than keeping your waistline down. Try drinking an average of 3-10 cups each day if you want to reap the benefits. Again, you don’t have to totally deprive yourself of food once you go on a tea detox. As long as you eat clean, you’ll be able to see a drastic change in your weight, and your way of life in no time.

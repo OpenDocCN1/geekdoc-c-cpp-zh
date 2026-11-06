@@ -1,0 +1,11 @@
+# Chapter 1 : Aromatherapy
+
+Do you often get tired and stressed in your workout regimes? Do you often fall prey to depression and anxiety after not seeing any significant improvement in your body shape? Do you desperately want to get in your desirable shape but the current practices are not working out for you? If yes, then you need not worry anymore as this book is here to guide you about an exciting thing which could aid in reducing your weight to a great extent.
+
+Losing weight can be a daunting task for most of us. While everyone is excited to get a slim and smart figure, it is only a few which persist in following a strict diet and exercise regime. While exercises and diets are crucial in reducing your weight, they can sometimes take an enormous amount of time to give desirable results.
+
+For most of us, our exercise regimes do not seem effective on our bodies and our diets do not provide any significant reduction to our fats. While many people may continue working out for years, most of us lose hope and give up on our dreams to look slim. Sticking to a strict exercise and diet regime can be stressful for most of us, due to which many people fall into depression and bulimia and move further apart from their aims of reducing weight.
+
+In situations like these, you need something which could lift your moods and fill you with a determination and motivation to reduce the excess weight gained. You need something to enhance your mental health so you could control your cravings in a better way and persist in your workouts no matter how hard they seem. This is where aromatherapy steps in. It enhances your energy, lifts your mood, reduces your stress and improves physical and mental well being. It is when you are energized, motivated and fit that you will be able to concentrate on your aim and get in your desirable shape.
+
+Before we move on to tell you how aromatherapy can aid in reducing weight, let us tell you what aromatherapy really is. Aromatherapy is a technique in which controlled amount of essential oils are used to enhance one ’ s physical, mental and spiritual well being. You

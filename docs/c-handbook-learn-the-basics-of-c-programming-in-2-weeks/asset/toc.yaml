@@ -1,0 +1,1397 @@
+level_changes:
+- line: 1227
+  before: 1
+  after: 4
+- line: 1229
+  before: 1
+  after: 4
+- line: 1247
+  before: 1
+  after: 4
+- line: 1248
+  before: 1
+  after: 4
+- line: 1249
+  before: 1
+  after: 4
+- line: 1250
+  before: 1
+  after: 4
+- line: 1931
+  before: 2
+  after: 1
+- line: 1933
+  before: 3
+  after: 2
+- line: 2261
+  before: 2
+  after: 3
+- line: 2281
+  before: 2
+  after: 3
+- line: 2482
+  before: 2
+  after: 1
+- line: 2484
+  before: 3
+  after: 2
+- line: 3075
+  before: 2
+  after: 1
+- line: 3077
+  before: 3
+  after: 2
+- line: 3308
+  before: 2
+  after: 3
+- line: 3328
+  before: 2
+  after: 3
+- line: 3349
+  before: 2
+  after: 3
+- line: 3381
+  before: 2
+  after: 3
+- line: 3411
+  before: 2
+  after: 3
+- line: 3441
+  before: 2
+  after: 3
+- line: 3719
+  before: 2
+  after: 3
+- line: 3739
+  before: 2
+  after: 3
+- line: 3774
+  before: 2
+  after: 3
+- line: 3793
+  before: 2
+  after: 3
+- line: 3807
+  before: 2
+  after: 3
+- line: 3832
+  before: 2
+  after: 3
+- line: 3855
+  before: 2
+  after: 3
+- line: 3920
+  before: 2
+  after: 1
+- line: 4184
+  before: 2
+  after: 3
+- line: 4187
+  before: 2
+  after: 3
+- line: 4190
+  before: 2
+  after: 3
+- line: 4193
+  before: 2
+  after: 3
+- line: 4196
+  before: 2
+  after: 3
+- line: 4250
+  before: 2
+  after: 1
+- line: 4251
+  before: 3
+  after: 2
+- line: 4252
+  before: 3
+  after: 2
+- line: 4253
+  before: 3
+  after: 2
+- line: 5071
+  before: 2
+  after: 1
+- line: 5234
+  before: 2
+  after: 3
+- line: 5842
+  before: 2
+  after: 1
+- line: 5844
+  before: 3
+  after: 2
+- line: 6410
+  before: 2
+  after: 3
+- line: 6461
+  before: 2
+  after: 3
+- line: 6529
+  before: 2
+  after: 3
+- line: 6533
+  before: 3
+  after: 4
+- line: 6563
+  before: 3
+  after: 4
+- line: 6590
+  before: 3
+  after: 4
+- line: 6674
+  before: 2
+  after: 1
+- line: 7520
+  before: 2
+  after: 1
+- line: 7522
+  before: 3
+  after: 2
+- line: 8129
+  before: 2
+  after: 1
+- line: 8509
+  before: 2
+  after: 1
+- line: 8511
+  before: 3
+  after: 2
+- line: 9651
+  before: 2
+  after: 1
+- line: 10139
+  before: 2
+  after: 1
+- line: 10704
+  before: 2
+  after: 1
+- line: 10706
+  before: 3
+  after: 2
+- line: 11494
+  before: 2
+  after: 1
+- line: 11496
+  before: 3
+  after: 2
+- line: 11955
+  before: 2
+  after: 1
+- line: 12308
+  before: 2
+  after: 1
+- line: 12310
+  before: 3
+  after: 2
+- line: 12633
+  before: 2
+  after: 1
+- line: 13654
+  before: 2
+  after: 1
+- line: 13656
+  before: 3
+  after: 2
+- line: 14106
+  before: 2
+  after: 3
+- line: 14118
+  before: 2
+  after: 3
+- line: 14187
+  before: 2
+  after: 1
+- line: 14297
+  before: 3
+  after: 4
+- line: 14303
+  before: 3
+  after: 4
+- line: 14307
+  before: 3
+  after: 4
+- line: 14311
+  before: 3
+  after: 4
+- line: 14315
+  before: 3
+  after: 4
+- line: 14967
+  before: 2
+  after: 1
+- line: 14971
+  before: 3
+  after: 2
+- line: 14973
+  before: 3
+  after: 2
+- line: 15704
+  before: 2
+  after: 1
+- line: 15789
+  before: 3
+  after: 4
+- line: 15808
+  before: 3
+  after: 4
+- line: 15825
+  before: 3
+  after: 4
+- line: 15846
+  before: 3
+  after: 4
+- line: 15873
+  before: 3
+  after: 4
+- line: 15892
+  before: 3
+  after: 4
+- line: 15912
+  before: 3
+  after: 4
+- line: 15933
+  before: 3
+  after: 4
+- line: 15960
+  before: 3
+  after: 4
+- line: 15987
+  before: 3
+  after: 4
+- line: 16010
+  before: 3
+  after: 4
+- line: 16029
+  before: 3
+  after: 4
+- line: 16051
+  before: 3
+  after: 4
+- line: 16061
+  before: 2
+  after: 3
+- line: 16070
+  before: 3
+  after: 4
+- line: 16129
+  before: 2
+  after: 1
+- line: 16282
+  before: 2
+  after: 3
+- line: 16288
+  before: 2
+  after: 3
+- line: 16294
+  before: 2
+  after: 3
+- line: 16306
+  before: 2
+  after: 3
+- line: 16312
+  before: 2
+  after: 3
+- line: 16318
+  before: 2
+  after: 3
+- line: 16324
+  before: 2
+  after: 3
+- line: 16330
+  before: 2
+  after: 3
+- line: 16336
+  before: 2
+  after: 3
+- line: 16342
+  before: 2
+  after: 3
+- line: 16348
+  before: 2
+  after: 3
+- line: 16354
+  before: 2
+  after: 3
+- line: 16372
+  before: 2
+  after: 3
+- line: 16424
+  before: 2
+  after: 3
+- line: 16452
+  before: 2
+  after: 3
+- line: 16460
+  before: 2
+  after: 3
+- line: 16478
+  before: 2
+  after: 3
+- line: 16490
+  before: 2
+  after: 3
+- line: 16493
+  before: 2
+  after: 3
+- line: 16505
+  before: 2
+  after: 3
+- line: 16511
+  before: 2
+  after: 3
+- line: 16517
+  before: 2
+  after: 3
+- line: 16535
+  before: 2
+  after: 3
+- line: 16553
+  before: 2
+  after: 3
+- line: 16571
+  before: 2
+  after: 3
+- line: 16589
+  before: 2
+  after: 3
+- line: 16607
+  before: 2
+  after: 3
+- line: 16625
+  before: 2
+  after: 3
+- line: 16643
+  before: 2
+  after: 3
+- line: 16661
+  before: 2
+  after: 3
+- line: 16679
+  before: 2
+  after: 3
+- line: 16697
+  before: 2
+  after: 3
+- line: 16715
+  before: 2
+  after: 3
+- line: 16728
+  before: 2
+  after: 3
+- line: 16740
+  before: 2
+  after: 3
+- line: 16752
+  before: 2
+  after: 3
+- line: 17192
+  before: 2
+  after: 1
+- line: 17384
+  before: 2
+  after: 3
+- line: 17388
+  before: 2
+  after: 3
+- line: 17392
+  before: 2
+  after: 3
+- line: 17396
+  before: 2
+  after: 3
+- line: 17400
+  before: 2
+  after: 3
+- line: 17404
+  before: 2
+  after: 3
+- line: 17412
+  before: 2
+  after: 3
+- line: 17420
+  before: 2
+  after: 3
+- line: 17424
+  before: 2
+  after: 3
+- line: 17432
+  before: 2
+  after: 3
+- line: 17436
+  before: 2
+  after: 3
+- line: 17440
+  before: 2
+  after: 3
+- line: 17448
+  before: 2
+  after: 3
+- line: 17454
+  before: 2
+  after: 3
+- line: 17463
+  before: 2
+  after: 3
+- line: 17472
+  before: 2
+  after: 3
+- line: 17481
+  before: 2
+  after: 3
+- line: 17490
+  before: 2
+  after: 3
+- line: 17740
+  before: 2
+  after: 1
+- line: 17742
+  before: 3
+  after: 2
+- line: 18136
+  before: 2
+  after: 1
+- line: 18138
+  before: 3
+  after: 2
+- line: 18309
+  before: 2
+  after: 3
+- line: 18312
+  before: 2
+  after: 3
+- line: 18315
+  before: 2
+  after: 3
+- line: 18318
+  before: 2
+  after: 3
+- line: 18321
+  before: 2
+  after: 3
+- line: 18496
+  before: 2
+  after: 1
+- line: 19131
+  before: 2
+  after: 1
+- line: 19193
+  before: 2
+  after: 3
+- line: 19207
+  before: 2
+  after: 3
+- line: 19213
+  before: 3
+  after: 4
+- line: 19219
+  before: 3
+  after: 4
+- line: 19225
+  before: 3
+  after: 4
+- line: 19229
+  before: 3
+  after: 4
+- line: 19233
+  before: 3
+  after: 4
+- line: 19239
+  before: 3
+  after: 4
+- line: 19243
+  before: 3
+  after: 4
+- line: 19247
+  before: 3
+  after: 4
+- line: 19267
+  before: 2
+  after: 3
+- line: 19282
+  before: 2
+  after: 3
+- line: 19298
+  before: 2
+  after: 3
+- line: 19302
+  before: 2
+  after: 3
+- line: 19312
+  before: 2
+  after: 3
+- line: 19458
+  before: 2
+  after: 3
+- line: 19460
+  before: 3
+  after: 4
+- line: 19468
+  before: 3
+  after: 4
+- line: 19476
+  before: 2
+  after: 3
+- line: 19478
+  before: 3
+  after: 4
+- line: 19488
+  before: 3
+  after: 4
+- line: 19568
+  before: 2
+  after: 3
+- line: 19570
+  before: 3
+  after: 4
+- line: 19578
+  before: 3
+  after: 4
+- line: 19586
+  before: 2
+  after: 3
+- line: 19588
+  before: 3
+  after: 4
+- line: 19609
+  before: 3
+  after: 4
+- line: 19677
+  before: 2
+  after: 3
+- line: 19679
+  before: 3
+  after: 4
+- line: 19690
+  before: 3
+  after: 4
+- line: 19751
+  before: 2
+  after: 1
+- line: 19829
+  before: 2
+  after: 3
+- line: 19835
+  before: 2
+  after: 3
+- line: 20016
+  before: 2
+  after: 3
+- line: 20017
+  before: 3
+  after: 4
+- line: 20025
+  before: 3
+  after: 4
+- line: 20030
+  before: 2
+  after: 3
+- line: 20031
+  before: 3
+  after: 4
+- line: 20044
+  before: 3
+  after: 4
+- line: 20049
+  before: 2
+  after: 3
+- line: 20050
+  before: 3
+  after: 4
+- line: 20066
+  before: 3
+  after: 4
+- line: 20069
+  before: 2
+  after: 3
+- line: 20070
+  before: 3
+  after: 4
+- line: 20082
+  before: 3
+  after: 4
+- line: 20087
+  before: 2
+  after: 3
+- line: 20088
+  before: 3
+  after: 4
+- line: 20103
+  before: 3
+  after: 4
+- line: 20110
+  before: 2
+  after: 3
+- line: 20111
+  before: 3
+  after: 4
+- line: 20124
+  before: 3
+  after: 4
+- line: 20131
+  before: 2
+  after: 3
+- line: 20132
+  before: 3
+  after: 4
+- line: 20139
+  before: 3
+  after: 4
+- line: 20151
+  before: 2
+  after: 3
+- line: 20152
+  before: 3
+  after: 4
+- line: 20161
+  before: 3
+  after: 4
+- line: 20182
+  before: 2
+  after: 3
+- line: 20208
+  before: 2
+  after: 3
+- line: 20226
+  before: 2
+  after: 3
+- line: 20289
+  before: 2
+  after: 1
+- line: 20291
+  before: 3
+  after: 2
+- line: 20390
+  before: 3
+  after: 4
+- line: 20396
+  before: 3
+  after: 4
+- line: 20400
+  before: 3
+  after: 4
+- line: 20404
+  before: 3
+  after: 4
+- line: 20408
+  before: 3
+  after: 4
+- line: 20429
+  before: 2
+  after: 3
+- line: 20441
+  before: 2
+  after: 3
+- line: 20453
+  before: 2
+  after: 3
+- line: 20465
+  before: 2
+  after: 3
+- line: 20474
+  before: 2
+  after: 3
+- line: 20482
+  before: 2
+  after: 3
+- line: 20490
+  before: 2
+  after: 3
+- line: 20499
+  before: 2
+  after: 3
+- line: 20706
+  before: 3
+  after: 4
+- line: 20721
+  before: 3
+  after: 4
+- line: 20722
+  before: 3
+  after: 4
+- line: 20736
+  before: 2
+  after: 3
+- line: 20739
+  before: 3
+  after: 4
+- line: 20751
+  before: 3
+  after: 4
+- line: 20756
+  before: 2
+  after: 3
+- line: 20759
+  before: 3
+  after: 4
+- line: 20779
+  before: 3
+  after: 4
+- line: 20786
+  before: 2
+  after: 3
+- line: 20789
+  before: 3
+  after: 4
+- line: 20795
+  before: 3
+  after: 4
+- line: 20801
+  before: 2
+  after: 3
+- line: 20804
+  before: 3
+  after: 4
+- line: 20814
+  before: 3
+  after: 4
+- line: 20820
+  before: 2
+  after: 3
+- line: 20823
+  before: 3
+  after: 4
+- line: 20837
+  before: 2
+  after: 3
+- line: 20840
+  before: 3
+  after: 4
+- line: 20851
+  before: 3
+  after: 4
+- line: 20858
+  before: 2
+  after: 3
+- line: 20861
+  before: 3
+  after: 4
+- line: 20878
+  before: 3
+  after: 4
+- line: 20885
+  before: 2
+  after: 3
+- line: 20913
+  before: 2
+  after: 3
+- line: 20925
+  before: 2
+  after: 3
+- line: 20938
+  before: 2
+  after: 3
+- line: 20950
+  before: 2
+  after: 3
+- line: 20963
+  before: 2
+  after: 3
+- line: 21034
+  before: 2
+  after: 3
+- line: 21040
+  before: 2
+  after: 3
+- line: 21044
+  before: 2
+  after: 3
+- line: 21052
+  before: 2
+  after: 3
+- line: 21158
+  before: 2
+  after: 3
+- line: 21162
+  before: 3
+  after: 4
+- line: 21174
+  before: 3
+  after: 4
+- line: 21182
+  before: 3
+  after: 4
+- line: 21190
+  before: 3
+  after: 4
+- line: 21196
+  before: 3
+  after: 4
+- line: 21214
+  before: 3
+  after: 4
+- line: 21220
+  before: 2
+  after: 3
+- line: 21246
+  before: 2
+  after: 3
+- line: 21278
+  before: 2
+  after: 3
+- line: 21282
+  before: 3
+  after: 4
+- line: 21288
+  before: 3
+  after: 4
+- line: 21292
+  before: 3
+  after: 4
+- line: 21296
+  before: 3
+  after: 4
+- line: 21300
+  before: 3
+  after: 4
+- line: 21304
+  before: 2
+  after: 3
+- line: 21320
+  before: 2
+  after: 3
+- line: 21330
+  before: 2
+  after: 3
+- line: 21342
+  before: 2
+  after: 3
+- line: 21356
+  before: 2
+  after: 3
+- line: 21364
+  before: 3
+  after: 4
+- line: 21372
+  before: 2
+  after: 3
+- line: 21392
+  before: 2
+  after: 1
+- line: 21486
+  before: 2
+  after: 3
+- line: 21490
+  before: 3
+  after: 4
+- line: 21494
+  before: 3
+  after: 4
+- line: 21498
+  before: 3
+  after: 4
+- line: 21502
+  before: 2
+  after: 3
+- line: 21605
+  before: 2
+  after: 3
+- line: 21611
+  before: 2
+  after: 3
+- line: 21620
+  before: 2
+  after: 3
+- line: 21632
+  before: 2
+  after: 3
+- line: 21663
+  before: 2
+  after: 3
+- line: 21667
+  before: 3
+  after: 4
+- line: 21702
+  before: 3
+  after: 4
+- line: 21730
+  before: 3
+  after: 4
+- line: 21738
+  before: 3
+  after: 4
+- line: 21746
+  before: 3
+  after: 4
+- line: 21757
+  before: 2
+  after: 3
+- line: 21793
+  before: 2
+  after: 3
+- line: 21802
+  before: 2
+  after: 3
+- line: 21807
+  before: 1
+  after: 4
+- line: 21809
+  before: 1
+  after: 4
+- line: 21827
+  before: 1
+  after: 4
+- line: 21828
+  before: 1
+  after: 4
+- line: 21829
+  before: 1
+  after: 4
+- line: 21830
+  before: 1
+  after: 4
+- line: 21833
+  before: 2
+  after: 3
+- line: 21851
+  before: 3
+  after: 4
+- line: 21859
+  before: 3
+  after: 4
+- line: 21865
+  before: 3
+  after: 4
+text_changes:
+- line: 388
+  before: 第5章：变量
+  after: 第 5 章：变量
+- line: 453
+  before: 第6章：字面量和常量
+  after: 第 6 章：字面量和常量
+- line: 548
+  before: 第7章：C# 中的运算符
+  after: 第 7 章：C# 中的运算符
+- line: 651
+  before: 第8章：C# 中的循环
+  after: 第 8 章：C# 中的循环
+- line: 1257
+  before: 第3章：数据类型
+  after: 第 3 章：数据类型
+- line: 1317
+  before: 第4章：运算符
+  after: 第 4 章：运算符
+- line: 1535
+  before: 第2章：Scrum框架
+  after: 第 2 章：Scrum 框架
+- line: 1585
+  before: 第3章：事件
+  after: 第 3 章：事件
+- line: 1689
+  before: 第4章：工件
+  after: 第 4 章：工件
+- line: 1997
+  before: 第1章：了解10天绿色冰沙净化计划
+  after: 第 1 章：了解 10 天绿色冰沙净化计划
+- line: 2074
+  before: 第2章：一种有趣又健康的减肥方式
+  after: 第 2 章：一种有趣又健康的减肥方式
+- line: 2105
+  before: 第3章：如何进行10天净化法
+  after: 第 3 章：如何进行 10 天净化法
+- line: 2140
+  before: 第4章：10个经过验证的绿色果昔食谱，助你减肥
+  after: 第 4 章：10 个经过验证的绿色果昔食谱，助你减肥
+- line: 2300
+  before: 第5章：DIY绿色果昔食谱
+  after: 第 5 章：DIY 绿色果昔食谱
+- line: 2545
+  before: 第1章：全食物饮食的好处
+  after: 第 1 章：全食物饮食的好处
+- line: 2557
+  before: 第2章：开始全食物饮食
+  after: 第 2 章：开始全食物饮食
+- line: 2599
+  before: 第3章：饮食计划（30天指南）
+  after: 第 3 章：饮食计划（30 天指南）
+- line: 2613
+  before: 第4章：天然食品早餐食谱
+  after: 第 4 章：天然食品早餐食谱
+- line: 2705
+  before: 第5章：午餐食谱
+  after: 第 5 章：午餐食谱
+- line: 2822
+  before: 第6章：晚餐食谱
+  after: 第 6 章：晚餐食谱
+- line: 2936
+  before: 第7章：全食物零食
+  after: 第 7 章：全食物零食
+- line: 3015
+  before: 第8章：提示与技巧
+  after: 第 8 章：提示与技巧
+- line: 3458
+  before: 第3章 – 素食午餐食谱
+  after: 第 3 章 – 素食午餐食谱
+- line: 3638
+  before: 第四章 – 素食晚餐食谱
+  after: 第 4 章 – 素食晚餐食谱
+- line: 3770
+  before: 第四章 – 素食甜点
+  after: 第 5 章 – 素食甜点
+- line: 4057
+  before: 第四章 - 今天可以尝试的茶排毒食谱
+  after: 第 4 章 - 今天可以尝试的茶排毒食谱
+- line: 4168
+  before: 第五章 - 7天平坦小腹减肥计划
+  after: 第 5 章 - 7 天平坦小腹减肥计划
+- line: 5139
+  before: 第2章 – 慢炖锅鸡肉食谱
+  after: 第 2 章 – 慢炖锅鸡肉食谱
+- line: 5256
+  before: 第三章 – 慢炖锅猪肉食谱
+  after: 第 3 章 – 慢炖锅猪肉食谱
+- line: 5364
+  before: 第四章 – 慢炖锅牛肉食谱
+  after: 第 4 章 – 慢炖锅牛肉食谱
+- line: 5481
+  before: 第5章 – 慢炖锅海鲜食谱
+  after: 第 5 章 – 慢炖锅海鲜食谱
+- line: 5570
+  before: 第6章 – 慢炖锅蔬菜食谱
+  after: 第 6 章 – 慢炖锅蔬菜食谱
+- line: 5679
+  before: 第 6 章 – 慢炖锅甜点食谱
+  after: 第 7 章 – 慢炖锅甜点食谱
+- line: 5890
+  before: 第1章：欢迎来到 Java 编程世界
+  after: 第 1 章：欢迎来到 Java 编程世界
+- line: 5976
+  before: 第2章：“Hello Java”，初次相遇
+  after: 第 2 章：“Hello Java”，初次相遇
+- line: 6190
+  before: 第4章：实用表格，方便查阅
+  after: 第 4 章：实用表格，方便查阅
+- line: 6270
+  before: 第5章：进行数学运算及其他操作
+  after: 第 5 章：进行数学运算及其他操作
+- line: 6361
+  before: 第6章：选择语句
+  after: 第 6 章：选择语句
+- line: 6730
+  before: 第一章：什么是 Python？
+  after: 第 1 章：什么是 Python？
+- line: 6742
+  before: 第二章：Python 的交互模式
+  after: 第 2 章：Python 的交互模式
+- line: 8274
+  before: 第3章：你的目标用户：搜索营销策略的起点
+  after: 第 3 章：你的目标用户：搜索营销策略的起点
+- line: 8304
+  before: 第4章：选择要排名的关键词
+  after: 第 4 章：选择要排名的关键词
+- line: 9065
+  before: 第4章：SQL 中的不同数据类型
+  after: 第 4 章：SQL 中的不同数据类型
+- line: 9140
+  before: 第5章：SQL 语言中的运算符
+  after: 第 5 章：SQL 语言中的运算符
+- line: 9193
+  before: 第6章：SQL 表达式
+  after: 第 6 章：SQL 表达式
+- line: 9233
+  before: 第7章：如何在你的数据库中使用SQL
+  after: 第 7 章：如何在你的数据库中使用 SQL
+- line: 9516
+  before: 第8章：如何使用 SQL 组合记录
+  after: 第 8 章：如何使用 SQL 组合记录
+- line: 9694
+  before: 第1章：黑客技术——概述
+  after: 第 1 章：黑客技术——概述
+- line: 9727
+  before: 第2章：编程技能
+  after: 第 2 章：编程技能
+- line: 9760
+  before: 第3章：密码
+  after: 第 3 章：密码
+- line: 10746
+  before: 第1章：JavaScript 语言
+  after: 第 1 章：JavaScript 语言
+- line: 10788
+  before: 第2章：JavaScript 的语法
+  after: 第 2 章：JavaScript 的语法
+- line: 10856
+  before: 第3章：JavaScript 代码的位置
+  after: 第 3 章：JavaScript 代码的位置
+- line: 10976
+  before: 第4章：JavaScript 语言中的变量
+  after: 第 4 章：JavaScript 语言中的变量
+- line: 11074
+  before: 第5章：JavaScript 运算符
+  after: 第 5 章：JavaScript 运算符
+- line: 11167
+  before: 第6章：条件语句
+  after: 第 6 章：条件语句
+- line: 11250
+  before: 第 6 章：JavaScript 中的不同类型的循环
+  after: 第 7 章：JavaScript 中的不同类型的循环
+- line: 11338
+  before: 第 7 章：JavaScript 语言中的函数
+  after: 第 8 章：JavaScript 语言中的函数
+- line: 11525
+  before: 第1章：有什么新功能？
+  after: 第 1 章：有什么新功能？
+- line: 11567
+  before: 第2章：Cortana 的登场
+  after: 第 2 章：Cortana 的登场
+- line: 11618
+  before: 第3章：使用开始菜单
+  after: 第 3 章：使用开始菜单
+- line: 11806
+  before: 第6章：使用 Microsoft Edge
+  after: 第 6 章：使用 Microsoft Edge
+- line: 11849
+  before: 第7章：最大化 Windows 10 的使用
+  after: 第 7 章：最大化 Windows 10 的使用
+- line: 12014
+  before: 第1章：Kindle 出版
+  after: 第 1 章：Kindle 出版
+- line: 12072
+  before: 第2章：联盟营销
+  after: 第 2 章：联盟营销
+- line: 12162
+  before: 第3章：股票市场
+  after: 第 3 章：股票市场
+- line: 12182
+  before: 第4章：博客
+  after: 第 4 章：博客
+- line: 12243
+  before: 第5章：打造终极被动收入机器
+  after: 第 5 章：打造终极被动收入机器
+- line: 12367
+  before: 第1章：芳香疗法
+  after: 第 1 章：芳香疗法
+- line: 12417
+  before: 第二章：如何使用精油
+  after: 第 2 章：如何使用精油
+- line: 12494
+  before: 第3章：为什么要使用精油
+  after: 第 3 章：为什么要使用精油
+- line: 12531
+  before: 第4章：配方
+  after: 第 4 章：配方
+- line: 12675
+  before: 第1章 – 概述：DASH饮食减肥解决方案
+  after: 第 1 章 – 概述：DASH 饮食减肥解决方案
+- line: 12850
+  before: 第3章 – DASH饮食及其特点
+  after: 第 3 章 – DASH 饮食及其特点
+- line: 12896
+  before: 第4章 – DASH饮食早餐创意
+  after: 第 4 章 – DASH 饮食早餐创意
+- line: 13051
+  before: 第5章——DASH饮食午餐创意
+  after: 第 5 章——DASH 饮食午餐创意
+- line: 13199
+  before: 第6章 – DASH 饮食晚餐创意
+  after: 第 6 章 – DASH 饮食晚餐创意
+- line: 13341
+  before: 第7章 – DASH 饮食零食创意
+  after: 第 7 章 – DASH 饮食零食创意
+- line: 13470
+  before: 第8章 – DASH饮食甜点创意
+  after: 第 8 章 – DASH 饮食甜点创意
+- line: 13594
+  before: 第9章 – DASH饮食最终建议
+  after: 第 9 章 – DASH 饮食最终建议
+- line: 13699
+  before: 第1章：地中海饮食：一种健康选择
+  after: 第 1 章：地中海饮食：一种健康选择
+- line: 13731
+  before: 第2章：14天餐计划食材清单
+  after: 第 2 章：14 天餐计划食材清单
+- line: 13779
+  before: 第三章：地中海早餐食谱
+  after: 第 3 章：地中海早餐食谱
+- line: 13888
+  before: 第四章：地中海午餐食谱
+  after: 第 4 章：地中海午餐食谱
+- line: 14000
+  before: 第5章：地中海晚餐食谱
+  after: 第 5 章：地中海晚餐食谱
+- line: 14064
+  before: 第6章：地中海甜点食谱
+  after: 第 6 章：地中海甜点食谱
+- line: 14106
+  before: 4 橙香水果果酱
+  after: '#4 橙香水果果酱'
+- line: 14118
+  before: 5 南瓜派
+  after: '#5 南瓜派'
+- line: 14273
+  before: 第2章：开始生酮饮食计划
+  after: 第 2 章：开始生酮饮食计划
+- line: 14319
+  before: 第3章：生酮饮食计划（14天指南）
+  after: 第 3 章：生酮饮食计划（14 天指南）
+- line: 14425
+  before: 第4章：生酮早餐食谱
+  after: 第 4 章：生酮早餐食谱
+- line: 14572
+  before: 第5章：午餐食谱
+  after: 第 5 章：午餐食谱
+- line: 14699
+  before: 第6章：晚餐食谱
+  after: 第 6 章：晚餐食谱
+- line: 14815
+  before: 第7章：生酮饮食计划零食
+  after: 第 7 章：生酮饮食计划零食
+- line: 14882
+  before: 第8章：提示和技巧
+  after: 第 8 章：提示和技巧
+- line: 15023
+  before: 第一章：果昔的好处
+  after: 第 1 章：果昔的好处
+- line: 15147
+  before: 第3章：饮食计划（14天指南）
+  after: 第 3 章：饮食计划（14 天指南）
+- line: 15285
+  before: 第4章：绿色思慕雪食谱
+  after: 第 4 章：绿色思慕雪食谱
+- line: 15399
+  before: 第5章：柑橘类思慕雪食谱
+  after: 第 5 章：柑橘类思慕雪食谱
+- line: 15522
+  before: 第6章：甜味奶昔食谱
+  after: 第 6 章：甜味奶昔食谱
+- line: 15608
+  before: 第7章：提示和技巧
+  after: 第 7 章：提示和技巧
+- line: 16188
+  before: 第1章：素食的好处
+  after: 第 1 章：素食的好处
+- line: 16214
+  before: 第2章：开始素食饮食
+  after: 第 2 章：开始素食饮食
+- line: 16766
+  before: 第四章：早餐食谱
+  after: 第 4 章：早餐食谱
+- line: 16842
+  before: 第五章：午餐食谱
+  after: 第 5 章：午餐食谱
+- line: 16989
+  before: 第6章：晚餐食谱
+  after: 第 6 章：晚餐食谱
+- line: 17080
+  before: 第7章：零食和开胃菜
+  after: 第 7 章：零食和开胃菜
+- line: 17251
+  before: 第一章：茶的健康益处
+  after: 第 1 章：茶的健康益处
+- line: 17303
+  before: 第2章：开始茶排毒
+  after: 第 2 章：开始茶排毒
+- line: 17430
+  before: 第三章：14天减脂计划
+  after: 第 3 章：14 天减脂计划
+- line: 17590
+  before: 第四章：需要避免的事物
+  after: 第 4 章：需要避免的事物
+- line: 17618
+  before: 第五章：食谱
+  after: 第 5 章：食谱
+- line: 17798
+  before: 第1章：慢炖的好处
+  after: 第 1 章：慢炖的好处
+- line: 17951
+  before: 第4章：慢炖锅晚餐食谱
+  after: 第 4 章：慢炖锅晚餐食谱
+- line: 18018
+  before: 第五章：慢炖锅甜点食谱
+  after: 第 5 章：慢炖锅甜点食谱
+- line: 18197
+  before: 第1章：全食物指南
+  after: 第 1 章：全食物指南
+- line: 18228
+  before: 第2章：需要了解的关键理念
+  after: 第 2 章：需要了解的关键理念
+- line: 18287
+  before: 第3章：14天计划
+  after: 第 3 章：14 天计划
+- line: 18324
+  before: 第4章：早餐
+  after: 第 4 章：早餐
+- line: 18352
+  before: 第5章：午餐
+  after: 第 5 章：午餐
+- line: 18372
+  before: 第6章：晚餐
+  after: 第 6 章：晚餐
+- line: 18406
+  before: 第7章：零食
+  after: 第 7 章：零食
+- line: 18559
+  before: 第1章 使用精油减肥
+  after: 第 1 章 使用精油减肥
+- line: 18688
+  before: 第2章 使用精油进行芳香疗法
+  after: 第 2 章 使用精油进行芳香疗法
+- line: 18867
+  before: 第3章 使用精油缓解压力
+  after: 第 3 章 使用精油缓解压力
+- line: 19186
+  before: 第1章：多给我些食物！
+  after: 第 1 章：多给我些食物！
+- line: 19327
+  before: 第2章：停！... 别吃那个
+  after: 第 2 章：停！……别吃那个
+- line: 19344
+  before: 第3章：早餐组合
+  after: 第 3 章：早餐组合
+- line: 19502
+  before: 第4章：主打菜肴
+  after: 第 4 章：主打菜肴
+- line: 19625
+  before: 第5章：超级零食
+  after: 第 5 章：超级零食
+- line: 19804
+  before: 第一章：原始人饮食……或者我该说，穴居人饮食
+  after: 第 1 章：原始人饮食……或者我该说，穴居人饮食
+- line: 19839
+  before: 第二章：不可思议的食材
+  after: 第 2 章：不可思议的食材
+- line: 19857
+  before: 第三章：早餐拼盘
+  after: 第 3 章：早餐拼盘
+- line: 19948
+  before: 第四章：优质沙拉
+  after: 第 4 章：优质沙拉
+- line: 20085
+  before: 第5章：怪兽主菜
+  after: 第 5 章：怪兽主菜
+- line: 20346
+  before: 第一章：生酮饮食的益处
+  after: 第 1 章：生酮饮食的益处
+- line: 20366
+  before: 第二章：开始生酮饮食计划
+  after: 第 2 章：开始生酮饮食计划
+- line: 20412
+  before: 第三章：生酮饮食计划（14天指南）
+  after: 第 3 章：生酮饮食计划（14 天指南）
+- line: 20515
+  before: 第4章：生酮早餐食谱
+  after: 第 4 章：生酮早餐食谱
+- line: 20672
+  before: 第5章：午餐食谱
+  after: 第 5 章：午餐食谱
+- line: 20798
+  before: 第6章：晚餐食谱
+  after: 第 6 章：晚餐食谱
+- line: 20909
+  before: 第7章：生酮饮食计划零食
+  after: 第 7 章：生酮饮食计划零食
+- line: 20974
+  before: 第8章：提示与建议
+  after: 第 8 章：提示与建议
+- line: 21024
+  before: 第1章 – 为什么要学习 WordPress？
+  after: 第 1 章 – 为什么要学习 WordPress？
+- line: 21464
+  before: 第1章：Python 简介
+  after: 第 1 章：Python 简介
+- line: 21837
+  before: 第3章：数据类型
+  after: 第 3 章：数据类型
+- line: 21893
+  before: 第4章：运算符
+  after: 第 4 章：运算符

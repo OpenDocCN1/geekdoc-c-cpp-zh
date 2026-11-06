@@ -1,0 +1,1 @@
+Word to the wise: don’t go through the whole diet plan as a victim. Instead, use your available resources to make this change as pleasant as it is possible. Don’t spend your time thinking about the items you are not allowed to have; instead, try out new recipes with the allowed foods.

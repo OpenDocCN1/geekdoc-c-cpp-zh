@@ -1,0 +1,7 @@
+# Getting started
+
+A wise man once said that change is never easy. But that doesn’t mean you cannot find pleasure in it. The food philosophy behind the whole foods diet encourages simple eating but even the simplest meal can bring immense joy. There is no better time than now to get inspired, allowing your creativity in the kitchen to reach new heights. Don’t waste your time dwelling on the foods that you are not allowed to eat but rather break new ground, exploring new recipes and getting fancy.
+
+As you will see in the following chapter, it is recommended that you always go out shopping with a list. So, when you start on this path, make sure that you remember to stick to your shopping list. Be sure to add plenty of veggies to this list, as these are going to be part of many meals. Sure, in the situation that you see any special products, such as some beautiful eggplants or a new variety of tea, you can straw away a little bit from your list. Remember, only for the items that you are allowed to have.
+
+Consider planning your meals ahead, so that you reduce the risk of giving in to cravings. This is especially valid when it comes to the protein sources, as these will help you deal with the initial hunger, at the beginning of the program. Stock your fridge with foods that are rich in protein, such as wild salmon, tuna, beef or eggs. Make sure that you have them in sufficient quantities as well. Speaking about head preparation, make sure that you stock the pantry with spices and sauces, as these will help you get through the most difficult of times.

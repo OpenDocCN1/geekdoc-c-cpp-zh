@@ -1,0 +1,1 @@
+With a teaspoon, scoop up some of the mixture and place on a cookie sheet. Space the cookies 1 inch apart, and flatten them with the back of your spoon. Cook for approximately 12 minutes or until they cookies have browned. Now transfer them to a cooling rack, allow to cool, and serve.

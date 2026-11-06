@@ -1,0 +1,3 @@
+# Day 3
+
+While the previous recipe contained four ingredients, the recipe for day three is even easier and quicker. The recipe is chicken salsa which requires just two ingredients and a pressure cooker. So if you have a super busy day where you cannot do any extra work for around 8 hours, and you badly crave for a tasty dinner, simply make this recipe before you leave for work, and then come back to enjoy the tasty salsa combined with delicious chicken. Do not worry about the preparation time as well. The dish will hardly take ten minutes to prepare after which you just need to put it in a cooker.

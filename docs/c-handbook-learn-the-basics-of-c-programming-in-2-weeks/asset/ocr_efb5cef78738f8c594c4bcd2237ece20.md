@@ -1,0 +1,9 @@
+opportunity to see for yourself, the purpose is not to eliminate fats altogether but rather to integrate the ones that are healthier in the diet. For example, you will not see foods that contain saturated or trans fats in this diet.
+
+Olive oil remains the primary source of healthy monounsaturated fats, having a positive effect on the overall health. The regular consumption of olive oil has been shown to reduce the levels of bad LDL cholesterol; moreover, the extra-virgin olive oil, which is the least processed, contains a high quantity of healthy antioxidants (cancer protection).
+
+Canola oil is also consumed as part of this diet, as it contains healthy omega-3 fatty acids, such as the linolenic acid (also found in nuts). By consuming such types of oil, you will enjoy a lower level of triglycerides, plus reduce the risk of blood clots. Omega-3 fatty acids are known to protect against heart disease, they make the blood vessels stronger and they keep the blood pressure under control. These healthy acids are also found in certain types of fish, often eaten as part of the Mediterranean diet (trout, sardines, mackerel, herring, salmon, tune etc.).
+
+Dairy products, such as eggs, cheese or yoghurt, are part of the healthy Mediterranean diet. However, just as with poultry, it is recommended that they are consumed in moderate portions. As for red meat and sweets, these, as it was said, are the top of the pyramid, which means that they should be consumed the least often.
+
+When it comes to the beverages that are part of the Mediterranean diet, the moderate consumption of wine (red wine in particular) is encouraged, as it has been shown to reduce the risk of heart disease. For women, the recommended daily amount is of one glass, while gentlemen can enjoy two glasses per day. Water is a basic beverage of this diet and it is recommended to be consumed throughout the entire day.

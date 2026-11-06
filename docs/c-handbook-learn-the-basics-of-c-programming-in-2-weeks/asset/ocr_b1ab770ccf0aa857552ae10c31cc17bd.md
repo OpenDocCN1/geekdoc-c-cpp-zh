@@ -1,0 +1,1 @@
+This artifact allows team members to refine requirements so they can use it for the upcoming sprint. The backlog items that the Scrum team can develop are considered to be ready for usage in the next sprint’s planning stage.

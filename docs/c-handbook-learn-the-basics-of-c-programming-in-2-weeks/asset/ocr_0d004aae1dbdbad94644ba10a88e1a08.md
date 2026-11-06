@@ -1,0 +1,3 @@
+# Day 1
+
+We know how stressful it is to decide what to cook for the dinner every single day. We also know how difficult it is to stand in the kitchen and make tasty dinners. It often becomes extremely difficult to perform well at our jobs and yet make good dinners with a tired body. Hence for day 1, we have recommended a simple yet delicious recipe for you which will not require a lot of time and effort.

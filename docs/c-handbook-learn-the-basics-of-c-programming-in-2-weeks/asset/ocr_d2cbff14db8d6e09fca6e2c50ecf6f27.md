@@ -1,0 +1,13 @@
+If you haven’t already, be sure to check out my new website, ***KindleBookSpot.com***. This is a new project I’ve been working on, and I really hope it’s valuable to my readers. I made the site because I wanted to give you guys an easier way to find the hottest kindle books at discounted prices, all in one place. Here are some details on what my site has:
+
++   - A list of best selling free kindle books
++   - Discounted fiction and non-fiction books
++   - A book of the week
++   - Featured books
++   - Promote your own book on my site
+
+This site isn’t just for readers, it’s also a spot where up and coming authors can promote their new books before they turn to best sellers. So if you’d like to promote your own book, check out my site, ***KindleBookSpot.com***.
+
+I hope this site will be useful to you, and I hope to see you there!
+
+***KindleBookSpot.com***

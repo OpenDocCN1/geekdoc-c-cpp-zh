@@ -1,0 +1,5 @@
+# What Tea Do I Drink And When?
+
+There are some tea cleansing programs out there that tell you exactly what tea you should drink and when. A lot of these programs tell you that only specific brands of teas can be drunk. Unless you want to pay a subscription fee every month for tea that tastes good, but works just as well as other naturally detoxing teas, I would suggest making up your own mind. Try to have at least 2 different types of antioxidant tea per day, so you reap the benefits. Please refer to the shopping guide below for details about which teas are suitable for the 14 day tea cleanse program.
+
+If you plan to do the program more than once, you may want to think about experimenting with different teas. This will help you to get a feel for what is out there, and you’re more likely to come across some teas that work well, or just taste great.

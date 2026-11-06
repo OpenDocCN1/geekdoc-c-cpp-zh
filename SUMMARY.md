@@ -376,6 +376,7 @@
 +   [Qt 4 C++ GUI 编程 (第2版) (普伦特霍开源软件开发系列)](docs/c-gui-programming-with-qt-4-2nd-edition-prentice-hall-open-s/README.md)
 +   [Qt4 C++ GUI 编程](docs/c-gui-programming-with-qt4-2e/README.md)
 +   [C++ 指南：一书三个编程境界：C++ 编程示例](docs/c-guidebook-three-levels-of-programing-in-a-book-c-programmi/README.md)
++   [C# 手册：2周学会 C# 编程基础](docs/c-handbook-learn-the-basics-of-c-programming-in-2-weeks/README.md)
 +   [金融系统高性能 C++ 高级指南](docs/c-high-performance-for-financial-systems/README.md)
 +   [C++ 编程指南](docs/c-how-to-program/README.md)
 +   [C++ 程序设计 第 10 版 全球版 (2017)](docs/c-how-to-program-10th-edition-global-edition-2017/README.md)

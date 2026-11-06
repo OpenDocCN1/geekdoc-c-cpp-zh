@@ -1,0 +1,19 @@
+# Conclusion
+
+Thank you again for downloading this book!
+
+I hope this book was able to help you to get a better insight on how you can use the smoothie cleanse to get the body and lifestyle that you’ve always wanted. With the right information and mindset, it’s never too late to regain your physical health and improve your quality of life. By understanding fully how a smoothie detox works and how it can improve your life, you’ll be back in shape in no time.
+
+It may not be easy to give up on your old habits altogether, but know that it is possible. As long as you create an action plan that will help you start on the right track, anything is possible.
+
+Make sure to apply what you have learned from this book immediately. You don’t have to make drastic change. You just need to do something to jumpstart the process, and doing a healthy smoothie detox should be enough to help you get that flat tummy you’ve always wanted.
+
+Finally, if you enjoyed this book, then I’d like to ask you for a favor, would you be kind enough to leave a review for this book on Amazon? It’d be greatly appreciated!
+
+*[Click here to leave a review for this book on Amazon!](#)*
+
+I want to reach as many people as possible and more reviews will help me achieve this. Thank you and good luck!
+
+**Also, be sure to like my [Facebook](#) page and join the conversation all about health and my latest books!**
+
+If you liked this book, check out the next book in the series …

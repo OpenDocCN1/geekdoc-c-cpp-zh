@@ -1,0 +1,7 @@
+# **Multi-Scale Adaptive Task-Oriented Semantic Communication for Image Transmission**
+
+To address the issue of semantic feature extraction at different scales and mismatch between task requirements and transmission resources in semantic communication, a multi-scale adaptive task-oriented semantic communication system (MSAT-OSC) is proposed. The system consists of a multi-scale semantic encoder, an adaptive feature selection module, and a task decoder. The multi-scale semantic encoder is composed of a multi-branch structure with different kernel sizes to obtain semantic features at different scales. The adaptive feature selection module uses the channel attention mechanism to adaptively select the most relevant semantic features according to the task requirements and transmit them, thereby reducing redundant information. In addition, a scalable coded modulation scheme is designed to adaptively adjust the transmission rate according to channel conditions, achieving a trade-off between task performance and transmission efficiency. Simulation results show that the proposed scheme effectively reduces transmission overhead while improving task performance compared with existing methods.
+
+**Index Terms** — Semantic communication, task-oriented, multi-scale, adaptive transmission.
+
+![](bbox=[0.2, 0.62, 0.8, 0.9])

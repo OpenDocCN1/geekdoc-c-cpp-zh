@@ -1,0 +1,1 @@
+links. If you have someone to help you out, you should have him or her look for a specific information in your website. You should then ask them for feedback on your website ’ s navigation.

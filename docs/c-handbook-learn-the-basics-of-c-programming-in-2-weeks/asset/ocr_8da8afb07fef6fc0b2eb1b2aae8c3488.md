@@ -1,0 +1,3 @@
+Add the egg and ricotta to a mixing bowl, and whisk. Now add the pepper, salt and spices, and mix again. Add the Swiss cheese and onion, mix once more. Place the beef in the bowl and combine, until all of the ingredients have become stuck together and sticky. Divide the mixture into 30 meatballs, and roll into a ball.
+
+Add the meatballs to a cookie sheet, and cook at 350 Fahrenheit for about 20 minutes, or until brown. Serve.

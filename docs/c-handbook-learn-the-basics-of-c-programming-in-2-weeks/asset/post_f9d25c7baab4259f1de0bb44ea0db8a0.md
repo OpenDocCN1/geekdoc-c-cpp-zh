@@ -1,0 +1,98 @@
+
+programmers to create efficient and productive codes. Its main objective is to help beginners learn a programming language easily and quickly. Due to this less learning time, you can create more useful applications that will be difficult to do with more obscure and complicated programming languages.
+
+With Python, you can also benefit from less development time when coding applications. As mentioned earlier, Python has fewer lines of code than C, C++, and Java. Its codes are actually five to ten times shorter; thus, making it more efficient and less complicated. You get to spend less time in developing applications and more time tweaking and improving them.
+
+When it comes to checking for bugs and errors, it is crucial for the programming language that you use to be easy to read and comprehend. If the programming language is too complicated, you may have a hard time coding and checking your program. With Python, codes are much easier to read and write; hence, you can easily interpret the codes and make the necessary changes.
+
+Furthermore, Python has many other uses. It is ideal for scripting applications that are browser-based, creating great user interfaces and rough application examples, interacting with databases, working with XML and designing mathematical, engineering and scientific applications.
+
+## Python vs. C#, Java, and Perl
+
+You may find comparing programming languages with one another to be a subjective task. Usually, their differences are a matter of personal preference. Nonetheless, there are times when such comparisons are backed up by scientific data. Anyway, you have to keep in mind that an all-encompassing programming language does not exist. As a programmer, you just have to find one that works best for your goals or needs.
+
+### C#
+
+If you have a background in Java, you may notice that C# and Java are highly similar. Then again, C# still has its own advantages and disadvantages compared to Java. Microsoft claims that their primary objective in developing C# is to produce a better version of C and C++. Compared to C#, however, Python has better scientific and engineering applications and better multiplatform support. It is more extensible when it comes to using C, C++ and Java. It is easier to learn and comprehend, and it allows the use of various computer environments. It also has more concise codes.
+
+### Java
+
+Programmers consider Java as a one-stop shop programming language. For many years, they have searched for something that can be run and written anywhere and they found Java, which can perform well in different platforms and computer environments. With this being said, Python is also a one-stop shop programming language. It is very similar to Java, except that it has more concise codes and it is easier to learn and comprehend. It is much faster to develop and it has improved data boxes or variables that can store different data types that are useful when running applications.
+
+### PERL
+
+PERL stands for Practical Extraction and Report Language. It is a programming language that is suitable for acquiring and processing data from another database. In comparison, Python is better than PERL because it is easier to read, implement, learn and understand. It has better Java integration and data protection. It also has less platform-specific biases.
+
+## Why Python is Ideal for Beginners?
+
+If you have just started programming, you may want to consider Python. It is ideal for beginners because it has a consistent and simple syntax and vast standard library that allows you to do multiple projects. The assignments involved are not limited to the usual four-function calculator and checkbook balancing programs.
+
+As you get used to writing programs in Python, you will realize that it is actually easy to make realistic applications. The interactive interpreter will also allow you to test language features. In Python, you can concentrate on essential programming skills, such as programming decomposition and data type design, and fundamental concepts, including procedures and loops.
+
+Since Python involves the use of multiple libraries and system calls, you can develop applications with interfaces that are easy to program. You can also complete tasks necessary for the application programming interface (API).
+
+Do not worry if you have never used any other programming language before. Even people with no prior programming knowledge or experience can easily grasp the fundamentals of the Python programming language.
+
+As for the installation, Python is easy to install. Most UNIX and Linux distributions actually include it in their package. If you purchase a Windows computer from Hewlett-Packard (HP), you can readily use Python as it comes pre-installed with the system.
+
+To make things easier for you, you should study how to use the text editors as well as the integrated development environments (IDEs). It will also be helpful to read programming books with sample codes and programs.
+
+Regarding copyright, the developers of Python allow programmers to do whatever they want with the source, as long as they do not forget to include the copyrights. The copyright rules are not that strict. You can even sell copies in binary and source form, as well as products involving Python use. However, if you wish to use the logo, see to it that you obtain permission.
+
+Python is highly stable. In fact, it is stable enough for regular use. You can expect a new version within six to eighteen months. The developers issue bug fix releases to ensure that the newer versions are better than the previous ones.
+
+If you want to perform a static analysis or search for bugs, you can use Pylint or PyChecker. The former is a tool that checks the module to see if it abides by the coding standard as well as allow the customization of plug-ins. The latter is a static analysis tool that finds bugs in the source code.
+
+So now that you have learned about the fundamentals of the programming language, you may still wonder how Python got its name. Was Guido van Rossum fond of pythons? Well, he was actually fond of the television show called Monty Python’s Flying Circus, not the reptile.
+
+During the time of Python’s development, he was reading scripts from the comedy series and thought that ‘Python’ will be a suitable name since it was short, unique and has the right amount of mystery. In fact, references to the comedy show are allowed and actually encouraged in documentations.
+
+## Chapter 2: Syntax
+
+Python has a simple and straightforward syntax. It even encourages programmers to write programs without using prepared or boilerplate codes. The print directive is actually the simplest of all directives. It prints out lines and includes newlines. You may notice that the print directive is different in the new major versions of the programming language.
+
+Python 2.0 is the more common version while Python 3.0 supports the latest features and is more semantically correct. Anyway, the print statement is not considered as a function in version 2.0; hence, you can invoke it without including parentheses in your code. On the other hand, the print statement is considered as a function in version 3.0; hence, you have to use parentheses if you wish to invoke it.
+
+### Interactive Mode Programming
+
+You can execute your programs in different modes. If you invoke the interpreter without passing the script file as a parameter, this is what you will get:
+
+```
+$ python
+Python 2.4.3 ( #1, Nov 11 2010, 13:34:43 )
+[GCC 4.1.2 20080704 ( Red Hat 4.1.2 – 48 )] on linux2
+Type “help”, “copyright”, “credits” or “license” for more information.
+>>>
+```
+
+When you see this prompt, you can type in your desired text then press Enter. In this example, we will be using the words ‘Monty Python and the Holy Grail’.
+
+```
+>>> print “Monty Python and the Holy Grail”;
+```
+
+Take note that if you are using a newer version of the programming language, you need to use opening and closing parentheses with your print statement, such as in the following:
+
+```
+>>> print ( “Monty Python and the Holy Grail” ) ;
+```
+
+Regardless of which version you are using, if you run the sample code shown above, you will get the following output:
+
+```
+Monty Python and the Holy Grail
+```
+
+### Script Mode Programming
+
+If you invoke the interpreter with a script parameter, the script will start to execute and continue to run until it is done. When it is done, the interpreter will not be active anymore. Consider the following example. The sample program is written in a script and has a .py extension:
+
+```
+print “Monty Python’s Flying Circus”;
+```
+
+If you type in the above given source code in a test.py file and run it as
+
+```
+$ python test.py
+```
