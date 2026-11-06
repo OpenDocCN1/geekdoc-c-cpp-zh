@@ -1,0 +1,15 @@
+Now why did these errors happen? Because the software wasn't *stable*. You managed to put the software into a situation that the programmers didn't expect, and the thing choked, coughing up a general protection fault. And why did the programmers create software that allowed this situation to occur? Because they didn't thoroughly go through the construction phase!
+
+The construction phase includes *implementation* and *testing* workflows. You may have some analysis and design flaws, but they will be little; the main time you'll see these flaws is if you find you forgot something or need to change something in the classes. By now, you will be going through iterations of writing code, testing, testing, testing, and finally more testing. When the testers encounter errors, you go back and fix the code. Then, eventually, the testers determine that they can't find any more bugs. The day is done! You are ready to ship.
+
+Thus, if you follow the construction phase properly, you will limit the number of operating system errors that pop up when your application goes haywire — because if you did everything correctly, it shouldn't go haywire.
+
+![](bbox=[0.16, 0.433, 0.216, 0.478])
+
+If you are heading up a project where you will be using RUP to design a large-scale software system, you will want to give your testers a certain amount of authority. Think of the testers as the quality assurance people. And in fact, some companies call them *Q/A engineers* instead of testers. Your testers shouldn't allow your company to put its name on the software until they say it *works*. This has multiple benefits because it allows the Q/A engineers to feel a certain amount of authority, and it also puts a heavy responsibility on them, which will help ensure that they do a *thorough* job. And that will help ensure that your software is both good and stable. Sounds like a good plan to us!
+
+# ### The transition phase
+
+The *transition phase* is both the happiest time and the scariest. As a software engineer, we know that this can be a frightening time because the final moment of truth has arrived: Did you and the rest of the team build a product that is actually going to work? Or is it going to get out on the customer's computer and crash and burn?
+
+Most likely, because you did everything correctly in the first three phases, the software will run on the customer's computers. However, just because you did it right doesn't mean that you won't be anxious. But relax: If you are shipping a piece of software to one specific customer, you and the other engineers will probably be on hand that day for the big installation. It may not go perfectly at first, but in our experience most of the problems will not involve faulty software. Rather, the customer's computers will not be set up quite right. Fortunately, such problems are pretty easy to track down and fix.

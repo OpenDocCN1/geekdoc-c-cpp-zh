@@ -1,0 +1,11 @@
+![](bbox=[0.329, 0.135, 0.724, 0.424])
+
+**Figure 4-1:** Class diagrams and object diagrams are similar.
+
+The lower half of the diagram shows instances of the classes. When you program, you sometimes give a name to an instance in the way of a variable name. Or you may be using a language that allows its objects to be named. (C++ does not allow this; you have to use a variable name.) In the object diagram, we named the instances. At the top of each rectangle is an underlined name, a colon, and the instance type. Thus, `RollingHillsOfIndiana` is an instance of type `Pasture`. `Bessie` is an instance of type `Cow`, and `Hilda` is also an instance of type `Cow`. Inside the object boxes, we also gave values to the member variables (or attributes). For these, the name goes first, then a colon, and then the type, just as in the class symbols. But then you see an equal sign and a value. (Because these are actual instances of the class, they can have values for the member variables.)
+
+Look carefully at the line connecting the `RollingHillsOfIndiana` object to the `Bessie` and `Hilda` objects (as well as the line connecting the two classes). You can see an arrow pointing to each of the Cow instances but not to the Pasture instance. Thus, the Pasture instance contains a pointer to each Cow instance but not vice versa. That means the Cow instances don’t know about the Pasture instances. That is, the Cow instance does not contain a member variable that points to the Pasture instance. You can see this is the case also with the class diagram, because an arrow is pointing to the Cow class.
+
+![](bbox=[0.146, 0.841, 0.229, 0.909])
+
+If you want both instances to *know about* each other, you simply remove the arrows and use only lines. This change is called a **bidirectional association**. When you have an arrow, it indicates that the relationship is unidirectional. In the case of Pasture and Cow, the arrow indicates that the Pasture instance can call methods in the Cow instance but not vice versa. The Cow instances are not aware of the Pasture instance.

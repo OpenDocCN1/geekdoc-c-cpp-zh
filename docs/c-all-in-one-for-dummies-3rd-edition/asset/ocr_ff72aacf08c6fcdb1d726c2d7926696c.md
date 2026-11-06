@@ -1,0 +1,15 @@
+have the value 7 for PenCount and the value 3 for NotebookCount. Thus, the current state of this particular instance is PenCount=7, NotebookCount=3. The Cabboodle class might also include a member function called AddPen(), which takes no parameters and simply adds 1 to PenCount. When you call AddPen(), you are changing the state of the object.
+
+![](bbox=[0.15, 0.24, 0.215, 0.33])
+
+When you consider the state of an object, you need to look at only the member variables. The values of the member variables together represent the state. The member functions may modify the state, but because the functions themselves do not change during the life of the application, they do not represent part of the object's state. Also, remember that one object can contain as a member another object. The current state of the outer object would include the state of the object that it contains.
+
+![](bbox=[0.15, 0.365, 0.215, 0.455])
+
+In the world of UML, the concept of a *metadescription* comes up again and again. *Meta* is a prefix to a word, and it usually means the *next level up*. For example, with metadescription, we could first describe a tree by writing information about the tree. Then we could describe the description: "It was a beautiful paragraph with flowing words that brought the tree to life." Now that previous sentence itself is what we are referring to right now in this sentence. Do you see what is happening here? We're describing something, and then we describe the description, and then we describe *that* description. Each time we move up "one level of abstraction." The term *metadescription*, then, means a description of a description.
+
+In UML, you encounter meta terminology all the time. For example, a class represents a type of object. But the word *class* is a kind of classifier. Another kind of classifier is *type*. So consider this somewhat philosophical concept: A *class* is a kind of classifier, at least from the perspective of the UML diagrams. But a particular class itself has certain attributes about it, such as the class name and the names and types of the members. That information is a *metaclass*. If you're not totally confused and you find this fascinating, we highly recommend reading *Gödel, Escher, Bach: An Eternal Golden Braid*, by Douglas R. Hofstadter (Basic Books, 1999) or, for a slightly easier read, *Metamagical Themas: Questing for the Essence of Mind and Pattern*, also by Hofstadter (Basic Books, 1996).
+
+# # Building with UML and the Rational Unified Process
+
+UML is not a methodology. That means that UML, by itself, is not a step-by-step process for building software. Rather, you can think of UML as a language you use for describing your software as you are building it. The language, however, is not a verbal talking language with a bunch of engineers in a room yelling and arguing. Yes, that sometimes happens, but fortunately

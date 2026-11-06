@@ -1,0 +1,9 @@
+Sometimes, people really like to show that the objects are instances of the class by drawing a dashed arrow from the instance to the class and adding the `<<instantiate>>` stereotype. When you have lots of instances, this technique can make for a messy diagram, but if you have only one instance per class, you can easily show it in the diagram. We did just that in Figure 4-2. Notice that the word `<<instantiate>>` is present and that the arrow points to the class. To us, this setup seems a little backward, but lots of stuff seems backward in the world of computers, so we're not surprised.
+
+![](bbox=[0.14, 0.29, 0.61, 0.52])
+
+# ## Casing Out the Use Cases
+
+Talk about disagreement. People have argued and bickered about use cases for years. The term *use case* (pronounced with a soft *s*, as in *use*, because *use* is a noun here) refers to one single case or instance of functionality in your application. Most applications have many, many things you can do with them; for example, a web browser enables you to click the Go button to go to a web address that you've typed into a box; or it enables you to click a link to go to a page. Each of these two things is a single use case.
+
+Use cases have become an important aspect of modeling software. So why the contention? Because use cases focus on the functions (that is, verbs!) of a software package, and objects focus on the things, or nouns. So it would make sense by that argument that use cases have no big place in object-oriented analysis and design. However, the flaw in this argument is in saying that the term *object-oriented* means that you focus only on the nouns. It's true that it's oriented to the objects, but that doesn't mean you ignore verbs, or have a disdain for them. (Personally, we like verbs. Life without verbs boring. Talking difficult with no verbs. Me car grocery store.)

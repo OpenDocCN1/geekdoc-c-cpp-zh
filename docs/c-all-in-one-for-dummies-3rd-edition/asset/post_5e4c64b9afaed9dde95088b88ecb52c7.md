@@ -1,0 +1,264 @@
+
+- classes
+  - capabilities explained, 252–253
+  - constructors
+    - calling one from another, 489–490
+    - copy, 490–492
+    - default, 484–486
+    - default parameters, 483–484
+    - functional, 486–489
+    - handling failures, 492–493
+    - implicit default, 485
+    - initializer list, 480
+    - initializing base class values first, 483
+    - initializing members, 479–484
+    - inline, 479
+    - invoking, 160
+    - ordering, 497
+    - overloading, 478–479
+    - overview, 201–202, 477–478
+    - parameters for, 205–206
+    - private, 346
+    - using, 203–204
+  - creating custom templates, 725–728
+  - declaring types in, 526–528
+  - defined, 187
+  - deriving
+    - class from template, 548–550
+    - class template from class template, 552–554
+    - overriding function in, 511–514
+    - overview, 207–208
+    - protecting members in, 262
+    - template from class, 550–552
+  - designing, 256–259
+  - destructors
+    - ordering, 497
+    - overview, 202, 477–478
+    - using, 203–204, 493–495
+    - virtually inheriting, 495–497
+  - diagram of, 285
+  - documenting, 371
+  - encapsulation and, 254–256
+  - explained, 175–176
+  - files for, 178
+  - friend keyword, 520–521
+  - hierarchies of, 206–207
+  - inheritance
+    - designing base class, 260–261
+    - displaying in UML, 304–305
+    - multiple, 514–516
+    - overriding member functions, 267–269
+    - overview, 207–208
+    - polymorphism, 269–270
+    - protecting class members, 262–267
+    - types of, 508
+    - virtual, 516–520
+  - instances
+    - analog, 250, 253
+    - preventing creation of, 525
+    - temporary, 486–487, 489
+  - mailbox analogy, 250–254
+  - member functions
+    - overloading, 199–201
+    - overriding, 267–269, 511–514
+  - pointer to, 446–449
+  - pointer to static, 449
+  - members
+    - accessing, 188–191, 257
+    - activity diagram and, 287
+    - adjusting access to, 508–510
+    - attributes and, 304
+    - designing base class, 261
+    - designing encapsulation, 256–259
+    - destructors and, 493
+    - drawing static members in UML, 339–340
+    - encapsulation and, 255
+    - explained, 178–180
+    - friend classes and, 520–521
+    - initializing, 479–484
+    - initializing in constructor, 479–484
+    - overview, 187–188
+    - private, 189
+    - protected, 208
+    - protecting, 262–267
+    - protecting when inheriting class, 262–267
+    - public, 189
+    - read-only, 255
+  - templatizing function, 559–560
+  - templatizing member functions, 559–560
+  - members, static
+    - copying instances and, 492
+    - drawing in UML, 339–340
+    - pointer to function, 449
+    - scope of, 339
+    - in template, 538–540
+  - modeling
+    - collection of classes as model, 284
+    - design patterns, 343–344
+    - design workflow and, 277
+    - Façade pattern, 361
+    - finding missing, 277
+    - Observer pattern, 348–356
+    - overview, 275–276
+    - searching for nouns and verbs, 276
+    - Singleton pattern, 344–348
+    - using CRC cards, 276–277
+    - using mediator class, 356–371
+  - naming, 178, 250
+  - nesting, 521–526
+  - object aliases, 209–210
+  - organizing things using, 177
+  - parameterized, 340–341
+  - parts of, 187–188
+  - passing objects to functions, 194–195
+  - persistent, 669
+  - planning for application, 272–275
+  - pointers and, 191–194
+  - polymorphism, 269–270, 505–508
+  - public, 180
+  - runtime and, 530–531
+  - separating member function code, 185–187
+  - singleton, 177, 345
+  - struct type and, 467
+  - this pointer, 196–199
+  - using, 180–184
+  - using namespaces with, 471–473
+  - wrapping enum type, 236–237
+- classifiers, 338
+- clean section, Makefile, 792
+- code reuse, 106
+- Code::Blocks IDE
+  - adding library to project, 767–770
+  - alternatives to, 25
+  - associating C++ files with, 17
+  - breakpoints
+    - changing variable values, 408–409
+    - commands for, 390
+    - disabling, 402–404
+    - enabling, 402–404
+    - setting, 401–402
+    - variables and, 404
+    - watching objects, 404–408
+    - watching variables, 406–407
+  - building application, 33–34
+  - Call Stack window, 396, 412–414
+  - CASE plugin and, 334
+  - code editor in, 34–35
+  - command-line parameters in, 126, 433
+  - compilers, selecting, 23–24
+  - compilers and, 10
+  - compiling with debugging information, 389
+  - CPU Registers window, 396, 419–420
+  - creating project from multiple source code files, 133–135
+  - Current Stack Frame window, 396
+  - Debugger tab in, 391
+  - debugging tools in, 390, 395
+  - debugging using command line arguments, 398
+  - debugging windows in, 396–397
+  - Disassembly window, 394, 396–397, 417–419
+  - downloading, 10–11
+  - dynamic array support, 594
+  - Explorer view, 33
+  - forums, 21
+  - FPU Status window, 397
+  - hash type support, 692
+  - installing
+    - on Linux, 14–16
+    - on Mac, 13
+    - on Windows, 11–13
+  - instruction pointer, 390
+  - keyboard shortcuts, 35
+  - library creation
+    - adding template, 734–735
+    - creating, 730–732
+    - setting up, 732–734
+    - using, 735
+  - Loaded Libraries window, 397
+  - Logs & others window, 22–23
+  - make utility and, 783
+  - Management window, 21–22
+  - Memory Dump window, 396, 436
+  - modified files in, 42
+  - opening sample projects, 19–20
+  - platform support, 2
+  - projects
+    - adding library to, 767–770
+    - creating, 21, 28–33
+    - creating from multiple source code files, 133–135
+    - opening, 19–20
+    - overview, 28
+    - removing files from, 132
+    - splitting into multiple source code files, 130–132
+    - types of, 29–30
+  - running application, 33–34
+  - Running Threads window, 396, 416
+  - Signal Handling window, 397
+  - Standard Library and, 561
+  - Start Here window, 20–21
+  - starting for first time, 17–19
+  - supporting newer C++ features in, 691
+  - Targets and Files window, 397
+  - template errors, 543–544
+  - testing Boost installation, 744–749
+  - troubleshooting settings on Windows, 18–19
+  - Watches window, 396
+  - Wave tool and, 761
+- CodeLite, 25
+- coercion, type, 217
+- cohesion, 367
+- collaboration diagrams, 286, 325–326
+- colon (:)
+  - accessing member functions, 188
+  - in assignment statements, 324
+  - conditional operations, 72
+  - fully qualifying names, 523
+  - template functions, 537
+- COM (Component Object Model), 307
+- comma (,), 430
+- command-line arguments
+  - arrays and, 432–433
+  - for debugging, 398
+  - overview, 125–127
+- comments
+  - in Makefiles, 793
+  - syntax for, 211–213
+- compilers
+  - advantages of C++, 1
+  - auto keyword, 605
+  - C++14 support, 709
+  - comments and, 212
+  - compiling process, 46, 783–785
+  - conditional compilation, 225–226
+  - Demangle() function, 706
+  - differences in interpretation, 10
+  - GCC
+    - adjusting member access, 508
+    - Boost support, 739
+    - Build tool, 753
+    - C++14 support, 709
+    - debugging information, 389
+    - downloading, 10
+    - lvalue and rvalue expressions, 458
+    - non-standard suffix extensions, 707
+    - std namespace and, 475, 621
+    - stream libraries, 619
+    - supporting STL features, 689
+  - header files and, 139
+  - IDE versus, 10
+  - including debugging information, 389
+  - keyboard shortcuts, 46
+  - linker and, 784
+  - listing dependencies, 790–791
+  - make utility and, 785–786
+  - purpose of, 37
+  - return type for lambda expressions, 602–604
+  - selecting in Code::Blocks IDE, 23–24
+  - separating function code from template, 537
+  - templates and, 529
+  - UDLs and, 703
+- complex class, 707, 711–712
+- component diagrams, 285, 307–310
+- Component Object Model (COM), 307
+- compose1() function, 689
+- composition, 302, 303, 305–307
+- Computer-Aided Software Engineering (CASE), 284, 334, 338

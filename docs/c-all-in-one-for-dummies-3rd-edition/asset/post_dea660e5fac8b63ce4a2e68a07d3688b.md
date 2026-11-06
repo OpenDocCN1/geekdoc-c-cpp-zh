@@ -1,0 +1,358 @@
+
+- selecting text in code editor, 35
+- semicolon (;)
+  - class definitions, 181
+  - function prototypes, 119
+  - functions and, 113
+  - loop statements, 86
+  - statement syntax, 37, 40
+- sequence diagrams
+  - comparisons in, 323–324
+  - defined, 286–287
+  - loops in, 322–323
+  - notating, 321
+  - overview, 318–321
+- sequence_buffer type, 686, 690
+- sequential access, 619
+- Serialization library, 743
+- set type
+  - find() function, 580–581
+  - finding intersection, 583–584
+  - map type versus, 581
+  - overview, 578
+  - unionizing, 581–584
+  - using, 579–580
+- Standard Library containers, 685
+- set_difference() function, 687
+- set_intersection() function, 687
+- set_symmetric_difference() function, 687
+- set_union() function, 687
+- setf() function, 635, 641
+- setprecision() function, 640, 729
+- setw flag, 643
+- SGI (Silicon Graphics, Inc.), 683, 684, 685
+- Shift key, 35
+- SHL (shift-left), 419
+- short int type, 455
+- shortcut notation (->), 167, 183, 242, 535
+- showbase flag, 636, 637
+- showpoint flag, 636, 637
+- showpos flag, 636, 637
+- side effects, custom UDL for, 716
+- Signal Handling window, Code::Blocks IDE, 397
+- Signals library, 743
+- signed type, 456–457
+- significant digits, 638
+- Silicon Graphics, Inc. (SGI), 683, 684, 685
+- Simple Mail Transfer Protocol (SMTP), 348
+- single quote ('), 64, 66
+- singleton class, 177, 345
+- Singleton pattern, 344–348
+- sizeof operator, 425
+- skipws flag, 637
+- slist type, 685
+- SMTP (Simple Mail Transfer Protocol), 348
+- sort() function, 611, 687, 702
+- sort order
+  - map type, 571–572
+  - set type, 580
+- sort_heap() function, 687
+- sorting using lambda expression, 610–612
+- source code files
+  - associating with Code::Blocks IDE, 17
+  - class member definitions, 188
+  - creating project from multiple, 133–135
+  - functions in separate, 136–137
+  - global variables, 142–143
+  - header files
+    - adding only once, 140
+    - brackets versus quotes, 140–141
+    - class definitions, 188
+    - global variables, 142–143
+    - header wrappers, 143–144
+    - header-only libraries in Boost, 742
+    - overview, 138–140
+    - using from Boost library, 764
+  - indentation in, 41
+  - modifying Makefile for, 135–136
+  - namespaces in multiple, 473
+  - order of statements, 51
+  - splitting Code::Blocks project into multiple, 130–132
+  - using multiple, 129–130
+- SP (stack pointer), 412
+- spaces, stripping, 382–384
+- splicing list, 585, 588
+- square brackets ([ ])
+  - accessing characters in strings, 67
+  - declaring arrays, 424
+  - in lambda expressions, 602
+  - symbol names, 66
+  - using with map type, 513
+- srand() function, 239, 700
+- srand48() function, 700
+- sstream library, 619
+- stable_partition() function, 687
+- stable_sort() function, 687
+- stack
+  - constructors and destructors with, 204
+  - debugging using, 412–414
+  - heap versus, 146–148
+  - local variable storage explained, 414–416
+  - overview, 411–412
+  - window in Code::Blocks, 396
+- stack frame, 396, 415
+- stack pointer (SP), 412
+- stack type, 589–592, 685, 690
+- stakeholders, 294, 323
+- Standard Library. See also Boost library; STL
+  - adaptors, 690
+  - algorithms, 686–687
+  - allocators, 690–691
+  - architecture of, 562
+  - Boost Filesystem library and, 779
+  - categories in, 684–685
+  - comparisons using min() and max(), 700
+  - container classes
+    - comparing instances, 570–574
+    - copy constructor for, 592–594
+    - deque type, 589
+    - equal operator for, 592
+    - instances in, 566–569
+    - iterating through, 574–577
+    - list type, 584–588
+    - listing of, 685
+    - overview, 562
+    - pointers in, 568–569
+    - queue type, 589–592
+    - references and, 567–568
+    - set type, 578–584
+    - stack type, 589–592
+    - unordered_set type, 596–598
+  - defined, 561
+  - documentation, 684
+  - find algorithms, 697–698
+  - functors, 687–689
+  - hashes, 691–694
+  - history of, 683
+  - iterators, 685–686
+  - map type, 565–566
+  - nocreate flag and, 628
+  - Observer pattern and, 353–354
+  - polymorphic allocators, 691
+  - random number generator, 698–700
+  - STL headers versus, 694
+  - STL versus, 561
+  - stream libraries, 620
+  - temporary buffers, 701–702
+  - third-party libraries and, 737
+  - UDLs
+    - basic_string class, 708–710
+    - chrono::duration class, 712–713
+    - complex class, 711–712
+  - using random access iterator, 694–696
+  - utilities, 689
+  - vector type, 562–564
+- Standard Template Library. See STL
+- Start Here window, Code::Blocks IDE, 20–21
+- state, defined, 287–288
+- state diagrams, 328–329
+- statechart diagrams, 286–287
+- statements
+  - assignment, 52
+  - defined, 40
+  - order of, 51
+- static diagrams, 284–285
+- static library
+  - adding template, 734–735
+  - creating project, 730–732
+  - defined, 29, 307
+  - setting up project, 732–734
+  - using, 735
+- static members
+  - copying instances and, 492
+  - drawing in UML, 339–340
+  - pointer to function, 449
+  - in template, 538–540
+- static_cast keyword, 465–466, 519
+- status directory, Boost, 742
+- std namespace, 333, 475, 620
+- stdio.h header, 659
+- stepping into/over functions, 392
+- stereotyping, 308, 315, 336–338
+- stereotyping symbol (<< >>), 308
+- STL (Standard Template Library). See also Boost Library; Standard Library
+  - defined, 561
+  - documentation, 684
+  - hash_map type, 692
+  - history of, 683
+  - limitations of, 683
+  - Standard Library headers versus, 694
+  - Standard Library versus, 561
+  - stream libraries, 620
+  - supporting features using GCC compiler, 689
+  - third-party libraries and, 737
+- streams
+  - accessing files and, 618–619
+  - to and from class, 670–672
+  - classes and, 669
+  - commonly-used classes, 620–621
+  - defined, 75, 214, 617
+  - file
+    - current working directory, 633
+    - extraction operator (>>), 645–648
+    - fields, 642–643
+    - finding EOF, 648–653
+    - format flags, 634–637
+    - formatting output, 633–634
+    - handling errors when opening files, 624–626
+    - insertion operator (<<), 631–632
+    - ios flags, 627–629
+    - libraries for, 619–620
+    - manipulators, 673–675
+    - opening files, 621–624
+    - precision for numbers, 637–640
+    - reading formatted input, 657
+    - reading lines, 653–656
+    - setting width, 640–643
+    - while loop and, 93
+  - string type, 67
+- stringify() function, 728
+- strings
+  - accessing characters in, 67
+  - adding onto, 69–70
+  - basic_string class, 708–710
+  - changing part of, 69
+  - class for, 183
+  - combining, 70–71
+  - constant, 70
+  - converting, 214
+  - converting using Boost library, 741
+  - creating tokens from, 772–773
+  - defined, 39
+  - delimiters, 68
+  - functions for, 122–124
+  - getting part of, 68–69
+  - index number for, 385–386
+  - modifying using pointer, 167
+  - numbering positions in, 68
+  - overview, 67
+  - pointing to, 153–155
+  - processing to anticipate bugs, 382–384
+  - random, 169
+  - raw and cooked processing, 707–708
+  - shortcut notation, 167
+  - using BOOST_FOREACH macro with, 778
+  - using new operator with, 160–161
+  - variables for, 48
+- Stroustrup, Bjarne, 59, 467, 684
+- struct type
+  - creating custom templates, 722–725
+  - equality between, 469–470
+  - overview, 466–468
+  - packaging other data types as, 468–469
+  - returning from function, 470–471
+  - templates for, 719
+- subactivities, 327
+- subscripting, 240
+- subtraction, 40, 60–61
+- subtractive_rng type, 688
+- sudo command, 14
+- suffixes, UDL, 704–707
+- SunPro, 739
+- SUSE Linux, 14
+- swap() function, 687
+- swap_ranges() function, 687
+- switch statements
+  - break statement, 234
+  - case keyword, 234
+  - default keyword, 234
+  - using, 233–236
+  - wrapping enum type with class, 237
+- switches
+  - `-apple_macro`, 755
+  - `-ascii`, 755
+  - `-assert_macro`, 755
+  - `-boost`, 760
+  - `-brief`, 756
+  - `-copyright`, 755
+  - `-crlf`, 755
+  - `-cvs`, 756
+  - `--cvs`, 760
+  - `-debug`, 759
+  - `-deprecated_macro`, 755
+  - `-end`, 755
+  - `-help`, 759
+  - `-indent`, 759
+  - `-input-file`, 759
+  - `-license`, 754
+  - `-linewidth`, 759
+  - `-link`, 755
+  - `-minmax`, 755
+  - `-ms-errors`, 759
+  - `-no-pretty-print`, 759
+  - `-output-file`, 759
+  - `-path_name`, 755
+  - `-scan`, 760
+  - `-tab`, 755
+  - `-text`, 756
+  - `-unix-lines`, 760
+  - `-unnamed`, 755
+  - `-version`, 759
+- symbols, defined, 144
+- Symbols tab, Code::Blocks IDE, 22
+- syntax, C++
+  - anticipating bugs, 385–386
+  - case sensitivity, 54
+  - comments, 211–213
+  - conditional operators, 71–73
+  - constants, 230–233
+  - `cout` object, 39
+  - `endl` function, 39
+  - extraction operator (`>>`)
+    - defined, 75
+    - overloading in class, 670–672
+    - reading from console, 219
+    - using with stream, 645–648
+  - indentation, 41
+  - insertion operator (`<<`)
+    - defined, 75
+    - manipulators and, 673–675
+    - overloading in class, 670–672
+    - using with stream, 631–632
+  - lambda expressions, 601–605, 609–610
+  - naming variables, 53–55
+  - numbering positions in string, 68
+  - shortcut notation (`->`), 167, 183, 242, 535
+  - statements
+    - assignment, 52
+    - defined, 40
+    - order of, 51
+  - strings, 39
+  - switch statements, 233–236
+  - system() function, 660, 665
+  - System library, 743, 778
+
+## T
+
+- `T placeholder`, 534, 556
+- `tab character`, 44–45, 65
+- `-tab switch`, 755
+- `Targets and Files window`, Code::Blocks IDE, 397
+- `template keyword`, 555
+- `templates`
+  - availability of, 717
+  - best practices, 719–721
+  - compilers and, 529
+  - creating
+    - class template, 725–728
+    - customizing for different data types, 728–729
+    - math template, 721–722
+    - structure template, 722–725
+  - debugging errors, 543–544
+  - default parameters, 575
+  - deriving
+    - class from template, 548–550
+    - template from class, 550–552
+    - template from class template, 552–554
+  - DLLs and, 730
+  - drawing in UML, 340–341

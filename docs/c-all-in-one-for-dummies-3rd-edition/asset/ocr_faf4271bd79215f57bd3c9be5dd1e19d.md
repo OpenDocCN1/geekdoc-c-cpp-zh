@@ -1,0 +1,15 @@
+allow the user to enter both names at one time, but the user doesn’t realize that the last name was supposed to come first, or perhaps it was last name, and then a comma, and then the first name.
+
++   - The user can type some spaces at the beginning or end of the name. The application then looks for an entry like “George Washington” and does not find it, because it’s stored as “George Washington” (with no spaces before or after).
++   - The user might include middle initials when the name is not stored in the database with middle initials.
+
+All these problems are easy to avoid. Here are some tips:
+
++   - You must know how the names are stored in the database before you go looking for them. If they are stored in all caps, you shouldn’t require the user to enter them in all caps. Instead, accept words in any case and *convert them* to all uppercase.
++   - You must know whether the names are stored with the first name separated from the last. Then allow any format. If the user types **George Washington** (no comma), you can split the string at the space and pull out the first name and last name. But if the user types the name with a comma between the first and last names, you can split it at the comma and extract the last name and then the first name.
++   - Spaces should not be a problem. You can strip the spaces off a string after a user types it in.
++   - Are middle initials required? Document things well. Your application should clearly tell the user whether to enter a middle name, a middle initial, or neither. If you are using text controls, don’t even include a middle name field if you don’t want a middle name. Or if you do, specify right on the window whether the user should type a middle initial or an entire middle name. If the entry is just an initial, you can remove a trailing period, or add it, depending on what’s stored in the database.
+
+All these steps will help make your application bulletproof. The idea is to encourage users to do things the way they prefer, but to prevent them from doing things in ways that your application doesn’t like. If your application doesn’t want middle initials, don’t give users the opportunity to enter them.
+
+Listing 1-1 shows you how you can strip spaces, strip a possible period off the end of a middle initial, and split a string based on either spaces or commas. In this listing, we used a special class called vector. The vector class is much like an array, except that the vector class is a bit more powerful: vector is a class, and you can add things to it and remove things from it easily by using member functions. vector is also a template, so when you declare it, you must state what type of variables you want it to hold. You put the variable types in angle brackets. We’re putting strings in it, so we declared it as vector<string>. But to make our lives simpler, we used a typedef to make an easier name for this type: StringList.

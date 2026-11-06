@@ -1,0 +1,346 @@
+
+- lambda expressions (*continued*)
+    - return type
+        - specifying, 604–605
+            - using compiler detection, 602–604
+    - sorting data using, 610–612
+    - throwing exceptions from, 612–613
+- longjmp() function, 700
+- left flag, 636, 641, 642
+- length() function, 154
+- less type, 688
+- less_equal type, 688
+- less-than symbol (<), 37, 79, 575
+- lexicographical_compare() function, 687
+- lexicographical_compare_3way() function, 687
+- lib directory, Boost, 741
+- .lib file extension, 784
+- libboost_filesystem-mgw47-mt-1_55.a library, 778
+- libboost_regex-mgw47-mt-1_55.a library, 768
+- libboost_system-mgw47-mt-1_55.a library, 778
+- libraries. *See also* Boost library; Standard Library, STL
+    - component diagrams, 307–310
+    - creating for template
+        - adding template, 734–735
+        - creating project, 730–732
+        - overview, 730
+        - setting up project, 732–734
+        - using library, 735
+    - defined, 28, 561
+    - namespaces and, 734
+    - quality of code, 738
+    - size of, 423
+    - Standard C++ versus STL, 561
+    - static, 29
+    - stream, 619–620
+    - using, 735
+    - windows displaying loaded, 397
+- libs directory, Boost, 741
+- -license switch, 754
+- lifecycle, 287
+- line numbers, 38
+- --linewidth switch, 759
+- -link switch, 755
+- linker, 46, 307, 784, 785, 791
+- Linux
+    - Boost library for, 740
+    - installing Code::Blocks
+        - graphical installation, 14–16
+        - standard method, 14
+    - root directory access and, 649
+    - support for, 2
+- list type
+    - deque type versus, 589
+    - insert() function, 585
+    - overview, 584
+    - push_back() function, 584
+    - push_front() function, 584
+    - queue type and, 590
+    - stack type and, 590
+    - Standard Library containers, 685
+    - using, 353–354, 585–587
+    - using iterator with, 585
+    - vector type versus, 588
+- literals, raw versus cooked, 707–708
+- LL suffix, 704
+- LLU suffix, 705
+- Loaded Libraries window, Code::Blocks IDE, 397
+- loader, 785
+- local variables
+    - in functions, 117–118
+    - global variables versus, 143
+- local_time() function, 764
+- Locale library, 743
+- locking files, 618
+- logical operators, 81
+- logical_and type, 688
+- logical_not type, 688
+- logical_or type, 688
+- Logs & others window, Code::Blocks IDE, 22–23
+- long double type, 456, 712, 714
+- long int type, 456, 699, 704–705
+- **loops**
+    - arrays and, 241
+    - BOOST_FOREACH macro, 776–778
+    - BOOST_REVERSE_FOREACH macro, 777–778
+    - break statement, 95–96
+    - continue statement, 96–97
+    - defined, 77
+    - do-while loop, 94–95
+    - for loop
+        - condition for, 87–88
+        - counting backward, 88–89
+        - incrementing one step, 89–90
+        - multiple counter variables, 91–92
+        - using, 86–87
+        - using auto keyword, 607
+    - nesting, 97–99
+    - overview, 84–85
+    - in sequence diagrams, 322–323
+    - types of, 85–86
+    - while loop, 92–94
+- low coupling, 367
+- lower_bound() function, 687
+- lrand48() function, 699–700
+- LU suffix, 704
+- lvalue in error messages, 458–459
+
+## M
+
+- -M option, 790
+- **Mac OS X**
+    - Boost library for, 740
+    - installing Code::Blocks IDE, 13
+    - root directory access and, 649
+    - support for, 2
+- machine code, 784
+- **macros**
+    - BOOST_FOREACH macro, 776–778
+    - BOOST_REVERSE_FOREACH macro, 777–778
+    - defined, 224
+    - using in Makefile, 792
+- mailbox analogy, 250–254
+- **main() function**
+    - command-line arguments, 125–127
+    - as function, 124
+    - overview, 36
+    - return value from, 124–125
+- **make utility**
+    - all option, 793
+    - clean option, 792
+    - compiling and linking with, 791
+    - compiling specific item, 789
+    - defined, 783
+    - different names for, 786
+    - documentation, 793
+    - inference rules and, 787
+    - macros and, 792
+    - Makefiles and, 786
+    - purpose of, 785–786
+    - rules checked before running, 788–789
+- make_heap() function, 687
+- **Makefiles**
+    - all rule in, 793
+    - backslash in, 793
+    - clean section, 792
+    - comments in, 793
+    - compiling and linking using, 791
+    - compiling specific item, 789
+    - defined, 129
+    - header files and, 139
+    - implicit rules, 793
+    - **inference rules**
+        - multiple dependencies, 789–791
+        - overview, 787–788
+        - rules checked before running, 788–789
+    - macros in, 792
+    - modifying for multiple source code files, 135–136
+    - naming, 788
+    - overview, 786
+- Management window, Code::Blocks IDE, 21–22, 132
+- **manipulators**
+    - creating, 676–680
+    - defined, 669
+    - formatting output, 637
+    - overview, 673–675
+- root directory access and, 649
+- support for, 2
+- troubleshooting Code::Blocks settings, 18–19
+- min() function, 687, 689, 700
+- min suffix, 713
+- min_element() function, 687
+- MinGW, 389, 57, 561, 790, 792
+- -minmax switch, 755
+- minus sign (-), 40, 261
+- minus type, 688
+- mismatch() function, 687
+- mission-critical applications, 125
+- mkdir() function, 660
+- -MM option, 791
+- m..n symbol, 304
+- modeling classes. See also UML
+    - collection of classes as model, 284
+    - design patterns
+        - Façade pattern, 361
+        - Observer pattern, 348–356
+        - overview, 343–344
+        - Singleton pattern, 344–348
+        - using mediator class, 356–371
+    - design workflow and, 277
+    - finding missing, 277
+    - overview, 275–276
+    - searching for nouns and verbs, 276
+    - using CRC cards, 276–277
+- modulus operator, 55, 62
+- modulus type, 688
+- MPI library, 743
+- mrand48() function, 699–700
+- ms suffix, 713
+- MS-DOS, 622
+- --ms-errors switch, 759
+- multidimensional arrays
+    - initializing, 430
+    - overview, 429–430
+    - passing, 430–432
+- multimap type, 685
+- multiple inheritance, 514–516, 519
+- multiplication, 40, 61
+- multiplicities, 304
+- multiplies type, 688
+- multiset type, 685
+
+## N
+
+- n symbol, 304
+- name() function, 706, 710
+- namespace keyword, 332
+- namespaces
+    - creating from multiple source code files, 473
+    - defined, 471
+    - identifiers and, 331
+    - libraries and, 734
+    - overview, 137
+    - std namespace, 333, 475
+    - in UML diagrams, 332–334
+    - using, 471–473
+    - using from Boost library, 764
+    - variables in, 474–476
+- naming
+    - classes, 178, 250
+    - enum type, 180
+    - Makefiles, 788
+    - pointers, 157
+    - variables, 49, 53–55, 118
+- negate type, 688
+- nesting
+    - classes, 521–526
+    - loops, 97–99
+- Netbeans, 25
+- new operator
+    - allocating memory using, 157–159, 690
+    - creating pointer to object, 191
+    - using delete operator for each, 386
+    - using with strings, 160–161
+- newline character, 64–65
+- next_permutation() function, 687
+- nmake utility, 786
+- noboolalpha flag, 637
+- nocreate flag, 627–628
+- node, 310
+- nonprintable characters, 64–66
+- non-type parameters, template, 543
+- --no-pretty-print switch, 759
+- noreplace flag, 628–629
+- noshowbase flag, 637
+- noshowpoint flag, 637
+- noshowpos flag, 637
+- noskipws flag, 637
+- not declared error, 38
+- not equal (!=) operator, 79
+- not_equal_to type, 688
+- notating diagrams, 334–335
+- nothrow keyword, 596
+- nouppercase flag, 637
+- nrand48() function, 699
+- ns suffix, 713
+- nth_element() function, 687
+- null character (\0), 64
+- null reference, 465
+- null value, 163
+- nullptr, 596
+- numbers
+    - converting, 218
+    - converting accurately, 773–776
+    - evaluating conditions with, 79–80
+    - floating-point
+        - casting, 466
+        - converting to integers, 216
+        - creating complex numbers, 712
+    - defined, 48
+    - double type, 456
+    - float type, 456
+    - format flags, 634–637
+    - long double type, 456
+    - format flags, 634–637
+    - integers
+        - adding together, 56–59
+        - casting, 466
+        - converting double type to, 773–775
+        - converting to floating-point numbers, 216
+        - converting using Boost library, 741
+        - dividing, 62–63
+        - format flags, 634–637
+        - long int type, 456
+        - mathematics using, 55
+        - max() function, 700
+        - min() function, 700
+        - multiplying, 61
+        - short int type, 455
+        - subtracting, 60–61
+    - UDL suffixes, 704–705
+        - variables for, 48–50
+    - largest possible, 43–44
+    - precision for output, 637–640
+    - random, 169, 238–240, 698–700
+    - rounding, 775
+    - truncating, 216
+
+## O
+
+- .o file extension, 135, 784
+- .obj file extension, 135, 784
+- object diagrams, 286, 313–315
+- object files, 784
+- Object Management Group (OMG), 282
+- object-oriented programming. See OOP
+- objects
+    - aliases, 209–210
+    - attributes and, 249
+    - capabilities explained, 252–253
+    - comparing, 570–574
+    - constructors, 201–202
+    - converting types, 213–218
+    - creating from class, 180–184
+    - defined, 103, 176, 187
+    - designing encapsulation for, 256–259
+    - destructors, 202
+    - encapsulation and, 254–256
+    - instance and, 250, 253
+    - mailbox analogy, 250–254
+    - overview, 249–250
+    - passing to function, 194–195
+    - pointers for, 191–194
+    - polymorphism and, 505–508
+    - this pointer, 196–199
+    - watching using breakpoints, 407–408
+- Observer pattern
+    - automatically adding observer, 354–356
+    - overview, 348–353
+    - Standard Library and, 353–354
+- oct flag, 636
+- ofstream class, 620, 623, 624, 632
+- omain type, 674–675
+- OMG (Object Management Group), 282
+- OOP (object-oriented programming)
+    - C++ history, 59
+    - classes and, 175
