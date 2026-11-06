@@ -295,6 +295,7 @@
 +   [完全初学者的 C++ 与算法思维：学会像程序员一样思考 1](docs/c-and-algorithmic-thinking-for-the-complete-beginner-learn-t/README.md)
 +   [C++ 与算法思维初学者指南 第三版](docs/c-and-algorithmic-thinking-for-the-complete-beginner-third-e/README.md)
 +   [C++ 与计算机黑客及移动黑客三合集：学习 C++ 编程、计算机黑客与移动黑客初学者指南](docs/c-and-computer-hacking-mobile-hacking-3-bundle-manuscript-be/README.md)
++   [C++ 与数据分析 2 合 1 手稿合集：提升 C++ 编程技能并学习实用数据分析、数据科学和预测分析的必备初学者指南](docs/c-and-data-analytics-2-bundle-manuscript-essential-beginners/README.md)
 +   [C# 与 游戏编程：初学者指南，第二版 (书与光盘)](docs/c-and-game-programming-a-beginners-guide-second-edition-book/README.md)
 +   [C++ 与 Linux 操作系统初学者指南：提升你的 C++ 编程技能并学习 Linux 操作系统](docs/c-and-linux-operating-system-2-bundle-manuscript-essential-b/README.md)
 +   [C# 与 .NET 编程](docs/c-and-net-programming/README.md)

@@ -1,0 +1,74 @@
+level_changes:
+- line: 107
+  before: 2
+  after: 3
+- line: 125
+  before: 2
+  after: 3
+- line: 205
+  before: 2
+  after: 3
+- line: 237
+  before: 2
+  after: 3
+- line: 243
+  before: 2
+  after: 3
+- line: 249
+  before: 2
+  after: 3
+- line: 259
+  before: 2
+  after: 3
+- line: 307
+  before: 2
+  after: 3
+- line: 346
+  before: 2
+  after: 3
+- line: 389
+  before: 2
+  after: 3
+- line: 722
+  before: 2
+  after: 3
+- line: 818
+  before: 2
+  after: 3
+- line: 832
+  before: 2
+  after: 3
+- line: 848
+  before: 2
+  after: 3
+- line: 955
+  before: 2
+  after: 3
+text_changes:
+- line: 528
+  before: 第5章：在 C++ 中使用运算符
+  after: 第 5 章：在 C++ 中使用运算符
+- line: 577
+  before: 第6章：帮助 C++ 做出决策
+  after: 第 6 章：帮助 C++ 做出决策
+- line: 637
+  before: 第6章：常量与各种类型的字面量
+  after: 第 7 章：常量与各种类型的字面量
+- line: 773
+  before: 第1章：什么是数据分析，以及为什么每家企业都应具备它
+  after: 第 1 章：什么是数据分析，以及为什么每家企业都应具备它
+- line: 801
+  before: 第2章：如何处理大量数据及其益处
+  after: 第 2 章：如何处理大量数据及其益处
+- line: 866
+  before: 第3章：数据分析的类型
+  after: 第 3 章：数据分析的类型
+- line: 913
+  before: 第4章：大数据、数据挖掘、数据仓库和数据可视化
+  after: 第 4 章：大数据、数据挖掘、数据仓库和数据可视化
+- line: 967
+  before: 第5章：如何对自己的业务进行数据分析
+  after: 第 5 章：如何对自己的业务进行数据分析
+- line: 1003
+  before: 第6章：如何利用社交媒体、软件和其他工具维持业务发展
+  after: 第 6 章：如何利用社交媒体、软件和其他工具维持业务发展

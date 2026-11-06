@@ -1,0 +1,2 @@
++   [C++ 与数据分析 2 合 1 手稿合集：提升 C++ 编程技能并学习实用数据分析、数据科学和预测分析的必备初学者指南](README.md)
++   [C++ 与数据分析 2 合 1 手稿合集：提升 C++ 编程技能并学习实用数据分析、数据科学和预测分析的必备初学者指南](c-and-data-analytics-2-bundle-manuscript-essential-beginners.md)

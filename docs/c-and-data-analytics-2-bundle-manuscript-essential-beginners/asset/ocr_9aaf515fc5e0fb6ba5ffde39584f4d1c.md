@@ -1,0 +1,3 @@
+can use this as a basis to promote people, on the grounds of the statistical evidence. You can do this in order to keep morale going. Sometimes, if you don’t reward the ones doing well, you’ll end up suffering because the person will then not work as well, causing issues for you too.
+
+But also, look at it in other regards as well. It can even protect you from bad situations. For example, let’s say that you’re running a bank or a credit card service. These companies and businesses will look at any withdrawal and spending of a certain person at any time. If they suddenly see countless

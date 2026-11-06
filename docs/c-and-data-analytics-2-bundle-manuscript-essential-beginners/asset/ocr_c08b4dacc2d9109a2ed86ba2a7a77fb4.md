@@ -1,0 +1,3 @@
+and today it is still a pretty advanced piece of technology, due to the updates that keep it on top.
+
+There are a lot of opinions that also have to do with why C++ is considered the best. While there are a lot of people who say that C++ is no longer relevant, even more vouch that it is still the best language out there, and it is their fall back language. It is the one they know the most about, and the one they carry close to their heart. The reasons vary, but the fact that 90% of programmers default to C++ shows that it is very much the best programming language out there

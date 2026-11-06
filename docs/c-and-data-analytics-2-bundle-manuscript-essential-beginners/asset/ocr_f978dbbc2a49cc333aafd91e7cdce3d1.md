@@ -1,0 +1,3 @@
+today.
+
+C++ is one of the few languages that follow the ANSI standard completely, which is why some of the best games you will ever play are still written with C++. Because their compilers are set to ensure that all commands are written and executed without errors. It can also be used across many different types of platforms, whether you have a Microsoft, Unix, Mac, Windows, or and Alpha device, it is possible to use C++. This is a great thing, because a lot of programmers have to operate across many different platforms, and the

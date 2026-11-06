@@ -1,0 +1,3 @@
+components, it is fairly easy to learn, and if you master C++, you can master the other languages with ease. The reason for this is that when you learn something that is a little more complex than everything else first, the easier stuff will fall right into place, however, if you get used to easy to learn subjects, then you will find that the more difficult stuff is hard to learn because you are not used to putting in that much effort into the subject that you are trying to learn.
+
+If you want to learn a language that you can use for different types of functions within the realm of computer technology,

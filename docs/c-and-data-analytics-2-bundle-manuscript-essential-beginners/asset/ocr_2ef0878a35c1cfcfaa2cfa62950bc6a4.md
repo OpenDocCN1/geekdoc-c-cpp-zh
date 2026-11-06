@@ -1,0 +1,3 @@
+You should start in a text editor to get the rough draft going on your program before you even think of moving to a compiler. This is because once you get to a compiler, it is a lot easier to mess up on your program, and not catch it. However, if you have it laid out in a nice, clean-cut fashion in a text editor, then you should have no problems with getting things going in the compiler.
+
+# ## C++ Compilers

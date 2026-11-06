@@ -1,0 +1,3 @@
+what was going on, why that was, and the result of it. The question this type of analytic asks is, “Why did it happen?”
+
++   - **Prescriptive**: Prescriptive analytics will tell you when it’s time to take action. Now, this is the most important one of them all, because this is the data analytics that will tell you what needs to be done next, and it’s sort of what will determine the next step of the company. This is the type of data analytics that either lets the company go under, or will let the

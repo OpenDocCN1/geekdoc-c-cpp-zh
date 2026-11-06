@@ -1,0 +1,3 @@
+ability to learn other languages with ease. Having the ability of learning C++ will enhance your knowledge of other programming language, which is why many people regard it as the ‘godfather’ of computer programming. Furthermore, many big companies still need programmers that have C++ as they rely this programming language to run their central computer system. So when the going gets tough, just know it’ll benefit you in the long run so stay strong and get in the programming mindset!
+
+# History of C++

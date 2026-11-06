@@ -1,0 +1,3 @@
+**Headers-** There are several headers out there for C++, and all of them are necessary or at the very least useful to your programming operations. However, for most functions you will see the header that is above <iostream>. When you use a header be sure to enclose it properly, and put **#include** before it to prompt the program to use that header.
+
+**Namespace-** Namespaces are a fairly new addition to C++, only coming about in the 2011 update. They do not do much, other than describe which namespace to

@@ -1,0 +1,3 @@
+how to fix them. Sometimes the most shocking things can be learning the truth about your company and the fact that it’s not doing well. Even so though, data analytics will help you blow right on past that, and you’ll be able to be much more successful as a result of everything that you’ve learned from this, and the results that you’ve obtained.
+
+Finally, if you enjoyed this book, then I’d like to ask you for a favor, would you be kind enough to leave a review for this book on Amazon? It’d be greatly appreciated!

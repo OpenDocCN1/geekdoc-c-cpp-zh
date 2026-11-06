@@ -1,0 +1,3 @@
+of data that is being sent from one place to another. This is done with scripts. While you can get pre-packaged scripts online, many people prefer the old fashioned way of writing their own scripts, as is gives them more flexibility to do what they want with the information. Scripts that come already set up into packages have limited mobility and are pretty visible. The goal of a hacker who truly wants to hack is to remain discreet. If you are caught, unless you have permission to be doing what you are doing, you can get in a heap of trouble.
+
+# History of Hacking

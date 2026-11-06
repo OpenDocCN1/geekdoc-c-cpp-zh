@@ -1,0 +1,3 @@
+For example, let’s say that you’re looking at the amount of items you’ve sold within the year. Let’s say it was going great at first, but around June or July, things start to fizzle out. At first, you might freak out, but upon further analysis, you might realize that you put in a new program, or maybe hired on a new person to the business. Maybe Joe Schmo might be causing you more harm than good, and when you look at his production, you’ll start to see who is at fault here in order to handle it accordingly.
+
+In another sort of situation, maybe sales started to increase. The wrong thing to

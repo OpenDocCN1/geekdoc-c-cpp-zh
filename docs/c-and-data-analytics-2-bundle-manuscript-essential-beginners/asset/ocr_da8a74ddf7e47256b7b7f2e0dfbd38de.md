@@ -1,0 +1,3 @@
+or an electric company's power grid, you'll notice that the data moves unbearably fast. Big-time companies need to watch this section of data analytics like a hawk, because while you can certainly sift through the big stuff, but becomes problematic over time if you don't manage the speed of this, and that's why it's a major factor in the way the business is conducted at the core.
+
+Then there is the **variety**. The variety is the difference in handling the big data. With smaller companies, it's all pretty cut and narrow, with very little difference but as you start to grow, you will start to develop departments, and

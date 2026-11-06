@@ -1,0 +1,3 @@
+# Chapter 3: Types of Data Analytics
+
+With data analytics, it's important to understand that some types of data analytics are not the same as others. Remember, that this big data can help with fraud detection as said before, the competitive analysis on a complex level, optimizing various structures such as call centers, seeing customers feel on a real-time level, improving the traffic management of various intelligence, and also to even help manage other such items. All of these things can be used with data analytics, and big data is

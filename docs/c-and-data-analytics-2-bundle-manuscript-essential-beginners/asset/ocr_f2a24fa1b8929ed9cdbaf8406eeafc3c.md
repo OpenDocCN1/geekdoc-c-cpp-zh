@@ -1,0 +1,3 @@
+left with nothing.
+
+Now, a business also needs this not just for protection, but for their products as well. Let’s say you have an online business that sells different types of clothing. Maybe you have the data on all of the articles of clothing and you see that some are being sold more than other products. These data analyses will allow you to see which products your customers will buy more or less, and you can adjust this accordingly so that you’re not wasting money. In this day and age, many of these analytics have dashboards that showcase these data streams so that you can see them in real
