@@ -1,0 +1,339 @@
+
+-   保留标识符, 48
+-   reset, 402, 405
+-   resetiosflags, 80
+-   resize, 68, 256, 260, 268
+-   资源：窃取, 176
+-   程序员的责任, 255, 259, 263, 267, 284, 402
+-   限制, 9
+-   result_of, 589
+-   result_type, 509, 647
+-   return, 187
+-   通过参数返回, 31
+-   返回类型：隐式, 417
+-   返回类型：后指定, 417
+-   返回值, 12, 244
+-   返回值优化, 184
+-   可复用软件, 321, 338
+-   reverse, 261, 484
+-   反向迭代器, 620
+-   逆波兰表示法, 283
+-   reverse_copy, 485
+-   reverse_iterator, 256, 260, 268, 274, 280, 620
+-   reverse_iterator：由迭代器初始化, 620
+-   reversed_iterator, 391
+-   rfind, 69
+-   right, 81
+-   右侧, 252, 253
+-   rmExceptFd, 703
+-   rmReadFd, 703
+-   rmWriteFd, 703
+-   RNG, 421
+-   rotate, 485
+-   rotate_copy, 486
+-   round_error, 540
+-   round_style, 541
+-   RPN, 283
+-   经验法则, 11, 17, 23, 47, 55, 116, 129, 132, 137, 152, 207, 209, 225, 228, 237, 257, 295, 296, 321, 363, 409, 514, 533, 543, 562, 574
+-   运行时, 317, 332, 538
+-   运行时错误, 201
+-   运行时支持系统, 162
+-   运行时与编译时, 630
+-   runtime_error, 205
+-   右值, 33, 219, 229, 392, 401
+-   右值引用, 33
+-   右值：与左值区分, 723
+-   sbumpc, 339, 681
+-   标量数值类型, 285
+-   标量类型, 288
+-   扫描缓冲区, 735
+-   scanf, 92
+-   扫描器, 675, 728, 738
+-   扫描器生成器, 728
+-   scientific, 83
+-   科学记数法, 83
+-   作用域解析运算符, 21, 50, 237, 304, 309, 326
+-   作用域：类, 362
+-   作用域：全局, 362
+-   search, 487
+-   search_n, 488
+-   second, 253
+-   second_argument_type, 509, 647
+-   越过文件边界定位, 87, 94
+-   seek_dir, 376
+-   seek_off, 683
+-   seekdir, 86, 93, 340
+-   seekg, 93
+-   seekoff, 344, 682
+-   seekp, 86
+-   seekpos, 344, 682, 683
+-   段错误, 399
+-   select, 700
+-   Selector, 702
+-   信号量, 415
+-   set, 278
+-   set：头文件, 278, 280
+-   set_debug, 732
+-   set_difference, 489
+-   set_intersection, 490
+-   set_new_handler, 161
+-   set_symmetric_difference, 491
+-   set_union, 492
+-   setAlarm, 703
+-   setbase, 82
+-   setbuf, 344
+-   setf, 80
+-   setfill, 79
+-   setg, 342, 679, 681, 683
+-   setiosflags, 80
+-   setjmp, 187, 189, 190
+-   setp, 344, 677
+-   setprecision, 80
+-   setstate, 78
+-   setupex, 7
+-   setw, 81
+-   SFINAE, 548
+-   sgetc, 339
+-   sgetn, 339, 682
+-   遮蔽成员, 299
+-   shared_ptr, 45, 403, 615
+-   shared_ptr：空指针, 404
+-   shared_ptr：默认, 403
+-   shared_ptr：定义, 403
+-   shared_ptr：初始化, 404
+-   shared_ptr：运算符, 405
+-   shared_ptr：所用类型, 404
+-   移进-归约, 746
+-   showbase, 82
+-   showmanyc, 342
+-   showpoint, 83
+-   showpos, 82
+-   混洗, 436
+-   signal, 695
+-   Stuart, A. & Ord, K, 420
+-   student_t_distribution<RealType = double>, 431
+-   替换失败, 548
+-   substr, 69
+-   subtract_with_carry_engine, 420
+-   sungetc, 339
+-   Sutter, H., 207, 549
+-   swap, 69, 170, 209, 256, 262, 268, 274, 280, 402, 405, 497
+-   swap_area, 161
+-   swap_ranges, 498
+-   交换, 436
+-   瑞士军刀, 307
+-   符号区, 731
+-   符号常量, 25
+-   sync, 344, 676, 677
+-   语法元素, 187
+-   system, 692, 695
+-   Tanenbaum, A.S., 416
+-   TCP/IP 协议栈, 338
+-   tellg, 93
+-   tellp, 86
+-   模板, 71, 381, 512, 550
+-   模板别名, 646
+-   模板声明, 526
+-   模板显式特化, 534
+-   模板显式类型指定：省略, 536
+-   模板头, 513
+-   模板头：用于成员模板, 554
+-   模板实例化声明, 536
+-   模板机制, 511, 512
+-   模板成员：无模板类型参数, 626
+-   模板元编程, 526, 623
+-   模板方法, 321
+-   模板方法设计模式, 692
+-   模板非类型参数, 515
+-   模板包：与模板模板参数, 667
+-   模板参数推导, 520
+-   模板参数列表, 512, 515, 550
+-   模板参数：默认值, 552
+-   模板参数：相同类型, 524
+-   模板编程, 629
+-   模板模板参数, 623, 642
+-   模板模板参数：与模板包, 667
+-   模板类型推导, 524
+-   模板类型参数, 513
+-   模板类型：初始化, 515
+-   模板：与 < 记号, 628
+-   模板：类, 550
+-   模板：嵌入 typedef 中, 567
+-   模板：嵌入整数值, 630
+-   模板：显式特化, 535
+-   模板：标识符-声明不匹配, 536
+-   模板：识别子类型, 565
+-   模板：IfElse, 633
+-   模板：参数类型变换, 521
+-   模板：实例化点, 527, 543
+-   模板：阻止实例化, 562
+-   模板：根据 bool 选择类型, 633
+-   模板：特化, 567
+-   模板：在模板内指定, 628
+-   模板：依赖于类型参数的语句, 542
+-   模板：模板内的子类型, 625
+-   模板：可变参数, 577
+-   模板：实例化时, 562
+-   模板与 using, 516
+-   模板：通过递归迭代, 635
+-   模板：重载类型参数列表, 531
+-   terminate, 346
+-   文本文件, 100
+-   textMsg, 196
+-   this, 139, 146, 147, 166, 235
+-   线程, 410
+-   thread：头文件, 410
+-   throw, 188, 193
+-   throw 列表, 201, 204
+-   throw：空, 196
+-   throw：指针, 195
+-   tie, 75, 97
+-   timed_mutex, 412
+-   timeval, 701
+-   tinyness_before, 541
+-   记号, 283, 738
+-   top, 266, 283, 284
+-   特征类, 647
+-   特征类：类检测, 650
+-   特征类：嵌套, 648
+-   transform, 385, 387, 499
+-   transform：与 for_each 对比, 500
+-   到基类的转换, 523
+-   陷阱, 541
+-   平凡复制构造函数, 168, 185
+-   平凡默认构造函数, 122, 184, 652
+-   平凡析构函数, 159, 185
+-   平凡成员, 184
+-   平凡成员函数, 652
+-   平凡重载赋值运算符, 185
+-   true, 43, 88, 94, 389, 460, 469, 731
+-   trunc, 89, 100
+-   try, 197
+-   tuple, 587
+-   tuple：头文件, 587
+-   tuple_element, 588
+-   tuple_size, 588
+-   Type, 253
+-   类型检查, 12
+-   类型转换, 544
+-   类型识别：运行时, 331
+-   指针的类型, 311
+-   类型安全, 25, 91, 149, 150
+-   类型安全, 72
+-   类型指定：显式, 520
+-   类型安全, 26
+-   类型：匿名、局部, 519
+-   类型：基本, 42
+-   类型：无值, 377
+-   type_traits：头文件, 652
+-   typedef, 19, 71, 254, 269
+-   typedefs：嵌套, 613
+-   typeid, 331, 334
+-   typeid：参数, 335
+-   typeinfo：头文件, 204, 334
+-   typename, 623
+-   typename ...Params, 577
+-   typename &&, 33
+-   typename 与 class, 642
+-   typename：与模板子类型, 565
+-   typename：消除代码歧义, 564
+-   类型：STL 所需, 714
+-   U, 43
+-   uflow, 339, 342
+-   uint32_t, 45
+-   Ullman, J.D., 257
+-   一元函数对象, 388
+-   一元非, 713
+-   一元运算符, 713
+-   一元谓词, 442
+-   unary_function, 714
+-   未绑定友元, 593, 598
+-   vtable 的未定义引用, 352
+-   下溢, 342, 679
+-   underflow_error, 205
+-   unget, 93, 684
+-   Unicode, 44
+-   统一初始化, 120
+-   uniform_int_distribution<IntType = int>, 432
+-   uniform_real_distribution<RealType = double>, 432
+-   未实现：dotstar_expr 的名称修饰, 518
+-   union, 19, 741
+-   unique, 262, 405, 500
+-   unique_copy, 501
+-   unique_lock, 412
+-   unique_ptr, 397, 615
+-   unique_ptr：空指针, 398
+-   unique_ptr：赋值, 399
+-   unique_ptr：默认, 398
+-   unique_ptr：定义, 398
+-   unique_ptr：初始化, 399
+-   unique_ptr：移动构造函数, 399
+-   unique_ptr：运算符, 401
+-   unique_ptr：访问成员, 400
+-   unique_ptr：所用类型, 400
+-   unistd.h：头文件, 676, 679, 680, 683, 697
+-   unitbuf, 84
+-   Unix, 98, 100, 695, 696, 737, 746
+-   未命名类型, 519
+-   unordered_map, 284
+-   unordered_map：头文件, 284
+-   unordered_multimap, 284
+-   unordered_multiset, 284
+-   unordered_set, 284
+-   unordered_set：头文件, 284
+-   解包运算符, 578, 585
+-   不受限联合, 289
+-   unset, 80
+-   unsigned int, 44
+-   upper_bound, 274, 280, 502
+-   uppercase, 82
+-   URNG, 421
+-   use_count, 405
+-   用户定义字面量, 145
+-   用户定义字面量, 248
+-   using, 40, 136
+-   using 声明, 51
+-   using 指示, 51
+-   using namespace std, 21
+-   using 与模板, 516
+-   using：在派生类中, 305
+-   using：限制, 55
+-   UTF-16, 44
+-   UTF-32, 44
+-   UTF-8, 44
+-   utility, 178
+-   utility：头文件, 253, 581
+-   模糊链接, 130
+-   有效状态, 60
+-   值, 269
+-   值类型, 284
+-   value_type, 269, 278
+-   Vandevoorde, D., 623
+-   可变参数函数, 577
+-   可变参数非类型参数, 586
+-   可变参数模板：参数数量, 578
+-   可变参数模板, 577
+-   vector, 251, 254, 391
+-   vector 构造函数, 254
+-   vector：头文件, 254
+-   vector：成员函数, 255
+-   可行函数, 544
+-   virtual, 319, 730
+-   虚基类, 327
+-   虚构造函数, 353, 747
+-   虚派生, 327
+-   虚析构函数, 320, 322
+-   虚成员函数, 319
+-   virtual：与 static 对比, 139
+-   可见性：嵌套类, 369
+-   void, 15
+-   void *, 198, 234, 236, 238
+-   volatile, 522
+-   vpointer, 348
+-   vprintf, 86
+-   vscanf, 92
+-   vtable, 348, 644
+-   vtable：与多重继承, 350
+-   vtable：未定义引用, 352
+-   wait, 702
+-   waitpid, 693

@@ -303,6 +303,7 @@
 +   [C++ 与 Python 编程合集：学习 C++ 编程与 Python 编程入门初学者指南](docs/c-and-python-programming-2-bundle-manuscript-introductory-be/README.md)
 +   [C++ 注释 (A4格式)](docs/c-annotations-a4-format/README.md)
 +   [C++ 注释（信函格式）](docs/c-annotations-letter-format/README.md)
++   [C++ 注释：版本 6.1.0b](docs/c-annotations-version-610b/README.md)
 +   [# 基础速查表](docs/c-basics-cheat-sheet/README.md)
 +   [C++：从入门到高级的指南 (C++ 编程 2016)](docs/c-beginner-to-pro-guide-c-programming-2016/README.md)
 +   [C++ 最佳实践：提升 C++  de 45 条简单规则与具体行动项](docs/c-best-practices-45ish-simple-rules-with-specific-action-ite/README.md)

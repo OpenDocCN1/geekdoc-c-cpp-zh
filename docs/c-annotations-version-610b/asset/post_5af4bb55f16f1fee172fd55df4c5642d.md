@@ -1,0 +1,335 @@
+
+## Index
+
+- `!=`, 252
+- `'0'`, 59
+- `--std=c++0x`, 7, 8
+- `--std=c++11`, 7
+- `->`, 364
+- `->*`, 364
+- `-O0`, 142
+- `.*`, 364
+- `...`, 578
+- `.h`, 17
+- `.ih extension`, 135
+- `.template`, 629
+- `//`, 11
+- `::`, 21, 237
+- `::template`, 628
+- `<`, 252
+- `<=`, 252
+- `= 0`, 321
+- `= default`, 122, 182
+- `= delete`, 122
+- `==`, 252
+- `>`, 252
+- `>=`, 252
+- `>>`, 223
+- `>>: with templates`, 269
+- `[begin, end)`, 255
+- `[first, beyond)`, 255, 259, 268, 274, 280
+- `[first, last)`, 436
+- `[left, right)`, 391
+- `#define __cplusplus`, 15
+- `#error`, 538
+- `#ifdef`, 16
+- `#ifndef`, 16
+- `#include`, 730
+- `#include <condition_variable>`, 417
+- `%baseclass-header`, 739
+- `%baseclass-preinclude`, 739
+- `%class-header`, 739
+- `%class-name`, 740
+- `%debug`, 740
+- `%filenames`, 740
+- `%implementation-header`, 740
+- `%left`, 741
+- `%name`, 740
+- `%nonassoc`, 741
+- `%option 8bit`, 731
+- `%option c++`, 728, 731
+- `%option debug`, 732, 738
+- `%option noyywrap`, 732
+- `%option outfile`, 732
+- `%option warn`, 732
+- `%option yyclass`, 732
+- `%option yyline`, 732
+- `%parsefun-source`, 740
+- `%prec`, 741
+- `%right`, 741
+- `%scanner`, 740
+- `%stype`, 740
+- `%token`, 741
+- `%type`, 741
+- `%union`, 739, 740
+- `&`, 33
+- `__cplusplus`, 15, 16
+- `\u`, 44
+- `[=]`, 418
+- `[&]`, 418
+- `0-pointer`, 150
+- `0x30`, 59
+- `A2x`, 715
+- `abort exception`, 212
+- `abs`, 289
+- `absolute position`, 340
+- `abstract base class`, 353, 692
+- `abstract classes`, 321
+- `access`, 43
+- `access files`, 87, 94
+- `access promotion`, 300
+- `access rights`, 108
+- `accessor`, 108, 111
+- `accessor member function`, 224
+- `accumulate`, 436
+- `actions`, 738
+- `adaptor: inserter`, 393
+- `adaptor: object to iterator`, 390
+- `adaptor: required typedefs`, 394
+- `add_lvalue_reference`, 653
+- `add_rvalue_reference`, 653
+- `addExceptFd`, 703
+- `addReadFd`, 703
+- `address of objects`, 166
+- `address-of operator`, 33
+- `addWriteFd`, 703
+- `adjacent_difference`, 437
+- `adjacent_find`, 438
+- `adjustfield`, 81
+- `Aho, A.V.`, 257
+- `Alexandrescu, A.`, 549, 623, 629, 658, 667, 668
+- `Alexandrescu, H.`, 655
+- `algorithm: header file`, 435
+- `allocate arrays`, 151
+- `allocate memory`, 237
+- `allocate objects`, 150
+- `allocate primitive types`, 150
+- `allocator`, 640
+- `allocator class`, 381
+- `ambiguity`, 325, 326
+- `and`, 45
+- `and`, 249
+- `and_eq`, 249
+- `angle bracket notation`, 253, 254, 381
+- `angle brackets`, 536
+- `angle brackets: consecutive`, 269
+- `anonymize`, 177
+- `anonymous`, 385, 395
+- `anonymous function`, 417
+- `anonymous object`, 125, 245
+- `anonymous object: lifetime`, 126
+- `anonymous pair`, 253
+- `anonymous tuple`, 519
+- `anonymous variable`, 34
+- `anonymous variable: generic form`, 253
+- `ANSI/ISO`, 6, 11, 15, 42, 49, 72, 75, 79
+- `app`, 88, 99
+- `append`, 64
+- `arg`, 289
+- `argument_type`, 509, 647
+- `arithmetic function object`, 383
+- `arithmetic operations`, 383, 713
+- `array bounds`, 255
+- `array bounds overflow`, 219
+- `array-to-pointer transformation`, 521
+- `array: 0-sized`, 151
+- `array: dynamic`, 151
+- `array: enlarge`, 151
+- `array: fixed size`, 151, 152
+- `array: local`, 151
+- `ASCII`, 86, 91, 92, 265
+- `ascii to anything`, 715
+- `ascii-value`, 688
+- `ASCII-Z`, 59, 65, 87, 92, 103, 655
+- `ASCII-Z string`, 59
+- `assembly language`, 9
+- `assign`, 64
+- `assignment`, 310
+- `assignment: pointer to members`, 363
+- `assignment: refused`, 310
+- `assignment: sequential`, 167
+- `associative array`, 268, 276, 285
+- `asynchronous alarm`, 701
+- `asynchronous input`, 700
+- `at`, 64
+- `ate`, 89, 100
+- `atoi`, 95, 714
+- `atol`, 714
+- `auto`, 38
+- `auto_ptr`, 402
+- `auto_ptr: deprecated`, 398
+- `automatic expansion`, 255
+- `available member functions`, 311
+- `avoid global variables`, 18
+- `b`, 42
+- `back`, 255, 259, 263, 267
+- `back_inserter`, 393
+- `backdoors`, 111
+- `background process`, 696
+- `bad`, 76
+- `bad_alloc`, 161, 204, 207, 240
+- `bad_cast`, 204, 334
+- `bad_exception`, 204, 304
+- `bad_function_call`, 541
+- `bad_typeid`, 204, 336
+- `badbit`, 76
+- `base class`, 293, 311, 683, 692
+- `base class destructor`, 303
+- `base class initializer`, 301
+- `base class initializers: calling order`, 308
+- `base class: converting to derived class`, 331
+- `base class: hiding members`, 304
+- `base class: prototype`, 338
+- `base class: virtual`, 327
+- `bash`, 98
+- `BASIC`, 9
+- `basic guarantee`, 206
+- `basic operators of containers`, 252
+- `basic_`, 71
+- `basic_ios.h`, 75
+- `beg`, 86, 93, 344
+- `begin`, 65, 112, 255, 259, 267, 271, 279, 391
+- `bernoulli_distribution`, 422
+- `bidirectional_iterator_tag`, 614
+- `BidirectionalIterator`, 393, 614
+- `binary`, 89, 100
+- `binary constant`, 42
+- `binary file`, 86, 92, 100, 101
+- `binary function object`, 388
+- `binary input`, 91
+- `binary operator`, 713
+- `binary output`, 81, 85
+- `binary predicate`, 389
+- `binary tree`, 504
+- `binary_function`, 714
+- `binary_search`, 439
+- `bind1st`, 388
+- `bind2nd`, 388
+- `bind2nd: perfect forwarding`, 584
+- `binder`, 388
+- `binders.h`, 584
+- `binomial_distribution<IntType = int>`, 422
+- `bison`, 728, 738
+- `bison++`, 728, 738
+- `bisonc++`, 729, 738
+- `bisonc++: grammar file`, 739
+- `bitand`, 249
+- `bitfunctional`, 714
+- `bitor`, 249
+- `bits/stl_function.h`, 714
+- `bitwise`, 713
+- `bitwise and`, 78, 713
+- `bitwise operations`, 713
+- `Bobcat library`, 287, 677, 681
+- `bool`, 42, 273, 280
+- `boolalpha`, 82
+- `bound friend`, 593, 596, 611
+- `bridge design pattern`, 337
+- `buffer`, 340
+- `buffer overflow`, 28
+- `built-in`, 42
+- `C++0x standard`, 7
+- `C++11`, 120, 269, 284, 286, 517
+- `C++11 standard`, 7
+- `C++: function prevalence rule`, 516
+- `c_str`, 65
+- `call back`, 147
+- `call_once`, 414
+- `calling order of base class initializers`, 308
+- `calloc`, 149
+- `candidate functions`, 544
+- `capacity`, 65, 255
+- `case-insensitive`, 60
+- `catch`, 188, 198
+- `catch: empty enum`, 377
+- `cauchy_distribution<RealType = double>`, 423
+- `cbuild`, 8
+- `cerr`, 25, 85, 97
+- `chain of command`, 338
+- `char`, 71
+- `char *`, 223
+- `chi_squared_distribution<RealType = double>`, 424
+- `child process`, 692, 693
+- `cin`, 25, 74, 91, 97
+- `circular queue`, 550
+- `class`, 11, 25, 49, 377, 513, 642
+- `class hierarchy`, 293, 319
+- `class interface`, 594
+- `class name`, 335
+- `class scope`, 362
+- `class template`, 523, 549, 550, 713
+- `class template: adding functionality`, 602
+- `class template: as base class`, 644
+- `class template: conditional data organization`, 633
+- `class template: declaration`, 562, 591
+- `class template: deducing parameters`, 591
+- `class template: default argument`, 562
+- `class template: default arguments`, 561
+- `class template: defining a type`, 630
+- `class template: derivation`, 602
+- `class template: derived from ordinary class`, 606
+- `class template: friend function template`, 548
+- `class template: generate types`, 549
+- `class template: identifying subtypes`, 565
+- `class template: instantiation`, 590
+- `class template: member instantiation`, 591
+- `class template: member template`, 553
+- `class template: nested`, 611
+- `class template: non-type parameter`, 551
+- `class template: partial specialization`, 571, 574
+- `class template: partially compiled`, 602
+- `class template: pointer to`, 591
+- `class template: reference to`, 591
+- `class template: shadowing parameters`, 555
+- `class template: static members`, 564
+- `class template: subtype vs. static members`, 625
+- `class template: transformation to a base class`, 523
+- `class template: using friend`, 593
+- `class template: values without objects`, 631
+- `class template: wrapped in simpler template`, 667
+- `class vs. typename`, 513
+- `Class(T&) cannot be overloaded with Class(T const&)`, 583
+- `class-type parameters`, 134
+- `class-type return values`, 134
+- `class: abstract`, 321
+- `class: concept defined`, 357
+- `class: enforcing constraints`, 639
+- `class: externally declared functions`, 357
+- `class: having pointers`, 408
+- `class: move-aware`, 174
+- `class: ordinary`, 523
+- `class: policy`, 640
+- `class: trait`, 647
+- `classes: local`, 130, 312
+- `classes: without data members`, 322
+- `clear`, 78, 255, 259, 267, 271, 279
+- `climits: header file`, 538
+- `Cline`, 23
+- `clog`, 85
+- `clone`, 447
+- `close`, 87, 88, 94, 345
+- `closure`, 418
+- `cmatch`, 287
+- `code bloat`, 644
+- `Coetmeur, A.`, 738
+- `collating order`, 336
+- `collision`, 284
+- `command language`, 700
+- `common data fields`, 139
+- `common pool`, 150
+- `compare`, 65
+- `compile-time`, 14, 317, 319, 330, 511, 538
+- `compiler`, 6, 7
+- `compiler firewall`, 337
+- `compiler flag`, 7
+- `compiler flag: -pthread`, 410
+- `compiler option`, 8
+- `compl`, 249
+- `complex`, 287
+- `complex container`, 251
+- `complex numbers`, 251, 287
+- `complex: header file`, 287
+- `composition`, 115, 134, 293, 307
+- `condition flags`, 76
+- `condition member functions`, 76
+- `condition state`, 76
