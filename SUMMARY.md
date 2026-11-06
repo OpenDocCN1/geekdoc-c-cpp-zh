@@ -539,6 +539,7 @@
 +   [C# 编程：高级用户学习 C# 编程的终极指南（3 本合 1）](docs/c-programming-ultimate-guide-for-advanced-users-to-learn-c-p/README.md)
 +   [机器人开发 C++ 编程练习：使用 OpenCV 和 ROS 构建并编程机器人的分步指南](docs/c-programming-workbook-for-robotic-development-a-step-by-ste/README.md)
 +   [C# 编程黄书，奶士版](docs/c-programming-yellow-book-cheese-edition/README.md)
++   [初学者的 C++ & Python](docs/c-python-for-beginners/README.md)
 +   [Python 初学者指南 - 第17版 2024](docs/c-python-for-beginners---17th-edition-2024/README.md)
 +   [C++ & Python 初学者指南 - 第 8 版，2021年](docs/c-python-for-beginners---8th-edition-2021/README.md)
 +   [C++ & Python 初学者指南 - 第11版 2022](docs/c-python-for-beginners-11th-edition-2022/README.md)

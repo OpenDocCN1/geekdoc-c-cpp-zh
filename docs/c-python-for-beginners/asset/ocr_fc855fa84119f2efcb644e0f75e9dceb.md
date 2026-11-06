@@ -1,0 +1,35 @@
+# ### STEP 5
+
+With everything now installed, including the additional components, Xcode launches, displaying the version number along with three choices and any recent projects that you've worked on, with a fresh install though, this is blank.
+
+![](bbox=[0.065, 0.195, 0.468, 0.4])
+
+# ### STEP 6
+
+Start by clicking on Create New Xcode Project; this opens a template window to choose which platform you're developing code for. Click the macOS tab, then click the Command Line Tool option. Click Next to continue.
+
+![](bbox=[0.065, 0.47, 0.468, 0.68])
+
+# ### STEP 7
+
+Fill in the various fields but ensure that the Language option at the bottom is set to C++; simply choose it from the drop-down list. When you've filled in the fields, and made sure that C++ is the chosen language, click on the Next button to continue.
+
+![](bbox=[0.065, 0.76, 0.468, 0.963])
+
+# ### STEP 8
+
+The next step asks where to create a Git Repository for all your future code. Choose a location on your Mac, or a network location, and click the Create button. When you've done all that, you can start to code. The left-hand pane details the files used in the C++ program you're coding. Click on the main.cpp file in the list.
+
+![](bbox=[0.507, 0.195, 0.933, 0.4])
+
+# ### STEP 9
+
+You can see that Xcode has automatically completed a basic Hello World program for you. While it may not make much sense at present, you will discover more as you progress, the content is just Xcode utilising what's available on the Mac.
+
+![](bbox=[0.507, 0.47, 0.933, 0.68])
+
+# ### STEP 10
+
+When you want to run the code, click on Product > Run. You may be asked to enable Developer Mode on the Mac; this is to authorise Xcode to perform functions without needing your password every session. When the program executes, the output is displayed at the bottom of the Xcode window.
+
+![](bbox=[0.507, 0.76, 0.933, 0.963])
