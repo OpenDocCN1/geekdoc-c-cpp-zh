@@ -1,0 +1,13 @@
++   - **Usage:** Some templates are so difficult to use that it's hard to imagine that even the originator uses them. If a developer can't determine how to use your template, no one will ever use it, and your effort is wasted. Consequently, you must design the template such that it meets security, reliability, and speed goals without becoming overly difficult to use.
++   - **Time:** Every time you design a new piece of software, a time element is involved. It's essential to decide whether the template will ultimately save enough development time to offset the development cost of creating and testing it. A template that you intend to use only a few times may not be worth the effort.
++   - **Maintenance:** Someone will have to maintain the code used to create the template. A good template is one in which the code is relatively straightforward. Of course, you need to add comments to the code that explain how the code works — and fully document the template design. Most templates see some level of redesign during their lifecycles. They evolve as developers use the template and discover new ways to incorporate it into applications.
+
+![](bbox=[0.184, 0.431, 0.259, 0.508])
+
+The best template is the one that seems obvious. Consider the article about the invention of the safety pin at https://lemelson.mit.edu/resources/walter-hunt. The safety pin seems obvious, but someone still had to invent it because no one else had thought about it. When you create a template and someone tells you that it seems like an obvious idea, don't get mad. Be glad. You've joined the ranks of people who thought of something that fulfills an obvious need, but no one thought about your idea before you did.
+
+The third decision you must make is how inclusive to make the template. In some cases, you want to create a template that can handle a range of situations. However, a template can quickly become unwieldy and difficult to manage. A good template is balanced; it includes the elements you need, but nothing beyond.
+
+# ## Creating a Basic Math Template
+
+With a math template, you usually need access to a wealth of calculations but may use only one or two of those calculations at a time. For example, when calculating your mortgage, you don't need to know the amortization calculation. However, you might need the amortization calculation the next week when thinking about a retirement plan. In short, the calculations all have a purpose, and you need them all, but you don't need them all at the same time. Because of the way you use math templates, they work best as a series of function templates. The *MathTemplate* example, in Listing 3-1, shows how to create the series of functions.

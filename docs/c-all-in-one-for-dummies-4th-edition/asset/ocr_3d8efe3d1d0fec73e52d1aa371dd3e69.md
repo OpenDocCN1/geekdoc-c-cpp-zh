@@ -1,0 +1,13 @@
+# CONVERTING BETWEEN HEXADECIMAL AND DECIMAL
+
+Every hex number has a decimal equivalent. When you make a list showing decimal numbers side by side with hex numbers, you see, for example, that 0x0000001F is next to the decimal number 31. Thus, these two numbers represent the same quantity of items, such as apples.
+
+You can represent hex numbers by using either uppercase or lowercase letters. However, do not mix cases within a single number because it makes the number incredibly hard to read and other developers will make mistakes. Don’t use 0xABab0000. Instead, use either 0xabab0000 or 0xABAB0000.
+
+If you want to convert between hex and decimal, you can use the Hex to Decimal Converter application at https://www.binaryhexconverter.com/hex-to-decimal-converter or the Decimal to Hex Converter application at https://www.binaryhexconverter.com/decimal-to-hex-converter. These two applications make it easy to convert between the two numbering systems, and you can use them on any device that supports a browser.
+
+To convert a hex number to decimal, select the Hex to Decimal Converter application and type the hex number into the Hex Value field by using the number keys and the letters A through F, such as FB1263. (You don’t need to type the zeroes at the beginning, such as 00FB1263 — they don’t show up — nor do you type the 0x used in C++.) After you finish typing it all, click Convert. The application instantly transforms the hex number into a decimal number! In this case, you see 16454243. You can go the other way, too: If you have a decimal number, such as 16454243, you can select the Decimal to Hex Converter application, type its value into the Decimal Value field, and click Convert to convert it to hex. If you convert 16454243 to hex, you get back FB1263, which is what you started with.
+
+The Windows calculator also makes it easy to convert between hex and decimal when placed in Programmer view, as shown in the following figure. The calculator also supports binary (base 2) and octal (base 8) numbers. Just select the base you want to use and the calculator performs the conversion automatically. (The precise Calculator features you have for performing this task depend on your version of Windows. The blog post at http://blog.johnmuelerbooks.com/2012/01/30/examining-the-calculator-in-windows-7/ complains about the changes that Windows 7 brought. Windows 10 offers more of the same.)
+
+*(continued)*

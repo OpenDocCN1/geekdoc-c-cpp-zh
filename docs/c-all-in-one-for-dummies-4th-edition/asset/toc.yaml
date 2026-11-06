@@ -1,0 +1,161 @@
+level_changes:
+- line: 110
+  before: 2
+  after: 3
+- line: 118
+  before: 3
+  after: 4
+- line: 160
+  before: 3
+  after: 4
+- line: 194
+  before: 3
+  after: 4
+- line: 216
+  before: 2
+  after: 3
+- line: 244
+  before: 2
+  after: 3
+- line: 250
+  before: 3
+  after: 4
+- line: 276
+  before: 3
+  after: 4
+- line: 290
+  before: 3
+  after: 4
+- line: 296
+  before: 2
+  after: 3
+- line: 320
+  before: 2
+  after: 3
+- line: 330
+  before: 2
+  after: 3
+- line: 370
+  before: 2
+  after: 3
+- line: 472
+  before: 2
+  after: 3
+- line: 476
+  before: 3
+  after: 4
+- line: 500
+  before: 3
+  after: 4
+- line: 517
+  before: 3
+  after: 4
+- line: 540
+  before: 3
+  after: 4
+- line: 554
+  before: 3
+  after: 4
+- line: 566
+  before: 3
+  after: 4
+- line: 581
+  before: 3
+  after: 4
+- line: 591
+  before: 3
+  after: 4
+- line: 3113
+  before: 1
+  after: 2
+- line: 3159
+  before: 1
+  after: 2
+- line: 3186
+  before: 1
+  after: 2
+- line: 3238
+  before: 1
+  after: 2
+- line: 3252
+  before: 1
+  after: 2
+- line: 4978
+  before: 2
+  after: 1
+- line: 10069
+  before: 2
+  after: 1
+- line: 10096
+  before: 3
+  after: 2
+- line: 11025
+  before: 2
+  after: 1
+- line: 11059
+  before: 3
+  after: 2
+- line: 17383
+  before: 2
+  after: 1
+- line: 17408
+  before: 3
+  after: 2
+- line: 19352
+  before: 2
+  after: 1
+text_changes:
+- line: 1455
+  before: 清单4.4：**两个变量的减法**
+  after: 清单 4-4：两个变量的减法
+- line: 3159
+  before: 清单 6-6 —— 不接受参数
+  after: 清单 6-6：不接受参数
+- line: 3252
+  before: 清单 6-8 —— 完全不返回任何内容
+  after: 清单 6-8：完全不返回任何内容
+- line: 3434
+  before: 清单6-10：编写一个函数的两个版本
+  after: 清单 6-10：编写一个函数的两个版本
+- line: 3531
+  before: 清单6-11：对字符串进行操作
+  after: 清单 6-11：对字符串进行操作
+- line: 3589
+  before: 清单6-12：访问命令行参数
+  after: 清单 6-12：访问命令行参数
+- line: 4812
+  before: 清单8-13：函数无法修改传入的原始变量
+  after: 清单 8-13：函数无法修改传入的原始变量
+- line: 4842
+  before: 清单8-14：*（续）*
+  after: 清单 8-14：（续）
+- line: 4894
+  before: 清单8-15：从字符串返回指针需要在返回类型中使用星号
+  after: 清单 8-15：从字符串返回指针需要在返回类型中使用星号
+- line: 4978
+  before: '2'
+  after: 第2部分：理解对象和类
+- line: 6402
+  before: '**清单 2-3：** 使用多种不同的预处理器指令'
+  after: 清单 2-3：使用多种不同的预处理器指令
+- line: 16257
+  before: '**清单 6-5：** 做出决定：哦，该存储什么？'
+  after: 清单 6-5：做出决定：哦，该存储什么？
+- line: 16362
+  before: '**清单 6-6：** Maps2 示例的 vector 版本'
+  after: 清单 6-6：Maps2 示例的 vector 版本
+- line: 20903
+  before: '**清单 5-1：** 使用 RegEx 执行匹配和搜索'
+  after: 清单 5-1：使用 RegEx 执行匹配和搜索
+- line: 11025
+  before: 5 高级编程
+  after: 第5部分：高级编程
+- line: 10069
+  before: 修复问题
+  after: 第3部分：修复问题
+- line: 19352
+  before: 高级标准库用法
+  after: 第7部分：高级标准库用法
+- line: 20351
+  before: 第 4 章 探究 Boost
+  after: 第4章：探究 Boost

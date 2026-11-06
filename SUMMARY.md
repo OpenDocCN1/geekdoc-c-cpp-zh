@@ -287,6 +287,7 @@
 +   [C++ 高级编程：构建高性能应用指南](docs/c-advanced-programming-building-high-performance-application/README.md)
 +   [C++ 初学者全能指南](docs/c-all-in-one-desk-reference-for-dummies/README.md)
 +   [C++ 初学者指南](docs/c-all-in-one-for-dummies/README.md)
++   [C++ 傻瓜大全（第4版）](docs/c-all-in-one-for-dummies-4th-edition/README.md)
 +   [C 语言初学者全案指南](docs/c-allinone-desk-reference-for-dummiessupsup-all-in-one-desk-/README.md)
 +   [C++ 与算法思维：初学者指南（第2版）：像程序员一样思考](docs/c-and-algorithmic-thinking-for-the-complete-beginner-2nd-edi/README.md)
 +   [C++ 与算法思维：初学者入门指南（第3版）](docs/c-and-algorithmic-thinking-for-the-complete-beginner-3rd-edi/README.md)

@@ -1,0 +1,14 @@
+# **TABLE 2-1: CppDroid Features**
+
+| Feature | Paid Only | Description |
+|---|---|---|
+| Add-ons manager |  | Even though CppDroid comes with all the basics you need, at some point you'll want to go beyond the basics, which is where add-ons come into play. An add-ons manager makes the task of knowing what you need to add a lot easier. Plus, you can easily get rid of items that you no longer need. |
+| Auto indentation |  | Trying to keep your code readable means using indentation to see things like the start and finish of an if statement or other code block. Having configurable auto indentation means that you can choose how the code is indented, but you don't have to indent it manually. |
+| Auto pairing |  | Locating a missing parenthesis or brace can drive you slowly nuts. Configurable auto pairing means that you determine how elements are paired, but the IDE helps you ensure that nothing needed to compile the code is missing. |
+| Auto updates |  | Getting the latest software updates helps you write code that works with the newest trends in C/C++ development. You also get bug fixes, which is essential for the reliability and security of the code you create. |
+| C/C++ code examples included | X | Because working with tablet-based IDEs can sometimes come with quirks, having a full set of C/C++ code examples is essential. These examples show how to work around the quirks so that you can execute your C/C++ code with just a few small modifications when necessary. |
+| C++ tutorial and learn guide included | X | If you plan to work offline, it’s essential to have a tutorial and learning guide for those times when you almost, but not quite, remember how to perform a particular task. Of course, you'll also want to keep this book handy. |
+| Code complete | X | Automatically suggests how to complete statements that you type based on previous content. This feature reduces potential typos and makes you considerably more efficient, especially when working on the tiny keyboards found in tablets. |
+| Compile C/C++ code |  | In some cases, such as when working with a web-based IDE, the C++ code you create is interpreted by ROOT (see https://en.wikito learn.org/ROOT_for_beginners for more information about ROOT). Some tablet IDEs also require ROOT, but with CppDroid you get fully compiled C/C++ code output instead. |
+| Dropbox support | X | Sharing your code with others is a lot easier when you have Dropbox support. |
+| File and tutorial navigator |  | This feature provides an index into the documentation to tell you about C/C++ code constructs, including variables and methods. |

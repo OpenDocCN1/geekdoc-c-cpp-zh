@@ -1,0 +1,331 @@
+
+- ANSI (American National Standards Institute), 515–516
+- APIs (Application Programming Interfaces), 316
+- application flow, 105–138
+  - conditions, 107–115
+    - defined, 105
+    - evaluating, 107–111
+    - evaluating multiple, 110–111
+    - evaluating with `if` statements, 111–115
+  - in `for` loops, 118–122
+  - operators, 108–110
+  - satisfying, 107
+  - decisions, 106–107
+    - `if` statements, 111–115
+      - defined, 105
+      - with `else` keyword, 112–115
+      - example of, 111–112
+  - loops, 115–138
+    - breaking, 133–135
+    - continuing, 133, 135–136
+    - defined, 105–106
+    - do–while loops, 116–117, 132–133
+    - for loops, 116–130
+      - nesting, 136–138
+    - while loops, 116–117, 130–132
+- Application Programming Interfaces (APIs), 316
+- arguments. See parameters
+- Array01 example, 484–485
+- Array02 example, 486
+- Array03 example, 487
+- Array04 example, 488
+- Array05 example, 498
+- Array06 example, 498
+- ArrayLoop example, 303
+- ArrayPassing example, 306–307
+- ArrayPointer example, 304–305
+
+- arrays, 302–308, 482–498
+  - accessing, 302–304
+  - adding and subtracting pointers, 307–308
+  - allocating on heap, 494
+  - array names, 484, 486
+  - arrays of arrays, 495–498
+  - arrays of pointers, 304–305, 495–498
+  - command-line parameters and, 492–494
+  - constant, 498
+  - declaring, 303–304, 482–484
+  - defined, 167, 208, 302
+  - deleting from heap, 494–495
+  - external declarations, 485–487
+  - inner and outer, 496
+  - members, 496
+  - multidimensional arrays, 488–492
+  - overcoming limitations of, 642–643
+  - passing pointers to, 484–485
+  - passing to functions, 306–307
+  - pointer types, 487–488
+  - sorting, 494–495
+  - string arrays using pointers, 503–504
+- arrow (→) operator, 245, 247, 250, 555, 608
+- ASCII table, 88
+- assembly code, 452–454
+  - defined, 473
+  - tracing through, 475
+- AssignLambda example, 420–421
+- assignments, 108
+- asterisk (*), 92, 501
+  - dereference operator, 201
+  - multiplication symbol, 60, 84
+  - pointer variables, 205, 220
+- at sign (@), 92
+- atomic operations, 757–759
+- `attr` element, 400
+
+- Auto example, 388–389
+- auto keyword, 388–390
+  - lambda expressions, 404–405
+  - pointing to functions, 506
+- automata programming, 312
+- automatic type determination functions, 146
+  - lambda expressions, 401–404
+  - for loops, 129–130
+
+## B
+
+- backslash (`\`), 66, 90–92, 688, 734
+- bang (!), 92
+- `BasicString` example, 786
+- `begin()` function, 388, 655
+- BestFriends example, 589–590
+- Bitcoin, 820
+- body element, 401
+- `boolalpha` flag, 702–703
+- Boole, George, 100
+- Boolean expressions, 101
+- Boolean variables, 100–101
+  - defined, 100
+  - size and range, 516
+  - using with conditional operators, 101
+- Boost, 817–868
+  - AutoIndex utility, 834
+  - bcp (Boost copy) utility, 833, 843–845
+  - `BOOST_FOREACH` macro, 862–864
+  - `BOOST_REVERSE_FOREACH` macro, 863
+  - BoostBook format, 833, 840
+  - Boost.Build, 833–837
+    - building date/time application, 846–848
+    - building libraries, 825–827
+    - compiler support, 822
+  - downloading, 821, 823
+  - features backported to Standard Library, 818–819
+  - features of, 821
+  - Filesystem Library, 864–868
+  - folders, 824
+  - header-only libraries, 825
+  - Inspect utility, 833, 840
+  - installing, 823–824
+  - installing on 64-bit systems, 828, 852
+  - licensing, 822
+  - numeric conversion, 858–861
+  - paid support, 823
+  - QuickBook add-on, 833, 841–843
+  - RegEx library, 850–857
+  - smart pointers, 191
+  - Standard Library vs., 819–820
+  - testing, 827, 829–833
+  - tokenizer, 857–858
+  - tools, 833–835
+  - Wave utility, 834, 845
+- BoostPro Computing, 823
+- break statements, 133–135, 137, 269, 299
+- breakpoints, 454, 457–467
+  - defined, 457–458
+  - enabling/disabling, 460–463
+  - inspecting variables, 463–467
+  - setting in Code::Blocks, 459–460
+- Breakpoints example, 458–460
+- Breakpoints2 example, 463–464
+- BuggyProgram example, 444
+- bugs, 429–442
+  - anticipating and avoiding, 432–442
+    - creating objects, 441–442
+    - forgetting deleted objects, 441
+    - indexes, 441
+    - menus, 432–435
+    - new and delete, 441
+    - string processing, 437–440
+    - textual input, 435–436
+  - debugging, 443–456
+    - Code::Blocks debugger, 444–455
+    - command-line arguments, 456
+    - Dev-C++ debugger, 456
+    - gdb debugger, 456
+    - programming with debuggers, 444–453
+    - stacks, 469–478
+    - Visual C++ debugger, 455
+  - features that resemble bugs, 430–432
+  - myth of bulletproof applications, 440
+  - origin of term, 429
+- built-in literals, 780–781
+
+## C
+
+- C compatibility headers, 759
+- C++20, 269–308
+- application flow, 105–138
+- arrays, 302–308, 482–498
+- bugs, 429–442
+- characteristics of, 1
+- cin object, 277–281
+- classes, 227–268, 571–599
+- code editing, 53–55
+- comments, 270–272
+- compiling (building), 57, 67–68
+- conditional operators, 98–101
+- constants, 292–295
+- constructors, 542–563
+- design patterns, 335–366
+- desktop configuration, 9–26
+- destructors, 548–550, 558–563
+- directories, 727–736
+- exceptions, 563–569
+- executing (running), 52–53, 67–68
+- functional programming, 312, 369–395
+- functions, 139–168
+- linking, 67
+- mobile configuration, 27–43
+- namespaces, 534–539
+- objects, 309–334
+- pointers, 187–223, 498–510
+- popularity of, 45
+- preprocessor directives, 282–291
+- random numbers, 300–302
+- references, 510–513
+- saving code, 62
+- source code files, 169–186
+- Standard Library, 637–680, 753–778
+- streams, 683–726
+- strings, 93–98
+- structures, 515–539
+- switch statements, 295–298
+- templates, 795–815
+- type conversion, 272–277
+- User-Defined Literals, 779–794
+- variables, 69–91
+- wrapping enum types, 298–299
+- C++ Shell IDE, 35
+- C4Droid IDE, 29, 33
+- captures element, 400
+- caret (^), 93
+- CarParts example, 354–357
+- carriage return (`\r`) character, 90–91, 281
+- casting data, 520–529
+  - const_cast, 528–529
+  - converting data vs., 521–522
+  - dynamic_cast, 524–527
+  - narrowing casts, 523
+  - static_cast, 527
+- CastOrConvert example, 521
+
+- catch blocks
+  - catching any exception, 567–568
+  - multiple, 565–566
+  - `try...catch` blocks, 558, 563–565
+- `.cbp` files, 20
+- ChangePointer example, 203–204
+- ChangeVariable example, 74
+- character variables, 88–91
+  - carriage return character, 90
+  - defined, 88
+  - initializing, 88
+  - newline character, 89–90
+  - nonprintable characters, 89
+  - null character, 89
+  - size and range, 516
+  - tab character, 90
+  - values, 88
+- Cheesecake example, 597–598
+- CheeseClass example, 253–254
+- Church, Alonzo, 398
+- `cin` (console input) object, 102–103, 277–281
+- class definitions, 230
+  - defined, 234, 241
+  - separating method code, 238
+- `class` keyword, 232
+- classes, 227–268, 571–599
+  - accessing members, 241–244
+  - class definitions, 230
+    - defined, 234, 241
+    - separating method code, 238
+  - const parameters, 251–252
+- constructors
+  - adding parameters to, 263–264
+  - overview, 259–261
+  - with stack variables, 262
+- creating with templates, 601–636
+- creating templates, 605–607
+- deriving templates, 623–630
+- function templates, 630–636
+- including static members in templates, 611–612
+- need for, 602–605
+- parameterizing templates, 612–622
+- separating templates from function code, 609–611
+- `template` keyword, 607–608
+- `typedef`s for templates, 622–623
+- types, 602
+  - defined, 230, 240
+- destructors, 260–262
+- friend classes, 588–591
+- header files
+  - class names and, 230
+  - defined, 241
+  - properties of, 232
+- hierarchies of, 264–267
+- implementing, 232–237
+- inheritance, 571–591
+  - access adjustment, 574–575
+  - avoiding polymorphism, 573–574
+  - avoiding variable naming conflicts, 575–576
+- class-based access adjustment, 575–576
+- friend classes and functions, 588–591
+- multiple inheritance, 581–584
+- overriding functions, 577–580
+- polymorphism, 572
+- virtual inheritance, 584–588
+- instances
+  - of classes, creating, 234–237
+  - defined, 230
+  - of objects, creating, 237
+- lambda expressions with, 407–408
+- making streamable classes, 737–749
+- methods, 232
+  - defined, 241
+  - naming, 238–239
+  - overloading, 256–259
+  - running, 235–236
+  - separating code for, 237–240
+- modeling, 232
+- names and filenames, 230
+- nesting, 591–596
+- object aliases, 267–268
+- objects
+  - capabilities of, 228–229
+  - defined, 240
+  - overview, 227–229
+  - passing to functions, 249–251
+  - parts of, 240–241
+  - persistent classes, 738
+  - properties, 231
+    - accessing, 235
+    - defined, 241
+  - raw pointers and, 244–248
+  - singleton, 230
+  - smart pointers and, 248–249
+  - source files, 240
+    - defined, 241
+    - method code, 230
+- structures vs., 530
+- `this` pointer, 252–256
+- types within, 597–599
+- ClassFromTemplate example, 624–625
+- ClassTemplate example, 804–806
+- `close()` method, 689
+- Code::Blocks IDE, 9–25
+  - auto indentation, 60–61
+  - Boost
+    - building libraries, 825–827
+    - testing, 827, 829–833
+  - breakpoints, 454
+    - enabling/disabling, 460–463
+    - setting, 459–460
