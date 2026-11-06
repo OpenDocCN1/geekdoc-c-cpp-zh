@@ -1,0 +1,29 @@
+# # 21. If You Must Do Manual Resource Management, Follow the Rule of 5
+
+If you provide a destructor because `std::unique_ptr` doesn't make sense for your use case, you must `=delete`, `=default`, or implement the other special member functions.
+
+This rule was initially known as the Rule of 3 and is known as the Rule of 5 after C++11.
+
+*The special member functions.*
+
+```
+```cpp
+struct S {
+    S(); // default constructor
+         // does not affect other special member functions
+
+    // If you define any of the following, you must deal with
+    // all the others.
+    S(const S &);        // copy constructor
+    S(S&&);              // move constructor
+    S &operator=(const S &); // copy assignment operator
+    S &operator=(S &&);  // move assignment operator
+};
+```
+```
+
+![](bbox=[0.105, 0.755, 0.18, 0.812])
+
+`=delete` is a safe way of dealing with the special member functions if you don't know what to do with them!
+
+You should also follow the Rule of 5 when declaring base classes with virtual functions.

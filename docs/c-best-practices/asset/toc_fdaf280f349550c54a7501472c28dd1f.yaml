@@ -1,0 +1,20 @@
+level_changes: []
+text_changes:
+- line: 198
+  before: 启用更多静态分析
+  after: 练习：启用更多静态分析
+- line: 999
+  before: '*首选版本*'
+  after: 首选版本
+- line: 1153
+  before: '*requires 子句中的概念。*'
+  after: requires 子句中的概念。
+- line: 1180
+  before: '*简洁概念约束语法。*'
+  after: 简洁概念约束语法。
+- line: 1344
+  before: 32. 让你的接口难以被错误使用。
+  after: 32. 让你的接口难以被错误使用
+- line: 1537
+  before: 找出你现有代码中有问题的 API。
+  after: 练习：找出你现有代码中有问题的 API。

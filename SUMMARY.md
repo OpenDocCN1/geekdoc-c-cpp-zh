@@ -306,6 +306,7 @@
 +   [C++ 注释：版本 6.1.0b](docs/c-annotations-version-610b/README.md)
 +   [# 基础速查表](docs/c-basics-cheat-sheet/README.md)
 +   [C++：从入门到高级的指南 (C++ 编程 2016)](docs/c-beginner-to-pro-guide-c-programming-2016/README.md)
++   [C++ 最佳实践](docs/c-best-practices/README.md)
 +   [C++ 最佳实践：提升 C++  de 45 条简单规则与具体行动项](docs/c-best-practices-45ish-simple-rules-with-specific-action-ite/README.md)
 +   [C++ 脑筋急转弯](docs/c-brain-teasers/README.md)
 +   [C++ 脑筋急转弯：锻炼你的思维](docs/c-brain-teasers-exercise-your-mind/README.md)
