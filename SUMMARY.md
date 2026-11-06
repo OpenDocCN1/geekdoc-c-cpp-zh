@@ -363,6 +363,7 @@
 +   [工程师与科学家的 C++（编程入门指南）](docs/c-for-engineers-and-scientists-introduction-to-programming/README.md)
 +   [工程师与科学家的 C++，第三版](docs/c-for-engineers-and-scientists-third-edition/README.md)
 +   [所有人的 C++ 第二版 活页版](docs/c-for-everyone-2e-binder-ready-version/README.md)
++   [每个人的 C++（第 2 版）](docs/c-for-everyone-2nd-edition/README.md)
 +   [金融市场的 C# 指南](docs/c-for-financial-markets-duffyc/README.md)
 +   [金融数学的C++](docs/c-for-financial-mathematics/README.md)
 +   [金融数学的 C++](docs/c-for-financial-mathematicsarmstrong-johncrc-press/README.md)

@@ -1,0 +1,21 @@
+Don’t do that! The red arrow points inside a different branch. Instead, add another task that sets the shipping cost to $10, like this:
+
+![](bbox=[0.365, 0.147, 0.844, 0.476])
+
+Not only do you avoid spaghetti code, but it is also a better design. In the future it may well happen that the cost for international shipments is different from that to Alaska and Hawaii.
+
+Flowcharts can be very useful for getting an intuitive understanding of the flow of an algorithm. However, they get large rather quickly when you add more details. At that point, it makes sense to switch from flowcharts to pseudocode.
+
+# SELF CHECK
+
++   22. Draw a flowchart for a program that reads a value temp and prints “Frozen” if it is less than zero.
++   23. What is wrong with the flowchart at right?
++   24. How do you fix the flowchart of Self Check 23?
++   25. Draw a flowchart for a program that reads a value x. If it is less than zero, print “Error”. Otherwise, print its square root.
++   26. Draw a flowchart for a program that reads a value temp. If it is less than zero, print “Ice”. If it is greater than 100, print “Steam”. Otherwise, print “Liquid”.
+
+![](bbox=[0.681, 0.643, 0.923, 0.91])
+
+# Practice It
+
+Now you can try these exercises at the end of the chapter: R3.10, R3.11, R3.12.

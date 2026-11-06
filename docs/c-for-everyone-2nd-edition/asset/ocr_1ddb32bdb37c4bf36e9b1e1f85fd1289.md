@@ -1,0 +1,60 @@
+You will write a program in which the computer plays against a human opponent.
+Generate a random integer between 10 and 100 to denote the initial size of the pile.
+Generate a random integer between 0 and 1 to decide whether the computer or the
+human takes the first turn. Generate a random integer between 0 and 1 to decide
+whether the computer plays *smart* or *stupid*. In stupid mode the computer simply
+takes a random legal value (between 1 and *n*/2) from the pile whenever it has a turn.
+In smart mode the computer takes off enough marbles to make the size of the pile a
+power of two minus 1—that is, 3, 7, 15, 31, or 63. That is always a legal move, except
+when the size of the pile is currently one less than a power of two. In that case, the
+computer makes a random legal move.
+
+You will note that the computer cannot be beaten in smart mode when it has the first
+move, unless the pile size happens to be 15, 31, or 63. Of course, a human player who
+has the first turn and knows the winning strategy can win against the computer.
+
+# **P4.25**  *The Drunkard’s Walk.*
+
+A drunkard in a grid of streets randomly picks one of four
+directions and stumbles to the next intersection, then again randomly picks one of
+four directions, and so on. You might think that on average the drunkard doesn’t
+move very far because the choices cancel each other out, but that is actually not
+the case.
+
+Represent locations as integer pairs (*x*, *y*). Implement the drunkard’s walk over 100
+intersections and print the beginning and ending location.
+
+# **P4.26**  *The Monty Hall Paradox.*
+
+Marilyn vos Savant described the following problem
+(loosely based on a game show hosted by Monty Hall in a popular magazine:
+“Suppose you’re on a game show, and you’re given the choice of three doors: Behind
+one door is a car; behind the others, goats. You pick a door, say No. 1, and the host,
+who knows what’s behind the doors, opens another door, say No. 3, which has a
+goat. He then says to you, “Do you want to pick door No. 2?” Is it to your advan-
+tage to switch your choice?”
+
+Ms. vos Savant proved that it is to your advantage, but many of her readers, includ-
+ing some mathematics professors, disagreed, arguing that the probability would not
+change because another door was opened.
+
+Your task is to simulate this game show. In each iteration, randomly pick a door
+number between 1 and 3 for placing the car. Randomly have the player pick a door.
+Randomly have the game show host pick one of the two doors having a goat. Now
+increment a counter for strategy 1 if the player wins by switching to the third door,
+and increment a counter for strategy 2 if the player wins by sticking with the original
+choice. Run 1,000 iterations and print both counters.
+
+# **P4.27**  *The Buffon Needle Experiment.*
+
+The following experiment was devised by
+Comte Georges-Louis Leclerc de
+Buffon (1707–1788), a French
+naturalist. A needle of length 1 inch is
+dropped onto paper that is ruled with
+lines 2 inches apart. If the needle drops
+onto a line, we count it as a hit. (See
+Figure 8.) Buffon conjectured that the
+quotient *tries/hits* approximates π.
+
+![](bbox=[0.609, 0.729, 0.889, 0.891])

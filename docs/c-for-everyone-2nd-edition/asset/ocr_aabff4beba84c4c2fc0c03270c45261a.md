@@ -1,0 +1,37 @@
+# Syntax 4.2 for Statement
+
+![](bbox=[0.238, 0.126, 0.881, 0.36])
+
+A for loop can count down instead of up:
+
+```
+for (counter = 10; counter >= 0; counter--) . . .
+```
+
+The increment or decrement need not be in steps of 1:
+
+```
+for (counter = 0; counter <= 10; counter = counter + 2) . . .
+```
+
+See Table 2 on page 146 for additional variations.
+
+So far, we assumed that the counter variable had already been defined before the for loop. Alternatively, you can define a variable in the loop initialization. Such a variable is defined *only* in the loop:
+
+```
+for (int counter = 1; counter <= 10; counter++)
+{ . . . }
+// counter no longer defined here
+```
+
+Here is a typical use of the for loop. We want to print the balance of our savings account over a period of years, as shown in this table:
+
+| Year | Balance |
+| --- | --- |
+| 1 | 10500.00 |
+| 2 | 11025.00 |
+| 3 | 11576.25 |
+| 4 | 12155.06 |
+| 5 | 12762.82 |
+
+The for loop pattern applies because the variable year starts at 1 and then moves in constant increments until it reaches the target:

@@ -1,0 +1,56 @@
+```
+5  int n = 0;
+6  a = c;
+7  if (n < c)
+8  {
+9      n = a + b;
+10 }
+11 return n;
+12 }
+13
+14 int g(int c)
+15 {
+16     int n = 0;
+17     int a = c;
+18     if (n < f(c))
+19     {
+20         n = a + b;
+21     }
+22     return n;
+23 }
+24
+25 int main()
+26 {
+27     int i = 1;
+28     int b = g(i);
+29     cout << a + b + i << endl;
+30     return 0;
+31 }
+```
+
+**R5.9** We have seen three kinds of variables in C++: global variables, parameter variables, and local variables. Classify the variables of Exercise R5.8 according to these categories.
+
+**R5.10** Use the process of stepwise refinement to describe the process of making scrambled eggs. Discuss what you do if you do not find eggs in the refrigerator.
+
+**R5.11** How many parameters does the following function have? How many return values does it have? *Hint:* The C++ notions of “parameter” and “return value” are not the same as the intuitive notions of “input” and “output.”
+
+```
+void average(double& avg)
+{
+    cout << "Please enter two numbers: ";
+    double x;
+    double y;
+    cin >> x >> y;
+    avg = (x + y) / 2;
+}
+```
+
+**R5.12** Perform a walkthrough of the `int_name` function with the following arguments:
+
++   a. 5
++   b. 12
++   c. 21
++   d. 301
++   e. 324
++   f. 0
++   g. -2

@@ -1,0 +1,35 @@
+# Acknowledgments
+
+Many thanks to Beth Golub, Tom Kulesa, Andre Legaspi, Elizabeth Mills, Michael Berlin, and Lisa Gee at John Wiley & Sons, and to the team at Publishing Services for their hard work and support for this book project. An especially deep acknowledgment and thanks to Cindy Johnson, who, through enormous patience and attention to detail, made this book a reality. We would also like to thank Jonathan Tolstedt, North Dakota State University, for his high-quality solutions; Brent Scales, University of Kentucky, for revising and enhancing the test bank; and to Evan Gallagher, Polytechnic Institute of New York University, for his creative PowerPoint slides.
+
+We are very grateful to the many individuals who reviewed and/or class tested this and the first edition of the book. We value their many valuable suggestions for improvement. They include:
+
++   - Charles D. Allison, Utah Valley State College
++   - Fred Annexstein, University of Cincinnati
++   - Stefano Basagni, Northeastern University
++   - Noah D. Barnett, Virginia Tech
++   - Susan Bickford, Tallahassee Community College
++   - Ronald D. Bowman, University of Alabama, Huntsville
++   - Peter Breznay, University of Wisconsin, Green Bay
++   - Richard Cacace, Pensacola Junior College, Pensacola
++   - Kuang-Nan Chang, Eastern Kentucky University
++   - Joseph DeLibero, Arizona State University
++   - Subramaniam Dharmarajan, Arizona State University
++   - Mary Dorf, University of Michigan
++   - Marty Dulberg, North Carolina State University
++   - William E. Duncan, Louisiana State University
++   - John Estell, Ohio Northern University
++   - Waleed Farag, Indiana University of Pennsylvania
++   - Stephen Gilbert, Orange Coast Community College
++   - Kenneth Gitlitz, New Hampshire Technical Institute
++   - Daniel Grigoletti, DeVry Institute of Technology, Tinley Park
++   - Barbara Guillott, Louisiana State University
++   - Charles Halsey, Richland College
++   - Jon Hanrath, Illinois Institute of Technology
++   - Neil Harrison, Utah Valley University
++   - Jurgen Hecht, University of Ontario
++   - Steve Hodges, Cabrillo College
++   - Jackie Jarboc, Boise State University
++   - Debbie Kaneko, Old Dominion University
++   - Mir Behrad Khamesee, University of Waterloo
++   - Sung-Sik Kwon, North Carolina Central University

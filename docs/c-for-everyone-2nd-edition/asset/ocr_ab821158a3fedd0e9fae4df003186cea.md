@@ -1,0 +1,59 @@
+# Common Error 3.5
+
+![](bbox=[0.165, 0.148, 0.238, 0.225])
+
+# Combining Multiple Relational Operators
+
+Consider the expression
+
+```
+if (0 <= temp <= 100) // Error
+```
+
+This looks just like the mathematical test 0 ≤ temp ≥ 100. Unfortunately, it is not.
+
+Let us dissect the expression 0 <= temp <= 100. The first half, 0 <= temp, is a test with outcome true or false, depending on the value of temp. The outcome of that test (true or false) is then compared against 100. Can one compare true values and floating-point numbers? Is true larger than 100 or not? Unfortunately, to stay compatible with the C language, C++ converts false to 0 and true to 1. Therefore, the expression will always evaluate to true.
+
+You must be careful not to mix logical and arithmetic expressions in your programs. Instead, use **and** to combine two separate tests:
+
+```
+if (0 <= temp && temp <= 100) ...
+```
+
+Another common error, along the same lines, is to write
+
+```
+if (x && y > 0) ... // Error
+```
+
+instead of
+
+```
+if (x > 0 && y > 0) ...
+```
+
+Unfortunately, the compiler will not issue an error message. Instead, it converts x to true or false. Zero is converted to false, and any nonzero value is converted to true. If x is not zero, then it tests whether y is greater than 0, and finally it computes the **and** of these two truth values. Naturally, that computation makes no sense.
+
+# Common Error 3.6
+
+![](bbox=[0.165, 0.544, 0.238, 0.615])
+
+# Confusing && and || Conditions
+
+It is a surprisingly common error to confuse **and** and **or** conditions. A value lies between 0 and 100 if it is at least 0 **and** at most 100. It lies outside that range if it is less than 0 **or** greater than 100. There is no golden rule; you just have to think carefully.
+
+Often the **and** or **or** is clearly stated, and then it isn’t too hard to implement it. But sometimes the wording isn’t as explicit. It is quite common that the individual conditions are nicely set apart in a bulleted list, but with little indication of how they should be combined. Consider these instructions for filing a tax return. You can claim filing status if any one of the following is true:
+
++   - You were never married.
++   - You were legally separated or divorced on the last day of the tax year.
++   - You were widowed, and did not remarry.
+
+Since the test passes if **any one** of the conditions is true, you must combine the conditions with **or**. Elsewhere, the same instructions state that you may use the more advantageous status of married filing jointly if all five of the following conditions are true:
+
++   - Your spouse died less than two years ago and you did not remarry.
++   - You have a child whom you can claim as a dependent.
++   - That child lived in your home for all of the tax year.
++   - You paid over half the cost of keeping up your home for this child.
++   - You filed a joint return with your spouse the year he or she died.
+
+Because **all** of the conditions must be true for the test to pass, you must combine them with an **and**.
