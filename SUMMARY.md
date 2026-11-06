@@ -344,6 +344,7 @@
 +   [C++ 入门指南](docs/c-for-beginners/README.md)
 +   [C++ 入学者指南：将热情转化为编程精通的全面指南](docs/c-for-beginners-a-comprehensive-guide-to-transform-your-pass/README.md)
 +   [C++ 初学者指南：通过实用示例循易学习 C++ 编程语言基础的逐步指南指南](docs/c-for-beginners-a-step-by-step-guide-to-learn-in-an-easy-way/README.md)
++   [初学者的 C++：C++ 编程与面向对象编程入门指南，含教程和实用示例](docs/c-for-beginners-an-introduction-to-c-programming-and-object-/README.md)
 +   [C++ 初学者指南：一周内一步步学习使用 C++ 编程语言](docs/c-for-beginners-learn-how-to-use-the-c-programming-language-/README.md)
 +   [C++ 初学者指南：从基础到进阶的 C++ 编程逐步指南（C++ 编程，C++ 傻瓜指南）](docs/c-for-beginners-step-by-step-guide-to-c-programming-from-bas/README.md)
 +   [C++ 初学者指南：C++ 书籍是轻松快速学习 C++ 编程的终极初学者指南](docs/c-for-beginners-the-c-book-is-the-ultimate-beginners-guide-t/README.md)
