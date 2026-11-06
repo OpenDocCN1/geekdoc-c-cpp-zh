@@ -320,6 +320,7 @@
 +   [C++ 速查表，语法快速参考手册（表格与图表）：语法快速学习指南](docs/c-cheat-sheet-syntax-quick-reference-handbook-by-table-and-c/README.md)
 +   [C# 代码契约简明指南](docs/c-code-contracts-succinctly/README.md)
 +   [C++ 编码：易于理解的编程练习与解决方案](docs/c-coding-easy-to-follow-programming-exercises-and-solutions/README.md)
++   [C++ 编码规范：101 条规则、指导原则与最佳实践](docs/c-coding-standards-101-rules-guidelines-and-best-practices/README.md)
 +   [C 语言：快速学习 C 语言的终极分步指南](docs/c-coding-ultimate-step-by-step-guide-to-learning-c-programmi/README.md)
 +   [C++ 编译器构建：精通语言处理（计算机科学基础）](docs/c-compiler-construction-mastering-language-processing-comput/README.md)
 +   [C#：计算机编程入门指南：学习 C# 编程基础知识](docs/c-computer-programming-for-beginners-learn-the-basics-of-c-s/README.md)
