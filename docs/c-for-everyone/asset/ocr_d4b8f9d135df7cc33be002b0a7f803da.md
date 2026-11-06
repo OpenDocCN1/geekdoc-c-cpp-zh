@@ -1,0 +1,59 @@
+When you insert an element in the middle, you still want to call `push_back` so that the size of the vector is increased. Use the following code:
+
+```
+int last_pos = values.size() - 1;
+values.push_back(values[last_pos]);
+for (int i = last_pos; i > pos; i--)
+{
+    values[i] = values[i - 1];
+}
+values[pos] = new_element;
+```
+
+# SELF CHECK
+
+![](bbox=[0.145, 0.241, 0.226, 0.327])
+
++   35. Define a vector of integers that contains the first five prime numbers (2, 3, 5, 7, and 11). Use push_back to add the elements.
++   
++   36. Answer Self Check 35 without using push_back.
++   
++   37. What is the contents of the vector `names` after the following statements?
++   
++       ```cpp
++       vector<string> names;
++       names.push_back("Ann");
++       names.push_back("Bob");
++       names.pop_back();
++       names.push_back("Cal");
++       ```
++   
++   38. Suppose you want to store a set of temperature measurements that is taken every five minutes. Should you use a vector or an array?
++   
++   39. Suppose you want to store the names of the weekdays. Should you use a vector or an array of seven strings?
++   
++   40. Write the header for a function that appends two vectors, yielding a third vector. Do not implement the function.
++   
++   41. Consider this partially completed function that appends the elements of one vector to another.
++   
++       ```cpp
++       void append(vector<double> __ target, vector<double> __ source)
++       {
++           for (int i = 0; i < source.size(); i++)
++           {
++               target.push_back(source[i]);
++           }
++       }
++       ```
++   
++       Specify whether the parameters should be value or reference parameters.
+
+# Practice It
+
+Now you can try these exercises at the end of the chapter: R6.11, R6.25, P6.26, P6.27.
+
+![](bbox=[0.124, 0.829, 0.249, 0.888])
+
+# Prefer Vectors over Arrays
+
+For most programming tasks, vectors are easier to use than arrays. Vectors can grow and shrink. Even if a vector always stays the same size, it is convenient that a vector remembers its size. For a beginner, the sole advantage of an array is the initialization syntax. Advanced programmers sometimes prefer arrays because they are a bit more efficient. Moreover, you need to know how to use arrays if you work with older programs.

@@ -1,0 +1,56 @@
+# WORKED EXAMPLE 5.1 — Matching and Replacing Parts of a String
+
+![](bbox=[0.077, 0.121, 0.21, 0.199])
+
+This Worked Example creates a function to find the first occurrence of one string in a given string and replace it with a second string.
+
+# WORKED EXAMPLE 5.2 — Using a Debugger
+
+![](bbox=[0.077, 0.264, 0.21, 0.341])
+
+In this Worked Example, you will learn how to use a debugger to find errors in a program.
+
+# 5.5 Functions Without Return Values
+
+Use a return type of `void` to indicate that a function does not return a value.
+
+Sometimes, you need to carry out a sequence of instructions that does not yield a value. If that instruction sequence occurs multiple times, you will want to package it into a function. In C++, you use the return type `void` to indicate the absence of a return value. Here is a typical example. Your task is to print a string in a box, like this:
+
+```
+```
+------
+!Hello!
+------
+```
+```
+
+![](bbox=[0.568, 0.443, 0.891, 0.594])
+
+*A `void` function returns no value, but it can produce output.*
+
+However, different strings can be substituted for Hello. A function for this task can be defined as follows:
+
+```
+```cpp
+void box_string(string str)
+```
+```
+
+Now you develop the body of the function in the usual way, by formulating a general method for solving the task.
+
++   - Print a line that contains the `-` character `n + 2` times, where `n` is the length of the string.
++   - Print a line containing the string, surrounded with a `!` to the left and right.
++   - Print another line containing the `-` character `n + 2` times.
+
+Here is the function implementation:
+
+```
+```cpp
+/**
+   Prints a string in a box.
+   @param str the string to print
+*/
+void box_string(string str)
+{
+```
+```

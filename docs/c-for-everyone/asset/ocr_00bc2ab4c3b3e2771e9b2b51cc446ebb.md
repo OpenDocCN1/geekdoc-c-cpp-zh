@@ -1,0 +1,102 @@
++   - pointers
++     - &, address operator, 309
++     - to base classes from virtual functions, 457
++     - dangling, 328
++     - defining, 308-309
++     - defining multiple variables, 313
++     - definition, 308
++     - to derived classes from virtual functions, 457
++     - drawing pictures of, 332-335
++     - initializing, 311-313
++     - NULL, 312
++     - simulating a Galton board, 329-332
++     - syntax, 310
++     - translating from reference parameters, 314
++     - uninitialized, 311-312
++     - vs. variables pointed to, 313
++     - as vectors, 329-332
++   - pointers, accessing variables with
++     - *, indirection operator, 309
++     - overview, 309-311
++     - pointer syntax, 310
++     - process description, 334-335
++   - pointers, to objects
++     - ->, arrow operator, 422-423
++     - calling member functions, 422-423
++     - dynamic object allocation, 422
++     - this pointer, 423
++   - pointers, using with arrays
++     - array parameter variables, 316-318
++     - array/pointer duality law, 315
++     - declaring arrays as pointers, 314
++     - passing arrays to functions, 316-318
++     - pointer arithmetic, 315
++     - returning a pointer to a local variable, 319
++     - simulating a Galton board, 329-332
++     - stepping through arrays, 318
++   - pointers, using with structures
++     - ->, arrow operator, 337
++     - ., dot operator, 337
++     - allocating structure values, 337
++     - dot notation, 336
++     - pointer members, 337-338
++     - pointing to structures, 337
++     - structures, definition, 336
++   - pop_back function, 286, 288, 498
++   - podensity.cpp (ch08), 370-371
++   - pow function, 41-42, 495
++   - powers, calculating, 41-43
++   - poutable.cpp (ch04), 166
++   - precision
++     - file stream output, 361
++     - int number type, 39
+
++   - Pretty Good Privacy (PGP), 368
++   - primary storage, 3-4
++   - printing
++     - array elements, 267-268
++     - formatting printed output, 49-51t
++     - tables, rows and columns, 165-168
++   - privacy issues, databases, 377
++   - private
++     - data members, 396, 402
++     - inheritance, 449-450
++     - keys, 368
++     - member functions, 402
++   - private, reserved word, 489t
++   - problem solving techniques
++     - discovering classes, 414-417
++     - drawing pictures of pointers, 332-334
++     - flowcharts, 99-101
++     - hand calculations, 52-53
++     - reusable functions, 208-210
++     - stepwise refinement, 210-215
++     - storyboards, 154-157
++     - test cases, 102
++     - thinking recursively, 229-230
++   - problem solving techniques, hand tracing
++     - code simulation, 139-142
++     - objects, 407-409
++   - problem solving techniques, with algorithms
++     - adapting algorithms, 269-274
++     - designing algorithms, 17-21
++     - discovering algorithms, 274-277
++   - problem statements, converting to C++ programs, 54-56
++   - programmers, first, 290
++   - programming, 2. See also software development process
++   - programming environment. See integrated development environment
++   - programming languages. See also C++
++     - hardware independence, 6
++     - high level, 6
++     - machine instructions, 6
++   - programs, starting from the command line, 365-367
++   - prompt
++     - definition, 48
++     - reading from, 48
++   - pseudocode
++     - converting to C++ programs, 54-56
++     - definition, 18
++     - designing algorithms, 18, 20-21
++   - pseudorandom numbers, 169
++   - public
++     - data members, 396, 402

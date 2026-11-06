@@ -1,0 +1,48 @@
+# 3.3 Multiple Alternatives
+
+Multiple alternatives are required for decisions that have more than two cases.
+
+In Section 3.1, you saw how to program a two-way branch with an if statement. In many situations, there are more than two cases. In this section, you will see how to implement a decision with multiple alternatives. For example, consider a program that displays the effect of an earthquake, as measured by the Richter scale (see Table 3).
+
+*The 1989 Loma Prieta earthquake that damaged the Bay Bridge in San Francisco and destroyed many buildings measured 7.1 on the Richter scale.*
+
+![](bbox=[0.245, 0.227, 0.515, 0.431])
+
+| Table 3 — Richter Scale |  |
+|---|---|
+| Value | Effect |
+| 8 | Most structures fall |
+| 7 | Many buildings destroyed |
+| 6 | Many buildings considerably damaged, some collapse |
+| 4.5 | Damage to poorly constructed buildings |
+
+The Richter scale is a measurement of the strength of an earthquake. Every step in the scale, for example from 6.0 to 7.0, signifies a tenfold increase in the strength of the quake.
+
+In this case, there are five branches: one each for the four descriptions of damage, and one for no destruction. Figure 3 shows the flowchart for this multiple-branch statement.
+
+You use multiple if statements to implement multiple alternatives, like this:
+
+```
+if (richter >= 8.0)
+{
+    cout << "Most structures fall";
+}
+else if (richter >= 7.0)
+{
+    cout << "Many buildings destroyed";
+}
+else if (richter >= 6.0)
+{
+    cout << "Many buildings considerably damaged, some collapse";
+}
+else if (richter >= 4.5)
+{
+    cout << "Damage to poorly constructed buildings";
+}
+else
+{
+    cout << "No destruction of buildings";
+}
+```
+
+As soon as one of the four tests succeeds, the effect is displayed, and no further tests are attempted. If none of the four cases applies, the final else clause applies, and a default message is printed. (See the ch03/richter.cpp file for the full program.)

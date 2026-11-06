@@ -1,0 +1,40 @@
+# # New to This Edition
+
+# ## Problem Solving Strategies
+
+This edition adds practical, step-by-step illustrations of techniques that can help students devise and evaluate solutions to programming problems. Introduced where they are most relevant, these strategies address barriers to success for many students. Strategies included are:
+
++   - Algorithm Design (with pseudocode)
++   - First Do It by Hand (doing sample calculations by hand)
++   - Flowcharts
++   - Test Cases
++   - Hand-Tracing
++   - Storyboards
++   - Reusable Functions
++   - Stepwise Refinement
++   - Adapting Algorithms
++   - Discover Algorithms by Manipulating Physical Objects
++   - Draw a Picture (pointer diagrams)
++   - Tracing Objects (identifying state and behavior)
++   - Discovering Classes
+
+# ## Optional Engineering Exercises
+
+End-of-chapter exercises have been enhanced with problems from scientific and engineering domains. Geared to students learning C++ for a technical major, the exercises are designed to illustrate the value of programming in those fields. Additional exercises are available on the book’s companion web site.
+
+# ## New and Reorganized Topics
+
+All chapters were revised and enhanced to respond to user feedback and improve the flow of topics. Loop algorithms are now introduced explicitly in Chapter 4. Debugging is now introduced in a lengthy Worked Example in Chapter 5. Arrays are covered before vectors are introduced in Chapter 6, and a new section on vector algorithms builds on the array algorithms presented earlier in the chapter. A new optional section on structure types is now in Chapter 7. New example tables, photos, and exercises appear throughout the book.
+
+# # A Tour of the Book
+
+The core material of the book is:
+
++   - Chapter 1. Introduction
++   - Chapter 2. Fundamental Data Types
++   - Chapter 3. Decisions
++   - Chapter 4. Loops
++   - Chapter 5. Functions
++   - Chapter 6. Arrays and Vectors
+
+In a course for engineers with a need for systems and embedded programming, you will want to cover Chapter 7 on pointers. Sections 7.1 and 7.4 are sufficient for using pointers with polymorphism in Chapter 10.

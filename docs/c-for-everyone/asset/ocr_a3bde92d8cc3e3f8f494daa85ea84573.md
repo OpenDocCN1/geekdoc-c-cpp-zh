@@ -1,0 +1,40 @@
+R10.2 An object-oriented traffic simulation system has the following classes:
+
++   Vehicle        PickupTruck
++   Car            SportUtilityVehicle
++   Truck          Minivan
++   Sedan          Bicycle
++   Coupe          Motorcycle
+
+Draw a UML diagram that shows the inheritance relationships between these classes.
+
+R10.3 What inheritance relationships would you establish among the following classes?
+
++   Student        Professor
++   Employee       Secretary
++   Person         Janitor
++   DepartmentChair
+
+R10.4 Draw a UML diagram that shows the inheritance and aggregation relationships between the classes:
+
++   Person         Instructor
++   Student        Lecture
++   Course         Lab
+
+R10.5 Consider a program for managing inventory in a small appliance store. Why isn’t it useful to have a base class SmallAppliance and derived classes Toaster, CarVacuum, TravelIron, and so on?
+
+R10.6 Which data members does the CheckingAccount class in How To 10.1 on page 464 inherit from its base class? Which data members does it add?
+
+R10.7 Which functions does the SavingsAccount class in How To 10.1 on page 464 inherit from its base class? Which functions does it override? Which functions does it add?
+
+R10.8 Design an inheritance hierarchy for geometric shapes: rectangles, squares, and circles. Draw a UML diagram. Provide a virtual function to compute the area of a shape. Provide appropriate constructors for each class. Write the class definitions but do not provide implementations of the member functions.
+
+R10.9 Continue Exercise R10.8 by writing a main function that executes the following steps:
+
++   - Fill a vector of shape pointers with a rectangle, a square, and a circle.
++   - Print the area of each shape.
++   - Deallocate all heap objects.
+
+R10.10 Can you convert a base-class object into a derived-class object? A derived-class object into a base-class object? A base-class pointer into a derived-class pointer? A derived-class pointer into a base-class pointer? If so, give examples. If not, explain why not.
+
+R10.11 Consider a function process_file(ostream& str). Objects from which of the classes in Figure 2 can be passed as parameters to this function?

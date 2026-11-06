@@ -1,0 +1,39 @@
+After you delete a memory block, you can no longer use it. The storage space may already be used elsewhere.
+
+```
+    delete[] account_array;
+    account_array[0] = 1000; // NO! You no longer own the memory of account_array
+```
+
+Heap arrays have one significant advantage over array variables. If you declare an array variable, you must specify a fixed array size when you compile the program. But when you allocate an array on the heap, you can choose the size at run time.
+
+Moreover, if you later need more elements, you are not stuck. You can allocate a bigger heap array, copy the elements from the smaller array into the bigger array, and delete the smaller array (see Figure 7):
+
+```
+    double* bigger_array = new double[2 * n];
+    for (int i = 0; i < n; i++)
+    {
+       bigger_array[i] = account_array[i];
+    }
+    delete[] account_array;
+    account_array = bigger_array;
+    n = 2 * n;
+```
+
+This is exactly what a vector does behind the scenes.
+
+Heap allocation is a powerful feature, but you must be very careful to follow all rules precisely:
+
++   - Every call to `new` must be matched by exactly one call to `delete`.
++   - Use `delete[]` to delete arrays.
++   - Don’t access a memory block after it has been deleted.
+
+If you don’t follow these rules, your program can crash or run unpredictably. Table 5 shows common errors.
+
+![](bbox=[0.613, 0.408, 0.888, 0.575])
+
+*Be sure to recycle any heap memory that your program no longer needs.*
+
+![](bbox=[0.375, 0.645, 0.738, 0.862])
+
+**Figure 7**   Growing a Dynamic Array

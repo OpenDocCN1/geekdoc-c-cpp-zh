@@ -1,0 +1,38 @@
+![](bbox=[0.286, 0.094, 0.849, 0.358])
+
+# **Figure 3** Inheritance Hierarchy of Question Types
+
+At the root of this hierarchy is the Question type. A question can display its text, and it can check whether a given response is a correct answer:
+
+```
+```cpp
+class Question
+{
+public:
+    Question();
+    void set_text(string question_text);
+    void set_answer(string correct_response);
+    bool check_answer(string response) const;
+    void display() const;
+private:
+    string text;
+    string answer;
+};
+```
+```
+
+How the text is displayed depends on the question type. Later in this chapter, you will see some variations, but the base class simply sends the question text to cout. How the response is checked also depends on the question type. As already mentioned, a numeric question might accept approximate answers (see Exercise P10.1). In Exercise P10.3, you will see another way of checking the response. But in the base class, we will simply require that the response match the correct answer exactly.
+
+In the following sections, you will see how to form derived classes that inherit the member functions and data members of this base class.
+
+Here is the implementation of the Question class and a simple test program. Note that the Question class constructor needs to do no work because the text and answer fields are automatically set to the empty string. The boolalpha stream manipulator in the main function causes Boolean values to be displayed as true and false instead of the default 1 and 0.
+
+```
+**ch10/quiz1/test.cpp**
+
+```cpp
+#include <iostream>
+#include <sstream>
+#include <string>
+```
+```

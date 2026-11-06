@@ -1,0 +1,45 @@
+> > The programmer is responsible for inspecting and testing the program to guard against run-time errors.
+
+![](bbox=[0.078, 0.326, 0.2, 0.414])
+
+output. Because run-time errors are caused by logical flaws in the program, they are often called logic errors. Some kinds of run-time errors are so severe that they generate an exception: a signal from the processor that aborts the program with an error message. For example, if your program includes the statement `cout << 1 / 0;` your program may terminate with a “divide by zero” exception.
+
+During program development, errors are unavoidable. Once a program is longer than a few lines, it requires superhuman concentration to enter it correctly without slipping up once. You will find yourself omitting semicolons or quotes more often than you would like, but the compiler will track down these problems for you.
+
+Run-time errors are more troublesome. The compiler will not find them—in fact, the compiler will cheerfully translate any program as long as its syntax is correct—the resulting program will do something wrong. It is the responsibility of the program author to test the program and find any run-time errors. Program testing is an important topic that you will encounter many times in this book.
+
+# SELF CHECK
+
++   17. Suppose you omit the `()` characters after `main` from the `hello.cpp` program. Will you get a compile-time error or a run-time error?
++   
++   18. When you used your computer, you may have experienced a program that “crashed” (quit spontaneously or “hung” (failed to respond to your input). Is that behavior a compile-time error or a run-time error?
++   
++   19. Why can’t you test a program for run-time errors when it has compiler errors?
+
+# Practice It
+
+Now you can try these exercises at the end of the chapter: R1.10, R1.11.
+
+# Common Error 1.2 — Misspelling Words
+
+![](bbox=[0.079, 0.562, 0.2, 0.929])
+
+If you accidentally misspell a word, strange things may happen, and it may not always be completely obvious from the error messages that went wrong. Here is a good example of how simple spelling errors can cause trouble:
+
+```
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int Main()
+{
+    cout << "Hello, World!" << endl;
+    return 0;
+}
+```
+```
+
+This code defines a function called `Main`. The compiler will not consider this to be the same as the main function, because Main starts with an uppercase letter and the C++ language is case-sensitive. Upper- and lowercase letters are considered to be completely different from each other, and to the compiler Main is no better match for main than the compiler will compile your Main function, but when the linker is ready to build the executable file, it will complain about the missing main function and refuse to link the program. Of course, the message “missing-main function” should give you a clue where to look for the error.
+
+If you get an error message that seems to indicate that the compiler is on the wrong track, it is a good idea to check for spelling and capitalization. In C++, most names use only lowercase letters. If you misspell the name of a symbol (for example out instead of cout), the compiler will complain about an “undefined symbol”. This error message is usually a good clue that you made a spelling error.

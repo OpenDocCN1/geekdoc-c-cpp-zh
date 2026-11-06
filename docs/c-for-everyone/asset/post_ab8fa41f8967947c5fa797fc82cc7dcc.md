@@ -1,0 +1,88 @@
+
+- **delete operator** The operator that recycles memory to the heap.
+- **Derived class** A class that modifies a base class by adding data members, adding member functions, or redefining member functions.
+- **Directory** A structure on a disk that can hold files or other directories; also called a folder.
+- **Dot notation** The notation *object.function(parameters)* used to invoke a member function on an object.
+- **Element** A storage location in an array.
+- **Encapsulation** The hiding of implementation details.
+- **Escape character** A character in text that is not taken literally but has a special meaning when combined with the character or characters that follow it. The \\ character is an escape character in C++ strings.
+- **Exception** A condition that prevents a program from continuing normally.
+- **Executable file** The file that contains a program’s machine instructions.
+- **Explicit parameter** A parameter of a member function other than the object on which the function is invoked.
+- **Expression** A syntactical construct that is made up of constants, variables, and/or function calls, and the operators combining them.
+- **Extension** The last part of a file name, which specifies the file type. For example, the extension .cpp denotes a C++ file.
+- **Failed stream state** The state of a stream after an invalid operation has been attempted, such as reading a number when the next stream position yielded a non-digit, or reading after the end of file was reached.
+- **File** A sequence of bytes that is stored on disk.
+- **File pointer** The position within a file of the next byte to be read or written. It can be moved so as to access any byte in the file.
+- **Floating-point number** A number with a fractional part.
+- **Folder** Directory.
+- **Function** A sequence of statements that can be invoked multiple times, with different values for its parameter variables.
+- **Global variable** A variable whose scope is not restricted to a single function.
+- **Header file** A file that informs the compiler of features that are available in another module or library.
+- **Heap** A reservoir of storage from which memory can be allocated when a program runs.
+- **IDE (Integrated Development Environment)** A programming environment that includes an editor, compiler, and debugger.
+- **Implicit parameter** The object on which a member function is called. For example, in the call `x.f(y)`, the object `x` is the implicit parameter of `f`.
+- **#include directive** An instruction to the preprocessor to include a header file.
+- **Index** The position of an element in an array.
+- **Inheritance** The “is-a” relationship between a general base class and a specialized derived class.
+- **Initialization** Setting a variable to a well-defined value when it is created.
+- **Integer** A number without a fractional part.
+- **Integer division** Taking the quotient of two integers and discarding the remainder. In C++, the `/` symbol denotes integer division if both arguments are integers. For example, 11 / 4 is 2, not 2.75.
+- **Interface** The set of functions that can be applied to objects of a given type.
+- **Lexicographic ordering** Ordering strings in the same order as in a dictionary, by skipping all matching characters and comparing the first nonmatching characters of both strings. For example, “orbit” comes before “orchid” in the lexicographic ordering. Note that in C++, unlike a dictionary, the ordering is case-sensitive: Z comes before a.
+- **Library** A set of precompiled functions that can be included in programs.
+- **Linker** The program that combines object and library files into an executable file.
+- **Local variable** A variable whose scope is a single block.
+- **Logic error** An error in a syntactically correct program that causes it to act differently from its specification.
+- **Logical operator** An operator that can be applied to Boolean values. C++ has three logical operators: `&&`, `||`, and `!`.
+- **Loop** A sequence of instructions that is executed repeatedly.
+- **Loop and a half** A loop whose termination decision is neither at the beginning nor at the end.
+- **Machine code** Instructions that can be executed directly by the CPU.
+- **Magic number** A number that appears in a program without explanation.
+- **main function** The function that is called first when a program executes.
+- **Member function** A function that is defined by a class and operates on objects of that class.
+- **Memory** The circuitry that stores code and data in a computer.
+- **Memory leak** Memory that is dynamically allocated but never returned to the heap manager. A succession of memory leaks can cause the heap manager to run out of memory.
+- **Modulus operator** The % operator that yields the remainder of an integer division.
+- **Mutator function** A member function that changes the state of an object.
+- **Nested block** A block that is contained inside another block.
+- **Nested loop** A loop that is contained in another loop.
+- **new operator** The operator that allocates new memory from the heap.
+- **Newline** The '\n' character, which indicates the end of a line.
+- **Object-oriented programming** A programming style in which tasks are solved by collaborating objects.
+- **Off-by-one error** A common programming error in which a value is one larger or smaller than it should be.
+- **Opening a file** Preparing a file for reading or writing.
+- **Operator** A symbol denoting a mathematical or logical operation, such as + or &&.
+- **Operator precedence** The rule that governs which operator is evaluated first. For example, in C++ the && operator has a higher precedence than the || operator. Hence a || b && c is interpreted as a || (b && c).
+- **Overloading** Giving more than one meaning to a function name or operator.
+- **Overriding** Redefining a function from a base class in a derived class.
+- **Parallel arrays** Arrays of the same length, in which corresponding elements are logically related.
+- **Parameter variable** A variable in a function that is initialized with the argument value when the function is called.
+- **Pointer** A value that denotes the memory location of an object.
+- **Polymorphism** Selecting a function among several functions with the same name, by comparing the actual types of the parameters.
+- **Prompt** A string that prompts the program user to provide input.
+- **Prototype** The declaration of a function, including its parameter types and return type.
+- **Pseudocode** A mixture of English and C++ used when developing the code for a program.
+- **Pseudorandom numbers** A number that appears to be random but is generated by a formula.
+- **Public interface** The features of a class that are accessible to all clients.
+- **Random access** The ability to access any value directly without having to read the values preceding it.
+- **Recursive function** A function that can call itself with simpler values. It must handle the simplest values without calling itself.
+- **Reference parameter** A parameter that is bound to a variable supplied in the call. Changes made to the parameter within the function affect the variable outside the function.
+- **Relational operator** An operator that compares two values, yielding a Boolean result.
+- **Reserved word** A word that has a special meaning in a programming language and therefore cannot be used as a name by the programmer.
+- **Return value** The value returned by a function through a return statement.
+- **Roundoff error** An error introduced by the fact that the computer can store only a finite number of digits of a floating-point number.
+- **Run-time error** See **Logic error**.
+- **Scope** The part of a program in which a variable is defined.
+- **Selection sort** A sorting algorithm in which the smallest element is repeatedly found and removed until no elements remain.
+- **Sentinel** A value in input that is not to be used as an actual input value but to signal the end of input.
+- **Sequential access** Accessing values one after another without skipping over any of them.
+- **Slicing an object** Copying an object of a derived class into a variable of the base class, thereby losing the derived-class data.
+- **Source file** A file containing instructions in a programming language.
+- **Stepwise refinement** Solving a problem by breaking it into smaller problems and then further decomposing those smaller problems.
+- **Stream** An abstraction for a sequence of bytes from which data can be read or to which data can be written.
+- **String** A sequence of characters.
+- **Structure** A construct for aggregating items of arbitrary types into a single value.
+- **Stub** A function with no or minimal functionality.
+- **Substitution principle** The rule that states that you can use a derived-class object whenever a base-class object is expected.
+- **Syntax** Rules that define how to form instructions in a particular programming language.

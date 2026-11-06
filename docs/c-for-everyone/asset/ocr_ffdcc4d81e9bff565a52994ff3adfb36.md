@@ -1,0 +1,56 @@
+```
+```cpp
+}
+```
+```
+
+The Menu constructor is a bit odd. We need to construct a menu with no options. A vector is a class, and it has a default constructor. That constructor does exactly what we want, namely to construct an empty vector. Nothing else needs to be done:
+
+```
+```cpp
+Menu::Menu()
+{
+}
+```
+```
+
+If you find that you have trouble with the implementation of some of your member functions, you may need to rethink your choice of data members. It is common for a beginner to start out with a set of data members that cannot accurately describe the state of an object. Don’t hesitate to go back and rethink your implementation strategy.
+
+Once you have completed the implementation, compile your class and fix any compiler errors. (See ch09/menu.cpp in your book’s companion code for the completed class.)
+
+# Step 6
+
+Test your class.
+
+Write a short tester program and execute it. The tester program should carry out the member function calls that you found in Step 2.
+
+```
+```cpp
+int main()
+{
+    Menu main_menu;
+    main_menu.add_option("Open new account");
+    main_menu.add_option("Log into existing account");
+    main_menu.add_option("Help");
+    main_menu.add_option("Quit");
+}
+```
+```
+
+# _Random Fact 9.1_  **Electronic Voting Machines**
+
+In the 2000 presidential elections in the United States, votes were tallied by a variety of machines. Some machines processed cardboard ballots into which voters punched holes to indicate their choices (see photo below). When voters were not careful, remains of paper—the now infamous “chads”—were partially stuck in the punch cards, causing votes to be miscounted. A manual recount was necessary, but it was not carried out everywhere due to time constraints and procedural wrangling. The election was very close, and there remain doubts in the minds of many people whether the election outcome would have been different if the voting machines had accurately counted the intent of the voters.
+
+Subsequently, voting machine manufacturers have argued that electronic voting machines would avoid the problems caused by punch cards or optically scanned forms.
+
+In an electronic voting machine, voters indicate their preferences by pressing buttons or touching icons on a computer screen. Typically, each voter is presented with a summary screen for review before casting the ballot. The process is very similar to using an automatic bank teller machine.
+
+It seems plausible that these machines make it more likely that a vote is counted in the same way that the voter intends. However, there has been significant controversy surrounding some types of electronic voting machines. If a machine simply records the votes and prints out the totals after the election has been completed, then how do you know that the machine worked correctly? Inside the machine is a computer that executes a program, and, as you may know from your own experience, programs can have bugs.
+
+In fact, some electronic voting machines do have bugs. There have been isolated cases where machines
+
+reported tallies that were impossible. When a machine reports far more or far fewer votes than voters, then it is clear that it malfunctioned. Unfortunately, it is then impossible to find out the actual votes. Over time, one would expect these bugs to be fixed in the software. More insidiously, if the results are plausible, nobody may ever investigate.
+
+![](bbox=[0.629, 0.738, 0.891, 0.916])
+
+*Punch Card Ballot*
