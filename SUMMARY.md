@@ -546,6 +546,7 @@
 +   [C++ & Python 初学者指南 - 第4版，2020年11月](docs/c-python-for-beginners-4th-edition-november-2020/README.md)
 +   [C++ & Python 完整手册（第2版）](docs/c-python-the-complete-manual-2nd-edition/README.md)
 +   [C++ & Python 技巧与指南 - 第 5 版 2021](docs/c-python-tricks-and-tips---5th-edition-2021/README.md)
++   [C++ 与 Python 技巧与提示 - 第 7 版，2021](docs/c-python-tricks-and-tips---7th-edition-2021/README.md)
 +   [C# 2010 全能傻瓜书](docs/c-sharp-2010-all-in-one-for-dummies/README.md)
 +   [C++：高效学习 C++ 编程的简单技巧与秘籍](docs/c-simple-and-effective-tips-and-tricks-to-learn-c-programmin/README.md)
 +   [C-Simpler 入门指南（C 语言概念与编程挑战）](docs/c-simpler-concepts-of-c-language-including-programming-chall/README.md)

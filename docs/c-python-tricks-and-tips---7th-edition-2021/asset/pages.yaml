@@ -1,0 +1,3474 @@
+- pgno: 0
+  md: '# September 2021 Update
+
+
+    # C++ & Python
+
+
+    # Tricks and Tips
+
+
+    # Master Coding Skills!
+
+
+    # Advanced Tutorials & Guides
+
+
+    # Next level Secrets & Fixes
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_0_0.png)
+
+
+    # Expert Tips & Hacks
+
+
+    # Over 435 Secrets & Hacks'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Discover more of our guides...
+
+
+    # Adobe Photoshop — Tricks and Tips
+
+
+    # Android — Tricks and Tips
+
+
+    # C++ & Python — Tricks and Tips
+
+
+    # Black & White Photography — Tricks and Tips
+
+
+    # Cloud Computing — Tricks and Tips
+
+
+    # Google — Tricks and Tips
+
+
+    # Mac — Tricks and Tips
+
+
+    # Coding — Tricks and Tips
+
+
+    # Photography — Tricks and Tips
+
+
+    # Python — Tricks and Tips
+
+
+    # FRITZ!Box — Tricks and Tips
+
+
+    # GoPro — Tricks and Tips
+
+
+    # iPad — Tricks and Tips
+
+
+    # Landscape Photography — Tricks and Tips
+
+
+    # iPhone — Tricks and Tips
+
+
+    # Instagram — Tricks and Tips'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # Contents
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_3_0.png)
+
+
+    +   - **6 Working with Data**
+
+    +     - 8 Lists
+
+    +     - 10 Tuples
+
+    +     - 12 Dictionaries
+
+    +     - 14 Splitting and Joining Strings
+
+    +     - 16 Formatting Strings
+
+    +     - 18 Date and Time
+
+    +     - 20 Opening Files
+
+    +     - 22 Writing to Files
+
+    +     - 24 Exceptions
+
+    +     - 26 Python Graphics
+
+
+    +   - **54 Loops and Decision Making**
+
+    +     - 56 While Loop
+
+    +     - 58 For Loop
+
+    +     - 60 Do... While Loop
+
+    +     - 62 If Statement
+
+    +     - 64 If... Else Statement
+
+
+    +   - **28 Using Modules**
+
+    +     - 30 Calendar Module
+
+    +     - 32 OS Module
+
+    +     - 34 Random Module
+
+    +     - 36 Tkinter Module
+
+    +     - 38 Pygame Module
+
+    +     - 42 Create Your Own Modules
+
+
+    +   - **66 Working with Code**
+
+    +     - 68 Common Coding Mistakes
+
+    +     - 70 Beginner Python Mistakes
+
+    +     - 72 Beginner C++ Mistakes
+
+    +     - 74 Where Next?
+
+
+    +   - **44 C++ Input/Output**
+
+    +     - 46 User Interaction
+
+    +     - 48 Character Literals
+
+    +     - 50 Defining Constants
+
+    +     - 52 File Input/Output
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_3_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_4_0.png)
+
+
+    # BDM’s Code Portal
+
+
+    60+ Python programs
+
+    21,500+ lines of code
+
+
+    Master Python with the help of our fantastic Code Portal, featuring code for games,
+    tools and more.
+
+
+    Visit: https://bdmpublications.com/code-portal, and log in to get access!
+
+
+    > “We’ve taken two of the most powerful and versatile programming languages available,
+    Python and C++ and broken them down into bite-sized tutorials and guides to help
+    you learn how they work, and how to make them work for you…”'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Working with Data
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_5_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_6_0.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_6_1.png)
+
+
+    # Working with Data
+
+
+    Data is everything. With it you can display, control, add, remove, create and
+    manipulate Python to your every demand. Over these coming pages we look at how
+    you can create lists, tuples, dictionaries and multi-dimensional lists; and see
+    how to use them to forge exciting and useful programs.
+
+
+    Then, you can learn how to use date and time functions, write to files in your
+    system and even create graphical user interfaces that take your coding skills
+    to new levels and into new project ideas.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# # Lists
+
+
+    Lists are one of the most common types of data structures you will comes across
+    in Python. A list is simply a collection of items, or data if you prefer, that
+    can be accessed as a whole, or individually if wanted.
+
+
+    # ## WORKING WITH LISTS
+
+
+    Lists are extremely handy in Python. A list can be strings, integers and also
+    variables. You can even include functions in lists, and lists within lists.
+
+
+    **STEP 1**
+
+
+    A list is a sequence of data values called items. You create the name of your
+    list followed by an equals sign, then square brackets and the items separated
+    by commas; note that strings use quotes:
+
+
+    ```
+
+    ```python
+
+    numbers = [1, 4, 7, 21, 98, 156]
+
+    mythical_creatures = ["Unicorn", "Balrog", "Vampire", "Dragon", "Minotaur"]
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_7_0.png)
+
+
+    **STEP 3**
+
+
+    You can also access, or index, the last item in a list by using the minus sign
+    before the item number [-1], or the second to last item with [-2] and so on. Trying
+    to reference an item that isn''t in the list, such as [10] will return an error:
+
+
+    ```
+
+    ```python
+
+    numbers[-1]
+
+    mythical_creatures[-4]
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_7_1.png)
+
+
+    **STEP 2**
+
+
+    Once you''ve defined your list you can call each by referencing its name, followed
+    by a number. Lists start the first item entry as 0, followed by 1, 2, 3 and so
+    on. For example:
+
+
+    ```
+
+    ```python
+
+    numbers
+
+    ```
+
+    ```
+
+
+    To call up the entire contents of the list.
+
+
+    ```
+
+    ```python
+
+    numbers[3]
+
+    ```
+
+    ```
+
+
+    To call the third from zero item in the list (21 in this case).
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_7_2.png)
+
+
+    **STEP 4**
+
+
+    Slicing is similar to indexing but you can retrieve multiple items in a list by
+    separating item numbers with a colon. For example:
+
+
+    ```
+
+    ```python
+
+    numbers[1:3]
+
+    ```
+
+    ```
+
+
+    Will output the 4 and 7, being item numbers 1 and 2. Note that the returned values
+    don''t include the second index position (as you would numbers[1:3] to return
+    4, 7 and 21).
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_7_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# STEP 5
+
+
+    You can update items within an existing list, remove items and even join lists
+    together. For example, to join two lists you can use:
+
+
+    ```python
+
+    everything = numbers + mythical_creatures
+
+    ```
+
+
+    Then view the combined list with:
+
+
+    ```python
+
+    everything
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_8_0.png)
+
+
+    # STEP 8
+
+
+    You can view what can be done with lists by entering dir(list) into the Shell.
+    The output is the available functions, for example, insert and pop are used to
+    add and remove items at certain positions. To insert the number 62 at item index
+    4:
+
+
+    ```python
+
+    numbers.insert(4, 62)
+
+    ```
+
+
+    To remove it:
+
+
+    ```python
+
+    numbers.pop(4)
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_8_1.png)
+
+
+    # STEP 6
+
+
+    Items can be added to a list by entering:
+
+
+    ```python
+
+    numbers=numbers+[201]
+
+    ```
+
+
+    Or for strings:
+
+
+    ```python
+
+    mythical_creatures=mythical_creatures+["Griffin"]
+
+    ```
+
+
+    Or by using the append function:
+
+
+    ```python
+
+    mythical_creatures.append("Nessie")
+
+    numbers.append(278)
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_8_2.png)
+
+
+    # STEP 9
+
+
+    You also use the list function to break a string down into its components. For
+    example:
+
+
+    ```python
+
+    list("David")
+
+    ```
+
+
+    Breaks the name David into ‘D’, ‘a’, ‘v’, ‘i’, ‘d’. This can then be passed to
+    a new list:
+
+
+    ```python
+
+    name=list("David Hayward")
+
+    name
+
+    age=[44]
+
+    user = name + age
+
+    user
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_8_3.png)
+
+
+    # STEP 7
+
+
+    Removal of items can be done in two ways. The first is by the item number:
+
+
+    ```python
+
+    del numbers[7]
+
+    ```
+
+
+    Alternatively, by item name:
+
+
+    ```python
+
+    mythical_creatures.remove("Nessie")
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_8_4.png)
+
+
+    # STEP 10
+
+
+    Based on that, you can create a program to store someone’s name and age as a list:
+
+
+    ```python
+
+    name=input("What’s your name? ")
+
+    lname=list(name)
+
+    age=int(input("How old are you: "))
+
+    lage=[age]
+
+
+    user = lname + lage
+
+    ```
+
+
+    The combined name and age list is called user, which can be called by entering
+    user into the Shell. Experiment and see what you can do.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_8_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Tuples
+
+
+    Tuples are very much identical to lists. However, where lists can be updated,
+    deleted or changed in some way, a tuple remains a constant. This is called immutable
+    and they’re perfect for storing fixed data items.
+
+
+    # THE IMMUTABLE TUPLE
+
+
+    Reasons for having tuples vary depending on what the program is intended to do.
+    Normally, a tuple is reserved for something special but they’re also used for
+    example, in an adventure game, where non-playing character names are stored.
+
+
+    STEP 1 — A tuple is created the same way as a list but in this instance you use
+    curved brackets instead of square brackets. For example:
+
+
+    ```
+
+    months=(“January”, “February”, “March”, “April”, “May”, “June”)
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_9_0.png)
+
+
+    STEP 2 — Just as with lists, the items within a named tuple can be indexed according
+    to their position in the data range, i.e.:
+
+
+    ```
+
+    months[0]
+
+    months[5]
+
+    ```
+
+
+    However, any attempt at deleting or adding to the tuple will result in an error
+    in the Shell.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_9_1.png)
+
+
+    STEP 3 — You can create grouped tuples into lists that contain multiple sets of
+    data. For instance, here is a tuple called NPC (Non-Playable Characters) containing
+    the character name and their combat rating for an adventure game:
+
+
+    ```
+
+    NPC=[(“Conan”, 100), (“Belit”, 80), (“Valeria”, 95)]
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_9_2.png)
+
+
+    STEP 4 — Each of these data items can be accessed as a whole by entering NPC into
+    the Shell; or they can be indexed according to their position NPC[0]. You can
+    also index the individual tuples within the NPC list:
+
+
+    ```
+
+    NPC[0][1]
+
+    ```
+
+
+    Will display 100.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_9_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'It’s worth noting that when referencing multiple tuples within a list, the
+    indexing is slightly different from the norm. You would expect the 95 combat rating
+    of the character Valeria to be NPC[4][5], but it’s not. It’s actually:
+
+
+    ```
+
+    NPC[2][1]
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_10_0.png)
+
+
+    This means of course that the indexing follows thus:
+
+
+    +   - 0
+
+    +   - 0, 0
+
+    +   - 0, 1
+
+    +   - 1
+
+    +   - 1, 0
+
+    +   - 1, 1
+
+    +   - 2
+
+    +   - 2, 0
+
+    +   - 2, 1
+
+
+    Which as you can imagine, gets a little confusing when you’ve got a lot of tuple
+    data to deal with.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_10_1.png)
+
+
+    Tuples though utilise a feature called unpacking, where the data items stored
+    within a tuple are assigned variables. First create the tuple with two items (name
+    and combat rating):
+
+
+    ```
+
+    NPC=(“Conan”, 100)
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_10_2.png)
+
+
+    Now unpack the tuple into two corresponding variables:
+
+
+    ```
+
+    (name, combat_rating)=NPC
+
+    ```
+
+
+    You can now check the values by entering name and combat_rating.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_10_3.png)
+
+
+    Remember, as with lists, you can also index tuples using negative numbers which
+    count backwards from the end of the data list. For our example, using the tuple
+    with multiple data items, you would reference the Valeria character with:
+
+
+    ```
+
+    NPC[2][-0]
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_10_4.png)
+
+
+    You can use the max and min functions to find the highest and lowest values of
+    a tuple composed of numbers. For example:
+
+
+    ```
+
+    numbers=(10.3, 23, 45.2, 109.3, 6.1, 56.7, 99)
+
+    ```
+
+
+    The numbers can be integers and floats. To output the highest and lowest, use:
+
+
+    ```
+
+    print(max(numbers))
+
+    print(min(numbers))
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_10_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Dictionaries
+
+
+    Lists are extremely useful but dictionaries in Python are by far the more technical
+    way of dealing with data items. They can be tricky to get to grips with at first
+    but you’ll soon be able to apply them to your own code.
+
+
+    # KEY PAIRS
+
+
+    A dictionary is like a list but instead each data item comes as a pair, these
+    are known as Key and Value. The Key part must be unique and can either be a number
+    or string whereas the Value can be any data item you like.
+
+
+    **STEP 1** Let’s say you want to create a phonebook in Python. You would create
+    the dictionary name and enter the data in curly brackets, separating the key and
+    value by a colon `Key:Value`. For example:
+
+
+    ```
+
+    phonebook={“Emma” : 1234, “Daniel” : 3456, “Hannah” : 6789}
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_11_0.png)
+
+
+    **STEP 3** As with lists and tuples, you can check the contents of a dictionary
+    by giving the dictionary a name: phonebook, in this example. This will display
+    the data items you’ve entered in a similar fashion to a list, which you’re no
+    doubt familiar with by now.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_11_1.png)
+
+
+    **STEP 2** Just as with most lists, tuples and so on, strings need to be enclosed
+    in quotes (single or double), whilst integers can be left open. Remember that
+    the value can be either a string or an integer, you just need to enclose the relevant
+    one in quotes:
+
+
+    ```
+
+    phonebook2={“David” : “0987 654 321”}
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_11_2.png)
+
+
+    **STEP 4** The benefit of using a dictionary is that you can enter the key to
+    index the value. Using the phonebook example from the previous steps, you can
+    enter:
+
+
+    ```
+
+    phonebook[“Emma”]
+
+    phonebook[“Hannah”]
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_11_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# STEP 5
+
+
+    The opposite of the .split function is .join, where you will have separate items
+    in a string and can join them all together to form a word or just a combination
+    of items, depending on the program you’re writing. For instance:
+
+
+    ```
+
+    alphabet="".join(["a","b","c","d","e"])
+
+    alphabet
+
+    ```
+
+
+    This will display ‘abcde’ in the Shell.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_14_0.png)
+
+
+    # STEP 8
+
+
+    As with the .split function, the separator doesn’t have to be a space, it can
+    also be a comma, a full stop, a hyphen or whatever you like:
+
+
+    ```
+
+    colours=["Red", "Green", "Blue"]
+
+    col=", ".join(colours)
+
+    col
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_14_1.png)
+
+
+    # STEP 6
+
+
+    You can therefore apply join to the separated name you made in Step 4, combining
+    the letters again to form the name:
+
+
+    ```
+
+    name="".join(name)
+
+    name
+
+    ```
+
+
+    We’ve joined the string back together, and retained the list called name, passing
+    it through the .join function.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_14_2.png)
+
+
+    # STEP 9
+
+
+    There’s some interesting functions you apply to a string, such as .capitalize
+    and .title. For example:
+
+
+    ```
+
+    title="conan the cimmerian"
+
+    title.capitalize()
+
+    title.title()
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_14_3.png)
+
+
+    # STEP 7
+
+
+    A good example of using the join function is when you have a list of words you
+    want to combine into a sentence:
+
+
+    ```
+
+    list=["Conan", "raised", "his", "mighty", "sword", "and", "struck", "the", "demon"]
+
+    text=" ".join(list)
+
+    text
+
+    ```
+
+
+    Note the space between the quotes before the .join function (where there were
+    no spaces in the Step 6’s join)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_14_4.png)
+
+
+    # STEP 10
+
+
+    You can also use logic operators on strings, with the ‘in’ and ‘not in’ functions.
+    These enable you to check if a string contains (or does not contain) a sequence
+    of characters:
+
+
+    ```
+
+    message="Have a nice day"
+
+    "nice" in message
+
+
+    "bad" not in message
+
+    "day" not in message
+
+    "night" in message
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_14_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# ### STEP 5
+
+
+    Interestingly you can reference a list using the string formatting function. You
+    need to place an asterisk in front of the list name:
+
+
+    ```
+
+    ~~~python
+
+    numbers=1, 3, 45, 567546, 3425346345
+
+    print("Some numbers: {}, {}, {}, {}, {}.".format(*numbers))
+
+    ~~~
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_16_0.png)
+
+
+    # ### STEP 6
+
+
+    With indexing in lists, the same applies to calling a list using string formatting.
+    You can index each item according to its position (from 0 to however many are
+    present):
+
+
+    ```
+
+    ~~~python
+
+    numbers=1, 4, 7, 9
+
+    print("More numbers: {3}, {0}, {2}, {1}".format(*numbers))
+
+    ~~~
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_16_1.png)
+
+
+    # ### STEP 7
+
+
+    And as you probably suspect, you can mix strings and integers in a single list
+    to be called in the .format function:
+
+
+    ```
+
+    ~~~python
+
+    characters=["Conan", "Belit", "Valeria", 19, 27, 20]
+
+    print("{0} is {3} years old. Whereas {1} is {4} years old.".format(*characters))
+
+    ~~~
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_16_2.png)
+
+
+    # ### STEP 8
+
+
+    You can also print out the content of a user''s input in the same fashion:
+
+
+    ```
+
+    ~~~python
+
+    name=input("What''s your name? ")
+
+    print("Hello {}.".format(name))
+
+    ~~~
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_16_3.png)
+
+
+    # ### STEP 9
+
+
+    You can extend this simple code example to display the first letter in a person''s
+    entered name:
+
+
+    ```
+
+    ~~~python
+
+    name=input("What''s your name? ")
+
+    print("Hello {}.".format(name))
+
+    lname=list(name)
+
+    print("The first letter of your name is a {}.".format(*lname))
+
+    ~~~
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_16_4.png)
+
+
+    # ### STEP 10
+
+
+    You can also call upon a pair of lists and reference them individually within
+    the same print function. Looking back the code from Step 7, you can alter it with:
+
+
+    ```
+
+    ~~~python
+
+    names=["Conan", "Belit", "Valeria"]
+
+    ages=[25, 21, 22]
+
+    ~~~
+
+    ```
+
+
+    Creating two lists. Now you can call each list, and individual items:
+
+
+    ```
+
+    ~~~python
+
+    print("{0[0]} is {1[0]} years old. Whereas {0[1]} is {1[1]} years old.".format(names,
+    ages))
+
+    ~~~
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_16_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # Date and Time
+
+
+    When working with data it’s often handy to have access to the time. For example,
+    you may want to time-stamp an entry or see at what time a user logged into the
+    system and for how long. Luckily acquiring the date and time is easy, thanks to
+    the Time module.
+
+
+    # ## TIME LORDS
+
+
+    The time module contains functions that help you retrieve the current system time,
+    reads the date from strings, formats the time and date and much more.
+
+
+    # ### STEP 1
+
+
+    First you need to import the time module. It’s one that’s built-in to Python 3
+    so you shouldn’t need to drop into a command prompt and pip install it. Once it’s
+    imported, you can call the current time and date with a simple command:
+
+
+    ```
+
+    import time
+
+    time.asctime()
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_17_0.png)
+
+
+    # ### STEP 2
+
+
+    The time function is split into nine tuples, these are divided up into indexed
+    items, as with any other tuple, and shown in the screen shot below.
+
+
+    | Index | Field | Values |
+
+    |---:|---|---|
+
+    | 0 | 4-digit year | 2016 |
+
+    | 1 | Month | 1 to 12 |
+
+    | 2 | Day | 1 to 31 |
+
+    | 3 | Hour | 0 to 23 |
+
+    | 4 | Minute | 0 to 59 |
+
+    | 5 | Second | 0 to 61 (60 or 61 are leap-seconds) |
+
+    | 6 | Day of Week | 0 to 6 (0 is Monday) |
+
+    | 7 | Day of year | 1 to 366 (Julian day) |
+
+    | 8 | Daylight savings | -1, 0, 1, -1 means library determines DST |
+
+
+    # ### STEP 3
+
+
+    You can see the structure of how time is presented by entering:
+
+
+    ```
+
+    time.localtime()
+
+    ```
+
+
+    The output is displayed as such: `time.struct_time(tm_year=2017, tm_mon=9, tm_mday=7,
+    tm_hour=9, tm_min=6, tm_sec=13, tm_wday=3, tm_yday=250, tm_isdst=0)`; obviously
+    dependent on your current time as opposed to the time shown above.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_17_1.png)
+
+
+    # ### STEP 4
+
+
+    There are numerous functions built into the time module. One of the most common
+    of these is .strftime(). With it, you’re able to present a wide range of arguments
+    as it converts the time tuple into a string. For example, to display the current
+    day of the week you can use:
+
+
+    ```
+
+    time.strftime(''%A'')
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_17_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# STEP 5
+
+
+    This naturally means you can incorporate various functions into your own code,
+    such as:
+
+
+    ```
+
+    ```python
+
+    time.strftime("%a")
+
+    time.strftime("%B")
+
+    time.strftime("%b")
+
+    time.strftime("%H")
+
+    time.strftime("%H%M")
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_18_0.png)
+
+
+    # STEP 8
+
+
+    You saw at the end of the previous section, in the code to calculate Pi to however
+    many decimal places the users wanted, you can time a particular event in Python.
+    Take the code from above and alter it slightly by including:
+
+
+    ```
+
+    ```python
+
+    start_time=time.time()
+
+    ```
+
+    ```
+
+
+    Then there''s:
+
+
+    ```
+
+    ```python
+
+    endtime=time.time()-start_time
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_18_1.png)
+
+
+    # STEP 6
+
+
+    Note the last two entries, with %H and %H%M, as you can see these are the hours
+    and minutes and as the last entry indicates, entering them as %H%M doesn’t display
+    the time correctly in the Shell. You can easily rectify this with:
+
+
+    ```
+
+    ```python
+
+    time.strftime("%H:%M")
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_18_2.png)
+
+
+    # STEP 9
+
+
+    The output will look similar to the screenshot below. The timer function needs
+    to be either side of the input statement, as that’s when the variable name is
+    being created, depending on how long the user took to log in. The length of time
+    is then displayed on the last line of the code as the endtime variable.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_18_3.png)
+
+
+    # STEP 7
+
+
+    This means you’re going to be able to display either the current time or the time
+    when something occurred, such as a user entering their name. Try this code in
+    the Editor:
+
+
+    ```
+
+    ```python
+
+    import time
+
+    name=input("Enter login name: ")
+
+    print("Welcome", name, "%d")
+
+    print("User:", name, "logged in at", time.strftime("%H:%M"))
+
+    ```
+
+    ```
+
+
+    Try to extend it further to include day, month, year and so on.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_18_4.png)
+
+
+    # STEP 10
+
+
+    There’s a lot that can be done with the time module; some of it is quite complex
+    too, such as displaying the number of seconds since January 1st 1970. If you want
+    to drill down further into the time module, then in the Shell enter: help(time)
+    to display the current Python version help file for the time module.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_18_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '# # Opening Files
+
+
+    In Python you can read text and binary files in your programs. You can also write
+    to file, which is something we will look at next. Reading and writing to files
+    enables you to output and store data from your programs.
+
+
+    # ## OPEN, READ AND WRITE
+
+
+    In Python you create a file object, similar to creating a variable, only pass
+    in the file using the open() function. Files are usually categorised as text or
+    binary.
+
+
+    **STEP 1** Start by entering some text into your system''s text editor. The text
+    editor is best, not a word processor, as word processors include background formatting
+    and other elements. In our example, we have the poem The Cimmerian, by Robert
+    E Howard. You need to save the file as poem.txt.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_19_0.png)
+
+
+    **STEP 2** You use the open() function to pass the file into a variable as an
+    object. You can name the file object anything you like, but you will need to tell
+    Python the name and location of the text file you''re opening:
+
+
+    ```
+
+    ```
+
+    poem=open("/home/pi/Documents/Poem.txt")
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_19_1.png)
+
+
+    **STEP 3** If you now enter poem into the Shell, you will get some information
+    regarding the text file you''ve just asked to be opened. You can now use the poem
+    variable to read the contents of the file:
+
+
+    ```
+
+    ```
+
+    poem.read()
+
+    ```
+
+    ```
+
+
+    Note than a /n entry in the text represents a new line, as you used previously.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_19_2.png)
+
+
+    **STEP 4** If you enter poem.read() a second time you will notice that the text
+    has been removed from the file. You will need to enter: poem=open("/home/pi/Documents/Poem.txt")
+    again to recreate the file. This time, however, enter: print(poem.read())
+
+
+    ```
+
+    ```
+
+    poem=open("/home/pi/Documents/Poem.txt")
+
+    print(poem.read())
+
+    ```
+
+    ```
+
+
+    This time, the /n entries are removed in favour of new lines and readable text.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_19_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '# STEP 5
+
+
+    To expand this code, you can reopen the file using `a`, for access or append mode.
+    This will add any text at the end of the original line instead of wiping the file
+    and creating a new one. For example:
+
+
+    ```
+
+    ```python
+
+    t=open("/home/pi/Documents/text.txt","a")
+
+    t.write("\n")
+
+    t.write("You stand and survey your surroundings. On top of the table is some meat,
+    and a cup of water.\n")
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_22_0.png)
+
+
+    # STEP 8
+
+
+    You can pass variables to a file that you’ve created in Python. Perhaps you want
+    the value of Pi to be written to a file. You can call Pi from the math module,
+    create a new file and pass the output of Pi into the new file:
+
+
+    ```
+
+    ```python
+
+    import math
+
+    print("Value of Pi is: ",math.pi)
+
+    print("\nWriting to a file now...")
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_22_1.png)
+
+
+    # STEP 6
+
+
+    You can keep extending the text line by line, ending each with a new line (`\n`).
+    When you’re done, finish the code with `t.close()` and open the file in a text
+    editor to see the results:
+
+
+    ```
+
+    ```python
+
+    t.write("The door is made of solid oak with iron strips. It’s bolted from the
+    outside, locking you in. You are a prisoner!\n")
+
+    t.close()
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_22_2.png)
+
+
+    # STEP 9
+
+
+    Now let’s create a variable called pi and assign it the value of Pi:
+
+
+    ```
+
+    ```python
+
+    pi=math.pi
+
+    ```
+
+    ```
+
+
+    You also need to create a new file in which to write Pi to:
+
+
+    ```
+
+    ```python
+
+    t=open("/home/pi/Documents/pi.txt","w")
+
+    ```
+
+    ```
+
+
+    Remember to change your file location to your own particular system setup.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_22_3.png)
+
+
+    # STEP 7
+
+
+    There are various types of file access to consider using the `open()` function.
+    Each depends on how the file is accessed and even the position of the cursor.
+    For example, `r+` opens a file in read and write and places the cursor at the
+    start of the file.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_22_4.png)
+
+
+    # STEP 10
+
+
+    To finish, you can use string formatting to call the variable and write it to
+    the file, then commit the changes and close the file:
+
+
+    ```
+
+    ```python
+
+    t.write("Value of Pi is: {}".format(pi))
+
+    t.close()
+
+    ```
+
+    ```
+
+
+    You can see from the results that you’re able to pass any variable to a file.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_22_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: "# # Exceptions\n\nWhen coding, you’ll naturally come across some issues that\
+    \ are out of your control. Let’s assume you ask a user to divide two numbers and\
+    \ they try to divide by zero. This will create an error and break your code.\n\
+    \n# ## EXCEPTIONAL OBJECTS\n\nRather than stop the flow of your code, Python includes\
+    \ exception objects which handle unexpected errors in the code. You can combat\
+    \ errors by creating conditions where exceptions may occur.\n\n+   **STEP 1**\
+    \  \n+   You can create an exception error by simply trying to divide a number\
+    \ by zero. This will report back with the ZeroDivisionError: Division by zero\
+    \ message, as seen in the screenshot. The ZeroDivisionError part is the exception\
+    \ class, of which there are many.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_23_0.png)\n\
+    \n+   **STEP 2**  \n+   Most exceptions are raised automatically when Python comes\
+    \ across something that’s inherently wrong with the code. However, you can create\
+    \ your own exceptions that are designed to contain the potential error and react\
+    \ to it, as opposed to letting the code fail.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_23_1.png)\n\
+    \n+   **STEP 3**  \n+   You can use the functions raise exception to create our\
+    \ own error handling code within Python. Let’s assume your code has you warping\
+    \ around the cosmos, too much however results in a warp core breach. To stop the\
+    \ game from exiting due to the warp core going supernova, you can create a custom\
+    \ exception:\n\n```\n```python\nraise Exception(\"warp core breach\")\n```\n```\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_23_2.png)\n\n+   **STEP 4**  \n+  \
+    \ To trap any errors in the code you can encase the potential error within a try:\
+    \ block. This block consists of try, except, else, where the code is held within\
+    \ try; then if there’s an exception do something, else do something else.\n\n\
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_23_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# STEP 5\n\nFor example, use the divide by zero error. You can create an exception\
+    \ where the code can handle the error without Python quitting due to the problem:\n\
+    \n```\n```python\ntry:\n    a=int(input(\"Enter the first number: \"))\n    b=int(input(\"\
+    Enter the second number: \"))\n    print(a/b)\nexcept ZeroDivisionError:\n   \
+    \ print(\"You have tried to divide by zero!\")\nelse:\n    print(\"You didn’t\
+    \ divide by zero. Well done!\")\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_24_0.png)\n\
+    \n# STEP 8\n\nNaturally, you can quickly fix the issue by changing the “r” read\
+    \ only instance with a “w” for write. This, as you already know, will create the\
+    \ file and write the content then commit the changes to the file. The end result\
+    \ will report a different set of circumstances, in this case, a successful execution\
+    \ of the code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_24_1.png)\n\n# STEP\
+    \ 6\n\nYou can use exceptions to handle a variety of useful tasks. Using an example\
+    \ from our previous tutorials, let’s assume you want to open a file and write\
+    \ to it:\n\n```\n```python\ntry:\n    txt = open(\"/home/pi/Documents/textfile.txt\"\
+    , \"r\")\n    txt.write(\"This is a test. Normal service will shortly resume!\"\
+    )\nexcept IOError:\n    print (\"Error: unable to write the file. Check permissions\"\
+    )\nelse:\n    print (\"Content written to file successfully. Have a nice day.\"\
+    )\n    txt.close()\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_24_2.png)\n\
+    \n# STEP 9\n\nYou can also use a finally: block, which works in a similar fashion\
+    \ but you can’t use else with it. To use our example from Step 6:\n\n```\n```python\n\
+    try:\n    txt = open(\"/home/pi/Documents/textfile.txt\", \"r\")\n    try:\n \
+    \       txt.write(\"This is a test. Normal service will shortly resume!\")\n \
+    \   finally:\n        print (\"Content written to file successfully. Have a nice\
+    \ day.\")\n        txt.close()\nexcept IOError:\n    print (\"Error: unable to\
+    \ write the file. Check permissions\")\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_24_3.png)\n\
+    \n# STEP 7\n\nObviously this won’t work due to the file textfile.txt being opened\
+    \ as read only (the “r” part). So in this case rather than Python telling you\
+    \ that you’re doing something wrong, you’ve created an exception using the IOError\
+    \ class informing the user that the permissions are incorrect.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_24_4.png)\n\
+    \n# STEP 10\n\nAs before an error will occur as you’ve used the “r” read-only\
+    \ permission. If you change it to a “w”, then the code will execute without the\
+    \ error being displayed in the IDLE Shell. Needless to say, it can be a tricky\
+    \ getting the exception code right the first time. Practise though, and you will\
+    \ get the hang of it.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_24_5.png)"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "# STEP 5\n\nYou can add a new line to the square code to add some colour:\n\
+    \n```\n```python\nturtle.color(\"Red\")\n```\n```\n\nThen you can even change\
+    \ the character to an actual turtle by entering:\n\n```\n```python\nturtle.shape(\"\
+    turtle\")\n```\n```\n\nYou can also use the command `turtle.begin_fill()`, and\
+    \ `turtle.end_fill()` to fill in the square with the chosen colours; red outline,\
+    \ yellow fill in this case.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_26_0.png)\n\
+    \n# STEP 6\n\nYou can see that the Turtle module can draw out some pretty good\
+    \ shapes and become a little more complex as you begin to master the way it works.\
+    \ Enter this example:\n\n```\n```python\nfrom turtle import *\ncolor('red', 'yellow')\n\
+    begin_fill()\nwhile True:\n    forward(200)\n    left(170)\n    if abs(pos())\
+    \ < 1:\n        break\nend_fill()\ndone()\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_26_1.png)\n\
+    \nIt’s a different method, but very effective.\n\n# STEP 7\n\nAnother way in which\
+    \ you can display graphics is by using the Pygame module. There are numerous ways\
+    \ in which pygame can help you output graphics to the screen but for now let’s\
+    \ look at displaying a predefined image. Start by opening a browser and finding\
+    \ an image, then save it to the folder where you save your Python code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_26_2.png)\n\
+    \n# STEP 8\n\nNow let’s get the code by importing the pygame module:\n\n```\n\
+    ```python\nimport pygame\npygame.init()\n\nimg = pygame.image.load(\"RPi.png\"\
+    )\n\nwhite = (255, 255, 255)\nw = 900\nh = 450\nscreen = pygame.display.set_mode((w,\
+    \ h))\nscreen.fill((white))\n\nscreen.fill((white))\nscreen.blit(img,(0,0))\n\
+    pygame.display.flip()\n\nwhile True:\n    for event in pygame.event.get():\n \
+    \       if event.type == pygame.QUIT:\n            pygame.quit()\n```\n```\n\n\
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_26_3.png)\n\n# STEP 9\n\nIn the previous\
+    \ step you imported pygame, initiated the pygame engine and asked it to import\
+    \ our saved Raspberry Pi logo image, saved as RPi.png. Next you defined the background\
+    \ colour of the window to display the image and the window size as per the actual\
+    \ image dimensions. Finally you have a loop to close the window.\n\n```\n```python\n\
+    w = 900\nh = 450\nscreen = pygame.display.set_mode((w, h))\nscreen.fill((white))\n\
+    \nscreen.fill((white))\nscreen.blit(img,(0,0))\npygame.display.flip()\n\nwhile\
+    \ True:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n\
+    \            pygame.quit()\n```\n```\n\n# STEP 10\n\nPress F5 to save and execute\
+    \ the code and your image will be displayed in a new window. Have a play around\
+    \ with the colours, sizes and so on and take time to look up the many functions\
+    \ within the pygame module too.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_26_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# Using Modules
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_27_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # Using Modules
+
+
+    A Python module is simply a Python-created source file which contains the necessary
+    code for classes, functions and global variables. You can bind and reference modules
+    to extend functionality and create even more spectacular Python programs.
+
+
+    Want to see how to improve these modules to add a little something extra to your
+    code? Then read on and learn how they can be used to fashion fantastic code.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# Calendar Module
+
+
+    Beyond the time module, the calendar module can produce some interesting results
+    when executed within your code. It does far more than simply display the date
+    in the time module-like format, you can actually call up a wall calendar type
+    display.
+
+
+    # WORKING WITH DATES
+
+
+    The calendar module is built into Python 3. However, if for some reason it’s not
+    installed you can add it using `pip install calendar` as a Windows administrator
+    or `sudo pip install calendar` for Linux and macOS.
+
+
+    STEP 1 — Launch Python 3 and enter: `import calendar` to call up the module and
+    its inherent functions. Once it’s loaded into memory, start by entering:
+
+
+    ```
+
+    sep=calendar.TextCalendar(calendar.SUNDAY)
+
+    sep.prmonth(2017, 9)
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_29_0.png)
+
+
+    STEP 2 — You can see that the days of September 2017 are displayed in a wall calendar
+    fashion. Naturally you can change the 2017, 9 part of the second line to any year
+    and month you want, a birthday for example (1973, 6). The first line configures
+    TextCalendar to start its weeks on a Sunday; you can opt for Monday if you prefer.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_29_1.png)
+
+
+    STEP 3 — There are numerous functions within the calendar module that may be of
+    interest to you when forming your own code. For example, you can display the number
+    of leap years between two specific years:
+
+
+    ```
+
+    leaps=calendar.leapdays(1900, 2018)
+
+    print(leaps)
+
+    ```
+
+
+    The result is 29, starting from 1904 onward.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_29_2.png)
+
+
+    STEP 4 — You could even fashion that particular example into a piece of working,
+    user interactive Python code:
+
+
+    ```
+
+    import calendar
+
+    print(“>>>>>>>>Leap Year Calculator<<<<<<<<\n”)
+
+    y1=int(input(“Enter the first year: “))
+
+    y2=int(input(“Enter the second year: “))
+
+    leaps=calendar.leapdays(y1, y2)
+
+    print(“Number of leap years between”, y1, “and”, y2, “is:”, leaps)
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_29_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "# STEP 5\n\nYou can also create a program that will display all the days, weeks\
+    \ and months within a given year:\n\n```\n```python\nimport calendar\nyear=int(input(“Enter\
+    \ the year to display: “))\nprint(calendar.prcal(year))\n```\n```\n\nWe’re sure\
+    \ you’ll agree that’s quite a handy bit of code to have to hand.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_30_0.png)\n\
+    \n# STEP 8\n\nYou’re also able to print the individual months or days of the week:\n\
+    \n```\n```python\nimport calendar\nfor name in calendar.month_name:\n    print(name)\n\
+    \nimport calendar\nfor name in calendar.day_name:\n    print(name)\n```\n```\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_30_1.png)\n\n# STEP 6\n\nInterestingly\
+    \ we can also list the number of days in a month by using a simple for loop:\n\
+    \n```\n```python\nimport calendar\ncal=calendar.TextCalendar(calendar.SUNDAY)\n\
+    for i in cal.itermonthdays(2018, 6):\n    print(i)\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_30_2.png)\n\
+    \n# STEP 9\n\nThe calendar module also allows us to write the functions in HTML,\
+    \ so that you can display it on a website. Let’s start by creating a new file:\n\
+    \n```\n```python\nimport calendar\ncal=open(“/home/pi/Documents/cal.html”, “w”)\n\
+    c=calendar.HTMLCalendar(calendar.SUNDAY)\ncal.write(c.formatmonth(2018, 1))\n\
+    cal.close()\n```\n```\n\nThis code will create an HTML file called cal, open it\
+    \ with a browser and it displays the calendar for January 2018.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_30_3.png)\n\
+    \n# STEP 7\n\nYou can see that code produced some zeros at the beginning, this\
+    \ is due to the starting day of the week, Sunday in this case, and overlapping\
+    \ days from the previous month. So the counting of the days will start on Friday\
+    \ 1st June 2018 and will total 30 as the output correctly displays.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_30_4.png)\n\
+    \n# STEP 10\n\nOf course, you can modify that to display a given year as a web\
+    \ page calendar:\n\n```\n```python\nimport calendar\n\nyear=int(input(“Enter the\
+    \ year to display as a webpage: “))\ncal=open(“/home/pi/Documents/cal.html”, “w”)\n\
+    cal.write(calendar.HTMLCalendar(calendar.MONDAY).formatyear(year))\ncal.close()\n\
+    ```\n```\n\nThis code asks the user for a year, then creates the necessary webpage.\
+    \ Remember to change your file destination.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_30_5.png)"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# OS Module
+
+
+    The OS module allows you to interact directly with the built-in commands found
+    in your operating system. Commands vary depending on the OS you’re running, as
+    some will work with Windows whereas others will work with Linux and macOS.
+
+
+    # INTO THE SYSTEM
+
+
+    One of the primary features of the OS module is the ability to list, move, create,
+    delete and otherwise interact with files stored on the system, making it the perfect
+    module for backup code.
+
+
+    +   **STEP 1** — You can start the OS module with some simple functions to see
+    how it interacts with the operating system environment that Python is running
+    on. If you’re using Linux or the Raspberry Pi, try this:
+
+
+    ```
+
+    ```python
+
+    import os
+
+    home=os.getcwd()
+
+    print(home)
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_31_0.png)
+
+
+    +   **STEP 2** — The returned result from printing the variable home is the current
+    user’s home folder on the system. In our example that’s `/home/pi`; it will be
+    different depending on the user name you log in as and the operating system you
+    use. For example, Windows 10 will output: `C:\Program Files (x86)\Python36-32`.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_31_1.png)
+
+
+    +   **STEP 3** — The Windows output is different as that’s the current working
+    directory of Python, as determined by the system; as you might suspect, the `os.getcwd()`
+    function is asking Python to retrieve the Current Working Directory. Linux users
+    will see something along the same lines as the Raspberry Pi, as will macOS users.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_31_2.png)
+
+
+    +   **STEP 4** — Yet another interesting element to the OS module, is its ability
+    to launch programs that are installed in the host system. For instance, if you
+    wanted to launch the Chromium browser from within a Python program you can use
+    the command:
+
+
+    ```
+
+    ```python
+
+    import os
+
+    browser=os.system(“/usr/bin/chromium-browser”)
+
+    ```
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_31_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# # Random Module\n\nThe random module is one you will likely come across many\
+    \ times in your Python programming lifetime; as the name suggests, it’s designed\
+    \ to create random numbers or letters. However, it’s not exactly random but it\
+    \ will suffice for most needs.\n\n# ## RANDOM NUMBERS\n\nThere are numerous functions\
+    \ within the random module, which when applied can create some interesting and\
+    \ very useful Python programs.\n\n**STEP 1**  \nJust as with other modules you\
+    \ need to import random before you can use any of the functions we’re going to\
+    \ look at in this tutorial. Let’s begin by simply printing a random number from\
+    \ 1 to 5:\n\n```\n```python\nimport random\nprint(random.randint(0,5))\n```\n\
+    ```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_33_0.png)\n\n**STEP 2**  \nIn\
+    \ our example the number four was returned. However, enter the print function\
+    \ a few more times and it will display different integer values from the set of\
+    \ numbers given, zero to five. The overall effect, although pseudo-random, is\
+    \ adequate for the average programmer to utilise in their code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_33_1.png)\n\
+    \n**STEP 3**  \nFor a bigger set of numbers, including floating point values,\
+    \ you can extend the range by using the multiplication sign:\n\n```\n```python\n\
+    import random\nprint(random.random() *100)\n```\n```\n\nWill display a floating\
+    \ point number between 0 and 100, to the tune of around fifteen decimal points.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_33_2.png)\n\n**STEP 4**  \nHowever,\
+    \ the random module isn’t used exclusively for numbers. You can use it to select\
+    \ an entry from a list from random, and the list can contain anything:\n\n```\n\
+    ```python\nimport random\nrandom.choice([“Conan”, “Valeria”, “Belit”])\n```\n\
+    ```\n\nThis will display one of the names of our adventurers at random, which\
+    \ is a great addition to a text adventure game.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_33_3.png)\n\
+    \n**STEP 5**  \nYou can extend the previous example somewhat by having random.choice()\
+    \ select from a list of mixed variables. For instance:\n\n```\n```python\nimport\
+    \ random\nlst=[“David”, 44, “BDM Publications”, 3245.23, “Pi”, True, 3.14, “Python”]\n\
+    rnd=random.choice(lst)\nprint(rnd)\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_33_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: "# STEP 6\n\nInterestingly, you can also use a function within the random module\
+    \ to shuffle the items in the list, thus adding a little more randomness into\
+    \ the equation:\n\n```\n```python\nrandom.shuffle(lst)\nprint(lst)\n```\n```\n\
+    \nThis way, you can keep shuffling the list before displaying a random item from\
+    \ it.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_34_0.png)\n\n# STEP 7\n\nUsing\
+    \ shuffle, you can create an entirely random list of numbers. For example, within\
+    \ a given range:\n\n```\n```python\nimport random\nlst=[i for i in range(20)]\n\
+    random.shuffle(lst)\nprint(lst)\n```\n```\n\nKeep shuffling the list and you can\
+    \ have a different selection of items from 0 to 20 every time.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_34_1.png)\n\
+    \n# STEP 8\n\nYou can also select a random number from a given range in steps,\
+    \ using the start, stop, step loop:\n\n```\n```python\nimport random\nfor i in\
+    \ range(10):\n    print(random.randrange(0, 200, 7))\n```\n```\n\nResults will\
+    \ vary but you get the general idea as to how it works.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_34_2.png)\n\
+    \n# STEP 9\n\nLet’s use an example piece of code which flips a virtual coin ten\
+    \ thousand times and counts how many times it will land on heads or tails:\n\n\
+    ```\n```python\nimport random\noutput={\"Heads\":0, \"Tails\":0}\ncoin=list(output.keys())\n\
+    \nfor i in range(10000):\n    output[random.choice(coin)]+=1\n\nprint(\"Heads:\"\
+    , output[\"Heads\"])\nprint(\"Tails:\", output[\"Tails\"])\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_34_3.png)\n\
+    \n# STEP 10\n\nHere’s an interesting piece of code. Using a text file containing\
+    \ 466 thousand words, you can pluck a user generated number of words from the\
+    \ file (text file found at: **www.github.com/dwyl/english-words**):\n\n```\n```python\n\
+    import random\n\nprint(\">>>>>>>>>>Random Word Finder<<<<<<<<<<\")\nprint(\"\\\
+    nUsing a 466K English word text file I can pick any words at random.\\n\")\n\n\
+    wds=int(input(\"\\nHow many words shall I choose?\\n\"))\n\nwith open(\"/home/pi/Downloads/words.txt\"\
+    , \"rt\") as f:\n    words = f.readlines()\nwords = [w.rstrip() for w in words]\n\
+    \nprint(\"--------------------\")\n\nfor w in random.sample(words, wds):\n   \
+    \ print(w)\n\nprint(\"--------------------\")\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_34_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "# Tkinter Module\n\nWhile running your code from the command line, or even\
+    \ in the Shell, is perfectly fine, Python is capable of so much more. The Tkinter\
+    \ module enables the programmer to set up a Graphical User Interface to interact\
+    \ with the user, and it’s surprisingly powerful too.\n\n# GETTING GUI\n\nTkinter\
+    \ is easy to use but there’s a lot more you can do with it. Let’s start by seeing\
+    \ how it works and getting some code into it. Before long you will discover just\
+    \ how powerful this module really is.\n\n**STEP 1** Tkinter is usually built into\
+    \ Python 3. However, if it’s available when you enter `import tkinter`, then you\
+    \ need to `pip install tkinter` from the command prompt. We can start to import\
+    \ modules differently than before, to save on typing and by importing all their\
+    \ contents:\n\n```\nimport tkinter as tk\nfrom tkinter import *\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_35_0.png)\n\
+    \n**STEP 3** The ideal approach is to add `mainloop()` into the code to control\
+    \ the Tkinter event loop, but we’ll get to that soon. You’ve just created a Tkinter\
+    \ widget and there are several more we can play around with:\n\n```\nbtn=Button()\n\
+    btn.pack()\nbtn[“text”]=”Hello everyone!”\n```\n\nThe first line focuses on the\
+    \ newly created window. Click back into the Shell and continue the other lines.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_35_1.png)\n\n**STEP 2** It’s not recommended\
+    \ to import everything from a module using the asterisk but it won’t do any harm\
+    \ normally. Let’s begin by creating a basic GUI window, enter:\n\n```\nwind=Tk()\n\
+    ```\n\nThis creates a small, basic window. There’s not much else to do at this\
+    \ point but click the X in the corner to close the window.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_35_2.png)\n\
+    \n**STEP 4** You can combine the above into a New File:\n\n```\nimport tkinter\
+    \ as tk\nfrom tkinter import *\nbtn=Button()\nbtn.pack()\nbtn[“text”]=”Hello everyone!”\n\
+    ```\n\nThen add some button interactions:\n\n```\ndef click():\n    print(“You\
+    \ just clicked me!”)\nbtn[“command”]=Click\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_35_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: "# ### STEP 5\n\nSave and execute the code from Step 4 and a window appears\
+    \ with 'Hello everyone!' inside. If you click the Hello everyone! button, the\
+    \ Shell will output the text 'You just clicked me!'. It's simple but shows you\
+    \ what can be achieved with a few lines of code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_36_0.png)\n\
+    \n# ### STEP 6\n\nYou can also display both text and images within a Tkinter window.\
+    \ However, only GIF, PGM or PPM formats are supported. So find an image and convert\
+    \ it before using the code. Here's an example using the BDM Publishing logo:\n\
+    \n```\n~~~python\nfrom tkinter import *\n\nroot = Tk()\nlogo = PhotoImage(file=\"\
+    /home/pi/Downloads/BDM_logo.gif\")\nw1 = Label(root, root.title(\"BDM Publications\"\
+    ), image=logo).pack(side=\"right\")\ncontent = \"\"\" From its humble beginnings\
+    \ in 2004,\nthe BDM brand quickly grew from a single publication\nproduced by\
+    \ a team of just two to one of the biggest\nnames in global bookazine publishing,\
+    \ for two simple\nreasons. Our passion and commitment to deliver the\nvery best\
+    \ product each and every volume. While\nthe company has grown with a portfolio\
+    \ of over 250\npublications delivered by our international staff,\nthe foundation\
+    \ that it has been built upon remains\nthe same, which is why we believe BDM isn’t\
+    \ just\nthe first choice it’s the only choice for the smart\nconsumer. \"\"\"\n\
+    w2 = Label(root,\n    justify=LEFT,\n    padx = 10,\n    text=content).pack(side=\"\
+    left\")\nroot.mainloop()\n~~~\n```\n\n# ### STEP 7\n\nThe previous code is quite\
+    \ weighty, mostly due to the content variable holding a part of BDM's About page\
+    \ from the company website. You can obviously change the content, the root.title\
+    \ and the image to suit your needs.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_36_1.png)\n\
+    \n# ### STEP 8\n\nYou can create radio buttons too. Try:\n\n```\n~~~python\nfrom\
+    \ tkinter import *\n\nroot = Tk()\n\nv = IntVar()\n\nLabel(root, root.title(\"\
+    Options\"), text=\"\"\"Choose\na preferred language:\"\"\",\n    justify = LEFT,\
+    \ padx = 20).pack()\nRadiobutton(root,\n    text=\"Python\",\n    padx = 20,\n\
+    \    variable=v,\n    value=1).pack(anchor=W)\nRadiobutton(root,\n    text=\"\
+    C++\",\n    padx = 20,\n    variable=v,\n    value=2).pack(anchor=W)\n\nmainloop()\n\
+    ~~~\n```\n\n# ### STEP 9\n\nYou can also create check boxes, with buttons and\
+    \ output to the Shell:\n\n```\n~~~python\nfrom tkinter import *\nroot = Tk()\n\
+    \ndef var_states():\n    print(\"Warrior: %d,\\nMage: %d\" % (var1.get(), var2.get()))\n\
+    \nLabel(root, root.title(\"Adventure Game\"),\n    text=\">>>>>>>>>>Your adventure\
+    \ role<<<<<<<<<<\").grid(row=0, sticky=N)\nvar1 = IntVar()\nCheckbutton(root,\
+    \ text=\"Warrior\", variable=var1).grid(row=1, sticky=W)\nvar2 = IntVar()\nCheckbutton(root,\
+    \ text=\"Mage\", variable=var2).grid(row=2, sticky=W)\nButton(root, text=\"Quit\"\
+    , command=root.destroy).grid(row=3, sticky=W, pady=4)\nButton(root, text=\"Show\"\
+    , command=var_states).grid(row=3, sticky=E, pady=4)\n\nmainloop()\n~~~\n```\n\n\
+    # ### STEP 10\n\nThe code from Step 9 introduced some new geometry elements into\
+    \ Tkinter. Note the sticky=N, E and W arguments. These describe the locations\
+    \ of the check boxes and buttons (North, East, South and West). The row argument\
+    \ places them on separate rows. Have a play around and see what you get.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_36_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: "# STEP 4\n\nIf the Pygame window still won’t close don’t worry, it’s just a\
+    \ discrepancy between the IDLE (which is written with Tkinter) and the Pygame\
+    \ module. If you run your code via the command line, it closes perfectly well.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_38_0.png)\n\n# STEP 5\n\nYou’re going\
+    \ to shift the code around a bit now, running the main Pygame code within a while\
+    \ loop; it makes it neater and easier to follow. We’ve downloaded a graphic to\
+    \ use and we need to set some parameters for pygame:\n\n```\n```python\nimport\
+    \ pygame\npygame.init()\n\nrunning=True\n\nwhile running:\n    gamewindow=pygame.display.set_mode((800,600))\n\
+    \    pygame.display.set_caption(“Adventure Game”)\n    black=(0,0,0)\n    white=(255,255,255)\n\
+    ```\n```\n\n```\n```python\nimg=pygame.image.load(“/home/pi/Downloads/sprite1.png”)\n\
+    \ndef sprite(x,y):\n    gamewindow.blit(img, (x,y))\n\nx=(800*0.45)\ny=(600*0.8)\n\
+    \ngamewindow.fill(white)\nsprite(x,y)\npygame.display.update()\n\nfor event in\
+    \ pygame.event.get():\n    if event.type==pygame.QUIT:\n        running=False\n\
+    ```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_38_1.png)\n\n# STEP 6\n\n\
+    Let’s quickly go through the code changes. We’ve defined two colours, black and\
+    \ white together with their respective RGB colour values. Next we’ve loaded the\
+    \ downloaded image called sprite1.png and allocated it to the variable img; and\
+    \ also defined a sprite function and the Blit function will allow us to eventually\
+    \ move the image.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_38_2.png)\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_38_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: "# STEP 9\n\nYou can now implement a few additions and utilise some previous\
+    \ tutorial code. The new elements are the subprocess module, of which one function\
+    \ allows us to launch a second Python script from within another; and we're going\
+    \ to create a New File called pysamentext.py:\n\n```\n```python\nimport pygame\n\
+    import time\nimport subprocess\npygame.init()\nscreen = pygame.display.set_mode((800,\
+    \ 250))\nclock = pygame.time.Clock()\n\nfont = pygame.font.Font(None, 25)\n\n\
+    pygame.time.set_timer(pygame.USEREVENT, 200)\n\ndef text_generator(text):\n  \
+    \  tmp = ''\n    for letter in text:\n        tmp += letter\n        if letter\
+    \ != ' ':\n            yield tmp\n\nclass DynamicText(object):\n    def __init__(self,\
+    \ font, text, pos, autoreset=False):\n        self.done = False\n        self.font\
+    \ = font\n        self.text = text\n        self._gen = text_generator(self.text)\n\
+    \        self.pos = pos\n        self.autoreset = autoreset\n        self.update()\n\
+    \n    def reset(self):\n        self._gen = text_generator(self.text)\n      \
+    \  self.done = False\n        self.update()\n\n    def update(self):\n       \
+    \ if not self.done:\n            try: self.rendered = self.font.render(next(self._gen),\
+    \ True, (0, 128, 0))\n            except StopIteration:\n                self.done\
+    \ = True\n                time.sleep(10)\n                subprocess.Popen(\"\
+    python3 /home/pi/Documents/Python\\ Code/pygame1.py 1\", shell=True)\n\n    def\
+    \ draw(self, screen):\n        screen.blit(self.rendered, self.pos)\n\ntext=(\"\
+    A long time ago, a barbarian strode from the frozen north. Sword in hand...\"\
+    )\nmessage = DynamicText(font, text, (65, 120), autoreset=True)\n\nwhile True:\n\
+    \    for event in pygame.event.get():\n        if event.type == pygame.QUIT: break\n\
+    \        if event.type == pygame.USEREVENT: message.update()\n    else:\n    \
+    \    screen.fill(pygame.color.Color('black'))\n        message.draw(screen)\n\
+    ```\n```\n\n```\n```python\npygame.display.flip()\nclock.tick(60)\ncontinue\n\
+    break\n\npygame.quit()\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_40_0.png)\n\
+    \n# STEP 10\n\nWhen you run this code it will display a long, narrow Pygame window\
+    \ with the intro text scrolling to the right. After a pause of ten seconds, it\
+    \ then launches the main game Python script where you can move the warrior sprite\
+    \ around. Overall the effect is quite good but there's always room for improvement.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_40_1.png)\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_40_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "# Create Your Own Modules\n\n# STEP 6\n\nBack to the basic_math.py window:\
+    \ at the top of the code enter:\n\n```\n```python\nfrom minimath import *\n```\n\
+    ```\n\nThis will import the function definitions as a module. Press F5 to save\
+    \ and execute the program to see it in action.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_42_0.png)\n\
+    \n# STEP 7\n\nYou can now use the code further to make the program a little more\
+    \ advanced, utilising the newly created module to its full. Include some user\
+    \ interaction. Start by creating a basic menu the user can choose from:\n\n```\n\
+    ```python\nprint(\"Select operation.\\n\")\nprint(\"1.Times by two\")\nprint(\"\
+    2.Times by Three\")\nprint(\"3.Square\")\nprint(\"4.Power of\")\n\nchoice = input(\"\
+    \\nEnter choice (1/2/3/4):\")\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_42_1.png)\n\
+    \n# STEP 8\n\nNow we can add the user input to get the number the code will work\
+    \ on:\n\n```\n```python\nnum1 = int(input(\"\\nEnter number: \"))\n```\n```\n\n\
+    This will save the user-entered number as the variable num1.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_42_2.png)\n\
+    \n# STEP 9\n\nFinally, you can now create a range of if statements to determine\
+    \ what to do with the number and utilise the newly created function definitions:\n\
+    \n```\n```python\nif choice == '1':\n    print(timestwo(num1))\n\nelif choice\
+    \ == '2':\n    print(timesthree(num1))\n\nelif choice == '3':\n    print(square(num1))\n\
+    \nelif choice == '4':\n    num2 = int(input(\"Enter second number: \"))\n    print(power(num1,\
+    \ num2))\nelse:\n    print(\"Invalid input\")\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_42_3.png)\n\
+    \n# STEP 10\n\nNote that for the last available options, the Power of choice,\
+    \ we’ve added a second variable, num2. This passes a second number through the\
+    \ function definition called power. Save and execute the program to see it in\
+    \ action.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_42_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# C++ Input/Output
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_43_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_44_0.png)
+
+
+    # C++ input/output
+
+
+    There’s a satisfying feeling when you program code that asks the user for input,
+    then uses that input to produce something that the user can see. Even if it’s
+    simply asking for someone’s name, and displaying a personal welcome message, it’s
+    a big leap forward.
+
+
+    User interaction, character literals, defining constants and file input and output
+    are all covered in the following pages. All of which help you to understand how
+    a C++ program works better.'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: "# STEP 5\n\nThe principal works the same as the previous code. The user’s input,\
+    \ their name, is stored in a string, because it contains multiple characters,\
+    \ and retrieved in the second `cout` line. As long as the variable ‘name’ doesn’t\
+    \ change, then you can recall it wherever you like in your code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_46_0.png)\n\
+    \n# STEP 6\n\nYou can chain input requests to the user but just make sure you\
+    \ have a valid variable to store the input to begin with. Let’s assume you want\
+    \ the user to enter two whole numbers:\n\n```\n```cpp\n#include <iostream>\nusing\
+    \ namespace std;\n\nint main ()\n{\n    int num1, num2;\n\n    cout << “Enter\
+    \ two whole numbers: “;\n    cin >> num1 >> num2;\n\n    cout << “you entered\
+    \ “ << num1 << “ and “ << num2 << “\\n”;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_46_1.png)\n\
+    \n# STEP 7\n\nLikewise, inputted data can be manipulated once you have it stored\
+    \ in a variable. For instance, ask the user for two numbers and do some maths\
+    \ on them:\n\n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main\
+    \ ()\n{\n    float num1, num2;\n\n    cout << “Enter two numbers: \\n”;\n    cin\
+    \ >> num1 >> num2;\n\n    cout << num1 << “ + “ << num2 << “ is: “ << num1 + num2\
+    \ << “\\n”;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_46_2.png)\n\
+    \n# STEP 8\n\nWhile `cin` works well for most input tasks, it does have a limitation.\
+    \ `Cin` always considers spaces as a terminator, so it’s designed for just single\
+    \ words not multiple words. However, `getline` takes `cin` as the first argument\
+    \ and the variable as the second:\n\n```\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main ()\n{\n    string mystr;\n    cout << “Enter a sentence: \\\
+    n”;\n    getline(cin, mystr);\n\n    cout << “Your sentence is: “ << mystr.size()\
+    \ <<\n    “ characters long.\\n”;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_46_3.png)\n\
+    \n# STEP 9\n\nBuild and execute the code, then enter a sentence with spaces. When\
+    \ you’re done the code reads the number of characters. If you remove the getline\
+    \ line and replace it with cin >> mystr and try again, the result displays the\
+    \ number of characters up to the first space.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_46_4.png)\n\
+    \n# STEP 10\n\nGetline is usually a command that new C++ programmers forget to\
+    \ include. The terminating white space is annoying when you can’t figure out why\
+    \ your code isn’t working. In short, it’s best to use `getline(cin, variable)`\
+    \ in future:\n\n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint\
+    \ main ()\n{\n    string name;\n    cout << “Enter your full name: \\n”;\n   \
+    \ getline(cin, name);\n\n    cout << “\\nHello, “ << name << “\\n”;\n}\n```\n\
+    ```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_46_5.png)"
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "# Character Literals\n\nIn C++ a literal is an object or variable that once\
+    \ defined remains the same throughout the code. However, a character literal is\
+    \ defined by a backslash, such as the `\\n` you’ve been using at the end of a\
+    \ cout statement to signify a new line.\n\n# ESCAPE SEQUENCE\n\nWhen used in something\
+    \ like a cout statement, character literals are also called Escape Sequence Codes.\
+    \ They allow you to insert a quote, an alert, new line and much more.\n\n**STEP\
+    \ 1** Create a new C++ file and enter the relevant headers:\n\n```\n```cpp\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main ()\n{\n\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_47_0.png)\n\
+    \n**STEP 2** You’ve already experienced the `\\n` character literal placing a\
+    \ new line wherever it’s called. The line: `cout << \"Hello\\n\" << \"I’m a C++\\\
+    n\" << \"Program\\n\";` outputs three lines of text, each starting after the last\
+    \ `\\n`.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_47_1.png)\n\n**STEP 3** If\
+    \ you wanted to insert speech quotes inside a cout statement, you would have to\
+    \ use a backslash as it already uses quotes:\n\n```\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main ()\n{\n    cout << “Hello, user. This is how\
+    \ to use \\\\\"quotes\\\\\".”;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_47_2.png)\n\
+    \n**STEP 4** There’s even a character literal that can trigger an alarm. In Windows\
+    \ 10, it’s the notification sound that chimes when you use `\\a`. Try this code,\
+    \ and turn up your sound.\n\n```\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main ()\n{\n    cout << “ALARM! \\\\a”;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_47_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: "# A HANDY CHART\n\nThere are numerous character literals, or escape sequence\
+    \ codes, to choose from. We therefore thought it would be good for you to have\
+    \ a handy chart available, for those times when you need to insert a code.\n\n\
+    | ESCAPE SEQUENCE CODE | CHARACTER |\n| --- | --- |\n| `\\\\` | Backslash |\n\
+    | `\\'` | Single Quote |\n| `\\\"` | Double Quote (Speech Marks) |\n| `\\?` |\
+    \ Question Mark |\n| `\\a` | Alert/Alarm |\n| `\\b` | Backspace |\n| `\\f` | Form\
+    \ Feed |\n| `\\n` | New Line |\n| `\\r` | Carriage Return |\n| `\\t` | Horizontal\
+    \ Tab |\n| `\\v` | Vertical Tab |\n| `\\0` | Null Character |\n| `\\uxxxx` | Unicode\
+    \ (UTF-8) |\n| `\\Uxxxxxxxx` | Unicode (UTF-16) |\n\n# ## UNICODE CHARACTERS (UTF-8)\n\
+    \nUnicode characters are symbols or characters that are standard across all platforms.\
+    \ For example, the copyright symbol, that can be entered via the keyboard by entering\
+    \ the Unicode code, followed by ALT+X. In the case of the copyright symbol enter:\
+    \ 00A9 Alt+X. In C++ code, you would enter:\n\n```\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main ()\n{\n    cout << \"\\u00A9\";\n}\n```\n```\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_48_0.png)\n\n# ## UNICODE CHARACTER\
+    \ TABLE\n\nA complete list of the available Unicode characters can be found at\
+    \ **www.unicode-table.com/en/**. Hover your mouse over the character to see its\
+    \ unique code to enter in C++.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_48_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: "# # Defining Constants\n\nConstants are fixed values in your code. They can\
+    \ be any basic data type but as the name suggests their value remains constant\
+    \ throughout the entire code. There are two separate ways to define a constant\
+    \ in C++, the #define pre-processor and const.\n\n# # #DEFINE\n\nThe pre-processors\
+    \ are instructions to the compiler to pre-process the information before it goes\
+    \ ahead and compiles the code. #include is a pre-processor as is #define.\n\n\
+    # ### STEP 1\n\nYou can use the #define pre-processor to define any constants\
+    \ you want in our code. Start by creating a new C++ file complete with the usual\
+    \ headers:\n\n```\n~~~cpp\n#include <iostream>\nusing namespace std;\n\nint main\
+    \ ()\n{\n}\n~~~\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_49_0.png)\n\n\
+    # ### STEP 2\n\nNow let's assume your code has three different constants: length,\
+    \ width and height. You can define them with:\n\n```\n~~~cpp\n#include <iostream>\n\
+    using namespace std;\n#define LENGTH 50\n#define WIDTH 40\n#define HEIGHT 60\n\
+    \nint main ()\n{\n}\n~~~\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_49_1.png)\n\
+    \n# ### STEP 3\n\nNote the capitals for defined constants, it's considered good\
+    \ programming practice to define all constants in capitals. Here, the assigned\
+    \ values are 50, 40 and 60, so let's call them up:\n\n```\n~~~cpp\n#include <iostream>\n\
+    using namespace std;\n\n#define LENGTH 50\n#define WIDTH 40\n#define HEIGHT 60\n\
+    \nint main ()\n{\n    cout << \"Length is: \" << LENGTH << \"\\n\";\n    cout\
+    \ << \"Width is: \" << WIDTH << \"\\n\";\n    cout << \"Height is: \" << HEIGHT\
+    \ << \"\\n\";\n}\n~~~\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_49_2.png)\n\
+    \n# ### STEP 4\n\nBuild and run the code. Just as expected, it displays the values\
+    \ for each of the constants created. It's worth noting that you don't need a semicolon\
+    \ when you're defining a constant with the #define keyword.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_49_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: "**STEP 5** You can also define other elements as a constant. For example, instead\
+    \ of using `\\n` for a newline in the `cout` statement, you can define it at the\
+    \ start of the code:\n\n```\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    \n#define LENGTH 50\n#define WIDTH 40\n#define HEIGHT 60\n#define NEWLINE '\\\
+    n'\n\nint main ()\n{\n    cout << \"Length is: \" << LENGTH << NEWLINE;\n    cout\
+    \ << \"Width is: \" << WIDTH << NEWLINE;\n    cout << \"Height is: \" << HEIGHT\
+    \ << NEWLINE;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_50_0.png)\n\
+    \n**STEP 6** The code, when built and executed, does exactly the same as before,\
+    \ using the new constant NEWLINE to insert a newline in the cout statement. Incidentally,\
+    \ creating a newline constant isn’t a good idea unless you’re making it smaller\
+    \ than `\\n` or even the endl command.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_50_1.png)\n\
+    \n**STEP 7** Defining a constant is a good way of initialising your base values\
+    \ at the start of your code. You can define that your game has three lives, or\
+    \ even the value of PI without having to call up the C++ math library:\n\n```\n\
+    ```cpp\n#include <iostream>\nusing namespace std;\n\n#define PI 3.14159\n\nint\
+    \ main ()\n{\n    cout << \"The value of Pi is: \" << PI << endl;\n}\n```\n```\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_50_2.png)\n\n**STEP 8** Another method\
+    \ of defining a constant is with the const keyword. Use const together with a\
+    \ data type, variable and value: const type variable = value. Using Pi as an example:\n\
+    \n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main ()\n{\n \
+    \   const double PI = 3.14159;\n    cout << \"The value of Pi is: \" << PI <<\
+    \ endl;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_50_3.png)\n\n\
+    **STEP 9** Because you’re using const within the main block of code, you need\
+    \ to finish the line with a semicolon. You can use either, as long as the names\
+    \ and values don’t clash, but it’s worth mentioning that #define requires no memory,\
+    \ so if you’re coding to a set amount of memory, #define is your best bet.\n\n\
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_50_4.png)\n\n**STEP 10** Const works\
+    \ in much the same way as #define. You can create static integers and even newlines:\n\
+    \n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n  \
+    \  const int LENGTH = 50;\n    const int WIDTH = 40;\n    const char NEWLINE =\
+    \ '\\n';\n\n    int area;\n    area = LENGTH * WIDTH;\n\n    cout << \"Area is:\
+    \ \" << area << NEWLINE;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_50_5.png)"
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# File Input/Output\n\nThe standard iostream library provides C++ coders with\
+    \ the cin and cout input and output functionality. However, to be able to read\
+    \ and write from a file you need to utilise another C++ library, called Fstream.\n\
+    \n# FSTREAMS\n\nThere are two main data types within the fstream library that\
+    \ are used to open a file, read from it and write to it, ofstream and ifstream.\
+    \ Here’s how they work.\n\n**STEP 1** The first task is to create a new C++ file\
+    \ and along with the usual headers you need to include the new fstream header:\n\
+    \n```\n```cpp\n#include <iostream>\n#include <fstream>\nusing namespace std;\n\
+    \nint main ()\n{\n\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_51_0.png)\n\
+    \n**STEP 2** Begin by asking a user for their name and writing that information\
+    \ to a file. You need the usual string to store the name, and getline to accept\
+    \ the input from the user.\n\n```\n```cpp\n#include <iostream>\n#include <fstream>\n\
+    using namespace std;\n\nint main ()\n{\n    string name;\n\n    ofstream newfile;\n\
+    \    newfile.open(“name.txt”);\n\n    cout << “Enter your name: “ << endl;\n \
+    \   getline(cin, name);\n\n    newfile << name << endl;\n\n    newfile.close();\n\
+    }\n```\n```\n\n**STEP 3** We’ve included comments in the screenshot of step 2\
+    \ to help you understand the process. You created a string called name, to store\
+    \ the user’s inputted name. You also created a text file called name.txt (with\
+    \ the ofstream newfile and newfile.open lines), asked the user for their name\
+    \ and stored it and then written the data to the file.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_51_1.png)\n\
+    \n**STEP 4** To read the contents of a file, and output it to the screen, you\
+    \ need to do things slightly differently. First you need to create a string variable\
+    \ to store the file’s contents (line by line), then open the file, use getline\
+    \ to read the file line by line and output those lines to the screen. Finally,\
+    \ close the file.\n\n```\n```cpp\nstring line;\nifstream newfile (“name.txt”);\n\
+    \ncout << “Contents of the file: “ << endl;\n\ngetline(newfile, line);\ncout <<\
+    \ line << endl;\nnewfile.close();\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_51_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "# ### STEP 5\n\nThe code above is great for opening a file with one or two\
+    \ lines but what if there are multiple lines? Here we opened a text file of the\
+    \ poem Cimmeria, by Robert E Howard:\n\n```\n    string line;\n    ifstream newfile\
+    \ (\"c:\\\\users\\\\david\\\\Documents\\\\Cimmeria.txt\");\n\n    cout << \"Cimmeria,\
+    \ by Robert E Howard: \\n\" << endl;\n\n    while (getline(newfile, line))\n \
+    \       cout << line << endl;\n\n    newfile.close();\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_52_0.png)\n\
+    \n# ### STEP 6\n\nYou can no doubt see that we've included a while loop, which\
+    \ we cover in a few pages time. It means that while there are lines to be read\
+    \ from the text file, C++ getlines them. Once all the lines are read, the output\
+    \ is displayed on the screen and the file is closed.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_52_1.png)\n\
+    \n# ### STEP 7\n\nYou can also see that the location of the text file Cimmeria.txt\
+    \ isn't in the same folder as the C++ program. When we created the first name.txt\
+    \ file, it was written to the same folder where the code was located; this is\
+    \ done by default. To specify another folder, you need to use double-back slashes,\
+    \ as per the character literals/escape sequence code.\n\n```\n    string line;\n\
+    \    ifstream newfile (\"c:\\\\users\\\\david\\\\Documents\\\\Cimmeria.txt\");\n\
+    \    cout << \"Cimmeria, by Robert E Howard: \\n\" << endl;\n```\n\n# ### STEP\
+    \ 8\n\nJust as you might expect, you can write almost anything you like to a file,\
+    \ for reading either in Notepad or via the console through the C++ code:\n\n```\n\
+    \    string name;\n    int age;\n\n    ofstream newfile;\n    newfile.open(\"\
+    name.txt\");\n\n    cout << \"Enter your name: \" << endl;\n    getline(cin, name);\n\
+    \n    newfile << name << endl;\n\n    cout << \"\\nHow old are you: \" << endl;\n\
+    \    cin >> age;\n\n    newfile << age << endl;\n\n    newfile.close();\n```\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_52_2.png)\n\n# ### STEP 9\n\nThe code\
+    \ from step 8 differs again, but only where it comes to adding the age integer.\
+    \ Notice that we used cin >> age, instead of the previous getline(cin, variable).\
+    \ The reason for this is that the getline function handles strings, not integers;\
+    \ so when you're using a data type other than a string, use the standard cin.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_52_3.png)\n\n# ### STEP 10\n\nHere's\
+    \ an exercise: see if you can create code to write several different elements\
+    \ to a text file. You can have a user's name, age, phone number etc. Maybe even\
+    \ the value of Pi and various mathematical elements. It's all good practice.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_52_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '# # Loops and Decision Making
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_53_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_54_0.png)
+
+
+    # # Loops and Decision Making
+
+
+    Loops and repetition are one of the most important factors of any programming
+    language. Good use of a loop creates a program that does exactly what you want
+    it to and delivers the desired outcome without issues or errors.
+
+
+    Without loops and decision making events within the code, your program will never
+    be able to offer the user any choice. It’s this understanding of choice that elevates
+    your skills as a programmer and makes for much better code.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_54_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "# While Loop\n\nA while loop’s function is to repeat a statement, or a group\
+    \ of statements, while a certain condition remains true. When the while loop starts,\
+    \ it initialises itself by testing the condition of the loop and the statements\
+    \ within, before executing the rest of the loop.\n\n# TRUE OR FALSE?\n\nWhile\
+    \ loops are one of the most popular form of C++ code looping. They repeatedly\
+    \ run the code contained within the loop while the condition is true. Once it\
+    \ proves false, the code continues as normal.\n\nSTEP 1 — Clear what you’ve done\
+    \ so far and create a new C++ file. There’s no need for any extra headers at the\
+    \ moment, so add the standard headers as per usual:\n\n```\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main ()\n{\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_55_0.png)\n\
+    \nSTEP 2 — Create a simple while loop. Enter the code below, build and run (we’ve\
+    \ added comments to the screen shot):\n\n```\n```cpp\n{\n    int num = 1;\n  \
+    \  while (num < 30 )\n    {\n        cout << “Number: “ << num << endl;\n    \
+    \    num = num +1;\n    }\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_55_1.png)\n\
+    \nSTEP 3 — First you need to create a condition, so use a variable called num\
+    \ and give it the value 1. Now create the while loop, stating that as long as\
+    \ num is less than 30, the loop is true. Within the loop the value of num is displayed\
+    \ and adds 1 until it’s more than 30.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_55_2.png)\n\
+    \nSTEP 4 — We’re introducing a few new elements here. The first are the opening\
+    \ and closing braces for the while loop. This is because our loop is a compound\
+    \ statement, meaning a group of statements; note also, there’s no semicolon after\
+    \ the while statement. You now also have return 0, which is a clean and preferred\
+    \ way of ending the code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_55_3.png)\n\
+    \nSTEP 5 — If you didn’t need to see the continually increasing value of num,\
+    \ you could have done away with the compound while statement and instead just\
+    \ added num by itself until it reached 30, and then displayed the value:\n\n```\n\
+    ```cpp\n{\n    int num = 1;\n    while (num < 30 )\n        num++;\n    cout <<\
+    \ “Number: “ << num << endl;\n    return 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "# While Loop\n\n# STEP 6\n\nIt’s important to remember not to add a semicolon\
+    \ at the end of a while statement. Why? Well, as you know, the semicolon represents\
+    \ the end of a C++ line of code. If you place one at the end of a while statement,\
+    \ your loop will be permanently stuck until you close the program.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_56_0.png)\n\
+    \n# STEP 7\n\nIn our example, if we were to execute the code the value of num\
+    \ would be 1, as set by the int statement. When the code hits the while statement\
+    \ it reads that while the condition of 1 being less than 30 is true, loop. The\
+    \ semicolon closes the line, so the loop repeats; but it never adds 1 to num,\
+    \ as it won’t continue through the compound statement.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_56_1.png)\n\
+    \n# STEP 8\n\nYou can manipulate the while statement to display different results\
+    \ depending on what code lies within the loop. For example, to read the poem,\
+    \ Cimmeria, word by word, you would enter:\n\n```\n```cpp\n#include <iostream>\n\
+    #include <fstream>\nusing namespace std;\n\nint main ()\n{\n    string word;\n\
+    \    ifstream newfile (\"C:\\\\users\\\\david\\\\Documents\\\\Cimmeria.txt\");\n\
+    \n    cout << \"Cimmeria, by Robert E Howard: \\n\" << endl;\n\n    while (newfile\
+    \ >> word)\n    {\n        cout << word << endl;\n    }\n\n    return 0;\n}\n\
+    ```\n```\n\n# STEP 9\n\nYou can further expand the code to enable each word of\
+    \ the poem to appear every second. To do so, you need to pull in a new library,\
+    \ <windows.h>. This is a Windows only library and within it you can use the Sleep()\
+    \ function:\n\n```\n```cpp\n#include <iostream>\n#include <fstream>\n#include\
+    \ <windows.h>\nusing namespace std;\n\nint main ()\n{\n    string word;\n    ifstream\
+    \ newfile (\"C:\\\\users\\\\david\\\\Documents\\\\Cimmeria.txt\");\n\n    cout\
+    \ << \"Cimmeria, by Robert E Howard: \\n\" << endl;\n\n    while (newfile >> word)\n\
+    \    {\n        cout << word << endl;\n        Sleep(1000);\n    }\n\n    return\
+    \ 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_56_2.png)\n\n# STEP\
+    \ 10\n\nSleep() works in milliseconds, so Sleep(1000) is one second, Sleep(10000)\
+    \ is ten seconds and so on. Combining the sleep function (along with the header\
+    \ it needs) and a while loop enables you to come up with some interesting countdown\
+    \ code.\n\n```\n```cpp\n#include <iostream>\n#include <windows.h>\nusing namespace\
+    \ std;\n\nint main ()\n{\n    int a = 10;\n\n    while (a != 0)\n    {\n     \
+    \   cout << a << endl;\n        a = a - 1;\n        Sleep(1000);\n    }\n\n  \
+    \  cout << \"\\nBlast Off!\" << endl;\n\n    return 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: "# # For Loop\n\nIn some respects, a for loop works in a very similar way to\
+    \ that of a while loop, although it’s structure is different. A for loop is split\
+    \ into three stages: an initialiser, a condition and an incremental step. Once\
+    \ set up, the loop repeats itself until the condition becomes false.\n\n# ## LOOPY\
+    \ LOOPS\n\nThe initialise stage of a for loop is executed only once and this sets\
+    \ the point reference for the loop. The condition is evaluated by the loop to\
+    \ see if it’s true or false and then the increment is executed. The loop then\
+    \ repeats the second and third stage.\n\n**STEP 1** Create a new C++ file, with\
+    \ the standard headers:\n\n```\n~~~cpp\n#include <iostream>\nusing namespace std;\n\
+    \nint main ()\n{\n\n}\n~~~\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_57_0.png)\n\
+    \n**STEP 2** Start simple and create a for loop that counts from 1 to 30, displaying\
+    \ the value to the screen with each increment:\n\n```\n~~~cpp\n{\n    //For Loop\
+    \ Begins\n    for( int num = 1; num < 30; num = num +1 )\n    {\n        cout\
+    \ << \"Number: \" << num << endl;\n    }\n    return 0;\n}\n~~~\n```\n\n**STEP\
+    \ 3** Working through the process of the for loop, begin by creating an integer\
+    \ called num and assigning it a value of 1. Next, set the condition, in this case\
+    \ num being less than 30. The last stage is where you create the increments; here\
+    \ it's the value of num being added by 1.\n\n```\n~~~cpp\n{\n    //For Loop Begins\n\
+    \    for( int num = 1; num < 30; num = num +1 )\n~~~\n```\n\n**STEP 4** After\
+    \ the loop, you created a compound statement in braces (curly brackets), that\
+    \ displays the current value of the integer num. Every time the for loop repeats\
+    \ itself, the second and third stages of the loop, it adds 1 until the condition\
+    \ <30 is false. The loop then ends and the code continues, ending neatly with\
+    \ return 0.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_57_1.png)\n\n**STEP 5**\
+    \ A for loop is quite a neat package in C++, all contained within its own brackets,\
+    \ while the other elements outside of the loop are displayed below. If you want\
+    \ to create a 10-second countdown, you could use:\n\n```\n~~~cpp\n#include <iostream>\n\
+    #include <windows.h>\nusing namespace std;\n\nint main ()\n{\n    //For Loop Begins\n\
+    \    for( int a = 10; a != 0; a = a -1 )\n    {\n        cout << a << endl;\n\
+    \        Sleep(1000);\n    }\n\n    cout << \"\\nBlast Off!\" << endl;\n    return\
+    \ 0;\n}\n~~~\n```"
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: "# STEP 6\n\nWith the countdown code, don’t forget to include the windows.h\
+    \ library, so you can use the Sleep command. Build and run the code; in the command\
+    \ console you can see the numbers 10 to 1 countdown in one second increments,\
+    \ until it reaches zero and Blast Off! appears.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_58_0.png)\n\
+    \n# STEP 7\n\nNaturally you can include a lot more content into a for loop, including\
+    \ some user input:\n\n```\n```cpp\nint i, n, fact = 1;\n\ncout << “Enter a whole\
+    \ number: “;\ncin >> n;\n\nfor (i = 1; i <= n; ++i) {\n    fact *= i;\n}\n\ncout<<\
+    \ “\\nFactorial of “ << n <<” = “<< fact << endl;\n\nreturn 0;\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_58_1.png)\n\
+    \n# STEP 8\n\nThe code from step 7, when built and run, asks for a number, then\
+    \ displays the factorial of that number through the for loop. The user’s number\
+    \ is stored in the integer n, followed by the integer I which is used to check\
+    \ if the condition is true or false, adding 1 each time and comparing it to the\
+    \ user’s number, n.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_58_2.png)\n\n\
+    # STEP 9\n\nHere’s an example of a for loop displaying the multiplication tables\
+    \ of a user inputted number. Handy for students:\n\n```\n```cpp\n{\n    int n;\n\
+    \n    cout << “Enter a number to view its times table: “;\n    cin >> n;\n\n \
+    \   for (int i = 1; i <= 12; ++i) {\n        cout << n << “ x “ << i << “ = “\
+    \ << n * i << endl;\n    }\n\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_58_3.png)\n\
+    \n# STEP 10\n\nThe value of the integer i can be expanded from 12 to whatever\
+    \ number you want, displaying a very large multiplication table in the process\
+    \ (or a small one). Of course the data type within a for loop doesn’t have to\
+    \ be an integer, as long as it’s valid, it works.\n\n```\n```cpp\nfor ( float\
+    \ i = 0.00; i < 1.00; i += 0.01)\n{\n    cout << i << endl;\n}\n\nreturn 0;\n\
+    ```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_58_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# Do... While Loop\n\nA do... while loop differs slightly from that of a for\
+    \ or even a while loop. Both for and while set and examine the state of the condition\
+    \ at the start of the loop, or the top of the loop if you prefer. However, a do...\
+    \ while loop is similar to a while loop but instead checks the condition at the\
+    \ bottom of the loop.\n\n# DO LOOPS\n\nThe good thing about a do... while loop\
+    \ is that it’s guaranteed to run through at least once. It’s structure is: do,\
+    \ followed by statements, while condition is true. This is how it works.\n\n**STEP\
+    \ 1** — Begin with a new, blank C++ file and enter the standard headers:\n\n```\n\
+    ```cpp\n#include <iostream>\nusing namespace std;\n\nint main ()\n{\n}\n```\n\
+    ```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_59_0.png)\n\n**STEP 2** — Begin\
+    \ with a simple number count:\n\n```\n```cpp\n{\n    int num = 1;\n    do\n  \
+    \  {\n        cout << “Number: “ << num << endl;\n        num = num + 1;\n   \
+    \ }\n    while (num < 30 );\n\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_59_1.png)\n\
+    \n**STEP 3** — Now, here’s a look at the structure of a do... while loop. First\
+    \ you create an integer called num, with the value of 1. Now the do... while loops\
+    \ begins. The code inside the body of the loop is executed at least once, then\
+    \ the condition is checked for either true or false.\n\n```\n```cpp\n// Create\
+    \ integer with the value of 1\nint num = 1;\n\n// Do... While loops begins\ndo\n\
+    {\n    cout << \"Number: \" << num << endl; // Display the current value of num\n\
+    \    num = num + 1; // Adds 1 to the value of num\n}\nwhile (num < 30 ); // Tests\
+    \ the condition of num (true or false)\n```\n```\n\n**STEP 4** — If the condition\
+    \ is true, the loop is executed. This continues until the condition is false.\
+    \ When the condition has been expressed as false, the loop terminates and the\
+    \ code continues. This means you can create a loop where the code continues until\
+    \ the user enters a certain character.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_59_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: "# STEP 5\n\nIf you want code to add up user inputted numbers until the user\
+    \ enters zero:\n\n```\n```cpp\n{\n    float number, sum = 0.0;\n    cout << \"\
+    **** Program to execute a Do... While loop continuously ****\" << endl;\n    cout\
+    \ << \"\\nEnter 0 to stop and display the sum of all the numbers entered\\n\"\
+    \ << endl;\n    cout << \"\\n------------------------------\\n\" << endl;\n  \
+    \  do {\n        cout << \"\\nPlease enter a number: \";\n        cin >> number;\n\
+    \        sum += number;\n    }\n    while(number != 0.0);\n    cout << \"Total\
+    \ sum of all numbers: \" << sum;\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_60_0.png)\n\
+    \n# STEP 6\n\nThe code from Step 5 works as follows: two floating point variables\
+    \ are assigned, number and sum, both with the value of 0.0. There is a brief set\
+    \ of instructions for the user, then the do...while loop begins.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_60_1.png)\n\
+    \n# STEP 7\n\nThe do...while loop in this instance asks the user to input a number,\
+    \ which you assigned to the float variable, number. The calculation step uses\
+    \ the second floating point variable, sum, which adds the value of number every\
+    \ time the user enters a new value.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_60_2.png)\n\
+    \n# STEP 8\n\nFinally, the while statement checks the condition of the variable\
+    \ number. If the user has entered zero, then the loop is terminated, if not then\
+    \ it continues indefinitely. When the user finally enters zero, the value of sum,\
+    \ the total value of all the user’s input, is displayed. The loop, and the program,\
+    \ then ends.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_60_3.png)\n\n# STEP 9\n\
+    \nUsing the countdown and Blast Off! code used previously, a do...while loop would\
+    \ look like:\n\n```\n```cpp\n{\n    int a = 10;\n    do\n    {\n        cout <<\
+    \ a << endl;\n        a = a - 1;\n    }\n    while (a != 0);\n\n    cout << \"\
+    \\nBlast Off!\" << endl;\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_60_4.png)\n\
+    \n# STEP 10\n\nThe main advantage of using a do...while loop is because it’s an\
+    \ exit-condition loop; whereas a while loop is an entry-control loop. Therefore,\
+    \ if your code requires a loop that needs to be executed at least once (for example,\
+    \ to check the number of lives in a game), then a do...while loop is perfect.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_60_5.png)"
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: "# # If Statement\n\nThe decision making statement ‘If’ is probably one of the\
+    \ most used statements in any programming language, regardless of whether it’s\
+    \ C++, Python, BASIC or anything else. It represents a junction in the code, where\
+    \ IF one condition is true, do this, or IF it’s false, do that.\n\n# ## IF ONLY\n\
+    \nIf uses a Boolean expression within its statement. If the Boolean expression\
+    \ is true, the code within the statement is executed. If not, then the code after\
+    \ the statement is executed instead.\n\n**STEP 1**  \nFirst, create a new C++\
+    \ file and enter the relevant standard headers, as usual.\n\n```\n```cpp\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main ()\n{\n\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_61_0.png)\n\
+    \n**STEP 2**  \nIf is best explained when you use a number-based condition:\n\n\
+    ```\n```cpp\n{\n    int num = 1;\n    if ( num < 30 )\n    {\n        cout <<\
+    \ “The number is less than 30.” << endl;\n    }\n    cout << “Value of number\
+    \ is: “ << num << endl;\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_61_1.png)\n\
+    \n**STEP 3**  \nWhat’s going on here? To begin, an integer called `num` was created\
+    \ and assigned with the value of 1. The if statement comes next, and in this case\
+    \ we’ve instructed the code that if the condition, the value, of `num` is less\
+    \ than 1, then the code within the braces should be executed.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_61_2.png)\n\
+    \n**STEP 4**  \nThe second cout statement displays the current value of num and\
+    \ the program terminates safely. It’s easy to see how the if statement works if\
+    \ you were to change the initial value of num from 1 to 31.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_61_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: "# STEP 5\n\nWhen you change the value to anything above 30, then build and\
+    \ run the code, you can see that the only line to be outputted to the screen is\
+    \ the second cout statement, displaying the current value of num. This is because\
+    \ the initial if statement is False, so it ignores the code within the braces.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_62_0.png)\n\n# STEP 6\n\nYou can include\
+    \ an if statement within a do…while loop. For example:\n\n```\n```cpp\n{\n   \
+    \ float temp;\n\n    do\n    {\n        cout << \"\\nEnter the temperature (or\
+    \ -10000 to exit): \" << endl;\n        cin >> temp;\n        if (temp <= 0)\n\
+    \        {\n            cout << \"\\nBrrrr, it's really cold!\" << endl;\n   \
+    \     }\n        if (temp > 0)\n        {\n            cout << \"\\nAt least it's\
+    \ not freezing!\" << endl;\n        }\n    }\n    while (temp != -10000);\n\n\
+    \    cout << \"\\nGood bye\\n\" << endl;\n\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_62_1.png)\n\
+    \n# STEP 7\n\nThe code in Step 6 is simplistic but effective. First we created\
+    \ a floating point integer called temp, then a do…while loop that asks the user\
+    \ to enter the current temperature.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_62_2.png)\n\
+    \n# STEP 8\n\nThe first if statement checks to see if the user’s inputted value\
+    \ is less than or equal to zero. If it is, then the output is ‘Brrr, it’s really\
+    \ cold!’. Otherwise, if the input is greater than zero, the code outputs ‘At least\
+    \ it’s not freezing!’.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_62_3.png)\n\
+    \n# STEP 9\n\nFinally, if the user enters the value -10000, which is impossibly\
+    \ cold so is therefore a unrealistic value, the do…while loop is terminated and\
+    \ a friendly ‘Good bye’ is displayed to the screen.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_62_4.png)\n\
+    \n# STEP 10\n\nUsing if is quite powerful, if it’s used correctly. Just remember\
+    \ that if the condition is true then the code executes what’s in the braces. If\
+    \ not, it continues on its merry way. See what else you can come up with using\
+    \ if and a combination of loops.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_62_5.png)"
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: "# If… Else Statement\n\nThere is a much better way to use an if statement in\
+    \ your code, with if… else. If… else works in much the same way as a standard\
+    \ if statement. If the Boolean expression is true, the code within the braces\
+    \ is executed. Else, the code within the next set of braces is used instead.\n\
+    \n# IF YES, ELSE NO\n\nThere are two sections of code that can be executed depending\
+    \ on the outcome in an if… else statement. It’s quite easy to visualise once you\
+    \ get used to its structure.\n\nSTEP 1 — Begin with a new C++ file and the standard\
+    \ headers:\n\n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main\
+    \ ()\n{\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_63_0.png)\n\n\
+    STEP 2 — Let’s expand the code from the If Statement on the previous page:\n\n\
+    ```\n```cpp\n{\n    int num = 1;\n\n    if ( num < 30 )\n    {\n        cout <<\
+    \ “The number is less than 30!” << endl;\n    }\n    else\n    {\n        cout\
+    \ << “The number is greater than 30!” << endl;\n    }\n\n    return 0;\n}\n```\n\
+    ```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_63_1.png)\n\nSTEP 3 — The first\
+    \ line in the code creates the integer called num and gives it a value of 1. The\
+    \ if statement checks to see if the value of num is less than thirty and if it\
+    \ is it outputs “The number is less than 30!” to the console.\n\n```\n```cpp\n\
+    if ( num < 30 )\n{\n    cout << \"The number is less than 30!\" << endl;\n}\n\
+    ```\n```\n\nSTEP 4 — The else companion to if checks if the number is greater\
+    \ than 30 and if so, then displays “The number is greater than 30!” to the console;\
+    \ and finally, the code is terminated satisfactorily.\n\n```\n```cpp\n}\nelse\n\
+    {\n    cout << \"The number is greater than 30!\" << endl;\n}\n```\n```\n\nSTEP\
+    \ 5 — You can change the value of num in the code or you can improve the code\
+    \ by asking the user to enter a value:\n\n```\n```cpp\n{\n    int num;\n\n   \
+    \ cout << “Enter a number: “;\n    cin >> num;\n\n    if ( num < 30 )\n    {\n\
+    \        cout << “The number is less than 30!” << endl;\n    }\n    else\n   \
+    \ {\n        cout << “The number is greater than 30!” << endl;\n    }\n\n    return\
+    \ 0;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "# If… Else Statement\n\n**STEP 6** The code works the same way, as you would\
+    \ expect, but what if you wanted to display something if the user entered the\
+    \ number 30? Try this:\n\n```\n```cpp\n{\n    int num;\n\n    cout << “Enter a\
+    \ number: “;\n    cin >> num;\n\n    if ( num < 30 )\n    {\n        cout << “The\
+    \ number is less than 30!” << endl;\n    }\n    else if ( num > 30 )\n    {\n\
+    \        cout << “The number is greater than 30!” << endl;\n    }\n    else if\
+    \ ( num == 30 )\n    {\n        cout << “The number is exactly 30!” << endl;\n\
+    \    }\n\n    return 0;\n}\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_64_0.png)\n\
+    \n**STEP 7** The new addition to the code is what’s known as a nested if… else\
+    \ statement. This allows you to check for multiple conditions. In this case, if\
+    \ the user enters a number less than 30, greater than 30 or actually 30 itself,\
+    \ a different outcome is presented to them.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_64_1.png)\n\
+    \n**STEP 8** You can take this up a notch and create a two-player number guessing\
+    \ game. Begin by creating the variables:\n\n```\n```cpp\nint num, guess, tries\
+    \ = 0;\n\ncout << “***** Two-player number guessing game *****” << endl;\ncout\
+    \ << “\\nPlayer One, enter a number for Player Two to guess: “ << endl;\ncin >>\
+    \ num;\ncout << string(50, ‘\\n’);\n```\n```\n\n**STEP 9** The cout << string(50,\
+    \ ‘\\n’) line clears the screen so Player Two doesn’t see the entered number.\
+    \ Now you can create a do… while loop, together with if… else:\n\n```\n```cpp\n\
+    do\n{\n    cout << “\\nPlayer Two, enter your guess: “;\n    cin >> guess;\n \
+    \   tries++;\n    if (guess > num)\n    {\n        cout << “\\nToo High!\\n” <<\
+    \ endl;\n    }\n    else if (guess < num)\n    {\n        cout << “\\nToo Low!\\\
+    n” << endl;\n    }\n    else if (guess == num)\n    {\n        cout << “Well done!\
+    \ You got it in “ << tries << “ guesses!” << endl;\n    }\n} while (guess != num);\n\
+    \nreturn 0;\n```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_64_2.png)\n\n\
+    **STEP 10** Grab a second player, then build and run the code. Player One enters\
+    \ the number to be guessed, then Player Two can take as many guesses as they need\
+    \ to get the right number. Want to make it harder? Maybe use decimal numbers.\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_64_3.png)"
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# Common Coding Mistakes
+
+
+    When you start something new you’re inevitably going to make mistakes, this is
+    purely down to inexperience and those mistakes are great teachers in themselves.
+    However, even experts make the occasional mishap. Thing is, to learn from them
+    as best you can.
+
+
+    # X=MISTAKE, PRINT Y
+
+
+    There are many pitfalls for the programmer to be aware of, far too many to be
+    listed here. Being able to recognise a mistake and fix it is when you start to
+    move into more advanced territory.
+
+
+    # SMALL CHUNKS
+
+
+    It would be wonderful to be able to work like Neo from The Matrix movies. Simply
+    ask, your operator loads it into your memory and you instantly know everything
+    about the subject. Sadly though, we can’t do that. The first major pitfall is
+    someone trying to learn too much, too quickly. So take coding in small pieces
+    and take your time.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_67_0.png)
+
+
+    # EASY VARIABLES
+
+
+    Meaningful naming for variables is a must to eliminate common coding mistakes.
+    Having letters of the alphabet is fine but what happens when the code states there’s
+    a problem with x variable. It’s not too difficult to name variables lives, money,
+    player1 and so on.
+
+
+    ```
+
+    ```\nvar points = 1023;\nvar lives = 3;\nvar totalTime = 45;\nwrite("Points: "+points);\nwrite("Lives:
+    "+lives);\nwrite("Total Time: "+totalTime+" secs");\nwrite("------------------------------");\nvar
+    totalScore = 0;\nwrite("Your total Score is: "+totalScore);\n```
+
+    ```
+
+
+    # //COMMENTS
+
+
+    Use comments. It’s a simple concept but commenting on your code saves so many
+    problems when you next come to look over it. Inserting comment lines helps you
+    quickly sift through the sections of code that are causing problems; also useful
+    if you need to review an older piece of code.
+
+
+    ```
+
+    ```\n52  orig += 2;\n53  target += 2;\n54  --n;\n55  }\n56  #endif\n57  if (n
+    == 0)\n58      return;\n59\n60  //\n61  // Loop unrolling.\n62  //\n63\n64  //
+    (n & (~3)) is the greatest multiple of 4\n65  // In the while loop ahead, orig
+    will move\n66  // increments (4 elements of 2 bytes).\n67  // end marks our barrier
+    for not falling out\n68  char const * const end = orig + 2 * (n & ...);\n70  //
+    See if we''re aligned for writing in ...\n71  #if __SIZEOF_LONG == 8 && \\\n```
+
+    ```
+
+
+    # PLAN AHEAD
+
+
+    While it’s great to wake up one morning and decide to code a classic text adventure,
+    it’s not always practical without a good plan. Small snippets of code can be written
+    without too much thought and planning but longer and more in-depth code requires
+    a good working plan to stick to and help iron out the bugs.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_67_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: '# USER ERROR
+
+
+    User input is often a paralysing mistake in code. For example, when the user is
+    supposed to enter a number for their age and instead they enter it in letters.
+    Often a user can enter so much into an input that it overflows some internal buffer,
+    thus sending the code crashing. Watch those user inputs and clearly state what’s
+    needed from them.
+
+
+    ```
+
+    Enter an integer number
+
+    asudfdsf
+
+    You have entered wrong input
+
+    s
+
+    You have entered wrong input
+
+    "£*££"
+
+    You have entered wrong input
+
+    sdfsdf213213123
+
+    You have entered wrong input
+
+    123234234234234
+
+    You have entered wrong input
+
+    12
+
+    the number is: 12
+
+
+    Process returned 0 (0x0)    execution time : 21.495 s
+
+    Press any key to continue.
+
+    ```
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_68_0.png)
+
+
+    # BACKUPS
+
+
+    Always make a backup of your work, with a secondary backup for any changes you’ve
+    made. Mistakes can be rectified if there’s a good backup in place to revert to
+    for those times when something goes wrong. It’s much easier to start where you
+    left off, rather than starting from the beginning again.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_68_1.png)
+
+
+    # RE-INVENTING WHEELS
+
+
+    You can easily spend days trying to fathom out a section of code to achieve a
+    given result and it’s frustrating and often time-wasting. While it’s equally rewarding
+    to solve the problem yourself, often the same code is out there on the Internet
+    somewhere. Don’t try and re-invent the wheel, look to see if someone else has
+    done it first.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_68_2.png)
+
+
+    # SECURE DATA
+
+
+    If you’re writing code to deal with usernames and passwords, or other such sensitive
+    data, then ensure that the data isn’t in cleartext. Learn how to create a function
+    to encrypt sensitive data, prior to feeding into a routine that can transmit or
+    store it where someone may be able to get to view it.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_68_3.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_68_4.png)
+
+
+    # HELP!
+
+
+    Asking for help is something most of us has struggled with in the past. Will the
+    people we’re asking laugh at us? Am I wasting everyone’s time? It’s a common mistake
+    for someone to suffer in silence. However, as long as you ask the in the correct
+    manner, obey any forum rules and be polite, then your question isn’t silly.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_68_5.png)
+
+
+    # MATHS
+
+
+    If your code makes multiple calculations then you need to ensure that the maths
+    behind it is sound. There are thousands of instances where programs have offered
+    incorrect data based on poor mathematical coding, which can have disastrous effects
+    depending on what the code is set to do. In short, double check your code equations.
+
+
+    ```
+
+    set terminal x11
+
+    set output
+
+
+    max = 5
+
+    nmax = 100
+
+
+    complex (x, y) = x * {1, 0} + y * {0, 1}
+
+    mandel (x, y, z, n) = (abs (z) > max || n >= 100)? n: mandel (x, y, z * z + complex
+    (x, y), n + 1)
+
+
+    set xrange [-0.5:0.5]
+
+    set yrange [-0.5:0.5]
+
+    set logscale z
+
+    set samples 200
+
+    set isosample 200
+
+    set pm3d map
+
+    set size square
+
+    b = #8
+
+    B = #8
+
+    splot mandel(-1/100, -1/100, complex(x,y),0) notitle
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: "# # Beginner Python Mistakes\n\nPython is a relatively easy language to get\
+    \ started in where there's plenty of room for the beginner to find their programming\
+    \ feet. However, as with any other programming language, it can be easy to make\
+    \ common mistakes that'll stop your code from running.\n\n# ## DEF BEGINNER(MISTAKES=10)\n\
+    \nHere are ten common Python programming mistakes most beginners find themselves\
+    \ making. Being able to identify these mistakes will save you headaches in the\
+    \ future.\n\n# ### VERSIONS\n\nTo add to the confusion that most beginners already\
+    \ face when coming into programming, Python has two live versions of its language\
+    \ available to download and use. There is Python version 2.7.x and Python 3.6.x.\
+    \ The 3.6.x version is the most recent, and the one we'd recommend starting. But,\
+    \ version 2.7.x code doesn't always work with 3.6.x code and vice versa.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_69_0.png)\n\
+    \n# ### INDENTS, TABS AND SPACES\n\nPython uses precise indentations when displaying\
+    \ its code. The indents mean that the code in that section is a part of the previous\
+    \ statement, and not something linked with another part of the code. Use four\
+    \ spaces to create an indent, not the Tab key.\n\n```\n    MOVESPEED = 11\n  \
+    \  MOVE = 1\n    SHOOT = 15\n\n    # set up counting\n    SCORE = 0\n\n    # set\
+    \ up font\n    font = pygame.font.Font('freesans', 50)\n\n    def makeplayer():\n\
+    \        player = pygame.Rect(370, 635, 40, 25)\n        return player\n\n   \
+    \ def makeinvaders():\n        for i in invaders:\n            for j in range(11):\n\
+    \                invader = pygame.Rect(754+i, 75+j, 50, 20)\n                invaders.append(invader)\n\
+    \            i += 60\n        return invaders\n\n    def makewalls(vals):\n  \
+    \      wall = pygame.Rect(60, 520, 120, 30)\n        walls = pygame.Rect(252,\
+    \ 520, 120, 30)\n        walls = pygame.Rect(352, 520, 120, 30)\n        walls\
+    \ = pygame.Rect(452, 520, 120, 30)\n```\n\n# ### THE INTERNET\n\nEvery programmer\
+    \ has and does at some point go on the Internet and copy some code to insert into\
+    \ their own routines. There's nothing wrong with using others' code, but you need\
+    \ to know how the code works and what it does before you go blindly running it\
+    \ on your own computer.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_69_1.png)\n\
+    \n# ### COMMENTING\n\nAgain we mention commenting. It's a hugely important factor\
+    \ in programming, even if you're the only one who is ever going to view the code,\
+    \ you need to add comments as to what's going on. Is this function where you lose\
+    \ a life? Write a comment and help you, or anyone else, see what's going on.\n\
+    \n```\n    # set up pygame\n    pygame.init()\n    mainClock = pygame.time.Clock()\n\
+    \n    # set up the window\n    width = 800\n    height = 700\n    screen = pygame.display.set_mode((width,\
+    \ height), 0, 32)\n    pygame.display.set_caption('caption')\n\n    # set up movement\
+    \ variables\n    moveLeft = False\n    moveRight = False\n    moveUp = False\n\
+    \    moveDown = False\n\n    # set up direction variables\n    DOWNLEFT = 1\n\
+    \    DOWNRIGHT = 3\n```"
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: "# COUNTING LOOPS\n\nRemember that in Python a loop doesn’t count the last number\
+    \ you specify in a range. So if you wanted the loop to count from 1 to 10, then\
+    \ you will need to use:\n\n```\nn = list(range(1, 11))\n```\n\nWhich will return\
+    \ 1 to 10.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_70_0.png)\n\n# CASE SENSITIVE\n\
+    \nPython is a case sensitive programming language, so you will need to check any\
+    \ variables you assign. For example, `Lives=10` is a different variable to `lives=10`,\
+    \ calling the wrong variable in your code can have unexpected results.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_70_1.png)\n\
+    \n# BRACKETS\n\nEveryone forgets to include that extra bracket they should have\
+    \ added to the end of the statement. Python relies on the routine having an equal\
+    \ amount of closed brackets to open brackets, so any errors in your code could\
+    \ be due to you forgetting to count your brackets; including square brackets.\n\
+    \n```\ndef print_game_status(self):\n    print (board[len(self.missed_letters)])\n\
+    \    print ('Word: ' + self.hide_word())\n    print ('Letters Missed: ',)\n  \
+    \  for letter in self.missed_letters:\n        print (letter,)\n    print ()\n\
+    \    print ('Letters Guessed: ',)\n    for letter in self.guessed_letters:\n \
+    \       print (letter,)\n    print ()\n```\n\n# COLONS\n\nIt’s common for beginners\
+    \ to forget to add a colon to the end of a structural statement, such as:\n\n\
+    ```\nclass Hangman:\ndef guess(self, letter):\n```\n\nAnd so on. The colon is\
+    \ what separates the code, and creates the indents to which the following code\
+    \ belongs to.\n\n```\nclass Hangman:\n    def __init__(self,word):\n        self.word\
+    \ = word\n        self.missed_letters = []\n        self.guessed_letters = []\n\
+    \n    def guess(self,letter):\n        if letter in self.word and letter not in\
+    \ self.guessed_letters:\n            self.guessed_letters.append(letter)\n   \
+    \     elif letter not in self.word and letter not in self.missed_letters:\n  \
+    \          self.missed_letters.append(letter)\n        else:\n            return\
+    \ False\n        return True\n\n    def hangman_over(self):\n        return self.hangman_won()\
+    \ or (len(self.missed_letters) == 6)\n\n    def hangman_won(self):\n        if\
+    \ '_' not in self.hide_word():\n            return True\n        return False\n\
+    \n    def hide_word(self):\n        rtn = ''\n        for letter in self.word:\n\
+    \            if letter not in self.guessed_letters:\n                rtn += '_'\n\
+    \            else:\n                rtn += letter\n        return rtn\n```\n\n\
+    # OPERATORS\n\nUsing the wrong operator is also a common mistake to make. When\
+    \ you’re performing a comparison between two values, for example, you need to\
+    \ use the equality operator (a double equals, `==`). Using a single equal (`=`)\
+    \ is an assignment operator that places a value to a variable (such as, `lives=10`).\n\
+    \n```\nb = 5\nc = 10\nd = 10\nb == c #false because 5 is not equal to 10\nc ==\
+    \ d #true because 10 is equal to 10\n```\n\n# OPERATING SYSTEMS\n\nWriting code\
+    \ for multiple platforms is difficult, especially when you start to utilise the\
+    \ external commands of the operating system. For example, if your code calls for\
+    \ the screen to be cleared, then for Windows you would use `cls`. Whereas, for\
+    \ Linux you need to use `clear`. You need to solve this by capturing the error\
+    \ and issuing it with an alternative command.\n\n```\n# Code to detect error for\
+    \ using a different OS\nrun=1\nwhile(run==1):\n    try:\n        os.system('clear')\n\
+    \    except OSError:\n        os.system('cls')\n    print('\\n>>>>>>>>>>Python\
+    \ 3 File Manager<<<<<<<<<<\\n')\n```"
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '# # Beginner C++ Mistakes
+
+
+    There are many pitfalls the C++ developer can encounter, especially as this is
+    a more complex and often unforgiving language to master. Beginners need to take
+    C++ a step at a time and digest what they’ve learned before moving on.
+
+
+    # VOID(C++, MISTAKES)
+
+
+    Admittedly it’s not just C++ beginners that make the kinds of errors we outline
+    on these pages, even hardened coders are prone to the odd mishap here and there.
+    Here are some common issues to try and avoid.
+
+
+    # UNDECLARED IDENTIFIERS
+
+
+    A common C++ mistake, and to be honest a common mistake with most programming
+    languages, is when you try and output a variable that doesn’t exist. Displaying
+    the value of x on-screen is fine but not if you haven’t told the compiler what
+    the value of x is to begin with.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_71_0.png)
+
+
+    # STD NAMESPACE
+
+
+    Referencing the Standard Library is common for beginners throughout their code,
+    but if you miss the std:: element of a statement, your code errors out when compiling.
+    You can combat this by adding:
+
+
+    ```
+
+    using namespace std;
+
+    ```
+
+
+    Under the #include part and simply using cout, cin and so on from then on.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_71_1.png)
+
+
+    # SEMICOLONS
+
+
+    Remember that each line of a C++ program must end with a semicolon. If it doesn’t
+    then the compiler treats the line with the missing semicolon as the same line
+    with the next semicolon on. This creates all manner of problems when trying to
+    compile, so don’t forget those semicolons.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_71_2.png)
+
+
+    # GCC OR G++
+
+
+    If you’re compiling in Linux then you will no doubt come across gcc and g++. In
+    short, gcc is the Gnu Compiler Collection (or Gnu C Compiler as it used to be
+    called) and g++ is the Gnu ++ (the C++ version) of the compiler. If you’re compiling
+    C++ then you need to use g++, as the incorrect compiler drivers will be used.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_71_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: "# COMMENTS (AGAIN)\n\nIndeed the mistake of never making any comments on code\
+    \ is back once more. As we’ve previously bemoaned, the lack of readable identifiers\
+    \ throughout the code makes it very difficult to look back at how it worked, for\
+    \ both you and someone else. Use more comments.\n\n```\n```cpp\n#include <iostream>\n\
+    #include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main()\n\
+    {\n    vector<double> v;\n    double d;\n    while (cin >> d) v.push_back(d);\
+    \    // read elements\n    if (cin.eof()) {                    // check if input\
+    \ failed\n        cerr << \"format error\\n\";       // error return\n       \
+    \ return 1;\n    }\n\n    cout << \"read \" << v.size() << \" elements\\n\";\n\
+    \    reverse(v.begin(), v.end());\n    cout << \"elements in reverse order:\\\
+    n\";\n    for (int i = 0; i < v.size(); ++i) cout << v[i] << '\\n';\n\n    return\
+    \ 0;                           // success return\n}\n```\n```\n\n# QUOTES\n\n\
+    Missing quotes is a common mistake to make, for every level of user. Remember\
+    \ that quotes need to encase strings and anything that’s going to be outputted\
+    \ to the screen or into a file, for example. Most compilers errors are due to\
+    \ missing quotes in the code.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_72_0.png)\n\
+    \n# EXTRA SEMICOLONS\n\nWhile it’s necessary to have a semicolon at the end of\
+    \ every C++ line, there are some exceptions to the rule. Semicolons need to be\
+    \ at the end of every complete statement but some lines of code aren’t complete\
+    \ statements. Such as:\n\n```\n```text\n#include\nif lines\nswitch lines\n```\n\
+    ```\n\nIf it sounds confusing don’t worry, the compiler lets you know where you\
+    \ went wrong.\n\n```\n```cpp\n// Program to print positive number entered by the\
+    \ user\n// If user enters negative number, it is skipped\n\n#include <iostream>\n\
+    using namespace std;\n\nint main()\n{\n    int number;\n    cout << \"Enter an\
+    \ integer: \";\n    cin >> number;\n\n    // checks if the number is positive\n\
+    \    if (number > 0)\n    {\n        cout << \"You entered a positive integer:\
+    \ \" << number << endl;\n    }\n\n    cout << \"This statement is always executed.\"\
+    ;\n    return 0;\n}\n```\n```\n\n# TOO MANY BRACES\n\nThe braces, or curly brackets,\
+    \ are beginning and ending markers around blocks of code. So for every { you must\
+    \ have a }. Often it’s easy to include or miss out one or the other facing brace\
+    \ when writing code; usually when writing in a text editor, as an IDE adds them\
+    \ for you.\n\n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    int x;\n    string mystring = \"This is a string!\\n\";\n    cout << \"\
+    What's the value of x? \";\n    cin >> x;\n    cout << x;\n    {\n        cout\
+    \ << \"\\n\\n\";\n        cout << mystring;\n    }\n}\n```\n```\n\n# INITIALISE\
+    \ VARIABLES\n\nIn C++ variables aren’t initialised to zero by default. This means\
+    \ if you create a variable called x then, potentially, it is given a random number\
+    \ from 0 to 18,446,744,073,709,551,616, which can be difficult to include in an\
+    \ equation. When creating a variable, give it the value of zero to begin with:\
+    \ x=0.\n\n```\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    int x;\n    x=0;\n\n    cout << x;\n}\n```\n```\n\n# A.OUT\n\nA common\
+    \ mistake when compiling in Linux is forgetting to name your C++ code post compiling.\
+    \ When you compile from the Terminal, you enter:\n\n```\n```bash\ng++ code.cpp\n\
+    ```\n```\n\nThis compiles the code in the file code.cpp and create an a.out file\
+    \ that can be executed with ./a.out. However, if you already have code in a.out\
+    \ then it’s overwritten. Use:\n\n```\n```bash\ng++ code.cpp -o nameofprogram\n\
+    ```\n```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_72_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: "# # Where Next?\n\nCoding, like most subjects, is a continual learning experience.\
+    \ You may not class yourself as a beginner any more but you still need to test\
+    \ your code, learn new tricks and hacks to make it more efficient and even branch\
+    \ out and learn another programming language.\n\n# ## #INCLUDE<KEEP ON LEARNING>\n\
+    \nWhat can you do to further your skills, learn new coding practices, experiment\
+    \ and present your code and even begin to help others using what you've experienced\
+    \ so far?\n\n# ### TWITTER\n\n# ### OPEN PROJECTS\n\nTwitter isn't all trolls\
+    \ and antagonists; among the well-publicised vitriol are some genuine people who\
+    \ are more than willing to spread their coding knowledge. We recommend you find\
+    \ a few who you can relate to and follow them. Often they post great tips, hacks\
+    \ and fixes for common coding problems.\n\nLook for open source projects that\
+    \ you like the sound of and offer to contribute to the code to keep it alive and\
+    \ up to date. There are millions of projects to choose from, so contact a few\
+    \ and see where they need help. It may only be a minor code update but it's a\
+    \ noble occupation for coders to get into.\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_73_0.png)\n\
+    \n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_73_1.png)\n\n# ### KEEP CODING\n\n\
+    # ### SHARE SKILLS\n\nIf you've mastered Python fairly well, then turn your attention\
+    \ to C++ or even C#. Still keep your Python skills going but learning a new coding\
+    \ language keeps the old brain ticking over nicely and give you a view into another\
+    \ community, and how they do things differently.\n\nBecome more active on coding\
+    \ and development knowledge sites, such as StackExchange. If you have the skills\
+    \ to start and help others out, not only will you feel really good for doing so\
+    \ but you can also learn a lot yourself by interacting with other members.\n\n\
+    ```\n```cpp\n#pragma once\n\n#define EXPAND_ME __FILE__ \":\" __LINE__\n\nconstexpr\
+    \ auto pi = 3.14l;\nthread_local decltype(pi) rage = 0b10;\n\n[[deprecated(\"\
+    abc\")]] char16_t *f() noexcept { return nullptr; }\n\ntemplate <typename T> struct\
+    \ Foo {\n    static_assert(std::is_floating_point_v<T>,\n        \"Foo<T>: T must\
+    \ be floating point\");\n};\n\nstruct A final : Foo {\n    A() = default;\n  \
+    \  [[noreturn]] virtual void foo() override;\n};\n\ntemplate <typename T> concept\
+    \ bool EqualityComparable = requires(T a) {\n    { a == b } -> bool;\n};\n```\n\
+    ```\n\n![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_73_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: '# ## GOING MOBILE
+
+
+    # ## PORTFOLIOS
+
+
+    The mobile market is a great place to test your coding skills and present any
+    games or apps you''ve created. If your app is good, then who knows, it could be
+    the next great thing to appear on the app stores. It''s a good learning experience
+    nevertheless, and something worth considering.
+
+
+    If you''ve learned how to code with an eye for a developer job in the future,
+    then it''s worth starting to build up an online portfolio of code. Look at job
+    postings and see what skills they require, then learn and code something with
+    those skills and add it to the portfolio. When it comes to applying, include a
+    link to the portfolio.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_74_0.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_74_1.png)
+
+
+    # ## ONLINE LEARNING
+
+
+    # ## TEACH CODE
+
+
+    Online courses are good examples of where to take your coding skills next, even
+    if you start from the beginner level again. Often, an online course follows a
+    strict coding convention, so if you''re self-taught then it might be worth seeing
+    how other developers lay out their code, and what''s considered acceptable.
+
+
+    Can you teach? If your coding skills are spot on, consider approaching a college
+    or university to see if they have need for a programming language teacher, perhaps
+    a part-time or evening course. If not teaching, then consider creating your own
+    YouTube how to code channel.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_74_2.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_74_3.png)
+
+
+    # ## SHARE CODE
+
+
+    # ## HARDWARE PROJECTS
+
+
+    Get sharing, even if you think your code isn''t very good. The criticism, advice
+    and comments you receive back help you iron out any issues with your code, and
+    you add them all to your checklist. Alternatively your code might be utterly amazing
+    but you won''t know unless you share it.
+
+
+    Contributing to hardware projects is a great resource for proving your code with
+    others and learning from other contributors. Many of the developer boards have
+    postings for coders to apply to for hardware projects, using unique code to get
+    the most from the hardware that''s being designed.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_74_4.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_74_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '**Congratulations, we have reached the end of your latest tech adventure.**
+    With help from our team of tech experts, you have been able to answer all your
+    questions, grow in confidence and ultimately master any issues you had. You can
+    now proudly proclaim that you are getting the absolute best from your latest choice
+    from the ever changing world of consumer technology and software.
+
+
+    > So what’s next? Do you want to start a new hobby? Are you looking to upgrade
+    to a new device? Or simply looking to learn a new skill?
+
+
+    Whatever your plans we are here to help you. Just check our expansive range of
+    For Beginners guidebooks and we are positive you will find what you are looking
+    for. This adventure with us may have ended, but that’s not to say that your journey
+    is over. Every new hardware or software update brings its new features and challenges,
+    and of course you already know we are here to help. So we will look forward to
+    seeing you again soon.
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_75_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# Discover more of our guides...
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_0.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_1.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_2.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_3.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_4.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_5.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_6.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_7.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_8.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_9.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_10.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_11.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_12.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_13.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_14.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_76_15.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_0.png)
+
+
+    # Master Your Tech
+
+
+    # From Beginner to Expert
+
+
+    To continue learning more about your tech visit us at:
+
+
+    # www.bdmpublications.com
+
+
+    # FREE Tech Guides
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_1.png)
+
+
+    Apple iPhone, iPad, Mac, MacBook & Watch
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_2.png)
+
+
+    PC & Windows 10
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_3.png)
+
+
+    Samsung & Android
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_4.png)
+
+
+    Photography, Photoshop & Lightroom
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_5.png)
+
+
+    Coding Python, Raspberry Pi & Linux
+
+
+    # EXCLUSIVE Offers on Our Tech Guidebooks
+
+
+    +   - Print & digital editions
+
+    +   - Featuring the very latest updates
+
+    +   - Step-by-step tutorials and guides
+
+    +   - Created by BDM experts
+
+
+    *Check out our latest titles today!*
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_6.png)
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_7.png)
+
+
+    # BDM''s *Ultimate* Photoshop
+
+
+    # bdmpublications.com/ultimate-photoshop
+
+
+    Buy our Photoshop guides and download tutorial images for free! *Simply sign up
+    and get creative.*
+
+
+    # PLUS
+
+
+    # SPECIAL DEALS and Bonus Content
+
+
+    Sign up to our monthly newsletter and get the latest updates, offers and news
+    from BDM. We are here to help you Master Your Tech!
+
+
+    ![](img/bdf3833c5133a7f9b1eef9ebdb21a76d_77_8.png)'
+  merge: -1
+  img_proc: true
