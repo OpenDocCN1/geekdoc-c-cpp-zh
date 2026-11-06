@@ -1,0 +1,15 @@
+![](bbox=[0.194, 0.059, 0.831, 0.528])
+
+> **Notice:** To save paper, you can prompt the user to enter all three numbers using one single oblique parallelogram.
+> 
+> **Remember!** A Decision symbol always has one entrance and two exit paths!
+
+Of course it is very soon for you to start creating your own algorithms. This particular exercise is quite simple and is presented in this chapter as an exception, just for demonstration purposes. You need to learn more before starting your own algorithms or even C++ programs. Just be patient! In a few chapters the big moment will come!
+
+# 4.8 What are “Reserved Words”?
+
+In a computer language, “reserved words” are all those words that have a strictly predefined meaning—they are reserved for special use and cannot be used for any other purpose. For example, the words Start, End, Read, and Write in flowcharts have a predefined meaning. They are used to represent the beginning, the end, the data input, and the results output, respectively.
+
+Reserved words exist in all high-level computer languages as well. In C++, there are many reserved words such as if, while, else, and for. Their meanings are predefined, so these words cannot be used for any other purposes.
+
+> **Notice:** Reserved words in a computer language are often called keywords.

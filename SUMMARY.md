@@ -292,6 +292,7 @@
 +   [C 语言初学者全案指南](docs/c-allinone-desk-reference-for-dummiessupsup-all-in-one-desk-/README.md)
 +   [C++ 与算法思维：初学者指南（第2版）：像程序员一样思考](docs/c-and-algorithmic-thinking-for-the-complete-beginner-2nd-edi/README.md)
 +   [C++ 与算法思维：初学者入门指南（第3版）](docs/c-and-algorithmic-thinking-for-the-complete-beginner-3rd-edi/README.md)
++   [完全初学者的 C++ 与算法思维：学会像程序员一样思考 1](docs/c-and-algorithmic-thinking-for-the-complete-beginner-learn-t/README.md)
 +   [C++ 与算法思维初学者指南 第三版](docs/c-and-algorithmic-thinking-for-the-complete-beginner-third-e/README.md)
 +   [C++ 与计算机黑客及移动黑客三合集：学习 C++ 编程、计算机黑客与移动黑客初学者指南](docs/c-and-computer-hacking-mobile-hacking-3-bundle-manuscript-be/README.md)
 +   [C# 与 游戏编程：初学者指南，第二版 (书与光盘)](docs/c-and-game-programming-a-beginners-guide-second-edition-book/README.md)
