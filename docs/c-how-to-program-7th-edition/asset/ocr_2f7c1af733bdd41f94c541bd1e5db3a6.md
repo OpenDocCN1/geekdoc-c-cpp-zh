@@ -1,0 +1,54 @@
+and in blocks nested within that block. This section discusses four scopes for an identifier—
+function scope, global namespace scope, local scope and function-prototype scope. Later
+we’ll see two other scopes—class scope (Chapter 9) and namespace scope (Chapter 24).
+
+An identifier declared outside any function or class has global namespace scope. Such
+an identifier is “known” in all functions from the point at which it’s declared until the end
+of the file. Global variables, function definitions and function prototypes placed outside a
+function all have global namespace scope.
+
+Labels (identifiers followed by a colon such as `start:`) are the only identifiers with
+function scope. Labels can be used anywhere in the function in which they appear, but
+cannot be referenced outside the function body. Labels are used in goto statements
+(Appendix F). Labels are implementation details that functions hide from one another.
+
+Identifiers declared inside a block have local scope. Local scope begins at the identi-
+fier’s declaration and ends at the terminating right brace (}) of the block in which the iden-
+tifier is declared. Local variables have local scope, as do function parameters, which are also
+local variables of the function. Any block can contain variable declarations. When blocks
+are nested and an identifier in an outer block has the same name as an identifier in an inner
+block, the identifier in the outer block is “hidden” until the inner block terminates. The
+inner block sees the value of its own local identifier and not the value of the identically
+named identifier in the enclosing block. Local variables declared `static` still have local
+scope, even though they exist from the time the program begins execution. Storage dura-
+tion does not affect the scope of an identifier.
+
+The only identifiers with function prototype scope are those used in the parameter list
+of a function prototype. As mentioned previously, function prototypes do not require
+names in the parameter list—only types are required. Names appearing in the parameter
+list of a function prototype are ignored by the compiler. Identifiers used in a function pro-
+totype can be reused elsewhere in the program without ambiguity. In a single prototype,
+a particular identifier can be used only once.
+
+> > **Common Programming Error 6.9**
+> >
+> > *Accidentally using the same name for an identifier in an inner block that is used for an
+> > identifier in an outer block, when in fact you want the identifier in the outer block to be
+> > active for the duration of the inner block, is typically a logic error.*
+
+> > **Good Programming Practice 6.4**
+> >
+> > *Avoid variable names that hide names in outer scopes. This can be accomplished by avoid-
+> > ing the use of duplicate identifiers in a program.*
+
+The program of Fig. 6.12 demonstrates scoping issues with global variables, auto-
+matic local variables and `static` local variables.
+
+Line 10 declares and initializes global variable `x` to 1. This global variable is hidden in
+any block (or function) that declares a variable named `x`. In `main`, line 14 displays the value
+of global variable `x`. Line 16 declares a local variable `x` and initializes it to 5. Line 19 out-
+puts this variable to show that the global `x` is hidden in `main`. Next, lines 20–24 define a
+new block in `main` in which another local variable `x` is initialized to 7 (line 21). Line 23
+outputs this variable to show that it hides `x` in the outer block of `main`. When the block
+exits, the variable `x` with value 7 is destroyed automatically. Next, line 26 outputs the local
+variable `x` in the outer block of `main` to show that it’s no longer hidden.

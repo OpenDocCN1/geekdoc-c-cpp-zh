@@ -1,0 +1,56 @@
+```
+base-salaried commission employee: Bob Lewis
+social security number: 444-44-4444
+gross sales: 5000.00; commission rate: 0.04; base salary: 300.00
+earned $500.00
+
+Employees processed polymorphically using dynamic binding:
+
+Virtual function calls made off base-class pointers:
+
+salaried employee: John Smith
+social security number: 111-11-1111
+weekly salary: 800.00
+earned $800.00
+
+hourly employee: Karen Price
+social security number: 222-22-2222
+hourly wage: 16.75; hours worked: 40.00
+earned $670.00
+
+commission employee: Sue Jones
+social security number: 333-33-3333
+gross sales: 10000.00; commission rate: 0.06
+earned $600.00
+
+base-salaried commission employee: Bob Lewis
+social security number: 444-44-4444
+gross sales: 5000.00; commission rate: 0.04; base salary: 300.00
+earned $500.00
+
+Virtual function calls made off base-class references:
+
+salaried employee: John Smith
+social security number: 111-11-1111
+weekly salary: 800.00
+earned $800.00
+
+hourly employee: Karen Price
+social security number: 222-22-2222
+hourly wage: 16.75; hours worked: 40.00
+earned $670.00
+
+commission employee: Sue Jones
+social security number: 333-33-3333
+gross sales: 10000.00; commission rate: 0.06
+earned $600.00
+
+base-salaried commission employee: Bob Lewis
+social security number: 444-44-4444
+gross sales: 5000.00; commission rate: 0.04; base salary: 300.00
+earned $500.00
+```
+
+**Fig. 13.23** | Employee class hierarchy driver program. (Part 3 of 3)
+
+Line 46 allocates vector employees, which contains four Employee pointers. Line 49 aims employees[0] at object salariedEmployee. Line 50 aims employees[1] at object hourlyEmployee. Line 51 aims employees[2] at object commissionEmployee. Line 52 aims employee[3] at object basePlusCommissionEmployee. The compiler allows these assignments, because a SalariedEmployee is an Employee, an HourlyEmployee is an

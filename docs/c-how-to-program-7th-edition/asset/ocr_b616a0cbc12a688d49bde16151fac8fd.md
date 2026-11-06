@@ -1,0 +1,57 @@
+# ### 22.5.5 Mathematical Algorithms
+
+Figure 22.30 demonstrates several common mathematical algorithms from the STL, including `random_shuffle`, `count`, `count_if`, `min_element`, `max_element`, `accumulate`, `for_each` and `transform`.
+
+```
+~~~cpp
+// Fig. 22.30: Fig22_30.cpp
+// Mathematical algorithms of the Standard Library.
+#include <iostream>
+#include <algorithm> // algorithm definitions
+#include <numeric> // accumulate is defined here
+#include <vector>
+#include <iterator>
+using namespace std;
+
+bool greater9( int ); // predicate function prototype
+void outputSquare( int ); // output square of a value
+int calculateCube( int ); // calculate cube of a value
+
+int main()
+{
+   const int SIZE = 10;
+   int a1[ SIZE ] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+   vector< int > v( a1, a1 + SIZE ); // copy of a1
+   ostream_iterator< int > output( cout, " " );
+
+   cout << "Vector v before random_shuffle: ";
+   copy( v.begin(), v.end(), output );
+
+   random_shuffle( v.begin(), v.end() ); // shuffle elements of v
+   cout << "\nVector v after random_shuffle: ";
+   copy( v.begin(), v.end(), output );
+
+   int a2[ SIZE ] = { 100, 2, 8, 1, 50, 3, 8, 8, 9, 10 };
+   vector< int > v2( a2, a2 + SIZE ); // copy of a2
+   cout << "\n\nVector v2 contains: ";
+   copy( v2.begin(), v2.end(), output );
+
+   // count number of elements in v2 with value 8
+   int result = count( v2.begin(), v2.end(), 8 );
+   cout << "\nNumber of elements matching 8: " << result;
+
+   // count number of elements in v2 that are greater than 9
+   result = count_if( v2.begin(), v2.end(), greater9 );
+   cout << "\nNumber of elements greater than 9: " << result;
+
+   // locate minimum element in v2
+   cout << "\n\nMinimum element in Vector v2 is: "
+      << *( min_element( v2.begin(), v2.end() ) );
+
+   // locate maximum element in v2
+   cout << "\nMaximum element in Vector v2 is: "
+      << *( max_element( v2.begin(), v2.end() ) );
+~~~
+```
+
+Fig. 22.30 | Mathematical algorithms of the Standard Library. (Part 1 of 2.)

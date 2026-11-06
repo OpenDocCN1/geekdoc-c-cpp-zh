@@ -1,0 +1,45 @@
+![](bbox=[0.116, 0.109, 0.613, 0.232])
+
+**4.29** *(Multiples of 2 with an Infinite Loop)* Write a program that prints the powers of the integer 2, namely 2, 4, 8, 16, 32, 64, etc. Your while loop should not terminate (i.e., you should create an infinite loop). To do this, simply use the keyword true as the expression for the while statement. What happens when you run this program?
+
+**4.30** Write a program that reads the radius of a circle (as a double value) and computes and prints the diameter, the circumference and the area. Use the value 3.14159 for π.
+
+**4.31** What’s wrong with the following statement? Provide the correct statement to accomplish what the programmer was probably trying to do.
+
+```
+```cpp
+cout << ++( x + y );
+```
+```
+
+**4.32** *(Sides of a Triangle)* Write a program that reads three nonzero double values and determines and prints whether they could represent the sides of a triangle.
+
+**4.33** *(Sides of a Right Triangle)* Write a program that reads three nonzero integers and determines and prints whether they could be the sides of a right triangle.
+
+**4.34** *(Factorial)* The factorial of a nonnegative integer *n* is written *n*! (pronounced “*n* factorial”) and is defined as follows:
+
+*n*! = *n* · (*n* - 1) · (*n* - 2) · ... · 1   (for values of *n* greater than 1)
+
+and
+
+*n*! = 1   (for *n* = 0 or *n* = 1).
+
+For example, 5! = 5 · 4 · 3 · 2 · 1, which is 120. Use while statements in each of the following:
+
++   a) Write a program that reads a nonnegative integer and computes and prints its factorial.
++   
++   b) Write a program that estimates the value of the mathematical constant *e* by using the formula:
++   
++      e = 1 + 1/1! + 1/2! + 1/3! + ...
++   
++      Prompt the user for the desired accuracy of *e* (i.e., the number of terms in the summation).
++   
++   c) Write a program that computes the value of *e*^x by using the formula
++   
++      *e*^x = 1 + x/1! + x^2/2! + x^3/3! + ...
++   
++      Prompt the user for the desired accuracy of *e* (i.e., the number of terms in the summation).
+
+# **Making a Difference**
+
+**4.35** *(Enforcing Privacy with Cryptography)* The explosive growth of Internet communications and data storage on Internet-connected computers has greatly increased privacy concerns. The field of cryptography is concerned with coding data to make it difficult (and hopefully—with the most advanced schemes—impossible) for unauthorized users to read. In this exercise you’ll investigate a simple scheme for encrypting and decrypting data. A company that wants to send data over the In-

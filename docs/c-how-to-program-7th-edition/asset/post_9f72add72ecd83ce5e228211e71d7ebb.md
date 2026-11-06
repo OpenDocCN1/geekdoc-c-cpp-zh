@@ -1,0 +1,154 @@
+
+![](img/023f159fdd47d944d48e08843cea732d_9_0.png)
+
+## Contents
+
+Chapters 23–27 and Appendices F–I are PDF documents posted online at the book's Companion Website (located at www.pearsonhighered.com/deitel).
+
+- **Preface** — xxiii
+- **1 Introduction to Computers, the Internet and the World Wide Web** — 1
+  - 1.1 Introduction — 2
+  - 1.2 Computers: Hardware and Software — 3
+  - 1.3 Computer Organization — 4
+  - 1.4 Personal, Distributed and Client/Server Computing — 5
+  - 1.5 The Internet and the World Wide Web — 6
+  - 1.6 Web 2.0 — 6
+  - 1.7 Machine Languages, Assembly Languages and High-Level Languages — 7
+  - 1.8 History of C and C++ — 8
+  - 1.9 C++ Standard Library — 9
+  - 1.10 History of Java — 10
+  - 1.11 Fortran, COBOL, Pascal and Ada — 11
+  - 1.12 BASIC, Visual Basic, Visual C++, C# and .NET — 11
+  - 1.13 Key Software Trend: Object Technology — 12
+  - 1.14 Typical C++ Development Environment — 13
+  - 1.15 Notes About C++ and C++ How to Program, 7/e — 15
+  - 1.16 Test-Driving a C++ Application — 16
+  - 1.17 Software Technologies — 22
+  - 1.18 Future of C++: Open Source Boost Libraries, TR1 and C++0x — 23
+  - 1.19 Software Engineering Case Study: Introduction to Object Technology and the UML — 24
+  - 1.20 Wrap-Up — 28
+  - 1.21 Web Resources — 29
+- **2 Introduction to C++ Programming** — 39
+  - 2.1 Introduction — 40
+  - 2.2 First Program in C++: Printing a Line of Text — 40
+  - 2.3 Modifying Our First C++ Program — 44
+  - 2.4 Another C++ Program: Adding Integers — 45
+- **6 Functions and an Introduction to Recursion** — 207
+  - 6.1 Introduction — 208
+  - 6.2 Program Components in C++ — 209
+  - 6.3 Math Library Functions — 210
+  - 6.4 Function Definitions with Multiple Parameters — 211
+  - 6.5 Function Prototypes and Argument Coercion — 216
+  - 6.6 C++ Standard Library Header Files — 218
+  - 6.7 Case Study: Random Number Generation — 220
+  - 6.8 Case Study: Game of Chance; Introducing enum — 225
+  - 6.9 Storage Classes — 229
+  - 6.10 Scope Rules — 231
+  - 6.11 Function Call Stack and Activation Records — 235
+  - 6.12 Functions with Empty Parameter Lists — 238
+  - 6.13 Inline Functions — 239
+  - 6.14 References and Reference Parameters — 241
+  - 6.15 Default Arguments — 245
+  - 6.16 Unary Scope Resolution Operator — 247
+  - 6.17 Function Overloading — 248
+  - 6.18 Function Templates — 251
+  - 6.19 Recursion — 253
+  - 6.20 Example Using Recursion: Fibonacci Series — 256
+  - 6.21 Recursion vs. Iteration — 259
+  - 6.22 Wrap-Up — 262
+- **7 Arrays and Vectors** — 282
+  - 7.1 Introduction — 283
+  - 7.2 Arrays — 284
+  - 7.3 Declaring Arrays — 285
+  - 7.4 Examples Using Arrays — 286
+    - 7.4.1 Declaring an Array and Using a Loop to Initialize the Array's Elements — 286
+    - 7.4.2 Initializing an Array in a Declaration with an Initializer List — 287
+    - 7.4.3 Specifying an Array's Size with a Constant Variable and Setting Array Elements with Calculations — 288
+    - 7.4.4 Summing the Elements of an Array — 291
+    - 7.4.5 Using Bar Charts to Display Array Data Graphically — 291
+    - 7.4.6 Using the Elements of an Array as Counters — 293
+    - 7.4.7 Using Arrays to Summarize Survey Results — 294
+    - 7.4.8 Static Local Arrays and Automatic Local Arrays — 297
+  - 7.5 Passing Arrays to Functions — 299
+  - 7.6 Case Study: Class GradeBook Using an Array to Store Grades — 303
+  - 7.7 Searching Arrays with Linear Search — 309
+  - 7.8 Sorting Arrays with Insertion Sort — 311
+  - 7.9 Multidimensional Arrays — 313
+  - 7.10 Case Study: Class GradeBook Using a Two-Dimensional Array — 316
+  - 7.11 Introduction to C++ Standard Library Class Template vector — 323
+  - 7.12 Wrap-Up — 328
+- **8 Pointers** — 345
+  - 8.1 Introduction — 346
+  - 8.2 Pointer Variable Declarations and Initialization — 346
+  - 8.3 Pointer Operators — 348
+  - 8.4 Pass-by-Reference with Pointers — 350
+  - 8.5 Using const with Pointers — 354
+  - 8.6 Selection Sort Using Pass-by-Reference — 358
+  - 8.7 sizeof Operator — 362
+  - 8.8 Pointer Expressions and Pointer Arithmetic — 365
+  - 8.9 Relationship Between Pointers and Arrays — 367
+  - 8.10 Pointer-Based String Processing — 370
+  - 8.11 Arrays of Pointers — 373
+  - 8.12 Function Pointers — 374
+  - 8.13 Wrap-Up — 377
+- **9 Classes: A Deeper Look, Part 1** — 395
+  - 9.1 Introduction — 396
+  - 9.2 Time Class Case Study — 397
+  - 9.3 Class Scope and Accessing Class Members — 403
+  - 9.4 Separating Interface from Implementation — 405
+  - 9.5 Access Functions and Utility Functions — 406
+  - 9.6 Time Class Case Study: Constructors with Default Arguments — 409
+  - 9.7 Destructors — 414
+  - 9.8 When Constructors and Destructors Are Called — 415
+  - 9.9 Time Class Case Study: A Subtle Trap—Returning a Reference to a private Data Member — 418
+  - 9.10 Default Memberwise Assignment — 421
+  - 9.11 Wrap-Up — 423
+- **10 Classes: A Deeper Look, Part 2** — 429
+  - 10.1 Introduction — 430
+  - 10.2 const (Constant) Objects and const Member Functions — 430
+  - 10.3 Composition: Objects as Members of Classes — 439
+  - 10.4 friend Functions and friend Classes — 445
+  - 10.5 Using the this Pointer — 448
+  - 10.6 static Class Members — 453
+  - 10.7 Data Abstraction and Information Hiding — 458
+  - 10.8 Wrap-Up — 460
+- **11 Operator Overloading** — 466
+  - 11.1 Introduction — 467
+  - 11.2 Fundamentals of Operator Overloading — 468
+  - 11.3 Restrictions on Operator Overloading — 469
+  - 11.4 Operator Functions as Class Members vs. Global Functions — 470
+  - 11.5 Overloading Stream Insertion and Stream Extraction Operators — 472
+  - 11.6 Overloading Unary Operators — 475
+  - 11.7 Overloading Binary Operators — 476
+  - 11.8 Dynamic Memory Management — 476
+  - 11.9 Case Study: Array Class — 478
+  - 11.10 Converting between Types — 490
+  - 11.11 Building a String Class — 491
+  - 11.12 Overloading ++ and -- — 492
+  - 11.13 Case Study: A Date Class — 494
+  - 11.14 Standard Library Class string — 498
+  - 11.15 explicit Constructors — 502
+  - 11.16 Proxy Classes — 505
+  - 11.17 Wrap-Up — 509
+- **12 Object-Oriented Programming: Inheritance** — 521
+  - 12.1 Introduction — 522
+  - 12.2 Base Classes and Derived Classes — 523
+  - 12.3 protected Members — 526
+  - 12.4 Relationship between Base Classes and Derived Classes — 526
+    - 12.4.1 Creating and Using a CommissionEmployee Class — 527
+    - 12.4.2 Creating a BasePlusCommissionEmployee Class Without Using Inheritance — 532
+    - 12.4.3 Creating a CommissionEmployee-BasePlusCommissionEmployee Inheritance Hierarchy — 537
+    - 12.4.4 CommissionEmployee-BasePlusCommissionEmployee Inheritance Hierarchy Using protected Data — 542
+    - 12.4.5 CommissionEmployee-BasePlusCommissionEmployee Inheritance Hierarchy Using private Data — 549
+  - 12.5 Constructors and Destructors in Derived Classes — 556
+  - 12.6 public, protected and private Inheritance — 564
+  - 12.7 Software Engineering with Inheritance — 565
+  - 12.8 Wrap-Up — 566
+- **13 Object-Oriented Programming: Polymorphism** — 572
+  - 13.1 Introduction — 573
+  - 13.2 Polymorphism Examples — 574
+  - 13.3 Relationships Among Objects in an Inheritance Hierarchy — 575
+    - 13.3.1 Invoking Base-Class Functions from Derived-Class Objects — 576
+    - 13.3.2 Aiming Derived-Class Pointers at Base-Class Objects — 583
+    - 13.3.3 Derived-Class Member-Function Calls via Base-Class Pointers — 584
+    - 13.3.4 Virtual Functions — 586

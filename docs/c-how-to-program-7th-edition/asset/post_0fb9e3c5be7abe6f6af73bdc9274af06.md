@@ -1,0 +1,364 @@
+
+- shift a range of numbers 221
+- shifted, scaled integers 222
+- shifted, scaled integers produced by 1 + rand() % 6 222
+- Shifting and Printing an Integer 906
+- shifting.Value 25
+- “shifting” section of the computer short 4
+- short-circuit evaluation 189
+- short data type 184
+- short int data type 184
+- showbase stream manipulator 662, 666
+- showpoint flag in ios function of class ios 662
+- showpoint stream manipulator 139, 662
+- showpos stream manipulator 392, 662, 666
+- shrink-wrapped software 566
+- shuffle cards 906
+- shuffling algorithm 857
+- sibling 832
+- side effect 241
+- side effect in an expression 231, 241, 259
+- side effects 834
+- sides of a right triangle 161
+- Sides of a Right Triangle exercise 161
+- sides of a square 204
+- sides of a triangle 161
+- Sides of a Triangle exercise 161
+- Sieve of Eratosthenes 389, 1003
+- Sieve of Eratosthenes exercise 342
+- SIGABRT CXXV
+- SIGFPE CXXV
+- SIGILL CXXV
+- SIGINT CXXV
+- sign extension 861
+- sign left justified 662
+- signal CXXV
+- signal 5 394
+- signal handler CXXV
+- signal handling CXXVI
+- signal-handling library CXXV
+- signal number CXXV
+- signals 394
+- “signals” defined in header `<csignal>` CXXV
+- signature 216, 249, 492
+- signatures of overloaded prefix and postfix increment operators 495
+- significant digits 663
+- SIGSEGV CXXV
+- SIGTERM CXXV
+- simple condition 187, 188
+- Simple Encryption 781
+- simple loop activity diagram 194
+- Simpletron Machine Language (SML) 393, 807
+- Simpletron Simulator 393, 808
+- Simpletron Simulator exercise 393
+- simulation 399
+- Simulation: Tortoise and the Hare 384
+- sine function 211
+- sine 211
+- single-argument constructor 490, 491, 502, 503, 504
+- single entry point 192
+- single-entry/single-exit control statement 115, 116, 194
+- single exit point 192
+- single inheritance 522, LVII
+- single-line comment 41
+- single-precision floating-point number 13, 767
+- single quote 43
+- single quote (') 370
+- single selection 197
+- single-selection if statement 114, 119
+- single-selection statement 122
+- sized deallocation function 652
+- size_t 122
+- size_t argument 53
+- size_t argument of function strlen 793
+- size_t function member of class string 592
+- size_t function member of function push_back 1121
+- size_t function member of queue 954
+- size_t function member of stack 952
+- size_t function member of vector 229, 1075
+- size of a string 753
+- size of a structure 855
+- size of a variable 49, 229
+- size of an array 362
+- size of an int 48
+- size_t type 122
+- size_t 40, 748, 794, 1028
+- size_t operator 362, 363, 405, 753, 809
+- size_t used to determine standard data type sizes 365
+- size_t function when applied to an array name returns the number of bytes in the array 365
+- sizes of the basic data types 754
+- skip remainder of switch statement 185
+- skip remaining code in loop 186
+- skipping whitespace 657
+- skipping white-space characters 662
+- small circle symbol 113
+- smaller circle symbol 113
+- small integer 185
+- smallest 192
+- smallest of several integers 203
+- “smart array” 297, 229
+- smart pointer auto_ptr 24, XIV
+- smatch typedef 788
+- SML 388
+- SML operation code 388
+- SMS Language 783
+- “smiley” character 5
+- social networking 6
+- software 2, 4
+- Software as a Service (SaaS) 23
+- software asset 26
+- software engineering 71, 91
+  - encapsulation 83
+  - reuse 87, 91
+  - separate interface from implementation 91
+- Software Engineering Case Study 388
+- Software Engineering Case Study xxvii
+- Software Engineering Observations 10
+- Software Engineering Observations overview xxvi
+- software life cycle LXXII
+- software reuse 10, 209, 522, 628, 631, 632, 634, LXXI
+- solid circle for representing an initial state in a UML diagram in the UML LXXVIII, LXXIX
+- solid circle enclosed in an open circle (for representing the end of a UML activity diagram) LXXVIII
+- solid circle symbol 113
+- solid diamonds (representing composition) in the UML LXXIX
+- Solution Configurations combobox 45
+- sort algorithm 970, 972
+- sort algorithms
+  - bubble sort 335, 803, 804
+  - bucket sort 343, 804
+  - insertion sort 330, 341, 799
+  - merge sort 799
+  - quicksort 805
+  - selection sort 343, 358, 793
+- sort function 627
+- sort function of list 941
+- sort standard library function 788, 788
+- sort_heap algorithm 985
+- sorting 78, 807, 970
+- sorting algorithms 793, 970
+- sorting data 787
+- sorting data 785, 793
+- sorting order 972, 975
+- sorting program 781
+- source character set LXV, LXVII
+- Source code CXLII
+- sound class CXIII
+  - play function of class Sound CXIII
+- SoundManager class CXIII
+  - createSound function of class SoundManager CXIII
+- source code 13, 405, 565
+- source-code file 88
+- space (' ') 46
+- space can be allocated CXXVIII
+- spaces for padding 665
+- space-time trade-off 737
+- Spanish 30
+- speaking to a computer 4
+- special character 370
+- special characters 46
+- Special Section: Building Your Own Computer 388
+- special symbol 714
+- specialization in the UML CXXVII
+- special light CXXI
+- spelling checker 915
+- spiral 729
+- split 125
+- splice function member of list 941
+- sprintf 829
+- sqrt 287, LXXIII
+- sqrt function of cmath header file 211
+- square 160
+- square function 218
+- Square of Any Character exercise 274
+
+- two's complement notation 1019
+- two's position 1014
+- tying an output stream to an input stream 902
+- type checking 628, 1027, 1028
+- type field 744
+- type information 744
+- type name (of a formal argument) 229
+- type of a value 49, 229
+- type of the this pointer 448
+- type parameter 252, 628, 632, 638
+- type qualifier 302
+- type specifier 649
+- type template parameter 628
+- type_info class 619
+- typedef 756, 773, 856, 921, 946, 949, 950
+- typedef fstream 650
+- typedef ifstream 650
+- typedef iostream 648
+- typedef istream 648
+- typedef keyword 648
+- typedef name 650
+- typedef ofstream 648
+- typedefs in first-class containers 922
+- typedef 704
+- typeid operator 619
+- `<typeinfo>` header file 219, 619
+- typename 629
+- typename keyword 628
+- type-safe I/O 646
+- type-safe linkage CXXCI
+
+## U
+
+- U integer suffix CXXIV
+- u integer suffix CXXIV
+- UL integer suffix CXXIV
+- ul integer suffix CXXIV
+
+### UML
+
+- action expression 113
+- action state 113
+- activity diagram 112
+- class diagram
+- decision symbol 116
+- diamond symbol 113
+- dotted line 113
+- final state 113
+- initial state 113
+- merge symbol 122
+- note 113
+- small circle symbol 113
+- solid circle symbol 113
+- transition 113
+- transition arrow 113
+
+### UML (Unified Modeling Language)
+
+- xxiii, 24, 27, 73, 113, LXXVIII, LXXXIV, LXXXVII, LXXXIX, XCIII, XCIV, XCV, XCVI
+- action expression 117, 123
+- action state 113
+- activity diagram 113, 117, 122
+- arrow 113
+- arrowheads 73
+- data types 77
+- decision 117
+- diagram LXXIV
+- diamond symbol 116
+- guard condition 116, 117, 121
+
+### UML (Unified Modeling Language) (cont.)
+
+- guillemets (« and ») 87
+- minus sign (-) 83
+- plus sign (+) 73
+- public operation 73
+- Resource Center
+  - (http://dev.omg.com/uml/)
+  - LXXXVI
+- Str typing 77
+- transition arrow 116, 122, 123
+- UML activity diagram 112, 169
+- UML class diagram 112, 169
+- UML deployment diagram LXXIV
+- UML final state (for representing the initial state) LXXXIX
+- UML solid circle (for representing an activity) in the UML LXXXVII
+- UML Use Case Diagram
+  - actor 116
+  - actor in the UML LXXXVII
+  - use case LXXXVII
+- UML Use Case Diagram (cont.)
+  - use case 116
+  - use case in the UML LXXXVII
+
+## U
+
+- unary cast operator 145
+- unary decrement operator (--) 145
+- unary function IV
+- unary increment operator (++) 144
+- unary minus operator (-) 144
+- unary operator 138, 189, 348
+- unary operator overload 469, 475
+- unary plus (+) operator 138
+- unary reduction function 941, 964, 966
+- unary scope resolution operator (::) 247
+- unbuffered output 650
+- unbuffered standard error stream 648
+- Uncaught Exception 712
+- uncommitted copy of an object 498
+- unconditional branch 30
+- unconditional branch goto 650
+- #undef preprocessor directive 1028, 1030
+- undefined area in memory 855
+- undefined value 127
+- undefined value exception 705
+- underlying container 952
+- underlying data structure 955
+- underscore (_) 46
+- unexpected end CXXIV
+- unexpected event CXXIV
+- unexpected handler 694, 704
+- unformatted I/O 647, 648, 655
+- unformatted I/O using the read, gcount and write member functions 656
+- unformatted output 651, 652
+- unget 645
+- Unicode character set 647, 714
+- Unified Modeling Language (UML) 24, 27, 113, LXXVIII, LXXIV, LXXXIII, LXXXIV, LXXXVII, LXXXIX, XCII, XCIV, XCV, XCVI
+- uniform distribution IV
+- uninitialized copy 498
+- uninitialized fill 498
+- uninitialized local reference causes a runtime error 344
+- uninitialized value 127
+- union CXXIX, CCXX
+- union constructor CCXX
+- union function cannot be virtual CCXXI
+- union with no constructor CCXX
+- unique algorithm 729, 973, 975
+- unique key 944, 947, 950
+- unique member function of list 941
+- unique member function of map 976, 977
+- unique-format form 299
+- UNIX S_5, 8, 660, 720, CCXIV, CCXII, CCXV
+- UNIX command line CCVI
+- UNIX environment
+- unnamed bit field 872
+- unnamed bit field with a zero width 872
+- unnamed namespace XLVI
+- unnamed namespace CXXVI
+- unordered map 950
+- unordered map container XXV
+- unordered_multimap container XXV
+- unordered_multiset container XXV
+- unordered_set container XXV
+- Unpacking Characters from Unsigned Integers 506
+- unreachable code 87
+- unreferenced class CXXIV
+- unsigned 218, CCXIV
+- unsigned char data type 218
+- unsigned data type 220, 224
+- unsigned int 218, 224, 362
+- unsigned integer in bits 861
+- unsigned long 256, 889, CCXIV
+- unsigned long data type 218
+- unsigned long int 256
+- unsigned long int data type 218
+- unsigned short data type 218
+- unsigned short int data type 218
+- unspecified number of arguments CCVII
+- unsuccessful termination CCXIII
+- untyped data 871
+- upcasting a stream from an output stream 673
+- updating the function call stack 695
+- update a record 752
+- update in place 787
+- upper bound algorithm 980
+- upper_bound function of associative container 946
+- uppercase letter 46, 66
+- uppercase letter A-Z 875
+- uppercase letter X 797
+- uppercase stream manipulator 662, 666, 668
+- usa. autodesk.com/adsk/servlet/ index?id=231123&id=64350
+- user-defined class 490
+- use case diagram in the UML LXXXVII, LXXXV
+- use case in the UML LXXXII, LXXXIV
+- use case modeling LXXXIII
+- user-defined function shared_ptr CXXVII
+- USENIX C++ Conference 627
+- user-defined class name 72
+- user-defined function 209, 211
+- user-defined type 229, 490

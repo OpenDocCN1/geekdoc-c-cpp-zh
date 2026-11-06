@@ -392,6 +392,7 @@
 +   [金融系统高性能 C++ 高级指南](docs/c-high-performance-for-financial-systems/README.md)
 +   [C++ 编程指南](docs/c-how-to-program/README.md)
 +   [C++ 程序设计 第 10 版 全球版 (2017)](docs/c-how-to-program-10th-edition-global-edition-2017/README.md)
++   [C++ 编程指南（第7版）](docs/c-how-to-program-7th-edition/README.md)
 +   [C 编程指南，第 9 全球版](docs/c-how-to-program-9th-global-edition/README.md)
 +   [C++ 编程程序（早期对象版），全球版](docs/c-how-to-program-early-objects-version-global-edition/README.md)
 +   [C 如何编程 全球版](docs/c-how-to-program-global-edition/README.md)
