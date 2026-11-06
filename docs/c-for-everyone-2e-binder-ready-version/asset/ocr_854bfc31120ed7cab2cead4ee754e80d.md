@@ -1,0 +1,56 @@
+![](bbox=[0.08, 0.1, 0.2, 0.18])
+
++   1. Consider the function call pow(3, 2). What are the arguments and return value?
++   2. What is the return value of the function call pow(pow(2, 2), 2)?
++   3. The ceil function in the C++ standard library takes a single argument x and returns the smallest integer ≥ x. What is the return value of ceil(2.3)?
++   4. Is it possible to determine the answer to Self Check 3 without knowing how the ceil function is implemented. Use an engineering term to describe this aspect of the ceil function.
+
+**Practice It** Now you can try these exercises at the end of the chapter: R5.1, P5.1.
+
+# # 5.2 Implementing Functions
+
+In this section, you will learn how to implement a function from a given specification. We will use a very simple example: a function to compute the volume of a cube with a given side length.
+
+![](bbox=[0.69, 0.36, 0.93, 0.5])
+
+The cube_volume function uses a given side length to compute the volume of a cube.
+
+> When defining a function, you provide a name for the function, a variable for each argument, and a type for the result.
+
+When writing this function, you need to
+
++   * Pick a name for the function (cube_volume).
++   * Declare a variable for each argument (double side_length). These variables are called parameter variables.
++   * Specify the type of the return value (double).
+
+Put all this information together to form the first line of the function's definition:
+
+```
+double cube_volume(double side_length)
+```
+
+Next, specify the body of the function: the statements that are executed when the function is called.
+
+The volume of a cube of side length s is s × s × s. However, for greater clarity, our parameter variable has been called side_length, not s, so we need to compute side_length * side_length * side_length.
+
+We will store this value in a variable called volume:
+
+```
+double volume = side_length * side_length * side_length;
+```
+
+In order to return the result of the function, use the return statement:
+
+```
+return volume;
+```
+
+The body of a function is enclosed in braces. Here is the complete function:
+
+```
+double cube_volume(double side_length)
+{
+    double volume = side_length * side_length * side_length;
+    return volume;
+}
+```

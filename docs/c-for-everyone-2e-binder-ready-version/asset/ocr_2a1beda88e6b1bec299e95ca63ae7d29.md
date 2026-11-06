@@ -1,0 +1,56 @@
+**P2.12** The following pseudocode describes how to turn a string containing a ten-digit phone number (such as "4155551212") into a more readable string with parentheses and dashes, like this: "(415) 555-1212".
+
+```
+~~~
+Take the substring consisting of the first three characters and surround it with "(" and ")". This is the area code.
+Concatenate the area code, the substring consisting of the next three characters, a hyphen, and the substring consisting of the last four characters. This is the formatted number.
+~~~
+```
+
+Translate this pseudocode into a C++ program that reads a telephone number into a string variable, computes the formatted number, and prints it.
+
+**P2.13** The following pseudocode describes how to extract the dollars and cents from a price given as a floating-point value. For example, a price 2.95 yields values 2 and 95 for the dollars and cents.
+
+```
+~~~
+Assign the price to an integer variable dollars.
+Multiply the difference price - dollars by 100 and add 0.5.
+Assign the result to an integer variable cents.
+~~~
+```
+
+Translate this pseudocode into a C++ program. Read a price and print the dollars and cents. Test your program with inputs 2.95 and 4.35.
+
+**P2.14** *Giving change.* Implement a program that directs a cashier how to give change. The program has two inputs: the amount due and the amount received from the customer. Display the dollars, quarters, dimes, nickels, and pennies that the customer should receive in return.
+
+![](bbox=[0.75, 0.359, 0.901, 0.429])
+
+**P2.15** Write a program that asks the user to input
+
++   - The number of gallons of gas in the tank
++   - The fuel efficiency in miles per gallon
++   - The price of gas per gallon
+
+Then print the cost per 100 miles and how far the car can go with the gas in the tank.
+
+**P2.16** *File names and extensions.* Write a program that prompts the user for the drive letter (C), the path (\Windows\System), the file name (Readme), and the extension (txt). Then print the complete file name C:\Windows\System\Readme.txt. (If you use UNIX or a Macintosh, skip the drive name and use / instead of \ to separate directories.)
+
+**P2.17** Write a program that reads a number between 1,000 and 999,999 from the user and prints it *with a comma separating the thousands*. Here is a sample dialog; the user input is in color:
+
+```
+~~~
+Please enter an integer between 1000 and 999999: 23456
+23,456
+~~~
+```
+
+**P2.18** Write a program that reads a number between 1,000 and 999,999 from the user, where the user enters a comma in the input. Then print the number without a comma. Here is a sample dialog; the user input is in color:
+
+```
+~~~
+Please enter an integer between 1,000 and 999,999: 23,456
+23456
+~~~
+```
+
+*Hint:* Read the input as a string. Measure the length of the string. Suppose it contains *n* characters. Then extract substrings consisting of the first *n* − 4 characters and the last three characters.
