@@ -1,0 +1,37 @@
+Also the defaulted move constructor and defaulted move assignment operator work similarly to their copy counterparts, doing memberwise initialization and copying for built-in types. For members that are class objects, constructors and assignment operators for those classes are used as if the parameters were rvalues. This, in turn, invokes move constructors and assignment operators, if defined, and copy constructors and assignment operators otherwise, if defined.
+
+# Defaulted and Deleted Methods
+
+C++11 provides more control over which methods are used. Suppose that you wish to use a defaulted function that, due to circumstances, isn’t created automatically. For example, if you provide a move constructor, then the default constructor, the copy constructor, and the copy assignment operator are not provided. In that case, you can use the keyword `default` to explicitly declare the defaulted versions of these methods:
+
+```
+class Someclass
+{
+public:
+    Someclass(Someclass &&);
+    Someclass() = default;        // use compiler-generated default constructor
+    Someclass(const Someclass &) = default;
+    Someclass & operator=(const Someclass &) = default;
+...
+};
+```
+
+The compiler provides the same constructor that it would have provided automatically had you not provided the move constructor.
+
+The `delete` keyword, on the other hand, can be used to prevent the compiler from using a particular method. For example, to prevent an object from being copied, you can disable the copy constructor and copy assignment operator:
+
+```
+class Someclass
+{
+public:
+    Someclass() = default;        // use compiler-generated default constructor
+// disable copy constructor and copy assignment operator:
+    Someclass(const Someclass &) = delete;
+    Someclass & operator=(const Someclass &) = delete;
+// use compiler-generated move constructor and move assignment operator:
+    Someclass(Someclass &&) = default;
+    Someclass & operator=(Someclass &&) = default;
+    Someclass & operator+(const Someclass &) const;
+...
+};
+```

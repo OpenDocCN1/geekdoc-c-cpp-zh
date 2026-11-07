@@ -1,0 +1,48 @@
+Here’s the output from the program in Listing 4.12:
+
+```
+bouquet: sunflowers for $12.49
+choice: sunflowers for $12.49
+```
+
+As you can see, memberwise assignment is at work, for the members of the choice structure are assigned the same values stored in the bouquet structure.
+
+You can combine the definition of a structure form with the creation of structure variables. To do so, you follow the closing brace with the variable name or names:
+
+```
+struct perks
+{
+    int key_number;
+    char car[12];
+} mr_smith, ms_jones;   // two perks variables
+```
+
+You even can initialize a variable you create in this fashion:
+
+```
+struct perks
+{
+    int key_number;
+    char car[12];
+} mr_glitz =
+{
+    7,                 // value for mr_glitz.key_number member
+    "Packard"          // value for mr_glitz.car member
+};
+```
+
+However, keeping the structure definition separate from the variable declarations usually makes a program easier to read and follow.
+
+Another thing you can do with structures is create a structure with no type name. You do this by omitting a tag name while simultaneously defining a structure form and a variable:
+
+```
+struct       // no tag
+{
+    int x;    // 2 members
+    int y;
+} position;  // a structure variable
+```
+
+This creates one structure variable called position. You can access its members with the membership operator, as in position.x, but there is no general name for the type. You can’t subsequently create other variables of the same type. This book doesn’t use that limited form of structure.
+
+Aside from the fact that a C++ program can use the structure tag as a type name, C structures have all the features discussed so far for C++ structures, apart from the C++11 changes. But C++ structures go further. Unlike C structures, for example, C++ structures can have member functions in addition to member variables. But these more advanced features most typically are used with classes rather than structures, so we’ll discuss them when we cover classes, beginning with Chapter 10, “Objects and Classes.”

@@ -1,0 +1,67 @@
+```
+```cpp
+void SingingWaiter::Show()
+{
+    Singer::Show();
+}
+```
+```
+
+This method of having the derived method call the base method works well enough for single inheritance. For example, suppose that the HeadWaiter class derives from the Waiter class. You could use a sequence of definitions like this, with each derived class adding to the information displayed by its base class:
+
+```
+```cpp
+void Worker::Show() const
+{
+    cout << "Name: " << fullname << "\n";
+    cout << "Employee ID: " << id << "\n";
+}
+```
+```
+
+```
+```cpp
+void Waiter::Show() const
+{
+    Worker::Show();
+    cout << "Panache rating: " << panache << "\n";
+}
+```
+```
+
+```
+```cpp
+void HeadWaiter::Show() const
+{
+    Waiter::Show();
+    cout << "Presence rating: " << presence << "\n";
+}
+```
+```
+
+This incremental approach fails for the SingingWaiter case, however. The following method fails because it ignores the Waiter component:
+
+```
+```cpp
+void SingingWaiter::Show()
+{
+    Singer::Show();
+}
+```
+```
+
+You can remedy that by calling the Waiter version also:
+
+```
+```cpp
+void SingingWaiter::Show()
+{
+    Singer::Show();
+    Waiter::Show();
+}
+```
+```
+
+However, this displays a person's name and ID twice because Singer::Show() and with Waiter::Show() both call Worker::Show():
+
+How can you fix this? One way is to use a modular approach instead of an incremental approach. That is, you can provide a method that displays only Worker components, another method that displays only Waiter components (instead of Waiter plus Worker components), and another that displays only Singer components. Then the

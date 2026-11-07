@@ -1,0 +1,272 @@
+
+- \- (subtraction operator), overloading, 574-578
+- ~ (tilde), 529
+- _ (underscore), 1222
+
+## A
+
+- ABCs (abstract base classes), 746-749
+  - ABC philosophy, 756
+  - AccABC example, 749-751, 754-755
+  - enforcing interface rules with, 757
+- abort() function, 897-898, 928-930
+- abstract data types (ADTs), 552
+- abstraction, 507. See also classes
+- access control, 892
+- access control (classes), 511-513
+  - accessing
+    - content of template and parameter packs, 1198-1199
+    - strings, 1259
+- AccABC class, 749-751, 754-755
+- acctabc.cpp, 751
+- acctabc.h, 750
+- accumulate() function, 1320
+- acquire() function, 516
+- actual arguments, 314
+- adaptable binary functions, 1035
+- adaptable binary predicate, 1035
+- adaptable functors, 1032
+- adaptable generators, 1035
+- adaptable predicate, 1035
+- adaptable unary functions, 1035
+- adapters, 1002
+- adding vectors, 590
+- addition operator (+), overloading, 569-572
+- addpntrs.cpp, 167
+- address.cpp, 154
+- addresses
+  - addresses of functions, obtaining, 362
+  - of arrays, 170
+  - structure addresses, passing, 351-353
+- adjacent_difference() function, 1321-1322
+- adjacent_find() function, 1287, 1290
+- ADTs (abstract data types), 552-557
+- algorithms, 1035
+  - copying, 1036
+  - groups, 1035-1036
+  - in-place, 1036
+  - properties, 1036-1037
+- aliases
+  - creating, 230
+  - declarations, 1157
+  - namespaces, 491
+- align.cpp, 1246
+- alignof() operator, 1204
+- allocating memory, 968
+  - bad_alloc exceptions, 921
+  - dynamic memory allocation, 757
+    - derived class does use new, 758-760
+    - derived class doesn't use new, 757-758
+    - example, 761-766
+    - new operator, 160-162
+- allocators, 979
+- alternative tokens, table of, 1222
+- American National Standards Institute (ANSI), C++ standard, 16
+- American Standard Code for Information Interchange. See ASCII character set
+- ampersand (&), 1239-1240
+  - logical AND operator (&), 262
+    - alternative representations, 270
+    - example, 263-265
+    - precedence, 269-270
+    - ranges, 265-267
+  - reference operator (&), 383-386
+- AND operators
+  - bitwise AND (&), 1239-1240
+  - logical AND (&), 262
+    - alternative representations, 270
+    - example, 263-265
+    - precedence, 269-270
+    - ranges, 265-267
+- and.cpp, 263-264
+- angle brackets, 1162
+- anonymous unions, 150
+- ANSI (American National Standards Institute), C++ standard, 16
+- ANSI C Standard Input/Output, 1062
+- append() method, 1265
+- append.cpp, 1125
+- appending
+  - data to files, 1125-1127
+  - strings, 133-134, 1265-1266
+- applications. See also compilers
+  - creating, 18-19
+  - portability, 15, 17-18
+  - ANSI/ISO standard, 16
+  - limitations, 16
+  - source code, 19
+  - file extensions, 20
+- apply() method, 1046
+- Area() method, 748
+- args, 1198
+- argument lists, 30
+- arguments, 31
+  - arrays, 322-325
+  - C-style strings, 339-341
+  - command-line, 1119-1120
+  - default arguments, 409-412
+  - formal/actual, 314
+  - multiple, 314-320
+    - n_chars() example, 314-317
+    - probability() example, 318-320
+  - parameters, 314
+  - passing by reference, 386, 389-390
+  - passing by value, 313-314
+  - reference arguments, 392-394, 408-409
+  - two-dimensional arrays, 337-339
+  - type conversions, 106
+- arguments (functions), 49, 53
+- arith.cpp, 98
+- arithmetic, pointers, 167-172
+- arithmetic operators, 97-99
+  - associativity, 99-100
+  - division (/), 100-101
+  - functor equivalents, 1031-1032
+  - modulus (%), 101-102
+  - order of precedence, 99-100
+  - overloading
+    - addition operator (+), 569-572
+    - multiplication operator (\*), 574-578, 600
+    - subtraction operator (-), 574-578
+    - vector class, 599-600
+- array notation, 173
+- array objects, 355
+  - fill function, 357
+  - versus arrays, 188-189
+  - versus vector objects, 188-189
+- array template class, 187
+- ArrayDb class, 791
+- arraynew.cpp, 166
+- arrayone.cpp, 117
+- arrays
+  - addresses, 170
+  - array notation, 173
+  - arrays of objects, 546-549
+    - declaring, 546
+    - example, 547-549
+    - initializing, 546
+  - as function arguments, 322-325
+  - const keyword, 327-328
+  - declaring, 116-119
+  - defined, 77, 116
+  - design decisions, 325-326
+  - displaying contents of, 327-328
+  - dynamic arrays, 172-173
+    - creating, 164-165
+    - sample program, 165-167
+  - examples, 328-331
+  - filling, 326-327
+  - function idioms, 331
+  - functions and, 320-321
+  - indexes, 117
+  - initializing, 117-120
+    - in C++11, 120
+  - modifying, 328
+  - naming, 172
+  - one-dimensional arrays, 244
+  - pointer arithmetic, 167-172
+  - pointers, 321-322
+  - ranges, 332-334
+  - static binding, 172
+  - strings, 123-124
+    - initializing, 121
+  - structures, 147-148
+  - subscripts, 117
+  - templates, non-type arguments, 843-845
+  - two-dimensional arrays, 244-249, 337-339
+    - declaring, 244-246
+    - initializing, 246-249
+  - variable arrays, 1329
+  - versus vector objects, 188-189
+- arrayt.h, 843-844
+- arrfun1.cpp, 321
+- arrfun2.cpp, 323
+- arrfun3.cpp, 328
+- arrfun4.cpp, 332
+- arrstruc.cpp, 147-148
+- ASCII character set, table of, 1225-1229
+- assert, 1204
+- assgn_st.cpp, 145
+- assign() method, 1266, 1278
+- assignable objects, 1008
+- assigning
+  - strings, 1266
+  - values to pointers, 171
+  - values to variables, 43
+  - variable values, 43
+- assignment
+  - string class, 133-134
+  - type conversions, 103-104
+- assignment methods, 1260
+- assignment operator (=), 43-44, 644, 767-768, 772-775
+  - compared to equality operator, 218-220
+  - custom definitions, 645-646
+  - enumerator values, setting, 152
+  - enumerators, value ranges, 153
+  - overloading, 652-658
+    - saying1.cpp, 656
+    - string1.cpp, 653-656
+    - string1.h, 652-653
+  - potential problems, 645
+  - strings, 133-134
+  - structures, 145-146
+  - when to use, 644
+- assignment operators, combination assignment operators, 211-212
+- assignment statements, 43-44
+- assignments, 1172-1173
+- associative containers, 1018, 1026
+  - methods, 1281-1284
+  - multimap, 1023-1025
+  - set, 1019-1022
+- associativity, arithmetic operators, 99-100
+- associativity of operators, 1231
+  - examples, 1234
+  - table of, 1232-1234
+- asterisk (\*), dereferencing operator (\*), 155, 159
+  - pointers, 171-172
+- at() method, 1259
+- atan() function, 348
+- atan2() function, 348
+- ATM queue simulation
+  - bank.cpp simulation, 695
+  - Customer class, 694
+  - Queue class
+    - class declaration, 691
+    - public interface, 679
+- ATM queue simulation, 678
+  - bank.cpp simulation, 694-698
+  - Customer class, 690-691
+  - Queue class
+    - class declaration, 694
+    - design, 679
+    - implementation, 680-682
+    - methods, 682-690
+    - public interface, 680
+- auto, 370
+  - declarations, 1155
+- auto declarations, 109
+- auto keyword, 472
+- auto_ptr, 1158
+- auto.cpp, 456-457
+- automatic memory storage, 182
+- automatic sizing (strings), 966-967
+- automatic teller machine simulation. See ATM queue simulation
+- automatic type conversion. See type conversion
+- automatic variables, 182, 314, 453-457
+  - example, 455-457
+  - initializing, 458
+  - stacks, 458-459
+- auto_ptr template, 1333
+- auto_ptr class, 969, 973-975
+  - versus unique_ptr, 975-977
+- average() function, 800
+
+## B
+
+- back insert iterators, 1005-1007
+- bad() method, 296
+- bad() stream state method, 1098-1102
+- badbit stream state, 1097-1102
+- bad_alloc exceptions, 921
+- Balance() function, 731
+- bank.cpp, 695-697
+- bank.cpp simulation, 694-698
+- Base 10 notation, 1215

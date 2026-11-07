@@ -1,0 +1,38 @@
+equal to the number of times the function has been called.) Yes, this is a silly function, but it makes you use some of the techniques discussed in this chapter. Use the function in a simple program that demonstrates how the function works.
+
++   2. The CandyBar structure contains three members. The first member holds the brand name of a candy bar. The second member holds the weight (which may have a fractional part) of the candy bar, and the third member holds the number of calories (an integer value) in the candy bar. Write a program that uses a function that takes as arguments a reference to CandyBar, a pointer-to-char, a double, and an int and uses the last three values to set the corresponding members of the structure. The last three arguments should have default values of “Millennium Munch,” 2.85, and 350. Also the program should use a function that takes a reference to a CandyBar as an argument and displays the contents of the structure. Use const where appropriate.
+
++   3. Write a function that takes a reference to a string object as its parameter and that converts the contents of the string to uppercase. Use the toupper() function described in Table 6.4 of Chapter 6. Write a program that uses a loop which allows you to test the function with different input. A sample run might look like this:
+
+```
+Enter a string (q to quit): go away
+GO AWAY
+Next string (q to quit): good grief!
+GOOD GRIEF!
+Next string (q to quit): q
+Bye.
+```
+
++   4. The following is a program skeleton:
+
+```
+#include <iostream>
+using namespace std;
+#include <cstring>      // for strlen(), strcpy()
+struct stringy {
+    char * str;          // points to a string
+    int ct;              // length of string (not counting '\0')
+};
+
+// prototypes for set(), show(), and show() go here
+int main()
+{
+    stringy beany;
+    char testing[] = "Reality isn't what it used to be.";
+
+    set(beany, testing);    // first argument is a reference,
+                            // allocates space to hold copy of testing,
+                            // sets str member of beany to point to the
+                            // new block, copies testing to new block,
+                            // and sets ct member of beany
+```

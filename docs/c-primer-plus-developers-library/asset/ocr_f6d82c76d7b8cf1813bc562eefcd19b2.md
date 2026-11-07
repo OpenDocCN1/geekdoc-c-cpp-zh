@@ -1,0 +1,45 @@
+```
+```cpp
+template <class Type>
+bool Stack<Type>::push(const Type & item)
+{
+    if (top < stacksize)
+    {
+        items[top++] = item;
+        return true;
+    }
+    else
+        return false;
+}
+
+template <class Type>
+bool Stack<Type>::pop(Type & item)
+{
+    if (top > 0)
+    {
+        item = items[--top];
+        return true;
+    }
+    else
+        return false;
+}
+
+template <class Type>
+Stack<Type> & Stack<Type>::operator=(const Stack<Type> & st)
+{
+    if (this == &st)
+        return *this;
+    delete [] items;
+    stacksize = st.stacksize;
+    top = st.top;
+    items = new Type [stacksize];
+    for (int i = 0; i < top; i++)
+        items[i] = st.items[i];
+    return *this;
+}
+
+#endif
+```
+```
+
+Notice that the prototype declares the return type for the assignment operator function to be a reference to Stack, and the actual template function definition identifies the type as Stack<Type>. The former is an abbreviation for the latter, but it can be used only within the class scope. That is, you can use Stack inside the template declaration and inside the template function definitions, but outside the class, when identifying return

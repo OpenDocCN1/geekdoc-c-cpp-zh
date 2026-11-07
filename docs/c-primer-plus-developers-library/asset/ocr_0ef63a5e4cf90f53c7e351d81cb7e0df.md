@@ -1,0 +1,57 @@
+# Conversion Considerations
+
+Any constructor that can be invoked with exactly one argument defines conversion from the argument type to the class type. For example, consider the following constructor prototypes for a Star class:
+
+```
+```cpp
+Star(const char *);               // converts char * to Star
+Star(const Spectral &, int members = 1); // converts Spectral to Star
+```
+```
+
+Conversion constructors are used, for example, when a convertible type is passed to a function that is defined as taking a class argument. For instance, suppose you have the following:
+
+```
+```cpp
+Star north;
+north = "polaris";
+```
+```
+
+The second statement would invoke the Star::operator=(const Star &) function, using Star::Star(const char *) to generate a Star object to be used as an argument for the assignment operator function. This assumes that you haven't defined a (char *)-to-Star assignment operator.
+
+Using explicit in the prototype for a one-argument constructor disables implicit conversions but still allows explicit conversions:
+
+```
+```cpp
+class Star
+{
+...
+public:
+    explicit Star(const char *);
+...
+};
+
+Star north;
+north = "polaris";          // not allowed
+north = Star("polaris");    // allowed
+```
+```
+
+To convert from a class object to some other type, you define a conversion function (see Chapter 11, "Working with Classes"). A conversion function is a class member function with no arguments or declared return type that has the name of the type to be converted to. Despite having no declared return type, the function should return the desired conversion value. Here are some examples:
+
+```
+```cpp
+Star::Star double() {...}        // converts star to double
+Star::Star const char * () {...} // converts to const char
+```
+```
+
+You should be judicious with such functions, only using them if they make good sense. Also, with some class designs, having conversion functions increases the likelihood of writing ambiguous code. For example, suppose you define a double conversion for the Vector type of Chapter 11, and suppose you have the following code:
+
+```
+```cpp
+Vector ius(6.0, 0.0);
+Vector lux = ius + 20.2;        // ambiguous
+```
+```

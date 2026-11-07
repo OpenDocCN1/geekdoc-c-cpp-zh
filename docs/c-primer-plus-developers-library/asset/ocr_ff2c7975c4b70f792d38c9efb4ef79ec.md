@@ -1,0 +1,89 @@
++   - memberwise copying, 640
++   - memb_pt.cpp, 1244-1245
++   - memory. *See also* buffers
++     - allocating
++       - bad_alloc exceptions, 921
++       - new operator, 160-162
++     - automatic storage, 182
++     - cv-qualifiers, 472-474
++     - dynamic, 476-482
++     - dynamic memory allocation, 757
++       - derived class does use new, 758-760
++       - derived class doesn’t use new, 757-758
++       - example, 761-766
++     - free store, 182-183
++     - freezing delete operator, 163-164
++     - function linkage, 474-475
++     - language linking, 475-476
++     - leaks, 183
++     - memory-related methods, 1258
++     - multifile programs, compiling separately, 447-453
++     - named, 160
++     - stack, 458-459
++       - unwinding, 909-914
++     - static storage, 183
++     - storage class specifiers, 472-473
++     - storage duration, 453-454
++       - automatic variables, 455-459
++       - scope and linkage, 454
++       - static variables, 459-463, 466-472
++       - storage methods, 182
++   - memory allocation, dynamic (auto_ptr class), 969, 973-975
++   - memory leaks, 163
++   - merge() function, 1305, 1310-1311
++   - merge() method, 1016-1017, 1280
++   - merging
++     - inplace_merge() function, 1305, 1311
++     - merge() function, 1305, 1310-1311
++   - methods. *See also* specific methods
++     - base-class methods, accessing, 800-801
++     - defaulted and deleted methods, classes, 1179-1180
++     - end(), 984
++     - inheritance, multiple, 826
++     - insert(), 1015-1016
++     - STL, 1161
++     - virtual base classes, 818-828
+
++   - MI (multiple inheritance), 798
++   - min() function, 1305, 1316
++   - min() method, 787, 1046
++   - minimum values
++     - finding, 1316-1317
++   - minus sign (-), decrement operator (—), 207-208
++     - pointers, 210-211
++     - postfixing, 209-210
++     - prefixing, 209-210
++   - min_element() function, 1305, 1317
++   - mismatch() function, 1288, 1291
++   - mixtypes.cpp, 185
++   - models, concepts of iterators, 1000-1001
++   - modifiers
++     - const, as alternative to #define, 1327-1329
++     - inline, as alternative to #define, 1329-1330
++   - modulus operator (%), 101-102
++   - modulus.cpp, 102
++   - morechar.cpp, 82
++   - more_and.cpp, 266
++   - move assignment operator, 1173
++   - move constructors, 1165
++   - move semantics, 1164-1171
++     - observations, 1171-1172
++   - Move() method, 748
++   - moves, forcing, 1173-1178
++   - MS-DOS, cpp compiler, 22
++   - multifile programs, compiling separately, 447-453
++   - multimap associative containers, 1023-1025
++   - multiple arguments, 314-320
++     - n_chars() example, 314-317
++     - probability() example, 318-320
++   - multiple class representations, 599
++   - multiple inheritance, 798, 808-809, 829-830
++     - virtual base classes, 815-817
++     - combining with nonvirtual base classes, 828
++     - constructors, 817-818
++     - dominance, 828-829
++     - methods, 818-828
++     - Worker class example, 810-814
++   - multiple library linking, 453
++   - multiple public inheritance, methods, 826
++   - multiple type parameters, 847

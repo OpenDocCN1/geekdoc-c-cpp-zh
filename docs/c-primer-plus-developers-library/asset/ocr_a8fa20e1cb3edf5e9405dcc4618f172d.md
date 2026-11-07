@@ -1,0 +1,16 @@
+You’ll get a closer look at the class details later, but first let’s examine the more general features. To begin, the C++ keyword class identifies the code in Listing 10.1 as defining the design of a class. (In this context the keywords class and typename are not synonymous—the way they were in template parameters; typename can’t be used here.) The syntax identifies Stock as the type name for this new class. This declaration enables you to declare variables, called objects, or instances, of the Stock type. Each individual object represents a single holding. For example, the following declarations create two Stock objects called sally and solly:
+
+```
+Stock sally;
+Stock solly;
+```
+
+The sally object, for example, could represent Sally’s stock holdings in a particular company.
+
+Next, notice that the information you decided to store appears in the form of class data members, such as company and shares. The company member of sally, for example, holds the name of the company, the share member holds the number of shares Sally owns, the share_val member holds the value of each share, and the total_val member holds the total value of all the shares. Similarly, the desired operations appear as class function members (or methods), such as sell() and update(). A member function can be defined in place—for example, set_tot()—or it can be represented by a prototype, like the other member functions in this class. The full definitions for the other member functions come later in the implementation file, but the prototypes suffice to describe the function interfaces. The binding of data and methods into a single unit is the most striking feature of the class. Because of this design, creating a Stock object automatically establishes the rules governing how that object can be used.
+
+You’ve already seen how the istream and ostream classes have member functions, such as get() and getline(). The function prototypes in the Stock class declaration demonstrate how member functions are established. The istream header file, for example, has a getline() prototype in the istream class declaration.
+
+# Access Control
+
+Also new are the keywords private and public. These labels describe access control for class members. Any program that uses an object of a particular class can access the public portions directly. A program can access the private members of an object only by using the public member functions (or, as you’ll see in Chapter 11, “Working with Classes,” via a friend function). For example, the only way to alter the shares member of the Stock class is to use one of the stock member functions. Thus, the public member functions act as go-betweens between a program and an object’s private members; they provide the interface between object and program. This insulation of data from direct access by a program is called data hiding. (C++ provides a third access-control keyword, protected, which we’ll discuss when we cover class inheritance in Chapter 13, “Class Inheritance.”) (See Figure 10.1.) Whereas data hiding may be an unscrupulous act in, say, a stock fund prospectus, it’s a good practice in computing because it preserves the integrity of the data.

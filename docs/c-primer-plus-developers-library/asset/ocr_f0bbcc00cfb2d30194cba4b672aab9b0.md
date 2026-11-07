@@ -1,0 +1,41 @@
+And if you use a pointer instead of an array name, C++ makes the same conversion:
+
+```
+pointername[i] becomes *(pointername + i)
+```
+
+Thus, in many respects you can use pointer names and array names in the same way. You can use the array brackets notation with either. You can apply the dereferencing operator (*) to either. In most expressions, each represents an address. One difference is that you can change the value of a pointer, whereas an array name is a constant:
+
+```
+pointername = pointername + 1;  // valid
+arrayname = arrayname + 1;      // not allowed
+```
+
+A second difference is that applying the sizeof operator to an array name yields the size of the array, but applying sizeof to a pointer yields the size of the pointer, even if the pointer points to the array. For example, in Listing 4.19, both pw and wages refer to the same array. But applying the sizeof operator to them produces the following results:
+
+```
+24 = size of wages array <- displaying sizeof wages
+4 = size of pw pointer <- displaying sizeof pw
+```
+
+This is one case in which C++ doesn’t interpret the array name as an address.
+
+# The Address of an Array
+
+Taking the address of an array is another case in which the name of an array is not interpreted as its address. But wait, isn’t the name of an array interpreted as the address of the array? Not quite—the name of the array is interpreted as the address of the first element of an array, whereas applying the address operator yields the address of the whole array:
+
+```
+short tell[10];       // tell an array of 20 bytes
+cout << tell << endl; // displays &tell[0]
+cout << &tell << endl; // displays address of whole array
+```
+
+Numerically, these two addresses are the same, but conceptually &tell[0], and hence tell, is the address of a 2-byte block of memory, whereas &tell is the address of a 20-byte block of memory. So the expression tell + 1 adds 2 to the address value, whereas &tell + 1 adds 20 to the address value. Another way of expressing this is to say that tell is type pointer-to-short, or short *, and &tell is type pointer-to-array-of-20-shorts, or short (*)[20].
+
+Now you might be wondering about the genesis of that last type description. First, here is how you could declare and initialize a pointer of that type:
+
+```
+short (*pas)[20] = &tell;  // pas points to array of 20 shorts
+```
+
+If you omit the parentheses, precedence rules would first associate [20] with pas, making pas an array of 20 pointers-to-short, so the parentheses are necessary. Next, if you wish to describe the type of a variable, you can use the declaration of that variable as a guide and remove the variable name. Thus, the type of pas is short (*)[20]. Also note that because pas is set to &tell, *pas is equivalent to tell, so (*pas)[0] would be the first element of the tell array.

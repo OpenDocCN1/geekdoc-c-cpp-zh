@@ -1,0 +1,59 @@
+```
+~~~cpp
+template<class InputIterator1, class InputIterator2, class OutputIterator,
+         class BinaryOperation>
+OutputIterator transform(InputIterator1 first1, InputIterator1 last1,
+                         InputIterator2 first2, OutputIterator result,
+                         BinaryOperation binary_op);
+~~~
+```
+
+The first version of transform() applies the unary function object op to each element in the range [first, last) and assigns the return value to the corresponding element in the range beginning at result. So *result is set to op(*first), and so on. It returns result + (last - first)—that is, the past-the-end value for the target range.
+
+The second version of transform() applies the binary function object op to each element in the range [first1,last1) and to each element in the range [first2,last2) and assigns the return value to the corresponding element in the range beginning at result. So *result is set to op(*first1, *first2), and so on. It returns result + (last - first), the past-the-end value for the target range.
+
+# ### replace()
+
+```
+~~~cpp
+template<class ForwardIterator, class T>
+void replace(ForwardIterator first, ForwardIterator last,
+             const T& old_value, const T& new_value);
+~~~
+```
+
+The replace() function replaces each occurrence of the value old_value in the range [first, last) with the value new_value.
+
+# ### replace_if()
+
+```
+~~~cpp
+template<class ForwardIterator, class Predicate, class T>
+void replace_if(ForwardIterator first, ForwardIterator last,
+                Predicate pred, const T& new_value);
+~~~
+```
+
+The replace_if() function replaces each value old in the range [first, last) for which pred(old) is true with the value new_value.
+
+# ### replace_copy()
+
+```
+~~~cpp
+template<class InputIterator, class OutputIterator, class T>
+OutputIterator replace_copy(InputIterator first, InputIterator last,
+                            OutputIterator result, const T& old_value, const T& new_value);
+~~~
+```
+
+The replace_copy() function copies the elements in the range [first,last) to a range beginning at result but substituting new_value for each occurrence of old_value. It returns result + (last - first), the past-the-end value for the target range.
+
+# ### replace_copy_if()
+
+```
+~~~cpp
+template<class Iterator, class OutputIterator, class Predicate, class T>
+OutputIterator replace_copy_if(Iterator first, Iterator last,
+                               OutputIterator result, Predicate pred, const T& new_value);
+~~~
+```

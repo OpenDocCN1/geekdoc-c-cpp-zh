@@ -1,0 +1,92 @@
++   - range_error exception, 919
++   - ranges, logical AND operator (&), 265-267
++   - ranges (arrays), 332-334
++   - RatedPlayer class, 711-712
++     - header files, 716
++     - method definitions, 716
++     - RatedPlayer object, 717-718
++   - Rating() method, 719
++   - rbegin() method, 1251, 1275
++   - rdstate() stream state method, 1098-1102
++   - read() member function, 1109-1114, 1130-1133
++   - reading
++     - C-style strings
++       - get(), 127-130
++       - getline(), 126-127
++     - from files, 1116-1118
++     - string class strings, 136-140
++     - text files, 292-298
++     - text with loops, 234
++       - cin.get() function, 235-237, 241-244
++       - cin object, 234-235
++       - end-of-file conditions, 237-241
++       - sentinel characters, 234
++   - real numbers, 50
++   - recommended reading, 1323-1324
++   - rect_to_polar() function, 348-349
++   - rectangular coordinates, 346
++     - converting to polar coordinates, 348-351
++   - recurs(), 355, 358
++   - recurs() function, 357-359
++     - recursion, 357
++       - multiple recursive calls, 359-361
++       - single recursive call, 358-359
++       - variadic template functions, 1199-1202
++   - recursive use of templates, 846-847
++   - redefining virtual functions, 743-745
++   - redirecting I/O, 1067-1068
++   - reduction, 238
++   - refcube() function, 391-393
++   - reference, passing by, 343, 386, 389-390, 770
++   - reference arguments, 392-394, 408-409
++   - reference counting, 973
++   - reference operator (&), 383-386
++   - reference parameters, overloading, 415
+
++   - reference returns, const, 400
++   - reference type, 1273
++   - reference variables, 383
++     - arguments, 408-409
++     - class objects, 401-405
++       - creating, 383-386
++     - function parameters, 386, 389-390
++       - inheritance, 405-408
++       - initialization, 385
++     - properties, 390-391
++     - structures, 394, 397-399
++       - const keyword, 401
++     - return references, 399-400
++   - references
++     - inheritance, 737-739
++     - returning, 399, 770-771
++   - referencing declarations, 463
++   - refinement, 1001
++   - register keyword, 472
++   - reinterpret_cast operators, 946
++   - relational operators, 217-220
++     - C-style strings, comparing, 220-223
++     - equality operator (==), 218-220
++     - functor equivalents, 1031-1032
++     - string class strings, comparing, 223-224
++       - table of, 217
++   - relationships
++     - has-a, 721, 788
++     - is-a, 720-722, 772, 808
++   - remove() function, 971
++   - remote_access() function, 468
++   - remove_copy() function, 1295, 1300
++   - remove_copy_if() function, 1295, 1300
++   - remove() function, 1295, 1299
++   - remove_if() function, 1295, 1300
++   - remove_if() method, 1280
++   - remove() method, 1280
++   - rend() method, 1251-1252, 1275
++   - replace_copy() function, 1294, 1298
++   - replace_copy_if() function, 1294, 1298
++   - replace() function, 1294, 1298, 1302
++   - replace_if() function, 1294, 1298
++   - replace() method, 1268-1269
++   - replacing strings, 1268-1269
++   - report() function, 859
++   - reserve() method, 966, 1258, 1279
++   - reserved names, 1222-1223

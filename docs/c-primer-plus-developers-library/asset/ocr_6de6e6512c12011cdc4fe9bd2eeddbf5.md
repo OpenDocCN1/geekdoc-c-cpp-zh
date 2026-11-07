@@ -1,0 +1,66 @@
+```
+extern int dogs;        // extern and have no initialization
+...
+
+// file98.cpp
+// use cats, dogs, and fleas from file01.cpp
+extern int cats;
+extern int dogs;
+extern int fleas;
+...
+```
+
+In this case, all the files use the cats and dogs variables defined in file01.cpp. However, file02.cpp doesn’t re-declare the fleas variable, so it can’t access it. The extern in file01.cpp isn’t really needed because the effect is the same if it is omitted (also see Figure 9.4).
+
+```
+// file1.cpp
+#include <iostream>
+using namespace std;
+
+// function prototypes
+#include "mystuff.h"
+
+// defining an external variable
+int process_status = 0;
+
+void promise();
+int main()
+{
+    ...
+}
+
+void promise()
+{
+    ...
+}
+```
+
+```
+// file2.cpp
+#include <iostream>
+using namespace std;
+
+// function prototypes
+#include "mystuff.h"
+
+// referencing an external variable
+extern int process_status;
+
+int manipulate(int n)
+{
+    ...
+}
+
+char * remark(char * str)
+{
+    ...
+}
+```
+
+This file defines the variable process_status, causing the compiler to allocate space for it.
+
+This file uses extern to instruct the program to use the variable process_status that was defined in another file.
+
+Figure 9.4　Defining declaration and referencing declaration.
+
+Note that the one definition rule doesn’t mean that there can be only one variable with a given name. For example, automatic variables sharing the same name but defined in different functions are separate variables, independent of one another, and each having its own address. Also as later examples show, a local variable can hide a global variable of the same name. However, although a program can have different variables of the same name, each version can have only one definition.

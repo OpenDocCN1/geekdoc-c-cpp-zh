@@ -1,0 +1,42 @@
+The parentheses are needed because the following declaration would declare an array of four pointers-to-int instead of a single pointer-to-array-of-four-int, and a function parameter cannot be an array:
+
+```
+int *ar2[4]
+```
+
+Here’s an alternative format that means exactly the same thing as this first prototype, but, perhaps, is easier to read:
+
+```
+int sum(int ar2[][4], int size);
+```
+
+Either prototype states that `ar2` is a pointer, not an array. Also note that the pointer type specifically says it points to an array of four ints. Thus, the pointer type specifies the number of columns, which is why the number of columns is not passed as a separate function argument.
+
+Because the pointer type specifies the number of columns, the `sum()` function only works with arrays with four columns. But the number of rows is specified by the variable size, so `sum()` can work with a varying number of rows:
+
+```
+int a[100][4];
+int b[6][4];
+...
+int total1 = sum(a, 100);   // sum all of a
+int total2 = sum(b, 6);     // sum all of b
+int total3 = sum(a, 10);    // sum first 10 rows of a
+int total4 = sum(a+10, 20); // sum next 20 rows of a
+```
+
+Given that the parameter `ar2` is a pointer to an array, how do you use it in the function definition? The simplest way is to use `ar2` as if it were the name of a two-dimensional array. Here’s a possible function definition:
+
+```
+int sum(int ar2[][4], int size)
+{
+    int total = 0;
+    for (int r = 0; r < size; r++)
+        for (int c = 0; c < 4; c++)
+            total += ar2[r][c];
+    return total;
+}
+```
+
+Again, note that the number of rows is whatever is passed to the size parameter, but the number of columns is fixed at four, both in the parameter declaration for `ar2` and in the inner `for` loop.
+
+Here’s why you can use array notation. Because `ar2` points to the first element (element 0) of an array whose elements are array-of-four-int, the expression `ar2 + r` points to element number r. Therefore `ar2[r]` is element number r. That element is itself an array-of-four-int, so `ar2[r]` is the name of that array-of-four-int. Applying a subscript to an array name gives an array element, so `ar2[r][c]` is an element of the array-of-four-int, hence is a single `int` value. The pointer `ar2` has to be dereferenced twice to get to

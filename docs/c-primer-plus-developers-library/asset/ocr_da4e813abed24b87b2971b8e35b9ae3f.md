@@ -1,0 +1,55 @@
+```
+```cpp
+else {
+    st.pop(po);
+    cout << "PO #" << po << " popped\n";
+    break;
+}
+}
+cout << "Please enter A to add a purchase order,\n"
+     << "P to process a PO, or Q to quit.\n";
+}
+cout << "Bye\n";
+return 0;
+}
+```
+```
+
+Here's a sample run of the program in Listing 14.14:
+
+```
+```
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+A
+Enter a PO number to add: red911porsche
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+A
+Enter a PO number to add: blueR8audi
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+A
+Enter a PO number to add: silver747boeing
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+P
+PO #silver747boeing popped
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+P
+PO #blueR8audi popped
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+P
+PO #red911porsche popped
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+P
+stack already empty
+Please enter A to add a purchase order,
+P to process a PO, or Q to quit.
+Q
+Bye
+```
+```

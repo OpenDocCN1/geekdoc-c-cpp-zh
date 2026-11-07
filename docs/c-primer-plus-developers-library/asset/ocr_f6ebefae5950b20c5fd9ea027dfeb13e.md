@@ -1,0 +1,24 @@
+# Other Class Methods?
+
+Do you need any more methods? The class constructor doesn’t use new, so at first glance, it may appear that you don’t have to worry about the special requirements of classes that do use new in the constructors. Of course, that first glance is misleading because adding objects to a queue does invoke new to create new nodes. It’s true that the dequeue () method cleans up by deleting nodes, but there’s no guarantee that a queue will be empty when it expires. Therefore, the class does require an explicit destructor—one that deletes all remaining nodes. Here’s an implementation that starts at the front of the list and deletes each node in turn:
+
+```
+```cpp
+Queue::~Queue()
+{
+    Node * temp;
+    while (front != NULL)    // while queue is not yet empty
+    {
+        temp = front;        // save address of front item
+        front = front->next;// reset pointer to next item
+        delete temp;         // delete former front
+    }
+}
+```
+```
+
+Hmmm. You’ve seen that classes that use new usually require explicit copy constructors and assignment operators that do deep copying. Is that the case here? The first question to answer is, “Does the default memberwise copying do the right thing?” The answer is no. Memberwise copying of a Queue object would produce a new object that points to the front and rear of the same linked list as the original. Thus, adding an item to the copy Queue object changes the shared linked list. That’s bad enough. What’s worse is that only the copy’s rear pointer gets updated, essentially corrupting the list from the standpoint of the original object. Clearly, then, cloning or copying queues requires providing a copy constructor and an assignment constructor that do deep copying.
+
+Of course, that raises the question of why you would want to copy a queue. Well, perhaps you would want to save snapshots of a queue during different stages of a simulation. Or you would like to provide identical input to two different strategies. Actually, it might be useful to have operations that split a queue, the way supermarkets sometimes do when opening an additional checkout stand. Similarly, you might want to combine two queues into one or truncate a queue.
+
+But suppose you don’t want to do any of these things in this simulation. Can’t you simply ignore those concerns and use the methods you already have? Of course you can. However, at some time in the future, you might need to use a queue again, but with copying. And you might forget that you failed to provide proper code for copying. In that case, your programs will compile and run, but they will generate puzzling results and crashes. So it would seem that it’s best to provide a copy constructor and an assignment operator, even though you don’t need them now.

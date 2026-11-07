@@ -1,0 +1,46 @@
+```
+7. //rq17-7.cpp
+#include <iostream>
+#include <iomanip>
+
+int main()
+{
+    using namespace std;
+    char name[20];
+    float hourly;
+    float hours;
+
+    cout << "Enter your name: ";
+    cin.get(name, 20).get();
+    cout << "Enter your hourly wages: ";
+    cin >> hourly;
+    cout << "Enter number of hours worked: ";
+    cin >> hours;
+
+    cout.setf(ios::showpoint);
+    cout.setf(ios::fixed, ios::floatfield);
+    cout.setf(ios::right, ios::adjustfield);
+    // or cout << showpoint << fixed << right;
+    cout << "First format:\n";
+    cout << setw(30) << name << ": $" << setprecision(2)
+         << setw(10) << hourly << ":" << setprecision(1)
+         << setw(5) << hours << "\n";
+    cout << "Second format:\n";
+    cout.setf(ios::left, ios::adjustfield);
+    cout << setw(30) << name << ": $" << setprecision(2)
+         << setw(10) << hourly << ":" << setprecision(1)
+         << setw(5) << hours << "\n";
+
+    return 0;
+}
+```
+
+8. Here is the output:
+
+```
+ct1 = 5; ct2 = 9
+```
+
+The first part of the program ignores spaces and newline characters; the second part doesn’t. Note that the second part of the program begins reading at the newline character following the first `q`, and it counts that newline character as part of its total.
+
+9. The `ignore()` form falters if the input line exceeds 80 characters. In that case, it skips only the first 80 characters.

@@ -1,0 +1,41 @@
+```
+class Ik
+{
+private:
+    int fuss;        // fuss has class scope
+public:
+    Ik(int f = 9) {fuss = f; }  // fuss is in scope
+    void ViewIk() const;        // ViewIk has class scope
+};
+
+void Ik::ViewIk() const    // Ik:: places ViewIk into Ik scope
+{
+    cout << fuss << endl;   // fuss in scope within class methods
+}
+...
+int main()
+{
+    Ik * pik = new Ik;
+    Ik ee = Ik(8); // constructor in scope because has class name
+    ee.ViewIk();   // class object brings ViewIk into scope
+    pik->ViewIk(); // pointer-to-Ik brings ViewIk into scope
+...
+}
+```
+
+# Class Scope Constants
+
+Sometimes it would be nice to have symbolic constants with class scope. For example, a class declaration might use the literal 30 to specify an array size. Because the constant is the same for all objects, it would be nice to create a single constant shared by all objects. You might think the following would be a solution:
+
+```
+class Bakery
+{
+private:
+    const int Months = 12;   // declare a constant? FAILS
+    double costs[Months];
+    ...
+```
+
+But this won’t work because declaring a class describes what an object looks like but doesn’t create an object. Hence, until you create an object, there’s no place to store a value. (Actually, C++11 provides for member initialization, but not in a way that would make the preceding array declaration work; Chapter 12 returns to this topic.) There are, however, a couple ways to achieve essentially the same desired effect.
+
+First, you can declare an enumeration within a class. An enumeration given in a class declaration has class scope, so you can use enumerations to provide class scope symbolic names for integer constants. That is, you can start off the Bakery declaration this way:

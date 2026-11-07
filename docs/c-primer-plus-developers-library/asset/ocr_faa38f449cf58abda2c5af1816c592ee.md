@@ -1,0 +1,49 @@
+This is similar to the start of Listing 17.19, but there are some changes and additions. First, as just described, the program uses an fstream object with a read/write mode, and it uses seekg() to position the file pointer at the start of the file. (This isn't really needed for this example, but it shows how seekg() is used.) Next, the program makes the minor change of numbering the records as they are displayed. Then it makes the following important addition:
+
+```
+~~~
+if (finout.eof())
+    finout.clear();  // clear eof flag
+else
+{
+    cerr << "Error in reading " << file << ".\n";
+    exit(EXIT_FAILURE);
+}
+~~~
+```
+
+The problem this code addresses is that when the program finishes reading and displaying the entire file, it sets the eofbit element. This convinces the program that it's finished with the file and disables any further reading of or writing to the file. Using the clear() method resets the stream state, turning off eofbit. Now the program can once again access the file. The else part handles the possibility that the program quits reading the file for some reason other than reaching the end-of-file, such as a hardware failure.
+
+The next step is to identify the record to be changed and then change it. To do this, the program asks the user to enter a record number. Multiplying the number by the number of bytes in a record yields the byte number for the beginning of the record. If record is the record number, the desired byte number is record * sizeof p1:
+
+```
+~~~
+cout << "Enter the record number you wish to change: ";
+long rec;
+cin >> rec;
+eatline();                 // get rid of newline
+if (rec < 0 || rec >= ct)
+{
+    cerr << "Invalid record number -- bye\n";
+    exit(EXIT_FAILURE);
+}
+streampos place = rec * sizeof p1;  // convert to streampos type
+finout.seekp(place);        // random access
+~~~
+```
+
+The variable ct represents the number of records; the program exits if you try to go beyond the limits of the file.
+
+Next, the program displays the current record:
+
+```
+~~~
+finout.read((char *) &p1, sizeof p1);
+cout << "Your selection:\n";
+cout << rec << ": " << setw(LIM) << p1.name << " "
+     << setprecision(0) << setw(12) << p1.population
+     << setprecision(2) << setw(6) << p1.g << endl;
+if (finout.eof())
+    finout.clear();            // clear eof flag
+~~~
+```

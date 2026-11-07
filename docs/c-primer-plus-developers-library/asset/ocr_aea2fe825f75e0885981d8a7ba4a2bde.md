@@ -1,0 +1,46 @@
+twice. The same solution used for Show() works. You can provide protected Get() methods that solicit information for just a single class, and then you can put together Set() methods that use the Get() methods as building blocks.
+
+In short, introducing MI with a shared ancestor requires introducing virtual base classes, altering the rules for constructor initialization lists, and possibly recoding the classes if they were written with MI in mind. Listing 14.10 shows the modified class declarations with these changes institutes, and Listing 14.11 shows the implementation.
+
+# Listing 14.10　workermi.h
+
+```
+```cpp
+// workermi.h -- working classes with MI
+#ifndef WORKERMI_H_
+#define WORKERMI_H_
+
+#include <string>
+
+class Worker   // an abstract base class
+{
+private:
+    std::string fullname;
+    long id;
+protected:
+    virtual void Data() const;
+    virtual void Get();
+public:
+    Worker() : fullname("no one"), id(0L) {}
+    Worker(const std::string & s, long n)
+        : fullname(s), id(n) {}
+    virtual ~Worker() = 0; // pure virtual function
+    virtual void Set() = 0;
+    virtual void Show() const = 0;
+};
+
+class Waiter : virtual public Worker
+{
+private:
+    int panache;
+protected:
+    void Data() const;
+    void Get();
+public:
+    Waiter() : Worker(), panache(0) {}
+    Waiter(const std::string & s, long n, int p = 0)
+        : Worker(s, n), panache(p) {}
+    Waiter(const Worker & wk, int p = 0)
+        : Worker(wk), panache(p) {}
+```
+```

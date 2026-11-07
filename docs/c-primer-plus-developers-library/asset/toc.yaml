@@ -1,0 +1,131 @@
+level_changes:
+- line: 35
+  before: 3
+  after: 2
+- line: 39
+  before: 3
+  after: 2
+- line: 55
+  before: 3
+  after: 2
+- line: 9246
+  before: 1
+  after: 3
+- line: 34877
+  before: 1
+  after: 3
+- line: 35022
+  before: 1
+  after: 3
+- line: 35058
+  before: 1
+  after: 2
+- line: 37373
+  before: 1
+  after: 3
+- line: 37475
+  before: 1
+  after: 2
+- line: 48902
+  before: 1
+  after: 2
+- line: 49019
+  before: 1
+  after: 2
+text_changes:
+- line: 2670
+  before: 程序清单 3.14 *typecast.cpp*
+  after: 程序清单 3.14 typecast.cpp
+- line: 2907
+  before: 程序清单 4.1 **arrayone.cpp**
+  after: 程序清单 4.1 arrayone.cpp
+- line: 4485
+  before: 清单 4.18  **arraynew.cpp**
+  after: 清单 4.18 arraynew.cpp
+- line: 4528
+  before: 清单 4.19  **addpntrs.cpp**
+  after: 清单 4.19 addpntrs.cpp
+- line: 5218
+  before: 清单 4.23 **mixtypes.cpp**
+  after: 清单 4.23 mixtypes.cpp
+- line: 7824
+  before: 程序清单 6.3 **ifelseif.cpp**
+  after: 程序清单 6.3 ifelseif.cpp
+- line: 7920
+  before: 程序清单 6.4 **or.cpp**
+  after: 程序清单 6.4 or.cpp
+- line: 7980
+  before: 程序清单 6.5 **and.cpp**
+  after: 程序清单 6.5 and.cpp
+- line: 8637
+  before: Listing 6.11 enum.cpp
+  after: 程序清单 6.11 enum.cpp
+- line: 8713
+  before: Listing 6.12 jump.cpp
+  after: 程序清单 6.12 jump.cpp
+- line: 8814
+  before: Listing 6.13 cinfish.cpp
+  after: 程序清单 6.13 cinfish.cpp
+- line: 9056
+  before: 清单 6.15 **outfile.cpp**
+  after: 清单 6.15 outfile.cpp
+- line: 11093
+  before: 程序清单 7.13 **strctptr.cpp**
+  after: 程序清单 7.13 strctptr.cpp
+- line: 11465
+  before: 程序清单7.17 **ruler.cpp**
+  after: 程序清单 7.17 ruler.cpp
+- line: 11636
+  before: 程序清单 7.18 **fun_ptr.cpp**
+  after: 程序清单 7.18 fun_ptr.cpp
+- line: 12641
+  before: 程序清单8.6 **strc_ref.cpp**
+  after: 程序清单 8.6 strc_ref.cpp
+- line: 16894
+  before: 程序清单10.3  **usestock.cpp**
+  after: 程序清单 10.3 usestock.cpp
+- line: 20432
+  before: 清单 11.21 **stone1.cpp**
+  after: 清单 11.21 stone1.cpp
+- line: 20914
+  before: 代码清单 12.1 **strngbad.h**
+  after: 代码清单 12.1 strngbad.h
+- line: 21825
+  before: 清单 12.4 **string1.h**
+  after: 清单 12.4 string1.h
+- line: 21869
+  before: 清单 12.5 **string1.cpp**
+  after: 清单 12.5 string1.cpp
+- line: 22002
+  before: 程序清单12.6 **sayings1.cpp**
+  after: 程序清单 12.6 sayings1.cpp
+- line: 25939
+  before: 清单 13.15 **dma.cpp**
+  after: 清单 13.15 dma.cpp
+- line: 31788
+  before: 清单15.12 **error5.cpp**
+  after: 清单 15.12 error5.cpp
+- line: 32193
+  before: 程序清单 15.13 **newexcp.cpp**
+  after: 程序清单 15.13 newexcp.cpp
+- line: 34877
+  before: 程序清单16.9    vect3.cpp
+  after: 程序清单 16.9 vect3.cpp
+- line: 37127
+  before: 程序清单 16.20 **valvect.cpp**
+  after: 程序清单 16.20 valvect.cpp
+- line: 38083
+  before: 程序清单 17.3    **manip.cpp**
+  after: 程序清单 17.3 manip.cpp
+- line: 38303
+  before: 程序清单 17.7 **showpt.cpp**
+  after: 程序清单 17.7 showpt.cpp
+- line: 39450
+  before: is next input character.
+  after: ''
+- line: 39452
+  before: is next input character.
+  after: ''
+- line: 40432
+  before: 清单 17.20 **random.cpp**
+  after: 清单 17.20 random.cpp

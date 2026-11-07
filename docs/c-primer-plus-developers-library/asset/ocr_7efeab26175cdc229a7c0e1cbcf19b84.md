@@ -1,0 +1,23 @@
+# Answers to Chapter Reviews
+
+# Answers to Chapter Review for Chapter 2
+
++   1. They are called functions.
++   2. It causes the contents of the `iostream` file to be substituted for this directive before final compilation.
++   3. It makes definitions made in the `std` namespace available to a program.
++   4. `cout << "Hello, world\n";`
++   
++      or
++   
++      `cout << "Hello, world" << endl;`
++   5. `int cheeses;`
++   6. `cheeses = 32;`
++   7. `cin >> cheeses;`
++   8. `cout << "We have " << cheeses << " varieties of cheese\n";`
++   9. The function `floop()` expects to be called with one argument, which will be type `double`, and that the function will return a type `int` value. For instance, it could be used as follows:
++   
++      `int gval = floop(3.14159);`
++   
++      The function `rattle()` has no return value and expects an `int` argument. For instance, it could be used as follows:
++   
++      `rattle(37);`

@@ -1,0 +1,45 @@
+```
+cout << "Enter target distance (q to quit): ";
+}
+cout << "Bye!\n";
+cin.clear();
+while (cin.get() != '\n')
+    continue;
+return 0;
+}
+```
+
+Because the program has a using declaration bringing Vector into scope, the program can use Vector::POL instead of VECTOR::Vector::POL.
+Here is a sample run of the program in Listings 11.13, 11.14, and 11.15:
+
+```
+Enter target distance (q to quit): 50
+Enter step length: 2
+After 253 steps, the subject has the following location:
+(x,y) = (46.1512, 20.4902)
+or
+(m,a) = (50.495, 23.9402)
+Average outward distance per step = 0.199587
+Enter target distance (q to quit): 50
+Enter step length: 2
+After 951 steps, the subject has the following location:
+(x,y) = (-21.9577, 45.3019)
+or
+(m,a) = (50.3429, 115.8593)
+Average outward distance per step = 0.0529362
+Enter target distance (q to quit): 50
+Enter step length: 1
+After 1716 steps, the subject has the following location:
+(x,y) = (40.0164, 31.1244)
+or
+(m,a) = (50.6956, 37.8755)
+Average outward distance per step = 0.0295429
+Enter target distance (q to quit): q
+Bye!
+```
+
+The random nature of the process produces considerable variation from trial to trial, even if the initial conditions are the same. On average, however, halving the step size quadruples the number of steps needed to cover a given distance. Probability theory suggests that, on average, the number of steps (N) of length s needed to reach a net distance of D is given by the following equation:
+
+N = (D/s)²
+
+This is just an average, but there will be considerable variations from trial to trial. For example, 1,000 trials of attempting to travel 50 feet in 2-foot steps yielded an average of 636 steps (close to the theoretical value of 625) to travel that far, but the range was from

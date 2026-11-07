@@ -1,0 +1,56 @@
+```
+```cpp
+String::String()
+{
+    len = 0;
+    str = 0;    // or, with C++11, str = nullptr;
+}
+```
+```
+
+```
+```cpp
+String::String()
+{
+    static const char * s = "C++";   // initialized just once
+    len = std::strlen(s);
+    str = new char[len + 1];          // uses new with []
+    std::strcpy(str, s);
+}
+```
+```
+
+Next, the second constructor in the original excerpt applies new, but it fails to request the correct amount of memory; hence, new returns a block containing space for just one character. Attempting to copy a longer string to that location is asking for memory problems. Also the use of new without brackets is inconsistent with the correct form of the other constructors.
+
+The third constructor is fine.
+
+Finally, here's a destructor that doesn't work correctly with the previous constructors:
+
+```
+```cpp
+String::~String()
+{
+    delete str;        // oops, should be delete [] str;
+}
+```
+```
+
+The destructor uses delete incorrectly. Because the constructors request arrays of characters, the destructor should delete an array.
+
+# ## Memberwise Copying for Classes with Class Members
+
+Suppose you use the String class, or, for that matter, the standard string class as a type for class members:
+
+```
+```cpp
+class Magazine
+{
+private:
+    String title;
+    string publisher;
+...
+};
+```
+```
+
+String and string both use dynamic memory allocation. Does that mean you need to write a copy constructor and assignment operator for the Magazine class? No—at least not in itself. The default memberwise copying and assignment behavior does have some smarts. If you copy or assign one Magazine object to another, memberwise copying uses the copy constructors and assignment operators defined for the member types. That is, the

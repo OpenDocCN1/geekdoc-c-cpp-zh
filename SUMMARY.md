@@ -444,6 +444,7 @@
 +   [C++ Primer Plus，第 6 版](docs/c-primer-plus-6th-edition/README.md)
 +   [C语言入门宝典（第6版）（开发者文库）](docs/c-primer-plus-6th-edition-developers-library/README.md)
 +   [C Primer Plus (6版)](docs/c-primer-plus-c-primer-plus-6-developers-library/README.md)
++   [C++ 入门指南 Plus（开发者文库）](docs/c-primer-plus-developers-library/README.md)
 +   [C Primer Plus，第六版 (Jason Arnold 图书库)](docs/c-primer-plus-sixth-edition-jason-arnolds-library/README.md)
 +   [C 语言编程透视](docs/c-prog-toushi/README.md)
 +   [C++ 编程指南](docs/c-programming/README.md)

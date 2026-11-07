@@ -1,0 +1,384 @@
+
+- cubes.cpp, 390
+- defaults.cpp, 1077
+- delete.cpp, 181, 185
+- divide.cpp, 100
+- dna.cpp, 762-764
+- dna.h, 761-762
+- dowhile.cpp, 232
+- enum.cpp, 279
+- equal.cpp, 219
+- error1.cpp, 897-898
+- error2.cpp, 899
+- error3.cpp, 901
+- error4.cpp, 906-907
+- error5.cpp, 910, 913
+- exceed.cpp, 75
+- exceptions, newexcep.cpp, 920
+- exe_mean.cpp, 905-906
+- express.cpp, 200
+- external.cpp, 465
+- file1.cpp, 451
+- file2.cpp, 452
+- filefunc.cpp, 406-407
+- fileio.cpp, 1117
+- fill.cpp, 1082
+- firstref.cpp, 383
+- floatnum.cpp, 95
+- fltadd.cpp, 96
+- forloop.cpp, 196
+- formore.cpp, 203-204
+- forstr1.cpp, 206
+- forstr2.cpp, 215
+- fowl.cpp, 973
+- friend2tmp.cpp, 860-861
+- fun_ptr.cpp, 364, 368
+- funadap.cpp, 1034-1035
+- function overloading, leftover.cpp, 418
+- functions, tempover.cpp, 434-437
+- functions, arguments, twoarg.cpp, 316
+- functions, recursion, recur.cpp, 359
+- functor.cpp, 1028
+- funtemp.cpp, 420
+- getinfo.cpp, 45
+- get_fun.cpp, 1107
+- hangman.cpp, 962-965
+- hexoct2.cpp, 79
+- if.cpp, 255
+- ifelse.cpp, 257
+- ifelseif.cpp, 259
+- ilist.cpp, 1053
+
+- init_ptr.cpp, 158
+- inline functions.cpp, 381
+- inserts.cpp, 1006
+- instr1.cpp, 125
+- instr2.cpp, 127
+- instr3.cpp, 129
+- iomanip.cpp, 1092
+- jump.cpp, 280-281
+- lambda0.cpp, 1186
+- lambda1.cpp, 1190
+- left.cpp, 410-411
+- leftover.cpp, 416-417
+- lexcast.cpp, 1206
+- limits.cpp, 70
+- list.cpp, 1015
+- listrmv.cpp, 1039-1040
+- lotto.cpp, 319
+- manip.cpp, 1079
+- manyfrnd.cpp, 865
+- memb_pt.cpp, 1244-1245
+- modulus.cpp, 102
+- morechar.cpp, 82
+- more_and.cpp, 266
+- multmap.cpp, 1024-1025
+- mytime0.cpp, 566
+- mytime1.cpp, 569-570
+- mytime1.h, 569
+- mytime2.cpp, 575
+- mytime2.h, 575
+- names.cpp, 493-494
+- names.h, 493
+- namespaces, static.cpp, 479
+- nested.cpp, 247, 895-896
+- newstrct.cpp, 179-180
+- not.cpp, 267-268
+- numstr.cpp, 130
+- num_test.cpp, 198
+- operator overloading
+  - mytime0.cpp, 566
+  - mytime3.cpp, 585
+  - mytime3.h, 584
+  - usetime0.cpp, 568
+  - usetime3.cpp, 587
+- or.cpp, 261
+- outfile.cpp, 54
+- outfile.cpp, 290-291
+- pairs.cpp, 848
+- peeker.cpp, 1111
+
+- placenew1.cpp, 671–673
+- placenew2.cpp, 674–675
+- plus_one.cpp, 207
+- pointer.cpp, 155
+- precise.cpp, 1082
+- protos.cpp, 310
+- ptrstr.cpp, 174–175
+- queue.cpp, 692–694
+- queue.h, 691–692
+- queuetp.h, 893–895
+- random.cpp, 1138–1139
+- randwalk.cpp, 603
+- recur.cpp, 355, 358
+- reference variables as function parameters, swaps.cpp, 389
+- rtti1.cpp, 936–938
+- rtti2.cpp, 939–941
+- ruler.cpp, 360
+- rvref.cpp, 1163
+- sales.cpp, 924
+- sales.h, 922
+- sayings1.cpp, 656
+- sayings2.cpp, 665
+- secref.cpp, 385
+- setf.cpp, 1085
+- setf2.cpp, 1088
+- setops.cpp, 1021–1022
+- showpt.cpp, 1084
+- somedefs.h, 1192
+- sqrt.cpp, 51
+- stack.cpp, 554–555
+- stack.h, 553–554
+- stacker.cpp, 555–557
+- stacktem.cpp, 835–836
+- stacktp.h, 833–834
+- static.cpp, 470–471
+- stcktp1.cpp, 841–842
+- stcktp1.h, 839–840
+- stdmove.cpp, 1174
+- stock00.h, 510
+- stock1.cpp, 531
+- stock1.h, 530
+- stock2.cpp, 543
+- stock2.h, 543
+- stocks.cpp, class member functions, 515
+- stone1.cpp, 615
+- stone.cpp, 610
+- stonewt.cpp, 608
+
+- stonewt.h, 607
+- stonewt1.cpp, 614–615
+- stonewt1.h, 613
+- str1.cpp, 953
+- str2.cpp, 966–967, 971
+- strctfun.cpp, 348
+- strctptr.cpp, 352–353
+- strfile.cpp, 958–959
+- strgfun.cpp, 340
+- strgtsl.cpp, 1038–1039
+- strin.cpp, 1144
+- string1.cpp, 653–656
+- string1.h, 653
+- strings, numeric input, numstr.cpp, 135
+- strings, returning, strgback.cpp, 341
+- strings.cpp, 123
+- stringbad.cpp, 630–631
+- strngbad.h, 629
+- strout.cpp, 1143
+- strquote.cpp, 402–403
+- strref.cpp, 395
+- strtype1.cpp, 132
+- strtype2.cpp, 134
+- strtype4.cpp, 137
+- structur.cpp, 142
+- studentc.cpp, 793
+- studentc.h, 789–790
+- studenti.cpp, 802–803
+- studenti.h, 799
+- sumafile.cpp, 294–295
+- swaps.cpp, 387–388
+- switch.cpp, 276–277
+- tabtenn0.cpp, 709
+- tabtenn0.h, 708
+- tabtenn1.cpp, 717
+- tabtenn1.h, 716
+- tempnemb.cpp, 852
+- tempparm.cpp, 856–857
+- textin1.cpp, 234
+- textin2.cpp, 236
+- textin3.cpp, 239
+- textin4.cpp, 242
+- tmp2tmp.cpp, 862–864
+- topfive.cpp, 353
+- travel.cpp, 344–345
+- truncate.cpp, 1113
+- tv.cpp, 880–882
+
+- tv.h, 879-880
+- tvfm.h, 885-886
+- twoarg.cpp, 316
+- twod.cpp, 846-847
+- twofile1.cpp, 469
+- twofile2.cpp, 469
+- twoswap.cpp, 427-428
+- twotemps.cpp, 422
+- typecast.cpp, 108
+- use_new.cpp, 161
+- uselogo.cpp, 1043-1044
+- usebrass1.cpp, 732-733
+- usebrass2.cpp, 734
+- usedma.cpp, 765
+- useless.cpp, 1165
+- usenmsp.cpp, 494-495
+- usestok2.cpp, 547
+- usestok1.cpp, 533
+- usetime1.cpp, 571-572
+- usetime2.cpp, 577
+- use0.cpp, 710
+- use11.cpp, 717-718
+- use_sales.cpp, 925-927
+- use_stuc.cpp, 795-797
+- use_stui.cpp, 804-805
+- use_tv.cpp, 882
+- usestok0.cpp, 519
+- valvect.cpp, 1048
+- variadic1.cpp, 1199
+- vect.cpp, 593
+- vect.h, 591
+- vect1.cpp, 980
+- vect2.cpp, 984-985
+- vect3.cpp, 988
+- vegnnews.cpp, 634
+- vslice.cpp, 1049-1050
+- waiting.cpp, 229
+- while.cpp, 225
+- width.cpp, 1080
+- Worker0.cpp, 811-812
+- Worker0.h, 810-811
+- workermi.cpp, 823-825
+- workermi.h, 821-822
+- workmi.cpp, 826-827
+- worktest.cpp, 813
+- write.cpp, 1073-1074
+
+- code style, 40
+- colon (:) scope-resolution operator (::), 514
+- combination assignment operators, 211-212
+
+- comma operator, 214-217
+  - example, 214-216
+  - precedence, 217
+- command-line processing, 1119-1120
+  - comments, 27, 33
+    - /*, notation, 33
+    - //, notation, 32
+- compare() method, 1264-1265
+- comparing
+  - arrays, vector objects, and array objects, 188-189
+  - strings, 960, 1263-1265
+    - C-style strings, comparing, 220-223
+    - string class strings, comparing, 223-224
+- comparison members (String class), 648-649
+- compile time, 155
+- compile time complexity, 1009-1010
+- compilers, 21
+  - C/C++ (UNIX), 21-22
+  - definition of, 11
+  - g++ (Linux), 22
+  - gpp, 22
+  - troubleshooting, 24
+  - Windows, 23-24
+- compiling files separately, 447-449, 453
+- complex class template, 1045
+- composition, 785
+- compound statements (blocks), 212-214
+- compound types, 115-116
+  - enumerations, 150-152
+    - enumerators, 150-151
+    - value ranges, 153
+    - values, setting, 152
+  - pointers, 153
+    - assigning values to, 171
+    - C++ philosophy, 155
+    - cautions, 159
+    - compared to pointed-to values, 172
+    - declaring, 155-159, 171
+    - dereferencing, 171-172
+    - delete operator, 163-164
+    - example, 154
+    - initializing, 157-159
+    - integers, 160
+    - new operator, 160-162
+    - pointer arithmetic, 167-172
+    - pointer notation, 173
+- pointers to objects, 665-670
+  - arrays, 173-178
+  - structures, 140-142
+    - arrays, 147-148
+      - assignment, 145-146
+      - bit fields, 148
+  - dynamic structures, 178-180
+    - example, 142-144
+    - members, 141
+  - string class members, 144-145
+  - unions, 149
+    - anonymous unions, 150
+    - declaring, 149
+- comps1r1.cpp, 221
+- comps2.cpp, 223
+- concatenating strings, 122, 128, 1266
+- concatenating output, 46-47
+- concatenation
+  - output, 1071-1072
+  - string class, 133-134
+- concatenation operator (+), strings, 133-134
+- concepts
+  - containers, 1007
+    - container methods compared to functions, 1039-1041
+    - properties, 1008-1010
+    - sequence requirements, 1011-1012
+    - functors, 1027-1030
+    - iterators, models, 1000-1001
+- concurrent programming, 1202-1203
+- condit.cpp, 273
+- conditional operator (?:), 273-274
+- const, reference returns, 400
+- const keyword, 90-92, 473-474, 771-772
+  - arrays, 327-328
+  - pointers, 334-336
+  - reference variables, 401
+  - temporary variables, 392-394
+- const member functions, 537
+- const modifier as alternative to #define, 1327-1329
+- const objects, returning references to, 662-665
+- constant time, 1009
+- constant time complexity, 1009-1010
+- constants, 78-80. See also strings
+  - char constants. See char data type
+  - const keyword, 90-92
+
+- file modes, 1122-1123
+- floating-point constants, 96
+  - representing bit values, 1085
+- size_type, 1251
+- symbolic constants, 72
+- symbolic names, 90-92
+- constcast.cpp, 944
+- constructors, 524, 742, 768
+  - calling, 526-527
+  - class, 524
+  - conversion, 769-770
+  - copy constructors, 639, 767
+    - deep copying, 642-644
+      - limitations, 640-642
+    - shallow copying, 640
+    - when to use, 639-640
+  - declaring, 525-526
+  - default constructors, 527-528, 638-639, 766-767
+  - defining, 525-526
+  - delegating, 1180-1181
+  - inheritance, 713-715
+  - initialization list, C++11, 1258
+  - new operator, 659-661, 677-678
+  - R value reference, C++11, 1256
+  - string class, 1253
+    - constructors that use arrays, 1254
+    - constructors that use n copies of character, 1257
+    - constructors that use parts of arrays, 1254-1255
+    - constructors that use ranges, 1257
+    - copy constructors, 1255-1256
+    - default constructors, 1254
+    - String(), 647-648, 952-956
+  - virtual base classes, 817-818
+- const_cast operator, 944
+- const_iterator type, 1273
+- const_reference type, 1273
+- contained objects
+  - compared to private inheritance, 806
+  - initializing, 791
+  - interfaces, 792-795
+- container classes, 830
+- container concepts, 1007
+  - container methods compared to functions, 1039-1041
+  - properties, 1008-1010
+  - sequence requirements, 1011-1012

@@ -1,0 +1,58 @@
+# ### The find_first_of() Family
+
+The find_first_of() methods have these prototypes:
+
+```
+size_type find_first_of(const basic_string& str,
+                          size_type pos = 0) const noexcept;
+size_type find_first_of(const char* s, size_type pos, size_type n) const;
+size_type find_first_of(const char* s, size_type pos = 0) const;
+size_type find_first_of(const char* s, size_type pos = 0) const noexcept;
+size_type find_first_of(char c, size_type pos = 0) const noexcept;
+```
+
+These methods work like the corresponding find() methods, except that instead of looking for a match of the entire substring, they look for the first match for any single character in the substring:
+
+```
+string longer("That is a funny hat.");
+string shorter("fluke");
+size_type loc1 = longer.find_first_of(shorter);   // sets loc1 to 10
+size_type loc2 = longer.find_first_of("fat");     // sets loc2 to 2
+```
+
+The first occurrence of any of the five characters of fluke in longer is the f in funny. The first occurrence of any of three characters of fat in longer is the a in That.
+
+# ### The find_last_of() Family
+
+The find_last_of() methods have these prototypes:
+
+```
+size_type find_last_of(const basic_string& str,
+                       size_type pos = npos) const noexcept;
+size_type find_last_of(const char* s, size_type pos, size_type n) const;
+size_type find_last_of(const char* s, size_type pos = npos) const;
+size_type find_last_of(const char* s, size_type pos = npos) const noexcept;
+size_type find_last_of(char c, size_type pos = npos) const noexcept;
+```
+
+These methods work like the corresponding rfind() methods, except that instead of looking for a match of the entire substring, they look for the last match for any single character in the substring.
+
+Here's code for finding the location of the last and next to last occurrences of any of the letters in "fluke" in a longer string:
+
+```
+string longer("That is a funny hat.");
+string shorter("hat");
+size_type loc1 = longer.find_last_of(shorter);   // sets loc1 to 18
+size_type loc2 = longer.find_last_of("any");     // sets loc2 to 17
+```
+
+The last occurrence of any of the three letters of hat in longer is the t in hat. The last occurrence of any of the three characters of any in longer is the a in hat.
+
+# ### The find_first_not_of() Family
+
+The find_first_not_of() methods have these prototypes:
+
+```
+size_type find_first_not_of(const basic_string& str,
+                            size_type pos = 0) const noexcept;
+```

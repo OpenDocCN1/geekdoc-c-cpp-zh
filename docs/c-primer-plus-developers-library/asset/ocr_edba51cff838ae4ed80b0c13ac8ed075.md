@@ -1,0 +1,46 @@
+**Tip**
+
+If you find yourself using `typedef` in an extended series of `if else` statements, you should check whether you should instead use virtual functions and `dynamic_cast`.
+
+# Type Cast Operators
+
+The C type cast operator, in Bjarne Stroustrup’s view, is too lax. For example, consider the following:
+
+```
+struct Data
+{
+    double data[200];
+};
+
+struct Junk
+{
+    int junk[100];
+};
+Data d = {2.5e33, 3.5e-19, 20.2e32};
+char * pch = (char *) (&d);   // type cast #1 - convert to string
+char ch = char (&d);          // type cast #2 - convert address to a char
+Junk * pj = (Junk *) (&d);    // type cast #3 - convert to Junk pointer
+```
+
+First, which of these three type casts makes any sense? Unless you resort to the implausible, none of them make much sense. Second, which of these three type casts are allowed? In C, all of them are. Stroustrup’s response to this laxity was to tighten up what is allowable for a general type cast and to add four type cast operators that provide more discipline for the casting process:
+
+```
+dynamic_cast
+const_cast
+static_cast
+reinterpret_cast
+```
+
+Instead of using a general type cast, you can select an operator that is suited to a particular purpose. This documents the intended reason for the type cast and gives the compiler a chance to check that you did what you thought you did.
+
+You’ve already seen the `dynamic_cast` operator. To summarize, suppose High and Low are two classes, that `ph` is type `High *`, and that `pl` is type `Low *`. Then the following statement assigns a `Low *` pointer to `pl` only if Low is an accessible base class (direct or indirect) to High:
+
+```
+pl = dynamic_cast<Low *>(ph);
+```
+
+Otherwise, the statement assigns the null pointer to `pl`. In general, the operator has this syntax:
+
+```
+dynamic_cast < type-name > (expression)
+```
