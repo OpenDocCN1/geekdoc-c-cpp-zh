@@ -511,6 +511,7 @@
 +   [Qt GUI 开发初学者 C++ 编程手册：使用 C++ 和 Qt 框架构建跨平台 GUI 应用逐步指南](docs/c-programming-handbook-for-beginners-on-gui-development-with/README.md)
 +   [C# 编程：初学者实用项目指南](docs/c-programming-hands-on-project-for-beginners/README.md)
 +   [C 语言简易教程](docs/c-programming-in-easy-steps/README.md)
++   [C++ 编程轻松入门（第 5 版）](docs/c-programming-in-easy-steps-5th-edition/README.md)
 +   [C 编程轻松学（第5版）：针对 GNU 编译器 6.3.0 和 Windows 10 更新](docs/c-programming-in-easy-steps-5th-edition-updated-for-the-gnu-/README.md)
 +   [C++ 编程入门指南，第 6 版](docs/c-programming-in-easy-steps-6th-edition/README.md)
 +   [C++ 编程入门，第五版](docs/c-programming-in-easy-steps-fifth-edition/README.md)
