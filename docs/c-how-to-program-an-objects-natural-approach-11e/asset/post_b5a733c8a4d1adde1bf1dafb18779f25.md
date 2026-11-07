@@ -1,0 +1,290 @@
+
+- underflow_error exception 681
+- underlying data structure 743
+- underscore (_) 73
+- unformatted I/O 1103, 1110
+- unformatted output 1104, 1106
+- unhandled_exception
+  - function of a coroutine
+  - promise object 1094
+- Unicode character set 10, 90, 1103
+- uniform_int_distribution 204
+- unincremented copy of an object 632
+- union 1158
+- unique algorithm 837
+  - ranges version (C++20) 802, 804
+- unique keys 734, 738
+- unique member function of list 727
+- unique_copy algorithm 837
+  - ranges version (C++20) 805, 806
+- unique_lock class 1020, 1021
+  - unlock function 1022
+- unique_ptr 605
+- unique_ptr class 601, 601, 604, 605, 1143
+  - built-in array 603
+  - create with make_unique function template 621
+  - get member function 618
+  - swap member function 636
+- univariate time series 423
+- universal-time format 451
+- University of Tennessee Martin Prime Pages website 1041
+- UNIX 162, 380
+- unlock function of a unique_lock 1022
+- unnamed namespace 1180
+- unordered associative containers 704, 706, 708, 730
+- unordered_map associative container class template 706, 730, 738
+- <unordered_map> header 201, 736, 738
+- unordered_multimap associative container class template 706, 730, 736
+- unordered_multiset associative container class template 706, 730, 731
+- unordered_set associative container class template 706, 730, 734
+- <unordered_set> header 201, 731, 734
+- unpack elements (C++17 structured binding) 795
+- unpack elements via structured binding 795
+- unpacking a tuple 901
+- unresolved forward reference (Simple compiler) 761
+- Unruh, Erwin 914
+- unseq execution policy 995
+- unsequenced_policy class 995
+- unsigned data type 199
+  - integer types 198
+  - unsigned char 199
+  - unsigned int 199
+  - unsigned long 199
+  - unsigned long int 199
+  - unsigned long long 199
+  - unsigned long long int 199
+  - unsigned short 199
+  - unsigned short int 199
+- unpacking the stream from an output stream 1127
+- unwinding the function call stack 667
+- upper_bound algorithm 837
+  - ranges version (C++20) 810, 811
+- upper_bound function of associative container 733
+- uppercase letter 72, 90, 201
+- uppercase stream manipulator 1111, 1119, 1121
+- use cases 53
+- use_count member function of class shared_ptr 1146
+- user defined function 194
+  - type 210, 211
+- user-defined type 434, 640
+- using a dynamically allocated ostringstream object 386
+- using a function template 227
+- using a static data member to maintain a count of the number of objects of a class 488
+- using arrays instead of switch 274
+- using declaration 81, 132, 946
+  - in headers 436
+- using declaration to create an alias for a type 899, 900, 1157
+- using directive 81, 946
+  - in headers 436
+- using enum statement 213
+- using function swap to swap two strings 364
+- using standard library functions to perform a heapsort 817
+- using virtual base classes 1176
+- Utilities area (Xcode) 38
+- utility function 457
+- <utility> header 202
+  - exchange function 623
+
+## V
+
+- V operation on semaphore 1059
+- V’s of big data 52
+- validate a first name 402
+- validate data 111
+- validate data in a set function 442
+- validating data (regular expressions) 399
+- Validating User Input exercise 138
+- value initialization 266, 321, 441, 493, 599, 902
+  - memory 617
+  - objects 599
+  - rules 599
+- value member of a type-trait class 866
+- value metafunction 917
+- value of a variable 75, 1182
+- value of an array element 261
+- value_type 706, 707
+  - nested type in an iterator 887
+- values range adaptor (C++20) 829, 833
+- variable 72
+- variable name 75, 756, 759
+- variable scope 149
+- variable size 75
+- variable template 866, 898
+- variable type 75
+- variadic function template 906
+  - compile-time recursion 902
+  - typename... 903
+- variadic template 848, 894, 899
+  - parameter pack 894, 903
+  - sizeof... operator 894
+- variadic template parameter pack 905
+- variance 418
+- <variant> header 1154
+- variant standard library class template 1154
+- variety (in big data) 53
+- vector 851
+  - capacity 715
+- vector class 290, 670
+- vector class template 260, 704, 716
+  - capacity function 716
+  - crbegin function 719
+  - crend function 719
+  - push_back function 717
+  - push_back member function 295
+  - push_front function 717
+  - rbegin function 719
+  - rend function 719
+  - shrink_to_fit member function 719
+- vector class template element-manipulation functions 720
+- vector container
+  - erase member function 787
+- vector hardware operations 991
+- <vector> header 201, 290
+- vector mathematics 835, 991
+- vectorized execution 996
+- velocity (in big data) 52
+- Veracity (in big data) 53
+- Version Control Systems (VCS) 48
+  - Git 48
+- version control tools xxxix
+- video streaming 1027
+- view (C++20) 286, 699, 828
+  - all range adaptor 829
+  - common range adaptor 829
+  - composable 286
+  - composing 828
+  - counted range adaptor 829
+  - drop range adaptor 829, 832
+  - drop_while range adaptor 829, 832
+  - elements range adaptor 829, 834
+  - filter range adaptor 829
+  - iota range factory 830
+  - iota range factory for an infinite range 830
+  - keys range adaptor 829, 833
+  - reverse range adaptor 829, 831
+  - split range adaptor 829
+  - take range adaptor 829, 831
+  - take_while range adaptor 829, 831
+  - transform range adaptor 829, 832
+  - values range adaptor 829, 833
+- view into a container 334
+- viewable_range (C++20) 829
+- views of contiguous container elements 334
+- views::filter 288
+- views::iota 287
+- Vigenère cipher 502, 505
+  - Vigenère square 497
+- Vigenère secret key cipher 245, 246, 248
+- Vigenère secret-key cipher xxix, 494
+- vim editor 25
+- violation handler (contracts) 694
+  - default 690
+- virtual base class 1174, 1176
+- virtual destructor 557
+- virtual function 531, 552, 570, 572, 1174
+  - as an internal implementation detail 1167, 1194
+  - call 572
+  - call illustrated 571
+  - overhead 570
+  - private 1162
+  - protected 1162
+  - table (vtable) 570
+  - “under the hood” 570
+- Virtual Functions exercise 582
+- Virtual Functions vs. Pure Virtual Functions exercise 582
+- virtual inheritance 1176
+- virtual machine xxx, xliv, 348, 753
+- virtual memory 677, 679
+- virtual reality (VR) 44, 46
+  - fully-immersive 45
+  - non-immersive 44
+  - semi-immersive 44
+- Virtuality (paper by Herb Sutter) 1161
+- virtualization 49
+- visibility (C++20 modules) 971
+- visit standard library function 1154, 1159
+- Visual C++ xxxvii
+- Visual C++ compiler xxviii, liv, lv
+- Visual C++ programming language 21
+- visual product search 53
+- Visual Studio
+  - Community edition 3
+- Visual Studio Code 25
+- Visual Studio Code editor 28
+- Visual Studio Community Edition liv, 26, 28
+  - Command Prompt window 30
+  - Configure your new project 29
+  - Create a New Project 29
+  - Empty Project 29
+  - Solution Explorer 29, 30
+  - Start Window 29
+- visualization xl, 419
+  - binary search xxxvi
+  - merge sort xxxvi
+- Visualizing 231
+- visualizing recursion 231, 238, 254
+- Visualizing Searching and Sorting Algorithms case studies xxxvi
+- voice recognition 53
+- void * 333
+- void return type 195, 196, 198
+- volatile information 6
+- volume (in big data) 52
+- volume of a cube 218
+- VR (virtual reality) 44
+- vtable 570, 573
+  - pointer 573
+
+## W
+
+- W3C (World Wide Web Consortium) 42
+- wait-for (necessary condition for deadlock) 1002
+- wait function of a condition_variable 1021
+- wait member function of a std::latch 1053, 1053
+- wait operation on semaphore 1059
+- waiting thread 1022
+  - state 1000
+- “walk off” either end of an array 604
+- -Wall GNU g++ compiler flag 174
+- “warehouse” section of the computer 6
+- warnings
+  - treat as errors 221
+- watchOS 16
+- wchar_t character type 1103
+- weak_ptr class 601, 1147
+  - bad_weak_ptr exception 1148
+  - lock member function of class weak_ptr 1148, 1151
+- weakly_incrementable concept (C++20) 779
+- weather forecasting 53
+- web scraping 400
+- web service 42, 49, 515
+- web services
+  - Any API 44
+  - API Layer 44
+  - GitHub Public APIs 43
+  - Google APIs Explorer 43
+  - Rapid API 44
+- Web3 47
+- Welcome to Xcode window 37
+- What Does This Code Do? exercise 184, 187
+- What Does This Program Do? exercise 138
+- what virtual function of class exception 295, 661, 663, 677
+- What’s Wrong with This Code? exercise 184
+- when to use exceptions xxxiii
+- when_all function (concurrency library) 1088
+- when_any function (concurrency library) 1089
+- while iteration statement 98, 106, 109, 116, 147, 179
+- whitespace characters 68, 68, 1106, 1108, 1111
+- whole number 72
+- width member function of class ios_base 1114
+- width setting 1114
+  - implicitly set to 0 1114
+- William Gates xxxiii
+- Williams, Anthony xlix
+- Windows 162
+- Windows operating system 15
+- Windows Subsystem for Linux (WSL) 32
+- wiostream 1104
+- word character 401
+- Word Endings exercise 408
+- word frequency counting 426
+- Word Frequency Counting exercise 752

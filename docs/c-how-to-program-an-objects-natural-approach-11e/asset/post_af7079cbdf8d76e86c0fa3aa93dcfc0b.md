@@ -1,0 +1,52 @@
+
+## Index
+
+- words 349
+- worker_thread_executor (concept) 1085
+- workflow 97
+- Working with the diamonds.csv Dataset exercise 414
+- Working with the iris.csv Dataset exercise 415
+- workspace window 38
+- World Wide Web 42, 42
+- worst-case run time for an algorithm 1199
+- wostream 1104
+- Wozniak, Steve 16
+- write 761
+- write function of ostream 1105, 1110
+
+### X
+
+- X (or x) presentation type 1130
+- -x c++-module compiler flag (clang++) 948
+- -x c++-system-header compiler flag (g++) 940
+- x86-64 gcc (contracts) 689
+- -xc++-system-header compiler flag (clang++) 940
+- Xcode xxxvii, liv, 26
+  - **Debug** area 38
+  - **Editor** area 38
+  - **Navigator** area 38
+  - **Utilities** area 38
+  - **Welcome to Xcode** window 37
+- Xcode navigators
+  - **Issue** 38
+  - **Project** 38
+- Xcode on Mac OS X 28
+- Xerox PARC (Palo Alto Research Center) 16
+- XML (eXtensible Markup Language) 516
+- xor operator keyword 1185
+- xor_eq operator keyword 1185
+- xvalue (expiring value) 611
+
+### Y
+
+- y-intercept 420, 421
+- yield function of namespace std::this_thread 1050
+- yield the processor 1050
+- yield_value function of a coroutine promise object 1095
+- Yoda condition 174
+
+### Z
+
+- zero-based counting 149
+- zero-overhead principle of C++ features 656
+- zettabytes (ZB) 50

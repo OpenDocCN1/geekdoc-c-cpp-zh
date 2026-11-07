@@ -1,0 +1,28 @@
+The conditional “branch if accumulator is zero” instruction is simulated as
+
+```
+if (accumulator == 0) {
+    instructionCounter = operand;
+}
+```
+
+At this point, you should implement your Simpletron simulator and run the SML programs you wrote in Exercise 7.9. You may embellish SML with additional features and provide for these in your simulator. Exercise 7.11 lists several possible embellishments.
+
+Your simulator should check for various types of errors. During the program loading phase, for example, each number the user types into the Simpletron’s memory must be in the range -9999 to +9999. Your simulator should use a while loop to test that each number entered is in this range, and, if not, keep prompting the user to re-enter the number until a correct number is entered.
+
+During the execution phase, your simulator should check for serious errors, such as attempts to divide by zero, attempts to execute an invalid operation code and accumulator overflows (i.e., arithmetic operations resulting in values larger than +9999 or smaller than -9999). Such serious errors are fatal errors. When a fatal error is detected, print an error message such as:
+
+```
+*** Attempt to divide by zero ***
+*** Simpletron execution abnormally terminated ***
+```
+
+and print a full computer dump in the format we’ve discussed previously. This will help the user locate the error in the program.
+
+*Implementation Note:* When you implement the Simpletron Simulator, define the memory array and all the registers as variables in main. The program should contain three other functions—load, execute and dump. Function load reads the SML instructions from the user at the keyboard. (Once you study file processing in Chapter 8, you’ll be able to read the SML instruction from a file.) Function execute executes the SML program currently loaded in the memory array. Function dump displays the contents of memory and all of the registers stored in main’s variables. Pass the memory array and registers to the other functions as necessary to complete their tasks. Functions load and execute need to modify variables that are defined in main, so you’ll need to pass those variables to the functions by reference using pointers. You’ll need to modify the statements we showed throughout this problem description to use the appropriate pointer notations.
+
+**7.11 (Challenge Project: Modifications to the Simpletron Simulator)** In this exercise, we propose several modifications and enhancements to Exercise 7.10’s Simpletron Simulator. In Exercises 13.31 and 13.32, we propose building a compiler that converts programs written in a high-level programming language (a variation of BASIC) to Simpletron Machine Language. Some of the following modifications and enhancements may be required to execute the programs produced by the compiler:
+
++   a) Extend the Simpletron Simulator’s memory to contain 1000 memory locations (000 to 999) to enable the Simpletron to handle larger programs.
++   b) Allow the simulator to perform remainder calculations. This requires an additional Simpletron Machine Language instruction.
++   c) Allow the simulator to perform exponentiation calculations. This requires an additional Simpletron Machine Language instruction.
