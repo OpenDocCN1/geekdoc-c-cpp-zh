@@ -461,6 +461,7 @@
 +   [C 语言编程初学者指南 (第3版)](docs/c-programming-absolute-beginners-guide-3rd-edition/README.md)
 +   [C++ 编程：下班自学 C++ 指南。构建你的编程技能并学习解决常见问题。将你的热情转化为计算机程序员职业生涯。](docs/c-programming-after-work-guide-to-master-c-on-your-own-build/README.md)
 +   [C++ 编程：入门指南：面向初学者的清晰简洁 C++ 编程入门指南](docs/c-programming-an-introduction-a-clear-and-concise-introducti/README.md)
++   [C++ 编程：面向对象方法（第1版 ISE）](docs/c-programming-an-object-oriented-approach-1e-ise/README.md)
 +   [C++ 编程：面向对象方法](docs/c-programming-an-object-oriented-approach-editable/README.md)
 +   [C 语言与编程题库：强化你的编程能力，第 2 版](docs/c-programming-and-coding-question-bank-with-solution-make-yo/README.md)
 +   [C 编程与数据结构](docs/c-programming-and-data-structures/README.md)
