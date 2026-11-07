@@ -1,0 +1,28 @@
++   5. Relational operators can be used with `enum` values.
++   6. Enumeration type values cannot be input or output directly.
++   7. Enumeration types can be passed as parameters to functions either by value or by reference.
++   8. A function can return a value of the enumeration type.
++   9. An anonymous type is one in which a variable’s values are specified without any type name.
++   10. C++’s reserved word `typedef` is used to create synonyms or aliases to previously defined data types.
++   11. Anonymous types cannot be passed as parameters to functions.
++   12. The `namespace` mechanism is a feature of ANSI/ISO Standard C++.
++   13. A `namespace` member is usually a named constant, variable, function, or another `namespace`.
++   14. The scope of a `namespace` member is local to the `namespace`.
++   15. One way to access a `namespace` member outside the `namespace` is to precede the `namespace` member name with the `namespace` name and scope resolution operator.
++   16. In C++, `namespace` is a reserved word.
++   17. To use the `namespace` mechanism, the program must include the ANSI/ISO Standard C++ header files—that is, the header files without the extension h.
++   18. The `using` statement simplifies the accessing of `namespace` members.
++   19. In C++, `using` is a reserved word.
++   20. The keyword `namespace` must appear in the `using` statement.
++   21. When accessing a `namespace` member without the `using` statement, the `namespace` name and the scope resolution operator must precede the name of the `namespace` member.
++   22. To use an identifier declared in the standard header files without the `namespace` name, after including all the necessary header files, the following statement must appear in the program:
++   
++       ```cpp
++       using namespace std;
++       ```
++   
++   23. A string is a sequence of zero or more characters.
++   24. Strings in C++ are enclosed in double quotation marks.
++   25. To use the type `string`, the program must include the header file `string`. The other header files used in the program should be ANSI/ISO Standard C++ style header files.
++   26. The assignment operator can be used with the `string` type.
++   27. The operator + can be used to concatenate two values of the type `string`. For the operator + to work with the `string` data type, one of the operands of + must be a `string` variable.

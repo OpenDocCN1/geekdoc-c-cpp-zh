@@ -1,0 +1,51 @@
+45. What is the output of the following code?
+
+```
+```cpp
+int num = 12;
+
+while (num >= 0)
+{
+    if (num % 5 == 0)
+    {
+        num++;
+        continue;
+    }
+
+    cout << num << " ";
+    num = num - 2;
+}
+cout << endl;
+```
+```
+
+46. What does a `break` statement do in a loop?
+
+# PROGRAMMING EXERCISES
+
++   1. Write a program that prompts the user to input an integer and then outputs both the individual digits of the number and the sum of the digits. For example, it should output the individual digits of 3456 as 3 4 5 6, output the individual digits of 8030 as 8 0 3 0, output the individual digits of 2345526 as 2 3 4 5 5 2 6, output the individual digits of 4000 as 4 0 0 0, and output the individual digits of −2345 as 2 3 4 5.
+
++   2. The value of π can be approximated by using the following series:
++   
++   π = 4\left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots + \frac{1}{2n-1} + \frac{1}{2n+1}\right).
++   
++   The following program uses this series to find the approximate value of π. However, the statements are in the incorrect order, and there is also a bug in this program. Rearrange the statements and also find and remove the bug so that this program can be used to approximate π.
+
+```
+```cpp
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    double pi = 0;
+    long i;
+    long n;
+
+    cin >> n;
+    cout << "Enter the value of n: ";
+    cout << endl;
+```
+```

@@ -1,0 +1,19 @@
+> > **NOTE:** The preceding program uses five variables—`test1`, `test2`, `test3`, `test4`, and `test5`—to read the five test scores and then find the average test score. The Web site accompanying this book contains a modified version of this program that uses only one variable, `testScore`, to read the test scores and another variable, `sum`, to find the sum of the test scores. The program is named `Ch3_AverageTestScoresVersion2.cpp`.
+
+# QUICK REVIEW
+
++   1. A stream in C++ is an infinite sequence of characters from a source to a destination.
++   2. An input stream is a stream from a source to a computer.
++   3. An output stream is a stream from a computer to a destination.
++   4. `cin`, which stands for common input, is an input stream object, typically initialized to the standard input device, which is the keyboard.
++   5. `cout`, which stands for common output, is an output stream object, typically initialized to the standard output device, which is the screen.
++   6. When the binary operator `>>` is used with an input stream object, such as `cin`, it is called the stream extraction operator. The left-side operand of `>>` must be an input stream variable, such as `cin`; the right-side operand must be a variable.
++   7. When the binary operator `<<` is used with an output stream object, such as `cout`, it is called the stream insertion operator. The left-side operand of `<<` must be an output stream variable, such as `cout`; the right-side operand of `<<` must be an expression or a manipulator.
++   8. When inputting data into a variable, the operator `>>` skips all leading whitespace characters.
++   9. To use `cin` and `cout`, the program must include the header file `iostream`.
++   10. The function `get` is used to read data on a character-by-character basis and does not skip any whitespace characters.
++   11. The function `ignore` is used to skip data in a line.
++   12. The function `putback` puts the last character retrieved by the function `get` back into the input stream.
++   13. The function `peek` returns the next character from the input stream but does not remove the character from the input stream.
++   14. Attempting to read invalid data into a variable causes the input stream to enter the fail state.
++   15. Once an input failure has occurred, you use the function `clear` to restore the input stream to a working state.

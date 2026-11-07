@@ -1,0 +1,48 @@
+operator `delete` is used to destroy dynamic variables. The syntax to use the operator `delete` has two forms:
+
+```
+delete pointerVariable;       // to deallocate a single
+                              // dynamic variable
+delete [] pointerVariable;   // to deallocate a dynamically
+                              // created array
+```
+
+Thus, given the declarations of the previous section, the statements:
+
+```
+delete p;
+delete [] name;
+delete str;
+```
+
+deallocate the memory spaces that the pointers p, name, and str point to.
+
+Suppose p and name are pointer variables, as declared previously. Notice that an expression such as:
+
+```
+delete p;
+```
+
+or:
+
+```
+delete [] name;
+```
+
+only marks the memory spaces that these pointer variables point to as deallocated. Depending on a particular system, after these statements execute, these pointer variables may still contain the addresses of the deallocated memory spaces. In this case, we say that these pointers are dangling. Therefore, if later you access the memory spaces via these pointers without properly initializing them, depending on a particular system, either the program will access a wrong memory space, which may result in corrupting data, or the program will terminate with an error message. One way to avoid this pitfall is to set these pointers to NULL after the delete operation. Also note that for the operator delete to work properly, the pointer must point to a valid memory space.
+
+# Operations on Pointer Variables
+
+The operations that are allowed on pointer variables are the assignment and relational operations and some limited arithmetic operations. The value of one pointer variable can be assigned to another pointer variable of the same type. Two pointer variables of the same type can be compared for equality, and so on. Integer values can be added and subtracted from a pointer variable. The value of one pointer variable can be subtracted from another pointer variable.
+
+For example, suppose that we have the following statements:
+
+```
+int *p, *q;
+```
+
+The statement:
+
+```
+p = q;
+```

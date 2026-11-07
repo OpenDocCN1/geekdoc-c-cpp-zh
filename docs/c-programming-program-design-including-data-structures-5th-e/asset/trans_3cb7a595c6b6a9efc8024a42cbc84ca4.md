@@ -1,0 +1,236 @@
+
+```cpp
+int main()
+{
+    try                                                   //Line 1
+    {
+        doDivision();                                     //Line 2
+    }
+    catch (divisionByZero divByZeroObj)                   //Line 3
+    {
+        cout << "Line 4: In main: "
+             << divByZeroObj.what() << endl;              //Line 4
+    }
+
+    return 0;                                             //Line 5
+}
+
+void doDivision() throw (divisionByZero)
+{
+    int dividend, divisor, quotient;
+
+    try
+    {
+        cout << "Line 8: Enter the dividend: ";           //Line 8
+        cin >> dividend;                                  //Line 9
+        cout << endl;                                     //Line 10
+
+        cout << "Line 11: Enter the divisor: ";           //Line 11
+        cin >> divisor;                                   //Line 12
+        cout << endl;                                     //Line 13
+
+        if (divisor == 0)                                 //Line 14
+            throw divisionByZero("Found division by 0!"); //Line 15
+
+        quotient = dividend / divisor;                    //Line 16
+        cout << "Line 17: Quotient = " << quotient
+             << endl;                                     //Line 17
+    }
+    catch (divisionByZero)                                //Line 18
+    {
+        throw;                                            //Line 19
+    }
+}
+```
+
+**示例运行 1：** 在此示例运行中，用户输入以阴影显示。
+
+```text
+Line 8: Enter the dividend: 34
+
+Line 11: Enter the divisor: 5
+
+Line 17: Quotient = 6
+```
+
+**示例运行 2：** 在此示例运行中，用户输入以阴影显示。
+
+```text
+Line 8: Enter the dividend: 56
+
+Line 11: Enter the divisor: 0
+
+Line 4: In main: Found division by 0!
+```
+
+在这个程序中，如果 divisor 的值为 0，则第 15 行的语句会抛出一个 `divisionByZero` 类型的异常，它是该类的一个匿名对象，其消息字符串为：
+
+"Found division by 0!"
+
+`catch` 块中第 19 行的语句抛出相同的异常值，在这里是一个对象。
+
+在示例运行 1 中，没有抛出异常。
+
+让我们看看示例运行 2 中发生了什么。函数 `main` 在 `try` 块中调用函数 `doDivision`。在函数 `doDivision` 中，divisor 的值为 0，因此第 15 行的语句抛出异常。该异常由第 18 行的 `catch` 块捕获。第 19 行的语句重新抛出同一异常。换句话说，`catch` 块捕获并重新抛出同一异常。因此，第 2 行的函数调用语句会导致抛出异常。该异常由第 3 行的 `catch` 块捕获并处理。
+
+## 示例 15-15
+
+```cpp
+// Handling exception, in the main function, thrown by another
+// function. The function throws a different exception object.
+
+#include <iostream>
+#include "divisionByZero.h"
+
+using namespace std;
+
+void doDivision() throw (divisionByZero);
+
+int main()
+{
+    try                                      //Line 1
+    {
+        doDivision();                        //Line 2
+    }
+    catch (divisionByZero divByZeroObj)      //Line 3
+    {
+        cout << "Line 4: In main: "
+             << divByZeroObj.what() << endl; //Line 4
+    }
+
+    return 0;                                //Line 5
+}
+
+void doDivision() throw (divisionByZero)
+{
+    int dividend, divisor, quotient;                    //Line 6
+    try                                             //Line 7
+    {
+        cout << "Line 8: Enter the dividend: ";       //Line 8
+        cin >> dividend;                              //Line 9
+        cout << endl;                                 //Line 10
+
+        cout << "Line 11: Enter the divisor: ";      //Line 11
+        cin >> divisor;                               //Line 12
+        cout << endl;                                 //Line 13
+
+        if (divisor == 0)                             //Line 14
+            throw divisionByZero();                   //Line 15
+
+        quotient = dividend / divisor;                //Line 16
+        cout << "Line 17: Quotient = " << quotient
+             << endl;                                 //Line 17
+    }
+    catch (divisionByZero)                            //Line 18
+    {
+        throw divisionByZero("Division by zero found!"); //Line 19
+    }
+}
+```
+
+**示例运行 1：** 在此示例运行中，用户输入以阴影显示。
+
+```text
+Line 8: Enter the dividend: 34
+
+Line 11: Enter the divisor: 5
+
+Line 17: Quotient = 6
+```
+
+**示例运行 2：** 在此示例运行中，用户输入以阴影显示。
+
+```text
+Line 8: Enter the dividend: 56
+
+Line 11: Enter the divisor: 0
+
+Line 4: In main: Division by zero found!
+```
+
+本程序的工作方式与示例 15-14 中的程序相同。唯一的区别在于，这里的第 18 行 `catch` 块重新抛出一个不同的异常值，即一个对象。
+
+示例 15-14 和 15-15 中的程序说明了函数如何重新抛出同一异常，或抛出另一个异常供调用函数处理。这种机制非常有用，因为它允许程序在一个位置处理所有异常，而不是将异常处理代码分散到整个程序中。
+
+## 异常处理技术
+
+当程序中发生异常时，程序员通常有三种选择：终止程序、在程序中加入代码以从异常中恢复，或者记录错误并继续。以下各节讨论这些情况。
+
+### 终止程序
+
+在某些情况下，当发生异常时，最好让程序终止。假设你编写了一个从文件输入数据的程序。如果程序执行时输入文件不存在，那么继续执行程序就没有意义。在这种情况下，程序可以输出适当的错误消息并终止。
+
+### 修复错误并继续
+
+在其他情况下，你会希望处理异常并让程序继续运行。假设你有一个接收整数输入的程序。如果用户输入一个字母而不是数字，输入流将进入失败状态。在这种情况下，你可以加入必要的代码，持续提示用户输入数字，直到输入有效。示例 15-16 中的程序说明了这种情况。
+
+## 示例 15-16
+
+```cpp
+// Handle exceptions by fixing the errors. The program continues to
+// prompt the user until a valid input is entered.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int number;                              //Line 1
+    bool done = false;                       //Line 2
+
+    string str =
+        "The input stream is in the fail state."; //Line 3
+
+    do                                       //Line 4
+    {                                        //Line 5
+        try                                  //Line 6
+        {                                    //Line 7
+            cout << "Line 8: Enter an integer"; //Line 8
+            cin >> number;                   //Line 9
+            cout << endl;                    // Line 10
+
+            if (!cin)                        // Line 11
+                throw str;                   // Line 12
+
+            done = true;                     // Line 13
+            cout << "Line 14: Number = " << number // Line 14
+                 << endl;                    // Line 15
+        }                                    // Line 16
+        catch (string messageStr)            // Line 17
+        {
+            cout << "Line 18: " << messageStr // Line 18
+                 << endl;
+            cout << "Line 19: Restoring the " // Line 19
+                 << "input stream." << endl;  // Line 20
+            cin.clear();                      // Line 21
+            cin.ignore(100, '\n');            // Line 22
+        }
+    } while (!done);                          // Line 23
+
+    return 0;                                 // Line 24
+}
+```
+
+**示例运行：** 在此示例运行中，用户输入以阴影显示。
+
+```text
+Line 8: Enter an integer: 5
+
+Line 18: The input stream is in the fail state.
+Line 19: Restoring the input stream.
+Line 8: Enter an integer: 45
+
+Line 18: The input stream is in the fail state.
+Line 19: Restoring the input stream.
+Line 8: Enter an integer: hw3
+
+Line 18: The input stream is in the fail state.
+Line 19: Restoring the input stream.
+Line 8: Enter an integer: 48
+
+Line 14: Number = 48
+```
+
+该程序提示用户输入一个整数。如果输入无效，标准输入流会进入失败状态。在 `try` 块中，第 12 行的语句抛出一个异常，该异常是一个 string 对象。控制权转移到 `catch` 块，异常被捕获并处理。第 21 行的语句将输入流恢复到良好状态，第 22 行的语句清除该行剩余的输入。`do...while` 循环继续提示用户，直到用户输入有效数字。

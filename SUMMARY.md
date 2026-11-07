@@ -552,6 +552,7 @@
 +   [C 语言编程高级指南：第六版 2014](docs/c-programming-professional-sixth-edition-2014/README.md)
 +   [C 编程入门指南：第六版（2014）](docs/c-programming-professional-sixth-edition-2014-for-beginners/README.md)
 +   [C++ 编程：包含数据结构的程序设计](docs/c-programming-program-design-including-data-structures/README.md)
++   [C++ 编程：包含数据结构的程序设计（第 5 版）](docs/c-programming-program-design-including-data-structures-5th-e/README.md)
 +   [C++ 编程：程序设计与数据结构，第 6 版](docs/c-programming-program-design-including-data-structures-6th-e/README.md)
 +   [C++ 编程：包含数据结构的程序设计（MindTap 课程列表）](docs/c-programming-program-design-including-data-structures-mindt/README.md)
 +   [C# 编程：快速学习 C# 编程](docs/c-programming-quickly-learn-c-programming/README.md)

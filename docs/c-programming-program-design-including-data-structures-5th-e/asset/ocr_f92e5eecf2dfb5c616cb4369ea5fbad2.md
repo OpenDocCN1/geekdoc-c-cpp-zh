@@ -1,0 +1,21 @@
+figure, such as E-1, to find the binary representation of a nonnegative integer, typically, we show only the quotients and remainders as in Figure E-1(b). You can write the binary representation of the number starting with the last remainder in the third column, followed by the second last remainder, and so on. Thus:
+
+$6510 = 1000001_2$.
+
+Next, consider the number 711. Figure E-2 shows the quotients and the remainders.
+
+![](bbox=[0.204, 0.264, 0.889, 0.602])
+
+**FIGURE E-2**  Determining the binary representation of 711
+
+From Figure E-2, it follows that:
+
+$711_{10} = 101100011_2$.
+
+# Converting a Binary Number (Base 2) to Base 10
+
+To convert a number from base 2 to base 10, we first find the weight of each bit in the binary number. The weight of each bit in the binary number is assigned from right to left. The weight of the rightmost bit is 0. The weight of the bit immediately to the left of the rightmost bit is 1, the weight of the bit immediately to the left of it is 2, and so on. Consider the binary number 1001101. The weight of each bit is as follows:
+
+| weight | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+|  | 1 | 0 | 0 | 1 | 1 | 0 | 1 |

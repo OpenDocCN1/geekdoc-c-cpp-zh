@@ -1,0 +1,51 @@
+```
+```cpp
+noOfGuesses++;
+if (guess == num)
+{
+    cout << "Winner!. You guessed the correct number."
+         << endl;
+    isGuessed = true;
+}
+else if (guess < num)
+    cout << "Your guess is lower than the number.\\n"
+         << "Guess again!" << endl;
+else
+    cout << "Your guess is higher than the number.\\n"
+         << "Guess again!" << endl;
+}//end while
+```
+```
+
+You also need the following code to be included after the **while** loop in case the user cannot guess the correct number in five tries.
+
+```
+```cpp
+if (!isGuessed)
+    cout << "You lose! The correct number is " << num << endl;
+```
+```
+
+Programming Exercise 16 at the end of this chapter asks you to write a complete C++ program to implement the Number Guessing Game in which the user has, at most, five tries to guess the number.
+
+As you can see from the preceding **while** loop, the expression in a **while** statement can be complex. The main objective of a **while** loop is to repeat certain statement(s) until certain conditions are met.
+
+# PROGRAMMING EXAMPLE: Fibonacci Number
+
+So far, you have seen several examples of loops. Recall that in C++, **while** loops are used when a certain statement(s) must be executed repeatedly until certain conditions are met. Following is a C++ program that uses a **while** loop to find a **Fibonacci number**.
+
+Consider the following sequence of numbers:
+
+1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+Given the first two numbers of the sequence (say, $a_1$ and $a_2$), the $n$th number $a_n$, $n \ge 3$, of this sequence is given by:
+
+$$a_n = a_{n-1} + a_{n-2}$$
+
+Thus:
+
+$a_3 = a_2 + a_1 = 1 + 1 = 2,$
+
+$a_4 = a_3 + a_2 = 2 + 1 = 3,$
+
+and so on.

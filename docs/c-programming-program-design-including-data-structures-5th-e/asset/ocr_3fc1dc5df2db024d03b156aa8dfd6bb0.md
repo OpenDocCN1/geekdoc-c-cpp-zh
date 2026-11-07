@@ -1,0 +1,59 @@
+Example 13–4 illustrates how pointers work with class member functions.
+
+# EXAMPLE 13-4
+
+Consider the following class:
+
+```
+class classExample
+{
+public:
+    void setX(int a);
+        //Function to set the value of x
+        //Postcondition: x = a;
+    void print() const;
+        //Function to output the value of x
+
+private:
+    int x;
+};
+```
+
+The definition of the member function is as follows:
+
+```
+void classExample::setX(int a)
+{
+    x = a;
+}
+
+void classExample::print() const
+{
+    cout << "x = " << x << endl;
+}
+```
+
+Consider the following function main:
+
+```
+int main()
+{
+    classExample *cExpPtr;       //Line 1
+    classExample cExpObject;     //Line 2
+
+    cExpPtr = &cExpObject;        //Line 3
+
+    cExpPtr->setX(5);             //Line 4
+    cExpPtr->print();             //Line 5
+
+    return 0;
+}
+```
+
+# Sample Run:
+
+```
+x = 5
+```
+
+In the function main, the statement in Line 1 declares cExpPtr to be a pointer of type classExample, and the statement in Line 2 declares cExpObject to be an object of type classExample. The statement in Line 3 stores the address of cExpObject into cExpPtr (see Figure 13–3).

@@ -1,0 +1,51 @@
+```
+```cpp
+~newString();
+    //Destructor
+char & operator[] (int);
+const char &operator[](int) const;
+
+    //Overload the relational operators
+bool operator==(const newString&) const;
+bool operator!=(const newString&) const;
+bool operator<(const newString&) const;
+bool operator<=(const newString&) const;
+bool operator>(const newString&) const;
+bool operator>=(const newString&) const;
+
+private:
+    char *strPtr;      //pointer to the char array
+                       //that holds the string
+    int strLength;     //variable to store the length
+                       //of the string
+};
+
+#endif
+```
+```
+
+The **class** newString has two private member variables: one to store the C-string and one to store the length of the C-string.
+
+Next, we give the definitions of the functions to implement the newString operations. The implementation file includes the header file `cassert` because we are using the function assert. (For an explanation of the function assert, see Chapter 4 or the header file `cassert` in the Appendix.)
+
+```
+```cpp
+//Implementation file myStringImp.cpp
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+#include <cassert>
+#include "myString.h"
+
+using namespace std;
+
+    //Constructor: conversion from the char string to newString
+newString::newString(const char *str)
+{
+    strLength = strlen(str);
+    strPtr = new char[strLength + 1]; //allocate memory to
+                                      //store the char string
+    strcpy(strPtr, str);              //copy string into strPtr
+}
+```
+```

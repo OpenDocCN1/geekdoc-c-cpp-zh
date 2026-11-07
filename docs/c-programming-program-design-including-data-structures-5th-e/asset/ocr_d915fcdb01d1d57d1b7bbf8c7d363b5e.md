@@ -1,0 +1,64 @@
+The general syntax for accessing a namespace member is:
+
+```
+namespace_name::identifier
+```
+
+Recall that in C++, `::` is called the scope resolution operator.
+
+To access the member `RATE` of the namespace `globalType`, the following statement is required:
+
+```
+globalType::RATE
+```
+
+To access the member `printResult` (which is a function), the following statement is required:
+
+```
+globalType::printResult();
+```
+
+Thus, to access a member of a namespace, you use the `namespace_name`, followed by the scope resolution operator, followed by the member name.
+
+To simplify the accessing of a namespace member, ANSI/ISO Standard C++ provides the use of the statement `using`. The syntax to use the statement `using` is as follows:
+
++   a. To simplify the accessing of all namespace members:
+
+```
+using namespace namespace_name;
+```
+
++   b. To simplify the accessing of a specific namespace member:
+
+```
+using namespace_name::identifier;
+```
+
+For example, the `using` statement:
+
+```
+using namespace globalType;
+```
+
+simplifies the accessing of all members of the namespace `globalType`. The statement:
+
+```
+using globalType::RATE;
+```
+
+simplifies the accessing of the member `RATE` of the namespace `globalType`.
+
+In C++, `using` is a reserved word.
+
+You typically put the `using` statement after the namespace declaration. For the namespace `globalType`, for example, you usually write the code as follows:
+
+```
+namespace globalType
+{
+    const int N = 10;
+    const double RATE = 7.50;
+    int count = 0;
+    void printResult();
+}
+using namespace globalType;
+```

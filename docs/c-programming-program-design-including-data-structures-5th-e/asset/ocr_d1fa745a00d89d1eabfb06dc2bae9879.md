@@ -1,0 +1,47 @@
+# The copy Algorithm
+
+Example 22-4 used a `for` loop to output the elements of a vector container. The STL provides a convenient way to output the elements of a container with the help of the function copy. The function copy is provided as a part of the generic algorithm and can be used with any container type. Because we frequently need to output the elements of a container, before continuing with our discussion of containers, let us describe this function.
+
+The function copy does more than output the elements of a container. In general, it allows us to copy the elements from one place to another. For example, to output the elements of a vector or to copy the elements of a vector into another vector, we can use the function copy. The prototype of the function template copy is:
+
+```
+template <class inputIterator, class outputIterator>
+outputIterator copy(inputIterator first, inputIterator last,
+                     outputIterator first2);
+```
+
+The parameter `first1` specifies the position from which to begin copying the elements; the parameter `last` specifies the end position. The parameter `first2` specifies where to copy the elements. Therefore, the parameters `first1` and `last` specify the source; parameter `first2` specifies the destination.
+
+Note that the elements within the range `first1...last-1` are copied.
+
+The definition of the function template copy is contained in the header file algorithm. Thus, to use the function copy, the program must include the statement:
+
+```
+#include <algorithm>
+```
+
+The function copy works as follows. Consider the following statement:
+
+```
+int intArray[] = {5, 6, 8, 3, 40, 36, 98, 29, 75};
+```
+
+This statement creates an array `intArray` of nine components. Here `intArray[0] = 5`, `intArray[1] = 6`, and so on.
+
+The statement:
+
+```
+vector<int> vecList(9);
+```
+
+creates an empty container of nine components of type vector and the element type `int`.
+
+Recall that the array name, `intArray`, is actually a pointer and contains the base address of the array. Therefore, `intArray` points to the first component of the array, `intArray + 1` points to the second component of the array, and so on.
+
+Now consider the statement:
+
+```
+copy(intArray, intArray + 9, vecList.begin());
+```
+
+This statement copies the elements starting at the location `intArray`, which is the first component of the array `intArray`, until `intArray + 9 - 1` (that is, `intArray + 8`).

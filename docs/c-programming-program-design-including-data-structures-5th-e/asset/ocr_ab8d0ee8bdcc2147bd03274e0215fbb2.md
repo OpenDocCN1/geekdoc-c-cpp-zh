@@ -1,0 +1,24 @@
+**base classes**. The derived classes inherit the properties of the base classes. So rather than create completely new classes from scratch, we can take advantage of inheritance and reduce software complexity.
+
+Each derived class, in turn, becomes a base class for a future derived class. Inheritance can be either single inheritance or multiple inheritance. In **single inheritance**, the derived class is derived from a single base class; in **multiple inheritance**, the derived class is derived from more than one base class. This chapter concentrates on single inheritance.
+
+Inheritance can be viewed as a tree-like, or hierarchical, structure wherein a base class is shown with its derived classes. Consider the tree diagram shown in *Figure 12-1*.
+
+![](bbox=[0.201, 0.331, 0.886, 0.519])
+
+FIGURE 12-1  Inheritance hierarchy
+
+In this diagram, **shape** is the base class. The classes **circle** and **rectangle** are derived from **shape**, and the class **square** is derived from **rectangle**. Every **circle** and every **rectangle** is a **shape**. Every **square** is a **rectangle**.
+
+The general syntax of a derived class is:
+
+```
+```
+class className: memberAccessSpecifier baseClassName
+{
+    member list
+};
+```
+```
+
+in which **memberAccessSpecifier** is public, protected, or private. When no **memberAccessSpecifier** is specified, it is assumed to be a private inheritance. (We discuss protected inheritance later in this chapter.)

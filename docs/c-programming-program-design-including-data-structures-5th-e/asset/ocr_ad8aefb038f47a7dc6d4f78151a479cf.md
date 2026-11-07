@@ -1,0 +1,21 @@
+![](bbox=[0.204, 0.107, 0.885, 0.191])
+
+**FIGURE 19-1** List of length 12
+
+Suppose that we want to determine whether 75 is in the list. Initially, the entire list is the search list (see Figure 19-2).
+
+![](bbox=[0.204, 0.298, 0.885, 0.435])
+
+**FIGURE 19-2** Search list, list[0]...list[11]
+
+First, we compare 75 with the middle element in this list, list[5] (which is 39). Because 75 ≠ list[5] and 75 > list[5], we then restrict our search to the list list[6]...list[11], as shown in Figure 19-3.
+
+![](bbox=[0.204, 0.575, 0.885, 0.679])
+
+**FIGURE 19-3** Search list, list[6]...list[11]
+
+This process is now repeated on the list list[6]...list[11], which is a list of length = 6.
+
+Because we need to determine the middle element of the list frequently, the binary search algorithm is typically implemented for array-based lists. To determine the middle element of the list, we add the starting index, first, and the ending index, last, of the search list and then divide by 2 to calculate its index. That is:
+
+$$\text{mid} = \frac{\text{first} + \text{last}}{2}$$

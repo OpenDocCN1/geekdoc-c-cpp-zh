@@ -1,0 +1,68 @@
+```
+```cpp
+else
+    cout << "x = " << x << endl;
+    cin >> x;
+}
+
+cout << "Stack Elements: ";
+
+while (!stack.isEmptyStack())
+{
+    cout << " " << stack.top();
+    stack.pop();
+}
+cout << endl;
+```
+```
+
+5. Evaluate the following postfix expressions:
+
++   a. `8 2 + 3 * 16 4 / - =`
++   
++   b. `12 25 5 1 / / * 8 7 + =`
++   
++   c. `70 14 4 5 15 3 / * - - / 6 + =`
++   
++   d. `3 5 6 * + 13 − 18 2 / + =`
+
+6. Convert the following infix expressions to postfix notations.
+
++   a. `(A + B) * (C + D) − E`
++   
++   b. `A − (B + C) * D + E / F`
++   
++   c. `((A + B) / (C − D) + E) * F − G`
++   
++   d. `A + B * (C + D) − E / F * G + H`
+
+7. Write the equivalent infix expression for the following postfix expressions.
+
++   a. `A B * C +`
++   
++   b. `A B + C D − *`
++   
++   c. `A B − C − D *`
+
+8. What is the output of the following program?
+
+```
+```cpp
+#include <iostream>
+#include <string>
+#include "myStack.h"
+
+using namespace std;
+
+template <class type>
+void mystery(stackType<type> & s, stackType<type> & t);
+
+int main()
+{
+    stackType<string> s1;
+    stackType<string> s2;
+
+    string list[] = {"Winter", "Spring", "Summer", "Fall",
+                     "Cold", "Warm", "Hot"};
+```
+```

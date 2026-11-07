@@ -1,0 +1,227 @@
+
+```cpp
+      cout << "Line 6: sentence.length() = "
+           << static_cast<int>(sentence.length())
+           << endl;                       //Line 6
+
+      str1 = sentence.substr(8, 20);      //Line 7
+      cout << "Line 8: str1 = " << str1
+           << endl;                       //Line 8
+
+      str2 = sentence.substr(28, 10);     //Line 9
+      cout << "Line 10: str2 = " << str2
+           << endl;                       //Line 10
+
+      str3 = "Exception handling. " + sentence;
+      cout << "Line 12: str3 = " << str3
+           << endl;                       //Line 12
+
+   }
+   catch (out_of_range re)                //Line 13
+   {
+      cout << "Line 14: In the out of range "
+           << "catch block: " << re.what()
+           << endl;                       //Line 14
+   }
+   catch (length_error le)                //Line 15
+   {
+      cout << "Line 16: In the length_error "
+           << "catch block: " << le.what()
+           << endl;                       //Line 16
+   }
+
+   return 0;                              //Line 17
+}
+```
+
+**Sample Run:**
+
+```text
+Line 5: sentence = Testing string exceptions!
+Line 6: sentence.length() = 26
+Line 8: str1 = string exceptions!
+Line 14: In the out of range catch block: invalid string position
+```
+
+In this program, the statement in Line 7 uses the function `substr` to determine a substring in the `string` object `sentence`. The length of the string `sentence` is 26. Because the starting position of the substring is 8, which is less than 26, no exception is thrown. However, in the statement in Line 9, the starting position of the substring is 28, which is greater than 26 (the length of `sentence`). Therefore, the function `substr` throws an `out_of_range` exception, which is caught and processed by the `catch` block in Line 13. Notice that in the statement in Line 14, the object `re` uses the function `what` to return the error message, `invalid string position`.
+
+The program in Example 15-9 illustrates how to handle the exception `bad_alloc` thrown by the operator `new`.
+
+### EXAMPLE 15-9
+
+```cpp
+// Handling bad_alloc exception thrown by the operator new.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int *list[100];                         //Line 1
+
+    try                                      //Line 2
+    {
+        for (int i = 0; i < 100; i++)       //Line 3
+        {
+            list[i] = new int[50000000];    //Line 4
+            cout << "Line 4: Created list[" << i
+                 << "] of 50000000 components."
+                 << endl;                   //Line 5
+        }
+    }
+    catch (bad_alloc be)                    //Line 6
+    {
+        cout << "Line 7: In the bad_alloc catch "
+             << "block: " << be.what() << "."
+             << endl;                       //Line 7
+    }
+
+    return 0;                               //Line 8
+}
+```
+
+**Sample Run:**
+
+```text
+Line 4: Created list[0] of 50000000 components.
+Line 4: Created list[1] of 50000000 components.
+Line 4: Created list[2] of 50000000 components.
+Line 4: Created list[3] of 50000000 components.
+Line 4: Created list[4] of 50000000 components.
+Line 4: Created list[5] of 50000000 components.
+Line 4: Created list[6] of 50000000 components.
+Line 4: Created list[7] of 50000000 components.
+Line 7: In the bad_alloc catch block: bad allocation.
+```
+
+The preceding program works as follows. The statement in Line 1 declares list to be an array of 100 pointers. The body of the for loop in Line 3 is designed to execute 100 times. For each iteration of the for loop, the statement in Line 4 uses the operator new to allocate an array of 50000000 components of type int. As shown in the sample run, the operator new is able to create eight arrays of 50000000 components each. In the ninth iteration, the operator new is unable to create the array and throws a bad_alloc exception. This exception is caught and processed by the catch block in Line 6. Notice that the expression be.what() returns the string bad allocation. (Moreover, the string returned by be.what() is IDE dependent. Some IDEs might return the string bad alloc.) After the statement in Line 7 executes, control exits the try/catch block, and the statement in Line 8 terminates the program.
+
+## Creating Your Own Exception Classes
+
+Whenever you create your own classes or write programs, exceptions are likely to occur. As you have seen, C++ provides numerous exception classes to deal with these situations. However, it does not provide all of the exception classes you will ever need. Therefore, C++ enables programmers to create their own exception classes to handle both the exceptions not covered by C++'s exception classes and their own exceptions. This section describes how to create your own exception classes.
+
+C++ uses the same mechanism to process the exceptions that you define as it uses for built-in exceptions. However, you must throw your own exceptions using the throw statement.
+
+In C++, any class can be considered an exception class. Therefore, an exception class is simply a class. It need not be inherited from the class exception. What makes a class an exception is how you use it.
+
+The exception class that you define can be very simple in the sense that it does not contain any members. For example, the following code can be considered an exception class.
+
+```cpp
+class dummyExceptionClass
+{
+};
+```
+
+The program in Example 15-10 uses a user-defined class (with no members) to throw an exception.
+
+### EXAMPLE 15-10
+
+```cpp
+// Using a user-defined exception class.
+
+#include <iostream>
+
+using namespace std;
+
+class divByZero
+{};
+
+int main()
+{
+    int dividend, divisor, quotient;                //Line 1
+
+    try                                      //Line 2
+    {
+        cout << "Line 3: Enter the dividend: ";       //Line 3
+        cin >> dividend;                                //Line 4
+        cout << endl;                                    //Line 5
+
+        cout << "Line 6: Enter the divisor: ";         //Line 6
+        cin >> divisor;                                 //Line 7
+        cout << endl;                                   //Line 8
+
+        if (divisor == 0)                               //Line 9
+            throw divByZero();                           //Line 10
+
+        quotient = dividend / divisor;                  //Line 11
+        cout << "Line 12: Quotient = " << quotient     //Line 12
+             << endl;
+    }
+    catch (divByZero)                                  //Line 13
+    {
+        cout << "Line 14: Division by zero!"          //Line 14
+             << endl;
+    }
+
+    return 0;                                           //Line 15
+}
+```
+
+**Sample Run 1:** In this sample run, the user input is shaded.
+
+Line 3: Enter the dividend: **34**
+
+Line 6: Enter the divisor: **5**
+
+Line 12: Quotient = 6
+
+**Sample Run 2:** In this sample run, the user input is shaded.
+
+Line 3: Enter the dividend: **56**
+
+Line 6: Enter the divisor: **0**
+
+Line 14: Division by zero!
+
+The preceding program works as follows. If the user enters 0 for the divisor, the statement in Line 10 throws an anonymous object of the class divByZero. The class divByZero has no members, so we cannot really do anything with the thrown object. Therefore, in the catch block in Line 13, we specify only the data type name without the parameter name. The statement in Line 14 outputs the appropriate error message.
+
+Let us again consider the statement throw divByZero(); in Line 10. Notice that in this statement, divByZero is the name of the class, the expression divByZero() creates an anonymous object of this class, and the throw statement throws the object.
+
+The exception class divByZero designed and used in Example 15-10 has no members. Next, we illustrate how to create exception classes with members.
+
+If you want to include members in your exception class, you typically include constructors and the function what. Consider the following definition of the class divisionByZero.
+
+```cpp
+// User-defined exception class.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class divisionByZero                                    //Line 1
+{                                                       //Line 2
+public:                                                 //Line 3
+    divisionByZero()                                    //Line 4
+    {                                                   //Line 5
+        message = "Division by zero";                   //Line 6
+    }                                                   //Line 7
+
+    divisionByZero(string str)                          //Line 8
+    {                                                   //Line 9
+        message = str;                                  //Line 10
+    }                                                   //Line 11
+
+    string what()                                       //Line 12
+    {                                                   //Line 13
+        return message;                                 //Line 14
+    }                                                   //Line 15
+
+private:                                                //Line 16
+    string message;                                     //Line 17
+};
+```
+
+The definition of the class divisionByZero contains two constructors: the default constructor and the constructor with parameters. The default constructor stores the string "Division by zero" in an object. The constructor with parameters allows users to create their own error messages. The function what is used to return the string stored in the object.
+
+> NOTE
+> 
+> In the definition of the class divisionByZero, the constructors can also be written as:
+> 
+> ```cpp
+> divisionByZero() : message("Division by zero"){}
+> divisionByZero(string str) : message(str){}
+> ```
+
+The program in Example 15-11 uses the preceding class to throw an exception.

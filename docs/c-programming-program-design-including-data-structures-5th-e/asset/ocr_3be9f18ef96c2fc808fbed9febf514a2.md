@@ -1,0 +1,67 @@
+# EXAMPLE 2-23
+
+Consider the following C++ statements:
+
+```
+cout << "Hello there.\nMy name is James.";
+```
+
+or:
+
+```
+cout << "Hello there.";
+cout << "\nMy name is James.";
+```
+
+or:
+
+```
+cout << "Hello there.";
+cout << endl << "My name is James.";
+```
+
+In each case, the output of the statements is:
+
+```
+Hello there.
+My name is James.
+```
+
+# EXAMPLE 2-24
+
+The output of the C++ statements:
+
+```
+cout << "Count...\n.....1\n.....2\n......3";
+```
+
+or:
+
+```
+cout << "Count..." << endl << ".....1" << endl
+     << ".....2" << endl << "......3";
+```
+
+is:
+
+```
+Count...
+.....1
+.....2
+......3
+```
+
+# EXAMPLE 2-25
+
+Suppose that you want to output the following sentence in one line as part of a message:
+
+It is sunny, warm, and not a windy day. We can go golfing.
+
+Obviously, you will use an output statement to produce this output. However, in the
+programming code, this statement may not fit in one line as part of the output statement.
+Of course, you can use multiple output statements as follows:
+
+```
+cout << "It is sunny, warm, and not a windy day. ";
+cout << "We can go golfing." << endl;
+```

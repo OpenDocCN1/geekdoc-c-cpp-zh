@@ -1,0 +1,52 @@
++   22.
++      a. Write a statement that declares `sales` to be a pointer to a pointer of type `double`.
++      b. Write a C++ code that dynamically creates a two-dimensional array of five rows and seven columns and `sales` contains the base address of that array.
++      c. Write a C++ code that inputs data from the standard input device into the array `sales`.
++      d. Write a C++ code that deallocates the memory space occupied by the two-dimensional array to which `sales` points.
+
++   23. What is the purpose of a copy constructor?
++   24. Name two situations in which a copy constructor executes.
++   25. Name three things that you should do for classes with pointer member variables.
+
+26. Suppose that you have the following classes, `classA` and `classB`:
+
+```
+class classA
+{
+public:
+    virtual void print() const;
+    void doubleNum();
+    classA(int a = 0);
+
+private:
+    int x;
+};
+
+void classA::print() const
+{
+    cout << "ClassA x: " << x << endl;
+}
+
+void classA::doubleNum()
+{
+    x = 2 * x;
+}
+
+classA::classA(int a)
+{
+    x = a;
+}
+
+class classB: public classA
+{
+public:
+    void print() const;
+    void doubleNum();
+    classB(int a = 0, int b = 0);
+
+private:
+    int y;
+};
+
+void classB::print() const
+```

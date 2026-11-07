@@ -1,0 +1,46 @@
+# # Templates
+
+Templates are a very powerful feature of C++. They allow you to write a single class segment for a set of related functions, called a **function template**, and for a set of related classes, called a **class template**. The syntax we use for templates is:
+
+```
+```cpp
+template <class Type>
+declaration;
+```
+```
+
+in which **Type** is the name of a data type, built-in or user-defined, and **declaration** is either a function declaration or a class declaration. In C++, **template** is a reserved word. The word **class** in the heading refers to any user-defined type or built-in type. **Type** is referred to as a formal parameter to the template. (Note that in the first line, `template <class Type>`, the keyword **class** can be replaced with the keyword **typename**.)
+
+Similar to variables being parameters to functions, types (that is, data types) are parameters to templates.
+
+# ## Function Templates
+
+In Chapter 7, when we introduced function overloading, the function `larger` was overloaded to find the larger of two integers, characters, floating-point numbers, or strings. To implement the function `larger`, we need to write four function definitions for the data type: one for `int`, one for `char`, one for `double`, and one for `string`. However, the body of each function is similar. C++ simplifies the process of overloading functions by providing function templates.
+
+The syntax of the function template is:
+
+```
+```cpp
+template <class Type>
+function definition;
+```
+```
+
+in which **Type** is referred to as a formal parameter of the template. It is used to specify the type of parameters to the function and the return type of the function and to declare variables within the function.
+
+The statements:
+
+```
+```cpp
+template <class Type>
+Type larger(Type x, Type y)
+{
+    if (x >= y)
+        return x;
+    else
+        return y;
+}
+```
+```
+
+define a function template `larger`, which returns the larger of two items. In the function heading, the type of the formal parameters **x** and **y** is **Type**, which will be specified by the type of the actual parameters when the function is called. The statement:

@@ -1,0 +1,53 @@
+# Invoking a Constructor
+
+Recall that when a class object is declared, a constructor is automatically executed. Because a class might have more than one constructor, including the default constructor, next we discuss how to invoke a specific constructor.
+
+# Invoking the Default Constructor
+
+Suppose that a class contains the default constructor. The syntax to invoke the default constructor is:
+
+```
+```cpp
+className classObjectName;
+```
+```
+
+For example, the statement:
+
+```
+```cpp
+clockType yourClock;
+```
+```
+
+declares yourClock to be an object of type clockType. In this case, the default constructor executes, and the member variables of yourClock are initialized to 0.
+
+> > **NOTE**  
+> > If you declare an object and want the default constructor to be executed, the empty parentheses after the object name are not required in the object declaration statement. In fact, if you accidentally include the empty parentheses, the compiler generates a syntax error message. For example, the following statement to declare the object yourClock is illegal:
+> >
+> > `clockType yourClock();`  //illegal object declaration
+
+# Invoking a Constructor with Parameters
+
+Suppose a class contains constructors with parameters. The syntax to invoke a constructor with a parameter is:
+
+```
+```cpp
+className classObjectName(argument1, argument2, ...);
+```
+```
+
+in which argument1, argument2, and so on are either a variable or an expression.
+
+Note the following:
+
++   - The number of arguments and their type should match the formal parameters (in the order given) of one of the constructors.
++   - If the type of the arguments does not match the formal parameters of any constructor (in the order given), C++ uses type conversion and looks for the best match. For example, an integer value might be converted to a floating-point value with a zero decimal part. Any ambiguity will result in a compile-time error.
+
+Consider the statement:
+
+```
+```cpp
+clockType myClock(5, 12, 40);
+```
+```

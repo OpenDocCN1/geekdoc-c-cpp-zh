@@ -1,0 +1,34 @@
+This error message indicates that the assertion of denominator failed. The error message also gives the name of the file containing the source code and the line number where the assertion failed.
+
+You can also rewrite statement 2 using an assertion statement as follows:
+
+```
+assert (hours > 0 && (0 < rate && rate <= 15.50));
+if (hours > 0 && (0 < rate && rate <= 15.50))
+    wages = rate * hours;
+```
+
+If the expression in the assert statement fails, the program terminates with an error message similar to the following:
+
+```
+Assertion failed: hours > 0 && (0 < rate && rate <= 15.50), file
+c:\temp\assertion\assertion.cpp, line 26
+```
+
+During program development and testing, the assert statement is very useful for enforcing programming constraints. As you can see, the assert statement not only halts the program, but also identifies the expression where the assertion failed, the name of the file containing the source code, and the line number where the assertion failed.
+
+Although assert statements are useful during program development, after a program has been developed and put into use, if an assert statement fails for some reason, an end user would have no idea what the error means. Therefore, after you have developed and tested a program, you might want to remove or disable the assert statements. In a very large program, it could be tedious, and perhaps impossible, to remove all of the assert statements that you used during development. In addition, if you plan to modify a program in the future, you might like to keep the assert statements. Therefore, the logical choice is to keep these statements but to disable them. You can disable assert statements by using the following preprocessor directive:
+
+```
+#define NDEBUG
+```
+
+This preprocessor directive #define NDEBUG must be placed before the directive #include <cassert>.
+
+# PROGRAMMING EXAMPLE: Cable Company Billing
+
+This programming example demonstrates a program that calculates a customer’s bill for a local cable company. There are two types of customers: residential and business. There are two rates for calculating a cable bill: one for residential customers and one for business customers. For residential customers, the following rates apply:
+
++   - Bill processing fee: $4.50
++   - Basic service fee: $20.50
++   - Premium channels: $7.50 per channel.

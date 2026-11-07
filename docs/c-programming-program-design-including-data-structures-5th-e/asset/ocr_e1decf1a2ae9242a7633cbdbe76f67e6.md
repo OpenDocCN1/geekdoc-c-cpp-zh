@@ -1,0 +1,54 @@
+# ### EXAMPLE 4-21
+
+Consider the following statements, in which *grade* is a variable of type char.
+
+```
+````cpp
+switch (grade)
+{
+case 'A':
+    cout << "The grade point is 4.0.";
+    break;
+case 'B':
+    cout << "The grade point is 3.0.";
+    break;
+case 'C':
+    cout << "The grade point is 2.0.";
+    break;
+case 'D':
+    cout << "The grade point is 1.0.";
+    break;
+case 'F':
+    cout << "The grade point is 0.0.";
+    break;
+default:
+    cout << "The grade is invalid.";
+}
+````
+```
+
+In this example, the expression in the switch statement is a variable identifier. The variable *grade* is of type char, which is an integral type. The possible values of *grade* are 'A', 'B', 'C', 'D', and 'F'. Each case label specifies a different action to take, depending on the value of *grade*. If the value of *grade* is 'A', the output is:
+
+The grade point is 4.0.
+
+# ### EXAMPLE 4-22
+
+The following program illustrates the effect of the *break* statement. It asks the user to input a number between 0 and 10.
+
+```
+````cpp
+//Program: Effect of break statements in a switch structure
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num;
+
+    cout << "Enter an integer between 0 and 7: ";    //Line 1
+    cin >> num;                                      //Line 2
+    cout << endl;                                    //Line 3
+````
+```

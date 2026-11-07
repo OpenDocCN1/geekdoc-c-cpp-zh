@@ -1,0 +1,150 @@
+
+### EXAMPLE 2-8
+
+| Mixed Expression | Evaluation | Rule Applied |
+|---|---|---|
+| `3 / 2 + 5.5` | `= 1 + 5.5`<br>`= 6.5` | `3 / 2 = 1` (integer division; Rule 1(a))<br>`1 + 5.5 = 1.0 + 5.5` (Rule 1(b))<br>`= 6.5` |
+| `15.6 / 2 + 5` | `= 7.8 + 5`<br>`= 12.8` | `15.6 / 2`<br>`= 15.6 / 2.0` (Rule 1(b))<br>`= 7.8`<br>`7.8 + 5`<br>`= 7.8 + 5.0` (Rule 1(b))<br>`= 12.8` |
+| `4 + 5 / 2.0` | `= 4 + 2.5`<br>`= 6.5` | `5 / 2.0 = 5.0 / 2.0` (Rule 1(b))<br>`= 2.5`<br>`4 + 2.5 = 4.0 + 2.5` (Rule 1(b))<br>`= 6.5` |
+| `4 * 3 + 7 / 5 - 25.5` | `= 12 + 7 / 5 - 25.5`<br>`= 12 + 1 - 25.5`<br>`= 13 - 25.5`<br>`= -12.5` | `4 * 3 = 12;` (Rule 1(a))<br>`7 / 5 = 1` (integer division; Rule 1(a))<br>`12 + 1 = 13;` (Rule 1(a))<br>`13 - 25.5 = 13.0 - 25.5` (Rule 1(b))<br>`= -12.5` |
+
+The following C++ program evaluates the preceding expressions:
+
+```cpp
+// This program illustrates how mixed expressions are evaluated.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "3 / 2 + 5.5 = " << 3 / 2 + 5.5 << endl;
+    cout << "15.6 / 2 + 5 = " << 15.6 / 2 + 5 << endl;
+    cout << "4 + 5 / 2.0 = " << 4 + 5 / 2.0 << endl;
+    cout << "4 * 3 + 7 / 5 - 25.5 = "
+         << 4 * 3 + 7 / 5 - 25.5
+         << endl;
+
+    return 0;
+}
+```
+
+**Sample Run:**
+
+```text
+3 / 2 + 5.5 = 6.5
+15.6 / 2 + 5 = 12.8
+4 + 5 / 2.0 = 6.5
+4 * 3 + 7 / 5 - 25.5 = -12.5
+```
+
+These examples illustrate that an integer is not converted to a floating-point number unless the operator to be evaluated has one integer and one floating-point operand.
+
+## Type Conversion (Casting)
+
+In the previous section, you learned that when evaluating an arithmetic expression, if the operator has mixed operands, the integer value is changed to a floating-point value with the zero decimal part. When a value of one data type is automatically changed to another data type, an **implicit type coercion** is said to have occurred. As the examples in the preceding section illustrate, if you are not careful about data types, implicit type coercion can generate unexpected results.
+
+To avoid implicit type coercion, C++ provides for explicit type conversion through the use of a cast operator. The **cast operator**, also called **type conversion** or **type casting**, takes the following form:
+
+```cpp
+static_cast<dataTypeName>(expression)
+```
+
+First, the expression is evaluated. Its value is then converted to a value of the type specified by `dataTypeName`. In C++, `static_cast` is a reserved word.
+
+When converting a floating-point (decimal) number to an integer using the cast operator, you simply drop the decimal part of the floating-point number. That is, the floating-point number is truncated. Example 2-9 shows how cast operators work. Be sure you understand why the last two expressions evaluate as they do.
+
+### EXAMPLE 2-9
+
+| Expression | Evaluates to |
+| :--- | :--- |
+| `static_cast<int>(7.9)` | `7` |
+| `static_cast<int>(3.3)` | `3` |
+| `static_cast<double>(25)` | `25.0` |
+| `static_cast<double>(5 + 3)` | `= static_cast<double>(8) = 8.0` |
+| `static_cast<double>(15) / 2` | `= 15.0 / 2`<br>`(because static_cast<double>(15) = 15.0)`<br>`= 15.0 / 2.0 = 7.5` |
+| `static_cast<double>(15 / 2)` | `= static_cast<double>(7)`<br>`(because 15 / 2 = 7)`<br>`= 7.0` |
+| `static_cast<int>(7.8 + static_cast<double>(15) / 2)` | `= static_cast<int>(7.8 + 7.5)`<br>`= static_cast<int>(15.3)`<br>`= 15` |
+| `static_cast<int>(7.8 + static_cast<double>(15 / 2))` | `= static_cast<int>(7.8 + 7.0)`<br>`= static_cast<int>(14.8)`<br>`= 14` |
+
+The following C++ program evaluates the preceding expressions:
+
+```cpp
+// This program illustrates how explicit type conversion works.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "static_cast<int>(7.9) = "
+         << static_cast<int>(7.9)
+         << endl;
+    cout << "static_cast<int>(3.3) = "
+         << static_cast<int>(3.3)
+         << endl;
+    cout << "static_cast<double>(25) = "
+         << static_cast<double>(25)
+         << endl;
+    cout << "static_cast<double>(5 + 3) = "
+         << static_cast<double>(5 + 3)
+         << endl;
+    cout << "static_cast<double>(15) / 2 = "
+         << static_cast<double>(15) / 2
+         << endl;
+    cout << "static_cast<double>(15 / 2) = "
+         << static_cast<double>(15 / 2)
+         << endl;
+    cout << "static_cast<int>(7.8 + static_cast<double>(15) / 2) = "
+         << static_cast<int>(7.8 + static_cast<double>(15) / 2)
+         << endl;
+    cout << "static_cast<int>(7.8 + static_cast<double>(15 / 2)) = "
+         << static_cast<int>(7.8 + static_cast<double>(15 / 2))
+         << endl;
+
+    return 0;
+}
+```
+
+**Sample Run:**
+
+```text
+static_cast<int>(7.9) = 7
+static_cast<int>(3.3) = 3
+static_cast<double>(25) = 25
+static_cast<double>(5 + 3) = 8
+static_cast<double>(15) / 2 = 7.5
+static_cast<double>(15 / 2) = 7
+static_cast<int>(7.8 + static_cast<double>(15) / 2) = 15
+static_cast<int>(7.8 + static_cast<double>(15 / 2)) = 14
+```
+
+Note that the value of the expression `static_cast<double>(25)` is 25.0. However, it is output as 25 rather than 25.0. This is because we have not yet discussed how to output decimal numbers with 0 decimal parts to show the decimal point and the trailing zeros. Chapter 3 explains how to output decimal numbers in a desired format. Similarly, the output of other decimal numbers with zero decimal parts is without the decimal point and the 0 decimal part.
+
+> **NOTE** In C++, the cast operator can also take the form `dataType(expression)`. This form is called C-like casting. For example, `double(5) = 5.0` and `int(17.6) = 17`. However, `static_cast` is more stable than C-like casting.
+
+You can also use cast operators to explicitly convert `char` data values into `int` data values and `int` data values into `char` data values. To convert `char` data values into `int` data values, you use a collating sequence. For example, in the ASCII character set, `static_cast<int>('A')` is 65 and `static_cast<int>('8')` is 56. Similarly, `static_cast<char>(65)` is 'A' and `static_cast<char>(56)` is '8'.
+
+Earlier in this chapter you learned how arithmetic expressions are formed and evaluated in C++. If you want to use the value of one expression in another expression, first you must save the value of the expression. There are many reasons to save the value of an expression. Some expressions are complex and may require a considerable amount of computer time to evaluate. By calculating the values once and saving them for further use, you not only save computer time and create a program that executes more quickly, you also avoid possible typographical errors. In C++, expressions are evaluated, and if the value is not saved, it is lost. That is, unless it is saved, the value of an expression cannot be used in later calculations. In the next section, you will learn how to save the value of an expression and use it in subsequent calculations.
+
+Before leaving the discussion of data types, let us discuss one more data type—string.
+
+## string Type
+
+The data type `string` is a programmer-defined data type. It is not directly available for use in a program like the simple data types discussed earlier. To use this data type, you need to access program components from the library, which will be discussed later in this chapter. The data type `string` is a feature of ANSI/ISO Standard C++.
+
+> **NOTE** Prior to the ANSI/ISO C++ language standard, the standard C++ library did not provide a string data type. Compiler vendors often supplied their own programmer-defined string type, and the syntax and semantics of string operations often varied from vendor to vendor.
+
+A string is a sequence of zero or more characters. Strings in C++ are enclosed in double quotation marks. A string containing no characters is called a null or empty string. The following are examples of strings. Note that "" is the empty string.
+
+```text
+"William Jacob"
+"Mickey"
+""
+```
+
+Every character in a string has a relative position in the string. The position of the first character is 0, the position of the second character is 1, and so on. The length of a string is the number of characters in it.
+
+![](img/f97f778697507bb6fdd80c5991210cba_90_0.png)

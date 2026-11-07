@@ -1,0 +1,48 @@
+```
+```cpp
+void serverListType::setServerBusy(int serverID,
+                                    customerType cCustomer)
+{
+    int time;
+
+    time = cCustomer.getTransactionTime();
+
+    servers[serverID].setBusy();
+    servers[serverID].setTransactionTime(time);
+    servers[serverID].setCurrentCustomer(cCustomer);
+}
+```
+```
+
+The definition of the function updateServers is quite straightforward. Starting at the first server, it searches the list of servers for busy servers. When a busy server is found, its transactionTime is decremented by 1. If the transactionTime reduces to zero, the server is set to free. If the transactionTime of a busy server reduces to zero, then the transaction of the customer being served by the server is complete. If the actual parameter corresponding to outFile is cout, a message indicating which customer has been served is printed on the screen, together with the customer's departing time. Otherwise, the output is sent to a file specified by the user. The definition of this function is as follows:
+
+```
+```cpp
+void serverListType::updateServers(ostream& outFile)
+{
+    int i;
+
+    for (i = 0; i < numOfServers; i++)
+        if (!servers[i].isFree())
+        {
+            servers[i].decreaseTransactionTime();
+
+            if (servers[i].getRemainingTransactionTime() == 0)
+            {
+                outFile << "From server number " << (i + 1)
+                        << " customer number "
+                        << servers[i].getCurrentCustomerNumber()
+                        << "\n        departed at time unit "
+                        << servers[i].
+                           getCurrentCustomerArrivalTime()
+                        + servers[i].
+                          getCurrentCustomerWaitingTime()
+                        + servers[i].
+                          getCurrentCustomerTransactionTime()
+                        << endl;
+                servers[i].setFree();
+            }
+        }
+}
+```
+```

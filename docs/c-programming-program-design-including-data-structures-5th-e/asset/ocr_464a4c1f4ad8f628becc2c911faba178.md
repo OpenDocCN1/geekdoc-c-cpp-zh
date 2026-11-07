@@ -1,0 +1,57 @@
+Next, we determine whether sum contains the desired sum of the numbers rolled by the dice. If sum does not contain the desired sum, then we roll the dice again. This can be accomplished by the following do...while loop. (Assume that the int variable num contains the desired sum to be rolled.)
+
+```
+~~~
+do
+{
+    die1 = rand() % 6 + 1;
+    die2 = rand() % 6 + 1;
+    sum = die1 + die2;
+    rollCount++;
+}
+while (sum != num);
+~~~
+```
+
+We can now write the function rollDice that takes as a parameter the desired sum of the numbers to be rolled and returns the number of times the dice are rolled to roll the desired sum.
+
+```
+~~~
+int rollDice(int num)
+{
+    int die1;
+    int die2;
+    int sum;
+    int rollCount = 0;
+
+    srand(time(0));
+
+    do
+    {
+        die1 = rand() % 6 + 1;
+        die2 = rand() % 6 + 1;
+        sum = die1 + die2;
+        rollCount++;
+    }
+    while (sum != num);
+
+    return rollCount;
+}
+~~~
+```
+
+The following program shows how to use the function rollDice in a program.
+
+```
+~~~
+//Program: Roll dice
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int rollDice(int num);
+~~~
+```

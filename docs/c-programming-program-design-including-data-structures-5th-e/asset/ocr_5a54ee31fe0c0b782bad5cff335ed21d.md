@@ -1,0 +1,51 @@
+```
+```cpp
+cAssignmentOpOverload::cAssignmentOpOverload(int size)
+{
+    maxSize = size;
+    length = 0;
+
+    if (maxSize == 0)
+        list = NULL;
+    else
+        list = new int[maxSize];
+}
+
+const cAssignmentOpOverload& cAssignmentOpOverload::operator=
+                         (const cAssignmentOpOverload& otherList)
+{
+    if (this != &otherList)    //avoid self-assignment; Line 1
+    {
+        delete [] list;                        //Line 2
+        maxSize = otherList.maxSize;            //Line 3
+        length = otherList.length;             //Line 4
+
+        list = new int[maxSize];                //Line 5
+
+        for (int i = 0; i < length; i++)        //Line 6
+            list[i] = otherList.list[i];        //Line 7
+    }
+
+    return *this;                               //Line 8
+}
+```
+```
+
+The function to overload the assignment operator works as follows. The statement in Line 1 checks whether an object is copying itself. The statement in Line 2 destroys list. The statements in Lines 3 and 4 copy the values of the member variables maxSize and length of otherList into the member variables maxSize and length of list, respectively. The statement in Line 5 creates the array to store the numbers. The for loop in Line 6 copies otherList into list. The statement in Line 8 returns the address of this object, because the return type of the function operator= is a reference type.
+
+The following program tests the class cAssignmentOpOverload:
+
+```
+```cpp
+#include <iostream>
+
+#include "classAssignmentOverload.h"
+
+using namespace std;
+int main()
+{
+    cAssignmentOpOverload intList1(10);       //Line 9
+    cAssignmentOpOverload intList2;           //Line 10
+    cAssignmentOpOverload intList3;           //Line 11
+```
+```

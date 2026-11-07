@@ -1,0 +1,284 @@
+
+
+访问命名空间成员的一般语法是：
+
+```cpp
+namespace_name::identifier
+```
+
+回想一下，在 C++ 中，`::` 称为作用域解析运算符。
+
+要访问命名空间 `globalType` 的成员 `RATE`，需要以下语句：
+
+```cpp
+globalType::RATE
+```
+
+要访问成员 `printResult`（它是一个函数），需要以下语句：
+
+```cpp
+globalType::printResult();
+```
+
+因此，要访问命名空间的成员，需要使用 `namespace_name`，后跟作用域解析运算符，再后跟成员名。
+
+为了简化命名空间成员的访问，ANSI/ISO 标准 C++ 提供了 `using` 语句的使用。使用 `using` 语句的语法如下：
+
+- a. 简化访问所有命名空间成员：
+
+    ```cpp
+    using namespace namespace_name;
+    ```
+
+- b. 简化访问特定命名空间成员：
+
+    ```cpp
+    using namespace_name::identifier;
+    ```
+
+例如，`using` 语句：
+
+```cpp
+using namespace globalType;
+```
+
+简化了对命名空间 `globalType` 所有成员的访问。语句：
+
+```cpp
+using globalType::RATE;
+```
+
+简化了对命名空间 `globalType` 的成员 `RATE` 的访问。
+
+在 C++ 中，`using` 是保留字。
+
+通常将 `using` 语句放在命名空间声明之后。例如，对于命名空间 `globalType`，通常编写如下代码：
+
+```cpp
+namespace globalType
+{
+    const int N = 10;
+    const double RATE = 7.50;
+    int count = 0;
+    void printResult();
+}
+using namespace globalType;
+```
+
+在 `using` 语句之后，要访问 `namespace` 成员，不必在 `namespace` 成员之前放置 `namespace_name` 和作用域解析运算符。但是，如果 `namespace` 成员与程序中的全局标识符同名，则要在程序中访问该 `namespace` 成员，必须在 `namespace` 成员之前加上 `namespace_name` 和作用域解析运算符。类似地，如果 `namespace` 成员与块中的标识符同名，则要在该块中访问此 `namespace` 成员，必须在 `namespace` 成员之前加上 `namespace_name` 和作用域解析运算符。
+
+示例 8-9 至 8-12 有助于阐明 `namespace` 机制的使用。
+
+### 示例 8-9
+
+考虑以下 C++ 代码：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+.
+.
+int main()
+{
+    .
+    .
+    .
+}
+.
+.
+.
+```
+
+在此示例中，可以引用头文件 `iostream` 的全局标识符（如 `cin`、`cout` 和 `endl`），而无需在标识符名称前使用前缀 `std::`。明显的限制是，引用头文件 `iostream` 全局标识符的块（或函数）不得包含与此全局标识符同名的任何标识符。
+
+### 示例 8-10
+
+考虑以下 C++ 代码：
+
+```cpp
+#include <cmath>
+
+int main()
+{
+    double x = 15.3;
+    double y;
+    y = std::pow(x, 2);
+    .
+    .
+}
+```
+
+此示例访问头文件 `cmath` 的函数 `pow`。
+
+### 示例 8-11
+
+考虑以下 C++ 代码：
+
+```cpp
+#include <iostream>
+.
+.
+int main()
+{
+    using namespace std;
+.
+.
+.
+}
+.
+.
+.
+```
+
+在此示例中，函数 `main` 可以引用头文件 `iostream` 的全局标识符，而无需在标识符名称前使用前缀 `std::`。`using` 语句出现在函数 `main` 内部。因此，其他函数（如果有）应在头文件 `iostream` 的全局标识符名称前使用前缀 `std::`，除非该函数有类似的 `using` 语句。
+
+### 示例 8-12
+
+考虑以下 C++ 代码：
+
+```cpp
+#include <iostream>
+
+using namespace std;        //Line 1
+
+int t;                       //Line 2
+double u;                    //Line 3
+
+namespace expN
+{
+    int x;                   //Line 4
+    char t;                  //Line 5
+    double u;                //Line 6
+    void printResult();      //Line 7
+}
+
+using namespace expN;
+
+int main()
+{
+    int one;                 //Line 8
+    double t;                //Line 9
+    double three;            //Line 10
+
+    .
+    .
+    .
+}
+
+void expN::printResult() //Definition of the function printResult
+{
+    .
+    .
+    .
+}
+```
+
+在此 C++ 程序中：
+
+- 1. 要在 `main` 中引用第 2 行的变量 `t`，请使用*作用域解析运算符*，即 `::`（也就是说，将 `t` 引用为 `::t`），因为函数 `main` 有一个名为 `t` 的变量（在第 9 行声明）。例如，要将 `x` 的值复制到 `t`，可以使用语句 `t = x`。
+- 2. 要在 `main` 中引用 `namespace` `expN` 的成员 `t`（在第 5 行声明），请在 `t` 前使用前缀 `expN::`（也就是说，将 `t` 引用为 `expN::t`），因为有一个名为 `t` 的全局变量（在第 2 行声明）以及 `main` 中有一个名为 `t` 的变量。
+- 3. 要在 `main` 中引用 `namespace` `expN` 的成员 `u`（在第 6 行声明），请在 `u` 前使用前缀 `expN::`（也就是说，将 `u` 引用为 `expN::u`），因为有一个名为 `u` 的全局变量（在第 3 行声明）。
+- 4. 可以在 `main` 中将 `namespace` `expN` 的成员 `x`（在第 4 行声明）引用为 `x` 或 `expN::x`，因为没有名为 `x` 的全局标识符，并且函数 `main` 不包含任何名为 `x` 的标识符。
+- 5. 作为 `namespace` 成员（例如 `printResult`）的函数的定义通常写在该 `namespace` 之外，如前面的程序所示。要编写函数 `printResult` 的定义，函数头中的函数名可以是 `printResult` 或 `expN::printResult`（因为没有其他全局标识符名为 `printResult`）。
+
+> **注意**
+>
+> 系统提供的头文件（如 `iostream`、`cmath` 和 `iomanip`）中的标识符定义在命名空间 `std` 中。因此，为了简化对这些头文件中标识符的访问，我们在编写的程序中一直使用以下语句：
+>
+> `using namespace std;`
+
+## string 类型
+
+在第 2 章中，你已接触数据类型 `string`。回想一下，在 ANSI/ISO C++ 语言标准之前，标准 C++ 库并未提供 `string` 数据类型。编译器供应商通常提供自己的程序员定义 `string` 类型，而 `string` 操作的语法和语义往往因供应商而异。
+
+数据类型 `string` 是程序员定义的类型，不是 C++ 语言的一部分；它由 C++ 标准库提供。在使用数据类型 `string` 之前，程序必须包含头文件 `string`，如下所示：
+
+```cpp
+    #include <string>
+```
+
+回想一下，在 C++ 中，`string` 是零个或多个字符的序列，字符串用双引号括起来。
+
+语句：
+
+```cpp
+    string name = "William Jacob";
+```
+
+将 `name` 声明为 `string` 变量，并将 `name` 初始化为 `"William Jacob"`。`name` 中第一个字符 `W` 的位置是 0；第二个字符 `i` 的位置是 1；依此类推。也就是说，`string` 变量中第一个字符的位置从 0 开始，而不是从 1 开始。
+
+变量 `name` 可以存储（几乎）任意大小的 `string`。
+
+第 3 章讨论了对 `string` 类型的 I/O 操作；第 4 章解释了对 `string` 类型的关系操作。我们建议你重新阅读第 3 章和第 4 章，复习 `string` 类型上的 I/O 和关系操作。
+
+其他运算符，例如二元运算符 `+`（用于支持字符串连接操作）和数组索引（下标）运算符 `[]`，也已为数据类型 `string` 定义。我们来看看这些运算符如何在 `string` 数据类型上工作。
+
+假设有如下声明：
+
+```cpp
+    string str1, str2, str3;
+```
+
+语句：
+
+```cpp
+str1 = "Hello There";
+```
+
+将字符串 "Hello There" 存储到 str1 中。语句：
+
+```cpp
+str2 = str1;
+```
+
+将 str1 的值复制到 str2 中。
+
+如果 str1 = "Sunny"，则语句：
+
+```cpp
+str2 = str1 + " Day";
+```
+
+将字符串 "Sunny Day" 存储到 str2 中。
+
+假设 str1 = "Hello" 且 str2 = "There"。语句：
+
+```cpp
+str3 = str1 + " " + str2;
+```
+
+将 "Hello There" 存储到 str3 中。此语句等价于语句：
+
+```cpp
+str3 = str1 + ' ' + str2;
+```
+
+此外，语句：
+
+```cpp
+str1 = str1 + "Mickey";
+```
+
+通过将字符串 "Mickey" 追加到 str1 的旧值来更新 str1 的值。因此，str1 的新值是 "Hello Mickey"。
+
+> **注意**  
+> 要使运算符 + 适用于 string 数据类型，+ 的操作数之一必须是 string 变量。例如，以下语句将无法工作：
+> 
+> ```cpp
+> str1 = "Hello " + "there!"; //illegal
+> str2 = "Sunny Day" + "!"; //illegal
+> ```
+
+如果 str1 = "Hello there"，则语句：
+
+```cpp
+str1[6] = 'T';
+```
+
+将字符 t 替换为字符 T。回想一下，`string` 变量中第一个字符的位置是 0。因此，由于 t 是 str1 中的第七个字符，其位置是 6。
+
+在 C++ 中，[] 称为**数组下标运算符**。
+
+如前所述，结合使用数组下标运算符和字符位置，可以访问字符串中的单个字符。
+

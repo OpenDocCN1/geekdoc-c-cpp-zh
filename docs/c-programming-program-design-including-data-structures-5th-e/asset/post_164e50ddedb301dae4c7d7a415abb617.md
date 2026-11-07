@@ -1,0 +1,307 @@
+
+## functions (listed by name) *(Continued)*
+
+- length function, 426, 463, 464–465
+- listSize function, 800–801
+- max function, 1448–1452
+- max_element function, 1448–1452
+- maxListSize function, 800–801
+- maxSaleByPerson function, 588
+- maxSaleByQuarter function, 588–589
+- max_size function, 1373
+- merge function, 1232, 1386, 1387, 1441–1445
+- mergeList function, 1230–1231, 1233, 1234
+- min function, 1448–1452
+- min_element function, 1448–1452
+- minimalSpanning function, 1353–1354
+- minLocation function, 1211–1212
+- move function, 788
+- nodeCount function, 1282
+- partial_sum function, 1463–1468
+- partition function, 1223, 1224
+- peek function, 130–132
+- poolCapacity function, 394
+- poolFillTime function, 394
+- pop function, 1085, 1086, 1110, 1112–1114, 1094–1096, 1043–1054
+- pop_back function, 1367, 1374
+- pop_front function, 1380, 1382, 1385
+- pow function, 321–326, 456
+- print function, 684, 701, 714, 720–721, 767, 781–783, 801, 852, 897, 1013, 1044
+- printDataTotals function, 1242
+- printGradeReports function, 725–726
+- printGraph function, 1332
+- printListReverse function, 1039–1040
+- printMatrix function, 528–529
+- printReport function, 587–588
+- printResult function, 453–454, 457, 1126–1129
+- printShortestDistance function, 1344
+- printStars function, 364–366
+- printTime function, 605, 616
+- printTreeAndWeight function, 1354–1355
+- processVotes function, 1250
+- push function, 1085, 1086, 1110–1112, 1092–1094, 1403–1405
+- push_back function, 1367, 1368, 1374, 1382
+- push_front function, 1380, 1385
+- quickSort function, 1224
+- random_shuffle function, 1448–1452
+- rbegin function, 1373, 1376
+- recMergeSort function, 1231–1233
+- remove function, 805, 899, 1447, 1385
+- removeAt function, 801, 805, 897
+- remove_copy function, 1427
+- remove_copy_if function, 1427
+- remove_if function, 1385, 1427
+- replace function, 463, 467–468, 1430–1434
+- replaceAt function, 805–806, 899
+- replace_copy function, 1430–1434
+- replace_copy_if function, 1430–1434
+- replace_if function, 1430–1434
+- resize function, 1367, 1368, 1374
+- retrieveAt function, 802, 897
+- reverse function, 1387, 1445–1448
+- reverse_copy function, 1445–1448
+- reversePrint function, 1037–1039
+- rFibNum function, 967–971
+- rollDice function, 639–640
+- rotate function, 1445–1448
+- rotate_copy function, 1445–1448
+- runSimulation function, 1167, 1168
+- saleByQuarter function, 586
+- search function, 1018–1019, 1045, 1280, 1288–1289, 1437–1440
+- search_n function, 1437–1440
+- searchVideoList function, 1309
+- seek function, 1498, 1499–1503
+- seekp function, 1499–1500, 1503
+- sellProduct function, 654–655
+- seqSearch function, 508–509, 573, 574, 805, 899
+- setCustomerInfo function, 1155–1156
+- setData function, 701, 704–705
+- set_difference function, 1455–1463
+- setDimension function, 684, 685
+- setFirstName function, 834–835
+- setInfo function, 718
+- setIntersection function, 1455–1463
+- setLastName function, 834–835
+- setName function, 1238
+- setServerBusy function, 1162
+- setSimulationParameters function, 1166
+- set_symmetric_difference function, 1455–1463
+- setTime function, 604, 605, 608, 611–612, 616, 621, 622
+- set_union function, 1455–1463
+- setX function, 755
+- shortHash function, 1343, 1344
+- showSelection function, 654
+- size function, 463, 1372, 1403–1405
+- sort function, 1207, 1386, 1437–1440
+- sortCourses function, 718, 722
+- splice function, 1386, 1389–1390
+- sqrt function, 321, 322
+- squareFirst function, 381
+- strcmp function, 512, 513
+- strlen function, 512
+- substr function, 463, 469–470
+- sumRows function, 528–529
+- swap function, 463, 470, 1210–1211, 1223, 1373, 1434
+- terminate function, 948
+- testTime function, 610–611
+- tolower function, 322
+- top function, 1085, **1086**, 1403–1404
+- totalSaleByPerson function, 586–587
+- toupper function, 322, 323, 1454
+- transform function, 1452–1454
+- unique function, 1385
+- updateServers function, 1163
+- updateVotesByRegion function, 1242
+- what function, 931–932
+- write function, 1498
+
+## G
+
+- general case, **960**, 965
+- generate function, 1420–1422
+- generate_n function, 1420–1422
+- get function, 127–128, 514, 696
+- getCost function, 653
+- getCredits function, 721
+- getData function, 584–586
+- getFirstName function, 1238
+- getFreeServerId function, 1162
+- getGap function, 722
+- getLastName function, 1238
+- getLength function, 685
+- getLine function, 515
+- getNumberOfBusyServers function, 1162
+- getScore function, 369–370
+- getStudentData function, 724–725
+- getTime function, 616
+- getTotalVotes function, 1242
+- getWaitingTime function, 1156
+- getWidth function, 685
+- grade-calculation programs, 162–165, 369–372, 710–731, 1102–1106
+- graph(s). *See also* digraph (directed graph)
+    - as ADTs, 1329–1332
+    - definitions, 1323–1326
+    - described, **1323**
+    - minimal spanning tree, 1345–1355
+    - notations, 1323–1326
+    - operations on, 1328–1329
+    - overview, 1321–1360
+    - representation, 1326–1328
+    - traversals, 1333–1337
+- graphType class, 1329–1330, 1338
+- greedy algorithm. *See* shortest path algorithm
+
+## H
+
+- hardware, overview of, 4–5
+- head, use of the term, **992**, 994, 996
+- header file(s), 76, 80, 456, 512. *See also* specific files
+    - containers and, 1406–1407
+    - control structures and, 224
+    - described, **634**
+    - functions and, 321
+    - graphs and, 1344
+    - inheritance and, 694–696
+    - input/output and, 118, 142, 143
+    - linked lists and, 1025–1026, 1034–1037
+    - multiple inclusions of, 695–696
+    - namespaces and, 452, 458
+    - naming conventions, 1506–1507
+    - overview, 1509–1517
+    - stacks and, 1098–1102
+    - templates and, 895
+- heap algorithms, 1410
+- height, use of the term, **1270**, 1271
+- height function, 1271
+- hexadecimal number system, 1490–1492
+- high-level languages, **9**
+- Hollerith, Herman, 2
+
+## I
+
+- IBM (International Business Machines)
+    - character sets and, 37
+    - encoding schemes and, 8
+    - history of, 2–3
+- identifiers
+    - described, **33**
+    - functions and, 382–386
+    - global, **382**
+    - local, **382**
+    - namespaces and, 452, 455
+    - naming, 85–86
+    - overview, 33–34
+    - self-documenting, **86**
+- IDEs (integrated development environments)
+    - debugging and, 299
+    - exception handling and, 935
+    - executable code and, 638
+    - filename extensions and, 78
+    - identifiers and, 34
+    - indentation and, 212
+    - input/output and, 137
+    - overview, 11–12
+- if statements, 188–212, 981
+    - comparing if…else statements with, 198–199
+
+## L
+
+- linkedQueueType class, 1146, 1149–1151
+- linkedStackType class, 1108–1109, 1117–1119
+- linkers, 11
+- links, of nodes, 992
+- list(s). *See also* linked lists
+    - adjacency, 1327–1328
+    - array-based, 1208–1225
+    - described, 796
+    - formal parameter, 326, 362, 395
+    - length of, 796
+    - sort algorithms and, 1208–1225
+- list class, 1383–1390
+- list container, 1383–1390, 1407
+- listSize function, 800–801
+- listType class, 632, 893–894
+- loaders, 11
+- local declaration, 328
+- logic errors, 149–152, 932. *See also* errors
+- logical expressions, 178, 182–188, 443–444
+- logical operators, 182–188
+- logical values, 178
+- loop(s). *See also* recursion; *specific types*
+    - arrays and, 491
+    - enumeration types and, 438
+    - graphs and, 1325
+    - nested, 291–296, 525, 526
+    - overview, 1325
+    - recursion and, 974–984
+    - stacks and, 1131–1133
+    - structs and, 575–576
+- loop control variables (LCVs), 250, 251, 256, 274
+- Lukasciewicz, Jan, 1119
+
+## M
+
+- machine language, 6
+- main function, 31, 78, 80, 124, 324, 369, 381, 456–457, 795, 832–833, 838, 1122, 1168
+    - candy-machine example and, 656–657
+    - exception handling and, 940, 950
+    - pointer variables and, 754, 778–779
+    - structs and, 589–590
+    - void functions and, 362
+- main memory. *See* RAM (random access memory)
+- make command, 638
+- map containers, 1407
+- math.h (cmath) header file, 456, 458, 1506, 1514–1515
+- max function, 1448–1452
+- maxElement function, 1448–1452
+- maxListSize function, 800–801
+- maxSaleByPerson function, 588
+- maxSaleByQuarter function, 588–589
+- max_size function, 1373
+- member access operator, **133**, 567, 607–609
+- member access operator arrow, 753
+- member access specifiers, 603. *See also* private members; protected members; public members
+- member functions
+    - containers and, 1372–1374
+    - implementation of, 611–615
+    - operator functions and, 839–842
+    - operator overloading and, 839–846
+    - redefining/overriding, 679–686
+- members, of classes, 602
+- memory. *See also* RAM (random access memory); stacks
+    - addresses, 4
+    - allocation, 50–53, 372–382
+    - cells, 4
+    - data types and, 36
+    - leaks, 758
+    - overview, 4–5
+    - structs, 565–566
+    - size, 1519–1520
+- menu-driven programs, 388–389
+- merge function, 1232, 1386, 1387, 1441–1445
+- merge sort algorithms, 1225–1235
+- mergeList function, 1230–1231, 1233, 1234
+- min function, 1448–1452
+- min_element function, 1448–1452
+- minimal spanning tree, 1345–1346, **1347**, 1348–1355
+- minimalSpanning function, 1353–1354
+- minLocation function, 1211–1212
+- mixed expressions, 45, 46
+- mnemonics, 8–9
+- modular programming, **20**
+- modules, **320**. *See also* functions
+- move function, 788
+- movie-ticket-sales program, 156–161
+- multidimensional arrays, 518–533. *See also* arrays
+- multimap containers, 1407
+- multiple inheritance, 677. *See also* inheritance
+- multiset containers, 1397–1399, 1407
+- mutator functions, 616, 617–619
+- myException class, 948–949
+
+## N
+
+- named constants, **51**, 52, 386–390, 461
+- namespace keyword, 76
+- namespaces, 76, 452–458, 1506, 1507, 1519–1520
+- n-dimensional arrays, **532**, 533. *See also* arrays

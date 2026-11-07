@@ -1,0 +1,50 @@
+```
+```cpp
+else if (nthFibonacci == 2)                         //Step 6.b
+    current = previous2;                             //Step 6.c
+else
+{
+    counter = 3;                                     //Step 6.c.1
+
+                //Steps 6.c.2 - 6.c.5
+    while (counter <= nthFibonacci)
+    {
+        current = previous2 + previous1;             //Step 6.c.2
+        previous1 = previous2;                       //Step 6.c.3
+        previous2 = current;                         //Step 6.c.4
+        counter++;                                   //Step 6.c.5
+    }//end while
+}//end else
+
+cout << "The Fibonacci number at position "
+     << nthFibonacci << " is " << current
+     << endl;                                        //Step 7
+
+return 0;
+}//end main
+```
+```
+
+**Sample Runs:** In these sample runs, the user input is shaded.
+
+**Sample Run 1:**
+
+Enter the first two Fibonacci numbers: `12 16`
+
+The first two Fibonacci numbers are 12 and 16
+Enter the position of the desired Fibonacci number: `10`
+
+The Fibonacci number at position 10 is 796
+
+**Sample Run 2:**
+
+Enter the first two Fibonacci numbers: `1 1`
+
+The first two Fibonacci numbers are 1 and 1
+Enter the position of the desired Fibonacci number: `15`
+
+The Fibonacci number at position 15 is 610
+
+# for Looping (Repetition) Structure
+
+The `while` loop discussed in the previous section is general enough to implement most forms of repetitions. The C++ `for` looping structure discussed here is a specialized form of the `while` loop. Its primary purpose is to simplify the writing of counter-controlled loops. For this reason, the `for` loop is typically called a counted or indexed `for` loop.

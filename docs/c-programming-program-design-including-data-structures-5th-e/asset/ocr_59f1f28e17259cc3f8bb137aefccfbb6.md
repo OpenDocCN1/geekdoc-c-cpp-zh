@@ -1,0 +1,78 @@
+```
+```cpp
+rectangleType();
+rectangleType(double l, double w);
+
+private:
+    double length;
+    double width;
+};
+```
+```
+
+Notice that we have removed the member function `print` because we are overloading the stream insertion operator `<<`.
+
+```
+```cpp
+//The definitions of the functions operator+, operator*,
+//operator==, and operator!= are the same as in Example 14-5.
+```
+```
+
+```
+```cpp
+ostream& operator<< (ostream& osObject,
+                     const rectangleType& rectangle)
+{
+    osObject << "Length = " << rectangle.length
+             << "; Width = " << rectangle.width;
+
+    return osObject;
+}
+```
+```
+
+```
+```cpp
+istream& operator>> (istream& isObject,
+                     rectangleType& rectangle)
+{
+    isObject >> rectangle.length >> rectangle.width;
+
+    return isObject;
+}
+```
+```
+
+Consider the following program. (We assume that the definition of the class `rectangleType` is in the header file `rectangleType.h`.)
+
+```
+```cpp
+//This program shows how to use the modified class rectangleType.
+```
+```
+
+```
+```cpp
+#include <iostream>
+
+#include "rectangleType.h"
+
+using namespace std;
+
+int main()
+{
+    rectangleType myRectangle(23, 45);              //Line 1
+    rectangleType yourRectangle;                    //Line 2
+
+    cout << "Line 3: myRectangle: " << myRectangle
+                                                     //Line 3
+         << endl;
+
+    cout << "Line 4: Enter the length and width "
+         << "of a rectangle: ";                     //Line 4
+    cin >> yourRectangle;                            //Line 5
+    cout << endl;                                    //Line 6
+}
+```
+```

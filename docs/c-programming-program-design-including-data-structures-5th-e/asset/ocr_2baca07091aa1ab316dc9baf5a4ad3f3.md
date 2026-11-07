@@ -1,0 +1,29 @@
+the default array size. The for loop in Line 5 reads and stores five integers in listOne.p. The statement in Line 9 outputs the numbers stored in listOne, that is, the five numbers stored in p. (See the output of the line marked Line 8 in the sample run.)
+
+The statement in Line 11 declares listTwo to be an object of type ptrMemberVarType and also initializes listTwo using the values of listOne. The statement in Line 13 outputs the numbers stored in listTwo. (See the output of the line marked Line 12 in the sample run.)
+
+The statements in Lines 15 and 16 modify listTwo, and the statement in Line 18 outputs the modified data of listTwo. (See the output of the line marked Line 17 in the sample run.) The statement in Line 21 outputs the data stored in listOne. Notice that the data stored in listOne is unchanged, even though listTwo modified its data. It follows that the copy constructor used to initialize listTwo using listOne (at Line 11) provides listTwo its own copy of the data.
+
+The statements in Lines 23 through 28 show that when listOne is passed as a parameter by value to the function testCopyConst (see Line 24), the corresponding formal parameter temp has its own copy of data. Notice that the function testCopyConst modifies the object temp; however, the object listOne remains unchanged. See the outputs of the lines marked Line 23 (before the function testCopyConst is called) and Line 25 (after the function testCopyConst terminates) in the sample run. Also notice that when the function testCopyConst terminates, the destructor of the class ptrMemberVarType deallocates the memory space occupied by temp.p, which has no effect on listOne.p.
+
+For classes with pointer member variables, three things are normally done:
+
++   1. Include the destructor in the class.
++   2. Overload the assignment operator for the class.
++   3. Include the copy constructor.
+
+Chapter 15 discusses overloading the assignment operator. Until then, whenever we discuss classes with pointer member variables, out of the three items in the previous list, we will implement only the destructor and the copy constructor.
+
+# # Inheritance, Pointers, and Virtual Functions
+
+Recall that as a parameter, a class object can be passed either by value or by reference. Earlier chapters also said that the types of the actual and formal parameters must match. However, in the case of classes, C++ allows the user to pass an object of a derived class to a formal parameter of the base class type.
+
+First, let us discuss the case in which the formal parameter is either a reference parameter or a pointer. To be specific, let us consider the following classes:
+
+```
+```cpp
+class petType
+{
+public:
+```
+```

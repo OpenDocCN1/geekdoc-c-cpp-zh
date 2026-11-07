@@ -1,0 +1,31 @@
+This linked list has four nodes. The address of the first node is stored in the pointer head. Each node has two components: info, to store the info, and link, to store the address of the next node. For simplicity, we assume that info is of type int.
+
+Suppose that the first node is at location 2000, the second node is at location 2800, the third node is at location 1500, and the fourth node is at location 3600. Therefore, the value of head is 2000, the value of the component link of the first node is 2800, the value of the component link of the second node is 1500, and so on. Also, the value 0 in the component link of the last node means that this value is NULL, which we indicate by drawing a down arrow. The number at the top of each node is the address of that node. The following table shows the values of head and some other nodes in the list shown in Figure 17–4.
+
+|  | Value | Explanation |
+|---|---:|---|
+| `head` | 2000 |  |
+| `head->info` | 17 | Because head is 2000 and the info of the node at location 2000 is 17 |
+| `head->link` | 2800 |  |
+| `head->link->info` | 92 | Because head->link is 2800 and the info of the node at location 2800 is 92 |
+
+Suppose that current is a pointer of the same type as the pointer head. Then, the statement:
+
+```
+current = head;
+```
+
+copies the value of head into current (see Figure 17–5).
+
+![](bbox=[0.204, 0.605, 0.888, 0.733])
+
+**FIGURE 17-5** Linked list after the statement `current = head;` executes
+
+Clearly, in Figure 17–5:
+
+|  | Value |
+|---|---:|
+| `current` | 2000 |
+| `current->info` | 17 |
+| `current->link` | 2800 |
+| `current->link->info` | 92 |

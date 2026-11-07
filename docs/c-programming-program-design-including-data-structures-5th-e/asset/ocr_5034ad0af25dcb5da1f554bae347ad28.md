@@ -1,0 +1,61 @@
+```
+```cpp
+void incrementMinutes();
+void incrementHours();
+bool equalTime(const clockType&) const;
+clockType(int, int, int);  //constructor with parameters
+clockType();  //default constructor
+
+private:
+    int hr;
+    int min;
+    int sec;
+};
+```
+```
+
+This definition of the class clockType includes two constructors: one with three parameters and one without any parameters. Let us now write the definitions of these constructors:
+
+```
+```cpp
+clockType::clockType(int hours, int minutes, int seconds)
+{
+    if (0 <= hours && hours < 24)
+        hr = hours;
+    else
+        hr = 0;
+
+    if (0 <= minutes && minutes < 60)
+        min = minutes;
+    else
+        min = 0;
+
+    if (0 <= seconds && seconds < 60)
+        sec = seconds;
+    else
+        sec = 0;
+}
+```
+```
+
+```
+```cpp
+clockType::clockType()  //default constructor
+{
+    hr = 0;
+    min = 0;
+    sec = 0;
+}
+```
+```
+
+From the definitions of these constructors, it follows that the default constructor sets the three member variables—hr, min, and sec—to 0. Also, the constructor with parameters sets the member variables to whatever values are assigned to the formal parameters. Moreover, we can write the definition of the constructor with parameters by calling the function setTime, as follows:
+
+```
+```cpp
+clockType::clockType(int hours, int minutes, int seconds)
+{
+    setTime(hours, minutes, seconds);
+}
+```
+```

@@ -1,0 +1,59 @@
+```
+```cpp
+ptr->info = 12;
+ptr->link = NULL;
+list->link->link = ptr;
+```
+```
+
+Use the linked list created by this code to answer the following questions. (These questions are independent of each other.) Declare additional pointers if you need them.
+
++   a. Which pointer points to the first node of the linked list?
++   
++   b. Determine the order of the nodes of the linked list.
++   
++   c. Write a C++ code that creates and inserts a node with info 45 after the node with info 16.
++   
++   d. Write a C++ code that creates and inserts a node with info 58 before the node with info 25. Does this require you to change the value of the pointer that was pointing to the first node of the linked list?
++   
++   e. Write a C++ code that deletes the node with info 25. Does this require you to change the value of the pointer that was pointing to the first node of the linked list?
+
+17. Consider the following C++ statements. (The class `unorderedLinkedList` is as defined in this chapter.)
+
+```
+```cpp
+unorderedLinkedList<int> list;
+
+list.insertFirst(15);
+list.insertLast(28);
+list.insertFirst(30);
+list.insertFirst(2);
+list.insertLast(45);
+list.insertFirst(38);
+list.insertFirst(25);
+list.deleteNode(30);
+list.insertFirst(18);
+list.deleteNode(28);
+list.deleteNode(12);
+list.print();
+```
+```
+
+What is the output of this program segment?
+
+18. Suppose the input is:
+
+`18 30 4 32 45 36 78 19 48 75 -999`
+
+What is the output of the following C++ code? (The class `unorderedLinkedList` is as defined in this chapter.)
+
+```
+```cpp
+unorderedLinkedList<int> list;
+unorderedLinkedList<int> copyList;
+int num;
+
+cin >> num;
+while (num != -999)
+```
+```

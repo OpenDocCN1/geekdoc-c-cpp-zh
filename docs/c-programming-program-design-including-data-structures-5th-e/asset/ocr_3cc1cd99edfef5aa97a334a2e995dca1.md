@@ -1,0 +1,44 @@
+```
+Line 17: Largest element in list = 78
+Line 19: Smallest element in list = 12
+Line 21: list after random shuffle:
+         12 34 25 56 12 78 55 21 34 34
+```
+
+The preceding output is self-explanatory. The details are left as an exercise for you.
+
+# The Functions for_each and transform
+
+The algorithm for_each is used to access and process each element in a given range by applying a function, which is passed as a parameter. The prototype of the function implementing this algorithm is:
+
+```
+template <class inputItr, class function>
+function for_each(inputItr first, inputItr last, function func);
+```
+
+The function specified by the parameter func is applied to each element in the range first...last-1. The function func can modify the element. The returned value of the function for_each is usually ignored.
+
+The algorithm transform has two forms. The prototypes of the functions implementing this algorithm are:
+
+```
+template <class inputItr, class outputItr,
+          class unaryOperation>
+outputItr transform(inputItr first, inputItr last,
+                   outputItr destFirst,
+                   unaryOperation op);
+```
+
+```
+template <class inputItr1, class inputItr2,
+          class outputItr, class binaryOperation>
+outputItr transform(inputItr1 first1, inputItr1 last,
+                    inputItr2 first2,
+                    outputItr destFirst,
+                    binaryOperation op);
+```
+
+The first form of the function transform has four parameters. This function creates a sequence of elements at the destination, beginning with destFirst, by applying the unary operation op to each element in the range first1...last1. This function returns the position one past the last element copied at the destination.
+
+The second form of the function transform has five parameters. This function creates a sequence of elements by applying the binary operation bOp—that is, bOp (elemRange1, elemRange2)—to the corresponding elements in the range first1...last1−1 and the range beginning with first2. The resulting sequence is placed at the destination beginning at destFirst. The function returns the position one element past the last element copied at the destination.
+
+Example 22–25 illustrates how to use these functions.

@@ -1,0 +1,40 @@
+```
+```cpp
+while (num != -1)                         //Line 5
+{
+    sum = sum + num;                       //Line 6
+    count++;                               //Line 7
+    cin >> num;                            //Line 8
+}
+
+cout << "The sum of the numbers is: " << sum
+     << endl;                              //Line 9
+
+if (count != 0)                            //Line 10
+    average = sum / count;                 //Line 11
+else                                       //Line 12
+    average = 0;                           //Line 13
+
+cout << "The average is: " << average << endl; //Line 14
+```
+```
+
+This algorithm has five operations (Lines 1 through 4) before the `while` loop. Similarly, there are nine or eight operations after the `while` loop, depending on whether Line 11 or Line 13 executes.
+
+Line 5 has one operation, and there are four operations within the `while` loop (Lines 6 through 8). Thus, Lines 5 through 8 have five operations. If the `while` loop executes 10 times, these five operations execute 10 times, plus one extra operation is executed at Line 5 to terminate the loop. Therefore, the number of operations executed from Lines 5 through 8 is 51.
+
+If the `while` loop executes 10 times, the total number of operations executed is:
+
+5 × 10 + 1 + 5 + 9 or 5 × 10 + 1 + 5 + 8
+
+That is:
+
+5 × 10 + 15 or 5 × 10 + 14
+
+We can generalize it to the case when the `while` loop executes n times. If the `while` loop executes n times, the number of operations executed is:
+
+5n + 15 or 5n + 14
+
+In these expressions, for very large values of n, the term 5n becomes the dominating term, and the terms 15 and 14 become negligible.
+
+Usually, in an algorithm, certain operations are dominant. For example, in the algorithm in Example 19-4, to add numbers, the dominant operation is in Line 6. Similarly, in a search algorithm, because the search item is compared with the items in the list, the dominant operations would be comparison, that is, the relational operation. Therefore, in the case of a search algorithm, we count the number of comparisons.

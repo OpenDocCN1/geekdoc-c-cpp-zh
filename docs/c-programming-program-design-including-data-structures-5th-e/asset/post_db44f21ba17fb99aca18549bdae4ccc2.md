@@ -1,0 +1,159 @@
+
+### TABLE 22-10 Various Operations Specific to a `list` Container
+
+| Expression | Description |
+|---|---|
+| `listCont.assign(n, elem)` | Assigns `n` copies of `elem`. |
+| `listCont.assign(beg, end)` | Assigns all of the elements in the range `beg...end-1`. Both `beg` and `end` are iterators. |
+| `listCont.push_front(elem)` | Inserts `elem` at the beginning of `listCont`. |
+| `listCont.pop_front()` | Removes the first element from `listCont`. |
+| `listCont.front()` | Returns the first element. (Does not check whether the container is empty.) |
+| `listCont.back()` | Returns the last element. (Does not check whether the container is empty.) |
+| `listCont.remove(elem)` | Removes all of the elements that are equal to `elem`. |
+| `listCont.remove_if(oper)` | Removes all of the elements for which `oper` is `true`. |
+| `listCont.unique()` | If the consecutive elements in `listCont` have the same value, removes the duplicates. |
+| `listCont.unique(oper)` | If the consecutive elements in `listCont` have the same value, removes the duplicates, for which `oper` is `true`. |
+| `listCont1.splice(pos, listCont2)` | All of the elements of `listCont2` are moved to `listCont1` before the position specified by the iterator `pos`. After this operation, `listCont2` is empty. |
+| `listCont1.splice(pos, listCont2, pos2)` | All of the elements starting at `pos2` of `listCont2` are moved to `listCont1` before the position specified by the iterator `pos`. |
+| `listCont1.splice(pos, listCont2, beg, end)` | All of the elements in the range `beg...end-1` of `listCont2` are moved to `listCont1` before the position specified by the iterator `pos`. Both `beg` and `end` are iterators. |
+| `listCont.sort()` | The elements of `listCont` are sorted. The sort criteria is `<`. |
+| `listCont.sort(oper)` | The elements of `listCont` are sorted. The sort criteria is specified by `oper`. |
+| `listCont1.merge(listCont2)` | Suppose that the elements of `listCont1` and `listCont2` are sorted. This operation moves all of the elements of `listCont2` into `listCont1`. After this operation, the elements in `listCont1` are sorted. Moreover, after this operation, `listCont2` is empty. |
+
+```cpp
+cout << "Line 12: intList1: ";                         //Line 12
+copy(intList1.begin(), intList1.end(), screen);       //Line 13
+cout << endl;                                         //Line 14
+
+intList2 = intList1;                                  //Line 15
+
+cout << "Line 16: intList2: ";                       //Line 16
+copy(intList2.begin(), intList2.end(), screen);       //Line 17
+cout << endl;                                         //Line 18
+
+intList1.unique();                                    //Line 19
+
+cout << "Line 20: After removing the consecutive "
+     << "duplicates," << endl
+     << "             intList1: ";                    //Line 20
+copy(intList1.begin(), intList1.end(), screen);       //Line 21
+cout << endl;                                         //Line 22
+
+intList2.sort();                                      //Line 23
+
+cout << "Line 24: After sorting, intList2: ";        //Line 24
+copy(intList2.begin(), intList2.end(), screen);       //Line 25
+cout << endl;                                         //Line 26
+
+intList3.push_back(13);                               //Line 27
+intList3.push_back(23);                               //Line 28
+intList3.push_back(25);                               //Line 29
+intList3.push_back(136);                              //Line 30
+intList3.push_back(198);                              //Line 31
+
+cout << "Line 32: intList3: ";                       //Line 32
+copy(intList3.begin(), intList3.end(), screen);       //Line 33
+cout << endl;                                         //Line 34
+
+intList4.push_back(-2);                               //Line 35
+intList4.push_back(-7);                               //Line 36
+intList4.push_back(-8);                               //Line 37
+
+cout << "Line 38: intList4: ";                       //Line 38
+copy(intList4.begin(), intList4.end(), screen);       //Line 39
+cout << endl;                                         //Line 40
+
+intList3.splice(intList3.begin(), intList4);          //Line 41
+
+cout << "Line 42: After moving the elements of "
+     << "intList4 into intList3," << endl
+     << "             intList3: ";                    //Line 42
+copy(intList3.begin(), intList3.end(), screen);       //Line 43
+cout << endl;                                         //Line 44
+
+intList3.sort();                                      //Line 45
+
+cout << "Line 46: After sorting, intList3: ";        //Line 46
+copy(intList3.begin(), intList3.end(), screen);       //Line 47
+cout << endl;                                         //Line 48
+
+intList2.merge(intList3);                             //Line 49
+
+cout << "Line 50: After merging intList2 and "
+     << "intList3: " << endl                       //Line 50
+     << "          ";
+copy(intList2.begin(), intList2.end(), screen);       //Line 51
+cout << endl;                                         //Line 52
+
+intList2.unique();                                    //Line 53
+
+cout << "Line 54: After removing the consecutive "
+     << "duplicates, intList2: " << endl             //Line 54
+     << "          ";
+copy(intList2.begin(), intList2.end(), screen);       //Line 55
+cout << endl;                                         //Line 56
+
+return 0;
+}
+```
+
+### Sample Run
+
+```text
+Line 12: intList1: 23 58 58 58 36 15 93 98 58
+Line 16: intList2: 23 58 58 36 15 93 98 58
+Line 20: After removing the consecutive duplicates,
+          intList1: 23 58 36 15 93 98 58
+Line 24: After sorting, intList2: 15 23 36 58 58 58 58 93 98
+Line 32: intList3: 13 23 25 136 198
+Line 38: intList4: -2 -7 -8
+Line 42: After moving the elements of intList4 into intList3,
+          intList3: -2 -7 -8 13 23 25 136 198
+Line 46: After sorting, intList3: -8 -7 -2 13 23 25 136 198
+Line 50: After merging intList2 and intList3:
+          -8 -7 -2 13 15 23 23 25 36 58 58 58 58 93 98 136 198
+Line 54: After removing the consecutive duplicates, intList2:
+          -8 -7 -2 13 15 23 25 36 58 93 98 136 198
+```
+
+For the most part, the output of the preceding program is straightforward. The statements in Lines 3 through 11 insert the element numbers 23, 58, 58, 58, 36, 15, 93, 98, and 58 (in that order) into intList1. The statement in Line 15 copies the elements of intList1 into intList2. After this statement executes, intList1 and intList2 are identical. The statement in Line 19 removes any consecutive occurrences of the same elements. For example, the number 58 appears consecutively three times. The operation unique removes two occurrences of 58. Note that this operation has no effect on the 58 that appears at the end of intList1.
+
+The statement in Line 23 sorts intList2. The statements in Lines 27 through 31 insert 13, 23, 25, 136, and 198 into intList3. Similarly, the statements in Lines 35 through 37 insert −2, −7, and −8 into intList4. The statement in Line 41 uses the operation splice to move the elements of `intList4` to the beginning of `intList3`. After the splice operation, `intList4` is empty. The statement in Line 45 sorts `intList3`, and the statement in Line 49 merges `intList2` and `intList3` into `intList2`. After the merge operation, `intList3` is empty. The meanings of the remaining statements are similar.
+
+Examples 22–5 through 22–7 further clarify that iterators are important to efficiently process the elements of a container. Before describing associative containers, let us discuss iterators in some detail.
+
+## Iterators
+
+Iterators are similar to pointers. In general, an iterator points to the elements of a container (sequence or associative). Thus, with the help of iterators, we can successively access each element of a container.
+
+The two most common operations on iterators are `++` (the increment operator) and `*` (the dereferencing operator). Suppose that `cntItr` is an iterator into a container. The statement:
+
+```cpp
+++cntItr;
+```
+
+advances `cntItr` so that it points to the next element in the container. Similarly, the statement:
+
+```cpp
+*cntItr;
+```
+
+gives access to the element of the container pointed to by `cntItr`.
+
+## Types of Iterators
+
+There are five types of iterators:
+
+- Input iterators
+- Output iterators
+- Forward iterators
+- Bidirectional iterators
+- Random access iterators
+
+The following sections describe these iterators.
+
+### INPUT ITERATORS
+
+Input iterators, with read access, step forward element by element; consequently, they return the values element by element. These iterators are provided for reading data from an input stream.
+
+Suppose `inputIterator` is an input iterator. Table 22–11 describes the operations on `inputIterator`.

@@ -1,0 +1,62 @@
+We now give the definitions of the functions to implement the various operations of the **class personType**.
+
+The definitions of the member functions setName, getFirstName, getLastName, and the constructors are the same as those given in Chapter 11. We, therefore, consider the definitions of the functions to overload the relational and stream operators.
+
+The names of two people are the same if their first and last names are the same. Therefore, the definition of the function to overload the equality operator is:
+
+```
+```cpp
+bool personType::operator==(const personType& right) const
+{
+    return (firstName == right.firstName
+            && lastName == right.lastName);
+}
+```
+```
+
+The names of two people are different if either their first or last names are different. Therefore, the definition of the function to overload the not equal to operator is:
+
+```
+```cpp
+bool personType::operator!=(const personType& right) const
+{
+    return (firstName != right.firstName
+            || lastName != right.lastName);
+}
+```
+```
+
+Similarly, the definitions of the functions to overload the remaining relational operators are:
+
+```
+```cpp
+bool personType::operator<=(const personType& right) const
+{
+    return (lastName <= right.lastName ||
+            (lastName == right.lastName &&
+             firstName <= right.firstName));
+}
+```
+```
+
+```
+```cpp
+bool personType::operator<(const personType& right) const
+{
+    return (lastName < right.lastName ||
+            (lastName == right.lastName &&
+             firstName < right.firstName));
+}
+```
+```
+
+```
+```cpp
+bool personType::operator>=(const personType& right) const
+{
+    return (lastName >= right.lastName ||
+            (lastName == right.lastName &&
+             firstName >= right.firstName));
+}
+```
+```

@@ -1,0 +1,17 @@
+Chapter 8 discusses the user-defined simple data type (enumeration type), the namespace mechanism of ANSI/ISO Standard C++, and the `string` type. The earlier versions of C did not include the enumeration type. Enumeration types have very limited use; their main purpose is to make the program readable. This book is organized such that readers can skip the section on enumeration types during the first reading without experiencing any discontinuity, and then later go through this section.
+
+Chapter 9 discusses arrays in detail. Chapter 10 introduces records (`structs`). The introduction of `structs` in this book is similar to C `structs`. This chapter is optional; it is not a prerequisite for any of the remaining chapters.
+
+Chapter 11 begins the study of object-oriented programming (OOP) and introduces classes. The first half of this chapter shows how classes are defined and used in a program. The second half of the chapter introduces abstract data types (ADTs). This chapter shows how classes in C++ are a natural way to implement ADTs. Chapter 12 continues with the fundamentals of object-oriented design (OOD) and OOP, and discusses inheritance and composition. It explains how classes in C++ provide a natural mechanism for OOD and how C++ supports OOP. Chapter 12 also discusses how to find the objects in a given problem.
+
+Chapter 13 studies pointers in detail. After introducing pointers and how to use them in a program, this chapter highlights the peculiarities of classes with pointer data members and how to avoid them. Moreover, this chapter also discusses how to create and work with dynamic two-dimensional arrays. Chapter 13 also discusses abstract classes and a type of polymorphism accomplished via virtual functions.
+
+Chapter 14 continues the study of OOD and OOP. In particular, it studies polymorphism in C++. Chapter 14 specifically discusses two types of polymorphism—overloading and templates.
+
+Chapter 15 discusses exception handling in detail. Chapter 16 introduces and discusses recursion. This is a stand-alone chapter, so it can be studied anytime after Chapter 10.
+
+Chapters 17 and 18 are devoted to the study of data structures. Discussed in detail are linked lists in Chapter 17 and stacks and queues in Chapter 18. The programming code developed in these chapters is generic. These chapters effectively use the fundamentals of OOD.
+
+Chapter 19 discusses various searching and sorting algorithms. In addition to showing how these algorithms work, it also provides relevant analysis and results concerning the performance of the algorithms. The algorithm analysis allows the user to decide which algorithm to use in a particular application. This chapter also includes several sorting algorithms. The instructor can decide which algorithms to cover.
+
+Chapter 20 provides an introduction to binary trees. Various traversal algorithms, as well as the basic properties of binary trees, are discussed and illustrated. Special binary trees, called binary search trees, are introduced. Searching, as well as item insertion and deletion from a binary search tree, are described and illustrated. Chapter 20 also discusses nonrecursive binary tree traversal algorithms. Furthermore, to enhance the flexibility of traversal algorithms, it shows how to construct and pass functions as parameters to other functions. This chapter also discusses AVL

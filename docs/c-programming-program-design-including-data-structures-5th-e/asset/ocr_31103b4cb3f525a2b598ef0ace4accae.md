@@ -1,0 +1,54 @@
+```
+```cpp
+//Use the assignment operator to copy the elements
+//of stack into otherStack
+otherStack = stack;
+
+cout << "Testing the copy constructor." << endl;
+
+testCopy(otherStack);
+
+cout << "After the copy constructor, otherStack: " << endl;
+
+while (!otherStack.isEmptyStack())
+{
+    cout << otherStack.top() << endl;
+    otherStack.pop();
+}
+
+return 0;
+}
+
+//Function to test the copy constructor
+void testCopy(linkedStackType<int> otherStack)
+{
+    cout << "Stack in the function testCopy:" << endl;
+
+    while (!OStack.isEmptyStack())
+    {
+        cout << OStack.top() << endl;
+        OStack.pop();
+    }
+}
+```
+```
+
+# Sample Run:
+
+```
+```text
+After the assignment operator, newStack:
+27
+43
+34
+Testing the copy constructor.
+Stack in the function testCopy:
+27
+43
+34
+After the copy constructor, otherStack:
+27
+43
+34
+```
+```

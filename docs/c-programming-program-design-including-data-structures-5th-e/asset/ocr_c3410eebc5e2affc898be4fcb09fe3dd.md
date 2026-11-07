@@ -1,0 +1,60 @@
+In skeleton form, a C++ program looks like the following:
+
+```
+```cpp
+//comments, if needed
+
+preprocessor directives to include header files
+
+using statement
+
+named constants, if necessary
+
+int main()
+{
+    statement_1
+    .
+    .
+    .
+    statement_n
+    return 0;
+}
+```
+```
+
+The C++ program in Example 2–29 shows where include statements, declaration statements, executable statements, and so on typically appear in the program.
+
+# EXAMPLE 2-29
+
+```
+```cpp
+/**************************************************************
+// Author: D.S. Malik
+//
+// This program shows where the include statements, using
+// statement, named constants, variable declarations, assignment
+// statements, and input and output statements typically appear.
+/**************************************************************
+
+#include <iostream>                                      //Line 1
+
+using namespace std;                                     //Line 2
+
+const int NUMBER = 12;                                   //Line 3
+
+int main()                                               //Line 4
+{                                                        //Line 5
+    int firstNum;                                        //Line 6
+    int secondNum;                                       //Line 7
+
+    firstNum = 18;                                       //Line 8
+    cout << "Line 9: firstNum = " << firstNum
+         << endl;                                        //Line 9
+
+    cout << "Line 10: Enter an integer: ";              //Line 10
+    cin >> secondNum;                                    //Line 11
+    cout << endl;                                        //Line 12
+```
+```
+
+![](bbox=[0.904, 0.16, 1.0, 0.265])

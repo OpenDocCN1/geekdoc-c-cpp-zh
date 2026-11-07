@@ -1,0 +1,64 @@
+```
+```cpp
+{
+    cout << x << " ";
+    exercise (x + 1);
+}
+}
+```
+```
+
+What is the output of the following statements?
+
++   a. `exercise(0);`  
++   b. `exercise(5);`  
++   c. `exercise(10);`  
++   d. `exercise(-5);`
+
+**12.** Consider the following function:
+
+```
+```cpp
+int test(int x, int y)
+{
+    if (x == y)
+        return x;
+    else if (x > y)
+        return (x + y);
+    else
+        return test(x + 1, y - 1);
+}
+```
+```
+
+What is the output of the following statements?
+
++   a. `cout << test(5, 10) << endl;`  
++   b. `cout << test(3, 9) << endl;`
+
+**13.** Consider the following function:
+
+```
+```cpp
+int func(int x)
+{
+    if (x == 0)
+        return 2;
+    else if (x == 1)
+        return 3;
+    else
+        return (func(x - 1) + func(x - 2));
+}
+```
+```
+
+What is the output of the following statements?
+
++   a. `cout << func(0) << endl;`  
++   b. `cout << func(1) << endl;`  
++   c. `cout << func(2) << endl;`  
++   d. `cout << func(5) << endl;`
+
+**14.** Suppose that intArray is an array of integers, and length specifies the number of elements in intArray. Also, suppose that low and high are two integers such that 0 <= low < length, 0 <= high < length, and low < high. That is, low and high are two indices in intArray. Write a recursive definition that reverses the elements in intArray between low and high.
+
+**15.** Write a recursive algorithm to multiply two positive integers *m* and *n* using repeated addition. Specify the base case and the recursive case.

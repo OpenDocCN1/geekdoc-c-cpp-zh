@@ -1,0 +1,129 @@
+
+A graph can be shown pictorially. The vertices are drawn as circles, and a label inside of the circle represents the vertex. In an undirected graph, the edges are drawn using lines. In a directed graph, the edges are drawn using arrows. Moreover, in a directed graph, the tail of a pictorial directed edge is the origin, and the head is the destination.
+
+### EXAMPLE 21-1
+
+Figure 21–3 shows some examples of undirected graphs.
+
+![](img/f97f778697507bb6fdd80c5991210cba_1365_0.png)
+
+**FIGURE 21-3** Various undirected graphs
+
+### EXAMPLE 21-2
+
+Figure 21-4 shows some examples of directed graphs.
+
+![](img/f97f778697507bb6fdd80c5991210cba_1366_0.png)
+
+**FIGURE 21-4** Various directed graphs
+
+For the graphs of Figure 21-4, we have:
+
+$V(G_1)=\{1,2,3,4,5\}$
+
+$V(G_2)=\{0,1,2,3,4\}$
+
+$V(G_3)=\{0,1,2,3,4,5,6,7,8,9,10\}$
+
+$E(G_1)=\{(1,2),(1,4),(2,5),(3,1),(3,4),(4,5)\}$
+
+$E(G_2)=\{(0,1),(0,3),(1,2),(1,4),(2,1),(4,3)\}$
+
+$E(G_3)=\{(0,1),(0,5),(1,2),(1,3),(1,5),(2,4),(4,3),(5,6),(6,8),(7,3),(7,8),(8,10),(9,4),(9,7),(9,10)\}$
+
+Let $G$ be an undirected graph. Let $u$ and $v$ be two vertices in $G$. Then, $u$ and $v$ are called **adjacent** if there is an edge from one to the other; that is, $(u,v)\in E(G)$. Let $e=(u,v)$ be an edge in $G$. We then say that edge $e$ is incident on the vertices $u$ and $v$. An edge incident on a single vertex is called a **loop**. If two edges, $e_1$ and $e_2$, are associated with the same pair of vertices, then $e_1$ and $e_2$ are called **parallel edges**. A graph is called a **simple graph** if it has no loops and no parallel edges. There is a **path** from $u$ to $v$ if there is a sequence of vertices $u_1,u_2,\ldots,u_n$ such that $u=u_1$, $v=u_n$, and $(u_i,u_{i+1})$ is an edge for all $i=1,2,\ldots,n-1$. Vertices $u$ and $v$ are called **connected** if there is a path from $u$ to $v$. A **simple path** is a path in which all of the vertices, except possibly the first and last vertices, are distinct. A **cycle** in *G* is a simple path in which the first and last vertices are the same. *G* is called **connected** if there is a path from any vertex to any other vertex. A maximal subset of connected vertices is called a **component** of *G*.
+
+Let *G* be a directed graph, and let *u* and *v* be two vertices in *G*. If there is an edge from *u* to *v*, that is, (*u*, *v*) ∈ *E*(*G*), then we say that *u* is **adjacent to** *v* and *v* is **adjacent from** *u*. The definitions of the paths and cycles in *G* are similar to those for undirected graphs. *G* is called **strongly connected** if any two vertices in *G* are connected.
+
+Consider the directed graphs of Figure 21–4. In *G*₁, 1–4–5 is a path from vertex 1 to vertex 5. There are no cycles in *G*₁. In *G*₂, 1–2–1 is a cycle. In *G*₃, 0–1–2–4–3 is a path from vertex 0 to vertex 3; 1–5–6–8–10 is a path from vertex 1 to vertex 10. There are no cycles in *G*₃.
+
+## Graph Representation
+
+To write programs that process and manipulate graphs, the graphs must be stored—that is, represented—in computer memory. A graph can be represented (in computer memory) in several ways. We now discuss two commonly used methods: adjacency matrices and adjacency lists.
+
+### Adjacency Matrix
+
+Let *G* be a graph with *n* vertices, in which *n* > 0. Let *V*(*G*) = {v₁, v₂, …, vₙ}. The **adjacency matrix** *A*<sub>G</sub> of *G* is a two-dimensional *n* × *n* matrix such that the (*i*, *j*)th entry of *A*<sub>G</sub> is 1 if there is an edge from vᵢ to vⱼ; otherwise, the (*i*, *j*)th entry is zero. That is:
+
+A<sub>G</sub>(i, j) = {
+  1  if (vᵢ, vⱼ) ∈ E(G)
+  0  otherwise
+}
+
+In an undirected graph, if (vᵢ, vⱼ) ∈ E(G), then (vⱼ, vᵢ) ∈ E(G), so A<sub>G</sub>(i, j) = 1 = A<sub>G</sub>(j, i). It follows that the adjacency matrix of an undirected graph is symmetric.
+
+### EXAMPLE 21-3
+
+Consider the directed graphs of Figure 21–4. The adjacency matrices of the directed graphs *G*₁, *G*₂, and *G*₃ are as follows:
+
+$$A_{G_1}=\begin{bmatrix}0&1&0&1&0\\0&0&0&0&1\\1&0&0&1&0\\0&0&0&0&1\\0&0&0&0&0\end{bmatrix}$$
+
+$$A_{G_2}=\begin{bmatrix}0&1&0&1&0\\0&0&1&0&1\\0&1&0&0&1\\0&0&0&0&0\\0&0&0&1&0\end{bmatrix}$$
+
+$$A_{G_3}=\begin{bmatrix}0&1&0&0&0&1&0&0&0&0&0\\0&0&1&1&0&1&0&0&0&0&0\\0&0&0&0&1&0&0&0&0&0&0\\0&0&0&0&0&0&0&0&0&0&0\\0&0&0&1&0&0&0&0&0&0&0\\0&0&0&0&0&0&1&0&0&0&0\\0&0&0&0&0&0&0&0&0&0&0\\0&0&0&1&0&0&0&0&1&0&0\\0&0&0&0&0&0&0&0&0&0&1\\0&0&0&0&1&0&0&1&0&0&1\\0&0&0&0&0&0&0&0&0&0&0\end{bmatrix}$$
+
+### Adjacency Lists
+
+Let $G$ be a graph with $n$ vertices, in which $n > 0$. Let $V(G) = \{v_1, v_2, \ldots, v_n\}$. In the adjacency list representation, corresponding to each vertex $v$, there is a linked list such that each node of the linked list contains the vertex, $u$, such that $(v, u) \in E(G)$. Because there are $n$ nodes, we use an array, $A$, of size $n$, such that $A[i]$ is a reference variable pointing to the first node of the linked list containing the vertices to which $v_i$ is adjacent. Clearly, each node has two components, say `vertex` and `link`. The component `vertex` contains the index of the vertex adjacent to vertex $i$.
+
+### EXAMPLE 21-4
+
+Consider the directed graphs of Figure 21-4. Figure 21-5 shows the adjacency list of the directed graph $G_2$.
+
+![](img/f97f778697507bb6fdd80c5991210cba_1369_0.png)
+
+**FIGURE 21-5** Adjacency list of graph G₂ of Figure 21-4
+
+Figure 21–6 shows the adjacency list of the directed graph G₃.
+
+![](img/f97f778697507bb6fdd80c5991210cba_1369_1.png)
+
+**FIGURE 21-6** Adjacency list of graph G₃ of Figure 21-4
+
+## Operations on Graphs
+
+Now that you know how to represent graphs in computer memory, the next obvious step is to learn the basic operations on a graph. The operations commonly performed on a graph are as follows:
+
+- 1. Create the graph. That is, store the graph in computer memory using a particular graph representation.
+- 2. Clear the graph. This operation makes the graph empty.
+- 3. Determine whether the graph is empty.
+- 4. Traverse the graph.
+- 5. Print the graph.
+
+We will add more operations on a graph when we discuss a specific application or a particular graph later in this chapter.
+
+How a graph is represented in computer memory depends on the specific application. For illustration purposes, we use the adjacency list (linked list) representation of graphs. Therefore, for each vertex, v, the vertices adjacent to v (in a directed graph, also called the **immediate successors**) are stored in the linked list associated with v.
+
+To manage the data in a linked list, we use the class `unorderedLinkedList`, discussed in Chapter 17.
+
+The labeling of the vertices of a graph depends on a specific application. If you are dealing with the graph of cities, you could label the vertices by the names of the cities. However, to write algorithms to manipulate a graph as well as to simplify the algorithm, there must be some ordering to the vertices. That is, we must specify the first vertex, the second vertex, and so on. Therefore, for simplicity, throughout this chapter, we assume that the n vertices of the graphs are numbered 0, 1, . . . , n − 1. Moreover, it follows that the class that we will design to implement the graph algorithm will not be a template.
+
+## Graphs as ADTs
+
+In this section, we describe the class to implement graphs as an abstract data type (ADT) and provide the definitions of the functions to implement the operations on a graph.
+
+The following class defines a graph as an ADT.
+
+```cpp
+class graphType
+{
+public:
+    bool isEmpty() const;
+        //Function to determine whether the graph is empty.
+        //Postcondition: Returns true if the graph is empty;
+        //               otherwise, returns false.
+
+    void createGraph();
+        //Function to create a graph.
+        //Postcondition: The graph is created using the
+        //               adjacency list representation.
+
+    void clearGraph();
+        //Function to clear graph.
+        //Postcondition: The memory occupied by each vertex
+        //               is deallocated.
+
+    void printGraph() const;
+        //Function to print graph.
+        //Postcondition: The graph is printed.
+```
