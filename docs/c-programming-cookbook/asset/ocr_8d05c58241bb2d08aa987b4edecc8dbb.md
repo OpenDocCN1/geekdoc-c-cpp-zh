@@ -1,0 +1,1 @@
+more specialized exception that includes the username that could not be found, demonstrating how custom exceptions can carry additional context about the error situation. Custom exception classes provide a powerful mechanism for expressing specific error conditions in a manner that is directly relevant to the application's domain.

@@ -467,6 +467,7 @@
 +   [C 语言：现代代码的构建模块（精通编程语言系列）](docs/c-programming-building-blocks-of-modern-code-mastering-progr/README.md)
 +   [C++ 编程：7 天掌握 C++ 编程基础完整指南](docs/c-programming-complete-guide-to-learn-the-basics-of-c-progra/README.md)
 +   [C# 编程：计算机编程初学者指南：学习 C# 基础 (Coding, C 编程, Java 编程, C# 编程, JavaScript, Python, PHP)](docs/c-programming-computer-programming-for-beginners-learn-the-b/README.md)
++   [C++ 编程秘籍](docs/c-programming-cookbook/README.md)
 +   [C++ 编程秘籍：使用 C++ 20 处理函数、文件 I/O、流、内存管理、STL、并发、类型操作和错误调试的实战解决方案](docs/c-programming-cookbook-proven-solutions-using-c-20-across-fu/README.md)
 +   [C语言编程：核心概念与技术](docs/c-programming-core-concepts-and-techniques/README.md)
 +   [C++ 编程 (De Gruyter 教科) (de Gruyter Stem)](docs/c-programming-de-gruyter-textbook-de-gruyter-stem/README.md)

@@ -1,0 +1,1 @@
+Both list and forward_list are essential tools in the STL for managing sequences where the performance of insertions and deletions is critical, and the trade-offs between bidirectional traversal and memory efficiency are considered.
