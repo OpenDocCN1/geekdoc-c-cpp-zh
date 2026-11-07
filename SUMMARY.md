@@ -536,6 +536,7 @@
 +   [C语言：终极初学者指南](docs/c-programming-language-the-ultimate-beginners-guide/README.md)
 +   [C 语言：学习编程，第 1 版](docs/c-programming-learn-to-code-1st-edition/README.md)
 +   [C++ 编程简明指南：编程初学者指南](docs/c-programming-made-simple-a-beginners-guide-to-programming/README.md)
++   [C++ 编程（编程语言精通系列）](docs/c-programming-mastering-programming-languages-series/README.md)
 +   [C 编程 新版](docs/c-programming-new-edition/README.md)
 +   [树莓派上的 C 编程——用 C 开发创新的硬件项目](docs/c-programming-on-raspberry-pi---develop-innovative-hardware-/README.md)
 +   [C 编程模式：学习编程技能的改善之道](docs/c-programming-patterns-a-kaizen-way-to-learn-coding-skills/README.md)

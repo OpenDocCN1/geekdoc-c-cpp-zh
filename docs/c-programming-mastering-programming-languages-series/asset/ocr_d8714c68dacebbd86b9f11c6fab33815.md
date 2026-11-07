@@ -1,0 +1,3 @@
+In this instance, the nested ternary operators are employed to categorize a student's score as "Pass," "Average," or "Fail" based on different score ranges.
+
+Understanding the ternary operator in C++ provides developers with a powerful tool for expressing compact conditionals in a clear and concise manner. While its application is best suited for straightforward scenarios, it significantly contributes to code readability and brevity in situations where simplicity is paramount.
