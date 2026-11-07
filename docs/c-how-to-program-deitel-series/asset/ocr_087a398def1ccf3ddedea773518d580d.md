@@ -1,0 +1,63 @@
+# Self-Review Exercises
+
++   **22.1** Fill in the blanks in each of the following:
++   
++   a) The bits in the result of an expression using the ______ operator are set to one if the corresponding bits in each operand are set to one. Otherwise, the bits are set to zero.
++   
++   b) The bits in the result of an expression using the ______ operator are set to one if at least one of the corresponding bits in either operand is set to one. Otherwise, the bits are set to zero.
++   
++   c) Keyword ______ introduces a structure declaration.
++   
++   d) Keyword ______ is used to create a synonym for a previously defined data type.
++   
++   e) Each bit in the result of an expression using the ______ operator is set to one if exactly one of the corresponding bits in either operand is set to one.
++   
++   f) The bitwise AND operator is often used with ______ bits (i.e., to select certain bits from a bit string while zeroing others).
++   
++   g) The ______ and ______ operators are used to shift the bits of a value to the left or to the right, respectively.
+
++   **22.2** Write a single statement or a set of statements to accomplish each of the following:
++   
++   a) Define a structure called Part containing int variable partNumber and char array partName, whose values may be as long as 25 characters.
++   
++   b) Define PartPtr to be a synonym for the type Part *.
++   
++   c) Use separate statements to declare variable a to be of type Part, array b[10] to be of type Part and variable ptr to be of type pointer to Part.
++   
++   d) Read a part number and a part name from the keyboard into the members of variable a.
++   
++   e) Assign the member values of variable a to element three of array b.
++   
++   f) Assign the address of array b to the pointer variable ptr.
++   
++   g) Print the member values of element three of array b, using the variable ptr and the structure pointer operator to refer to the members.
+
++   **22.3** Write a single statement to accomplish each of the following. Assume that variables c (which stores a character), x, y, and z are of type int; variables d, e and f are of type double; variable ptr is of type char * and arrays s1[100] and s2[100] are of type char.
++   
++   a) Convert the character stored in c to an uppercase letter. Assign the result to variable c.
++   
++   b) Determine if the value of variable c is a digit. Use the conditional operator as shown in Figs. 22.18–22.20 to print "is a" or "is not a" when the result is displayed.
++   
++   c) Convert the string "1234567" to long, and print the value.
++   
++   d) Determine whether the value of variable c is a control character. Use the conditional operator to print "is a" or "is not a" when the result is displayed.
++   
++   e) Assign to ptr the location of the last occurrence of c in s1.
++   
++   f) Convert the string "8.63582" to double, and print the value.
++   
++   g) Determine whether the value of c is a letter. Use the conditional operator to print "is a" or "is not a" when the result is displayed.
++   
++   h) Assign to ptr the location of the first occurrence of c in s1.
++   
++   i) Determine whether the value of variable c is a printing character. Use the conditional operator to print "is a" or "is not a" when the result is displayed.
++   
++   j) Assign to ptr the location of the first occurrence of c in s2.
++   
++   k) Assign to ptr the location of the first occurrence of c in s1.
++   
++   l) Convert the string "-21" to int, and print the value.
+
+# Answers to Self-Review Exercises
+
+**22.1** a) bitwise AND (&). b) bitwise inclusive OR (|). c) struct. d) typedef. e) bitwise exclusive OR (^). f) mask. g) left-shift operator (<<), right-shift operator (>>).

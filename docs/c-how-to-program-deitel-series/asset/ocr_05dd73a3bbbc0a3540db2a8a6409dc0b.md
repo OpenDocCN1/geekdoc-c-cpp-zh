@@ -1,0 +1,23 @@
+The context of a divide-by-zero example. We reviewed how to use try blocks to enclose code that may throw an exception, and how to use catch handlers to deal with exceptions that may arise. You learned how to throw and rethrow exceptions, and how to handle the exceptions that occur in constructors. The chapter continued with discussions of processing new failures, dynamic memory allocation with class `unique_ptr` and the standard library exception hierarchy. In the next chapter, you’ll learn how to build your own custom class templates. In particular, we’ll demonstrate the features that you’ll need to build your own custom templized data structures in Chapter 19.
+
+# ## Summary
+
+# ### Section 17.1 Introduction
+
++   - An exception (p. 741) is an indication of a problem that occurs during a program’s execution.
++   - Exception handling (p. 741) enables you to create programs that can resolve problems that occur at execution time—often allowing programs to continue executing as if no problems had been encountered. More severe problems may require a program to notify the user of the problem before terminating in a controlled manner.
+
+# ### Section 17.2 Example: Handling an Attempt to Divide by Zero
+
++   - Class exception is the standard base class for exceptions classes (p. 742). It provides virtual function `what` (p. 742) that returns an appropriate error message and can be overridden in derived classes.
++   - Class `runtime_error` (p. 742), which is defined in header `<stdexcept>` (p. 742), is the C++ standard base class for representing runtime errors.
++   - C++ uses the termination model (p. 745) of exception handling.
++   - A try block consists of keyword `try` followed by braces (`{}`) that define a block of code in which exceptions might occur. The try block encloses statements that might cause exceptions and statements that should not execute if exceptions occur.
++   - At least one catch handler must immediately follow a try block. Each catch handler specifies an exception parameter that represents the type of exception the catch handler can process.
++   - If an exception parameter includes an optional parameter name, the catch handler can use that parameter name to interact with a caught exception object (p. 746).
++   - The point in the program at which an exception occurs is called the throw point (p. 745).
++   - If an exception occurs in a try block, the try block expires and program control transfers to the first catch in which the exception parameter’s type matches that of the thrown exception.
++   - When a try block terminates, local variables defined in the block go out of scope.
++   - When a try block terminates due to an exception, the program searches for the first catch handler that matches the type of exception that occurred. A match occurs if the types are identical or if the thrown exception’s type is a derived class of the exception-parameter type. When a match occurs, the code contained within the matching catch handler executes.
++   - When a catch handler finishes processing, the catch parameter and local variables defined within the catch handler go out of scope. Any remaining catch handlers that correspond to the try block are ignored, and execution resumes at the first line of code after the try…catch sequence.
++   - If no exceptions occur in a try block, the program ignores the catch handler(s) for that block. Program execution resumes with the next statement after the try…catch sequence.

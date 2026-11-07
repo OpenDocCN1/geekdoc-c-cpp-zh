@@ -1,0 +1,47 @@
++   d) `0143`
++      `0x63`
++   
++    e) `100000`
++      `+100000`
++   
++    f) `4.45e+002`
+
+# Exercises
+
++   **13.6** *(Write C++ Statements)* Write a statement for each of the following:
++   
++   a) Print integer 40000 left justified in a 15-digit field.
++   
++   b) Read a string into character array variable `state`.
++   
++   c) Print 200 with and without a sign.
++   
++   d) Print the decimal value 100 in hexadecimal form preceded by 0x.
++   
++   e) Read characters into array `charArray` until the character `'p'` is encountered, up to a limit of 10 characters (including the terminating null character). Extract the delimiter from the input stream, and discard it.
++   
++   f) Print 1.234 in a 9-digit field with preceding zeros.
+
+**13.7** *(Inputting Decimal, Octal and Hexadecimal Values)* Write a program to test the inputting of integer values in decimal, octal and hexadecimal formats. Output each integer read by the program in all three formats. Test the program with the following input data: 10, 010, 0x10.
+
+**13.8** *(Printing Pointer Values as Integers)* Write a program that prints pointer values, using casts to all the integer data types. Which ones print strange values? Which ones cause errors?
+
+**13.9** *(Printing with Field Widths)* Write a program to test the results of printing the integer value 12345 and the floating-point value 1.2345 in various-sized fields. What happens when the values are printed in fields containing fewer digits than the values?
+
+**13.10** *(Rounding)* Write a program that prints the value 100.453627 rounded to the nearest digit, tenth, hundredth, thousandth and ten-thousandth.
+
+**13.11** *(Length of a String)* Write a program that inputs a string from the keyboard and determines the length of the string. Print the string in a field width that is twice the length of the string.
+
+**13.12** *(Converting Fahrenheit to Celsius)* Write a program that converts integer Fahrenheit temperatures from 0 to 212 degrees to floating-point Celsius temperatures with 3 digits of precision. Use the formula
+
+```cpp
+celsius = 5.0 / 9.0 * ( fahrenheit - 32 );
+```
+
+to perform the calculation. The output should be printed in two right-justified columns and the Celsius temperatures should be preceded by a sign for both positive and negative values.
+
+**13.13** In some programming languages, strings are entered surrounded by either single or double quotation marks. Write a program that reads the three strings `suzy`, `suzy` and `suzy`. Are the single and double quotes ignored or read as part of the string?
+
+**13.14** *(Reading Phone Numbers with and Overloaded Stream Extraction Operator)* In Fig. 10.5, the stream extraction and stream insertion operators were overloaded for input and output of objects of the `PhoneNumber` class. Rewrite the stream extraction operator to perform the following error checking on input. The operator>> function will need to be reimplemented.
+
+a) Input the entire phone number into an array. Test that the proper number of characters has been entered. There should be a total of 14 characters read for a phone number of the form (800) 555-1212. Use `ios_base-member-function clear` to set `failbit` for improper input.

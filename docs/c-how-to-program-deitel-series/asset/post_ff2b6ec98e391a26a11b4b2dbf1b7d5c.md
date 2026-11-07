@@ -1,0 +1,287 @@
+
+## C
+
+- C extension 17
+- C legacy code 986, 987, 992
+- C-like pointer-based array 641
+- C programming language 12
+- C string 358
+- c_str member function of class string 865
+- C# programming language 13
+- C++ 10
+- C++ compiler 18
+- C++ development environment 18, 19
+- C++ How to Program, 9/e — instructor resources xxxi
+- C++ preprocessor 17, 40
+- C++ programming environment 203
+- C++ Standard Library 11, 203
+  - `<string>` file 72
+  - class template vector 314
+  - header location 86
+  - headers 212
+  - string class 72
+- C++11 31, 251
+  - all_of algorithm 709
+  - anonymous function objects 691
+  - any_of algorithm 709
+  - associative container keys are immutable 641
+  - auto keyword 306, 667
+  - begin function 345, 653
+  - cbegin container member function 653
+  - cend container member function 653
+  - compiler fix for types ending in >> 666
+  - copy_n algorithm 714
+  - crbegin container member function 654
+  - crend container member function 654
+  - default type arguments for function template type parameters 773
+  - delegating constructor 392
+  - end function 345, 653
+  - find_if_not algorithm 710
+  - forward_list class template 640, 658
+  - in-class initializer 381
+  - in-class initializers 178
+  - insert container member function (now returns an iterator) 657, 658
+  - iota algorithm 733
+  - is_heap algorithm 724
+  - is_heap_until algorithm 724
+  - list initialization 139, 671
+  - list initialization of a return type 671
+  - list initialization of associative container 671
+  - list initializer 392
+  - list initializers 654
+  - minmax algorithm 722
+  - minmax_element algorithm 705, 726
+  - move algorithm 713
+  - move assignment operator 642
+  - move constructor 642
+  - move_backward algorithm 713
+  - noexcept 751
+  - none_of algorithm 709
+  - non-member container swap function 642
+  - nullptr constant 336
+  - override 527
+  - random-number generator 288
+  - scoped enum 223
+  - shrink_to_fit container member function for vector and deque 654
+  - specifying an enum’s integral type 223
+  - stod function 870
+  - stof function 870
+  - stoi function 870
+  - stol function 870
+  - stold function 870
+  - stoll function 870
+  - to_string function 870
+  - trailing return types of functions 248
+  - unique_ptr class template 755, 758
+  - unordered_multimap class template 641
+  - unordered_multiset class template 641
+  - unordered_set class template 641
+- calculate a salesperson’s earnings 151
+- calculate the value of π 197
+- Calculating Number of Seconds exercise 270
+- Calculating π 197
+- Calculating Salaries 198
+- Calculating Total Sales 197
+- Calculations 7, 49, 108
+- call a function 71
+- call stack 348
+- calling function (caller) 69, 77
+- calling functions by reference 339
+- calling method (caller) 203
+- camel case 68
+- capacity member function
+  - of string 859
+  - of vector 652
+- capacity of a string 857
+- carbon footprint calculator 35
+- CarbonFootprint Abstract Class: Polymorphism 561
+- Card Shuffling and Dealing 431, 432, 928
+  - simulation 880, 882, 884
+- carriage return ('\r') escape sequence 428, 898, 901
+- carry bit 980
+- cascading member function calls 414, 415, 417
+- cascading stream insertion operations 48
+- case label 174, 175
+- case sensitive 45
+- casino 219
+- `<cassert>` header 214, 992
+- cast 355
+  - downcast 525
+  - cast away const-ness 940
+  - cast expression 989
+  - cast operator 128, 132, 212, 467, 468
+  - cast operator function 467
+  - cast variable visible in debugger 987
+- catch a base class object 758
+- catch all exceptions 759
+- catch block 319
+- catch clause (or handler) 746, 750
+- catch handler 744
+- catch related errors 752
+- catch(...) 759
+- Catching All Exceptions 764
+- Catching Derived-Class Exceptions 764
+- cbegin member function of containers 643
+- cbegin member function of vector 653
+- `<cctype>` header 213, 898
+- ceil function 204
+- Celsius and Fahrenheit Temperatures exercise 271
+- cend member function of containers 643
+- cend member function of vector 653
+- central processing unit (CPU) 7
+- centralized control 28
+- cerr (standard error stream) 19, 95, 565, 566, 600
+- `<cfloat>` header 214
+- chaining stream insertion operations 48
+- char '\n' 912
+- char data types 45, 173, 212, 864
+- char16_t 565
+- char32_t 565
+- character 8, 880
+- character set 8
+- character array 359, 864
+- character constant 358
+- character-handling functions 898
+  - isdigit, isalpha, isalnum and isxdigit 899
+  - islower, isupper, tolower and toupper 900
+  - isspace, iscntrl, ispunct, isprint and isgraph 901
+- character manipulation 203
+- character representation 214
+- character sequences 611
+- character set 64, 178
+- character’s numerical representation 173
+- characters represented as numeric codes 908
+- character-string manipulation 897
+- checked access 853
+- checkerboard pattern 64, 154
+- Checkerboard Pattern of Asterisks exercise 154
+- checkout line in a supermarket 817
+- child 803
+- child node 819
+- chrono library 430
+- cin (standard input stream) 19, 46, 47, 565, 566, 600, 604
+  - function getline 360
+- cin.clear 589
+- cin.eof 569, 583
+- cin.get function 173, 570
+- cin.tie function 590
+- Circle Area exercise 275
+- circular, doubly linked list 794
+- circular, singly linked list 793
+- Cisco 3
+- class 15, 987
+  - attribute 74
+  - client-code programmer 91
+  - constructor 79
+  - data member 16, 74
+  - default constructor 80, 82
+  - define a constructor 81
+  - define a member function 67
+  - implementation programmer 91
+  - instance of 75
+  - interface 87
+  - interface described by function prototypes 87
+  - member function 67
+  - member-function implementations in a separate source-code file 88
+  - naming convention 68
+  - object of 75
+  - public services 87
+- class average on a quiz 118
+- class average problem 118, 126
+- class definition 68
+- class development 454
+- class diagram (UML) 70
+- class hierarchy 484, 532, 534
+- class-implementation programmer 91
+- class keyword 246, 767
+- class libraries 167
+- class library 512
+- class members default to private access 880
+- class scope 228, 382, 385
+- class-scope variable is hidden 386
+- class template 279, 766, 781, 850
+  - auto_ptr 755
+  - definition 766
+  - scope 769
+  - specialization 766
+  - Stack 767, 769
+- class variable 300
+- Classline 110
+- Classes
+  - Array 454
+  - bitset 641, 677, 678, 679
+  - Complex 476
+  - deque 649, 662
+  - exception 742
+  - forward_list 649, 658
+  - HugeInt 478
+  - invalid_argument 758
+  - list 649, 658
+  - multimap 669
+  - out_of_range exception class 319
+  - Polynomial 481
+  - priority_queue 676
+  - queue 675
+  - RationalNumber 481
+  - runtime_error 742, 750
+  - set 668
+  - stack 673
+  - string 72
+  - unique_ptr 755
+  - vector 314
+- classic stream libraries 564
+- classified listings 29
+- clear function of ios_base 589
+- clear member function of containers 643
+- clear member function of first-class containers 658
+- client code 519
+- client-code programmer 91
+- client of an object 78
+- `<climits>` header 214
+- clog (standard error buffered) 565, 566, 600
+- close member function of ofstream 605
+- cloud computing 3, 30
+- `<cmath>` header 166, 213
+- COBOL (Common Business Oriented Language) 12
+- code 14
+- CodeLite 17
+- coefficient 481
+- coin tossing 215, 271
+- Coin Tossing exercise 271
+- collaboration 28
+- colon (:) 228, 407, 953
+- column 304
+- column headings 282
+- column subscript 304
+- combining Class Time and Class Date exercise 429
+- combining control statements in two ways 185
+- comma operator (,) 161, 254
+- comma-separated list of base classes 953
+- comma-separated list of parameters 45, 56, 161, 209, 336
+- comment 40, 46
+- commercial data processing 633
+- commission worker 198
+- CommissionEmployee class header 542
+- CommissionEmployee class implementation file 543
+- CommissionEmployee class represents an employee paid a percentage of gross sales 487
+- CommissionEmployee class test program 490
+- CommissionEmployee class uses member functions to manipulate its private data 505
+- Common Programming Errors
+  - overview xxix
+- community 28
+- commutative 46
+- commutative operation 466
+- comparator function object 665, 669
+- comparator function object less 665, 676
+- compare iterators 648
+- compare member function of class string 855
+- comparing strings 903, 906
+- comparing blocks of memory 919
+- comparing strings 853, 932
+- compilation error 41, 139
+- compilation phase 41
+- compilation unit 945
+- compile 17
+- compile-time error 41
+- compiler 10, 40, 41, 132, 795
+- compiler error 41

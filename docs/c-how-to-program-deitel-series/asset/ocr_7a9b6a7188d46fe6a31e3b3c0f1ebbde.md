@@ -1,0 +1,37 @@
+| Prototype | Description |
+|---|---|
+| `long strtol( const char *nPtr, char **endPtr, int base )` | Converts the string nPtr to long. endPtr is the address of a pointer to the rest of the string after the long. If the string cannot be converted, 0 is returned. The base parameter indicates the base of the number to convert (e.g., 8 for octal, 10 for decimal or 16 for hexadecimal). The default is decimal. |
+| `unsigned long strtoul( const char *nPtr, char **endPtr, int base )` | Converts the string nPtr to unsigned long. endPtr is the address of a pointer to the rest of the string after the unsigned long. If the string cannot be converted, 0 is returned. The base parameter indicates the base of the number to convert (e.g., 8 for octal, 10 for decimal or 16 for hexadecimal). The default is decimal. |
+
+**Fig. 22.27** | C string-conversion functions of the general-utilities library. (Part 2 of 2.)
+
+Function `atof` (Fig. 22.28, line 9) converts its argument—a string that represents a floating-point number—to a double value. The function returns the double value. If the string cannot be converted—for example, if the first character of the string is not a digit—function atof returns zero.
+
+```
+```cpp
+// Fig. 22.28: fig22_28.cpp
+// Using atof.
+#include <iostream>
+#include <cstdlib> // atof prototype
+using namespace std;
+
+int main()
+{
+   double d = atof( "99.0" ); // convert string to double
+
+   cout << "The string \"99.0\" converted to double is " << d
+      << "\nThe converted value divided by 2 is " << d / 2.0 << endl;
+} // end main
+```
+```
+
+```
+```text
+The string "99.0" converted to double is 99
+The converted value divided by 2 is 49.5
+```
+```
+
+**Fig. 22.28** | String-conversion function `atof`.
+
+Function `atoi` (Fig. 22.29, line 9) converts its argument—a string of digits that represents an integer—to an int value. The function returns the int value. If the string cannot be converted, function atoi returns zero.

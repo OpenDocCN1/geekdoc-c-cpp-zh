@@ -1,0 +1,291 @@
+
+## P
+
+- public static class member 419
+- public static member function 419
+- punctuation mark 908
+- punctuation 534
+- pure virtual function 534, 550
+- purpose of the program 40
+- push 771, 794
+- push function of container adapters 673
+- push member function of priority_queue 676, 688
+- push member function of queue 675
+- push member function of stack 673
+- push onto a stack 231
+- push_back member function of class template vector 319
+- push_back member function of vector 652
+- push_front member function of deque 663
+- push_front member function of list 661
+- push_heap algorithm 724, 732
+- put file-position pointer 612, 617
+- put member function 567, 568, 569
+- put pointer 607
+- putback function of istream 572
+- Pythagorean triples 197
+- Python 13
+
+## Q
+
+- quad-core processor 7
+- quadratic runtime 826
+- Quadrilateral Inheritance Hierarchy 515
+- qualified name 509
+- Quality Points for Numeric Grades 271
+- qualityPoints 271
+- &lt;queue&gt; header 213
+- queue 778, 779, 780, 792
+- queue adapter class 675
+  - back function 675
+  - empty function 675
+  - front function 675
+  - pop function 675
+  - push function 675
+  - size function 675
+- Queue class-template definition 800
+- queue grows infinitely 818
+- &lt;queue&gt; header 675, 676
+- queue in a computer network 800
+- queue object 817
+- Queue-processing program 801
+- quicksort algorithm 843, 847
+- quotation marks 41
+
+## R
+
+- radians 204
+- radius of a circle 155
+- raise to a power 193, 205
+- rand function 214, 215
+- RAND_MAX symbolic constant 214
+- random integers in range 1 to 6 215
+- random intervals 817
+- random number 217
+- random-shuffle algorithm 702, 704, 731
+- random-access file 600, 612, 613, 619, 621
+- random-access iterator 646, 647, 662, 665, 691, 697, 704, 709, 723, 724
+- random-access iterator operations 648
+- randomizing 217
+- Randomizing the die-rolling program 218
+- range 645, 705
+- range checking 454, 853
+- range-based for 853, 866
+- range-based for statement 293
+- Rational class exercise 428
+- RationalNumber class 481
+- raw data 611
+- raw data processing 600
+- rbegin member function of class string 866
+- rbegin member function of containers 643
+- rbegin member function of vector 654
+- rdstate function of ios_base 589
+- read 612, 619
+- read a line of text 72
+- read characters with getline 72
+- read data sequentially from a file 605
+- read function of fstream 572
+- read member function 573
+- read member function of istream 612, 626
+- read-only variable 284
+- readability 136
+- Reading a random-access file sequentially 619
+- Reading and printing a sequential file 605
+- “receiving” section of the computer 6
+- record 9, 601, 621, 635
+- record format 614
+- record key 635
+- recover from errors 589
+- Rectangle class exercise 429
+- recursion 248, 255, 256, 272
+- recursion examples and exercises 257
+- recursion exercises
+  - binary search 847
+  - linear search 847
+- recursion step 249, 252, 847
+- recursive binary search 258, 843, 847
+- recursive binary tree delete 258
+- recursive binary tree insert 258
+- recursive binary tree printing 258
+- recursive binary tree search 258
+- recursive call 249, 252
+- Recursive Eight Queens exercise 257, 332
+- Recursive Exponentiation exercise 272
+- recursive factorial function 257
+- recursive Fibonacci function 257
+- recursive function 248, 781
+- recursive function call 795
+- recursive function factorial 251
+- recursive greatest common divisor 257, 273
+- recursive implementation of merge sort 837
+- recursive inorder traversal of a binary tree 258
+- recursive linear search 258, 824, 843, 847
+- recursive maze traversal 257
+- recursive mergesort 258
+- recursive postorder traversal of a binary tree 258
+- recursive preorder traversal of a binary tree 258
+- recursive quicksort 258
+- recursive Towers of Hanoi 257
+- recursive utility function 807
+- recursively calculate minimum value in an array 257
+- recursively check if a string is a palindrome 257
+- recursively determine whether a string is a palindrome exercise 332, 739
+- recursively find the minimum value in an array exercise 332
+- recursively print a linked list backward 258
+- recursively print a list backwards 818
+- recursively print a string backward 257
+- recursively print a string backward exercise 332
+- recursively print an array 257
+- recursively print an array exercise 332
+- recursively raising an integer to an integer power 257
+- recursively search a linked list 258
+- recursively search a list 818
+
+## S
+
+- savings account 165
+- SavingsAccount class 430
+- Scala 14
+- scaling 215
+- scaling factors 215, 219
+- scanning images 6
+- scientific notation 133, 568, 584
+- scientific notation floating-point value 585
+- scientific stream manipulator 579, 584
+- scope 161, 228, 943
+- scope of a symbolic constant or macro 89
+- scope of an identifier 225, 227
+- scope-resolution operator (::) 89, 479, 819, 943, 946, 950, 955
+- scoped enum 223
+- scope-resolution operator (::) 223
+- scopes
+  - class 228
+  - file 228
+  - function 228
+  - function prototype 228
+  - namespace 228
+- scoping example 229
+- screen 5, 6, 19, 40
+- screen-manager program 519
+- scripting language 10
+- scrutinize data 380
+- SDK (Software Development Kit) 30
+- search a linked list 781, 821
+- search algorithm 731
+- search algorithms 823
+  - binary search 827
+  - linear search 824
+  - recursive binary search 847
+  - recursive linear search 847
+- search functions of the string-handling library 515
+- search key 664, 823, 824, 827
+- search_n algorithm 731
+- searching lists 778
+- searching arrays 302
+- searching blocks of memory 919
+- searching data 823
+- Searching for Characters 931
+- Searching for Substrings 931
+- searching performance 821
+- searching strings 903, 910
+- second data member of pair 667
+- second-degree polynomial 52
+- second refinement 125, 136
+- secondary storage 6
+- secondary storage device 600
+- secondary storage devices
+  - CD 600
+  - DVD 600
+  - flash drive 600
+  - hard disk 600
+  - tape 600
+- secondary storage unit 7
+- “secret” implementation details 941
+- security flaws 291
+- seed 219
+- seed function rand 217
+- seek direction 607
+- seek get 607
+- seek put 607
+- seekg function of istream 607, 627
+- seekp function of ostream 607, 617
+- select a substring 470
+- selection 188, 190
+- selection sort 832, 836, 837, 842, 843
+- selection sort algorithm 834
+- selection sort efficiency 834
+- selection sort with call-by-reference 834
+- selection statement 107, 110
+- self assignment 463
+- self-assignment 414
+- self-documenting 446
+- self-referential arrays 779, 780
+- semicolon (;) 41, 56, 116, 986
+- semicolon that terminates a structure definition 881
+- send a message to an object 151
+- sentinel-controlled repetition 126, 131
+- sentinel value 124, 126, 131, 173
+- separate interface from implementation 87
+- Separating Digits exercise 270
+- sequence 188, 190, 302, 645, 711, 713
+- sequence container 640, 647, 649, 657, 661
+  - back function 656
+  - empty function 657
+  - front function 656
+  - insert function 657
+- sequence of integers 196
+- sequence of random numbers 217
+- sequence statement 107, 110
+- sequence-statement activity diagram 107
+- sequential execution 107
+- sequential file 600, 601, 602, 605, 611
+- serialized object 628
+- services of a class 78
+- &lt;set&gt; header 213
+- set a value 78
+- set and get functions 78
+- set associative container 668
+- set function 409
+- &lt;set&gt; header 665, 668
+- set_intersection 718
+- set_new_handler function 752, 754
+- set of recursive calls to method Fibonacci 254
+- set operations of the Standard Library 716
+- set_difference algorithm 716, 718, 732
+- set_intersection algorithm 716, 718, 732
+- set_new_handler specifying the function to call when new fails 754
+- set_symmetric_difference algorithm 716, 718, 732
+- set_union algorithm 716, 719, 732
+- setbase manipulator
+  - setf and stream manipulator 375, 382, 580, 582
+- setprecision stream manipulator 133, 167, 574
+- setw 282, 442
+- setw parameterized stream manipulator 360, 576, 580
+- Shakespeare, William 934
+- Shape class hierarchy 485, 515
+- shape of a tree 821
+- sheer brute force 198
+- shell prompt on Linux 200
+- shift a range of numbers 215
+- shifted, scaled integers 215
+- shifted, scaled integers produced by 1 + rand() % 6 215
+- Shifting and Printing an Integer 929
+- shiftingValue 219
+- “shipping” section of the computer 6
+- short-circuit evaluation 182
+- short data type 178
+- short int data type 178
+- showbase stream manipulator 579, 583
+- showpoint stream manipulator 133, 579
+- showpos stream manipulator 374, 579, 581
+- shrink_to_fit member function of classes vector and deque 654
+- shuffle algorithm 731
+- shuffling cards 928
+- sibling 803
+- side effect 237
+- side effect on expression 227, 237, 254
+- sides of a right triangle 155
+- Sides of a Right Triangle exercise 155
+- sides of a square 197
+- sides of a triangle 155
+- Sides of a Triangle exercise 155
+- Sieve of Eratosthenes 688

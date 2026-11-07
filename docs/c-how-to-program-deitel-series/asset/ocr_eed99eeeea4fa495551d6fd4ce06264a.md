@@ -1,0 +1,36 @@
+```
+```cpp
+63     else if ( result > 0 )
+64         cout << "string2.compare( 0, 3, string4) > 0" << endl;
+65     else // result < 0
+66         cout << "string2.compare( 0, 3, string4) < 0" << endl;
+67 } // end main
+```
+```
+
+```
+```text
+string1: Testing the comparison functions.
+string2: Hello
+string3: stinger
+string4: Hello
+
+string1 > string4
+string1.compare(string2) > 0
+string1.compare( 2, 5, string3, 0, 5) == 0
+string1.compare( 0, string2.size(), 0) == 0
+string2.compare( 0, 3, string4) < 0
+```
+```
+
+**Fig. 2.12** | Comparing strings. (Part 3 of 3.)
+
+The program declares four strings (lines 9–12) and outputs each (lines 14–15). Line 18 tests string1 against string4 for equality using the overloaded equality operator. If the condition is true, "string1 == string4" is output. If the condition is false, the condition in line 20 is tested. All the string class overloaded relational and equality operator functions return bool values.
+
+Line 26 uses string member function compare to compare string1 to string2. Variable result is assigned 0 if the strings are equivalent, a positive number if string1 is lexicographically greater than string2 or a negative number if string1 is lexicographically less than string2. When we say that a string is lexicographically less than another, we mean that the compare method uses the numerical values of the characters (see Appendix B, ASCII Character Set) in each string to determine that the first string is less than the second. Because a string starting with 'T' is considered lexicographically greater than a string starting with 'H', result is assigned a value greater than 0, as confirmed by the output. A lexicon is a dictionary.
+
+Line 36 compares portions of string1 and string3 using an overloaded version of member function compare. The first two arguments (2 and 5) specify the starting subscript and length of the portion of string1 ("sting") to compare with string3. The third argument is the comparison string. The last two arguments (0 and 5) are the starting subscript and length of the portion of the comparison string being compared (also "sting"). The value assigned to result is 0 for equality, a positive number if string1 is lexicographically greater than string3 or a negative number if string1 is lexicographically less than string3. The two pieces being compared here are identical, so result is assigned 0.
+
+Line 46 uses another overloaded version of function compare to compare string4 and string2. The first two arguments are the same—the starting subscript and length. The last argument is the comparison string. The value returned is also the same—0 for equality, a positive number if string4 is lexicographically greater than string2 or a negative number if string4 is lexicographically less than string2. Because the two pieces of strings being compared here are identical, result is assigned 0.
+
+Line 59 calls member function compare to compare the first 3 characters in string2 to string4. Because "Hel" is less than "Hello", a value less than zero is returned.

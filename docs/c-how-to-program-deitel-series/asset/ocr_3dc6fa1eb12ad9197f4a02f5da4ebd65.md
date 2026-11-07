@@ -1,0 +1,52 @@
+# Section 9.13 *Using the this Pointer*
+
++   - Every object has access to its own address through the this pointer (p. 412).
++   - An object’s this pointer is not part of the object itself—i.e., the size of the memory occupied by the this pointer is not reflected in the result of a sizeof operation on the object.
++   - The this pointer is passed as an implicit argument to each non-static member function.
++   - Objects use the this pointer implicitly (as we’ve done to this point) or explicitly to reference their data members and member functions.
++   - The this pointer enables cascaded member-function calls (p. 414) in which multiple functions are invoked in the same statement.
+
+# Section 9.14 *static Class Members*
+
++   - A static data member (p. 418) represents “class-wide” information (i.e., a property of the class shared by all instances, not a property of a specific object of the class).
++   - static data members have class scope and can be declared public, private or protected.
++   - A class’s static members exist even when no objects of that class exist.
++   - To access a public static class member when no objects of the class exist, simply prefix the class name and the scope resolution operator (::) to the name of the data member.
++   - The static keyword cannot be applied to a member definition that appears outside the class definition.
++   - A member function should be declared static (p. 419) if it does not access non-static data members or non-static member functions of the class. Unlike non-static member functions, a static member function does not have a this pointer, because static data members and static member functions exist independently of any objects of a class.
+
+# Self-Review Exercises
+
++   **9.1** Fill in the blanks in each of the following:
++   
++   a) Class members are accessed via the ______ operator in conjunction with the name of an object (or reference to an object) of the class or via the ______ operator in conjunction with a pointer to an object of the class.
++   
++   b) Class members specified as ______ are accessible only to member functions of the class and friends of the class.
++   
++   c) ______ class members are accessible anywhere an object of the class is in scope.
++   
++   d) ______ can be used to assign an object of a class to another object of the same class.
++   
++   e) A nonmember function must be declared as a(n) ______ of a class to have access to that class’s private data members.
++   
++   f) A constant object must be ______; it cannot be modified after it’s created.
++   
++   g) A(n) ______ data member represents class-wide information.
++   
++   h) An object’s non-static member functions have access to a “self pointer” to the object called the ______ pointer.
++   
++   i) Keyword ______ specifies that an object or variable is not modifiable.
++   
++   j) If a member initializer is not provided for a member object of a class, the object’s ______ is called.
++   
++   k) A member function should be static if it does not access ______ class members.
++   
++   l) Member objects are constructed ______ their enclosing class object.
+
++   **9.2** Find the error(s) in each of the following and explain how to correct it (them):
++   
++   a) Assume the following prototype is declared in class Time:
+
+```
+void ~Time( int );
+```

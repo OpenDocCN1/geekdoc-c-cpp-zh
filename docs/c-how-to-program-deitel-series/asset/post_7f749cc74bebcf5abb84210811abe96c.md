@@ -1,0 +1,297 @@
+
+- overloaded constructors 510
+- overloaded equality operator (==) 457, 464
+- overloaded function 244, 774
+- overloaded function call operator () 470
+- overloaded function definitions 243
+- overloaded increment operator 446
+- overloaded inequality operator 457, 464
+- overloaded operator () 726
+- overloaded operator += 450
+- overloaded operator [] member function 465
+- overloaded postfix increment operator 446, 450
+- overloaded prefix increment operator 446, 450
+- overloaded stream insertion and stream extraction operators 441
+- overloaded stream insertion operator 953
+- overloaded subscript operator 458, 465
+- overloading 48, 243
+- overloading << and >> 246
+- overloading binary operator 440
+- overloading binary operators 439
+- overloading function call operator () 470, 475
+- overloading operators 246
+- overloading postfix increment operator 445, 450
+- overloading prefix and postfix increment operators 445
+- overloading resolution 774
+- overloading stream insertion and stream extraction operators 440, 446, 457, 461
+- overloading template functions 774
+- overloading the stream insertion operator 628
+- override a function 526
+- override keyword 527
+
+## P
+
+- PaaS (Platform as a Service) 30
+- Package Inheritance Hierarchy 560
+- Package inheritance hierarchy 515
+- Package inheritance hierarchy exercise 515
+- packet 27, 80
+- packet switching 27
+- Packing Characters into Unsigned Integers 929
+- pad with specified characters 568
+
+- padding 897
+- padding characters 576, 579, 580, 582
+- padding in a structure 897
+- pair 667
+- pair of braces {} 55, 95
+- palindrome exercise 332, 739
+- palindrome 815
+  - counting 876
+  - exercise 154
+  - testing with stacks 815
+- palindrome function 688
+- parameter 70, 73
+- parameter in the UML 73
+- parameter list 73, 81
+- parameterized stream manipulator 133, 167, 565, 574, 607
+- parameterized type 776
+- parent node 803, 818
+- parentheses operator ( ) 50, 133
+- parentheses to force order of evaluation 57
+- Parking Charges exercise 268
+- partial_sort algorithm 731
+- partial_sort_copy algorithm 731
+- partial_sum algorithm 732
+- partition algorithm 731
+- partition step in quicksort 847
+- partition_copy algorithm 731
+- partition pivot algorithm 731
+- Pascal case 68
+- Pascal programming language 12
+- pass-by-reference 237, 335, 340, 341, 343
+  - with a pointer parameter used to cube a variable’s value 341
+  - with pointer parameters 339
+  - with reference parameters 238, 339
+- pass-by-reference with pointers 239
+- pass-by-value 237, 238, 339, 340, 342, 348
+  - used to cube a variable’s value 340
+- Pass-by-Value vs. Pass-by-Reference exercise 275
+- passing arguments by value and by reference 238
+- passing large objects 239
+- passing options to a program 346
+- "past the end" iterator 705
+- pattern of 1s and 0s 8
+- Payroll System Modification 560
+  - exercise 560, 561
+- peek function of iostream 572
+- percent sign (%) (modulus operator) 49
+- perfect number 271
+- Perfect Numbers exercise 271
+- perform a task 69
+- perform an action 41
+
+- performance 11
+- Performance of Binary Tree Sorting and Searching 821
+- Performance Tips overview xxix
+- Perl (Practical Extraction and Report Language) 13
+- persistent 7
+- Peter Minuit problem 167, 199
+- phases of a program 125
+- Phishing Scanner 637
+- photo sharing 29
+- PHP 10, 13, 30
+- PI 987, 988
+- Pi (π) 63, 197
+- pieceworker 198
+- Pig Latin 933
+- Platform as a Service (PaaS) 30
+- Plauger, P. J. 11
+- plus function object 727
+- plus sign 581
+- plus sign, + (UML) 70
+- Point Class 598
+- pointer 353
+- pointer 643
+- pointer arithmetic 353, 354, 356, 653
+  - machine dependent 353
+- pointer assignment 355
+- pointer-based strings 358
+- pointer comparison 355
+- pointer difference (-) operator 337, 338
+- pointer expression 353, 356
+- pointer handle 385
+- pointer link 780
+- pointer manipulation 550, 778
+- pointer notation 356
+- pointer operators & and * 338
+- pointer to a function 550
+- pointer to an object 348
+- pointer to void (void *) 355
+- pointer variable 755
+- pointer/offset notation 356
+- pointer/subscript notation 356
+- pointer-based string 864
+- pointers and array subscripting 355, 356
+- pointers and arrays 355
+- pointers declared const 348
+- pointers to dynamically allocated storage 414, 464
+- pointer-to-member operator
+  - -> 948
+  - .* 948
+- point-of-sale system 611
+- poker playing program 432
+- poll analysis program 289
+- Polling exercise 333
+- Polymorphic Banking Program
+  - Exercise Using Account hierarchy 561
+- polymorphic exception processing 752
+
+- polymorphic programming 533, 553
+- polymorphic screen manager 519
+- polymorphically invoking functions in a derived class 956
+- polymorphism 178, 513, 518
+- polymorphism and reference 550
+- polymorphism as an alternative to switch logic 560
+- polynomial 52
+- Polynomial 2 class 481
+- pop 769, 771
+- pop function of container adapters 673
+- pop member function of priority_queue 676
+- pop member function of queue 675
+- pop member function of stack 673
+- pop off a stack 231
+- pop_back member function of list 662
+- pop_front 658, 659, 664, 675
+- pop_heap algorithm 724, 732
+- Portability Tips overview xxxi
+- portable 10
+- position number 279
+- positional notation 973
+- positional value 154, 973, 974
+- positional values in the decimal number system 974
+- postdecrement 141, 142
+- postfix decrement operator 140
+- Postfix Evaluation 817
+- Postfix Evaluation Enhanced 817
+- postfix expression 817
+- postfix expression evaluation algorithm 816
+- postfix increment operator 140, 142
+- postfix notation 816
+- postincrement 141, 450
+- postincrement an iterator 648
+- postorder traversal 804, 818, 819
+- postOrderTraversal 810
+- pow function 165, 167, 205
+- power 205
+- power 147
+- Practical Extraction and Report Language (Perl) 13
+- precedence 50, 52, 56, 143, 161, 182, 253
+- precedence chart 57
+- precedence not changed by overloading 439
+- precedence of the conditional operator 113
+- precision 133, 568, 573
+  - format of a floating-point number 134
+- precision function of ios_base 574
+- precision of a floating-point value 127
+- precision of floating-point numbers 574
+- precision setting 575
+- predecrement 141, 142
+- predefined function objects 726
+- predefined symbolic constants 991, 992
+- predecessor function 386, 661, 696, 699, 702, 705, 709, 710, 713, 718, 723, 786
+- prefix decrement operator 140, 141
+- prefix increment operator 140, 142
+- preincrement 141, 450
+- preorder traversal 804
+- "prepackaged" functions 203
+- preprocessing directives 17, 40
+- preprocessor 17, 210, 986
+- preprocessor directives
+  - #if defined 380
+  - #define 380
+  - #endif 380
+- prev_permutation algorithm 732
+- prevent memory leak 757
+- preventing headers from being included more than once 380
+- primary memory 7, 18
+- prime 271
+- prime factorization 688
+- prime number 688
+- Prime Numbers exercise 271
+- primitive data type promotion 132
+- principal 165, 193
+- principle of least privilege 236, 345, 346, 348, 402, 605, 647
+- print a line of text 39
+- print a linked list backwards 781
+- print a list backwards 818
+- print a string backwards recursively exercise 332
+- print an array recursively exercise 332
+- print spooling 800
+- printer 19, 564
+- printing
+  - binary tree in a two-dimensional tree format 811
+  - dates 935
+  - Decimal Equivalent of a Binary Number exercise 154
+  - line of text with multiple squares 43
+  - multiple lines of text with a single statement 44
+  - Sentence in Reverse Order with a Stack 815
+  - string Backward 875
+  - tree 820
+  - unsigned integer in bits 886
+- priority_queue adapter class 676
+  - empty function 677
+  - pop function 676
+  - push function 676, 688
+  - size function 677
+  - top function 677
+- private
+  - access specifier 76
+  - base class 512
+  - base-class data cannot be accessed from derived class 498
+  - inheritance 485, 795
+  - inheritance as an alternative to composition 511
+  - members of a base class 485
+  - static data member 419
+- private libraries 18
+- probability 214
+- procedure 105
+- processing phase 125
+- processing unit 5
+- product of odd integers 196
+- program 5
+- program control 106
+- program development environment 17
+- program development tool 110, 127
+- program execution stack 232
+- program in the general 518, 560
+- program in the specific 518
+- programmer 5
+- programmer-defined maximum 206
+- promotion 132
+- promotion hierarchy for built-in data types 212
+- promotion rules 211
+- prompt 46, 130
+- prompting message 590
+- property classes 512
+- protected 501
+- protected access specifier 379
+- protected base class 512
+- protected base-class data can be accessed from derived class 503
+- protected inheritance 485, 512
+- Protected vs. Private Base Classes 515
+- pseudocode 106, 110, 112, 118, 134
+  - first refinement 125
+  - second refinement 125
+  - step 125
+  - top-down, stepwise refinement 127
+  - two levels of refinement 127
+- pseudorandom numbers 217
+- public
+  - method 381
+- public access specifier 68
+- public base class 511
+- public inheritance 483, 485
+- public keyword 68
+- public member of a derived class 486
+- public services of a class 87
