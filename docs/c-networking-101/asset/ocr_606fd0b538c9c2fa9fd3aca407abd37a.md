@@ -1,0 +1,9 @@
+C++ offers a comprehensive set of operators, supporting a wide range of programming needs. This includes arithmetic operators such as addition (+), subtraction (-), multiplication (*), division (/), and modulo (%), used for performing basic mathematical operations. Comparison operators like equal to (==), not equal to (!=), greater than (>), less than (<), greater than or equal to (>=), and less than or equal to (<=) enable comparisons between variables. Logical operators include and (&&), or (||), and not (!), providing the foundation for logic-based decision-making. Lastly, C++ supports bitwise operators such as and (&), or (|), xor (^), not (~), left shift (<<), and right shift (>>), allowing for direct manipulation of binary data.
+
+# Control Structures
+
+Control structures are fundamental components in programming that modify the path or flow of execution. They come in different types, including conditional and iterative. Conditional structures like 'if', 'if-else', and 'switch' allow for decisions to be made based on certain conditions. For instance, 'if' executes a block of code if a specified condition is true. Conversely, iterative structures like 'for', 'while', and 'do-while' facilitate repetitive execution of code blocks, making them ideal for looping tasks. Understanding and applying these control structures effectively is crucial for efficient and functional programming.
+
+# Arrays
+
+An array is a powerful data structure, adept at storing a fixed-size sequential collection of homogeneous elements. This means it can hold a certain number of values, all of the same data type, arranged in a strict

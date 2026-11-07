@@ -1,0 +1,7 @@
+# Summary
+
+In this Chapter, we deeply delved into the vital area of network troubleshooting. We started by understanding the network troubleshooting methodology, a systematic approach often used by network administrators to identify, diagnose, propose solutions, test, and document network problems. This methodology is crucial to avoid recurrent issues and maintain a reliable network infrastructure.
+
+Next, we explored essential network troubleshooting tools, beginning with 'ping', a simple yet effective tool used to verify network host reachability and network latency. We then covered 'tracert' (trace route), a powerful command-line tool used to track the path that a packet takes from the source system to the destination system. Moving on, we discussed 'nslookup', a command-line tool used for querying the DNS (Domain Name System) to obtain domain name or IP address mapping, and other DNS records. We also went through 'netstat', a versatile tool that provides information and statistics about protocols in use and current TCP/IP network connections.
+
+Finally, we studied packet sniffers like Wireshark and tcpdump. Wireshark, a popular GUI-based network protocol analyzer, enables users to see what's happening on their network at a microscopic level. We learnt how to install, configure, and capture network packets using Wireshark. On the other hand, tcpdump, a command-line packet sniffer, came next. It's a powerful tool used for network debugging and troubleshooting. We walked through its features, installation, and some practical examples of

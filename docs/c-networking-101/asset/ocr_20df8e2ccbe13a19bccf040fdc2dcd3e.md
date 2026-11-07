@@ -1,0 +1,17 @@
+```
+std::string output = exec(cmd.c_str());
+
+std::cout << "Command output: " << std::endl;
+
+std::cout << output << std::endl;
+
+return 0;
+
+}
+```
+
+In the above sample program, we've created an exec function that executes a command and returns its output as a std::string. The popen function opens a pipe to a process that's created by running the given command in a shell. It returns a file stream that can be used to read the output of the command.
+
+The fgets function reads data from the pipe into the buffer, and this is appended to the result string.
+
+Finally, the main function runs the iw dev wlan0 link command and prints its output.

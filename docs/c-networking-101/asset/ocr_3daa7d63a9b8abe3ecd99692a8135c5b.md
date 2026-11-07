@@ -1,0 +1,3 @@
+When Wireshark opens, you will see a list of the network interfaces on your system. Click the name of the interface that you want to capture data from. This will start the capture process. You can filter the traffic using the 'Apply a display filter' field. For example, typing http will only display HTTP traffic.
+
+Click the stop button to stop capturing traffic. Now you can analyze the traffic in detail.

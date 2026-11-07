@@ -1,0 +1,3 @@
+This demonstrates how to use C++ and libcurl to rename a file (myfile.txt to newfile.txt) on an FTP server. In this code, we're using the CURLOPT_POSTQUOTE option to pass the FTP commands to libcurl. The command RNFR is used to specify the old name of the file, and RNTO is used to specify the new name.
+
+Before you can use this code, you'll need to have libcurl installed and replace ftp://example.com/myfile.txt, myusername, and mypassword with the actual FTP server URL, username, and password.

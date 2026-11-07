@@ -1,0 +1,1 @@
+Remember that the full set of options and how they're used can vary between systems, so it's always a good idea to check the manual page for traceroute on your system by typing man traceroute (on Linux/macOS) or tracert /? (on Windows) in your terminal.

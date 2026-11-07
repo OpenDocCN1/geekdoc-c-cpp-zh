@@ -1,0 +1,11 @@
+# # Deep into Transmission Control Protocol (TCP)
+
+The Transmission Control Protocol (TCP) is one of the fundamental protocols of the internet, providing reliable, ordered, and error-checked delivery of a stream of bytes. It is a part of the TCP/IP protocol suite and operates at the transport layer. Let us dive into the aspects of TCP in detail.
+
+# ## Basic Structure of TCP
+
+In TCP, data is transmitted in the form of packets, specifically called "segments". Each TCP segment contains a header and data. The header, which is 20 to 60 bytes long, contains information needed for the proper delivery of data, including source and destination port numbers, sequence number, acknowledgement number, data offset, reserved, control flags, window, checksum, and urgent pointer as below:
+
++   - Source and Destination Port Numbers: These are 16-bit fields that identify the ports on the source and destination machines.
++   - Sequence Number: This 32-bit field represents the number assigned to the first byte of data in the current message.
++   - Acknowledgement Number: Also 32-bits, this field indicates the value of the next sequence number that the sender of the segment is expecting to receive.

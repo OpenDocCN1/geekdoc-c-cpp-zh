@@ -1,0 +1,3 @@
+Closing the Socket: After the communication is finished, the socket must be closed using the close() function (or closesocket() on Windows).
+
+C++ provides a rich library support for socket programming. In the coming chapters, we'll delve into practical aspects of socket programming with both TCP and UDP in C++ using the libraries as discussed in Chapter 1, providing hands-on examples and exercises for a better understanding. Understanding sockets and socket programming is fundamental for any network administrator, as it forms the basis of many network operations and applications.
