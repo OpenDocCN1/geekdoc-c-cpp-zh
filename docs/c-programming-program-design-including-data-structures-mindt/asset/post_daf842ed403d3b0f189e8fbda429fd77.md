@@ -1,0 +1,238 @@
+
+- designing, 1248–1249
+- main program, 1261–1265
+- server list, 1255–1259
+- servers, 1248, 1252–1255
+- transaction time, 1248–1249
+- waiting customers queue, 1259–1261
+- waiting time, 1248–1249
+- quick sort algorithm
+  - analysis, 1317–1318
+  - array-based lists, 1311–1318
+  - for loops, 1312
+  - key comparisons, 1317
+  - recursion, 1317
+- quotient variable, 237, 1016
+- q value parameter, 842
+
+## R
+
+- **rAccessIterator** random access iterator, 1490–1491
+- **radiusPtr** pointer variable, 825–826, 833, 835
+- **radius** variable, 148–149, 693, 825–826, 833, 1031
+- RAM. See random access memory (RAM)
+- **rand** function, 284
+- random access data structure, 1184
+- random access iterators, 1490–1491
+- random access memory (RAM), 4–5
+- random number generator, 365
+- random numbers, 17, 284
+- **random_device**, 986
+- **random_shuffle** function, 1506, 1545–1549
+- range(s)
+  - accessing and processing elements by applying function, 1549–1551
+  - consecutive elements meeting criteria, 1538–1542
+  - copying elements, 1527–1531
+  - elements appearing in another range, 1552–1560
+  - elements common to two ranges, 1552–1560
+  - elements not appearing in another range, 1552–1560
+  - element sum of previous elements, 1560–1565
+  - finding elements, 1519–1521
+  - last element, 1521–1524
+  - multiplying elements in multiple ranges, 1560–1565
+  - replacing elements, 1527–1531
+  - reversing order of elements, 1542–1545
+  - rotating elements, 1542–1545
+  - searching elements, 1534–1537
+  - sequence of elements, 1549–1551
+  - sorting elements, 1534–1537
+  - subrange, 1521–1524
+  - summing elements, 1560–1565
+  - swapping elements, 1531–1534
+- range-based for loops, 1472–1475
+  - arrays, 840–841
+  - dynamic arrays, 840–841, 1473
+  - formal parameters, 1473
+  - sequence containers, 1487
+  - syntax errors, 840–841
+  - vector objects, 1473–1475, 1487
+- **RATE** member, 488–489
+- rate variable, 146, 196, 237
+- **rbegin** function, 1467, 1470
+- **readCode** function, 578
+- **readCourses** function, 475–476
+- **readIn** function, 619
+- read statements, 65–69
+- real alias, 478
+- real numbers and relational operators, 189–190
+- rear, 1229
+- rebuild command, 690
+- **recFriendObject** formal parameter, 919
+- **recMergeSort** function, 1324–1326
+- records, 611–628
+- **recQuickSort** function, 1317
+- **rectangle** class, 745, 866–867
+- **rectangleFriend** function, 919–920
+- **rectangle1** object, 928
+- **rectangle2** object, 928
+- **rectangle3** object, 928
+- **rectangle4** object, 928
+- **rectangleType** class, 748–749, 751–755, 758–759, 914–917, 920–924, 928–935, 943–950
+  - overloading binary operators, 925–928
+  - private members, 752
+- **rectangleType** constructor, 748, 750, 759–760
+- recursion, **1052**
+  - direct, 1054
+  - Fibonacci number, 1059–1062
+  - indirect, 1054
+  - infinite, 1054–1055
+  - largest element in array, 1055–1058
+  - printing linked lists in reverse order, 1131–1133
+  - problem solving, 1055–1066
+  - quick sort algorithm, 1317
+  - removing, 1225–1229
+  - Tower of Hanoi, 1063–1065
+- recursive algorithms, 1053, 1055–1065, 1367
+  - base cases, 1053
+  - binary search algorithm, 1285
+  - converting into nonrecursive algorithms, 1180
+  - largest element in array, 1055–1058
+  - sequential search algorithm, 1282
+- recursive definitions, 1052
+  - base cases, 1052
+  - directly recursive functions, 1054
+  - general cases, 1052
+  - indirectly recursive functions, 1054
+  - infinite recursion, 1054–1055
+- recursive algorithms, 1053
+- recursive functions, 1053–1054
+  - tail recursive functions, 1054
+- recursive functions, 1053
+  - designing, 1055
+  - local variables, 1066
+  - memory allocation, 1066
+  - parameters, 1066
+  - unlimited copies of itself, 1054
+- reference parameters, 380, 408–410
+  - and, 380
+  - changing values of parameter, 386
+  - class objects, 660–661
+  - declaring as constant, 387
+  - formal parameters, 842, 858–859
+  - manipulating actual parameters, 396–399
+  - memory allocation, 390–399
+  - value-returning functions, 399
+- reference variables as parameters, 386–390
+- ref formal parameter, 397
+- **regionNumber** variable, 1341
+- **registered** variable, 472–473
+- relational functional objects, 1503–1510
+- relational operators, 189, 618, 908–909
+  - associativity, 213–215
+  - binary operators, 189
+  - **char** data type, 190–191
+  - enumeration types, 471–472
+  - integers, 189–190
+  - order of precedence, 202
+  - queues, 1502
+  - real numbers, 189–190
+  - simple data types, 189–190
+  - stacks, 1501
+  - **string** data types, 205–206
+- remainder operator (%), 43–45
+- **removeAt** function, 878–880, 883, 979
+- **remove_copy** function, 1506, 1524–1527
+- **remove_copy_if** function, 1506, 1524–1527
+- **remove** function, 878, 881, 883, 981, 1482, 1506, 1524–1527
+- **remove_if** function, 1482, 1506, 1524–1527
+- **rend** function, 1467, 1470
+- repetition, 21, 188–189, 266–268
+  - **do...while** loops, 309–313
+  - **for** loops, 297–308
+  - **while** loop, 269–297
+- **replaceAt** function, 878, 881, 884–885, 981
+- **replace_copy** function, 1506, 1527–1531
+- **replace_copy_if** function, 1506, 1527–1531
+- **replace** function, 1497, 1502–1503, 1506, 1527–1531
+- **replace_if** function, 1506, 1527–1531
+- reserved words, 35–36, 88
+- residential function, 371–375
+- **resize** function, 1461–1462, 1468
+- rethrowing exceptions, 1032–1036
+- **retrieveAt** function, 880, 979, 1341, 1344
+- **retrievePlay** function, 480
+- retrieving data from, 1108
+- return escape sequence (\\r), 77
+- return reserved word, 357
+- **return** statement, 84, 219–220, 371
+  - returning only one value, 363–364
+  - secret function, 363
+  - value-returning functions, 353, 356
+  - void functions, 378
+- **reverse_copy** function, 1506, 1542–1545
+- **reverse** function, 1484, 1506, 1542–1545
+- **reverseNum** function, 697–700
+- Reverse Polish notation, 1215
+- **reversePrint** function, 1131–1133, 1138–1139
+- **rFibNum** function, 1059–1062
+- right child, 1362, 1382
+- right manipulator, 152, 154–156, 785
+- rightmost bit, 1071
+- **rightObject** formal parameter, 938
+- right subtree, 1362–1364, 1382–1383, 1387–1389
+- **rLink** pointer, 1364–1365, 1384–1385, 1389
+- **rollDice** function, 365–367, 693
+- **roll** function, 693–694
+- root, 1365
+- rooted tree, 1441
+- root node, 1310, 1362–1364
+  - binary search tree, 1382, 1384
+  - level of, 1365
+  - pointer, 1365, 1367
+- root pointer, 1376–1377, 1384
+- **rotate_copy** function, 1506, 1542–1545
+- **rotate** function, 506–507, 1506, 1542–1545
+- row order form, 570
+- row processing, 566
+- **rows** variable, 845
+- **runSimulation** function, 1263–1264
+- run-time binding, 861, 866
+- **runtime_error** class, 1020
+- runtime errors, 1020
+- run-together words, 55, 89
+- **ryanHouse** variable, 616
+
+## S
+
+- **saleByQuarter** function, 634
+- **salePrice** variable, 15
+- **sales** array, 528–530, 532, 562, 563
+- **salesPersonList** array, 629–632, 634–636
+- **salesPersonRec** struct data type, 629
+- **salesTax** variable, 15
+- **sale** variable, 57
+- **scholarship** variable, 154
+- scientific manipulator, 144, 156
+- scientific notation, 40, 143–146
+- scope
+  - class members, 660
+  - function names, 400
+  - identifiers, 399–403
+  - namespace member, 488
+- scope resolution operator (::), 403, 488–751, 1463, 1491
+- **score** parameter, 388–390
+- **score** variable, 197–198, 209, 232, 233, 427, 617
+- screen, 124
+- screen ostream_iterator, 1471, 1479, 1499, 1517–1518, 1527
+- search algorithms, 1280–1289, 1505
+  - asymptotic notation, 1289–1297
+  - binary search, 1283–1289
+  - binary search trees, 1392–1393
+  - comparison-based search algorithms, 1297
+  - dominant operations, 1291–1292
+  - growth rate of functions, 1292–1294
+  - keys, 1281
+  - number of comparisons, 1292–1294
+  - sequential search algorithm, 883, 1281–1283
+  - while loops, 1291
+- **searchDVDList** function, 1154, 1156, 1404–1405

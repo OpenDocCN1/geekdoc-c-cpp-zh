@@ -1,0 +1,39 @@
+**Sample Runs:** In these sample runs, the user input is shaded.
+
+**Sample Run 1**
+
+Enter a positive integer: `27193257`
+
+The sum of the digits = 36
+
+27193257 is divisible by 3 and 9
+
+**Sample Run 2**
+
+Enter a positive integer: `609321`
+
+The sum of the digits = 21
+
+609321 is divisible by 3, but not 9
+
+**Sample Run 3**
+
+Enter a positive integer: `161905102`
+
+The sum of the digits = 25
+
+161905102 is not divisible by 3 or 9
+
+# ## Choosing the Right Looping Structure
+
+All three loops have their place in C++. If you know, or the program can determine in advance, the number of repetitions needed, the `for` loop is the correct choice. If you do not know, and the program cannot determine in advance the number of repetitions needed, and it could be 0, the `while` loop is the right choice. If you do not know, and the program cannot determine in advance the number of repetitions needed, and it is at least 1, the `do...while` loop is the right choice.
+
+# ## break and continue Statements
+
+The `break` statement, when executed in a `switch` structure, provides an immediate exit from the `switch` structure. Similarly, you can use the `break` statement in `while`, `for`, and `do...while` loops to immediately exit from the loop structure. The `break` statement is typically used for two purposes:
+
++   - To exit early from a loop.
+
++   - To skip the remainder of the `switch` structure.
+
+After the `break` statement executes, the program continues to execute with the first statement after the structure. The use of a `break` statement in a loop can eliminate the use of certain (flag) variables. The following C++ code segment helps illustrate this idea. (Assume that all variables are properly declared.)

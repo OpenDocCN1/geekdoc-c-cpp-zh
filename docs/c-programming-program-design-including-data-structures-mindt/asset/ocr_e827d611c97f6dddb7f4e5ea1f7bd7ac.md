@@ -1,0 +1,35 @@
+Also, C++ does not allow the nesting of functions. That is, you cannot include the definition of one function in the body of another function.
+
+In general, the following rules apply when an identifier is accessed:
+
++   1. **Global identifiers** (such as variables) are accessible by a function or a block if
++      a. The identifier is declared before the function definition (block),
++      b. The function name is different than the identifier,
++      c. All parameters of the function have names different than the name of the identifier, and
++      d. All local identifiers (such as local variables) have names different than the name of the identifier.
++   
++   2. **(Nested Block)** An identifier declared within a block is accessible
++      a. Only within the block from the point at which it is declared until the end of the block, and
++      b. By those blocks that are nested within that block if the nested block does not have an identifier with the same name as that of the outside block (the block that encloses the nested block).
++   
++   3. The scope of a function name is similar to the scope of an identifier declared outside any block. That is, the scope of a function name is the same as the scope of a global variable.
+
+Before considering an example to explain these scope rules, first note the scope of the identifier declared in the `for` statement. C++ allows the programmer to declare a variable in the initialization statement of the `for` statement. For example, the following `for` statement:
+
+```
+for (int count = 1; count < 10; count++)
+    cout << count << endl;
+```
+
+declares the variable count and initializes it to 1. The scope of the variable count is limited to only the body of the `for` loop.
+
+> **NOTE**  
+> This scope rule for the variable declared in a `for` statement may not apply to Standard C++, that is, non-ANSI/ISO Standard C++. In Standard C++, the scope of the variable declared in the `initialize` statement may extend from the point at which it is declared until the end of the block that immediately surrounds the `for` statement. (To be absolutely sure, check your compiler’s documentation.)
+
+The following C++ programming code helps illustrate the scope rules:
+
+```
+#include <iostream>
+
+using namespace std;
+```

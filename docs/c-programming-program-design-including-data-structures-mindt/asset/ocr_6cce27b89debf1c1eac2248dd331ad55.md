@@ -1,0 +1,32 @@
+# EXAMPLE 18-10
+
+Consider the following code, in which m and n are int variables and their values are nonnegative:
+
+```
+```cpp
+for (int i = 0; i < m; i++)        //Line 1
+    for (int j = 0; j < n; j++)    //Line 2
+        cout << i * j << endl;     //Line 3
+```
+```
+
+This code contains nested for loops. The outer for loop, at Line 1, executes m times. For each iteration of the outer loop, the inner loop at Line 2 executes n times. For each iteration of the inner loop, the output statement in Line 3 executes. It follows that the total number of iterations of the nested for loop is mn. So the number of times the statement in Line 3 executes is mn. It follows that this algorithm is O(mn). Note that if m = n, then this algorithm is O(n²).
+
+Table 18-7 shows some common Big-O functions that appear in the algorithm analysis. Let f(n) = O(g(n)), wherein n is the problem size.
+
+# TABLE 18-7 — Some Big-O Functions That Appear in Algorithm Analysis
+
+| Function g(n) | Growth rate of f(n) |
+|---|---|
+| g(n) = 1 | The growth rate is constant and so does not depend on n, the size of the problem. |
+| g(n) = log₂ n | The growth rate is a function of log₂ n. Because a logarithm function grows slowly, the growth rate of the function f is also slow. |
+| g(n) = n | The growth rate is linear. The growth rate of f is directly proportional to the size of the problem. |
+| g(n) = n log₂ n | The growth rate is faster than the linear algorithm. |
+| g(n) = n² | The growth rate of such functions increases rapidly with the size of the problem. The growth rate is quadrupled when the problem size is doubled. |
+| g(n) = 2ⁿ | The growth rate is exponential. The growth rate is squared when the problem size is doubled. |
+
+> **NOTE:** It can be shown that
+> 
+> O(1) ≤ O(log₂ n) ≤ O(n) ≤ O(n log₂ n) ≤ O(n²) ≤ O(2ⁿ).
+
+Using the notations developed in this section, we can conclude that the algorithm in Example 18-3 is of the order O(1), and the algorithm in Example 18-4 is of the order O(n). Table 18-8 summarizes the algorithm analysis of the search algorithms discussed earlier.

@@ -1,0 +1,27 @@
+To determine the average number of comparisons in the successful case of the sequential search algorithm:
+
++   1. Consider all possible cases.
++   2. Find the number of comparisons for each case.
++   3. Add the number of comparisons and divide by the number of cases.
+
+If the search item, called the **target**, is the first element in the list, one comparison is required. If the target is the second element in the list, two comparisons are required. Similarly, if the target is the *k*th element in the list, *k* comparisons are required. We assume that the target can be any element in the list; that is, all list elements are equally likely to be the target. Suppose that there are *n* elements in the list. The following expression gives the average number of comparisons:
+
+$$\frac{1+2+\cdots+n}{n}$$
+
+It is known that
+
+$$1+2+\cdots+n=\frac{n(n+1)}{2}.$$
+
+Therefore, the following expression gives the average number of comparisons made by the sequential search in the successful case:
+
+$$\frac{1+2+\cdots+n}{n}=\frac{1}{n}\frac{n(n+1)}{2}=\frac{n+1}{2}.$$
+
+This expression shows that, on average, a successful sequential search searches half of the list. It thus follows that if the list size is 1,000,000, on average, the sequential search makes 500,000 comparisons. As a result, the sequential search is not efficient for large lists.
+
+# ## Binary Search
+
+As you can see, the sequential search is not efficient for large lists because, on average, it searches half the list. We, therefore, describe another search algorithm called the **binary search**, which is very fast. However, a binary search can be performed only on sorted lists. We, therefore, assume that the list is sorted. Later in this chapter, we will describe several sorting algorithms.
+
+The binary search algorithm uses the “divide and conquer” technique to search the list. First, the search item is compared with the middle element of the list. If the search item is less than the middle element of the list, we restrict the search to the first half of the list; otherwise, we search the second half of the list.
+
+Consider the sorted list of *length = 12* in Figure 18-1.

@@ -1,0 +1,159 @@
+
+Further, suppose that we want to store the first c-string in `str1` and the second c-string in `str2`. Both `str1` and `str2` can store c-strings that are up to 25 characters in length. Because the number of characters in the first line is 15, the reading stops at `'\n'`. Now the newline character remains in the input buffer and must be manually discarded. Therefore, you must read and discard the newline character at the end of the first line to store the second line into `str2`. The following sequence of statements stores the first line into `str1` and the second line into `str2`:
+
+```cpp
+cin.get(str1, 26);
+cin.get(discard);
+cin.get(str2, 26);
+```
+
+To read and store a line of input, including whitespace characters, you can also use the stream function `getline`. Suppose that you have the following declaration:
+
+```cpp
+char textLine[100];
+```
+
+The following statement will read and store the next 99 characters, or until the newline character, into `textLine`. The null character will be automatically appended as the last character of `textLine`.
+
+```cpp
+cin.getline(textLine, 100);
+```
+
+## String Output
+
+The output of c-strings is another place where aggregate operations on arrays are allowed. You can output c-strings by using an output stream variable, such as `cout`, together with the insertion operator, `<<`. For example, the statement:
+
+```cpp
+cout << name;
+```
+
+outputs the contents of `name` on the screen. The insertion operator, `<<`, continues to write the contents of `name` until it finds the null character. Thus, if the length of `name` is 4, the above statement outputs only four characters. If `name` does not contain the null character, then you will see strange output because the insertion operator continues to output data from memory adjacent to `name` until a `\0` is found. For example, see the output of the following program. (Note that on your computer, you may get a different output.)
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char name[5] = {'a', 'b', 'c', 'd', 'e'};
+    int x = 50;
+    int y = -30;
+
+    cout << name << endl;
+
+    return 0;
+}
+```
+
+**Output:**
+
+```text
+abcde|¦|¦|¦|¦|¦
+```
+
+## Specifying Input/Output Files at Execution Time
+
+In Chapter 3, you learned how to read data from a file. In subsequent chapters, the name of the input file was included in the open statement. By doing so, the program always received data from the same input file. In real-world applications, the data may actually be collected at several locations and stored in separate files. Also, for comparison purposes, someone might want to process each file separately and then store the output in separate files. To accomplish this task efficiently, the user would prefer to specify the name of the input and/or output file at execution time rather than in the programming code. C++ allows the user to do so.
+
+Consider the following statements:
+
+```cpp
+cout << "Enter the input file name: ";
+cin >> fileName;
+
+infile.open(fileName);    //open the input file
+// ...
+cout << "Enter the output file name: ";
+cin >> fileName;
+
+outfile.open(fileName);  //open the output file
+```
+
+The Programming Example: Code Detection, given later in this chapter, further illustrates how to specify the names of input and output files during program execution.
+
+## string Type and Input/Output Files
+
+In Chapter 7, we discussed the data type `string`. We now want to point out that values (that is, strings) of type `string` are not null terminated. Variables of type `string` can also be used to read and store the names of input/output files. However, the argument to the function open must be a null-terminated string—that is, a c-string. Therefore, if we use a variable of type `string` to read the name of an input/output file and then use this variable to open a file, the value of the variable must (first) be converted to a c-string (that is, a null-terminated string). The header file `string` contains the function `c_str`, which converts a value of type `string` to a null-terminated character array (that is, c-string). The syntax to use the function `c_str` is
+
+```cpp
+strVar.c_str()
+```
+
+in which `strVar` is a variable of type `string`.
+
+The following statements illustrate how to use variables of type `string` to read the names of the input/output files during program execution and open those files:
+
+```cpp
+ifstream infile;
+string fileName;
+
+cout << "Enter the input file name: ";
+cin >> fileName;
+
+infile.open(fileName.c_str());  //open the input file
+```
+
+Of course, you must also include the header file `string` in the program. The output file has similar conventions.
+
+## Parallel Arrays
+
+Two (or more) arrays are called **parallel** if their corresponding components hold related information.
+
+Suppose you need to keep track of students’ course grades, together with their ID numbers, so that their grades can be posted at the end of the semester. Further, suppose that there is a maximum of 50 students in a class and their IDs are 5 digits long. Because there may be 50 students, you need 50 variables to store the students’ IDs and 50 variables to store their grades. You can declare two arrays: `studentId` of type `int` and `courseGrade` of type `char`. Each array has 50 components. Furthermore, `studentId[0]` and `courseGrade[0]` will store the ID and course grade of the first student, `studentId[1]` and `courseGrade[1]` will store the ID and course grade of the second student, and so on.
+
+The statements:
+
+```cpp
+int studentId[50];
+char courseGrade[50];
+```
+
+declare these two arrays.
+
+Suppose you need to input data into these arrays, and the data is provided in a file in the following form. For example, a sample data set is:
+
+| studentId | courseGrade |
+|---|---|
+| 23456 | A |
+| 86723 | B |
+| 22356 | C |
+| 92733 | B |
+| 11892 | D |
+| ... | ... |
+
+Suppose that the input file is opened using the **ifstream** variable `infile`. Because the size of each array is 50, a maximum of 50 elements can be stored into each array. Moreover, it is possible that there may be fewer than 50 students in the class. Therefore, while reading the data, we also count the number of students and ensure that the array indices do not go out of bounds. The following loop reads the data into the parallel arrays `studentId` and `courseGrade`:
+
+```cpp
+int noOfStudents = 0;
+
+infile >> studentId[noOfStudents] >> courseGrade[noOfStudents];
+
+while (infile && noOfStudents < 50)
+{
+    noOfStudents++;
+    infile >> studentId[noOfStudents]
+           >> courseGrade[noOfStudents];
+}
+```
+
+Note that, in general, when swapping values in one array, the corresponding values in parallel arrays must also be swapped.
+
+## Two- and Multidimensional Arrays
+
+The remainder of this chapter discusses two-dimensional arrays and ways to work with multidimensional arrays.
+
+In the previous section, you learned how to use one-dimensional arrays to manipulate data. If the data is provided in a list form, you can use one-dimensional arrays. However, sometimes data is provided in a table form. For example, suppose that you want to track the number of cars in a particular color that are in stock at a local dealership. The dealership sells six types of cars in five different colors. Figure 8-12 shows sample data.
+
+| inStock | RED | BROWN | BLACK | WHITE | GRAY |
+|---|---|---|---|---|---|
+| GMC | 10 | 7 | 12 | 10 | 4 |
+| FORD | 18 | 11 | 15 | 17 | 10 |
+| TOYOTA | 12 | 10 | 9 | 5 | 12 |
+| BMW | 16 | 6 | 13 | 8 | 3 |
+| NISSAN | 10 | 7 | 12 | 6 | 4 |
+| VOLVO | 9 | 4 | 7 | 12 | 11 |
+
+**FIGURE 8-12** Table inStock
+
+You can see that the data is in a table format. The table has 30 entries, and every entry is an integer. Because the table entries are all of the same type, you can declare a one-dimensional array of 30 components of type `int`. The first five components of the one-dimensional array can store the data of the first row of the table, the next five components of the one-dimensional array can store the data of the second row of the table, and so on. In other words, you can simulate the data given in a table format in a one-dimensional array.

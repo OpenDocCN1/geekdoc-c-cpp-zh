@@ -1,0 +1,58 @@
+```
+```cpp
+{
+    cout << "Cannot open the input file." << endl;
+    return 1;
+}
+
+cout << "Enter the output file name: ";
+cin >> outputFile;
+cout << endl;
+
+outcode.open(outputFile);
+
+readCode(incode, codeArray, codeLength,
+         lengthCodeOk);                    //Step 3
+
+if (lengthCodeOk)                          //Step 4
+    compareCode(incode, outcode, codeArray,
+                codeLength);
+else
+    cout << "Length of the secret code "
+         << "must be <= " << MAX_CODE_SIZE
+         << endl;                          //Step 5
+
+incode.close();
+outcode.close();
+
+return 0;
+}
+
+//Place the definitions of the functions readCode and
+//compareCode, as described previously, here.
+```
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+Enter the input file name: `Ch8_SecretCodeData.txt`
+
+Enter the output file name: `Ch8_SecretCodeOut.txt`
+
+**Input File Data:** (Ch8_SecretCodeData.txt)
+
+7 9 2 7 8 3 5 6 7 9 2 7 8 3 5 6
+
+**Output File Data:** (Ch8_SecretCodeOut.txt)
+
+| Code Digit | Code Digit Copy |
+|---:|---:|
+| 9 | 9 |
+| 2 | 2 |
+| 7 | 7 |
+| 8 | 8 |
+| 3 | 3 |
+| 5 | 5 |
+| 6 | 6 |
+
+Message transmitted OK.

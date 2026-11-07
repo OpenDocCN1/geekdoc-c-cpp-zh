@@ -1,0 +1,48 @@
+```
+```cpp
+sum = 0;
+isNegative = false;
+
+cin >> num;
+
+while (cin && !isNegative)
+{
+    if (num < 0)    //if num is negative, terminate the loop
+                    //after this iteration
+    {
+        cout << "Negative number found in the data." << endl;
+        isNegative = true;
+    }
+    else
+    {
+        sum = sum + num;
+        cin >> num;
+    }
+}
+```
+```
+
+This while loop is supposed to find the sum of a set of positive numbers. If the data set contains a negative number, the loop terminates with an appropriate error message. This while loop uses the flag variable isNegative to signal the presence of a negative number. The variable isNegative is initialized to false before the while loop. Before adding num to sum, a check is made to see if num is negative. If num is negative, an error message appears on the screen and isNegative is set to true. In the next iteration, when the expression in the while statement is evaluated, it evaluates to false because !isNegative is false. (Note that because isNegative is true, !isNegative is false.)
+
+The following while loop is written without using the variable isNegative:
+
+```
+```cpp
+sum = 0;
+cin >> num;
+
+while (cin)
+{
+    if (num < 0)    //if num is negative, terminate the loop
+    {
+        cout << "Negative number found in the data." << endl;
+        break;
+    }
+
+    sum = sum + num;
+    cin >> num;
+}
+```
+```
+
+In this form of the while loop, when a negative number is found, the expression in the if statement evaluates to true; after printing an appropriate message, the break statement terminates the loop. (After executing the break statement in a loop, the remaining statements in the loop are discarded.)

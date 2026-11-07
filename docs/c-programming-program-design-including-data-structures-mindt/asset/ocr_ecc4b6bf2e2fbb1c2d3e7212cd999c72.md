@@ -1,0 +1,48 @@
+Now the logical (Boolean) expression `(score >= 60)` evaluates to `true` or `false`. So we used two different values of `score`—one for which the logical (Boolean) expression evaluated to `true` and the other for which it evaluated to `false`. This is an example of thoroughly testing your code.
+
+The correct code to print Passing or Failing, depending on the value of `score`, is:
+
+```
+    if (score >= 60)
+        cout << "Passing" << endl;
+    else
+        cout << "Failing" << endl;
+```
+
+# ## `int` Data Type and Logical (Boolean) Expressions
+
+Earlier versions of C++ did not provide built-in data types that had logical (or Boolean) values `true` and `false`. Because logical expressions evaluate to either 1 or 0, the value of a logical expression was stored in a variable of the data type `int`. Therefore, you can use the `int` data type to manipulate logical (Boolean) expressions.
+
+Recall that nonzero values are treated as `true`. Now, consider the declarations:
+
+```
+    int legalAge;
+    int age;
+```
+
+and the assignment statement:
+
+```
+    legalAge = 21;
+```
+
+If you regard `legalAge` as a logical variable, the value of `legalAge` assigned by this statement is `true`.
+
+The assignment statement:
+
+```
+    legalAge = (age >= 21);
+```
+
+assigns the value 1 to `legalAge` if the value of `age` is greater than or equal to 21. The statement assigns the value 0 if the value of `age` is less than 21.
+
+It is interesting to note that `!(true)` evaluates to `true`. However, `!(36)` evaluates to 0 because as a logical expression 36 evaluates to 1, so `!(36)` evaluates to 0 and `!(36) == 1(0) == 1`.
+
+# ## `bool` Data Type and Logical (Boolean) Expressions
+
+More recent versions of C++ contain a built-in data type, `bool`, that has the logical (Boolean) values `true` and `false`. Therefore, you can manipulate logical (Boolean) expressions using the `bool` data type. Recall that in C++, `bool`, `true`, and `false` are reserved words. In addition, the identifier `true` has the value 1, and the identifier `false` has the value 0. Now, consider the following declaration:
+
+```
+    bool legalAge;
+    int age;
+```

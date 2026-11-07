@@ -1,0 +1,17 @@
+One solution to this problem is that when the queue overflows to the rear (that is, **queueRear** points to the last array position), we can check the value of the index **queueFront**. If the value of **queueFront** indicates that there is room in front of the array, then when **queueRear** gets to the last array position, we can slide all of the queue elements toward the first array position. This solution is good if the queue size is very small; otherwise, the program may execute more slowly.
+
+Another solution to this problem is to assume that the array is circular—that is, the first array position immediately follows the last array position (see Figure 17-30).
+
+![](bbox=[0.183, 0.266, 0.909, 0.481])
+
+**FIGURE 17-30**  Circular queue
+
+We will consider the array containing the queue to be circular, although we will draw the figures of the array holding the queue elements as before.
+
+Suppose that we have the queue as shown in Figure 17-31(a).
+
+![](bbox=[0.183, 0.63, 0.909, 0.779])
+
+**FIGURE 17-31**  Queue before and after the add operation
+
+After the operation **addQueue(Queue, 'Z');**, the queue is as shown in Figure 17-31(b).

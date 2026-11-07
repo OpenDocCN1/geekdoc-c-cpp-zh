@@ -1,0 +1,61 @@
++   2. Consider the following `for` loop:
+
+```
+```cpp
+for (i = 9; i >= 10; i--)
+    cout << i << " ";
+cout << endl;
+```
+```
+
+In this `for` loop, the initial statement sets `i` to 9. Because initially the loop condition (`i >= 10`) is `false`, nothing happens.
+
++   3. Consider the following `for` loop:
+
+```
+```cpp
+for (i = 10; i <= 10; i++)        //Line 1
+    cout << i << " ";             //Line 2
+cout << endl;                     //Line 3
+```
+```
+
+In this `for` loop, the initial statement sets `i` to 10. The loop condition (`i <= 10`) evaluates to `true`, so the output statement in Line 2 executes, which outputs 10. Next, the update statement increments the value of `i` by 1, so the value of `i` becomes 11. Now the loop condition evaluates to `false` and the `for` loop terminates. Note that the output statement in Line 2 executes only once.
+
++   4. Consider the following `for` loop:
+
+```
+```cpp
+for (i = 1; i <= 10; i++);        //Line 1
+    cout << i << " ";             //Line 2
+cout << endl;                     //Line 3
+```
+```
+
+This `for` loop has no effect on the output statement in Line 2. The semi-colon at the end of the `for` statement terminates the `for` loop; the action of the `for` loop is thus empty. The output statement is all by itself and executes only once.
+
++   5. Consider the following `for` loop:
+
+```
+```cpp
+for (i = 1; ; i++)
+    cout << i << " ";
+cout << endl;
+```
+```
+
+In this `for` loop, because the loop condition is omitted from the `for` statement, the loop condition is always `true`. This is an infinite loop.
+
++   6. The following `for` loop outputs the positive powers of 2 up to 100.
+
+```
+```cpp
+for (i = 2; i < 100; i = 2 * i)
+    cout << i << " ";          //output power of 2
+cout << endl;
+```
+```
+
+The output is:
+
+`2 4 8 16 32 64`

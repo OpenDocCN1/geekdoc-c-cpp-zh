@@ -1,0 +1,52 @@
+back to the caller. (Later, we will discuss how to write nonrecursive traversal functions.) The recursive definition of the function to implement the inorder traversal algorithms is
+
+```
+    template <class elemType>
+    void inorder(nodeType<elemType> *p) const
+    {
+        if (p != nullptr)
+        {
+            inorder(p->lLink);
+            cout << p->info << " ";
+            inorder(p->rLink);
+        }
+    }
+```
+
+To do the inorder traversal of a binary tree, the root node of the binary tree is passed as a parameter to the function inorder. For example, if root points to the root node of the binary tree, a call to the function inorder is
+
+```
+    inorder(root);
+```
+
+Similarly, we can write the functions to implement the preorder and postorder traversals. The definitions of these functions are given next:
+
+```
+    template <class elemType>
+    void preorder(nodeType<elemType> *p) const
+    {
+        if (p != nullptr)
+        {
+            cout << p->info << " ";
+            preorder(p->lLink);
+            preorder(p->rLink);
+        }
+    }
+```
+
+```
+    template <class elemType>
+    void postorder(nodeType<elemType> *p) const
+    {
+        if (p != nullptr)
+        {
+            postorder(p->lLink);
+            postorder(p->rLink);
+            cout << p->info << " ";
+        }
+    }
+```
+
+> > **NOTE**
+> >
+> > This section described the binary tree traversal algorithms inorder, preorder, and postorder. If you want to make a copy of a binary tree while preserving the structure of the binary tree, you can use preorder traversal. To delete all of the nodes of a binary tree, you can use postorder traversal. Later in this chapter, we will discuss binary search trees. The inorder traversal of a binary search tree visits the nodes in sorted order.

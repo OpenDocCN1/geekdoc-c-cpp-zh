@@ -1,0 +1,13 @@
+The program then executes the statement in Line 21, which outputs the fourth line. The `if...else` statement in Line 22 to 31 determines and outputs the grade for the course. Because the output statement in Line 7 does not contain the newline character or the manipulator `endl`, the output of the `if...else` statement is part of the fourth line of the output. After the `if...else` statement executes, control goes back to the function `main`. Because the next statement to execute in the function `main` is the last statement of the function `main`, the program terminates.
+
+In this program, the function `main` first calls the function `getScore` to obtain the course score from the user. The function `main` then calls the function `printGrade` to calculate and print the grade based on this course score. The course score is retrieved by the function `getScore`; later, this course score is used by the function `printGrade`. Because the value retrieved by the `getScore` function is used later in the program, the function `getScore` must pass this value outside. Because `getScore` is written as a void function, the formal parameter that holds this value must be a reference parameter.
+
+# Value and Reference Parameters  
+and Memory Allocation
+
+When a function is called, memory for its formal parameters and variables declared in the body of the function (called **local variables**) is allocated in the function data area. Recall that in the case of a value parameter, the value of the actual parameter is copied into the memory cell of its corresponding formal parameter. In the case of a reference parameter, the address of the actual parameter passes to the formal parameter. That is, the content of the formal parameter is an address. During data manipulation, the address stored in the formal parameter directs the computer to manipulate the data of the memory cell at that address. Thus, in the case of a reference parameter, both the actual and formal parameters refer to the same memory location. Consequently, during program execution, changes made by the formal parameter permanently change the value of the actual parameter.
+
+> > **NOTE**  
+> > Stream variables (for example, `ifstream` and `ofstream`) should be passed by reference to a function. After opening the input/output file or after reading and/or outputting data, the state of the input and/or output stream can then be passed outside the function.
+
+Because parameter passing is fundamental to any programming language, Examples 6-14 and 6-15 further illustrate this concept. Each covers a different scenario.

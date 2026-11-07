@@ -1,0 +1,36 @@
+Example 10-1 illustrates how to access the members of a class.
+
+# EXAMPLE 10-1
+
+Suppose we have the following declaration (say, in a user’s program):
+
+```
+clockType myClock;
+clockType yourClock;
+```
+
+Consider the following statements:
+
+```
+myClock.setTime(5, 2, 30);
+myClock.printTime();
+yourClock.setTime(x, y, z);    //assume x, y, and z are
+                              //variables of type int
+if (myClock.equalTime(yourClock))
+.
+.
+.
+```
+
+These statements are legal; that is, they are syntactically correct.
+
+In the first statement, `myClock.setTime(5, 2, 30);`, the member function `setTime` is executed. The values 5, 2, and 30 are passed as parameters to the function, and the function uses these values to set the values of the three member variables hr, min, and sec of `myClock` to 5, 2, and 30, respectively. Similarly, the second statement executes the member function `printTime` and outputs the contents of the three member variables of `myClock`. In the third statement, the values of the variables x, y, and z are used to set the values of the three member variables of `yourClock`.
+
+In the fourth statement, the member function `equalTime` executes and compares the three member variables of `myClock` to the corresponding member variables of `yourClock`. Because in this statement `equalTime` is a member of the object `myClock`, it has direct access to the three member variables of `myClock`. So it needs one more object, which in this case is `yourClock`, to compare. In essence, `equalTime` needs two objects to compare. The object to which it is dotted, `myClock`, is one and the argument, `yourClock`, is the other. This explains why the function `equalTime` has only one parameter.
+
+The objects `myClock` and `yourClock` can access only `public` members of the class `clockType`. Thus, the following statements are illegal because hr and min are declared as `private` members of the class `clockType` and, therefore, cannot be accessed by the objects `myClock` and `yourClock`:
+
+```
+myClock.hr = 10;                 //illegal
+myClock.min = yourClock.min;     //illegal
+```

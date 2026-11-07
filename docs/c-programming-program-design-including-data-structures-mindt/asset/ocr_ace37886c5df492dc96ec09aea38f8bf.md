@@ -1,0 +1,37 @@
+The definitions of the remaining functions are as follows:
+
+```
+int courseType::getCredits()
+{
+    return courseCredits;
+} //end getCredits
+
+string courseType::getCourseNumber()
+{
+    return courseNo;
+} //end getCourseNumber
+
+string courseType::getCourseName()
+{
+    return courseName;
+} //end getCourseName
+```
+
+Next, we discuss the student component.
+
+> > **NOTE** Notice that in the definition of the class `courseType`, the member functions, such as `print` and `getCredits`, are accessor functions. This class also has other accessor functions. As noted in Chapter 10, we typically define the accessor functions with the keyword `const` at the end of their headings. We leave it as an exercise for you to redefine this class so that the accessor functions are declared as constant functions. (See Programming Exercise 12 at the end of this chapter.)
+
+# Student
+
+The main characteristics of a student are the student name, student ID, number of courses in which enrolled, courses in which enrolled, and grade for each course. Because every student has to pay tuition, we also include a member to indicate whether the student has paid the tuition.
+
+Every student is a person, and every student takes courses. We have already designed a class `personType` to process a person’s first and last name. We have also designed a class to process the information for a course. Thus, we see that we can derive the class `studentType` to keep track of a student’s information from the class `personType`, and one member of this class is of type `courseType`. We can add more members as needed.
+
+The basic operations to be performed on an object of type `studentType` are as follows:
+
++   1. Set the student information.
++   2. Print the student information.
++   3. Calculate the number of credit hours taken.
++   4. Calculate the GPA.
++   5. Calculate the billing amount.
++   6. Because the grade report will print the courses in ascending order, sort the courses according to the course number.

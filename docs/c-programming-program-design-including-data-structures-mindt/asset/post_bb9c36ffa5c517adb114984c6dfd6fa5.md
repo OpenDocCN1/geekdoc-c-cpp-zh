@@ -1,0 +1,265 @@
+
+- **stateSalesTax** variable, 15
+- static arrays, 837
+- static binding, 860
+- `static_cast` reserved word, 50–52
+- static functions, 701–707
+- static members, 701–707
+- static member variables memory allocation, 702–704
+- `static` reserved word, 411, 701–702
+- static variables, 411–412, 701–707
+- static variable, 1252
+- `stdexcept` header file, 1020
+- `std` namespace, 79–80, 492
+- stepwise refinement, 20
+- STL. See Standard Template Library (STL)
+- `strcmp` function, 554–556
+- `strcpy` function, 554–556
+- stream(s), 124
+  - input, 124
+  - output, 124
+- stream classes, 768–769
+- stream extraction operator (>>), 62–65, 909
+  - overloading, 930, 932–935
+- stream functions, 130, 156
+- stream insertion operator (<<), 31, 58, 71, 909
+  - overloading, 930–932
+- syntax error, 86
+- stream manipulators, 156
+- stream member functions, 130
+- stream objects, 139
+- stream variables, 125
+  - passing by reference to functions, 390
+- string(s), 30–31, 53–54, 551, 553
+  - accessing individual character in, 494
+  - arrays, 573
+  - character-by-character comparison, 205–206
+  - clearing, 498–499
+  - concatenating, 493
+  - containing blanks, 157
+  - containing message, 1020
+  - converting to null-terminated string, 559–560
+  - empty, 53, 498–499
+  - input, 556–558
+  - inserting, 502–503
+  - length, 53–54, 131–133, 498–500
+  - manipulating, 54
+  - multiple-line, 77
+  - null, 53
+  - null-terminated, 559–560
+  - output, 53, 76–77, 150–152, 558
+  - output statements, 76–77
+  - palindromes, 370
+  - reading, 64–65, 156–157, 556
+  - relative position of characters, 53
+  - replacing, 502–503
+  - searching, 500–502
+  - size, 498–499
+  - slash (/) within, 162
+  - storing in string variable, 66
+  - subscript out of range error, 1020
+  - substrings, 504–505
+  - writing, 556
+- string concatenation operator (+), 1020
+- `string` data type, 53–54, 473–476, 573
+  - additional operations, 496–505
+  - binary operator (+), 493–494
+  - functions, 496–505
+  - input/output (I/O), 156–157, 559–560
+  - predefined operations, 574
+  - processing array of strings, 573
+  - relational operators, 205–206
+  - usage, 80
+  - variables, 560
+- `string` header file, 80, 131–133, 492, 559
+- `stringList` object, 977, 984
+- `stringList` vector container, 1457
+- string::npos named constant, 496
+- `string` objects, 1020
+- `string::size_type` data type, 496, 500, 502
+- `string` variables, 66, 493–494, 505
+- `strlen` function, 554–556
+- strongly connected, 1421
+- Stroustrup, Bjarne, 22
+- `str` pointer, 833
+- `str` string variable, 496
+- `struct` (a)
+  - accessing components with pointer, 827
+  - declaring, 826
+  - nodes as, 1088, 1100
+  - public members, 826
+- `struct` data type, 624–628
+  - accessing members, 614–617
+  - versus aggregate, 620
+  - versus classes, 684–685
+  - components, 684
+  - defining, 613–614
+  - length, 620–622
+  - members, 612
+  - passing by reference, 622
+  - passing by value, 622
+  - public members, 685
+  - values, 620–622
+- `struct` reserved word, 612
+- `struct` statement, 612–613
+- structured data types, 522
+- structured design, 20–21
+- structured programming, 20, 778–781
+- struct variables
+  - assigning value, 617–618
+  - comparing member-wise, 618
+  - declaring, 613–614
+  - functions and, 619–620
+  - as global variables, 614
+  - input/output (I/O), 618–619
+  - member, 614
+  - passing as parameter by value or by reference, 619–620
+  - printing contents, 619
+  - reading and writing, 618
+- `str` variable, 57, 984
+- `str1` variable, 493, 500, 972
+- `str2` variable, 493, 500, 972
+- `str3` variable, 493, 972
+- `strVar` string variable, 157, 496, 559
+- stubs, 414–415
+- `studentID` array, 560–561
+- `studentList` array, 794
+- `studentName` array, 554
+- `student` object, 777, 826
+- `studentPtr` pointer variable, 826–827
+- `student` struct variable, 618
+- `studentType` class, 786–793
+- `studentType` struct, 826–827
+- `studentType` struct variable, 619
+- `style` member, 613
+- subgraphs, **1419**
+- subproblems, 18, 20
+- subprograms, 33
+- subscript operator (), 1462, 1465
+  - overloading, 964–972
+- subset, **1419**
+- substr function, 497, 504–505, 1020–1021
+- subtraction compound operator (−=), 92–93
+- subtraction operator (−), 43, 45, 909
+- subtrees, 1367
+- **sumArray** function, 536–537, 540
+- **sumDigits** function, 698–700
+- **sumRows** function, 570–572
+- sum variable, 292, 303, 305, 312, 314, 317, 366, 1008
+- **sumVotes** variable, 1345–1346
+- surface area, 781
+- **swap** function, 497, 505, 1304–1305, 1316, 1467, 1506, 1531–1534
+- **swap_ranges** function, 1506, 1531–1534
+- switch reserved word, 227
+- switch statements, 191, 283, 292, 305, 473
+  - break statement, 228, 235, 313
+  - case statement, 227–228
+  - default label, 228
+  - evaluating expression to logical value, 232
+  - expressions, 227–228, 231
+  - general rules for, 227–228
+  - identifier, 228
+  - immediately exiting, 228, 313
+  - multiple selections, 233
+  - nesting, 233–234
+  - range of values, 233
+  - selector, 228
+  - skipping remainder of, 313
+  - switch structures, 227–234
+  - syntax, 13
+  - syntax errors, 10–11, 91, 157
+    - correcting in top-down fashion, 85
+    - detecting, 87
+    - identifying, 84
+  - range-based for loops, 840–841
+  - semicolon (;) after expressions in if...else statements, 226
+  - two-way selections, 196–197
+  - understanding and fixing, 84–87
+- syntax rules, 34, 87
+- system programs, 5
+- system-provided header files, 686, 763
+
+## T
+
+- tab escape sequence (\t), 77
+- tableType data type, 575
+- tail recursive functions, **1054**
+- target, 1283
+- tax member, 613
+- temp array, 969, 970
+- temperature variable, 210
+- temp formal parameter, 858
+- **tempHouse** variable, 614, 616
+- template(s), 780, 908, 973–975
+  - class templates, 973, 975–977
+  - function templates, 973–975
+  - template instantiations, 977
+  - template reserved word, 973
+- **tempNum** variable, 85
+- temp object, 1342–1343, 1346
+- temporary queue, 1260
+- **tempRect** object, 923
+- **tempRect** variable, 930
+- temp variable, 945, 1306
+- **temp1** vector, 1527, 1531
+- **temp2** vector, 1527, 1531
+- terabytes (TB), 6
+- terminate function, 1038
+- ternary operator, 223
+- **testAddress** class, 887–889
+- **testA.h** header file, 764–765
+- test class, 913
+- **testCopyConst** function, 858
+- **testExp()** function, 842
+- **testFunc** function, 841
+- test function, 412
+- **test.h** header file, 764–765
+- **testScore** member, 615
+- **testScore** parameter, 381
+- **testScore** variable, 173, 235–236, 292
+- **testTime** function, 661
+- test1 variable, 173
+- test2 variable, 173
+- test3 variable, 173
+- test4 variable, 173
+- test5 variable, 173
+- text editors, 9, 11
+- TextPad, 162
+- **t** global variable, 403
+- **this** pointer, 937–938, 944
+  - operator overloading, 913–917
+  - this reserved word, 913
+- **three** class, 763
+- **three** function, 403
+- throwing exceptions, 1014, 1023–1035
+- **throw** reserved word, 1014
+- **throw** statement, 1013, 1016, 1023, 1032
+- time-driven simulations, 1248
+- time function, 284
+- timeZone variable, 744
+- title parameter, 1156
+- **t** member, 492
+- tokens, 35
+- tolerance variable, 146
+- **toLower** function, 350
+- top-down design, 20
+- **top** function, 1190, 1206, 1208, 1500
+- topological ordering, 1447
+- top operation, 1180–1182
+- totalAverage variable, 19
+- totalNumOfBoxesSold variable, 276–277, 279
+- **totalSelByPerson** function, 634–635
+- **totalSelByQuarter** array, 630, 634–635
+- totalSales variable, 16
+- totalScore variable, 427
+- totalVotes variable, 1338
+- **toupper** function, 350, 352–353, 1551
+- **trailCurrent** pointer, 1122–1123, 1125, 1127, 1136, 1385, 1389
+- transaction time, 1248–1249
+- **transactionTime** function, 1255
+- **transactionTime** variable, 1249, 1251–1252, 1258–1259
+- **transform** function, 1506, 1549–1551
+- transistors, 3
+- traversal algorithms and binary trees, 1397–1401
+- **treeHeight** function, 1377
+- **treeLeavesCount** function, 1378

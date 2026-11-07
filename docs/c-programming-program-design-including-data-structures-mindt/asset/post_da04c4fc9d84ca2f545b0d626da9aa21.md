@@ -1,0 +1,168 @@
+
+Enter another uppercase letter to find its corresponding telephone digit.
+To stop the program enter #.
+Enter a letter: Q
+
+Letter: Q, Corresponding telephone digit: 7
+```
+
+```text
+Enter another uppercase letter to find its corresponding telephone digit.
+To stop the program enter #.
+Enter a letter: V
+
+Letter: V, Corresponding telephone digit: 8
+```
+
+```text
+Enter another uppercase letter to find its corresponding telephone digit.
+To stop the program enter #.
+Enter a letter: Y
+
+Letter: Y, Corresponding telephone digit: 9
+```
+
+```text
+Enter another uppercase letter to find its corresponding telephone digit.
+To stop the program enter #.
+Enter a letter: #
+```
+
+This program works as follows. The statements in Lines 8 and 9 tell the user what to do. The statement in Line 10 prompts the user to input a letter; the statement in Line 11 reads and stores that letter into the variable `letter`. The `while` loop at Line 13 checks if `letter` is `#`. If the letter entered by the user is not `#`, the body of the `while` loop executes. The statement at Line 15 outputs the letter entered by the user. The statement in Line 17 determines the position of the letter in the English alphabet. (Note that the position of A is 0, B is 1, and so on.) The `if` statement at Line 18 checks whether the letter entered by the user is uppercase. If the letter entered by the user is uppercase, the statements between Lines 19 and 27 determine and output the corresponding telephone digit. If the letter entered by the user is not valid, the `else` statement (Line 28) executes.
+
+Let us see how the statements in Lines 19 to 27 determine the corresponding telephone digits. Now, the letters A, B, and C correspond to the telephone digit 2, letters D, E, and F correspond to the telephone digit 3, and so on. Note that the letters P, Q, R, and S correspond to the telephone digit 7, and the letters W, X, Y, and Z correspond to the telephone digit 9. The ASCII values of the letters A, B, and C are 65, 66, and 67, respectively. We subtract 65 from these values to get 0, 1, and 2. If we divide each of these numbers by 3, then the quotient is 0, so we add 2 to the quotient to get the corresponding telephone digit. Similarly, the ASCII values of the letters D, E, and F are 68, 69, and 70, respectively. We subtract 65 from these values, to get 3, 4, and 5. Again we divide 3, 4, and 5 by 3 to get the quotient 1, and then add 2 to get the corresponding telephone digit, which is 3. The statements in Lines 18 to 23 handle the cases when four letters, such as P, Q, R, and S, correspond to a telephone digit. We leave the details as an exercise.
+
+Once the current letter is processed, the statements at Lines 30 and 31 again inform the user what to do next. The statement at Line 32 prompts the user to enter a letter; the statement at Line 33 reads and stores that letter into the variable `letter`. After the statement at Line 34 (at the end of the `while` loop) executes, the control goes back to the top of the `while` loop and the same process begins again. When the user enters `#`, the program terminates.
+
+Notice that in this program, the variable `letter` is the loop control variable. First, it is initialized in Line 11 by the input statement and then updated in Line 33. The expression in Line 13 checks whether `letter` is `#`.
+
+The statements in Lines 17 to 29 can be written using a `switch` statement by checking each letter and outputting the corresponding telephone digit as follows:
+
+```cpp
+if (letter >= 'A' && letter <= 'Z')
+    switch (letter)
+    {
+    case 'A':
+    case 'B':
+    case 'C':
+        cout << 2 << endl;
+        break;
+    case 'D':
+    case 'E':
+    case 'F':
+        cout << 3 << endl;
+        break;
+    .
+    .
+    .
+```
+
+However, this code will be very long and occupy a considerable amount of space.
+
+## Case 3: Flag-Controlled `while` Loops
+
+A flag-controlled `while` loop uses a `bool` variable to control the loop. A flag variable is a `bool` variable that indicates whether a condition is `true` or `false`. It is generally named for the `true` state of that condition; for example, `isFound`, `isTallEnough`, and `isFull`. Suppose `isFound` is a `bool` variable. The flag-controlled `while` loop takes the following form:
+
+```cpp
+isFound = false;        //initialize the loop control variable
+
+while (!isFound)        //test the loop control variable
+{
+    .
+    .
+    .
+    if (expression)
+        isFound = true; //update the loop control variable
+    .
+    .
+    .
+}
+```
+
+Example 5-6 further illustrates the use of a flag-controlled `while` loop.
+
+## EXAMPLE 5-6
+
+### Number Guessing Game
+
+The following program randomly generates an integer greater than or equal to 0 and less than 100. The program then prompts the user to guess the number. If the user guesses the number correctly, the program outputs an appropriate message. Otherwise, the program checks whether the guessed number is less than the random number. If the guessed number is less than the random number generated by the program, the program outputs the message “Your guess is lower than the number. Guess again!”; otherwise, the program outputs the message “Your guess is higher than the number. Guess again!”. The program then prompts the user to enter another number. The user is prompted to guess the random number until the user enters the correct number.
+
+To generate a random number, you can use the function `rand` from the header file `cstdlib`. For example, the expression `rand()` returns an `int` value between 0 and 32767. Therefore, the statement:
+
+```cpp
+cout << rand() << " " << rand() << endl;
+```
+
+will output two numbers that appear to be random. However, each time the program is run, this statement will output the same random numbers. This is because the function `rand` uses an algorithm that produces the same sequence of random numbers each time the program is executed on the same system. To generate different random numbers each time the program is executed, you also use the function `srand` from the header file `cstdlib`. The function `srand` takes as input an `unsigned int`, which acts as the seed for the algorithm. By specifying different seed values, each time the program is executed, the function `rand` will generate a different sequence of random numbers. To specify a different seed, you can use the function `time` from the header file `ctime`, which returns the number of seconds elapsed since January 1, 1970. For example, consider the following statements:
+
+```cpp
+srand(time(0));
+num = rand() % 100;
+```
+
+The first statement sets the seed, and the second statement generates a random number greater than or equal to 0 and less than 100. Note how the function `time` is used. It is used with an argument, that is, parameter, which is 0.
+
+The program uses the `bool` variable `isGuessed` to control the loop. The `bool` variable `isGuessed` is initialized to `false`. It is set to `true` when the user guesses the correct number.
+
+```cpp
+//Flag-controlled while loop.
+//Number guessing game.
+
+#include <iostream>                         //Line 1
+#include <cstdlib>                          //Line 2
+#include <ctime>                            //Line 3
+using namespace std;            //Line 4
+
+int main()                      //Line 5
+{                               //Line 6
+    //declare the variables     //Line 7
+    int num;                    //variable to store the random
+                                //number
+    int guess;                  //variable to store the number
+                                //guessed by the user
+    bool isGuessed;             //boolean variable to control
+                                //the loop
+
+    srand(time(0));             //Line 11
+    num = rand() % 100;         //Line 12
+
+    isGuessed = false;          //Line 13
+
+    while (!isGuessed)          //Line 14
+    {                           //Line 15
+        cout << "Enter an integer greater"
+             << " than or equal to 0 and "
+             << "less than 100: ";  //Line 16
+
+        cin >> guess;           //Line 17
+        cout << endl;           //Line 18
+
+        if (guess == num)       //Line 19
+        {                       //Line 20
+            cout << "You guessed the correct " //Line 21
+                 << "number." << endl;        //Line 22
+            isGuessed = true;   //Line 23
+        }                       //Line 24
+        else if (guess < num)
+            cout << "Your guess is lower than the " //Line 25
+                 << "number.\n Guess again!"       //Line 26
+                 << endl;
+        else
+            cout << "Your guess is higher than " //Line 27
+                 << "the number.\n Guess again!"  //Line 28
+                 << endl;
+    } //end while              //Line 29
+
+    return 0;                   //Line 30
+}
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+```text
+Enter an integer greater than or equal to 0 and less than 100: 45
+
+Your guess is higher than the number.
+  Guess again!
+Enter an integer greater than or equal to 0 and less than 100: 20
+```

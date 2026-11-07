@@ -1,0 +1,236 @@
+
+We leave the UML class diagram of the `class queueType` as an exercise for you. (See Exercise 34 at the end of this chapter.)
+
+Next, we consider the implementation of the queue operations.
+
+### EMPTY QUEUE AND FULL QUEUE
+
+As discussed earlier, the queue is empty if `count == 0`, and the queue is full if `count == maxQueueSize`. So the functions to implement these operations are as follows:
+
+```cpp
+template <class Type>
+bool queueType<Type>::isEmptyQueue() const
+{
+    return (count == 0);
+} //end isEmptyQueue
+
+
+template <class Type>
+bool queueType<Type>::isFullQueue() const
+{
+    return (count == maxQueueSize);
+} //end isFullQueue
+```
+
+### INITIALIZE QUEUE
+
+This operation initializes a queue to an empty state. The first element is added at the first array position. Therefore, we initialize `queueFront` to 0, `queueRear` to `maxQueueSize - 1`, and `count` to 0 (see Figure 17-35).
+
+![](img/b217c421655b51e7494cf3b89bb5432d_1287_0.png)
+
+The definition of the function `initializeQueue` is as follows:
+
+```cpp
+template <class Type>
+void queueType<Type>::initializeQueue()
+{
+    queueFront = 0;
+    queueRear = maxQueueSize - 1;
+    count = 0;
+} //end initializeQueue
+```
+
+### FRONT
+
+This operation returns the first element of the queue. If the queue is nonempty, the element of the queue indicated by the index `queueFront` is returned; otherwise, the program terminates.
+
+```cpp
+template <class Type>
+Type queueType<Type>::front() const
+{
+    assert(!isEmptyQueue());
+    return list[queueFront];
+} // end front
+```
+
+### BACK
+
+This operation returns the last element of the queue. If the queue is nonempty, the element of the queue indicated by the index queueRear is returned; otherwise, the program terminates.
+
+```cpp
+template <class Type>
+Type queueType<Type>::back() const
+{
+    assert(!isEmptyQueue());
+    return list[queueRear];
+} // end back
+```
+
+### addQueue
+
+Next, we implement the addQueue operation. Because queueRear points to the last element of the queue, to add a new element to the queue, we first advance queueRear to the next array position and then add the new element to the array position indicated by queueRear. We also increment count by 1. So the function addQueue is as follows:
+
+```cpp
+template <class Type>
+void queueType<Type>::addQueue(const Type& newElement)
+{
+    if (!isFullQueue())
+    {
+        queueRear = (queueRear + 1) % maxQueueSize; //use mod
+                                                    //operator to advance queueRear
+                                                    //because the array is circular
+        count++;
+        list[queueRear] = newElement;
+    }
+    else
+        cout << "Cannot add to a full queue." << endl;
+} // end addQueue
+```
+
+### deleteQueue
+
+To implement the deleteQueue operation, we access the index queueFront. Because queueFront points to the array position containing the first element of the queue, in order to remove the first queue element, we decrement count by 1 and advance queueFront to the next queue element. So the function deleteQueue is as follows:
+
+```cpp
+template <class Type>
+void queueType<Type>::deleteQueue()
+{
+    if (!isEmptyQueue())
+    {
+        count--;
+        queueFront = (queueFront + 1) % maxQueueSize; //use the
+                                      //mod operator to advance queueFront
+                                      //because the array is circular
+    }
+    else
+        cout << "Cannot remove from an empty queue." << endl;
+} //end deleteQueue
+```
+
+### CONSTRUCTORS AND DESTRUCTORS
+
+To complete the implementation of the queue operations, we next consider the implementation of the constructor and the destructor. The constructor gets the maxQueueSize from the user, sets the variable maxQueueSize to the value specified by the user, and creates an array of size maxQueueSize. If the user does not specify the queue size, the constructor uses the default value, which is 100, to create an array of size 100. The constructor also initializes queueFront and queueRear to indicate that the queue is empty. The definition of the function to implement the constructor is as follows:
+
+```cpp
+template <class Type>
+queueType<Type>::queueType(int queueSize)
+{
+    if (queueSize <= 0)
+    {
+        cout << "Size of the array to hold the queue must "
+             << "be positive." << endl;
+        cout << "Creating an array of size 100." << endl;
+
+        maxQueueSize = 100;
+    }
+    else
+        maxQueueSize = queueSize; //set maxQueueSize to
+                                   //queueSize
+
+    queueFront = 0;                 //initialize queueFront
+    queueRear = maxQueueSize - 1;   //initialize queueRear
+    count = 0;
+    list = new Type[maxQueueSize];  //create the array to
+                                    //hold the queue elements
+} //end constructor
+```
+
+The array to store the queue elements is created dynamically. Therefore, when the queue object goes out of scope, the destructor simply deallocates the memory occupied by the array that stores the queue elements. The definition of the function to implement the destructor is as follows:
+
+```cpp
+template <class Type>
+queueType<Type>::~queueType()
+{
+    delete [] list;
+} //end destructor
+```
+
+The implementation of the copy constructor and overloading the assignment operator are left as exercises for you. (The definitions of these functions are similar to those discussed for linked lists and stacks.)
+
+## Linked Implementation of Queues
+
+Because the size of the array to store the queue elements is fixed, only a finite number of queue elements can be stored in the array. Also, the array implementation of the queue requires the array to be treated in a special way together with the values of the indices queueFront and queueRear. The linked implementation of a queue simplifies many of the special cases of the array implementation and, because the memory to store a queue element is allocated dynamically, the queue is never full. This section discusses the linked implementation of a queue.
+
+Because elements are added at one end and removed from the other end, we need to know the front of the queue and the rear of the queue. Thus, we need two pointers, queueFront and queueRear, to maintain the queue. The following class implements the functions of the abstract class queueADT:
+
+```cpp
+//Definition of the node
+template <class Type>
+struct nodeType
+{
+    Type info;
+    nodeType<Type> *link;
+};
+
+template <class Type>
+class linkedQueueType: public queueADT<Type>
+{
+public:
+    const linkedQueueType<Type>& operator=
+                          (const linkedQueueType<Type>&);
+    //Overload the assignment operator.
+
+    bool isEmptyQueue() const;
+    //Function to determine whether the queue is empty.
+    //Postcondition: Returns true if the queue is empty,
+    //              otherwise returns false.
+
+    bool isFullQueue() const;
+    //Function to determine whether the queue is full.
+    //Postcondition: Returns true if the queue is full,
+    //              otherwise returns false.
+
+    void initializeQueue();
+    //Function to initialize the queue to an empty state.
+    //Postcondition: queueFront = nullptr; queueRear = nullptr
+
+    Type front() const;
+    //Function to return the first element of the queue.
+    //Precondition: The queue exists and is not empty.
+    //Postcondition: If the queue is empty, the program
+    //              terminates; otherwise, the first
+    //              element of the queue is returned.
+
+    Type back() const;
+    //Function to return the last element of the queue.
+    //Precondition: The queue exists and is not empty.
+    //Postcondition: If the queue is empty, the program
+    //              terminates; otherwise, the last
+    //              element of the queue is returned.
+
+    void addQueue(const Type& queueElement);
+    //Function to add queueElement to the queue.
+    //Precondition: The queue exists and is not full.
+    //Postcondition: The queue is changed and queueElement
+    //              is added to the queue.
+
+    void deleteQueue();
+    //Function to remove the first element of the queue.
+    //Precondition: The queue exists and is not empty.
+    //Postcondition: The queue is changed and the first
+    //              element is removed from the queue.
+
+    linkedQueueType();
+    //Default constructor
+
+    linkedQueueType(const linkedQueueType<Type>& otherQueue);
+    //Copy constructor
+
+    ~linkedQueueType();
+    //Destructor
+
+private:
+    nodeType<Type> *queueFront;  //pointer to the front of
+                                 //the queue
+    nodeType<Type> *queueRear;   //pointer to the rear of
+                                 //the queue
+};
+```
+
+The UML class diagram of the class `linkedQueueType` is left as an exercise for you. (See Exercise 35 at the end of this chapter.)
+
+Next, we write the definitions of the functions of the class `linkedQueueType`.
+
+### EMPTY AND FULL QUEUE
+
+The queue is empty if `queueFront` is `nullptr`. Memory to store the queue elements is allocated dynamically. Therefore, the queue is never full, so the function to implement

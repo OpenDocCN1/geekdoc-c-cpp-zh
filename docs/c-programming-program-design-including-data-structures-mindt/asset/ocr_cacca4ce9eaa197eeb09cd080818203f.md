@@ -1,0 +1,41 @@
+```
+```cpp
+void functionA()
+{
+    functionB();
+}
+
+void functionB()
+{
+    try
+    {
+        functionC();
+    }
+    catch (myException me)
+    {
+        cout << me.what() << " Caught in functionB." << endl;
+    }
+}
+
+void functionC() throw (myException)
+{
+    throw myException("Exception generated in function C.");
+}
+```
+```
+
+# Sample Run:
+
+Exception generated in functionC. Caught in functionB.
+
+In this program, the exception is caught and processed by functionB. Even though the function main contains the try/catch block, the try block does not throw any exceptions because the exception thrown by functionC is caught and processed by functionB.
+
+# QUICK REVIEW
+
++   1. An exception is an occurrence of an undesirable situation that can be detected during program execution.
++   2. Some typical ways of dealing with exceptions are to use an if statement or the assert function.
++   3. The function assert can check whether an expression meets the required condition(s). If the conditions are not met, it terminates the program.
++   4. The try/catch block is used to handle exceptions within a program.
++   5. Statements that may generate an exception are placed in a try block. The try block also contains statements that should not be executed if an exception occurs.
++   6. The try block is followed by one or more catch blocks.
++   7. A catch block specifies the type of exception it can catch and contains an exception handler.

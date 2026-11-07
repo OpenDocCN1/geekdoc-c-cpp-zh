@@ -1,0 +1,173 @@
+
+3. Maintain the program by using and modifying it if the problem domain changes.
+
+Figure 1-3 summarizes the first two steps of this programming process.
+
+![](img/b217c421655b51e7494cf3b89bb5432d_61_0.png)
+
+**FIGURE 1-3** Problem analysis—coding—execution cycle
+
+To develop a program to solve a problem, you start by analyzing the problem. You then design the algorithm; write the program instructions in a high-level language, or code the program; and enter the program into a computer system. Analyzing the problem is the first and most important step. This step requires you to do the following:
+
+1. Thoroughly understand the problem.
+2. Understand the problem requirements. Requirements can include whether the program requires interaction with the user, whether it manipulates data, whether it produces output, and what the output looks like. If the program manipulates data, the programmer must know what the data is and how it is represented. That is, you need to look at sample data. If the program produces output, you should know how the results should be generated and formatted.
+3. If the problem is complex, divide the problem into subproblems and repeat Steps 1 and 2. That is, for complex problems, you need to analyze each subproblem and understand each subproblem’s requirements.
+
+After you carefully analyze the problem, the next step is to design an algorithm to solve the problem. If you break the problem into subproblems, you need to design an algorithm for each subproblem. Once you design an algorithm, you need to check it for correctness. You can sometimes test an algorithm’s correctness by using sample data. At other times, you might need to perform some mathematical analysis to test the algorithm’s correctness.
+
+Once you have designed the algorithm and verified its correctness, the next step is to convert it into an equivalent programming code. You then use a text editor to enter the programming code or the program into a computer. Next, you must make sure that the program follows the language’s syntax. To verify the correctness of the syntax, you run the code through a compiler. If the compiler generates error messages, you must identify the errors in the code, remove them, and then run the code through the compiler again. When all the syntax errors are removed, the compiler generates the equivalent machine code, the linker links the machine code with the system’s resources, and the loader places the program into main memory so that it can be executed.
+
+The final step is to execute the program. The compiler guarantees only that the program follows the language’s syntax. It does not guarantee that the program will run correctly. During execution, the program might terminate abnormally due to logical errors, such as division by zero. Even if the program terminates normally, it may still generate erroneous results. Under these circumstances, you may have to reexamine the code, the algorithm, or even the problem analysis.
+
+Your overall programming experience will be successful if you spend enough time to complete the problem analysis before attempting to write the programming instructions. Usually, you do this work on paper using a pen or a pencil. Taking this careful approach to programming has a number of advantages. It is much easier to find errors in a program that is well analyzed and well designed. Furthermore, a carefully analyzed and designed program is much easier to follow and modify. Even the most experienced programmers spend a considerable amount of time analyzing a problem and debugging an algorithm.
+
+Throughout this book, you will not only learn the rules of writing programs in C++, but you will also learn problem-solving techniques. Most of the chapters contain programming examples that discuss programming problems. These programming examples teach techniques of how to analyze and solve problems, design algorithms, code the algorithms into C++, and also help you understand the concepts discussed in the chapter. To gain the full benefit of this book, we recommend that you work through these programming examples.
+
+Next, we provide examples of various problem-analysis and algorithm-design techniques.
+
+## EXAMPLE 1-1
+
+In this example, we design an algorithm to find the perimeter and area of a rectangle.
+
+To find the perimeter and area of a rectangle, you need to know the rectangle’s length and width. The perimeter and area of the rectangle are given by the following formulas:
+
+```text
+perimeter = 2 · (length + width)
+area = length · width
+```
+
+The algorithm to find the perimeter and area of the rectangle is as follows:
+
+1. Get the length of the rectangle.
+2. Get the width of the rectangle.
+3. Find the perimeter using the following equation:
+
+   ```text
+   perimeter = 2 · (length + width)
+   ```
+
+4. Find the area using the following equation:
+
+   ```text
+   area = length · width
+   ```
+
+## EXAMPLE 1-2
+
+In this example, we design an algorithm that calculates the sales tax and the price of an item sold in a particular state.
+
+The sales tax is calculated as follows: The state’s portion of the sales tax is 4%, and the city’s portion of the sales tax is 1.5%. If the item is a luxury item, such as a car more than $50,000, then there is a 10% luxury tax.
+
+To calculate the price of the item, we need to calculate the state’s portion of the sales tax, the city’s portion of the sales tax, and, if it is a luxury item, the luxury tax. Suppose `salePrice` denotes the selling price of the item, `stateSalesTax` denotes the state’s sales tax, `citySalesTax` denotes the city’s sales tax, `luxuryTax` denotes the luxury tax, `salesTax` denotes the total sales tax, and `amountDue` denotes the final price of the item.
+
+To calculate the sales tax, we must know the selling price of the item and whether the item is a luxury item.
+
+The `stateSalesTax` and `citySalesTax` can be calculated using the following formulas:
+
+```text
+stateSalesTax = salePrice · 0.04
+citySalesTax = salePrice · 0.015
+```
+
+Next, you can determine `luxuryTax` as follows:
+
+```text
+if (item is a luxury item)
+    luxuryTax = salePrice · 0.1
+otherwise
+    luxuryTax = 0
+```
+
+Next, you can determine `salesTax` as follows:
+
+```text
+salesTax = stateSalesTax + citySalesTax + luxuryTax
+```
+
+Finally, you can calculate `amountDue` as follows:
+
+```text
+amountDue = salePrice + salesTax
+```
+
+The algorithm to determine `salesTax` and `amountDue` is, therefore:
+
+1. Get the selling price of the item.
+2. Determine whether the item is a luxury item.
+3. Find the state’s portion of the sales tax using the formula:
+
+   ```text
+   stateSalesTax = salePrice · 0.04
+   ```
+
+4. Find the city’s portion of the sales tax using the formula:
+
+   ```text
+   citySalesTax = salePrice · 0.015
+   ```
+
+5. Find the luxury tax using the following formula:
+
+   ```text
+   if (item is a luxury item)
+       luxuryTax = salePrice · 0.1
+   otherwise
+       luxuryTax = 0
+   ```
+
+6. Find `salesTax` using the formula:
+
+   ```text
+   salesTax = stateSalesTax + citySalesTax + luxuryTax
+   ```
+
+7. Find `amountDue` using the formula:
+
+   ```text
+   amountDue = salePrice + salesTax
+   ```
+
+![](img/b217c421655b51e7494cf3b89bb5432d_65_0.png)
+
+## EXAMPLE 1-3
+
+In this example, we design an algorithm that calculates the monthly paycheck of a salesperson at a local department store.
+
+Every salesperson has a base salary. The salesperson also receives a bonus at the end of each month, based on the following criteria: If the salesperson has been with the store for five years or less, the bonus is $10 for each year that he or she has worked there. If the salesperson has been with the store for more than five years, the bonus is $20 for each year that he or she has worked there. The salesperson can earn an additional bonus as follows: If the total sales made by the salesperson for the month are at least $5,000 but less than $10,000, he or she receives a 3% commission on the sale. If the total sales made by the salesperson for the month are at least $10,000, he or she receives a 6% commission on the sale.
+
+To calculate a salesperson’s monthly paycheck, you need to know the base salary, the number of years that the salesperson has been with the company, and the total sales made by the salesperson for that month. Suppose **baseSalary** denotes the base salary, **noOfServiceYears** denotes the number of years that the salesperson has been with the store, **bonus** denotes the bonus, **totalSales** denotes the total sales made by the salesperson for the month, and **additionalBonus** denotes the additional bonus.
+
+You can determine the bonus as follows:
+
+```text
+if (noOfServiceYears is less than or equal to five)
+    bonus = 10 · noOfServiceYears
+otherwise
+    bonus = 20 · noOfServiceYears
+```
+
+Next, you can determine the additional bonus of the salesperson as follows:
+
+```text
+if (totalSales is less than 5000)
+    additionalBonus = 0
+otherwise
+    if (totalSales is greater than or equal to 5000 and
+        totalSales is less than 10000)
+        additionalBonus = totalSales · (0.03)
+    otherwise
+        additionalBonus = totalSales · (0.06)
+```
+
+Following the above discussion, you can now design the algorithm to calculate a salesperson’s monthly paycheck:
+
+1. Get **baseSalary**.
+2. Get **noOfServiceYears**.
+3. Calculate bonus using the following formula:
+
+   ```text
+   if (noOfServiceYears is less than or equal to five)
+       bonus = 10 · noOfServiceYears
+   otherwise
+       bonus = 20 · noOfServiceYears
+   ```

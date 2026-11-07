@@ -1,0 +1,23 @@
+The output of the previous `cout` statement is:
+
+6
+
+In Figure 15-1, the down arrow represents the successive calls to the function `fact`, and the upward arrows represent the values returned to the caller, that is, the calling function.
+
+Let us note the following from the preceding example, involving the factorial function.
+
++   - Logically, you can think of a recursive function as having an unlimited number of copies of itself.
++   - Every call to a recursive function—that is, every recursive call—has its own code and its own set of parameters and local variables.
++   - After completing a particular recursive call, control goes back to the calling environment, which is the previous call. The current (recursive) call must execute completely before control goes back to the previous call. The execution in the previous call begins from the point immediately following the recursive call.
+
+# Direct and Indirect Recursion
+
+A function is called **directly recursive** if it calls itself. A function that calls another function and eventually results in the original function call is said to be **indirectly recursive**. For example, if function A calls function B and function B calls function A, then function A is indirectly recursive. Indirect recursion can be several layers deep. For example, suppose that function A calls function B, function B calls function C, function C calls function D, and function D calls function A. Function A is then indirectly recursive.
+
+Indirect recursion requires the same careful analysis as direct recursion. The base cases must be identified, and appropriate solutions to them must be provided. However, tracing through indirect recursion can be tedious. You must, therefore, exercise extra care when designing indirect recursive functions. For simplicity, the problems in this book involve only direct recursion.
+
+A recursive function in which the last statement executed is the recursive call is called a **tail recursive function**. The function `fact` is an example of a tail recursive function.
+
+# Infinite Recursion
+
+Figure 15-1 shows that the sequence of recursive calls eventually reached a call that made no further recursive calls. That is, the sequence of recursive calls eventually reached a base case. On the other hand, if every recursive call results in another recursive call, then the recursive function (algorithm) is said to have infinite recursion. In theory, infinite recursion executes forever. Every call to a recursive function requires the system to allocate memory for the local variables and formal parameters. The system also saves this information so that after completing a call, control can be transferred back to the right caller. Therefore, because computer memory is finite, if you

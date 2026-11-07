@@ -1,0 +1,25 @@
+**TABLE 21-14** Additional Operations on a Bidirectional Iterator
+
+| Expression | Effect |
+| --- | --- |
+| `--biDirectionalIterator` | Moves backward, returns the new position (pre-decrement). |
+| `biDirectionalIterator--` | Moves backward, returns the old position (post-decrement). |
+
+> > **NOTE**
+> > Bidirectional iterators can be used with containers of type `vector`, `deque`, `list`, `set`, `multiset`, `map`, and `multimap`.
+
+# ## RANDOM ACCESS ITERATORS
+
+Random access iterators are bidirectional iterators that can randomly process the elements of a container. These iterators can be used with containers of types `vector`, `deque`, and `string`, as well as arrays. The operations defined for bidirectional iterators (for example, Tables 21-13 and 21-14) are also applicable to random access iterators. Table 21-15 describes the additional operations that are defined for random access iterators. Suppose `rAccessIterator` is a random access iterator.
+
+**TABLE 21-15** Additional Operations on a Random Access Iterator
+
+| Expression | Effect |
+| --- | --- |
+| `rAccessIterator[n]` | Accesses the nth element. |
+| `rAccessIterator += n` | Moves `rAccessIterator` forward n elements if n >= 0 and backward if n < 0. |
+| `rAccessIterator -= n` | Moves `rAccessIterator` backward n elements if n >= 0 and forward if n < 0. |
+| `rAccessIterator + n` | Returns the iterator of the next nth element. |
+| `n + rAccessIterator` | Returns the iterator of the next nth element. |
+| `rAccessIterator - n` | Returns the iterator of the previous nth element. |
+| `rAccessIt1 - rAccessIt2` | Returns the distance between the iterators `rAccessIt1` and `rAccessIt2`. |

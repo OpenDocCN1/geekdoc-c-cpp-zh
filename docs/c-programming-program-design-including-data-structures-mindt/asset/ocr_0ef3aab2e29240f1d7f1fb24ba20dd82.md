@@ -1,0 +1,52 @@
+the first line will output 100 onto the screen, while the second line will output an address usually displayed in hexadecimal digits.
+
+In the next section, after discussing the dereference operator, we will explain how to output the value of the memory location whose address is stored in `numPtr`.
+
+# Dereferencing Operator (*)
+
+Every chapter until now has used the asterisk character, *, as the binary multiplication operator. C++ also uses * as a unary operator. When used as a unary operator, *, commonly referred to as the **dereferencing operator** or **indirection operator**, refers to the object to which its operand (that is, the pointer) points. For example, given the statements:
+
+```
+```cpp
+int x = 25;
+int *p;
+p = &x; //store the address of x in p
+```
+```
+
+the statement
+
+```
+```cpp
+cout << *p << endl;
+```
+```
+
+prints the value stored in the memory space pointed to by p, which is the value of x.
+
+Also, the statement
+
+```
+```cpp
+*p = 55;
+```
+```
+
+stores 55 in the memory location pointed to by p—that is, in x.
+
+# EXAMPLE 12-1
+
+Let us consider the following statements:
+
+```
+```cpp
+int *p;
+int num;
+```
+```
+
+In these statements, p is a pointer variable of type int, and num is a variable of type int. Let us assume that memory location 1200 is allocated for p, and memory location 1800 is allocated for num. (See Figure 12-1.)
+
+![](bbox=[0.183, 0.765, 0.909, 0.868])
+
+FIGURE 12-1  Variables p and num

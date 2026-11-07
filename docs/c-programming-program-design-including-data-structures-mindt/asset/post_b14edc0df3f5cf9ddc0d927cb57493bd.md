@@ -1,0 +1,167 @@
+
+## Member Functions Common to Sequence Containers
+
+The previous section described the member functions that are common to all containers. In addition to these member functions, Table 21-6 describes the member functions that are common to all sequence containers, that is, containers of type **vector**, **deque**, and **list**. (Suppose that **seqCont** is a sequence container.)
+
+**TABLE 21-6** Member Functions Common to All Sequence Containers
+
+| Expression | Description |
+|---|---|
+| `seqCont.insert(position, elem);` | A copy of `elem` is inserted at the position specified by the iterator `position`. The position of the new element is returned. |
+| `seqCont.insert(position, n, elem);` | `n` copies of `elem` are inserted at the position specified by the iterator `position`. |
+| `seqCont.insert(position, beg, end);` | A copy of the elements, starting at `beg` until `end-1`, is inserted into `seqCont` at the position specified by the iterator `position`. Also, `beg` and `end` are iterators. |
+| `seqCont.push_back(elem);` | A copy of `elem` is inserted into `seqCont` at the end. |
+| `seqCont.pop_back();` | Deletes the last element. |
+| `seqCont.erase(position);` | Deletes the element at the position specified by the iterator `position`. |
+| `seqCont.erase(beg, end);` | Deletes all of the elements starting at `beg` until `end-1`. Both `beg` and `end` are iterators. |
+| `seqCont.clear();` | Deletes all of the elements from the container. |
+| `seqCont.resize(num);` | Changes the number of elements to `num`. If `size` grows, the new elements are created by their default constructor. |
+| `seqCont.resize(num, elem);` | Changes the number of elements to `num`. If `size` grows, the new elements are copies of `elem`. |
+
+### The copy Algorithm
+
+Example 21-4 used a `for` loop to output the elements of a vector container. The STL provides a convenient way to output the elements of a container with the help of the function `copy`. The function `copy` is provided as a part of the generic algorithm and can be used with any container type. Because we frequently need to output the elements of a container, before continuing with our discussion of containers, let us describe this function.
+
+The function `copy` does more than output the elements of a container. In general, it allows us to copy the elements from one place to another. For example, to output the elements of a vector or to copy the elements of a vector into another vector, we can use the function `copy`. The prototype of the function template `copy` is as follows:
+
+```cpp
+template <class InputIterator, class OutputIterator>
+OutputIterator copy(InputIterator first1, InputIterator last,
+                    OutputIterator first2);
+```
+
+The parameter `first1` specifies the position from which to begin copying the elements; the parameter `last` specifies the end position. The parameter `first2` specifies where to copy the elements. Therefore, the parameters `first1` and `last` specify the source; parameter `first2` specifies the destination.
+
+Note that the elements within the range `first1...last-1` are copied.
+
+The definition of the function template `copy` is contained in the header file `algorithm`. Thus, to use the function `copy`, the program must include the statement
+
+```cpp
+#include <algorithm>
+```
+
+The function `copy` works as follows. Consider the following statement:
+
+```cpp
+int intArray[] = {5, 6, 8, 3, 40, 36, 98, 29, 75};
+```
+
+This statement creates an array `intArray` of nine components. Here, `intArray[0] = 5`, `intArray[1] = 6`, and so on.
+
+The statement
+
+```cpp
+vector<int> vecList(9);
+```
+
+creates an empty container of nine components of type `vector` and the element type `int`.
+
+Recall that the array name, `intArray`, is actually a pointer and contains the base address of the array. Therefore, `intArray` points to the first component of the array, `intArray + 1` points to the second component of the array, and so on.
+
+Now consider the following statement:
+
+```cpp
+copy(intArray, intArray + 9, vecList.begin());
+```
+
+This statement copies the elements starting at the location `intArray`, which is the first component of the array `intArray`, until `intArray + 9 - 1` (that is, `intArray + 8`), which is the last element of the array intArray, into the container vecList. (Note that here, first1 is intArray, last is intArray + 9, and first2 is vecList.begin().) After the previous statement executes:
+
+```cpp
+vecList = {5, 6, 8, 3, 40, 36, 98, 29, 75}
+```
+
+Next, consider the following statement:
+
+```cpp
+copy(intArray + 1, intArray + 9, intArray);
+```
+
+Here, first1 is intArray + 1; that is, first1 points to the location of the second element of the array intArray, and last is intArray + 9. Also, first2 is intArray; that is, first2 points to the location of the first element of the array intArray. Therefore, the second array element is copied into the first array component, the third array element into the second array component, and so on. After the preceding statement executes:
+
+```cpp
+intArray = {6, 8, 3, 40, 36, 98, 29, 75, 75}
+```
+
+Clearly, the elements of the array intArray are shifted to the left by one position. Now consider the following statement:
+
+```cpp
+copy(vecList.rbegin() + 2, vecList.rend(), vecList.rbegin());
+```
+
+Recall that the function rbegin (reverse begin) returns a pointer to the last element in a container; it is used to process the elements of a container in reverse. Therefore, vecList.rbegin() + 2 returns a pointer to the third-to-last element in the container vecList. Similarly, the function rend (reverse end) returns a pointer to the first element in a container. The previous statement shifts the elements of the container vecList to the right by two positions. After the previous statement executes, the container vecList is
+
+```cpp
+vecList = {5, 6, 5, 6, 8, 3, 40, 36, 98}
+```
+
+Example 21-5 shows the effect of the preceding statements using a C++ program. Before discussing Example 21-5, let us describe a special type of iterators called ostream iterators. These iterators work well with the function copy to copy the elements of a container to an output device.
+
+### THE *ostream* ITERATOR AND THE FUNCTION *copy*
+
+One way to output the contents of a container is to use a for loop, the function begin to initialize the for loop control variable, and the function end to set the limit. Alternatively, the function copy can be used to output the elements of a container. In this case, an iterator of type ostream specifies the destination. (ostream iterators are discussed in detail later in this chapter.) When we create an iterator of type ostream, we also specify the type of element that the iterator will output.
+
+The following statement illustrates how to create an ostream iterator of type int:
+
+```cpp
+ostream_iterator<int> screen(cout, " ");        //Line A
+```
+
+This statement creates `screen` to be an `ostream` iterator with the element type `int`. The iterator `screen` has two arguments: the object `cout` and a space. Thus, the iterator `screen` is initialized using the object `cout`. When this iterator outputs elements, they are separated by a space.
+
+The statement
+
+```cpp
+copy(intArray, intArray + 9, screen);
+```
+
+outputs the elements of `intArray` on the screen. Similarly, the statement
+
+```cpp
+copy(vecList.begin(), vecList.end(), screen);
+```
+
+outputs the elements of the container `vecList` on the screen.
+
+We will frequently use the function `copy` to output the elements of a container by using an `ostream` iterator. Also, until we discuss `ostream` iterators in detail, we will use statements similar to Line A to create an `ostream` iterator.
+
+Of course, we can directly specify an `ostream` iterator in the function `copy`. For example, the statement (shown previously)
+
+```cpp
+copy(vecList.begin(), vecList.end(), screen);
+```
+
+is equivalent to the statement
+
+```cpp
+copy(vecList.begin(), vecList.end(),
+              ostream_iterator<int>(cout, " "));
+```
+
+Finally, the statement
+
+```cpp
+copy(vecList.begin(), vecList.end(),
+              ostream_iterator<int>(cout, ", "));
+```
+
+outputs the elements of `vecList` with a comma and space between them.
+
+Example 21-5 shows how to use the function `copy` and an `ostream` iterator in a program.
+
+### EXAMPLE 21-5
+
+```cpp
+#include <algorithm>                        //Line 1
+#include <vector>                           //Line 2
+#include <iterator>                         //Line 3
+#include <iostream>                         //Line 4
+
+using namespace std;                        //Line 5
+
+int main()                                  //Line 6
+{                                           //Line 7
+    int intArray[] = {5, 6, 8, 3, 40,
+                      36, 98, 29, 75};      //Line 8
+
+    vector<int> vecList(9);                 //Line 9
+```

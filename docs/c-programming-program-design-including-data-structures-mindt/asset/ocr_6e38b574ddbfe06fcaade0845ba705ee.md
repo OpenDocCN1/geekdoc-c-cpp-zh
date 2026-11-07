@@ -1,0 +1,36 @@
+```
+double larger(double x, double y)
+{
+    if (x >= y)
+        return x;
+    else
+        return y;
+}
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+```
+Enter 10 numbers.
+20 36 71 89 11 65 55 90 44 65
+The largest number is 90
+```
+
+# # Void Functions
+
+Earlier in this chapter, you learned how to use value-returning functions. In this section, you will explore user-defined functions in general and, in particular, those C++ functions that do not have a data type, called void functions.
+
+Void functions and value-returning functions have similar structures. Both have a heading and a body. Like value-returning functions, you can place user-defined functions either before or after the function main. However, the program execution always begins with the first statement in the function main. If you place a user-defined void function after the function main, you should place the function prototype before the function main. A void function does not have a data type. Therefore, functionType—that is, the return type—in the heading part and the return statement in the body of the void functions are meaningless. However, in a void function, you can use the return statement without any value; it is typically used to exit the function early. Like value-returning functions, void functions may or may not have formal parameters.
+
+Because void functions do not have a data type, they are not used (called) in an expression. A call to a void function is a stand-alone statement. Thus, to call a void function, you use the function name together with the actual parameters (if any) in a stand-alone statement. Before giving examples of void functions, next we give the syntax of a void function.
+
+# **FUNCTION DEFINITION**
+
+The function definition of void functions with parameters has the following syntax:
+
+```
+void functionName(formal parameter list)
+{
+    statements
+}
+```

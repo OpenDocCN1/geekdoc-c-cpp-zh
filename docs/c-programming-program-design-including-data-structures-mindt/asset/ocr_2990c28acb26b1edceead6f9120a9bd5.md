@@ -1,0 +1,60 @@
+```
+```cpp
+current = first; //set current to point to the first
+                 //node in the list
+
+while (current != nullptr && !found)  //search the list
+    if (current->info == searchItem)  //searchItem is found
+        found = true;
+    else
+        current = current->link;      //make current point to
+                                       //the next node
+
+return found;
+}//end search
+```
+```
+
+> > **NOTE**  The function `search` can also be written as follows:
+
+```
+```cpp
+template <class Type>
+bool unorderedLinkedList<Type>::search(const Type& searchItem) const
+{
+    nodeType<Type> *current; //pointer to traverse the list
+
+    current = first; //set current to point to the first
+                     //node in the list
+
+    while (current != nullptr)        //search the list
+        if (current->info == searchItem) //searchItem is found
+            return true;
+        else
+            current = current->link;  //make current point
+                                       //to the next node
+
+    return false; //the list is empty, return false
+}//end search
+```
+```
+
+# ## Insert the First Node
+
+The function `insertFirst` inserts the new item at the beginning of the list—that is, before the node pointed to by `first`. The steps needed to implement this function are as follows:
+
++   1. Create a new node.
++   2. Store the new item in the new node.
++   3. Insert the node before `first`.
++   4. Increment `count` by 1.
+
+```
+```cpp
+template <class Type>
+void unorderedLinkedList<Type>::insertFirst(const Type& newItem)
+{
+    nodeType<Type> *newNode; //pointer to create the new node
+    newNode = new nodeType<Type>; //create the new node
+    newNode->info = newItem; //store the new item in the node
+```
+```

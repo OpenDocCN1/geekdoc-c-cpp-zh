@@ -1,0 +1,26 @@
+Figure 18-48 shows candidateList after adding the votes for each candidate—that is, after a call to the function `addVotes`.
+
+![](bbox=[0.161, 0.162, 0.889, 0.522])
+
+FIGURE 18-48  `candidateList` after a call to the function `addVotes`
+
+Printing Heading and Print Results
+
+To complete the program, we include a function to print the heading, which outputs the first four lines of the output. The following function accomplishes this task:
+
+```
+```cpp
+void printHeading()
+{
+    cout << "        --------------------Election Results-----"
+         << "--------------------" << endl << endl;
+    cout << "                         Votes" << endl;
+    cout << "  Candidate Name   Region1   Region2   Region3"
+         << "  Region4   Total" << endl;
+    cout << "  --------  --------  -------  -------  -------"
+         << "  -------  -------  " << endl;
+}
+```
+```
+
+We now describe the function `printResults`, which prints the results. Suppose that the variable `sumVotes` holds the total votes polled for the election, the variable `largestVotes` holds the largest number of votes received by a candidate, and the variable `winLoc` holds the index of the winning candidate in the array list.

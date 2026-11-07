@@ -1,0 +1,371 @@
+
+- floating-point notation, **40**
+- floating-point numbers, **48**
+  - absolute value, **213**
+  - comparing for equality, **212–213**
+  - converting to integer, **50–52**
+  - decimal point and trailing zeros, **146–149**
+  - default type, **55, 145**
+  - division operator (/), **909**
+  - double data type, **42, 55**
+  - fixed decimal format, **145–146, 196**
+  - formatting, **143–145**
+  - precision, **143–145**
+  - scientific notation, **144**
+- floor function, **349–350**
+- for_each function, **1505, 1549–1551**
+- foreignLanguages variable, **477**
+- for loop variable, **298**
+- for loops, **22, 307, 317, 382, 529–530, 845, 1022, 1066, 1309, 1312, 1429, 1462–1463, 1465, 1470**
+  - auto declaration of elements, **551–552**
+  - body, **298**
+  - break statement, **313**
+  - component-wise copying, **534**
+  - continue statement, **315**
+  - counted, **297**
+  - counter, **305**
+  - counting backward, **301**
+  - immediately exiting, **313–314**
+  - indexed, **297**
+  - infinite, **300, 302**
+  - initializing array components, **838**
+  - initial statement, **298–300**
+  - inputting data, **568**
+  - largest element, **569**
+  - loop condition, **298–300, 302, 310**
+  - loop control variables (LCV), **301**
+  - nesting, **316–317, 1301**
+  - range-based, **552, 840–841, 1472–1475**
+  - scope of identifier, **400**
+  - simple or compound statements, **299**
+  - sorting lists, **549**
+  - stepping through array elements, **527–530**
+  - terminating, **302**
+  - two-dimensional arrays, **566–567**
+  - update statement, **298–300, 315**
+  - versus while loops, **303–304**
+- for loop control, **298**
+- formal parameters, **354, 840**
+  - actual parameters, **356, 379, 622**
+  - base address passed to, **538–539**
+  - base class objects, **858**
+  - changing value of, **661**
+  - constant arrays as, **535–537**
+  - const reserved word, **535**
+  - memory allocation, **390**
+  - pointer, **858–859, 862**
+  - range-based for loops and, **1473**
+  - reference parameter, **380, 842, 858–859, 862**
+  - value parameter, **380, 862–863**
+  - virtual functions, **862**
+  - void functions, **378**
+- formal parameter lists, **355–356, 415, 416**
+  - and&, **386**
+  - constructors, **671**
+  - data types, **379**
+- formatting flags, **768**
+- FORTRAN, **3, 8**
+- forward_iterator, **1489**
+- forward iterators, **1154, 1157**
+- fParamFunc1 function, **1398**
+- free tree, **1441**
+- friend functions, **918**
+  - extraction operator (>>), **921**
+  - insertion operator (<<), **921**
+  - operator functions as, **921–923**
+  - operator overloading, **949–950**
+  - pre-increment operator (++u), **945**
+- friend reserved word, **918**
+- front, **1229–1230**
+- front function, **1108, 1139, 1230, 1239, 1243–1244, 1459, 1477, 1502**
+- front_inserter insert iterator, **1514**
+- fstream class, **768**
+- fstream header file, **161–162, 768–769**
+- fullTimeEmployee class, **868–871**
+- funcA function, **376**
+- funcArrayAsParam function, **535**
+- funcB function, **376**
+- funcExp function, **418**
+- func parameter, **1549**
+- function(s), **21, 31–33, 80, 188, 348**
+  - arguments, **131, 134**
+  - arrays as parameters to, **534–535**
+  - body, **354**
+  - calling, **355–356**
+  - classes and, **660**
+  - class members, **652–653**
+  - class templates, **977**
+  - constructors, **671–673**
+  - C-strings, **554–555**
+  - default parameters, **417–419**
+  - definition, **354, 661, 686**
+  - depending on another function, **413–415**
+  - derived classes, **866**
+  - destructors, **681–682**
+  - directly recursive, **1054**
+  - empty, **866**
+  - enumeration types parameter to, **475–476**
+  - exceptions thrown by, **1032**
+  - formal parameter lists, **356, 415–416**
+  - formal parameters, **354, 840**
+  - function templates, **973**
+  - global identifier access, **400**
+  - header files, **131**
+  - heading, **354, 354, 416**
+  - identifiers, **375**
+  - illegal arguments, **1020**
+  - immediately exiting, **219–220**
+  - inability to nest, **400**
+  - indirectly recursive, **1054**
+  - infinite recursion, **1054–1055**
+  - I/O, **349**
+  - istream (input stream) data type, **130**
+  - local variables, **390**
+  - mathematical, **349**
+  - names, **400, 415**
+  - overloaded operators, **909**
+  - overloading, **779–780**
+  - parameters, 131, 134, 349, 1397–1401
+  - passing by reference, 390
+  - pointers, 841–842, 1397
+  - pointer variables, 841
+  - predefined, 33, 130–138, 348–352
+  - processing thrown exceptions, 1039–1041
+  - pure virtual function, 867
+  - recursive, 1053–1054
+  - returning multiple values from, 386
+  - reusing, 352
+  - run-time binding, 866
+  - search algorithm growth rate, 1292–1294
+  - signatures, 416
+  - stack implementing calls, 1180
+  - stack unwinding, 1038–1041
+  - standard, 33
+  - static, 701–707
+  - string data type, 496–505
+  - structured programming, 779
+  - struct variables and, 619–620
+  - tail recursive functions, 1054
+  - testing, 413–415
+  - throwing and rethrowing exceptions, 1032–1036
+  - two-dimensional array as parameters, 570–573
+  - user-defined, 352–353
+  - value-returning, 353–359
+  - virtual, 866
+  - void functions, 353, 378–384
+  - writing other functions with, 360
+- functionABC function, 416
+- functionA function, 1040
+- functional header file, 1496
+- functionB function, 1040–1041
+- function call, 131, 359, 376
+- function header, 354
+- function objects, 1507, 1508–1513
+  - arithmetic, 1508
+  - logical, 1513
+  - predicates, 1513
+  - relational, 1510–1513
+- function overloading, 415–417, 973–975
+  - algorithm, 1507
+- function prototypes, 360–362, 376, 418, 653, 661
+- functionSeven function, 415
+- functionSix function, 415
+- function stub, 414–415
+- function templates, 908, 973–975, 977, 980, 981
+- function type, 349
+- functionXYZ function, 416
+- funcValueParam function, 385–386
+- funExample function, 403
+- funOne function, 392–395, 405
+- funTwo function, 394–395
+
+## G
+
+- gameCount variable, 479
+- gameResult function, 480, 482–483
+- gameWinner variable, 479
+- general cases, 1052
+- generate function, 1506, 1517–1519
+- generate_n function, 1506, 1517–1519
+- generic algorithms, 1505
+- gen function, 1517
+- getArrivalTime function, 1252
+- getCost function, 710, 711
+- getCourseName function, 784, 786
+- getCourseNumber function, 792
+- getCredits function, 784, 786, 792
+- getCurrentBalance function, 708, 709
+- getCurrentCustomerArrivalTime function, 1255
+- getCurrentCustomerNumber function, 1255
+- getCurrentCustomerTransactionTime function, 1255
+- getCurrentCustomerWaitingTime function, 1255
+- getCustomerNumber function, 1252
+- getData function, 632–634
+- getDay function, 774–775
+- getFirstName function, 696–697, 1330
+- getFreeServerID function, 1257–1258
+- get function, 130, 133–134, 137–138, 156, 161, 320, 557, 583, 585, 768
+- getGpa function, 787, 792
+- getHeight function, 750, 753
+- getHoursEnrolled function, 787, 792
+- getLastName function, 696–697, 1330
+- getLength function, 748–749, 753, 916
+- getline function, 156–157, 320, 558
+- getMonth function, 774–775
+- getNoOfItems function, 710–711
+- getNumber function, 420–422, 424
+- getNumberOfBusyServers function, 1258
+- getNum function, 693–694, 697–700
+- getOddsCount function, 698–700
+- getRadius function, 691, 692
+- getRemainingTransactionTime function, 1255
+- getScore function, 387–390, 794–795
+- getStudentData function, 794–795
+- getTime function, 654–655, 662–663, 666–667, 687, 955
+- getTotalVotes function, 1335
+- getTransactionTime function, 1252, 1255
+- getWaitingTime function, 1252
+- getWidth function, 748–749, 753, 916
+- getYear function, 774
+- getZeroCount function, 698–700
+- gigabytes (GB), 6
+- global identifiers, 399–400
+  - header files, 487
+  - iostream header file, 490–491
+- global named constants, 405
+- global positioning system (GPS), 3
+- globalType namespace, 488–489
+- global variables, 403–405
+  - memory allocation, 411
+  - scope resolution operator (::), 403
+  - static variables, 411
+  - struct variables, 614
+- **gpa** component, **826–827**
+- **gpa** variable, **154**
+- **grade** enumeration type, **476**
+- **grade** parameter, **381**
+- **grade** variable, **18, 43, 229, 235, 292**
+- graphics and binary trees, 1373
+- **graphIt** iterator, 1429
+- graph pointer, 1429
+- graphs, **1419**
+  - abstract data type (ADT), 1424–1427
+  - adjacency lists, 1423–1424
+  - adjacency matrix, **1422**
+  - applications, 1432
+  - breadth first traversal algorithm, **1428**, 1430–1432
+  - cycle, **1421–1422**
+  - definitions, 1419–1424
+  - depth first traversal algorithm, **1428**–1430
+  - destination, **1419**
+  - directed, **1419**–1424
+  - edges, 1419–1420
+  - empty, 1425, 1427
+  - free tree, 1441
+  - minimal spanning tree, **1441**–1447
+  - notations, 1419–1422
+  - operations on, 1423–1424
+  - origin of edge, **1419**
+  - paths, **1421**
+  - printing, 1427
+  - representations, 1422–1423
+  - rooted tree, **1441**
+  - shortest path, **1432**–1440
+  - simple graphs, **1421**
+  - source vertex, **1442**
+  - spanning tree, **1441**
+  - strongly connected, **1421**
+  - subgraphs, **1419**
+  - traversing, 1428–1430
+  - undirected, **1419**–1421
+  - vertices, 1419–1420, 1424
+  - weight, **1432**
+  - weighted graphs, **1432**
+  - weighted tree, **1441**
+  - weight of the path, **1432**
+- graph theory, 1418–1419, **1432**
+- **graphType** class, 1424–1427, 1433
+- **greater_equal** function object, 1510
+- **greater** function, 1496, 1510
+- greater than operator (>), 189
+- greater than or equal to operator (>=), 189, 909
+- greedy algorithm, **1432**
+- **guess** variable, 17, 286
+
+## H
+
+- Hamblin, Charles, 1215
+- hand-held devices, 3
+- hardware, 4–5
+- Harvard University, 3
+- “has-a” relationship, 744, 773–778
+- head, **1086**
+- header files, 79–81, 131, **686**–688, 1503–1504
+  - class templates, 977
+  - derived classes, 763–764
+  - functions, 131
+  - global identifiers, 487
+  - .h extension, 686
+  - multiple inclusions of, 764–767
+  - ordered linked lists, 1128
+  - predefined functions, 350, 352–353
+  - system-provided, 686, 763
+  - unordered linked lists, 1119–1120
+  - user-defined, 686, 763
+- heading, **353**–354
+- head pointer, 1088, 1090
+- heap sort algorithms, 1507
+- height
+  - binary search trees, 1383
+  - binary trees, **1366**
+  - subtrees, 1367
+- **height** function, 1367, 1378
+- height variable, 141, 148–149, 199, 752, 755–756, 758
+- .h extension, 686
+- high-level languages, 8–9
+- Hollerith, Herman, 3
+- horizontal tab character (\t), 40
+- hours variable, 151–152, 195–196, 237
+- hoursWorked variable, 126
+- houseType struct, 613–614, 616
+- hr variable, 653–656, 658–659, 662, 665–666, 673, 677, 679–680, 908, 956
+- H_test preprocessor identifier, 765
+
+## I
+
+- IBM, 3
+- identifiers, 36–37, 79, 83
+  - blanks in, 88
+  - blocks, 400
+  - cmath header file, 492
+  - declaring before using, 56, 82
+  - enumeration types, 468–469
+  - functions, 375
+  - global, **399**
+  - iomanip header file, 492
+  - iostream header file, 492
+  - legal and illegal, 36–37
+  - local, **399**
+  - named constants, 55, 89
+  - naming, 89
+  - predefined, 36
+  - rules to access, 399–401
+  - run-together words, **89**
+  - scope of, **399**–403
+  - self-documenting, 89
+  - std namespace, 79
+  - **switch** structure, 228
+  - undeclared, 360
+  - user-defined, 36
+- IDEs. See integrated development environments (IDEs)
+- **#ifdef** statement, 765
+- **if...else** statements, 191, 194–198, 208, 227, 235, 390
+  - comparing with if statements, 210–211
+  - compound statements, 207
+  - conditional operator (?:), 223
+  - expressions and semicolon (;), 226
+  - incorrect, 216
+  - logical expressions, 195
+  - nesting, 208, 280
+  - range of values, 235
+- **if** reserved word, 192, 195

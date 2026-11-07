@@ -1,0 +1,23 @@
+> Output iterators cannot be used to iterate over a range twice. Thus, if we write data at the same position twice, there is no guarantee that the new value will replace the old value.
+
+# FORWARD ITERATORS
+
+Forward iterators combine all of the functionality of input iterators and almost all of the functionality of output iterators. Suppose `forwardIterator` is a forward iterator. Table 21-13 describes the operations on `forwardIterator`.
+
+**TABLE 21-13** Operations on a Forward Iterator
+
+| Expression | Effect |
+|---|---|
+| `*forwardIterator` | Gives access to the element to which `forwardIterator` points. |
+| `forwardIterator->member` | Gives access to the member of the element. |
+| `++forwardIterator` | Moves forward, returns the new position (pre-increment). |
+| `forwardIterator++` | Moves forward, returns the old position (post-increment). |
+| `forwardIt1 == forwardIt2` | Returns `true` if the two iterators are the same, and `false` otherwise. |
+| `forwardIt1 != forwardIt2` | Returns `true` if the two iterators are not the same, and `false` otherwise. |
+| `forwardIt1 = forwardIt2` | Assignment |
+
+> A forward iterator can refer to the same element in the same collection and process the same element more than once.
+
+# BIDIRECTIONAL ITERATORS
+
+Bidirectional iterators are forward iterators that can also iterate backward over the elements. Suppose `bidirectionalIterator` is a bidirectional iterator. The operations defined for forward iterators (Table 21-13) are also applicable to bidirectional iterators. To step backward, decrement operations are also defined for `bidirectionalIterator`. Table 21-14 shows additional operations on a bidirectional iterator.
