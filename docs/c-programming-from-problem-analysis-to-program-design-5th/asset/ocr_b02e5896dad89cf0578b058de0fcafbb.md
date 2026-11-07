@@ -1,0 +1,68 @@
+```
+```cpp
+case 4:
+case 5:
+    cout << n;
+    break;
+case 0:
+    cout << endl;
+    break;
+}
+```
+```
+
+```
+```cpp
+d. switch (n % 10)
+{
+    case 2:
+    case 4:
+    case 6:
+    case 8:
+        cout << "Even";
+        break;
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+        cout << "Odd";
+        break;
+}
+```
+```
+
+19. Suppose the input is 5. What is the value of alpha after the following C++ code executes?
+
+```
+```cpp
+cin >> alpha;
+switch (alpha)
+{
+    case 1:
+    case 2:
+        alpha = alpha + 2;
+        break;
+    case 4:
+        alpha++;
+    case 5:
+        alpha = 2 * alpha;
+    case 6:
+        alpha = alpha + 5;
+        break;
+    default:
+        alpha--;
+}
+```
+```
+
+20. Suppose the input is 3. What is the value of beta after the following C++ code executes?
+
+```
+```cpp
+cin >> beta;
+switch (beta)
+{
+    case 3:
+        beta = beta + 3;
+```
+```

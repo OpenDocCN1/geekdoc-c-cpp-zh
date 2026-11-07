@@ -1,0 +1,57 @@
+```
+```cpp
+{
+    if (this != &otherStack) //avoid self-copy
+        copyStack(otherStack);
+
+    return *this;
+}//end operator
+```
+```
+
+The definition of a stack and the functions to implement the stack operations discussed previously are generic. Also, as in the case of an array representation of a stack, in the linked representation of a stack, we must put the definition of the stack and the functions to implement the stack operations together in a (header) file. A client’s program can include this header file via the `include` statement.
+
+Example 19–3 illustrates how a linkedStack object is used in a program.
+
+# EXAMPLE 19-3
+
+We assume that the definition of the `class linkedStackType` and the functions to implement the stack operations are included in the header file "linkedStack.h".
+
+```
+```cpp
+//This program tests various operations of a linked stack
+
+#include <iostream>
+#include "linkedStack.h"
+
+using namespace std;
+
+void testCopy(linkedStackType<int> OStack);
+
+int main()
+{
+    linkedStackType<int> stack;
+    linkedStackType<int> otherStack;
+    linkedStackType<int> newStack;
+
+    //Add elements into stack
+    stack.push(34);
+    stack.push(43);
+    stack.push(27);
+
+    //Use the assignment operator to copy the elements
+    //of stack into newStack
+    newStack = stack;
+
+    cout << "After the assignment operator, newStack: "
+         << endl;
+
+    //Output the elements of newStack
+    while (!newStack.isEmptyStack())
+    {
+        cout << newStack.top() << endl;
+        newStack.pop();
+    }
+}
+```
+```

@@ -1,0 +1,37 @@
+The other arithmetic compound operators have similar conventions. For example, using the compound operator +=, you can rewrite the simple assignment statement:
+
+```
+variable = variable + (expression);
+```
+
+as:
+
+```
+variable += expression;
+```
+
+The compound assignment statement allows you to write simple assignment statements in a concise fashion by combining an arithmetic operator with the assignment operator.
+
+# EXAMPLE 2-31
+
+This example shows several compound assignment statements that are equivalent to simple assignment statements.
+
+| Simple Assignment Statement | Compound Assignment Statement |
+|---|---|
+| `i = i + 5;`<br>`counter = counter + 1;`<br>`sum = sum + number;`<br>`amount = amount * (interest + 1);`<br>`x = x / (y + 5);` | `i += 5;`<br>`counter += 1;`<br>`sum += number;`<br>`amount *= interest + 1;`<br>`x /= y + 5;` |
+
+> **NOTE**
+> 
+> Any compound assignment statement can be converted into a simple assignment statement. However, a simple assignment statement may not be (easily) converted to a compound assignment statement. For example, consider the following simple assignment statement:
+> 
+> `x = x * y + z − 5;`
+> 
+> To write this statement as a compound assignment statement, the variable `x` must be a common factor in the right side, which is not the case. Therefore, you cannot immediately convert this statement to a compound assignment statement. In fact, the equivalent compound assignment statement is:
+> 
+> `x *= y + (z − 5)/x;`
+> 
+> which is more complicated than the simple assignment statement. Furthermore, in the preceding compound statement, `x` cannot be 0. We recommend avoiding such compound expressions.
+
+> **NOTE**
+> 
+> In programming code, this book typically uses only the compound operator +=. So statements such as `a = a + b;` are written as `a += b;`.

@@ -1,0 +1,18 @@
+In Chapter 2, you learned that a C++ program is a collection of functions. One such function is `main`. The programs in Chapters 1 through 5 use only the function `main`; the programming instructions are packed into one function. This technique, however, is good only for short programs. For large programs, it is not practical (although it is possible) to put the entire programming instructions into one function, as you will soon discover. You must learn to break the problem into manageable pieces. This chapter first discusses the functions previously defined and then discusses user-defined functions.
+
+Let us imagine an automobile factory. When an automobile is manufactured, it is not made from basic raw materials; it is put together from previously manufactured parts. Some parts are made by the company itself; others, by different companies.
+
+Functions are like building blocks. They let you divide complicated programs into manageable pieces. They have other advantages, too:
+
++   - While working on one function, you can focus on just that part of the program and construct it, debug it, and perfect it.
++   - Different people can work on different functions simultaneously.
++   - If a function is needed in more than one place in a program or in different programs, you can write it once and use it many times.
++   - Using functions greatly enhances the program’s readability because it reduces the complexity of the function main.
+
+Functions are often called **modules**. They are like miniature programs; you can put them together to form a larger program. When user-defined functions are discussed, you will see that this is the case. This ability is less apparent with predefined functions because their programming code is not available to us. However, because predefined functions are already written for us, you will learn these first so that you can use them when needed.
+
+# Predefined Functions
+
+Before formally discussing predefined functions in C++, let us review a concept from a college algebra course. In algebra, a function can be considered a rule or correspondence between values, called the function’s arguments, and the unique values of the function associated with the arguments. Thus, if **f(x) = 2x + 5**, then **f(1) = 7, f(2) = 9, and f(3) = 11**, where 1, 2, and 3 are the arguments of f, and 7, 9, and 11 are the corresponding values of the function f.
+
+In C++, the concept of a function, either predefined or user-defined, is similar to that of a function in algebra. For example, every function has a name and, depending on the values specified by the user, it does some computation. This section discusses various predefined functions.

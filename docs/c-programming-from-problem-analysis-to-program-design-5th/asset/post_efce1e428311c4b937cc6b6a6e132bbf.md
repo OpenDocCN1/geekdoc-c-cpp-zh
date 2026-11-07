@@ -1,0 +1,248 @@
+
+- LIFO (Last In First Out) data structure, 117, 1120
+- limits.h (climits) header file, 1250–1251
+- linked lists. *See also* ordered linked lists; unordered linked lists
+  - building, 1032–1037
+  - circular, **1083**, 1084–1103
+  - containers and, 1279–1284
+  - copying, 1047–1048
+  - deleting items in, 1028, 1031–1032
+  - described, **1024**
+  - destroying, 1044–1045, 1075
+  - doubly, 1072–1083
+  - first/last elements of, 1077–1083
+  - initializing, 1045, 1076
+  - inserting items in, 1028–1031
+  - length of, 1045–1046, 1076
+  - overview, 1023–1114
+  - printing, 1045, 1069–1071, 1076–1077, 1161–1165
+  - properties of, 1025–1031
+  - searching, 1050–1051, 1059–1060, 1077
+  - stacks and, 1150–1151, 1161–1165
+  - traversing, 1044, 1027–1028
+- linkedList.h header file, 1057–1058, 1067–1069
+- linkedListIterator class, 1039–1041
+- linkedListType class, 1037–1044, 1048–1049, 1057–1059, 1067, 1150–1151, 1162, 1182
+- linkedQueueType class, 1181–1182
+- linkedStack.h header file, 1148
+- linkedStackType class, 1140–1141, 1147–1149
+- linkers, **11**
+- links, between nodes, **1024**, 1025
+- list class, 1279–1280
+- list container, 1279–1284
+- lists. *See also* linked lists
+  - described, **565**
+  - processing, 564–580
+- listType class, 680, 927–929
+- loaders, **11**
+- local declaration, **328**
+- logic errors, 149–152, 964. *See also* errors
+- logical expressions, **178**, 182–188, 443–444
+- logical operators, 182–188
+- logical values, **178**
+- loop(s). *See also* recursion; *specific types*
+  - arrays and, 491
+  - binary search algorithm and, 579, 580
+  - enumeration types and, 438
+  - nested, 291–296, 525, 526
+  - records and, 623
+  - selection sort algorithm, 571
+- loop control variables (LCVs), **250**, 251, 256, 274
+
+## M
+
+- machine language, **6**
+- main function, 31, 78, 80, 124, 324, 369, 381, 456–457, 872–873
+  - arrays and, 815
+  - constructors and, 826
+  - information hiding and, 682
+  - pointers and, 802
+  - virtual functions and, 843
+  - void functions and, 362
+- main memory. *See* RAM (random access memory)
+- make command, **686**
+- math.h (cmath) header file, 1252–1255
+- max_size function, 582
+- member access operator, **133**, 655, 656, 657, 615
+- member functions
+  - binary operators as, 876
+  - common to containers, 1269–1272
+  - implementation of, 659–663
+  - operator functions as, 873–876, 896–898, 901–902
+  - redefining (overriding), 727–734
+- members, of classes
+  - accessing, 655–656
+  - described, **650**
+  - order of, 667–669
+  - overview, 650–651
+  - static, 691–696
+- memory. *See also* stacks
+  - addresses, **4**
+  - allocation, 50–53, 372–382
+  - cells, 4
+  - data types and, 36
+  - leaks, **806, 807**
+  - overview, 4–5
+  - records and, 613–616
+  - size, 1257–1258
+- menu-driven programs, 388–389
+- minus sign (-), 654
+- mixed expressions, **45, 46**
+- mnemonics, **8–9**
+- modular programming, **20**
+- modules, **320**. *See also* functions
+- movie-ticket-sales program, 156–161
+- multidimensional arrays, 518–533. *See also* arrays
+- mutator functions, **664**, 665–669
+- myStack.h header file, 1130–1134
+
+## N
+
+- named constants, **51**, 52, 386–390, 461
+- namespace keyword, 76
+- namespaces, 76, 452–458
+- naming conventions, for header files, 1244–1245
+- n-dimensional arrays, **532, 533**. *See also* arrays
+- new keyword, 804
+- new operator, 804–805, 809, 965–966
+- newline escape sequence (\n), 69, 71–73, 120, 128, 295
+- newString class, 918–924, 930, 952
+- node(s)
+  - deleting, 1031–1032, 1052–1057, 1065–1066
+  - described, **1024**
+  - inserting, 1029–1031, 1051–1057, 1060–1064, 1078–1080
+  - retrieving the data of, 1046
+  - structure of, 1038
+- nonmember functions, 873–876, 898–902
+- nonrecursive algorithms, 1161–1165
+- null character, 510
+- NULL nodes, 1026, 1028, 1033–1034, 1044
+- null pointers, **803**
+- null strings, **49**
+- number-classification program, 399–404
+- number-guessing game, 260–261
+
+## O
+
+- .obj filename extension, 77–78
+- object(s)
+  - arrays of, 675–677
+  - declaring, 654–655
+  - described, **650**
+  - identifying, 757–758
+  - programs, 10–11
+  - reference parameters and, 648
+- object-oriented design. *See* OOD (object-oriented design)
+- object-oriented programming. *See* OOP (object-oriented programming)
+- octal number system, conversion to, 1228–30
+- one-dimensional arrays, **487**, 491–494, 498, 519, 527, 564. *See also* arrays
+- OOD (object-oriented design). *See also* objects
+  - abstract classes and, 835
+  - basic principles of, 756
+  - described, **20**
+  - overview, 20–22, 650, 755–758
+- OOP (object-oriented programming). *See also* objects
+  - described, **21**
+  - OOD, and relationship of, 756
+  - overview, 755–758
+- operands, **40**
+- operating system software, **6**
+- operations
+  - data abstraction and, 679
+  - described, **679**
+  - identifying, 757–758
+- operator(s). *See also* operator overloading; operators (listed by name)
+  - arithmetic operators, 39, 40, 41–44
+  - functions, **863**, 864, 873–876, 898–902
+  - precedence, 43–44, 85, 184–187, 1217–1218
+- operator keyword, 864
+- operator overloading
+  - linked lists and, 1044, 1049
+  - need for, 862–863
+  - overview, 863–924
+  - post-increment operator and, 897–901
+  - pre-increment operator and, 896
+  - restrictions, 864
+  - stacks and, 1129–1130, 1147–1149
+  - stream extraction operator and, 882–887
+  - stream insertion operator and, 882–887
+  - table, 1223
+  - unary operators and, 895–901
+- operators (listed by name). *See also* assignment operator; operators
+  - address operator, **795–796**, 844–846
+  - array index operator, 916–924
+  - array subscript operator, **459**, 488
+  - cast operator, **47**
+  - conditional operator, **211**
+  - delete operator, 804, 805–807
+  - dereferencing operator, **796–801**, 1039
+  - equality operator, 209–211
+  - extraction operator, 119–124, 129, 148
+  - insertion operator, 515
+  - member access operator, **133**, 655, 656, 657, 615
+  - new operator, 804–805, 809, 965–966
+  - post-increment operator, 897–901
+  - scope resolution operator, 386, 454, 457, **659**, 691
+  - stream extraction operator, **59**, 882–887
+  - stream insertion operator, **31**, **68**, 882–887
+- ordered linked lists. *See also* linked lists
+  - deleting nodes from, 1065–1066
+  - overview, 1058–1069
+  - searching, 1059–1060
+- orderedLinkedList class, 1043–1044, 1058
+- orderedListType class, 106
+- output. *See also* I/O (input/output)
+  - devices, **5**
+  - formatting, 137–148
+  - overview, 67–74, 117–174
+  - statements, **68**
+  - stream variables, **119**
+  - streams, **118**
+  - string, 515–516
+- overflow condition, **126**
+- overflow_error exception, 964
+
+## P
+
+- palindrome number program, 338–340
+- parallel arrays, **537**, 538
+- parameter(s)
+  - actual, **326**
+  - arrays as, 497–498
+  - constructors and, 671–675
+  - default, 396–399, 738
+  - formal, **325–326**, 498–500
+  - linked lists and, 1048, 1070–1071
+  - passing, to functions, 527–530
+  - queues and, 1198
+  - reference, **363**, 372–382
+  - stacks and, 1155
+  - value, **363**, 372–382
+- parameterized stream manipulators, **148**
+- parameterized types, **327**
+- parentheses, 187, 327, 801
+- partTimeEmployee class, 724, 740–742, 837, 841–843
+- Pascal, Blaise, 2
+- patches, 296–299
+- PCs (personal computers), history of, 3. *See also* computers
+- peek function, 130–132
+- period (.), 129, 655
+- personalInfo class, 753–755
+- personType class, 689–690, 724, 740, 742, 750–751, 837, 867–870
+- pig-latin strings, 471–475
+- plus sign (+), 654
+- pointer variable(s)
+  - classes and, 902
+  - declaring, 794–795
+  - described, **794**
+  - initializing, 803
+  - operations on, 807–809
+  - operators, 795–800
+  - structs and, 800–803
+- pointers
+  - classes and, 800–803, 818–828
+  - constant, 811
+  - dangling, **807**
+  - destructors and, 818–819
+  - dynamic variables and, 803–807
+  - functions and, 812

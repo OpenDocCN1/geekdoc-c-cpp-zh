@@ -1,0 +1,31 @@
+function `printMatrix` to output the elements of `board` (see the first six lines of the Sample Run). The statement in Line 4 uses the function `sumRows` to calculate and print the sum of each row. The statement in Line 6 uses the function `largestInRows` to find and print the largest element in each row.
+
+# ## Arrays of Strings
+
+Suppose that you need to perform an operation, such as alphabetizing a list of names. Because every name is a string, a convenient way to store the list of names is to use an array. Strings in C++ can be manipulated using either the data type string or character arrays (C-strings). Also, on some compilers, the data type string may not be available in Standard C++ (that is, non-ANSI/ISO Standard C++). This section illustrates both ways to manipulate a list of strings.
+
+# ## Arrays of Strings and the `string` Type
+
+Processing a list of strings using the data type `string` is straightforward. Suppose that the list consists of a maximum of 100 names. You can declare an array of 100 components of type `string` as follows:
+
+```
+```cpp
+string list[100];
+```
+```
+
+Basic operations, such as assignment, comparison, and input/output, can be performed on values of the `string` type. Therefore, the data in `list` can be processed just like any one-dimensional array discussed in the first part of this chapter.
+
+# ## Arrays of Strings and C-Strings (Character Arrays)
+
+Suppose that the largest string (for example, name) in your list is 15 characters long and your list has 100 strings. You can declare a two-dimensional array of characters of 100 rows and 16 columns as follows (see Figure 9-16):
+
+```
+```cpp
+char list[100][16];
+```
+```
+
+![](bbox=[0.176, 0.743, 0.914, 0.936])
+
+**FIGURE 9-16** Array list of strings

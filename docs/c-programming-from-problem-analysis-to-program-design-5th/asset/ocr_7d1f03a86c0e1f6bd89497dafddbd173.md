@@ -1,0 +1,35 @@
+Recall that the third Fibonacci number is the sum of the first two Fibonacci numbers. The fourth Fibonacci number in a sequence is the sum of the second and third Fibonacci numbers. Therefore, to calculate the fourth Fibonacci number, we add the second Fibonacci number and the third Fibonacci number (which is itself the sum of the first two Fibonacci numbers). The following recursive algorithm calculates the nth Fibonacci number, in which a denotes the first Fibonacci number, b the second Fibonacci number, and n the nth Fibonacci number.
+
+rFibNum(a,b,n) = {
+  a                                  if n = 1
+  b                                  if n = 2
+  rFibNum(a,b,n − 1) + rFibNum(a,b,n − 2)   if n > 2.   (17-3)
+}
+
+Suppose that we want to determine:
+
+`rFibNum(2, 5, 4)`
+
+Here, a = 2, b = 5, and n = 4. That is, we want to determine the fourth Fibonacci number of the sequence whose first number is 2 and whose second number is 5. Because n is 4 > 2:
+
++   1. `rFibNum(2, 5, 4) = rFibNum(2, 5, 3) + rFibNum(2, 5, 2)`
++   
++      Next, we determine `rFibNum(2, 5, 3)` and `rFibNum(2, 5, 2)`. Let us first determine `rFibNum(2, 5, 3)`. Here, a = 2, b = 5, and n is 3. Because n is 3:
++   
++      1.a. `rFibNum(2, 5, 3) = rFibNum(2, 5, 2) + rFibNum(2, 5, 1)`
++   
++      This statement requires us to determine `rFibNum(2, 5, 2)` and `rFibNum(2, 5, 1)`. In `rFibNum(2, 5, 2)`, a = 2, b = 5, and n = 2. Therefore, from the definition given in Equation 17-3, it follows that:
++   
++      1.a.1. `rFibNum(2, 5, 2) = 5`
++   
++      To find `rFibNum(2, 5, 1)`, note that a = 2, b = 5, and n = 1. Therefore, by the definition given in Equation 17-3:
++   
++      1.a.2. `rFibNum(2, 5, 1) = 2`
++   
++      We substitute the values of `rFibNum(2, 5, 2)` and `rFibNum(2, 5, 1)` into (1.a) to get:
++   
++      `rFibNum(2, 5, 3) = 5 + 2 = 7`
++   
++      Next, we determine `rFibNum(2, 5, 2)`. As in (1.a.1), `rFibNum(2, 5, 2) = 5`. We can substitute the values of `rFibNum(2, 5, 3)` and `rFibNum(2, 5, 2)` into (1) to get:
++   
++      `rFibNum(2, 5, 4) = 7 + 5 = 12`

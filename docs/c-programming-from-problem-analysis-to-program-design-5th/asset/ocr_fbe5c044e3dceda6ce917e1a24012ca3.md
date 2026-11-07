@@ -1,0 +1,30 @@
+Before you can learn about selection and repetition, you must understand the nature of conditional statements and how to use them. Consider the following three statements:
+
++   1. `if (score is greater than or equal to 90)`
++      `grade is A`
++   
++   2. `if (hours worked are less than or equal to 40)`
++      `wages = rate * hours`
++      `otherwise`
++      `wages = (rate * 40) + 1.5 * (rate * (hours - 40))`
++   
++   3. `if (temperature is greater than 70 degrees and it is not raining)`
++      `Go golfing!`
+
+These statements are examples of conditional statements. You can see that certain statements are to be executed only if certain conditions are met. A condition is met if it evaluates to **true**. For example, in statement 1:
+
+```
+score is greater than or equal to 90
+```
+
+is **true** if the value of score is greater than or equal to 90; it is **false** otherwise. For example, if the value of score is 95, the statement evaluates to **true**. Similarly, if the value of score is 86, the statement evaluates to **false**.
+
+It would be useful if the computer could recognize these types of statements to be true for appropriate values. Furthermore, in certain situations, the truth or falsity of a statement could depend on more than one condition. For example, in statement 3, both temperature is greater than 70 degrees and it is not raining must be true to recommend golfing.
+
+As you can see, for the computer to make decisions and repeat statements, it must be able to react to conditions that exist when the program executes. The next few sections discuss how to represent and evaluate conditional statements in C++.
+
+# Relational Operators
+
+To make decisions, you must be able to express conditions and make comparisons. For example, the interest rate and service charges on a checking account might depend on the balance at the end of the month. If the balance is less than some minimum balance, not only is the interest rate lower, but there is also usually a service charge. Therefore, to determine the interest rate, you must be able to state the minimum balance and compare the account balance with the minimum balance (a condition). The premium on an insurance policy is also determined by stating conditions and making comparisons. For example, to determine an insurance premium, you must be able to check the smoking status of the policyholder. Nonsmokers (the condition) receive lower premiums than smokers. Both of these examples involve comparing items. Certain items are compared
+
+![](bbox=[0.929, 0.269, 0.999, 0.377])

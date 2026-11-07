@@ -1,0 +1,37 @@
+basic service connections is fixed. If the number of basic service connections exceeds 10, you must add the cost for each connection over 10. The following statement calculates the business billing amount.
+
+```
+    if (numOfBasicServConn <= 10)
+        amountDue = BUS_BILL_PROC_FEES + BUS_BASIC_SERV_COST
+                    + numOfPremChannels * BUS_COST_PREM_CHANNEL;
+    else
+        amountDue = BUS_BILL_PROC_FEES + BUS_BASIC_SERV_COST
+                    + (numOfBasicServConn - 10)
+                       * BUS_BASIC_CONN_COST
+                    + numOfPremChannels * BUS_COST_PREM_CHANNEL;
+```
+
+Based on the preceding discussion, you can now write the main algorithm.
+
+# MAIN ALGORITHM
+
++   1. To output floating-point numbers in a fixed decimal format with a decimal point and trailing zeros, set the manipulators `fixed` and `showpoint`. Also, to output floating-point numbers with two decimal places, set the precision to two decimal places. Recall that to use these manipulators, the program must include the header file `iomanip`.
++   2. Prompt the user to enter the account number.
++   3. Get the customer account number.
++   4. Prompt the user to enter the customer code.
++   5. Get the customer code.
++   6. If the customer code is `r` or `R`,
++       a. Prompt the user to enter the number of premium channels.
++       b. Get the number of premium channels.
++       c. Calculate the billing amount.
++       d. Print the account number and the billing amount.
++   7. If the customer code is `b` or `B`,
++       a. Prompt the user to enter the number of basic service connections.
++       b. Get the number of basic service connections.
++       c. Prompt the user to enter the number of premium channels.
++       d. Get the number of premium channels.
++       e. Calculate the billing amount.
++       f. Print the account number and the billing amount.
++   8. If the customer code is something other than `r`, `R`, `b`, or `B`, output an error message.
+
+For Steps 6 and 7, the program uses a `switch` statement to calculate the bill for the desired customer.

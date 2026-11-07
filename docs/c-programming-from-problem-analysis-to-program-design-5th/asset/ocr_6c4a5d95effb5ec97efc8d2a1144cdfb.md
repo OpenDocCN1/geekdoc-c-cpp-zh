@@ -1,0 +1,51 @@
++   16. Putting a semicolon at the end of the `for` loop (before the body of the `for` loop) is a semantic error. In this case, the action of the `for` loop is empty.
+
++   17. The syntax of the `do...while` statement is:
+
+```
+do
+    statement
+while (expression);
+```
+
+`statement` is called the body of the `do...while` loop.
+
++   18. Both `while` and `for` loops are called pretest loops. A `do...while` loop is called a posttest loop.
+
++   19. The `while` and `for` loops may not execute at all, but the `do...while` loop always executes at least once.
+
++   20. Executing a `break` statement in the body of a loop immediately terminates the loop.
+
++   21. Executing a `continue` statement in the body of a loop skips the loop’s remaining statements and proceeds with the next iteration.
+
++   22. When a `continue` statement executes in a `while` or `do...while` loop, the expression update statement in the body of the loop may not execute.
+
++   23. After a `continue` statement executes in a `for` loop, the update statement is the next statement executed.
+
+# EXERCISES
+
++   1. Mark the following statements as true or false.
+
++   a. In a counter-controlled `while` loop, it is not necessary to initialize the loop control variable.
++   
++   b. It is possible that the body of a `while` loop may not execute at all.
++   
++   c. In an infinite `while` loop, the `while` expression (the decision maker) is initially false, but after the first iteration it is always true.
+
++   d. The `while` loop:
+
+```
+j = 0;
+while (j <= 10)
+    j++;
+```
+
+terminates if `j > 10`.
+
++   e. A sentinel-controlled `while` loop is an event-controlled `while` loop whose termination depends on a special value.
++   
++   f. A loop is a control structure that causes certain statements to execute over and over.
++   
++   g. To read data from a file of an unspecified length, an EOF-controlled loop is a good choice.
+
+![](bbox=[0.928, 0.323, 0.999, 0.431])

@@ -1,0 +1,38 @@
+# EXERCISES
+
++   1. Mark the following statements as true or false.
++      a. A sequential search of a list assumes that the list elements are sorted in ascending order.
++      b. A binary search of a list assumes that the list is sorted.
++      c. A binary search is faster on ordered lists and slower on unordered lists.
++      d. A binary search is faster on large lists, but a sequential search is faster on small lists.
++      e. When you declare a vector object and specify its size as 10, then only 10 elements can be stored in the object.
+
++   2. Consider the following list:
++   
++      63 45 32 98 46 57 28 100
++   
++      Using a sequential search, how many comparisons are required to determine whether the following items are in the list or not? (Recall that comparisons mean item comparisons, not index comparisons.)
++   
++      a. 90   b. 57   c. 63   d. 120
+
++   3. 
++      a. Write a version of the sequential search algorithm that can be used to search a sorted list.
++      b. Consider the following list:
++   
++         5 12 17 35 46 65 78 85 93 110 115
++   
++         Using a sequential search on ordered lists, which you designed in (a), how many comparisons are required to determine whether the following items are in the list or not? (Recall that comparisons mean item comparisons, not index comparisons.)
++   
++         i. 35   ii. 60   iii. 78   iv. 120
+
++   4. Consider the following list:
++   
++      2 10 17 45 49 55 68 85 92 98 110
++   
++      Using the binary search, how many comparisons are required to determine whether the following items are in the list or not? Show the values of first, last, and middle and the number of comparisons after each iteration of the loop.
++   
++      a. 15   b. 49   c. 98   d. 99
+
++   5. Sort the following list using the bubble sort algorithm as discussed in this chapter. Show the list after each iteration of the outer for loop.
++   
++      26, 45, 17, 65, 33, 55, 12, 18

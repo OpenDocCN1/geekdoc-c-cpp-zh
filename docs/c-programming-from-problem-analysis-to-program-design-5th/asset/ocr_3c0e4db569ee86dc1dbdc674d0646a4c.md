@@ -1,0 +1,14 @@
+![](bbox=[0.0, 0.0, 0.52, 0.326])
+
+# CHAPTER 11
+
+# RECORDS (structs)
+
+# IN THIS CHAPTER, YOU WILL:
+
++   - Learn about records (structs)
++   - Examine various operations on a struct
++   - Explore ways to manipulate data using a struct
++   - Learn about the relationship between a struct and functions
++   - Discover how arrays are used in a struct
++   - Learn how to create an array of struct items

@@ -1,0 +1,65 @@
+```
+```cpp
+void find(int a, int& b, int& c)
+
+int main()
+{
+    int one, two, three;
+
+    one = 5;
+    two = 10;
+    three = 15;
+
+    find(one, two, three);
+    cout << one << ", " << two << ", " << three << endl;
+
+    find(two, one, three);
+    cout << one << ", " << two << ", " << three << endl;
+
+    find(three, two, one);
+    cout << one << ", " << two << ", " << three << endl;
+
+    find(two, three, one);
+    cout << one << ", " << two << ", " << three << endl;
+
+    return 0;
+}
+```
+```
+
+```
+```cpp
+void find(int a, int& b, int& c)
+{
+    int temp;
+
+    c = a + b;
+    temp = a;
+    a = b;
+    b = 2 * temp;
+}
+```
+```
+
+10. What is the output of the following program?
+
+```
+```cpp
+#include <iostream>
+using namespace std;
+
+int x;
+
+void summer(int&, int);
+void fall(int, int&);
+
+int main()
+{
+    int intNum1 = 2;
+    int intNum2 = 5;
+    x = 6;
+
+    summer(intNum1, intNum2);
+    cout << intNum1 << " " << intNum2 << " " << x << endl;
+```
+```

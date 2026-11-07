@@ -1,0 +1,52 @@
++   f. Write a C++ statement that prints the value returned by function two with the actual parameters 17.5 and 18.3, respectively.
++   
++   g. Write a C++ statement that prints the next character returned by function three. (Use your own actual parameters.)
+
++   10. Why do you need to include function prototypes in a program that contains user-defined functions?
+
++   11. Write the definition of a function that takes as input a `char` value and returns `true` if the character is uppercase; otherwise, it returns `false`.
+
++   12. Consider the following function:
+
+```
+int mystery(int x, double y, char ch)
+{
+    int u;
+    if ('A' <= ch && ch <= 'R')
+        return(2 * x + static_cast<int>(y));
+    else
+        return(static_cast<int>(2 * y) - x);
+}
+```
+
+What is the output of the following C++ statements?
+
++   a. `cout << mystery(5, 4.3, 'B') << endl;`
++   
++   b. `cout << mystery(4, 9.7, 'v') << endl;`
++   
++   c. `cout << 2 * mystery(6, 3.9, 'D') << endl;`
+
++   13. Consider the following function:
+
+```
+int secret(int one)
+{
+    int i;
+    int prod = 1;
+
+    for (i = 1; i <= 3; i++)
+        prod = prod * one;
+    return prod;
+}
+```
+
++   a. What is the output of the following C++ statements?
++   
++      i. `cout << secret(5) << endl;`
++   
++      ii. `cout << 2 * secret(6) << endl;`
++   
++   b. What does the function `secret` do?
+
++   14. Write the definition of a function that takes as input the three numbers. The function returns `true` if the first number to the power of the second number equals the third number; otherwise, it returns `false`. (Assume that the three numbers are of type `double`.)

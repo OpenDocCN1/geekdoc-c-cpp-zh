@@ -1,0 +1,39 @@
+| Expression | Value / Explanation |
+|---|---|
+| `hours + overTime <= 75.00` | true<br>Because `hours + overTime` is `45.30 + 15.00 = 60.30` and `60.30 <= 75.00` is true, it follows that `hours + overTime <= 75.00` evaluates to `true`. |
+| `(count >= 0) &&<br>(count <= 100)` | true<br>Now, `count` is `20`. Because `20 >= 0` is true, `count >= 0` is true. Also, `20 <= 100` is true, so `count <= 100` is true. Therefore, `(count >= 0) && (count <= 100)` is `true && true`, which evaluates to `true`. |
+| `('A' <= ch && ch <= 'Z')` | true<br>Here, `ch` is `'B'`. Because `'A' <= 'B'` is true, `'A' <= ch` evaluates to `true`. Also, because `'B' <= 'Z'` is true, `ch <= 'Z'` is true. Therefore, `('A' <= ch && ch <= 'Z')` is `true && true`, which evaluates to `true`. |
+
+The following program evaluates and outputs the values of these logical expressions. Note that if a logical expression evaluates to true, the corresponding output is 1; if the logical expression evaluates to false, the corresponding output is 0, as shown in the output at the end of the program. (Recall that if the value of a logical expression is true, it evaluates to 1, and if the value of the logical expression is false, it evaluates to 0.)
+
+```
+```cpp
+//Chapter 4 Logical operators
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    bool found = true;
+    int age = 20;
+    double hours = 45.30;
+    double overTime = 15.00;
+    int count = 20;
+    char ch = 'B';
+
+    cout << fixed << showpoint << setprecision(2);
+    cout << "found = " << found << ", age = " << age
+         << ", hours = " << hours << ", overTime = " << overTime
+         << "," << endl << "count = " << count
+         << ", ch = " << ch << endl << endl;
+
+    cout << "!found evaluates to " << !found << endl;
+    cout << "hours > 40.00 evaluates to " << (hours > 40.00) << endl;
+    cout << "!age evaluates to " << !age << endl;
+    cout << "!found && (hours >= 0) evaluates to "
+         << (!found && (hours >= 0)) << endl;
+```
+```

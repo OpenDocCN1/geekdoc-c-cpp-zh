@@ -1,0 +1,56 @@
+Putting data into variables from the standard input device is accomplished via the use of `cin` and the operator `>>`. The syntax of `cin` together with `>>` is:
+
+```
+```
+cin >> variable >> variable ...;
+```
+```
+
+This is called an **input (read)** statement. In C++, `>>` is called the **stream extraction operator**.
+
+> > **NOTE**
+> >
+> > In a syntax, the shading indicates the part of the definition that is optional. Furthermore, throughout this book, the syntax is enclosed in yellow boxes.
+
+# ### EXAMPLE 2-16
+
+Suppose that `miles` is a variable of type `double`. Further suppose that the input is 73.65. Consider the following statements:
+
+```
+```
+cin >> miles;
+```
+```
+
+This statement causes the computer to get the input, which is 73.65, from the standard input device and stores it in the variable `miles`. That is, after this statement executes, the value of the variable `miles` is 73.65.
+
+Example 2-17 further explains how to input numeric data into a program.
+
+# ### EXAMPLE 2-17
+
+Suppose we have the following statements:
+
+```
+```
+int feet;
+int inches;
+```
+```
+
+Suppose the input is:
+
+```
+```
+23 7
+```
+```
+
+Next, consider the following statement:
+
+```
+```
+cin >> feet >> inches;
+```
+```
+
+This statement first stores the number 23 into the variable `feet` and then the number 7 into the variable `inches`. Notice that when these numbers are entered via the keyboard, they are separated with a blank. In fact, they can be separated with one or more blanks or lines or even the tab character.

@@ -1,0 +1,232 @@
+
+## 变量
+
+因为程序会要求用户输入客户账号、客户代码、付费频道数量以及基本服务连接数量，所以你需要变量来存储所有这些信息。另外，因为程序会计算账单金额，所以你需要一个变量来存储账单金额。因此，程序至少需要以下变量来计算并打印账单：
+
+```cpp
+int accountNumber;    //variable to store the customer's
+                      //account number
+char customerType;    //variable to store the customer code
+int numOfPremChannels; //variable to store the number
+                      //of premium channels to which the
+                      //customer subscribes
+int numOfBasicServConn; //variable to store the
+                       //number of basic service connections
+                       //to which the customer subscribes
+double amountDue;     //variable to store the billing amount
+```
+
+## 命名常量
+
+如你所见，账单处理费、基本服务连接费用和付费频道费用都是固定的，计算账单需要这些值。尽管这些值在程序中是常量，但有线电视公司可能会在几乎没有预警的情况下更改它们。为了简化以后修改程序的过程，不应在程序中直接使用这些值，而应将它们声明为命名常量。基于问题分析，你需要声明以下命名常量：
+
+```cpp
+//Named constants - residential customers
+const double RES_BILL_PROC_FEES = 4.50;
+const double RES_BASIC_SERV_COST = 20.50;
+const double RES_COST_PREM_CHANNEL = 7.50;
+
+//Named constants - business customers
+const double BUS_BILL_PROC_FEES = 15.00;
+const double BUS_BASIC_SERV_COST = 75.00;
+const double BUS_BASIC_CONN_COST = 5.00;
+const double BUS_COST_PREM_CHANNEL = 50.00;
+```
+
+## 公式
+
+程序使用多个公式来计算账单金额。要计算住宅客户账单，你只需要知道用户订阅的付费频道数量。以下语句计算住宅客户的账单金额。
+
+```cpp
+amountDue = RES_BILL_PROC_FEES + RES_BASIC_SERV_COST
+           + numOfPremChannels * RES_COST_PREM_CHANNEL;
+```
+
+要计算商业客户账单，你需要知道基本服务连接数量和用户订阅的付费频道数量。如果基本服务连接数量小于或等于 10，则基本服务连接费用是固定的。如果基本服务连接数量超过 10，则必须为超过 10 的每个连接增加费用。以下语句计算商业客户的账单金额。
+
+```cpp
+    if (numOfBasicServConn <= 10)
+        amountDue = BUS_BILL_PROC_FEES + BUS_BASIC_SERV_COST
+                    + numOfPremChannels * BUS_COST_PREM_CHANNEL;
+    else
+        amountDue = BUS_BILL_PROC_FEES + BUS_BASIC_SERV_COST
+                    + (numOfBasicServConn - 10)
+                       * BUS_BASIC_CONN_COST
+                    + numOfPremChannels * BUS_COST_PREM_CHANNEL;
+```
+
+基于前面的讨论，你现在可以编写主算法。
+
+## 主算法
+
+- 1. 要以带小数点和尾随零的固定十进制格式输出浮点数，请设置操纵符 `fixed` 和 `showpoint`。另外，要输出保留两位小数的浮点数，请将精度设置为两位小数。回想一下，要使用这些操纵符，程序必须包含头文件 `iomanip`。
+- 2. 提示用户输入账号。
+- 3. 获取客户账号。
+- 4. 提示用户输入客户代码。
+- 5. 获取客户代码。
+- 6. 如果客户代码是 `r` 或 `R`，
+  - a. 提示用户输入付费频道数量。
+  - b. 获取付费频道数量。
+  - c. 计算账单金额。
+  - d. 打印账号和账单金额。
+- 7. 如果客户代码是 `b` 或 `B`，
+  - a. 提示用户输入基本服务连接数量。
+  - b. 获取基本服务连接数量。
+  - c. 提示用户输入付费频道数量。
+  - d. 获取付费频道数量。
+  - e. 计算账单金额。
+  - f. 打印账号和账单金额。
+- 8. 如果客户代码不是 `r`、`R`、`b` 或 `B`，则输出错误消息。
+
+对于步骤 6 和 7，程序使用 `switch` 语句来计算所需客户的账单。
+
+## 完整程序清单
+
+```cpp
+/***********************************************************
+// Author: D. S. Malik
+//
+// Program: Cable Company Billing
+// This program calculates and prints a customer's bill for
+// a local cable company. The program processes two types of
+// customers: residential and business.
+/***********************************************************
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+    //Named constants - residential customers
+const double RES_BILL_PROC_FEES = 4.50;
+const double RES_BASIC_SERV_COST = 20.50;
+const double RES_COST_PREM_CHANNEL = 7.50;
+
+    //Named constants - business customers
+const double BUS_BILL_PROC_FEES = 15.00;
+const double BUS_BASIC_SERV_COST = 75.00;
+const double BUS_BASIC_CONN_COST = 5.00;
+const double BUS_COST_PREM_CHANNEL = 50.00;
+
+int main()
+{
+    //Variable declaration
+    int accountNumber;
+    char customerType;
+    int numOfPremChannels;
+    int numOfBasicServConn;
+    double amountDue;
+
+    cout << fixed << showpoint;                //Step 1
+    cout << setprecision(2);                   //Step 1
+
+    cout << "This program computes a cable "
+         << "bill." << endl;
+    cout << "Enter account number (an integer): "; //Step 2
+    cin >> accountNumber;                          //Step 3
+    cout << endl;
+
+    cout << "Enter customer type: "
+         << "R or r (Residential), "
+         << "B or b (Business): ";                  //Step 4
+    cin >> customerType;                           //Step 5
+    cout << endl;
+
+    switch (customerType)
+    {
+    case 'r':
+    case 'R':
+        cout << "Enter the number"
+             << " of premium channels: ";
+        cin >> numOfPremChannels;
+        cout << endl;
+
+        amountDue = RES_BILL_PROC_FEES
+                  + RES_BASIC_SERV_COST
+                  + numOfPremChannels *
+                    RES_COST_PREM_CHANNEL;
+
+        cout << "Account number: "
+             << accountNumber
+             << endl;
+        cout << "Amount due: $"
+             << amountDue
+             << endl;
+        break;
+
+    case 'b':
+    case 'B':
+        cout << "Enter the number of basic "
+             << "service connections: ";
+        cin >> numOfBasicServConn;
+        cout << endl;
+
+        cout << "Enter the number"
+             << " of premium channels: ";
+        cin >> numOfPremChannels;
+        cout << endl;
+
+        if (numOfBasicServConn <= 10)
+            amountDue = BUS_BILL_PROC_FEES
+                      + BUS_BASIC_SERV_COST
+                      + numOfPremChannels *
+                        BUS_COST_PREM_CHANNEL;
+        else
+            amountDue = BUS_BILL_PROC_FEES
+                      + BUS_BASIC_SERV_COST
+                      + (numOfBasicServConn - 10) *
+                        BUS_BASIC_CONN_COST
+                      + numOfPremChannels *
+                        BUS_COST_PREM_CHANNEL;
+
+        cout << "Account number: "
+             << accountNumber << endl;
+        cout << "Amount due: $" << amountDue
+             << endl;
+        break;
+
+    default:
+        cout << "Invalid customer type." << endl;    //Step 8
+    }//end switch
+
+    return 0;
+}
+```
+
+**示例运行：** 在此示例运行中，用户输入以阴影显示。
+
+```
+This program computes a cable bill.
+Enter account number (an integer): 12345
+
+Enter customer type: R or r (Residential), B or b (Business): b
+
+Enter the number of basic service connections: 16
+
+Enter the number of premium channels: 8
+
+Account number: 12345
+Amount due: $520.00
+```
+
+### 快速复习
+
+- 1. 控制结构会改变正常的控制流。
+- 2. 两种最常见的控制结构是选择结构和重复结构。
+- 3. 选择结构将决策融入程序中。
+- 4. 关系运算符有 `==`（等于）、`<`（小于）、`<=`（小于或等于）、`>`（大于）、`>=`（大于或等于）和 `!=`（不等于）。
+- 5. 在关系运算符 `==`、`<=`、`>=` 和 `!=` 之间包含空格会产生语法错误。
+- 6. 字符使用机器的整理顺序进行比较。
+- 7. 逻辑表达式的计算结果为 1（或非零值）或 0。逻辑值 1（或任何非零值）被视为真；逻辑值 0 被视为假。
+- 8. 在 C++ 中，`int` 变量可用于存储逻辑表达式的值。
+- 9. 在 C++ 中，`bool` 变量可用于存储逻辑表达式的值。
+- 10. 在 C++ 中，逻辑运算符有 `!`（非）、`&&`（与）和 `||`（或）。
+- 11. C++ 中有两种选择结构。
+- 12. 单向选择采用以下形式：
+
+  ```cpp
+  if (expression)
+      statement
+  ```
+
+  如果 expression 为真，则执行该语句；否则，计算机执行 `if` 语句之后的语句。

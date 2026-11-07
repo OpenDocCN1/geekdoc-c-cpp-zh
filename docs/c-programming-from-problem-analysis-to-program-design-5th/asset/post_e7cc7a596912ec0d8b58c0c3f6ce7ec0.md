@@ -1,0 +1,108 @@
+
+Now, consider the following program code:
+
+```cpp
+//Program headerTest.cpp
+
+#include "test.h"
+#include "testA.h"
+.
+.
+.
+```
+
+When the program headerTest.cpp is compiled, it is first processed by the preprocessor. The preprocessor includes first the header file test.h and then the header file testA.h. When the header file testA.h is included, because it contains the preprocessor directive `#include "test.h"`, the header file test.h is included twice in the program. The second inclusion of the header file test.h results in compile-time error, such as the identifier ONE already being declared. This problem occurs because the first inclusion of the header file test.h has already defined the variables ONE and TWO. To avoid multiple inclusion of a file in a program, we use certain preprocessor commands in the header file. Let us first rewrite the header file test.h using these preprocessor commands and then explain the meaning of these commands.
+
+```cpp
+//Header file test.h
+
+#ifndef H_test
+#define H_test
+const int ONE = 1;
+const int TWO = 2;
+#endif
+```
+
+- a. `#ifndef H_test` means “if not defined H_test”
+- b. `#define H_test` means “define H_test”
+- c. `#endif` means “end if”
+
+Here, H_test is a preprocessor identifier.
+
+The effect of these commands is as follows: If the identifier H_test is not defined, we must define the identifier H_test and let the remaining statements between `#define` and `#endif` pass through the compiler. If the header file test.h is included the second time in the program, the statement `#ifndef` fails and all of the statements until `#endif` are skipped. In fact, all header files are written using similar preprocessor commands.
+
+## C++ Stream Classes
+
+Chapter 3 described in detail how to perform input/output (I/O) using standard I/O devices and file I/O. In particular, you used the object cin, the extraction operator >>, and functions such as get and ignore to read data from the standard input device. You also used the object cout and the insertion operator << to send output to the standard output device. To use cin and cout, the programs included the header file iostream, which includes the definitions of the classes `istream` and `ostream`. Moreover, for file I/O, the programs included the header file `fstream`, and they used objects of type `ifstream` for file input and objects of type `ofstream` for file output. This section briefly describes how stream classes are related and implemented in C++.
+
+In C++, stream classes are implemented using the inheritance mechanism, as shown in Figure 13–6.
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_785_0.png)
+
+**FIGURE 13–6**  C++ stream classes hierarchy
+
+Figure 13–6 shows the stream classes that we have encountered in previous chapters. From this figure, it follows that the class `ios` is the base class for all stream classes. Classes `istream` and `ostream` are derived from the class `ios`. The class `ifstream` is derived from the class `istream`, and the class `ofstream` is derived from the class `ostream`. Moreover, using the mechanism of multiple inheritance, the class `iostream` (not to be confused with the header file `iostream`—they are separate things) and the class `fstream` are derived from the classes `istream` and `ostream`. (The classes `iostream` and `fstream` are not discussed in this book.)
+
+The class `ios` contains formatting flags and member functions to access and/or modify the setting of these flags. To identify the I/O status, the class `ios` contains an integer status word. This integer status word provides a continuous update reporting the status of the stream.
+
+The classes `istream` and `ostream` are responsible for providing the operations for the data transfer between memory and devices. The class `istream` defines the extraction operator, `>>`, and functions such as `get` and `ignore`. The class `ostream` defines the insertion operator, `<<`, which is used by the object `cout`.
+
+The class `ifstream` is derived from the class `istream` to provide the file input operations. Similarly, the class `ofstream` is derived from the class `ostream` to provide the file output operations. Objects of type `ifstream` are used for file input; objects of type `ofstream` are used for file output. The header file `fstream` contains the definitions of the classes `ifstream` and `ofstream`.
+
+## Protected Members of a Class
+
+The **private** members of a class are **private** to the class and cannot be directly accessed outside of the class. Only member functions of that class can access the **private** members. As discussed previously, the derived class cannot directly access the **private** members of a base class. However, it is sometimes necessary (say, for efficiency and/or to simplify the code) for a derived class to directly access a private member of a base class. If you make a **private** member become **public**, then anyone can access that member. Recall that the members of a class are classified into three categories: **public**, **private**, and **protected**. So, for a base class to give access to a member to its derived class and still prevent its direct access outside of the class, you must declare that member under the memberAccessSpecifier **protected**. Thus, the accessibility of a **protected** member of a class is in between **public** and **private**. A derived class can directly access the **protected** members of a base class.
+
+To summarize, if a member of a base class needs to be accessed by a derived class, that member is declared under the memberAccessSpecifier **protected**.
+
+## Inheritance as **public**, **protected**, or **private**
+
+Suppose class B is derived from class A. Then, B cannot directly access the **private** members of A. That is, the **private** members of A are hidden in B. What about the **public** and **protected** members of A? This section gives the rules that generally apply when accessing the members of a base class.
+
+Consider the following statement:
+
+```cpp
+class B: memberAccessSpecifier A
+{
+    .
+    .
+    .
+};
+```
+
+In this statement, memberAccessSpecifier is either **public**, **protected**, or **private**.
+
+- 1. If memberAccessSpecifier is **public**—that is, the inheritance is **public**—then:
+  - a. The **public** members of A are **public** members of B. They can be directly accessed in **class B**.
+  - b. The **protected** members of A are **protected** members of B. They can be directly accessed by the member functions (and **friend** functions) of B.
+  - c. The **private** members of A are hidden in B. They cannot be directly accessed in B. They can be accessed by the member functions (and **friend** functions) of B through the **public** or **protected** members of A.
+
+- 2. If memberAccessSpecifier is `protected`—that is, the inheritance is `protected`—then:
+  - a. The `public` members of A are `protected` members of B. They can be accessed by the member functions (and `friend` functions) of B.
+  - b. The `protected` members of A are `protected` members of B. They can be accessed by the member functions (and `friend` functions) of B.
+  - c. The `private` members of A are hidden in B. They cannot be directly accessed in B. They can be accessed by the member functions (and `friend` functions) of B through the `public` or `protected` members of A.
+
+- 3. If memberAccessSpecifier is `private`—that is, the inheritance is `private`—then:
+  - a. The `public` members of A are `private` members of B. They can be accessed by the member functions (and `friend` functions) of B.
+  - b. The `protected` members of A are `private` members of B. They can be accessed by the member functions (and `friend` functions) of B.
+  - c. The `private` members of A are hidden in B. They cannot be directly accessed in B. They can be accessed by the member functions (and `friend` functions) of B through the `public` or `protected` members of A.
+
+> **NOTE** Chapter 15 describes the `friend` functions.
+
+Example 13-4 illustrates how the member functions of a derived class can directly access a `protected` member of the base class.
+
+## EXAMPLE 13-4
+
+### (Accessing protected Members in the Derived Class)
+
+Consider the following definition of the `class` bClass:
+
+```cpp
+class bClass
+{
+public:
+    void setData(double);
+    void setData(double, double);
+    void print() const;
+};
+```

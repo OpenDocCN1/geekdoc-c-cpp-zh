@@ -1,0 +1,41 @@
+# Dynamic Two-Dimensional Arrays
+
+The beginning of this section discussed how to create dynamic one-dimensional arrays. You can also create dynamic multidimensional arrays. In this section, we discuss how to create dynamic two-dimensional arrays. Dynamic multidimensional arrays are created similarly.
+
+There are various ways you can create dynamic dimensional arrays. One way is as follows. Consider the statement:
+
+```
+int *board[4];
+```
+
+This statement declares board to be an array of four pointers wherein each pointer is of type `int`. Because `board[0]`, `board[1]`, `board[2]`, and `board[3]` are pointers, you can now use these pointers to create the rows of board. Suppose that each row of board has six columns. Then, the following `for` loop creates the rows of board.
+
+```
+for (int row = 0; row < 4; row++)
+    board[row] = new int[6];
+```
+
+Note that the expression `new int[6]` creates an array of six components of type `int` and returns the base address of the array. The assignment statement then stores the returned address into `board[row]`. It follows that after the execution of the previous `for` loop, board is a two-dimensional array of four rows and six columns.
+
+In the previous `for` loop, if you replace the number 6 with the number 10, then the loop will create a two-dimensional array of four rows and 10 columns. In other words, the number of columns of board can be specified during execution. However, the way board is declared, the number of rows is fixed. So in reality, board is not a true dynamic two-dimensional array.
+
+Next, consider the following statement:
+
+```
+int **board;
+```
+
+This statement declares board to be a pointer to a pointer. In other words, board and *board are pointers. Now board can store the address of a pointer or an array of pointers of type `int`, and *board can store the address of an `int` memory space or an array of `int` values.
+
+Suppose that you want board to be an array of 10 rows and 15 columns. To accomplish this, first we create an array of 10 pointers of type `int` and assign the address of that array to board. The following statement accomplishes this:
+
+```
+board = new int*[10];
+```
+
+Next, we create the columns of board. The following `for` loop accomplishes this.
+
+```
+for (int row = 0; row < 10; row++)
+    board[row] = new int[15];
+```

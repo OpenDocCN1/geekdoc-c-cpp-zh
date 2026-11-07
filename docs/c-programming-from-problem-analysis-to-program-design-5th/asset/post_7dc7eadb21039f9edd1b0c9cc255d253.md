@@ -1,0 +1,168 @@
+
+The following abstract `class queueADT` defines these operations as an ADT.
+
+```cpp
+template <class Type>
+class queueADT
+{
+public:
+    virtual bool isEmptyQueue() const = 0;
+        //Function to determine whether the queue is empty.
+        //Postcondition: Returns true if the queue is empty,
+        //               otherwise returns false.
+
+    virtual bool isFullQueue() const = 0;
+        //Function to determine whether the queue is full.
+        //Postcondition: Returns true if the queue is full,
+        //               otherwise returns false.
+
+    virtual void initializeQueue() = 0;
+        //Function to initialize the queue to an empty state.
+        //Postcondition: The queue is empty.
+    virtual Type front() const = 0;
+        //Function to return the first element of the queue.
+        //Precondition: The queue exists and is not empty.
+        //Postcondition: If the queue is empty, the program
+        //               terminates; otherwise, the first
+        //               element of the queue is returned.
+
+    virtual Type back() const = 0;
+        //Function to return the last element of the queue.
+        //Precondition: The queue exists and is not empty.
+        //Postcondition: If the queue is empty, the program
+        //               terminates; otherwise, the last
+        //               element of the queue is returned.
+
+    virtual void addQueue(const Type& queueElement) = 0;
+        //Function to add queueElement to the queue.
+        //Precondition: The queue exists and is not full.
+        //Postcondition: The queue is changed and queueElement
+        //               is added to the queue.
+
+    virtual void deleteQueue() = 0;
+        //Function to remove the first element of the queue.
+        //Precondition: The queue exists and is not empty.
+        //Postcondition: The queue is changed and the first
+        //               element is removed from the queue.
+};
+```
+
+We leave it as an exercise for you to draw the UML class diagram of the class queueADT.
+
+## Implementation of Queues as Arrays
+
+Before giving the definition of the class to implement a queue as an ADT, we need to decide how many member variables are needed to implement the queue. Of course, we need an array to store the queue elements, the variables queueFront and queueRear to keep track of the first and last elements of the queue and the variable maxQueueSize to specify the maximum size of the queue. Thus, we need at least four member variables.
+
+Before writing the algorithms to implement the queue operations, we need to decide how to use queueFront and queueRear to access the queue elements. How do queueFront and queueRear indicate that the queue is empty or full? Suppose that queueFront gives the index of the first element of the queue, and queueRear gives the index of the last element of the queue. To add an element to the queue, first we advance queueRear to the next array position, and then we add the element to the position that queueRear is pointing to. To delete an element from the queue, first we retrieve the element that queueFront is pointing to, and then we advance queueFront to the next element of the queue. Thus, queueFront changes after each deleteQueue operation, and queueRear changes after each addQueue operation.
+
+Let us see what happens when queueFront changes after a deleteQueue operation and queueRear changes after an addQueue operation. Assume that the array to hold the queue elements is of size 100.
+
+Initially, the queue is empty. After the operation:
+
+```
+addQueue(Queue, 'A');
+```
+
+the array is as shown in Figure 19–26.
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1208_0.png)
+
+**FIGURE 19–26** Queue after the first `addQueue` operation
+
+After two more addQueue operations:
+
+```
+addQueue(Queue, 'B');
+addQueue(Queue, 'C');
+```
+
+the array is as shown in Figure 19–27.
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1209_0.png)
+
+**FIGURE 19-27** Queue after two more addQueue operations
+
+Now consider the deleteQueue operation:
+
+```
+deleteQueue();
+```
+
+After this operation, the array containing the queue is as shown in Figure 19-28.
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1209_1.png)
+
+**FIGURE 19-28** Queue after the deleteQueue operation
+
+Will this queue design work? Suppose A stands for adding (that is, addQueue) an element to the queue, and D stands for deleting (that is, deleteQueue) an element from the queue. Consider the following sequence of operations:
+
+```
+AAADADADADADADADA...
+```
+
+This sequence of operations would eventually set the index queueRear to point to the last array position, giving the impression that the queue is full. However, the queue has only two or three elements, and the front of the array is empty (see Figure 19-29).
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1209_2.png)
+
+**FIGURE 19-29** Queue after the sequence of operations AAADADADADADADADA...
+
+One solution to this problem is that when the queue overflows to the rear (that is, queueRear points to the last array position), we can check the value of the index queueFront. If the value of queueFront indicates that there is room in the front of the array, then when queueRear gets to the last array position, we can slide all of the queue elements toward the first array position. This solution is good if the queue size is very small; otherwise, the program may execute more slowly.
+
+Another solution to this problem is to assume that the array is circular—that is, the first array position immediately follows the last array position (see Figure 19-30).
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1210_0.png)
+
+**FIGURE 19-30** Circular queue
+
+We will consider the array containing the queue to be circular, although we will draw the figures of the array holding the queue elements as before.
+
+Suppose that we have the queue as shown in Figure 19-31(a).
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1210_1.png)
+
+**FIGURE 19-31** Queue before and after the add operation
+
+After the operation `addQueue(Queue, 'Z');`, the queue is as shown in Figure 19-31(b).
+
+Because the array containing the queue is circular, we can use the following statement to advance `queueRear` (`queueFront`) to the next array position.
+
+`queueRear = (queueRear + 1) % maxQueueSize;`
+
+If `queueRear < maxQueueSize − 1`, then `queueRear + 1 <= maxQueueSize − 1`, so `(queueRear + 1) % maxQueueSize = queueRear + 1`. If `queueRear == maxQueueSize − 1` (that is, `queueRear` points to the last array position), `queueRear + 1 == maxQueueSize`, so `(queueRear + 1) % maxQueueSize = 0`. In this case, `queueRear` will be set to 0, which is the first array position.
+
+This queue design seems to work well. Before we write the algorithms to implement the queue operations, consider the following two cases.
+
+**Case 1:** Suppose that after certain operations, the array containing the queue is as shown in Figure 19–32(a).
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1211_0.png)
+
+**FIGURE 19–32** Queue before and after the delete operation
+
+After the operation `deleteQueue();`, the resulting array is as shown in Figure 19–32(b).
+
+**Case 2:** Let us now consider the queue shown in Figure 19–33(a).
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1211_1.png)
+
+**FIGURE 19–33** Queue before and after the add operation
+
+After the operation `addQueue(Queue, 'Z');`, the resulting array is as shown in Figure 19–33(b).
+
+The arrays in Figures 19–32(b) and 19–33(b) have identical values for queueFront and queueRear. However, the resulting array in Figure 19–32(b) represents an empty queue, whereas the resulting array in Figure 19–33(b) represents a full queue. This latest queue design has brought up another problem of distinguishing between an empty and a full queue.
+
+This problem has several solutions. One solution is to keep a count. In addition to the member variables queueFront and queueRear, we need another variable, count, to implement the queue. The value of count is incremented whenever a new element is added to the queue, and it is decremented whenever an element is removed from the queue. In this case, the function initializeQueue initializes count to 0. This solution is very useful if the user of the queue frequently needs to know the number of elements in the queue.
+
+Another solution is to let queueFront indicate the index of the array position preceding the first element of the queue, rather than the index of the (actual) first element itself. In this case, assuming queueRear still indicates the index of the last element in the queue, the queue is empty if queueFront == queueRear. In this solution, the slot indicated by the index queueFront (that is, the slot preceding the first true element) is reserved. The queue will be full if the next available space is the special reserved slot indicated by queueFront. Finally, because the array position indicated by queueFront is to be kept empty, if the array size is, say, 100, then 99 elements can be stored in the queue (see Figure 19–34).
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_1212_0.png)
+
+Let us implement the queue using the first solution. That is, we use the variable count to indicate whether the queue is empty or full. The following class implements the functions of the abstract class queueADT. Because arrays can be allocated dynamically, we will leave it for the user to specify the size of the array to implement the queue. The default size of the array is 100.
+
+```cpp
+template <class Type>
+class queueType: public queueADT<Type>
+{
+public:
+    queueType<Type>& operator=(const queueType<Type>&);
+    //Overload the assignment operator
+```

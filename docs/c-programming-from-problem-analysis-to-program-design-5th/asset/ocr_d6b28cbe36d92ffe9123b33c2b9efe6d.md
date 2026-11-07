@@ -1,0 +1,50 @@
+That is, the largest element in list is the maximum of list[0] and the largest element in list[1]...list[5]. To find the largest element in list[1]...list[5], we use the same formula again because the length of this list is greater than 1. The largest element in list[1]...list[5] is then:
+
+```
+```text
+maximum(list[1], largest(list[2]...list[5]))
+```
+```
+
+and so on. We see that every time we use the preceding formula to find the largest element in a sublist, the length of the sublist in the next call is reduced by one. Eventually, the sublist is of length 1, in which case the sublist contains only one element, which is the largest element in the sublist. From this point onward, we backtrack through the recursive calls. This discussion translates into the following recursive algorithm, which is presented in pseudocode.
+
+**Base Case:** The size of the list is 1
+
+The only element in the list is the largest element
+
+**General Case:** The size of the list is greater than 1
+
+To find the largest element in list[a]...list[b]
+
+a. Find the largest element in list[a + 1]...list[b]
+   and call it max
+b. Compare the elements list[a] and max
+   if (list[a] >= max)
+      the largest element in list[a]...list[b] is list[a]
+   otherwise
+      the largest element in list[a]...list[b] is max
+
+This algorithm translates into the following C++ function to find the largest element in an array:
+
+```
+```cpp
+int largest(const int list[], int lowerIndex, int upperIndex)
+{
+    int max;
+
+    if (lowerIndex == upperIndex)  //size of the sublist is one
+        return list[lowerIndex];
+    else
+    {
+        max = largest(list, lowerIndex + 1, upperIndex);
+
+        if (list[lowerIndex] >= max)
+            return list[lowerIndex];
+        else
+            return max;
+    }
+}
+```
+```
+
+Consider the list given in Figure 17–3.

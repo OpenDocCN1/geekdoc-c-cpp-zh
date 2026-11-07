@@ -1,0 +1,39 @@
+# Arrays in `structs`
+
+A list is a set of elements of the same type. Thus, a list has two things associated with it: the values (that is, elements) and the length. Because the values and the length are both related to a list, we can define a struct containing both items.
+
+```
+const int ARRAY_SIZE = 1000;
+```
+
+```
+struct listType
+{
+    int listElem[ARRAY_SIZE];    //array containing the list
+    int listLength;               //length of the list
+};
+```
+
+The following statement declares intList to be a struct variable of type listType (see Figure 11-5):
+
+```
+listType intList;
+```
+
+![](bbox=[0.184, 0.411, 0.913, 0.641])
+
+**FIGURE 11-5** `struct` variable `intList`
+
+The variable `intList` has two members: `listElem`, an array of 1000 components of type int, and `listLength`, of type int. Moreover, `intList.listElem` accesses the member `listElem`, and `intList.listLength` accesses the member `listLength`.
+
+Consider the following statements:
+
+```
+intList.listLength = 0;       //Line 1
+intList.listElem[0] = 12;    //Line 2
+intList.listLength++;         //Line 3
+intList.listElem[1] = 37;    //Line 4
+intList.listLength++;         //Line 5
+```
+
+The statement in Line 1 sets the value of the member listLength to 0. The statement in Line 2 stores 12 in the first component of the array listElem. The statement in Line 3 increments the value of listLength by 1. The meaning of the other statements is similar. After these statements execute, intList is as shown in Figure 11-6.

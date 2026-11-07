@@ -1,0 +1,45 @@
+```
+```cpp
+myClass::incrementCount();
+myObject1.printCount();
+cout << endl;
+myObject2.printCount();
+cout << endl;
+myObject2.printX();
+cout << endl;
+myObject1.setX(14);
+myObject1.incrementCount();
+myObject1.printX();
+cout << endl;
+myObject1.printCount();
+cout << endl;
+myObject2.printCount();
+cout << endl;
+```
+```
+
++   14. In Example 12-8, we designed the class *die*. Using this class, declare an array named *rolls*, of 100 components of type *die*. Write C++ statements to roll each die of the array *rolls*, find and output the highest number rolled and the number of times this number was rolled, and find and output the number that is rolled the maximum number of times together with its count. Also write a program to test your statements.
+
+# ## PROGRAMMING EXERCISES
+
++   1. Write a program that converts a number entered in Roman numerals to decimal. Your program should consist of a class, say, *romanType*. An object of type *romanType* should do the following:
+
++   a. Store the number as a Roman numeral.
+
++   b. Convert and store the number into decimal form.
+
++   c. Print the number as a Roman numeral or decimal number as requested by the user.
+
+The decimal values of the Roman numerals are:
+
+|  |  |
+|---|---|
+| M | 1000 |
+| D | 500 |
+| C | 100 |
+| L | 50 |
+| X | 10 |
+| V | 5 |
+| I | 1 |
+
++   d. Test your program using the following Roman numerals: MCXIV, CCCLIX, MDCLXVI.

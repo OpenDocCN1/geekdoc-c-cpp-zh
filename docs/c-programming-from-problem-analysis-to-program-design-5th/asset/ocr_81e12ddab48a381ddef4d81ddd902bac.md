@@ -1,0 +1,23 @@
+In C++, *return* is a reserved word.
+
+When a *return* statement executes in a function, the function immediately terminates and the control goes back to the caller. Moreover, the function call statement is replaced by the value returned by the *return* statement. When a *return* statement executes in the function main, the program terminates.
+
+To put the ideas in this discussion to work, let us write a function that determines the larger of two numbers. Because the function compares two numbers, it follows that this function has two parameters and that both parameters are numbers. Let us assume that the data type of these numbers is floating-point (decimal)—say, double. Because the larger number is of type double, the function’s data type is also double. Let us name this function larger. The only thing you need to complete this function is the body of the function. Thus, following the syntax of a function, you can write this function as follows:
+
+```
+    double larger(double x, double y)
+    {
+        double max;
+
+        if (x >= y)
+            max = x;
+        else
+            max = y;
+
+        return max;
+    }
+```
+
+Note that the function **larger** requires that you use an additional variable **max** (called a **local declaration**, in which **max** is a variable local to the function **larger**). Figure 6-1 describes various parts of the function **larger**.
+
+![](bbox=[0.192, 0.817, 0.895, 0.987])

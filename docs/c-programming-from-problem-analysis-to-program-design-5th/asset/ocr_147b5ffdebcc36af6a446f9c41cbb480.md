@@ -1,0 +1,59 @@
+```
+```cpp
+template <class Type>
+linkedListIterator<Type> linkedListType<Type>::end()
+{
+    linkedListIterator<Type> temp (NULL);
+
+    return temp;
+}
+```
+```
+
+# Copy the List
+
+The function copyList makes an identical copy of a linked list. Therefore, we traverse the list to be copied, starting at the first node. Corresponding to each node in the original list, we:
+
++   a. Create a node, and call it newNode.
++   
++   b. Copy the info of the node (in the original list) into newNode.
++   
++   c. Insert newNode at the end of the list being created.
+
+The definition of the function copyList is:
+
+```
+```cpp
+template <class Type>
+void linkedListType<Type>::copyList
+                      (const linkedListType<Type> & otherList)
+{
+    nodeType<Type> *newNode;  //pointer to create a node
+    nodeType<Type> *current;  //pointer to traverse the list
+
+    if (first != NULL)  //if the list is nonempty, make it empty
+        destroyList();
+
+    if (otherList.first == NULL)  //otherList is empty
+    {
+        first = NULL;
+        last = NULL;
+        count = 0;
+    }
+    else
+    {
+        current = otherList.first;  //current points to the
+                                     //list to be copied
+        count = otherList.count;
+
+        //copy the first node
+        first = new nodeType<Type>;  //create the node
+        first->info = current->info; //copy the info
+        first->link = NULL;          //set the link field of
+                                     //the node to NULL
+        last = first;                //make last point to the
+                                     //first node
+        current = current->link;     //make current point to
+                                     //the next node
+```
+```

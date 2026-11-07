@@ -1,0 +1,17 @@
+Chapter 8 discusses the user-defined simple data type (enumeration type), the namespace mechanism of ANSI/ISO Standard C++, and the string type. The earlier versions of C did not include the enumeration type. Enumeration types have very limited use; their main purpose is to make the program readable. This book is organized such that readers can skip the section on enumeration types during the first reading without experiencing any discontinuity, and then later go through this section.
+
+Chapter 9 discusses arrays in detail. Chapter 10 describes various searching and sorting algorithms as well as an introduction to the vector class. Chapter 11 introduces records (structs). The introduction of structs in this book is similar to C structs. This chapter is optional; it is not a prerequisite for any of the remaining chapters.
+
+Chapter 12 begins the study of object-oriented programming (OOP) and introduces classes. The first half of this chapter shows how classes are defined and used in a program. The second half of the chapter introduces abstract data types (ADTs). This chapter shows how classes in C++ are a natural way to implement ADTs. Chapter 13 continues with the fundamentals of object-oriented design (OOD) and OOP and discusses inheritance and composition. It explains how classes in C++ provide a natural mechanism for OOD and how C++ supports OOP. Chapter 13 also discusses how to find the objects in a given problem.
+
+Chapter 14 studies pointers in detail. After introducing pointers and how to use them in a program, this chapter highlights the peculiarities of classes with pointer data members and how to avoid them. Moreover, this chapter also discusses how to create and work with dynamic two-dimensional arrays. Chapter 14 also discusses abstract classes and a type of polymorphism accomplished via virtual functions.
+
+Chapter 15 continues the study of OOD and OOP. In particular, it studies polymorphism in C++. The chapter specifically discusses two types of polymorphism—overloading and templates.
+
+Chapter 16 discusses exception handling in detail. Chapter 17 introduces and discusses recursion. Moreover, this is a standalone chapter, so it can be studied anytime after Chapter 10.
+
+Chapters 18 and 19 are devoted to the study of data structures. Discussed in detail are linked lists in Chapter 18 and stacks and queues in Chapter 19. The programming code developed in these chapters is generic. These chapters effectively use the fundamentals of OOD.
+
+Appendix A lists the reserved words in C++. Appendix B shows the precedence and associativity of the C++ operators. Appendix C lists the ASCII (American Standard Code for Information Interchange) and EBCDIC (Extended Binary Coded Decimal Interchange Code) character sets. Appendix D lists the C++ operators that can be overloaded.
+
+Appendix E has three objectives. First, we discuss how to convert a number from decimal to binary and binary to decimal. We then discuss binary and random access files in detail. Finally, we describe the naming conventions of the header files in both ANSI/ISO Standard C++ and Standard C++. Appendix F discusses some of the most widely used library routines, and includes the names of the standard C++ header files. The programs in Appendix G show how to print the memory size for the built-in data types on your system as well as how to use a random number generator. Appendix H gives an introduction to

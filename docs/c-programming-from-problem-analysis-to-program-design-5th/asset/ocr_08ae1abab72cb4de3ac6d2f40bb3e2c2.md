@@ -1,0 +1,37 @@
+**Sample Run 1:** In this sample run, the user input is shaded.
+
+Line 4: Enter the dividend: **23**
+
+Line 7: Enter the divisor: **6**
+
+Line 17: Quotient = 3
+
+**Sample Run 2:** In this sample run, the user input is shaded.
+
+Line 4: Enter the dividend: **34**
+
+Line 7: Enter the divisor: **-6**
+
+Line 21: Negative divisor.
+
+**Sample Run 3:** In this sample run, the user input is shaded.
+
+Line 4: Enter the dividend: **34**
+
+Line 7: Enter the divisor: **g**
+
+Line 21: The input stream is in the fail state.
+
+In this program, the statements in Lines 1 and 2 declare the variables used in the program. Notice that the string object inpStr is also initialized.
+
+The statements in Lines 4 through 9 input the data into the variables dividend and divisor. The statement in Line 10 checks whether divisor is 0; the statement in Line 12 checks whether divisor is negative; and the statement in Line 14 checks whether the standard input stream is in the fail state.
+
+The statement in Line 11 throws the variable divisor; the statement in Line 13 throws an anonymous string object with the string "Negative divisor."; and the statement in Line 15 throws the object inpStr.
+
+The catch block in Line 18 catches an exception of type int, and the catch block in Line 20 catches an exception of type string. If the exception is thrown by the statement in Line 11, it is caught and processed by the catch block in Line 18. If the exception is thrown by the statements in Lines 13 or 15, it is caught and processed by the catch block in Line 20.
+
+In Sample Run 1, the program does not encounter any problems. In Sample Run 2, division by a negative number occurs. In Sample Run 3, the standard input stream enters the fail state.
+
+# Using C++ Exception Classes
+
+C++ provides support to handle exceptions via a hierarchy of classes. The class exception is the base of the classes designed to handle exceptions. Among others, this class contains the function what. The function what returns a string containing an

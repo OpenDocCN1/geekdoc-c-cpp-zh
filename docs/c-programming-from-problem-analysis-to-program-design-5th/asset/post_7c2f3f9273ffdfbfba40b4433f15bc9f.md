@@ -1,0 +1,177 @@
+
+### Sample Run 4:
+
+```text
+Enter an integer between 0 and 7: 5
+The number you entered is 5
+This program shows the effect of the break statement.
+Out of the switch structure.
+```
+
+### Sample Run 5:
+
+```text
+Enter an integer between 0 and 7: 7
+The number you entered is 7
+This program shows the effect of the break statement.
+Out of the switch structure.
+```
+
+### Sample Run 6:
+
+```text
+Enter an integer between 0 and 7: 8
+The number you entered is 8
+The number is out of range.
+Out of the switch structure.
+```
+
+A walk-through of this program, using certain values of the `switch` expression `num`, can help you understand how the `break` statement functions. If the value of `num` is 0, the value of the `switch` expression matches the `case` value 0. All statements following `case 0:` execute until a `break` statement appears.
+
+The first `break` statement appears in Line 13, just before the `case` value of 4. Even though the value of the `switch` expression does not match any of the `case` values (that is, 1, 2, or 3), the statements following these values execute.
+
+When the value of the `switch` expression matches a `case` value, all statements execute until a `break` is encountered, and the program skips all `case` labels in between. Similarly, if the value of `num` is 3, it matches the `case` value of 3, and the statements following this label execute until the `break` statement is encountered in Line 13. If the value of `num` is 4, it matches the `case` value of 4. In this situation, the action is empty because only the `break` statement, in Line 15, follows the `case` value of 4.
+
+### EXAMPLE 4-23
+
+Although a `switch` structure’s case values (labels) are limited, the `switch` statement expression can be as complex as necessary. For example, consider the following `switch` statement:
+
+```cpp
+switch (score / 10)
+{
+case 0:
+case 1:
+case 2:
+case 3:
+case 4:
+case 5:
+    grade = 'F';
+    break;
+case 6:
+    grade = 'D';
+    break;
+case 7:
+    grade = 'C';
+    break;
+case 8:
+    grade = 'B';
+    break;
+case 9:
+case 10:
+    grade = 'A';
+    break;
+default:
+    cout << "Invalid test score." << endl;
+}
+```
+
+Assume that score is an `int` variable with values between 0 and 100. If score is 75, score / 10 = 75 / 10 = 7, and the grade assigned is 'C'. If the value of score is between 0 and 59, the grade is 'F'. If score is between 0 and 59, then score / 10 is 0, 1, 2, 3, 4, or 5. Each of these values corresponds to the grade 'F'.
+
+Therefore, in this `switch` structure, the action statements of `case 0`, `case 1`, `case 2`, `case 3`, `case 4`, and `case 5` are all the same. Rather than write the statement `grade = 'F';` followed by the `break` statement for each of the `case` values of 0, 1, 2, 3, 4, and 5, you can simplify the programming code by first specifying all of the case values (as shown in the preceding code) and then specifying the desired action statement. The `case` values of 9 and 10 follow similar conventions.
+
+In addition to being a variable identifier or a complex expression, the `switch` expression can evaluate to a logical value. Consider the following statements:
+
+```cpp
+switch (age >= 18)
+{
+case 1:
+    cout << "Old enough to be drafted." << endl;
+    cout << "Old enough to vote." << endl;
+    break;
+case 0:
+    cout << "Not old enough to be drafted." << endl;
+    cout << "Not old enough to vote." << endl;
+}
+```
+
+If the value of age is 25, the expression age >= 18 evaluates to 1—that is, true. If the expression evaluates to 1, the statements following the case label 1 execute. If the value of age is 14, the expression age >= 18 evaluates to 0—that is, false—and the statements following the case label 0 execute.
+
+You can use **true** and **false**, instead of 1 and 0, respectively, in the case labels, and rewrite the preceding `switch` statement as follows:
+
+```cpp
+switch (age >= 18)
+{
+case true:
+    cout << "Old enough to be drafted." << endl;
+    cout << "Old enough to vote." << endl;
+    break;
+case false:
+    cout << "Not old enough to be drafted." << endl;
+    cout << "Not old enough to vote." << endl;
+    break;
+}
+```
+
+As you can see from the preceding examples, the `switch` statement is an elegant way to implement multiple selections. You will see the use of a `switch` statement in the programming example at the end of this chapter. Even though no fixed rules exist that can be applied to decide whether to use an `if...else` structure or a `switch` structure to implement multiple selections, the following considerations should be remembered. If multiple selections involve a range of values, you should use either an `if...else` structure or a `switch` structure, wherein you convert each range to a finite set of values.
+
+For instance, in Example 4–23, the value of grade depends on the value of `score`. If `score` is between 0 and 59, grade is 'F'. Because `score` is an `int` variable, 60 values correspond to the grade of 'F'. If you list all 60 values as case values, the `switch` statement could be very long. However, dividing by 10 reduces these 60 values to only 6 values: 0, 1, 2, 3, 4, and 5.
+
+If the range of values consists of infinitely many values and you cannot reduce them to a set containing a finite number of values, you must use the `if...else` structure. For example, if `score` happens to be a `double` variable, the number of values between 0 and 60 is infinite. However, you can use the expression `static_cast<int>(score) / 10` and still reduce this infinite number of values to just six values.
+
+## Avoiding Bugs by Avoiding Partially Understood Concepts and Techniques (Revisited)
+
+Earlier in this chapter, we discussed how a partial understanding of a concept or technique can lead to errors in a program. In this section, we give another example to illustrate the problem of using partially understood concepts and techniques. In Example 4–23, we illustrate how to assign a grade based on a test score between 0 and 100. Next, consider the following program that assigns a grade based on a test score.
+
+```cpp
+//Grade program with bugs.
+
+#include <iostream>                                      //Line 1
+
+using namespace std;                                     //Line 2
+
+int main()                                      //Line 3
+{                                               //Line 4
+    int testScore;                              //Line 5
+
+    cout << "Enter the test score: ";           //Line 6
+    cin >> testScore;                           //Line 7
+    cout << endl;                               //Line 8
+
+    switch (testScore / 10)                     //Line 9
+    {                                           //Line 10
+    case 0:                                     //Line 11
+    case 1:                                     //Line 12
+    case 2:                                     //Line 13
+    case 3:                                     //Line 14
+    case 4:                                     //Line 15
+    case 5:                                     //Line 16
+        cout << "The grade is F." << endl;      //Line 17
+    case 6:                                     //Line 18
+        cout << "The grade is D." << endl;      //Line 19
+    case 7:                                     //Line 20
+        cout << "The grade is C." << endl;      //Line 21
+    case 8:                                     //Line 22
+        cout << "The grade is B." << endl;      //Line 23
+    case 9:                                     //Line 24
+    case 10:                                    //Line 25
+        cout << "The grade is A." << endl;      //Line 26
+    default:                                    //Line 27
+        cout << "Invalid test score." << endl;  //Line 28
+    }                                           //Line 29
+
+    return 0;                                   //Line 30
+}                                               //Line 31
+```
+
+**Sample Runs:** In these sample runs, the user input is shaded.
+
+**Sample Run 1:**
+
+Enter the test score: `110`
+
+Invalid test score.
+
+**Sample Run 2:**
+
+Enter the test score: `-70`
+
+Invalid test score.
+
+**Sample Run 3:**
+
+Enter the test score: `75`
+
+The grade is C.
+The grade is B.
+The grade is A.
+Invalid test score.

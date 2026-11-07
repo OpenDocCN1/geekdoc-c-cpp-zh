@@ -1,0 +1,71 @@
+5. What is wrong with the following program?
+
+```
+```cpp
+#include <iostream>                         //Line 1
+
+int main()                                   //Line 2
+{
+    cout << "Hello World! " << endl;        //Line 3
+
+    return 0;                                //Line 4
+}
+```
+```
+
+6. What is wrong with the following program?
+
+```
+```cpp
+#include <iostream.h>                       //Line 1
+
+using namespace std;                         //Line 2
+
+int main()                                   //Line 3
+{
+    int x = 0;                               //Line 4
+    cout << "x = " << x << endl;            //Line 5
+    return 0;                                //Line 6
+}
+```
+```
+
+7. What is wrong with the following program?
+
+```
+```cpp
+#include <iostream>                         //Line 1
+
+namespace aaa                              //Line 2
+{
+    const int X = 0;                         //Line 3
+    double Y;                                //Line 4
+}
+
+using namespace std;                         //Line 5
+
+int main()                                   //Line 6
+{
+    Y = 34.50;                               //Line 7
+    cout << "X = " << X << ", Y = " << Y   //Line 8
+         << endl;
+    return 0;                                //Line 9
+}
+```
+```
+
+8. What is wrong with the following program?
+
+```
+```cpp
+#include <iostream>                         //Line 1
+#include <cmath>                             //Line 2
+
+using std;                                  //Line 3
+
+int main()                                   //Line 4
+{
+    return 0;                                //Line 5
+}
+```
+```

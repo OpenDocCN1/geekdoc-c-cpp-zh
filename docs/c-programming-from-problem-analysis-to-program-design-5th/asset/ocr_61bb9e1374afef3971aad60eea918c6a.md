@@ -1,0 +1,53 @@
+the isFullQueue operation returns the value **false**. (The queue is full only if we run out of memory.)
+
+```
+```cpp
+template <class Type>
+bool linkedQueueType<Type>::isEmptyQueue() const
+{
+    return (queueFront == NULL);
+} //end
+```
+```
+
+```
+```cpp
+template <class Type>
+bool linkedQueueType<Type>::isFullQueue() const
+{
+    return false;
+} //end isFullQueue
+```
+```
+
+Note that in reality, in the linked implementation of queues, the function isFullQueue does not apply because, logically, the queue is never full. However, you must provide its definition because it is included as an abstract function in the parent class queueADT.
+
+# INITIALIZE QUEUE
+
+The operation initializeQueue initializes the queue to an empty state. The queue is empty if there are no elements in the queue. Note that the constructor initializes the queue when the queue object is declared. So this operation must remove all of the elements, if any, from the queue. Therefore, this operation traverses the list containing the queue starting at the first node, and it deallocates the memory occupied by the queue elements. The definition of this function is:
+
+```
+```cpp
+template <class Type>
+void linkedQueueType<Type>::initializeQueue()
+{
+    nodeType<Type> *temp;
+
+    while (queueFront != NULL)    //while there are elements left
+                                  //in the queue
+    {
+        temp = queueFront;        //set temp to point to the
+                                  //current node
+        queueFront = queueFront->link;  //advance first to
+                                        //the next node
+        delete temp;              //deallocate memory occupied by temp
+    }
+
+    queueRear = NULL;  //set rear to NULL
+} //end initializeQueue
+```
+```
+
+# addQueue, front, back, AND deleteQueue OPERATIONS
+
+The addQueue operation adds a new element at the end of the queue. To implement this operation, we access the pointer queueRear.

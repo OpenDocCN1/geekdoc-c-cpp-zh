@@ -1,0 +1,201 @@
+
+- **24.** When an array is passed as an actual parameter to a function, what is actually being passed?
+
+- **25.** In C++, as an actual parameter, can an array be passed by value?
+
+- **26.** Given the declaration:
+
+  ```cpp
+  char string15[16];
+  ```
+
+  Mark the following statements as valid or invalid. If a statement is invalid, explain why.
+
+  - a. `strcpy(string15, "Hello there");`
+  - b. `strlen(string15);`
+  - c. `string15 = "Jacksonville";`
+  - d. `cin >> string15;`
+  - e. `cout << string15;`
+  - f. `if (string15 >= "Nice day")`
+    `cout << string15;`
+  - g. `string15[6] = 't';`
+
+- **27.** Given the declaration:
+
+  ```cpp
+  char str1[15];
+  char str2[15] = "Good day";
+  ```
+
+  Mark the following statements as valid or invalid. If a statement is invalid, explain why.
+
+  - a. `str1 = str2;`
+  - b. `if (str1 == str2)`
+    `cout << "Both strings are of the same length." << endl;`
+  - c. `if (strlen(str1) >= strlen(str2))`
+    `str1 = str2;`
+  - d. `if (strcmp(str1, str2) < 0)`
+    `cout << "str1 is less than str2." << endl;`
+
+- **28.** Given the declaration:
+
+  ```cpp
+  char name[8] = "Shelly";
+  ```
+
+  Mark the following statements as “Yes” if they output Shelly. Otherwise, mark the statement as “No” and explain why it does not output Shelly.
+
+  - a. `cout << name;`
+  - b. `for (int j = 0; j < 6; j++)`
+    `cout << name[j];`
+  - c. `int j = 0;`
+    `while (name[j] != '\0')`
+    `cout << name[j++];`
+  - d. `int j = 0;`
+    `while (j < 8)`
+    `cout << name[j++];`
+
+- **29.** Given the declaration:
+
+  ```cpp
+  char str1[21];
+  char str2[21];
+  ```
+
+  - a. Write a C++ statement that stores "Sunny Day" in `str1`.
+  - b. Write a C++ statement that stores the length of `str1` into the `int` variable `length`.
+  - c. Write a C++ statement that copies the value of `name` into `str2`.
+  - d. Write C++ code that outputs `str1` if `str1` is less than or equal to `str2`, and otherwise outputs `str2`.
+
+- **30.** Assume the following declarations:
+
+  ```cpp
+  char name[21];
+  char yourName[21];
+  char studentName[31];
+  ```
+
+  Mark the following statements as valid or invalid. If a statement is invalid, explain why.
+
+  - a. `cin >> name;`
+  - b. `cout << studentName;`
+  - c. `yourName[0] = '\0';`
+  - d. `yourName = studentName;`
+  - e. `if (yourName == name) studentName = name;`
+  - f. `int x = strcmp(yourName, studentName);`
+  - g. `strcpy(studentName, Name);`
+  - h. `for (int j = 0; j < 21; j++) cout << name[j];`
+
+- **31.** Define a two-dimensional array named `temp` of three rows and four columns of type `int` such that the first row is initialized to 6, 8, 12, 9; the second row is initialized to 17, 5, 10, 6; and the third row is initialized to 14, 13, 16, 20.
+
+- **32.** Suppose that array `temp` is as defined in Exercise 31. Write C++ statements to accomplish the following:
+
+  - a. Output the contents of the first row and first column element of `temp`.
+  - b. Output the contents of the first row and last column element of `temp`.
+  - c. Output the contents of the last row and first column element of `temp`.
+  - d. Output the contents of the last row and last column element of `temp`.
+
+- **33.** Consider the following declarations:
+
+  ```cpp
+  const int CAR_TYPES = 5;
+  const int COLOR_TYPES = 6;
+  double sales[CAR_TYPES][COLOR_TYPES];
+  ```
+
+  - a. How many components does the array `sales` have?
+  - b. What is the number of rows in the array `sales`?
+  - c. What is the number of columns in the array `sales`?
+  - d. To sum the sales by `CAR_TYPES`, what kind of processing is required?
+  - e. To sum the sales by `COLOR_TYPES`, what kind of processing is required?
+
+- **34.** Write C++ statements that do the following:
+
+  - a. Declare an array `alpha` of 10 rows and 20 columns of type `int`.
+  - b. Initialize the array `alpha` to 0.
+  - c. Store 1 in the first row and 2 in the remaining rows.
+  - d. Store 5 in the first column, and make sure that the value in each subsequent column is twice the value in the previous column.
+  - e. Print the array `alpha` one row per line.
+  - f. Print the array `alpha` one column per line.
+
+- **35.** Consider the following declaration:
+
+  ```cpp
+  int beta[3][3];
+  ```
+
+  What is stored in `beta` after each of the following statements executes?
+
+  - a.
+
+    ```cpp
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            beta[i][j] = 0;
+    ```
+
+  - b.
+
+    ```cpp
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            beta[i][j] = i + j;
+    ```
+
+  - c.
+
+    ```cpp
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            beta[i][j] = i * j;
+    ```
+
+  - d.
+
+    ```cpp
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            beta[i][j] = 2 * (i + j) % 4;
+    ```
+
+- **36.** Suppose that you have the following declarations:
+
+  ```cpp
+  int times[30][7];
+  int speed[15][7];
+  int trees[100][7];
+  int students[50][7];
+  ```
+
+  - a. Write the definition of the function `print` that can be used to output the contents of these arrays.
+  - b. Write the C++ statements that call the function `print` to output the contents of the arrays `times`, `speed`, `trees`, and `students`.
+
+![](img/1fbe55537254baeb2b5b7dbaf64956ae_597_0.png)
+
+## PROGRAMMING EXERCISES
+
+- **1.** Write a C++ program that declares an array alpha of 50 components of type double. Initialize the array so that the first 25 components are equal to the square of the index variable, and the last 25 components are equal to three times the index variable. Output the array so that 10 elements per line are printed.
+
+- **2.** Write a C++ function, `smallestIndex`, that takes as parameters an int array and its size and returns the index of the first occurrence of the smallest element in the array. Also, write a program to test your function.
+
+- **3.** Write a C++ function, `largestIndex`, that takes as parameters an int array and its size and returns the index of the last occurrence of the largest element in the array. Also, write a program to test your function.
+
+- **4.** Write a program that reads a file consisting of students’ test scores in the range 0–200. It should then determine the number of students having scores in each of the following ranges: 0–24, 25–49, 50–74, 75–99, 100–124, 125–149, 150–174, and 175–200. Output the score ranges and the number of students. (Run your program with the following input data: 76, 89, 150, 135, 200, 76, 12, 100, 150, 28, 178, 189, 167, 200, 175, 150, 87, 99, 129, 149, 176, 200, 87, 35, 157, 189.)
+
+- **5.** Write a program that prompts the user to input a string and outputs the string in uppercase letters. (Use a character array to store the string.)
+
+- **6.** The history teacher at your school needs help in grading a True/False test. The students’ IDs and test answers are stored in a file. The first entry in the file contains answers to the test in the form:
+
+  ```text
+  TFFTFFTTTTTFFTFTTTT
+  ```
+
+  Every other entry in the file is the student ID, followed by a blank, followed by the student’s responses. For example, the entry:
+
+  ```text
+  ABC54301 TFTFTTTT TFTTFFTTTT
+  ```
+
+  indicates that the student ID is ABC54301 and the answer to question 1 is True, the answer to question 2 is False, and so on. This student did not answer question 9. The exam has 20 questions, and the class has more than 150 students. Each correct answer is awarded two points, each wrong answer gets one point deducted, and no answer gets zero points. Write a program that processes the test data. The output should be the student’s ID, followed by the answers, followed by the test score, followed by the test grade. Assume the following grade scale: 90%–100%, A; 80%–89.99%, B; 70%–79.99%, C; 60%–69.99%, D; and 0%–59.99%, F.
+
+- **7.** Write a program that allows the user to enter the last names of five candidates in a local election and the number of votes received by each candidate. The program should then output each candidate’s name, the number of votes

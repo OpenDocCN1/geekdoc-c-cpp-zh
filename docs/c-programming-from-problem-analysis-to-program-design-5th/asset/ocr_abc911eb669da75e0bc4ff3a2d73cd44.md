@@ -1,0 +1,29 @@
+character has a predefined ordering, which is called a **collating sequence**, in the set. The collating sequence is used when you compare characters. For example, the value representing 'B' is 66, so 'A' is smaller than 'B'. Similarly, '+' is smaller than 'A' because 43 is smaller than 65.
+
+The 14th character in the ASCII character set is called the newline character and is represented as '\n'. (Note that the position of the newline character in the ASCII character set is 13 because the position of the first character is 0.) Even though the newline character is a combination of two characters, it is treated as one character. Similarly, the horizontal tab character is represented in C++ as '\t', and the null character is represented as '\0' (backslash followed by zero). Furthermore, the first 32 characters in the ASCII character set are nonprintable. (See Appendix C for a description of these characters.)
+
+# ## Floating-Point Data Types
+
+To deal with decimal numbers, C++ provides the floating-point data type, which we discuss in this section. To facilitate the discussion, let us review a concept from a high school or college algebra course.
+
+You may be familiar with scientific notation. For example:
+
+```
+43872918 = 4.3872918 * 10^7        {10 to the power of seven}
+.0000265 = 2.65 * 10^-5          {10 to the power of minus five}
+47.9832 = 4.79832 * 10^1          {10 to the power of one}
+```
+
+To represent real numbers, C++ uses a form of scientific notation called **floating-point notation**. Table 2–3 shows how C++ might print a set of real numbers using one machine's interpretation of floating-point notation. In the C++ floating-point notation, the letter E stands for the exponent.
+
+# **TABLE 2-3** Examples of Real Numbers Printed in C++ Floating-Point Notation
+
+| Real Number | C++ Floating-Point Notation |
+|---|---|
+| 75.924 | 7.592400E1 |
+| 0.18 | 1.800000E-1 |
+| 0.0000453 | 4.530000E-5 |
+| −1.482 | −1.482000E0 |
+| 7800.0 | 7.800000E3 |
+
+C++ provides three data types to manipulate decimal numbers: float, double, and long double. As in the case of integral data types, the data types float, double, and long double differ in the set of values.
