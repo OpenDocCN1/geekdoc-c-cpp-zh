@@ -1,0 +1,7 @@
+There are two types of addressing schemes:
+
+IP Addressing: An Internet Protocol (IP) address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication. It serves two main functions: host or network interface identification and location addressing.
+
+MAC Addressing: As mentioned, every network interface card has a unique MAC address that identifies it on the network at the physical layer of the network protocol.
+
+There are two versions of IP addresses in use: IPv4 and IPv6. IPv4 addresses are 32 bits long, and IPv6 addresses are 128 bits long. The length of the IP address affects the total number of possible addresses. The IPv4 addressing system is organized into classes (A, B, C, D, E) for different kinds of networks, from small networks (fewer addresses, such as Class C) to large networks (more addresses, such as Class A). However, with the advent of CIDR (Classless Inter-Domain Routing), the concept of classes is no longer used. The topic of addressing is also linked to the concept of subnetting. Subnetting is a technique used to divide a network into two or more smaller network segments (called subnets), each functioning as a small, separate

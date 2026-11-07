@@ -1,0 +1,9 @@
+# Using Tracert/Traceroute
+
+The tracert command (known as traceroute on Linux and macOS) is a command-line tool used to track and display the route that a packet takes to reach a destination on a network. It displays the series of IP addresses that the packet travels through to reach the destination. This tool is especially useful for troubleshooting network issues, as it can help to identify where along the path the problem occurs.
+
+Below is how it works in detail:
+
+To use tracert or traceroute, open your command line interface and type tracert (on Windows) or traceroute (on Linux or macOS), followed by the IP address or domain name of the destination host. For example, tracert www.google.com or traceroute www.google.com.
+
+The tool will then send packets towards the destination and list each router or hop along the way. Each line represents one hop, and it displays the IP address (and often the domain name) of the router at that hop. Now, let us look at a few examples:

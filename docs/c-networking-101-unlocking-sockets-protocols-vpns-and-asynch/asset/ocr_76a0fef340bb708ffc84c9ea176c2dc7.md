@@ -1,0 +1,3 @@
+unauthorized access or attacks. We demonstrated using Nagios for security monitoring tasks. Lastly, the account monitoring section explored the monitoring of user accounts, especially for activities like SSH log-in attempts. A custom script was used as a Nagios plugin to illustrate how account monitoring could be done.
+
+This chapter serves as an essential guide to network monitoring, highlighting its importance and demonstrating how to effectively use a tool like Nagios in a variety of monitoring scenarios. The practical examples using C++ and Nagios provide a strong foundation for implementing and customizing network monitoring to suit unique network environments.

@@ -1,0 +1,5 @@
+# Summary
+
+Network Monitoring is a crucial part of network administration as it allows for the identification and resolution of issues before they impact users or cause downtime. The chapter commenced by stressing the importance of network monitoring and its various elements, including fault, performance, security, and account monitoring, all achievable through C++. The fault monitoring section emphasized detecting and diagnosing problems in the network infrastructure. We explored Nagios, a powerful open-source tool used widely for fault monitoring. Detailed steps for installing and configuring Nagios on Linux were provided, including how to add hosts and services to the Nagios configuration for monitoring. Practical demonstrations showcased how to create plugins for Nagios to monitor specific aspects of a system.
+
+Performance monitoring focused on ensuring the network is performing optimally, and Nagios's role was elaborated in this regard. Similarly, we touched upon security monitoring, an integral part of any network administration task to protect network resources from

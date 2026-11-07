@@ -1,0 +1,5 @@
+network key. This vulnerability isn't a minor hiccup but rather an inherent flaw in the WEP protocol's design. Given the ease with which its encryption can be cracked, WEP doesn't provide reliable security for Wi-Fi networks. Due to these vulnerabilities, WEP is widely recognized as insecure and is generally not recommended for use in safeguarding wireless networks. Instead, newer and more secure protocols like WPA2 or WPA3 should be utilized.
+
+# Wi-Fi Protected Access (WPA)
+
+Wi-Fi Protected Access (WPA) was established as an interim solution to remedy the deficiencies of the Wired Equivalent Privacy (WEP) security protocol. WPA retained the use of the RC4 stream cipher, just like WEP, but introduced several robust features that significantly bolstered its security performance. A key component of WPA is the Temporal Key Integrity Protocol (TKIP), a sophisticated mechanism that dynamically changes the encryption key for each data packet transmitted. This feature makes it more difficult for attackers to compromise the encryption, thereby addressing the key static vulnerability that WEP suffered from, which led to its downfall.

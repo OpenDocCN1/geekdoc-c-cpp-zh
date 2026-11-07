@@ -1,0 +1,5 @@
+# Performance Monitoring
+
+Performance monitoring is the process of measuring and analyzing the operational characteristics of a system to understand its behavior, optimize its efficiency, and to detect and troubleshoot any performance-related issues. When applied to networking, performance monitoring encompasses tracking metrics like bandwidth usage, latency, packet loss, error rates, throughput, network device CPU utilization, and more. These metrics can give insights into how the network is performing and can help identify any bottlenecks or areas that might require improvement.
+
+For instance, high latency could mean that data is taking too long to travel from one point in the network to another, which could negatively impact applications like voice and video conferencing that require real-time data transmission. On the other hand, high bandwidth usage might indicate that the network is nearing its capacity, potentially leading to network congestion and degraded performance. Performance monitoring can be done in real-time, where the metrics are tracked and analyzed continuously, or it can be done periodically at

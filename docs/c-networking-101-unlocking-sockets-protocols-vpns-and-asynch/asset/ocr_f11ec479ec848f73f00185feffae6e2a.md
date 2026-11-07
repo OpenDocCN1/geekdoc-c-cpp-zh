@@ -1,0 +1,9 @@
+# Functional Testing
+
+Functional testing is a type of testing that validates whether individual components of the network are functioning as expected. In networking terms, this could include various elements like routers, switches, firewalls, access points, network interfaces, and software-defined networking (SDN) components.
+
+The objective of functional testing is to ensure that all the elements within the network setup perform their expected tasks without any issues. This encompasses checking the correct data packet forwarding, ensuring proper load balancing, validating efficient routing protocols operation, and verifying successful network connections.
+
+# Step-by-Step
+
+This type of testing typically involves several stages, including identifying the functions to be tested, creating input data, determining expected outputs, executing tests, and reviewing the results. It's an essential part of maintaining network health, security, and efficiency,

@@ -1,0 +1,5 @@
+# Summary
+
+In this chapter, we delved into the world of Application Layer Protocols and their practical use through C++. We began with an understanding of the Application Layer itself, appreciating its role as a bridge between network services and the applications that use them. We learned that protocols such as HTTP/HTTPS, FTP, SMTP, IMAP, and DNS function at this layer, providing the basis for the internet's most common tasks, from browsing the web to sending emails.
+
+Next, we took a detailed look at each of these protocols, beginning with HTTP/HTTPS. We saw how they are utilized for accessing and sending data over the internet, using Boost.Asio and Boost.Asio SSL for HTTPS requests. FTP's role in file transfers was explored next, learning how to execute FTP operations using respective C++ libraries. We followed this with a study of SMTP and IMAP, the protocols essential for email transmission and retrieval. Practical demonstrations of sending and receiving emails using the VMime library in C++ were provided. Lastly, we unraveled DNS, which translates

@@ -1,0 +1,5 @@
+Privilege Usage: Monitor the use of system privileges. If a user suddenly starts performing administrative tasks that they usually don't do, this could be a sign of a problem.
+
+Account Changes: Keep track of changes to user accounts. This includes when accounts are created, modified, or deleted. Unauthorized changes could indicate a security breach.
+
+As for monitoring these aspects in a practical way, we can consider Nagios for account monitoring. Monitoring these aspects with Nagios will involve the use of NRPE (Nagios Remote Plugin Executor) or similar tools, along with custom scripts that can check the aspects mentioned above. NRPE allows you to remotely execute Nagios plugins on other Linux/Unix machines. This allows you to monitor remote machine metrics (disk usage, CPU load, etc.). While Nagios does have built-in support for some aspects of system monitoring (like disk usage, CPU usage, etc.), it does not have built-in support for specific account monitoring tasks for which you have to write custom scripts that perform the desired checks and can be called as Nagios plugins.
