@@ -1,0 +1,23 @@
+# Phase 3: Compiling a C++ Program
+
+In Phase 3, the compiler translates the C++ program into machine-language code—also referred to as object code (Fig. 1.8).
+
+![](bbox=[0.143, 0.174, 0.857, 0.269])
+
+**Fig. 1.8** | *Typical C++ development environment—compilation phase.*
+
+# Phase 4: Linking
+
+Phase 4 is called linking. C++ programs typically contain references to functions and data defined elsewhere, such as in the standard libraries or in the private libraries of groups of programmers working on a particular project (Fig. 1.9). The object code produced by the C++ compiler typically contains “holes” due to these missing parts. A linker links the object code with the code for the missing functions to produce an executable program (with no missing pieces). If the program compiles and links correctly, an executable image is produced.
+
+![](bbox=[0.143, 0.455, 0.857, 0.55])
+
+**Fig. 1.9** | *Typical C++ development environment—linking phase.*
+
+# Phase 5: Loading
+
+Phase 5 is called loading. Before a program can be executed, it must first be placed in memory (Fig. 1.10). This is done by the loader, which takes the executable image from disk and transfers it to memory. Additional components from shared libraries that support the program are also loaded.
+
+![](bbox=[0.143, 0.7, 0.857, 0.921])
+
+**Fig. 1.10** | *Typical C++ development environment—loading phase.*

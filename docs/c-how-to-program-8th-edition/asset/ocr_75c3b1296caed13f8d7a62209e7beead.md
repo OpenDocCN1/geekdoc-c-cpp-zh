@@ -1,0 +1,53 @@
+```
+```cpp
+// class Test definition
+class Test
+{
+public:
+    void func()
+    {
+        cout << "In func\\n";
+    } // end function
+
+    int value; // public data member
+}; // end class Test
+
+void arrowStar( Test * ); // prototype
+void dotStar( Test * ); // prototype
+
+int main()
+{
+    Test test;
+    test.value = 8; // assign value 8
+    arrowStar( &test ); // pass address to arrowStar
+    dotStar( &test ); // pass address to dotStar
+} // end main
+
+// access member function of Test object using ->*
+void arrowStar( Test *testPtr )
+{
+    void ( Test::*memberPtr )() = &Test::func; // declare function pointer
+    ( testPtr->*memberPtr )(); // invoke function indirectly
+} // end arrowStar
+
+// access members of Test object data member using .*
+void dotStar( Test *testPtr2 )
+{
+    int Test::*vPtr = &Test::value; // declare pointer
+    cout << ( *testPtr2 ).*vPtr << endl; // access value
+} // end dotStar
+```
+```
+
+```
+```
+In test function
+8
+```
+```
+
+**Fig. 24.6** | Demonstrating the .* and ->* operators. (Part 2 of 2.)
+
+The program declares class Test (lines 7–16), which provides public member function test and public data member value. Lines 18–19 provide prototypes for the functions arrowStar (defined in lines 30–34) and dotStar (defined in lines 37–41), which demonstrate the ->* and .* operators, respectively. Lines 23–25 create object test, and line 24 assigns 8 to its data member value. Lines 25–26 call functions arrowStar and dotStar with the address of the object test.
+
+Line 32 in function arrowStar declares and initializes variable memPtr as a pointer to a member function. In this declaration, Test::* indicates that the variable memPtr is a pointer to a member of class Test. To declare a pointer to a function, enclose the pointer name preceded by * in parentheses, as in (Test::*memPtr). A pointer to a function must

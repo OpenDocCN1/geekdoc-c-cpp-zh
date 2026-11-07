@@ -1,0 +1,17 @@
+bers retain their original member access when they become members of the derived class (e.g., public members of the base class become public members of the derived class, and, as we’ll soon see, protected members of the base class become protected members of the derived class). Though these inherited base-class members, the derived class can manipulate private members of the base class (if these inherited members provide such functionality in the base class). Note that friend functions are not inherited.
+
+Inheritance is not appropriate for every class relationship. In Chapter 10, we discussed the has-a relationship, in which classes have members that are objects of other classes. Such relationships create classes by composition of existing classes. For example, given the classes Employee, BirthDate and TelephoneNumber, it’s improper to say that an Employee is a BirthDate or that an Employee is a TelephoneNumber. However, it is appropriate to say that an Employee has a BirthDate and that an Employee has a TelephoneNumber.
+
+It’s possible to treat base-class objects and derived-class objects similarly; their commonalities are expressed in the members of the base class. Objects of all classes derived from a common base class can be treated as objects of that base class (i.e., such objects have an is-a relationship with the base class). In Chapter 13, we consider many examples that take advantage of this relationship.
+
+# ## 12.3 protected Members
+
+Chapter 3 introduced access specifiers public and private. A base class’s public members are accessible within its body and anywhere the program has a handle (i.e., a name, reference or pointer) to an object of that class or one of its derived classes. A base class’s private members are accessible only within its body and to the friends of that base class. In this section, we introduce the access specifier protected.
+
+Using protected access offers an intermediate level of protection between public and private access. A base class’s protected members can be accessed within the body of that base class, by members and friends of that base class, and by members and friends of any classes derived from that base class.
+
+Derived-class member functions can refer to public and protected members of the base class simply by using the member names. When a derived-class member function redefines a base-class member function, the base-class member can still be accessed from the derived class by preceding the base-class member name with the base-class name and the scope resolution operator (::). We discuss accessing redefined members of the base class in Section 12.4.5 and using protected data in Section 12.4.4.
+
+# ## 12.4 Relationship between Base Classes and Derived Classes
+
+In this section, we use an inheritance hierarchy containing types of employees in a company’s payroll application to discuss the relationship between a base class and a derived class. Commission employees (who will be represented as objects of a base class) are paid a percentage of their sales, while base-salaried commission employees (who will be represented as objects of a derived class) receive a base salary plus a percentage of their sales. We divide our discussion of the relationship between commission employees and base-salaried commission employees into a carefully paced series of five examples.

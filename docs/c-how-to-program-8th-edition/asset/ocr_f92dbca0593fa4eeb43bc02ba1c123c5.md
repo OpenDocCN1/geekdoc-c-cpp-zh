@@ -1,0 +1,47 @@
+# ## 26 ATM Case Study, Part 2: Implementing an Object-Oriented Design
+
+| Section | Title | Page |
+|---|---|---|
+| 26.1 | Introduction | 26-2 |
+| 26.2 | Starting to Program the Classes of the ATM System | 26-2 |
+| 26.3 | Incorporating Inheritance into the ATM System | 26-8 |
+| 26.4 | ATM Case Study Implementation | 26-15 |
+| 26.4.1 | Class ATM | 26-16 |
+| 26.4.2 | Class Screen | 26-23 |
+| 26.4.3 | Class Keypad | 26-25 |
+| 26.4.4 | Class CashDispenser | 26-26 |
+| 26.4.5 | Class DepositSlot | 26-28 |
+| 26.4.6 | Class Account | 26-29 |
+| 26.4.7 | Class BankDatabase | 26-31 |
+| 26.4.8 | Class Transaction | 26-35 |
+| 26.4.9 | Class BalanceInquiry | 26-37 |
+| 26.4.10 | Class Withdrawal | 26-39 |
+| 26.4.11 | Class Deposit | 26-44 |
+| 26.4.12 | Test Program ATMCaseStudy.cpp | 26-47 |
+| 26.5 | Wrap-Up | 26-47 |
+
+# ## F C Legacy Code Topics
+
+| Section | Title | Page |
+|---|---|---|
+| F.1 | Introduction | F-2 |
+| F.2 | Redirecting Input/Output on UNIX/Linux/Mac OS X and Windows Systems | F-2 |
+| F.3 | Variable-Length Argument Lists | F-3 |
+| F.4 | Using Command-Line Arguments | F-5 |
+| F.5 | Notes on Compiling Multiple-Source-File Programs | F-7 |
+| F.6 | Program Termination with exit and atexit | F-9 |
+| F.7 | Type Qualifier volatile | F-10 |
+| F.8 | Suffixes for Integer and Floating-Point Constants | F-10 |
+| F.9 | Signal Handling | F-11 |
+| F.10 | Dynamic Memory Allocation with calloc and realloc | F-13 |
+| F.11 | Unconditional Branch: goto | F-14 |
+| F.12 | Unions | F-15 |
+| F.13 | Linkage Specifications | F-18 |
+| F.14 | Wrap-Up | F-19 |
+
+# ## G UML 2: Additional Diagram Types
+
+| Section | Title | Page |
+|---|---|---|
+| G.1 | Introduction | G-1 |
+| G.2 | Additional Diagram Types | G-2 |

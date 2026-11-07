@@ -1,0 +1,294 @@
+
+- binary (base 2) number system 1008
+- binary arithmetic operator 129
+- binary comparison function 919
+- binary digit (bit) 7
+- binary function 919, 925, 939
+- binary function object 924
+- binary numeral 149
+- binary operator 416
+- binary predicate function 874, 894, 902, 905, 908, 911, 912, 918, 920
+- binary scope resolution operator (::) 86
+- binary search 293, 725, 727, 730, 732, 740
+- binary search efficiency 732
+- binary search tree 773, 778, 779, 787
+- binary search tree implementation 773
+- binary tree 747, 772, 778, 916
+  - delete 248, 787
+  - level-order traversal 780, 789
+  - of strings 787
+  - search 248, 788
+  - sort 779, 790
+  - with duplicates 787
+- binary_function class 926
+- binary_search algorithm 903, 905
+- binary_search STL algorithm 924
+- BinarySearch class 728
+- bind class 939
+- bind1st function 939
+- bind2nd function 939
+- bit 792
+- bit (binary digit) 7
+- bit field 797, 806, 809
+- bit-field manipulation 809
+- bit-field member of structure 807
+- bit fields swap space 810
+- bit manipulation 797
+- bit operator keyword 983
+- “bits-and-bytes” level 797
+- bitset 853, 920, 922
+  - flip 924
+  - reset 924
+- `<bitset>` header 206, 855
+- bitwise AND assignment 983
+- bitwise AND assignment operator (&=) 805
+- bitwise AND operator (&) 797, 798, 800, 802, 841
+- bitwise AND, bitwise inclusive-OR, bitwise exclusive-OR and bitwise complement operators 800
+- bitwise assignment operator keywords 983
+- bitwise assignment operators 805, 921
+- bitwise complement 798, 983
+- bitwise complement operator (~) 797, 800, 803, 805, 1015
+- bitwise exclusive OR 983
+- bitwise exclusive OR assignment operator (^=) 805
+- bitwise exclusive OR operator (^) 797, 800, 803
+- bitwise inclusive OR 983
+- bitwise inclusive OR assignment operator (|=) 805
+- bitwise inclusive OR operator (|) 797, 800, 803
+- bitwise left-shift operator (<<) 452, 803
+- bitwise logical OR 921
+- bitwise operator keywords 983
+- bitwise operators 797, 798, 805
+- bitwise right-shift operator (>>) 452
+- bitwise shift operator 804
+- BlackBerry OS 13
+- blank 190
+- blank line 45
+- block 54, 71, 93, 112, 113, 127, 216, 218, 219
+- block is active 216
+- block is exited 216
+- block of data 832
+- block of memory 831, 875
+- block scope variable 388
+- body array index (B?M) 35
+- calculator 35
+- body of a class definition 66
+- body of a function 40, 67
+- body of a loop 113, 154, 157, 192
+- Böhm, C. 104, 184
+- Booch, Grady 25, 3
+- bool data type 108
+- bool value false 108
+- bool value true 108
+- boolalpha stream manipulator 177, 612, 618
+- Boolean attribute in the UML 25, 18
+- Boost
+  - Array library 939
+  - Bind library 939
+  - Function library 939
+  - Random library 939
+  - Regex library 940
+  - Smart_ptr library 940
+  - Tuple library 940
+  - Type_traits library 940
+- Boost C++ Libraries xiii, 31, 686, 937
+- Boost Sandbox 938
+- Boost Software License 938
+- Boost.Array library 939
+- Boost.Bind library 939, 962
+  - bind class 939
+- Boost.Function library 939
+  - function class 939
+- Boost.Random library 939
+  - non-deterministic random numbers 210, 939
+  - pseudo-random number generator 939
+  - uniform distribution 939
+- Boost.Regex library 940
+  - basic_regex class 942
+  - match_results class 943
+  - regex typedef 942
+  - regex_match algorithm 941, 946
+  - regex_replace algorithm 949, 967
+  - regex_search algorithm 941, 943, 946
+  - regex_token_iterator 947, 967
+  - smatch typedef 943
+- Boost.Smart_ptr library 940
+  - shared_ptr class 940, 950, 953, 954, 956, 959
+  - weak_ptr class 954
+- Boost.Test library 940
+- Boost.Type_traits library 940
+- Borland C++ 8
+- bottom of a stack 764
+- boundary of a storage unit 809
+- bounds checking 280
+- box 61
+- braces ({ }) 40, 54, 93, 112, 127, 169
+- braces in a do...while statement 162
+- bracket ([ ]) 270
+- break debugger command 4
+- break mode 5, 5, 5
+- break statement 170, 173, 192, 194
+- break statement exiting for a statement 173
+- breakpoint 2
+  - inserting 4, 9
+  - yellow arrow in break mode 5
+- breakpoints
+  - inserting 5, 8
+  - red circle 5
+- Brin, Sergey 27
+- “brute force” computing 191
+- Bubble Sort 320, 320
+  - Enhancement exercise 320
+  - exercise 320
+- bubble sort 740, 743, 744
+  - improving performance 743
+- bucket 743
+- bucket (hash table) 961
+- Bucket Sort 327
+  - exercise 327
+- bucket sort 743
+- buffer is filled 600
+- circularly referential data 955
+- Cisco 3
+- clarity 45
+- class 1, 1022, 25_20, 25_26, 25_30, 2
+  - attribute 71
+  - client-code programmer 90
+  - construct 77
+  - data member 12, 71
+  - default constructor 77, 80
+  - define a constructor 79
+  - define a member function 65
+  - implementation programmer 89
+  - instance of 73
+  - interface 84, 85
+  - interface described by function prototypes 85
+  - member function 65
+  - member-functions implementations in a separate source-code file 86
+  - name 4
+  - naming convention 66
+  - object of 73
+  - public services 85
+  - services 75
+- class 57
+- class Array 472
+- class average on a quiz 114
+- class average problem 114, 123
+- class definition 66
+- class development 471
+- class diagram
+  - for the ATM system model 25_16, 25_4
+  - in the UML 25_9, 25_12, 25_15, 25_17, 25_19, 25_27, 25_1, 12, 13
+- class diagram (UML) 68
+- class hierarchy 501, 550, 573
+- class-implementation programmer 89
+- class keyword 237, 581
+- class libraries 161
+- class library 390, 529
+- class members default to private access 792
+- class scope 218, 385, 388
+- class-scope variable is hidden 388
+- class template 580, 584, 584, 697, 750
+  - explicit specialization 591
+  - class-template definition 584
+  - scope 586
+  - specialization 580, 584
+  - Stack 585, 587
+- class template auto_ptr 648
+- class variable 290
+- class's object code 390
+- class's source code 390
+- Classes 18
+  - binary_function 926
+  - Binary Search 728
+  - bitset 922
+  - Complex 492
+  - deque 852
+  - exception 634
+  - HugeInt 495
+  - initializer_list 965
+  - invalid_argument 651
+  - list 852
+  - Node 748
+  - out_of_range exception 313
+  - Polynomial 498
+  - RationalNumber 498
+  - runtime_error 634, 644
+  - shared_ptr 950
+  - string 69
+  - unique_ptr 648
+  - vector 307
+- classic stream libraries 597
+- classified listings 27
+- clear function of ios_base 622
+- clear member function of containers 855
+- clear member function of first-class containers 871
+- client 442, 443
+- client code 536
+- client-code programmer 89, 90
+- client of a class 25_26, 25_35
+- client of an object 75
+- `<climits>` header 206
+- clog (standard error buffered) 598, 599, 699
+- close a stream 9
+- close member function of ofstream 663
+- cloud computing 30
+- `<cmath>` header 161, 269, 961
+- COBOL (Common Business Oriented Language) 15
+- code 12
+- CodeLite 19
+- coefficient 498
+- coin tossing 207, 260
+- Coin Tossing exercise 260
+- collaboration 25_33, 25_36
+- collaboration diagram in the UML 25_10, 25_35
+- collaboration on the UML 25_32
+- colon (:) 218, 289, 14
+- column 297
+- column headings 271
+- column subscript 297
+- combining Class Time and Class Date exercise 412
+- combining control statements in two ways 179
+- comma operator (, ) 156, 244
+- comma-separated list of parameters 44, 54, 156, 202, 332
+- command line 2
+- command-line argument 358, 6, 5
+- command-line prompt 2
+- comma-separated list of base classes 989
+- comment 39, 45
+- commercial data processing 692
+- commission worker 191
+- CommissionEmployee class header 558
+- CommissionEmployee class implementation file 559
+- CommissionEmployee represents an employee paid a percentage of gross sales 505
+- CommissionEmployee class test program 507
+- CommissionEmployee class uses member functions to manipulate its private data 522
+- Common Programming Errors overview xxviii
+- communication diagram in the UML 25_10, 25_35, 25_36
+- commutative 483
+- commutative operation 483
+- comparator function object 877, 889
+- comparator iterators 860
+- compare member function of class string 702
+- comparing strings 815, 819
+- comparing blocks of memory 831
+- comparing strings 700, 844
+- comparing unions 16
+- compilation error 40
+- compilation phase 40
+- compilation unit 981
+- compile 19
+- compile-time error 40
+- compiler 10, 40, 129, 764
+- compiler error 40
+- compiler optimization 10
+- compiling 747, 781, 8
+  - multiple-source-file program 90, 7
+- compl operator keyword 983
+- complement operator (~) 798
+- Complex Class 631
+- Complex class 411, 492, 493
+  - exercise 411
+- Complex class member-function definitions 493
+- complex conditions 175
+- complex numbers 411, 492
+- component 10

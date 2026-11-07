@@ -1,0 +1,55 @@
+```
+#include <iostream>
+#include "Increment.h" // include definition of class Increment
+using namespace std;
+
+// constructor
+Increment::Increment( int c, int i )
+   : count( c ),        // initializer for non-const member
+     increment( i )     // required initializer for const member
+{
+   // empty body
+} // end constructor Increment
+
+// print count and increment values
+void Increment::print() const
+{
+   cout << "count = " << count << ", increment = " << increment << endl;
+} // end function print
+```
+
+Fig. 10.5 | Member initializer used to initialize a constant of a built-in data type. (Part 2 of 2.)
+
+```
+// Fig. 10.6: fig10_06.cpp
+// Program to test class Increment.
+#include <iostream>
+#include "Increment.h" // include definition of class Increment
+using namespace std;
+
+int main()
+{
+   Increment value( 10, 5 );
+
+   cout << "Before incrementing: ";
+   value.print();
+
+   for ( int j = 1; j <= 3; ++j )
+   {
+      value.addIncrement();
+      cout << "After increment " << j << ": ";
+      value.print();
+   } // end for
+} // end main
+```
+
+```
+Before incrementing: count = 10, increment = 5
+After increment 1: count = 15, increment = 5
+After increment 2: count = 20, increment = 5
+After increment 3: count = 25, increment = 5
+```
+
+Fig. 10.6 | Invoking an Increment object's print and addIncrement member functions.
+
+The constructor definition (Fig. 10.5, lines 9–14) uses a member initializer list to initialize class Increment’s data members—const integer count and const integer increment (declared in lines 19–20 of Fig. 10.4). Member initializers appear between a constructor’s parameter list and the left brace that begins the constructor’s body. The

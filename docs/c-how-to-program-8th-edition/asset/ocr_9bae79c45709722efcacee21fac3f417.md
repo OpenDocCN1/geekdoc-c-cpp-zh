@@ -1,0 +1,17 @@
+Line 13 creates a bitset of size bits (size is 1024 in this example). By default, all the bits in the bitset are set “off.” Line 14 calls function `flip` to set all bits “on.” Numbers 0 and 1 are not prime numbers, so lines 15–16 call function `reset` to set bits 0 and 1 “off.” Lines 22–29 determine all the prime numbers from 2 to 1023. The integer `finalBit` (line 19) is used to determine when the algorithm is complete. The basic algorithm is that a number is prime if it has no divisors other than 1 and itself. Starting with the number 2, we can eliminate all multiples of that number. The number 2 is divisible only by 1 and itself, so it’s prime. Therefore, we can eliminate 4, 6, 8 and so on. The number 3 is divisible only by 1 and itself. Therefore, we can eliminate all multiples of 3 (keep in mind that all even numbers have already been eliminated).
+
+# 22.10 Function Objects
+
+Many STL algorithms allow you to pass a function pointer into the algorithm to help the algorithm perform its task. For example, the `binary_search` algorithm that we discussed in Section 22.8.6 is overloaded with a version that requires as its fourth parameter a pointer to a function that takes two arguments and returns a bool value. The `binary_search` algorithm uses this function to compare the search key to an element in the collection. The function returns true if the search key and element being compared are equal; otherwise, the function returns false. This enables `binary_search` to search a collection of elements for which the element type does not provide an overloaded equality `==` operator.
+
+The STL’s designers made the algorithms more flexible by allowing any algorithm that can receive a function pointer to receive an object of a class that overloads the parentheses operator with a function named `operator()`, provided that the overloaded operator meets the requirements of the algorithm—in the case of `binary_search`, it must receive two arguments and return a bool. An object of such a class is known as a function object and can be used syntactically and semantically like a function or function pointer—the overloaded parentheses operator is invoked by using a function object’s name followed by parentheses containing the arguments to the function. Together, function objects and functions are known as functors. Most algorithms can use function objects and functions interchangeably.
+
+Function objects provide several advantages over function pointers. Since function objects are commonly implemented as class templates that are included into each source code file that uses them, the compiler can inline an overloaded `operator()` to improve performance. Also, since they’re objects of classes, function objects can have data members that `operator()` can use to perform its task.
+
+# *Predefined Function Objects of the Standard Template Library*
+
+Many predefined function objects can be found in the header `<functional>`. Figure 22.41 lists several of the STL function objects, which are all implemented as class templates. We used the function object `less<T>` in the set, multiset and priority_queue examples, to specify the sorting order for elements in a container.
+
+# *Using the STL Accumulate Algorithm*
+
+Figure 22.42 demonstrates the accumulate numeric algorithm (discussed in Fig. 22.30) to calculate the sum of the squares of the elements in a vector. The fourth argument to accumulate is a binary function object (that is, a function object for which `operator()`

@@ -1,0 +1,290 @@
+
+- magnitude right justified 612
+- mail order house 191
+- main 39, 43, 9
+- make utility 8
+- “make your point” 212
+- make_heap algorithm 917
+- makefile 18
+- malloc 13
+- mandatory function prototypes 203
+- mangled function name 235
+- Manhattan 193
+- manipulating a linked list 756
+- manipulating individual characters 810
+- manipulator 162
+- manipulators 660
+- “manufacturing” section of the computer 8
+- many-to-one relationship 25.15
+- `<map>` header 206, 855, 881, 883
+- mapped values 877
+- margin indicator bar 5
+- mask 799
+- “masked off” 800
+- match_not_eol 943
+- match_results class 943
+- suffix member function of class match_results 943
+- matching catch block 636
+- math library 205
+- math library functions 161, 197, 253
+  - ceil 197
+  - cos 197
+  - exp 197
+  - fabs 197
+  - floor 197
+  - fmod 197
+  - log 197
+  - log10 197
+  - pow 198
+  - sin 198
+  - sqrt 198
+  - tan 198
+- Math Library Functions exercise 264
+- matrices 51
+- mathematical algorithms 900
+- mathematical algorithms of the Standard Library 900
+- mathematical calculation 196
+- mathematical computations 15
+- Matsumoto, Yukihiro “Matz” 17
+- max algorithm 918
+- max_element algorithm 900, 902
+- max_size member function of a string 706
+- max_size member function of containers 854
+- maxheap 916
+- maximum function 198
+- maximum length of a string 706
+- maximum size of a string 704
+- mean 49
+- medical imaging 3
+- member function 11, 65, 66, 2
+- implementation in a separate source-code file 86
+- member function automatically inlined 285
+- member function call 1
+- member function calls for const objects 415
+- member function calls often concise 385
+- member function defined in a class definition 385
+- Member function definitions of class Integer 649
+- member functions 65
+- member functions that take no arguments 385
+- member initializer 420, 422, 480
+- member initializer for a const data member 423
+- member initializer list 989
+- member-initializer syntax 420
+- Member-initializer list used to initialize a constant of a built-in data type 420
+- Member Object Destructors 657
+- member object initializer 427
+- member object's default constructor member 649
+- member operator (. ) 388, 431, 544, 649
+- member-function parameter 68
+- member-function argument 68
+- memberwise assignment 405, 456
+- memberwise copy 480
+- memchr 832, 834
+- memcmp 832, 834
+- memcpy 832, 832
+- memmove 832, 832
+- `<memory>` header 648, 950
+- memory leak 470, 648, 650, 712, 852
+  - prevent 650
+- memory location 47, 115
+- memory not allocated 13
+- memory unit 8
+- memory-access violation 852
+- memset 832, 835
+- merge algorithm 906, 908
+- merge in the UML 25.23
+- merge member function of list 874
+- merge sort 733, 740
+- merge sort (a recursive implementation) 733
+- merge sort algorithm 733, 739
+- merge sort efficiency 739
+- merge sort implementation 734
+- merge sort recursive implementation 734
+- merge symbol 114
+- merge two arrays 733
+- merge two ordered lists objects 784
+- Merging Ordered Lists 784
+- message in the UML 25.32, 25.35, 25.36, 25.37
+- message passing in the UML 25.37
+- metric conversion program 848
+- microblogging 27, 28
+- Microsoft 3
+- Image Cup 36
+- SYNC 4
+- Visual C++ 19
+- Microsoft Visual C++ 983, 8
+- Microsoft Windows 168
+- mileage obtained by automobiles 145
+- min algorithm 918
+- min_element algorithm 900, 902
+- minus function object 925
+- minus sign (-) indicating private visibility in the UML 2
+- minus sign, − (UML) 77
+- mismatch algorithm 862, 892, 894
+- mission-critical computing 637
+- mixed-type expression 204
+- mobile application 2
+- mobile check-in 27
+- model 375
+- model of a software system 25.13, 25.21, 11
+- modifiable lvalue 456, 475, 483
+- modify a constant pointer 342
+- modify address stored in pointer variable 342
+- Modifying Class GradeBook (Exercise) 99
+- modularizing a program with functions 196
+- modulus function object 925
+- modulus operator (%) 48, 49, 62, 149, 207, 212
+- monetary calculations 161
+- monetary formats 206
+- Moore’s Law 6
+- Morse Code 848
+- Moskowitz, Dustin 28
+- most derived class 995
+- motion information 8
+- Motorola 3
+- mouse 5
+- Mozilla Foundation 13
+- MP3 player 14
+- multi-core processor 8
+- multidimensional array 297, 298, 299
+- multimap associative container 881
+- multiple 48
+- multiple 259
+- multiple inheritance 502, 502, 599, 986, 987, 988, 989, 991
+- multiple inheritance deconstruction 987
+- multiple parameters to a function 71
+- multiple-selection statement 105, 164
+- multiple-source-file program compilation and linking process 89
+- multiple-statement body 54
+- Multiples exercise 259
+- Multiples of 2 with an Infinite Loop exercise 150
+- multiple-source-file programs 7, 8
+- multiplication 48, 494
+- Multiplication Via Bit Shifting 841
+- multiplicative operators `(*, /, %)` 129
+- multiplicity 25.13
+- Multipurpose sorting program using function pointers 359
+- Multitouch screen 15
+- Mussar, David 851
+- mutable
+  - data member 977, 977, 978
+  - demonstration 978
+  - keyword 215, 977
+- mutating-sequence algorithms 862
+- mutator 76
+- MySQL 30
+- mystery recursive exercise 247
+
+### N
+
+- name decoration 235
+- name function of class type_info 572
+- name handle 388
+- name an object 388
+- name mangling 235
+- name mangling to enable type-safe linkage 235
+- name of a control variable 153
+- name of a source file 1027
+- name of a user-defined class 66
+- name of a variable 47, 215
+- name of an array 269, 336
+- named constant 274
+- namespace 41
+  - alias 982
+  - global 981
+  - nested 981
+  - qualifier 982
+  - unnamed 981
+- namespace
+  - unnamed 8
+- namespace alias 982
+- namespace keywords 979, 981
+- namespace merge 979
+- namespace scope 218
+- namespaces 979
+- naming conflict 979
+- natural logarithm 197
+- navigability arrow in the UML 2
+- NDEBUG 1027
+- near container 851, 853
+- negate function object 925
+- nested blocks 218
+- nested building block 185
+- nested control statement 150, 183
+- nested control structure 15
+- nested for statement 277, 300, 304
+- nested if...else statement 110, 111, 112
+- nested message in the UML 25.37
+- nested namespace 981
+- nested namespace 981
+- nested namespaces 49
+- nesting 108, 154, 185
+- nesting rule 183
+- NetBeans 19
+- network connection 597
+- network message arrival 639
+- network node 769
+- new 480, 13
+- new block of memory 14
+- new calls the constructor 470
+- new fails 644
+- new failure handler 647
+- `<new>` header 645
+- new operator 469
+- new returning 0 on failure 640
+- new stream manipulators 610
+- new throwing bad_alloc on failure 645, 646
+- newline (`'\n'`) escape sequence 41, 46, 170, 355, 602, 814
+- newline (`'\n'`) escape sequence 54
+- Nirvana 30
+- noboolalpha stream manipulator 618
+- node 749
+- non-member, friend function 461
+- non-member function to overload an operator 483
+- non-static member function 484
+- non-const member function called on a const object 419
+- non-const member function on a non-const object 419
+- non-constant pointer to constant data 340, 341
+- nonconstant pointer to nonconstant data 340
+- noncontiguous memory layout of a deque 875
+- non-dependent name 766
+- nondestructive read 47
+- non-deterministic random numbers 210, 939
+- nonfatal logic error 51
+- nonfatal runtime error 21
+- nonlinear data structures 749
+- nonlinear, two-dimensional data structure 772
+- nonmodifiable function code 387
+- nonmodifying sequence algorithm 862
+- nonparameterized stream manipulator 129
+- nonrecoverable failures 622
+- non-static member function 431, 441
+- non-type template parameter 590
+- nonvirtual destructor 573
+- nonzero treated as true 179, 187
+- noshowbase stream manipulator 612, 616
+- noshowpoint stream manipulator 612
+- noshowpos stream manipulator 613
+- noskipws stream manipulator 376, 612, 614
+- NOT (!: logical NOT) 175
+- not equal 52
+- not operator keyword 982
+- not_eq operator keyword 982
+- not_equal_to function object 925
+- note 105
+- nothrow object 646
+- nothrow_t type 646
+- noun phrase in requirements specification 25.11, 25.17
+- nouppercase stream manipulator 612, 618
+- nth_element 919
+- NULL 332
+- null character (`'\0'`) 355, 356, 606, 748, 816, 822
+- null pointer 0 332, 334, 663, 748, 788, 816, 133
+- null stream 133
+- null string 672
+- null terminated 711
+- null-terminated string 357, 601, 357
+- nullptr constant 332
+- number of arguments 202
+- number of elements in an array 348
+- Number Systems Table 191

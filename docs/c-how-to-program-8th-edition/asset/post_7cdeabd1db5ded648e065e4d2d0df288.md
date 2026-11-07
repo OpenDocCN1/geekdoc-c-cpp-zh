@@ -1,0 +1,84 @@
+
+contained in a leaf node (i.e., it has no children), the item is contained in a node that has one child, or the item is contained in a node that has two children.
+
+If the item to be deleted is contained in a leaf node, the node is deleted and the pointer in the parent node is set to null.
+
+If the item to be deleted is contained in a node with one child, the pointer in the parent node is set to point to the child node and the node containing the data item is deleted. This causes the child node to take the place of the deleted node in the tree.
+
+The last case is the most difficult. When a node with two children is deleted, another node in the tree must take its place. However, the pointer in the parent node cannot be assigned to point to one of the children of the node to be deleted. In most cases, the resulting binary search tree would not adhere to the following characteristic of binary search trees (with no duplicate values): *The values in any left subtree are less than the value in the parent node, and the values in any right subtree are greater than the value in the parent node.*
+
+Which node is used as a replacement node to maintain this characteristic? Either the node containing the largest value in the tree less than the value in the node being deleted, or the node containing the smallest value in the tree greater than the value in the node being deleted. Let’s consider the node with the smaller value. In a binary search tree, the largest value less than a parent’s value is located in the left subtree of the parent node and is guaranteed to be contained in the rightmost node of the subtree. This node is located by walking down the left subtree to the right until the pointer to the right child of the current node is null. We are now pointing to the replacement node, which is either a leaf node or a node with one child to its left. If the replacement node is a leaf node, the steps to perform the deletion are as follows:
+
+1. Store the pointer to the node to be deleted in a temporary pointer variable (this pointer is used to delete the dynamically allocated memory).
+2. Set the pointer in the parent of the node being deleted to point to the replacement node.
+3. Set the pointer in the parent of the replacement node to null.
+4. Set the pointer to the right subtree in the replacement node to point to the right subtree of the node to be deleted.
+5. Delete the node to which the temporary pointer variable points.
+
+The deletion steps for a replacement node with a left child are similar to those for a replacement node with no children, but the algorithm also must move the child into the replacement node’s position in the tree. If the replacement node is a node with a left child, the steps to perform the deletion are as follows:
+
+1. Store the pointer to the node to be deleted in a temporary pointer variable.
+2. Set the pointer in the parent of the node being deleted to point to the replacement node.
+3. Set the pointer in the parent of the replacement node to point to the left child of the replacement node.
+4. Set the pointer to the right subtree in the replacement node to point to the right subtree of the node to be deleted.
+5. Delete the node to which the temporary pointer variable points.
+
+Write member function deleteNode, which takes as its arguments a pointer to the root node of the tree object and the value to be deleted. The function should locate the tree node containing the value to be deleted and use the algorithms discussed here to delete the node. The function should print a message that indicates whether the value is deleted. Modify the program of Figs. 20.20–20.22 to use this function. After deleting an item, call the inOrder, preOrder and postOrder traversal functions to confirm that the delete operation was performed correctly.
+
+## 20.23 *(Binary Tree Search)*
+
+Write member function binaryTreeSearch, which attempts to locate a specified value in a binary search tree object. The function should take as arguments a pointer to the binary tree’s root node and a search key to locate. If the node containing the search key is found, the function should return a pointer to that node; otherwise, the function should return a null pointer.
+
+## 20.24 *Level-Order Binary Tree Traversal*
+
+The program of Figs. 20.20–20.22 illustrated three recursive methods of traversing a binary tree—inorder, preorder and postorder traversals. This exercise presents the level-order traversal of a binary tree, in which the node values are printed level by level, starting at the root node level. The nodes on each level are printed from left to right. The level-order traversal is not a recursive algorithm. It uses a queue object to control the output of the nodes. The algorithm is as follows:
+
+1. Insert the root node in the queue
+2. While there are nodes left in the queue,
+    - Get the next node in the queue
+    - Print the node’s value
+    - If the pointer to the left child of the node is not null
+        - Insert the left child node in the queue
+    - If the pointer to the right child of the node is not null
+        - Insert the right child node in the queue
+
+Write member function `levelOrder` to perform a level-order traversal of a binary tree object. Modify the program of Figs. 20.20–20.22 to use this function. *[Note: You’ll also need to modify and incorporate the queue-processing functions of Fig. 16.16 in this program.]*
+
+## 20.25 *Printing Trees*
+
+Write a recursive member function `outputTree` to display a binary tree object on the screen. The function should output the tree row by row, with the top of the tree at the left of the screen and the bottom of the tree toward the right of the screen. Each row is output vertically. For example, the binary tree illustrated in Fig. 20.24 is output as shown in Fig. 20.25. Note that the rightmost leaf node appears at the top of the output in the rightmost column and the root node appears at the left of the output. Each column of output starts five spaces to the right of the previous column. Function `outputTree` should receive an argument `totalSpaces` representing the number of spaces preceding the value to be output (this variable should start at zero, so the root node is output at the left of the screen). The function uses a modified inorder traversal to output the tree—it starts at the rightmost node in the tree and works back to the left. The algorithm is as follows:
+
+- While the pointer to the current node is not null
+    - Recursively call `outputTree` with the current node’s right subtree and `totalSpaces + 5`
+    - Use a for structure to count from 1 to `totalSpaces` and output spaces
+    - Output the value in the current node
+    - Set the pointer to the current node to point to the left subtree of the current node
+    - Increment `totalSpaces` by 5
+
+![](img/bfd978e7e9b192bab46ec2a89e481263_822_0.png)
+
+**Fig. 20.25** | Displaying a binary tree
+
+## 20.26 *(Insert/Delete Anywhere in a Linked List)*
+
+Our linked list class template allowed insertions and deletions at only the front and the back of the linked list. These capabilities were convenient for us when we used private inheritance and composition to produce a stack class template and a queue class template with a minimal amount of code by reusing the list template. Actually, linked lists are more general than those we provided. Modify the linked list class template we developed in this chapter to handle insertions and deletions anywhere in the list.
+
+## 20.27 *(List and Queues without Tail Pointers)*
+
+Our implementation of a linked list (Figs. 20.3–20.5) used both a `firstPtr` and a `lastPtr`. The `lastPtr` was useful for the `insertAtBack` and `removeFromBack` member functions of the `List` class. The `insertAtBack` function corresponds to the enqueue member function of the `Queue` class. Rewrite the `List` class so that it does not use a `lastPtr`. Thus, any operations on the tail of a list must begin searching the list from the front. Does this affect our implementation of the `Queue` class (Fig. 20.16)?
+
+## 20.28
+
+Use the composition version of the stack program (Fig. 20.15) to form a complete working stack program. Modify this program to inline the member functions. Compare the two approaches. Summarize the advantages and disadvantages of inlining member functions.
+
+## 20.29 *(Performance of Binary Tree Sorting and Searching)*
+
+One problem with the binary tree sort is that the order in which the data is inserted affects the shape of the tree—for the same collection of data, different orderings can yield binary trees of dramatically different shapes. The performance of the binary tree sorting and searching algorithms is sensitive to the shape of the binary tree. What shape would a binary tree have if its data were inserted in increasing order? in decreasing order? What shape should the tree have to achieve maximal searching performance?
+
+## 20.30 *(Indexed Lists)*
+
+As presented in the text, linked lists must be searched sequentially. For large lists, this can result in poor performance. A common technique for improving list searching performance is to create and maintain an index to the list. An index is a set of pointers to various key places in the list. For example, an application that searches a large list of names could improve performance by creating an index with 26 entries—one for each letter of the alphabet. A search operation for a last name beginning with “y” would first search the index to determine where the “y” entries begin and “jump into” the list at that point and search linearly until the desired name was found. This would be much faster than searching the linked list from the beginning. Use the `List` class of Figs. 20.3–20.5 as the basis of an `IndexedList` class. Write a program that demonstrates the operation of indexed lists. Be sure to include member functions `insertInIndexedList`, `searchIndexedList` and `deleteFromIndexedList`.
+
+## Special Section: Building Your Own Compiler
+
+In Exercises 8.18–8.19 and 8.20, we introduced Simpletron Machine Language (SML), and you implemented a Simpletron computer simulator to execute SML programs. In Exercises 20.31—20.35, we build a compiler that converts programs written in a high-level programming language to SML. This section “ties” together the entire programming process. You’ll write programs in this new high-level language, compile them on the compiler you build and run them on the simulator you built in Exercise 8.19. You should make every effort to implement your compiler in an object-oriented manner. [Note: Due to the size of the descriptions for Exercises 20.31—20.35, we’ve posted them in a PDF document located at www.deitel.com/books/cpphtp8/.]

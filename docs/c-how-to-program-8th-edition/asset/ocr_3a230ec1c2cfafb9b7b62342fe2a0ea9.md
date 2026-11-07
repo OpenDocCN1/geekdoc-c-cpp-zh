@@ -1,0 +1,26 @@
+# Section 13.5 Abstract Classes and Pure Virtual Functions
+
++   - Abstract classes (p. 550) are typically used as base classes, so we refer to them as abstract base classes (p. 550). No objects of an abstract class may be instantiated.
++   - Classes from which objects can be instantiated are concrete classes (p. 550).
++   - You create an abstract class by declaring one or more pure virtual functions (p. 551) with pure specifiers (= 0) in their declarations.
++   - If a class is derived from a class with a pure virtual function and that derived class does not supply a definition for that pure virtual function, then that virtual function remains pure in the derived class. Consequently, the derived class is also an abstract class.
++   - Although we cannot instantiate objects of abstract base classes, we can declare pointers and references to objects of abstract base classes. Such pointers and references can be used to enable polymorphic manipulations of derived-class objects instantiated from concrete derived classes.
+
+# Section 13.7 (Optional) Polymorphism, Virtual Functions and Dynamic Binding “Under the Hood”
+
++   - Dynamic binding requires that at runtime, the call to a virtual member function be routed to the virtual function version appropriate for the class. A virtual function table called the vtable (p. 567) is implemented as an array containing function pointers. Each class with virtual functions has a vtable. For each virtual function in the class, the vtable has an entry containing a function pointer to the version of the virtual function to use for an object of that class. The virtual function to use for a particular class could be the function defined in that class, or it could be function inherited either directly or indirectly from a base class higher in the hierarchy.
++   - When a base class provides a virtual member function, derived classes can override the virtual function, but they do not have to override it.
++   - Each object of a class with virtual functions contains a pointer to the vtable for that class. When a function call is made from a base-class pointer to a derived-class object, the appropriate function pointer in the vtable is obtained and dereferenced to complete the call at execution time.
++   - Any class that has one or more 0 pointers in its vtable is an abstract class. Classes without any 0 vtable pointers are concrete classes.
++   - New kinds of classes are regularly added to systems and accommodated by dynamic binding.
+
+# Section 13.8 Case Study: Payroll System Using Polymorphism and Runtime Type Information with Downcasting, dynamic_cast, typeid and type_info
+
++   - Operator dynamic_cast (p. 571) checks the type of the object to which a pointer points, then determines whether the type has an is-a relationship with the type to which the pointer is being converted. If so, dynamic_cast returns the object’s address. If not, dynamic_cast returns 0.
++   - Operator typeid (p. 573) returns a reference to a type_info object (p. 573) that contains information about the operand’s type, including the type name. To use typeid, the program must include header <typeinfo> (p. 573).
++   - When invoked, type_info member function name (p. 573) returns a pointer-based string that contains the name of the type that the type_info object represents.
++   - Operators dynamic_cast and typeid are part of C++’s runtime type information (RTTI; p. 571) feature, which allows a program to determine an object’s type at runtime.
+
+# Section 13.9 Virtual Destructors
+
++   - Declare the base-class destructor virtual (p. 574) if the class contains virtual functions. This makes all derived-class destructors virtual, even though they do not have the same name as the

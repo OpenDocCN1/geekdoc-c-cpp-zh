@@ -1,0 +1,127 @@
+Step 1: Before main calls cubeByValue:
+
+```
+```c
+int main()
+{
+    int number = 5;
+    number = cubeByValue( number );
+}
+
+// number: 5
+```
+```
+
+```
+```c
+int cubeByValue( int n )
+{
+    return n * n * n;
+}
+
+// n: undefined
+```
+```
+
+Step 2: After cubeByValue receives the call:
+
+```
+```c
+int main()
+{
+    int number = 5;
+    number = cubeByValue( number );
+}
+
+// number: 5
+```
+```
+
+```
+```c
+int cubeByValue( int n )
+{
+    return n * n * n;
+}
+
+// n: 5
+```
+```
+
+Step 3: After cubeByValue cubes parameter n and before cubeByValue returns to main:
+
+```
+```c
+int main()
+{
+    int number = 5;
+    number = cubeByValue( number );
+}
+
+// number: 5
+```
+```
+
+```
+```c
+int cubeByValue( int n )
+{
+    return n * n * n;   // 125
+}
+
+// n: 5
+```
+```
+
+Step 4: After cubeByValue returns to main and before assigning the result to number:
+
+```
+```c
+int main()
+{
+    int number = 5;
+    number = cubeByValue( number );   // 125
+}
+
+// number: 5
+```
+```
+
+```
+```c
+int cubeByValue( int n )
+{
+    return n * n * n;
+}
+
+// n: undefined
+```
+```
+
+Step 5: After main completes the assignment to number:
+
+```
+```c
+int main()
+{
+    int number = 5;
+    number = cubeByValue( number );
+}
+
+// number: 125
+// returned value: 125
+```
+```
+
+```
+```c
+int cubeByValue( int n )
+{
+    return n * n * n;
+}
+
+// n: undefined
+```
+```
+
+**Fig. 8.8** | Pass-by-value analysis of the program of Fig. 8.6.

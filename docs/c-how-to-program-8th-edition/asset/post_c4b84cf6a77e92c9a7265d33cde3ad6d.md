@@ -1,0 +1,294 @@
+
+- struct 793, 16
+- structure 268, 792, 1022
+- structure definition 792, 806
+- structure member 793
+- structure member operator (.) 16
+- structure members default to private access 792
+- structure name 793
+- structure of a system 25_21, 25_22
+- structure type 793
+- structured program 180
+- structured programming 5, 102, 104, 174, 14
+- structured programming summary 180
+- Student Inheritance Hierarchy 532
+- student-poll-analysis program 279
+- subclass 500
+- subobject
+  - base class 992
+- subproblem 239
+- subscript 269
+- subscript 0 (zero) 269
+- subscript operator 876
+- subscript operator [ ] 700
+- subscript operator [ ] used with strings 698
+- subscript operator for map 883
+- subscript operator of map 883
+- subscript of range 870
+- subscript through a vector 870
+- subscripted name of an array element 284
+- subscripted name used as a *rvalue* 475
+- subscripting 875
+- subscripting with a pointer and an offset 535
+- substatement
+  - member function of class string 92, 703
+- substr member function of string 455
+- substring 487
+- substring length 487
+- substring of a string 703
+- subtract an integer from a pointer 349
+- subtract one pointer from another 349
+- subtraction 8, 48, 49
+- suffix member function of class match_results 943
+- suit values of cards 358
+- sum of the elements of an array 275
+- Summing and Averaging Elements in a List 784
+- Summing Integers 189
+- summing integers with the `for` statement 159
+- superclass 500
+- supermarket checkout line 768
+- supermarket simulation 787
+- survey 278, 280
+- svn.boost.org/svn/boost/sandbox 938
+- swap algorithm 862, 905
+- swap member function of class string 703
+- swap member function of containers 854
+- swap member function of list 875
+- swap_ranges algorithm 862, 905
+- swapping strings 703
+- swapping two strings 245, 344
+- swapping values (in sorting algorithms) 733
+- switch logic 172, 549
+- switch multiple-selection statement 164, 171, 184
+- switch multiple-selection statement activity diagram with break statements 172
+- symbol 697
+- symbol values 1008
+- symbolic constant 1021, 1022, 1024, 1026, 1027
+- symbolic constant NDEBUG 1027
+- symbolic constant PTI 1023
+- symmetric key encryption 720
+- synchronization operation of an istream and an ostream 623
+- synchronous call 25_35
+- synchronous error 639
+- synonym 333, 336
+- syntax 40
+- syntax error 40
+- system 25_9
+- system behavior 25_9
+- system requirements 25_7
+- system structure 25_9
+
+## T
+
+- tab 54
+- tab escape sequence \t 170
+- Tab key 40
+- tab stop 41
+- table of values 297
+- tabular computer 14
+- tabular format 271
+- Tabular Output exercise 147
+- tail of a list 790
+- tail of a queue 747, 769
+- tail pointer 790
+- tails 207
+- tan function 198
+- tangent 198
+- tape 659
+- Target-Heart-Rate Calculator 100
+- Tax Plan Alternatives 193
+- technical publications 32
+- Technical Report 1 (TR1) xxii, 31, 937, 960
+- Technical Report 2 (TR2) 960
+- Telephone Number Word Generator 694
+- tellg function of istream 666
+- tellp function of ostream 666
+- template 580, 747, 750, 764, 1022
+  - dependent name 766
+- template alias 965
+- template definition 237
+- template function 237, 581
+- template keyword 257, 581
+- template parameter 581, 589
+- template parameter list 237
+- templates
+  - class template 584
+  - function template 581
+- temporary object 484
+- temporary value 128, 204
+- terabyte 9
+- terminate a loop 122
+- terminate a program 647, 9
+- terminate a repetition structure 14
+- terminate function 640, 642
+- terminate normally 663
+- terminate successfully 41
+- terminating condition 241
+- terminating null character 356, 712, 817, 822
+- terminating right brace (}) of a block 218
+- termination condition 280
+- termination housekeeping 399
+- termination model of exception handling 637
+- termination order from the operating system 11
+- termination phase 121
+- termination request sent to the program 11
+- termination test 245
+- ternary conditional operator (?:) 244
+- ternary operator 109
+- test 921
+- test characters 206
+- test state bits after an I/O operation 602
+- Testing Characters with the <ctype> Functions 841
+- text analysis 846
+- text editor 663
+- text file 679
+- text-printing program 38
+- text substitution 1023
+- The “Fair Tax” 193
+- this pointer 431, 441, 481
+- this pointer used explicitly 431
+- this pointer used implicitly and explicitly to access members of an object 432
+- UL integer suffix 10
+- ul integer suffix 10
+- UML (Unified Modeling Language) 12, 68, 25_2, 25_3, 25_9, 25_13, 25_19, 25_21, 9
+  - action expression 105, 108
+  - action state 105
+  - activity diagram 104, 105, 113
+  - arrow 105
+  - attribute 68
+  - class diagram 68
+  - constructor in a class diagram 80
+  - data types 71
+  - decision 108
+  - decision symbol 107
+  - diagram 25_9
+  - diamond symbol 105, 107
+  - dotted line 105
+  - final state 105
+  - guard condition 107, 108
+  - guillemet (« and ») 80
+  - initial state 105
+  - merge symbol 114
+  - minus sign (-) 77
+  - note 105
+  - plus sign (+) 68
+  - public operation 68
+  - Resource Center (www.deitel.com/UML/) 25_10
+  - small circle symbol 105
+  - solid circle symbol 105
+  - String type 71
+  - transition 105
+  - transition arrow 105, 107, 113, 114
+- UML activity diagram 158
+  - solid circle (for representing an initial state) in the UML 25_23
+  - solid circle enclosed in an open circle (for representing the end of an activity) in the UML 25_23
+- UML class diagram
+  - attribute compartment 25_19
+  - constructor 80
+  - operation compartment 25_27
+- UML sequence diagram
+  - activation 25_37
+  - arrowhead 25_37
+  - lifeline 25_37
+- UML state diagram
+  - rounded rectangle (for representing a state) in the UML 25_22
+  - solid circle (for representing an initial state) in the UML 25_22
+- UML use case diagram
+  - actor 25_8
+  - use case 25_8
+- unary cast operator 128
+- unary decrement operator (--) 135
+- unary function 939
+- unary increment operator (++) 135
+- unary minus (-) operator 129
+- unary operator 129, 176, 177, 332
+- unary operator overload 457, 462
+- unary plus (+) operator 129
+- unary predicate function 874, 897, 899
+- unary scope resolution operator (::) 232
+- unbuffered output 600
+- unbuffered standard error stream 598
+- uncaught exceptions 657
+- unconditional branch 14
+- #undef preprocessor directive 1024, 1026
+- undefined area in memory 794
+- undefined value 118
+- underflow_error exception 652
+- underlying container 888
+- underlying data structure 888
+- underscore (_) 44
+- unexpected event 1
+- unexpected function 642, 651
+- unformatted I/O 597, 598, 605
+- unformatted output 601, 602
+- Unicode 697
+- Unicode character set 597
+- Unified Modeling Language (UML) 12, 25_2, 25_3, 25_9, 25_19, 25_21, 9
+- uniform distribution 939
+- uninitialized copy of an object 469
+- uninitialized local reference causes a syntax error 230
+- uninitialized variable 118
+- union 15, 16
+- union constructor 16
+- union functions cannot be virtual 16
+- union with no constructor 16
+- unique algorithm 862, 906, 908
+- unique keys 877, 880, 883
+- unique member function of list 875
+- unique_copy algorithm 862, 909, 910
+- unique_ptr class
+- Classes
+- unique_ptr class (C++0x) 648
+- universal-time format 384
+- UNIX 609, 663, 5, 8, 11
+- UNIX command line 2
+- unmodifiable lvalue 456
+- unnamed bit field 809
+- unnamed bit field with a zero width 809
+- unnamed namespace 981
+- unnamed namespace 8
+- unnamed object 17
+- unordered_map container 961
+- unordered_multimap container 961
+- unordered_multiset container 961
+- unordered_set container 961
+- Unpacking Characters from Unsigned Integers 841
+- unresolved references 10
+- unsigned 204, 10
+- unsigned char data type 204
+- unsigned data type 210
+- unsigned int data type 204, 210, 347
+- unsigned integer in bits 798
+- unsigned long 242, 826, 10
+- unsigned long data type 204
+- unsigned long int 241
+- unsigned long int data type 204
+- unsigned long long data type 204
+- unsigned long long int data type 204
+- unsigned short data type 204
+- unsigned short int data type 204
+- unspecified number of arguments 3
+- unsuccessful termination 9
+- untie an input stream from an output stream 623
+- unwinding the function call stack 642
+- update a record 694
+- update records in place 670
+- upper_bound algorithm 913
+- upper_bound function of associative container 879
+- uppercase letter 44, 62
+- uppercase letter (A-Z) 812
+- uppercase letters 206, 810
+- uppercase stream manipulator 612, 616, 618
+- use case diagram in the UML 25_8, 25_9
+- use case in the UML 25_7, 25_8
+- use case modeling 25_7
+- use_count member function of class shared_ptr 953
+- user-defined class name 66
+- user-defined function 196, 198
+- user-defined type 67, 214, 484
+- using a dynamically allocated ostream from object 715
+- using a function template 237
+- Using a static data member to maintain a count of the number of objects of a class 438
+- using an anonymous union 18
+- using an iterator to output a string 713
+- using arrays instead of switch 278
