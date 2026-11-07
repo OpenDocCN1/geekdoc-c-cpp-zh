@@ -1,0 +1,13 @@
+The Windows Sockets Application Programming Interface (WinSock API) is a library of functions that implements the socket interface as popularized by the Berkeley Software Distribution of UNIX. WinSock augments the Berkeley socket implementation by adding Windows-specific extensions to support the message-driven nature of the Windows operating system.
+
+WinSock version 1.1 is bound to the TCP/IP protocol suite. Although future versions of WinSock are expected to support Novell’s IPX/SPX, Apple’s Appletalk, and other popular network protocols, this book concentrates on the socket interface to the TCP/IP protocol stack.
+
+The WinSock specification allows TCP/IP stack vendors to provide a consistent interface to their stacks so that application developers can write an application to the WinSock specification and have that application run on any vendor’s WinSock-compatible TCP/IP protocol stack. This is in contrast to the days before the WinSock standard when software developers had to link their applications with libraries specific to each TCP/IP vendor’s implementation. This limited the number of stacks that most applications ran on because of the difficulty in maintaining an application that used several different implementations of Berkeley sockets. WinSock has removed that barrier. Application programmers write to the WinSock API and link their applications with the WINSOCK.LIB import library (or WSOCK32.LIB in the case of Win32). The application can then be installed on a computer that has a WinSock TCP/IP stack, from any number of vendors, and dynamically link to the WINSOCK.DLL (or WSOCK32.DLL) provided by the vendor. Figure 3.1 is a block diagram of WSOCK32.DLL interaction in a 32-bit program on Windows NT. Although the actual WINSOCK.DLL is specific to each TCP/IP stack vendor, the interface into that dynamic link library remains consistent, hence any program linked with the WinSock import library should work.
+
+![](bbox=[0.112, 0.605, 0.181, 0.713])
+
+> > **CAUTION**
+> >
+> > I say *should* work because not all TCP/IP vendors’ stacks operate in exactly the same way. Some simply have bugs and others interpret the WinSock or TCP/IP protocol standards differently. In some cases, the WinSock specification itself is ambiguous.
+
+As discussed in Chapter 2, a socket is simply an end-point of communication. A TCP/IP socket is comprised of an IP address and a port. Some ports are reserved for well-known services and others are for use by your applications. Sockets can be set up to provide either a reliable, connection-oriented stream service or an unreliable, connectionless datagram service.
