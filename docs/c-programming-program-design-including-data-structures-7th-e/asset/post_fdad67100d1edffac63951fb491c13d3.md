@@ -1,0 +1,352 @@
+
+## INDEX
+
+![](img/d0be7fc6d804b63484835c6c8bc67a07_1699_0.png)
+
+*Note: Page numbers in boldface indicate key terms.*
+
+### A
+
+- abacus, **2**
+- abs function, **347, 350–353**
+- absolute value, **21**
+- abstract classes, **860–867**
+- abstract data type (ADT), **680–681, 774**
+  - binary search trees, 1369–1379
+  - binary trees, 1359–1367
+  - graphs, 1410–1413
+  - implementing, 681–682
+  - linked lists, 1085–1097, 1106–1117
+  - lists, 681–682, 869
+- abstraction, **680**
+- acceptAmount function, **705–706**
+- accessor functions, **664–667, 780, 783**
+- accumulate algorithm, **1493**
+- accumulate function, **1546–1551**
+- A class, **763**
+- action statement, **190**
+- actual parameter list, **354**
+- actual parameters, **352**
+  - changing value, 384
+  - corresponding to formal parameters, 354, 377
+  - virtual functions, 856
+- Ada, **774**
+- addFirst function, **395–397**
+- additionalBonus variable, **16**
+- addition compound operator (+=), **94–95**
+- addition operator (+), **45, 93, 922**
+  - overloading, 923
+- add operation, **1216–1217**
+- addQueue function, **1216, 1218, 1220–1221, 1225, 1229–1230, 1232, 1246**
+- addresses, **4–5**
+- address of operator (&), **814, 881–883**
+- addressOf function, **882, 883**
+- addressType struct, **624–625**
+- addVotes function, **1333**
+- adjacency lists, **1409**
+- adjacency matrix, **1408**
+- adjacent, **1407**
+  - adjacent_difference function, 1493, 1546–1551
+  - adjacent_find function, 1491, 1493, 1497, 1524–1528
+- adjacent from, **1407**
+- adjacent to, **1407**
+- ADT. See abstract data type (ADT)
+- A function, **1042**
+- age variable, **66, 141–197, 210**
+- aggregate operations, **331, 554**
+- aggregation, **738, 767–772**. See also composition (aggregation)
+- Aiken, Howard, **3**
+- algorithm header file, **1455, 1490, 1501, 1505, 1510, 1517, 1520, 1529**
+- algorithms, **11–13, 1442**
+  - classifications, 1491
+  - deterministic, 1277
+  - function overloading, 1493
+  - generic, 1491
+  - heap sort algorithms, 1493
+  - implementing, 21
+  - modifying algorithms, 1492
+  - nondiverging algorithms, 1491
+  - numeric algorithms, 1492–1493
+  - recursive algorithms, 1041
+  - repetition, 21
+  - subproblems and, 13
+- aliases, **881–883**
+- allocating memory. See memory allocation
+- American National Standards Institute (ANSI), **22**
+- American Standard Code for Information Interchange (ASCII), **7, 40–41, 203**
+- amountDue variable, **14–15, 57**
+- analog signals, **6**
+- analytical engine, **2**
+- and (&&) logical operator, **197–203, 209–210, 213**
+- and operator (&), **200**
+- Android, **5**
+- antiAliasValue variable, **615**
+- anonymous data types, **475**
+- ANSI. See American National Standards Institute (ANSI)
+- ANSI/ISO Standard C++, **22, 485**
+  - namespace mechanism, 81, 485–490
+  - Standard Template Library (STL), 1442–1551
+  - string data type, 53
+- append function, **494**
+- Apple computer, **3**
+- apple object, **708**
+- application programs, **5**
+- areaAddOrderItem, **378**
+- area function, **689–690, 742–745, 747, 752–753, 910**
+- area variable, **19, 33**
+- arguments, **131, 134**
+- arithmetic expressions, **30, 45**
+  - floating-point (decimal) expressions, 48–49
+  - grouping with parentheses (), 46
+  - infix notation, 1201
+  - integral expressions, 48–49
+  - mixed expressions, 48, 49–50
+  - operands, 45
+  - Polish notation, 1201
+  - postfix notation, 1202
+  - prefix notation, 1201
+  - Reverse Polish notation, 1201
+- arithmetic function objects, 1494
+- arithmetic operators, 43–45
+  - addition operator (+), 43, 45
+  - associativity, 46
+  - division operator (/), 43, 45
+  - floating-point data type, 43
+  - integral data type, 43–44
+  - modulus (mod) operator (%), 43–45
+  - multiplication operator (*), 43–45
+  - negation operator (−), 43, 45
+  - order of precedence, 46–47, 200
+  - remainder operator (%), 43–45
+  - subtraction operator (−), 43, 45
+- arithmetic overflow and underflow exceptions, 1010
+- arrayAsParameter function, 538
+- array-based lists, 868–875, 972–978
+  - binary search algorithm, 1270
+  - insertion sort, 1292–1297
+  - pivot, 1299–1303
+  - quick sort algorithm, 1298–1306
+  - selection sort, 1290–1292
+  - sequential search, 1267–1269
+  - sequential search algorithm, 877
+  - sublists, 1299
+- arrayClass class, 932–933
+- array index operator ([]), overloading, 958–966
+- arrayListType class, 869–872, 875, 879, 972, 975, 978
+  - as abstract data type (ADT), 727
+- arrays, 21, 520, 521
+  - accessing components, 523–524
+  - aggregate operations, 531, 554
+  - auto declaration of elements, 549–550
+  - base address, 535–538
+  - in bounds, 529
+  - circular, 1220–1221
+  - class objects, 658, 677–679
+  - components, 523–524
+  - component-wise copying, 532
+  - constant arrays as formal parameters, 533–535
+  - constructors, 677–679
+  - copying elements between, 531–532, 535
+  - C-strings, 572–573
+  - declaring, 542
+  - default size, 874, 1222
+  - dynamic, 525, 831–833, 868
+  - elements, 521
+  - implementing queues, 1218–1227
+  - implementing stacks, 1170–1188
+  - index, 523, 527, 535
+  - index out of bounds, 529–530
+  - initializing, 526, 534
+  - initializing during declaration, 530, 552, 1461
+  - integral data types and indexes, 541–542
+  - largest element in, 526–528, 1043–1046
+  - for loops, 22
+  - manipulating lists, 868–875
+  - memory location, 535–538
+  - multidimensional, 574–575
+  - number of components in, 522
+  - one-dimensional, 521
+  - outputting data, 525–526
+  - parallel, 558–559
+  - parameters to functions, 532–533
+  - partial initialization during declaration, 530–531
+  - passed by reference, 532–533
+  - passed by value, 538
+  - pointers to, 840
+  - printing, 526, 534
+  - processing, 525–529, 531–533
+  - random access data structure, 1170
+  - range-based for loops, 834–835
+  - reading data into, 526, 534
+  - searching for specific item, 542–549
+  - selection sort, 545–549
+  - sequential lists, 1072
+  - size, 525, 530–531, 552, 831, 868–869, 872
+  - smallest element in, 528
+  - sorted and unsorted sublists, 1295
+  - sorting, 545–549
+  - static, 831
+  - stepping through with loops, 525–528
+  - strings, 572
+  - struct data type in, 621–623
+  - in structs, 619–621
+  - versus structs, 618
+  - summing elements, 534–535
+  - two-dimensional, 560–574
+  - variables, 524, 824–825
+- arraySize variable, 525
+- array subscript operator ([]), 491–492, 523
+- arrivalTimeEmp array, 677–678
+- arrivalTime variable, 1235
+- artificial intelligence, 3
+- ASCII. *See* American Standard Code for Information Interchange (ASCII)
+- ASCII character set, 188, 280, 551
+- assemblies, 8
+- assembly languages, 8
+- assert function, 234–236, 961, 998, 1001–1002, 1094
+- assert statement, 235, 959
+- assign functions, 1463, 1468
+- assignment operator (=), 43, 58–59, 187, 814, 844, 903, 1172, 1453
+  - associativity, 61, 966
+  - classes, 657–658, 843–844
+  - versus equality relational operator (==), 220–221
+  - order of precedence, 200
+  - overloading, 929–937, 974, 1092, 1179–1180, 1197–1198, 1362, 1366–1367
+  - pointer variables, 829–830
+- assignment statements, 43, 57–61
+  - assigning value of a struct variable, 615–616
+  - compound, 94–95
+  - initializing variables, 66–69
+  - peek function, 137
+  - simple, 94, 95
+  - value-returning functions, 351
+- associative containers
+  - automatically sorted elements, 1479–1480
+  - binary search trees, 1480
+    - multiset associative container, 1480–1486
+    - set associative container, 1480–1486
+- associativity, 46, 200
+  - assignment operator (=), 61
+  - operators, 904
+  - relational operators, 211–213
+- asymptotic notation, 1276–1284, 1280
+- at function, 494, 1445, 1463
+- Augusta, Ada, Countess of Lovelace, 2
+- auto declaration and range-based for loops, 549–550
+- automatic variables, 409–410, 698
+- average function, 376, 681, 691
+- averageGrade function, 379
+- average parameter, 379
+- average variable, 18, 301
+- AVL trees, 1386
+
+### B
+
+- Babbage, Charles, 2
+- back, 1215–1216
+- back function, 1094, 1125–1126, 1216, 1225, 1229–1230, 1445, 1463, 1468, 1488
+- back_inserter insert iterator, 1500, 1527
+- back pointer variable, 1122, 1126–1127
+- backslash escape sequence (`\`), 78
+- backspace escape sequence (`\b`), 78
+- bad_alloc, 1013
+- bad_alloc exception, 825, 1010–1013
+- bar graphs, 431–432
+- base 2, 7
+- base 10, 7
+- base cases, 1040–1041
+- base class, 741, 754
+- base classes, 739–741, 855, 859–861
+  - constructors, 748–756
+  - copying values of derived class object into, 858
+  - destructors, 757, 859
+  - private members, 748, 750
+  - redefining (overriding) member functions of, 741–748
+  - virtual destructors, 859
+- baseSalary variable, 16
+- base 2 system, 1055, 1059
+- base 10 system, 1055, 1059
+- Basic, 8
+- bch variable, 765–767
+- B class, 753
+- Bclass class, 764–767
+- bDay object, 771
+- begin function, 835, 1094–1095, 1449, 1455, 1463, 1500, 1505
+- beg iterator, 1444, 1447, 1454, 1462, 1467, 1481
+- beg pointer, 1444
+- Bell Laboratories, 22
+- B function, 1042
+- bidirectional iterator, 1475–1476
+- bidirectional iterators, 1475–1476
+- Big-O notation, 1276–1280, 1281–1284
+- billingAmount function, 781, 786
+- binary code, 6
+- binary digits, 6
+- binary numbers, 6–7
+  - converting decimal number to, 1059–1062
+  - converting to decimal, 1055–1059
+- binary operator (+), 491–492
+- binary operators, 45
+  - overloading, 918–924
+  - overloading as member functions, 918–922
+  - overloading as nonmember functions, 922–924
+  - operators, 904
+- binary search, 1289, 1276
+- binary search algorithm, 1269
+  - array-based lists, 1270
+  - divide-and-conquer technique, 1269
+  - key comparisons, 1271, 1274–1275
+  - recursive algorithm, 1271
+  - sequential search compared, 1276–1277
+- binarySearch function, 1274
+- binary_search function, 1491, 1520–1523
+- binary search trees, 1368
+  - abstract data type (ADT), 1369–1379
+  - analysis, 1378–1379
+  - associative containers, 1480
+  - deleting nodes, 1373–1378
+  - height, 1369
+  - inserting items, 1371
+  - key comparisons, 1378–1379
+  - key in root node, 1369
+  - left subtree, 1368–1369, 1373–1375
+  - right subtree, 1368–1369, 1373–1375
+  - root node, 1368–1369
+  - search algorithm, 1378–1379
+  - searching, 1370–1371
+  - traversing, 1370–1371
+- binary system, 7, 1055
+- binary trees, 1297, 1348
+  - abstract data type (ADT), 1359–1367
+  - binary search trees, 1368–1379
+  - branches, 1348, 1352
+  - breadth-first traversal, 1359
+  - children, 1348, 1350
+  - copying, 1353–1354, 1358, 1366
+  - deleting nodes, 1358
+  - destroying, 1365
+  - directed edge, 1348
+  - directed edges, 1348
+  - empty, 1353
+  - functions as parameters, 1383–1386
+  - height, 1352–1353
+  - implementing, 1359–1367
+  - inorder sequence, 1355
+  - inorder traversal, 1354–1359
+  - leaf, 1351
+  - left child, 1348, 1368
+  - left subtree, 1348, 1349
+  - length of path, 1351
+  - level-by-level traversal, 1359
+  - leaf node, 1352
+  - nodes, 1348–1351, 1353
+  - nonrecursive inorder traversal, 1379–1381
+  - nonrecursive postorder traversal, 1382–1383
+  - nonrecursive preorder traversal, 1381–1382
+  - nonrecursive traversal algorithms, 1379–1383
+  - parent, 1348, 1351
+  - path length, 1351
+  - postorder sequence, 1355
+  - postorder traversal, 1355–1359
+  - preorder sequence, 1355
+  - preorder traversal, 1354–1359

@@ -1,0 +1,253 @@
+
+## binary trees *(Continued)*
+
+- right child, **1348**, 1368
+- right subtree, **1348–1349**
+- root node, **1348–1350**, 1353
+- shallow copy of data, 1353
+- traversal algorithms, 1383–1386
+- traversing, 1354–1359, 1367
+- visiting nodes in sorted order, 1358
+- binaryTreeType class, 1360–1367, 1384–1385
+- binding, 854
+- binSearch function, 1275–1276, 1290
+- binToDec function, 1056–1059
+- bits, 6
+- bitWeight variable, 1056–1059
+- blank space (' '), 40
+- blanks parameter, 380
+- blank special symbol, 35
+- block of statements, **205**
+- blocks, 398, 409
+- Bloodshed Software, 11
+- board array, 562, 571, 837, 839
+- board pointer, 837
+- *board pointer, 837
+- body, 351
+- bool data type, 38–40, 189, 196–197
+- Boolean alias, 476
+- bool reserved word, 40, 196
+- bool variables
+  - flag variable, 281–284
+  - logical (Boolean) expressions, 202–203
+- bottom-up design, 280
+- boxType class, 744–750, 752–754
+- brackets, 90
+- branch control structures, 189–192
+- branches, 186, **1298, 1348**, 1351
+- breadth-first traversal, 1359
+- breadth first traversal algorithm, **1414**, 1416–1418
+- breadthFirstTraversal function, 1417–1418
+- break reserved word, 225
+- break statement, 226–227, 229–230, 234, 311–313
+- breed variable, 856
+- bSearchTreeType class, 1369–1379, 1385–1386
+- bubble sort, **1284–1290**
+- bubble sort algorithm, 1289–1290
+- bubbleSort function, 1287–1290
+- bugs
+  - avoiding, 213–217, 232–234
+  - patches, 319–322
+- build command, 11, 688
+- buildListBackward function, 1084–1085
+- buildListForward function, 1083
+- business function, 369–373
+- b variable, 61, 71–72
+- bx variable, 765–766
+- bytes, 6–7
+
+## C
+
+- C, 8
+- C#, 8
+- C++, 2, 8, 22, 80, 774
+  - case sensitivity, 36
+  - integrated development environments (IDEs), 10, 11
+- C++11, 22
+- calBurnedInAWeek variable, 265–266
+- calBurnedInOneDay variable, 265–266
+- calculateAverage function, 424–426
+- calculatePay function, 756, 861
+- calculateTotalVotes function, 123
+- callPrint function, 853–854, 856
+- candidateList object, 1325–1329, 1331
+- candidateType class, 1317, 1320–1326, 1332
+- capacity function, 1446
+- carDealers multidimensional array, 575
+- carType enumeration type, 563
+- case reserved word, 225–226
+- case sensitivity, 36
+- case statements, 226–227, 229–231, 234
+- cashOnHand member variable, 706
+- cashRegister class, 705–707
+- cassert header file, 235, 961
+- cAssignmentOpOverload class, 933–937
+- casting, 51–53
+- cast operator, 51–53, 350, 469–470, 500
+- catch block parameters, 1003
+- catch blocks, 1002–1006, 1006, 1009, 1011, 1013–1014, 1017, 1022, 1024, 1027
+- catching exceptions, 1027
+- C++ Builder, 11, 688
+- cctype header file, 348, 350, 1507, 1537
+- cCustomer object, 1244
+- ceil function, 347
+- celsius variable, 158–159
+- CENTIMETERS_PER_INCH constant, 91
+- central processing units (CPUs), 4
+- cExpObject object, 822
+- cExpPtr pointer, 822–823
+- cfloat header file, 1425
+- change variable, 475
+- character arrays, 551–558, 572
+- characterCount function, 583, 584
+- characters, 40–41
+  - arithmetic operations, 46
+  - ASCII values, 280
+  - bytes, 7
+  - char variables, 67
+  - collating sequence, 188–189
+  - comparing, 40
+  - encoding schemes, 7
+  - maximum number ignored in line, 135–136
+  - next available, 137–139
+  - putting last from input stream back, 137–139
+  - reading, 134, 137–139
+  - relative position in strings, 53
+  - storing in memory, 137–139
+  - strings, 53–54
+- character sets, 40–41
+- char data type, 38–41, 470–471
+  - arithmetic operations, 46
+  - converting to int data type, 53
+  - extraction operator (>>), 126–130
+  - pointer variables, 813
+  - reading values, 134
+  - relational operators, 188–189
+- charItr iterator, 159
+- charList vector, 1506–1507, 1519, 1537
+- charList vector list, 1513, 1516
+- char variables, 67, 584
+- checkTitle function, 1142
+- chExp variable, 135
+- children, 1350
+- chips, 3
+- ch pointer variable, 813
+- ch variable, 551, 582
+- cin (common input statement), 19, 36, 63–66, 79, 80–81, 124–125, 161, 244, 455, 556, 762
+  - extraction operator (>>) and, 125–130
+  - get function, 133–134
+  - ignore function, 135–136
+- cindex identifier, 139
+- cin variable, 139, 285
+- circle class, 739–740, 860
+- circle class object, 691
+- circle1 object, 691
+- circle2 object, 691
+- circleType class, 689–691, 1019–1021
+- circular array, 1220–1221
+- circular linked lists, 1131
+- circumference function, 689, 690
+- cityList variable, 14–15
+- classes, 21, 139, 850, 773
+  - abstract classes, 860–867
+  - abstract data type (ADT), 681–682
+  - address of operator (&), 881–883
+  - assignment operator (=), 657–658
+  - assignment operators, 843–844
+  - base classes, 849
+  - built-in operations on, 657
+  - class templates, 967, 969–971
+  - clients, 664
+  - components, 650
+  - constructors, 669–671, 675
+  - copy constructor, 845–848, 847–848
+  - declaring variables, 11
+  - defining, 650–651, 768–772
+  - derived classes, 738–739
+  - destructors, 679–680, 842–843
+  - examples of, 689–698
+  - exception classes, 1009–1013
+  - formal parameters, 855
+  - friend functions, 912–914
+  - functions, 658–659, 821–823
+  - identifying, 774–775
+  - inheritance, 738–767, 859
+  - instance variables, 664
+  - manipulating sets, 879
+  - member access operator (.), 657
+  - members, 680
+  - nodes as, 1073
+  - non-static member variables, 700–702
+  - object-oriented design (OOD), 773
+  - object-oriented programming (OOP), 773
+  - pointers, 821–823
+  - pointer variables, 841–852, 944
+  - private members, 651–653, 668–669, 683, 763, 820, 881–882
+  - protected members, 763
+  - public members, 651–653, 668–669, 763
+  - pure virtual functions, 860–861
+  - relating, 738
+  - reusing, 773
+  - static members, 698–704
+  - versus structs, 682–683
+  - Unified Modeling Language (UML) diagrams, 654
+  - virtual destructors, 859
+- classExample class, 821–823
+- classifyDigits function, 695–698
+- classifyNumber function, 418–420
+- classIlluFriend class, 912
+- class instances, 654–655, 124–125, 161, 244, 455, 762
+- class members, 650–651, 655–666, 658
+- class objects, 654–655, 658–659
+  - arrays, 677–679
+  - initializing, 677
+- class reserved word, 651
+- class templates, 967, 969–971
+- container classes, 1018
+- class1 object, 958–959
+- clear function, 142–143, 156, 494, 496–497, 1447, 1453–1454, 1483
+- clearGraph function, 1413
+- clearList function, 874
+- clients, 664
+- C-like casting, 53
+- clrscr array, 1506, 1516, 1519
+- clock class, 679
+- clockType abstract data type (ADT), 681
+- clockType class, 651–653, 655, 657, 659–660, 664–665, 668–670, 675–679, 683–687, 738, 902–903, 905–907, 944–952
+- clockType variable, 684, 687
+- clockType objects, 978
+- close file stream function, 162–163
+- cmath header file, 79, 81, 131–133, 211, 347–348, 350, 488, 490
+- const_iterator, 1473
+- COBOL, 8
+- code fragment, 11
+- codeOk variable, 578
+- coins enumeration type, 475
+- collating sequence, 40, 203
+- colors enumeration type, 467
+- colorType enumeration type, 563
+- column processing, 565
+- combinations, 912–916, 839
+- commands, 3
+- commas, 3, 35, 90
+- comments, 31, 34–35
+- common input, 124
+- common output, 124
+- compareCode function, 578–579
+- compare function, 494
+- compareThree function, 358–360
+- comparison-based search algorithms, 1284, 1297
+- comparison-based sorting algorithms, 1297–1298
+- comparison tree, 1297–1298
+- compilers, 9–11
+  - complex numbers, 13
+  - integral data types, 39
+  - syntax errors, 85–89
+- compile-time binding, 854
+- complex numbers, 953–958
+- complexType class, 953–958
+- components, 1407, 765
+  - grouping different types, 610–626
+- composition (aggregation), 738, 767–772, 775–796
+- compound assignment statements, 94–95
+- compound statements, 205, 215

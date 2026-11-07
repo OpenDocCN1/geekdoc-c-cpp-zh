@@ -1,0 +1,18 @@
+# **TABLE 21-4** Various Operations on a Vector Container
+
+| Statement | Effect |
+|---|---|
+| `vecList.clear()` | Deletes all of the elements from the container. |
+| `vecList.erase(position)` | Deletes the element at the position specified by position. |
+| `vecList.erase(beg, end)` | Deletes all of the elements starting at beg until end-1. |
+| `vecList.insert(position, elem)` | A copy of elem is inserted at the position specified by position. The position of the new element is returned. |
+| `vecList.insert(position, n, elem)` | n copies of elem are inserted at the position specified by position. |
+| `vecList.insert(position, beg, end)` | A copy of the elements, starting at beg until end-1, is inserted into `vecList` at the position specified by position. |
+| `vecList.push_back(elem)` | A copy of elem is inserted into `vecList` at the end. |
+| `vecList.pop_back()` | Deletes the last element. |
+| `vecList.resize(num)` | Changes the number of elements to num. If `size()` increases, the default constructor creates the new elements. |
+| `vecList.resize(num, elem)` | Changes the number of elements to num. If `size()` increases, the new elements are copies of elem. |
+
+> > **NOTE**
+> >
+> > In Table 21-4, the identifiers `position`, `beg`, and `end` in STL terminology are called iterators. An iterator is just like a pointer. In general, iterators are used to step through the elements of a container. In other words, with the help of an iterator, we can walk through the elements of a container and process them one at a time. Because iterators are an integral part of the STL, they are discussed in the section "Iterators" located later in this chapter.

@@ -1,0 +1,44 @@
+# Exception Handling Techniques
+
+When an exception occurs in a program, the programmer usually has three choices: terminate the program, include code in the program to recover from the exception, or log the error and continue. The following sections discuss each of these situations.
+
+# Terminate the Program
+
+In some cases, it is best to let the program terminate when an exception occurs. Suppose you have written a program that inputs data from a file. If the input file does not exist when the program executes, then there is no point in continuing with the program. In this case, the program can output an appropriate error message and terminate.
+
+# Fix the Error and Continue
+
+In other cases, you will want to handle the exception and let the program continue. Suppose that you have a program that takes as input an integer. If a user inputs a letter in place of a number, the input stream will enter the fail state. This is a situation in which you can include the necessary code to keep prompting the user to input a number until the entry is valid. The program in Example 14–17 illustrates this situation.
+
+# EXAMPLE 14-17
+
+```
+```cpp
+// Handle exceptions by fixing the errors. The program continues to
+// prompt the user until a valid input is entered.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int number;                                      //Line 1
+    bool done = false;                               //Line 2
+
+    string str =
+            "The input stream is in the fail state."; //Line 3
+
+    do                                               //Line 4
+    {                                                //Line 5
+        try                                          //Line 6
+        {                                            //Line 7
+            cout << "Line 8: Enter an integer: ";   //Line 8
+            cin >> number;                           //Line 9
+            cout << endl;                            //Line 10
+
+            if (!cin)                                //Line 11
+                throw str;                           //Line 12
+```
+```

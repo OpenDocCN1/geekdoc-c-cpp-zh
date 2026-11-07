@@ -1,0 +1,54 @@
+```
+```cpp
+str = sentence.substr(0, 8);                         //Line 9
+cout << "Line 10: " << "str = \"" << str             //Line 10
+     << "\"\n" << endl;
+
+str = sentence.substr(2, 10);                        //Line 11
+cout << "Line 12: " << "str = \"" << str             //Line 12
+     << "\"\n" << endl;
+
+return 0;
+}
+```
+```
+
+# ### Sample Run:
+
+```
+```text
+Line 4: substr(0, 5) in "It is cloudy and warm." = "It is"
+Line 5: substr(6, 5) in "It is cloudy and warm." = "cloudy"
+Line 6: substr(6, 16) in "It is cloudy and warm." =
+        "cloudy and warm."
+Line 7: substr(17, 10) in "It is cloudy and warm." = "warm."
+Line 8: substr(3, 6) in "It is cloudy and warm." = "is clo"
+Line 10: str = "It is cl"
+Line 12: str = "is cloudy"
+```
+```
+
+The output of this program is self-explanatory. The details are left as an exercise for you.
+
+# ## EXAMPLE 7-18 (swap FUNCTION)
+
+The swap function is used to swap—that is, interchange—the contents of two string variables.
+
+Suppose you have the following statements:
+
+```
+```cpp
+string str1 = "Warm";
+string str2 = "Cold";
+```
+```
+
+After the following statement executes, the value of str1 is "Cold" and the value of str2 is "Warm".
+
+```
+```cpp
+str1.swap(str2);
+```
+```
+
+> **NOTE** Additional string functions are described in Appendix F (Header File `string`).

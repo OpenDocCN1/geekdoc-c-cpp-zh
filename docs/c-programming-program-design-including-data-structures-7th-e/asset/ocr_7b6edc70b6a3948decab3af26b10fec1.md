@@ -1,0 +1,52 @@
+the number of characters in the first line is 15, the reading stops at `\n`. Now the newline character remains in the input buffer and must be manually discarded. Therefore, you must read and discard the newline character at the end of the first line to store the second line into str2. The following sequence of statements stores the first line into str1 and the second line into str2:
+
+```
+cin.get(str1, 26);
+cin.get(discard);
+cin.get(str2, 26);
+```
+
+To read and store a line of input, including whitespace characters, you can also use the stream function getline. Suppose that you have the following declaration:
+
+```
+char textLine[100];
+```
+
+The following statement will read and store the next 99 characters, or until the newline character, into textLine. The null character will be automatically appended as the last character of textLine.
+
+```
+cin.getline(textLine, 100);
+```
+
+# String Output
+
+The output of C-strings is another place where aggregate operations on arrays are allowed. You can output C-strings by using an output stream variable, such as cout, together with the insertion operator, <<. For example, the statement:
+
+```
+cout << name;
+```
+
+outputs the contents of name on the screen. The insertion operator, <<, continues to write the contents of name until it finds the null character. Thus, if the length of name is 4, the above statement outputs only four characters. If name does not contain the null character, then you will see strange output because the insertion operator continues to output data from memory adjacent to name until a '\0' is found. For example, see the output of the following program. (Note that on your computer, you may get a different output.)
+
+```
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char name[5] = {'a', 'b', 'c', 'd', 'e'};
+    int x = 50;
+    int y = -30;
+
+    cout << name << endl;
+
+    return 0;
+}
+```
+
+# Output:
+
+```
+abcde��������
+```

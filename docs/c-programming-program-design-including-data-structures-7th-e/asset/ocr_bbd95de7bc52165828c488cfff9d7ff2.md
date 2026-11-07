@@ -1,0 +1,50 @@
+Suppose the definition of the constructor is:
+
+```
+```cpp
+rectangleType::rectangleType(double l, double w)
+{
+    setDimension(l, w);
+}
+```
+```
+
+Now suppose that the definition of the class `boxType` is:
+
+```
+```cpp
+class boxType: public rectangleType
+{
+public:
+    void setDimension(double l, double w, double h);
+    double getHeight() const;
+    double area() const;
+    double volume() const;
+    void print() const;
+    boxType(double l = 0, double w = 0, double h = 0);
+    //Constructor with default parameters
+
+private:
+    double height;
+};
+```
+```
+
+You can write the definition of the constructor of the class `boxType` as follows:
+
+```
+```cpp
+boxType::boxType(double l, double w, double h)
+    : rectangleType(l, w)
+{
+    if (h >= 0)
+        height = h;
+    else
+        height = 0;
+}
+```
+```
+
+Notice that this definition also takes care of the default constructor of the class `boxType`.
+
+> > **NOTE**  Suppose that a base class, `baseClass`, has private member variables and constructors. Further suppose that the class `derivedClass` is derived from `baseClass`, and `derivedClass` has no member variables. Therefore, the member variables of `derivedClass` are the ones inherited from `baseClass`. A constructor cannot be called like other functions, and the member variables of `baseClass` cannot be directly accessed by the member functions of `derivedClass`. To guarantee the initialization of the inherited member variables of an object of type `derivedClass`, even though `derivedClass` has no member variables, it must have the appropriate constructors. A constructor (with parameters) of `derivedClass` merely issues a call to a constructor (with parameters) of `baseClass`. Therefore, when you write the definition of the constructor (with parameters) of `derivedClass`, the heading of the definition of the constructor contains a call to an appropriate constructor (with parameters) of `baseClass`, and the body of the constructor is empty—that is, it contains only the opening and closing braces.

@@ -1,0 +1,26 @@
++   5. **(Modified Bubble Sort)** Write a complete C++ function template to implement the modified bubble sort algorithm given in Exercise 9 of this chapter. Call this function `modifiedBubbleSort`. Also, write a program to test your function.
+
++   6. Write a program to test the selection sort algorithm for array-based lists as given in this chapter.
+
++   7. Write and test a version of the selection sort algorithm for linked lists.
+
++   8. Write a program to test the insertion sort algorithm for array-based lists as given in this chapter.
+
++   9. Write and test a version of the insertion sort algorithm for linked lists.
+
++   10. Write a program to test the quick sort algorithm for array-based lists as given in this chapter.
+
++   11. **(C. A. R. Hoare)** Let \(L\) be a list of size \(n\). The quick sort algorithm can be used to find the \(k\)th smallest item in \(L\), wherein \(0 \le k \le n - 1\), without completely sorting \(L\). Write and implement a C++ function, `kthSmallestItem`, that uses a version of the quick sort algorithm to determine the \(k\)th smallest item in \(L\) without completely sorting \(L\).
+
++   12. Sort an array of 10,000 elements using the quick sort algorithm as follows:
++      a. Sort the array using pivot as the middle element of the array.
++      b. Sort the array using pivot as the median of the first, last, and middle elements of the array.
++      c. Sort the array using pivot as the middle element of the array. However, when the size of any sublist reduces to less than 20, sort the sublist using an insertion sort.
++      d. Sort the array using pivot as the median of the first, last, and middle elements of the array. When the size of any sublist reduces to less than 20, sort the sublist using an insertion sort.
++      e. Calculate and print the CPU time for each of the preceding four steps.
++   
++      To find the current CPU time, declare a variable, say, `x`, of type `clock_t`. The statement `x = clock();` stores the current CPU time in `x`. You can check the CPU time before and after a particular phase of a program. Then, to find the CPU time for that particular phase of the program, subtract the before time from the after time. Moreover, you must include the header file `ctime` to use the data type `clock_t` and the function `clock`. Use a random number generator to initially fill the array.
+
++   13. Write a program to test the merge sort algorithm for linked lists as given in this chapter.
+
++   14. Write and test a version of the merge sort algorithm for array-based lists.

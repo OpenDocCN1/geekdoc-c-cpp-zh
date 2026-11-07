@@ -1,0 +1,62 @@
+```
+```cpp
+void print() const;
+//Function to print the list
+
+void insertEnd(int item);
+//Function to insert an item at the end of the list
+//Postcondition: if the list is not full,
+//              length++; list[length] = item;
+//              if the list is full,
+//              output an appropriate message
+
+void destroyList();
+//Function to destroy the list
+//Postcondition: length = 0; maxSize = 0; list = NULL;
+
+cAssignmentOpOverload(int size = 0);
+//Constructor
+//Postcondition: length = 0; maxSize = size;
+//              list is an array of size maxSize
+
+private:
+    int maxSize;
+    int length;
+    int *list;
+};
+```
+```
+
+The definitions of the member functions of the class cAssignmentOpOverload are:
+
+```
+```cpp
+void cAssignmentOpOverload::print() const
+{
+    if (length == 0)
+        cout << "The list is empty." << endl;
+    else
+    {
+        for (int i = 0; i < length; i++)
+            cout << list[i] << " ";
+        cout << endl;
+    }
+}
+
+void cAssignmentOpOverload::insertEnd(int item)
+{
+    if (length == maxSize)
+        cout << "List is full" << endl;
+    else
+        list[length++] = item;
+}
+
+void cAssignmentOpOverload::destroyList()
+{
+    delete [] list;
+    list = nullptr;
+    length = 0;
+    maxSize = 0;
+}
+```
+```

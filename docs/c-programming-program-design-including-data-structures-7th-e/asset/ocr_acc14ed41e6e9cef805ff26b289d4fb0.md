@@ -1,0 +1,27 @@
+# Programming Methodologies
+
+Two popular approaches to programming design are the structured approach and the object-oriented approach, which are outlined below.
+
+# Structured Programming
+
+Dividing a problem into smaller subproblems is called **structured design**. Each subproblem is then analyzed, and a solution is obtained to solve the subproblem. The solutions to all of the subproblems are then combined to solve the overall problem. This process of implementing a structured design is called **structured programming**. The structured-design approach is also known as **top-down design**, **bottom-up design**, **stepwise refinement**, and **modular programming**.
+
+# Object-Oriented Programming
+
+**Object-oriented design (OOD)** is a widely used programming methodology. In OOD, the first step in the problem-solving process is to identify the components called objects, which form the basis of the solution, and to determine how these objects interact with one another. For example, suppose you want to write a program that automates the video rental process for a local video store. The two main objects in this problem are the video and the customer.
+
+After identifying the objects, the next step is to specify for each object the relevant data and possible operations to be performed on that data. For example, for a video object, the *data* might include:
+
++   - movie name
++   - year released
++   - producer
++   - production company
++   - number of copies in stock
+
+Some of the *operations* on a video object might include:
+
++   - checking the name of the movie
++   - reducing the number of copies in stock by one after a copy is rented
++   - incrementing the number of copies in stock by one after a customer returns a particular video
+
+This illustrates that each object consists of data and operations on that data. An object combines data and operations on the data into a single unit. In OOD, the final program is a collection of interacting objects. A programming language that implements OOD is called an **object-oriented programming (OOP)** language. You will learn about the many advantages of OOD in later chapters.

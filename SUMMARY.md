@@ -554,6 +554,7 @@
 +   [C++ 编程：包含数据结构的程序设计](docs/c-programming-program-design-including-data-structures/README.md)
 +   [C++ 编程：包含数据结构的程序设计（第 5 版）](docs/c-programming-program-design-including-data-structures-5th-e/README.md)
 +   [C++ 编程：程序设计与数据结构，第 6 版](docs/c-programming-program-design-including-data-structures-6th-e/README.md)
++   [C++ 编程：程序设计（含数据结构）第7版](docs/c-programming-program-design-including-data-structures-7th-e/README.md)
 +   [C++ 编程：包含数据结构的程序设计（MindTap 课程列表）](docs/c-programming-program-design-including-data-structures-mindt/README.md)
 +   [C# 编程：快速学习 C# 编程](docs/c-programming-quickly-learn-c-programming/README.md)
 +   [C 编程考试与面试样题：适用于学生备考和求职](docs/c-programming-sample-questions-for-exams-and-interviews-usef/README.md)

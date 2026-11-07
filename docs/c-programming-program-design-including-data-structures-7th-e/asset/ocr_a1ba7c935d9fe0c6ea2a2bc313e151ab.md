@@ -1,0 +1,7 @@
+1 and 4 because these are the vertices for which there is an edge from the vertex 3, and the shortest path from 0 to these vertices has not been found. We then check if the path from the vertex 0 to the vertices 1 and 4 via the vertex 3 can be improved. The weight of the path 0–3–1 from 0 to 1 is less than the weight of the path 0–1. So we update `smallestWeight[1]` to 14. The weight of the path 0–3–4, which is 2 + 7 = 9, is greater than the weight of the path 0–4, which is 3. So we do not update the weight of the vertex 4. Figure 20–9 shows the resulting graph. (The dotted arrow shows the shortest path from the source—that is, from 0—to the vertex.)
+
+![](bbox=[0.199, 0.29, 0.897, 0.577])
+
+**Iteration 2 of Steps 3 to 5:** At Step 3, we select vertex 4 because this is the vertex in the array `smallestWeight` that has the smallest weight, and its corresponding entry in the array `weightFound` is `false`. Next, we execute Steps 4 and 5. At Step 4, we set `weightFound[4]` to `true`. At Step 5, we consider vertices 1 and 2 because these are the vertices for which there is an edge from the vertex 4, and the shortest path from 0 to these vertices has not been found. We then check if the path from the vertex 0 to the vertices 1 and 2 via the vertex 4 can be improved. Clearly, the weight of the path 0–4–1, which is 13, is smaller than the current weight of 1, which is 14. So we update `smallestWeight[1]`. Similarly, we update `smallestWeight[2]`. Figure 20–10 shows the resulting graph.
+
+FIGURE 20-9  Graph after the first iteration of Steps 3, 4, and 5

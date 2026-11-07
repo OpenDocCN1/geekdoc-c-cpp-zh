@@ -1,0 +1,45 @@
+```
+```cpp
+cout << "Enter calories burned day 7: ";
+cin >> calBurnedDay7;
+cout << endl;
+
+calBurnedInAWeek = calBurnedDay1 + calBurnedDay2 + calBurnedDay3
+                    + calBurnedDay4 + calBurnedDay5 + calBurnedDay6
+                    + calBurnedDay7;
+
+cout << "Average number of calories burned each day: "
+     << calBurnedInAWeek / 7 << endl;
+
+return 0;
+}
+```
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+```
+```text
+Enter calories burned day 1: 375
+Enter calories burned day 2: 425
+Enter calories burned day 3: 270
+Enter calories burned day 4: 190
+Enter calories burned day 5: 350
+Enter calories burned day 6: 200
+Enter calories burned day 7: 365
+
+Average number of calories burned each day: 310
+```
+```
+
+As you can see, this program requires us to declare seven variables to store seven numbers. Now if David wants to determine the average number of calories burned each day of a month, then we need to add and average about 30 numbers, which will require us to declare at least 30 variables, list them again in cin statements, and, perhaps, again in the output statements. This takes an exorbitant amount of lines and time. Also, if you want to run this program again with a different number of values, you have to rewrite the program.
+
+Next, let us see if there is a better alternative. The numbers we want to add are: 375, 425, 270, 190, 350, 200, and 365.
+
+Consider the following statements, in which `calBurnedInAWeek` and `calBurnedInOneDay` are variables of the type int.
+
++   1. `calBurnedInAWeek = 0;`
++   2. `cin >> calBurnedInOneDay;`
++   3. `calBurnedInAWeek = calBurnedInAWeek + calBurnedInOneDay;`
+
+The first statement initializes `calBurnedInAWeek` to 0. Next, let us execute statements 2 and 3 three times.

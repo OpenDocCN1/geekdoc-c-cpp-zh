@@ -1,0 +1,54 @@
+```
+```cpp
+void functionB() throw (myException)
+{
+    functionC();
+}
+void functionC() throw (myException)
+{
+    throw myException("Exception generated in function C.");
+}
+```
+```
+
+# Sample Run:
+
+Exception generated in function C. Caught in main.
+
+In this program, the function main calls functionA, functionA calls functionB, and functionB calls functionC. The function functionC creates and throws an exception of type myException. The functions functionA and functionB do not process the exception thrown by functionC.
+
+The function main calls functionA in the `try` block and catches the exception thrown by functionC. The parameter me in the `catch` block heading catches the value of the exception and then uses the function what to return the string stored in that object. The output statement in the `catch` block outputs the appropriate message.
+
+The program in Example 14-19 is similar to the program in Example 14-18. Here, the exception is caught and processed by the immediate calling environment.
+
+# EXAMPLE 14-19
+
+```
+```cpp
+// Processing exceptions, thrown by a function, in the
+// immediate calling environment.
+
+#include <iostream>
+#include "myException.h"
+
+using namespace std;
+
+void functionA();
+void functionB();
+void functionC() throw (myException);
+
+int main()
+{
+    try
+    {
+        functionA();
+    }
+    catch (myException e)
+    {
+        cout << e.what() << " Caught in main." << endl;
+    }
+
+    return 0;
+}
+```
+```

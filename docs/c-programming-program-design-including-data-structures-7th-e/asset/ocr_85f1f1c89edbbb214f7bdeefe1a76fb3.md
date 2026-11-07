@@ -1,0 +1,44 @@
+```
+dvdType newDVD;
+
+getline(infile, title);
+
+while (infile)
+{
+    getline(infile, star1);
+    getline(infile, star2);
+    getline(infile, producer);
+    getline(infile, director);
+    getline(infile, productionCo);
+    infile >> inStock;
+    infile.ignore(100, '\n');
+    newDVD.setDVDInfo(title, star1, star2, producer,
+                      director, productionCo, inStock);
+    dvdList.insert(newDVD);
+
+    getline(infile, title);
+} //end while
+} //end createDVDList
+
+void displayMenu()
+{
+    cout << "Select one of the following:" << endl;
+    cout << "1: To check whether the store carries a "
+         << "particular DVD." << endl;
+    cout << "2: To check out a DVD." << endl;
+    cout << "3: To check in a DVD." << endl;
+    cout << "4: To check whether a particular DVD is "
+         << "in stock." << endl;
+    cout << "5: To print only the titles of all the DVDs."
+         << endl;
+    cout << "6: To print a list of all the DVDs." << endl;
+    cout << "9: To exit" << endl;
+}
+```
+
+# QUICK REVIEW
+
++   1. A binary tree is either empty or it has a special node called the root node. If the tree is nonempty, the root node has two sets of nodes, called the left and right subtrees, such that the left and right subtrees are also binary trees.
++   2. The node of a binary tree has two links in it.
++   3. A node in the binary tree is called a leaf if it has no left and right children.
++   4. A node U is called the parent of a node V if there is a branch from U to V.

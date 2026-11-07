@@ -1,0 +1,255 @@
+
+- queue header file, 1488
+- queueRear pointer variable, 1216, 1218–1222, 1224–1227, 1229, 1232
+- queues, 1215–1233
+  - adding elements, 1216–1218, 1221, 1225, 1229–1230, 1246
+  - back, 1215–1216
+  - breadth first traversal algorithm, 1417
+  - constructors, 1226–1227
+  - deleting elements, 1216–1219, 1221, 1225–1226, 1230–1231, 1246
+  - destructors, 1226–1227
+  - double-ended, 1462–1466
+  - empty, 1216, 1224, 1228–1229
+  - first element, 1218, 1220, 1224–1225
+  - First In First Out structure, 1215, 1234
+  - front, 1215–1216
+  - full, 1216, 1224, 1228–1229
+  - implementation as arrays, 1218–1227
+  - initializing, 1216, 1224, 1229
+  - last element, 1218, 1220, 1222, 1225, 1230
+  - linked implementation of, 1227–1232
+  - maximum size, 1218, 1224
+  - middle elements, 1216
+  - operations, 1216–1217
+  - rear, 1215
+  - relational operators, 1488
+  - temporary, 1246
+  - waiting customers queue, 1245–1247
+- queues simulation, 1233–1251
+- queueType class, 1222–1227, 1245–1246
+- queuing systems, 1234
+  - customers, 1234–1238
+  - designing, 1234–1235
+  - main program, 1247–1251
+  - server list, 1241–1245
+  - servers, 1234, 1238–1241
+  - transaction time, 1234–1235
+  - waiting customers queue, 1245–1247
+  - waiting time, 1234–1235
+- quick sort algorithm
+  - analysis, 1305–1306
+  - array-based lists, 1298–1306
+  - divide-and-conquer technique, 1299
+  - key comparisons, 1305
+  - for loops, 1300
+  - partitioning list, 1299–1306
+  - recursion, 1305
+- quotient variable, 235, 1006
+- q value parameter, 836
+- arrays, 834–835
+- auto declaration, 550
+- dynamic arrays, 834–835, 1459
+- formal parameters, 1459
+- sequence containers, 1473
+- syntax errors, 834–835
+- vector objects, 1459–1461, 1473
+- ranges
+  - accessing and processing elements by applying function, 1535–1537
+  - consecutive elements meeting criteria, 1524–1528
+  - copying elements, 1513–1517
+  - counting occurrences of values, 1531–1535
+  - elements appearing in another range, 1538–1546
+  - elements common to two ranges, 1538–1546
+  - elements not appearing in another range, 1538–1546
+  - element sum of previous elements, 1546–1551
+  - finding elements, 1505–1507
+  - largest element in, 1531–1535
+  - last element, 1507–1510
+  - maximum of values, 1531–1535
+  - minimum of values, 1531–1535
+  - multiplying elements in multiple, 1546–1551
+  - randomly ordering values, 1531–1535
+  - replacing elements, 1513–1517
+  - reversing order of elements, 1528–1531
+  - rotating elements, 1528–1531
+  - searching elements, 1520–1523
+  - sequence of elements, 1535–1537
+  - smallest element in, 1531–1535
+  - sorting elements, 1520–1523
+  - subrange, 1507–1510
+  - summing elements, 1546–1551
+  - swapping elements, 1517–1520
+
+## R
+
+- randomAccessIterator random access iterator, 1476–1477
+- radiusPtr pointer variable, 819–820, 827, 829
+- radius variable, 148–149, 691, 819–820, 827, 1021
+- RAM. See random access memory (RAM)
+- rand function, 282
+- random access data structure, 1170
+- random access iterators, 1476–1477
+- random access memory (RAM), 4–5
+- random number generator, 363
+- random numbers, 17, 282
+- random_shuffle function, 1492, 1531–1535
+- range-based for loops, 550, 1458–1461
+- RATE member, 486–487
+- rate variable, 146, 194, 235
+- rbegin function, 1453, 1456
+- readCode function, 577
+- readCourses function, 473–474
+- readIn function, 617–618
+- read statements, 66–69
+- real alias, 476
+- real numbers and relational operators, 187–188
+- rear, 1215
+- rebuild command, 1, 688
+- recFriendObject formal parameter, 913
+- recMergeSort function, 1312–1314
+- records, 610–626
+- recQuickSort function, 1305
+- rectangle class, 739, 750, 860–861
+- rectangleFriend function, 913–914
+- rectangle1 object, 922
+- rectangle2 object, 922
+- rectangle3 object, 922
+- rectangle4 object, 922
+- rectangleType class, 742–743, 745, 747–750, 752–753, 908–911, 914–918, 922–929, 937–944
+  - overloading binary operators, 919–922
+  - private members, 746
+- rectangleType constructor, 742, 744, 753–754
+- recursion, 1040
+  - direct, 1042
+  - Fibonacci num, 1047–1050
+  - indirect, 1042
+  - infinite, 1042–1043
+  - largest element in array, 1043–1046
+  - printing linked lists in reverse order, 1117–1119
+  - problem solving, 1043–1054
+  - quick sort algorithm, 1305
+  - removing, 1211–1215
+  - selection control structures, 1054
+  - Tower of Hanoi, 1051–1053
+- recursive algorithms, 1041, 1043–1053, 1353
+  - base cases, 1041
+  - binary search algorithm, 1271
+  - converting into nonrecursive algorithms, 1166
+  - largest element in array, 1043–1046
+  - sequential search algorithm, 1268
+- recursive definitions, 1040
+  - base cases, 1040
+  - directly recursive functions, 1042
+  - general cases, 1040
+  - indirectly recursive functions, 1042
+  - infinite recursion, 1042–1043
+  - recursive algorithms, 1041
+  - recursive functions, 1041–1042
+  - tail recursive functions, 1042
+- recursive functions, 1041
+  - designing, 1043
+  - local variables, 1054
+  - memory allocation, 1054
+  - parameters, 1054
+  - unlimited copies of itself, 1042
+- reference parameters, 378, 406–408
+  - and &, 378
+  - changing values of parameter, 384
+  - class objects, 658–659
+  - declaring as constant, 385
+  - formal parameters, 836, 852–853
+  - manipulating actual parameters, 394–397
+  - memory allocation, 388–397
+  - value-returning functions, 397
+- reference variables as parameters, 384–388
+- ref formal parameter, 395
+- regionNumber variable, 1329
+- registered variable, 470–471
+- relational function objects, 1469–1499
+- relational operators, 187, 616–617, 902–903
+  - associativity, 211–213
+  - binary operators, 187
+  - char data type, 188
+  - enumeration types, 469–470
+  - integers, 187–188
+  - order of precedence, 200
+  - queues, 1488
+  - real numbers, 187–188
+  - simple data types, 187–188
+  - stacks, 1487
+  - string data type, 203–204
+- remainder operator (%), 43–45
+- removeAt function, 873–874, 877, 973
+- remove_copy function, 1492, 1510–1513
+- remove_copy_if function, 1492, 1510–1513
+- remove function, 872, 875, 877, 975, 1468, 1492, 1510–1513
+- remove_if function, 1468, 1492, 1510–1513
+- rend function, 1453, 1456
+- re object, 1011
+- repetition, 21, 186–187, 264–266
+  - do...while loops, 307–311
+  - for loops, 295–306
+  - while loop, 267–295
+- replaceAt function, 872, 875, 877–879, 975, 1329
+- replace_copy function, 1492, 1513–1517
+- replace_copy_if function, 1492, 1513–1517
+- replace function, 495, 500–501, 1492, 1513–1517
+- replace_if function, 1492, 1513–1517
+- reserved words, 36, 390
+- residential function, 369–373
+- resize function, 1447–1448, 1454
+- rethrowing exceptions, 1022–1025
+- retrieveAt function, 874, 973, 1329, 1332
+- retrievePlay function, 478–480
+- return escape sequence (\r), 78
+- return reserved word, 35
+- return statement, 85, 217–218, 369
+  - returning only one value, 361–362
+  - secret function, 361
+  - value-returning functions, 351, 354–355
+  - void functions, 376
+- reverse_copy function, 1492, 1528–1531
+- reverse function, 1470, 1492, 1528–1531
+- reverseNum function, 695–698
+- Reverse Polish notation, 1201
+- reversePrint function, 1117–1119, 1124–1125
+- rFibNum function, 1047–1050
+- right child, 1348, 1368
+- right manipulator, 154–155, 779
+- rightmost bit, 1059
+- rightObj object formal parameter, 932
+- right subtree, 1348–1350, 1368–1369, 1373–1375
+- rLink pointer, 1350–1351, 1370–1373
+- rollDice function, 363–365, 691
+- roll function, 691–692
+- root, 1351
+- rooted tree, 1427
+- root node, 1298, 1348–1350
+  - binary search trees, 1368, 1370
+  - level of, 1352
+  - pointer, 1351, 1353
+- root pointer, 1362–1363, 1370
+- rotate_copy function, 1492, 1528–1531
+- rotate function, 504–505, 1492, 1528–1531
+- row order form, 569
+- row processing, 565
+- rows variable, 839
+- runSimulation function, 1249–1250
+- run-time binding, 854, 860
+- runtime_error class, 1010
+- runtime errors, 1010
+- run-together words, 55, 91
+- ryanHouse variable, 615
+
+## S
+
+- saleByQuarter function, 633
+- salePrice variable, 14–15
+- sales array, 526, 527–528, 530, 560, 561
+- salesPersonList array, 628–631, 633–635
+- salesPersonRec struct data type, 628
+- salesTax variable, 14–15
+- sales variable, 58
+- scholarship variable, 153
+- scientific manipulator, 145–146, 156
+- scientific notation, 41, 144–146

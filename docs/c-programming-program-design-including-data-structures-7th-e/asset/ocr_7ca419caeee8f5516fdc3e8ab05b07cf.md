@@ -1,0 +1,51 @@
+# Function Definition:
+
+```
+```cpp
+returnType className::operator#
+                         (const className& otherObject) const
+{
+    //algorithm to perform the operation
+
+    return value;
+}
+```
+```
+
+The return type of the functions that overload relational operators is **bool**.
+
+# EXAMPLE 13-5
+
+Let us overload +, *, ==, and != for the class rectangleType. These operators are overloaded as member functions.
+
+```
+```cpp
+class rectangleType
+{
+public:
+        void setDimension(double l, double w);
+        double getLength() const;
+        double getWidth() const;
+        double area() const;
+        double perimeter() const;
+        void print() const;
+
+        rectangleType operator+(const rectangleType&) const;
+        //Overload the operator +
+        rectangleType operator*(const rectangleType&) const;
+        //Overload the operator *
+
+        bool operator==(const rectangleType&) const;
+        //Overload the operator ==
+        bool operator!=(const rectangleType&) const;
+        //Overload the operator !=
+
+        rectangleType();
+        rectangleType(double l, double w);
+
+private:
+        double length;
+        double width;
+};
+```
+```

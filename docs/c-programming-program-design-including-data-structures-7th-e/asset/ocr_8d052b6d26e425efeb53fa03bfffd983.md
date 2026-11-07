@@ -1,0 +1,52 @@
+For example, the `using` statement:
+
+```
+using namespace globalType;
+```
+
+simplifies the accessing of all members of the `namespace` globalType. The statement:
+
+```
+using globalType::RATE;
+```
+
+simplifies the accessing of the member RATE of the `namespace` globalType.
+In C++, `using` is a reserved word.
+
+You typically put the `using` statement after the `namespace` declaration. For the `namespace` globalType, for example, you usually write the code as follows:
+
+```
+namespace globalType
+{
+    const int N = 10;
+    const double RATE = 7.50;
+    int count = 0;
+    void printResult();
+}
+using namespace globalType;
+```
+
+After the `using` statement, to access a `namespace` member, you do not have to put the namespace_name and the scope resolution operator before the `namespace` member. However, if a `namespace` member and a global identifier in a program have the same name, to access this `namespace` member in the program, the namespace_name and the scope resolution operator must precede the `namespace` member. Similarly, if a `namespace` member and an identifier in a block have the same name, to access this `namespace` member in the block, the namespace_name and the scope resolution operator must precede the `namespace` member.
+
+Examples 7–9 through 7–12 help clarify the use of the `namespace` mechanism.
+
+# EXAMPLE 7-9
+
+Consider the following C++ code:
+
+```
+#include <iostream>
+
+using namespace std;
+.
+.
+int main()
+{
+    .
+    .
+    .
+}
+.
+.
+.
+```

@@ -1,0 +1,42 @@
++   6. Calculate payCheck using the equation:
+
+```
+payCheck = baseSalary + bonus + additionalBonus
+```
+
+# EXAMPLE 1-4
+
+In this example, we design an algorithm to play a number-guessing game.
+
+The objective is to randomly generate an integer greater than or equal to 0 and less than 100. Then prompt the player (user) to guess the number. If the player guesses the number correctly, output an appropriate message. Otherwise, check whether the guessed number is less than the random number. If the guessed number is less than the random number generated, output the message, “Your guess is lower than the number. Guess again!”; otherwise, output the message, “Your guess is higher than the number. Guess again!”. Then prompt the player to enter another number. The player is prompted to guess the random number until the player enters the correct number.
+
+The first step is to generate a random number, as described above. C++ provides the means to do so, which is discussed in Chapter 5. Suppose num stands for the random number and guess stands for the number guessed by the player.
+
+After the player enters the guess, you can compare the guess with the random number as follows:
+
+```
+if (guess is equal to num)
+    Print "You guessed the correct number."
+otherwise
+    if (guess is less than num)
+        Print "Your guess is lower than the number. Guess again!"
+    otherwise
+        Print "Your guess is higher than the number. Guess again!"
+```
+
+You can now design an algorithm as follows:
+
++   1. Generate a random number and call it num.
++   2. Repeat the following steps until the player has guessed the correct number:
++      a. Prompt the player to enter guess.
++      b. Check the value of guess.
++   
++         if (guess is equal to num)
++             Print "You guessed the correct number."
++         otherwise
++             if (guess is less than num)
++                 Print "Your guess is lower than the number. Guess again!"
++             otherwise
++                 Print "Your guess is higher than the number. Guess again!"
+
+In Chapter 5, we use this algorithm to write a C++ program to play the guessing number game.

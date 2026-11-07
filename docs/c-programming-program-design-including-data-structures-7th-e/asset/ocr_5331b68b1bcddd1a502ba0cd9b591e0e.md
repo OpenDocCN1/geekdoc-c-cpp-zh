@@ -1,0 +1,55 @@
+are in ascending order. The second form assumes that both ranges are sorted using the operation specified by `op`. The elements in the source ranges are not modified.
+
+Suppose that you have setA, setB, setC, setD, and setE as defined previously. Then:
+
+```
+AunionB = {1, 2, 3, 4, 5, 6, 7, 8}
+AunionC = {1, 2, 4, 5, 8, 15}
+AunionD = {1, 2, 3, 4, 4, 5, 6, 7, 12}
+DunionE = {1, 2, 3, 4, 4, 5, 6, 7, 10, 12}
+```
+
+Notice that because 8 appears twice in setC, it appears twice in AunionC. Because 4 appears twice in setD and setE, 4 appears twice in DunionE.
+
+Example 21–28 illustrates how the functions `set_union` and `set_intersection` work.
+
+# EXAMPLE 21-28
+
+```
+```cpp
+//STL set theory functions set_union and set_intersection
+//These functions assume that the elements in the given ranges
+//are ordered according to some sorting criteria.
+
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+
+using namespace std;
+
+int main()
+{
+    int setA[5] = {2, 4, 5, 7, 8};             //Line 1
+    int setB[7] = {1, 2, 3, 4, 5, 6, 7};       //Line 2
+    int setC[5] = {2, 5, 8, 8, 15};            //Line 3
+    int setD[6] = {1, 4, 4, 6, 7, 12};         //Line 4
+
+    int AunionB[10];                            //Line 5
+    int AunionC[10];                            //Line 6
+    int AunionD[15];                            //Line 7
+    int AintersectB[10];                        //Line 8
+    int AintersectC[10];                        //Line 9
+
+    int *lastElem;                              //Line 10
+
+    ostream_iterator<int> screen(cout, " ");  //Line 11
+
+    cout << "Line 12: setA = ";                 //Line 12
+    copy(setA, setA + 5, screen);                //Line 13
+    cout << endl;                                //Line 14
+
+    cout << "Line 15: setB = ";                 //Line 15
+    copy(setB, setB + 7, screen);                //Line 16
+    cout << endl;                                //Line 17
+```
+```

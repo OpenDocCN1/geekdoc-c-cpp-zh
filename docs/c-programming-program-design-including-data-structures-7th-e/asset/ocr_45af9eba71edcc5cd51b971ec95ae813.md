@@ -1,0 +1,39 @@
+For example, consider a program that analyzes an airline’s ticketing transactions. Because numerous ticketing transactions occur each day, a program is run at the end of each day to validate that day’s transactions. This type of program would take an enormous amount of time to process the transactions and use exceptions to identify any erroneous entries. Instead, when an exception occurs, the program should write the exception into a file and continue to analyze the transactions.
+
+# Stack Unwinding
+
+The examples given in this chapter show how to catch and process an exception. In particular, you learned how to catch and process an exception in the same block, as well as process the caught exception in the calling environment.
+
+When an exception is thrown in, say, a function, the function can do the following:
+
++   - Do nothing.
++   - Partially process the exception and throw the same exception or a new exception.
++   - Throw a new exception.
+
+In each of these cases, the function call stack is unwound so that the exception can be caught in the next `try/catch` block. When the function call stack is unwound, the function in which the exception was not caught and/or rethrown terminates, and the memory for its local variables is destroyed. The stack unwinding continues until either a `try/catch` handles the exception or the program does not handle the exception. If the program does not handle the exception, then the function `terminate` is called to terminate the program.
+
+Examples 14–18 and 14–19 illustrate how the exceptions are propagated. For this, let us define the following exception class:
+
+```
+```cpp
+// User-defined myException class.
+
+#include <string>
+
+using namespace std;
+
+class myException
+{
+public:
+    myException()
+    {
+        message = "Something is wrong!";
+    }
+
+    myException(string str)
+    {
+        message = str;
+    }
+```
+
+```

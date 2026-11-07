@@ -1,0 +1,19 @@
+![](bbox=[0.0, 0.0, 0.522, 0.337])
+
+# CHAPTER 17
+
+# STACKS AND QUEUES
+
+IN THIS CHAPTER, YOU WILL:
+
++   1. Learn about stacks
++   2. Examine various stack operations
++   3. Learn how to implement a stack as an array
++   4. Learn how to implement a stack as a linked list
++   5. Learn about infix, prefix, and postfix expressions, and how to use a stack to evaluate postfix expressions
++   6. Learn how to use a stack to remove recursion
++   7. Learn about queues
++   8. Examine various queue operations
++   9. Learn how to implement a queue as an array
++   10. Learn how to implement a queue as a linked list
++   11. Discover how to use queues to solve simulation problems

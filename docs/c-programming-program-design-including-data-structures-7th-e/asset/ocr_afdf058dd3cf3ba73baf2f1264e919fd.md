@@ -1,0 +1,13 @@
+template. Because we are now dealing with a very specific data type, the `class dvdListType` is no longer required to be a template. Thus, the `info` type of each node in the linked list is now `dvdType`. Through the member functions of the `class dvdType`, certain members—such as `dvdTitle` and `copiesInStock` of an object of type `dvdType`—can now be accessed.
+
+The definitions of the functions to implement the operations of the `class dvdListType` are given next.
+
+The primary operations on the DVD list are to check in a DVD and to check out a DVD. Both operations require the list to be searched and the location of the DVD being checked in or checked out to be found in the DVD list. Other operations, such as determining whether a particular DVD is in the store, updating the number of copies of a DVD, and so on, also require the list to be searched. To simplify the search process, we will write a function that searches the DVD list for a particular DVD. If the DVD is found, it sets a parameter found to `true` and returns a pointer to the DVD so that check-in, check-out, and other operations on the DVD object can be performed. Note that the function `searchDVDList` is a private data member of the `class dvdListType` because it is used only for internal manipulation. First, we describe the search procedure.
+
+Consider the node of the DVD list shown in Figure 16-47.
+
+![](bbox=[0.21, 0.55, 0.88, 0.63])
+
+FIGURE 16-47 Node of a DVD list
+
+The component `info` is of type `dvdType` and contains the necessary information about a DVD. In fact, the component `info` of the node has seven members: `dvdTitle`, `movieStar1`, `movieStar2`, `movieProducer`, `movieDirector`, `movieProductionCo`, and `copiesInStock`. (See the definition of the `class dvdType`.) Therefore, the node of a DVD list has the form shown in Figure 16-48.

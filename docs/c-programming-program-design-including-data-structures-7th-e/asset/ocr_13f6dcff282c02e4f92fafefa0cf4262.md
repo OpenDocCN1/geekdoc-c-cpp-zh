@@ -1,0 +1,47 @@
+**Sample Run 2:** In this sample run, the user input is shaded.
+
+Line 3: Enter the dividend: 56
+
+Line 6: Enter the divisor: 0
+
+Line 14: In the divisionByZero catch block: Division by zero
+
+In this program, the statement in Line 10 throws an object (exception) of the class `divisionByZero` if the user enters 0 for the divisor. This thrown exception is caught and processed by the `catch` block in Line 13. The parameter `divByZeroObj` in the `catch` block catches the value of the thrown object and executes the function that returns the string stored in the object. The statement in Line 14 outputs the appropriate error message.
+
+The program in Example 14–12 is similar to the program in Example 14–11. Here, the thrown object is still an anonymous object, but the error message is specified by the user (see the statement in Line 10).
+
+# EXAMPLE 14-12
+
+```
+```cpp
+// Using user-defined exception class divisionByZero with a
+// specific error message.
+
+#include <iostream>
+#include "divisionByZero.h"
+
+using namespace std;
+
+int main()
+{
+    int dividend, divisor, quotient;                         //Line 1
+
+    try                                                   //Line 2
+    {
+        cout << "Line 3: Enter the dividend: ";          //Line 3
+        cin >> dividend;                                  //Line 4
+        cout << endl;                                     //Line 5
+
+        cout << "Line 6: Enter the divisor: ";           //Line 6
+        cin >> divisor;                                   //Line 7
+        cout << endl;                                     //Line 8
+
+        if (divisor == 0)                                 //Line 9
+            throw divisionByZero("Found division by zero"); //Line 10
+
+        quotient = dividend / divisor;                    //Line 11
+        cout << "Line 12: Quotient = " << quotient
+             << endl;                                     //Line 12
+    }
+```
+```

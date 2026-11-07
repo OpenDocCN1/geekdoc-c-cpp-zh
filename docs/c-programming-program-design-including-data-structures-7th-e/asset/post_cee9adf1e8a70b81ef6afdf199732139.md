@@ -1,0 +1,207 @@
+
+**cylinder** to be a class—say, `cylinderType`—from which we can create many cylinder objects of various dimensions. The nouns **dimensions**, **surface area**, and **volume** are characteristics of a **cylinder** and thus can hardly be considered classes.
+
+After we identify a class, the next step is to determine three pieces of information:
+
+- Operations that an object of that class type can perform
+- Operations that can be performed on an object of that class type
+- Information that an object of that class type must maintain
+
+From the list of verbs identified in the problem description, we choose a list of possible operations that an object of that class can perform, or has performed, on itself. For example, from the list of verbs for the cylinder problem description—*write*, *input*, *calculate*, and *print*—the possible operations for a cylinder object are *input*, *calculate*, and *print*.
+
+For the `class cylinderType`, the dimensions represent the data. The center of the base, radius of the base, and height of the cylinder are the characteristics of the dimensions. You can input data to the object either by a constructor or by a mutator function.
+
+The verb *calculate* applies to determining the volume and the surface area. From this, you can deduce the operations: `cylinderVolume` and `cylinderSurfaceArea`. Similarly, the verb *print* applies to the display of the volume and the surface area on an output device. In Programming Exercise 3 at the end of this chapter, you are asked to design a class to implement the characteristics of a cylinder.
+
+Identifying classes via the nouns and verbs from the descriptions of the problem is not the only technique possible. There are several other OOD techniques in the literature. However, this technique is sufficient for the programming exercises in this book.
+
+## PROGRAMMING EXAMPLE: Grade Report
+
+![](img/d0be7fc6d804b63484835c6c8bc67a07_825_0.png)
+
+This programming example further illustrates the concepts of inheritance and composition.
+
+The mid-semester point at your local university is approaching. The registrar's office wants to prepare the grade reports as soon as the students' grades are recorded. However, some of the students enrolled have not yet paid their tuition.
+
+- 1. If a student has paid the tuition, the grades are shown on the grade report together with the grade point average (GPA).
+- 2. If a student has not paid the tuition, the grades are not printed. For these students, the grade report contains a message indicating that the grades have been held for nonpayment of the tuition. The grade report also shows the billing amount.
+
+The registrar's office and the business office want your help in writing a program that can analyze the students' data and print the appropriate grade reports. The data is stored in a file in the following form:
+
+```
+numberOfStudents tuitionRate
+studentName studentID isTuitionPaid numberOfCourses
+courseName courseNumber creditHours grade
+courseName courseNumber creditHours grade
+.
+.
+.
+studentName studentID isTuitionPaid numberOfCourses
+courseName courseNumber creditHours grade
+courseName courseNumber creditHours grade
+.
+.
+.
+```
+
+The first line indicates the number of students enrolled and the tuition rate per credit hour. The students’ data is given thereafter.
+
+A sample input file is as follows:
+
+```
+3 345
+Lisa Miller 890238 Y 4
+Mathematics MTH345 4 A
+Physics PHY357 3 B
+ComputerSci CSC478 3 B
+History HIS356 3 A
+.
+.
+.
+```
+
+The first line indicates that the input file contains three students’ data, and the tuition rate is $345 per credit hour. Next, the course data for student Lisa Miller is given: Lisa Miller’s ID is 890238, she has paid the tuition, and she is taking four courses. The course number for the mathematics class she is taking is MTH345, the course has four credit hours, her mid-semester grade is A, and so on.
+
+The desired output for each student is in the following form:
+
+```
+Student Name: Lisa Miller
+Student ID: 890238
+Number of courses enrolled: 4
+```
+
+| Course No | Course Name | Credits | Grade |
+|---|---|---:|---|
+| CSC478 | ComputerSci | 3 | B |
+| HIS356 | History | 3 | A |
+| MTH345 | Mathematics | 4 | A |
+| PHY357 | Physics | 3 | B |
+
+```
+Total number of credits: 13
+Mid-Semester GPA: 3.54
+```
+
+It is clear from this output that the courses must be ordered according to the course number. To calculate the GPA, we assume that the grade A is equivalent to four points, B is equivalent to three points, C is equivalent to two points, D is equivalent to one point, and F is equivalent to zero points.
+
+**Input**  A file containing the data in the form given previously. For easy reference, let us assume that the name of the input file is `stData.txt`.
+
+**Output**  A file containing the output in the form given previously.
+
+## PROBLEM ANALYSIS AND ALGORITHM DESIGN
+
+We must first identify the main components of the program. The university has students, and every student takes courses. Thus, the two main components are the student and the course.
+
+Let us first describe the course component.
+
+### Course
+
+The main characteristics of a course are the course name, course number, and number of credit hours.
+
+Some of the basic operations that need to be performed on an object of the course type are:
+
+- 1. Set the course information.
+- 2. Print the course information.
+- 3. Show the credit hours.
+- 4. Show the course number.
+
+The following class defines the course as an ADT:
+
+```cpp
+class courseType
+{
+public:
+    void setCourseInfo(string cName, string cNo, int credits);
+        //Function to set the course information.
+        //The course information is set according to the
+        //parameters.
+        //Postcondition: courseName = cName; courseNo = cNo;
+        //              courseCredits = credits;
+
+    void print(ostream& outF);
+        //Function to print the course information.
+        //This function sends the course information to the
+        //output device specified by the parameter outF. If the
+        //actual parameter to this function is the object cout,
+        //then the output is shown on the standard output device.
+        //If the actual parameter is an ofstream variable, say
+        //outFile, then the output goes to the file specified by
+        //outFile.
+
+    int getCredits();
+        //Function to return the credit hours.
+        //Postcondition: The value of courseCredits is returned.
+
+    string getCourseNumber();
+        //Function to return the course number.
+        //Postcondition: The value of courseNo is returned.
+
+    string getCourseName();
+        //Function to return the course name.
+        //Postcondition: The value of courseName is returned.
+
+    courseType(string cName = "", string cNo = "",
+               int credits = 0);
+        //Constructor
+        //The object is initialized according to the parameters.
+        //Postcondition: courseName = cName; courseNo = cNo;
+        //              courseCredits = credits;
+
+private:
+    string courseName;    //variable to store the course name
+    string courseNo;      //variable to store the course number
+    int courseCredits;    //variable to store the credit hours
+};
+```
+
+Figure 11-9 shows the UML class diagram of the class `courseType`.
+
+![](img/d0be7fc6d804b63484835c6c8bc67a07_828_0.png)
+
+**FIGURE 11-9**  UML class diagram of the class `courseType`
+
+The definitions of the functions to implement the operations of the class `courseType` are quite straightforward and easy to follow.
+
+The function `setCourseInfo` sets the values of the private member variables according to the values of the parameters. Its definition is:
+
+```cpp
+void courseType::setCourseInfo(string cName, string cNo,
+                               int credits)
+{
+    courseName = cName;
+    courseNo = cNo;
+    courseCredits = credits;
+} //end setCourseInfo
+```
+
+The function print prints the course information. The parameter outF specifies the output device. Also, we print the course name and course number left-justified rather than right-justified (the default). Thus, we need to set the left manipulator. Before printing the credit hours, the manipulator is set to be right-justified. The following steps describe this function:
+
+- 1. Set the left manipulator.
+- 2. Print the course number.
+- 3. Print the course name.
+- 4. Set the right manipulator.
+- 5. Print the credit hours.
+
+The definition of the function print is:
+
+```cpp
+void courseType::print(ostream& outF)
+{
+    outF << left;                           //Step 1
+    outF << setw(8) << courseNo << "   ";   //Step 2
+    outF << setw(15) << courseName;         //Step 3
+    outF << right;                          //Step 4
+    outF << setw(3) << courseCredits << "   "; //Step 5
+} //end print
+```
+
+The constructor is declared with the default values. If no values are specified when a courseType object is declared, the constructor uses the default values to initialize the object as follows: courseNo to blank, courseName to blank, and courseCredits to 0. Otherwise, the values specified in the object declaration are used to initialize the object. Its definition is:
+
+```cpp
+courseType::courseType(string cName, string cNo, int credits)
+{
+    courseName = cName;
+    courseNo = cNo;
+    courseCredits = credits;
+} //end default constructor
+```

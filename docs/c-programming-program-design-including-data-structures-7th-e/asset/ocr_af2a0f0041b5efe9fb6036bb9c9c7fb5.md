@@ -1,0 +1,45 @@
+```
+```cpp
+//open the input file
+inFile.open("ids.dat");                                      //Line 11
+
+if (!inFile)                                                   //Line 12
+{
+    cout << "The input file does not exist.";
+    cout << "The program terminates!!!!" << endl;              //Line 13
+    return 1;                                                   //Line 14
+}
+
+//input the data into the array arrayID
+inFile.read(reinterpret_cast<char *> (arrayID),
+            sizeof(arrayID));                                  //Line 15
+//output the data of the array arrayID
+for (int i = 0; i < 5; i++)                                    //Line 16
+    cout << arrayID[i] << " ";                                 //Line 17
+cout << endl;                                                   //Line 18
+
+//read the student's data
+inFile.read(reinterpret_cast<char *> (&student),
+            sizeof(student));                                  //Line 19
+
+//output studentData
+cout << student.ID << " " << student.firstName
+     << " " << student.lastName << endl;                       //Line 20
+
+inFile.close();    //close the file                              //Line 21
+
+return 0;                                                        //Line 22
+}
+```
+```
+
+# Sample Run:
+
+111111 222222 333333 444444 555555
+777777 John Wilson
+
+The output of the preceding program is self-explanatory. The details are left as an exercise for you.
+
+> **NOTE**  In the program in Example E-1, the statement in Line 2 declares the `struct` variable `newStudent` and also initializes it. Because `newStudent` has three components and we want to initialize all the components, three values are specified in braces separated by commas. In other words, `struct` variables can also be initialized when they are declared.
+
+The program in the following example further explains how to create binary files and then read the data from the binary files.

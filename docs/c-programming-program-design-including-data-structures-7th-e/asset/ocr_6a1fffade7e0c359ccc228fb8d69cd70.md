@@ -1,0 +1,51 @@
+```
+```cpp
+if (found)
+    return loc;
+else
+    return -1;
+} //end seqSearch
+
+template <class elemType>
+void unorderedArrayListType<elemType>::remove
+                                      (const elemType& removeItem)
+{
+    int loc;
+
+    if (length == 0)
+        cout << "Cannot delete from an empty list." << endl;
+    else
+    {
+        loc = seqSearch(removeItem);
+
+        if (loc != -1)
+            removeAt(loc);
+        else
+            cout << "The item to be deleted is not in the list."
+                 << endl;
+    }
+} //end remove
+
+template <class elemType>
+void unorderedArrayListType<elemType>::replaceAt(int location,
+                                      const elemType& repItem)
+{
+    if (location < 0 || location >= length)
+        cout << "The location of the item to be "
+             << "replaced is out of range." << endl;
+    else
+        list[location] = repItem;
+} //end replaceAt
+
+template <class elemType>
+unorderedArrayListType<elemType>::
+          unorderedArrayListType(int size)
+              : arrayListType<elemType>(size)
+{
+}
+```
+```
+
+We leave it as an exercise for you to provide the definitions of the remaining function templates for the class unorderedArrayListType. (See Programming Exercise 20 at the end of this chapter.)
+
+The following example illustrates how to use the class unorderedArrayListType to process a list of strings.

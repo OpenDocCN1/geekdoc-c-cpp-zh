@@ -1,0 +1,26 @@
+# EXAMPLE 2-10
+
+| String | Position of a Character in the String | Length of the String |
+|---|---|---|
+| "William Jacob" | Position of 'W' is 0.<br>Position of the first 'i' is 1.<br>Position of ' ' (the space) is 7.<br>Position of 'J' is 8.<br>Position of 'b' is 12. | 13 |
+| "Mickey" | Position of 'M' is 0.<br>Position of 'i' is 1.<br>Position of 'c' is 2.<br>Position of 'k' is 3.<br>Position of 'e' is 4.<br>Position of 'y' is 5. | 6 |
+
+The length of the following string is 22.
+
+```
+"It is a beautiful day."
+```
+
+The string type is very powerful and more complex than simple data types. It provides not only the physical space required to store the string, but many operations to manipulate strings. For example, it provides operations to find the length of a string, extract part of a string, and compare strings. You will learn about this data type over the next few chapters.
+
+# Variables, Assignment Statements,
+and Input Statements
+
+As noted earlier, the main objective of a C++ program is to perform calculations and manipulate data. Recall that data must be loaded into main memory before it can be manipulated. In this section, you will learn how to put data into the computer’s memory. Storing data in the computer’s memory is a two-step process:
+
++   1. Instruct the computer to allocate memory.
++   2. Include statements in the program to put data into the allocated memory.
+
+# Allocating Memory with Constants and Variables
+
+When you instruct the computer to allocate memory, you tell it not only what names to use for each memory location, but also what type of data to store in those memory locations. Knowing the location of data is essential, because data stored in one memory location might be needed at several places in the program. As you saw earlier, knowing what data type you have is crucial for performing accurate calculations. It is also critical to

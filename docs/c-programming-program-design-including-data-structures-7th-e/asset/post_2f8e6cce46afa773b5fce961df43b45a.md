@@ -1,0 +1,138 @@
+
+- 6. Calculate `payCheck` using the equation:
+
+  ```text
+  payCheck = baseSalary + bonus + additionalBonus
+  ```
+
+## EXAMPLE 1-4
+
+In this example, we design an algorithm to play a number-guessing game.
+
+The objective is to randomly generate an integer greater than or equal to 0 and less than 100. Then prompt the player (user) to guess the number. If the player guesses the number correctly, output an appropriate message. Otherwise, check whether the guessed number is less than the random number. If the guessed number is less than the random number generated, output the message, “Your guess is lower than the number. Guess again!”; otherwise, output the message, “Your guess is higher than the number. Guess again!”. Then prompt the player to enter another number. The player is prompted to guess the random number until the player enters the correct number.
+
+The first step is to generate a random number, as described above. C++ provides the means to do so, which is discussed in Chapter 5. Suppose num stands for the random number and guess stands for the number guessed by the player.
+
+After the player enters the guess, you can compare the guess with the random number as follows:
+
+```text
+if (guess is equal to num)
+    Print "You guessed the correct number."
+otherwise
+    if (guess is less than num)
+        Print "Your guess is lower than the number. Guess again!"
+    otherwise
+        Print "Your guess is higher than the number. Guess again!"
+```
+
+You can now design an algorithm as follows:
+
+- 1. Generate a random number and call it `num`.
+- 2. Repeat the following steps until the player has guessed the correct number:
+  - a. Prompt the player to enter `guess`.
+  - b. Check the value of `guess`.
+
+    ```text
+    if (guess is equal to num)
+        Print "You guessed the correct number."
+    otherwise
+        if (guess is less than num)
+            Print "Your guess is lower than the number. Guess again!"
+        otherwise
+            Print "Your guess is higher than the number. Guess again!"
+    ```
+
+In Chapter 5, we use this algorithm to write a C++ program to play the guessing number game.
+
+## EXAMPLE 1-5
+
+There are 10 students in a class. Each student has taken five tests, and each test is worth 100 points. We want to design an algorithm to calculate the grade for each student, as well as the class average. The grade is assigned as follows: If the average test score is greater than or equal to 90, the grade is A; if the average test score is greater than or equal to 80 and less than 90, the grade is B; if the average test score is greater than or equal to 70 and less than 80, the grade is C; if the average test score is greater than or equal to 60 and less than 70, the grade is D; otherwise, the grade is F. Note that the data consists of students’ names and their test scores.
+
+This is a problem that can be divided into subproblems as follows: There are five tests, so you design an algorithm to find the average test score. Next, you design an algorithm to determine the grade. The two subproblems are to determine the average test score and to determine the grade.
+
+Let us first design an algorithm to determine the average test score. To find the average test score, add the five test scores and then divide the sum by 5. Therefore, the algorithm is the following:
+
+- 1. Get the five test scores.
+- 2. Add the five test scores. Suppose `sum` stands for the sum of the test scores.
+- 3. Suppose `average` stands for the average test score.
+
+  ```text
+  average = sum / 5;
+  ```
+
+Next, you design an algorithm to determine the grade. Suppose grade stands for the grade assigned to a student. The following algorithm determines the grade:
+
+```text
+if average is greater than or equal to 90
+    grade = A
+otherwise
+    if average is greater than or equal to 80
+        grade = B
+    otherwise
+        if average is greater than or equal to 70
+            grade = C
+        otherwise
+            if average is greater than or equal to 60
+                grade = D
+            otherwise
+                grade = F
+```
+
+You can use the solutions to these subproblems to design the main algorithm as follows: (Suppose totalAverage stands for the sum of the averages of each student’s test average.)
+
+- 1. `totalAverage = 0;`
+- 2. *Repeat* the following steps for each student in the class:
+  - a. Get the student’s name.
+  - b. Use the algorithm as discussed above to find the average test score.
+  - c. Use the algorithm as discussed above to find the grade.
+  - d. Update `totalAverage` by adding the current student’s average test score.
+- 3. Determine the class average as follows:
+
+  ```text
+  classAverage = totalAverage / 10
+  ```
+
+A programming exercise in Chapter 8 asks you to write a C++ program to calculate the average test score and grade for each student in a class.
+
+> **NOTE**
+>
+> Earlier in this chapter, we described the problem analysis, coding, and execution cycle. In this section, we give various examples to illustrate the problem analysis and coding cycle. It must be pointed out that problem analysis is the most important part of programming. Once you have analyzed the problem and written the necessary steps of the solution in your native language, then, as you will see throughout the text, writing the C++ code to implement your solution is relatively easy. In addition, soon you will recognize that the steps of your solutions can be effectively translated into a C++ code. Furthermore, a good problem analysis will lead to a better and cleaner program. Even though we have not yet introduced the syntax of C++, to illustrate how to write a C++ code corresponding to the steps of your solution, let us consider the algorithm designed in Example 1-1. Suppose `length`, `width`, `perimeter`, and `area` represent the length, width, perimeter, and area of a rectangle. Here are the four steps of the algorithm and their corresponding C++ statement:
+>
+> | Algorithm Step | C++ Instruction (Code) |
+> |---|---|
+> | 1. Get the length of the rectangle. | `cin >> length;` |
+> | 2. Get the width of the rectangle. | `cin >> width;` |
+> | 3. Calculate the perimeter. | `perimeter = 2 * (length + width);` |
+> | 4. Calculate the area. | `area = length * width;` |
+>
+> Consider the first statement. In C++, cin stands for common input. During program execution, the code associated with it instructs the user to input data and if the user enters a valid datum, then that datum will be stored in the memory, that is, will become the value of length. The C++ code in Step 3 uses the values of length and width to compute the perimeter, which then is assigned to perimeter.
+>
+> In order to write a complete C++ program to compute the area and perimeter, you need to know the basic structure of a C++ program, which will be introduced in the next chapter. However, if you are curious to know how the complete C++ program looks, you can visit the Web site accompanying this book and look at the programming code stored in the file `Ch1_Example_1-1_Code.cpp`.
+
+## Programming Methodologies
+
+Two popular approaches to programming design are the structured approach and the object-oriented approach, which are outlined below.
+
+### Structured Programming
+
+Dividing a problem into smaller subproblems is called **structured design**. Each subproblem is then analyzed, and a solution is obtained to solve the subproblem. The solutions to all of the subproblems are then combined to solve the overall problem. This process of implementing a structured design is called **structured programming**. The structured-design approach is also known as **top-down design**, **bottom-up design**, **stepwise refinement**, and **modular programming**.
+
+### Object-Oriented Programming
+
+**Object-oriented design (OOD)** is a widely used programming methodology. In OOD, the first step in the problem-solving process is to identify the components called objects, which form the basis of the solution, and to determine how these objects interact with one another. For example, suppose you want to write a program that automates the video rental process for a local video store. The two main objects in this problem are the video and the customer.
+
+After identifying the objects, the next step is to specify for each object the relevant data and possible operations to be performed on that data. For example, for a video object, the *data* might include:
+
+- movie name
+- year released
+- producer
+- production company
+- number of copies in stock
+
+Some of the *operations* on a video object might include:
+
+- checking the name of the movie
+- reducing the number of copies in stock by one after a copy is rented
+- incrementing the number of copies in stock by one after a customer returns a particular video
+
+This illustrates that each object consists of data and operations on that data. An object combines data and operations on the data into a single unit. In OOD, the final program is a collection of interacting objects. A programming language that implements OOD is called an **object-oriented programming (OOP)** language. You will learn about the many advantages of OOD in later chapters.

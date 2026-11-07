@@ -1,0 +1,37 @@
+The statement in Line 27 outputs list4. The statement in Line 29 uses the function find_first_of to find the position in list1 where the first element of list4 is also an element of list1. The first element of list4, which is also an element of list1, is 33. Its position in list1 is 1, the second element of list1. The statements in Lines 30 through 33 output the result of the search. (In the output, see Line 31.)
+
+# ## The Functions remove, remove_if, remove_copy, and remove_copy_if
+
+The function remove is used to remove certain elements from a sequence, and the function remove_if is used to remove elements from a sequence by using some criteria. The function remove_copy copies the elements of a sequence into another sequence by excluding certain elements of the first sequence. Similarly, the function remove_copy_if copies the elements of a sequence into another sequence by excluding certain elements, using some criteria, of the first sequence. These functions are defined in the header file algorithm.
+
+The prototypes of the functions remove and remove_if are:
+
+```
+```cpp
+template <class forwardItr, class Type>
+forwardItr remove(forwardItr first, forwardItr last,
+                      const Type& value);
+```
+```
+
+```
+```cpp
+template <class forwardItr, class unaryPredicate>
+forwardItr remove_if(forwardItr first, forwardItr last,
+                          unaryPredicate op);
+```
+```
+
+The function remove removes each occurrence of a given element in the range first..last-1. The element to be removed is passed as the third parameter to this function. The function remove_if removes those elements, in the range first..last-1, for which the op(element) is true. Both of these functions return forwardItr, which points to the position after the last element of the new range of elements. These functions do not modify the size of the container; in fact, the elements are moved to the beginning of the container. For example, if the sequence is {3, 7, 2, 5, 7, 9} and the element to be removed is 7, then after removing 7, the resulting sequence is {3, 2, 5, 9, 9, 9}. The function returns a pointer to element 9 (which is after 5).
+
+The program in Example 21-18 further illustrates the importance of this returned forwardItr. (See Lines 8, 10, 12, and 14.)
+
+Let us now look at the prototypes of the functions remove_copy and remove_copy_if.
+
+```
+```cpp
+template <class inputItr, class outputItr, class Type>
+outputItr remove_copy(inputItr first1, inputItr last1,
+                      outputItr destFirst, const Type& value);
+```
+```

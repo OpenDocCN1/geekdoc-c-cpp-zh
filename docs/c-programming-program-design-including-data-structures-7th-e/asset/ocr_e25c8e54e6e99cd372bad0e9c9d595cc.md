@@ -1,0 +1,35 @@
+and
+
+```
+const double CENTIMETERS_PER_INCH = 2.54;
+double centimeters;
+double inches;
+
+centimeters = inches * CENTIMETERS_PER_INCH;
+```
+
+The identifiers in the second set of statements, such as `CENTIMETERS_PER_INCH`, are usually called **self-documenting** identifiers. As you can see, self-documenting identifiers can make comments less necessary.
+
+Consider the self-documenting identifier `annualSale`. This identifier is called a **run-together word**. In using self-documenting identifiers, you may inadvertently include run-together words, which may lessen the clarity of your documentation. You can make run-together words easier to understand by either capitalizing the beginning of each new word or by inserting an underscore just before a new word. For example, you could use either `annualSale` or `annual_sale` to create an identifier that is more clear.
+
+Recall that earlier in this chapter, we specified the general rules for naming named constants and variables. For example, an identifier used to name a named constant is all uppercase. If this identifier is a run-together word, then the words are separated with the underscore character, such as `CENTIMETERS_PER_INCH`.
+
+# Prompt Lines
+
+Part of good documentation is the use of clearly written prompts so that users will know what to do when they interact with a program. There is nothing more frustrating than sitting in front of a running program and not having the foggiest notion of whether to enter something or what to enter. **Prompt lines** are executable statements that inform the user what to do. For example, consider the following C++ statements, in which `num` is an `int` variable:
+
+```
+cout << "Please enter an integer between 1 and 10 and "
+     << "press the return key" << endl;
+cin >> num;
+```
+
+When these two statements execute in the order given, first the output statement causes the following line of text to appear on the screen:
+
+```
+Please enter an integer between 1 and 10 and press the return key
+```
+
+After seeing this line, users know that they must enter an integer and press the return key. If the program contained only the second statement, users would have no idea that they must enter an integer, and the computer would wait forever for the input. The preceding output statement is an example of a prompt line.
+
+In a program, whenever input is needed from users, you must include the necessary prompt lines. Furthermore, these prompt lines should include as much information as

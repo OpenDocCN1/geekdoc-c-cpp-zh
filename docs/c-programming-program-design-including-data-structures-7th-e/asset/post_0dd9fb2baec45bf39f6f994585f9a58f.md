@@ -1,0 +1,238 @@
+
+```cpp
+//Constructor
+clockType::clockType(int hours, int minutes, int seconds)
+{
+    setTime(hours, minutes, seconds);
+}
+```
+
+We now discuss the definition of the function `operator<<`. The time must be output in the form:
+
+```
+hh:mm:ss
+```
+
+The algorithm to output the time in this format is the same as the body of the printTime function of clockType given in Chapter 10. Here, after printing the time in the previous format, we must return the ostream object. Therefore, the definition of the function `operator<<` is:
+
+```cpp
+//Overload the stream insertion operator.
+ostream& operator<<(ostream& osObject, const clockType& timeOut)
+{
+    if (timeOut.hr < 10)
+        osObject << '0';
+    osObject << timeOut.hr << ':';
+
+    if (timeOut.min < 10)
+        osObject << '0';
+    osObject << timeOut.min << ':';
+
+    if (timeOut.sec < 10)
+        osObject << '0';
+    osObject << timeOut.sec;
+
+    return osObject;  //return the ostream object
+}
+```
+
+Let us now discuss the definition of the function `operator>>`. The input to the program is of the form:
+
+```
+hh:mm:ss
+```
+
+That is, the input is the hours followed by a colon, followed by the minutes, followed by a colon, followed by the seconds. The algorithm to input the time is:
+
+- a. Get the input, which is a number, and store it in the member variable hr. Also check if the input is valid.
+- b. Get the next input, which is a colon, and discard it.
+- c. Get the next input, which is a number, and store it in the member variable min. Also check if the input is valid.
+- d. Get the next input, which is a colon, and discard it.
+- e. Get the next input, which is a number, and store it in the member variable sec. Also check if the input is valid.
+- f. Return the istream object.
+
+Clearly, we need a local variable of type `char` to read the colon.
+
+The definition of the function operator>> is:
+
+```cpp
+//overload the stream extraction operator
+istream& operator>> (istream& is, clockType& timeIn)
+{
+    char ch;
+
+    is >> timeIn.hr;                         //Step a
+
+    if (timeIn.hr < 0 || timeIn.hr >= 24)   //Step a
+        timeIn.hr = 0;
+
+    is.get(ch);                              //Read and discard : Step b
+
+    is >> timeIn.min;                        //Step c
+
+    if (timeIn.min < 0 || timeIn.min >= 60)  //Step c
+        timeIn.min = 0;
+
+    is.get(ch);                              //Read and discard : Step d
+
+    is >> timeIn.sec;                        //Step e
+
+    if (timeIn.sec < 0 || timeIn.sec >= 60)  //Step e
+        timeIn.sec = 0;
+
+    return is;                               //Step f
+}
+```
+
+The following test program uses the class `clockType`:
+
+```cpp
+//****************************************************
+// Author: D.S. Malik
+//
+// This program shows how to use the class clockType.
+//****************************************************
+
+#include <iostream>
+#include "newClock.h"
+
+using namespace std;
+
+int main()
+{
+    clockType myClock(5, 6, 23);                       //Line 1
+    clockType yourClock;                               //Line 2
+
+    cout << "Line 3: myClock = " << myClock
+         << endl;                                      //Line 3
+
+    cout << "Line 4: yourClock = " << yourClock
+         << endl;                                      //Line 4
+
+    cout << "Line 5: Enter the time in the form "
+         << "hr:min:sec ";                             //Line 5
+    cin >> myClock;                                     //Line 6
+    cout << endl;                                       //Line 7
+
+    cout << "Line 8: The new time of myClock = "
+         << myClock << endl;                            //Line 8
+
+    ++myClock;                                          //Line 9
+
+    cout << "Line 10: After incrementing the time, "
+         << "myClock = " << myClock << endl;            //Line 10
+
+    yourClock.setTime(13, 35, 38);                      //Line 11
+
+    cout << "Line 12: After setting the time, "
+         << "yourClock = " << yourClock << endl;        //Line 12
+
+    if (myClock == yourClock)                            //Line 13
+        cout << "Line 14: The times of myClock and "
+             << "yourClock are equal." << endl;         //Line 14
+    else                                                //Line 15
+        cout << "Line 16: The times of myClock and "
+             << "yourClock are not equal." << endl;     //Line 16
+
+    if (myClock <= yourClock)                            //Line 17
+        cout << "Line 18: The time of myClock is "
+             << "less than or equal to " << endl
+             << "the time of yourClock." << endl;       //Line 18
+    else                                                //Line 19
+        cout << "Line 20: The time of myClock is "
+             << "greater than the time of "
+             << "yourClock." << endl;                   //Line 20
+
+    return 0;
+}
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+```
+Line 3: myClock = 05:06:23
+Line 4: yourClock = 00:00:00
+Line 5: Enter the time in the form hr:min:sec  4:50:59
+
+Line 8: The new time of myClock = 04:50:59
+Line 10: After incrementing the time, myClock = 04:51:00
+Line 12: After setting the time, yourClock = 13:35:38
+Line 16: The times of myClock and yourClock are not equal.
+Line 18: The time of myClock is less than or equal to
+the time of yourClock.
+```
+
+## PROGRAMMING EXAMPLE: Complex Numbers
+
+A number of the form *a + ib*, in which *i² = −1* and *a* and *b* are real numbers, is called a **complex number**. We call *a* the real part and *b* the imaginary part of *a + ib*. Complex numbers can also be represented as ordered pairs (*a*, *b*). The addition and multiplication of complex numbers are defined by the following rules:
+
+$(a + ib) + (c + id) = (a + c) + i(b + d)$
+
+$(a + ib) * (c + id) = (ac − bd) + i(ad + bc)$
+
+Using the ordered pair notation, these rules are written as:
+
+$(a, b) + (c, d) = ((a + c), (b + d))$
+
+$(a, b) * (c, d) = ((ac − bd), (ad + bc))$
+
+C++ has no built-in data type that allows us to manipulate complex numbers. In this example, we will construct a data type, complexType, that can be used to process complex numbers. We will overload the stream insertion and stream extraction operators for easy input and output. We will also overload the operators + and * to perform addition and multiplication of complex numbers. If x and y are complex numbers, we can evaluate expressions such as x + y and x * y.
+
+```cpp
+//Specification file complexType.h
+
+#ifndef H_complexNumber
+#define H_complexNumber
+
+#include <iostream>
+using namespace std;
+
+class complexType
+{
+        //Overload the stream insertion and extraction operators
+        friend ostream& operator<<(ostream&, const complexType&);
+        friend istream& operator>>(istream&, complexType&);
+
+public:
+        void setComplex(const double& real, const double& imag);
+                //Function to set the complex numbers according to
+                //the parameters.
+                //Postcondition: realPart = real; imaginaryPart = imag;
+
+        void getComplex(double& real, double& imag) const;
+                //Function to retrieve the complex number.
+                //Postcondition: real = realPart; imag = imaginaryPart;
+
+        complexType(double real = 0, double imag = 0);
+                //Constructor
+                //Initializes the complex number according to
+                //the parameters.
+                //Postcondition: realPart = real; imaginaryPart = imag;
+
+        complexType operator+
+                    (const complexType& otherComplex) const;
+                //Overload the operator +
+
+        complexType operator*
+                    (const complexType& otherComplex) const;
+                //Overload the operator *
+
+        bool operator== (const complexType& otherComplex) const;
+                //Overload the operator ==
+
+private:
+        double realPart;       //variable to store the real part
+        double imaginaryPart;  //variable to store the
+                               // imaginary part
+};
+#endif
+```
+
+Figure 13-2 shows a UML class diagram of the class `complexType`.
+
+![](img/d0be7fc6d804b63484835c6c8bc67a07_1004_0.png)
+
+**FIGURE 13-2** UML class diagram of the class `complexType`
+
+Next, we write the definitions of the functions to implement various operations of the class `complexType`.
+
+The definitions of most of these functions are straightforward. We will discuss only the definitions of the functions to overload the stream insertion operator, `<<`, and the stream extraction operator, `>>`.

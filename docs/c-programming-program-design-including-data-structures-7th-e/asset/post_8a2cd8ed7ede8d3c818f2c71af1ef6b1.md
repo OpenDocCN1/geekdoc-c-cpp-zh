@@ -1,0 +1,260 @@
+
+# Standard Template Library (STL) *(Continued)*
+
+- components, 1442–1473
+- container adapters, 1486–1489
+- containers, 1442–1473
+- function objects, 1493, 1494–1499
+- insert iterators, 1500–1501
+- iterators, 1442, 1473–1479
+- strongly typed enumeration type, 467
+- static inline parameter type, 380
+- statements, 81–82
+  - repetition, 264–266
+  - self-assignment, 931–933
+  - statement terminator (;), 90
+- stateSales static variable, 14–15
+- static arrays, 831
+- static binding, 854
+- `static_cast` reserved word, 51–53
+- static functions, 698–704
+- static members, 698–704
+- static member variables memory allocation, 700–702
+- static reserved word, 409, 698–699
+- static variables, 409–410, 698–704
+- status variable, 1238
+- stdexcept header file, 1010
+- std namespace, 80–81, 490
+- stepwise refinement, 20
+- STL. See Standard Template Library (STL)
+- `strcmp` function, 552–554
+- `strcpy` function, 552–554
+- stream classes, 762–763
+- stream extraction operator (>>), 63–66, 903
+  - overloading, 924, 926–929
+- stream functions, 130, 156
+- stream insertion operator (<<), 32, 59, 72, 903
+  - overloading, 924, 925–926
+  - syntax error, 87
+- stream manipulator, 156
+- stream member functions, 130
+- stream objects, 139
+- streams, 124
+- stream variables, 125
+  - passing by reference to functions, 388
+- string concatenation operator (+), 1010
+- string data type, 53–54, 471–474, 572
+  - additional operations, 494–503
+  - binary operator (+), 491–492
+  - functions, 494–503
+  - input/output (I/O), 156–157, 557–558
+  - predefined operations, 573
+  - processing array of strings, 572
+  - relational operators, 203–204
+  - usage, 81
+  - variables, 558
+- string header file, 81, 131–133, 490, 557
+- stringList object, 970, 978
+- StringList vector container, 1443
+- `string::npos` named constant, 494
+- string objects, 1010
+- strings, 30–31, 53–54, 551
+  - accessing individual character in, 492
+  - arrays, 572
+  - character-by-character comparison, 203–204
+  - clearing, 496–497
+  - concatenating, 491
+  - containing blanks, 156
+  - containing message, 1010
+  - converting to null-terminated string, 557–558
+  - empty, 53, 496–497
+  - input, 554–556
+  - inserting, 500–501
+  - length, 53–54, 131–133, 496–498
+  - manipulating, 54
+  - multiple-line, 78
+  - null, 53
+  - null-terminated, 557–558
+  - output, 77–78, 149–151, 556
+  - output statements, 77–78
+  - palindromes, 368–369
+  - reading, 65–66, 156–157, 554–555, 555
+  - relative position of characters, 53
+  - replacing, 500–501
+  - searching, 498–500
+  - size, 496–497
+  - slash (\\) within, 162
+  - storing in string variable, 67
+  - subscript out of range error, 1010
+  - substrings, 502–503
+  - writing, 554
+- `string::size_type` data type, 494, 498, 500
+- string variables, 67, 491–492, 503
+- `strlen` function, 552–554
+- strongly connected, 1407
+- Stroustrup, Bjarne, 22
+- `str` pointer, 827
+- `str` string variable, 494
+- struct data type
+  - accessing members, 612–615
+  - arrays, 619–623
+  - versus arrays, 618
+  - versus classes, 682–683
+  - components, 682
+  - defining, 611–612
+  - length, 619–621
+  - members, 610
+  - passing by reference, 621
+  - passing by value, 621
+  - public members, 683
+- struct data type, 623–626
+  - values, 619–621
+- struct reserved word, 610
+- structs
+  - accessing components with pointer, 821
+  - declaring, 820
+  - nodes as, 1073, 1086
+  - public members, 820
+- struct statement, 610–611
+- structured data types, 520
+- structured design, 20–21
+- structured programming, 20, 772–775
+- structural variables
+  - assigning value, 615–616
+  - comparing member-wise, 616–617
+  - declaring, 611–612
+  - functions and, 617–618
+  - global variables, 612
+  - input/output (I/O), 617
+  - name, 612
+  - passing as parameter by value or by reference, 617–618
+  - printing contents, 618
+  - reading and writing, 617
+- str variable, 58, 978
+- str1 variable, 491, 498, 966
+- str2 variable, 491, 498, 966
+- str3 variable, 491, 966
+- strVar string variable, 156, 494, 557
+- stubs, 412-413
+- studentID array, 558-559
+- studentList array, 789
+- studentName array, 552
+- student object, 771, 820
+- studentPtr pointer variable, 820-821
+- student struct variable, 616
+- studentType class, 780-788
+- studentType struct, 820-821
+- studentType struct variable, 618
+- style member, 611
+- subgraphs, 1405
+- subproblems, 18, 20
+- subprograms, 34
+- subscript operator ([]), 1448, 1451
+  - overloading, 958-966
+- subset, 1405
+- `substr` function, 495, 502–503, 1010–1011
+- subtraction compound operator (-=), 94-95
+- subtraction operator (-), 43, 45, 903
+- subtrees, 1353
+- sumArray function, 534-535, 538
+- sumDigits function, 696-698
+- sumRows function, 569-571
+- sum variable, 290, 301, 303, 310, 312, 316, 364, 998
+- sumVotes variable, 1333-1334
+- surface area, 774-776
+- swap function, 495, 503, 1291-1292, 1304, 1453, 1492, 1517-1520
+- swap_ranges function, 1492, 1517-1520
+- switch reserved word, 225
+- switch statements, 189, 281, 290, 303, 471
+  - break statement, 227, 234, 311
+  - case label, 226-227
+  - default label, 227
+  - evaluating expression to logical value, 231
+  - expressions, 225-227, 230
+  - general rules for, 226-227
+  - identifier, 226
+  - immediately exiting, 227, 311
+  - multiple selections, 232
+  - nesting, 231-232
+  - range of values, 232
+  - selector, 226
+  - skipping remainder of, 311
+- switch structures, 225-232
+- syntax, 13
+- syntax errors, 10-11, 92, 157
+  - correcting in top-down fashion, 87
+  - detecting, 89
+  - identifying, 85
+  - range-based for loops, 834-835
+  - semicolon (;) after expressions in if...else statements, 224
+  - two-way selections, 194-195
+  - understanding and fixing, 85-88
+- syntax rules, 34, 89
+- system programs, 5
+- system-provided header files, 684, 757
+
+# T
+
+- tab escape sequence (\t), 78, 79
+- tableType data type, 574
+- tail recursive functions, 1042
+- target, 1269
+- targetLabel, 611
+- temp array, 963
+- temperature variable, 208
+- temp formal parameter, 852
+- tempHouse variable, 612
+- template instantiations, 971
+- template reserved word, 967
+- templates, 774, 902, 967-978
+  - class templates, 967, 969-971
+  - function templates, 967-969
+- tempNum variable, 87
+- temp object, 1330-1331, 1334
+- temporary queue, 1246
+- tempRect object, 917
+- tempRect variable, 924
+- temp variable, 939, 1293
+- temp1 vector, 1513, 1517
+- temp2 vector, 1513, 1517
+- terabytes (TB), 6
+- terminate function, 1028
+- ternary operator, 221
+- testAddress class, 881-883
+- test.h header file, 758-759
+- test class, 907
+- testCopyConstr function, 852
+- testExp() function, 836
+- testExp function, 835
+- test function, 410
+- test.h header file, 758-759
+- testScore member, 614
+- testScore parameter, 379
+- testScore variable, 173, 233-234, 290
+- test variable, 173
+- test1 variable, 173
+- test2 variable, 173
+- test3 variable, 173
+- test4 variable, 173
+- test5 variable, 173
+- text editors, 9, 11
+- textField, 162
+- t global variable, 401
+- this pointer, 931-932, 938
+  - operator overloading, 907-911
+- this reserved word, 907
+- three class, 757
+- three function, 401
+- throwing exceptions, 1003-1004, 1013-1025
+- throw reserved word, 1004
+- throw statement, 1003, 1006, 1013, 1022
+- time-driven simulations, 1234
+- time function, 282
+- timeZone variable, 738
+- title parameter, 1142
+- t member, 490
+- tokens, 35-36
+- tolerance variable, 146
+- tolower function, 348
+- top-down design, 20
+- top function, 1176, 1192, 1194, 1486

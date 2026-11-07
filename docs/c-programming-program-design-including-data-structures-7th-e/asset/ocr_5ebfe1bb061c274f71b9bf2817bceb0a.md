@@ -1,0 +1,47 @@
+```
+```cpp
+void courseType::setCourseInfo(string cName, string cNo,
+                               int credits)
+{
+    courseName = cName;
+    courseNo = cNo;
+    courseCredits = credits;
+} //end setCourseInfo
+```
+```
+
+The function print prints the course information. The parameter outF specifies the output device. Also, we print the course name and course number left-justified rather than right-justified (the default). Thus, we need to set the left manipulator. Before printing the credit hours, the manipulator is set to be right-justified. The following steps describe this function:
+
++   1. Set the left manipulator.
++   2. Print the course number.
++   3. Print the course name.
++   4. Set the right manipulator.
++   5. Print the credit hours.
+
+The definition of the function print is:
+
+```
+```cpp
+void courseType::print(ostream& outF)
+{
+    outF << left;                           //Step 1
+    outF << setw(8) << courseNo << "   ";   //Step 2
+    outF << setw(15) << courseName;         //Step 3
+    outF << right;                          //Step 4
+    outF << setw(3) << courseCredits << "   "; //Step 5
+} //end print
+```
+```
+
+The constructor is declared with the default values. If no values are specified when a courseType object is declared, the constructor uses the default values to initialize the object as follows: courseNo to blank, courseName to blank, and courseCredits to 0. Otherwise, the values specified in the object declaration are used to initialize the object. Its definition is:
+
+```
+```cpp
+courseType::courseType(string cName, string cNo, int credits)
+{
+    courseName = cName;
+    courseNo = cNo;
+    courseCredits = credits;
+} //end default constructor
+```
+```

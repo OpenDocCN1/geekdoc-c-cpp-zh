@@ -1,0 +1,232 @@
+
+The definition of the `class clockType` is as follows:
+
+```cpp
+//Header file newClock.h
+
+#ifndef H_newClock
+#define H_newClock
+
+#include <iostream>
+
+using namespace std;
+
+class clockType
+{
+    friend ostream& operator<<(ostream&, const clockType&);
+    friend istream& operator>>(istream&, clockType&);
+
+public:
+    void setTime(int hours, int minutes, int seconds);
+        //Function to set the member variables hr, min, and sec.
+        //Postcondition: hr = hours; min = minutes; sec = seconds;
+
+    void getTime(int& hours, int& minutes, int& seconds) const;
+        //Function to return the time.
+        //Postcondition: hours = hr; minutes = min; seconds = sec;
+
+    clockType operator++();
+        //Overload the pre-increment operator.
+        //Postcondition: The time is incremented by one second.
+
+    bool operator==(const clockType& otherClock) const;
+        //Overload the equality operator.
+        //Postcondition: Returns true if the time of this clock
+        //              is equal to the time of otherClock,
+        //              otherwise it returns false.
+
+    bool operator!=(const clockType& otherClock) const;
+        //Overload the not equal operator.
+        //Postcondition: If the time of this clock
+        //              is not equal to the time of otherClock,
+        //              otherwise it returns false.
+
+    bool operator<=(const clockType& otherClock) const;
+        //Overload the less than or equal to operator.
+        //Postcondition: Returns true if the time of this clock
+        //              is less than or equal to the time of
+        //              otherClock, otherwise it returns false.
+
+    bool operator<(const clockType& otherClock) const;
+        //Overload the less than operator.
+        //Postcondition: Returns true if the time of this clock
+        //              is less than the time of otherClock,
+        //              otherwise it returns false.
+
+    bool operator>=(const clockType& otherClock) const;
+        //Overload the greater than or equal to operator.
+        //Postcondition: Returns true if the time of this clock
+        //              is greater than or equal to the time of
+        //              otherClock, otherwise it returns false.
+
+    bool operator>(const clockType& otherClock) const;
+        //Overload the greater than operator.
+        //Postcondition: Returns true if the time of this clock
+        //              is greater than the time of otherClock,
+        //              otherwise it returns false.
+
+    clockType(int hours = 0, int minutes = 0, int seconds = 0);
+        //Constructor to initialize the object with the values
+        //specified by the user. If no values are specified,
+        //the default values are assumed.
+        //Postcondition: hr = hours; min = minutes;
+        //               sec = seconds;
+
+private:
+    int hr;   //variable to store the hours
+    int min;  //variable to store the minutes
+    int sec;  //variable to store the seconds
+};
+
+#endif
+```
+
+Figure 13-1 shows a UML class diagram of the class `clockType`.
+
+![](img/d0be7fc6d804b63484835c6c8bc67a07_996_0.png)
+
+**FIGURE 13-1** UML class diagram of the class `clockType`
+
+Let us now write the definitions of the functions to implement the operations of the class `clockType`. Notice that the class `clockType` overloads only the pre-increment operator. For consistency, however, the class should also overload the post-increment operator. This step is left as an exercise for you. (See Programming Exercise 5 at the end of this chapter.)
+
+First, we write the definition of the function `operator++`. The algorithm to increment the time by one second is as follows:
+
+- a. Increment the seconds by 1.
+- b. If seconds > 59,
+    - 1. Set the seconds to 0.
+    - 2. Increment the minutes by 1.
+    - 3. If minutes > 59,
+        - 1. Set the minutes to 0.
+        - 2. Increment the hours by 1.
+        - 3. If hours > 23,
+            - 1. Set the hours to 0.
+- c. Return the incremented value of the object.
+
+The definition of the function `operator++` is:
+
+```cpp
+//Overload the pre-increment operator
+clockType clockType::operator++()
+{
+    sec++;                         //Step a
+
+    if (sec > 59)                  //Step b
+    {
+        sec = 0;                   //Step b.1
+        min++;                     //Step b.2
+
+        if (min > 59)              //Step b.3
+        {
+            min = 0;               //Step b.3.1
+            hr++;                   //Step b.3.2
+
+            if (hr > 23)            //Step b.3.3
+            {
+                hr = 0;             //Step b.3.3.1
+            }
+        }
+    }
+
+    return *this;                   //Step c
+}
+```
+
+The definition of the function `operator==` is quite simple. The two times are the same if they have the same hours, minutes, and seconds. Therefore, the definition of the function `operator==` is:
+
+```cpp
+//Overload the equality operator
+bool clockType::operator==(const clockType& otherClock) const
+{
+    return (hr == otherClock.hr && min == otherClock.min
+            && sec == otherClock.sec);
+}
+```
+
+The definition of the function `operator<=` is given next. The first time is less than or equal to the second time if:
+
+- 1. The hours of the first time are less than the hours of the second time, or
+- 2. The hours of the first time and the second time are the same, but the minutes of the first time are less than the minutes of the second time, or
+- 3. The hours and minutes of the first time and the second time are the same, but the seconds of the first time are less than or equal to the seconds of the second time.
+
+The definition of the function `operator<=` is:
+
+```cpp
+//Overload the less than or equal to operator.
+bool clockType::operator<=(const clockType& otherClock) const
+{
+    return ((hr < otherClock.hr) ||
+            (hr == otherClock.hr && min < otherClock.min) ||
+            (hr == otherClock.hr && min == otherClock.min &&
+             sec <= otherClock.sec));
+}
+```
+
+In a similar manner, we can write the definitions of the other relational operator functions as follows:
+
+```cpp
+//Overload the not equal operator.
+bool clockType::operator!=(const clockType& otherClock) const
+{
+    return (hr != otherClock.hr || min != otherClock.min
+            || sec != otherClock.sec);
+}
+
+//Overload the less than operator.
+bool clockType::operator<(const clockType& otherClock) const
+{
+    return ((hr < otherClock.hr) ||
+            (hr == otherClock.hr && min < otherClock.min) ||
+            (hr == otherClock.hr && min == otherClock.min &&
+             sec < otherClock.sec));
+}
+
+//Overload the greater than or equal to operator.
+bool clockType::operator>=(const clockType& otherClock) const
+{
+    return ((hr > otherClock.hr) ||
+            (hr == otherClock.hr && min > otherClock.min) ||
+            (hr == otherClock.hr && min == otherClock.min &&
+             sec >= otherClock.sec));
+}
+
+//Overload the greater than operator.
+bool clockType::operator>(const clockType& otherClock) const
+{
+    return ((hr > otherClock.hr) ||
+            (hr == otherClock.hr && min > otherClock.min) ||
+            (hr == otherClock.hr && min == otherClock.min &&
+             sec > otherClock.sec));
+}
+```
+
+(Note that after writing the definition of the function to overload the operator ==, you can use the operator == to write the definition of the function to overload the operator !=. Similarly, you can use the operators == and < to write the definition of the function to overload the operator <=, and so on. We leave the details as an exercise.)
+
+The definitions of the functions setTime and getTime are the same as given in Chapter 10. They are included here for the sake of completeness. Moreover, we have modified the definition of the constructor so that it uses the function setTime to set the time. The definitions are as follows:
+
+```cpp
+void clockType::setTime(int hours, int minutes, int seconds)
+{
+    if (0 <= hours && hours < 24)
+        hr = hours;
+    else
+        hr = 0;
+
+    if (0 <= minutes && minutes < 60)
+        min = minutes;
+    else
+        min = 0;
+
+    if (0 <= seconds && seconds < 60)
+        sec = seconds;
+    else
+        sec = 0;
+}
+
+void clockType::getTime(int& hours, int& minutes,
+                        int& seconds) const
+{
+    hours = hr;
+    minutes = min;
+    seconds = sec;
+}
+```

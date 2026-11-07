@@ -1,0 +1,35 @@
+```
+```cpp
+b.  if (month == 1)
+        cout << "January" << endl;
+    if (month == 2)
+        cout << "February" << endl;
+    if (month == 3)
+        cout << "March" << endl;
+    if (month == 4)
+        cout << "April" << endl;
+    if (month == 5)
+        cout << "May" << endl;
+    if (month == 6)
+        cout << "June" << endl;
+```
+```
+
+Program segment (a) is written as a sequence of `if...else` statements; program segment (b) is written as a series of `if` statements. Both program segments accomplish the same thing. If month is 3, then both program segments output March. If month is 1, then in program segment (a), the expression in the `if` statement in Line 1 evaluates to `true`. The statement (in Line 2) associated with this `if` then executes; the rest of the structure, which is the `else` of this `if` statement, is skipped; and the remaining `if` statements are not evaluated. In program segment (b), the computer has to evaluate the expression in each `if` statement because there is no `else` statement. As a consequence, program segment (b) executes more slowly than does program segment (a).
+
+In a sequence of `if...else` statements, such as (a), if more than one condition is `true`, only the statements associated with the first `true` condition will be executed. On the other hand, in a series of `if` statements, such as (b), if more than one condition evaluates to `true`, statements associated with each `true` condition will execute.
+
+# ## Short-Circuit Evaluation
+
+Logical expressions in C++ are evaluated using a highly efficient algorithm. This algorithm is illustrated with the help of the following statements:
+
+```
+```cpp
+(x > y) || (x == 5)       //Line 1
+(a == b) && (x >= 7)      //Line 2
+```
+```
+
+In the statement in Line 1, the two operands of the operator `||` are the expressions `(x > y)` and `(x == 5)`. This expression evaluates to `true` if either the operand `(x > y)` is `true` or the operand `(x == 5)` is `true`. With short-circuit evaluation, the computer evaluates the logical expression from left to right. As soon as the final value of the entire logical expression is known, the evaluation stops. For example, in statement 1, if the operand `(x > y)` evaluates to `true`, then the entire expression evaluates to `true` because `true || true` is `true` and `true || false` is `true`. Therefore, the value of the operand `(x == 5)` has no bearing on the final outcome.
+
+Similarly, in the statement in Line 2, the two operands of the operator `&&` are `(a == b)` and `(x >= 7)`. If the operand `(a == b)` evaluates to `false`, then the entire expression evaluates to `false` because `false && true` is `false` and `false && false` is `false`.

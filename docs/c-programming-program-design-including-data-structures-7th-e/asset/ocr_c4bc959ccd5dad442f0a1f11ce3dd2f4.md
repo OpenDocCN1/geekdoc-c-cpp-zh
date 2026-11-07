@@ -1,0 +1,55 @@
+```
+```cpp
+copy (setA, setA + 5, screen);                 //Line 6
+cout << endl;                                   //Line 7
+
+cout << "Line 8: setB: ";                      //Line 8
+copy(setB, setB + 10, screen);                 //Line 9
+cout << endl;                                   //Line 10
+
+cout << "Line 11: setC: ";                     //Line 11
+copy(setC, setC + 5, screen);                  //Line 12
+cout << endl;                                   //Line 13
+
+if (includes(setB, setB + 10, setA, setA + 5)) //Line 14
+    cout << "Line 15: setA is a subset of "    //Line 15
+         << " setB." << endl;
+else
+    cout << "Line 17: setA is not a subset "   //Line 17
+         << "of setB." << endl;                //Line 17
+
+if (includes(setB, setB + 10, setC, setC + 5)) //Line 18
+    cout << "Line 19: setC is a subset of "    //Line 19
+         << " setB." << endl;                 //Line 19
+else
+    cout << "Line 21: setC is not a subset "   //Line 20
+         << "of setB." << endl;                //Line 21
+
+return 0;
+}
+```
+```
+
+# Sample Run:
+
+```
+Line 5: setA: A B C D E
+Line 8: setB: A B C D E F I J K L
+Line 11: setC: A E I O U
+Line 15: setA is a subset of setB
+Line 21: setC is not a subset of setB
+```
+
+The preceding output is self-explanatory. The details are left as an exercise for you.
+
+The algorithm set_intersection is used to find the elements that are common to two ranges of elements. This algorithm has two forms, as shown by the following prototypes:
+
+```
+```cpp
+template <class inputItr1, class inputItr2,
+          class outputItr>
+outputItr set_intersection(inputItr1 first1, inputItr1 last1,
+                          inputItr2 first2, inputItr2 last2,
+                          outputItr destFirst);
+```
+```

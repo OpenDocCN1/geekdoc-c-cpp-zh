@@ -1,0 +1,52 @@
+In this function definition:
+
++   - Both parameters are reference parameters.
++   - The first parameter—that is, `isObject`—is a reference to an `istream` object.
++   - The second parameter is usually a reference to a particular class. The data read will be stored in the object.
++   - The function return type is a reference to an `istream` object.
+
+For the same reasons as explained previously (when we overloaded the insertion operator `<<`), the return type of the function `operator>>` must be a reference to an `istream` object. We can then successfully execute statements of the following type:
+
+```
+```cpp
+cin >> myRectangle >> yourRectangle;
+```
+```
+
+Example 13-7 shows how the stream insertion and extraction operators are overloaded for the `class` `rectangleType`.
+
+# EXAMPLE 13-7
+
+The definition of the `class` `rectangleType` and the definitions of the operator functions are:
+
+```
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class rectangleType
+{
+        //Overload the stream insertion and extraction operators
+        friend ostream& operator<< (ostream&, const rectangleType&);
+        friend istream& operator>> (istream&, rectangleType&);
+
+public:
+        void setDimension(double l, double w);
+        double getLength() const;
+        double getWidth() const;
+        double area() const;
+        double perimeter() const;
+        void print() const;
+
+        rectangleType operator+(const rectangleType&) const;
+        //Overload the operator +
+        rectangleType operator*(const rectangleType&) const;
+        //Overload the operator *
+
+        bool operator==(const rectangleType&) const;
+        //Overload the operator ==
+        bool operator!=(const rectangleType&) const;
+        //Overload the operator !=
+```
+```

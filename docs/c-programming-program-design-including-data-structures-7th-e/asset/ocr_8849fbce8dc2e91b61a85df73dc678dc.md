@@ -1,0 +1,35 @@
+# ## PROGRAMMING EXAMPLE: DVD Store
+
+![](bbox=[0.093, 0.174, 0.178, 0.258])
+
+For a family or an individual, a favorite place to go on weekends or holidays is to a DVD store to rent movies. A new DVD store in your neighborhood is about to open. However, it does not have a program to keep track of its DVDs and customers. The store managers want someone to write a program for their system so that the DVD store can function. The program should be able to perform the following operations:
+
++   1. Rent a DVD; that is, check out a DVD.
++   2. Return, or check in, a DVD.
++   3. Create a list of DVDs owned by the store.
++   4. Show the details of a particular DVD.
++   5. Print a list of all of the DVDs in the store.
++   6. Check whether a particular DVD is in the store.
++   7. Maintain a customer database.
++   8. Print a list of all of the DVDs rented by each customer.
+
+Let us write a program for the DVD store. This example further illustrates the object-oriented design methodology and, in particular, inheritance and overloading.
+
+The programming requirement tells us that the DVD store has two major components: DVDs and customers. We will describe these two components in detail. We also need to maintain the following lists:
+
++   - A list of all of the DVDs in the store
++   - A list of all of the store's customers
++   - Lists of the DVDs currently rented by the customers
+
+We will develop the program in two parts. In Part 1, we design, implement, and test the DVD component. In Part 2, we design and implement the customer component, which is then added to the DVD component developed in Part 1. That is, after completing Parts 1 and 2, we can perform all of the operations listed previously.
+
+# ### PART 1: DVD COMPONENT
+
+# #### DVD Object
+
+This is the first stage, wherein we discuss the DVD component. The common things associated with a DVD are:
+
++   - Name of the movie
++   - Names of the stars
++   - Name of the producer
++   - Name of the director
