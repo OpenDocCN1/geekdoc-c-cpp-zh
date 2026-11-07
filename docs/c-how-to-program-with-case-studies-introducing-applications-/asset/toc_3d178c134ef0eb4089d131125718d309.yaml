@@ -1,0 +1,23 @@
+level_changes:
+- line: 13851
+  before: 1
+  after: 3
+- line: 13862
+  before: 1
+  after: 3
+- line: 13988
+  before: 1
+  after: 3
+- line: 1039
+  before: 2
+  after: 3
+- line: 1294
+  before: 2
+  after: 3
+text_changes:
+- line: 285
+  before: 第4部分：算法与数据结构
+  after: 第 4 部分：算法与数据结构
+- line: 293
+  before: 第5部分：预处理器及其他主题
+  after: 第 5 部分：预处理器及其他主题

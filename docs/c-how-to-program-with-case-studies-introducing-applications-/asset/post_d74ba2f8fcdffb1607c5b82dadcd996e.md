@@ -1,0 +1,306 @@
+
+## S
+- samples (in datasets) 584
+- Satya Nadella xxxii
+- savings account example 140
+- scalar 261, 326
+- scaling 198
+- scaling factor 198, 202
+- scan characters 467
+- scan set 469
+  - inverted 470
+- scanf 450
+- scanf function 62
+- scanf_s function xxxiii, 289
+- scanning images 5
+- scene tree (Webots) 376, 377
+- science, technology, engineering and math (STEM) xx
+- scientific computing 19
+- scientific notation 454
+- scope 686
+- scope of an identifier 206, 208
+- Scoping example 209
+- screen 4, 6, 24
+- SDK (Software Development Kit) 39
+- search a linked list 219
+- search functions of the string handling library 408
+- search key 272
+- search strings 408
+- searching 272, 274
+  - arrays xxv
+- searching a binary tree 626
+- searching strings 403
+- second refinement 100, 101, 108
+- secondary storage 5
+  - device 21
+  - unit 7
+- secure C 73
+- Secure C Programming sections xxxix
+- *Secure Coding in C and C++, 2/e* 164
+- secure random numbers
+  - arc4random function 221
+  - BCryptGenRandom function 221
+    - random function 221
+- security xxxv, xxxix, xli, 434
+- security vulnerabilities 74, 472
+- seed 201
+- seed the rand function 200
+- SEEK_CUR 558
+- SEEK_END 558
+- SEEK_SET 557, 558
+- segmentation fault 62, 389, 456
+- SEI (Carnegie Mellon University's Software Engineering Institute) 54
+- SEI CERT C Coding Standard xxii, 54, 73
+- selection sort 219, 677
+  - recursive 677
+- selection sort algorithm 660, 661, 664
+- selection statement xxv, 90
+- selection structure 88, 90
+- Self Check exercises xxix
+- self-documenting 61
+- self-driving cars 47, 49
+- self-referential structure 483, 597
+- semicolon (;) 58, 71
+- send a message to an object 749
+- sentiment analysis 47, 577
+- sentinel-controlled iteration xxv, 101
+- sentinel value 99, 101, 102, 124
+- sequence structure 88, 90
+- sequence structure flowchart 88
+- sequential access file 542
+- sequential execution 88
+- sequential file 542
+- service-oriented architecture (SOA) 37
+- `<setjmp.h>` 196
+- SetTargetFPS function (raylib) 524
+- Shakespeare xxxvii, 579
+  - *Romeo and Juliet* xci
+- shapes in raylib 521
+- shared memory (union) 492
+- sharing economy 47
+- shell prompt on Linux 3, 25
+- shift 198
+- Shifted, scaled integers produced by 1 + rand() % 6 198
+- shifting value 202
+- "shipping" section of the computer 6
+- short 149, 189
+- short-circuit evaluation 155
+- sibling 621
+- side effect 197, 207, 217
+- Sieve of Eratosthenes 307
+- SIGABRT 709
+- SIGFPE 709
+- SIGILL 709
+- SIGINT 709
+- sign bit 452
+- signal 709
+- signal handling xxvii, 709
+  - library 709
+- signal value 99
+- `<signal.h>` 196, 709
+- signed decimal integer 452
+- SIGSEGV 709
+- SIGTERM 709
+- silicon 4
+- similarity detection 47, 578, 579
+- Simple made-up programming language 636
+- Simple compiler 645
+  - data counter 649
+  - enhancements 654
+  - first pass 644
+  - tool 646
+  - optimize 653
+  - production 653
+  - second pass 644
+  - symbol table 644
+  - token 644
+  - unresolved forward reference 645
+- Simple compiler case study xxxviii, 643
+- Simple programming language 640
+- simple condition 154
+- simple interest problem 126
+- simple linear regression xxvi, xxxvii, 586
+- simplest flowchart 160
+- Simpletron 575
+- Simpletron computer case study xxxv
+- Simpletron Machine Language xxxv, xxxviii
+- Simpletron Machine Language (SML) 362, 596
+- Simpletron simulator 362, 365, 368
+  - modifications 368
+- Simpletron virtual machine 637, 641
+- simulated robots xxxiv
+- simulation xxx, 197, 339
+  - techniques xxv, xxxiv
+- simulations xli
+- sin function 183
+- sine 183
+- single entry/single exit control statement 89, 91, 161
+- single-selection statement 89
+- sinking sort 265
+- size_t 247, 404
+- sizeof operator 328, 484, 575, 598, 687
+- slope 585
+- smallest number problem 82
+- smart cities 47
+- smart homes 47
+- smart thermostats 47
+- smart traffic control 47
+- smartmeters 47
+- smartphone 15
+- SML 362, 365, 368
+  - instruction 363
+- SMS Language 433
+- social graph analysis 47
+- software xix, xxiv, 2
+- Software as a Service (SaaS) 37
+- software-based simulation xxxv, 362, 365
+- Software Development Kit (SDK) 39
+- software engineering 153, 208, 327
+- Software Engineering Institute (Carnegie Mellon) xxxix, 734
+- Software Engineering Institute (SEI) 54
+- software engineering observations xliv
+- software model 365
+- software reuse 18, 183, 327, 705
+- solid-state drive 4, 5
+- Solution Explorer 26
+  - add an existing file 26
+  - display 26
+- solution in Visual Studio 25
+- solve problems xli
+- sort algorithms
+  - bucket sort 678
+  - insertion sort 665
+  - merge sort 668
+  - Quicksort 678
+  - recursive selection sort 677
+  - selection sort 660
+  - sort key 658
+- sorting 265, 658
+  - arrays xxv
+- Sound type in raylib 523
+- sounds in raylib 521
+- source code 12
+- space 471
+- space flag 462, 463
+- space-time trade-off 674
+- spam detection 47
+- Spam Scanner 432
+- speaking to a computer 5
+- special characters 389
+- Special Section: Advanced String Manipulation Exercises 429
+- special symbol 8
+- speech recognition xl, 48, 577
+- speech synthesis xl, 48, 577
+- spell checking 578
+- spelling correction 578
+- split the array in merge sort 668
+- SpotOn Game (game-programming case study) raylib
+- SpotOn game 526
+- SpotOn Game App exercise enhancements 535
+- sprintf 399, 401
+- sqrt function 182
+- square brackets ([]) 245
+- square root 182
+- srand 200
+- sscanf 399, 402
+- stack 191, 310, 482, 596, 608
+- stack frame 192
+- stack overflow 192
+- Stack program 609
+- stacked building blocks 161
+- stacking rule 160
+- StackOverflow xxx, xxxi, xlv
+- stacks xxvii
+- Standard C 17
+- standard data types 329
+- standard deviation 583
+- standard error stream (stderr) 24, 450, 541
+- standard input 62
+- standard input stream 450
+- standard input stream (stdin) xxvi, 24, 450, 541
+- standard input/output header (stdio.h) 57
+- standard input/output library (stdio) 399
+- standard library 22
+- header 195, 683
+- standard output stream 450
+- standard output stream (stdout) xxvi, 24, 450, 541
+- standard version of C 17
+- statement 58, 88, 640
+- statement terminator (;) 58
+- statements return 185
+- static 206, 206, 207, 208, 258
+- Static arrays are automatically initialized to zero if not explicitly initialized by the programmer 258
+- _Static_assert 692
+- static assertions 724
+- static code analysis tools xxxiii
+- static data structures 711
+- static global variable 525
+- static storage duration 206
+- _Static_assert 735
+- statistical thinking xli
+- statistics
+  - count 583
+  - craps game 301
+  - maximum 583
+  - measures of central tendency 583
+  - measures of dispersion 583
+  - measures of variability 583
+  - minimum 583
+  - range 583
+  - standard deviation 583
+  - sum 583
+  - variance 583
+- stdalign.h header 735
+- stdarg.h 196, 700
+- stdbool.h 156, 725, 727
+- stddef.h 196, 312
+- stderr (standard error stream) 24, 541
+- stdin (standard input stream) 24, 399, 541
+- stdint.h 725
+- stdio.h 57, 146, 196, 207, 399, 450, 541, 686
+- stdlib.h 196, 197, 198, 396, 706
+- stdout (standard output stream) 24, 541, 544
+- stemming 578
+- stepwise refinement 339
+- stepwise refinement 100
+- stock market forecasting 47
+- stop word elimination 578
+- Storage as a Service (SaaS) 37
+- storage class 206
+- storage class of an identifier 206
+- storage duration 206, 260
+- storage duration of an identifier 206
+- storage unit boundary 507
+- storage-class specifiers 206
+- Store 363
+- store 653
+- stored array 600
+- straight-line form 66
+- strcat function 405
+- strchr function 409
+- strcmp function 406
+- strcpy function 404
+- strcspn function 410
+- stream 450, 540
+- strerror 419
+- string 58, 389
+- string processing xxvi
+- string array 338
+- string built-in type in JSON 591
+- string comparison lexicographical 408
+- string comparison functions 406
+- string concatenation 429
+- string constant 389
+- string conversion functions 396
+- string copy 429
+- string is a pointer 389
+- string literal 256, 389, 390
+- string literals separated only by whitespace 267
+- string manipulation functions of the string handling library 403, 407
+- string processing 196, 255
+- `<string.h>` 403
+- `<string.h>` header file 196
+- strlen function 419
+- strncat function 404, 405
+- strncmp function 406
+- strncpy function 404

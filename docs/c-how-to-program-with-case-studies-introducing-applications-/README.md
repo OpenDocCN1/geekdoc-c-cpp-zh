@@ -1,4 +1,4 @@
-# C 编程入门指南：案例研究介绍应用编程与系统编程
+# C程序设计：案例研究介绍应用编程和系统编程
 
 > 原文：[C how to program ： with case studies introducing applications programmung and systems programming]()
 > 

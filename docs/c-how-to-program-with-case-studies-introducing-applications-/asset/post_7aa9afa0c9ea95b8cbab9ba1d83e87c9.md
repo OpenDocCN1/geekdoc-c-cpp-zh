@@ -1,0 +1,291 @@
+
+- preorder traversal of a binary tree 219, 622, 625
+- preprocess phase 21
+- preprocessor xxviii, 22, 196, 682
+- preprocessor directive 22, 682, 683, 686
+- preventative medicine 47
+- preventing
+  - disease outbreaks 47
+- primary memory 6
+- prime number 234, 446
+- principle of least privilege 208, 263, 316, 319, 322, 327
+- print
+  - trees 635
+- print a hollow square 130
+- print a linked list backwards 219
+- print a square 129
+- print a string backwards 219, 308
+- print an array 219, 308
+- print an array backwards 219
+- print characters 393
+- print patterns 173
+- printf 450
+- printf function 58
+- printf_s function xxxiii
+- printing a string input at the keyboard backwards 219
+- Printing a string one character at a time using a non-constant pointer to constant data 321
+- printing character 394
+- printing dates in various formats 430
+- printing multiple lines with a single printf 59
+- printing one line with two printf statements 59
+- printing positive and negative numbers with and without the + flag 462
+- privacy xxxii, xxxv, xli, 53, 434
+- private decryption key 440
+- private key 440, 442, 444
+- probability 198
+- problem solving xxv, xxviii
+- procedural programming xxxiii, 747
+- procedure 86
+- Processing a queue 615
+- processing phase 100, 102, 105
+- processing unit 4
+- product 80
+- production (Simple compiler) 653
+- program 4, 4
+- program control 87
+- program execution stack 191
+- Program to simulate the game of craps 203
+- ProgrammableWeb xxxviii, 38, 594
+- programmer 4
+- Programmer-defined maximum function 187
+- programming xli
+- programming fundamentals xx, xli
+- programming languages xxiv
+- programming paradigms xxxiii, 747
+- Project Gutenberg xxxi, 579
+- project in Visual Studio 25
+- project in Xcode 29
+- Project MAC (MIT) xxx
+- Project navigator 30
+- promotion 190
+- prompt 62
+- proprietary software 13
+- protecting the environment 47
+- PROTO nodes (Webots) 377
+- pseudo-random numbers 200
+- pseudocode 87, 102, 105
+- -pthread option (multi-threading) 741
+- public domain
+  - card images 522, 533
+  - images 534
+- public-domain card images 533
+- public encryption key 440, 443
+- public key 440, 442, 443
+- public key cryptography xxxv, 439, 441
+- public-key/private-key pair 442
+- push 609, 612
+- push onto a stack 191
+- putchar 399
+- puts 401, 575
+- puts function 74
+- Pythagorean Triples 176
+- Python 19
+- Python Software Foundation 14
+
+## Q
+- quad-core processor 7
+- quadratic run time 660
+- quantum computers 43
+- questions
+  - getting answered xlv
+- queue xxxvii, 310, 482, 596, 614, 615
+- quick_exit function 724
+- quicksort 219, 678
+
+## R
+- r file open mode 546
+- R programming language 19, 21
+- r+ file open mode 546
+- radians 183
+- radius 131
+- raise 709
+- raising an integer to an integer power 219
+- raylib game-programming library
+  - element positions 524
+- RAM (Random Access Memory) 6
+- rand 197
+- RAND_MAX 198, 201
+- random function POSIX secure random numbers 221
+- random number
+  - generation xxv, xxxiv
+- random number generation 339, 427
+- random-access file 552, 555
+- randomizing 200
+- range checking 164
+- range statistic 583
+- raylib
+  - Cannon game 527
+- raylib
+  - Law of Large Numbers Animation 529
+- raylib cheat sheet 523
+- raylib game programming library xxxv, 520
+  - animation xxxvi, 521
+  - collision detection xxxvi, 521
+  - colors 521
+  - input events xxxvi, 521
+  - shapes xxxvi, 521
+  - sounds xxxvi, 521
+- raylib game-programming library
+  - C programming demos 521
+  - CloseWindow function 525
+  - color constants 523
+  - Color type 523
+  - custom types 523
+  - DrawGame function 525
+  - DrawRectangleLines function 535
+  - DrawTextureEx function 535
+  - frame-by-frame animation 524
+  - game loop 524
+  - InitGame function 524
+  - InitWindow function 524
+  - Law of Large Numbers 529
+  - Rectangle type 523
+  - rFXGen online sound-effect generator 526
+  - RGBA color 523
+  - sample games 521
+  - SetTargetFPS function 524
+  - Sound type 523
+  - types 523
+  - UnloadGame function 525
+  - UpdateGame function 525
+  - Vector2 type 523
+  - WindowShouldClose function 525
+- raylib.h header 523
+- rb file open mode 546
+- rb+ file open mode 546
+- read 645
+- readability 71, 577
+- reading and discarding characters from the input stream 471
+- reading characters and strings 469
+- reading input with floating-point conversion specifiers 468
+- reading input with integer conversion specifiers 467
+- readline function (non-standard) 390
+- real-time systems xxii
+- real-world data xli
+- real10c 711
+- “receiving” section of the computer 5
+- recommender systems 47
+- record 9, 322, 542
+- record key 542
+- rectangle 91
+- rectangle symbol 89
+- Rectangle type in raylib 523
+- RectangleArena (Webots) 372, 376
+- recursion xxv, 211, 217
+- recursion step 212
+- recursive call 212
+- recursive definition 212
+- recursive function 211
+- recursive function gcd 237
+- recursive function power 235
+- vs. iteration 218
+- recursion examples
+  - binary search 219
+  - binary tree insert 219
+  - check if a string is a palindrome 219
+  - Eight Queens 219
+  - Factorial function 219
+  - Fibonacci function 219
+  - Greatest common divisor 219
+  - inorder traversal of a binary tree 219
+  - linear search 219
+  - maze traversal 219
+- recursion examples (cont.)
+  - minimum value in an array 219
+  - multiply two integers 219
+  - postorder traversal of a binary tree 219
+  - preorder traversal of a binary tree 219
+  - print a linked list backwards 219
+  - print a string backwards 219
+  - print an array 219
+  - print an array backwards 219
+  - printing a string input at the keyboard backwards 219
+  - quicksort 219
+  - raising an integer to an integer power 219
+  - recursive main 219
+  - search a linked list 219
+  - selection sort 219
+  - sum of the elements of an array 219
+  - Towers of Hanoi 219
+  - visualizing recursion 219
+- recursive search of a list 635
+- recursive main 219
+- recursive selection sort 677
+- recursive step of Quicksort 678
+- reddit xlv
+- redirect input or output 450, 451
+- reducing carbon emissions 47
+- redundant parentheses 68
+- refactoring 39
+- register 206
+- regression line 585
+- reinforcement learning 50
+- reinventing the wheel 180
+- relational database 9
+- relational operators 69
+- reliable integer division 724, 731
+- remainder 183
+- remainder operator (%) 65, 82, 198
+- repeatability 200
+- replacement text 249, 684
+- representational error in floating point 142
+- Representational State Transfer (REST) 590
+- reproducibility xli, 53
+- request to a web service 589
+- requirements 207
+- requirements statement 750
+- research and project exercises xxx
+- reserved word 72
+- response from a web service 589
+- RESTful web services 590
+- restrict 730
+- restricted pointer 730
+- restricted pointers 724
+- return 315
+- return a result 57, 185
+- return from a function 181, 182
+- return key 22, 367
+- return statement 185, 187
+- return type 327
+- return value type 186, 223
+- reusable software components 747
+- reuse 748
+- rewind function 548
+- rFXGen online sound-effect generator (raylib) 526
+- RGBA (red, green, blue, alpha) color 523
+- Richards, Martin 16
+- ride sharing 47
+- right align in a field 142, 458
+- right brace (}) 57
+- right child 621
+- right justify in a field 451, 458, 462
+- right subtree 621
+- right-justifying integers in a field 458
+- right-shift (>>) operator 518
+- rise-and-shine algorithm 86
+- risk minimization 47
+- risk monitoring and minimization 47
+- Ritchie, D. 16
+- robot advisers 47
+- robot
+  - e-puck 373
+- robotics simulations xxxiv
+- robotics simulator 369, 385
+- Robotics with Webot Simulator xxxiv
+- roll a six-sided die 199
+- *Romeo and Juliet* xxxi, xli
+- root node of a binary tree 621, 635
+- rounded 105
+- rounding 80, 211, 451
+- rounding a number 143
+- rounding toward negative infinity 731
+- rounding toward zero 731
+- rows 278
+- RSA algorithm xxxv
+- RSA ciphertext cracking 448
+- RSA Problem 448
+- RSA Public-Key Cryptography algorithm 440
+- rules of operator precedence 66
+- runtime constraint 349
+- runtime error 24
+- *rvalue* ("right value") 158

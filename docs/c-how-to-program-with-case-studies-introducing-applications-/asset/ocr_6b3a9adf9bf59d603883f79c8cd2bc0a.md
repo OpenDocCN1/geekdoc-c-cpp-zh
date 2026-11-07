@@ -1,0 +1,58 @@
+# 7.18 What does this program do?
+
+```
+// ex07_20.c
+// what does this program do?
+#include <stdio.h>
+#define SIZE 80
+
+size_t mystery2(const char *s); // prototype
+
+int main(void) {
+    char string[SIZE]; // create char array
+
+    puts("Enter a string: ");
+    scanf("%79s", string);
+    printf("%d\n", mystery2(string));
+}
+
+// What does this function do?
+size_t mystery2(const char *s) {
+    size_t x;
+
+    // Loop through string
+    for (x = 0; *s != '\0'; ++s) {
+        ++x;
+    }
+
+    return x;
+}
+```
+
+# 7.19 Find the error in each of the following program segments. If the error can be corrected, explain how.
+
+Find the error in each of the following program segments. If the error can be corrected, explain how.
+
++   a) int *number;
++       printf("%d\n", *number);
++   
++   b) float *realPtr;
++       long *integerPtr;
++       integerPtr = realPtr;
++   
++   c) int * x, y;
++       x = y;
++   
++   d) char s[] = "this is a character array";
++       int count;
++       for (; *s != '\0'; ++s) {
++           printf("%c ", *s);
++       }
++   
++   e) short *numPtr, result;
++       void *genericPtr = numPtr;
++       result = *genericPtr + 7;
++   
++   f) float x = 19.34;
++       float xPtr = &x;
++       printf("%f\n", xPtr);

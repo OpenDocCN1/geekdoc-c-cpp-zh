@@ -403,7 +403,7 @@
 +   [C 编程：C++ 入门指南](docs/c-how-to-program-with-an-introduction-to-c/README.md)
 +   [C 语言编程：C++ 入门指南，全球版](docs/c-how-to-program-with-an-introduction-to-c-global-edition/README.md)
 +   [C 语言编程：应用与系统编程案例分析，全球版](docs/c-how-to-program-with-case-studies-in-applications-and-syste/README.md)
-+   [C 编程入门指南：案例研究介绍应用编程与系统编程](docs/c-how-to-program-with-case-studies-introducing-applications-/README.md)
++   [C程序设计：案例研究介绍应用编程和系统编程](docs/c-how-to-program-with-case-studies-introducing-applications-/README.md)
 +   [C++ 24 小时实战，Sams 自学指南（第6版）](docs/c-in-24-hours-sams-teach-yourself-6th-edition/README.md)
 +   [C 深度](docs/c-in-depth/README.md)
 +   [C 深入：从初学者到专家简易指南](docs/c-in-depth-easy-beginners-to-experts-guide/README.md)

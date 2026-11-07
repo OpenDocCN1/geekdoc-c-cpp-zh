@@ -1,0 +1,49 @@
+```
+puts("End of run.");
+}
+// display program instructions to user
+void instructions(void) {
+    printf("Enter your choice:\n"
+           "  1 to add an item to the queue\n"
+           "  2 to remove an item from the queue\n"
+           "  3 to end\n");
+}
+
+// insert a node at queue tail
+void enqueue(QueueNodePtr *headPtr, QueueNodePtr *tailPtr, char value) {
+    QueueNodePtr newPtr = malloc(sizeof(QueueNode));
+
+    if (newPtr != NULL) { // is space available?
+        newPtr->data = value;
+        newPtr->nextPtr = NULL;
+
+        // if empty, insert node at head
+        if (isEmpty(*headPtr)) {
+            *headPtr = newPtr;
+        }
+        else {
+            (*tailPtr)->nextPtr = newPtr;
+        }
+
+        *tailPtr = newPtr;
+    }
+    else {
+        printf("%c not inserted. No memory available.\n", value);
+    }
+}
+
+// remove node from queue head
+char dequeue(QueueNodePtr *headPtr, QueueNodePtr *tailPtr) {
+    char value = (*headPtr)->data;
+    QueueNodePtr tempPtr = *headPtr;
+    *headPtr = (*headPtr)->nextPtr;
+
+    // if queue is empty
+    if (*headPtr == NULL) {
+        *tailPtr = NULL;
+    }
+
+    free(tempPtr);
+    return value;
+}
+```
