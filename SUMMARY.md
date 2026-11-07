@@ -426,6 +426,7 @@
 +   [C++ 精通：编程卓越全面指南](docs/c-mastery-a-comprehensive-guide-to-programming-excellence/README.md)
 +   [C# 迷你参考：C# 编程语言的快速指南](docs/c-mini-reference-a-quick-guide-to-the-c-programming-language/README.md)
 +   [C++ 移动语义 - 完整指南](docs/c-move-semantics---the-complete-guide/README.md)
++   [C++ 移动语义完整指南：第一版](docs/c-move-semantics---the-complete-guide-first-edition/README.md)
 +   [C++ 多线程秘籍](docs/c-multithreading-cookbook/README.md)
 +   [C 笔记：C 编程语言指南](docs/c-notes-a-guide-to-the-c-programming-language/README.md)
 +   [C 语言专业指南指南](docs/c-notes-for-professionals/README.md)

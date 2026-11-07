@@ -1,0 +1,55 @@
+Programs using `std::move()` usually compile without including this header file, because in practice almost all header files include `<utility>`. However, no standard header file is required to include `utility`. Therefore, when using `std::move()`, you should explicitly include `<utility>` to make your program portable.
+
+# ### 2.2.2   Implementation of `std::move()`
+
+`std::move()` is nothing but a `static_cast` to an rvalue reference. You can achieve the same effect by calling `static_cast` manually as follows:
+
+```
+```cpp
+foo(static_cast<decltype(foo)&>(obj));    // same effect as foo(std::move(obj))
+```
+```
+
+Therefore, we could also write:
+
+```
+```cpp
+std::string s;
+...
+foo(static_cast<std::string&>(s));        // same effect as foo(std::move(s))
+```
+```
+
+Note that the `static_cast` does a bit more than only changing the type of the object here. It also enables the object to be passed to an rvalue reference (remember that passing objects with names to rvalue references is usually not allowed). We will discuss this in detail in the chapter about value categories.
+
+# ## 2.3   Moved-From Objects
+
+After a `std::move()`, moved-from objects are not (partially) destroyed. They are still valid objects for which at least the destructor will be called. However, they should also be valid in the sense that they have a consistent state and all operations work as expected. The only thing you do not know is their value. It is like using a parameter of the type where you have no clue which value was passed.
+
+# ### 2.3.1   Valid but Unspecified State
+
+The C++ standard library guarantees that moved-from objects are in a *valid but unspecified state*.
+
+Consider the following code:
+
+```
+```cpp
+std::string s;
+...
+coll.push_back(std::move(s));
+```
+```
+
+After passing `s` with `std::move()` you can ask for the number of characters, print out the value, or even assign a new value. However, you cannot print the first character or any other character without checking the number of characters first:
+
+```
+```cpp
+foo(std::move(s));                 // keeps s in a valid but unclear state
+
+std::cout << s << '\n';              // OK (don’t know which value is written)
+std::cout << s.size() << '\n';      // OK (writes current number of characters)
+std::cout << s[0] << '\n';          // ERROR (potentially undefined behavior)
+std::cout << s.front() << '\n';     // ERROR (potentially undefined behavior)
+s = "new value";                    // OK
+```
+```

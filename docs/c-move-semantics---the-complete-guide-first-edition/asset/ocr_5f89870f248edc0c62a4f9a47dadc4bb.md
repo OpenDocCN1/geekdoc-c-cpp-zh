@@ -1,0 +1,7 @@
++   2. We insert this temporary string into the vector `coll`. However, here something different happens now: we steal the memory for the value from `s+s` and move it to the new element of `coll`.
+
+![](bbox=[0.156, 0.143, 0.781, 0.454])
+
+This is possible because since C++11, we can implement special behavior for getting a value that is no longer needed. The compiler can signal this fact because it knows that right after performing the `push_back()` call, the temporary object `s+s` will be destroyed. So, we call a different implementation of `push_back()` provided for the case when the caller no longer needs that value. As we can see, the effect is an optimized implementation of copying a string where we no longer need the value: instead of creating an individual deep copy, we copy both the size and the pointer to the memory. However, that shallow copy is not enough; we also modify the temporary object `s+s` by setting the size to 0 and assigning the `nullptr` as new value. Essentially, `s+s` is modified so that it gets the state of an empty string. The important point is that it no longer owns its memory. And that is important because we still have a third step in this statement.
+
++   3. At the end of the statement, the temporary string `s+s` is destroyed because we no longer need it. However, because the temporary string is no longer the owner of the initial memory, the destructor will not free this memory.

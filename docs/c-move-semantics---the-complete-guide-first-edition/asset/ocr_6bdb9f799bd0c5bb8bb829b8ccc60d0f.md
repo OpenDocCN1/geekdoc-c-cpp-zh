@@ -1,0 +1,45 @@
+# Implementing Move Semantics
+
+The third option is to implement the move operations so that they do not break the invariants of the class. For this, we have to decide what the state of a moved-from object should be. To support that `asString()` can call `operator*` without checking whether a value exists, we would always have to provide a value. We could, for example, have a static moved-from value which we assign to objects where the value is moved away.⁶
+
+`basics/sharedint.hpp`
+
+```
+```cpp
+#include <memory>
+#include <string>
+
+class SharedInt {
+  private:
+    std::shared_ptr<int> sp;
+    // special “value” for moved-from objects:
+    inline static std::shared_ptr<int> movedFromValue{std::make_shared<int>(0)};
+
+  public:
+    explicit SharedInt(int val)
+      : sp{std::make_shared<int>(val)} {
+    }
+
+    std::string asString() const {
+      return std::to_string(*sp);    // OOPS: unconditional deref
+    }
+
+    // fix moving special member functions:
+    SharedInt (SharedInt&& si)
+      : sp{std::move(si.sp)} {
+        si.sp = movedFromValue;
+    }
+    SharedInt& operator= (SharedInt&& si) noexcept {
+      if (this != &si) {
+        sp = std::move(si.sp);
+        si.sp = movedFromValue;
+      }
+      return *this;
+    }
+
+    // enable copying (deleted with user-declared move operations):
+    SharedInt (const SharedInt&) = default;
+```
+```
+
+⁶ Note that inline static members are only supported since C++17. Before C++17, you had to define the member in a separate CPP file to respect the *one definition rule* (ODR).

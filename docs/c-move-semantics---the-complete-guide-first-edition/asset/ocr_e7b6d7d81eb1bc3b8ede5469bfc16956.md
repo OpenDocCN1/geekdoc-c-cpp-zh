@@ -1,0 +1,26 @@
+```
+```cpp
+std::string first;  // first name
+std::string last;   // last name
+public:
+  Person(std::string f, std::string l)
+    : first{std::move(f)}, last{std::move(l)} {
+  }
+  ...
+};
+```
+```
+
+This single constructor takes all possible arguments and ensures that we have only one allocation for each argument.
+
+For example, if we pass two string literals:
+
+`Person p{"Ben", "Cook"};`
+
+we first use them to initialize the parameters f and l:
+
+![](bbox=[0.115, 0.375, 0.51, 0.569])
+
+By using `std::move()`, we move the values of the parameters to the members. First, the member `first` steals the value from `f`:
+
+![](bbox=[0.115, 0.636, 0.51, 0.829])

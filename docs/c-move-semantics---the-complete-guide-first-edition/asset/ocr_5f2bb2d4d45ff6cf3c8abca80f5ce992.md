@@ -1,0 +1,56 @@
+```
+```cpp
+};
+```
+```
+
+the only valid function to call for const objects is the first overload of `push_back()` with the const& parameter:
+
+```
+```cpp
+std::vector<std::string> coll;
+const std::string s{"data"};
+...
+coll.push_back(std::move(s));  // OK, calls push_back(const std::string&)
+```
+```
+
+That means that a `std::move()` for const objects essentially has no effect.
+
+In principle, we could provide a special overload for this case by declaring a function taking a const rvalue reference. However, this makes no semantic sense. Again, the const lvalue reference overload serves as a fallback to handle this case.
+
+# 1.4.1 const Return Values
+
+The fact that const disables move semantics also has consequences for declaring return types. A const return value cannot be moved.
+
+Therefore, since C++11, it is no longer good style to return by value with const (as some style guides have recommended in the past). For example:
+
+```
+```cpp
+const std::string getValue();
+```
+```
+
+```
+```cpp
+std::vector<std::string> coll;
+...
+coll.push_back(getValue());  // copies (because the return value is const)
+```
+```
+
+When returning by value, do not declare the return value as a whole to be const. Use const only to declare parts of your return type (such as the object returned reference or pointers to):
+
+```
+```cpp
+const std::string   getValue();  // BAD: disables move semantics for return values
+const std::string&  getRef();     // OK
+const std::string*  getPtr();     // OK
+```
+```
+
+# 1.5 Summary
+
++   - Move semantics allows us to optimize the copying of objects, where we no longer need the value. It can be used implicitly (for unnamed temporary objects or local return values) or explicitly (with `std::move()`).
++   - `std::move()` means *I no longer need this value here*. It marks the object as movable. An object marked with `std::move()` is not (partially) destroyed (the destructor still will be called).
++   - By declaring a function with a non-const rvalue reference (such as `std::string&&`), you define an interface where the caller semantically claims that it no longer needs the passed value. The implementer of the function can use this information to optimize its task by “stealing” the value or do any other modification with the passed argument. Usually, the implementer also has to ensure that the passed argument is in a valid state after the call.

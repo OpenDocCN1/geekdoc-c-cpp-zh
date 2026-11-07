@@ -1,0 +1,39 @@
+```
+char c = *pos;
+if (c == ' ') {
+    ...
+}
+```
+
+Before we start to iterate, we initialize a reference¹ because we have to use the passed range twice (once to call `begin()` and once to call `end()` for it) and want to avoid creating a copy of the range (which might be expensive or even not possible). In general, references extend the lifetime of what they refer to. However, in this case, range does not refer to the `Person` returned by `returnPersonByValue();` range refers to the return value of `getName()`, which is a *reference* to a returned `Person`. Thus, range extends the lifetime of the reference but not of the temporary object that the reference refers to. Therefore, with the end of the first statement, the returned temporary object is destroyed and we use a reference to the name of a destroyed object when we iterate over the characters of the name.
+
+At best, we get a core dump here so that we see that something went significantly wrong. At worst, we get fatal undefined behavior once we ship the software.
+
+Code like this would not be a problem if the getter were to return the name by value. In that case, range would extend the lifetime of a copy of the name so that we can use the name until the end of the lifetime of range.
+
+# 5.1.3 Using Move Semantics to Solve the Dilemma
+
+With move semantics, we now have a way to solve the dilemma. We can return by reference if it is safe to do so and return by value if we might run into lifetime issues.
+
+The way to program this is as follows:
+
+```
+class Person
+{
+private:
+    std::string name;
+public:
+    ...
+    std::string getName() && {    // when we no longer need the value
+        return std::move(name);   // we steal and return by value
+    }
+
+    const std::string& getName() const& {    // in all other cases
+        return name;                         // we give access to the member
+    }
+};
+```
+
+We overload the getter with different reference qualifiers in the same way as when overloading a function for && and const& parameters:
+
++   - The version with the && qualifier is used when we have an object where we no longer need the value (an object that is about to die or that we have marked with `std::move()`).

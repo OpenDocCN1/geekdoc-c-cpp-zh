@@ -1,0 +1,13 @@
++   - **2020-01-04**: The initial published version of the book
+
+# Acknowledgments
+
+First of all, I would like to thank you, the C++ community, for making this book possible. The incredible design of all the features of move semantics, the helpful feedback, and their curiosity are the basis for the evolution of a successful language. In particular, thanks for all the issues you told me about and explained and for the feedback you gave.
+
+I would especially like to thank everyone who reviewed drafts of this book or corresponding slides and provided valuable feedback and clarification. These reviews increased the quality of the book significantly, again proving that good things need the input of many “wise guys.” Therefore, so far (this list is still growing) huge thanks to Javier Estrada, Howard Hinnant, Klaus Iglberger, Daniel Krügler, Marc Mutz, Aleksandr Solovet (axelovet), Peter Sommerlad, and Tony Van Eerd.
+
+In addition, I would like to thank everyone in the C++ community and on the C++ standards committee. In addition to all the work involved in adding new language and library features, these experts spent many, many hours explaining and discussing their work with me, and they did so with patience and enthusiasm.
+
+Special thanks go to the LaTeX community for a great text system and to Frank Mittelbach for solving my \LaTeX issues (it was almost always my fault).
+
+And finally, many thanks go to my proofreader, Tracey Duffy, who has done a tremendous job of converting my “German English” into native English.

@@ -1,0 +1,45 @@
+# std::move() for Reference or static Members
+
+If the members are references or static, different rules apply.² A reference or static member of an rvalue is still an lvalue. Again, this rule reflects that the value of such a member is not really part of the object. Saying “I no longer need the value of the object” should not imply “I no longer need the value (of a member) that is not part of the object.”
+
+Therefore, it makes a difference how you use std::move() if you have reference or static members:
+
++   - Using `std::move()` for the *object* has no effect:
++   
++     ```cpp
++     struct S {
++         static std::string statString;  // static member
++         std::string& refString;         // reference member
++     };
++   
++     S obj;
++     ...
++     coll.push_back(std::move(obj).statString);  // copies statString
++     coll.push_back(std::move(obj).refString);   // copies refString
++     ```
+
++   - Using `std::move()` for the *members* has the usual effect:
++   
++     ```cpp
++     struct S {
++         static std::string statString;
++         std::string& refString;
++     };
++     S obj;
++     ...
++     coll.push_back(std::move(obj).statString);  // moves statString
++     coll.push_back(std::move(obj).refString);   // moves refString
++     ```
+
+Whether such a move is useful is a different question. Stealing the value of a static member or referenced member means that you modify a value outside the object you use. It might make sense, but it could also be surprising and dangerous. Usually, a type S should better protect access to these members.
+
+In generic code, you might not know whether members are static or references. Therefore, using the approach to mark the object with std::move() is less dangerous, even though it looks weird:
+
+```
+coll.push_back(std::move(obj).mem1);  // move value, copy reference/static
+coll.push_back(std::move(obj).mem2);  // move value, copy reference/static
+```
+
+In the same way, std::forward<>(), which we introduce later, can be used to perfectly forward members of objects. See *basics/members.cpp* for a complete example.
+
+² Thanks to Andrey Upadyshev for pointing this out.
