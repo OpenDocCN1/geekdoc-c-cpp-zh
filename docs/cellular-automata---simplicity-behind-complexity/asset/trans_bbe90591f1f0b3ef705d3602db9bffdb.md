@@ -1,0 +1,61 @@
+
+- Gardner, M. (1970). 数学游戏：约翰·康威的新单人游戏“生命”的奇妙组合. *科学美国人*, 223, (1970年10月) 120-123.
+- 基因本体论, http://www.geneontology.org/GO.database.shtml.
+- Guimerà, R. & Amaral, L. A. N. (2005). 复杂代谢网络的功能制图. *自然*, 433, 895-900.
+- Hanahan, D. & Weinberg, R. A. (2000). 癌症的标志特征. *细胞*, 100, 第1期, (2000年1月) 57-70.
+- Hintze, A. & Adami, C. (2008). 复杂模块化生物网络的进化. *PLoS 计算生物学*, 4, 第2期, e23.
+- Hoffman, P. (1998). *只爱数字的人：保罗·埃尔德什的故事与数学真相的探索*. Hyperion出版社, ISBN: 0-786-86362-5, 纽约州纽约市.
+- Hopkins, A. L. (2008). 网络药理学：药物发现的下一范式. *自然化学生物学*, 4, (2008年10月) 682-690.
+- Huang, C.-Y. F. & Ferrell, J. E. (1996). 丝裂原活化蛋白激酶级联中的超敏感性. *美国国家科学院院刊*, 93, (1996年9月) 10078-10083.
+- 人类蛋白质组组织, www.hupo.org.
+- Igney, F. H. & Krammer, P. H. (2005). 肿瘤反击：事实还是虚构？ *癌症免疫学与免疫治疗*, 54, 第11期, 1127-1136.
+- Ingenuity 通路分析（Ingenuity® 系统公司, www.ingenuity.com）.
+- Irmer, M., Thome, M., Hahne, M., Schneider, P., Hofmann, K., Steiner, V., Bodmer, J. L., Schroter, M., Burns, K., Mattmann, C., Rimoldi, D., French, L. E. & Tschopp, J. (1997). 细胞FLIP对死亡受体信号的抑制. *自然*, 388, 190-195.
+- Jin, Z. & El-Deiry, W. S. (2005). 细胞死亡信号通路概述. *癌症生物学与治疗*, 4, 第2期, (2005年2月) 139-163.
+- Kashtan, N., Itzkovitz, S., Milo, R. & Alon, U. (2004). 网络基序的拓扑推广. *物理评论E*, 第70卷, 第3期, 031909(12).
+- Kashtan, N. & Alon, U. (2005). 模块性和网络基序的自发进化. *美国国家科学院院刊*, 102, 第39期, (2005年9月) 13773-13778.
+- Kauffman, S. (1969). 随机构建的遗传网络中的代谢稳定性与后成论. *理论生物学杂志*, 22, 437-467.
+- Kauffman, S. (1993). *秩序的起源：进化中的自组织与选择*. 牛津大学出版社, ISBN: 0-19-505811-9, 纽约州纽约市.
+- Kauffman, S., Peterson, C., Samuelsson, B. & Troein, C. (2003). 随机布尔网络模型与酵母转录网络. *美国国家科学院院刊*, 100, 第25期, (2003年12月) 14796-14799.
+- KEGG数据库, http://www.genome.jp/kegg/kegg1.html.
+- Kholodenko, B. N. (2000). 负反馈和超敏感性可引发丝裂原活化激酶级联中的振荡. *欧洲生物化学杂志*, 267, (2000年2月) 1583-1588.
+- Kier, L. B., Cheng, C.-K., Testa, B. & Carrupt, P.-A. (1996). 酶动力学的元胞自动机模型. *分子图形学杂志*, 14, (1996年8月) 227-231.
+- Kier, L. B., Seybold, P. G. & Cheng, C.-K. (2005a). *化学系统的元胞自动机建模*. Springer出版社, ISBN: 1-4020-3657-4, 阿姆斯特丹.
+- Kier, L. B. & Witten, T. M. (2005b). 复杂生化网络的元胞自动机模型. 见：*化学、生物学与生态学中的复杂性*, Bonchev, D. & Rouvray, D. H. (编), 237-301, Springer出版社, ISBN: 0-387-23264-8, 纽约州纽约市.
+- Newman, M. E. J. (2006). 网络中的模块性和社团结构. *美国国家科学院院刊*, 103, 第23期, (2006年6月) 8577-8582.
+- Okazaki, N., Asano, R., Kinoshita, T. & Chuman, H. (2008). Fas信号诱导凋亡中I型/II型细胞的简单计算模型. *理论生物学杂志*, 250, 第4期, 621-633.
+- Opsahl, T. & Panzarasa, P. (2009). 加权网络中的聚类. *社会网络*, 31, 第2期, 155-163.
+- Palsson, B. (2006). *系统生物学：重建网络的性质*. 剑桥大学出版社, ISBN: 0521859034, 马萨诸塞州剑桥.
+- Pathway Studio（Ariadne Genomics公司, www.ariadnegenomics.com）.
+- Peak, D., West, J. D., Messinger, S. & Mott, K. A. (2004). 植物中复杂集体动力学与分布式涌现计算的证据. *美国国家科学院院刊*, 101, 第4期, (2004年1月) 918-922.
+- PINA数据库, http://csbi.ltd.keio.ac.jp/pina/.
+- Prill, R. J., Iglesias, P. A. & Levchenko, A. (2005). 网络基序的动态特性有助于生物网络的组织. *PLoS 生物学*, 3, 第11期, (2005年11月) e343.
+- Yuan, Q. & Ge, H. (2006). 细胞网络的模块性与动力学. *PLoS 计算生物学*, 2006, 2, 第12期, (2006年12月) 1502-1510.
+- Reed, J. C. (2006). 药物洞见：基于恢复内源性细胞死亡机制的癌症治疗策略. *自然临床实践肿瘤学*, 3, 第7期, (2006年4月), 388-398.
+- Reichardt, J. & Bornholdt, S. (2006). 社群检测的统计力学. *物理评论E*, 74, (2006年7月) 016110.
+- Rives, A. W. & Galitski, T. (2003). 细胞网络的模块化组织. *美国国家科学院院刊*, 100, 第3期, (2003年2月) 1128-1133.
+- Rucker, R. (2005). *生命之盒、海贝与灵魂*. Thunder's Mouth出版社, ISBN 1-560-25722-9, 纽约州纽约市.
+- Salvesen, G. S. & Riedl, S. J. (2009). Fas/FADD复合物的结构：一种通过受体聚集介导信号传导的条件性死亡结构域复合物. *细胞周期*, 8, 第17期, (2009年9月), 2723-2727.
+- Scott, F. L., Stec, B., Pop, C., Dobaczewska, M., Lee, J. E., Monosov, E., Robinson, H., Salvesen, G. S., Schwarzenbacher, R. & Riedl, S. J. (2009). Fas-FADD死亡结构域复合物结构揭示了受体聚集的信号传导机制. *自然*, 457, 第7232期, (2009年2月) 1019-1022.
+- Scott, J. (1991). *社会网络分析：手册*. Sage出版社, ISBN 0-7619-6338-3, 英国伦敦.
+- Shannon, P., Markiel, A., Ozier, O., Baliga, N. S., Wang, J. T., Ramage, D., Amin, N., Schwikowski, B. & Ideker, T. (2003). Cytoscape：生物分子相互作用网络整合模型的软件环境. *基因组研究*, 13, (2003年11月), 2498-2504. http://cytoscape.org/download.php.
+- Strogatz, S. H. (2001). 探索复杂网络. *自然*, 410, (2001年3月), 268-276.
+- Taylor, D. T., Cain, J. W., Bonchev, D., Apte, A., Fong, S. S. & Pace, L. E. (2010). 迈向等动力学前馈基序的分类. *生物动力学杂志*, 4, 第2期, (2010年3月) 196-211.
+- Thomas, S. & Bonchev, D. (2010). 分子生物学中网络分析当前软件综述. *人类基因组学*, 4, 第5期, (2010年6月) 353-360.
+- Tyson, J. J., Chen, K. & Novak, B. (2001). 网络动力学与细胞生理学. *自然评论分子细胞生物学*, 2, 第12期, (2001年12月) 908-916.
+- Vazquez, A. (2003). 局部规则下的网络生长：优先连接、聚类层次和度相关性. *物理评论E*, 67 (2003年5月) 056104.
+- von Neumann, J. (1966). *自复制自动机理论*. Burks, A. W. (编), 伊利诺伊大学出版社, 厄巴纳, 伊利诺伊州.
+- Watts, D. J. & Strogatz, S. H. (1998). “小世界”网络的集体动力学. *自然*, 393, (1998年6月) 440-442.
+- Watts, D. J. (1999). 网络、动力学与小世界现象. *美国社会学杂志*, 105, 第2期, (1999年9月) 493–527.
+- Watts, D. J. (2003). *小世界：秩序与随机之间网络的动力学*. 普林斯顿大学出版社, ISBN 0-691-11704-7, 新泽西州普林斯顿.
+- Wajant, H. (2002). Fas信号通路：不仅仅是范式. *科学*, 296, 第5573期 (2002年5月), 1635-1636.
+- Weimar, J. R. (2002). 酶反应网络的元胞自动机方法. 第五届细胞自动机研究与工业国际会议(ACRI), 日内瓦, 2002年10月. *计算机科学讲义*, 293, 294-303, Springer出版社, 柏林.
+- Weitz, J. S., Benfey, P. N. & Wingreen, N. S. (2007). 进化、相互作用与生物网络. *PLoS 生物学*, 5, 第1期 (2007年1月) e11.
+- Wernicke, S. & Rasche, F. (2006). FANMOD：快速网络基序检测工具. *生物信息学*, 22, 第9期, 1152-1153.
+- Wilson, T. R., McEwan, M., McLaughlin, K., Le Clorennec, C., Allen, W. L., Fennell, D. A., Johnston, P. G. & Longley, D. B. (2009). FLIP与XIAP联合抑制诱导II型结直肠癌细胞中不依赖Bax的凋亡. *癌基因*, 28, 第1期, (2009年1月) 63-72.
+- Wolfram, S. (1986). *元胞自动机的理论与应用*. 复杂系统高级丛书, 世界科学出版社, 新加坡, 1986.
+- Wolfram, S. (2002). *一种新科学*. Wolfram Media出版社, ISBN 1-57955-008-8, 伊利诺伊州尚佩恩.
+- Wong, S. L., Zhang, L. V., Tong, A. H. Y., Li, Z., Goldberg, D. S., King, O. D., Lesage, G., Vidal, M., Andrews, B., Bussey, H., Boone, C., Roth, F. P. & Kleckner, N. (2004). 结合生物网络预测遗传相互作用. *美国国家科学院院刊*, 101, 第44期, (2004年11月) 15682-15687.
+- Woodcock, M. R. (2010). 利用十二种*Drosophila*（果蝇）物种进行microRNA及其相应信使RNA靶标的网络分析和比较系统基因组学. 博士论文 (2010年11月).
+- Zhigulin, V. P. (2004). 动力学基序：复杂网络动力学的构建模块. *物理评论快报*, 92, 第23期, (2004年6月) 238701.
+- Zhou, L. L., Zhou, L. Y., Luo, K. Q. & Chan, D. C. (2005). 在紫外线诱导的细胞凋亡过程中，Smac/DIABLO和细胞色素c通过类似机制从线粒体释放. *细胞凋亡*, 10, 289-299.

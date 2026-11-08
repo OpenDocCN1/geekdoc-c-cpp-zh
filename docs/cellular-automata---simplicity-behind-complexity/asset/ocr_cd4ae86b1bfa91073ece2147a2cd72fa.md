@@ -1,0 +1,19 @@
+reaction rate was assessed in parallel by CA and ODE simulations, as the number of iterations (respectively time in s) needed for 90% conversion of the input signal into the output one. The simulation was performed on a 2D-square lattice, 100 by 100 cells, embedded on the surface of a torus, with a lattice density of 3.6%. Each simulation was run 100 times, which produced a statistics with a sufficiently low standard deviation. Each motif $a_i$ was assumed to correspond to an enzymatic reaction: S(i) + E(i) → SE(i) → PE(i) → P(i) + E(i), and the probabilistic rules used were the ones for enzymatic reactions (See Section 3). The performance of all directed 4-node feed-forward motifs having a single source and a single target node (S1T1 class) was evaluated and compared to that of the directed linear motif of the same size.
+
+The parallel ODE simulation was carried out in several approximations (Apte et al., 2008). The simplest way to construct an ODE model is to treat each feed-forward link A→B without regard to the underlying biochemical processes (e.g., neglecting the formation of substrate-enzyme and enzyme-product complex and the subsequent dissociation of the latter). In doing so, we neglect any nonlinear interactions of various species. The advantage of this linear ODE approach is that with the assumption for constant initial concentrations and rate constants, the linear systems of ODEs can be solved explicitly. Taking into account the formation of the substrate-enzyme complex SE(i), and assuming that the substrate-enzyme complex SE(i) converts with a certain transitional probability into the product P(i) and a release of the enzyme E(i), produced a nonlinear model (NDE), which can be solved only numerically. A second, more detailed nonlinear model (NDE) has taken into account the reversibility of the process of formation of the intermediate SE(i) complex, which is a basic assumption in the theory of enzymatic reactions. The results summarized in Fig. 9 show very good agreement between CA and ODE models.
+
+The ordering of the ten directed 4-node motifs in Fig. 9 was found to follow several topological transformation patterns (Apte et al., 2008). The acceleration of the S → T conversion might be predicted in part by conjecturing that every graph transformation that reduces the distance or, alternatively reduces the average path length, between the source and target vertices S and T, accelerates the process. Counting the distance between two neighboring vertices as a unit, one extracts from Fig. 9 a series of topological patterns that improve the motif dynamic performance.
+
+**Topodynamic Pattern 1:** The shorter the graph distance d(S→T) between the source node and the target node in a feed-forward motif, the higher the overall motif dynamic performance:
+
+$A(d = 3) < B, C (d = 2) < D, E, F, G, H, I (d = 1)$    (2)
+
+Notably, the two bi-parallel motifs F and J do not obey this pattern.
+
+When considering the average path length one arrives at a more distinctive pattern. It singles out motif I to perform with the highest rate, due to the lowest average path length between nodes S and T (L = (1+2+2)/3 = 5/3):
+
+**Topodynamic Pattern 2:** The shorter the average path length L(S→T) between the source node and the target node in a feed-forward motif, the higher the overall motif dynamic performance:
+
+$A (L = 3) < B, C (L = 2.5) < D, E, G, H (L = 2) < I (L = 1.67)$    (3)
+
+**Topodynamic Pattern 3:** Any ring closure of a linear chain of steps converting a source substrate S into a target product T accelerates the transformation. Acceleration of the process is the strongest when the feed-forward link directly connects the substrate to the target and is the smallest when the link connects the substrate to an intermediate product:

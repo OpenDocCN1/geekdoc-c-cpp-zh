@@ -1,0 +1,15 @@
+# # Cellular Automata for Bus Dynamics
+
+Ding-wei Huang^1 and Wei-neng Huang^2
+
+*Department of Physics, Chung Yuan Christian University, Taiwan*
+
+# ## 1. Introduction
+
+Recently, traffic dynamics has attracted much attention from physicists (Maerivoet & De Moor, 2005; Chowdhury et al., 2000; Helbing, 2001). From 2005 to 2006, more than fifty articles on various topics of traffic research had been published in the physics journal *Physica A* alone. With a keyword search in the journal *Physica A*, there were only 7 papers related to traffic dynamics in the publication of 2004. In 2005, the number increased to 17; the number further advanced to 36 in both 2006 and 2007. One of the research interests concerns the intrinsic fluctuations of the dynamics. For the highway system, the dynamics could be simple and deterministic; each vehicle is supposed to follow its predecessor moving smoothly down the road. As vehicle density increases, however, a small fluctuation in one of the headways will lead to instability of the whole system. The congestion emerges inevitably without any specific causes, such as accidents or bottlenecks. One of the research interests in highway traffic is to provide a better understanding of the so-called phantom jam (Treiber, 1975).
+
+In contrast to the highway traffic, the city traffic is much more dynamic and complicated. Further considerations such as intersections and pedestrians should be included, e.g., traffic from different directions (Biham et al., 1992), operation of traffic lights (Huang & Huang, 2003b), and the interaction with pedestrians (Jiang et al., 2006). It is interesting to note that the fluctuations can be nontrivial even in the case of a single vehicle (Nagatani, 2001b; Nagatani & Yoshimura, 2002; Nagatani, 2002c). The limited roadways are shared by more vehicles with all different itineraries. Within the city, vehicles are not expected to move smoothly down the road. At each intersection, pedestrians and vehicles from different directions would have to take turns to use the roadway or to yield to others. And the city layout, especially in the downtown area, is characterized by its full of intersections. Quite obviously, the bus transportation to replace numerous passenger cars and the traffic lights to regulate traffic at intersections are two vital ingredients to the city traffic.
+
+We present a simple cellular automaton model to study the typical bus dynamics in a modern city. At the first stage, the nontrivial fluctuations are prescribed by the stochastic moving of bus interacted with the stochastic arrival of passengers. As passengers increase, the bus schedule shows a clear transition. Both numerical and analytical results are presented. The divergence of bus schedule can be taken as an analogy to the gridlock of 4-way traffic. We also comment on the strategy to keep a stable schedule.
+
+At the second stage, we examine the bus schedule interrupted by the traffic lights. We analyse the city buses time headway distribution and compare to the real time headway measurements. Since experimental data shows neither a smooth nor a random distribution,

@@ -651,6 +651,7 @@
 +   [CCNA 安全（640-554）便携命令指南](docs/ccna-security-640-554-portable-command-guide/README.md)
 +   [CCNA Voice 640-461 官方认证指南 第2版](docs/ccna-voice-640-461-official-cert-guide2nd-edition/README.md)
 +   [CEH 道德黑客认证学习指南 [附 CDROM]](docs/ceh-certified-ethical-hacker-study-guide-with-cdrom/README.md)
++   [元胞自动机——复杂性背后的简单性](docs/cellular-automata---simplicity-behind-complexity/README.md)
 +   [细胞神经生理学与整合：入门指南](docs/cellular-neurophysiology-and-integration-an-interpretive-int/README.md)
 +   [CGI 编程 101：为万维网编程 Perl（第二版）](docs/cgi-programming-101-programming-perl-for-the-world-wide-web-/README.md)
 +   [NLP 改变你的业务：提升组织绩效并获取成果的强大工具](docs/change-your-business-with-nlp-powerful-tools-to-improve-your/README.md)

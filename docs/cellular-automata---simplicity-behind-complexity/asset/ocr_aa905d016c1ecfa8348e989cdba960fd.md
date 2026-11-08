@@ -1,0 +1,11 @@
+![](bbox=[0.25, 0.095, 0.77, 0.37])
+
+Fig. 1. Demonstration of the basic ideas of the model construction. Agents use different level technologies (mobile phones) to communicate with each other. The different capabilities of the devices (SMS, MMS, video-phone) induce difficulties, i.e. communication is the easiest between devices of the same technological level (this is indicated by the black lines between agents). The height of the colored rectangle indicates the “technological level” of the device of the corresponding agent.
+
+difficult and uncomfortable. In the opposite direction we have to notice that our message will be automatically split up into pieces. Agents using mobile phones are presented in Fig. 1. This simple example clearly illustrates that the source of difficulties is the difference in the technological levels of the devices used for communication and they would not occur if the two partners would use equally advanced technologies. It has to be emphasized that in our modeling approach cost does not only mean the money one has to pay for the services or for the device, but it covers all types of difficulties (including also financial ones) that can affect the quality of the communication (e.g. time, convenience etc.) Kocsis & Kun (2008); Kun et al. (2007).
+
+Based on the above arguments it is reasonable to assume that the cost C induced by the communication of agents i and j is a monotonic function of the difference of the technological levels |τ_i − τ_j|. For the purpose of the explicit mathematical analysis we consider the most simple functional form and cast the cost of cooperation into the following form Kun et al. (2007)
+
+$$C(i \to j) = a|\tau_i - \tau_j|. \tag{1}$$
+
+Equation (1) expresses that having products of different technological levels (having different values of τ) incurs cost, while interaction with devices of the same technological level is cost free. This crude assumption describes a socio-economic system which favors the local communities being at the same technological level. Producers fabricate and introduce new communication devices on the market with the goal to provide solutions of possible problems, difficulties customers may have. This generic tendency of technological development can be captured in the model by setting appropriate values for the multiplication factor a of the cost

@@ -1,0 +1,18 @@
+resting status. The ERP is computed during run time, as the values depend on each preceding diastolic interval and on the current CL (detailed explanation can be found in Killmann R. (1990); Wach P. et al. (1989)). It should be stated that the CL in this context is the time distance between two proceeding excitation processes in the tetrahedron and does not necessarily refer to a CL provoked by any pacemaker (e. g. sinus node, atrioventricular node or paced rhythms). The run time ERP at the CL is calculated by
+
+$$ERP(CL)=ERP_{700}+A+B\cdot\frac{CL-700}{1000}-D\cdot\left(\frac{C-CL}{C}\right)^2$$
+
+if $CL<C$ and
+
+$$ERP(CL)=ERP_{700}+A+B\cdot\frac{CL-700}{1000}$$  (10)
+
+if $CL\geq C$, respectively. Parameters A (offset value), B (slope of the function), C (a predefined CL), and D (coefficient for the quadratic decrease) have been defined for each type of tissue individually. The values for these parameters were chosen for each tissue type according to Killmann R. (1990). $ERP_{700}$ was set to 210 ms for the bundle of His, 290 ms for the conjunction points, 280 ms for the left and right bundle branches, 320 ms for the Purkinje fiber network and 260 ms for the ventricular myocardium. Parameter A is introduced for enabling a simple change from physiological to pathological conditions for each tissue type individually. The value for the slope parameter B was obtained by averaging data reported for human hearts. Parameters C and D were set unequal zero for the ventricular epi-, endo- and myocardium only as the relationship between CL and refractory periods shows up to have a quadratically decreasing shape for these ventricular tissue types Killmann R. (1990) for the case $CL<C$. If $CL\geq C$, the $ERP(CL)$ is assumed to increase linearly with the CL.
+
+# Computation of activation times
+
+After selecting an arbitrary number of tetrahedrons assigned with an arbitrary time instant for starting the excitation process the activation sequence is computed as follows. Every tetrahedron of the cardiac model can take up three different states: excitable (e), refractory (R; i. e., excited) or waiting (W; i. e., awaiting excitation). The last state has no physiological meaning but was introduced due to algorithmic needs.
+
+The simulation starts by selecting that tetrahedron with earliest excitation time and its status is changed from e to R, i. e., the number of this tetrahedron is written into table R. The ’possible excitation times’ of the excited tetrahedron’s neighbors are calculated according to the distance between the center of masses and conduction velocities for each connection and stored in table W. In case no conduction between two neighboring tetrahedrons can occur the conduction velocity is set to zero. Whether a conduction between the tissues the tetrahedra are belonging to can or cannot occur is stored in an additional parameter set. In the next step the two tables S and W are searched for the tetrahedron with the lowest excitation time. This is the next tetrahedron to be excited and stored in table R and the corresponding table W is cleared. If two or more tetrahedrons have the same starting or possible excitation time one of them is arbitrarily chosen and the other one becomes/the other ones become the source tetrahedron of the subsequent calculations. The propagation is then calculated as described above, but now three cases may occur: The neighboring tetrahedron is
+
++   - in status $e$ → the possible excitation time is stored in table $W$, i. e., the tetrahedrons’s status is set to ’awaiting excitation’,
++   - already in waiting status and has been assigned a possible excitation time with

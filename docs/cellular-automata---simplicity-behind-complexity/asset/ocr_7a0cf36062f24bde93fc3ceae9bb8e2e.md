@@ -1,0 +1,7 @@
+![](bbox=[0.121, 0.104, 0.878, 0.621])
+
+Fig. 3. Predicted urban growth of the new administrative capital area under the first (baseline) scenario during (a) the Mid-Planning period; (b) the Post-Planning period, (c) urban changes during both periods; and (d) the final urban shape in 2020.
+
+During the Mid-Planning period, most of the urban development occurred within the area planned for the new administrative capital city with small amounts of urban clustering developing in the east and south-eastern areas (see Figure 3a). This might be considered the result of well organised and intended urban growth. However, during the Post-Planning period, further urban development would be expected to take place around the planned city, particularly along the road network (including the outer ring road and north-east corner of the image). Development pressure from the highly developed area seems to cause the urban development in the south-eastern corner of Figure 3b. It is also of note that a new urban cluster has developed in the north-eastern corner of the image.
+
+Figure 3 clearly demonstrates the differences between those urban growth patterns during the Mid-Planning and Post-Planning periods. Most urban development during the Mid-

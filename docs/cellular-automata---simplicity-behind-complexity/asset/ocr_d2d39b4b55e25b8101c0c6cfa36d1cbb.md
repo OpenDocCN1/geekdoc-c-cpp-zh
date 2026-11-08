@@ -1,0 +1,19 @@
+Rule R1 sets the speed vi of the i-th vehicle, for the current updated configuration of the system; it states that a vehicle always strives to drive at a speed of one lattice site per timestep, unless it is impeded by its direct leader, in which case hi(t), the number of empty sites in front of the i-th vehicle at time t, is equal zero, and the vehicle consequently stops in order to avoid a collision. The rule R2 just allows the vehicles to advance in the lattice.
+
+The Wolfram's rule 184 can be expressed also as follows. The state of each lattice site at any time is expressed by a 1-digit binary number, whose value is 1 if the site is occupied by a particle and 0 otherwise. For any lattice site, i, the state at time t+1, denoted by σ(i, t+1), will be a function of the states σ(i-1, t), σ(i, t), and σ(i+1, t), at time t, in the sites which compose the Moore neighbourhood of the site in question, Ni = {i-1, i, i+1}. The configuration of the states of the sites in Ni is expressed as a 3-digit binary number ξ(i,t) = σ(i-1,t)σ(i,t)σ(i+1,t). Then the evolution in time of the state at the lattice site i can be written as
+
+σ(i, t+1) = ℱ(ξ(i,t))
+
+where the function ℱ is defined by the updating rule given in Table 1.
+
+| ξ(i,t) | 111 | 110 | 101 | 100 | 011 | 010 | 001 | 000 |
+|---|---|---|---|---|---|---|---|---|
+| σ(i,t+1) | 1 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+
+Table 1. Wolfram's rule 184. All eight possible configurations for the local neighbourhood are sorted in the first row, and the results are shown in the second row. The physical meaning is that a particle (a 1) moves to the right if its right neighbouring site is empty.
+
+In Fig. 3, we show the evolution in time of the traffic model WR184. We considered a lattice consisting of 500 sites with periodic boundary conditions, and carried out simulations over a period of 465 timesteps each, for mean densities n = 0.15, 0.25, 0.35, 0.45, 0.5, 0.55, 0.65, 0.75, and 0.85 particles/site. Each case, the initial condition was prepared by distributing the particles randomly in the lattice.
+
+In the figures, the time and space axes are oriented from left to right, and top to bottom, respectively. The simulations show the occurrence of a free-flow regime for low densities (first row); a transition from a free-flow to a congested-flow regime for densities around the critical density nc = 0.50 particles/site (second row), and a congested-flow regime for high densities (third row). As time advances, the congestion waves can be seen propagating in the opposite direction of traffic. We can see also that the WR184 model constitutes a fully deterministic system that continuously repeats itself. A characteristic of the encountered congestion waves is that they have an eternal life time.
+
+Let n0(t) and n1(t) denote the average numbers of particles per lattice site at time t, which are at rest (c0 = 0) and moving with the speed one (c1 = 1), respectively. Then the mean velocity is given by q = n0c0 + n1c1 = n1, and the mean speed is v = q/n = n1/n, where n = n0 + n1 is the mean density of particles in the lattice. In Fig. 4, there are shown the plots of n0, n1, q and v as functions of n for the steady state of the WR184 model. As can be seen from the plot drawn in green, the mean speed remains constant at v = c1 = 1 sites per timestep, until the critical density nc = 0.5 particles/site is reached, at which point v will start to diminish towards zero where the density n = 1 particles/site is reached. Similarly, the mean flow q (plot drawn in red) first increases and then decreases linearly with the density, below and respectively above, the critical density. Here, the capacity flow qcap = 0.5 particles/timestep is reached. The transition from the free-flowing to the congested regime is characterised by a

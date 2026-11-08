@@ -1,0 +1,13 @@
+influence is different between rings. Consequently, the continuous distance function used in most CA models to represent the influence of neighborhoods has been replaced by a discrete distance function. This approach has the main advantage of greatly simplifying the definition of the cells’ influence as there is only one influence per ring. Moreover, these influences are dynamically found in the historical data and are not hard coded in the model, which allows the use of historical data at a different scale without changing the model.
+
+![](bbox=[0.331, 0.224, 0.657, 0.457])
+
+Fig. 3. Illustration of the neighborhood configuration used in the study corresponding to rings of 5, 9 and 17 cells
+
+While testing all the possible combinations of cell size (60 m and 100 m) and neighborhood configuration was beyond the scope of this study, several combinations were tested to identify which ones provide the best simulation outcomes. Details regarding the sensitivity analysis that was conducted are provided in Section 2.1.3.
+
+Land-use changes are complex spatial processes resulting from the interactions of socio-economic (e.g., population growth), biophysical (e.g., slope and soil quality), and geographic (e.g., proximity and accessibility to services) factors operating at different spatial and temporal scales (Liu and Phinn, 2003; Verburg et al., 2004). In this study, in addition to the influence of the cells located within local and extended neighborhoods as previously described, four external factors were considered as parameters in the transition rules, namely the distance to Calgary city center, the distance to a main road, the distance to a main river, and the ground slope. Such factors are commonly quoted in the literature as influencing land-use changes (Fang et al., 2005; Li and Yeh, 2002b; Pijanowski et al., 2002; Wu, 2002). The aforementioned distances were calculated for each cell and each historical year using the Euclidian distance tool available in ArcGIS 9.1 (ESRI, 2006). The resulting distance files were stored as raster images of the same resolution and extent as the land-use maps.
+
+# 2.1.2 Rule extraction and model calibration
+
+The transition rule extraction and the model calibration include the following steps (Figure 4). First, the set of historical land-use maps along with the maps corresponding to the driving factors are read and the number of cells of a particular state in the neighborhood of each central cell is computed. For each type of land-use change, all the cells that have

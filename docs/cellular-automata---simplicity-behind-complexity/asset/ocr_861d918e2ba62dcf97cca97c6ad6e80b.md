@@ -1,0 +1,17 @@
+towards $n_c(v_{\max})$, and so $P/T$ and $\mu/T$ diverge to infinity as $\ln(1/\lambda)$. Because $\lambda$ remains null for densities larger than $n_c(v_{\max})$ (see Fig. 13c), $P/T$ and $\mu/T$ will remain undefined there. Other thermodynamic properties, such as the specific heat $C_v$, isothermal compressibility $\kappa_T$, and isobaric expansivity $\alpha_P$, can be calculated easily from the velocity distribution densities. The expressions we have obtained for these thermodynamic properties are shown in the equations (24), (25), and (26). The behaviour of these properties is shown in Fig. 18.
+
+$$C_v=-\rho^2\left(\frac{\partial \hat e}{\partial\beta}\right)_\rho=\rho^2\sum_{n=0}^{v_{\max}}n\epsilon_n\frac{(\beta\epsilon)^2}{n}$$
+
+$$\kappa_T(P,\beta)=-\frac{1}{v}\left(\frac{\partial v}{\partial P}\right)_\beta=\frac{n\beta e^{\beta P}}{(e^{\beta P}-1)(e^{\beta P}-1-n)}$$
+
+$$\alpha_P(P,\beta)=-\beta^2\frac{1}{v}\left(\frac{\partial v}{\partial\beta}\right)_P=\beta\kappa_T(P,\beta)$$
+
+with
+
+$$v\equiv1-\lambda=1-\frac{n}{e^{\beta P}-1}$$
+
+In this figure, we can observe the effect on the thermodynamic properties due to a sharp transition between the free- and congested-flow regimes. In particular, it is observed that compressibility and expansivity go to zero as $n$ is increased towards $1/3$. This means that for $n>1/3$, in the high-energy limit, no empty sites will be available in the lattice in order to set in motion the particles at rest (i.e., the system of particles cannot be expanded), and any particle will be found at rest or moving with the speed $v_{\max}$. This behaviour of particles in the high-energy limit is observed also in the Fig. 13.
+
+# 6. Conclusions and future work
+
+The cellular automata traffic models of Nagel-Schreckenberg (NS) and Fukui-Ishibashi (FI) include velocity updating-rules which define a dynamics that do not obey a detailed balance. These rules continuously drive the system to states out of equilibrium. This is the reason why these models and their variants cannot be studied within the framework of equilibrium statistical mechanics. Nevertheless, as we have shown here, thermodynamic entropy exists for the 1DTCA models with no velocity anticipation, which we have found through an isomorphic system where a lattice gas particle which moves with speed $v$ is modelled as a brick, $(v+1)$-sites length, that is inserted in a 1D lattice with no overlapping. This allowed us to study the equilibrium (or maximum entropy) states of these systems and their thermodynamic properties. As it could be expected, the maximum entropy states do not agree in general with the steady states of the NS model, particularly for high energies (i.e. small values of the randomization parameter $p$); however, in the low energies domain, the equilibrium states resemble very strongly the steady states of the NS model, and the fundamental diagrams are reproduced quite well. For $v_{\max}=2$, the behaviour of entropy, as a function of the density of particles, allowed a clear identification of different flow-regimes in the 1DTCA models, displaying a sharp transition between the free- and congested-flow regimes in the high-energy limit. The presence of this transition was observed also in other

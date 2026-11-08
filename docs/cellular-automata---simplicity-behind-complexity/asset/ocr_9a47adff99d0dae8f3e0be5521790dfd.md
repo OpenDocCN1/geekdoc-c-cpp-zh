@@ -1,0 +1,16 @@
++   - Pontius, R.G., Cornell, J.D. & Hall, C.A.S. (2001). Modeling the spatial pattern of land-use change with GEOMOD2: application and validation for Costa Rica. Agriculture, Ecosystems & Environment, Vol.85, No.1, 191–203, ISSN 0167-8809.
++   - Portugali, J. (2000). Self-Organization and the City. Springer-Verlag, ISBN 3-540-65483-6, Berlin.
++   - Rafiee, R., Mahiny, A.S., Khorasani, N., Darvishsefat, A.A., Danekar, A. (2009). Simulating urban growth in Mashad City, Iran through the SLEUTH model (UGM). Cities, Vol.26, No.1, 19–26, ISSN 0264-2751.
++   - Santé, I., García, A.M., Miranda, D., Crecente, R. (2010) Cellular automata models for the simulation of real-world urban processes: A review and analysis. Landscape and Urban Planning, Vol.96, No.2, 108–122, ISSN 0169-2046.
++   - Stevens, D. & Dragicevic, S. (2007). A GIS-based irregular cellular automata model of land-use change. Environment and Planning B, Vol.34, No.4, 708–724, ISSN 0265-8135.
++   - Torrens, P.M. (2000a). How Cellular Models of Urban Systems Work. CASA Centre for Advanced Spatial Analysis, University College London, Working Paper 28, http://www.casa.ucl.ac.uk/publications/workingPaperDetail.asp?ID=28.
++   - Torrens, P.M. (2000b). How Land-Use Transport Models Work. Centre for Advanced Spatial Analysis, University College London, Working Paper 20, http://www.casa.ucl.ac.uk/publications/workingPaperDetail.asp?ID=20.
++   - van Vliet, J., White, R. & Dragicevic, S. (2009). Modeling urban growth using a variable grid cellular automaton. Computers, Environment and Urban Systems, Vol.33, No.1, 35–43, ISSN 0198-9715.
++   - Veldkamp, A. & Fresco, L.O. (1996). CLUE: A conceptual model to study the conversion of land use and its effects. Ecological Modelling, Vol.85, No.2-3, 253–270, ISSN 0304-3800.
++   - Weber, A. (1929) (translated by Carl J. Friedrich from Weber’s 1909 book). Theory of the Location of Industries. The University of Chicago Press, ISBN-10: 0226264696, Chicago.
++   - White, R., Engelen, G. & Uljee, I. (1997). Cellular automata as the basis of integrated dynamic regional modelling. Environment and Planning B, Vol.24, No.3, 323–343, ISSN 0265-8135.
++   - United Nations (2010). World Urbanization Prospects, The 2009 Revision: Press Release. Department of Economic and Social Affairs, Population Division, New York.
++   - Wolfram, S. (1994). Cellular Automata and Complexity. Addison-Wesley, ISBN 0-201-62716-7, Reading, MA.
++   - Wu, X., Hu, Y., He, H.S., Rencang, B., Onsted, J. & Xi, F. (2009). Performance Evaluation of the SLEUTH Model in the Shenyang Metropolitan Area of Northeastern China. Environmental Modeling and Assessment, Vol.14, No.2, 221–230, ISSN 0167-6369.
++   - Wu, D., Liu, J., Wang, S. & Wang, R. (2010). Simulating urban expansion by coupling a stochastic cellular automata model and socioeconomic indicators. Stochastic Environmental Research and Risk Assessment, Vol.24, No.2, 235–245, ISSN 1436-3240.
++   - Wu, N. & Silva, E. (2009). Integration of genetic agents and cellular automata for dynamic urban growth modelling, Proceedings of the 10th International Conference on GeoComputation, University of New South Wales, Sydney, Australia, 30 Nov to 2 Dec 2009, Brisbane.
