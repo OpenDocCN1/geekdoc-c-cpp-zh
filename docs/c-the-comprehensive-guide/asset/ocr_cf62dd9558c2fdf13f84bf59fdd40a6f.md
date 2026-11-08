@@ -1,0 +1,26 @@
+# Chapter 10
+
+# Error Handling
+
++   **Chapter Telegram**
++   
++   - **Error**
++     An error is something abnormal or unexpected. An abnormal situation could be, for example, an attempt to open a nonexistent file, and the program will *handle* it; that is, it deals with an exceptional situation. But if something completely unexpected occurs, it could be a program error.
++   - **Exceptional situation**
++     Within the scope of this chapter, an exceptional situation is a more or less anticipated but unusual event to which the program responds. This can happen via an exception or through error codes.
++   - **Program error**
++     Reaching an undefined state of the program.
++   - **Programming error (software bug)**
++     An error in the program that leads to a poor or incorrect result.
++   - **Exception**
++     An exception is triggered using `throw`. The current blocks upward of the call chain are exited until a matching `catch` is reached, or the program is terminated if no `catch` matches.
++   - **Error code**
++     Alternative to handling errors using exceptions through return value or output parameters (or in extreme cases, a global variable).
++   - **throw**
++     The act of triggering (throwing) an exception
++   - **catch**
++     Start of a handling block for exceptions.
+
+Often a program must respond to events that are not what you want them to be: a file is not found, a zero is entered for a calculation period, or so on. There are many ways to deal with such events:
+
++   - You can ignore them and expect users to live with the resulting errors. Perhaps you are one of the users yourself.

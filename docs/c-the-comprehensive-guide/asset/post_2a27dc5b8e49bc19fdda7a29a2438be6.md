@@ -1,0 +1,118 @@
+
+```cpp
+int main() {
+    auto result = num_to_vec("12 33 43");
+    for(auto r : result) std::cout << r << " ";
+    std::cout << '\n';
+    // Output: 12 33 43
+    errorDemo("XYZ", 4);
+    // Output: Invalid argument
+    errorDemo("123123123123123", 16);
+    // Output: Numerical result out of range
+}
+```
+
+First, we find the end of the string and ignore any whitespace there. In the loop, we also ignore all whitespace, as from_chars would not do that. The result ends up in p. In errorDemo, a conversion error is also handled. In p, we have the position where the conversion stopped.
+
+Experiments show that from_chars can be very fast. Depending on requirements and tests, this naturally varies, but one source states: if from_chars takes one unit of time, strtol and atoi take about two, stoul about four, and stringstream about six units of time. from_chars was particularly fast in cases only the first number needed to be extracted from a string.⁹ Other experiments are even more in favor of from_chars.¹⁰
+
+The to_chars function works very similarly. It also returns a pointer and error code in a struct and writes the result to an output parameter:
+
+```cpp
+to_chars_result to_chars(char* first, char* last, T value, int base = 10);
+```
+
+Here, structured binding helps again:
+
+```cpp
+// https://godbolt.org/z/dcqenEd31
+#include <iostream>
+#include <charconv>
+#include <string_view>
+#include <array>
+int main() {
+    std::array<char, 10> str {};
+    if(auto [p, ec] = std::to_chars(str.data(), str.data() + str.size(), 42);
+        ec == std::errc{}) {
+        std::cout << std::string_view(str.data(), p - str.data()) << "\n";
+    }
+}
+```
+
+The result ends up in str. For this, to_chars needs the beginning and the end of the range into which it can write.
+
+- 9. *Floating-Point charconv: Making Your Code 10x Faster With C++17's Final Boss*, https://www.youtube.com/watch?v=4P_bE0EBzM, Stephan T. Lavavej, 2019
+- 10. *How to Use The Newest C++ String Conversion Routines - std::from_chars*, https://www.cppstories.com/2018/12/fromchars/, Bartłomiej Filipek, 2021-06-16, [2024-08-15]
+
+## Chapter 29
+
+## Threads: Programming with Concurrency
+
+- **Chapter Telegram**
+  - **Thread**：A “strand” of program execution that can run concurrently with other threads.
+  - **Semaphores**：Mechanism to limit concurrent access to a shared resource. A semaphore exists per shared resource or group of resources.
+  - **Mutex**：Semaphores that allow access to exactly one thread.
+  - **Lock**：Group of classes that define the range in which access should be protected using a mutex. A lock exists per thread and resource.
+  - **Critical section**：Program piece protected from concurrent execution using lock and mutex.
+  - **Data race**：Condition where multiple threads unpredictably modify data.
+  - **Deadlock**：Condition when two threads holding locks on mutexes block each other, and neither can proceed.
+  - **Promise and future**：Model of a communication channel between threads. A promise is the commitment to deliver a result via a future when requested.
+  - **Memory order**：This specifies the temporal relationship in which read and write operations in different threads on an object must occur.
+
+This chapter introduces you to the parts of the standard library that deal with *multithreading*. In doing so, I will also explain a few principles around this type of concurrent programming so that you know how to use the classes and functions correctly.
+
+So far, we have considered a program as a sequence of instructions to be executed sequentially. With branches and functions, the computer can jump back and forth, but it has always executed one instruction after another. For some time now, computers have had multiple processing units and thus the ability to work on different parts of a program simultaneously. Your program can work in *parallel*. These parallel execution threads are called *threads*.
+
+All running threads share the program's memory. All threads can see all the memory of all other threads—that is, all variables and values. And unfortunately, not only do they see, but they can also write to them if they want. The trick is to do this in an orderly manner so that the data remains consistent.
+
+> **Other Forms of Parallelism**
+>
+> There are other forms of parallelism—all that you can imagine. For example, there can be a thread that works on multiple data simultaneously—effectively working on the same memory with the same instructions (SIMD from graphics cards). It is also parallel when a single CPU instruction multiplies eight pairs of numbers simultaneously (MMX, SSE, and AVX). You can also achieve parallelism by running a program distributed across one or more computers and having them communicate with each other (processes, sockets, MPI, and others).
+>
+> All these forms are not yet covered in the C++ standard and therefore are not part of this book. I limit myself to the execution of a program with *one* memory with *multiple* threads.
+>
+> With C++17, the possibility for SIMD for many algorithms has been added. It is listed under `parallel_unsequenced_policy`. You then specify the additional `par_unseq` parameter. If you are interested, check what your compiler already supports and what it can do with it.
+
+### 29.1 C++ Threading Basics
+
+You have already started threads, even if you didn't realize it, because in every C++ program, at least the main thread exists. For you, this means that upon entering `main`, you are in your first thread, which the system has started for you. When you leave `main`, the main thread terminates after some mandatory cleanup.
+
+You achieve multithreading when you start additional threads. Each thread has an entry and exit point, just like `main` for the main thread. Anything callable can define this entry and exit, such as a function, a functor, a lambda, a bound method, a function<> instance—simply anything that can implicitly convert to a function pointer.
+
+In C++, a thread is an instance of type `std::thread` from the `<thread>` header. With this instance, you can interact a bit, such as waiting for its termination, called `joining`. If you don't join, but the thread is still running, `terminate()` is called, thus ending your program. Alternatively, you can also “detach” the thread by calling `detach()`. Then your thread would continue running, but the program is terminated. This is usually not what you want. Therefore, you should always wait for the termination before ending the program.
+
+Hence, since C++20, there is the *joining thread* with the `jthread` class. These threads attempt to terminate themselves in the destructor and then wait. Normally, you will use `jthreads`. Everything said in this chapter essentially applies to both `thread` and `jthread`. If you need to use `thread` instead of `jthread`—for example, because C++20 is not available and `jthread` is not part of your version of the standard library—then you must not forget to `join()` the thread. I point out further differences between `jthread` and `thread`. If you still don't want to do without `jthread`, you can use the library at https://github.com/josuttis/jthread by Nico Josuttis, the original author of the `jthread` class. It is compatible with C++17.
+
+But before you can wait for the termination of a thread, you must of course first start a new thread or `jthread`.
+
+### 29.1.1 Starting Pure Threads
+
+For this, you need a *function object* (I will use this term from now on to represent anything that can be started by a thread) and an existing thread that starts the new one. The latter is easy—you have `main`.
+
+```cpp
+// https://godbolt.org/z/qnadyPWh1
+#include <iostream>
+#include <thread>
+
+using std::cout; using std::endl;
+
+long fib(long n) { return n<=1 ? n : fib(n-1)+fib(n-2); }
+void task1() { auto r = fib(40); cout << "fib(40): " << r << endl; }
+void task2() { auto r = fib(41); cout << "fib(41): " << r << endl; }
+void task3() { auto r = fib(42); cout << "fib(42): " << r << endl; }
+
+struct BackgroundTask {
+    void operator()() const {
+        task1();
+        task2();
+        task3();
+    }
+};
+
+int main() {
+    BackgroundTask backgroundTask{}; // Initialization, does not compute anything yet
+    std::jthread myThread { backgroundTask }; // Computation starts
+}
+```
+
+**Listing 29.1** How to start a thread.
