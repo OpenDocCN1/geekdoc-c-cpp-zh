@@ -1,0 +1,203 @@
+
+- context switching, 57, 196, 316
+- contiguous, 86, 87, 98, 101, 102, 107, 140, 150, 285, 296, 297
+- continuations, 328
+- Continue Statement, 49
+- continue-break Statement, 523
+- Conversion Operators, 630
+- Copy(string sourcePath), 689
+- CopyTo Operation, 501
+- CopyTo(string destinationPath), 691
+- correct prototyping, 66
+- corresponding, 2, 3, 11, 53, 60, 190, 295, 316, 362, 364, 437, 445, 453, 596, 599, 653, 670, 674, 728, 730
+- cos, 73, 207, 208, 233, 323, 360, 427, 484, 878, 886, 887, 888, 889
+- cosf, 207, 208
+- cosine, 207, 208, 233
+- cosl, 207, 208
+- Count Sort, 846, 847, 848
+- CPU register, 73, 75, 76
+- Create(), 687, 691
+- Create(string path), 689
+- CreateAttribute(string name), 654
+- CreateComment(string commentText), 654
+- CreateDirectory(string path), 686
+- CreateDocumentFragment(), 654
+- CreateDocumentType(string name), 654
+- CreateElement(string name), 655
+- CreateEntityReference(string name), 655
+- CreateNavigator(), 655, 674
+- CreateNode(string nodeType), 655
+- CreateSubdirectory(), 687
+- CreateText(), 692
+- CreateTextNode(string text), 655
+- CreateWhitespace(string text), 655
+- CreateXmlDeclaration(string version), 655
+- ctime, 215, 216, 217, 218, 233
+- cube root, 211, 233
+- Current Program Status Register, 189
+
+## D
+
+- data abort, 191
+- data files, 150, 706
+- data segment, 178
+- data structure, 71, 84, 146, 150, 283, 296, 300, 323, 328, 330, 360, 508, 512, 516, 583, 778, 783, 798, 801, 816, 820, 821, 826, 829, 858, 873, 877, 878, 890, 891
+- Data Type, 1, 7, 8, 9, 279, 281, 282, 294, 358, 425, 483, 487, 488, 489, 777, 779
+- database, 162, 588, 590, 591, 594, 598, 599, 601, 606, 607, 611, 639, 669, 675, 681, 720, 748, 751, 768, 774, 776, 821, 828
+- DBMS, 350
+- de-allocated, 465
+- Deadlocks, 249, 273
+- debugging, 58, 66, 203, 239, 276, 323, 324, 915
+- decision making, 2, 19, 20, 22, 24, 27, 29, 30, 39, 40, 50
+- decrement operator, 17, 18, 378
+- default handler, 185
+- Deferred Execution, 593
+- Delegates, 479, 542, 558, 559, 585
+- Delete(), 687, 692, 806, 807
+- Delete(string path), 686
+- deleteItem, 825, 826
+- Dennis Ritchie, 4
+- Dependency, 338, 351
+- Dequeues, 816
+- dereferencing, 96, 115, 282, 383, 386
+- Derived Class, 390, 394, 398, 399, 400, 421, 453
+- Destructors, 327, 342, 365, 416, 542, 552
+- Detached Thread, 255
+- Device Driver, 235, 245
+- difftime, 216, 233
+- Dijkstra's Algorithm, 777, 886, 887
+- directives, 194, 199, 200, 201, 202, 203, 280, 300, 321, 322, 324, 533, 534
+- Directory Class, 685, 686, 687
+- DirectoryInfo Class, 687, 688
+- Disk I/O Using Member Functions, 421, 431
+- insertInTree, 825
+- Insertion Sort, 832, 834, 835
+- insmod, 239, 240, 241, 243, 244, 246
+- Instance Variables, 747, 760
+- int count(), 501, 652, 682, 683, 684, 685
+- int index, 349, 447, 650, 652, 682, 683, 684, 685
+- int numByte, 682
+- int offset, 682
+- Integer and Floating-Point Extraction, 424
+- integer constants, 9, 10
+- integers, 8, 15, 31, 33, 57, 69, 104, 114, 115, 116, 118, 119, 120, 128, 150, 171, 172, 234, 293, 297, 315, 319, 361, 362, 384, 424, 425, 440, 471, 490, 496, 497, 523, 554, 557, 579, 589, 591, 631, 632, 633, 640, 727, 741, 749, 828, 892, 913
+- interchangeable, 343
+- Interfaces, 244, 250, 479, 541, 577
+- interlinked, 199
+- internal, 7, 15, 35, 47, 71, 76, 81, 283, 332, 376, 387, 418, 422, 436, 440, 457, 459, 460, 470, 573, 575, 576, 599, 646, 654, 710, 759, 760, 822, 828
+- interrupt, 182, 183, 184, 185, 188, 189, 190, 191, 192, 236, 237, 238, 246, 247, 248, 309
+- Interrupt Handlers, 181, 183, 184, 188, 190, 235, 247
+- invalid_argument(), 458
+- invoking function, 61, 62
+- ios_base::failure, 460
+- IRQ, 184, 189, 190, 247
+- isalnum, 229, 233
+- isalpha, 230, 233
+- isblank, 231, 233
+- iscntrl, 230, 231
+- IsDefined(Type enumType), 582
+- isdigit, 231
+- isfinite, 206
+- isgreater, 206
+- isgreaterequal, 206
+- isinf, 206
+- isless, 206
+- islessequal, 206
+- islessgreater, 206
+- isnan, 206
+- isnormal, 206
+- ISO, 4, 206
+- Isolated Storage, 679, 713, 714, 715
+- ispunct, 232, 233
+- IsStartElement(), 650
+
+## J
+
+- Jagged Array, 496, 497
+- jump address, 2
+- jump statements, 2, 3, 46, 303, 309, 523, 524
+
+## K
+
+- KERN_ALERT, 239
+- KERN_CRIT, 239
+- KERN_INFO, 238, 239, 240, 241, 242, 243
+- Kernel Programming, 235, 237, 239, 241, 243, 245, 247
+- keyword, 4, 6, 7, 19, 31, 66, 73, 77, 78, 80, 81, 82, 131, 148, 178, 190, 241, 282, 284, 307, 309, 311, 316, 317, 326, 360, 373, 391, 407, 408, 411, 418, 419, 451, 452, 476, 489, 494, 505, 522, 527, 528, 529, 530, 532, 539, 551, 558, 566, 568, 573, 575, 576, 577, 580, 589, 615, 617, 618, 619, 621, 623, 625, 626, 646, 897, 901, 902, 903
+- keywords, 4, 6, 7, 241
+- Kruskal's Algorithm, 884
+- Lambda Expression, 589, 590, 612, 614
+- Lambda Queries, 592
+- Late Binding, 409
+- left shift, 173, 175, 293
+- length_error(), 458
+- library functions, 4, 15, 56, 67, 86, 88, 150, 177, 188, 194, 199, 203, 206, 237, 244, 276, 277, 522
+- LIFO, 71, 178, 509, 510, 778, 798
+- Linear Probing, 875
+- link register, 190
+- linked list, 146, 147, 180, 357, 358, 363, 778, 779, 783, 784, 785, 787, 788, 793, 800, 801, 806, 821, 822, 874, 877, 879, 890, 891, 893, 894
+- LINQ, 478, 479, 480, 482, 587, 588, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 603, 604, 605, 606, 607, 610, 611, 614, 615, 616, 618, 619, 621, 623, 625, 626, 629, 630, 633, 634, 635, 637, 640, 641, 642
+- LINQ Queries, 590
+- LINQ to ADO.NET, 588, 594, 598, 640
+- LINQ to DataSet, 599, 615
+- LINQ to Entities, 599
+- LINQ to Object, 588, 594, 595, 615, 640
+- LINQ to SQL, 588, 591, 599, 611, 615, 641
+- LINQ to XML, 588, 594, 596, 598, 615, 640, 641
+- Linux Kernel Modules, 235, 238
+- Load(string fileName), 656
+- LoadXml(string xml), 656
+- local variable, 3, 5, 14, 57, 58, 73, 80, 81, 178, 288, 289, 315, 318, 361, 448, 480
+- localtime, 215, 217, 233
+- Lock(long position, long lengthToRead), 682, 683
+- logarithmic, 15, 212
+- logic_error(), 457
+- logical AND, 170
+- logical components, 56
+- logical operators, 2, 26, 27, 28, 50, 169
+- Logical view, 751
+- looping, 39, 40, 50, 306, 307, 762
+
+## M
+
+- machine level language, 2, 464
+- Machine-scoped isolated storage, 714
+- macro expansion, 194, 195, 197, 204
+- MailMessage class, 717
+- MailPriority class, 717
+- main function, 5, 14, 47, 56, 57, 62, 65, 66, 71, 72, 74, 77, 78, 79, 735, 903
+- Makefile, 239, 240, 243
+- malloc, 121, 146, 147, 218, 219, 220, 254, 255, 260, 267, 268, 289, 318, 319, 321, 326, 784, 807, 825, 858, 885, 903
+- Managed code, 465, 481, 482
+- manifestation, 774
+- Manipulators, 421, 439, 440
+- mask, 170, 171, 175, 176, 187, 188, 192, 436, 437, 727
+- MATH_ERRNO, 206, 207
+- mathematical functions, 206, 207, 233
+- Member Dereferencing Operator, 290
+- Member Functions for Accessing Stream Status Bits, 433
+- memcpy, 139, 176, 728
+- memory location, 3, 47, 61, 62, 86, 87, 96, 97, 98, 99, 100, 114, 115, 125, 126, 130, 132, 134, 137, 140, 141, 144, 148, 220, 284, 285, 288, 296, 297, 311, 319, 321, 465, 466, 514
+- Memory Management in C#, 463, 476
+- Memory Management Unit, 190
+- memory segmentation, 130, 178, 179
+- MERCURY, 4
+- Merge Sort, 842, 843, 844, 845
+- Method-Level Scope, 526
+- Microkernel, 235, 237
+- Microsoft.CSharp, 468
+- Microsoft.JScript, 468
+- Microsoft.VisualBasic, 468
+- middle level language, 4
+- Minimum Spanning Tree, 777, 883
+- mismatch, 65, 69, 89, 276, 312
+- mktime, 217, 218
+- MODULE_AUTHOR, 242
+- module_init(), 240
+- MODULE_LICENSE, 242
+- MODULE_SUPPORTED_DEVICE, 242
+- Move(string sourcePath), 687, 689
+- MoveTo(string destinationPath), 688, 692
+- MoveToAttribute(int index), 650
+- MoveToContent(), 650
+- MoveToElement(), 651

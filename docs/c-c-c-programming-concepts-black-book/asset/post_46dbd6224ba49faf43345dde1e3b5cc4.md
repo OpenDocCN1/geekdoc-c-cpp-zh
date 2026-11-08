@@ -1,0 +1,166 @@
+
+- **Q6.** The rewind() function takes the file pointer to:
+  - i. The user-defined location
+  - ii. The end
+  - iii. The beginning
+  - iv. Nowhere
+
+- **Q7.** The ftell() function is used for getting information on:
+  - i. Where exactly the pointer is located
+  - ii. How many bytes are written into the file
+  - iii. When the file was last accessed
+  - iv. None of the above
+
+- **Q8.** The type qualifier that was introduced in C99 is:
+  - i. volatile
+  - ii. const
+  - iii. restrict
+  - iv. None of the above
+
+### Subjective Questions
+
+- **Q1.** Create a structure called book with different members and populate it with all the relevant information.
+
+- **Q2.** Pass a structure pointer to a member function and modify it inside a function. In addition, return the address of the structure from the function.
+
+- **Q3.** Write a program using self-referential structures, which will insert, delete, and modify a linked list.
+
+- **Q4.** Use a bitwise operator to check whether a number is even or not.
+
+- **Q5.** Use a binary file and write a program that keeps the records of a medical store management system. The program should perform the following functionalities:
+  - 1. Add, delete, and modify the records
+  - 2. Search the records
+  - 3. Show daily sales report
+  - 4. Show stocks
+
+- **Q6.** Write a program that deletes a certain pattern from a text file.
+
+- **Q7.** Write a program that searches and replaces all the occurrences of a pattern with a user-defined input in a text file.
+
+## 6 Interrupts in C
+
+| If you need an Information on: | See page: |
+|---|---|
+| Interrupt Handling in C | 182 |
+| Calling Subroutines from Interrupt Handlers | 183 |
+| Re-Entrant Interrupt Handlers | 184 |
+| Some Useful Signals | 185 |
+| Registering a Common Handler | 186 |
+| Blocking Signals | 187 |
+| Case Study on ARM Architecture | 188 |
+
+Often, we need to terminate the flow of execution of a program with the help of external events, such as pressing the CTRL + C key combination. This generates an interrupt that can be trapped inside the code by using some added capabilities. Such scenarios occur in case of an infinite loop or NULL pointers. C provides the ability of handling external signals so that the flow of execution can be resumed once the work associated with interrupts is over. Simply put, an interrupt can be an asynchronous signal, which indicates the need for immediate attention, or it can be a synchronous signal, which indicates a change in the flow of execution.
+
+In this chapter, we learn about interrupt handling with the help of some C programs. We also learn how to call subroutines from interrupt handlers. Further, the chapter discusses re-entrant interrupt handlers as well as some useful signals. Next, we learn about Interrupt Service Routines and their implementation using C. In addition, we learn how to block signals. The chapter also discusses how exceptions and interrupts are handled by ARM processors.
+
+### Interrupt Handling in C
+
+Generally, two types of communication take place between the processor and the hardware of a computer. In the first type, the processor gives instructions to the hardware; and in the second type, the hardware informs the processor about certain events. When the communication goes from the hardware toward the processor, it is referred to as an interrupt (also called signal in C). Hardware devices save the information related to an interrupt in a stack. If this information is not fetched from the stack immediately, then it is lost. Therefore, when the processor gets an interrupt, it stops whatever it is doing, saves certain parameters on a stack, and calls the interrupt handler (or signal handler) to process the interrupt. Note that if the processor is processing another interrupt, then it deals with the new interrupt only when the processing of the current one is completed. Let’s understand the basic interrupt handling in C with the help of a program, as shown in Listing 6.1:
+
+Listing 6.1: Showing the Basic Interrupt Handling
+
+```c
+#include<stdio.h>
+#include<signal.h>
+
+void sighandler(int signum)
+{
+    FILE *fp = fopen("D:\\...\\SignalTest.txt", "a");
+    fprintf(fp, "\n SIGINT Received ");
+    fclose(fp);
+
+}
+
+int main()
+{
+    signal(SIGINT, (void*)sighandler);
+
+    while(1)
+    {
+        printf("\n Infinite Loop");
+    }
+
+    return 0;
+}
+```
+
+In Listing 6.1, we have created an infinite while loop, which can be terminated by pressing the CTRL+C key combination. When a user presses CTRL+C, the keyboard device driver informs the processor about the interrupt generated with the help of the key combination. The processor reacts to this interrupt by sending another signal to the running program. In Listing 6.1, we have already registered a signal handler, which is called when the processor generates an interrupt. However, a question arises that how the program would know about the type of signal generated by the processor. The answer to this question is simple – by using different macros that are defined in C. If we take a closer look at the program, then we notice that the SIGINT macro is used to register a signal handler in the main() function. The SIGINT macro is used to trap the interrupt that comes to the program. When a user presses CTRL+C, it generates an interrupt, which is forwarded by the processor to the program. This interrupt is then trapped by the signal handler function. To trap an interrupt, we need to register a signal handler function and perform certain activities when the interrupt is generated. To register a signal handler function, we use the following signal library function:
+
+```
+void (*signal(int signal, void (*func)(int)))(int);
+```
+
+The signal() function registers the function pointed to by func as a handler for the signal. This implies that the function pointed to by func will be called when the interrupt signal is received by a program. Note that the <signal.h> header should be added in the source code to use the signal() function.
+
+Next, let's learn to call subroutines or functions from interrupt handlers.
+
+### Calling Subroutines from Interrupt Handlers
+
+After the control of a program is transferred to an interrupt handler, different subroutines can be called to perform certain actions from the interrupt handler. Listing 6.2 shows how to call subroutines from an interrupt handler:
+
+Listing 6.2: Calling Subroutines from an Interrupt Handler
+
+```c
+#include<stdio.h>
+#include<signal.h>
+
+void writeToFile()
+{
+    FILE *fp = fopen("D:\\SignalTest.txt", "a");
+    fprintf(fp,"\n SIGNAL Received ");
+    fclose(fp);
+}
+
+void sighandler(int signum)
+{
+    writeToFile();
+}
+
+int main()
+{
+    signal(SIGINT, (void*)sighandler);
+
+    while(1)
+    {
+        printf("\n Infinite Loop");
+    }
+
+    return 0;
+}
+```
+
+In Listing 6.2, we have called a subroutine from the signal handler and performed certain actions in it. When the program receives a SIGINT signal, the sighandler() subroutine is invoked. This is because we have registered a signal handler from the main() subroutine. From sighandler(), we have also called the writeToFile() subroutine to perform certain tasks.
+
+Let's now discuss re-entrant interrupt handlers.
+
+### Re-Entrant Interrupt Handlers
+
+A program or subroutine is said to be re-entrant, if the program or subroutine can be interrupted in the middle of its execution and safely called again (this process is known as re-entered) before the execution of the previous invocations of the program is completed. After the re-entered invocation completes, the previous invocation will be resumed. The re-entrant interrupt handlers are used mainly for single-threaded operating systems where the flow could be interrupted by a hardware interrupt and the control would be transferred to an Interrupt Service Routine. Any subroutine or function used by Interrupt Service Routine, which could have been under execution when the interrupt was made, should be made re-entrant.
+
+Re-entrant interrupt handlers re-enable interrupts inside an Interrupt Service Routine early so that intermediate interrupts can be trapped, if generated at all. Consider a scenario where a code has generated an interrupt, which invoked an Interrupt Service Routine. Now, suppose another interrupt occurs while the Interrupt Service Routine is executing. This new interrupt will not be catered, as the current Interrupt Service Routine is under execution, and any further interrupt will only be catered when the control returns from that subroutine.
+
+However, there is a problem with re-enabling interrupts before branching to a subroutine. Suppose an interrupt handler re-enables interrupts and then calls a subroutine. Now, in the meantime, if another interrupt occurs, then the return address of the subroutine will be corrupted when the Interrupt Service Routine for the second interrupt will be called. Consider the following code snippet:
+
+```c
+void IRQ_HANDLER __irq
+{
+    // re-enable interrupts
+
+    function();
+}
+```
+
+When the program counter jumps to IRQ_Handler, the return address from Interrupt Service Routine is already stored. Suppose the returned address is pushed into a stack. Now, when the function() subroutine is called, the next address to be executed gets overwritten with the address of the instruction following function(). Further assume that a second higher priority interrupt takes place while function() is executing. In this case, address of the next statement to be executed is overwritten with the return address of function(); thereby, corrupting the return address to IRQ_Handler.
+
+Any re-entrant interrupt handler needs to save the particular Interrupt Request (IRQ) state, switch processor modes, and the state of the new processor mode before branching to a nested subroutine of C function. Switching to a system mode while programming re-entrant interrupt handlers is always recommended. Some steps that need to be followed while nesting interrupts using re-entrant interrupt handlers are:
+
+- 1. Save the registers that would be used in Interrupt Service Routine along with a stack pointer
+- 2. Clear the source of the interrupt
+- 3. Switch to a system mode and re-enable interrupts
+- 4. Save the user mode register and non-callee saved registers
+- 5. Call the interrupt handler function
+- 6. When the interrupt handler function returns, restore user mode registers and disable interrupts
+- 7. Restore work registers and stack pointer
+- 8. Return from IRQ
+
+Next, let’s learn about some useful signals.
