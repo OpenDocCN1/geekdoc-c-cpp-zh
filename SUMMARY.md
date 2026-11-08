@@ -656,6 +656,7 @@
 +   [CGI 编程 101：为万维网编程 Perl（第二版）](docs/cgi-programming-101-programming-perl-for-the-world-wide-web-/README.md)
 +   [NLP 改变你的业务：提升组织绩效并获取成果的强大工具](docs/change-your-business-with-nlp-powerful-tools-to-improve-your/README.md)
 +   [NLP 改变人生：让全方位更更好的强大方法，第2版](docs/change-your-life-with-nlp-the-powerful-way-to-make-your-whol/README.md)
++   [改变你的问题，改变你的人生练习册：运用提问思维掌控心态](docs/change-your-questions-change-your-life-workbook-master-your-/README.md)
 +   [混沌、CNN、忆阻器及其超越：Leon Chua 的纪念文集（附 DVD-ROM，由 Eleonora Bilotta 编制）](docs/chaos-cnn-memristors-and-beyond-a-festschrift-for-leon-chua-/README.md)
 +   [混沌猴子：硅谷的暴利财富与随机失败](docs/chaos-monkeys-obscene-fortune-and-random-failure-in-silicon-/README.md)
 +   [R 数据科学并行计算：R、C 和 CUDA 示例](docs/chapman-and-hall-crc-the-r-series-crc-press-matloff-norman-s/README.md)
