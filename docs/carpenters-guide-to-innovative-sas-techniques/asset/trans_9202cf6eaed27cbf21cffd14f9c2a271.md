@@ -1,0 +1,278 @@
+
+- REPLACE 数据集选项 40–41
+- REPLACE 方法 94–95, 120, 124
+- REPLACE 选项
+  - EXPORT 过程 9–10
+  - IMPORT 过程 10
+- Repole, Warren 430
+- 报表项 280–281
+- REPORT 过程
+  - 关于 280
+  - 对齐小数点 289–290
+  - CALL DEFINE 例程 287–288
+  - COLUMN 语句 281–284
+  - COMPLETEROWS 选项 72, 365–367
+  - 计算块与 280–291
+  - 合并列 284–285
+  - CONTENTS= 选项 349
+  - DEFINE 语句 100, 281–282, 288–289, 340, 365–366
+  - EXCLUSIVE 选项 366–367
+  - 指示条和仪表盘 321–322
+  - LINE 语句 281, 285–287, 290–291, 340, 342
+  - 嵌套日期 288–289
+  - 预加载格式与 72, 364–367
+  - 样式覆盖与 345–347
+  - TABULATE 过程 280
+  - THREADS 系统选项 195
+  - 交通灯式着色与 352, 354–355
+- 报表
+  - 使用预加载格式修改内容 364–370
+  - 写入 Excel 表 332–336
+- RESET= 图形选项 301, 304
+- RETAIN 语句
+  - 在 PDV 上重新排列变量与 202
+  - SUM 语句与 114
+  - 表查找技术 220
+- 返回代码（方法）121, 126
+- RETURN 语句，FCMP 过程 386, 480
+- Rhodes, Dianne 258
+- Rhodes, Mike 110
+- 滚动平均值计算 107, 113–114, 378–380
+- Rosenbloom, Mary 476
+- ROTATE= 选项，AXIS 语句 308
+- ROUND 函数 159–160
+- ROUND 选项，PICTURE 语句 (FORMAT) 372, 374
+- RTF 目标
+  - 发出原始 RTF 特定命令 344–345
+  - LASTPAGE 格式序列 339
+  - 从中链接报表 348
+  - PAGEOF 格式序列 338–339
+  - THISPAGE 格式序列 339
+- RTF 文件格式 485–487
+- RTFCOLOR 初始化选项 440
+- RTS= 选项，TABLE 语句 (TABULATE) 265–266
+- RUN 语句 280
+- RUN_MACRO 函数 482
+
+## S
+
+- SAME 运算符 83, 85
+- _SAME_ 运算符 384
+- SAS/ACCESS 引擎 4, 6
+- SAS/AF 应用程序 449
+- SAS/GRAPH 应用程序
+  - 关于 297, 303, 313–314
+  - 注释功能 273, 309–311
+  - 构建指示条和仪表盘 320–322
+  - 使用 SYMBOLD 语句更改绘图符号 303–306
+  - 控制坐标轴和图例 306–309
+  - FREQ 过程 323
+  - 生成箱线图 314–317
+  - 图形选项和设置 300–302
+  - 专用技术和过程 317–322
+  - 拆分文本行 319
+  - 标题/脚注选项 298–300
+  - UNIVARIATE 过程与 270, 273
+- SAS/SQL 应用程序 303, 314, 316–317
+- SAS/STAT 应用程序 303, 314
+- SASAUTOS= 系统选项
+  - 自动调用库与 407, 423
+  - 更改 SASAUTOS 位置 447–448
+  - 保存系统选项与 444–445
+- SAS_EXECFILEPATH 环境变量 469–470
+- SASHELP 视图
+  - 附加信息 8
+  - 数据集属性与 424
+  - 列表 420–421
+  - 记录物理位置信息 468–469
+- SASHELP.VALL 视图 420–422
+- SASHELP.VCATALOG 视图 420
+- SASHELP.VCFORMAT 视图 420
+- SASHELP.VCOLUMN 视图 151, 420
+- SASHELP.VDCTNRY 视图 420
+- SASHELP.VENGINE 视图 420
+- SASHELP.VEXTFL 视图 420, 469
+- SASHELP.VFORMAT 视图 420
+- SASHELP.VFUNC 视图 483
+- SASHELP.VOPT 视图 420, 422
+- SASHELP.VINDEX 视图 420
+- SASHELP.VLIBNAM 视图 420, 468–469
+- SASHELP.VMACRO 视图 420
+- SASHELP.VMEMBER 视图 421
+- SASHELP.VOPTION 视图 421–422
+- SASHELP.VSACCES 视图 421
+- SASHELP.VSCATLG 视图 421
+- SASHELP.VSLIB 视图 421
+- SASHELP.VSTABLE 视图 421
+- SASHELP.VSTABV 视图 421
+- SASHELP.VSTYLE 视图 421
+- SASHELP.VVIEW 视图 421
+- SASHELP.VTABLE 视图 8, 421
+- SASHELP.VTITLE 视图 421
+- SASHELP.VVIEW 视图 421
+- -SASINITIALFOLDER 初始化选项 439, 448
+- SASMORE= 系统选项 408–409
+- SASROOT 目录 446
+- SASV9.CFG 文件 446
+- SAVE 命令 466
+- %SAVEGLOBAL 宏 440–441
+- %SCALEPOS 宏 402
+- SCAN 函数 160, 424
+- %SCAN 宏函数 16, 470
+- SCAN_TEXT 选项，LIBNAME 语句 7
+- SCANTEXT 语句，IMPORT 过程 10
+- Schreier, Howard 52, 105
+- 宏库的搜索顺序 409
+- 搜索格式 394
+- Secosky, Jason 479
+- %SECRETSQL 宏 209–210
+- SECURE 选项，%MACRO 语句 427
+- %SECURECODE 宏 422
+- 安全注意事项
+  - 宏语言与 426–430
+  - 密码保护 41, 208–210
+- SELECT 语句
+  - DATA 步 215, 421
+  - SQL 过程 202, 410, 421
+- 分号 (;)
+  - %DO 块与 404
+  - INDEX 函数与 163
+  - 排查缺失的分号 40
+- 发送电子邮件 467–468
+- -SET 关键字 447
+- SET 语句
+  - 关于 172
+  - 拆分数据集示例 127
+  - 双重 SET 111, 175–176, 214, 218–219
+  - END= 选项 111, 128, 172, 175, 177, 245
+  - HASH 对象与 228–229
+  - INDSNAME= 选项 172, 174–175
+  - KEEP= 数据集选项与 42
+  - 键索引查找 225
+  - KEY= 选项 172, 203, 222
+  - 前瞻技术与 111
+  - 回溯技术与 111–113
+  - NOBS= 选项 172–174, 180
+  - OPEN= 选项 172
+  - POINT= 选项 111–113, 172–174, 180
+  - 在 PDV 上呈现变量与 201
+  - 简单排序示例 120–121
+  - UNIQUE 选项 172
+- SETINIT 过程 5
+- SHAPE= 选项，LEGEND 语句 309
+- SHEET= 语句
+  - EXPORT 过程 9
+  - IMPORT 过程 10
+- SHEET_INTERVAL 选项，EXCELXP 标签集 334
+- 工作表
+  - 参见 Excel 工作表和工作簿
+- SHEWHART 过程 303, 314, 316–317
+- 移位运算符 132–134
+- 简写变量列表 73–76
+- SHOWDECR. 格式 374
+- %SHOWSTYLES 宏 336
+- SHOWVAL. 格式 373
+- SIGN 函数 52
+- 斜杠 (/) 239
+- %SLIDER 宏 322
+- SMALLEST 函数 147–148
+- SORT 过程
+  - BY 语句 121
+  - 数据集选项与 190–191
+  - DESCENDING 选项 234
+  - 重复观测与 91–92
+  - DUPOUT= 选项 187–188
+  - EQUALS 选项 190
+  - FORCE 选项 190
+  - 元数据排序信息 193–194
+  - NODUPKEY 选项 66, 92, 121, 169–170, 187, 223
+  - NODUPLICATES 选项 91
+  - NODUP 选项 186–187, 190
+  - NOEQUALS 选项 190
+  - OUT= 选项 5
+  - 简单示例 120–121
+  - 排序顺序注意事项 191–193
+  - SORTSEQ 选项 188–189
+  - 表查找技术 217
+  - TAGSORT 选项 121, 188
+  - THREADS 系统选项与 195
+- SORTEDBY 数据集选项 194
+- SORTEQUALS 系统选项 190
+- SORTSEQ 选项，SORT 过程 188–189
+- SOUNDEX 函数 85–86, 145
+- 发音相似运算符 85–86
+- SOURCE 目录项 470–471
+- SOURCE 选项，%MACRO 语句 426–427
+- 间距 342–343
+- 稀疏数据
+  - 关于 65
+  - CLASS DATA= 选项与 70–71
+  - COMPLETETYPES 选项与 70
+  - 双重转置 67–69
+  - 已知行模板 65–66
+  - 预加载格式与 72
+  - SPARSE 选项与 73
+- SPARSE= 选项，TABLE 语句 (FREQ) 73
+- SPDEDIST 函数 145
+- SPLASH 选项，初始化选项 439
+- -SPLASHLOG 初始化选项 439
+- SQL 过程
+  - CASE 语句 215
+  - CONNECT 语句 32, 210
+  - CREATE INDEX 语句 204
+  - 创建索引 203–205, 221
+  - DESCRIBE 语句 421
+  - DICTIONARY 表与 8, 421
+  - DISCONNECT 语句 32
+  - DROP TABLE 语句 211
+  - 重复观测与 93
+  - FROM 语句 93
+  - IN 比较运算符与 47, 430
+  - 连接操作 218
+  - ORDER BY 语句 93
+  - 传递与 32–33, 208–210
+  - SELECT 语句 202, 410, 421
+  - 排序注意事项 193
+  - THREADS 系统选项与 195
+  - WHERE 子句 82–83
+- START 函数 484–485
+- START 选项，ODS LAYOUT 语句 356
+- STARTROW= 语句，IMPORT 过程 12
+- STDIZE 过程 101
+- STOP 语句 121, 131
+- /STORE 选项，%MACRO 语句 408
+- 存储的已编译宏库 406, 408
+- 存储
+  - 将公式作为数据值 415
+  - 函数 481–482
+- %STR 宏函数 101, 435
+- 字符串
+  - 参见文本字符串
+- STRIP 函数 163–164
+- STUDYID. 格式 392
+- 样式属性
+  - 关于 335–336
+  - CALL DEFINE 例程与 287–288
+  - 更改文本样式 341–342
+  - PRINT 过程与 292–294
+  - 样式修饰符 341–342
+- STYLE= 选项
+  - CLASS 语句 (TABULATE) 265
+  - CLASSLEVEL 语句 (TABULATE) 266, 351
+  - 创建链接 345–347
+  - LINE 语句 (REPORT) 285–287
+  - ODS MARKUP 语句 336
+  - PRINT 过程 292–294
+  - TABLE 语句 (TABULATE) 265–266, 353
+  - VAR 语句 (PRINT) 355
+  - VAR 语句 (TABULATE) 267
+- SUBJECT= 选项，FILENAME 语句 467
+- SUBROUTINE 语句，FCMP 过程 482
+- 下标 340–341
+- 子集
+  - CLASS DATA= 选项与 251–252
+  - EXCLUSIVE 选项与 251–252
+  - LEVELS 选项与 254
+  - 创建百分位数 245
+  - TYPES 语句与 250–251
+

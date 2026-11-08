@@ -642,6 +642,7 @@
 +   [计算机科学与编程职业（计算机技术职业）](docs/careers-in-computer-science-and-programming-careers-in-compu/README.md)
 +   [数据库设计职业指南](docs/careers-in-database-design-none/README.md)
 +   [游戏职业指南](docs/careers-in-gaming/README.md)
++   [Carpenter 的创新 SAS® 技术指南](docs/carpenters-guide-to-innovative-sas-techniques/README.md)
 +   [科技公司案例面试题：155 道真实面试题与答案](docs/case-interview-questions-for-tech-companies-155-real-intervi/README.md)
 +   [休闲游戏设计：为每个人内心的玩家设计游戏体验](docs/casual-game-design-designing-play-for-the-gamer-in-all-of-us/README.md)
 +   [C/C++ 初学者指南，第5版](docs/cc-course-for-beginners-5e/README.md)

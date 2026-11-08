@@ -1,0 +1,285 @@
+
+## S
+
+- subsets
+  - WAYS option and 254
+  - WAYS statement and 249
+  - subsetting IF statements 87
+- SUBSTR function
+  - about 161
+  - checking date strings example 54
+  - conditionally executing 158
+  - manipulating dates 480
+  - variable information functions and 154
+- SUM function 114
+- SUM statement 114
+- SUMMARY procedure
+  - about 233–234
+  - CHARTYPE option 247–248
+  - CLASS statement 78, 100, 191–192, 234–238, 255
+  - CLASSDATA= option 70, 251–252, 364
+  - COMPLETETYPES option 70, 253, 369–370
+  - EXCLUSIVE option 70, 251–252, 364
+  - FORMAT statement 237
+  - identifying extremes 241–245
+  - naming output variables 238–240
+  - NWAY option 247, 276
+  - OUTPUT statement 238–245, 254
+  - preloaded formats and 72, 364, 369–370
+  - shorthand variable naming and 75–76
+  - THREADS statement option and 195
+  - transposing data and 61
+  - _TYPE_ automatic variable and 246–248
+  - TYPES statement 250–251
+  - VAR statement 76
+  - WAYS statement 249–250
+- sunflower symbol 318
+- %SUPERQ macro function 210
+- superscripts 340–341
+- SYMBOL statement
+  - BWIDTH= option 316
+  - changing plot symbols with 303–306
+  - COLOR= option 304, 316
+  - generating box plots 314–315
+  - GPLOT procedure and 315–316
+  - HEIGHT= option 304
+  - I= option 315–316
+  - INTERPOL= option 304, 315–316
+  - LINE= option 304
+  - POINTLABEL option 311
+  - probability plots and 275, 303
+  - quantile plots and 303
+  - UNIVARIATE procedure and 273
+  - VALUE= option 304, 316
+  - WIDTH= option 304
+- SYMBOLGEN system option 210, 422, 433
+- SYMBOLGEN option, PLOT statement (BOXPLOT) 314
+- %SYMEXIST macro function 419
+- SYMFGET function 210
+- SYMPP. format 365, 367
+- SYMPUT routine 401–402
+- SYMPUTX routine
+  - See CALL SYMPUTX routine
+- %SYSCALL statement 482
+- %SYSEXEC macro function 466, 477
+- %SYSFUNC macro function
+  - about 418, 482
+  - accessing metadata of data sets 425
+  - COUNTW function and 155
+  - FILENAME function and 423
+  - IFC function and 157
+  - IFN function and 157
+  - INPUT function and 138
+  - INPUTN function and 139
+  - INTNX function and 137–138
+  - PUT function and 138
+  - PUTN function and 139, 142, 371
+  - quotation marks and 434–435
+- %SYSGET macro function 448, 470
+- -SYSIN initialization option 439–440
+- SYSIN system option 469
+- %SYSMACDELETE statement 429
+- %SYSMACEXIST macro function 209
+- %SYSPARM automatic macro variable 439
+- -SYSPARM initialization option 439
+- %SYSRC macro function 223
+- SYSTASK COMMAND statement 477–479
+- SYSTEM function 478
+- system options
+  - See also specific options
+  - about 39, 438
+  - additional information 444
+  - data processing options 441–444
+  - initialization options 438–441
+  - macro language and 422–424
+  - saving 444–445
+
+## T
+
+- table lookup techniques
+  - about 213–214
+  - array processing 214
+  - BY statement 216, 222
+  - direct addressing 214, 223–227
+  - double SET statements 214, 218–219
+  - format-driven 214, 219–221
+  - hash tables 214, 227–229
+  - IF statement 214–216
+  - indexes and 214, 221–223
+  - joins and merges 214, 216–218
+  - key indexing 214, 223–227
+- table of contents, generating 295
+- TABLE statement, FREQ procedure
+  - about 93, 277–278
+  - CHISQ option 278, 323
+  - classification variables and 236
+  - MISSING option 100
+  - NOPRINT option 279
+  - PLOTS= option 323
+  - SPARSE option 73
+- TABLE statement, TABULATE procedure
+  - about 258–259
+  - BOX= option 261, 265
+  - combination of elements 261–262
+  - concatenated elements 260
+  - LABEL= option 266
+  - MISSING= option 262
+  - nested elements 260–261
+  - PCTN option 263–264
+  - PRINTMISS option 367–368
+  - PCTSUM option 263–264
+  - RTS= option 265–266
+  - singular elements 259–260
+  - STYLE= option 265–266, 353
+- tables
+  - building from CSV files 13–15
+  - concatenated 260
+  - dimension components of 259
+  - hash 118–119
+  - nested 260–261
+  - writing reports to 332–336
+- TABULATE procedure
+  - about 258–262
+  - additional information 258, 270
+
+## U
+
+- UNIVARIATE procedure
+  - OUTPUT destination and 327–332
+  - OUTPUT statement 276–277
+  - probability plots and 275
+  - PROBPLOT statement 270, 275
+  - QQPLOT statement 270, 276
+  - quantile plots and 276
+  - SAS/GRAPH support and 303
+- Universal Naming Convention (UNC) 470–472
+- %UNQUOTE macro function 80, 435
+- %UPCASE macro function 435
+- UPDATE statement 130
+- URL= style attribute 346
+- USER option, LIBNAME statement 6
+
+## V
+
+- validating data
+  - about 52
+  - checking date strings 53–54
+  - in metadata-driven programs 410–415
+- VALIDVARNAME= system option 10, 442–444
+- VALUE= option
+  - AXIS statement 307
+  - LEGEND statement 308
+  - SYMBOL statement 304, 316
+- VALUE statement, FORMAT procedure
+  - about 390
+  - DEFAULT= option 384
+  - MULTILABEL option 377–378
+  - NOTSORTED option 270, 381
+  - traffic lighting and 352
+- VAR command 464
+- VAR statement
+  - MEANS procedure 404
+  - PRINT procedure 31, 294, 355
+  - shorthand variable lists and 73, 76
+  - SUMMARY procedure 76
+  - TABULATE procedure 235, 258, 265, 267
+  - TRANSPOSE procedure 69, 199
+- variable information functions 148–154
+- variable-length records, reading 24–28
+- variable names, shorthand lists 73–76
+- variables
+  - See also numeric variables
+  - character 75–76, 99–100, 138–142
+  - classification 100, 236
+  - converting 138–142
+  - environmental 447, 469–470
+  - macro 80, 101, 398–403
+  - naming in compute block 280–281
+  - output 238–240
+  - shorthand 73–76
+  - temporary 92–93, 105–107, 222–223
+- VARNAME function 426
+- VARNUM option, CONTENTS procedure 74, 200
+- VARRAY function 149
+- VARRAYX function 149
+- VARTYPE function 425
+- VARYING15. informat 27
+- VARYING. informat 26–28
+- VAXIS= option, PLOT statement (BOXPLOT) 315
+- VBAR statement, GCHART procedure 348
+- VER option, LIBNAME statement 7
+- -VERBOSE initialization option 448
+- %VERIFY macro function 406, 417
+- versions, macro 427–430
+- VFCHECK function 149
+- VFORMATD function 149
+- VFORMATDX function 149
+- VFORMATN function 149
+- VFORMATNX function 149
+- VFORMATW function 149
+- VFORMATWX function 149
+- VFORMATX function 149, 154
+- View Columns tool 6
+- VIEWTABLE command 451, 464
+- VIEWTABLE window (Display Manager)
+  - closing 452
+  - SASHELP views and 421
+  - showing column names in 450–451
+- VINARRAY function 149
+- VINARRAYX function 149
+- VINFORMAT function 149
+- VINFORMATD function 149
+- VINFORMATDX function 149
+- VINFORMATN function 149
+- VINFORMATNX function 149
+- VINFORMATW function 149
+- VINFORMATWX function 149
+- VINFORMATX function 149
+- VLABEL function 149
+- VLABELX function 149
+- VLENGTH function 149
+- VLENGTHX function 150
+- VNAME function
+  - about 150, 183
+  - additional information 163
+  - usage example 153
+- VNAMEX function 150, 153
+- VNEXT function 149–154
+- VPOS graphics option 402
+- VT command 451
+- VTYPE function 150, 154
+- VTYPEX function 150
+- VVALUE function 150
+- VVALUEX function 150, 153
+
+## W
+
+- -w sequence code 342–343
+- WAITFOR statement 479
+- warnings, customizing 474
+- WAYS option, OUTPUT statement 254
+- WAYS statement
+  - MEANS procedure 249–250
+  - SUMMARY procedure 249–250
+- WEDIT command 452
+- WHERE= data set option
+  - colon operator and 47
+  - creating WHERE clause 415–417
+  - in DATA steps 82–83
+  - SORT procedure and 191
+- WHERE statement
+  - about 83
+  - BY-group processing and 86–88
+  - checking date strings 53
+  - colon comparison operator modifier in 47
+  - compound inequalities and 49
+  - creating 415–417
+  - data set options and 45
+  - MIN and MAX operators 50–51
+  - negative values and 51
+  - operators supported 83–86
+  - PRINT procedure 351
+  - reordering variables in PDV and 201
+- WHICHCNT function 49, 162–163, 183
+- Whitlock, Ian 95, 176, 419, 427
+- WIDTH= option, SYMBOL statement 304

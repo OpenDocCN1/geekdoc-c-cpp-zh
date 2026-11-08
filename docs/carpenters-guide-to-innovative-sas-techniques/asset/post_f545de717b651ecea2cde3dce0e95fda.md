@@ -1,0 +1,277 @@
+
+- simple sorts using 120–121
+- table lookup techniques 227–229
+- hash sign (#) 350–351, 430–431
+- hash tables
+  - about 118
+  - creating 119
+  - key indexing, 223–227
+  - referencing hash tables 128–130
+  - stepping through hash tables 121–126
+  - table lookup techniques 214, 227–229
+  - updating master data sets 130–131
+- HASHEXP= constructor 119
+- Haworth, Lauren 258
+- HAXIS= option, PLOT statement (BOXPLOT) 315
+- HBOUND function 182–183
+- HBULLET statement, GKR procedure 320–321
+- HEADER option, LIBNAME statement 7
+- HEIGHT= option
+  - AXIS statement 307
+  - FOOTNOTE statement 298
+  - SYMBOL statement 304
+  - TITLE statement 298
+- Henderson, Don 176, 474
+- HEX. format 143
+- HEX16. format 169
+- hexadecimal number conversions 143
+- hiding macro code 426–427
+- hierarchy of operators 45–46
+- HISTOGRAM statement, UNIVARIATE procedure
+  - about 270
+  - MIDPOINTS option 272
+  - OUTHISTOGRAM= option 273
+- histograms
+  - linking to reports 348–349
+  - UNIVARIATE procedure and 270, 272–273
+- HITER object
+  - about 118
+  - accessing hash tables 119
+  - stepping through hash tables 122, 125–126
+- HPOS graphics option 402
+- HTEXT= graphics option 300, 302
+- HTITLE= graphics option 302
+- HTML anchor tags 295
+- HTML destination
+  - about 332
+  - ASIS style attribute, 358
+  - linking graphics elements 348
+- HTML3 destination 332
+- HTML option, VBAR statement (GCHART) 348
+- HTML4 tags 332
+- HTML_LEGEND option, VBAR statement (GCHART) 348
+- Huang, Charlie 462
+- Huntley, Scott 357
+- hyperlinks
+  - about 345
+  - creating internal links 350–351
+  - linking graphics elements 348–350
+  - style overrides, 345–347
+- hyphen (-) 438–441
+- I= option, SYMBOL statement 315–316
+- ID statement
+  - PRINT procedure 291–292
+  - TRANSPOSE procedure 62, 153, 199
+  - UNIVARIATE procedure 327
+- IDGROUP option, OUTPUT statement 61, 243–244
+- IDXNAME data set option 206–207
+- IDXWHERE data set option 206–207
+- IF statement
+  - CALL SYMPUTX routine comparison 163, 179–180
+  - conditionally assigning formats 354
+  - DLM option, 23
+  - logical and comparison operators in 48–49
+  - MIN and MAX operator, 50–51
+  - negative values, 51
+  - table lookup techniques 214–216
+- IFC function 156–157
+- IFN function 156–157
+- implicit arrays 183–184
+- IMPORT procedure
+  - about 9
+  - data source statements 10–12
+  - DATAROW statement 10
+  - DBMS= option 10, 12
+  - GETNAMES statement 10–11, 13, 443
+  - GUESSINGROWS= statement 10–12
+  - importing CSV files 12–15
+  - MIXED= statement 11–12
+  - NAMEROW= statement 12
+  - RANGE= statement 10, 17
+  - REPLACE option 10
+  - SCANTEXT statement 10
+  - SHEET= statement 10
+  - STARTROW= statement 12
+  - TEXTSIZE statement 10
+  - working with named ranges 16–17
+- importing CSV files 12–15
+- IN comparison operator
+  - DATA steps, 47, 430
+  - in macro language 430–433
+  - SQL procedure, 47, 430
+- IN= data set option 383
+- %INCLUDE statement 406, 462
+- indentations 342–343
+- INDEX function
+  - about 157, 159
+  - ANY family of functions and 144
+  - mixed dates example 390
+  - semicolons, 163
+- INDEX statement, DATASETS procedure
+  - about 222
+  - CREATE option 204
+  - DELETE option 205
+- INDEXC function 157
+- indexes
+  - about 193, 202–204
+  - BY statement 222
+  - caveats and considerations 207
+  - composite 203, 206
+  - KEY= option, SET statement 203, 222–223
+  - simple 203–205
+  - table lookup techniques 214, 221–223
+- INDEXW function 157
+- indicator bars and dials 320–322
+- INDIRECT option, %LET statement 172, 174–175
+- inequalities, compound 49–50
+- _INFILE_ automatic variable 17
+- INFILE statement
+  - DELIMITER option 21
+  - DLM= option 21, 23–24
+  - DLMOPT option 21
+  - DLMSTR= option 21, 23–24, 28–29
+  - DSD option 21
+  - FLOWOVER option 25
+  - LENGTH= option 26
+  - MISSOVER option 25, 27–28
+  - TRUNCOVER option 25, 28
+- INFMT catalog entry type 393
+- mapping overlapping ranges 383
+- MARKUP destination
+  - about 33-34
+  - EXCELXP tagset 333
+  - linking reports from 348
+- MATCH ALL option, ODS OUTPUT statement 330-332
+- MAUTOLOCDISPLAY system option 408
+- MAUTOSOURCE system option 407
+- MAX function 50, 147-148
+- MAX operator 50-51, 86
+- MAX statistic 241-243
+- MAXID option, OUTPUT statement 241-243
+- maximum values
+  - finding 147-148
+  - MAX function 50, 147-148
+  - MAX operator 50-51, 86
+- MAXWT_B format 353
+- MAXWT_F format 353
+- MDYAMPM informat 389
+- MEAN= option, OUTPUT statement 240-241
+- MEANS procedure
+  - about 233-234
+  - CHARTYPE option 247-248
+  - CLASS statement 78, 100, 191-192, 234-238, 255, 404
+  - CLASSDATA= option 70-71, 251-252
+  - COMPLETETYPES option 70, 253, 369-370
+  - EXCLUSIVE option 71, 251-252, 364
+  - generalizing programs example 404
+  - identifying extremes 241-245
+  - naming output variables 238-240
+  - NWAY option 247, 276
+  - ORDER= option 77-79
+  - OUTPUT statement 238-245, 254
+  - preloaded formats, 72, 364, 369-370
+  - THREADS system option, 195
+  - transposing data, 61
+  - TYPE_ automatic variable, 246-248
+  - TYPES statement 250-251
+  - VAR statement 404
+  - WAYS statement 249-250
+- MEMTYPE= option, DATASETS procedure 211
+- %MEND statement 407
+- MERGE statement
+  - double SET statement, 111, 176, 218-219
+  - in joins and merges 168
+  - look-ahead technique, 110
+- MERGENOBY= system option, 441
+  - repeating BY variables, 170
+  - table lookup techniques 216-218
+- MERGENOBY= system option 110, 441-442
+- merges and joins
+  - See joins and merges
+- metadata
+  - about 409
+  - accessing for data sets 424-426
+  - controlling data validations 410-415
+  - macro language and 409-415
+  - processing across data sets 409-410
+  - sort considerations 193-194
+  - sources of information for 410
+- methods
+  - about 119
+  - accessing within objects 119-120
+  - dot notation and 120
+  - return codes 121, 126
+- MFILE system option 433
+- Mf procedure 101
+- MIDPOINTS option, HISTOGRAM statement (UNIVARIATE) 272
+- MIN function 50, 147-148
+- MIN operator 50-51, 86
+- MIN statistic 241-243
+- MINIDELIMITER= system option 431-432
+- MINID option, OUTPUT statement 241-243
+- minimum values
+  - finding 147-148
+  - MIN function 50, 147-148
+  - MIN operator 50-51, 86
+- MINOPERATOR system option 430-433
+- MINOR= option, AXIS statement 307
+- MISSDATE, format 382
+- MISSING function
+  - about 99-100
+  - checking for missing date values 55
+  - negation of 51
+- MISSING method 120
+- MISSING option
+  - CLASS statement (MEANS) 100, 234-236
+  - CLASS statement (SUMMARY) 100, 234-236
+  - DEFINE statement (REPORT) 100
+  - TABLE statement (FREQ) 100
+- MISSING routine
+  - See CALL MISSING routine
+- MISSING statement 97
+- MISSING system option 98
+- missing values
+  - additional information 97
+  - CALL MISSING routine 96, 100
+  - checking for missing dates 54-55
+  - classification variables 100
+  - CMISS function, 99-100
+  - filtering 382
+  - imputing 101
+  - macro variables, 101
+  - MISSING function, 51, 55, 99-100
+  - MISSING system option 98
+  - NMISS function, 99-100
+  - numeric 383-384
+  - replacing with zero 51
+  - special 97-98
+  - SUM function, 114
+- MISSOVER option, INFILE statement 25, 27-28
+- MISSTEXT= option, TABLE statement (TABULATE) 262
+- MIXED option, LIBNAME statement 7
+- mixed procedure
+  - MIXED= statement, IMPORT procedure 11-12
+- MLF (multilabel) formats 377-380
+- MLF option
+  - CLASS statement (MEANS) 235
+  - CLASS statement (SUMMARY) 235
+- MLF option, CLASS statement (TABULATE) 378
+- MLOGIC system option 422, 433
+- MLOGICNEST system option 433
+- MMDDY_ format 53
+- MOD function 113-114
+- MODIFY statement
+  - data set procedure 76, 222
+  - hash tables updating master data sets 130
+- MODULEC function 470
+- MODULEN function 470
+- MONNAME_ format 142, 372
+- MONTH function 46-47
+- MONTHABB_ format 372
+- MONTHNAME_ format 372
+- moving average calculation 107, 113-114, 378-380
+- MPRINT system option 422, 427, 433
+- MPRINTNEST system option 433
+- MSLEVEL= system option 203, 205
+- MSG_LOGC2 destination 352
+- MSTORED system option 408

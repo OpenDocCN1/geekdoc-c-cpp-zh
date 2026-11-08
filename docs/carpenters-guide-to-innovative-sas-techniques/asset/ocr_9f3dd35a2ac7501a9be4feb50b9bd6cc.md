@@ -1,0 +1,9 @@
+# # Acknowledgments
+
+Writing this book has been a fun adventure, and it has provided me the opportunity to work with a number of talented and helpful folks. From small conversations to extended dialogs I would like to thank all of those who helped to make this book possible. I would especially like to thank the following members of the SAS community who gave so freely to this endeavor.
+
+Bob Virgile and Peter Eberhardt both contributed several suggestions for the title of this book. Because their suggestions were judged by others to be too humorous, their ideas were ultimately not used; however, I liked them nonetheless and wish they could have been incorporated.
+
+During the writing of this book it was my privilege to learn from the contributions and help of several of the world-class SAS programming legends, including, but not limited to, Peter Crawford, Paul Dorfman, John King, Art Tabachneck, and Ian Whitlock.
+
+I’d like to thank the following technical reviewers at SAS who contributed substantially to the overall quality of the book’s content: Amber Elam, Kim Wilson, Scott McElroy, Kathryn McLawhorn, Ginny Piechota, Russ Tyndall, Grace Whiteis, Chevell Parker, Jan Squillace, Ted Durie, Jim Simon, Kent Reeve, and Kevin Russell. In addition to the SAS reviewers, helpful comments and suggestions were received from William Benjamin Jr. and Peter Crawford. Rick Langston at SAS contributed a number of his examples and explanations to the sections on formats and functions. The reviewers and editors were thorough; therefore, any mistakes or omissions that remain are mine alone and in no way reflect a lack of effort on the part of the reviewers to guide me. To paraphrase Merle Haggard, “they tried to guide me better, but their pleadings I denied, I have only me to blame, because they tried.”
