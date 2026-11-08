@@ -638,6 +638,7 @@
 +   [癌症与人类生存状况](docs/cancer-and-the-human-condition/README.md)
 +   [癌症系统生物学](docs/cancer-systems-biology/README.md)
 +   [Carbon 语言：C++ 的目标继任者](docs/carbon-programming-language-the-aimed-successor-of-c/README.md)
++   [通过创建移动应用构建职业生涯（数字职业构建）](docs/career-building-through-creating-mobile-apps-digital-career-/README.md)
 +   [计算机科学与编程职业（计算机技术职业）](docs/careers-in-computer-science-and-programming-careers-in-compu/README.md)
 +   [数据库设计职业指南](docs/careers-in-database-design-none/README.md)
 +   [游戏职业指南](docs/careers-in-gaming/README.md)
