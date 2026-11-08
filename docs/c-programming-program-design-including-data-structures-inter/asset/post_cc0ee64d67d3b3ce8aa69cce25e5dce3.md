@@ -1,0 +1,137 @@
+
+From these sample runs, it follows that if the value of `testScore` is less than 0 or greater than 100, the program produces correct results, but if the value of `testScore` is between 0 and 100, say 75, the program produces incorrect results. Can you see why?
+
+As in Sample Run 3, suppose that the value of `testScore` is 75. Then, `testScore % 10 == 7`, and this value matched the case label 7. So, as we intended, it should print The grade is C. However, the output is:
+
+```text
+The grade is C.
+The grade is B.
+The grade is A.
+Invalid test score.
+```
+
+But why? Clearly only at most one `cout` statement is associated with each case label. The problem is a result of having only a partial understanding of how the `switch` structure works. As we can see, the `switch` statement does not include any `break` statement. Therefore, after executing the statement(s) associated with the matching case label, execution continues with the statement(s) associated with the next case label, resulting in the printing of the four unintended lines.
+
+To output results correctly, the `switch` structure must include a `break` statement after each `cout` statement, except the last `cout` statement. We leave it as an exercise for you to modify this program so that it outputs correct results.
+
+Once again, we can see that a partially understood concept can lead to serious errors in a program. Therefore, taking time to understand each concept and technique completely will save you hours of debugging time.
+
+## Terminating a Program with the assert Function
+
+Certain types of errors that are very difficult to catch can occur in a program. For example, division by zero can be difficult to catch using any of the programming techniques you have examined so far. C++ includes a predefined function, `assert`, that is useful in stopping program execution when certain elusive errors occur. In the case of division by zero, you can use the `assert` function to ensure that a program terminates with an appropriate error message indicating the type of error and the program location where the error occurred.
+
+Consider the following statements:
+
+```cpp
+int numerator;
+int denominator;
+int quotient;
+double hours;
+double rate;
+double wages;
+char ch;
+```
+
+- 1. `quotient = numerator / denominator;`
+- 2. `if (hours > 0 && (0 < rate && rate <= 15.50))`  
+  `wages = rate * hours;`
+- 3. `if ('A' <= ch && ch <= 'Z')`
+
+In the first statement, if the denominator is 0, logically you should not perform the division. During execution, however, the computer would try to perform the division. If the denominator is 0, the program would terminate with an error message stating that an illegal operation has occurred.
+
+The second statement is designed to compute wages only if hours is greater than 0 and rate is positive and less than or equal to 15.50. The third statement is designed to execute certain statements only if ch is an uppercase letter.
+
+For all of these statements (for that matter, in any situation in which certain conditions must be met), if conditions are not met, it would be useful to halt program execution with a message indicating where in the program an error occurred. You could handle these types of situations by including output and return statements in your program. However, C++ provides an effective method to halt a program if required conditions are not met through the assert function.
+
+The syntax to use the assert function is:
+
+```cpp
+assert(expression);
+```
+
+Here, expression is any logical expression. If expression evaluates to true, the next statement executes. If expression evaluates to false, the program terminates and indicates where in the program the error occurred.
+
+The specification of the assert function is found in the header file cassert. Therefore, for a program to use the assert function, it must include the following statement:
+
+```cpp
+#include <cassert>
+```
+
+A statement using the assert function is sometimes called an assert statement.
+
+Returning to the preceding statements, you can rewrite statement 1 (quotient = numerator / denominator;) using the assert function. Because quotient should be calculated only if denominator is nonzero, you include an assert statement before the assignment statement as follows:
+
+```cpp
+assert(denominator);
+quotient = numerator / denominator;
+```
+
+Now, if denominator is 0, the assert statement halts the execution of the program with an error message similar to the following:
+
+```text
+Assertion failed: denominator, file c:\temp\assertfunction\assertfunction.cpp, line 20
+```
+
+This error message indicates that the assertion of denominator failed. The error message also gives the name of the file containing the source code and the line number where the assertion failed.
+
+You can also rewrite statement 2 using an assertion statement as follows:
+
+```cpp
+assert(hours > 0 && (0 < rate && rate <= 15.50));
+if (hours > 0 && (0 < rate && rate <= 15.50))
+    wages = rate * hours;
+```
+
+If the expression in the assert statement fails, the program terminates with an error message similar to the following:
+
+```text
+Assertion failed: hours > 0 && (0 < rate && rate <= 15.50), file c:\temp\assertfunction\assertfunction.cpp, line 26
+```
+
+During program development and testing, the assert statement is very useful for enforcing programming constraints. As you can see, the assert statement not only halts the program, but also identifies the expression where the assertion failed, the name of the file containing the source code, and the line number where the assertion failed.
+
+Although assert statements are useful during program development, after a program has been developed and put into use, if an assert statement fails for some reason, an end user would have no idea what the error means. Therefore, after you have developed and tested a program, you might want to remove or disable the assert statements. In a very large program, it could be tedious, and perhaps impossible, to remove all of the assert statements that you used during development. In addition, if you plan to modify a program in the future, you might like to keep the assert statements. Therefore, the logical choice is to keep these statements but to disable them. You can disable assert statements by using the following preprocessor directive:
+
+```cpp
+#define NDEBUG
+```
+
+This preprocessor directive `#define NDEBUG` must be placed before the directive `#include <cassert>`.
+
+## PROGRAMMING EXAMPLE: Cable Company Billing
+
+![](img/dc1b115c1ae2ec0d8a557b7c2b830e8c_276_0.png)
+
+This programming example demonstrates a program that calculates a customer’s bill for a local cable company. There are two types of customers: residential and business. There are two rates for calculating a cable bill, one for residential customers and one for business customers. For residential customers, the following rates apply:
+
+- Bill processing fee: $4.50
+- Basic service fee: $20.50
+- Premium channels: $7.50 per channel
+
+For business customers, the following rates apply:
+
+- Bill processing fee: $15.00
+- Basic service fee: $75.00 for first 10 connections, $5.00 for each additional connection
+- Premium channels: $50.00 per channel for any number of connections
+
+The program should ask the user for an account number (an integer) and a customer code. Assume that R or r stands for a residential customer, and B or b stands for a business customer.
+
+**Input**  The customer’s account number, customer code, number of premium channels to which the user subscribes, and, in the case of business customers, number of basic service connections.
+
+**Output**  Customer’s account number and the billing amount.
+
+### PROBLEM ANALYSIS AND ALGORITHM DESIGN
+
+The purpose of this program is to calculate and print the billing amount. To calculate the billing amount, you need to know the customer for whom the billing amount is calculated (whether the customer is residential or business) and the number of premium channels to which the customer subscribes. In the case of a business customer, you also need to know the number of basic service connections and the number of premium channels. Other data needed to calculate the bill, such as the bill processing fees and the cost of a premium channel, are known quantities. The program should print the billing amount to two decimal places, which is standard for monetary amounts. This problem analysis translates into the following algorithm:
+
+- 1. Set the precision to two decimal places.
+- 2. Prompt the user for the account number and customer type.
+- 3. Based on the customer type, determine the number of premium channels and basic service connections, compute the bill, and print the bill.
+  - a. If the customer type is R or r,
+    - i. Prompt the user for the number of premium channels.
+    - ii. Compute the bill.
+    - iii. Print the bill.
+  - b. If the customer type is B or b,
+    - i. Prompt the user for the number of basic service connections and number of premium channels.
+    - ii. Compute the bill.
+    - iii. Print the bill.

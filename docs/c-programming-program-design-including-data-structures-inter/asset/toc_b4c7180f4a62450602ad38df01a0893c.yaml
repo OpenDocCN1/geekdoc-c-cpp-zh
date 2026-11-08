@@ -1,0 +1,443 @@
+level_changes:
+- line: 996
+  before: 3
+  after: 2
+- line: 1232
+  before: 2
+  after: 3
+- line: 1288
+  before: 2
+  after: 3
+- line: 1302
+  before: 2
+  after: 3
+- line: 1312
+  before: 2
+  after: 3
+- line: 1351
+  before: 2
+  after: 3
+- line: 1355
+  before: 2
+  after: 3
+- line: 1418
+  before: 2
+  after: 3
+- line: 1460
+  before: 2
+  after: 3
+- line: 1478
+  before: 2
+  after: 3
+- line: 1573
+  before: 2
+  after: 3
+- line: 1669
+  before: 2
+  after: 3
+- line: 1771
+  before: 2
+  after: 3
+- line: 1927
+  before: 2
+  after: 3
+- line: 2082
+  before: 2
+  after: 3
+- line: 2111
+  before: 2
+  after: 3
+- line: 2355
+  before: 2
+  after: 3
+- line: 2414
+  before: 2
+  after: 3
+- line: 2765
+  before: 2
+  after: 3
+- line: 2793
+  before: 2
+  after: 3
+- line: 2818
+  before: 2
+  after: 3
+- line: 2826
+  before: 2
+  after: 3
+- line: 2931
+  before: 2
+  after: 3
+- line: 3092
+  before: 2
+  after: 3
+- line: 3315
+  before: 2
+  after: 3
+- line: 3339
+  before: 2
+  after: 3
+- line: 3498
+  before: 2
+  after: 3
+- line: 3647
+  before: 2
+  after: 3
+- line: 3714
+  before: 2
+  after: 3
+- line: 4205
+  before: 2
+  after: 3
+- line: 4658
+  before: 2
+  after: 3
+- line: 4785
+  before: 2
+  after: 3
+- line: 4837
+  before: 2
+  after: 3
+- line: 4879
+  before: 2
+  after: 3
+- line: 4907
+  before: 2
+  after: 3
+- line: 4969
+  before: 2
+  after: 3
+- line: 4998
+  before: 2
+  after: 3
+- line: 5113
+  before: 2
+  after: 3
+- line: 5283
+  before: 2
+  after: 3
+- line: 5392
+  before: 2
+  after: 3
+- line: 5525
+  before: 2
+  after: 3
+- line: 5636
+  before: 2
+  after: 3
+- line: 5701
+  before: 2
+  after: 3
+- line: 5822
+  before: 2
+  after: 3
+- line: 5966
+  before: 2
+  after: 3
+- line: 6235
+  before: 2
+  after: 3
+- line: 6374
+  before: 2
+  after: 3
+- line: 6535
+  before: 2
+  after: 3
+- line: 6761
+  before: 2
+  after: 3
+- line: 6895
+  before: 2
+  after: 3
+- line: 6933
+  before: 2
+  after: 3
+- line: 7080
+  before: 2
+  after: 3
+- line: 7107
+  before: 2
+  after: 3
+- line: 7132
+  before: 2
+  after: 3
+- line: 7242
+  before: 2
+  after: 3
+- line: 7365
+  before: 2
+  after: 3
+- line: 7406
+  before: 2
+  after: 3
+- line: 7518
+  before: 2
+  after: 3
+- line: 7558
+  before: 2
+  after: 3
+- line: 7584
+  before: 2
+  after: 3
+- line: 7644
+  before: 2
+  after: 3
+- line: 7718
+  before: 2
+  after: 3
+- line: 7889
+  before: 2
+  after: 3
+- line: 7972
+  before: 2
+  after: 3
+- line: 8182
+  before: 2
+  after: 3
+- line: 8213
+  before: 2
+  after: 3
+- line: 8266
+  before: 2
+  after: 3
+- line: 8341
+  before: 2
+  after: 3
+- line: 8429
+  before: 2
+  after: 3
+- line: 8511
+  before: 2
+  after: 3
+- line: 8711
+  before: 2
+  after: 3
+- line: 8769
+  before: 2
+  after: 3
+- line: 9541
+  before: 2
+  after: 3
+- line: 9595
+  before: 2
+  after: 3
+- line: 9682
+  before: 2
+  after: 3
+- line: 9723
+  before: 2
+  after: 3
+- line: 9843
+  before: 2
+  after: 3
+- line: 10097
+  before: 2
+  after: 3
+- line: 10121
+  before: 2
+  after: 3
+- line: 10233
+  before: 2
+  after: 3
+- line: 10439
+  before: 2
+  after: 3
+- line: 10480
+  before: 2
+  after: 3
+- line: 10669
+  before: 2
+  after: 3
+- line: 10740
+  before: 2
+  after: 3
+- line: 10771
+  before: 2
+  after: 3
+- line: 10789
+  before: 2
+  after: 3
+- line: 10799
+  before: 2
+  after: 3
+- line: 10855
+  before: 2
+  after: 3
+- line: 10913
+  before: 2
+  after: 3
+- line: 10930
+  before: 2
+  after: 3
+- line: 10978
+  before: 2
+  after: 3
+- line: 11143
+  before: 2
+  after: 3
+- line: 11247
+  before: 2
+  after: 3
+- line: 11251
+  before: 2
+  after: 3
+- line: 11331
+  before: 2
+  after: 3
+- line: 11409
+  before: 2
+  after: 3
+- line: 11435
+  before: 2
+  after: 3
+- line: 11530
+  before: 2
+  after: 3
+- line: 11661
+  before: 2
+  after: 3
+- line: 11671
+  before: 2
+  after: 3
+- line: 11718
+  before: 2
+  after: 3
+- line: 12370
+  before: 2
+  after: 3
+- line: 39646
+  before: 1
+  after: 3
+- line: 39665
+  before: 1
+  after: 3
+- line: 45404
+  before: 1
+  after: 3
+- line: 60710
+  before: 3
+  after: 2
+- line: 60859
+  before: 3
+  after: 2
+text_changes:
+- line: 64
+  before: 示例 2.2
+  after: 示例 2-2
+- line: 1494
+  before: 例2-3
+  after: 示例 2-3
+- line: 1505
+  before: 例2-4
+  after: 示例 2-4
+- line: 2144
+  before: 例2-17
+  after: 示例 2-17
+- line: 2202
+  before: 例2-18
+  after: 示例 2-18
+- line: 2301
+  before: 例2-19
+  after: 示例 2-19
+- line: 2488
+  before: 示例 2-2
+  after: 示例 2-22
+- line: 3315
+  before: 示例 2-3
+  after: 示例 2-31
+- line: 4837
+  before: 例 3-6
+  after: 示例 3-6
+- line: 4907
+  before: 例 3-7
+  after: 示例 3-7
+- line: 5295
+  before: 例 3-11
+  after: 示例 3-11
+- line: 5404
+  before: 例 3-12
+  after: 示例 3-12
+- line: 7151
+  before: 示例 4.7
+  after: 示例 4-7
+- line: 7160
+  before: 示例 4.8
+  after: 示例 4-8
+- line: 7215
+  before: 示例 4.9
+  after: 示例 4-9
+- line: 7228
+  before: 示例 4.10
+  after: 示例 4-10
+- line: 7259
+  before: 例 4-11
+  after: 示例 4-11
+- line: 7275
+  before: 例 4-12
+  after: 示例 4-12
+- line: 7289
+  before: 例 4-13
+  after: 示例 4-13
+- line: 7333
+  before: 例 4-14
+  after: 示例 4-14
+- line: 7412
+  before: 例 4-15
+  after: 示例 4-15
+- line: 8182
+  before: 示例 4.1
+  after: 示例 4-21
+- line: 8213
+  before: 示例 4.2
+  after: 示例 4-22
+- line: 9527
+  before: 第5章
+  after: 第 5 章
+- line: 11199
+  before: 示例9-20
+  after: 示例 5-20
+- line: 12466
+  before: 28. **圆锥形纸杯问题**
+  after: 28. 圆锥形纸杯问题
+- line: 12510
+  before: '**表 6-1** 预定义函数（续）'
+  after: 表 6-1 预定义函数（续）
+- line: 14436
+  before: 示例 8-15（菜单驱动程序）
+  after: 示例 6-15（菜单驱动程序）
+- line: 15132
+  before: 编程示例：**数据比较**
+  after: 编程示例：数据比较
+- line: 16750
+  before: 28. **（发电站问题）**
+  after: 28. （发电站问题）
+- line: 17961
+  before: '**表7-1** 一些字符串函数（续）'
+  after: 表7-1 一些字符串函数（续）
+- line: 19017
+  before: 7. **(分数计算器)**
+  after: 7. （分数计算器）
+- line: 32494
+  before: 示例 17-2
+  after: 示例 13-2
+- line: 33000
+  before: 示例 13.5
+  after: 示例 13-5
+- line: 33470
+  before: 示例 11.7
+  after: 示例 13-7
+- line: 34286
+  before: 编程示例：**复数**
+  after: 编程示例：复数
+- line: 35336
+  before: 示例 13-3
+  after: 示例 13-9
+- line: 35942
+  before: 本章你将
+  after: 本章你将：
+- line: 38734
+  before: 第16章 链表
+  after: 第 16 章 链表
+- line: 4436
+  before: 第3章：输入/输出
+  after: 第 3 章：输入/输出

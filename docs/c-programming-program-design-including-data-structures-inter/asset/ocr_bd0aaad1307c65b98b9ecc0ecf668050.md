@@ -1,0 +1,26 @@
++   2. To refer to the member t (declared in Line 5) of the namespace expN in main, use the prefix expN:: with t (that is, refer to t as expN::t) because there is a global variable named t (declared in Line 2) and a variable named t in main.
++   3. To refer to the member u (declared in Line 6) of the namespace expN in main, use the prefix expN:: with u (that is, refer to u as expN::u) because there is a global variable named u (declared in Line 3).
++   4. You can reference the member x (declared in Line 4) of the namespace expN in main as either x or expN::x because there is no global identifier named x and the function main does not contain any identifier named x.
++   5. The definition of a function that is a member of a namespace, such as printResult, is usually written outside the namespace as in the preceding program. To write the definition of the function printResult, the name of the function in the function heading can be either printResult or expN::printResult (because no other global identifier is named printResult).
+
+The identifiers in the system-provided header files, such as iostream, cmath, and iomanip, are defined in the namespace std. For this reason, to simplify the accessing of identifiers from these header files, we have been using the following statement in the programs that we write:
+
+```
+```
+using namespace std;
+```
+```
+
+# string Type
+
+In Chapter 2, you were introduced to the data type string. Recall that prior to the ANSI/ISO C++ language standard, the Standard C++ library did not provide a string data type. Compiler vendors often supplied their own programmer-defined string type, and the syntax and semantics of string operations often varied from vendor to vendor.
+
+The data type string is a programmer-defined type and is not part of the C++ language; the C++ standard library supplies it. Before using the data type string, the program must include the header file string, as follows:
+
+```
+```
+#include <string>
+```
+```
+
+Recall that in C++, a string is a sequence of zero or more characters, and strings are enclosed in double quotation marks.

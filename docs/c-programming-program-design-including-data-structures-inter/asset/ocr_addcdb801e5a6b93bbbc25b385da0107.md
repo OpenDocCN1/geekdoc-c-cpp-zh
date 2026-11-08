@@ -1,0 +1,47 @@
+This pseudocode algorithm translates into the following C++ function:
+
+```
+```cpp
+template <class elemType>
+bool bSearchTreeType<elemType>::search
+                  (const elemType& searchItem) const
+{
+    nodeType<elemType> * current;
+    bool found = false;
+
+    if (root == NULL)
+        cout << "Cannot search an empty tree." << endl;
+    else
+    {
+        current = root;
+
+        while (current != NULL && !found)
+        {
+            if (current->info == searchItem)
+                found = true;
+            else if (current->info > searchItem)
+                current = current->lLink;
+            else
+                current = current->rLink;
+        }//end while
+    }//end else
+
+    return found;
+}//end search
+```
+```
+
+# INSERT
+
+After inserting an item in a binary search tree, the resulting binary tree must be a binary search tree. To insert a new item, first we search the binary search tree and find the place where the new item is to be inserted. The search algorithm is similar to the search algorithm of the function search. Here, we traverse the binary search tree with two pointers—a pointer, say, current, to check the current node and a pointer, say, trailCurrent, pointing to the parent of current. Because duplicate items are not allowed, our search must end at an empty subtree. We can then use the pointer trailCurrent to insert the new item at the proper place. The item to be inserted, insertItem, is passed as a parameter to the function insert. The general algorithm is:
+
++   a. Create a new node and copy insertItem into the new node. Also set lLink and rLink of the new node to NULL.
++   
++   b. ```cpp
++   if the root is NULL, the tree is empty, so make root point to the new node.
++   else
++   {
++       current = root;
++       while (current is not NULL)    //search the binary tree
++   ```
++

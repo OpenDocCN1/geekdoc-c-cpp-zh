@@ -1,0 +1,13 @@
+![](bbox=[0.241, 0.126, 0.837, 0.431])
+
+**FIGURE 12-5** — after the memory space `p` points to following the execution of various statements
+
+(The number 1500 on top of the box indicates the address of the memory space.) The statement in Line 1 allocates memory space of type `int` and stores the address of the allocated memory space into `p`. Suppose that the address of the allocated memory space is 1500. Then, the value of `p` after the execution of this statement is 1500 (see Figure 12-5(a)). The statement in Line 2 stores 54 into the memory space that `p` points to, which is 1500 (see Figure 12-5(b)).
+
+Next, the statement in Line 3 executes, which allocates a memory space of type `int` and stores the address of the allocated memory space into `p`. Suppose the address of this allocated memory space is 1800. It follows that the value of `p` is now 1800 (see Figure 12-5(c)). The statement in Line 4 stores 73 into the memory space that `p` points to, which is 1800. In other words, after the execution of the statement in Line 4, the value stored into memory space at location 1800 is 73 (see Figure 12-5(d)).
+
+Now the obvious question is what happened to the memory space 1500 that `p` was pointing to after execution of the statement in Line 1. After execution of the statement in Line 3, `p` points to the new memory space at location 1800. The previous memory space at location 1500 is now inaccessible. In addition, the memory space 1500 remains marked as allocated. In other words, it cannot be reallocated. This is called **memory leak**. That is, there is an unused memory space that cannot be allocated.
+
+Imagine what would happen if you executed statements, such as Line 3, a few thousand or a few million times. There would be a good amount of memory leak. The program might then run out of memory spaces for data manipulation and eventually result in an abnormal termination of the program.
+
+The question at hand is how to avoid memory leak. When a dynamic variable is no longer needed, it can be destroyed; that is, its memory can be deallocated. The C++

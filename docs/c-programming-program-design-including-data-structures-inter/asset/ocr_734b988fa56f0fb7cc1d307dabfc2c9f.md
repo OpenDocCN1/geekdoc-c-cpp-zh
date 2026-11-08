@@ -1,0 +1,55 @@
+# GENERAL SYNTAX TO OVERLOAD THE PRE-INCREMENT OPERATOR ++ AS A NONMEMBER FUNCTION
+
+The general syntax to overload the pre-increment operator ++ as a nonmember function is described next.
+
+**Function Prototype** (to be included in the definition of the class):
+
+```
+friend className operator++(className&);
+```
+
+**Function Definition:**
+
+```
+className operator++(className& incObj)
+{
+    //increment incObj by 1
+    return incObj;
+}
+```
+
+# OVERLOADING THE POST-INCREMENT OPERATOR
+
+We now discuss how to overload the post-increment operator. As in the case of the pre-increment operator, we first describe the overloading of this operator as a member of a class.
+
+Let us overload the post-increment operator for the class rectangleType. In both cases, pre- and post-increment, the name of the operator function is the same—operator++. To distinguish between pre- and post-increment operator overloading, we use a dummy parameter (of type int) in the function heading of the operator function. Thus, the function prototype for the post-increment operator of the class rectangleType is:
+
+```
+rectangleType operator++(int);
+```
+
+The statement:
+
+```
+myRectangle++;
+```
+
+is compiled by the compiler in the statement:
+
+```
+myRectangle.operator++(0);
+```
+
+and so the function operator++ with a parameter executes. The parameter 0 is used merely to distinguish between the pre- and post-increment operator functions.
+
+The post-increment operator first uses the value of the object in the expression and then increments the value of the object. So the steps required to implement this function are:
+
++   1. Save the value of the object—in, say, temp.
++   2. Increment the value of the object.
++   3. Return the value that was saved in temp.
+
+The function definition of the post-increment operator for the class rectangleType is:
+
+```
+rectangleType rectangleType::operator++(int u)
+```

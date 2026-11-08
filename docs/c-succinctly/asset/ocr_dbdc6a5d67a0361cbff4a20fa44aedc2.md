@@ -1,0 +1,3 @@
+# # Lambdas in Class-Member Functions
+
+When you use a lambda in a class-member function, you cannot use a default capture by reference. This is because the lambda will be provided with a `this` pointer, and it must be copied. Also, when dealing with reference-counted smart pointers, it's common to run into problems with the lambda holding a reference to the class. Usually you will never get back to a reference count of zero, causing a memory leak in your program.

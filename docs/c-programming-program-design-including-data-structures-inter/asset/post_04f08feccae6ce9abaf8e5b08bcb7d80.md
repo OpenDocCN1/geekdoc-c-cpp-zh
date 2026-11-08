@@ -1,0 +1,269 @@
+
+- logic_error class, 972
+- msTreeType class, 1388–1390
+- myClass class, 675
+- myException class, 990–993
+- negativeNumber class, 981, 982
+- newString class, 921, 923–929
+- one class, 729
+- opOverClass class, 878
+- orderedArrayList class, 233–234
+- orderedArrayListType class, 839, 846–848, 935
+- orderedLinkedList class, 1045, 1051–1052, 1066–1077
+- orderedListType class, 1074–1077
+- orderedSetType class, 848
+- ostream class, 732
+- ostream_iterator class, 1434
+- overflow_error class, 972
+- partTimeEmployee class, 710–711, 727–730, 828–829, 832–833
+- personalInfo class, 738, 740–742
+- personType class, 673–674, 710, 727, 729–730, 737–738, 828, 1105, 1275–1278, 1282
+- petType class, 819–826
+- ptrMemberVarType class, 809–819
+- queue class, 1443
+- queueADT class, 1174, 1180, 1185–1186
+- queueType class, 1180–1182, 1204
+- rectangle class, 711, 722, 826–828
+- rectangleType class, 1174–1176, 719–722, 724–726, 871–887, 893–907
+- runtime_error class, 972
+- serverListType class, 1200–1201
+- serverType class, 1196–1199
+- shape class, 712, 826–828
+- square class, 711
+- stack class, 1441–1442
+- stackADT class, 1126–1127, 1128, 1147–1148, 1150
+- stackType class, 1128–1131, 1137–1142
+- studentType class, 752–753*
+- substr class, 922
+- test class, 871
+- testAddress class, 849, 850
+- three class, 729
+- two class, 729
+- underflow_error class, 972
+- unorderedArrayListType class, 839, 842–843, 846, 935, 938, 939–941, 1224, 1278, 1247–1248
+- unorderedLinkedList class, 1045, 1051–1052, 1057–1066, 1158–1159, 1224, 1271, 1368
+- unorderedLinkedListType class, 1190–1191
+- unorderedListType class, 1065–1066
+- vector class, 1401–1407
+- waitingCustomerQueueType class, 1204–1205
+- weightedGraphType class, 1337–1378, 1382
+- classifyNumber function, 404–405
+- classIIIsFriend class, 875–876
+- classTest class, 921–922
+- clear function, 140–141, 480, 482, 1405, 1411, 1412, 1438
+- clearGraph function, 1371
+- clearList function, 841
+- clients, of classes, 643
+- climits (limits.h) header file, 1550–1551
+- clockType class, 631, 632–667, 710, 868–869, 907–915
+- clockType.h, 662, 663–665
+- clockTypeImpl.cpp, 662, 665–666
+- clockTypeImpl.obj, 665
+- close function, 160
+- cmath (math.h) header file, 79, 81, 129, 209, 1544, 1552–1553
+  - functions and, 337
+  - namespaces and, 474, 476
+- COBOL
+  - classification of, as a high-level language, 9
+  - introduction of, 3
+- code. See also pseudocode
+  - color coding, 31, 34
+  - commenting, 34–35
+  - detection program, 559–560
+  - executable, 665–667
+  - object, 82, 665–666
+  - source, 10, 82
+  - spaghetti, 304
+  - walk-throughs, 60, 69, 222, 306
+- collating sequences, 40, 41
+- color coding, 31, 34
+- columns
+  - largest element in, 551
+  - processing, 548, 549
+  - sum by, 551
+- comma (,), 35, 40, 90
+- comments
+  - multiple line, 35
+  - overview, 34–35
+  - single-line, 35
+- common
+  - input, 122
+  - output, 122
+- compare function, 480
+- compareCode function, 561–562
+- compareThree function, 348, 349
+- comparison tree, 1255
+- comparison-based search algorithms, 1242
+- comparison-based sort algorithms, 1255–1256
+- compiler(s). *See also* compile-time
+  - ANSI/ISO Standard C++ and, 22
+  - constants and, 55
+  - data types and, 39
+  - debugging and, 85–88
+  - described, 9
+  - identifiers and, 37
+  - preprocessor directives and, 79
+  - string data type and, 85
+  - typical C++ program processing and, 10, 11
+- compile-time binding, 821
+- compile-time errors. *See also* errors
+  - address of operator and, 850
+  - slicing problems and, 825
+- complex numbers
+  - described, 916
+  - programming example, 916–921
+- complexType class, 916–921
+- components
+  - adjacency lists and, 1367
+  - use of the term, with graphs, 1365
+- composition
+  - described, 737
+  - overview, 737–742
+- compound statements
+  - compound assignment statements, 94, 95
+  - described, 203
+  - overview, 203–204
+- computer(s)
+  - language of, 6–8
+  - systems, elements of, 3–6
+- Computer History Museum, 2
+- computer programs. *See* programs
+- concepts, partially understood, avoiding, 211–214, 229–231
+- conditional expressions, 219
+- conditional operator, 219
+- connected, use of the term, with graphs, 1365
+- const identifier, 888, 1324
+  - containers and, 1410
+  - graphs and, 1390
+- const keyword, 36, 602, 633, 638
+- constant(s). *See also* named constants
+  - allocating memory with, 54–57
+  - cable company billing program and, 234
+  - calculating length and, 97
+  - described, 55
+  - functions, 644
+  - global, 392
+  - overview, 55–56
+  - typed statements and, 462
+- constructor(s). *See also* default constructors
+  - binary trees and, 1321
+  - default parameters and, 654
+  - graphs and, 1371
+  - inheritance and, 720–828
+  - invoking, 651–653
+  - overview, 649–650
+  - parameters and, 725
+  - pointers and, 872
+  - accessing regarding, 654–655
+  - queues and, 1184–1185
+  - stacks and, 1136–1137, 1155
+  - templates and, 936
+- container(s)
+  - associative, 1434–1441
+  - header files and, 1444–1445
+  - initializing, 1402
+  - member functions common to, 1410–1412
+  - overview, 1400–1410
+- container adapters
+  - described, 1441
+  - overview, 1441–1444
+- continue statement, 303–305
+- control structures. *See also* repetition structures; selection structures
+  - choosing the right, 303
+  - nested, 271–273, 294, 305–310
+  - overview, 183–333
+  - pseudocode and, 220–223
+  - switch structures and, 223–241
+  - testing and, 220–223
+- conversion constructor, 926
+- conversion identifier, 37
+- convertEnum function, 464, 467–468
+- cookies sold, calculating, 265–270
+- copy constructor
+  - binary trees and, 1324
+  - containers and, 1410
+  - described, **812**
+  - linked lists and, 1052, 1056
+  - operator overloading and, 907
+  - pointers and, 812–819
+  - stacks and, 1137
+- copy function, 1413–1416, 1447
+- copy_backward function, 1447
+- copyList function, 1055–1056, 1083
+- copyStack function, 1136, 1154–1155
+- copyText function, 666–667
+- copyTree function, 1323, 1324
+- cos function, 337, 1552
+- count function, 1446, 1486–1490
+- count variable, 472, 675, 678, 679
+- count_if function, 1446, 1486–1490
+- counter variable, 43, 267, 294, 308
+- counter-controlled loops
+  - for loops, 287–288
+  - while loops, 264, 265–267
+- counter1 identifier, 37
+- courseGrade function, 352–353
+- courseScore variable, 374–375
+- courseType class, 747–750, 758
+- cout identifier, 31, 36, 685
+  - debugging with, 154–157
+  - generating output with, 72–79
+  - header files and, 1545
+  - inheritance and, 731–732
+  - namespaces and, 474
+  - operator overloading and, 889
+  - putback function and, 136
+  - setprecision manipulator, and, 143
+  - using, 80–81
+- .cpp filename extension, 10, 82, 662
+- CPUs (central processing units)
+  - described, 4
+  - invention of, 3
+- createDVDList function, 1106
+- createGraph function, 1370–1371
+- createSpanning function, 1389
+- createWeightedGraph function, 1377–1378
+- credit card balance program, 198–199
+- creditCardBalance variable, 199
+- cstddef header file, 1553
+- cstdio header file, 274, 1558
+- c_str function, 541–542
+- cstring (string.h) header file, 489, 536, 541, 923, 1553–1555
+- C-strings (character arrays)
+  - arrays of, 555–556
+  - described, 535
+  - input, 539–540
+  - operator overloading and, 923–929
+  - overview, 535–542
+  - reading/writing, 539
+- ctime header file, 274
+- curly braces ({}), 7, 83, 90, 203, 214, 220, 398, 592, 726
+- customerNumber variable, 1193, 1195
+- customers
+  - queuing systems and, 1192, 1193–1196
+  - use of the term, 1192
+  - waiting, 1204–1205
+- customerType class, 1105, 1193–1195
+- custSize variable, 1539
+- cycles, use of the term, with graphs, **1365**
+- cylinder, dimensions of, 744–745
+- cylinderType class, 745
+- dangling pointers, **796**
+- .dat filename extension, 159
+- data
+  - comparison program, 408–418
+  - formatted, **1530**
+  - raw, **1530**
+- data abstraction
+  - described, **658**
+  - overview, 658–660
+- data types. See also specific data types
+  - described, **38**
+  - operator overloading and, 870
+  - overview, 37–42
+  - random number generation and, 1557–1559
+  - variables and, 42–43
+- dataType identifier, 42
+- dateType class, 738–740
+- DBL_DIG constant, 1549
+- DBL_MAX constant, 1383, 1549

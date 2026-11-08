@@ -1,0 +1,24 @@
++   19. Assume the definition of the class personType as given in this chapter.
++       a. Write a C++ statement that declares student to be a personType object, and initialize its first name to "Buddy" and last name to "Arora".
++       b. Write a C++ statement that outputs the data stored in the object student.
++       c. Write a C++ statement that changes the first name of student to "Susan" and the last name to "Gilbert".
++   20. Explain why you would need both public and private members in a class.
++   21. What is a constructor? Why would you include a constructor in a class?
++   22. Which of the following characters appears before a destructor's name?
++       a. #    b. !    c. ~    d. $
++   23. What is a destructor and what is its purpose?
++   24. Write the definition of a class that has the following properties:
++       a. The name of the class is secretType.
++       b. The class secretType has four member variables: name of type string, age and weight of type int, and height of type double.
++       c. The class secretType has the following member functions. (Make each accessor function constant.)
++           - print—outputs the data stored in the member variables with the appropriate titles
++           - setName—function to set the name
++           - setAge—function to set the age
++           - setWeight—function to set the weight
++           - setHeight—function to set the height
++           - getName—value-returning function to return the name
++           - getAge—value-returning function to return the age
++           - getWeight—value-returning function to return the weight
++           - getHeight—value-returning function to return the height
++           - constructor—with default parameters: The default value of name is the empty string "", and the default values of age, weight, and height are 0.
++       d. Write the definition of the member functions of the class secretType, as described in Part c.

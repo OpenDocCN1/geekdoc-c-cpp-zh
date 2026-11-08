@@ -1,0 +1,28 @@
+# MODIFYING ALGORITHMS
+
+Modifying algorithms, as the name implies, modify the elements of the container by rearranging, removing, or changing the values of the elements. Table 21-23 lists the modifying algorithms.
+
+**TABLE 21-23** Modifying Algorithms
+
+|  |  |  |
+|---|---|---|
+| `copy` | `prev_permutation` | `rotate_copy` |
+| `copy_backward` | `random_shuffle` | `set_difference` |
+| `fill` | `remove` | `set_intersection` |
+| `fill_n` | `remove_copy` | `set_symmetric_difference` |
+| `generate` | `remove_copy_if` | `set_union` |
+| `generate_n` | `remove_if` | `sort` |
+| `inplace_merge` | `replace` | `stable_partition` |
+| `iter_swap` | `replace_copy` | `stable_sort` |
+| `merge` | `replace_copy_if` | `swap` |
+| `next_permutation` | `replace_if` | `swap_ranges` |
+| `nth_element` | `reverse` | `transform` |
+| `partial_sort` | `reverse_copy` | `unique` |
+| `partial_sort_copy` | `rotate` | `unique_copy` |
+| `partition` |  |  |
+
+Modifying algorithms that change the order of the elements, not their values, are also called mutating algorithms. For example, next_permutation, partition, prev_permutation, random_shuffle, reverse, reverse_copy, rotate, rotate_copy, and stable_partition are mutating algorithms.
+
+# NUMERIC ALGORITHMS
+
+Numeric algorithms are designed to perform numeric calculations on the elements of a container. Table 21-24 lists these algorithms.

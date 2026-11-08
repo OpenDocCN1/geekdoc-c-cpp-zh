@@ -1,0 +1,51 @@
+In Chapter 4, you saw how decisions are incorporated in programs. In this chapter, you will learn how repetitions are incorporated in programs.
+
+# Why Is Repetition Needed?
+
+Suppose you want to add five numbers to find their average. From what you have learned so far, you could proceed as follows (assume that all variables are properly declared):
+
+```
+cin >> num1 >> num2 >> num3 >> num4 >> num5; //read five numbers
+sum = num1 + num2 + num3 + num4 + num5;     //add the numbers
+average = sum / 5;                          //find the average
+```
+
+But suppose you want to add and average 100, 1000, or more numbers. You would have to declare that many variables and list them again in cin statements and, perhaps, again in the output statements. This takes an exorbitant amount of space and time. Also, if you want to run this program again with different values or with a different number of values, you have to rewrite the program.
+
+Suppose you want to add the following numbers:
+
+5 3 7 9 4
+
+Consider the following statements, in which sum and num are variables of type int:
+
++   1. sum = 0;
++   2. cin >> num;
++   3. sum = sum + num;
+
+The first statement initializes sum to 0. Let us execute statements 2 and 3. Statement 2 stores 5 in num; statement 3 updates the value of sum by adding num to it. After statement 3, the value of sum is 5.
+
+Let us repeat statements 2 and 3. After statement 2 (after the programming code reads the next number):
+
+```
+num = 3
+```
+
+After statement 3:
+
+```
+sum = sum + num = 5 + 3 = 8
+```
+
+At this point, sum contains the sum of the first two numbers. Let us again repeat statements 2 and 3 (a third time). After statement 2 (after the code reads the next number):
+
+```
+num = 7
+```
+
+After statement 3:
+
+```
+sum = sum + num = 8 + 7 = 15
+```
+
+Now, sum contains the sum of the first three numbers. If you repeat statements 2 and 3 two more times, sum will contain the sum of all five numbers.

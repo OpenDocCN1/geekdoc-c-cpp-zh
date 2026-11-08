@@ -1,0 +1,51 @@
+# EXAMPLE 5-5
+
+# Telephone Digits
+
+The following program reads the letter codes A to Z and prints the corresponding telephone digit. This program uses a sentinel-controlled while loop. To stop the program, the user is prompted for the sentinel, which is #. This is also an example of a nested control structure, in which if...else, switch, and the while loop are nested.
+
+```
+```cpp
+//**********************************************************
+// Program: Telephone Digits
+// This is an example of a sentinel-controlled loop. This
+// program converts uppercase letters to their corresponding
+// telephone digits.
+//**********************************************************
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char letter;                                      //Line 1
+
+    cout << "Program to convert uppercase "
+         << "letters to their corresponding "
+         << "telephone digits." << endl;              //Line 2
+
+    cout << "To stop the program enter #."
+         << endl;                                     //Line 3
+
+    cout << "Enter a letter: ";                       //Line 4
+    cin >> letter;                                    //Line 5
+    cout << endl;                                     //Line 6
+
+    while (letter != '#')                             //Line 7
+    {
+        cout << "The letter you entered is: "
+             << letter << endl;                       //Line 8
+        cout << "The corresponding telephone "
+             << "digit is: ";                         //Line 9
+
+        if (letter >= 'A' && letter <= 'Z')           //Line 10
+            switch (letter)                           //Line 11
+            {
+                case 'A':
+                case 'B':
+                case 'C':
+                    cout << 2 << endl;                //Line 12
+                    break;                            //Line 13
+```
+```

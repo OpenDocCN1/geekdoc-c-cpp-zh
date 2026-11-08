@@ -1,0 +1,32 @@
++   5. A path from a node $X$ to a node $Y$ in a binary tree is a sequence of nodes $X_0, X_1, \ldots, X_n$ such that (a) $X = X_0$, $X_n = Y$, and (b) $X_{i-1}$ is the parent of $X_i$ for all $i$, for $i = 1, 2, \ldots, n$. That is, there is a branch from $X_0$ to $X_1$, $X_1$ to $X_2$, $\ldots$, $X_{n-1}$ to $X_n$.
+
++   6. The length of a path in a binary tree is the number of branches on that path.
+
++   7. The level of a node in a binary tree is the number of branches on the path from the root to the node.
+
++   8. The level of the root node of a binary tree is 0, and the level of the children of the root node is 1.
+
++   9. The height of a binary tree is the number of nodes on the longest path from the root to a leaf.
+
++   10. In an inorder traversal, the binary tree is traversed as follows:
++      a. Traverse the left subtree.
++      b. Visit the node.
++      c. Traverse the right subtree.
+
++   11. In a preorder traversal, the binary tree is traversed as follows:
++      a. Visit the node.
++      b. Traverse the left subtree.
++      c. Traverse the right subtree.
+
++   12. In a postorder traversal, the binary tree is traversed as follows:
++      a. Traverse the left subtree.
++      b. Traverse the right subtree.
++      c. Visit the node.
+
++   13. A binary search tree $T$ is either empty or:
++      i. $T$ has a special node called the root node;
++      ii. $T$ has two sets of nodes, $L_T$ and $R_T$, called the left subtree and the right subtree of $T$, respectively;
++      iii. The key in the root node is larger than every key in the left subtree and smaller than every key in the right subtree; and
++      iv. $L_T$ and $R_T$ are binary search trees.
+
++   14. To delete a node from a binary search tree that has both left and right nonempty subtrees, first its immediate predecessor is located, then the predecessor’s info is copied into the node, and finally the predecessor is deleted.

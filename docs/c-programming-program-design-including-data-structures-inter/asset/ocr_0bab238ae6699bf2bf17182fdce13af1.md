@@ -1,0 +1,23 @@
++   g. Test whether the year is a leap year.
+
++   h. Return the number of days in the month. For example, if the date is 3-12-2015, the number of days to be returned is 31 because there are 31 days in March.
+
++   i. Return the number of days passed in the year. For example, if the date is 3-18-2015, the number of days passed in the year is 77. Note that the number of days returned also includes the current day.
+
++   j. Return the number of days remaining in the year. For example, if the date is 3-18-2015, the number of days remaining in the year is 288.
+
++   k. Calculate the new date by adding a fixed number of days to the date. For example, if the date is 3-18-2015 and the days to be added are 25, the new date is 4-12-2015.
+
++   7. Write the definitions of the functions to implement the operations defined for the class dateType in Programming Exercise 6.
+
++   8. The class extDateType defined in Programming Exercise 6 prints the date in numerical form. Some applications might require the date to be printed in another form, such as March 24, 2015. Derive the class extDateType so that the date can be printed in either form.
++   
++   Add a member variable to the class extDateType so that the month can also be stored in string form. Add a member function to output the month in the string format, followed by the year—for example, in the form March 2015.
++   
++   Write the definitions of the functions to implement the operations for the class extDateType.
+
++   9. Using the classes extDateType (Programming Exercise 8) and dayType (Chapter 10, Programming Exercise 4), design the class calendarType that, given the month and the year, can print the calendar for that month.
++   
++   To print a monthly calendar, you must know the first day of the month and the number of days in that month. Thus, you must store the first day of the month, which is of the form dayType, and the month and the year of the calendar. Clearly, the month and the year can be stored in an object of the form extDateType by setting the day component of the date to 1 and the month and year as specified by the user. Thus, the class calendarType has two member variables: an object of the type dayType and an object of the type extDateType.
++   
++   Design the class calendarType so that the program can print a calendar for any month starting January 1, 1500. Note that the day for January 1 of the year 1500 is a Monday. To calculate the first day of a month, you can add the appropriate days to Monday of January 1, 1500.

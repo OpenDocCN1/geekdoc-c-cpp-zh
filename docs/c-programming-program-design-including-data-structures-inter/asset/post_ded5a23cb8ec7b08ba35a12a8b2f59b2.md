@@ -1,0 +1,249 @@
+
+To create a binary file, the file must be opened in the binary mode. Suppose `outFile` is an `ofstream` variable (object). Consider the following statement.
+
+```cpp
+outFile.open("employee.dat", ios::binary);
+```
+
+This statement opens the file employee.dat. Data in this file will be written in its binary format. Therefore, the file opening mode `ios::binary` specifies that the file is opened in the binary mode.
+
+Next, you use the stream function `write` to write data to the file employee.dat. The syntax to use the function `write` is:
+
+```cpp
+fileVariableName.write(reinterpret_cast<const char *>(buffer),
+                       sizeof(buffer));
+```
+
+where `fileVariableName` is the object used to open the output file, and the first argument `buffer` specifies the starting address of the location in memory where the data is stored. The expression `sizeof(buffer)` specifies the size of the data, in bytes, to be written.
+
+For example, suppose `num` is an `int` variable. The following statement writes the value of `num` in the binary format to the file associated with `outFile`:
+
+```cpp
+outFile.write(reinterpret_cast<const char *> (&num),
+              sizeof(num));
+```
+
+Similarly, suppose `empSalary` is an array of, say, 100 components and the component type is `double`. The following statement writes the entire array to the file associated with `outFile`:
+
+```cpp
+outFile.write(reinterpret_cast<const char *> (empSalary),
+              sizeof(empSalary));
+```
+
+Next, let us discuss how to read data from a binary file. The operation of reading data from a binary file is similar to writing data to a binary file. First, the binary file must be opened. For example, suppose `inFile` is an `ifstream` variable, and a program has already created the binary file employee.dat. The following statement opens this file:
+
+```cpp
+inFile.open("employee.dat");
+```
+
+or:
+
+```cpp
+inFile.open("employee.dat", ios::binary);
+```
+
+To read data in the binary format, the stream function `read` is used. The syntax to use the function `read` is:
+
+```cpp
+fileVariableName.read(reinterpret_cast<char *> (buffer),
+                     sizeof(buffer));
+```
+
+The first argument `buffer` specifies the starting address of the location in memory where the data is to be stored. The expression `sizeof(buffer)` specifies the size of the data, in bytes, to be read.
+
+The program in the following example further explains how to create binary files and read data from a binary file.
+
+## EXAMPLE E-1
+
+```cpp
+//Creating and reading binary files
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+struct studentType
+{
+    char firstName[15];
+    char lastName[15];
+    int ID;
+};
+
+int main()
+{
+    //create and initialize an array of students' IDs
+    int studentIDs[5] = {111111, 222222, 333333,
+                         444444, 555555};        //Line 1
+
+    //declare and initialize the struct newStudent
+    studentType newStudent = {"John", "Wilson",
+                              777777};            //Line 2
+
+    ofstream outFile;                              //Line 3
+
+    //open the output file as a binary file
+    outFile.open("ids.dat", ios::binary);          //Line 4
+
+    //write the array in the binary format
+    outFile.write(reinterpret_cast<const char *> (studentIDs),
+                  sizeof(studentIDs));            //Line 5
+    //write the newStudent data in the binary format
+    outFile.write(reinterpret_cast<const char *> (&newStudent),
+                  sizeof(newStudent));             //Line 6
+
+    outFile.close(); //close the file              //Line 7
+
+    ifstream inFile;                               //Line 8
+    int arrayID[5];                                //Line 9
+    studentType student;                           //Line 10
+
+    //open the input file
+    inFile.open("ids.dat");                                      //Line 11
+
+    if (!inFile)                                                   //Line 12
+    {
+        cout << "The input file does not exist. "
+             << "The program terminates!!!!" << endl;              //Line 13
+        return 1;                                                  //Line 14
+    }
+
+    //input the data into the array arrayID
+    inFile.read(reinterpret_cast<char *> (arrayID),
+                sizeof(arrayID));                                  //Line 15
+    //output the data of the array arrayID
+    for (int i = 0; i < 5; i++)                                    //Line 16
+        cout << arrayID[i] << " ";                                //Line 17
+    cout << endl;                                                  //Line 18
+
+    //read the student's data
+    inFile.read(reinterpret_cast<char *> (&student),
+                sizeof(student));                                  //Line 19
+
+    //output studentData
+    cout << student.ID << " " << student.firstName
+         << " " << student.lastName << endl;                       //Line 20
+
+    inFile.close();       //close the file                         //Line 21
+
+    return 0;                                                       //Line 22
+}
+```
+
+### Sample Run:
+
+```text
+111111 222222 333333 444444 555555
+777777 John Wilson
+```
+
+The output of the preceding program is self-explanatory. The details are left as an exercise.
+
+> In the program in Example E-1, the statement in Line 2 declares the struct variable `newStudent` and also initializes it. Because `newStudent` has three components and we want to initialize all the components, three values are specified in braces separated by commas. In other words, `struct` variables can also be initialized when they are declared.
+
+The program in the following example further explains how to create binary files and then read the data from the binary files.
+
+## EXAMPLE 5
+
+```cpp
+//Creating and reading a binary file consisting of
+//bank customers’ data
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+struct customerType
+{
+    char firstName[15];
+    char lastName[15];
+    int ID;
+    double balance;
+};
+
+int main()
+{
+    customerType cust;                         //Line 1
+    ifstream inFile;                            //Line 2
+    ofstream outFile;                           //Line 3
+
+    inFile.open("customerData.txt");            //Line 4
+
+    if (!inFile)                                //Line 5
+    {
+        cout << "The input file does not exist. "
+             << "The program terminates!!!!" << endl; //Line 6
+        return 1;                               //Line 7
+    }
+
+    outFile.open("customer.dat", ios::binary);  //Line 8
+
+    inFile >> cust.ID >> cust.firstName >> cust.lastName
+           >> cust.balance;                     //Line 9
+
+    while (inFile)                              //Line 10
+    {
+        outFile.write(reinterpret_cast<const char *> (&cust),
+                      sizeof(cust));            //Line 11
+        inFile >> cust.ID >> cust.firstName >> cust.lastName
+               >> cust.balance;                //Line 12
+    }
+
+    inFile.close();                             //Line 13
+    inFile.clear();                             //Line 14
+    outFile.close();                            //Line 15
+
+    inFile.open("customer.dat", ios::binary);              //Line 16
+
+    if (!inFile)                                             //Line 17
+    {
+        cout << "The input file does not exist. "
+             << "The program terminates!!!!" << endl;        //Line 18
+        return 1;                                             //Line 19
+    }
+
+    cout << left << setw(8) << "ID"
+         << setw(16) << "First Name"
+         << setw(16) << "Last Name"
+         << setw(10) << "Balance" << endl;                  //Line 20
+    cout << fixed << showpoint << setprecision(2);            //Line 21
+
+            //read and output the data from the binary
+            //file customer.dat
+    inFile.read(reinterpret_cast<char *> (&cust),
+              sizeof(cust));                                  //Line 22
+    while (inFile)                                            //Line 23
+    {
+        cout << left << setw(8) << cust.ID
+             << setw(16) << cust.firstName
+             << setw(16) << cust.lastName
+             << right << setw(10) << cust.balance
+             << endl;                                         //Line 24
+        inFile.read(reinterpret_cast<char *> (&cust),
+                   sizeof(cust));                             //Line 25
+    }
+
+    inFile.close();      //close the file                    //Line 26
+
+    return 0;                                               //Line 27
+}
+```
+
+### Sample Run:
+
+| ID | First Name | Last Name | Balance |
+|---:|---|---|---:|
+| 77234 | Ashley | White | 4563.50 |
+| 12345 | Brad | Smith | 128923.45 |
+| 87123 | Lisa | Johnson | 2345.93 |
+| 81234 | Sheila | Robinson | 674.00 |
+| 11111 | Rita | Gupta | 14863.50 |
+| 23422 | Ajay | Kumar | 72682.90 |
+| 22222 | Jose | Ramey | 25345.35 |
+| 54234 | Sheila | Duffy | 65220.00 |
+| 55555 | Tommy | Pitts | 892.85 |
+| 23452 | Salma | Quade | 2812.90 |
+| 32657 | Jennifer | Ackerman | 9823.89 |
+| 82722 | Steve | Sharma | 78932.00 |

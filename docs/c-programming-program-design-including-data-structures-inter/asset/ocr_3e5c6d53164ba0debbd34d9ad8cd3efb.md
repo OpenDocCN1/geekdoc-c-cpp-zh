@@ -1,0 +1,20 @@
+If you want to add 10 numbers, you can repeat statements 2 and 3 ten times. And if you want to add 100 numbers, you can repeat statements 2 and 3 one hundred times. In either case, you do not have to declare any additional variables, as you did in the first code. You can use this C++ code to add any set of numbers, whereas the earlier code requires you to drastically change the code.
+
+There are many other situations in which it is necessary to repeat a set of statements. For example, for each student in a class, the formula for determining the course grade is the same. C++ has three repetition, or looping, structures that let you repeat statements over and over until certain conditions are met. This chapter introduces all three looping (repetition) structures. The next section discusses the first repetition structure, called the while loop.
+
+# while Looping (Repetition) Structure
+
+In the previous section, you saw that sometimes it is necessary to repeat a set of statements several times. One way to repeat a set of statements is to type the set of statements in the program over and over. For example, if you want to repeat a set of statements 100 times, you type the set of statements 100 times in the program. However, this solution of repeating a set of statements is impractical, if not impossible. Fortunately, there is a better way to repeat a set of statements. As noted earlier, C++ has three repetition, or looping, structures that allow you to repeat a set of statements until certain conditions are met. This section discusses the first looping structure, called a while loop.
+
+The general form of the while statement is:
+
+```
+```cpp
+while (expression)
+    statement
+```
+```
+
+In C++, while is a reserved word. Of course, the statement can be either a simple or compound statement. The expression acts as a **decision maker** and is usually a logical expression. The statement is called the body of the loop. Note that the parentheses around the expression are part of the syntax. Figure 5-1 shows the flow of execution of a while loop.
+
+![](bbox=[0.109, 0.746, 0.931, 0.941])

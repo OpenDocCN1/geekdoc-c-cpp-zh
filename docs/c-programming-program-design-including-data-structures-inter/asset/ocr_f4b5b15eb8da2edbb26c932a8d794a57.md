@@ -1,0 +1,50 @@
+```
+~~~cpp
+cout << "Line 23: temp1 list after copying "
+     << "intList and " << endl
+     << "     replacing 34 with 0: ";        //Line 23
+copy(temp1.begin(), temp1.end(), screenOut); //Line 24
+cout << endl;                               //Line 25
+
+vector<int> temp2(10);                      //Line 26
+
+//replace_copy_if
+replace_copy_if(intList.begin(), intList.end(),
+                temp2.begin(), lessThanEqualTo50, 50); //Line 27
+
+cout << "Line 28: temp2 after copying intList "
+     << "and replacing any " << endl
+     << "     numbers less than 50 "
+     << "with 50: " << endl << "         "; //Line 28
+copy(temp2.begin(), temp2.end(), screenOut); //Line 29
+cout << endl;                                //Line 30
+
+return 0;
+}
+
+bool lessThanEqualTo50(int num)
+{
+    return (num <= 50);
+}
+~~~
+```
+
+# **Sample Run:**
+
+```
+~~~text
+Line 4: Character list: A a A B A c d e F A
+Line 8: Character list after replacing A with Z:
+        Z a Z B Z c d e F Z
+Line 12: Character list after replacing the uppercase
+        letters with *: * a * * * c d e * *
+Line 18: intList: 12 34 56 21 34 78 34 55 12 25
+Line 23: temp1 list after copying intList and
+        replacing 34 with 0: 12 0 56 21 0 78 0 55 12 25
+Line 28: temp2 after copying intList and replacing any
+        numbers less than 50 with 50:
+        50 50 56 50 50 78 50 55 50 50
+~~~
+```
+
+The statement in Line 2 creates a vector list, charList, of type char and initializes charList using the array cList created in Line 1. The statement in Line 3 declares an ostream iterator, screen. The statement in Line 5 outputs the value of charList. The statement in Line 7 uses the function replace to replace all occurrences of 'A' with 'Z' in charList. The statement in Line 9 outputs the elements of charList. In the output, the line marked Line 8 contains the outputs of Lines 8 through 10. The statement in Line 11 uses the function replace_if to replace the uppercase letters with '*' in the list charList. The statement in Line 13 outputs the elements of charList. In the output, the line marked Line 12 contains the output of Lines 12 through 14.

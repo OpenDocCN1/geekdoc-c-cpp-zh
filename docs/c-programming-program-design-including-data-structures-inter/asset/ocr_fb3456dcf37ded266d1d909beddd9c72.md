@@ -1,0 +1,42 @@
+# ## Two-Dimensional Array Initialization During Declaration
+
+Like one-dimensional arrays, two-dimensional arrays can be initialized when they are declared. The following example helps illustrate this concept. Consider the following statement:
+
+```
+```c
+int board[4][3] = {{2, 3, 1},
+                   {15, 25, 13},
+                   {20, 4, 7},
+                   {11, 18, 14}};
+```
+```
+
+This statement declares board to be a two-dimensional array of four rows and three columns. The components of the first row are 2, 3, and 1; the components of the second row are 15, 25, and 13; the components of the third row are 20, 4, and 7; and the components of the fourth row are 11, 18, and 14, respectively. Figure 8-15 shows the array board.
+
+![](bbox=[0.376, 0.365, 0.74, 0.468])
+
+**FIGURE 8-15** Two-dimensional array board
+
+To initialize a two-dimensional array when it is declared:
+
++   1. The elements of each row are enclosed within curly braces and separated by commas.
++   2. All rows are enclosed within curly braces.
++   3. For number arrays, if all components of a row are not specified, the unspecified components are initialized to 0. In this case, at least one of the values must be given to initialize all the components of a row.
+
+# ## Two-Dimensional Arrays and Enumeration Types
+
+> > **NOTE**  
+> > The section “Enumeration Type” in Chapter 7 is required to understand this section.
+
+You can also use the enumeration type for array indices. Consider the following statements:
+
+```
+```c
+const int NUMBER_OF_ROWS = 6;
+const int NUMBER_OF_COLUMNS = 5;
+enum carType {GM, FORD, TOYOTA, BMW, NISSAN, VOLVO};
+enum colorType {RED, BROWN, BLACK, WHITE, GRAY};
+
+int inStock[NUMBER_OF_ROWS][NUMBER_OF_COLUMNS];
+```
+```

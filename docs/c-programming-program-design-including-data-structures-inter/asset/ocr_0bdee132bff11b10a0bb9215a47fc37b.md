@@ -1,0 +1,54 @@
+Chapter 8 describes a **sequential** or **linear search**. For easy reference and the sake of completeness, next we give the sequential search algorithm for array-based lists:
+
+```
+int unorderedArrayListType::seqSearch(int searchItem) const
+{
+    int loc;
+    bool found = false;
+
+    loc = 0;
+
+    while (loc < length && !found)
+        if (list[loc] == searchItem)
+            found = true;
+        else
+            loc++;
+
+    if (found)
+        return loc;
+    else
+        return -1;
+} //end seqSearch
+```
+
+The function remove deletes an item from the list. The item to be deleted is passed as a parameter to this function. In order to delete the item, the function calls the member function seqSearch to determine whether or not the item to be deleted is in the list. If the item to be deleted is found in the list, the item is removed from the list and the length of the list is decremented by 1. If the item to be removed is found in the list, the function seqSearch returns the index of the item in the list to be deleted. We can now use the index returned by the function seqSearch, and use the function removeAt to remove the item from the list. Therefore, the definition of the function remove is:
+
+```
+void unorderedArrayListType::remove(int removeItem)
+{
+    int loc;
+
+    if (length == 0)
+        cout << "Cannot delete from an empty list." << endl;
+    else
+    {
+        loc = seqSearch(removeItem);
+
+        if (loc != -1)
+            removeAt(loc);
+        else
+            cout << "The item to be deleted is not in the list."
+                 << endl;
+    }
+} //end remove
+```
+
+The definition of the function replaceAt is:
+
+```
+void unorderedArrayListType::replaceAt(int location, int repItem)
+{
+    if (location < 0 || location >= length)
+        cout << "The location of the item to be "
+             << "replaced is out of range." << endl;
+```

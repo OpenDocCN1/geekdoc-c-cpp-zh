@@ -1,0 +1,51 @@
+```
+```cpp
+void doDivision()
+{
+    int dividend, divisor, quotient;                 //Line 3
+
+    try
+    {
+        cout << "Line 4: Enter the dividend: ";     //Line 4
+        cin >> dividend;                             //Line 5
+        cout << endl;                                //Line 6
+
+        cout << "Line 7: Enter the divisor: ";      //Line 7
+        cin >> divisor;                              //Line 8
+        cout << endl;                                //Line 9
+
+        if (divisor == 0)                            //Line 10
+            throw divisionByZero();                  //Line 11
+
+        quotient = dividend / divisor;               //Line 12
+        cout << "Line 13: Quotient = " << quotient   //Line 13
+             << endl;
+    }
+    catch (divisionByZero divByZeroObj)              //Line 14
+    {
+        cout << "Line 15: In the function "
+             << divByZeroObj.what() << endl;         //Line 15
+    }
+}
+```
+```
+
+**Sample Run 1:** In this sample run, the user input is shaded.
+
+Line 4: Enter the dividend: **34**
+
+Line 7: Enter the divisor: **5**
+
+Line 13: Quotient = 6
+
+**Sample Run 2:** In this sample run, the user input is shaded.
+
+Line 4: Enter the dividend: **56**
+
+Line 7: Enter the divisor: **0**
+
+Line 15: In the function doDivision: Division by zero
+
+# EXAMPLE 14-14
+
+Example 10-8 defined the class circleType to implement the basic properties of a circle. If a circleType object tries to set the radius to a negative number, then the function setRadius of this class sets the radius to 0. In this example, we derive the class negativeNumber to handle negative number exceptions and then use this class to throw an exception if a circleType object tries to set the radius to a negative number. So consider the following class:

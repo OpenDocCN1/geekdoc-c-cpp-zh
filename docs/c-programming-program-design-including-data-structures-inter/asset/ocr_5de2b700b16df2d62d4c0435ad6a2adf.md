@@ -1,0 +1,45 @@
+```
+int main()
+{
+    cout << "The number of times the dice are rolled to "
+         << "get the sum 10 = " << rollDice(10) << endl;
+    cout << "The number of times the dice are rolled to "
+         << "get the sum 6 = " << rollDice(6) << endl;
+
+    return 0;
+}
+
+int rollDice(int num)
+{
+    int die1;
+    int die2;
+    int sum;
+    int rollCount = 0;
+
+    srand(time(0));
+
+    do
+    {
+        die1 = rand() % 6 + 1;
+        die2 = rand() % 6 + 1;
+        sum = die1 + die2;
+        rollCount++;
+    }
+    while (sum != num);
+
+    return rollCount;
+}
+```
+
+**Sample Run:**
+
+The number of times the dice are rolled to get the sum 10 = 11
+The number of times the dice are rolled to get the sum 6 = 7
+
+We leave it as an exercise for you to modify this program so that it allows the user to enter the desired sum of the numbers to be rolled. (See Programming Exercise 7 at the end of this chapter.)
+
+The following is an example of a function that returns a Boolean value.
+
+# EXAMPLE 6-5 (PALINDROME)
+
+In this example, a function, isPalindrome, is designed that returns true if a string is a palindrome and false otherwise. A string is a palindrome if it reads forward and backward in the same way. For example, the strings "madamimadam", "5", "434", and "78965987" are all palindromes.

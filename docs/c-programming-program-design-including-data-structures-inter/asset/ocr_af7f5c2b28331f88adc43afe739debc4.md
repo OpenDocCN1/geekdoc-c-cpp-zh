@@ -1,0 +1,57 @@
+Example 2-17 further explains how to input numeric data into a program.
+
+# **EXAMPLE 2-17**
+
+Suppose we have the following statements:
+
+```
+int feet;
+int inches;
+```
+
+Suppose the input is:
+
+```
+23 7
+```
+
+Next, consider the following statement:
+
+```
+cin >> feet >> inches;
+```
+
+This statement first stores the number 23 into the variable feet and then the number 7 into the variable inches. Notice that when these numbers are entered via the keyboard, they are separated with a blank. In fact, they can be separated with one or more blanks or lines or even the tab character.
+
+The following C++ program shows the effect of the preceding input statements:
+
+```
+// This program illustrates how input statements work.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int feet;
+    int inches;
+
+    cout << "Enter two integers separated by one or more spaces: ";
+    cin >> feet >> inches;
+    cout << endl;
+
+    cout << "Feet = " << feet << endl;
+    cout << "Inches = " << inches << endl;
+
+    return 0;
+}
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+```
+Enter two integers separated by one or more spaces: 23 7
+Feet = 23
+Inches = 7
+```

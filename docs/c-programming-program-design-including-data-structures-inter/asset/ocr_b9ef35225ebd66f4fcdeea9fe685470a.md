@@ -1,0 +1,53 @@
+```
+```cpp
+while (cin)
+{
+    if (num < 0)
+    {
+        cout << "Negative number found in the data." << endl;
+        cin >> num;
+        continue;
+    }
+
+    sum = sum + num;
+    cin >> num;
+}
+```
+```
+
+It was stated earlier that all three loops have their place in C++ and that one loop can often replace another. The execution of a continue statement, however, is where the while and do...while structures differ from the for structure. When the continue statement is executed in a while or a do...while loop, the update statement may not execute. In a for structure, the update statement always executes.
+
+# Nested Control Structures
+
+In this section, we give examples that illustrate how to use nested loops to achieve useful results and process data.
+
+# EXAMPLE 5-21
+
+Suppose you want to create the following pattern:
+
++   *
++   **
++   ***
++   ****
++   *****
+
+Clearly, you want to print five lines of stars. In the first line, you want to print one star, in the second line, two stars, and so on. Because five lines will be printed, start with the following for statement:
+
+```
+```cpp
+for (i = 1; i <= 5; i++)
+```
+```
+
+The value of i in the first iteration is 1, in the second iteration it is 2, and so on. You can use the value of i as the limiting condition in another for loop nested within this loop to control the number of stars in a line. A little more thought produces the following code:
+
+```
+```cpp
+for (i = 1; i <= 5; i++)        //Line 1
+{                               //Line 2
+    for (j = 1; j <= i; j++)    //Line 3
+        cout << "*";            //Line 4
+    cout << endl;                //Line 5
+}                               //Line 6
+```
+```

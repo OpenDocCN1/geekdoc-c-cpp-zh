@@ -1,0 +1,43 @@
+new value of **x**—also becomes the value of the expression in the `if` statement—that is, the value of the assignment expression. Because 5 is nonzero, the expression in the `if` statement evaluates to true, so the statement part of the `if` statement outputs: The value is five.
+
+No matter how experienced a programmer is, almost everyone makes the mistake of using `=` in place of `==` at one time or another. One reason why these two operators are often confused is that most programming languages use `==` as an equality operator. Thus, experience with other programming languages can create confusion. Sometimes the error is merely typographical, another reason to be careful when typing code.
+
+Despite the fact that an assignment expression can be used as an expression, using the assignment operator in place of the equality operator can cause serious problems in a program. For example, suppose that the discount on a car insurance policy is based on the insured’s driving record. A driving record of 1 means that the driver is accident-free and receives a 25% discount on the policy. The statement:
+
+```
+```cpp
+if (drivingCode == 1)
+    cout << "The discount on the policy is 25%." << endl;
+```
+```
+
+outputs:
+
+The discount on the policy is 25%.
+
+only if the value of `drivingCode` is 1. However, the statement:
+
+```
+```cpp
+if (drivingCode = 1)
+    cout << "The discount on the policy is 25%." << endl;
+```
+```
+
+always outputs:
+
+The discount on the policy is 25%.
+
+because the right side of the assignment expression evaluates to 1, which is nonzero and so evaluates to true. Therefore, the expression in the `if` statement evaluates to true, outputting the following line of text: The discount on the policy is 25%. Also, the value 1 is assigned to the variable `drivingCode`. Suppose that before the `if` statement executes, the value of the variable `drivingCode` is 4. After the `if` statement executes, not only is the output wrong, but the new value assigned replaces the old driving code.
+
+The appearance of `=` in place of `==` resembles a silent killer. It is not a syntax error, so the compiler does not warn you of an error. Rather, it is a logical error.
+
+> > Using `=` in place of `==` can cause serious problems, especially if it happens in a looping statement. Chapter 5 discusses looping structures.
+
+The appearance of the equality operator in place of the assignment operator can also cause errors in a program. For example, suppose x, y, and z are `int` variables. The statement:
+
+```
+```cpp
+x = y + z;
+```
+```

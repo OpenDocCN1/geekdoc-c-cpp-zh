@@ -1,0 +1,29 @@
+11 outputs the value of `ch`. The `cin.get(ch);` statement in Line 12 extracts the next character from the input stream and stores it in `ch`. The `cout` statement in Line 13 outputs the value of `ch`, which is still `'c'`.
+
+Note that the statement `ch = cin.peek();` in Line 10 did not remove the character `'c'` from the input stream; it only peeked into the input stream. The output of Lines 11 and 13 demonstrates this functionality.
+
+# The Dot Notation between I/O Stream Variables and I/O Functions: A Precaution
+
+In the preceding sections, you learned how to manipulate an input stream to get data into a program. You also learned how to use the functions `get`, `ignore`, `peek`, and `putback`. It is important that you use these functions exactly as shown. For example, to use the `get` function, you used statements such as the following:
+
+```
+cin.get(ch);
+```
+
+Omitting the dot—that is, the period between the variable `cin` and the function name `get`—results in a syntax error. For example, in the statement:
+
+```
+cin.get(ch);
+```
+
+`cin` and `get` are two separate identifiers separated by a dot. In the statement:
+
+```
+cinget(ch);
+```
+
+`cinget` becomes a new identifier. If you used `cinget(ch);` in a program, the compiler would try to resolve an undeclared identifier, which would generate an error. Similarly, missing parentheses, as in `cin.getch`, result in a syntax error. Also, remember that you must use the input functions together with an input stream variable. If you try to use any of the input functions alone—that is, without the input stream variable—the compiler might generate an error message such as “undeclared identifier.” For example, the statement `get(ch);` could result in a syntax error.
+
+As you can see, several functions are associated with an iostream variable, each doing a specific job. Recall that the functions `get`, `ignore`, and so on are members of the data type `istream`. Called the **dot notation**, the dot separates the input stream variable name from the member, or function, name. In fact, in C++, the dot is an operator called the **member access operator**.
+
+> **C++** has a special name for the data types `istream` and `ostream`. The data types `istream` and `ostream` are called classes. The variables `cin` and `cout` also have special names, called objects. Therefore, `cin` is called an istream object, and `cout` is called an ostream object. In fact, stream variables are called stream objects. You will learn these concepts in Chapter 11 later in this book.

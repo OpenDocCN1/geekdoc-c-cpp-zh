@@ -1,0 +1,56 @@
+```
+```cpp
+cout << "Line 18: setC = ";                    //Line 18
+copy(setC, setC + 5, screen);                   //Line 19
+cout << endl;                                   //Line 20
+
+cout << "Line 21: setD = ";                    //Line 21
+copy(setD, setD + 6, screen);                   //Line 22
+cout << endl;                                   //Line 23
+
+lastElem = set_union(setA, setA + 5,
+                     setB, setB + 7,
+                     AunionB);                  //Line 24
+
+cout << "Line 25: Set AunionB: ";              //Line 25
+copy(AunionB, lastElem, screen);                //Line 26
+cout << endl;                                   //Line 27
+
+lastElem = set_union(setA, setA + 5,
+                     setC, setC + 5,
+                     AunionC);                  //Line 28
+
+cout << "Line 29: Set AunionC: ";              //Line 29
+copy(AunionC, lastElem, screen);                //Line 30
+cout << endl;                                   //Line 31
+
+lastElem = set_union(setB, setB + 7,
+                     setD, setD + 6,
+                     BunionD);                  //Line 32
+
+cout << "Line 33: Set BunonD: ";               //Line 33
+copy(BunionD, lastElem, screen);                //Line 34
+cout << endl;                                   //Line 35
+
+lastElem = set_intersection(setA, setA + 5,
+                            setB, setB + 7,
+                            AintersectB);       //Line 36
+
+cout << "Line 37: Set AintersectB: ";          //Line 37
+copy(AintersectB, lastElem, screen);            //Line 38
+cout << endl;                                   //Line 39
+
+lastElem = set_intersection(setA, setA + 5,
+                            setC, setC + 5,
+                            AintersectC);       //Line 40
+
+cout << "Line 41: Set AintersectC: ";          //Line 41
+copy(AintersectC, lastElem, screen);            //Line 42
+cout << endl;                                   //Line 43
+
+return 0;
+}
+```
+```
+
+![](bbox=[0.948, 0.422, 1.0, 0.535])

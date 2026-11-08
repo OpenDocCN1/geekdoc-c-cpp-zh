@@ -1,0 +1,59 @@
+```
+Customer number 3 arrived at time unit 9
+Customer number 4 arrived at time unit 12
+From server number 2 customer number 2
+    departed at time unit 13
+From server number 1 customer number 3
+    departed at time unit 14
+From server number 2 customer number 4
+    departed at time unit 18
+Customer number 5 arrived at time unit 21
+From server number 1 customer number 5
+    departed at time unit 26
+Customer number 6 arrived at time unit 37
+Customer number 7 arrived at time unit 38
+Customer number 8 arrived at time unit 41
+From server number 1 customer number 6
+    departed at time unit 42
+From server number 2 customer number 7
+    departed at time unit 43
+Customer number 9 arrived at time unit 43
+Customer number 10 arrived at time unit 44
+From server number 1 customer number 8
+    departed at time unit 47
+From server number 2 customer number 9
+    departed at time unit 48
+Customer number 11 arrived at time unit 49
+Customer number 12 arrived at time unit 51
+From server number 1 customer number 10
+    departed at time unit 52
+Customer number 13 arrived at time unit 52
+Customer number 14 arrived at time unit 53
+From server number 2 customer number 11
+    departed at time unit 54
+Customer number 15 arrived at time unit 54
+From server number 1 customer number 12
+    departed at time unit 57
+From server number 2 customer number 13
+    departed at time unit 59
+Customer number 16 arrived at time unit 59
+From server number 1 customer number 14
+    departed at time unit 62
+From server number 2 customer number 15
+    departed at time unit 64
+Customer number 17 arrived at time unit 66
+From server number 1 customer number 16
+    departed at time unit 67
+From server number 2 customer number 17
+    departed at time unit 71
+Customer number 18 arrived at time unit 71
+From server number 1 customer number 18
+    departed at time unit 76
+Customer number 19 arrived at time unit 78
+From server number 1 customer number 19
+    departed at time unit 83
+Customer number 20 arrived at time unit 90
+Customer number 21 arrived at time unit 92
+From server number 1 customer number 20
+    departed at time unit 95
+```

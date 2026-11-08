@@ -1,0 +1,65 @@
+Consider the following statements:
+
+```
+char str[31];
+cin.get(str, 31);
+```
+
+If the input is:
+
+```
+William T. Johnson
+```
+
+then "William T. Johnson" is stored in str. Suppose that the input is:
+
+```
+Hello there. My name is Mickey Blair.
+```
+
+Then, because str can store, at most, 30 characters, the C-string "Hello there. My name is Mickey" is stored in str.
+
+Now, suppose that we have the statements:
+
+```
+char str1[26];
+char str2[26];
+char discard;
+```
+
+and the two lines of input:
+
+```
+Summer is warm.
+Winter will be cold.
+```
+
+Further, suppose that we want to store the first C-string in str1 and the second C-string in str2. Both str1 and str2 can store C-strings that are up to 25 characters in length. Because the number of characters in the first line is 15, the reading stops at '\n'. You must read and discard the newline character at the end of the first line to store the second line into str2. The following sequence of statements stores the first line into str1 and the second line into str2:
+
+```
+cin.get(str1, 26);
+cin.get(discard);
+cin.get(str2, 26);
+```
+
+To read and store a line of input, including whitespace characters, you can also use the stream function getline. Suppose that you have the following declaration:
+
+```
+char textLine[100];
+```
+
+The following statement will read and store the next 99 characters, or until the newline character, into textLine. The null character will be automatically appended as the last character of textLine.
+
+```
+cin.getline(textLine, 100);
+```
+
+# String Output
+
+The output of C-strings is another place where aggregate operations on arrays are allowed. You can output C-strings by using an output stream variable, such as cout, together with the insertion operator, <<. For example, the statement:
+
+```
+cout << name;
+```
+
+outputs the contents of name on the screen. The insertion operator, <<, continues to write the contents of name until it finds the null character. Thus, if the length of name is 4, the above statement outputs only four characters. If name does not contain the null

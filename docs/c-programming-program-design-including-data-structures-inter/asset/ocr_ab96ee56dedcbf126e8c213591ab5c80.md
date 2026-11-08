@@ -1,0 +1,46 @@
+```
+```cpp
+cout << "Line 7: yourRectangle: "
+     << yourRectangle << endl;                 //Line 7
+
+cout << "Line 8: myRectangle + yourRectangle: "
+     << myRectangle + yourRectangle << endl;   //Line 8
+cout << "Line 9: myRectangle * yourRectangle: "
+     << myRectangle * yourRectangle << endl;   //Line 9
+
+}
+return 0;
+```
+```
+
+**Sample Run:** In this sample run, the user input is shaded.
+
+```
+Line 3: myRectangle: Length = 23; Width = 45
+Line 4: Enter the length and width of a rectangle: 32 15
+
+Line 7: yourRectangle: Length = 32; Width = 15
+Line 8: myRectangle + yourRectangle: Length = 55; Width = 60
+Line 9: myRectangle * yourRectangle: Length = 736; Width = 675
+```
+
+The statements in Lines 1 and 2 declare and initialize myRectangle and yourRectangle to be objects of type rectangleType. The statement in Line 3 outputs the value of myRectangle using cout and the insertion operator. The statement in Line 5 inputs the data into yourRectangle using cin and the extraction operator. The statement in Line 7 outputs the value of yourRectangle using cout and the insertion operator. The cout statement in Line 8 adds the lengths and widths of myRectangle and yourRectangle and outputs the result. Similarly, the cout statement in Line 9 multiplies the lengths and widths of myRectangle and yourRectangle and outputs the result. The output shows that both the stream insertion and stream extraction operators were overloaded successfully.
+
+# ## Overloading the Assignment Operator (=)
+
+One of the built-in operations on classes is the assignment operation. The assignment operator causes a member-wise copy of the member variables of the class. For example, the statement:
+
+```
+myRectangle = yourRectangle;
+```
+
+is equivalent to the statements:
+
+```
+myRectangle.length = yourRectangle.length;
+myRectangle.width = yourRectangle.width;
+```
+
+From Chapter 12, recall that the built-in assignment operator works well for classes that do not have pointer member variables, but not for classes with pointer member variables. Therefore, to avoid the shallow copy of data for classes with pointer member variables, we must explicitly overload the assignment operator.
+
+Recall that to overload the assignment operator = for a class, the operator function operator= must be a member of that class.

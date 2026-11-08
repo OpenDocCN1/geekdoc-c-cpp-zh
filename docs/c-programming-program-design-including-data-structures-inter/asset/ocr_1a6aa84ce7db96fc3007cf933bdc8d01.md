@@ -1,0 +1,13 @@
+![](bbox=[0.0, 0.0, 0.313, 0.281])
+
+# PREFACE
+
+WELCOME TO THE SIXTH EDITION OF *C++ Programming: Program Design Including Data Structures*. Designed for a two semester (CS1 and CS2) C++ course, this text will provide a breath of fresh air to you and your students. The CS1 and CS2 courses serve as the cornerstone of the Computer Science curriculum. My primary goal is to motivate and excite all introductory programming students, regardless of their level. Motivation breeds excitement for learning. Motivation and excitement are critical factors that lead to the success of the programming student. This text is a culmination and development of my classroom notes throughout more than fifty semesters of teaching successful programming to Computer Science students.
+
+> > **Warning:** This text can be expected to create a serious reduction in the demand for programming help during your office hours. Other side effects include significantly diminished student dependency on others while learning to program.
+
+*C++ Programming: Program Design Including Data Structures* started as a collection of brief examples, exercises, and lengthy programming examples to supplement the books that were in use at a university. It soon turned into a collection large enough to develop into a text. *The approach taken in this book is, in fact, driven by the students’ demand for clarity and readability.* The material was written and rewritten until the students felt comfortable with it. Most of the examples in this book resulted from student interaction in the classroom.
+
+As with any profession, practice is essential. Cooking students practice their recipes. Budding violinists practice their scales. New programmers must practice solving problems and writing code. This is not a C++ cookbook. We do not simply list the C++ syntax followed by an example; we dissect the “why” behind all the concepts. The crucial question of “why?” is answered for every topic when first introduced. This technique offers a bridge to learning C++. Students must understand the “why?” in order to be motivated to learn.
+
+Traditionally, a C++ programming neophyte needed a working knowledge of another programming language. This book assumes no prior programming experience. However, some adequate mathematics background such as college algebra is required.

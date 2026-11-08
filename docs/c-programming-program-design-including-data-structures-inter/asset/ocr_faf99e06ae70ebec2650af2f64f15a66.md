@@ -1,0 +1,32 @@
+Read the first symbol, 6, which is a number. Push the number onto the stack (see Figure 17-17(a)). Read the next symbol, 3, which is a number. Push the number onto the stack (see Figure 17-17(b)). Read the next symbol, +, which is an operator. Because an operator requires two operands to be evaluated, pop the stack twice (see Figure 17-17(c)). Perform the operation and put the result back onto the stack (see Figure 17-17(d)).
+
+![](bbox=[0.938, 0.19, 0.999, 0.306])
+
+Read the next symbol, 2, which is a number. Push the number onto the stack (see Figure 17-17(e)). Read the next symbol, *, which is an operator. Because an operator requires two operands to be evaluated, pop the stack twice (see Figure 17-17(f)). Perform the operation, and put the result on the stack (see Figure 17-17(g)).
+
+Scan the next symbol, =, which is the equal sign, indicating the end of the expression. Therefore, print the result. The result of the expression is in the stack, so pop and print (see Figure 17-17(h)).
+
+The value of the expression 6 3 + 2 * = 18.
+
+From this discussion, it is clear that when we read a symbol other than a number, the following cases arise:
+
++   1. The symbol we read is one of the following: +, −, *, /, or =.
++      a. If the symbol is +, −, *, /, or /, the symbol is an operator, so we must evaluate it. Because an operator requires two operands, the stack must have at least two elements; otherwise, the expression has an error.
++      b. If the symbol is = (an equal sign), the expression ends and we must print the answer. At this step, the stack must contain exactly one element; otherwise, the expression has an error.
++   2. The symbol we read is something other than +, −, *, /, or =. In this case, the expression contains an illegal operator.
+
+It is also clear that when an operand (number) is encountered in an expression, it is pushed onto the stack because the operator comes after the operands.
+
+Consider the following expressions:
+
++   a. 7 6 + 3 ; 6 − =
++    b. 14 + 2 3 * =
++    c. 14 2 3 + =
+
+Expression (a) has an illegal operator, expression (b) does not have enough operands for +, and expression (c) has too many operands. In the case of expression (c), when we encounter the equal sign (=), the stack will have two elements, and this error cannot be discovered until we are ready to print the value of the expression.
+
+To make the input easier to read, we assume that the postfix expressions are in the following form:
+
+```
+#6 #3 + #2 * =
+```

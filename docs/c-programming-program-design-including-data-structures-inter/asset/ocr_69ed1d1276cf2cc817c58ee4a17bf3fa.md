@@ -1,0 +1,48 @@
+```
+```cpp
+private:
+    int dMonth;  //variable to store the month
+    int dDay;    //variable to store the day
+    int dYear;   //variable to store the year
+};
+```
+```
+
+Figure 11-7 shows the UML class diagram of the class dateType.
+
+![](bbox=[0.325, 0.236, 0.743, 0.442])
+
+FIGURE 11-7  UML class diagram of the class dateType
+
+The definitions of the member functions of the class dateType are as follows:
+
+```
+```cpp
+void dateType::setDate(int month, int day, int year)
+{
+    dMonth = month;
+    dDay = day;
+    dYear = year;
+}
+```
+```
+
+The definition of the function setDate, before storing the date into the member variables, does not check whether the date is valid. That is, it does not confirm whether month is between 1 and 12, year is greater than 0, and day is valid (for example, for January, day should be between 1 and 31). In Programming Exercise 2 at the end of this chapter, you are asked to rewrite the definition of the function setDate so that the date is validated before storing it in the member variables. The definitions of the remaining member functions are as follows:
+
+```
+```cpp
+int dateType::getDay() const
+{
+    return dDay;
+}
+```
+```
+
+```
+```cpp
+int dateType::getMonth() const
+{
+    return dMonth;
+}
+```
+```

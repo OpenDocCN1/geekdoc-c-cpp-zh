@@ -1,0 +1,30 @@
+In Example 10-5, because the identifiers `hr`, `min`, and `sec` do not follow any member access specifier, they are private.
+
+It is a common practice to list all of the public members first and then the private members. This way, you can focus your attention on the public members.
+
+# Constructors
+
+In the program in Example 10-2, when we printed the value of yourClock without calling the function setTime, the output was some strange numbers (see the output of Line 5 in the sample run). This is due to the fact that C++ does not automatically initialize the variables. Because the private members of a class cannot be accessed outside of the class (in our case, the member variables), if the user forgets to initialize these variables by calling the function setTime, the program will produce erroneous results.
+
+To guarantee that the member variables of a class are initialized, you use constructors. There are two types of constructors: with parameters and without parameters. The constructor without parameters is called the **default constructor**.
+
+Constructors have the following properties:
+
++   - The name of a constructor is the same as the name of the class.
++   - A constructor, even though it is a function, has no type. That is, it is neither a value-returning function nor a void function.
++   - A class can have more than one constructor. However, all constructors of a class have the same name.
++   - If a class has more than one constructor, the constructors must have different formal parameter lists. That is, either they have a different number of formal parameters or, if the number of formal parameters is the same, then the data type of the formal parameters, in the order you list, must differ in at least one position.
++   - Constructors execute automatically when a class object enters its scope. Because they have no types, they cannot be called like other functions.
++   - Which constructor executes depends on the types of values passed to the class object when the class object is declared.
+
+Let us extend the definition of the class `clockType` by including two constructors:
+
+```
+class clockType
+{
+public:
+    void setTime(int, int, int);
+    void getTime(int&, int&, int&) const;
+    void printTime() const;
+    void incrementSeconds();
+```

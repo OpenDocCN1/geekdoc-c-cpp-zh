@@ -1,0 +1,21 @@
+As noted earlier, programs are developed using an IDE. Well-known IDEs used to create programs in the high-level language C++ include Visual C++ 2008 Express, Visual C++ 2010 Express, Visual Studio 2010 (from Microsoft), and C++ Builder (from Borland). You can also use Dev-C++ IDE from Bloodshed Software to create and test C++ programs. These IDEs contain a text editor to create the source program, a compiler to check the source program for syntax errors, a program to link the object code with the IDE resources, and a program to execute the program.
+
+These IDEs are quite user friendly. When you compile your program, the compiler not only identifies the syntax errors, but also typically suggests how to correct them. Moreover, with just a simple command, the object code is linked with the resources used from the IDE. For example, the command that does the linking on Visual C++ 2008 Express, Visual C++ 2010 Express, and Visual Studio 2010 is **Build** or **Rebuild**. (For further clarification regarding the use of these commands, check the documentation of these IDEs.) If the program is not yet compiled, each of these commands first compiles the program and then links and produces the executable code.
+
+The Web site http://msdn.microsoft.com/en-us/beginner/bb964629.aspx contains a video that explains how to use Visual C++ 2008 Express to write C++ programs.
+
+# ## Programming with the Problem Analysis–Coding–Execution Cycle
+
+*Programming is a process of problem solving.* Different people use different techniques to solve problems. Some techniques are nicely outlined and easy to follow. They not only solve the problem, but also give insight into how the solution was reached. These problem-solving techniques can be easily modified if the domain of the problem changes.
+
+To be a good problem solver and a good programmer, you must follow good problem-solving techniques. One common problem-solving technique includes analyzing a problem, outlining the problem requirements, and designing steps, called an **algorithm**, to solve the problem.
+
+**Algorithm:** A step-by-step problem-solving process in which a solution is arrived at in a finite amount of time.
+
+In a programming environment, the problem-solving process requires the following three steps:
+
++   1. Analyze the problem, outline the problem and its solution requirements, and design an algorithm to solve the problem.
++   2. Implement the algorithm in a programming language, such as C++, and verify that the algorithm works.
++   3. Maintain the program by using and modifying it if the problem domain changes.
+
+Figure 1-4 summarizes this three-step programming process.

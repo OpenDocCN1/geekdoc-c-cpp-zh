@@ -1,0 +1,44 @@
+In this example, you can refer to the global identifiers of the header file iostream, such as cin, cout, and endl, without using the prefix std:: before the identifier name. The obvious restriction is that the block (or function) that refers to the global identifier (of the header file iostream) must not contain any identifier with the same name as this global identifier.
+
+# EXAMPLE 7-10
+
+```
+Consider the following C++ code:
+
+#include <cmath>
+
+int main()
+{
+    double x = 15.3;
+    double y;
+
+    y = std::pow(x, 2);
+    .
+    .
+    .
+}
+```
+
+This example accesses the function pow of the header file cmath.
+
+# EXAMPLE 7-11
+
+```
+Consider the following C++ code:
+
+#include <iostream>
+.
+.
+int main()
+{
+    using namespace std;
+    .
+    .
+    .
+}
+.
+.
+.
+```
+
+In this example, the function main can refer to the global identifiers of the header file iostream without using the prefix std:: before the identifier name. The using
