@@ -669,6 +669,7 @@
 +   [CISSP 入学者指南，第 6 版](docs/cissp-for-dummies-6th-edition-for-dummies-computertech/README.md)
 +   [公民社会与政府](docs/civil-society-and-government/README.md)
 +   [敏捷之道：回归基础](docs/clean-agile-back-to-basics/README.md)
++   [Clean Agile：回归基础（Robert C. Martin系列）](docs/clean-agile-back-to-basics-robert-c-martin-series/README.md)
 +   [整洁架构：软件结构与设计的工艺指南（Robert C. Martin 系列）](docs/clean-architecture-a-craftsmans-guide-to-software-structure-/README.md)
 +   [洁净代码：敏捷软件手工艺手册（第2版）](docs/clean-code-a-handbook-of-agile-software-craftsmanship-2nd-ed/README.md)
 +   [洁净代码：敏捷软件工之道手册](docs/clean-code-a-handbook-of-agile-software-craftsmanship-robert/README.md)
