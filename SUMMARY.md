@@ -648,6 +648,7 @@
 +   [C/C++ 初学者指南，第5版](docs/cc-course-for-beginners-5e/README.md)
 +   [CCNA Cisco认证网络助理（语音）学习指南（考试640-460和642-436）（认证出版社）](docs/ccna-cisco-certified-network-associate-voice-study-guide-exa/README.md)
 +   [CCNA 路由与交换 ICND2 200-105 官方认证指南](docs/ccna-routing-and-switching-icnd2-200-105-official-cert-guide/README.md)
++   [CCNA 安全（640-554）便携命令指南](docs/ccna-security-640-554-portable-command-guide/README.md)
 +   [CCNA Voice 640-461 官方认证指南 第2版](docs/ccna-voice-640-461-official-cert-guide2nd-edition/README.md)
 +   [CEH 道德黑客认证学习指南 [附 CDROM]](docs/ceh-certified-ethical-hacker-study-guide-with-cdrom/README.md)
 +   [细胞神经生理学与整合：入门指南](docs/cellular-neurophysiology-and-integration-an-interpretive-int/README.md)
