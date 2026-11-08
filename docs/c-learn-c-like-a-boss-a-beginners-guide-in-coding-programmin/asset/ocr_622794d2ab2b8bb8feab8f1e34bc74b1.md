@@ -1,0 +1,3 @@
+# # Conclusion
+
+Thank you again for purchasing this book. I hope that it proved to be informational, but enjoyable. Keep this book as a guide not only for knowledge, but inspiration as well. C++ seems like an intimidating language but the more you practice it in regularity, by days, months, and years, you will achieve complete mastery of this programming language like with anything else in life. I ask you not to fret and be anxious and a problem arise, because there will be many times in which this will happen. There are numerous resources out there for you just waiting to be read of discovered and it is in your best interest to do your due diligence in learning, improving, and enhancing your C++ programming skills to the next level.

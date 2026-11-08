@@ -1,0 +1,2 @@
+Congratulations, if you got all five right, then you can move on to the next section!  
+However, if you got more than one wrong, then you should probably go back and reread the section. If you’re ready then onwards to Chapter 3.

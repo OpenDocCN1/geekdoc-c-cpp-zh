@@ -1,0 +1,3992 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # C++
+
+
+    # ## LEARN C++ LIKE A BOSS
+
+
+    # ### A BEGINNERS GUIDE IN CODING
+
+    ### PROGRAMMING AND DOMINATING C++
+
+
+    Novice to expert guide to learn
+
+    and master C++ FAST
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_0_0.png)'
+  - '[PAGE 1]
+
+
+    # # C++: Learn C++ Like a Boss
+
+
+    # ## A Beginners Guide in Coding Programming
+
+    ## And Dominating C++. Novice to Expert
+
+    ## Guide To Learn and Master C++ Fast
+
+
+    **By: Isaac D. Cody**'
+  - '[PAGE 2]
+
+
+    # # C++
+
+
+    # ## LEARN C++ LIKE A BOSS
+
+
+    A BEGINNERS GUIDE IN CODING
+
+    PROGRAMMING AND DOMINATING C++
+
+
+    Novice to expert guide to learn
+
+    and master C++ FAST
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_2_0.png)
+
+
+    ISAAC D. CODY'
+  - '[PAGE 3]
+
+
+    © Copyright 2014 by Isaac D. Cody- All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    > - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.'
+  - '[PAGE 4]
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.'
+  - '[PAGE 5]
+
+
+    # Table of Contents
+
+
+    +   - [Chapter 1: Basic Background, History, and the Fruition of C++](#chapter-1)
+
+
+    +   - [Chapter 2: Let’s Begin](#chapter-2)
+
+
+    +   - [Chapter 3: Diving more into Program Comments, Data Types, Lines, and Characters](#chapter-3)
+
+
+    +   - [Chapter 4: Arrays, Loops, and Conditions](#chapter-4)
+
+
+    +   - [Chapter 5: Working with Operators](#chapter-5)
+
+
+    +   - [Chapter 6: Constants and the various types of Literals](#chapter-6)
+
+
+    +   - [Conclusion](#conclusion)
+
+
+    +   - [Bonus: Brief Hacking History and Overview](#bonus)'
+  - '[PAGE 6]
+
+
+    # Chapter 1: Basic Background, History, and the Fruition of C++
+
+
+    Before we get into how to start using C++, you have to learn what it is, and how
+    it came about. The reason for this is simple. To truly know something, you have
+    to know everything you possibly can learn about the subject, especially when it
+    comes to something so technical such as computer programming.
+
+
+    C++ is a very important part of computer and Internet history. It is simply something
+    that is interwoven within the history of the technological world, as we know today.
+    Furthermore, the apps and other functions on a smart phone would not exist if
+    it were not for C++.
+
+
+    When you are learning C++, you will be filled with wonder at the fact that one
+    programming language can have so much impact in our daily lives. Almost every
+    computer ever built can be attributed to a specific aspect that can be traced
+    back to the language of C++. One of the benefits of learning this language is
+    the ability to learn other languages with ease. Having the ability of learning
+    C++ will enhance your knowledge of other programming language, which is why many
+    people regard it as the ‘godfather’ of computer programming. Furthermore, many
+    big companies still need programs that have C++ as they rely this programming
+    language to run their central computer system. So when the going gets tough, just
+    know it’ll benefit you in the long run so stay strong and get in the programming
+    mindset!
+
+
+    # History of C++
+
+
+    Bjarne Strousup was working on his thesis for his doctorate, and he decided to
+    work with a programming language that was known as Simula. This language one one
+    of the'
+  - '[PAGE 7]
+
+
+    first programming languages of the computer age. However it was very slow and
+    full of bugs.
+
+
+    Strousup came up with the idea of C with Classes. A programming language that
+    was a lot faster than Simula. C with classes later became Cfront which sped up
+    the process of creating a language. However, Cfront was left in the dust when
+    C++ came along, because it added compilers into the language, making it a lot
+    easier, and faster to use than any other project language of the time.
+
+
+    Since then there have been annotated reference guides and updates to the language
+    to make it better and faster, and even easier to use. C++ for Dummies is a popular
+    guide for this language.
+
+
+    C++ is one of the most popular languages out there today. This language is the
+    best for many industries, so rather than make a new language which takes a lot
+    of time, they just adapt C++ to many different variations because it is versatile
+    in its nature.
+
+
+    # **Exactly what is** C++
+
+
+    C++ is not just any programming language, it is object oriented. Object oriented
+    programming or OOP for short, is programming that revolves around objects rather
+    than actions. It is like looking at the whole picture at once, rather than each
+    individual puzzle piece.
+
+
+    This programming language was designed with flexibility and speed in mind, as
+    other languages of the time were way too slow, and could only do one thing, so
+    every time you wanted to create something new, you needed a new language.'
+  - "[PAGE 8]\n\nThere are many things that you can use this language for, and they\
+    \ are still very much popular today, despite the ominous amount of languages that\
+    \ are out there now.\n\n+   - Prepackaged scripts: These are what script enthusiasts,\
+    \ and new hackers use to practice their programming techniques. Since so many\
+    \ people nowadays want to take the easy way out, scripts that come already prepared\
+    \ are what most hackers are looking for, thus the packages need to improve, and\
+    \ they do so using C++.\n+   \n+   - Video Games: Let's face it, pretty much everyone\
+    \ plays video games at some point in their life. Whether it is growing up, or\
+    \ when you have kids, you will get sucked into the realm of video games, and you\
+    \ can never escape. Those games can be attributed to some way or form from using\
+    \ the C++ language. If you are into making games, and bringing the world joy through\
+    \ graphics, then it is definitely a good idea to learn the language of C++\n+\
+    \   \n+   - Web pages: A lot of web pages are made using C++. The reason for this\
+    \ is because the language is so easy to manipulate, it makes for a quick and easy\
+    \ website that has plenty of interactive features for people. Some websites you\
+    \ may visit often that are created with C++ are Amazon and Ebay. If you like designing\
+    \ web pages you should learn C++ to be efficient and maybe even land a decent\
+    \ job in this field.\n+   \n+   - Phone Apps: Nowadays it seems everyone has a\
+    \ smart phone, and that means apps galore. There are thousands of apps out there,\
+    \ and more are being made every day. Some apps are free, some apps cost money,\
+    \ but a good chunk were made using C++. That is because this language is so scalable\
+    \ that it can be used for simple games and more intricate shopping apps.\n\nThere\
+    \ are a lot of other minor things that C++ is used for, such as VoIP calling.\
+    \ That was created using C++. The fact of the matter is, you will get told time\
+    \ and time again that C++ is a dying language when in reality that is just a ruse\
+    \ that JAVA people uses to scare"
+  md: '
+
+    # C++
+
+    ## LEARN C++ LIKE A BOSS
+
+    ### A BEGINNERS GUIDE IN CODING PROGRAMMING AND DOMINATING C++
+
+    Novice to expert guide to learn and master C++ FAST
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_0_0.png)
+
+
+    # C++: Learn C++ Like a Boss
+
+    ## A Beginners Guide in Coding Programming and Dominating C++. Novice to Expert
+    Guide To Learn and Master C++ Fast
+
+
+    **By: Isaac D. Cody**
+
+
+    # C++
+
+    ## LEARN C++ LIKE A BOSS
+
+    ### A BEGINNERS GUIDE IN CODING PROGRAMMING AND DOMINATING C++
+
+    Novice to expert guide to learn and master C++ FAST
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_2_0.png)
+
+
+    ISAAC D. CODY
+
+
+    © Copyright 2014 by Isaac D. Cody — All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    > - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are owned by
+    the owners themselves, not affiliated with this document.
+
+
+    # Table of Contents
+
+
+    - [Chapter 1: Basic Background, History, and the Fruition of C++](#chapter-1)
+
+
+    - [Chapter 2: Let’s Begin](#chapter-2)
+
+
+    - [Chapter 3: Diving more into Program Comments, Data Types, Lines, and Characters](#chapter-3)
+
+
+    - [Chapter 4: Arrays, Loops, and Conditions](#chapter-4)
+
+
+    - [Chapter 5: Working with Operators](#chapter-5)
+
+
+    - [Chapter 6: Constants and the various types of Literals](#chapter-6)
+
+
+    - [Conclusion](#conclusion)
+
+
+    - [Bonus: Brief Hacking History and Overview](#bonus)
+
+
+    # Chapter 1: Basic Background, History, and the Fruition of C++
+
+
+    Before we get into how to start using C++, you have to learn what it is, and how
+    it came about. The reason for this is simple. To truly know something, you have
+    to know everything you possibly can learn about the subject, especially when it
+    comes to something so technical such as computer programming.
+
+
+    C++ is a very important part of computer and Internet history. It is simply something
+    that is interwoven within the history of the technological world, as we know today.
+    Furthermore, the apps and other functions on a smart phone would not exist if
+    it were not for C++.
+
+
+    When you are learning C++, you will be filled with wonder at the fact that one
+    programming language can have so much impact in our daily lives. Almost every
+    computer ever built can be attributed to a specific aspect that can be traced
+    back to the language of C++. One of the benefits of learning this language is
+    the ability to learn other languages with ease. Having the ability of learning
+    C++ will enhance your knowledge of other programming language, which is why many
+    people regard it as the ‘godfather’ of computer programming. Furthermore, many
+    big companies still need programs that have C++ as they rely this programming
+    language to run their central computer system. So when the going gets tough, just
+    know it’ll benefit you in the long run so stay strong and get in the programming
+    mindset!
+
+
+    ## History of C++
+
+
+    Bjarne Stroustrup was working on his thesis for his doctorate, and he decided
+    to work with a programming language that was known as Simula. This language was
+    one of the first programming languages of the computer age. However, it was very
+    slow and full of bugs.
+
+
+    Stroustrup came up with the idea of C with Classes. A programming language that
+    was a lot faster than Simula. C with Classes later became Cfront, which sped up
+    the process of creating a language. However, Cfront was left in the dust when
+    C++ came along, because it added compilers into the language, making it a lot
+    easier, and faster to use than any other programming language of the time.
+
+
+    Since then there have been annotated reference guides and updates to the language
+    to make it better and faster, and even easier to use. C++ for Dummies is a popular
+    guide for this language.
+
+
+    C++ is one of the most popular languages out there today. This language is the
+    best for many industries, so rather than make a new language which takes a lot
+    of time, they just adapt C++ to many different variations because it is versatile
+    in its nature.
+
+
+    ## Exactly what is C++
+
+
+    C++ is not just any programming language, it is object oriented. Object-oriented
+    programming, or OOP for short, is programming that revolves around objects rather
+    than actions. It is like looking at the whole picture at once, rather than each
+    individual puzzle piece.
+
+
+    This programming language was designed with flexibility and speed in mind, as
+    other languages of the time were way too slow, and could only do one thing, so
+    every time you wanted to create something new, you needed a new language.
+
+
+    There are many things that you can use this language for, and they are still very
+    much popular today, despite the enormous amount of languages that are out there
+    now.
+
+
+    - Prepackaged scripts: These are what script enthusiasts, and new hackers use
+    to practice their programming techniques. Since so many people nowadays want to
+    take the easy way out, scripts that come already prepared are what most hackers
+    are looking for, thus the packages need to improve, and they do so using C++.
+
+
+    - Video Games: Let''s face it, pretty much everyone plays video games at some
+    point in their life. Whether it is growing up, or when you have kids, you will
+    get sucked into the realm of video games, and you can never escape. Those games
+    can be attributed to some way or form from using the C++ language. If you are
+    into making games, and bringing the world joy through graphics, then it is definitely
+    a good idea to learn the language of C++.
+
+
+    - Web pages: A lot of web pages are made using C++. The reason for this is because
+    the language is so easy to manipulate, it makes for a quick and easy website that
+    has plenty of interactive features for people. Some websites you may visit often
+    that are created with C++ are Amazon and eBay. If you like designing web pages
+    you should learn C++ to be efficient and maybe even land a decent job in this
+    field.
+
+
+    - Phone Apps: Nowadays it seems everyone has a smart phone, and that means apps
+    galore. There are thousands of apps out there, and more are being made every day.
+    Some apps are free, some apps cost money, but a good chunk were made using C++.
+    That is because this language is so scalable that it can be used for simple games
+    and more intricate shopping apps.
+
+
+    There are a lot of other minor things that C++ is used for, such as VoIP calling.
+    That was created using C++. The fact of the matter is, you will get told time
+    and time again that C++ is a dying language when in reality that is just a ruse
+    that Java people uses to scare
+
+    '
+  mdcn: '
+
+
+    # C++
+
+    ## 像高手一样学习 C++
+
+    ### 编程入门指南：编写代码并精通 C++
+
+    从新手到专家的指南：快速学习并掌握 C++
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_0_0.png)
+
+
+    # C++：像高手一样学习 C++
+
+    ## 编程入门指南：编写代码并精通 C++。从新手到专家指南：快速学习并掌握 C++
+
+
+    **作者：艾萨克·D·科迪**
+
+
+    # C++
+
+    ## 像高手一样学习 C++
+
+    ### 编程入门指南：编写代码并精通 C++
+
+    从新手到专家的指南：快速学习并掌握 C++
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_2_0.png)
+
+
+    艾萨克·D·科迪
+
+
+    © 2014 年版权归艾萨克·D·科迪所有——保留所有权利。
+
+
+    本文档旨在就所涉及的主题和问题提供准确可靠的信息。本书的销售基于这样一种认识：出版商无需提供会计、官方许可或其他具备资质的服务。如有必要获得法律或专业建议，应咨询该领域的执业人士。
+
+
+    > - 摘自《原则宣言》，该宣言由美国律师协会的一个委员会与出版商和协会的一个委员会共同接受并批准。
+
+
+    以电子或印刷形式复制、翻印或传播本文档任何部分均不合法。严禁录制本出版物；未经出版商书面许可，不得以任何方式存储本文档。保留所有权利。
+
+
+    本文提供的信息据称真实且一致；对于因使用或滥用其中包含的任何政策、流程或指示，或因疏忽或其他原因而产生的任何责任，均由接收方读者自行承担全部责任。在任何情况下，出版商均不对因本文信息直接或间接导致的任何赔偿、损害或金钱损失承担法律责任或受到指责。
+
+
+    未由出版商持有的所有版权均归各自作者所有。
+
+
+    本文信息仅用于提供信息之目的，并按其普遍适用性提供。信息的呈现不构成合同或任何形式的保证。
+
+
+    本书使用的商标均未经同意；商标的发布未经商标所有者许可或支持。本书中的所有商标和品牌仅用于说明目的，归其所有者所有，与本文件无关。
+
+
+    # 目录
+
+
+    - [第1章：基础背景、历史与C++的成果](#chapter-1)
+
+
+    - [第2章：让我们开始吧](#chapter-2)
+
+
+    - [第3章：深入探讨程序注释、数据类型、行与字符](#chapter-3)
+
+
+    - [第4章：数组、循环与条件](#chapter-4)
+
+
+    - [第5章：使用运算符](#chapter-5)
+
+
+    - [第6章：常量与各种类型的字面量](#chapter-6)
+
+
+    - [结论](#conclusion)
+
+
+    - [附赠：黑客简史与概述](#bonus)
+
+
+    # 第1章：基础背景、历史与C++的成果
+
+
+    在开始学习如何使用C++之前，你必须了解它是什么，以及它是如何产生的。原因很简单。要真正了解某件事，你必须尽可能了解有关该主题的一切，尤其是在涉及计算机编程这样技术性很强的内容时。
+
+
+    C++是计算机和互联网历史中非常重要的一部分。它简直交织在我们今天所熟知的技术世界的历史之中。此外，如果没有C++，智能手机上的应用和其他功能就不会存在。
+
+
+    学习C++时，你会惊叹于一种编程语言竟能在我们的日常生活中产生如此大的影响。几乎每一台曾制造出来的计算机，都可以归因于某个可追溯到C++语言的特定方面。学习这门语言的好处之一是能够轻松学习其他语言。掌握C++的能力会增进你对其他编程语言的了解，这也是许多人将其视为计算机编程“教父”的原因。此外，许多大公司仍然需要以C++编写的程序，因为他们依赖这种编程语言来运行其核心计算机系统。所以，当情况变得艰难时，只要知道从长远来看它会让你受益，因此要坚持下去，进入编程思维模式！
+
+
+    ## C++的历史
+
+
+    本贾尼·斯特劳斯特卢普当时正在撰写博士论文，他决定使用一种名为Simula的编程语言。这种语言是计算机时代最早的编程语言之一。然而，它非常慢，而且充满缺陷。
+
+
+    斯特劳斯特卢普想出了“带类的C”（C with Classes）这一构想。这是一种比Simula快得多的编程语言。“带类的C”后来成为Cfront，它加快了创建语言的过程。然而，随着C++的出现，Cfront被抛在了后面，因为C++将编译器加入语言中，使其比当时任何其他编程语言都更容易、更快速地使用。
+
+
+    自那以后，出现了带注释的参考指南和对该语言的更新，使其更好、更快，甚至更易于使用。《C++达人迷》是这门语言的一本流行指南。
+
+
+    C++是当今最流行的语言之一。这门语言对许多行业来说都是最好的选择，因此与其花大量时间创造一种新语言，不如将C++改编成许多不同的变体，因为它本质上具有多功能性。
+
+
+    ## C++究竟是什么
+
+
+    C++不是普通的编程语言，它是面向对象的。面向对象编程，简称OOP，是一种围绕对象而非动作展开的编程方式。它就像一次性看整幅图景，而不是看每一块拼图。
+
+
+    这门编程语言在设计时考虑了灵活性和速度，因为当时的其他语言太慢，而且只能做一件事，所以每次你想创造新东西时，都需要一种新语言。
+
+
+    你可以将这门语言用于许多用途，尽管如今已有大量语言存在，这些用途在今天仍然非常流行。
+
+
+    - 预打包脚本：这些是脚本爱好者和新黑客用来练习编程技巧的东西。由于如今很多人都想走捷径，已经准备好的脚本正是大多数黑客所寻找的，因此这些包需要改进，而他们正是使用C++来改进。
+
+
+    - 电子游戏：面对现实吧，几乎每个人一生中某个时候都会玩电子游戏。无论是成长过程中，还是有了孩子之后，你都会被吸入电子游戏的世界，永远无法逃脱。那些游戏在某种程度上都可以归功于使用C++语言。如果你热衷于制作游戏，并通过图形为世界带来欢乐，那么学习C++语言绝对是个好主意。
+
+
+    - 网页：很多网页都是用C++制作的。原因在于这种语言非常容易操控，能快速、轻松地制作出具有大量交互功能的网站。你经常访问的一些用C++创建的网站包括亚马逊和eBay。如果你喜欢设计网页，就应该学习C++以提高效率，甚至可能在这个领域找到一份不错的工作。
+
+
+    - 手机应用：如今似乎每个人都有智能手机，这意味着应用琳琅满目。市面上的应用有成千上万，而且每天都有更多应用被制作出来。有些应用免费，有些应用收费，但其中很大一部分是用C++制作的。这是因为这种语言的可扩展性非常强，可以用于简单游戏和更复杂的购物应用。
+
+
+    C++还有许多其他较小的用途，例如VoIP通话。那就是用C++创建的。事实是，你会一次又一次地被告知C++是一门正在消亡的语言，而实际上那只是Java人士用来吓唬人的伎俩
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 9]
+
+
+    people into switching languages to ensure that C++ is a dying language.
+
+
+    # ## Why It’s used
+
+
+    C++ is used not only for its flexibility and speed, but because it has a lot of
+    components, it is fairly easy to learn, and if you master C++, you can master
+    the other languages with ease. The reason for this is that when you learn something
+    that is a little more complex than everything else first, the easier stuff will
+    fall right into place, however, if you get used to easy to learn subjects, then
+    you will find that the more difficult stuff is hard to learn because you are not
+    used to putting in that much effort into the subject that you are trying to learn.
+
+
+    If you want to learn a language that you can use for different types of functions
+    within the realm of computer technology, then this is the language for you. You
+    can do almost anything with it, and once you learn enough about it, you may be
+    able to figure out ways to manipulate the language to do things that it generally
+    cannot do.
+
+
+    C++ is a very important language when it comes to computer programming, and though
+    it has a lot of variables from the way that it is laid out, it is very easy to
+    read, and very easy to create. This makes it one of the most desired programming
+    languages that are out there, because no one wants to struggle to read code. No
+    one wants to have to spend all of their time out there working on what they know
+    is right just because they cannot find where they went wrong.
+
+
+    # ## Job Outlook
+
+
+    Yes, there are a lot of jobs out there that still rely on C++ to operate. There
+    are so many'
+  - '[PAGE 10]
+
+
+    different things that you could do, and all of them affect other people in the
+    community. Video game designing, and web page designing are two of the most prominent
+    things that are out there. You could also become a white hat or blue hat hacker.
+
+
+    But according to payscale.com (search software engineer), a person with C++ Software
+    engineer background can earn up to $57,000 to $120,000 based on experience. The
+    median is around $80,363. Some other titles that people with C++ programming language
+    have is Computer Programmer, Electrical Engineer, and Application Developer.
+
+
+    However, to be the best that you can be, you should always know two or three programming
+    languages to be marketable. Though those languages will not be included in this
+    book, do not marry yourself to a single language. Instead, just like with human
+    language, broaden your horizons and dabble in a few, but keep one as your main
+    language.
+
+
+    C++ should be the main language that you fall back on due to its versatility.
+    Maybe use JAVA or Linux as your other languages, but C++ is the best main language
+    to have, and you only want the best as your main.
+
+
+    C++ is a statically written lower level language which means that it is a clean
+    cut expansive language.
+
+
+    C++ is a fully functional super set of C that supports object oriented programming.
+    This means that it supports all the pillars of OOP, such as encapsulation, data
+    hiding, inheritance and polymorphism.
+
+
+    To learn more about object oriented programming, you can do a quick search online,
+    and find out more about it. It is best to get some knowledge about what it is,
+    but it is not'
+  - '[PAGE 11]
+
+
+    quintessential to your knowledge of C++, so it will not really be included in
+    this book, except for a few mentions in passing, and some tidbits of information
+    here and there.
+
+
+    # Three Important Components of C++
+
+
+    The standard C++ is made up of three very important concepts.
+
+
+    +   - **Core Language:** This is made up of all the variables, data types, literals,
+    and other important aspects of the language, creating building blocks to get to
+    the next level
+
+    +   - **C++ Standard Library:** this allows you to manipulate files, and other
+    workings within the language, and bend them to your will.
+
+    +   - **STL:** This stands for Standard Template Library, which gives you functions
+    to manipulate data structures and variables and other things of the sort.
+
+
+    # Why is C++ considered the best language out there?
+
+
+    Well, aside from the copiously mentioned flexibility, speed, and simplicity, it
+    is a language that has spanned over thirty years, and is still widely used today.
+    There are not many products in any genre of life out there that can say the same.
+    Products and companies come and go, but only true perfection stays. Well that
+    is how the saying goes. To be honest, C++ has had many updates since then, but
+    the core process is still the same. When it came out it was light years ahead
+    of its time, and today it is still a pretty advanced piece of technology, due
+    to the updates that keep it on top.'
+  - '[PAGE 12]
+
+
+    There are a lot of opinions that also have to do with why C++ is considered the
+    best. While there are a lot of people who say that C++ is no longer relevant,
+    even more vouch that it is still the best language out there, and it is their
+    fall back language. It is the one they know the most about, and the one they carry
+    close to their heart. The reasons vary, but the fact that 90% of programmers default
+    to C++ shows that it is very much the best programming language out there today.
+
+
+    C++ is one of the few languages that follow the ANSI standard completely, which
+    is why some of the best games you will ever play are still written with C++. Because
+    their compilers are set to ensure that all commands are written and executed without
+    errors. It can also be used across many different types of platforms, whether
+    you have a Microsoft, Unix, Mac, Windows, or and Alpha device, it is possible
+    to use C++. This is a great thing, because a lot of programmers have to operate
+    across many different platforms, and the universality makes it easy and portable.
+    Just throw your code on a flash drive and upload it wherever it is needed.
+
+
+    # **Benefits of using the C++ language**
+
+
+    There are a lot of benefits that you will be able to enjoy when using the C++
+    language. Some of these benefits include:
+
+
+    +   - The big library: since C++ has been around for along time, they have a library
+    that is pretty large. This is available for you to use so you can pick out the
+    codes that you want inside of your script and save some time and even learn some
+    new things. You can also create some of your own codes if you wish, but this library
+    can be really helpful for the beginner who is learning and can make it easier
+    than ever to get the code written.
+
+
+    +   - Ability to work with other languages: C++ is a great language to use with'
+  - '[PAGE 13]
+
+
+    some of the other programming languages out there. This makes it easier to really
+    work on the projects that you want because you can add in the parts that you like
+    from different coding languages and combine them together to get something really
+    amazing.
+
+
+    +   - Works on many projects: most other programming languages are going to focus
+    on just one or two little projects. For example, using JavaScript means that you
+    are just going to be working on websites. But with C++, you are able to use it
+    to help with a lot of different projects. Whether you are looking to work on a
+    website, looking to create a new program, or do something else with programming,
+    you will be able to do it with the help of C++.
+
+    +   - Fast and reliable: if you have used some of the other coding languages that
+    are popular in the past, you will find that sometimes they aren’t the most reliable.
+    Information may slip through or they won’t start working the way that you would
+    like. If you want something that works the first time and is reliable, then it
+    is a good idea to go with C++.
+
+    +   - Offers a lot of power: those who like to work in programming and want to
+    have a lot of power in the work that they are doing will find that C++ is the
+    right option for them to choose. It has some of the best power for the programming
+    languages that are out there.
+
+
+    These are just a few of the benefit that you can enjoy when you are using the
+    C++ programming language. It may seem a bit more difficult to use than some of
+    the others, such as Python, but it has a lot of the power that you need and can
+    work well with other programming languages. With a bit of practice, you are going
+    to get all the basics of this language down and really enjoy what you are able
+    to do with this programming language.'
+  md: '
+
+    People into switching languages to ensure that C++ is a dying language.
+
+
+    ## Why It’s used
+
+
+    C++ is used not only for its flexibility and speed, but because it has a lot of
+    components, it is fairly easy to learn, and if you master C++, you can master
+    the other languages with ease. The reason for this is that when you learn something
+    that is a little more complex than everything else first, the easier stuff will
+    fall right into place, however, if you get used to easy to learn subjects, then
+    you will find that the more difficult stuff is hard to learn because you are not
+    used to putting in that much effort into the subject that you are trying to learn.
+
+
+    If you want to learn a language that you can use for different types of functions
+    within the realm of computer technology, then this is the language for you. You
+    can do almost anything with it, and once you learn enough about it, you may be
+    able to figure out ways to manipulate the language to do things that it generally
+    cannot do.
+
+
+    C++ is a very important language when it comes to computer programming, and though
+    it has a lot of variables from the way that it is laid out, it is very easy to
+    read, and very easy to create. This makes it one of the most desired programming
+    languages that are out there, because no one wants to struggle to read code. No
+    one wants to have to spend all of their time out there working on what they know
+    is right just because they cannot find where they went wrong.
+
+
+    ## Job Outlook
+
+
+    Yes, there are a lot of jobs out there that still rely on C++ to operate. There
+    are so many different things that you could do, and all of them affect other people
+    in the community. Video game designing, and web page designing are two of the
+    most prominent things that are out there. You could also become a white hat or
+    blue hat hacker.
+
+
+    But according to payscale.com (search software engineer), a person with C++ Software
+    engineer background can earn up to $57,000 to $120,000 based on experience. The
+    median is around $80,363. Some other titles that people with C++ programming language
+    have is Computer Programmer, Electrical Engineer, and Application Developer.
+
+
+    However, to be the best that you can be, you should always know two or three programming
+    languages to be marketable. Though those languages will not be included in this
+    book, do not marry yourself to a single language. Instead, just like with human
+    language, broaden your horizons and dabble in a few, but keep one as your main
+    language.
+
+
+    C++ should be the main language that you fall back on due to its versatility.
+    Maybe use Java or Linux as your other languages, but C++ is the best main language
+    to have, and you only want the best as your main.
+
+
+    C++ is a statically written lower-level language, which means that it is a clean-cut,
+    expansive language.
+
+
+    C++ is a fully functional superset of C that supports object-oriented programming.
+    This means that it supports all the pillars of OOP, such as encapsulation, data
+    hiding, inheritance and polymorphism.
+
+
+    To learn more about object-oriented programming, you can do a quick search online,
+    and find out more about it. It is best to get some knowledge about what it is,
+    but it is not quintessential to your knowledge of C++, so it will not really be
+    included in this book, except for a few mentions in passing, and some tidbits
+    of information here and there.
+
+
+    ## Three Important Components of C++
+
+
+    The standard C++ is made up of three very important concepts.
+
+
+    - **Core Language:** This is made up of all the variables, data types, literals,
+    and other important aspects of the language, creating building blocks to get to
+    the next level.
+
+    - **C++ Standard Library:** This allows you to manipulate files, and other workings
+    within the language, and bend them to your will.
+
+    - **STL:** This stands for Standard Template Library, which gives you functions
+    to manipulate data structures and variables and other things of the sort.
+
+
+    ## Why is C++ considered the best language out there?
+
+
+    Well, aside from the copiously mentioned flexibility, speed, and simplicity, it
+    is a language that has spanned over thirty years, and is still widely used today.
+    There are not many products in any genre of life out there that can say the same.
+    Products and companies come and go, but only true perfection stays. Well, that
+    is how the saying goes. To be honest, C++ has had many updates since then, but
+    the core process is still the same. When it came out, it was light years ahead
+    of its time, and today it is still a pretty advanced piece of technology, due
+    to the updates that keep it on top.
+
+
+    There are a lot of opinions that also have to do with why C++ is considered the
+    best. While there are a lot of people who say that C++ is no longer relevant,
+    even more vouch that it is still the best language out there, and it is their
+    fallback language. It is the one they know the most about, and the one they carry
+    close to their heart. The reasons vary, but the fact that 90% of programmers default
+    to C++ shows that it is very much the best programming language out there today.
+
+
+    C++ is one of the few languages that follow the ANSI standard completely, which
+    is why some of the best games you will ever play are still written with C++. Because
+    their compilers are set to ensure that all commands are written and executed without
+    errors. It can also be used across many different types of platforms, whether
+    you have a Microsoft, Unix, Mac, Windows, or an Alpha device, it is possible to
+    use C++. This is a great thing, because a lot of programmers have to operate across
+    many different platforms, and the universality makes it easy and portable. Just
+    throw your code on a flash drive and upload it wherever it is needed.
+
+
+    ## Benefits of using the C++ language
+
+
+    There are a lot of benefits that you will be able to enjoy when using the C++
+    language. Some of these benefits include:
+
+
+    - The big library: Since C++ has been around for a long time, they have a library
+    that is pretty large. This is available for you to use so you can pick out the
+    codes that you want inside of your script and save some time and even learn some
+    new things. You can also create some of your own codes if you wish, but this library
+    can be really helpful for the beginner who is learning and can make it easier
+    than ever to get the code written.
+
+    - Ability to work with other languages: C++ is a great language to use with some
+    of the other programming languages out there. This makes it easier to really work
+    on the projects that you want because you can add in the parts that you like from
+    different coding languages and combine them together to get something really amazing.
+
+    - Works on many projects: Most other programming languages are going to focus
+    on just one or two little projects. For example, using JavaScript means that you
+    are just going to be working on websites. But with C++, you are able to use it
+    to help with a lot of different projects. Whether you are looking to work on a
+    website, looking to create a new program, or do something else with programming,
+    you will be able to do it with the help of C++.
+
+    - Fast and reliable: If you have used some of the other coding languages that
+    are popular in the past, you will find that sometimes they aren’t the most reliable.
+    Information may slip through or they won’t start working the way that you would
+    like. If you want something that works the first time and is reliable, then it
+    is a good idea to go with C++.
+
+    - Offers a lot of power: Those who like to work in programming and want to have
+    a lot of power in the work that they are doing will find that C++ is the right
+    option for them to choose. It has some of the best power for the programming languages
+    that are out there.
+
+
+    These are just a few of the benefits that you can enjoy when you are using the
+    C++ programming language. It may seem a bit more difficult to use than some of
+    the others, such as Python, but it has a lot of the power that you need and can
+    work well with other programming languages. With a bit of practice, you are going
+    to get all the basics of this language down and really enjoy what you are able
+    to do with this programming language.
+
+    '
+  mdcn: '
+
+    人们热衷于更换编程语言，以确保C++是一门垂死的语言。
+
+
+    ## 为什么使用它
+
+
+    C++之所以被使用，不仅因为它的灵活性和速度，还因为它包含大量组件，相当容易学习，而且如果你掌握了C++，就可以轻松掌握其他语言。原因在于，当你首先学习比其他任何内容都更复杂一点的东西时，较容易的内容就会迎刃而解；然而，如果你习惯了容易学习的科目，那么你就会发现更难的内容学起来很吃力，因为你不习惯在所学科目上投入那么多努力。
+
+
+    如果你想学习一种可以在计算机技术领域内用于不同类型功能的语言，那么这门语言正适合你。你几乎可以用它做任何事情，而一旦你学得足够多，你甚至可能找到方法操纵这门语言，去做它通常无法做到的事情。
+
+
+    在计算机编程领域，C++是一种非常重要的语言。虽然它的布局方式有很多变量，但它非常易读，也非常容易编写。这使它成为业内最受欢迎的编程语言之一，因为没有人想要费力地阅读代码。没有人愿意因为找不到出错的位置，而把所有时间都花在检查自己明知正确的代码上。
+
+
+    ## 就业前景
+
+
+    是的，市面上仍有很多工作岗位依赖C++来运作。你可以做许多不同的事情，而所有这些都会影响社群中的其他人。视频游戏设计和网页设计是目前最突出的两件事。你还可以成为一名白帽或蓝帽黑客。
+
+
+    但根据payscale.com（搜索软件工程师）的数据，拥有C++软件工程师背景的人根据经验可以赚取57,000到120,000美元。中位数约为80,363美元。拥有C++编程语言技能的人的其他头衔包括计算机程序员、电气工程师和应用程序开发员。
+
+
+    然而，要想成为最好的自己，你应该始终掌握两到三种编程语言，以便具备市场竞争力。虽然这些语言不会包含在本书中，但不要把自己局限于单一语言。相反，就像人类语言一样，拓宽你的视野，涉猎几种语言，但要保留一门作为你的主要语言。
+
+
+    鉴于其多功能性，C++应该是你依赖的主要语言。也许你可以使用Java或Linux作为其他语言，但C++是最好的主要语言，而你只想要最好的作为主语言。
+
+
+    C++是一种静态编写的低级语言，这意味着它是一种简洁、可扩展的语言。
+
+
+    C++是C语言的全功能超集，支持面向对象编程。这意味着它支持OOP的所有支柱，如封装、数据隐藏、继承和多态。
+
+
+    要了解更多关于面向对象编程的知识，你可以在网上快速搜索，了解更多信息。最好对它有一些基本了解，但这对你掌握C++来说并不是至关重要的，所以本书不会过多涉及，只会在行文中偶尔提及，并穿插一些零碎的信息。
+
+
+    ## C++的三个重要组成部分
+
+
+    标准C++由三个非常重要的概念组成。
+
+
+    - **核心语言：** 它由语言的所有变量、数据类型、字面量和其他重要方面组成，构成进入下一级的构建块。
+
+    - **C++标准库：** 它允许你操作文件以及语言内部的其他工作，并让它们听命于你。
+
+    - **STL：** 即标准模板库，它为你提供操作数据结构、变量和其他类似内容的函数。
+
+
+    ## 为什么C++被认为是世上最好的语言？
+
+
+    嗯，除了被广泛提及的灵活性、速度和简洁性之外，它是一种已经跨越三十多年、至今仍被广泛使用的语言。在生活的任何领域中，没有多少产品能这么说。产品和公司来来去去，但只有真正的完美留存。嗯，谚语是这么说的。老实说，C++自那时起经历了许多更新，但核心流程仍然相同。它问世时，遥遥领先于它的时代，而今天，由于不断更新使其保持领先，它仍然是一项相当先进的技术。
+
+
+    还有很多观点与为什么C++被认为是最好的有关。虽然有很多人说C++已经过时，但更多的人保证它仍然是最好的语言，并且是他们的备用语言。这是他们最了解的语言，也是他们心中最亲近的语言。原因各不相同，但90%的程序员默认使用C++这一事实表明，它是当今最好的编程语言。
+
+
+    C++是少数完全遵循ANSI标准的语言之一，这就是为什么你玩过的一些最好的游戏仍然是用C++编写的。因为它们的编译器被设置为确保所有命令都能无错误地编写和执行。它还可以用于许多不同类型的平台，无论你拥有Microsoft、Unix、Mac、Windows还是Alpha设备，都可以使用C++。这是很棒的，因为许多程序员必须在许多不同的平台上工作，而通用性使其易于移植。只需将你的代码放到U盘上，然后上传到需要的地方即可。
+
+
+    ## 使用C++语言的好处
+
+
+    使用C++语言时，你可以享受到很多好处。其中一些好处包括：
+
+
+    - **庞大的库：** 由于C++已经存在很长时间，它的库相当庞大。你可以使用这些库，从中挑选脚本中需要的代码，节省时间，甚至学习一些新东西。如果你愿意，也可以创建一些自己的代码，但对于初学编程的人来说，这个库非常有用，可以让你比以前更轻松地编写代码。
+
+    - **与其他语言协同工作：** C++非常适合与一些其他编程语言一起使用。这使得你可以更轻松地真正开展你想要的项目，因为你可以从不同的编码语言中加入你喜欢的部分，并将它们组合在一起，创造出真正惊人的成果。
+
+    - **适用于许多项目：** 大多数其他编程语言只专注于一两个小项目。例如，使用JavaScript意味着你只能处理网站。但使用C++，你可以用它来帮助完成许多不同的项目。无论你是想开发网站、创建新程序，还是做其他编程相关的事情，你都能借助C++来完成。
+
+    - **快速可靠：** 如果你过去使用过其他一些流行的编码语言，你会发现有时它们并不那么可靠。信息可能会遗漏，或者它们不会按你期望的方式开始工作。如果你想要一个第一次就能正常工作且可靠的东西，那么选择C++是一个好主意。
+
+    - **功能强大：** 那些喜欢从事编程并希望在自己所做的工作中拥有强大功能的人会发现，C++是他们应该选择的正确选项。在现有的编程语言中，C++拥有一些最强大的功能。
+
+
+    这些只是你使用C++编程语言时可以享受的一部分好处。它可能看起来比Python等其他语言更难用一些，但它拥有你需要的强大功能，并且能与其他编程语言很好地配合。稍加练习，你就能掌握这门语言的所有基础知识，并真正享受这门编程语言能为你带来的乐趣。
+
+
+    '
+  merge: 1
+- raw:
+  - "[PAGE 14]\n\n# Chapter 2: Let's Begin\n\nLet’s begin! There are a lot of places\
+    \ we can start, but let's talk about environments first. While you do not really\
+    \ need to set up your own environment, as there are many online. An environment\
+    \ is a compiler of your choice that takes your code, and does all of the functions\
+    \ for you. In the old days, you would have to open your command prompts and create\
+    \ an environment to use, but those days are over. A simple mistake back in the\
+    \ day could do some serious damage to their computers. Now you can practice some\
+    \ risky prompts without any risk to your device whatsoever.\n\nThere are many\
+    \ examples to try out and use on the internet. To try them out, the easiest place\
+    \ to go is http://www.compileonline.com Choose the “Learn C++” option down at\
+    \ the bottom, and it will take you to where you need to go.\n\nHere is an example\
+    \ to try. The output should be the words “Try This”.\n\n```\n```cpp\n#include\
+    \ <iostream>\n\nusing namespace std;\n\nint main ()\n{\n    cout << “Use This\
+    \ One!”;\n    return 0;\n}\n```\n```"
+  - '[PAGE 15]
+
+
+    Now you can choose to type these codes into the compiler directly, or you can
+    write several, and save them to your computer, and access them whenever, so that
+    you don''t have to retype them every time you want to mess with them. You can
+    use several different types of text editors. However, some of them are device
+    type specific. This means they only work on the type of device that you create
+    them on.
+
+
+    The text editors that you can use are OS edit command, Brief, EMACS, epsilon,
+    Windows Notepad, vlm or vl. However, only vlm and vl are multi platform usable.
+    Make sure to save the files with the extension .c or .cpp.
+
+
+    You should start in a text editor to get the rough draft going on your program
+    before you even think of moving to a compiler. This is because once you get to
+    a compiler, it is a lot easier to mess up on your program, and not catch it. However,
+    if you have it laid out in a nice, clean-cut fashion in a text editor, then you
+    should have no problems with getting things going in the compiler.
+
+
+    # C++ Compilers
+
+
+    There are many different compilers out there, and a lot of them are pretty expensive.
+    Those compilers are for the elite programmers who have mastered the lower level
+    compilers already. Beginners only need a basic compiler, and most of those are
+    free. However, just like with anything that is free, you have to be careful of
+    what you are getting. There are more bad cheap compilers than good ones out there
+    so on the pretense of being free, I would suggest you paying additional functions
+    past the start up page. These additional functions are usually very cheap anyways
+    so you won’t have to break the bank to get them.
+
+
+    One of the most popular compilers available is the GNU C/C++ compiler. It is used
+    most commonly in UNIX and Linux installations. To see if you already have the'
+  - '[PAGE 16]
+
+
+    compiler, pull up the command line in your UNIX/Linux application and type in
+    the
+
+    following
+
+
+    ```
+
+    ```
+
+    $ g++ -v
+
+    ```
+
+    ```
+
+
+    If the compiler is installed, then you should see this message on the screen:
+
+
+    ```
+
+    ```
+
+    Using built-in specs.
+
+    Target: i386-redhat-linux
+
+    Configured with: ../configure --prefix=/usr ......
+
+    Thread model: posix
+
+    gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
+
+    ```
+
+    ```
+
+
+    If this message does not come up on your screen, the compiler either isn’t on
+    the
+
+    computer or you installed it incorrectly and you will need to go through and get
+    it
+
+    properly installed.
+
+
+    In this book, we will go over how to install using the Windows platform. If you
+    have a
+
+    different platform, then you should go to http://gcc.gnu.org/install/ and read
+    the
+
+    instructions on how to download it onto your platform.
+
+
+    To install this compiler on your Windows computer, you will need to first install
+
+    MinGW. This is the software that makes the compiler compatible with your computer,
+
+    and it is very important that you have this software, otherwise you will not even
+    be able
+
+    to download the compiler at all.'
+  - '[PAGE 17]
+
+
+    To install this software, you can go to the homepage of the software at www.mingw.org
+    and allow it to direct you to where you need to go. Once you install that you
+    should install gcc core, gcc-g++, MinGW runtime and binutils, at the bare minimum,
+    but you can install more if you would like. Once you are done with the install,
+    you can run all of the GNU tools from the Command line on Windows.
+
+
+    Now that you have everything set up to where you can run it, you can start learning
+    more about how to run the programs themselves.
+
+
+    # Basic Syntax
+
+
+    C++ can be defined as not only the program, but objects that collectively communicate
+    by invoking other methods. When you are working with C++ you should know what
+    four things mean above all else.
+
+
+    **Class-** This is a template or a blueprint that states the object and its support
+    type, and describes the behaviors of an object. This means that objects are sorted
+    by their behaviors and their actions /supports into classes that fit the description
+    of the object in question.
+
+
+    **Object-** Objects have behaviors and states. For example, if you look at a dog,
+    it has states. These states could be classified as color, breed, name, standard
+    of breed (AKC/AKA/APC registries). “Dogs” also show certain behaviors as well.
+    They wag their tails, they bark, they pant, they eat dry kibble, and they go to
+    the bathroom outside in the yard. These things make dogs a *unique object*. These
+    objects are classified into groups know as, you guessed it, classes.'
+  - "[PAGE 18]\n\n**Method**- This is another term for behavior. There can be as many\
+    \ or as few as you choose in your classes. This is where all of the data is manipulated,\
+    \ and actions are played out, along with the place that all of the logic is written.\
+    \ Methods are especially important because without them, your program would not\
+    \ know what it is supposed to do with the variable that you give it. It would\
+    \ just sit there like a dud and do nothing.\n\n**Instant Variables**- These refer\
+    \ to each individual object. Each object is classified with a unique set of these\
+    \ variables that act as a fingerprint for an object. These variables are assigned\
+    \ to the object by using values that occur whenever the object is created.\n\n\
+    Now that you know the four main definitions of programming. Let's take a look\
+    \ at a code that you can write that will print out: **“Try This”**. Unlike the\
+    \ example above, this will explain a little more in depth what you are wanting\
+    \ to do, and the reason for each function.\n\n```\n```cpp\n#include <iostream>\n\
+    \nusing namespace std;\n\n// main() [this is when the program will begin to execute.]\n\
+    \nint main()\n{\n    cout << \"Try This\"; // [Prints Try This]\n\n    return\
+    \ 0;\n}\n```\n```"
+  - '[PAGE 19]
+
+
+    This function will allow you to print whatever you want, not just the words “Try
+    This”.
+
+
+    Now let''s break down the various aspects of the program that is set out above.
+    There are several different aspects of this language that you have to take in
+    consideration. Each aspect is important in getting it to run, and if you do not
+    execute them entirely.
+
+
+    **Headers**- There are several headers out there for C++, and all of them are
+    necessary or at the very least useful to your programming operations. However,
+    for most functions you will see the header that is above <iostream>. When you
+    use a header be sure to enclose it properly, and put **#include** before it to
+    prompt the program to use that header.
+
+
+    **Namespace**- Namespaces are a fairly new addition to C++, only coming about
+    in the 2011 update. They do not do much, other than describe which namespace to
+    use. While they are not necessary, they save you a lot of confusion on functions
+    of a program. It simply act as a way to organize your functions more systematically.
+
+
+    **Main**- Here is where the main function begins. Using the line **// main()**
+    instructs the program to start executing the main function of the program, and
+    start the out put process. It is essential that you set up the main function command,
+    otherwise your program will not know what it is supposed to be running, nor will
+    it know when it is supposed to run. This will be seen as a single line comment
+    inside the program and it is going to tell the program that the main function
+    is beginning.
+
+
+    **INT main**- This is where the function execution officially begins. If you do
+    not include this, the entire process will stop, because you did not introduce
+    the variables, and without the variables, the program is lost.'
+  md: "\n## Chapter 2: Let's Begin\n\nLet’s begin! There are a lot of places we can\
+    \ start, but let's talk about environments first. While you do not really need\
+    \ to set up your own environment, as there are many online. An environment is\
+    \ a compiler of your choice that takes your code, and does all of the functions\
+    \ for you. In the old days, you would have to open your command prompts and create\
+    \ an environment to use, but those days are over. A simple mistake back in the\
+    \ day could do some serious damage to their computers. Now you can practice some\
+    \ risky prompts without any risk to your device whatsoever.\n\nThere are many\
+    \ examples to try out and use on the internet. To try them out, the easiest place\
+    \ to go is http://www.compileonline.com. Choose the “Learn C++” option down at\
+    \ the bottom, and it will take you to where you need to go.\n\nHere is an example\
+    \ to try. The output should be the words “Try This”.\n\n```cpp\n#include <iostream>\n\
+    \nusing namespace std;\n\nint main ()\n{\n    cout << \"Try This\";\n    return\
+    \ 0;\n}\n```\n\nNow you can choose to type these codes into the compiler directly,\
+    \ or you can write several, and save them to your computer, and access them whenever,\
+    \ so that you don't have to retype them every time you want to mess with them.\
+    \ You can use several different types of text editors. However, some of them are\
+    \ device type specific. This means they only work on the type of device that you\
+    \ create them on.\n\nThe text editors that you can use are OS edit command, Brief,\
+    \ EMACS, epsilon, Windows Notepad, vim or vi. However, only vim and vi are multi-platform\
+    \ usable. Make sure to save the files with the extension .c or .cpp.\n\nYou should\
+    \ start in a text editor to get the rough draft going on your program before you\
+    \ even think of moving to a compiler. This is because once you get to a compiler,\
+    \ it is a lot easier to mess up on your program, and not catch it. However, if\
+    \ you have it laid out in a nice, clean-cut fashion in a text editor, then you\
+    \ should have no problems with getting things going in the compiler.\n\n### C++\
+    \ Compilers\n\nThere are many different compilers out there, and a lot of them\
+    \ are pretty expensive. Those compilers are for the elite programmers who have\
+    \ mastered the lower level compilers already. Beginners only need a basic compiler,\
+    \ and most of those are free. However, just like with anything that is free, you\
+    \ have to be careful of what you are getting. There are more bad cheap compilers\
+    \ than good ones out there so, on the pretense of being free, I would suggest\
+    \ you pay for additional functions past the startup page. These additional functions\
+    \ are usually very cheap anyways so you won’t have to break the bank to get them.\n\
+    \nOne of the most popular compilers available is the GNU C/C++ compiler. It is\
+    \ used most commonly in UNIX and Linux installations. To see if you already have\
+    \ the compiler, pull up the command line in your UNIX/Linux application and type\
+    \ in the following:\n\n```bash\n$ g++ -v\n```\n\nIf the compiler is installed,\
+    \ then you should see this message on the screen:\n\n```text\nUsing built-in specs.\n\
+    Target: i386-redhat-linux\nConfigured with: ../configure --prefix=/usr ......\n\
+    Thread model: posix\ngcc version 4.1.2 20080704 (Red Hat 4.1.2-46)\n```\n\nIf\
+    \ this message does not come up on your screen, the compiler either isn’t on the\
+    \ computer or you installed it incorrectly and you will need to go through and\
+    \ get it properly installed.\n\nIn this book, we will go over how to install using\
+    \ the Windows platform. If you have a different platform, then you should go to\
+    \ http://gcc.gnu.org/install/ and read the instructions on how to download it\
+    \ onto your platform.\n\nTo install this compiler on your Windows computer, you\
+    \ will need to first install MinGW. This is the software that makes the compiler\
+    \ compatible with your computer, and it is very important that you have this software,\
+    \ otherwise you will not even be able to download the compiler at all.\n\nTo install\
+    \ this software, you can go to the homepage of the software at www.mingw.org and\
+    \ allow it to direct you to where you need to go. Once you install that, you should\
+    \ install gcc core, gcc-g++, MinGW runtime and binutils, at the bare minimum,\
+    \ but you can install more if you would like. Once you are done with the install,\
+    \ you can run all of the GNU tools from the command line on Windows.\n\nNow that\
+    \ you have everything set up to where you can run it, you can start learning more\
+    \ about how to run the programs themselves.\n\n### Basic Syntax\n\nC++ can be\
+    \ defined as not only the program, but objects that collectively communicate by\
+    \ invoking other methods. When you are working with C++ you should know what four\
+    \ things mean above all else.\n\n- **Class** - This is a template or a blueprint\
+    \ that states the object and its support type, and describes the behaviors of\
+    \ an object. This means that objects are sorted by their behaviors and their actions/supports\
+    \ into classes that fit the description of the object in question.\n- **Object**\
+    \ - Objects have behaviors and states. For example, if you look at a dog, it has\
+    \ states. These states could be classified as color, breed, name, standard of\
+    \ breed (AKC/AKA/APC registries). “Dogs” also show certain behaviors as well.\
+    \ They wag their tails, they bark, they pant, they eat dry kibble, and they go\
+    \ to the bathroom outside in the yard. These things make dogs a *unique object*.\
+    \ These objects are classified into groups known as, you guessed it, classes.\n\
+    - **Method** - This is another term for behavior. There can be as many or as few\
+    \ as you choose in your classes. This is where all of the data is manipulated,\
+    \ and actions are played out, along with the place that all of the logic is written.\
+    \ Methods are especially important because without them, your program would not\
+    \ know what it is supposed to do with the variable that you give it. It would\
+    \ just sit there like a dud and do nothing.\n- **Instance Variables** - These\
+    \ refer to each individual object. Each object is classified with a unique set\
+    \ of these variables that act as a fingerprint for an object. These variables\
+    \ are assigned to the object by using values that occur whenever the object is\
+    \ created.\n\nNow that you know the four main definitions of programming, let's\
+    \ take a look at a code that you can write that will print out: **“Try This”**.\
+    \ Unlike the example above, this will explain a little more in depth what you\
+    \ are wanting to do, and the reason for each function.\n\n```cpp\n#include <iostream>\n\
+    \nusing namespace std;\n\n// main() [this is when the program will begin to execute.]\n\
+    \nint main()\n{\n    cout << \"Try This\"; // [Prints Try This]\n\n    return\
+    \ 0;\n}\n```\n\nThis function will allow you to print whatever you want, not just\
+    \ the words “Try This”.\n\nNow let's break down the various aspects of the program\
+    \ that is set out above. There are several different aspects of this language\
+    \ that you have to take into consideration. Each aspect is important in getting\
+    \ it to run, and if you do not execute them entirely.\n\n- **Headers** - There\
+    \ are several headers out there for C++, and all of them are necessary or at the\
+    \ very least useful to your programming operations. However, for most functions\
+    \ you will see the header that is above `<iostream>`. When you use a header, be\
+    \ sure to enclose it properly, and put `#include` before it to prompt the program\
+    \ to use that header.\n- **Namespace** - Namespaces are a fairly new addition\
+    \ to C++, only coming about in the 2011 update. They do not do much, other than\
+    \ describe which namespace to use. While they are not necessary, they save you\
+    \ a lot of confusion on functions of a program. They simply act as a way to organize\
+    \ your functions more systematically.\n- **Main** - Here is where the main function\
+    \ begins. Using the line `// main()` instructs the program to start executing\
+    \ the main function of the program, and start the output process. It is essential\
+    \ that you set up the main function command, otherwise your program will not know\
+    \ what it is supposed to be running, nor will it know when it is supposed to run.\
+    \ This will be seen as a single line comment inside the program and it is going\
+    \ to tell the program that the main function is beginning.\n- **int main()** -\
+    \ This is where the function execution officially begins. If you do not include\
+    \ this, the entire process will stop, because you did not introduce the variables,\
+    \ and without the variables, the program is lost.\n"
+  mdcn: "\n## 第2章：开始吧\n\n让我们开始吧！我们可以从很多地方入手，但先来谈谈环境。虽然你并不真的需要搭建自己的环境，因为网上有很多现成的环境。环境是你所选择的编译器，它接收你的代码并为你完成所有功能。在过去，你必须打开命令提示符并创建一个可用的环境，但那样的日子已经一去不复返了。当年，一个简单的错误就可能对他们的计算机造成严重损坏。现在，你可以练习一些有风险的命令，而不会对你的设备造成任何风险。\n\
+    \n互联网上有很多示例可以尝试和使用。要试用它们，最简单的去处是 http://www.compileonline.com。选择底部的“学习C++”选项，它就会带你到达需要去的地方。\n\
+    \n这里有一个示例可以尝试。输出应该是“Try This”这两个词。\n\n```cpp\n#include <iostream>\n\nusing namespace\
+    \ std;\n\nint main ()\n{\n    cout << \"Try This\";\n    return 0;\n}\n```\n\n\
+    现在，你可以选择将这些代码直接输入编译器，也可以编写多个代码并保存到计算机上，随时访问，这样就不必每次想摆弄它们时都重新输入。你可以使用几种不同类型的文本编辑器。不过，其中一些编辑器是特定于设备类型的。这意味着它们只能在你创建代码的那种设备类型上运行。\n\
+    \n你可以使用的文本编辑器有 OS 编辑命令、Brief、EMACS、epsilon、Windows 记事本、vim 或 vi。不过，只有 vim 和 vi\
+    \ 可以跨平台使用。确保将文件保存为 .c 或 .cpp 扩展名。\n\n在考虑转向编译器之前，你应该先在文本编辑器中起草程序的初稿。这是因为一旦进入编译器，你的程序就更容易出错，而且不易发现。然而，如果你在文本编辑器中把程序布局得整洁明了，那么在编译器中进行操作就不会有任何问题。\n\
+    \n### C++ 编译器\n\n市面上有很多不同的编译器，其中不少都相当昂贵。这些编译器是为那些已经掌握了低级编译器的精英程序员准备的。初学者只需要一个基本的编译器，而这些大多数都是免费的。然而，就像任何免费的东西一样，你必须小心你所得到的东西。市面上糟糕的廉价编译器比好的要多，所以，在免费的表象之下，我建议你为初始页面之外的其他功能付费。这些额外功能通常也非常便宜，所以你不需要为此倾家荡产。\n\
+    \n最流行的编译器之一是 GNU C/C++ 编译器。它最常用于 UNIX 和 Linux 系统。要查看你是否已经安装了该编译器，请在 UNIX/Linux\
+    \ 应用程序中打开命令行并输入以下内容：\n\n```bash\n$ g++ -v\n```\n\n如果编译器已安装，你应该会在屏幕上看到以下信息：\n\n\
+    ```text\nUsing built-in specs.\nTarget: i386-redhat-linux\nConfigured with: ../configure\
+    \ --prefix=/usr ......\nThread model: posix\ngcc version 4.1.2 20080704 (Red Hat\
+    \ 4.1.2-46)\n```\n\n如果屏幕上没有出现这条信息，说明编译器未安装在计算机上，或者你安装不正确，你需要重新操作，确保正确安装。\n\n在本书中，我们将介绍如何在\
+    \ Windows 平台上安装。如果你使用不同的平台，则应访问 http://gcc.gnu.org/install/ 并阅读如何将其下载到你的平台上的说明。\n\
+    \n要在 Windows 计算机上安装此编译器，你首先需要安装 MinGW。这个软件能让编译器与你的计算机兼容，拥有这个软件非常重要，否则你甚至根本无法下载编译器。\n\
+    \n要安装此软件，你可以访问该软件的主页 www.mingw.org，让它带你到需要去的地方。安装该软件后，你至少应该安装 gcc core、gcc-g++、MinGW\
+    \ runtime 和 binutils，当然，如果你愿意，也可以安装更多。安装完成后，你就可以在 Windows 的命令行中运行所有 GNU 工具了。\n\
+    \n现在你已经万事俱备，可以运行了，接下来就可以开始进一步学习如何运行这些程序本身。\n\n### 基本语法\n\nC++ 不仅可以定义为程序，还可以定义为一组通过调用其他方法进行集体通信的对象。在使用\
+    \ C++ 时，你首先应该知道以下四件事的含义。\n\n- **类（Class）** - 这是一个模板或蓝图，规定了对象及其支持类型，并描述对象的行为。这意味着对象会根据其行为以及动作/支持被归类到符合该对象描述的类中。\n\
+    - **对象（Object）** - 对象具有行为和状态。例如，你看到一只狗，它就有状态。这些状态可以分为颜色、品种、名字、品种标准（AKC/AKA/APC\
+    \ 注册机构）。“狗”也表现出某些行为。它们摇尾巴、吠叫、喘气、吃干狗粮，还会在院子外面上厕所。这些特性使狗成为一个*独特的对象*。这些对象被归类到一个个组中，你猜到了，那就是类。\n\
+    - **方法（Method）** - 这是行为的另一种说法。你可以在类中根据需要设置任意多或少的方法。所有数据的操作、动作的执行以及所有逻辑的编写都在这里进行。方法尤其重要，因为如果没有方法，你的程序就不知道该如何处理你给它的变量。它只会像一块废铁一样呆在那里，什么也不做。\n\
+    - **实例变量（Instance Variables）** - 这些变量指的是每一个具体的对象。每个对象都用一组独特的变量进行分类，这些变量就像对象的指纹。这些变量是通过对象创建时出现的值赋给对象的。\n\
+    \n既然你已经知道了编程的四个主要定义，让我们来看一段代码，你可以用它打印出：**“Try This”**。与上面的示例不同，这段代码会稍微深入解释你想要做什么，以及每个函数的原因。\n\
+    \n```cpp\n#include <iostream>\n\nusing namespace std;\n\n// main() [this is when\
+    \ the program will begin to execute.]\n\nint main()\n{\n    cout << \"Try This\"\
+    ; // [Prints Try This]\n\n    return 0;\n}\n```\n\n这个函数允许你打印任何你想要的内容，不仅仅是“Try\
+    \ This”这两个词。\n\n现在，让我们分解一下上面程序的各个方面。你需要考虑这种语言的几个不同方面。每个方面对于让它运行起来都很重要，如果你没有完全执行它们，程序就无法运行。\n\
+    \n- **头文件（Headers）** - C++ 中有多种头文件，所有头文件都是必要的，或者至少对你的编程操作非常有用。不过，对于大多数功能，你都会看到上面提到的\
+    \ `<iostream>` 头文件。使用头文件时，请确保正确地将它括起来，并在前面加上 `#include`，以提示程序使用该头文件。\n- **命名空间（Namespace）**\
+    \ - 命名空间是 C++ 中比较新的特性，直到 2011 年的更新才出现。除了指定使用哪个命名空间之外，它们没有太多作用。虽然它们不是必需的，但它们可以避免你在程序功能上产生很多困惑。它们只是作为一种更有条理地组织函数的方式。\n\
+    - **主函数（Main）** - 这是主函数开始的地方。使用 `// main()` 这一行会指示程序开始执行主函数，并开始输出过程。设置主函数命令至关重要，否则你的程序将不知道它应该运行什么，也不知道应该在什么时候运行。这会被视为程序中的单行注释，并告诉程序主函数即将开始。\n\
+    - **int main()** - 这是函数执行正式开始的地方。如果你没有包含这一部分，整个进程将停止，因为你没有引入变量，而没有变量，程序就会迷失方向。\n"
+  merge: 0
+- raw:
+  - '[PAGE 20]
+
+
+    **Cout.-** This instructs the program to display the message that you want on
+    the screen. If you do not put cout, chances are your program will may or may not
+    fail. The problem is you don’t know if you succeed or not so if you want to make
+    sure that everything runs smoothly, be sure to add cout.
+
+
+    **Return-** This returns the value back to zero, and terminates the function.
+    It instructs the program to end the process, and go back to the beginning.
+
+
+    # Now to compile and execute your first official C++ program.
+
+
+    First you must know how to *save* the file. Open your chosen text editor, and
+    enter the code that is seen above. Once you have done that, hit save as, and choose
+    a file location that is easily found. For organization purposes, it is always
+    best to have a separate folder for all of your programs. Save the file as hello.cpp,
+    and once you have saved it, you should open up your command prompt before heading
+    to the directory where the file is saved.
+
+
+    To get the file to open inside your compiler, start by typing ‘g++ hello.cpp’.
+    You can then press enter and the code will be opened properly. As long as there
+    aren’t any errors, the prompt is going to generate an a.out executable file. To
+    run the program, type out ‘.out’ and see the compiler work. The information that
+    you should get on the compiler from this on the computer includes:
+
+
+    ```
+
+    ```bash
+
+    $ g++ hello.cpp
+
+    $ ./a.out
+
+    ```
+
+    ```
+
+
+    # Try This
+
+
+    Make sure that you are inputting all of the variables the proper way, and remember,
+    these things are case sensitive. If you do not input the functions the right way,
+    you will'
+  - '[PAGE 21]
+
+
+    find that things tend to go awry. The thing with coding is you have to be precise.
+    This detailed oriented personal attributed applies to all programming languages!
+    However, anyone can do it if they are willing to pay attention.
+
+
+    The basic function commands are not the only things that you need to use. There
+    are other things that are important when you are building a prompt as well, as
+    they too instruct the program to do specific things. Some of these things are
+    blocks and semicolons.
+
+
+    You probably think a pause in a sentence when you think semicolon, however, they
+    are complete stops in C++ programs. The semicolon indicates the termination of
+    a statement. This means that each individual statement must be indicated by the
+    use of a semicolon. The following are three different statements.
+
+
+    ```
+
+    ```
+
+    x=y;
+
+    y=y+1;
+
+    add(x,y);
+
+    ```
+
+    ```
+
+
+    Each one of those statements were separated by not only a line break, but also
+    a semicolon. You could also do it this way.
+
+
+    ```
+
+    ```
+
+    x=y; y=y+1; add(x,y);
+
+    ```
+
+    ```
+
+
+    Each one of those will be recognized as separate statements simply because of
+    the semicolon. It is kind of mind blowing how something so simple can have so
+    much of an impact.'
+  - '[PAGE 22]
+
+
+    <!-- no content -->'
+  - '[PAGE 23]
+
+
+    |  |  |  |
+
+    |---|---|---|
+
+    | asm |  |  |
+
+    | Break | Bool | Auto |
+
+    | Char | Catch | Case |
+
+    | Const cast | Const | Class |
+
+    | Delete | Default | Continue |
+
+    | Dynamic<br>cast | Double | Do |
+
+    | Explicit | Enum | Else |
+
+    | False | Extern | Export |
+
+    | Friend | For | Float |
+
+    | Inline | If | Goto |
+
+    | Mutable | Long | Int |
+
+    | Protected | Private | Namespace |
+
+    | Reinterpret<br>cast | Register | Public |
+
+    | Signed | Short | Return |
+
+    | Static cast | Static | Sizeof |
+
+    | Template | Switch | Struct |
+
+    | True | Throw | This |
+
+    | Typeid | Typedef | Try |
+
+    | Unsigned | UnIon | Typename |
+
+    | Void | Virtual | Using |
+
+    | While | Wchar t | Volatile |
+
+
+    Everything else is fair game when it comes to identifiers. Think of identifiers
+    as usernames and passwords. Mix it up, but make sure that they are functional.
+
+
+    # Trigraphs
+
+
+    Trigraphs are going to be sequences of three characters that will represent just
+    one'
+  - '[PAGE 24]
+
+
+    character. You will notice these because they are going to start out with two
+    question marks at the beginning. Seems a little redundant to use three characters
+    when one will work, but the reason behind this is so you do not confuse the program
+    with the meaning of the character, as many are similar.
+
+
+    Here are some frequently used trigraphs to give you an example of what we mean.
+
+
+    ```
+
+    ??=   #
+
+    ??/   \
+
+    ??''   ^
+
+    ??(   [
+
+    ??)   ]
+
+    ??!   |
+
+    ??<   {
+
+    ??>   }
+
+    ??-   ~
+
+    ```
+
+
+    Not all compilers support trigraphs due to their confusing nature, and most people
+    try to stay away from them, however, it has been found that when you memorize
+    trigraphs, you are less likely to mess up by hitting the wrong symbol in your
+    function.
+
+
+    # Whitespace
+
+
+    Moving on to whitespace. This is the empty lines in a program. Sometimes they
+    contain comments, and these are known as blank lines. The compilers completely
+    ignore them. Whitespace describes blanks, new lines, tabs, characters and comments.
+    It is merely used to make your program look more organized and readable.'
+  - '[PAGE 25]
+
+
+    There should be at least one line of whitespace between the variable/identifier
+    and the statement.
+
+
+    # QUIZ
+
+
+    You thought that you could just waltz through this book without being tested on
+    if you were paying attention? No cheating either! Just because you can peek at
+    the answers does not mean that you should. You should take it just like a normal
+    quiz to truly test your knowledge so you can figure out if you need to go back
+    and re-read over some things. This is a short quiz, so you will be okay.
+
+
+    +   1. What is whitespace?
+
+    +   2. Fill in the blanks ___ <<x=y+1_>>
+
+    +   3. What are trigraphs?
+
+    +   4. Who Invented the C with Classes language?
+
+    +   5. What is the header used in most functions?
+
+
+    # Answers
+
+
+    +   1. The blank spaces or comments that the compiler ignores
+
+    +   2. Cout <<x=y+1;>>
+
+    +   3. A sequence of three characters that represent a single character
+
+    +   4. Bjarne Stroupus
+
+    +   5. <iostream>'
+  - "[PAGE 26]\n\nCongratulations, if you got all five right, then you can move on\
+    \ to the next section!  \nHowever, if you got more than one wrong, then you should\
+    \ probably go back and reread the section. If you’re ready then onwards to Chapter\
+    \ 3."
+  - '[PAGE 27]
+
+
+    # # Chapter 3: Diving more into Program Comments, Data Types, Lines, and Characters
+
+
+    Now that we have covered the bare basics of C++ it is time to get into some more
+    in depth subjects that surround the program. While these are more in depth, they
+    are still a paramount concepts all beginners need to learn.
+
+
+    # ## Program Comments
+
+
+    So, there are going to be times when you will want to write some comments inside
+    of your code. These are important because they allow you to leave a little message
+    inside the code so that others who are reading through it later on will be able
+    to get a good look at exactly how your code is ran and also provide “referral”
+    to what you’re trying to accomplish in your code. Furthermore, leaving notes within
+    the lines of your code is a good way to notify yourself where a code might have
+    gone wrong. By putting comments inside your codes, you are more likely to know
+    where you succeed or where you went wrong.
+
+
+    These comments can be as simple or as complex as you would like. Some people will
+    just place in one or two words if that is all that is needed to help out the other
+    users, but there are other times when you are going to need to combine a few more
+    lines into the mix to ensure that it is all going to work out and that the other
+    person understands what is going on inside of the code.
+
+
+    In this language, you will just need to use the // symbol in order to show that
+    you are writing out a comment. You can make it as long as you would like, just
+    make sure that when the comment is done, you skip to the next line so that the
+    program knows that it is supposed to start reading through it again.'
+  - '[PAGE 28]
+
+
+    <!-- no content -->'
+  - '[PAGE 29]
+
+
+    will have the final output of “that''s great” and nothing else. The comment is
+    ignored by the compiler so that you can let other programmers in on what the code
+    is for, or what you need done to the code.
+
+
+    However if you are trying to get some help on a code, you should use a multi line
+    comment so that you can easily get the best out of your complicated code. Multi
+    line comments are surrounded by these symbols /*-.*/. Typed out like that it almost
+    looks like an emoji. For example
+
+
+    `/* I need help making the puppet dance*/` is a comment. However, that is still
+    a single line comment still. A better example would be
+
+
+    ```
+
+    ```
+
+    /* I need help making the puppet dance
+
+    *All he does at this point is sway from side to side */
+
+    ```
+
+    ```
+
+
+    That would be a multi line comment. As you can see, when you start a new line
+    you should put the asterisk at the beginning to indicate to the program that you
+    are still writing a comment and that the next line is indeed whitespace. When
+    compiled it will ignore the comments and only show what you want it to show.
+
+
+    While you can mix the comment styles, it is best to keep them separated for now,
+    until you get the hang of everything.
+
+
+    # ## Data Types
+
+
+    You have to use different variables when you are writing a program using any language.
+    These are nothing more than just reserved memory values that store locations in
+    some space in the memory of the compiler. The above list of reserved keywords
+    are useful here as well. While there are a lot of keywords, there are seven basic
+    keywords that'
+  md: '
+
+    **Cout** - This instructs the program to display the message that you want on
+    the screen. If you do not put cout, chances are your program may or may not fail.
+    The problem is you don’t know if you succeed or not, so if you want to make sure
+    that everything runs smoothly, be sure to add cout.
+
+
+    **Return** - This returns the value back to zero, and terminates the function.
+    It instructs the program to end the process, and go back to the beginning.
+
+
+    ## Now to compile and execute your first official C++ program.
+
+
+    First you must know how to *save* the file. Open your chosen text editor, and
+    enter the code that is seen above. Once you have done that, hit save as, and choose
+    a file location that is easily found. For organization purposes, it is always
+    best to have a separate folder for all of your programs. Save the file as hello.cpp,
+    and once you have saved it, you should open up your command prompt before heading
+    to the directory where the file is saved.
+
+
+    To get the file to open inside your compiler, start by typing ‘g++ hello.cpp’.
+    You can then press enter and the code will be opened properly. As long as there
+    aren’t any errors, the prompt is going to generate an a.out executable file. To
+    run the program, type out ‘./a.out’ and see the compiler work. The information
+    that you should get on the compiler from this on the computer includes:
+
+
+    ```bash
+
+    $ g++ hello.cpp
+
+    $ ./a.out
+
+    ```
+
+
+    ## Try This
+
+
+    Make sure that you are inputting all of the variables the proper way, and remember,
+    these things are case sensitive. If you do not input the functions the right way,
+    you will find that things tend to go awry. The thing with coding is you have to
+    be precise. This detail-oriented personal attribute applies to all programming
+    languages! However, anyone can do it if they are willing to pay attention.
+
+
+    The basic function commands are not the only things that you need to use. There
+    are other things that are important when you are building a prompt as well, as
+    they too instruct the program to do specific things. Some of these things are
+    blocks and semicolons.
+
+
+    You probably think of a pause in a sentence when you think of a semicolon; however,
+    they are complete stops in C++ programs. The semicolon indicates the termination
+    of a statement. This means that each individual statement must be indicated by
+    the use of a semicolon. The following are three different statements.
+
+
+    ```
+
+    x=y;
+
+    y=y+1;
+
+    add(x,y);
+
+    ```
+
+
+    Each one of those statements was separated by not only a line break, but also
+    a semicolon. You could also do it this way.
+
+
+    ```
+
+    x=y; y=y+1; add(x,y);
+
+    ```
+
+
+    Each one of those will be recognized as separate statements simply because of
+    the semicolon. It is kind of mind-blowing how something so simple can have so
+    much of an impact.
+
+
+    |   |   |   |
+
+    |---|---|---|
+
+    | asm |  |  |
+
+    | Break | Bool | Auto |
+
+    | Char | Catch | Case |
+
+    | Const_cast | Const | Class |
+
+    | Delete | Default | Continue |
+
+    | Dynamic_cast | Double | Do |
+
+    | Explicit | Enum | Else |
+
+    | False | Extern | Export |
+
+    | Friend | For | Float |
+
+    | Inline | If | Goto |
+
+    | Mutable | Long | Int |
+
+    | Protected | Private | Namespace |
+
+    | Reinterpret_cast | Register | Public |
+
+    | Signed | Short | Return |
+
+    | Static_cast | Static | Sizeof |
+
+    | Template | Switch | Struct |
+
+    | True | Throw | This |
+
+    | Typeid | Typedef | Try |
+
+    | Unsigned | Union | Typename |
+
+    | Void | Virtual | Using |
+
+    | While | Wchar_t | Volatile |
+
+
+    Everything else is fair game when it comes to identifiers. Think of identifiers
+    as usernames and passwords. Mix it up, but make sure that they are functional.
+
+
+    ## Trigraphs
+
+
+    Trigraphs are going to be sequences of three characters that will represent just
+    one character. You will notice these because they are going to start out with
+    two question marks at the beginning. Seems a little redundant to use three characters
+    when one will work, but the reason behind this is so you do not confuse the program
+    with the meaning of the character, as many are similar.
+
+
+    Here are some frequently used trigraphs to give you an example of what we mean.
+
+
+    ```
+
+    ??=   #
+
+    ??/   \
+
+    ??''   ^
+
+    ??(   [
+
+    ??)   ]
+
+    ??!   |
+
+    ??<   {
+
+    ??>   }
+
+    ??-   ~
+
+    ```
+
+
+    Not all compilers support trigraphs due to their confusing nature, and most people
+    try to stay away from them; however, it has been found that when you memorize
+    trigraphs, you are less likely to mess up by hitting the wrong symbol in your
+    function.
+
+
+    ## Whitespace
+
+
+    Moving on to whitespace. This is the empty lines in a program. Sometimes they
+    contain comments, and these are known as blank lines. The compilers completely
+    ignore them. Whitespace describes blanks, new lines, tabs, characters and comments.
+    It is merely used to make your program look more organized and readable.
+
+
+    There should be at least one line of whitespace between the variable/identifier
+    and the statement.
+
+
+    ## QUIZ
+
+
+    You thought that you could just waltz through this book without being tested on
+    if you were paying attention? No cheating either! Just because you can peek at
+    the answers does not mean that you should. You should take it just like a normal
+    quiz to truly test your knowledge so you can figure out if you need to go back
+    and re-read over some things. This is a short quiz, so you will be okay.
+
+
+    - 1. What is whitespace?
+
+    - 2. Fill in the blanks ___ <<x=y+1;>>
+
+    - 3. What are trigraphs?
+
+    - 4. Who Invented the C with Classes language?
+
+    - 5. What is the header used in most functions?
+
+
+    ## Answers
+
+
+    - 1. The blank spaces or comments that the compiler ignores
+
+    - 2. cout << x=y+1;
+
+    - 3. A sequence of three characters that represent a single character
+
+    - 4. Bjarne Stroustrup
+
+    - 5. `<iostream>`
+
+
+    Congratulations, if you got all five right, then you can move on to the next section!
+    However, if you got more than one wrong, then you should probably go back and
+    reread the section. If you’re ready then onwards to Chapter 3.
+
+
+    ## Chapter 3: Diving More into Program Comments, Data Types, Lines, and Characters
+
+
+    Now that we have covered the bare basics of C++ it is time to get into some more
+    in-depth subjects that surround the program. While these are more in-depth, they
+    are still paramount concepts all beginners need to learn.
+
+
+    ### Program Comments
+
+
+    So, there are going to be times when you will want to write some comments inside
+    of your code. These are important because they allow you to leave a little message
+    inside the code so that others who are reading through it later on will be able
+    to get a good look at exactly how your code is ran and also provide “referral”
+    to what you’re trying to accomplish in your code. Furthermore, leaving notes within
+    the lines of your code is a good way to notify yourself where a code might have
+    gone wrong. By putting comments inside your codes, you are more likely to know
+    where you succeed or where you went wrong.
+
+
+    These comments can be as simple or as complex as you would like. Some people will
+    just place in one or two words if that is all that is needed to help out the other
+    users, but there are other times when you are going to need to combine a few more
+    lines into the mix to ensure that it is all going to work out and that the other
+    person understands what is going on inside of the code.
+
+
+    In this language, you will just need to use the `//` symbol in order to show that
+    you are writing out a comment. You can make it as long as you would like, just
+    make sure that when the comment is done, you skip to the next line so that the
+    program knows that it is supposed to start reading through it again.
+
+
+    will have the final output of “that''s great” and nothing else. The comment is
+    ignored by the compiler so that you can let other programmers in on what the code
+    is for, or what you need done to the code.
+
+
+    However, if you are trying to get some help on a code, you should use a multi-line
+    comment so that you can easily get the best out of your complicated code. Multi-line
+    comments are surrounded by these symbols `/* */`. Typed out like that, it almost
+    looks like an emoji. For example
+
+
+    `/* I need help making the puppet dance */` is a comment. However, that is still
+    a single-line comment. A better example would be
+
+
+    ```
+
+    /* I need help making the puppet dance
+
+    *All he does at this point is sway from side to side */
+
+    ```
+
+
+    That would be a multi-line comment. As you can see, when you start a new line
+    you should put the asterisk at the beginning to indicate to the program that you
+    are still writing a comment and that the next line is indeed whitespace. When
+    compiled, it will ignore the comments and only show what you want it to show.
+
+
+    While you can mix the comment styles, it is best to keep them separated for now,
+    until you get the hang of everything.
+
+
+    ### Data Types
+
+
+    You have to use different variables when you are writing a program using any language.
+    These are nothing more than just reserved memory values that store locations in
+    some space in the memory of the compiler. The above list of reserved keywords
+    are useful here as well. While there are a lot of keywords, there are seven basic
+    keywords that
+
+    '
+  mdcn: '
+
+    **Cout** - 这会指示程序在屏幕上显示你想要的消息。如果不写 cout，你的程序可能会失败，也可能不会。问题在于你无法知道自己是否成功，所以如果想确保一切顺利运行，就一定要加上
+    cout。
+
+
+    **Return** - 这会将值返回为零，并终止函数。它指示程序结束进程，并回到开头。
+
+
+    ## 现在来编译并执行你的第一个正式 C++ 程序。
+
+
+    首先你必须知道如何*保存*文件。打开你选定的文本编辑器，输入上面看到的代码。完成之后，点击“另存为”，并选择一个容易找到的文件位置。为了便于组织管理，最好始终为所有程序准备一个单独的文件夹。将文件保存为
+    hello.cpp，保存完成后，你应该先打开命令提示符，然后前往文件保存所在的目录。
+
+
+    要让文件在编译器中打开，首先输入‘g++ hello.cpp’。然后按回车键，代码就会被正确打开。只要没有错误，提示符就会生成一个 a.out 可执行文件。要运行程序，请输入‘./a.out’，看看编译器如何工作。你在计算机上从这一过程应在编译器中获得的信息包括：
+
+
+    ```bash
+
+    $ g++ hello.cpp
+
+    $ ./a.out
+
+    ```
+
+
+    ## 试试这个
+
+
+    确保你以正确的方式输入所有变量，并记住，这些东西区分大小写。如果你没有以正确的方式输入函数，你会发现事情往往会出错。编码这件事要求你必须精确。这种注重细节的个人特质适用于所有编程语言！不过，只要愿意用心，任何人都能做到。
+
+
+    基本函数命令并不是你唯一需要使用的。在构建程序时，还有其他重要的东西，因为它们也会指示程序执行特定操作。其中一些是代码块和分号。
+
+
+    提到分号时，你可能会想到句子中的停顿；然而，在 C++ 程序中，分号是完全的停止符。分号表示语句的终止。这意味着每个单独的语句都必须用分号来标示。下面是三个不同的语句。
+
+
+    ```
+
+    x=y;
+
+    y=y+1;
+
+    add(x,y);
+
+    ```
+
+
+    这些语句中的每一个不仅由换行分隔，还由分号分隔。你也可以这样写。
+
+
+    ```
+
+    x=y; y=y+1; add(x,y);
+
+    ```
+
+
+    仅仅因为分号，其中每一个都会被识别为单独的语句。这么简单的东西竟能产生如此大的影响，实在有点令人惊叹。
+
+
+    |   |   |   |
+
+    |---|---|---|
+
+    | asm |  |  |
+
+    | Break | Bool | Auto |
+
+    | Char | Catch | Case |
+
+    | Const_cast | Const | Class |
+
+    | Delete | Default | Continue |
+
+    | Dynamic_cast | Double | Do |
+
+    | Explicit | Enum | Else |
+
+    | False | Extern | Export |
+
+    | Friend | For | Float |
+
+    | Inline | If | Goto |
+
+    | Mutable | Long | Int |
+
+    | Protected | Private | Namespace |
+
+    | Reinterpret_cast | Register | Public |
+
+    | Signed | Short | Return |
+
+    | Static_cast | Static | Sizeof |
+
+    | Template | Switch | Struct |
+
+    | True | Throw | This |
+
+    | Typeid | Typedef | Try |
+
+    | Unsigned | Union | Typename |
+
+    | Void | Virtual | Using |
+
+    | While | Wchar_t | Volatile |
+
+
+    在标识符方面，其他一切都可以自由使用。把标识符想象成用户名和密码。可以随意组合，但要确保它们能正常发挥作用。
+
+
+    ## 三字符组（Trigraphs）
+
+
+    三字符组是由三个字符组成的序列，却只表示一个字符。你会注意到它们，因为它们开头是两个问号。一个字符就能起作用时却要用三个字符，似乎有点多余，但这样做是为了避免你因字符含义而让程序混淆，因为许多字符看起来很相似。
+
+
+    下面是一些常用的三字符组，举例说明我们的意思。
+
+
+    ```
+
+    ??=   #
+
+    ??/   \
+
+    ??''   ^
+
+    ??(   [
+
+    ??)   ]
+
+    ??!   |
+
+    ??<   {
+
+    ??>   }
+
+    ??-   ~
+
+    ```
+
+
+    并非所有编译器都支持三字符组，因为它们容易让人困惑，大多数人都尽量避开它们；不过，人们发现，当你记住三字符组后，在函数中按错符号而出错的概率就会降低。
+
+
+    ## 空白字符
+
+
+    接下来讲空白字符。这是程序中的空行。有时它们包含注释，这些被称为空行。编译器会完全忽略它们。空白字符包括空格、换行、制表符、字符和注释。它只是用来让你的程序看起来更有条理、更易读。
+
+
+    在变量/标识符和语句之间，至少应有一行空白。
+
+
+    ## 小测验
+
+
+    你以为可以轻轻松松读完这本书，而不用测试自己有没有认真看吗？也不许作弊！能偷看答案并不意味着你应该偷看。你应该像参加普通测验一样对待它，才能真正检验自己的知识，从而判断是否需要回头重读一些内容。这是一次简短的测验，所以你会没事的。
+
+
+    - 1. 什么是空白字符？
+
+    - 2. 填空 ___ <<x=y+1;>>
+
+    - 3. 什么是三字符组？
+
+    - 4. 谁发明了 C with Classes 语言？
+
+    - 5. 大多数函数中使用的头文件是什么？
+
+
+    ## 答案
+
+
+    - 1. 编译器忽略的空白或注释
+
+    - 2. cout << x=y+1;
+
+    - 3. 表示单个字符的三个字符序列
+
+    - 4. Bjarne Stroustrup
+
+    - 5. `<iostream>`
+
+
+    恭喜，如果你五题全对，就可以继续学习下一节了！不过，如果你错了一题以上，可能就应该回去重读这一节。如果你准备好了，那就前往第3章。
+
+
+    ## 第3章：进一步深入程序注释、数据类型、行和字符
+
+
+    既然我们已经介绍了 C++ 的最基础知识，现在该深入一些围绕程序的更深入主题了。虽然这些内容更深入，但它们仍然是所有初学者都必须学习的重要概念。
+
+
+    ### 程序注释
+
+
+    所以，有时你会想在代码中写一些注释。这些注释很重要，因为它们让你能在代码中留下一点信息，这样以后阅读代码的人就能清楚地了解你的代码究竟是如何运行的，也能获得关于你在代码中想要实现什么的“指引”。此外，在代码行中留下注释，是提醒自己代码可能在哪里出错的好方法。通过在代码中添加注释，你更有可能知道自己在哪里成功、在哪里出错。
+
+
+    这些注释可以随你喜欢，简单或复杂都行。如果只需一两个词就能帮助其他使用者，有些人就只写一两个词；但有时你需要多写几行，以确保一切都能顺利运行，并让其他人理解代码内部发生了什么。
+
+
+    在这种语言中，你只需要使用 `//` 符号来表明你正在写注释。注释可以随你喜欢写多长，只要确保注释结束后换到下一行，这样程序就知道它应该重新开始读取代码了。
+
+
+    最终输出将是“that''s great”，不会有其他内容。编译器会忽略注释，这样你就可以让其他程序员了解代码的用途，或者你需要对代码做什么。
+
+
+    不过，如果你想就某段代码寻求帮助，就应该使用多行注释，这样你就能轻松地从复杂代码中获得最好的帮助。多行注释由这些符号 `/* */` 包围。这样打出来，它几乎看起来像一个表情符号。例如
+
+
+    `/* I need help making the puppet dance */` 是一条注释。不过，那仍然是单行注释。更好的例子是
+
+
+    ```
+
+    /* I need help making the puppet dance
+
+    *All he does at this point is sway from side to side */
+
+    ```
+
+
+    那将是一条多行注释。如你所见，当你开始新的一行时，应该在开头加上星号，以向程序表明你仍在写注释，并且下一行确实是空白。编译时，它会忽略注释，只显示你想显示的内容。
+
+
+    虽然你可以混用注释样式，但最好暂时将它们分开使用，直到你完全掌握所有内容。
+
+
+    ### 数据类型
+
+
+    使用任何语言编写程序时，你都必须使用不同的变量。这些变量不过是保留的内存值，用于在编译器内存的某个空间中存储位置。上面的保留关键字列表在这里也很有用。虽然关键字很多，但有七个基本关键字
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 30]
+
+
+    define data types.
+
+
+    | Type | Keyword |
+
+    |---|---|
+
+    | Wide character | Wchar_t |
+
+    | Valueless | Void |
+
+    | Double floating point | Double |
+
+    | Floating point | Float |
+
+    | Integer | Int |
+
+    | Character | Char |
+
+    | Boolean | bool |
+
+
+    Most of the data types that you can use can be modified using one of these following
+    modifiers to help:
+
+
+    +   - Long,
+
+    +   - Short
+
+    +   - Unsigned
+
+    +   - Signed
+
+
+    # Variable Types Cont…
+
+
+    When you are using variables inside of a coding language, you are providing some'
+  - '[PAGE 31]
+
+
+    storage space that makes it easier to for the program to manipulate. All of the
+    variables that you use will be attached to a different type and these types are
+    going to determine the layout and the size of the memory of the variable. It is
+    also going to set a range of values that you are able to store on this memory
+    space.
+
+
+    Naming the variable is going to be similar to naming the identifier. You will
+    only be able to name it with a letter or an underscore and the letters are going
+    to be case sensitive. But after that, you are able to use any type of digit, letter,
+    and character that you would like.
+
+
+    Again, the basic variables that you will be able to use here in more detail include:
+
+
+    +   - Wchart_t: this is the wide character type.
+
+    +   - Void: this is going to represent the absence of a type
+
+    +   - Double: this is a floating value that will have double precision.
+
+    +   - Float: this is a floating point that is going to have single precision.
+
+    +   - Int: this is an integer
+
+    +   - Char: this is often going to be just one byte and is a type of integer.
+
+    +   - Bool: this is going to work with values that are either true or false.
+
+
+    You can also define other types of variables. These variables are things like
+    pointer, array, reference, enumeration, data structures, and classes.
+
+
+    # Creating a new line'
+  - '[PAGE 32]
+
+
+    Now that you know the data types and modifiers, and all about making a comment
+    in your program, it is time to learn about how to create a new line. This is a
+    problem that a lot of new programmers run into. They have their program all nice
+    and laid out in the input, but the output is still really mashed together and
+    really unkempt. This is because they did not properly create a new line. Remember
+    that whitespace is ignored, so you cannot just skip a line, and expect to have
+    a line skipped in your program. You have to indicate to the compiler that you
+    want to start a new line. This is really important, as when you play out your
+    program, you want it to run smoothly. You do not want to see something like this.
+
+
+    Try This Today I ate Pizza and I did math. 6=(7-1) that what I learned today.
+
+
+    You would probably rather see this.
+
+
+    Try This
+
+    today I ate pizza and I did math
+
+    6=(7-1)
+
+    that is what I learned today
+
+
+    To make the distinction, you have to have the right function, as that is what
+    programming relies on, having the correct function.
+
+
+    To create a line break, you have to use the function endl; this will indicate
+    that you want a line break, and you do not even have to add whitespace if you
+    do not want to, though it is recommended because it makes your program easier
+    to read for a human.
+
+
+    For example, this:'
+  - "[PAGE 33]\n\n```\n```cpp\n{\n    cout << Try This;>> endl;\n    <<Today I ate\
+    \ Pizza and did Math;>> endl;\n    <<6=(7-1);>> endl;\n    << That is what I learned\
+    \ today;>> endl;\n    return 0\n}\n```\n```\n\nLooks way better than this:\n\n\
+    ```\n```cpp\n{\n    cout << Try This;>> endl; << Today I ate Pizza and did Math;>>\
+    \ endl; <<6=(7-\n1);>> endl; << That is what I learned today;>> endl;\n    return\
+    \ 0\n}\n```\n```\n\nCan you see how confusing that would get for someone reading\
+    \ the code? You want your code file to be easy to read, so that if someone else\
+    \ has to fix something, they can easily find where the mistake has been made.\
+    \ If everything is all jumbled together, then they would not be able to find anything\
+    \ very easily, now would they?\n\nYou can also indicate line breaks by using /n\
+    \  This is the same thing as endl; but is a lot faster to type. You can use whichever\
+    \ method you want but choose one and stick with it."
+  - '[PAGE 34]
+
+
+    # # The importance of the basics of C++
+
+
+    I know what you are thinking, why must you know all these nonsense tidbits of
+    information when you are just beginning, and the reason is, if you don''t learn
+    them now, you won''t think that you will need them in the future, and then when
+    you are reading a program that someone else wrote, you will be wondering what
+    all of those extra characters mean, and why there is so much whitespace. Creating
+    a habit of these simple yet somewhat tedious tasks is paramount if mastering more
+    complicated programming methods. Just like mastering any sort of language, you
+    have to master the basics to master the expert level concepts.
+
+
+    # ## Variable definitions
+
+
+    A variable definitions instructs the compiler how much and where to store and
+    create the variable. It specifies the data type and lists one or more of the variables
+    of the type. For example
+
+
+    ```
+
+    ~~~
+
+    type variable_list;
+
+    ~~~
+
+    ```
+
+
+    You have to have a valid data type that is listed above. They may contain one
+    or more identifier names as long as they are separated by commas, such as
+
+
+    ```
+
+    ~~~
+
+    int ---- j,k,l;
+
+    char----c,ch;
+
+    float---- f, salary;
+
+    ~~~
+
+    ```'
+  - '[PAGE 35]
+
+
+    <!-- no content -->'
+  - "[PAGE 36]\n\nHere is the set up. You should have one phrase, a math problem,\
+    \ and then the answer to the math problem using said integers. You can make up\
+    \ all of the variables yourself, whatever you want them to be.\n\n```\n```cpp\n\
+    #using <header>\n\nusing namespace std;\n\nint main ()\nint _ =\nint _ =\nint\
+    \ _ = + _\n{\n        cout << “”;> /n\n\n        <“”;> /n\n\n        cout << “int_”;>\
+    \ /n\n\n        return 0\n}\n```\n```\n\nSimply enter your digits in and make\
+    \ sure your numbers add up. After you’ve done so, rerun the code without relying\
+    \ on copying and pasting the code without the integers. This way, you’ll have\
+    \ a basic understanding of variables and playing with the basic integers operations\
+    \ within C++."
+  - '[PAGE 37]
+
+
+    # **Chapter 4: Arrays, Loops, and Conditions**
+
+
+    Believe it or not, you’ve learned so much already. The basics are really not that
+    hard and now it’s just about learning about a few more things and putting concept
+    after concept together to make sure you’re becoming a better C++ programmer. Let’s
+    keep going.
+
+
+    # **Arrays**
+
+
+    Arrays are a data structure in C++ that will be able to store elements that are
+    basically the same type and also a fixed size. Basically a collection of same
+    type variables. Instead of using the individual variables, you would declare one
+    array of variables such as numbers. To do this you use the numbers 0 to 99 and
+    access each one by an index of the array.
+
+
+    Arrays are going to be memory locations that are continuous. The lowest is always
+    the first element and then the highest element is going to be the last.
+
+
+    # **Initializing arrays**
+
+
+    You can initialize arrays one by one or using a single statement. Example'
+  - '[PAGE 38]
+
+
+    ```
+
+    ```cpp
+
+    double balance [5]= {1000.0, 2.0, 3.4, 17.0, 50.0};
+
+    ```
+
+    ```
+
+
+    The numbers that are found between the bracket can’t end up higher than the amount
+    of elements that you are using. This means that you cannot have six sets of numbers
+    when your array title only specified five. However, if you do not specify the
+    size, then an array of just the right size is created. You would type it as follows
+
+
+    ```
+
+    ```cpp
+
+    double balance [] {1000.0, 2.0, 3.4, 17.0, 50.0};
+
+    ```
+
+    ```
+
+
+    This creates the exact same array as the previous example, only you did not specify
+    the array size so it was created for you. Pretty nifty.
+
+
+    Now that you know how to write an array, it is time to move on to putting it into
+    the actual program. This program is a bit more advanced than the ones before,
+    and has a few more elements. You can look up these elements on www.compileonline.com.
+    You will be directed to a lot of tutorials and there is even a PDF file for you
+    to download.
+
+
+    Here is the formula for your program to assign an array.
+
+
+    ```
+
+    ```cpp
+
+    #include <iostream>
+
+    using namespace std;
+
+
+    #include <iomanip>
+
+    ```
+
+    ```'
+  - '[PAGE 39]
+
+
+    <!-- no content -->'
+  - "[PAGE 40]\n\nexecute it over and over. These statements are going to be done\
+    \ one right after the other. The loop statement will make it easier to execute\
+    \ these statements as many times as you would like.\n\nThere are four types of\
+    \ loops. These loops handle different requirements.\n\n# **While loop**\n\nThe\
+    \ While loop is going to continue repeating the loop as long as a certain condition\
+    \ is met. It is going to test out this condition each time it restarts the loop\
+    \ cycle and will do this until the condition is no longer true.\n\nWritten like\
+    \ this\n\n```\n```\nwhile (condition)\n{\n    statement(s);\n}\n```\n```\n\n#\
+    \ **For Loop**\n\nThis loop executes a statement sequence over and over again\
+    \ while abbreviating the code that manages the loop variables."
+  md: "\ndefine data types.\n\n| Type | Keyword |\n|---|---|\n| Wide character | `wchar_t`\
+    \ |\n| Valueless | `void` |\n| Double floating point | `double` |\n| Floating\
+    \ point | `float` |\n| Integer | `int` |\n| Character | `char` |\n| Boolean |\
+    \ `bool` |\n\nMost of the data types that you can use can be modified using one\
+    \ of these following modifiers to help:\n\n- long\n- short\n- unsigned\n- signed\n\
+    \n### Variable Types Cont…\n\nWhen you are using variables inside of a coding\
+    \ language, you are providing some storage space that makes it easier for the\
+    \ program to manipulate. All of the variables that you use will be attached to\
+    \ a different type and these types are going to determine the layout and the size\
+    \ of the memory of the variable. It is also going to set a range of values that\
+    \ you are able to store on this memory space.\n\nNaming the variable is going\
+    \ to be similar to naming the identifier. You will only be able to name it with\
+    \ a letter or an underscore and the letters are going to be case sensitive. But\
+    \ after that, you are able to use any type of digit, letter, and character that\
+    \ you would like.\n\nAgain, the basic variables that you will be able to use here\
+    \ in more detail include:\n\n- wchar_t: this is the wide character type.\n- void:\
+    \ this is going to represent the absence of a type.\n- double: this is a floating-point\
+    \ value that will have double precision.\n- float: this is a floating-point that\
+    \ is going to have single precision.\n- int: this is an integer.\n- char: this\
+    \ is often going to be just one byte and is a type of integer.\n- bool: this is\
+    \ going to work with values that are either true or false.\n\nYou can also define\
+    \ other types of variables. These variables are things like pointer, array, reference,\
+    \ enumeration, data structures, and classes.\n\n### Creating a new line\n\nNow\
+    \ that you know the data types and modifiers, and all about making a comment in\
+    \ your program, it is time to learn about how to create a new line. This is a\
+    \ problem that a lot of new programmers run into. They have their program all\
+    \ nice and laid out in the input, but the output is still really mashed together\
+    \ and really unkempt. This is because they did not properly create a new line.\
+    \ Remember that whitespace is ignored, so you cannot just skip a line, and expect\
+    \ to have a line skipped in your program. You have to indicate to the compiler\
+    \ that you want to start a new line. This is really important, as when you play\
+    \ out your program, you want it to run smoothly. You do not want to see something\
+    \ like this.\n\nTry This Today I ate Pizza and I did math. 6=(7-1) that is what\
+    \ I learned today.\n\nYou would probably rather see this.\n\nTry This  \ntoday\
+    \ I ate pizza and I did math  \n6=(7-1)  \nthat is what I learned today\n\nTo\
+    \ make the distinction, you have to have the right function, as that is what programming\
+    \ relies on, having the correct function.\n\nTo create a line break, you have\
+    \ to use the function endl; this will indicate that you want a line break, and\
+    \ you do not even have to add whitespace if you do not want to, though it is recommended\
+    \ because it makes your program easier to read for a human.\n\nFor example, this:\n\
+    \n```cpp\n{\n    cout << \"Try This\" << endl;\n    cout << \"Today I ate Pizza\
+    \ and did Math\" << endl;\n    cout << \"6=(7-1)\" << endl;\n    cout << \"That\
+    \ is what I learned today\" << endl;\n    return 0;\n}\n```\n\nLooks way better\
+    \ than this:\n\n```cpp\n{\n    cout << \"Try This\" << endl; cout << \"Today I\
+    \ ate Pizza and did Math\" << endl; cout << \"6=(7-1)\" << endl; cout << \"That\
+    \ is what I learned today\" << endl;\n    return 0;\n}\n```\n\nCan you see how\
+    \ confusing that would get for someone reading the code? You want your code file\
+    \ to be easy to read, so that if someone else has to fix something, they can easily\
+    \ find where the mistake has been made. If everything is all jumbled together,\
+    \ then they would not be able to find anything very easily, now would they?\n\n\
+    You can also indicate line breaks by using \\n. This is the same thing as endl;\
+    \ but is a lot faster to type. You can use whichever method you want but choose\
+    \ one and stick with it.\n\n### The importance of the basics of C++\n\nI know\
+    \ what you are thinking, why must you know all these nonsense tidbits of information\
+    \ when you are just beginning, and the reason is, if you don't learn them now,\
+    \ you won't think that you will need them in the future, and then when you are\
+    \ reading a program that someone else wrote, you will be wondering what all of\
+    \ those extra characters mean, and why there is so much whitespace. Creating a\
+    \ habit of these simple yet somewhat tedious tasks is paramount if mastering more\
+    \ complicated programming methods. Just like mastering any sort of language, you\
+    \ have to master the basics to master the expert level concepts.\n\n### Variable\
+    \ definitions\n\nA variable definition instructs the compiler how much and where\
+    \ to store and create the variable. It specifies the data type and lists one or\
+    \ more of the variables of the type. For example\n\n```cpp\ntype variable_list;\n\
+    ```\n\nYou have to have a valid data type that is listed above. They may contain\
+    \ one or more identifier names as long as they are separated by commas, such as\n\
+    \n```cpp\nint j, k, l;\nchar c, ch;\nfloat f, salary;\n```\n\nHere is the set\
+    \ up. You should have one phrase, a math problem, and then the answer to the math\
+    \ problem using said integers. You can make up all of the variables yourself,\
+    \ whatever you want them to be.\n\n```cpp\n#include <header>\n\nusing namespace\
+    \ std;\n\nint main ()\n{\n    int _ = ;\n    int _ = ;\n    int _ = _ + _;\n\n\
+    \    cout << \"\" << endl;\n    cout << \"\" << endl;\n    cout << \"int_\" <<\
+    \ endl;\n\n    return 0;\n}\n```\n\nSimply enter your digits in and make sure\
+    \ your numbers add up. After you’ve done so, rerun the code without relying on\
+    \ copying and pasting the code without the integers. This way, you’ll have a basic\
+    \ understanding of variables and playing with the basic integer operations within\
+    \ C++.\n\n## Chapter 4: Arrays, Loops, and Conditions\n\nBelieve it or not, you’ve\
+    \ learned so much already. The basics are really not that hard and now it’s just\
+    \ about learning about a few more things and putting concept after concept together\
+    \ to make sure you’re becoming a better C++ programmer. Let’s keep going.\n\n\
+    ### Arrays\n\nArrays are a data structure in C++ that will be able to store elements\
+    \ that are basically the same type and also a fixed size. Basically a collection\
+    \ of same type variables. Instead of using the individual variables, you would\
+    \ declare one array of variables such as numbers. To do this you use the numbers\
+    \ 0 to 99 and access each one by an index of the array.\n\nArrays are going to\
+    \ be memory locations that are continuous. The lowest is always the first element\
+    \ and then the highest element is going to be the last.\n\n### Initializing arrays\n\
+    \nYou can initialize arrays one by one or using a single statement. Example\n\n\
+    ```cpp\ndouble balance[5] = {1000.0, 2.0, 3.4, 17.0, 50.0};\n```\n\nThe numbers\
+    \ that are found between the brackets can’t end up higher than the amount of elements\
+    \ that you are using. This means that you cannot have six sets of numbers when\
+    \ your array size only specified five. However, if you do not specify the size,\
+    \ then an array of just the right size is created. You would type it as follows\n\
+    \n```cpp\ndouble balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};\n```\n\nThis creates\
+    \ the exact same array as the previous example, only you did not specify the array\
+    \ size so it was created for you. Pretty nifty.\n\nNow that you know how to write\
+    \ an array, it is time to move on to putting it into the actual program. This\
+    \ program is a bit more advanced than the ones before, and has a few more elements.\
+    \ You can look up these elements on www.compileonline.com. You will be directed\
+    \ to a lot of tutorials and there is even a PDF file for you to download.\n\n\
+    Here is the formula for your program to assign an array.\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\n#include <iomanip>\n```\n\nexecute it over and over. These\
+    \ statements are going to be done one right after the other. The loop statement\
+    \ will make it easier to execute these statements as many times as you would like.\n\
+    \nThere are four types of loops. These loops handle different requirements.\n\n\
+    ### While loop\n\nThe While loop is going to continue repeating the loop as long\
+    \ as a certain condition is met. It is going to test out this condition each time\
+    \ it restarts the loop cycle and will do this until the condition is no longer\
+    \ true.\n\nWritten like this\n\n```cpp\nwhile (condition)\n{\n    statement(s);\n\
+    }\n```\n\n### For Loop\n\nThis loop executes a statement sequence over and over\
+    \ again while abbreviating the code that manages the loop variables.\n"
+  mdcn: "\n定义数据类型。\n\n| 类型 | 关键字 |\n|---|---|\n| 宽字符 | `wchar_t` |\n| 无值 | `void`\
+    \ |\n| 双精度浮点数 | `double` |\n| 浮点数 | `float` |\n| 整数 | `int` |\n| 字符 | `char` |\n\
+    | 布尔值 | `bool` |\n\n你可以使用的大多数数据类型都可以用以下修饰符之一来修改，以提供帮助：\n\n- long\n- short\n- unsigned\n\
+    - signed\n\n### 变量类型（续）……\n\n在编程语言中使用变量时，你提供了一些存储空间，使程序更容易操作。你使用的所有变量都会关联到不同的类型，而这些类型将决定变量内存的布局和大小。它还会设定你能够存储在该内存空间中的值范围。\n\
+    \n变量命名与标识符命名类似。你只能用字母或下划线来命名，并且字母区分大小写。但在此之后，你可以随意使用任何数字、字母和字符。\n\n再次说明，下面更详细地列出你可以使用的基本变量：\n\
+    \n- wchar_t：这是宽字符类型。\n- void：这表示没有类型。\n- double：这是具有双精度的浮点值。\n- float：这是具有单精度的浮点数。\n\
+    - int：这是整数。\n- char：这通常只占一个字节，是一种整数类型。\n- bool：这用于处理真或假的值。\n\n你还可以定义其他类型的变量。这些变量包括指针、数组、引用、枚举、数据结构和类。\n\
+    \n### 创建新行\n\n现在你已经了解了数据类型和修饰符，以及如何在程序中添加注释，接下来该学习如何创建新行了。这是许多新程序员都会遇到的问题。他们在输入中把程序排得整整齐齐，但输出仍然挤在一起，非常凌乱。这是因为他们没有正确地创建新行。记住，空白会被忽略，所以你不能只是跳过一个空行，就指望程序里也会跳过一行。你必须向编译器表明你想开始新的一行。这非常重要，因为当你运行程序时，你希望它顺利运行。你不会想看到像这样的输出。\n\
+    \n试试这个 我今天吃了披萨，还做了数学。6=(7-1) 这就是我今天学到的。\n\n你可能更希望看到这样。\n\n试试这个  \n今天我吃了披萨，还做了数学\
+    \  \n6=(7-1)  \n这就是我今天学到的\n\n为了做出这种区分，你必须使用正确的函数，因为编程正是依赖于使用正确的函数。\n\n要创建换行，你必须使用函数\
+    \ endl;；它会表明你想要换行，而且如果你不想添加空白，甚至可以不加，不过建议加上，因为这会让你的程序更便于人阅读。\n\n例如，这样：\n\n```cpp\n\
+    {\n    cout << \"Try This\" << endl;\n    cout << \"Today I ate Pizza and did\
+    \ Math\" << endl;\n    cout << \"6=(7-1)\" << endl;\n    cout << \"That is what\
+    \ I learned today\" << endl;\n    return 0;\n}\n```\n\n看起来比这样好多了：\n\n```cpp\n\
+    {\n    cout << \"Try This\" << endl; cout << \"Today I ate Pizza and did Math\"\
+    \ << endl; cout << \"6=(7-1)\" << endl; cout << \"That is what I learned today\"\
+    \ << endl;\n    return 0;\n}\n```\n\n你能看出这会让阅读代码的人多么困惑吗？你希望你的代码文件易于阅读，这样如果别人需要修复某些东西，就能轻松找到错误所在。如果所有内容都乱七八糟地挤在一起，那他们也无法轻易找到任何东西，不是吗？\n\
+    \n你也可以使用 \\n 来表示换行。它与 endl; 相同，但输入起来快得多。你可以任选一种方法，但选定后就要坚持使用。\n\n### C++ 基础知识的重要性\n\
+    \n我知道你在想什么：为什么刚开始学就必须知道所有这些琐碎信息？原因是，如果你现在不学，你就不会觉得自己将来会需要它们；而当你阅读别人写的程序时，你就会纳闷那些额外字符是什么意思，以及为什么有那么多空白。养成处理这些简单却有些繁琐的任务的习惯，对于掌握更复杂的编程方法至关重要。就像掌握任何一门语言一样，你必须掌握基础知识，才能掌握专家级概念。\n\
+    \n### 变量定义\n\n变量定义会指示编译器要创建变量、存储多少内容以及存储在何处。它指定数据类型，并列出该类型的一个或多个变量。例如\n\n```cpp\n\
+    type variable_list;\n```\n\n你必须使用上面列出的有效数据类型。它们可以包含一个或多个标识符名称，只要用逗号分隔即可，例如\n\n\
+    ```cpp\nint j, k, l;\nchar c, ch;\nfloat f, salary;\n```\n\n下面是设置。你应该有一句话、一道数学题，然后使用上述整数给出这道数学题的答案。所有变量都可以由你自己编造，想设成什么就设成什么。\n\
+    \n```cpp\n#include <header>\n\nusing namespace std;\n\nint main ()\n{\n    int\
+    \ _ = ;\n    int _ = ;\n    int _ = _ + _;\n\n    cout << \"\" << endl;\n    cout\
+    \ << \"\" << endl;\n    cout << \"int_\" << endl;\n\n    return 0;\n}\n```\n\n\
+    只需输入你的数字，并确保数字相加正确。完成之后，重新运行代码，而不要依赖复制粘贴那些不含整数的代码。这样，你将对变量以及 C++ 中基本整数运算的使用有基本理解。\n\
+    \n## 第 4 章：数组、循环和条件\n\n信不信由你，你已经学到了很多。基础知识其实并不难，现在只需再学习一些内容，并把一个概念接一个概念地组合起来，确保你成为更优秀的\
+    \ C++ 程序员。我们继续吧。\n\n### 数组\n\n数组是 C++ 中的一种数据结构，能够存储类型基本相同且大小固定的元素。基本上就是一组相同类型的变量。与其使用单个变量，不如声明一个变量数组，例如数字。为此，你使用\
+    \ 0 到 99 这些编号，并通过数组索引访问每一个元素。\n\n数组将是连续的内存位置。最低地址始终对应第一个元素，最高地址则对应最后一个元素。\n\n\
+    ### 初始化数组\n\n你可以逐个初始化数组，也可以使用单条语句初始化。例如\n\n```cpp\ndouble balance[5] = {1000.0,\
+    \ 2.0, 3.4, 17.0, 50.0};\n```\n\n方括号中的数字不能超过你使用的元素数量。这意味着，当数组大小只指定为五个元素时，你不能有六组数字。但是，如果你不指定大小，就会创建一个大小刚好合适的数组。你会这样写：\n\
+    \n```cpp\ndouble balance[] = {1000.0, 2.0, 3.4, 17.0, 50.0};\n```\n\n这会创建与前一个示例完全相同的数组，只是你没有指定数组大小，因此系统为你创建了它。相当巧妙。\n\
+    \n现在你已经知道如何编写数组，接下来该把它放入实际程序中了。这个程序比之前的程序稍微高级一些，并且有更多元素。你可以在 www.compileonline.com\
+    \ 上查找这些元素。你会被引导到许多教程，甚至还有可下载的 PDF 文件。\n\n下面是你的程序分配数组的公式。\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\n#include <iomanip>\n```\n\n一遍又一遍地执行它。这些语句会一个接一个地执行。循环语句会让你更容易按所需次数执行这些语句。\n\
+    \n循环有四种类型。这些循环处理不同的需求。\n\n### while 循环\n\nwhile 循环会在满足某个条件时持续重复循环。每次重新开始循环周期时，它都会测试这个条件，直到条件不再为真为止。\n\
+    \n写成这样\n\n```cpp\nwhile (condition)\n{\n    statement(s);\n}\n```\n\n### for 循环\n\
+    \n这种循环会反复执行一个语句序列，同时简化管理循环变量的代码。\n"
+  merge: 1
+- raw:
+  - "[PAGE 41]\n\nWritten like this\n\n```\n    for ( init; condition; increment)\n\
+    \    {\n        statement(s);\n    }\n```\n\n# ***Do.. while loop***\n\nThe Do...while\
+    \ loop is going to be similar to the while statement, but it is going to test\
+    \ the condition when you reach the end of your statement, rather than the beginning.\n\
+    \nWritten like this\n\n```\n    do\n        {\n            statement(s);\n   \
+    \     } while (condition);\n```\n\n# ***Nested loops***"
+  - "[PAGE 42]\n\nThe nested loop is going to have a loop that works inside of another\
+    \ loop, to create a continuous loop of loops. This one can get confusing after\
+    \ awhile.\n\nWritten like this\n\n```\n```cpp\nwhile (condition)\n{\n    while\
+    \ (condition)\n    {\n    statement(s)\n    }\n    statement(s) // you can put\
+    \ more statements\n}\n```\n```\n\nWhy is this important\n\nEventually you are\
+    \ going to want to branch out. I would highly recommend to further enhance your\
+    \ C++knowledge of the basics to ensure mastery and better understanding of more\
+    \ difficult tasks.\n\nThough these may seem like they are too advanced for some\
+    \ or too easy for others, it's always good to do other practices and tutorials\
+    \ to enrich your programming skills. You can find tutorials at www.compileonline.com.\
+    \ It cannot be stressed enough how much of"
+  - '[PAGE 43]
+
+
+    an essential tool this is. You have to check it out for yourself, and find out
+    just how useful it really is. There are tutorials for other languages as well,
+    not just C++ dabble around and see what you like.'
+  - '[PAGE 44]
+
+
+    # # Chapter 5: Working with Operators in C++
+
+
+    With any of the coding languages that you plan to use, it is important that you
+    learn how to use the operators. These are going to help you to tell the program
+    what you would like to do and can make dealing with your own codes so much easier.
+    There are four main types of operators that you are able to use inside your program
+    and they will each tell the program how to behave in a different way. Some of
+    the operators that you will be able to use with the C++ language include:
+
+
+    +   - Logical operators
+
+    +   - Arithmetic operators
+
+    +   - Assignment operators
+
+    +   - Relational operators
+
+
+    Let’s take a look at how some of these work and how you can bring them out to
+    work well when writing code in the C++ language.
+
+
+    # ## Logical operators
+
+
+    The first type of operator that we are going to use in this guidebook are the
+    logical operators. These are going to help you to compare some of the parts that
+    you are putting into the system. Some of the logical operators that you can work
+    with include:
+
+
+    +   - (||): this is known as the logical OR. With this one, the condition is going
+    to be true if one of your operands is not zero.'
+  - '[PAGE 45]
+
+
+    +   - (&): this one is known as the logical AND. If you have two operands and
+    they are not zero, your condition is true.
+
+    +   - (!): this is the logical NOT. You will be able to use this to reverse the
+    status of your operand. So if the condition ends up being false, this sign will
+    make it true.
+
+
+    # Arithmetic operators
+
+
+    Another of the operators that you are able to use is the arithmetic operators.
+    These are pretty much the same as using math in school. You are going to tell
+    the program to add, subtract, and do other equations with the information that
+    you are providing. Some of the arithmetic operators that you are able to use include:
+
+
+    +   - (+): this is the addition operator that will add together two operands of
+    your choices.
+
+    +   - (-): this is the subtraction operator. It is going to take the right hand
+    operand and subtract it from the left hand operand.
+
+    +   - (*): this is the operator that makes it possible to do multiplication in
+    the C++ language.
+
+    +   - (/): this operator helps you to do division in C++.
+
+    +   - (++): this is the increment operator. It is going to increase the value
+    of your operand by one.
+
+    +   - (--): this is the decrement operator. It is going to decrease the operand
+    value by just one.
+
+
+    # Assignment operators'
+  - '[PAGE 46]
+
+
+    The assignment operators will make it easier for you to assign a name to your
+    variable and can help with searching for, saving, and so on with the different
+    parts of the code that you are writing. Some of the assignment operators that
+    you may use inside of C++ include:
+
+
+    +   - (=): this operator is the simple assignment operator. It is going to assign
+    the value of the operand on the right hand to the one that is on the left.
+
+
+    +   - (+): this one is called the Add AND operator. It is going to add together
+    the values from both operands and then assigns the sum of these over to the operand
+    on the left side.
+
+
+    +   - (*=): this is the Multiply AND operator. It is going to multiply both of
+    the operands and then gives the results over to the operand on the left side.
+
+
+    +   - (-=): this is the one that will subtract the value of your operand on the
+    right side from the one on the left and then gives this difference to the left
+    operand.
+
+
+    +   - (/=): this is the divide and operator. It is going to divide the value that
+    is on the left side from the one on the right side and then assigns this amount
+    to the left side.
+
+
+    There are a few other assignment operators that are available, but they are more
+    advanced so we will just stick with some of these basic ones to help keep things
+    in order!
+
+
+    # ## Relational Operators
+
+
+    Relational operators can be really helpful when you are working inside of the
+    C++ language. Some of the ones that you can use include:
+
+
+    +   - (==): this is the operator that is going to check the equality of your two
+    operands. If they are equal, the conditions will be true.
+
+
+    +   - (>): this operator is going to check the value of your operands. If the
+    operand on the left side is higher than the one on the right, the condition will
+    be true.'
+  - '[PAGE 47]
+
+
+    +   - (<): this operator is basically the opposite of the one above. If you find
+    that the value of your operand on the left side is greater than the one on the
+    right side, the condition will be true.
+
+    +   - (!=): this one is going to check the equality of your two operands and if
+    the values are unequal, your condition is true.
+
+    +   - (<=): this operator is going to check whether the operand on the left side
+    is less than or equal to the operand on the right side. If it meets this criteria,
+    the condition is true.
+
+    +   - (>=): this one is going to check if the value of the operand on the left
+    side is greater or equal to the one on the right side. If it is true, the condition
+    is true.'
+  - "[PAGE 48]\n\n# **Chapter 6: Helping C++ to Make Decisions**\n\nThere are times\
+    \ when you will need the program to make decisions for you. You are able to set\
+    \ it up to act in a certain way based on the information that the user puts into\
+    \ the computer and what you decide needs to be met for the conditions to be true.\
+    \ The decision making is a bit more advanced inside of this system, but you will\
+    \ find that is pretty easy to learn and will open up a lot of ideas that you are\
+    \ able to work with in the C++ system. Let’s take a look at some of the things\
+    \ that you are able to do to help the system to make decisions on its own.\n\n\
+    # **Switch Statements**\n\nThe first decision that we are going to work with inside\
+    \ of this system are the switch statements. These statements are nice because\
+    \ they are going to allow you to check the equality of your variable against a\
+    \ set of values, or cases. The variable that you are trying to check is going\
+    \ to be compared with each of the cases. A good example of the syntax that you\
+    \ are able to use for this include:\n\n```\n```\nSwitch(expression){\n    case\
+    \ constant-expression:\n    statement(s);\n    break; //optional\n    case constant-expression:\n\
+    \    statement(s);\n    break; //optional\n```\n```"
+  - '[PAGE 49]
+
+
+    ```
+
+    //you can add in as many of these case statements as you would like
+
+    ```
+
+
+    ```
+
+    Default: //Optional
+
+    statement(s);
+
+    }
+
+    ```
+
+
+    When you are working inside of these statements, there are a few rules that you
+    should keep in mind. First, the expression of the switch statement should be the
+    integral or enumerated class type. In addition, it can also belong to a class
+    that has a conversion function. With C++, there isn’t going to be a limit to the
+    amount of case statements that you add into the syntax so you can make them as
+    long or short as you would like. Just remember that you need to have a colon and
+    a value in each of them.
+
+
+    Once the variable finds a value that it is equal to, it is going to keep running
+    until it finds a break statement. The system finds the break statement, the switch
+    is going to stop. Then the control flow will be passed on. You don’t need to put
+    in a break statement to the cases. If you end up not having one of these, the
+    control flow will just keep being passed on.
+
+
+    # The if statements
+
+
+    One of the most basic things that you are able to do in your programs is create
+    an if statement. These are going to be based on a true and false idea inside the
+    system. If the system says that the input is true with the condition that you
+    set out, then the program is going to run whatever you ask it to. For example,
+    you set it up to have the system as what the answer to 2 + 2 is. If the user puts
+    in the answer as 4, you could have a message come up that says “That is Correct!
+    Good Job!”
+
+
+    Any time that the user puts in an input that ends up being true based on the conditions
+    that you are setting out, you are going to get the statement to show up that you
+    picked out. On the other hand, what is going to happen if your person puts in
+    the wrong answer. If they'
+  md: "\nWritten like this\n\n```cpp\nfor (init; condition; increment)\n{\n    statement(s);\n\
+    }\n```\n\n### Do...while loop\n\nThe Do...while loop is going to be similar to\
+    \ the while statement, but it is going to test the condition when you reach the\
+    \ end of your statement, rather than the beginning.\n\nWritten like this\n\n```cpp\n\
+    do\n{\n    statement(s);\n} while (condition);\n```\n\n### Nested loops\n\nThe\
+    \ nested loop is going to have a loop that works inside of another loop, to create\
+    \ a continuous loop of loops. This one can get confusing after a while.\n\nWritten\
+    \ like this\n\n```cpp\nwhile (condition)\n{\n    while (condition)\n    {\n  \
+    \      statement(s)\n    }\n    statement(s) // you can put more statements\n\
+    }\n```\n\n### Why is this important\n\nEventually you are going to want to branch\
+    \ out. I would highly recommend to further enhance your C++ knowledge of the basics\
+    \ to ensure mastery and better understanding of more difficult tasks.\n\nThough\
+    \ these may seem like they are too advanced for some or too easy for others, it's\
+    \ always good to do other practices and tutorials to enrich your programming skills.\
+    \ You can find tutorials at www.compileonline.com. It cannot be stressed enough\
+    \ how much of an essential tool this is. You have to check it out for yourself,\
+    \ and find out just how useful it really is. There are tutorials for other languages\
+    \ as well, not just C++; dabble around and see what you like.\n\n## Chapter 5:\
+    \ Working with Operators in C++\n\nWith any of the coding languages that you plan\
+    \ to use, it is important that you learn how to use the operators. These are going\
+    \ to help you to tell the program what you would like to do and can make dealing\
+    \ with your own codes so much easier. There are four main types of operators that\
+    \ you are able to use inside your program and they will each tell the program\
+    \ how to behave in a different way. Some of the operators that you will be able\
+    \ to use with the C++ language include:\n\n- Logical operators\n- Arithmetic operators\n\
+    - Assignment operators\n- Relational operators\n\nLet’s take a look at how some\
+    \ of these work and how you can bring them out to work well when writing code\
+    \ in the C++ language.\n\n### Logical operators\n\nThe first type of operator\
+    \ that we are going to use in this guidebook are the logical operators. These\
+    \ are going to help you to compare some of the parts that you are putting into\
+    \ the system. Some of the logical operators that you can work with include:\n\n\
+    - (||): this is known as the logical OR. With this one, the condition is going\
+    \ to be true if one of your operands is not zero.\n- (&&): this one is known as\
+    \ the logical AND. If you have two operands and they are not zero, your condition\
+    \ is true.\n- (!): this is the logical NOT. You will be able to use this to reverse\
+    \ the status of your operand. So if the condition ends up being false, this sign\
+    \ will make it true.\n\n### Arithmetic operators\n\nAnother of the operators that\
+    \ you are able to use is the arithmetic operators. These are pretty much the same\
+    \ as using math in school. You are going to tell the program to add, subtract,\
+    \ and do other equations with the information that you are providing. Some of\
+    \ the arithmetic operators that you are able to use include:\n\n- (+): this is\
+    \ the addition operator that will add together two operands of your choices.\n\
+    - (-): this is the subtraction operator. It is going to take the right hand operand\
+    \ and subtract it from the left hand operand.\n- (*): this is the operator that\
+    \ makes it possible to do multiplication in the C++ language.\n- (/): this operator\
+    \ helps you to do division in C++.\n- (++): this is the increment operator. It\
+    \ is going to increase the value of your operand by one.\n- (--): this is the\
+    \ decrement operator. It is going to decrease the operand value by just one.\n\
+    \n### Assignment operators\n\nThe assignment operators will make it easier for\
+    \ you to assign a name to your variable and can help with searching for, saving,\
+    \ and so on with the different parts of the code that you are writing. Some of\
+    \ the assignment operators that you may use inside of C++ include:\n\n- (=): this\
+    \ operator is the simple assignment operator. It is going to assign the value\
+    \ of the operand on the right hand to the one that is on the left.\n- (+=): this\
+    \ one is called the Add AND operator. It is going to add together the values from\
+    \ both operands and then assigns the sum of these over to the operand on the left\
+    \ side.\n- (*=): this is the Multiply AND operator. It is going to multiply both\
+    \ of the operands and then gives the results over to the operand on the left side.\n\
+    - (-=): this is the one that will subtract the value of your operand on the right\
+    \ side from the one on the left and then gives this difference to the left operand.\n\
+    - (/=): this is the Divide AND operator. It is going to divide the value that\
+    \ is on the left side from the one on the right side and then assigns this amount\
+    \ to the left side.\n\nThere are a few other assignment operators that are available,\
+    \ but they are more advanced so we will just stick with some of these basic ones\
+    \ to help keep things in order!\n\n### Relational Operators\n\nRelational operators\
+    \ can be really helpful when you are working inside of the C++ language. Some\
+    \ of the ones that you can use include:\n\n- (==): this is the operator that is\
+    \ going to check the equality of your two operands. If they are equal, the conditions\
+    \ will be true.\n- (>): this operator is going to check the value of your operands.\
+    \ If the operand on the left side is higher than the one on the right, the condition\
+    \ will be true.\n- (<): this operator is basically the opposite of the one above.\
+    \ If you find that the value of your operand on the left side is less than the\
+    \ one on the right side, the condition will be true.\n- (!=): this one is going\
+    \ to check the equality of your two operands and if the values are unequal, your\
+    \ condition is true.\n- (<=): this operator is going to check whether the operand\
+    \ on the left side is less than or equal to the operand on the right side. If\
+    \ it meets this criteria, the condition is true.\n- (>=): this one is going to\
+    \ check if the value of the operand on the left side is greater or equal to the\
+    \ one on the right side. If it is true, the condition is true.\n\n## Chapter 6:\
+    \ Helping C++ to Make Decisions\n\nThere are times when you will need the program\
+    \ to make decisions for you. You are able to set it up to act in a certain way\
+    \ based on the information that the user puts into the computer and what you decide\
+    \ needs to be met for the conditions to be true. The decision making is a bit\
+    \ more advanced inside of this system, but you will find that is pretty easy to\
+    \ learn and will open up a lot of ideas that you are able to work with in the\
+    \ C++ system. Let’s take a look at some of the things that you are able to do\
+    \ to help the system to make decisions on its own.\n\n### Switch Statements\n\n\
+    The first decision that we are going to work with inside of this system are the\
+    \ switch statements. These statements are nice because they are going to allow\
+    \ you to check the equality of your variable against a set of values, or cases.\
+    \ The variable that you are trying to check is going to be compared with each\
+    \ of the cases. A good example of the syntax that you are able to use for this\
+    \ include:\n\n```cpp\nswitch(expression) {\n    case constant-expression:\n  \
+    \      statement(s);\n        break; // optional\n    case constant-expression:\n\
+    \        statement(s);\n        break; // optional\n        // you can add in\
+    \ as many of these case statements as you would like\n    default: // Optional\n\
+    \        statement(s);\n}\n```\n\nWhen you are working inside of these statements,\
+    \ there are a few rules that you should keep in mind. First, the expression of\
+    \ the switch statement should be the integral or enumerated class type. In addition,\
+    \ it can also belong to a class that has a conversion function. With C++, there\
+    \ isn’t going to be a limit to the amount of case statements that you add into\
+    \ the syntax so you can make them as long or short as you would like. Just remember\
+    \ that you need to have a colon and a value in each of them.\n\nOnce the variable\
+    \ finds a value that it is equal to, it is going to keep running until it finds\
+    \ a break statement. The system finds the break statement, the switch is going\
+    \ to stop. Then the control flow will be passed on. You don’t need to put in a\
+    \ break statement to the cases. If you end up not having one of these, the control\
+    \ flow will just keep being passed on.\n\n### The if statements\n\nOne of the\
+    \ most basic things that you are able to do in your programs is create an if statement.\
+    \ These are going to be based on a true and false idea inside the system. If the\
+    \ system says that the input is true with the condition that you set out, then\
+    \ the program is going to run whatever you ask it to. For example, you set it\
+    \ up to have the system ask what the answer to 2 + 2 is. If the user puts in the\
+    \ answer as 4, you could have a message come up that says “That is Correct! Good\
+    \ Job!”\n\nAny time that the user puts in an input that ends up being true based\
+    \ on the conditions that you are setting out, you are going to get the statement\
+    \ to show up that you picked out. On the other hand, what is going to happen if\
+    \ your person puts in the wrong answer. If they\n"
+  mdcn: "\n写法如下\n\n```cpp\nfor (init; condition; increment)\n{\n    statement(s);\n\
+    }\n```\n\n### Do...while 循环\n\nDo...while 循环与 while 语句类似，但它是在到达语句末尾时测试条件，而不是在开始时测试。\n\
+    \n写法如下\n\n```cpp\ndo\n{\n    statement(s);\n} while (condition);\n```\n\n### 嵌套循环\n\
+    \n嵌套循环是指在一个循环内部再放置一个循环，从而形成循环套循环的连续结构。这种写法过一段时间后可能会让人感到困惑。\n\n写法如下\n\n```cpp\n\
+    while (condition)\n{\n    while (condition)\n    {\n        statement(s)\n   \
+    \ }\n    statement(s) // you can put more statements\n}\n```\n\n### 为什么这很重要\n\n\
+    最终你会希望拓展自己的知识面。我强烈建议你进一步巩固 C++ 基础知识，以确保掌握并更好地理解更困难的任务。\n\n尽管这些内容对某些人来说可能太高级，对另一些人来说又太简单，但多做一些练习和教程来丰富你的编程技能总是有益的。你可以在\
+    \ www.compileonline.com 上找到教程。这个工具的重要性再怎么强调都不为过。你必须亲自去看看，了解它到底有多实用。那里也有其他语言的教程，不仅仅是\
+    \ C++；不妨随意尝试，看看自己喜欢什么。\n\n## 第5章：在 C++ 中使用运算符\n\n无论你计划使用哪种编程语言，学会使用运算符都很重要。它们可以帮助你告诉程序你想做什么，并让你处理自己的代码轻松得多。在你的程序中，可以使用四种主要类型的运算符，它们各自会以不同方式告诉程序如何运行。在\
+    \ C++ 语言中，你可以使用的一些运算符包括：\n\n- 逻辑运算符\n- 算术运算符\n- 赋值运算符\n- 关系运算符\n\n我们来看看其中一些运算符如何工作，以及在使用\
+    \ C++ 语言编写代码时，如何让它们发挥良好作用。\n\n### 逻辑运算符\n\n本指南中我们要使用的第一类运算符是逻辑运算符。它们可以帮助你比较输入系统中的某些部分。你可以使用的一些逻辑运算符包括：\n\
+    \n- (||)：这被称为逻辑或。使用这个运算符时，如果你的一个操作数不为零，条件就会为真。\n- (&&)：这个被称为逻辑与。如果你有两个操作数且它们都不为零，条件就为真。\n\
+    - (!)：这是逻辑非。你可以用它来反转操作数的状态。因此，如果条件最终为假，这个符号会使其变为真。\n\n### 算术运算符\n\n你可以使用的另一类运算符是算术运算符。这些基本上和在学校里做数学一样。你会告诉程序对你提供的信息进行加法、减法和其他运算。你可以使用的一些算术运算符包括：\n\
+    \n- (+)：这是加法运算符，会将你选择的两个操作数相加。\n- (-)：这是减法运算符。它会取右侧操作数，并从左侧操作数中减去它。\n- (*)：这个运算符使得在\
+    \ C++ 语言中可以进行乘法运算。\n- (/)：这个运算符帮助你在 C++ 中进行除法运算。\n- (++)：这是自增运算符。它会把你的操作数的值增加一。\n\
+    - (--)：这是自减运算符。它会把操作数的值减少一。\n\n### 赋值运算符\n\n赋值运算符可以让你更轻松地为变量指定名称，并有助于在你编写的代码的不同部分中进行搜索、保存等操作。你在\
+    \ C++ 中可能会使用的一些赋值运算符包括：\n\n- (=)：这个运算符是简单赋值运算符。它会将右侧操作数的值赋给左侧操作数。\n- (+=)：这个称为加且赋值运算符。它会将两个操作数的值相加，然后将它们的和赋给左侧操作数。\n\
+    - (*=)：这是乘且赋值运算符。它会将两个操作数相乘，然后把结果赋给左侧操作数。\n- (-=)：这个运算符会从左侧操作数中减去右侧操作数的值，然后将差值赋给左侧操作数。\n\
+    - (/=)：这是除且赋值运算符。它会用左侧的值除以右侧的值，然后将这个结果赋给左侧。\n\n还有一些其他赋值运算符可用，但它们更高级，因此我们只保留这些基础运算符，以帮助保持条理！\n\
+    \n### 关系运算符\n\n在使用 C++ 语言时，关系运算符非常有用。你可以使用的一些运算符包括：\n\n- (==)：这个运算符会检查你的两个操作数是否相等。如果它们相等，条件将为真。\n\
+    - (>)：这个运算符会检查操作数的值。如果左侧操作数大于右侧操作数，条件将为真。\n- (<)：这个运算符基本上与上面的运算符相反。如果你发现左侧操作数的值小于右侧操作数，条件将为真。\n\
+    - (!=)：这个运算符会检查你的两个操作数是否相等，如果值不相等，条件就为真。\n- (<=)：这个运算符会检查左侧操作数是否小于或等于右侧操作数。如果满足这个条件，条件就为真。\n\
+    - (>=)：这个运算符会检查左侧操作数的值是否大于或等于右侧操作数。如果为真，条件就为真。\n\n## 第6章：帮助 C++ 做出决策\n\n有时你需要让程序为你做出决策。你可以根据用户输入计算机的信息，以及你决定条件为真所需满足的内容，设置程序以某种方式行动。在这个系统中，决策功能稍微高级一些，但你会发现它很容易学习，并且会为你打开许多可以在\
+    \ C++ 系统中运用的思路。我们来看看你可以做哪些事情来帮助系统自行做出决策。\n\n### switch 语句\n\n我们要在这个系统中处理的第一种决策是\
+    \ switch 语句。这些语句很好用，因为它们允许你将变量的相等性与一组值（或情况）进行比较。你试图检查的变量将与每个情况进行比较。你可以使用的一个很好的语法示例如下：\n\
+    \n```cpp\nswitch(expression) {\n    case constant-expression:\n        statement(s);\n\
+    \        break; // optional\n    case constant-expression:\n        statement(s);\n\
+    \        break; // optional\n        // you can add in as many of these case statements\
+    \ as you would like\n    default: // Optional\n        statement(s);\n}\n```\n\
+    \n在使用这些语句时，有几条规则需要牢记。首先，switch 语句的表达式应为整型或枚举类类型。此外，它也可以属于具有转换函数的类。在 C++ 中，你添加到语法中的\
+    \ case 语句数量没有限制，因此你可以按需要让它们长或短。只需记住，每个 case 语句中都需要有一个冒号和一个值。\n\n一旦变量找到与它相等的值，它就会继续运行，直到遇到\
+    \ break 语句。系统找到 break 语句后，switch 就会停止。然后控制流会继续传递。你不需要为这些 case 都放入 break 语句。如果你最终没有\
+    \ break 语句，控制流就会继续传递下去。\n\n### if 语句\n\n你在程序中能做的最基本的事情之一就是创建 if 语句。这些语句基于系统中的真/假概念。如果系统根据你设置的条件判断输入为真，那么程序就会运行你要求它运行的内容。例如，你设置让系统询问\
+    \ 2 + 2 的答案是什么。如果用户输入答案为 4，你可以让一条消息显示“回答正确！干得好！”\n\n任何时候，只要用户输入的内容根据你设置的条件最终为真，你选择的语句就会显示出来。另一方面，如果用户输入了错误答案，会发生什么。如果他们\n"
+  merge: 0
+- raw:
+  - "[PAGE 50]\n\nput the answer as 5 to the question above, it is not going to be\
+    \ right and the system is going to see that the answer is false.\n\nSince the\
+    \ if statement is pretty basic, you are going to find that it is not going to\
+    \ be prepared if the person puts in the wrong answer. At this stage, if they put\
+    \ in any number other than 4 for the example above, the screen is just going to\
+    \ go blank and nothing is going to happen. The next type of statement will go\
+    \ more in depth and show you how to get answers based on what the person puts\
+    \ into the system.\n\n# ## The if else statement\n\nNow as we discussed a bit\
+    \ above, there are some limitations that can come up when you are using the if\
+    \ statement. If the person puts in the wrong answer, the screen is just going\
+    \ to go blank and this can be a pain with the system. Plus, there are times when\
+    \ the user will need to put in a variety of answers, such as when they will put\
+    \ in their age and you want to separate those out. Their age is not necessarily\
+    \ wrong, but if you just want people who are older than 21, you want to make sure\
+    \ that an answer comes up correctly along the way.\n\nA good syntax to use in\
+    \ order to work with the if else statements include:\n\n```\n```\nif(boolean_expression)\n\
+    {\n    //statement(s) will execute if the boolean expression is true\n}\nElse\n\
+    {\n```\n```"
+  - '[PAGE 51]
+
+
+    ```
+
+    // statement(s) will execute if the boolean expression is false
+
+    }
+
+    ```
+
+
+    You are able to add in as many of these into your statement as you would like.
+    So if you would like to have a program that set apart people in five different
+    age groups, you could set that up based on more of the “else” in your syntax.
+    This makes it easier to add in some other choices.
+
+
+    So let’s keep it simple. Let’s say that you have 2 +2 on the system. If the person
+    guesses that 4 is the answer, you can set that up in the first part to be the
+    true statement and then the message “That’s Right! Good Job!” will come up on
+    the screen. But if the user puts in the answer 5 (or any other answer than 4),
+    you can have a message like “Sorry, that is not the right answer” come up on the
+    screen.
+
+
+    This gives you a lot of freedom when it comes to taking care of what you want
+    to do inside of your code. You are going to be able to add in some different things
+    to the process and you can really expand the code that you are working on.
+
+
+    Another thing that you can keep in mind when working on these, is that you are
+    able to add some if statements and some if else statements inside of each other.
+    This can get a bit complex as a beginner, but with some practice, you will find
+    that it is going to add a lot of power to the whole process and can make it easier
+    to do some of the things that you want within this coding language.
+
+
+    Working with the if statements and the if else statements can make your coding
+    experience so much better. It allows the system to make decisions based on what
+    the user is putting into the system rather than having to be there and do it themselves.
+    Make sure to try out a few of these different types of statements and see how
+    they are going to work within your code and with what you want to do.'
+  - '[PAGE 52]
+
+
+    # # Chapter 6: Constants and the various types of Literals
+
+
+    This language is complex, and even though what you have learned above is enough
+    to run some simple functions, there are so many more parts to this language that
+    it would be a crime to not put more in depth knowledge in here to help you transition
+    to the next step.
+
+
+    If you want to be successful with this language, be prepared to spend long hours
+    working hard on it. While it is a good language for beginners as it has multiple
+    levels of difficulties, it is also something that you have to work hard at to
+    make it to the next level. The added effects are more difficult the more you try
+    to learn.
+
+
+    Programming itself is a long and difficult process, but it is definitely worth
+    it, as there are so many professions that you can go into that require the knowledge
+    of C++. From game designing, to working with robots and more. If it involves technology,
+    chances are it involves C++.
+
+
+    So here are some more steps that you can learn, and some more important functions
+    that you need to know to begin to master this language.
+
+
+    # ## Constants and Literals
+
+
+    Constants and literals are an imperative part of learning C++. They refer to data
+    types and variables in those data types. They are constant, and cannot be changed.'
+  - '[PAGE 53]
+
+
+    <!-- no content -->'
+  - "[PAGE 54]\n\nWhen you choose to use the decimal point to represent these literals,\
+    \ you need to make sure that you are adding in at least the decimal, although\
+    \ adding in the exponent is good as well. When you are representing through the\
+    \ exponential form, you should include either the fractional part, the integer\
+    \ part, or both of them. The signed exponent that you are using should also be\
+    \ started with either E or e.\n\nSome of the floating point literals that you\
+    \ are able to use in your code writing include:\n\n```\n    .e55   //these are\
+    \ illegal because they are missing the fraction or the integer\n    21of.  //these\
+    \ are illegal because they don't have the exponent or the decimal\n    51oE  \
+    \ //these are illegal because they have an incomplete exponent\n    314159E-5L\
+    \  //these are legal\n    3.15159//these are legal\n```\n\n# **Boolean Literals**\n\
+    \nThe next type of literal that we can discuss are the Boolean literals. There\
+    \ are two types that you will be able to use inside of your C++ code. Basically\
+    \ the Boolean values are going to be shown as either true or false. If the conditions\
+    \ that you set out are true, the Boolean expression is going to come out as true.\
+    \ On the other hand, if the conditions that you set out are not met, you are going\
+    \ to end up with a condition that is false. All of the answers when they are Boolean\
+    \ will come out either true or false.\n\n# **Character Literals**"
+  - '[PAGE 55]
+
+
+    When you see a character literal in your code, you will notice that they are closed
+    off with single quotes. These can be simple and use something like ‘x’ to tell
+    the command or they can be much longer in length as well. These are basic things
+    that you are able to add into your code and can make things much easier to handle.
+
+
+    # String Literals
+
+
+    Another type of literal that you are able to work with are the string literals.
+    These are the ones that will be closed off using a double quote. The string is
+    going to contain characters that are like the character literals, including options
+    like universal, escape sequence, and plain characters. You can use the string
+    literal in many ways including to break up one of your lines into two, and separating
+    out things to make it easier to read. Some of the examples of the strings that
+    you can use include:
+
+
+    ```
+
+    ```text
+
+    hello, Mother"
+
+    "hello, \\
+
+    Mother"
+
+    "hello, "M" "other"
+
+    ```
+
+    ```
+
+
+    Learning how to use some of these different parts inside of the C++ programming
+    language will make a big difference in how well you are able to use this computer
+    language. Have some fun and experiment with using them a bit and you will find
+    that it is easier than ever to get the results that you want!'
+  - '[PAGE 56]
+
+
+    # # Conclusion
+
+
+    Thank you again for purchasing this book. I hope that it proved to be informational,
+    but enjoyable. Keep this book as a guide not only for knowledge, but inspiration
+    as well. C++ seems like an intimidating language but the more you practice it
+    in regularity, by days, months, and years, you will achieve complete mastery of
+    this programming language like with anything else in life. I ask you not to fret
+    and be anxious and a problem arise, because there will be many times in which
+    this will happen. There are numerous resources out there for you just waiting
+    to be read of discovered and it is in your best interest to do your due diligence
+    in learning, improving, and enhancing your C++ programming skills to the next
+    level.'
+  - '[PAGE 57]
+
+
+    # # Bonus: Brief Hacking History and Overview
+
+
+    Many people have heard the name C++ but really think nothing of it. If you are
+    not very technologically versed then you may think that it is about having a mediocre
+    letter grade, but that is not the case.
+
+
+    Believe it or not, C++ is a hacking language, and while it is not the only one
+    out there, it is one of the more important ones because it is versatile and also
+    easy to use. To learn the most about C++, you have to know more about the reason
+    it came about and that would be hacking.
+
+
+    # # Hacking
+
+
+    Hacking is not a new concept. For as long as there has been any type of technologies
+    around, there have been people figuring out ways to hack them. Hacking is the
+    manipulations and/or interruptions of any technological stream of data that is
+    being sent from one place to another. This is done with scripts. While you can
+    get pre-packaged scripts online, many people prefer the old fashioned way of writing
+    their own scripts, as is gives them more flexibility to do what the want with
+    the information. Scripts that come already set up into packages have limited mobility
+    and are pretty visible. The goal of a hacker who truly wants to hack is to remain
+    discreet. If you are caught, unless you have permission to be doing what you are
+    doing, you can get in a heap of trouble.
+
+
+    # # History of Hacking
+
+
+    Hacking began officially in the 1970s when teenagers were banned from using the
+    phone'
+  md: "\nPut the answer as 5 to the question above, it is not going to be right and\
+    \ the system is going to see that the answer is false.\n\nSince the if statement\
+    \ is pretty basic, you are going to find that it is not going to be prepared if\
+    \ the person puts in the wrong answer. At this stage, if they put in any number\
+    \ other than 4 for the example above, the screen is just going to go blank and\
+    \ nothing is going to happen. The next type of statement will go more in depth\
+    \ and show you how to get answers based on what the person puts into the system.\n\
+    \n### The if else statement\n\nNow as we discussed a bit above, there are some\
+    \ limitations that can come up when you are using the if statement. If the person\
+    \ puts in the wrong answer, the screen is just going to go blank and this can\
+    \ be a pain with the system. Plus, there are times when the user will need to\
+    \ put in a variety of answers, such as when they will put in their age and you\
+    \ want to separate those out. Their age is not necessarily wrong, but if you just\
+    \ want people who are older than 21, you want to make sure that an answer comes\
+    \ up correctly along the way.\n\nA good syntax to use in order to work with the\
+    \ if else statements include:\n\n```cpp\nif(boolean_expression)\n{\n    // statement(s)\
+    \ will execute if the boolean expression is true\n}\nelse\n{\n    // statement(s)\
+    \ will execute if the boolean expression is false\n}\n```\n\nYou are able to add\
+    \ in as many of these into your statement as you would like. So if you would like\
+    \ to have a program that set apart people in five different age groups, you could\
+    \ set that up based on more of the “else” in your syntax. This makes it easier\
+    \ to add in some other choices.\n\nSo let’s keep it simple. Let’s say that you\
+    \ have 2 + 2 on the system. If the person guesses that 4 is the answer, you can\
+    \ set that up in the first part to be the true statement and then the message\
+    \ “That’s Right! Good Job!” will come up on the screen. But if the user puts in\
+    \ the answer 5 (or any other answer than 4), you can have a message like “Sorry,\
+    \ that is not the right answer” come up on the screen.\n\nThis gives you a lot\
+    \ of freedom when it comes to taking care of what you want to do inside of your\
+    \ code. You are going to be able to add in some different things to the process\
+    \ and you can really expand the code that you are working on.\n\nAnother thing\
+    \ that you can keep in mind when working on these, is that you are able to add\
+    \ some if statements and some if else statements inside of each other. This can\
+    \ get a bit complex as a beginner, but with some practice, you will find that\
+    \ it is going to add a lot of power to the whole process and can make it easier\
+    \ to do some of the things that you want within this coding language.\n\nWorking\
+    \ with the if statements and the if else statements can make your coding experience\
+    \ so much better. It allows the system to make decisions based on what the user\
+    \ is putting into the system rather than having to be there and do it themselves.\
+    \ Make sure to try out a few of these different types of statements and see how\
+    \ they are going to work within your code and with what you want to do.\n\n##\
+    \ Chapter 6: Constants and the Various Types of Literals\n\nThis language is complex,\
+    \ and even though what you have learned above is enough to run some simple functions,\
+    \ there are so many more parts to this language that it would be a crime to not\
+    \ put more in depth knowledge in here to help you transition to the next step.\n\
+    \nIf you want to be successful with this language, be prepared to spend long hours\
+    \ working hard on it. While it is a good language for beginners as it has multiple\
+    \ levels of difficulties, it is also something that you have to work hard at to\
+    \ make it to the next level. The added effects are more difficult the more you\
+    \ try to learn.\n\nProgramming itself is a long and difficult process, but it\
+    \ is definitely worth it, as there are so many professions that you can go into\
+    \ that require the knowledge of C++. From game designing, to working with robots\
+    \ and more. If it involves technology, chances are it involves C++.\n\nSo here\
+    \ are some more steps that you can learn, and some more important functions that\
+    \ you need to know to begin to master this language.\n\n### Constants and Literals\n\
+    \nConstants and literals are an imperative part of learning C++. They refer to\
+    \ data types and variables in those data types. They are constant, and cannot\
+    \ be changed.\n\nWhen you choose to use the decimal point to represent these literals,\
+    \ you need to make sure that you are adding in at least the decimal, although\
+    \ adding in the exponent is good as well. When you are representing through the\
+    \ exponential form, you should include either the fractional part, the integer\
+    \ part, or both of them. The signed exponent that you are using should also be\
+    \ started with either E or e.\n\nSome of the floating point literals that you\
+    \ are able to use in your code writing include:\n\n```cpp\n.e55        // these\
+    \ are illegal because they are missing the fraction or the integer\n210f     \
+    \   // these are illegal because they don't have the exponent or the decimal\n\
+    510E        // these are illegal because they have an incomplete exponent\n314159E-5L\
+    \  // these are legal\n3.14159     // these are legal\n```\n\n### Boolean Literals\n\
+    \nThe next type of literal that we can discuss are the Boolean literals. There\
+    \ are two types that you will be able to use inside of your C++ code. Basically\
+    \ the Boolean values are going to be shown as either true or false. If the conditions\
+    \ that you set out are true, the Boolean expression is going to come out as true.\
+    \ On the other hand, if the conditions that you set out are not met, you are going\
+    \ to end up with a condition that is false. All of the answers when they are Boolean\
+    \ will come out either true or false.\n\n### Character Literals\n\nWhen you see\
+    \ a character literal in your code, you will notice that they are closed off with\
+    \ single quotes. These can be simple and use something like 'x' to tell the command\
+    \ or they can be much longer in length as well. These are basic things that you\
+    \ are able to add into your code and can make things much easier to handle.\n\n\
+    ### String Literals\n\nAnother type of literal that you are able to work with\
+    \ are the string literals. These are the ones that will be closed off using a\
+    \ double quote. The string is going to contain characters that are like the character\
+    \ literals, including options like universal, escape sequence, and plain characters.\
+    \ You can use the string literal in many ways including to break up one of your\
+    \ lines into two, and separating out things to make it easier to read. Some of\
+    \ the examples of the strings that you can use include:\n\n```cpp\n\"hello, Mother\"\
+    \n\"hello, \\\nMother\"\n\"hello, \" \"M\" \"other\"\n```\n\nLearning how to use\
+    \ some of these different parts inside of the C++ programming language will make\
+    \ a big difference in how well you are able to use this computer language. Have\
+    \ some fun and experiment with using them a bit and you will find that it is easier\
+    \ than ever to get the results that you want!\n\n## Conclusion\n\nThank you again\
+    \ for purchasing this book. I hope that it proved to be informational, but enjoyable.\
+    \ Keep this book as a guide not only for knowledge, but inspiration as well. C++\
+    \ seems like an intimidating language but the more you practice it in regularity,\
+    \ by days, months, and years, you will achieve complete mastery of this programming\
+    \ language like with anything else in life. I ask you not to fret and be anxious\
+    \ and a problem arise, because there will be many times in which this will happen.\
+    \ There are numerous resources out there for you just waiting to be read or discovered\
+    \ and it is in your best interest to do your due diligence in learning, improving,\
+    \ and enhancing your C++ programming skills to the next level.\n\n## Bonus: Brief\
+    \ Hacking History and Overview\n\nMany people have heard the name C++ but really\
+    \ think nothing of it. If you are not very technologically versed then you may\
+    \ think that it is about having a mediocre letter grade, but that is not the case.\n\
+    \nBelieve it or not, C++ is a hacking language, and while it is not the only one\
+    \ out there, it is one of the more important ones because it is versatile and\
+    \ also easy to use. To learn the most about C++, you have to know more about the\
+    \ reason it came about and that would be hacking.\n\n### Hacking\n\nHacking is\
+    \ not a new concept. For as long as there has been any type of technologies around,\
+    \ there have been people figuring out ways to hack them. Hacking is the manipulations\
+    \ and/or interruptions of any technological stream of data that is being sent\
+    \ from one place to another. This is done with scripts. While you can get pre-packaged\
+    \ scripts online, many people prefer the old-fashioned way of writing their own\
+    \ scripts, as it gives them more flexibility to do what they want with the information.\
+    \ Scripts that come already set up into packages have limited mobility and are\
+    \ pretty visible. The goal of a hacker who truly wants to hack is to remain discreet.\
+    \ If you are caught, unless you have permission to be doing what you are doing,\
+    \ you can get in a heap of trouble.\n\n### History of Hacking\n\nHacking began\
+    \ officially in the 1970s when teenagers were banned from using the phone\n"
+  mdcn: "\n如果对上面的问题把答案填成5，那它不会正确，系统会判定这个答案是错误的。\n\n由于 if 语句相当基础，你会发现，如果用户输入错误答案，它并没有做好准备。在这个阶段，如果用户为上面的示例输入除4以外的任何数字，屏幕只会变成空白，什么也不会发生。下一类语句会讲得更深入，并展示如何根据用户输入系统的内容来获得答案。\n\
+    \n### if else 语句\n\n现在，正如我们上面稍微讨论过的，使用 if 语句时可能会出现一些限制。如果用户输入错误答案，屏幕只会变成空白，这在系统中可能会很麻烦。此外，有时用户需要输入各种答案，例如当他们输入自己的年龄，而你想把这些年龄区分开时。他们的年龄不一定错误，但如果你只想要21岁以上的人，你就要确保在这个过程中能正确显示某个答案。\n\
+    \n为了处理 if else 语句，一个可用的良好语法包括：\n\n```cpp\nif(boolean_expression)\n{\n    // statement(s)\
+    \ will execute if the boolean expression is true\n}\nelse\n{\n    // statement(s)\
+    \ will execute if the boolean expression is false\n}\n```\n\n你可以按自己的意愿在语句中加入任意多个这样的结构。因此，如果你想做一个把人们分成五个不同年龄组的程序，你可以根据语法中更多的“else”来设置。这会让你更容易加入其他一些选择。\n\
+    \n所以让我们保持简单。假设系统中有 2 + 2。如果用户猜答案是4，你可以在第一部分把它设为真语句，然后屏幕上会显示“答对了！干得好！”这条消息。但如果用户输入答案5（或除4以外的任何其他答案），你可以让屏幕上显示“抱歉，这不是正确答案”这样的消息。\n\
+    \n这在你处理代码中想做的事情时给了你很大的自由。你将能够在这个过程中加入一些不同的东西，并且可以真正扩展你正在编写的代码。\n\n在处理这些内容时，你还可以记住另一点：你可以把一些\
+    \ if 语句和一些 if else 语句相互嵌套。对初学者来说，这可能会变得有点复杂，但经过一些练习，你会发现它会给整个过程增加很大的能力，并能让你更容易地在这个编程语言中实现你想要做的一些事情。\n\
+    \n使用 if 语句和 if else 语句可以让你的编程体验好得多。它允许系统根据用户输入系统的内容做出决定，而不必有人在旁边亲自操作。一定要尝试几种不同类型的语句，看看它们在你的代码中、以及在你想要做的事情中会如何发挥作用。\n\
+    \n## 第6章：常量和各类字面量\n\n这门语言很复杂，尽管你上面学到的内容足以运行一些简单函数，但这门语言还有太多部分，如果不在这里加入更深入的知识来帮助你过渡到下一步，那简直是一种罪过。\n\
+    \n如果你想成功掌握这门语言，就要准备好花很长时间努力钻研。虽然它对初学者来说是一门好语言，因为它有多个难度层次，但你也必须努力才能进入下一层次。你越尝试学习，附加的效果就越难。\n\
+    \n编程本身是一个漫长而艰难的过程，但它绝对值得，因为有很多职业都需要 C++ 知识。从游戏设计到机器人工作等等。只要涉及技术，很可能就涉及 C++。\n\n\
+    所以，这里还有一些你可以学习的步骤，以及一些你需要知道、以便开始掌握这门语言的更重要的函数。\n\n### 常量和字面量\n\n常量和字面量是学习 C++\
+    \ 的重要部分。它们涉及数据类型以及这些数据类型中的变量。它们是常量，不能被更改。\n\n当你选择用小数点来表示这些字面量时，需要确保至少加入小数点，不过加入指数也很好。当你用指数形式表示时，应该包括小数部分、整数部分或两者都包括。你使用的带符号指数也应该以\
+    \ E 或 e 开头。\n\n你在编写代码时可以使用的一些浮点字面量包括：\n\n```cpp\n.e55        // these are illegal\
+    \ because they are missing the fraction or the integer\n210f        // these are\
+    \ illegal because they don't have the exponent or the decimal\n510E        //\
+    \ these are illegal because they have an incomplete exponent\n314159E-5L  // these\
+    \ are legal\n3.14159     // these are legal\n```\n\n### 布尔字面量\n\n接下来我们可以讨论的字面量类型是布尔字面量。在\
+    \ C++ 代码中，你可以使用两种类型。基本上，布尔值会显示为 true 或 false。如果你设定的条件为真，布尔表达式的结果就是 true。另一方面，如果你设定的条件没有得到满足，你最终会得到一个为\
+    \ false 的条件。当答案是布尔值时，所有答案都会以 true 或 false 的形式出现。\n\n### 字符字面量\n\n当你在代码中看到字符字面量时，你会注意到它们用单引号括起来。它们可以很简单，比如用\
+    \ 'x' 来告诉命令，也可以长得多。这些是你能够加入代码中的基础内容，可以让事情处理起来容易得多。\n\n### 字符串字面量\n\n你还可以使用的另一种字面量是字符串字面量。这些字面量会用双引号括起来。字符串将包含类似字符字面量中的字符，包括通用字符、转义序列和普通字符等选项。你可以通过多种方式使用字符串字面量，包括把一行拆成两行，以及把内容分开以便更容易阅读。你可以使用的字符串示例包括：\n\
+    \n```cpp\n\"hello, Mother\"\n\"hello, \\\nMother\"\n\"hello, \" \"M\" \"other\"\
+    \n```\n\n学习如何在 C++ 编程语言中使用其中一些不同部分，会对你使用这门计算机语言的能力产生很大影响。玩一玩并尝试使用它们，你会发现比以往更容易得到你想要的结果！\n\
+    \n## 结论\n\n再次感谢你购买这本书。我希望它既有信息量，又令人愉快。请把这本书当作指南，不仅用于获取知识，也用于获得灵感。C++ 看起来像是一门令人生畏的语言，但你越是有规律地练习它，日复一日、月复一月、年复一年，你就会像对待生活中的其他事情一样，完全掌握这门编程语言。我请你不要因为出现问题而烦恼和焦虑，因为这种情况会发生很多次。外面有无数资源正等着你去阅读或发现，而尽你所能地学习、改进并把你的\
+    \ C++ 编程技能提升到下一层次，对你最有利。\n\n## 附赠：黑客历史与概述\n\n许多人都听说过 C++ 这个名字，但并没有真正在意它。如果你不太懂技术，你可能会以为它指的是得到一个中等偏下的字母等级，但事实并非如此。\n\
+    \n信不信由你，C++ 是一门黑客语言，虽然它不是唯一的黑客语言，但它是比较重要的语言之一，因为它用途广泛，而且易于使用。要最深入地了解 C++，你必须更多地了解它产生的原因，而那就是黑客行为。\n\
+    \n### 黑客行为\n\n黑客行为并不是一个新概念。只要有某种技术存在，就会有人想办法入侵它们。黑客行为是对从一个地方发送到另一个地方的技术数据流进行操纵和/或中断。这是通过脚本来完成的。虽然你可以在网上获得预先打包好的脚本，但许多人更喜欢自己编写脚本的传统方式，因为这让他们在利用信息时拥有更大的灵活性。已经打包设置好的脚本灵活性有限，而且相当显眼。真正想要实施黑客行为的黑客，其目标是保持隐蔽。如果你被抓到，除非你有权限这样做，否则你可能会陷入大麻烦。\n\
+    \n### 黑客史\n\n黑客行为正式始于20世纪70年代，当时青少年被禁止使用电话\n"
+  merge: 1
+- raw:
+  - '[PAGE 58]
+
+
+    lines because they were trying to make free calls, and figured out how to do so.
+    Phone hacking was the biggest thing, and continued for over a hundred years. Making
+    calls used to be expensive, especially when the phone lines were new, so of course
+    people were trying to find ways to save money, and usually it caught up with them.
+    Such was the case for a man named John Draper. He was arrested for figuring out
+    how to make long distance calls simply by blowing a note into the receiver that
+    prompted it to make a long distance call without an operator. You could then input
+    the number and talk as long as you wish. Genius, but illegal.
+
+
+    He started a revolution though. A group of young teens banded together to create
+    a phone line that hacked the system to help people make free calls. Once this
+    spread like wildfire, Steve Jobs decided to come up with a product that he could
+    market that hacked the phone lines and helped people make free calls by themselves.
+
+
+    Big time computer hacking didn''t actually start until the 1980s. However, once
+    it began, it spread like wildfire, and there were a lot of people who thought
+    that it would be a great idea to see what all they could do, and how they could
+    manipulate these computers.
+
+
+    # # Types of Hacking
+
+
+    There are several different types of hacking out there. And while the media portrays
+    all hackers as bad, they are not. It is not black and white either. While those
+    are the two most popular groups when talking about hacking, there are so many
+    categories in between, that it would not be beneficial to only talk about the
+    two that are most known.
+
+
+    The two main categories that all the sub categories fall between however, are
+    ethical and unethical hacking.'
+  - '[PAGE 59]
+
+
+    Ethical hacking is hacking that is used only for good purposes. There are a lot
+    of people who have full permissions to hack into a system, and to find all of
+    the bugs of the software or hardware.
+
+
+    Ethical hackers are the ones that are responsible for all of the bug fixes in
+    your phone, apps, tablets, or computers. These people are hired by a company to
+    figure out what is wrong with their systems, and find the best way to fix it.
+    These hackers are an essential part of the hacking community.
+
+
+    If it were not for hackers we would not have the world wide web, urls or HTML.
+    Hacking is an important part if done within the boundaries of ethical hacking.
+
+
+    Unethical hacking, however, is not within the realms of hacking that is legal
+    with current laws. It is hacking for a malicious purpose. People who hack bank
+    mainframes and steal people''s credit card and account information and use it
+    to drain accounts are known as unethical hacking.
+
+
+    Unethical hacking is the bane of true hackers existence. These people are the
+    ones that give the good guys a bad name.
+
+
+    Now to go on to the terms for all different types of hackers.
+
+
+    +   - White Hat Hackers: These are the completely ethical hackers. Every thing
+    that they do is done for good. They go thru a system, and comb it down for any
+    bugs, and build super strong firewalls so that the systems are safe. They create
+    anti-malware software.'
+  - "[PAGE 60]\n\n+   - Black Hat Hacking: This is the type of hacking that you have\
+    \ to stay away from. With great power comes great responsibility. The great responsibility\
+    \ to not become prey to the temptation that is black hat hacking. This type of\
+    \ hacking can get you in a lot of trouble, and are immoral. Hacking government\
+    \ files or even other people’s privacy can be tempting but will lead to heavy\
+    \ disciplinary actions.\n+   \n+   - Grey Hat Hacking: These are the hackers that\
+    \ sometimes do bad things for good reasons. Such as Anonymous. They may hack the\
+    \ firewall of a sensitive information file, but they do so to expose the corruption\
+    \ that is going on behind the firewall. These hackers are often treated like criminals,\
+    \ but in reality, they can be regarded as heroes depending on your perspective.\n\
+    +   \n+   - Red Hats: These are the bounty hunters of the hacking world. They\
+    \ use their hacking skills to find illegal hackers, such as black hat hackers,\
+    \ or grey hats that are doing bad things that they should not be doing. They then\
+    \ turn them over to the feds, so that the illegal hackers are arrested. There\
+    \ are several other terms for these hackers, but they are not very appropriate,\
+    \ so we shall leave them out.\n+   \n+   - Blue Hat Hackers: These are the blue\
+    \ collar workers of the hacking world. They sit in a cubicle and hack away all\
+    \ day to find bugs for Microsoft or other major companies. They clock into a nine\
+    \ to five job that just happens to involve hacking.\n\nThese are the main classifications\
+    \ of hackers. There are also elite hackers that spend their entire life becoming\
+    \ the best hackers that the world has seen, and green hat hackers who don't really\
+    \ care about hacking, they just do it for fun. Hacking can be a very useful tool,\
+    \ and even become a profession if you go about it the right way.\n\nNow it is\
+    \ important to note that all of these hackers are going to work in a different\
+    \ way, but they are going to use the same kinds of codes in order to get the information\
+    \ that they want from other computers. A black hat hacker is going to concentrate\
+    \ on getting into the system and getting the information that they need to see\
+    \ success while the white hat hackers are going to work to keep these hackers\
+    \ off the system. While they are working"
+  - '[PAGE 61]
+
+
+    in different ways, they are going to use the same tools and see who will come
+    out on top in the end.
+
+
+    With that said, you need to be careful about what you are doing with your hacking
+    abilities. If you are using them to get onto a system or a network that you aren’t
+    allowed to be on, then you could get into a lot of trouble. While some people
+    find these vulnerabilities and tell the company all about them right away, it
+    is still a legal issue if you are on the system when you shouldn’t be. The company
+    you mess with could press charges so it is always best to just work within your
+    own network and keep that safe rather than trying to get onto a network you don’t
+    belong.
+
+
+    On the other hand, if you are someone who loves to work in the computer world
+    and you want to be able to do this all the time, it may be a good idea to work
+    as a white hat hacker. There are many companies that hold onto private and personal
+    information for their customers, whether it is hospital information, credit card
+    information, or something else. They are always on the lookout for a black hat
+    hacker who may try to get into the system and take this information and a good
+    white hat hacker can always find the work that they need helping these companies
+    out.'
+  - '[PAGE 62]
+
+
+    # ## Related Titles
+
+
+    Hacking University: Freshman Edition Essential Beginner''s Guide on How to Become
+    an Amateur Hacker
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_62_0.png)'
+  - '[PAGE 63]
+
+
+    # Hacking University: Sophomore Edition. Essential Guide to Take Your Hacking
+    Skills to the Next Level. Hacking Mobile Devices, Tablets, Game Consoles, and
+    Apps
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_63_0.png)'
+  - '[PAGE 64]
+
+
+    # Hacking University: Junior Edition. Learn Python Computer Programming From Scratch.
+    Become a Python Zero to Hero. The Ultimate Beginners Guide in Mastering the Python
+    Language
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_64_0.png)'
+  - '[PAGE 65]
+
+
+    # # Hacking University. Senior Edition Linux. Optimal Beginner’s Guide To Precisely
+    Learn And Conquer The Linux Operating System. A Complete Step By Step Guide In
+    How Linux Command Line Works
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_65_0.png)'
+  - '[PAGE 66]
+
+
+    # # Hacking University: Graduation Edition. 4 Manuscripts (Computer, Mobile, Python,
+    & Linux). Hacking Computers, Mobile Devices, Apps, Game Consoles and Learn Python
+    & Linux
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_66_0.png)'
+  - '[PAGE 67]
+
+
+    # Data Analytics: Practical Data Analysis and Statistical Guide to Transform and
+    Evolve Any Business, Leveraging the power of Data Analytics, Data Science, and
+    Predictive Analytics for Beginners
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_67_0.png)'
+  md: '
+
+    lines because they were trying to make free calls, and figured out how to do so.
+    Phone hacking was the biggest thing, and continued for over a hundred years. Making
+    calls used to be expensive, especially when the phone lines were new, so of course
+    people were trying to find ways to save money, and usually it caught up with them.
+    Such was the case for a man named John Draper. He was arrested for figuring out
+    how to make long distance calls simply by blowing a note into the receiver that
+    prompted it to make a long distance call without an operator. You could then input
+    the number and talk as long as you wish. Genius, but illegal.
+
+
+    He started a revolution though. A group of young teens banded together to create
+    a phone line that hacked the system to help people make free calls. Once this
+    spread like wildfire, Steve Jobs decided to come up with a product that he could
+    market that hacked the phone lines and helped people make free calls by themselves.
+
+
+    Big time computer hacking didn''t actually start until the 1980s. However, once
+    it began, it spread like wildfire, and there were a lot of people who thought
+    that it would be a great idea to see what all they could do, and how they could
+    manipulate these computers.
+
+
+    ## Types of Hacking
+
+
+    There are several different types of hacking out there. And while the media portrays
+    all hackers as bad, they are not. It is not black and white either. While those
+    are the two most popular groups when talking about hacking, there are so many
+    categories in between, that it would not be beneficial to only talk about the
+    two that are most known.
+
+
+    The two main categories that all the subcategories fall between, however, are
+    ethical and unethical hacking.
+
+
+    Ethical hacking is hacking that is used only for good purposes. There are a lot
+    of people who have full permissions to hack into a system, and to find all of
+    the bugs of the software or hardware.
+
+
+    Ethical hackers are the ones that are responsible for all of the bug fixes in
+    your phone, apps, tablets, or computers. These people are hired by a company to
+    figure out what is wrong with their systems, and find the best way to fix it.
+    These hackers are an essential part of the hacking community.
+
+
+    If it were not for hackers, we would not have the World Wide Web, URLs, or HTML.
+    Hacking is an important part if done within the boundaries of ethical hacking.
+
+
+    Unethical hacking, however, is not within the realms of hacking that is legal
+    with current laws. It is hacking for a malicious purpose. People who hack bank
+    mainframes and steal people''s credit card and account information and use it
+    to drain accounts are known as unethical hacking.
+
+
+    Unethical hacking is the bane of true hackers'' existence. These people are the
+    ones that give the good guys a bad name.
+
+
+    Now to go on to the terms for all different types of hackers.
+
+
+    - White Hat Hackers: These are the completely ethical hackers. Everything that
+    they do is done for good. They go through a system, and comb it down for any bugs,
+    and build super strong firewalls so that the systems are safe. They create anti-malware
+    software.
+
+    - Black Hat Hacking: This is the type of hacking that you have to stay away from.
+    With great power comes great responsibility. The great responsibility to not become
+    prey to the temptation that is black hat hacking. This type of hacking can get
+    you in a lot of trouble, and is immoral. Hacking government files or even other
+    people’s privacy can be tempting but will lead to heavy disciplinary actions.
+
+    - Grey Hat Hacking: These are the hackers that sometimes do bad things for good
+    reasons. Such as Anonymous. They may hack the firewall of a sensitive information
+    file, but they do so to expose the corruption that is going on behind the firewall.
+    These hackers are often treated like criminals, but in reality, they can be regarded
+    as heroes depending on your perspective.
+
+    - Red Hats: These are the bounty hunters of the hacking world. They use their
+    hacking skills to find illegal hackers, such as black hat hackers, or grey hats
+    that are doing bad things that they should not be doing. They then turn them over
+    to the feds, so that the illegal hackers are arrested. There are several other
+    terms for these hackers, but they are not very appropriate, so we shall leave
+    them out.
+
+    - Blue Hat Hackers: These are the blue collar workers of the hacking world. They
+    sit in a cubicle and hack away all day to find bugs for Microsoft or other major
+    companies. They clock into a nine to five job that just happens to involve hacking.
+
+
+    These are the main classifications of hackers. There are also elite hackers that
+    spend their entire life becoming the best hackers that the world has seen, and
+    green hat hackers who don''t really care about hacking, they just do it for fun.
+    Hacking can be a very useful tool, and even become a profession if you go about
+    it the right way.
+
+
+    Now it is important to note that all of these hackers are going to work in a different
+    way, but they are going to use the same kinds of codes in order to get the information
+    that they want from other computers. A black hat hacker is going to concentrate
+    on getting into the system and getting the information that they need to see success
+    while the white hat hackers are going to work to keep these hackers off the system.
+    While they are working in different ways, they are going to use the same tools
+    and see who will come out on top in the end.
+
+
+    With that said, you need to be careful about what you are doing with your hacking
+    abilities. If you are using them to get onto a system or a network that you aren’t
+    allowed to be on, then you could get into a lot of trouble. While some people
+    find these vulnerabilities and tell the company all about them right away, it
+    is still a legal issue if you are on the system when you shouldn’t be. The company
+    you mess with could press charges so it is always best to just work within your
+    own network and keep that safe rather than trying to get onto a network you don’t
+    belong.
+
+
+    On the other hand, if you are someone who loves to work in the computer world
+    and you want to be able to do this all the time, it may be a good idea to work
+    as a white hat hacker. There are many companies that hold onto private and personal
+    information for their customers, whether it is hospital information, credit card
+    information, or something else. They are always on the lookout for a black hat
+    hacker who may try to get into the system and take this information and a good
+    white hat hacker can always find the work that they need helping these companies
+    out.
+
+
+    ## Related Titles
+
+
+    ### Hacking University: Freshman Edition Essential Beginner''s Guide on How to
+    Become an Amateur Hacker
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_62_0.png)
+
+
+    ### Hacking University: Sophomore Edition. Essential Guide to Take Your Hacking
+    Skills to the Next Level. Hacking Mobile Devices, Tablets, Game Consoles, and
+    Apps
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_63_0.png)
+
+
+    ### Hacking University: Junior Edition. Learn Python Computer Programming From
+    Scratch. Become a Python Zero to Hero. The Ultimate Beginners Guide in Mastering
+    the Python Language
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_64_0.png)
+
+
+    ### Hacking University. Senior Edition Linux. Optimal Beginner’s Guide To Precisely
+    Learn And Conquer The Linux Operating System. A Complete Step By Step Guide In
+    How Linux Command Line Works
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_65_0.png)
+
+
+    ### Hacking University: Graduation Edition. 4 Manuscripts (Computer, Mobile, Python,
+    & Linux). Hacking Computers, Mobile Devices, Apps, Game Consoles and Learn Python
+    & Linux
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_66_0.png)
+
+
+    ### Data Analytics: Practical Data Analysis and Statistical Guide to Transform
+    and Evolve Any Business, Leveraging the power of Data Analytics, Data Science,
+    and Predictive Analytics for Beginners
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_67_0.png)
+
+    '
+  mdcn: '
+
+    电话线路，因为他们试图免费打电话，并想出了办法。电话黑客行为是当时最重大的事情，并持续了一百多年。过去打电话很贵，尤其是在电话线路刚出现的时候，所以人们自然会想方设法省钱，而通常这也会让他们惹上麻烦。一个名叫约翰·德雷珀的人就是如此。他因发现只需向听筒吹一个音调，就能促使系统在没有接线员的情况下拨出长途电话，从而打长途电话而被捕。之后你可以输入号码，想聊多久就聊多久。很天才，但违法。
+
+
+    不过，他引发了一场革命。一群青少年联合起来，创建了一条入侵系统的电话线路，帮助人们免费打电话。此事像野火一样蔓延后，史蒂夫·乔布斯决定推出一款可以推向市场的产品，它能入侵电话线路，帮助人们自行免费打电话。
+
+
+    真正大规模的计算机黑客行为实际上直到20世纪80年代才开始。然而，一旦开始，它就迅速蔓延，很多人认为，看看自己究竟能做些什么、如何操纵这些计算机，是个绝妙的主意。
+
+
+    ## 黑客行为的类型
+
+
+    黑客行为有几种不同类型。虽然媒体把所有黑客都描绘成坏人，但事实并非如此。这也不是非黑即白的。虽然谈到黑客时，这两类是最常被提及的群体，但介于两者之间的类别非常多，只讨论最知名的两类并没有好处。
+
+
+    然而，所有子类别都归属于两大主要类别之间：道德黑客行为和不道德黑客行为。
+
+
+    道德黑客行为是仅用于正当目的的黑客行为。很多人拥有完全权限入侵系统，并找出软件或硬件的所有漏洞。
+
+
+    道德黑客负责你手机、应用、平板电脑或计算机中的所有漏洞修复。这些人受公司雇佣，找出系统的问题，并找到最佳修复方法。这些黑客是黑客社区中不可或缺的一部分。
+
+
+    如果没有黑客，我们就不会有万维网、URL 或 HTML。如果在道德黑客行为的边界内进行，黑客行为就是重要的一环。
+
+
+    然而，不道德黑客行为不属于现行法律允许的黑客行为范畴。它是出于恶意目的的黑客行为。入侵银行大型机、窃取他人信用卡和账户信息并用来清空账户的人，其行为被称为不道德黑客行为。
+
+
+    不道德黑客行为是真正黑客的克星。正是这些人让好人背上了坏名声。
+
+
+    接下来介绍各种不同类型黑客的术语。
+
+
+    -   白帽黑客：这些是完全遵守道德的黑客。他们所做的一切都是为了正当目的。他们遍历系统，仔细排查任何漏洞，并构建超强防火墙以保障系统安全。他们开发反恶意软件。
+
+    -   黑帽黑客行为：这是你必须远离的黑客行为类型。能力越大，责任越大。重大的责任就是不要成为黑帽黑客行为诱惑的猎物。这类黑客行为会给你带来很多麻烦，而且不道德。入侵政府文件甚至他人隐私可能很诱人，但会导致严厉的惩戒。
+
+    -   灰帽黑客行为：这些黑客有时出于正当理由做坏事。例如“匿名者”（Anonymous）。他们可能会入侵敏感信息文件的防火墙，但这样做是为了揭露防火墙背后的腐败。这些黑客常被当作罪犯对待，但实际上，取决于你的视角，他们也可以被视为英雄。
+
+    -   红帽黑客：这些是黑客世界的赏金猎人。他们利用自己的黑客技能寻找非法黑客，例如黑帽黑客，或正在做不该做的坏事的灰帽黑客。然后他们将其移交给联邦探员，以便非法黑客被逮捕。这些黑客还有几个其他称呼，但不太恰当，所以我们略去不提。
+
+    -   蓝帽黑客：这些是黑客世界的蓝领工人。他们坐在小隔间里，整天不停地从事黑客工作，为微软或其他大公司寻找漏洞。他们按时打卡上下班，从事一份恰好涉及黑客行为的朝九晚五工作。
+
+
+    这些是黑客的主要分类。还有精英黑客，他们毕生致力于成为世界上见过的最优秀的黑客；以及绿帽黑客，他们并不真正在乎黑客行为，只是图个乐。黑客行为可以是非常有用的工具，如果你以正确的方式去做，甚至能成为一种职业。
+
+
+    现在需要注意的是，所有这些黑客的工作方式都会不同，但他们会使用同类代码来从其他计算机获取想要的信息。黑帽黑客会专注于进入系统并获取他们需要的信息以取得成功，而白帽黑客则会努力阻止这些黑客进入系统。尽管他们工作方式不同，但会使用相同的工具，并看看最终谁能胜出。
+
+
+    话虽如此，你需要小心使用自己的黑客能力。如果你利用它们进入不允许你进入的系统或网络，就可能惹上很多麻烦。虽然有些人发现这些漏洞后会立即告知公司，但如果你本不该在系统上却进入了系统，这仍然是一个法律问题。你招惹的公司可能会提起诉讼，所以最好始终只在自己的网络内工作并保障其安全，而不是试图进入不属于你的网络。
+
+
+    另一方面，如果你热爱在计算机世界工作，并且希望一直做这类事情，那么成为一名白帽黑客可能是个好主意。许多公司会保存客户的私人和个人信息，无论是医院信息、信用卡信息还是其他信息。他们始终警惕可能试图进入系统并窃取这些信息的黑帽黑客，而优秀的白帽黑客总能找到帮助这些公司所需的工作。
+
+
+    ## 相关书名
+
+
+    ### 黑客大学：新生版 成为业余黑客的必备初学者指南
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_62_0.png)
+
+
+    ### 黑客大学：大二版。将你的黑客技能提升到下一水平的必备指南。入侵移动设备、平板电脑、游戏主机和应用
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_63_0.png)
+
+
+    ### 黑客大学：大三版。从零开始学习 Python 计算机编程。从 Python 小白到高手。掌握 Python 语言的终极初学者指南
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_64_0.png)
+
+
+    ### 黑客大学。大四版 Linux。精准学习并征服 Linux 操作系统的最佳初学者指南。Linux 命令行工作原理的完整分步指南
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_65_0.png)
+
+
+    ### 黑客大学：毕业版。4 部手稿（计算机、移动设备、Python 与 Linux）。入侵计算机、移动设备、应用、游戏主机，并学习 Python 与 Linux
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_66_0.png)
+
+
+    ### 数据分析：实用数据分析与统计指南，助你转型和发展任何企业；为初学者利用数据分析、数据科学和预测分析的力量
+
+
+    ![](img/a8e645feaa99cddc334c252dbed8ca09_67_0.png)
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 68]
+
+
+    # About the Author
+
+
+    Isaac D. Cody is a proud, savvy, and ethical hacker from New York City. Currently,
+    Isaac now works for a mid-size Informational Technology Firm in the heart of NYC.
+    He aspires to work for The United States government as a security hacker, but
+    also loves teaching others about the future of technology. Isaac firmly believes
+    that the future will heavily rely computer "geeks" for both security and the successes
+    of companies and future jobs alike. In his spare time, he loves to analyze and
+    scrutinize everything about the game of basketball.'
+  md: '
+
+    ## About the Author
+
+
+    Isaac D. Cody is a proud, savvy, and ethical hacker from New York City. Currently,
+    Isaac works for a mid-size Information Technology firm in the heart of NYC. He
+    aspires to work for the United States government as a security hacker, but also
+    loves teaching others about the future of technology. Isaac firmly believes that
+    the future will heavily rely on computer “geeks” for both security and the successes
+    of companies and future jobs alike. In his spare time, he loves to analyze and
+    scrutinize everything about the game of basketball.
+
+    '
+  mdcn: '
+
+    ## 关于作者
+
+
+    艾萨克·D·科迪（Isaac D. Cody）是一位来自纽约市、自豪、精明且恪守道德的黑客。目前，艾萨克在纽约市中心一家中型信息技术公司工作。他立志成为美国政府的安全黑客，但也热衷于向他人讲授技术的未来。艾萨克坚信，未来无论是安全保障，还是公司和未来职业的成功，都将高度依赖计算机“极客”。闲暇时，他喜欢分析和审视篮球比赛的一切。
+
+    '
+  merge: 0

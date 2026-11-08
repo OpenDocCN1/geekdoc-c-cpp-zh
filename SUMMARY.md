@@ -422,6 +422,7 @@
 +   [C# 语言规范 - ECMA-334，第7版，2023年12月](docs/c-language-specification---ecma-334-7th-edition-december-202/README.md)
 +   [C# 语言规范 第 4 版](docs/c-language-specification-version-4/README.md)
 +   [C++：一天学会 C++！快速掌握 C++ 基础的终极速课程 (C++、C++ 课程、C++ 开发、C++ 书籍、初学者 C++)](docs/c-learn-c-in-a-day---the-ultimate-crash-course-to-learning-t/README.md)
++   [C++：像高手一样学习 C++。编程与征服 C++ 的初学者指南。从新手到专家快速学习并掌握 C++ 指南（黑客自由与数据驱动）（第 10 卷）](docs/c-learn-c-like-a-boss-a-beginners-guide-in-coding-programmin/README.md)
 +   [C 编程语言学习：初学者指南步步进阶（初学者的 C 编程实用指南：快速学习编码）](docs/c-learn-c-programming-language-the-absolute-beginner-guide-s/README.md)
 +   [C++ 低延迟：多线程与热点优化](docs/c-low-latency-multithreading-and-hotpath-optimizations/README.md)
 +   [C++ 精通：编程卓越全面指南](docs/c-mastery-a-comprehensive-guide-to-programming-excellence/README.md)

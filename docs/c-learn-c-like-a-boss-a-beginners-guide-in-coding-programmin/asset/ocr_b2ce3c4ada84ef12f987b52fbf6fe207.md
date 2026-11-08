@@ -1,0 +1,4 @@
++   - (<): this operator is basically the opposite of the one above. If you find that the value of your operand on the left side is greater than the one on the right side, the condition will be true.
++   - (!=): this one is going to check the equality of your two operands and if the values are unequal, your condition is true.
++   - (<=): this operator is going to check whether the operand on the left side is less than or equal to the operand on the right side. If it meets this criteria, the condition is true.
++   - (>=): this one is going to check if the value of the operand on the left side is greater or equal to the one on the right side. If it is true, the condition is true.
