@@ -1,0 +1,9 @@
+Now open up DigiCel FlipBook and import your sound track onto an X-sheet (right click on Sound on the X-sheet and in the Sound Properties window click Change; find your .wav file and click OK; the sound will now be loaded into the sound column). Scrub through the sound slowly and mark onto a paper X-sheet the frames where each of the sounds of the dialog start and end.
+
+![](bbox=[0.041, 0.213, 0.917, 0.591])
+
+When breaking down a sound track I always play the dialog through a few times and write what is said at the top of my paper X-Sheet. When I’m scrubbing through the dialog slowly the first thing I listen for is the silences. These occur between some words and where there are the sounds produced by the consonants that occur when the mouth is shut (‘M’, ‘B’, ‘P’, ‘F’ and ‘V’). Little sound comes out of the mouth when these consonants are spoken and the sound track is quiet or silent at these points.
+
+Then I listen for the ‘S’ sounds in the dialog, which tend to sound like a “shhh” or hissing sound. If the hissing sound lasts for three frames, mark it down on your X-sheet for three frames. Keep scrubbing backwards and forwards through your dialog. The next sounds to listen for are ‘T’ and ‘C’. ‘T’ makes a ‘tut’ kind of sound and ‘C’ makes a ‘kar’ sound. Next listen out for the consonants at the start of each of the syllables of each of the words.
+
+Once these are done, all that remain is the vowels. Listen for the loudest ones first. These will generally be the vowels that are spoken with the mouth wide open (jaw dropped). ‘A’ and ‘O’ are the loudest of the vowels and ‘I’ and ‘E’ tend to be quieter because the mouth is less open and less sound can come out of the mouth as a result.
