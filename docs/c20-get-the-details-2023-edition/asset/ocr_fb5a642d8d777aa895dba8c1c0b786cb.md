@@ -1,0 +1,50 @@
+```
+```cpp
+bool Event::Awaiter::await_suspend(std::coroutine_handle<> corHandle) noexcept {
+    coroutineHandle = corHandle;
+
+    const Event& ev = event;
+    ev.suspendedWaiter.store(this);
+
+    if (ev.notified) {
+        void* thisPtr = this;
+
+        if (ev.suspendedWaiter.compare_exchange_strong(thisPtr, nullptr)) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+void Event::notify() noexcept {
+    notified = true;
+
+    void* waiter = suspendedWaiter.load();
+
+    if (waiter != nullptr && suspendedWaiter.compare_exchange_strong(waiter, nullptr)) {
+        static_cast<Awaiter*>(waiter)->coroutineHandle.resume();
+    }
+}
+
+Event::Awaiter Event::operator co_await() const noexcept {
+    return Awaiter{*this};
+}
+
+struct Task {
+    struct promise_type {
+        Task get_return_object() { return {}; }
+        std::suspend_never initial_suspend() { return {}; }
+        std::suspend_never final_suspend() noexcept { return {}; }
+        void return_void() {}
+        void unhandled_exception() {}
+    };
+};
+
+Task receiver(Event& event) {
+    auto start = std::chrono::high_resolution_clock::now();
+    co_await event;
+    std::cout << "Got the notification!" << '\\n';
+}
+```
+```

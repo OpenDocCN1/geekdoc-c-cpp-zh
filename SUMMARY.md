@@ -623,6 +623,7 @@
 +   [面向程序员的 C++20：面向对象的自然方法，第 3 版](docs/c20-for-programmers-an-objects-natural-approach-3rd-edition/README.md)
 +   [面向程序员的 C++20：一种面向对象的自然方法 (Deitel 开发系列)](docs/c20-for-programmers-an-objects-natural-approach-deitel-devel/README.md)
 +   [++20 深度解析](docs/c20-get-the-details/README.md)
++   [C++20：细节详解（2023 版）](docs/c20-get-the-details-2023-edition/README.md)
 +   [C++20 示例](docs/c20-in-examples/README.md)
 +   [C++20 完全指南](docs/c20-the-complete-guide/README.md)
 +   [C++23 最佳实践：提升 C++ 的简单规则与具体行动项](docs/c23-best-practices-simple-rules-with-specific-action-items-f/README.md)
