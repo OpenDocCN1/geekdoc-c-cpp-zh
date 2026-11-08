@@ -1,0 +1,29 @@
+level_changes:
+- line: 196
+  before: 2
+  after: 3
+- line: 227
+  before: 3
+  after: 4
+- line: 258
+  before: 3
+  after: 4
+- line: 288
+  before: 3
+  after: 2
+text_changes:
+- line: 76
+  before: 第2章 – 关系模型示例
+  after: 第 2 章 – 关系模型示例
+- line: 102
+  before: 第3章 – SQL 语句
+  after: 第 3 章 – SQL 语句
+- line: 186
+  before: 第4章 – 在 MySQL 中编码
+  after: 第 4 章 – 在 MySQL 中编码
+- line: 657
+  before: 第6章 – 数组
+  after: 第 6 章 – 数组
+- line: 863
+  before: 第9章——类与对象
+  after: 第 9 章 – 类与对象

@@ -311,6 +311,7 @@
 +   [C++ 脑筋急转弯](docs/c-brain-teasers/README.md)
 +   [C++ 脑筋急转弯：锻炼你的思维](docs/c-brain-teasers-exercise-your-mind/README.md)
 +   [C# & C++：5合1：从零到高薪工作：秘籍 最新速成指南 一周学会 C# & C++ + 50 个动手练习](docs/c-c-5-in-1-from-zero-to-high-paying-jobs-the-updated-crash-c/README.md)
++   [C++与黑客攻防傻瓜书：学习C++与计算机黑客入门的聪明方法（C++编程、C++入门、黑客、...语言、编码、Web开发 第2卷）](docs/c-c-and-hacking-for-dummies-a-smart-way-to-learn-c-plus-plus/README.md)
 +   [C#：C# 速成课程——学习 C# 编程语言基础的初学者课程（c#、c 编程、c、java、python、angularjs、c++ 编程）](docs/c-c-crash-course---beginners-course-to-learn-the-basics-of-c/README.md)
 +   [C++：C++ 初学者指南，C++ 24小时实战，快速学习 C++！一种学习 C++ 的智能方法。简单易懂。C++ 步骤指南，C++ 编程，从今天开始编码](docs/c-c-for-beginners-c-in-24-hours-learn-c-fast-a-smart-way-to-/README.md)
 +   [C#：初学者的 C# 速成课程：今天快速轻松掌握 C# 编程（计算机编程，初学者编程）（第 2 卷）](docs/c-c-for-beginners-crash-course-master-c-programming-fast-and/README.md)
