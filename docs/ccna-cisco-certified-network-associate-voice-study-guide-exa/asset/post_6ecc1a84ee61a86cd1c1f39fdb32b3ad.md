@@ -1,0 +1,120 @@
+
+- self-test Q & A, 33–36
+- TCP/IP. See TCP/IP (Transmission Control Protocol/Internet Protocol)
+- traditional data networking technology, 3–5
+  - two-minute drill, 32
+- voice quality, factors impacting, 21–26
+- voice quality, improving, 26–30
+- VoIP protocols. See VoIP (Voice over Internet Protocol) protocols
+- VoIP (Voice over Internet Protocol) protocols
+  - H.323. See H.323 protocol
+  - MGCP. See MGCP (Media Gateway Control Protocol)
+  - RTCP. See RTCP (Real-time Transport Control Protocol)
+  - RTP. See RTP (Real-time Transport Protocol)
+  - SCCP. See SCCP (Skinny Client Control Protocol)
+  - SIP. See SIP (Session Initiation Protocol)
+  - TCP/IP. See TCP/IP (Transmission Control Protocol/Internet Protocol)
+  - UDP. See UDP (User Datagram Protocol)
+- VoIPng tool, 518
+- VPNs (Virtual Private Networks), 530–532
+- VTP (VLAN Trunking Protocol), 79
+- vulnerabilities. See also security
+  - exploits on servers, 500–501
+  - vulnerability analysis, 495
+
+### W
+
+- WANs (wide area networks)
+  - implementing connections from telephones to, 377
+  - implementing PBX-to-PBX over, 378
+  - implementing UC architecture, 260–261
+  - PPP and HDLC used for, 51
+- waves, sound. See sound waves
+- weak IV attacks, 505
+- WEP passwords
+  - discovering with ettercap, 509–510
+  - discovering with L0phtCrack, 510–512
+  - discovering with LRC, 511–512
+  - discovering with Revelation, 509
+  - discovering with Sniffer tool, 507–508
+  - as security threat in networking, 507
+- web-based administration, Cisco Unified Mobility, 258–259
+- web browsers
+  - as OSI Application layer user application, 42
+  - router management with, 69
+- WEP (Wired Equivalent Privacy) protocol
+  - claims of modern equipment using better, 499–500
+  - cracking, 496, 503–504
+- Wi-Fi, OSI Physical layer protocol, 52
+- wide area networks. See WANs (wide area networks)
+- Win Sniffer tool, 507–508
+- Windows 2000/XP, Cisco IP Communicator hardware for, 279
+- Windows Vista/7
+  - accessing Reliability Monitor, 450
+  - Cisco IP Communicator hardware for, 279
+- Winsock API, 47
+- Wired Equivalent Privacy. See WEP (Wired Equivalent Privacy) protocol
+- wired networks, exploiting, 497–498
+- wireless networks, exploiting, 498–500
+- wireless security VPNs, 530
+- Wireshark, in VoIP eavesdropping, 514
+- worms, 534
+- WRR (weighted round robin) queues, auto-QoS, 479
+
+### X
+
+- X (Extension) field, RTP header, 169
+
+### Z
+
+- 0-day hacks, 517
+- 2IP algorithm, 177
+- zone local command, 393–394, 415
+- zone prefix command, 394
+- zone prefixes, 393, 394
+- zone remote command, 394, 415
+- zone subnet command, 394
+- zone subnet gatekeeper_name default command, 394
+- H.323, 389–392
+  - implementing gatekeepers, 393–395
+  - verifying gatekeeper configuration, 396
+
+## LICENSE AGREEMENT
+
+THIS PRODUCT (THE "PRODUCT") CONTAINS PROPRIETARY SOFTWARE, DATA AND INFORMATION (INCLUDING DOCUMENTATION) OWNED BY THE McGRAW-HILL COMPANIES, INC. ("McGRAW-HILL") AND ITS LICENSORS. YOUR RIGHT TO USE THE PRODUCT IS GOVERNED BY THE TERMS AND CONDITIONS OF THIS AGREEMENT.
+
+### LICENSE
+
+Through this License Agreement, "you" shall mean either the individual or the entity whose agent opens this package. You are granted a non-exclusive and non-transferable license to use the Product subject to the following terms:
+
+- (i) If you have licensed a single user version of the Product, the Product may only be used on a single computer (i.e., a single CPU). If
+- (ii) If you have licensed a local area network version, you may use the Product on unlimited workstations located in one single building selected by you that is served by such local area network. If you have licensed a wide area network version, you may use the Product on unlimited workstations located in multiple buildings on the same site selected by you that is served by such wide area network; provided, however, that any building not be considered located in the same site if it is more than five (5) miles away from any building included in such site. In addition, you may only use a local area or wide area network version of the Product on one single server. If you wish to use the Product on more than one server, you must obtain written authorization from McGraw-Hill and pay additional fees.
+- (iii) You may make one copy of the Product for back-up purposes only and you must maintain an accurate record as to the location of the back-up at all times.
+
+### COPYRIGHT: RESTRICTIONS ON USE AND TRANSFER
+
+All rights (including copyrights) in and to the Product are owned by McGraw-Hill and its licensors. You are the owner of the enclosed disc on which the Product is recorded. You may not use, copy, decompile, disassemble, reverse engineer, modify, reproduce, create derivative works, transmit, distribute, sublicense, store in a database or retrieval system of any kind, rent or transfer the Product, or any portion thereof, in any form or by any means (including electronically or otherwise) except as expressly provided for in this License Agreement. You must reproduce the copyright notices, trademark notices, legends and logos of McGraw-Hill and its licensors that appear on the Product on the back-up copy of the Product which you are permitted to make hereunder. All rights in the Product not expressly granted herein are reserved by McGraw-Hill and its licensors.
+
+### TERM
+
+This License Agreement is effective until terminated. It will terminate if you fail to comply with any term or condition of this License Agreement. Upon termination, you are obligated to return to McGraw-Hill the Product together with all copies thereof and to purge all copies of the Product included in any and all servers and computer facilities.
+
+### DISCLAIMER OF WARRANTY
+
+THE PRODUCT AND THE BACK-UP COPY ARE LICENSED "AS IS." McGRAW-HILL, ITS LICENSORS AND THE AUTHORS MAKE NO WARRANTIES, EXPRESS OR IMPLIED, AS TO THE RESULTS TO BE OBTAINED BY ANY PERSON OR ENTITY FROM USE OF THE PRODUCT, ANY INFORMATION OR DATA INCLUDED THEREIN, AND/OR ANY TECHNICAL SUPPORT SERVICES PROVIDED HEREUNDER, IF ANY ("TECHNICAL SUPPORT SERVICES"). McGRAW-HILL, ITS LICENSORS AND THE AUTHORS MAKE NO EXPRESS OR IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE OR USE WITH RESPECT TO THE PRODUCT. McGRAW-HILL, ITS LICENSORS, AND THE AUTHORS MAKE NO GUARANTEE THAT YOU WILL PASS ANY CERTIFICATION EXAM WHATSOEVER BY USING THIS PRODUCT. NEITHER McGRAW-HILL, ANY OF ITS LICENSORS NOR THE AUTHORS WARRANT THAT THE FUNCTIONS CONTAINED IN THE PRODUCT WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE PRODUCT WILL BE UNINTERRUPTED OR ERROR FREE. YOU ASSUME THE ENTIRE RISK WITH RESPECT TO THE QUALITY AND PERFORMANCE OF THE PRODUCT.
+
+### LIMITED WARRANTY FOR DISC
+
+To the original licensee only, McGraw-Hill warrants that the enclosed disc on which the Product is recorded is free from defects in materials and workmanship under normal use and service for a period of ninety (90) days from the date of purchase. In the event of a defect in the disc covered by the foregoing warranty, McGraw-Hill will replace the disc.
+
+### LIMITATION OF LIABILITY
+
+NEITHER McGRAW-HILL, ITS LICENSORS NOR THE AUTHORS SHALL BE LIABLE FOR ANY INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, SUCH AS BUT NOT LIMITED TO, LOSS OF ANTICIPATED PROFITS OR BENEFITS, RESULTING FROM THE USE OR INABILITY TO USE THE PRODUCT EVEN IF ANY OF THEM HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THIS LIMITATION OF LIABILITY SHALL APPLY TO ANY CLAIM OR CAUSE WHATSOEVER WHETHER SUCH CLAIM OR CAUSE ARISES IN CONTRACT, TORT, OR OTHERWISE. Some states do not allow the exclusion or limitation of indirect, special or consequential damages, so the above limitation may not apply to you.
+
+### U.S. GOVERNMENT RESTRICTED RIGHTS
+
+Any software included in the Product is provided with restricted rights subject to subparagraphs (c), (1) and (2) of the Commercial Computer Software-Restricted Rights clause at 48 C.F.R. 52.227-19. The terms of this Agreement apply to the use of the data in the Product are those under which the data are generally made available to the general public by McGraw-Hill. Except as provided herein, no reproduction, use, or disclosure rights are granted with respect to the data included in the Product and no right to modify or create derivative works from any such data is hereby granted.
+
+### GENERAL
+
+This License Agreement constitutes the entire agreement between the parties relating to the Product. The terms of any Purchase Order shall have no effect on the terms of this License Agreement. Failure of McGraw-Hill to insist at any time on strict compliance with this License Agreement shall not constitute a waiver of any rights under this License Agreement. This License Agreement shall be construed and governed in accordance with the laws of the State of New York. If any provision of this License Agreement is held to be contrary to law, that provision will be enforced to the maximum extent permissible and the remaining provisions will remain in full force and effect.

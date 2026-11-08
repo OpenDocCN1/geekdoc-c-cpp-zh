@@ -1,0 +1,3 @@
+# # CERTIFICATION SUMMARY
+
+In this chapter, you began your journey to mastery of VoIP. You learned about the benefits of VoIP and the applications it provides to your users. You also reviewed the basics of TCP/IP networking as a refresher, since this information is assumed knowledge for the CCNA Voice exams. Finally, you explored the quality factor as it relates to VoIP communications. You learned why VoIP makes special demands on the quality of network communications and how to address common hindrances to this quality. In the next chapter, you will review fundamental networking technologies from the perspective of a VoIP professional.

@@ -1,0 +1,249 @@
+
+
+- 使用子网掩码划分子网，14–17
+- 作为 TCP/IP 网际层协议，7
+- 使用 ARP 将地址解析为 MAC 地址以进行 LAN 数据包传递，469–470
+- 在 VoIP 中，5
+- IP 数据包，将语音转换为 IP 数据包，2、4
+- IP 电话
+  - 配置路由器，275–277
+  - 配置交换机，273–275
+  - 连接，275–277
+  - 指示连接目标，103
+  - 加载文件，331
+  - 作为 QoS 信任边界，478
+  - 作为 UC 端点，252–253
+- IP RTP 压缩
+  - compression-connections number 命令，178
+  - IP RTP header-compression 命令，177–178
+  - IP RTP header-compression passive 命令，178
+- IP 安全（IPsec），49
+- IP source-address xxx.xxx.xxx.xxx 命令，331
+- IP 电话。参见 VoIP（Voice over Internet Protocol）
+- IP 到 IP 网关（IPIPGW）。参见 UBE（Unified Border Element）网关
+- IP 到 IP 网关。参见 UBE（Unified Border Element）网关
+- IPIPGW（IP 到 IP 网关）。参见 UBE（Unified Border Element）网关
+- IPS（入侵防御系统），534
+- IPsec。参见 IP 安全，49
+- IS-IS（Intermediate System to Intermediate System）协议，IP 路由，74–75
+- iSCSI（Internet Small Computer Systems Interface），46
+- ISDN，作为数字端口，381–383
+- 隔离，网络安全设计，521
+- ISR（集成服务路由器），Cisco 定义，275
+  - 支持 CME，322–326
+  - 使用 DSP 实现 VoIP。参见 DSP（数字信号处理器）
+- IT 承包商，作为社会工程目标，516
+- ITSP（Internet Telephony Service Providers），288
+- IVR（交互式语音应答），VoIP 产品，257
+- IV（初始化向量），499–500、505
+
+- John the Ripper 工具，504–505
+- 抖动
+  - 缓冲区，27–28、141
+  - RTCP 接收方报告与抖动，175
+  - RTCP 发送方报告与抖动，173
+  - 解决方案，27–28
+  - 语音质量与抖动，25–26
+- JPEG，与 cRTP 压缩对比，177
+
+- KeepAlive 消息，464
+- Kerberos 认证，529
+- 密钥存储
+  - 通过密钥存储攻击 EFS，512–514
+  - 通过密钥存储攻击存储加密，503
+- 按键系统，114、334
+- 密钥流，504
+- keyswitch 或按键系统模型，CME，334
+
+- L0phtCrack 版本 5（LC5），510–512
+- L2TP（Layer 2 Tunneling Protocol），用于 VPN，530–531
+- LAN（局域网）
+  - 大多数使用以太网，51
+  - 保护无线安全，500
+  - 在 OSI 的 PHY 层进行故障排除，454–455
+- 喉，与人类语音，94
+- 延迟，数据包，150
+- Layer 2 Tunneling Protocol（L2TP），用于 VPN，530–531
+- 分层安全，网络设计，521
+- 在数据网络上分层传输语音，133
+- LC5（L0phtCrack 版本 5），510–512
+- LDAP（Lightweight Directory Access Protocol）
+  - 使用其进行凭据访问，528
+  - 使用其的 SIP 位置服务，215
+- LearnKey 技术支持，549
+- LED（发光二极管），网络交换机，62–63
+- 传统 PBX 系统，实现 TDM，114–115
+- 许可证，CME，326–327
+- Lightweight Directory Access Protocol（LDAP）
+  - 使用其进行凭据访问，528
+  - 使用其的 SIP 位置服务，215
+
+- 线路卡，PBX，122
+- 链路层，TCP/IP，7
+- LinkedIn 网站，3
+- Linux，仅可在其上运行较新版本的 UCM，359
+- LLC（Logical Link Control）子层，OSI 数据链路层，51–52
+- LLQ（低延迟队列），478
+- load phone file 命令，332
+- 局域网。参见 LAN（局域网）
+- 本地 CAC（呼叫准入控制），UBE，419
+- 本地呼叫转移模型，337
+- 本地交换局，PSTN，104–105
+- 本地组代接，在 CME 中，339
+- 本地环路信令，PSTN，108
+- 本地区域，实现网守，393–395
+- 位置服务，SIP
+  - 定义，209
+  - 概述，215
+  - 注册器将 REGISTER 请求重定向到位置服务，210
+- 日志记录，有线网络上 Internet 连接尝试的日志记录，497
+- Logical Link Control（LLC）子层，OSI 数据链路层，51–52
+- 环路，SIP，209
+- 环路启动模拟信令方法，380
+- 环回地址，IP，13
+- 松散路由，209
+- 丢失。参见数据包丢失
+- Low Latency Queuing（LLQ），478
+- LRC（Lucene Registry Crack），512–513
+- LRQ 消息，网守，414–415
+
+- mu-law，G.711 编码方法，145
+- M（标记）字段，RTP 报头，169
+- MAC 过滤，利用其攻击无线网络，498–499
+- MAC（Media Access Control）地址
+  - 以太网中的地址，9
+  - 将 ephone 映射到 MAC 地址，335
+  - 使用其划分子网，16–17
+  - 在交换机功能中，61–62
+  - 在以太网上使用其运行 TCP/IP，7
+  - 使用 ARP 将 IP 地址解析为 MAC 地址，469–470
+- MAC（Media Access Control）子层，OSI 数据链路层，51–52
+- 恶意软件应用程序，534
+
+- NFS（Network File System）协议，OSI 会话层，46
+- NID（网络接口设备），104
+- 911 代码，112
+- 96X 代码，112
+- NME-CUE 外形规格，CUE 硬件，291–292
+- NM-CUE 外形规格，CUE 硬件，291–292
+- NM（Network Module），CUE，255
+- nMap，496
+- no echo-cancel enable 命令，437
+- no gateway 命令，395
+- no shutdown 命令，311
+- no shutdown 命令，385
+- no sip fallback 命令，538
+- no vad 命令，294、437
+- 节点地址，编号计划，362–363
+- Noel, Jean-Antoine，4
+- 不可否认性，在认证中，44
+- 非 RTP 方式，167
+- 非易失性 RAM（NVRAM），与路由器，67
+- 北美编号计划（NANP），使用其创建拨号计划，362
+  - 用于 PSTN，112–113
+- 北美信令架构，SS7，108
+- NPA（编号计划区域），编号计划，112–113
+- nslookup，故障排除工具，470–471
+- NTFY 消息，MGCP 呼叫处理，236、238
+- NTLMv2，密码认证/加密，510
+- NTN（National Telephone Numbering Plan），英国，362
+- ntp master 命令，333
+- NTP（Network Time Protocol），CME 操作，332–334
+- ntp server server.address 命令，333–334
+- NTP 时间戳，RTCP 报告，173–174
+- 号码阻止功能，PSTN，111–112
+- 号码扩展，创建拨号计划，365
+- Numbering Plan Areas（NPA），编号计划，112–113
+- 编号计划，创建拨号计划，362–364
+  - 网关实现与拨号计划，386
+  - 编号计划，PSTN 概述，112–113
+- 问答自测，126、128–129
+- 两分钟演练，123
+- 编号，RTP 序列，163–164
+- NVRAM（非易失性 RAM），与路由器，65、67
+- 奈奎斯特定理，136–137
+
+## O
+
+- 八位组
+  - IP 编址与八位组，12–13
+  - RTCP 发送方报告与八位组，173
+  - 使用 CIDR 划分子网，16
+  - 在网络中理解八位组，11
+- 离网传真，436
+- off-line 命令，475
+- 入网传真，436
+- 在线参考资料
+  - 等效端口配置，381
+  - Cisco Configuration Assistant，283–284
+  - 使用 Cisco UBE 配置网守，415
+  - 国家代码列表，113
+  - DSP 计算器，144
+  - 输入密码捕获与审计工具，509
+  - H.323 协议，196
+  - IOS 兼容性矩阵，330
+  - L0phtCrack，510–512
+  - LearnKey 技术支持，549
+  - LinkedIn 网站，3
+  - 定位 NTP 服务器，333
+  - OSI 基本参考模型，3
+  - 选择 DSP，309
+  - SIP 协议，206
+  - 小型企业通信系统，280
+  - 技术支持，549
+  - 与 UCM 配合工作的第三方服务器，359
+  - 漏洞发现，506
+- Open Shortest Path First（OSPF）协议，IP 路由，10、75
+- Open System Interconnection Environment（OSIE），41
+- Open Systems Interconnection 模型。参见 OSI（Open System Interconnection）模型
+- option 150 命令，333
+- OPTIONS 方法，SIP 呼叫处理，219
+- OSI（Open Systems Interconnection）模型
+  - 应用层，41–43
+  - 与 CCNA Voice/CVOICE 考试，4
+  - 通信过程，56–58
+  - 数据链路层，50–52
+  - 其重要性，55
+  - 将 TCP/IP 模型映射到 OSI 模型，8
+  - 网络层，48–50
+  - 概述，38–41
+  - 物理层，52–54
+  - 表示层，44–45
+  - 场景与解决方案，54–55
+  - 会话层，46–47
+  - 传输层，47–48
+  - 作为故障排除方法，453–457
+- OSIE（Open System Interconnection Environment），41
+- OSPF（Open Shortest Path First）协议，IP 路由，10、75
+- 其他组代接，CME，339
+- 带外信令，SS7 使用，108
+- 出站代理，SIP，209
+- 呼出呼叫阻止号码列表，配置 UC500 设备，280
+- Outlook Express，在 OSI 应用层，42
+- 开销，cRTP 导致的，176
+
+## P
+
+- P（填充）字段，RTP 报头，168
+- 分组（数据报）交换，58
+- 数据包丢失
+  - 编解码器选择，148–149
+  - 导致语音质量差，26
+  - RTCP 接收方报告，174–175
+  - RTCP 发送方报告，173
+  - 解决方案，28–29
+- 模拟数据包路径，29–30
+- 分组交换机，MGCP，233
+- 分组语音/数据模块（PVDM），作为 DSP，144
+- 打包过程
+  - 在传真和调制解调器透传中，435
+  - 在数据网络语音传输中。参见数据网络语音传输、语音打包
+- 打包延迟，与语音质量，25
+- PANS，RTP 规则，172
+- PAC（Privilege Attribute Certificates），529
+- 填充字段，RTP 报头，168
+- 寻呼
+  - 在 CME 中配置，340–341
+  - 使用 CCA 配置 UC500 设备，289
+- PAP（password authentication protocol），安全问题，527
+

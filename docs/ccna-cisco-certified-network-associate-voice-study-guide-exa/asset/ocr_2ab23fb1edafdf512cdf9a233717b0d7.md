@@ -1,0 +1,3 @@
+# CERTIFICATION SUMMARY
+
+In this chapter, you reviewed the infrastructure technologies that allow for VoIP communications. You explored the important OSI model from a reference perspective and reviewed the basic operations of switches, routers, gateways, gatekeepers, call managers, and VoIP phones. You next learned about VLANs and their importance in VoIP networks, and finally, you learned to configure voice VLANs on Cisco switches.

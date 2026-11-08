@@ -1,0 +1,13 @@
+Once you've completed these first three stages, you'll have come to a solution. Again, that solution is sometimes reinstalling the application, reinstalling the operating system, or reloading factory defaults and starting over with the configuration of a router, but things are working again. You may have your solution after the Research phase, or you may have it after the Engage phase. Whether you make it all the way to the Adjust phase, or you solve the problem earlier in the process, you are now ready to move to what I call the ongoing stability phases: Configure and Take Note.
+
+# Configure
+
+This is the first of the two ongoing stability phases. In the Configure phase, you ensure that the systems and devices are configured and are operating according to your standards before leaving the physical area (or remote management tool). This allows you to maintain a standardized environment, and a standardized environment is usually more stable. Of course, with a reinstallation, you will need to reinstall according to the original specifications for the installation and then apply any configuration changes that have been approved or processed since that time. The primary goal of this phase is to provide consistency in your environment and to improve troubleshooting processes moving forward.
+
+In a consistent environment, you can assume certain things. For example, you can assume that a device has the newest firmware, or you can assume that an operating system has a particular service pack loaded. The real world, however, introduces great difficulty in the area of consistency. For an environment to be and remain consistent, the following things must all be true:
+
++   - The users must be unable to make configuration changes that affect the consistency of the configurations.
++   - All administrators who have the power to make configuration changes must be consistent in the changes they make.
++   - Some automated system must be in place that adjusts the configurations of all machines or devices simultaneously.
+
+As you can see from these three requirements, it is very difficult to have a truly consistent environment because of the human factor. However, even an environment that is mostly consistent makes troubleshooting much easier because the likelihood of an administrator implementing a bad configuration is lower than that of a user or customer. This ratio is not based on some superior intellect of the administrator; it is simply based on the training and area of specialty of the administrator. In the end, configuring your machines and devices to a standard specification generally reduces support costs by reducing support incidents.

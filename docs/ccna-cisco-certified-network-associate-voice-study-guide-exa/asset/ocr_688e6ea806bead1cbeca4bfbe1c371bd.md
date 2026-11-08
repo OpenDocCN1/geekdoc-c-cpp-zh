@@ -1,0 +1,3 @@
+# LAB ANSWER
+
+Answers may vary, but if your goal is to use the fewest number of routers while providing redundancy, you can use two routers each having three interfaces. The 10.1.0.0 network will connect between one of the interfaces on each router as will the 10.2.0.0 and 10.3.0.0 networks. The result will be two routes to any potential destination. If you plan to use CME, based on the number of phones (36?), you will have to implement it on more than one router and then configure the appropriate extensions and dial peers to allow for communications between the separate networks.

@@ -1,0 +1,13 @@
+For example, you could use the IP addresses ranging from 10.10.10.1 to 10.10.10.254 to implement a 254-node network. The devices using these IP addresses will not be able to communicate on the Internet. Instead, they will need to communicate through a device that can translate private addresses to Internet addresses. *Network Address Translation (NAT)* servers perform this operation. A NAT server sits between your network and the Internet, or between your network and your DMZ in some cases. The internal users communicate with the NAT server, and the NAT server maintains sessions for those users with the Internet locations the users are requesting. NAT is one of the major reasons that IPv4 has continued as the most popular communications protocol. Without NAT, or a similar technology, we would have been forced to upgrade to IPv6 with the explosion of nodes connected to the Internet.
+
+Do not confuse NAT with PAT. *Port Address Translation (PAT)* is very different from NAT. While NAT is about managing IP address translation, PAT can perform IP address translation as well as Layer 4 port translation. PAT servers usually have only one Internet-facing IP address, and all communications coming out of the network appear to originate from that one address. NAT servers may have multiple Internet-facing IP addresses. With NAT, the Internet-facing addresses may be assigned to an internal IP address for the duration of a session, or they may be used in a round-robin fashion. With PAT, the single IP address is used for outbound communications, and the inbound communications are automatically redirected to the appropriate internal IP address based on the PAT routing table.
+
+Because VoIP protocols use two communication channels for the calls, NAT and PAT servers may introduce problems. The NAT server can usually initiate the call, but the audio may work only in one direction, or the audio may not work at all. This failure is caused by communicating through the NAT device. The NAT device does not know that the two streams (signaling and audio) are for the same communication. You can resolve this issue in several ways:
+
++   - Don't use NAT or PAT.
++   - Implement IP tunneling through the NAT device to the remote network, and run the VoIP connection through the tunnel. This will introduce extra latency.
++   - Use VoIP-aware NAT or PAT devices.
+
+# ## Connectivity Solutions
+
+One of the key security solutions that should be implemented on a converged network is secure connectivity. Secure connectivity includes authentication to the network, confidentiality of network communications, and accounting.

@@ -646,6 +646,7 @@
 +   [科技公司案例面试题：155 道真实面试题与答案](docs/case-interview-questions-for-tech-companies-155-real-intervi/README.md)
 +   [休闲游戏设计：为每个人内心的玩家设计游戏体验](docs/casual-game-design-designing-play-for-the-gamer-in-all-of-us/README.md)
 +   [C/C++ 初学者指南，第5版](docs/cc-course-for-beginners-5e/README.md)
++   [CCNA Cisco认证网络助理（语音）学习指南（考试640-460和642-436）（认证出版社）](docs/ccna-cisco-certified-network-associate-voice-study-guide-exa/README.md)
 +   [CCNA Voice 640-461 官方认证指南 第2版](docs/ccna-voice-640-461-official-cert-guide2nd-edition/README.md)
 +   [CEH 道德黑客认证学习指南 [附 CDROM]](docs/ceh-certified-ethical-hacker-study-guide-with-cdrom/README.md)
 +   [细胞神经生理学与整合：入门指南](docs/cellular-neurophysiology-and-integration-an-interpretive-int/README.md)
