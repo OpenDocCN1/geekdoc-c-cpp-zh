@@ -1,0 +1,21 @@
+The `SharedBox` member of the `Package` class will store the address of a `Box` object. Every `Package` object refers to exactly one `Box` object. Note that to use the `SharedBox` alias, we first have to import the corresponding module partition (because `Package.cpp` is a partition file as well, it does not implicitly import the `Truckload` module).
+
+The `m_next` member variable of a `Package` will point to the next `Package` object in the list. The `m_next` member for the last `Package` object in a list will contain `nullptr`. The constructor allows a `Package` object to be created that contains the address of the `Box` argument. The `m_next` member will be `nullptr` by default, but it can be set to point to a `Package` object by calling the `setNext()` member. The `setNext()` function updates `m_next` to the next `Package` in the list. To add a new `Package` object to the end of the list, you pass its address to the `setNext()` function for the last `Package` object in a list.
+
+`Packages` themselves are not intended to be shared with the rest of the program. Their sole purpose is to form a chain in one `Truckload`'s linked list. A `shared_ptr<>` is therefore not a good match for the `m_next` member variable. Normally, you should consider using a `unique_ptr<>` pointer for this member. The reason is that, in essence, every `Package` is always pointed to by exactly one object, either by the previous `Package` in the list or, for the head of the list, by the `Truckload` itself. And if the `Truckload` is destroyed, so should all its `Packages` be. However, in the spirit of the current chapter, and in particular its previous section, we decided to use a raw pointer here instead and thus to grab this opportunity to show you some examples of nondefault destructors.
+
+If a `Package` object is deleted, its destructor deletes the next `Package` in the list as well. This in turn will delete the next one, and so on. So, to delete its linked list of `Packages`, all a `Truckload` has to do is delete the first `Package` object in the list, which is the head; the rest of the `Packages` in the list will then be deleted, one by one, by the destructors of the `Packages`.
+
+> > **Note** For the last `Package` in the list, `m_next` will be `nullptr`. Nevertheless, you don't need to test for `nullptr` in the destructor before applying `delete`. That is, you don't need to write the destructor like this:
+
+```
+```cpp
+Package() { if (m_next) delete m_next; }  // 'if (m_next)' is not required!
+```
+```
+
+You'll often encounter such overly cautious tests in production code. But they are completely redundant. The `delete` operator is defined to simply do nothing when passed a `nullptr`. Also noteworthy is that, in this destructor, there is little value in setting `m_next` to `nullptr` after the deletion. We told you earlier that, in general, it is considered good practice to reset a pointer to null after deleting the value it points to. You should do so to avoid further use of dangling pointers, which includes accidentally deleting the same object twice. But since the `m_next` member can no longer be accessed once the destructor is done executing—the corresponding `Package` object no longer exists!—there is little point in doing it here.
+
+# ## Defining the Truckload Class
+
+A `Truckload` object will encapsulate a list of `Package` objects. The class must provide everything necessary to create a new list and to extend the list and delete from it, as well as the means by which `Box` objects can be retrieved. A pointer to the first `Package` object in the list as a member variable will allow you to get to any `Package` object in the list by stepping through the chain of `m_next` pointers, using the `getNext()` function from the `Package` class. The `getNext()` function will be called repeatedly to step through the list one `Package` object at a time, so the `Truckload` object will need to track the object that was retrieved most recently. It's also useful to store the address of the last `Package` object because this makes it easy to add a new object to the end of the list. Figure 12-9 shows this.

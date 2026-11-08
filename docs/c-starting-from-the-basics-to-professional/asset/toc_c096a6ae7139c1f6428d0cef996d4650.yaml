@@ -1,0 +1,365 @@
+level_changes:
+- line: 598
+  before: 3
+  after: 2
+- line: 615
+  before: 3
+  after: 2
+- line: 631
+  before: 2
+  after: 1
+- line: 651
+  before: 3
+  after: 2
+- line: 814
+  before: 3
+  after: 2
+- line: 1106
+  before: 2
+  after: 3
+- line: 2054
+  before: 3
+  after: 2
+- line: 2070
+  before: 2
+  after: 1
+- line: 2083
+  before: 3
+  after: 2
+- line: 2735
+  before: 2
+  after: 1
+- line: 2736
+  before: 2
+  after: 1
+- line: 2747
+  before: 3
+  after: 2
+- line: 3974
+  before: 3
+  after: 2
+- line: 3993
+  before: 2
+  after: 1
+- line: 5550
+  before: 2
+  after: 1
+- line: 5552
+  before: 2
+  after: 1
+- line: 5566
+  before: 3
+  after: 2
+- line: 5658
+  before: 3
+  after: 2
+- line: 6909
+  before: 3
+  after: 2
+- line: 6929
+  before: 3
+  after: 2
+- line: 6940
+  before: 2
+  after: 1
+- line: 6955
+  before: 3
+  after: 2
+- line: 8344
+  before: 2
+  after: 1
+- line: 8346
+  before: 2
+  after: 1
+- line: 8364
+  before: 3
+  after: 2
+- line: 8962
+  before: 1
+  after: 2
+- line: 9944
+  before: 2
+  after: 1
+- line: 10139
+  before: 2
+  after: 1
+- line: 10210
+  before: 2
+  after: 1
+- line: 10223
+  before: 3
+  after: 2
+- line: 10621
+  before: 3
+  after: 2
+- line: 10631
+  before: 3
+  after: 2
+- line: 10665
+  before: 3
+  after: 2
+- line: 10728
+  before: 3
+  after: 2
+- line: 11261
+  before: 3
+  after: 2
+- line: 11270
+  before: 3
+  after: 2
+- line: 11305
+  before: 2
+  after: 1
+- line: 11307
+  before: 2
+  after: 1
+- line: 11323
+  before: 3
+  after: 2
+- line: 12310
+  before: 3
+  after: 2
+- line: 14648
+  before: 2
+  after: 1
+- line: 14654
+  before: 3
+  after: 2
+- line: 14869
+  before: 2
+  after: 1
+- line: 14911
+  before: 3
+  after: 2
+- line: 15503
+  before: 3
+  after: 2
+- line: 15547
+  before: 3
+  after: 2
+- line: 15579
+  before: 3
+  after: 2
+- line: 15794
+  before: 2
+  after: 1
+- line: 15814
+  before: 3
+  after: 2
+- line: 15861
+  before: 3
+  after: 2
+- line: 15909
+  before: 3
+  after: 2
+- line: 15925
+  before: 3
+  after: 2
+- line: 16178
+  before: 2
+  after: 1
+- line: 16194
+  before: 3
+  after: 2
+- line: 16889
+  before: 2
+  after: 1
+- line: 17033
+  before: 3
+  after: 2
+- line: 17047
+  before: 3
+  after: 2
+- line: 17069
+  before: 3
+  after: 2
+- line: 17108
+  before: 3
+  after: 2
+- line: 17119
+  before: 2
+  after: 1
+- line: 17128
+  before: 3
+  after: 2
+- line: 17209
+  before: 3
+  after: 2
+- line: 17704
+  before: 2
+  after: 1
+- line: 17745
+  before: 3
+  after: 2
+- line: 18022
+  before: 3
+  after: 2
+- line: 18050
+  before: 3
+  after: 2
+- line: 18493
+  before: 2
+  after: 1
+- line: 18507
+  before: 3
+  after: 2
+- line: 18519
+  before: 3
+  after: 2
+- line: 19490
+  before: 2
+  after: 1
+- line: 19507
+  before: 3
+  after: 2
+- line: 19519
+  before: 3
+  after: 2
+- line: 20325
+  before: 3
+  after: 2
+- line: 20421
+  before: 3
+  after: 2
+- line: 20934
+  before: 2
+  after: 1
+- line: 20951
+  before: 3
+  after: 2
+- line: 21855
+  before: 3
+  after: 2
+- line: 21870
+  before: 3
+  after: 2
+- line: 21880
+  before: 2
+  after: 1
+- line: 21884
+  before: 2
+  after: 1
+- line: 22771
+  before: 2
+  after: 1
+- line: 22773
+  before: 2
+  after: 1
+- line: 22788
+  before: 3
+  after: 2
+- line: 24370
+  before: 2
+  after: 1
+- line: 24371
+  before: 2
+  after: 1
+- line: 24742
+  before: 2
+  after: 1
+- line: 24758
+  before: 3
+  after: 2
+- line: 24835
+  before: 3
+  after: 2
+- line: 24897
+  before: 3
+  after: 2
+- line: 25132
+  before: 2
+  after: 1
+- line: 25342
+  before: 2
+  after: 1
+- line: 25366
+  before: 3
+  after: 2
+- line: 25384
+  before: 3
+  after: 2
+- line: 25415
+  before: 3
+  after: 2
+- line: 25428
+  before: 3
+  after: 2
+- line: 25446
+  before: 3
+  after: 2
+- line: 25466
+  before: 3
+  after: 2
+- line: 25604
+  before: 2
+  after: 1
+- line: 25712
+  before: 2
+  after: 1
+text_changes:
+- line: 2735
+  before: 第4章
+  after: 第 4 章
+- line: 3993
+  before: 第 5 章 ■ 数组和循环
+  after: 第 5 章：数组和循环
+- line: 5550
+  before: 第6章
+  after: 第 6 章
+- line: 9944
+  before: 第 8 章 » 定义函数
+  after: 第 8 章：定义函数
+- line: 10139
+  before: 第 8 章 ■ 定义函数
+  after: 第 8 章：定义函数
+- line: 15794
+  before: 第13章：运算符重载
+  after: 第 13 章：运算符重载
+- line: 16178
+  before: 第14章：继承
+  after: 第 14 章：继承
+- line: 16889
+  before: 第 14 章 — 继承
+  after: 第 14 章：继承
+- line: 17119
+  before: 第 14 章 • 继承
+  after: 第 14 章：继承
+- line: 17704
+  before: 第15章 » 多态
+  after: 第 15 章：多态
+- line: 19490
+  before: 第17章：类模板
+  after: 第 17 章：类模板
+- line: 21880
+  before: 第19章
+  after: 第 19 章
+- line: 24742
+  before: 第21章 约束模板与概念
+  after: 第 21 章：约束模板与概念
+- line: 25366
+  before: 第7章：使用字符串 ... 235
+  after: 第 7 章：使用字符串 ... 235
+- line: 25384
+  before: 第8章：定义函数 ... 275
+  after: 第 8 章：定义函数 ... 275
+- line: 25415
+  before: 第9章：词汇类型 ... 333
+  after: 第 9 章：词汇类型 ... 333
+- line: 25428
+  before: 第10章：函数模板 ... 347
+  after: 第 10 章：函数模板 ... 347
+- line: 25446
+  before: 第11章：模块与命名空间 ... 365
+  after: 第 11 章：模块与命名空间 ... 365
+- line: 25466
+  before: 第12章：定义你自己的数据类型 ... 395
+  after: 第 12 章：定义你自己的数据类型 ... 395
+- line: 25517
+  before: 第13章：运算符重载 — 467
+  after: 第 13 章：运算符重载 ... 467
+- line: 25548
+  before: 第14章：继承 — 513
+  after: 第 14 章：继承 ... 513
+- line: 25576
+  before: 第15章：多态 — 547
+  after: 第 15 章：多态 ... 547

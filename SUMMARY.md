@@ -586,6 +586,7 @@
 +   [C++：高效学习 C++ 编程的简单技巧与秘籍](docs/c-simple-and-effective-tips-and-tricks-to-learn-c-programmin/README.md)
 +   [C-Simpler 入门指南（C 语言概念与编程挑战）](docs/c-simpler-concepts-of-c-language-including-programming-chall/README.md)
 +   [C 标准库：内置函数集合](docs/c-standard-library-collection-of-built-in-functions/README.md)
++   [C++：从基础到专业](docs/c-starting-from-the-basics-to-professional/README.md)
 +   [C++ 简明指南](docs/c-succinctly/README.md)
 +   [C++ 模板元编程实践指南：深度学习框架](docs/c-template-metaprogramming-in-practice-a-deep-learning-frame/README.md)
 +   [C++ Templates：完全指南](docs/c-templates-the-complete-guide/README.md)
