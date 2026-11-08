@@ -1,0 +1,52 @@
+
+- **balanced hybrid** A term that, over the years, has been used to refer to the logic behind the EIGRP routing protocol. More commonly today, this logic is referred to as advanced distance vector logic.
+- **bandwidth** The speed at which bits can be sent and received over a link.
+- **bandwidth profile** In Metro Ethernet, a contractual definition of the amount of traffic that the customer can send into the service, and receive out of the service. Includes a concept called the committed information rate (CIR), which defines the minimum amount of bandwidth (bits/second) the SP will deliver with the service.
+- **best path selection** The BGP process of choosing the best route by working through an ordered list of comparisons of different BGP path attributes.
+- **BGP neighbor** Another term for BGP peer. A reference to another router with which a router has formed a BGP neighbor or peer relationship.
+- **BGP peer** Another term for BGP neighbor. A reference to another router with which a router has formed a BGP neighbor or peer relationship.
+- **BGP table** The table in each router, maintained by the BGP process, that holds prefixes and path attributes known to BGP.
+- **BGP update** The BGP message that lists BGP path attributes and prefixes.
+- **BGP update source** When running BGP in a router, the interface IP address used to form the TCP connection for the BGP peer relationship with another router.
+- **blocking state** In 802.1D STP, a port state in which no received frames are processed and the switch forwards no frames out the interface, with the exception of STP messages.
+- **boot field** The low-order 4 bits of the configuration register in a Cisco router. The value in the boot field in part tells the router where to look for a Cisco IOS image to load.
+- **Border Gateway Protocol (BGP)** An exterior routing protocol, used today as the primary routing protocol to exchange routes in the Internet.
+- **BPDU** Bridge protocol data unit. The generic name for Spanning Tree Protocol messages.
+- **BPDU Guard** A Cisco switch feature that listens for incoming STP BPDU messages, disabling the interface if any are received. The goal is to prevent loops when a switch connects to a port expected to only have a host connected to it.
+- **bridge ID (BID)** An 8-byte identifier for bridges and switches used by STP and RSTP. It is composed of a 2-byte priority field followed by a 6-byte System ID field that is usually filled with a MAC address.
+- **bridge protocol data unit** *See* BPDU.
+- **broadcast address** Generally, any address that represents all devices, and can be used to send one message to all devices. In Ethernet, the MAC address of all binary 1s, or FFFF.FFFF.FFFF in hex. For IPv4, *see* subnet broadcast address.
+- **broadcast domain** A set of all devices that receive broadcast frames originating from any device in the set. Devices in the same VLAN are in the same broadcast domain.
+- **broadcast subnet** When subnetting a Class A, B, or C network, the one subnet in each classful network for which all subnet bits have a value of binary 1. The subnet broadcast address in this subnet has the same numeric value as the classful network's networkwide broadcast address.
+
+## C
+
+- **cable internet** An Internet access technology that uses a cable TV (CATV) cable, normally used for video, to send and receive data.
+- **carrier Ethernet** Per MEF documents, the term for what was formerly called Metro Ethernet, generally referring to any WAN service that uses Ethernet links as the access link between the customer and the service provider.
+- **central office (CO)** A term used by telcos to refer to a building that holds switching equipment, into which the telco's cable plant runs, so that the telco has cabling from each home and business into that building.
+- **centralized control plane** An approach to architecting network protocols and products that places the control plane functions into a centralized function rather than distributing the function across the networking devices.
+- **Channel-group** One term Cisco switches use to reference a bundle of links that are, in some respects, treated like a single link. Other similar terms include EtherChannel and PortChannel.
+- **CHAP** Challenge Handshake Authentication Protocol. A security feature defined by PPP that allows either or both endpoints on a link to authenticate the other device as a particular authorized device.
+- **chassis aggregation** A Cisco technology used to combine two distribution or core switches together to act as one, sharing the data plane functions across both switches (called *active/active*), and centralizing control plane functions on one switch (called *active/standby*).
+- **CIDR** Classless interdomain routing. An RFC-standard tool for global IP address range assignment. CIDR reduces the size of Internet routers' IP routing tables, helping deal with the rapid growth of the Internet. The term *classless* refers to the fact that the summarized groups of networks represent a group of addresses that do not conform to IPv4 classful (Class A, B, and C) grouping rules.
+- **CIDR notation** See prefix notation.
+- **circuit switching** The switching system in which a dedicated physical circuit path must exist between the sender and the receiver for the duration of the "call." Used heavily in the telephone company network.
+- **Cisco Access Control Server (ACS)** A Cisco product that acts as a AAA server.
+- **Cisco AnyConnect Secure Mobility Client** Cisco software product used as client software on user devices to create a client VPN. Commonly referred to as the Cisco VPN client.
+- **Cisco Express Forwarding (CEF)** A long-time Cisco IOS internal feature that optimizes the forwarding process by creating a more search-efficient forwarding information base (FIB) that is used instead of the IP routing table, along with an adjacency table that caches the new data link headers used to reach the next-hop addresses.
+- **Cisco Intercloud Fabric** Cisco software that provides a variety of functions to help companies connect to different cloud services and to aid the management of and migration between different public cloud services.
+- **Cisco Open SDN Controller (OSC)** A commercial SDN controller from Cisco that is based on the OpenDaylight controller.
+- **Cisco Prime** Graphical user interface (GUI) software that utilizes SNMP and can be used to manage your Cisco network devices. The term *Cisco Prime* is an "umbrella" term that encompasses many different individual software products.
+- **Cisco VPN client** See Cisco AnyConnect Secure Mobility Client.
+- **Class of Service (CoS)** The informal term for the 3-bit field in the 802.1Q header intended for marking and classifying Ethernet frames for the purposes of applying QoS actions. Another term for Priority Code Point (PCP).
+- **Class Selector (CS)** The name of eight DSCP values that all end with binary 000, for the purpose of having eight identifiable DSCP values whose first 3 bits match the eight values used for the older IP Precedence field. Originally used for backward compatibility with IP Precedence, but today the values are often used as just more values to use for packet marking.
+- **classful addressing** A concept in IPv4 addressing that defines a subnetted IP address as having three parts: network, subnet, and host.
+- **classful network** An IPv4 Class A, B, or C network. It is called a classful network because these networks are defined by the class rules for IPv4 addressing.
+- **classful routing protocol** An inherent characteristic of a routing protocol. Specifically, the routing protocol does not send subnet masks in its routing updates. This requires the protocol to make assumptions about classful networks and makes it unable to support VLSM and manual route summarization.
+- **classification** The process of examining various fields in networking messages in an effort to identify which messages fit into certain predetermined groups (classes).
+- **classless addressing** A concept in IPv4 addressing that defines a subnetted IP address as having two parts: a prefix (or subnet) and a host.
+- **classless interdomain routing (CIDR)** See CIDR.
+- **classless routing** A variation of the IPv4 forwarding (routing) process that defines the particulars of how the default route is used. The default route is always used for packets whose destination IP address does not match any other routes.
+- **classless routing protocol** An inherent characteristic of a routing protocol. Specifically, the routing protocol sends subnet masks in its routing updates, thereby removing any need to make assumptions about the addresses in a particular subnet or network. This allows the protocol to support VLSM and manual route summarization.
+- **client VPN** A VPN for which one endpoint is a user device, like a phone, tablet, or PC.
+- **clock rate** The speed at which a serial link encodes bits on the transmission medium.

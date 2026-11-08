@@ -1,0 +1,6 @@
+Today, dialer interfaces act as logical interfaces that can be dynamically bound to use another interface. These interfaces cooperate to perform a function. For instance, for PPPoE, the dialer interface holds configuration for IP and PPP, but it is not a physical Ethernet interface. So, to let the dialer interface use G0/1 as the physical interface in this scenario:
+
++   - The configuration puts interface G0/1 into a dial pool, specifically numbered dial pool 1, per the **pppoe-client dial-pool-number** 1 command. This command means that G0/1 is available to be used by dialer interfaces wanting to do PPPoE.
++   - Dialer interface 2 references dial pool number 1 with the **dialer-pool** 1 command. Because the dial pool number matches, interface dialer 2 will use G0/1 for PPPoE.
+
+Note that the dialer interface number (2 in this case) and dialer pool number (1 in this case) do not have to match. The customer network engineer can just choose an integer value to use; they do not have to match the ISP router. However, the dial pool number listed by the **dialer-pool** command on the dialer interface, and the dial pool number listed by the **pppoe-client dial-pool-number** subcommand on the physical interface, must match.

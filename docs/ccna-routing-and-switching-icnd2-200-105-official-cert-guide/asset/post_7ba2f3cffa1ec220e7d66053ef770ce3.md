@@ -1,0 +1,258 @@
+
+- **Network Layer Reachability Information (NLRI),** 303
+- **Network Management Station.** See NMS
+- **Network Time Protocol (NTP),** 757-758
+- networks
+  - analyzers, 719
+  - broad access, 739
+  - classful
+    - *autosummarization at boundaries,* 266-267
+    - *routes, injecting,* 315-318
+  - contiguous, 267
+  - controllers
+    - *centralized control,* 766-767
+    - *defined,* 766
+    - *Northbound Interfaces (NBIs),* 768-769
+    - *Southbound Interfaces (SBIs),* 767-768
+  - devices, 762
+    - *control, centralizing,* 766-767
+    - *control plane,* 763-764
+    - *data plane,* 762-763
+    - *management plane,* 764
+    - *security.* See authentication, AAA servers
+    - *switch internal processing,* 765-766
+  - discontiguous, 267
+  - discontiguous classful, 266-268
+  - flow, 493
+  - physical data center, 736
+  - programmability, 760
+    - *APIC Enterprise Module (APIC-EM),* 774-776
+    - *Application Centric Infrastructure (ACI),* 773-774
+    - *comparisons,* 776
+- public cloud
+  - *address assignment services,* 756-757
+  - *DHCP services,* 757
+  - *DNS services,* 754-756
+  - *NTP,* 757-758
+  - *VNFs,* 752-754
+- redundancy needs, 547-548
+- traffic
+  - *bandwidth, managing,* 491
+  - *characteristics,* 491
+  - *delay,* 491
+  - *jitter,* 491
+  - *loss,* 491
+  - *types,* 492-494
+- unsecured, 400-401
+- virtual, 735-736, 754
+- VMs, 736
+- **Nexus 1000v vSwitch,** 736
+- **NFV (network functions virtualization),** 754
+- **NHRP (Next Hop Resolution Protocol),** 412-413
+  - dynamic mapping, enabling, 412
+  - spoke-to-spoke communication, 413
+- **NICs (network interface cards),** 718, 735
+- **NIMs (Network Interface Modules),** 332
+- **NIST (National Institute of Standards and Technology),** 739
+- **NLRI (Network Layer Reachability Information),** 303
+- **NMS (Network Management Station),** 695
+  - notification community strings, 701
+  - SNMP, 696-697
+- **no auto-summary command,** 268
+- no ip access-group command, 476
+- no ip address command, 539
+- no ip domain-lookup command, 572
+- no ip sla schedule 1 command, 715
+- no neighbor shutdown command, 314
+- no passive-interface command, 223, 270
+- no shutdown command, 40, 359
+  - EIGRP for IPv6, 650, 662
+  - Layer 1 leased-line WAN problems, 354
+  - OSPF processes, 294
+  - ROAS subinterfaces, 527
+- no spanning-tree portfast bpduguard default command, 95
+- no spanning-tree portfast default command, 95
+- no switchport command
+  - Layer 3 EtherChannels, 539
+  - Layer 3 switches, 543
+  - routed ports, 535
+- nondisclosure agreement (NDA), 788
+- noninteractive data application traffic, 493
+- nonroot switches (RPs), 101-103
+  - problems, troubleshooting, 103
+  - tiebreakers, 102-103
+- normal-time questions, 785
+- Northbound Interfaces (NBIs), 768-770
+- notification community strings, 701
+- notifications
+  - SNMP, 696-697
+  - SNMPv3, 710-711
+- NS (neighbor solicitation) messages, 683
+- NTP (Network Time Protocol), 757-758
+- numbered ACLs, configuring, 475-476
+- numbers
+  - AS numbers. *See* ASNs
+  - HSRP groups, 555
+  - MIB variables, 697
+  - ROAS subinterfaces, 525
+  - sequence, editing ACLs with, 473-475
+- numeric reference table conversions
+  - binary-to-hexadecimal, 808
+  - decimal-to-binary, 805-807
+  - hexadecimal-to-binary, 808
+
+## O
+
+- ODL (OpenDaylight), 771-772
+- Odom, Wendell Twitter/Facebook information, 799
+- OIDs (object IDs), 697
+- on-demand self-service (cloud computing), 739
+- one-way delay, 491
+- ONF (Open Networking Foundation), 771
+- Open SDN, 771
+- Open SDN Controller (OSC), 772
+- Open Shortest Path First. *See* OSPF
+- OpenDaylight (ODL), 771-772
+- OpenFlow, 768, 771
+- operations (IP SLAs), 713-715
+- OpFlex, 768
+- OSC (Open SDN Controller), 772
+- OSPF (Open Shortest Path First), 170, 179
+  - area design, 189
+    - ABR, 190, 210-211
+    - areas, 189-190
+    - backbone area, 190
+    - backbone routers, 190
+    - benefits, 191
+    - interarea routes, 190
+    - internal routers, 190
+    - intra-area routes, 190
+    - MPLS VPNs, 381-382
+    - network size, 189
+    - problems, 188, 281
+    - single-area, 188
+    - SPF workload, reducing, 190
+    - three-area, 189
+  - best routes with SPF, calculating, 186-188
+  - configuration
+    - *errors, troubleshooting, 282-283*
+    - *mode, enabling, 198*
+  - default routes, 213-215
+  - Dijkstra SPF algorithm, 180
+  - EIGRP, compared, 224
+  - goals, 302
+  - Hello/dead timers, 293-294
+  - history, 619
+  - interarea routes, verifying, 212
+  - interfaces
+    - *costs, setting, 216-217*
+    - *EIGRP interfaces, compared, 281*
+    - *identifying, 275*
+    - *passive, 196*
+    - *troubleshooting, 281-283*
+  - load balancing, 217
+  - LSAs, 179
+  - metrics, 215
+    - *based on interface bandwidth, 216-217*
+    - *higher reference bandwidth, 217*
+    - *setting, 217*
+  - MTU mismatched settings, 296
+  - neighbors, 181
+    - *area mismatches, finding, 290-291*
+    - *DRs on Ethernet links, 185-186*
+    - *duplicate RIDs, 291-293*
+    - *Hello messages, 181-182*
+    - *Hello/dead timer mismatches, 293-294*
+    - *LSAs, exchanging, 183-184*
+    - *maintaining, 184-185*
+    - *meeting, 181*
+    - *requirements, 284, 289*
+    - *RIDs, learning, 181*
+    - *states, 182-186, 288*
+    - *troubleshooting, 288-294*
+  - process-ids, 198
+  - processes, shutting down, 294-296
+  - RIDs
+    - *configuring, 203-204*
+    - *duplicate, troubleshooting, 291-293*
+  - super backbone, 381
+  - Version 2. See OSPFv2
+- OSPFv2 (OSPF Version 2), 170
+  - default routes, 213-215
+  - dual stack, 619
+  - history, 619
+  - interface configuration
+    - *example, 218*
+    - *verifying, 219-221*
+  - load balancing, 217
+  - metrics, 215
+    - *based on interface bandwidth, 216-217*
+    - *higher reference bandwidth, 217*
+    - *setting, 217*
+  - multiarea configuration, 206-210
+    - *network commands*, 209
+    - *single-area configurations*, 207-208
+    - *subnets*, 206
+    - *verifying*, 210-212
+  - OSPFv3, compared, 621, 628-629
+  - RIPv2/EIGRP, compared, 233
+  - single-area configuration, 197-198
+    - *IPv4 addresses*, 197
+      - *matching with network command*, 198-200
+    - *multiarea configurations*, 207-208
+    - *network command*, 198
+    - *organization*, 196-197
+    - *passive interfaces*, 204-206
+    - RIDs, 203-204
+    - *verifying*, 200-202
+    - *wildcard masks*, 199
+- OSPFv3 (OSPF Version 3), 616
+  - address families dual stack, 620
+  - configuration, 621
+    - *default routes*, 627-628
+    - *load balancing*, 627
+    - *multiarea example*, 622
+    - *multiarea on ABR*, 625
+    - *route selection metrics, setting*, 626
+    - *single-area*, 623-624
+  - dual stack, 619
+  - interfaces, 630
+    - *troubleshooting*, 631-632
+    - *verifying*, 630-631
+  - IPv6
+    - *MTU mismatches*, 636-638
+    - *routes*, 638-641
+  - LSAs, 636
+  - LSDBs, 636
+  - neighbors, 632
+    - *requirements*, 633-634
+    - *troubleshooting*, 633-635
+    - *verifying*, 632
+  - OSPFv2, compared, 621, 628-629
+  - passive interfaces, 624
+  - RIDs, 624
+- **output queuing**, 504
+- **overages (MetroE data usage)**, 374-375
+- **overlapping routes, troubleshooting**, 577-580
+- **overlapping subnets**
+  - with VLSM, 583-585
+  - without VLSM, 581-583
+
+## P
+
+- PaaS (Platform as a Service), 743-744
+- **packets**
+  - classification, 495
+    - *ACLs*, 497
+    - *with marking*, 497
+    - *matching*, 496-497
+    - *NBAR*, 498
+    - *router queuing*, 496
+    - *routers*, 497
+  - congestion avoidance, 512
+    - *TCP windowing*, 512-513
+    - *tools*, 513-514
+  - congestion management, 504
+    - *Low Latency Queuing (LLQ)*, 505-507
+    - *multiple queues*, 504
+    - *output queuing*, 504

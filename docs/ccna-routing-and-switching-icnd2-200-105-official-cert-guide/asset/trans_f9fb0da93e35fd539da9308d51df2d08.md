@@ -1,0 +1,253 @@
+
+- 美国互联网号码注册机构 (ARIN)，174
+- 分析器（网络），719
+- 回答考试问题，790-792
+- 抗重放（Internet VPN），394
+- any 关键字，448
+- 任意/所有 IP 地址，匹配，448
+- API（应用程序编程接口），768-769
+- APIC（应用策略基础设施控制器），774
+- APIC EM（APIC 企业模块），774-776
+  - ACL 分析工具，777
+  - 控制器，777
+  - 实验室网站，777
+  - Path Trace ACL 分析工具，777-778
+  - Path Trace 应用，777
+- 以应用为中心的基础设施 (ACI)，773-774
+- 应用策略基础设施控制器 (APIC)，774
+- 应用签名，498
+- 专用集成电路 (ASIC)，765
+- 架构（SDN），770
+  - APIC 企业模块 (APIC-EM)，774-776
+    - 控制器，777
+    - 实验室网站，778
+    - Path Trace ACL 分析工具，777-778
+    - Path Trace 应用，777
+  - 以应用为中心的基础设施 (ACI)，773-774
+  - 比较，776
+  - Open SDN，771
+  - Open SDN Controller (OSC)，772
+  - OpenDaylight (ODL)，771-772
+  - OpenFlow，771
+- 区域边界路由器。参见 ABR
+- 区域设计（OSPF），189-190
+  - ABR，190、210-211
+  - 区域，189-190
+  - 骨干区域，190
+  - *ABR 上的多区域配置*，625
+  - *超级*，381
+  - 骨干路由器，190
+  - 优势，191
+  - 区域间路由，190
+  - 内部路由器，190
+  - 区域内路由，190
+  - 不匹配，查找，290-291
+  - MPLS VPN，381-382
+  - 网络规模，189
+  - 问题，188、281
+  - 单区域，188
+  - SPF 工作量，减少，190
+  - 三区域，189
+- ARIN（美国互联网号码注册机构），174
+- AS（自治系统），174、304
+- 即服务（-aaS），742
+- ASAv（虚拟 ASA 防火墙），754
+- ASIC（专用集成电路），765
+- ASN（AS 号），174
+  - BGP，304
+  - EIGRP，248
+  - *用于 IPv6*，649
+  - *邻居*，235、288
+- 确保转发 (AF)，502-503
+- 非对称 DSL (ADSL)，391
+- channel-group 命令（EtherChannel），84、95、543
+  - 错误选项，故障排除，106-108
+  - 第 3 层，故障排除，541
+- 信道服务单元 (CSU)/数据服务单元 (DSU)，332-334
+- CHAP（质询握手认证协议）
+  - 认证，342、356
+  - 配置，344-345
+  - 验证，345-346
+- 机箱聚合，159
+  - 优势，161
+  - 设计，改进，160
+  - 分布层/核心层交换机高可用性，159-160
+  - 交换机堆叠，159-161
+- CIR（承诺信息速率），373、509
+- Cisco
+  - 访问控制服务器 (ACS)，147
+  - 以应用为中心的基础设施 (ACI)，773-774
+  - BPDU Guard，66
+  - Catalyst 交换机 RSTP 模式，88-90
+  - Catalyst 交换机 STP 模式，88-89
+  - DevNet，777
+  - 功能导航器 (CFN)，531
+  - Intercloud Fabric，749
+  - 保密协议 (NDA)，788
+  - Open SDN Controller (OSC)，772
+  - Prime 管理产品网站，695
+  - 服务器硬件，732-733
+  - 统一通信管理器 (CUCM)，35
+  - 虚拟 ASA 防火墙 (ASAv)，754
+- 基于类的加权公平队列 (CBWFQ)，505
+- 服务等级 (CoS) 字段（802.1Q 报头），500-501
+- 类选择器 (CS)，503
+- 有类网络
+  - 边界自动汇总，266-267
+  - 不连续，267-268
+  - 路由，注入，315-318
+- 有类路由协议，177、266
+- 经典模式（EIGRP 配置），249
+- 分类（QoS），495
+  - ACL，497
+  - 匹配，496-497
+  - NBAR，498
+  - 路由器排队，496
+  - 路由器，497
+  - 使用标记，497
+- 无类路由协议，177
+- clear ip ospf process 命令，204、223
+- 明文密码，698
+- CLI 技能，794-796
+- 客户端 VPN，396-397
+- clock rate 命令，349、359
+- 时钟，332
+- 云计算
+  - 地址分配服务，756-757
+  - 云服务目录，740
+  - 云服务路由器 (CSRs)，747
+  - DHCP 服务，757
+  - 基础设施即服务 (IaaS)，742
+  - NTP，757-758
+  - 平台即服务 (PaaS)，743-744
+  - 私有云，739-741
+- default-information originate，233、321、628
+- default-information originate always，214
+- 延迟，247、270、472-474
+  - *EIGRP*，647
+  - *用于 IPv6 的 EIGRP*，662
+  - *EIGRP 度量*，237、265
+  - *扩展 IPv6 ACL*，675
+  - *IPv6 ACL*，672
+- deny icmp any any，683
+- description，359
+- 拨号池，417、432
+- dns-server，571
+- eigrp router-id，246、252
+  - *EIGRP*，647
+  - *用于 IPv6 的 EIGRP*，662
+- 封装，359、525
+- encapsulation dot1q，543
+- encapsulation ppp，344、350、417、432
+- erase startup-config，135
+- frequency，728
+- history buckets-kept 6，728
+- history enhanced，717
+- history enhanced interval，728
+- history filter all，728
+- history lives-kept 1，728
+- hostname，345
+- icmp-echo，728
+- ifconfig，568、600、615
+- interface，25、37、543
+- interface dialer，432
+- interface loopback，196、222
+- interface multilink，360
+- interface multilink1，350
+- interface port-channel，543
+- interface range，27
+- interface tunnel，400、432
+- interface vlan，543
+- ip -6 neighbor show，615
+- ip access-group，450、457、467、477、486
+- ip access-list，472、486
+- ip access-list extended，473
+- ip address，568、584-585
+  - *环回接口上的 IP 地址*，196
+  - *MLPPP*，350
+  - *子接口*，525
+- ip address negotiated，418、432
+- ip domain-lookup，572
+- ip hello-interval eigrp，247、270、297、648
+- ip helper-address，573-574
+- ip hold-time eigrp，247、270、297
+- ip mtu，296、637
+- ip name-server，572
+- ip ospf，222
+- ip ospf cost，222
+- ip ospf dead-interval，297
+- ip ospf hello-interval，297
+- ip route，323
+- ip routing，543
+- ip sla，728
+- ip sla restart，728
+- ip sla schedule，715
+- ipconfig，568、600、615
+- ipv6 access-list
+  - *构建*，678-679
+  - *IPv6 ACL*，687
+- ipv6 access-list deny，678
+- ipv6 access-list permit，678
+- ipv6 address，598、614
+- ipv6 dhcp relay destination，614
+- ipv6 eigrp，648、662
+- ipv6 hello-interval eigrp，662
+- ipv6 hold-time eigrp，662
+- ipv6 mtu，637
+- ipv6 ospf，614、624、643
+- ipv6 ospf cost，643
+- ipv6 router eigrp，647、662
+- ipv6 router ospf，614、624、643
+- ipv6 traffic-filter，673、687
+- ipv6 unicast routing，614
+- ipv6 unicast-routing，598
+- mac-address，432
+- maximum-paths，218
+  - *已定义，222、270*
+  - *EIGRP，247、647*
+  - *用于 IPv6 的 EIGRP，651、662*
+  - *EIGRP 负载均衡，263*
+  - *OSPFv3，627、643*
+- monitor session，721、728
+- mtu，432
+- name，25、40、135
+- ndp -an，615
+- neighbor，322
+- neighbor shutdown，314
+- netsh interface ipv6 show neighbors，615
+- network
+  - *BGP，323*
+  - *BGP 表项，注入，314-320*
+  - *EIGRP，248、270*
+  - *EIGRP，启用，246*
+  - *用于 IPv4 的 EIGRP，648*
+  - *EIGRP 对 IPv6 的兼容性，647*
+  - *OSPF 单区域配置，198-200*
+  - *OSPFv2 接口配置，218*
+  - *OSPFv2 多区域配置，209*
+- no auto-summary，268
+- no ip access-group，476
+- no ip address，539
+- no ip domain-lookup，572
+- no ip sla schedule 1，715
+- no neighbor shutdown，314
+- no passive-interface，223、270
+- no shutdown，40、359
+  - *用于 IPv6 的 EIGRP，662*
+  - *用于 IPv6 的 EIGRP 路由，650*
+  - *第 1 层租用线路 WAN 问题，354*
+  - *OSPF 进程，294*
+  - *ROAS 子接口，527*
+- no spanning-tree portfast bpduguard default，95
+- no spanning-tree portfast default，95
+- no switchport
+  - *第 3 层 EtherChannel，539*
+  - *第 3 层交换机，543*
+  - *路由端口，535*
+- passive-interface，205
+  - *已定义，222、297*
+  - *EIGRP，270*
+  - *EIGRP 支持，251*
+  - *将 OSPF 接口配置为被动，196*
+  - *OSPFv3，624*
+- passive-interface default，205、270

@@ -1,0 +1,223 @@
+
+- 共享会话密钥，395
+- 更简短的 VLAN 配置示例，28-29
+- 最短路径优先算法。*参见* SPF 算法
+- show access-list 命令，473
+- show access-lists 命令，450, 457, 479, 487, 687
+- show arp 命令，572
+- show 命令
+  - IPv6 ACL，673
+  - 验证启用了路由协议的接口，275
+  - STP 状态，68
+- show controllers 命令，352
+- show controllers serial 命令，360
+- show etherchannel 1 summary 命令，86
+- show etherchannel 命令，96, 543
+- show etherchannel summary 命令，107, 540
+- show interfaces 命令，298, 360, 543, 569
+  - 验证 EIGRP 邻居要求，286
+  - MLPPP，352
+  - OSPF
+    - *接口*，283
+    - *邻居*，289
+  - OSPFv3 接口带宽，640
+  - PPP CHAP 状态，345
+  - PPP PAP，346
+  - PPP 状态，344
+  - 路由端口，536
+- show interfaces description 命令，298, 576
+- show interfaces dialer 命令，421, 433
+- show interfaces status 命令
+  - 第 3 层 EtherChannel，539
+  - 路由端口，536
+- show interfaces switchport 命令，31-34, 37, 41, 114-116, 135
+- show interfaces trunk 命令，32-34, 38, 41, 116-117
+- show interfaces tunnel 命令，405, 433
+- show interfaces virtual-access 命令，433
+- show interfaces virtual-access configuration 命令，423
+- show interfaces vlan 命令，543
+- show ip access-list 命令，457, 474-476
+- show ip access-lists 命令，450, 479, 487
+- show ip bgp 命令，323
+- show ip bgp summary 命令，313, 323
+- show ip eigrp interfaces 命令，271, 297
+  - 启用 EIGRP 的接口，250-251, 275
+  - 验证 EIGRP 邻居要求，286
+  - 多链路接口，352
+- show ip eigrp interfaces detail 命令，250, 271
+- show ip eigrp neighbors 命令，271, 297
+  - 显示邻居状态，253
+  - 邻居验证检查，285
+- show ip eigrp topology all-links 命令，260
+- show ip eigrp topology 命令，271
+  - 可行后继路由，259
+  - 度量值，262
+  - 后继路由，258
+  - 拓扑表，256
+- **show ip interface brief 命令，360**
+  - GRE 隧道，404
+  - 多链路接口，352
+  - 排除 OSPF 接口故障，283
+- **show ip interface 命令，286, 450, 457, 479**
+- **show ip ospf 命令，223, 298**
+  - 重复的 OSPF RID，291
+  - 排除 OSPF 邻居故障，289
+- **show ip ospf database 命令，179, 201, 223**
+- **show ip ospf interface brief 命令，205, 223, 298**
+  - ABR 接口的 OSPF 区域，210
+  - 识别启用 OSPF 的接口，275
+  - 排除 OSPF 邻居故障，289
+  - 接口上的 OSPF 状态，281
+  - OSPFv2 接口配置，221
+- **show ip ospf interface 命令，223, 298**
+  - 显示 DR/BDR 详细信息，211
+  - Hello/dead 定时器不匹配，293
+  - ABR 接口的 OSPF 区域，210
+  - 排除 OSPF 邻居故障，289
+  - OSPFv2 接口配置，220
+  - 被动接口，206
+- **show ip ospf neighbor 命令，182, 223, 298**
+  - 显示 DR/BDR 详细信息，211
+  - 列出邻居，288
+  - 关闭 OSPF 进程，295
+- **show ip ospf neighbor interface brief 命令，295**
+- **show ip protocols 命令，223, 271, 297**
+  - 启用 EIGRP 的接口，251-252, 275
+  - EIGRP 邻居，253, 286
+  - IPv4 路由协议，202
+  - OSPF 配置错误，282-283
+  - OSPFv2 接口配置，219
+- **show ip route 命令，223, 271, 323, 577-580**
+  - 管理距离，178
+  - dialer 接口的第 3 层定向，425
+  - 显示 EIGRP 学到的路由，254
+  - 由 OSPF 添加的 IPv4 路由，201
+  - 显示路由表，543
+- **show ip route eigrp 命令，254, 271, 297**
+- **show ip route ospf 命令，223, 298, 577-578**
+- **show ip route static 命令，214**
+- **show ip sla enhanced-history distribution-statistics 命令，729**
+- **show ip sla history 命令，717, 729**
+- **show ip sla statistics 命令，729**
+- **show ip sla summary 命令，729**
+- **show ipv6 access-list 命令，677, 687**
+- **show ipv6 eigrp interfaces 命令，654, 662**
+- **show ipv6 eigrp interfaces detail 命令，662**
+- **show ipv6 eigrp neighbors 命令，663**
+- **show ipv6 eigrp topology 命令，663**
+- **show ipv6 eigrp topology | section 命令，663**
+- show ipv6 interface 命令，614, 687
+- show ipv6 neighbors 命令，614
+  - IPv6 ACL 对 ICMPv6 NDP 消息的过滤，681
+  - IPv6 替代 IPv4，603
+- show ipv6 ospf 命令，640, 643
+- show ipv6 ospf database 命令，636, 643
+- show ipv6 ospf interface brief 命令，630, 640, 643
+- show ipv6 ospf interface 命令，630-631, 643
+- show ipv6 ospf neighbor 命令，635, 643
+- show ipv6 protocols 命令，614, 643
+  - EIGRP for IPv6，662
+  - EIGRP for IPv6 接口，654
+  - OSPFv3 接口，630
+- show ipv6 route 命令，614, 643
+  - EIGRP for IPv6，663
+  - IPv6 路由器连通性，603
+- show ipv6 route eigrp 命令，663
+- show ipv6 route ospf 命令，638, 643
+- show ipv6 route | section 命令，663
+- show ipv6 routers 命令，614, 681
+- show mac address-table 命令，114
+- show mac address-table dynamic 命令，111
+- show monitor detail 命令，724, 729
+- show monitor session all 命令，723
+- show monitor session 命令，724, 729
+- show ppp all 命令，346-347, 360
+- show ppp multilink 命令，353, 360
+- show pppoe session 命令，424, 433
+- show running-config 命令，135, 449, 473-475
+- show snmp 命令，703, 729
+- show snmp community 命令，702, 728
+- show snmp contact 命令，728
+- show snmp group 命令，709, 729
+- show snmp host 命令，702, 729
+- show snmp location 命令，728
+- show snmp user 命令，708, 729
+- show spanning-tree bridge 命令，81
+- show spanning-tree 命令，96
+- show spanning-tree interface 命令，96
+- show spanning-tree interface detail 命令，82
+- show spanning-tree root 命令，77, 81
+- show spanning-tree summary 命令，83, 96
+- show spanning-tree vlan 10 bridge 命令，77
+- show spanning-tree vlan 10 命令，75-77
+- show spanning-tree vlan 10 interface gigabitethernet0/2 state 命令，92
+- show spanning-tree vlan 命令，96
+- show standby brief 命令，555-565
+- show standby 命令（HSRP），565
+  - 配置，560
+  - 状态，556
+- show tcp brief 命令，313
+- show tcp summary 命令，323
+- show vlan brief 命令，26-29, 114
+- show vlan 命令，41, 114, 141
+- show vlan id 命令，27, 114
+- show vlan status 命令，135
+- show vlans 命令，527, 543
+- show vtp password 命令，134, 141
+- show vtp status 命令，29, 41, 131, 134, 141
+- shutdown 命令，40, 359
+  - EIGRP for IPv6，650, 662
+  - 第 1 层租用线路 WAN 问题，354
+  - OSPF 进程，294
+  - ROAS 子接口，527
+- shutdown vlan 命令，135, 140
+- 关闭 OSPF 进程，294-296
+- 签名，498
+- *Sim（Pearson 网络模拟器），796*
+- 简单网络管理协议。*参见* SNMP
+- 单区域 OSPF，188
+- 单区域 OSPFv2 配置，197-198
+  - IPv4 地址，197
+  - 使用 network 命令匹配，198-200
+  - 多区域配置，207-208
+  - network 命令，198
+  - 组织，196-197
+  - 被动接口，204-206
+  - RID，203-204
+  - 验证，200-202
+    - *IPv4 路由协议，201-202*
+    - *显示 LSDB 内容，201*
+  - 通配符掩码，199
+- 单区域 OSPFv3 配置，623-624
+- 单归属 Internet 边缘设计，306
+- 单点故障，547
+- 站点到站点 VPN，394-396
+- SLA（服务级别协议），712
+- SLAAC（无状态地址自动配置）
+  - EUI-64，597
+  - IPv6 设置，597
+  - NDP，597
+  - 故障排除，609-610
+- SLBaaS（SLB 即服务），753
+- SNMP（简单网络管理协议），692
+  - 代理，695-696
+    - 明文密码，698
+    - 团体字符串，698-699
+    - Get 消息
+      - *代理信息，696*
+      - *RO/RW 团体字符串，699*
+      - *SNMPv2 配置，699-701*
+  - 历史，695
+  - Inform 消息，696-697, 701-702
+  - 管理器，695
+  - MIB，696-697
+  - 通知，696-697
+  - 只读（RO）团体字符串，699
+  - 读写（RW）团体字符串，699
+  - 安全，698-699
+  - Set 消息
+    - *RO/RW 团体字符串，699*
+    - *SNMPv2 配置，699-701*
+    - *在代理上写入变量，696*
+  - Trap 消息，696-697, 701-702
+- snmp-server 命令，700

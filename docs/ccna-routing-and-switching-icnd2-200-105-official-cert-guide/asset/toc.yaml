@@ -1,0 +1,68 @@
+level_changes:
+- line: 250
+  before: 2
+  after: 3
+- line: 483
+  before: 2
+  after: 3
+- line: 491
+  before: 2
+  after: 3
+- line: 554
+  before: 2
+  after: 1
+- line: 556
+  before: 3
+  after: 1
+- line: 1320
+  before: 1
+  after: 2
+- line: 5739
+  before: 3
+  after: 1
+- line: 8499
+  before: 2
+  after: 1
+- line: 8501
+  before: 2
+  after: 1
+- line: 9945
+  before: 2
+  after: 1
+- line: 14008
+  before: 2
+  after: 1
+- line: 14336
+  before: 2
+  after: 1
+- line: 14338
+  before: 3
+  after: 1
+- line: 19804
+  before: 2
+  after: 3
+- line: 19822
+  before: 2
+  after: 3
+- line: 19848
+  before: 2
+  after: 3
+text_changes:
+- line: 250
+  before: 第 X 部分：DVD 附录
+  after: 第十部分：DVD 附录
+- line: 2559
+  before: 基础知识
+  after: 基础主题
+- line: 2589
+  before: “你知道这些内容吗？”测验答案：
+  after: “我已经掌握了吗？”测验答案：
+- line: 19804
+  before: Chapter 3
+  after: 第3章
+- line: 19822
+  before: Chapter 5
+  after: 第5章
+- line: 19848
+  before: Chapter 9
+  after: 第9章

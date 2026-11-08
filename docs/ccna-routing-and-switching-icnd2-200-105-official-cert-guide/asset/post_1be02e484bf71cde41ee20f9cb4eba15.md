@@ -1,0 +1,253 @@
+
+- DNS problems, 571-572
+  - incorrect addressing plans, 581-585
+- IP forwarding issues, 577-580
+- LAN issues, 575-576
+- mismatched IPv4 settings, 568-569
+- mismatched masks, 569-571
+- packet filtering with access lists, 586
+- router WAN interface status, 585
+- IPv6 routing, 604
+  - ACLs, 612
+  - filtering issues, 604
+  - host issues, 604
+  - host pings fail from default router, 606-607
+  - host pings only working in some cases, 605-606
+  - missing IPv6 settings in host, 608-610
+  - name resolution problems, 607-608
+  - router issues, 604
+  - routes, 640-641
+  - routing, 611-612
+- Layer 3 EtherChannel issues, 541
+- leased-line WANs, 353-354
+  - Layer 1 problems, 354
+  - Layer 2 problems, 354-356
+  - Layer 3 problems, 357-358
+  - mismatched subnets, 358
+- neighbors, 285
+- OSPF
+  - MTU mismatched settings, 296
+  - processes, shutting down, 294-296
+- OSPF interfaces, 281-283
+  - area design, 281
+  - configuration errors, 282-283
+  - details, checking, 283
+  - unsolicited log messages, 283
+- OSPF neighbors, 288-294
+  - area mismatches, finding, 290-291
+  - duplicate RIDs, 291-293
+  - Hello timer/dead timer mismatches, 293-294
+- LAN problems, 289
+  - neighbor states, 288
+- OSPFv3
+  - interfaces, 631-632
+  - neighbors, 633-635
+- PAP authentication failures, 356
+- PPPoE, 425-426
+  - customer router configuration, 426
+  - dialer 2 status, 427
+  - Layer 1, 427-428
+  - Layer 2, 428-429
+  - Layer 3, 429
+  - summary, 430
+- ROAS, 528-529
+- routing protocols
+  - configuration errors, 274
+  - internetwork, analyzing, 273
+  - neighbor relationships, 274
+  - routing tables, 273
+- routing with SVIs, 532-534
+- RP problems, 103
+- SPAN sessions, 725
+- standard numbered ACLs, 452-453
+- STP
+  - convergence, 105-106
+  - DPs on LAN segments, 104-105
+  - root switch election, 99-101
+  - RPs on nonroot switches, 101-103
+- switch data plane forwarding
+  - EtherChannel impact on MAC tables, 111-112
+  - STP impact on MAC tables, 110
+  - VLAN of incoming frames, 112-113
+- VLANs
+  - access interfaces, 113-114
+  - frame switching problems, 113
+  - undefined/disabled VLANs, 114-115
+- VLAN trunking
+  - frame switching problems, 113
+  - mismatched native VLANs, 118
+  - mismatched operational states, 116
+  - mismatched supported VLAN lists, 117-118
+- VTP, 135
+  - adding switches, 137-139
+  - common configuration rejections, 137
+  - synchronization, 136-137
+- trunking (VLANs)
+  - 802.1Q, 20-21
+  - configuration, 30-34
+  - disabling, 139
+  - ISL (Inter-Switch Link), 20-21
+  - overview, 18
+  - protocol, See VTP
+  - troubleshooting, 113-118
+  - VLAN tagging, 18-20
+- trust boundaries (QoS marking), 501-502
+- trusted ports, 151
+  - configuring, 153
+  - DHCP snooping, 154
+- tunnel destination command, 406-408, 432
+- tunnel mode gre ip command, 404, 432
+- tunnel mode gre multipoint command, 404
+- tunnel source command, 406-407, 432
+- tunnels
+  - destinations, 408
+  - GRE, 398
+    - between routers, 399
+    - configuring, 402-404
+    - details, displaying, 404
+    - functionality, testing, 406
+    - large scale environments, 411
+    - multipoint with DMVPN, 411
+    - point-to-point, 399
+    - routes, 405
+    - troubleshooting, 406-410
+    - tunnel interfaces, 398
+    - unsecured networks, 400-401
+    - verifying, 404-406
+  - interfaces
+    - ACLs, 409-410
+    - creating, 400
+    - destinations, 408
+    - Layer 3 issues, 409
+    - replacing serial links, 398
+    - state, 407
+- VPN, 394-395
+- tutorial (exam), 784-785
+- Twitter (Wendell Odom), 799
+- Type of Service (ToS) field (IPv4), 499
+
+## U
+
+- UCS (Unified Computing System), 733
+- UDP (User Datagram Protocol)
+  - Jitter probes, 713
+  - packets, IPv6 ACL matching, 675
+  - port numbers, matching, 464-467
+- **undebug all command**, 298
+- **undefined VLANs, troubleshooting**, 114-115
+- unequal-cost load balancing, 263
+- UNI (user network interface), 365
+- unicast IPv6 addresses, 593-595
+- Unified Computing System (UCS), 733
+- unique local unicast addresses, 593
+- unsecured networks (GRE tunnels), 400-401
+- unsolicited log messages, 283
+- untrusted ports, 151-154
+- udp keyword, 464
+- updates
+  - BGP, 303, 310
+  - DV protocols, 229-230
+  - EIGRP, 235-236
+  - full, 229
+  - partial, 232
+  - periodic, 229
+- **User Datagram Protocol. See UDP**
+- **user network interface (UNI)**, 365
+- **username command**, 345, 359
+- **U.S. National Institute of Standards and Technology (NIST)**, 739
+
+## V
+
+- v1default MIB view, 706
+- variable length subnet masking. *See* VLSM
+- variables (MIB)
+  - monitoring, 696
+  - numbering/names, 697
+- variance (EIGRP), 263-264
+- **variance command**, 270
+  - EIGRP for IPv4, 247, 263, 647
+  - EIGRP for IPv6, 651, 662
+- vCPU (virtual CPU), 734
+- vector (DV protocols), 228
+- verification command, 75
+- verifying
+  - BPDU Guard, 82-83
+  - data and voice VLANs, 36-38
+  - eBGP neighbors, 312-313
+  - EIGRP configuration, 249
+    - *EIGRP enabled interfaces, finding*, 250-252
+    - *IPv4 routing table, displaying*, 253-254
+    - *neighbor status, displaying*, 253
+  - EIGRP for IPv6
+    - *interfaces*, 654
+    - *routes*, 659-660
+  - EIGRP neighbors, 235, 285-286
+  - EtherChannel configuration before adding interfaces, 108-109
+  - GRE tunnels, 404-406
+  - HDLC, 339
+  - HSRP, 555-556
+  - interarea OSPF routes, 212
+- *virtual data center vendors*, 735
+- *VMs*, 734
+- switches (vSwitches), 735
+- **VLANs (virtual LANs)**
+  - configuration
+    - *data and voice VLANs*, 36-38
+    - *database, VTP synchronization*, 125-126
+    - *full VLAN configuration*
+      - *example*, 25-28
+      - *overview*, 24-25
+    - *shorter VLAN configuration*
+      - *example*, 28-29
+    - *trunking*, 30-34
+  - database, switches and synchronization, 131-133
+  - default, 25
+  - enabling/disabling, 115
+  - IDs, 18
+  - incoming frames, choosing, 112-113
+  - interfaces. *See* SVIs
+  - IP telephony, 34
+    - *data and voice VLAN concepts*, 34-36
+    - *data and voice VLAN configuration and verification*, 36-38
+    - *summary*, 38-39
+  - LAN support, adding, 122
+  - mismatched native on trunks, 118
+  - mismatched supported trunk lists, 117-118
+  - native, 20, 525-526
+  - overview, 16-18
+  - routing. *See* VLAN routing
+  - SPAN monitoring, 721
+  - standard range, 123
+  - tagging, 18-20
+  - troubleshooting
+    - *access interfaces*, 113-114
+    - *frame switching process problems*, 113
+    - *undefined/disabled VLANs*, 114-115
+  - trunking
+    - *802.1Q*, 20-21
+    - *configuration*, 30-34
+    - *disabling*, 139
+    - *ISL (Inter-Switch Link)*, 20-21
+    - *overview*, 18
+    - *protocol*. *See* VTP
+    - *troubleshooting*, 113-118
+    - *VLAN tagging*, 18-20
+  - **vlan 10 command**, 122
+  - **vlan 200 command**, 137
+  - **vlan command**, 25, 37, 40, 135
+  - **VLAN routing**, 21
+    - Layer 3 EtherChannels
+      - *configuring*, 537-539
+      - *troubleshooting*, 541
+      - *verifying*, 539-540
+    - Layer 3 switch routed ports, 23-24, 534-537
+    - Layer 3 switching with SVIs
+      - *configuring*, 529-531
+      - *troubleshooting*, 532-534
+      - *verifying*, 531
+    - ROAS, 524
+      - *configuration*, 524-526
+      - *troubleshooting*, 528-529
+      - *verifying*, 526-527
+    - routers, 21-23
+  - **VLAN Trunking Protocol**. *See* VTP

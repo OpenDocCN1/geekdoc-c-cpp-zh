@@ -1,0 +1,340 @@
+
+- root. *See RPs*
+- *RSTP*, 60, 91-92
+- STP, 57
+- **root bridge IDs**, 50
+- **root costs (switches)**, 48
+- **root ports.** *See RPs*
+- **root switches**
+  - electing, 50-52
+  - election influence, configuring, 80-81
+  - ruling out switches, 100-101
+  - STP, verification, 77
+  - troubleshooting, 99-101
+- **round robin scheduling (queuing)**, 505
+- **round-trip delay**, 491
+- **Round Trip Time (RTT)**, 715
+- **routable protocols**, 172
+- **routed ports**, 534-537
+- **routed protocols**, 172
+- **Router Advertisement (RA) messages**, 610, 684
+- **router bgp command**, 311
+- **router eigrp command**, 246, 270, 647
+- **router-id command**, 222, 614
+  - OSPFv3, 624, 643
+  - RIDs, defining, 196
+- **router-on-a-stick.** *See ROAS*
+- **router ospf command**, 196, 222
+- **router ospf 1 command**, 198
+- **Router Solicitation (RS)**, 610
+- **routers.** *See also* routers; routing
+  - ABR (Area Border Router), 190
+    - *interface OSPF areas, verifying*, 210-211
+    - *OSPFv2 multiarea configuration*, 209-210
+  - advertisement (RA) messages, 610, 684
+  - backbone, 190
+  - best routes, finding, 180
+  - classification, 497
+    - *ACLs*, 497
+    - *NBAR*, 498
+  - **Cloud Services Routers (CSRs)**, 747
+  - configuring different VIPs,
+    - troubleshooting, 563
+  - data plane processing, 763
+  - designated (DRs), 185
+    - *backup (BDRs)*, 185
+    - *discovering*, 211-212
+    - *Ethernet links*, 185-186
+  - DROthers, 186
+  - flooding, 179
+  - GRE tunnels between, 399
+  - **HSRP**
+    - *active/passive model*, 551
+    - *active/standby routers, choosing*, 555
+    - *active/standby rules*, 557
+    - *configuring*, 554
+    - *failover*, 552
+    - *group numbers*, 555
+    - *load balancing*, 553
+    - *no preemption*, 557
+    - *with preemption*, 558
+    - *troubleshooting*, 560-563
+    - *verifying*, 555-556
+    - *versions*, 559-560
+  - IDs. *See RIDs*
+  - internal, 190, 623-624
+  - IPv6
+    - *addressing configuration*, 598-599
+    - *connectivity, verifying*, 601-603
+    - *issues*, 604
+    - *routing, enabling*, 598
+    - *static route configuration*, 599
+    - *troubleshooting*, 611-612
+  - ISP, 419
+  - LSAs, 636
+  - multiple serial links between, 347
+  - OSPF interface costs, 216-217
+  - public cloud networks, 754
+  - QoS, 495
+  - queuing
+    - *classification for*, 496
+    - *congestion management*, 504-507
+    - *strategy*, 507
+  - redundant, 549. See also FHRP
+  - ROAS, 23, 524
+    - *configuration*, 524-526
+    - *native VLANs*, 525-526
+    - *subinterfaces, creating*, 524-525
+    - *troubleshooting*, 528-529
+    - *verifying*, 526-527
+  - router WAN interface status, 585
+  - routing IP packets over serial links, 398
+  - solicitation (RS) messages, 610, 684
+  - troubleshooting
+    - *DHCP issues*, 573-574
+    - *LAN issues*, 575-576
+  - VLAN routing, 21-23
+- **routes.** *See also* routers; routing
+  - BGP
+    - *advertising*, 303-304
+    - *best path selection*, 305-306
+  - classful networks, injecting, 315-318
+  - default, 627-628
+  - discard, 319
+  - EIGRP
+    - *choosing*, 234
+    - *load balancing*, 263-264
+    - *tuning with bandwidth*, 259
+    - *variance*, 263-264
+  - EIGRP for IPv6, 659-660
+  - feasibility conditions, 242
+  - feasible successor, 241-242
+    - *convergence*, 260-261
+    - *identifying*, 258-260
+  - host, 357
+  - interarea, 640
+  - IPv6
+    - *EIGRP for IPv6 metrics*, 650-651
+    - *OSPFv3 metrics*, 626, 638-640
+    - *static, configuring*, 599
+    - *troubleshooting*, 640-641
+  - ISP
+    - *default, learning*, 320-321
+    - *Internet edge, learning*, 309
+  - OSPF
+    - *default routes*, 213-215
+    - *interarea, verifying*, 212
+  - poisoning, 231-232
+  - redistribution, 177, 380
+  - static discard, 319-320
+  - successor, 257-258
+- **routing.** *See also* routers; routes
+  - EIGRP for IPv6, enabling/disabling, 650
+  - LANs, 523
+  - protocols. *See* routing protocols
+  - troubleshooting
+    - *default router IP address setting*, 572
+    - *DHCP issues*, 573-574
+    - *DNS problems*, 571-572
+    - *incorrect addressing plans*, 581-585
+    - *IP forwarding issues*, 577-580
+    - LAN issues, 575-576
+    - mismatched IPv4 settings, 568-569
+    - mismatched masks, 569-571
+    - router WAN interface status, 585
+  - VLAN. *See* VLAN routing
+- **Routing Information Protocol (RIP), 175**
+- **routing protocols**
+  - administrative distance, 177-178
+  - algorithms, 175
+  - AS, 174
+  - autosummarization, 266
+    - *classful network boundaries, 266-267*
+    - *discontiguous classful networks, 267-268*
+  - classless/classful, 177, 266
+  - convergence, 173
+  - defined, 172
+  - DV, 175, 228
+    - *distance/vector information learned, 228*
+    - *EIGRP as, 232-233*
+    - *route poisoning, 231-232*
+    - *split horizon, 230-231*
+    - *update messages, 229-230*
+  - EGP (exterior gateway protocol), 173
+  - functions, 172-173
+  - IGP, 173
+    - *algorithms, 175*
+    - *classless/classful, 177*
+    - *metrics, 175-176*
+  - interfaces enabled with, verifying, 274
+  - interior comparison, 233
+  - IPv4, 202
+  - link-state, 175
+  - path selections, 172
+  - proprietary, 175
+  - RIPv1, 226
+  - RIPv2, 226
+  - route redistribution, 177
+  - **troubleshooting**
+    - *configuration errors, 274*
+    - *internetwork, analyzing, 273*
+    - *neighbor relationships, 274*
+    - *routing tables, 273*
+- **RPs (root ports), 60**
+  - nonroot switches, 101-103
+    - *problems, troubleshooting, 103*
+    - *tiebreakers, 102-103*
+  - switches, choosing, 52-53
+- **RS (Router Solicitation) messages, 610, 684**
+- **RSPAN (Remote SPAN), 721**
+- **RSTP (Rapid Spanning Tree Protocol), 58-59**
+  - alternate ports, 60-61
+  - backup port role, 62-63
+  - Cisco Catalyst switch RSTP modes, 88-90
+  - implementing, 88
+  - link types, 63
+  - ports
+    - *roles, 60, 91-92*
+    - *states, 62, 92-93*
+    - *types, 63, 92*
+  - processes, 62
+  - standards, 58
+  - STP, compared, 59-60
+- **RTP (Real-time Transport Protocol), 235**
+- **RTP (Reliable Transport Protocol), 235**
+- **RTT (Round Trip Time), 715**
+- **rules**
+  - AAA login authentication, 150
+  - HSRP active/standby, 557
+  - implicit IPv6 ACL ICMPv6 message filtering, 683-684
+- **ruling out switches, 100-101**
+- **RW (read-write) communications (SNMP), 699**
+
+## S
+
+- SaaS (Software as a Service), 743
+- SBIs (Southbound Interfaces), 767-768
+- scoring exams, 796-797
+- sdm prefer command, 532
+- sdm prefer lanbase-routing command, 543
+- **SDN (Software Defined Networking), 760**
+  - APIC Enterprise Module (APIC-EM), 774-776
+  - Application Centric Infrastructure (ACI), 773-774
+  - architecture, 770
+  - comparisons, 776
+  - controllers
+    - *centralized control*, 766-767
+    - *Northbound Interfaces (NBIs)*, 768-770
+    - *OpenDaylight SDN controller*, 771
+    - *Southbound Interfaces (SBIs)*, 767-768
+  - Open SDN, 771
+  - Open SDN Controller (OSC), 772
+  - OpenDaylight (ODL), 771-772
+  - OpenFlow, 771
+- Secure Shell (SSH), 765
+- Secure Sockets Layer (SSL), 396-397
+- **security**
+  - AAA servers
+    - *configuration*, 148-150
+    - *login authentication rules*, 150
+    - *login process*, 147
+    - *TACACS+/RADIUS protocols*, 148
+  - access, 145
+  - attacks
+    - *DHCP-based*, 152
+    - *types*, 150
+  - authentication
+    - *802.1x*, 145
+    - *AAA servers*, 147-150
+    - *Internet VPNs*, 393
+    - *SNMPv3*, 699, 707-708
+  - DHCP snooping
+    - *configuration settings*, 153
+    - *DHCP-based attacks*, 152
+    - *DHCP Binding Table*, 153
+    - *features*, 151
+    - *ports as trusted, configuring*, 153
+    - *rate limiting*, 154
+    - *rules summary*, 153
+    - *trusted/untrusted ports*, 151-154
+  - encryption, 699, 707-708
+  - IEEE 802.1x, 144-146
+    - *AAA servers, configuring*, 145
+    - *authentication process*, 145
+    - *EAP*, 146
+    - *username/password combinations, verifying*, 145
+  - Internet VPNs, 393
+  - IPsec encryption, 395-396
+  - SNMP, 698-699
+  - SNMPv3, 705-707
+  - STP, 65-66
+- self-ping, 483-485
+- sender's bridge IDs, 50
+- sender's root cost, 50
+- sequence numbers, 473-475
+- serial cables, 332
+- serial links. *See* leased-line WANs
+- servers
+  - AAA
+    - authentication, 147-150
+    - configuring for 802.1x, 145
+    - defining, 149
+    - enabling, 149
+    - username/passwords, verifying, 145
+  - Cisco hardware, 732-733
+  - defined, 732
+  - physical server model, 734
+  - virtualization, 734-735
+    - hosts, 734
+    - hypervisors, 734
+    - multithreading, 734
+    - networking, 736
+    - virtual data centers, 735-738
+  - VMs, 734
+- VTP, 124
+- service-level agreements (SLAs), 712
+- service providers (SPs), 362
+- services
+  - cloud computing
+    - *broad network access*, 739
+    - *cloud services catalogs*, 740
+    - *Infrastructure as a Service (IaaS)*, 742
+    - *measured*, 739
+    - *on-demand self-service*, 739
+    - *Platform as a Service (PaaS)*, 743-744
+    - *private*, 739-741
+    - *public*, 741
+    - *rapid elasticity*, 739
+    - *requirements*, 739
+    - *resource pooling*, 739
+    - *Software as a Service (SaaS)*, 743
+  - DHCP, 757
+  - DNS, 754-756
+  - Internet as WAN, 389
+  - MetroE, 366
+    - *E-LAN*, 368-372
+    - *E-Line*, 367-371
+    - *E-Tree*, 369-372
+  - public cloud
+    - *accessing with Internet*, 745-746
+    - *accessing with private WANs*, 746-749
+    - *accessing with VPNs*, 747
+    - *address assignment*, 756-757
+    - *branch offices example*, 749-752
+    - *intercloud exchanges*, 748-749
+- session keys, 395
+- session status (PPPoE), 424
+- sessions (SPAN), 720-721, 725
+- Set messages
+  - RO/RW communities, 699
+  - SNMPv2 support, 699-701
+  - writing variables on agents, 696
+- shaping (QoS), 507, 510
+  - features, 512
+  - rate, 510
+  - slowing messages, 510
+  - time intervals, 511-512
+- shaping data overages (MetroE), 375
+- shared edge ports, 93
+- shared keys, 395
+- shared ports, 63, 93
