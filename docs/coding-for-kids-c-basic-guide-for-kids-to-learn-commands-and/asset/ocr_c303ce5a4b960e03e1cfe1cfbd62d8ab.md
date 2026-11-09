@@ -1,0 +1,1 @@
+number of characters are both specified by you. For instance, `str.substr(start, length)` creates a new string containing characters from str beginning at position start and continuing for length characters.\nThis member function creates a new string with a duplicate of the characters supplied. Therefore, it has no effect on the receiver string.
