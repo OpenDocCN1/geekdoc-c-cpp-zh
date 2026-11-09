@@ -1,0 +1,3 @@
+# JavaScript Example 1
+
+The code below creates a html form that accepts name, age and hobby of a person. There is a html button that produces JavaScript code when clicked. The JavaScript code prints out the name, age and hobby of the person when clicked. The JavaScript code is within the <script> tags. The code is shown below with the output; and then a few of the lines are explained later as well.

@@ -738,6 +738,7 @@
 +   [绝对初学者的编程：用 Python、Java、SQL、C、C++、C#、HTML 和 CSS 掌握计算机编程基础](docs/coding-for-absolute-beginners-master-the-basics-of-computer-/README.md)
 +   [初学者编程入门指南：适合全年龄段的基础编程](docs/coding-for-beginners-in-easy-steps-basic-programming-for-all/README.md)
 +   [编程达人迷（计算机达人迷）](docs/coding-for-dummies-for-dummies-computers/README.md)
++   [儿童编程五合一：面向儿童和初学者的 JavaScript、Python 和 C++ 指南（绝对初学者编程）](docs/coding-for-kids-5-books-in-1-javascript-python-and-c-guide-f/README.md)
 +   [儿童编程入门指南](docs/coding-for-kids-for-dummies/README.md)
 +   [C++ 少儿编程：通过有趣的活动、游戏和谜题学习 C++ 编程](docs/coding-for-kids-in-c-learn-to-code-with-amazing-activities-g/README.md)
 +   [渗透测试员编程：构建更好的工具指南](docs/coding-for-penetration-testers-building-better-tools/README.md)
