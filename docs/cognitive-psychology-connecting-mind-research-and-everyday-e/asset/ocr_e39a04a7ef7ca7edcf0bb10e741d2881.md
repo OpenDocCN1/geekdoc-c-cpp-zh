@@ -1,0 +1,15 @@
+interpreting the beginning of the sentence as identifying which apple is to be moved, as predicted by the interactionist approach. Then, upon hearing “in the box” the eyes moved to the box (eye movement 3).
+
+The interactionist approach predicts a different result if there is only one apple (Figure 11.9a). In this case, subjects will know which apple to move immediately upon hearing “Put the apple,” so they’ll be more likely to adopt Interpretation 2, above. The eye movement records for this condition, in Figure 11.9b, show that upon hearing “Put the apple on the towel,” the person immediately looks at the apple (eye movement 1) and then at the other towel (eye movement 2), indicating that this person did adopt the second interpretation, that the apple should be moved to the other towel. However, upon hearing “in the box,” the person quickly makes a correction and looks back at the apple (eye movement 3) and then at the box (eye movement 4), indicating the new interpretation that the apple should be placed in the box.
+
+The important result of this experiment is that the way subjects interpret the sentence, as indicated by their eye movements, is determined by the scene they are observing. This result is different from the prediction of the syntax-first approach: If parsing is always based on the structure of the sentence, then changing the scene should have no effect on the eye movements. (Also see Chambers et al., 2004, for another example of a visual world paradigm experiment.)
+
+# MAKING PREDICTIONS BASED ON KNOWLEDGE ABOUT THE ENVIRONMENT
+
+One of the contributions of the visual world paradigm to our understanding of language is its acknowledgment that we often use language as we interact with the environment. But even when we aren’t actively interacting with the environment, we are, according to the results of a number of recent experiments, continually using our knowledge of the environment to make predictions about what we are about to read or hear. According to this idea, we take the “statistics” of the environment—our knowledge of what is most likely to occur—into account to determine meaning. This is similar to the idea, in our discussion of how words affect our interpretation of a sentence, of using the knowledge that birds don’t look through binoculars to interpret sentence [10] (page 312). However, the idea that knowledge of the environment affects sentence understanding goes beyond just individual words. Consider, for example, the following:
+
+> “Getting himself and his car to work on the neighboring island was time consuming. Every morning he drove for a few minutes, and then boarded the…”
+
+Although there are a number of ways to complete this sentence, most people respond “ferry” (Federmeier & Kutas, 1999). They do this by going beyond syntax and
+
+![](bbox=[0.311, 0.64, 0.871, 0.908])

@@ -1,0 +1,23 @@
+![](bbox=[0.039, 0.009, 0.367, 0.173])
+
+Figure 1.4 Calculating the savings score in Ebbinghaus's experiment. In this example, it took 1,000 seconds to learn the list of nonsense syllables for the first time. This is indicated by the lines at 0. The time needed to relearn the list at delays of (a) 19 minutes, (b) 1 day, and (c) 6 days are indicated by the line to the right of the 0 line. The red line indicates the savings score for each delay. Notice that savings decrease for longer delays. This decrease in savings provides a measure of forgetting. © 2015 Cengage Learning
+
+errors when he first tried to remember the list. But because he had retained something from his original learning, he relearned the list more rapidly than when he had learned it for the first time.
+
+Ebbinghaus used a measure called *savings*, calculated as follows, to determine how much was forgotten after a particular delay: Savings = (Original time to learn the list) – (Time to relearn the list after the delay). Thus, if it took 1,000 seconds to learn the list the first time and 400 seconds to relearn the list after the delay, the savings would be 1,000 – 400 = 600 seconds. Figure 1.4, which represents original learning and relearning after three different delays, shows that longer delays result in smaller savings.
+
+According to Ebbinghaus, this reduction in savings provides a measure of forgetting, with smaller savings meaning more forgetting. Thus, the plot of percent savings versus time in Figure 1.5, called a *savings curve*, shows that memory drops rapidly for the first 2 days after the initial learning and then levels off. This curve was important because it demonstrated that memory could be quantified and that functions like the savings curve could be used to describe a property of the mind—in this case, the ability to retain information. Notice that although Ebbinghaus's savings method was very different from Donders's reaction time method, both measured *behavior* to determine a property of the *mind*.
+
+![](bbox=[0.039, 0.319, 0.367, 0.628])
+
+Figure 1.5 Ebbinghaus's savings curve. Ebbinghaus considered the percent savings to be a measure of the amount remembered, so he plotted this versus the time between initial learning and testing. The decrease in savings (remembering) with increasing delays indicates that forgetting occurs rapidly over the first 2 days and then occurs more slowly after that. (Source: Based on H. Ebbinghaus, Memory: A Contribution to experimental psychology, H. A. Ruger & C. E. Bussenius, Trans. New York: Teachers College, Columbia University, 1885/1913.)
+
+# ### WILLIAM JAMES'S *PRINCIPLES OF PSYCHOLOGY*
+
+William James, one of the early American psychologists (although not a student of Wundt), taught Harvard's first psychology course and made significant observations about the mind in his textbook, *Principles of Psychology* (1890). James's observations were based not on the results of experiments but on observations about the operation of his own mind. One of the best known of James's observations is the following, on the nature of attention:
+
+> > Millions of items ... are present to my senses which never properly enter my experience. Why? Because they have no interest for me. My experience is what I agree to attend to. ... Everyone knows what attention is. It is the taking possession by the mind, in clear and vivid form, of one out of what seem several simultaneously possible objects or trains of thought. ... It implies withdrawal from some things in order to deal effectively with others.
+
+The observation that paying attention to one thing involves withdrawing from other things still rings true today and has been the topic of many modern studies of attention. As impressive as the accuracy of James's observations, so too was the range of cognitive topics he considered, which included thinking, consciousness, attention, memory, perception, imagination, and reasoning.
+
+The founding of the first laboratory of psychology by Wundt, the quantitative experiments of Donders and Ebbinghaus, and the perceptive observations of James provided what seemed to be a promising start to the study of the mind (Table 1.1). However, research on the mind was soon to be curtailed, largely because of events early in the 20th century that shifted the focus of psychology away from the study of the mind and mental processes. One of the major forces that caused psychology to reject the study of mental processes was a negative reaction to Wundt's technique of analytic introspection.

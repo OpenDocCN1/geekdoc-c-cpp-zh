@@ -1,0 +1,280 @@
+
+## Subject Index
+
+### A
+
+- **Action**
+  - courses of, 578
+  - perception and, 74–79
+- **Action pathway**, 78
+- **Action potentials**, 31–32
+- **Advertisements**, 171
+- **Algebra problems**, 338
+- **Ambiguity**
+  - in sentence comprehension, 91
+  - lexical, 305–307, 312, 316
+  - of image on the retina, 57–59, 63, 70
+- **Ambiguity effect**, 316
+- **Ambiguous figure**, 291
+- **Amnesia**
+  - anterograde, 195
+  - graded, 195
+  - implicit memory and, 168–169, 170
+  - retrograde, 195
+- **Amygdala**
+  - emotion and, 201, 212
+  - imagery and, 284
+  - memory and, 142, 160
+  - pain and, 19
+- **Analogical encoding**, 353–354
+- **Analogical paradox**, 354
+- **Analogical problem solving**, 348–355
+  - analogical encoding and, 353–354
+  - creative thinking and, 358
+  - in vivo research on, 354–355
+  - radiation problem and, 349–353
+  - transfer process in, 349
+- **Analogical transfer**, 349
+- **Analogies**, 348, 349
+- **Analysis of problems**, 357
+- **Analytic introspection**, 7
+- **Anaphoric inference**, 318
+- **Animal communication**, 298
+- **Anisomycin**, 199, 200
+- **Anterior temporal lobe (ATL)**
+  - hub and spoke model and, 270–271
+  - savant syndrome and, 364
+- **Anterograde amnesia**, 195
+- **Apparent movement**, 64
+- **Articulatory rehearsal process**, 134
+- **Articulatory suppression**, 136, 137
+- **Artificial intelligence**, 13–14
+- **Association techniques**, 202
+- **Attention**, 84–117
+  - attenuation model of, 90
+  - automatic processing and, 102
+  - binding problem and, 109
+  - brain activity related to, 112–114
+  - central executive and, 138–139
+  - cognitive factors and, 96–97
+  - coherence related to, 109–112
+  - covert, 94, 98–100
+  - definitions of, 86, 87
+  - distracted, 87
+  - divided, 87, 100–104
+  - early selection models of, 89–91
+  - eye movements and, 94, 95–98
+  - eyewitness testimony and, 232
+  - feature integration theory and, 109–112
+  - filter model of, 13, 87–89
+  - inattentional blindness and, 105–106
+  - late selection models of, 91
+  - load theory of, 92–94
+  - location-based, 98–99
+  - misinformation effect and, 236
+  - object-based, 100
+  - overt, 94, 95–98
+  - pain perception and, 61–62, 74
+  - perceptual load and, 91–92
+  - processing capacity and, 91–93
+  - research on the mind and, 13
+  - selective, 87
+  - task demands related to, 97–98
+  - visual perception and, 105–109
+  - William James quotation on, 8
+  - working memory and, 135, 138–141
+- **Attentional capture**, 87, 96
+- **Attenuation model of attention**, 90
+- **Attenuator**, 90
+- **Auditory coding**, 159, 169
+- **Auditory imagery**, 276, 293–294
+- **Auditory stimuli**
+  - coding of, 157, 159
+  - echoic memory for, 126
+- **Autobiographical memory (AM)**, 164, 208–211
+  - definition of, 164, 208
+  - highly superior, 226
+  - life events and, 209–211
+  - multidimensional nature of, 208–209
+- **Automatic processing**, 102
+- **Availability heuristic**, 371–373, 377
+- **Axons**, 29–32, 35
+  - connectionism and, 260
+  - consolidation and, 193
+
+### B
+
+- **Back propagation**, 262
+- **Balanced dominance**, 305
+- **Balint's syndrome**, 111
+- **Base rates**, 374, 377
+- **Basic level of categories**, 254
+- **Basis of Sensation, The (Adrian)**, 32
+- **Bayesian inference**, 70–71
+- **Behaviorism**, 9
+  - Skinner's operant conditioning and, 10
+  - Tolman's cognitive maps and, 11–12
+  - Watson's founding of, 9–10
+- **Belief bias**, 388–389, 397
+- **Bias**
+  - belief, 388–389, 397
+  - confirmation, 376
+  - lexical ambiguity and, 305–307
+  - memory and, 222
+  - myside, 376
+  - status quo, 383
+- **Biased dominance**, 305
+- **Binding**, 109, 111–112
+- **Binding problem**, 109
+- **Blindness**
+  - change, 107
+  - inattentional, 105–106
+- **Bottleneck model**, 89
+- **Bottom-up processing**, 59
+  - attention and, 96, 111
+  - object perception and, 71
+  - pain perception and, 61
+  - visual perception and, 290
+- *Bourne Identity, The* (film), 172–173
+- **Brain**
+  - attention and, 112–114
+  - color processing in, 328–329
+  - concepts represented in, 264–270
+  - connectionist networks and, 264
+  - consolidation of memories in, 193–201
+  - decision making and, 385–386
+  - distributed representation across, 44–45
+  - early studies of, 28–29
+  - experience-dependent plasticity of, 73–74
+  - feature detectors in, 34
+  - geography of, 46
+  - imagery neurons in, 284–285
+  - language processing in, 299, 308–310, 320
+  - localization of function in, 39–41, 42–44
+  - memory represented in, 160–161
+  - microstructure of, 28–30
+  - representation in, 33–38
+  - syntax and semantics in, 308–310
+  - visual imagery and, 284–291
+  - working memory and, 138–139, 141–145
+  - *See also* Mind; Neurons; Physiology
+- Brain ablation, 76
+- **Brain damage**
+  - attention control and, 138–139
+  - categorization and, 267
+  - double dissociations and, 40
+  - imagery problems and, 287–290
+  - knowledge of concepts and, 270
+  - language problems and, 308–309
+  - localization demonstrated by, 39–40
+  - memory impairment and, 47, 160, 162–163, 167, 209
+  - savant syndrome and, 364
+  - working memory and, 138–139, 142–143
+- **Brain imaging**, 41–45
+  - attention and, 112–114
+  - concept representation and, 269
+  - embodied approach to categorization and, 269
+  - emotions and, 212
+  - evidence for localization of function, 42–44
+  - experience-dependent plasticity and, 73–74
+  - fMRI method of, 41–42
+  - memory and, 161, 163, 164, 167, 196, 209, 210
+  - neural mind reading and, 145
+  - visual imagery and, 285–287
+  - working memory and, 144–145
+- Brainstorming, 360–362
+- Broca's aphasia, 308–309
+- Broca's area, 39, 308
+
+### C
+
+- Candle problem, 339
+- Categorical syllogisms, 387–391
+- Categories, 246
+- **Categorization**, 246, 247–259
+  - brain representation of, 265–266
+  - connectionist approach to, 260–264
+  - definitional approach to, 247–249
+  - embodied approach to, 268–269
+  - exemplar approach to, 253
+  - hierarchical organization and, 254
+  - knowledge and, 255–256
+  - levels related to, 254–256
+  - multiple-factor approach to, 266–267
+  - prototype approach to, 249–253
+  - semantic category approach to, 265
+  - semantic networks and, 256–259
+  - sensory-functional hypothesis and, 265
+  - usefulness of, 246
+  - *See also* Concepts
+- Category-specific memory impairment, 265
+- Causal inference, 318
+- Cell body, 29
+- Cell phone use, and driving, 103–104, 109, 226
+- Central executive, 135, 138–139
+- Central vision, 96
+- Cerebral cortex, 39
+- Chain problem, 338
+- *Challenger study*, 214–215
+- Change blindness, 107
+- **Change detection**
+  - attention and, 106–107
+  - short-term memory and, 129–130
+  - working memory and, 138–141
+- Cheating, and reasoning, 395
+- Choice reaction time, 6
+- Choking under pressure, 16–17, 146
+- Chunk, 130
+- Chunking, 130–131, 138, 203
+- Circle problem, 337
+- Circular reasoning, 181
+- Classical conditioning, 10, 172, 199–200
+- Cocktail party effect, 88
+- **Coding**, 157
+  - auditory, 157, 159
+  - long-term memory, 157, 158–160
+  - semantic, 157–159
+  - short-term memory, 157–158, 159–160
+  - specificity, 35–36
+  - visual, 157, 159
+  - *See also* Encoding
+- **Cognition**
+  - creative, 361–362
+  - definition of, 5
+  - evolutionary perspective on, 395–396
+- Cognitive economy, 257–258, 259
+- Cognitive hypothesis for reminiscence bump, 211
+- Cognitive interviews, 237
+- Cognitive maps, 11–12
+- Cognitive neuroscience, 25–48
+- **Cognitive psychology**
+  - computers and, 12–13
+  - definition of, 4
+  - early work in, 5–9
+  - first modern textbook on, 14
+  - modern research in, 15–17
+  - origin of term, 14
+  - rebirth of, 12–15
+  - role of models in, 17–20
+  - timeline for development of, 15
+- *Cognitive Psychology* (Neisser), 14
+- Cognitive revolution, 12, 14, 277–278
+- Coherence, 318
+- Color perception, 326–329
+- Common ground, 323, 326
+- **Computers**
+  - cognitive psychology and, 12–13
+  - connectionist networks on, 260–264
+  - flow diagrams for, 12–13
+  - logic theorist program for, 14, 341
+  - perception represented by, 57–59
+  - semantic networks on, 256–259
+  - vision systems based on, 55–57
+- **Concepts**
+  - connectionist approach to, 260–264
+  - definition of, 246
+  - represented in the brain, 264–270
+  - semantic networks and, 256–259
+  - *See also* Categorization
+- Conceptual knowledge, 246
+- Conceptual hypothesis, 278

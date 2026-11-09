@@ -1,0 +1,19 @@
+The fact that adding the two blue bars caused a large increase in the response of the low-capacity group means that these subjects were not able to ignore the irrelevant blue stimuli, so the blue bars were taking up space in working memory. The central executive of these subjects is not operating as efficiently as the central executives of the high-capacity subjects. Vogel and coworkers concluded from these results that some people’s central executives are better at allocating attention than others’. The reason this is important is that other experiments have shown that people with more efficient working memories are more likely to perform well on tests of reading and reasoning ability and on tests designed to measure intelligence.
+
+# THE EPISODIC BUFFER
+
+We have seen that Baddeley’s three-component model can explain a number of results. However, research has shown that there are some things the model can’t explain. One of those things is that working memory can hold more than would be expected based on just the phonological loop or visuospatial sketch pad. For example, people can remember long sentences consisting of as many as 15 to 20 words. The ability to do this is related to chunking, in which meaningful units are grouped together (page 13), and it is also related to long-term memory, which is involved in knowing the meanings of words in the sentence and in relating parts of the sentence to each other based on the rules of grammar.
+
+These ideas are nothing new. It had long been known that the capacity of working memory can be increased by chunking and that there is an interchange of information between working memory and long-term memory. But Baddeley decided it was necessary to propose an additional component of working memory to address these abilities. This new component, which he called the **episodic buffer**, is shown in Baddeley’s new model of working memory in **Figure 5.21**. The episodic buffer can store information (thereby providing extra capacity) and is connected to LTM (thereby making interchange between working memory and LTM possible). Notice that this model also shows that the visuospatial sketch pad and phonological loop are linked to long-term memory.
+
+![](bbox=[0.57, 0.312, 1.0, 0.565])
+
+The proposal of the episodic buffer represents another step in the evolution of Baddeley’s model, which has been stimulating research on working memory for more than 40 years since it was first proposed. The exact functioning of the episodic buffer seems a little vague, it is because it is a “work in progress.” Even Baddeley (Baddeley et al., 2009) states that “the concept of an episodic buffer is still at a very early stage of development.” (p. 57). The main “take-home message” about the episodic buffer is that it represents a way of increasing storage capacity and communication with LTM.
+
+Although we have been focusing on Baddeley’s model because of the large amount of research that has generated, his is not the only model of working memory. For example, a model proposed by Nelson Cowan (1988, 1999, 2005) has focused on how working memory is related to attention and suggests that working memory and attention are essentially the same mechanism. Other researchers have provided evidence that supports the close relationship between attention and working memory (Awh et al., 2006; Awh & Jonides, 2008; Chun & Johnson, 2011; Gazzaley & Nobre, 2012; Ikkai & Curtis, 2011).
+
+# Working Memory and the Brain
+
+We have seen from previous chapters that cognitive psychologists have a number of tools at their disposal to determine the connection between cognitive functioning and the brain. The major methods are:
+
++   1. Analysis of behavior after brain damage, either human or animal (Method: Demonstrating a Double Dissociation, Chapter 2, page 40; Method: Brain Ablation, Chapter 3, page 76)

@@ -1,0 +1,7 @@
+![](bbox=[0.178, 0.047, 0.888, 0.593])
+
+**Figure 7.20** The Nader et al. (2000a) experiment on how injecting anisomycin affects fear conditioning. (a) Anisomycin is injected on Day 1, before consolidation, so memory for the tone–shock pairing is not formed. (b) Anisomycin is injected on Day 2, after consolidation, so memory for the tone–shock pairing remains. (c) Anisomycin is injected after reactivation on Day 2, so memory for the tone–shock pairing is eliminated.
+
+survival. Consider, for example, an animal version of our driving example: A chipmunk returns to the location of a food source and finds that the food has been moved to a new location nearby. Returning to the original location reactivates the original memory, new information about the change in location updates the memory, and the updated memory is then reconsolidated.
+
+Once Nader demonstrated that reactivated memories become fragile and subject to change, other researchers confirmed this finding, and some researchers looked for evidence of this phenomenon in humans. Almut Hupbach and coworkers (2007) provided evidence for the effect of reactivation in humans using the following procedure: On Day 1, subjects studied a list of words naming everyday objects such as *envelope*, *teabag*, and *shovel*.

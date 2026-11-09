@@ -1,0 +1,9 @@
+![](bbox=[0.111, 0.047, 0.865, 0.206])
+
+# SETTING THE STAGE FOR THE REEMERGENCE OF THE MIND IN PSYCHOLOGY
+
+Although behaviorism dominated American psychology for many decades, some researchers were not toeing the strict behaviorist line. One of these researchers was Edward Chance Tolman. Tolman, who from 1918 to 1954 was at the University of California at Berkeley, called himself a behaviorist because his focus was on measuring behavior. But in reality he was one of the early cognitive psychologists, because he used behavior to infer mental processes.
+
+In one of his experiments, Tolman (1938) placed a rat in a maze like the one in Figure 1.8. Initially, the rat explored the maze, running up and down each of the alleys (Figure 1.8a). After this initial period of exploration, the rat was placed at A and food was placed at B, and the rat quickly learned to turn right at the intersection to obtain the food. This is exactly what the behaviorists would predict, because turning right was rewarded with food (Figure 1.8b). However, when Tolman (after taking precautions to be sure the rat couldn’t determine the location of the food based on smell) placed the rat at C, something interesting happened. The rat turned left at the intersection to reach the food at B (Figure 1.8c). Tolman’s explanation of this result was that when the rat initially experienced the maze it was developing a cognitive map—a conception within the rat’s mind of the maze’s layout (Tolman, 1948). Thus, even though the rat had previously been rewarded for turning right, its mental map indicated that it should turn left to reach the food. Tolman’s use of the word cognitive, and the idea that something other than stimulus–response connections might be occurring in the rat’s mind, placed Tolman outside of mainstream behaviorism.
+
+![](bbox=[0.111, 0.656, 0.902, 0.906])

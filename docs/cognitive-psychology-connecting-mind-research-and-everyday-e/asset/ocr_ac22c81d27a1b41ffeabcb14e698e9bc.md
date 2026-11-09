@@ -1,0 +1,19 @@
+# CLASSICAL CONDITIONING
+
+**Classical conditioning** occurs when the following two stimuli are paired: (1) a neutral stimulus that initially does not result in a response and (2) a conditioning stimulus that does result in a response (see page 10). An example of classical conditioning from the laboratory is presenting a tone to a person followed by a puff of air to the eye that causes the person to blink. The tone initially does not cause an eyeblink, but after a number of pairings with the puff of air, the person blinks in response to the tone. This is implicit memory because it can occur even if the person has forgotten about the original pairing of the tone and the air puff.
+
+Conditioning in real life is often linked to emotional reactions. I remember, for example, the bad feeling I had when, as I was driving along a country road, I saw the flashing red lights of a police car in my rearview mirror. I wasn’t happy about receiving a speeding ticket, but the incident did provide an example of classical conditioning, because when I passed that spot on the road later, I reexperienced the emotions that had been triggered by the police car’s flashing lights. This example illustrates the classical conditioning of emotions but doesn’t illustrate implicit memory, because I was aware of what was causing my conditioned response.
+
+An example of classical conditioning causing implicit memory is provided by a situation we described earlier (page 165), in which you meet someone who seems familiar but you can’t remember how you know him or her. Have you ever had this experience and also felt positively or negatively about the person, without knowing why? If so, your emotional reaction was an example of implicit memory.
+
+Now that we have described how cognitive psychologists have distinguished between different types of memory, we will close this chapter by considering how memory has been described by another group—people who make movies.
+
+# Something to Consider
+
+# MEMORY LOSS IN THE MOVIES
+
+On September 18, 1993, Kim and Krickett Carpenter, who had been married just 10 weeks earlier, were involved in a car crash. Krickett’s head injury erased her memory of her romance with her husband, Kim, and left her thinking he was a complete stranger. The 2012 movie *The Vow*, which is based on the book Kim and Krickett wrote describing their lives after the car crash, accurately describes memory loss because it is based on an actual case. However, this movie is the exception. The accuracy of most movies that describe memory loss ranges from depictions that resemble types of memory loss that actually occur to completely fictional types of memory loss that have never occurred. Sometimes, even when the memory loss in a movie resembles actual cases, it is described using incorrect terminology. We will describe some examples of fact-based memory loss, fictional memory loss, and the use of incorrect terminology in movies.
+
+In some movies, characters lose their memory for everything in their past, including their identity, but are able to form new memories. This is what happened to Jason Bourne, the character played by Matt Damon in *The Bourne Identity* (2002). In this film, the unconscious and badly wounded Bourne is plucked out of the water by a fishing boat. When he regains consciousness, he has no memory of his identity. As he searches for his previous identity, he realizes people are out to kill him, but, because of his memory loss, he doesn’t know why. Although Bourne has lost his episodic memories of his past, his semantic memory appears to be intact, and, most interesting of all, he has lost none of his procedural memories from his training as a CIA agent, including ways to outsmart, outrun, and eliminate his adversaries.
+
+Bourne’s situation is related to a rare condition called *psychogenic fugue*. Symptoms of this condition include traveling away from where the person lives and a lack of memory for

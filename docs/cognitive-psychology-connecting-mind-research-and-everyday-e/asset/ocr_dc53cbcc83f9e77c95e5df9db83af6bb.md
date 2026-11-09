@@ -1,0 +1,9 @@
+![](bbox=[0.132, 0.048, 0.667, 0.51])
+
+than one stimulus. For example, neuron #4 responds to all three faces, although most strongly to Mary’s.
+
+Recently, neurons were discovered when recording from the temporal lobe of patients undergoing brain surgery for epilepsy. (We should point out that stimulating and recording from neurons is a common procedure before and during brain surgery, because it makes it possible to determine the exact layout of a particular person’s brain.) These neurons responded to very specific stimuli. **Figure 2.16** shows the records for a neuron that responded to pictures of the actor Steve Carell and not to other people’s faces (Quiroga et al., 2007). However, the researchers who discovered this neuron (as well as other neurons that responded to other people) point out that they had only 30 minutes to record from these neurons and that if more time were available, it is likely that they would have found other faces that would cause these neurons to fire. Given the likelihood that even these special neurons are likely to fire to more than one stimulus, Quiroga, and coworkers (2008) suggested that their neurons are probably an example of sparse coding.
+
+There is also other evidence that the code for representing objects in the visual system, tones in the auditory system, and odors in the olfactory system may involve the pattern of activity across a relatively small number of neurons, as sparse coding suggests (Olshausen & Field, 2004).
+
+Memories are also represented by the firing of neurons, but there is a difference between representation of perceptions and representation of memories. The neural firing associated with experiencing a perception is associated with what is happening as perception is occurring, as in our example in **Figure 2.9** when Gil is looking at Mary. Firing

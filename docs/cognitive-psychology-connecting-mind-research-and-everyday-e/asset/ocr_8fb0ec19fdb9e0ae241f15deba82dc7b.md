@@ -1,0 +1,9 @@
+(List 1). On Day 2, one group (the reminder group) was reminded of their learning on Day 1 by being asked to remember their training sessions (but without actually recalling the objects). Immediately following this reminder, they learned a new list of objects (List 2). The other group (the no-reminder group) were not reminded of their previous training; they just learned the new list.
+
+To see if having the reminder group think about their learning on Day 1 had any effect, both groups were asked, on Day 3, to remember List 1. The left pair of bars in Figure 7.21 indicates that the no-reminder group recalled 45 percent of the words from List 1 and mistakenly recalled only 5 percent of the words from List 2. (Remember that their task was to remember only the words from List 1.) The right pair of bars shows that something quite different happened for the reminder group. They recalled 36 percent of the words from List 1, but they also mistakenly recalled 24 percent of the words from List 2.
+
+According to Hupbach, in the amygdala, and this reduced the emotional reaction associated with remembering the trauma. Brunet has used this procedure to treat patients with PTSD, and many of the patients report significant reductions in their symptoms, even months after the treatment. (See Kindt et al., 2009, and Schiller et al., 2010, for other demonstrations of using reconsolidation to eliminate fear responses in humans.)
+
+Research on reconsolidation and its potential applications is just in its infancy, but from what researchers have learned so far, it appears that our memory is not static or fixed. Rather, it is a “work in progress” that is constantly being constructed and remodeled in response to new learning and changing conditions. We will be describing this aspect of memory in detail in the next chapter, when we consider the creative, constructive properties of memory.
+
+![](bbox=[0.664, 0.047, 0.999, 0.476])

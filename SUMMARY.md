@@ -762,6 +762,7 @@
 +   [Sphero 编程（21 世纪技能创新图书馆：少年创客）](docs/coding-with-sphero-21st-century-skills-innovation-library-ma/README.md)
 +   [Cody 的常用 SAS 编程任务及解决方案集](docs/codys-collection-of-popular-sas-programming-tasks-and-how-to/README.md)
 +   [基于脑原理编程的决策认知架构](docs/cognitive-architecture-for-decision-making-based-on-brain-pr/README.md)
++   [认知心理学：连接心智、研究与日常经验（第4版）](docs/cognitive-psychology-connecting-mind-research-and-everyday-e/README.md)
 +   [认知机器人](docs/cognitive-robotics/README.md)
 +   [组合地图：计算机图形学与图像处理的高效数据结构](docs/combinatorial-maps-efficient-data-structures-for-computer-gr/README.md)
 +   [动画师喜剧指南](docs/comedy-for-animators/README.md)

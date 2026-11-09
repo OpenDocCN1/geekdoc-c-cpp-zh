@@ -1,0 +1,19 @@
+words to survival created memory that was not only better than memory created by counting vowels but was also better than memory achieved by the “elaborative” tasks we have described such as forming visual images, linking words to oneself, and generating information. Whether this advantage is due to evolution is debated among memory researchers, but there is no question that relating words to something meaningful and potentially important like survival does enhance memory (also see Klein et al., 2011).
+
+# RETRIEVAL PRACTICE
+
+As we will see when we consider study techniques at the end of this chapter, many students prepare for tests by rereading their notes or information they have highlighted in their text (Karpicke et al., 2009). However, recent research shows that practicing retrieval of information by making up and answering practice test questions results in better memory than rereading the information (Karpicke, 2012).
+
+![](bbox=[0.0, 0.205, 0.522, 0.447])
+
+**Figure 7.6** Design of the Roediger and Karpicke (2006) “testing effect” experiment.
+
+Henry Roediger and Jeffrey Karpicke (2006) demonstrated the advantages of practice testing using the experimental design in **Figure 7.6**. In the first phase of the experiment, college students read prose passages for 7 minutes followed by a 2-minute break during which they solved math problems. Then one group (the testing group) took a 7-minute recall test in which they were asked to write down as much of the passage as they could remember, in no particular order. The other group (the rereading group) were given 7 minutes to reread the material.
+
+![](bbox=[0.0, 0.514, 0.431, 0.887])
+
+**Figure 7.7** Results of the Roediger and Karpicke (2006) experiment. Note that at longer time intervals after learning, the performance of the testing group is better than the performance of the rereading group. (Source: H. L. Roediger & J. D. Karpicke, Test-enhanced learning: Taking memory tests improves long-term retention, Psychological Science, 17, 249–255, 2006. Reprinted by permission of SAGE Publications.)
+
+In the second phase of the experiment, which occurred after a delay of either 5 minutes, 2 days, or 1 week, all subjects were given the recall test in which they wrote down what they remembered from the passage. The results, in **Figure 7.7**, show that there was little difference between the rereading and testing groups after the 5-minute delay but that after 1 week, the testing group’s performance was much better than the rereading group’s. This enhanced performance was due to retrieval and is called the **testing effect**. It has been demonstrated in a large number of experiments, both in the laboratory and in classroom settings (Karpicke et al., 2009). For example, testing resulted in better performance than rereading for eighth-grade students’ performance on a history test (Carpenter et al., 2009) and for college students’ performance on an exam in a brain and behavior course (McDaniel et al., 2007).
+
+Table 7.1 lists all of the examples we have described of encoding methods that increase memory. What do these procedures have in common? Practicing retrieval and generating information both involve actively creating and recreating material. Similarities between the other procedures are not as obvious, but it is probably accurate to say that each, in its own way, increases the richness of the information in memory by providing connections between the material to be remembered and other material in memory. For example, when material is organized, it becomes easier to form links between items (such as apple, grape, and plum) in a list. What all this means is that there is a close relationship between encoding and retrieval. We will consider further evidence for this connection as we discuss retrieval in the next section.

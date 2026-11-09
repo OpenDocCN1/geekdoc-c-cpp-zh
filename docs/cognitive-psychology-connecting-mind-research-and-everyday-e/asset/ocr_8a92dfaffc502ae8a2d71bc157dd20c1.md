@@ -1,0 +1,9 @@
+![](bbox=[0.147, 0.047, 0.653, 0.509])
+
+mind between *canary* and *bird*, and between *bird* and *animal* (indicated by the dashes along the links in **Figure 9.12**). It is a *hierarchical model*, because it consists of levels arranged so that more specific concepts, such as “canary” and “salmon,” are at the bottom, and more general concepts are at higher levels.
+
+We can illustrate how this network works, and how it proposes that knowledge about concepts is organized in the mind, by considering how we would retrieve the properties of canaries from the network. We start by entering the network at the concept node for “canary.” At this node, we obtain the information that a canary can sing and is yellow. To access more information about “canary,” we move up the link and learn that a canary is a bird and that a bird has wings, can fly, and has feathers. Moving up another level, we find that a canary is also an animal, which has skin and can move, and finally we reach the level of living things, which tells us it can grow and is living.
+
+You might wonder why we have to travel from “canary” to “bird” to find out that a canary can fly. That information could have been placed at the canary node, and then we would know it right away. But Collins and Quillian proposed that including “can fly” at the node for every bird (canary, robin, vulture, etc.) was inefficient and would use up too much storage space. Thus, instead of indicating the properties “can fly” and “has feathers” for every kind of bird, these properties are placed at the node for “bird” because this property holds for most birds. This way of storing shared properties just once at a higher-level node is called *cognitive economy*.
+
+Although cognitive economy makes the network more efficient, it does create a problem because not all birds fly. To deal with this problem while still achieving the advantages of

@@ -1,0 +1,15 @@
+![](bbox=[0.29, 0.04, 0.9, 0.33])
+
+Figure 6.7 Results of the Wickens et al. (1976) proactive interference experiment. (a) The Fruits group showed reduced performance on trials 2, 3, and 4, caused at least partially by proactive interference (indicated by dark points). (b) The Professions group showed similarly reduced performance on trials 2 and 3. The increase in performance on trial 4 represents a release from proactive interference because the names of fruits, rather than professions, were presented on trial 4. (Source: Based on D. D. Wickens, R. E. Dalezman, & F. T. Eggemeier, Multiple encoding of word attributes in memory, Memory & Cognition, 4, 307–310, 1976.)
+
+is absent, and performance increases on trial 4. This increase in performance is called **release from proactive interference**.
+
+What does release from proactive interference tell us about coding in short-term memory? The key to answering this question is to realize that the release from proactive interference that occurs in the Wickens experiment depends on the words' *categories* (fruits and professions). Because placing words into categories involves the *meanings* of the words, and because subjects were recalling the words 15 seconds after they heard them, this represents an effect of semantic coding in short-term memory.
+
+SEMANTIC CODING IN LONG-TERM MEMORY: THE SACHS EXPERIMENT A study by Jacqueline Sachs (1967) demonstrated semantic coding in long-term memory. Sachs had subjects listen to a tape recording of a passage and then measured their **recognition memory** to determine whether they remembered the exact wording of sentences in the passage or just the general meaning of the passage.
+
+# METHOD
+
+# MEASURING RECOGNITION MEMORY
+
+**Recognition memory** is the identification of a stimulus that was encountered earlier. The procedure for measuring recognition memory is to present a stimulus during a study period and later to present the same stimulus along with others that were not presented. For example, in the study period, a list of words might be presented that includes the word *house*. Later, in the test, a series of words is presented that includes *house* plus some other words that were not presented, such as *table* and *money*. The subject's task is to answer "Yes" if the word was presented previously (the word *house* in this example) and "No" if it wasn't presented (the words *table* and *money*). Notice that this method is different from testing for recall (see Method: Recall, Chapter 5, page 127). In a recall test, the person must produce the item to be recalled. An example of a recall test is a fill-in-the-blanks exam question. In contrast, an example of recognition is a multiple-choice exam, in which the task is to pick the correct answer from a number of alternatives. The way Sachs applied recognition to the study of coding in long-term memory is illustrated in the next demonstration.

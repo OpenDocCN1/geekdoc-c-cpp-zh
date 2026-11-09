@@ -1,0 +1,17 @@
+![](bbox=[0.364, 0.048, 0.834, 0.221])
+
+Switching to the unattended channel to say “Aunt” means that the subject’s attention had jumped from one ear to the other and then back again. This occurred because they were taking the meaning of the words into account. (An example of top-down processing! See page 59.) Because of results such as these, Anne Treisman (1964) proposed a modification of Broadbent’s model.
+
+Treisman proposed that selection occurs in two stages, and she replaced Broadbent’s filter with an **attenuator** (Figure 4.5). The **attenuator** analyzes the incoming message in terms of (1) its physical characteristics—whether it is high-pitched or low-pitched, fast or slow; (2) its language—how the message groups into syllables or words; and (3) its meaning—how sequences of words create meaningful phrases. Note that the attenuator represents a *process* and is not identified with a specific brain structure.
+
+![](bbox=[0.0, 0.527, 0.351, 0.905])
+
+Treisman’s idea that the information in the channel is selected is similar to what Broadbent proposed, but in Treisman’s **attenuation model of attention**, language and meaning can also be used to separate the messages. However, Treisman proposed that the analysis of the message proceeds only as far as is necessary to identify the attended message. For example, if there are two messages, one in a male voice and one in a female voice, then analysis at the physical level (which Broadbent emphasized) is adequate to separate the low-pitched male voice from the higher-pitched female voice. If, however, the voices are similar, then it might be necessary to use meaning to separate the two messages.
+
+According to Treisman’s model, once the attended and unattended messages have been identified, both messages pass through the attenuator, but the attended message emerges at full strength and the unattended messages are attenuated—they are still present, but are weaker than the attended message. Because at least some of the unattended message gets through the attenuator, Treisman’s model has been called a “leaky filter” model.
+
+The final output of the system is determined in the second stage, when the message is analyzed by the **dictionary unit**. The dictionary unit contains words, stored in memory, each of which has a threshold for being activated (Figure 4.6). A threshold is the smallest signal strength that can barely be detected. Thus, a word with a low threshold might be detected even when it is presented softly or is obscured by other words.
+
+According to Treisman, words that are common or especially important, such as the listener’s name, have low thresholds, so even a weak signal in the unattended channel can activate that word, and we hear our name from across the room. Uncommon words or words that are unimportant to the listener have higher thresholds, so it takes the stronger signal of the attended message to activate these words. Thus, according to Treisman, the attended message gets through, plus some parts of the weaker, unattended messages.
+
+The research we have been describing so far was extremely important, not only because it defined some of the basic phenomena of attention but also because

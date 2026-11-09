@@ -1,0 +1,3 @@
+![](bbox=[0.0, 0.0, 1.0, 0.796])
+
+A hiker steps out of a cave into the sunlight and anticipates his journey through an amazing and varied landscape. Now you, the reader of this book, are about to embark on an intellectual journey that will take you through the remarkable inner workings of the mind. This chapter sets the stage for this journey, by tracing the history of the scientific study of the mind from its beginnings in a few laboratories in Europe in the late 19th century, to today’s widespread scientific study of what the mind is and what it does.
