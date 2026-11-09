@@ -1,0 +1,389 @@
+
+
+```java
+public int getRenterPoints() {
+    if (VideoRegistry.getType(title) == REGULAR)
+        return applyGracePeriod(1, 3);
+    else
+        return 1;
+}
+
+@Test
+public void OneRegularOneChildrens_FourDays() throws Exception {
+    customer.addRental("RegularMovie", 4); // $3+2p
+    customer.addRental("ChildrensMovie", 4); // $4+1p
+
+    assertFeeAndPoints(700, 3);
+}
+```
+
+```java
+public class Customer {
+    private List<Rental> rentals = new ArrayList<>();
+
+    public void addRental(String title, int days) {
+        rentals.add(new Rental(title, days));
+    }
+
+    public int getRentalFee() {
+        int fee = 0;
+        for (Rental rental : rentals) {
+            if (rental.type == REGULAR)
+                fee += applyGracePeriod(150, rental.days, 3);
+            else
+                fee += rental.days * 100;
+        }
+        return fee;
+    }
+
+    public int getRenterPoints() {
+        int points = 0;
+        for (Rental rental : rentals) {
+            if (rental.type == REGULAR)
+                points += applyGracePeriod(1, rental.days, 3);
+            else
+                points++;
+        }
+        return points;
+    }
+
+    private int applyGracePeriod(int amount, int days, int grace) {
+        if (days > grace)
+            return amount + amount * (days - grace);
+        return amount;
+    }
+}
+
+public class Rental {
+    public String title;
+    public int days;
+    public VideoType type;
+
+    public Rental(String title, int days) {
+        this.title = title;
+        this.days = days;
+        type = VideoRegistry.getType(title);
+    }
+}
+```
+
+```java
+public int getRentalFee() {
+    int fee = 0;
+    for (Rental rental : rentals)
+        fee += feeFor(rental);
+    return fee;
+}
+
+private int feeFor(Rental rental) {
+    int fee = 0;
+    if (rental.getType() == REGULAR)
+        fee += applyGracePeriod(150, rental.getDays(), 3);
+    else
+        fee += rental.getDays() * 100;
+    return fee;
+}
+
+public int getRenterPoints() {
+    int points = 0;
+    for (Rental rental : rentals)
+        points += pointsFor(rental);
+    return points;
+}
+
+private int pointsFor(Rental rental) {
+    int points = 0;
+    if (rental.getType() == REGULAR)
+        points += applyGracePeriod(1, rental.getDays(), 3);
+    else
+        points++;
+    return points;
+}
+```
+
+```java
+public class Rental {
+    private String title;
+    private int days;
+    private VideoType type;
+
+    public Rental(String title, int days) {
+        this.title = title;
+        this.days = days;
+        type = VideoRegistry.getType(title);
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public VideoType getType() {
+        return type;
+    }
+
+    public int getFee() {
+        int fee = 0;
+        if (getType() == REGULAR)
+            fee += applyGracePeriod(150, days, 3);
+        else
+            fee += getDays() * 100;
+        return fee;
+    }
+
+    public int getPoints() {
+        int points = 0;
+        if (getType() == REGULAR)
+            points += applyGracePeriod(1, days, 3);
+        else
+            points++;
+        return points;
+    }
+
+    private static int applyGracePeriod(int amount, int days, int grace)
+    {
+        if (days > grace)
+            return amount + amount * (days - grace);
+        return amount;
+    }
+}
+```
+
+```java
+public abstract class Movie {
+    private String title;
+
+    public Movie(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public abstract int getFee(int days, Rental rental);
+    public abstract int getPoints(int days, Rental rental);
+    protected static int applyGracePeriod(int amount, int days,
+                                         int grace) {
+        if (days > grace)
+            return amount + amount * (days - grace);
+        return amount;
+    }
+}
+```
+
+```java
+public class RegularMovie extends Movie {
+    public RegularMovie(String title) {
+        super(title);
+    }
+
+    public int getFee(int days, Rental rental) {
+        return applyGracePeriod(150, days, 3);
+    }
+
+    public int getPoints(int days, Rental rental) {
+        return applyGracePeriod(1, days, 3);
+    }
+}
+
+public class ChildrensMovie extends Movie {
+    public ChildrensMovie(String title) {
+        super(title);
+    }
+
+    public int getFee(int days, Rental rental) {
+        return days * 100;
+    }
+
+    public int getPoints(int days, Rental rental) {
+        return 1;
+    }
+}
+```
+
+```java
+public class Rental {
+    private int days;
+    private Movie movie;
+
+    public Rental(String title, int days) {
+        this.days = days;
+        movie = VideoRegistry.getMovie(title);
+    }
+
+    public String getTitle() {
+        return movie.getTitle();
+    }
+
+    public int getFee() {
+        return movie.getFee(days, this);
+    }
+
+    public int getPoints() {
+        return movie.getPoints(days, this);
+    }
+}
+```
+
+```java
+public class VideoRegistry {
+    public enum VideoType {REGULAR, CHILDRENS}
+
+    private static Map<String, VideoType> videoRegistry =
+            new HashMap<>();
+
+    public static Movie getMovie(String title) {
+        switch (videoRegistry.get(title)) {
+            case REGULAR:
+                return new RegularMovie(title);
+            case CHILDRENS:
+                return new ChildrensMovie(title);
+        }
+        return null;
+    }
+
+    public static void addMovie(String title, VideoType type) {
+        videoRegistry.put(title, type);
+    }
+}
+```
+
+```java
+public class RentalCalculator {
+    private List<Rental> rentals = new ArrayList<>();
+
+    public void addRental(String title, int days) {
+        rentals.add(new Rental(title, days));
+    }
+
+    public int getRentalFee() {
+        int fee = 0;
+        for (Rental rental : rentals)
+            fee += rental.getFee();
+        return fee;
+    }
+
+    public int getRenterPoints() {
+        int points = 0;
+        for (Rental rental : rentals)
+            points += rental.getPoints();
+        return points;
+    }
+}
+```
+
+```java
+public class PrimeFactorsTest {
+    @Test
+    public void factors() throws Exception {
+        assertThat(factorsOf(1), is(empty()));
+    }
+
+    private List<Integer> factorsOf(int n) {
+        return null;
+    }
+}
+```
+
+```java
+private List<Integer> factorsOf(int n) {
+    return new ArrayList<>();
+}
+
+assertThat(factorsOf(2), contains(2));
+
+private List<Integer> factorsOf(int n) {
+    ArrayList<Integer> factors = new ArrayList<>();
+    if (n > 1)
+        factors.add(2);
+    return factors;
+}
+
+private List<Integer> factorsOf(int n) {
+    return null;
+}
+
+private List<Integer> factorsOf(int n) {
+    return new ArrayList<>();
+}
+
+public class Stack {
+    private boolean empty = true;
+
+    public boolean isEmpty() {
+        return empty;
+    }
+
+    . . .
+}
+```
+
+```java
+private List<Integer> factorsOf(int n) {
+    ArrayList<Integer> factors = new ArrayList<>();
+    if (n > 1)
+        factors.add(n);
+    return factors;
+}
+```
+
+```java
+private List<Integer> factorsOf(int n) {
+    ArrayList<Integer> factors = new ArrayList<>();
+    if (n > 1)
+        factors.add(2);
+    return factors;
+}
+```
+
+```java
+public class Stack {
+    private int size = 0;
+    private int[] elements = new int[2];
+
+    public void push(int element) {
+        this.elements[size++] = element;
+    }
+
+    public int pop() {
+        if (size == 0)
+            throw new Underflow();
+        return elements[--size];
+    }
+}
+```
+
+```java
+private String wrap(String s, int w) {
+    if (w >= s.length())
+        return s;
+    else
+        return s.substring(0, w) + "\n" + wrap(s.substring(w), w);
+}
+
+private List<Integer> factorsOf(int n) {
+    ArrayList<Integer> factors = new ArrayList<>();
+    if (n > 1) {
+        while (n % 2 == 0) {
+            factors.add(2);
+            n /= 2;
+        }
+    }
+    if (n > 1)
+        factors.add(n);
+    return factors;
+}
+
+private List<Integer> sort(List<Integer> list) {
+    if (list.size() > 1) {
+        if (list.get(0) > list.get(1)) {
+            int first = list.get(0);
+            int second = list.get(1);
+            list.set(0, second);
+            list.set(1, first);
+        }
+    }
+    return list;
+}
+```
+

@@ -1,0 +1,28 @@
+```
+else {
+    int middle = list.get(0);
+    List<Integer> middles =
+        list.stream().filter(x -> x == middle).collect(toList());
+    List<Integer> lessers =
+        list.stream().filter(x -> x<middle).collect(toList());
+    List<Integer> greaters =
+        list.stream().filter(x -> x>middle).collect(toList());
+
+    List<Integer> result = new ArrayList<>();
+    result.addAll(sort(lessers));
+    result.addAll(middles);
+    result.addAll(sort(greaters));
+    return result;
+}
+
+if (list.size() <= 1)
+    return list;
+else if (list.size() == 2){
+    int first = list.get(0);
+    int second = list.get(1);
+    if (first > second)
+        return asList(second, first);
+    else
+        return asList(first, second);
+}
+```
