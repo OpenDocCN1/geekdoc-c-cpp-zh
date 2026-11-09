@@ -1,0 +1,13 @@
+In making the decision to remove the gadgets, the controllers, from the player, the Kinect developers had to sacrifice certain affordances, not only the data provided by the accelerometers—which are replaced (with a slight lag, in our experience with the release titles) by image-captured data—but also the immediate responsiveness of digital input—such as the on/off/shoot/release signals provided by buttons. Like the Kinect, the Wii also makes use of a gestural interface. You just gesture with a controller in your hand, and this offers certain advantages. As Chris Kohler observes,
+
+> > “When you press a button on a standard controller, it sends a very clear signal. A switch is flipped; a zero becomes a one. Kinect doesn’t possess this ability. All it has is fuzzy analog input.”^27^
+
+Bowling in *Kinect Sports* presents the same problem. The Wii version of bowling is markedly superior for one reason—you hold down a button when you’re holding the ball, and release it to let it go. The accelerometer does the fuzzy stuff, tracking the swing of your arm, but the button reports when, exactly, you release the ball.^28^
+
+Every system has its unique constraints as well as affordances. Our point is simply that the rhetoric of total immersion through “controller-free” gaming in the case of Kinect masks certain practical trade-offs. Despite the marketing, the Kinect and the Wii have much in common. (They are in some ways structurally inverted versions of one another, as we have shown.) Yet Kinect’s move to exit the gadgets not only comes at a certain cost, it also sheds light on the importance of gadgets in the Wii’s case—that is, on the significance of the network of interrelated control devices. A gadget is something you handle, something you with which you engage.^29^ These devices are objects in their own right, or components in the larger system, that shape and mediate the player’s experience of the system as a whole.
+
+By contrast, the symbolism at the E3 Kinect pageant was focused on erasing those mediating devices, dismissed as mere gadgets and gizmos, as if to play to an imagined nontechnical consumer. As the voice-over announcer said,
+
+> > “History is about to be rewritten. . . . Human beings will be at the center, and the machine will be the one that adapts. Might the next step be an absence of an object?”
+
+The absence of an object literally meant the absence of a controller, pad, or joystick or remote, but because of the dramatic way it was worded, it had a more sweeping, philosophical ring to it: the absence of an object implies a total, sublime domination by the subject (“it’s all about you”), or the dominance of subjectivity itself, which is one version of the old dream of total immersion.^30^

@@ -1,0 +1,56 @@
+level_changes:
+- line: 75
+  before: 2
+  after: 1
+- line: 137
+  before: 3
+  after: 2
+- line: 157
+  before: 2
+  after: 1
+- line: 220
+  before: 3
+  after: 2
+- line: 240
+  before: 3
+  after: 2
+- line: 319
+  before: 2
+  after: 1
+- line: 333
+  before: 3
+  after: 2
+- line: 851
+  before: 2
+  after: 1
+- line: 941
+  before: 2
+  after: 1
+- line: 1008
+  before: 3
+  after: 2
+- line: 1563
+  before: 2
+  after: 3
+- line: 1573
+  before: 2
+  after: 3
+text_changes:
+- line: 439
+  before: 作为魔法蜡笔的Wii遥控器
+  after: 作为魔法蜡笔的 Wii 遥控器
+- line: 451
+  before: 作为鼠标的Wii遥控器
+  after: 作为鼠标的 Wii 遥控器
+- line: 483
+  before: Wii平衡板作为游戏控制器
+  after: Wii 平衡板作为游戏控制器
+- line: 677
+  before: 《粘粘世界》（通过WiiWare）
+  after: 《粘粘世界》（通过 WiiWare）
+- line: 823
+  before: Wii社交游戏
+  after: Wii 社交游戏
+- line: 851
+  before: 作为社交平台的Wii
+  after: 作为社交平台的 Wii

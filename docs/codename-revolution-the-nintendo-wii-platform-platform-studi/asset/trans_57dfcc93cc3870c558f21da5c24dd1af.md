@@ -1,0 +1,51 @@
+
+- 15. 保罗·马克斯。“Wii平衡板帮助物理治疗师在卒中后恢复平衡”，*《新科学家》* 2743（2010年1月16日），http://www.newscientist.com/article/mg20527435.300-wii-board-helps-physios-strike-a-balance-after-strokes.html。
+- 16. 乔迪·耶格尔，“新安全系统采用Wii技术，令共和党担忧”，*《国会山报》*，2009年11月15日，http://thehill.com/homenews/house/67839-new-security-system-uses-wii-technology-and-worries-gop。
+- 17. 约翰尼·钟·李的项目，http://johnnylee.net/projects/Wii。李的博客报道了他在Project Natal（后成为Kinect）上的工作，http://procrastineering.blogspot.com。
+- 18. 根据李在其项目博客上的解释，http://procrastineering.blogspot.com。
+- 19. WiiBrew wiki，http://wiibrew.org/w/index.php?title=Twilight_Hack。
+- 20. *Wii Guitar Hero*破解视频，http://www.youtube.com/watch?v=JDqE6bLgLFs。
+- 21. Loop Machine，http://www.theamazingrol.net/2009/05/the-wii-beatlooper。
+- 22. 塞思·希塞尔，“马里奥和路易吉重返Wii：玩家们”，*《纽约时报》*，2009年11月15日，http://www.nytimes.com/2009/11/16/arts/television/16marioth.html。
+- 23. 参见 http://www.nintendo.com/sites/software_warioware.jsp；http://www.nintendo.com/games/detail/7qUZw?6w?UiZX?ZQ8j6_?UB?3V。
+- 24. 亚历山大·斯利温斯基，“任天堂：Wii Music不与Rock Band、*Guitar Hero*竞争”，*Joystiq*，2008年8月8日，http://www.joystiq.com/2008/08/08/nintendo-wii-music-not-competing-against-rock-band-guitar-hero。
+- 25. 值得注意的是，克里斯·科勒在“Wii Music将即兴置于玩法之前”一文中同样程度地为该游戏辩护，*《连线》*，2008年10月23日，http://www.wired.com/gamelife/2008/10/wii-music-review。
+- 26. 关于此类节奏游戏特定的程序修辞，参见伊恩·博戈斯特，*《说服性游戏：电子游戏的表现力》*。Kindle版（马萨诸塞州剑桥：麻省理工学院出版社，2007年），3749–3755。
+- 27. *《大金刚》*破解视频，http://www.youtube.com/watch?v=osHK651Qn5M。
+- 28. 参见博戈斯特，*《说服性游戏》*，3755。
+- 29. J. P. 曼加兰丹，“休闲游戏正在摧毁传统游戏市场吗？”*CNN Money*，2010年3月18日，http://tech.fortune.cnn.com/2010/03/16/is-casual-gaming-destroying-the-traditional-gaming-market。
+- 30. 杰斯珀·尤尔，*《休闲革命：重塑电子游戏及其玩家》*（马萨诸塞州剑桥：麻省理工学院出版社，2010年），117。
+- 31. 威尔·赖特访谈，Web 2.0 Expo，2009年。Wired视频。http://link.brightcove.com/services/player/bcpid180?6?4?bctid?215230901。
+- 32. 巴特·西蒙，“Wii的物质想象：身体、空间与完全不虚拟的真实”，*Interfaces*，康考迪亚大学，蒙特利尔，2009年3月10日，http://www.interact.../en/videos/the-material-imaginary-wii-bodies-spaces-the-not-at-all-virtually-real；以及“Wii失控了：身体、游戏屏幕与手势过剩的生产”，*Loading* 3.4（2009），http://journals.sfu.ca/loading/index.php/loading/article/viewArticle/65。
+- 33. 尤尔，*《休闲革命》*，107，117。
+- 34. 任天堂新闻稿，转引自“Nintendo Revolution更名为Nintendo Wii”，*Console Watcher*，2006年5月2日，http://www.consolewatcher.com/2006/05/nintendo-revolution-renamed-to-nintendo-wii。
+
+- 7. *Kinect Sports*预告片，2010年6月14日，http://www.youtube.com/watch?v=am2RdxbaKE。
+- 8. 转引自乔纳森·齐特林，*《互联网的未来：以及如何阻止它》*，Kindle版（康涅狄格州纽黑文：耶鲁大学出版社，2008年），101–114。
+- 9. 塞思·希塞尔。“小玩意新动向：无需眼镜的3D奇遇。”*《纽约时报》*，2010年6月20日，http://www.nytimes.com/2010/06/21/arts/television/21videogame.html?hp。本章完成后，我们得以花时间体验3DS，并发现尤其是AR（增强现实）游戏，是对我们在本书中一直描述的Wii设计精神的延伸。Wii配置中那张极具象征意义的咖啡桌或茶桌，在3DS游玩中被一张真实的桌子（或任何其他表面）取代，你在这张桌子上放置一张印有图像的AR卡。通过3DS观看时，纸质卡片和木桌变成了游戏世界，例如，一条龙从卡片中钻出，仿佛是从桌子的洞里钻出来，你绕着桌子从多个角度向它射击，把主机举在面前作为观察器。对增强现实可能性的类似关注，显然也影响了Wii U的设计；Wii U利用触摸屏控制器作为第二个替代窗口，“把游戏世界从电视上拿下来，让它洒满你周围”的客厅，从而“你可以从任何角度窥视它”。岩田，任天堂2011年E3新闻发布会，2011年6月7日，http://e3.nintendo.com。
+- 10. 杰里米·帕里什，“任天堂2010年E3开发者圆桌会议笔记”，1Up.com，2010年6月15日，http://www.1up.com/news/notes-nintendo-e3-2010-developer。
+- 11. 布赖恩·考尔菲尔德，“任天堂美国总裁称苹果近期威胁大于微软”，*Shiny Objects*博客，福布斯。http://blogs.forbes.com/briancaulfield/2010/01/21/apple-bigger-near-term-threat-than-microsoft-nintendo-of-america-president-says。
+- 12. *GameSetWatch*工作人员，“E3：任天堂的邓纳威谈3DS、Kinect/Move与Wii势头”，*GameSetWatch*，2010年6月18日，http://www.gamesetwatch.com/2010/06/e3_nintendos_dunaway_on_3ds_ki.php。
+- 13. 同上。
+- 14. 汤姆·比塞尔。*《额外生命：电子游戏为何重要》*。Kindle版（纽约：万神殿书店，2010年），222–235。
+- 15. 维基百科，“沃伦·斯佩克特”。http://en.wikipedia.org/wiki/Warren_Spector。
+- 16. M. H. 威廉姆斯，“玩法风格至关重要：沃伦·斯佩克特谈迪士尼的《史诗米奇》”，*Industry Gamers*，2010年10月11日，http://www.industrygamers.com/news/playstyle-matters-warren-spector-on-disneys-epic-mickey-part-1。
+- 17. 沃伦·斯佩克特，迪士尼《史诗米奇》演示视频的画外音，http://www.youtube.com/watch?v=AvNQhdBVGMQ。
+- 18. 参见任天堂维基，“迪士尼扑克牌”，http://nintendo.wikia.com/wiki/Disney_playing_cards。
+- 19. 沃伦·斯佩克特，迪士尼《史诗米奇》演示视频的画外音，http://www.youtube.com/watch?v=AvNQhdBVGMQ。
+- 20. 杰西·谢尔，“盒子之外的设计”（在Design, Innovate, Communicate, Entertain上的演讲，2010年2月18日），http://g4tv.com/videos/44277/DICE-2010-Design-Outside-the-Box-Presentation。
+- 21. Xbox Kinect网站，微软，http://www.xbox.com/en-US/kinect。
+
+- 22. 巴特·西蒙。“Wii失控了：身体、游戏屏幕与手势过剩的生产”，*Loading* 3.4（2009）。http://journals.sfu.ca/loading/index.php/loading/article/viewArticle/65。
+- 23. 威廉·吉布森首次在一篇短篇小说中使用该术语，但该词因他的赛博朋克小说*《神经漫游者》*（纽约：Ace Books，1984年）而广为人知。关于赛博空间的灵感，参见威廉·吉布森在纪录片*《这些领土没有地图》*中的访谈，导演马克·尼尔（Chris Paine/007 Productions，2001年）。
+- 24. 关于实际游玩过程的边界性与不纯粹性的不同观点，例如参见杰斯珀·尤尔，*《半真实：真实规则与虚构世界之间的电子游戏》*（马萨诸塞州剑桥：麻省理工学院出版社，2005年）；鲁内·克莱夫耶，“为过场动画辩护”，载*《计算机游戏与数字文化会议论文集》*，弗兰斯·梅于拉编（芬兰坦佩雷：坦佩雷大学出版社，2002年），191–202。可访问：http://www.digra.org/dl/db/05164.0528。
+- 25. 埃莉·吉布森，采访亚历克斯·基普曼，*Eurogamer*，2010年6月5日。http://www.eurogamer.net/articles/03-post-natal-discussion-interview。
+- 26. 参见克里斯·科勒，“有缺陷的Kinect让人一窥游戏未来的诱人景象”，*《连线》*，2010年11月4日，http://www.wired.com/gamelife/2010/11/review-kinect/?intcid=postnav。关于肤色问题，参见拉里·弗鲁姆，“报道称光照影响Kinect的面部识别”，CNN，2010年11月4日，http://premium.edition.cnn.com/2010/TECH/gaming.gadgets/11/04/kinect.dark.skin/index.html。
+- 27. 科勒，“有缺陷的Kinect让人一窥游戏未来的诱人景象。”
+- 28. 同上。
+- 29. gadget的一个可能词源来自法语词*engager*，意为“参与/投入”（*《牛津英语词典》*）。
+- 30. 在一篇博客文章中，米图·坎达克（“论存在与沉浸”，2009年10月1日，http://mitu.nu/2009/10/01/on-existenz-and-immersion-from-the-immersive-fallacy-to-the-immersive-appeal）推测了我们在此正在考虑的若干相同问题，包括沉浸式游戏所涉及的唯我论危险。史蒂文·普尔（*《触发快乐：电子游戏与娱乐革命》*[纽约：Arcade Publishing，2004年]，63）提出了如今因Kinect发布而再次被提出的一般性问题：“完全沉浸又如何？……那么，这会成为电子游戏控制的主导方式吗？”[如果是这样，[马丁]海德格尔的精神将再次兴起，警告这种控制论霸权必然会缩小可能性的领域。]
+- 31. 威廉·吉布森，*《幽灵国度》*（纽约：Putnam，2007年），20，64。
+- 32. 在某些方面，Wii U凭借其推测中更强大的系统和高清能力，标志着钟摆回摆到沉浸式体验的方向——至少作为同一系统的一种可供性，而该系统在其他方面延续了休闲游戏的趋势。参见岩田在“岩田问：Wii U”中引用的宫本茂关于沉浸的评论，任天堂，http://iwataasks.nintendo.com/interviews/#/wii-u/01/。
+- 33. 诺伯特·维纳，“人、机器与周围世界”（1954），载*《新媒体读本》*，诺亚·沃德里普-弗鲁因与尼克·蒙特福特编（马萨诸塞州剑桥：麻省理工学院出版社，2003年），65–72。
+- 34. 普尔，*《触发快乐》*，61，63。

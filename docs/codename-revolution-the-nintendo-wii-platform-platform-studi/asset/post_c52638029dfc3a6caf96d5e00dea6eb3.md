@@ -1,0 +1,281 @@
+
+- WarioWare D.I.Y. Showcase
+- WarioWare, Inc.: Mega Microgame$!
+- WarioWare: Smooth Moves
+- WarioWare: Twisted!
+- Wii Fit
+- Wii Fit Plus
+- Wii Music
+- Wii Party
+- Wii Play
+- Wii Sports
+- Wii Sports Resort
+
+## Via WiiWare
+
+- Bit.Trip Beat
+- Bit.Trip Core
+- Bit.Trip Fate
+- Bit.Trip Runner
+- Bit.Trip Void
+- Max and the Magic Marker
+- World of Goo
+
+## For Other Platforms
+
+- Brain Training
+- Dance Dance Revolution
+- Duck Hunt
+- Family Fun Fitness
+- Family Trainer
+- FarmVille
+- Gears of War 2
+- GoldenEye 007
+- Grand Theft Auto: San Andreas
+- Grand Theft Auto: Vice City
+- Guru Meditation
+- Gyromite
+- Inergy
+- Kid Icarus: Uprising
+- Kinect Adventures!
+- Kinectimals
+- Kirby Tilt 'n' Tumble
+- Mafia Wars
+- Mogul Maniac
+- Nintendogs
+- Pata!!
+- Pocket Pikachu
+- Red Dead Redemption
+- The Sims
+- Spore
+- Stack-Up
+- Wild Gunman
+- World of Warcraft
+
+## Index
+
+- Abe, Goro, 72–73
+- Absence of object, 167
+- Accelerometers, 58, 63–64
+- Active Life: Outdoor Challenge, 61
+- “Adequate space,” 7, 91–92, 117, 168
+- ADXL330 accelerometer, 58
+- Affordances, 5, 9, 13, 40, 50, 110, 155.
+  - See also Constraints
+- AiLive, 73
+- Amaya, Daisuke, 111
+- Amazon, 11
+- American Heart Association, 86
+- Amiga, 87
+- Analog Devices, 58
+- Animal Crossing, 153
+- Anime, 15, 37
+- Apple, 11, 28, 47, 129, 152, 162
+- Apple II, 126
+- Apple TV, 47
+- Arcades, 142
+- Ashida, Kenichiro, 57, 76
+- Astro Boy (Mighty Atom), 15, 37
+- Asus, 47
+- Atari VCS, 9, 50, 61, 87
+- Atom processor, 47
+- Attached storage, 48
+- Augmented reality, 92–93, 96, 146, 151, 164
+
+- Backward compatibility, 29, 107–108
+- Balance Board. See Wii Balance Board
+- Bandai, 61
+- Bannerbomb, 133
+- Barton, Emily, 161
+- Beatles: Rock Band, 22, 61, 135–137
+- Bissell, Tom, 14, 154
+- Bit.Trip Runner, 22, 118–119
+- Bit.Trip series, 137–139
+- Blake, William, 10
+- Blue-ocean strategy, 5, 103, 139–140, 151
+- Body. See Player space
+- Body scan, 165–166
+- Body Test, 90–91
+- Bogost, Ian, 9, 87
+- Bongo-drum controller, 137
+- Bonsai, 18, 95, 98, 104
+- Books, 10, 32, 143–144
+- Bowling, 1–2
+- Bowling Alone, 1
+- Braben, David, 110
+- Bradley, Milton, 142
+- Brighter Minds Media, 112
+- “Broadway,” 29
+- Call of Duty, 143
+- Capcom, 43, 73, 111
+- Carmel, Ron, 112, 118
+- Casual gaming, 2–3, 7, 44–45, 68–69, 76, 112
+- *A Casual Revolution*, 44, 91
+- *Cave Story*, 111–112
+- Cel-shaded animation, 41, 155
+- Center for Textual Studies and Digital Humanities, 6
+- Central processing unit (CPU), 29, 33, 46–48
+- Chalk circle, 94
+- Channels of distribution, 11–12, 102. *See also* Wii Channels
+- Classic Controller, 57, 106, 108
+- Codex, 10
+- Coffee table, 97, 117, 182n
+- Commander Video, 137–138
+- Command line interface, 75
+- Competitive motion-control systems, 23
+- Complementary metal-oxide semiconductor (CMOS), 59
+- Consoles, 25–26, 50. *See also* Wii console
+  - emulation, 107–108
+  - and technological convergence, 161–163
+- Constraints, 5, 9, 13, 40, 50, 110, 155. *See also* Affordances
+- Context, 144
+- Controller objects, 4, 169
+- Convergence, 162–163
+- Converging technologies, 161–163
+- Core controller. *See* Wii Remote (Wiimote)
+- Core gamers, 110–111
+- Culture
+  - and computing, 7
+  - and design, 34
+  - and layered contexts, 9
+  - and material technology, 9
+  - and platform technology, 5–6, 32, 147–148, 160
+  - and print media, 10, 32
+- Cybernetics, 62, 168
+- Cyberspace, 164, 168
+- *Dance Dance Revolution*, 60, 137
+- *Dancing Made in Wario*, 71
+- Dark, Gary, 110–111
+- Design
+  - and constraints, 15–16
+  - and culture, 34
+  - “emotional,” 54
+  - graphics, 37–38
+  - and player space, 169
+  - and power consumption, 49–50
+  - and social contexts, 129
+- *Deus Ex*, 156
+- Development. *See* Design; Game development
+- Diegetic space, 146–147
+- Digital humanities, 7
+- Disc Channel, 103
+- Disney, Walt, 12
+- *Disney Epic Mickey*, 12, 73, 156–159
+- Distribution, 107–112, 116
+- Doctorow, Cory, 126–127, 132–133
+- “Dolphin,” 29
+- *Donkey Kong*, 12–13, 35, 142
+- *Donkey Konga*, 22, 137
+- *Donkey Kong Jungle Beat*, 137
+- DS system, 28, 36, 118
+- DualShock controller, 57
+- *Duck Amuck*, 157
+- *Duck Hunt*, 62
+- Dunaway, Cammie, 153
+- Electricity consumption, 19–20
+- Electronic books, 10–11
+- Emerging technologies, 161–163
+- Energy efficiency, 45–47
+- Engelbart, Douglas, 75
+- English, William K., 75
+- Entertainment
+  - family, 102
+  - and games, 105
+- “Epilepsy,” 144–145
+- Everett, N., 168. *See also* Cyberspace
+- “Exergames,” 83
+- *Extra Lives*, 154
+- EyeToy, 166
+- Facebook, 138
+- Famicom, 25, 58, 61
+- *Family Fun Fitness*, 61
+- Family Trainer, 61
+- Fan space, 143
+- Fantasia, 135
+- FarmVille, 138, 141
+- Fils-Aime, Reggie, 79, 107, 108, 110–111, 152, 154
+- Find Mii, 70
+- Firmware, 127
+- Flash games, 119–120
+- Flickr experiment, 139, 143
+- “Flipper,” 29
+- Foot Craz control pad, 61
+- Forecast Channel, 103
+- Free/open-source software (FOSS), 127–129
+- Frontier Development, 110
+- Gabler, Kyle, 112, 115
+- Gadgets, 163, 166–167, 169
+- Gaijin Games, 118, 137
+- Galloway, Alexander, 146–147
+- Game Boy Advance platform, 63, 72, 84
+- Game Boy Color platform, 60
+- GameCube platform, 17, 25, 29, 34
+  - development of, 28
+  - memory cards, 105–106
+  - power consumption, 50
+  - speed, 49
+  - and Wii, 85
+- Game development
+  - and distribution, 116
+  - and intuitive interface, 73
+  - and multiple dimensions, 18
+  - and peripherals, 88
+  - and player responses, 64–65
+  - and player space, 21
+  - and power constraints, 37, 43
+  - and realistic graphics, 15
+  - and software, 160–161
+  - and system limitations, 14, 16, 34, 37, 41–43
+  - third-party developers, 38, 108–111, 116, 118–119
+  - and WarioWare series, 8, 22, 72, 117–118
+  - and Wii Remote, 73, 110
+  - and WiiWare, 108–111
+- World of Goo as metaphor for, 115–116
+- Game Over, 140
+- “Gamepocalypse,” 146
+- Gamers
+  - casual, 68–69, 76
+  - core, 110–111
+  - female, 90
+  - images of, 140–141
+  - and immersive effects, 44
+  - and platform technology, 32–33
+  - types of, 30–31
+- Games
+  - diegetic/nondiegetic elements, 147
+  - emulated, 107–108
+  - history of, 146
+  - Internet published, 119–120
+  - paratextual features, 144–145
+  - and “pleasurable control,” 168
+- Game Seminar, 90
+- Game space, 81–82, 92–93, 163–168
+- Game & Watch, 84
+- “Gamification,” 146
+- Gaming
+  - casual, 2–3, 7, 44–45, 68–69, 76, 112
+  - consoles, 25–26, 50, 107–108, 161–163
+  - and entertainment, 105
+  - gender, 32
+  - and gimmicks, 84
+  - hard-core, 44
+  - and “hybrid consciousness,” 168
+  - meditation and concentration, 86–87
+  - microgames, 7–8
+  - mimetic–interactive, 2–3, 57–60, 71
+  - mobile, 45, 96, 152, 162
+  - negative perceptions of, 80
+  - online play, 16
+  - origins of, 84
+  - and social contexts, 2–3, 22–23, 129
+  - and social interaction, 4–5
+- Gates, Bill, 150
+- Gears of War 2, 143
+- “Gecko,” 29
+- Gender, 32, 90
+- General public license (GPL), 127
+- Genette, Gerard, 143, 145
+- Gibson, William, 123, 164–165
+- Gingold, Chaim, 73–74, 95–96, 98
+- GoldenEye 007, 160
+- Grand Theft Auto, 44, 154
