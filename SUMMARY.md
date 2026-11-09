@@ -772,6 +772,7 @@
 +   [Autodesk Revit 2018 商业设计使用指南](docs/commercial-design-using-autodesk-revit-2018/README.md)
 +   [临床研究常用统计方法及 SAS 示例，第三版](docs/common-statistical-methods-for-clinical-research-with-sas-ex/README.md)
 +   [计算机小型数值方法：线性代数与函数极化](docs/compact-numerical-methods-for-computers-linear-algebra-and-f/README.md)
++   [竞赛编程](docs/competitive-programming/README.md)
 +   [Competitive Programming 3：编程竞赛的新下限](docs/competitive-programming-3-the-new-lower-bound-of-programming/README.md)
 +   [Java, JavaCC 和 Yacc 编译器构建指南](docs/compiler-construction-using-java-javacc-and-yacc/README.md)
 +   [C 编译器构建：打造高效解释器与编译器](docs/compiler-construction-with-c-crafting-efficient-interpreters/README.md)
