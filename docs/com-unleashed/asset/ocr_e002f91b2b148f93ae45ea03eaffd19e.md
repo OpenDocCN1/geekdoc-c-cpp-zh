@@ -1,0 +1,13 @@
+![](bbox=[0.166, 0.1, 0.593, 0.188])
+
+Step through the wizard dialogs to create a new application named Stateful; accept the defaults throughout. To add your Stateful.dll to the package, simply select the new application’s Components folder, right-click and select New/Component, and then add the registered component. This causes COM+ to adjust the registry entries to run the component within the mtx.exe runtime.
+
+Selecting the Components folder for the Stateful package in the Component Services Console and choosing Status View enables you to monitor object activity. Double-click the .vbs source file to test the component under COM+. Voilà! You didn’t even need to modify your client. COM+ has taken care of everything.
+
+Want to try using the new application in a distributed configuration? No problem, just right-click the application and choose Export, and then provide an export pathname. A client installer can be found in the export client subdirectory when the export is complete. Simply run this installer on the remote client machine, and you’re finished. Running your script on the client invokes a DCOM connection to the COM+ server process supporting the component on the server system.
+
+There are two additional concerns when building components and testing them under COM+ on a single machine. First, remember that COM+ server processes don’t shut down immediately by default. You need to shut down your package (right-click it and choose Shutdown) in order for the linker to overwrite the component DLL with a new build. Failing to do this produces a link error because the target DLL is still in use by the COM+ server process. Second, remember that each time you build a component in Visual C++, it tries to reregister the component as a standard COM component. You then need to refresh the registry with the COM+ application configuration by right-clicking the computer in the Component Services Console and choosing Refresh All Components.
+
+# Security Problems
+
+Your non-COM+ component has some problems. Some of the problems are obvious now, and others will become obvious as the component use increases. One glaring point is that your component is now running under a server process, likely having a relatively powerful access token, as opposed to its previous home in the client process. Anytime you start distributing components across process boundaries, security concerns arise. It’s hard to decide what a client is allowed to do in a vacuum, and unless you are intimately familiar with the deployment environment’s account structure, knowing who clients are doesn’t

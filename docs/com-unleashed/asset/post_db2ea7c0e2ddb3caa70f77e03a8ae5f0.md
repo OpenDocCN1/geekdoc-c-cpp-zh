@@ -1,0 +1,385 @@
+
+- function names, 581
+- GUIDs, 582
+- identifying, 580
+- labels, 582
+- opening, 593
+- pathnames, 381
+- private, 583
+- properties, 379
+- response, 655
+- storing, 579
+- types, 583
+- responses, 648, 655
+- security, 693-694
+- site links, 584
+- transactions, 656-657. See also **MS DTC**
+  - aborting, 658
+  - committing, 657
+  - external, 663-664
+  - internal, 660-663
+  - ITransaction interface, 658
+  - messages, 657-658
+  - queues, creating, 658-659
+  - single message, 659
+  - successful, 656
+  - support, 66
+  - types, 659
+  - unsuccessful, 656
+
+- **MSMQ email interface, 673**
+- **MSMQ Emailers, 572-573**
+  - administration, 585
+  - controller servers, 584
+  - machines, 573
+  - messages, 574
+  - MQIS, 579
+  - MSMQ Explorer, 573
+  - Queues, 573, 576
+    - Administration, 577
+    - Dead Letter, 578
+    - Journal, 578
+    - message, 577
+    - Report, 578
+    - Response, 578
+    - types, 577
+- **MSMQ machines, 583**
+- **MSMQCoordinatedTransactionDispenser class, 664**
+- **MSMQEvent object, 675**
+- **MSMQEvent_Arrived() function, 675**
+- **MSMQEvent_ArrivedError() function, 675**
+- **MSMQMailEMail class, 674**
+- **MSMQQueueInfo objects, 609, 693**
+- **MSMQTransaction class, 658**
+- **MS DTC, 376**
+- **MTA (multithreaded apartments), 61, 152, 161**
+- **MTCLIENT application, 546**
+- **MTS (Microsoft Transaction Server), 8, 16, 23, 47, 373**
+  - activities, 381
+  - administration, 391
+  - applications, 401
+  - business process level, 16
+  - COM objects (in-process servers), 377
+  - COM-based middle-tier components, 376
+  - compared to COM+, 374
+  - components, 380
+  - configuring, 381
+  - context wrappers, 380
+  - coordinating transactions, 378
+  - creating
+    - COM servers with ATL, 385
+    - objects, 447
+  - deficiencies, 57
+  - Explorer, 377-378
+    - Computers branch, 387
+    - default settings, 382
+    - locking packages from users, 389
+    - remote activity, 402
+    - viewing other computers, 382
+  - IIS integration, 378
+  - improving performance with COM+, 58
+  - interception, 376, 386
+  - JIT, 546
+  - load balancing, 58, 397
+  - modifying object behavior, 377
+  - MS DTC, 376
+  - MTS 2, 381
+    - deactivation/destruction, 387
+    - just-in-time (JIT) activation, 386
+    - life cycle phases, 386
+    - object pooling, 387
+  - Mtx.exe, 394
+  - MtxLib.lib library, 384
+  - objects, 383
+    - administration, 382
+    - caution, 384
+    - creating, 380
+    - deactivating, 400
+    - developing, 384
+    - DLLs, 384
+    - happy flags, 399
+    - properties, 390
+    - scriptable, 382
+    - overview, 379
+  - packages, 379
+    - adding components, 391
+    - adding objects, 388
+    - creating, 387
+    - exporting package definition, 391-392
+    - importing packages, 393
+    - Installation Options dialog box, 393
+    - locking from users, 389
+    - naming, 388
+    - pack files, 393
+    - properties, 389
+    - server, 379-380
+    - Set Package Identity dialog box, 393
+  - pooling, 62
+  - registry information, 391
+  - roles, 381
+  - security, 376, 393
+    - affecting programmatically, 395
+    - blocking calls, 377
+    - client identification, 396
+    - direct versus original callers, 396
+    - role-based, 377
+    - roles, 394-395
+  - Select Roles dialog box, 395
+  - Server Process Shutdown setting, 389
+  - setup program, 392
+  - SIDs, 390
+  - static load balancing, 63
+  - surrogate processes, 377
+  - system package, 38
+  - transactions, 669-672
+    - behavior, 398-399
+    - CIS support issues, 368
+    - initiating, 390
+    - longevity, 398
+    - PlaceHolder() function example, 671-672
+    - roots, 390, 399
+    - state access functions, 670
+
+- **MTS Shared Property Manager. See SPM**
+- **Mtx.exe, 394**
+- **Mtxih.lib library, 384**
+- **multiple interfaces**
+  - cautions, 410
+  - support, 353
+- **multiple threads, 444**
+- **multithreaded apartments (MTAs), 61, 152, 161**
+- **multitiered applications, 8**
+- **multitiered models, 37-39**
+  - constraints, 43
+  - identifying components, 41-42
+  - interfaces, 43
+  - layers, 40
+- **mutexes, 168-169**
+- **MQSendMessage() function, 594**
+- **mymidlexperiment.h header file, 268-271**
+
+## N
+
+- **named pipes protocol, 283**
+- **names**
+  - applications, 737
+  - nonsensical, 99
+  - subscription, 709
+  - TPs, 505
+- **Native Structured Storage (NSS), 70**
+- **NetDynamics, 21**
+- **Netscape, 21**
+- **network cycles (DCOM), 203-204**
+- **networks**
+  - application development, 561
+  - client access restrictions, 358
+  - Ethernet DLC links, 494
+  - failures, 461
+  - managing objects, 298
+  - messaging, 560
+    - downside, 562-563
+    - system evolution, 562
+    - unifying dissimilar systems, 562
+- **MOM systems**
+  - administrative tools, 568
+  - APIs, 567
+  - monikers, 98
+  - network authentication, 299
+  - protocols, 13
+  - security, 298-299
+  - SIDs, 390
+  - WinSock, 564
+- **net start mtsfpsvc command, 365**
+- **net stop iisadmin command, 365**
+- **neutral-threaded apartments, 60-61**
+- **New Subscription Wizard, 708-709**
+- **NewDllMain() function**, channel hooks, 533-534
+- **NLB Service**, load balancing, 537
+  - comparison, 537-538
+- **non-event operations, 564**
+- **noise**, filtering, 700
+- **non-blocking I/O, 564**
+- **non-generic composition (monikers), 110**
+- **nondurable state, 428**
+- **nonzero values, 349**
+- **Not Supported transaction setting, 455**
+- **Notepad, 17**
+- **notification (event), 132**
+- **NSS (Native Structured Storage), 70**
+- **NT log**, examining using Event Viewer, 508
+- **NT subsystem**, security, 299
+- **NTLMSSP (NT LAN Manager Security Service Provider), 298, 313**
+
+## O
+
+- **objbase.h header, 606**
+- **object class**
+  - declaring, 284-285
+  - defining, 285-289
+- **object oriented programming (OOP), 50**
+- **object pooling, 57**
+- **object request brokers (ORBs), 376**
+- **object server, 285**
+- **Object Wizard (ATL), 155**
+- **Object-bound state, 428**
+- **Object-Oriented (OO) component architecture, 548**
+- **ObjectContext function, 459**
+- **objects, 410. See also components**
+  - activities, 381
+  - automation, 161
+  - channel hooks
+    - DllCanUnloadNow() function, 533
+    - DllMain() function, 533
+    - load balancing issues, 532-534
+    - NewDllMain() function, 533-534
+    - ServerFillBuffer() function, 533
+  - client identity, 474
+  - CLSID, 104
+  - COM+
+    - creating, 59
+    - direct callers, 474
+  - component software environment, 98
+  - compound (IPersistStorage interface), 75
+  - connection point, 114
+  - Context
+    - IObjectContext interface, 432, 435-436, 441
+    - MTS transactions, 670
+  - context wrappers, 380
+  - creating (MTS), 380
+  - critical section, 166
+  - deactivating, 400
+  - destructors, 386
+  - determining class and host machine, 104
+  - embedded, 108
+  - event sinks, 114, 120
+    - class declarations, 121
+    - class definitions, 122
+    - creating, 128
+  - filenames, 98
+  - IObjectControl interface, 433
+    - building COM+ components with ATL, 435-436
+    - methods, 433-434
+  - life cycle, 386
+  - ListenerHelper, 730
+  - loading/unloading, 93-94
+  - loading from disk files, 76
+  - locating, 109
+  - maintaining states, 74
+  - marshaling, envelopes, 530-531
+  - monikers, 60, 98
+  - monitoring calls, 376
+  - MSMQEvent, 675
+  - MSMQQueueInfo, 693
+  - MTS, 383-384
+  - OXID, 528-529
+  - packages, 379
+    - adding to, 388
+    - server, 380
+  - persistence, 88-92, 104-105
+  - Player, 730
+  - pooling, 61-62, 387
+  - process identity, 474
+  - properties (declarative), 390
+  - pseudo-objects, 108
+  - Recorder, 729
+  - reference, 386, 440-441
+  - SafeRef() function, 386
+  - saving to disk files, 76
+  - scriptable (MTS), 382
+  - security, 298
+    - as services (AppIDs), 188
+  - sharing in a callback, 386
+  - state
+    - client persistent storage, 429
+    - client temporary storage, 429
+    - defined, 427
+    - durable, 428
+    - reliable, 427
+    - managing, 427
+    - nondurable, 428
+    - object-bound, 428
+    - separating state from behavior, 426-427
+    - server persistent storage, 430
+    - server temporary storage, 429
+    - transient, 428
+  - stream, 78
+  - system event, MSMQ asynchronous operations, 675-680
+  - thread-unsafe COM+, 157
+  - transaction state access functions, 670
+  - TransactionContextEx, 670
+  - transactions, 390
+  - votes, 399
+  - Win32 synchronization, 676
+
+- **OBJREF data type, 528**
+- **OBJREF monikers, 369-370**
+- **Observer pattern, 696**
+- **OCXs, reading type library, 137**
+- **OLE**
+  - controls, 128
+  - transactions, 452
+- **OLE DB, 68, 665**
+- **OLE2, 56, 58**
+- **OLEView, 344. See also DCOM, MFC**
+  - access permissions, 347
+  - Activation property page, 346
+  - bugs, 345
+  - configuring COM+ objects, 344
+  - disadvantages, 344
+  - launch permissions, 346
+  - launching in-process servers locally, 346
+  - reading OCX type libraries, 137
+- **OnLButtonDown() function, 94**
+- **OnRButtonDown() function, 94**
+- **OO (object oriented) components, 548**
+- **OOP (object oriented programming), 50**
+- **Open() function, 609**
+- **OpenEventLog() function, 259**
+- **opening**
+  - groups (SPM), 439
+  - queues, 593, 609, 626
+- **OpenSCManager() function, 253-254**
+- **OpenService() function, 253**
+- **operating systems (OS), 44**
+- **operators (Boolean), filtering events, 718**
+- **optimization (performance), 542**
+  - DCOM speed, 202-209
+  - mixed threading models, 204
+  - network cycles, 203-204
+  - object location, 203
+  - JIT, 547
+  - Just-in-Time activation, 546
+  - Windows DNA, 542-543
+- **optional call parameters, 624**
+- **ORB (object request brokers), 376**
+- **Order processing system (MSMQ example)**
+  - listing pending order labels, 643-644
+  - Shipping Server, 641-643
+- **original callers, 474**
+- **OS (operating systems), 44**
+- **out-of-process servers**
+  - creating, 330
+  - OBJREF monikers, 370
+  - self-registering, 197-198
+  - speed, 203
+- **output**
+  - files, 280
+  - MIDL, 266
+  - synchronized, 165-166
+- **overlapping I/O, 565-566, 676**
+- **overriding**
+  - methods (IPersistStreamInit interface), 83
+  - smart pointers, 622
+- **OwnerSID method (EventSubscription interface), 712**
+- **OXID, 528-529**
+
+## P
+
+- **Package Export Wizard, 510**
+- **Package Wizard dialog box, 393**
+- **packages, 379. See also applications**
+  - adding components, 391
+  - creating, 338, 387
+  - definitions, exporting, 391-392
+  - importing, 393
+  - Installation Options dialog box, 393

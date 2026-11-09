@@ -1,0 +1,5 @@
+CreateInstance() method is much the same as the IObjectContext version, with the exception that it enables the creator to control the transaction context of the new object.
+
+# Summary
+
+The sample application developed in this chapter is, at best, trivial. Aren’t you glad? You focused on building a highly scalable, stateless COM+ component, and it was a snap. This is exactly what COM+ is all about. You write the business logic, and COM+ handles the high-end, frame-mastle performance and robustness issues. If COM+ wasn’t easy to use, it would be far less valuable. The real trick is adjusting your brain to focus on matters of state. The most important things to take away from this chapter are the concept of state, behavior, and interface separation, along with the scalability guidelines of the COM+ system. This chapter covered the key concepts behind basic COM+ component development as well as the implementation issues related to IObjectContext and IObjectControl. Now that you’ve mastered the art of high performance, MTS component design, Chapter 17 will examine transactions, the key to highly reliable state management and robust applications.

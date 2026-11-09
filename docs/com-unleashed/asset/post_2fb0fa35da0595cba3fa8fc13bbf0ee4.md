@@ -1,0 +1,351 @@
+
+- proxy class, 289–293
+- stubs, 274–279
+- TypeLib GUID, 2
+- **delegate impersonation level**, 319
+- **delegate-level impersonation**, 316
+- **DeleteService() function**, 255
+- **deleting**
+    - hardware, load balancing advantages, 519
+    - queues, 592, 609, 626
+- **Delivery parameter**, 746
+- **dependencies (ATL)**, 625
+- **deploying applications**, 63
+- **DeregisterEventSource() function**, 259
+- **Description method** (*IEventSubscription interface*), 712
+- **design patterns**, 696
+- **Design Patterns: Elements of Reusable Object-Oriented Software**, 697
+- **Design Time Control (DTC) library**, 18
+- **Design Time Controls (DTCs)**, 25
+- **designing**
+    - CASE tools, 49
+    - COM+ components, 65
+    - consumer considerations, 45
+    - maintainability, 46
+    - portability, 48
+    - reliability, 46
+    - reusability, 49
+    - scalability, 47
+    - flawed designs, 30
+    - software components, 31
+    - models
+        - multi-tiered, 37–43
+        - three-tiered, 33–34
+        - balancing, 35
+- **desktop**, 228–229
+- **destroying**, *See* deleting
+- **destructors**, 386
+- **development**
+    - environments (Visual Studio 6.0 Suite), 18
+    - flawed design, 31
+    - leveraging existing technology and skills, 44
+    - session management, 21
+    - team, 18
+- **DevStudio**, 132
+- **DFCMCOMAREA**. *See* COM-MAREA
+- **Diagnostic utility**, 251–252
+- **direct callers**, 474
+- **directories**
+    - help directory (TypeLib), 193
+    - hardware, 364
+- **DisableCommit() function** (*IObjectContext interface*), 399, 433, 447–448
+- **Disabled transaction setting**, 455
+- **discretionary access control lists**. *See* DACLs
+- **dispatch interfaces**, 130
+- **display names**, 370
+- **displaying type library contents in MTS Explorer**, 385
+- **DisplayMessage method**, 735
+- **distributed applications**
+    - coordinating transactions, 375
+    - load balancing, 397
+    - MSMQ, 378
+- **distributed computing (Queued Components)**, 723–724
+    - data received confirmation, 724
+    - lookup data, 726–727
+    - queuing traits, 727
+    - server requests more data, 725
+    - work performed confirmation, 725–726
+- **Distributed Computing Environment Procedure Call (DCE RPC)**, 298
+- **Distributed InterNet Applications Architecture**. *See* DNA
+- **Distributed Operating Environment**
+    - components, 12
+    - security, 474
+- **distributed systems, networking**, 13
+- **distributed events**, 67
+- **DLL entry points**, 267
+- **DllCanUnloadNow() function**, 533
+- **dlldata.c source file**, 267
+- **DLLDATA FUNCTIONS macro**, 267
+- **DllGetClassObject() function**, 379, 384, 431
+- **DllMain() function**, 533
+- **DllRegisterServer() function**, 195–197, 431
+- **DllRegisterServer() function** (*Regsvr32 application*), 195–197
+- **DllUnregisterServer() function**, 533
+- **DNA (Distributed InterNet Applications Architecture)**, 8
+    - Active Data Objects, 16
+    - advantages, 9
+    - browsers, 20
+    - COM+, 9
+    - components (MTS), 23
+    - core, 15
+    - functional overview, 20
+    - hot zone, 16
+    - IIS, 21
+    - legacy code, 8
+    - MTS, 8
+    - network protocols, 13
+    - RAD development, 18
+    - security, 12–13
+    - team development, 18
+    - tools, 17
+    - Visual SourceSafe, 19
+    - Visual Studio 6.0 Suite, 24
+    - Windows DNA services, 10–11
+    - Windows Registry, 12
+    - **Windows services**
+        - business process level, 16
+        - DNA core, 15
+        - HTML authoring, 17
+        - integrated storage level, 16
+        - tools, 17
+        - user-interface level, 15
+- **DNA Performance Kit**, 544, 399-401, 433
+    - ComConfiguration table, 551
+    - downloading, 550
+    - MTCLIENT, 546
+    - requirements, 550
+- **domains**
+    - NT workstations, 299
+    - security, 299
+    - validation, 39
+- **downloading**
+    - DCOM95/DCOM98, 361
+    - DNA Performance Kit, 550
+- **DTC (Design Time Control)**
+    - library, 18
+- **DTC transactions**
+    - database sessions, 665-666
+    - dispensing, 664
+    - enlisting, 667-669
+    - message transfers, 665
+- **DtcGetTransactionManager() function**, 664
+- **DTCs (Design Time Controls)**, 25
+- **dual interfaces**, 410
+- **dumping Event Log**, 260-261
+- **durability property**, 446
+- **durable state**, 428
+- **durable transactions**, 375
+- **dynamic load balancing**, 58, 63, 397
+- **dynamic load-balancing algorithm**, 521-522
+
+## E
+
+- **early deactivation**
+    - defined, 409
+    - standard COM component problems, 415
+    - state issues, 426
+- **ECMA JavaScript, user-interface level**, 15
+- **editors (registry)**
+    - Regedit, 179-180
+    - RegEd32, 179-181
+- **email**
+    - ActiveX component, 674
+    - MSMQ, 569, 672-674
+- **embedded objects**, 108
+- **EnableCommit() function** (*IObjectContext*), 447
+- **EnableDCOM property** (*IEventSubscription interface*), 712
+- **EnableDCOM value** (HKEY_LOCAL_MACHINE), 194
+- **EnableDCOM+ registry value**, 333
+- **enabling**
+    - CTS, 366
+    - security, 479
+    - SSL tunneling, 366
+    - transactions, 448
+- **encapsulation**, 419-424
+- **EncryptionAlgorithm parameter**, 746
+- **encrypted messages**, 575
+- **enterprise applications**, 374
+- **enterprises**
+    - applications, troubleshooting, 542
+    - security, 472
+- **entries (registry)**, 255
+- **Enum() function**, 101, 371
+- **envelopes**
+    - custom marshaling, 530-531
+    - load balancing, 529-531
+    - standard marshaling, 530
+- **environments (stateless)**, 10
+- **EOAC_ACCESS_CONTROL flag**, 481
+- **EOAC_APPID flag**, 481
+- **equivalent C++**, 202
+- **error handling**, 347-349
+    - facility status codes, 348
+    - FAILED() macro (listing), 349
+    - strategies for HRESULT values, 349-350
+- **errors**
+    - access-denied, 315
+    - COBOL, Import Wizard, 508
+    - COM+ runtime errors, 508
+    - MQ_ERROR_BUFFER_OVERFLOW, 595
+    - Receive() functions timing out, 611
+- **Ethernet DLC network links**, 494
+- **Event Log**
+    - CloseEventLog() function, 258
+    - DeregisterEventSource() function, 259
+    - dumping, 260-261
+    - MC (message compiler), 256-258
+    - OpenEventLog() function, 259
+    - ReadEventLog() function, 259
+    - RegisterEventSource() function, 259
+    - ReportEvent() function, 259
+    - services, 256
+    - viewer, 259, 261
+    - writing to, 259
+- **event notification**
+    - loosely coupled events, 699-701
+    - polling, 698-699
+    - tightly coupled events, 699-700
+- **Event server**, 258
+- **Event Service (COM+)**, 696-697
+    - COM+ catalog, 702
+    - component instantiation, 710
+    - demo, 705-711
+    - event class advanced properties, 707
+    - event class registration, 705-707
+    - event class type library, 707
+    - receiving notification, 711
+    - subscribers, adding, 709-710
+    - event classes
+        - advanced properties, 707
+        - registration, 705-707
+        - type library, 707
+- **event services**, 14
+- **event sinks**, 115, 120
+    - calling handling functions, 132
+    - class declarations, 121
+    - class definitions, 122
+    - creating, 118, 128
+    - interfaces, 114
+    - notification, 132
+    - Visual Basic, 129, 136
+- **Event Viewer utility**, 252-253, 508
+- **EventClassID method** (*IEventSubscription interface*), 712
+- **events**, 170
+    - broadcasters, 704
+    - capturing. *See* event sinks
+    - classes
+        - advanced properties, 707
+        - registering, 705-707
+        - type library, 707
+    - communication between components, 696
+    - distribution, 67
+    - Event Service definition, 702
+    - filtering, 717
+        - administratively, 717-718
+        - Boolean operators, 718
+        - programmatically, 719
+    - firing, 129, 702-703
+        - initializing (listing), 135
+    - loosely coupled, event notification, 700-701
+    - notification, 128, 132
+    - publisher catalog registration, 703
+    - receiving notification, 711
+    - sources, 128
+        - event notification, 132
+        - IDL (listing), 117
+        - importing type library, 121
+        - reporting, 130
+    - subscribers
+        - adding, 707-709
+        - catalog subscriptions, 703
+        - subscription interface, 712-713
+        - transient subscriptions, 713
+        - registering, 714-715
+        - unregistering, 715-717
+    - tightly coupled
+        - concurrent life times, 700
+        - event notification, 699-700
+        - noise filtering, 700
+        - too tight, 699
+    - triggers, 118, 131
+    - weaknesses
+        - datagrams, 704
+        - notification mechanisms, 704
+        - subscription mechanism, 703-704
+- **exceptions**, 354
+- **Exchange Server connector**, 673
+- **EXEC CICS LINK command**, 498
+- **executables**
+    - self-registering (listing), 328-329
+    - Visual Basic, 135
+- **Export Package dialog box**, 392
+- **export functions**, 267
+- **exporting**
+    - applications, 64, 749-750
+    - package definition (MTS), 391-392
+    - registration files (registry editors), 180
+- **external transactions**, 663-664. *See also* MS DTC
+
+## F
+
+- **facility**, 348
+- **FACILITY_ITF error codes**, 348
+- **FAILED() macro**, 349
+- **fat clients**, 376
+- **fault-tolerance**, 13
+- **file extensions (HKEY_CLASSES_ROOT key)**, 181-182
+- **File I/O**, 283
+- **file monikers**, 103, 106, 109
+- **file systems, storage**, 16
+- **filenames**, 98
+- **files**
+    - header, code to create, 257-258
+    - IDL, 457
+    - registration files, 180
+    - sharing, 390
+    - storing, 16
+    - structured storage, 69
+        - .dll, 621
+        - .dll, 624
+- **filtering**
+    - events, 717
+        - administratively, 717-718
+        - Boolean operators, 718
+        - programmatically, 719
+    - noise, 700
+- **FindConnectionPoint() function**, 116
+- **finding MSMQ queues**, 645-647
+- **fine granularity**, 520-521
+- **FireEvent() function**, 136
+- **firewalls**, 358
+    - CICS client configuration, 367
+    - port 135, 358
+- **FireEvent (function)**, 132
+- **firing**
+    - delayed events, 131
+    - events, 129, 702-703
+- **flags**, 193
+- **flawed designs**, 30
+- **flexibility (mainframes)**, 492
+- **for loops, commenting out**, 161
+- **format names**, 590
+    - buffers, 592
+    - destroying queues, 592
+    - looking up, 590
+    - queues, 581
+- **frameworks, registering COM+ servers**, 198-199
+- **Free Threaded Marshaler attribute**, 733-734
+- **free-threaded marshaler (FTM)**, 61
+- **free-threaded server model**
+    - concurrency issues, 162
+    - creating, 158
+    - defining
+        - __ATL_FREE_THREADED constant, 159
+    - objects, 161
+    - sleep calls, 161
+- **FromName parameter**, 746
+- **FTM (free-threaded marshaler)**, 61
+- **full controls**, 83
+- **functions**
+    - abort(), 658
+    - Accumulate(), 412

@@ -764,6 +764,7 @@
 +   [基于脑原理编程的决策认知架构](docs/cognitive-architecture-for-decision-making-based-on-brain-pr/README.md)
 +   [认知心理学：连接心智、研究与日常经验（第4版）](docs/cognitive-psychology-connecting-mind-research-and-everyday-e/README.md)
 +   [认知机器人](docs/cognitive-robotics/README.md)
++   [COM+ 完全指南](docs/com-unleashed/README.md)
 +   [组合地图：计算机图形学与图像处理的高效数据结构](docs/combinatorial-maps-efficient-data-structures-for-computer-gr/README.md)
 +   [动画师喜剧指南](docs/comedy-for-animators/README.md)
 +   [Autodesk Revit 2018 商业设计使用指南](docs/commercial-design-using-autodesk-revit-2018/README.md)

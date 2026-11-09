@@ -1,0 +1,29 @@
+level_changes:
+- line: 180
+  before: 3
+  after: 2
+- line: 13415
+  before: 3
+  after: 2
+- line: 13852
+  before: 3
+  after: 2
+- line: 17476
+  before: 3
+  after: 2
+text_changes:
+- line: 180
+  before: 章
+  after: 第1章
+- line: 11181
+  before: 第 5 章
+  after: 第 15 章
+- line: 13852
+  before: 第 7 章
+  after: 第 19 章
+- line: 14870
+  before: 第 2 章：优化 Windows DNA 应用程序
+  after: 第 21 章：优化 Windows DNA 应用程序
+- line: 19186
+  before: 人类情感的八个基本要素
+  after: I/O 完成端口

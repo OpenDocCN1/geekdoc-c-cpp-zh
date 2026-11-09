@@ -1,0 +1,14 @@
++   1. Assuming you're adding this component to a new (not an existing) COM+ Application, you would use the Component Services snap-in to create a new, empty COM+ Application. This application acts as a surrogate process for the COM component.
++   2. After creating the COM+ Application, you would mark the application itself as being queued. When you do that, Queued Components automatically creates for your application a queue of the same name as your chosen application name. This is the queue that will be used by MSMQ to route messages from the client to the application's component.
++   3. After you've marked the COM+ Application as being queued, you then add any number of COM components to that COM+ application.
++   4. Finally, for any of the COM+ component's interfaces that you want queued, you would simply go about manually selecting them from a list in Component Services and marking them as being queued. If any method in an interface you want to mark as queued is not unidirectional, Component Services will not allow you to mark the interface as queued. It's really an all-or-nothing proposition.
+
+That’s it on the server side. There’s absolutely nothing from a code perspective that you need to explicitly do in order to mark a component as queued.
+
+# The Client Side of Queued Components
+
+On the client side, things are even easier. In fact, the client doesn’t even know that the component it’s using is queued. Here’s how that works. In Visual C++, the client uses a function called ::CoGetObject (in Visual Basic, you would use GetObject) to retrieve a proxy for the opponent. Actually, what the client is receiving is a very special kind of Queued Component object called a Recorder object.
+
+However, the key point is that this Recorder object can be used in every way just as if the client had a reference to the actual server-side component. The advantage of this is that the client code doesn’t have to be written differently for a standalone versus a queued environment.
+
+Once the client acquires this Recorder object, it can call the methods of the desired server-side component. However, each time the client calls a method, the Recorder simply buffers the call. The data is not sent until the client deactivates the object (either by explicitly releasing the object or letting it go out of scope). The client simply calls the AddLineItem repeatedly to add each item the customer ordered, calls ProcessOrder to signify that the order is ready for processing, and then deactivates the object. Listing 27.1 shows how easy this is to code from a Visual Basic application. Once again, don’t worry too much about the specifics of the GetObject call because it will be explained in detail when you get to the demo section of this chapter.

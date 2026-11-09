@@ -1,0 +1,322 @@
+
+## 图 10.1
+
+启动 ATL COM AppWizard。
+
+![](img/112c2326f49d26b8d59aa054e14c5747_261_0.png)
+
+## 图 10.2
+
+ATL COM AppWizard。
+
+![](img/112c2326f49d26b8d59aa054e14c5747_261_1.png)
+
+该向导方便地让您选择 Service 作为服务器类型。选择 Service 后，单击 Finish 按钮，然后单击 OK；Developer Studio 将生成您的服务所需的全部代码。就是这样。这个简短的过程生成的代码，与您在本章前面各节中学到的所有代码类似。
+
+ATL COM AppWizard 生成大约十几个文件。大多数文件是构建 ATL 项目所需的典型样板代码，即预编译头、资源脚本等。其中一个生成的文件包含实现您的服务的代码。清单 10.8 显示了 ATL COM AppWizard 生成的实现示例。
+
+## 清单 10.8
+
+### ATL 服务样板代码
+
+```cpp
+// myatlservice.cpp : Implementation of WinMain
+
+// Note: Proxy/Stub Information
+//      To build a separate proxy/stub DLL,
+//      run nmake -f myatlserviceps.mk in the project directory.
+
+#include "stdafx.h"
+#include "resource.h"
+#include "initguid.h"
+#include "myatlservice.h"
+
+#include "myatlservice_i.c"
+
+#include <stdio.h>
+
+CServiceModule Module;
+
+BEGIN_OBJECT_MAP(ObjectMap)
+END_OBJECT_MAP()
+
+LPCSTR FindOneOf(LPCSTR p1, LPCSTR p2)
+{
+    while (p1 != NULL && *p1 != NULL)
+    {
+        LPCSTR p = p2;
+        while (p != NULL && *p != NULL)
+        {
+            if (*p1 == *p)
+                return CharNext(p1);
+            p = CharNext(p);
+        }
+        p1 = CharNext(p1);
+    }
+    return NULL;
+}
+
+// Although some of these functions are big they are declared inline
+// since they are only used once
+
+inline HRESULT CServiceModule::RegisterServer(BOOL bRegTypeLib,
+                                              BOOL bService)
+{
+    HRESULT hr = CoInitialize(NULL);
+    if (FAILED(hr))
+        return hr;
+
+    // Remove any previous service since it may point to
+    // the incorrect file
+    Uninstall();
+
+    // Add service entries
+    UpdateRegistryFromResource(IDR_Myatlservice, TRUE);
+
+    // Adjust the AppID for Local Server or Service
+    CRegKey keyAppID;
+    LONG lRes = keyAppID.Open(HKEY_CLASSES_ROOT, _T("AppID"), KEY_WRITE);
+    if (lRes != ERROR_SUCCESS)
+        return lRes;
+
+    CRegKey key;
+    lRes =
+        key.Open(keyAppID, _T("{1B51F632-99A5-11D2-BEC8-00C04F8B72E7}"),
+                 KEY_WRITE);
+    if (lRes != ERROR_SUCCESS)
+        return lRes;
+    key.DeleteValue(_T("LocalService"));
+
+    if (bService)
+    {
+        key.SetValue(_T("myatlservice"), _T("LocalService"));
+        key.SetValue(_T("Service"), _T("ServiceParameters"));
+        // Create service
+        Install();
+    }
+
+    // Add object entries
+    hr = CComModule::RegisterServer(bRegTypeLib);
+
+    CoUninitialize();
+    return hr;
+}
+
+inline HRESULT CServiceModule::UnregisterServer()
+{
+    HRESULT hr = CoInitialize(NULL);
+    if (FAILED(hr))
+        return hr;
+
+    // Remove service entries
+    UpdateRegistryFromResource(IDR_Myatlservice, FALSE);
+    // Remove service
+    Uninstall();
+    // Remove object entries
+    CComModule::UnregisterServer(TRUE);
+    CoUninitialize();
+    return S_OK;
+}
+
+inline void CServiceModule::Init(_ATL_OBJMAP_ENTRY *p, HINSTANCE h,
+                                 UINT nServiceNameID, const GUID* plibid)
+{
+    CComModule::Init(p, h, plibid);
+
+    m_bService = TRUE;
+
+    LoadString(h, nServiceNameID, m_szServiceName,
+        sizeof(m_szServiceName) / sizeof(TCHAR));
+
+    // set up the initial service status
+    m_hServiceStatus = NULL;
+    m_status.dwServiceType = SERVICE_WIN32_OWN_PROCESS;
+    m_status.dwCurrentState = SERVICE_STOPPED;
+    m_status.dwControlsAccepted = SERVICE_ACCEPT_STOP;
+    m_status.dwWin32ExitCode = 0;
+    m_status.dwServiceSpecificExitCode = 0;
+    m_status.dwCheckPoint = 0;
+    m_status.dwWaitHint = 0;
+}
+
+LONG CServiceModule::Unlock()
+{
+    LONG l = CComModule::Unlock();
+    if (l == 0 && m_bService)
+        PostThreadMessage(dwThreadID, WM_QUIT, 0, 0);
+    return l;
+}
+
+BOOL CServiceModule::IsInstalled()
+{
+    BOOL bResult = FALSE;
+
+    SC_HANDLE hSCM = ::OpenSCManager(NULL, NULL, SC_MANAGER_ALL_ACCESS);
+
+    if (hSCM != NULL)
+    {
+        SC_HANDLE hService = ::OpenService(hSCM, m_szServiceName,
+                                           SERVICE_QUERY_CONFIG);
+
+        if (hService != NULL)
+        {
+            bResult = TRUE;
+            ::CloseServiceHandle(hService);
+        }
+        ::CloseServiceHandle(hSCM);
+    }
+    return bResult;
+}
+
+inline BOOL CServiceModule::Install()
+{
+    if (IsInstalled())
+        return TRUE;
+
+    SC_HANDLE hSCM = ::OpenSCManager(NULL, NULL, SC_MANAGER_ALL_ACCESS);
+
+    if (hSCM == NULL)
+    {
+        MessageBox(NULL, _T("Couldn't open service manager"),
+                   m_szServiceName, MB_OK);
+        return FALSE;
+    }
+
+    // Get the executable file path
+    TCHAR szFilePath[_MAX_PATH];
+    ::GetModuleFileName(NULL, szFilePath, _MAX_PATH);
+
+    SC_HANDLE hService = ::CreateService(
+        hSCM, m_szServiceName, m_szServiceName,
+        SERVICE_ALL_ACCESS, SERVICE_WIN32_OWN_PROCESS,
+        SERVICE_DEMAND_START, SERVICE_ERROR_NORMAL,
+        szFilePath, NULL, NULL, _T("RPCSS\0"), NULL, NULL);
+
+    if (hService == NULL)
+    {
+        ::CloseServiceHandle(hSCM);
+        MessageBox(NULL, _T("Couldn't create service"), m_szServiceName,
+                   MB_OK);
+        return FALSE;
+    }
+
+    ::CloseServiceHandle(hService);
+    ::CloseServiceHandle(hSCM);
+    return TRUE;
+}
+
+inline BOOL CServiceModule::Uninstall()
+{
+    if (!IsInstalled())
+        return TRUE;
+
+    SC_HANDLE hSCM = ::OpenSCManager(NULL, NULL, SC_MANAGER_ALL_ACCESS);
+
+    if (hSCM == NULL)
+    {
+        MessageBox(NULL, _T("Couldn't open service manager"),
+                   m_szServiceName, MB_OK);
+        return FALSE;
+    }
+
+    SC_HANDLE hService = ::OpenService(hSCM, m_szServiceName,
+        SERVICE_STOP | DELETE);
+
+    if (hService == NULL)
+    {
+        ::CloseServiceHandle(hSCM);
+        MessageBox(NULL, TEXT("Couldn't open service"), m_szServiceName,
+                   MB_OK);
+        return FALSE;
+    }
+    SERVICE_STATUS status;
+    ::ControlService(hService, SERVICE_CONTROL_STOP, &status);
+
+    BOOL bDelete = ::DeleteService(hService);
+    ::CloseServiceHandle(hService);
+    ::CloseServiceHandle(hSCM);
+
+    if (bDelete)
+        return TRUE;
+
+    MessageBox(NULL, TEXT("Service could not be deleted"), m_szServiceName,
+               MB_OK);
+    return FALSE;
+}
+
+///////////////////////////////////////////////////////////////////////
+// Logging functions
+void CServiceModule::LogEvent(LPCTSTR pFormat, ...)
+{
+    TCHAR    chMsg[256];
+    HANDLE   hEventSource;
+    LPTSTR   lpszStrings[1];
+    va_list  pArg;
+
+    va_start(pArg, pFormat);
+    _vstprintf(chMsg, pFormat, pArg);
+    va_end(pArg);
+
+    lpszStrings[0] = chMsg;
+
+    if (m_bService)
+    {
+        /* Get a handle to use with ReportEvent(). */
+        hEventSource = RegisterEventSource(NULL, m_szServiceName);
+        if (hEventSource != NULL)
+        {
+            /* Write to event log. */
+            ReportEvent(hEventSource, EVENTLOG_INFORMATION_TYPE, 0, 0,
+                        NULL, 1, 0, (LPCTSTR*) &lpszStrings[0], NULL);
+            DeregisterEventSource(hEventSource);
+        }
+    }
+    else
+    {
+        // As we are not running as a service, just write the error to
+        // the console.
+        _puts(chMsg);
+    }
+}
+
+/////////////////////////////////////////////////////////////////
+// Service startup and registration
+inline void CServiceModule::Start()
+{
+    SERVICE_TABLE_ENTRY st[] =
+    {
+        { (LPTSTR)m_szServiceName, _ServiceMain },
+        { NULL, NULL }
+    };
+    if (m_bService && !::StartServiceCtrlDispatcher(st))
+    {
+        m_bService = FALSE;
+    }
+    if (m_bService == FALSE)
+        Run();
+}
+
+inline void CServiceModule::ServiceMain(DWORD, LPTSTR*)
+{
+    // Register the control request handler
+    m_status.dwCurrentState = SERVICE_START_PENDING;
+    m_hServiceStatus = RegisterServiceCtrlHandler(m_szServiceName,
+                                                   _Handler);
+    if (m_hServiceStatus == NULL)
+    {
+        LogEvent(_T("Handler not installed"));
+        return;
+    }
+    SetServiceStatus(SERVICE_START_PENDING);
+
+    m_status.dwWin32ExitCode = S_OK;
+    m_status.dwCheckPoint = 0;
+    m_status.dwWaitHint = 0;
+
+    // When the Run function returns, the service has stopped.
+    Run();
+
+    SetServiceStatus(SERVICE_STOPPED);
+    LogEvent(_T("Service stopped"));
+}
+```

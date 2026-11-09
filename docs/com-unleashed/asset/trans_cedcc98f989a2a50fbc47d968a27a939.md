@@ -1,0 +1,358 @@
+
+- Activate(), 433-436
+- 添加，734-735
+- AddRef(), 431
+  - 调用，56
+- CanBePooled(), 433-434
+- ChangeServiceConfig(), 255
+- CloseEventLog(), 259
+- CloseHandle(), 229
+- CloseServiceHandle(), 253
+- CoCreateFreeThreadedMarshaler, 734
+- CoCreateInstance(), 216-217, 528-529, 670
+  - 信封，529-531
+  - 工作单元（负载平衡），519
+- CoCreateInstanceEx(), 217-218
+  - 信封，531
+  - 负载平衡问题，528-529
+  - OXID，528-529
+- CoGetClassObject(), 527-528
+- CoGetObject, 744
+- commit(), 658
+- COM/MTS 之间的冲突，57
+- ControlService(), 254
+- CObjects 类，352
+- CreateDesktop(), 229
+- CreateInstance()
+  - 访问 SPM，439
+  - COM+ 组件要求，430
+  - IObjectContext 接口，412-431, 441
+- CreateIncompletePort(), 687
+- CreatePropertyGroup(), 439
+- CreateService(), 255
+- CreateThread(), 145, 229
+- Deactivate(), 433-436
+- DeleteService(), 255
+- DeregisterEventSource(), 259
+- 描述，712
+- DisableCommit(), 433
+- DisplayMessage，735
+- DllCanUnloadNow(), 533
+- DllGetClassObject(), 431
+- DllMain(), 533
+- DllRegisterServer（Regsvr32 应用程序），195-197
+- DllRegisterServer(), 431
+- DllUnregisterServer 函数（Regsvr32 应用程序），195-197
+- DtcGetTransactionManager(), 664
+- EnableCommit(), 433
+- Enabled，712
+- EventClassID，712
+- 事件，属性限制，703
+- 格式名称查找，590
+- GetContextObject(), 431
+- GetMarshalSizeMax(), 530
+- GetObjectContext(), 670
+- GetQueuedCompletionStatus(), 687
+- ICancelMethodCalls 接口，70
+- IClientSecurity 接口，321
+- IEventSubscription 接口，712-713
+- IMoniker 接口，100-102, 370
+- IObjectContext 接口，432, 441, 447-448
+- IObjectControl 接口，433-434
+- IPersistStreamInit 接口，78, 83
+- IsCallerInRole(), 433
+- ISecurityProperty 接口，482
+- IsInTransaction(), 433
+- IsSecurityEnabled(), 433
+- IStream 接口，79
+- ITransactionContextEx 接口，456
+- MachineName，712
+- main(), 231-232
+- main() 入口，232
+- MarshalInterface(), 530-531
+- MethodName，712
+- MQBeginTransaction(), 657
+- MQBeginTransaction() 函数，661
+- MQGetMachineProperties(), 647
+- MQMailComposeBody(), 673
+- MQMailFreeMemory(), 674
+- MQMailParseBody(), 674
+- MQReceiveMessage()，事务，640, 657
+- MQSendMessage(), 660
+- MSMQEvent.Arrived(), 675
+- MSMQEvent.ArrivedError(), 675
+- NewDllMain(), 533-534
+- OpenEventLog(), 259
+- OpenSCManager(), 253-254
+- OpenService(), 253
+- 重写，83
+- OwnerSID，712
+- 重写，83
+- OwnerSID，712
+- PeekCurrent(), 643
+- PeekNext(), 643
+- PerfLib，712
+- PerfQuery(), 712
+- PostQueuedCompletionStatus(), 687
+- PublisherID，712
+- PublisherProperty，712
+- QueryServiceStatus(), 254
+- ReadEventLog(), 259
+- RegisterEventSource(), 259
+- RegisterTypeLib(), 192
+- Release(), 431
+- ReleaseMarshalData(), 531
+- RemoteActivate() RPC，210
+- ReportEvent(), 259
+- ReportEventLog(), 259
+- Reset(), 643
+- SafeArrayCreateVector(), 669
+- SafeArrayDestroy(), 669
+- SafeRef(), 431, 440-441
+- ServiceCtrlHandler(), 533
+- ServiceCtrlHandler(), 235-237
+- ServiceMain(), 235-237
+- SetAbort(), 433
+- SetComplete(), 433
+- SetThreadDesktop(), 229
+- 单线程服务器模型，155
+- StartService(), 253
+- StartServiceCtrlDispatcher(), 231-232
+- 结构化存储，70
+- SubscriberCLSID，712
+- SubscriberInterface，713
+- SubscriptionID，713
+- SubscriptionName，713
+- Sum(), 412
+- SwitchDesktop(), 229
+- 事务状态访问，670
+- UnmarshalInterface(), 530
+- WaitForMultipleObjects(), 686
+- WinMain(), 231-232
+- 工作线程，146
+- 使用安全描述符，300
+- 包装器，624
+
+## G
+
+- 一般访问权限，306
+- 一般组合（名字对象），110
+- GetClassID() 函数（IPersistStreamInit 接口），84
+- GetContextObject() 函数，431
+- GetDirectCallerSID() 函数（ISecurityProperty 接口），482
+- GetDirectCreatorSID() 函数（ISecurityProperty 接口），482
+- GetDisplayName() 函数（IMoniker 接口），102, 371
+- GetInterface() 函数，127
+- GetMarshalSizeMax() 函数，530
+- GetMessage() 函数，148
+- GetObjectContext() 函数（IObjectContext 接口），670
+- GetOriginalCallerSID() 函数（ISecurityProperty 接口），482
+- GetOriginalCreatorSID() 函数（ISecurityProperty 接口），483
+- GetQueuedCompletionStatus() 函数，687
+- GetTimeOfLastChange() 函数，102, 371
+- GetUnknown() 函数，127
+- 粒度（负载平衡），516, 520-521
+- 网格控件，128
+- 组（SPM），439-440
+- GUID
+  - 定义，606, 620
+  - 生成，607
+  - 接口，392
+  - 队列，582
+
+## H
+
+- 句柄，253-254
+- 快乐标志，399
+- 硬件灵活性，519
+- 哈希算法，575
+- Hash Algorithm 属性，694
+- Hash() 函数（Moniker 接口），101, 371
+- hashAlgorithm 参数，746
+- 头文件
+  - 创建头文件，257-258
+  - MQOA.H，606
+  - objbase.h，606
+- 堆内存，505
+- 帮助目录（TypeLib），193
+- 高位，348
+- HKEY_CLASSES_ROOT 键，181-193
+  - AppID，185-188
+  - 标识，188
+  - 服务器对象，188
+  - 权限，186
+  - 远程激活，187
+  - 远程进程内服务器，186
+  - 远程进程外服务器，186
+  - 安全描述符，186-187
+  - CLSID，188-191
+    - 位置，190-191
+    - 类型库，191
+  - 文件扩展名，181-182
+  - 接口，191-192
+  - ProgID，182-185
+    - CLSID，184
+      - 配置，182-184
+      - 依赖版本的 ProgID，184
+      - 不依赖版本的 ProgID，185
+  - TypeLib，192-193
+    - 标志，193
+    - 帮助目录，193
+    - RegisterTypeLib() 函数，192
+- HKEY_CLASSES_ROOT\CLSID 注册表，379
+- HKEY_LOCAL_MACHINE 键，193-195
+  - 默认权限，194
+  - EnableDCOM 值，194
+  - 旧版安全性，194-195
+  - 主机区域，16
+- HRESULT，347
+  - 宏，349
+  - 处理值的策略，349-350
+- HRESULT 返回值，461
+- HRESULT_CODE 宏，349
+- HRESULT_FACILITY() 宏，349
+- HRESULT_SEVERITY() 宏，349
+- HTML，9
+  - ASP，22
+  - 创作，17
+  - 在页面中嵌入远程对象的引用，369
+  - 作为目标平台，45
+- HTTP，283
+  - 缓存设备，368
+  - 代理配置，363
+  - 服务器，21
+- HTTP CONNECT 方法，359, 366
+
+## I
+
+- I/O
+  - 非阻塞，564
+  - 重叠，566
+  - 同步，565
+  - WinSock 网络，564
+- I/O 完成端口。参见 IOCP
+- I/O 重叠结构，676
+- ICancelMethodCalls 接口，70
+- IClassFactory 类，216-218
+- IClassFactory 接口，384
+  - 聚合继承，219
+  - COM+ 组件要求，430
+  - 安全性，320
+- IConnectionPoint 接口
+  - Advise() 函数，128
+  - 处理程序（列表），133-134
+  - Unadvise() 函数，128
+- **IConnectionPointContainerImpl 类**，117
+- **IContextObject 接口**，391
+- **ID Message 属性**，655
+- **标识符**
+  - CLSID，负载平衡，526-527
+  - OXID
+    - *CoCreateInstance()* 函数，529
+    - *CoCreateInstanceEx()* 函数，529
+- **身份验证**，342-343
+- **IDispatch 接口**，129, 382
+- **IDL（接口定义语言）**，266, 425
+  - C++Builder ActiveForm，139
+  - 编译，128
+  - 事件接收器对象，121
+  - 事件源
+    - 列表，117
+    - 新建，130
+  - 文件，457
+  - 保存到类型库，133
+  - Visual Basic ActiveX 控件，137
+- **IE（Internet Explorer）**，20
+- **IEnumConnectionPoints 接口**，116
+- **IErrorInfo 客户端**，353
+- **IEventSubscription 接口**，712-713
+- **IEventTrigger 接口**，128
+- **IID（接口标识符）**，115, 273
+- **IInteraction 接口（ATL 组件）**，733
+- **IIS（Internet Information Server）**，10, 21, 378
+  - Cisco 的 LocalDirector，368
+  - 配置，23
+  - 停止 Web 服务，365
+  - Visual InterDev，24
+- **IIS Admin 服务**，365
+- **非法状态**，427
+- **ILoadBalancingAlgorithm 接口**，532-534
+- **IMarshal 接口**，431
+  - 定义，282
+  - 对象服务器，285
+- **IMDB（内存数据库）**，15, 56, 68
+- **IMoniker 接口**，98, 370
+  - *BindToObject()* 函数，100
+  - *BindToStorage()* 函数，101
+  - *CommonPrefixWith()* 函数，102
+  - *ComposeWith()* 函数，101
+  - *Enum()* 函数，101
+  - *GetDisplayName()* 函数，102
+  - *GetTimeOfLastChange()* 函数，102
+  - *Hash()* 函数，101
+  - *IsEqual()* 函数，101
+  - *IsSystemMoniker()* 函数，102
+  - *Reduce()* 函数，101
+  - *RelativePathTo()* 函数，102
+- **模拟级别的模拟**，316
+- **模拟**
+  - 伪装，315-316
+  - 委托，319
+  - 委托级别，316
+  - 函数，318
+  - 级别，315, 333
+  - 远程访问客户端，315
+  - 远程服务器，315
+- **模拟委托**，313
+- **实现继承**，218
+  - 聚合类声明，219-224
+  - 聚合器类声明，220-221
+  - 聚合器类方法，调用，222-224
+  - *IClassFactory* 接口，219
+- **组件**，43
+  - 事件通知
+    - 松散耦合事件，700-701
+    - 轮询，698-699
+    - 紧密耦合事件，700-701
+- **IPersistStreamInit 接口**，83
+- **IROData 接口**，108
+  - 对象服务器，285
+  - *IServiceMain()* 函数，232-233
+- **#import 指令**，620-621
+- **#import 语句**，354
+- **导入**
+  - 包（MTS），393
+  - 注册文件（注册表编辑器），180
+  - 类型库（事件源），121
+- **IMS 事务**，452
+- **IMSMQueueInfo 接口**
+  - 参数，定义块，611, 622
+  - *Receive()* 函数，611
+- **IMyInterface 接口**，265, 285
+- **IMyInterface 对象**，268-271
+- **内存数据库（IMDB）**，15, 56, 69
+- **不确定事务**，468
+- **进程内服务器**，377
+  - 注册，195-197
+  - 指定，345
+  - 速度，203
+  - 代理进程，212-216
+  - 远程服务器的代理，345
+- **不兼容性（浏览器）**，48
+- **Inetpub 目录**，363
+- **继承**，218-224
+  - 聚合继承，219-224
+  - 聚合器类声明，219-220
+  - 聚合器类声明，220-221
+  - 聚合器类方法，调用，222-224
+  - *IClassFactory* 接口，219
+  - 实现继承，218
+  - 接口继承，218
+  - 软件可重用性问题，419
+- **INITGUID**，607
+- **InitNew() 函数**
+- **IPersistStreamInit（接口）**，77
+- **插入菜单**，83
+- **安装新组件对话框**，739
+- **安装选项对话框**，393
+
