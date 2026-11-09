@@ -1,0 +1,11 @@
+# # Ditch it
+
+Here's an opportunity for you to practise being a little bit ruthless. If you're not going to take advantage of a 'once in a lifetime chance to save a fortune on your dream holiday' offer when it comes through your door or into your email in-box, you're probably not going to be interested in it later in the day or week, so throw it away right now. The same goes for all those 'interesting' emails that arrive on your computer every day, and incoming phone calls that you're not really interested in. Extra reading and research is great and all very well if you have time and if the reading matter is relevant. You can quickly read emails as they arrive if they are important, or you can file them to be read at a time you allocate for this kind of work, but don't get sidetracked reading about the latest developments in ball bearing technology or a brand new offer from a manufacturer of Wellington boots if you have more important things to think about. Remove these distractions immediately.
+
+With telephone call interruptions, don't say you'll call the person back or, worse, ask them to call you back later. If you have time to deal with telephone issues, answer the call and deal with it. If you don't, manage your calls with your voicemail and either address each issue when you can focus on it properly or delete any unnecessarily distracting messages.
+
+# ## Delegate it
+
+When things crop up that are relevant to your aims, it doesn't necessarily follow that you have to be the one who follows a task through to completion. Considering what you can delegate is a useful exercise as it will show you how effective your systems, surroundings and support network are for achieving your objectives.
+
+A common response to the notion of delegating is 'But I don't have anyone to delegate any of my tasks to. There's only me.' Well, just because there may only be you right now doesn't mean that it will always be this way. One thing is for sure though, if you insist on trying to do everything without any help down the way, you run the risk of limiting your growth and your potential. It will always be just
