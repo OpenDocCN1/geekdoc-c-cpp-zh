@@ -1,0 +1,11 @@
+implementation is called because e refers to a Manager object. The result of this operation is shown in Figure 4-12.
+
+Note that if Employee's Lookup method had discovered that Joe was just an Employee and not a Manager, Lookup would have internally constructed an Employee object whose type object pointer member would have referred to the Employee type object, causing Employee's implementation of GetProgressReport to execute instead of Manager's implementation.
+
+![](bbox=[0.17, 0.19, 0.81, 0.52])
+
+# FIGURE 4-12 Employee's virtual instance GetProgressReport method is called, causing Manager's override of this method to execute.
+
+At this point, we have discussed the relationship between source code, IL, and JITted code. We have also discussed the thread's stack, arguments, local variables, and how these arguments and variables refer to objects on the managed heap. You also see how objects contain a pointer to their type object (containing the static fields and method table). We have also discussed how the JIT compiler determines how to call static methods, nonvirtual instance methods, and virtual instance methods. All of this should give you great insight into how the CLR works, and this insight should help you when architecting and implementing your types, components, and applications. Before ending this chapter, I'd like to give you just a little more insight as to what is going on inside the CLR.
+
+You'll notice that the Employee and Manager type objects both contain type object pointer members. This is because type objects are actually objects themselves. When the CLR creates type objects, the CLR must initialize these members. "To what?" you might ask. Well, when the CLR starts running in a process, it immediately creates a special type object for the System.Type type (defined in MSCorLib.dll). The Employee and Manager type objects are "instances" of this type, and therefore, their type object pointer members are initialized to refer to the System.Type type object, as shown in Figure 4-13.

@@ -1,0 +1,34 @@
+```
+~~~csharp
+// Decrement the recursion count. If this thread still owns the lock, just return
+if (--m_recursion > 0) return;
+
+m_owningThreadId = 0;   // No thread owns the lock now
+
+// If no other threads are waiting, just return
+if (Interlocked.Decrement(ref m_waiters) == 0)
+    return;
+
+// Other threads are waiting, wake 1 of them
+m_waiterLock.Set();     // Bad performance hit here
+}
+
+public void Dispose() { m_waiterLock.Dispose(); }
+}
+~~~
+```
+
+As you can see, adding extra behavior to the lock increases the number of fields it has, which increases its memory consumption. The code is also more complex, and this code must execute, which decreases the lock’s performance. In Chapter 29’s “Event Constructs” section, I compared the performance of incrementing an Int32 without any locking, with a primitive user-mode construct, and with a kernel-mode construct. I repeat the results of those performance tests here and I include the results of using the SimpleHybridLock and the AnotherHybridLock. The results are in fastest to slowest order.
+
+| Incrementing x: 8 | Fastest |
+| Incrementing x in M: 69 | -9x slower |
+| Incrementing x in SpinLock: 164 | -21x slower |
+| Incrementing x in SimpleHybridLock: 164 | -21x slower (similar to SpinLock) |
+| Incrementing x in AnotherHybridLock: 230 | -29x slower (due to ownership/recursion) |
+| Incrementing x in SimpleWaitLock: 8,854 | -1,107x slower |
+
+It is worth noting that the AnotherHybridLock hurts performance as compared to using the SimpleHybridLock. This is due to the additional logic and error checking required managing the thread ownership and recursion behaviors. As you see, every behavior added to a lock impacts its performance.
+
+# ## Hybrid Constructs in the Framework Class Library
+
+The FCL ships with many hybrid constructs that use fancy logic to keep your threads in user mode, improving your application’s performance. Some of these hybrid constructs also avoid creating the kernel-mode construct until the first time threads contend on the construct. If threads never contend on the construct, then your application avoids the performance hit of creating the object and also avoids allocating memory for the object. A number of the constructs also support the use of a CancellationToken (discussed in Chapter 27, “Compute-Bound Asynchronous Operations”) so that a thread can forcibly unblock other threads that might be waiting on the construct. In this section, I introduce you to these hybrid constructs.

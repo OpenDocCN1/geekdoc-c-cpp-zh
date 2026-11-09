@@ -1,0 +1,35 @@
+```
+```
+Write     = 0x0002,
+ReadWrite = Actions.Read | Actions.Write,
+Delete    = 0x0004,
+Query     = 0x0008,
+Sync      = 0x0010
+}
+```
+```
+
+Because Actions is an enumerated type, you can use all of the methods described in the previous section when working with bit-flag enumerated types. However, it would be nice if some of those functions behaved a little differently. For example, let's say you had the following code.
+
+```
+```
+Actions actions = Actions.Read | Actions.Delete;   // 0x0005
+Console.WriteLine(actions.ToString());              // "Read, Delete"
+```
+```
+
+When ToString is called, it attempts to translate the numeric value into its symbolic equivalent. The numeric value is 0x0005, which has no symbolic equivalent. However, the ToString method detects the existence of the [Flags] attribute on the Actions type, and ToString now treats the numeric value not as a single value but as a set of bit flags. Because the 0x0001 and 0x0004 bits are set, ToString generates the following string: "Read, Delete". If you remove the [Flags] attribute from the Actions type, ToString would return "5".
+
+I discussed the ToString method in the previous section, and I showed that it offered three ways to format the output: "G" (general), "D" (decimal), and "X" (hex). When you're formatting an instance of an enumerated type by using the general format, the type is first checked to see if the [Flags] attribute is applied to it. If this attribute is not applied, a symbol matching the numeric value is looked up and returned. If the [Flags] attribute is applied, ToString works like this:
+
++   1. The set of numeric values defined by the enumerated type is obtained, and the numbers are sorted in descending order.
++   
++   2. Each numeric value is bitwise-ANDed with the value in the enum instance, and if the result equals the numeric value, the string associated with the numeric value is appended to the output string, and the bits are considered accounted for and are turned off. This step is repeated until all numeric values have been checked or until the enum instance has all of its bits turned off.
++   
++   3. If, after all the numeric values have been checked, the enum instance is still not 0, the enum instance has some bits turned on that do not correspond to any defined symbols. In this case, ToString returns the original number in the enum instance as a string.
++   
++   4. If the enum instance's original value wasn't 0, the string with the comma-separated set of symbols is returned.
++   
++   5. If the enum instance's original value was 0 and if the enumerated type has a symbol defined with a corresponding value of 0, the symbol is returned.
++   
++   6. If we reach this step, "0" is returned.

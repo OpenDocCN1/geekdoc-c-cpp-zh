@@ -1,0 +1,264 @@
+
+- stack space, 102
+  - checking for, 489
+- stack trace, 461, 462
+  - complete, 462
+  - constructing, 462
+  - interpreting, 463
+- StackTrace property, 461
+- Start method (Thread class), 679
+- StartNew method, 710
+- StartsWith method, comparing strings, 325
+- startup time, improving, 19, 21
+- starvation, thread, 684
+- state corruption
+  - destroying, 476
+  - exception handling and, 474
+  - FailFast method, 480
+  - managed code and, 477
+  - mitigating, 475
+  - terminating process for, 477
+- state machines, returning threading model, 749
+- stateless encoding and decoding, 356
+- statements, checked and unchecked, 116
+- static classes, 158
+- static constructors. See type constructors
+  - defining on generic types, 273
+- static events, 152
+- static fields, 177
+  - defining, 178
+  - initializing, 189
+  - memory leaks and, 510
+- static members
+  - interfaces and, 297
+  - MarshalByRefObject class and, 567
+- static methods
+  - for arrays, 380
+  - calling, 106
+  - calling back, with delegates, 394
+  - calling operator overload methods with, 194
+  - for Char type, 318
+  - extension attribute, 203
+  - Finalize method and, 526
+  - for Int32 variables, 768
+  - thread safety, 759, 760
+  - volatile keyword, 767
+- StaticDelegateDemo method, 394
+- Stop method (Parallel class), 716
+- streaming contexts for serialization, 631
+- StreamReader type, 350
+- streams, 656
+- StreamWriter type, 350, 537
+  - finalization and, 538
+- String class
+  - hash table, accessing, 330
+  - methods, 338
+  - sealed, 323
+  - string interning, 329
+- String objects. See strings
+  - immutability of, 569
+- String type, 112, 320
+  - constructing, 320
+  - interfaces and, 300
+  - method overloads defined by, 325
+  - as primitive type, 320
+- StringBuilder class, 198, 345
+  - creating objects, 336
+  - members, 337
+  - methods, 338
+- StringBuilder type, 336
+- StringComparer class, 329
+- StringComparison type, 324
+- StringInfo, 333
+- strings
+  - base-64 encoding/decoding, 356
+  - changing case of characters in, 325
+  - character arrays, 337
+  - characters, examining, 333
+  - cloning, 335
+  - comparing, 323
+  - concatenating, 322
+  - constructing, 320
+  - constructing efficiently, 336
+  - converting to bytes, 353
+  - converting Unicode to MBCS, 350
+  - copying, 335
+  - custom formatter, 345
+  - date formatting, 341
+  - deleting securely, 358
+  - encodings, 350
+
+- creation flags for, 701
+- CurrentId property, 708
+  - disposing of, 708
+  - factory for, 709
+  - Int32 fields in, 708
+  - statuses of, 708
+- Status property, querying, 708
+- supplementary state, 707
+- WaitingForActivation state, 709
+- TaskFactory type, 709, 710
+- TaskLogger class, 738
+- tasks, 700
+  - arrays of, 710
+  - canceling, 704
+    - CancellationToken objects, associating with, 705
+  - child tasks, 707
+    - composition of, 707
+    - constructors and, 701
+    - creation options, 701
+    - deadlock situations, 702
+    - delaying, 722
+    - delegates, passing, 715
+    - exceptions, detecting, 703
+    - exceptions thrown by, 704
+    - performance issues and, 708
+    - reader/writer semantics, 815
+    - returning void with, 709
+    - scheduling to run, 701
+    - starting automatically on other task completion, 705
+    - state, 707
+    - supplementary state, 707
+  - synchronization context task schedulers, 711
+  - task factories, 709
+  - task schedulers, 711, 712
+  - vs. thread synchronization, 807
+  - unhandled exceptions thrown by, 702
+  - unique IDs for, 708
+  - waiting for completion, 702
+- Tasks namespace, 651, 700, 709
+- TaskScheduler objects, 711
+- TaskScheduler type, defining classes derived from, 712
+- TEB (thread environment block), 671
+- temporary variables, 284
+
+- terminated applications, viewing in Reliability Monitor, 487
+- terminating process, 477, 574
+- text elements. See also characters
+  - examining in strings, 333
+- TextElementEnumerator method, 333
+- thread blocking, I/O operations and, 731
+- Thread class, 678
+- thread environment block (TEB), 671
+- thread kernel objects, 671
+- thread locks, asynchronous functions and, 734
+- thread pools, 692
+  - calling methods asynchronously, 693
+  - child tasks, 707
+  - continuing tasks in, 705, 707
+  - deadlock situations, 724
+  - delaying tasks, 722
+  - execution contexts, 695
+  - function of, 692
+  - heuristic nature of, 692
+  - limiting number of threads in, 724
+  - loop state management, 716
+  - parallel performance of, 713
+  - parallel processing, exceptions thrown when, 716
+  - performance and, 692
+  - processing order, 725
+  - queuing in, 693
+  - scheduling method calls, 720
+  - scheduling tasks in, 712
+  - security settings and, 694
+  - sequential method execution, 713
+  - thread management in, 723
+  - thread synchronization locks and, 725
+  - worker thread management, 724
+  - work items in, 693
+- thread prioritization, 754
+- thread-safe
+  - collection classes, 818
+  - queues, 813
+- thread safety, 759
+- thread synchronization
+  - async functions and, 757
+  - asynchronous, 814
+  - auto-reset events and, 782
+  - avoiding, 759
+  - blocking, avoiding, 805
+  - blocking countdown, 804
+  - class libraries and, 759
+  - condition variable pattern, 811
+  - constructs, 805
+  - double-check locking, 807
+  - drawbacks of, 757
+  - exception handling and, 476
+  - hybrid, 790
+  - hybrid constructs. See hybrid constructs
+  - livelocks and deadlocks, 761
+  - lock, 189, 799
+  - locks, 476, 725
+  - lock scalability issues, 814
+  - m_opCount field, 772
+  - Mutex objects, 786
+  - parallel execution, 805
+  - performance issues, 758
+  - primitive constructs, 760
+  - priority boosting, disabling, 774
+  - private locks, 797
+  - properties and, 233
+  - reader-writer locks, 801, 804
+  - recursive locks, 786
+  - recursive locks, avoiding, 806
+  - specifying synchronization object, 811
+  - spin lock addition logic, 774
+  - spin locks, 773
+  - tasks vs., 807
+  - yielding threads when, 775
+- ThreadAbortException exception, 580
+- ThreadException event, 488
+- threading models, 748
+- Threading namespace, 695, 720, 778
+  - DispatcherTimer class, 723
+  - Timer class, 723
+- ThreadPerTaskScheduler, 713
+- ThreadPool class, 693
+  - for Windows Store apps, 694
+- threads, 102
+  - in 16-bit Windows, 669
+  - aborting, 578, 679
+  - allocating local variables, 105
+  - asynchronous compute-bound operations
+    - with, 678
+  - avoiding, 674
+  - blocking, avoiding, 705
+  - caching of, 673
+  - CLR and Windows interoperability, 678
+  - constructors for, 679
+  - contexts, 671
+  - context structures, 683
+  - context switching, 672, 673, 683
+  - creating, vs. creating processes, 675
+  - debuggers and, 673
+  - dedicated, 679
+  - defined, 670
+  - DLL thread-attach/thread-detach notifications, 671
+  - early implementation of, 669
+  - ending early, 673
+  - execution contexts, 694, 695
+  - forcibly killing, 670
+  - foreground, 679
+  - foreground vs. background, 688
+  - garbage collection and, 673
+  - gracefully aborting, 577
+  - High priority class, 685
+  - Idle priority class, 685
+  - Idle priority level, 687
+  - inefficient memory allocation and, 676
+  - kernel-mode stacks, 671
+  - labeling, avoiding, 806
+  - lowering priority, 687
+  - minimizing number of, 676
+  - number per process, 674
+  - overhead, 670
+  - performance issues, 674, 681
+  - prioritizing, 684, 685, 688
+  - priority levels, mapping, 686
+  - priority, non-normal, 679
+  - properties, viewing, 683
+  - Realtime priority class, 685
+  - reasons for using, 681
+  - relative priorities, 685
+  - responsiveness of, 681
+  - safe places, 580

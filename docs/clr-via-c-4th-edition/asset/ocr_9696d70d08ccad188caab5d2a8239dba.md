@@ -1,0 +1,9 @@
+# Rules and Guidelines
+
+There are some additional rules and guidelines that you should know about partial methods:
+
++   - They can only be declared within a partial class or struct.
++   - Partial methods must always have a return type of `void`, and they cannot have any parameters marked with the `out` modifier. These restrictions are in place because at run time, the method may not exist and so you can't initialize a variable to what the method might return because the method might not exist. Similarly, you can't have an `out` parameter because the method would have to initialize it and the method might not exist. A partial method may have `ref` parameters, may be generic, may be instance or static, and may be marked as `unsafe`.
++   - Of course, the defining partial method declaration and the implementing partial method declaration must have identical signatures. If both have custom attributes applied to them, then the compiler combines both methods' attributes together. Any attributes applied to a parameter are also combined.
++   - If there is no implementing partial method declaration, then you cannot have any code that attempts to create a delegate that refers to the partial method. Again, the reason is that the method doesn't exist at run time. The compiler produces this message: `error CS0762: Cannot create delegate from method 'Base.OnNameChanging(String)' because it is a partial method without an implementing declaration.`
++   - Partial methods are always considered to be private methods. However, the C# compiler forbids you from putting the `private` keyword before the partial method declaration.

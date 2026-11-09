@@ -1,0 +1,14 @@
+# PART II
+
+# Designing Types
+
++   - CHAPTER 4 Type Fundamentals ........ 91
++   - CHAPTER 5 Primitive, Reference, and Value Types ........ 111
++   - CHAPTER 6 Type and Member Basics ........ 151
++   - CHAPTER 7 Constants and Fields ........ 175
++   - CHAPTER 8 Methods ........ 181
++   - CHAPTER 9 Parameters ........ 209
++   - CHAPTER 10 Properties ........ 227
++   - CHAPTER 11 Events ........ 249
++   - CHAPTER 12 Generics ........ 265
++   - CHAPTER 13 Interfaces ........ 295

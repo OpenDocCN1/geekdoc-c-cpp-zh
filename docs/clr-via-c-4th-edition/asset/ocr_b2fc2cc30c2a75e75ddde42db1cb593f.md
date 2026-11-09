@@ -1,0 +1,40 @@
+run-time handle instance and vice versa. Fortunately, this is easy using the following conversion meth- ods and properties:
+
++   * To convert a Type object to a RuntimeTypeHandle, call Type’s static GetTypeHandle method passing in the reference to the Type object.
++   * To convert a RuntimeTypeHandle to a Type object, call Type’s static GetTypeFromHandle method passing in the RuntimeTypeHandle.
++   * To convert a FieldInfo object to a RuntimeFieldHandle, query FieldInfo’s instance read-only FieldHandle property.
++   * To convert a RuntimeFieldHandle to a FieldInfo object, call FieldInfo’s static Get- FieldFromHandle method.
++   * To convert a MethodInfo object to a RuntimeMethodHandle, query MethodInfo’s instance read-only MethodHandle property.
++   * To convert a RuntimeMethodHandle to a MethodInfo object, call MethodInfo’s static Get- MethodFromHandle method.
+
+The following program sample acquires a lot of MethodInfo objects, converts them to Runtime- MethodHandle instances, and shows the working set difference.
+
+```
+```csharp
+using System;
+using System.Reflection;
+using System.Collections.Generic;
+
+public sealed class Program {
+    private const BindingFlags c_bf = BindingFlags.FlattenHierarchy | BindingFlags.Instance |
+        BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic;
+
+    public static void Main() {
+        // Show size of heap before doing any reflection stuff
+        Show("Before doing anything");
+
+        // Build cache of MethodInfo objects for all methods in MSCorlib.dll
+        List<MethodBase> methodInfos = new List<MethodBase>();
+        foreach (Type t in typeof(Object).Assembly.GetExportedTypes()) {
+            // Skip over any generic types
+            if (t.IsGenericTypeDefinition) continue;
+
+            MethodBase[] mb = t.GetMethods(c_bf);
+            methodInfos.AddRange(mb);
+        }
+
+        // Show number of methods and size of heap after binding to all methods
+        Console.WriteLine("# of methods={0:N0}", methodInfos.Count);
+        Show("After building cache of MethodInfo objects");
+```
+```

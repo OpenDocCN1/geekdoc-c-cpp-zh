@@ -1,0 +1,32 @@
+> > **Important** I know that this can be very confusing, so let me summarize it as a simple rule. When threads are communicating with each other via shared memory, write the last value by calling Volatile.Write and read the first value by calling Volatile.Read.
+
+So now we can fix the ThreadsSharingData class by using these methods.
+
+```
+~~~csharp
+internal sealed class ThreadsSharingData {
+    private Int32 m_flag = 0;
+    private Int32 m_value = 0;
+
+    // This method is executed by one thread
+    public void Thread1() {
+        // Note: 5 must be written to m_value before 1 is written to m_flag
+        m_value = 5;
+        Volatile.Write(ref m_flag, 1);
+    }
+
+    // This method is executed by another thread
+    public void Thread2() {
+        // Note: m_value must be read after m_flag is read
+        if (Volatile.Read(ref m_flag) == 1)
+            Console.WriteLine(m_value);
+    }
+}
+~~~
+```
+
+First, notice that we are following the rule. The Thread1 method writes two values out to fields that are shared by multiple threads. The last value that we want written (setting m_flag to 1) is performed by calling Volatile.Write. The Thread2 method reads two values from fields shared by multiple threads, and the first value being read (m_flag) is performed by calling Volatile.Read.
+
+But what is really happening here? Well, for the Thread1 method, the Volatile.Write call ensures that all the writes above it are completed before a 1 is written to m_flag. Because m_value = 5 is before the call to Volatile.Write, it must complete first. In fact, if there were many variables being modified before the call to Volatile.Write, they would all have to complete before 1 is written to m_flag. Note that the writes before the call to Volatile.Write can be optimized to execute in any order; it's just that all the writes have to complete before the call to Volatile.Write.
+
+For the Thread2 method, the Volatile.Read call ensures that all variable reads after it start after the value in m_flag has been read. Because reading m_value is after the call to Volatile.Read, the value must be read after having read the value in m_flag. If there were many reads after the call to Volatile.Read, they would all have to start after the value in m_flag has been read. Note that the reads after the call to Volatile.Read can be optimized to execute in any order; it's just that the reads can't start happening until after the call to Volatile.Read.

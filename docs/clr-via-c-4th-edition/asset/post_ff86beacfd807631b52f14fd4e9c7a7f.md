@@ -1,0 +1,119 @@
+
+HideScheduler—are identical to the flags offered by the TaskCreationOptions enumerated type shown earlier. Here is what the TaskContinuationOptions type looks like.
+
+```csharp
+[Flags, Serializable]
+public enum TaskContinuationOptions {
+    None                    = 0x0000, // The default
+
+    // Hints to the TaskScheduler that you want this task to run sooner than later.
+    PreferFairness          = 0x0001,
+
+    // Hints to the TaskScheduler that it should more aggressively create thread pool threads.
+    LongRunning             = 0x0002,
+
+    // Always honored: Associates a Task with its parent Task (discussed shortly)
+    AttachedToParent        = 0x0004,
+
+    // If a task attempts to attach to this parent task, an InvalidOperationException is thrown.
+    DenyChildAttach         = 0x0008,
+
+    // Forces child tasks to use the default scheduler as opposed to the parent's scheduler.
+    HideScheduler           = 0x0010,
+
+    // Prevents completion of the continuation until the antecedent has completed.
+    LazyCancellation        = 0x0020,
+
+    // This flag indicates that you want the thread that executed the first task to also
+    // execute the ContinueWith task. If the first task has already completed, then the
+    // thread calling ContinueWith will execute the ContinueWith task.
+    ExecuteSynchronously    = 0x80000,
+
+    // These flags indicate under what circumstances to run the ContinueWith task
+    NotOnRanToCompletion    = 0x10000,
+    NotOnFaulted            = 0x20000,
+    NotOnCanceled           = 0x40000,
+
+    // These flags are convenient combinations of the above three flags
+    OnlyOnCanceled          = NotOnRanToCompletion | NotOnFaulted,
+    OnlyOnFaulted           = NotOnRanToCompletion | NotOnCanceled,
+    OnlyOnRanToCompletion   = NotOnFaulted       | NotOnCanceled,
+}
+```
+
+When you call ContinueWith, you can indicate that you want the new task to execute only if the first task is canceled by specifying the TaskContinuationOptions.OnlyOnCanceled flag. Similarly, you have the new task execute only if the first task throws an unhandled exception using the TaskContinuationOptions.OnlyOnFaulted flag. And, of course, you can use the TaskContinuationOptions.OnlyOnRanToCompletion flag to have the new task execute only if the first task runs all the way to completion without being canceled or throwing an unhandled exception. By default, if you do not specify any of these flags, then the new task will run regardless of how the first task completes. When a Task completes, any of its continue-with tasks that do not run are automatically canceled. Here is an example that puts all of this together.
+
+```csharp
+// Create and start a Task, continue with multiple other tasks
+Task<Int32> t = Task.Run(() => Sum(10000));
+// Each ContinueWith returns a Task but you usually don't care
+
+t.ContinueWith(task => Console.WriteLine("The sum is: " + task.Result),
+    TaskContinuationOptions.OnlyOnRanToCompletion);
+
+t.ContinueWith(task => Console.WriteLine("Sum threw: " + task.Exception.InnerException),
+    TaskContinuationOptions.OnlyOnFaulted);
+
+t.ContinueWith(task => Console.WriteLine("Sum was canceled"),
+    TaskContinuationOptions.OnlyOnCanceled);
+```
+
+### A Task May Start Child Tasks
+
+Finally, tasks support parent/child relationships, as demonstrated by the following code.
+
+```csharp
+Task<Int32[]> parent = new Task<Int32[]>(() => {
+    var results = new Int32[3];   // Create an array for the results
+
+    // This task creates and starts 3 child tasks
+    new Task(() => results[0] = Sum(10000), TaskCreationOptions.AttachedToParent).Start();
+    new Task(() => results[1] = Sum(20000), TaskCreationOptions.AttachedToParent).Start();
+    new Task(() => results[2] = Sum(30000), TaskCreationOptions.AttachedToParent).Start();
+
+    // Returns a reference to the array (even though the elements may not be initialized yet)
+    return results;
+});
+
+// When the parent and its children have run to completion, display the results
+var cwt = parent.ContinueWith(
+    parentTask => Array.ForEach(parentTask.Result, Console.WriteLine));
+
+// Start the parent Task so it can start its children
+parent.Start();
+```
+
+Here, the parent task creates and starts three Task objects. By default, Task objects created by another task are top-level tasks that have no relationship to the task that creates them. However, the TaskCreationOptions.AttachedToParent flag associates a Task with the Task that creates it so that the creating task is not considered finished until all its children (and grandchildren) have finished running. When creating a Task by calling the ContinueWith method, you can make the continue-with task be a child by specifying the TaskContinuationOptions.AttachedToParent flag.
+
+### Inside a Task
+
+Each Task object has a set of fields that make up the task's state. There is an Int32 ID (see Task's read-only Id property), an Int32 representing the execution state of the Task, a reference to the parent task, a reference to the TaskScheduler specified when the Task was created, a reference to the callback method, a reference to the object that is to be passed to the callback method (queryable via Task's read-only AsyncState property), a reference to an ExecutionContext, and a reference to a ManualResetEventSlim object. In addition, each Task object has a reference to some supplementary state that is created on demand. The supplementary state includes a CancellationToken, a collection of ContinueWithTask objects, a collection of Task objects for child tasks that have thrown unhandled exceptions, and more. My point is that although tasks provide you a lot of features, there is some cost to tasks because memory must be allocated for all this state. If you don’t need the additional features offered by tasks, then your program will use resources more efficiently if you use ThreadPool.QueueUserWorkItem.
+
+The Task and Task<TResult> classes implement the IDisposable interface, allowing you to call Dispose when you are done with the Task object. Today, all the Dispose method does is close the ManualResetEventSlim object. However, it is possible to define classes derived from Task and Task<TResult>, and these classes could allocate their own resources, which would be freed in their override of the Dispose method. I recommend that developers not explicitly call Dispose on a Task object in their code; instead, just let the garbage collector clean up any resources when it determines that they are no longer in use.
+
+You’ll notice that each Task object contains an Int32 field representing a Task’s unique ID. When you create a Task object, the field is initialized to zero. Then the first time you query Task’s read-only Id property, the property assigns a unique Int32 value to this field and returns it from the property. Task IDs start at 1 and increment by 1 as each ID is assigned. Just looking at a Task object in the Microsoft Visual Studio debugger will cause the debugger to display the Task’s ID, forcing the Task to be assigned an ID.
+
+The idea behind the ID is that each Task can be identified by a unique value. In fact, Visual Studio shows you these task IDs in its Parallel Tasks and Parallel Stacks windows. But because you don’t assign the IDs yourself in your code, it is practically impossible to correlate an ID number with what your code is doing. While running a task’s code, you can query Task’s static CurrentId property, which returns a nullable Int32 (Int32?). You can also call this from Visual Studio’s Watch window or Immediate window while debugging to get the ID for the code that you are currently stepping through. Then you can find your task in the Parallel Tasks/Stacks windows. If you query the CurrentId property while a task is not executing, it returns null.
+
+During a Task object’s existence, you can learn where it is in its lifecycle by querying Task’s read-only Status property. This property returns a TaskStatus value that is defined as follows.
+
+```csharp
+public enum TaskStatus {
+    // These flags indicate the state of a Task during its lifetime:
+    Created,            // Task created explicitly; you can manually Start() this task
+    WaitingForActivation, // Task created implicitly; it starts automatically
+
+    WaitingToRun,   // The task was scheduled but isn't running yet
+    Running,        // The task is actually running
+
+    // The task is waiting for children to complete before it considers itself complete
+    WaitingForChildrenToComplete,
+
+    // A task's final state is one of these:
+    RanToCompletion,
+    Canceled,
+    Faulted
+}
+```
+
+When you first construct a Task object, its status is Created. Later, when the task is started, its status changes to WaitingToRun. When the Task is actually running on a thread, its status changes

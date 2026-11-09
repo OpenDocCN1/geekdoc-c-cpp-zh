@@ -1,0 +1,16 @@
+| Version Resource | AL.exe Switch | Custom Attribute/Comment |
+| --- | --- | --- |
+| InternalName | /out | Set to the name of the output file specified (without the extension). |
+| LegalCopyright | /copyright | System.Reflection.AssemblyCopyrightAttribute. |
+| LegalTrademarks | /trademark | System.Reflection.AssemblyTrademarkAttribute. |
+| OriginalFilename | /out | Set to the name of the output file (without a path). |
+| PrivateBuild | (none) | Always blank. |
+| ProductName | /product | System.Reflection.AssemblyProductAttribute. |
+| ProductVersion | /productversion | System.Reflection.AssemblyInformationalVersionAttribute. |
+| SpecialBuild | (none) | Always blank. |
+
+> > **Important** When you create a new C# project in Visual Studio, an AssemblyInfo.cs file is created automatically for you in a Properties folder. This file contains all of the assembly version attributes described in this section, plus a few additional attributes that I'll cover in Chapter 3. You can simply open the AssemblyInfo.cs file and modify your assembly-specific information. Visual Studio also provides a dialog box that you can use to edit the assembly version information in this file. To see this dialog box, in Solution Explorer, double-click your project's Properties entry, and on the Application tab, click Assembly Information; you'll see a dialog box like the one shown in Figure 2-5.
+
+![](bbox=[0.19, 0.57, 0.54, 0.8])
+
+FIGURE 2-5 Visual Studio's Assembly Information dialog box.

@@ -1,0 +1,37 @@
+> > **Note** Although you can set a SerializationInfo's FullTypeName and AssemblyName properties, this is discouraged. If you want to change the type that is being serialized, it is recommended that you call SerializationInfo's SetType method, passing a reference to the desired Type object. Calling SetType ensures that the type's full name and defining assembly are set correctly. An example of calling SetType is shown in the "Serializing a Type As a Different Type and Deserializing an Object As a Different Object" section later in this chapter.
+
+After the SerializationInfo object is constructed and initialized, the formatter calls the type's GetObjectData method, passing it the reference to the SerializationInfo object. The GetObjectData method is responsible for determining what information is necessary to serialize the object and adding this information to the SerializationInfo object. GetObjectData indicates what information to serialize by calling one of the many overloaded AddValue methods provided by the SerializationInfo type. AddValue is called once for each piece of data that you want to add.
+
+The following code shows an approximation of how the Dictionary<TKey, TValue> type implements the ISerializable and IDeserializationCallback interfaces to take control over the serialization and deserialization of its objects.
+
+```
+```csharp
+[Serializable]
+public class Dictionary<TKey, TValue>: ISerializable, IDeserializationCallback {
+    // Private fields go here (not shown)
+
+    private SerializationInfo m_siInfo; // Only used for deserialization
+
+    // Special constructor (required by ISerializable) to control deserialization
+    [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
+    protected Dictionary(SerializationInfo info, StreamingContext context) {
+        // During deserialization, save the SerializationInfo for OnDeserialization
+        m_siInfo = info;
+    }
+
+    // Method to control serialization
+    [SecurityCritical]
+    public virtual void GetObjectData(SerializationInfo info, StreamingContext context) {
+
+        info.AddValue("Version", m_version);
+        info.AddValue("Comparer", m_comparer, typeof(IEqualityComparer<TKey>));
+        info.AddValue("HashSize", (m_buckets == null) ? 0 : m_buckets.Length);
+        if (m_buckets != null) {
+            KeyValuePair<TKey, TValue>[] array = new KeyValuePair<TKey, TValue>[Count];
+            CopyTo(array, 0);
+            info.AddValue("KeyValuePairs", array, typeof(KeyValuePair<TKey, TValue>[]));
+        }
+    }
+}
+```
+```

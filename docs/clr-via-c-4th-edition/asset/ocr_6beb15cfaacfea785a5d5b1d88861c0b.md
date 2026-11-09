@@ -1,0 +1,16 @@
+Because MemberInfo is the root of the member hierarchy, it makes sense for us to discuss it a bit more. Table 23-1 shows several read-only properties and methods offered by the MemberInfo class. These properties and methods are common to all members of a type. Don't forget that System.TypeInfo is derived from MemberInfo, and therefore, TypeInfo also offers all of the properties shown in Table 23-1.
+
+# TABLE 23-1 Properties and Methods Common to All MemberInfo-Derived Types
+
+| Member Name | Member Type | Description |
+| --- | --- | --- |
+| Name | String property | Returns the name of the member. |
+| DeclaringType | Type property | Returns the Type that declares the member. |
+| Module | Module property | Returns the Module that declares the member. |
+| CustomAttributes | Property returning `IEnumerable<Custom-AttributeData>` | Returns a collection in which each element identifies an instance of a custom attribute applied to this member. Custom attributes can be applied to any member. Even though Assembly does not derive from MemberInfo, it provides the same property that can be used with assemblies. |
+
+Each element of the collection returned by querying DeclaredMembers is a reference to one of the concrete types in the hierarchy. Although TypeInfo's DeclaredMembers property returns all of the type's members, TypeInfo also offers methods that return specific member types for a specified string name. For example, TypeInfo offers GetDeclaredNestedType, GetDeclaredField, GetDeclaredMethod, GetDeclaredProperty, and GetDeclaredEvent. These methods all return a reference to a TypeInfo object, FieldInfo object, MethodInfo object, PropertyInfo object, or EventInfo object, respectively. There is also a GetDeclaredMethods method that returns a collection of MethodInfo objects describing the methods matching the specified string name.
+
+Figure 23-2 summarizes the types used by an application to walk reflection's object model. From an AppDomain, you can discover the assemblies loaded into it. From an assembly, you can discover the modules that make it up. From an assembly or a module, you can discover the types that it defines. From a type, you can discover its nested types, fields, constructors, methods, properties, and events. Namespaces are not part of this hierarchy because they are simply syntactical gatherings of types. If you want to list all of the namespaces defined in an assembly, you need to enumerate all of the types in this assembly and take a look at their Namespace property.
+
+From a type, it is also possible to discover the interfaces it implements. And from a constructor, method, property accessor method, or event add/remove method, you can call the GetParameters method to obtain an array of ParameterInfo objects, which tells you the types of the member's parameters. You can also query the read-only ReturnParameter property to get a ParameterInfo object for detailed information about a member's return type. For a generic type or method, you can call the GetGenericArguments method to get the set of type parameters. Finally, for any of these items, you can query the CustomAttributes property to obtain the set of custom attributes applied to them.

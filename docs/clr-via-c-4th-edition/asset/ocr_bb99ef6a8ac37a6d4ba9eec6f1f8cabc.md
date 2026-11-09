@@ -1,0 +1,22 @@
+# Surrogate Selector Chains
+
+Multiple SurrogateSelector objects can be chained together. For example, you could have a SurrogateSelector that maintains a set of serialization surrogates that are used for serializing types into proxies that get remoted across the wire or between AppDomains. You could also have a separate SurrogateSelector object that contains a set of serialization surrogates that are used to convert Version 1 types into Version 2 types.
+
+If you have multiple SurrogateSelector objects that you'd like the formatter to use, you must chain them together into a linked list. The SurrogateSelector type implements the ISurrogateSelector interface, which defines three methods. All three of these methods are related to chaining. Here is how the ISurrogateSelector interface is defined.
+
+```
+~~~csharp
+public interface ISurrogateSelector {
+    void ChainSelector(ISurrogateSelector selector);
+    ISurrogateSelector GetNextSelector();
+    ISerializationSurrogate GetSurrogate(Type type, StreamingContext context,
+        out ISurrogateSelector selector);
+}
+~~~
+```
+
+The ChainSelector method inserts an ISurrogateSelector object immediately after the ISurrogateSelector object being operated on ('this' object). The GetNextSelector method returns a reference to the next ISurrogateSelector object in the chain or null if the object being operated on is the end of the chain.
+
+The GetSurrogate method looks up a Type/StreamingContext pair in the ISurrogateSelector object identified by this. If the pair cannot be found, then the next ISurrogateSelector object in the chain is accessed, and so on. If a match is found, then GetSurrogate returns the ISerializationSurrogate object that handles the serialization/deserialization of the type looked up. In addition, GetSurrogate also returns the ISurrogateSelector object that contained the match; this is usually not needed and is ignored. If none of the ISurrogateSelector objects in the chain have a match for the Type/StreamingContext pair, GetSurrogate returns null.
+
+> > **Note** The FCL defines an ISurrogateSelector interface and also defines a SurrogateSelector type that implements this interface. However, it is extremely rare that anyone will ever have to define their own type that implements the ISurrogateSelector interface. The only reason to define your own type that implements this interface is if you need to have more flexibility over mapping one type to another. For example, you might want to serialize all types that inherit from a specific base class in a special way. The System.Runtime.Remoting.Messaging.RemotingSurrogateSelector class is a perfect example. When serializing objects for remoting purposes, the CLR formats the objects using the RemotingSurrogateSelector. This surrogate selector serializes all objects that derive from System.MarshalByRefObject in a special way so that deserialization causes proxy objects to be created on the client side.

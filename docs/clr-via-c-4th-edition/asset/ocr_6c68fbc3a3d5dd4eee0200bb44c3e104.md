@@ -1,0 +1,63 @@
+```
+```csharp
+        if (mi is PropertyInfo) typeName = "PropertyInfo";
+        if (mi is EventInfo) typeName = "EventInfo";
+        Show(2, "{0}: {1}", typeName, mi);
+      }
+    }
+  }
+  private static void Show(Int32 indent, String format, params Object[] args) {
+    Console.WriteLine(new String(' ', 3 * indent) + format, args);
+  }
+}
+```
+```
+
+When you compile and run this code, a ton of output is produced. Here is a small sampling of what it looks like.
+
+```
+```
+Assembly: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  Type: System.Object
+    MethodInfo: System.String ToString()
+    MethodInfo: Boolean Equals(System.Object)
+    MethodInfo: Boolean Equals(System.Object, System.Object)
+    MethodInfo: Boolean ReferenceEquals(System.Object, System.Object)
+    MethodInfo: Int32 GetHashCode()
+    MethodInfo: System.Type GetType()
+    MethodInfo: Void Finalize()
+    MethodInfo: System.Object MemberwiseClone()
+    MethodInfo: Void FieldSetter(System.String, System.String, System.Object)
+    MethodInfo: Void FieldGetter(System.String, System.String, System.Object ByRef)
+    MethodInfo: System.Reflection.FieldInfo GetFieldInfo(System.String, System.String)
+    ConstructorInfo: Void .ctor()
+  Type: System.Collections.Generic.IComparer`1[T]
+    MethodInfo: Int32 Compare(T, T)
+  Type: System.Collections.IEnumerator
+    MethodInfo: Boolean MoveNext()
+    MethodInfo: System.Object get_Current()
+    MethodInfo: Void Reset()
+    PropertyInfo: System.Object Current
+  Type: System.IDisposable
+    MethodInfo: Void Dispose()
+  Type: System.Collections.Generic.IEnumerator`1[T]
+    MethodInfo: T get_Current()
+    PropertyInfo: T Current
+  Type: System.ArraySegment`1[T]
+    MethodInfo: T[] get_Array()
+    MethodInfo: Int32 get_Offset()
+    MethodInfo: Int32 get_Count()
+    MethodInfo: Int32 GetHashCode()
+    MethodInfo: Boolean Equals(System.Object)
+    MethodInfo: Boolean Equals(System.ArraySegment`1[T])
+    MethodInfo: Boolean op_Equality(System.ArraySegment`1[T], System.ArraySegment`1[T])
+    MethodInfo: Boolean op_Inequality(System.ArraySegment`1[T], System.ArraySegment`1[T])
+    ConstructorInfo: Void .ctor(T[])
+    ConstructorInfo: Void .ctor(T[], Int32, Int32)
+    PropertyInfo: T[] Array
+    PropertyInfo: Int32 Offset
+    PropertyInfo: Int32 Count
+    FieldInfo: T[] _array
+    FieldInfo: Int32 _offset
+```
+```

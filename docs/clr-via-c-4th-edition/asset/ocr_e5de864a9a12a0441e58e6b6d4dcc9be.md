@@ -1,0 +1,38 @@
+The FeedbackToFile method works as the FeedbackToConsole and FeedbackToMsgBox methods, except that it opens a file and appends the string to the end of the file. (The Status file that the method creates can be found in the application's AppBase directory.)
+
+Again, the purpose of this example is to demonstrate that delegates can wrap calls to instance methods as well as static methods. For instance methods, the delegate needs to know the instance of the object the method is going to operate on. Wrapping an instance method is useful because code inside the object can access the object's instance members. This means that the object can have some state that can be used while the callback method is doing its processing.
+
+# ## Demystifying Delegates
+
+On the surface, delegates seem easy to use: you define them by using C#'s delegate keyword, you construct instances of them by using the familiar new operator, and you invoke the callback by using the familiar method-call syntax (except instead of a method name, you use the variable that refers to the delegate object).
+
+However, what's really going on is quite a bit more complex than what the earlier examples illustrate. The compilers and the CLR do a lot of behind-the-scenes processing to hide the complexity. In this section, I'll focus on how the compiler and the CLR work together to implement delegates. Having this knowledge will improve your understanding of delegates and will teach you how to use them effectively and efficiently. I'll also touch on some additional features delegates make available.
+
+Let's start by reexamining this line of code.
+
+```
+```csharp
+internal delegate void Feedback(Int32 value);
+```
+```
+
+When the compiler sees this line, it actually defines a complete class that looks something like this.
+
+```
+```csharp
+internal class Feedback : System.MulticastDelegate {
+    // Constructor
+    public Feedback(Object @object, IntPtr method);
+
+    // Method with same prototype as specified by the source code
+    public virtual void Invoke(Int32 value);
+
+    // Methods allowing the callback to be called asynchronously
+    public virtual IAsyncResult BeginInvoke(Int32 value,
+        AsyncCallback callback, Object @object);
+    public virtual void EndInvoke(IAsyncResult result);
+}
+```
+```
+
+The class defined by the compiler has four methods: a constructor, Invoke, BeginInvoke, and EndInvoke. In this chapter, I'll concentrate on the constructor and Invoke methods. The BeginInvoke and EndInvoke methods are related to the .NET Framework's Asynchronous Programming Model which is now considered obsolete and has been replaced by tasks that I discuss in Chapter 27, "Compute-Bound Asynchronous Operations."

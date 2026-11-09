@@ -686,6 +686,7 @@
 +   [傻瓜的云计算](docs/cloud-computing-for-dummieshurwitz-judithfor-dummies-imprint/README.md)
 +   [Windows Azure 平台云计算计算指南](docs/cloud-computing-with-the-windows-azure-platform/README.md)
 +   [通过 C# 掌握 CLR - 第四版](docs/clr-via-c---fourth-edition/README.md)
++   [C# 中的 CLR（第4版）](docs/clr-via-c-4th-edition/README.md)
 +   [C# 上的 CLR（开发者参考）；第 4 版](docs/clr-via-c-developer-reference-4th-edition/README.md)
 +   [C# 进阶 CLR 第四版](docs/clr-via-c-fourth-edition-prepress/README.md)
 +   [CLR via C#（预印本）第 4 版](docs/clr-via-c-prepress-4th-edition/README.md)

@@ -1,0 +1,32 @@
+# # Simple Administrative Control (Configuration)
+
+The user or the administrator can best determine some aspects of an application's execution. For example, an administrator might decide to move an assembly's files on the user's hard disk or to override information contained in the assembly's manifest. Other scenarios also exist related to versioning; I'll talk about some of these in Chapter 3.
+
+To allow administrative control over an application, a configuration file can be placed in the application's directory. An application's publisher can create and package this file. The setup program would then install this configuration file in the application's base directory. In addition, the machine's administrator or an end user could create or modify this file. The CLR interprets the content of this file to alter its policies for locating and loading assembly files.
+
+These configuration files contain Extensible Markup Language (XML) and can be associated with an application or with the machine. Using a separate file (versus registry settings) allows the file to be easily backed up and also allows the administrator to copy the application to another machine—just copy the necessary files and the administrative policy is copied too.
+
+In Chapter 3, we'll explore this configuration file in more detail. But I want to give you a taste of it now. Let's say that the publisher of an application wants its application deployed with the MultiFileLibrary assembly files in a different directory than the application's assembly file. The desired directory structure looks like the following.
+
+```
+AppDir directory (contains the application's assembly files)
+    Program.exe
+    Program.exe.config (discussed below)
+
+    AuxFiles subdirectory (contains MultiFileLibrary's assembly files)
+        MultiFileLibrary.dll
+        FUT.netmodule
+        RUT.netmodule
+```
+
+Because the MultiFileLibrary files are no longer in the application's base directory, the CLR won't be able to locate and load these files; running the application will cause a System.IO.FileNotFoundException exception to be thrown. To fix this, the publisher creates an XML configuration file and deploys it to the application's base directory. The name of this file must be the name of the application's main assembly file with a .config extension: Program.exe.config, for this example. The configuration file should look like the following.
+
+```
+<configuration>
+    <runtime>
+        <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+            <probing privatePath="AuxFiles" />
+        </assemblyBinding>
+    </runtime>
+</configuration>
+```

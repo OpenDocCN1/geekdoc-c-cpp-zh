@@ -1,0 +1,60 @@
+```
+```csharp
+public void EventRaised(Object sender, TEventArgs eventArgs) {
+    m_events.Enqueue(eventArgs); // Save EventArgs to return it from GetResult/await
+
+    // If there is a pending continuation, this thread takes it
+    Action continuation = Interlocked.Exchange(ref m_continuation, null);
+    if (continuation != null) continuation(); // Resume the state machine
+}
+```
+```
+
+And here is a method that uses my EventAwaiter class to return from an await operator when­ever an event is raised. In this case, the state machine continues whenever any thread in the App­Domain throws an exception.
+
+```
+```csharp
+private static void ShowExceptions() {
+    var eventAwaiter = new EventAwaiter<FirstChanceExceptionEventArgs>();
+    AppDomain.CurrentDomain.FirstChanceException += eventAwaiter.EventRaised;
+
+    while (true) {
+        Console.WriteLine("AppDomain exception: {0}",
+            (await eventAwaiter).Exception.GetType());
+    }
+}
+```
+```
+
+And finally, here is some code that demonstrates it all working.
+
+```
+```csharp
+public static void Go() {
+    ShowExceptions();
+
+    for (Int32 x = 0; x < 3; x++) {
+        try {
+            switch (x) {
+                case 0: throw new InvalidOperationException();
+                case 1: throw new ObjectDisposedException("");
+                case 2: throw new ArgumentOutOfRangeException();
+            }
+        }
+        catch { }
+    }
+}
+```
+```
+
+# # Async Functions and Event Handlers
+
+Async functions usually have a return type of either Task or Task<TResult> to represent the completion of the function's state machine. However, it is also possible to define an async function with a void return type. This is a special case that the C# compiler allows to simplify the very com­mon scenario where you want to implement an asynchronous event handler.
+
+Almost all event handler methods adhere to a method signature similar to this.
+
+```
+```csharp
+void EventHandlerCallback(Object sender, EventArgs e);
+```
+```

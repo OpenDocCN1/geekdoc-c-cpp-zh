@@ -1,0 +1,30 @@
+The GetObjectData method here works just like the ISerializable interface's GetObjectData method. The only difference is that ISerializationSurrogate's GetObjectData method takes one additional parameter: a reference to the "real" object that is to be serialized. In the GetObjectData method above, this object is cast to DateTime, the value is converted from local time to universal time, and a string (formatted using universal full date/time pattern) is added to the SerializationInfo collection.
+
+The SetObjectData method is called in order to deserialize a DateTime object. When this method is called, it is passed a reference to a SerializationInfo object. SetObjectData gets the string date out of this collection, parses it as a universal full date/time formatted string, and then converts the resulting DateTime object from universal time to the machine's local time.
+
+The Object that is passed for SetObjectData's first parameter is a bit strange. Just before calling SetObjectData, the formatter allocates (via FormatterServices's static GetUninitializedObject method) an instance of the type that the surrogate is for. The instance's fields are all 0/null and no constructor has been called on the object. The code inside SetObjectData can simply initialize the fields of this instance by using the values from the passed-in SerializationInfo object and then have SetObjectData return null. Alternatively, SetObjectData could create an entirely different object or even a different type of object and return a reference to this new object, in which case, the formatter will ignore any changes that may or may not have happened to the object it passed in to SetObjectData.
+
+In my example, my UniversalToLocalTimeSerializationSurrogate class acts as a surrogate for the DateTime type, which is a value type. And so, the obj parameter refers to a boxed instance of a DateTime. There is no way to change the fields in most value types (because they are supposed to be immutable) and so, my SetObjectData method ignores the obj parameter and returns a new DateTime object with the desired value in it.
+
+At this point, I'm sure you're all wondering how the formatter knows to use this ISerializationSurrogate type when it tries to serialize/deserialize a DateTime object. The following code demonstrates how to test the UniversalToLocalTimeSerializationSurrogate class.
+
+```
+```csharp
+private static void SerializationSurrogateDemo() {
+    using (var stream = new MemoryStream()) {
+        // 1. Construct the desired formatter
+        IFormatter formatter = new SoapFormatter();
+
+        // 2. Construct a SurrogateSelector object
+        SurrogateSelector ss = new SurrogateSelector();
+
+        // 3. Tell the surrogate selector to use our surrogate for DateTime objects
+        ss.AddSurrogate(typeof(DateTime), formatter.Context,
+            new UniversalToLocalTimeSerializationSurrogate());
+
+        // NOTE: AddSurrogate can be called multiple times to register multiple surrogates
+
+        // 4. Tell the formatter to use our surrogate selector
+        formatter.SurrogateSelector = ss;
+```
+```
