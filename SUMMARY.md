@@ -733,6 +733,7 @@
 +   [能源行业的编程职业](docs/coding-careers-in-the-energy-industry/README.md)
 +   [Coding Club 级 1 Python 基础](docs/coding-club-level-1-python-basics/README.md)
 +   [Coding Club Level 2 Python：进阶指南](docs/coding-club-level-2-python-next-steps/README.md)
++   [编程俱乐部第3级 Python：大型应用构建指南](docs/coding-club-level-3-python-building-big-apps/README.md)
 +   [零基础学者编程与网络安全：5 本合1 编程圣经：精通 Python、Java、C++ 基础功能以及如何保护数据免受黑客攻击](docs/coding-for-absolute-beginners-and-cybersecurity-5-books-in-1/README.md)
 +   [初学者编程入门指南：适合全年龄段的基础编程](docs/coding-for-beginners-in-easy-steps-basic-programming-for-all/README.md)
 +   [儿童编程入门指南](docs/coding-for-kids-for-dummies/README.md)
