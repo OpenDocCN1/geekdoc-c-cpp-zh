@@ -678,6 +678,7 @@
 +   [洁净之道：准则、标准与伦理](docs/clean-craftsmanship-disciplines-standards-and-ethics/README.md)
 +   [整洁工艺：纪律、标准与伦理（Robert C. Martin 系列）](docs/clean-craftsmanship-disciplines-standards-and-ethics-robert-/README.md)
 +   [Clean语言报告 2.2](docs/clean-language-report-22/README.md)
++   [清晰 Visual Basic：Microsoft Visual Basic 2008 编程](docs/clearly-visual-basic-programming-with-microsoft-visual-basic/README.md)
 +   [接近机器：技术狂热及其不满](docs/close-to-the-machine-technophilia-and-its-discontents/README.md)
 +   [你的图书馆的云服务：LITA指南](docs/cloud-based-services-for-your-library-a-lita-guide/README.md)
 +   [云计算：实用方法](docs/cloud-computing-a-practical-approach/README.md)

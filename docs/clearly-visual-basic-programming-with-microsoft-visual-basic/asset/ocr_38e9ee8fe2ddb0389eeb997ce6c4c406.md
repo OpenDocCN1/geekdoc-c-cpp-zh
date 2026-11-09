@@ -1,0 +1,11 @@
+4. Click **Segoe UI** in the Font list box and click **9** in the Size list box, then click the **OK** button. The form's Font property setting changes to the new value. The Font property setting for each label control also changes to the new value. To verify that fact, click the **Label1** control, then view its Font property setting. Click the **Label2** control, then view its Font property setting.
+
+Next, you will change the Text and Location properties of the two label controls. A label control's Text property specifies the text displayed inside the control. Its Location property controls the location of the upper-left corner of the control on the form. (Although you can simply drag a control to the desired location, you many times will be provided with the setting for the Location property so that your screen agrees with the figures in this book.)
+
+# **To change two properties of each label control:**
+
++   1. Click the **Label1** control to select it, then change its Text property to **Wizard 1**.
++   2. Click the **Location** property in the Properties list. The first number in the Settings box specifies the control's horizontal location; the second number specifies its vertical location. In other words, the first number is the location of the control's left border, and the second number is the location of its top border. Type **40, 212** and press **Enter**.
++   3. Click the **Label2** control. Set its Text property to **Wizard 2** and its Location property to **175, 212**.
+
+Finally, you will change the Image and SizeMode properties of the picture boxes. The Image property specifies the name of the file containing the image to display. The SizeMode property handles how the image is displayed and can be set to Normal, StretchImage, AutoSize, CenterImage, or Zoom. The images for the Wizard application's interface are stored in the Lightning_bolts (Lightning_bolts.gif) and Wizard_appears (Wizard_appears.gif) files, which are contained in the ClearlyVB\Chap04 folder. Both image files were downloaded from the Animation Library site. You can browse and optionally download other free image files at *www.animationlibrary.com*.

@@ -1,0 +1,17 @@
+control's Click event procedure should determine whether the user entered the phone number in the required format: three digits, a hyphen, three digits, a hyphen, and four digits. Display an appropriate message if the format is not correct. Modify the procedure appropriately. Save the solution, then start the application. Test the application using the following phone numbers: 1-234-567890 and 999-888-1111. Stop the application, then close the solution.
+
+INTRODUCTORY
+
++   4. Open the CityState Solution (CityState Solution.sln) file, which is contained in the ClearlyVB\Chap24\CityState Solution folder. Open the designer window. The interface provides a text box for entering the name of a city, followed by a comma, a space, and a state name. The Display Message button's Click event procedure should display the message "cityName is located in stateName", where cityName and stateName are the names of the city and state entered by the user. Code the procedure. Save the solution, then start and test the application. Stop the application, then close the solution.
+
+INTERMEDIATE
+
++   5. Open the Color Solution (Color Solution.sln) file, which is contained in the ClearlyVB\Chap24\Color Solution folder. Open the designer window. The Display Color button's Click event procedure should display the color of the item whose item number is entered by the user. All item numbers contain exactly five characters. All items are available in four colors: blue, green, red, and white. The third character in the item number indicates the item's color, as follows: a B or b indicates Blue, a G or g indicates Green, an R or r indicates Red, and a W or w indicates White. The procedure should display an appropriate message when the item number does not contain exactly five characters, or when the third character is not one of the valid color characters. Save the solution, then start the application. Test the application using 12b45 as the item number. The procedure should display the word "Blue" in the lblColor control. Test the application using the following valid item numbers: 99G44, abr55, and 78w99. Now test the application using the following invalid item numbers: 12x and 23abc. Stop the application, then close the solution.
+
+ADVANCED
+
++   6. Open the Jacobson Solution (Jacobson Solution.sln) file, which is contained in the ClearlyVB\Chap24\Jacobson Solution folder. Open the designer window. The interface provides a text box for entering a password. The text box's CharacterCasing property is set to Upper. The password can contain 5, 6, or 7 characters, but no space characters. The Display New Password button should create and display a new password using the following three rules. First, replace all vowels (A, E, I, O, and U) with the letter X. Second, replace all numbers with the letter Z. Third, reverse the characters in the password. Save the solution, then start and test the application. Stop the application, then close the solution.
+
++   7. Open the FigureThisOut Solution (FigureThisOut Solution.sln) file, which is contained in the ClearlyVB\Chap24\FigureThisOut Solution folder. Open the Code Editor window and study the existing code. What task is performed by the btnDisplay control's Click event procedure? Start and then test the application. Stop the application. Close the Code Editor window, then close the solution.
+
+![](bbox=[0.13, 0.76, 0.199, 0.814])

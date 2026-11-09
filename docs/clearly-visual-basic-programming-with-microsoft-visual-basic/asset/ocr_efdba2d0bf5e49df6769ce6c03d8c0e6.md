@@ -1,0 +1,9 @@
+![](bbox=[0.114, 0.138, 0.931, 0.265])
+
+**Figure 17-16:** Desk-check table before the computer processes the Call statement
+
+Next, the computer processes the Call AssignDiscount(decSubtotal, decDiscount) statement. At this point, the computer temporarily leaves the Click event procedure to process the code contained in the AssignDiscount procedure; the procedure header is processed first. The ByVal keyword indicates that the first parameter is receiving a value from the Call statement; as a result, the computer creates the decSub variable to store the value. In this case, the computer stores the value 60 in the decSub variable. The ByRef keyword, on the other hand, indicates that the second parameter is receiving the address of a variable. When you pass a variable’s address to a procedure, the computer uses the address to locate the variable in its internal memory. It then assigns the parameter name to the memory location. In this case, for example, the computer locates the decDiscount variable in memory and assigns the name decDisc to it. At this point, the memory location has two names: one assigned by the btnCalc control’s Click event procedure and the other assigned by the AssignDiscount procedure, as indicated in Figure 17-17. Notice that four variables in the table belong strictly to the Click event procedure, and one belongs strictly to the AssignDiscount procedure. One memory location, however, belongs to both procedures. Although both procedures can access the memory location, each procedure uses a different name to do so. The Click event procedure uses the name decDiscount, whereas the AssignDiscount procedure uses the name decDisc.
+
+![](bbox=[0.042, 0.663, 0.931, 0.852])
+
+**Figure 17-17:** Desk-check table after the computer processes the Call statement and procedure header
