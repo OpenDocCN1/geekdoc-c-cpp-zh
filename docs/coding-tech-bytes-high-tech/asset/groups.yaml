@@ -1,0 +1,2389 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # Coding
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_0_0.png)'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - "[PAGE 3]\n\nCover: A user works on a coding tutorial using a tablet computer.\n\
+    \nNorwood House Press  \nP.O. Box 316598  \nChicago, Illinois 60631\n\nFor information\
+    \ regarding Norwood House Press, please visit our website at:  \nwww.norwoodhousepress.com\
+    \ or call 866-565-2900.\n\nPHOTO CREDITS: Cover: © Marcio Jose Sanchez/AP Images;\
+    \ © Belyaevskiy/iStockphoto, 19; © da-kuk/iStockphoto, 37; © Everett Collection,\
+    \ 29; © fstop123/iStockphoto, 5, 13; © Jeff Chiu/AP Images, 30; © marusFM77/iStockphoto,\
+    \ 14; © Mark Lennihan/AP Images, 32; © martin-dm/iStockphoto, 24; © Matthew Corley/Shutterstock\
+    \ Images, 38; © mikkelwilliam/iStockphoto, 11; © National Physical Laboratory/Crown\
+    \ Copyright/Science Source, 9; © Paul Sakuma/AP Images, 21; © Rex Features/AP\
+    \ Images, 39; © Seth Wenig/AP Images, 41; © Toria/Shutterstock Images, 12; © vgajic/iStockphoto,\
+    \ 35; © Wachiwi/iStockphoto, 26; © Yuri_Arcurs/iStockphoto, 16\n\nHardcover ISBN:\
+    \ 978-1-59953-887-7  \nPaperback ISBN: 978-1-68404-118-3\n\n© 2018 by Norwood\
+    \ House Press.\n\nAll rights reserved.\n\nNo part of this book may be reproduced\
+    \ without written permission from the publisher.\n\n**LIBRARY OF CONGRESS CATALOGING-IN-PUBLICATION\
+    \ DATA**\n\n| Field | Value |\n|---|---|\n| Names | Marquardt, Meg, author. |\n\
+    | Title | Coding / by Meg Marquardt. |\n| Description | Chicago, Illinois: Norwood\
+    \ House Press, 2017. \\| Series: Tech bytes \\| Audience: Ages 8-12. \\| Audience:\
+    \ Grades 4 to 6. \\| Includes bibliographical references and index. |\n| Identifiers\
+    \ | LCCN 2017002713 (print) \\| LCCN 2017003619 (ebook) \\| ISBN 9781599538877\
+    \ (library edition : alk. paper) \\| ISBN 9781684041237 (ebook) |\n| Subjects\
+    \ | LCSH: Computer programming--Juvenile literature. |\n| Classification | LCC\
+    \ QA76.52 .M374 2017 (print) \\| LCC QA76.52 (ebook) \\| DDC 005.1--dc23 |\n|\
+    \ LC record available at | https://lccn.loc.gov/2017002713 |"
+  - '[PAGE 4]
+
+
+    # CONTENTS
+
+
+    +   - **Chapter 1:** A World of Computers ................................ 4
+
+    +   - **Chapter 2:** What Is Code? ........................................ 14
+
+    +   - **Chapter 3:** Coding in the Real World .............................. 22
+
+    +   - **Chapter 4:** Coding for Tomorrow ................................... 31
+
+    +   - **Glossary** ........................................................ 43
+
+    +   - **For More Information** ............................................. 44
+
+    +   - **Index** ........................................................... 46
+
+    +   - **About the Author** ................................................ 48
+
+
+    Note: Words that are **bolded** in the text are defined in the glossary.'
+  - '[PAGE 5]
+
+
+    # # A World of Computers
+
+
+    For hundreds of years, machines have made life easier for people. In the 1800s,
+    trains made it easier to move cargo and passengers over long distances. In the
+    1900s, home appliances made it easier to store and prepare food. Today, the machine
+    that makes the biggest difference in people’s everyday lives is the computer.
+
+
+    Computers make a wide assortment of tasks easier. People use them to send and
+    receive messages, pictures, and videos. Students use them to write papers, and
+
+
+    workers use them to create budgets. Computers are used for relaxation, too. People
+    watch movies and play games on them. One of the most useful things about computers
+    is that they can be used for so many tasks. This flexibility comes from programs
+    and coding.
+
+
+    A program is a set of instructions that a computer carries out. Some programs
+    let users create documents or spreadsheets. Other programs play movies or music.
+    Some are thrilling video games. Coding is the process of writing the instructions
+    that'
+  - '[PAGE 6]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_6_0.png)
+
+
+    Computers and tablets are found in most US schools and homes.
+
+
+    make up these programs. By dreaming up
+
+    new types of programs, coders expand
+
+    the potential of computers.
+
+
+    Computers cannot understand
+
+    instructions written in plain English.
+
+    Coders must learn to write programs in'
+  - "[PAGE 7]\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_7_0.png)\n\n# # What Does\
+    \ Code Look Like?\n\nEvery coding language looks slightly different. Many use\
+    \ symbols and special acronyms. Often, programming instructions may be tough to\
+    \ read for an untrained coder. Here is an example from the Java programming language.\
+    \ This code writes the words “Hello World!” on the screen. Writing a “Hello World”\
+    \ program is a common first step for coders studying a new programming language.\n\
+    \n```\n```java\npublic class HelloWorld\n{\n    public static void\nmain(String[]\
+    \ args) {\n        System.out.\nprintln(\"Hello World!\");\n    }\n}\n```\n```\n\
+    \na way that a computer can understand. Coders write in a variety of different\
+    \ programming languages. These languages use different sets of words, numbers,\
+    \ and symbols to make up their instructions. Hundreds of programming languages\
+    \ are in use today.\n\nModern computers have been around for only a few decades,\
+    \ but the idea of programming languages has a long history. One of the first people\
+    \ to think about coding was the pioneering Ada Lovelace. She carried out her work\
+    \ in the early 1800s."
+  - '[PAGE 8]
+
+
+    # # Creating the First Code
+
+
+    Lovelace was born in 1815. She had a nontraditional upbringing. Unlike most girls
+    of her time, she was encouraged to learn math and science. During her studies,
+    she met scientist Charles Babbage. Babbage had designed a mechanical device that
+    could be used for mathematics.
+
+
+    Babbage’s machine was known as the Difference Engine. It was much different from
+    today’s computers. Rather than electricity, circuits, and microchips, it would
+    use levers and gears. It could quickly carry out math problems that would take
+    a person hours to calculate by hand. The user would set the device to the initial
+    settings for the problem, then turn a crank to put the machine into motion.
+
+
+    # ## DID YOU KNOW?
+
+
+    > > Ada Lovelace was the daughter of Lord Byron, a famous British poet. Byron
+    left the family when Ada was a child. Her mother worried Ada would become moody
+    and unpredictable like her father. She felt that having Ada focus on studying
+    math and science would prevent this.
+
+
+    However, the full machine was not built during Babbage’s lifetime.'
+  - '[PAGE 9]
+
+
+    <!-- no content -->'
+  - "[PAGE 10]\n\n# Building More  \nComplex Machines\n\nSince Lovelace’s day, computers\
+    \ and coding have come a long way. In the 1940s, German inventor Konrad Zuse created\
+    \ what is considered the first modern computer. Called the Z3, it could remember\
+    \ and carry out instructions.\n\nUS programming pioneer Grace Hopper worked with\
+    \ early computers during World War II. She later helped in the development of\
+    \ the UNIVAC I computer and a programming language called COBOL. Hopper served\
+    \ in the US Naval Reserve, helping the US Navy develop and use early computers.\
+    \ She eventually rose to the rank of rear admiral.\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_10_0.png)\n\
+    \nAda Lovelace is often considered the first computer programmer."
+  - '[PAGE 11]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_11_0.png)
+
+
+    # DID YOU KNOW?
+
+
+    Konrad Zuse built his early computers and programming languages alone. He worked
+    in the 1940s, when Germany was fighting World War II. Some of his inventions were
+    destroyed by bombs during the war.
+
+
+    Scientists and engineers continued to build improved computers. By the 1950s,
+    there was an explosion of coding languages. Computer company IBM released FORTRAN
+    in 1957. Updated versions of this language are still in use
+
+
+    today. In the 1960s, programming grew beyond solving mathematical problems. Computers
+    became powerful enough for coders to make drawings or animation. These early roots
+    eventually led to modern computer-animated movies.
+
+
+    In the 1970s and 1980s, personal computers became widely available. Millions of
+    people now had computers in their homes. Programming was no longer only for experts
+    in labs or universities. People could learn to create their own games or other
+    programs.
+
+
+    The 1990s brought the Internet, changing the world of computers forever. The Internet
+    is a framework connecting computers around the world. Data travels from one computer
+    to another across this vast network. One of the major uses'
+  md: "\n## Coding\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_0_0.png)\n\n*Cover:\
+    \ A user works on a coding tutorial using a tablet computer.*\n\nNorwood House\
+    \ Press  \nP.O. Box 316598  \nChicago, Illinois 60631\n\nFor information regarding\
+    \ Norwood House Press, please visit our website at:  \nwww.norwoodhousepress.com\
+    \ or call 866-565-2900.\n\nPHOTO CREDITS: Cover: © Marcio Jose Sanchez/AP Images;\
+    \ © Belyaevskiy/iStockphoto, 19; © da-kuk/iStockphoto, 37; © Everett Collection,\
+    \ 29; © fstop123/iStockphoto, 5, 13; © Jeff Chiu/AP Images, 30; © marusFM77/iStockphoto,\
+    \ 14; © Mark Lennihan/AP Images, 32; © martin-dm/iStockphoto, 24; © Matthew Corley/Shutterstock\
+    \ Images, 38; © mikkelwilliam/iStockphoto, 11; © National Physical Laboratory/Crown\
+    \ Copyright/Science Source, 9; © Paul Sakuma/AP Images, 21; © Rex Features/AP\
+    \ Images, 39; © Seth Wenig/AP Images, 41; © Toria/Shutterstock Images, 12; © vgajic/iStockphoto,\
+    \ 35; © Wachiwi/iStockphoto, 26; © Yuri_Arcurs/iStockphoto, 16\n\nHardcover ISBN:\
+    \ 978-1-59953-887-7  \nPaperback ISBN: 978-1-68404-118-3\n\n© 2018 by Norwood\
+    \ House Press.\n\nAll rights reserved.\n\nNo part of this book may be reproduced\
+    \ without written permission from the publisher.\n\n**LIBRARY OF CONGRESS CATALOGING-IN-PUBLICATION\
+    \ DATA**\n\n| Field | Value |\n| --- | --- |\n| Names | Marquardt, Meg, author.\
+    \ |\n| Title | Coding / by Meg Marquardt. |\n| Description | Chicago, Illinois:\
+    \ Norwood House Press, 2017.<br>Series: Tech bytes<br>Audience: Ages 8-12.<br>Audience:\
+    \ Grades 4 to 6.<br>Includes bibliographical references and index. |\n| Identifiers\
+    \ | LCCN 2017002713 (print)<br>LCCN 2017003619 (ebook)<br>ISBN 9781599538877 (library\
+    \ edition : alk. paper)<br>ISBN 9781684041237 (ebook) |\n| Subjects | LCSH: Computer\
+    \ programming--Juvenile literature. |\n| Classification | LCC QA76.52 .M374 2017\
+    \ (print)<br>LCC QA76.52 (ebook)<br>DDC 005.1--dc23 |\n| LC record available at\
+    \ | https://lccn.loc.gov/2017002713 |\n\n## Contents\n\n- **Chapter 1:** A World\
+    \ of Computers — 4\n- **Chapter 2:** What Is Code? — 14\n- **Chapter 3:** Coding\
+    \ in the Real World — 22\n- **Chapter 4:** Coding for Tomorrow — 31\n- **Glossary**\
+    \ — 43\n- **For More Information** — 44\n- **Index** — 46\n- **About the Author**\
+    \ — 48\n\nNote: Words that are **bolded** in the text are defined in the glossary.\n\
+    \n## A World of Computers\n\nFor hundreds of years, machines have made life easier\
+    \ for people. In the 1800s, trains made it easier to move cargo and passengers\
+    \ over long distances. In the 1900s, home appliances made it easier to store and\
+    \ prepare food. Today, the machine that makes the biggest difference in people’s\
+    \ everyday lives is the computer.\n\nComputers make a wide assortment of tasks\
+    \ easier. People use them to send and receive messages, pictures, and videos.\
+    \ Students use them to write papers, and workers use them to create budgets. Computers\
+    \ are used for relaxation, too. People watch movies and play games on them. One\
+    \ of the most useful things about computers is that they can be used for so many\
+    \ tasks. This flexibility comes from programs and coding.\n\nA program is a set\
+    \ of instructions that a computer carries out. Some programs let users create\
+    \ documents or spreadsheets. Other programs play movies or music. Some are thrilling\
+    \ video games. Coding is the process of writing the instructions that make up\
+    \ these programs. By dreaming up new types of programs, coders expand the potential\
+    \ of computers.\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_6_0.png)\n\n*Computers\
+    \ and tablets are found in most US schools and homes.*\n\nComputers cannot understand\
+    \ instructions written in plain English. Coders must learn to write programs in\
+    \ a way that a computer can understand. Coders write in a variety of different\
+    \ programming languages. These languages use different sets of words, numbers,\
+    \ and symbols to make up their instructions. Hundreds of programming languages\
+    \ are in use today.\n\n### What Does Code Look Like?\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_7_0.png)\n\
+    \nEvery coding language looks slightly different. Many use symbols and special\
+    \ acronyms. Often, programming instructions may be tough to read for an untrained\
+    \ coder. Here is an example from the Java programming language. This code writes\
+    \ the words “Hello World!” on the screen. Writing a “Hello World” program is a\
+    \ common first step for coders studying a new programming language.\n\n```java\n\
+    public class HelloWorld {\n    public static void main(String[] args) {\n    \
+    \    System.out.println(\"Hello World!\");\n    }\n}\n```\n\nModern computers\
+    \ have been around for only a few decades, but the idea of programming languages\
+    \ has a long history. One of the first people to think about coding was the pioneering\
+    \ Ada Lovelace. She carried out her work in the early 1800s.\n\n### Creating the\
+    \ First Code\n\nLovelace was born in 1815. She had a nontraditional upbringing.\
+    \ Unlike most girls of her time, she was encouraged to learn math and science.\
+    \ During her studies, she met scientist Charles Babbage. Babbage had designed\
+    \ a mechanical device that could be used for mathematics.\n\nBabbage’s machine\
+    \ was known as the Difference Engine. It was much different from today’s computers.\
+    \ Rather than electricity, circuits, and microchips, it would use levers and gears.\
+    \ It could quickly carry out math problems that would take a person hours to calculate\
+    \ by hand. The user would set the device to the initial settings for the problem,\
+    \ then turn a crank to put the machine into motion.\n\nHowever, the full machine\
+    \ was not built during Babbage’s lifetime.\n\n### DID YOU KNOW?\n\n> Ada Lovelace\
+    \ was the daughter of Lord Byron, a famous British poet. Byron left the family\
+    \ when Ada was a child. Her mother worried Ada would become moody and unpredictable\
+    \ like her father. She felt that having Ada focus on studying math and science\
+    \ would prevent this.\n\n### Building More Complex Machines\n\nSince Lovelace’s\
+    \ day, computers and coding have come a long way. In the 1940s, German inventor\
+    \ Konrad Zuse created what is considered the first modern computer. Called the\
+    \ Z3, it could remember and carry out instructions.\n\nUS programming pioneer\
+    \ Grace Hopper worked with early computers during World War II. She later helped\
+    \ in the development of the UNIVAC I computer and a programming language called\
+    \ COBOL. Hopper served in the US Naval Reserve, helping the US Navy develop and\
+    \ use early computers. She eventually rose to the rank of rear admiral.\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_10_0.png)\n\
+    \nAda Lovelace is often considered the first computer programmer.\n\n### DID YOU\
+    \ KNOW?\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_11_0.png)\n\n> Konrad Zuse\
+    \ built his early computers and programming languages alone. He worked in the\
+    \ 1940s, when Germany was fighting World War II. Some of his inventions were destroyed\
+    \ by bombs during the war.\n\nScientists and engineers continued to build improved\
+    \ computers. By the 1950s, there was an explosion of coding languages. Computer\
+    \ company IBM released FORTRAN in 1957. Updated versions of this language are\
+    \ still in use today. In the 1960s, programming grew beyond solving mathematical\
+    \ problems. Computers became powerful enough for coders to make drawings or animation.\
+    \ These early roots eventually led to modern computer-animated movies.\n\nIn the\
+    \ 1970s and 1980s, personal computers became widely available. Millions of people\
+    \ now had computers in their homes. Programming was no longer only for experts\
+    \ in labs or universities. People could learn to create their own games or other\
+    \ programs.\n\nThe 1990s brought the Internet, changing the world of computers\
+    \ forever. The Internet is a framework connecting computers around the world.\
+    \ Data travels from one computer to another across this vast network. One of the\
+    \ major uses\n"
+  mdcn: "\n\n## 编程\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_0_0.png)\n\n*封面：一名用户正在使用平板电脑学习编程教程。*\n\
+    \nNorwood House Press  \nP.O. Box 316598  \nChicago, Illinois 60631\n\n有关 Norwood\
+    \ House Press 的信息，请访问我们的网站：  \nwww.norwoodhousepress.com 或致电 866-565-2900。\n\n\
+    图片来源：封面：© Marcio Jose Sanchez/AP Images；© Belyaevskiy/iStockphoto，19；© da-kuk/iStockphoto，37；©\
+    \ Everett Collection，29；© fstop123/iStockphoto，5，13；© Jeff Chiu/AP Images，30；©\
+    \ marusFM77/iStockphoto，14；© Mark Lennihan/AP Images，32；© martin-dm/iStockphoto，24；©\
+    \ Matthew Corley/Shutterstock Images，38；© mikkelwilliam/iStockphoto，11；© National\
+    \ Physical Laboratory/Crown Copyright/Science Source，9；© Paul Sakuma/AP Images，21；©\
+    \ Rex Features/AP Images，39；© Seth Wenig/AP Images，41；© Toria/Shutterstock Images，12；©\
+    \ vgajic/iStockphoto，35；© Wachiwi/iStockphoto，26；© Yuri_Arcurs/iStockphoto，16\n\
+    \n精装版 ISBN：978-1-59953-887-7  \n平装版 ISBN：978-1-68404-118-3\n\n© 2018 Norwood House\
+    \ Press 版权所有。\n\n保留所有权利。\n\n未经出版方书面许可，不得以任何形式复制本书的任何部分。\n\n**美国国会图书馆在版编目数据**\n\
+    \n| 字段 | 值 |\n| --- | --- |\n| 名称 | 马夸特，梅格，作者。 |\n| 书名 | 《编程》/ 梅格·马夸特 著。 |\n|\
+    \ 描述 | 伊利诺伊州芝加哥：Norwood House Press，2017年。<br>系列：Tech bytes<br>读者对象：8—12岁。<br>读者对象：4—6年级。<br>包含参考书目和索引。\
+    \ |\n| 标识符 | LCCN 2017002713（印刷版）<br>LCCN 2017003619（电子书）<br>ISBN 9781599538877（图书馆版：碱性纸）<br>ISBN\
+    \ 9781684041237（电子书） |\n| 主题 | LCSH：计算机编程——青少年读物。 |\n| 分类 | LCC QA76.52 .M374\
+    \ 2017（印刷版）<br>LCC QA76.52（电子书）<br>DDC 005.1--dc23 |\n| 美国国会图书馆记录见 | https://lccn.loc.gov/2017002713\
+    \ |\n\n## 目录\n\n- **第1章：** 计算机的世界 — 4\n- **第2章：** 什么是代码？ — 14\n- **第3章：** 现实世界中的编程\
+    \ — 22\n- **第4章：** 面向未来的编程 — 31\n- **术语表** — 43\n- **更多信息** — 44\n- **索引** — 46\n\
+    - **关于作者** — 48\n\n注：文中以**粗体**显示的词语在术语表中有定义。\n\n## 计算机的世界\n\n数百年来，机器让人们的生活更加便利。19世纪，火车让长途运输货物和乘客变得更加容易。20世纪，家用电器让储存和准备食物变得更加方便。如今，对人们日常生活影响最大的机器是计算机。\n\
+    \n计算机让各种各样的任务变得更容易。人们用它们发送和接收消息、图片和视频。学生用它们写论文，工作人员用它们制作预算。计算机也用于放松。人们在上面看电影、玩游戏。计算机最有用的特点之一是它们可以用于如此多的任务。这种灵活性来自程序和编程。\n\
+    \n程序是计算机执行的一组指令。有些程序让用户创建文档或电子表格。其他程序播放电影或音乐。有些则是刺激的电子游戏。编程是编写构成这些程序的指令的过程。通过构思新型程序，程序员拓展了计算机的潜力。\n\
+    \n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_6_0.png)\n\n*计算机和平板电脑出现在美国大多数学校和家庭中。*\n\
+    \n计算机无法理解用普通英语写成的指令。程序员必须学会以计算机能理解的方式编写程序。程序员用各种不同的编程语言编写程序。这些语言使用不同的单词、数字和符号组合来构成指令。如今有数百种编程语言在使用中。\n\
+    \n### 代码长什么样？\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_7_0.png)\n\n每种编程语言看起来都略有不同。许多语言使用符号和特殊缩略词。对于未受过训练的程序员来说，编程指令往往可能难以阅读。下面是\
+    \ Java 编程语言的一个示例。这段代码在屏幕上写出“Hello World!”这几个字。编写“Hello World”程序是程序员学习一门新编程语言时常见的第一个步骤。\n\
+    \n```java\npublic class HelloWorld {\n    public static void main(String[] args)\
+    \ {\n        System.out.println(\"Hello World!\");\n    }\n}\n```\n\n现代计算机出现只有几十年，但编程语言的思想已有悠久历史。最早思考编程的人之一是先驱阿达·洛芙莱斯。她在19世纪初开展了自己的工作。\n\
+    \n### 创造最初的代码\n\n洛芙莱斯出生于1815年。她接受的是非传统的成长教育。与同时代大多数女孩不同，她受到鼓励去学习数学和科学。在学习期间，她结识了科学家查尔斯·巴贝奇。巴贝奇设计了一种可用于数学计算的机械装置。\n\
+    \n巴贝奇的机器被称为差分机。它与今天的计算机大不相同。它不使用电力、电路和微芯片，而是使用杠杆和齿轮。它可以快速完成一个人手工计算需要数小时的数学问题。用户会为问题设置装置的初始参数，然后转动曲柄让机器运转起来。\n\
+    \n然而，完整的机器在巴贝奇有生之年并未建成。\n\n### 你知道吗？\n\n> 阿达·洛芙莱斯是英国著名诗人拜伦勋爵的女儿。阿达年幼时，拜伦离开了家庭。她的母亲担心阿达会像父亲一样喜怒无常、难以捉摸。她认为让阿达专注于学习数学和科学可以防止这种情况。\n\
+    \n### 制造更复杂的机器\n\n自洛芙莱斯时代以来，计算机和编程已经取得了长足发展。20世纪40年代，德国发明家康拉德·楚泽创造了被认为是第一台现代计算机的机器。它被称为\
+    \ Z3，能够存储并执行指令。\n\n美国编程先驱格蕾丝·霍珀在第二次世界大战期间从事早期计算机工作。她后来帮助开发了 UNIVAC I 计算机和一种名为\
+    \ COBOL 的编程语言。霍珀曾在美国海军预备役服役，帮助美国海军开发和使用早期计算机。她最终晋升为海军少将。\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_10_0.png)\n\
+    \n阿达·洛芙莱斯常被认为是第一位计算机程序员。\n\n### 你知道吗？\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_11_0.png)\n\
+    \n> 康拉德·楚泽独自制造了他的早期计算机和编程语言。他在20世纪40年代工作，当时德国正在参加第二次世界大战。他的一些发明在战争期间被炸弹摧毁。\n\n\
+    科学家和工程师继续制造改进的计算机。到20世纪50年代，编程语言出现了爆炸式增长。计算机公司 IBM 于1957年发布了 FORTRAN。这种语言的更新版本至今仍在使用。20世纪60年代，编程超出了解决数学问题的范围。计算机变得足够强大，程序员可以制作绘图或动画。这些早期根源最终促成了现代计算机动画电影。\n\
+    \n20世纪70年代和80年代，个人计算机变得广泛可用。数以百万计的人现在家里有了计算机。编程不再只是实验室或大学专家的专利。人们可以学习创建自己的游戏或其他程序。\n\
+    \n20世纪90年代带来了互联网，永远改变了计算机世界。互联网是连接世界各地计算机的框架。数据在这个庞大网络中从一台计算机传输到另一台计算机。其中一个主要用途\n\
+    \n"
+  merge: -1
+- raw:
+  - '[PAGE 12]
+
+
+    # The First Home Computers
+
+
+    The companies Apple and IBM made early personal computers. Some ads showed the
+    computers as being useful in the kitchen. Users could store recipes and create
+    meal plans with them. Other ads showed how useful computers could be for home
+    budgets. These early computers were not as easy to use as today’s machines. The
+    user often needed to have programming knowledge to use them. Today, most users
+    never see the code behind the programs they use. All these instructions are carried
+    out behind the scenes.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_12_0.png)
+
+
+    *Early personal computers were much bulkier than the ones used today.*'
+  - '[PAGE 13]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_13_0.png)
+
+
+    The Internet connects computer users all over the world.
+
+
+    of the Internet is the World Wide Web. It is a set of interconnected pages that
+    Internet users can access online. Another use for the Internet is e-mail, a system
+    for sending and receiving messages. Using the Internet, coders could now share'
+  - '[PAGE 14]
+
+
+    programs with other users. They could also write programs for the World Wide Web.
+
+
+    **Smartphones** and tablets changed the programming landscape in the 2000s. Programs,
+    also known as apps, turned these devices into powerful tools for both work and
+    fun. And new programming tools made coding accessible to more people than ever
+    before.
+
+
+    Today, the future of programming is bright. Computers, smartphones, and tablets
+    can be found in practically every part of society. These machines make modern
+    life more efficient and fun. Inventive coders will continue to make new advances,
+    creating innovative programs that unlock the potential of our computerized world.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_14_0.png)
+
+
+    Some smartphone apps let users listen to music.'
+  - '[PAGE 15]
+
+
+    # What Is Code?
+
+
+    When using a computer, a person interacts with two related things: hardware and
+    software. The computer’s hardware is made up of its physical parts. The screen,
+    keyboard, and mouse are all hardware. The parts inside the computer, such as the
+    processor and memory, are also hardware.
+
+
+    The computer’s software is made up of all the programs it runs. Some programs
+    manage how the hardware and software
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_15_0.png)
+
+
+    Web browsers allow users to access social media, videos, search engines, and more.'
+  - "[PAGE 16]\n\nwork together. These are called **operating systems**. Other programs\
+    \ include word processors, **web browsers**, and games.\n\nEach programming language\
+    \ has its own strengths and weaknesses, and each is best for different kinds of\
+    \ programs. Some work well for making video games, while others are better suited\
+    \ for simple programs on desktop computers. A few of today’s major languages include\
+    \ C#, Python, Java, and Swift.\n\n> **DID YOU KNOW?**\n> \n> The first computer\
+    \ science department in the United States was at Purdue University in Indiana.\
+    \ In October 1962, the department opened its doors. Today, virtually every university\
+    \ and college has its own computer science program.\n\nRegardless of the language,\
+    \ all code has the same basic function. Code is a list of instructions for the\
+    \ computer processor to follow. Processors can handle instructions only in **binary**—long\
+    \ sequences of ones and zeroes. The most basic programming language, machine code,\
+    \ consists of only ones and zeroes. Binary instructions can\n\nbe extremely difficult\
+    \ for coders to write and read. To make programming easier, people have developed\
+    \ programming languages that use symbols, letters, and words. Before these instructions\
+    \ go to"
+  - '[PAGE 17]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_17_0.png)
+
+
+    Searching for errors can be a challenging part of programming.
+
+
+    the processor, they are converted into the equivalent series of ones and zeroes.
+
+
+    # # Finding Errors
+
+
+    Programmers use compiler software to convert a program into binary. They feed
+    in the code they wrote, and the compiler spits out the ones and zeroes that a
+    processor can understand. Compiler software also helps programmers find
+
+
+    errors in their code. If something is mistyped or formatted incorrectly, a compiler
+    can often catch the problem. This is known as a syntax error. A piece of software
+    may have thousands of lines of code, so it is not unusual for errors to appear.
+
+
+    Errors in code look different than typos in regular text. The language C# uses
+    symbols such as %, {, }, &, and \*. These symbols can tell a program to go look
+    in a specific area to find information. Accidentally leaving out a single \* could
+    bring a program to a sudden halt. When'
+  - "[PAGE 18]\n\na programmer tries to run software and it doesn’t work at all, he\
+    \ or she knows a syntax error may be lurking somewhere in the code.\n\nAnother\
+    \ type of programming error is called a runtime error. This is a problem that\
+    \ occurs while a program is running. The program may seem to run normally at first,\
+    \ but some of its features might not be working correctly. Problems like these\
+    \ are also known as bugs.\n\n> **DID YOU KNOW?**\n> \n> Major programs, such as\
+    \ operating systems, can include huge amounts of code. This can make finding tiny\
+    \ errors difficult. Microsoft’s Windows XP operating system was made up of 45\
+    \ million lines of code!\n\n# Dealing with Bugs\n\nThe use of the term bug to\
+    \ describe general errors predates computers. One of its early uses in computer\
+    \ errors came from an incident in September 1947. Technicians were working on\
+    \ a US military computer. At that time, computers were the size of\n\nentire rooms.\
+    \ Something went wrong with the computer, and the workers searched for the problem.\
+    \ They found that a moth had gotten stuck in one of its parts and caused the issue.\
+    \ Computer pioneer Grace Hopper wrote in the log book, “First actual case of bug\
+    \ being found.”"
+  - '[PAGE 19]
+
+
+    In computers, a bug can cause a game to crash. It may cause a music app to suddenly
+    skip songs. It might make a video chat suddenly disconnect. But some bugs can
+    be much more serious. One of these happened on September 23, 1983.
+
+
+    On that date, alarm bells sounded in a Russian military base. The base’s software
+    said that the United States had just launched nuclear missiles at Russia. Commanders
+    thought they might need to fire their own missiles. This would result in a devastating
+    war. But Lieutenant Colonel Stanislaus Petrov did not think the missiles were
+    really coming. It turned out a software bug had made the alarms sound. A software
+    error could have led to a war. Instead, Petrov was able to guess that something
+    wasn’t quite right.
+
+
+    Living in a world of computers means knowing that sometimes software will not
+    work as intended. There will be errors and mistakes in the code. In a process
+    called debugging, coders find and fix these errors to make their software work
+    better.
+
+
+    # ## Thinking Like a Programmer
+
+
+    Programming is not just a job. It is also a mindset. Thinking like a programmer
+    makes it easier to code successfully.
+
+
+    There are many aspects to thinking like a programmer. First, programmers should
+    keep in mind that they are writing code that computers need to understand. Unless
+    there is a flaw in the hardware,'
+  - '[PAGE 20]
+
+
+    # # HTML
+
+
+    One of the most common ways of writing things on the World Wide Web involves the
+    HyperText Markup Language (HTML). At first HTML may look like code, but it actually
+    just describes what a website will look like. HTML gives web browsers instructions
+    on the size, typeface, arrangement, and formatting of text and pictures online.
+    Though HTML isn’t a programming language, it works together with programming languages
+    to make exciting websites. A programming language called JavaScript is used to
+    make websites more interactive. JavaScript is different from the similarly named
+    Java programming language. JavaScript code is sometimes added directly into the
+    HTML text that makes up a website.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_20_0.png)
+
+
+    *HTML is the language that makes up most websites.*
+
+
+    computers don’t make mistakes. They do exactly what their instructions say. Errors
+    in these instructions are the source of problems. Programmers must logically think
+    about how the computer will interpret their instructions to prevent such issues.'
+  md: '
+
+    ## The First Home Computers
+
+
+    The companies Apple and IBM made early personal computers. Some ads showed the
+    computers as being useful in the kitchen. Users could store recipes and create
+    meal plans with them. Other ads showed how useful computers could be for home
+    budgets. These early computers were not as easy to use as today’s machines. The
+    user often needed to have programming knowledge to use them. Today, most users
+    never see the code behind the programs they use. All these instructions are carried
+    out behind the scenes.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_12_0.png)
+
+
+    *Early personal computers were much bulkier than the ones used today.*
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_13_0.png)
+
+
+    *The Internet connects computer users all over the world.*
+
+
+    One part of the Internet is the World Wide Web. It is a set of interconnected
+    pages that Internet users can access online. Another use for the Internet is e-mail,
+    a system for sending and receiving messages. Using the Internet, coders could
+    now share programs with other users. They could also write programs for the World
+    Wide Web.
+
+
+    **Smartphones** and tablets changed the programming landscape in the 2000s. Programs,
+    also known as apps, turned these devices into powerful tools for both work and
+    fun. And new programming tools made coding accessible to more people than ever
+    before.
+
+
+    Today, the future of programming is bright. Computers, smartphones, and tablets
+    can be found in practically every part of society. These machines make modern
+    life more efficient and fun. Inventive coders will continue to make new advances,
+    creating innovative programs that unlock the potential of our computerized world.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_14_0.png)
+
+
+    *Some smartphone apps let users listen to music.*
+
+
+    ## What Is Code?
+
+
+    When using a computer, a person interacts with two related things: hardware and
+    software. The computer’s hardware is made up of its physical parts. The screen,
+    keyboard, and mouse are all hardware. The parts inside the computer, such as the
+    processor and memory, are also hardware.
+
+
+    The computer’s software is made up of all the programs it runs. Some programs
+    manage how the hardware and software work together. These are called **operating
+    systems**. Other programs include word processors, **web browsers**, and games.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_15_0.png)
+
+
+    *Web browsers allow users to access social media, videos, search engines, and
+    more.*
+
+
+    Each programming language has its own strengths and weaknesses, and each is best
+    for different kinds of programs. Some work well for making video games, while
+    others are better suited for simple programs on desktop computers. A few of today’s
+    major languages include C#, Python, Java, and Swift.
+
+
+    > **DID YOU KNOW?**
+
+    >
+
+    > The first computer science department in the United States was at Purdue University
+    in Indiana. In October 1962, the department opened its doors. Today, virtually
+    every university and college has its own computer science program.
+
+
+    Regardless of the language, all code has the same basic function. Code is a list
+    of instructions for the computer processor to follow. Processors can handle instructions
+    only in **binary**—long sequences of ones and zeroes. The most basic programming
+    language, machine code, consists of only ones and zeroes. Binary instructions
+    can be extremely difficult for coders to write and read. To make programming easier,
+    people have developed programming languages that use symbols, letters, and words.
+    Before these instructions go to the processor, they are converted into the equivalent
+    series of ones and zeroes.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_17_0.png)
+
+
+    *Searching for errors can be a challenging part of programming.*
+
+
+    ### Finding Errors
+
+
+    Programmers use compiler software to convert a program into binary. They feed
+    in the code they wrote, and the compiler spits out the ones and zeroes that a
+    processor can understand. Compiler software also helps programmers find errors
+    in their code. If something is mistyped or formatted incorrectly, a compiler can
+    often catch the problem. This is known as a syntax error. A piece of software
+    may have thousands of lines of code, so it is not unusual for errors to appear.
+
+
+    Errors in code look different than typos in regular text. The language C# uses
+    symbols such as %, {, }, &, and \*. These symbols can tell a program to go look
+    in a specific area to find information. Accidentally leaving out a single \* could
+    bring a program to a sudden halt. When a programmer tries to run software and
+    it doesn’t work at all, he or she knows a syntax error may be lurking somewhere
+    in the code.
+
+
+    Another type of programming error is called a runtime error. This is a problem
+    that occurs while a program is running. The program may seem to run normally at
+    first, but some of its features might not be working correctly. Problems like
+    these are also known as bugs.
+
+
+    > **DID YOU KNOW?**
+
+    >
+
+    > Major programs, such as operating systems, can include huge amounts of code.
+    This can make finding tiny errors difficult. Microsoft’s Windows XP operating
+    system was made up of 45 million lines of code!
+
+
+    ### Dealing with Bugs
+
+
+    The use of the term bug to describe general errors predates computers. One of
+    its early uses in computer errors came from an incident in September 1947. Technicians
+    were working on a US military computer. At that time, computers were the size
+    of entire rooms. Something went wrong with the computer, and the workers searched
+    for the problem. They found that a moth had gotten stuck in one of its parts and
+    caused the issue. Computer pioneer Grace Hopper wrote in the log book, “First
+    actual case of bug being found.”
+
+
+    In computers, a bug can cause a game to crash. It may cause a music app to suddenly
+    skip songs. It might make a video chat suddenly disconnect. But some bugs can
+    be much more serious. One of these happened on September 23, 1983.
+
+
+    On that date, alarm bells sounded in a Russian military base. The base’s software
+    said that the United States had just launched nuclear missiles at Russia. Commanders
+    thought they might need to fire their own missiles. This would result in a devastating
+    war. But Lieutenant Colonel Stanislaus Petrov did not think the missiles were
+    really coming. It turned out a software bug had made the alarms sound. A software
+    error could have led to a war. Instead, Petrov was able to guess that something
+    wasn’t quite right.
+
+
+    Living in a world of computers means knowing that sometimes software will not
+    work as intended. There will be errors and mistakes in the code. In a process
+    called debugging, coders find and fix these errors to make their software work
+    better.
+
+
+    ### Thinking Like a Programmer
+
+
+    Programming is not just a job. It is also a mindset. Thinking like a programmer
+    makes it easier to code successfully.
+
+
+    There are many aspects to thinking like a programmer. First, programmers should
+    keep in mind that they are writing code that computers need to understand. Unless
+    there is a flaw in the hardware, computers don’t make mistakes. They do exactly
+    what their instructions say. Errors in these instructions are the source of problems.
+    Programmers must logically think about how the computer will interpret their instructions
+    to prevent such issues.
+
+
+    ### HTML
+
+
+    One of the most common ways of writing things on the World Wide Web involves the
+    HyperText Markup Language (HTML). At first HTML may look like code, but it actually
+    just describes what a website will look like. HTML gives web browsers instructions
+    on the size, typeface, arrangement, and formatting of text and pictures online.
+    Though HTML isn’t a programming language, it works together with programming languages
+    to make exciting websites. A programming language called JavaScript is used to
+    make websites more interactive. JavaScript is different from the similarly named
+    Java programming language. JavaScript code is sometimes added directly into the
+    HTML text that makes up a website.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_20_0.png)
+
+
+    *HTML is the language that makes up most websites.*
+
+    '
+  mdcn: '
+
+    ## 第一代家用电脑
+
+
+    苹果和IBM公司制造了早期的个人电脑。一些广告展示电脑在厨房中有用。用户可以存储食谱并用它们制定膳食计划。其他广告展示了电脑对家庭预算多么有用。这些早期电脑不像今天的机器那样易于使用。用户通常需要具备编程知识才能使用它们。如今，大多数用户从不会看到所用程序背后的代码。所有这些指令都在幕后执行。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_12_0.png)
+
+
+    *早期的个人电脑比现在使用的电脑笨重得多。*
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_13_0.png)
+
+
+    *互联网连接着世界各地的计算机用户。*
+
+
+    互联网的一部分是万维网。它是一组相互连接的页面，互联网用户可以在线访问。互联网的另一个用途是电子邮件，一种发送和接收消息的系统。使用互联网，程序员现在可以与其他用户共享程序。他们也可以为万维网编写程序。
+
+
+    **智能手机**和平板电脑在2000年代改变了编程格局。程序（也称为应用程序）将这些设备变成了工作和娱乐的强大工具。新的编程工具使编程比以往任何时候都更容易被更多人使用。
+
+
+    如今，编程的未来是光明的。计算机、智能手机和平板电脑几乎可以在社会的每个角落找到。这些机器使现代生活更高效、更有趣。有创造力的程序员将继续取得新进展，创造出创新程序，释放我们计算机化世界的潜力。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_14_0.png)
+
+
+    *一些智能手机应用让用户听音乐。*
+
+
+    ## 什么是代码？
+
+
+    使用计算机时，人会与两个相关事物互动：硬件和软件。计算机硬件由其物理部件组成。屏幕、键盘和鼠标都是硬件。计算机内部的部件，如处理器和内存，也是硬件。
+
+
+    计算机软件由它运行的所有程序组成。一些程序管理硬件和软件如何协同工作。这些被称为**操作系统**。其他程序包括文字处理器、**网络浏览器**和游戏。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_15_0.png)
+
+
+    *网络浏览器允许用户访问社交媒体、视频、搜索引擎等。*
+
+
+    每种编程语言都有自己的优缺点，每种都最适合不同种类的程序。有些很适合制作电子游戏，而另一些则更适合台式电脑上的简单程序。当今一些主要语言包括C#、Python、Java和Swift。
+
+
+    > **你知道吗？**
+
+    >
+
+    > 美国第一个计算机科学系在印第安纳州的普渡大学。1962年10月，该系开门招生。如今，几乎每所大学和学院都有自己的计算机科学项目。
+
+
+    无论使用哪种语言，所有代码都有相同的基本功能。代码是供计算机处理器遵循的指令列表。处理器只能以**二进制**——由一和零组成的长序列——处理指令。最基本的编程语言——机器码——仅由一和零组成。二进制指令对程序员来说可能极难编写和阅读。为了让编程更容易，人们开发了使用符号、字母和单词的编程语言。在这些指令进入处理器之前，它们会被转换成等价的一和零序列。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_17_0.png)
+
+
+    *查找错误可能是编程中具有挑战性的一部分。*
+
+
+    ### 查找错误
+
+
+    程序员使用编译软件将程序转换为二进制。他们输入自己编写的代码，编译器输出处理器能理解的一和零。编译软件还帮助程序员查找代码中的错误。如果某处输入错误或格式不正确，编译器通常能发现该问题。这被称为语法错误。一个软件可能有数千行代码，因此出现错误并不罕见。
+
+
+    代码中的错误看起来与普通文本中的拼写错误不同。C#语言使用诸如%、{、}、&和\*之类的符号。这些符号可以告诉程序去特定区域查找信息。意外漏掉一个\*可能会让程序突然停止。当程序员尝试运行软件而它完全无法工作时，他或她知道代码某处可能潜伏着语法错误。
+
+
+    另一种编程错误称为运行时错误。这是程序运行时发生的问题。程序一开始可能看起来运行正常，但它的某些功能可能没有正确工作。这类问题也称为漏洞。
+
+
+    > **你知道吗？**
+
+    >
+
+    > 大型程序，例如操作系统，可能包含大量代码。这会使查找微小错误变得困难。微软的Windows XP操作系统由4500万行代码组成！
+
+
+    ### 处理漏洞
+
+
+    用bug一词描述一般错误早于计算机。它在计算机错误中的早期使用之一来自1947年9月的一次事件。技术人员当时正在研究一台美国军用计算机。那时，计算机有整个房间那么大。计算机出了故障，工作人员查找问题。他们发现一只飞蛾卡在其中一个部件中并导致了该问题。计算机先驱格蕾丝·霍珀在日志中写道：“第一次实际发现bug的案例。”
+
+
+    在计算机中，漏洞可能导致游戏崩溃。它可能使音乐应用突然跳过歌曲。它可能让视频聊天突然断开。但有些漏洞可能严重得多。其中一次发生在1983年9月23日。
+
+
+    那一天，一个俄罗斯军事基地响起了警报。该基地的软件称美国刚刚向俄罗斯发射了核导弹。指挥官们认为他们可能需要发射自己的导弹。这将导致一场毁灭性的战争。但斯坦尼斯拉夫·彼得罗夫中校认为导弹并不是真的来袭。结果发现是软件漏洞触发了警报。一个软件错误本可能导致战争。相反，彼得罗夫能够猜到事情有些不对劲。
+
+
+    生活在计算机世界中意味着要知道有时软件不会按预期工作。代码中会有错误和失误。在称为调试的过程中，程序员查找并修复这些错误，使他们的软件更好地工作。
+
+
+    ### 像程序员一样思考
+
+
+    编程不仅仅是一份工作。它也是一种思维方式。像程序员一样思考可以更容易地成功编写代码。
+
+
+    像程序员一样思考涉及许多方面。首先，程序员应该记住，他们编写的代码需要被计算机理解。除非硬件存在缺陷，否则计算机不会犯错。它们完全按照指令行事。这些指令中的错误才是问题的根源。程序员必须逻辑地思考计算机将如何解释他们的指令，以防止此类问题。
+
+
+    ### HTML
+
+
+    在万维网上书写内容最常见的方式之一涉及超文本标记语言（HTML）。起初HTML可能看起来像代码，但它实际上只是描述网站将是什么样子。HTML给网络浏览器提供关于在线文本和图片的大小、字体、排列和格式的指令。虽然HTML不是编程语言，但它与编程语言协同工作，制作出令人兴奋的网站。一种称为JavaScript的编程语言用于使网站更具交互性。JavaScript不同于名称相似的Java编程语言。JavaScript代码有时直接添加到构成网站的HTML文本中。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_20_0.png)
+
+
+    *HTML是构成大多数网站的语言。*
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 21]
+
+
+    <!-- no content -->'
+  - '[PAGE 22]
+
+
+    # Linus Torvalds
+
+
+    When most people get a new computer, they use whatever operating system the computer
+    comes with. Today’s most common operating systems are Windows and macOS. Another
+    popular operating system, Linux, dates back to 1991. In that year, a Finnish student
+    named Linus Torvalds decided he could make his own operating system. It soon became
+    known as Linux. Torvalds made it free to use. Torvalds’ major innovation was that
+    it was easy for other coders to make changes to Linux. These changes are shared
+    online. Over time, the development of Linux split into several different branches.
+    Different groups of coders took the operating system in different directions.
+    These different versions of Linux are known as distributions. Major distributions
+    used today include Fedora and Ubuntu.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_22_0.png)
+
+
+    *Torvalds with the mascot of Linux, a penguin*
+
+
+    Thinking like a programmer is useful for more than just coders. Thinking logically,
+    splitting up problems, and collaborating with others are good things for anyone
+    to do when working on any sort of daily task.'
+  - '[PAGE 23]
+
+
+    # # Coding in the Real World
+
+
+    Coding is literally all around us. Because most of the world runs on computers,
+    coding is an important part of keeping information safe and secure. But criminals,
+    sometimes called hackers, can use their coding skills to break the law. Coding
+    skills are also valuable at major businesses for keeping track of vast amounts
+    of data. At the same time, code plays a role in entertaining people, making amazing
+    special effects possible.
+
+
+    # ## Encryption
+
+
+    Security is a major issue online. People may send e-mails about sensitive information.
+    They may look up personal health-care data or access their bank accounts. If these
+    systems were not secure, someone may be able to steal data or even money. Luckily,
+    coders have developed **encryption** programs to help keep information safe online.
+
+
+    Encryption software works by obscuring the true contents of messages.'
+  - '[PAGE 24]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_24_0.png)
+
+
+    # # Apps that Save Lives
+
+
+    Part of being a programmer is thinking of how real-world problems can be solved
+    using code. Some of these problems are simple. For example, a person who needs
+    to keep a budget may develop a budgeting program. Other types of programs may
+    be designed to save lives. One such app has information on how to survive a natural
+    disaster. Another has a host of first aid information in case of an emergency.
+    Many apps are also designed for use by doctors, especially in rural areas. Some
+    apps can be used to help with the diagnosis of a disease. For example, an app
+    was developed to identify instances of milky eyes in pictures. This can be a sign
+    of a type of eye cancer. By always looking out for problems in the world, programmers
+    can create software that helps people live safer and healthier lives...
+
+
+    sent online. For instance, a program might turn each letter in a message into
+    another letter. Every *A* may become a *B*, and every *N* may become a *Q*. The
+    word *an* would appear as *bq* instead. The person receiving the message would
+    have software that knows which letters are which. The message would be unscrambled.
+    But if
+
+
+    a person intercepted the message, they would see only the unreadable encrypted
+    message. Programmers who work on encryption software have to adapt to new situations.
+    Criminals or spies may attempt to break the encryption systems. If they succeed,
+    they can read the encrypted text, which'
+  - '[PAGE 25]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_25_0.png)
+
+
+    Online banking and shopping require encryption to keep people’s data safe.
+
+
+    to let users get access to information they aren’t supposed to see. Other programs
+    are designed to annoy users or even steal money. These are known as malware. One
+    major type of malware is known as a virus.
+
+
+    may include passwords, bank account numbers, and sensitive information. Encryption
+    software has to be on the cutting edge at all times to keep data safe.
+
+
+    # Hacking
+
+
+    Not all programmers have good intentions. Some programs are specifically designed
+
+
+    Viruses are pieces of code that are typically hidden inside another file. For
+    example, a programmer may add virus code to a music file. When a person downloads
+    that file and plays the song, the computer also carries out the instructions in
+    the virus’s code. Once on the computer, viruses can wreak havoc. They may delete
+    files or steal information. They may'
+  - '[PAGE 26]
+
+
+    prevent a computer from being used until the user pays the hacker money. They
+    may even allow the hacker to control the computer. Companies create antivirus
+    software to find and delete viruses from computers. A constant struggle exists
+    between hackers and antivirus coders.
+
+
+    # Big Data
+
+
+    In recent years, computer programmers have been dealing with the phenomenon known
+    as big data. Social networks, businesses, schools, scientists, and others are
+    collecting huge amounts of data all the time. Programmers have learned how to
+    manage all that information and make it useful.
+
+
+    One of the biggest sets of data on the planet is owned by Facebook. The social
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_26_0.png)
+
+
+    networking website, which began in 2004, had approximately 1.8 billion users by
+    2016. These users share photos, talk'
+  - '[PAGE 27]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_27_0.png)
+
+
+    Social media apps often store huge amounts of data about their users.
+
+
+    with friends, and fill their profile pages with the celebrities and brands they
+    like most. Facebook uses all this data to help advertisers target users’ specific
+    interests. The company also collects information about how people use Facebook,
+    even recording how long users hold the mouse over certain parts of the page. It
+    uses this kind of information when redesigning how the website looks.
+
+
+    # ## Making Movies with Code
+
+
+    Computers and programming have revolutionized the movie industry. This revolution
+    is clear in today’s incredible special effects. Programmers in this field are
+    often artists and designers, too. Computer-generated special effects first came
+    to film in the 1970s. One of the first'
+  - '[PAGE 28]
+
+
+    major milestones was the 1973 movie *Westworld*. In that movie, artists worked
+    with programmers to create a scene from the point of view of a robot. The robot
+    could sense body heat. Programmers made a short sequence where the whole screen
+    is red, except a patch of yellow and orange where a human is standing.
+
+
+    > > **DID YOU KNOW?**
+
+    > >
+
+    > > Facebook stores all the data it collects in large facilities called data centers.
+    By 2016, it had built four data centers. One of them was a building measuring
+    307,000 square feet (28,500 square meters) in size. That’s bigger than five football
+    fields!
+
+
+    Another major milestone was **three-dimensional computer graphics**. Programmers
+    faced a big challenge when it came to making a virtual creature in a movie look
+    lifelike next to real people. The 1993 movie *Jurassic Park* was the first movie
+    to show off this new skill. Artists drew and sculpted dinosaurs in different poses.
+    This work was scanned into a computer. Coders used animation software to make
+    the dinosaur models move. Other artists created skin textures to make the dinosaurs
+    look lifelike. All of these elements came together to create a dinosaur that could
+    be placed into a scene.'
+  - '[PAGE 29]
+
+
+    # DID YOU KNOW?
+
+
+    In 1995, the first completely computer-animated movie, *Toy Story*, arrived in
+    theaters. Created by Pixar, the movie was an instant hit. Since then, Pixar has
+    released more than 15 other movies. Each one has brought new innovations to the
+    world of computer animation.
+
+
+    Some movies are completely computer generated. Companies such as Pixar and DreamWorks
+    create animated movies solely on computers. They use software created especially
+    for the task. Programmers who make this animation software find ways to make things
+    move in realistic ways. They also figure out how to make light and shadows look
+    realistic in a scene. In the world of movies, artists and programmers work together
+    to make beautiful films.
+
+
+    # Gaming
+
+
+    Programming is a central part of the video game industry. In some ways, programming
+    video games is similar to the work programmers do for movies. Both fields often
+    involve creating virtual
+
+
+    Each step required complex programming to make sure all the pieces fit together.'
+  md: '
+
+    ## Linus Torvalds
+
+
+    When most people get a new computer, they use whatever operating system the computer
+    comes with. Today’s most common operating systems are Windows and macOS. Another
+    popular operating system, Linux, dates back to 1991. In that year, a Finnish student
+    named Linus Torvalds decided he could make his own operating system. It soon became
+    known as Linux. Torvalds made it free to use. Torvalds’ major innovation was that
+    it was easy for other coders to make changes to Linux. These changes are shared
+    online. Over time, the development of Linux split into several different branches.
+    Different groups of coders took the operating system in different directions.
+    These different versions of Linux are known as distributions. Major distributions
+    used today include Fedora and Ubuntu.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_22_0.png)
+
+
+    *Torvalds with the mascot of Linux, a penguin*
+
+
+    Thinking like a programmer is useful for more than just coders. Thinking logically,
+    splitting up problems, and collaborating with others are good things for anyone
+    to do when working on any sort of daily task.
+
+
+    ## Coding in the Real World
+
+
+    Coding is literally all around us. Because most of the world runs on computers,
+    coding is an important part of keeping information safe and secure. But criminals,
+    sometimes called hackers, can use their coding skills to break the law. Coding
+    skills are also valuable at major businesses for keeping track of vast amounts
+    of data. At the same time, code plays a role in entertaining people, making amazing
+    special effects possible.
+
+
+    ### Encryption
+
+
+    Security is a major issue online. People may send e-mails about sensitive information.
+    They may look up personal health-care data or access their bank accounts. If these
+    systems were not secure, someone may be able to steal data or even money. Luckily,
+    coders have developed **encryption** programs to help keep information safe online.
+
+
+    Encryption software works by obscuring the true contents of messages sent online.
+    For instance, a program might turn each letter in a message into another letter.
+    Every *A* may become a *B*, and every *N* may become a *Q*. The word *an* would
+    appear as *bq* instead. The person receiving the message would have software that
+    knows which letters are which. The message would be unscrambled. But if a person
+    intercepted the message, they would see only the unreadable encrypted message.
+
+
+    Programmers who work on encryption software have to adapt to new situations. Criminals
+    or spies may attempt to break the encryption systems. If they succeed, they can
+    read the encrypted text, which may include passwords, bank account numbers, and
+    sensitive information. Encryption software has to be on the cutting edge at all
+    times to keep data safe.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_25_0.png)
+
+
+    Online banking and shopping require encryption to keep people’s data safe.
+
+
+    ### Apps that Save Lives
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_24_0.png)
+
+
+    Part of being a programmer is thinking of how real-world problems can be solved
+    using code. Some of these problems are simple. For example, a person who needs
+    to keep a budget may develop a budgeting program. Other types of programs may
+    be designed to save lives. One such app has information on how to survive a natural
+    disaster. Another has a host of first aid information in case of an emergency.
+    Many apps are also designed for use by doctors, especially in rural areas. Some
+    apps can be used to help with the diagnosis of a disease. For example, an app
+    was developed to identify instances of milky eyes in pictures. This can be a sign
+    of a type of eye cancer. By always looking out for problems in the world, programmers
+    can create software that helps people live safer and healthier lives...
+
+
+    ### Hacking
+
+
+    Not all programmers have good intentions. Some programs are specifically designed
+    to let users get access to information they aren’t supposed to see. Other programs
+    are designed to annoy users or even steal money. These are known as malware. One
+    major type of malware is known as a virus.
+
+
+    Viruses are pieces of code that are typically hidden inside another file. For
+    example, a programmer may add virus code to a music file. When a person downloads
+    that file and plays the song, the computer also carries out the instructions in
+    the virus’s code. Once on the computer, viruses can wreak havoc. They may delete
+    files or steal information. They may prevent a computer from being used until
+    the user pays the hacker money. They may even allow the hacker to control the
+    computer. Companies create antivirus software to find and delete viruses from
+    computers. A constant struggle exists between hackers and antivirus coders.
+
+
+    ### Big Data
+
+
+    In recent years, computer programmers have been dealing with the phenomenon known
+    as big data. Social networks, businesses, schools, scientists, and others are
+    collecting huge amounts of data all the time. Programmers have learned how to
+    manage all that information and make it useful.
+
+
+    One of the biggest sets of data on the planet is owned by Facebook. The social
+    networking website, which began in 2004, had approximately 1.8 billion users by
+    2016. These users share photos, talk with friends, and fill their profile pages
+    with the celebrities and brands they like most. Facebook uses all this data to
+    help advertisers target users’ specific interests. The company also collects information
+    about how people use Facebook, even recording how long users hold the mouse over
+    certain parts of the page. It uses this kind of information when redesigning how
+    the website looks.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_26_0.png)
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_27_0.png)
+
+
+    Social media apps often store huge amounts of data about their users.
+
+
+    ### Making Movies with Code
+
+
+    Computers and programming have revolutionized the movie industry. This revolution
+    is clear in today’s incredible special effects. Programmers in this field are
+    often artists and designers, too. Computer-generated special effects first came
+    to film in the 1970s. One of the first major milestones was the 1973 movie *Westworld*.
+    In that movie, artists worked with programmers to create a scene from the point
+    of view of a robot. The robot could sense body heat. Programmers made a short
+    sequence where the whole screen is red, except a patch of yellow and orange where
+    a human is standing.
+
+
+    > **DID YOU KNOW?**
+
+    >
+
+    > Facebook stores all the data it collects in large facilities called data centers.
+    By 2016, it had built four data centers. One of them was a building measuring
+    307,000 square feet (28,500 square meters) in size. That’s bigger than five football
+    fields!
+
+
+    Another major milestone was **three-dimensional computer graphics**. Programmers
+    faced a big challenge when it came to making a virtual creature in a movie look
+    lifelike next to real people. The 1993 movie *Jurassic Park* was the first movie
+    to show off this new skill. Artists drew and sculpted dinosaurs in different poses.
+    This work was scanned into a computer. Coders used animation software to make
+    the dinosaur models move. Other artists created skin textures to make the dinosaurs
+    look lifelike. All of these elements came together to create a dinosaur that could
+    be placed into a scene.
+
+
+    > **DID YOU KNOW?**
+
+    >
+
+    > In 1995, the first completely computer-animated movie, *Toy Story*, arrived
+    in theaters. Created by Pixar, the movie was an instant hit. Since then, Pixar
+    has released more than 15 other movies. Each one has brought new innovations to
+    the world of computer animation.
+
+
+    Some movies are completely computer-generated. Companies such as Pixar and DreamWorks
+    create animated movies solely on computers. They use software created especially
+    for the task. Programmers who make this animation software find ways to make things
+    move in realistic ways. They also figure out how to make light and shadows look
+    realistic in a scene. In the world of movies, artists and programmers work together
+    to make beautiful films.
+
+
+    ### Gaming
+
+
+    Programming is a central part of the video game industry. In some ways, programming
+    video games is similar to the work programmers do for movies. Both fields often
+    involve creating virtual
+
+
+    Each step required complex programming to make sure all the pieces fit together.
+
+    '
+  mdcn: '
+
+    ## 林纳斯·托瓦兹
+
+
+    大多数人拿到新电脑时，都会使用电脑预装的操作系统。如今最常见的操作系统是 Windows 和 macOS。另一个流行的操作系统 Linux 可以追溯到 1991
+    年。那一年，一位名叫林纳斯·托瓦兹的芬兰学生决定自己做一个操作系统。它很快以 Linux 之名广为人知。托瓦兹让它免费使用。托瓦兹的主要创新在于，其他程序员可以很容易地对
+    Linux 进行修改。这些修改会在网上共享。随着时间推移，Linux 的开发分成了几个不同的分支。不同的程序员群体把这个操作系统带向了不同的方向。这些不同版本的
+    Linux 被称为发行版。如今使用的主要发行版包括 Fedora 和 Ubuntu。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_22_0.png)
+
+
+    *托瓦兹与 Linux 的吉祥物——一只企鹅*
+
+
+    像程序员一样思考，不仅对程序员有用。在处理任何日常任务时，逻辑思考、拆分问题以及与他人协作，对任何人来说都是有益的做法。
+
+
+    ## 现实世界中的编程
+
+
+    编程确实无处不在。由于世界上大部分事务都依赖计算机运行，编程是保障信息安全的重要一环。但犯罪分子——有时被称为黑客——可能利用他们的编程技能违法。大型企业也需要编程技能来跟踪海量数据。与此同时，代码还在娱乐大众方面发挥作用，让令人惊叹的特效成为可能。
+
+
+    ### 加密
+
+
+    安全是网络上的一个重大问题。人们可能会发送包含敏感信息的电子邮件。他们可能会查询个人医疗数据或访问自己的银行账户。如果这些系统不安全，有人就可能窃取数据甚至金钱。幸运的是，程序员已经开发出**加密**程序，帮助保障网上信息安全。
+
+
+    加密软件的工作原理是隐藏网上发送信息的真实内容。例如，程序可能把消息中的每个字母转换成另一个字母。每个 *A* 可能变成 *B*，每个 *N* 可能变成 *Q*。单词
+    *an* 则会显示为 *bq*。接收消息的人会拥有知道字母对应关系的软件。消息会被还原。但如果有人截获了这条消息，他们只会看到无法读取的加密消息。
+
+
+    从事加密软件工作的程序员必须适应新情况。犯罪分子或间谍可能试图破解加密系统。如果他们得逞，就能读取加密文本，其中可能包含密码、银行账号和敏感信息。加密软件必须始终保持前沿，才能保障数据安全。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_25_0.png)
+
+
+    网上银行和购物需要加密来保障人们的数据安全。
+
+
+    ### 拯救生命的应用程序
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_24_0.png)
+
+
+    作为程序员的一部分工作，就是思考如何用代码解决现实世界中的问题。其中一些问题很简单。例如，需要控制预算的人可能会开发一个预算管理程序。其他类型的程序则可能旨在拯救生命。有一款这样的应用程序提供如何从自然灾害中幸存的信息。另一款则汇集了大量急救信息，以备紧急情况之需。许多应用程序还专为医生使用而设计，尤其是在农村地区。有些应用程序可用于辅助诊断疾病。例如，有人开发了一款应用程序，用来识别图片中出现的乳白色眼睛。这可能是某种眼癌的征兆。通过始终关注世界上的问题，程序员可以创造出帮助人们更安全、更健康地生活的软件……
+
+
+    ### 黑客行为
+
+
+    并非所有程序员都心怀善意。有些程序专门设计来让用户获取他们本不应看到的信息。还有些程序旨在骚扰用户，甚至窃取钱财。这些被称为恶意软件。其中一种主要的恶意软件被称为病毒。
+
+
+    病毒是通常隐藏在另一个文件中的代码片段。例如，程序员可能把病毒代码添加到音乐文件中。当一个人下载该文件并播放歌曲时，计算机也会执行病毒代码中的指令。一旦进入计算机，病毒就可能造成严重破坏。它们可能删除文件或窃取信息。它们可能让计算机无法使用，直到用户向黑客付钱。它们甚至可能让黑客控制计算机。公司开发杀毒软件来查找并删除计算机中的病毒。黑客与杀毒软件程序员之间始终存在着一场持续的斗争。
+
+
+    ### 大数据
+
+
+    近年来，计算机程序员一直在应对被称为大数据的现象。社交网络、企业、学校、科学家以及其他各方无时无刻不在收集海量数据。程序员已经学会如何管理所有这些信息并使其发挥作用。
+
+
+    地球上最大的数据集之一归 Facebook 所有。这个社交网站始于 2004 年，到 2016 年已拥有约 18 亿用户。这些用户分享照片、与朋友交谈，并在个人资料页面上填满他们最喜欢的名人和品牌。Facebook
+    利用所有这些数据帮助广告商瞄准用户的具体兴趣。该公司还收集人们如何使用 Facebook 的信息，甚至记录用户将鼠标停留在页面某些部分的时间。它在重新设计网站外观时会利用这类信息。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_26_0.png)
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_27_0.png)
+
+
+    社交媒体应用程序通常会存储大量关于其用户的数据。
+
+
+    ### 用代码制作电影
+
+
+    计算机和编程彻底改变了电影行业。这场革命在当今令人难以置信的特效中清晰可见。这一领域的程序员往往同时也是艺术家和设计师。计算机生成的特效最早于20世纪70年代进入电影。最早的重大里程碑之一是1973年的电影*《西部世界》*。在那部电影中，艺术家与程序员合作，创造了一个从机器人视角出发的场景。机器人能够感知体温。程序员制作了一段短镜头：整个屏幕都是红色的，只有一个人站立的位置呈现一片黄色和橙色。
+
+
+    > **你知道吗？**
+
+    >
+
+    > Facebook 将其收集的所有数据存储在称为数据中心的大型设施中。到 2016 年，它已建成四个数据中心。其中一个是一座面积为 307,000 平方英尺（28,500
+    平方米）的建筑。这比五个足球场还要大！
+
+
+    另一个重大里程碑是**三维计算机图形**。程序员面临的一大挑战是，如何让电影中的虚拟生物在真人旁边看起来栩栩如生。1993年的电影*《侏罗纪公园》*是第一部展示这项新技能的电影。艺术家绘制并雕刻出不同姿态的恐龙。这些作品被扫描进计算机。程序员使用动画软件让恐龙模型动起来。其他艺术家创作皮肤纹理，使恐龙看起来逼真。所有这些元素结合在一起，创造出一只可以放入场景中的恐龙。
+
+
+    > **你知道吗？**
+
+    >
+
+    > 1995年，第一部完全由计算机动画制作的电影*《玩具总动员》*登陆影院。这部电影由皮克斯创作，一经上映便大获成功。自那以后，皮克斯又发行了超过15部电影。每一部都为计算机动画世界带来了新的创新。
+
+
+    有些电影完全由计算机生成。皮克斯和梦工厂等公司完全在计算机上创作动画电影。他们使用专为此任务开发的软件。制作这种动画软件的程序员想办法让物体以逼真的方式运动。他们还研究如何让场景中的光线和阴影看起来真实。在电影世界里，艺术家和程序员携手合作，制作出精美的影片。
+
+
+    ### 游戏
+
+
+    编程是电子游戏行业的核心部分。在某些方面，为电子游戏编程与程序员为电影所做的工作相似。这两个领域通常都涉及创建虚拟
+
+
+    每个步骤都需要复杂的编程，以确保所有部分能够组合在一起。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 30]
+
+
+    <!-- no content -->'
+  - '[PAGE 31]
+
+
+    # Code Bootcamps
+
+
+    With so many coding jobs, the need for talented programmers is growing. Though
+    a person can get a college degree in programming, other educational pathways have
+    become available. One such method is a coding bootcamp. Bootcamps are intense,
+    immersive classes in programming. Some are only nine weeks long. They usually
+    focus on the specific kind of programming needed for a job. For example, if a
+    person is looking for a job writing mobile apps, a bootcamp will focus on app
+    programming. Bootcamps are becoming particularly popular among young people, as
+    well as in developing countries. In places where unemployment is high, this style
+    of training can be a quick way to find a new career.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_31_0.png)
+
+
+    A teacher works with a student at a code bootcamp.
+
+
+    data research, or an entertaining movie or video game, code is a major part of
+    our world. Learning how code works is critical to understanding how computers
+    have changed modern life. The flexibility of programming means that computers
+    can tackle just about any task coders can dream up.'
+  - '[PAGE 32]
+
+
+    # # Coding for Tomorrow
+
+
+    Students learn to read and write in school. But what if they learned to code,
+    too? Many schools are beginning to teach coding in the classroom. And students
+    of all ages can use online tools to start learning programming in their free time.
+    As computers continue to reach into almost every part of daily life, learning
+    about code is becoming more important. Even if a student does not want to become
+    a programmer, knowing how code works will help them understand the world in which
+    he or she lives.
+
+
+    # ## Hour of Code
+
+
+    In 2013, an organization called Code.org was formed. Its goal is to bring coding
+    to as many people as possible. The group particularly targets students who may
+    not otherwise have access to computer science education. Many of their events
+    are focused on recruiting girls and people of color. Because coding is such an
+    important part of the digital world, it is important to make sure everyone has
+    an equal opportunity to learn about it.'
+  - '[PAGE 33]
+
+
+    Code.org is home to Hour of Code. This 60-minute program is designed to introduce
+    students of all ages to coding and computer science. If a student is interested,
+    he or she can go on to more advanced coding lessons. By 2017, more than 300 million
+    people worldwide had tried the Hour of Code.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_33_0.png)
+
+
+    Tim Cook, the head of computer company Apple, watches as kids participate in an
+    Hour of Code event at an Apple Store.'
+  - '[PAGE 34]
+
+
+    People can access the Hour of Code at home, but each year, Code.org also hosts
+    a worldwide Hour of Code event. The event takes place during the Computer Science
+    Education Week at the beginning of December. Partners such as Disney, Apple, and
+    Google help spread the word. In 2016, Disney made a new Hour of Code lesson based
+    on the animated film *Moana*. Microsoft made several tutorials related to the
+    popular game *Minecraft*. A group of athletes, including Kobe Bryant and Serena
+    Williams, helped promote a sports-themed lesson. And in Apple Stores across the
+    world, students could participate in a one-hour coding lesson.
+
+
+    # DID YOU KNOW?
+
+
+    Coding websites sometimes feature challenges to help students sharpen their skills.
+    They give users real-world coding problems to solve, helping them learn to think
+    like a programmer.
+
+
+    These early coding lessons often use a concept called block coding. This means
+    students don’t have to jump straight
+
+
+    into writing code. Instead, they move blocks labeled with commands around the
+    screen. These blocks may say “move forward” or “turn left.” The character on the
+    screen then follows the actions. This helps students understand the basic process
+    of giving logical instructions to the computer. As the lessons progress.'
+  - '[PAGE 35]
+
+
+    the challenges become more complex and more block commands are added. Eventually
+    students begin writing actual code.
+
+
+    students from preschool to high school early exposure to coding, helping them
+    think about how computers work in their daily lives. Students learn what computer
+    science is and how programs are written. They also get a preview of what college
+    life is like.
+
+
+    # Learning to Code in School
+
+
+    In schools across the country, coding is becoming a common subject. Alongside
+    math and social studies, kids are learning the basics of how to make computer
+    programs. Most of these courses are in middle and high schools. The number of
+    schools offering programming classes is expected to rise in the coming years.
+
+
+    Students also learn to code in after-school and summer programs. One of these
+    is CS@SC Summer Camps, held at the University of Southern California. The weeklong
+    camps are designed to give
+
+
+    Learning how to program has advantages beyond preparing students for coding careers.
+    It also teaches students to think like a programmer, which can improve their problem-solving
+    skills in other areas. Coding can give students another set of critical thinking
+    tools, especially when thinking about how to tackle big projects of all kinds.
+
+
+    Experts predict there will be a major demand for programmers in the future. Students
+    who aren’t exposed to'
+  - '[PAGE 36]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_36_0.png)
+
+
+    programming in high school may not have the chance to see if it is interesting
+    to them. Giving students the chance to code early means that many more may choose
+    to pursue computer science. This can help satisfy the future need for coders.
+
+
+    # Coding for a Mobile Future
+
+
+    In the last decade, the popularity of mobile devices has boomed. Smartphones kicked
+    off this wave, bringing amazing computing power into the palms of people’s hands.'
+  - '[PAGE 37]
+
+
+    # DID YOU KNOW?
+
+
+    Computers and coding have enabled a new type of acting in Hollywood movies. It
+    is known as motion capture. An actor is covered with a bunch of white or green
+    dots. Special sensors record how the dots move as the actor performs in a scene.
+    The facial movements are then transferred to a digital character, such as an alien
+    or a magical beast. The end result is similar to acting with a high-tech mask.
+
+
+    By the late 2010s, the hottest trend was wearable technology. Devices such as
+    the FitBit or the Apple Watch are worn on the wrist. Some track fitness information,
+    such as heart rate or running distance. Others can send messages or play music.
+    The future is likely to bring devices that are even smaller and more capable.
+    Imagine jewelry that is connected to a phone. A person could answer a call with
+    a tap on an earring. Coding for these devices will require a lot of creative thinking.
+    One of the biggest hurdles with wearable technology is battery life. Small devices
+    can fit only small batteries. Smart, efficient programming can help these items
+    run on less power, extending the battery life.'
+  - '[PAGE 38]
+
+
+    # Coding for Virtual Spaces
+
+
+    Another field that will require creative coding is virtual reality. Virtual reality
+    immerses the user in an entirely different world. A user puts on a headset and
+    is transported to a virtual location. Small screens in front of the eyes create
+    the illusion of being in a three-dimensional environment. Headphones produce noises
+    that sound as if they are coming
+
+
+    from specific directions. And when the user turns his or her head, the screens
+    and headphones work together to match this movement in the virtual world.
+
+
+    In virtual reality, the user moves through a landscape and interacts with virtual
+    objects. For example, with the headset on, a user may be exploring a house. When
+    the user wants to open a door, he or she reaches out to grasp the
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_38_0.png)'
+  - '[PAGE 39]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_39_0.png)
+
+
+    *Pokémon GO* became the most popular use of augmented reality yet when it released
+    in 2016.
+
+
+    knob. Of course, the door isn’t really there. Programmers have to create code
+    that displays the door knob in the right location and causes it to turn when the
+    user grasps it. In other words, the game must react to both what the user is seeing
+    and what the user is doing.
+
+
+    Augmented reality has similar demands but works slightly different. While virtual
+    reality involves worlds that are entirely created in a computer, augmented reality
+
+
+    blends computer programming with the real world. One of the best examples is the
+    mobile game *Pokémon GO*. The game took the world by storm in the summer of 2016.
+    In *Pokémon GO*, the user sees a map of the surrounding area. Creatures appear
+    in particular locations on the map. When the user taps a creature, the map goes
+    away and the phone displays a view through the device’s camera. A three-dimensional
+    rendering of the creature appears on the screen, overlaid on the camera view.
+    It looks as though'
+  md: '
+
+    ## Code Bootcamps
+
+
+    With so many coding jobs, the need for talented programmers is growing. Though
+    a person can get a college degree in programming, other educational pathways have
+    become available. One such method is a coding bootcamp. Bootcamps are intense,
+    immersive classes in programming. Some are only nine weeks long. They usually
+    focus on the specific kind of programming needed for a job. For example, if a
+    person is looking for a job writing mobile apps, a bootcamp will focus on app
+    programming. Bootcamps are becoming particularly popular among young people, as
+    well as in developing countries. In places where unemployment is high, this style
+    of training can be a quick way to find a new career.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_31_0.png)
+
+
+    A teacher works with a student at a code bootcamp.
+
+
+    data research, or an entertaining movie or video game, code is a major part of
+    our world. Learning how code works is critical to understanding how computers
+    have changed modern life. The flexibility of programming means that computers
+    can tackle just about any task coders can dream up.
+
+
+    ## Coding for Tomorrow
+
+
+    Students learn to read and write in school. But what if they learned to code,
+    too? Many schools are beginning to teach coding in the classroom. And students
+    of all ages can use online tools to start learning programming in their free time.
+    As computers continue to reach into almost every part of daily life, learning
+    about code is becoming more important. Even if a student does not want to become
+    a programmer, knowing how code works will help them understand the world in which
+    he or she lives.
+
+
+    ### Hour of Code
+
+
+    In 2013, an organization called Code.org was formed. Its goal is to bring coding
+    to as many people as possible. The group particularly targets students who may
+    not otherwise have access to computer science education. Many of their events
+    are focused on recruiting girls and people of color. Because coding is such an
+    important part of the digital world, it is important to make sure everyone has
+    an equal opportunity to learn about it.
+
+
+    Code.org is home to Hour of Code. This 60-minute program is designed to introduce
+    students of all ages to coding and computer science. If a student is interested,
+    he or she can go on to more advanced coding lessons. By 2017, more than 300 million
+    people worldwide had tried the Hour of Code.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_33_0.png)
+
+
+    Tim Cook, the head of computer company Apple, watches as kids participate in an
+    Hour of Code event at an Apple Store.
+
+
+    People can access the Hour of Code at home, but each year, Code.org also hosts
+    a worldwide Hour of Code event. The event takes place during the Computer Science
+    Education Week at the beginning of December. Partners such as Disney, Apple, and
+    Google help spread the word. In 2016, Disney made a new Hour of Code lesson based
+    on the animated film *Moana*. Microsoft made several tutorials related to the
+    popular game *Minecraft*. A group of athletes, including Kobe Bryant and Serena
+    Williams, helped promote a sports-themed lesson. And in Apple Stores across the
+    world, students could participate in a one-hour coding lesson.
+
+
+    ### DID YOU KNOW?
+
+
+    Coding websites sometimes feature challenges to help students sharpen their skills.
+    They give users real-world coding problems to solve, helping them learn to think
+    like a programmer.
+
+
+    These early coding lessons often use a concept called block coding. This means
+    students don’t have to jump straight into writing code. Instead, they move blocks
+    labeled with commands around the screen. These blocks may say “move forward” or
+    “turn left.” The character on the screen then follows the actions. This helps
+    students understand the basic process of giving logical instructions to the computer.
+    As the lessons progress, the challenges become more complex and more block commands
+    are added. Eventually students begin writing actual code.
+
+
+    ## Learning to Code in School
+
+
+    In schools across the country, coding is becoming a common subject. Alongside
+    math and social studies, kids are learning the basics of how to make computer
+    programs. Most of these courses are in middle and high schools. The number of
+    schools offering programming classes is expected to rise in the coming years.
+
+
+    Students also learn to code in after-school and summer programs. One of these
+    is CS@SC Summer Camps, held at the University of Southern California. The weeklong
+    camps are designed to give students from preschool to high school early exposure
+    to coding, helping them think about how computers work in their daily lives. Students
+    learn what computer science is and how programs are written. They also get a preview
+    of what college life is like.
+
+
+    Learning how to program has advantages beyond preparing students for coding careers.
+    It also teaches students to think like a programmer, which can improve their problem-solving
+    skills in other areas. Coding can give students another set of critical thinking
+    tools, especially when thinking about how to tackle big projects of all kinds.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_36_0.png)
+
+
+    Experts predict there will be a major demand for programmers in the future. Students
+    who aren’t exposed to programming in high school may not have the chance to see
+    if it is interesting to them. Giving students the chance to code early means that
+    many more may choose to pursue computer science. This can help satisfy the future
+    need for coders.
+
+
+    ## Coding for a Mobile Future
+
+
+    ### DID YOU KNOW?
+
+
+    Computers and coding have enabled a new type of acting in Hollywood movies. It
+    is known as motion capture. An actor is covered with a bunch of white or green
+    dots. Special sensors record how the dots move as the actor performs in a scene.
+    The facial movements are then transferred to a digital character, such as an alien
+    or a magical beast. The end result is similar to acting with a high-tech mask.
+
+
+    By the late 2010s, the hottest trend was wearable technology. Devices such as
+    the FitBit or the Apple Watch are worn on the wrist. Some track fitness information,
+    such as heart rate or running distance. Others can send messages or play music.
+    The future is likely to bring devices that are even smaller and more capable.
+    Imagine jewelry that is connected to a phone. A person could answer a call with
+    a tap on an earring. Coding for these devices will require a lot of creative thinking.
+    One of the biggest hurdles with wearable technology is battery life. Small devices
+    can fit only small batteries. Smart, efficient programming can help these items
+    run on less power, extending the battery life.
+
+
+    ## Coding for Virtual Spaces
+
+
+    Another field that will require creative coding is virtual reality. Virtual reality
+    immerses the user in an entirely different world. A user puts on a headset and
+    is transported to a virtual location. Small screens in front of the eyes create
+    the illusion of being in a three-dimensional environment. Headphones produce noises
+    that sound as if they are coming from specific directions. And when the user turns
+    his or her head, the screens and headphones work together to match this movement
+    in the virtual world.
+
+
+    In virtual reality, the user moves through a landscape and interacts with virtual
+    objects. For example, with the headset on, a user may be exploring a house. When
+    the user wants to open a door, he or she reaches out to grasp the knob. Of course,
+    the door isn’t really there. Programmers have to create code that displays the
+    door knob in the right location and causes it to turn when the user grasps it.
+    In other words, the game must react to both what the user is seeing and what the
+    user is doing.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_38_0.png)
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_39_0.png)
+
+
+    *Pokémon GO* became the most popular use of augmented reality yet when it released
+    in 2016.
+
+
+    Augmented reality has similar demands but works slightly differently. While virtual
+    reality involves worlds that are entirely created in a computer, augmented reality
+    blends computer programming with the real world. One of the best examples is the
+    mobile game *Pokémon GO*. The game took the world by storm in the summer of 2016.
+    In *Pokémon GO*, the user sees a map of the surrounding area. Creatures appear
+    in particular locations on the map. When the user taps a creature, the map goes
+    away and the phone displays a view through the device’s camera. A three-dimensional
+    rendering of the creature appears on the screen, overlaid on the camera view.
+    It looks as though
+
+    '
+  mdcn: '
+
+
+    ## 编程训练营
+
+
+    编程岗位众多，对优秀程序员的需求与日俱增。虽然人们可以通过大学获得编程学位，但其他教育途径也相继出现。其中一种方式就是编程训练营。训练营是强度大、沉浸式的编程课程，有些只有九周时间。它们通常专注于某项工作所需的特定编程技能。例如，如果一个人想找编写移动应用的工作，训练营就会专注于应用编程。训练营在年轻人中以及发展中国家尤其流行。在失业率高的地方，这种培训方式可以成为快速找到新职业的途径。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_31_0.png)
+
+
+    一位教师在一家编程训练营中指导学生。
+
+
+    无论是数据研究，还是一部娱乐电影或电子游戏，代码都是我们世界的重要组成部分。了解代码的运作方式，对于理解计算机如何改变现代生活至关重要。编程的灵活性意味着计算机几乎可以处理程序员能想到的任何任务。
+
+
+    ## 为明天而编程
+
+
+    学生在学校里学习阅读和写作。但如果他们也学习编程呢？许多学校开始在课堂上教授编程。各个年龄段的学生都可以利用在线工具，在空闲时间开始学习编程。随着计算机不断渗透到日常生活的几乎每个角落，学习代码变得越来越重要。即使学生不想成为程序员，了解代码的运作方式也能帮助他们理解自己所生活的世界。
+
+
+    ### 编程一小时
+
+
+    2013年，一个名为Code.org的组织成立。它的目标是为尽可能多的人提供编程教育。该组织特别关注那些原本可能无法接受计算机科学教育的学生。他们的许多活动都致力于招募女孩和有色人种参与。由于编程是数字世界如此重要的组成部分，确保每个人都有平等机会学习编程至关重要。
+
+
+    Code.org是“编程一小时”活动的发起方。这个60分钟的项目旨在向各个年龄段的学生介绍编程和计算机科学。如果学生感兴趣，可以继续学习更高级的编程课程。到2017年，全球已有超过3亿人尝试过“编程一小时”。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_33_0.png)
+
+
+    电脑公司苹果的负责人蒂姆·库克在苹果专卖店里观看孩子们参加“编程一小时”活动。
+
+
+    人们可以在家参与“编程一小时”，但每年Code.org也会举办一次全球性的“编程一小时”活动。该活动于12月初的计算机科学教育周期间举行。迪士尼、苹果和谷歌等合作伙伴帮助宣传活动。2016年，迪士尼根据动画电影《海洋奇缘》制作了一堂新的“编程一小时”课程。微软制作了与热门游戏《我的世界》相关的几个教程。包括科比·布莱恩特和塞雷娜·威廉姆斯在内的一组运动员帮助推广了一堂体育主题课程。而在世界各地的苹果专卖店里，学生们都可以参加一小时的编程课。
+
+
+    ### 你知道吗？
+
+
+    编程网站有时会设置挑战，帮助学生磨练技能。它们为用户提供现实世界中的编程问题来攻克，帮助他们学会像程序员一样思考。
+
+
+    这些早期的编程课程通常使用一种叫模块化编程的概念。这意味着学生不必直接跳入代码编写，而是把带有命令的模块在屏幕上移动。这些模块上可能写着“向前移动”或“向左转”，屏幕上的角色随后会按照这些指令行动。这有助于学生理解向计算机发出逻辑指令的基本过程。随着课程推进，挑战会变得更加复杂，并加入更多模块命令。最终，学生们开始编写真正的代码。
+
+
+    ## 在学校学习编程
+
+
+    在全国各地的学校中，编程正成为一门常见课程。除了数学和社会研究外，孩子们也在学习如何编写计算机程序的基础知识。这些课程大多设在初中和高中。提供编程课程的学校数量预计在未来几年还会增加。
+
+
+    学生们还通过课外班和暑期项目学习编程。其中之一是在南加州大学举办的CS@SC夏令营。这个为期一周的夏令营旨在让从学龄前到高中的学生尽早接触编程，帮助他们思考计算机在日常生活中的作用。学生们了解什么是计算机科学以及程序是如何编写的，还能提前感受一下大学生活。
+
+
+    学习编程除了为学生从事编程职业做好准备外，还有其他好处。它还能教导学生像程序员一样思考，从而提高他们在其他领域解决问题的能力。编程可以为学生提供另一套批判性思维工具，尤其是在思考如何应对各类大型项目时。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_36_0.png)
+
+
+    专家预测，未来对程序员的需求将会很大。高中时期没有接触过编程的学生，可能没有机会发现自己是否对此感兴趣。让学生尽早有机会编程，意味着更多人可能会选择学习计算机科学。这有助于满足未来对编码人才的需求。
+
+
+    ## 面向移动未来的编程
+
+
+    ### 你知道吗？
+
+
+    计算机与编程催生了好莱坞电影中的一种新型表演方式，即动作捕捉。演员身上贴满白色或绿色的点在演员表演某个场景时，特殊传感器会记录这些点的移动方式。随后，面部动作会被转换到数字角色上，比如外星人或魔法野兽。最终效果就像戴着一副高科技面具在表演。
+
+
+    到2010年代末，最热门的趋势是可穿戴技术。FitBit（健康手环）或Apple Watch（苹果手表）等设备佩戴在手腕上。有些设备追踪健康信息，如心率或跑步距离；有些则能发送消息或播放音乐。未来可能会带来更小、功能更强大的设备。想象一下珠宝与手机相连。一个人只需轻触耳环就能接听电话。为这些设备编写代码需要大量创造性思维。可穿戴技术最大的障碍之一是电池续航能力。小型设备只能容纳小电池。智能而高效的编程可以帮助这些设备以更低的功耗运行，从而延长电池寿命。
+
+
+    ## 为虚拟空间编程
+
+
+    另一个需要创造性编程的领域是虚拟现实。虚拟现实将用户完全沉浸在一个截然不同的世界里。用户戴上头戴式显示器，就会被传送到一个虚拟地点。眼前的小屏幕营造出三维环境的错觉。耳机产生的声音听起来像是从特定方向传来的。当用户转动头部时，屏幕和耳机协同工作，在虚拟世界中匹配这一动作。
+
+
+    在虚拟现实中，用户在场景中移动并与虚拟物体互动。例如，戴上头戴设备后，用户可能正在探索一栋房子。当用户想要开门时，他或她会伸手去抓门把手。当然，门并不真正存在。程序员必须编写代码，在正确的位置显示门把手，并在用户抓握时使其转动。换句话说，游戏必须对用户所看到的和所做的事情都做出反应。
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_38_0.png)
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_39_0.png)
+
+
+    《精灵宝可梦GO》在2016年发布时，成为了增强现实迄今为止最热门的应用。
+
+
+    增强现实有类似的需求，但运作方式略有不同。虚拟现实涉及完全由计算机创造的世界，而增强现实则将计算机编程与现实世界相融合。最好的例子之一就是手机游戏《精灵宝可梦GO》。这款游戏在2016年夏天风靡全球。在《精灵宝可梦GO》中，用户会看到周围区域的地图。生物出现在地图上的特定位置。当用户点击一个生物时，地图消失，手机通过摄像头显示实时画面。一个三维渲染的生物出现在屏幕上，覆盖在摄像头画面之上。看起来就像
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 40]
+
+
+    # # HoloLens: Bringing Augmented Reality into the Home
+
+
+    Computer company Microsoft created an augmented reality device called HoloLens.
+    The HoloLens is a set of big glasses that a user can wear. Through the glasses,
+    the user sees three-dimensional objects in his or her environment. Imagine a phone''s
+    screen floating in midair. You could click on the e-mail app and it would open,
+    allowing you to write a message without using a keyboard. Microsoft also thinks
+    the augmented reality technology could be used by artists. A sculptor could design
+    a statue of a horse in a HoloLens app. That statue then could be created by a
+    three-dimensional printer. The programming opportunities with HoloLens are huge,
+    but they will require a lot of work. Since the HoloLens is meant to be used by
+    everyday people, programmers will have a lot of users test their creations.
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_40_0.png)
+
+
+    *This promotional photo from Microsoft shows a motorcycle designer using HoloLens
+    to view her creation on her desktop.*'
+  - '[PAGE 41]
+
+
+    # DID YOU KNOW?
+
+
+    A truly smart robot will require artificial intelligence with more than just knowledge.
+    It would need to have emotions, too. The most realistic robots in the future will
+    be coded to understand when to act sad, grumpy, or happy.
+
+
+    world. When archaeologists find ancient ruins, they may try to describe or sketch
+    what the ruins might have once looked like. With an augmented reality program,
+    they can see these recreations overlaid on the ruins themselves. Someone walking
+    through ruins in Greece could hold up a phone or tablet and see how the place
+    would have looked in 500 BCE.
+
+
+    the creature really exists in the user’s environment.
+
+
+    However, coders are using augmented reality for more than creating games. Some
+    have designed a new way to see an old
+
+
+    # Artificial Intelligence
+
+
+    One major area of study in programming today is artificial intelligence. In this
+    field, coders work to create smart software that can solve problems and adapt
+    to new situations on its own. Simple versions of artificial intelligence are responsible
+    for the challenging computer opponents found in modern video games. These'
+  - '[PAGE 42]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_42_0.png)
+
+
+    opponents are programmed to adapt to new situations created by the player’s actions.
+    For example, in a football game, the artificial intelligence might make adjustments
+    to its team’s defense based on the play style of the user. Making smarter robots
+    is another application of artificial intelligence. Robotic vacuum cleaners learn
+    how to clean a room, how to avoid obstacles, and when to return to their base
+    to recharge their batteries. However, there
+
+
+    are many other ways programmers are bringing smart technology to the world. The
+    computer Watson is one of the most famous artificial intelligence machines. It
+    was built by the company IBM through years of hardware and software development.
+    Watson competed on the quiz show *Jeopardy!* in 2011. It beat two human players.
+    IBM later adapted Watson to use its intelligence in the field of health care.
+    It analyzes a'
+  - '[PAGE 43]
+
+
+    ![](img/364f62702bba0f9efdd5ce92b1a6d6f9_43_0.png)
+
+
+    # # Self-Modifying Code
+
+
+    What happens when a program becomes its own programmer? Though human programmers
+    try to make software that can work perfectly, they can''t anticipate every issue
+    that may arise. Instead of the programmer having to go back in and rework the
+    code, a self-modifying program could just rewrite its own code. The hope is that
+    such smart software would be able to adapt itself to carry out complex tasks.
+    For example, the US government hopes to make self-learning computers that can
+    assess situations based on huge amounts of complex information. Computers can
+    store vastly more data than human analysts. A smart, adaptable computer with access
+    to all this information may be able to suggest the best decisions in high-stakes
+    situations, such as natural disasters or wars.
+
+
+    wide variety of patient data, then makes recommendations to doctors. In 2016,
+    IBM announced that Watson would begin working on weather forecasts as well.
+
+
+    # ## Coding a New World
+
+
+    As computers and electronic devices become more sophisticated, coding will
+
+
+    have to adapt as well. Programmers will continue developing innovative new software
+    to run on these machines. From animated movies to virtual video games to weather
+    forecasts, code has a nearly infinite number of uses in our digital future.'
+  - '[PAGE 44]
+
+
+    # # GLOSSARY
+
+
+    **binary** (BYE-nary): A number system that consists solely of ones and zeroes.
+
+
+    **compiler** (com-PIE-ler): A software program that translates code into a program
+    that can run on a computer.
+
+
+    **encryption** (en-CRIP-shun): The process of turning information into a form
+    that prevents it from being read.
+
+
+    **operating systems** (OP-er-ay-ting SIS-temz): The most basic software on a computer
+    that helps the other software work together with the hardware.
+
+
+    **processor** (PRAW-sess-er): The part of the computer that carries out the instructions
+    of programs.
+
+
+    **smartphones** (SMART-fonez): Cell phones that have a large touchscreen and a
+    powerful processor and can run apps.
+
+
+    **three-dimensional** (three-duh-MENSH-un-uhl): Having height, width, and depth.
+
+
+    **web browsers** (WEB brow-zerz): Software programs that allow a user to access
+    the World Wide Web, part of the Internet.'
+  - '[PAGE 45]
+
+
+    # FOR MORE INFORMATION
+
+
+    # Books
+
+
+    Heather Lyons and Elizabeth Tweedale, *Learn to Program*. Minneapolis, MN: Lerner
+    Publications, 2017. This book provides some basic information for beginning programmers,
+    explaining concepts such as algorithms, loops, and variables.
+
+
+    Jon Woodcock, *Coding Games in Scratch: A Step-by-Step Visual Guide to Building
+    Your Own Computer Games*. New York: DK, 2016. This guide for new programmers shows
+    how to build programs with the Scratch programming language. Users can create
+    puzzles, mazes, and other interactive games.
+
+
+    Sean McManus, *How to Code in 10 Easy Lessons: Learn How to Design and Code Your
+    Very Own Computer Game*. Lake Forest, CA: Walter Foster Jr., 2015. This helpful
+    guide breaks down ten key skills that new programmers should learn. Readers will
+    be able to create games and web pages.
+
+
+    Tammy Gagne, *Women in Computer Science*. Minneapolis, MN: Abdo Publishing, 2017.
+    This book includes examples of women doing incredible work in many areas of computer
+    science, including coding.
+
+
+    Therese Naber, *How the Computer Changed History*. Minneapolis, MN: Abdo Publishing,
+    2016. In this book, discover the amazing story behind how computers went from
+    expensive, room-sized machines to something that millions of people carry with
+    them in their pockets every day.'
+  - '[PAGE 46]
+
+
+    # # Websites
+
+
+    **Code Academy** (https://www.codecademy.com/) The Code Academy website features
+    free lessons on many different programming languages, including Python, Java,
+    and Ruby.
+
+
+    **Made w/Code** (https://www.madewithcode.com/) The Made w/Code site, run by technology
+    company Google, features many fun and interesting coding projects.
+
+
+    **Hour of Code** (https://code.org/learn) The website for the Hour of Code has
+    links to dozens of coding tutorials. Many of the tutorials feature popular characters,
+    such as those from the Star Wars films and Minecraft.
+
+
+    **Scratch** (https://scratch.mit.edu/) The Massachusetts Institute of Technology
+    (MIT) runs this coding site, which uses an easy-to-learn programming language
+    called Scratch to introduce users to coding concepts.
+
+
+    **Lightbot** (https://lightbot.com/) On the Lightbot website, users can tackle
+    puzzles using basic programming concepts, helping them to think like coders.'
+  - "[PAGE 47]\n\n+   **A**\n+   - Analytical Engine, 8\n+   - Apple, 11, 33, 36\n\
+    +   - Apps, 13, 18, 20, 23, 30, 39\n+   - Artificial intelligence, 40–42\n+  \
+    \ - Augmented reality, 38–40\n+   \n+   **B**\n+   - Babbage, Charles, 7–8\n+\
+    \   - Big data, 25–26\n+   - Binary, 15–16\n+   - Bryant, Kobe, 33\n+   - Bugs,\
+    \ 17–18\n+   \n+   **C**\n+   - Coding\n+     - bootcamp, 30\n+     - in schools,\
+    \ 34–35\n+   - Compiler, 16\n+   - Computers\n+     - hardware, 14, 18, 41\n+\
+    \     - software, 14–15, 16–17, 18, 23–24, 40\n\n+   **D**\n+   - Data centers,\
+    \ 27\n+   - Difference Engine, 7, 8\n+   \n+   **E**\n+   - E-mail, 12, 22, 39\n\
+    +   - Encryption, 22–24\n+   - Errors, 16–18\n+     - runtime error, 17\n+   \
+    \  - syntax error, 16–17\n+   \n+   **F**\n+   - Facebook, 26, 27\n+   - Fitness\
+    \ devices, 36\n+   \n+   **G**\n+   - Games, 4, 10, 15, 18, 20, 28–30, 33, 38,\
+    \ 40–42\n+   - Google, 33\n\n+   **H**\n+   - Hackers, 24–25\n+   - “Hello World”\
+    \ programs, 6\n+   - Hopper, Grace, 9, 17\n+   - Hour of Code, 31–33\n+   - HTML,\
+    \ 19\n+   \n+   **I**\n+   - IBM, 10, 11, 41–42\n+   - Internet, 10, 12–13\n+\
+    \   \n+   **L**\n+   - Linux, 21\n+   - Lord Byron, 7\n+   - Lovelace, Ada, 6–9\n\
+    +   \n+   **M**\n+   - Malware, 24–25\n+   - Marconi, Guglielmo, 25\n+   - Menabrea,\
+    \ Luigi Federico, 8\n+   - Microsoft HoloLens, 39\n+   - Microsoft Windows XP,\
+    \ 17\n+   - Minecraft (game), 33"
+  md: "\n## HoloLens: Bringing Augmented Reality into the Home\n\nComputer company\
+    \ Microsoft created an augmented reality device called HoloLens. The HoloLens\
+    \ is a set of big glasses that a user can wear. Through the glasses, the user\
+    \ sees three-dimensional objects in his or her environment. Imagine a phone's\
+    \ screen floating in midair. You could click on the e-mail app and it would open,\
+    \ allowing you to write a message without using a keyboard. Microsoft also thinks\
+    \ the augmented reality technology could be used by artists. A sculptor could\
+    \ design a statue of a horse in a HoloLens app. That statue then could be created\
+    \ by a three-dimensional printer. The programming opportunities with HoloLens\
+    \ are huge, but they will require a lot of work. Since the HoloLens is meant to\
+    \ be used by everyday people, programmers will have a lot of users test their\
+    \ creations.\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_40_0.png)\n\n*This promotional\
+    \ photo from Microsoft shows a motorcycle designer using HoloLens to view her\
+    \ creation on her desktop.*\n\nThe creature really exists in the user’s environment.\n\
+    \nHowever, coders are using augmented reality for more than creating games. Some\
+    \ have designed a new way to see an old world. When archaeologists find ancient\
+    \ ruins, they may try to describe or sketch what the ruins might have once looked\
+    \ like. With an augmented reality program, they can see these recreations overlaid\
+    \ on the ruins themselves. Someone walking through ruins in Greece could hold\
+    \ up a phone or tablet and see how the place would have looked in 500 BCE.\n\n\
+    ### DID YOU KNOW?\n\nA truly smart robot will require artificial intelligence\
+    \ with more than just knowledge. It would need to have emotions, too. The most\
+    \ realistic robots in the future will be coded to understand when to act sad,\
+    \ grumpy, or happy.\n\n## Artificial Intelligence\n\nOne major area of study in\
+    \ programming today is artificial intelligence. In this field, coders work to\
+    \ create smart software that can solve problems and adapt to new situations on\
+    \ its own. Simple versions of artificial intelligence are responsible for the\
+    \ challenging computer opponents found in modern video games. These opponents\
+    \ are programmed to adapt to new situations created by the player’s actions. For\
+    \ example, in a football game, the artificial intelligence might make adjustments\
+    \ to its team’s defense based on the play style of the user. Making smarter robots\
+    \ is another application of artificial intelligence. Robotic vacuum cleaners learn\
+    \ how to clean a room, how to avoid obstacles, and when to return to their base\
+    \ to recharge their batteries.\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_42_0.png)\n\
+    \nHowever, there are many other ways programmers are bringing smart technology\
+    \ to the world. The computer Watson is one of the most famous artificial intelligence\
+    \ machines. It was built by the company IBM through years of hardware and software\
+    \ development. Watson competed on the quiz show *Jeopardy!* in 2011. It beat two\
+    \ human players. IBM later adapted Watson to use its intelligence in the field\
+    \ of health care. It analyzes a wide variety of patient data, then makes recommendations\
+    \ to doctors. In 2016, IBM announced that Watson would begin working on weather\
+    \ forecasts as well.\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_43_0.png)\n\n\
+    ### Self-Modifying Code\n\nWhat happens when a program becomes its own programmer?\
+    \ Though human programmers try to make software that can work perfectly, they\
+    \ can't anticipate every issue that may arise. Instead of the programmer having\
+    \ to go back in and rework the code, a self-modifying program could just rewrite\
+    \ its own code. The hope is that such smart software would be able to adapt itself\
+    \ to carry out complex tasks. For example, the US government hopes to make self-learning\
+    \ computers that can assess situations based on huge amounts of complex information.\
+    \ Computers can store vastly more data than human analysts. A smart, adaptable\
+    \ computer with access to all this information may be able to suggest the best\
+    \ decisions in high-stakes situations, such as natural disasters or wars.\n\n\
+    ### Coding a New World\n\nAs computers and electronic devices become more sophisticated,\
+    \ coding will have to adapt as well. Programmers will continue developing innovative\
+    \ new software to run on these machines. From animated movies to virtual video\
+    \ games to weather forecasts, code has a nearly infinite number of uses in our\
+    \ digital future.\n\n## GLOSSARY\n\n- **binary** (BYE-nary): A number system that\
+    \ consists solely of ones and zeroes.\n- **compiler** (com-PIE-ler): A software\
+    \ program that translates code into a program that can run on a computer.\n- **encryption**\
+    \ (en-CRIP-shun): The process of turning information into a form that prevents\
+    \ it from being read.\n- **operating systems** (OP-er-ay-ting SIS-temz): The most\
+    \ basic software on a computer that helps the other software work together with\
+    \ the hardware.\n- **processor** (PRAW-sess-er): The part of the computer that\
+    \ carries out the instructions of programs.\n- **smartphones** (SMART-fonez):\
+    \ Cell phones that have a large touchscreen and a powerful processor and can run\
+    \ apps.\n- **three-dimensional** (three-duh-MENSH-un-uhl): Having height, width,\
+    \ and depth.\n- **web browsers** (WEB brow-zerz): Software programs that allow\
+    \ a user to access the World Wide Web, part of the Internet.\n\n## FOR MORE INFORMATION\n\
+    \n### Books\n\n- Heather Lyons and Elizabeth Tweedale, *Learn to Program*. Minneapolis,\
+    \ MN: Lerner Publications, 2017. This book provides some basic information for\
+    \ beginning programmers, explaining concepts such as algorithms, loops, and variables.\n\
+    - Jon Woodcock, *Coding Games in Scratch: A Step-by-Step Visual Guide to Building\
+    \ Your Own Computer Games*. New York: DK, 2016. This guide for new programmers\
+    \ shows how to build programs with the Scratch programming language. Users can\
+    \ create puzzles, mazes, and other interactive games.\n- Sean McManus, *How to\
+    \ Code in 10 Easy Lessons: Learn How to Design and Code Your Very Own Computer\
+    \ Game*. Lake Forest, CA: Walter Foster Jr., 2015. This helpful guide breaks down\
+    \ ten key skills that new programmers should learn. Readers will be able to create\
+    \ games and web pages.\n- Tammy Gagne, *Women in Computer Science*. Minneapolis,\
+    \ MN: Abdo Publishing, 2017. This book includes examples of women doing incredible\
+    \ work in many areas of computer science, including coding.\n- Therese Naber,\
+    \ *How the Computer Changed History*. Minneapolis, MN: Abdo Publishing, 2016.\
+    \ In this book, discover the amazing story behind how computers went from expensive,\
+    \ room-sized machines to something that millions of people carry with them in\
+    \ their pockets every day.\n\n### Websites\n\n- **Code Academy** (https://www.codecademy.com/)\
+    \ The Code Academy website features free lessons on many different programming\
+    \ languages, including Python, Java, and Ruby.\n- **Made w/Code** (https://www.madewithcode.com/)\
+    \ The Made w/Code site, run by technology company Google, features many fun and\
+    \ interesting coding projects.\n- **Hour of Code** (https://code.org/learn) The\
+    \ website for the Hour of Code has links to dozens of coding tutorials. Many of\
+    \ the tutorials feature popular characters, such as those from the Star Wars films\
+    \ and Minecraft.\n- **Scratch** (https://scratch.mit.edu/) The Massachusetts Institute\
+    \ of Technology (MIT) runs this coding site, which uses an easy-to-learn programming\
+    \ language called Scratch to introduce users to coding concepts.\n- **Lightbot**\
+    \ (https://lightbot.com/) On the Lightbot website, users can tackle puzzles using\
+    \ basic programming concepts, helping them to think like coders.\n\n**A**\n\n\
+    - Analytical Engine, 8\n- Apple, 11, 33, 36\n- Apps, 13, 18, 20, 23, 30, 39\n\
+    - Artificial intelligence, 40–42\n- Augmented reality, 38–40\n\n**B**\n\n- Babbage,\
+    \ Charles, 7–8\n- Big data, 25–26\n- Binary, 15–16\n- Bryant, Kobe, 33\n- Bugs,\
+    \ 17–18\n\n**C**\n\n- Coding\n  - bootcamp, 30\n  - in schools, 34–35\n- Compiler,\
+    \ 16\n- Computers\n  - hardware, 14, 18, 41\n  - software, 14–15, 16–17, 18, 23–24,\
+    \ 40\n\n**D**\n\n- Data centers, 27\n- Difference Engine, 7, 8\n\n**E**\n\n- E-mail,\
+    \ 12, 22, 39\n- Encryption, 22–24\n- Errors, 16–18\n  - runtime error, 17\n  -\
+    \ syntax error, 16–17\n\n**F**\n\n- Facebook, 26, 27\n- Fitness devices, 36\n\n\
+    **G**\n\n- Games, 4, 10, 15, 18, 20, 28–30, 33, 38, 40–42\n- Google, 33\n\n**H**\n\
+    \n- Hackers, 24–25\n- “Hello World” programs, 6\n- Hopper, Grace, 9, 17\n- Hour\
+    \ of Code, 31–33\n- HTML, 19\n\n**I**\n\n- IBM, 10, 11, 41–42\n- Internet, 10,\
+    \ 12–13\n\n**L**\n\n- Linux, 21\n- Lord Byron, 7\n- Lovelace, Ada, 6–9\n\n**M**\n\
+    \n- Malware, 24–25\n- Marconi, Guglielmo, 25\n- Menabrea, Luigi Federico, 8\n\
+    - Microsoft HoloLens, 39\n- Microsoft Windows XP, 17\n- Minecraft (game), 33\n"
+  mdcn: "\n\n## HoloLens：将增强现实带入家庭\n\n计算机公司微软创造了一款名为 HoloLens 的增强现实设备。HoloLens 是一副用户可佩戴的大眼镜。透过眼镜，用户能在自身环境中看到三维物体。想象一块手机屏幕悬浮在半空中。你可以点击电子邮件应用，它就会打开，让你无需使用键盘即可撰写信息。微软还认为，增强现实技术可以供艺术家使用。雕塑家可以在\
+    \ HoloLens 应用中设计一座马雕像。然后，这座雕像可以由三维打印机制作出来。HoloLens 带来的编程机会巨大，但需要大量工作。由于 HoloLens\
+    \ 旨在供普通人使用，程序员将让大量用户测试他们的作品。\n\n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_40_0.png)\n\
+    \n*这张微软宣传照片展示了一位摩托车设计师使用 HoloLens 在桌面上查看她的创作。*\n\n这个生物确实存在于用户的环境中。\n\n然而，程序员使用增强现实不仅仅是为了制作游戏。有些人设计了一种观察旧世界的新方式。当考古学家发现古代遗迹时，他们可能会尝试描述或勾勒这些遗迹曾经可能的样子。借助增强现实程序，他们可以看到这些复原景象叠加在遗迹本身上。走在希腊遗迹中的人可以举起手机或平板电脑，看到这个地方在公元前500年时的样子。\n\
+    \n### 你知道吗？\n\n真正智能的机器人所需的人工智能将不仅仅拥有知识。它还需要拥有情感。未来最逼真的机器人将被编码为懂得何时表现出悲伤、暴躁或快乐。\n\
+    \n## 人工智能\n\n当今编程领域的一个主要研究领域是人工智能。在这一领域，程序员致力于创建能够自行解决问题并适应新情况的智能软件。简单版本的人工智能造就了现代电子游戏中富有挑战性的电脑对手。这些对手经过编程，能够适应玩家行为所造成的新情况。例如，在橄榄球游戏中，人工智能可能会根据用户的比赛风格调整其球队的防守。制造更智能的机器人是人工智能的另一项应用。机器人吸尘器会学习如何清洁房间、如何避开障碍物，以及何时返回基座为电池充电。\n\
+    \n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_42_0.png)\n\n然而，程序员还有许多其他方式将智能技术带给世界。计算机\
+    \ Watson 是最著名的人工智能机器之一。它由 IBM 公司经过多年硬件和软件开发而打造。Watson 于2011年参加了智力竞赛节目 *《危险边缘》*。它击败了两名人类选手。IBM\
+    \ 后来调整 Watson，使其智能应用于医疗保健领域。它会分析各种各样的患者数据，然后向医生提出建议。2016年，IBM 宣布 Watson 也将开始从事天气预报工作。\n\
+    \n![](img/364f62702bba0f9efdd5ce92b1a6d6f9_43_0.png)\n\n### 自修改代码\n\n当一个程序成为自己的程序员时，会发生什么？尽管人类程序员努力使软件完美运行，但他们无法预见可能出现的每一个问题。与其让程序员返回并重写代码，自修改程序可以直接重写自己的代码。人们希望这种智能软件能够自我调整以执行复杂任务。例如，美国政府希望制造出能够基于大量复杂信息评估形势的自学习计算机。计算机能存储的数据量远超人类分析师。一台能够访问所有这些信息的智能、可适应计算机，或许能够在自然灾害或战争等高风险情境中提出最佳决策建议。\n\
+    \n### 编码新世界\n\n随着计算机和电子设备变得越来越复杂，编码也必须随之调整。程序员将继续开发创新的新软件，以便在这些机器上运行。从动画电影到虚拟电子游戏再到天气预报，代码在我们数字化的未来中有着几乎无穷无尽的用途。\n\
+    \n## 词汇表\n\n- **二进制**（BYE-nary）：一种仅由1和0组成的数字系统。\n- **编译器**（com-PIE-ler）：一种将代码转换为可在计算机上运行程序的软件程序。\n\
+    - **加密**（en-CRIP-shun）：将信息转换为一种防止其被读取的形式的过程。\n- **操作系统**（OP-er-ay-ting SIS-temz）：计算机上最基础的软件，帮助其他软件与硬件协同工作。\n\
+    - **处理器**（PRAW-sess-er）：计算机中执行程序指令的部分。\n- **智能手机**（SMART-fonez）：具有大触摸屏和强大处理器、可运行应用的手机。\n\
+    - **三维的**（three-duh-MENSH-un-uhl）：具有高度、宽度和深度。\n- **网络浏览器**（WEB brow-zerz）：允许用户访问万维网（互联网的一部分）的软件程序。\n\
+    \n## 更多信息\n\n### 书籍\n\n- 希瑟·莱昂斯和伊丽莎白·特威代尔，*《学习编程》*。明尼苏达州明尼阿波利斯：Lerner Publications，2017年。本书为初学程序员提供了一些基础知识，解释了算法、循环和变量等概念。\n\
+    - 乔恩·伍德科克，*《Scratch 编程游戏：构建你自己的计算机游戏的逐步可视化指南》*。纽约：DK，2016年。这本面向新程序员的指南展示了如何使用\
+    \ Scratch 编程语言构建程序。用户可以创建拼图、迷宫和其他互动游戏。\n- 肖恩·麦克马纳斯，*《10堂简单课程教你编程：学习如何设计和编写你自己的计算机游戏》*。加利福尼亚州莱克福里斯特：Walter\
+    \ Foster Jr.，2015年。这本实用指南分解了新程序员应学习的十项关键技能。读者将能够创建游戏和网页。\n- 塔米·加涅，*《计算机科学中的女性》*。明尼苏达州明尼阿波利斯：Abdo\
+    \ Publishing，2017年。本书收录了女性在计算机科学许多领域（包括编程）做出非凡工作的例子。\n- 特蕾丝·纳伯，*《计算机如何改变历史》*。明尼苏达州明尼阿波利斯：Abdo\
+    \ Publishing，2016年。在本书中，探索计算机如何从昂贵的、房间大小的机器变成数百万人每天随身携带在口袋里的东西这一惊人故事。\n\n### 网站\n\
+    \n- **代码学院**（https://www.codecademy.com/）代码学院网站提供许多不同编程语言的免费课程，包括 Python、Java\
+    \ 和 Ruby。\n- **Made w/Code**（https://www.madewithcode.com/）由科技公司谷歌运营的 Made w/Code\
+    \ 网站收录了许多有趣好玩的编程项目。\n- **编程一小时**（https://code.org/learn）编程一小时的网站提供了数十个编程教程的链接。许多教程以热门角色为主角，例如《星球大战》电影和《我的世界》中的角色。\n\
+    - **Scratch**（https://scratch.mit.edu/）麻省理工学院（MIT）运营这个编程网站，该网站使用一种名为 Scratch 的易学编程语言向用户介绍编程概念。\n\
+    - **Lightbot**（https://lightbot.com/）在 Lightbot 网站上，用户可以使用基本编程概念解决谜题，从而帮助自己像程序员一样思考。\n\
+    \n**A**\n\n- 分析机，8\n- 苹果公司，11，33，36\n- 应用，13，18，20，23，30，39\n- 人工智能，40–42\n- 增强现实，38–40\n\
+    \n**B**\n\n- 查尔斯·巴贝奇，7–8\n- 大数据，25–26\n- 二进制，15–16\n- 科比·布莱恩特，33\n- 程序错误，17–18\n\
+    \n**C**\n\n- 编程\n  - 训练营，30\n  - 在学校中，34–35\n- 编译器，16\n- 计算机\n  - 硬件，14，18，41\n\
+    \  - 软件，14–15，16–17，18，23–24，40\n\n**D**\n\n- 数据中心，27\n- 差分机，7，8\n\n**E**\n\n\
+    - 电子邮件，12，22，39\n- 加密，22–24\n- 错误，16–18\n  - 运行时错误，17\n  - 语法错误，16–17\n\n**F**\n\
+    \n- Facebook，26，27\n- 健身设备，36\n\n**G**\n\n- 游戏，4，10，15，18，20，28–30，33，38，40–42\n\
+    - 谷歌，33\n\n**H**\n\n- 黑客，24–25\n- “Hello World”程序，6\n- 格蕾丝·霍珀，9，17\n- 编程一小时，31–33\n\
+    - HTML，19\n\n**I**\n\n- IBM，10，11，41–42\n- 互联网，10，12–13\n\n**L**\n\n- Linux，21\n\
+    - 拜伦勋爵，7\n- 阿达·洛芙莱斯，6–9\n\n**M**\n\n- 恶意软件，24–25\n- 古列尔莫·马可尼，25\n- 路易吉·费德里科·梅纳布雷亚，8\n\
+    - 微软 HoloLens，39\n- 微软 Windows XP，17\n- 《我的世界》（游戏），33\n\n"
+  merge: 1
+- raw:
+  - "[PAGE 48]\n\n+   **M**\n+   \n+   Motion capture, 36\n+   \n+   Movies, 26–28,\
+    \ 36\n\n+   **N**\n+   \n+   National STEM Video Game Challenge, 20\n\n+   **O**\n\
+    +   \n+   Operating systems, 17, 21\n\n+   **P**\n+   \n+   Personal computers,\
+    \ 10–11\n+   \n+   Petrov, Stanislav, 18\n+   \n+   *Pokémon GO* (game), 38\n\
+    +   \n+   Programming languages, 6\n+   \n+   C#, 15\n+   \n+   COBOL, 9\n+  \
+    \ \n+   FORTRAN, 10\n+   \n+   Java, 6, 15\n+   \n+   JavaScript, 19\n+   \n+\
+    \   Python, 15\n+   \n+   Swift, 15\n+   \n+   Purdue University, 15\n\n+   **R**\n\
+    +   \n+   Robots, 27, 40, 41\n\n+   **S**\n+   \n+   Self-modifying code, 42\n\
+    +   \n+   Smartphones, 13, 35\n+   \n+   Social networks, 25–26\n\n+   **T**\n\
+    +   \n+   Tablets, 13, 40\n+   \n+   Telegraph, 25\n+   \n+   Thinking like a\
+    \ programmer, 18–21\n+   \n+   Three-dimensional computer graphics, 27–29\n+ \
+    \  \n+   Torvalds, Linus, 21\n+   \n+   Toy Story (film), 28\n\n+   **U**\n+ \
+    \  \n+   UNIVAC 1, 9\n\n+   **V**\n+   \n+   Virtual reality, 37, 38\n+   \n+\
+    \   Viruses, 24–25\n\n+   **W**\n+   \n+   Watson (computer), 41–42\n+   \n+ \
+    \  Web browsers, 15, 19\n+   \n+   *Westworld* (film), 27\n+   \n+   Williams,\
+    \ Serena, 33\n+   \n+   World War II, 9, 10\n+   \n+   World Wide Web, 12–13,\
+    \ 19\n\n+   **Z**\n+   \n+   Z3, 9\n+   \n+   Zuse, Konrad, 9, 10"
+  - '[PAGE 49]
+
+
+    <!-- no content -->'
+  - '[PAGE 50]
+
+
+    <!-- no content -->'
+  - '[PAGE 51]
+
+
+    <!-- no content -->'
+  - '[PAGE 52]
+
+
+    <!-- no content -->'
+  - '[PAGE 53]
+
+
+    Amazing technological breakthroughs are happening all the time. Scientists and
+    engineers bring new ideas to life, and businesses make them real. Tech Bytes:
+    High Tech explores some of the extraordinary devices and systems that are changing
+    the modern world. Explore the history of these high-tech inventions, what obstacles
+    their inventors encountered along the way, and how these technologies can become
+    a part of society’s culture. Each book contains fast facts, a glossary, an index,
+    and places to go for more information.
+
+
+    # Coding
+
+
+    Coding is the process of giving computers instructions in a language they can
+    understand. It has unlocked the power of modern technology, allowing a computer
+    to complete any task a coder can dream up. Learning to write code is becoming
+    an important skill in our high-tech world.
+
+
+    # DID YOU KNOW?
+
+
+    +   - There are hundreds of different programming languages that coders use.
+
+    +   - A single computer program can have millions of lines of code.
+
+    +   - Everything that happens on a computer, from video games to spreadsheets
+    to browsing the Internet, has code behind it making it work.'
+  md: "\n### M\n\n- Motion capture, 36\n- Movies, 26–28, 36\n\n### N\n\n- National\
+    \ STEM Video Game Challenge, 20\n\n### O\n\n- Operating systems, 17, 21\n\n###\
+    \ P\n\n- Personal computers, 10–11\n- Petrov, Stanislav, 18\n- *Pokémon GO* (game),\
+    \ 38\n- Programming languages, 6\n  - C#, 15\n  - COBOL, 9\n  - FORTRAN, 10\n\
+    \  - Java, 6, 15\n  - JavaScript, 19\n  - Python, 15\n  - Swift, 15\n- Purdue\
+    \ University, 15\n\n### R\n\n- Robots, 27, 40, 41\n\n### S\n\n- Self-modifying\
+    \ code, 42\n- Smartphones, 13, 35\n- Social networks, 25–26\n\n### T\n\n- Tablets,\
+    \ 13, 40\n- Telegraph, 25\n- Thinking like a programmer, 18–21\n- Three-dimensional\
+    \ computer graphics, 27–29\n- Torvalds, Linus, 21\n- Toy Story (film), 28\n\n\
+    ### U\n\n- UNIVAC I, 9\n\n### V\n\n- Virtual reality, 37, 38\n- Viruses, 24–25\n\
+    \n### W\n\n- Watson (computer), 41–42\n- Web browsers, 15, 19\n- *Westworld* (film),\
+    \ 27\n- Williams, Serena, 33\n- World War II, 9, 10\n- World Wide Web, 12–13,\
+    \ 19\n\n### Z\n\n- Z3, 9\n- Zuse, Konrad, 9, 10\n\nAmazing technological breakthroughs\
+    \ are happening all the time. Scientists and engineers bring new ideas to life,\
+    \ and businesses make them real. Tech Bytes: High Tech explores some of the extraordinary\
+    \ devices and systems that are changing the modern world. Explore the history\
+    \ of these high-tech inventions, what obstacles their inventors encountered along\
+    \ the way, and how these technologies can become a part of society’s culture.\
+    \ Each book contains fast facts, a glossary, an index, and places to go for more\
+    \ information.\n\n## Coding\n\nCoding is the process of giving computers instructions\
+    \ in a language they can understand. It has unlocked the power of modern technology,\
+    \ allowing a computer to complete any task a coder can dream up. Learning to write\
+    \ code is becoming an important skill in our high-tech world.\n\n### DID YOU KNOW?\n\
+    \n- There are hundreds of different programming languages that coders use.\n-\
+    \ A single computer program can have millions of lines of code.\n- Everything\
+    \ that happens on a computer, from video games to spreadsheets to browsing the\
+    \ Internet, has code behind it making it work.\n"
+  mdcn: "\n\n### M\n\n- 动作捕捉，36\n- 电影，26–28，36\n\n### N\n\n- 全国 STEM 电子游戏挑战赛，20\n\n\
+    ### O\n\n- 操作系统，17，21\n\n### P\n\n- 个人电脑，10–11\n- 彼得罗夫，斯坦尼斯拉夫，18\n- *宝可梦 GO*（游戏），38\n\
+    - 编程语言，6\n  - C#，15\n  - COBOL，9\n  - FORTRAN，10\n  - Java，6，15\n  - JavaScript，19\n\
+    \  - Python，15\n  - Swift，15\n- 普渡大学，15\n\n### R\n\n- 机器人，27，40，41\n\n### S\n\n\
+    - 自修改代码，42\n- 智能手机，13，35\n- 社交网络，25–26\n\n### T\n\n- 平板电脑，13，40\n- 电报，25\n- 像程序员一样思考，18–21\n\
+    - 三维计算机图形学，27–29\n- 托瓦兹，林纳斯，21\n- 玩具总动员（电影），28\n\n### U\n\n- UNIVAC I，9\n\n###\
+    \ V\n\n- 虚拟现实，37，38\n- 病毒，24–25\n\n### W\n\n- 沃森（计算机），41–42\n- 网页浏览器，15，19\n-\
+    \ *西部世界*（电影），27\n- 威廉姆斯，塞雷娜，33\n- 第二次世界大战，9，10\n- 万维网，12–13，19\n\n### Z\n\n- Z3，9\n\
+    - 楚泽，康拉德，9，10\n\n惊人的技术突破时刻都在发生。科学家和工程师将新想法变为现实，企业则将其付诸实践。《科技快讯：高科技》探索了一些正在改变现代世界的非凡设备和系统。探索这些高科技发明的历史、发明者在过程中遇到的障碍，以及这些技术如何融入社会文化。每本书都包含快速事实、词汇表、索引以及获取更多信息的资源。\n\
+    \n## 编程\n\n编程是用计算机能理解的语言向计算机发出指令的过程。它释放了现代技术的力量，使计算机能够完成程序员所能设想的任何任务。学习编写代码正成为我们高科技世界中一项重要技能。\n\
+    \n### 你知道吗？\n\n- 程序员使用的编程语言有数百种。\n- 单个计算机程序可以包含数百万行代码。\n- 计算机上发生的一切，从电子游戏到电子表格再到浏览互联网，背后都有代码使其运行。\n\
+    \n"
+  merge: 0
