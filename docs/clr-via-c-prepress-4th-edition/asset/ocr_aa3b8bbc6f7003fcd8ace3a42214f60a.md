@@ -1,0 +1,15 @@
+wrong values!
+
+This data corruption problem occurs because none of the Encoding-derived classes maintains any state in between calls to their methods. If you'll be encoding or decoding characters/bytes in chunks, you must do some additional work to maintain state between calls, preventing any loss of data.
+
+To decode chunks of bytes, you should obtain a reference to an Encoding-derived object (as described in the previous section) and call its GetDecoder method. This method returns a reference to a newly constructed object whose type is derived from the System.Text.Decoder class. Like the Encoding class, the Decoder class is an abstract base class. If you look in the .NET Framework SDK documentation, you won't find any classes that represent concrete implementations of the Decoder class. However, the FCL does define a bunch of Decoder-derived classes. These classes are all internal to the FCL, but the GetDecoder method can construct instances of these classes and return them to your application code.
+
+All Decoder-derived classes offer two important methods: GetChars and GetCharCount. Obviously, these methods are used for decoding an array of bytes and work similarly to Encoding's GetChars and GetCharCount methods, discussed earlier. When you call one of these methods, it decodes the byte array as much as possible. If the byte array doesn't contain enough bytes to complete a character, the leftover bytes are saved inside the decoder object. The next time you call one of these methods, the decoder object uses the leftover bytes plus the new byte array passed to it—this ensures that the chunks of data are decoded properly. Decoder objects are very useful when reading bytes from a stream.
+
+An Encoding-derived type can be used for stateless encoding and decoding. However, a Decoder-derived type can be used only for decoding. If you want to encode strings in chunks, call GetEncoder instead of calling the Encoding object's GetDecoder method. GetEncoder returns a newly constructed object whose type is derived from the abstract base class System.Text.Encoder. Again, the .NET Framework SDK documentation doesn't contain any classes representing concrete implementations of the Encoder class. However, the FCL does define some Encoder-derived classes. As with the Decoder-derived classes, these classes are all internal to the FCL, but the GetEncoder method can construct instances of these classes and return them to your application code.
+
+All Encoder-derived classes offer two important methods: GetBytes and GetByteCount. On each call, the Encoder-derived object maintains any leftover state information so that you can encode data in chunks.
+
+# ## Base-64 String Encoding and Decoding
+
+As of this writing, the UTF-16 and UTF-8 encodings are quite popular. It is also quite popular to encode a sequence of bytes to a base-64 string. The FCL does offer methods to do base-64 encoding and decoding, and you might expect that this would be accomplished via an Encoding-derived type. However, for some reason, base-64 encoding and decoding is done using some static methods offered by the System.Convert type.

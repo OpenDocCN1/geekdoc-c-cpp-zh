@@ -1,0 +1,49 @@
+not as complete as the old API. With the new API and some extension methods (in the
+System.Reflection.RuntimeReflectionExtensions class), you can accomplish all you need.
+Expect additional methods to be added to the new API in future versions of the .NET Framework.
+
+Of course, for desktop applications, the old API still exists so that it doesn’t break existing code when
+re-compiling it. However, the new API is the recommended API going forward, and that is why I
+explain the new API exclusively in this chapter. For Windows Store Apps (where backward
+compatibility is not an issue), using the new API is mandatory.
+
+# Assembly Loading
+
+As you know, when the just-in-time (JIT) compiler compiles the Intermediate Language (IL) for a
+method, it sees what types are referenced in the IL code. Then at runtime, the JIT compiler uses the
+assembly’s TypeRef and AssemblyRef metadata tables to determine what assembly defines the type
+being referenced. The AssemblyRef metadata table entry contains all of the parts that make up the
+strong name of the assembly. The JIT compiler grabs all of these parts—name (without extension or
+path), version, culture, and public key token—concatenates them into a string, and then attempts to
+load an assembly matching this identity into the AppDomain (assuming that it’s not already loaded). If
+the assembly being loaded is weakly named, the identity is just the name of the assembly (no version,
+culture, or public key token information).
+
+Internally, the CLR attempts to load this assembly by using the System.Reflection.Assembly
+class’s static Load method. This method is publicly documented, and you can call it to explicitly load an
+assembly into your AppDomain. This method is the CLR equivalent of Win32’s LoadLibrary function.
+There are actually several overloaded versions of Assembly’s Load method. Here are the prototypes of
+the more commonly used overloads:
+
+```
+```csharp
+public class Assembly {
+    public static Assembly Load(AssemblyName assemblyRef);
+    public static Assembly Load(String assemblyString);
+    // Less commonly used overloads of Load are not shown
+}
+```
+```
+
+Internally, Load causes the CLR to apply a version-binding redirection policy to the assembly and
+looks for the assembly in the global assembly cache (GAC), followed by the application’s base directory,
+private path subdirectories, and codebase locations. If you call Load passing a weakly named assembly,
+Load doesn’t apply a version-binding redirection policy to the assembly, and the CLR won’t look in the
+GAC for the assembly. If Load finds the specified assembly, it returns a reference to an Assembly
+object that represents the loaded assembly. If Load fails to find the specified assembly, it throws a
+System.IO.FileNotFoundException.
+
+**Note** In some extremely rare situations, you may want to load an assembly that was built for a
+specific CPU architecture. In this case, when specifying an assembly’s identity, you can also include a
+process architecture part. For example, if my GAC happened to have an IL-neutral and an x86-specific
+version of an assembly, the CLR would favor the CPU-specific version of the assembly (as discussed in

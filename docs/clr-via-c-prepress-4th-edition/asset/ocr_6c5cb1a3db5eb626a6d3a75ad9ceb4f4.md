@@ -1,0 +1,21 @@
+```
+```csharp
+if (pc != null)
+    Marshal.ZeroFreeCoTaskMemUnicode((IntPtr) pc);
+}
+}
+}
+```
+```
+
+The System.Runtime.InteropServices.Marshal class offers five methods that you can call to decrypt a SecureString's characters into an unmanaged memory buffer. All of these methods are static, all accept a SecureString argument, and all return an IntPtr. Each of these methods has a corresponding method that you must call in order to zero the internal buffer and free it. Table 14-4 shows the System.Runtime.InteropServices.Marshal class's methods to decrypt a SecureString into a memory buffer and the corresponding method to zero and free the buffer.
+
+# TABLE 14-4 Methods of the Marshal Class for Working with Secure Strings
+
+| Method to Decrypt SecureString to Buffer | Method to Zero and Free Buffer |
+|---|---|
+| SecureStringToBSTR | ZeroFreeBSTR |
+| SecureStringToCoTaskMemAnsi | ZeroFreeCoTaskMemAnsi |
+| SecureStringToCoTaskMemUnicode | ZeroFreeCoTaskMemUnicode |
+| SecureStringToGlobalAllocAnsi | ZeroFreeGlobalAllocAnsi |
+| SecureStringToGlobalAllocUnicode | ZeroFreeGlobalAllocUnicode |

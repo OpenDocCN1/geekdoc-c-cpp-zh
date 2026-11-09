@@ -1,0 +1,18 @@
+point, the garbage collector would correctly detect that the objects were garbage and finalize them. But the garbage collector doesn't guarantee the order in which objects are finalized. So if the FileStream object were finalized first, it would close the file. Then when the StreamWriter object was finalized, it would attempt to write data to the closed file, throwing an exception. If, on the other hand, the StreamWriter object were finalized first, the data would be safely written to the file.
+
+How was Microsoft to solve this problem? Making the garbage collector finalize objects in a specific order would have been impossible because objects could contain references to each other, and there would be no way for the garbage collector to correctly guess the order in which to finalize these objects. Here is Microsoft's solution: the StreamWriter type does not support finalization and therefore it never flushes data in its buffer to the underlying FileStream object. This means that if you forget to explicitly call Dispose on the StreamWriter object, data is guaranteed to be lost. Microsoft expects developers to see this consistent loss of data and fix the code by inserting an explicit call to Dispose.
+
+**Note** The .NET Framework offers a feature called Managed Debugging Assistants (MDAs). When an MDA is enabled, the .NET Framework looks for certain common programmer errors and fires a corresponding MDA. In the debugger, it looks like an exception has been thrown. There is an MDA available to detect when a StreamWriter object is garbage collected without previously having been explicitly disposed. To enable this MDA in Microsoft Visual Studio, open your project and select the Debug, Exceptions menu item. In the Exceptions dialog box, expand the Managed Debugging Assistants node and scroll to the bottom. There you will see the StreamWriterBufferredDataLost MDA. Select the Throw check box to have the Visual Studio debugger stop whenever a StreamWriter object's data is lost.
+
+# Other GC Features for Use with Native Resources
+
+Sometimes, a native resource consumes a lot of memory, but the managed object wrapping that resource occupies very little memory. The quintessential example of this is the bitmap. A bitmap can occupy several megabytes of native memory, but the managed object is tiny because it contains only an HBITMAP (a 4- or 8-byte value). From the CLR's perspective, a process could allocate hundreds of bitmaps (using little managed memory) before performing a collection. But if the process is manipulating many bitmaps, the process's memory consumption will grow at a phenomenal rate. To fix this situation, the GC class offers the following two static methods:
+
+```
+public static void AddMemoryPressure(Int64 bytesAllocated);
+public static void RemoveMemoryPressure(Int64 bytesAllocated);
+```
+
+A class that wraps a potentially large native resource should use these methods to give the garbage collector a hint as to how much memory is really being consumed. Internally, the garbage collector monitors this pressure, and when it gets high, a garbage collection is forced.
+
+There are some native resources that are fixed in number. For example, Windows formerly had a restriction that it could create only five device contexts. There had also been a restriction on the number of files that an application could open. Again, from the CLR's perspective, a process could

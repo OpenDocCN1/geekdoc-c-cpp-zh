@@ -1,0 +1,41 @@
+whatever object is caught.
+
+# Hiding an Implementation Detail to Maintain a ”Contract”
+
+In some situations, you might find it useful to catch one exception and re-throw a different exception. The only reason to do this is to maintain the meaning of a method’s contract. Also, the new exception type that you throw should be a specific exception (an exception that’s not used as the base type of any other exception type). Imagine a PhoneBook type that defines a method that looks up a phone number from a name, as shown in the following pseudocode:
+
+```
+internal sealed class PhoneBook {
+    private String m_pathname;  // path name of file containing the address book
+
+    // Other methods go here.
+
+    public String GetPhoneNumber(String name) {
+        String phone;
+        FileStream fs = null;
+        try {
+            fs = new FileStream(m_pathname, FileMode.Open);
+            // Code to read from fs until name is found goes here
+            phone = /* the phone # found */
+        }
+        catch (FileNotFoundException e) {
+            // Throw a different exception containing the name, and
+            // set the originating exception as the inner exception.
+            throw new NameNotFoundException(name, e);
+        }
+        catch (IOException e) {
+            // Throw a different exception containing the name, and
+            // set the originating exception as the inner exception.
+            throw new NameNotFoundException(name, e);
+        }
+        finally {
+            if (fs != null) fs.Close();
+        }
+        return phone;
+    }
+}
+```
+
+The phone book data is obtained from a file (versus a network connection or database). However, the user of the PhoneBook type doesn’t know this because this is an implementation detail that could change in the future. So if the file isn’t found or can’t be read for any reason, the caller would see a FileNotFoundException or IOException, which wouldn’t be anticipated. In other words, the file’s existence and ability to be read is not part of the method’s implied contract. There is no way the caller could have guessed this. So the GetPhoneNumber method catches these two exception types and throws a new NameNotFoundException.
+
+When using this technique, you should catch specific exceptions that you fully understand the circumstances that cause the exception to be thrown. And, you should also know what exception types

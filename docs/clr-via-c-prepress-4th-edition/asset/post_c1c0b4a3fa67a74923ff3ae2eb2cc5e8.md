@@ -1,0 +1,108 @@
+
+```
+foreach (MemberInfo mi in t.GetTypeInfo().DeclaredMembers) {
+    String typeName = String.Empty;
+    if (mi is Type) typeName = "(Nested) Type";
+    if (mi is FieldInfo) typeName = "FieldInfo";
+    if (mi is MethodInfo) typeName = "MethodInfo";
+    if (mi is ConstructorInfo) typeName = "ConstructorInfo";
+    if (mi is PropertyInfo) typeName = "PropertyInfo";
+    if (mi is EventInfo) typeName = "EventInfo";
+    Show(2, "{0}: {1}", typeName, mi);
+}
+}
+private static void Show(Int32 indent, String format, params Object[] args) {
+    Console.WriteLine(new String(' ', 3 * indent) + format, args);
+}
+```
+
+When you compile and run this code, a ton of output is produced. Here is a small sampling of what it looks like:
+
+```
+Assembly: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Type: System.Object
+    MethodInfo: System.String ToString()
+    MethodInfo: Boolean Equals(System.Object)
+    MethodInfo: Boolean Equals(System.Object, System.Object)
+    MethodInfo: Boolean ReferenceEquals(System.Object, System.Object)
+    MethodInfo: Int32 GetHashCode()
+    MethodInfo: System.Type GetType()
+    MethodInfo: Void Finalize()
+    MethodInfo: System.Object MemberwiseClone()
+    MethodInfo: Void FieldSetter(System.String, System.String, System.Object)
+    MethodInfo: Void FieldGetter(System.String, System.String, System.Object ByRef)
+    MethodInfo: System.Reflection.FieldInfo GetFieldInfo(System.String, System.String)
+    ConstructorInfo: Void .ctor()
+Type: System.Collections.Generic.IComparer`1[T]
+    MethodInfo: Int32 Compare(T, T)
+Type: System.Collections.IEnumerator
+    MethodInfo: Boolean MoveNext()
+    MethodInfo: System.Object get_Current()
+    MethodInfo: Void Reset()
+    PropertyInfo: System.Object Current
+Type: System.IDisposable
+    MethodInfo: Void Dispose()
+Type: System.Collections.Generic.IEnumerator`1[T]
+    MethodInfo: T get_Current()
+    PropertyInfo: T Current
+Type: System.ArraySegment`1[T]
+    MethodInfo: T[] get_Array()
+    MethodInfo: Int32 get_Offset()
+    MethodInfo: Int32 get_Count()
+    MethodInfo: Int32 GetHashCode()
+    MethodInfo: Boolean Equals(System.Object)
+    MethodInfo: Boolean Equals(System.ArraySegment`1[T])
+    MethodInfo: Boolean op_Equality(System.ArraySegment`1[T], System.ArraySegment`1[T])
+    MethodInfo: Boolean op_Inequality(System.ArraySegment`1[T], System.ArraySegment`1[T])
+    ConstructorInfo: Void .ctor(T[])
+    ConstructorInfo: Void .ctor(T[], Int32, Int32)
+    PropertyInfo: T[] Array
+    PropertyInfo: Int32 Offset
+    PropertyInfo: Int32 Count
+    FieldInfo: T[] _array
+    FieldInfo: Int32 _offset
+```
+
+Since MemberInfo is the root of the member hierarchy, it makes sense for us to discuss it a bit more. Table 23-1 shows several read-only properties and methods offered by the MemberInfo class. These properties and methods are common to all members of a type. Don't forget that System.TypeInfo is derived from MemberInfo, and therefore, TypeInfo also offers all of the properties shown in Table 23-1.
+
+**TABLE 23-1** Properties and Methods Common to All MemberInfo-Derived Types
+
+| Member Name | Member Type | Description |
+| --- | --- | --- |
+| Name | String property | Returns the name of the member. |
+| DeclaringType | Type property | Returns the `Type` that declares the member. |
+| Module | Module property | Returns the `Module` that declares the member. |
+| CustomAttributes | Property returning IEnumerable<CustomAttributeData> | Returns a collection in which each element identifies an instance of a custom attribute applied to this member. Custom attributes can be applied to any member. Even though `Assembly` does not derive from `MemberInfo`, it provides the same property that can be used with assemblies. |
+
+Each element of the collection returned by querying DeclaredMembers is a reference to one of the concrete types in the hierarchy. Although TypeInfo's DeclaredMembers property returns all of the type's members, TypeInfo also offers methods that return specific member types for a specified string name. For example, TypeInfo offers GetDeclaredNestedType, GetDeclaredField, GetDeclaredMethod, GetDeclaredProperty, and GetDeclaredEvent. These methods all return a reference to a TypeInfo object, FieldInfo object, MethodInfo object, PropertyInfo object, or EventInfo object, respectively. There is also a GetDeclaredMethods method that returns a collection of MethodInfo objects describing the methods matching the specified string name.
+
+Figure 23-2 summarizes the types used by an application to walk reflection's object model. From an AppDomain, you can discover the assemblies loaded into it. From an assembly, you can discover the modules that make it up. From an assembly or a module, you can discover the types that it defines. From a type, you can discover its nested types, fields, constructors, methods, properties, and events. Namespaces are not part of this hierarchy because they are simply syntactical gatherings of types. If you want to list all of the namespaces defined in an assembly, you need to enumerate all of the types in this assembly and take a look at their Namespace property.
+
+From a type, it is also possible to discover the interfaces it implements. And from a constructor, method, property accessor method, or event add/remove method, you can call the GetParameters method to obtain an array of ParameterInfo objects, which tells you the types of the member’s parameters. You can also query the read-only ReturnParameter property to get a ParameterInfo object for detailed information about a member’s return type. For a generic type or method, you can call the GetGenericArguments method to get the set of type parameters. Finally, for any of these items, you can query the CustomAttributes property to obtain the set of custom attributes applied to them.
+
+![](img/3f2c86949cdef7e2f9e27c37c607b28e_598_0.png)
+
+**FIGURE 23-2** Types an application uses to walk reflection’s object model.
+
+## Invoking a Type’s Members
+
+Now that you know how to discover the members defined by a type, you may want to invoke one of these members. What invoke means depends on the kind of member being invoked. Table 23-4 shows which method to call for each kind of member to invoke that member.
+
+**TABLE 23-4** How to Invoke a Member
+
+| Type of Member | Method to Invoke Member |
+| --- | --- |
+| FieldInfo | Call `GetValue` to get a field's value.<br>Call `SetValue` to set a field's value. |
+| ConstructorInfo | Call `Invoke` to construct an instance of the type and call a constructor. |
+| MethodInfo | Call `Invoke` to call a method of the type. |
+| PropertyInfo | Call `GetValue` to call a property's get accessor method.<br>Call `SetValue` to call a property's set accessor method. |
+| EventInfo | Call `AddEventHandler` to call an event's add accessor method.<br>Call `RemoveEventHandler` to call an event's remove accessor method. |
+
+The PropertyInfo type represents metadata information about a property (as discussed in Chapter 10, “Properties”); that is, PropertyInfo offers CanRead, CanWrite, and PropertyType read-only properties. These properties indicate whether a property is readable or writable and what data type the property is. PropertyInfo also has read-only GetMethod and SetMethod properties which return MethodInfo objects representing the methods that get and set a property’s value. PropertyInfo’s GetValue and SetValue methods exist for convenience; internally, they invoke the appropriate MethodInfo object. To support parameterful properties (C# indexers), the GetValue and SetValue methods offer an index parameter of Object[] type.
+
+The EventInfo type represents metadata information about an event (as discussed in Chapter 11, “Events”). The EventInfo type offers a read-only EventHandlerType property that returns the Type of the event’s underlying delegate. The EventInfo type also has read-only AddMethod and RemoveMethod properties, which return the MethodInfo objects corresponding to the methods that add or remove a delegate to/from the event. To add or remove a delegate, you can invoke these MethodInfo objects, or you can call EventInfo’s more convenient AddEventHandler and RemoveEventHandler methods.
+
+The following sample application demonstrates the various ways to use reflection to access a type’s members. The SomeType class represents a type that has various members: a private field (m_someField), a public constructor (SomeType) that takes an Int32 argument passed by reference, a public method (ToString), a public property (SomeProp), and a public event (SomeEvent). Having defined the SomeType type, I offer three different methods that use reflection to access SomeType’s members. Each method uses reflection in a different way to accomplish the same thing:
+
+- The `BindToMemberThenInvokeTheMember` method demonstrates how to bind to a member and invoke it later.
+- The `BindToMemberCreateDelegateToMemberThenInvokeTheMember` method demonstrates how to bind to an object or member, and then it creates a delegate that refers to that object or member. Calling through the delegate is very fast, and this technique yields faster

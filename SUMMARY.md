@@ -688,6 +688,7 @@
 +   [通过 C# 掌握 CLR - 第四版](docs/clr-via-c---fourth-edition/README.md)
 +   [C# 上的 CLR（开发者参考）；第 4 版](docs/clr-via-c-developer-reference-4th-edition/README.md)
 +   [C# 进阶 CLR 第四版](docs/clr-via-c-fourth-edition-prepress/README.md)
++   [CLR via C#（预印本）第 4 版](docs/clr-via-c-prepress-4th-edition/README.md)
 +   [C# CLR 高级指南](docs/clr-via-c-pro-developer/README.md)
 +   [C 语言实现 CLR：Microsoft .NET Framework 2.0 平台上的 C 语言编程](docs/clr-via-c-программирование-на-платформе-microsoft-net-framew/README.md)
 +   [C# 详解 CLR 第3版](docs/clr-via-csharp-3rd-edition/README.md)

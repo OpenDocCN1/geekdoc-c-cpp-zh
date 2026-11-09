@@ -1,0 +1,28 @@
+vice versa). Also, should a symbol's numeric value change, the code can simply be recompiled without requiring any changes to the source code. In addition, documentation tools and other utilities, such as a debugger, can show meaningful symbolic names to the programmer.
+
++   - Enumerated types are strongly typed. For example, the compiler will report an error if I attempt to pass Color.Orange as a value to a method requiring a Fruit enumerated type as a parameter.
+
+In the Microsoft .NET Framework, enumerated types are more than just symbols that the compiler cares about. Enumerated types are treated as first-class citizens in the type system, which allows for very powerful operations that simply can't be done with enumerated types in other environments (such as in unmanaged C++, for example).
+
+Every enumerated type is derived directly from System.Enum, which is derived from System.ValueType, which in turn is derived from System.Object. So enumerated types are value types (described in Chapter 5, "Primitive, Reference, and Value Types") and can be represented in unboxed and boxed forms. However, unlike other value types, an enumerated type can't define any methods, properties, or events. However, you can use C#'s extension methods feature to simulate adding methods to an enumerated type. See the "Adding Methods to Enumerated Types" section at the end of this chapter for an example of this.
+
+When an enumerated type is compiled, the C# compiler turns each symbol into a constant field of the type. For example, the compiler treats the Color enumeration shown earlier as if you had written code similar to the following:
+
+```
+```csharp
+internal struct Color : System.Enum {
+    // Below are public constants defining Color's symbols and values
+    public const Color White  = (Color) 0;
+    public const Color Red    = (Color) 1;
+    public const Color Green  = (Color) 2;
+    public const Color Blue   = (Color) 3;
+    public const Color Orange = (Color) 4;
+
+    // Below is a public instance field containing a Color variable's value
+    // You cannot write code that references this instance field directly
+    public Int32 value__;
+}
+```
+```
+
+The C# compiler won't actually compile this code because it forbids you from defining a type derived from the special System.Enum type. However, this pseudo-type definition shows you what's happening internally. Basically, an enumerated type is just a structure with a bunch of constant fields defined in it and one instance field. The constant fields are emitted to the assembly's metadata and can be accessed via reflection. This means that you can get all of the symbols and their values associated with an enumerated type at runtime. It also means that you can convert a string symbol into its equivalent numeric value. These operations are made available to you by the System.Enum base type, which offers several static and instance methods that can be performed on an instance of an enumerated type, saving you the trouble of having to use reflection. I'll discuss some of these

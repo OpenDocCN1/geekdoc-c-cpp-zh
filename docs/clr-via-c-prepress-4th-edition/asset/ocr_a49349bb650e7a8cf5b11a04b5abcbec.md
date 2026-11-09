@@ -1,0 +1,16 @@
+effect. Operations on `Decimal` values always throw an `OverflowException` if the operation can’t be performed safely.
+
+Similarly, the `System.Numerics.BigInteger` type is also special in that it internally uses an array of `UInt32`s to represent an arbitrarily large integer whose value has no upper or lower bound. Therefore, operations on a `BigInteger` never result in an `OverflowException`. However, a `BigInteger` operation may throw an `OutOfMemoryException` if the value gets too large and there is insufficient available memory to resize the array.
+
+# # Reference Types and Value Types
+
+The CLR supports two kinds of types: reference types and value types. While most types in the FCL are reference types, the types that programmers use most often are value types. Reference types are always allocated from the managed heap, and the C# `new` operator returns the memory address of the object—the memory address refers to the object’s bits. You need to bear in mind some performance considerations when you’re working with reference types. First, consider these facts:
+
++   - The memory must be allocated from the managed heap.
++   - Each object allocated on the heap has some additional overhead members associated with it that must be initialized.
++   - The other bytes in the object (for the fields) are always set to zero.
++   - Allocating an object from the managed heap could force a garbage collection to occur.
+
+If every type were a reference type, an application’s performance would suffer greatly. Imagine how poor performance would be if every time you used an `Int32` value, a memory allocation occurred! To improve performance for simple, frequently used types, the CLR offers lightweight types called value types. Value type instances are usually allocated on a thread’s stack (although they can also be embedded as a field in a reference type object). The variable representing the instance doesn’t contain a pointer to an instance; the variable contains the fields of the instance itself. Because the variable contains the instance’s fields, a pointer doesn’t have to be dereferenced to manipulate the instance’s fields. Value type instances don’t come under the control of the garbage collector, so their use reduces pressure in the managed heap and reduces the number of collections an application requires over its lifetime.
+
+The .NET Framework SDK documentation clearly indicates which types are reference types and which are value types. When looking up a type in the documentation, any type called a class is a reference type. For example, the `System.Text.Exception` class, the `System.IO.FileStream` class, and the `System.Random` class are all reference types. On the other hand, the documentation refers to each value type as a structure or an enumeration. For example, the `System.Int32` structure, the `System.Boolean` structure, the `System.Decimal` structure, the `System.TimeSpan` structure, the `System.DayOfWeek` enumeration, the `System.IO.FileAttributes` enumeration, and the `System.Drawing.FontStyle` enumeration are all value types.

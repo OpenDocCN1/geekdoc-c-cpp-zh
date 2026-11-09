@@ -1,0 +1,56 @@
+```
+```csharp
+Int32 firstYear    = quarterlyRevenue.GetLowerBound(0);
+Int32 lastYear     = quarterlyRevenue.GetUpperBound(0);
+Int32 firstQuarter = quarterlyRevenue.GetLowerBound(1);
+Int32 lastQuarter  = quarterlyRevenue.GetUpperBound(1);
+
+for (Int32 year = firstYear; year <= lastYear; year++) {
+    Console.Write(year + " ");
+    for (Int32 quarter = firstQuarter; quarter <= lastQuarter; quarter++) {
+        Console.Write("{0,9:C} ", quarterlyRevenue[year, quarter]);
+    }
+    Console.WriteLine();
+}
+```
+```
+
+If you compile and run this code, you get the following output:
+
+| Year | Q1 | Q2 | Q3 | Q4 |
+|---|---|---|---|---|
+| 2005 | $0.00 | $0.00 | $0.00 | $0.00 |
+| 2006 | $0.00 | $0.00 | $0.00 | $0.00 |
+| 2007 | $0.00 | $0.00 | $0.00 | $0.00 |
+| 2008 | $0.00 | $0.00 | $0.00 | $0.00 |
+| 2009 | $0.00 | $0.00 | $0.00 | $0.00 |
+
+# # Array Internals
+
+Internally, the CLR actually supports two different kinds of arrays:
+
++   - Single-dimensional arrays with a lower bound of 0. These arrays are sometimes called SZ (for single-dimensional, zero-based) arrays or vectors.
++   - Single-dimensional and multi-dimensional arrays with an unknown lower bound.
+
+You can actually see the different kinds of arrays by executing the following code (the output is shown in the code's comments):
+
+```
+```csharp
+using System;
+
+public sealed class Program {
+    public static void Main() {
+        Array a;
+
+        // Create a 1-dim, 0-based array, with no elements in it
+        a = new String[0];
+        Console.WriteLine(a.GetType());   // "System.String[]"
+
+        // Create a 1-dim, 0-based array, with no elements in it
+        a = Array.CreateInstance(typeof(String),
+            new Int32[] { 0 }, new Int32[] { 0 });
+        Console.WriteLine(a.GetType());   // "System.String[]"
+
+        // Create a 1-dim, 1-based array, with no elements in it
+```
+```

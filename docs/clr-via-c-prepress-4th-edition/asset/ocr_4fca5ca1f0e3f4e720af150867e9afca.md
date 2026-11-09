@@ -1,0 +1,54 @@
+example, you could have a response file called MyProject.rsp that contains the following text:
+
+```
+```text
+/out:MyProject.exe
+/target:winexe
+```
+```
+
+To cause CSC.exe to use these settings, you'd invoke it as follows:
+
+```
+```text
+csc.exe @MyProject.rsp CodeFile1.cs CodeFile2.cs
+```
+```
+
+This tells the C# compiler what to name the output file and what kind of target to create. As you can see, response files are very convenient because you don't have to manually express the desired command-line arguments each time you want to compile your project.
+
+The C# compiler supports multiple response files. In addition to the files you explicitly specify on the command line, the compiler automatically looks for files called CSC.rsp. When you run CSC.exe, it looks in the directory containing the CSC.exe file for a global CSC.rsp file. Settings that you want applied to all of your projects should go in this file. The compiler aggregates and uses the settings in all of these response files. If you have conflicting settings in the local and global response files, the settings in the local file override the settings in the global file. Likewise, any settings explicitly passed on the command line override the settings taken from a local response file.
+
+When you install the .NET Framework, it installs a default global CSC.rsp file in the %SystemRoot%\Microsoft.NET\Framework(64)\vX.X.Xdirectory (where X.X.X is the version of the .NET Framework you have installed). The latest version of this file contains the following switches:
+
+```
+```text
+# This file contains command-line options that the C#
+# command line compiler (CSC) will process as part
+# of every compilation, unless the "/noconfig" option
+# is specified.
+
+# Reference the common Framework libraries
+/r:Accessibility.dll
+/r:Microsoft.CSharp.dll
+/r:System.Configuration.dll
+/r:System.Configuration.Install.dll
+/r:System.Core.dll
+/r:System.Data.dll
+/r:System.Data.DataSetExtensions.dll
+/r:System.Data.Linq.dll
+/r:System.Data.OracleClient.dll
+/r:System.Deployment.dll
+/r:System.Design.dll
+/r:System.DirectoryServices.dll
+/r:System.dll
+/r:System.Drawing.Design.dll
+/r:System.Drawing.dll
+/r:System.EnterpriseServices.dll
+/r:System.Management.dll
+/r:System.Messaging.dll
+/r:System.Runtime.Remoting.dll
+/r:System.Runtime.Serialization.dll
+/r:System.Runtime.Serialization.Formatters.Soap.dll
+```
+```

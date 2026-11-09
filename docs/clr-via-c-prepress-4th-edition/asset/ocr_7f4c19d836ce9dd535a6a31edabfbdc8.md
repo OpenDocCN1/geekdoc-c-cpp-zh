@@ -1,0 +1,30 @@
+# Chapter 15
+
+# # Enumerated Types and Bit Flags
+
++   In this chapter:
++   - Enumerated Types 373
++   - Bit Flags 379
++   - Adding Methods to Enumerated Types 383
+
+In this chapter, I'll discuss enumerated types and bit flags. Since Microsoft Windows and many programming languages have used these constructs for so many years, I'm sure that many of you are already familiar with how to use enumerated types and bit flags. However, the common language runtime (CLR) and the Framework Class Library (FCL) work together to make enumerated types and bit flags real object-oriented types that offer cool features that I suspect most developers aren't familiar with. It's amazing to me how these features, which are the focus of this chapter, make developing application code so much easier.
+
+# ## Enumerated Types
+
+*An enumerated type* is a type that defines a set of symbolic name and value pairs. For example, the Color type shown here defines a set of symbols, with each symbol identifying a single color:
+
+```
+```
+internal enum Color {
+    White,      // Assigned a value of 0
+    Red,        // Assigned a value of 1
+    Green,      // Assigned a value of 2
+    Blue,       // Assigned a value of 3
+    Orange      // Assigned a value of 4
+}
+```
+```
+
+Of course, programmers can always write a program using 0 to represent white, 1 to represent red, and so on. However, programmers shouldn't hard-code numbers into their code and should use an enumerated type instead, for at least two reasons:
+
++   - Enumerated types make the program much easier to read, and maintain. With enumerated types, the symbolic name is used throughout the code, and the programmer doesn't have to mentally map the meaning of each hard-coded value (for example, white is 0 or
