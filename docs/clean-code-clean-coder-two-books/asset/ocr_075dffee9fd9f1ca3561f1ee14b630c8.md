@@ -1,0 +1,35 @@
+```
+```java
+*/
+protected Cluster cluster = null;
+
+/**
+ * The human-readable name of this Container.
+ */
+protected String name = null;
+
+/**
+ * The parent Container to which this Container is a child.
+ */
+protected Container parent = null;
+
+/**
+ * The parent class loader to be configured when we install a
+ * Loader.
+ */
+protected ClassLoader parentClassLoader = null;
+
+/**
+ * The Pipeline object with which this Container is
+ * associated.
+ */
+protected Pipeline pipeline = new StandardPipeline(this);
+
+/**
+ * The Realm with which this Container is associated.
+ */
+protected Realm realm = null;
+
+/**
+```
+```

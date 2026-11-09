@@ -1,0 +1,33 @@
+# # T
+
++   **technology** *see also* **artificial intelligence (AI); Internet;**  
++     social media addiction [ref1], [ref2], [ref3], [ref4]  
++     Archons [ref1], [ref2]  
++     the cloud [ref1], [ref2], [ref3], [ref4], [ref5], [ref6], [ref7]  
++     cyber-operations [ref1]  
++     cyberwarfare [ref1]  
++     radiation [ref1], [ref2]  
++     social distancing and isolation [ref1]  
++     technocracy [ref1]  
++   **Tedros Adhanom Ghebreyesus** [ref1], [ref2], [ref3], [ref4], [ref5], [ref6], [ref7],  
++     [ref8], [ref9], [ref10], [ref11], [ref12], [ref13]  
++   **telepathy** [ref1]  
++   **Tenpenny, Sherri** [ref1]  
++   **Tesla, Nikola** [ref1]  
++   **testosterone levels, decrease in** [ref1]  
++   **testing for Covid-19** [ref1], [ref2]  
++     anal swab tests [ref1]  
++     cancer [ref1]  
++     China [ref1], [ref2], [ref3]  
++     Corman-Drosten test [ref1], [ref2], [ref3], [ref4]  
++     death certificates [ref1], [ref2]  
++     fraudulent testing [ref1]  
++     genetic material, amplification of [ref1]  
++     Lateral Flow Device (LFD) [ref1]  
++     PCR tests [ref1], [ref2], [ref3], [ref4], [ref5], [ref6], [ref7], [ref8]  
++     vaccines [ref1], [ref2], [ref3]  
++   **Thunberg, Greta** [ref1], [ref2], [ref3]  
++   **Totalitarian Tiptoe** [ref1], [ref2], [ref3], [ref4]  
++   **transgender persons**  
++     activism [ref1]  
++     artificial wombs [ref1]

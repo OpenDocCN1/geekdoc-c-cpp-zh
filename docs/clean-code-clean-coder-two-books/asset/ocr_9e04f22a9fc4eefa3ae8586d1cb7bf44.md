@@ -1,0 +1,41 @@
+```
+```java
+public int straightPay() {
+    return getTenthsWorked() * getTenthRate();
+}
+
+public int overTimePay() {
+    int overTimeTenths = Math.max(0, getTenthsWorked() - 400);
+    int overTimePay = overTimeBonus(overTimeTenths);
+    return straightPay() + overTimePay;
+}
+
+private int overTimeBonus(int overTimeTenths) {
+    double bonus = 0.5 * getTenthRate() * overTimeTenths;
+    return (int) Math.round(bonus);
+}
+```
+```
+
+Of course, selectors need not be `boolean`. They can be enums, integers, or any other type of argument that is used to select the behavior of the function. In general it is better to have many functions than to pass some code into a function to select the behavior.
+
+# **G16: _Obscured Intent_**
+
+We want code to be as expressive as possible. Run-on expressions, Hungarian notation, and magic numbers all obscure the author’s intent. For example, here is the `overTimePay` function as it might have appeared:
+
+```
+```java
+public int m_otCalc() {
+    return iThsWkd * iThsRte +
+        (int) Math.round(0.5 * iThsRte *
+            Math.max(0, iThsWkd - 400)
+        );
+}
+```
+```
+
+Small and dense as this might appear, it’s also virtually impenetrable. It is worth taking the time to make the intent of our code visible to our readers.
+
+# **G17: _Misplaced Responsibility_**
+
+One of the most important decisions a software developer can make is where to put code. For example, where should the `PI` constant go? Should it

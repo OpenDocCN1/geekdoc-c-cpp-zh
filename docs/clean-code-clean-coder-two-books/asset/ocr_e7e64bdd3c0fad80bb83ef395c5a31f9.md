@@ -1,0 +1,11 @@
+far indistinguishable from human measles virus’. In other words, Cowan says, these particles called ‘measles viruses’ are simply and clearly breakdown products of the starved and poisoned tissue. For measles ‘virus’ see all ‘viruses’ including the so-called ‘Covid virus’. Enders, the ‘Father of Modern Vaccines’, also said:
+
+> There is a potential risk in employing cultures of primate cells for the production of vaccines composed of attenuated virus, since the presence of other agents possibly latent in primate tissues cannot be definitely excluded by any known method.
+
+Cowan further quotes from a paper published in the journal *Viruses* in May, 2020, while the ‘Covid pandemic’ was well underway in the media if not in reality. ‘EVs’ here refers to particles of genetic debris from our own tissues, such as exosomes of which more in a moment: ‘The remarkable resemblance between EVs and viruses has caused quite a few problems in the studies focused on the analysis of EVs released during viral infections.’ Later the paper adds that to date a reliable method that can actually guarantee a complete separation (of EVs from viruses) DOES NOT EXIST. This was published at a time when a fairy tale ‘virus’ was claimed in total certainty to be causing a fairy tale ‘viral disease’ called ‘Covid-19’ – a fairy tale that was already well on the way to transforming human society in the image that the Cult has worked to achieve for so long. Cowan concludes his article:
+
+> To summarize, there is no scientific evidence that pathogenic viruses exist. What we think of as ‘viruses’ are simply the normal breakdown products of dead and dying tissues and cells. When we are well, we make fewer of these particles; when we are starved, poisoned, suffocated by wearing masks, or afraid, we make more.
+
+> There is no engineered virus circulating and making people sick. People in laboratories all over the world are making genetically modified products to make people sick. These are called vaccines. There is no virome, no ‘ecosystem’ of viruses, viruses are not 8%, 50% or 100 % of our genetic material. These are all simply erroneous ideas based on the misconception called a virus.
+
+# What is ‘Covid’? Load of bollocks

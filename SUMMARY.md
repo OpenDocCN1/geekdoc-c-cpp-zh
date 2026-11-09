@@ -674,6 +674,7 @@
 +   [洁净代码：敏捷软件手工艺手册（第2版）](docs/clean-code-a-handbook-of-agile-software-craftsmanship-2nd-ed/README.md)
 +   [洁净代码：敏捷软件工之道手册](docs/clean-code-a-handbook-of-agile-software-craftsmanship-robert/README.md)
 +   [整洁代码：敏捷软件手之道手册（第二版）](docs/clean-code-a-handbook-of-agile-software-craftsmanship-second/README.md)
++   [整洁代码 ／ 整洁程序员两本书](docs/clean-code-clean-coder-two-books/README.md)
 +   [洁净之道：准则、标准与伦理](docs/clean-craftsmanship-disciplines-standards-and-ethics/README.md)
 +   [Clean语言报告 2.2](docs/clean-language-report-22/README.md)
 +   [接近机器：技术狂热及其不满](docs/close-to-the-machine-technophilia-and-its-discontents/README.md)
