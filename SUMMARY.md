@@ -716,6 +716,7 @@
 +   [代码大全：软件构建的实践手册 第二版](docs/code-complete-a-practical-handbook-of-software-construction-/README.md)
 +   [Code Connected 卷1：ZeroMQ 入门指南](docs/code-connected-volume-1-learning-zeromq/README.md)
 +   [代码工厂：通过 100 多种编程解决方案探索二进制卓越之外的奥秘](docs/code-factory-navigating-the-wonders-beyond-binary-brilliance/README.md)
++   [云端代码：Google App Engine 编程](docs/code-in-the-cloud-programming-google-app-engine/README.md)
 +   [脑中可代码：软件工程启发式指南 (Robert C. Martin 系列)](docs/code-that-fits-in-your-head-heuristics-for-software-engineer/README.md)
 +   [Code this！：为问题解决者准备的谜题、游戏、挑战与计算机编程概念！](docs/code-this-puzzles-games-challenges-and-computer-coding-conce/README.md)
 +   [编写你自己的太空冒险：与 Major Kate 一起编程并拯救 Zyskinar 行星](docs/code-your-own-space-adventure-code-with-major-kate-and-save-/README.md)
