@@ -1,0 +1,11 @@
+# # Chapter 2
+
+# ## Data
+
+Data in bioinformatics and drug discovery are manifold. The data are often empirically collected and input into a computer either by hand or automatically; or data can be derived from known properties and thus generated on the computer. These data are then typically placed in a database or flat file for analysis. Of course, within any given data set there may be error, missing data, erroneous elements, mixed types, or a mixture of empirical and derived elements. As a result, data quality analysis and expert knowledge about the data are almost always necessary to go forward with meaningful exploratory data analysis. Having a thorough understanding of the data, its generation, its scale, its range, its anomalies and outliers, goes a long way in determining the type of clustering algorithms to apply, and how to evaluate and validate the results. How the data are represented internally within a computer is also important: the precision, memory usage, and disk space used to represent the data can impact the choice and effectiveness of the cluster analysis performed.
+
+In order to input data into a clustering algorithm, additional processing is often required. The data may need to be scaled, normalized, or otherwise transformed. A measure of proximity between data elements will then need to be chosen. Depending on the clustering method, the data matrix (sometimes called the *pattern matrix*) or some form of a proximity matrix can then be used as input. In turn, there are a number of different ways to consider a proximity matrix, either for matrix manipulation through matrix algebra, or as combinatorial graph objects. Each also has ramifications for how one may visualize and interpret clustering results, or design, or intuitively understand clustering algorithms.
+
+# ### 2.1 Types
+
+There are four basic data types: binary, ordinal (count data), continuous (ratio data), and categorical data. These are not hard and fast types in that they can be converted from one to the other, and for any particular data set, there may be several different types that make up the dimension of the data. Thus, for example, a set of small drug and drug-like molecules may have binary data that represents the chemical graph structural properties of each

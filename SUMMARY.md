@@ -694,6 +694,7 @@
 +   [C 语言实现 CLR：Microsoft .NET Framework 2.0 平台上的 C 语言编程](docs/clr-via-c-программирование-на-платформе-microsoft-net-framew/README.md)
 +   [C# CLR](docs/clr-via-csharp/README.md)
 +   [C# 详解 CLR 第3版](docs/clr-via-csharp-3rd-edition/README.md)
++   [生物信息学与药物发现中的聚类（Chapman & Hall／CRC 计算生物学系列）](docs/clustering-in-bioinformatics-and-drug-discovery-chapman-hall/README.md)
 +   [CNC 加工手手册：构建、编程与实施指南](docs/cnc-machining-handbook-building-programming-and-implementati/README.md)
 +   [Cocoa 基础指南](docs/cocoa-fundamentals-guide/README.md)
 +   [Cocoa 编程开发者手册](docs/cocoa-programming-developers-handbook/README.md)

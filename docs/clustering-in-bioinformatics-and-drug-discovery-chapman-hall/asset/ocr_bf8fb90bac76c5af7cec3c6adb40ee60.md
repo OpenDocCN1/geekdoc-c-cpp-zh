@@ -1,0 +1,12 @@
+matrix, otherwise 1 or a weight or label. There are other less common data structures such as an ordered pair, or edge adjacency list. A proximity matrix, whether symmetric or asymmetric can be thought of as a adjacency matrix for a simple binary graph or simple directed graph respectively. Various graph algorithms can then be used to operate on these matrices either for clustering purposes directly or for visualization of clustering results.
+
+Graph algorithms can be very powerful tools, and often if a problem can be transformed to a graph problem, it may lead to the design of a more efficient algorithm for that problem. An example can be found in network flow algorithms that were originally solved via linear programming methods of the 1950s and 1960s whose computational complexity was in the worst case extreme. Transformed to a graph problem, and with the use of graph algorithms, far more efficient algorithms were designed both in theory and in practice in the 1980s and 1990s. This is an important notion to keep in reserve: if there is a clustering method that is an iterative, gradient search-like algorithm, that approaches an optimal solution, there may be a more efficient graph algorithm, more combinatorial in nature, that in practice outperforms such an approach. Physicists, engineers, and chemists often approach problems from the standpoint of analogue processes, and model them with analogue-like algorithms. Machine learning algorithms for artificial intelligence—often based on neural processes—also have this flavor. Some clustering algorithms in this book that derive their provenance from those fields will thus naturally have that same flavor, and they may work well and appropriately for the data at hand, but taking a more graph theoretic, combinatorial approach may work just as well or better. After all, the computers used to generate clustering results are not analogue machines. A recognition of this fact is often important in the understanding of clustering ambiguity and practical efficiency of clustering algorithms.
+
+# 2.11 Glossary
+
++   - **adjacency list:** A list of lists of edge-vertex relationships.
++   - **adjacency matrix:** Full matrix of edge-vertex relationships.
++   - **arc:** A directed edge.
++   - **centroid:** The geometric center of a group.
++   - **centrotype:** The center or representative of a group, that may not be the centroid strictly speaking.
++   - **directed hypergraph:** Edges are an ordered sequence of vertices(nodes).

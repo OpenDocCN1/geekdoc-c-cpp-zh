@@ -1,0 +1,13 @@
+There are typically two methods, one [103] very much akin to PCA or MDS that reduces the dimension of the data by computing k eigenvectors of the Laplacian matrix from the similarity matrix, $A$:
+
+$$L = I - D^{-\frac{1}{2}} A D^{-\frac{1}{2}}, \tag{4.2}$$
+
+where the diagonal matrix $D$ has entries $\sum_{j=1}^{N} A_{ij}$, for the $i$th entry. The choice of the dimension is simply some $k \in \mathbb{N}$, where the $k$ eigenvectors act as the columns of the data features. These are very much like loadings or linear factors. The transformed data are in turn clustered by any clustering algorithm, though most commonly by $K$-means.
+
+The other more interesting method [122] again computes the Laplacian matrix, but recursively partitions the data based on the first and second eigenvalues, building a hierarchy from the bottom down.
+
+# 4.4 Self-Organizing Maps
+
+Self-Organizing Maps is specifically a non-linear projection of an $N$-dimensional space onto a special form of a 2-dimensional surface. The algorithm can be thought of as a cross between $K$-means and 2-dimensional elastic or force directed MDS methods. The surface however has a special property in that it is a torus - the edges of the grid that comprises the SOM wrap around. Thus, clusters that form along the edge are related closely to the clusters on the opposite edge. SOM is sometimes referred to as a *topologically ordered maps* because they try to preserve the proximity relationships from the original space of the problem to a simpler space or topology, and not necessarily because the results are in the form of a curious topological object such as the torus. Grid centers on the toroidal projection of the data are stretched (in keeping with the elastic and topological metaphor) towards single data points, but, akin to $K$-means, just grid centers near the point. This process is done iteratively, such that all of the points are run through this process up to a number of specified iterations. The algorithm is thus parameterized by how much the grid centers are moved by each point; what the size of the neighborhood defines closeness; the number of iterations. “Grid” here is broadly defined to refer to a simple uniform tiling. So for example the grid need not be square but can be hexagonal. SOM also samples the original space much like $K$-means and does a good job at creating dense clusters and placing them within grid regions appropriately.
+
+SOM is particularly sensitive to input parameters and can form unfortunate kinks in the map under certain conditions, where the learning is localized. Additionally, SOM is sensitive to input order - a change in the input order may cause a change in the learning that is additive, leading to a different,

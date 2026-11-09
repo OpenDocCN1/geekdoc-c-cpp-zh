@@ -1,0 +1,62 @@
+
+## Bibliography
+
+- [74] M. Irwin and B. Shoichet. ZINC—a free database of commercially available compounds for virtual screening. *J. Chem. Inf. Model.*, 45(1):177–82, 2005.
+- [75] P. Jaccard. Distribution de la flore alpine dans le bassin des Dranses et dans quelques régions voisines. *Bulletin de la Société Vaudoise des Sciences Naturelles*, 40(37):241–272, 1901.
+- [76] A.K. Jain and R.C. Dubes. *Algorithms for Clustering Data*. Prentice Hall, 1988.
+- [77] D. Jiang, C. Tang, and A. Zhang. Cluster Analysis for Gene Expression Data: A Survey (2004) http://www.cse.buffalo.edu/DBGROUP/bioinformatics/papers/survey.pdf, January 2004.
+- [78] Jmol. Jmol: an open-source Java viewer for chemical structures in 3D http://www.jmol.org, January 2010.
+- [79] M. A. Johnson and G.M. Maggiora, editors. *Concepts and Applications of Molecular Similarity*. Wiley, 1990.
+- [80] I.T. Jolliffe. *Principal Component Analysis*. Springer-Verlag, second edition, 2002.
+- [81] P.D. Karp. BioCyc Home http://www.biocyc.org, January 2010.
+- [82] L. Kaufman and P.J. Rousseeuw. *Finding Groups in Data*. Wiley, 1990.
+- [83] L.A. Kelly, S.P. Gardner, and M.J. Sutcliffe. An automated approach for clustering an ensemble of NMR-derived protein structures into conformationally related subfamilies. *Prot. Eng.*, 9:1063–1065, 1996.
+- [84] L. Kocis and W. Whitten. Computational investigations of low-discrepancy sequences. *ACM Trans. Math. Softw.*, 23(2):266–294, 1997.
+- [85] A. Kong et al. Parental origin of sequence variants associated with complex diseases. *Nature*, pages 868–874, December 2009.
+- [86] B. Kosata. Use of InChI and InChIKey in the XML gold book. *Chem. Internat.*, 31(1), 2009.
+- [87] H.-P. Kriegel, P. Kröger, and A. Zimek. Clustering high dimensional data: a survey on subspace clustering, pattern-based clustering, and correlation clustering. *ACM Transactions on Knowledge Discovery from Data*, 3(1), 2009.
+- [88] M. Kull and J. Vilo. Fast approximate hierarchical clustering using similarity heuristics. *BioData Mining*, 1(9), 2008.
+- [89] M.S. Lajiness and V. Shanmugasundaram. Strategies for the identification and generation of informative compound sets. In J. Bajorath, editor, *Chemoinformatics: Concepts, Methods, and Tools for Drug Discovery*. Springer, 2004.
+- [90] G. N. Lance and W.T. Williams. A general theory of classificatory sorting strategies: II. Clustering systems. *Comput. J.*, 10:271–277, 1967.
+- [91] A.R. Leach and V.J. Gillet. *An Introduction to Chemoinformatics*. Kluwer Academic Publishers, first edition, 2003.
+- [92] P. Legendre and L. Legendre. *Numerical Ecology*. Elsevier, 1998.
+- [93] Z. Lepp, C. Huang, and T. Okada. Finding key members in compound libraries by analyzing networks of molecules assembled by structural similarity. *J. Chem. Inf. Model.*, 49(11):2429–2443, 2009.
+- [94] V.I. Levenshtein. Binary codes capable of correcting deletions, insertions, and reversals. *Soviet Physics Doklady*, 10:707–710, 1966.
+- [95] Y. Li and S.M. Chung. Parallel bisecting k-means with prediction clustering algorithm. *J. Supercomp.*, 39(1):19–37, 2007.
+- [96] C.A. Lipinski, F. Lombardo, B.W. Dominy, and P.J. Feeney. Experimental and computational approaches to estimate solubility and permeability in drug discovery and development settings. *Adv. Drug Del. Rev.*, 23(23):3–25, 1997.
+- [97] S.P. Lloyd. Least squares quantization in PCM. *Bell Laboratories, Technical Report*, 1957.
+- [98] J. MacCuish, C. Nicolaou, and N.E. MacCuish. Ties in proximity and clustering compounds. *J. Chem. Inf. Comput. Sci.*, 41(1):134–146, 2001.
+- [99] J.D. MacCuish, N.E. MacCuish, M. Hawrylycz, and M. Chapman. Quasi-Monte Carlo integration for the generation of molecular shape fingerprints. Manuscript.
+- [100] J. MacQueen. Some methods for classification and analysis of multivariate observations. In *Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability*, pages 281–297. University of California Press, 1967.
+- [101] N. Mantel. The detection of disease clustering and a generalized regression approach. *Cancer Res.*, 27:209–220, 1967.
+- [102] E.J. Martin, J.M. Blaney, M.A. Siani, D.C. Spellmeyer, A.K. Wong, and W.H. Moos. Measuring diversity: experimental design of combinatorial libraries for drug discovery. *J. Med. Chem.*, 38(9):1431–1436, 1995.
+- [103] M. Meila and J. Shi. A random walks view of spectral segmentation. In *8th International Workshop on Artificial Intelligence and Statistics*. Society for Artificial Intelligence and Statistics, 2001.
+- [104] Mesa Analytics & Computing, Inc. SAESAR http://www.mesaac.com, January 2010.
+- [105] G.W. Milligan. Ultrametric hierarchical clustering algorithms. *Psychometrika*, 44:343–346, 1979.
+- [106] W.J. Morokoff and R.E. Caflisch. Quasi-Monte Carlo integration. *J. Comput. Phys.*, 122(2):218–230, 1995.
+- [107] C.A. Nicolaou, J.D. MacCuish, and S.Y. Tamura. A new multi-domain clustering algorithm for lead discovery that exploits ties in proximities. In *13th European Symposium on Quantitative Structure-Activity Relationships*, pages 486–495. Prous Science, 2000.
+- [108] M.M. Olah, C.C. Bologna, and T.I. Oprea. Strategies for compound selection. *Curr. Drug Disc. Tech.*, 1:211–220, 2004.
+- [109] C.M. Papadimitriou. *Computational Complexity*. Addison-Wesley, 1992.
+- [110] A. Prinzie and D. Van Den Poel. Incorporating sequential information into traditional classification models by using an element position-sensitive SAM. *Decision Support Systems*, 42(2):508–526, 2006.
+- [111] G.J.E. Rawlins. *Compared to What*. Computer Science Press, 1992.
+- [112] ReNaBi. ReNaBi French bioinformatics platforms network http://www.renabi.fr, January 2010.
+- [113] PIR Protein Information Resource. PIR-PSD Database http://pir.georgetown.edu/pirwww/dbinfo/pir_psd.shtml, January 2010.
+- [114] G.M. Ritson. Molecular diversity in the context of leadlikeness: compound properties that enable effective biochemical screening. *Curr. Opin. in Chem. Bio.*, 40:340–351, 2008.
+- [115] G.-C. Rota. The number of partitions of a set. *Amer. Math. Monthly*, 71:498–504, 1964.
+- [116] N. Salmi, J.D. Holliday, and P. Willett. Combination of fingerprint-based similarity coefficients using data fusion. *J. Chem. Inf. Comput. Sci.*, 43(2):435–442, 2003.
+- [117] W. Schnyder. Embedding planar graphs on the grid. In *Proceedings of the First Annual ACM-SIAM Symposium on Discrete Algorithms*, pages 138–148, 1990.
+- [118] P.A. Schulte, R.L. Ehrenberg, and M. Singal. Investigation of occupational cancer clusters. *Am. J. Public Health*, pages 52–56, 1987.
+- [119] R. Shamir and R. Sharan. CLICK: A clustering algorithm for gene expression analysis. In *Proceedings of the 8th International Conference on Intelligent Systems for Molecular Biology*, 2000.
+- [120] N.E. Shemetulskis, J.B. Dunbar, B.W. Dunbar, D.W. Moreland, and C. Humblet. Enhancing the diversity of a corporate database using chemical database clustering and analysis. *J. Comput. Aided Mol. Des.*, pages 407–416, 1995.
+- [121] N.E. Shemetulskis, D. Weininger, C.J. Blankley, J.J. Yang, and C. Humblet. Stigmata: an algorithm to determine structural commonalities in diverse datasets. *J. Chem. Inf. Comput. Sci.*, 36(4):862–871, 1996.
+- [122] J. Shi and J. Malik. Normalized cuts and image segmentation. *IEEE Trans. on Patt. Anal. and Mach. Intell.*, 22(8):888–905, August 2000.
+- [123] P. Shirley. Discrepancy as a quality measure for sample distributions. In *Proceedings of Eurographics*, pages 183–194. Association for Computing Machinery, 1991.
+- [124] S.S. Skiena. *Algorithm Design Manual*. Springer, second edition, 2008.
+- [125] P.H.A. Sneath. The application of computers to taxonomy. *J. Gen. Microbiol.*, pages 201–226, 1957.
+- [126] P.H.A. Sneath and R.R. Sokal. *Numerical Taxonomy*. Freeman, first edition, 1973.
+- [127] R.R. Sokal and P.H.A. Sneath. *Principles of Numerical Taxonomy*. Freeman, first edition, 1963.
+- [128] M. Steinbach, G. Karypis, and V. Kumar. A comparison of document clustering techniques. In *Proceedings of World Text Mining Conference*. KDD-2000, 2000.
+- [129] Symyx. Symyx Products Cheminformatics http://www.symyx.com/products/software/cheminformatics/index.jsp, January 2010.
+- [130] T.T. Tanimoto. Internal Report. IBM Internal Report, November 17, 1957.
+- [131] R. E. Tarjan. A hierarchical clustering algorithm using strongly connected components. *Information Processing Letters*, 14:26–29, 1982.
+- [132] R.J. Taylor. Simulation analysis of experimental design strategies for screening random compounds as potential new drugs and agrochemicals. *J. Chem. Inf. Comput. Sci.*, 35(1):59–67, 1995.
