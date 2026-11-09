@@ -724,6 +724,7 @@
 +   [Codecrafter (第 1 卷)](docs/codecrafter-volume-1/README.md)
 +   [C语言表达式：C语言编程之旅：C 语言课程学习书籍](docs/coded-expressions-a-journey-into-c-programming-c-language-co/README.md)
 +   [代号革命：任天堂 Wii 平台（平台研究）](docs/codename-revolution-the-nintendo-wii-platform-platform-studi/README.md)
++   [CoderDojo Nano：代码创造：你自己的网站构建指南](docs/coderdojo-nano-create-with-code-build-your-own-website/README.md)
 +   [程序员：新部落的崛起与世界的重塑](docs/coders-the-making-of-a-new-tribe-and-the-remaking-of-the-wor/README.md)
 +   [编程：三合一：像专业人士一样学习编程所需的一切知识。本书包含 PYTHON、JAVA 和 C++](docs/coding-3-manuscripts-in-1-everything-you-need-to-know-to-lea/README.md)
 +   [编程：6本合1：Linux 初学者指南 - Python (2) - SQL - HTML – C++ 编程](docs/coding-6-books-in-1-linux-for-beginners-python-2---sql---htm/README.md)
