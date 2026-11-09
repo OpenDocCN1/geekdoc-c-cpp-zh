@@ -1,0 +1,1368 @@
+- pgno: 0
+  md: '# READY, SET, CODE!
+
+
+    # CODING
+
+
+    # with
+
+
+    # Python
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_1.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_2.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_3.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_4.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_5.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_0_6.png)'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# READY, SET, CODE!
+
+
+    # CODING
+
+
+    # with
+
+
+    # Python
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_4_0.png)
+
+
+    Álvaro Scrivano
+
+
+    Illustrated by Sue Downing'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'First American edition published in 2019 by Lerner Publishing Group, Inc.
+
+
+    First published in Great Britain in 2018 by Wayland
+
+    Copyright © Hodder and Stoughton, 2018
+
+    All rights reserved.
+
+
+    Editor: Hayley Fairhead
+
+    Design and illustrations: Codetorable
+
+
+    All rights reserved. International copyright secured. No part of this book may
+    be reproduced, stored in a retrieval system, or transmitted in any form or by
+    any means—electronic, mechanical, photocopying, recording, or otherwise—without
+    the prior written permission of Lerner Publishing Group, Inc., except for the
+    inclusion of brief quotations in an acknowledged review.
+
+
+    Lerner Publications Company
+
+    A division of Lerner Publishing Group, Inc.
+
+    241 First Avenue North
+
+    Minneapolis, MN 55401 USA
+
+
+    For reading levels and more information, look up
+
+    this title at www.lernerbooks.com
+
+
+    Main body text set in Frutiger LT Pro 45 Light.
+
+    Typeface provided by Linotype AG.
+
+
+    # Library of Congress Cataloging-in-Publication Data
+
+
+    The Cataloging-in-Publication Data for *Coding with Python* is on file at the
+    Library of Congress.
+
+    ISBN 978-1-5415-3876-4 (lib. bdg.)
+
+    ISBN 978-1-5415-4467-7 (pbk.)
+
+    ISBN 978-1-5415-4303-4 (ebk.pdf)
+
+
+    Printed in China
+
+    1-45059-35886-7/25/2018
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_5_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_5_1.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_5_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/a1849c7d7e98817476d64684d9c96952_6_0.png)
+
+
+    # Contents
+
+
+    +   - What Is Python? ................................................ 4
+
+    +   - Project 1: Turtle Talk ........................................ 6
+
+    +   - Project 2: Argentina ........................................ 12
+
+    +   - Project 3: Poppy Flower ..................................... 18
+
+    +   - Project 4: The Caterpillar .................................. 24
+
+    +   - Glossary .......................................................... 30
+
+    +   - Further Information ........................................... 31
+
+    +   - Index ............................................................... 32
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_6_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '# # What Is Python?
+
+
+    A programming language is a particular way to talk to a computer. It is a set
+    of instructions that you give the computer to use. Python is a typed programming
+    language that allows you to create animations, graphics, and games. One of the
+    advantages of Python is that you can get things done with less code than many
+    other programming languages.
+
+
+    Many famous organizations such as Google, YouTube, NASA, and Yahoo use Python.
+    It has been used to produce the special effects for the *Harry Potter* and *Pirates
+    of the Caribbean* films.
+
+
+    # ## Trinket
+
+
+    All the projects in this book will be done using Trinket Blocks to create and
+    run Python projects. This means you will not need to type the code; you can just
+    drag, drop, and snap the coding blocks together!
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_7_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_7_1.png)
+
+
+    # ## Note to parents
+
+
+    To use Trinket, go to: https://trinket.io/.
+
+
+    Trinket allows your child to create and run Python projects in a web browser,
+    on your desktop, or on an iPad. In this book, the instructions assume the user
+    is creating on a desktop. There is no software to install. Children will be able
+    to see their Python code and its output side-by-side. Children can also save their
+    code online or share it with others with a link. Trinket Blocks is a free Trinket
+    feature.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# Creating Trinket accounts
+
+
+    Parental permission is required to create accounts for children under 13. It is
+    recommended that a Trinket account be created by a parent or responsible adult.
+
+
+    Trinket can be used without downloading plug-ins or installing software. For your
+    child to be able to save and share his or her projects, you will have to sign
+    up and create a username and a password.
+
+
+    # Trinket
+
+
+    These are the main features you will find when you open a new Trinket Blocks project:
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_8_0.png)
+
+
+    Menu
+
+
+    Project title
+
+
+    Click here to run your program.
+
+
+    Save your work here.
+
+
+    Click here to view your Python program as text.
+
+
+    Coding block menus
+
+
+    You will drop the blocks for your program onto this white canvas.
+
+
+    Drag blocks here to delete them.
+
+
+    Your program will run here.
+
+
+    # Be share aware
+
+
+    Usernames and passwords are personal information and, just like your toothbrush,
+    YOU DO NOT SHARE THEM WITH ANYBODY!
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_8_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # TURTLE TALK
+
+
+    # ## GET YOUR TURTLES CHATTING!
+
+
+    # ## READY
+
+
+    In this project, you will use Python to create an animation of two turtles talking.
+    Turtles are used in Python to show you the position of your program on the canvas.
+
+
+    > > **Did you know?**
+
+    > >
+
+    > > Turtles have been on Earth since the time of the dinosaurs—over 200 million
+    years ago!
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_9_0.png)
+
+
+    # ## 1. GETTING STARTED
+
+
+    Go to Trinket: https://trinket.io/ and log in.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_9_1.png)
+
+
+    Type in your username and password.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# SET
+
+
+    Now you''ve opened Trinket, it''s time to begin a new program.
+
+
+    # 2 OPEN A NEW TRINKET
+
+
+    Click on Trinket and you will see the following drop-down menu. Click on Blocks.
+
+
+    You will see the following window. Click on Turtle.
+
+
+    You will drop the blocks for your program in this white canvas.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_10_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_10_1.png)
+
+
+    The following menu will open up on the right when you click on Turtle. Drag the
+    `shape turtle` block to the white canvas. You are now ready to code.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_10_2.png)
+
+
+    # Did you know?
+
+
+    Both tortoises and turtles are reptiles. Both lay eggs and have hard, bony shells.
+    Tortoises have flatter backs than turtles and they live on land in deserts, grasslands,
+    and forests. Turtles have webbed feet for swimming and live in rivers, lakes,
+    or oceans.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_10_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# Did you know?
+
+
+    Turtles have a hard shell that protects them like a shield. This upper shell is
+    called a carapace. Turtles also have a lower shell called a plastron. Many turtle
+    species can hide their heads inside their shells when attacked by predators.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_11_0.png)
+
+
+    # CODE!
+
+
+    Now you''re ready to start programming your turtles.
+
+
+    If you select the wrong block, you can delete it by returning it to the blocks
+    section on the left or dragging and dropping it in the bin in the bottom right-hand
+    corner.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_11_1.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_11_2.png)
+
+
+    # 3 WRITE IN PYTHON
+
+
+    Add the following block from the Turtle menu and type: "Hello! What are you doing?"
+    inside the quotes. Your program should look like this:
+
+
+    ```
+
+    when turtle
+
+    write "Hello! What are you doing?" font size 14
+
+    ```
+
+
+    Press ▶ Run to test your program. You should see your message disappearing off
+    the right side of the screen, with a turtle overlapping the first word.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: "# 4 **POSITION THE TEXT**\n\nLet’s position the text toward the left of the\
+    \ screen. Add the **go to** block from the Turtle menu to your program by clicking\
+    \ and dragging each block into the positions below. Change the numbers in the\
+    \ two purple blocks to: **-50, 40**.\n\n![](img/a1849c7d7e98817476d64684d9c96952_12_0.png)\n\
+    \nPress ▶ **Run** to test your program. You should see the text on the right of\
+    \ the screen.\n\n![](img/a1849c7d7e98817476d64684d9c96952_12_1.png)\n\n> **Did\
+    \ you know?**\n> \n> The common box turtle has a distinctive hinged lowered shell\
+    \ (the box) that allows it to completely enclose itself. It lives in woodlands,\
+    \ marshy meadows, floodplains, scrub forests, and grasslands in much of the eastern\
+    \ United States.\n\n# 5 **USE THE PEN UP BLOCK**\n\nThe turtle draws a line when\
+    \ it moves. To make the turtle move without drawing a line you need to use the\
+    \ **pen up** block from the Turtle menu. Your program should look like this:\n\
+    \n![](img/a1849c7d7e98817476d64684d9c96952_12_2.png)\n\nPress ▶ **Run** to test\
+    \ your program.\n\n# 6 **SET THE SPEED**\n\nAdd a **speed 10** block to the program\
+    \ to make the turtle go faster.\n\n![](img/a1849c7d7e98817476d64684d9c96952_12_3.png)\n\
+    \nThe number inside this block will set the turtle’s speed. The higher the number,\
+    \ the faster the turtle will move.\n\nPress ▶ **Run** to test your program.\n\n\
+    ![](img/a1849c7d7e98817476d64684d9c96952_12_4.png)"
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: "# 7. USE A STAMP BLOCK AND SET THE PROGRAM'S COLOR\n\nA `stamp` block will\
+    \ produce an image of the character you are using in your program (a turtle),\
+    \ which is stamped on the white canvas.\n\nAdd a `stamp` and `set color to` `yellow`\
+    \ block to your program to make a stamp and color it red. Add a further `go to\
+    \ x: 0 y: 0` block to position the stamp.\n\n```\nwhen green flag clicked\npen\
+    \ up\ngo to x: 250 y: 40\nset color to yellow\nstamp\ngo to x: -20 y: 40\nsay\
+    \ \"Hello! What are you doing?\" for 2 seconds\n```\n\nPress ▶ Run to test your\
+    \ program.\n\n# 8. ADD ANOTHER TURTLE\n\nNow you can add another turtle to talk\
+    \ to the first one. You need to make it look different from the first one, so\
+    \ you will need to use a different color. Add the following blocks below the program\
+    \ in Step 7:\n\n```\npen up\ngo to x: 250 y: -10\nset color to green\nstamp\n\
+    go to x: -20 y: -10\nsay \"I am coding with Python!\" for 1 second\n```\n\nPress\
+    \ ▶ Run to test your program.\n\n> The `pen up` block can be snapped under the\
+    \ `go to x: 0 y: 0` block in the previous step or kept just below and separated.\n\
+    \n> **Did you know?**\n> \n> The largest turtle is the leatherback sea turtle.\
+    \ It can weigh over 1,900 pounds!\n\n![](img/a1849c7d7e98817476d64684d9c96952_13_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# COMPLETING THE DIALOGUE
+
+
+    To complete the dialogue between the turtles, add the following blocks to your
+    program.
+
+
+    ```
+
+    get [say] [Hello!]
+
+    when [green flag clicked]
+
+    say [Hello!]
+
+    wait [2] seconds
+
+    say [What can you code?]
+
+    wait [4] seconds
+
+    ```
+
+
+    > You can right click on any block in the white canvas and copy it.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_14_0.png)
+
+
+    # CHALLENGE
+
+
+    Add more lines to the program to make the turtles have a longer conversation.
+
+
+    +   - Hello! What are you doing?
+
+    +   - I am coding with Python.
+
+    +   - What can you code?
+
+    +   - A circle
+
+    +   - Wow! That''s great.
+
+    +   - Thanks.
+
+
+    # DRAW A CIRCLE
+
+
+    At the end of the dialogue, the blue turtle will draw a circle. Add the following
+    blocks:
+
+
+    ```
+
+    pen up
+
+    move [20] steps
+
+    pen down
+
+    set color to [orange]
+
+    forward [25]
+
+    turn right [20]
+
+    ```
+
+
+    Press ▶ Run to test your program.
+
+
+    # TROUBLESHOOTING
+
+
+    If you prefer the text centered, use the [go to x: 0 y: 0] block to position the
+    dialogue in the middle of your screen. Try [go to x: 0 y: 0] for your x-coordinates.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # ARGENTINA
+
+
+    CREATE THE FLAG AND DISCOVER SOME FUN FACTS ABOUT ARGENTINA!
+
+
+    # READY
+
+
+    In this code, you will create the flag of Argentina by drawing different colored
+    rectangles.
+
+
+    # GETTING STARTED
+
+
+    +   1. Go to Trinket: https://trinket.io/ and log in.
+
+    +   2. Type in your username and password.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_15_0.png)
+
+
+    > > Argentina is the second largest country in South America after Brazil and
+    the eighth largest country in the world.
+
+
+    # Did you know?
+
+
+    Lionel Messi was born in Rosario, Argentina. When he was 11 years old, he moved
+    to Barcelona with his father. He now holds most of Barcelona''s goal-scoring records,
+    and he is Argentina''s all-time top scorer.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_15_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "# # SET\n\nBefore you start coding, you need to open up a new Trinket.\n\n\
+    > **Did you know?**\n> \n> The name Argentina comes from the Latin word for silver:\
+    \ argentum.\n\n# ## OPEN A NEW TRINKET\n\nClick on **New Trinket** and click on\
+    \ Blocks.\n\n![](img/a1849c7d7e98817476d64684d9c96952_16_0.png)\n\nYou will see\
+    \ the following window. Click on Loops.\n\nYou will drop the blocks for your program\
+    \ in this white canvas.\n\nThe following menu will open up.\n\n![](img/a1849c7d7e98817476d64684d9c96952_16_1.png)\n\
+    \n> **What is a loop?**\n> \n> A loop is a repeated command or set of commands.\
+    \ Loops repeat actions.\n\n![](img/a1849c7d7e98817476d64684d9c96952_16_2.png)\n\
+    \nA different menu will open when you click on any of the other options on the\
+    \ left."
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "# CODE!\n\nNow you need to create colored rectangles to form your flag.\n\n\
+    ![](img/a1849c7d7e98817476d64684d9c96952_17_0.png)\n\n# 3. DRAW A RECTANGLE USING\
+    \ LOOPS\n\nAdd the following blocks to your program using the Loops and Turtle\
+    \ menus:\n\n```\n```text\nrepeat 2 times\ndo\n  turn right by 90\n  move forward\
+    \ by 50\n  turn right by 90\n  move forward by 150\n```\n```\n\nPress ▶ Run to\
+    \ test your program. You should see a rectangle on the right side of your screen.\n\
+    \n# 4. COLOR THE RECTANGLE\n\nAdd the following three blocks to the beginning\
+    \ and end of your program using the Turtle menu:\n\nThis block will set the color\
+    \ of the program.\n\n```\n```text\nset color to blue\nrepeat 2 times\ndo\n  turn\
+    \ right by 90\n  move forward by 50\n  turn right by 90\n  move forward by 150\n\
+    ```\n```\n\nThis block will color the rectangle.\n\nPress ▶ Run to test your program.\
+    \ You should see a blue rectangle on the right side of your screen.\n\n![](img/a1849c7d7e98817476d64684d9c96952_17_1.png)\n\
+    \nFunctions are like recipes. For example, to cook rice you have to follow a set\
+    \ of instructions: boil water, add salt, pour in the rice, simmer for 20 minutes,\
+    \ drain any remaining water, and fluff the rice with a fork. Functions allow programmers\
+    \ to put all those instructions under one block and give it a name, such as “Rice.”\
+    \ Every time you need to make rice, you could use the function “Rice.”"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# ## CREATE A FUNCTION
+
+
+    The Argentine flag is divided into three horizontal rectangles colored blue, then
+    white, then blue. Add the following block to your program using the Functions
+    menu: Let’s create a function by deleting “do something” and naming the function
+    “Rectangle blue.”
+
+
+    From the Functions menu, add the function **Rectangle blue** that you have just
+    created to the side of your program, like this:
+
+
+    Press ▶ Run to test your program. You should still see the same rectangle as in
+    Step 4, but it is now a function, and you will use it again in the next step.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_18_0.png)
+
+
+    # ## COPY A FUNCTION
+
+
+    Right-click on the block used at the start of Step 5 and select Duplicate.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_18_1.png)
+
+
+    > > The Tango dance and music was created in Buenos Aires, Argentina.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_18_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: "# **7**\n\n# ## CHANGE THE COLOR OF A FUNCTION\n\nYou may remember that the\
+    \ Argentine flag has two colors and three rectangles, so you will have to change\
+    \ the color of the second function. Click on the **color** block of the second\
+    \ function you created in Step 6 and choose the white color.\n\nChange the function\
+    \ name from “Rectangle blue2” to “Rectangle white.”\n\n![](img/a1849c7d7e98817476d64684d9c96952_19_0.png)\n\
+    \n# **8**\n\n![](img/a1849c7d7e98817476d64684d9c96952_19_1.png)\n\n# ## DRAW A\
+    \ FLAG USING FUNCTIONS\n\nLeave the functions on one side of the white canvas\
+    \ and add the following blocks beneath the Rectangle blue block you created at\
+    \ the end of Step 5, using the Turtle and Functions menus. Remember, purple blocks\
+    \ are found in the Functions menu; light green blocks are in the Turtles menu.\n\
+    \nPress ▶ Run to test your program.\n\n> **Did you know?**\n> \n> Located on the\
+    \ border between Argentina and Brazil, Iguazú Falls are the largest waterfall\
+    \ system in the world. Iguazú is a series of 275 waterfalls, which fall a distance\
+    \ of 246 feet.\n\n![](img/a1849c7d7e98817476d64684d9c96952_19_2.png)"
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: "# ### ADD A COLORED MESSAGE\n\nLet's add a message in colored text.\n\nAdd\
+    \ the following block to your program:\n\nThis message will appear above the flag.\n\
+    \nThe font size will automatically be set to 14, but you can change it to any\
+    \ size you want.\n\n```\n    when flag clicked\n    set size to 14\n    go to\
+    \ x: -150 y: 50\n    say 'This is the Argentine flag!' for 2 secs\n```\n\nPress\
+    \ ▶ Run to test your program.\n\n# ### Did you know?\n\nLuciana Aymar is a retired\
+    \ Argentine field hockey player. She is the only player in history to receive\
+    \ the Player of the Year Award eight times, and she is considered to be one of\
+    \ the best female hockey players of all time.\n\n![](img/a1849c7d7e98817476d64684d9c96952_20_0.png)\n\
+    \n# ## 10 ADD TEXT\n\nNow we can add some facts using print blocks from the Text\
+    \ menu:\n\nThese lines will appear separately at the bottom of the screen.\n\n\
+    ```\n    when flag clicked\n    go to x: -150 y: 50\n    set size to 14\n    print\
+    \ 'This is the Argentine flag!'\n    print 'The capital of Argentina is Buenos\
+    \ Aires.'\n    print 'The official language is Spanish.'\n    print 'Lionel Messi\
+    \ was born in Argentina.'\n```\n\nPress ▶ Run to test your program.\n\n![](img/a1849c7d7e98817476d64684d9c96952_20_1.png)\n\
+    \n# ### CHALLENGE\n\nUse your Python writing skills and the facts you have read\
+    \ in this project to add information about Argentina to your program. Try placing\
+    \ the facts in different places on the screen.\n\n# ### TROUBLESHOOTING\n\nIf\
+    \ the message: “This is the Argentine flag.” is not right above the flag, change\
+    \ the coordinates in these blocks:\n\n```\n    when flag clicked\n    set size\
+    \ to 14\n    go to x: -150 y: 50\n    say 'This is the Argentine flag!'\n```"
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# # POPPY FLOWER
+
+
+    # ## IT''S TIME FOR SOME FLOWER POWER!
+
+
+    # ## READY
+
+
+    You’re going to draw a poppy using functions and loops.
+
+
+    Poppies come in many different colors, such as white, pink, yellow, orange, red,
+    or blue.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_21_0.png)
+
+
+    # ### 1 GETTING STARTED
+
+
+    Go to Trinket: https://trinket.io/ and log in.
+
+
+    Type in your username and password.
+
+
+    # ## SET
+
+
+    # ### 2 OPEN A NEW TRINKET
+
+
+    Click on **New Trinket** and click on Blocks.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_21_1.png)
+
+
+    You will see the following window.
+
+
+    Click on Turtle.
+
+
+    You will drop the blocks for your program in this white canvas.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'From the Turtle menu, select **shape**. Click on the drop-down menu and select
+    **circle**. We will use a circle to create our flower pattern.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_22_0.png)
+
+
+    # Did you know?
+
+
+    The Golden Poppy, or California Poppy, is the Californian state flower. It grows
+    wild throughout California and became the state flower in 1903.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_22_1.png)
+
+
+    # CODE!
+
+
+    You can draw your poppy using lots of different circles.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_22_2.png)
+
+
+    # Did you know?
+
+
+    Every year, on November 11, people remember the end of the First World War. The
+    common field poppy has become a symbol of this remembrance because these people
+    began to grow in the fields of battle when the war ended.
+
+
+    # 3  WRITE IN PYTHON
+
+
+    Add this block to your program:
+
+
+    +   - Press **Run** to test your program.
+
+    +   - You should see a large circle on the right of your screen.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_22_3.png)
+
+
+    ```
+
+    ```python
+
+    stamp Circle()
+
+    color 100
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 4. MAKE A PETAL
+
+
+    The circle has no color inside and is a bit big for the screen. Let’s fix this
+    by adding the following blocks to your program:
+
+
+    Change this number by clicking inside the box and typing over the old number with
+    the new one.
+
+
+    Press ▶ Run to test your program.
+
+
+    ```
+
+    shape circle
+
+    begin fill
+
+    set color to [brown]
+
+    circle 25
+
+    end fill
+
+    ```
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_23_0.png)
+
+
+    You should see a red circle on your screen.
+
+
+    # 5. CREATE A FUNCTION
+
+
+    Click on Functions and add the “do something” block to your program.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_23_1.png)
+
+
+    # 6. NAME THE FUNCTION
+
+
+    It is important to name the function so you know what you can do with it. Click
+    inside the box which says “do something,” delete, and type “Petal”. After that,
+    click on Functions again and you will see a block called “Petal”. This is the
+    function you have just created.
+
+
+    From now on, every time you want to draw a petal, you will only need to use the
+    function Petal
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_23_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "# ## USE LOOPS\n\nA poppy has four petals. Programmers can use loops to repeat\
+    \ the same instruction many times. Add the following code to your program using\
+    \ the Functions, Loops, and Turtle menus:\n\nPress ▶ Run to test your program.\n\
+    \nYou should see a red flower on the right of your screen.\n\n```\n```\nrepeat\
+    \ 4 times\n    do Petal\n    turn right by 90\n```\n```\n\nFunction\n\n```\n```\n\
+    to Petal\n    shape circle\n    begin fill\n    set color to red\n    circle 25\n\
+    \    end fill\n```\n```\n\nProgram\n\n```\n```\nrepeat 4 times\n    do Petal\n\
+    \    turn right by 90\n```\n```\n\n![](img/a1849c7d7e98817476d64684d9c96952_24_0.png)\n\
+    \n# ## CREATE THE CENTER\n\nYou will have to add another circle to make the center\
+    \ of the flower. This time the circle will be black. Add the following blocks\
+    \ to your program:\n\nPress ▶ Run to test your program.\n\nThis position block\
+    \ will place the black circle right on the center of the flower.\n\n```\n```\n\
+    repeat 4 times\n    do Petal\n    turn right by 90\ngoto 0 -15\nset color to brown\n\
+    begin fill\ncircle 15\nend fill\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# ## 9. ADD THE STEM
+
+
+    To finish your flower, you need to add the stem. Add the following blocks to your
+    program to finish the poppy:
+
+
+    This block will make the program stop drawing.
+
+
+    This block will make the program continue drawing. Remember to use the drop-down
+    menu to select it.
+
+
+    Press ▶ Run to test your program.
+
+
+    Your program should look like this:
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_25_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_25_1.png)
+
+
+    # ## 10. USE TEXT BLOCKS
+
+
+    In Trinket, you can use Text blocks to write a message at the bottom of your screen.
+
+
+    Use these two blocks to write your message.
+
+
+    Press ▶ Run to test your program.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_25_2.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_25_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '# TROUBLESHOOTING
+
+
+    If the petals are too small, you need to change the size of the circle in the
+    function.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_26_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_26_1.png)
+
+
+    # Did you know?
+
+
+    The Bluebonnet Poppy is the state flower of Texas. They are easily found in fields
+    and along roadsides throughout central and southern Texas.
+
+
+    # CHALLENGE
+
+
+    Use your knowledge about functions to create a Golden Poppy (see page 20) and
+    a Bluebonnet Poppy (see above). Use the “set color” block to change the poppy’s
+    color and the “change size by” block to change the petals’ size.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_26_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: "# # THE CATERPILLAR\n\n# ## GET READY FOR CREEPY CRAWLY FUN!\n\n# ## READY\n\
+    \nYou’re going to create a program using variables and loops to draw a caterpillar.\n\
+    \n> > **Did you know?**\n> >\n> > A caterpillar is the larva of a moth or butterfly.\
+    \ Caterpillars eat a lot of food before producing a hard, outer shell called a\
+    \ chrysalis. Inside the chrysalis, the caterpillar develops into a butterfly.\n\
+    \n![](img/a1849c7d7e98817476d64684d9c96952_27_0.png)\n\n+   1. **GETTING STARTED**\n\
+    +      Go to Trinket: https://trinket.io/ and log in.\n+   \n+      Type in your\
+    \ username and password.\n\n# ## The life cycle of a butterfly\n\n+   1. **Egg**\n\
+    +      The female lays lots of little round eggs and attaches them to leaves or\
+    \ stems.\n+   2. **Caterpillar (or larva)**\n+      The eggs develop into caterpillars.\n\
+    +   3. **Chrysalis (often called the pupa)**\n+      This is a rest stage in which\
+    \ the caterpillar develops a hard, outer case. Inside the chrysalis, the caterpillar\
+    \ changes and becomes a butterfly.\n+   4. **Butterfly**\n+      Once the butterfly\
+    \ is ready to emerge, the case around the chrysalis splits open.\n\n![](img/a1849c7d7e98817476d64684d9c96952_27_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # SET
+
+
+    # ## 2 OPEN A NEW TRINKET
+
+
+    Click on `New Trinket` and click on Turtle.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_28_0.png)
+
+
+    Click on Turtle.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_28_1.png)
+
+
+    The following menu will open. Drag the `shape: turtle` block to the white canvas
+    and choose triangle from the drop-down menu.
+
+
+    A variable is a space in the computer memory where you can store information such
+    as numbers, text, or lists of numbers and text. To create a variable you need
+    to name it.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '# CODE!
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_29_0.png)
+
+
+    # CREATE VARIABLES
+
+
+    Click on the Variables menu and then select “Make a Variable”.
+
+
+    The following message will appear at the top of the screen:
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_29_1.png)
+
+
+    Type “set to ” and click OK. “set to ” is the name of the variable and it will
+    appear in the Variables menu, like this:
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_29_2.png)
+
+
+    Add two more variables: one named x and the other named y.
+
+
+    # USE VARIABLES
+
+
+    Drag and drop the block from the Variables menu under the shape block. Click on
+    the drop-down menu and choose x.
+
+
+    Then go to the Numbers menu. Select and drag the first block into your program
+    and type in 150.
+
+
+    Add another two blocks from the Turtle menu to your program:
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_29_3.png)
+
+
+    This variable will make the triangle move along the screen horizontally.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_29_4.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_29_5.png)
+
+
+    Coordinates in programming are the number of pixels (each small block of color
+    which forms a picture) across the screen (horizontally) and the number of pixels
+    down (vertically).'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '# Did you know?
+
+
+    A caterpillar has up to 4,000 muscles in its body.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_30_0.png)
+
+
+    # 5. CREATE A LIST USING LOOPS
+
+
+    Click on the Loops menu and drag this block onto the white canvas.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_30_1.png)
+
+
+    Now go to the Lists menu and select the `create list with` block. Your program
+    should look like this.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_30_2.png)
+
+
+    # 6. ADD ITEMS TO THE LIST
+
+
+    A caterpillar’s body is made of several parts. The list you created in the previous
+    step will help you add parts of the body to your drawing. Click on the list icon
+    in the `create list with` block to add items.
+
+
+    ```
+
+    `create list with`
+
+    ```
+
+
+    You have to drag the `item` block and drop it inside the list block in the pop-out
+    list. Add `item` until you have six inside the list block. The items will appear
+    as six jigsaw slots in the `create list with` block.
+
+
+    ```
+
+    `create list with`
+
+    ```
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_30_3.png)
+
+
+    # Did you know?
+
+
+    Most caterpillars are shades of green or brown and are relatively hairless, but
+    some caterpillars are very hairy and brightly colored.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_30_4.png)'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "# DRAW THE CATERPILLAR'S HEAD\n\nAdd the following blocks to your program:\n\
+    \n```\n```scratch\nwhen green flag clicked\nset size to 50%\ngo to x: 0 y: 25\n\
+    set pen size to 10\nset color to [selected color]\npen down\nrepeat 25\n  move\
+    \ 10 steps\n  turn right 15 degrees\n  move 10 steps\n  turn left 15 degrees\n\
+    pen up\n```\n```\n\nThis block will position the caterpillar's head.\n\nChoose\
+    \ any suitable color for your caterpillar's head.\n\nPress ▶ Run to test your\
+    \ program.\n\n![](img/a1849c7d7e98817476d64684d9c96952_32_0.png)\n\n> **Did you\
+    \ know?**\n> \n> Caterpillars are eating machines! They love eating nettles, wild\
+    \ grasses, and flowers. During the first stage of their lives—the larval stage—caterpillars\
+    \ can eat 27,000 times their own weight!\n\n![](img/a1849c7d7e98817476d64684d9c96952_32_1.png)\n\
+    \n# TROUBLESHOOTING\n\nIf the circles that make the body of the caterpillar are\
+    \ a bit separated, you can solve this by reducing the number in the variable.\n\
+    \n```\n```scratch\nrepeat [triangle]\n  move 10 steps\nset [x] to [45]\n```\n\
+    ```\n\n# CHALLENGE\n\nUse your knowledge of drawing circles to draw an orange\
+    \ or an apple next to the caterpillar. Remember, they are always hungry!"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# GLOSSARY
+
+
+    **Canvas**
+
+    An area of the screen for drawing on
+
+
+    **Pixel**
+
+    A point on the screen. It is the smallest dot a computer is capable of drawing.
+
+
+    **Coordinates**
+
+    The position of a pixel on the screen. It is the number of pixels across the screen
+    (x-axis/horizontally) and the number of pixels down (y-axis/vertically).
+
+
+    **Turtle**
+
+    An image that shows the position of the program on the white canvas
+
+
+    **Function**
+
+    A set of instructions that can be used to do an action
+
+
+    **Variable**
+
+    A place to store data in a computer program. It has a name and a value.
+
+
+    **Loop**
+
+    An instruction or set of instructions that keep repeating
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_33_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_33_1.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_33_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # FURTHER
+
+    # INFORMATION
+
+
+    # ## BOOKS
+
+
+    *Kids Get Coding by Heather Lyons and Elizabeth Tweedale (Lerner Publications,
+    2018)*
+
+
+    *Generation Code: I am a Python Programmer* by Max Wainwright (Wayland, 2017)
+
+
+    # ## WEBSITES
+
+
+    https://trinket.io/
+
+
+    https://www.python.org/
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_34_0.png)
+
+
+    # ## INTERNET SAFETY
+
+
+    The internet is a great resource which helps you connect, communicate, and be
+    creative.
+
+
+    However, you need to stay safe online. Always remember:
+
+
+    +   1. If you see anything online which makes you feel uncomfortable or unhappy,
+    tell a grown up right away.
+
+    +   2. Never share your personal information, such as your full name, address,
+    or date of birth, with anybody online.
+
+    +   3. Remember that people online may not always be who they say they are. Never
+    share anything with people online unless you are sure you know who they are.
+
+
+    # ## NOTE TO PARENTS
+
+
+    It is advisable to:
+
+
+    +   - Use filtering software to block unwanted content
+
+    +   - Familiarize yourself with the privacy settings of your device
+
+    +   - Set up passwords to protect personal information.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: '# # INDEX
+
+
+    +   - "Challenge" panel, 11, 17, 23, 29
+
+    +   - characters
+
+    +     - adding / creating, 7, 10, 19, 25, 27
+
+    +     - moving, 9
+
+    +   - color
+
+    +     - adding, 10, 14, 17, 20, 23, 28–29
+
+    +     - changing, 16, 23
+
+    +   - coordinates, 11, 17, 26, 30
+
+    +   - drawing
+
+    +     - circles, 19–21, 28–29
+
+    +     - rectangles, 14–16
+
+    +   - menu blocks
+
+    +     - colors, 28
+
+    +     - functions, 14–16, 20, 23, 30
+
+    +     - lists, 27
+
+    +     - loops, 13–14, 21, 27, 30
+
+    +     - numbers, 28–29
+
+    +     - text, 8–9, 11, 17
+
+
+    +   - turtle, 7–11, 14, 16, 19, 25, 28, 30
+
+    +   - variables, 24–25, 28, 30
+
+    +   - speed, 9
+
+    +   - text
+
+    +     - changing color, 17
+
+    +     - positioning, 9, 11
+
+    +     - writing, 8, 17, 22
+
+    +   - troubleshooting, 11, 17, 23, 29
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_35_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '# READY, SET, CODE!
+
+
+    # CODING
+
+    with
+
+    Python
+
+
+    *In Coding with Python*, you can talk with turtles, travel to South America, draw
+    a flower, and create a caterpillar without paper, pencils, or paint.
+
+
+    Easy-to-follow, step-by-step instructions will guide you through coding these
+    fantastic projects. Once you’ve got the hang of it, there are different challenges
+    you can choose to really test your coding skills and troubleshooting hints to
+    help you if you need them.
+
+
+    With Ready, Set, Code!, you’ll soon be ready for the world of coding.
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_39_0.png)
+
+
+    ![](img/a1849c7d7e98817476d64684d9c96952_39_1.png)
+
+
+    # READY, SET, CODE!
+
+
+    +   - CODING with HOPSCOTCH
+
+    +   - The Unofficial Guide to CODING with MINECRAFT
+
+    +   - CODING with PYTHON
+
+    +   - CODING with SCRATCH
+
+
+    ISBN 978-1-5415-3876-4
+
+    90000
+
+    9 781541 538764
+
+
+    Lerner
+
+    www.lernerbooks.com'
+  merge: -1
+  img_proc: true

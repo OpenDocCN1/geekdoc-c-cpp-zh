@@ -756,6 +756,7 @@
 +   [Python 编程项目（儿童计算机编程）](docs/coding-projects-in-python-computer-coding-for-kids/README.md)
 +   [编程（科技字节：高科技）](docs/coding-tech-bytes-high-tech/README.md)
 +   [Anna 与 Elsa 的编程之旅：冰雪奇缘 Blockly指南 (迪士尼冰雪奇缘)](docs/coding-with-anna-and-elsa-a-frozen-guide-to-blockly-disney-f/README.md)
++   [Python 编程（预备，开始，编码！）](docs/coding-with-python-ready-set-code/README.md)
 +   [Scratch 编程入门指南：学习基础、游戏与项目](docs/coding-with-scratch-made-easy-learn-the-basics-games-and-pro/README.md)
 +   [Scratchjr 编程（21 世纪技能创新系列：创作者即创新者）](docs/coding-with-scratchjr-21st-century-skills-innovation-library/README.md)
 +   [Cody 的常用 SAS 编程任务及解决方案集](docs/codys-collection-of-popular-sas-programming-tasks-and-how-to/README.md)
