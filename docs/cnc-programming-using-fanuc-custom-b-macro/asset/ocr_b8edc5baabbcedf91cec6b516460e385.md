@@ -1,0 +1,13 @@
+```
+    #[#1] = SQRT[-#21];
+    G00 W#11;
+```
+
+all cases of assigning a value to a variable. Only eight decimal digits are stored) (Causes a displacement of 3.162 mm, the rounded value up to three digits after decimal, as the least input increment for displacement is 0.001 mm, in millimeter mode. In an NC statement, rounding of axis values, up to the least input increment of the machine, is automatically done by the control, if the values are specified in terms of variables. Refer to Sec. 4.4 also)
+
+The term “NC statement” has been used without formally defining it. It is a *program block* involving at least one NC address, such as G, M, F, S, T, X, Y, and Z, except codes for calling a macro program (such as G65, G66, etc.) On the other hand, a *macro statement* simply assigns a value to a variable (#1 = <some value or an arithmetic expression>), or jumps to a specified block number (GOTO_ and IF_GOTO_), or uses a conditional statement (IF_THEN_WHILE_DO_ and END_), or calls a macro program. To put it simply, a macro statement does not directly cause physical machine movement, whereas an NC statement directly controls the machine movement. An NC statement may or may not use macro variables/functions.
+
+There are two major differences in the way the control treats NC statements and macro statements:
+
++   - If the program is executed in the single-block mode (there is a switch for this purpose on the MOP), its execution stops at the end of each NC statement, and proceeds to the next block only after the CYCLE START button is pressed again. However, the execution does not stop at the end of a macro statement; it proceeds to the next block. If it is desired to execute the macro statements also in single-block mode, set parameter 6000#5 to 1. In a normal situation, such a requirement would never arise, because a macro statement does not involve machine movement. However, in case of an error in the program, execute the macro statements one at a time to check the intermediate calculations.
++   - Although the program execution is block by block, the control pre-reads the next block and interprets it in advance, to speed up the execution. In the radius compensation mode, two blocks are preread, because the control needs to position the tool properly at the end of the current block, to suit the next path segment. However, all (or as many as possible) sequential macro statements are read and evaluated immediately. In fact, the control does not count a macro statement as a block. An NC statement constitutes a block.

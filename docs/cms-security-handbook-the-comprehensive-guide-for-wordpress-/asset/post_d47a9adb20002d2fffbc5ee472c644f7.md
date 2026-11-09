@@ -1,0 +1,366 @@
+
+- personal digital assistant (PDA), 335
+- phenelit-us.org, 123
+- Phillips WiFi, 331
+- phishing, 2, 388
+- phones, 356–357
+- PHP, 70
+  - error logs, 45
+  - LAMP, 263
+  - patching, 227
+  - SecureLive, 95
+  - server hardening, 142–146
+  - suPHP, 142–143
+  - version control, 103
+- php -v, 103
+- phpinfo, 143
+- php.ini, 79, 144–146
+- phpMyAdmin, 38
+- PHPSC. See PHP Security Consortium
+- PHPsecInfo, 143–144
+- physical access
+  - breach response, 300
+  - wireless, 322
+- physical location, 9–10
+  - hosting, 51–52
+- physical security, 40–45
+- PID. See Process ID
+- ping, 47
+- pipe, 47
+- Plone, 27
+  - add-ons, 72
+  - baseline, 105–106
+  - backups, 207–210
+  - installation, 90–94
+  - log files, 263, 293
+  - patching, 227, 249–251
+  - Python, 70
+  - SalvaAlerting.com, 73
+  - shopping carts, 56
+  - snapshots, 210
+  - SSL, 327
+  - technical support, 75
+  - plone.net, 75
+- plug-ins
+  - Joomla!, baseline, 104
+- prevention, 315
+- passwords, 72, 93–94
+  - baseline, 106–107
+  - patching, 243–244
+- Policies, Nessus, 115
+- PORT, 150
+- ports
+  - approved scanning vendor (ASV), 58
+  - configurations, 101
+  - misconfiguration, 113
+  - Nmap, 113–114, 304, 308
+  - operating system breach response, 304
+  - patching, 236
+  - scanning, 388
+  - Secure FTP (SFTP), 154–157
+  - server hardening, 146–148
+- portlets, 99
+- ports, USB, 19
+- Ports/Hosts, 112
+- POST, 146, 293
+- post processing, 200–201
+- Postfix, 168
+- postrotate, 282, 283, 284
+- power, 47
+- power-up sequence, 101
+- pre-action, 43
+- prerotate, 284
+- prevention, 315
+- print working directory (pwd), 196
+- printers
+  - baseline, 108–109
+  - breach response, 300
+  - dorks, 108
+  - usernames, 108
+  - wireless, 108–109
+- privacy, 150
+- private keys, 161
+- Process ID (PID), 301, 309
+- production, 194
+- Profile, Nmap, 111
+- profiles, 86
+  - Advanced Backup, 215
+  - asset, 290
+  - backups, 200–202
+  - security, 69
+- ProFTPD, 148–149
+- ProjectMayhem, 111
+- proxy servers, 138
+- # ps --All, 260
+- Pseudo Terminal number (PTY number), 301
+- public, 141
+- public keys, 161, 388
+- public permissions, 131
+- public_html, 116
+- public_html, 76, 144, 305
+- Pure-FTPd, 149, 153–154
+- --purge, 129
+- PUT, requirement for, 380
+- PuTTY, 38, 132, 300
+  - command line, 291
+- pwd. See print working directory
+- Pychkine, Tews, and Weinmann (PTW), 333
+- Python, 11, 70, 250
+  - patching, 227
+  - version control, 103
+  - Zope, 250
+  - python -v, 103
+
+## Q
+
+- q, Telnet parameter, 361
+- QSA. See Qualified Security Assessor
+- Qualified Security Assessor (QSA), 54, 58
+- qualys.com, 252
+- Quick Backup, 215
+- Quick scan, 360
+- Quick traceroute, 360
+- quotas, 228
+
+## R
+
+- $r, log file format, 265
+- r, FTP logs, 271
+- -r, NetStat option, 362
+- R57, 237
+- Rackspace.com, 228
+- Radius, 322
+- RAID. See Redundant Array of Inexpensive Disks
+- random-access memory (RAM), 36
+- Virtual Private Server (VPS), 38
+- Ransome, James, 34
+- RAT. See remote access Trojan
+- Raw Access Logs, 293
+- read the manual (RTM), 50
+- Received Signal Strength Indicator (RSSI), 22
+- reciprocity, 350
+- Red Hat, 103
+  - FTP, 152–154
+- Reduced footprint, 147–148
+- redundancy, 37, 47–48
+- Redundant Array of Inexpensive Disks (RAID), 64, 101
+- Referer, 267
+- register_globals = off, 145
+- Regular Scan, 361
+- remediation plan, 116–118, 388
+- remote access, 346
+- remote access Trojan (RAT), 236, 298
+- remote connectivity, 101
+- remote file inclusion, 74
+- remote file injection, 238
+- Reply-To, 310
+- Reports, 115
+- repositories, 126
+- response time, 229–230
+- restoration. See backups
+- retention policy, 256
+- RF POWER, 332
+- risk free, 56
+- Ristic, Ivan, 140
+- Rittinghouse, John, 34
+- RKHunter, 262
+  - operating system breach penetration, 302–303
+  - rkhunter, 237
+- RoadRunner, 311
+- Rochen.com, 227
+- rogue devices
+  - information security policy, 356
+  - wireless, 325
+- root directory, 76
+- root user
+  - IP address, 301
+  - log files, 260
+  - passwords, 121
+  - permissions, 131
+  - SSH, 308
+- rootkits. See Trojans
+- rotate, 284
+- routers
+  - log files, 296
+  - wireless, 322
+  - misconfiguration, 21
+- RPM/Yum, 127
+- RSH Server, 135
+- RSSI. See Received Signal Strength Indicator
+- RTM. See read the manual
+
+## S
+
+- $s, log file format, 265
+- -s, NetStat option, 362
+- safe_mode = On, 145
+- SafeOver, 237
+- salt, 390
+- SalvusaAlerting.com, 46, 54, 108
+  - patching, 252
+  - Plone, 73
+  - prevention, 315
+- SAN. See storage area network
+- SandCat log analyzer, 297
+- scanning, 390
+  - ASV, 55, 56
+  - testing, 58
+  - ports, 388
+  - vulnerabilities, 109–116
+- Scans
+  - Nessus, 115
+  - Nmap, 112
+- scarcity, 350
+- ScheduleAgent, ports, 147
+- search engine optimizing (SEO), 36
+- Seattle Wireless, 326
+- Secure File Transfer Protocol (SFTP), 270
+  - ports, 154–157
+  - server hardening, 154–157
+  - WinSCP, 155, 290
+- Secure Shell (SSH), 38
+  - client, 290–291
+  - Drupal, 83
+  - Joomla!, 81
+  - Nmap, 14
+  - OpenSSH, 154
+  - ports, 114
+  - root user, 133, 308
+- SFTP, 154
+- Secure Socket Layer (SSL), 13, 152, 390
+  - access logs, 270
+  - Apache, 136
+  - certificate, 35, 39, 55–56
+    - approved service vendor (ASV), 58
+  - certificates, 161, 162–165
+    - hosting, 164
+    - envelope, 160
+    - OpenSSL, 58
+    - ports, 114
+    - requirement for, 379–380
+    - server hardening, 160–165
+    - shared hosting, 31
+    - wireless, 320, 327
+  - WordPress, 94
+- SecureLive, 95
+- security logs, 158–159, 259
+- Security Review, Drupal, 86–87
+- security scan tool, 93–94
+- self-signed certificates, 58, 163
+- send, 361
+- SENT, 308, 309
+- SEO. See search engine optimizing
+- servers. See also specific server types
+  - activity status, Apache, 137
+  - backups, 190–197
+  - baseline, 101
+  - hardening, 119–169
+  - hosted hosting, 101
+  - signature, 380
+  - sprawl, 48
+  - updates
+    - operating system breach response, 302
+    - yum, 128–129, 302
+- server hardening, 119–169
+  - Apache, 135–140
+  - disabling unneeded services, 134–135
+  - disk access, 134
+  - FTP, 148–154
+  - Linux, 124–135
+  - logging, 157–160
+  - orphan files, 134
+  - packet sniffing, 166–167
+  - passwords, 132
+  - permissions, 130–131
+  - PHP, 142–146
+  - physically securing, 168
+  - ports, 146–148
+  - RSH Server, 135
+  - Secure FTP (SFTP), 154–157
+  - SGID, 133–134
+  - SMTP, 167–168
+  - SNMP, 141–142
+  - Secure Socket Layer (SSL), 160–165
+  - SUID, 133–134
+  - Telnet, 135
+  - world-writeable files, 133
+  - zone transfers, 168
+- Server Side Includes (SSI), 137
+- ServerTokens Prod, 136
+- Service Level Agreement (SLA), 44, 48, 203
+- Service Set Identifier (SSID), 22, 101, 330–331
+- set, 361
+- SetGID, 133
+- SetUID, 133
+- SFR WiFi Public, 331
+- SFTP. See Secure File Transfer Protocol
+- SGID, 133–134
+- shadow, 132
+- shadow password, 121
+- shared hosting, 30–31, 37–38
+  - backups, 31, 44
+  - breach response, 298
+  - misconfiguration, 31
+  - server, 101
+  - WordPress, 94
+- shared secret, 161
+- sharedscripts, 282, 284
+- Shintaro Uda, 320
+- shopping carts, 56–57
+- shred, 284
+- shredcycles, 284
+- SID. See System ID
+- signs, 41
+- Simple Mail Transfer Protocol (SMTP)
+  - FTP, 150
+  - ports, 114
+  - server hardening, 167–168
+- Simple Network Management Protocol (SNMP)
+  - disabling, 142
+  - permissions, 142
+  - server hardening, 141–142
+- SITE EXEC, 149
+- SITECOM, 330
+- Sites, 245
+- situational awareness. See awareness
+- size, 284
+- skins, 99
+- SLA. See Service Level Agreement
+- Slackware, 103
+- Slammer, 230
+- smc, 330
+- smoke break area, 355
+- smoking hole syndrome, 219
+- SMTP. See Simple Mail Transfer Protocol
+- snapshots, 52
+  - Drupal, 217
+  - Plone, 210
+- sniffers, 166–167, 362–365
+- SNMP. See Simple Network Management Protocol
+- social engineering, 17–19, 42
+  - information security policy, 349–351
+  - managers, 10
+- social media, 349
+- social proof, 351
+- Solaris/SPARC, 103
+- spam, 5, 309–310
+- spam filtering, 46
+- SpamHaus.org, 309
+- spelling_module, 138
+- spoofing, 329, 390
+- spooler logs, 159
+- spy tools, 19
+- SQL injections, 7, 390
+  - development costs, 74
+  - patching, 226
+- SSH. See Secure Shell
+- SSI. See Server Side Includes
+- SSID. See Service Set Identifier
+- SSL. See Secure Socket Layer
+- status, 361
+- Standard Cron Manager, 211
+- status codes
+  - Apache, 267–269
+  - HTTP, 376–378
+  - log files, 265
+- Stop, Think, Click, 19

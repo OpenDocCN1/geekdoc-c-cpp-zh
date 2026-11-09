@@ -1,0 +1,128 @@
+level_changes:
+- line: 81
+  before: 2
+  after: 1
+- line: 466
+  before: 1
+  after: 2
+- line: 468
+  before: 2
+  after: 3
+- line: 474
+  before: 2
+  after: 3
+- line: 482
+  before: 1
+  after: 2
+- line: 490
+  before: 2
+  after: 3
+- line: 499
+  before: 3
+  after: 4
+- line: 503
+  before: 1
+  after: 2
+- line: 509
+  before: 2
+  after: 3
+- line: 513
+  before: 3
+  after: 4
+- line: 722
+  before: 2
+  after: 1
+- line: 746
+  before: 2
+  after: 3
+- line: 752
+  before: 3
+  after: 4
+- line: 756
+  before: 3
+  after: 4
+- line: 1132
+  before: 3
+  after: 2
+- line: 1152
+  before: 2
+  after: 1
+- line: 1619
+  before: 2
+  after: 1
+- line: 2231
+  before: 2
+  after: 1
+- line: 2268
+  before: 3
+  after: 2
+- line: 2766
+  before: 2
+  after: 1
+- line: 2842
+  before: 2
+  after: 3
+- line: 2897
+  before: 2
+  after: 3
+- line: 2899
+  before: 3
+  after: 4
+- line: 2907
+  before: 2
+  after: 4
+- line: 3073
+  before: 2
+  after: 3
+- line: 3079
+  before: 2
+  after: 1
+text_changes:
+- line: 146
+  before: 原因4——你会用MDI吗？
+  after: 原因 4——你会用 MDI 吗？
+- line: 150
+  before: 原因5——向他人学习
+  after: 原因 5——向他人学习
+- line: 186
+  before: 你是CAM加工员吗？
+  after: 你是 CAM 加工员吗？
+- line: 1224
+  before: G54命令
+  after: G54 命令
+- line: 1256
+  before: CNC技巧与诀窍
+  after: CNC 技巧与诀窍
+- line: 1307
+  before: 最初的G76
+  after: 最初的 G76
+- line: 1318
+  before: 改进G76
+  after: 改进 G76
+- line: 1658
+  before: CNC车床上的动力刀具
+  after: CNC 车床上的动力刀具
+- line: 1870
+  before: 解读CNC程序
+  after: 解读 CNC 程序
+- line: 1990
+  before: 创建自己的G代码
+  after: 创建自己的 G 代码
+- line: 1996
+  before: G13命令
+  after: G13 命令
+- line: 2038
+  before: 转换宏调用G65
+  after: 转换宏调用 G65
+- line: 2115
+  before: 安全与CNC编程
+  after: 安全与 CNC 编程
+- line: 2268
+  before: G70循环
+  after: G70 循环
+- line: 2306
+  before: 车床循环G70-G72——第2部分
+  after: 车床循环 G70-G72——第 2 部分
+- line: 3073
+  before: 车床循环 G70–G72 – 第2部分
+  after: 车床循环 G70–G72 – 第 2 部分

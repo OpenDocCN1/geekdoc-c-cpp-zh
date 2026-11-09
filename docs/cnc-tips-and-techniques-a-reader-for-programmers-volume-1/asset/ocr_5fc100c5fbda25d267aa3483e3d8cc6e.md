@@ -1,0 +1,9 @@
+# A Reader for Programmers
+
+provide suggestions, and — most important — listen to what they have to say. Programmers who never put their foot in the machine shop or who go there reluctantly are on the wrong track. The same is true for programmers who go to the machine shop with their eyes closed and their ears plugged, and programmers who take the attitude that they are always right.
+
+Exchanging ideas with CNC machine operators, asking questions, and seeking answers is the only way to be fully informed about what is actually going on in the machine shop. It is in the programmers' own interest to know how the CNC operators feel about their programs, the programming style, and their approach to CNC programming overall. Exchange thoughts and communicate with each other — that is the best way to become a better CNC programmer (as well as CNC operator). Most machine shops offer tremendous resources, take advantage of them.
+
+These days, more than ever, CNC technology is an instrument to improve productivity with a minimal human involvement, measured at least by the physical level. As with any other technology, it must be understood and managed intelligently, by qualified people with experience. Without a firm grip and good control, without good management, and without the right attitudes, the technology will not yield the expected results; in fact, it will become counterproductive.
+
+In order to develop high quality programs, CNC programmers must have certain qualities of their own. The quality of actual parts produced is measurable. Is the quality of CNC programming also measurable? We look at this subject in the essay *Quality in CNC Programming*.

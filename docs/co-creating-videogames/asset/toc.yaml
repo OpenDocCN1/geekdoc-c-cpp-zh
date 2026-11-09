@@ -1,0 +1,50 @@
+level_changes:
+- line: 9
+  before: 2
+  after: 1
+- line: 29
+  before: 2
+  after: 1
+- line: 96
+  before: 2
+  after: 1
+- line: 98
+  before: 3
+  after: 2
+- line: 323
+  before: 2
+  after: 1
+- line: 486
+  before: 2
+  after: 1
+- line: 488
+  before: 3
+  after: 2
+- line: 707
+  before: 2
+  after: 1
+- line: 797
+  before: 2
+  after: 1
+- line: 799
+  before: 3
+  after: 2
+- line: 947
+  before: 2
+  after: 1
+- line: 1153
+  before: 2
+  after: 1
+- line: 1386
+  before: 2
+  after: 1
+text_changes:
+- line: 323
+  before: 打造 SAGE
+  after: 2 打造 SAGE
+- line: 707
+  before: 用户共同创造与劳动
+  after: 4 用户共同创造与劳动
+- line: 947
+  before: '*Minecraft——打造共创文化*'
+  after: 6 *Minecraft——打造共创文化*

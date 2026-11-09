@@ -1,0 +1,9 @@
+# Other Features
+
+Combining part geometry with the tools used creates an operation. Operations are treated as units — within a unit, an individual change will update the whole operation, for example, changing a tool diameter, spindle speed, or a cutting feedrate. There could be a number of special features included in CAM software. One that is very important is the support for various cycles for drilling, milling, turning, grooving, and threading. Such cycles make manual programming a lot simpler and less tedious; having support for them in the CAM software makes it easier at the machine to make small machining changes. Some CAM software offers an open architecture model. In plain words, it means that anybody with the required skills can write special utilities that can be accessed by the CAM software. The ability to add external features greatly adds to the power of the CAM software.
+
+# *Multi-Machine Support*
+
+Some machine tool manufacturers provide their own CAM software dedicated only to the CNC machines they make. Typical examples in this area are fabricating machines and some EDM machines. The software usually performs very well for the machine type supported, but it lacks flexibility to support other machines. It is quite suitable for a specialized shop, but not very practical for a shop that needs programming flexibility.
+
+Most CAM software is integrated software, which allows the part programmer to use it for several types of machine tools, typically mills, machining centers, and lathes. The major advantage of integrated CAM software is its flexibility. Additional benefits may be more practical but also important, for example, a similar interface for milling and turning shortens the programming time.

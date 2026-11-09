@@ -1,0 +1,303 @@
+
+![](img/8bd670d4939cf71dbd0c6123d1b834ff_418_0.png)
+
+## Index
+
+### SYMBOLS AND NUMBERS
+
+- `_`, FTP logs, 271
+- `'`, FTP logs, 271
+- `>` (greater than symbol), export, 195
+- `#` (hash mark), administrator prompts, 127
+- comments, 281
+- `-` (hyphen), log file format, 265
+- `<` (less than symbol), import, 195
+- `§ 1`, log file format, 265
+- `1`, FTP logs, 271
+- `2`, FTP logs, 270
+- 3Com, 331
+- 3D Traceroute, 35
+- 95th percentile, 37
+- 101, SSID, 331
+- 802.11 protocol, 22, 328, 386
+
+### A
+
+- `A`, FTP logs, 270
+- `~a`, NetStat, 362
+- AAR. See After Action Report
+- access control list (ACL), 27, 76, 386
+  - Joomla, 83
+- access logs, 46, 157, 258, 259, 269–270
+  - Apache, 262–263
+    - breach response, 293–295
+- access point security, 22
+- accesses, log, 282
+- ACL. See access control list
+- acquirers, 55
+- ACTIONTEC, 330
+- Acunetix, 109
+- add-ons
+  - baseline, 102–103
+  - patching, 227
+  - Plone, 72
+    - baseline, 105–106
+    - patching, 249–251
+  - third-parties, 103–107
+- admin, 81, 83
+  - brute-force attacks, 93
+- admin@domain.com, 282
+  - FTP logs, 271
+- administrator, 87, 89
+- Advanced Backup, 215
+- Advanced Encryption Standard (AES), 211
+- Advanced Research Projects Agency Network (ARPANET), 60
+- After Action Report (AAR), 187–188, 313–315
+- agents, 386
+- airbase-ng, 333
+- aircrack-ng, 333–334
+- airdecap-ng, 333
+- airdecloak-ng, 334
+- airdriver-ng, 334
+- airdrop-ng, 334
+- aireplay-ng, 334
+- airgraph-ng, 334
+- airmon-ng, 334
+- airodump-ng, 334
+- airserv-ng, 334
+- airtun-ng, 334
+- Akeeba Backup, 39, 198–206
+  - backups, 198–206
+  - cloud storage, 202–203
+  - HTTP, 202
+- Albitz, Paul, 63
+- Altium: Powered by Joomla, 9
+- ALLOW, 155–156
+- allow_url_fopen = Off, 146
+- AngryIP, 13
+- anonymous, 87
+- anonymous FTP, 151
+- AOL, 311
+- Apache, 12–13
+  - access logs, 262–263
+    - breach response, 293–295
+  - disabling/setting up services, 139–140
+  - ErrorLog, 269
+  - GUI, 136
+  - .htaccess, 76
+  - httpd, 135
+  - LAMP, 263
+  - log files, 263–269
+  - Nmap, 14
+  - root user, 133
+  - Secure Socket Layer (SSL), 136
+  - server activity status, 137
+  - server hardening, 135–140
+  - status codes, 267–269
+  - version control, 103, 227
+- approved scanning vendor (ASV), 55, 56
+  - testing, 58
+- aptitude, 129–130
+- Arbaugh, William A., 223
+- archive directory, 259
+- Archive_Tar, 211
+- ARPANET. See Advanced Research Projects Agency Network
+- The Art of War (Sun Tzu), 6–7
+- attacks. See breach response; hackers; specific attack types
+- atwtfi, 331
+- audit trail, 386
+- authenticated, 87–88
+- authoritarian play, 350
+- availability, 292, 386
+- awareness, 4–6
+  - information security policy, 4, 351–352
+- AWStats, 271–273
+
+### B
+
+- % b, log file format, 265
+- backdoor, 16
+  - development costs, 74
+  - Trojans, 110–111, 236, 262, 364–381
+- backdoor, 262, 364–381
+  - development costs, 74
+  - patching, 237–238
+- BackDoor-G, 147–148
+- Backdoor.Hacarmy.E, 111
+- Backdoor.IRC.Flood, 111
+- backups, 3, 386. See also Akeeba Backup
+  - budget, 36
+  - cloud computing, 34
+  - command line, 194–197
+  - databases, 194–195
+  - disaster recovery plan (DRP), 27, 188–190, 289
+  - Drupal, 210–217
+  - encryption, 27, 189, 211
+  - hosting, 39, 50–53
+  - Joomla!, 198–206
+  - log files, 262
+  - logging, 190
+  - patching, 222, 227
+  - permissions, Drupal, 88–89
+  - Plone, 207–210
+  - profiles, 200–202
+  - servers, 190–197
+  - shared hosting, 31, 44
+  - testing, 27
+  - web server hosting, 64
+  - WordPress, 206–207
+- Backup and Migrate module, Drupal, 210–217
+- backup user, 89
+- backupdb.sql, 194
+- BackupExec, 190
+- BackWeb Server, 147
+- bad bots, 379
+- bandwidth, 37
+- baseline, 97–118, 386
+  - add-ons, 102–103
+  - documentation, 100–102
+  - Drupal modules, 104–105
+  - hardware, 107–109
+  - hosting, 117–118
+  - inventory, 99
+  - Joomla! plug-ins, 104
+  - modules, 102–103
+  - network hardware, 108
+  - operating system, 102–103
+  - Plone add-ons, 105–106
+  - printers, 108–109
+  - remediating problems, 116–118
+  - server, 101
+  - uninterruptible power supply (UPS), 97
+  - version control, 103
+  - virus protection, 116
+  - vulnerability scanning, 109–116
+  - WordPress plug-ins, 106–107
+- Basic Input/Output System (BIOS), 100, 101, 107, 292
+- BCC, 309
+- BCP. See business continuity plan
+- Belkin54g, 330
+- Bennet, Bob, 59
+- Berkeley Internet Name Domain (BIND), 62
+  - patching, 227
+- black-box testing, 18
+- blackhat, 7
+- blended attack, 387
+- Blind Elephant, 9, 11
+- blocklist removal page, 310
+- Bluebugging, 337
+- Bluejacking, 337
+- Bluesnarfing, 337
+- BlueTie, 311
+- Bluetooth, 320, 335–338
+- boot logs, 159, 259
+- bots, 92
+  - bad, 379
+- bounce attack, 149–150
+- breach response, 43, 59, 287–339
+  - Apache access logs, 293–295
+  - crisis communication, 312–316
+  - databases, 300
+  - dedicated servers, 298–299
+  - desktop, 299
+  - e-mail, 297, 307–311
+  - employees, 299
+  - firewalls, 299
+  - FTP, 297, 306–307
+  - hardware logs, 292, 295–296
+  - ISP, 316–318
+  - log files, 258–259, 262, 291
+  - networks, 300
+  - operating system, 297, 299–304
+  - ports, 304
+  - RKHunter, 302–303
+  - server updates, 302
+  - patching, 238–239, 299
+  - physical access, 300
+  - prevention, 315
+  - printers, 300
+  - shared hosting, 298
+  - Telnet, 297, 306–307
+- Browne, Hilary K., 223
+- brute-force attacks, 294–295, 387
+  - admin, 93
+- BTPON, 330
+- BTOpenzone, 330
+- budgets
+  - backups, 36
+  - hosting, 34–36
+- buffer overflow, 13, 387
+  - FTP, 149
+  - patching, 226
+- “Building an Information Technology Security Awareness and Training Program” (Wilson and Hash), 6
+- Burp, 109
+- business continuity plan (BCP), 3, 25–27, 387
+  - hosting, 44–45
+- Bypass.txt, 237
+- bzip2, 90
+
+### C
+
+- c log format
+  - FTP logs, 271
+  - Telnet, 361
+- C++ extensions for GCC (G++), 90
+- C99 Shell, 7–8
+  - back door, 16
+- Cacti, 142
+- Car Whisperer, 337
+- Carper, Tom, 59
+- cars, 354
+- cat /etc/*-rel*, 103
+- CentOS. See Community Enterprise Operating System
+- certification authority (CA), 387
+- cgi.force_redirect = 0, 146
+- Chandler, Robert, 172
+- change policy, passwords, 21
+- changelog, 13
+- channels, 149
+- # chmod 0600 logfile, 160
+- chown root:root logfile, 160
+- .crt.net/passwords, 123
+- clear text, 148
+- client, 20
+  - SSH, 290–291
+- ClientAliveInterval, 156
+- closed ports, 147
+- cloud
+  - hosting, 33–34
+  - storage, 202–203
+- Cloud Computing: Implementation, Management, and Security (Rittinghouse and Ransome), 34
+- Cloud Security Alliance, 33
+- code-tampering, 237, 238
+- co-location facility (CoLo), 32, 40–42, 43, 101, 141, 177, 284
+- .com, 35
+- Comcast, 311
+- Command, 112
+- command channel, 149
+- command line
+  - backups, 194–197
+  - PuTTY, 291
+- comments, 281
+- Community, 141
+- Community Enterprise Operating System (CentOS), 103, 153, 306
+- Comprehensive Guide to Secure Cloud Computing (Krutz and Vines), 34
+- compress, 282
+- compressed, 282
+- compressext, 282
+- compression, 195–197
+- compromise, 2, 62, 263, 387
+- computer security incident, 387
+- confidentiality, 387
+- ConfigServer, 38, 45
+- ConfigServer Security Firewall, 148
+- configservers.com, 95
+- contingency plan, 43, 176–183, 387
+- contributed modules, 244
+- control panels, 58
+- cookies, 387
+- copy, 283
+- copytruncate, 283
+- countermeasures, 387
+  - wireless, 328–335
+- Cox, 311

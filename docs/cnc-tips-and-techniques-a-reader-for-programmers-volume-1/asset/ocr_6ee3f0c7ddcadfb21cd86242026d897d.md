@@ -1,0 +1,11 @@
+# A Reader for Programmers
+
+ties). When the tap reaches the hole bottom and the spindle stops, the deceleration of the spindle forces the tap to be slightly pulled out of the tool holder (using tension of the holder).
+
+Standard tapping is almost always programmed using one of two tapping cycles: G84 (right hand tapping) and G74 (left hand tapping). As you will find in the second part of this essay, many control systems support the same format for rigid tapping either as provided or slightly modified. The major difference is not much in the programming technique as it is in machine design and suitable tooling.
+
+# Why Underfeed?
+
+Most experienced CNC programmers have faced various tapping problems in their careers. The floating tap holder is an imperfect tool to say the least. It is a mechanical device and, as such, subject to some variables, including spindle fluctuations. If the tapping operation is not successful the first time (assuming the program is correct in principle), programmers often use a simple technique for a quick fix: tapping feedrate reduction. This reduction is called underfeeding because it is lower than the normal tapping federate, which is always r/min x pitch. Here are the reasons why this technique often works.
+
+Most spindles may fluctuate up to ±10 r/min, particularly at high speeds. Because the tapping feed is always a direct relationship between the spindle speed and the tap pitch, any spindle fluctuation throws this relationship out of balance. When the tap in a floating holder enters the hole, it is pushed a bit into the holder, before the tap has a chance to “bite” into the material. This is the compression part of tapping. When a tap reaches the Z-depth, the spindle stops, but not right away; it has to wind down first. In order not to break the tap, the floating holder allows the tap to be pulled slightly out of the holder by its own force, after the Z-axis motion stopped. This part is called tension. Compression means pushing; tension means pulling. Now back to the spindle fluctuation.
