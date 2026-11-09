@@ -768,6 +768,7 @@
 +   [组合地图：计算机图形学与图像处理的高效数据结构](docs/combinatorial-maps-efficient-data-structures-for-computer-gr/README.md)
 +   [Comdex .NET 4.0 编程课程套件：涵盖 .NET Framework 4.0、VB 2010、C# 2010 和 ASP.NET 4.0](docs/comdex-net-40-programming-course-kit-covering-net-framework-/README.md)
 +   [动画师喜剧指南](docs/comedy-for-animators/README.md)
++   [命令行功夫：Bash 脚本技巧、Linux Shell 编程提示与 Bash 单行命令](docs/command-line-kung-fu-bash-scripting-tricks-linux-shell-progr/README.md)
 +   [Autodesk Revit 2018 商业设计使用指南](docs/commercial-design-using-autodesk-revit-2018/README.md)
 +   [临床研究常用统计方法及 SAS 示例，第三版](docs/common-statistical-methods-for-clinical-research-with-sas-ex/README.md)
 +   [计算机小型数值方法：线性代数与函数极化](docs/compact-numerical-methods-for-computers-linear-algebra-and-f/README.md)
