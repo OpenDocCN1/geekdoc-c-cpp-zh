@@ -711,6 +711,7 @@
 +   [Mac OS X Cocoa 秘籍 (第2版)](docs/cocoa-recipes-for-mac-os-x-2nd-edition/README.md)
 +   [Mac OS X Cocoa 食谱：佛蒙特食谱](docs/cocoa-recipes-for-mac-os-x-the-vermont-recipes/README.md)
 +   [iPhone OS 3.0 Cocoa touch 入门指南](docs/cocoa-touch-for-iphone-os-30-none/README.md)
++   [密码破译者和数学家艾伦·图灵](docs/code-breaker-and-mathematician-alan-turing/README.md)
 +   [密码破解者与数学家艾伦·图灵（STEM 先驱者传）](docs/code-breaker-and-mathematician-alan-turing-stem-trailblazer-/README.md)
 +   [代码破解者：激发创意、重塑评估，并培养一批编程忍者！](docs/code-breaker-increase-creativity-remix-assessment-and-develo/README.md)
 +   [代码大全：软件构建的实践手册 第二版](docs/code-complete-a-practical-handbook-of-software-construction-/README.md)

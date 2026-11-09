@@ -1,0 +1,3 @@
+![](bbox=[0.238, 0.085, 0.782, 0.61])
+
+Alan was especially fascinated with plants. Alan's mother sketched a picture of him gazing at daisies while he was supposed to be playing field hockey with Hazelhurst classmates. Alan also enjoyed reading a book called *Natural Wonders Every Child Should Know* by Edwin Tenney Brewster. It was a well-known science book that covered the similarities and differences between living things.
