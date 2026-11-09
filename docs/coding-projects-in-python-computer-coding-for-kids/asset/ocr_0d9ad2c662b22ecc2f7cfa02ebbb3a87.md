@@ -1,0 +1,51 @@
+# # Hacks and tweaks
+
+Are your rainbows mutant enough? No? Here are some ideas you could try to make them even more bizarre!
+
+![](bbox=[0.58, 0.063, 0.938, 0.299])
+
+# ▽ Color surprise!
+
+In Python, colors can also be described by using RGB values—this stands for red, green, blue. Choosing values at random for the amounts of red, green, and blue in a color means the color itself will be completely random. Try replacing the code in the move_turtle() function with some new code that uses RGB values instead of color names. Now run the code to see what colors appear!
+
+```
+```python
+pen_colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+t.pencolor(random.choice(pen_colors))
+```
+```
+
+Replace these two lines with...
+
+```
+```python
+t.colormode(255)
+red = random.randint(0, 255)
+blue = random.randint(0, 255)
+green = random.randint(0, 255)
+t.pencolor(red, green, blue)
+```
+```
+
+# ▽ Mix up the lines
+
+Don't just stick to one width for the line—draw even more scrambled rainbows with this hack! The lines will change at random from really thin to superthick and all widths in between. Add this code to the move_turtle() function after you set t.pencolor.
+
+```
+```python
+t.pensize(random.randint(1,40))
+```
+```
+
+# EXPERT TIPS — RGB colors
+
+The turtle color “blue” is (0, 0, 255) in RGB values, because it’s made up of the maximum amount of blue, with no red or green. If you want to use RGB values for the turtle’s pen color, you need to let Python know by using the command t.colormode(255), or it will expect a string and give you an error.
+
+This number shows the amount of red in the color (between 0 and 255). The amount of green. The amount of blue.
+
+```
+```python
+t.pencolor(0, 0, 255)
+t.pencolor('blue')
+```
+```

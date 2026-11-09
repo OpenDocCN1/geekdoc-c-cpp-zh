@@ -1,0 +1,69 @@
+# # Setting up
+
+First you'll import the parts of Python that you need for this project. Then you'll set things up so that you're ready to write the main functions for the game.
+
+# ## 1. Create a file
+
+Open IDLE and create a new file. Save it as “egg_catcher.py”.
+
+![](bbox=[0.783, 0.121, 0.893, 0.17])
+
+# ## 2. Import the modules
+
+Egg Catcher uses three modules: itertools to cycle through some colors; random to make the eggs appear in random places; and tkinter to animate the game by creating shapes on the screen. Type these lines at the top of your file.
+
+```
+```python
+from itertools import cycle
+from random import randrange
+from tkinter import Canvas, Tk, messagebox, font
+```
+```
+
+The code only imports the parts of the modules that you need.
+
+# ## 3. Set up the canvas
+
+Add this code beneath the import statements. It creates variables for the height and width of the canvas, then uses them to create the canvas itself. To add a bit of scenery to your game, it draws a rectangle to represent some grass and an oval to represent the sun.
+
+```
+```python
+from tkinter import Canvas, Tk, messagebox, font
+
+canvas_width = 800
+canvas_height = 400
+
+root = Tk()
+
+c = Canvas(root, width=canvas_width, height=canvas_height, \
+background='deep sky blue')
+
+c.create_rectangle(-5, canvas_height - 100, canvas_width + 5, \
+canvas_height + 5, fill='sea green', width=0)
+c.create_oval(-80, -80, 120, 120, fill='orange', width=0)
+
+c.pack()
+```
+```
+
+Use a backslash character if you need to split a long line of code over two lines.
+
+The canvas will be sky blue and measure 800 x 400 pixels.
+
+This creates a window.
+
+This creates the grass.
+
+The pack() function tells the program to draw the main window and all of its contents.
+
+This line creates the sun.
+
+# ## 4. See your canvas
+
+Run the code to see how the canvas looks. You should see a scene with green grass, a blue sky, and a bright sun. If you feel confident, try to make your own scenery with shapes of different colors or sizes. You can always go back to the code above if you run into problems.
+
+![](bbox=[0.323, 0.652, 0.598, 0.811])
+
+![](bbox=[0.714, 0.678, 0.893, 0.801])
+
+![](bbox=[0.824, 0.837, 0.948, 0.893])

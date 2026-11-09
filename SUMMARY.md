@@ -753,6 +753,7 @@
 +   [Coding Interview Ninja：50 道带 Java 解决方案的编程题，面试实践指南](docs/coding-interview-ninja-50-coding-questions-with-java-solutio/README.md)
 +   [为儿童编写 iPhone 应用：Swift 入门指南](docs/coding-iphone-apps-for-kids-a-playful-introduction-to-swift/README.md)
 +   [编程素养：计算机编程如何改变写作（软件研究）](docs/coding-literacy-how-computer-programming-is-changing-writing/README.md)
++   [Python 编程项目（儿童计算机编程）](docs/coding-projects-in-python-computer-coding-for-kids/README.md)
 +   [编程（科技字节：高科技）](docs/coding-tech-bytes-high-tech/README.md)
 +   [Anna 与 Elsa 的编程之旅：冰雪奇缘 Blockly指南 (迪士尼冰雪奇缘)](docs/coding-with-anna-and-elsa-a-frozen-guide-to-blockly-disney-f/README.md)
 +   [Scratch 编程入门指南：学习基础、游戏与项目](docs/coding-with-scratch-made-easy-learn-the-basics-games-and-pro/README.md)
