@@ -759,6 +759,7 @@
 +   [Python 编程（预备，开始，编码！）](docs/coding-with-python-ready-set-code/README.md)
 +   [Scratch 编程入门指南：学习基础、游戏与项目](docs/coding-with-scratch-made-easy-learn-the-basics-games-and-pro/README.md)
 +   [Scratchjr 编程（21 世纪技能创新系列：创作者即创新者）](docs/coding-with-scratchjr-21st-century-skills-innovation-library/README.md)
++   [Sphero 编程（21 世纪技能创新图书馆：少年创客）](docs/coding-with-sphero-21st-century-skills-innovation-library-ma/README.md)
 +   [Cody 的常用 SAS 编程任务及解决方案集](docs/codys-collection-of-popular-sas-programming-tasks-and-how-to/README.md)
 +   [基于脑原理编程的决策认知架构](docs/cognitive-architecture-for-decision-making-based-on-brain-pr/README.md)
 +   [认知机器人](docs/cognitive-robotics/README.md)

@@ -1,0 +1,733 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Coding with
+
+    Sphero
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_0_0.png)
+
+
+    By Adrienne Matteson'
+  - '[PAGE 1]
+
+
+    Digitized by the Internet Archive
+
+    in 2022 with funding from
+
+    Kahle/Austin Foundation'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # Coding with
+
+    Sphero
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_4_0.png)
+
+
+    By Adrienne Matteson
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_4_1.png)'
+  - '[PAGE 5]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_5_0.png)
+
+
+    Published in the United States of America by
+
+    Cherry Lake Publishing
+
+    Ann Arbor, Michigan
+
+    www.cherrylakepublishing.com
+
+
+    Series Editor: Kristin Fontichiaro
+
+    Photo Credits: All images by Adrienne Matteson
+
+
+    Copyright ©2018 by Cherry Lake Publishing
+
+    The text of this book is licensed under the Creative Commons
+
+    Attribution-NonCommercial-ShareAlike 3.0 Unported license.
+
+    To view a copy of this license, go to http://creativecommons.org
+
+    /licenses/by-nc-sa/3.0.
+
+
+    Library of Congress Cataloging-in-Publication Data
+
+    Names: Matteson, Adrienne, author.
+
+    Title: Coding with Sphero / by Adrienne Matteson.
+
+    Description: Ann Arbor, Michigan : Cherry Lake Publishing, [2017] | Series:
+
+    21st Century Skills Innovation Library. Makers as innovators junior |
+
+    Audience: K to grade 3. | Includes bibliographical references and index.
+
+    Identifiers: LCCN 2016055218 | ISBN 9781634726955 (lib. bdg.) | ISBN
+
+    9781634727280 (pbk.) | ISBN 9781634727945 (ebook) | ISBN 9781634727969
+
+    Subjects: LCSH: Robotics--Programming--Juvenile literature. | Computer
+
+    programming--Juvenile literature.
+
+    Classification: LCC TJ211.2 .M37435 2017 | DDC 629.8/932--dc23 LC record available
+
+    at https://lccn.loc.gov/2016055218
+
+
+    Cherry Lake Publishing would like to acknowledge the work of the Partnership for
+
+    21st Century Learning. Please visit www.p21.org for more information.
+
+
+    Printed in the United States of America
+
+    Corporate Graphics
+
+
+    A Note to Adults: Please review
+
+    the instructions for the
+
+    activities in this book before
+
+    allowing children to do them. Be
+
+    sure to help them with any
+
+    activities you do not think they
+
+    can safely complete on their own.
+
+
+    A Note to Kids: Be sure to
+
+    ask an adult for help with these
+
+    activities when you need it.
+
+    Always put your safety first!'
+  - '[PAGE 6]
+
+
+    # Table of Contents
+
+
+    +   - Meet Sphero ........................................ 5
+
+    +   - How Sphero Works .................................. 7
+
+    +   - Getting Started .................................... 9
+
+    +   - Go, Sphero, Go! .................................. 11
+
+    +   - Made for Play ..................................... 13
+
+    +   - A Sensitive Robot ................................. 15
+
+    +   - MacroLab .......................................... 17
+
+    +   - Lightning Lab ..................................... 19
+
+    +   - Give It a Try! .................................... 21
+
+    +   - Glossary .......................................... 22
+
+    +   - Find Out More ..................................... 23
+
+    +   - Index ............................................. 24
+
+    +   - About the Author .................................. 24'
+  - '[PAGE 7]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_7_0.png)
+
+
+    Sphero SPRK+ can be programmed using the Lightning Lab application.'
+  - '[PAGE 8]
+
+
+    # Meet Sphero
+
+
+    Have you ever wanted to own a robot of your very own? Meet Sphero! Sphero is a
+    robotic ball that can be controlled using a tablet or smartphone. Sphero started
+    out as a toy. Now, it is used to teach kids how to write computer programs.'
+  - '[PAGE 9]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_9_0.png)
+
+
+    Look at Sphero up close! Use the Robot Reveal screen in the Lightning Lab app
+    to find out what each part is.'
+  - '[PAGE 10]
+
+
+    # How Sphero Works
+
+
+    The outside of Sphero is a hard shell made of very strong plastic. On the inside
+    is a robot that stays upright as the plastic ball around it rolls. It does this
+    using two motors and a **gyroscope**. Also inside the ball are **LED** lights
+    that can change colors.'
+  - '[PAGE 11]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_11_0.png)
+
+
+    Tap a Robot to Connect!
+
+
+    SPRK+ Connecting...
+
+
+    Sphero connects to your device with Bluetooth. You will know when SPRK+ is connected!'
+  - '[PAGE 12]
+
+
+    # # Getting Started
+
+
+    You need a tablet or smartphone to use Sphero. Get started by **pairing** the
+    Sphero with your device. Tap the Sphero to turn it on. Then open the Sphero Go
+    or Lightning Lab app on your device. The app will search for nearby robots. Select
+    your Sphero when it shows up on the screen.
+
+
+    # ## Other Sphero Robots
+
+
+    **Ollie:** This Sphero is made for racing. Ollie goes 14 miles (22.5 kilometers)
+    per hour!
+
+
+    **BB-8:** This Sphero looks and moves like the droid from *Star Wars: The Force
+    Awakens*.'
+  - '[PAGE 13]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_13_0.png)
+
+
+    When Sphero’s bright blue taillight is facing you, it is ready to roll.'
+  - '[PAGE 14]
+
+
+    # Go, Sphero, Go!
+
+
+    Before you can drive your Sphero, you need to adjust its taillight. The taillight
+    is a small blue light on Sphero. It shows where the back side of the robot is.
+    When the light is pointed at you, Sphero is ready to drive.
+
+
+    Use your device screen to control Sphero. Push UP to go forward and DOWN to go
+    backward.'
+  - '[PAGE 15]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_15_0.png)
+
+
+    In the Draw N'' Drive app, you draw the picture, and Sphero will drive it. Try
+    changing colors or writing your name!'
+  - '[PAGE 16]
+
+
+    # # Made for Play
+
+
+    There are a lot of ways you can play with Sphero. Hold it in your hand like a
+    controller for video games such as *Exile*. Drive it into a cup to play Sphero
+    golf. You can even use the Draw N’ Drive app to draw a path on your device screen
+    for Sphero to follow.'
+  - '[PAGE 17]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_17_0.png)
+
+
+    Sphero can sense when it runs into another object, and even when it is falling.'
+  - '[PAGE 18]
+
+
+    # # A Sensitive Robot
+
+
+    A Sphero robot uses **sensors** to keep track of the way it moves. It can tell
+    how fast it is going and in which direction it is moving. It knows if it hits
+    another object or if it is falling through the air. You can use Sphero’s sensors
+    to program it to react in different ways.
+
+
+    # ## Sphero’s Inventors
+
+
+    Inventors Ian Bernstein and Adam Wilson have always loved making robots. They
+    teamed up in 2010 to create Sphero. They built the robot because they wanted to
+    create something fun to control with their smartphones.'
+  - '[PAGE 19]
+
+
+    # Figure 8
+
+
+    ```
+
+    ```
+
+    Tone of 500 Hz for 0.5 s
+
+    RGB 1, 0, 0, 0
+
+    Back LED 1, 0, 0
+
+    Stabilization 0.5 s
+
+    Delay 2.0 s
+
+    Tone of 500 Hz for 0.5 s
+
+    Back LED 0, 0, 0
+
+    Back LED 0, 0, 0
+
+    Back LED 0, 0, 0
+
+    Back LED 0, 0, 0
+
+    Back LED 0, 0, 0
+
+    Back LED 0, 0, 0
+
+    Tone of 500 Hz for 0.5 s
+
+    Set Orientation 0°
+
+    Stabilization 0.5 s
+
+    Delay 2.0 s
+
+    Tone of 500 Hz for 0.5 s
+
+    Roll 0.5 s
+
+    Delay 0.5 s
+
+    RGB 1, 0, 0, 0
+
+    Tone of 500 Hz for 0.5 s
+
+    ```
+
+    ```
+
+
+    You can write programs in the MacroLab. This macro, or program, makes Sphero drive
+    in a figure eight.'
+  - '[PAGE 20]
+
+
+    # MacroLab
+
+
+    If you are ready for a challenge, try creating a macro in the MacroLab app. A
+    macro is a simple computer program that tells Sphero what to do. MacroLab uses
+    symbols to represent instructions for Sphero. For example, an arrow tells Sphero
+    to roll. A stop sign tells it to stop.'
+  - '[PAGE 21]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_21_0.png)
+
+
+    The SPRK Lightning Lab is where you can write programs for Sphero. This is a program
+    for making Sphero spin!'
+  - '[PAGE 22]
+
+
+    # Lightning Lab
+
+
+    Another way to write a program for Sphero is to use the Lightning Lab app. Lightning
+    Lab lets you snap colorful blocks together to create programs. Blocks of different
+    colors have different jobs. Blue-green “action” blocks make changes to Sphero’s
+    movements or lights. Purple “control” blocks tell Sphero when to perform an action.'
+  - '[PAGE 23]
+
+
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_23_0.png)
+
+
+    With the right tools, there''s no limit to the fun you will have!'
+  - '[PAGE 24]
+
+
+    # Give It a Try!
+
+
+    Time to give it a try! The best way to start programming is to borrow a program
+    that is already made. MacroLab and Lightning Lab both come with sample programs
+    for you to try. Choose one, then try making small changes to see what happens.
+    Every **maker** must be ready to tinker!
+
+
+    # Sphero for Makers
+
+
+    Sphero makes a great engine for inventions that can move or spin. Try making Sphero
+    power a car, Sphero can swim, too. Sphero can even paint. There is no limit to
+    what you can do with a creative program.'
+  md: "\n## Coding with Sphero\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_0_0.png)\n\
+    \nBy Adrienne Matteson\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_4_0.png)\n\n\
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_4_1.png)\n\nDigitized by the Internet\
+    \ Archive in 2022 with funding from Kahle/Austin Foundation\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_5_0.png)\n\
+    \nPublished in the United States of America by  \nCherry Lake Publishing  \nAnn\
+    \ Arbor, Michigan  \nwww.cherrylakepublishing.com\n\nSeries Editor: Kristin Fontichiaro\
+    \  \nPhoto Credits: All images by Adrienne Matteson\n\nCopyright ©2018 by Cherry\
+    \ Lake Publishing. The text of this book is licensed under the Creative Commons\
+    \ Attribution-NonCommercial-ShareAlike 3.0 Unported license. To view a copy of\
+    \ this license, go to http://creativecommons.org/licenses/by-nc-sa/3.0.\n\nLibrary\
+    \ of Congress Cataloging-in-Publication Data  \nNames: Matteson, Adrienne, author.\
+    \  \nTitle: Coding with Sphero / by Adrienne Matteson.  \nDescription: Ann Arbor,\
+    \ Michigan : Cherry Lake Publishing, [2017] | Series: 21st Century Skills Innovation\
+    \ Library. Makers as innovators junior | Audience: K to grade 3. | Includes bibliographical\
+    \ references and index.  \nIdentifiers: LCCN 2016055218 | ISBN 9781634726955 (lib.\
+    \ bdg.) | ISBN 9781634727280 (pbk.) | ISBN 9781634727945 (ebook) | ISBN 9781634727969\
+    \  \nSubjects: LCSH: Robotics--Programming--Juvenile literature. | Computer programming--Juvenile\
+    \ literature.  \nClassification: LCC TJ211.2 .M37435 2017 | DDC 629.8/932--dc23\
+    \ LC record available at https://lccn.loc.gov/2016055218\n\nCherry Lake Publishing\
+    \ would like to acknowledge the work of the Partnership for 21st Century Learning.\
+    \ Please visit www.p21.org for more information.\n\nPrinted in the United States\
+    \ of America  \nCorporate Graphics\n\n**A Note to Adults:** Please review the\
+    \ instructions for the activities in this book before allowing children to do\
+    \ them. Be sure to help them with any activities you do not think they can safely\
+    \ complete on their own.\n\n**A Note to Kids:** Be sure to ask an adult for help\
+    \ with these activities when you need it. Always put your safety first!\n\n##\
+    \ Table of Contents\n\n| Section | Page |\n| --- | --- |\n| Meet Sphero | 5 |\n\
+    | How Sphero Works | 7 |\n| Getting Started | 9 |\n| Go, Sphero, Go! | 11 |\n\
+    | Made for Play | 13 |\n| A Sensitive Robot | 15 |\n| MacroLab | 17 |\n| Lightning\
+    \ Lab | 19 |\n| Give It a Try! | 21 |\n| Glossary | 22 |\n| Find Out More | 23\
+    \ |\n| Index | 24 |\n| About the Author | 24 |\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_7_0.png)\n\
+    \nSphero SPRK+ can be programmed using the Lightning Lab application.\n\n## Meet\
+    \ Sphero\n\nHave you ever wanted to own a robot of your very own? Meet Sphero!\
+    \ Sphero is a robotic ball that can be controlled using a tablet or smartphone.\
+    \ Sphero started out as a toy. Now, it is used to teach kids how to write computer\
+    \ programs.\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_9_0.png)\n\nLook at Sphero\
+    \ up close! Use the Robot Reveal screen in the Lightning Lab app to find out what\
+    \ each part is.\n\n## How Sphero Works\n\nThe outside of Sphero is a hard shell\
+    \ made of very strong plastic. On the inside is a robot that stays upright as\
+    \ the plastic ball around it rolls. It does this using two motors and a **gyroscope**.\
+    \ Also inside the ball are **LED** lights that can change colors.\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_11_0.png)\n\
+    \nTap a Robot to Connect!\n\nSPRK+ Connecting...\n\nSphero connects to your device\
+    \ with Bluetooth. You will know when SPRK+ is connected!\n\n## Getting Started\n\
+    \nYou need a tablet or smartphone to use Sphero. Get started by **pairing** the\
+    \ Sphero with your device. Tap the Sphero to turn it on. Then open the Sphero\
+    \ Go or Lightning Lab app on your device. The app will search for nearby robots.\
+    \ Select your Sphero when it shows up on the screen.\n\n### Other Sphero Robots\n\
+    \n- **Ollie:** This Sphero is made for racing. Ollie goes 14 miles (22.5 kilometers)\
+    \ per hour!\n- **BB-8:** This Sphero looks and moves like the droid from *Star\
+    \ Wars: The Force Awakens*.\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_13_0.png)\n\
+    \nWhen Sphero’s bright blue taillight is facing you, it is ready to roll.\n\n\
+    ## Go, Sphero, Go!\n\nBefore you can drive your Sphero, you need to adjust its\
+    \ taillight. The taillight is a small blue light on Sphero. It shows where the\
+    \ back side of the robot is. When the light is pointed at you, Sphero is ready\
+    \ to drive.\n\nUse your device screen to control Sphero. Push UP to go forward\
+    \ and DOWN to go backward.\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_15_0.png)\n\
+    \nIn the Draw N’ Drive app, you draw the picture, and Sphero will drive it. Try\
+    \ changing colors or writing your name!\n\n## Made for Play\n\nThere are a lot\
+    \ of ways you can play with Sphero. Hold it in your hand like a controller for\
+    \ video games such as *Exile*. Drive it into a cup to play Sphero golf. You can\
+    \ even use the Draw N’ Drive app to draw a path on your device screen for Sphero\
+    \ to follow.\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_17_0.png)\n\nSphero can\
+    \ sense when it runs into another object, and even when it is falling.\n\n## A\
+    \ Sensitive Robot\n\nA Sphero robot uses **sensors** to keep track of the way\
+    \ it moves. It can tell how fast it is going and in which direction it is moving.\
+    \ It knows if it hits another object or if it is falling through the air. You\
+    \ can use Sphero’s sensors to program it to react in different ways.\n\n### Sphero’s\
+    \ Inventors\n\nInventors Ian Bernstein and Adam Wilson have always loved making\
+    \ robots. They teamed up in 2010 to create Sphero. They built the robot because\
+    \ they wanted to create something fun to control with their smartphones.\n\n**Figure\
+    \ 8**\n\n```text\nTone of 500 Hz for 0.5 s\nRGB 1, 0, 0, 0\nBack LED 1, 0, 0\n\
+    Stabilization 0.5 s\nDelay 2.0 s\nTone of 500 Hz for 0.5 s\nBack LED 0, 0, 0\n\
+    Tone of 500 Hz for 0.5 s\nSet Orientation 0°\nStabilization 0.5 s\nDelay 2.0 s\n\
+    Tone of 500 Hz for 0.5 s\nRoll 0.5 s\nDelay 0.5 s\nRGB 1, 0, 0, 0\nTone of 500\
+    \ Hz for 0.5 s\n```\n\nYou can write programs in the MacroLab. This macro, or\
+    \ program, makes Sphero drive in a figure eight.\n\n## MacroLab\n\nIf you are\
+    \ ready for a challenge, try creating a macro in the MacroLab app. A macro is\
+    \ a simple computer program that tells Sphero what to do. MacroLab uses symbols\
+    \ to represent instructions for Sphero. For example, an arrow tells Sphero to\
+    \ roll. A stop sign tells it to stop.\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_21_0.png)\n\
+    \nThe SPRK Lightning Lab is where you can write programs for Sphero. This is a\
+    \ program for making Sphero spin!\n\n## Lightning Lab\n\nAnother way to write\
+    \ a program for Sphero is to use the Lightning Lab app. Lightning Lab lets you\
+    \ snap colorful blocks together to create programs. Blocks of different colors\
+    \ have different jobs. Blue-green “action” blocks make changes to Sphero’s movements\
+    \ or lights. Purple “control” blocks tell Sphero when to perform an action.\n\n\
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_23_0.png)\n\nWith the right tools, there's\
+    \ no limit to the fun you will have!\n\n## Give It a Try!\n\nTime to give it a\
+    \ try! The best way to start programming is to borrow a program that is already\
+    \ made. MacroLab and Lightning Lab both come with sample programs for you to try.\
+    \ Choose one, then try making small changes to see what happens. Every **maker**\
+    \ must be ready to tinker!\n\n### Sphero for Makers\n\nSphero makes a great engine\
+    \ for inventions that can move or spin. Try making Sphero power a car. Sphero\
+    \ can swim, too. Sphero can even paint. There is no limit to what you can do with\
+    \ a creative program.\n"
+  mdcn: "\n## 用 Sphero 编程\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_0_0.png)\n\n\
+    作者：Adrienne Matteson\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_4_0.png)\n\n\
+    ![](img/3b0b30eeb4afa76d16dd7e7c96584469_4_1.png)\n\n由 Internet Archive 于 2022\
+    \ 年数字化，资金来自 Kahle/Austin Foundation\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_5_0.png)\n\
+    \n由 Cherry Lake Publishing 在美国出版  \n密歇根州安娜堡  \nwww.cherrylakepublishing.com\n\n\
+    系列编辑：Kristin Fontichiaro  \n图片来源：所有图片均由 Adrienne Matteson 提供\n\n版权所有 ©2018 Cherry\
+    \ Lake Publishing。本书文本根据 Creative Commons Attribution-NonCommercial-ShareAlike\
+    \ 3.0 Unported 许可协议授权。要查看该许可协议的副本，请访问 http://creativecommons.org/licenses/by-nc-sa/3.0。\n\
+    \n美国国会图书馆出版编目数据  \n姓名：Matteson, Adrienne，作者。  \n书名：用 Sphero 编程 / 作者：Adrienne Matteson。\
+    \  \n描述：密歇根州安娜堡：Cherry Lake Publishing，[2017] | 系列：21st Century Skills Innovation\
+    \ Library. Makers as innovators junior | 读者对象：幼儿园至三年级。| 包含参考书目和索引。  \n标识符：LCCN\
+    \ 2016055218 | ISBN 9781634726955（图书馆装订） | ISBN 9781634727280（平装） | ISBN 9781634727945（电子书）\
+    \ | ISBN 9781634727969  \n主题：LCSH：机器人技术——编程——青少年读物。| 计算机编程——青少年读物。  \n分类：LCC TJ211.2\
+    \ .M37435 2017 | DDC 629.8/932--dc23 LC 记录可访问 https://lccn.loc.gov/2016055218\n\
+    \nCherry Lake Publishing 谨此感谢 21 世纪学习联盟的工作。请访问 www.p21.org 了解更多信息。\n\n在美国印刷  \n\
+    Corporate Graphics\n\n**给成年人的提示：** 在允许孩子进行本书中的活动之前，请先审阅这些活动的说明。对于你认为孩子无法安全独立完成的任何活动，请务必帮助他们。\n\
+    \n**给孩子们的提示：** 进行这些活动时，如果需要帮助，一定要向成年人求助。始终把安全放在第一位！\n\n## 目录\n\n| 章节 | 页码 |\n\
+    | --- | --- |\n| 认识 Sphero | 5 |\n| Sphero 的工作原理 | 7 |\n| 开始使用 | 9 |\n| 出发吧，Sphero，出发！\
+    \ | 11 |\n| 为玩乐而生 | 13 |\n| 敏感的机器人 | 15 |\n| MacroLab | 17 |\n| Lightning Lab\
+    \ | 19 |\n| 试一试！ | 21 |\n| 词汇表 | 22 |\n| 了解更多 | 23 |\n| 索引 | 24 |\n| 关于作者 | 24\
+    \ |\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_7_0.png)\n\nSphero SPRK+ 可以使用\
+    \ Lightning Lab 应用程序进行编程。\n\n## 认识 Sphero\n\n你是否曾想过拥有一个属于自己的机器人？来认识 Sphero 吧！Sphero\
+    \ 是一个可以通过平板电脑或智能手机控制的机器人球。Sphero 最初是一个玩具。现在，它被用来教孩子们如何编写计算机程序。\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_9_0.png)\n\
+    \n近距离观察 Sphero！使用 Lightning Lab 应用中的“机器人揭秘”屏幕，了解每个部件是什么。\n\n## Sphero 的工作原理\n\n\
+    Sphero 的外壳是由非常坚固的塑料制成的硬壳。内部是一个机器人，当周围的塑料球滚动时，它能保持直立。它通过两个电机和一个**陀螺仪**来实现这一点。球体内部还有可以变色的\
+    \ **LED** 灯。\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_11_0.png)\n\n点击机器人以连接！\n\
+    \nSPRK+ 正在连接……\n\nSphero 通过蓝牙连接到你的设备。当 SPRK+ 连接成功时，你就会知道！\n\n## 开始使用\n\n你需要一台平板电脑或智能手机来使用\
+    \ Sphero。首先通过将 Sphero 与你的设备**配对**来开始。点击 Sphero 将其开启。然后打开你设备上的 Sphero Go 或 Lightning\
+    \ Lab 应用。该应用会搜索附近的机器人。当你的 Sphero 出现在屏幕上时，选择它。\n\n### 其他 Sphero 机器人\n\n- **Ollie：**\
+    \ 这款 Sphero 专为竞速而设计。Ollie 的时速可达 14 英里（22.5 公里）！\n- **BB-8：** 这款 Sphero 的外形和移动方式都像\
+    \ *星球大战：原力觉醒* 中的机器人。\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_13_0.png)\n\n\
+    当 Sphero 明亮的蓝色尾灯面向你时，它就准备好滚动了。\n\n## 出发吧，Sphero，出发！\n\n在驾驶 Sphero 之前，你需要调整它的尾灯。尾灯是\
+    \ Sphero 上的一个小蓝灯。它显示机器人背面所在的位置。当灯光指向你时，Sphero 就准备好行驶了。\n\n使用设备屏幕控制 Sphero。向上推以前进，向下推以后退。\n\
+    \n![](img/3b0b30eeb4afa76d16dd7e7c96584469_15_0.png)\n\n在 Draw N’ Drive 应用中，你画出图案，Sphero\
+    \ 就会沿着它行驶。试着改变颜色或写下你的名字！\n\n## 为玩乐而生\n\n有很多方式可以玩 Sphero。像握持 *Exile* 等电子游戏的控制器一样把它握在手中。把它驶入杯子来玩\
+    \ Sphero 高尔夫。你甚至可以使用 Draw N’ Drive 应用在设备屏幕上画出一条路径，让 Sphero 沿着它行驶。\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_17_0.png)\n\
+    \nSphero 能感知到自己何时撞到另一个物体，甚至能感知到自己何时正在下落。\n\n## 敏感的机器人\n\nSphero 机器人使用**传感器**来追踪自己的运动方式。它能知道自己移动得多快以及朝哪个方向移动。它能知道自己是否撞到另一个物体，或者是否正在空中下落。你可以利用\
+    \ Sphero 的传感器为它编程，让它以不同方式做出反应。\n\n### Sphero 的发明者\n\n发明者 Ian Bernstein 和 Adam\
+    \ Wilson 一直热爱制造机器人。他们在 2010 年合作创造了 Sphero。他们制造这个机器人，是因为想创造出一种能用智能手机控制的、有趣的东西。\n\
+    \n**图 8**\n\n```text\nTone of 500 Hz for 0.5 s\nRGB 1, 0, 0, 0\nBack LED 1, 0,\
+    \ 0\nStabilization 0.5 s\nDelay 2.0 s\nTone of 500 Hz for 0.5 s\nBack LED 0, 0,\
+    \ 0\nTone of 500 Hz for 0.5 s\nSet Orientation 0°\nStabilization 0.5 s\nDelay\
+    \ 2.0 s\nTone of 500 Hz for 0.5 s\nRoll 0.5 s\nDelay 0.5 s\nRGB 1, 0, 0, 0\nTone\
+    \ of 500 Hz for 0.5 s\n```\n\n你可以在 MacroLab 中编写程序。这个宏（即程序）能让 Sphero 按 8 字形行驶。\n\
+    \n## MacroLab\n\n如果你准备好接受挑战，试着在 MacroLab 应用中创建一个宏。宏是一种简单的计算机程序，用来告诉 Sphero 该做什么。MacroLab\
+    \ 使用符号来表示给 Sphero 的指令。例如，箭头告诉 Sphero 滚动。停止标志告诉它停下。\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_21_0.png)\n\
+    \nSPRK Lightning Lab 是你为 Sphero 编写程序的地方。这是一个让 Sphero 旋转的程序！\n\n## Lightning Lab\n\
+    \n为 Sphero 编写程序的另一种方法是使用 Lightning Lab 应用。Lightning Lab 让你把彩色积木块拼接在一起以创建程序。不同颜色的积木块有不同的功能。蓝绿色的“动作”积木块会改变\
+    \ Sphero 的运动或灯光。紫色的“控制”积木块告诉 Sphero 何时执行某个动作。\n\n![](img/3b0b30eeb4afa76d16dd7e7c96584469_23_0.png)\n\
+    \n有了合适的工具，你将获得无穷无尽的乐趣！\n\n## 试一试！\n\n该试一试了！开始编程的最佳方式是借用已经制作好的程序。MacroLab 和 Lightning\
+    \ Lab 都附带示例程序供你尝试。选择一个，然后试着做一些小改动，看看会发生什么。每个**创客**都必须准备好动手捣鼓！\n\n### 面向创客的 Sphero\n\
+    \nSphero 是能为可移动或旋转的发明提供动力的绝佳引擎。试着让 Sphero 驱动一辆汽车。Sphero 还能游泳。Sphero 甚至能画画。有了富有创意的程序，你能做的事情没有极限。\n"
+  merge: -1
+- raw:
+  - '[PAGE 25]
+
+
+    # Glossary
+
+
+    **gyroscope** (JYE-ruh-skope) a device inside of Sphero and other objects that
+    measures movement and direction
+
+
+    **LED** (EL EE DEE) a small light that uses very little energy and gives off very
+    little heat; LED stands for “light-emitting diode”
+
+
+    **maker** (MAY-kur) a creative person who makes everything from artwork and useful
+    objects to robots and computer programs
+
+
+    **pairing** (PARE-ing) connecting two devices using a wireless communication method
+    such as Bluetooth
+
+
+    **sensors** (SEN-surz) instruments that can detect and measure changes and transmit
+    the information to a controlling device'
+  - '[PAGE 26]
+
+
+    # # Find Out More
+
+
+    # ## Books
+
+
+    Lovett, Amber. *Coding with Blockly*. Ann Arbor, MI: Cherry Lake Publishing, 2017.
+
+
+    Lovett, Amber. *Controlling an Ozobot*. Ann Arbor, MI: Cherry Lake Publishing,
+    2017.
+
+
+    Matteson, Adrienne. *Coding with ScratchJr*. Ann Arbor, MI: Cherry Lake Publishing,
+    2017.
+
+
+    # ## Web Sites
+
+
+    **Lightning Lab**
+
+
+    *http://edu.sphero.com*
+
+
+    Check out some Sphero project ideas and download sample programs.
+
+
+    **Sphero**
+
+
+    *www.sphero.com*
+
+
+    Check out the different Sphero models and watch videos of these robots in action.'
+  - '[PAGE 27]
+
+
+    # Index
+
+
+    +   - "action" blocks, 19
+
+    +   - "control" blocks, 19
+
+    +   - controls, 5, 11, 15, 19
+
+    +   - directions, 15
+
+    +   - Draw N'' Drive app, 13
+
+    +   - engines, 21
+
+    +   - *Exile* game, 13
+
+    +   - games, 13
+
+    +   - gyroscope, 7
+
+    +   - LED lights, 7, 11
+
+    +   - Lightning Lab app, 9, 19, 21
+
+
+    +   - MacroLab app, 17, 21
+
+    +   - motors, 7
+
+    +   - Ollie, 9
+
+    +   - pairing, 9
+
+    +   - plastic, 7
+
+    +   - programming, 15, 17, 19, 21
+
+    +   - sensors, 15
+
+    +   - smartphones, 5, 9, 11, 15
+
+    +   - speeds, 9, 15
+
+    +   - Sphero Go app, 9
+
+    +   - tablets, 5, 9, 11
+
+    +   - taillight, 11
+
+
+    # About the Author
+
+
+    Adrienne Matteson is a school librarian. She spends most of her days playing with
+    robots and helping her students write programs about unicorns.'
+  - '[PAGE 28]
+
+
+    <!-- no content -->'
+  - '[PAGE 29]
+
+
+    <!-- no content -->'
+  - '[PAGE 30]
+
+
+    <!-- no content -->'
+  - '[PAGE 31]
+
+
+    <!-- no content -->'
+  md: "\n## Glossary\n\n- **gyroscope** (JYE-ruh-skope) a device inside of Sphero\
+    \ and other objects that measures movement and direction\n- **LED** (EL EE DEE)\
+    \ a small light that uses very little energy and gives off very little heat; LED\
+    \ stands for “light-emitting diode”\n- **maker** (MAY-kur) a creative person who\
+    \ makes everything from artwork and useful objects to robots and computer programs\n\
+    - **pairing** (PAIR-ing) connecting two devices using a wireless communication\
+    \ method such as Bluetooth\n- **sensors** (SEN-surz) instruments that can detect\
+    \ and measure changes and transmit the information to a controlling device\n\n\
+    ## Find Out More\n\n### Books\n\n- Lovett, Amber. *Coding with Blockly*. Ann Arbor,\
+    \ MI: Cherry Lake Publishing, 2017.\n- Lovett, Amber. *Controlling an Ozobot*.\
+    \ Ann Arbor, MI: Cherry Lake Publishing, 2017.\n- Matteson, Adrienne. *Coding\
+    \ with ScratchJr*. Ann Arbor, MI: Cherry Lake Publishing, 2017.\n\n### Web Sites\n\
+    \n- **Lightning Lab**  \n  *http://edu.sphero.com*  \n  Check out some Sphero\
+    \ project ideas and download sample programs.\n- **Sphero**  \n  *www.sphero.com*\
+    \  \n  Check out the different Sphero models and watch videos of these robots\
+    \ in action.\n\n## Index\n\n- “action” blocks, 19\n- “control” blocks, 19\n- controls,\
+    \ 5, 11, 15, 19\n- directions, 15\n- Draw N' Drive app, 13\n- engines, 21\n- *Exile*\
+    \ game, 13\n- games, 13\n- gyroscope, 7\n- LED lights, 7, 11\n- Lightning Lab\
+    \ app, 9, 19, 21\n- MacroLab app, 17, 21\n- motors, 7\n- Ollie, 9\n- pairing,\
+    \ 9\n- plastic, 7\n- programming, 15, 17, 19, 21\n- sensors, 15\n- smartphones,\
+    \ 5, 9, 11, 15\n- speeds, 9, 15\n- Sphero Go app, 9\n- tablets, 5, 9, 11\n- taillight,\
+    \ 11\n\n## About the Author\n\nAdrienne Matteson is a school librarian. She spends\
+    \ most of her days playing with robots and helping her students write programs\
+    \ about unicorns.\n"
+  mdcn: "\n## 术语表\n\n-   **陀螺仪**（JYE-ruh-skope）一种位于 Sphero 及其他物体内部、用于测量运动和方向的装置\n\
+    -   **LED**（EL EE DEE）一种能耗极低、发热很少的小型灯；LED 是“light-emitting diode”（发光二极管）的缩写\n\
+    -   **创客**（MAY-kur）一个有创造力的人，能制作从艺术品、实用物品到机器人和计算机程序等各种东西\n-   **配对**（PAIR-ing）使用蓝牙等无线通信方式连接两台设备\n\
+    -   **传感器**（SEN-surz）能够检测和测量变化，并将信息传输到控制设备的仪器\n\n## 了解更多\n\n### 图书\n\n-   Lovett,\
+    \ Amber. *用 Blockly 编程*。Ann Arbor, MI: Cherry Lake Publishing, 2017.\n-   Lovett,\
+    \ Amber. *控制 Ozobot*。Ann Arbor, MI: Cherry Lake Publishing, 2017.\n-   Matteson,\
+    \ Adrienne. *用 ScratchJr 编程*。Ann Arbor, MI: Cherry Lake Publishing, 2017.\n\n\
+    ### 网站\n\n-   **闪电实验室**  \n    *http://edu.sphero.com*  \n    查看一些 Sphero 项目创意并下载示例程序。\n\
+    -   **Sphero**  \n    *www.sphero.com*  \n    查看不同的 Sphero 型号，并观看这些机器人实际运行的视频。\n\
+    \n## 索引\n\n-   “动作”积木，19\n-   “控制”积木，19\n-   控制项，5、11、15、19\n-   方向，15\n-   Draw\
+    \ N' Drive 应用，13\n-   引擎，21\n-   *Exile* 游戏，13\n-   游戏，13\n-   陀螺仪，7\n-   LED\
+    \ 灯，7、11\n-   Lightning Lab 应用，9、19、21\n-   MacroLab 应用，17、21\n-   马达，7\n-   Ollie，9\n\
+    -   配对，9\n-   塑料，7\n-   编程，15、17、19、21\n-   传感器，15\n-   智能手机，5、9、11、15\n-   速度，9、15\n\
+    -   Sphero Go 应用，9\n-   平板电脑，5、9、11\n-   尾灯，11\n\n## 关于作者\n\nAdrienne Matteson\
+    \ 是一名学校图书馆员。她大部分时间都在玩机器人，并帮助她的学生编写关于独角兽的程序。\n"
+  merge: 0
