@@ -1,0 +1,19 @@
++   - For a Windows Presentation Foundation (WPF) application, look at **System.Windows.Application's DispatcherUnhandledException** event and **System.Windows.Threading.Dispatcher's UnhandledException** and **UnhandledExceptionFilter** events.
++   - For Silverlight, look at **System.Windows.Application's UnhandledException** event.
++   - For an ASP.NET Web Form application, look at **System.Web.UI.TemplateControl's Error** event. **TemplateControl** is the base class of the **System.Web.UI.Page** and **System.Web.UI.UserControl** classes. Furthermore, you should also look at **System.Web.HttpApplication's Error** event.
++   - For a Windows Communication Foundation application, look at **System.ServiceModel.Dispatcher.ChannelDispatcher's ErrorHandlers** property.
+
+Before I leave this section, I'd like to say a few words about unhandled exceptions that could occur in a distributed application such as a Web site or Web service. In an ideal world, a server application that experiences an unhandled exception should log it, send some kind of notification back to the client indicating that the requested operation could not complete, and then the server should terminate. Unfortunately, we don't live in an ideal world, and therefore, it may not be possible to send a failure notification back to the client. For some *stateful servers* (such as Microsoft SQL Server), it may not be practical to terminate the server and start a brand new instance.
+
+For a server application, information about the unhandled exception should not be returned to the client because there is *little* a client could do about it, especially if the client is implemented by a different company. Furthermore, the server should divulge as little information about itself as possible to its clients to reduce that potential of the server being hacked.
+
+> > **Note** The CLR considers some exceptions thrown by native code as corrupted state exceptions (CSEs) because they are usually the result of a bug in the CLR itself or in some native code for which the managed developer has no control over. By default, the CLR will not let managed code catch these exceptions and **finally** blocks will not execute. Here is the list of native Win32 exceptions that are considered CSEs:
+> > 
+> > | | |
+> > |---|---|
+> > | EXCEPTION_ACCESS_VIOLATION | EXCEPTION_STACK_OVERFLOW |
+> > | EXCEPTION_ILLEGAL_INSTRUCTION | EXCEPTION_IN_PAGE_ERROR |
+> > | EXCEPTION_INVALID_DISPOSITION | EXCEPTION_NONCONTINUABLE_EXCEPTION |
+> > | EXCEPTION_PRIV_INSTRUCTION | STATUS_UNWIND_CONSOLIDATE |
+> > 
+> > Individual managed methods can override the default and catch these exceptions by applying the **System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute** to the method. In addition, the method must have the **System.Security.SecurityCriticalAttribute** applied to it. You can also override the default for an entire process by setting the **legacyCorruptedStateExceptionPolicy** element in the application's Extensible Markup Language (XML) configuration file to **true**. The CLR converts most of these to a **System.Runtime.InteropServices.SEHException** object except for **EXCEPTION_ACCESS_VIOLATION**, which is converted to a **System.AccessViolationException** object, and **EXCEPTION_STACK_OVERFLOW**, which is converted to a **System.StackOverflowException** object.

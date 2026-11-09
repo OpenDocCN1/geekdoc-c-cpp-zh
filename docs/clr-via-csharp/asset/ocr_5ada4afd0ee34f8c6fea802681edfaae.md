@@ -1,0 +1,28 @@
+```
+```csharp
+}
+[event: SomeAttr]        // Applied to event
+[field: SomeAttr]        // Applied to compiler-generated field
+[method: SomeAttr]        // Applied to compiler-generated add & remove methods
+public event EventHandler SomeEvent;
+}
+```
+```
+
+Now that you know how to apply a custom attribute, let’s find out what an attribute really is. A custom attribute is simply an instance of a type. For Common Language Specification (CLS) compliance, custom attribute classes must be derived, directly or indirectly, from the public abstract **System.Attribute** class. C# allows only CLS-compliant attributes. By examining the .NET Framework SDK documentation, you’ll see that the following classes (from the earlier example) are defined: **StructLayoutAttribute**, **MarshalAsAttribute**, **DllImportAttribute**, **InAttribute**, and **OutAttribute**. All of these classes happen to be defined in the **System.Runtime.InteropServices** namespace, but attribute classes can be defined in any namespace. Upon further examination, you’ll notice that all of these classes are derived from **System.Attribute**, as all CLS-compliant attribute classes must be.
+
+![](bbox=[0.091, 0.426, 0.131, 0.461])
+
+> **Note** When applying an attribute to a target in source code, the C# compiler allows you to omit the **Attribute** suffix to reduce programming typing and to improve the readability of the source code. My code examples in this chapter take advantage of this C# convention. For example, my source code contains `[DllImport(...)]` instead of `[DllImportAttribute(...)]`.
+
+As I mentioned earlier, an attribute is an instance of a class. The class must have a public constructor so that instances of it can be created. So when you apply an attribute to a target, the syntax is similar to that for calling one of the class’s instance constructors. In addition, a language might permit some special syntax to allow you to set any public fields or properties associated with the attribute class. Let’s look at an example. Recall the application of the **DllImport** attribute as it was applied to the **GetVersionEx** method earlier:
+
+```
+```csharp
+[DllImport("Kernel32", CharSet = CharSet.Auto, SetLastError = true)]
+```
+```
+
+The syntax of this should look pretty strange to you because you could never use syntax like this when calling a constructor. If you examine the **DllImportAttribute** class in the documentation, you’ll see that its constructor requires a single **String** parameter. In this example, **"Kernel32"** is being passed for this parameter. A constructor’s parameters are called *positional parameters* and are mandatory; the parameter must be specified when the attribute is applied.
+
+What are the other two “parameters”? This special syntax allows you to set any public fields or properties of the **DllImportAttribute** object after the object is constructed. In this example, when the **DllImportAttribute** object is constructed and **"Kernel32"** is passed to the constructor, the object’s public instance fields, **CharSet** and **SetLastError**, are set to **CharSet.Auto** and **true**, respectively. The “parameters” that set fields or properties are

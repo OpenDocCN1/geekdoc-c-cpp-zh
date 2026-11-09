@@ -1,0 +1,142 @@
+
+## Step #2: Define the event member
+
+An event member is defined using the C# keyword **event**. Each event member is given accessibility (which is almost always **public** so that other code can access the event member), a type of delegate indicating the prototype of the method(s) that will be called, and a name (which can be any valid identifier). Here is what the event member in our **MailManager** class looks like:
+
+```csharp
+internal class MailManager {
+
+    // Step #2: Define the event member
+    public event EventHandler<NewMailEventArgs> NewMail;
+    ...
+}
+```
+
+**NewMail** is the name of this event. The type of the event member is **EventHandler<NewMailEventArgs>**, which means that all receivers of the event notification must supply a callback method whose prototype matches that of the **EventHandler<NewMailEventArgs>** delegate type. Since the generic **System.EventHandler** delegate is defined as follows:
+
+```csharp
+public delegate void EventHandler<TEventArgs>(Object sender, TEventArgs e)
+    where TEventArgs : EventArgs;
+```
+
+the method prototypes must look like this:
+
+```csharp
+void MethodName(Object sender, NewMailEventArgs e);
+```
+
+![](img/3c46ff5b170881db4209d365b1f7a808_279_0.png)
+
+> **Note** A lot of people wonder why the event pattern requires the **sender** parameter to always be of type **Object**. After all, since the **MailManager** will be the only type raising an event with a **NewMailEventArgs** object, it makes more sense for the callback method to be prototyped like this:
+>
+> ```csharp
+> void MethodName(MailManager sender, NewMailEventArgs e);
+> ```
+>
+> The pattern requires the **sender** parameter to be of type **Object** mostly because of inheritance. What if **MailManager** were used as a base class for **SmtpMailManager**? In this case, the callback method should have the **sender** parameter prototyped as **SmtpMailManager** instead of **MailManager**, but this can't happen because **SmtpMailManager** just inherited the **NewMail** event. So the code that was expecting **SmtpMailManager** to raise the event must still have to cast the **sender** argument to **SmtpMailManager**. In other words, the cast is still required, so the **sender** parameter might as well be typed as **Object**.
+>
+> The next reason for typing the **sender** parameter as **Object** is just flexibility. It allows the delegate to be used by multiple types that offer an event that passes a **NewMailEventArgs** object. For example, a **PopMailManager** class could use the delegate even if this class were not derived from **MailManager**.
+>
+> The event pattern also requires that the delegate definition and the callback method name the **EventArgs**-derived parameter *e*. The only reason for this is to add additional consistency to the pattern, making it easier for developers to learn and implement the pattern. Tools that spit out source code (such as Microsoft Visual Studio) also know to call the parameter *e*.
+>
+> Finally, the event pattern requires all event handlers to have a return type of **void**. This is necessary because raising an event might call several callback methods, and there is no way to get the return values from all of them. Having a return type of **void** doesn't allow the callbacks to return a value. Unfortunately, there are some event handlers in the FCL, such as **ResolveEventHandler**, that did not follow Microsoft's own prescribed pattern because it returns an object of type **Assembly**.
+
+## Step #3: Define a method responsible for raising the event to notify registered objects that the event has occurred
+
+By convention, the class should define a protected, virtual method that is called by code internally within the class and its derived classes when the event is to be raised. This method takes one parameter, a **NewMailEventArgs** object, which includes the information passed to the objects receiving the notification. The default implementation of this method simply checks if any objects have registered interest in the event and, if so, the event will be raised, thereby notifying the registered methods that the event has occurred. Here is what the method in our **MailManager** class looks like:
+
+```csharp
+internal class MailManager {
+    ...
+    // Step #3: Define a method responsible for raising the event
+    // to notify registered objects that the event has occurred
+    // If this class is sealed, make this method private and nonvirtual
+    protected virtual void OnNewMail(NewMailEventArgs e) {
+        // Copy a reference to the delegate field now into a temporary field for thread safety
+        EventHandler<NewMailEventArgs> temp =
+            Interlocked.CompareExchange(ref NewMail, null, null);
+
+        // If any methods registered interest with our event, notify them
+        if (temp != null) temp(this, e);
+    }
+    ...
+}
+```
+
+## Raising an Event in a Thread-Safe Way
+
+When the .NET Framework first shipped, the recommended way for developers to raise an event was by using code similar to this:
+
+```csharp
+// Version 1
+protected virtual void OnNewMail(NewMailEventArgs e) {
+    if (NewMail != null) NewMail(this, e);
+}
+```
+
+The problem with the OnNewMail method is that the thread could see that NewMail is not null, and then, just before invoking NewMail, another thread could remove a delegate from the chain making NewMail null, resulting in a NullReferenceException being thrown. To fix this race condition, many developers write the OnNewMail method as follows:
+
+```csharp
+// Version 2
+protected void OnNewMail(NewMailEventArgs e) {
+    EventHandler<NewMailEventArgs> temp = NewMail;
+    if (temp != null) temp(this, e);
+}
+```
+
+The thinking here is that a reference to NewMail is copied into a temporary variable, temp, which refers to the chain of delegates at the moment the assignment is performed. Now, this method compares temp and null and invokes temp, so it doesn't matter if another thread changes NewMail after the assignment to temp. Remember that delegates are immutable and this is why this technique works in theory. However, what a lot of developers don't realize is that this code could be optimized by the compiler to remove the local temp variable entirely. If this happens, this version of the code is identical to the first version, so a NullReferenceException is still possible.
+
+To really fix this code, you should rewrite OnNewMail like this:
+
+```csharp
+// Version 3
+protected void OnNewMail(NewMailEventArgs e) {
+    EventHandler<NewMailEventArgs> temp = Thread.VolatileRead(ref NewMail);
+    if (temp != null) temp(this, e);
+}
+```
+
+The call to VolatileRead forces NewMail to be read at the point of the call and the reference really has to be copied to the temp variable now. Then, temp will be invoked only if it is not null. Unfortunately, it is impossible to write the code as shown because there isn't a generic overload of the VolatileRead method. However, there is a generic overload of Interlocked.CompareExchange, which you can use:
+
+```csharp
+// Version 4
+protected void OnNewMail(NewMailEventArgs e) {
+    EventHandler<NewMailEventArgs> temp =
+        Interlocked.CompareExchange(ref NewMail, null, null);
+    if (temp != null) temp(this, e);
+}
+```
+
+> Here, **CompareExchange** changes the **NewMail** reference to **null** if it is **null** and does not alter **NewMail** if it is not **null**. In other words, **CompareExchange** doesn't change the value in **NewMail** at all, but it does return the value inside **NewMail** in an atomic, thread-safe way. See Chapter 28, “Primitive Thread Synchronization Constructs,” for more information about the **Thread.VolatileRead** and **Interlocked.CompareExchange** methods.
+>
+> While the fourth version of this code is the best, technically correct version, you can actually use the second version because the just-in-time (JIT) compiler is aware of this pattern and it knows not to optimize away the local **temp** variable. Specifically, all of Microsoft's JIT compilers respect the invariant of not introducing new reads to heap memory and therefore, caching a reference in a local variable ensures that the heap reference is accessed only once. This is not documented and, in theory, it could change, which is why you should use the fourth version. But in reality, Microsoft's JIT compiler would never embrace a change that would break this pattern because too many applications would break.^1 In addition, events are mostly used in single-threaded scenarios (Windows Forms, Windows Presentation Foundation, and Microsoft Silverlight) and so thread safety is not an issue anyway.
+>
+> It is very important to note that due to this thread race condition, it is also possible that a method will be invoked after it has been removed from the event's delegate chain.
+
+As a convenience, you could define an extension method (as discussed in Chapter 8, “Methods”) that encapsulates this thread-safety logic. Define the extension method like this:
+
+```csharp
+public static class EventArgExtensions {
+    public static void Raise<TEventArgs>(this TEventArgs e,
+        Object sender, ref EventHandler<TEventArgs> eventDelegate)
+        where TEventArgs : EventArgs {
+
+        // Copy a reference to the delegate field now into a temporary field for thread safety
+        EventHandler<TEventArgs> temp =
+            Interlocked.CompareExchange(ref eventDelegate, null, null);
+
+        // If any methods registered interest with our event, notify them
+        if (temp != null) temp(sender, e);
+    }
+}
+```
+
+And now, we can rewrite the **OnNewMail** method as follows:
+
+```csharp
+protected virtual void OnNewMail(NewMailEventArgs e) {
+    e.Raise(this, ref m_NewMail);
+}
+```
+
+1 This was actually told to me by a member of Microsoft's JIT compiler team.

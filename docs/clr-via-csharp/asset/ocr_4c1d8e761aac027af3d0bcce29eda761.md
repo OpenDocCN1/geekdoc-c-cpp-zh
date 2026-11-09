@@ -1,0 +1,11 @@
+![](bbox=[0.155, 0.064, 0.612, 0.326])
+
+**FIGURE 21-5** The managed heap showing pointers in its finalization list
+
+> > **Note** Even though **System.Object** defines a **Finalize** method, the CLR knows to ignore it; that is, when constructing an instance of a type, if the type's **Finalize** method is the one inherited from **System.Object**, the object isn't considered finalizable. One of the derived types must override **Object's Finalize** method.
+
+When a garbage collection occurs, objects B, E, G, H, I, and J are determined to be garbage. The garbage collector scans the finalization list looking for pointers to these objects. When a pointer is found, the pointer is removed from the finalization list and appended to the *freachable queue*. The freachable queue (pronounced "F-reachable") is another of the garbage collector's internal data structures. Each pointer in the freachable queue identifies an object that is ready to have its **Finalize** method called. After the collection, the managed heap looks like Figure 21-6.
+
+In this figure, you see that the memory occupied by objects B, G, and H has been reclaimed because these objects didn't have a **Finalize** method. However, the memory occupied by objects E, I, and J couldn't be reclaimed because their **Finalize** methods haven't been called yet.
+
+A special high-priority CLR thread is dedicated to calling **Finalize** methods. A dedicated thread is used to avoid potential thread synchronization situations that could arise if one of the application's normal-priority threads were used instead. When the freachable queue is empty (the usual case), this thread sleeps. But when entries appear, this thread wakes, removes each entry from the queue, and then calls each object's **Finalize** method. Because of the way this thread works, you shouldn't execute any code in a **Finalize** method that makes any assumptions about the thread that's executing the code. For example, avoid accessing thread-local storage in the **Finalize** method.

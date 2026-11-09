@@ -1,0 +1,515 @@
+level_changes:
+- line: 64
+  before: 2
+  after: 1
+- line: 80
+  before: 3
+  after: 2
+- line: 136
+  before: 3
+  after: 2
+- line: 152
+  before: 3
+  after: 2
+- line: 400
+  before: 2
+  after: 1
+- line: 421
+  before: 3
+  after: 2
+- line: 908
+  before: 2
+  after: 3
+- line: 932
+  before: 2
+  after: 3
+- line: 1307
+  before: 1
+  after: 2
+- line: 1494
+  before: 2
+  after: 1
+- line: 1504
+  before: 3
+  after: 2
+- line: 1533
+  before: 3
+  after: 2
+- line: 1612
+  before: 3
+  after: 2
+- line: 1689
+  before: 3
+  after: 2
+- line: 1890
+  before: 2
+  after: 1
+- line: 1902
+  before: 3
+  after: 2
+- line: 2189
+  before: 3
+  after: 2
+- line: 2561
+  before: 3
+  after: 2
+- line: 2846
+  before: 2
+  after: 1
+- line: 2861
+  before: 3
+  after: 2
+- line: 2917
+  before: 3
+  after: 2
+- line: 2959
+  before: 3
+  after: 2
+- line: 3445
+  before: 2
+  after: 1
+- line: 3454
+  before: 3
+  after: 2
+- line: 3618
+  before: 2
+  after: 1
+- line: 3632
+  before: 3
+  after: 2
+- line: 3706
+  before: 3
+  after: 2
+- line: 4156
+  before: 3
+  after: 2
+- line: 4175
+  before: 3
+  after: 2
+- line: 4224
+  before: 2
+  after: 1
+- line: 4236
+  before: 3
+  after: 2
+- line: 4284
+  before: 3
+  after: 2
+- line: 4328
+  before: 3
+  after: 2
+- line: 4336
+  before: 3
+  after: 2
+- line: 4624
+  before: 3
+  after: 2
+- line: 4636
+  before: 2
+  after: 1
+- line: 4648
+  before: 3
+  after: 2
+- line: 4979
+  before: 3
+  after: 2
+- line: 5166
+  before: 3
+  after: 2
+- line: 5181
+  before: 3
+  after: 2
+- line: 5191
+  before: 3
+  after: 2
+- line: 5209
+  before: 3
+  after: 2
+- line: 5213
+  before: 2
+  after: 1
+- line: 5242
+  before: 3
+  after: 2
+- line: 5246
+  before: 4
+  after: 3
+- line: 5281
+  before: 2
+  after: 3
+- line: 5323
+  before: 2
+  after: 3
+- line: 5453
+  before: 3
+  after: 2
+- line: 5647
+  before: 2
+  after: 1
+- line: 6008
+  before: 3
+  after: 2
+- line: 6067
+  before: 3
+  after: 2
+- line: 6088
+  before: 3
+  after: 2
+- line: 6112
+  before: 3
+  after: 2
+- line: 6267
+  before: 3
+  after: 2
+- line: 6331
+  before: 2
+  after: 3
+- line: 6414
+  before: 3
+  after: 2
+- line: 6446
+  before: 3
+  after: 2
+- line: 6469
+  before: 3
+  after: 2
+- line: 6483
+  before: 3
+  after: 2
+- line: 6497
+  before: 3
+  after: 2
+- line: 6518
+  before: 2
+  after: 1
+- line: 6555
+  before: 3
+  after: 2
+- line: 6598
+  before: 3
+  after: 2
+- line: 6670
+  before: 3
+  after: 2
+- line: 6769
+  before: 3
+  after: 2
+- line: 7139
+  before: 2
+  after: 1
+- line: 7153
+  before: 3
+  after: 2
+- line: 7744
+  before: 3
+  after: 2
+- line: 7782
+  before: 3
+  after: 2
+- line: 7854
+  before: 3
+  after: 2
+- line: 7943
+  before: 3
+  after: 2
+- line: 8101
+  before: 3
+  after: 2
+- line: 8115
+  before: 3
+  after: 2
+- line: 8152
+  before: 3
+  after: 2
+- line: 8225
+  before: 2
+  after: 1
+- line: 8237
+  before: 3
+  after: 2
+- line: 8563
+  before: 2
+  after: 1
+- line: 8742
+  before: 3
+  after: 2
+- line: 8754
+  before: 3
+  after: 2
+- line: 8795
+  before: 3
+  after: 2
+- line: 9100
+  before: 2
+  after: 1
+- line: 9115
+  before: 3
+  after: 2
+- line: 9221
+  before: 3
+  after: 2
+- line: 9265
+  before: 3
+  after: 2
+- line: 9522
+  before: 3
+  after: 2
+- line: 9528
+  before: 3
+  after: 2
+- line: 9941
+  before: 2
+  after: 1
+- line: 9957
+  before: 3
+  after: 2
+- line: 10470
+  before: 2
+  after: 1
+- line: 10562
+  before: 3
+  after: 2
+- line: 10762
+  before: 2
+  after: 1
+- line: 10786
+  before: 3
+  after: 2
+- line: 10899
+  before: 2
+  after: 3
+- line: 13727
+  before: 2
+  after: 1
+- line: 14115
+  before: 3
+  after: 2
+- line: 14133
+  before: 3
+  after: 2
+- line: 14298
+  before: 2
+  after: 1
+- line: 14312
+  before: 3
+  after: 2
+- line: 15284
+  before: 2
+  after: 1
+- line: 16127
+  before: 2
+  after: 1
+- line: 16149
+  before: 3
+  after: 2
+- line: 16159
+  before: 3
+  after: 2
+- line: 16450
+  before: 3
+  after: 2
+- line: 16458
+  before: 2
+  after: 1
+- line: 16479
+  before: 3
+  after: 2
+- line: 16600
+  before: 3
+  after: 2
+- line: 17476
+  before: 2
+  after: 1
+- line: 17495
+  before: 3
+  after: 2
+- line: 18062
+  before: 3
+  after: 2
+- line: 18796
+  before: 2
+  after: 1
+- line: 18815
+  before: 3
+  after: 2
+- line: 18860
+  before: 3
+  after: 2
+- line: 19836
+  before: 2
+  after: 1
+- line: 19838
+  before: 3
+  after: 2
+- line: 19842
+  before: 3
+  after: 2
+- line: 19984
+  before: 3
+  after: 2
+- line: 20010
+  before: 3
+  after: 2
+- line: 21088
+  before: 2
+  after: 1
+- line: 21090
+  before: 3
+  after: 2
+- line: 21092
+  before: 3
+  after: 2
+- line: 21116
+  before: 3
+  after: 2
+text_changes:
+- line: 64
+  before: 第1章：CLR的执行模型
+  after: 第1章 CLR的执行模型
+- line: 102
+  before: 表1-1 托管模块的组成部分
+  after: ''
+- line: 378
+  before: 表 1-4 Test 类型的字段和方法（从元数据获得）
+  after: ''
+- line: 400
+  before: 第2章：生成、打包、部署和管理应用程序与类型
+  after: 第2章 生成、打包、部署和管理应用程序及类型
+- line: 456
+  before: This file contains command-line options that the C#
+  after: ''
+- line: 457
+  before: command-line compiler (CSC) will process as part
+  after: ''
+- line: 458
+  before: of every compilation, unless the "/noconfig" option
+  after: ''
+- line: 459
+  before: is specified.
+  after: ''
+- line: 461
+  before: Reference the common Framework libraries
+  after: ''
+- line: 489
+  before: 表 2-1 常见定义元数据表
+  after: ''
+- line: 505
+  before: 表 2-2 常见引用元数据表
+  after: ''
+- line: 726
+  before: 表 2-3 清单元数据表
+  after: ''
+- line: 1025
+  before: 第3章
+  after: 第3章 共享程序集和强命名程序集
+- line: 1027
+  before: 共享程序集和强命名程序集
+  after: ''
+- line: 1494
+  before: 第 4 章：类型基础
+  after: 第4章 类型基础
+- line: 1890
+  before: 第 5 章：基元类型、引用类型和值类型
+  after: 第5章 基元类型、引用类型和值类型
+- line: 2846
+  before: 第6章：类型和成员基础
+  after: 第6章 类型和成员基础
+- line: 3445
+  before: 第 7 章：常量和字段
+  after: 第7章 常量和字段
+- line: 3618
+  before: 第 8 章：方法
+  after: 第8章 方法
+- line: 4291
+  before: 深度学习在图像识别中的应用
+  after: ''
+- line: 4636
+  before: 第10章：属性
+  after: 第10章 属性
+- line: 5213
+  before: 第11章：事件
+  after: 第11章 事件
+- line: 5838
+  before: 表 12-1 Wintellect 的 Power Collections 库中的泛型集合类
+  after: ''
+- line: 6518
+  before: 第 13 章：接口
+  after: 第13章 接口
+- line: 7139
+  before: 第14章：字符、字符串和文本处理
+  after: 第14章 字符、字符串和文本处理
+- line: 7214
+  before: 燕麦云
+  after: ''
+- line: 7216
+  before: 智能文档处理
+  after: ''
+- line: 8225
+  before: 第 15 章
+  after: 第15章 枚举类型和位标志
+- line: 8227
+  before: 枚举类型和位标志
+  after: ''
+- line: 8563
+  before: 第16章
+  after: 第16章 数组
+- line: 8565
+  before: 数组
+  after: ''
+- line: 9100
+  before: 第十七章 委托
+  after: 第17章 委托
+- line: 9322
+  before: 表 17-1 MulticastDelegate 的重要非公共字段
+  after: ''
+- line: 9941
+  before: 第 18 章
+  after: 第18章 自定义特性
+- line: 9943
+  before: 自定义特性
+  after: ''
+- line: 10470
+  before: 第 19 章 可空值类型
+  after: 第19章 可空值类型
+- line: 10762
+  before: 第 20 章：异常与状态管理
+  after: 第20章 异常与状态管理
+- line: 14298
+  before: 第23章：程序集加载与反射
+  after: 第23章 程序集加载与反射
+- line: 15276
+  before: of methods=48,467
+  after: ''
+- line: 15284
+  before: 第 24 章
+  after: 第24章 运行时序列化
+- line: 15286
+  before: 运行时序列化
+  after: ''
+- line: 16127
+  before: 第 25 章
+  after: 第25章 线程基础
+- line: 16129
+  before: 线程基础
+  after: ''
+- line: 16381
+  before: 表25-1 进程优先级类与相对线程优先级如何映射到优先级级别
+  after: ''
+- line: 16458
+  before: 第26章
+  after: 第26章 计算密集型异步操作
+- line: 16459
+  before: 计算密集型异步操作
+  after: ''
+- line: 17476
+  before: 第 27 章：I/O 密集型异步操作
+  after: 第27章 I/O 密集型异步操作
+- line: 17982
+  before: 表 27-1 比较 .NET Framework 的异步编程模型
+  after: ''
+- line: 18796
+  before: 第29章
+  after: 第29章 混合线程同步构造
+- line: 18797
+  before: 混合线程同步构造
+  after: ''

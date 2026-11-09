@@ -1,0 +1,31 @@
++   - A property method may throw an exception; field access never throws an exception.
+
++   - A property cannot be passed as an **out** or **ref** parameter to a method; a field can. For example, the following code will not compile:
+
+```
+    using System;
+
+    public sealed class SomeType {
+       private static String Name {
+          get { return null; }
+          set { }
+       }
+
+       static void MethodWithOutParam(out String n) { n = null; }
+
+       public static void Main() {
+          // For the line of code below, the C# compiler emits the following:
+          // error CS0206: A property or indexer may not
+          // be passed as an out or ref parameter
+          MethodWithOutParam(out Name);
+       }
+    }
+```
+
++   - A property method can take a long time to execute; field access always completes immediately. A common reason to use properties is to perform thread synchronization, which can stop the thread forever, and therefore, a property should not be used if thread synchronization is required. In that situation, a method is preferred. Also, if your class can be accessed remotely (for example, your class is derived from **System.MarshalByRefObject**), calling the property method will be very slow, and therefore, a method is preferred to a property. In my opinion, classes derived from **MarshalByRefObject** should never use properties.
+
++   - If called multiple times in a row, a property method may return a different value each time; a field returns the same value each time. The **System.DateTime** class has a read-only **Now** property that returns the current date and time. Each time you query this property, it will return a different value. This is a mistake, and Microsoft wishes that they could fix the class by making **Now** a method instead of a property. **Environment's TickCount** property is another example of this mistake.
+
++   - A property method may cause observable side effects; field access never does. In other words, a user of a type should be able to set various properties defined by a type in any order he or she chooses without noticing any different behavior in the type.
+
++   - A property method may require additional memory or return a reference to something that is not actually part of the object's state, so modifying the returned object has no effect on the original object; querying a field always returns a reference to an object that is guaranteed to be part of the original object's state. Working with a property that returns a copy can be very confusing to developers, and this characteristic is frequently not documented.

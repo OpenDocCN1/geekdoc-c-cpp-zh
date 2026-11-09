@@ -1,0 +1,47 @@
+than are available will typically result in exceptions being thrown. To fix this situation, the **System.Runtime.InteropServices** namespace offers the **HandleCollector** class:
+
+```
+public sealed class HandleCollector {
+    public HandleCollector(String name, Int32 initialThreshold);
+    public HandleCollector(String name, Int32 initialThreshold, Int32 maximumThreshold);
+    public void Add();
+    public void Remove();
+
+    public Int32 Count { get; }
+    public Int32 InitialThreshold { get; }
+    public Int32 MaximumThreshold { get; }
+    public String Name { get; }
+}
+```
+
+A class that wraps a native resource that has a limited quantity available should use an instance of this class to give the garbage collector a hint as to how many instances of the resource are really being consumed. Internally, this class object monitors the count, and when it gets high, a garbage collection is forced.
+
+> **Note** Internally, the **GC.AddMemoryPressure** and **HandleCollector.Add** methods call **GC.Collect**, forcing a garbage collection to start prior to generation 0 reaching its budget. Normally, forcing a garbage collection to start is strongly discouraged because it usually has an adverse effect on your application’s performance. However, classes that call these methods are doing so in an effort to keep limited native resources available for the application. If the native resources run out, the application will fail. For most applications, it is better to work with reduced performance than to not be working at all.
+
+Here is some code that demonstrates the use and effect of the memory pressure methods and the **HandleCollector** class:
+
+```
+using System;
+using System.Runtime.InteropServices;
+
+public static class Program {
+    public static void Main() {
+        MemoryPressureDemo();                 // 0   causes infrequent GCs
+        MemoryPressureDemo(10 * 1024 * 1024); // 10MB causes frequent GCs
+
+        HandleCollectorDemo();
+    }
+
+    private static void MemoryPressureDemo(Int32 size) {
+        Console.WriteLine();
+        Console.WriteLine("MemoryPressureDemo, size={0}", size);
+        // Create a bunch of objects specifying their logical size
+        for (Int32 count = 0; count < 15; count++) {
+            new BigNativeResource(size);
+        }
+
+        // For demo purposes, force everything to be cleaned-up
+        GC.Collect();
+    }
+}
+```

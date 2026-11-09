@@ -1,0 +1,52 @@
+When I compile this method, there is quite a bit of resulting Intermediate Language (IL) code, which also makes performing operations on nullable types slower than performing the same operation on non-nullable types. Here is the C# equivalent of the compiler-produced IL code:
+
+```
+    private static Nullable<Int32> NullableCodeSize(Nullable<Int32> a, Nullable<Int32> b) {
+        Nullable<Int32> nullable1 = a;
+        Nullable<Int32> nullable2 = b;
+        if (!(nullable1.HasValue & nullable2.HasValue)) {
+            return new Nullable<Int32>();
+        }
+        return new Nullable<Int32>(nullable1.GetValueOrDefault() + nullable2.GetValueOrDefault());
+    }
+```
+
+Finally, let me point out that you can define your own value types that overload the various operators mentioned above. I discuss how to do this in the “Operator Overload Methods” section in Chapter 8, “Methods.” If you then use a nullable instance of your own value type, the compiler does the right thing and invokes your overloaded operator. For example, suppose that you have a **Point** value type that defines overloads for the == and != operators as follows:
+
+```
+    using System;
+
+    internal struct Point {
+        private Int32 m_x, m_y;
+        public Point(Int32 x, Int32 y) { m_x = x; m_y = y; }
+
+        public static Boolean operator==(Point p1, Point p2) {
+            return (p1.m_x == p2.m_x) && (p1.m_y == p2.m_y);
+        }
+
+        public static Boolean operator!=(Point p1, Point p2) {
+            return !(p1 == p2);
+        }
+    }
+```
+
+At this point, you can use nullable instances of the **Point** type and the compiler will invoke your overloaded operators:
+
+```
+    internal static class Program {
+        public static void Main() {
+            Point? p1 = new Point(1, 1);
+            Point? p2 = new Point(2, 2);
+
+            Console.WriteLine("Are points equal? " + (p1 == p2).ToString());
+            Console.WriteLine("Are points not equal? " + (p1 != p2).ToString());
+        }
+    }
+```
+
+When I build and run the code above, I get the following output:
+
+```
+    Are points equal? False
+    Are points not equal? True
+```

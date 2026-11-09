@@ -1,0 +1,60 @@
+```
+```csharp
+// Load our assembly into the new AppDomain, construct an object, marshal
+// it back to our AD (we really get a reference to a proxy)
+mbrt = (MarshalByRefType)
+    ad2.CreateInstanceAndUnwrap(exeAssembly, "MarshalByRefType");
+
+Console.WriteLine("Type={0}", mbrt.GetType());  // The CLR lies about the type
+
+// Prove that we got a reference to a proxy object
+Console.WriteLine("Is proxy={0}", RemotingServices.IsTransparentProxy(mbrt));
+
+// This looks like we're calling a method on MarshalByRefType but, we're not.
+// We're calling a method on the proxy type. The proxy transitions the thread
+// to the AppDomain owning the object and calls this method on the real object.
+mbrt.SomeMethod();
+
+// Unload the new AppDomain
+AppDomain.Unload(ad2);
+// mbrt refers to a valid proxy object; the proxy object refers to an invalid AppDomain
+
+try {
+    // We're calling a method on the proxy type. The AD is invalid, exception is thrown
+    mbrt.SomeMethod();
+    Console.WriteLine("Successful call.");
+}
+catch (AppDomainUnloadedException) {
+    Console.WriteLine("Failed call.");
+}
+
+
+
+// *** DEMO 2: Cross-AppDomain Communication using Marshal-by-Value ***
+Console.WriteLine("{0}Demo #2", Environment.NewLine);
+
+// Create new AppDomain (security & configuration match current AppDomain)
+ad2 = AppDomain.CreateDomain("AD #2", null, null);
+
+// Load our assembly into the new AppDomain, construct an object, marshal
+// it back to our AD (we really get a reference to a proxy)
+mbrt = (MarshalByRefType)
+    ad2.CreateInstanceAndUnwrap(exeAssembly, "MarshalByRefType");
+
+// The object's method returns a COPY of the returned object;
+// the object is marshaled by value (not be reference).
+MarshalByValType mbvt = mbrt.MethodWithReturn();
+
+// Prove that we did NOT get a reference to a proxy object
+Console.WriteLine("Is proxy={0}", RemotingServices.IsTransparentProxy(mbvt));
+
+// This looks like we're calling a method on MarshalByValType and we are.
+Console.WriteLine("Returned object created " + mbvt.ToString());
+
+// Unload the new AppDomain
+AppDomain.Unload(ad2);
+// mbvt refers to valid object; unloading the AppDomain has no impact.
+
+try {
+```
+```

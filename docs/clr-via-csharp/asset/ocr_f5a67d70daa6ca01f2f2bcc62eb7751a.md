@@ -1,0 +1,15 @@
+If you are interested in using the CLR for hosting scenarios, I highly recommend that you get Steven Pressman’s excellent book, *Customizing the Microsoft .NET Framework Common Language Runtime* (Microsoft Press 2005), even though it focuses on pre-4.0 versions of the CLR.
+
+> **Note** Of course, a Windows process does not need to load the CLR at all. It needs to be loaded only if you want to execute managed code in a process. Prior to .NET Framework 4.0, the CLR allowed only one instance of itself to reside within a Windows process. That is, a process could contain no CLR, v1.0 of the CLR, v1.1 of the CLR, or v2.0 of the CLR. Allowing only one CLR version per process is a huge limitation. For example, Microsoft Office Outlook couldn’t load two add-ins that were built and tested against different versions of the .NET Framework.
+> 
+> However, with .NET Framework 4.0, Microsoft now supports the ability to load v2.0 and v4.0 in a single Windows process, allowing components written for .NET Framework versions 2.0 and 4.0 to run side by side without experiencing any compatibility problems. This is a fantastic new feature, as it allows .NET Framework components to be used reliably in more scenarios than ever before. You can use the ClrVer.exe tool to see which CLR version(s) are loaded into any given process.
+> 
+> Once a CLR is loaded into a Windows process, it can never be unloaded; calling the **AddRef** and **Release** methods on the **ICLRRuntimeInfo** interface has no effect. The only way for the CLR to be unloaded from a process is for the process to terminate, causing Windows to clean up all resources used by the process.
+
+# AppDomains
+
+When the CLR COM server initializes, it creates an *AppDomain*. An AppDomain is a logical container for a set of assemblies. The first AppDomain created when the CLR is initialized is called the *default AppDomain*; this AppDomain is destroyed only when the Windows process terminates.
+
+In addition to the default AppDomain, a host using either unmanaged COM interface methods or managed type methods can instruct the CLR to create additional AppDomains. The whole purpose of an AppDomain is to provide isolation. Here are the specific features offered by an AppDomain:
+
++   - **Objects created by code in one AppDomain cannot be accessed directly by code in another AppDomain**  When code in an AppDomain creates an object, that object is “owned” by that AppDomain. In other words, the object is not allowed to live beyond the lifetime of the AppDomain whose code constructed it. Code in other AppDomains can access another AppDomain’s object only using marshal-by-reference or marshal-by-value semantics. This enforces a clean separation and boundary because code in one AppDomain can’t have a direct reference to an object created by code in a different AppDomain. This isolation allows AppDomains to be easily unloaded from a process without affecting code running in other AppDomains.

@@ -1,0 +1,49 @@
+```
+~~~csharp
+using System;
+
+public sealed class SomeLibraryType {
+    // The static is required to associate the field with the type.
+    public static readonly Int32 MaxEntriesInList = 50;
+}
+~~~
+```
+
+This is the only change you have to make; the application code doesn't have to change at all, although you must rebuild it to see the new behavior. Now when the application's **Main** method runs, the CLR will load the DLL assembly (so this assembly is now required at run time) and grab the value of the **MaxEntriesInList** field out of the dynamic memory allocated for it. Of course, the value will be **50**.
+
+Let's say that the developer of the DLL assembly changes the **50** to **1000** and rebuilds the assembly. When the application code is re-executed, it will automatically pick up the new value: **1000**. In this case, the application code doesn't have to be rebuilt—it just works (although its performance is adversely affected). A caveat: this scenario assumes that the new version of the DLL assembly is not strongly named and the versioning policy of the application is such that the CLR loads this new version.
+
+The following example shows how to define a **readonly** static field that is associated with the type itself, as well as **read/write** static fields and **readonly** and **read/write** instance fields, as shown here:
+
+```
+~~~csharp
+public sealed class SomeType {
+    // This is a static read-only field; its value is calculated and
+    // stored in memory when this class is initialized at run time.
+    public static readonly Random s_random = new Random();
+
+    // This is a static read/write field.
+    private static Int32 s_numberOfWrites = 0;
+
+    // This is an instance read-only field.
+    public readonly String Pathname = "Untitled";
+
+    // This is an instance read/write field.
+    private System.IO.FileStream m_fs;
+
+    public SomeType(String pathname) {
+        // This line changes a read-only field.
+        // This is OK because the code is in a constructor.
+        this.Pathname = pathname;
+    }
+
+    public String DoSomething() {
+        // This line reads and writes to the static read/write field.
+        s_numberOfWrites = s_numberOfWrites + 1;
+
+        // This line reads the read-only instance field.
+        return Pathname;
+    }
+}
+~~~
+```
