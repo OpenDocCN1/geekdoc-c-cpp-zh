@@ -1,0 +1,15 @@
+and so on — that can be remotely controlled by messages. When a window receives a message, it not only stores the value, but also it can automatically redraw itself. Messaging makes it possible for objects to control each other remotely. Objects can update themselves or trigger behaviors in other objects because changing an object’s properties can trigger a much more complex response.
+
+Objects are *opaque*; that is, an object’s internal code can be hidden and the object can be shared with other developers who see an *interface* — a set of properties and behaviors they can access remotely — but they don’t need to think about the details of the *implementation* code behind these features. This enhances security and simplifies application design. Developers can use objects as functional building blocks without being distracted by the code that implements them.
+
+Because objects can send and receive messages and respond to them in programmable ways, they’re more powerful than conventional data structures and functions. Developers not only find objects simpler to use, but they also find it easier to invent new and more complex kinds of interactions. Updating a single property in a single object can automatically trigger a cascade of responses across an application.
+
+# From Smalltalk to Objective-C
+
+Although Smalltalk’s ideas were powerful, its syntax was cumbersome and it never evolved into a mainstream language. It is only rarely used now by professional developers, though it continues to be available in hobby projects. For example, experimenters can explore the Smalltalk interpreter shown in Figure 1.2, which runs on the Web as a Flash application at www.smoak talk.com/st/071808.
+
+Smalltalk’s influence is evident in other languages, including Ruby, Perl, and Objective-C. Objective-C is closest in spirit and implementation to the original Smalltalk design ideals. It blends them with the features of standard C to create a very powerful and productive environment. Objective-C can run C code without changes, but it adds features and concepts imported from Smalltalk. Specifically it supports objects and messaging using some of Smalltalk’s syntax and conventions.
+
+# From Objective-C to NeXTStep
+
+In 1988 Steve Jobs left Apple and started a new company called NeXT. NeXT licensed a version of Objective-C from StepStone, the owners of the language, and began creating its own compiler and libraries. NeXT’s computing hardware products were widely acclaimed, but because they were too expensive for mainstream users, they sold poorly. NeXT reluctantly dropped out of hardware development and concentrated on developing the compiler, libraries, and SDK as a marketable product that could be licensed to potential users. The libraries, known as NeXTStep, included data management features. They also supported a sophisticated graphical and user interface (UI) environment based on the object-message development idiom inherited from Smalltalk.

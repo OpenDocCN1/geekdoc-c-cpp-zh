@@ -1,0 +1,283 @@
+
+- NSInvocation, 221
+- NSISOLatin1StringEncoding, 377
+- NSKeyedArchiveFromDataTransformerName, 349
+- NSKeyedArchiver, 300, 306
+- NSKeyValueChangeInsertion constant, 289
+- NSKeyValueChangeRemoval constant, 289
+- NSKeyValueChangeReplacement constant, 289
+- NSLog. *See also* debugging
+    - Console window, 467
+    - format options, 468–469
+    - implementing delegation method, 140
+    - listing running apps, 331
+    - overview, 466–467
+    - reporting events with, 467–469
+    - reporting line numbers and function names with, 470
+    - reporting values with, 468–469
+    - selectively enabling, 471–472
+- NSMakePoint, 403, 417
+- NSMakeRect, 130, 417
+- NSManagedObject, 367
+- NSManagedObjectContext, 366
+- NSManagedObjectModel, 366
+- NSMid, 417
+- NSMidY, 417
+- NSMutableArray
+    - description, 286
+    - searching, 293–294
+    - sorting, 294–295
+    - using, 292–293
+- NSMutableAttributedString, 379
+- NSMutableData, 300, 306
+- NSMutableDictionary
+    - description, 286, 298
+    - key-value pairs, 39
+    - setValue:forKey: method, 288
+- NSMutableSet, 297
+- NSMutableString, 39
+- NSNib, 153
+- NSNotFound, 294
+- NSNull, 224
+- NSNumber, 223, 270, 287, 290–291
+- NSNumberFormatter, 328–330
+- NSObject
+    - as blank generic subclass, 146–147
+    - description, 105
+    - key-value observing, 225
+    - performSelector: in, 268
+    - running on delegates, 120
+    - subclass hierarchy, 106
+    - subclassing, 108, 119, 304, 386
+    - uses for, 97
+- NSObjectController, 330
+- NSOpenGLContext, 458
+- NSOpenGLView, 458
+- NSOpenPanel, 240, 241, 245
+- NSOperation
+    - advantages, 271–272
+    - creating new object, 272–273
+    - disadvantage, 277
+    - Grand Central Dispatch, 281
+    - running object, 274
+    - using, 275–276
+- NSOperationQueue, 274–277, 280, 281
+- NSOrderedAscending, 294–295
+- NSOrderedDescending, 294–295
+- NSOrderedSame, 294–295
+- NSPanel, 345, 405
+- NSPersistentStoreCoordinator, 366
+- NSPoint, 290, 403, 416, 428
+- NSPointFromCGPoint, 428
+- NSPointInRect, 417
+- NSPointToCGPoint, 428
+- NSPredicate, 367
+- NSRange, 291, 376–377
+- NSRect, 129–130, 291, 403, 416
+- NSRectFromCGRect, 403
+- NSRectToCGRect, 403
+- NSResponder
+    - description, 406
+    - handling keyboard events, 49
+    - handling mouse events, 414–415
+    - placing events in OS X, 204
+    - receiving message from OS X, 142–144
+- NSSavePanel, 240, 242, 243, 245
+- NSScreen, 133
+- NSScrollView, 243, 244
+- NSSet
+    - adding to nib, 162
+    - description, 38, 286, 298
+    - id data type, 200
+    - methods, 297
+    - touch events, 515
+- NSSize, 291, 416
+- NSSlider, 317
+- NSSortDescriptor, 367
+- NSString
+    - creating paths with, 236
+    - description, 39
+    - methods, 235, 376
+    - overview, 375
+- NSStringWritingWithFormat: method, 196
+- NSTask, 281–283
+- NSTextField, 185, 196
+- NSTextFieldDelegate protocol, 249
+- NSTextView, 243, 244, 302, 381
+- NSThread
+    - description, 270
+    - handling UI and thread interactions, 271
+    - managing thread memory, 271
+    - pausing thread, 270
+- NSTimeInterval, 267
+- NSTimer, 195–199, 221, 267–268, 441
+- NSTrackingArea, 415
+- NSTreeController, 330
+- NSUInteger, 338
+- NSUnarchiveFromDataTransformerName, 349
+- NSUndoManager, 394–395
+- NSUnionRect, 417
+- NSURL, 240
+- NSURLConnection object, 260
+- NSURLRequest object, 260
+- NSUserDefaults, 341
+- NSUserDefaultsController, 330, 340–341, 345–346
+- NSUTF8StringEncoding, 238, 377–378
+- NSValue, 39, 287, 290–291
+- NSValueTransformer, 347
+- NSView
+    - description, 46, 405
+    - drawInRect: method, 105–106
+    - handling mouse events, 414–415
+    - subclassing, 108
+    - template, 406
+- NSViewController, 153, 406
+- NSWindow
+    - application, 405
+    - class references, 121–122
+    - creating category on, 149–150
+    - in document-based application, 385
+    - extending with maximize method, 149–150
+    - guide, 129
+    - setting classes and subclasses, 170–172
+    - subclassing, 144–149
+- NSWindow window object, 36
+- NSWindow *window, 119
+- NSWindowController, 153
+- NSWorkspace, 331
+- NSXMLDocument, 261, 378
+- NSXMLElement, 260
+- NSXMLNode, 260
+- NSXMLParser, 261
+- NSZeroPoint, 416
+- NSZeroRect, 416, 426
+- NSZeroSize, 416
+- null, 229
+- numTaps, 515
+- Object, ActionScript, 53
+- Object Allocations, 484–485
+- object explorer, 478
+- object names, finding, 186
+- object property, 32
+- objectWithContentsOfFile: method, 238
+- objectAtIndex: method, 294
+- objectForKey, 287–288
+- Objective-C
+    - asterisks in, 37–38
+    - blocks
+        - code, 277
+        - description, 267
+        - NSBlockOperation, 279–281
+        - overview, 277
+        - pointer, 277
+        - syntax, 277–278
+        - values, 278–279
+        - variables, 278–279
+    - classes
+        - description, 97–98
+        - getters, 109
+        - implementation, 110–111
+        - interface, 107–109
+        - public methods, 111–112
+        - public properties, 111
+        - self, 110
+        - setters, 109
+    - Cocoa messaging and notifications, 36
+    - features, 112
+    - history, 4–5
+    - implicit question-response, 35
+    - instances, 98–100
+    - memory management, 43–44
+    - messaging, 32–33
+    - moving to, 31
+    - objectification with @ character, 38
+    - objects
+        - constructors, 102–103
+        - designing, 100–107
+        - inheritance, 105–106
+        - naming, 101–102
+        - overview, 31–32
+        - pointers, 102–103
+        - subclassing, 105–106
+    - question-response messaging, 34
+    - subclassing in, 32
+    - syntax, 36
+    - using objects in, 113–114
+    - object-oriented architecture, 112
+    - object-oriented programming, 95–96
+- objects
+    - abstraction, 95
+    - adding to nib, 176–178
+    - aligning, 179–181, 182–183
+    - applications, 96
+    - archiving, 304–306
+    - cell, selecting, 181–182
+    - centering, 182–183
+    - changing class of, 170–172
+    - conditionals and, 44
+    - constructors, 102–103
+    - creating, 33
+    - data dependency management, 95
+    - de-archiving, 304–306
+    - designing, 100–107
+    - encapsulation, 95
+    - event management, 95
+    - finding names of, 186
+    - flow control, 95
+    - getting property, 32
+    - initializing, 33
+    - looping, 95
+    - loose links between messages and, 113
+    - naming, 101–102
+    - Objective-C, 31–32
+    - path, 418–419
+    - pointers, 102–103
+    - posting, 230
+    - posting status of, 33
+    - private features, 98
+    - receiver, 99
+    - registering for notifications, 229
+    - releasing, 33
+    - setting property, 32
+    - using, 230–231
+    - using id sender to identify, 202
+    - using in Objective-C, 113–114
+    - vs. values, 287
+- Objects tab, Library window, 160–161
+- ObjectToWatch, 225
+- observedProperty key, 225
+- observeValue method, 226
+- observeValueForKeyPath: method, 225, 328
+- onclick message, 34
+- online assistant, 539–540
+- onload message, 34
+- opacity, 426
+- opaque objects, 5
+- Open Office documents, 379
+- Open Recent menu, 384
+- openDocument: method, 244
+- OpenDocumentText, 379
+- OpenGL. *See also* animations
+    - controlling animation, 462–463
+    - creating animation, 459–462
+    - description, 439, 440
+    - functions, 459
+    - overview, 457–458
+    - Utility Toolkit, 459
+- OpenGL ES Application template, 519
+- OpenStep, 6
+- orderFrontPanel: method, 381
+- orientation sensing, 496, 509–511
+- OS Layer, 24
+- OS X 10.0, 7
+- OS X application
+    - creating, 29
+    - vs. iOS apps, 495–496
+- OS X documentation
+    - articles, 61–62
+    - download site, 57
+    - Featured, 61
+    - flowchart, 73
+    - Getting Started, 60, 62–63
+    - guides, 63–64
+    - references, 64–65

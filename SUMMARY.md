@@ -702,6 +702,7 @@
 +   [共同创作电子游戏](docs/co-creating-videogames/README.md)
 +   [自我教练走向成功：Flash](docs/coach-yourself-to-success-flash/README.md)
 +   [Cocoa 应用教程](docs/cocoa-application-tutorial/README.md)
++   [Cocoa 开发者参考](docs/cocoa-developer-reference/README.md)
 +   [Cocoa 基础指南](docs/cocoa-fundamentals-guide/README.md)
 +   [Cocoa 编程：开发者的快速启动指南](docs/cocoa-programming-a-quick-start-guide-for-developers-pragmat/README.md)
 +   [Cocoa 编程开发者手册](docs/cocoa-programming-developers-handbook/README.md)

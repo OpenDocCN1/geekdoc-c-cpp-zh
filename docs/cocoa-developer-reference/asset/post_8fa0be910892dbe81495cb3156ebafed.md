@@ -1,0 +1,294 @@
+
+## Figure B.6
+
+Code repositories such as SourceForge (http://sourceforge.net), GitHub (http://github.com), and Google Code (http://code.google.com) have hundreds of prewritten frameworks you can drop into a project, such as the EXIF framework shown here.
+
+![](img/2b293e29fc15b0797f113b85dd429b6e_595_0.png)
+
+## Summary
+
+In this appendix you were introduced to some simple but effective project management techniques, you explored checklists of common errors with likely solutions, and you looked at resources for online help. Finally, you were given hints for keeping a project moving when faced with problems that appear impossible — but often aren’t.
+
+## Index
+
+![](img/2b293e29fc15b0797f113b85dd429b6e_596_0.png)
+
+### SPECIAL CHARACTERS
+
+- ! = conditional, 310
+- * (asterisk), 37–38
+- : (colon), 126, 567
+- ; (semicolon), 111, 567
+- @ character, 38
+- [] (square brackets), 40, 127, 567
+- ^ (caret), 277, 278
+- {} (curly brackets), 111, 141, 277, 567
+- ' (apostrophe), 277
+
+### A
+
+- Ableton’s Live, 9–10
+- aBlock, 281
+- Abstract classes, 113
+- accelerometer, 497
+- accessors, 97
+- actions
+  - creating direct links to, 191–192
+  - defining in implementation, 188
+  - defining in interface, 185–187
+  - description, 184
+  - placing, 202–203
+- ActionScript, 48, 53
+- Active Executable, 525
+- Active Screen Corner, 548
+- Activity Monitor, 483
+- ad banners, 550
+- ad hoc distribution, 540
+- addAnimation: method, 452
+- addOne: method, 219–220
+- addOperation:, 281
+- Address Book, 96, 117
+- addSubview: method, 413, 435
+- Adobe Creative Suite, 9
+- aesthetics in design, 19
+- aFile.ext, 236
+- aFrame, 129
+- aFunctionCalledInTheTimerExpires, 561
+- AKey, 342
+- Align Horizontal Center button, 182
+- Alignment button, 183
+- allMatches, 237
+- alloc message, 103
+- alloc method, 37
+- alloc/init code, 154, 410, 413
+- allocateObject, 269
+- alpha, 426
+- Amazon, 11, 247
+- aMethod, 215
+- anImage, 561
+- AnImaginaryProtocol, 135
+- animatable filter, 453–456
+- animated view swaps, creating, 534–535
+- animationCurve, 535
+- animationDidEnd:, 446, 447, 458
+- animationDidStart:, 446, 447, 458
+- animations
+  - creating property animation code, 442
+  - creating timer for, 441
+  - overview, 439
+  - types, 440
+  - using animator
+    - creating path animation, 450–452
+    - creating simple proxy animation, 443–445
+    - creating values/keytimes animation, 449
+    - customizing animation object, 446–449
+    - setting duration, 446
+    - timing functions, 448–449
+  - using CALayer
+    - animatable filter, 453–456
+    - animating filter, 456–458
+    - using layers for animation, 452–453
+  - using drawRect:, 443
+  - using OpenGL, 458–463
+- animator
+  - animatable filter, 453–456
+  - animating filter, 456–458
+  - creating path animation, 450–452
+  - creating simple proxy animation, 443–445
+  - creating values/keytimes animation, 449
+  - customized animation, 440
+  - customizing animation object, 446–449
+  - default animation, 440
+  - setting duration, 446
+  - timing functions, 448–449
+- anInstance, 99
+- anObject, 215
+- anotherInstance, 99
+- aNotification, 139
+- Ansca Corona, 76
+- aParameter, 112
+- Aperture, 4
+- APIs (application programming interface)
+  - creating asynchronous Web requests, 258–260
+  - creating long URL, 252–253
+  - creating XML requests, 255–256
+  - parsing XML returns a text, 257–258
+  - selecting XML format, 256–257
+  - sending URL request, 253–255
+  - using, 247–248
+- apostrophe ('), 277
+- App Delegate, 304
+  - .app file, 48, 88
+- App ID, 538
+- App Store
+  - certification process, 538–540
+  - income territories, 499
+  - online assistant, 539–540
+  - packaging apps for, 541–542
+  - permissions, 538–540
+  - ratings grid, 543
+  - reasons for refusing apps, 536–537
+  - selling in, 82, 536–537
+  - uploading apps to, 542–543
+- app switching, 498
+- AppDelegate suffix, 118
+- appendBezierPath:, 419
+- appendBezierPathWithArcFromPoint:toPoint:, 419
+- appendBezierPathWithGlyphInFont:, 419
+- appendBezierPathWithPoints:, 419
+- AppKiDo, 57, 59
+- Apple Developer Connection, 80
+- Apple Developer Forums, 80
+- Apple Human Interface Guidelines, 20, 60
+- Apple ID, 80
+- Application Delegate
+  - code for, 344
+  - key features, 344
+  - link destinations, 189
+- application delegates
+  - converting notifications to, 230–231
+  - description, 118–121
+  - errors, 568
+  - messages, 138–139
+  - methods, 139–142
+  - notifications and, 230–231
+  - receiving message from OS X with, 134–137
+- Application Framework layer, 22
+- application frameworks, 24–25
+- Application Kit Functions Reference, 131
+- application programming interface. See APIs
+- applicationDidChangeScreenParameters:, 138
+- applicationDidFinishLaunching:
+  - auto-refresh, 373
+  - delegation, 138
+  - description, 120
+  - event logging, 467
+  - Key-Value Observing, 328
+  - object status, 33
+  - Protocol Reference, 137
+  - receiving message from OS X, 134
+  - timer method, 196
+- applications
+  - adding navigation and control features to, 511–514
+  - application delegates, 118–121
+  - application frameworks, 24–25
+  - building simple application
+    - adding view controller subclasses, 526
+    - creating animated view swap, 534–535
+    - creating new project in Xcode, 525
+    - creating views, 528–532
+    - handling events with protocol messaging, 532–534
+    - implementing view controllers, 526–528
+  - business model
+    - making money from iPad development, 501–502
+    - making money from iPhone and iPod touch development, 499
+  - Carbon, 25
+  - C-language routes, 129–132
+  - class references, 121–125
+  - code layers, 25
+  - Code Sense, 126–127
+  - Core Data
+    - adding code, 363–364
+    - adding entity, 354
+    - adding properties, 355–356
+    - building the application, 361–363
+    - creating fetch requests, 367
+    - creating relationships, 356–359
+    - displaying such results, 370–373
+    - generating user interface, 359–361
+    - modifying nib, 363–364
+    - project template, 352–353
+    - sort descriptors, 368
+    - to-many fetch requests, 368–370
+    - using predicates, 367–368
+  - creating category on NSWindow, 149–150
+  - custom switching, 514
+  - delegate, 118–121
+  - design goals
+    - constrained data sharing, 504
+    - full-screen operation, 503
+    - instant on, instant off, 503
+    - loss of focus without notice, 503
+    - no explicit data save and restore, 504
+    - orientation sensing, 509–511
+    - restricted battery life, 504
+  - developing features across layers, 25
+  - elements, 22–23, 117–118
+  - expanding search to related classes, 133–134
+  - frameworks, 27–29
+  - handling touch events, 514–515
+  - iOS vs. OS X apps, 30, 495–496
+  - iPad apps, 30
+  - iPhone apps, 30
+  - layers, 22–23, 27–29
+    - vs. Mac apps, 13
+  - market, 499
+  - master/root view controller, 507
+  - multiple classes, 128
+  - prices, 499
+  - profiting from, 12–14
+  - receiving message from OS X delegate
+    - delegate methods, 139–142
+    - overview, 134
+    - protocol, 135–136
+    - Protocol Reference page, 137–138
+  - receiving message from OS X with NSResponder, 142–144
+  - selling in App Store
+    - certification process, 538–540
+    - income territories, 499
+    - online assistant, 539–540
+    - packaging apps for, 541–542
+    - permissions, 538–540
+    - ratings grid, 543
+    - reasons for refusing apps, 536–537
+    - selling in, 82, 536–537
+    - uploading apps to, 542–543
+  - signatures, 125–126
+  - subclassing NSWindow, 144–149
+  - “toll-free bridged” layers, 25
+  - uploading to App Store, 542–543
+  - user experience, 23–24
+    - workflow, 29
+    - Xcode only policy for, 76
+- Applications folder, 82
+- applicationShouldTerminate:, 138
+- applicationWillHide:, 139, 141
+- applicationWillUnhide:, 138, 141–142
+- Aqua
+  - default graphics features, 24
+  - design guidelines, 20–21
+  - user experience, 23–24
+  - using with Cocoa, 21–22
+- archiving, 44, 214, 300–301
+- argc parameter, 116
+- argv parameter, 116
+- arrangedObjects, 338
+- ArrayControllerSubclass, 333
+- arrays, without using NSArray, 295
+- articles, 61–62
+- Assembler, 54
+- assignments, KVO-compliant, 226–227
+- asterisk (*), 37–38
+- aStructWrapper, 291
+- asynchronous requests, 258–260
+- aThread, 269
+- atomically parameter, 238
+- attributed strings
+  - drawing text on path, 380
+  - loading, 379–380
+  - saving, 379–380
+  - using, 380
+- attributes
+  - description, 180–181
+  - document, 379
+  - text, 379
+- Attributes pane, 557
+- Attributes tab, Inspector window, 164
+- Audio Toolbox, 27
+- autocompletion feature, 126–127, 237–238
+- Automator, 10
+- autorotation, 509
+- AViewController.m file, 531
+- AViewController.xib, 526–528
+- awakeFromNib, 408, 425, 448, 526
+- aWindow, 36

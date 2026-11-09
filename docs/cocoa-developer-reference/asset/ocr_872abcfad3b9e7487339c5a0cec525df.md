@@ -1,0 +1,3 @@
+Next, you explored NSURL in detail, and you found out how to use URL objects to load online data into Cocoa objects. You experimented with the bit.ly Web API, and you learned how to assemble simple text-based request and complex asynchronous requests that extracted information from an XML return.
+
+Finally, you were introduced to the WebView object in WebKit, and you saw how easy it is to add a simple Web browser to any project.
