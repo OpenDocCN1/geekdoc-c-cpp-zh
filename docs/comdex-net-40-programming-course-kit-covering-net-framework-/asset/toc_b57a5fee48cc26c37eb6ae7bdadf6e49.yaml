@@ -1,0 +1,77 @@
+level_changes:
+- line: 153
+  before: 2
+  after: 3
+- line: 162
+  before: 2
+  after: 3
+- line: 192
+  before: 2
+  after: 3
+- line: 198
+  before: 2
+  after: 3
+- line: 208
+  before: 2
+  after: 3
+- line: 219
+  before: 2
+  after: 3
+- line: 227
+  before: 2
+  after: 3
+- line: 295
+  before: 2
+  after: 3
+- line: 378
+  before: 2
+  after: 3
+- line: 404
+  before: 2
+  after: 3
+- line: 408
+  before: 2
+  after: 3
+- line: 8898
+  before: 1
+  after: 2
+- line: 15610
+  before: 1
+  after: 3
+- line: 15616
+  before: 1
+  after: 3
+- line: 15624
+  before: 1
+  after: 2
+- line: 15630
+  before: 1
+  after: 2
+- line: 19650
+  before: 1
+  after: 2
+- line: 19652
+  before: 1
+  after: 2
+- line: 19654
+  before: 2
+  after: 3
+text_changes:
+- line: 8439
+  before: 床架中心支撑方案
+  after: C# 2010
+- line: 8445
+  before: 是否需要中心支撑？
+  after: 第 1 章
+- line: 4727
+  before: 清单4.3：显示 TextBox1_TextChanged 事件处理程序的代码
+  after: 清单 4.3：显示 TextBox1_TextChanged 事件处理程序的代码
+- line: 4742
+  before: 清单4.4：显示用于处理 StatusStrip 控件的 ItemClicked 事件的代码
+  after: 清单 4.4：显示用于处理 StatusStrip 控件的 ItemClicked 事件的代码
+- line: 4824
+  before: 清单4.5：显示 **Button1_Click** 事件处理程序的代码
+  after: 清单 4.5：显示 **Button1_Click** 事件处理程序的代码
+- line: 4897
+  before: 清单4.6：显示 **Button1_Click 事件处理程序** 的代码
+  after: 清单 4.6：显示 **Button1_Click 事件处理程序** 的代码

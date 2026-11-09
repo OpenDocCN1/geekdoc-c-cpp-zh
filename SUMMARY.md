@@ -766,6 +766,7 @@
 +   [认知机器人](docs/cognitive-robotics/README.md)
 +   [COM+ 完全指南](docs/com-unleashed/README.md)
 +   [组合地图：计算机图形学与图像处理的高效数据结构](docs/combinatorial-maps-efficient-data-structures-for-computer-gr/README.md)
++   [Comdex .NET 4.0 编程课程套件：涵盖 .NET Framework 4.0、VB 2010、C# 2010 和 ASP.NET 4.0](docs/comdex-net-40-programming-course-kit-covering-net-framework-/README.md)
 +   [动画师喜剧指南](docs/comedy-for-animators/README.md)
 +   [Autodesk Revit 2018 商业设计使用指南](docs/commercial-design-using-autodesk-revit-2018/README.md)
 +   [临床研究常用统计方法及 SAS 示例，第三版](docs/common-statistical-methods-for-clinical-research-with-sas-ex/README.md)
