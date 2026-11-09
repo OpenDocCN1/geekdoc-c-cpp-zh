@@ -701,6 +701,7 @@
 +   [CNC 技巧与诀窍：程序员读本（第一卷）](docs/cnc-tips-and-techniques-a-reader-for-programmers-volume-1/README.md)
 +   [共同创作电子游戏](docs/co-creating-videogames/README.md)
 +   [自我教练走向成功：Flash](docs/coach-yourself-to-success-flash/README.md)
++   [Cocoa 应用教程](docs/cocoa-application-tutorial/README.md)
 +   [Cocoa 基础指南](docs/cocoa-fundamentals-guide/README.md)
 +   [Cocoa 编程开发者手册](docs/cocoa-programming-developers-handbook/README.md)
 +   [Mac OS X Cocoa 编程入门指南 (第4版)](docs/cocoa-programming-for-mac-os-x-4th-edition/README.md)
