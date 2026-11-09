@@ -1,0 +1,31 @@
+# 16. Place the stars
+
+In this step, you'll use the `layout_stars()` function to place all the stars in the right position. First you need to work out the number of gaps you need between the stars. This number will be one more than the number of stars on the screen. For example, if there are two stars on the screen, there will be three gaps. The size of each gap can be worked out by dividing the width of the screen by the total number of gaps. You also need to shuffle the position of the stars so that the red star doesn't appear at the same position every time. Replace `pass` under `def layout_stars(stars_to_layout)` with the code below.
+
+This divides the width of the screen by the number of gaps.
+
+```
+```python
+def layout_stars(stars_to_layout):
+    number_of_gaps = len(stars_to_layout) + 1
+    gap_size = WIDTH / number_of_gaps
+    random.shuffle(stars_to_layout)
+    for index, star in enumerate(stars_to_layout):
+        new_x_pos = (index + 1) * gap_size
+        star.x = new_x_pos
+```
+```
+
+This calculates the number of gaps on the screen.
+
+This shuffles the position of the stars along the x-axis.
+
+This block sets the position of the current star along the x-axis by multiplying the position of the star in the list by the size of the gap.
+
+# 17. Test again
+
+Run the program one more time to see what's changed in the code.
+
+The gap between the edge of the screen and each star is the same size as the gap between the two stars. This gap is represented by the yellow dotted line here.
+
+![](bbox=[0.292, 0.507, 0.951, 0.964])

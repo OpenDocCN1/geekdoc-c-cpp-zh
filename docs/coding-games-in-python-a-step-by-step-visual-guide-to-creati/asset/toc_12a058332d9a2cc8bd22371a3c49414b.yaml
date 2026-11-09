@@ -1,0 +1,698 @@
+level_changes:
+- line: 288
+  before: 2
+  after: 3
+- line: 428
+  before: 2
+  after: 3
+- line: 1050
+  before: 2
+  after: 3
+- line: 1068
+  before: 3
+  after: 4
+- line: 1072
+  before: 2
+  after: 3
+- line: 1090
+  before: 3
+  after: 4
+- line: 1112
+  before: 2
+  after: 3
+- line: 1116
+  before: 3
+  after: 4
+- line: 1468
+  before: 2
+  after: 3
+- line: 1470
+  before: 3
+  after: 4
+- line: 1521
+  before: 2
+  after: 3
+- line: 1523
+  before: 3
+  after: 4
+- line: 1668
+  before: 2
+  after: 3
+- line: 1670
+  before: 3
+  after: 4
+- line: 1697
+  before: 2
+  after: 3
+- line: 1712
+  before: 2
+  after: 3
+- line: 1722
+  before: 2
+  after: 3
+- line: 1759
+  before: 3
+  after: 4
+- line: 1821
+  before: 3
+  after: 4
+- line: 1882
+  before: 3
+  after: 4
+- line: 1895
+  before: 2
+  after: 3
+- line: 1910
+  before: 2
+  after: 3
+- line: 1921
+  before: 2
+  after: 3
+- line: 1933
+  before: 2
+  after: 3
+- line: 1939
+  before: 2
+  after: 3
+- line: 1941
+  before: 3
+  after: 4
+- line: 2146
+  before: 2
+  after: 3
+- line: 2170
+  before: 2
+  after: 3
+- line: 2180
+  before: 2
+  after: 3
+- line: 2192
+  before: 2
+  after: 3
+- line: 2211
+  before: 2
+  after: 3
+- line: 2223
+  before: 2
+  after: 3
+- line: 2234
+  before: 2
+  after: 3
+- line: 2258
+  before: 2
+  after: 3
+- line: 2270
+  before: 2
+  after: 3
+- line: 2290
+  before: 2
+  after: 3
+- line: 2323
+  before: 2
+  after: 3
+- line: 2382
+  before: 2
+  after: 3
+- line: 2655
+  before: 2
+  after: 3
+- line: 2672
+  before: 2
+  after: 3
+- line: 2674
+  before: 3
+  after: 4
+- line: 2684
+  before: 2
+  after: 3
+- line: 2686
+  before: 3
+  after: 4
+- line: 2705
+  before: 2
+  after: 3
+- line: 2945
+  before: 2
+  after: 3
+- line: 2970
+  before: 2
+  after: 3
+- line: 2978
+  before: 2
+  after: 3
+- line: 3000
+  before: 2
+  after: 3
+- line: 3008
+  before: 2
+  after: 3
+- line: 3035
+  before: 2
+  after: 3
+- line: 3049
+  before: 2
+  after: 3
+- line: 3051
+  before: 3
+  after: 4
+- line: 3064
+  before: 2
+  after: 3
+- line: 3795
+  before: 2
+  after: 3
+- line: 3829
+  before: 2
+  after: 3
+- line: 3843
+  before: 2
+  after: 3
+- line: 3928
+  before: 2
+  after: 3
+- line: 3930
+  before: 3
+  after: 4
+- line: 3983
+  before: 2
+  after: 3
+- line: 3985
+  before: 3
+  after: 4
+- line: 4005
+  before: 2
+  after: 3
+- line: 4026
+  before: 2
+  after: 3
+- line: 4039
+  before: 2
+  after: 3
+- line: 4047
+  before: 2
+  after: 3
+- line: 4049
+  before: 3
+  after: 4
+- line: 4053
+  before: 2
+  after: 3
+- line: 4075
+  before: 2
+  after: 3
+- line: 4077
+  before: 3
+  after: 4
+- line: 4089
+  before: 2
+  after: 3
+- line: 4106
+  before: 2
+  after: 3
+- line: 4108
+  before: 3
+  after: 4
+- line: 4114
+  before: 2
+  after: 3
+- line: 4125
+  before: 2
+  after: 3
+- line: 4138
+  before: 2
+  after: 3
+- line: 4144
+  before: 2
+  after: 3
+- line: 4166
+  before: 2
+  after: 3
+- line: 4184
+  before: 2
+  after: 3
+- line: 4186
+  before: 3
+  after: 4
+- line: 4192
+  before: 2
+  after: 3
+- line: 4216
+  before: 2
+  after: 3
+- line: 4234
+  before: 2
+  after: 3
+- line: 4236
+  before: 3
+  after: 4
+- line: 4287
+  before: 2
+  after: 3
+- line: 4289
+  before: 3
+  after: 4
+- line: 4334
+  before: 2
+  after: 3
+- line: 4336
+  before: 3
+  after: 4
+- line: 4733
+  before: 1
+  after: 3
+- line: 4739
+  before: 1
+  after: 3
+- line: 4779
+  before: 1
+  after: 3
+- line: 4795
+  before: 1
+  after: 3
+- line: 4815
+  before: 1
+  after: 3
+- line: 4823
+  before: 1
+  after: 3
+- line: 4866
+  before: 2
+  after: 3
+- line: 4886
+  before: 2
+  after: 3
+- line: 4888
+  before: 3
+  after: 4
+- line: 4894
+  before: 2
+  after: 3
+- line: 5427
+  before: 2
+  after: 3
+- line: 5458
+  before: 2
+  after: 3
+- line: 5481
+  before: 2
+  after: 3
+- line: 5495
+  before: 2
+  after: 3
+- line: 5519
+  before: 2
+  after: 3
+- line: 5540
+  before: 2
+  after: 3
+- line: 5553
+  before: 2
+  after: 3
+- line: 5561
+  before: 2
+  after: 3
+- line: 5586
+  before: 2
+  after: 3
+- line: 5608
+  before: 2
+  after: 3
+- line: 5642
+  before: 2
+  after: 3
+- line: 5676
+  before: 2
+  after: 3
+- line: 5705
+  before: 2
+  after: 3
+- line: 5719
+  before: 2
+  after: 3
+- line: 5733
+  before: 2
+  after: 3
+- line: 5764
+  before: 2
+  after: 3
+- line: 5772
+  before: 2
+  after: 3
+- line: 5800
+  before: 2
+  after: 3
+- line: 5853
+  before: 2
+  after: 3
+- line: 5883
+  before: 2
+  after: 3
+- line: 5925
+  before: 2
+  after: 3
+- line: 5951
+  before: 2
+  after: 3
+- line: 5985
+  before: 2
+  after: 3
+- line: 6017
+  before: 2
+  after: 3
+- line: 6074
+  before: 2
+  after: 3
+- line: 6104
+  before: 2
+  after: 3
+- line: 6116
+  before: 2
+  after: 3
+- line: 6124
+  before: 2
+  after: 3
+- line: 6233
+  before: 2
+  after: 3
+- line: 6252
+  before: 3
+  after: 4
+- line: 6254
+  before: 3
+  after: 4
+- line: 6471
+  before: 2
+  after: 3
+- line: 6483
+  before: 2
+  after: 3
+- line: 6504
+  before: 2
+  after: 3
+- line: 6527
+  before: 2
+  after: 3
+- line: 6551
+  before: 2
+  after: 3
+- line: 6561
+  before: 2
+  after: 3
+- line: 6591
+  before: 2
+  after: 3
+- line: 6612
+  before: 2
+  after: 3
+- line: 6627
+  before: 2
+  after: 3
+- line: 6645
+  before: 2
+  after: 3
+- line: 6660
+  before: 2
+  after: 3
+- line: 6723
+  before: 2
+  after: 3
+- line: 6727
+  before: 3
+  after: 4
+- line: 6756
+  before: 3
+  after: 4
+- line: 6812
+  before: 3
+  after: 4
+- line: 6854
+  before: 3
+  after: 4
+- line: 6964
+  before: 3
+  after: 4
+- line: 7018
+  before: 2
+  after: 4
+- line: 7145
+  before: 2
+  after: 4
+- line: 7343
+  before: 2
+  after: 4
+text_changes:
+- line: 1405
+  before: 1 定义函数
+  after: 1. 定义函数
+- line: 1424
+  before: 2 添加一些参数
+  after: 2. 添加一些参数
+- line: 1895
+  before: 14 没打中？游戏结束！
+  after: 14. 没打中？游戏结束！
+- line: 1910
+  before: 15 导入 Random
+  after: 15. 导入 Random
+- line: 1921
+  before: 16 使用 Random
+  after: 16. 使用 Random
+- line: 1933
+  before: 17 该射击了！
+  after: 17. 该射击了！
+- line: 2146
+  before: 11 使用占位符
+  after: 11. 使用占位符
+- line: 2170
+  before: 12 导入 randint()
+  after: 12. 导入 randint()
+- line: 2180
+  before: 13 放置金币
+  after: 13. 放置金币
+- line: 2192
+  before: 14 运行函数
+  after: 14. 运行函数
+- line: 2270
+  before: 19 单向移动
+  after: 19. 单向移动
+- line: 2290
+  before: 20 收集金币
+  after: 20. 收集金币
+- line: 2323
+  before: 21 游戏完成！
+  after: 21. 游戏完成！
+- line: 2335
+  before: △ 不同的角色
+  after: 不同的角色
+- line: 2345
+  before: △ 额外时间
+  after: 额外时间
+- line: 2357
+  before: △ 更改游戏区域
+  after: 更改游戏区域
+- line: 2361
+  before: △ 更快！
+  after: 更快！
+- line: 2396
+  before: ◁ 圆点与线条
+  after: 圆点与线条
+- line: 2655
+  before: ▷ 创纪录时间
+  after: 创纪录时间
+- line: 2779
+  before: ⚠ 红色警报流程图
+  after: 红色警报流程图
+- line: 3149
+  before: 24 该玩了！
+  after: 24. 该玩了！
+- line: 3581
+  before: 20 正确答案
+  after: 20. 正确答案
+- line: 3603
+  before: 21 回答问题
+  after: 21. 回答问题
+- line: 3622
+  before: 22 点击这些框
+  after: 22. 点击这些框
+- line: 3628
+  before: 23 检查答案
+  after: 23. 检查答案
+- line: 3651
+  before: 24 结束游戏
+  after: 24. 结束游戏
+- line: 3675
+  before: 25 更新计时器
+  after: 25. 更新计时器
+- line: 3694
+  before: 26 安排计时器
+  after: 26. 安排计时器
+- line: 3704
+  before: 27 开始答题吧！
+  after: 27. 开始答题吧！
+- line: 3825
+  before: ◁ 在空中
+  after: 在空中
+- line: 3879
+  before: 5 设置屏幕大小
+  after: 5. 设置屏幕大小
+- line: 3890
+  before: 6 准备气球
+  after: 6. 准备气球
+- line: 3903
+  before: 7 准备障碍物
+  after: 7. 准备障碍物
+- line: 3939
+  before: 8 创建全局变量
+  after: 8. 创建全局变量
+- line: 3967
+  before: 9 管理最高分
+  after: 9. 管理最高分
+- line: 4245
+  before: 22 保持稳定
+  after: 22. 保持稳定
+- line: 4257
+  before: 23 处理与障碍物的碰撞
+  after: 23. 处理与障碍物的碰撞
+- line: 4279
+  before: 24 测试你的代码
+  after: 24. 测试你的代码
+- line: 4295
+  before: 27 找出最高分
+  after: 27. 找出最高分
+- line: 4319
+  before: 28 将高分写入文件
+  after: 28. 将高分写入文件
+- line: 4396
+  before: 29 显示高分
+  after: 29. 显示高分
+- line: 4675
+  before: 12 第一个屏幕
+  after: 12. 第一个屏幕
+- line: 4681
+  before: 13 音乐雕像
+  after: 13. 音乐雕像
+- line: 4733
+  before: 随机数
+  after: 14. 随机数
+- line: 4739
+  before: 动起来吧！
+  after: 15. 动起来吧！
+- line: 4779
+  before: 16 重置角色
+  after: 16. 重置角色
+- line: 4795
+  before: 17 做出动作
+  after: 17. 做出动作
+- line: 4815
+  before: 18 动动脚
+  after: 18. 动动脚
+- line: 4823
+  before: 19 给我看看步骤
+  after: 19. 给我看看步骤
+- line: 4866
+  before: 倒计时
+  after: 20. 倒计时
+- line: 4894
+  before: 显示倒计时
+  after: 21. 显示倒计时
+- line: 4920
+  before: 22 生成移动序列
+  after: 22. 生成移动序列
+- line: 4946
+  before: 23 游戏结束
+  after: 23. 游戏结束
+- line: 4973
+  before: 24 生成测试
+  after: 24. 生成测试
+- line: 4986
+  before: 25 获取下一个动作
+  after: 25. 获取下一个动作
+- line: 5008
+  before: 26 每个动作得分
+  after: 26. 每个动作得分
+- line: 5082
+  before: 28 测试游戏
+  after: 28. 测试游戏
+- line: 5090
+  before: 29 开始音乐
+  after: 29. 开始音乐
+- line: 5101
+  before: 30 停止音乐
+  after: 30. 停止音乐
+- line: 5117
+  before: 31 准备游玩
+  after: 31. 准备游玩
+- line: 5427
+  before: 13 其他函数
+  after: 13. 其他函数
+- line: 5458
+  before: 14 在花园中移动
+  after: 14. 在花园中移动
+- line: 5481
+  before: 15 另一次测试
+  after: 15. 另一次测试
+- line: 5495
+  before: 16 添加一朵花
+  after: 16. 添加一朵花
+- line: 5519
+  before: 17 向花园添加更多花
+  after: 17. 向花园添加更多花
+- line: 5586
+  before: 21 停止浇水
+  after: 21. 停止浇水
+- line: 5608
+  before: 22 精准得分！
+  after: 22. 精准得分！
+- line: 5642
+  before: 23 让一朵花枯萎
+  after: 23. 让一朵花枯萎
+- line: 5676
+  before: 24 不开心的花园！
+  after: 24. 不开心的花园！
+- line: 6471
+  before: 22 安排调用
+  after: 22. 安排调用
+- line: 6483
+  before: 23 唤醒沉睡的龙
+  after: 23. 唤醒沉睡的龙
+- line: 6504
+  before: 24 让龙回去睡觉
+  after: 24. 让龙回去睡觉
+- line: 6527
+  before: 25 让龙蛋重新出现
+  after: 25. 让龙蛋重新出现
+- line: 6551
+  before: 26 测试代码
+  after: 26. 测试代码
+- line: 6561
+  before: 27 检测碰撞
+  after: 27. 检测碰撞
+- line: 6591
+  before: 28 龙碰撞
+  after: 28. 龙碰撞
+- line: 6612
+  before: 29 重置英雄
+  after: 29. 重置英雄
+- line: 6627
+  before: 30 龙蛋碰撞
+  after: 30. 龙蛋碰撞
+- line: 6645
+  before: 31 失去生命
+  after: 31. 失去生命
+- line: 6660
+  before: 32 开始游戏
+  after: 32. 开始游戏
+- line: 6756
+  before: 收集硬币（第 58 页）
+  after: 硬币收集者（第 58 页）
+- line: 6964
+  before: 大型问答（第 98 页）
+  after: 大型问答游戏（第 98 页）
+- line: 7018
+  before: 气球飞行（第116页）
+  after: 气球飞行（第 116 页）
+- line: 7145
+  before: 舞蹈挑战（第136页）
+  after: 舞蹈挑战（第 136 页）
+- line: 7343
+  before: 快乐花园（第154页）
+  after: 快乐花园（第 154 页）

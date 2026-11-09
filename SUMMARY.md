@@ -745,6 +745,7 @@
 +   [渗透测试员编程：构建更好的工具指南](docs/coding-for-penetration-testers-building-better-tools/README.md)
 +   [编码自由：黑客的伦理与美学](docs/coding-freedom-the-ethics-and-aesthetics-of-hacking-the-ethi/README.md)
 +   [趣味编程：通过游戏、动画和移动应用学习 C 编程](docs/coding-fun-learn-c-programming-with-games-animations-and-mob/README.md)
++   [Python 游戏编程：创建专属 Python 游戏的分步可视化指南](docs/coding-games-in-python-a-step-by-step-visual-guide-to-creati/README.md)
 +   [Python 编程：学习 Python 编程领域的初学者指南](docs/coding-in-python-a-comprehensive-beginners-guide-to-learn-th/README.md)
 +   [现实世界中的编程 (Kids Get Coding)](docs/coding-in-the-real-world-kids-get-coding/README.md)
 +   [科学实验室编程：Scratch 3.0（操作代码）](docs/coding-in-the-science-lab-scratch-30-operation-code/README.md)

@@ -1,0 +1,111 @@
+
+### R
+- coding 85–95
+- flowchart 84
+- hacks and tweaks 96–97
+- how it works 84
+- project reference 200–202
+- see also stars
+- replace() function 41
+- return value 40
+- reverse() function 41
+- RGB values 75, 114–15
+- round() function 79
+
+### S
+- scores
+    - high 121, 123, 124, 130–31, 133
+    - keeping 131
+- Scratch 13
+- screen.draw.text() function 75
+- screen size 74, 103, 122
+- scrolling, across screen 128
+- shell window 20
+    - messages in 44
+- Shoot the fruit 48–57
+    - coding 51–56
+    - flowchart 51
+    - hacks and tweaks 57
+    - how it works 51
+    - project reference 198
+    - what happens 50
+- shuffle() function 97
+- Sleeping Dragons 176–195
+    - coding 181–94
+    - flowcharts 180–81
+    - hacks and tweaks 195
+    - how it works 180–81
+    - project reference 216–219
+    - losing lives 193–94
+    - what happens 178–79
+- split() function 130
+- Sprites 52
+- stack 108
+- stars
+    - animating 92
+    - clicking 94
+    - creating 90
+    - drawing 87
+    - placing 91
+- str() function 75
+- strings 30
+    - length 30
+    - splitting 130
+- syntax errors 45
+
+### T
+- time 79
+- time() function 79
+- Time module 15
+- timer
+    - scheduling 112
+    - setting 107
+- trees 128
+- True/False statements 32–34
+- type errors 46
+
+### U
+- update() function
+    - automatic calls 127
+    - Balloon Flight 126, 135
+    - Coin Collector 65, 67
+    - Happy Garden 171, 173
+    - Red Alert 84, 88
+    - Sleeping Dragons 180,
+- upper() function 41
+
+### V
+- values 184
+    - returning 43
+- variables 28–31
+    - creating 28
+    - global 74, 86, 123
+    - local 74
+    - loop 36
+    - naming 28
+    - velocity 170
+
+### W
+- “while” loops 38–39
+- Windows computers 16, 18
+- wireframes 104
+- write() function 132
+
+## Acknowledgments
+
+DK Publishing would like to thank Caroline Hunt for proofreading; Jonathan Burd for the index; Daniel Pope for creating Pygame Zero; Jason Shaw at audionautix.com for the music for Dance Challenge; Chloe Parry, Phoebe Parry, and Joshua Parry for user testing; Aashirwad Jain for code testing; and Isha Sharma for editorial assistance.
+
+Python is copyright © 2001–2018 Python Software Foundation.
+All Rights Reserved.
+
+Ever wondered what it takes to create fantastic computer games? Anybody, from absolute beginners to confident coders, can jump right into **Coding Games in Python®** and start building a whole arcade of perplexing puzzles, creative quizzes, [模糊文字] and more.
+
+Follow the simple step-by-step guides to learn how to write code in the popular programming language Python®.
+
+Improve your programming skills and learn to create, remix, and customize your own games.
+
+## Also from DK
+
+![](img/3188b147f991a51de14dcd2bb4b4c42e_227_0.png)
+
+![](img/3188b147f991a51de14dcd2bb4b4c42e_227_1.png)

@@ -1,0 +1,16 @@
+# # How to build Sleeping Dragons
+
+Grab your shield and sword as you go in search of dragon treasure. Time your movements to snatch the eggs from under the dragons' noses. But be careful, brave knight—if they wake up, you're in for a nasty surprise!
+
+# ## What happens
+
+In this game, the player controls the hero using the four arrow keys. The hero must collect 20 eggs from the dragons' lair to win the game. Each dragon sleeps and wakes up at different times. If the hero is near a dragon when it's awake, the player loses a life. The game ends when the player runs out of lives or collects enough eggs.
+
++   - **Dragons**
++     The three dragons are harmless when they're asleep.
++   - **Eggs**
++     Each dragon has a different number of eggs.
++   - **Hero**
++     The fearless hero has three lives to collect 20 eggs.
+
+![](bbox=[0.55, 0.212, 1.0, 0.992])

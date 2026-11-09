@@ -1,0 +1,290 @@
+
+```python
+garden_happy = True
+fangflower_collision = False
+
+time_elapsed = 0
+start_time = time.time()
+
+cow = Actor("cow")
+cow.pos = 100, 500
+
+flower_list = []
+wilted_list = []
+fangflower_list = []
+fangflower_y_list = {}
+fangflower_x_list = []
+
+def draw():
+    global game_over, time_elapsed, finalized
+    if not game_over:
+        screen.clear()
+        screen.blit("garden", (0, 0))
+        cow.draw()
+        for flower in flower_list:
+            flower.draw()
+        for fangflower in fangflower_list:
+            fangflower.draw()
+        time_elapsed = int(time.time() - start_time)
+        screen.draw.text(
+            "Garden happy for: " +
+            str(time_elapsed) + " seconds",
+            topleft=(10, 10), color="black"
+        )
+    else:
+        if not finalized:
+            cow.draw()
+            screen.draw.text(
+                "Garden happy for: " +
+                str(time_elapsed) + " seconds",
+                topleft=(10, 10), color="black"
+            )
+            if (not garden_happy):
+                screen.draw.text(
+                    "GARDEN UNHAPPY - GAME OVER!", color="black",
+                    topleft=(10, 50)
+                )
+            finalized = True
+        else:
+            screen.draw.text(
+                "FANGFLOWER ATTACK - GAME OVER!", color="black",
+                topleft=(10, 50)
+            )
+            finalized = True
+            return
+
+def new_flower():
+    global flower_list, wilted_list
+    flower_new = Actor("flower")
+    flower_new.pos = randint(50, WIDTH - 50), randint(150, HEIGHT - 100)
+    flower_list.append(flower_new)
+    wilted_list.append("happy")
+    return
+
+def add_flowers():
+    global game_over
+    if not game_over:
+        new_flower()
+        clock.schedule(add_flowers, 4)
+    return
+
+def check_wilted(times):
+    global wilted_list, game_over, garden_happy
+    if wilted_list:
+        for wilted_since in wilted_list:
+            if (not wilted_since == "happy"):
+                time_wilted = int(time.time() - wilted_since)
+                if (time_wilted > 10.0):
+                    garden_happy = False
+                    game_over = True
+                    break
+    return
+
+def wilt_flower():
+    global flower_list, wilted_list, game_over
+    if not game_over:
+        if flower_list:
+            rand_flower = randint(0, len(flower_list) - 1)
+            if (flower_list[rand_flower].image == "flower"):
+                flower_list[rand_flower].image = "flower-wilt"
+                wilted_list[rand_flower] = time.time()
+    clock.schedule(wilt_flower, 3)
+    return
+
+def check_flower_collision():
+    global cow, flower_list, wilted_list
+    index = 0
+    for flower in flower_list:
+        if flower.colliderect(cow):
+            flower.image = "flower-wilt"
+            flower.image = "flower"
+            wilted_list[index] = "happy"
+            break
+        index = index + 1
+    return
+
+def check_fangflower_collision():
+    global cow, fangflower_list, fangflower_collision
+    global game_over
+    for fangflower in fangflower_list:
+        if fangflower.colliderect(cow):
+            cow.image = "zap"
+            game_over = True
+            break
+    return
+
+def velocity():
+    random_dir = randint(0, 1)
+    random_velocity = randint(2, 3)
+    if random_dir == 0:
+        return -random_velocity
+    else:
+        return random_velocity
+
+def mutate():
+    global flower_list, fangflower_list, fangflower_xy_list
+    global fangflower_vx_list, game_over
+    if not game_over and flower_list:
+        rand_flower = randint(0, len(flower_list) - 1)
+        fangflower_pos_x = flower_list[rand_flower].x
+        fangflower_pos_y = flower_list[rand_flower].y
+        del flower_list[rand_flower]
+        fangflower = Actor("fangflower")
+        fangflower.pos = fangflower_pos_x, fangflower_pos_y
+        fangflower_vx = velocity()
+        fangflower_vy = velocity()
+        fangflower = fangflower_list.append(fangflower)
+        fangflower_vx_list.append(fangflower_vx)
+        fangflower_vy_list.append(fangflower_vy)
+        clock.schedule(mutate, 20)
+    return
+
+def update_fangflowers():
+    global fangflower_list, game_over
+    if not game_over:
+        index = 0
+        for fangflower in fangflower_list:
+            fangflower_vx = fangflower_vx_list[index]
+            fangflower_vy = fangflower_vy_list[index]
+            fangflower.x = fangflower.x + fangflower_vx
+            fangflower.y = fangflower.y + fangflower_vy
+            if fangflower.left < 0:
+                fangflower_vx_list[index] = -fangflower_vx
+            if fangflower.right > WIDTH:
+                fangflower_vx_list[index] = -fangflower_vx
+            if fangflower.top < 150:
+                fangflower_vy_list[index] = -fangflower_vy
+            if fangflower.bottom > HEIGHT:
+                fangflower_vy_list[index] = -fangflower_vy
+            index = index + 1
+
+def reset_cow():
+    global game_over
+    if not game_over:
+        cow.image = "cow"
+    return
+
+add_flowers()
+wilt_flower()
+
+def update():
+    global score, game_over, fangflower_collision
+    global flower_list, fangflower_list, time_elapsed
+    fangflower_collision = check_fangflower_collision()
+    check_wilt_times()
+    if not game_over:
+        if keyboard.space:
+            cow.image = "cow-water"
+            clock.schedule(reset_cow, 0.5)
+            check_flower_collision()
+        if keyboard.left and cow.x > 0:
+            cow.x -= 5
+        elif keyboard.right and cow.x < WIDTH:
+            cow.x += 5
+        elif keyboard.up and cow.y > 150:
+            cow.y -= 5
+        elif keyboard.down and cow.y < HEIGHT:
+            cow.y += 5
+        if time_elapsed > 15 and not fangflower_list:
+            mutate()
+        update_fangflowers()
+```
+
+```python
+{
+    "egg_count": 3,
+    "egg_hidden": False,
+    "egg_hide_counter": 0,
+    "sleep_length": 4,
+    "sleep_counter": 0,
+    "wake_counter": 0
+}
+
+lairs = [easy_lair, medium_lair, hard_lair]
+hero = Actor("hero", pos=HERO_START)
+
+def draw():
+    global lairs, eggs_collected, lives, game_complete
+    screen.clear()
+    screen.blit("dungeon", (0, 0))
+    if game_over:
+        screen.draw.text("GAME OVER!", fontsize=60, center=CENTER, color=FONT_COLOR)
+    elif game_complete:
+        screen.draw.text("YOU WON!", fontsize=60, center=CENTER, color=FONT_COLOR)
+    else:
+        hero.draw()
+        draw_lairs(lairs)
+        draw_counters(eggs_collected, lives)
+
+def draw_lairs(lairs_to_draw):
+    for lair in lairs_to_draw:
+        lair["dragon"].draw()
+        if lair["egg_hidden"] is False:
+            lair["eggs"].draw()
+
+def draw_counters(eggs_collected, lives):
+    screen.blit("egg-count", (0, HEIGHT - 30))
+    screen.draw.text(str(eggs_collected),
+                     fontsize=40,
+                     pos=(30, HEIGHT - 30),
+                     color=FONT_COLOR)
+    screen.blit("life-count", (60, HEIGHT - 30))
+    screen.draw.text(str(lives),
+                     fontsize=40,
+                     pos=(90, HEIGHT - 30),
+                     color=FONT_COLOR)
+
+def update():
+    if keyboard.right:
+        herox.x += MOVE_DISTANCE
+        if herox.x > WIDTH:
+            herox.x = WIDTH
+    elif keyboard.left:
+        herox.x -= MOVE_DISTANCE
+        if herox.x < 0:
+            herox.x = 0
+    elif keyboard.down:
+        heroy.y += MOVE_DISTANCE
+        if heroy.y > HEIGHT:
+            heroy.y = HEIGHT
+    elif keyboard.up:
+        heroy.y -= MOVE_DISTANCE
+        if heroy.y < 0:
+            heroy.y = 0
+    check_for_collisions()
+
+
+def update_lairs():
+    global lairs, hero, lives
+    for lair in lairs:
+        if lair["dragon"].image == "dragon-asleep":
+            update_sleeping_dragon(lair)
+        elif lair["dragon"].image == "dragon-awake":
+            update_waking_dragon(lair)
+    update_egg(lair)
+
+
+clock.schedule_interval(update_lairs, 1)
+
+
+def update_sleeping_dragon(lair):
+    if lair["sleep_counter"] >= lair["sleep_length"]:
+        lair["dragon"].image = "dragon-awake"
+        lair["sleep_counter"] = 0
+    else:
+        lair["sleep_counter"] += 1
+
+
+def update_waking_dragon(lair):
+    if lair["wake_counter"] >= DRAGON_WAKE_TIME:
+        lair["dragon"].image = "dragon-asleep"
+        lair["wake_counter"] = 0
+    else:
+        lair["wake_counter"] += 1
+
+
+def update_egg(lair):
+    if lair["egg_hidden"] is True:
+        if lair["egg_hide_counter"] >= EGG_HIDE_TIME:
+```
+
