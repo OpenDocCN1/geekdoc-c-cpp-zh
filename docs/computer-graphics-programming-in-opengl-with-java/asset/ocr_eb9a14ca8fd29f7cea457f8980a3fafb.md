@@ -1,0 +1,5 @@
+![](bbox=[0.14, 0.11, 0.86, 0.61])
+
+**Figure 16.19** Output of Program 16.12, showing recursive depth values of 0, 1, 2, 3, and 4 (left-to-right, top-to-bottom).
+
+At depth zero, only direct textures and lighting are visible (and since the sphere isn't textured, it has no color). At depth one, immediate reflections are visible, and the very first refraction of the sphere has occurred but had little effect because its ray terminates inside of the sphere. At depth two, the results are essentially equivalent to our previous hard-coded output of Program 16.11 (shown in Figure 16.16). At depths three and four, additional reflections are evident in the sphere, and a second reflection of the box can be seen faintly against the inside back of the sphere. Any differences between depth 3 and depth 4 are negligible for this particular scene.

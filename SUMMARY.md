@@ -814,6 +814,7 @@
 +   [C++ OpenGL 计算机图形编程](docs/computer-graphics-programming-in-opengl-with-c/README.md)
 +   [C++ OpenGL 计算机图形学编程（第二版）](docs/computer-graphics-programming-in-opengl-with-c-second-editio/README.md)
 +   [C++ OpenGL 计算机图形学编程，第三版](docs/computer-graphics-programming-in-opengl-with-c-third-edition/README.md)
++   [Java OpenGL 计算机图形学编程](docs/computer-graphics-programming-in-opengl-with-java/README.md)
 +   [计算机图形学：理论与实践](docs/computer-graphics-theory-and-practice/README.md)
 +   [计算机编程与 IT](docs/computer-programming-and-it/README.md)
 +   [计算机编程与软件开发：C#、Python、JavaScript、React、Angular和TypeScript编码](docs/computer-programming-and-software-development-coding-with-c-/README.md)

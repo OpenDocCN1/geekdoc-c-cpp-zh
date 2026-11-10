@@ -1,0 +1,38 @@
+```
+```cpp
+void main(void)
+{
+    tc = position;                               // texture coordinates are simply the vertex coordinates
+    mat4 rot_mat = mat4(v_matrix);               // removes translation from view matrix
+    gl_Position = p_matrix * rot_mat * vec4(position, 1.0);
+}
+```
+```
+
+# *Fragment shader*
+
+```
+```glsl
+#version 430
+in vec3 tc;
+out vec4 fragColor;
+
+uniform mat4 v_matrix;
+uniform mat4 p_matrix;
+layout (binding = 0) uniform samplerCube samp;
+
+void main(void)
+{ fragColor = texture(samp,tc);
+}
+```
+```
+
+# # 9.4 ENVIRONMENT MAPPING
+
+When we looked at lighting and materials, we considered the “shininess” of objects. However, we never modeled *very* shiny objects, such as a mirror or something made out of chrome. Such objects don’t just have small specular highlights; they actually reflect their surroundings. When we look at them, we see things in the room, or sometimes even our own reflection. The ADS lighting model doesn’t provide a way of simulating this effect.
+
+Texture cube maps, however, offer a relatively simple way to simulate reflective surfaces—at least partially. The trick is to *use the cube map to texture the reflective object itself*! Doing this so that it appears realistic requires finding texture coordinates that correspond to the part of the surrounding environment we should see reflected in the object from our vantage point.
+
+Figure 9.9 illustrates the strategy of using a combination of the view vector and the normal vector to calculate a *reflection vector* which is then used to look up a texel from the cube map. The reflection vector can thus be used to access the texture cube map directly. When the cube map performs this function, it is referred to as an *environment map*.
+
+1 This same trick is also possible in those cases where a skydome is being used instead of a skybox, by texturing the reflective object with the skydome texture image.

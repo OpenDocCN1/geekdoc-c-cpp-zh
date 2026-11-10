@@ -1,0 +1,39 @@
+```
+```glsl
+    tes_out.gl_InvocationID[] = tcs_gl_InvocationID[];
+    gl_out[gl_InvocationID].gl_Position = gl_in[gl_InvocationID].gl_Position;
+}
+```
+```
+
+# ### Tessellation Evaluation Shader
+
+```
+```glsl
+#version 400
+in vec2 tes_out[];
+out vec2 tes_out;
+
+void main (void)
+{
+    // map the texture coordinates onto the sub-grid specified by the incoming control points
+    vec2 tc = vec2(tes_out[0].x + gl_TessCoord.x / 64.0, tes_out[0].y + (1.0 - gl_TessCoord.y) / 64.0);
+
+    // map the tessellated grid onto the sub-grid specified by the incoming control points
+    vec4 tessellatedPoint = vec4(gl_in[0].gl_Position.x + gl_TessCoord.x / 64.0, 0.0,
+                                 gl_in[0].gl_Position.z + gl_TessCoord.y / 64.0, 1.0);
+
+    // add the height from the height map to the vertex:
+    tessellatedPoint.y += (texture(tex_height, tc).r) / 40.0;
+
+    gl_Position = mvp * tessellatedPoint;
+    tes_out = tc;
+}
+```
+```
+
+Now that we have achieved height mapping, we can work on improving it and incorporating lighting. One challenge is that our vertices do not yet have normal vectors associated with them. Another challenge is that simply using the texture image as a height map has produced an overly “jagged” result—in this case because not all grayscale variation in the texture image is due to height. For this particular texture map, it so happens that Hastings-Trew has already produced an improved height map that we can use [HT12]. It is shown in Figure 12.8 (on the left).
+
+To create normals, we could compute them on the fly, by generating the heights of neighboring vertices (or neighboring texels in the height map), building vectors connecting them, and using a cross
+
+![](bbox=[0.489, 0.646, 0.874, 0.917])

@@ -1,0 +1,35 @@
+
+## W
+
+- Vertex shader, specifying in, 69
+- Vertex Buffer Object (VBO), 64
+- Vertex displacement, 477, 485
+- View-Master®, 468, 474
+- View matrix, 70, 470, 473
+- View space. See Eye space
+- Viewing transform matrix, 52
+- Visual Studio, 498
+
+- Water, 355–384
+  - animating, 379–381
+  - fog and fresnel effects, 374–378
+  - reflection and refraction
+    - cameras, 365
+  - surface waves, 371–374
+  - underwater caustics, 381–383
+- Water caustics, 381–383
+- Wavefront OBJ, 149
+- Whitted, T., 388
+- Winding order, 101, 102, 279, 304
+- WiredXDisplay, 483–484
+- Wireframe rendering, 18
+- Work group, 394–399
+- World space, 49–51
+- Wood, 340–343
+- Wrapping, 124–126
+
+## Z
+
+- Z-buffer algorithm, 11, 94
+- Z-buffer, 20, 104, 194, 196–197, 316
+- Z-fighting, 94–95

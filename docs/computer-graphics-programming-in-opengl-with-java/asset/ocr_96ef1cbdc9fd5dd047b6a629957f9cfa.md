@@ -1,0 +1,34 @@
++   - the position where we wish to move the box, as a vec3
++   - X, Y, and Z rotations around the box origin, as floats
+
+Next, we build translation and rotation transform matrices using the buildTranslate() and buildRotate() functions described back in Section 3.10. The trick is then to use the inverses of these matrices to modify the start point and direction of the ray; specifically, we rotate the ray’s direction and rotate/translate the ray’s starting point. The computations then proceed as before to generate the collision distance (and of course determining whether the ray collides with the box at all). Once the collision distance is determined, it is then used to compute the world collision point as before, based on the actual ray start point and direction. Note that the surface normal also needs to be rotated based on the rotation matrix (actually the inverse-transpose of the rotation matrix, as we learned in Chapter 7).
+
+The changes to intersect_box_object() are shown in Program 16.5 (highlighted), along with an example set of box parameters for its shape, position, and orientation. The output is shown in Figure 16.6.
+
+# Program 16.5 Non-Axis-Aligned Box Intersection
+
+Compute Shader
+
+```
+...
+vec3 box_mins = vec3(-0.5, -0.5, -1.0);
+vec3 box_maxs = vec3(0.5, 0.5, 1.0);
+vec3 box_pos = vec3(-1, -0.5, 1.0);
+
+const float DEG_TO_RAD = 3.1415926535 / 180.0;
+float box_xrot = 10.0;
+float box_yrot = 70.0;
+float box_zrot = 55.0;
+
+Collision intersect_box_object(Ray r)
+{
+    // Compute the box's local-space to world-space transform matrices and their inverses
+    mat4 local_to_worldT = buildTranslate(box_pos.x, box_pos.y, box_pos.z);
+    mat4 local_to_worldR =
+        buildRotateY(DEG_TO_RAD * box_yrot)
+        * buildRotateX(DEG_TO_RAD * box_xrot)
+        * buildRotateZ(DEG_TO_RAD * box_zrot);
+    mat4 local_to_worldTR = local_to_worldT * local_to_worldR;
+    mat4 world_to_localTR = inverse(local_to_worldTR);
+    mat4 world_to_localR = inverse(local_to_worldR);
+```

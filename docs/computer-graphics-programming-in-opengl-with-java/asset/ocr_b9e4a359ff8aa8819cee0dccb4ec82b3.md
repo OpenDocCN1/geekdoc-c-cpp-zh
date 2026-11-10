@@ -1,0 +1,15 @@
+![](bbox=[0.141, 0.11, 0.856, 0.389])
+
+**Figure 15.2**  
+Geometry for water top surface and bottom floor, camera above surface (left) and below surface (right).
+
+# 15.2 ADDING SURFACE REFLECTION AND REFRACTION
+
+Water is complex, and making a completely realistic simulation would require adding the many reflections and refractions that are usually visible in a body of water. A further complication is that different effects are needed depending on whether the camera is above or below the water surface.
+
+We will start by focusing on the first case: the camera above the water surface. In Figure 15.2 (the left figure), we can see that so far we have (1) a solid blue surface, (2) a skybox above the water, and (3) lighting on the surface. To start making this look more like water, Program 15.3 adds the following two items:
+
++   - *reflection*, so that objects above the water (such as the skybox) are reflected on the water’s surface
++   - *refraction* of the view through the top surface to the bottom floor, so that items under the water (such as the checkerboard floor) are visible when looking down from above the surface of the water
+
+We will accomplish these by rendering the scene to multiple frame buffers, from various vantage points, and then use the resulting frame buffers as textures

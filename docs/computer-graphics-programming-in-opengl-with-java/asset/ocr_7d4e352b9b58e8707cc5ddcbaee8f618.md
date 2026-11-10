@@ -1,0 +1,13 @@
+# ### 3.1 3D COORDINATE SYSTEMS
+
+3D space is generally represented with three axes: X, Y, and Z. The three axes can be arranged into two configurations, *right-handed* or *left-handed*. (The name derives from the orientation of the axes as if constructed by pointing the thumb and first two fingers of the right versus the left hand, at right angles.)
+
+![](bbox=[0.2, 0.22, 0.8, 0.38])
+
+It is important to know which coordinate system your graphics programming environment uses. For example, the majority of coordinate systems in OpenGL are right-handed, whereas in Direct3D the majority are left-handed. Throughout this book, we will assume a right-handed configuration unless otherwise stated.
+
+# ### 3.2 POINTS
+
+Points in 3D space can be specified by listing the X, Y, Z values, using a notation such as (2, 8, -3). However, it turns out to be much more useful to specify points using *homogeneous* notation, a representation first described in the early 1800s. Points in homogeneous notation contain four values, the first three corresponding to X, Y, and Z, and the fourth, W, is always a fixed nonzero value, usually 1. Thus, we represent this point as (2, 8, -3, 1). As we will see shortly, homogeneous notation will make many of our graphics computations more efficient.
+
+The appropriate GLSL data type for storing points in homogeneous 3D notation is vec4 (“vec” refers to *vector*, but it can also be used for a point). The JOML library includes classes appropriate for creating and storing three-element and four-element (homogeneous) points in the Java application, called Vector3f and

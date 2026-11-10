@@ -1,0 +1,46 @@
+```
+    else if (index==3) return texture(sampMarble, tc).xyz;
+    else return vec3(1,7,7);  // return pink if index is for an object other than the plane or box
+}
+
+...
+Collision intersect_plane_object(Ray r, Object o)
+{
+    mat4 local_to_worldT = BuildTranslate((o.position).x, (o.position).y, (o.position).z);
+    mat4 local_to_worldR =
+        BuildRotateY((DEG_TO_RAD*o.yrot) * BuildRotateX(DEG_TO_RAD*o.xrot) *
+                                              BuildRotateZ(DEG_TO_RAD* o.zrot);
+}
+// similar object references in other intersection functions also changed to "o.position", "o.bmins", etc.
+//-----------------------------------------------------------------------------
+// Returns the closest collision of a ray
+// object_index == -1 if no collision
+// object_index == 0 if collision with room box
+// object_index > 0 if collision with another object
+//-----------------------------------------------------------------------------
+Collision get_closest_collision(Ray r)
+{  float closest = 3.402823466e+38;  // initialize to a very large number (max value of a float)
+   Collision closest_collision;
+   closest_collision.object_index = -1;
+
+   for (int i=0; i<numObjects; i++)
+   {  Collision c;
+      if (objects[i].type == 0)
+      {  c = intersect_room_box_object(r);
+         if (c.t <= 0) continue;             // ray didn't collide with this skybox object
+      }
+      else if (objects[i].type == 1)
+      {  c = intersect_sphere_object(r, objects[i]);
+         if (c.t <= 0) continue;             // ray didn't collide with this sphere object
+      }
+      else if (objects[i].type == 2)
+      {  c = intersect_box_object(r, objects[i]);
+         if (c.t <= 0) continue;             // ray didn't collide with this box object
+      }
+      else if (objects[i].type == 3)
+      {  c = intersect_plane_object(r, objects[i]);
+         if (c.t <= 0) continue;             // ray didn't collide with this plane object
+      }
+      else continue;        // in case we have any non-collidable object types
+      if (c.t < closest)    // we found a collision, now check if it is closer than the current closest
+```
