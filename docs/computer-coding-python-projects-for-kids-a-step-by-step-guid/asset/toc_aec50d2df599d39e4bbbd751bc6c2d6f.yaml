@@ -1,0 +1,353 @@
+level_changes:
+- line: 983
+  before: 2
+  after: 3
+- line: 987
+  before: 2
+  after: 3
+- line: 991
+  before: 2
+  after: 3
+- line: 995
+  before: 2
+  after: 3
+- line: 1003
+  before: 2
+  after: 3
+- line: 1057
+  before: 2
+  after: 3
+- line: 1076
+  before: 2
+  after: 3
+- line: 1094
+  before: 2
+  after: 3
+- line: 1116
+  before: 2
+  after: 3
+- line: 2475
+  before: 2
+  after: 3
+- line: 2481
+  before: 2
+  after: 3
+- line: 2497
+  before: 2
+  after: 3
+- line: 2503
+  before: 2
+  after: 3
+- line: 2514
+  before: 1
+  after: 4
+- line: 2521
+  before: 2
+  after: 4
+- line: 2530
+  before: 1
+  after: 4
+- line: 2555
+  before: 1
+  after: 4
+- line: 2565
+  before: 1
+  after: 4
+- line: 2579
+  before: 1
+  after: 4
+- line: 2607
+  before: 1
+  after: 4
+- line: 2657
+  before: 1
+  after: 4
+- line: 2665
+  before: 1
+  after: 4
+- line: 2682
+  before: 1
+  after: 4
+- line: 2707
+  before: 1
+  after: 4
+- line: 3199
+  before: 1
+  after: 4
+- line: 3244
+  before: 1
+  after: 4
+- line: 3270
+  before: 1
+  after: 4
+- line: 5538
+  before: 2
+  after: 3
+- line: 6857
+  before: 1
+  after: 2
+- line: 6861
+  before: 2
+  after: 3
+- line: 6871
+  before: 2
+  after: 3
+- line: 6877
+  before: 2
+  after: 3
+- line: 6889
+  before: 2
+  after: 3
+- line: 7013
+  before: 2
+  after: 3
+- line: 7056
+  before: 2
+  after: 3
+- line: 7074
+  before: 2
+  after: 3
+- line: 7087
+  before: 2
+  after: 3
+- line: 7105
+  before: 2
+  after: 3
+- line: 7126
+  before: 2
+  after: 3
+- line: 7179
+  before: 2
+  after: 3
+- line: 7183
+  before: 3
+  after: 4
+- line: 7185
+  before: 3
+  after: 4
+- line: 7191
+  before: 3
+  after: 4
+- line: 7195
+  before: 3
+  after: 4
+- line: 7317
+  before: 1
+  after: 3
+- line: 7323
+  before: 1
+  after: 3
+- line: 7329
+  before: 1
+  after: 3
+- line: 7333
+  before: 1
+  after: 3
+- line: 7344
+  before: 1
+  after: 3
+- line: 7348
+  before: 1
+  after: 3
+- line: 7352
+  before: 1
+  after: 3
+- line: 7360
+  before: 1
+  after: 3
+- line: 7407
+  before: 1
+  after: 3
+text_changes:
+- line: 559
+  before: 1 多个变量
+  after: 1. 多个变量
+- line: 574
+  before: 2 将列表放入变量
+  after: 2. 将列表放入变量
+- line: 589
+  before: 3 从列表中获取条目
+  after: 3. 从列表中获取条目
+- line: 1057
+  before: 10 显示得分
+  after: 10. 显示得分
+- line: 1076
+  before: 11 忽略大小写
+  after: 11. 忽略大小写
+- line: 1094
+  before: 12 再次测试代码
+  after: 12. 再次测试代码
+- line: 1116
+  before: 13 给玩家更多机会
+  after: 13. 给玩家更多机会
+- line: 2677
+  before: 2 添加手臂
+  after: 2. 添加手臂
+- line: 3128
+  before: 6 给它上色！
+  after: 6. 给它上色！
+- line: 3148
+  before: 7 运行项目
+  after: 7. 运行项目
+- line: 3154
+  before: 8 画不同的星星
+  after: 8. 画不同的星星
+- line: 3778
+  before: 5 创建画布
+  after: 5. 创建画布
+- line: 3800
+  before: 6 运行代码
+  after: 6. 运行代码
+- line: 3810
+  before: 7 读取文本文件
+  after: 7. 读取文本文件
+- line: 3825
+  before: 8 打开文本文件
+  after: 8. 打开文本文件
+- line: 3837
+  before: 9 开始循环
+  after: 9. 开始循环
+- line: 3850
+  before: 10 移除不可见字符
+  after: 10. 移除不可见字符
+- line: 3864
+  before: 11 存储事件详细信息
+  after: 11. 存储事件详细信息
+- line: 3902
+  before: 12 使用 datetime
+  after: 12. 使用 datetime
+- line: 3916
+  before: 13 将事件添加到列表
+  after: 13. 将事件添加到列表
+- line: 3947
+  before: 14 计算天数
+  after: 14. 计算天数
+- line: 3964
+  before: 15 拆分字符串
+  after: 15. 拆分字符串
+- line: 3976
+  before: 16 返回天数
+  after: 16. 返回天数
+- line: 3992
+  before: 17 获取事件
+  after: 17. 获取事件
+- line: 4010
+  before: 18 显示结果
+  after: 18. 显示结果
+- line: 4039
+  before: 19 测试程序
+  after: 19. 测试程序
+- line: 4244
+  before: 9 逐行处理
+  after: 9. 逐行处理
+- line: 4266
+  before: 10 向字典添加数据
+  after: 10. 向字典添加数据
+- line: 4285
+  before: 11 文件输出
+  after: 11. 文件输出
+- line: 4347
+  before: 15 知道答案吗？
+  after: 15. 知道答案吗？
+- line: 4361
+  before: 16 显示正确答案
+  after: 16. 显示正确答案
+- line: 4384
+  before: 17 测试一下
+  after: 17. 测试一下
+- line: 4390
+  before: 18 教它
+  after: 18. 教它
+- line: 4416
+  before: 19 运行它
+  after: 19. 运行它
+- line: 5538
+  before: 编写 SQL 查询
+  after: 编写游戏
+- line: 5556
+  before: 3 创建毛毛虫海龟
+  after: 3. 创建毛毛虫海龟
+- line: 5575
+  before: 4 创建叶子海龟
+  after: 4. 创建叶子海龟
+- line: 5599
+  before: 5 添加文本
+  after: 5. 添加文本
+- line: 5628
+  before: 6 占位函数
+  after: 6. 占位函数
+- line: 5654
+  before: 7 游戏启动
+  after: 7. 游戏启动
+- line: 5686
+  before: 8 动起来
+  after: 8. 动起来
+- line: 5717
+  before: 9 绑定并监听
+  after: 9. 绑定并监听
+- line: 5729
+  before: 10 测试代码
+  after: 10. 测试代码
+- line: 5790
+  before: 13 显示得分
+  after: 13. 显示得分
+- line: 5809
+  before: 14 新叶子
+  after: 14. 新叶子
+- line: 5827
+  before: 15 让毛毛虫转向
+  after: 15. 让毛毛虫转向
+- line: 5856
+  before: 16 监听按键
+  after: 16. 监听按键
+- line: 6075
+  before: 6 创建圆形
+  after: 6. 创建圆形
+- line: 6124
+  before: 7 显示圆形
+  after: 7. 显示圆形
+- line: 6132
+  before: 8 添加一些矩形
+  after: 8. 添加一些矩形
+- line: 6152
+  before: 9 添加一些正方形
+  after: 9. 添加一些正方形
+- line: 6172
+  before: 10 打乱形状
+  after: 10. 打乱形状
+- line: 6192
+  before: 11 设置变量
+  after: 11. 设置变量
+- line: 6212
+  before: 12 添加延迟
+  after: 12. 添加延迟
+- line: 6286
+  before: 18 这是有效的抢牌吗？
+  after: 18. 这是有效的抢牌吗？
+- line: 6339
+  before: 19 测试你的代码
+  after: 19. 测试你的代码
+- line: 6955
+  before: 5 设置鸡蛋
+  after: 5. 设置鸡蛋
+- line: 6979
+  before: 6 设置接蛋器
+  after: 6. 设置接蛋器
+- line: 7056
+  before: 10 哎呀——鸡蛋掉了！
+  after: 10. 哎呀——鸡蛋掉了！
+- line: 7074
+  before: 11 失去一条生命
+  after: 11. 失去一条生命
+- line: 7087
+  before: 12 检查是否接住
+  after: 12. 检查是否接住
+- line: 7105
+  before: 13 增加分数
+  after: 13. 增加分数
+- line: 7130
+  before: 14 设置控制
+  after: 14. 设置控制
+- line: 7163
+  before: 15 启动游戏
+  after: 15. 启动游戏

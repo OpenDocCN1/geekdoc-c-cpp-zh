@@ -1,0 +1,346 @@
+
+- integer
+  - modular, 115–117
+  - prime, 120–121
+- number field, 38, 111, 137
+- number_field, 137
+- NumberField, 38, 108, 137
+- numer, 96
+- numerator, 143
+- numerical approximation, 8, 47, 125, 140, 246, 279
+  - differential equation, 318–323
+  - equation solving, 257
+  - integral, 305–316
+  - limits, 32
+  - solutions of equations, 25–26, 140, 200, 241, 278
+- numerical sequence, 49
+  - uniformly distributed, 81
+- numerical_approx, 8, 11, 22, 105
+- NumPy, 86, 275, 298
+
+- object, 95
+- object-oriented programming, 95–98
+- objective function, 391
+- ode_contrib, 218
+- ode_solver, 84, 319
+- odeint, 84, 90, 417
+- one, 156
+- oo, 11
+- optimisation, 389–401
+- or, 106
+- order
+  - additive, 116
+  - multiplicative, 116
+- order, 363
+- order of variables, 180
+- OrderedSetPartitions, 343
+- osculating circle, 90
+- O’Shea, Donal, 179
+
+- p-adic number, 139
+- Padé approximant, 145
+- pairing, 386
+- PALP, 353
+- parametric curve, 78, 88, 90, 195
+  - in 3D, 93
+- parametric surface, 91
+- parametric_plot, 78, 90
+- parametrisation, 88, 195
+- parent, 99, 101, 129, 133
+- parent, 116
+- PARI/GP, 5, 6, 98, 275, 311, 314, 315
+- partial differential equation, 216
+- partial fraction decomposition, 19, 226
+- partial-fraction, 19, 20, 226
+- partial fraction decomposition, 143
+- pass, 42
+- periphery, 374
+- Permutations, 380
+
+- π (Archimedes’ constant), 11
+  - computation, see computation of π
+- piecewise, 77
+- pivot_rows, 162, 167
+- pivots, 162, 167
+- plot, 15, 30, 75, 90, 220, 259, 306, 372
+- plot (differential equation), 220
+- plot3d, 15, 91
+- plot_histogram, 79, 90
+- plot_points, 75
+- plot_vector_field, 86
+- point, 81
+- point cloud, 81
+- points, 81, 90
+- polar coordinates, 36, 78
+- polar_plot, 78, 90
+- polygon, 128
+- polygon, 90
+- polymorphism, 97
+- polynomial, 127–153, 179–213
+  - Chebyshev, 135
+- polynomial, 181, 182
+- polynomial representation
+  - dense, 152
+  - recursive, 130, 181
+  - sparse, 152
+- polynomial ring, 128, 179, 275
+  - with infinite number of variables, 182
+- polynomial root, 257
+- polynomial_sequence, 191
+- PolynomialRing, 103, 128, 179, 181
+- pop, 66, 72
+- power, 8
+- power method, 291–293, 302–304
+- power series, 27, 30, 108
+  - expansion, 30
+- PowerSeriesRing, 108, 143
+- prec, 148
+- precision
+  - arbitrary vs fixed, 237, 255
+  - floating-point number, 235–238, 240, 241, 243
+  - loss of, 240
+- numerical computation, 200
+- series, 148
+- predator-prey model, 86
+- primality, see number, prime
+- primary normal form, 177
+- prime_range, 122
+- print, 42, 54, 58
+- probability, 368
+- procedure, 43, 52
+- prod, 63
+- product, 63
+  - of graphs, 373, 378
+- programming, 41–73, 343–349
+  - method, 43
+- projection, 194
+
+- pseudo-division, 134
+- pseudo-primality, 120
+- pseudo_divrem, 134
+- public server, 4–6
+- Python
+  - function, 43, 52
+    - anonymous, 61
+  - variable, 12–13
+  - version 3, 41
+- q-factorial, 446
+- QQ, 103, 255, 275
+- QQbar, 103, 140, 185, 275
+- QUADPACK, 313
+- quadratic residue, 123
+- quadrature rule, 307
+- quit, 42
+- quo, 136, 137, 190
+- quo_rem, 134, 183
+- quotient
+  - numerical, see arithmetic operations
+  - polynomial ring, 188, 202
+    - Gröbner, 116
+- quotient, 190, 192
+- radical, 139, 190
+- radical of an ideal, 190
+- radius, 374
+- radius of a graph, 374
+- Ramanujan, Srinivasa, 32
+- random, 81
+- random walk, 81
+- random_element, 131, 380
+- random_matrix, 156, 157
+- randrange, 79
+- range, 46
+- range, 46, 345
+- rank, 162
+  - matrix, 167, 170
+  - profile, 162, 167
+- rank, 167
+- Rational, 95, 96
+- rational
+  - number, 104
+- rational function, 19, 134, 142–143
+- rational reconstruction, 118, 125, 143, 144
+- rational_argument, 186
+- rational_reconstruct, 143, 145
+- rational_reconstruction, 118
+- RationalField, 103
+- raw_input, 59
+- RBF, 248
+- RDF, 132, 237, 255, 258, 275
+- real, 105
+- real_root_intervals, 139
+- real_roots, 139, 275, 277
+- RealBallField, 248
+- RealField, 103, 237, 255, 258
+
+- RealIntervalField, 247, 258
+- Reals, 237, 258
+- rectangle rule, 307
+- recurrence, 45
+- recurrence relation, 228–232
+- recurrent sequence, 47–55, 136
+  - drawing, 82
+  - numerical stability, 241
+- recurrent series, 147
+- recursivity, 54
+- reduce
+  - list, 63
+  - modulo, 136, 143, 189, 190
+- reduce_trig, 21
+- reduced echelon form, 164
+  - transformation to, 164
+- reduction of endomorphism, 162
+- regular expression, 69
+- remove, 67
+- representation of polynomials
+  - factored, 110
+  - sparse, 181
+- reset, 43, 45
+- resolution
+  - polynomial systems, 184
+- resources, 4
+- restore, 13
+- resultant, 140, 196
+- resultant, 139, 184, 193
+- return, 42, 47, 53, 267, 347
+- reverse, 65, 130, 131, 143
+- rewriting, 205
+- rhs, 24, 229
+- RIF, 140, 247, 258, 275
+- right_kernel, 36, 37, 162, 168, 411
+- right_solve, 24
+- root
+  - n-th root, 9, 21
+  - of a polynomial, 139, 240, 265
+  - isolation, 264
+- root_field, 259
+- roots, 24, 25, 139, 198, 257, 262, 263, 277
+- rounding, 256, 240, 245
+- row_space, 87
+- RR, 103, 275
+- RSA (crypto-system), 117
+- rsolve, 231
+- Runge's phenomenon, 307
+- Runge-Kutta
+  - method, 319
+- Sage developers, 6
+- Sage history, 6
+- sage-support, iii
+- sage.: 7
+- sagemath.org, 4
+- SageMathCloud, see CoCalc, 4
+- SageMathInc, 4
+
+- save, 76
+- scalar product, 35
+- SciPy, 84, 85, 277, 278, 298, 300, 303, 304, 417
+- sequence, see tuple
+  - numerical, 28
+  - Syracuse, 51
+- series, 31, 243
+  - alternating, 49
+  - expansion, 150
+- series, 30, 108
+- Set, 71, 442
+  - set, 71
+- set_binary, 392
+- set_immutable, 160
+- set_integer, 392
+- set_max, 392
+- set_min, 392
+- set_objective, 391
+- set_real, 392
+- shortest path (graph), 374
+- shortest_path, 374
+- show, 76, 91, 369, 372, 387
+- significand, 235–244
+- similarity (matrix), 169, 173, 178
+- similarity invariant, 170, 172, 174
+- simplification, 11, 21, 22, 110
+- simplify, 11, 29, 109
+- simplify_factorial, 21
+- simplify_full, 21
+- simplify_rational, 20, 21, 335
+- simplify_rectform, 21
+- simplify_trig, 20, 21, 23
+- sin, 21, 246
+- Singular, 5, 6, 181, 201
+- singular value decomposition, 286, 288, 289
+- size, 363
+- SL, 157
+- small_roots, 132
+- Smith normal form, 166
+- smith_form, 162
+- solve, 23, 24, 88, 184, 222, 391, 392
+- solve_left, 36, 37, 162, 168
+- solve_right, 36, 37, 162, 168
+- solving
+  - linear programming, 391
+  - linear systems, 35
+  - numerical equations, 23–26, 257–278
+- sort, 65
+- sorted, 66
+- sorting, 65
+- split, 68
+- spreadsheet, 80
+- sqrt, 21, 22, 38
+- squarefree_decomposition, 139
+- SR, 103, 152, 260
+- SR.var, see var
+- strange, 46
+
+- SSP (subset sum problem), 394
+- stable (graph), see independent set
+- stack, 156
+- staircase, 205, 206
+- StandardTableaux, 343
+- Stein, William, 6
+- steiner_tree, 377
+- str, 68, 103
+- study of a function, 21
+- Sturm sequence, 264
+- subgraph, 373
+- subgraph_search, 368, 377, 379, 385
+- submatrix, 159
+- submatrix, 156
+- SubMultiset, 429
+- subs, 18, 131, 181, 183
+- subset sum, 394
+- Subsets, 429, 448
+- substitute, 18
+- substitute_function, 424
+- sum, 27, 30, 63, 345
+  - summation
+    - compensated, 244
+    - programming, 48
+    - symbolic, 27, 30
+- SVD, see singular value decomposition
+- swap_columns, 162
+- swap_rows, 162
+- srange, 46
+- symbolic expression, 10–14, 17, 105, 108–109, 112, 128, 152
+  - function, 19
+  - test of zero, 22
+- symbolic function, 19, 229, 405
+- symbolic variable, 13–14
+- SymPy, 231
+- system of equations, 35, 179, 389
+  - differential, 226
+- tabulation, 11
+- Tachyon, 91
+- tangent (to a curve), 270
+- taylor, 39, 145, 405
+- Taylor expansion, 30, 108
+- Tennenbaum, Gerald, 82
+- test of zero, 22
+- test_poly, 180
+- text, 90
+- theorem
+  - Borsuk-Ulam, 367
+  - Cayley-Hamilton, 173
+  - Chinese remainder, 119
+  - theorem
+    - fundamental (of algebra), 259
+  - Kuratowski's, 366
+  - Menger's, 375
+  - Pocklington's, 121
+  - Schwarz', 33

@@ -1,0 +1,116 @@
++   Screen Set 142–55
++   - flowchart 143
++   - hacks and tweaks 153–55
++   - how it works 143
++   - what happens 142
++   Secret Messages 130–41
++   - flowchart 132
++   - GUI 133–34
++   - hacks and tweaks 138–41
++   - how it works 131–32
++   - what happens 131
++   setheading function 81, 164
++   shell window 18
++   - messages in 48
++   shuffle function 169, 173, 183
++   simpledialog widget 126
++   sleep function 169
++   Snap 168–79
++   - coding 174–76
++   - flowchart 169
++   - GUI 170
++   - hacks and tweaks 177–79
++   - how it works 169
++   - what happens 168
++   socket module 58
++   sort function 119
++   sounds, playing 199
++   speed function 97
++   spirals, drawing 82–89
++   squares, drawing 78, 172
++   stamp function 106
++   Standard Library 14, 58
+
++   Starry Night 90–97
++   - drawing stars 92–94
++   - flowchart 92
++   - hacks and tweaks 97
++   - how it works 92
++   - what happens 90–91
++   start_game function 161, 162, 164, 166
++   statistics module 58
++   str function 40, 55
++   string module 53
++   strings 26, 55
++   - empty 173
++   - length 26, 136
++   - repeating 65
++   - splitting 116
++   symbols, adding in game 183
++   syntax errors 48, 49
++   
++   T
++   text, restyling 119
++   text files 111, 112–14
++   time function 59
++   time module 169
++   timing 190
++   Tinker module 58, 111–13, 121
++   - coordinates 145
++   Egg Catcher 191, 193, 195, 199
++   Matchmaker 181–82, 184–87
++   Snap 168–70, 173, 176–77
+
++   toggling 146, 150–51
++   tuple, drawing 149
++   trial and error 81
++   True/False statements 28–30
++   Animal Quiz 42–43
++   Nine Lives 63
++   Turtle Graphics 72–107
++   - see also Kaleido-spiral; Mutant Rainbow; Robot Builder; Starry Night
++   “turtle” name 73
++   turtles
++   Caterpillar 158–67
++   - coordinates 76
++   - drawing with 73
++   - invisible 78, 96
++   Kaleido-spiral 82–89
++   - keeping inside limits 101, 103
++   Mutant Rainbow 98–107
++   Robot Builder 72–81
++   - runaway 101
++   - speed 75
++   - standard mode 74
++   Starry Night 90–97
++   - tweaks see hacks and tweaks
++   type errors 50
++   
++   U
++   Unicode characters 61
++   upper function 45
+
++   V
++   values, returning 47
++   variables 24–27
++   - creating 24
++   - flag 150
++   - global 174
++   - local 174
++   - loop 32
++   - naming 24
++   - score 38
++   
++   W
++   webbrowser module 58
++   while loops 33–34
++   widgets 111
++   Windows operating system 16
++   word length 63
++   varying 67–68
+
+# Acknowledgments
+
+Dorling Kindersley would like to thank Caroline Hunt for proofreading; Jonathan Burd for the index; Tina Jindal and Sonia Yooshing for editorial assistance; Deeksha Saikia, Priyanjali Narain, and Arpita Dasgupta for code testing.
+
+Python is copyright © 2001–2017 Python Software Foundation; All Rights Reserved.

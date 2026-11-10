@@ -1,0 +1,340 @@
+
+- vector space, 156
+- genericity, 97
+- gens, 156, 179
+- genus, 193, 377
+- genus, 193, 377
+- geometry, 195, 197
+- get-values, 391
+- GF, 103, 117, 121
+- gfun, 334
+- Gibbs phenomenon, 77
+- girth (graph), 366
+- GL, 157
+- global, 53
+- GMP, 258
+- GMRES, 301, 304
+- GNU MPFR, 237, 298
+- GNU/Linux, 4
+- golden_ratio, 11
+- Graph, 363, 364, 372, 376
+- graph, 90
+  - adjoint, see line graph
+  - bipartite, 367, 378
+  - chordal, 374, 378
+  - circulant, 365, 367
+  - complete, 367
+  - Eulerian, 378
+  - families of graphs, 366
+  - interval, 378
+- graph
+  - k-connected, 375
+  - Kneser, 366
+  - perfect, 378
+  - Petersen, 365, 366
+  - planar, 366
+  - random, 367, 375, 381, 383
+  - small graphs, 365
+  - vertex-transitive, 366, 378
+- graph colouring, 376, 379, 387
+- graph isomorphism, 377
+- graph minor, 377
+  - forbidden, 366
+- graph of a function, 75
+  - differential equation solution, 82, 320
+- graph paths
+  - edge-disjoint, 375
+  - vertex-disjoint, 375
+- graph traversal, 373, 375
+- Graphics, 84, 90
+- graphics, 15, 75–93
+- Gröbner basis, 189, 192, 202, 205–213
+  - computation cost, 211
+  - definition, 207
+  - reduced, 210
+- group, 101
+  - linear GLₙ, 156
+- GSL, 84, 312, 313, 320, 321, 441
+- guessing, 147
+- Hamiltonian cycle, 376, 397
+- hamiltonian_cycle, 376, 377
+- harmonic function, 33
+- harmonic number, 119, 243
+- hash table, 71
+- help, 4, 11, 98
+- Hermite normal form, 165, 412
+- hermite_form, 166
+- Hilbert matrix, 281, 295, 296
+- histogram, 79, 90
+- homogenize, 181, 190
+- i (imaginary unit), 11, 105
+- ideal
+  - polynomials, 183, 184, 187
+  - polynomials with an infinite number of variables, 182
+- ideal, 136, 137, 184, 190
+- identifier, 42
+- identity_matrix, 156, 157, 292
+- IEEE-754 standard, 236
+- if, 51, 62
+- imag, 105
+- image, see graphics
+  - of a function, 73
+  - of a linear transformation, 168
+- image, 162, 168
+- immutability, 160, 364, 391
+- immutable, 70, 72
+- implicit_plot, 79, 90
+- implicit_plot3d, 92
+- import, 13, 42
+- in, 60, 71, 72
+- indentation, 7, 45, 46
+- independent_set, 369, 376, 382, 386
+- independent_set, 369, 376, 386
+- index, 67
+- induced subgraph, 368, 383
+- inequality, 25, 389
+  - polynomial system, 197
+- inert function, 424
+- infinite, 238
+- InfinitePolynomialRing, 181, 182
+- Infinity, 11, 28, 338
+- initial conditions, 216
+- inject_variables, 430
+- insert, 66
+- instance, 95
+- instruction block, 45
+- int, 103, 338
+- Integer, 104, 258
+- integer
+  - modulo n, 106
+  - number, 103
+  - part, 9, 21
+  - ring, 115–117
+- integer_kernel, 162, 169
+- IntegerListsLex, 352, 353
+- IntegerModRing, 103, 106, 115, 121
+- IntegerRing, 103
+- Integers, 103, 115
+- IntegerVectors, 343
+- integral, 33
+- integral curve, 84, 90
+- integrate, 30, 33, 312
+- integrate_numerical, 34
+- integration
+  - numerical, 34, 305–316
+  - symbolic, 30, 33
+- interreduced_basis, 210
+- intersection, 190, 192
+- interval arithmetic, 258
+- introspection, 98
+- invariant factor, 166, 174
+- invariant subspace, 170
+- inverse
+  - compositional (of a series), 143
+  - modular, 116
+  - power, 292
+- inverse_laplace, 226, 229
+- IPython, 5
+- irrelevant_ideal, 190
+- is_bipartite, 378
+- is_cartesian_transitive, 378
+- is_chordal, 374, 378
+- is_connected, 375
+- is_constant, 131
+- is_eulerian, 378
+- is_exact, 275
+- is_hamiltonian, 377
+- is_integral_domain, 128
+- is_interval, 378
+- is_irreducible, 137, 139
+- is_isomorphic, 368, 377
+- is_monic, 131
+- is_noetherian, 133
+- is_perfect, 378
+- is_prime, 121
+- is_pseudoprime, 121
+- is_regular, 366
+- is_ring, 133
+- is_squarefree, 184
+- is_tree, 378
+- is_vertex_transitive, 366, 378
+- is_zero, 23, 263
+- iter, 344
+- iterable, 30, 344
+- iterator, 45, 46, 267, 347, 374
+- itertools, 347
+- jacobi, 123
+- Jacobi symbol, 123
+- jacobian_ideal, 190
+- Jmol, 91
+- Jordan
+  - block, 176
+  - form, 37, 169, 176
+  - matrix, 176
+- jordan_block, 156, 157, 162, 177
+- jordan_form, 37, 38, 177
+- Jupyter, 4, 5, 14
+- Kash, 98
+- kernel, 36, 37, 162, 168
+- kernel, 162, 169
+- keyboard shortcut, 7
+- keys, 73, 350
+- knapsack (problem), 393
+- knot, 93
+- Krylov sequence, 170
+- label (graph), 364, 369
+- lagrange_polynomial, 134, 274, 307
+- lambda, 42, 61, 67
+- LAPACK, 294, 298
+- laplace, 229
+- Laplace transform, 225
+- LaTeX, 76
+- Lattice, 353
+- LaurentSeriesRing, 143
+- lazy computation, 150
+- LazyPowerSeriesRing, 150, 332
+- lc, 181
+- lcm, 119, 134, 184
+- leading coefficient, 181, 182, 203
+- leading monomial, 181, 182, 203
+- leading term, 181, 182, 203
+- leading_coefficient, 131
+- left_kernel, 36, 37, 162, 169
+- left_solve, 24
+- Legendre polynomial, 35, 308
+- Leibniz formula, 65
+- len, 59, 68, 71, 338
+- lex_BFS, 374, 378
+- lexicographic order, 65, 203
+- lhs, 24, 223, 229
+- lift, 116, 136, 137, 189, 190
+- lim, 28
+- limit, 30
+  - numerical approximation, 49
+- limit, 28, 30, 407
+- limit point, 229
+- line, 81, 84, 90
+- line graph, 373
+- line3d, 93
+- linear algebra, 35–39, 155–178
+  - numerical, 279–304
+- linear equation, 168
+- linear programming, 375, 376, 389–401
+  - over the integers, 390
+- linear system, 168
+  - solving, 162, 168
+- linearisation (trigonometric), 21
+- Linux, 4
+- list, 59
+- list, 131
+- Little, John B., 179
+- lm, 181
+- log, 21, 124, 246
+- logic, 105
+- logistic map, 228
+- loop
+  - while, 45
+  - early abort, 47
+  - for (enumeration), 44
+  - infinite, 65
+- lt, 181
+- Macaulay2, 201
+- Machin's formula, 31
+- Machin, John, 31
+- MacOS, 1
+- Magma, 98, 99, 128
+- Magma effect, 87
+- manual, 4
+- map, 64, 69, 71
+- map_coefficients, 181
+- Maple, 13, 14, 128, 334
+- Masser-Gramain constant, 124
+- matching, 375, 376, 394
+- matching, 386
+- matrix, 36, 37, 107, 155, 178, 279–304, 380
+  - column, 158
+  - companion, 171
+  - decomposition, see matrix factorisation
+  - equivalence, 161, 164, 169
+  - factorisation
+    - Cholesky, 285, 286, 290
+    - LU, 165, 283, 285, 286, 293
+    - QR, 286–288, 293, 294
+  - inverse, 160
+  - norm, 280, 287–289
+  - normal form, 161, 164–166, 173
+  - rank, 286–288
+  - row, 158
+  - similarity, see similarity (matrix)
+  - transpose, 160
+  - unimodular, 165
+- matrix, 36, 37, 107, 137, 157
+- matrix_block, 37
+- MatrixGroup, 156, 157
+- MatrixSpace, 103, 107, 155, 156
+- max_cut, 377
+- max_symbolic, 315
+- Maxima, 6, 13, 14, 128, 221, 262, 313, 321
+- maxpin, 162, 172
+- Mendès France, Michel, 82
+- method
+  - bisection, 266
+  - Brent's, 277
+  - false position, 269
+  - Newton's, 270
+  - Newton-Cotes, 307
+  - programming, 96
+  - secant, 272
+  - separation of variables, 224
+  - Steffensen's, 276
+- Microsoft Windows, 4
+- minimal polynomial, 37
+  - algebraic number, 186
+  - linear recurrence, 136
+  - matrix, 38, 162, 171
+  - vector, 171
+- minimal_polynomial, 37, 162
+- minor, 162
+- minor, 377
+- minpoly, 137, 162
+- MixedIntegerLinearProgram, 390, 391
+- mod, 116, 137, 183, 190
+- modulus (complex number), 9, 105
+- monomial order, 180, 182, 183, 203
+  - change of order, 212
+- MPFR, 249
+- MPFR, see GNU MPFR
+- MPolynomial, 181
+- mq, 191
+- __mul__, 96
+- Muller, David E., 273
+- Muller, Jean-Michel, 242
+- multicommodity_flow, 377
+- multiplicity, 188, 257, 262
+- MuPAD, 99, 128
+- MuPAD-Combinat, 334
+- mutability, see immutability
+- n, see numerical_approx
+- n-tuple, see tuple
+- NaN (Not a Number), 238
+- new_variable, 392, 395
+- next, 344
+- next_prime, 120
+- None, 42, 53
+- norm
+  - of a matrix, see matrix norm
+  - of a vector, 35
+- not, 65
+- normal equations, 287, 288
+- normal form
+  - expression, 20, 22, 101, 112, 128
+  - modulo an ideal, 189
+- normal_basis, 193, 202
+- not, 106
+- notebook, 7
+- NotImplementedError, 132
+- nth_root, 21
+- Nullstellensatz, 190
+- number
+  - Carmichael, 122
+  - floating-point, 235

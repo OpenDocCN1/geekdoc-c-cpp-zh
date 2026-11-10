@@ -1,0 +1,229 @@
+
+## 9 Line by line
+
+Now use a for loop to go through the file line by line. Just as in Countdown Calendar, you must remove the invisible newline character. Then you need to store the values of country and city in two variables. Using the split command, the code will return the two values. You can store these values in two variables using one line of code.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_124_0.png)
+
+```python
+def read_from_file():
+    with open('capital_data.txt') as file:
+        for line in file:
+            line = line.rstrip('\n')
+            country, city = line.split('/')
+```
+
+This removes the newline character.
+
+The '/' character splits the line.
+
+This stores the word before '/' in the variable country.
+
+This stores the word after '/' in the variable city.
+
+## 10 Add data to the dictionary
+
+At this stage, the variables country and city hold the information you need to add into the dictionary. For the first line in your text file, country would hold 'India' and city would hold 'New Delhi'. Type this line of code to put them into the dictionary.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_124_1.png)
+
+```python
+def read_from_file():
+    with open('capital_data.txt') as file:
+        for line in file:
+            line = line.rstrip('\n')
+            country, city = line.split('/')
+            the_world[country] = city
+```
+
+This is the value.
+
+This is the key.
+
+## 11 File output
+
+When the user types in a capital city the program doesn't know about, you want the program to insert this new information into the text file. This is called file output. It works in a similar way to file input, but instead of reading the file, you write into it. Type this new function after the code you typed in Step 10.
+
+```python
+def write_to_file(country_name, city_name):
+    with open('capital_data.txt', 'a') as file:
+```
+
+This function will add new country and capital city names to the text file.
+
+The a means "append," or add, new information to the end of the file.
+
+### Write to the file
+
+Now add a line of code to write the new information into the file. First the code will add a newline character, which tells the program to start a new line in the text file. Then it writes the name of the country followed by a forward slash (/) and the name of the capital city, such as Egypt/Cairo. Python automatically closes the text file once the information has been written into it.
+
+```python
+def write_to_file(country_name, city_name):
+    with open('capital_data.txt', 'a') as file:
+        file.write('\n' + country_name + '/' + city_name)
+```
+
+![](img/1bd24ab186f69fb18194b4174ca15178_125_0.png)
+
+> Your files are safe with me!
+
+## Code the main program
+
+You’ve written all the functions you need, so it’s time to start coding the main program.
+
+### Read the text file
+
+The first thing you want the program to do is to read the information from the text file. Add this line after the code you wrote in Step 7.
+
+Run the `read_from_file` function.
+
+```python
+read_from_file()
+```
+
+### Start the infinite loop
+
+Next add the code below to create an infinite loop. Inside the loop is a function from the Tkinter module: `simpledialog.askstring()`. This function creates a box on the screen that displays information and gives a space for the user to type an answer. Test the code again. A box will appear asking you for the name of a country. It may be hidden behind the other windows.
+
+This is the box created by `simpledialog`.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_125_1.png)
+
+```python
+read_from_file()
+
+while True:
+    query_country = simpledialog.askstring('Country', 'Type the name of a country:')
+```
+
+This appears in the box to tell the user what to do.
+
+The answer the user types is stored in this variable.
+
+This is the title of the box.
+
+## 15 Know the answer?
+
+Now add an if statement to see if the program knows the answer. This will check whether the country and its capital city are stored in the dictionary.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_126_0.png)
+
+```python
+while True:
+    query_country = simpledialog.askstring('Country', 'Type the name of a country:')
+    if query_country in the_world:
+```
+
+Will return True if the country input by the user is stored in the_world.
+
+## 16 Display the correct answer
+
+If the country is in the_world, you want the program to look up the correct answer and display it on the screen. To do this, use the messagebox.showinfo() function from the Tkinter module. This displays the message in a box with an OK button. Type this inside the if statement.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_126_1.png)
+
+Don't forget to save your work.
+
+Using query_country as the key, this line looks up the answer from the dictionary.
+
+```python
+if query_country in the_world:
+    result = the_world[query_country]
+    messagebox.showinfo('Answer',
+                        'The capital city of ' + query_country + ' is ' + result + '!')
+```
+
+This is the title of the box.
+
+This message will be displayed inside the box.
+
+This variable stores the answer (the value from the dictionary).
+
+## 17 Test it out
+
+If your code has a bug, now would be a good time to catch it. When it asks you to name a country, type 'France'. Does it give you the correct answer? If it doesn't, look back over your code carefully and see if you can find out where it's gone wrong. What would happen if you typed in a country that wasn't in the text file? Try it out to see how the program responds.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_126_2.png)
+
+## 18 Teach it
+
+Finally, add a few more lines after the `if` statement. If the country isn't in the dictionary, the program asks the user to enter the name of its capital city. This capital city is added to the dictionary, so that the program remembers it for next time. Then the `write_to_file()` function adds the city to the text file.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_127_0.png)
+
+```python
+if query_country in the_world:
+    result = the_world[query_country]
+    messagebox.showinfo('Answer',
+                        'The capital city of ' + query_country + ' is ' + result + '!')
+else:
+    new_city = simpledialog.askstring('Teach me',
+                                      'I don\'t know! ' +
+                                      'What is the capital city of ' + query_country + '?')
+    the_world[query_country] = new_city
+    write_to_file(query_country, new_city)
+
+root.mainloop()
+```
+
+Notes:
+* "Ask the user to type in the capital city and store it in `new_city`."
+* "This adds `new_city` to the dictionary, using `query_country` as the key."
+* "Write the new capital city into the text file, so that it gets added to the program's knowledge."
+
+## 19 Run it
+
+That's it. You've created a digital expert! Now run the code and start quizzing it!
+
+![](img/1bd24ab186f69fb18194b4174ca15178_127_1.png)
+
+## Hacks and tweaks
+
+Take your program to the next level and make it even smarter by trying out these suggestions.
+
+- **Around the world**
+
+  Turn your program into a geographical genius by creating a text file that contains every country in the world and its capital city. Remember to put each entry on a new line in this format: country name/capital city.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_127_2.png)
+
+### Capitalize
+
+If the user forgets to use a capital letter to name the country, the program won’t find the capital city. How can you solve this problem using code? Here’s one way to do it.
+
+```python
+query_country = simpledialog.askstring('Country', 'Type the name of a country:')
+query_country = query_country.capitalize()
+```
+
+This function turns the first letter in a string into a capital letter.
+
+```text
+sports_teams.txt
+```
+
+| Team name | Coach’s name |
+| --- | --- |
+| Castle United | Bobby Welsh |
+| Dragon Rangers | Alex Andrews |
+| Purple Giants | Sam Sloan |
+
+### Different data
+
+At the moment, the program only knows about capital cities of the world. You can change that by editing the text file so that it stores facts about a subject you’re an expert on. For example, you could teach it the names of famous sports teams and their coaches.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_128_0.png)
+
+### Fact check
+
+Your program currently adds new answers straight into the text file, but it can’t check if the answers are correct. Tweak the code so that new answers are saved in a separate file. Then you can check them later before adding them to the main text file. Here’s how you can change the code.
+
+```python
+def write_to_file(country_name, city_name):
+    with open('new_data.txt', 'a') as file:
+        file.write('\n' + country_name + '/' + city_name)
+```
+
+This stores the new answers in a different text file, called new_data.
+
+![](img/1bd24ab186f69fb18194b4174ca15178_128_1.png)

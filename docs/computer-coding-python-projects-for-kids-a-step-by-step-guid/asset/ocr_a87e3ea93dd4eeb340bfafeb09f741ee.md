@@ -1,0 +1,64 @@
+# ### 8 Realistic blinking
+
+The eyes need to close only briefly and stay open for a while between blinks. Add this function, `blink()`, under the code you typed in Step 7. It blinks the eyes for a quarter of a second (250 milliseconds), then finishes with a command that tells `mainloop()` to call it again after 3 seconds (3,000 milliseconds).
+
+```
+```python
+c.itemconfigure(eye_right, fill=new_color)
+
+def blink():
+    toggle_eyes()
+    root.after(250, toggle_eyes)
+    root.after(3000, blink)
+
+root = Tk()
+```
+```
+
+Close the eyes.
+
+Wait 250 milliseconds, then open the eyes.
+
+Wait 3,000 milliseconds, then blink again.
+
+# ### 9 Animate!
+
+Put this line in the main part of your program, just above the last line. Now run the program. Your pet will come to life after 1 second (1,000 milliseconds) and sit there blinking until you close the window.
+
+```
+```python
+root.after(1000, blink)
+root.mainloop()
+```
+```
+
+Wait 1,000 milliseconds, then start blinking.
+
+# ## Changing moods
+
+Screen Pet looks quite happy just now, with its little smile, but let's cheer it up even more. We'll give it a bigger, beaming smile and bright, rosy cheeks.
+
+![](bbox=[0.6, 0.486, 0.89, 0.662])
+
+# ### 10 Make a happy face
+
+Add this code to the part of the program that draws Screen Pet, after the line that creates the "normal" mouth. As well as a happy mouth and pink cheeks, it also draws a sad mouth. They will all remain hidden for now.
+
+Create a happy mouth.
+
+Create a sad mouth.
+
+```
+```python
+mouth_normal = c.create_line(170, 250, 200, 272, 230, 250, smooth=1, width=2, state=NORMAL)
+mouth_happy = c.create_line(170, 250, 200, 282, 230, 250, smooth=1, width=2, state=HIDDEN)
+mouth_sad = c.create_line(170, 250, 200, 232, 230, 250, smooth=1, width=2, state=HIDDEN)
+
+cheek_left = c.create_oval(70, 180, 120, 230, outline='pink', fill='pink', state=HIDDEN)
+cheek_right = c.create_oval(280, 180, 330, 230, outline='pink', fill='pink', state=HIDDEN)
+
+c.pack()
+```
+```
+
+These lines create pink, blushing cheeks.

@@ -1,0 +1,25 @@
+# Mutant Rainbow
+
+You can program Python’s turtle to draw all sorts of patterns and designs. But watch out! Looks like the turtle in this project has gone a bit wild – you wouldn’t see rainbows like this in the sky!
+
+# What happens
+
+The program will ask you to choose the length and thickness of the line that the turtle paints. The turtle then scurries around the screen until you stop the program, painting coloured lines as it goes. The type of pattern it makes will change, depending on the length and thickness of the lines.
+
+# Python Turtle Graphics
+
+![](bbox=[0.542, 0.256, 1.0, 0.974])
+
+The turtle has a “pen” that paints lines as the turtle moves over the window.
+
+# EXPERT TIPS
+
+# Which colour next?
+
+In Mutant Rainbow, you’ll use the choice() function from Python’s random module to pick a colour when you tell the turtle to draw a line. This means that you can’t really predict which colour the turtle will use each time.
+
+```
+t.pencolor(random.choice(pen_colors))
+```
+
+The turtle chooses from the six colours you put in the list pen_colors.
