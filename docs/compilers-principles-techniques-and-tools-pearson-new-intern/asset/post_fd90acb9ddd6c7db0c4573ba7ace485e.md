@@ -1,0 +1,59 @@
+
+Do you see a pattern?
+
+**Exercise 3.9.5:** To make formal the informal claim of Example 3.25, show that any deterministic finite automaton for the regular expression
+
+`(a|b)* a(a|b)(a|b) · · · (a|b)`
+
+where `(a|b)` appears n − 1 times at the end, must have at least 2^n states. *Hint:* Observe the pattern in Exercise 3.9.4. What condition regarding the history of inputs does each state represent?
+
+## 3.10 Summary of Chapter 3
+
+- *Tokens.* The lexical analyzer scans the source program and produces as output a sequence of tokens, which are normally passed, one at a time, to the parser. Some tokens may consist only of a token name while others may also have an associated lexical value that gives information about the particular instance of the token that has been found on the input.
+- *Lexemes.* Each time the lexical analyzer returns a token to the parser, it has an associated lexeme — the sequence of input characters that the token represents.
+- *Buffering.* Because it is often necessary to scan ahead on the input in order to see where the next lexeme ends, it is usually necessary for the lexical analyzer to buffer its input. Using a pair of buffers cyclicly and ending each buffer's contents with a sentinel that warns of its end are two techniques that accelerate the process of scanning the input.
+- *Patterns.* Each token has a pattern that describes which sequences of characters can form the lexemes corresponding to that token. The set of words, or strings of characters, that match a given pattern is called a language.
+- *Regular Expressions.* These expressions are commonly used to describe patterns. Regular expressions are built from single characters, using union, concatenation, and the Kleene closure, or any-number-of, operator.
+- *Regular Definitions.* Complex collections of languages, such as the patterns that describe the tokens of a programming language, are often defined by a regular definition, which is a sequence of statements that each define one variable to stand for some regular expression. The regular expression for one variable can use previously defined variables in its regular expression.
+- *Extended Regular-Expression Notation.* A number of additional operators may appear as shorthands in regular expressions, to make it easier to express patterns. Examples include the + operator (one-or-more-of), ? (zero-or-one-of), and character classes (the union of the strings each consisting of one of the characters).
+- *Transition Diagrams.* The behavior of a lexical analyzer can often be described by a transition diagram. These diagrams have states, each of which represents something about the history of the characters seen during the current search for a lexeme that matches one of the possible patterns. There are arrows, or transitions, from one state to another, each of which indicates the possible next input characters that cause the lexical analyzer to make that change of state.
+- *Finite Automata.* These are a formalization of transition diagrams that include a designation of a start state and one or more accepting states, as well as the set of states, input characters, and transitions among states. Accepting states indicate that the lexeme for some token has been found. Unlike transition diagrams, finite automata can make transitions on empty input as well as on input characters.
+- *Deterministic Finite Automata.* A DFA is a special kind of finite automaton that has exactly one transition out of each state for each input symbol. Also, transitions on empty input are disallowed. The DFA is easily simulated and makes a good implementation of a lexical analyzer, similar to a transition diagram.
+- *Nondeterministic Finite Automata.* Automata that are not DFA’s are called nondeterministic. NFA’s often are easier to design than are DFA’s. Another possible architecture for a lexical analyzer is to tabulate all the states that NFA’s for each of the possible patterns can be in, as we scan the input characters.
+- *Conversion Among Pattern Representations.* It is possible to convert any regular expression into an NFA of about the same size, recognizing the same language as the regular expression defines. Further, any NFA can be converted to a DFA for the same pattern, although in the worst case (never encountered in common programming languages) the size of the automaton can grow exponentially. It is also possible to convert any nondeterministic or deterministic finite automaton into a regular expression that defines the same language recognized by the finite automaton.
+- *Lex.* There is a family of software systems, including Lex and Flex, that are lexical-analyzer generators. The user specifies the patterns for tokens using an extended regular-expression notation. Lex converts these expressions into a lexical analyzer that is essentially a deterministic finite automaton that recognizes any of the patterns.
+- *Minimization of Finite Automata.* For every DFA there is a minimum-state DFA accepting the same language. Moreover, the minimum-state DFA for a given language is unique except for the names given to the various states.
+
+## 3.11 References for Chapter 3
+
+Regular expressions were first developed by Kleene in the 1950’s [9]. Kleene was interested in describing the events that could be represented by McCulloch and Pitts’ [12] finite-automaton model of neural activity. Since that time regular expressions and finite automata have become widely used in computer science.
+
+Regular expressions in various forms were used from the outset in many popular Unix utilities such as awk, ed, egrep, grep, lex, sed, sh, and vi. The IEEE 1003 and ISO/IEC 9945 standards for the Portable Operating System Interface (POSIX) define the POSIX extended regular expressions which are similar to the original Unix regular expressions with a few exceptions such as mnemonic representations for character classes. Many scripting languages such as Perl, Python, and Tcl have adopted regular expressions but often with incompatible extensions.
+
+The familiar finite-automaton model and the minimization of finite automata, as in Algorithm 3.39, come from Huffman [6] and Moore [14]. Nondeterministic finite automata were first proposed by Rabin and Scott [15]; the subset construction of Algorithm 3.20, showing the equivalence of deterministic and nondeterministic finite automata, is from there.
+
+McNaughton and Yamada [13] first gave an algorithm to convert regular expressions directly to deterministic finite automata. Algorithm 3.36 described in Section 3.9 was first used by Aho in creating the Unix regular-expression matching tool egrep. This algorithm was also used in the regular-expression pattern matching routines in awk [3]. The approach of using nondeterministic automata as an intermediary is due Thompson [17]. The latter paper also contains the algorithm for the direct simulation of nondeterministic finite automata (Algorithm 3.22), which was used by Thompson in the text editor qed.
+
+Lesk developed the first version of Lex and then Lesk and Schmidt created a second version using Algorithm 3.36 [10]. Many variants of Lex have been subsequently implemented. The GNU version, Flex, can be downloaded, along with documentation at [4]. Popular variants of Lex include JFlex [7] and JLex [8].
+
+The KMP algorithm, discussed in the exercises to Section 3.4 just prior to Exercise 3.4.3, is from [11]. Its generalization to many keywords appears in [2] and was used by Aho in the first implementation of the Unix utility egrep.
+
+The theory of finite automata and regular expressions is covered in [5]. A survey of string-matching techniques is in [1].
+
+1. Aho, A. V., “Algorithms for finding patterns in strings,” in *Handbook of Theoretical Computer Science* (J. van Leeuwen, ed.), Vol. A, Ch. 5, MIT Press, Cambridge, 1990.
+2. Aho, A. V. and M. J. Corasick, “Efficient string matching: an aid to bibliographic search,” *Comm. ACM* 18:6 (1975), pp. 333–340.
+3. Aho, A. V., B. W. Kernighan, and P. J. Weinberger, *The AWK Programming Language*, Addison-Wesley, Boston, MA, 1988.
+4. Flex home page http://www.gnu.org/software/flex/, Free Software Foundation.
+5. Hopcroft, J. E., R. Motwani, and J. D. Ullman, *Introduction to Automata Theory, Languages, and Computation*, Addison-Wesley, Boston MA, 2006.
+6. Huffman, D. A., “The synthesis of sequential machines,” *J. Franklin Inst.* 257 (1954), pp. 3–4, 161, 190, 275–303.
+7. JFlex home page http://jflex.de/.
+8. http://www.cs.princeton.edu/~appel/modern/java/JLex.
+9. Kleene, S. C., “Representation of events in nerve nets,” in [16], pp. 3–40.
+10. Lesk, M. E., “Lex – a lexical analyzer generator,” Computing Science Tech. Report 39, Bell Laboratories, Murray Hill, NJ, 1975. A similar document with the same title but with E. Schmidt as a coauthor, appears in Vol. 2 of the *Unix Programmer’s Manual*, Bell Laboratories, Murray Hill NJ, 1975; see http://dinosaur.compiletools.net/lex/index.html.
+11. Knuth, D. E., J. H. Morris, and V. R. Pratt, “Fast pattern matching in strings,” *SIAM J. Computing* 6:2 (1977), pp. 323–350.
+12. McCulloch, W. S. and W. Pitts, “A logical calculus of the ideas immanent in nervous activity,” *Bull. Math. Biophysics* 5 (1943), pp. 115–133.
+13. McNaughton, R. and H. Yamada, “Regular expressions and state graphs for automata,” *IRE Trans. on Electronic Computers* EC-9:1 (1960), pp. 38–47.
+14. Moore, E. F., “Gedanken experiments on sequential machines,” in [16], pp. 129–153.
+15. Rabin, M. O. and D. Scott, “Finite automata and their decision problems,” *IBM J. Res. and Devel.* 3:2 (1959), pp. 114–125.
+16. Shannon, C. and J. McCarthy (eds.), *Automata Studies*, Princeton Univ. Press, 1956.
+17. Thompson, K., “Regular expression search algorithm,” *Comm. ACM* 11:6 (1968), pp. 419–422.

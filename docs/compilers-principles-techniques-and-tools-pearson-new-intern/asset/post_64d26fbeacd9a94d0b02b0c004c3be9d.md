@@ -1,0 +1,104 @@
+
+| Production | Semantic Rules |
+|---|---|
+| *S* → id = *E* ; | *S.code* = *E.code* ‖<br>gen(top.get(id.lexeme) ‘=’ *E.addr*) |
+| *E* → *E₁* + *E₂* | *E.addr* = new Temp()<br>*E.code* = *E₁.code* ‖ *E₂.code* ‖<br>gen(*E.addr* ‘=’ *E₁.addr* ‘+’ *E₂.addr*) |
+| *E* → − *E₁* | *E.addr* = new Temp()<br>*E.code* = *E₁.code* ‖<br>gen(*E.addr* ‘=’ ‘minus’ *E₁.addr*) |
+| *E* → ( *E₁* ) | *E.addr* = *E₁.addr*<br>*E.code* = *E₁.code* |
+| *E* → id | *E.addr* = top.get(id.lexeme)<br>*E.code* = ‘’ |
+
+Figure 6.19: Three-address code for expressions
+
+hold the value of *E*. Recall from Section 6.2.1 that an address can be a name, a constant, or a compiler-generated temporary.
+
+Consider the last production, *E* → id, in the syntax-directed definition in Fig. 6.19. When an expression is a single identifier, say *x*, then *x* itself holds the value of the expression. The semantic rules for this production define *E.addr* to point to the symbol-table entry for this instance of id. Let *top* denote the current symbol table. Function *top.get* retrieves the entry when it is applied to the string representation id.lexeme of this instance of id. *E.code* is set to the empty string.
+
+When *E* → ( *E₁* ), the translation of *E* is the same as that of the subexpression *E₁*. Hence, *E.addr* equals *E₁.addr*, and *E.code* equals *E₁.code*.
+
+The operators + and unary − in Fig. 6.19 are representative of the operators in a typical language. The semantic rules for *E* → *E₁* + *E₂*, generate code to compute the value of *E* from the values of *E₁* and *E₂*. Values are computed into newly generated temporary names. If *E₁* is computed into *E₁.addr* and *E₂* into *E₂.addr*, then *E₁* + *E₂* translates into *t* = *E₁.addr* + *E₂.addr*, where *t* is a new temporary name. *E.addr* is set to *t*. A sequence of distinct temporary names *t₁, t₂, …* is created by successively executing **new Temp()**.
+
+For convenience, we use the notation gen(*x* ‘=’ *y* ‘+’ *z*) to represent the three-address instruction *x* = *y* + *z*. Expressions appearing in place of variables like *x, y,* and *z* are evaluated when passed to *gen*, and quoted strings like ‘=’ are taken literally.⁵ Other three-address instructions will be built up similarly by applying *gen* to a combination of expressions and strings.
+
+⁵ In syntax-directed definitions, *gen* builds an instruction and returns it. In translation schemes, *gen* builds an instruction and incrementally emits it by putting it into the stream of generated instructions.
+
+When we translate the production E → E₁ + E₂, the semantic rules in Fig. 6.19 build up E.code by concatenating E₁.code, E₂.code, and an instruction that adds the values of E₁ and E₂. The instruction puts the result of the addition into a new temporary name for E, denoted by E.addr.
+
+The translation of E → -E₁ is similar. The rules create a new temporary for E and generate an instruction to perform the unary minus operation.
+
+Finally, the production S → id = E; generates instructions that assign the value of expression E to the identifier id. The semantic rule for this production uses function top.get to determine the address of the identifier represented by id, as in the rules for E → id. S.code consists of the instructions to compute the value of E into an address given by E.addr, followed by an assignment to the address top.get(id.lexeme) for this instance of id.
+
+**Example 6.11:** The syntax-directed definition in Fig. 6.19 translates the assignment statement a = b + -c ; into the three-address code sequence
+
+```
+t₁ = minus c
+t₂ = b + t₁
+a = t₂
+```
+
+□
+
+### 6.4.2 Incremental Translation
+
+Code attributes can be long strings, so they are usually generated incrementally, as discussed in Section 5.5.2. Thus, instead of building up E.code as in Fig. 6.19, we can arrange to generate only the new three-address instructions, as in the translation scheme of Fig. 6.20. In the incremental approach, *gen* not only constructs a three-address instruction, it appends the instruction to the sequence of instructions generated so far. The sequence may either be retained in memory for further processing, or it may be output incrementally.
+
+The translation scheme in Fig. 6.20 generates the same code as the syntax-directed definition in Fig. 6.19. With the incremental approach, the code attribute is not used, since there is a single sequence of instructions that is created by successive calls to *gen*. For example, the semantic rule for E → E₁ + E₂ in Fig. 6.20 simply calls *gen* to generate an add instruction; the instructions to compute E₁ into E₁.addr and E₂ into E₂.addr have already been generated.
+
+The approach of Fig. 6.20 can also be used to build a syntax tree. The new semantic action for E → E₁ + E₂ creates a node by using a constructor, as in
+
+```
+E → E₁ + E₂   { E.addr = new Node('+', E₁.addr, E₂.addr); }
+```
+
+Here, attribute addr represents the address of a node rather than a variable or constant.
+
+| Production | Semantic action |
+|---|---|
+| `S → id = E ;` | `{ gen(top.get(id.lexeme) '=' E.addr); }` |
+| `E → E₁ + E₂` | `{ E.addr = new Temp(); gen(E.addr '=' E₁.addr '+' E₂.addr); }` |
+| `E → - E₁` | `{ E.addr = new Temp(); gen(E.addr '=' 'minus' E₁.addr); }` |
+| `E → ( E₁ )` | `{ E.addr = E₁.addr; }` |
+| `E → id` | `{ E.addr = top.get(id.lexeme); }` |
+
+Figure 6.20: Generating three-address code for expressions incrementally
+
+### 6.4.3 Addressing Array Elements
+
+Array elements can be accessed quickly if they are stored in a block of consecutive locations. In C and Java, array elements are numbered 0, 1, . . . , n − 1, for an array with n elements. If the width of each array element is w, then the ith element of array A begins in location
+
+\[base + i \times w \tag{6.2}\]
+
+where base is the relative address of the storage allocated for the array. That is, base is the relative address of A[0].
+
+The formula (6.2) generalizes to two or more dimensions. In two dimensions, let us write A[i₁][i₂], as in C, for element i₂ in row i₁. Let w₁ be the width of a row and let w₂ be the width of an element in a row. The relative address of A[i₁][i₂] can then be calculated by the formula
+
+\[base + i₁ \times w₁ + i₂ \times w₂ \tag{6.3}\]
+
+In k dimensions, the formula is
+
+\[base + i₁ \times w₁ + i₂ \times w₂ + \cdots + i_k \times w_k \tag{6.4}\]
+
+where wⱼ, for 1 ≤ j ≤ k, is the generalization of w₁ and w₂ in (6.3).
+
+Alternatively, the relative address of an array reference can be calculated in terms of the numbers of elements nⱼ along dimension j of the array and the width w = wₖ of a single element of the array. In two dimensions (i.e., k = 2 and w = w₂), the location for A[i₁][i₂] is given by
+
+\[base + (i₁ \times n₂ + i₂) \times w \tag{6.5}\]
+
+In k dimensions, the following formula calculates the same address as (6.4):
+
+\[base + (((\cdots ((i₁ \times n₂ + i₂) \times n₃ + i₃) \cdots) \times n_k + i_k) \times w) \tag{6.6}\]
+
+More generally, array elements need not be numbered starting at 0. In a one-dimensional array, the array elements are numbered `low`, `low + 1`, ..., `high` and `base` is the relative address of `A[low]`. Formula (6.2) for the address of `A[i]` is replaced by:
+
+$$\text{base} + (i - \text{low}) \times w \tag{6.7}$$
+
+The expressions (6.2) and (6.7) can both be rewritten as $i \times w + c$, where the subexpression $c = \text{base} - \text{low} \times w$ can be precalculated at compile time. Note that $c = \text{base}$ when `low` is 0. We assume that $c$ is saved in the symbol table entry for $A$, so the relative address of $A[i]$ is obtained by simply adding $i \times w$ to $c$.
+
+Compile-time precalculation can also be applied to address calculations for elements of multidimensional arrays; see Exercise 6.4.5. However, there is one situation where we cannot use compile-time precalculation: when the array’s size is dynamic. If we do not know the values of `low` and `high` (or their generalizations in many dimensions) at compile time, then we cannot compute constants such as $c$. Then, formulas like (6.7) must be evaluated as they are written, when the program executes.
+
+The above address calculations are based on row-major layout for arrays, which is used in C, for example. A two-dimensional array is normally stored in one of two forms, either *row-major* (row-by-row) or *column-major* (column-by-column). Figure 6.21 shows the layout of a $2 \times 3$ array $A$ in (a) row-major form and (b) column-major form. Column-major form is used in the Fortran family of languages.
+
+Figure 6.21: Layouts for a two-dimensional array.
+
+![](img/a29d16e454785bb105e96ef448ac07f6_386_0.png)
+
+We can generalize row- or column-major form to many dimensions. The generalization of row-major form is to store the elements in such a way that, as we scan down a block of storage, the rightmost subscripts appear to vary fastest, like the numbers on an odometer. Column-major form generalizes to the opposite arrangement, with the leftmost subscripts varying fastest.
