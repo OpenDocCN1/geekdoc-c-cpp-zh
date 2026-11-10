@@ -1,0 +1,9 @@
+![](bbox=[0.244, 0.089, 0.817, 0.402])
+
+**FIGURE 2.5:** A Simple Neural Network Diagram
+
+Many researchers in the early days tried to just connect neurons in a random way, without more success. At present, it is known that even the brains of snails are an organized entity. Among the easiest design techniques to design a structure the most common one is to create layers of elements. It is the grouping of these neurons into layers, the connections between these layers, and the summation and transfer functions that comprise a functioning neural network.
+
+Though there are useful networks, which contain only one layer, or even one element, most applications require networks that contain at least the three normal types of layers - input, hidden, and output. The layer of input neurons receives the data either from input files or directly from electronic sensors in real-time applications. The output layer sends information directly to the outside world, to a secondary computer process, or to other devices such as a mechanical control system. There can be any number of hidden layers between the input and the output layers. These internal hidden layers contain a lot of the neurons in various interconnected structures. The inputs and outputs of each of these hidden neurons merely go away to other neurons.
+
+In almost all networks each neuron in a hidden layer receives the signals from all of the neurons in a layer above it, typically an input layer. Once the neuron performs its function, it passes its output to all of the neurons in the layer below it, providing a feed-forward path to the output. These channels of communication from one neuron to another are important aspects of neural networks. They are referred to

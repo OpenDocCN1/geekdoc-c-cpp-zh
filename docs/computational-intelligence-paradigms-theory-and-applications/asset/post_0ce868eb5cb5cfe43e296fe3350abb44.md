@@ -1,0 +1,49 @@
+
+Simulated Annealing. Morgan Kaufmann, Los Altos, CA, pp. 42-60, 1987.
+
+- [267] Grimaldi, E. A., Grimaccia, F., Mussetta, M., Pirinoli, P., & Zich, R. E. A new hybrid genetical swarm algorithm for electromagnetic optimization, In Proceedings of International Conference on Computational Electromagnetics and its Applications, Beijing - China, pp. 157-160, 2004.
+- [268] Harik, G. R., & Goldberg, D. E. Linkage learning through probabilistic expression. Computer Methods in Applied Mechanics and Engineering 186 (2-4), pp. 295-310, 2000.
+- [269] Herrera, F., & Lozano, M. Adaptation of Genetic Algorithm Parameters based on Fuzzy Logic Controllers. Genetic Algorithms and Soft Computing, F. Herrera, J. L. Verdegay (Eds.), pp. 95-125, 1996.
+- [270] Jeong, S. J., Lim, S. J., & Kim, K. S. Hybrid approach to production scheduling using genetic algorithm and simulation, International Journal of Advanced Manufacturing Technology, 28(1), pp. 129-136, 2005.
+- [271] Keedwell, E., & Khu, S. T. A hybrid genetic algorithm for the design of water distribution networks, Engineering Applications of Artificial Intelligence, 18(4), pp. 461-472, 2005.
+- [272] Kennedy, J., & Eberhart, R. C. Particle swarm optimization, In Proceedings of IEEE International Conference on Neural Networks, Perth, Australia, pp. 1942-1948, 1995.
+- [273] Kennedy, J. The Particle Swarm: Social adaptation of knowledge, In Proceedings of IEEE International Conference on Evolutionary Computation, Indianapolis, IN, 1997, pp. 303-308, 1997.
+- [274] Kim, J. H., Myung, H., Jeon, J. Y. Hybrid evolutionary programming with fast convergence for constrained optimization problems, IEEE Conference on Intelligent Systems for the 21st Century, Vancouver, Canada, pp. 3047-3052, 1995.
+- [275] Koza, J. R. Genetic Programming II: Automatic Discovery of Reusable Programs, MIT Press, Cambridge, MA, 1994.
+- [276] Koza, J. R., Bennett, F. H., Andre, D., & Keane, M. A. Genetic Programming III: Darwinian Invention and Problem Solving, Morgan Kaufmann, 1999.
+- [277] Koza, J. R., Keane, M. A., Streeter, M. J., Mydlowec, W., Yu, J., & Lanza, G. Genetic Programming IV: Routine Human-Competitive Machine Intelligence, Kluwer Academic Publishers, 2003.
+- [278] Lee, M. A., & Takagi, H. Dynamic control of genetic algorithms using fuzzy logic techniques. In: S. Forrest, Ed., Proc. of the Fifth Int. Conf. on Genetic Algorithms pp. 76-83, 1993.
+- [279] Liaw, C. F. A hybrid genetic algorithm for the open shop scheduling problem. European Journal of Operational Research 124 (1), pp. 28-42, 2000.
+- [280] Lin, Y. C., Hwang, K. S., & Wang, F. S. A mixed-coding scheme of evolutionary algorithms to solve mixed-integer nonlinear programming problems, Computers and Mathematics with Applications, 47(8-9), pp. 1295-1307, 2004.
+- [281] Lo, C. C., & Chang, W. H. A Multiobjective Hybrid Genetic Algorithm for the Capacitated Multipoint Network Design Problem, IEEE Transactions on Systems, Man and Cybernetics - Part B, 30(3), pp. 461-470, 2000.
+- [282] Liu, H., Abraham, A., & Zhang, W. A Fuzzy Adaptive Turbulent Particle Swarm Optimization, International Journal of Innovative Computing and Applications, Vol. 1, Issue 1, pp. 39-47, 2007.
+- [283] Maa, C. Y., & Shanblatt, M. A. A two-phase optimization neural network, IEEE Transactions on Neural Networks, 3(6), pp. 1003-1009, 1992.
+- [284] Magyar, G., Johnsson, M., & Nevalainen, O. An Adaptive Hybrid Genetic Algorithm for the Three-Matching Problem, IEEE Transactions on Evolutionary Computation, 4(2), pp. 135-146, 2000.
+- [285] Menon, P. P., Bates, D. G., & Postlethwaite, I. Hybrid Evolutionary Optimisation Methods for the Clearance of Nonlinear Flight Control Laws, In Proceedings of the 44th IEEE Conference on Decision and Control, and the European Control Conference, Seville, Spain, pp. 4053-4058, 2005.
+- [286] Misevicius, A. Genetic algorithm hybridized with ruin and recreate procedure: Application to the quadratic assignment problem, Knowledge-Based Systems, 16, pp. 261-268, 2003.
+- [287] Myung, H., & Kim, J. H. Hybrid evolutionary programming for heavily constrained problems. Biosystems, 38(1), pp. 29-43, 1996.
+- [288] Nepalli, V. R., Chen, C. L., & Gupta, J. N. D. Genetic algorithms for the two-stage bicriteria flowshop problem. European Journal of Operational Research 95, pp. 356-373, 1996.
+- [289] Von Neumann, J. In: Burks, A. (Ed.), Theory of Self-Reproducing Automata. University of Illinois Press, Champaign, IL, 1966.
+- [290] Osman, S., & Cunningham, P. Using case retrieval to seed genetic algorithms. International Journal of Computational Intelligence and Applications 1 (1), pp. 71-82, 2001.
+- [291] Schlottmann, F., & Seese, D. A hybrid heuristic approach to discrete multiobjective optimization of credit portfolios, Computational Statistics and Data Analysis, 47(2), pp. 373-399, 2004.
+- [292] Shi, X. H., Liang, Y. C., Lee, H. P., Lu, C., & Wang, L. M. An improved GA and a novel PSO-GA-based hybrid algorithm, Information Processing Letters, 93(5), pp. 255-261, 2005.
+- [293] Sinha, A., & Goldberg, D. E. A Survey of Hybrid Genetic and Evolutionary Algorithms, Technical Report, 2003.
+- [294] Storn, R., & Price, K. Differential evolution — A simple and efficient adaptive scheme for global optimization over continuous spaces. Journal of Global Optimization, 11(4), pp. 341-359, 1997.
+- [295] Wang, L., Zhang, L., & Zheng, D. Z. An effective hybrid genetic algorithm for flow shop scheduling with limited buffers, Computers and Operations Research, 33(10), pp. 2960-2971, 2006.
+- [296] Grosan, C., Abraham, A., & Nicoara, M. Search Optimization Using Hybrid Particle Sub-Swarms and Evolutionary Algorithms, International Journal of Simulation Systems, Science and Technology, UK, Volume 6, Nos. 10 and 11, pp. 60-79, 2005.
+- [297] Andrews, R., Diederich, J., & Tickle, A. B. A survey and critique of techniques for extracting rules from trained artificial neural networks. Technical report, Queensland University of Technology, 1995.
+- [298] Andrews, R., & Geva, S. Rules and local function networks. In Proceedings of the Rule Extraction From Trained Artificial Neural Networks Workshop, Artificial Intelligence and Simulation of Behaviour, Brighton, UK, 1996.
+- [299] Barnden, J. A., & Holyoak, K. J. Advances in connectionist and neural computation theory, volume 3. Ablex Publishing Corporation, 1994.
+- [300] Benitez, J., Castro, J., & Requena, J. I. Are artificial neural networks black boxes? IEEE Transactions on Neural Networks, 8(5):1156-1164, 1997.
+- [301] Bogacz, R., & Giraud-Carrier, C. A novel modular neural architecture for rule-based and similarity-based reasoning. In Hybrid Neural Systems (this volume). Springer-Verlag, 2000.
+- [302] Bologna, G. Symbolic rule extraction from the DIMLP neural network. In Hybrid Neural Systems (this volume). Springer-Verlag, 2000.
+- [303] Churchland, P. S., & Sejnowski, T. J. The Computational Brain. MIT Press, Cambridge, MA, 1992.
+- [304] Fu, L. M. Neural Networks in Computer Intelligence. McGraw-Hill, Inc., New York, NY, 1994.
+- [305] Gallant, S. I. Neural Network Learning and Expert Systems. MIT Press, Cambridge, MA, 1993.
+- [306] Holldobler, S., Kalinke, Y., & Wunderlich, J. A recursive neural network for reflexive reasoning. In Hybrid Neural Systems (this volume). Springer-Verlag, 2000.
+- [307] Honkela, S. Self-organizing maps in symbol processing. In Hybrid Neural Systems (this volume). Springer-Verlag, 2000.
+- [308] Alba, E., & Tomassini, M. “Parallelism & evolutionary algorithms,” IEEE Transactions on Evolutionary Computation, vol. 6, pp. 443-462, 2002.
+- [309] Bertoluzza, C., Gil, M. A., & Ralescu, D. A. Statistical Modeling, Analysis & Management of Fuzzy Data. Springer-Verlag, 2003.
+- [310] Coello, C. A., Van Veldhuizen, D. A., & Lamont, G. B. Evolutionary Algorithms for Solving Multi-Objective Problems. Kluwer Academic Publishers, 2002.
+- [311] Cordon, O., M. J. del Jesus, Herrera, F., & Lozano, M. “MOGUL: A Methodology to Obtain Genetic fuzzy rule-based systems Under the iterative rule Learning approach,” International Journal of Intelligent Systems, Vol. 14, pp. 1123-1153, 1999.
+- [312] Cordon, O., Herrera, F., Hoffmann, F., & Magdalena, L. Genetic Fuzzy Systems. Evolutionary Tuning & Learning of Fuzzy Knowledge Bases. World Scientific, 2001.

@@ -1,0 +1,3 @@
+# ## E.9 Neural Processing of Symbolic Data
+
+Connectionist systems constitute powerful adaptive machine learning tools which are particularly suited for large scale and noisy learning problems. One major problem, however, is given by the fact that typical neural system are restricted to flat vector representations such that their applicability in domains with additional symbolic or structured knowledge is limited. In various concrete projects, new models as well as theoretical background have been developed which investigate neural methods for non-Euclidian, symbolic, and structured data.

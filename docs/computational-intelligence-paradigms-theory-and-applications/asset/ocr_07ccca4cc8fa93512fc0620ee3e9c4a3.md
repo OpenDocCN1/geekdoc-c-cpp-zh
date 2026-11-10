@@ -1,0 +1,10 @@
+# Chapter 11
+
+# Evolutionary Computation
+Paradigms
+
+# 11.1  Introduction
+
+Evolutionary computation is a broad subfield of computational intelligence that requires combinatorial optimization problems. The evolutionary computation algorithm is an iterative process like growth or development in a population. The optimal solution is then obtained using parallel processing among the population. These procedures are frequently inspired by biological mechanisms of evolution. A population of individuals is exposed to an environment and responds with a collection of behaviors.
+
+Some of these behaviors are better suited to meet the demands of the environment than are others. Selection tends to eliminate those individuals that demonstrate inappropriate behaviors. The survivors reproduce, and the genetics underlying their behavioral traits are passed on to their offspring. But this replication is never without error, no individual genotypes remain free of random mutations. The introduction of random genetic variation in turn leads to novel behavioral characteristics, and the process of evolution iterates. Over successive generations, increasingly appropriate behaviors accumulate within evolving phyletic lines. Evolution optimizes behaviors (i.e., the phenotype), because selection can act only in the face of phenotypic variation. The manner in which functional adaptations are encoded in genetics is transparent to selection; only the realized behaviors resulting from the interaction of the genotype with the environment can be assessed by competitive selection. Useful variations have the best chance of being preserved in the struggle for life, leading to a process of continual improvement. Evolution may in fact create “organs of extreme perfection and complication”, but must always act within the constraints of physical development and

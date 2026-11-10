@@ -1,0 +1,13 @@
+cluster unit also decreases as the clustering process goes on. The initial weights are assumed with random values. The learning rate is updated by, α (t+1) = 0.5 α (t).
+
+# 4.5 Applications Areas of ANN
+
+Artificial neural networks are going through the change that happens once a concept departs the academic environment and is thrown into the harsh world of users who merely wish to get a job arranged. Several networks that are being designed recently are statistically quite exact but they still leave a defective impression with users who anticipate computers to solve their problems absolutely. These networks could be 85% to 90% accurate. Regrettably, a couple of applications tolerate that level of error.
+
+While researchers continue to work on improving the accuracy of their “creations,” some explorers are finding uses for the current technology.
+
+In reviewing this state of the art, it is hard not to be overcome by the bright promises or tainted by the undeceived realities. Presently, neural networks are not the user interface which translates spoken works into instructions for a machine, but someday they will be. Someday, VCRs, home security systems, CD players, and word processors will simply be activated by voice. Touch screen and voice editing will replace the word processors of today while bringing spreadsheets and data bases to a level of usability pleasing to most everyone. But for now, neural networks are simply entering the marketplace in niches where their statistical accuracy is valuable as they await what will surely come.
+
+Many of these niches indeed involve applications where answers are nebulous. Loan approval is one. Financial institutions make more money by having the lowest bad loan rate they can achieve. Systems that are “90% accurate” might be an improvement over the current selection process. Indeed, some banks have proven that the failure rate on loans approved by neural networks is lower than those approved by some of their best traditional methods. Also, some credit card companies are using neural networks in their application screening process.
+
+This latest method of looking into the future by examining past experiences has rendered its own independent problems. One of the major problems is to provide a reason behind the computer-generated answer, such as to why a particular loan application was denied. As mentioned throughout this chapter, the inner workings of neural networks are “black boxes.” The explanation of a neural net and its learning has been diff-

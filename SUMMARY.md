@@ -785,6 +785,7 @@
 +   [CompTIA IT 基础学习指南：考试 FC0-U51 第1版](docs/comptia-it-fundamentals-study-guide-exam-fc0-u51-1st-edition/README.md)
 +   [计算童话](docs/computational-fairy-tales/README.md)
 +   [MATLAB 和 Python 中的有限元法计算框架](docs/computational-framework-for-the-finite-element-method-in-mat/README.md)
++   [计算智能范式：MATLAB® 使用指南的理论与应用](docs/computational-intelligence-paradigms-theory-and-applications/README.md)
 +   [下一代测序数据分析的计算方法 (Wiley 生物信息学系列)](docs/computational-methods-for-next-generation-sequencing-data-an/README.md)
 +   [计算物理：FORTRAN 版本](docs/computational-physics-fortran-version-paperback/README.md)
 +   [计算物理：Python 问题求解 第三版](docs/computational-physics-problem-solving-with-python---3-edició/README.md)

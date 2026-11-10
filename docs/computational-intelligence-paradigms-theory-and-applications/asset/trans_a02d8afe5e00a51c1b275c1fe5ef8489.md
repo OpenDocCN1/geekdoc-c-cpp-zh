@@ -1,0 +1,49 @@
+
+模拟退火。Morgan Kaufmann，加利福尼亚州洛斯阿尔托斯，第42-60页，1987。
+
+- [267] Grimaldi, E. A., Grimaccia, F., Mussetta, M., Pirinoli, P., & Zich, R. E. 一种用于电磁优化的新型混合遗传群算法，载于 Proceedings of International Conference on Computational Electromagnetics and its Applications，中国北京，第157-160页，2004。
+- [268] Harik, G. R., & Goldberg, D. E. 通过概率表达进行连锁学习。Computer Methods in Applied Mechanics and Engineering 186(2-4)，第295-310页，2000。
+- [269] Herrera, F., & Lozano, M. 基于模糊逻辑控制器的遗传算法参数自适应。Genetic Algorithms and Soft Computing，F. Herrera、J. L. Verdegay（编），第95-125页，1996。
+- [270] Jeong, S. J., Lim, S. J., & Kim, K. S. 使用遗传算法和仿真的生产调度混合方法，International Journal of Advanced Manufacturing Technology，28(1)，第129-136页，2005。
+- [271] Keedwell, E., & Khu, S. T. 一种用于供水管网设计的混合遗传算法，Engineering Applications of Artificial Intelligence，18(4)，第461-472页，2005。
+- [272] Kennedy, J., & Eberhart, R. C. 粒子群优化，载于 Proceedings of IEEE International Conference on Neural Networks，澳大利亚珀斯，第1942-1948页，1995。
+- [273] Kennedy, J. 粒子群：知识的社会适应，载于 Proceedings of IEEE International Conference on Evolutionary Computation，印第安纳州印第安纳波利斯，1997，第303-308页，1997。
+- [274] Kim, J. H., Myung, H., Jeon, J. Y. 用于约束优化问题的快速收敛混合进化规划，IEEE Conference on Intelligent Systems for the 21st Century，加拿大温哥华，第3047-3052页，1995。
+- [275] Koza, J. R. 遗传编程 II：可重用程序的自动发现，MIT Press，马萨诸塞州剑桥，1994。
+- [276] Koza, J. R., Bennett, F. H., Andre, D., & Keane, M. A. 遗传编程 III：达尔文式发明与问题求解，Morgan Kaufmann，1999。
+- [277] Koza, J. R., Keane, M. A., Streeter, M. J., Mydlowec, W., Yu, J., & Lanza, G. 遗传编程 IV：常规人类竞争性机器智能，Kluwer Academic Publishers，2003。
+- [278] Lee, M. A., & Takagi, H. 使用模糊逻辑技术对遗传算法进行动态控制。载于：S. Forrest（编），Proc. of the Fifth Int. Conf. on Genetic Algorithms，第76-83页，1993。
+- [279] Liaw, C. F. 一种用于开放车间调度问题的混合遗传算法。European Journal of Operational Research 124(1)，第28-42页，2000。
+- [280] Lin, Y. C., Hwang, K. S., & Wang, F. S. 一种求解混合整数非线性规划问题的进化算法混合编码方案，Computers and Mathematics with Applications，47(8-9)，第1295-1307页，2004。
+- [281] Lo, C. C., & Chang, W. H. 一种用于容量受限多点网络设计问题的多目标混合遗传算法，IEEE Transactions on Systems, Man and Cybernetics - Part B，30(3)，第461-470页，2000。
+- [282] Liu, H., Abraham, A., & Zhang, W. 一种模糊自适应湍流粒子群优化，International Journal of Innovative Computing and Applications，第1卷，第1期，第39-47页，2007。
+- [283] Maa, C. Y., & Shanblatt, M. A. 一种两阶段优化神经网络，IEEE Transactions on Neural Networks，3(6)，第1003-1009页，1992。
+- [284] Magyar, G., Johnsson, M., & Nevalainen, O. 一种用于三匹配问题的自适应混合遗传算法，IEEE Transactions on Evolutionary Computation，4(2)，第135-146页，2000。
+- [285] Menon, P. P., Bates, D. G., & Postlethwaite, I. 用于非线性飞行控制律放行的混合进化优化方法，载于 Proceedings of the 44th IEEE Conference on Decision and Control, and the European Control Conference，西班牙塞维利亚，第4053-4058页，2005。
+- [286] Misevicius, A. 与破坏和重建过程混合的遗传算法：在二次分配问题中的应用，Knowledge-Based Systems，16，第261-268页，2003。
+- [287] Myung, H., & Kim, J. H. 用于高度约束问题的混合进化规划。Biosystems，38(1)，第29-43页，1996。
+- [288] Nepalli, V. R., Chen, C. L., & Gupta, J. N. D. 用于两阶段双准则流水车间问题的遗传算法。European Journal of Operational Research 95，第356-373页，1996。
+- [289] Von Neumann, J. 载于：A. Burks（编），自复制自动机理论。University of Illinois Press，伊利诺伊州香槟，1966。
+- [290] Osman, S., & Cunningham, P. 使用案例检索为遗传算法提供初始种子。International Journal of Computational Intelligence and Applications 1(1)，第71-82页，2001。
+- [291] Schlottmann, F., & Seese, D. 一种用于信用组合离散多目标优化的混合启发式方法，Computational Statistics and Data Analysis，47(2)，第373-399页，2004。
+- [292] Shi, X. H., Liang, Y. C., Lee, H. P., Lu, C., & Wang, L. M. 一种改进的遗传算法和一种新的基于 PSO-GA 的混合算法，Information Processing Letters，93(5)，第255-261页，2005。
+- [293] Sinha, A., & Goldberg, D. E. 混合遗传与进化算法综述，技术报告，2003。
+- [294] Storn, R., & Price, K. 差分进化——一种用于连续空间全局优化的简单高效自适应方案。Journal of Global Optimization，11(4)，第341-359页，1997。
+- [295] Wang, L., Zhang, L., & Zheng, D. Z. 一种用于有限缓冲区流水车间调度的有效混合遗传算法，Computers and Operations Research，33(10)，第2960-2971页，2006。
+- [296] Grosan, C., Abraham, A., & Nicoara, M. 使用混合粒子子群和进化算法的搜索优化，International Journal of Simulation Systems, Science and Technology，英国，第6卷，第10和11期，第60-79页，2005。
+- [297] Andrews, R., Diederich, J., & Tickle, A. B. 从训练后人工神经网络中提取规则技术的综述与评析。技术报告，昆士兰科技大学，1995。
+- [298] Andrews, R., & Geva, S. 规则与局部函数网络。载于 Proceedings of the Rule Extraction From Trained Artificial Neural Networks Workshop，Artificial Intelligence and Simulation of Behaviour，英国布莱顿，1996。
+- [299] Barnden, J. A., & Holyoak, K. J. 连接主义与神经计算理论的进展，第3卷。Ablex Publishing Corporation，1994。
+- [300] Benitez, J., Castro, J., & Requena, J. I. 人工神经网络是黑箱吗？IEEE Transactions on Neural Networks，8(5)：1156-1164，1997。
+- [301] Bogacz, R., & Giraud-Carrier, C. 一种用于基于规则和基于相似性推理的新型模块化神经架构。载于 Hybrid Neural Systems（本卷）。Springer-Verlag，2000。
+- [302] Bologna, G. 从 DIMLP 神经网络中提取符号规则。载于 Hybrid Neural Systems（本卷）。Springer-Verlag，2000。
+- [303] Churchland, P. S., & Sejnowski, T. J. 计算大脑。MIT Press，马萨诸塞州剑桥，1992。
+- [304] Fu, L. M. 计算机智能中的神经网络。McGraw-Hill, Inc.，纽约州纽约，1994。
+- [305] Gallant, S. I. 神经网络学习与专家系统。MIT Press，马萨诸塞州剑桥，1993。
+- [306] Holldobler, S., Kalinke, Y., & Wunderlich, J. 一种用于自反推理的递归神经网络。载于 Hybrid Neural Systems（本卷）。Springer-Verlag，2000。
+- [307] Honkela, S. 符号处理中的自组织映射。载于 Hybrid Neural Systems（本卷）。Springer-Verlag，2000。
+- [308] Alba, E., & Tomassini, M. “并行性与进化算法，”IEEE Transactions on Evolutionary Computation，第6卷，第443-462页，2002。
+- [309] Bertoluzza, C., Gil, M. A., & Ralescu, D. A. 模糊数据的统计建模、分析与管理。Springer-Verlag，2003。
+- [310] Coello, C. A., Van Veldhuizen, D. A., & Lamont, G. B. 求解多目标问题的进化算法。Kluwer Academic Publishers，2002。
+- [311] Cordon, O., M. J. del Jesus, Herrera, F., & Lozano, M. “MOGUL：一种在迭代规则学习方式下获得遗传模糊规则库系统的方法，”International Journal of Intelligent Systems，第14卷，第1123-1153页，1999。
+- [312] Cordon, O., Herrera, F., Hoffmann, F., & Magdalena, L. 遗传模糊系统。模糊知识库的进化调优与学习。World Scientific，2001。

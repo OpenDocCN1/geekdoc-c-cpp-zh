@@ -1,0 +1,13 @@
+The present commercial network development software packages provide functions and methods to monitor the convergence of artificial neural network to predict the correct answer. These functions allow the training process to go on for days; stopping only when the system reaches some statistically desired point, or accuracy. However, some networks never learn. This could be because the input data does not contain the specific information from which the desired output is derived. Networks also don’t converge if there is not enough data to enable complete learning. Ideally, there should be enough data so that part of the data can be held back as a test. Several layered networks with multiple nodes are capable of memorizing data. To monitor the network to determine if the system is simply memorizing its data in some non-significant way, supervised training needs to hold back a set of data to be used to test the system after it has undergone its training.
+
+If a network simply can’t solve the problem, the designer then has to review the input and outputs, the number of layers, the number of elements per layer, the connections between the layers, the summation, transfer, and training functions, and even the initial weights themselves. Those changes required to create a successful network constitute a process wherein the “art” of neural networking occurs.
+
+Another part of the designer’s creativity governs the rules of training. There are many laws (algorithms) used to implement the adaptive feedback required to adjust the weights during training. The most common technique is backward-error propagation, more commonly known as back-propagation. These various learning techniques are explored in greater depth later in this book.
+
+Eventually, training is not exactly a technique. It involves an experience and sensitive analysis, to insure that the network is not overtrained. Initially, an artificial neural network configures itself with the general statistical trends of the data. Later, it continues to “learn” about other aspects of the data which may be spurious from a universal point of view.
+
+Finally when the system has been perfectly trained, and no further learning is required, the weights can, be “frozen.” In some systems this finalized network is then turned into hardware so that it can be fast. Other systems don’t lock themselves in but continue to learn while in production.
+
+# Unsupervised or Adaptive Training
+
+The other type of training is called unsupervised training. In unsupervised training, the network is provided with inputs but not with desired outputs. The system itself must then decide what features it will use to

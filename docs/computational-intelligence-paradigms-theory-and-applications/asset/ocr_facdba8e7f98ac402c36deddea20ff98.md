@@ -1,0 +1,15 @@
+# 2.3.5  Training an Artificial Neural Network
+
+When a network has been organized and structured for a specific application, it implies that the network is ready to be trained. This operation begins by choosing the initial weights randomly.
+
+Then, the training, or learning, begins. There are two approaches to training - supervised and unsupervised. Supervised training involves a mechanism of providing the network with the desired output either by manually “grading” the network’s performance or by providing the desired outputs with the inputs. Unsupervised training is where the network has to make sense of the inputs without outside help.
+
+Neuron connection weights cannot be updated within a single step. The process by which neuron weights are modified occurs over iterations. Training data are presented to the neural network and the results are watched over. The connection weights have to be updated based on these results for the network to learn. The accurate process by which this goes on is influenced by the learning algorithm.
+
+These learning algorithms, which are commonly called learning rules, are almost always expressed as functions. Consider a weight matrix between four neurons, which is expressed as an array of doubles in Java as follows: double weights[][] = new double[4][4];
+
+This gives us the connection weights between four neurons. Since most of the programming languages index arrays as beginning with zero we shall refer to these neurons as neurons zero through three. Using the above array, the weight between neuron two and neuron three would be contained in the variable weights[2][3]. Therefore, we would like a learning function that would return the new weight between neurons i and j, such as weights[i][j] = new weights[i][j] + learningRule(...).
+
+The hypothetical method learningRule calculates the change (delta) that must occur between the two neurons in order for learning to take place. The previous weight value is not discarded altogether, rather a delta value is computed which gives the difference between the weights of the previous iteration and the present one thus modifying the original weight. When the weight of the neural network has been updated the network is presented with the training data again, and the process continues for several iterations. These iterations keep going until the neural network’s error rate decreases to an acceptable level.
+
+A common input to the learning rule is the error. The error is the difference between the actual output of the neural network and the anticipated output. If such an error is provided to the training function then the method is called supervised training. In supervised training the neural network is constantly adjusting the weights to attempt to better line up with the anticipated outputs that were provided.
