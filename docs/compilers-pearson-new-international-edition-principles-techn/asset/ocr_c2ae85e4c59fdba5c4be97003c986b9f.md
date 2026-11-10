@@ -1,0 +1,32 @@
+| Block $B$ | OUT[$B^0$] | IN[$B^1$] | OUT[$B^1$] | IN[$B^2$] | OUT[$B^2$] |
+|---|---|---|---|---|---|
+| $B_1$ | 000 0000 | 000 0000 | 111 0000 | 000 0000 | 111 0000 |
+| $B_2$ | 000 0000 | 111 0000 | 011 1100 | 111 0111 | 001 1110 |
+| $B_3$ | 000 0000 | 001 1100 | 000 1110 | 001 1110 | 000 1110 |
+| $B_4$ | 000 0000 | 001 1100 | 001 0111 | 001 1110 | 001 0111 |
+| EXIT | 000 0000 | 001 0111 | 001 0111 | 001 0111 | 001 0111 |
+
+Figure 9.15: Computation of IN and OUT
+
+we now know there is a change on the first round (and will proceed to a second round).
+
+Then we consider $B = B_2$ and compute
+
+$$\begin{aligned}
+IN[B_2]^1 &= OUT[B_1]^1 \cup OUT[B_4]^0\\
+&= 111\ 0000 \cup 000\ 0000 = 111\ 0000\\
+OUT[B_2]^1 &= gen_{B_2} \cup (IN[B_2]^1 - kill_{B_2})\\
+&= 000\ 1100 \cup (111\ 0000 - 110\ 0001) = 001\ 1100
+\end{aligned}$$
+
+This computation is summarized in Fig. 9.15. For instance, at the end of the first pass, $OUT[B_2]^1 = 001\ 1100$, reflecting the fact that $d_4$ and $d_3$ are generated in $B_2$, while $d_3$ reaches the beginning of $B_2$ and is not killed in $B_2$.
+
+Notice that after the second round, $OUT[B_2]^1$ has changed to reflect the fact that $d_6$ also reaches the beginning of $B_2$ and is not killed by $B_2$. We did not learn that fact on the first pass, because the path from $d_6$ to the end of $B_2$, which is $B_3 \to B_4 \to B_2$, is not traversed in that order by a single pass. That is, by the time we learn that $d_6$ reaches the end of $B_4$, we have already computed $IN[B_2]$ and $OUT[B_2]$ on the first pass.
+
+There are no changes in any of the OUT sets after the second pass. Thus, after a third pass, the algorithm terminates, with the IN's and OUT's as in the final two columns of Fig. 9.15. □
+
+# ## 9.2.5 Live-Variable Analysis
+
+Some code-improving transformations depend on information computed in the direction opposite to the flow of control in a program; we shall examine one such example now. In live-variable analysis we wish to know for variable $x$ and point $p$ whether the value of $x$ at $p$ could be used along some path in the flow graph starting at $p$. If so, we say $x$ is live at $p$; otherwise, $x$ is dead at $p$.
+
+An important use for live-variable information is register allocation for basic blocks. Aspects of this issue were introduced in Sections 8.6 and 8.8. After a value is computed in a register, and presumably used within a block, it is not

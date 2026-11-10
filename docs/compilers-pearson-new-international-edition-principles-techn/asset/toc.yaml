@@ -1,0 +1,836 @@
+level_changes:
+- line: 660
+  before: 2
+  after: 3
+- line: 2395
+  before: 2
+  after: 3
+- line: 2410
+  before: 2
+  after: 3
+- line: 2499
+  before: 2
+  after: 3
+- line: 2615
+  before: 2
+  after: 3
+- line: 2701
+  before: 2
+  after: 3
+- line: 2825
+  before: 2
+  after: 3
+- line: 2942
+  before: 2
+  after: 3
+- line: 3023
+  before: 2
+  after: 3
+- line: 3114
+  before: 2
+  after: 3
+- line: 3201
+  before: 2
+  after: 3
+- line: 3476
+  before: 2
+  after: 3
+- line: 3715
+  before: 2
+  after: 3
+- line: 3751
+  before: 2
+  after: 3
+- line: 3792
+  before: 2
+  after: 3
+- line: 4144
+  before: 2
+  after: 3
+- line: 4161
+  before: 2
+  after: 3
+- line: 4597
+  before: 2
+  after: 4
+- line: 5485
+  before: 1
+  after: 3
+- line: 5998
+  before: 2
+  after: 3
+- line: 6254
+  before: 2
+  after: 3
+- line: 6360
+  before: 2
+  after: 3
+- line: 6486
+  before: 2
+  after: 3
+- line: 6545
+  before: 2
+  after: 3
+- line: 6581
+  before: 2
+  after: 3
+- line: 6701
+  before: 2
+  after: 3
+- line: 6778
+  before: 2
+  after: 3
+- line: 6917
+  before: 2
+  after: 3
+- line: 7141
+  before: 2
+  after: 3
+- line: 7160
+  before: 2
+  after: 3
+- line: 7271
+  before: 3
+  after: 4
+- line: 7332
+  before: 3
+  after: 4
+- line: 7354
+  before: 3
+  after: 4
+- line: 7390
+  before: 3
+  after: 4
+- line: 7398
+  before: 3
+  after: 4
+- line: 7419
+  before: 3
+  after: 4
+- line: 7459
+  before: 3
+  after: 4
+- line: 7508
+  before: 3
+  after: 4
+- line: 7551
+  before: 3
+  after: 4
+- line: 7641
+  before: 3
+  after: 4
+- line: 7672
+  before: 3
+  after: 4
+- line: 7690
+  before: 3
+  after: 4
+- line: 7732
+  before: 3
+  after: 4
+- line: 7769
+  before: 3
+  after: 4
+- line: 7849
+  before: 3
+  after: 4
+- line: 7971
+  before: 3
+  after: 4
+- line: 8022
+  before: 3
+  after: 4
+- line: 8055
+  before: 3
+  after: 4
+- line: 8138
+  before: 3
+  after: 4
+- line: 8225
+  before: 3
+  after: 4
+- line: 8329
+  before: 3
+  after: 4
+- line: 8406
+  before: 2
+  after: 3
+- line: 8504
+  before: 2
+  after: 3
+- line: 8603
+  before: 2
+  after: 3
+- line: 8724
+  before: 2
+  after: 3
+- line: 8734
+  before: 2
+  after: 3
+- line: 8833
+  before: 2
+  after: 3
+- line: 8937
+  before: 2
+  after: 3
+- line: 8949
+  before: 2
+  after: 3
+- line: 9062
+  before: 2
+  after: 3
+- line: 9168
+  before: 2
+  after: 3
+- line: 9196
+  before: 2
+  after: 3
+- line: 9313
+  before: 2
+  after: 3
+- line: 9396
+  before: 2
+  after: 3
+- line: 9449
+  before: 2
+  after: 3
+- line: 9498
+  before: 2
+  after: 3
+- line: 9726
+  before: 2
+  after: 3
+- line: 9828
+  before: 2
+  after: 3
+- line: 9936
+  before: 2
+  after: 3
+- line: 9942
+  before: 2
+  after: 3
+- line: 10132
+  before: 2
+  after: 3
+- line: 10165
+  before: 2
+  after: 3
+- line: 10234
+  before: 2
+  after: 3
+- line: 10314
+  before: 2
+  after: 3
+- line: 10416
+  before: 2
+  after: 3
+- line: 10475
+  before: 2
+  after: 3
+- line: 10564
+  before: 2
+  after: 3
+- line: 10619
+  before: 2
+  after: 3
+- line: 10649
+  before: 2
+  after: 3
+- line: 10710
+  before: 2
+  after: 3
+- line: 10755
+  before: 2
+  after: 3
+- line: 10798
+  before: 2
+  after: 3
+- line: 10805
+  before: 2
+  after: 3
+- line: 10855
+  before: 2
+  after: 3
+- line: 10914
+  before: 2
+  after: 3
+- line: 10980
+  before: 2
+  after: 3
+- line: 11133
+  before: 2
+  after: 3
+- line: 11198
+  before: 2
+  after: 3
+- line: 11216
+  before: 2
+  after: 3
+- line: 11291
+  before: 2
+  after: 3
+- line: 11340
+  before: 2
+  after: 3
+- line: 11403
+  before: 2
+  after: 3
+- line: 11480
+  before: 2
+  after: 3
+- line: 11501
+  before: 2
+  after: 3
+- line: 11523
+  before: 2
+  after: 3
+- line: 11627
+  before: 2
+  after: 3
+- line: 11667
+  before: 2
+  after: 3
+- line: 11929
+  before: 2
+  after: 3
+- line: 12154
+  before: 2
+  after: 3
+- line: 12343
+  before: 2
+  after: 3
+- line: 12366
+  before: 2
+  after: 3
+- line: 12524
+  before: 2
+  after: 3
+- line: 12615
+  before: 2
+  after: 3
+- line: 12644
+  before: 2
+  after: 4
+- line: 12711
+  before: 2
+  after: 4
+- line: 12758
+  before: 2
+  after: 3
+- line: 12899
+  before: 2
+  after: 3
+- line: 12965
+  before: 2
+  after: 3
+- line: 13091
+  before: 2
+  after: 3
+- line: 13132
+  before: 2
+  after: 3
+- line: 13279
+  before: 2
+  after: 3
+- line: 13336
+  before: 2
+  after: 3
+- line: 13368
+  before: 2
+  after: 3
+- line: 13387
+  before: 2
+  after: 3
+- line: 13429
+  before: 2
+  after: 3
+- line: 13569
+  before: 2
+  after: 3
+- line: 13693
+  before: 2
+  after: 3
+- line: 13746
+  before: 2
+  after: 3
+- line: 13782
+  before: 2
+  after: 3
+- line: 14235
+  before: 2
+  after: 3
+- line: 14342
+  before: 2
+  after: 3
+- line: 14468
+  before: 2
+  after: 3
+- line: 14645
+  before: 2
+  after: 3
+- line: 14772
+  before: 2
+  after: 3
+- line: 14790
+  before: 2
+  after: 3
+- line: 14890
+  before: 2
+  after: 3
+- line: 14943
+  before: 2
+  after: 3
+- line: 15106
+  before: 2
+  after: 3
+- line: 15162
+  before: 2
+  after: 3
+- line: 15282
+  before: 2
+  after: 3
+- line: 15372
+  before: 2
+  after: 3
+- line: 15452
+  before: 2
+  after: 3
+- line: 15474
+  before: 2
+  after: 3
+- line: 15688
+  before: 2
+  after: 3
+- line: 15959
+  before: 2
+  after: 3
+- line: 16105
+  before: 2
+  after: 3
+- line: 16122
+  before: 2
+  after: 3
+- line: 16166
+  before: 2
+  after: 3
+- line: 16262
+  before: 2
+  after: 3
+- line: 16434
+  before: 2
+  after: 3
+- line: 16507
+  before: 2
+  after: 3
+- line: 16558
+  before: 2
+  after: 3
+- line: 16634
+  before: 2
+  after: 3
+- line: 16659
+  before: 2
+  after: 3
+- line: 16769
+  before: 2
+  after: 3
+- line: 16855
+  before: 2
+  after: 3
+- line: 16906
+  before: 2
+  after: 3
+- line: 17164
+  before: 2
+  after: 3
+- line: 17308
+  before: 1
+  after: 3
+- line: 17579
+  before: 2
+  after: 3
+- line: 17597
+  before: 2
+  after: 3
+- line: 17650
+  before: 2
+  after: 3
+- line: 17714
+  before: 2
+  after: 3
+- line: 17805
+  before: 2
+  after: 3
+- line: 17917
+  before: 2
+  after: 3
+- line: 18092
+  before: 2
+  after: 3
+- line: 18362
+  before: 2
+  after: 3
+- line: 18438
+  before: 2
+  after: 3
+- line: 18449
+  before: 2
+  after: 3
+- line: 18575
+  before: 2
+  after: 3
+- line: 18743
+  before: 2
+  after: 3
+- line: 19129
+  before: 2
+  after: 3
+- line: 19198
+  before: 2
+  after: 3
+- line: 19269
+  before: 2
+  after: 3
+- line: 19488
+  before: 2
+  after: 3
+- line: 19692
+  before: 2
+  after: 3
+- line: 19790
+  before: 2
+  after: 3
+- line: 19837
+  before: 2
+  after: 3
+- line: 19981
+  before: 2
+  after: 3
+- line: 20025
+  before: 2
+  after: 3
+- line: 20090
+  before: 2
+  after: 3
+- line: 20213
+  before: 2
+  after: 3
+- line: 20371
+  before: 2
+  after: 3
+- line: 20506
+  before: 2
+  after: 3
+- line: 20709
+  before: 2
+  after: 3
+- line: 20754
+  before: 2
+  after: 3
+- line: 20962
+  before: 2
+  after: 3
+- line: 21091
+  before: 1
+  after: 2
+- line: 22183
+  before: 3
+  after: 2
+- line: 22451
+  before: 2
+  after: 3
+- line: 22566
+  before: 2
+  after: 3
+- line: 22640
+  before: 2
+  after: 3
+- line: 22685
+  before: 2
+  after: 3
+- line: 22727
+  before: 2
+  after: 3
+- line: 22751
+  before: 2
+  after: 3
+- line: 22780
+  before: 2
+  after: 3
+- line: 22840
+  before: 2
+  after: 3
+- line: 22863
+  before: 2
+  after: 3
+- line: 22868
+  before: 2
+  after: 3
+- line: 22899
+  before: 2
+  after: 3
+- line: 22967
+  before: 2
+  after: 3
+- line: 23005
+  before: 2
+  after: 3
+- line: 23031
+  before: 2
+  after: 3
+- line: 23138
+  before: 2
+  after: 3
+- line: 23143
+  before: 2
+  after: 3
+- line: 23197
+  before: 2
+  after: 3
+- line: 23298
+  before: 2
+  after: 3
+- line: 23345
+  before: 2
+  after: 3
+- line: 23366
+  before: 2
+  after: 3
+- line: 23392
+  before: 2
+  after: 3
+- line: 23411
+  before: 2
+  after: 3
+- line: 23415
+  before: 2
+  after: 3
+- line: 23419
+  before: 2
+  after: 3
+text_changes:
+- line: 143
+  before: 1.2. 编译器的结构
+  after: 1.2 编译器的结构
+- line: 279
+  before: 1.5. 编译器技术的应用
+  after: 1.5 编译器技术的应用
+- line: 362
+  before: 1.6. 编程语言基础
+  after: 1.6 编程语言基础
+- line: 696
+  before: 第2章：一个简单的语法制导翻译器
+  after: 第2章 一个简单的语法制导翻译器
+- line: 796
+  before: 2.2. 语法定义
+  after: 2.2 语法定义
+- line: 892
+  before: 2.2. 语法定义
+  after: 2.2 语法定义
+- line: 1379
+  before: 2.5. 简单表达式的翻译器
+  after: 2.5 简单表达式的翻译器
+- line: 1413
+  before: 2.5. 简单表达式的翻译器
+  after: 2.5 简单表达式的翻译器
+- line: 2073
+  before: 2.8. 中间代码生成
+  after: 2.8 中间代码生成
+- line: 2151
+  before: 2.8.3 **静态检查**
+  after: 2.8.3 静态检查
+- line: 2410
+  before: 2.9. *第2章小结*
+  after: 2.9 第2章小结
+- line: 2615
+  before: 3.3. 记号的规范
+  after: 3.3 记号的规格说明
+- line: 2701
+  before: 3.3. 词法单元（Token）的规格说明
+  after: 3.3 记号的规格说明
+- line: 2825
+  before: 3.3. 记号规范
+  after: 3.3 记号的规格说明
+- line: 2942
+  before: 3.4. 词法单元的识别
+  after: 3.4 记号的识别
+- line: 3023
+  before: 3.4. 记号的识别
+  after: 3.4 记号的识别
+- line: 3114
+  before: 3.4. *记号的识别*
+  after: 3.4 记号的识别
+- line: 3201
+  before: 3.5. 词法分析器生成器LEX
+  after: 3.5 词法分析器生成器 Lex
+- line: 3476
+  before: 3.7. 从正则表达式到自动机
+  after: 3.7 从正则表达式到自动机
+- line: 3715
+  before: 3.7. 从正则表达式到自动机
+  after: 3.7 从正则表达式到自动机
+- line: 3751
+  before: 3.8. 词法分析器生成器的设计
+  after: 3.8 词法分析器生成器的设计
+- line: 4197
+  before: 第4章：语法分析
+  after: 第4章 语法分析
+- line: 5998
+  before: 4.7 更强大的LR解析器
+  after: 4.7 更强大的 LR 分析器
+- line: 6254
+  before: 4.7. 更强大的 LR 分析器
+  after: 4.7 更强大的 LR 分析器
+- line: 6360
+  before: 4.7 更强大的 LR 语法分析器
+  after: 4.7 更强大的 LR 分析器
+- line: 6701
+  before: 4.8 使用歧义文法
+  after: 4.8 使用二义性文法
+- line: 6917
+  before: 4.9. 解析器生成器
+  after: 4.9 分析器生成器
+- line: 7141
+  before: 4.10. 第 4 章小结
+  after: 4.10 第4章小结
+- line: 7160
+  before: 4.11. 第 4 章参考文献
+  after: 4.11 第4章参考文献
+- line: 7178
+  before: 4.11. 第4章参考文献
+  after: 4.11 第4章参考文献
+- line: 8375
+  before: 第6章：中间代码生成
+  after: 第6章 中间代码生成
+- line: 8734
+  before: 6.3. 类型与声明
+  after: 6.3 类型与声明
+- line: 8833
+  before: 6.3. 类型与声明
+  after: 6.3 类型与声明
+- line: 9313
+  before: 6.5. 类型检查
+  after: 6.5 类型检查
+- line: 9396
+  before: 6.5. 类型检查
+  after: 6.5 类型检查
+- line: 9942
+  before: 6.8 SWITCH 语句
+  after: 6.8 switch 语句
+- line: 10116
+  before: 第7章：运行时环境
+  after: 第7章 运行时环境
+- line: 10805
+  before: 7.5. *垃圾回收简介*
+  after: 7.5 垃圾回收简介
+- line: 10855
+  before: 7.5. 垃圾回收简介
+  after: 7.5 垃圾回收简介
+- line: 11133
+  before: 7.6. 基于追踪的收集简介
+  after: 7.6 基于追踪的回收简介
+- line: 11216
+  before: 7.7. 短暂停垃圾收集
+  after: 7.7 短暂停垃圾回收
+- line: 11480
+  before: 7.8. 垃圾收集的高级主题
+  after: 7.8 垃圾回收的高级主题
+- line: 11501
+  before: 7.9. 第7章小结
+  after: 7.9 第7章小结
+- line: 11523
+  before: 7.10. 第7章参考文献
+  after: 7.10 第7章参考文献
+- line: 11559
+  before: 第8章：代码生成
+  after: 第8章 代码生成
+- line: 11929
+  before: 8.3. 目标代码中的地址
+  after: 8.3 目标代码中的地址
+- line: 12343
+  before: 8.5 基本块优化
+  after: 8.5 基本块的优化
+- line: 13435
+  before: 第9章：机器无关优化
+  after: 第9章 机器无关优化
+- line: 13445
+  before: 9.1. 优化的主要来源
+  after: 9.1 优化的主要来源
+- line: 13693
+  before: 9.1　优化的主要来源
+  after: 9.1 优化的主要来源
+- line: 13746
+  before: 9.2　数据流分析导论
+  after: 9.2 数据流分析导论
+- line: 13782
+  before: 9.2. 数据流分析简介
+  after: 9.2 数据流分析导论
+- line: 14790
+  before: 9.5. 部分冗余消除
+  after: 9.5 部分冗余消除
+- line: 14890
+  before: 9.5. *部分冗余消除*
+  after: 9.5 部分冗余消除
+- line: 14943
+  before: 9.5. 部分冗余消除
+  after: 9.5 部分冗余消除
+- line: 15282
+  before: 9.6 *流图中的循环*
+  after: 9.6 流图中的循环
+- line: 15550
+  before: §9.7.4 关于传递函数的必要假设
+  after: 9.7.4 关于传递函数的必要假设
+- line: 16105
+  before: 9.9 第 9 章小结
+  after: 9.9 第9章小结
+- line: 16187
+  before: 9.10. 第 9 章参考文献
+  after: 9.10 第9章参考文献
+- line: 16211
+  before: 第 10 章 指令级并行
+  after: 第10章 指令级并行
+- line: 16434
+  before: 10.2. 代码调度约束
+  after: 10.2 代码调度约束
+- line: 16634
+  before: 10.4. 全局代码调度
+  after: 10.4 全局代码调度
+- line: 16855
+  before: 10.5. 软件流水线
+  after: 10.5 软件流水线
+- line: 17620
+  before: 第11章：面向并行性与局部性的优化
+  after: 第11章 面向并行性与局部性的优化
+- line: 17714
+  before: 11.1. 基本概念
+  after: 11.1 基本概念
+- line: 18449
+  before: 11.5. 数据复用
+  after: 11.5 数据重用
+- line: 18575
+  before: 11.5. 数据复用
+  after: 11.5 数据重用
+- line: 19269
+  before: 11.7. 寻找无同步并行性
+  after: 11.7 寻找无同步并行性
+- line: 19488
+  before: 11.7. 寻找无同步并行性
+  after: 11.7 寻找无同步并行性
+- line: 19837
+  before: 11.8. **并行循环之间的同步**
+  after: 11.8 并行循环之间的同步
+- line: 20090
+  before: 11.9. 流水线化
+  after: 11.9 流水线
+- line: 20371
+  before: 11.9. 流水线
+  after: 11.9 流水线
+- line: 21270
+  before: 附录 A. 一个完整的前端
+  after: 附录 A 一个完整的前端
+- line: 21872
+  before: 附录A. 一个完整的前端
+  after: 附录 A 一个完整的前端
+- line: 21506
+  before: A.6  布尔表达式的跳转代码
+  after: A.6 布尔表达式的跳转代码

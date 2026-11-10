@@ -776,6 +776,7 @@
 +   [Competitive Programming 3：编程竞赛的新下限](docs/competitive-programming-3-the-new-lower-bound-of-programming/README.md)
 +   [Java, JavaCC 和 Yacc 编译器构建指南](docs/compiler-construction-using-java-javacc-and-yacc/README.md)
 +   [C 编译器构建：打造高效解释器与编译器](docs/compiler-construction-with-c-crafting-efficient-interpreters/README.md)
++   [编译原理：原理、技术与工具（培生新国际版）](docs/compilers-pearson-new-international-edition-principles-techn/README.md)
 +   [Complete Commodore 64 初学者指南：通过这本标志性 Commodore 64 编程综合指南，掌握编码基础](docs/complete-commodore-64-beginners-guide-master-the-basics-of-c/README.md)
 +   [C++ 编程入门完整教程](docs/complete-tutorial-to-begin-programming-in-c/README.md)
 +   [复杂系统与云：自组织与自管理的视角（计算机科学综述与趋势）](docs/complex-systems-and-clouds-a-self-organization-and-self-mana/README.md)
