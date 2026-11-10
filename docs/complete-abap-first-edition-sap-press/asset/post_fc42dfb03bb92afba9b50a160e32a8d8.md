@@ -1,0 +1,369 @@
+
+## Q
+
+- Quality assurance, 973
+- Quality assurance client (QTST), 67
+- Quantity fields, 405
+
+## R
+
+- R/3, 380
+- Radio buttons, 219, 527, 531
+  - groups, 219
+- RAISE, 290, 371
+  - EVENT, 324
+  - EXCEPTION, 376
+- Range field, 223
+- Range tables, 221
+  - HIGH, 222
+  - LOW, 222
+  - OPTION, 222
+  - SIGN, 222
+  - values, 226
+- Ranges, 224
+  - operator, 225
+- READ, 165, 173, 179
+  - CURRENT LINE, 596
+  - DATASET, 500
+  - LINE, 596
+- Receiver, 842
+- Receiver determination, 842
+- Recording routine, 416
+- REDEFINITION, 338
+- Refactoring assistant, 346
+- Reference data types, 127, 439, 446
+- Reference objects, 310
+- Reference variables, 680
+  - assignment, 684
+  - upcast and downcast, 684
+- Referenced data types, 443
+- Relational database, 472
+- Relational database management system (RDBMS), 51, 61, 187, 189
+  - example, 61
+  - foreign keys, 51, 191
+  - primary key, 190
+  - relational database design, 189
+  - table, 190
+- Remote-enabled function modules, 289
+- Remove<subobject>(), 824
+- Replacement objects, 438
+- Report output
+  - types, 626
+- Report transactions, 571
+- Reporting events, 262
+  - END-OF-SELECTION, 267
+  - GET <table> LATE, 266
+  - GET table, 265
+  - INITIALIZATION, 263
+  - START-OF-SELECTION, 264
+- Reporting programs, 559
+- Reports, 576
+  - background execution, 620
+  - forms, 723
+  - programs, 44
+  - run in background, 619
+  - scheduling, 619
+- Repository, 68
+  - object, 40, 74
+  - packages, 68
+- Repository Browser, 91
+- Representational State Transfer (REST), 895
+- REQUEST_LOC, 467
+- Request-response cycle, 519
+- Requests, 70
+- RESTful APIs, 895
+- RETCODE, 376
+- RETURN, 249, 252
+- Returning parameters, 297
+- REUSE_ALV_BLOCK_LIST_APPEND, 637
+- REUSE_ALV_BLOCK_LIST_INIT, 636
+- REUSE_ALV_*, 626
+- RFC, 58, 261, 284
+  - destination, 857
+  - trace, 975, 1000, 1006
+- RFC/BOR interface, 898
+- ROLLBACK WORK, 486, 488
+- Row type, 167
+- Runtime analysis, 474, 975, 1009
+- Runtime Type Creation (RTC), 685, 687
+  - dynamic, 689
+- Runtime Type Information (RTTI), 685, 686
+  - query, 687
+- Runtime Type Services (RTTS), 664, 685
+
+## S
+
+- Sales and Distribution (SD), 935
+- SAP
+  - data structure, 40
+  - Functional Modules, 36
+  - history, 31
+  - introduction, 36
+  - modules, 36
+  - systems, 39
+  - technical modules, 37
+  - users, 37
+- SAP Basis, 75
+- SAP Easy Access, 84
+  - Favorites, 80
+  - SAP Menu, 79
+  - User Menu, 79
+- SAP ERP, 29, 946
+- SAP ERP Controlling (CO), 37
+- SAP ERP Financial Accounting (FI), 37
+- SAP Gateway, 895
+  - activate/register an OData service, 902
+  - READ, 905
+  - Service Builder, 896
+- SAP GUI, 50, 52, 77, 78, 245
+  - architecture, 53
+  - for HTML (Web GUI), 53
+  - for the Java environment, 52
+  - for the Windows environment, 52
+  - set status, 647
+  - status, 645
+- SAP HANA, 51, 61, 189, 197, 426, 718
+  - ABAP CDS views, 198
+  - aggregate functions, 477
+  - code pushdown, 197
+  - parallelism, 197
+- SAP Interactive Forms by Adobe, 723, 777
+  - address node, 789
+  - alternative node, 792
+  - context and layout, 785
+  - Context tab, 787
+  - currency/quantity fields, 784
+  - data node, 792
+  - development, 777
+  - download as PDF, 799
+  - driver program, 797, 798
+  - form interface, 778
+  - global definitions, 783
+  - graphic node, 788
+  - import form data, 800
+  - layout, 794
+  - Layout tab, 793
+  - loop, 791
+  - object palette, 794
+  - single-record node, 793
+  - structure node, 790
+- SAP List Viewer (ALV), 624, 625
+- SAP liveCache, 61
+- SAP LUW, 485, 487, 508
+  - bundle with function modules, 489
+  - bundle with RFC, 492
+  - bundle with subroutines, 491
+  - bundling techniques, 488
+  - dialog steps, 488
+- SAP NetWeaver, 5, 4, 313
+- SAP NetWeaver 7.5, 36, 858
+  - debugging, 700
+  - global temporary tables, 400
+  - new SQL, 483
+- SAP Notes, 922
+- SAP script editor, 737, 739, 762
+  - printing, 740
+- SAP Software Change Registration (SSCR), 924
+- SAP start service, 55, 59
+- SAP Support Portal, 924
+- SAP system
+  - architecture, 49
+  - enqueue server, 59
+  - environment, 78
+  - gateway, 58
+  - instances, 55
+  - layers, 63
+  - logon, 78
+  - message server, 59
+  - SAP Web Dispatcher, 59
+  - session, 84
+  - user context, 60
+- SAP Web Dispatcher, 55, 59
+- SAPscripts, 723, 725
+  - align and print, 744
+  - billing document, 725
+  - change header, 730
+  - composer, 725
+  - create form layout, 729
+  - create standard text, 741
+  - create window, 733
+  - disadvantages, 749
+  - driver program, 727, 747, 774
+  - elements, 743
+  - field entries, 737
+  - formatting, 729, 737
+  - graphics administration, 736
+  - insert graphic, 739
+  - layout, 725
+  - layout designer, 730
+  - maintain tab positions, 745
+  - maintain window details, 736
+  - paragraph and character formatting, 734
+  - print logo, 736
+  - printing, 743
+  - process forms with function modules, 741
+  - return_code, 748
+  - subroutines, 727
+  - us_screen, 748
+  - windows, 727
+- SAPUI5, 1000
+- Schema, 188
+- Screen, 79, 515, 520
+  - application toolbar, 81
+  - attributes, 521, 523
+  - command field, 82
+  - create, 520
+  - events, 271, 510, 512
+  - exits, 938, 942
+  - groups, 523
+  - menu bar, 80
+  - number, 521
+  - processor, 511, 512
+  - sequence, 556
+  - standard toolbar, 81
+  - status bar, 82
+  - title bar, 81
+  - Transaction codes, 82
+  - types, 522
+- Screen elements, 510, 513, 515, 525, 528
+  - basic screen elements, 529
+- Screen field, 520
+  - modifying dynamically, 553
+- Screen flow logic, 511, 513, 517, 518, 548, 928
+- Screen Painter, 77, 92, 93, 231, 509, 522, 560, 568
+  - alphanumeric layout editor, 525
+  - dynpro, 211
+  - graphical layout editor, 94, 525, 530
+  - modifications, 928
+  - module pools, 572
+  - screen elements, 513
+  - subscreens, 545
+  - tab, 525
+  - tabs, 93
+- Screen structure, 554
+  - components, 554, 621
+- SCREEN_OPTIONS, 218
+  - AS CHECKBOX, 219
+  - AS LISTBOX VISIBLE LENGTH vlen, 220
+  - RADIOBUTTON GROUP, 219
+  - VISIBLE LENGTH vlen, 218
+- SCREEN-OPTIONS
+  - NO-DISPLAY, 218
+  - OBLIGATORY, 218
+- Search helps, 134, 440, 455
+  - assign, 463
+  - change, 462
+  - exit, 464
+  - parameters, 460
+- Second normal form (2NF), 195
+- Secondary index, 410, 413
+  - create, 411
+- Secondary keys, 172, 190, 447, 449, 472
+- Secondary list, 590
+- Secondary window, 752
+- Security, 506
+- Segment
+  - add, 852
+  - create, 849
+  - definition, 850
+- Segment Editor, 848, 851
+- Segment filtering, 843
+- Segments, 847
+- SELECT, 177, 188
+- Select
+  - ranges, 224
+  - single values, 224
+- SELECT clause, 476
+- SELECT statement, 475
+  - FROM clause, 479
+  - INTO clause, 479
+  - SELECT clause, 476
+  - WHERE clause, 480
+- Selection screen events, 269
+- Selection screens, 148, 212, 510, 601
+  - calling programs, 623
+  - create variants, 609
+  - define, 601, 602
+  - dynamic date, 616
+  - dynamic time, 617
+  - dynamically display/hide screen elements, 621
+  - events, 601, 604
+  - fields, 213
+  - PARAMETERS, 214
+  - radio buttons, 607
+  - standard, 602
+  - standard and user-defined, 602
+  - tasks, 212
+  - user-specific variables, 618
+  - variant attributes, 613
+  - variants, 608
+- Selection texts, 230
+- SELECTION-SCREEN, 212, 229
+  - BEGIN OF BLOCK, 229
+  - SKIP, 229
+  - ULINE, 229
+- Selectivity analysis, 974, 990
+- SELECT-OPTIONS, 185, 221, 228, 239
+  - multiple selection window, 223
+- Semantic attributes, 439, 442
+- Separation of concerns, 978
+- Sequential data, 154
+- Serialization, 843
+- Service implementation, 896, 903
+- Service maintenance, 896, 901
+- SESSION, 813, 817
+  - create manually, 818
+- Session breakpoint, 702
+- Sessions, 84, 717
+  - components, 717
+- SET DATASET, 501
+- SET HANDLER, 323
+- SET SCREEN, 557
+- Setter method, 310, 318, 329
+  - set_, 318
+  - set_message, 333
+- Shared lock (read lock), 466
+- Simple Object Access Protocol (SOAP), 881
+- Simple report
+  - field catalog, 632
+- Simple reports, 627
+- Single inheritance, 357
+- Single-record node, 793
+- Singleton design pattern, 498
+- Single-transaction analysis, 975, 1014
+- Size category, 407
+- SKIP, 270
+- Smart forms, 723, 749, 778, 779, 787
+  - addresses, 759
+  - advantages over SAPscripts, 749
+  - character formatting, 772
+  - commands, 768
+  - create templates, 760
+  - create text elements, 763
+  - draft page, 752
+  - driver program, 774, 776
+  - form attributes, 752, 753
+  - form interface, 752, 754
+  - Form Painter, 751
+  - global definitions, 753, 755
+  - graphics, 758
+  - interface, 780
+  - layout, 750
+  - line type, 764
+  - loops, 768
+  - maintain elements, 756
+  - maintain global settings, 753
+  - maintenance area, 751
+  - navigation area, 751
+  - paragraph formatting, 771
+  - program lines, 767
+  - row type, 764
+  - styles, 769, 773
+  - tables, 764
+  - text, 761
+  - windows, 752, 756
+- SOAP, 882, 888
+- Sorted keys, 172
+- Sorted tables, 168, 170
+  - secondary keys, 173
+- Special dynpros, 211, 212

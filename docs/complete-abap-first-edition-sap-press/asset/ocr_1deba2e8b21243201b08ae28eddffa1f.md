@@ -1,0 +1,6 @@
+text elements. For this example, enter “Item” in the text element of CELL1, “Description” in the text element of CELL2, and “Amount” in the text element of CELL3.
+
++   4. Print the internal table data in the main area. In order to print data from the internal table, loop the internal table into a work area under the DATA tab of the table node (see Figure 18.45). Within the text element of the cells in the main area, list the work area fields that should be printed. For this example, in the first cell of the main area, print the `WA_ITEM-POSNR` field; in the second cell of the main area, print the `WA_ITEM-ARKTX` field; and in the third cell of the main area, print the `WA_ITEM-NETWR` field.
++   5. Print the subtotals in the footer section. For this example, leave the first cell in the footer section empty to maintain the table alignment and print the text “Total” in the second cell and the `IM_HEADER-NETWR` field in the third cell. The `IM_HEADER` structure is defined in the form interface and will receive the data from the driver program when the form is called.
+
+![](bbox=[0.143, 0.533, 0.41, 0.816])

@@ -1,0 +1,11 @@
+In this chapter, we'll look at basic ABAP programming language concepts. The concepts discussed in this chapter will lay the foundations to write your own ABAP programs.
+
+# 4　ABAP Programming Concepts
+
+ABAP programs process data from the database or an external source. As discussed in Chapter 2, ABAP programs run in the application layer, and ABAP program statements can work only with locally available data in the program. External data, like user inputs on screens, data from a sequential file, or data from a database table, must always be transported to and saved in the program's local memory in order to be processed with ABAP statements.
+
+In other words, before any data can be processed with an ABAP program, it must first be read from the source, stored locally in the program memory, and then accessed via ABAP statements; you can't work with the external data directly using ABAP statements. This temporary data that exists in an ABAP program while the program is executed is called *transient data* and is cleared from memory once the program execution ends. If you wish to access this data later, it must be stored persistently in the database; such stored data is called *persistent data*.
+
+This chapter provides information on the basic building blocks of the ABAP programming language in order to understand the different ways to store and process data locally in ABAP programs. In Section 4.1, we begin by looking at the general structure of an ABAP program, before diving into ABAP syntax rules and ABAP keywords in Section 4.2 and Section 4.3, respectively.
+
+Section 4.4 introduces the TYPE concept, and explores key elements such as data types and data objects, which define memory locations in ABAP programs to store data locally. In Section 4.5, we discuss the different types of ABAP statements that can be employed, including declarative, modularization, control, call, and operational statements. Finally, in Section 4.6, we conclude this chapter by walking through the steps to create your first ABAP program!

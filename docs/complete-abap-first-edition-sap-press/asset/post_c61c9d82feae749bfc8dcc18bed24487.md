@@ -1,0 +1,292 @@
+
+information is useful to troubleshoot memory overflow situations in which the data being fetched from the database is more than the internal table can accommodate.
+
+## ABAP Developer View
+
+The ABAP Developer View provides technical details about the system that SAP Basis administrators can analyze.
+
+If you're an ABAP beginner, you may come across many runtime errors while you're developing programs. When you encounter a runtime error, go through the complete error in detail, because it can provide quite a lot of information, including suggestions to fix the error.
+
+## 21.12 Summary
+
+In this chapter, we discussed the tools available in our arsenal for troubleshooting problems with our code. These tools should help you to stop using guesswork and provide you with pointers to identify the problem areas in your code. We may not use all the tools every time; most of the time, a debugger is enough to identify problem areas. Nevertheless, knowing how to use a variety of tools can help unravel trickier problems.
+
+You started your journey as a beginner, but worked your way up through some advanced concepts as we progressed in this book. We hope you enjoyed reading this book as much as we enjoyed creating it for you! The topics in this book should give you a good foundation to explore ABAP even further as you progress through your career as an ABAP consultant.
+
+## The Author
+
+![](img/5f2e77efd858ed75fdad8c2a2aa83c8f_1020_0.png)
+
+**Kiran Bandari** is a solution architect for one of the world’s leading MNCs, and has been working with ABAP for more than 10 years. He has worked as a lead ABAP consultant on multiple SAP implementations, roll outs, and upgrade projects with a specific focus on custom development using ABAP Objects, Web Dynpro ABAP, and SAPUI5. He is also an industry trainer and has conducted ABAP training workshops for major clients like IBM, Accenture, CapGemini, and more.
+
+## Index
+
+- $TMP, 147
+
+### A
+
+- ABAP, 43
+  - *additions*, 110
+  - *conversions*, 45
+  - *environment*, 77
+  - *extensions*, 46
+  - *forms*, 47
+  - *interfaces*, 44
+  - *Reports*, 43
+  - *RICEF*, 43
+  - *statements*, 110, 141
+  - *System requirements*, 48
+- ABAP CDS views, 396, 426, 434
+  - *access*, 437
+  - *create*, 434
+  - *data definition*, 435
+  - *define*, 434
+  - *replacement objects*, 438
+  - *template*, 436
+- ABAP channels, 913, 915
+  - *consumer programs*, 917
+  - *producer program*, 916
+- ABAP consultants, 38
+- ABAP Data Dictionary, 77, 86, 96, 395, 469, 535
+  - *ABAP CDS views*, 427
+  - *BAPI*, 827
+  - *create data element*, 130
+  - *create domain*, 135
+  - *data types*, 438
+  - *database tables*, 396
+  - *DDL*, 473
+  - *domains*, 451
+  - *elementary search help*, 457
+  - *global table types*, 282
+  - *GTT*, 401
+  - *I_STRUCTURE_NAME*, 629
+  - *interface*, 779
+  - *lock objects*, 465
+  - *Modification Browser*, 932
+  - *modifications*, 929
+  - *non-generic data type*, 216
+  - *objects*, 97
+  - *screen*, 96, 395
+  - *search helps*, 455
+  - *selection texts*, 231
+  - *smart forms*, 754
+  - *table controls*, 538
+  - *type groups*, 450
+  - *type pools*, 574
+  - *views*, 426
+- ABAP Debugger, 699
+  - *learning tool*, 721
+- ABAP Developer View, 1018
+- ABAP Development Tools (ADT), 77, 101, 434
+- ABAP Dispatcher, 55, 56
+- ABAP Editor, 77, 88, 145, 177, 571, 893
+  - *back-end editor*, 89
+  - *creating variants*, 609
+  - *front-end editor (new)*, 88
+  - *front-end editor (old)*, 88
+  - *modify programs*, 925
+  - *program attributes*, 143
+  - *settings*, 89
+  - *your first program*, 143
+- ABAP in Eclipse
+  - *ABAP CDS views*, 434
+- ABAP keyword documentation, 113
+- ABAP Managed Database Procedures (AMDP), 700, 718
+- ABAP messaging channels, 913
+  - *create*, 914
+- ABAP Object Services, 492, 508
+- ABAP Objects, 244, 260, 274, 305, 967
+- ABAP Objects Control Framework, 561
+- ABAP processor, 511
+- ABAP programming environment, 78
+- ABAP programs, 107, 515
+  - *declaration*, 247
+  - *global declarations area*, 108
+  - *procedural area*, 108, 109
+  - *statements*, 253
+  - *structure*, 108, 245
+- ABAP push channels, 913, 1000
+- ABAP runtime environment
+  - *event blocks*, 255
+  - *processing blocks*, 243, 248
+  - *selection screens*, 601
+- ABAP statements
+  - *attributes*, 144
+  - *call*, 142
+  - *control*, 142
+  - *declarative*, 142
+  - *modularization*, 142
+  - *OpenSQL*, 143
+  - *operational*, 142
+  - *processing blocks*, 243
+- ABAP System Central Services (ASCS), 55
+- ABAP Trace, 975, 1006, 1009
+  - *analysis*, 1017
+  - *analyze results*, 1011
+  - *call*, 1016
+  - *results screen*, 1012
+  - *run*, 1009
+- ABAP Unit, 974, 976
+  - *code example*, 986
+  - *eliminate dependencies*, 977
+  - *fixture*, 981
+  - *implement mock objects*, 979
+  - *predefined methods*, 981
+  - *SETUP*, 981
+  - *TEARDOWN*, 981
+  - *unit tests*, 980
+- ABAP Workbench, 47, 76, 77, 85, 87, 284
+  - *ABAP Data Dictionary*, 396
+  - *Class Builder*, 91
+  - *Function Builder*, 90
+  - *Menu Painter*, 95
+  - *Object Navigator*, 98
+  - *objects*, 147
+  - *Screen Painter*, 92, 509
+- abap_false, 334
+- ABSTRACT, 342
+- Abstract classes, 341
+- Abstract methods, 341
+- Access control, 473
+- ActiveX, 630
+- Actual parameters, 275
+- Add<sub>subject</sub>(), 824
+- Additions, 110, 113
+- Address
+  - *elements*, 759
+  - *node*, 789
+- Adobe Document Server (ADS), 777
+- Adobe LiveCycle Designer, 777
+  - *Layout tab*, 793
+- Advance Business Application Programming (ABAP), 43
+- Agent class, 495, 498
+- Aggregation functions, 477, 478
+- ALE, 841
+  - *inbound process*, 843
+  - *layers*, 842
+  - *outbound process*, 842
+  - *RFC destination*, 858
+  - *system configuration*, 856
+  - *tRFC*, 859
+- Aliases, 359, 361
+- Alternative node, 792
+- ALV, 993
+  - *block display*, 636
+  - *CL_GUI_ALV_GRID*, 625
+  - *components*, 626
+  - *Control Framework*, 650
+  - *display*, 670
+  - *dynamic subroutine*, 644
+  - *grid display*, 630, 631
+  - *hierarchical sequential display*, 640
+  - *layout*, 636
+  - *library*, 625
+  - *list and grid display*, 627
+  - *object model*, 625
+  - *object-oriented*, 661
+  - *parameters*, 629
+  - *reports*, 625
+  - *reuse library*, 626
+  - *simple reports*, 628
+  - *standard reports*, 626
+- ALV grid control, 561, 651, 652
+- ALV object model, 261, 653, 666
+  - *classes*, 653, 654
+  - *default status*, 658
+  - *hierarchical display*, 655, 657
+  - *set SAP GUI status*, 655
+  - *table display*, 654
+  - *tree display*, 660
+  - *tree object model*, 659
+- AMDP Debugger, 699, 700, 718
+  - *breakpoints*, 719
+  - *capabilities*, 719
+  - *prerequisites*, 718
+- American Standard Code for Information Interchange (ASCII), 118, 119
+- Analysis, 973
+- Anomalies, 193
+- Anonymous data objects, 682, 683
+  - *access components*, 684
+- Any
+  - *fields*, 171
+  - *tables*, 170
+- API, 332, 803
+- APPEND, 175
+- Append structure, 160, 424
+  - *add*, 424
+- Application flow, 566
+- Application layer, 49, 51, 54, 75, 246
+- Application Link Enabling (ALE), 835
+- Application server, 54, 471
+  - *components*, 55
+  - *files*, 499
+- Application toolbar, 515
+- Architecture, 49
+- Arithmetical operations, 484
+- Array fetch, 199
+- ASSIGNING, 676
+- Assignment operators, 110
+- asXML, 912
+- Asynchronous data update, 812
+- AT LINE-SELECTION, 259, 586
+- AT SELECTION-SCREEN, 255, 604
+  - `ON <field>`, 604
+  - ON BLOCK, 605
+  - `ON END OF <sel>`, 605
+  - ON EXIT-COMMAND, 606
+  - `ON HELP-REQUEST FOR <field>`, 606
+  - ON RADIO BUTTON GROUP, 605
+  - OUTPUT, 604
+- AT USER-COMMAND, 586
+- Attributes, 306, 308, 312
+- Authorization group, 415
+- Authorization objects, 506, 507, 508
+- Automatic type conversion, 124
+- Automation Controller, 561
+- Average, 478
+- AVG, 478
+
+### B
+
+- Background mode, 812
+- Background processing, 601
+  - executing programs, 619
+- BAdI Builder, 948
+- BAdIs, 933, 946
+  - call, 959
+  - create, 950
+  - create definition, 949
+  - create interface, 954
+  - define, 948
+  - definition part, 946
+  - enhancement spots, 948
+  - fallback class, 958
+  - filter values, 952
+  - IF_FILTER_CHECK_AND_F4 interface, 953
+  - implementation, 955
+  - implementation part, 946
+  - releasing, 835
+  - return parameters, 825
+  - standardized parameters, 824
+  - test run parameters, 825
+  - tools, 826
+  - use cases, 819
+- BAPI, 261, 819, 820
+  - address parameters, 824
+  - BAPI Explorer, 820
+  - business component, 819
+  - business object type, 820, 830
+  - change parameters, 825
+  - class method, 822
+  - conventions, 827
+  - development phases, 821
+  - documentation, 834
+  - extension parameters, 825
+  - implementation, 826
+  - instance method, 823
+  - releasing, 835
+  - return parameters, 825
+  - standardized parameters, 824
+  - test run parameters, 825
+  - tools, 826
+  - use cases, 819

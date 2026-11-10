@@ -1,0 +1,12 @@
+SAP NetWeaver AS ABAP is delivered with many standard SAP tables. Some of these tables are prepopulated with data related to the system, such as repository objects or customization settings. Many database tables, such as application tables, are delivered empty and then updated by customers via ABAP programs or by transferring external data from legacy systems. Each relational database system provides a programming interface to access the tables of the database using the SQL query language. SQL statements aren't completely standardized and vary from one database vendor to another.
+
+As discussed in Chapter 5, standard SQL is comprised of the following languages:
+
++   - **Data Definition Language (DDL)**  
++     DDL contains statements such as CREATE, ALTER, and DROP, which allow you to define or alter database tables. ABAP doesn't support these statements directly because they're vendor-specific; that is, they vary from vendor to vendor. Rather than using these DDL statements in ABAP programs, we use the ABAP Data Dictionary tool to define or alter tables in the database; the tool implements these DDL statements such that they work with the underlying database. DDL statements are part of the Native SQL statements—that is, native to the underlying database.
++   - **Data Manipulation Language (DML)**  
++     DML contains statements such as SELECT, INSERT, UPDATE, and DELETE, which allow you to process data in the database tables. ABAP implements these statements as Open SQL statements; they're independent of the database. SAP NetWeaver AS ABAP contains a database interface that handles converting Open SQL statements in ABAP to vendor-specific SQL (or Native SQL) statements.
++   
++     The database interface makes ABAP programs portable and database-independent. We discussed Native SQL and Open SQL statements in Chapter 5 and provided a brief overview of different Open SQL statements, and we recommend that you refer to that section if you need a quick recap. In the next subsection, we'll examine Open SQL statements in more depth and look at the different Open SQL statements supported in ABAP.
++   - **Data Control Language (DCL)**  
++     DCL contains statements that allow you to define user views, execute access control, and ensure data consistency. ABAP doesn't contain any DCL statements. Access control is ensured using SAP NetWeaver AS ABAP authorization
