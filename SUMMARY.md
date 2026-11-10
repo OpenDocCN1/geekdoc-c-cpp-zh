@@ -812,6 +812,7 @@
 +   [C++ 与 OpenGL 计算机图形编程，第 3 版](docs/computer-graphics-programming-in-opengl-using-c-3rd-edition/README.md)
 +   [C++ OpenGL 计算机图形编程，第三版](docs/computer-graphics-programming-in-opengl-using-c-third-editio/README.md)
 +   [C++ OpenGL 计算机图形编程](docs/computer-graphics-programming-in-opengl-with-c/README.md)
++   [C++ OpenGL 计算机图形学编程（第二版）](docs/computer-graphics-programming-in-opengl-with-c-second-editio/README.md)
 +   [C++ OpenGL 计算机图形学编程，第三版](docs/computer-graphics-programming-in-opengl-with-c-third-edition/README.md)
 +   [计算机图形学：理论与实践](docs/computer-graphics-theory-and-practice/README.md)
 +   [计算机编程与 IT](docs/computer-programming-and-it/README.md)

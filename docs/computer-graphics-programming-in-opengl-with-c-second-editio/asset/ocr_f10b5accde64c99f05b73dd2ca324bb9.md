@@ -1,0 +1,20 @@
+# ### 16.2.9 Determining Texture Coordinates
+
+If we wish to apply a texture image to the objects in the scene, we need to compute texture coordinates. In previous examples, each texture coordinate corresponded to a vertex in the model, and they were loaded into a VBO either procedurally or by reading them in from an .OBJ file. We cannot do that here, because we aren't using models – we aren't even using vertices! Our shapes are the result of computing ray intersections on mathematically-defined shapes, so we need to extend our computations to determine texture coordinates.
+
+This can be complicated, because the desired layout of the texture coordinates can vary depending on the application. For example, the box might represent a brick wall or it might be a skybox, each of which would require different texture coordinate assignments. In the case of the sphere, it is a bit easier because the layout of the texture images that we have been using (such as for the earth or the moon) is by far the most common.
+
+For the sphere, a clever trick is to use the computed surface normal to specify a point on the surface, along with standard spherical coordinate methods, to find the corresponding point in flattened 2D space. The derivations from classical geometry are well-known [§16] and not repeated here. Given the normal vector N,
+
+$$
+\text{texCoord}_X = 0.5 + \frac{\arctan(-N_z, N_x)}{2\pi} \\
+\text{texCoord}_Y = 0.5 - \frac{\arcsin(-N_y)}{\pi}
+$$
+
+For the box, our first example assumes the need is to simply apply a texture image evenly over all surfaces, so we will scale it based on the longest box side. One set of steps for doing this is:
+
++   1. Compute the collision point, using the world_to_local matrix previously developed.
++   2. Determine the largest box side length.
++   3. Convert the X, Y, and Z collision point coordinates to the range [0..1], based on the largest box side.
++   4. Divide each coordinate by the largest box dimension, so that the image isn’t compressed along box sides.
++   5. Select (X,Y), (X,Z), or (Y,Z) as the texture coordinates, depending on which surface the collision occurred.

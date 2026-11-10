@@ -1,0 +1,20 @@
+is worth considering utilizing C++’s *multiple inheritance* capability, and to design a Spotlight class that inherits from both directional and positional light classes. Our examples are sufficiently simple that we omit building such a class hierarchy for lighting in this edition.
+
+# 7.3 MATERIALS
+
+The “look” of the objects in our scene has so far been handled exclusively by color and texture. The addition of lighting allows us to also consider the *reflectance* characteristics of the surfaces. By that we mean how the object interacts with our ADS lighting model. This can be modeled by considering each object to be “made of” a certain *material*.
+
+Materials can be simulated in an ADS lighting model by specifying four values, three of which we are already familiar with—*ambient, diffuse,* and *specular* RGB colors. The fourth is called *shininess*, which, as we will see, is used to build an appropriate specular highlight for the intended material. ADS and shininess values have been developed for many different types of common materials. For example, “pewter” can be specified as follows:
+
+```
+float pewterMatAmbient[4] = { .11f, .06f, .11f, 1.0f };
+float pewterMatDiffuse[4] = { .43f, .47f, .54f, 1.0f };
+float pewterMatSpecular[4] = { .33f, .33f, .52f, 1.0f };
+float pewterMatShininess = 9.85f;
+```
+
+ADS RGBA values for a few other materials are given in Figure 7.3 (from [BA16]).
+
+Sometimes other properties are included in the material properties. *Transparency* is handled in the RGBA specifications in the fourth (or “alpha”) channel, which specifies an opacity; a value of 1.0 represents completely opaque and 0.0 represents completely transparent. For most materials it is simply set to 1.0, although for certain materials a slight transparency plays a role. For example, in Figure 7.3, note that the materials “jade” and “pearl” include a small amount of transparency (values slightly less than 1.0) to add realism.
+
+*Emission* is also sometimes included in an ADS material specification. This is useful when simulating a material that emits its own light, such as phosphorescent materials.

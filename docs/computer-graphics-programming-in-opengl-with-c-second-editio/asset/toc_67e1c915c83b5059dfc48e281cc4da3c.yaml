@@ -1,0 +1,512 @@
+level_changes:
+- line: 218
+  before: 2
+  after: 3
+- line: 224
+  before: 2
+  after: 3
+- line: 232
+  before: 2
+  after: 3
+- line: 238
+  before: 2
+  after: 3
+- line: 242
+  before: 2
+  after: 3
+- line: 248
+  before: 2
+  after: 3
+- line: 291
+  before: 3
+  after: 4
+- line: 331
+  before: 3
+  after: 4
+- line: 395
+  before: 3
+  after: 4
+- line: 405
+  before: 3
+  after: 4
+- line: 427
+  before: 3
+  after: 4
+- line: 464
+  before: 3
+  after: 4
+- line: 615
+  before: 2
+  after: 3
+- line: 659
+  before: 2
+  after: 3
+- line: 696
+  before: 2
+  after: 3
+- line: 759
+  before: 2
+  after: 3
+- line: 786
+  before: 2
+  after: 3
+- line: 809
+  before: 2
+  after: 3
+- line: 816
+  before: 2
+  after: 3
+- line: 890
+  before: 3
+  after: 4
+- line: 905
+  before: 3
+  after: 4
+- line: 924
+  before: 3
+  after: 4
+- line: 949
+  before: 2
+  after: 3
+- line: 991
+  before: 3
+  after: 4
+- line: 1020
+  before: 3
+  after: 4
+- line: 1043
+  before: 3
+  after: 4
+- line: 1058
+  before: 2
+  after: 3
+- line: 1126
+  before: 2
+  after: 3
+- line: 1130
+  before: 3
+  after: 4
+- line: 1179
+  before: 2
+  after: 3
+- line: 1208
+  before: 2
+  after: 3
+- line: 1275
+  before: 2
+  after: 3
+- line: 1283
+  before: 2
+  after: 3
+- line: 1293
+  before: 2
+  after: 3
+- line: 1411
+  before: 2
+  after: 3
+- line: 1437
+  before: 2
+  after: 3
+- line: 1467
+  before: 2
+  after: 3
+- line: 1630
+  before: 2
+  after: 3
+- line: 1663
+  before: 3
+  after: 4
+- line: 1774
+  before: 2
+  after: 3
+- line: 1868
+  before: 2
+  after: 3
+- line: 2005
+  before: 2
+  after: 3
+- line: 2093
+  before: 2
+  after: 3
+- line: 2099
+  before: 3
+  after: 4
+- line: 2124
+  before: 3
+  after: 4
+- line: 2181
+  before: 3
+  after: 4
+- line: 2410
+  before: 2
+  after: 3
+- line: 2522
+  before: 2
+  after: 3
+- line: 2604
+  before: 2
+  after: 3
+- line: 2634
+  before: 2
+  after: 3
+- line: 2658
+  before: 2
+  after: 3
+- line: 2689
+  before: 2
+  after: 3
+- line: 2699
+  before: 2
+  after: 3
+- line: 2705
+  before: 2
+  after: 3
+- line: 2959
+  before: 2
+  after: 3
+- line: 2961
+  before: 3
+  after: 4
+- line: 2981
+  before: 2
+  after: 4
+- line: 3122
+  before: 2
+  after: 3
+- line: 3226
+  before: 2
+  after: 3
+- line: 3234
+  before: 2
+  after: 3
+- line: 3240
+  before: 2
+  after: 3
+- line: 3470
+  before: 3
+  after: 4
+- line: 3721
+  before: 2
+  after: 4
+- line: 3984
+  before: 2
+  after: 3
+- line: 3997
+  before: 2
+  after: 3
+- line: 4025
+  before: 3
+  after: 4
+- line: 4054
+  before: 3
+  after: 4
+- line: 4060
+  before: 3
+  after: 4
+- line: 4176
+  before: 2
+  after: 3
+- line: 4457
+  before: 2
+  after: 3
+- line: 4461
+  before: 3
+  after: 4
+- line: 4476
+  before: 3
+  after: 4
+- line: 4559
+  before: 3
+  after: 4
+- line: 4617
+  before: 2
+  after: 3
+- line: 4638
+  before: 2
+  after: 3
+- line: 4646
+  before: 2
+  after: 3
+- line: 4845
+  before: 2
+  after: 4
+- line: 4977
+  before: 2
+  after: 3
+- line: 5113
+  before: 2
+  after: 3
+- line: 5133
+  before: 2
+  after: 3
+- line: 5151
+  before: 2
+  after: 3
+- line: 5450
+  before: 2
+  after: 3
+- line: 5493
+  before: 2
+  after: 3
+- line: 5499
+  before: 2
+  after: 3
+- line: 5512
+  before: 2
+  after: 3
+- line: 5674
+  before: 2
+  after: 3
+- line: 5723
+  before: 2
+  after: 3
+- line: 5731
+  before: 2
+  after: 3
+- line: 5736
+  before: 2
+  after: 3
+- line: 5970
+  before: 2
+  after: 3
+- line: 6147
+  before: 2
+  after: 3
+- line: 6292
+  before: 2
+  after: 3
+- line: 6355
+  before: 2
+  after: 3
+- line: 6361
+  before: 2
+  after: 3
+- line: 6402
+  before: 2
+  after: 3
+- line: 6530
+  before: 2
+  after: 3
+- line: 6602
+  before: 2
+  after: 3
+- line: 6646
+  before: 2
+  after: 3
+- line: 6897
+  before: 2
+  after: 3
+- line: 7113
+  before: 2
+  after: 3
+- line: 7620
+  before: 2
+  after: 3
+- line: 7684
+  before: 2
+  after: 3
+- line: 7698
+  before: 2
+  after: 3
+- line: 7888
+  before: 2
+  after: 3
+- line: 8250
+  before: 2
+  after: 3
+- line: 8392
+  before: 2
+  after: 3
+- line: 8477
+  before: 2
+  after: 3
+- line: 8491
+  before: 2
+  after: 3
+- line: 8545
+  before: 3
+  after: 4
+- line: 8606
+  before: 3
+  after: 4
+- line: 8631
+  before: 3
+  after: 4
+- line: 8656
+  before: 2
+  after: 3
+- line: 8662
+  before: 3
+  after: 4
+- line: 8670
+  before: 2
+  after: 4
+- line: 8947
+  before: 3
+  after: 4
+- line: 8977
+  before: 3
+  after: 4
+- line: 9010
+  before: 3
+  after: 4
+- line: 9019
+  before: 3
+  after: 4
+- line: 9031
+  before: 3
+  after: 4
+- line: 9086
+  before: 3
+  after: 4
+- line: 9158
+  before: 3
+  after: 4
+- line: 9377
+  before: 3
+  after: 4
+- line: 9529
+  before: 2
+  after: 4
+- line: 9632
+  before: 2
+  after: 4
+- line: 9982
+  before: 2
+  after: 4
+- line: 10075
+  before: 2
+  after: 4
+- line: 10227
+  before: 2
+  after: 3
+- line: 10254
+  before: 2
+  after: 3
+- line: 10413
+  before: 2
+  after: 3
+- line: 10620
+  before: 2
+  after: 3
+- line: 10637
+  before: 2
+  after: 3
+- line: 10653
+  before: 2
+  after: 3
+- line: 10663
+  before: 2
+  after: 3
+- line: 10746
+  before: 2
+  after: 3
+- line: 10791
+  before: 3
+  after: 4
+- line: 10822
+  before: 2
+  after: 3
+- line: 10828
+  before: 3
+  after: 4
+- line: 10854
+  before: 3
+  after: 4
+- line: 10878
+  before: 2
+  after: 3
+- line: 10885
+  before: 2
+  after: 3
+- line: 10905
+  before: 2
+  after: 3
+text_changes:
+- line: 218
+  before: 1.14 扩展库
+  after: 1.2 扩展库
+- line: 224
+  before: 1.15 数学库
+  after: 1.3 数学库
+- line: 232
+  before: 1.16 纹理管理
+  after: 1.4 纹理管理
+- line: 238
+  before: 1.17 可选库
+  after: 1.5 可选库
+- line: 242
+  before: 1.18 安装与配置
+  after: 1.6 安装与配置
+- line: 464
+  before: 2.4.7 像素操作
+  after: 2.1.6 像素操作
+- line: 482
+  before: 2.7 检测 OPENGL 和 GLSL 错误
+  after: 2.7 检测 OpenGL 和 GLSL 错误
+- line: 659
+  before: 2.5 从顶点构建对象
+  after: 2.4 从顶点构建对象
+- line: 1411
+  before: 3.5 顶点属性的插值
+  after: 4.3 顶点属性的插值
+- line: 2181
+  before: 4.7.3 背面剔除
+  after: 4.11.3 背面剔除
+- line: 2319
+  before: 5.3 创建纹理对象
+  after: 5.2 创建纹理对象
+- line: 2333
+  before: 5.4 构建纹理坐标
+  after: 5.3 构建纹理坐标
+- line: 2362
+  before: 5.5 将纹理坐标加载到缓冲区
+  after: 5.4 将纹理坐标加载到缓冲区
+- line: 2380
+  before: 5.6 在着色器中使用纹理：采样器变量和纹理单元
+  after: 5.5 在着色器中使用纹理：采样器变量和纹理单元
+- line: 2410
+  before: 5.7 纹理映射：示例程序
+  after: 5.6 纹理映射：示例程序
+- line: 2522
+  before: 5.8 MIP 映射
+  after: 5.7 MIP 映射
+- line: 2604
+  before: 5.9 各向异性过滤
+  after: 5.8 各向异性过滤
+- line: 2634
+  before: 5.10 环绕与平铺
+  after: 5.9 环绕与平铺
+- line: 2658
+  before: 5.12 纹理——OpenGL 的其他细节
+  after: 5.10 纹理——OpenGL 的其他细节
+- line: 3260
+  before: 光照
+  after: 第7章：光照
+- line: 3604
+  before: '*（程序7.1，续）*'
+  after: （程序7.1，续）
+- line: 3606
+  before: '*顶点着色器*'
+  after: 顶点着色器
+- line: 3668
+  before: '*片段着色器*'
+  after: 片段着色器
+- line: 4476
+  before: 8.7.2 生成软阴影——百分比渐近过滤（PCF）
+  after: 8.7.2 生成软阴影——百分比渐进过滤（PCF）
+- line: 4563
+  before: 程序 8.2 百分比接近过滤（PCF）
+  after: 程序 8.2 百分比渐进过滤（PCF）
+- line: 6897
+  before: 11.5 用户定义的裁剪平面
+  after: 14.3 用户定义的裁剪平面
+- line: 10878
+  before: 9.2 设置 Nsight
+  after: C.1 设置 Nsight
+- line: 10885
+  before: 9.3 在 Nsight 中运行 C++/OpenGL 应用程序
+  after: C.2 在 Nsight 中运行 C++/OpenGL 应用程序
+- line: 10905
+  before: 参考
+  after: 参考文献

@@ -1,0 +1,25 @@
+Copyright ©2021 by MERCURY LEARNING AND INFORMATION LLC. All rights reserved.
+
+*This publication, portions of it, or any accompanying software may not be reproduced in any way, stored in a retrieval system of any type, or transmitted by any means, media, electronic display or mechanical display, including, but not limited to, photocopy, recording, Internet postings, or scanning, without prior permission in writing from the publisher.*
+
+Publisher: David Pallai  
+MERCURY LEARNING AND INFORMATION  
+22841 Quicksilver Drive  
+Dulles, VA 20166  
+info@merclearning.com  
+www.merclearning.com  
+(800) 232-0223
+
+*Computer Graphics Programming in OpenGL with C++, Second Edition.*  
+V. Scott Gordon & John Clevenger.  
+ISBN: 978-1-68392-672-6
+
+The publisher recognizes and respects all marks used by companies, manufacturers, and developers as a means to distinguish their products. All brand names and product names mentioned in this book are trademarks or service marks of their respective companies. Any omission or misuse (of any kind) of service marks or trademarks, etc. is not an attempt to infringe on the property of others.
+
+Library of Congress Control Number: 2020946880
+
+202122321　　　　 Printed on acid-free paper in the United States of America.
+
+Our titles are available for adoption, license, or bulk purchase by institutions, corporations, etc. For additional information, please contact the Customer Service Dept. at 800-232-0223 (toll free). Digital versions of our titles are available at: www.academiccourseware.com and other e-vendors. *All companion files are available by writing to the publisher at info@merclearning.com.*
+
+The sole obligation of MERCURY LEARNING AND INFORMATION to the purchaser is to replace the book and/or disc, based on defective materials or faulty workmanship, but not based on the operation or functionality of the product.
