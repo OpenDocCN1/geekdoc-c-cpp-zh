@@ -782,6 +782,7 @@
 +   [Complete Commodore 64 初学者指南：通过这本标志性 Commodore 64 编程综合指南，掌握编码基础](docs/complete-commodore-64-beginners-guide-master-the-basics-of-c/README.md)
 +   [C++ 编程入门完整教程](docs/complete-tutorial-to-begin-programming-in-c/README.md)
 +   [复杂系统与云：自组织与自管理的视角（计算机科学综述与趋势）](docs/complex-systems-and-clouds-a-self-organization-and-self-mana/README.md)
++   [CompTIA IT 基础学习指南：考试 FC0-U51 第1版](docs/comptia-it-fundamentals-study-guide-exam-fc0-u51-1st-edition/README.md)
 +   [计算童话](docs/computational-fairy-tales/README.md)
 +   [MATLAB 和 Python 中的有限元法计算框架](docs/computational-framework-for-the-finite-element-method-in-mat/README.md)
 +   [下一代测序数据分析的计算方法 (Wiley 生物信息学系列)](docs/computational-methods-for-next-generation-sequencing-data-an/README.md)
