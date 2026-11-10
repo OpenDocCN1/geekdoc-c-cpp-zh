@@ -1,0 +1,11 @@
+graphics and text (Hart 1999; Tumminello 2004; Truong et al. 2006). They are a planning, or previsualization, tool used to present, discuss, and revise the concept before costly development work has been done. Storyboards present a sequence of panels, or cells, which include graphics and text to explain what is happening. They have been selected for use in this work on SEGs for the following reasons:
+
++   - Storyboards have been adopted in game development, making them a familiar approach to many stakeholders.
++   - Storyboards are straightforward to create, understand, and revise by stakeholders with diverse backgrounds. This is an important consideration for creating SEGs, which involves game developers, software developers, and educators.
++   - Storyboards are versatile, as they can be applied at a high level of abstraction (presenting the overall concept of a game) or at a more detailed step-by-step description (presenting the details of part of a game).
+
+# ### 3.3.1.2 SimSYS Storyboard
+
+The SimSYS storyboard is an informal model, which provides a narrative with preliminary graphics, audio, characters, and learning objectives/standards (Figure 3.4). This is a straightforward, familiar way to begin the SEG development. The informal model is organized into a title, an overview that describes the structure of the game at a high level (number of acts, scenes, screens, challenges), the learning objectives (both topic specific and transferable skills), initial conditions for the game such as number of points a player starts with, backdrop for the scenes, and rules that need to be applied as the game is played. After this, the game play is described.
+
+In the simple example Test Game 4 SE Design, there is one Act; it has one Scene with two Screens; the first Screen has a challenge in it. The layout of the Challenge is presented (a collection of standard layouts is available to reuse); the Challenge is a simple multiple choice quiz—there is no timer or NPC competing in the quiz. The question and possible answer options are captured; the player can see a hint for each answer; the reward for a correct and an incorrect answer is described in addition to the feedback provided to the player. In this model, the details are not necessarily complete—for example, the narrative indicates that a hint should be available for each

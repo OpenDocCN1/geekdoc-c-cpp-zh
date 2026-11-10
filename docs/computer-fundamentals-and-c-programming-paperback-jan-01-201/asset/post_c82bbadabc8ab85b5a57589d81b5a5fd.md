@@ -1,0 +1,176 @@
+
+- 11.14 Thinking in Recursive Terms 359
+  - 11.14.1 Adding Array Elements Recursively 359
+  - 11.14.2 Computing the Power of a Number Recursively 360
+  - 11.14.3 Using Recursion To Compute Fibonacci Numbers 360
+- 11.15 The **main** Function 361
+- 11.16 Variable Scope and Lifetime 362
+  - 11.16.1 Local and Global Variables 362
+  - 11.16.2 Variables in a Block 362
+  - 11.16.3 Variable Hiding 363
+- 11.17 The Storage Classes 364
+  - 11.17.1 Automatic Variables (auto) 364
+  - 11.17.2 Static Variables (static) 364
+  - 11.17.3 External Variables (extern) 365
+  - 11.17.4 **extern.c**: Using extern to Control Variable Visibility 366
+  - 11.17.5 Register Variables (register) 368
+
+## CHAPTER 12 Pointers 373
+
+- 12.1 Memory Access and the Pointer 373
+- 12.2 Pointer Basics 374
+- 12.3 **intro2pointers.c**: A Simple Demonstration of Pointers 375
+- 12.4 Declaring, Initializing and Dereferencing a Pointer 375
+- 12.5 **pointers.c**: Using Two Pointers 377
+- 12.6 Important Attributes of Pointers 379
+- 12.7 Pointers and Functions 382
+  - 12.7.1 **swap_success.c**: Making the **swap** Function Work 383
+  - 12.7.2 Using Pointers to Return Multiple Values 384
+  - 12.7.3 **sphere_calc.c**: Function “Returning” Multiple Values 385
+  - 12.7.4 Returning a Pointer 386
+- 12.8 Pointers and Arrays 387
+  - 12.8.1 Using a Pointer for Browsing an Array 387
+  - 12.8.2 Dereferencing the Array Pointer 388
+  - 12.8.3 Treating a Pointer as an Array 389
+  - 12.8.4 Array vs Pointer Which Points to an Array 389
+  - 12.8.5 **pointer_array.c**: Treating an Array as a Pointer 390
+- 12.9 Operations on Pointers 391
+  - 12.9.1 Assignment 391
+  - 12.9.2 Pointer Arithmetic Using + and - 391
+  - 12.9.3 Pointer Arithmetic Using ++ and -- 392
+  - 12.9.4 Comparing Two Pointers 393
+- 12.10 **max_min.c**: Using **scanf** and **printf** with Pointer Notation 393
+- 12.11 NULL and the Null Pointer 393
+- 12.12 Pointers, Arrays and Functions Revisited 395
+  - 12.12.1 Pointers in Lieu of Array as Function Argument 395
+  - 12.12.2 Using const to Protect an Array from a Function 397
+  - 12.12.3 Returning a Pointer to an Array 397
+- 12.13 Array of Pointers 398
+- 12.14 sort_selection2.c: Sorted View of Array Using Array of Pointers 398
+- 12.15 Pointer to a Pointer 399
+- 12.16 Pointers and Two-Dimensional Arrays 402
+- 12.17 The Generic or Void Pointer 404
+- 12.18 Using the const Qualifier with Pointers 406
+
+## CHAPTER 13 Strings 412
+
+- 13.1 String Basics 412
+- 13.2 Declaring and Initializing a String 413
+  - 13.2.1 Using an Array to Declare a String 413
+  - 13.2.2 When an Array Is Declared But Not Initialized 413
+  - 13.2.3 Using a Pointer to Declare a String 414
+  - 13.2.4 When an Array of Characters Is Not a String 415
+- 13.3 intro2strings.c: Declaring and Initializing Strings 415
+- 13.4 Handling Lines as Strings 417
+  - 13.4.1 Using gets/puts: The Unsafe Way 417
+  - 13.4.2 gets_puts.c: A Program Using gets and puts 417
+  - 13.4.3 Using fgets/fputs: The Safe Way 418
+  - 13.4.4 fgets_fputs.c: A Program Using fgets and fputs 419
+- 13.5 The sscanf and sprintf Functions 420
+  - 13.5.1 sscanf: Formatted Input from a String 420
+  - 13.5.2 sprintf: Formatted Output to a String 421
+  - 13.5.3 validate_pan.c: Using sscanf and sprintf to Validate Data 421
+- 13.6 Using Pointers for String Manipulation 422
+- 13.7 Common String-Handling Programs 423
+  - 13.7.1 string_palindrome.c: Program to Check a Palindrome 423
+  - 13.7.2 count_words.c: Counting Number of Words in a String 424
+  - 13.7.3 sort_characters.c: Sorting Characters in a String 425
+- 13.8 Developing String-Handling Functions 426
+  - 13.8.1 my_strlen: Function to Evaluate Length of a String 426
+  - 13.8.2 reverse_string: Function to Reverse a String 427
+  - 13.8.3 my_strcpy: Function to Copy a String 427
+  - 13.8.4 my_strcat: Function to Concatenate Two Strings 427
+  - 13.8.5 string_manipulation.c: Invoking All Four Functions from main 428
+  - 13.8.6 substr.c: Program Using a Function to Extract a Substring 429
+- 13.9 Standard String-Handling Functions 430
+  - 13.9.1 The strlen Function 430
+  - 13.9.2 The strcpy Function 430
+  - 13.9.3 The strcat Function 431
+  - 13.9.4 The strcmp Function 431
+  - 13.9.5 The **strchr** and **strrchr** Functions 432
+  - 13.9.6 The **strstr** Function 432
+- 13.10 The Character-Oriented Functions 433
+- 13.11 **password_check.c**: Using the Character-Handling Functions 434
+- 13.12 Two-Dimensional Array of Strings 435
+- 13.13 Array of Pointers to Strings 435
+- 13.14 **sort_strings.c**: Sorting a 2D Array of Strings 437
+- 13.15 **string_swap.c**: Swapping Two Strings 438
+- 13.16 The **main** Function Revisited 439
+
+## CHAPTER 14 User-Defined Data Types 445
+
+- 14.1 Structure Basics 445
+- 14.2 Declaring and Defining a Structure 446
+  - 14.2.1 Accessing Members of a Structure 447
+  - 14.2.2 Combining Declaration, Definition and Initialization 448
+  - 14.2.3 Declaring without Structure Tag 448
+- 14.3 **intro2structures.c**: An Introductory Program 449
+- 14.4 Important Attributes of Structures 450
+  - 14.4.1 **structure_attributes.c**: Copying and Comparing Structures 451
+  - 14.4.2 Abbreviating a Data Type: The **typedef** Feature 452
+  - 14.4.3 **structure_typedef.c**: Simplifying Use of Structures 453
+- 14.5 Nested Structures 454
+  - 14.5.1 Initializing a Nested Structure 455
+  - 14.5.2 Accessing Members 456
+  - 14.5.3 **structure_nested.c**: Program Using a Nested Structure 456
+- 14.6 Arrays as Structure Members 457
+- 14.7 Arrays of Structures 458
+  - 14.7.1 **array_of_structures.c**: Program for Displaying Batting Averages 459
+  - 14.7.2 **structure_sort.c**: Sorting an Array of Structures 460
+- 14.8 Structures in Functions 462
+  - 14.8.1 **structure_in_func.c**: An Introductory Program 463
+  - 14.8.2 **time_difference.c**: Using a Function that Returns a Structure 464
+  - 14.8.3 **swap_success2.c**: Swapping Variables Revisited 465
+- 14.9 Pointers to Structures 466
+  - 14.9.1 **pointer_to_structure.c**: Accessing Structure Members 467
+  - 14.9.2 **update_pay.c**: Using a Pointer as a Function Argument 468
+  - 14.9.3 **time_addition.c**: Using Pointers as Function Arguments 469
+- 14.10 **student_management.c**: A Project 470
+- 14.11 Unions 473
+  - 14.11.1 Unique Attributes of Unions 473
+  - 14.11.2 **intro2unions**: An Introductory Program 474
+- 14.12 Bit Fields 475
+- 14.13 The Enumerated Type 476
+
+## CHAPTER 15 File Handling 484
+
+- 15.1 A Programmer’s View of the File 484
+- 15.2 File-Handling Basics 485
+- 15.3 Opening and Closing Files 486
+  - 15.3.1 **fopen**: Opening a File 486
+  - 15.3.2 File Opening Modes 486
+  - 15.3.3 The Filename 487
+  - 15.3.4 Error Handling 488
+  - 15.3.5 **fclose**: Closing a File 489
+  - 15.3.6 **fopen_fclose.c**: An Introductory Program 489
+- 15.4 The File Pointer and File Buffer 490
+- 15.5 The File Read/Write Functions 491
+  - 15.5.1 **mixing_functions.c**: Manipulating the File Offset Pointer 491
+  - 15.5.2 The **fgetc** and **fputc** Functions Revisited 492
+  - 15.5.3 **file_copy.c**: A File Copying Program 493
+  - 15.5.4 **file_append.c**: A File Appending Program 494
+- 15.6 The **fgets** and **fputs** Functions Revisited 495
+  - 15.6.1 **fgets_fputs2.c**: Using **fgets** and **fputs** with a Disk File 496
+  - 15.6.2 **save_student_data.c**: Writing Data Stored in Array to a File 497
+- 15.7 **fscanf** and **fprintf**: The Formatted Functions 498
+- 15.8 **fscanf_fprintf.c**: Writing and Reading Lines Containing Fields 498
+- 15.9 Filenames from Command-Line Arguments 500
+  - 15.9.1 **file_copy2.c**: File Copying Using Command-Line Arguments 500
+  - 15.9.2 **validate_records.c**: Detecting Lines Having Wrong Number of Fields 501
+- 15.10 **perror** and **errno**: Handling Function Errors 503
+- 15.11 **feof**, **ferror** and **clearerr**: EOF and Error Handling 504
+- 15.12 Text and Binary Files 505
+- 15.13 **fread** and **fwrite**: Reading and Writing Binary Files 506
+  - 15.13.1 The **fread** Function 506
+  - 15.13.2 The **fwrite** Function 507
+  - 15.13.3 **fread_fwrite.c**: Using the Primitive and Derived Data Types 507
+  - 15.13.4 **save_structure.c**: Saving and Retrieving a Structure 508
+- 15.14 Manipulating the File Position Indicator 510
+  - 15.14.1 **fseek**: Positioning the Offset Pointer 510
+  - 15.14.2 The **ftell** and **rewind** Functions 510
+  - 15.14.3 **reverse_read.c**: Reading a File in Reverse 511
+- 15.15 **update_structure.c**: Updating a Structure Stored on Disk 512
+- 15.16 The Other File-Handling Functions 514
+  - 15.16.1 The **remove** Function 514
+  - 15.16.2 The **rename** Function 514
+  - 15.16.3 The **tmpfile** Function 515

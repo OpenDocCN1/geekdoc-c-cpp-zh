@@ -1,0 +1,220 @@
+
+
+## 项目问题
+
+编写一个程序，从两个未排序的二进制文件（这些文件的格式如下所述）中读入员工数据，将两个文件中的数据按员工姓名排序合并在一起，并将得到的员工数据排序列表输出到一个二进制文件。此外，当程序从输入文件读取每位员工的信息时，应以表格格式将其打印到标准输出；在程序将来自两个输入文件的排序合并数据写入输出文件之前，也应将其以表格格式打印到标准输出，并打印员工总数和平均工资。`\t` 是制表符，可用于获得良好的表格输出。程序使用的三个文件（两个输入文件和一个输出文件）将通过命令行参数传递给程序。
+
+程序将把员工数据读入一个单链表。员工列表应按员工姓名字母顺序维护和排序。不要假设输入文件中的员工记录已经按排序顺序排列。但是，程序应按排序顺序将该列表写入输出二进制文件。
+
+### 参考书目与参考文献
+
+- A. L. Kelly 与 I. Pohl（1999），*C语言之书*，第4版，培生，新加坡。
+- A. N. Kamthane（2002），*ANSI C与Turbo C程序设计*，第1版，培生，新加坡。
+- A. Pandey（2003），*C程序设计*，第1版，Cybertech Publications，印度。
+- B. A. Forouzan 与 R. F. Gilberg（2001），*使用C的结构化程序设计方法*，第2版，Thomson Asia，新加坡。
+- B. Kernighan 与 D. Ritchie（1999），*C程序设计语言*，第2版，Prentice Hall，印度。
+- B. S. Gottfried（2000），*C程序设计*，第2版，Tata McGraw-Hill，印度。
+- C. L. Tondo 与 S. E. Gimpel（1989），*C答案书*，第1版，培生，新加坡。
+- Don Gosselin（2004），*C程序设计——6本合1*，Wiley Dreamtech Pvt Ltd。
+- E. Balaguruswamy（1998），*ANSI C*，第2版，Tata McGraw-Hill，印度。
+- ftp://scitec.wlv.ac.uk/pub/cprog/
+- Gary J. Bronson（2001），*ANSI C*，第3版，Thomson Asia，新加坡。
+- Greg Perry（2000），*C示例教程*，第1版，Prentice Hall，印度。
+- H. M. Deitel（2001），*C程序设计教程——C++与Java入门*，第3版，培生，印度。
+- H. Schildt（2000），*C：完整参考*，第4版，Tata McGraw-Hill，印度。
+- Herbert Schildt（2000），*C：完整参考*，第4版，Tata McGraw-Hill Education。
+- Ivor Horton（2006），*C语言入门：从新手到专家*，第4版，美国。
+- Jeri R. Hanly, Elliot B. Koffman（2007），*C语言问题求解与程序设计*，第5版，Pearson Education–Addison Wesley，美国。
+- K. N. King，*C程序设计：现代方法*，第2版，W. W. Norton，纽约，伦敦。
+- Peter van der Linden（1994），*专家C编程：C语言深层秘密*，第1版，Prentice Hall，印度。
+- R. Heathfield 等（2000），*C语言释放*，第1版，Techmedia，印度。
+- R. Radcliffe（1992），*C百科全书*，第1版，BPB Publications，印度。
+- S. Kaicker（1996），*完整ANSI C*，第1版，BPB Publications，印度。
+- S. Prata（1991），*C Primer Plus*，第3版，Techmedia，印度。
+- S. Summit（2000），*C编程常见问题解答*，第1版，培生，新加坡。
+- Samuel P. Harbison III, Guy L. Steele Jr.（2007），*C：参考手册*，第5版，培生教育，印度。
+- Stephen G. Kochan（2005），*C程序设计*，第3版，培生教育，印度。
+- Stephen G. Kochan（2005），*C程序设计*，第3版，Sams Publishing，印第安纳。
+- Stephen Prata（1998），*C Primer Plus®*，第3版，Sams Publishing，美国。
+- Y. Kanetkar（1991），*让我们学C*，第4版（修订版），BPB Publications，印度。
+- Y. Kanetkar（2001），*让我们学C题解*，第1版，BPB Publications，印度。
+- Y. Kanetkar（2001），*理解C中的指针*，第3版，BPB Publications，印度。
+
+- http://cplus.about.com
+- http://cplus.about.com/mbiopage.htm
+- http://en.wikipedia.org/wiki/C_syntax
+- http://goforit.unk.edu/cprogram/default.htm
+- http://mathbits.com/
+- www.old.dkuug.dk/JTC1/SC22/WG14/docs/e9x/
+- http://publications.gbdirect.co.uk/c_book/
+- http://students.csy.edu/~cs130a/index.html
+- http://students.csy.edu/~cs130a/readings/readings.html
+- http://users.evtek.fi/~jaanah/IntroC/DBeech/index.htm
+- http://www.d.umn.edu/~gshute/C/statements.html
+- http://www.netnam.vn/unescocourse/os/operating.htm
+- http://www.minich.com/education/psu/cplusplus/index.htm
+- http://www.cs.utk.edu/~cs102/lectures/index.html
+- http://www-ee.eng.hawaii.edu/Courses/EE150/Book/chap7/subsection2.1.3.1.html
+- http://www.coronadoenterprises.com
+- http://www.eskimo.com
+- http://www.ics.uci.edu/~dan
+- http://www.fredosaurus.com/notes-cpp/arrayptr/26arraysaspointers.html
+- http://www.ibiblio.org/pub/languages/
+- http://www.cs.cf.ac.uk/Dave/C/CE.html
+- http://www.cplusplus.com/doc/tutorial/
+- http://www.cs.mun.ca/~michael/c/problems.html
+- http://www.comp.nus.edu.sg/~hchia/Teaching/cs1101c/tut10/tut10.html
+- http://www.digitalmars.com/
+- http://www.borland.com/
+- http://www.function-pointer.org/
+- http://www.juicystudio.com
+- http://www.antioffline.com/h/c/
+- http://www.coronadoenterprises.com/coders/index.html
+- http://www.mrx.net/c/
+- http://www.scit.wlv.ac.uk/cbook/
+- http://www.cs.cmu.edu
+- http://www-h.eng.cam.ac.uk/help/tpl/languages/C/teaching_C/node1.html
+- http://www.its.strath.ac.uk/courses/c/tableofcontents3_1.html
+- http://www.scit.wlv.ac.uk/~jphb/cbook/html/chap10.bitfields.htm
+- http://www.xploiter.com/mirrors/cprogram/default.htm
+- http://yolinux.com/
+
+### 索引
+
+**符号**
+
+- `'-'` 118
+- `'!='` 119
+- `'*'` 118
+- `'/'` 118
+- `'&'` 118
+- `'#'` 118
+- `'<'` 119
+- `'<='` 118
+- `'>'` 118
+- `'>='` 119
+- 3GL 68, 124
+- 4GL 68
+- .com 108
+- .de 108
+- `-defined structure` 395
+- .edu 108
+- `#error` 457
+- .gov 108
+- `#line` 457
+- `-> operator` 407
+- `'*' operator` 407
+- `'.' operators` 407
+- .org 108
+- `#pragma` 457
+- .us 108
+
+- 算盘 1
+- 绝对路径名 86
+- 抽象 63
+- 活动记录 304
+- 地址常量 337
+- 算法 60, 114, 118, 133
+  - 流程图 114
+  - Nassi-Schneiderman 115
+  - 伪代码 114
+  - 步骤形式 114
+- 字母或字符数据 117
+- 字母数字编码 37
+- 应用软件 59
+- argc 451
+- 参数 287
+- argv 451
+- 算术运算符 118, 159
+  - 二元运算符 159
+  - 一元运算符 161
+- ARP 108
+- ARPA 105
+- ARPANET 105, 112
+- 数组 247, 253, 271, 360, 249, 252, 274, 359, 366
+  - 访问 250, 273
+  - 斐波那契数列 253
+  - 初始化 249
+  - 内部表示 252
+  - 内存分配 252
+  - 字符串数组 277
+  - 结构体数组 415, 416
+  - 一维数组 247, 253
+  - 不规则数组 366
+- 汇编语言 60, 61
+  - 代码 61
+  - 程序 61
+  - 语句 61
+- 结合律 44
+- 公理 43, 55
+
+- 基数 19
+- 批处理 101
+- 批处理系统 75
+- 批处理操作系统 78
+- 批处理，分时 78
+- 批处理系统 75
+- 大O表示法 313
+- 二进制编码 36, 60
+- 二进制文件 430
+- 二进制输入 53
+- 二分查找 305, 306, 315
+- 二进制减法
+  - 使用有符号反码表示 31
+  - 使用有符号补码表示 32
+- 位域 414, 415
+- 按位运算符 164, 446
+  - 与 446
+  - 异或 448
+  - 非 449
+  - 或 448
+  - 移位 449
+  - 用途 446
+
+- 布尔加法 44
+- 布尔代数 43, 55
+  - 与 44
+  - 基本运算 54
+  - 交换律 44
+  - 乘法 43
+- 布尔表达式 53, 54, 55, 57
+- 布尔函数 47, 57
+- 布尔乘法 43
+- 布尔非 44
+- 布尔运算 44
+- 布尔变量 47, 55, 57
+- break 语句 236
+- 电力线宽带（BPL）112
+- 浏览器 107, 112
+- 冒泡排序 254, 316
+- 缓冲区 76, 420
+- 缓冲 102
+- 缓冲区溢出 382
+- 缺陷 68
+
+- C99标准 399
+- 电缆调制解调器宽带 109, 112
+- 按地址调用 334
+- 按引用调用 288
+- 按值调用 288
+- calloc() 371
+- 规范形式 48, 55
+- 乘积项规范之和 49
+- 规范项 48
+- cat 命令 89
+- 蜂窝互联网 110
+- CERN 105, 106
+- CHAR_BIT 450
+- 聊天 110, 111
+- 子目录 95
+- CISS 107
+- 清屏 90
+- CLS 96
+- COBOL 60
+- 代码生成 64
+- 编码 66, 68
+- 同或门 54, 55
+- 命令解释器 73, 83, 93, 101
+- 命令行参数 451
+- 命令提示符 94
+

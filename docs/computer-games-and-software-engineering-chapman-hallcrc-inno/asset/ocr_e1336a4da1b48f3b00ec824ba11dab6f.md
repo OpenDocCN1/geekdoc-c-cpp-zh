@@ -1,0 +1,13 @@
+5 seconds using the Linux getrusage command.^3 We want to check how the number of proxies and the number of game servers scale with the number of bots for different message frequencies. We define the maximum capacity of the system as the highest number of connected clients when the 99th percentile of the latency is below 100 ms.
+
+The commodity machines used for the experiments are Dell Core i7 2600, each with four hyper-threaded 3.4-GHz processors. Up to two machines run proxy instances, up to two others server instances, another the database, and two others the bots. All machines reside on the same 1-Gbps LAN and are one hop from each other. Experiment names follow the format X/Y/Z, standing for X cores running one proxy each, Y cores running one game server each, and bots sending Z messages per second. For example, in the scenario 2/2/5, there are two proxy instances running on the same machine and two game servers sharing another machine, and bots on two other machines send five messages per second. In the scenario 4 + 4/4 + 4/2.5, there are four proxies running on one machine, four proxies on another, four game servers on a third machine, and four game servers on a fourth machine.
+
+# ### 7.6.2.2 Results
+
+Figure 7.6 shows that the maximum capacity is reached at 229 clients for the scenario 4 + 4/4 + 4/2.5. In this scenario, the proxy is the bottleneck, and the server reaches slightly past half of its total CPU capacity (400% out of 800% available). On the one hand, the total CPU consumed by the game servers increases linearly with the number of clients. On the other hand, the CPU consumed by the proxies increases quadratically at first, then flattens around 100 clients, and finally seems to increase linearly. We remark this behavior in most of the scenarios where the proxy is a bottleneck.
+
+Figure 7.7 shows that the number of voluntary context switches also reaches a plateau around 100 clients. Voluntary context switches occur when Tornado polls the client sockets, whereas involuntary context switches are triggered by the kernel scheduler.^4 Thus, there may be a bottleneck on the proxy well before the maximum capacity is reached. On the plus side, this bottleneck does not seem to impact the latency observed on the client side. It is possible that the TCP congestion control
+
+> > 3 See http://linux.die.net/man/2/getrusage.
+
+> > 4 See http://www.linuxdevcenter.com/wiki/Involuntary_context_switch.

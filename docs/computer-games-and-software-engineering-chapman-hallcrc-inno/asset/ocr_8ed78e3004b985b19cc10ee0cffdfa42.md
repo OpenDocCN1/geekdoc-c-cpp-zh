@@ -1,0 +1,13 @@
+to employ a library of AI behaviors to construct complex AIs, while at the same time simplifying adaptation of the AI to an actual game context.
+
+We illustrate our approach by creating a garbage collector NPC through the reuse of large portions of the AI designed for a squirrel NPC. These are different game AI contexts, and would typically be approached as unique development tasks. By treating the AI as a collection of interacting modules, many behavioral similarities emerge. By expressing and reusing AI behaviors at a suitable level of abstraction, our approach is able to capture many of these commonalities: fully two-thirds of the *AI modules* in the garbage collector are reused from the squirrel.
+
+Our development and reuse approach is made practical through our tool *Scythe AI*. This software framework directs and facilitates the development workflow, taking in statecharts and associated classes, providing an interface for producing novel AIs from a library of behaviors, and exporting code that can be directly incorporated into a game. By formally representing and understanding the game code associated with specific behaviors, Scythe AI is able to perform basic analysis of the constructed AI, ensuring code and functional group dependencies are properly satisfied and thus the AI is well constructed. Scythe AI represents a useful illustration of the practical value and general feasibility of our approach.
+
+Major contributions of our work include the following:
+
++   - Extending the reuse strategy for developing game AIs based on statecharts presented by Dragert et al. [2]. The work further demonstrates the feasibility of statecharts for game AIs [3], by defining efficient development, component definition, and porting strategies.
++   - A demonstration of reuse by reusing AI modules from a squirrel NPC to build a new AI for a garbage collector NPC.
++   - Concretizing the approach through the design of a software tool, *Scythe AI*. As part of a practical workflow for AI generation, it simplifies component reuse and allows for nontrivial analysis, helping to ensure that AI components are properly composed and integrated.
+
+We begin the next section with a basic background to our approach, as well as appropriate related work. Section 10.3 then describes our general design, whereas Section 10.4 presents our reuse strategy. Section 10.5 details a case study of reuse. Section 10.6 discusses the tool we developed

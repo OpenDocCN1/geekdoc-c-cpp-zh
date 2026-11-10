@@ -1,0 +1,315 @@
+
+## K
+
+- kernel 56
+- Kernighan, Brian 143, 197, 230, 447
+- key variable 237, 239–240, 244
+
+## L
+
+- Large Scale Integration (LSI) 7
+- Least Significant Digit (LSD) 86
+- Leibniz, Gottfried 4, 85
+- library 116, 122
+- line 271
+- linked list 521, 537–541
+  - add node 541–543, 547–548
+  - and **malloc** 539
+  - compared to array 537
+  - count nodes 548
+  - delete node 543, 549
+  - head pointer 539, 542
+  - insert node 548
+  - node 537
+  - operations 540–541
+  - search 548
+  - types 550
+- linker 116, 117, 122, 124
+- Linux 45, 559, 570
+- loader 117
+- Local Area Network (LAN) 10, 29
+- logic gates 103–106
+- logical expression 223
+- logical operators 198–199
+
+## M
+
+- MAC (Media Access Control) address 30, 31
+- Mac OS 45
+- machine code 3
+- machine language 3, 6, 37, 114
+- macro 493, 559
+  - `#` operator 567–568
+  - `##` operator 568
+  - compared to function 566
+- Magnetic Ink Character Recognition (MICR) 25
+- magnetic tape 19
+- **main** 129, 139, 153, 355, 362, 439–440, 488
+- **malloc** 405, 522, 523–526, 528, 533, 542
+  - and array 525–526
+  - and **memset** 534
+  - and strings 531–532
+  - and two-dimensional array 529
+  - error handling 524–525
+- malware 40
+- mantissa. *See* floating point number
+- math library 593
+- matrix 323–327
+  - multiplication 324
+  - transposition 322
+- memory 3, 14–17
+  - dynamic allocation 520–521
+- memory leak 521, 528–529
+- memory stick 20
+- **memset** 534
+- micro-SD card 21
+- microprocessor 2, 10
+- Microsoft Excel 69–74
+  - cell 69
+  - formula 69–70
+  - worksheet 69
+- Microsoft PowerPoint 74–75
+- Microsoft Word 60–66
+- Most Significant Bit (MSB) 89, 166
+- mouse. *See* pointing device
+- MSDOS 45, 47–50, 52, 56, 115, 132, 272, 440, 485, 487
+  - commands 48–50
+
+## N
+
+- name server 77
+- named constant. *See* symbolic constant
+- Network Interface Card (NIC) 28, 29, 30
+- network topology 28
+- node 75
+- NUL 172, 173, 244, 282, 412, 414, 415, 417, 423, 428, 495
+- NULL 393, 395, 405, 448, 503, 521, 527, 535, 588
+- null body 244
+- null pointer 379, 381, 393–395
+
+## O
+
+- Object-Oriented Programming (OOP) 108
+- octal number 95–96, 158
+- one’s complement 89–90
+- operand 154
+  - implicit promotion 184
+- operating system 7, 14, 39, 41, 41–45, 272, 484, 521
+  - Android 10
+  - iOS 10
+  - multi-programming 44
+  - multi-tasking 44
+  - multi-user 44
+- operator 122, 178
+  - `,` 200–202
+  - `!` (NOT) 199
+  - `!!` 198
+  - `%` (modulus) 165, 286, 181, 182
+  - `&` 374, 376, 576–577
+  - `&&` 198
+  - `*` 182, 374, 377, 388
+  - `**` 401, 403, 438
+  - `+` 182
+  - `++` 193, 392
+  - `+=` 192
+  - `-` 182
+  - `--` 193, 392
+  - `->` 450, 467
+  - `/` 182
+  - `<` 270, 274
+  - `=` 192
+  - `>` 270, 274
+  - `?:` 199, 208, 223
+  - `|` 478
+  - arithmetic 182
+  - associativity 180, 189–190, 197
+  - bitwise. *See* bitwise operations.
+  - cast 186
+  - dot 450, 456, 467
+  - order of evaluation 186
+  - parentheses 189, 194
+  - precedence 180, 188–189, 197
+  - priority. *See* operator: precedence
+  - side effect 181, 192, 193
+  - sizeof 154, 170, 185, 187, 188, 202
+- Optical Character Recognition (OCR) 25
+- output redirection 271
+
+## P
+
+- packet switching 75
+- parallel port 22
+- pass by reference 338, 384
+- pass by value 338, 384, 468
+- perror 494, 503
+- plotter 27
+- pointer 374–375
+  - arithmetic 375, 380, 387–388, 391–392, 423, 467
+  - as array 389
+  - as function argument 382–386, 395–397
+  - attributes 379
+  - const qualifier 397, 406
+  - declaration 375–377
+  - dereference 374, 377, 381, 384
+  - return of 386, 397–398
+  - return multiple values 384–385
+  - sizeof 380
+  - to function 582–586
+  - to pointer 399–402, 438, 439
+  - to structure 466–469
+  - uninitialized 382
+  - with array 387–391
+  - pointer to constant 387, 414
+- pointing device 23–24
+- **pow** 593
+- Power-On-Self-Test (POST) 40
+- preprocessor 124, 127, 128, 169, 183, 558–560
+  - **#define** 559, 560–563
+  - **#define** with parameters 563–566
+  - **#elif** 573–574
+  - **#else** 572–573
+  - **#if** 573–574
+  - **#ifdef** 572–573
+  - **#ifndef** 572–573
+  - **#include** 559, 570–571
+  - **#undef** 560, 569–570
+  - attributes 559
+  - conditional compilation 559, 571–574
+  - debug programs 574–575
+  - directive 124, 128
+  - include file, attributes 571
+  - parentheses, use of 564
+- primary memory 12, 14
+- prime number 249, 261
+- printer 26, 27
+- **printf** 129, 135, 285–288, 403, 459
+  - compared to **scanf** 286
+  - field width 288–289
+  - format specifier 135, 136, 287
+  - mismatch 285
+  - precision 285, 289–291
+- procedural language 106
+- procedure 107
+- Programmable Read Only Memory (PROM) 15
+- programming language 114–116
+- PS/2 22
+- **putc** 272–273, 493
+- **putchar** 243, 269, 493
+- **puts** 417, 419
+
+## Q
+
+- queue 551–552
+
+## R
+
+- Random Access Memory (RAM) 12, 13, 14
+- Read Only Memory (ROM) 15, 39
+- real number. *See* floating point number
+- **realloc** 527, 534–536
+- recursion 350, 359–361
+- redirection 512
+- **register** 368
+- relational operators 196
+- **remove** 514
+- **rename** 514–515
+- repetition 108, 110, 236
+- **return** 129, 488
+- **rewind** 489, 496, 511
+- Ritchie, Dennis 55, 121, 143, 197, 230, 447
+- RJ45 22, 31
+- router 32
+- runtime 125, 520
+
+## S
+
+- **scanf** 136–137, 274–276, 285, 403, 423, 447, 459, 531
+  - character data 280
+  - compared to **printf** 286
+  - format specifier 136, 274, 279
+  - mismatch 275
+  - numeric data 280
+  - return value 277
+  - scan set 281–284, 415
+  - string data 281
+  - whitespace 277, 280
+  - with string 416
+- scanner 24
+- secondary memory 12, 17
+- Secure Shell (SSH) 78, 79
+- selection 207
+- selection sort 309, 425
+- semantic error 125, 132
+- sequencing 108, 109
+- serial port 22
+- shared object 117
+- shell 42, 132, 271, 512
+- side effect 341
+- sign bit. *See* Most Significant Bit (MSB)
+- **sizeof** 403, 415, 475, 523
+- solid state disk (SSD) 20, 21
+- spreadsheet 66
+- **sprintf** 421
+- **sscanf** 284, 420–421, 421, 503
+- stack 350, 351, 356, 358, 522, 551
+  - overflow 358
+- standard library 139, 141, 268, 336, 342
+- standard streams 270–271
+- **static** 346, 356, 364, 365
+- Static RAM (SRAM) 15, 16
+- **stderr** 270, 512
+- **stdin** 270, 272
+- **stdout** 270, 272
+- stored program concept 5, 36
+- **strcat** 431, 488
+- **strchr** 432
+- **strcmp** 431–432
+- **strcpy** 430–431, 488
+- string 172, 173, 412–413
+  - and pointer 422–423
+  - concatenation 213
+  - NUL in 412–413
+  - sort 437
+  - swap 438
+  - with **printf** 415
+- stringizing operator. *See* macro; `#` operator
+- **strlen** 430, 531
+- **strrchr** 432
+- **strstr** 432
+- **struct** 446
+- structure 445–446, 537
+  - attributes 450–454
+  - declaration 446–447
+  - definition 447
+  - in function 462–466
+  - member 447
+  - nested 454–456
+  - save to file 508
+  - sort 460–462
+  - tag 446–447
+  - without tag 448
+- structure theorem 108, 109
+- structured programming 108–109
+- Structured Query Language (SQL) 116
+- supercomputer 9
+- **swap** function 383, 384, 465
+- **swap** macro 565
+- switch (MSDOS) 31, 208
+- **switch** statement 224–225
+- symbolic constant 128, 169, 560
+  - compared to variable 562
+- syntax error 122, 133
+- system software 38
+
+## T
+
+- TCP/IP 7, 75, 76
+- Telnet 78, 79
+- terminating condition 356
+- ternary operator 179, 199
+- text file 79, 271, 485, 505–506
+- time sharing 7, 9
+- **tmpfile** 515
+- token 561
+- token pasting operator. *See* macro: `##` operator
+- top-down programming 107
