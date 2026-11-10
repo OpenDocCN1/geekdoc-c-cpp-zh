@@ -786,6 +786,7 @@
 +   [计算童话](docs/computational-fairy-tales/README.md)
 +   [MATLAB 和 Python 中的有限元法计算框架](docs/computational-framework-for-the-finite-element-method-in-mat/README.md)
 +   [计算智能范式：MATLAB® 使用指南的理论与应用](docs/computational-intelligence-paradigms-theory-and-applications/README.md)
++   [可持续发展的计算智能数据分析（查普曼与霍尔/CRC 数据挖掘与知识发现系列）](docs/computational-intelligent-data-analysis-for-sustainable-deve/README.md)
 +   [下一代测序数据分析的计算方法 (Wiley 生物信息学系列)](docs/computational-methods-for-next-generation-sequencing-data-an/README.md)
 +   [计算物理：FORTRAN 版本](docs/computational-physics-fortran-version-paperback/README.md)
 +   [计算物理：Python 问题求解 第三版](docs/computational-physics-problem-solving-with-python---3-edició/README.md)

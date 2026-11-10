@@ -1,0 +1,13 @@
+An example of real energy data available to load disaggregation is visualized in Figure 7.1. If this load curve would represent what one has been doing throughout that day, one would be able to assign labels to certain patterns in the load curve. These labels would describe events or activities of that day. However, if somebody else looks at the load curve, they cannot directly infer information about one's daily activities. They might be able to identify certain devices, such as an oven. The lack of contextual information limits the usage of this data. This calls for automated disaggregation and visualization, as described in Section 7.4.3.3.
+
+The load curve of a factory or a commercial building is much more complex than that of a household or an individual person (see Scenario 7.6). Many more individuals and devices are contributing to the load curve, and many of them with individual behavior. Complex industrial processes are executed at the same time. However, there is a lot of contextual information available that can be used to identify individual devices and processes.
+
+In addition to the curve representing the real power over time, values such as reactive power, peak current, and possibly other electrical features can also be used. From these time series, a lot of higher-level information can be deduced, such as features in the frequency domain, the instantaneous admittance waveform, and more [91].
+
+A sophisticated energy auditing system should be enabled to map process information to load patterns. It should be able to identify recurring patterns. It might be necessary to initialize this system with additional knowledge. Load disaggregation should be as accurate as possible and with a tunable relation between false positives and false negatives.
+
+# 7.4.5.1 Approaches to Load Disaggregation
+
+In the following we describe the fundamental problem of load disaggregation. Further, we describe the fundamental approach to the problem, and discuss some recent work. For a thorough description of historic and recent work in this field, we refer you to Zeifman and Roth [142] and Froehlich et al. [53] for an overview of device characteristics that can be useful for disaggregation.
+
+A load curve is a function L that describes the complex load (real and reactive energy) over time. In each discrete time step t, the real energy consumed by all devices r_i and their respective reactive energy q_i is summed. Noise r_b and q_b are added as well:

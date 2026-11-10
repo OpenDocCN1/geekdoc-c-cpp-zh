@@ -1,0 +1,13 @@
+# ### 7.2.2.1 Long-Term Trading
+
+While electric energy has traditionally been traded by means of bilateral *over-the-counter* (OTC) contracts, an increasing amount of energy is nowadays traded at power exchanges. Such exchanges trade standardized products, which makes trading easier and increases the comparability of prices. While there are different ways of trading energy, double auctions as known from game theory [54] are the dominant means for finding the price [137].
+
+As one example, the *European Energy Exchange AG (EEX)* in Leipzig, Germany, trades different kinds of standardized energy futures and options. These products describe the potential delivery of a certain amount of energy at certain times in the future. The delivery must be within one of the transportation grids. In addition to the traded products, they also provide clearinghouse services for OTC contracts. The volume traded at the EEX derivative market for Germany amounted to 313 terawatt-hours (TWh) in 2010, 1,208 TWh including OTC transactions [6]. The latter number roughly corresponds to two times the energy consumed in Germany in the same time frame.
+
+# ### 7.2.2.2 Short-Term Trading
+
+Short-term trading becomes necessary as both consumption and production cannot be predicted with 100% accuracy. Therefore, not all needs for energy can be covered by long-term trading. In particular, fluctuating renewable energies make correct long-term predictions of production virtually impossible. As one example, wind energy production can only be predicted with sufficient accuracy for a few hours in advance. Therefore, energy exchanges are used for short-term trading, again making use of different kinds of auctions. At such exchanges, retailers can buy electrical energy for physical delivery in case their demand is not covered by futures. Again, the delivery must be within one of the transportation grids.
+
+The *EPEX Spot SE (European Power Exchange)* in Paris, France, trades energy for several European markets. There, trading is divided as follows:
+
++   - In *day-ahead auctions*, electrical energy is traded for delivery on the following day in 1-hour intervals [6]. These auctions take place at noon on every single day. Bids can be done for individual hours or blocks of several hours, and the price can be positive or negative. Negative prices may occur, for instance, when the predicted regenerative production is very high and the demand is low, possibly on a public holiday.

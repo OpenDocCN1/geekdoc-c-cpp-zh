@@ -1,0 +1,11 @@
+For individual stations, we have been developing methods for analysis of series of both wind farm output and solar energy. For forecasting, we use a combination of standard time-series techniques such as autoregressive moving average (ARMA)(p,q) models and a resonating model adapted from research into the firing of synapses in the brain. Lucheroni [26] applied the FitzHugh–Nagumo system of coupled nonlinear stochastic differential equations to create a dynamic regime called stochastically resonating spiking. The ARMA technique, on its own, cannot effectively model the spiking behavior in modeling electricity prices that was the focus of Lucheroni, nor similar spiking behavior in climate variables.
+
+# 8.3.1 Estimating Hourly Solar Irradiation
+
+When performing time-series analysis of a climate variable or a system dependent on one, the first step is to identify and model the seasonality. Several significant cycles can be identified using spectral analysis [8]. The seasonal component of solar irradiation for hour t of the year can be estimated by a Fourier series:
+
+S_t = α_0 + α_1 cos(2πt/8760) + β_1 sin(2πt/8760) + α_2 cos(4πt/8760) + β_2 sin(4πt/8760) + ∑_{i=3}^{11} ∑_{m=-1}^{1} [α_i cos(2π(365n+m)t/8760) + β_i sin(2π(365n+m)t/8760)]
+
+Here, α_0 is the mean of the data; α_1, β_1 are coefficients of the yearly cycle; α_2, β_2 of twice yearly; and α_i, β_i are coefficients of the daily cycle and its harmonics and associated beat frequencies. An inspection of the power spectrum would show that we need to include the harmonics of the daily cycle (n = 2, 3, as well as n = 1) and also the beat frequencies (m = -1, 1). The latter modulate the amplitude to fit the time of year—in other words, describe the beating of the yearly and daily cycles.
+
+Figure 8.3 shows the daily variation over the year for an example site. Figure 8.4 shows 5 days of hourly solar radiation and the Fourier series model for that variation. In Figure 8.5 we see the worth of the particular frequencies variously termed “beat frequencies” or “sidebands,” which modulate the amplitude of the daily harmonic to suit the time of

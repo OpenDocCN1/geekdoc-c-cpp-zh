@@ -1,0 +1,3 @@
+![](bbox=[0.13, 0.08, 0.89, 0.81])
+
+**FIGURE 11.8** (a, top) Only one eigenvalue, λ_i = 3, can be differentiated from the noise indicated by the solid line. (a, bottom) The solid curve is the eigenvalue density of the actual matrix spectra, while the dashed curve is the theoretical prediction from Equation (11.1). (b) We plot the maximum eigenvalue of the delayed correlation matrix for each of 30 lags. For drug-related crimes, we see a very clear periodicity at a frequency of 7 days (1 week).

@@ -1,0 +1,52 @@
+
+- 44. N.S. Keelyside, M. Latif, J. Jungclaus, L. Kornblueh, and E. Roeckner. Advancing decadal-scale climate prediction in the North Atlantic Sector. *Nature*, 453: 84–88, 2008.
+- 45. J.J. Kennedy, N.A. Rayner, R.O. Smith, D.E. Parker, and M. Saunby. Reassessing biases and other uncertainties in sea surface temperature observations measured in situ since 1850. 1. Measurement sampling uncertainties. *J. Geophys. Res.*, 116: D14103, 2011.
+- 46. R. Knutti, G.A. Meehl, M.R. Allen, and D.A. Stainforth. Constraining climate sensitivity from the seasonal cycle in surface temperature. *J. Clim.*, 19: 4224–4233, 2006.
+- 47. D. Koller and N. Friedman. *Probabilistic Graphical Models: Principles and Techniques*. MIT Press, Cambridge, MA, 2009.
+- 48. Y. Koren, R.M. Bell, and C. Volinsky. Matrix factorization techniques for recommender systems. *IEEE Computer*, 42(8): 30–37, 2009.
+- 49. R.S. Kovats, M.J. Bouma, S. Hajat, E. Worrall, and A. Haines. El Niño and health. *The Lancet*, 362: 1481–1489, 2003.
+- 50. V.M. Krasnopolsky and M.S. Fox-Rabinovitz. Complex hybrid models combining deterministic and machine learning components for numerical climate modeling and weather prediction. *Neural Networks*, 19(2): 122–134, 2006.
+- 51. T.C.K. Lee, F.W. Zwiers, and M. Tsao. Evaluation of proxy-based millennial reconstruction methods. *Climate Dyn.*, 31: 263–281, 2008.
+- 52. B. Li, D.W. Nychka, and C.M. Ammann. The value of multiproxy reconstruction of past climate. *J. Am. Stat. Assoc.*, 105: 883–895, 2010.
+- 53. C.H.R. Lima, U. Lall, T. Jebara, and A.G. Barnston. Statistical prediction of ENSO from subsurface sea temperature using a nonlinear dimensionality reduction. *J. Climate*, 22: 4501–4519, 2009.
+- 54. Z. Lu and T.K. Leen. Semi-supervised learning with penalized probabilistic clustering. In *Advances of Neural Information Processing System*, MIT Press, Cambridge, MA, 2005.
+- 55. M.E. Mann, R.S. Bradley, and M.K. Hughes. Northern hemisphere temperatures during the past millennium: Inferences, uncertainties, and limitations. *Geophys. Res. Lett.*, 26: 759–762, 1999.
+- 56. M.E. Mann, S. Rutherford, E. Wahl, and C. Ammann. Testing the fidelity of methods used in proxy-based reconstructions of past climate. *J. Climate*, 18: 4097–4107, 2005.
+- 57. M.E. Mann, S. Rutherford, E. Wahl, and C. Ammann. Robustness of proxy-based climate field reconstruction methods. *J. Geophys. Res.*, 112(D12109), 2007.
+- 58. M.E. Mann, Z. Zhang, M.K. Hughes et al. Proxy-based reconstructions of hemispheric and global surface temperature variations over the past two millennia. *Proc. Nat. Acad. Sci. USA*, 105: 13252–13257, 2008.
+- 59. M.E. Mann, Z. Zhang, S. Rutherford et al. Global signatures and dynamical origins of the Little Ice Age and Medieval Climate Anomaly. *Science*, 326: 1256–1260, 2009.
+- 60. L.O. Mearns, W.J. Gutowski, R. Jones et al. A regional climate change assessment program for North America. *EOS*, 90: 311–312, 2009.
+- 61. G.A. Meehl, T.F. Stocker, W.D. Collins et al. Global climate projections. *Climate Change 2007: The Physical Science Basis*. Contribution of Working Group I to the Fourth Assessment Report of the Intergovernmental Panel on Climate Change, S. Solomon et al. (Eds), Cambridge University Press, Cambridge (UK) and New York, 2007.
+- 62. M.J. Menne, C.N. Williams Jr., and M.A. Palecki. On the reliability of the U.S. surface temperature record. *J. Geophys. Res.*, 115: D1108, 2010.
+- 63. C. Monteleoni, G.A. Schmidt, S. Saroha, and E. Asplund. Tracking climate models. *Statistical Analysis and Data Mining*, 4: 372–392, 2011.
+- 64. J.M. Murphy, B.B. Booth, M. Collins et al. A methodology for probabilistic predictions of regional climate change from perturbed physics ensembles. *Phil. Trans. Roy. Soc. A*, 365: 2053–2075, 2007.
+- 65. G.T. Narisma, J.A. Foley, R. Licker, and N. Ramankutty. Abrupt changes in rainfall during the twentieth century. *Geophys. Res. Lett.*, 34: L06710, March 2007.
+- 66. S. Negahban, P. Ravikumar, M.J. Wainwright, and B. Yu. A unified framework for high-dimensional analysis of m-estimators with decomposable regularizers. Arxiv, 2010. http://arxiv.org/abs/1010.2731v1.
+- 67. H. Owhadi, J.C. Scovel, T. Sullivan, M. McKems, and M. Ortiz. Optimal uncertainty quantification. *SIAM Review*, 2011 (submitted).
+- 68. R.D. Peng, J.F. Bobb, C. Tebaldi, L. McDaniel, M.L. Bell, and F. Dominici. Toward a quantitative estimate of future heat wave mortality under global climate change. *Environ. Health Perspect.*, 119: 701–706, 2010.
+- 69. W.B. Powell and P. Frazier. Optimal learning. In *Tutorials in Operations Research: State-of-the-Art Decision Making Tools in the Information Age*. Hanover, MD, 2008.
+- 70. P. Ravikumar, A. Agarwal, and M.J. Wainwright. Message-passing for graph-structured linear programs: Proximal projections, convergence and rounding schemes. *J. Machine Learning Res.*, 11: 1043–1080, 2010.
+- 71. D.B. Reusch. Ice-core reconstructions of West Antarctic Sea-Ice variability: A neural network perspective. *Fall Meeting of the American Geophysical Union*, 2010.
+- 72. C.F. Ropelewski and M.S. Halpert. Global and regional scale precipitation patterns associated with the El Niño/Southern Oscillation. *Mon. Wea. Rev.*, 115: 1606–1626, 1987.
+- 73. R. Salakhutdinov and A. Mnih. Probabilistic matrix factorization. In *Advances in Neural Information Processing Systems 20*, 2008.
+- 74. M. Scheffer, S. Carpenter, J.A. Foley, C. Folke, and B. Walker. Catastrophic shifts in ecosystems. *Nature*, 413(6856): 591–596, October 2001.
+- 75. G.A. Schmidt. Error analysis of paleosalinity calculations. *Paleoceanography*, 14: 422–429, 1999.
+- 76. G.A. Schmidt, A. LeGrande, and G. Hoffmann. Water isotope expressions of intrinsic and forced variability in a coupled ocean-atmosphere model. *J. Geophys. Res.*, 112, D10103, 2007.
+- 77. T. Schneider. Analysis of incomplete climate data: Estimation of mean values and covariance matrices and imputation of missing values. *J. Climate*, 14: 853–871, 2001.
+- 78. S.D. Schubert, M.J. Suarez, P.J. Pegion, R.D. Koster, and J.T. Bacmeister. On the cause of the 1930s dust bowl. Science, 303: 1855–1859, 2004.
+- 79. C. Scovel and I. Steinwart. Hypothesis testing for validation and certification. J. Complexity, 2010 (submitted).
+- 80. G. Shafer and V. Vovk. A tutorial on conformal prediction. J. Mach. Learn. Res., 9: 371–421, 2008.
+- 81. J. Shukla. Dynamical predictability of monthly means. Mon. Wea. Rev., 38: 2547–2572, 1981.
+- 82. J. Shukla. Predictability in the midst of chaos: A scientific basis for climate forecasting. Science, 282: 728–731, 1998.
+- 83. F.H. Sinz. A Priori Knowledge from Non-Examples. Diplomarbeit (thesis), Universität Tübingen, Germany, 2007.
+- 84. F.H. Sinz, O. Chapelle, A. Agrawal, and B. Schölkopf. An analysis of inference with the universum. In Advances in Neural Information Processing Systems 20, 2008.
+- 85. I.E. Smirnov. Climate models as a test bed for climate reconstruction methods: Pseudoproxy experiments. Wiley Interdisciplinary Reviews Climate Change, in revision, 2011.
+- 86. I.E. Smirnov and A. Kaplan. Comment on "Testing the Fidelity of Methods Used in Proxy-Based Reconstructions of Past Climate": The Role of the Standardization Interval. J. Climate, 20(22): 5666–5670, 2007.
+- 87. I.E. Smirnov, A. Kaplan, and D.E. Amrhein. Erroneous model field representations in multiple pseudoproxy studies: Corrections and implications. J. Climate, 23: 5548–5554, 2010.
+- 88. I.E. Smirnov, A. Kaplan, D. Chang, and M.N. Evans. A pseudoproxy evaluation of the CCA and RegEM methods for reconstructing climate fields of the last millennium. J. Climate, 24: 1284–1309, 2011.
+- 89. I.E. Smirnov, A. Kaplan, E. Zorita, J.F. González-Rouco, and M.N. Evans. Spatial performance of four climate field reconstruction methods targeting the Common Era. Geophys. Res. Lett., 38, 2011.
+- 90. D.M. Smith, S. Cusack, A.W. Colman et al. Improved surface temperature prediction for the coming decade from a global climate model. Science, 317: 769–799, 2007.
+- 91. L.-K. Soh and C. Tsatsoulis. Unsupervised segmentation of ERS and Radarsat sea ice images using multiresolution peak detection and aggregated population equalization. Int. J. Remote S., 20: 3087–3109, 1999.
+- 92. L.-K. Soh, C. Tsatsoulis, D. Gineris, and C. Bertola. ARKTOS: An intelligent system for SAR sea ice image classification. IEEE T. Geosci. Remote S., 42: 229–248, 2004.
+- 93. A. Solomon, L. Goddard, A. Kumar, J. Carton, C. Deser, I. Fukumori, A. Greene, G. Hegerl, B. Kirtman, Y. Kushnir, M. Newman, D. Smith, D. Vimont, T. Delworth, J. Meehl, and T. Stockdale. Distinguishing the roles of natural and anthropogenically forced decadal climate variability: Implications for prediction. Bull. Amer. Meteor. Soc., 92: 141–156, 2010.
+- 94. S. Sra, S. Nowozin, and S. Wright. Optimization for Machine Learning. MIT Press, 2011.

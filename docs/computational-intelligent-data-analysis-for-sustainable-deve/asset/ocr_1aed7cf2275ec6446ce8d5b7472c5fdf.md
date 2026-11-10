@@ -1,0 +1,13 @@
+provide some suggestions on how they can be used. The discussion opens up some interesting problems. There are multiple sources of climate data, ranging from single-site observations scattered in an unstructured way across the globe to climate model output that is global and uniformly gridded. Each class of data has particular characteristics that should be appreciated before it can be successfully used or compared. We provide here a brief introduction to each, with a few examples and references for further information. Common issues that arise in cross-class syntheses are also addressed.
+
+# 4.3.1 *In-Situ Observations*
+
+*In-situ* measurements refer to raw (or only minimally processed) measurements of diverse climate system properties that can include temperatures, rainfall, winds, column ozone, cloud cover, radiation, etc., taken from specific locations. These locations are often at the surface (e.g., from weather stations), but can also include atmospheric measurements from radiosonde balloons, subsurface ocean data from floats, data from ships, aircraft, and special intensive observing platforms.
+
+Much of this data is routinely collected and made available in collated form from National Weather Services or special projects such as AEROCOM (for aerosol data), International Comprehensive Ocean-Atmosphere Data Set (ICOADS) (ocean temperature and salinity from ships), Argo (ocean floats), etc. Multivariate data related to single experiments (e.g., the Atmospheric Radiation Measurement (ARM) program or the Surface Heat Budget of the Arctic (SHEBA)), are a little less well organized, although usually available at specialized websites.
+
+This kind of data is useful for looking at coherent multivariate comparisons, although usually on limited time and space domains, as input to weather model analyses or as the raw material for processed gridded data (see next subsection). The principal problem with this data is their sparseness spatially and, in time, inhomogeneities due to differing measurement practices or instruments and overall incompleteness (not all variables are measured at the same time or place) [45, 62].
+
+# 4.3.2 Gridded/Processed Observations
+
+Given a network of raw *in-situ* data, the next step is synthesizing those networks into quality-controlled regularly gridded datasets. These have a number of advantages over the raw data in that they are easier to work with, are more comparable to model output (discussed below), and have

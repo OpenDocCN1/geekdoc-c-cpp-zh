@@ -1,0 +1,7 @@
+![](bbox=[0.1, 0.06, 0.9, 0.55])
+
+**FIGURE 11.11 (continued).** (a) IPR values for eigenvalues associated with the zero-lag correlation matrix for weekly theft time series. Points outside the gray area represent significance outside the bounds predicted by RMT. There are more significant eigenvalues, and these results suggest larger eigenvalues with low IPRs, corresponding to global forces that affect crime across the city, while small eigenvalues are associated with signals generated from just a few locations. (b) Component density distributions of significant eigenvalues (λ₁, λ₂, λ₃) confirm our interpretation of a “market” eigenvalue acting on nearly all locations with the same bias. Selecting an eigenvector from the random part of the distribution (i.e., λ₈₇) shows good agreement with theoretical predictions.
+
+Looking more closely at the eigenvectors that contribute to the signal contained in our correlation matrices, we examine the components of each $\mathbf{u}_i = (u_{i1}, u_{i2}, \ldots, u_{iN})$. The theoretical distribution of components as derived from RMT is a normal distribution with zero mean and unit variance [13].
+
+$$\rho(u)=\frac{1}{\sqrt{2\pi}}e^{-u^2/2} \qquad (11.2)$$
