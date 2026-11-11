@@ -826,6 +826,7 @@
 +   [C++ 计算机编程（附 CD）](docs/computer-programming-in-c-with-cd/README.md)
 +   [计算机编程入门指南](docs/computer-programming-made-simple-books/README.md)
 +   [计算机编程：即使是初学者也能掌握项目编程所需的完美技能最完整速成课程。学习并掌握最佳编程语言！](docs/computer-programming-the-most-complete-crash-course-for-lear/README.md)
++   [C++ 计算机编程](docs/computer-programming-with-c/README.md)
 +   [计算机科学纯粹而简单合订：面向 7-12 年级自学者的趣味编程](docs/computer-science-pure-and-simple-combined-edition-fun-progra/README.md)
 +   [计算机科学家让·巴蒂克 (STEM 拓驱传记)](docs/computer-scientist-jean-bartik-stem-trailblazer-bios/README.md)
 +   [计算机安全素养：数字世界中保持安全](docs/computer-security-literacy-staying-safe-in-a-digital-world/README.md)

@@ -1,0 +1,9 @@
+![](bbox=[0.13, 0.13, 0.89, 0.46])
+
+How does C++ design the object of class AssistantProf? This question still remains unanswered which we will answer now. To correctly design an object of AssistantProf, the compiler first changes the design of Student and Professor objects. Instead of storing Person object directly in Student object, the compiler creates a virtual parent pointer in Student object, which points to the entry in VTABLE that contains the address of Person object. The principle is that, instead of storing an object of parent class within the child class, the compiler creates a pointer in child class that points to the parent object (through a VTABLE as shown in Figure 14.64). Similarly the structure of the Professor object is also modified as shown in the Figure 14.64.
+
+So, the structure of Student/Professor objects can be fully represented as a virtual parent pointer followed by the respective specialized members.
+
+Now, let’s focus on the structure of the object of class AssistantProf. Since this class has two parent classes through which the duplication of Person data is possible; the object of class AssistantProf will have two different virtual parent pointers (one as a part of Student object and the other as a part of Professor object). This is because the AssistantProf object has both Student and Professor objects as a part of it. Each of the virtual parent pointers point to a different location in the VTABLE of AssistantProf class but both the VTABLE locations point to the same Person object as shown in the Figure 14.65. This is how compiler ensures that only one Person object is present within the object of class AssistantProf.
+
+We can now see that both Student and Professor objects are now stored in contiguous memory locations, hence we can safely up cast this object to either Student or Professor types. Hence this design resolves all the issues of up casting we faced before.
