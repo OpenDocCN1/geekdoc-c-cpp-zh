@@ -938,6 +938,7 @@
 +   [开发 hapi Edge：一个用于应用和服务的 Node.js 丰富框架](docs/developing-a-hapi-edge-a-rich-nodejs-framework-for-apps-and-/README.md)
 +   [嵌入式系统与产品的开发与管理：方法、技术、工具、流程与团队协作](docs/developing-and-managing-embedded-systems-and-products-method/README.md)
 +   [C++ 数字图像处理：使用 CImg 库实现参考算法](docs/digital-image-processing-with-c-implementing-reference-algor/README.md)
++   [数字媒体处理：C语言DSP算法](docs/digital-media-processing-dsp-algorithms-using-c/README.md)
 +   [数字媒体处理：使用 C 语言的 DSP 算法（包含配套网站补充材料）](docs/digital-media-processing-dsp-algorithms-using-c-including-ad/README.md)
 +   [数字孪生驱动智能制造](docs/digital-twin-driven-smart-manufacturing/README.md)
 +   [探索现代 C++ (C++ 深度系列)](docs/discovering-modern-c-c-in-depth-series/README.md)
