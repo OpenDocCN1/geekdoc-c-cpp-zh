@@ -1,0 +1,7 @@
+Almost all video games have music soundtracks and musicians can work on writing music, creating sound effects, or recording songs. Even a simple mobile app will require sound effects that can be created by someone who is musically inclined.
+
+Voice-over acting and singing falls under the category of video game sound, too. Talented singers and actors are needed for these positions. Some celebrities have lent their acting and voice talents to video games, but that doesn’t mean you need to be a famous actor to get a job in video game acting. Try answering ads for independent game developers making video games. They may have a need for voice talent but may not have a big budget. This is where you can build your résumé and get started working in the field.
+
+# ## PREPARING YOURSELF
+
+Learning how to write music as well as mastering an instrument is important. Becoming versatile with different digital equipment such as electronic keyboards and music programs is also good preparation. Listen to sound effects and soundtracks for all kinds of video games. Even small games for mobile devices require sound effects and music. Create a digital sound effect library on your computer, and compose short instrumental pieces that can be used in a portfolio for your work.

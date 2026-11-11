@@ -1,0 +1,5 @@
+start small. Once you take the first steps with learning coding and creating simple actions, you will see that learning coding is not as complex as you may have once thought. One reason that coding may not be as daunting as it looks is because software exists to create video game code. This existing game creation software is referred to as a game engine. Game engines help make the job of the programmer easier.
+
+Game engines exist as frameworks so that programmers can easily adapt them to the project they are working on. Core programming elements already exist in a game engine, and this allows game programmers to just focus on creating specific game elements unique to the game being designed. Game engines also help to manage all of the assets required to run a game and render them to the player’s TV screen.
+
+Some of the more common game engines that are used by programmers today are Unity3D, Unreal Engine, CryEngine 3, and HeroEngine. Each of these can be found online. If you are interested in learning to code, these programs are worth using.

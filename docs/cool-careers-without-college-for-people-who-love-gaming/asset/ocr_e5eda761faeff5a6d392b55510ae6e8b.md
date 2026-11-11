@@ -1,0 +1,7 @@
+role-playing board games or only console video games, then you should be playing those types of games regularly so you are familiar with what you want to write.
+
+Games are fluid, and, unlike a film or novel that operates according to typical linear storytelling with no choices for the viewer, games often have many choices and possible outcomes a player can make. A game writer needs to be able to write out all the varied possibilities that the player might experience. Playing an existing game several times and exploring the various choices is a great way to see how the writers of a game helped to construct the story. Each outcome must be conceptualized in advance and make sense within the construct of the entire game and its mechanics.
+
+# NETWORK WITH WRITER GROUPS
+
+Spending time with other writers can be a good way to get feedback on what you are working on, whether it’s an article, game review, or even a game framework. Although writing is a solitary craft, sharing your work with others can be helpful and allow you to see your work in a critical light, which can help you to improve your writing overall. Even if you do not know other writers in the gaming field, spending time with other writers you know will keep you thinking about your craft. Share your work with gamers so they can give feedback

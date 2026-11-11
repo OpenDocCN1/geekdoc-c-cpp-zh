@@ -1,0 +1,5 @@
+is even more important than learning computer design programs. A traditional game can be created entirely by hand. Illustration board and watercolor paints can be used to create a board game from scratch. Game pieces can be made from cardboard, painted stones, or anything else you can come up with. Let your imagination run wild and do not let limited resources block you from creating fresh and new gaming ideas. Potential employers will be happy to see anything you created. Remember to add your strongest work to a portfolio.
+
+# # PREPARING YOURSELF
+
+Taking computer, drawing, art, and graphic design courses in high school will help prepare you for a career as a graphic designer. Internships at gaming companies are also very valuable experiences. Putting together a strong portfolio of design work is essential for people looking for graphic design work. Practice design skills at home on a computer or by sketching out ideas. Creating your own graphic elements for games, box designs, and posters will help get you thinking like a graphic designer. Working on your school yearbook can also give you some valuable experience.

@@ -1,0 +1,5 @@
+# MAKING MONEY
+
+Making money as a professional gamer is not easy, but it can be done, and it does not require a college education. You need to be a fantastic gamer, and not just at any game, either. Some of the more popular games for professional play are: *League of Legends*, *Counter-Strike: Global Offensive*, *DotA 2*, *Hearthstone*, *Smite*, *World of Warcraft*, *Heroes of the Storm*, and *Super Smash Bros.* Getting great at one of these games will be a must if you are going to pursue professional gaming as a career. Although many people may say it is a long shot, there are people already doing this for a living. The attention the growing popularity is giving the emerging entertainment is only getting bigger. The most successful professionals can make six figure incomes from their winnings alone, not including salaries from teams or sponsors.
+
+![](bbox=[0.635, 0.08, 1.0, 0.885])
