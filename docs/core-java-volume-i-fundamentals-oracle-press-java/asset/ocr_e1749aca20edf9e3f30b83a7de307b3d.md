@@ -1,0 +1,21 @@
+parameter is one of `ERROR_MESSAGE`, `INFORMATION_MESSAGE`, `WARNING_MESSAGE`, `QUESTION_MESSAGE`, `PLAIN_MESSAGE`.
+
++   - `static int showConfirmDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon)`
+
++   - `static int showConfirmDialog(Component parent, Object message, String title, int optionType, int messageType)`
+
++   - `static int showConfirmDialog(Component parent, Object message, String title, int optionType)`
+
++   - `static int showConfirmDialog(Component parent, Object message)`
+
++   - `static int showInternalConfirmDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon)`
+
++   - `static int showInternalConfirmDialog(Component parent, Object message, String title, int optionType, int messageType)`
+
++   - `static int showInternalConfirmDialog(Component parent, Object message, String title, int optionType)`
+
++   - `static int showInternalConfirmDialog(Component parent, Object message)`
+
+shows a confirmation dialog or an internal confirmation dialog. (An internal dialog is rendered entirely within its owner’s frame.) Returns the option selected by the user (one of `OK_OPTION`, `CANCEL_OPTION`, `YES_OPTION`, `NO_OPTION`), or `CLOSED_OPTION` if the user closed the dialog. The parent component can be null. The message to show on the dialog can be a string, icon, component, or an array of them. The `messageType` parameter is one of `ERROR_MESSAGE`, `INFORMATION_MESSAGE`, `WARNING_MESSAGE`, `QUESTION_MESSAGE`, `PLAIN_MESSAGE`, and `optionType` is one of `DEFAULT_OPTION`, `YES_NO_OPTION`, `YES_NO_CANCEL_OPTION`, `OK_CANCEL_OPTION`.
+
++   - `static int showOptionDialog(Component parent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object default)`

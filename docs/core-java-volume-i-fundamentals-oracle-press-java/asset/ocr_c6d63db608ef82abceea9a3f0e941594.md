@@ -1,0 +1,21 @@
+# ### `javax.swing.JFileChooser` 1.2
+
++   - `JFileChooser()`
++     creates a file chooser dialog box that can be used for multiple frames.
++   - `void setCurrentDirectory(File dir)`
++     sets the initial directory for the file dialog box.
++   - `void setSelectedFile(File file)`
++   - `void setSelectedFiles(File[] file)`
++     sets the default file choice for the file dialog box.
++   - `void setMultiSelectionEnabled(boolean b)`
++     sets or clears the multiple selection mode.
++   - `void setFileSelectionMode(int mode)`
++     lets the user select files only (the default), directories only, or both files and directories. The mode parameter is one of `JFileChooser.FILES_ONLY`, `JFileChooser.DIRECTORIES_ONLY`, and `JFileChooser.FILES_AND_DIRECTORIES`.
++   - `int showOpenDialog(Component parent)`
++   - `int showSaveDialog(Component parent)`
++   - `int showDialog(Component parent, String approveButtonText)`
++     shows a dialog in which the approve button is labeled “Open”, “Save”, or with the `approveButtonText` string. Returns `APPROVE_OPTION`, `CANCEL_OPTION` (if the user selected the cancel button or dismissed the dialog), or `ERROR_OPTION` (if an error occurred).
++   - `File getSelectedFile()`
++   - `File[] getSelectedFiles()`
++     gets the file or files that the user selected (or returns null if the user didn’t select any file).
++   - `void setFileFilter(FileFilter filter)`

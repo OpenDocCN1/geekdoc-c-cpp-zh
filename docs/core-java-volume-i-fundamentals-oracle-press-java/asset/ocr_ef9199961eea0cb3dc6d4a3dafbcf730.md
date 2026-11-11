@@ -1,0 +1,43 @@
+```
+~~~java
+Pair<Employee> buddies = . . .;
+Employee buddy = buddies.getFirst();
+~~~
+```
+
+The erasure of getFirst has return type Object. The compiler automatically inserts the cast to Employee. That is, the compiler translates the method call into two virtual machine instructions:
+
++   - A call to the raw method Pair.getFirst
++   - A cast of the returned Object to the type Employee
+
+Casts are also inserted when you access a generic field. Suppose the first and second fields of the Pair class were public. (Not a good programming style, perhaps, but it is legal Java.) Then the expression
+
+```
+~~~java
+Employee buddy = buddies.first;
+~~~
+```
+
+also has a cast inserted in the resulting bytecodes.
+
+# ### 8.5.3 Translating Generic Methods
+
+Type erasure also happens for generic methods. Programmers usually think of a generic method such as
+
+```
+~~~java
+public static <T extends Comparable> T min(T[] a)
+~~~
+```
+
+as a whole family of methods, but after erasure, only a single method is left:
+
+```
+~~~java
+public static Comparable min(Comparable[] a)
+~~~
+```
+
+Note that the type parameter T has been erased, leaving only its bounding type Comparable.
+
+Erasure of methods brings up a couple of complexities. Consider this example:

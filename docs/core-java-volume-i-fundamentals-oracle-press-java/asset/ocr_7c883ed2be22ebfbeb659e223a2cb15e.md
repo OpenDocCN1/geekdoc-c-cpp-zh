@@ -1,0 +1,19 @@
+The main reason for using packages is to guarantee the uniqueness of class names. Suppose two programmers come up with the bright idea of supplying an `Employee` class. As long as both of them place their class into different packages, there is no conflict. In fact, to absolutely guarantee a unique package name, use an Internet domain name (which is known to be unique) written in reverse. You then use subpackages for different projects. For example, consider the domain `horstmann.com`. When written in reverse order, it turns into the package name `com.horstmann`. You can then append a project name, such as `com.horstmann.corejava`. If you then place the `Employee` class into that package, the “fully qualified” name becomes `com.horstmann.corejava.Employee`.
+
+> **NOTE:**
+> 
+> From the point of view of the compiler, there is absolutely no relationship between nested packages. For example, the packages `java.util` and `java.util.jar` have nothing to do with each other. Each is its own independent collection of classes.
+
+# ### 4.8.2 Class Importation
+
+A class can use all classes from its own package and all *public* classes from other packages.
+
+You can access the *public* classes in another package in two ways. The first is simply to use the *fully qualified name*; that is, the package name followed by the class name. For example:
+
+```
+```java
+java.time.LocalDate today = java.time.LocalDate.now();
+```
+```
+
+That is obviously tedious. A simpler, and more common, approach is to use the `import` statement. The point of the `import` statement is to give you a shorthand to refer to the classes in the package. Once you add an `import`, you no longer have to give the classes their full names.

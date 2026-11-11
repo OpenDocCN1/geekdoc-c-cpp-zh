@@ -873,6 +873,7 @@
 +   [Java 2 核心技术 高级特性](docs/core-java-2-advanced-features-cay-s-horstmann-gary-cornell/README.md)
 +   [Core Java SE 9 入门指南](docs/core-java-se-9-for-the-impatient/README.md)
 +   [Java 核心技术 卷I 基础知识（第11版）](docs/core-java-volume-i---fundamentals-eleventh-edition/README.md)
++   [Java核心技术 第I卷：基础知识](docs/core-java-volume-i-fundamentals-oracle-press-java/README.md)
 +   [Java 核心技术，第二卷——高级特性：高级特性，第2卷](docs/core-java-volume-ii--advanced-features-advanced-features-vol/README.md)
 +   [Java Java 第二卷：高级特性](docs/core-java-volume-ii-advanced-features/README.md)
 +   [Core Java 卷 II：高级特性 II](docs/core-java-volume-ii-advanced-features-ii/README.md)

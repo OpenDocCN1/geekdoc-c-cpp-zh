@@ -1,0 +1,43 @@
+```
+```java
+ 36     {
+ 37         var g2 = (Graphics2D) g;
+ 38
+ 39         // draw all squares
+ 40         for (Rectangle2D r : squares)
+ 41             g2.draw(r);
+ 42     }
+ 43
+ 44     /**
+ 45      * Finds the first square containing a point.
+ 46      * @param p a point
+ 47      * @return the first square that contains p
+ 48      */
+ 49     public Rectangle2D find(Point2D p)
+ 50     {
+ 51         for (Rectangle2D r : squares)
+ 52         {
+ 53             if (r.contains(p)) return r;
+ 54         }
+ 55         return null;
+ 56     }
+ 57
+ 58     /**
+ 59      * Adds a square to the collection.
+ 60      * @param p the center of the square
+ 61      */
+ 62     public void add(Point2D p)
+ 63     {
+ 64         double x = p.getX();
+ 65         double y = p.getY();
+ 66
+ 67         current = new Rectangle2D.Double(x - SIDELENGTH / 2, y -
+SIDELENGTH / 2,
+ 68             SIDELENGTH, SIDELENGTH);
+ 69         squares.add(current);
+ 70         repaint();
+ 71     }
+ 72
+ 73     /**
+```
+```

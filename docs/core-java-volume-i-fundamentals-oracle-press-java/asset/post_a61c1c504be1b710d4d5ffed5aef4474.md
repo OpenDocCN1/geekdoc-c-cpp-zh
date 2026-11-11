@@ -1,0 +1,161 @@
+
+```java
+/**
+ * @version 1.34 2018-04-10
+ * @author Cay Horstmann
+ */
+public class SimpleFrameTest
+{
+    public static void main(String[] args)
+    {
+        EventQueue.invokeLater(() ->
+        {
+            var frame = new SimpleFrame();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setVisible(true);
+        });
+    }
+}
+
+class SimpleFrame extends JFrame
+{
+    private static final int DEFAULT_WIDTH = 300;
+    private static final int DEFAULT_HEIGHT = 200;
+
+    public SimpleFrame()
+    {
+        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+    }
+}
+```
+
+Let’s work through this program, line by line.
+
+The Swing classes are placed in the `javax.swing` package. The package name `javax` indicates a Java extension package, not a core package. For historical reasons, Swing is considered an extension. However, it is present in every Java implementation since version 1.2.
+
+By default, a frame has a rather useless size of 0 × 0 pixels. We define a subclass `SimpleFrame` whose constructor sets the size to 300 × 200 pixels. This is the only difference between a `SimpleFrame` and a `JFrame`.
+
+In the `main` method of the `SimpleFrameTest` class, we construct a `SimpleFrame` object and make it visible.
+
+There are two technical issues that we need to address in every Swing program.
+
+First, all Swing components must be configured from the *event dispatch thread*, the thread of control that passes events such as mouse clicks and keystrokes to the user interface components. The following code fragment is used to execute statements in the event dispatch thread:
+
+```java
+EventQueue.invokeLater(() ->
+{
+    statements
+});
+```
+
+![](img/0e7b74ef51a065c077b42cd87b362288_828_0.png)
+
+> **NOTE:**
+>
+> You will see many Swing programs that do not initialize the user interface in the event dispatch thread. It used to be perfectly acceptable to carry out the initialization in the main thread. Sadly, as Swing components got more complex, the developers of the JDK were no longer able to guarantee the safety of that approach. The probability of an error is extremely low, but you would not want to be one of the unlucky few who encounter an intermittent problem. It is better to do the right thing, even if the code looks rather mysterious.
+
+Next, we define what should happen when the user closes the application’s frame. For this particular program, we want the program to exit. To select this behavior, we use the statement
+
+```java
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+```
+
+In other programs with multiple frames, you would not want the program to exit just because the user closed one of the frames. By default, a frame is hidden when the user closes it, but the program does not terminate. (It might have been nice if the program terminated once the *last* frame becomes invisible, but that is not how Swing works.)
+
+Simply constructing a frame does not automatically display it. Frames start their life invisible. That gives the programmer the chance to add components into the frame before showing it for the first time. To show the frame, the `main` method calls the `setVisible` method of the frame.
+
+After scheduling the initialization statements, the `main` method exits. Note that exiting `main` does not terminate the program—just the main thread. The event dispatch thread keeps the program alive until it is terminated, either by closing the frame or by calling the `System.exit` method.
+
+The running program is shown in [Figure 10.1](#)—it is a truly boring top-level window. As you can see in the figure, the title bar and the surrounding decorations, such as resize corners, are drawn by the operating system and not the Swing library. The Swing library draws everything inside the frame. In this program, it just fills the frame with a default background color.
+
+## 10.2.2 Frame Properties
+
+The `JFrame` class itself has only a few methods for changing how frames look. Of course, through the magic of inheritance, most of the methods for working with the size and position of a frame come from the various superclasses of `JFrame`. Here are some of the most important methods:
+
+- The `setLocation` and `setBounds` methods for setting the position of the frame
+- The `setIconImage` method, which tells the windowing system which icon to display in the title bar, task switcher window, and so on
+- The `setTitle` method for changing the text in the title bar
+- The `setResizable` method, which takes a boolean to determine if a frame will be resizable by the user
+
+Figure 10.2 illustrates the inheritance hierarchy for the `JFrame` class.
+
+![](img/0e7b74ef51a065c077b42cd87b362288_830_0.png)
+
+### **Figure 10.2** Inheritance hierarchy for the frame and component classes in AWT and Swing
+
+As the API notes indicate, the `Component` class (which is the ancestor of all GUI objects) and the `Window` class (which is the superclass of the `Frame` class) are where you need to look for the methods to resize and reshape frames. For example, the `setLocation` method in the `Component` class is one way to reposition a component. If you make the call
+
+```java
+setLocation(x, y)
+```
+
+the top left corner is located `x` pixels across and `y` pixels down, where (0, 0) is the top left corner of the screen. Similarly, the `setBounds` method in `Component` lets you resize and relocate a component (in particular, a `JFrame`) in one step, as
+
+```java
+setBounds(x, y, width, height)
+```
+
+Many methods of component classes come in getter/setter pairs, such as the following methods of the `Frame` class:
+
+```java
+public String getTitle()
+public void setTitle(String title)
+```
+
+Such a getter/setter pair is called a *property*. A property has a name and a type. The name is obtained by changing the first letter after the get or set to lowercase. For example, the `Frame` class has a property with name `title` and type `String`.
+
+Conceptually, `title` is a property of the frame. When we set the property, we expect the title to change on the user’s screen. When we get the property, we expect to get back the value that we have set.
+
+There is one exception to the get/set convention: For properties of type `boolean`, the getter starts with is. For example, the following two methods define the `resizable` property:
+
+```java
+public boolean isResizable()
+public void setResizable(boolean resizable)
+```
+
+To determine an appropriate size for a frame, first find out the screen size. Call the static `getDefaultToolkit` method of the `Toolkit` class to get the `Toolkit` object. (The `Toolkit` class is a dumping ground for a variety of methods interfacing with the native windowing system.) Then call the `getScreenSize` method, which returns the screen size as a `Dimension` object. A `Dimension` object simultaneously stores a width and a height in public (!) instance variables `width` and `height`. Then you can use a suitable percentage of the screen size to size the frame. Here is the code:
+
+```java
+Toolkit kit = Toolkit.getDefaultToolkit();
+Dimension screenSize = kit.getScreenSize();
+int screenWidth = screenSize.width;
+int screenHeight = screenSize.height;
+setSize(screenWidth / 2, screenHeight / 2);
+```
+
+You can also supply a frame icon:
+
+```java
+Image img = new ImageIcon("icon.gif").getImage();
+setIconImage(img);
+```
+
+### java.awt.Component 1.0
+
+- `boolean isVisible()`
+- `void setVisible(boolean b)`  
+  Gets or sets the visible property. Components are initially visible, with the exception of top-level components such as `JFrame`.
+- `void setSize(int width, int height) 1.1`  
+  Resizes the component to the specified width and height.
+- `void setLocation(int x, int y) 1.1`  
+  Moves the component to a new location. The x and y coordinates use the coordinates of the container if the component is not a top-level component, or the coordinates of the screen if the component is top level (for example, a `JFrame`).
+- `void setBounds(int x, int y, int width, int height) 1.1`  
+  Moves and resizes this component.
+- `Dimension getSize() 1.1`
+- `void setSize(Dimension d) 1.1`  
+  Gets or sets the size property of this component.
+
+### java.awt.Window 1.0
+
+- `void setLocationByPlatform(boolean b) 5`  
+  Gets or sets the locationByPlatform property. When the property is set before this window is displayed, the platform picks a suitable location.
+
+### java.awt.Frame 1.0
+
+- `boolean isResizable()`
+- `void setResizable(boolean b)`  
+  Gets or sets the resizable property. When the property is set, the user can resize the frame.
+- `String getTitle()`
+- `void setTitle(String s)`  
+  Gets or sets the title property that determines the text in the title bar for the frame.
+- `Image getIconImage()`
