@@ -808,6 +808,7 @@
 +   [计算机游戏与软件工程（Chapman & Hall/CRC 软件工程与软件开发创新系列）](docs/computer-games-and-software-engineering-chapman-hallcrc-inno/README.md)
 +   [游戏设计师：星球上最酷的职业](docs/computer-games-designer-the-coolest-jobs-on-the-planet/README.md)
 +   [计算机图形学从零开始：程序员 3D 渲染入门指南](docs/computer-graphics-from-scratch-a-programmers-introduction-to/README.md)
++   [计算机图形学：原理与实践（第3版）](docs/computer-graphics-principles-and-practice-3th-nd/README.md)
 +   [C++ OpenGL 计算机图形编程指南](docs/computer-graphics-programming-in-opengl-using-c/README.md)
 +   [C++ 与 OpenGL 计算机图形编程，第 3 版](docs/computer-graphics-programming-in-opengl-using-c-3rd-edition/README.md)
 +   [C++ OpenGL 计算机图形编程，第三版](docs/computer-graphics-programming-in-opengl-using-c-third-editio/README.md)

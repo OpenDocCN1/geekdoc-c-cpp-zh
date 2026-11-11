@@ -1,0 +1,9 @@
+![](bbox=[0.162, 0.109, 0.578, 0.461])
+
+Figure 35.11: Schematic of how interlacing is exploited to adapt 24 Hz film frames for 60 Hz interlaced broadcast to NTSC televisions under the 3:2 pulldown algorithm. In the center columns, the odd and even source film frames have been repeated three and two times, respectively. (Created by Eric Lee.)
+
+frames, and interpolating the remaining frames from adjacent ones would significantly blur the images. The telecine or pulldown employed in practice is a clever alternative that exploits interlacing.
+
+The commonly employed algorithm is called 3:2 pulldown. We begin with a simplified example to understand the intuition behind it. Instead of resampling from 24 Hz progressive to 30 Hz progressive, consider the problem of resampling from 24 Hz progressive to 60 Hz interlaced. We can approach this by replicating each source frame “2.5” times, that is, by repeating frame i twice, blending frames i and i + 1, and then proceeding to process frame i + 1. This blends only one out of every three frames, which is substantially better than blending all but one of every six frames. The output will be progressive, so to create an interlaced format, drop half the rasters from every frame.
+
+What the actual 3:2 pulldown algorithm does is perform the blending by choosing the source rasters more selectively. This avoids blending pixels from separate frames and directly produces interlaced output. This is similar to stochastic blending methods like dithering: The blending is spatial and is integrated by the eye. Figure 35.11 shows the process. Given four original film frames A, B, C, and D sampled at 24 Hz (left column), the algorithm will produce 4 · 2.5 = 10 interlaced frames at ≈60 Hz (center columns), that correspond to five progressive frames at ≈30 Hz (right column). Note that the interlaced frames are broadcast in alternating raster order, so the top frame of the left-center column will be

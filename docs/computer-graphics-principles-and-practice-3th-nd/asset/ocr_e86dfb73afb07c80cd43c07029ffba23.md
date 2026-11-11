@@ -1,0 +1,15 @@
+memory storage and bandwidth, and its incompatibility with multi-sample anti-aliasing.
+
+The advantages of binned rendering are compelling, yet no current PC-class GPU implements it.^18 The fundamental reason is that binned rendering differs too much from the pipeline Direct3D and OpenGL architectures—we say that the **abstraction distance** is too large. Typically, excess abstraction distance results in products with confounding performance characteristics (operations expected to be fast are slow; those expected to be slow are fast) or subtle deviations from specified operation. Practical problems that are encountered include the following.
+
++   - **Excess latency:** Previous binned rendering systems, such as the PixelPlanes 5 system developed at the University of North Carolina, Chapel Hill, have added a full frame time of latency.
++   - **Poor multipass operation:** Direct3D and OpenGL encourage advanced multipass rendering techniques that, in a binned implementation, require multiple two-pass operations per final frame. An example is rendering reflection from a curved surface by 1) rendering the scene that will be visible in the reflection, 2) loading this image as a texture, and 3) rendering the curved surface with the appropriately warped texture image. Some binned rendering systems failed to support such operations; others supported them, but performed poorly.
++   - **Unbounded memory requirements:** While binned rendering bounds *pixel storage* to that required for a single tile, the memory required by the bins themselves grows with scene complexity. Neither OpenGL nor Direct3D has scene-complexity limits, so a fully conforming implementation requires infinite memory (an obvious impossibility) or must introduce complexity to handle cases for which finite bin storage is inadequate.
+
+These complications have been sufficient to keep binned rendering out of mainstream PC GPUs. But recent implementation trends, in particular the use of a time-shared single compute engine to implement all pipeline shading stages, may overcome some of the difficulties.
+
+# ### 38.8.3 Larrabee: A CPU/GPU Hybrid
+
+In 2008, Intel published a technical paper [SCS+08] describing a forthcoming GPU, code-named Larrabee. While this product never shipped, for reasons we will discuss shortly, it was a serious attempt to combine ideas from Intel CPUs and competitive GPUs into a single compelling product. In this short section we will analyze this hybrid GPU, first by comparing its implementation and architecture with those of the NVIDIA GeForce 9800 GTX GPU and the Intel Core 2 Extreme QX9770 CPU, and then by considering the resultant strengths and weaknesses. We begin with implementation, referring to the Larrabee block diagram in Figure 38.11, which is drawn to be consistent (where possible) with the NVIDIA GeForce 9800 GTX block diagram in Figure 38.4.
+
+In several key respects the Larrabee implementation more closely resembles the implementation of the NVIDIA GeForce 9800 GTX GPU than it does that of the Intel Core 2 Extreme QX9770 CPU.

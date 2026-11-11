@@ -1,0 +1,5 @@
+(b) Show that if we apply the rule ν0 = 1/3(P1 − P−1), then the formula from part (a) lets us simplify this to ν0 = 2/3(P1 − P0).
+
+**Exercise 22.4:** In the Catmull-Rom spline, we placed a fictitious control point at each end, placing it so that the last three control points at each end were symmetrical. What would happen if we set P−1 = P0 and Pn+1 = Pn instead? The resultant spline will still interpolate all the original control points, but thinking of the spline as describing the position of a moving point at time *t*, we'll see its motion change at the ends. How will it change?
+
+**Exercise 22.5:** Show that the Catmull-Rom spline is in general not C². On each segment, the second derivative is a linear function (as it is for any cubic spline). Show that this function need not be continuous between segments.

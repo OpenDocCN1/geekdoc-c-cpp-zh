@@ -1,0 +1,337 @@
+
+## O
+
+- Normal vectors, 16, 27–28, 164, 193–194
+- Notation, mathematical, 150
+- Numbers
+  - and orders of magnitude in graphics, 12–15
+- Numerical integration, 29, 801–802
+  - deterministic method, 801–802, 804
+  - probabilistic or Monte Carlo method, 802
+- Numerical methods for solving ODEs, 1017–1020
+- Numerical model, 11. See also Mathematical model; Physical models
+- NURBS. See Nonuniform rational B-spline
+- NVIDIA GeForce 9800 GTX GPU, 1138
+- Nyquist frequency, 515
+- Nyquist rate, 544
+
+## O
+
+- Object-centered rotation, 272. See also Body-centered rotation
+- Object coordinates, 140, 245. See also Object space
+- Object ID channel, 485
+- Object-level scattering, 711–712
+- Object-oriented API, 41
+- Objects
+  - detail, 1051
+  - interaction with light, 118–119 and materials, 27–28
+- Object space, 245. See also Modeling space; Object coordinates
+- Occlusion, 308, 1023ff
+  - in 2.5D systems, 1042
+- Occlusion culling, 1023, 1049
+  - hierarchical, 1049–1050
+- Occlusion function, 1025
+- Occlusion query, 1049
+- Octree, 629, 1090
+- Odd winding number rule, 177
+- OLED. See Organic light-emitting diodes (OLEDs)
+- Omnidirectional point light
+- Omni-light, 379–380
+- One-dimensional (1D) meshes, 189
+  - boundary of, 190
+  - data structure for, 191–192
+  - manifoldness, 190
+  - 1-ring (vertices), 641
+- OpenGL, 452
+  - compatibility (fixed-function) profile, 454–455
+  - core API, 466
+  - programmable pipeline, 464–466
+  - program structure, 455–456
+  - utility toolkit, 456
+- OpenGL ES, 479
+- OpenGL Utility Toolkit. See GLUT (OpenGL Utility Toolkit)
+- Optic disk, 107
+- Optimization
+  - early, 446–447 and performance, 444–447
+- Ordinary differential equation (ODE), 998
+  - general ODE solver, 1016–1017
+  - numerical methods for, 1017–1020
+- Oren-Nayar model, 732–734
+- Organic light-emitting diodes (OLED), 20
+- Orientation-preserving reflection, 264, 284
+- Oriented 2D meshes, 194–195
+  - boundaries and, 194–195
+- Oriented meshes, 191
+  - closed, 195
+- Oriented simplex, 639
+- Orthogonal matrix, 230
+- Orthographic cameras, 315–317
+- Orthographic projections. See Parallel projections
+- Outer product (matrices), 260
+- Output merging stage, 433–434
+- Output-sensitive time cost, 1079
+- Outscattering, 738
+- Inside/outside testing, 175–177
+- Outward edge normal, 175
+- Over operator, 365
+
+## P
+
+- Packet tracing, 1061
+- Painter’s algorithm, 1028, 1041–1042
+- Panning (camera controlling technique), 585
+- Pantone™ color-matching system, 761
+- Paraboloid, dual, 554
+- Parallel projections, 315–316
+- Parameterization
+  - building tangent vectors from, 552–553
+  - of lines, 155
+  - texture, 555
+  - of triangles, 171
+- Parameterized model, 76
+- Parametric equation, 341
+- Parametric form of the line between P and Q, 155
+- Parametric-implicit line intersection, 167
+- Parametric lines, transforming, 254
+- Parametric-parametric line intersection, 166
+- Partial coverage, 364–367, 365, 1028, 1054–1062
+  - defocus, 1060–1061
+  - as a material property, 1062
+  - motion blur, 1061–1062
+  - spatial antialiasing, 1055–1060
+- Participating media, 737–738
+- Particle collision detection, 1008–1009
+- Particle collisions, 1008–1012
+  - collision detection, 1008–1009
+  - impulses, 1010–1012
+  - normal forces through transient constraints, 1009
+  - penalty forces, 1009–1010
+- Particle systems, 350–351
+- Path mesh, 668
+- Polarizers, 679
+- Polling (interaction loop), 574
+- Polygonal contour extraction, 955
+- Polygon coordinates, 249. See also Modeling coordinates
+- Polygon meshes, 635
+- Polygons, 175–182
+  - back face, 337
+  - drawing as black box, 23
+  - front face, 337
+  - interiors of nonsimple, 177
+  - micropolygon, 340
+  - normal to polygon in space, 178–179
+  - polygon rate, 14
+  - simple, 175
+- Polygon soup, 654
+- Polyhedral manifolds, 191
+- Polyhedral meshes
+  - conversion to, 625–629
+  - conversion to implicits, 629
+- Polyline, 81
+- Polymorphic types, 1068
+- Polymorphism, 1073
+- “Poor man’s Fourier series,” 560
+- Poor sample test efficiency, 420
+- Popping, 985
+- Portable Network Graphics (PNG), 484
+- Portal culling, 470
+- Portals, 1051, 1052–1054
+- Positive nodes (BSP tree), 1031
+- Positive winding number rule, 177
+- Potential energy, 1021
+- Potentially visible set (PVS), of primitives, 1050
+- Power vectors, 875
+- p-polarized light source, 681
+- p-polarized waves, 681
+- Practical lights, 372
+- Prebaking (models), 247
+- Premultiplied alpha, 366–367, 487
+  - problem with, 489
+- Presentation vector graphics, 1042
+- Primary colors, 758–759
+- Primary ray, 1027
+- Primary visibility, 1023, 1024, 1027
+- Primitive components
+  - geometries of, 140–141
+  - instantiating, 141
+- Primitives, 6, 38, 461–462, 962, 969, 973, 1028, 1030–1031, 1041–1042, 1044, 1059–1060, 1084–1085, 1087–1092
+- Primitives per second, 6
+- Principal curvatures, 956
+- Principal directions, 956
+- Probability
+  - of an event, 803
+  - continuum, 808–810
+  - mixed, 820–821
+- Probability density, 684, 686
+- Probability density functions (pdf), 684, 808, 810–812
+- Probability masses, 685, 820
+- Probability mass function (pmf), 803, 805
+- Probability of an event, 809
+- Procedural code, 35, 55, 58
+  - vs. declarative specification, 40
+  - dynamics via, 58
+- Procedural texturing, 549
+- Programmable graphics card, 8. See also GPU.
+- Programmable lighting, 930. See also Programmable shading; Programmable shader
+- Programmable pipeline, 433, 453–454
+  - abstract view of, 464–466
+  - OpenGL, 464–466
+- Programmable rendering pipeline
+  - fixed-function to programmable, 452–454
+- Programmable shading, 930, 932. See also Programmable lighting
+- Programmable units, 433
+- Programmatic interfaces, 1068–1077
+- Programmer instruction batching, 1033
+- Programmer’s model, 17, 454–464
+- Progressive meshes, 649–652
+  - goal of, 649
+- Progressive refinement (radiosity), 843
+- Progressive television formats, 978
+- Projected solid angle, 690
+- Projection stage, 460
+- Projection textures, 555, 629
+- Projective frame, 265
+- Projective geometry, 77, 257
+- Projective transformations, 255, 257, 259–260, 263, 291–293, 308
+  - general position, 291–292, 292f
+  - properties of, 265–266
+- Projective transformation theorems, 265–266
+- Propagation, 332–333
+- Proxies (data structure), 1068
+- Pseudoinverse
+  - defined, 232
+  - least squares problems and, 232
+  - SVD and, 231–233
+- Pseudoinverse Theorem, 232
+- Pulldown (interlacing), 979–980
+
+## Q
+
+- Quad fragments, 1137
+- Quad meshes, 611, 611f, 635
+- Quadratic error function, 653
+- Quad trees, 1090, 1091f
+- *Quake* video game, 1052
+- Quantitative invisibility, 1028
+- Quaternions, 273, 283, 993
+- QuickDraw, 38
+
+## R
+
+- Radial curvature, 957
+- Radiance, 333, 397, 693, 694–695
+  - area-weighted, 910
+  - emitted, 785, 832
+  - field, 786, 834, 846
+  - impulse-reflected, 794
+  - linear, 398
+  - surface, 786–787, 834, 846
+- Radiance computations, 683, 695–697
+- Radiance function, 370
+- Radiance propagation, 907–908
+- Radiant exitance, 699
+  - spectral, 699
+- Radiant flux, 699. See also Radiant power
+- Radiant power, 699. See also Radiant flux
+- Radiometry, 669, 694
+- Radiosity, 333, 700, 797, 838–844. See also Nonspectral radiant exitance
+  - characteristics, 838
+  - color bleeding and, 839
+  - as finite element method, 839
+  - meshing in, 843
+- Radiosity equation, 840
+- Randomized algorithms
+  - random variables and, 802–815
+- Random parametric filtering (RPF), 922
+- Random point, 812
+- Random variable(s)
+  - in continuum probability, 809
+  - defined, 803
+  - estimator, 818
+  - expected value of, 810
+  - identically distributed, 808
+  - independent, 807
+  - independent identically distributed (iid), 808
+  - and randomized algorithms, 802–815
+  - random point and, 812
+  - uniform, 807
+- Random variable with mixed probability, 820
+- Raster devices, 8
+- Raster graphics, 209
+  - history of, 931–932
+- Rasterization, 18, 418–432, 1027, 1061
+  - conservative, 1096
+  - defined, 387, 391
+  - hierarchical, 430
+  - and high-level design, 388–393
+  - incremental scanline, 431
+  - micropolygon, 431–432
+  - and ray casting, 387–449
+  - rendering with API of, 432–434
+  - swapping loops, 418–419
+  - triangles first, 391–393
+- Rasterizer algorithm, 418
+- Rasterizing shadows, 428–429
+- Rasterizing stage, 433
+- Rasters, 391, 978, 979
+- Rational B-spline, 604
+- Rational numbers, 325
+- Ray bumping, 886, 1027
+- Ray casting, 1023, 1028, 1029–1034
+  - defined, 387, 391
+  - implementation platform and, 393–403
+  - pixels first, 391–393
+  - and rasterization, 387–449
+  - renderer, 403–404
+  - and sampling framework, 407–408
+  - time cost of, 1029
+- Ray intersection, 1095–1099
+- Ray intersection query, 1026
+- Ray optics
+  - building blocks of, 330
+- Ray packet, 445
+- Ray packet tracing, 1027, 1033
+- Ray-plane intersection, 168–170
+- Ray-sphere intersection, 170–171
+- Ray tests, parallel evaluation of, 1032–1034
+- Ray tracer
+  - steps involved in, 929
+- Ray tracing
+  - defined, 391
+  - recursive, 851–852
+  - implicit surfaces, 342–343, 631
+- Ray-triangle intersection, 408–411, 1073
+- Reaction (morphogens), 561
+- Ready for rendering
+  - vs. abstract geometric, 467
+- Realistic lighting
+  - producing, 124–127
+- Realistic rendering, building blocks for, 26–31
+- Real numbers, 324–325
+- Real-time 3D graphics platforms, 351–480
+  - introduction, 351–352
+- Reciprocity, 714. See also Helmholtz reciprocity
+  - and BRDF, 705–706
+- Reconstruction, 505
+  - and band limiting, 524–527
+  - piecewise linear, 505
+- Rectangular area light, 377–378
+- Recursive approach, 861–864
+- Recoding, 470–471
+- Reference frame, 963
+- Reference renderer, 388
+- Reflectance, 133–138, 702–704, 711ff
+  - ambient reflection, 136
+  - diffuse reflection, 136
+  - emissive lighting, 138
+  - Phong reflectance (lighting) model, 134
+  - specular reflection, 137–138
+  - WPF reflectance model, 133–138
+- Reflectance equation, 703, 786
+- Reflection mapping, 556
+- Reflection model, 723. See also Scattering model
+- Reflective scattering, 697, 715
+- Reflective surface, 27
+- Refractive index, 679
+- Refractive scattering, 716
+- Rejection sampling, 823

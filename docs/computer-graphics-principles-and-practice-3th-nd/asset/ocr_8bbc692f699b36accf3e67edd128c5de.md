@@ -1,0 +1,15 @@
+The approach taken in our implementation is not the only one possible. Our approach depends on *transformations* as the primitive notion, but it’s quite possible and reasonable to think instead of *coordinate systems* as the fundamental entity. Just as in Chapter 10 we discussed the interpretation of a linear *transformation* as a change of coordinates, you can approach much of graphics with this point of view. You end up having coordinate frames for vector spaces (for a 2D space, you have two independent vectors; for a 3D space, you have three independent vectors), for affine spaces (typically a coordinate frame for a 2D affine space consists of three points, from which you determine barycentric coordinates, but you can also build a frame from one point and two vectors), and for projective spaces (where in 2D, a projective frame is represented by four points in “general position,” which we’ll discuss shortly). This coordinate frame approach is taken by Mann et al. [MLD97].
+
+# ## 12.2 Points and Vectors
+
+The predefined `Point` and `Vector` classes in WPF already implement the main ideas we’ve discussed (for two dimensions); There are operators defined so that you can add one `Point` and one `Vector` to get a new `Point`, but there is no operator for adding two `Points`, for instance. Certain convenience operations have been included, like the dot product of `Vectors`.
+
+There are idiosyncrasies in the design of the classes, however. The two coordinates of a point are `p.x` and `p.y`; there’s no way to refer to them as elements of an array of length 2, nor even a predefined “cast” operation to convert to a `double[2]`. There is, however, a predefined `CrossProduct` operation for `Vectors`, which treats the vectors as lying in the xy-plane of 3-space, computes the 3D cross product (which always points along the z-axis), and returns the z-component of the resultant vector. In deference to the convenience of having data types that work well with the remainder of WPF, we’ve ignored these idiosyncrasies and simply used the parts of the `Point` and `Vector` classes (and their 3D analogs) that we like. We’ve also added some geometric functions to our `LIN_ALG` namespace (in which all the transformation classes reside) to compute things like the two-dimensional cross product of one vector.
+
+# ## 12.3 Transformations
+
+While WPF also has a class called `Matrix`, its peculiarities made it unsuitable for our use. Furthermore, we wanted to build a library in which the fundamental idea was that of a *transformation* rather than the matrix used to represent it. We therefore define four classes.
+
++   - `MatrixTransformation2`: A parent class for linear, affine, and projective transformations. Since all three can be represented by 3 × 3 matrices, a `MatrixTransformation` holds a 3 × 3 matrix and provides certain support procedures to multiply and invert such matrices.
++   - `LinearTransformation2`: A transformation that takes `Vectors` to `Vectors`.
++   - `AffineTransformation2`: A transformation that can operate on both `Points` and `Vectors`.

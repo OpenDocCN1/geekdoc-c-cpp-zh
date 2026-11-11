@@ -1,0 +1,19 @@
+the first black-and-white television signal!), you might argue that if a human can distinguish, say, 100 levels of intensity, then we should use 100 different numbers to represent these. It would be silly to use 200 different numbers, because we'd have different numbers representing different, but indistinguishable, intensities. If we were representing values in binary, we'd be wasting a bit by going from 100 values to 200 values. Similarly, if we encoded only 50 different intensity levels, we'd get nonsmooth intensity gradients in our display.
+
+If you simply take all possible intensity values and divide them equally (i.e., you quantize the intensity signal), you'd find that to capture perceptual differences that were significant at the low-intensity levels you'd need to use very small buckets. But those same buckets would be redundant at high-intensity levels. In fact, you would be far better off encoding the number L*, because each quantized range of L* values would correspond to the same amount of perceptual variation. By choosing the bucket size correctly, you could most efficiently encode the brightness.
+
+To recover the intensity at the receiving end of the channel, you would invert the formula for L* (roughly, you'd take the third power of L*, and multiply by the constant Y_n) and arrange for your television screen to emit the corresponding intensity.
+
+As it happens, the cathode ray tubes (CRTs) that were used in early televisions have an interesting characteristic: The intensity emitted is proportional to the 5/2 power of an applied voltage. Since 5/2 is fairly close to three, this meant that you could take the L* value and use it as a voltage to determine the color of each pixel, approximately.
+
+To be clear: The visual system's response to intensity is nonlinear and looks approximately like I^{1/3}; the CRT's output intensity in response to applied voltage is also nonlinear and looks like I = kV^{5/2}. Combining these two results in a nearly linear overall effect (a 5/2 power law).
+
+In fact, video engineers defined a “signal representative of luminance” (which has later, in some video literature, been incorrectly called “luminance”); this signal approximately encodes the 0.42 power of luminance. Why use 0.42 instead of 0.33? One answer is that if you used 0.4 instead, then the 5/2 power law of the CRT would cancel it exactly: This allows you to simplify the electronics in a consumer television, and at the cost of only a minor inefficiency in the encoding of the signal. The use of 0.42 instead of 0.4 has been explained by the observation that the viewing circumstances for television (much less bright than outdoors) are not the same as the circumstances under which the signal was captured (often bright lights or outdoors in daylight); the slight adjustment is meant to help compensate for this.
+
+You can experience the distinction between high-light and low-light perception of intensity by considering a garden at midday on a slightly overcast day (so that the lighting is reasonably diffuse), and the same garden just after sunset on that day. Only the light levels change. Because our perception of “lightness” is supposed to be approximately logarithmic, the difference in lightness between the leaves of a plant and its flower should be the same at midday and at twilight. In practice, they are not, appearing to be lower-contrast at twilight, and we must do some adjusting to compensate.
+
+To experience this effect directly, we can use the area surrounding some gray values as a proxy for the ambient illumination. Figure 28.22 shows three gray squares surrounded by white and black borders. The gray squares in each column
+
+![](bbox=[0.7, 0.62, 0.95, 0.88])
+
+*Figure 28.22: Surrounding context can vary our perception of tones. (Figure concept from Poynton [Poyb].)*

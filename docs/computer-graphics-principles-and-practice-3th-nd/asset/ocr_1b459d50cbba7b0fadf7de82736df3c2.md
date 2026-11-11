@@ -1,0 +1,11 @@
+![](bbox=[0.101, 0.105, 0.642, 0.403])
+
+*Figure 36.14: Comparison of precision versus depth for various z-buffer representations: 24-bit fixed point (green) is obviously strictly more accurate than 16-bit fixed point (blue); 16-bit floating point is more accurate than 16-bit fixed point when far from the camera (on the right), but has less precision very near to the camera (on the left). The blue and green curves are lines in log-log space, but would appear as hyperbolas in a linear plot. The red floating-point line is jagged because floating-point spacing is uniform within a single exponent and then jumps at the next exponent; the red curve is a smoothed trendline.*
+
+These mappings assign relatively more precision close to the near plane (where z-fighting artifacts may be more visible), have a normalized range that is appropriate for fixed-point implementation, and are expressible as a matrix multiplication followed by a homogeneous division. The amount of precision close to the near plane is based on the relative distance of the near and far planes from the center of projection. As the near plane moves closer to the center of projection, all precision rapidly shifts toward it, giving poor depth resolution deep in the scene.
+
+A **complementary or reversed hyperbolic** [LJ99] encoding maps the far plane to the low end of the range and the near plane to the high end. For a fixed-point representation this is usually undesirable because nearby objects would receive higher depth representation errors, but under a floating-point representation this assigns nearly equal accuracy throughout the scene.
+
+Another advantage of the nonlinear depth range is that it is possible to take the limit of the mapping as *f* → ∞ [BI93]. This allows a representation of depth within an infinite frustum using finite precision.
+
+**Inline Exercise 36.4:** For *n* = 1m, *f* = 101m, compute the range of *z*-values within the view frustum that map to [0, 0.9] under the OpenGL projection matrix. Repeat the exercise for *n* = 0.1m. How would this inform your choice of near and far plane locations? What is the drawback of pushing the near plane farther into the scene?

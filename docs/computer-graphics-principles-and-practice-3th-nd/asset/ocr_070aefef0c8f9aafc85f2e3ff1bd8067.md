@@ -1,0 +1,21 @@
+a common notation in physics. In animation, time appears in all equations and is always denoted by $t$ (except when we need temporary variables for integration), so all derivatives are with respect to $t$ (e.g., $\dot{\mathbf{x}}(t)=\frac{d\mathbf{x}}{dt}(t)$). Multiple dots indicate higher-order derivatives (e.g., $\dddot{\mathbf{x}}(t)=\frac{d^3\mathbf{x}}{dt^3}(t)$).
+
+There are two hazards in this dot notation. The first is that “$\dot{\mathbf{x}}$” is such a compact form that it is easy to drop the “$(t)$” and treat the value of a velocity expression as a variable instead of as the evaluation of a function. When taking derivatives of complex expressions such as momentum that are based on velocity, forgetting that velocity is a function of time can lead to errors if you forget to apply the chain rule. For example, let’s look at a function of two arguments defined by $\mathbf{p}(m,\mathbf{v})=\frac{1}{2}m\mathbf{v}^2$ (which happens to be the momentum equation). We can compute the partial derivatives, $\frac{\partial \mathbf{p}}{\partial m}(m,\mathbf{v})=\frac{1}{2}\mathbf{v}^2$, $\frac{\partial \mathbf{p}}{\partial \mathbf{v}}(m,\mathbf{v})=m\mathbf{v}$. What you might see in an animation paper is a description of this function where the author writes, “$\mathbf{p}(m,\dot{\mathbf{x}})=\frac{1}{2}m\dot{\mathbf{x}}^2$.” And you’ll even see things like “$\frac{\partial \mathbf{p}}{\partial \dot{\mathbf{x}}}(m,\dot{\mathbf{x}})=m\dot{\mathbf{x}}$.” Here, $\dot{\mathbf{x}}$ is being treated as a variable, just like $\mathbf{v}$, and it is almost reasonable to do so thus far. It is also common to see “$\frac{d}{dt}\mathbf{p}(m,\dot{\mathbf{x}})=m\ddot{\mathbf{x}}$.” This is a little strange because $t$ isn’t even one of the arguments of function $\mathbf{p}$, and $\dot{\mathbf{x}}$ has changed from its role as a variable whose symbol happens to have a dot to representing a function of time whose time derivative is denoted $\ddot{\mathbf{x}}$. Thus, for clarity, in this chapter when we want such a function, we write either $\mathbf{p}(m,t)=\frac{1}{2}m\dot{\mathbf{x}}(t)^2$, or more verbosely,
+
+$$
+\mathbf{p}^*(m,\mathbf{v}) = \frac{1}{2}m\mathbf{v}^2, \tag{35.11}
+$$
+
+$$
+\mathbf{p}(m,t) = \mathbf{p}^*(m,\dot{\mathbf{x}}(t)) = \frac{1}{2}m\dot{\mathbf{x}}(t)^2, \tag{35.12}
+$$
+
+$$
+\frac{\partial \mathbf{p}(m,t)}{\partial t} = m\dot{\mathbf{x}}(t)\ddot{\mathbf{x}}(t). \tag{35.13}
+$$
+
+The second notational hazard is that the implementation of a dynamics system often uses higher-order functions. That is, it contains functions that take other functions as their arguments. In programming, the argument functions are called first-class functions or function pointers. There is a real distinction between the vector-valued function $\mathbf{x}$ (i.e., `Vector3 position(float time)` ...) and the vector value of that function at time $t$, $\mathbf{x}(t)$ (i.e., `Vector3 currentPosition`). Passing the wrong one as an argument will lead to programming errors. We therefore always keep the derivatives in function notation for this chapter. However, be warned that in the animation literature it is commonplace to move between the variable and function notation.
+
+Here’s one critical example of this notation. When discussing numerical integration schemes that dominate the dynamics portion of this chapter, we distinguish three fundamental representations. The position of an object (which may represent only position, or may be extended with other information) is $\mathbf{x}(t)$, which is a vector-valued function. The elements of the vector may be, for example, $x$-, $y$-, and $z$-coordinates, or those coordinates and rotational (and other pose) information. Since there may be many objects in a system, or many points on a single object, we consider a set of functions. When evaluated at $t$, their values are denoted $\mathbf{x}_i(t)$, $\mathbf{x}_j(t)$, etc. The state function of the entire system, which comprises the entire set of position functions and their derivatives, is written $\mathbf{X}(t)$ when evaluated at time $t$. The state function is defined for continuous $t$.
+
+When we approximate the state function with a numerical integrator that takes discrete steps, we refer to the values of the state function at given step indices.

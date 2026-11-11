@@ -1,0 +1,51 @@
+
+- [O'G10] Maureen O'Gara. Azul Zings Its Java Hardware—Poof, It's Software. *Java Developer's Journal*, 15(6), 2010.
+- [Ols09] Dan Olsen. *Building Interactive Systems: Principles for Human Computer Interaction*. Cengage Learning, Inc., 2009.
+- [ON94] Michael Oren and Shree K. Nayar. Generalization of Lambert's reflectance model. In *Proceedings of the 21st Annual Conference on Computer Graphics and Interactive Techniques*, SIGGRAPH '94, pages 239–246, New York, NY, USA, 1994. ACM.
+- [O'N06] B. O'Neill. *Elementary Differential Geometry, Revised 2nd Edition*. Elsevier Science, 2006.
+- [ORM08] Ryan Overbeck, Ravi Ramamoorthi, and William R. Mark. Large Ray Packets for Real-time Whitted Ray Tracing. In *IEEE/EG Symposium on Interactive Ray Tracing (IRT)*, pages 41–48, August 2008.
+- [OS88] Stanley Osher and James A. Sethian. Fronts propagating with curvature-dependent speed: Algorithms based on Hamilton-Jacobi formulations. *J. Comput. Phys.*, 79(1):12–49, November 1988.
+- [OS09] Alan V. Oppenheim and Ronald W. Schafer. *Discrete-Time Signal Processing*. Prentice Hall Press, Upper Saddle River, NJ, USA, 3rd Edition, 2009.
+- [OTS06] Aude Oliva, Antonio Torralba, and Philippe G. Schyns. Hybrid images. *ACM Trans. Graph.*, 25(3):527–532, July 2006.
+- [P+10] Jef Poskanzer et al. PPM file format. http://netpbm.sourceforge.net/doc/ppm.html, 2010.
+- [Pan11] Jacopo Pantaleoni. VoxelPipe: A programmable pipeline for 3D voxelization. In *Proceedings of the ACM SIGGRAPH Symposium on High Performance Graphics*, HPG '11, pages 99–106, New York, NY, USA, 2011. ACM.
+- [Par72] D. L. Parnas. On the criteria to be used in decomposing systems into modules. *Commun. ACM*, 15(12):1053–1058, 1972.
+- [Par07] Rick Parent. *Computer Animation, Second Edition: Algorithms and Techniques*. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2nd Edition, 2007.
+- [PBBW95] Randy Pausch, Tommy Burnette, Dan Brockway, and Michael E. Weiblen. Navigation and locomotion in virtual worlds via flight into hand-held miniatures. In *Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques*, SIGGRAPH '95, pages 399–400, New York, NY, USA, 1995. ACM.
+- [PBD+10] Steven G. Parker, James Bigler, Andreas Dietrich, Heiko Friedrich, Jared Hoberock, David Luebke, David McAllister, Morgan McGuire, Keith Morley, Austin Robison, and Martin Stich. OptiX: A General Purpose Ray Tracing Engine. *ACM Trans. Graph.*, 29(4), pages 66:1–66:13, August 2010.
+- [PC01] Frank Perbet and Marie-Paule Cani. Animating prairies in real-time. In *Proceedings of the 2001 Symposium on Interactive 3D Graphics*, I3D '01, pages 103–110, New York, NY, USA, 2001. ACM.
+- [PD84] Thomas Porter and Tom Duff. Compositing digital images. *SIGGRAPH Comput. Graph.*, 18(3):253–259, January 1984.
+- [Pea85] Darwyn R. Peachey. Solid texturing of complex surfaces. *SIGGRAPH Comput. Graph.*, 19(3):279–286, July 1985.
+- [Per85] Ken Perlin. An image synthesizer. *SIGGRAPH Comput. Graph.*, 19(3):287–296, July 1985.
+- [Per95] Ken Perlin. Real Time Responsive Animation with Personality. *IEEE Transactions on Visualization and Computer Graphics*, 1(1):5–15, 1995.
+- [Per02a] Ken Perlin. Improved Noise reference implementation. `http://mrl.nyu.edu/~perlin/noise/`, 2002.
+- [Per02b] Ken Perlin. Improving noise. *ACM Trans. Graph.*, 21(3):681–682, July 2002.
+- [PG96] Ken Perlin and Athomas Goldberg. Improv: A system for scripting interactive actors in virtual worlds. In *Proceedings of the 23rd Annual Conference on Computer Graphics and Interactive Techniques*, SIGGRAPH ’96, pages 205–216, New York, NY, USA, 1996. ACM.
+- [PH06] Sang Il Park and Jessica K. Hodgins. Capturing and animating skin deformation in human motion. *ACM Trans. Graph.*, 25(3):881–889, July 2006.
+- [PH10] Matt Pharr and Greg Humphreys. *Physically Based Rendering, Second Edition: From Theory to Implementation*. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 2nd Edition, 2010.
+- [Pho75] Bui Tuong Phong. Illumination for Computer Generated Pictures. *Communications of the ACM*, 18:311–317, June 1975.
+- [Pin88] Juan Pineda. A parallel algorithm for polygon rasterization. *SIGGRAPH Comput. Graph.*, 22(4):17–20, 1988.
+- [PL10] J. Pantaleoni and D. Luebke. HLBVH: hierarchical LBVH construction for real-time ray tracing of dynamic geometry. *Proceedings of the Conference on High Performance Graphics*, HPG ’10, pages 87–95, Saarbrücken, Germany, 2010. Eurographics Association.
+- [Plü68] J. Plücker. *Neue Geometrie des Raumes gegründet auf die Betrachtung der geraden Linie als Raumelement*. Druck und Verlag von B.G. Teubner, Leipzig, 1868.
+- [POC05] Fábio Policarpo, Manuel M. Oliveira, and João L. D. Comba. Real-time relief mapping on arbitrary polygonal surfaces. In *Proceedings of the 2005 Symposium on Interactive 3D Graphics and Games*, I3D ’05, pages 155–162, New York, NY, USA, 2005. ACM.
+- [Poya] C. Poynton. Color FAQ. `http://www.poynton.com/ColorFAQ.html`, accessed 2012.
+- [Poyb] C. Poynton. Gamma FAQ. `http://www.poynton.com/GammaFAQ.html`, accessed 2012.
+- [PP93] Kris Popat and Rosalind W. Picard. Novel Cluster-Based Probability Model for Texture Synthesis, Classification, and Compression. In *Visual Communications and Image Processing*, pages 756–768, 1993.
+- [PP07] Bob Palais and Richard Palais. Euler’s fixed point theorem: The axis of a rotation. *Journal of Fixed Point Theory and Applications*, 2(2):215–220, December 2007.
+- [Pre95] W. H. Press. *Numerical Recipes in C: The Art of Scientific Computing*. Cambridge University Press, 1995.
+- [PRS02] Jenny Preece, Yvonne Rogers, and Helen Sharp. *Interaction Design*. Wiley, 2002.
+- [Pur11] E. Purcell. *Electricity and Magnetism*. Cambridge University Press, 2011.
+- [PZvBG00] Hanspeter Pfister, Matthias Zwicker, Jeroen van Baar, and Markus Gross. Surfels: Surface elements as rendering primitives. In *Proceedings of the 27th Annual Conference on Computer Graphics and Interactive Techniques*, SIGGRAPH ’00, pages 335–342, New York, NY, USA, 2000. ACM Press/Addison-Wesley.
+- [Ras60] N. Rashevsky. *Mathematical biophysics: Physico-mathematical foundations of biology*. Dover Publications, 1960.
+- [Ras90] Roshdi Rashed. A pioneer in anaclastic: Ibn Sahl on burning mirrors and lenses. *Isis*, 81:464–491, 1990.
+- [RBF08] Ganesh Ramanarayanan, Kavita Bala, and James A. Ferwerda. Perception of complex aggregates. *ACM Trans. Graph.*, 27(3):1–10, 2008.
+- [Ree83] W. T. Reeves. Particle Systems—A Technique for Modeling a Class of Fuzzy Objects. *ACM Trans. Graph.*, 2:91–108, April 1983.
+- [Rey87] Craig W. Reynolds. Flocks, herds and schools: A distributed behavioral model. In *Proceedings of the 14th Annual Conference on Computer Graphics and Interactive Techniques*, SIGGRAPH ’87, pages 25–34, New York, NY, USA, 1987. ACM.
+- [RFWB07] Ganesh Ramanarayanan, James Ferwerda, Bruce Walter, and Kavita Bala. Visual equivalence: Towards a new standard for image fidelity. *ACM Trans. Graph.*, 26(3), pages 76:1–76:11, July 2007.
+- [RH01] Ravi Ramamoorthi and Pat Hanrahan. An efficient representation for irradiance environment maps. In *Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques*, SIGGRAPH ’01, pages 497–500, New York, NY, USA, 2001. ACM.
+- [RH04] Ravi Ramamoorthi and Pat Hanrahan. A signal-processing framework for reflection. *ACM Trans. Graph.*, 23(4):1004–1042, October 2004.
+- [RKB04] Carsten Rother, Vladimir Kolmogorov, and Andrew Blake. GrabCut: Interactive foreground extraction using iterated graph cuts. *ACM Trans. Graph.*, 23(3):309–314, August 2004.
+- [RKLC+11] Jonathan Ragan-Kelley, Jaakko Lehtinen, Jiawen Chen, Michael Doggett, and Frédo Durand. Decoupled sampling for graphics pipelines. *ACM Trans. Graph.*, 30(3):17:1–17:17, May 2011.
+- [Rob] Doug Roble. Personal communication.
+- [Roc95] I. Rock. *Perception*. Scientific American Library Series. Scientific American Library, 1995.
+- [Rod16] Olinde Rodrigues. De l’attraction des sphéroïdes. *Correspondence sur l’École Impériale Polytechnique (Thesis for the Faculty of Science of the University of Paris)*, 3(3):361–385, 1816.
