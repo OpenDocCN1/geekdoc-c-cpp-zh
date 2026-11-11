@@ -1,0 +1,50 @@
+
+and react to change, construction firms must be lean and flexible. This necessitates a general attitude toward elimination of excess in materials, personnel, and processes. "Lean" construction has helped propel many responsive construction companies to success. A fourth element that fosters the environment for best practice operations is *technology*. Knowledge of company capabilities, competitors, and the business cycle is critical to success. Modern technology can also be utilized to enhance information flows both inside and outside the firm. Technology may be exploited to facilitate improved project selection, planning, scheduling, work methods, and materials flows. This "Lean" construction approach enhances the responsiveness and allows the construction firm to be on the cutting edge of competition. See Fig. 1.8.
+
+The critical elements of attitude, process improvement, waste elimination, and technology are necessary in allowing operational efficiency to serve as a competitive advantage within a construction firm. An operations-oriented strategy, however, must extend beyond an individual construction firm. The project is delivered to the project owner via supply networks of firms consisting of architects, engineers, contractors, material suppliers, and related supply chain members. Most firms are simply a link in the supply chain, and a chain can only be as strong as its weakest link. Therefore, construction firms cannot be responsive without responsive subcontractors or material suppliers and technology implementation. As another example, a prime contractor cannot produce high-quality projects without quality materials and well-informed subcontractors, pushing quality responsibility down to its subcontractors and material suppliers.
+
+![](img/5a99b8094bd51e396d3bb39b49a21371_27_0.png)
+
+**FIGURE 1.8** The Construction House of Lean.
+
+## Supply Chain Management and Competitive Construction Operations
+
+This discussion leads to the conclusion that a single construction firm cannot necessarily position itself as an *operations efficiency* leader without the help of other firms in the chain. A fifth element necessary for a competitive construction operation is *supply chain control*. Specifically, the supply chain consists of all firms and organizations which contribute delivery of a high-quality project or service to the project owner. Japanese manufacturers achieved tight control over their supply chains with the *keiretsu*, which is described as a business cohort which relies on cooperation, coordination, and control to competitively position businesses and industry norms. While *keiretsu* activities are driven by the unique legal and cultural environment in Japan, transferring the keiretsu-like philosophy to the United States has yielded the concept of *supply chain management*.
+
+Supply chain management involves the strategic and process coordination of subcontractors, material suppliers, and information within the supply chain to deliver satisfaction to the ultimate project owner. While each business entity in the supply chain has been traditionally driven by self-profitability, the notion of supply chain management involves optimization of synergistic relationships between supply chain members to ultimately satisfy the project owner. The concept evolves from controlling the supply chain as a single process rather than as a sum of independent transactional relationships. The expected end result is a mutually beneficial, win-win partnership that creates a synergistic supply chain in which the entire chain is more effective than the sum of its individual parts.
+
+Ideally, supply chain management represents a win-win, utopian goal of circular benefits. See Fig. 1.9. Each company in the supply chain obtains its own profitability and success by creating customer value in terms of a functional, high-quality project at an acceptable price. Each organization within the supply chain can reduce its own costs and increase its project performance through supply chain management, thereby enabling the supply chain to deliver value to the project owner. The satisfied project owner in turn rewards the supply chain with loyal contracting power, allowing profitability to be transferred back down throughout the supply chain. This in turn fosters further supply chain integration and responsiveness, causing the cycle to repeat.
+
+As mentioned above, a prime contractor may be able to position a firm as a market leader through exploitation of best practice operations, but the nature of the linked firms in the supply chain necessitates that subcontractors and material suppliers must be part of this strategy. The prime contractor cannot become an industry leader without supply chain support, and, thus, supply chain management necessitates sharing of traditionally proprietary information, strategy, planning and goals, and most construction firms do not feel comfortable exposing such elements to other firms, fearing loss of control.
+
+**TABLE 1.2** Barriers to Supply Chain Management
+
+| |
+|---|
+| • Failure to share project information |
+| • Fear of loss of control |
+| • Lack of self awareness |
+| • Lack of partner awareness |
+| • Enormity of the project complexity |
+| • Inability to recognize project goals |
+| • Lack of understanding project owner |
+| • Lack of understanding of supply chain |
+| • Myopic thinking |
+| • Myopic strategies |
+| • Deficiency of mutuality |
+
+Furthermore, interfirm collaboration requires each participating firm to create a high level of awareness of both themselves and their partners, and such cognition is often difficult to accomplish effectively. Yet another problem involves the inability of chain members to focus on one mutual goal of the supply chain rather than individual performance. Other significant barriers to the execution of supply chain management include a lack of understanding of the project owner (who is the true customer and what do they really want?), communication gaps (in what ways is it difficult for separated members to communicate?), a lack of understanding of the true supply chain (what firms are in the chain?), the enormous size of many supply chains (is it difficult to coordinate many independent firms?), a lack of effective leadership (who is the best leader?), egocentrism (is pride creating a myopic strategy?), and finally, a deficiency of mutuality (are profits and rewards shared equally?).
+
+On the basis of the above barriers to supply chain management, development of an integrated supply chain remains an extremely difficult task. It represents a new way of doing business, and most construction firms are not prepared or even necessarily willing to effectively integrate the chain. Though it is perhaps a distant goal, the concept of supply chain management remains a critical factor for the long-term success of construction firms. While complete supply chain management may be out of reach for most construction firms, application of its concepts will improve their competitive advantage. Furthermore, as the supply chain best practice firms are able to improve project quality, completion times, and work methods while decreasing costs, the demanding project owner will continue to demand more. As a result, the efficient construction supply chains will prosper, and the traditional, adversarial supply chains will not survive. For this reason, construction supply chain management remains a critical element for positioning operational efficiency as a source of competitive advantage, and serves as a desirable goal for leadership in the construction industry.
+
+### Supply Chain Partnerships
+
+Critical to the implementation of construction supply chain management techniques is the construction supply chain partnership. Also termed a *strategic alliance*, a strategic supply chain partnership is a relationship formed between two independent entities in supply channels to achieve specific objectives and benefits. These partnerships form the essential building blocks of CSCM. The high levels of information flow and subsequent coordination of error-free planning and scheduling required by CSCM require prime contractors to build tighter bonds with a few strategic subcontractors and suppliers. Once traditionally driven by competition, the supplier *relationships* for many construction firms have thus matured from an adversarial relationship to one of a construction supply chain partnership.
+
+Within the win-win construction partnership dyad, prime contractors and strategic (subcontractors and material) suppliers share goals as well as inherent risks through joint planning and control, seeking to create an effective supply chain with increased information flow and enhanced project owner loyalty. Like the overall goal of CSCM, such coordination allows for improved service, technological innovation, and project design with decreased cost. Ideally, the end result for all members of the construction supply chain should be a decreased uncertainty, yielding greater control of costs, activity times, materials, project quality, and, ultimately, project owner satisfaction.
+
+### Traditional Construction Supply Chain
+
+Firms must take bold steps to break down intrafirm barriers to both smooth uncertainty and enhance control of the supply chain activities. See Fig. 1.10. The evolution of intrafirm functional integration has occurred for most progressive construction firms over the last few decades, and the current push is toward external integration with subcontractors, material suppliers, and project owners. Supply chain partnerships bridge the barrier between prime contractors, subcontractors, materials suppliers, and project owners.
+
+Historically, contractors have formulated operations strategy around adversarial downstream relationships. This approach encourages competition which the prime contractors can exploit to shop for lower costs. Such a strategy enhances ultimate prime contractor bargaining power. This is clearly an unsustainable strategy. The most

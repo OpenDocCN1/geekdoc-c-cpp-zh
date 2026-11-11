@@ -1,0 +1,302 @@
+
+- Bid, defined, 211
+- Bid bond, 211
+- Bid opening, 211
+- Bid packages:
+  - components of, 83–85
+  - development of, 159–160
+  - evaluation of, 86
+  - preparation of, 80–83
+  - sample form, 173–190
+- Bidding, 45, 47, 131–132, 148, 151, 160, 213
+- Bidding documents, 211
+- Bilateral monopoly systems, 94
+- Bill, 211
+- Bill of exchange, 212
+- Bill of lading, 212
+- Bill of materials, 212
+- Billing systems, 128
+- Binder, 212
+- Blanket order, 212
+- Boiler plate, 212
+- Boilerplate provisions, 39
+- Bond performance, 212
+- Bonded warehouse, 212
+- Bonds, 212
+- Breach of contract, 212
+- Broad form indemnity, 137
+- Brown & Root, 146
+- Building codes, 46, 100
+- Bulk materials:
+  - availability of, 71
+  - defined, 212
+  - multiple sourcing for, 72
+  - prices of, 64
+- Bulletin, 212
+- Burden, 212
+- Buying, multiple source, 223
+
+## C
+
+- California, 86–87
+- Cancellation of order, 211
+- Capacity analysis, 80
+- Capital equipment, 103–125
+  - acquisition process for, 104
+  - cash-flow analysis for investment in, 108–109
+  - disposal of, 119, 124
+  - and financial plan analysis, 112–118, 120–121
+  - implementation stage with, 118, 122–123
+  - leasing vs. purchasing, 112–118
+  - and long-term objectives, 105
+  - and market niches, 105, 108
+  - methods for evaluating investment in, 109–112
+  - new vs. used, 124–125
+  - requisition process for, 105–107
+  - sources for, 103
+- Capital leases, 115
+- Capitalism, 72
+- Cash-flow analysis, 108–109
+- Categorical method (for supplier evaluation), 54, 67–68
+- CD 200 (Standard Agreement and General Conditions between Owner and Contractor), 136
+- CD 240 (Standard Form Agreement between Owner and Architect/Engineer), 134
+- CD 300 (Standard Form of Tri-Party Agreement for Collaborative Project Delivery), 138, 191–196
+- CD 750 (Agreement between Contractor and Subcontractor), 137
+- Cellular telephones, 141
+- Certificate of material compliance, 213
+- Certificate of origin, 213
+- Certification programs (for suppliers), 75–76
+- Certified test report, 213
+- Chambers of commerce, 66
+- Change in scope, 213
+- Change orders:
+  - and contract types, 93
+  - defined, 213
+  - and INDOT, 154
+  - and subcontracting, 99–101
+- Chrysler, 14
+- Claim, 213
+- CM At Risk (see Construction manager at risk)
+- Collaboration, 6
+- Collaborative project delivery, standard form of tri-party agreement for, 192–196
+- Collaborative relationships, 52–53
+- Commercial terms, 213
+- Commodity materials, 52
+- Communication:
+  - between buyer and supplier, 66
+  - at field level, 97
+  - gaps in, 15
+  - for integration, 29
+  - lack of, 6
+  - with single sources, 72–73
+  - strategies for, 54
+- Compensatory damages, 213
+- Competitive bidding, 213
+
+- Dock, 215
+- Document flows, 154–155, 160
+- Documents, for supply sourcing, 43–44
+- DOTs (see Departments of transportation)
+- Downstream information technology, 50
+- Draft, 215
+- Due date, 215
+- Dunnage, 215
+- Durable goods, 215
+- Duty, 215
+
+## E
+
+- Early payment, 39
+- Earnest money, 215
+- EATCF (estimated after-tax cash flows), 109
+- Economic trends, 80
+- Efficiency, operational, 11–12
+- EIS (Federal Environmental Impact Statement), 148
+- EJCDC (see Engineers Joint Contract Documents Committee)
+- Electronic bidding, 148, 151, 160
+- Elimination of waste, 11–12
+- E-mails, 141
+- Employees, 10, 11
+- Empowerment, of employees, 11
+- Engineering, 146
+- Engineering drawings, 39, 47
+- Engineering specifications, 46
+- Engineers, 5, 6, 12
+- Engineers Joint Contract Documents Committee (EJCDC), 9, 133, 137
+- Equipment suppliers, 153–154
+- Error and omission excepted, 215
+- Escalation, 215
+- Escalation clause, 215
+- Estimated after-tax cash flows (EATCF), 109
+- Estimates, 131–132, 142, 153
+- Evaluation:
+  - of investment in capital equipment, 109–112
+  - supplier (see Supplier evaluation)
+- Ex (prefix), 215
+- Excavation, 91
+- Excess freight, 215
+- Exchange bill of lading, 215
+- Excise tax, 215
+- Execution, of projects, 140–142
+- Explicit bargaining, 94
+- Export, 216
+- Export permit, 216
+
+## F
+
+- Fabrication, 216
+- Facilitation, 216
+- Factor, 216
+- Fair market value, 216
+- Federal Aid Highway Act, 146
+- Federal Environmental Impact Statement (EIS), 148
+- Federal Highway Administration (FHWA), 79, 146, 148, 155
+- Ferrous metal products, 63
+- FHWA (see Federal Highway Administration)
+- Field inspection, 216
+- Field intelligence, 80
+- Field measurements, 141
+- Field purchase order, 216
+- Field required date, 216
+- FIFO, 216
+- Financial plan analysis, 112–118, 120–121
+- Financial Accounting Standards Board, 115
+- Firm offer, 216
+- Fixed costs, 73, 90
+- Flexibility, 36
+- Flow-down terms, 136
+- FOB, 216–217
+- FOB destination, freight prepaid, 217
+- FOB factory, freight allowed, 217
+- FOB origin, freight collect, 217
+- FOB shipping point, 217
+- Follow-up record, 217
+- Force majeure, 217
+- Ford Motor Company, 14
+- Forward purchasing, 217
+- Freight forwarder, 217
+
+## G
+
+- General conditions, 217
+- “General Conditions of the Contract for Construction,” 134
+- General contractor, 217
+- General liability insurance, 160, 218
+- General Motors, 14
+- Generic, 218
+- Global markets, 145–146
+- Goods received note, 218
+- Goodwill, 21
+- Government agencies, 45
+- Governmental regulations, 157
+- Grade methods (for supplier evaluation), 74–75
+- Gross ton, 218
+- Gross weight, 218
+- Guarantee, 218
+- Guaranteed maximum cost contract, 218
+
+## H
+
+- Halliburton, 146
+- Harvard Business School study on competitiveness, 17
+- Heavy/horizontal construction supply chain model(s), 8, 145–156
+  - components of, 147–148
+  - equipment suppliers in, 153–154
+  - flows in, 154–156
+  - and international demand, 146
+  - material suppliers in, 153
+  - prime contractor in, 149, 151–152
+  - project owner in, 148, 150
+  - public vs. private projects in, 154
+  - subcontractors in, 152–153
+- Heavy-lift charge, 218
+- Hedging, 218
+- Highway projects, 53, 90, 97, 131, 146
+- Historical maintenance records, 124
+- Hold, 218
+- Hold order, 218
+- Hold points, 218
+- Hundredweight, 218
+- Hurdle methods (for supplier evaluation), 75
+
+## I
+
+- IDM (initial decision maker), 137
+- Implementation stage (with capital equipment), 118, 122–123
+- Implied contract, 218
+- Improvement, continuous, 11, 50
+- Improvement curve techniques, 4
+- Income statements, 33
+- Income tax effect, 115–117
+- Indemnification, 218
+- Indemnity, 137, 218
+- Indiana Department of Transportation (INDOT), 148–156
+- Indirect costs, 139
+- Indirect materials, 48, 218
+- INDOT (see Indiana Department of Transportation)
+- Inflation, 32
+- Information:
+  - flow of, 155
+  - management of, 10
+  - on suppliers, 66
+- Information sharing, 29, 129–131
+- Information technology (IT), 8
+- Initial decision maker (IDM), 137
+- Injunction, 219
+- Inland bill of lading, 219
+- Inland carrier, 219
+- Inquiry, 219
+- Inspection:
+  - defined, 219
+  - of materials, 65
+  - of used equipment, 125
+- Inspection plan, 219
+- Inspection report, 219
+- Inspector, 219
+- Instructions to bidders, 219
+- Insurance, 79, 137, 149, 155, 160, 210, 219
+- Insurance certificate, 219
+- Integrated project delivery, standard form of agreement between owner and contractor for, 197–203
+- Integrated Project Delivery system, 138
+- Intermediate form indemnity, 137
+- Internal rate of return (IRR), 111–112
+- International demand, 146
+- Internet, 29, 66, 142
+- Inventory, 219–220
+- Inventory investment, 29
+- Invitation to bid, 220
+- Invoice, 220
+- Iraq, 32, 146
+- IRR (internal rate of return), 111–112
+- IT (information technology), 8
+
+## J
+
+- Japanese manufacturers, 13
+- Job lot, 220
+- Job-lot ordering, 220
+- Joint agent, 220
+- Joint venture(s), 21–23, 163–171, 220
+- Journeyman, 220
+- Judgment, 220
+- Just-in-time purchasing concepts, 29, 46
+
+## K
+
+- KD, 220
+- Keiretsu, 13
+- Key activity, 220
+- Kim Construction, 60–62
+- Kitting, 220
+- Knight, F., 2
+
+## L
+
+- Labor and material payment bond, 220
+- Lading, 220
+- Laydown area, 220
+- Lead time, 221
+- Leadership, 11
+- “Lean” construction, 12, 17
+- Lean purchasing concepts, 29
+- Leases, 44, 112–118, 221

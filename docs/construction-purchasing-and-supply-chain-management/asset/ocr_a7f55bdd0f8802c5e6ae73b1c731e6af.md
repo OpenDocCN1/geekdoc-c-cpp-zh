@@ -1,0 +1,13 @@
+work, when the work can be performed, and any other special details. The quotation may also include the payment terms that the subcontractor wants if he or she gets the job. In short, the quotation can be as long or short as the subcontractor sees fit. The prime contractor accepts the quotation and then prepares the subcontract which supersedes the original quotation.
+
+The transformation of the quotation into the subcontract can be the death knell for some subcontractors. The subcontractor always makes sure that the price is the same as what was quoted. However, they do not always make certain that the other terms, that were important to the subcontractor and were stated in the quotation, such as the number of mobilizations are actually written into the subcontract. Additionally, the subcontract usually contains a clause that automatically incorporates provisions from the master agreement between the prime contractor and the project owner. In short, the subcontractor should know exactly what he or she is agreeing to, including provisions in agreements to which the subcontractor is not privy.
+
+As in the case of the purchase order, the subcontract is a legal contract document between the construction organization and the subcontractor once it is signed. For this reason, both parties must take extraordinary care in preparing and wording the subcontract in one case, and reading and interpreting it in the other. Any significant errors in the subcontract can result in bankruptcy. To promote fairness among the supply chain entities, it is suggested that the construction organization select one of the accepted *standard agreements* discussed in Chap. 1 and modify it to reflect the specific construction documents and scope of work. A permanent contract file should be set up similar to the purchase order file that includes the six elements listed earlier. For information about AIA Document A 401—2007 “Standard Form of Agreement Between Contractor and Subcontractor” see http://www.aia.org/docs_purchase. Additionally, CONSENSUSDOCS 750, “Standard Form of Agreement Between Contractor and Subcontractor,” is available at http://www.consensusdocs.org/information.html.
+
+# ## The Sourcing Cycle
+
+The sourcing of construction materials ranges from nails, plywood, and small tools to structural steel, turbine generators, and customized design related items. At any rate, there is a general framework for construction sourcing. The construction sourcing cycle is as follows:
+
++   1. Recognition of need during design stage
++   2. Determination of the appropriate design related needs
++   3. Prequalification of desired skilled capabilities based on the design stage

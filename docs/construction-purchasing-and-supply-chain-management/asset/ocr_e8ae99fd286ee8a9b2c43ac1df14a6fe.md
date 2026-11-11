@@ -1,0 +1,15 @@
+awarded the job. Prime contractors sometimes demand that other members of the supply chain also obtain a performance bond.
+
+The proofs of insurance, comprehensive general liability insurance, worker's compensation, and other coverage are typically kept by the prime contractor. There is a trend to name the prime contractor as an additional insured on the subcontractor's policy. This coverage may be overreaching because it gives the prime contractor the same rights under the policy as the insured.
+
+# ### Supply Chain Coordination and Information Flows
+
+In public works markets, there is an abundance of information. INDOT has a public website with information on how and when to bid. The names of potential bidders and plan holders are published periodically before the public bid opening. After the project is awarded, there is a preconstruction meeting with the prime contractor, other supply chain members, and the district engineers and project administrators from INDOT. As the project progresses, the agency will conduct partnering meetings that include all supply chain members. Lower tier supply chain members have their own relationship with the INDOT district officials because prequalified subcontractors are evaluated on each job by the district officials. However, there are practical, if not actual, limits to the contacts with the agency because it is well known among supply chain entities that INDOT's contract is with the prime contractor.
+
+# ### Supply Chain Money Flows
+
+The flow of payments is one of the more attractive features of the INDOT market. The project owner is the state government and not vulnerable to bankruptcy in the same sense as private owners. The source of funding, gas tax revenues, and state matching funds are predictable in good economic times. There is no invoicing system, per se. Instead, the district engineers inspect the work as the project progresses and then issue an “estimate” for payment. The estimates are taken about every 2 weeks. On some projects, inspection is outsourced to consulting engineers. Payments are made directly to the prime contractor who, in turn, pays the subcontractors. The contract provisions between INDOT and the prime contractor require the prime contractor to pay subcontractors no later than 10 business days after the prime contractor is paid.
+
+# ### American Recovery and Reinvestment Act: Federal Economic Stimulus
+
+The state departments of transportation are playing a critical role in the federal economic stimulus plan, 2009 American Recovery and Reinvestment Act. The flow of money and controls from FHWA to the DOTs makes the horizontal heavy construction model ideal for managing the economic stimulus program. The law provides approximately 27.5 billion for highway work and requires that one-half of the funds be

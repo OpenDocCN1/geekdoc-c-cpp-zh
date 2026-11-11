@@ -856,6 +856,7 @@
 +   [连接代码：为什么孩子需要学习编程（约翰·D.和凯瑟琳·T.麦克阿瑟基金会数字媒体与学习系列）](docs/connected-code-why-children-need-to-learn-programming-the-jo/README.md)
 +   [连接游戏：视频游戏制作能教给我们关于学习与素养的什么（约翰·D与凯瑟琳·T·麦阿瑟基金会数字媒体与学习系列）](docs/connected-gaming-what-making-video-games-can-teach-us-about-/README.md)
 +   [约束规划与大规模离散优化：Dimacs研讨会约束规划与大规模离散优化，九月……数学与理论计算机科学）](docs/constraint-programming-and-large-scale-discrete-optimization/README.md)
++   [建筑采购与供应链管理](docs/construction-purchasing-and-supply-chain-management/README.md)
 +   [传染性建筑：计算、美学与空间（生活抽象的技术）](docs/contagious-architecture-computation-aesthetics-and-space-tec/README.md)
 +   [持续交付：通过构建、测试和部署自动化实现可靠的软件发布](docs/continuous-delivery-reliable-software-releases-through-build/README.md)
 +   [控制系统与强化学习](docs/control-systems-and-reinforcement-learning/README.md)

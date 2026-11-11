@@ -1,0 +1,7 @@
+# # CHAPTER 2
+
+# # The Construction Supply Sourcing Process and Procedures
+
+> > Reengineering Construction Organizations for the Twenty-First Century
+
+The sourcing process for most construction firms is fragmented and not well documented. Since the beginning of the new millennium and even more so today, the construction marketplace has been in an economic and energy quandary. In addition to these industry wide challenges, individual construction firms have had to change radically in response to burgeoning technologies. Historically, the sourcing of subcontracting services was the most neglected element in the construction process. Only when the cost of materials and subcontracting services increased, did management attempt to investigate alternative methods to the planning and control of the acquisition and transformation functions in the organization. Instead, most firms emphasized minimizing the cost of labor. The focus on labor was logical because, by definition, the construction process is labor intensive. Some construction market segments have embraced new technologies and invested in technology-driven construction systems. Although these new systems are up and running, too frequently they are operated just like the old construction business models, thus defeating the very purpose the system was designed to achieve. The reality is that technology and advanced management systems are rapidly displacing labor.
