@@ -1,0 +1,3 @@
+![](bbox=[0.27, 0.165, 0.726, 0.69])
+
+Figure 18  Application of the statistical simplex approach to the one-dimensional optimization of peak emission wavelength, using total flow rate as the sole reaction variable. (A) Variation of the figure of merit with measurement number. (B) Variation of the flow rate and peak wavelength with measurement number. (C) Emission spectra at various stages in the optimization, that is, the initial, tenth, and final measurements. The peak emission wavelength moves progressively closer to the target of 540 nm as the search proceeds.

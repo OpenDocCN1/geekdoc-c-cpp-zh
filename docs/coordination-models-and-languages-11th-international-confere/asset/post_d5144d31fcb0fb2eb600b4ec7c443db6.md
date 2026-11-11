@@ -1,0 +1,118 @@
+
+- Min, S., Evrendilek, G. A., and Zhang, H. Q. IEEE Trans. Plasma Sci. 35, 59 (2007).
+- Modi, A., Koratkar, N., Lass, E., Wei, B., and Ajayan, P. M. Nature 424, 171 (2003).
+- Mojet, B. L., Miller, J. T., Ramaker, D. E., and Koningsberger, D. C. J. Catal. 186, 373 (1999).
+- Moon, H., Cho, S. K., Garrell, R. L., and Kim, C.-J. J. Appl. Phys. 92, 4080 (2002).
+- Moon, S.-H., and Shim, J.-W. J. Colloid Interf. Sci. 298, 523 (2006).
+- Moreau, E. J. Phys. D: Appl. Phys. 40, 605 (2007).
+- Mori, S., Yamamoto, A., and Suzuki, M. Plasma Sources Sci. Technol. 15, 609 (2006).
+- Mugele, F. Soft Matter 5, 3377 (2009).
+- Mugele, F., and Baret, J.-C. J. Phys. Condens. Matter 17, R705 (2005).
+- Mugele, F., Baret, J.-C., and Steinhauser, D. Appl. Phys. Lett. 88, 204106 (2006).
+- Murgida, D. H., and Hildebrandt, P. J. Phys. Chem. B 106, 12814 (2002).
+- Neniu, R. K. T., Yoshida, H., Fukui, K., and Yamamoto, T. Powder Technol. 196, 147 (2009).
+- Nichols, K. P., and Gardeniers, H. J. G. E. Anal. Chem. 79, 8699 (2007).
+- Nichols, K. P., and Gardeniers, H. J. G. E. Unpublished results (2006).
+- Niedziolka, J., Szot, K., Marken, F., and Opallo, M. Electroanalysis 19, 155 (2007).
+- Nozaki, T., Hattori, A., and Okazaki, K. Catal. Tod. 98, 607 (2004).
+- Nozaki, T., Sasaki, K., Ogino, T., Asahi, D., and Okazaki, K. Nanotechnology 18, 235603 (2007a).
+- Nozaki, T., Sasaki, K., Ogino, T., Asahi, D., and Okazaki, K. J. Therm. Sci. Technol. 2, 192 (2007b).
+- Oddy, M. H., Santiago, J. G., and Mikkelsen, J. C. Anal. Chem. 73, 5822 (2001).
+- Oudenhuijzen, M. K., van Bokhoven, J. A., Ramaker, D. E., and Koningsberger, D. C. J. Phys. Chem. B 108, 20247 (2004).
+- Paddon, C. A., Atobe, M., Fuchigami, T., He, P., Watts, P., Haswell, S. J., Pritchard, G. J., Bull, S. D., and Marken, F. J. Appl. Electrochem. 36, 617 (2006).
+- Paik, P., Pamula, V. K., and Fair, R. B. Lab Chip 3, 253 (2003).
+- Park, S.-J., Kim, K. S., and Eden, J. G. Appl. Phys. Lett. 86, 221501 (2005).
+- Paschen, F. Ann. Phys. 37, 69 (1889).
+- Peng, H. Q., Alvarez, N. T., Kittrell, C., Hauge, R. H., and Schmidt, H. K. J. Am. Chem. Soc. 128, 8396 (2006).
+- Pileni, M.-P. Adv. Colloid Interf. Sci. 46, 139 (1993).
+- Pohl, H. A. "Dielectrophoresis. The Behavior of Neutral Matter in Non-Uniform Electric Fields" Cambridge University Press, Cambridge (1978).
+- Pollack, M. G., Shenderov, A. D., and Fair, R. B. Lab Chip 2, 96 (2002).
+- Pompa, P. P., Bramanti, A., Maruccio, G., Cingolani, R., De Rienzo, F., Corni, S., Di Felice, R., and Rinaldi, R. J. Chem. Phys. 122, 181102 (2005).
+- Pronkin, S., and Wandlowski, T. J. Electroanal. Chem. 550-551, 131 (2003).
+- Qian, A., and Bau, H. H. Anal. Chem. 74, 3616 (2002).
+- Qiao, Q., and Aluru, N. R. J. Micromech. Microeng. 12, 625 (2002).
+- Raizer, Y. "Gas Discharge Physics" Springer Verlag, Heidelberg (1991).
+- Rayleigh, L. Phil. Mag. 14, 184 (1882).
+- Rayner, D., Fietkau, N., Streeter, L., Marken, F., Buckley, B. R., Page, P. C. B., del Campo, J., Mas, R., Munoz, F. X., and Compton, R. G. J. Phys. Chem. C 111, 9992 (2007).
+- Reuss, R. H., and Chalamala, B. R. J. Vac. Sci. Technol. B 21, 1187 (2003).
+- Revermann, T., Götze, S., Künnemeyer, J., and Karst, U. Analyst 133, 167 (2008).
+- Robinson, M. Am. J. Phys. 30, 366 (1962).
+- Rode, S., and Lapicque, F. Microstructured reactors for electrochemical synthesis, Chapter 17 in "Micro Process Engineering. A Comprehensive Handbook. Volume 1, Fundamentals, Operations and Catalysis" Wiley VCH Verlag GmbH & Co. KGaA, Weinheim (2009).
+- Roth, C. M., Sader, J. E., and Lenhoff, A. M. J. Colloid Interface Sci. 203, 218 (1998).
+- Ruthen, D. M., and Cheng, C. B. Eng. Sci. 44, 1011 (1989).
+- Salimi-Moosavi, H., Tang, T., and Harrison, D. J. J. Am. Chem. Soc. 119, 8716 (1997).
+- Sankaran, R. M., Holunga, D., Flagan, R. C., and Giapis, K. P. Nano Lett. 5, 537 (2005).
+- Schaffert, R. M. “Electrophotography”. John Wiley and Sons, New York (1975).
+- Schalow, T., Brandt, B., Starr, D. E., Laurin, M., Shaikhutdinov, S. K., Schauermann, S., Libuda, J., and Freund, H.-J. *Angew. Chem. Int. Ed.* 45, 3693 (2006).
+- Schaafort, R. B. M., Schlaumann, S., Hendrikse, L., and van den Berg, A. *Science* 286, 942 (1999).
+- Schoenbach, K. H., Moselhy, M., Shi, W., and Bentley, R. J. *Vac. Sci. Technol. A* 21, 1260 (2003).
+- Schoenbach, K. H., Verhaeppen, R., Tessnow, T., Peterkin, P. F., and Byszewski, W. *Appl. Phys. Lett.* 68, 13 (1996).
+- Scholz, F., Schroder, U., and Gulaboski, R. “Electrochemistry of Immobilized Particles and Droplets”. Springer, Berlin (2005).
+- Schultz, Z. D., and Gewirth, A. A. *Anal. Chem.* 77, 7373 (2005).
+- Sekiguchi, H., Ando, M., and Kojima, H. *J. Phys. D: Appl. Phys.* 38, 1722 (2005).
+- Seto, T., Kwon, S.-B., Hirasawa, M., and Yabe, A. *Jpn. J. Appl. Phys.* 44, 5206 (2005).
+- Shaik, S., de Visser, S. P., and Kumar, D. J. *Am. Chem. Soc.* 126, 11746 (2004).
+- Sheldon, R. A. *Adv. Synth. Catal.* 349, 1289 (2007).
+- Sheng, Y.-J., Tsao, H.-J., Zhou, J., and Jiang, S. *Phys. Rev. E* 66, 011911 (2002).
+- Shimizu, Y., Sasaki, T., Ito, T., Terashima, K., and Koshizaki, N. *J. Phys. D: Appl. Phys.* 36, 2940 (2003).
+- Shimizu, Y., Sasaki, T., Liang, C., Bose, A. C., Ito, T., Terashima, K., and Koshizaki, N. *J. Chem. Vap. Dep.* 11, 244 (2005).
+- Shin, D. H., Kim, J.-E., Shim, H. C., Song, J.-W., Yoon, J.-H., Kim, J., Jeong, S., Kang, J., Baik, S., and Han, C.-S. *Nano Lett.* 8, 4380 (2008).
+- Shui, J.-X., Kou, C.-W., and Chen, P. *J. Am. Chem. Soc.* 126, 8096 (2004).
+- Shrimpton, J. S., and Crane, R. I. *Chem. Eng. Technol.* 24, 9 (2001).
+- Sichler, P., Buttgenbach, S., Hibbe, L. B., Shrader, C., and Gericke, K.-H. *Chem. Eng. J.* 101, 465 (2004).
+- Skelton, V., Greenway, G. M., Haswell, S. J., Styring, P., Morgan, D. O., Warrington, B., and Wong, S. Y. F. *Analyst* 126, 7 (2001a).
+- Skelton, V., Greenway, G. M., Haswell, S. J., Styring, P., Morgan, D. O., Warrington, B., and Wong, S. Y. F. *Analyst* 126, 11 (2001b).
+- Solomentsev, Y., Böhmer, M., and Anderson, J. L. *Langmuir* 13, 6058 (1997).
+- Somorjai, G. A., Contreras, A. M., Montano, M., and Rioux, R. M. *Proc. Natl. Acad. Sci.* 103, 10577 (2006).
+- Sparreboom, W., van den Berg, A., Eijkel, J. C. T. *Nat. Nanotechnol.* 4, 713 (2009).
+- Spindt, C. A., Brodie, I., Humphrey, L., and Westberg, E. R. *J. Appl. Phys.* 47, 5248 (1976).
+- Staack, D., Farouk, B., Gutsol, A., and Fridman, A. *Plasma Sources Sci. Technol.* 14, 700 (2005).
+- Staniewicz, A. I., and Moulijn, J. A. *Chem. Eng. Prog.* 96, 22 (2000).
+- Stark, R. H., and Schoenbach, K. H. *J. Appl. Phys.* 85, 2075 (1999).
+- Stoukides, M., and Vayenas, C. C. *J. Catal.* 70, 137 (1981).
+- Studer, V., Pépin, A., Chen, Y., and Jadjari, A. *Microelectron. Eng.* 61–62, 915 (2002).
+- Subramani, H. J., and Kurup, A. S. *Chem. Eng. J.* 120, 169 (2006).
+- Suehiro, J., Hidaka, S.-I., Yamane, S., and Imasaka, K. *Sens. Act. B* 127, 505 (2007).
+- Suga, S., Okajima, M., Fujiwara, K., and Yoshida, J.-I. *J. Am. Chem. Soc.* 129, 7941 (2007).
+- Suzuki, M., Yasukawa, T., Mase, Y., Oyamatsu, D., Shiku, H., and Matsue, T. *Langmuir* 20, 1105 (2004).
+- Tachibana, K. *IEEE Trans. Electr. Electron. Eng.* 1, 145 (2006).
+- Tang, C. S., Dussellier, M., Makohliso, S., Heuschkel, M., Sharma, S., Keller, B., and Vörös, J. *Anal. Chem.* 78, 711 (2006).
+- Taniguchi, T., Torii, T., and Higuchi, T. *Lab Chip* 2, 19 (2002).
+- Tao, R., Huang, K., Tang, H., and Bell, D. *Energy Fuels* 22, 3785 (2008).
+- Tao, R., Huang, K., Tang, H., and Bell, D. *Energy Fuels* 23, 3339 (2009).
+- Tas, A., Plasma Induced Catalysis, Ph.D. dissertation, Technische Universiteit Eindhoven, The Netherlands (1995).
+- Teh, S. Y., Lin, R., Hung, L. H., Lee, A. P. Lab Chip 8, 198 and 3604 (2008).
+- Thorne, B., and Ivory, C. F. J. Chromatogr. A 953, 263 (2002).
+- Thorne, B., and Ivory, C. F. J. Chromatogr. A 1129, 119 (2006).
+- Thorne, B., and Ivory, C. F. J. Chromatogr. A 1138, 291 (2007).
+- Townsend, J. S. J. Franklin Inst. 200, 563 (1925).
+- Trau, M., Saville, D. A., Aksay, I. A. Science 272, 706 (1996).
+- Trifonetti, C., Agiral, A., Gardeniers, J. G. E., Lefferts, L., and Seshan, K. ChemPhysChem 9, 533 (2008a).
+- Trifonetti, C., Agiral, A., Gardeniers, J. G. E., Lefferts, L., and Seshan, K. J. Phys. Chem. C 112, 4267 (2008b).
+- Trifonetti, C., Babich, I. V., Seshan, K., and Lefferts, L. Appl. Catal. A 310, 105 (2006).
+- van der Wouden, E. J., Heusner, T., Hermes, D. C., Oosterbroek, R. E., Gardeniers, J. G. E., and van den Berg, A. Colloids Surf. A 267, 110 (2005).
+- Van Kruenen, M., and Buess-Herman, C. Electrochim. Acta 45, 675 (1999).
+- Vayenas, C. G., Bebelis, S., and Ladas, S. Nature 343, 625 (1990).
+- Vayenas, C. G., and Koutsodis, C. J. Chem. Phys. 128, 182506 (2008).
+- von Allmen, P., McCann, S. T., Ostrem, N. P., Vojak, B. A., Eden, J. G., Zenhausern, F., Jensen, C., and Oliver, M. Appl. Phys. Lett. 82, 2562 (2003).
+- von Engel, A. "Ionized Gases." Clarendon Press, Oxford (1955).
+- Wang, H., Casper, D. G., Ratner, B. D., and Jiang, S. Langmuir 20, 1877 (2004).
+- Wang, J.-X., and Lunsford, J. H. J. Phys. Chem. 90, 5883 (1986).
+- Wang, X., Zhou, D., Sinniah, K., Clarke, C., Birch, L., Li, H., Rayment, T., and Abell, C. Langmuir 22, 887 (2006).
+- Watts, P., Haswell, S. J., Pombo-Villar, E. Chem. Eng. J. 101, 237 (2004).
+- Wheeler, A. R., Moon, H., Kim, C.-J., Loo, J. A., and Garrell, R. L. Anal. Chem. 76, 4833 (2004).
+- Wong, P. K., Chen, C.-Y., Wang, T.-H., and Ho, C.-M. Anal. Chem. 76, 6908 (2004).
+- Yamakata, A., Petcher, J., Yasuoka, K., and Ishii, S. IEEE Trans. Plasma Sci. 34, 1375 (2006).
+- Yan, K., Li, R., Zhu, T., Zhang, H., Hu, X., Jiang, X., Liang, H., Qiu, R., and Wang, Y. Chem. Eng. J. 116, 139 (2006).
+- Yang, Q., and Zhong, C. ChemPhysChem 7, 1417 (2006).
+- Yoon, J.-Y., and Garrell, R. L. Anal. Chem. 75, 5097 (2003).
+- Yoon, S. K., Choban, E. R., Kane, C., Tzedakis, T., and Kenis, P. J. A. J. Am. Chem. Soc. 127, 10466 (2005).
+- Yoon, S. K., Fichtl, G. W., and Kenis, P. J. A. Lab Chip 6, 1516 (2006).
+- Yoshida, J.-I. "Flash Chemistry: Fast Organic Synthesis in Microsystems." John Wiley & Sons, Ltd., Chichester (2008).
+- Yoshida, J.-I., Kataoka, K., Horcajada, R., and Nagaki, A. Chem. Rev. 108, 2265 (2008).
+- Yoshitake, H., and Iwasawa, Y. J. Phys. Chem. 96, 1329 (1992).
+- Zeng, X. A., Yu, S. J., Zhang, L., and Chen, X. D. Innov. Food Sci. Emerging Technol. 9, 463 (2008).
+- Zhang, W., Fisher, T. S., and Garimella, S. V. J. Appl. Phys. 96, 6066 (2004a).
+- Zhang, Y., Kolmakov, A., Chretien, S., Metiu, H., and Moskovits, M. Nano Lett. 4, 403 (2004b).
+- Zhang, Y., Kolmakov, A., Lilach, Y., and Moskovits, M. J. Phys. Chem. B. 109, 1923 (2005).
+- Zhao, Y., and Cho, S. K. Lab Chip 7, 273 (2007).
