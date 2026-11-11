@@ -861,6 +861,7 @@
 +   [传染性建筑：计算、美学与空间（生活抽象的技术）](docs/contagious-architecture-computation-aesthetics-and-space-tec/README.md)
 +   [持续交付：通过构建、测试和部署自动化实现可靠的软件发布](docs/continuous-delivery-reliable-software-releases-through-build/README.md)
 +   [控制系统与强化学习](docs/control-systems-and-reinforcement-learning/README.md)
++   [控制 Ozobot（21 世纪技能创新图书馆：创客即创新者）](docs/controlling-an-ozobot-21st-century-skills-innovation-library/README.md)
 +   [冒险项目中的争议性问题](docs/controversial-issues-in-adventure-programming/README.md)
 +   [热爱编程者的非大学学历酷职业（无需大学的酷职业）](docs/cool-careers-without-college-for-people-who-love-coding-cool/README.md)
 +   [酷信息图表：数据数据可视化与设计的有效沟通](docs/cool-infographics-effective-communication-with-data-visualiz/README.md)

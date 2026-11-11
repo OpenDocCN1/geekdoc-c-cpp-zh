@@ -1,0 +1,35 @@
+level_changes:
+- line: 2
+  before: 2
+  after: 1
+- line: 188
+  before: 3
+  after: 2
+text_changes:
+- line: 2
+  before: CPU
+  after: 目录
+- line: 20
+  before: 什么是Ozobot？
+  after: 什么是 Ozobot？
+- line: 24
+  before: 我能用Ozobot做什么？
+  after: 我能用 Ozobot 做什么？
+- line: 32
+  before: Ozobot的种类
+  after: Ozobot 的种类
+- line: 48
+  before: Ozobot由哪些部件组成？
+  after: Ozobot 由哪些部件组成？
+- line: 50
+  before: Ozobot的外部
+  after: Ozobot 的外部
+- line: 56
+  before: Ozobot的内部
+  after: Ozobot 的内部
+- line: 65
+  before: 开始使用Ozobot
+  after: 开始使用 Ozobot
+- line: 117
+  before: 与Ozobot一起探索
+  after: 与 Ozobot 一起探索
