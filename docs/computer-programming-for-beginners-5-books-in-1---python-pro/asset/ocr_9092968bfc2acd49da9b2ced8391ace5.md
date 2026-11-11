@@ -1,0 +1,30 @@
+# HTML Code:
+
+```
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Convert an asynchronous function to return a promise</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+```
+
+# JavaScript Code:
+
+```
+```javascript
+//#source https://bit.ly/2newfJ2
+const promisify = func => (...args) =>
+  new Promise((resolve, reject) =>
+    func(...args, (err, result) => (err ? reject(err) : resolve(result)))
+  );
+const delay = promisify((d, cb) => setTimeout(cb, d));
+delay(2000).then(() => console.log('Hi!')); // Promise resolves after 2s
+```
+```

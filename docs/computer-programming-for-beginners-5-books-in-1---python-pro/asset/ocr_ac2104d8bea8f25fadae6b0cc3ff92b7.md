@@ -1,0 +1,39 @@
+# Chapter 12: Structure
+
+A structure in C# is a value type data type. With a structure, you can use a single variable to hold related data belonging to different data types. In C#, we use the *struct* keyword to create a structure.
+
+Structures are used for tracking records. A good example is when you need to keep a record of all class students or all company employees. For the case of storing student records, some of the details that you may need to track including the names, age, course, date of enrollment, date of completion, amount of fee paid, fee balance etc, guardian address and mobile phone number etc. All these details belong to different data types, meaning that you will be required to create a variable for each of them. However, by use of a structure, you can define a single variable and keep these details together as one.
+
+Here is an example of declaring a structure:
+
+```
+```csharp
+struct Employee{
+    public string name;
+    public string department;
+    public string title;
+    public int age;
+    public double salary;
+};
+```
+```
+
+To initialize a struct, we can choose the *new* keyword or not. The members of a struct can be assigned values as shown below:
+
+```
+```csharp
+using System;
+```
+```
+
+```
+```csharp
+public class MyStruct
+{
+    public static void Main()
+    {
+        Employee emp = new Employee()
+        emp.name = "Nicholas Samuel";
+        emp.department = "Computing";
+```
+```

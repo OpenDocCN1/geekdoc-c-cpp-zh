@@ -1,0 +1,2 @@
+[←22]
+https://stackoverflow.com/questions/11981868/limit-sql-server-column-to-a-list-of-possible-values

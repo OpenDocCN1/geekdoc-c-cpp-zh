@@ -1,0 +1,3 @@
+[←6]
+
+https://www.w3schools.com/sql/sql_join_right.asp

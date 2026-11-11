@@ -1,0 +1,2 @@
+[←24]
+https://www.tutorialspoint.com/sql/sql-primary-key.htm

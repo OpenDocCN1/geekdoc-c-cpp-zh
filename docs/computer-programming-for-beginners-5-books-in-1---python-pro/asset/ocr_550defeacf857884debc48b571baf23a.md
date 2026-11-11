@@ -1,0 +1,9 @@
+Just about anyone can use Arduino, including children, that want to start tinkering with coding and computer hardware, as well as hobbyists who simply want to learn a bit about software and microcomputers.
+
+# The 6 Advantages of Arduino
+
++   - The driving force behind creating Arduino microcontrollers was cost-efficiency. Rather than the $100 that some other boards cost, a pre-assembled Arduino board costs less than $50, and the boards that can be manually put together cost even less.
++   - The Arduino environment, IDE, works across different platforms. This means that you can use a Windows computer like any other microcontroller board would probably require, but you can also use a Macintosh OSX computer, or a computer running Linux and work just as easily with the Arduino software. This opens up the use of microcontrollers to the Apple user and the open-source Linux user.
++   - The software for Arduino is open-source. The tools, or strings of code that you use to instruct the microcontroller to accomplish certain functions, are accessible by anyone. You do not have to purchase a license to use these tools so that teachers can teach students about them and students can learn them without added cost.
++   - The open-source tools are also extendable by the C++ libraries and the AVR-C coding language, meaning that those with more in-depth knowledge of code would be able to benefit from using these technologies as well. There is depth to the software and programming features that allow the more dedicated person to go deeper while being enough of a straightforward coding language to allow the hobbyist to tinker as well.
++   - The environment in which a person codes for the microcontroller is simple and clear. This means that the computer program, IDE, which you would use to program the instructions for the microcontroller, is straightforward and easy to understand. This makes working with the software a smooth experience.

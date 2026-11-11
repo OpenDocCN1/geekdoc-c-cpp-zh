@@ -1,0 +1,213 @@
+
+```csharp
+}
+public void show() {
+    Console.WriteLine("Car model : {0}", model);
+    Console.WriteLine("CC : {0}", cc);
+    Console.WriteLine("Passengers : {0}", passengers);
+    Console.WriteLine("Year : {0}", year);
+}
+};
+public class myStructure {
+    public static void Main(string[] args) {
+        Cars Premio = new Cars();  /* Declare Premio of type Cars */
+        Cars X6 = new Cars();     /* Declare X6 of type Cars */
+        /* Premio specification */
+        Premio.getValues("Saloon",
+        1800, 5, 2012);
+        /* X6 specification */
+        X6.getValues("Saloon",
+        3500, 5, 2012);
+        /* print Premio info */
+        Premio.show();
+        /* print X6 info */
+        X6.show();
+        Console.ReadKey();
+    }
+}
+```
+
+The code will give the following output after execution:
+
+```
+Car model : Saloon
+CC : 1800
+Passengers : 5
+Year : 2012
+
+Car model : Saloon
+CC : 3500
+Passengers : 5
+Year : 2012
+```
+
+## Chapter 13: Encapsulation
+
+Encapsulation is the process of enclosing items within a logical or physical package. In object-oriented programming, encapsulation is used to prevent access to the implementation details.
+
+Encapsulation and Abstraction are closely related features in object-oriented programming. The purpose of abstraction is to make the relevant details visible to users while the purpose of encapsulation is to enable a programmer to implement the required level of abstraction.
+
+To implement encapsulation[^31], we use *access specifiers*. The role of an access specifier is to state the visibility and scope of a class member. There are different types of access specifiers that are supported in C#. They include the following:
+
+- Public
+- Protected
+- Private
+- Protected internal
+- Internal
+
+### Private Access Specifier
+
+With a private access specifier, a class is able to hide its member functions and member variables from other objects and functions. Only functions of a similar class are able to access its private members. An instance of the class is not able to access the private members of the class. Consider the example given below:
+
+```csharp
+using System;
+namespace AccessApplication {
+    class Figure {
+        // The class member variables
+        private double width;
+        private double length;
+        public void GetDetails() {
+            Console.WriteLine("Enter the Length: ");
+            length = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the Width: ");
+            width = Convert.ToDouble(Console.ReadLine());
+        }
+        public double CalculateArea() {
+            return length * width;
+        }
+        public void Show() {
+            Console.WriteLine("The Length of the figure is: {0}", length);
+            Console.WriteLine("The Width of the figure is: {0}", width);
+            Console.WriteLine("The Area of the figure is: {0}", CalculateArea());
+        }
+    }//end the Class Figure
+    class RunFigure {
+        static void Main(string[] args) {
+            Figure f = new Figure();
+            f.GetDetails();
+            f.Show();
+            Console.ReadLine();
+        }
+    }
+```
+
+Run the code and enter the measurements of the figure, both the width and the length. You will get the area of the figure.
+
+The member variables, that is, the *width* and the *length* have been defined as *private*. This means that we cannot access them from the *Main()* function. The *GetDetails()* and *Show()* member functions have been declared as *public*, hence they are able to access these variables. We can also access them from the *Main()* function after creating an instance of the *Figure* class. This instance has been given the name *f*.
+
+### Public Access Specifier
+
+With a *public* access specifier, a class is able to expose its member functions and member variables to the other objects and functions. Any class member declared as *public* can be accessed from outside of that class. Consider the following example:
+
+```csharp
+using System;
+namespace FigureApplication {
+    class Figure {
+        // The class member variables
+        public double width;
+        public double length;
+        public double CalculateArea() {
+            return length * width;
+        }
+        public void Show() {
+            Console.WriteLine("The Length of the figure is: {0}", length);
+            Console.WriteLine("The Width of the figure is: {0}", width);
+            Console.WriteLine("The Area of the figure is: {0}", CalculateArea());
+        }
+    }//end the Figure class
+    class RunFigure {
+        static void Main(string[] args) {
+            Figure f = new Figure();
+            f.length = 5.4;
+            f.width = 3.2;
+            f.Show();
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+The following is the output from the code:
+
+```
+    The Length of the figure is: 5.4
+    The Width of the figure is: 3.2
+    The Area of the figure is: 17.28
+```
+
+The class member variables *width* and *length* have been declared as *public*, which means that we are able to access them from the *Main()* function after creating an instance of the class. We have created an instance of the *Figure* class and given it the name *f*.
+
+The *CalculateArea()* and *Show()* member functions are also able to access these member variables without using an instance of the class. The *Show()* member function has also been declared as *public*, meaning that we are able to access it from the *Main()* function using an instance of the class.
+
+### Protected Access Specifier
+
+This type of access specifier makes it possible for a child class to access the member functions and member variables that have been defined in the base class. This way, it is easier to implement inheritance. This will be discussed in inheritance.
+
+### Internal Access Specifier
+
+This type of access specifier allows a class to expose its member functions and member variables to the other objects and functions in the current assembly. This means that any member that has been created using the internal access specifier is accessible from any class or method that has been defined within the application where the member has been defined. This is demonstrated in the following example:
+
+```csharp
+using System;
+namespace AccesserApplication {
+    class Figure {
+        // The member variables
+        internal double width;
+        internal double length;
+        double CalculateArea() {
+            return length * width;
+        }
+        public void Show() {
+            Console.WriteLine("The Length of the figure is: {0}", length);
+            Console.WriteLine("The Width of the figure is: {0}", width);
+            Console.WriteLine("The Area of the figure is: {0}", CalculateArea());
+        }
+    }//end the class Figure
+
+    class RunFigure {
+        static void Main(string[] args) {
+            Figure f = new Figure();
+            f.length = 6.5;
+            f.width = 4.8;
+            f.Show();
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+The code should return the following result:
+
+![](img/239ff1e8a63502805c86c4dfbd71509a_577_0.png)
+
+## Chapter 14: Inheritance
+
+With inheritance, it is possible for a programmer to define one class in terms of another class. This also makes it possible for us to reuse code and shorten the time taken to implement an application.
+
+During the creation of a class, instead of having to create completely new member functions and data members, the programmer is able to designate that the new class inherits the members of an already existing class. The *base class* is the name for the existing class while the new class is known as the *derived class*.
+
+Inheritance is simply an implementation of IS-A relationship¹³². For example, Cow is a Mammal.
+
+It is possible for a class to inherit from more than one class or interfaces, meaning that it can inherit data and functions from many base interfaces or classes. The following example demonstrates the concept of the base and derived class:
+
+```csharp
+using System;
+namespace InheritanceApp {
+  class Figure {
+    public void setWidth(int wid) {
+      width = wid;
+    }
+    public void setHeight(int heig) {
+      height = heig;
+    }
+    protected int width;
+    protected int height;
+  }
+  // A Derived class
+  class Rectangle: Figure {
+    public int calculateArea() {
+      return (width * height);
+    }
+  }
+  class TestInheritance {
+```

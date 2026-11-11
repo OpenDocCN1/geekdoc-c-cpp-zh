@@ -1,0 +1,1 @@
+Once power is connected, and the specified input is put into the microcontroller, it will perform the function for which it is intended.

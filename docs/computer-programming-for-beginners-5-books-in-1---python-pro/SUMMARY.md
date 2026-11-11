@@ -1,0 +1,2 @@
++   [初学者的计算机编程：五合一——Python 编程 + SQL + Arduino + C# + JavaScript，助你更快掌握技能](README.md)
++   [初学者的计算机编程：五合一——Python 编程 + SQL + Arduino + C# + JavaScript，助你更快掌握技能](computer-programming-for-beginners-5-books-in-1---python-pro.md)

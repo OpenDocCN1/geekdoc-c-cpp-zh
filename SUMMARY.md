@@ -819,6 +819,7 @@
 +   [计算机图形学：理论与实践](docs/computer-graphics-theory-and-practice/README.md)
 +   [计算机编程与 IT](docs/computer-programming-and-it/README.md)
 +   [计算机编程与软件开发：C#、Python、JavaScript、React、Angular和TypeScript编码](docs/computer-programming-and-software-development-coding-with-c-/README.md)
++   [初学者的计算机编程：五合一——Python 编程 + SQL + Arduino + C# + JavaScript，助你更快掌握技能](docs/computer-programming-for-beginners-5-books-in-1---python-pro/README.md)
 +   [初学者计算机编程与网络安全：4合1：分步学习专业编程与数据保护的终极手册。本书包含：Python、Java、C++ 及网络安全](docs/computer-programming-for-beginners-and-cybersecurity-4-manus/README.md)
 +   [初学者计算机编程与网络安全：逐步学习专业编程与数据保护的终极手册。本书包含：Python、Java、C++ 与网络安全](docs/computer-programming-for-beginners-and-cybersecurity-the-ult/README.md)
 +   [初学者计算机编程指南：本书包含 - Python、C++、Linux 入门指南以及 Kali Linux 黑客攻击。通过此合集循序渐进地学习编程](docs/computer-programming-for-beginners-this-book-includes---pyth/README.md)

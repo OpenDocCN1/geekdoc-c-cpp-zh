@@ -1,0 +1,1 @@
+This is just a basis for basic Arduino programming. In the rest of the book, we will be looking at how Arduinos can be programmed with respect to different functions. If you’re new to programming, don’t let the above codes frighten you. Coding takes practice, but it relatively easy to learn, just like a new language.

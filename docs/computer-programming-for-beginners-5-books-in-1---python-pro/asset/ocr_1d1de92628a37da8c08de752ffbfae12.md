@@ -1,0 +1,27 @@
+```
+```csharp
+static void Main()
+{
+    System.Console.WriteLine("Hi C#!");
+}
+}
+```
+
+# The Syntax
+
+Use the following syntax when declaring a method:
+
+static data_type_of_the_result name_of_method (list_of_parameters)
+
+Let’s analyze this syntax using the Main() method (i.e. static void Main()). Main() uses “void” as its return type since it doesn’t generate any result. The word “Main” serves as its name. The parentheses, on the other hand, act as containers for the parameters that the programmer will provide.
+
+Important Note: You have to follow this syntax when writing a C# program. Don’t change the placement of the method’s parts.
+
+C# doesn’t require you to include parameters in your declarations. That means you can leave the parentheses empty (e.g. Main()).
+
+# The Method’s Name
+
+You need to indicate the method’s name during declarations, invocations, or implementations. Here are the rules that you need to remember when naming your methods:
+
++   - Make sure that the initial letter is in uppercase.
++   - Begin each word with an uppercase letter (e.g. SampleMethod, NewMethod, MainLine, etc.).

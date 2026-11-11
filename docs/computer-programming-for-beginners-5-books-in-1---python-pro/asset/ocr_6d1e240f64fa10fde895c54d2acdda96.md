@@ -1,0 +1,13 @@
+# Chapter 3: Variables and Data Types
+
+Variables are used to store data values that the computer processes. Each value can be a different data type, such as an integer, list, string, dictionary, etc. In this chapter you will learn about a number of variables that you can use to create an application. They are crucial to any program, which means that you can’t really write code without using them.
+
+Furthermore, you will work with real examples in order to learn how you can change text strings or perform mathematical operations. In programming, many tasks are solved with the help of variables. For instance, you can determine an operation for achieving a result without knowing what values certain variables refer to in advance. Any kind of data that you introduce to your computer is in fact converted into a variable, which you can then use as part of a program that has a number of functions.
+
+# Python Identifiers
+
+When you write code you need to be able to clearly understand and identify every type of data by just looking at its identifier or label. You can define identifiers as words that you did not comment out or type in-between quotation marks to turn it into plain text. Identifiers are used for naming purposes in order to make the code readable, provided that you use appropriate names related to your project and variables. Just make sure you don’t attempt to use the same identifier for multiple variables and functions, otherwise you will cause conflicts in your code that lead to chaotic results. Always focus on using unique identifiers.
+
+Keep in mind that you can use pretty much any word you can think of, however there are a number of words that are reserved by Python and you cannot use them as identifiers. They are part of the programming language itself and they can’t be used as labels. These words are known as keywords. Here are a number of such words: False, lambda, class, import, global, while, yield, continue, and so on. Fortunately, you don’t have to start learning all of them right away. Through practice you will eventually memorize them, however, until then Python will help you. If you use one of the keywords as an identifier, Python will warn you and ask you to change the name.
+
+With that in mind, let’s see precisely how you can name your variables. When you label a variable you should always start with an underscore or a letter. This isn’t a rule set in stone, however it’s a generally accepted naming convention which

@@ -1,0 +1,1 @@
+[←88] https://docs.microsoft.com/en-us/sql/relational-databases/tables/create-check-constraints?view=sql-server-2017
