@@ -1,0 +1,62 @@
+
+- SIGCSE 计算机科学教育技术研讨会，311–316。纽约：ACM。
+- Kay, A., 与 A. Goldberg. 1977. 个人动态媒体。*计算机* 10(3)：31–41。
+- Kelleher, C., 与 R. Pausch. 2005. 降低编程门槛：面向新手程序员的编程环境与语言分类。*ACM 计算综述* 37(2)：83–137。
+- Knobel, M., 与 C. Lankshear. 2010. DIY 媒体：运用新技术进行创作、分享与学习。纽约：Lang。
+- Lankshear, C., 与 M. Knobel. 2008. 混编：无尽混合的艺术与技艺。*青少年与成人读写能力杂志* 52(1)：22–33。
+- Larson, E. 2013. 将编程纳入课程。Mashable。访问于2013年9月25日。http://mashable.com/2013/09/22/coding-curriculum。
+- Lave, J. 1988. *实践中的认知：日常生活里的心智、数学与文化*。纽约：剑桥大学出版社。
+- Lave, J., 与 E. Wenger. 1991. *情境学习：合法的边缘性参与*。英国剑桥：剑桥大学出版社。
+- Lee, E., Y. B. Kafai, V. Vasudevan, 与 R. L. Davis. 2014. 在街机厅里玩耍：使用 MaKey MaKey 为 Scratch 游戏制作实体界面。载于 *趣味用户界面*，A. Nijholt 编。纽约：Springer。
+- LEAD（通过工程、艺术与设计学习）小组. 2012. *超级 Scratch 编程冒险：通过制作酷炫游戏学习编程*。加利福尼亚州旧金山：No Starch 出版社。
+- Lenhart, A. 2007. 网络欺凌。皮尤互联网与美国生活项目。最后修改于2007年。http://pewinternet.org/Reports/2007/Cyberbullying/1-Findings.aspx。
+- Lessig, L. 2008. *混编：让艺术与商业在混合经济中繁荣*。纽约：企鹅出版社。
+- Luther, K., 与 A. Bruckman. 2011. 在线创意协作中的领导力与成功因素。*IEEE 潜力*（9月/10月）：27–32。http://pipeline.cc.gatech.edu/pdf/Luther-Bruckman-Potentials.pdf。
+- Luther, K., K. Caine, K. Ziegler, 与 A. Bruckman. 2011. 为何奏效（当其奏效时）：在线创意协作中的成功因素。载于 *GROUP ’10：ACM 支持群体工作会议论文集*，1–10。纽约：ACM 出版社。
+- Magnifico, A. M. 2010. 为谁写作？认知、动机与写作者的受众。*教育心理学家* 45(3)：167–184。
+- Maloney, J., L. Burd, Y. Kafai, N. Rusk, B. Silverman, 与 M. Resnick. 2004. Scratch：先睹为快。载于 *CS ’04：第二届通过计算进行创造、连接与协作国际会议论文集*，104–109。华盛顿特区：IEEE 计算机学会。
+- Manovich, L. 2005. 混编与可混编性。最后修改于2005年。访问于2011年8月23日。http://jmportfolio.usc.edu/ctcs505/manovichremixmodular.pdf。
+- Margolis, J. 2013. 开启俱乐部之门：十年之后，接下来怎么办？在第四十四届 ACM 计算机科学教育技术研讨会上发表的闭幕主题演讲论文，科罗拉多州丹佛。
+- Margolis, J., 与 A. Fisher. 2002. 开启俱乐部之门：计算领域的女性。马萨诸塞州剑桥：麻省理工学院出版社。
+- Margolis, J., R. Estrella, J. Goode, J. J. Holme, 与 K. Nao. 2008. 困在浅水区：教育、种族与计算。马萨诸塞州剑桥：麻省理工学院出版社。
+- Marshall, S. 2000. 情境中的规划。博士论文，加利福尼亚大学洛杉矶分校。
+- Martin, F. 1996. 理想系统与真实系统：设计机器人的本科生控制观念研究。载于 *实践中的建构主义*，Y. Kafai 与 M. Resnick 编，255–268。新泽西州莫沃：Erlbaum。
+- Martin, F. 2001. 机器人探索：工程学动手入门。纽约：Prentice Hall。
+- Martinez, S., 与 G. Stager. 2013. 为学习而发明。加利福尼亚州托伦斯：Constructing Modern Knowledge。
+- Miller, A. 2009. 使用 Hook Ups 进行界面设计。载于 *计算机俱乐部：青年社区中的建构主义与创造力*，Y. Kafai、K. A. Peppler 与 R. Chapman 编，58–70。纽约：师范学院出版社。
+- Miller, A. 2010. 计算机如粉笔：培养并维系作为实体用户界面设计者的青年社群。博士论文，麻省理工学院，马萨诸塞州剑桥。
+- Mills, K. A. 2010. 新素养研究中“数字转向”述评。*教育研究评论* 80(2)：246–271。
+- Monroy-Hernández, A. 2012. 为混编而设计：支持业余创作者的在线社区。博士论文，麻省理工学院，马萨诸塞州剑桥。
+- Monroy-Hernández, A., 与 B. M. Hill. 2010. 青年创作者在线社区中的合作与署名。在 ACM 计算机支持协同工作会议（CSCW ’10）上展示的海报，佐治亚州萨凡纳。
+- Monroy-Hernández, A., B. M. Hill, J. Gonzalez-Rivero, 与 D. boyd. 2011. 计算机无法给予署名：自动署名在在线混编社区中为何不足。载于 *2011 年人类因素与计算系统年会论文集*，3421–3430。丹麦奥胡斯：交互设计基金会。
+- Monroy-Hernández, A., 与 M. Resnick. 2008. 赋能儿童创作与分享可编程媒体。*交互* 15(2)：50–53。
+- 国家研究委员会，计算机科学与电信委员会（CSTB）. 2010. 计算思维的范围与性质研讨会报告。华盛顿特区：国家科学院出版社。
+- 国家研究委员会，计算机科学与电信委员会（CSTB）. 2011. 计算思维的教学方面研讨会报告。华盛顿特区：国家科学院出版社。
+- Negroponte, N. 1995. 数字化生存。纽约：Knopf。
+- Nickerson, J. V., 与 A. Monroy-Hernández. 2012. 挪用与创造力：Scratch 中用户发起的竞赛。载于 *第四十四届夏威夷系统科学国际会议论文集*，1–10。夏威夷州马诺阿：Shidler 商学院。
+- Noss, R., 与 C. Hoyles. 1996. 数学意义之窗：学习文化与计算机。荷兰多德雷赫特：Kluwer Academic。
+- O'Reilly, T. 2005. 什么是 Web 2.0？最后修改于2005年。http://www.tivanguard.com/tivanguard_cfmfiles/pdf/dc05/dc05session4003.pdf。
+- Palumbo, D. 1990. 编程语言/问题解决研究：相关问题综述。*教育研究评论* 45：65–89。
+- Papert, S. 1975. 教育设计的一些诗意与社会标准。马萨诸塞州剑桥：麻省理工学院出版社。
+- Papert, S. 1990. 计算机批评与技术中心主义思维。*教育研究者* 16(1)：22–30。
+- Papert, S. 1991. 情境化建构主义。载于 *建构主义*，I. Harel 与 S. Papert 编，111–130。新泽西州诺伍德：Ablex。
+- Papert, S. 1993a. 儿童的机器：计算机时代对学校的重新思考。纽约：Basic Books。
+- Papert, S. 1993b. 心智风暴：儿童、计算机与强大理念。第2版。纽约：Basic Books。最初出版于1980年。
+- Papert, S. 1996. 互联家庭：弥合数字代沟。纽约：Taylor Trade。
+- Papert, S. 1997. 修修补补走向乌托邦：公立学校改革的一个世纪。*学习科学杂志* 6(4)：417–427。
+- Papert, S. 2002. 艰难之乐。Bangor Daily News。最后修改于2002年。http://www.papert.org/articles/HardFun.html。
+- Parnas, D., 与 J. Harel. 1991. *情境化建构主义*。新泽西州诺伍德：Ablex。
+- Parnas, D. 1972. 论将系统分解为模块时应采用的标准。*ACM 通讯* 15(12)：1053–1058。
+- Pea, R., 与 M. Kurland. 1984. 论学习计算机编程的认知效应。*心理学新观念* 2(2)：137–168。
+- Pea, R. D., 与 D. M. Kurland. 1983. *Logo 编程与规划技能的发展*。纽约：Bank Street College。
+- Pelletier, C. 2008. 情境中的游戏：年轻人在玩游戏与制作游戏时如何建构其性别身份。载于 *超越芭比与真人快打：性别与计算机游戏的新视角*，Y. B. Kafai、C. Heeter、J. Denner 与 J. Sun 编，145–160。马萨诸塞州剑桥：麻省理工学院出版社。
+- Peppler, K. A., 与 Y. B. Kafai. 2007. 从 SuperGoo 到 Scratch：探索非正式学习中的创造性数字媒体制作。*学习、媒体与技术* 32(2)：149–166。
+- Perkel, D. 2008. “不，我并不觉得受到恭维”：一位年轻艺术家对版权的看法。*数字青年研究*。最后修改于2008年。http://digitalyouth.ischool.berkeley.edu/node/105.html。
+- Perkins, D. N. 1986. *知识即设计*。新泽西州希尔斯代尔：Erlbaum。
+- Perrott, E. 2011. 课堂中的版权：为何美国 K–12 教育课程需要全面的版权教育。*美利坚大学知识产权简报*。最后修改于2011年。http://digitalcommons.wcl.american.edu。
+- Prensky, M. 2001. 数字原住民，数字移民。*在地平线上* 9(5)：1–6。
+- Prensky, M. 2008. 编程是新素养。*教育乌托邦*。最后修改于2008年。http://edutopia.org/literacy-computer-programming。
+- Ratto, M., 与 M. Boler 编. 2014. *DIY 公民身份：批判性制作与社交媒体*。马萨诸塞州剑桥：麻省理工学院出版社。
+- Repenning, A., 与 A. Ioannidou. 2008. 通过可扩展游戏设计扩大参与。载于 *SIGCSE ’08：第三十九届 SIGCSE 计算机科学教育技术研讨会论文集*，305–309。纽约：ACM。
+- Resnick, L. K. 1987. *教育与学会思考*。华盛顿特区：国家科学院出版社。
+- Resnick, M. 1991. 计算的新范式，思维的新范式。载于 *实践中的建构主义*，Y. Kafai 与 M. Resnick 编，255–268。新泽西州莫沃：Erlbaum。

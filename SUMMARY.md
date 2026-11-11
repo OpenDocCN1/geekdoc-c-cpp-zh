@@ -853,6 +853,7 @@
 +   [内在自信：女性的真实自信](docs/confidence-within-authentic-confidence-for-women/README.md)
 +   [自信编码：精通代码基础并加速职业发展 (自信系列)](docs/confident-coding-master-the-fundamentals-of-code-and-superch/README.md)
 +   [自信的数据技能：掌握数据处理基础并助力你的职业发展 (自信系列)](docs/confident-data-skills-master-the-fundamentals-of-working-wit/README.md)
++   [连接代码：为什么孩子需要学习编程（约翰·D.和凯瑟琳·T.麦克阿瑟基金会数字媒体与学习系列）](docs/connected-code-why-children-need-to-learn-programming-the-jo/README.md)
 +   [连接游戏：视频游戏制作能教给我们关于学习与素养的什么（约翰·D与凯瑟琳·T·麦阿瑟基金会数字媒体与学习系列）](docs/connected-gaming-what-making-video-games-can-teach-us-about-/README.md)
 +   [约束规划与大规模离散优化：Dimacs研讨会约束规划与大规模离散优化，九月……数学与理论计算机科学）](docs/constraint-programming-and-large-scale-discrete-optimization/README.md)
 +   [传染性建筑：计算、美学与空间（生活抽象的技术）](docs/contagious-architecture-computation-aesthetics-and-space-tec/README.md)
