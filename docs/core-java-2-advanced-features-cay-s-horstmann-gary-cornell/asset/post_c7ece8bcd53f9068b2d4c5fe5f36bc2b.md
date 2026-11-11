@@ -1,0 +1,196 @@
+
+- of `CellEditor`, 638
+- of `DefaultTableModel`, 628
+- of `JTableModel`, 608, 628
+- `isCharacters` method (`XMLStreamReader`), 208
+- `isClosable` method (`JInternalFrame`), 758
+- `isClosed` method
+  - of `JInternalFrame`, 758
+  - of `ResultSet`, 301
+  - of `Socket`, 239
+  - of `Statement`, 300
+- `isConnected` method (`Socket`), 239
+- `isContinuousLayout` method (`JSplitPane`), 735
+- `isDataFlavorAvailable` method (`Clipboard`), 891
+- `isDataFlavorSupported` method (`Transferable`), 892
+- `isDesktopSupported` method (`Desktop`), 927, 931
+- `isDirectory` method
+  - of `BasicFileAttributes`, 109
+  - of `ZipEntry`, 79
+- `isDrop` method (`TransferSupport`), 914, 919
+- `isEchoOn` method (`PasswordCallback`), 546, 698
+- `isEnabled` method (`JFormattedTextField`), 687, 690, 701
+- `isElement` method (`XMLStreamReader`), 208
+- `isExecutable` method (`Files`), 108–109
+- `isFirst` method (`ResultSet`), 324, 327
+- `isGroupingUsed` method (`NumberFormat`), 383
+- `isHidden` method (`Files`), 108–109
+- `isIcon` method (`JInternalFrame`), 745, 758
+- `isIconifiable` method (`JInternalFrame`), 758
+- `isIgnoringElementContentWhitespace` method
+  - (`DocumentBuilderFactory`), 171
+- `isImageAutoSize` method (`TrayIcon`), 937
+- `isIndeterminate` method (`JRootPane`), 730
+- `isInputShutdown` method (`Socket`), 249
+- `isInsert` method (`JList.DropLocation`), 915, 920
+- `isInsertRow`/`isInsertColumn` methods (`JTable.DropLocation`), 920
+- `isLast` method (`ResultSet`), 324, 327
+- `isLeaf` method
+  - of `DefaultTreeModel`, 648
+  - of `TreeModel`, 649, 672
+  - of `TreeNode`, 648–649
+- `isLeap` method (Date and Time API), 356
+- `isMaximizable` method (`JInternalFrame`), 758
+- `isMaximum` method (`JInternalFrame`), 758
+- `isMimeTypeEqual` method (`DataFlavor`), 894
+- `isNamespaceAware` method
+  - of `DocumentBuilderFactory`, 199
+  - of `SAXParserFactory`, 203
+- `isNegative` method (`Instant`, `Duration`), 353
+- ISO 216 paper sizes, 412
+- ISO 3166-1 country codes, 374
+- ISO 4217 currency identifiers, 384
+- ISO 639-1 language codes, 374
+- ISO 8601 format, 318, 471
+- ISO 8859-1 standard, 60, 68
+- `isOneTouchExpandable` method (`JSplitPane`), 734
+- `isOutputShutdown` method (`Socket`), 249
+- `isParseIntegerOnly` method (`NumberFormat`), 383
+- `isPresent` method (`Optional`), 15–16
+- `isSQL-Viewer` program, 334
+- `isReadable` method (`Files`), 108–109
+- `isRegularFile` method
+  - of `BasicFileAttributes`, 109
+  - of `Files`, 108–109
+- `isResizable` method (`JInternalFrame`), 758
+- `isSelected` method (`JInternalFrame`), 747, 758
+- `isShared` method (`FileLock`), 127
+- `isStartElement` method (`XMLStreamReader`), 208
+- `isStringPainted` method (`JProgressBar`), 730
+- `isSupported` method
+  - of `Desktop`, 927, 931
+  - of `SystemTray`, 932, 936
+- `isSymbolicLink` method
+  - of `BasicFileAttributes`, 109
+  - of `Files`, 108–109
+- `isUnresolved` method (`InetSocketAddress`), 256
+- `isValidating` method
+  - of `DocumentBuilderFactory`, 171
+  - of `SAXParserFactory`, 203
+- `isVisible` method (`JInternalFrame`), 758
+- `isWhiteSpace` method (`XMLStreamReader`), 208
+- `isWritable` method (`Files`), 108–109
+- `isZero` method (`Instant`, `Duration`), 353
+- `item` method
+  - of `NamedNodeMap`, 162
+  - of `NodeList`, 151, 162, 169
+- `Iterable` interface, 111
+- `iterate` method (`Stream`), 5, 8, 12, 36
+- `Iterator` interface, 298
+- `iterator` method
+  - of `BaseStream`, 19–20
+  - of `SQLException`, 302, 304
+- `Iterators`, 19
+
+## J
+
+- `J` (long), type code, 87, 961
+- JAAS (Java Authentication and Authorization Service), 530–546
+  - configuration files in, 531, 536
+  - login modules in, 537–546
+  - jaas/jaas.config, 545
+  - jaas/JAASTest.java, 544
+  - jaas/JAASTest.policy, 545
+  - jaas/SimpleCallbackHandler.java, 543
+  - jaas/SimpleLoginModule.java, 541
+  - jaas/SimplePrincipal.java, 540
+  - jaas.config file, 533
+- **JAR files**
+  - automatic registration in, 294
+  - class loaders in, 495
+  - code base of, 510
+  - for plugins, 494
+  - manifest of, 77
+  - resources in, 408
+  - signing, 555–556
+- jar: URI scheme, 257
+- `jarray` type (C), 988
+- jarsigner program, 555–556, 563
+- JarXxStream classes, 77
+- **Java programming language**
+  - deployment directory of, 564, 566
+  - internationalization support in, 371
+  - platform-independent, 70
+  - security of, 510–514
+  - vs. SQL, 311
+- **Java 2D API**, 765–937
+  - features supported in, 766
+  - rendering pipeline, 766–768
+- **Java EE** (Java Platform, Enterprise Edition), 285
+- Java Plug-in, loading signed code, 563
+- **Java program**
+  - -javaagent option, 487
+  - jdbc.drivers property in, 294
+  - -noverify option, 506
+  - security managers in, 516
+  - -splash option, 921
+- Java Rich Internet Applications Guide, 566
+- *Java™ Virtual Machine Specification, The* (Lindholm/Yellin), 506
+- java.awt.AlphaComposite API, 817
+- java.awt.BasicStroke API, 796
+- java.awt.Color API, 842
+- java.awt.datatransfer API, 888
+- java.awt.datatransfer.Clipboard API, 891–892, 894, 903
+- java.awt.datatransfer.ClipboardOwner API, 892
+- java.awt.datatransfer.DataFlavor API, 893–894
+- java.awt.datatransfer.FlavorListener API, 894
+- java.awt.datatransfer.Transferable API, 892, 894
+- java.awt.Desktop API, 931–932
+- java.awt.dnd API, 904
+- java.awt.font.TextLayout API, 807
+- java.awt.geom package, 92
+- java.awt.geom.AffineTransform API, 803–804
+- java.awt.geom.Arc2D.Double API, 785
+- java.awt.geom.Area API, 788
+- java.awt.geom.CubicCurve2D.Double API, 785
+- java.awt.geom.GeneralPath API, 785
+- java.awt.geom.Path2D API, 786
+- java.awt.geom.Path2D.Float API, 786
+- java.awt.geom.QuadCurve2D.Double API, 785
+- java.awt.geom.RoundRectangle2D API, 785
+- java.awt.GradientPaint API, 798
+- java.awt.Graphics API, 806
+- java.awt.Graphics2D API, 768, 796, 798, 804, 807, 816, 823
+- java.awt.image.AffineTransformOp API, 850
+- java.awt.image.BufferedImage API, 840
+- java.awt.image.BufferedImageOp API, 850
+- java.awt.image.ByteLookupTable API, 850
+- java.awt.image.ColorModel API, 842
+- java.awt.image.ConvolveOp API, 851
+- java.awt.image.Kernel API, 851
+- java.awt.image.LookupOp API, 850
+- java.awt.image.Raster API, 841
+- java.awt.image.RescaleOp API, 850
+- java.awt.image.ShortLookupTable API, 851
+- java.awt.image.WritableRaster API, 841
+- java.awt.print.Book API, 873
+- java.awt.print.PageFormat API, 861–862
+- java.awt.print.Printable API, 860
+- java.awt.print.PrinterJob API, 861, 873
+- java.awt.RenderingHints API, 823
+- java.awt.SplashScreen API, 926
+- java.awt.SystemTray API, 936
+- java.awt.TexturePaint API, 799
+- java.awt.Toolkit API, 891
+- java.awt.TrayIcon API, 936–937
+- java.beans.PropertyChangeEvent API, 759
+- java.beans.PropertyVetoException API, 760
+- java.beans.VetoableChangeListener API, 759
+- java.io.BufferedInputStream API, 59
+- java.io.BufferedOutputStream API, 59
+- java.io.Closeable API, 54
+- java.io.DataInput API, 71
+- java.io.DataOutput API, 72
+- java.io.File API, 103
+- java.io.File.separator constant, 56
+- java.io.FileInputStream API, 58, 121

@@ -1,0 +1,54 @@
+```
+```sql
+SELECT ISBN, Price, Title
+FROM Books
+```
+```
+
+You can restrict the rows in the answer with the WHERE clause:
+
+```
+```sql
+SELECT ISBN, Price, Title
+FROM Books
+WHERE Price <= 29.95
+```
+```
+
+Be careful with the “equals” comparison. SQL uses = and <>, rather than == or != as in the Java programming language, for equality testing.
+
+> > **NOTE:** Some database vendors support the use of `!=` for inequality testing. This is not standard SQL, so we recommend against such use.
+
+The WHERE clause can also use pattern matching by means of the LIKE operator. The wildcard characters are not the usual * and ?, however. Use a % for zero or more characters and an underscore for a single character. For example,
+
+```
+```sql
+SELECT ISBN, Price, Title
+FROM Books
+WHERE Title NOT LIKE '%n_%'
+```
+```
+
+excludes books with titles that contain words such as Unix or Linux.
+
+Note that strings are enclosed in single quotes, not double quotes. A single quote inside a string is represented by a pair of single quotes. For example,
+
+```
+```sql
+SELECT Title
+FROM Books
+WHERE Title LIKE '%''%'
+```
+```
+
+reports all titles that contain a single quote.
+
+You can select data from multiple tables:
+
+```
+```sql
+SELECT * FROM Books, Publishers
+```
+```
+
+Without a WHERE clause, this query is not very interesting. It lists all *combinations* of rows from both tables. In our case, where Books has 20 rows and Publishers has 8 rows, the result is a set of rows with 20 × 8 entries and lots of duplications. We really want to constrain the query to say that we are only interested in *matching* books with their publishers:

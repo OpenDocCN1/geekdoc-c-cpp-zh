@@ -1,0 +1,287 @@
+
+## H
+
+- 掩码中的 H，692
+- 正则表达式中的 \\h、\\H，131
+- 半闭合结论，249
+- *《应用密码学手册》*（Menezes 等），551
+- handle 方法（CallbackHandler），545
+- handleGetObject 方法（ResourceBundle），412–413
+- 控制柄（Swing），644、661
+- hash/Digest.java，549
+- hashCode 方法
+  - Annotation 的，464
+  - Permission 的，523
+- HashXAttributeSet 类，852、880
+- Haskell 编程语言，430
+- hasMoreElements 方法（*Enumeration*），987–989
+- hasNext 方法（*XMLStreamReader*），208
+- hasRemaining 方法（buffer），122
+- 头信息，来自服务器，259
+- 表头（Swing 表格）
+  - 渲染，627
+  - 滚动，601
+- helloNative/HelloNative.c，943
+- helloNative/HelloNative.h，942
+- helloNative/HelloNative.java，941
+- helloNative/HelloNativeTest.java，945
+- 十六进制编辑器
+  - 在其中创建类文件，505
+  - 用其修改字节码，507
+- XML 注释中的隐藏命令，149
+- HORIZONTAL_SPLIT 值（*JSplitPane*），732
+- HORIZONTAL_WRAP 值（*JList*），583
+- 主机
+  - 与 IP 地址，239–241
+  - 本地，240
+- 热部署，496
+- HTML（超文本标记语言）
+  - 中的属性，148
+  - 使用 *JEditorPane* 显示，681、712–719
+  - 中的结束标签和空标签，146
+  - 中的表单，268
+  - 从 XML 文件生成，222–225
+  - 与 JSP 混合，449
+  - 打印，874
+  - 与 XML 的比较，145–146
+- HTMLDocument 类，681
+- HTTP（超文本传输协议），285
+  - 中的请求头，261–262
+  - 在其上使用 SSL，579
+- http；URI 方案，257、517、713
+- https：URI 方案，257、579
+- HttpURLConnection 类，getErrorStream 方法，273、277
+- HyperLinkEvent 类，getURL 方法，715、719
+- HyperlinkListener 接口，hyperlinkUpdate 方法，715、718
+- 超链接，713
+
+## I
+
+- I（int），类型代码，87、961
+- I/O 流。参见输入流、输出流
+- IANA（互联网号码分配机构），361
+- IBM，143、150
+- IBM DB2 数据库，291
+- IBM437 编码，406
+- ICCP 配置文件，836
+- 图标
+  - 用于框架，743
+  - 在列标题中，627
+  - 在表格单元格中，626
+  - 在树中，648、661
+  - 一键展开，732
+  - 托盘，932
+- ID、IDREF、IDREFS 属性类型（DTD），167–168
+- identity 方法（*Function*），24
+- 恒等（不做任何操作）变换，213
+- 恒等值，34
+- ID 的唯一性，168、178
+- IETF BCP 47，377
+- ifPresent 方法（*Optional*），14–15、41
+- IIOMetadata 类，827、834
+- IIOServicesProvider 类，getVendorName、getVersion 方法，825、833
+- IllegalAccessException，674
+- IllegalArgumentException，207、706、710、712、976
+- IllegalStateException，24、826、914
+- 可成像区域，855
+- ImageFlavor 方法（*DataFlavor*），895
+- ImageInputStream 类，其“仅向前查找”，825
+- ImageIO 类
+  - createImageXxxStream 方法，825、832
+  - 确定图像类型，823–824
+  - getImageMetadata 方法，824、832
+  - getReaderXxx、getWriterXxx 方法，825、832
+  - read、write 方法，823、831
+- ImageIO/ImageIOFrame.java，828
+- ImageOutputStream 接口，827
+- ImageProcessing/ImageProcessingFrame.java，846
+- ImageReader 类，824
+  - getHeight、getWidth 方法，826、833
+  - getNumX 方法，826、833
+  - getOriginatingProvider 方法，824、833
+  - read 方法，832
+  - readThumbnail 方法，833
+  - setInput 方法，832
+- ImageReaderWriterSpi 类，getXxx 方法，833
+- 图像
+  - 模糊，844
+  - 缓冲图像，798
+  - 类型，835
+  - 特定于颜色模型的值，837
+  - 从像素构造，835–842
+  - 在 Java 与原生格式之间转换，895
+  - 边缘检测，845
+  - 过滤，842–851
+  - 读取前获取大小，826
+  - 增量渲染，834
+  - 操作，834–851
+  - 中的元数据，827
+  - 文件中的多个图像，825–834
+  - 打印，852–862、874、876
+  - 读取器/写入器，823–834
+  - 旋转，818、843
+  - 缩放，818、820
+  - 叠加，807–808
+  - 缩略图，826
+  - 通过剪贴板传输，894
+- ImageTransfer/ImageTransferFrame.java，897
+- ImageTransferable 类，895、909
+- ImageWriter 类，824、827
+  - canInsertImage 方法，827、834
+  - getOriginatingProvider 方法，834
+  - setOutput 方法，834
+  - write、writeInsert 方法，827、834
+- IMAP（互联网消息访问协议），579
+  - 实现规范中的类型使用注解，468
+- #IMPLIED 属性（DTD），167
+- implies 方法
+  - Permission 的，523–524、530
+  - ProtectionDomain 的，514
+- import 语句，496
+- importData 方法（TransferHandler），912–914、918
+- include 方法（RowFilter），616、624
+- INCLUDE 环境变量，984
+- 增量渲染，834
+- 索引颜色模型，844
+- indexOfComponent、indexOfTab 方法（JTabbedPane），737、740
+- indexOfTabComponent 方法（JTabbedPane），741
+- IndexOutOfBoundsException，826
+- InetAddress 类，239–241
+  - getXxx 方法，240–241
+- inetAddress/InetAddressTest.java，240
+- InetSocketAddress 类，isUnresolved 方法，256
+- 无限树，675
+- 继承树，303
+- @Inherited 注解，471、474
+- init 方法
+  - Cipher 的，573
+  - KeyGenerator 的，574
+- 共享库的初始化块，947
+- initialize 方法
+  - LogModule 的，546
+  - SimpleLogModule 的，538
+- INIT_STREAM 类（DocFlavor），875
+- 输入流，48–59
+  - 与 Unicode，48
+  - 作为输入源，150
+  - 缓冲，57–59
+  - 中的字节处理，57
+  - 面向字节，48
+  - 链式连接，57
+  - 关闭，49
+  - 编码，60
+  - 过滤器，55–59
+  - 层次结构，51–55
+  - 保持打开，249
+  - 监视进度，726–731
+  - 中的对象，80–100
+  - 中的总字节数，727
+- 输入验证掩码，685
+- InputSource 类，171
+- InputStream 类，48–51、52
+  - available 方法，49–50、727
+  - close 方法，49–50
+  - mark、markSupported 方法，50
+  - markSupported 方法，50
+  - read 方法，48–50
+  - reset 方法，50
+  - skip 方法，50
+- InputStreamReader 类，60、726
+- InputVerifier 类，verify 方法，690
+- INSERT 语句（SQL），290
+  - 与自动生成的键，321
+  - 执行，298、300、316
+  - 在批量更新中，345
+  - 与 ResultSet 方法的比较，325
+- insertBefore 方法（DefaultTreeModel），652、658
+- insertRow 方法（ResultSet），325、328
+- insertString 方法（DocumentFilter），688–689、702
+- insertTab 方法（JTabbedPane），736、740
+- insertUpdate 方法（DocumentListener），682、685
+- 《Java 2 平台安全内幕》（Gong 等），492
+- install 方法（LayerUI），764
+- 实例字段
+  - 从原生代码访问，956–960
+  - 注解，460
+- instanceof 关键字，以及类型使用注解，468
+- Instant 类，352
+  - 与遗留类，369
+  - 算术运算，353
+  - from 方法，369
+  - 不可变，354
+  - now 方法，352
+- Instrumentation API，487
+- int 类型
+  - 打印，61
+  - 存储，70
+  - 类型代码，87、961
+  - 与 C 类型的比较，947
+  - 以二进制格式写入，69
+- Integer 类，124
+- INTEGER 数据类型（SQL），291、348
+- 整数
+  - 范围，36
+  - 支持的区域设置，686
+  - 验证输入，686
+- IntegritySax 类，882
+- @interface 声明，456、462
+- 接口
+  - 通过接口访问脚本类，436
+  - 注解，466、470
+  - 在脚本引擎中实现，435
+- 内部框架（Swing），741–752
+  - 层叠/平铺，744–748
+  - 关闭，748
+  - 中的对话框，750
+  - 拖动，751–760
+  - 抓取器，742
+  - 图标，743
+  - 在桌面上管理，751
+  - 定位，744
+  - 可调整大小，745
+  - 选中的，744
+  - 状态，745
+  - 可见性，744
+- internalFrameBackground，752
+- InternalFrame 接口，InternalFrameClosing 方法，751
+- 国际化，371–428
+- 插值，843
+  - 用于渐变，797–798
+  - 策略，843
+  - 变换图像时，818、820、843
+- 可中断套接字，250–257
+- InterruptibleInputStreamTest.java，251
+- Intersect 方法（Area），787–788
+- Ints 方法（Random），37、40
+- IntStream 接口，36–41
+  - average、max、min、sum 方法，37、39
+  - boxed 方法，36、39
+  - flatMap 方法，36
+  - of、range、rangeClosed 方法，36、38
+  - summaryStatistics 方法，37、39
+  - toArray 方法，36、38
+- IntSummaryStatistics 类，20、23、37、41
+- IntValue 方法（Number），379
+- 无效指针（C、C++），940
+- InvalidPathException，101
+- InvocationTargetException
+- InvocationHandler，436
+  - getInterface 方法，436
+  - invoke 方法，435–436
+- Invocation API，980–985
+- InvocationHandler，981
+- IOException，237、716
+- IP 地址，235、239–241
+  - 验证，693–694
+- IPP（互联网打印协议）1.1，885
+- IPv6 地址，239
+- isAfter、isBefore 方法（日期和时间 API），356、360、363
+- isAfterLast 方法（ResultSet），324、327
+- isAnnotationPresent 方法（AnnotatedElement），462
+- isAssignableFrom 函数（C），989、1001
+- isBeforeFirst 方法（ResultSet），324、327
+- isCancelled 方法（ProgressMonitor），723、731
+- isCellEditable 方法
+  - AbstractCellEditor 的，630
+  - AbstractTableModel 的，628
+

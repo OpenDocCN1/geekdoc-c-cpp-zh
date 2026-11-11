@@ -1,0 +1,53 @@
+**NOTE:** This example shows that the designer of the choice format was a bit muddleheaded. If you have three format strings, you need two limits to separate them. In general, you need *one fewer limit* than you have format strings. As you saw in Table 7.8, the `MessageFormat` class ignores the first limit.
+
+The syntax would have been a lot clearer if the designer of this class realized that the limits belong *between* the choices, such as
+
+```
+```
+no houses|1|one house|2|{1} houses   // not the actual format
+```
+```
+
+You can use the `<` symbol to denote that a choice should be selected if the lower bound is strictly less than the value.
+
+You can also use the `≤` symbol (expressed as the Unicode character code `\u2264`) as a synonym for `#`. If you like, you can even specify a lower bound of `-∞` as `-\u221E` for the first value.
+
+For example,
+
+```
+```
+-∞<no houses|0<one house|2≤{1} houses
+```
+```
+
+or, using Unicode escapes,
+
+```
+```
+-\u221E<no houses|0<one house|2\u2264{1} houses
+```
+```
+
+Let’s finish our natural disaster scenario. If we put the choice string inside the original message string, we get the following format instruction:
+
+```
+```
+String pattern = "On {2,date,long}, {0} destroyed {1,choice,0#no houses|1#one house|2#{1}
+houses}" + " and caused {3,number,currency} of damage.";
+```
+```
+
+Or, in German,
+
+```
+```
+String pattern = "{0} zerstörte an {2,date,long} {1,choice,0#kein Haus|1#ein Haus|2#{1} Häuser}"
++ " und richtete einen Schaden von {3,number,currency} an.";
+```
+```
+
+Note that the ordering of the words is different in German, but the array of objects you pass to the `format` method is the *same*. The order of the placeholders in the format string takes care of the changes in the word ordering.
+
+# ## 7.7 Text Input and Output
+
+As you know, the Java programming language itself is fully Unicode-based. However, Windows and Mac OS X still support legacy character encodings such as Windows-1252 or Mac Roman in Western European countries, or Big5 in Taiwan. Therefore, communicating with your users through text is not as simple as

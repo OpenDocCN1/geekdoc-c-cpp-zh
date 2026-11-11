@@ -1,0 +1,40 @@
+# 9.3.1 The JAAS Framework
+
+As you can tell from its name, the JAAS framework has two components. The “authentication” part is concerned with ascertaining the identity of a program user. The “authorization” part maps users to permissions.
+
+JAAS is a “pluggable” API that isolates Java applications from the particular technology used to implement authentication. It supports, among others, UNIX logins, NT logins, Kerberos authentication, and certificate-based authentication.
+
+Once a user has been authenticated, you can attach a set of permissions. For example, here we grant Harry a particular set of permissions that other users do not have:
+
+```
+grant principal com.sun.security.auth.UnixPrincipal "harry"
+{
+    permission java.util.PropertyPermission "user.*", "read";
+    ...
+};
+```
+
+The `com.sun.security.auth.UnixPrincipal` class checks the name of the UNIX user who is running this program. Its `getName` method returns the UNIX login name, and we check whether that name equals "harry".
+
+Use a `LoginContext` to allow the security manager to check such a grant statement. Here is the basic outline of the login code:
+
+```
+try
+{
+    System.setSecurityManager(new SecurityManager());
+    LoginContext context = new LoginContext("Login1");  // defined in JAAS configuration file
+    context.login();
+    // get the authenticated Subject
+    Subject subject = context.getSubject();
+    ...
+    context.logout();
+}
+catch (LoginException exception)  // thrown if login was not successful
+{
+    exception.printStackTrace();
+}
+```
+
+Now the subject denotes the individual who has been authenticated.
+
+The string parameter "Login1" in the `LoginContext` constructor refers to an entry with the same name in the JAAS configuration file. Here is a sample configuration file:

@@ -1,0 +1,19 @@
+| `java.awt.image.Raster` | 1.2 |
+|---|---|
+| `Object getDataElements(int x, int y, Object data)` | returns the sample data for a raster point, in an array whose element type and length depend on the color model. If data is not null, it is assumed to be an array that is appropriate for holding sample data, and it is filled. If data is null, a new array is allocated. Its element type and length depend on the color model. |
+| `int[] getPixel(int x, int y, int[] sampleValues)` |  |
+| `float[] getPixel(int x, int y, float[] sampleValues)` |  |
+| `double[] getPixel(int x, int y, double[] sampleValues)` |  |
+| `int[] getPixels(int x, int y, int width, int height, int[] sampleValues)` |  |
+| `float[] getPixels(int x, int y, int width, int height, float[] sampleValues)` |  |
+| `double[] getPixels(int x, int y, int width, int height, double[] sampleValues)` | returns the sample values for a raster point, or a rectangle of raster points, in an array whose length depends on the color model. If sampleValues is not null, it is assumed to be sufficiently long for holding the sample values, and it is filled. If sampleValues is null, a new array is allocated. These methods are only useful if you know the meaning of the sample values for a color model. |
+
+| `java.awt.image.WritableRaster` | 1.2 |
+|---|---|
+| `void setDataElements(int x, int y, Object data)` | sets the sample data for a raster point. data is an array filled with the sample data for a pixel. Its element type and length depend on the color model. |
+| `void setPixel(int x, int y, int[] sampleValues)` |  |
+| `void setPixel(int x, int y, float[] sampleValues)` |  |
+| `void setPixel(int x, int y, double[] sampleValues)` |  |
+| `void setPixels(int x, int y, int width, int height, int[] sampleValues)` |  |
+| `void setPixels(int x, int y, int width, int height, float[] sampleValues)` |  |
+| `void setPixels(int x, int y, int width, int height, double[] sampleValues)` | sets the sample values for a raster point or a rectangle of raster points. These methods are only useful if you know the encoding of the sample values for a color model. |

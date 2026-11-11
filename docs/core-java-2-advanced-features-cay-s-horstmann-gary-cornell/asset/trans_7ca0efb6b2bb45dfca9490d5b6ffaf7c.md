@@ -1,0 +1,285 @@
+
+- minOccurs 属性 (XML Schema), 174
+- minus、minusXxx 方法 (Date and Time API), 353, 356–357, 360, 363
+- MissingResourceException, 409
+- 斜接连接, 788–789
+- 斜接限制, 790
+- 混合内容 (XML), 147
+  - 解析, 166
+- 模型-视图-控制器设计模式, 588
+- 现代主义绘画示例, 211
+- 修改版 UTF-8, 70–72, 407
+  - 与本地代码, 949–952
+- 单子, 10
+- 月份枚举, 355
+  - getDisplayName 方法, 365, 386
+- Mortbay 类, 357
+- 鼠标，双击列表组件, 585
+- move 方法 (Files), 106, 108
+- moveTo 方法 (Path), 617, 623
+- moveTo 方法 (Path2D.Float), 775–776, 786
+- moveToXxx 方法 (InternalFrame), 758
+- moveToXxx 方法 (Area), 525, 327
+- MSB (最高有效字节), 70
+- 多页打印, 861–864
+- multiply 方法 (Instant, Duration), 353
+- Mutable/Reader 接口
+  - 实现, 641
+  - setObject 方法, 642, 649
+- MySQL 数据库, 291
+
+## N
+
+- `\n`
+  - 作为换行符, 61, 154, 405
+    - 在电子邮件中, 278
+    - 在正则表达式中, 130–131
+- NameCallback 类, 538
+  - 构造函数, 545
+  - 方法, 545
+- NameCallback 接口，getLength、iter 方法, 162
+- names 方法 (Win32RegKey), 987
+- 命名空间, 196–199
+  - 激活对命名空间的处理, 174
+  - 用于命名空间的别名（前缀）, 172, 197
+  - 属性的命名空间, 198
+  - 子元素的命名空间, 197
+  - 将类加载器用作命名空间, 496
+- Nashorn 引擎, 430–431
+- 国家字符字符串, 348
+- 美国国家标准与技术研究院, 234, 548
+- native 关键字, 940
+- 本地应用程序
+  - 与 Java 通信, 903–921
+  - Java 与本地应用程序之间的数据传输, 888
+- 本地方法, 939–1001
+  - 与垃圾回收, 951
+  - 中的数组元素, 970–974
+  - 中的类引用, 958
+  - 编译, 943
+  - 使用本地方法枚举键, 989
+  - 中的错误处理, 974–979
+  - 中的异常, 975
+  - 中的实例字段, 956–960
+  - 在本地方法中调用 Java 构造函数, 965–966
+  - 链接到 Java, 946
+  - 命名, 941–942
+  - 重载, 941
+  - 使用理由, 940
+  - 中的注册表访问函数, 988–1001
+  - 静态, 941
+  - 中的静态字段, 960–961
+  - 中的字符串, 949
+- native2ascii 程序, 408, 410, 414
+- NDR 数据类型 (SQL), 348
+- NDR、NDR 数据类型 (SQL), 348
+- nested 方法 (Instant, Duration), 353
+- 负字节值, 693
+- Nervous text 小程序, 546
+- NetBeans 的启动插件, 922
+- NetPermission 类, 519
+- 网络, 233–280
+  - 无限期阻塞工作线程, 723
+  - 调试, 233–236
+  - 从网络获取巨大图像, 826
+- newBufferXxx 方法 (Files), 104
+- newByteBuffer 方法 (Files), 104
+- newDirectoryStream 方法 (Files), 111, 114
+- newDocument 方法 (DocumentBuilder), 209, 212, 227
+- newDocumentBuilder 方法 (DocumentBuilderFactory), 150, 160, 209
+- newFactory 方法 (RowSetProvider), 329, 332
+- newFileSystem 方法 (FileSystems), 115–116
+- newGlobalRef 函数 (C), 958
+- newInputStream 方法
+  - Channels 的, 256
+  - Files 的, 104–105
+- newInstance 方法
+  - DocumentBuilderFactory 的, 150, 160
+  - SAXParserFactory 的, 201, 203
+  - TransformerFactory 的, 213
+  - XMLInputFactory 的, 207
+  - XMLOutputFactory 的, 214, 221
+  - XPathFactory 的, 191, 195
+- NewObject 函数 (C), 965, 970, 974
+- newOutputStream 方法
+  - Channels 的, 250, 257
+  - Files 的, 104–105
+- newPath 方法 (PathFactory), 195
+- newSAXParser 方法 (SAXParserFactory), 201, 203
+- NewString 函数 (C), 953
+- NewStringUTF 函数 (C), 950–952, 954, 988
+- newTransformer 方法 (TransformerFactory), 213, 231
+- NewXmlArray 函数 (C), 973, 988
+- next 方法
+  - ResultSet 的, 298, 300, 321
+  - XMLStreamReader 的, 208
+- next、nextForName 方法 (TemporalAdjusters), 359
+- nextElement 方法 (Enumeration), 659, 987–990
+- nextPage 方法 (CachedRowSet), 330, 332
+- NMTOKEN、NMTOKENS 属性类型 (DTD), 167–168
+- Node 接口
+  - appendChild 方法, 209, 212
+  - getAttributes 方法, 154, 161
+  - getChildNodes 方法, 151, 161
+  - getFirstChild 方法, 153, 161
+  - getLastChild 方法, 154, 161
+  - getLocalName 方法, 198–199
+  - getNamespaceURI 方法, 198–199
+  - getNextSibling 方法, 154, 161
+  - getNodeXxx 方法, 154, 161, 198
+  - getParentNode 方法, 161
+  - getPreviousSibling 方法, 161
+  - 的子接口, 151
+- 节点渲染器, 648
+- nodeChanged 方法 (DefaultTreeModel), 652, 658
+- NodeList 接口, 151
+  - getLength 方法, 151, 162
+  - item 方法, 151, 162, 169
+- 节点 (Swing), 639
+  - 添加/移除, 652
+  - 中的更改, 653
+  - 子节点, 639, 642
+  - 折叠, 654
+  - 用于节点的连接线, 645–646
+  - 当前选中的节点, 650
+  - 编辑, 654, 673
+  - 枚举, 659–661
+  - 展开, 654
+  - 用于节点的处理器, 644, 646, 661
+  - 突出显示, 662
+  - 通过树路径标识, 650
+  - 使节点可见, 653
+  - 父节点, 639, 642
+  - 渲染, 661–664
+  - 根节点, 639–647
+  - 的行位置, 652
+  - 搜索给定用户对象, 660, 666
+  - 选择, 665
+  - 用于节点的用户对象, 642
+  - 更改, 652
+- nodesChanged 方法 (DefaultTreeModel), 658
+- 非确定性解析, 166
+- noneMatch 方法 (Stream), 13
+- 流操作的非干扰性, 43
+- @NotNull 注解, 467–468
+- normalize 方法 (Path), 102–103
+- 规范化颜色值, 835
+- Normalizer 类, 395
+  - normalize 方法, 400
+- NoSuchAlgorithmException, 550, 573
+- NoSuchElementException, 15, 990
+- notFilter 方法 (RowFilter), 615, 625
+- NotSerializableException, 92
+- now 方法 (Date and Time API), 352, 356, 360, 363
+- NT 登录, 531
+- NTLoginModule 类, 532–533
+- NTUserPrincipal 类, 533
+- NullPointerException, 12, 976
+- Number 类
+  - doubleValue 方法, 378
+  - intValue 方法, 379
+- numberFilter 方法 (RowFilter), 615, 625
+- NumberFormat 类, 378–383, 691 (续)
+  - format 方法, 379, 383
+  - get/setXxxDigits 方法, 383
+  - getAvailableLocales 方法, 376, 379, 383
+  - getCurrencyInstance 方法, 378, 383–384, 691
+  - getIntegerInstance 方法, 689
+  - getNumberInstance 方法, 378, 383, 691
+  - getPercentInstance 方法, 378, 383, 691
+  - isParseIntegerOnly 方法, 383
+  - parse 方法, 378–379, 383
+  - setGroupingUsed 方法, 384
+  - 支持的区域设置, 376
+- numberFormat/NumberFormat.java, 380
+- NumberFormatException, 683
+- 数字：
+  - 过滤, 615
+  - 浮点数, 372, 378–383, 691
+  - 格式化, 372, 378–383, 691
+    - 支持的区域设置, 379
+    - 使用 C, 947
+  - 在正则表达式中, 131, 133
+  - 打印, 61
+  - 随机数, 37
+  - 读取：
+    - 从文件, 56
+    - 从 ZIP 归档, 58
+    - 使用区域设置, 378
+  - 真随机, 370
+  - 以二进制格式写入, 69
+- NUMERIC 数据类型 (SQL), 291, 348
+- NVARCHAR 数据类型 (SQL), 348
+
+## O
+
+- Object 类，clone 方法, 81, 98
+- 对象检查树, 671–680
+- 对象引用与剪贴板, 902
+- 对象序列化, 80–100
+  - 使用对象序列化克隆, 98–100
+  - 用于对象序列化的文件格式, 85–92
+  - 其中对象的 MIME 类型, 893
+  - 修改默认序列化, 92–94
+  - 单例的序列化, 94–95
+  - 用于对象序列化的序列号, 82–83
+- ObjectInputStream 类, 81
+  - 构造函数, 85
+  - readObject 方法, 81, 85, 93
+- ObjectOutputStream 类, 80
+  - 构造函数, 85
+  - defaultWriteObject 方法, 92
+  - writeObject 方法, 80, 85, 92
+- 对象
+  - 克隆, 98–100
+  - 的指纹, 87
+  - 的生命周期, 472
+  - 的 MIME 类型, 893
+  - 打印, 61
+  - 从输入流读取, 81
+  - 保存：
+    - 在数据库中, 474
+    - 在输出流中, 80, 82
+    - 以文本格式, 63–67
+  - 可序列化, 80–85
+    - 通过剪贴板传输, 898–902
+    - 通过网络连接传输, 84
+  - 用于对象的类型代码, 87, 961
+  - 版本管理, 95–98
+- objectstream/ObjectStreamTest.java, 84
+- ODBC API, 282, 284
+- of 方法
+  - Date and Time API 的, 356, 360–363
+  - DoubleStream 的, 39
+  - IntStream 的, 36, 38
+  - LongStream 的, 39
+  - Optional 的, 16
+  - Stream 的, 5, 8
+- ofDateAdjuster 方法 (TemporalAdjusters), 359
+- ofLocalizedDate 方法 (DateTimeFormatter), 365, 385, 392
+- ofNullable 方法 (Optional), 16
+- ofPattern 方法 (DateTimeFormatter), 367
+- o) 字面量 (SQL), 319
+- 一键展开图标, 732
+- open 方法
+  - Desktop 的, 927, 932
+  - FileChannel 的, 117, 122
+  - SocketChannel 的, 250, 256
+- openConnection 方法 (URL), 259, 265
+- 打开的非本地图标, 648, 661
+- openOutputStream 方法 (SimpleFileVisitor), 445, 449
+- OpenSSL 工具包, 560–561
+- openStream 方法 (URL), 257, 265
+- 操作系统
+  - 中的字符编码, 404
+  - 中的资源, 408
+- Optional 类, 12–17
+  - 创建 Optional 的值, 16
+  - empty 方法, 16
+  - flatMap 方法, 16–19
+  - get 方法, 15–16
+  - ifPresent 方法, 14–15, 41
+  - isPresent 方法, 15–16
+  - map 方法, 14–15
+  - of、ofNullable 方法, 16
+  - orElse 方法, 12, 14–15, 41

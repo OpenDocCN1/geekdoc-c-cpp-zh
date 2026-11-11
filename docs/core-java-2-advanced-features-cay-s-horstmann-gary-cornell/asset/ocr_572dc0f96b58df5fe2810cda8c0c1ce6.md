@@ -1,0 +1,17 @@
+# Table 2.6 *(Continued)*
+
+| Expression | Description | Example |
+|---|---|---|
+| `\\d, \\D` | Digits (`[0-9]`, or `\\p{Digit}` when the `UNICODE_CHARACTER_CLASS` flag is set); the complement | `\\d+` is a sequence of digits |
+| `\\w, \\W` | Word characters (`[a-zA-Z0-9_]`, or Unicode word characters when the `UNICODE_CHARACTER_CLASS` flag is set); the complement | |
+| `\\s, \\S` | Spaces (`[\\n\\r\\t\\f\\x0B]`, or `\\p{IsWhite_Space}` when the `UNICODE_CHARACTER_CLASS` flag is set); the complement | `\\s*,\\s*` is a comma surrounded by optional white space |
+| `\\h, \\v, \\H, \\V` | Horizontal whitespace, vertical whitespace, their complements | |
+| **Sequences and Alternatives** |  |  |
+| `XY` | Any string from X, followed by any string from Y | `[1-9][0-9]*` is a positive number without leading zero |
+| `X\|Y` | Any string from X or Y | `http\|ftp` |
+| **Grouping** |  |  |
+| `(X)` | Captures the match of X | `(".*")` captures the quoted text |
+| `\\n` | The nth group | `(["']).*\\1` matches `"Fred"` or `'Fred'` but not `"Fred'` |
+| `(?<name>X)` | Captures the match of X with the given name | `(?<id>[a-zA-Z0-9]+)` captures the match with name `id` |
+| `\\k<name>` | The group with the given name | `\\k<id>` matches the group with name `id` |
+| `(?:X)` | Use parentheses without capturing X | In `(?:http\|ftp)://(.*)`, the match after `://` is `\\1` |

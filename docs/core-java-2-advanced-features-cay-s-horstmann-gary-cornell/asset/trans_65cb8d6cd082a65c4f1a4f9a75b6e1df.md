@@ -1,0 +1,292 @@
+
+- distinct 方法 (Stream), 11–12, 43
+- 抖动, 818
+- divideBy 方法 (Instant, Duration), 353
+- dnaJ/SecD/jmps.js, 907
+- dnaJ/SecDotFes.js, 907
+- dnaJ/RepeatsTargetedOrJmps.js, 915
+- doAs, 536
+- doAsPrivileged 方法 (Subject), 532–533, 536
+- Doc 接口, 874
+- DocAttributeSet 接口, 879
+  - 实现, 881
+  - 打印其属性, 882–885
+- DocWriter 接口, 880–881
+- DocFlavor 类, 874–875, 878
+- DocPrintJob 接口
+  - getAttributes 方法, 886
+  - print 方法, 877
+- DOC TYPE 声明 (DTD), 164
+  - 包含在输出中, 210
+- Document 接口
+  - addDocumentListener 方法, 682, 685
+  - createXxx 方法, 209, 212
+  - getDocument 方法, 150, 160, 161
+  - getLength 方法, 685
+  - getText 方法, 685
+  - 实现, 681
+- 文档过滤器, 688–690
+- 打印服务的文档格式, 874–875
+- 文档监听器, 682
+- DocumentBuilder 类
+  - newDocument 方法, 209, 212, 227
+  - parse 方法, 160
+  - setEntityResolver 方法, 164, 170
+  - setErrorHandler 方法, 170
+- DocumentBuilderFactory 类
+  - is/setIgnoringElementContentWhitespace 方法, 169, 171
+  - is/setNamespaceAware 方法, 174, 198–199, 201, 209
+  - isValidating 方法, 171
+  - newDocumentBuilder 方法, 150, 160, 209
+  - newInstance 方法, 150, 160
+  - setNamespaceAware 方法, 209
+  - setValidating 方法, 169
+- @Documented 注解, 470, 472, 474
+- DocumentEvent 接口, getDocument 方法, 685
+- DocumentFilter 类, 689
+  - insertString 方法, 688–689, 702
+  - remove 方法, 702
+  - replace 方法, 689, 702
+- DocumentListener 接口, XxxUpdate 方法, 682, 685
+- doFinal 方法 (Cipher), 568, 571, 573, 575
+- DOM（文档对象模型）解析器, 149–150, 199
+  - 在其中支持 RBIC 标识符, 164
+- DOM（文档对象模型）树
+  - 使用 XPath 访问, 190–196
+  - 分析, 152–154
+  - 构建, 208–222
+  - 写入, 210–211
+- doPrivileged, java, 155
+- Double 类, 227, 232
+- DoubleSource 类, 213, 226
+- DOUBLE 数据类型 (SQL), 291, 348
+- double 类型
+  - 打印, 61
+  - 类型代码, 87, 961
+  - 与 C 类型对比, 947
+  - 以二进制格式写入, 69
+- DoubleBuffer 类, 124
+- 双击列表组件, 585
+- double 方法 (Random), 37, 40
+- DoubleStream 接口, 36–41
+  - average, max, min, sum 方法, 37, 40
+  - boxed 方法, 36, 40
+  - mapToDouble 方法, 36
+  - of 方法, 39
+  - summaryStatistics 方法, 37, 40
+  - toArray 方法, 36, 40
+- DoubleSummaryStatistics 类, 20, 23, 37, 41
+- doubleValue 方法 (Number), 378
+- 下游收集器, 29–33
+- 拖放, 903–921
+  - 其中的文件列表, 914
+  - 在 Swing 组件中, 904–921
+  - 使用拖放的移动与复制, 903
+  - 其视觉反馈, 912
+- 拖放源, 903
+  - 配置, 909–912
+- draw 方法 (Graphics2D), 767–769, 787
+- 绘制
+  - 形状, 766–769
+  - 简单绘制, 765
+- drawXxx 方法 (Graphics), 769
+- DriverManager 类, 294
+  - getConnection 方法, 295, 297, 306, 350
+  - setLogWriter 方法, 296
+- 放置操作, 903–904
+- 放置位置, 914
+- DROP TABLE 语句 (SQL), 295
+  - 执行, 298, 300
+  - 在批量更新中, 345
+- 放置目标, 903, 912–921
+- Dropping 类 (JList 的)
+  - getIndex 方法, 914, 920
+  - isInsert 方法, 915, 920
+- DropLocation 类 (JTable 的), getXxx, isInsertXxx 方法, 920
+- DropLocation 类 (JTextComponent 的), getIndex 方法, 921
+- DropLocation 类 (JTree 的)
+  - getChildIndex 方法, 920
+  - getPath 方法, 914, 920
+- DropLocation 类 (TransferHandler 的), 914
+  - getDropPoint 方法, 920
+- DSA（数字签名算法）, 551–552
+- DST, DST_Xxx 合成规则, 810
+- DTDHandler 类, 201
+- DTD（文档类型定义）, 163–171
+  - 元素内容, 165–166
+  - 实体, 168
+  - 外部, 164
+  - 在 XML 文档中, 147, 164
+  - 无歧义, 166
+  - URL, 164
+- Duration 类
+  - 算术运算, 353
+  - between 方法, 352
+  - 不可变, 354
+  - toXxx 方法, 353
+- 动态链接, 981
+- 动态网页, 449–454
+
+## E
+- \e, \E, 在正则表达式中, 130
+- 回声服务器, 244
+- Eclipse, 启动插件, 922
+- 边缘检测, 845
+- edit 方法 (Desktop), 927, 932
+- 编辑器窗格 (Swing), 681, 712–719
+  - 编辑模式, 714
+  - 在独立线程中加载页面, 715
+- editorPane/EditorPane.java, 716
+- 自定义编辑器, 629
+- element 元素 (XML Schema), 172
+- Element 接口, 477
+  - getSimpleName 方法, 477
+- Element 接口
+  - getAttribute 方法, 154, 161, 176
+  - getTagName 方法, 151, 161, 198
+  - setAttribute, setAttributeNS 方法, 209, 212
+- ELEMENT 元素内容 (DTD), 165–166
+- 元素 (XML)
+  - 子元素, 147
+  - 在 XPath 中访问, 191
+  - 命名空间, 197
+  - 构造, 209
+  - 在 XPath 中计数, 191
+  - 空元素, 146
+  - 获取节点列表, 154
+  - 合法属性, 167
+  - 名称, 151, 198
+  - 根元素, 147, 172
+  - 修剪空白, 153
+  - 与属性对比, 147–148, 168, 212
+- Ellipse2D 类, 769
+- 椭圆, 边界矩形, 770
+- 电子邮件, 927
+  - 从桌面应用启动, 927
+  - 发送, 277–280
+  - 终止行, 278
+- employee/Employee.java, 959
+- employee/EmployeeTest.java, 958
+- empty 方法
+  - Optional 的, 16
+  - Stream 的, 5, 8
+- EMPTY 元素内容 (DTD), 165
+- 空标签 (XML), 146
+- encode 方法 (URLEncoder), 277
+- 加密, 567–579
+  - 最终块填充, 568
+  - 类文件的加密, 498–499
+- end 方法 (Matcher), 135, 137, 140–141
+- 端盖样式, 788–790
+- 端点, 774
+- 结束标签 (XML), 146
+- endElement 方法 (ContentHandler), 200–204
+- 行结束字符. 参见换行符
+- 企业应用, 349–350
+- 企业 JavaBeans (EJB), 285
+  - 热部署, 496
+- 实体引用 (XML), 148, 168
+- 实体解析器, 150
+- ENTITY, ENTITIES 属性类型 (DTDs), 167–168
+- EntityResolver 类, 201
+  - resolveEntity 方法, 164, 170
+- entries 方法 (ZipFile), 80
+- Entry 类, 616
+  - getXxx 方法, 625
+- EntryLogger 类, 487
+- EntryLoggingAgent 文件, 487
+- enum 关键字, 94
+- EnumBase 类, 387
+- enumeration 元素 (XML Schema), 172
+- Enumerator 接口, 80
+  - hasMoreElements 方法, 987–989
+  - nextElement 方法, 659, 987–990
+- 枚举
+  - 树中的节点, 659–661
+  - 类型安全, 94–95
+  - 使用属性, 168
+- EnumSyntax 类, 882
+- EOFException, 974
+- 纪元, 93, 352
+- equals 方法
+  - Annotation 的, 464
+  - Collator 的, 399
+  - Permission 的, 523
+  - Set 的, 525
+- 错误处理器
+  - 在原生代码中, 974–979
+  - 安装, 170
+- 错误消息
+  - 控制, 445
+  - 监听, 444
+- ErrorHandler 类, 201
+  - error, fatalError, warning 方法, 170–171
+- 应急出口机制, 650
+- escape 关键字 (SQL), 319
+- 转义
+  - 在正则表达式中, 64, 129
+  - 在 SQL 中, 318–319
+- Essential XML (Box 等人), 143, 222
+- 欧元符号, 384, 406
+- eval 方法
+  - CompiledScript 的, 437
+  - ScriptEngine 的, 431–433
+- evaluate 方法 (XPath), 191, 196
+- 事件处理器, 注解, 457–462
+- 事件监听器, 178, 455
+- 事件队列 (AWT), 访问, 509
+- EventHandler 类, 458
+- EventListenerList 类, 673
+- 过渡事件, 584
+- Evins, Jim, 609
+- env 指针 (C), 950
+- 异常
+  - 受检, 533
+  - 来自原生代码, 974–979
+    - 在 C++ 中, 975
+    - 在 SQL 中, 302–305
+  - 类型使用注解, 468
+- 函数中的异常 (C), 975–976, 979
+- 排他锁, 127
+- exclusiveOr 方法 (Area), 787–788
+- execute(SQL) (javax), 306
+- ExecutableElement 接口, 477
+- execute 方法
+  - Base, CallableBase 的, 330, 332
+  - Statement 的, 300, 306, 319, 321
+- executeBatch 方法 (Statement), 346–347
+- executeLargeBatch 方法 (Statement), 347
+- executeQuery 方法
+  - PreparedStatement 的, 310, 316
+  - Statement 的, 298, 300, 323
+- executeUpdate 方法
+  - PreparedStatement 的, 310, 316
+  - Statement 的, 298, 300, 321, 344
+- exists 方法 (Files), 108–109
+- EXIT 语句 (SQL), 293
+- exit 方法 (System), 509
+- exportAsDrag 方法 (TransferHandler), 910, 912
+- exportDone 方法 (TransferHandler), 911–912
+- 扩展类加载器, 493
+- extern "C", 在原生方法中 (C++), 943
+- 外部实体, 168
+- Externalizable 接口, 外部化方法, 93–94
+
+## F
+- f (float), 类型代码, 87, 961
+- \f, 在正则表达式中, 130
+- 因式分解算法, 552
+- fatalError 方法 (ErrorHandler), 170–171
+- Field 类
+  - getXxx, getType 方法, 674
+  - 实现 AnnotatedElement, 457
+- 字段
+  - 访问:
+    - 从另一个类, 509
+    - 从原生代码, 956–961
+  - 注解, 456, 470
+  - 瞬态, 92
+- File 类, toPath 方法, 102–103
+- 文件列表, 914
+- 文件权限, 520
+
