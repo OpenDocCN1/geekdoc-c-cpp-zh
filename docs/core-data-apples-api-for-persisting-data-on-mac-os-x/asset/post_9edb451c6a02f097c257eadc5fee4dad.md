@@ -1,0 +1,258 @@
+
+- fetchRequestTemplateForName: method, 63
+- File menu, adding item to, 31
+- filenames for Spotlight metadata, 119
+- files, creating for Spotlight, 116
+- filtering
+  - NSFetchRequest searches, 61
+  - objects in an NSArrayController, 48
+- finalize method, not overriding, 58
+- findParameter implementation (CDPPreferences), 233
+- formats for persistent stores, 97–99, 189
+
+### G
+
+- GeneratePermanentURIsForURLs method, 132
+- generating Spotlight metadata files, 119
+- GetMetadataForFile.m file, 127
+
+### H
+
+- Harrington, Tom, 8
+- hashes (versioning), 83
+- History pane (Syncroscopy), 159
+- HTML pages for recipes, 134
+
+### I
+
+- IBAction objects, 30
+- IBOutlet objects, 30
+- identity properties, for Sync Services, 144
+- imagePath key (ClientDescription.plist), 149
+- images, adding to user interface, 30
+- importer, Spotlight
+  - building, 123–130
+  - performance requirements, 116
+- importing images, 30
+- importing recipes (multithreading example), 173–178
+- in-memory stores, 97, 189
+- Info.plist, populating Type table from, 66
+- information overload, 113
+- ingredients property, 19
+- inheritance, entity, 101
+- initWithFetchController method, 198
+- initXXX methods, not overriding, 57
+- inspectors, 26
+- intelligent relationships, 103
+- Interface Builder, 9, 22
+- inverse relationships, 19, 20
+- iPhone, 184–206
+  - data change notifications, 192–194
+  - delegate design pattern, 193
+  - NSFetchedResultsController objects, 194
+  - NSNotificationCenter objects, 193
+  - memory management, 190–192
+  - recipe application on, 195–206
+    - building detail view controller, 204–206
+    - building main table view, 198–204
+    - preparing NSFetchedResultsController, 196–198
+    - upgrading applications to Core Data, 185–189
+
+### K
+
+- Key Value Coding (KVC), 34–38
+  - primitive access to NSManagedObject attributes, 53
+  - primitive access to NSManagedObject relationships, 56
+- Key Value Observing (KVO), 39–40
+  - primitive access to NSManagedObject attributes, 53
+  - primitive access to NSManagedObject relationships, 56
+
+### L
+
+- large binary data, storing, 101
+- localization file (sync), 148
+- localizeDescription method, 76, 213
+- logError: method, 212
+
+### M
+
+- main method (NSOperation), 163
+- MainMenu element, 31
+- managedObjectContext: method, 189
+- managedObjectContextsToMonitorWhenSyncingPersistentStoreCoordinator: method, 153
+- managedObjectContextsToReloadAfterSyncingPersistentStoreCoordinator: method, 153
+- ManagedObjectModels key (Schema.plist), 148
+- manual data migration, 90
+- mapping models, 84
+  - first, creating, 79–81
+  - updating, 96
+- medium binary data, storing, 100
+- memory management, iPhone, 190–192
+- menu items (user interface), 31, 165, 173
+- mergeChangesFromContextDidSaveNotification: method, 164, 178
+- metadata files for Spotlight integration, 116–123, 129, 139
+- metadataFolder, method, 123
+- methods, overriding
+  - methods good for, 58
+  - methods not safe for, 57
+- migrate phase (sync process), 141
+- mom files, 68
+  - entity hashes, 83
+- multithreading, 162–183
+  - creating multiple contexts, 163–165
+  - distributed objects and, 208
+  - exporting recipes (example), 165–173
+  - importing recipes (example), 173–178
+  - NSManagedObjectContext objects and, 65, 162
+  - NSPersistentStoreCoordinator objects and, 69
+  - recursive copy, 178–182
+  - why Core Data is thread unsafe, 162–163
+- mutable access, to-many relationships, 55
+- mutableSetValueForKey: method, 56
+
+### N
+
+- name attribute (Schema.plist), 148
+- name attribute, Type entity, 21
+- names for Spotlight metadata files, 119
+- netServiceBrowser:didFindService: implementation (DistributedCDClient), 220
+- netServiceDidResolveAddress: implementation (DistributedCDClient), 221
+- networking code for distributed Core Data, testing, 222–226
+  - disconnect method, 223
+  - startTestTimer method, 222
+  - testChildDeletion method, 226
+  - testChildInsertion method, 225
+  - testObjectDeletion method, 225
+  - testObjectFetch method, 224
+  - testObjectInsertion method, 225
+  - testPing method, 223
+- new projects, creating, 16
+- newContextForMainStore method, 164
+- nonatomic option (property definitions), 38
+- notifications with KVO, avoiding, 53, 56
+- NSAlert objects, 76
+- NSArray objects
+  - for exporting recipes (example), 167
+  - for importing recipes (example), 176
+  - sorting, 63
+- NSArrayController objects, 23
+  - for exporting recipes (example), 168
+  - using Cocoa Bindings with, 42
+- NSAttributedString objects, 27
+- NSButton objects, 26
+- NSComboBox objects, 28
+  - binding to Type entity, 66
+- NSConnection objects, 221
+- NSDateFormatter objects, Cocoa Bindings with, 44
+- NSDictionary objects, for Spotlight integration, 116
+- NSEntityDescription objects, for fetch requests, 60
+- NSEntityMigrationPolicy objects, 85–88
+- NSFetchedResultsController objects, 64, 190, 194, 196–198
+- NSFetchRequest objects, 59–63
+  - disk access and, 108
+  - executing fetch requests, 60
+  - for exporting recipes (example), 167
+  - of faulted NSManagedObject objects, 105
+  - for importing recipes (example), 176
+  - setting entity for fetch, 60
+  - storing fetch requests, 62
+  - using NSPredicate objects with, 61
+- NSFileManager objects, 33
+- NSFormatter objects, Cocoa Bindings with, 43
+- NSImageView objects, 30
+- NSManagedObject objects, 52–59
+  - accessing attributes, 52–54
+    - primitive access, 53
+  - accessing relationships, 54–56
+    - primitive access, 56
+    - property accessors, 56
+    - to-many relationships, 55
+    - to-one relationships, 55
+  - subclassing, 57–59
+  - faulted, 105
+  - Key Value Coding with, 35
+    - prefetching property values, 106
+- NSManagedObjectContext objects, 64–67
+  - creating multiple, 163–165
+  - for export files, 171
+  - passing by reference, 215
+  - updating Spotlight metadata files, 119
+- NSManagedObjectContextDidSaveNotification key, 164, 177
+- NSManagedObjectID objects, 105
+  - prefetching, 107
+- NSManagedObjectModel objects, 68–69
+  - finding for progressive migration, 92
+  - iPhone projects, 187
+  - as thread safe, 162
+- NSMappingModel objects
+  - finding for progressive migration, 93
+  - updating, 96
+- NSMapTable objects, 165, 173
+- NSMigratePersistentStoresAutomaticallyOption key, 90
+- NSMigrationManager objects, 94
+- NSMutableSet objects, 55
+- NSNetService objects, 211, 221
+- NSNetServiceBrowser objects, 220
+- NSNotification API, 193
+- NSNotification objects, multithreading and, 164, 177
+- NSNotificationCenter objects, 193
+- NSNumberFormatter objects, 28, 29
+  - using Cocoa Bindings with, 43
+- NSObject objects
+  - Key Value Coding implementation, 34
+  - Key Value Observing implementation, 39
+- NSObjectController objects, Cocoa Bindings with, 46
+- NSOpenPanel objects, 32
+- NSOperation objects, 163, 170
+- NSOperationQueue objects, 163
+- NSOutlineView objects, Cocoa Bindings with, 46
+- NSPersistentDocument objects, 232
+- NSPersistentStore objects
+  - adding to NSPersistentStoreCoordinator, 71, 75
+  - as thread safe, 162
+- NSPersistentStoreCoordinator objects, 69–71, 110
+  - enabling automatic versioning, 89
+  - iPhone projects, 187
+  - modifying for syncing, 151–152
+  - as thread safe, 162
+- NSPersistentStoreCoordinatorSyncing protocol, 152
+- NSPredicate objects, 48
+  - focusing fetch requests with, 61
+- NSRemoveTemplateImage, 26
+- NSSavePanel objects, 169
+- NSScrollView objects, 26
+- NSSearchField objects, Cocoa Bindings with, 48
+- NSSet objects, 55
+- NSSocketPort objects, 210, 211
+- NSSortDescriptor objects, 63–64
+- NSTableColumn objects, 26
+- NSTableView objects, 26
+  - using Cocoa Bindings with, 41
+- NSTreeController objects, 47
+  - using Cocoa Bindings with, 48
+- NSUnderlyingErrorKey, 213
+- NSUnderlyingException objects, 213
+- NSURL objects, for NSManagedObjectModel, 69
+- NSUserDefaults objects, 228
+- numberOfSectionsInTableView: method, 199
+
+### O
+
+- object deletion, 110
+- objectOfType:withName: method, 182
+- objectsOfName:withPredicate:
+  - implementation (DistributedCDServer), 218
+- one-to-many relationships, 20
+- one-way copies of repository, 171
+- optimizing data model, 99–104
+  - denormalizing data, 102
+  - entity inheritance, 101
+  - intelligent relationships, 103
+  - storing binary data, 99
+- order of magnitude (performance), 109
+- ordering data
+  - with NSSortDescriptor, 63–64
+  - performance and, 112
+- outline views (user interface), 46
+- overriding methods
+  - methods good for, 58

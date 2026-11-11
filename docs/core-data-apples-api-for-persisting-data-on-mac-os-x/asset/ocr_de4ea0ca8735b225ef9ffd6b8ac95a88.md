@@ -1,0 +1,7 @@
+# ## 11.4 Wrapping Up
+
+Whenever we start working with multiple computers on a network or interapplication communication, the code starts to get extremely complex. However, at least with this design, we can keep the Core Data/persistence separated from the distributed objects/networking as much as possible. By doing so, we avoid the need for a large number of locks and synchronization that would otherwise be required.
+
+As we discussed at the beginning of this chapter, it is not a very scalable design, but in situations where a formal stand-alone database is overkill, this design actually works quite well. There is no user configuration, and there is no need to set up an external application; we just start one application on one machine and another application on another and let them talk. The biggest gotcha is with the NSManagedObjectContext. As long as we do not try to share it across the distributed objects, we can use Core Data fairly transparently.
+
+The design that we built here can also be used in a peer environment as opposed to the client-server design. Multiple peers could use Bonjour to discover each other and use distributed objects to sync their data stores so that each device has a complete and up-to-date copy of the data set. In a situation like that, a user could have our application on each of their machines, and whenever they are near each other (that is, on the same local network), they would automatically update each other. Talk about a pleasant user experience!

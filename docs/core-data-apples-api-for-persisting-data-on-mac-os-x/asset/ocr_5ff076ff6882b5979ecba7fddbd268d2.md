@@ -1,0 +1,9 @@
+# Chapter 1
+
+# Introduction
+
+It is hard to believe that I have been working on this book for nine months and that it is now complete. I freely admit that I walked into this project with a lot of trepidation. There was simply no way that I was going to fill an entire book about Core Data! Now looking back on it, I realize how wrong I was. If you look at Core Data in a vacuum, then it can be a fairly small subject, and believe me, that is a good thing. But when we take it as part of the whole ecology of OS X, then it becomes so much more, which makes it possible to write several books on the subject.
+
+Back when Core Data was first introduced, I was in the process of designing a desktop application later to become known as Simple Elegant Sales. This point-of-sale software was originally written for my wife and her business as a photographer. I wanted her to be able to easily handle the accounting of her business from her laptop as she traveled from location to location. When I originally wrote the software, I had far more experience with Java than with Objective-C, but I knew that if the app was going to be taken seriously as an OS X application, the user interface had to be written in Objective-C and Cocoa. A Java UI simply would not do. However, I decided to write the back side of the application in Java so that I could take advantage of the powerful databases and relational mapping abilities of Hibernate.
+
+I was about halfway through this project when I met Tom Harrington of Atomic Bird (http://www.atomicbird.com). He suggested that I take a look at Core Data for the back end of my software and that it might suit my needs better than Java. At that time, Tiger had not yet been released, and Core Data was still available only to developers. After experimenting with it for just one day, I immediately went back to the

@@ -869,6 +869,7 @@
 +   [酷编程：充满适合所有年龄段孩子的奇妙知识（酷小孩）](docs/cool-coding-filled-with-fantastic-facts-for-kids-of-all-ages/README.md)
 +   [酷信息图表：数据数据可视化与设计的有效沟通](docs/cool-infographics-effective-communication-with-data-visualiz/README.md)
 +   [协调模型与语言：第11届国际会议，COORDINATION 2009，葡萄牙里斯本，2009年6月9日至12日，论文集（计算机科学讲义……程序设计与软件工程）](docs/coordination-models-and-languages-11th-international-confere/README.md)
++   [Core Data：苹果在 Mac OS X 上持久化数据的 API](docs/core-data-apples-api-for-persisting-data-on-mac-os-x/README.md)
 +   [Core Java SE 9 入门指南](docs/core-java-se-9-for-the-impatient/README.md)
 +   [Java Java 第二卷：高级特性](docs/core-java-volume-ii-advanced-features/README.md)
 +   [Core Java 卷 II：高级特性 II](docs/core-java-volume-ii-advanced-features-ii/README.md)

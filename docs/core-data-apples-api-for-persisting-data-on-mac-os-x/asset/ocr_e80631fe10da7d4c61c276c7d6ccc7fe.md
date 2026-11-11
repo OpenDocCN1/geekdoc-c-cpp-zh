@@ -1,0 +1,55 @@
+```
+```xml
+<string>Grokking Recipes</string>
+<key>ImagePath</key>
+<string>App.icns</string>
+<key>Type</key>
+<string>app</string>
+<key>Entities</key>
+<dict>
+  <key>com.pragprog.GrokkingRecipes.Author</key>
+  <array>
+    <string>com.apple.syncservices.RecordEntityName</string>
+    <string>name</string>
+    <string>recipes</string>
+  </array>
+  <key>com.pragprog.GrokkingRecipes.Ingredient</key>
+  <array>
+    <string>com.apple.syncservices.RecordEntityName</string>
+    <string>cost</string>
+    <string>name</string>
+    <string>quantity</string>
+    <string>recipes</string>
+    <string>unitOfMeasure</string>
+  </array>
+  <key>com.pragprog.GrokkingRecipes.Recipe</key>
+  <array>
+    <string>com.apple.syncservices.RecordEntityName</string>
+    <string>desc</string>
+    <string>lastUsed</string>
+    <string>name</string>
+    <string>serves</string>
+    <string>type</string>
+    <string>author</string>
+    <string>ingredients</string>
+    <string>image</string>
+  </array>
+  <key>com.pragprog.GrokkingRecipes.RecipeIngredient</key>
+  <array>
+    <string>com.apple.syncservices.RecordEntityName</string>
+    <string>quantity</string>
+    <string>unitOfMeasure</string>
+    <string>ingredient</string>
+    <string>recipe</string>
+  </array>
+  <key>com.pragprog.GrokkingRecipes.Type</key>
+  <array>
+    <string>com.apple.syncservices.RecordEntityName</string>
+    <string>name</string>
+  </array>
+  <key>com.pragprog.GrokkingRecipes.UnitOfMeasure</key>
+  <array>
+    <string>com.apple.syncservices.RecordEntityName</string>
+    <string>name</string>
+```
+```
