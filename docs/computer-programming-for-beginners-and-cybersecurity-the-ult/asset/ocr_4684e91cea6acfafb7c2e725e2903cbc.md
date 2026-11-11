@@ -1,0 +1,9 @@
+# CHAPTER 2:
+
+# Conditional Statements
+
+Now, it is time to move on to the topic of conditional statements, which can also go by the name of decision control statements. These are going to be the statements that allow the computer to make some decisions based on the input that the user has, as well as what you would like to happen with the program. You will have many times in your program where you will want the computer to make some decisions and complete itself when you are not there. If you are working on a code where you would like the user to put in their answer, rather than giving them two options to work with, then these decision control statements are going to be good options to work with.
+
+There are going to be a few different options that you can work with when you are making these conditional statements. The three most common ones are going to include the if statement, the if-else statement, and the elif statement. As a beginner, we are going to start with the basics of the if statement to get a good idea of how these can work, and then we will build up to understand some of the more complicated things that you can do with these conditional statements.
+
+The first option that we are going to take a look at is the if statement. The if statement is going to work with the ideas, and the answer that your user gives to the computer is going to be either true or false. If the user does an input of information that is seen as true based on your code, then the interpreter can continue with the program, and it will show up the statements or the information that you would like. But, if the user is on the program and puts in something that doesn’t match up with your code, and is seen as false, then the program is automatically going to end.
