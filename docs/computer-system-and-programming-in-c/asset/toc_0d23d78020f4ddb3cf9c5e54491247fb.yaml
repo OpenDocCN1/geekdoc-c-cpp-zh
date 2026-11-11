@@ -1,0 +1,188 @@
+level_changes:
+- line: 169
+  before: 2
+  after: 3
+- line: 173
+  before: 2
+  after: 3
+- line: 177
+  before: 2
+  after: 3
+- line: 181
+  before: 2
+  after: 3
+- line: 185
+  before: 2
+  after: 3
+- line: 189
+  before: 2
+  after: 3
+- line: 193
+  before: 2
+  after: 3
+- line: 197
+  before: 2
+  after: 3
+- line: 201
+  before: 2
+  after: 3
+- line: 205
+  before: 2
+  after: 3
+- line: 209
+  before: 3
+  after: 4
+- line: 217
+  before: 3
+  after: 4
+- line: 223
+  before: 3
+  after: 4
+- line: 227
+  before: 3
+  after: 4
+- line: 231
+  before: 3
+  after: 4
+- line: 235
+  before: 3
+  after: 4
+- line: 239
+  before: 3
+  after: 4
+- line: 243
+  before: 3
+  after: 4
+- line: 247
+  before: 2
+  after: 3
+- line: 263
+  before: 3
+  after: 4
+- line: 285
+  before: 2
+  after: 5
+- line: 289
+  before: 2
+  after: 5
+- line: 293
+  before: 2
+  after: 5
+- line: 297
+  before: 2
+  after: 5
+- line: 316
+  before: 2
+  after: 5
+- line: 322
+  before: 2
+  after: 5
+- line: 355
+  before: 2
+  after: 5
+- line: 5552
+  before: 1
+  after: 3
+- line: 10382
+  before: 2
+  after: 3
+- line: 10479
+  before: 2
+  after: 3
+- line: 10527
+  before: 2
+  after: 3
+- line: 10569
+  before: 2
+  after: 3
+- line: 10819
+  before: 2
+  after: 3
+- line: 10830
+  before: 2
+  after: 3
+- line: 10838
+  before: 2
+  after: 3
+- line: 10853
+  before: 2
+  after: 3
+- line: 11026
+  before: 2
+  after: 3
+- line: 11038
+  before: 2
+  after: 3
+- line: 11053
+  before: 2
+  after: 3
+- line: 11163
+  before: 2
+  after: 3
+- line: 11177
+  before: 2
+  after: 3
+text_changes:
+- line: 2557
+  before: 编程基础
+  after: 3 编程基础
+- line: 5149
+  before: C 语言中的数据类型
+  after: 6 C 语言中的数据类型
+- line: 6013
+  before: 运算符和表达式
+  after: 7 运算符和表达式
+- line: 7089
+  before: 8. 输入和输出函数
+  after: 8 输入和输出函数
+- line: 8657
+  before: 最高人民法院 关于办理减刑、假释案件具体应用法律的规定
+  after: 问题 9
+- line: 10375
+  before: 数组的分类
+  after: 11 数组
+- line: 14182
+  before: 动态内存分配
+  after: 15 动态内存分配
+- line: 15557
+  before: 预处理器指令
+  after: 16 预处理器指令
+- line: 16843
+  before: 数值库
+  after: 18 数值库
+- line: 5552
+  before: 字符用于预处理命令。*预处理器*是一种系统程序，它在编译器之前运行，并将替换文本替换为实际文本。
+  after: 预处理器
+- line: 7468
+  before: 示例：使用 getch() 函数输入字符的WAP程序
+  after: 示例：使用 getch() 函数输入字符的 WAP 程序
+- line: 17003
+  before: (c) *log10*
+  after: (c) log10()
+- line: 17050
+  before: (d) *modf*
+  after: (d) modf()
+- line: 17105
+  before: (a) *ceil*
+  after: (a) ceil()
+- line: 17152
+  before: (b) *fabs()*
+  after: (b) fabs()
+- line: 17196
+  before: (c) *floor*
+  after: (c) floor()
+- line: 17245
+  before: (d) *fmod()*
+  after: (d) fmod()
+- line: 17303
+  before: (a) *abort*
+  after: (a) abort()
+- line: 17312
+  before: (b) *assert*
+  after: (b) assert()
+- line: 17321
+  before: (c) *exit*
+  after: (c) exit()
+- line: 17330
+  before: (d) *system*
+  after: (d) system()

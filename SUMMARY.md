@@ -830,6 +830,7 @@
 +   [计算机科学纯粹而简单合订：面向 7-12 年级自学者的趣味编程](docs/computer-science-pure-and-simple-combined-edition-fun-progra/README.md)
 +   [计算机科学家让·巴蒂克 (STEM 拓驱传记)](docs/computer-scientist-jean-bartik-stem-trailblazer-bios/README.md)
 +   [计算机安全素养：数字世界中保持安全](docs/computer-security-literacy-staying-safe-in-a-digital-world/README.md)
++   [C 语言计算机系统与编程](docs/computer-system-and-programming-in-c/README.md)
 +   [计算机系统：程序员视角（第二版）](docs/computer-systems-a-programmers-perspective-second-edition/README.md)
 +   [计算机视觉与图像处理：基础与应用](docs/computer-vision-and-image-processing-fundamentals-and-applic/README.md)
 +   [计算机视觉：从表面到三维物体](docs/computer-vision-from-surfaces-to-3d-objects/README.md)
