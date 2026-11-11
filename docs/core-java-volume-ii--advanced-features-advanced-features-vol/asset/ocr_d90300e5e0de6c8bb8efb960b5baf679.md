@@ -1,0 +1,23 @@
+# Table 6.1 Predefined Formatters
+
+| Formatter | Description | Example |
+|---|---|---|
+| `BASIC_ISO_DATE` | Year, month, day, zone offset without separators | `19690716-0500` |
+| `ISO_LOCAL_DATE`, `ISO_LOCAL_TIME`, `ISO_LOCAL_DATE_TIME` | Separators `-`, `:`, `T` | `1969-07-16`, `09:32:00`, `1969-07-16T09:32:00` |
+| `ISO_OFFSET_DATE`, `ISO_OFFSET_TIME`, `ISO_OFFSET_DATE_TIME` | Like `ISO_LOCAL_XXX`, but with zone offset | `1969-07-16-05:00`, `09:32:00-05:00`, `1969-07-16T09:32:00-05:00` |
+| `ISO_ZONED_DATE_TIME` | With zone offset and zone ID | `1969-07-16T09:32:00-05:00[America/New_York]` |
+| `ISO_INSTANT` | In UTC, denoted by the `Z` zone ID | `1969-07-16T14:32:00Z` |
+| `ISO_DATE`, `ISO_TIME`, `ISO_DATE_TIME` | Like `ISO_OFFSET_DATE`, `ISO_OFFSET_TIME`, and `ISO_OFFSET_DATE_TIME`, but the zone information is optional | `1969-07-16-05:00`, `09:32:00-05:00`, `1969-07-16T09:32:00-05:00[America/New_York]` |
+| `ISO_ORDINAL_DATE` | The year and day of year, for `LocalDate` | `1969-197` |
+| `ISO_WEEK_DATE` | The year, week, and day of week, for `LocalDate` | `1969-W29-3` |
+| `RFC_1123_DATE_TIME` | The standard for email timestamps, codified in RFC 822 and updated to four digits for the year in RFC 1123 | `Wed, 16 Jul 1969 09:32:00 -0500` |
+
+The static methods of `LocalizedDate`, of `LocalizedTime`, and of `LocalizedDateTime` create such a formatter. For example:
+
+```
+DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG);
+String formatted = formatter.format(apolloLaunch);
+    // July 16, 1969 9:32:00 AM EDT
+```
+
+These methods use the default locale. To change to a different locale, simply use the `withLocale` method.

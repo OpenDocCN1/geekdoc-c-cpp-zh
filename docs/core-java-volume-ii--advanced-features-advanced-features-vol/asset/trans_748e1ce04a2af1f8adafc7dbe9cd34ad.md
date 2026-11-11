@@ -1,0 +1,278 @@
+
+- getMax 方法（XxxSummaryStatistics），26、30、48
+- getMaxConnections 方法（DatabaseMetaData），343
+- getMaxStatements 方法（DatabaseMetaData），303、343
+- getMessage 方法（Diagnostic），462
+- getMetaData 方法
+  - Connection 的，334、343
+  - ResultSet 的，335、344
+- getMethodCallsSystem 方法（ScriptEngineFactory），445
+- GetMethodID 函数（C），835、838
+- getMIMETypes 方法（ScriptEngineFactory），441
+- getMIMEType 方法（ImageReaderWriterSpi），755
+- getMin 方法（XxxSummaryStatistics），30、48
+- getMinute 方法
+  - LocalTime 的，366
+  - ZonedDateTime 的，371
+- getModel 方法（Entry），638
+- getMonth、getMonthValue 方法
+  - LocalDate 的，362
+  - ZonedDateTime 的，370
+- getMonths 方法（Period），363
+- getMoreResults 方法（Statement），321–322
+- getName 方法
+  - Attribute 的，806
+  - Field 的，687
+  - NameCallback 的，581
+  - Permission 的，561、566
+  - Principal 的，573
+  - PrintService 的，793
+  - UnixPrincipal 的，567
+  - XMLStreamReader 的，206
+  - ZipEntry 的，87
+  - ZipFile 的，88
+- getNames 方法（ScriptEngineFactory），441
+- getNamespaceURI 方法（Node），195–196
+- getNano 方法
+  - LocalTime 的，366
+  - ZonedDateTime 的，371
+- getNextEntry 方法（ZipInputStream），85–86
+- getNextException 方法（SQLException），304–305
+- getNextSibling 方法（Node），164、168
+- getNextWarning 方法（SQLWarning），306
+- getNodeXxx 方法（Node），164、169、195
+- getNumberInstance 方法（NumberFormat），387、392
+- getNumericXxx 方法（Currency），394
+- getNumXxx 方法（ImageReader），747、754
+- getObject 方法
+  - ResourceBundle 的，420–421
+  - ResultSet 的，300、302
+- GetObjectArrayElement 函数（C），840、843
+- GetObjectClass 函数（C），826–827
+- GetObjectField 函数（C），826、830
+- getOffset 方法（ZonedDateTime），371
+- getOrientation 方法（PageFormat），782
+- getOriginatingProvider 方法
+  - ImageReader 的，746、754
+  - ImageWriter 的，755
+- getOutputSize 方法（Cipher），606
+- getOutputStream 方法
+  - Socket 的，232、236
+  - URLConnection 的，254、261、264
+- getOwner 方法（Files），117
+- getPageCount 方法（Banner），784
+- getPageSize 方法（CachedRowSet），333
+- getParameter 方法（DataTruncation），306
+- getParent 方法
+  - ClassLoader 的，540
+  - Path 的，111
+  - TreeNode 的，671、673
+- getParentNode 方法（Node），168
+- getPassword 方法
+  - PasswordCallback 的，582
+  - RowSet 的，332
+- getPath 方法
+  - FileSystem 的，124
+  - TreeSelectionEvent 的，684
+  - URI 的，253
+- getPaths 方法（TreeSelectionEvent），678、684
+- getPathToRoot 方法（DefaultTreeModel），666
+- getPercentInstance 方法（NumberFormat），387、392
+- getPixel、getPixels 方法（Raster），757、762
+- getPointCount 方法（ShapeMaker），704
+- getPort 方法（URI），253
+- getPreviousSibling 方法（Node），168
+- getPrincipals 方法（Subject），572
+- getPrinterJob 方法（PrinterJob），773、781
+- getPrintService 方法
+  - StreamPrintServiceFactory 的，796
+- getPrompt 方法
+  - NameCallback 的，581
+  - PasswordCallback 的，582
+- getProtectionDomain 方法（Class），551
+- getValue 方法
+  - Attributes 的，202
+  - Copies 的，802
+  - Entry 的，638
+  - W3CRegexp 的，857
+- getValueOf 方法（TableModel），618–619、622
+- getValueCount 方法（Entry），639
+- getVendorName、getVersion 方法（IIOServiceProvider），746、754
+- getWarnings 方法（Connection、ResultSet、Statement），306
+- getWidth 方法
+  - ImageReader 的，748、754
+  - PageFormat 的，775、782
+- getWriter 方法（ScriptContext），444
+- getWriterXxx 方法（ImageIO），746、753
+- getYear 方法
+  - LocalDate 的，362
+  - ZonedDateTime 的，370
+- getYears 方法（Period），363
+- GIF 格式，745
+  - 动画，747
+  - 对图像的操作，767
+  - 打印，792
+- GlassFish 服务器，350
+- Glob 模式，120
+- GlobalSign，593
+- Gmail，279–280
+- GNU C 编译器，813–814
+- 哥德尔定理，542
+- Google Maps，263
+- GradientPaint 类，725
+  - 构造方法，725–726
+  - cyclic 参数，725
+- grant 关键字，553、568、599
+- Graphic Java™（Geary），614、652
+- Graphics 类，693–694
+  - drawXxx、fillXxx 方法，696
+  - get/setClip 方法，733–734、775
+- Graphics2D 类
+  - clip 方法，695、733–735、775
+  - draw 方法，695–697、715
+  - fill 方法，695–696、715
+  - getFontRenderContext 方法，733、735
+  - rotate、scale 方法，728、732
+  - setComposite 方法，695、738、744
+  - setPaint 方法，695、724、726
+  - setRenderingHint、setRenderingHints 方法，694
+  - setStroke 方法，694、715、724
+  - setTransform 方法，730、732
+  - shear 方法，728、732
+  - transform 方法，695、730、732
+  - translate 方法，728、732、784
+- 格林尼治皇家天文台，354、367
+- 格里高利历改革，363
+- GregorianCalendar 类
+  - timezone 方法，376–377
+- Groovy 编程语言，440、448
+- group 方法
+  - Matcher 的，143、145、149–150
+  - MatchResult 的，146、150
+- groupCount 方法（Matcher），149
+- 分组，34–35
+  - 分类器函数，35
+  - 归约为数字，36
+- groupingBy 方法（Collectors），34–40
+- groupingByConcurrent 方法（Collectors），35、50
+- gzip，实体引用，158
+- GUI（图形用户界面），用于 GUI 的脚本事件，447–452
+
+## H
+
+- 正则表达式中的 \h、\H，139
+- 半关闭连接，243–244
+- 《应用密码学手册》（Menezes 等），587
+- handle 方法（CallbackHandler），581
+- handleObject 方法（ResourceBundle），421
+- 句柄（Swing），657、674
+- hashDigest.java，585
+- hashCode 方法
+  - Annotation 的，472
+  - Permission 的，559
+- HashXxxAttributeSet 类，773、800
+- Haskell 编程语言，440
+- hasMoreElements 方法（Enumeration），857–859
+- hasNext 方法（XMLStreamReader），205
+- hasRemaining 方法（Buffer），130
+- 来自服务器的头信息，254
+- header 方法（HttpRequest.Builder），277
+- 表头（Swing 表格）
+  - 呈现，641
+  - 滚动，615
+- headers 方法（HttpResponse），272、278
+- helloNative/helloNative.c，813
+- helloNative/helloNative.h，812
+- helloNative/HelloNative.java，811
+- helloNative/HelloNativeTest.java，814
+- **十六进制编辑器**
+  - 在其中创建类文件，542
+  - 使用其修改字节码，544
+- **隐藏命令**，在 XML 注释中，159
+- **主机**，234–235
+- **HTML（超文本标记语言）**
+  - 其中的属性，158
+  - 以及其中的 `&amp;` 实体标签，156
+  - 其中的表单，262
+  - 从 XML 文件生成，216–219
+  - 与 JSP 混用，457
+  - 打印，792
+  - 与 XML 对比，155
+- **HTTP（超文本传输协议）**，287
+  - HTTPS 与 HTTP 之间的重定向，267
+  - 其中的请求头，255–256
+- **http:**（URI 方案），252、553
+- **HttpClient 类**，271–278
+  - 为其启用日志记录，273
+  - newBuilder 方法，271、273、277
+  - newHttpClient 方法，271、277
+  - send 方法，277
+  - sendAsync 方法，273、277
+- **HttpClient.Builder 类**
+  - build 方法，271–272、277
+  - executor 方法，277
+  - followRedirects 方法，271、277
+- **HttpHeaders 类**
+  - firstValue 方法，273、278
+  - map 方法，272、278
+- **HttpRequest 类**
+  - newBuilder 方法，271–273、277
+- **HttpRequest.Builder 类**
+  - build 方法，277
+  - DELETE 方法，278
+  - GET 方法，271、278
+  - header 方法，277
+  - POST 方法，272、278
+  - PUT 方法，278
+  - uri 方法，271–273、277
+- **HttpResponse 类**，其方法，272、278
+- **HttpResponse.BodyHandlers 类**
+  - discarding 方法，272
+  - ofString 方法，272–273
+- **HTTPS（安全超文本传输协议）**，267
+- **https:**（URI 方案），252
+- **HttpURLConnection 类**
+  - getErrorStream 方法，266、270
+  - getResponseCode 方法，267
+  - setInstanceFollowRedirects 方法，267
+
+## I
+
+- **I (int)**，类型代码，95、831
+- **I/O 流。** 参见输入流、输出流
+- **IANA（互联网号码分配局）**，367
+- **IBM**，153、160
+  - DB2 数据库，293
+- **IBM437 编码**，415
+- **ICC 配置文件**，758
+- **图标**
+  - 列标题中的，641
+  - 表格单元格中的，639
+  - 树中的，661–662、674
+- **ID、IDREF、IDREFS 属性类型（DTD）**，174–175
+- **恒等（不做任何操作）转换**，209
+- **identity 方法（Function）**，30
+- **恒等值**，41
+- **ID** 的唯一性，175、183
+- **IETF BCP 47**，385
+- **ifPresent 方法（Optional）**，17–18、48
+- **ifPresentOrElse 方法（Optional）**，18
+- **IIOImage 类**，745、755
+- **IIOServiceProvider 类**
+  - getVendorName、getVersion 方法，746、754
+- **IllegalAccessException**，687
+- **IllegalArgumentException**，204、845
+- **IllegalStateException**，30、747
+- **可成像区域**，776
+- **ImageInputStream 类**，747
+- **ImageIO 类**
+  - createImageXxxStream 方法，747、753
+  - 确定图像类型，745
+  - getImageXxxByXxx 方法，746、753
+  - getReaderXxx、getWriterXxx 方法，746、753
+- **ImageIO/ImageIOFrame.java**，749
+- **ImageOutputStream 接口**，748
+- **ImageProcessing/ImageProcessingFrame.java**，767
+- **ImageReader 类**，745
+  - getHeight、getWidth 方法，748、754
+

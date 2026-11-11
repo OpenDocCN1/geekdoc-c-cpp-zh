@@ -1,0 +1,35 @@
+Now let’s map the `codePoints` method on a stream of strings:
+
+```
+Stream<String> result = words.stream().map(w -> codePoints(w));
+```
+
+You will get a stream of streams, like . . . , ["y", "o", "u", "r"], ["b", "o", "a", "t"], . . . . To flatten it out to a single stream . . . , ["y", "o", "u", "r", "b", "o", "a", "t"], . . . , use the `flatMap` method instead of `map`:
+
+```
+Stream<String> flatResult = words.stream().flatMap(w -> codePoints(w));
+// Calls codePoints on each word and flattens the results
+```
+
+> > **NOTE:** You will find a `flatMap` method in classes other than streams. It is a general concept in computer science. Suppose you have a generic type G (such as `Stream` and functions f from some type T to `G<U>` and g from U to `G<V>`. Then you can compose them—that is, first apply f and then g, by using `flatMap`. This is a key idea in the theory of monads. But don’t worry—you can use `flatMap` without knowing anything about monads.
+
++   **java.util.stream.Stream 8**
++   
++   - `Stream<T> filter(Predicate<? super T> predicate)`
++     yields a stream containing the elements of this stream that fulfill the predicate.
++   - `<R> Stream<R> map(Function<? super T, ? extends R> mapper)`
++     yields a stream containing the results of applying mapper to the elements of this stream.
++   - `<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)`
++     yields a stream obtained by concatenating the results of applying mapper to the elements of this stream. (Note that each result is a stream.)
+
+# 1.4 Extracting Substreams and Combining Streams
+
+The call `stream.limit(n)` returns a new stream that ends after n elements (or when the original stream ends if it is shorter). This method is particularly useful for cutting infinite streams down to size. For example,
+
+```
+Stream<Double> randoms = Stream.generate(Math::random).limit(100);
+```
+
+yields a stream with 100 random numbers.
+
+The call `stream.skip(n)` does the exact opposite. It discards the first n elements. This is handy in our book reading example where, due to the way the `split` method works, the first element is an unwanted empty string. We can make it go away by calling `skip`:

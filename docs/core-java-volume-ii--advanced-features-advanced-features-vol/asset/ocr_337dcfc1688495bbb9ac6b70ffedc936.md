@@ -1,0 +1,48 @@
++   2. Compute the Base64 encoding of the resulting string. (The Base64 encoding encodes a sequence of bytes into a sequence of printable ASCII characters.)
+
+```
+Base64.Encoder encoder = Base64.getEncoder();
+String encoding = encoder.encodeToString(input.getBytes(StandardCharsets.UTF_8));
+```
+
++   3. Call the setRequestProperty method with a name of "Authorization" and the value "Basic " + encoding.
+
+```
+connection.setRequestProperty("Authorization", "Basic " + encoding);
+```
+
+> > **TIP:** You just saw how to access a password-protected web page. To access a password-protected file by FTP, use an entirely different method: Construct a URL of the form
+> >
+> > ftp://username:password@ftp.yourserver.com/pub/file.txt
+
+Once you call the connect method, you can query the response header information. First, let's see how to enumerate all response header fields. The implementors of this class felt a need to express their individuality by introducing yet another iteration protocol. The call
+
+```
+String key = connection.getHeaderFieldKey(n);
+```
+
+gets the nth key from the response header, where n starts from 1! It returns null if n is zero or greater than the total number of header fields. There is no method to return the number of fields; you simply keep calling getHeaderFieldKey until you get null. Similarly, the call
+
+```
+String value = connection.getHeaderField(n);
+```
+
+returns the nth value.
+
+The method getHeaderFields returns a Map of response header fields.
+
+```
+Map<String,List<String>> headerFields = connection.getHeaderFields();
+```
+
+Here is a set of response header fields from a typical HTTP request:
+
+```
+Date: Wed, 27 Aug 2008 00:15:48 GMT
+Server: Apache/2.2.2 (Unix)
+Last-Modified: Sun, 22 Jun 2008 20:53:38 GMT
+Accept-Ranges: bytes
+Content-Length: 4613
+Connection: close
+Content-Type: text/html
+```
