@@ -1,0 +1,1646 @@
+- pgno: 0
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_0_0.png)
+
+
+    # # COMPUTERCRAFT: PROGRAMMING LUA IN MINECRAFT
+
+
+    Matthew Monk & Simon Monk'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_1_0.png)
+
+
+    Digitized by the Internet Archive
+
+    in 2023 with funding from
+
+    Kahle/Austin Foundation'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "# ComputerCraft:  \nProgramming Lua  \nin Minecraft\n\nMatthew Monk & Simon\
+    \ Monk"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CONTENTS
+
+
+    +   Chapter 1: Introduction........................ 1
+
+    +   Minecraft....................................................1
+
+    +   Technology...................................................2
+
+    +   Mods............................................................3
+
+
+    +   Chapter 2: ComputerCraft............................5
+
+    +   Installing the ComputerCraft Mod.......................5
+
+    +   The ComputerCraft Command Line.......................7
+
+    +   The Lua Command Line...................................10
+
+    +   The Lua Editor...............................................11
+
+    +   Controlling Redstone with Lua.........................13
+
+    +   ComputerCraft Monitors................................14
+
+
+    +   Chapter 3: Programming in Lua........... 17
+
+    +   Simple Sums..................................................18
+
+    +   Variables......................................................19
+
+    +   Ifs.................................................................20
+
+    +   Loops.............................................................21
+
+    +   Functions.......................................................22
+
+    +   Lists...............................................................25
+
+    +   Summary.........................................................27
+
+
+    +   Chapter 4: Password Protected Door... 29
+
+    +   Hardware........................................................29
+
+    +   Software........................................................30
+
+    +   Summary.........................................................31
+
+
+    +   Chapter 5: Morse Code Sender..........33
+
+    +   Hardware........................................................33
+
+    +   Software........................................................34
+
+    +   Summary.........................................................37'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Chapter 6: Computer Network........... 39
+
+
+    +   - Setting Up the Sending Computer....................39
+
+    +   - Setting up the Receiver............................40
+
+    +   - Sending a Message..................................41
+
+    +   - Summary............................................41
+
+
+    # Chapter 7: Twitter in Minecraft........... 43
+
+
+    +   - Hardware...........................................44
+
+    +   - The Code...........................................44
+
+    +   - Summary............................................45
+
+
+    # Chapter 8: Remote Control a Turtle.....47
+
+
+    +   - Hardware...........................................47
+
+    +   - The Code...........................................48
+
+    +   - Summary............................................50
+
+
+    # Appendix A: Example Programs......... 51
+
+
+    +   - Installing Programs in ComputerCraft.............. 51'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# ACKNOWLEDGMENTS
+
+
+    Thanks Everyone!'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# CHAPTER 1: INTRODUCTION
+
+
+    This book will teach you how to program using the ComputerCraft mod in Minecraft
+    and the Lua programming language.
+
+
+    # Minecraft
+
+
+    Minecraft is the creation of Markus "Notch" Persson and has been developed further
+    by the games company Mojang. It was first released to the world back in 2009 and
+    has become a huge success world-wide.
+
+
+    Although the game includes combat and other conventional game activities, what
+    makes Minecraft so interesting and different from many other games is the construction
+    of objects within a virtual world (Figure 1-1)
+
+
+    The player can operate in a ''creative'' mode where they can roam free and construct
+    buildings and even machines from blocks. These blocks are of different types and
+    can be purely structural or can have some special purpose. Some
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_8_0.png)
+
+
+    of the more interesting blocks are:
+
+
+    +   - Redstone - conduct a signal
+
+    +   - Redstone lamp - light up'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '+   - Pistons - push blocks
+
+    +   - Sticky pistons - can pull as well as push blocks
+
+    +   - Redstone torch - acts as a power source for Redstone related objects (all
+    of the above)
+
+    +   - Redstone Repeaters - can extend Redstone signals (normal limit from a torch,
+    button, lever is 15 blocks), can also set delays and only allow signal through
+    one way
+
+
+    # Technology
+
+
+    Minecraft players are inventive and many have set about finding ways to build
+    incredibly complex machines in Minecraft. Some of these recreations of real-world
+    objects within Minecraft include:
+
+
+    +   - Digital Clocks
+
+    +   - Cannons that fire blocks
+
+    +   - Digital logic gates
+
+    +   - BUD or Block Update Detectors
+
+    +   - Elevators
+
+    +   - 8-bit memory
+
+    +   - Calculators
+
+
+    Figures 1-2 and 1-3 show a couple of interesting Minecraft creations.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_9_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_10_0.png)
+
+
+    Figure 1-3. The Works of a 9 Digit Programmable Door Lock
+
+
+    # Mods
+
+
+    The Minecraft platform is quite open, allowing developers to create extensions
+    to the original game. These extensions add new types of special purpose block
+    to the game or other features that game players might find useful.
+
+
+    These mods are often bundled up into a “mod pack” that can be downloaded and added
+    to Minecraft in one go.
+
+
+    Some of the interesting mods that are available include:
+
+
+    +   - Gems+ - Adds gems such as sapphires, rubies etc.
+
+    +   - Mo’creatures - add new animals and mobs to the game
+
+    +   - MAtmos - add environmental sounds to the game
+
+    +   - Equivalent Exchange - enables you to exchange items for other items using
+    a EMC value (the higher the more expensive) for example, 64 dirt for one coal
+
+    +   - Macro / Keybind Mod - record actions and replay them
+
+    +   - MineVideo Mod - record video of your gameplay
+
+    +   - Modern Weapons - add guns and things
+
+    +   - PortalCraft - Adds guns that fire portals
+
+    +   - Optifine - Improves frame-rate of your game (less lag)
+
+
+    One of these mods (ComputerCraft) allows you to add a computer to the game and
+    then program it with the Lua programming language.
+
+
+    This book focusses on how to program ComputerCraft in Lua.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# CHAPTER 2: COMPUTERCRAFT
+
+
+    ComputerCraft is a mod for Minecraft that enables all sorts of possibilities through
+    the use of programmable computers, and turtles and an array of other interesting
+    features such as printers and even floppy disks. It is included in two of the
+    most well-known modpacks: The Tekkit/Technic modpack, and the newcomer, Feed The
+    Beast.
+
+
+    Although the concept of using a computer in a computer game seems a bit odd, it
+    is perfect for people who want to get in to simple programming with visible and
+    satisfying results.
+
+
+    # Installing the ComputerCraft Mod
+
+
+    The computercraft mod requires the minecraftforge API, so it''s the easiest mod
+    to install, but it is still fairly easy to do. At the moment, the most recent
+    version of computercraft is for Minecraft 1.4.6, but confusingly enough, the ComputerCraft
+    version is 1.4.8. As I already mentioned, you could download Feed The Beast or
+    Tekkit/Technic which include the ComputerCraft mod. However, we will show you
+    how to install it into a clean version of Minecraft.
+
+
+    The instructions are for Windows, but can be easily adapted for other operating
+    systems.
+
+
+    First of all, you will need to download an archiving software if you do not already
+    have one, I recommend you install either Winrar (my preference) or 7zip. Winrar
+    can be downloaded from here: http://www.rarlab.com/ and 7zip from here: http://www.7-zip.org/
+
+
+    Now, we are going to install the correct version of forge, simply browse to the
+    link http://tinyurl.com/MF1-4-6
+
+
+    You will see a webpage that looks something like Figure 2-1.
+
+
+    After the timer hits 0, press the skip ad button and your zipped folder will start
+    downloading.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_13_0.png)
+
+
+    Figure 2-1. Downloading ComputerCraft
+
+
+    The second thing we need to install, is the actual ComputerCraft mod. Here is
+    the link: http://adf.ly/GKM9
+
+
+    So we have both of our required folders, we just have to
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_13_1.png)
+
+
+    Figure 2-2. Finding the ComputerCraft Installation Folder
+
+
+    put them in the right place. If you hold down the windows key on your keyboard,
+    and then press r. A menu like this should appear in the bottom left of your screen
+    (Figure 2-12).
+
+
+    Here, we type %appdata% and then open the folder called “.minecraft”. There are
+    alternative ways of getting to this folder, but I find this to be the quickest.
+    This is where all of your game data for Minecraft is stored, but for mods, we'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_14_0.png)
+
+
+    Figure 2-3. Opening the Minecraft file with WinRAR
+
+
+    first want to go into the folder "bin" and the right click on the file "minecraft",
+    or "minecraft.jar" if you have extensions on. This is where our archiving software
+    is used. As I have winrar, these options appear when I right click the file (Figure
+    2-3).
+
+
+    Click "open with..." and then whatever archiving software you use. Now go to wherever
+    your downloads folder is, and double click the "forge" folder. Highlight everything
+    in the forge folder, and simply drag it across into the Minecraft folder.
+
+
+    Close the two windows and run Minecraft to make sure everything still works. We
+    have nearly finished installing the mod, as all we need to do is head back into
+    our .minecraft folder, and right click on any empty space in the window, and click
+    the "new folder" button, and call it "mods". Simply copy or move the computercraft
+    folder you downloaded, into the "mods" folder we just created and your done! Sometime
+    you will find that there is already a "mods" folder in which case you will not
+    need to create one.
+
+
+    # The ComputerCraft Command Line
+
+
+    Now that you have installed Computer Craft, the first thing you will want to do
+    is to make your first computer - Figure 2-4 shows a normal computer and 2-5 an
+    advanced computer. You can use either for the examples in this book.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_15_0.png)
+
+
+    Figure 2-4. The Computer recipe
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_15_1.png)
+
+
+    Figure 2-5. The Advanced Computer recipe
+
+
+    After right clicking on your new computer, we can begin. First, we need to learn
+    how to navigate through the computer itself. It works with “directories” everything
+    is in a directory, and we need to learn how to use them. To see what is in your
+    current directory, type in "ls" (list) or "dir" (directory).
+
+
+    Both commands do exactly the same thing. The command ''ls'' is what people in
+    the Linux world do to list the contents of a directory and ''dir'' is the same
+    command, harking back to the days of Microsoft DOS and the Windows command line.
+
+
+    You should see something like Figure 2-6.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_16_0.png)
+
+
+    Figure 2-6. The Computer Command Line
+
+
+    The only thing in our directory is another directory, “rom.” To tell the difference
+    between programs and directories instantly, I recommend using advanced computers,
+    although more expensive, they come equipped with more handy tools than standard
+    computers, including colour-coding. It displays directories as green, and programs
+    as white.
+
+
+    To move into our “rom” directory, we type in “cd rom”, and then press enter. The
+    command ‘cd’ stands for ‘change directory’. After typing ‘cd rom’ (no pun intended)
+    type the ‘ls’ or ‘dir’ command to see what’s in there (Figure 2-7).
+
+
+    Now things are getting interesting. We now have four options: apis, programs,
+    startup and help. If we ‘cd’ into “programs” we are greeted with a whole host
+    of assorted programs, including apis. To find out more about any program, simply
+    type in “help” and then the name of the program. There is some pretty interesting
+    stuff in there, so I recommend you look through it all.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_16_1.png)
+
+
+    Figure 2-7. Commands'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'Now we want to get back to our main directory, to go up a level, as it were,
+    type in cd .., to make your own directory, enter the command, mkdir, and then
+    the name of your new directory.
+
+
+    It''s a good idea to create a directory in which to keep all your stuff. Including
+    the example projects that you will make as you work through the book.
+
+
+    Create this in root directory above rom. If you are currently in the rom directory,
+    type:
+
+
+    ```
+
+    ~~~
+
+    cd ..
+
+    ~~~
+
+    ```
+
+
+    To move up to that directory and then type:
+
+
+    ```
+
+    ~~~
+
+    mkdir mystuff
+
+    cd mystuff
+
+    ~~~
+
+    ```
+
+
+    See Figure 2-8.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_17_0.png)
+
+
+    Figure 2-8. Creating a directory for your stuff
+
+
+    # ## The Lua Command Line
+
+
+    To enter a solely Lua command line, type lua into the command line. From now on,
+    all the commands that you type into the command line will be assumed to be in
+    the Lua programming language.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_18_0.png)
+
+
+    *Figure 2-9. Arithmetic in the Lua Command Line*
+
+
+    So in this example, we have typed the command*
+
+
+    ```
+
+    ```
+
+    print(2 + 2)
+
+    ```
+
+    ```
+
+
+    ...into Lua and it has told us the answer 4.
+
+
+    In Chapter 3, we will return to the Lua command line as we learn more about how
+    to make use of this powerful programming language.
+
+
+    # ## The Lua Editor
+
+
+    Although the Lua command line is great for experimenting while we learn the language.
+    It does not remember the commands that we type in. To do that we need to use an
+    editor that will allow us to create and edit files containing Lua programs that
+    we can run, print or transfer to floppy disk to move them from computer to computer.
+
+
+    To make a program, simply type edit, and then the name of your program. You will
+    be brought to a screen that looks
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_18_1.png)
+
+
+    *Figure 2-10. The Lua editor*'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'like Figure 2-10.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_19_0.png)
+
+
+    Figure 2-11. The Lua options
+
+
+    This is the place you will invariably write your hundreds of useful programs,
+    but first lets take a closer look at it. In the bottom right-hand corner, we can
+    see which line we are on. The bottom left-hand corner, tells us to press control
+    to see the access menu (Figure 2-11). After you press the control key(don''t hold),
+    we are presented with these three options:
+
+
+    Use the arrow keys to navigate left and right, or press the letter that the word
+    begins with. Save and Exit are self explanatory, but if you wish to have your
+    program neatly set out on paper for storage (Figure 2-12), you can select the
+    Print option.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_19_1.png)
+
+
+    Figure 2-12. Printing
+
+
+    You will need a printer attached with ink sacs and some paper (Figure 2-13)'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_20_0.png)
+
+
+    Figure 2-13: Adding a printer
+
+
+    # ## Controlling Redstone with Lua
+
+
+    Now to write our first program. For now we are just going to turn a lamp on, but
+    later we will have password protected doors and even a morse code sender.
+
+
+    The first step is to change directory to the folder where you are going to keep
+    all your programs (*mystuff*), by typing:
+
+
+    ```
+
+    `cd mystuff`
+
+    ```
+
+
+    Then to create and edit the program file type:
+
+
+    ```
+
+    `edit redstonetest`
+
+    ```
+
+
+    Next enter the following text into the editor (Figure 2-14):
+
+
+    ```
+
+    ```lua
+
+    rs.setOutput("left", true)
+
+    sleep(3)
+
+    rs.setOutput("left", false)
+
+    ```
+
+    ```
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_20_1.png)
+
+
+    Figure 2-14: Controlling Redstone'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'After that, save and then exit your program (press CTRL and select the Save
+    and then the Exit option with the arrow keys).
+
+
+    To run a program, just type its name to run it. But first, place a Redstone lamp
+    in the left-hand side of the computer like Figure 2-15.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_21_0.png)
+
+
+    Your lamp should light for three seconds before turning off. Congratulations,
+    you have just written your first program in ComputerCraft!
+
+
+    # ComputerCraft Monitors
+
+
+    Monitors are very handy, especially touchscreen ones which have been recently
+    added, but more of that later. The crafting recipe for a normal, and advanced
+    monitor, are shown in Figure 2-16 and 2-17 (advanced monitors are touch screen
+    enabled unlike standard ones).
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_21_1.png)
+
+
+    Figure 2-16. The Monitor recipe'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_22_0.png)
+
+
+    Figure 2-17. The Advanced Monitor recipe
+
+
+    You can place monitors next to each other to make even bigger screens like Figure
+    2-18.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_22_1.png)
+
+
+    Figure 2-18. Big Monitors
+
+
+    To output to a monitor, type in: *monitor* then the side the monitor is on, and
+    then the name of the program, so it could look like this: *monitor left test*
+    (Figure 2-19).
+
+
+    However, if you wish to input via text, you will need to do so through the computer,
+    and not the monitor.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_22_2.png)
+
+
+    Figure 2-19. Using a Monitor'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# CHAPTER 3: PROGRAMMING IN
+
+    LUA
+
+
+    Lua is a new language that is gaining a lot of popularity for its flexibility
+    and ease of use. It is the language chosen by the developers of ComputerCraft
+    to allow you to write programs that can control MineCraft from within the ComputerCraft
+    mod.
+
+
+    Lua is an easy language to learn and if you have used Python, you will find it
+    particularly easy as the syntax is quite similar.
+
+
+    As we look at Lua, you will find it useful to have the Lua command line open (Figure
+    3-1) so that you can type in commands and try things out.
+
+
+    If you are not sure about how to start the Lua command line and what it is for,
+    then please look back over Chapter 2.
+
+
+    The Lua programming language is not unique to ComputerCraft. It is available for
+    most types of computer. There is also an online Lua interpreter, that works like
+    the Computer Craft Lua Command Line, except that it does not have any of the commands
+    that are specific to ComputerCraft for doing things like controlling Redstone.
+
+
+    You can find the online Lua interpreter here:
+
+
+    http://www.lua.org/demo.html
+
+
+    Figure 3-2 shows how it is used. Just type the Lua commands in the box at the
+    top and then press Run to run the code. The results of any print commands or errors
+    will be shown in the box underneath.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_25_0.png)
+
+
+    Figure 3-1. The Lua Command Line
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_25_1.png)
+
+
+    Figure 3-2. Lua Online
+
+
+    # Simple Sums
+
+
+    Programming languages all allow you to do calculations and display results. Try
+    entering the following on the Lua command line:
+
+
+    ```
+
+    ```lua
+
+    print(2 + 2)
+
+    ```
+
+    ```
+
+
+    This will display the answer (4). No surprise there!'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'The print command tells Lua to display on the command line whatever is inside
+    the (). So, we could just do:
+
+
+    ```
+
+    print(4)
+
+    ```
+
+
+    Try it. But by putting a sum inside the (), the sum is performed first and the
+    result of the sum is displayed rather than the sum itself.
+
+
+    # Variables
+
+
+    Variables are a way of giving a value a name. Try typing the following into the
+    Lua command line:
+
+
+    ```
+
+    a = 23
+
+    print(a)
+
+    ```
+
+
+    The first line gives the variable called a the value 23 and the second line prints
+    the value of a. You can use almost any name you like for a variable, but it cannot
+    contain any spaces and by convention, it should start with a lowercase letter.
+    You can use underscore characters (_) to separate words.
+
+
+    So for example you could write:
+
+
+    ```
+
+    number_of_blocks = 100
+
+    print(number_of_blocks)
+
+    ```
+
+
+    You can use variable in sums too. Try typing in the following commands:
+
+
+    ```
+
+    number_of_blocks = 100
+
+    print(number_of_blocks)
+
+    number_of_blocks = number_of_blocks + 1
+
+    print(number_of_blocks)
+
+    ```
+
+
+    Lua will first display the answer 100 and then 101.
+
+
+    The line number_of_blocks = number_of_blocks + 1 has added one to number_of_blocks.
+
+
+    In the examples so far, the variable we have used has contained a number. Variables
+    can hold different types of values, not just numbers. Perhaps the most common
+    type of variable is called a string.
+
+
+    The word string amongst programmers means just some text. This could be a single
+    word or a sentence or even the entire contents of a web page.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "Try the program out a few times with both the correct password and an incorrect\
+    \ password.\n\nNote how the end of the series of commands to run if the condition\
+    \ is true are marked with the end keyword. It is also important to indent the\
+    \ things that should be done, so that you can immediately see what is going to\
+    \ run if the condition is true, as opposed to commands outside the if statement\
+    \ that will always be run. Indent the lines of code inside the “if” statement\
+    \ by pressing tab once.\n\nWe could expand this example, so that if the wrong\
+    \ password was entered then you get a different message back. To do this we use\
+    \ an if else command as shown below.\n\n```\npassword = io.read()\nif password\
+    \ == \"computercraft\" then\n    print(\"Opening Door\")\nelse\n    print(\"Wrong\
+    \ Password\")\nend\n```\n\n# Loops\n\nIf you want to do something more than once\
+    \ then you need to put the commands that you want to repeat inside a while loop.\
+    \ For example, if you wanted to allow people to keep trying to guess the password,\
+    \ you could put the code above inside a loop like this:\n\n```\nwhile true do\n\
+    \    password = io.read()\n    if password == \"computercraft\" then\n       \
+    \ print(\"Opening Door\")\n    else\n        print(\"Wrong Password\")\n    end\n\
+    end\n```\n\nThe first line (while true do) will ensure that all the commands right\
+    \ up to the end on the last line will be repeated forever. Forever, because the\
+    \ condition after the word while is, in this case, true.\n\nThe value true is\
+    \ called a Boolean value. These kinds of value can only be either true or false.\
+    \ We will see them later in the context of controlling Redstone, where true means\
+    \ on and false means off.\n\nIf you wanted to only allow someone five incorrect\
+    \ guesses, then you could change the code like this:"
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: "```\n```lua\nfails = 0\nwhile fails < 5 do\n    password = io.read()\n    if\
+    \ password == \"computercraft\" then\n        print(\"Opening Door\")\n    else\n\
+    \        print(\"Wrong Password\")\n        fails = fails + 1\n    end\nend\n\
+    print(\"You are only allowed 5 attempts. Exiting\")\n```\n```\n\nNow, we are using\
+    \ a variable called fails that counts the number of times an incorrect password\
+    \ was entered. When this exceeds 5, the condition for staying in the while loop\
+    \ (that fails is less than 5) is no longer true and Lua exits the while loop and\
+    \ prints the message that the number of attempts has been exceeded.\n\nThis kind\
+    \ of \"while\" loop is handy if you just want to keep doing something until a\
+    \ condition stops being true. The other common situation where you might want\
+    \ to loop a certain number of times is called the \"for\" loop.\n\nThe following\
+    \ example prints out the numbers 1 to 10. Try typing it into a program (call it\
+    \ \"fortest\") and run it.\n\n```\n```lua\nfor i = 1, 10 do\n    print(i)\nend\n\
+    ```\n```\n\nTry changing 10 to 100 and run it again.\n\n# ## Functions\n\nWhen\
+    \ you write programs in any language, if you are not careful, there comes a point\
+    \ where everything gets too complicated to work out what is going on. A great\
+    \ way to keeps things simple and easy to modify is to break up your programs into\
+    \ manageable chunks called functions.\n\nBy putting sections of code in a function,\
+    \ you get the added advantage that you do not have to repeat yourself in your\
+    \ program, you can just call the same function from different places in your program.\n\
+    \nThere are really two things that you need to be able to do to a function. The\
+    \ first is to define it, which specifies the"
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: "commands that are going to be contained in the function and the second is to\
+    \ make the function run. Making the function run is referred to as \"calling\"\
+    \ the function.\n\nTo define a function you use the \"function\" command. Lets\
+    \ start by defining a really simple function that just prints out three lines\
+    \ of text every time it is called.\n\nTo try this out, change directory to the\
+    \ \"mystuff\" directory that you created earlier and type the following command:\n\
+    \n```\n~~~\nedit functiontest\n~~~\n```\n\nThen type the following into the editor\
+    \ before saving the file.\n\n```\n~~~lua\nfunction printWelcome()\n  print(\"\
+    This program is written\")\n  print(\"in the programming language Lua\")\n  print(\"\
+    Lua comes from Brazil\")\nend\n\nprintWelcome()\nprintWelcome()\nprintWelcome()\n\
+    ~~~\n```\n\nSave the program and exit the editor, then try running it by typing:\n\
+    \n```\n~~~\nfunctiontest\n~~~\n```\n\nYou should see the whole message printed\
+    \ out three times.\n\nWe can use a \"for\" loop rather than call the function\
+    \ three times, one after the other. Change the code to agree with the listing\
+    \ below and then run it again. The message will be printed out 10 times.\n\n```\n\
+    ~~~lua\nfunction printWelcome()\n  print(\"This program is written\")\n  print(\"\
+    in the programming language Lua\")\n  print(\"Lua comes from Brazil\")\nend\n\n\
+    for i = 1, 10 do\n  printWelcome()\nend\n~~~\n```"
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: "Functions can also be supplied with something called parameters. So, if for\
+    \ example, we wanted to write a function that would count up to a number of our\
+    \ choosing, we could write something like this:\n\n```\n~~~\nfunction count(numberOfTimes)\n\
+    \  for i = 1, numberOfTimes do\n    printWelcome()\n  end\nend\n~~~\n```\n\nYou\
+    \ could then instruct it to count up to 10 using:\n\n```\n~~~\ncount(10)\n~~~\n\
+    ```\n\nTo make it count to 1000, you would just do:\n\n```\n~~~\ncount(1000)\n\
+    ~~~\n```\n\nIf you want a function to have more than one parameter, you just separate\
+    \ them with commas both where you define the function and where you call it.\n\
+    \nModify the count example to take two parameters, fromNumber and toNumber.\n\n\
+    ```\n~~~\nfunction count(fromNumber, toNumber)\n  for i = fromNumber, toNumber\
+    \ do\n    printWelcome()\n  end\nend\n~~~\n```\n\n```\n~~~\ncount(5, 20)\n~~~\n\
+    ```\n\nAnother thing that functions can do is to return a value. When a function\
+    \ returns a value, it means that you can assign the returned value to a variable.\n\
+    \nLets write a function that converts temperatures in degrees C to degrees F:\n\
+    \n```\n~~~\nfunction c2f(c)\n  f = c * 9 / 5 + 32\n  return f\nend\n~~~\n```\n\
+    \n```\n~~~\ntemp = c2f(20)\nprint(temp)\n~~~\n```"
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: "The return command quits the function, sending back the value specified - in\
+    \ this case 'T'.\n\n# # Lists\n\nVariables can only hold a single value, but sometimes\
+    \ it is useful to be able to collect together a list of things. You will use this\
+    \ example later in the Morse code example. The items in a Lua list can be any\
+    \ type of value. They can be a number or string or even another list.\n\nThe example\
+    \ below shows how you can define a list of colors and then print them out one\
+    \ at a time.\n\n```\n```lua\ncolors = {'red', 'orange', 'yellow',\n          'green',\
+    \ 'blue',\n          'white', 'black'}\n\nfor i, color in ipairs(colors) do\n\
+    \  print(color)\nend\n```\n```\n\nIn this case, the list is given the values of\
+    \ color names, each as a string. The for loop uses a special command \"ipairs\"\
+    \ that allows the \"for\" loop to count with both the position of each thing in\
+    \ the list (i) and the color string (color).\n\nWe can prove this by modifying\
+    \ the example so that we print both the position in the list and the string as\
+    \ shown below:\n\n```\n```lua\ncolors = {'red', 'orange', 'yellow',\n        \
+    \  'green', 'blue', 'white', 'black'}\nfor i, color in ipairs(colors) do\n  print(i,\
+    \ color)\nend\n```\n```\n\nThis will produce an output like this:\n\n```\n```\n\
+    1    red\n2    orange\n3    yellow\n4    green\n5    blue\n6    white\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: "# 7 black\n\nYou can also find the value of things in a list from their position,\
+    \ by using a square-brackets notation. Try typing the following into the Lua console:\n\
+    \n```\n~~~lua\ncolors = { 'red', 'orange', 'yellow',\n  'green', 'blue', 'white',\n\
+    \  'black' }\nprint(colors[3])\n~~~\n```\n\nYou will get the answer yellow, the\
+    \ third item in the list.\n\nYou can use the same [] notation to change a particular\
+    \ item. Now type the following into the console:\n\n```\n~~~lua\ncolors[3] = \"\
+    purple\"\nprint(colors[3])\n~~~\n```\n\nThis now gives the answer purple. The\
+    \ command has changed the third element of the list from yellow to purple.\n\n\
+    You can also add and remove items from the list.\n\nTo add an element to the end\
+    \ of a list using the table insert command. As shown in the example below which\
+    \ will add the color gray to the end of the list.\n\n```\n~~~lua\ncolors = { 'red',\
+    \ 'orange', 'yellow',\n  'green', 'blue',\n  'white', 'black' }\ntable.insert(colors,\
+    \ 'gray')\n\nprint(colors[8])\n~~~\n```\n\nIf rather than add the color to the\
+    \ end of the list, you can specify a position in the list where the element should\
+    \ be added. The following code will add the new color to the start of the list.\n\
+    \n```\n~~~lua\ncolors = { 'red', 'orange', 'yellow',\n  'green', 'blue',\n  'white',\
+    \ 'black' }\ntable.insert(colors, 1, 'gray')\n\nprint(colors[1])\n~~~\n```\n\n\
+    The number 1 as the second argument to insert indicates that the new item should\
+    \ be inserted before the first element in the list."
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# Summary
+
+
+    This is a pretty brief introduction to what is quite a complex programming language.
+    It should however get you started with Lua and allow you to do most of the things
+    you want to with ComputerCraft.
+
+
+    If you want to find out more about Lua then check out the official web site at
+    www.lua.org.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# ## CHAPTER 4: PASSWORD PROTECTED DOOR
+
+
+    With our basic knowledge of Lua and ComputerCraft, we can start to make some pretty
+    cool stuff. A password protected door can be very useful on servers, especially
+    if you are the only one who knows how to use the ComputerCraft mod.
+
+
+    Something that is very important to know, before we start with this program, is
+    that if you have this line in your program..
+
+
+    ```
+
+    ```lua
+
+    while true do
+
+    ```
+
+    ```
+
+
+    .. you cannot stop the program, once it is running, unless you break the actual
+    computer block, or hold the CTRL key and press T. This line features in the password
+    program, so it''s important to remember CTRL-T (for terminate) to stop the program
+    so you can edit it, as you will probably want to change the password at some point.
+
+
+    # ### Hardware
+
+
+    Before we do the programming, we need to set up the blocks as shown in Figure
+    4-1.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_36_0.png)
+
+
+    Figure 4-1. Password Protected Door.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: "Of course it doesn't really matter what kind of blocks or door you are using,\
+    \ this is just an example. Also, if you want the computer above, or to the right\
+    \ of the door, you will have to change the sides that are used in the program\
+    \ code below from \"left\" to whichever side of the computer the door is situated.\n\
+    \nYou can use \"left\", \"right\", \"front\", \"back\", \"bottom\" or \"top\"\
+    .\n\n# Software\n\nThe program to control the door is pretty short and can easily\
+    \ be typed in. If you prefer to download a file containing the code, then it is\
+    \ available from: https://github.com/simomonk/computercraft_examples\n\nTo install\
+    \ this program into your ComputerCraft installation, follow the instructions in\
+    \ Appendix A.\n\n```\nwhile true do\n  term.clear()\n  term.setCursorPos(1, 1)\n\
+    \  print(\"Please enter the password:\")\n  password = read(\"*\")\n  if password\
+    \ == \"password\" then\n    rs.setOutput(\"left\", true)\n    sleep(3)\n    rs.setOutput(\"\
+    left\", false)\n  end\nend\n```\n\nNow I'm going to break down the program line\
+    \ by line, and explain how it works. While true do I have mentioned above, this\
+    \ just keeps the program running in an infinite loop.\n\n```\nterm.clear()\n```\n\
+    \nThis line clears the screen every time the loop goes round.\n\n```\nterm.setCursorPos\n\
+    ```\n\nThis sets the position of the cursor at (1, 1) or the top right hand side\
+    \ of the screen.\n\n```\nprint(\"Please enter the password\")\n```\n\nIs what\
+    \ is displayed on the screen to tell the user what to do.\n\nThe next line needs\
+    \ a bit more explanation:\n\n```\npassword = read(\"*\")\n```\n\npassword is the\
+    \ variable, which has to be defined with an equals. The command read means it\
+    \ is looking for something to be typed in and (*) means as it is typed in, it"
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'will be displayed as `*s`. Note that this is a ComputerCraft specific feature,
+    so if you try it on Lua not running in ComputerCraft, then it probably will not
+    work.
+
+
+    ```
+
+    ```lua
+
+    if password == "password" then
+
+    ```
+
+    ```
+
+
+    ..will look at the variable password which is what we typed in, and == means it
+    will compare it to whatever we put on the other side, which is the text "password".
+    This means that if you want to change the password, you have to change what''s
+    inside the quotes. The command then finishes the line off, so if what you typed
+    in matches what is inside the quotes(your password) then it will do something.
+
+
+    There is another indent here to show that it is inside the *if* statement.
+
+
+    ```
+
+    ```lua
+
+    rs.setOutput("left", true)
+
+    ```
+
+    ```
+
+
+    ..is saying that Redstone is turned on on the left side of the computer, which
+    goes through the block, and triggers the door.
+
+
+    ```
+
+    ```lua
+
+    sleep(3)
+
+    ```
+
+    ```
+
+
+    ..makes the computer wait 3 seconds before it moves on, and then `rs.setOutput("left",
+    false)` turns off the Redstone signal on the left of the computer, therefore closing
+    the door. I personally find keeping the door open for 3 seconds about right, but
+    you can change it to anything you want.
+
+
+    Finally, the first *end* marks the end point of what the *if* statement should
+    do, with *then* as the beginning point, and the second *end* is marking where
+    the *while true do* loop should stop.
+
+
+    As this program is only 11 lines long, you can easily type it out, but, for example,
+    it would be very tedious to type out the next program, so you can also refer to
+    Appendix A for instructions on downloading all the Lua programs in this book.
+
+
+    # ## Summary
+
+
+    This is a nice simple project to get you started. There are a number of ways you
+    could make this more sophisticated, by adding a maximum number of tries, or adding
+    some options to change the password without having to edit the program.
+
+
+    Experiment and have fun, before you move on to the next project, which is a much
+    more complicated program.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '# CHAPTER 5: MORSE CODE
+
+    SENDER
+
+
+    This project allows you to type a message into the Computer and then have that
+    message flashed as Morse
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_40_0.png)
+
+
+    Figure 5-1. Morse Code Sender.
+
+
+    code using a Redstone lamp.
+
+
+    To build the morse code sender, you will need a computer, and a or some Redstone
+    lamp(s).
+
+
+    # Hardware
+
+
+    Connect the two together using Redstone, and depending how far away you want your
+    lamp, you need a repeater every 15 blocks of Redstone.
+
+
+    The trick to hiding the Redstone, like I have done, is to set the output to bottom
+    instead of left which is shown on the program code below. This means you are able
+    to easily conceal the Redstone if you want, as it can be covered by other material.
+
+
+    Figure 5-1 shows one arrangement with the computer below the Redstone, but you
+    can wire it up in any way you want as long as the program specifies the right
+    side for the connection to the computer.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: 'Figure 5-2 shows the Computer terminal, which prompts for the message to be
+    translated into dots and dashes (short and long flashes).
+
+
+    The program cannot translate all characters into Morse code, it can only do the
+    upper and lowercase letters and the digits 0 to 9. It can also do a space, which
+    is just a pause.
+
+
+    If you type in a character that it cannot translate, it will just ignore it.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_41_0.png)
+
+
+    Figure 5-2. Sending Commands to the Morse Code Sender.
+
+
+    Figure 5-3 shows the Morse Sender with the Redstone lamp lit.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_41_1.png)
+
+
+    Figure 5-3. The Morse Sender with the Redstone Lamp Lit.
+
+
+    # Software
+
+
+    The program is long enough not to want to type in, so see Appendix A, if you would
+    rather download it.'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: "The program uses two lists, one for letters and one for numbers.\n\n```\n```lua\n\
+    letters = {\n    \".-\", \"-...\", \"-.-.\", \"-..\", \".\", \"..-.\",\n    \"\
+    --.\", \"....\", \"..\", \".---\", \"-.-\", \".-..\",\n    \"--\", \"-.\", \"\
+    ---\", \".--.\", \"--.-\", \".-.\",\n    \"...\", \"-\", \"..-\", \"...-\", \"\
+    .--\", \"-..-\",\n    \"-.--\", \"--..\"\n}\n\nnumbers = {\"-----\", \".----\"\
+    , \"..---\",\n    \"...--\", \"....-\", \".....\", \"-....\", \"--...\",\n   \
+    \ \"---..\", \"----.\"}\n```\n```\n\nEach element of the lists is a string of\
+    \ dashes and dots. A dash represents a long flash and a dot a short flash.\n\n\
+    The *sendMorse* function is where most of the action takes place. It takes a single\
+    \ letter code and flashes it out as Morse.\n\nBy letterCode we mean a number that\
+    \ is used to represent that letter within Lua. Every letter has a number, so for\
+    \ example the letter A has a value of 65. The Lua code `string.byte(\"A\", 1)`\
+    \ will return that letter code.\n\nSo the function handles the four possible types\
+    \ of letter, in the four if statements.\n\n```\n```lua\nfunction sendMorse(letterCode)\n\
+    \    if letterCode >= string.byte(\"A\", 1)\n        and letterCode <= string.byte(\"\
+    Z\", 1) then\n        dashesAndDots =\n            letters[letterCode-string.byte(\"\
+    A\", 1)+1]\n        for i = 1, string.len(dashesAndDots) do\n            sendDashOrDot(string.byte(dashesAndDots,\
+    \ i))\n        end\n    end\n    if letterCode >= string.byte(\"a\", 1)\n    \
+    \    and letterCode <= string.byte(\"z\", 1) then\n        dashesAndDots =\n \
+    \           letters[letterCode-string.byte(\"a\", 1)+1]\n        for i = 1, string.len(dashesAndDots)\
+    \ do\n            sendDashOrDot(string.byte(dashesAndDots, i))\n        end\n\
+    \    end\n    if letterCode >= string.byte(\"0\", 1)\n        and letterCode <=\
+    \ string.byte(\"9\", 1) then\n        dashesAndDots =\n            numbers[letterCode-string.byte(\"\
+    0\", 1)+1]\n        for i = 1, string.len(dashesAndDots) do\n            sendDashOrDot(string.byte(dashesAndDots,\
+    \ i))\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: "```\n```text\nsendDashOrDot(string.byte(dashesAndDots, i))\n    end\nend\n\
+    if letterCode == string.byte(\" \", 1) then\n    sendDashOrDot(0)\nend\nend\n\
+    ```\n```\n\nThe first checks to see if it is between A and Z, the second between\
+    \ a and z, the third checks to see if it is a digit and the final check is for\
+    \ a space character.\n\nWithin each of these if statement there is a loop that\
+    \ goes through each letter of the dots or dashes in the code calling the *sendDashOrDot*\
+    \ function to actually control the Redstone.\n\n```\n```text\nfunction sendDashOrDot(dashOrDot)\n\
+    \    if dashOrDot == 46 then\n        rs.setOutput(\"left\", true)\n        sleep(0.5)\n\
+    \        rs.setOutput(\"left\", false)\n        sleep(0.5)\n    elseif dashOrDot\
+    \ == 45 then\n        rs.setOutput(\"left\", true)\n        sleep(1.5)\n     \
+    \   rs.setOutput(\"left\", false)\n        sleep(1.5)\n    elseif dashOrDot ==\
+    \ 0 then\n        sleep(3)\n    end\nend\n```\n```\n\nThis function also uses\
+    \ three if statements to work out if the flash to make is a small one for a dot,\
+    \ a long one for dash or no flash at all for a space.\n\nTo make each flash, the\
+    \ Redstone first has to be turned on with the command *rs.setOutput(\"left\",\
+    \ true)*, there is then a delay of half a second using the command *sleep*, before\
+    \ the Redstone is turned off again. Finally there is another 0.5 second delay.\n\
+    \nIf you wanted to make the flashing faster then you would need to decrease these\
+    \ delays.\n\nThe flash for a dash should be three times the flash length of a\
+    \ dot.\n\nThe main part of the program is outside of any function and will therefore\
+    \ just run when the program is run. This clears the terminal and prompts the user\
+    \ to enter a string to send."
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: "```\n```lua\nterm.clear()\nterm.setCursorPos(1, 1)\nprint(\"Enter Message to\
+    \ Send\")\nmessage = read()\n```\n```\n\nIt then loops over each letter in the\
+    \ string sending it to the function *sendMore*.\n\n```\n```lua\nfor i = 1, string.len(message)\
+    \ do\n    sendMore(string.byte(message, i))\nend\n```\n```\n\nYou could if you\
+    \ wish put everything from term.clear() into a while true loop so that you do\
+    \ not have to run the program each time you want to send a message.\n\n# Summary\n\
+    \nThis is quite a tricky project to program, as you need to use arrays and manipulate\
+    \ strings to find the character codes of individual letters. You should find that\
+    \ if you can follow this code, you can do most things in ComputerCraft."
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '# # CHAPTER 6: COMPUTER NETWORK
+
+
+    ComputerCraft will actually allow you to create more than one computer in a world
+    and what is more, to connect the computers together in a network. To accomplish
+    this you just need to add a couple of computers and attach wireless modem to the
+    sides of them.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_46_0.png)
+
+
+    Figure 6-1. A Computer Network in ComputerCraft
+
+
+    In this project (Figure 6-1). There are two computers, (one is hidden behind the
+    screen in Figure 6-1) and you can type messages on the terminal in one computer
+    and the message will be transmitted to the other computer where it will be displayed
+    on the large screen attached to it.
+
+
+    # ## Setting Up the Sending Computer
+
+
+    In hardware terms, you just need a Computer and a wireless modem. Remember to
+    which side of the computer the wireless adapter is connected as you will need
+    to specify this in the program.
+
+
+    The program for the sender is called "sender" and can be downloaded with the other
+    programs used in this book from https://github.com/simonmonk/computercraft_examples.
+    See Appendix A for more information on installing the'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: "program. Alternatively neither the sender or receiver are long, so they can\
+    \ easily be typed in.\n\nHere is the full program for the sender.\n\n```\n```\n\
+    while true do\n  term.clear()\n  term.setCursorPos(1, 1)\n  print(\"Please enter\
+    \ message to send:\")\n  message = read()\n  rednet.open(\"right\")\n  rednet.broadcast(message)\n\
+    \  rednet.close(\"right\")\n  sleep(0.1)\nend\n```\n```\n\nThe program loops forever,\
+    \ waiting for a message to be entered. When a message is entered, then it opens\
+    \ a connection to the wireless network using rednet.open. The side passed as a\
+    \ parameter (in this case \"right\") needs to match the face of the computer to\
+    \ which the wireless access point is attached.\n\nThe command rednet.broadcast\
+    \ sends the message to all computers to which this computer is attached. Finally\
+    \ the connection is closed using rednet.close.\n\n# ## Setting up the Receiver\n\
+    \nThe receiver setup is the same as the sender, with the addition of a monitor\
+    \ on which the messages will be displayed.\n\nThe program for the receiver is\
+    \ still pretty simple. See Appendix A for details of how to download and install\
+    \ it, or you can enter it using the editor.\n\n```\n```\nrednet.open(\"left\"\
+    )\nwhile true do\n  id, message = rednet.receive(1)\n  if message then\n    print(message)\n\
+    \  end\nend\n```\n```\n\nThe first thing that happens is that a connection is\
+    \ established to the wireless access point to the left. There is then a loop that\
+    \ will only quit if you CTRL-T the program. Inside this loop rednet.receive is\
+    \ called to see if there is a message."
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: 'You will notice that there are two variables being assigned to the result of
+    calling of `rednet.receive` (id and message). This is because the function returns
+    two values. The first value is the id of the computer that sent the message (this
+    will be a number) and the second value is a string containing the message.
+
+
+    The if statement makes sure that a message was actually received before printing
+    it.
+
+
+    When you start the receiving computer, remember to run it on the monitor by starting
+    it with the command:
+
+
+    ```
+
+    monitor right receiver
+
+    ```
+
+
+    If your monitor is on some side of the computer other than right, then change
+    this in the command above.
+
+
+    # Sending a Message
+
+
+    Start the receiver running as described above and then move over to the sending
+    computer and start the sender program running (Figure 6-2).
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_48_0.png)
+
+
+    Figure 6-2. Sending a Message
+
+
+    Type in the message you want to send and hit Enter. If all is well the message
+    will appear over on the receiving computer''s monitor.
+
+
+    # Summary
+
+
+    There is nothing to stop you building bigger networks of computers and allowing
+    to send messages to each other. You could for instance have one control computer
+    that'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: sends wireless network commands to other computers that control pistons or Redstone
+    lamps. The possibilities are endless!
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# CHAPTER 7: TWITTER IN MINECRAFT
+
+
+    We thought it might be cool to be able to read tweets while you are playing Minecraft.
+    In this project, not only can you read tweets, but also you can arrange that when
+    a Tweet arrives you are notified by activating a piston using Redstone.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_50_0.png)
+
+
+    Figure 7-1. Twitter in Minecraft
+
+
+    After the piston activates and you know a Tweet has arrived you can go and view
+    it on the Computer''s console (Figure 7-2).
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_50_1.png)
+
+
+    Figure 7-2. Reading a Tweet in Minecraft'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: "# Hardware\n\nYou can use the Redstone signal from the computer any\nway you\
+    \ want, but in the arrangement shown above, the\nRedstone controls a piston that\
+    \ reveals a Glowstone block\nwhen a Tweet is received (Figure 7-3).\n\n![](img/7ea6f60bb53ecc17dd8979f66d5502d6_51_0.png)\n\
+    \nFigure 7-3. After a New Tweet Arrives.\n\n# The Code\n\nFor this program to\
+    \ work, you must first enable web access\nfrom ComputerCraft. To do this, you\
+    \ need to open up the\nfile \"ComputerCraft.cfg\" in the folder \"minecraft/config\"\
+    \nusing an editor like TextPad or NotePad and edit the\nfollowing code from:\n\
+    \n```\n```\nenableapi http {\n    Bgeneral=false\n}\n```\n```\n\nto:\n\n```\n\
+    ```\nenableapi http {\n    Bgeneral=false\n}\n```\n```\n\nand further down in\
+    \ the same text file from:\n\n```\n```\nBEnableAPI_http=false\n```\n```\n\nto:\n\
+    \n```\n```\nBEnableAPI_http=true\n```\n```\n\nOnce this is done, save the file\
+    \ again and restart MineCraft.\n\nThe code uses the Twitter API to fetch the latest\
+    \ tweet from\nthe twitter name specified, so you will probably want to\nchange\
+    \ the first line to refer to your Twitter name.\n\n```\n```\nname = \"Simonmonk2\"\
+    \n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "```\n```lua\npage = \"http://api.twitter.com/1/statuses/\"\nuser_timeline.xml?screen_name=\"\
+    \ .. name ..\n                     \"&count=1\"\nold_text = \"\"\n\nwhile true\
+    \ do\n    tweet_page = http.get(page)\n    response = tweet_page.readAll()\n \
+    \   tweet_page.close()\n    start_of_tag = string.find(response,\n           \
+    \          \"<text>\")\n    end_of_tag = string.find(response,\n             \
+    \        \"</text>\")\n\n    if (start_of_tag and end_of_tag) then\n        text\
+    \ = string.sub(response,\n             start_of_tag + 6, end_of_tag - 1)\n   \
+    \     if (text ~= old_text) then\n            print(text)\n            old_text\
+    \ = text\n            rs.setOutput(\"bottom\", true)\n            sleep(3)\n \
+    \           rs.setOutput(\"bottom\", false)\n            sleep(3)\n        end\n\
+    \    end\n    sleep(20)\nend\n```\n```\n\nThe Twitter API returns XML containing\
+    \ the message. The actual message itself will be in a <text> tag so the code finds\
+    \ the position of <text> and </text> and chops out the text in the middle.\n\n\
+    The main loop continues forever, but a sleep of 20 seconds ensures that Twitter\
+    \ is only checked every 20 seconds for tweets.\n\nWe do not want to trigger the\
+    \ notification unless there is a new tweet, so the message that is fetched is\
+    \ compared with the message in the variable old_text and only if they are different\
+    \ is the message printed and the Redstone activated.\n\nWhen you see the Redstone\
+    \ do something when you receive a message, you can go and read the message on\
+    \ the computer console.\n\n# Summary"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: This project opens up all sorts of possibilities. Not only does it mean that
+    you can be contacted via Twitter, when you are in Minecraft, but with some work,
+    you could be alerted of emails or Facebook messages.
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: "+   - Right button to Back face of the computer\n+   - Go button to Top face\
+    \ of the computer\n+   - Stop button to Front face of the computer\n\n![](img/7ea6f60bb53ecc17dd8979f66d5502d6_55_0.png)\n\
+    \n# The Code\n\nThe turtle will not normally move without fuel. Fortunately, there\
+    \ is a way around this. We can set our turtle to operate without being fed coal,\
+    \ by modifying the config file config/CCTurtle.cfg.\n\nChange the line:\n\n```\n\
+    turtleNeedsFuel=true\n```\n\nto:\n\n```\nturtleNeedsFuel=false\n```\n\nThe code\
+    \ is in two parts. There is one program that runs on the computer (TurtleSend)\
+    \ and another on the Turtle itself that receives commands from the computer through\
+    \ the Turtle's wireless modem.\n\n# TurtleSend\n\nThis is the program that runs\
+    \ on the Computer. It opens a connection to the wireless modem on the \"right\"\
+    \ of the computer. Remember to change this if you attach your modem to a different\
+    \ side.\n\n```\nwhile true do\n    rednet.open(\"right\")\n    if rs.getInput(\"\
+    left\") then\n        rednet.broadcast(\"1\")\n```"
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: "```\n```lua\nelseif rs.getInput(\"back\") then\n    rednet.broadcast(\"r\"\
+    )\nelseif rs.getInput(\"top\") then\n    rednet.broadcast(\"g\")\nelseif rs.getInput(\"\
+    front\") then\n    rednet.broadcast(\"s\")\nend\nrednet.close(\"right\")\nsleep(0.9)\n\
+    end\n```\n```\n\nHaving opened the connection, the rs.input functions return true\
+    \ if the Redstone connected to buttons are active. If the button is active then\
+    \ the computer broadcasts a message with a single letter command of 'r', 'l',\
+    \ 'g' or 's' for left, right, go or stop.\n\n# Turtle Receive\n\nThe receiving\
+    \ code on the turtle mirrors the code on the computer. But, instead of checking\
+    \ for button presses, it checks for incoming messages from the wireless modem.\
+    \ If it finds it, then it sends the appropriate turtle movement command.\n\nThe\
+    \ variable ‘moving’ is used to determine if the turtle.forward() message is carried\
+    \ out. This allows the turtle to move forward automatically unless stopped.\n\n\
+    ```\n```lua\nrednet.open(\"right\")\nwhile true do\n    id, message = rednet.receive(1)\n\
+    \    if message == \"r\" then\n        turtle.turnRight()\n    elseif message\
+    \ == \"l\" then\n        turtle.turnLeft()\n    elseif message == \"g\" then\n\
+    \        moving = true\n    elseif message == \"s\" then\n        moving = false\n\
+    \    end\n    if moving then\n        turtle.forward()\n    end\nend\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Summary
+
+
+    An obvious way of extending this project would be to add
+
+    extra commands to the Turtle to allow it to dig etc.
+
+
+    You could also combine it with the previous project and
+
+    have the Turtle do a little dance, or even come and find
+
+    you!'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '# APPENDIX A: EXAMPLE
+
+    PROGRAMS
+
+
+    The example programs used in this book are all open source and available for download
+    from https://github.com/simonmonk/computercraft_examples
+
+
+    # Installing Programs in ComputerCraft
+
+
+    You do not have to type the example programs into ComputerCraft. If you wish,
+    you can download the programs and install them into ComputerCraft. Then all you
+    have to do is to run them.
+
+
+    This is how you do that.
+
+
+    First, point your browser at https://github.com/simonmonk/computercraft_examples
+    and then click on the icon labelled ZIP. It looks like a cloud with an arrow beneath
+    it.
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_58_0.png)
+
+
+    Figure A-1: The Github Repository
+
+
+    This will download a zip file containing the programs. Unzip this into some convenient
+    location, say the desktop.
+
+
+    Next, on your computer, you have to find your ComputerCraft installation directory.
+
+
+    This is in your .minecraft folder we navigated to in the installation chapter.
+    Then go to “saves” and you will notice the titles of the folders are the names
+    of your worlds. Once'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '![](img/7ea6f60bb53ecc17dd8979f66d5502d6_63_0.png)
+
+
+    Welcome to a world of unlimited creativity,
+
+    where you can write all sorts of amazing pro-
+
+    grams, and build magnificent structures.
+
+
+    This book will guide you from the installa-
+
+    tion of the ComputerCraft mod, to networking
+
+    computers or making a Morse code generator.
+
+
+    With downloadable scripts and an installtion
+
+    guide for them, programming in a game with-
+
+    out copy and paste has never been so simple!
+
+
+    ![](img/7ea6f60bb53ecc17dd8979f66d5502d6_63_1.png)'
+  merge: -1
+  img_proc: true

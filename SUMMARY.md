@@ -834,6 +834,7 @@
 +   [计算机系统：程序员视角（第二版）](docs/computer-systems-a-programmers-perspective-second-edition/README.md)
 +   [计算机视觉与图像处理：基础与应用](docs/computer-vision-and-image-processing-fundamentals-and-applic/README.md)
 +   [计算机视觉：从表面到三维物体](docs/computer-vision-from-surfaces-to-3d-objects/README.md)
++   [ComputerCraft：Minecraft 中的 Lua 编程](docs/computercraft-lua-programming-in-minecraft/README.md)
 +   [计算机与社会：向善计算 (Chapman & Hall／CRC 计算教材)](docs/computers-and-society-computing-for-good-chapman-hallcrc-tex/README.md)
 +   [计算基础入门：IC3 版](docs/computing-fundamentals-ic3-edition/README.md)
 +   [计算手册（第三版）：计算机科学与软件工程](docs/computing-handbook-third-edition-computer-science-and-softwa/README.md)
