@@ -1,0 +1,279 @@
+
+- *Just One Bite* (Schaefer), 122
+- “Just Three” (Wise), 132, 140
+
+## K
+
+- Kalan, Robert, 34, 153, 164
+- Kasza, Keiko, 121, 159
+- Katz, Bobbi, 132
+- Katz, Karen, 20
+- Kaye, Buddy, 27
+- Keats, Ezra Jack, 32, 153, 158
+- Keller, Holly, 124
+- Kent, Jack, 128
+- Kerley, Barbara, 21, 25, 161
+- Khan, Rukhsana, 20
+- *A Kid’s Best Friend* (Ajmera), 140
+- King, Stephen Michael, 139
+- Kirk, Daniel, 167
+- *Kitchen Dance* (Manning), 21, 144
+- *Kitchen from One to Ten* (Ginsburg), 131, 152
+- *Kittens* (Macken), 132
+- *Kitten's First Full Moon* (Henkes), 130
+- *Kitty’s Cuddles* (Cabrera), 35, 131
+- Klassen, Jon, 132
+- Koide, Tan, 125
+- Komiya, Teruyuki, 122
+- Kopper, Lisa, 146
+- Kraus, Robert, 33, 121, 142
+- Krauss, Ruth, 157
+- Krebs, Laurie, 153
+- Kredensor, Gail, 122
+- Kuskin, Karla, 114, 122, 129, 132, 150
+
+## L
+
+- labels, activities with, 31
+- Lacome, Julie, 158
+- *Ladybug, Ladybug* (Brown), 128
+- ladybugs
+  - activities on, 43, 78, 127
+  - books and poems about, 128, 129, 142, 162
+- Langstaff, John, 153
+- language play, and learning, 39–40
+- Lavis, Steve, 149
+- learning, in preschoolers, 3–6, 11–12, 39–40
+- Lee, Dennis, 126
+- Lee, Spike, 139
+- *Lemons Are Not Red* (Seeger), 136
+- *Leo the Late Bloomer* (Kraus), 121, 142
+- *Let’s Count Critters 1–20* (Madden), 152
+- *Let’s Get a Pup, Said Kate* (Graham), 139
+- *Let’s Look at Snails* (Waxman), 129
+- letter awareness, 16
+- *Letter to Amy* (Keats), 32, 158
+- Letter/Number game, 86, 151
+- letters (of the alphabet), 83–84, 86, 90
+- letters (correspondence), 30, 31, 32
+- Lewin, Betsy, 152
+- Lewis, Kevin, 166, 167
+- librarians, role of, 4–5, 9, 11–12, 19, 39
+- Lichtenheld, Tom, 34, 167
+- *Life-Size Zoo* (Komiya), 122
+- Lionni, Leo, 13, 128, 134, 136, 153
+- literacy skills, 9–10, 12, 30, 95
+- Litowinsky, Olga, 166
+- *Little Blue and Little Yellow* (Lionni), 136
+- *Little Donkey Close Your Eyes* (Brown), 35, 125
+- *Little Fish Lost* (Van Laan), 162
+- Litwin, Eric, 29, 134
+- *Llama, Llama, Red Pajama* (Dewdney), 142
+- Lloyd, Sam, 134
+- Lobel, Anita, 149
+- Lobel, Arnold, 113
+- *Lola at the Library* (McQuinn), 21
+- *Lola Reads to Leo* (McQuinn), 21, 146
+- London, Jonathan, 34, 133
+- Long, Sylvia, 28
+- Longenecker, Theresa, 165
+- Look, Lenore, 23, 145
+- “Look” (Zolotow), 159
+- *Look! Look! Look!* (Wallace), 155
+- *Looking for Crabs* (Whatley), 164
+- Lord, John Vernon, 127
+- Lorig, Steffanie and Richard, 146
+- *Los Pollitos Dicen / The Baby Chicks Sing* (Hall), 28, 149
+- *Lots of Feelings* (Rotner), 143
+- Low, William, 167
+- Lowercase/Uppercase matching game, 86
+- *Lullaby Moons and a Silver Spoon* (Dyer), 113
+- Lum, Kate, 125
+
+## M
+
+- MacDonald, Margaret Read, 130, 146
+- MacDonald, Suse, 26, 154, 163
+- *Machines Go to Work* (Low), 167
+- Macken, JoAnn Early, 132
+- MacLachlan, Patricia, 131, 138, 140
+- Madden, Caolan, 152
+- magnetic poetry, 30, 112
+- mailbox activities, 30, 112, 144
+- Mallet, David, 28
+- Maloney, Peter, 153
+- *Mama, Do You Love Me?* (Joosse), 21, 143
+- *Mama, Is It Summer Yet?* (McClure), 35
+- *Mamá Goose: A Latino Nursery Treasury* (Ada), 114
+- Manning, Maurice J., 21, 144
+- Martin, Bill, 33, 127, 135, 153
+- *Mary Had a Little Lamb* (Hale), 29, 149
+- *Mary Middling and Other Silly Folk* (Fyleman), 114, 134, 150
+- Marzollo, Jean, 25
+- Massie, Diane Redfield, 33, 120
+- math, as storytime theme, 151–156
+- math activities
+  - adding to storytimes, 14, 93–96
+  - Attributes, 96, 166
+  - Clap and Count, 96, 160
+  - with counting, 96, 124, 127–128, 130–131, 163
+  - Feet, 97, 157
+  - fingerplays with, 96–97
+  - flannelboards with, 97–98, 124
+  - Floor Shapes, 98, 138
+  - High and Low, 98, 151
+  - Large and Small Chart, 98, 119
+  - Loves Me, Loves Me Not, 99
+  - Math Bag, 99
+  - Measuring, 99–100
+  - Moving Shapes, 100, 133
+  - Ribbon Prepositions, 100–101, 135, 157
+  - Shape Families, 101, 144
+  - Sundial, 101
+  - Weather Flannelboard, 102
+- *Max's ABC* (Wells), 128
+- *May We Sleep Here Tonight?* (Koide), 125
+- Mayer, Bill, 166
+- Mayo, Margaret, 114
+- McBratney, Sam, 142
+- McClure, Nikki, 35
+- McFarland, Lyn, 132, 137
+- McMillan, Bruce, 26, 135, 155
+- McQuinn, Anna, 21, 28, 146, 158
+- *Mean Soup* (Everett), 140
+- measurement
+  - books about, 153–154
+  - skills in, 95–96
+- Meeker, Clare Hodgson, 150
+- *Meow and the Pots and Pans* (Braun), 35
+- Merriam, Eve, 113, 151
+- Microphone game, 87, 130, 133, 138, 157
+- Miller, Margaret, 25, 31, 33, 36, 134, 152, 157, 158
+- Miller, Mary Britton, 165
+- Miller, Virginia, 143, 153
+- *Millions of Cats* (Gág), 35, 131
+- Milne, A. A., 159
+- Milord, Susan, 145
+- Minor, Wendell and Florence, 121
+- Miranda, Anne, 29
+- *Miss Mary Mack* (Hoberman), 161
+- mommies, books about, 145–146
+- moodiness, books about, 141
+- *Moon, Have You Met My Mother?* (Kuskin), 114, 129, 132, 150
+- Moon and Sun game, 87, 124
+- *The Moon Is La Luna* (Harris), 114, 130, 140, 163, 168
+- Mora, Pat, 113
+- *More, More, More, Said the Baby* (Williams), 22, 146
+- Morgan, Michaela, 31
+- Morris, Ann, 25, 143
+- Most, Bernard, 149
+- *Mother, Mother, I Want Another* (Robbins), 35, 145
+- *Mother Goose: Numbers on the Loose* (Dillon), 155
+- mothers, books about, 145–146
+- *Mothers Are Like That* (Carrick), 35, 145
+- *Mouse Count* (Walsh), 153
+- *Mouse in Love* (Kraus), 142
+- *Mouse Paint* (Walsh), 136
+- *The Mouse That Snored* (Waber), 123
+- *Mouse Views: What the Class Pet Saw* (McMillan), 155
+- *Mr. Gumpy's Motor Car* (Burningham), 165
+- *Mrs. McTats and Her Houseful of Cats* (Capucilli), 131
+- *Muncha! Muncha! Muncha!* (Fleming), 35
+- Murphy, Stuart J., 120, 154
+- music, in storytimes, 27–29, 86, 98, 100
+- *Mutt Dog* (King), 139
+- *My Crayons Talk* (Hubbard), 32, 136
+- *My First Farm Book* (Awan), 150
+- *My Five Senses* (Miller), 25, 158
+- *My Grandma / My Abuela* (Guy), 22
+- *My Heart Is Like a Zoo* (Hall), 121, 151
+- *My Mother's Sari* (Rao), 22, 133
+- *My Name Is Elizabeth* (Dunklee), 158
+- “My Puppy” (Fisher), 138
+
+## N
+
+- *The Napping House* (Wood), 35, 125
+- narrative skills, 10
+- Nash, Ogden, 113, 119, 150
+- *The Neighborhood Mother Goose* (Crews), 114
+- Nelson, Kadir, 21, 120
+- “Night Bear” (Hopkins), 126
+- nighttime, as storytime theme, 123–126
+- Nikola-Lisa, W., 22, 33, 150, 157
+- *No, David!* (Shannon), 158
+- *No, No, Jack!* (Hirsch), 139
+- *No Dinner! The Story of the Old Woman and the Pumpkin* (Souhami), 22, 35, 161
+- *No More Kissing!* (Clark), 146
+- Nodset, Joan L., 150
+- *Noisy Nora* (Wells), 35
+- nonfiction books, 23–27
+- North, Sherry, 145
+- note writing activities, 30, 31
+- number sequence, 94
+- numbers and operations skills, 93–95
+- Numeroff, Laura, 125
+
+## O
+
+- ocean, as storytime theme, 162–165
+- *Ocean Counting* (Pallotta), 164
+- *Of Colors and Things* (Hoban), 137
+- *Oh, No, Gotta Go!* (Elya), 143
+- *Old Black Fly* (Aylesworth), 129
+- *Old Hat, New Hat* (Berenstain), 133
+- Olson, Nathan, 25
+- Olson-Brown, Ellen, 28, 167
+- *On Mother's Lap* (Scott), 22, 145
+- *Once I Ate a Pie* (MacLachlan), 140
+- *One Foot, Two Feet* (Maloney), 153
+- *One Lonely Sea Horse* (Freymann), 164
+- *One Nighttime Sea* (Rose), 125, 155, 164
+- *One Red Rooster* (Carroll), 149
+- “1, 2, 3” (Calmenson), 156
+- *One Windy Wednesday* (Root), 150
+- one-to-one correspondence, in math, 94
+- *Oonga Boonga* (Wishinsky), 145
+- Opposites game, 87–88, 144
+- *Orange Everywhere* (Sterling), 137
+- order, books about, 154
+- *Our Grandparents: A Global Album* (Ajmera), 22, 147
+- *Outside Your Window* (Davies), 122, 126, 165
+- *Over in the Meadow* (Keats), 153
+- *Over in the Meadow* (Langstaff), 153
+- *Owen* (Henkes), 142
+- Owen, Ann, 28, 167
+
+## P
+
+- Pallotta, Jerry, 155, 164
+- “The Panther” (Nash), 119
+- *Papa, Do You Love Me?* (Joosse), 22, 145
+- Parenteau, Shirley, 160
+- Park, Linda Sue, 20
+- Parr, Todd, 142
+- Patilla, Peter, 154
+- *Patrick Paints a Picture* (Pirotta), 32, 136
+- *Pattern Bugs* (Harris), 127
+- *Pattern Fish* (Harris), 25, 151, 164
+- patterns, books about, 154
+- Paxton, Tom, 28, 120
+- *Peanut Butter and Jelly* (Westcott), 29
+- Pearson, Tracey Campbell, 148
+- *Pete the Cat: I Love My White Shoes* (Litwin), 29, 134
+- Peters, Andrew Fusek, 120
+- Phillips, Louis, 122
+- phonological awareness, 7, 10, 27, 39
+- photographs, activities with, 84, 88–90, 98, 104–105, 123, 148, 166
+- Photos game, 88
+- Picture/Word game, 88–89
+- Picture/Word/Number game, 89
+- *Pie's in the Oven* (Birney), 35
+- “Piggy Back” (Hughes), 147
+- *The Piggy in the Puddle* (Pomerantz), 150
+- *The Pig's Picnic* (Kasza), 159
+- Pinkney, Brian, 21, 28, 144
+- Pinkwater, Daniel, 31, 160
+- Pirotta, Savio, 32, 136
+- *Plant Patterns* (Olson), 25
+- play, in storytimes, 8–9, 95
