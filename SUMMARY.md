@@ -823,6 +823,7 @@
 +   [初学者计算机编程与网络安全：4合1：分步学习专业编程与数据保护的终极手册。本书包含：Python、Java、C++ 及网络安全](docs/computer-programming-for-beginners-and-cybersecurity-4-manus/README.md)
 +   [初学者计算机编程与网络安全：逐步学习专业编程与数据保护的终极手册。本书包含：Python、Java、C++ 与网络安全](docs/computer-programming-for-beginners-and-cybersecurity-the-ult/README.md)
 +   [初学者计算机编程指南：本书包含 - Python、C++、Linux 入门指南以及 Kali Linux 黑客攻击。通过此合集循序渐进地学习编程](docs/computer-programming-for-beginners-this-book-includes---pyth/README.md)
++   [C++ 计算机编程（附 CD）](docs/computer-programming-in-c-with-cd/README.md)
 +   [计算机编程入门指南](docs/computer-programming-made-simple-books/README.md)
 +   [计算机编程：即使是初学者也能掌握项目编程所需的完美技能最完整速成课程。学习并掌握最佳编程语言！](docs/computer-programming-the-most-complete-crash-course-for-lear/README.md)
 +   [计算机科学纯粹而简单合订：面向 7-12 年级自学者的趣味编程](docs/computer-science-pure-and-simple-combined-edition-fun-progra/README.md)

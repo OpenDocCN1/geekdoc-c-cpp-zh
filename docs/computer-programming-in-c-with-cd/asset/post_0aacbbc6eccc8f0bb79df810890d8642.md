@@ -1,0 +1,323 @@
+
+```cpp
+void marklist::del()
+{
+    node *ptr=head;
+    int rollno;
+    cout<<"\nEnter the roll no to be deleted:";
+    cin>>rollno;
+    if(rollno==ptr->data.rollno)
+    {
+        head=head->link;
+        delete(ptr);
+    }
+    else
+        while((rollno!=ptr->link->data.rollno)&&(ptr->link!=NULL))
+            ptr=ptr->link;
+    node *p=ptr->link;
+    ptr->link=p->link;
+    delete(p);
+    display();
+}
+
+void marklist::sort()
+{ int flag = 0;
+    node *dptr=head;
+    student data1;
+    do
+    {
+        node *ptr=head;
+        while(ptr->link!=NULL)
+        {
+            if(ptr->data.t<ptr->link->data.t)
+                flag =1;
+            else
+                if (ptr->data.t==ptr->link->data.t)
+                {
+                    if (ptr->data.m1<ptr->link->data.m1)
+                        flag =1;
+                }
+                else
+                    if (ptr->data.m1==ptr->link->data.m1)
+                    {
+                        if (ptr->data.m2<ptr->link->data.m2)
+                            flag =1;
+                    }
+                    else
+                        if(ptr->data.m2==ptr->link->data.m2)
+                        {
+                            if(ptr->data.m3<ptr->link->data.m3)
+                                flag = 1;
+else
+    if(ptr->data.m3==ptr->link->data.m3)
+    {
+        if(ptr->data.rollno<ptr->link->data.rollno)
+            flag=1;
+    }
+    }
+    }
+    }
+
+    if (flag==1)
+    {
+        data1= ptr->data;
+        ptr->data=ptr->link->data;
+        ptr->link->data=data1;
+        flag=0;
+    }
+    ptr=ptr->link;
+    dptr=dptr->link;
+}
+}while(dptr->link!=NULL);
+display();
+}
+
+void marklist::push()
+{
+    char name[10];
+    int rollno,m1,m2,m3,t;
+    cout<<"\nEnter roll no,name,marks of 3 subjects:\n";
+    cin>>rollno>>name>>m1>>m2>>m3;
+    t=m1+m2+m3;
+    node *ptr=new node;
+    strcpy(ptr->data.name,name);
+
+    ptr->data.rollno=rollno;
+    ptr->data.m1=m1;
+    ptr->data.m2=m2;
+    ptr->data.m3=m3;
+    ptr->data.t=t;
+    ptr->link=head;
+    head=ptr;
+    display();
+}
+
+void marklist::pop()
+{
+    int no;
+    no=head->data.rollno;
+    head=head->link;
+    cout<<"\nrecord with roll no "<<no<<" has been deleted";
+    display();
+}
+
+void main()
+{
+    clrscr();
+    marklist m1;
+    int ch;
+    char ans='Y';
+    do
+    {
+        cout<<"\n1.Input\n2.Insert\n3.delete\n4.Push\n5.Pop\n6.Sort\nEnter your choice:";
+        cin>>ch;
+        switch(ch)
+        {
+            case 1:
+                m1.input();
+                break;
+            case 2:
+                m1.insert();
+                break;
+
+            case 3:
+                m1.del();
+                break;
+
+            case 4:
+                m1.push();
+                break;
+
+            case 5:
+                m1.pop();
+                break;
+            case 6:
+                m1.sort();
+                break;
+            default:
+                cout<<"\nwrong choice";
+        }
+        cout<<"\nDo you want to continue:(Y/N)";
+        cin>>ans;
+    }while(toupper(ans)!='N');
+    getch();
+}
+```
+
+## Q47: Write a program to perform the operation of heapsort on an array and then display the results as a sorted array.
+
+### Ans
+
+```cpp
+#include<iostream.h>
+#include<conio.h>
+class heap //Defining a class by the name heap.
+{
+    int a[31],n; //private members of the class heap
+    public: //All declarations below are public
+            void readdata();
+            void display();
+            void swapdown(int,int);
+            void heapify();
+            void hsort();
+};
+
+void main()
+{
+    heap h1; //Declaring an object of the class heap
+            clrscr();
+            h1.readdata();
+            cout<<"\nThe elements are :\n";
+            h1.display();
+            cout<<"\nAfter heapsort : ";
+            h1.hsort();
+            cout<<endl;
+            h1.display();
+            getch();
+}
+
+void heap::readdata() //Function to input values
+{
+    cout<<"Enter the number of elements in the heap (max is 30) : ";
+    cin>>n;
+    cout<<"\nEnter the elements :\n";
+    for(int i=1;i<=n;i++)
+    /*Counter for inputting number of elements depending on the number entered
+earlier */
+            cin>>a[i];
+}
+
+void heap::display() //Function to display the values
+{
+    for(int i=1;i<=n;i++)
+    /*Counter for displaying the number of elements depending on the number
+       entered earlier */
+        cout<<a[i]<<"\t";
+}
+
+void heap::swapdown(int r,int m)
+/* Function for swapping down the entire heap once beginning from the top to
+   the bottom */
+{
+    int done=0,c;
+    while((!done) && ((c=(2*r))<=m))
+    /*Done is the flag for showing whether the heap has been swapped down once
+or not, r stands for the root elements and c stands for the children
+elements of the root element. */
+    {
+        if((c<m) && (a[c]<a[c+1]))
+        /* The condition to check the root with each out of its two children
+elements*/
+            c++;
+            if(a[c]>a[r]) //If the child is greater than the parent
+            {
+                int t=a[c]; //then swap the parent and child positions
+                a[c]=a[r];
+                a[r]=t;
+                r=c; /*and make the child the parent now to check for
+consensus among the disturbed positions, such that the
+children of the exchanged elements check with their
+children if any. */
+            }
+            else
+                done=1; //Once all conditions are checked, set the
+                        // flag to done
+    }
+}
+
+void heap::heapify() //Function to heapify
+{
+    for(int i=n/2;i>=1;i--)
+    /*Beginning to swapdown from the last non-leaf parent upwards to the first
+parent of all the children */
+    swapdown(i,n);
+}
+
+void heap::hsort()
+{
+    heapify(); //Beginning with heapifying the entire heap once
+    int x = n;
+    while(x>1) //Beginning to swapdown from the last element to the first one
+    {
+        int t=a[1]; /*swapping the positions of the last and the first
+        element since we need the sort results in the ascending form.*/
+        a[1]=a[x];
+        a[x]=t;
+        x--;
+        swapdown(1,x);
+    }
+}
+```
+
+## Q48: Write a program to perform the operation of heapsort using the doubly linked lists concept.
+
+### Ans
+
+```cpp
+#include<iostream.h>
+#include<stdio.h>
+#include<ctype.h>
+#include<iomanip.h>
+#include<conio.h>
+
+class dnode //Declaring a class with the name dnode
+{
+    public: //All declarations below this are public
+    int data; /* All doubly linked lists will have nodes, each node will have a
+                data field */
+    dnode *flink,*blink; /*Each node will have two link fields one pointing
+    forwards to the next node and one pointing backwards to the previous node.
+    */
+};
+
+class dll /* Declaring a class by the name dll standing for the doubly linked list, in this case */
+{
+    dnode * h1; /*Each doubly linked list will have two heads, one for the
+    first element and one for the last element depending on from which side
+you begin to view the list, in this case both the heads are named as h1
+and h2. */
+    dnode *h2;
+
+public: // All declarations below this are public.
+int cnt;
+void create();
+void display();
+void swapdown(int,int);
+void hpfy();
+void hsort();
+};
+
+void dll::create() //Function to create the doubly linked list
+{
+h1=new dnode;
+h2=new dnode;
+h1->blink=NULL;/* we are beginning to view the doubly linked list from h1.
+There is no previous element to h1, and so the backwards link from h1 will
+point to NULL.*/
+dnode *ptr =h1; //A pointer element taking off from h1
+dnode *prev;
+char ch;
+cnt=0;
+cout<<"\nenter the number of elements"<<endl;
+cin>>cnt; //Entering the count for the number of elements.
+for(int i=1;i<=cnt;i++) /* Counter for the number of elements as mentioned above. */
+{
+cout<<"\n\nenter element "<<i<<" :";
+cin>>ptr->data; /* The element entered will be inputted into the data field
+                    of the ptr node. */
+dnode *p=new dnode;
+ptr->flink=p; //p will be the next node to which ptr points
+p->blink=ptr; /* the previous node to p is ptr, hence the backwards link of
+                 p point to ptr. */
+prev=ptr;
+ptr=p; /* For the loop to be repeated storing value of current p to previous ptr */
+}
+prev->flink=NULL; /*Once the counter reaches the final count, there is no
+more node to be pointed to, hence the forward link of the node should
+point to NULL.*/
+h2=prev; /*Since there is no other node after this, this will be the
+second head of the linked lists. */
+delete(ptr); /* To avoid unnecessary consumption of memory storage, delete
+                the node. */
+}
+```

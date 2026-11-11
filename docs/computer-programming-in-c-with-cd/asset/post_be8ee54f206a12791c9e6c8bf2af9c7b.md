@@ -1,0 +1,295 @@
+
+```cpp
+{
+    n=0;
+
+    for(int i=0;i<=99;i++)
+        a[i]=0;
+    /*As soon as an object of the class dmanip is declared, this constructor
+      will be called which will initialize all the elements of the array
+      as 0.  */
+}
+
+void dmanip::input() /* The double colon, ::, is the scope resolution
+                        operator. It is a way of specifying what class something is associated
+                        with. In this case, it means “the input() member function of the dmanip
+                        class.”*/
+{
+    cout<<"\n Enter the number of elements you want to enter ";
+    cin >> n;
+
+    for(int i=1;i<=n;i++)
+        cin>>a[i];
+}
+
+void dmanip::input(int m, int x[100]) //Defining the overloaded function
+{
+    n=m;
+    for(int i=1;i<=n;i++)
+        a[i]=x[i];
+}
+
+void dmanip::merge(dmanip d1,dmanip d2)
+{
+    n = d1.n + d2.n;
+    int i=1,j=1,k=1;
+
+    while((i<=d1.n) && (j<=d2.n)) /* Comparing every successive element of
+    array in object d1 with every successive element of the array in object d2
+    to determine which of them is bigger, the smaller one goes into the
+    corresponding position in the array in the object accessing this
+    function*/
+    {
+        if(d1.a[i] < d2.a[j])
+        {
+            a[k]=d1.a[i];
+            ++i;
+            ++k;
+        }
+        else
+        {
+            a[k] = d2.a[j];
+            ++k;
+            ++j;
+        }
+    }
+
+    while(i<=d1.n)
+    /* providing for contingency in case the second array has lesser
+    elements as compared to the first array */
+    {
+        a[k]=d1.a[i];
+        ++i;
+        ++k;
+    }
+
+    while(j<=d2.n)
+    /* Providing for contingency in case the first array has lesser elements
+    as compared to the second array */
+    {
+        a[k]=d2.a[j];
+        ++j;
+        ++k;
+    }
+}
+
+void dmanip::sort()
+{
+    int sorted=0;
+    int k=0;
+    int temp;
+
+    for(k=1;k<=n-1;k++)    /* For sorting the array for n-1 passes*/
+    {
+        int sorted=0;
+        for(int i=1;i<=n-k;i++)    /* i<=n-k for not checking the number which are
+                                      already sorted*/
+        {
+            if(a[i]>a[i+1])
+            {
+                temp=a[i];
+                a[i]=a[i+1];
+                n--;             /* Decrease the counter for the size of array by 1*/
+            }
+        }
+    }
+}
+
+void dmanip::display()
+{
+    for(int i=1;i<=n;i++) //Counter for displaying the objects
+        cout<<a[i];
+}
+
+void main()
+{
+    clrscr();
+    int k,l,m,n;
+    dmanip d1,d2,d3; //Declaring objects d1,d2,d3 of class dmanip
+    d1.input();
+    d2.input();
+    cout<<"\nNow sorting and displaying the elements of the first array"<<endl;
+    d1.sort();
+    d1.display();
+    cout<<endl;
+    getch();
+    cout<<"\nNow sorting and displaying the elements of the second array"<<endl;
+    d2.sort();
+    d2.display();
+    cout<<endl;
+    getch();
+    cout<<"\nNow enter the new element that you want inserted into the first array"<<endl;
+    cin>>k;
+    d1.insert(k);
+    cout<<"\nNow displaying the first array with the inserted element at the desired position"<<endl;
+    d1.display();
+    cout<<endl;
+    getch();
+    cout<<"\nNow enter the new element that you want inserted into the second array"<<endl;
+    cin>>l;
+    d2.insert(l);
+    cout<<"\nNow displaying the second array with the inserted element at the desired position"<<endl;
+    d2.display();
+    cout<<endl;
+    getch();
+    cout<<"\nNow enter the element that you want deleted from the first array"<<endl;
+    cin>>m;
+    d1.del(m);
+    cout<<"\nNow displaying the first array with the given element deleted from the desired position"<<endl;
+    d1.display();
+    cout<<endl;
+    getch();
+    cout<<"\nNow enter the element that you want deleted from the second array"<<endl;
+    cin>>n;
+    d2.del(n);
+    cout<<"\nNow displaying the second array with the given element deleted from the desired position"<<endl;
+    d2.display();
+    cout<<endl;
+    getch();
+    d3.merge(d1,d2);
+    d3.sort();
+    cout<<"\nNow displaying the results of the two arrays when they are merged"<<endl;
+    d3.display();
+    cout<<endl;
+    getch();
+}
+```
+
+## Q38: Write a program to input information of students for eg: Student Roll Number, Student Name, Marks in Maths, Physics, Chemistry. Find the total marks for each student. In the student class make a function to sort students according to the total marks [ascending order]. If the total marks of two students are equal then it will decide the merit rank depending first on the marks obtained in Maths, then Physics. If total marks in all the three subjects and Maths and Physics are equal, it then means that chemistry is also equal. In that case, final decision is to be taken based on the roll number of the student.
+
+Ans:
+
+```cpp
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+
+class student             //Declaring a class of type student
+{
+public:      //All components below this declaration will be of type public
+    int sno,m,p,c,total;
+    char name[20];
+    void input();        // function to take input values
+    void display();      // function to display the merit list along
+                         // with the other
+                         // information
+}; // Semicolon after declaration of class
+
+void student::input()        //define the input function
+{
+    cout<<"\nSTUDENT ROLL NUMBER:";
+    cin>>sno;
+    cout<<"\nSTUDENT NAME:";
+    cin>>name;
+    cout<<"\nENTER THE MARKS FOR MATHS, PHYSICS AND CHEMISTRY RESPECTIVELY:";
+    cin>>m>>p>>c;
+    total=m+p+c;             //computing the total
+}
+
+void student::display() //define display function
+{
+    cout<<setw(5)<<sno<<setw(20)<<name<<setw(10)<<m<<setw(10)<<p<<setw(10)<<c<<setw(10)<<total;
+}
+
+void sort(student m1[10],int n) //define sorting function to sort students
+{
+    int flag = 0;
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=0;j<n-1;j++)
+        {
+            if(m1[j].total<m1[j+1].total)
+            // checking the total condition
+                flag = 1;
+            else if(m1[j].total==m1[j+1].total) //if total is equal
+            {
+                if(m1[j].m<m1[j+1].m)        //checking the maths marks
+                    flag = 1;
+                else if(m1[j].m==m1[j+1].m)   //if maths also equal
+                {
+                    if(m1[j].p<m1[j+1].p) //checking for the
+                                          // physics
+                                          // marks
+                        flag = 1;
+                    else
+                    {
+                        if(m1[j].sno>m1[j+1].sno)//if all subject
+                                                 //marks are equal
+                            flag =1;          //order the records
+                                             //according to the roll
+                                             // number
+                    }
+                }
+            }
+            if(flag==1)
+            {
+                student temp= m1[j+1];      //interchanging records based
+                                             // on results we got using the
+                                             // above code
+
+                m1[j+1]=m1[j];
+                m1[j]=temp;
+                flag =0;
+            }
+        }
+    }
+}
+
+void main()                         //main function
+{
+    clrscr();                            //array of objects of type student
+    student m1[10];
+    int n;
+    void sort(student s[10],int a);     //sorting function prototype
+    clrscr();
+    cout<<"ENTER THE NUMBER OF RECORDS YOU WANT TO ENTER:";
+    cin>>n;
+    for(int i=0;i<n;i++)
+        m1[i].input();              //inputting student records
+    sort(m1,n);                          //calling sort function
+    cout<<"STUDENTS LIST IN SORTING ORDER IS:\n";
+    for(i=0;i<80;i++)                    //loop to display border to the table
+        cout<<"-";
+    cout<<"\n";
+    cout<<"\n"<<setw(5)<<"SNO"<<setw(20)<<"NAME"<<setw(10)<<"MATHS"<<setw(10)<<"PHYSICS"<<setw(10)<<"CHEMISTRY"<<setw(10)<<"TOTAL"<<"\n";
+    for(i=0;i<80;i++)                    //loop to display lower border to the table
+        cout<<"-";
+    for(i=0;i<n;i++)          //loop to display sorted records
+    {
+        cout<<endl;
+        m1[i].display();          //calling class display function
+    }
+    getch();
+}
+```
+
+## Q39: Develop a class for matrix manipulations. Incorporate functions for reading a rectangular matrix, matrix addition, multiplication, transpose and display of the matrix. Incorporate overloaded functions wherever possible. Use object as parameter for matrix multiplication and addition. Also introduce constructors and overloaded constructors.
+
+Ans:
+
+```cpp
+#include<iostream.h>
+#include<iomanip.h>
+#include<conio.h>
+
+class matrix // Declaring a class by the name matrix
+{
+public:  // All the components of the class below this declaration will be
+         // public
+    int m,n,x,y,a[10][10];
+    matrix(int); //Example of Constructor
+    matrix(int,int); //Example of Constructor Overloading
+    void init();
+    void input();
+    void display();
+    void calculation(matrix,matrix);
+    void calculation(matrix,matrix,int);
+    void calculation(); //Example of three different functions with the same
+                        //name, to perform three different operations, instance
+                        //of Function overloading.
+};
+
+matrix::matrix(int x) //Constructor to initialize if the number of rows are equal to the
+                      //number of columns, i.e if the matrix is a square matrix
+{
+```
