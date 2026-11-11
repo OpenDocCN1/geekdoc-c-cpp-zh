@@ -1,0 +1,1 @@
+In contrast to thread-local data, condition variables are not easy to use.

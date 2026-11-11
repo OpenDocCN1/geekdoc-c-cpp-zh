@@ -1,0 +1,28 @@
+coroutine generatorForNumbers in lazyGenerator.cpp returns a generator. The generator numbers in line 17 or generatorForNumbers(0, 5) in line 23 returns a new number on request. The range-based for loop triggers the query. Precisely, the query of the coroutine returns the value i via co_yield i and immediately suspends its execution. If a new value is requested, the coroutine resumes its execution exactly at that place.
+
+The expression generatorForNumbers(0, 5) in line 23 is a just-in-place use of a generator.
+
+I want to stress one point explicitly. The coroutine generatorForNumbers creates an infinite data stream because the for loop in line 8 has no end condition. This is fine if I only ask for a finite number of values, such as in line 20. This does not hold for line 23, since there is no end condition. Therefore, the expression runs *forever.*
+
+# ## 5.2 Characteristics
+
+Coroutines have a few unique characteristics.
+
+# ### 5.2.1 Typical Use Cases
+
+Coroutines are the usual way to write event-driven applications¹, which can be simulations, games, servers, user interfaces, or even algorithms. Coroutines are also typically used for cooperative multitasking². The key to cooperative multitasking is that each task takes as much time as it needs, but avoids sleeping or waiting, and instead allows some other task to run. Cooperative multitasking stands in contrast to pre-emptive multitasking, for which we have a scheduler that decides how long each task gets the CPU.
+
+There are different kinds of coroutines.
+
+# ### 5.2.2 Underlying Concepts
+
+Coroutines in C++20 are asymmetric, first-class, and stackless.
+
+The workflow of an asymmetric coroutine goes back to the caller. This does not hold for a symmetric coroutine. A symmetric coroutine can delegate its workflow to another coroutine.
+
+First-class coroutines are similar to first-class functions, since coroutines behave like data. Behaving like data means that you can use them as arguments to or return values from functions, or store them in a variable.
+
+A stackless coroutine can suspend and resume the top-level coroutine. The execution of the coroutine and the yielding from the coroutine comes back to the caller. The coroutine stores its state for resumption separate from the stack. Stackless coroutines are often called resumable functions.
+
+> > ¹ https://en.wikipedia.org/wiki/Event-driven_programming
+> > ² https://en.wikipedia.org/wiki/Computer_multitasking
