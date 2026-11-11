@@ -866,6 +866,7 @@
 +   [烹制故事时间：轻松策划的混搭菜单](docs/cooking-up-a-storytime-mix-and-match-menus-for-easy-programm/README.md)
 +   [热爱编程者的非大学学历酷职业（无需大学的酷职业）](docs/cool-careers-without-college-for-people-who-love-coding-cool/README.md)
 +   [热爱游戏的人的无需大学学历的酷炫职业](docs/cool-careers-without-college-for-people-who-love-gaming/README.md)
++   [酷编程：充满适合所有年龄段孩子的奇妙知识（酷小孩）](docs/cool-coding-filled-with-fantastic-facts-for-kids-of-all-ages/README.md)
 +   [酷信息图表：数据数据可视化与设计的有效沟通](docs/cool-infographics-effective-communication-with-data-visualiz/README.md)
 +   [Core Java SE 9 入门指南](docs/core-java-se-9-for-the-impatient/README.md)
 +   [Java Java 第二卷：高级特性](docs/core-java-volume-ii-advanced-features/README.md)
