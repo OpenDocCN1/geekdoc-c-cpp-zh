@@ -850,6 +850,7 @@
 +   [分布式数据库系统中的并发控制（计算机科学与人工智能研究）](docs/concurrency-control-in-distributed-database-systems-studies-/README.md)
 +   [Modern C++ 并发编程](docs/concurrency-with-modern-c/README.md)
 +   [现代C++并发：每个专业C++程序员都应该了解的并发知识](docs/concurrency-with-modern-c-what-every-professional-c-programm/README.md)
++   [内在自信：女性的真实自信](docs/confidence-within-authentic-confidence-for-women/README.md)
 +   [自信编码：精通代码基础并加速职业发展 (自信系列)](docs/confident-coding-master-the-fundamentals-of-code-and-superch/README.md)
 +   [自信的数据技能：掌握数据处理基础并助力你的职业发展 (自信系列)](docs/confident-data-skills-master-the-fundamentals-of-working-wit/README.md)
 +   [连接游戏：视频游戏制作能教给我们关于学习与素养的什么（约翰·D与凯瑟琳·T·麦阿瑟基金会数字媒体与学习系列）](docs/connected-gaming-what-making-video-games-can-teach-us-about-/README.md)
