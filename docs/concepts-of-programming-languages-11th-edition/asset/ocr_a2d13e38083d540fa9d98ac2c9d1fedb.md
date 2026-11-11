@@ -1,0 +1,47 @@
+The following is an example of a C# program:
+
+```
+~~~csharp
+// C# Example Program
+// Input: An integer, listlen, where listlen is less than
+//        100, followed by listlen-integer values.
+// Output: The number of input values that are greater
+//        than the average of all input values.
+using System;
+public class Ch2example {
+   static void Main() {
+      int[] intList;
+      int listlen,
+          counter,
+          sum = 0,
+          average,
+          result = 0;
+      intList = new int[99];
+      listlen = Int32.Parse(Console.ReadLine());
+      if ((listlen > 0) && (listlen < 100)) {
+      // Read input into an array and compute the sum
+         for (counter = 0; counter < listlen; counter++) {
+            intList[counter] =
+                Int32.Parse(Console.ReadLine());
+            sum += intList[counter];
+         } //-- end of for (counter ...
+      // Compute the average
+         average = sum / listlen;
+      // Count the input values that are > average
+         foreach (int num in intList)
+            if (num > average) result++;
+      // Print result
+         Console.WriteLine(
+            "Number of values > average is:" + result);
+      } //-- end of if ((listlen ...
+      else
+         Console.WriteLine(
+            "Error--input list length is not legal");
+   } //-- end of method Main
+} //-- end of class Ch2example
+~~~
+```
+
+# ## 2.20 Markup-Programming Hybrid Languages
+
+A markup-programming hybrid language is a markup language in which some of the elements can specify programming actions, such as control flow and computation. The following subsections introduce two such hybrid languages, XSLT and JSP.

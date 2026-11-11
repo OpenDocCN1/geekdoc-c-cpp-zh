@@ -844,6 +844,7 @@
 +   [编程语言概念与语义，2：基于 Ocaml、Python、C++、Ada 和 Java 的模块化与面向对象构建](docs/concepts-and-semantics-of-programming-languages-2-modular-an/README.md)
 +   [C 编程概念与技术](docs/concepts-and-techniques-of-programming-in-c/README.md)
 +   [计算机与 C 语言编程概念](docs/concepts-of-computer-and-c-programming/README.md)
++   [编程语言概念（第11版）](docs/concepts-of-programming-languages-11th-edition/README.md)
 +   [编程语言概念（全球版）](docs/concepts-of-programming-languages-global-edition/README.md)
 +   [交互式系统概念设计：面向性能与用户体验的设计](docs/conceptual-design-for-interactive-systems-designing-for-perf/README.md)
 +   [分布式数据库系统中的并发控制（计算机科学与人工智能研究）](docs/concurrency-control-in-distributed-database-systems-studies-/README.md)

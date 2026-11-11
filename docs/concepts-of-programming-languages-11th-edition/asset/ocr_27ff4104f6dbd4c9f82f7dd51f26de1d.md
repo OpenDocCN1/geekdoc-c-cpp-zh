@@ -1,0 +1,33 @@
+The following two subsections describe Prolog examples that further illustrate the resolution process.
+
+# 16.6.6 Simple Arithmetic
+
+Prolog supports integer variables and integer arithmetic. Originally, the arithmetic operators were functors, so that the sum of 7 and the variable X was formed with
+
+```
+```prolog
++(7, X)
+```
+```
+
+Prolog now allows a more abbreviated syntax for arithmetic with the is operator. This operator takes an arithmetic expression as its right operand and a variable as its left operand. All variables in the expression must already be instantiated, but the left-side variable cannot be previously instantiated. For example, in
+
+```
+```prolog
+A is B / 17 + C.
+```
+```
+
+if B and C are instantiated but A is not, then this clause will cause A to be instantiated with the value of the expression. When this happens, the clause is satisfied. If either B or C is not instantiated or A is instantiated, the clause is not satisfied. And no instantiation of A can take place. The semantics of an is proposition is considerably different from that of an assignment statement in an imperative language. This difference can lead to an interesting scenario. Because the is operator makes the clause in which it appears look like an assignment statement, a beginning Prolog programmer may be tempted to write a statement such as
+
+```
+```prolog
+Sum is Sum + Number.
+```
+```
+
+which is never useful, or even legal, in Prolog. If Sum is not instantiated, the reference to it in the right side is undefined and the clause fails. If Sum is already instantiated, the clause fails, because the left operand cannot have a current instantiation when is is evaluated. In either case, the instantiation of Sum to the new value will not take place. (If the value of Sum + Number is required, it can be bound to some new name.)
+
+Prolog does not have assignment statements in the same sense as imperative languages. They are simply not needed in most of the programming for which Prolog was designed. The usefulness of assignment statements in imperative languages often depends on the capability of the programmer to control the execution control flow of the code in which the assignment statement is embedded. Because this type of control is not always possible in Prolog, such statements are far less useful.
+
+As a simple example of the use of numeric computation in Prolog, consider the following problem: Suppose we know the average speeds of several

@@ -1,0 +1,26 @@
+A task body must include some syntactic form of the entry points that correspond to the entry clauses in that task's specification part. In Ada, these task body entry points are specified by clauses that are introduced by the **accept** reserved word. An **accept** clause is defined as the range of statements beginning with the **accept** reserved word and ending with the matching **end** reserved word. **accept** clauses themselves are relatively simple, but other constructs in which they can be embedded can make their semantics complex. A simple **accept** clause has the following form:
+
+```
+accept entry_name (formal parameters) do
+  ...
+end entry_name;
+```
+
+The accept entry name matches the name in an **entry** clause in the associated task specification part. The optional parameters provide the means of communicating data between the caller and the called task. The statements between the **do** and the **end** define the operations that take place during the rendezvous. These statements are together called the **accept clause body**. During the actual rendezvous, the sender task is suspended.
+
+Whenever an **accept** clause receives a message that it is not willing to accept, for whatever reason, the sender task must be suspended until the **accept** clause in the receiver task is ready to accept the message. Of course, the **accept** clause must also remember the sender task that have sent messages that were not accepted. For this purpose, each **accept** clause in a task has a queue associated with it that stores a list of other tasks that have unsuccessfully attempted to communicate with it.
+
+The following is the skeleton body of the task whose specification was given previously:
+
+```
+task body Task_Example is
+begin
+  loop
+    accept Entry_1(Item : in Integer) do
+      ...
+    end Entry_1;
+  end loop;
+end Task_Example;
+```
+
+The **accept** clause of this task body is the implementation of the **entry** named Entry_1 in the task specification. If the execution of Task_Example begins and reaches the Entry_1 **accept** clause before any other task sends a message to Entry_1, Task_Example is suspended. If another task sends a message to Entry_1 while Task_Example is suspended, it accepts it at this **accept**, a rendezvous occurs and the **accept** clause body is executed. Then, because of the loop, execution proceeds back to the **accept**. If no other task has sent a message to Entry_1, execution is again suspended to wait for the next message.

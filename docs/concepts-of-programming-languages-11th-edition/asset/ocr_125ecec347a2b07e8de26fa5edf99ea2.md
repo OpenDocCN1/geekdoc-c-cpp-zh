@@ -1,0 +1,31 @@
+to the two previous propositions, then the relation man would have two distinct elements, {jake} and {fred}. All of the simple terms in these propositions—man, jake, like, bob, and steak—are constants. Note that these propositions have no intrinsic semantics. They mean whatever we want them to mean. For example, the second example may mean that bob likes steak, or that steak likes bob, or that bob is in some way similar to a steak.
+
+Propositions can be stated in two modes: one in which the proposition is defined to be true, and one in which the truth of the proposition is something that is to be determined. In other words, propositions either can be facts or queries. The example propositions above could be either.
+
+Compound propositions have two or more atomic propositions, which are connected by logical connectors, or operators, in the same way compound logic expressions are constructed in imperative languages. The names, symbols, and meanings of the predicate calculus logical connectors are as follows:
+
+| Name | Symbol | Example | Meaning |
+| --- | --- | --- | --- |
+| negation | ¬ | ¬a | not a |
+| conjunction | ∩ | a∩b | a and b |
+| disjunction | ∪ | a∪b | a or b |
+| equivalence | ≡ | a≡b | a is equivalent to b |
+| implication | ⊃ | a⊃b | a implies b |
+|  | ⊂ | a⊂b | b implies a |
+
+The following are examples of compound propositions:
+
+a∩b⊃c
+
+a∩¬b⊃d
+
+The ¬ operator has the highest precedence. The operators ∩, ∪, and ≡ all have higher precedence than ⊃ and ⊂. So, the second example above is equivalent to
+
+(a∩(¬b))⊃d
+
+Variables can appear in propositions but only when introduced by special symbols called quantifiers. Predicate calculus includes two quantifiers, as described below, where X is a variable and P is a proposition:
+
+| Name | Example | Meaning |
+| --- | --- | --- |
+| universal | ∀X.P | For all X, P is true. |
+| existential | ∃X.P | There exists a value of X such that P is true. |

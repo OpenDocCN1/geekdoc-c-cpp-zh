@@ -1,0 +1,35 @@
+analyzer, we can build a much more compact state diagram if we define a character class named DIGIT for digits and use a single transition on any character in this character class to a state that collects integer literals.
+
+Because our names can include digits, the transition from the node following the first character of a name can use a transition on LETTER or DIGIT to continue collecting the characters of a name.
+
+Next, we define some utility subprograms for the common tasks inside the lexical analyzer. First, we need a subprogram, which we can name `getChar`, that has several duties. When called, `getChar` gets the next character of input from the input program and puts it in the global variable `nextChar`. `getChar` also must determine the character class of the input character and put it in the global variable `charClass`. The lexeme being built by the lexical analyzer, which could be implemented as a character string or an array, will be named `lexeme`.
+
+We implement the process of putting the character in `nextChar` into the string array `lexeme` in a subprogram named `addChar`. This subprogram must be explicitly called because programs include some characters that need not be put in `lexeme`, for example the white-space characters between lexemes. In a more realistic lexical analyzer, comments also would not be put in `lexeme`.
+
+When the lexical analyzer is called, it is convenient if the next character of input is the first character of the next lexeme. Because of this, a function named `getNonBlank` is used to skip white space every time the analyzer is called.
+
+Finally, a subprogram named `lookup` is needed to compute the token code for the single-character tokens. In our example, these are parentheses and the arithmetic operators. Token codes are numbers arbitrarily assigned to tokens by the compiler writer.
+
+The state diagram in Figure 4.1 describes the patterns for our tokens. It includes the actions required on each transition of the state diagram.
+
+The following is a C implementation of a lexical analyzer specified in the state diagram of Figure 4.1, including a main driver function for testing purposes:
+
+```
+```c
+/* front.c - a lexical analyzer system for simple
+              arithmetic expressions */
+
+#include <stdio.h>
+#include <ctype.h>
+
+/* Global declarations */
+/* Variables */
+int charClass;
+char lexeme [100];
+char nextChar;
+int lexLen;
+int token;
+int nextToken;
+FILE *in_fp, *open();
+```
+```

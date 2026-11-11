@@ -1,0 +1,50 @@
+```
+~~~objective-c
+            NSLog(@"Error in pop--stack is empty");
+        else
+            topSub--;
+    }
+
+- (int) top {
+    if (topSub >= 0)
+        return stackPtr[topSub];
+    else
+        NSLog(@"Error in top--stack is empty");
+}
+
+- (int) empty {
+    return topSub == -1;
+}
+
+int main (int argc, char *argv[]) {
+    int temp;
+    @autoreleasepool {
+        Stack *myStack = [[Stack alloc] initWith];
+        [myStack push: 5];
+        [myStack push: 3];
+        temp = [myStack top];
+        NSLog(@"Top element is:%i", temp);
+        [myStack pop];
+        temp = [myStack top];
+        NSLog(@"Top element is:%i", temp);
+        temp = [myStack top];
+        [myStack pop];
+        }
+        return 0;
+    }
+@end
+~~~
+```
+
+The output of this program is as follows:
+
+```
+~~~
+Top element is: 3
+Top element is: 5
+Error in top--stack is empty
+Error in pop--stack is empty
+~~~
+```
+
+Screen output from an Objective-C program is created with a call to a method with the odd-looking name, NSLog, which takes a literal string as its parameter. Literal strings are created with an at sign (@) followed by a quoted string. If an output string includes the values of variables, the names of the variables are included as parameters in the call to NSLog. The positions in the literal string for the values are marked with format codes, for example %i for an integer and %f for a floating-point value in scientific notation, as is similar to C's printf function.

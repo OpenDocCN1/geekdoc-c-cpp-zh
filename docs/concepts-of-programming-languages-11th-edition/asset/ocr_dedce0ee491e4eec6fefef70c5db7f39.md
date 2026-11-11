@@ -1,0 +1,54 @@
+11. Write a BNF description of the precedence and associativity rules
+defined for the expressions in Problem 9. Assume the only operands are
+the names a, b, c, d, and e.
+
+12. Using the grammar of Problem 11, draw parse trees for the expressions
+of Problem 9.
+
+13. Let the function fun be defined as
+
+```
+    int fun(int *k) {
+        *k += 4;
+        return 3 * (*k) - 1;
+    }
+```
+
+Suppose fun is used in a program as follows:
+
+```
+    void main() {
+        int i = 10, j = 10, sum1, sum2;
+        sum1 = (i / 2) + fun(&i);
+        sum2 = fun(&j) + (j / 2);
+    }
+```
+
+What are the values of sum1 and sum2?
+
++   a. operands in the expressions are evaluated left to right?
++   b. operands in the expressions are evaluated right to left?
+
+14. What is your primary argument against (or for) the operator precedence
+rules of APL?
+
+15. Explain why it is difficult to eliminate functional side effects in C.
+
+16. For some language of your choice, make up a list of operator symbols
+that could be used to eliminate all operator overloading.
+
+17. Determine whether the narrowing explicit type conversions in two
+languages you know provide error messages when a converted value loses
+its usefulness.
+
+18. Should an optimizing compiler for C or C++ be allowed to change the
+order of subexpressions in a Boolean expression? Why or why not?
+
+19. Consider the following C program:
+
+```
+    int fun(int *i) {
+        *i += 5;
+        return 4;
+    }
+```

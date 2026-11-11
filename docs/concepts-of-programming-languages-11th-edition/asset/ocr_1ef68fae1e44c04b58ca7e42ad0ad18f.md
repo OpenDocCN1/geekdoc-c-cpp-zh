@@ -1,0 +1,30 @@
++   13. Explain how Smalltalk messages are bound to methods. When does this take place?
++   14. What type checking is done in Smalltalk? When does it take place?
++   15. What kind of inheritance, single or multiple, does Smalltalk support?
++   16. What are the two most important effects that Smalltalk has had on computing?
++   17. In essence, all Smalltalk variables are of a single type. What is that type?
++   18. From where can C++ objects be allocated?
++   19. How are C++ heap-allocated objects deallocated?
++   20. Are all C++ subclasses subtypes? If so, explain. If not, why not?
++   21. Under what circumstances is a C++ method call statically bound to a method?
++   22. What drawback is there to allowing designers to specify which methods can be statically bound?
++   23. What are the differences between private and public derivations in C++?
++   24. What is a *friend* function in C++?
++   25. What is a pure virtual function in C++?
++   26. How are parameters sent to a superclass's constructor in C++?
++   27. What is the single most important practical difference between Smalltalk and C++?
++   28. If an Objective-C method returns nothing, what return type is indicated in its header?
++   29. Does Objective-C support multiple inheritance?
++   30. Can an Objective-C class not specify a parent class in its header?
++   31. What is the root class in Objective-C?
++   32. In Objective-C, how can a method indicate that it cannot be overridden in descendant classes?
++   33. What is the purpose of an Objective-C category?
++   34. What is the purpose of an Objective-C protocol?
++   35. What is the primary use of the `id` type in Objective-C?
++   36. How is the type system of Java different from that of C++?
++   37. From where can Java objects be allocated?
++   38. What is boxing?
++   39. How are Java objects deallocated?
++   40. Are all Java subclasses subtypes?
++   41. How are superclass constructors called in Java?
++   42. Under what circumstances is a Java method call statically bound to a method?

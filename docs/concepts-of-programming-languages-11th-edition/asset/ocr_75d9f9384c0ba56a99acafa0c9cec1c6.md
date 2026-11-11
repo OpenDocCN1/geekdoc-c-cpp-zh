@@ -1,0 +1,49 @@
+Curried functions are interesting and useful because new functions can be constructed from them by partial evaluation. Partial evaluation means that the function is evaluated with actual parameters for one or more of the leftmost formal parameters. For example, we could define a new function as follows:
+
+```
+```
+fun add5 x = add 5 x;
+```
+```
+
+The add5 function takes the actual parameter 5 and evaluates the add function with 5 as the value of its first formal parameter. It returns a function that adds 5 to its single parameter, as in the following:
+
+```
+```
+val num = add5 10;
+```
+```
+
+The value of num is now 15. We could create any number of new functions from the curried function add to add any specific number to a given parameter.
+
+Curried functions also can be written in Scheme, Haskell, and F#. Consider the following Scheme function:
+
+```
+```
+(DEFINE (add x y) (+ x y))
+```
+```
+
+A curried version of this would be as follows:
+
+```
+```
+(DEFINE (add y) (LAMBDA (x) (+ y x)))
+```
+```
+
+This can be called as follows:
+
+```
+```
+((add 3) 4)
+```
+```
+
+ML has enumerated types, arrays, and tuples. ML also has exception handling and a module facility for implementing abstract data types.
+
+ML has had a significant impact on the evolution of programming languages. For language researchers, it has become one of the most studied languages. Furthermore, it has spawned several subsequent languages, among them Haskell, Caml, OCaml, and F#.
+
+# ## 15.8 Haskell
+
+Haskell (Thompson, 1999) is similar to ML in that it uses a similar syntax, is static scoped, is strongly typed, and uses the same type inferencing method. There are three characteristics of Haskell that set it apart from ML: First, functions in Haskell can be overloaded (functions in ML cannot). Second, nonstrict semantics are used in Haskell, whereas in ML (and most other programming languages) strict semantics are used. Third, Haskell is a pure functional programming language, meaning it has no expressions or statements that have side effects, whereas ML allows some side effects (for example, ML has mutable

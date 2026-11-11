@@ -1,0 +1,25 @@
+If the line `else` were indented to begin in the same column as the nested `if`, the else clause would be matched with the inner `if`.
+ML does not have a problem with nested selectors because it does not allow else-less `if` statements.
+
+# 8.2.1.5 Selector Expressions
+
+In the functional languages ML, F#, and LISP, the selector is not a statement; it is an expression that results in a value. Therefore, it can appear anywhere any other expression can appear. Consider the following example selector written in F#:
+
+```
+let y =
+    if x > 0 then x
+    else 2 * x;;
+```
+
+This creates the name y and sets it to either x or 2 * x, depending on whether x is greater than zero.
+
+In F#, the type of the value returned by the then clause of an if construct must be the same as that of the value returned by its else clause. If there is no else clause, the then clause cannot return a value of a normal type. In this case, it can only return a unit type, which is a special type that means no value. A unit type is represented in code as ().
+
+# 8.2.2 Multiple-Selection Statements
+
+The multiple-selection statement allows the selection of one of any number of statements or statement groups. It is, therefore, a generalization of a selector. In fact, two-way selectors can be built with a multiple selector.
+The need to choose from among more than two control paths in programs is common. Although a multiple selector can be built from two-way selectors and gotos, the resulting structures are cumbersome, unreliable, and difficult to write and read. Therefore, the need for a special structure is clear.
+
+# 8.2.2.1 Design Issues
+
+Some of the design issues for multiple selectors are similar to some of those for two-way selectors. For example, one issue is the question of the type of expression on which the selector is based. In this case, the range of possibilities is larger, in part because the number of possible selections is larger. A two-way selector needs an expression with only two possible values. Another issue is whether single statements, compound statements, or statement sequences may be selected. Next, there is the question of whether only a single selectable segment can be executed when the statement is executed. This is not an issue for two-way selectors, because they always allow only one of the clauses to be on a control path during one execution. As we shall see, the resolution of this issue for multiple selectors is a trade-off between reliability and flexibility. Another

@@ -1,0 +1,12 @@
+**Figure 10.9**
+Stack contents at
+position 1 in the
+program main
+
+![](bbox=[0.28, 0.07, 0.85, 0.7])
+
+ARI = activation record instance
+
+would be the first local variable (bigsub has no parameters). Notice that if the dynamic link were used to do a simple search for an activation record instance with a declaration for the variable b, it would find the variable b declared in sub2, which would be incorrect. If the (1, 4) pair were used with the dynamic chain, the variable e from sub3 would be used. The static link, however, points to the activation record for bigsub, which has the correct version of b. The variable b in sub2 is not in the referencing environment at this point and is (correctly) not accessible. The reference to c at point 1 is to the c defined in bigsub, which is represented by the pair (1, 5).
+
+After sub1 completes its execution, the activation record instance for sub1 is removed from the stack, and control returns to sub3. The reference to the variable e at position 2 in sub3 is local and uses the pair (0, 4) for access. The

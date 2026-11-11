@@ -1,0 +1,25 @@
+```
+~~~cpp
+class B {
+public:
+    int b;
+    virtual void sum() { . . . }
+};
+class C : public A, public B {
+public:
+    int c;
+    virtual void fun() { . . . }
+    virtual void dud() { . . . }
+};
+~~~
+```
+
+The C class inherits the variable a and the init method from the A class. It redefines the fun method, although both its fun and that of the parent class A are potentially visible through a polymorphic variable (of type A). From B, C inherits the variable b and the sum method. C defines its own variable, c, and defines an uninherited method, dud. A CIR for C must include A's data, B's data, and C's data, as well as some means of accessing all visible methods. Under single inheritance, the CIR would include a pointer to a vtable that has the addresses of the code of all visible methods. With multiple inheritance, however, it is not that simple. There must be at least two different views available in the CIR—one for each of the parent classes, one of which includes the view for the subclass, C. This inclusion of the view of the subclass in the parent class's view is just as in the implementation of single inheritance.
+
+There must also be two vtables: one for the A and C view and one for the B view. The first part of the CIR for C in this case can be the C and A view, which begins with a vtable pointer for the methods of C and those inherited from A, and includes the data inherited from A. Following this in C's CIR is the B view part, which begins with a vtable pointer for the virtual methods of B, which is followed by the data inherited from B and the data defined in C. The CIR for C is shown in Figure 12.8.
+
+![](bbox=[0.06, 0.775, 0.94, 0.945])
+
+# **Figure 12.8**
+
+An example of a subclass CIR with multiple parents
