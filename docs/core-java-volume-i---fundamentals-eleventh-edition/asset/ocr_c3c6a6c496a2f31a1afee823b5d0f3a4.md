@@ -1,0 +1,24 @@
+To solve this problem, use additional panels. For example, look at Figure 11.9. The three buttons at the bottom of the screen are all contained in a panel. The panel is put into the southern region of the content pane.
+
+![](bbox=[0.277, 0.215, 0.636, 0.4])
+
+**Figure 11.9** Panel placed at the southern region of the frame
+
+To achieve this configuration, first create a new JPanel object, then add the individual buttons to the panel. The default layout manager for a panel is a FlowLayout, which is a good choice for this situation. Add the individual buttons to the panel, using the add method you have seen before. The position and size of the buttons is under the control of the FlowLayout manager. This means the buttons stay centered within the panel and do not expand to fill the entire panel area. Finally, add the panel to the content pane of the frame.
+
+```
+```java
+var panel = new JPanel();
+panel.add(yellowButton);
+panel.add(blueButton);
+panel.add(redButton);
+frame.add(panel, BorderLayout.SOUTH);
+```
+```
+
+The border layout expands the size of the panel to fill the entire southern region.
+
+| java.awt.BorderLayout | 1.0 |
+|---|---|
+| • `BorderLayout()` | |
+| • `BorderLayout(int hgap, int vgap)` | constructs a new BorderLayout. |

@@ -1,0 +1,243 @@
+
+## Listing 11.13 dataExchange/DataExchangeFrame.java
+
+```java
+package dataExchange;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+/**
+ * A frame with a menu whose File->Connect action shows a password dialog.
+ */
+public class DataExchangeFrame extends JFrame
+{
+   public static final int TEXT_ROWS = 20;
+   public static final int TEXT_COLUMNS = 40;
+   private PasswordChooser dialog = null;
+   private JTextArea textArea;
+
+   public DataExchangeFrame()
+   {
+      // construct a file menu
+
+      var mbar = new JMenuBar();
+      setJMenuBar(mbar);
+      var fileMenu = new JMenu("File");
+      mbar.add(fileMenu);
+
+      // add Connect and Exit menu items
+
+      var connectItem = new JMenuItem("Connect");
+      connectItem.addActionListener(new ConnectAction());
+      fileMenu.add(connectItem);
+
+      // the Exit item exits the program
+
+      var exitItem = new JMenuItem("Exit");
+      exitItem.addActionListener(event -> System.exit(0));
+      fileMenu.add(exitItem);
+
+      textArea = new JTextArea(TEXT_ROWS, TEXT_COLUMNS);
+      add(new JScrollPane(textArea), BorderLayout.CENTER);
+      pack();
+   }
+
+   /**
+    * The Connect action pops up the password dialog.
+    */
+```
+
+## Listing 11.14 *(Continued)*
+
+```java
+private JTextField username;
+private JPasswordField password;
+private JButton okButton;
+private boolean ok;
+private JDialog dialog;
+
+public PasswordChooser()
+{
+    setLayout(new BorderLayout());
+
+    // construct a panel with user name and password fields
+
+    var panel = new JPanel();
+    panel.setLayout(new GridLayout(2, 2));
+    panel.add(new JLabel("User name:"));
+    panel.add(username = new JTextField(""));
+    panel.add(new JLabel("Password:"));
+    panel.add(password = new JPasswordField(""));
+    add(panel, BorderLayout.CENTER);
+
+    // create Ok and Cancel buttons that terminate the dialog
+
+    okButton = new JButton("Ok");
+    okButton.addActionListener(event -> {
+        ok = true;
+        dialog.setVisible(false);
+    });
+
+    var cancelButton = new JButton("Cancel");
+    cancelButton.addActionListener(event -> dialog.setVisible(false));
+
+    // add buttons to southern border
+
+    var buttonPanel = new JPanel();
+    buttonPanel.add(okButton);
+    buttonPanel.add(cancelButton);
+    add(buttonPanel, BorderLayout.SOUTH);
+}
+
+/**
+ * Sets the dialog defaults.
+ * @param u the default user information
+ */
+public void setUser(User u)
+{
+    username.setText(u.getName());
+}
+
+/**
+ * Gets the dialog entries.
+ * @return a User object whose state represents the dialog entries
+ */
+public User getUser()
+{
+   return new User(username.getText(), password.getPassword());
+}
+
+/**
+ * Show the chooser panel in a dialog.
+ * @param parent a component in the owner frame or null
+ * @param title the dialog window title
+ */
+public boolean showDialog(Component parent, String title)
+{
+   ok = false;
+
+   // locate the owner frame
+
+   Frame owner = null;
+   if (parent instanceof Frame)
+      owner = (Frame) parent;
+   else
+      owner = (Frame) SwingUtilities.getAncestorOfClass(Frame.class, parent);
+
+   // if first time, or if owner has changed, make new dialog
+
+   if (dialog == null || dialog.getOwner() != owner)
+   {
+      dialog = new JDialog(owner, true);
+      dialog.add(this);
+      dialog.getRootPane().setDefaultButton(okButton);
+      dialog.pack();
+   }
+
+   // set title and show dialog
+
+   dialog.setTitle(title);
+   dialog.setVisible(true);
+   return ok;
+}
+}
+```
+
+|  |  |
+|---|---|
+| `javax.swing.SwingUtilities` | 1.2 |
+| • `Container getAncestorOfClass(Class c, Component comp)` | returns the nearest parent container of the given component that belongs to the given class or one of its subclasses. |
+
+|  |  |
+|---|---|
+| `javax.swing.JComponent` | 1.2 |
+| • `JRootPane getRootPane()` | gets the root pane enclosing this component, or null if this component does not have an ancestor with a root pane. |
+
+|  |  |
+|---|---|
+| `javax.swing.JRootPane` | 1.2 |
+| • `void setDefaultButton(JButton button)` | sets the default button for this root pane. To deactivate the default button, call this method with a null parameter. |
+
+|  |  |
+|---|---|
+| `javax.swing.JButton` | 1.2 |
+| • `boolean isDefaultButton()` | returns true if this button is the default button of its root pane. |
+
+### 11.7.4 File Dialogs
+
+In an application, you often want to be able to open and save files. A good file dialog box that shows files and directories and lets the user navigate the file system is hard to write, and you definitely don’t want to reinvent that wheel. Fortunately, Swing provides a `JFileChooser` class that allows you to display a file dialog box similar to the one that most native applications use. `JFileChooser` dialogs are always modal. Note that the `JFileChooser` class is not a subclass of `JDialog`. Instead of calling `setVisible(true)`, call `showOpenDialog` to display a dialog for opening a file, or call `showSaveDialog` to display a dialog for saving a file. The button for accepting a file is then automatically labeled Open or Save. You can also supply your own button label with the `showDialog` method. Figure 11.33 shows an example of the file chooser dialog box.
+
+- 3. If you have a default file name that you expect the user to choose, supply it with the `setSelectedFile` method:
+
+    ```java
+    chooser.setSelectedFile(new File(filename));
+    ```
+
+- 4. To enable the user to select multiple files in the dialog, call the `setMultiSelectionEnabled` method. This is, of course, entirely optional and not all that common.
+
+    ```java
+    chooser.setMultiSelectionEnabled(true);
+    ```
+
+- 5. If you want to restrict the display of files in the dialog to those of a particular type (for example, all files with extension `.gif`), you need to set a file filter. We discuss file filters later in this section.
+
+- 6. By default, a user can select only files with a file chooser. If you want the user to select directories, use the `setFileSelectionMode` method. Call it with `JFileChooser.FILES_ONLY` (the default), `JFileChooser.DIRECTORIES_ONLY`, or `JFileChooser.FILES_AND_DIRECTORIES`.
+
+- 7. Show the dialog box by calling the `showOpenDialog` or `showSaveDialog` method. You must supply the parent component in these calls:
+
+    ```java
+    int result = chooser.showOpenDialog(parent);
+    ```
+
+    or
+
+    ```java
+    int result = chooser.showSaveDialog(parent);
+    ```
+
+    The only difference between these calls is the label of the “approve button”—the button that the user clicks to finish the file selection. You can also call the `showDialog` method and pass an explicit text for the approve button:
+
+    ```java
+    int result = chooser.showDialog(parent, "Select");
+    ```
+
+    These calls return only when the user has approved, canceled, or dismissed the file dialog. The return value is `JFileChooser.APPROVE_OPTION`, `JFileChooser.CANCEL_OPTION`, or `JFileChooser.ERROR_OPTION`.
+
+- 8. Get the selected file or files with the `getSelectedFile()` or `getSelectedFiles()` method. These methods return either a single `File` object or an array of `File` objects. If you just need the name of the file object, call its `getPath` method. For example:
+
+    ```java
+    String filename = chooser.getSelectedFile().getPath();
+    ```
+
+For the most part, these steps are simple. The major difficulty with using a file dialog is to specify a subset of files from which the user should choose. For example, suppose the user should choose a GIF image file. Then, the file chooser should only display files with the extension `.gif`. It should also give the user some kind of feedback that the displayed files are of a particular category, such as “GIF Images.” But the situation can be more complex. If the user should choose a JPEG image file, the extension can be either .jpg or .jpeg. Instead of a way to codify these complexities, the designers of the file chooser provided a more elegant mechanism: to restrict the displayed files, supply an object that extends the abstract class javax.swing.filechooser.FileFilter. The file chooser passes each file to the file filter and displays only those files that the filter accepts.
+
+At the time of this writing, two such subclasses are supplied: the default filter that accepts all files, and a filter that accepts all files with a given extension. However, it is easy to write ad-hoc file filters. Simply implement the two abstract methods of the FileFilter superclass:
+
+```java
+public boolean accept(File f);
+public String getDescription();
+```
+
+The first method tests whether a file should be accepted. The second method returns a description of the file type that can be displayed in the file chooser dialog.
+
+> **NOTE:** An unrelated `FileFilter` interface in the `java.io` package has a single method, `boolean accept(File f)`. It is used in the `listFiles` method of the `File` class to list files in a directory. We do not know why the designers of Swing didn't extend this interface—perhaps the Java class library has now become so complex that even the programmers at Sun were no longer aware of all the standard classes and interfaces.
+>
+> You will need to resolve the name conflict between these two identically named types if you import both the `java.io` and the `javax.swing.filechooser` packages. The simplest remedy is to import `javax.swing.filechooser.FileFilter`, not `javax.swing.filechooser.*`.
+
+Once you have a file filter object, use the setFileFilter method of the JFileChooser class to install it into the file chooser object:
+
+```java
+chooser.setFileFilter(new FileNameExtensionFilter("Image files", "gif", "jpg"));
+```
+
+You can install multiple filters to the file chooser by calling
+
+```java
+chooser.addChoosableFileFilter(filter1);
+chooser.addChoosableFileFilter(filter2);
+...
+```
+
+The user selects a filter from the combo box at the bottom of the file dialog. By default, the “All files” filter is always present in the combo box. This is

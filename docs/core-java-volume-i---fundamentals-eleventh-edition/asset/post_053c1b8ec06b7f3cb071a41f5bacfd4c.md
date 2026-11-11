@@ -1,0 +1,214 @@
+
+- Unchecked exceptions, 268, 375–377
+  - applicability of, 397
+- Inequality operator, 59
+- Unicode standard, 6, 47–48, 62
+  - in char type, 46
+- Unit testing, 160
+- University of Illinois, 11
+- UNIX operating system
+  - Eclipse versions for, 29
+  - setting paths in, 20, 189–191
+  - setting up JDK in, 20
+  - troubleshooting Java programs in, 26
+- unlock method (Lock), 755, 758
+- Unmodifiable views, 534–536
+- unmodifiableCollection method (Collections), 535–536, 539
+- Unnamed packages, 184, 187, 203, 400
+- UnsupportedOperationException, 526, 533, 535, 537, 539
+- unsynch/UnsynchBankTest.java, 752
+- updateAndGet method (AtomicType), 773
+- updateConfiguration method (LogManager), 408, 425
+- user method (ProcessHandle.Info), 838
+- User input, 644
+  - errors in, 373
+- User Interface. See Graphical User Interface
+- userNameForPackage, userRoot methods (Preferences), 625, 629
+- “Uses–a” relationship, 129–131
+- UTC (Coordinated Universal Time), 136
+- UTF-8 standard, 84
+- Utility classes/methods, 306–307
+
+### V
+
+- V type variable, 435
+- validate method (Component), 645
+- valueOf method
+  - of BigDecimal, BigInteger, 105–107
+  - of Enum, 262–263
+  - of Integer, 259
+- values method (Map), 525–526
+- Values, captured by lambda expressions, 334
+- varargs, 260–261
+  - passing generic types to, 448–449
+- VarHandle class, 279
+- Variable handles, 279
+- Variables, 48–50
+  - accessing in lambdas, 333–335
+  - annotating, 446
+  - copying, 314
+  - declarations of, 48
+  - effectively final, 335, 390
+  - final, accessing from outer methods, 350–351
+  - initializing, 50, 204
+  - local, 446
+  - mutating in lambda expressions, 334
+  - names of, 48–50
+  - package scope of, 187
+  - printing/logging values of, 426
+  - static, 157
+  - thread-local, 778–779
+- Vector class, 482, 552–553, 769, 799–800
+  - for dynamic arrays, 249
+  - get, set methods, 769
+  - synchronization in, 507
+- @version comment (javadoc), 201, 203
+- Views, 532, 632
+  - bulk operations for, 550
+  - checked, 536
+  - restricted, 537
+  - subranges of, 534
+  - synchronized, 536
+  - unmodifiable, 534–536
+- Visual Basic programming language
+  - built-in date type in, 132
+  - event handling in, 598
+  - syntax of, 3
+- Visual Studio, 23
+- void keyword, 40
+- Volatile fields, 771–772
+- volatile keyword, 771–773
+- von der Ahé, Peter, 438
+
+### W
+
+- wait method (Object), 741, 765, 768
+- Wait sets, 760
+- waitFor method (Process), 834, 837
+- walk method (StackWalker), 391, 394
+- warning method (Logger), 406, 421
+- Warnings
+  - fallthrough behavior, 101
+  - generic types, 256, 446, 449, 454–455
+  - suppressing, 449, 454–455
+  - when using reflection, 278
+- Weak hash maps, 526–527
+- Weak references, 527
+- WeakHashMap class, 526–527, 530
+  - as a concrete collection type, 495
+- Weakly consistent iterators, 789
+- WeakReference object, 527
+- Web pages
+  - dynamic, 9
+  - extracting links from, 817
+  - reading, 818, 824
+- Welcome/Welcome.java, 25
+- whenComplete method (CompletableFuture), 819
+- while loop, 91–95
+- Whitespace, irrelevant to compiler, 40
+- Wildcard types, 434, 459–467
+  - arrays of, 448
+  - capturing, 465–467
+  - supertypes bounds for, 461–464
+  - unbounded, 464
+- WildcardType interface, 470
+  - getLowerBounds, getUpperBounds methods, 479
+- Window class, 623
+  - pack method, 577, 579
+  - setLocationByPlatform method, 573
+- Window listeners, 605–607
+- WindowClosing event, 681
+- WindowEvent class, 598, 606, 622
+  - getNewState, getOldState methods, 624
+  - getWindow, getOppositeWindow, getScrollAmount methods, 623
+- WindowFocusListener interface, methods of, 624
+- WindowListener interface, methods of, 606–607, 623
+- Windows. See Dialogs
+- Windows operating system
+  - Alt+F4 keyboard shortcut in, 681
+  - default location in, 411
+  - eclipse versions for, 29
+  - executing JARs in, 195
+  - JDK versions for, 18
+  - pop-up menus in, 678
+  - registry in, 624, 626
+  - setting paths in, 20–22, 189, 191
+  - setting up JDK in, 20
+  - thread priority levels in, 749
+- WindowStateListener interface, windowStateChanged method, 607, 624
+- Wirth, Niklaus, 6, 10, 126
+- withInitial method (ThreadLocal), 779
+- Work stealing, 813
+- Worker threads, 823–831
+- Working directory, for a process, 832
+- Wrappers, 256–260
+  - equality testing for, 257
+  - immutability of, 256
+
+### X
+
+- XML (Extensible Markup Language), 12, 14
+- xor method (BitSet), 560
+
+### Y
+
+- yield method (Thread), 741
+
+### Z
+
+- ZIP format, 189, 192
+
+## Credits
+
+- Chapter 1: “As a computer language . . . existing code sets in”, Cay S. Horstmann.
+- Chapter 1: “Simple, Object-Oriented . . . Dynamic”, “The Java Language Environment: Contents, A White Paper, May 1996, James Gosling, Henry McGilton.
+- Chapter 1: “Simple We wanted to build a . . . very good job making it manageable”, Java: an Overview, James Gosling, February 1995.
+- Chapter 1, Figure 1.1: Screenshot of Jmol © Jmol.
+- Chapter 1: “All along, the language was a tool, not the end.” Interview with Java’s creators in the July 1995 issue of SunWorld’s online magazine.
+- Chapter 1: “We could build a real . . . we built a browser”. Interview with Java’s creators in the July 1995 issue of SunWorld’s online magazine.
+- Chapter 2, Figure 2.1: Screenshot of Windows 10 © Microsoft 2018.
+- Chapter 2, Figure 2.2: Screenshot of Windows 10 © Microsoft 2018.
+- Chapter 2, Figure 2.5: Screenshot of Eclipse © Eclipse Foundation.
+- Chapter 2, Figure 2.6: Screenshot of Eclipse © Eclipse Foundation.
+- Chapter 2, Figure 2.7: Screenshot of Eclipse © Eclipse Foundation.
+- Chapter 2, Figure 2.8: Screenshot of Eclipse © Eclipse Foundation.
+- Chapter 2, Figure 2.9: Screenshot of JShell © Oracle Corporation.
+- Chapter 3, Figure 3.2: Screenshot of Java © Oracle Corporation.
+- Chapter 3, Figure 3.3: Screenshot of Java © Oracle Corporation.
+- Chapter 3, Figure 3.4: Screenshot of Java © Oracle Corporation.
+- Chapter 3, Figure 3.5: Screenshot of Java © Oracle Corporation.
+- Chapter 4, Figure 4.2: Screenshot of Java © Oracle Corporation.
+- Chapter 4, Figure 4.11: Screenshot of Java © Oracle Corporation.
+- Chapter 5, Figure 5.3: Screenshot of Java © Oracle Corporation.
+- Chapter 7, Figure 7.3: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.1: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.3: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.8: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.11: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.14: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.15: Screenshot of Java © Oracle Corporation.
+- Chapter 10, Figure 10.16: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.4: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.5: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.8: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.9: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.10: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.11: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.12: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.13: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.14: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.15: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.16: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.17: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.18: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.19: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.20: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.21: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.22: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.23: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.24: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.25: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.26: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.27: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.29: Screenshot of Java © Oracle Corporation.
+- Chapter 11, Figure 11.30: Screenshot of Java © Oracle Corporation.

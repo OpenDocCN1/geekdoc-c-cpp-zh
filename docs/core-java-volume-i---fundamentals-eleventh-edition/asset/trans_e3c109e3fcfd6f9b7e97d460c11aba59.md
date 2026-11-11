@@ -1,0 +1,284 @@
+
+
+- newScheduledThreadPool 方法（Executors），803-805
+- newSingleThreadExecutor 方法（Executors），803-804
+- newSingleThreadScheduledExecutor 方法（Executors），803-805
+- next 方法
+  - Iterator 中的，485-488, 492
+  - Scanner 中的，77
+- nextDouble 方法（Scanner），76-77
+- nextElement 方法（Enumeration），487, 553-554
+- nextIndex 方法
+  - LinkedList 中的，503
+  - ListIterator 中的，506
+- nextInt 方法
+  - Random 中的，180
+  - Scanner 中的，76-77
+- nextLine 方法（Scanner），76-77
+- 无参数构造器，172, 212, 361
+- NoClassDefFoundError，26
+- node 方法（Preferences），625, 629
+- noneOf 方法（EnumSet），531
+- NoSuchElementException，486, 492, 506, 517
+- 记事本文本编辑器，26
+- notify 方法（Object）（Java），578
+- notify、notifyAll 方法（Object），765, 768
+- now 方法（LocalDate），136, 141
+- null 值，134
+  - 与之进行相等性测试，235
+- nullFirst/Last 方法（Comparator），340
+- NullPointerException，149-150, 163, 258, 330, 375, 398
+- Number 类，256
+- NumberFormat 类
+  - 工厂方法，159
+  - parse 方法，260
+- NumberFormatException，398
+- 数字
+  - 随机生成的，180, 778
+  - 舍入，107
+  - 无符号的，44
+- 数值类型
+  - 强制转换，57
+  - 比较，59, 340
+  - 转换：
+    - 转换为其他数值类型，56-57
+    - 转换为字符串，258
+  - 默认初始化，171
+  - 固定大小，6
+  - 精度，105
+  - 打印，78
+
+## O
+
+- Oak 编程语言，10
+- Object 类，128, 232-247
+  - clone 方法，153, 314-321, 326
+  - equals 方法，233-238, 247, 310, 536
+  - getClass 方法，247
+  - hashCode 方法，239-240, 511
+  - 其方法不可重定义，310
+  - notify、notifyAll 方法，765, 768
+  - toString 方法，241-247, 310, 326
+  - wait 方法，741, 765, 768
+- 对象引用
+  - 作为方法参数，164
+  - 转换，223
+  - 默认初始化，171
+  - 修改，164
+- 对象遍历算法，530
+- 对象变量，227
+  - 在预定义类中，132-135
+  - 初始化，134
+  - 设置为 null，134
+  - 与 C++ 对象指针的对比，135
+  - 与对象的对比，133
+- objectAnalyzer/ObjectAnalyzer.java，280
+- objectAnalyzer/ObjectAnalyzerTest.java，280
+- 面向对象编程（OOP），4, 126-131, 207
+  - 其中传递对象，310
+  - 其中时间测量，136
+  - 与过程式编程的对比，126-131
+- 对象，126-129
+  - 运行时分析，277-283
+  - 将方法应用于对象，133
+  - 行为，128
+  - 克隆，314-321
+  - 比较，303
+  - 与字符串连接，242
+  - 构造，127, 170-180
+  - 损坏的，779-780
+  - 默认哈希码，239
+  - 销毁，180
+  - 相等性测试，233-238, 266
+  - finalize 方法，180
+  - 标识，128
+  - 实现接口，304
+  - 在预定义类中，132–135
+  - 初始化，132
+  - 内置锁，764
+  - 将对象传递给方法，133
+  - 引用，134
+  - 运行时类型识别，264
+  - 序列化，530
+  - 排序，297
+  - 状态，127–128, 341–345
+  - 与对象变量的对比，133
+- Objects 类
+  - hash、hashCode 方法，240
+  - requireNonNull、requireNonNullElse 方法，149, 163
+- 八进制数
+  - 格式化输出，79
+  - 前缀，43
+- 八元数，48, 67
+- of 方法
+  - EnumSet 中的，531
+  - List、Map、Set 中的，532–533, 538, 540
+  - Locale 中的，136, 141
+  - Path 中的，83, 85–86, 306
+  - ProcessHandle 中的，835, 838
+- ofEntries 方法（Map），533, 538
+- offer 方法
+  - BlockingQueue 中的，782–783, 788
+  - Queue 中的，516
+- offerFirst/Last 方法
+  - BlockingQueue 中的，788
+  - Deque 中的，517
+- offsetByCodePoints 方法（String），67, 69
+- onExit 方法（Process），838
+- 在线文档，68, 71–73, 198, 203
+- 运算符
+  - 算术运算符，52–53
+  - 位运算符，60
+  - 布尔运算符，59
+  - 层次结构，61–62
+  - 自增/自减，58
+  - 不支持重载，105
+  - 关系运算符，59
+- 选项对话框，707–712
+- 可选操作，537
+  - of 方法（BitSet），560
+- Oracle，12, 20
+- 有序集合，492, 498
+- ordinal 方法（Enum），263
+- org.omg.CORBA 包，259
+- OSGi 平台，360
+- 输出语句，63
+- 输出，格式化，78–83
+- 重载解析，170–171, 219
+- @Override 注解，237
+- overview.html，204
+- 所有者框架，713
+
+## P
+
+- p（指数），在十六进制数中，45
+- pack 方法（Window），577, 579
+- package 语句，181, 184
+- package.html，202
+- package-info.java，203
+- 包，180–192
+  - 访问，187–188
+  - 向其中添加类，184–187
+  - 文档注释，199, 202
+  - 导入，181
+  - 名称，181, 265
+  - 未命名的，184, 187, 203, 400
+- Package.getPackage/com/example/Employee.java，186
+- Package.getPackageTest.java，185
+- paintComponent 方法（JComponent），575–577, 579, 592, 597, 780
+  - 重写，621
+- pair1/PairTest1.java，436
+- pair2/PairTest2.java，440
+- pair3/PairTest3.java，466
+- 并行阈值，795
+- parallelXxx 方法（Arrays），797–798
+- 参数化类型。参见类型参数
+- ParameterizedType 接口，470
+  - getXxx 方法，479
+- 参数，41, 163–170
+  - 使用断言检查，401–402
+  - 文档注释，200
+  - 显式参数，150–151
+  - 隐式参数，150–151, 158, 426
+  - 修改，164–167
+  - 名称，174
+  - 字符串参数，41
+  - 在参数中使用集合接口，552
+  - 可变数量的参数，260–261
+    - 向其传递泛型类型，448–449
+- Parent/Parent.java，168
+- 父类。参见超类
+- parse 方法（NumberFormat），260
+- parseInt 方法（Integer），258–259
+- Pascal 编程语言，10
+  - 其与体系结构无关的对象文件格式，6
+  - 其中的参数传递，165
+- 密码字段，647
+- PasswordChooser 类，716
+- 密码
+  - 对话框，717
+  - 从控制台读取，77
+- PATH 环境变量，20
+- Path 接口，of 方法，83, 85–86, 306
+- Paths 类，get 方法，306
+- Payne, Jonathan，11
+- peek 方法
+  - BlockingQueue 中的，782–783
+  - Queue 中的，517
+  - Stack 中的，559
+- peekFirst/Last 方法（Deque），517
+- 性能，7
+  - 计算，53, 55
+  - JAR 文件，189
+  - 测量，560–563
+  - 多线程，758, 774, 783
+  - 集合的，493–494, 509, 789
+  - Java 与 C++ 的对比，561
+  - 简单测试与捕获异常的对比，396
+- 物理限制，373
+- PI 常量（Math），55, 157–158
+- pipe 方法（ProcessHandle），838
+- plusDays 方法（LocalDate），137, 141
+- Point 类，582
+- 磅值（排版中），590–591
+- Point2D 类，582
+- Point2D.Double 类，582, 587
+- Point2D.Float 类，582
+- poll 方法
+  - BlockingQueue 中的，782–783, 788
+  - ExecutorCompletionService 中的，811
+  - Queue 中的，517
+- pollFirst/Last 方法
+  - Deque 中的，517, 788
+  - NavigableSet 中的，516
+- 多态，213, 217–218, 292
+- pop 方法（Stack），559
+- 弹出菜单，677–679
+- 正无穷大，45
+- pow 方法（Math），54, 158
+- 数值精度，79
+- 前置条件，402
+- 预定义动作表名称，609
+- 预定义类，131–141
+  - 其中的修改器与访问器方法，138–141
+  - 其中的对象和对象变量，132–135
+- Predicate 接口，327, 337
+- 抢占式调度，740
+- 首选项
+  - 访问，625
+  - 枚举其中的键，626
+  - 导入/导出，626
+- Preferences 类，624–630
+  - exportXXX 方法，626, 630
+  - get、getDataType 方法，625, 630
+  - importPreferences 方法，626, 630
+  - keys 方法，626, 629
+  - node 方法，625, 629
+  - 平台无关性，624
+  - put、putDataType 方法，625, 630
+  - systemUserNodeForPackage 方法，625, 629
+  - systemUserRoot 方法，625, 629
+- preferences/ImageViewer.java，627
+- preferredLayoutSize 方法（LayoutManager），706
+- previous 方法（ListIterator），499, 506
+- previousIndex 方法
+  - LinkedList 中的，503
+  - ListIterator 中的，506
+- 质数，560
+- 基本类型，42–48
+  - 作为方法参数，164
+  - 比较，340
+  - 转换为对象，256
+  - 其 final 字段，155
+  - 不用于类型参数，447
+  - 将哈希映射值转换为基本类型，796
+  - 其值不是对象，233
+- 普林斯顿大学，5
+- print 方法（System.out），41, 78
+- printf 方法（System.out），79–83
+  - 转换字符，79
+  - 标志，80
+  - 用于日期和时间，81–82
+  - 其参数，260
+- println 方法（System.out），41, 75, 328, 403
+

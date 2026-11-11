@@ -1,0 +1,281 @@
+
+- java.util.Collections API, 539–540, 544–545, 547–549, 555, 800
+- java.util.Comparator API, 546
+- java.util.concurrent package, 755
+    - efficient collections in, 789–790
+- java.util.concurrent.ArrayBlockingQueue API, 787
+- java.util.concurrent.atomic package, 773
+- java.util.concurrent.BlockingDeque API, 788
+- java.util.concurrent.BlockingQueue API, 788
+- java.util.concurrent.Callable API, 801
+- java.util.concurrent.ConcurrentXxx API, 790
+- java.util.concurrent.Delayed API, 787
+- java.util.concurrent.Deque API, 787
+- java.util.concurrent.ExecutorCompletionService API, 811
+- java.util.concurrent.Executors API, 804–805
+    - ExecutorService API, 805, 811
+- java.util.concurrent.Future API, 802
+- java.util.concurrent.FutureTask API, 802
+- java.util.concurrent.LinkedBlockingDeque API, 787
+- java.util.concurrent.LinkedBlockingQueue API, 787
+- java.util.concurrent.locks.Condition API, 764
+- java.util.concurrent.locks.Lock API, 758, 763
+- java.util.concurrent.locks.ReentrantLock API, 758
+- java.util.concurrent.PriorityBlockingQueue API, 787
+- java.util.concurrent.ScheduledExecutorService API, 805
+- java.util.concurrent.ThreadLocalRandom API, 779
+- java.util.concurrent.ThreadPoolExecutor API, 805
+- java.util.concurrent.TransferQueue API, 788
+- java.util.Dictionary API, 517
+- java.util.Enumeration API, 554
+- java.util.EnumMap API, 531
+- java.util.EnumSet API, 531
+- java.util.function API, 327
+- java.util.HashMap API, 522
+- java.util.HashSet API, 511
+- java.util.IdentityHashMap API, 531
+- java.util.Iterator API, 492
+- java.util.LinkedHashMap API, 530–531
+- java.util.LinkedHashSet API, 530
+- java.util.LinkedList API, 506
+- java.util.List API, 505, 538, 540, 545, 549
+- java.util.ListIterator API, 506
+- java.util.logging.ConsoleHandler API, 423
+- java.util.logging.FileHandler API, 423
+- java.util.logging.Filter API, 425
+- java.util.logging.Formatter API, 425
+- java.util.logging.Handler API, 422–423
+- java.util.logging.Logger API, 420–422
+- java.util.logging.LogManager API, 424–425
+- java.util.logging.LogRecord API, 423–424
+- java.util.Map API, 522, 524, 526, 538
+- java.util.Map.Entry API, 526
+- java.util.NavigableMap API, 541
+- java.util.NavigableSet API, 516, 541
+- java.util.Objects API, 238
+- java.util.prefs.Preferences API, 629–630
+- java.util.PriorityQueue API, 519
+- java.util.Properties API, 557
+- java.util.Queue API, 516–517
+- java.util.Random API, 180
+- java.util.Scanner API, 77–78, 85
+- java.util.ServiceLoader API, 362
+- java.util.ServiceLoader.Provider API, 362
+- java.util.Set API, 538
+- java.util.SortedMap API, 523, 541
+- java.util.SortedSet API, 515, 540
+- java.util.Stack API, 559
+- java.util.TreeMap API, 523
+- java.util.TreeSet API, 515
+- java.util.WeakHashMap API, 530
+- JavaBeans, 729
+- javac program, 25
+    - command-line options of, 197–198
+    - current directory in, 190
+- javadoc program, 198–204
+    - command-line options of, 203
+    - comments in, 199–202
+        - extracting, 203–204
+        - overview, 204
+        - redeclaring Object methods for, 326
+    - HTML markup in, 199
+    - hyperlinks in, 202
+    - links to other files in, 199
+    - online documentation of, 204
+- JavaFX platform
+    - and threads, 824
+    - versions of, 195–197, 567
+- javafx.css.CssParser class, 195–197
+- javap program, 197, 347
+- JavaScript programming language, 15
+- javax.swing package, 569
+- javax.swing.AbstractAction API, 676
+- javax.swing.AbstractButton API, 658, 674–677, 681
+- javax.swing.Action API, 613
+- javax.swing.border.LineBorder API, 661
+- javax.swing.border.SoftBevelBorder API, 660
+- javax.swing.BorderFactory API, 659–660
+- javax.swing.ButtonGroup API, 658
+- javax.swing.ButtonModel API, 658
+- javax.swing.event.MenuListener API, 683
+- javax.swing.filechooser.FileFilter API, 731
+- javax.swing.filechooser.FileNameExtensionFilter API, 731
+- javax.swing.filechooser.FileView API, 731–732
+- javax.swing.ImageIcon API, 574
+- javax.swing.JButton API, 604, 723
+- javax.swing.JCheckBox API, 654
+- javax.swing.JCheckBoxMenuItem API, 676
+- javax.swing.JComboBox API, 664
+- javax.swing.JComponent API, 579, 596, 614, 645, 661, 679, 690, 723
+- javax.swing.JDialog API, 716
+- javax.swing.JFileChooser API, 730–731
+- javax.swing.JFrame API, 579, 674
+- javax.swing.JLabel API, 646
+- javax.swing.JMenu API, 673–674
+- javax.swing.JMenuItem API, 674–675, 681, 683
+- javax.swing.JOptionPane API, 312, 710–712
+- javax.swing.JPasswordField API, 647
+- javax.swing.JPopupMenu API, 678
+- javax.swing.JRadioButton API, 657
+- javax.swing.JRadioButtonMenuItem API, 677
+- javax.swing.JScrollPane API, 651
+- javax.swing.JSlider API, 671
+- javax.swing.JTextArea API, 650–651
+- javax.swing.JTextField API, 645
+- javax.swing.JToolBar API, 690
+- javax.swing.KeyStroke API, 614
+- javax.swing.SwingUtilities API, 723
+- javax.swing.SwingWorker API, 831
+- javax.swing.text.JTextComponent API, 643
+- javax.swing.Timer API, 313
+- JButton class, 601, 604, 610, 635
+    - isDefaultButton method, 723
+- JCheckBox class, 651–654
+    - isSelected method, 652, 654
+- JCheckBoxMenuItem class, 676–677
+- JComboBox class, 622–623, 661–664
+    - addItem method, 662–664
+    - getItemAt method, 662
+    - getSelectedItem method, 662–664
+    - insertItemAt method, 662, 664
+    - isEditable method, 664
+    - removeItem methods, 662, 664
+    - setEditable method, 662, 664
+    - setModel method, 662
+- JComponent class, 575
+    - action maps, 612
+    - get/setComponentPopupMenu methods, 678–679
+    - get/setInheritsPopupMenu methods, 678–679
+    - getActionMap method, 614
+    - getFontMetrics method, 592, 596
+    - getInputMap method, 612, 614
+    - getRootPane method, 718, 723
+    - input maps, 611–613
+    - paintComponent method, 575–577, 579, 592, 597
+    - revalidate method, 644–645
+    - setBorder method, 659, 661
+    - setFont method, 645
+    - setToolTipText method, 690
+- JConsole program, 429, 775
+    - logging control with, 409
+- JDialog class, 712–716
+    - setDefaultCloseOperation method, 714
+    - setVisible method, 714, 716–717
+- JDK. See Java Development Kit
+- JEditorPane class, 649
+- JFileChooser class, 723–732
+    - addChoosableFileFilter method, 730
+    - getSelectedFile/Files methods, 725, 730
+    - resetChoosableFileFilters method, 727, 731
+    - setAcceptAllFileFilterUsed method, 726, 730
+    - setAccessory method, 731
+    - setCurrentDirectory method, 724, 730
+    - setFileFilter method, 726, 730
+    - setFileSelectionMode method, 725, 730
+    - setFileView method, 727–728, 731
+    - setMultiSelectionEnabled method, 725, 730
+    - setSelectedFile/Files methods, 725, 730
+    - showDialog, showOpenDialog methods, 718, 723, 725, 730
+- JFrame class, 567–571, 638
+    - add method, 579
+    - internal structure of, 575
+    - setJMenuBar method, 672, 674
+- JLabel class, 645–646, 728
+    - methods of, 646
+- JMenu class
+    - add method, 672–674
+    - addSeparator method, 672, 674
+    - insert, insertSeparator methods, 674
+    - remove method, 674
+- JMenuBar class, 672–674
+- JMenuItem class, 674–675
+    - setAccelerator method, 680–681
+    - setEnabled method, 682–683
+    - setIcon method, 675
+- Jmol applet, 9
+- join method (Thread), 70, 741–743
+- JOptionPane class, 707–712
+    - message types, 708
+    - showConfirmDialog method, 707–711
+    - showInputDialog method, 707–709, 712
+    - showInternalConfirmDialog method, 711
+    - showInternalInputDialog method, 712
+    - showInternalMessageDialog method, 710
+    - showInternalOptionDialog method, 711
+    - showMessageDialog method, 312, 707–710
+    - showOptionDialog method, 707–709, 711
+- JPanel class, 637
+- JPasswordField class, getPassword, setEchoChar methods, 647
+- JPopupMenu class, 677–679
+    - isPopupTrigger, show methods, 678
+- JRadioButton class, 654–658
+- JRadioButtonMenuItem class, 677
+- JRootPane class, setDefaultButton method, 718, 723
+- JScrollBar class, 622
+- JScrollPane class, 651
+- JShell program, 7, 32–35
+- JSlider class, 665–671
+    - setInverted method, 667
+    - setLabelTable method, 445, 667, 671
+    - setPaintLabels, setPaintTicks, setSnapToTicks methods, 666, 671
+    - setPaintTrack method, 667, 671
+    - setXxxTickSpacing methods, 671
+- JTextArea class, 647–648
+    - append method, 650
+    - setColumns, setRows methods, 647, 650
+    - setLineWrap method, 648, 650
+    - setTabSize method, 651
+    - setWrapStyleWord method, 651
+- JTextComponent class
+    - getText method, 644
+    - isEditable methods, 643
+    - setText method, 643–644
+- JTextField class, 622, 643–645
+    - getColumns method, 645
+    - setColumns method, 644–645
+- JToolBar class, 688–689
+    - add, addSeparator methods, 689–690
+- JUnit framework, 426
+- Just-in-time compiler, 6–7, 15, 151, 222, 561
+- JVM. See Java virtual machine
+
+## K
+
+- K type variable, 435
+- Key/value pairs. See Properties
+- Keyboard
+    - associating with actions, 611
+    - focus of, 611
+    - mnemonics for, 679–681
+- KeyEvent class, 622
+    - getKeyXxx, isActionKey methods, 623
+- KeyListener interface, keyXxx methods, 623
+- keys method (Preferences), 626, 629
+- keySet method
+    - of ConcurrentHashMap, 796
+    - of Map, 525–526
+- KeyStroke class, getKeyStroke method, 611, 614
+- Knuth, Donald, 102
+- KOI-8 standard, 47
+
+## L
+
+- L suffix (long integers), 43
+- Labeled break statement, 102
+- Labels
+    - for components, 645–646
+    - for slider ticks, 666
+- Lambda expressions, 322–340
+    - accessing variables in, 333–335
+    - atomic updates with, 773
+    - capturing values by, 334
+    - for event listeners, 604
+    - functional interfaces and, 326
+    - method references and, 328
+    - no assigning to a variable of type Object, 327
+    - parameter types of, 324
+    - processing, 335–339
+    - result type of, 325
+    - scope of, 335
+    - syntax of, 323–326
+    - this keyword in, 335

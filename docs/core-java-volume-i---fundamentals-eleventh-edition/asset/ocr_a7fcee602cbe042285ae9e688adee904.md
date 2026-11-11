@@ -1,0 +1,40 @@
+**javax.swing.JSlider** 1.2
+
+- `JSlider()`
+- `JSlider(int direction)`
+- `JSlider(int min, int max)`
+- `JSlider(int min, int max, int initialValue)`
+- `JSlider(int direction, int min, int max, int initialValue)`
+
+  constructs a horizontal slider with the given direction and minimum, maximum, and initial values. The direction parameter is one of `SwingConstants.HORIZONTAL` or `SwingConstants.VERTICAL`. The default is horizontal. Defaults for the minimum, initial, and maximum are 0, 50, and 100.
+
+- `void setPaintTicks(boolean b)`
+
+  displays ticks if b is true.
+
+- `void setMajorTickSpacing(int units)`
+- `void setMinorTickSpacing(int units)`
+
+  sets major or minor ticks at multiples of the given slider units.
+
+- `void setPaintLabels(boolean b)`
+
+  displays tick labels if b is true.
+
+- `void setLabelTable(Dictionary table)`
+
+  sets the components to use for the tick labels. Each key/value pair in the table has the form `new Integer(value)/component`.
+
+- `void setSnapToTicks(boolean b)`
+
+  if b is true, then the slider snaps to the closest tick after each adjustment.
+
+- `void setPaintTrack(boolean b)`
+
+  if b is true, a track is displayed in which the slider runs.
+
+# 11.5 Menus
+
+We started this chapter by introducing the most common components that you might want to place into a window, such as various kinds of buttons, text fields, and combo boxes. Swing also supports another type of user interface element—pull-down menus that are familiar from GUI applications.
+
+A menu bar at the top of a window contains the names of the pull-down menus. Clicking on a name opens the menu containing menu items and submenus. When the user clicks on a menu item, all menus are closed and a message is sent to the program. Figure 11.17 shows a typical menu with a submenu.

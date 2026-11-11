@@ -1,0 +1,264 @@
+
+- setBackground method (Component), 588–589
+- setBoolean, setByte, setChar methods (Array), 286
+- setBorder method (JComponent), 659, 661
+- setBounds method (Component), 570, 573
+    - coordinates in, 572
+- setCharAt method (StringBuilder), 75
+- setClassAssertionStatus method (ClassLoader), 403
+- setColumns method
+    - of JTextArea, 647, 650
+    - of JTextField, 644–645
+- setComponentPopupMenu method (JComponent), 678–679
+- setCurrentDirectory method (JFileChooser), 724, 730
+- setCursor method (Component), 620
+- setDaemon method (Thread), 746–747
+- setDefaultAssertionStatus method (ClassLoader), 403
+- setDefaultButton method (JRootPane), 718, 723
+- setDefaultCloseOperation method (JDialog), 714
+- setDefaultUncaughtExceptionHandler method (Thread), 428, 747–748
+- setDisplayedMnemonicIndex method (AbstractButton), 680–681
+- setDouble method (Array), 286
+- setEchoChar method (JPasswordField), 647
+- setEditable method
+    - of JComboBox, 662, 664
+    - of JTextComponent, 643
+- setEnabled method
+    - of Action, 608, 613
+    - of JMenuItem, 682–683
+- setFileFilter method (JFileChooser), 726, 730
+- setFileSelectionMode method (JFileChooser), 725, 730
+- setFileView method (JFileChooser), 727–728, 731
+- setFilter method
+    - of Handler, 443
+    - of Logger, 415, 422
+- setFloat method (Array), 286
+- setFont method (JComponent), 645
+- setForeground method (Component), 588–589
+- setFormatter method (Handler), 415, 423
+- setFrameFromCenter method (Ellipse2D), 583
+- setHorizontalTextPosition method (AbstractButton), 675
+- setIcon method
+    - of JLabel, 646
+    - of JMenuItem, 675
+- setIconImage method (Frame), 570, 574
+- setInheritsPopupMenu method (JComponent), 678–679
+- setInt method (Array), 286
+- setInverted method (JSlider), 667
+- setMenuBar method (JFrame), 672, 674
+- setLabelTable method (JSlider), 445, 667, 671
+- setLayout method (Container), 639
+- setLevel method
+    - of Handler, 423
+    - of Logger, 404, 422
+- setLineWrap method (JTextArea), 648, 650
+- setLocation method (Component), 570, 573
+    - coordinates in, 572
+- setLocationByPlatform method (Window), 573
+- setLong method (Array), 286
+- setMnemonic method (AbstractButton), 680–681
+- setModel method (JComboBox), 662
+- setMultiSelectionEnabled method (JFileChooser), 725, 730
+- setOut method (System), 158
+- setPackAssertionStatus method (ClassLoader), 403
+- setPaint method (Graphics2D), 587–589
+- setPaintLabels method (JSlider), 666–667, 671
+- setPaintTicks method (JSlider), 666–667, 671
+- setPaintTrack method (JSlider), 671
+- setParent method (Logger), 422
+- setPriority method (Thread), 749
+- setProperty method
+    - of Properties, 557
+    - of System, 408
+- setResizable method (Frame), 570, 573
+- setRows method (JTextArea), 647, 650
+- Sets, 509
+    - concurrent, 789–790
+    - intersecting, 549
+    - mutating elements of, 510
+    - subranges of, 534
+    - thread-safe, 796–797
+    - with given elements, 532
+- setSelected method
+    - of AbstractButton, 677
+    - of JCheckBox, 652, 654
+- setSelectedFile/Files methods (JFileChooser), 725, 730
+- setShort method (Array), 286
+- setSize method (Component), 573
+- setSnapToTicks method (JSlider), 666, 671
+- setTabSize method (JTextArea), 651
+- setText method
+    - of JLabel, 646
+    - of JTextComponent, 643–644
+- setTime method (Calendar), 222
+- setTitle method (JFrame), 570, 573
+- setToolTipText method (JComponent), 690
+- setUncaughtExceptionHandler method (Thread), 748
+- setUseParentHandlers method (Logger), 422
+- setValue method (Map.Entry), 526
+- setVisible method
+    - of Component, 570, 573
+    - of JDialog, 714, 716–717
+- setWrapStyleWord method (JTextArea), 651
+- setXxxTickSpacing methods (JSlider), 671
+- severe method (Logger), 406, 421
+- Shallow copies, 316–318
+- Shape interface, 580
+- Shell
+    - redirection syntax of, 85
+    - scripts in, 191
+- Shift operators, 60
+- short type, 43
+- Short class
+    - converting from short, 256
+    - hashCode method, 241
+- show method (JPopupMenu), 678
+- showConfirmDialog method (JOptionPane), 707–711
+- showDialog method (JFileChooser), 718, 725, 730
+- showInputDialog method (JOptionPane), 707–709, 712
+- showInternalConfirmDialog method (JOptionPane), 711
+- showInternalInputDialog method (JOptionPane), 712
+- showInternalMessageDialog method (JOptionPane), 710
+- showInternalOptionDialog method (JOptionPane), 711
+- showMessageDialog method (JOptionPane), 312, 707–710
+- showOptionDialog method (JOptionPane), 707–709, 711
+- showXxxDialog methods (JFileChooser), 718, 723, 725, 730
+- shuffle method (Collections), 544–545
+- shuffle/ShuffleTest.java, 545
+- Shuffling, 544
+- Shutdown hooks, 180
+- shutdown method (ExecutorService), 804–805
+- shutdownNow method (ExecutorService), 804, 806
+- Sieve of Eratosthenes benchmark, 560–563
+- sieve/sieve.cpp, 562
+- sieve/sieve.java, 561
+- signal method (Condition), 761–764, 775
+- signalAll method (Condition), 760–764, 775
+- Signatures (of methods), 171, 219
+- simpleframe/SimpleFrameTest.java, 568
+- sin method (Math), 54
+- singleton, singletonXxx methods (Collections), 533, 540
+- sort method
+    - of ArrayList, 250–251
+    - of Collection, 489–490
+    - of concurrent collections, 789
+- sleep method (Thread), 735, 739, 744
+- slider/SliderFrame.java, 667
+- Sliders, 665–671
+    - ticks on, 666–667
+    - vertical, 665
+- SoftBevelBorder class, 659–660
+- Software Development Kit (SDK), 19
+- Solaris operating system
+    - Eclipse versions for, 29
+    - JDK versions for, 18
+- sort method
+    - of Arrays, 113–116, 297, 300, 302, 322, 326
+    - of Collections, 543–546
+    - of List, 545
+- SortedMap interface, 494
+    - comparator, first/lastKey methods, 523
+    - subMap, headMap, tailMap methods, 534, 541
+- SortedSet interface, 494
+    - comparator, first, last methods, 515
+    - subSet, headSet, tailSet methods, 534, 540
+- Sorting
+    - algorithms for, 113, 543–546
+    - arrays, 113–116, 300
+    - assertions for, 401
+    - in reverse order, 543
+    - people, by name, 339–340
+    - strings by length, 314, 322–324
+- Source files, 191
+    - editing in Eclipse, 31
+    - installing, 22–23
+- Special characters, 46
+- Splash screen, 265
+- Spring layout, 691
+- sqrt method (Math), 54
+    - of BigDecimal, BigInteger, 107
+- src.zip file, 22
+- Stack interface, 482, 552, 558
+    - methods of, 559
+- Stack trace, 391–395, 775
+- StackFrame class
+    - getClassName method, 394
+    - getDeclaringClass method, 394
+    - getFileName method, 394
+    - getLineNumber method, 394
+    - getMethodName method, 395
+    - isNativeMethod method, 395
+    - toString method, 391, 395
+- Stacks, 558
+- StackTrace/StackTraceTest.java, 392
+- StackTraceElement class, methods of, 395
+- StackWalker class, 391
+    - forEach method, 394
+    - getInstance method, 391, 394
+    - walk method, 391, 394
+- Standard Edition (Java SE), 12, 19
+- Standard Java library
+    - companion classes in, 306
+    - online API documentation for, 68, 71–73, 198, 203
+- Standard Template Library (STL), 482, 487
+- start method
+    - of ProcessBuilder, 834, 837
+    - of Thread, 736, 739–740
+    - of Timer, 313
+- Starting directory, for a launched program, 84
+- startInstant method (ProcessHandle.Info), 838
+- startPipeline method (ProcessBuilder), 833, 837
+- startsWith method (String), 69
+- stateChanged method (ChangeListener), 666
+- Statements, 41
+    - compound. See Blocks
+    - static access modifier, 156–163
+        - for fields in interfaces, 304
+        - for main method, 40
+- Static binding, 220
+- Static constants, 157–158
+    - documentation comments for, 201
+- Static fields, 156–157
+    - accessing, in static methods, 158
+    - importing, 183
+    - initializing, 177
+    - no type variables in, 452
+    - static final access modifier, 51
+- Static imports, 183
+- Static inner classes, 341, 356–359
+- Static methods, 158–159
+    - accessing static fields in, 158
+    - adding to interfaces, 306
+    - importing, 183
+    - no type variables in, 452
+- Static variables, 157
+- staticInnerClass/StaticInnerClassTest.java, 358
+- StaticTest/StaticTest.java, 161
+- stop method
+    - of Thread (deprecated), 743, 779–781
+    - of Timer, 313
+- store method (Properties), 555, 557
+- stream method
+    - of Collection, 308
+    - of ServiceLoader, 361–362
+- Stream interface, toArray method, 332
+- StreamHandler class, 413–414
+- strictfp keyword, 53
+- StrictMath class, 54–55
+- String class, 62–75
+    - charAt method, 67–68
+    - codePointAt, codePoints methods, 69
+    - codePointCount method, 67, 70
+    - compareTo method, 69
+    - endsWith method, 69
+    - equals, equalsIgnoreCase methods, 65, 69
+    - format, formatTo methods, 80
+    - hashCode method, 238, 507
+    - immutability of, 63, 155, 222
+    - indexOf method, 69, 171
+    - isBlank, isEmpty methods, 69
+    - join method, 70
+    - lastIndexOf method, 70
+    - length method, 66–67, 70
+    - offsetByCodePoints method, 67, 69
+    - repeat method, 63, 70

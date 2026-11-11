@@ -1,0 +1,44 @@
+# ### 10.3.4 Displaying Images
+
+You can use the `ImageIcon` class to read an image from a file:
+
+```
+```java
+Image image = new ImageIcon(filename).getImage();
+```
+```
+
+Now the variable `image` contains a reference to an object that encapsulates the image data. Display the image with the `drawImage` method of the `Graphics` class.
+
+```
+```java
+public void paintComponent(Graphics g)
+{
+    . . .
+    g.drawImage(image, x, y, null);
+}
+```
+```
+
+We can take this a little bit further and tile the window with the graphics image. The result looks like the screen shown in Figure 10.11. We do the tiling in the `paintComponent` method. We first draw one copy of the image in the top left corner and then use the `copyArea` call to copy it into the entire window:
+
+```
+```java
+for (int i = 0; i * imageWidth <= getWidth(); i++)
+  for (int j = 0; j * imageHeight <= getHeight(); j++)
+    if (i + j > 0)
+      g.copyArea(0, 0, imageWidth, imageHeight, i * imageWidth, j * imageHeight);
+```
+```
+
+![](bbox=[0.314, 0.515, 0.6, 0.657])
+
+Figure 10.11 Window with tiled graphics image
+
+# **java.awt.Graphics 1.0**
+
++   - `boolean drawImage(Image img, int x, int y, ImageObserver observer)`
++   - `boolean drawImage(Image img, int x, int y, int width, int height, ImageObserver observer)`
++     draws an unscaled or scaled image. Note: This call may return before the image is drawn. The ImageObserver object is notified of the rendering progress. This was a useful feature in the distant past. Nowadays, just pass a null observer.
++   - `void copyArea(int x, int y, int width, int height, int dx, int dy)`
++     copies an area of the screen. The dx and dy parameters are the distance from the source area to the target area.

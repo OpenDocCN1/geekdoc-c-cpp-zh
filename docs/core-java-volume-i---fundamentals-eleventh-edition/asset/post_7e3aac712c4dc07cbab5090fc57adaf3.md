@@ -1,0 +1,277 @@
+
+- *printStackTrace* method (Throwable), 267, 391, 427
+- PrintWriter class, 84–85
+- Priority queues, 518
+- PriorityBlockingQueue class, 783, 787
+- PriorityQueue class, 519
+  - as a concrete collection type, 495
+  - priorityQueue/PriorityQueueTest.java, 518
+- private access modifier, 146, 187–188, 344
+  - checking, 271
+  - for fields, in superclasses, 210
+  - for methods, 155
+- Producers, 126
+- process method (SwingWorker), 825–827, 831
+- Process class, 831–838
+  - destroy, destroyForcibly methods, 834, 837
+  - exitValue method, 834, 837
+  - getInputStream methods, 832–833, 837
+  - isAlive method, 834, 837
+  - onExit method, 838
+  - supportsNormalTermination method, 837
+  - toHandle method, 835, 837
+  - waitFor method, 834, 837
+- ProcessBuilder class, 831–838
+  - directory method, 832, 836
+  - environment method, 837
+  - inheritIO method, 836
+  - redirectXxx methods, 833, 836
+  - start method, 834, 837
+  - startPipeline method, 833, 837
+- Processes, 831–838
+  - building, 832–834
+  - killing, 834
+  - running, 834–835
+  - vs. threads, 734
+- ProcessHandle interface
+  - allProcesses method, 835, 838
+  - children, descendants methods, 835, 838
+  - current method, 835, 838
+  - info method, 838
+  - of method, 835, 838
+  - pid method, 838
+- *ProcessHandle.Info*, methods of, 838
+- Producer threads, 781
+- Programs. *See* Applications
+- Properties, 572
+  - permitted to retrieve, 558
+- Properties class, 552
+  - getProperty method, 556–557
+  - load, store methods, 555, 557
+  - setProperty method, 557
+- Property maps, 555–558
+  - reading/writing, 555
+- *PropertyChangeListener* interface, 729
+- protected access modifier, 231–232, 290–291, 319
+- Proxies, 362–369
+  - properties of, 368–369
+  - purposes of, 364
+- Proxy class, 368–369
+  - getProxyClass/isProxyClass methods, 368–369
+  - newProxyInstance method, 363, 368–369
+  - proxy/ProxyTest.java, 366
+- public access modifier, 38, 52, 143–146, 187–188, 298
+  - checking, 271
+  - for fields in interfaces, 304
+  - for main method, 39
+  - for only one class in source file, 143
+  - not specified for interfaces, 297
+- publish method
+  - of Handler, 414, 422
+  - of SwingWorker, 825–826, 831
+- Pure virtual functions (C++), 227
+- push method (Stack), 559
+- put method
+  - of BlockingQueue, 782–783, 788
+  - of ConcurrentHashMap, 791
+  - of Map, 492, 520, 522
+  - of Preferences, 625, 630
+- putAll method (Map), 522
+- putXxx methods (Preferences), 625, 630
+- putFirst/Last methods (BlockingDeque), 788
+- putIfAbsent method
+  - of ConcurrentHashMap, 791
+  - of Map, 524
+- putValue method (Action), 608, 613
+
+## Q
+
+- Queue interface, 516–518
+  - implementing, 483–485
+  - methods of, 516–517
+- Queues, 482–485, 516–518
+  - blocking, 781–788
+  - concurrent, 789–790
+  - double-ended. *See* Deques
+- QuickSort algorithm, 113, 544
+
+## R
+
+- `\r` (carriage return escape sequence), 46
+- Race conditions, 750–754
+  - and atomic operations, 773
+- Radio buttons, 654–658
+  - in menus, 676–677
+- `radioButton/RadioButtonFrame.java`, 656
+- Ragged arrays, 120–123
+- Random class, 180
+  - `nextInt` method, 180
+  - thread-safe, 778
+- `RandomAccess` interface, 494, 544, 547
+- range method (EnumSet), 531
+- Raw types, 441–442
+  - converting type parameters to, 458
+  - type inquiring at runtime, 447
+- `readConfiguration` method (Logger), 408, 425
+- `readLine`/`readPassword` methods (Console), 78
+- Rectangle class, 513, 582
+- Rectangle2D class, 580–583
+- Rectangle2D.Double class, 581, 587
+- Rectangle2D.Float class, 581
+- Rectangles, 580
+  - comparing, 513
+  - drawing, 580
+  - filling with color, 588
+- RectangularShape class, 582
+  - `getCenterX/Y` methods, 582, 586
+  - `getHeight/Width` methods, 582, 587
+  - `getMaxX/Y`, `getMinX/Y` methods, 586
+  - `getX/Y` methods, 587
+- Recursive computation, 812
+- RecursiveAction, RecursiveTask classes, 812
+- Red-black trees, 512
+- `redirectXxx` methods (ProcessBuilder), 833, 836
+- reduce, `reduceXxx` methods (ConcurrentHashMap), 794–796
+- Redundant keywords, 304
+- ReentrantLock class, 755–758, 756
+- Reflection, 208, 264–290
+  - accessing nonpublic features with, 278
+  - analyzing:
+    - classes, 271–277
+    - objects, at runtime, 277–283
+    - generics and, 283–286, 467–479
+    - overusing, 293
+- `reflection/ReflectionTest.java`, 273
+- Reinhold, Mark, 12
+- Relational operators, 59, 61
+- Relative resource names, 269
+- remove method
+  - of ArrayList, 253–254
+  - of BlockingQueue, 782–783
+  - of Collection, 489, 491
+  - of Iterator, 485, 487–488, 492
+  - of JMenu, 674
+  - of List, 492, 505
+  - of ListIterator, 501
+  - of Map, 520
+  - of Queue, 517
+  - of ThreadLocal, 779
+- removeAll method
+  - of Collection, 489, 491
+  - of LinkedList, 503
+- removeEldestEntry method (LinkedHashMap), 528, 531
+- removeFirst/Last methods
+  - of Deque, 517
+  - of LinkedList, 506
+- removeHandler method (Logger), 422
+- removeIf method
+  - of ArrayList, 328
+  - of Collection, 491, 549
+- removeLayoutComponent method (LayoutManager), 706
+- removePropertyChangeListener method (Action), 608–609
+- removeXxx methods (JComboBox), 662, 664
+- repaint method
+  - of Component, 576
+  - of JComponent, 579
+- repeat method (String), 63, 70
+- REPL (read-evaluate-print loop), 32
+- replace method
+  - of ConcurrentHashMap, 791
+  - of String, 70
+- replaceAll method
+  - of Collections, 548
+  - of List, 549
+  - of Map, 524
+- requireNonNull, requireNonNullElse methods (Objects), 149, 163
+- Reserved words, 38
+  - forbidden for variable names, 49
+  - not used, 52
+- resetChoosableFileFilters method (JFileChooser), 727, 731
+- Resource bundles, 409–410
+- ResourceBundle class, 410
+- Resources, 268–271
+  - exhaustion of, 374
+  - localization of, 269
+  - names of, 269
+- resources/ResourceTest.java, 270
+- Restricted views, 537
+- resume method (Thread), 743
+- retain method (Collection), 489
+- retainAll method (Collection), 491
+- Retirement/Retirement.java, 93
+- Retirement2/Retirement2.java, 94
+- return statement
+  - in finally blocks, 388
+  - in lambda expressions, 324
+- @return comment (javadoc), 200
+- Return types, 219
+  - covariant, 445
+  - documentation comments for, 200
+  - for overridden methods, 443
+- Return values, 134
+- revalidate method (JComponent), 644–645
+- reverse method (Collections), 548
+- reversed, reverseOrder methods (Comparator), 340, 543, 546
+- rotate method (Collections), 549
+- round method (Math), 57
+- RoundingMode class, 107
+- rt.jar file, 192
+- run method (Thread), 736, 739
+- runAfterXxx methods (CompletableFuture), 819–820
+- runFinalizersOnExit method (System), 180
+- Runnable interface, 337, 734
+  - lambdas and, 326
+  - run method, 336, 739
+- Runtime
+  - adding shutdown hooks at, 180
+  - analyzing objects at, 277–283
+  - creating classes at, 363
+  - exec method, 832
+  - setting the size of an array at, 248
+  - type identification at, 224, 264, 447
+- RuntimeException, 374, 394, 397
+
+## S
+
+- @SafeVarargs annotation, 449
+- Scala programming language, default methods in, 308
+- Scanner class, 75–78, 83–85
+  - hasNext method, 77
+  - hasNextXxx methods, 77–78
+  - next method, 77
+  - nextXxx methods, 76–77
+- Scheduled execution, 804
+- ScheduledExecutorService class, methods of, 805
+- Scroll panes, 647–651
+- search, searchXxx methods (ConcurrentHashMap), 794–796
+- Security, 5, 15
+- @see comment (javadoc), 201–202
+- Semantic events, 621–622
+- Serialization, 530
+- Service loaders, 360–362
+- ServiceLoader class, 360
+  - iterator, load methods, 362
+  - stream method, 361–362
+- ServiceLoader.Provider interface, methods of, 361–362
+- Services, 360–362
+- ServletException, 384
+- Servlets, 384
+- Set interface
+  - add, equals, hashCode methods of, 494
+  - of method, 532–533, 538, 540
+- set method
+  - of Array, 286
+  - of ArrayList, 251, 254
+  - of BitSet, 560
+  - of Field, 283
+  - of List, 492, 505
+  - of ListIterator, 501, 506
+  - of ThreadLocal, 779
+  - of Vector, 769
+- set/SetTest.java, 510
+- setAccelerator method (JMenuItem), 680–681
+- setAcceptAllFileFilterUsed method (JFileChooser), 726, 730
+- setAccessible method (AccessibleObject), 278, 282
+- setAccessory method (JFileChooser), 731
+- setAction method (AbstractButton), 674
+- setActionCommand method (AbstractButton), 658

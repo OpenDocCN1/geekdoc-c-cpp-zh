@@ -1,0 +1,282 @@
+
+- Event sources, 598–599
+- EventObject class, 598
+  - getActionCommand, getSource methods, 620
+- Exception class, 374, 393
+- Exception handlers, 267, 373
+- Exception specification, 376
+- Exceptions
+  - ArrayIndexOutOfBoundsException, 110, 375–377
+  - ArrayStoreException, 218, 448–449, 458
+  - BadCastException, 468
+  - CancellationException, 826
+  - catching, 267–268, 377, 381–395
+    - multiple, 383–384
+  - changing type of, 384
+  - checked, 265–268, 375–378, 397
+  - ClassCastException, 224, 283, 303, 452, 459, 537
+  - classification of, 373–375
+  - CloneNotSupportedException, 318
+  - ConcurrentModificationException, 501, 789, 799
+  - creating classes for, 379–380
+  - documentation comments for, 200
+  - EmptyStackException, 396–398
+  - EOFException, 378–379
+  - FileNotFoundException, 376–378
+  - finally clause in, 386–389
+  - generics in, 454–455
+  - hierarchy of, 373, 397
+  - IllegalAccessException, 278–279, 282
+  - IllegalStateException, 488, 492, 506, 516–517, 783
+  - InterruptedException, 735, 743–746, 801
+  - InvocationTargetException, 266
+  - IOException, 85, 376–378, 382, 389
+  - logging, 407, 416
+  - micromanaging, 396
+  - NoSuchElementException, 486, 492, 506, 517
+  - NullPointerException, 149–150, 163, 258, 330, 375, 398
+  - NumberFormatException, 398
+  - propagating, 382, 398
+  - rethrowing and chaining, 384, 427
+  - RuntimeException, 374, 397
+  - ServletException, 384
+  - squelching, 398
+  - stack trace for, 391–395
+  - “throw early, catch late”, 399
+  - throwing, 267–268, 378–379
+  - TimeoutException, 801
+  - tips for using, 396–399
+  - uncaught, 428, 742, 747–749
+  - unchecked, 268, 375–377, 397
+  - unexpected, 407, 416
+  - UnsupportedOperationException, 526, 535, 537, 539
+  - using type variables in, 453
+  - variables for, implicitly final, 384
+  - vs. simple tests, 396
+  - wrapping, 385
+- .exe file extension, 195
+- exec method (Runtime), 832
+- Executable JAR files, 194–195
+- Executable path, 20
+- execute method (SwingWorker), 826, 831
+- Execution flow, tracing, 406
+- ExecutorCompletionService class, 806
+  - poll, submit, take methods, 811
+- Executors, 800–814
+  - groups of tasks, controlling, 806–811
+  - scheduled, 804
+- Executors class
+  - newSingleThreadExecutor method, 803–804
+  - newSingleThreadScheduledExecutor method, 803–805
+  - newXXThreadPool methods, 803–805
+- executors/ExecutorDemo.java, 808
+- ExecutorService interface, 802–805
+  - invokeAny/all methods, 806, 811
+  - shutdown method, 804–805
+  - shutdownNow method, 804, 806
+  - submit method, 803–805
+- Exit codes, 40
+- exit method (System), 40
+- exiting method (Logger), 406, 421
+- exitValue method (Process), 834, 837
+- exp method (Math), 55
+- Explicit parameters, 150–151
+- exploratory programming, 7
+- exportXXX methods (Preferences), 626, 630
+- extends keyword, 208–232, 439
+- External padding, 694
+
+## F
+
+- F suffix (float numbers), 45
+- Factorial functions, 392
+- Factory methods, 159
+- Fair locks, 758
+- Fallthrough behavior, 101
+- fdlibm (Freely Distributable Math Library), 55
+- Field class, 271
+  - get method, 277, 283
+  - getDeclaringClass method, 276
+  - getModifiers, getName methods, 271, 276
+  - getType method, 271
+  - set method, 283
+- Field width, of numbers, 79
+- Fields
+  - adding, in subclasses, 211
+  - default initialization of, 171
+  - documentation comments for, 199, 201
+  - final, 157, 222
+  - instance, 127, 146–152, 155, 173, 204
+  - private, 204, 210
+  - protected, 199, 231, 290–291
+  - public, 199, 201
+  - public static final, 304
+  - static, 156–157, 177, 183, 452
+  - volatile, 771–772
+- File dialogs, 723–732
+  - adding accessory components to, 728
+- FileFilter class (Swing), methods of, 726, 731
+- FileFilter interface (java.io package), 726
+- FilenameFilter class, 410–415, 423
+  - configuration parameters of, 412
+- FilenameExtensionFilter interface, 731
+- FileNotFoundException, 376–378
+- Files
+  - filters for, 726–728
+  - locating, 84
+  - names of, 25, 83
+  - opening/saving in GUI, 723–732
+  - reading, 83
+    - all words from, 390
+    - in a separate thread, 825
+  - writing, 84
+- FileView class, 727
+  - getDescription, getIcon methods, 727, 731
+  - getIcon, getTypeDescription methods, 727, 732
+  - isTraversable method, 727, 732
+- fill method
+  - of Arrays, 116
+  - of Collections, 548
+  - of Graphics2D, 588–589
+- filter interface, 414
+  - toString method, 414, 425
+- final access modifier, 51, 221–223
+  - checking, 271
+  - for fields in interfaces, 304
+  - for instance fields, 155
+  - for methods in superclass, 303
+  - for shared fields, 772
+  - inner classes and, 350–351
+- finalize method, 180
+- finally clause, 386–389
+  - return statements in, 368
+  - unlock operation in, 755
+  - without catch, 387
+- Financial calculations, 45
+- fine, finer, finest methods (Logger), 406, 421
+- first method (SortedSet), 515
+- First Person, Inc., 11
+- firstKey method (SortedMap), 523
+- FirstSample/FirstSample.java, 42
+- Flash, 567
+- Float class
+  - converting from float, 256
+  - hashCode method, 241
+  - POSITIVE_INFINITY, NEGATIVE_INFINITY, NaN constants, 45
+- float type, 44
+  - converting to other numeric types, 56–57
+- Floating-point numbers, 44–45
+  - arithmetic computations with, 53
+  - equality of, 97
+  - formatting output for, 79
+  - rounding, 45, 57
+- Floating-point overflow, 53
+- floor method (NavigableSet), 516
+- floorMod method (Math), 54
+- Flow layout manager, 637
+- FlowLayout class, 639
+- flush method (Handler), 422
+- FocusEvent class, 622
+  - isMemory method, 623
+- FocusListener interface, methods of, 623
+- Font class, 590–595
+  - deriveFont method, 591, 595
+  - getFamily, getFontName, getFrame methods, 595
+  - getLineMetrics method, 592, 595
+  - getStringBounds method, 591–592, 595
+- font/FontTest.java, 593
+- FontMetrics class, getFontRenderContext method, 596
+- Fonts, 589-596
+  - checking availability of, 589
+  - names of, 589-590
+  - size of, 590-591
+  - styles of, 590
+  - typesetting properties of, 591
+- 'for each' loop, 108-111
+  - for array lists, 253
+  - for collections, 486, 799
+  - for multidimensional arrays, 118
+- for loop, 95-99
+  - comma-separated lists of expressions in, 62
+  - defining variables inside, 97
+  - for collections, 486
+- forEach method
+  - of ConcurrentHashMap, 794-796
+  - of Map, 522
+  - of StackWalker, 394
+- forEachRemaining method (Iterator), 485, 492
+- Foreground color, specifying, 588
+- ForkJoin framework, 811
+- forkJoin/ForkJoinTest.java, 813
+- Format specifiers (printf), 79
+  - format, formatTo methods (String), 80
+- Formattable interface, 80
+- Formatter class, methods of, 415, 425
+- forName method (Class), 265, 267
+- Frame class, 567
+  - getIconImage method, 574
+  - getTitle method, 573
+  - isResizable method, 573
+  - setIconImage method, 570, 574
+  - setResizable method, 570, 573
+  - setTitle method, 570, 573
+- Frames
+  - closing by user, 570
+  - creating, 567
+  - displaying:
+    - information in, 574-597
+    - text in, 577
+  - positioning, 570-574
+  - properties of, 570-574
+- frequency method (Collections), 549
+- Functional interface, 337
+- Functional interfaces, 326-328
+  - abstract methods in, 326
+  - annotating, 339
+  - conversion to, 326
+  - generic, 327
+    - using supertype bounds in, 464
+  - @FunctionalInterface annotation, 339
+- Functions. See Methods
+- Future interface, 806
+  - cancel, get methods, 801-802, 804, 826
+  - isCancelled, isDone methods, 801-802, 804
+- Futures, 800-802
+  - combining, 819-820
+  - completable, 817-823
+- FutureTask class, 800-802
+
+## G
+
+- Garbage collection, 65, 135
+  - hash maps and, 526-527
+- GB18030 standard, 47
+- General Public License (GPL), 15
+- Generic programming, 431-479
+  - classes in, 248-249, 434-437, 661
+    - extending/implementing other generic classes, 459
+    - no throwing or catching instances of, 453
+  - collection interfaces in, 550
+  - converting to raw types, 458
+  - debugging, 536
+  - expressions in, 442
+  - in JVM, 441, 469-473
+  - inheritance rules for, 457-458
+  - legacy code and, 445
+  - methods in, 437-438, 443-445, 489-492
+    - not for arrays, 451-452
+    - reflection and, 467-479
+    - required skill levels for, 433
+    - static fields or methods and, 452
+    - type erasure in, 441-447, 451
+      - clashes after, 455-456
+    - type matching in, 469
+  - vs. arrays, 332
+  - vs. inheritance, 432-434
+  - wildcard types in, 459-467
+- GenericArrayType interface, 470
+- getGenericComponentType method, 479
+- genericReflection/GenericReflectionTest.java, 471
+- genericReflection/TypeLiterals.java, 474
+- get method
+  - of Array, 286
