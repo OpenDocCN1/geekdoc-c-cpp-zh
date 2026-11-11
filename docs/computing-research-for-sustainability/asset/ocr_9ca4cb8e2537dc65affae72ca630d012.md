@@ -1,0 +1,13 @@
+below. Sound scientific methodologies are needed to take into account total trade-offs among conflicting device requirements and to model long-term reliability and life of these devices.
+
+Products that are recyclable, use non-hazardous materials, or minimize the use of energy and matter tend to be less harmful for the environment. Often there are trade-offs among these concerns. For example, using fewer hazardous materials may increase the resources needed to manufacture a certain type of equipment. When considering the size of items, there is often a trade-off of size for function. For example, cellular telephones have grown larger in recent years as functionality has increased. This matters especially with regard to calculating potential waste over a product’s entire life cycle, although in the case of cell phones, the increased functionality may mean that other, even larger devices are no longer needed. Digitization is another example in which the functionality of electronics has decreased the amount of hardware needed. As digital music players have become more ubiquitous, compact disc players—and discs—are becoming less and less necessary.
+
+Life-cycle analysis is key to understanding the complete energy use of products, including the energy used in mining raw materials, producing semiconductors and other components, assembly, transportation, and, ultimately, consumer use of the product. Computing research can assist in the tracking and understanding of all of these inputs throughout the life cycle of products.
+
+“Green computing”—making computers themselves more environmentally friendly—plays a role in the reduction of energy consumption. For example, basic assumptions about computers’ operating environments can be rethought, to yield significant energy savings. The 2011 iNEMI roadmap recommends that server farms and machines be redesigned so that the temperatures of server rooms can be increased in order to reduce the amount of energy required for cooling.
+
+Participants noted that a holistic approach to technology is needed to contribute further to sustainability in electronics. Continued work in the following areas is needed: in digital semiconductor technology, work is needed in order to increase density and reduce cost; in the incorporation of sensor networks, work is needed to provide detailed energy-use data; in electronic packaging technology; and in innovation in CS and IT algorithms and applications. Additionally, participants suggested that standards may play an important role here.
+
+# **Ecological Sustainability**
+
+Threats to ecological sustainability include loss of biodiversity, species extinction and invasion, and the exploitation of ecosystems. Each of

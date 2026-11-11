@@ -1,0 +1,396 @@
+
+
+```text
+C:\WINDOWS\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Total Items in Stock: 0
+```
+
+```text
+C:\WINDOWS\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Enter Item Code: 200
+Name of the Item: Desktop computers
+Price of Each Unit: 450
+Quantity: 2
+Reorder Level: 4
+
+The item has been successfully added.
+
+Total Items in Stock: 0
+```
+
+![](img/11b034a94fc590add0a7808250a38792_587_0.png)
+
+![](img/11b034a94fc590add0a7808250a38792_587_1.png)
+
+```text
+C:\WINNT\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Enter Item Code:    200
+
+Item Code: 200
+Name of the Item: Desktop Computers
+Price of each unit: 450.00
+Quantity in Stock: 2.0000
+Reorder Level: 3889
+
+Press Any Key...
+
+Total Items in Stock: 1
+```
+
+```text
+C:\WINNT\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Number of Items Available in Stock: 1
+Total Investment: Rs.900.00
+Press Enter To View. Otherwise Press Any Key...
+
+Total Items in Stock: 1
+```
+
+```text
+C:\WINNT\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Enter Item Code:    200
+
+Item Code: 200
+Name of the Item: Desktop Computers
+Price of each unit: 450.00
+Quantity in Stock: 2.0000
+Reorder Level: 3889
+
+Press Any Key...
+
+Enter Quantity: 1
+
+Total Items in Stock: 1
+```
+
+```text
+C:\WINNT\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Enter Item Code:    200
+
+Item Code: 200
+Name of the Item: Desktop Computers
+Price of each unit: 450.00
+   Insufficient Stock
+   Insufficient quantity in stock.
+   Press Any Key...
+
+Enter Quantity: 1
+
+Total Items in Stock: 1
+```
+
+```text
+C:\WINNT\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Enter Item Code:      200
+
+Item Code: 200
+Name of the Item: Desktop Computers
+Price of each unit: 450.00
+Quantity in Stock: 6.0000
+Reorder Level: 2889
+
+Press Any Key...
+
+Enter Quantity: 2
+
+2.0000 Item(s) issued.
+You should pay Rs. 900.00
+
+Total Items in Stock: 1
+```
+
+```text
+C:\WINNT\system32\command.com
+Inventory Management System
+
+1: Add an Item
+2: Edit Item Information
+3: Show Item Information
+4: View Stock Report
+5: Issue Items from Stock
+6: View Items to be Ordered
+0: Close the application
+
+Enter Item Code:      200
+
+Item Code: 200
+Name of the Item: Desktop Computers
+Price of each unit: 450.00
+Quantity in Stock: 6.0000
+Reorder Level: 2889
+
+Press Any Key...
+
+Enter Quantity: 2
+
+2.0000 Item(s) issued.
+Would you like to issue another item (Y/N)?
+
+Total Items in Stock: 1
+```
+
+## C:\WINNT\system32\command.com — 库存管理系统
+
+- 1: 添加物品
+- 2: 编辑物品信息
+- 3: 显示物品信息
+- 4: 查看库存报告
+- 5: 从库存中发放物品
+- 6: 查看待订购物品
+- 0: 关闭应用程序
+
+```text
+Item Code: 200
+Name of the Item: 0
+Price of each unit: 456.00
+Quantity in Stock: 4.0000
+Reorder Level: 5889
+
+Press Any Key...
+```
+
+库存物品总数：1
+
+```c
+/* Shows the main menu for the application*/
+while (cancelOption==0)
+{
+clrscr();
+gotoxy(30,7);
+printf("Please Select an Action->");
+gotoxy(30,10);
+printf("Daily Time Record [1] ");
+gotoxy(30,11);
+printf("Data Entry        [2] ");
+gotoxy(30,12);
+printf("Close             [3] ");
+gotoxy(30,15);
+printf("Please Enter Your Choice (1/2/3): ");
+scanf("%s",&choice);
+timeOption=strcmp(choice,"1");
+entryOption=strcmp(choice,"2");
+exitOption=strcmp(choice,"3");
+
+
+if (timeOption==0)
+{
+clrscr();
+gotoxy(23,6);
+printf("DAILY EMPLOYEE TIME RECORDING SYSTEM");
+gotoxy(16,24);
+printf("Input Any Other Key to Return to Previous Screen.");
+gotoxy(31,9);
+printf("[1] Employee Log In ");
+gotoxy(31,10);
+printf("[2] Employee Log Out");
+gotoxy(28,12);
+printf("Please Enter Your Option: ");
+scanf("%s",&selectOption);
+if (strcmp(selectOption,"1")==0)
+{
+    getData(5);
+}
+if (strcmp(selectOption,"2")==0)
+{
+    getData(6);
+}
+}
+cancelOption=0;
+}
+if (entryOption==0)
+{
+dataentry();
+cancelOption=0;
+}
+if (exitOption==0)
+{
+cancelOption=1;
+}
+
+if (!(timeOption==0 || entryOption==0 || exitOption==0))
+{
+        gotoxy(10,17);
+    printf("You Have Entered an Invalid Option. Please Choose Either 1, 2 or 3. ");
+    getch();
+    cancelOption=0;
+}
+
+}
+clrscr();
+gotoxy(23,13);
+printf("The Application will Close Now. Thanks!");
+getch();
+}
+
+/* This function provides logic for data entry to be done for the system.
+Access to Data Entry screens will be only allowed to administrator user.*/
+void dataentry(void)
+{
+
+char adminName[10], passwd[5],buffer[1];
+char tempo[6],sel[1];
+int validUserNameOption,validUserPwdOption,returnOption,UserName,inc,tmp;
+char plus;
+    clrscr();
+    validUserNameOption=0;
+    validUserPwdOption=0;
+    while (validUserPwdOption==0)
+    {
+        clrscr();
+while (validUserNameOption==0)
+{
+    clrscr();
+    gotoxy(20,5);
+    printf("IT SOFTWARE DATA ENTRY SYSTEM-ADMIN INTERFACE");
+    gotoxy(20,24);
+    printf("Info: Type return to go back to the main screen.");
+    gotoxy(28,10);
+    printf("Enter Administrator Name: ");
+    scanf("%s",&adminName);
+    returnOption=strcmp(adminName,"return");
+    UserName=strcmp(adminName,"admin");
+
+    if (returnOption==0)
+    {
+        goto stream;
+    }
+    if (!(UserName==0 || returnOption==0))
+    {
+
+        gotoxy(32,11);
+        printf("Administrator Name Is Invalid.");
+        getch();
+        validUserNameOption=0;
+    }
+    else
+        validUserNameOption=1;
+
+}
+
+gotoxy(30,11);
+printf("Enter Password: ");
+inc=0;
+while (inc<5)
+{
+    passwd[inc]=getch();
+    inc=inc+1;
+    printf("* ");
+}
+inc=0;
+while (inc<5)
+{
+tempo[inc]=passwd[inc];
+inc=inc+1;
+}
+while(getch()!=13);
+if (!strcmp(tempo, "admin12"))
+    {
+        gotoxy(28,13);
+        printf("You have Entered a Wrong Password. Please Try Again. ");
+        getch();
+        validUserPwdOption=0;
+        validUserNameOption=0;
+    }
+else
+    {
+        clrscr();
+        gotoxy(24,11);
+        textcolor(YELLOW+BLINK);
+        cprintf("You Have Successfully Logged In.");
+        gotoxy(24,17);
+        textcolor(YELLOW);
+        printf("Press Any Key to Continue.");
+        validUserPwdOption=1;
+        validUserNameOption=1;
+        getch();
+        showAdminMenu=0;
+
+while (showAdminMenu==0)
+    {
+        clrscr();
+        gotoxy(24,4);
+        printf("ADMIN OPTIONS");
+        gotoxy(26,9);
+        printf("Add New Employee      [1]");
+        gotoxy(26,11);
+        printf("Show Daily Entries    [2]");
+        gotoxy(26,13);
+        printf("Search Employee Record [3]");
+        gotoxy(26,15);
+        printf("Remove Employee       [4]");
+        gotoxy(26,17);
+        printf("Close                 [5]");
+        gotoxy(24,21);
+        printf("Please enter your choice: ");
+```
+

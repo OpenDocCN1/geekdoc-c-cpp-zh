@@ -1,0 +1,14 @@
+through the system, ultimately leading to an estimate of the probability of the outcomes. Uncertainty analysis is driven by multiple goals, including the mitigation of climate change, adaptation to changing environmental conditions stemming from climate change, and vulnerability assessments.
+
+# ### Assessing Uncertainty
+
+There are two types of uncertainty in climate models: structural and parametric. (The level of uncertainties within each model creates a hierarchy of climate models, as described in Box A.1. Box A.2 then presents data summarized from the highly complex models used by the Intergovernmental Panel on Climate Change [IPCC].) Structural uncertainty stems from the hierarchy of models and attempts to balance the speed of the model with the complexity and components of individual models. Models take significant time to build; their complexity increases as more components are added. Modern tools and approaches in software systems, such as modularity, are important in creating current models. However, several of the models were built in the 1960s and 1970s before these tools existed. For example, participants observed that it is not possible to do comparisons between several of the older models, such as that of the United Kingdom’s Met Office Hadley Centre and the National Center for
+
+# ### BOX A.1
+### Hierarchy of Climate Models
+
+The first climate change assessments were done using the global energy balance model. Over the past 50 years, a number of additional types of climate models have been developed, creating a hierarchy of climate models. Each model typically has five major components—atmosphere, ocean, ice, land, ecosystems, and human action—and each component can be incorporated at various levels in the models, making the models significantly complex.
+
+The most basic of the models is the energy balance model, which is very fast to run but lacks a lot of detail. In terms of complexity, the next level up includes Earth-system models of intermediate complexity (EMICs), which are reasonably fast and able to explore feedback and uncertainty. Fifteen years ago, the Massachusetts Institute of Technology created one of the first EMICs, which included all of the major components listed above. The model is very fast and can explore feedbacks between systems, is flexible enough to do uncertainty analysis, and can propagate uncertainty through the different stages.
+
+At the next complexity level are the atmosphere-ocean general circulation models and Earth-system models, which are used by the Intergovernmental Panel on Climate Change (IPCC) (and from which the data for Box A.2 were drawn).

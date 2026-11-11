@@ -1,0 +1,13 @@
+and methodological approaches will be needed to address the broad systems challenges—encompassing the environment and ecosystems, social and economic factors, and personal and organizational behaviors affecting food production, distribution, and consumption.
+
++   - The development of sustainable and resilient infrastructures poses crosscutting challenges, especially when a broad view of sustainability is taken that encompasses economic and social issues. Contributing to the challenges of increasing the resilience of societal and physical infrastructures is the growing risk of natural and human-made disasters. Enhancing society’s resilience and ability to cope with inevitable disasters will contribute to sustainability. Even apart from climate change and resource consumption, the sheer magnitude of Earth’s population means that crises, when they happen, will be at scale. Sustainability challenges in this area involve planning and modeling infrastructure, and the anticipation of and response to disasters and the ways in which information technology can assist with developing sustainable and resilient infrastructures.
+
+Sustainability, of course, encompasses much more than the areas and examples outlined above, which are used here to illustrate the breadth of the challenges that need to be faced and the role that computer science and information technology can play.
+
+# ## THE VALUE OF THE COMPUTER SCIENCE APPROACH TO PROBLEM SOLVING
+
+As the sections below discuss, several key underlying philosophical and methodological approaches of computer science are well matched to key characteristics of sustainability problems.
+
+# ## Systems—Scale, Heterogeneity, Interconnection, Optimization, and Human Interaction
+
+Sustainability problems often share challenges of scale—sometimes due to the size of the problem space (e.g., geographic or planetary scale), sometimes due to the potential range of impact (e.g., widespread potential health or economic impacts), and often due to both. Sustainability problems are also typically heterogeneous in nature—there is almost never just one variable contributing to the challenge, or one avenue to a solution. Inputs, solutions, and technologies that can be brought to bear on any given problem vary a great deal. Most sustainability challenges emerge in part due to interconnection—multiple interlocking pieces of a system all having effects (some expected, some not) on other pieces of the system. Solutions to sustainability challenges typically involve finding near-

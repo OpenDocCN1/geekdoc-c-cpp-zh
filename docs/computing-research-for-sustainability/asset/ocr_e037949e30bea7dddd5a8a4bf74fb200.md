@@ -1,0 +1,13 @@
+while the adaptive redesign of the deployed system continues to be supported as advances in scientific understanding, changes in technology, and evolution in political and economic systems are incorporated. Thus iteration—adjusting, refining, and learning from ongoing efforts—will be essential, and it will often have to be done at a societal and planetary scale.
+
+Iteration is another core strength of computer science, and learning from iterative approaches to large-scale software systems and applications, and large-scale software engineering and system deployment generally, can help with large-scale sustainability challenges. The approach has been demonstrated in such specific applications as the engineering of the global Internet and the deployment of web search and has been used effectively in a wide array of successful software engineering projects.
+
+Because sustainability challenges involve complex, interacting systems of systems undergoing constant change, a data-driven, iterative approach will be essential to making progress and to making needed adjustments as situations change. One approach is to deploy technology in the field, using reasonably well-understood techniques, at first to explore the space and map gaps that need work. Data and models developed on the basis of this initial foray can then help provide context for developing qualitatively new techniques and technologies for contributing to even better solutions.
+
+**FINDING: Fast-moving iterative, incrementally evolving approaches to problem solving in computer science, which were critical to building the Internet and web search engines, will be useful in solving sustainability challenges.**
+
+# ## COMPUTER SCIENCE RESEARCH AREAS
+
+Despite numerous opportunities to apply well-understood technologies and techniques to sustainability, there are also hard problems—for example, the mitigation of climate change—for which current methods offer at best partial solutions and the pressing nature of the challenges motivates rapid innovation. This section describes some salient technical research areas and outlines a broad research agenda for CS and sustainability.
+
+**FINDING: Although current technologies can and should be put to immediate use, CS research and IT innovation will be critical to meeting sustainability challenges. Effectively realizing the potential of CS to address sustainability challenges will require sustained and appropriately structured and tailored investments in CS research.**

@@ -1,0 +1,53 @@
+level_changes:
+- line: 455
+  before: 2
+  after: 1
+- line: 710
+  before: 3
+  after: 2
+- line: 890
+  before: 2
+  after: 1
+- line: 1301
+  before: 2
+  after: 3
+- line: 1346
+  before: 2
+  after: 1
+- line: 1348
+  before: 3
+  after: 2
+- line: 1369
+  before: 2
+  after: 3
+text_changes:
+- line: 403
+  before: '*发展更具可持续性和韧性的基础设施所面临的挑战*'
+  after: 发展更具可持续性和韧性的基础设施所面临的挑战
+- line: 421
+  before: '*信息技术与计算机科学研究在建设可持续基础设施和培育韧性方面的作用*'
+  after: 信息技术与计算机科学研究在建设可持续基础设施和培育韧性方面的作用
+- line: 583
+  before: 专栏 2.1
+  after: 框2.1
+- line: 710
+  before: BOX 3.1
+  after: 框3.1
+- line: 890
+  before: 关于创新计算与信息技术促进可持续性研讨会的摘要
+  after: 附录A 关于创新计算与信息技术促进可持续性研讨会的摘要
+- line: 907
+  before: 环节1：以新颖的计算机科学/信息技术方法扩展科学与工程：“将数字转化为知识的需求”
+  after: 第1场会议：以新颖的计算机科学/信息技术方法扩展科学与工程：“将数字转化为知识的需求”
+- line: 1156
+  before: '*收集使用数据的挑战*'
+  after: 收集使用数据的挑战
+- line: 1195
+  before: 第四场：克服科学发现的障碍，将科学转化为实践
+  after: 第4场会议：克服科学发现的障碍，将科学转化为实践
+- line: 1301
+  before: 第二场：理解、跟踪和管理科学到政策全流程中的不确定性
+  after: 第2场会议：理解、跟踪和管理科学到政策全流程中的不确定性
+- line: 1346
+  before: B
+  after: 附录B
