@@ -1,0 +1,13 @@
+# ### viewWillAppear: AND viewDidAppear:
+
+The viewWillAppear: and viewDidAppear: methods can be somewhat confusing. For the most part, the system calls these methods whenever a view controller is used to display another view controller. This includes displaying modal views, adding new views to a navigation controller, or switching between views on a tab bar. The system will even call these notification methods when a view reappears. For example, when returning from a modal view or when a covering view is popped off the navigation stack.
+
+However, manually adding a view using the addSubview: method does not trigger these notifications. Nor does changing a view's hidden or alpha properties to hide or show a view. And, just to make things even more confusing, adding a view to the application's window using addSubview: will trigger the notifications (though in iOS 4.0 and later, you should assign the view controller to the window's rootViewController property instead).
+
+While these rules and exceptions may seem confusing, they do point to a common design problem. If your view appears onscreen but your view controller's viewWillAppear: and viewDidAppear: methods are not called, you may have an inconsistent view hierarchy. This occurs when you add a view to the view hierarchy without properly adding its view controller to the view controller hierarchy.
+
+There are a number of ways to fix this. Most simply, you could get rid of the view controller and add the view directly to its superview's controller. After all, view controllers often manage more than one view at a time. We're doing this anytime we create an outlet for one of our controls.
+
+Alternatively, in iOS 5.0 we could create a custom container view controller and use it to present our subview's controller. As the name suggests, a container view controller manages one or more other view controllers. Examples in UIKit include UINavigationController, UITabViewController, and UIPageViewController. iOS 5 has extended the UIViewController class, giving us methods to add (addChildViewController:) or remove (removeFromParentViewController) controllers from the controller hierarchy. This allows us to create a controller hierarchy that mirrors our views. As a result, the system can correctly forward important messages along both hierarchies.
+
+For more information, check out the UIViewController documentation. In particular, look at the automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers property. This contains a list of all the messages that need to be forwarded along the view controller hierarchy. We will also create our own custom container view controller in the “Creating a UIViewController Container” section of Chapter 8.

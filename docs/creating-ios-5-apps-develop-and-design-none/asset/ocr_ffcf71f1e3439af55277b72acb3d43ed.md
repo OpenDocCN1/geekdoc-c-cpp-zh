@@ -1,0 +1,13 @@
+Always remember, iOS is not a desktop operating system. Some of the things we take for granted on desktop machines are impossible, inappropriate, or at least very difficult in iOS. The file system is a great example of this. Where the desktop often displays dialog boxes to open and save files, forcing the user to search through a forest of directories, iOS goes to great lengths to hide the underlying file system, both from the user and from the applications themselves.
+
+This provides two main benefits. For the user, this greatly simplifies the experience. You don’t need to worry about where files are stored or how to find them. Your application handles all of this transparently. For the applications, limiting access to the file system greatly improves system security. Each application is limited to its own sandbox. The application can freely open and save files within this sandbox, but it cannot touch anything outside these carefully defined boundaries. This protects both your data and the system files from accidental (or worse yet, malicious) alterations. Unfortunately, it also makes sharing files between applications somewhat difficult. The communication channels between applications are few and tightly controlled.
+
+# ## GENERATING DIRECTORY PATHS
+
+Within the application sandbox, iOS sets aside specific directories for different types of use. These include the Document, Temporary, Caches, and Application Support directories.
+
+The Document directory stores our application’s documents—basically, any user-generated data. When writing a text editor, this is where we save the user’s text files. When designing a game, this is where we store the saved game files. For Health Beat, this is where we save our WeightHistory.
+
+The Temporary directory provides a handy location for storing information that does not need to survive past the current session. This often includes the scratch space needed for large calculations and similar transient uses. It’s best to actively delete these files when they are no longer needed; however, the system will periodically clear out the Temporary directory when our application is not running.
+
+The Caches directory also stores temporary information; however, this directory focuses on caching data to improve performance. Most of the time this means saving information that we may need to reuse, especially information that takes a long time or a lot of computational effort to re-create.

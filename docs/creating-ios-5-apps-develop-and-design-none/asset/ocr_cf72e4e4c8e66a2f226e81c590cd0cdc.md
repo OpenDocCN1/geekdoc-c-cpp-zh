@@ -1,0 +1,13 @@
+The initialize method is a special method that the Objective-C runtime calls once when the class is first loaded. You can implement it to perform class-level configurations. Here we use it to format our static format variable. This one variable will be used for all our number formatting needs. It will format decimal-styled numbers with up to two digits after the decimal place (rounding weights to the closest hundredth).
+
+We are also limiting it to positive numbers. By default, the NSNumberFormatter uses our current locale to determine how decimal numbers should be formatted. For example, here in the United States I use a period for the decimal point. However, in some parts of Europe you would use a comma instead. NSNumberFormatter transparently manages those details, letting us automatically localize our application.
+
+Next, the stringForUnit: method uses a switch statement to evaluate the value of the unit argument. If unit equals LBS, it returns @"lbs". If unit equals KG, it returns @"kg". For anything else, it throws an exception.
+
+Exceptions should be familiar to anyone with a Java background. They are raised when something has gone wrong in your application. If the exception is left uncaught, the application will crash, printing an appropriate message to the console. However, there is a significant difference in philosophy between Java and Objective-C.
+
+In Java, exceptions are caught and processed as a regular part of executing the program. They are often used to manage the flow of control whenever relatively common errors occur (for example, trying to open a file that doesn't exist).
+
+In Objective-C, exceptions are reserved for things that are truly exceptional. Or to put it another way, they are reserved for problems that should never occur during the regular operation of our application. As a result, exceptions are usually caused by developer errors (in our example here, by passing in an invalid WeightUnit value). As a result, we rarely write code to catch exceptions in Objective-C. Instead, when we see a raised exception during testing, we look for the error in our code and fix it.
+
+The stringForWeight:ofUnit: method takes a weight value and a unit value and combines them into a single string. We start by creating a string from our number. We wrap the float-valued weight in an NSNumber object and then pass that to the formatter's stringFromNumber: method. This will produce a correctly formatted, localized decimal string. Next, we get the unit string. We then combine the two with a space in between.

@@ -903,6 +903,7 @@
 +   [Android 应用程序创建指南：开发与设计](docs/creating-android-applications-develop-and-design/README.md)
 +   [数字动画创作：Scratch 故事动画制作](docs/creating-digital-animations-animate-stories-with-scratch/README.md)
 +   [Unity 和 Maya 游戏创建：如何开发有趣且畅销的 3D 游戏](docs/creating-games-with-unity-and-maya-how-to-develop-fun-and-ma/README.md)
++   [iOS 5 应用开发：开发与设计](docs/creating-ios-5-apps-develop-and-design-none/README.md)
 +   [创建 iOS 应用：开发与设计（第二版）](docs/creating-ios-apps-develop-and-design-second-edition/README.md)
 +   [创意播客制作人（数字世界！）](docs/creative-podcast-producers-its-a-digital-world/README.md)
 +   [关键代码研究：初始（方法）（软件研究）](docs/critical-code-studies-initialmethods-software-studies/README.md)

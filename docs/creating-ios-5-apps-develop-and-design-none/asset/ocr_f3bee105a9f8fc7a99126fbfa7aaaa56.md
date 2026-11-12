@@ -1,0 +1,5 @@
+Finally, we check the document’s `UIDocumentStateEditingDisabled` flag. This is set whenever the document is in a state where editing the document is no longer safe. Typically, this happens when the document is loading a remote update, but other events may trigger it as well.
+
+If the flag is turned on, we have our text field resign first responder status, hiding the keyboard. We also disable the text field, preventing the user from making any changes. If the flag is turned off, we enable the text field and set it as the first responder. This causes the keyboard to reappear. We also update our `currentDate` property and the user interface’s date label. This helps ensure that our weight entries remain in sequential order.
+
+That wraps up our work with the document; however, we still need to save the user defaults. Fortunately, as you will see, this is much, much easier. Still, this is a good place to take a break. Stretch for a bit, and (as always) commit your changes.

@@ -1,0 +1,13 @@
+iOS 5 features, like iCloud storage and Core Location regions. However, there is one huge problem here. There is no way to check the code at compile time and verify that we aren’t accidentally calling something above the deployment target in a generally reachable branch.
+
+Things aren’t so bad when you’re just adding a new feature to an existing app. You know that the code you’re adding is above the deployment target, and you can take care to isolate it properly. The real problem comes in when you’re doing general coding or debugging. It’s so easy to unknowingly use parts of the SDK that are above the deployment target—especially when using autocomplete.
+
+Unfortunately, there’s only one way to catch these errors: testing. Sure, I like testing. I’m a huge fan of testing, but testing alone is not a sufficient solution for this problem. Here’s the hard, cold truth: It’s very hard (I would say impractical if not impossible) to make sure that we actually execute every possible branch of our code during our test cycles. And if we don’t test every branch, we don’t really know if we’re safe. Above-deployment API calls may be scattered throughout any part of our code, lying in wait like little land mines, just waiting to kill our apps.
+
+So, if you go down this route, test your code. Test it hard and test it often. If possible, find a bunch of beta testers who still run older versions of iOS. Otherwise, you’re just asking for a bunch of bad reviews when your app starts crashing on older devices.
+
+Finally, there are also some important limitations that weak linking just cannot work around. Storyboards, for example, are only available on iOS 5 and later. ARC is available for iOS 4.0 and above, but weak references are not supported before iOS 5. Therefore, if you want to support earlier devices, you must use nibs and manual memory management.
+
+# LOCALIZATION
+
+Localization involves adapting our application to two or more culturally distinct markets. People often think about localization in terms of translating written text—and it can involve a lot of translation. However, it also involves a wide range of other cultural aspects that have nothing to do with language. For example, we’ve already used NSNumberFormatter to create locally formatted numbers. There, it’s not about language—we’re not translating the number; we’re simply choosing the best representation based on our user’s locale. Similarly, a stop sign icon should look very different in Japan than it does in the US. Both of these are prime examples of localization.
