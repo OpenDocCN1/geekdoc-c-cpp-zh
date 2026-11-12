@@ -1,0 +1,142 @@
+
+
+以下伪代码描述了针对至少包含四个条目的数组的分区算法：
+
+```
+// Partitions theArray[first..last].
+partition(theArray: ItemArray, first: integer, last: integer): integer
+// Choose pivot and reposition it
+mid = first + (last - first) / 2
+sortFirstMiddleLast(theArray, first, mid, last)
+Interchange theArray[mid] and theArray[last - 1]
+pivotIndex = last - 1
+pivot = theArray[pivotIndex]
+// Determine the regions S1 and S2,
+indexFromLeft = first + 1
+indexFromRight = last - 2
+done = false
+while (not done)
+  // Locate first entry on left that is >= pivot
+  while (theArray[indexFromLeft] < pivot)
+    indexFromLeft = indexFromLeft + 1
+  // Locate first entry on right that is <= pivot
+  while (theArray[indexFromRight] > pivot)
+    indexFromRight = indexFromRight - 1
+  if (indexFromLeft < indexFromRight)
+  {
+    Move theArray[indexFromLeft] into S1,
+    Interchange theArray[indexFromLeft] and theArray[indexFromRight]
+    indexFromLeft = indexFromLeft + 1
+    indexFromRight = indexFromRight - 1
+  }
+  else
+    done = true
+}
+// Place pivot in proper position between S1 and S2, and mark its new location
+Interchange theArray[pivotIndex] and theArray[indexFromLeft]
+pivotIndex = indexFromLeft
+return pivotIndex
+```
+
+### 问题 9
+跟踪快速排序的分区算法，对以下数组进行分区：38 16 40 39 12 27
+
+快速排序的一个函数。在完成快速排序的 C++ 代码之前，我们需要考虑小数组。你已经看到，在调用分区方法之前，数组应至少包含四个条目。但仅仅同意只在大数组上使用快速排序是不够的。刚才给出的快速排序伪代码表明，即使对大数组进行分区，最终也会导致涉及仅包含两个条目的数组的递归调用。快速排序的代码需要筛选出这些小数组，并采用另一种方法对它们进行排序。插入排序是小数组的一个好选择。事实上，对多达十个条目的数组使用它而不是快速排序是合理的。清单 11-5 中的函数实现了快速排序，并牢记这些观察结果。它假设一个常量 MIN_SIZE，用于指定我们将使用快速排序的最小数组的大小。
+
+### 清单 11-5 执行快速排序的函数
+
+```
+/* Sorts an array into ascending order. Uses the quick sort with
+median-of-three pivot selection for arrays of at least MIN_SIZE
+entries, and uses the insertion sort for other arrays.
+Pre: theArray[first..last] is an array.
+Post: theArray[first..last] is sorted.
+@param first The first index in theArray.
+@param last The last element to consider in theArray. */
+void quickSort(TemplateItemType theArray[], int first, int last)
+{
+   if (last - first + 1 < MIN_SIZE)
+      insertionSort(theArray, first, last);
+   else
+   {
+      // Create the partition: S1 | Pivot | S2
+      int pivotIndex = partition(theArray, first, last);
+
+      // Sort subarrays S1 and S2
+      quickSort(theArray, first, pivotIndex - 1);
+      quickSort(theArray, pivotIndex + 1, last);
+   }  // end if
+}  // end quickSort
+```
+
+### 分析。
+quickSort 函数的主要工作发生在分区步骤中。分区最多需要 n 次比较，因此，与合并一样，它将是一个 O(n) 任务。理想情况是枢轴移动到数组中心，因此分区形成的两个子数组大小相同。如果对 quickSort 的每次递归调用都形成子数组大小相等的分区，那么快速排序将类似于归并排序，即递归调用将数组对半分割。因此，quickSort 的递归调用次数减少。与前面的归并排序分析一样，你可以得出结论：quickSort 的递归调用有 log2 n 或 1 + log2 n 级。每次 quickSort 调用涉及 m 次比较和最多 m 次交换，其中 m 是要排序的子数组中的项目数。显然 m <= n - 1。因此，快速排序将是 O(n log n)，这将是其最佳情况。
+
+快速排序：最坏情况：O(n^2)，平均情况：O(n log n)
+
+然而，这种理想情况可能并不总是发生。每个分区都可能有一个空子数组。虽然一个递归调用无事可做，但另一个调用必须对 n - 1 个条目而不是 n / 2 进行排序。这种情况是最坏情况，因为非空子数组在每次 quickSort 递归调用中仅减少 1 的大小，因此 quickSort 的递归调用次数将达到最大。结果是 n 级递归调用，而不是 log n。因此，在最坏情况下，快速排序是 O(n^2)。
+
+对快速排序平均情况行为的正式分析将显示它是 O(n log n)。虽然归并排序始终是 O(n log n)，但快速排序在实践中可能更快，并且不需要归并排序用于合并所需的额外内存。此外，在大数组上，你可以预期快速排序的运行速度会比插入排序快得多。然而，在其最坏情况下，快速排序所需的时间大约与插入排序相同。
+
+快速排序的平均情况行为远好于其最坏情况行为，这一事实使其区别于本章中考虑的其他排序算法。如果数组中数据的原始排列是“随机”的，那么快速排序的性能至少与任何已知的涉及比较的排序算法一样好。
+
+归并排序的效率介于快速排序的可能性之间：有时快速排序更快，有时归并排序更快。虽然归并排序的最坏情况行为与快速排序的平均情况行为处于同一数量级，但在大多数情况下，快速排序的运行速度会比归并排序快一些。然而，在其最坏情况下，快速排序将比归并排序慢得多。
+
+> 注：枢轴的选择会影响快速排序的效率。某些枢轴选择方案可能导致最坏情况行为，如果数组已经排序或近乎排序。在实践中，近乎排序的数组出现的频率可能比你想象的更高。幸运的是，三数取中枢轴选择避免了排序数组的最坏情况行为。
+
+> 注：快速排序常用于对大数组进行排序，因为它在实践中通常极快，尽管其理论最坏情况行为不尽理想。虽然最坏情况并不典型，但即使发生最坏情况，快速排序对中等大小的数组的性能也是可以接受的。
+
+> 注：当你确信要排序的数组中的数据是随机排列时，快速排序是合适的。虽然快速排序的最坏情况行为是 O(n^2)，但最坏情况在实践中很少发生。
+
+## 旁注：快速排序与归并排序和 kSmall 的比较
+
+quickSort 和 mergeSort 算法在精神上相似，但 quickSort 在其递归调用之前完成其工作，而 mergeSort 在其递归调用之后完成其工作。也就是说，虽然 quickSort 具有以下形式
+
+```
+quickSort(theArray, first, last)
+if (first < last)
+{
+    Prepare array for recursive calls
+    quickSort(S1, region of theArray)
+    quickSort(S2, region of theArray)
+}
+```
+
+mergeSort 具有一般形式
+
+```
+mergeSort(theArray, first, last)
+if (first < last)
+{
+    mergeSort(Left half of theArray)
+    mergeSort(Right half of theArray)
+    // Tidy up after the recursive calls
+}
+```
+
+quickSort 中的准备工作是将数组分区为区域 S1 和 S2。然后算法独立地对 S1 和 S2 进行排序，因为 S1 中的每个项目都位于 S2 中每个项目的左侧。另一方面，在 mergeSort 中，递归调用之前不做任何工作：算法将数组的每一半相对于其自身进行排序。然而，算法仍必须处理两半之间项目的交互作用。也就是说，算法必须在递归调用后合并数组的两半。
+
+现在回顾第 2 章中描述的伪代码函数 kSmall，它返回数组中第 k 小的值：
+
+```
+kSmall(k, theArray, first, last): ItemType
+    Choose a pivot value p from theArray[first..last]
+    Partition the values of theArray[first..last] about p
+    if (k < pivotIndex - first + 1)
+        return kSmall(k, theArray, first, pivotIndex - 1)
+    else if (k == pivotIndex - first + 1)
+        return p
+    else
+        return kSmall(k - (pivotIndex - first + 1), theArray,
+                      pivotIndex + 1, last)
+```
+
+对 kSmall 的递归调用仅作用于包含所需项目的数组部分，如果所需项目是枢轴，则根本不会调用它。另一方面，quickSort 会在数组的两个未排序部分上递归调用。图 11-13 说明了这一差异。
+
+### 问题 10
+假设你使用归并排序对大整数数组进行排序。接下来，你使用二分查找来确定给定整数是否出现在数组中。最后，你显示排序后数组中的所有整数。
+
+- a. 一般来说，哪种算法更快：归并排序还是二分查找？用大 O 表示法解释。
+
+- b. 一般来说，哪种算法更快：二分查找还是显示整数？用大 O 表示法解释。
+

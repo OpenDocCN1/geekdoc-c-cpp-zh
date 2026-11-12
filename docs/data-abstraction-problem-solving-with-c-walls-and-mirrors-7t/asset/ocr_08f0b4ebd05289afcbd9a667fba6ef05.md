@@ -1,0 +1,45 @@
+3. What is the output of the following pseudocode, where num1, num2, and num3 are integer variables?
+
+```
+num1 = 5
+num2 = 1
+num3 = 4
+aQueue.enqueue(num2)
+aQueue.enqueue(num3)
+aQueue.dequeue()
+aQueue.dequeue()
+aQueue.enqueue(num1 - num2)
+num1 = aQueue.peek()
+aQueue.dequeue()
+num2 = aQueue.peek()
+aQueue.dequeue()
+cout << num2 << " " << num1 << " " << num3 << endl
+```
+
+4. Revise the infix-to-postfix conversion algorithm of Chapter 6 so that it uses a queue to represent the postfix expression.
+
+5. Write a client function that returns the back of a queue while leaving the queue unchanged. This function can call any of the methods of the ADT queue. It can also declare new Queue objects. The return type is ItemType, and it accepts a Queue object as a parameter.
+
+6. Consider a queue implementation that uses the ADT list to represent the items in the queue. Discuss the efficiency of the queue's insertion and removal operations when the ADT list's implementation is
+
++   a. Array based
++   b. Link based
+
+7. An operation that displays the contents of a queue can be useful during program debugging. Add a display operation to the ADT queue such that display uses only ADT queue operations, so it is independent of the queue's implementation.
+
+8. Write a C++ template interface PriorityQueueInterface for the ADT priority queue.
+
+9. Consider a slight variation of the ADT queue. In this variation, new items can be added to and removed from either end. This ADT is commonly called a **double-ended queue**, or **deque**. Specify each method of the deque by stating the method's purpose; by describing its parameters; and by writing preconditions, postconditions, and a pseudocode version of its header. Then write a C++ template interface for these methods that includes javadoc-style comments.
+
+10. Use a dequeue, as described in the previous exercise, to solve the read-and-correct problem given in Section 6.1.1 of Chapter 6. In that problem, you enter text at a keyboard and correct typing mistakes by using the Backspace key. Each backspace erases the most recently entered character. Your pseudocode solution should provide a corrected string of characters in the order in which they were entered at the keyboard.
+
+11. With the following data, hand-trace the execution of the bank-line simulation that this chapter describes. Each line of data contains an arrival time and a transaction time. Show the state of the queue and the event list at each step.
+
+| 5 | 9 |
+| 7 | 5 |
+| 14 | 5 |
+| 30 | 5 |
+| 32 | 5 |
+| 34 | 5 |
+
+Note that at time 14, there is a tie between the execution of an arrival event and a departure event.

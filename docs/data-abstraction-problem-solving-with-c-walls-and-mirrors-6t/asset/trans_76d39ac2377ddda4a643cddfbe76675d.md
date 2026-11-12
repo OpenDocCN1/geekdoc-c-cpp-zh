@@ -1,0 +1,183 @@
+
+
+{ return LinkedList<ItemType>::getEntry(position); } // end getEntry
+
+同时使用私有继承（as-a）和包含（has-a），LinkedList 对有序列表的客户端是隐藏的。也就是说，你可以使用私有继承或包含来在有序列表的实现中隐藏底层列表。然而，请注意，与公有继承不同，私有继承不允许你在所有可以使用 LinkedList 实例的地方使用 SortedListAsA 实例；也就是说，SortedListAsA 和 LinkedList 不是对象类型兼容的。图 12-8 的 UML 图显示了两个类之间的继承关系。符号 <<implementation>> 是一个刻板印象，用于指示 SortedListAsA 类是基于 LinkedList 类实现的。你可以使用刻板印象来标识任何 UML 图中元素的独特特征。
+
+图 12-8 基于 LinkedList 类实现的 SortedListAsA 类
+
+![](img/4e46b89c20760dcd4e6d1b7d0bde2b6b_393_0.png)
+
+## 摘要
+
+- 1. ADT 有序列表以排序顺序维护其条目。是它，而不是客户端，决定条目的放置位置。
+- 2. ADT 有序列表可以添加、删除或定位条目，条目作为参数给出。
+- 3. ADT 有序列表具有与 ADT 列表的相应操作相同的几个操作。但是，有序列表不允许你按位置添加或替换条目。
+- 4. 链接节点链为有序列表提供了相当高效的实现。
+- 5. 将列表作为数据字段的有序列表类被认为使用了包含。虽然这样的类易于编写，但如果 ADT 列表的实现效率低下，其效率可能会受到影响。
+- 6. 虽然有序列表看起来像是一个列表，但使用公有继承从列表类派生有序列表类是不合适的。这样做要求你重写 ADT 列表的一些方法，而有序列表类的客户端不应该能够使用这些方法。此外，公有继承会使两个类具有对象类型兼容性，但你不能在任何使用列表的地方使用有序列表。
+- 7. 私有继承提供了一种合理的包含替代方案，用于在 ADT 有序列表的实现中使用 ADT 列表。然而，通常包含更可取。
+
+## 练习
+
+- 1. 考虑如下概述的类 Sphere 和 Ball：
+
+```
+class Sphere
+{
+public:
+    ...
+    double getArea() const; // Surface area
+    void displayStatistics() const;
+}; // end Sphere
+```
+
+```
+class Ball : public Sphere
+{
+public:
+    ...
+    double getArea() const; // Cross-sectional area
+    void displayStatistics() const;
+}; // end Ball
+```
+
+假设每个版本的 displayStatistics 实现都调用方法 getArea。
+
+- a. 如果 mySphere 是 Sphere 的实例且 myBall 是 Ball 的实例，以下每个对 displayStatistics 的调用会调用哪个版本的 getArea？解释你的答案。
+
+```
+mySphere.displayStatistics();
+myBall.displayStatistics();
+```
+
+- b. 如果语句
+
+```
+Sphere* spherePtr;
+Ball* ballPtr;
+```
+
+声明了 spherePtr 和 ballPtr，以下每个对 displayStatistics 的调用会调用哪个版本的 getArea？解释你的答案。
+
+```
+spherePtr->displayStatistics();
+spherePtr = ballPtr;
+spherePtr->displayStatistics();
+ballPtr->displayStatistics();
+```
+
+- 2. 定义并实现一个类 Pen，它将 Ball 的实例作为其成员之一。为类 Pen 提供几个成员，例如数据成员 color 和方法 isEmpty 及 write。
+
+- 3. 考虑以下类：
+
+- LandVehicle 表示在陆地上行驶的车辆。其公有方法包括 wheelCount 和 speed。
+- MotorizedLandVehicle 表示带有电机的陆地车辆。其公有方法包括 engineCapacity 和 fuelType。
+
+- a. speed 的实现可以调用之前提到的哪些方法？
+- b. engineCapacity 的实现可以调用之前提到的哪些方法？
+
+- 4. 假设练习 3 中描述的类，并考虑包含以下语句的 main 方法：
+LandVehicle landVeh;
+MotorizedLandVehicle motorVeh;
+
+- a. 这些对象中哪些可以调用方法 wheelCount？
+- b. 这些对象中哪些可以调用方法 fuelType？
+
+- 5. 考虑以下类：
+
+```
+class Expr
+{
+private:
+    char Array[MAX_STRING+1];
+public:
+    ...
+    int getLength() const;
+    virtual void display() const;
+};
+// end Expr
+class AlgExpr : public Expr
+{
+public:
+    bool isExpression() const;
+    bool isBlank(int first, int last) const;
+};
+// end AlgExpr
+class InfixExpr : public AlgExpr
+{
+public:
+    bool isExpression() const;
+    int valueOf() const;
+    void display() const;
+    ...
+protected:
+    int endFactor(int first, int last) const;
+    int endTerm(int first, int last) const;
+    int endExpression(int first, int last) const;
+private:
+    Stack<int> values;
+    Stack<char> operators;
+};
+// end InfixExpr
+```
+
+类 AlgExpr 表示代数表达式，包括前缀、后缀和中缀表达式。其方法 isExpression 仅检查表达式中的有效字符，但不考虑字符的顺序。
+
+类 InfixExpr 表示中缀表达式。其 isExpression 调用 isBlank，其 display 调用 valueOf。
+
+- a. isBlank 应该是 public、protected 还是 private？解释。
+- b. 如果 inExpr 是 main 方法中 InfixExpr 的实例，inExpr 可以调用 endExpression 吗？解释。
+- c. 你会对类做哪些小更改以确保调用正确版本的 isExpression？
+
+假设练习 5 中描述的类，并考虑包含以下语句的 main 方法
+
+```
+Expr expr;
+AlgExpr aExpr;
+InfixExpr inExpr;
+```
+
+- a. 这些对象中哪些可以正确调用方法 getLength？
+- b. 这些对象中哪些可以正确调用方法 isExpression？
+- c. 这些对象中哪些可以正确调用方法 valueOf？
+- d. 通过编写一个方法声明和对它的调用来给出对象类型兼容性的示例，该声明和调用可以出现在此 main 方法中。
+
+回顾第 12.3.1 节中类 SortedListHasA 的拷贝构造函数。其定义使用循环。用递归定义替换该定义，并证明它是 O(n)。
+
+考虑一个 ADT 前置列表，它将插入、删除和检索限制在列表的第一个项目。为 ADT 栈定义并实现一个类，该类是 FrontList 的后代。
+
+定义一个描述典型人员的抽象基类 Person。接下来，定义一个描述典型学生的派生类 Student。最后，从 Student 派生一个用于典型研究生的类 GradStudent。
+
+设计并实现以下类：
+
+- a. 一个表示通用员工的抽象基类 Employee。包括检索员工信息的方法。
+- b. Employee 的一个子类 hourlyEmployee，描述按小时获得报酬的员工。包括一个名为 getPay 的公有方法，该方法返回该员工当月的报酬以及任何其他相关方法。
+- c. Employee 的一个子类 NonHourlyEmployee，描述每月获得固定薪水的员工。包括一个名为 getPay 的公有方法，该方法返回该员工当月的报酬。包括任何其他相关方法。
+
+确认图 12-5 和 12-6 中的结果。
+
+想象一个整数 ADT 有序列表的未知实现。该 ADT 将其项目组织为升序。假设你刚刚将 n 个整数读入名为 data 的一维整数数组。编写一些使用 ADT 有序列表操作将数组排序为升序的 C++ 语句。
+
+编写伪代码，仅使用 ADT 有序列表操作将两个有序列表合并为一个新的第三个有序列表。
+
+为 ADT 有序列表定义一组公理，并使用它们来证明由以下操作序列定义的字符有序列表
+
+```
+sList = an empty sorted list
+sList.insertSorted('S')
+sList.insertSorted('T')
+sList.insertSorted('R')
+sList.removeSorted('T')
+```
+
+与由以下序列定义的有序列表完全相同
+
+```
+sList = an empty sorted list
+sList.insertSorted('T')
+sList.insertSorted('R')
+sList.removeSorted('T')
+sList.insertSorted('S')
+```
+

@@ -1,0 +1,224 @@
+
+First, if there are no more columns to consider, you are finished; this is the base case. Otherwise, after you successfully place a queen in the current column, you need to consider the next column. That is, you need to solve the same problem with one fewer column; this is the recursive step. Thus, you begin with eight columns, consider smaller problems that decrease in size by one column at each recursive step, and reach the base case when you have a problem with no columns.
+
+This solution appears to satisfy the criteria for a recursive solution. However, you do not know whether you can successfully place a queen in the current column. If you can, you recursively consider the next column. If you cannot place a queen in the current column, you need to backtrack, as has already been described.
+
+The Eight Queens problem can be solved in a variety of ways. The solution in this chapter uses two classes: a board class to represent the chessboard and a queen class to represent a queen on the board. A Queen object keeps track of its row and column placement and contains a static pointer to the Board. It also has operations to move to the next row and to see whether it is subject to attack. A Board object keeps track of the Queen objects currently on the board and contains operations—such as placeQueens—to perform the Eight Queens problem and display the solution.
+
+The following pseudocode describes the algorithm for placing queens in columns, given that the previous columns contain queens that cannot attack one another:
+
+```
+placeQueens(queen: Queen): void
+if (queen's column is greater than the last column)
+    The problem is solved
+else
+    {
+        while (unconsidered squares exist in queen's column and
+               the problem is unsolved)
+        {
+            Find the next square in queen's column that is
+            not under attack by a queen in an earlier column
+            if (such a square exists)
+            {
+                Place a queen in the square
+                // Try next column
+                placeQueens(new Queen(firstRow, queen's column + 1))
+                if (no queen is possible in the next column)
+                {
+                    Delete the new queen
+                    Remove the last queen placed on the board and
+                    consider the next square in that column
+                }
+            }
+        }
+    }
+```
+
+The Eight Queens problem is initiated by the method doEightQueens, which calls placeQueens with a new queen in the upper-left corner of the board:
+
+```
+doEightQueens()
+{
+    placeQueens(new Queen(firstRow, firstColumn))
+}
+```
+
+After doEightQueens has completed, the board may display the solution, if one was found.
+
+## FIGURE 5-8 A solution to the Eight Queens problem
+
+![](img/4e46b89c20760dcd4e6d1b7d0bde2b6b_206_0.png)
+
+Figure 5-8 indicates the solution that the previous algorithm finds. By modifying the arguments to `placeQueens`, you can discover other solutions to the Eight Queens problem. The Programming Problems at the end of this chapter ask you to consider other solutions to this algorithm, as well as additional modifications.
+
+> **Question 7** Consider a Four Queens problem, which has the same rules as the Eight Queens problem but uses a $4 \times 4$ board. Find all solutions to this new problem by applying backtracking by hand.
+
+**Implementing eight queens using the STL class vector.** The Board class in the solution described thus far may be represented in a number of ways. The simplest representation would be a two-dimensional array; however, such an array wastes space because only eight squares out of 64 are used. Another approach would be to use a one-dimensional array of only the squares that contain a queen. Because the algorithm uses backtracking, a dynamic array is the optimal choice. The vector container in the STL is often used in place of an array type, because it allows the number of elements to vary dynamically and provides several built-in methods. Indexing is provided with array-type subscripting or with the `at` method, which provides range checking as well.
+
+As given in Listing 5-1, the class Board contains a vector of pointers to Queen objects, as well as several methods to manipulate the queens on the board. The class Queen appears in Listing 5-2.
+
+## LISTING 5-1 The header file for the class Board
+
+```
+//* File: Board.h */
+#ifndef _BOARD
+#define _BOARD
+#include "Queen.h"
+#include <vector>
+#include <cassert>
+#include <iostream>
+using namespace std;
+
+static const int BOARD_SIZE = 8;
+
+class Board
+{
+private:
+    vector<Queen*> queens; // Array of pointers to queens on the board
+
+    /* Sees whether a queen exists in position (inRow, inCol). */
+    bool isQueen(int inRow, int inCol) const;
+
+    /* Attempts to place queens on board, starting with the designated queen. */
+    bool placeQueens(Queen* queenPtr);
+
+    /* Removes the last queen from the board, but does not deallocate it. */
+    void removeQueen();
+
+    /* Places a queen on the board. */
+    void setQueen(const Queen& queenPtr);
+
+public:
+    /* Supplies the Queen class with a pointer to the board. */
+    Board();
+
+    /* Clears the board and removes pointer from queens. */
+    ~Board();
+
+    /* Clears board. */
+    void clear();
+
+    /* Displays board. */
+    void display() const;
+
+    /* Initiates the Eight Queens problem. */
+    void doEightQueens();
+
+    /* @return The number of queens on the board. */
+    int getNumQueens() const;
+
+    /* @return A pointer to the queen at the designated index. */
+    const Queen* getQueen(int index) const;
+}; // end Board
+#endif
+```
+
+## LISTING 5-2 The class Queen
+
+```
+class Board; // Forward declaration of Board class
+
+/* The Queen class. */
+class Queen
+{
+public:
+    /* Places a queen in upper-left corner of board. */
+    Queen();
+
+    /** Places a queen in supplied location. */
+    Queen(int inRow, int inCol);
+/** @return Column number. */
+int getCol() const;
+/** @return Row number. */
+int getRow() const;
+/** Moves queen to next row. */
+void nextRow();
+/** Sees whether the queen is under attack by another queen.
+@return True if another queen is in the same row or the same
+diagonal; otherwise, returns false. */
+bool isUnderAttack() const;
+/** Saves a pointer to the board for all queens. */
+static void setBoard(const Board* bPtr);
+
+private:
+int row; // Row (or prospective row) of queen if it is on the board
+int col; // Column (or prospective column) of queen if it is on
+// the board
+
+// All queens share the same board
+static const Board* boardPtr;
+}; // end Queen
+```
+
+An implementation of placeQueens follows:
+
+```
+bool Board::placeQueens(Queen* queenPtr)
+{
+// Base case: Try to place a queen in a nonexistent column.
+if (queenPtr->getCol() >= BOARD_SIZE)
+{
+delete queenPtr;
+return true;
+} // end if
+
+bool isQueenPlaced = false;
+while (!isQueenPlaced && queenPtr->getRow() < BOARD_SIZE)
+{
+// If the queen can be attacked, try moving it
+// to the next row in the current column
+if (queenPtr->isUnderAttack())
+queenPtr->nextRow();
+else
+{
+// Put this queen on the board and try putting a
+// new queen in the first row of the next column
+setQueen(queenPtr);
+Queen* newQueenPtr = new Queen(0, queenPtr->getCol() + 1);
+isQueenPlaced = placeQueens(newQueenPtr);
+}
+
+// If it wasn't possible to put the new queen in the next column,
+// backtrack by deleting the new queen and moving the last
+// queen placed down one row
+if (isQueenPlaced)
+{
+   delete newQueenPtr;
+   removeQueen();
+   queenPtr->nextRow();
+} // end if
+} // end while
+return isQueenPlaced;
+} // end placeQueens
+```
+
+## 5.4 The Relationship Between Recursion and Mathematical Induction
+
+A very strong relationship exists between recursion and mathematical induction. Recursion solves a problem by specifying a solution to one or more base cases and then demonstrating how to derive the solution to a problem of an arbitrary size from the solutions to smaller problems of the same type. Similarly, mathematical induction proves a property about the natural numbers by proving the property about a base case—usually 0 or 1—and then proving that the property must be true for an arbitrary natural number n if it is true for the natural numbers smaller than n.
+
+Given the similarities between recursion and mathematical induction, it should not be surprising that induction is often employed to prove properties about recursive algorithms. What types of properties? You can, for example, prove that an algorithm actually performs the task that you intended. As an illustration, we will prove that the recursive factorial algorithm of Chapter 2 does indeed compute the factorial of its argument. Another use of mathematical induction is to prove that a recursive algorithm performs a certain amount of work. For example, we will prove that the solution to the Towers of Hanoi problem—also from Chapter 2—makes exactly 2^n − 1 moves when it starts with N disks.
+
+> You can use induction to prove that a recursive algorithm either is correct or performs a certain amount of work
+
+### 5.4.1 The Correctness of the Recursive Factorial Function
+
+The following pseudocode describes a recursive function that computes the factorial of a nonnegative integer n:
+
+```
+fact(n: integer): integer
+   if (n == 0)
+      return 1
+   else
+      return n * fact(n - 1)
+```
+
+You can prove that the function fact returns the values
+
+```
+factorial(0) = 0! = 1
+factorial(n) = n! = n × (n - 1) × (n - 2) × ... × 1   if n > 0
+```
+
+The proof is by induction on n.
+
+Basis. Show that the property is true for n = 0. That is, you must show that fact(0) returns 1. But this result is simply the base case of the function: fact(0) returns 1 by its definition.

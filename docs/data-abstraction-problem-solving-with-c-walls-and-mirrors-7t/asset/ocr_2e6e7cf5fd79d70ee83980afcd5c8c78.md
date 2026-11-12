@@ -1,0 +1,46 @@
+```
+/** Sees whether this heap is empty.
+ @return True if the heap is empty, or false if not. */
+virtual bool isEmpty() const = 0;
+
+/** Gets the number of nodes in this heap.
+ @return The number of nodes in the heap. */
+virtual int getNumberOfNodes() const = 0;
+
+/** Gets the height of this heap.
+ @return The height of the heap. */
+virtual int getHeight() const = 0;
+
+/** Gets the data that is in the root (top) of this heap.
+ For a maxheap, the data is the largest value in the heap;
+ for a minheap, the data is the smallest value in the heap.
+ @pre The heap is not empty.
+ @post The root's data has been returned, and the heap is unchanged.
+ @return The data in the root of the heap. */
+virtual ItemType peekTop() const = 0;
+
+/** Adds a new node containing the given data to this heap.
+ @param newData  The data for the new node.
+ @post The heap contains a new node.
+ @return True if the addition is successful, or false if not. */
+virtual bool add(const ItemType& newData) = 0;
+
+/** Removes the root node from this heap.
+ @return True if the removal is successful, or false if not. */
+virtual bool remove() = 0;
+
+/** Removes all nodes from this heap. */
+virtual void clear() = 0;
+}; // end HeapInterface
+#endif
+```
+
+> Note: Do not confuse the ADT heap with the collection of memory cells known as a heap. This memory is available for allocation to your program when you use the new operator. The heap that contains this available memory is not an instance of the ADT heap.
+
+> Question 1 Is the full binary tree in Figure 16-16 of Chapter 16 a heap? Why?
+
+# 17.2 An Array-Based Implementation of a Heap
+
+Because a heap is a binary tree, you can use the array-based implementation of a binary tree discussed in Section 16.1.1 of Chapter 16, if you know the maximum size of the heap. However, because a heap is a complete binary tree, you can use a simpler array-based implementation that saves
+
+![](bbox=[0.12, 0.84, 0.18, 0.91])

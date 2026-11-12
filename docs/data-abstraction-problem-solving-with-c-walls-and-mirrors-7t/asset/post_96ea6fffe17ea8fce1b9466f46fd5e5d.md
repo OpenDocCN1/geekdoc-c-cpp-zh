@@ -1,0 +1,171 @@
+
+```
+{
+    return LinkedList<ItemType>::getEntry(position);
+} // end getEntry
+```
+
+With both private inheritance (as-a) and containment (has-a), LinkedList is hidden from the clients of the sorted list. That is, you can use either private inheritance or containment to hide the underlying list in the implementation of the sorted list. Realize, however, that unlike public inheritance, private inheritance does not allow you to use an instance of SortedListAsA wherever you can use an instance of LinkedList; that is, SortedListAsA and LinkedList are not object-type compatible. The UML diagram in Figure 12-8 shows the inheritance relationship between the two classes. The notation <<implementation>> is a stereotype and is used to indicate that the SortedListAsA class is implemented in terms of the LinkedList class. You can use a stereotype to identify a unique characteristic of an element in any UML diagram.
+
+## FIGURE 12-8 The SortedListAsA class implemented in terms of the LinkedList class
+
+![](img/288a0c22d14d2450c1e772f228f867b0_393_0.png)
+
+## SUMMARY
+
+- 1. The ADT sorted list maintains its entries in sorted order. It, not the client, determines where to place an entry.
+- 2. The ADT sorted list can add, remove, or locate an entry, given the entry as an argument.
+- 3. The ADT sorted list has several operations that are the same as the corresponding operations of the ADT list. However, a sorted list will not let you add or replace an entry by position.
+- 4. A chain of linked nodes provides a reasonably efficient implementation of the sorted list.
+- 5. A class of sorted lists that has a list as a data field is said to use containment. Although such a class is easy to write, its efficiency can suffer if the implementation of the ADT list is inefficient.
+- 6. Although it seems like a sorted list is a list, deriving a class of sorted lists from a class of lists using public inheritance is not appropriate. Doing so requires you to override some methods of the ADT list that a client of the sorted list class should not be able to use. Additionally, public inheritance would make the two classes object-type compatible, but you cannot use a sorted list anywhere that a list is used.
+- 7. Private inheritance provides a reasonable alternative to containment as an approach to using the ADT list in the implementation of the ADT sorted list. Usually, however, containment is preferable.
+
+## EXERCISES
+
+1. Consider the classes Sphere and Ball, as outlined here:
+
+```
+class Sphere
+{
+public:
+    ...
+    double getArea() const; // Surface area
+    void displayStatistics() const;
+    ... }; // end Sphere
+
+class Ball : public Sphere
+{
+public:
+    ...
+    double getArea() const; // Cross-sectional area
+    void displayStatistics() const;
+    ... }; // end Ball
+```
+
+Suppose that the implementation of each version of displayStatistics invokes the method getArea.
+
+- a. If mySphere is an instance of Sphere and myBall is an instance of Ball, which version of getArea does each of the following calls to displayStatistics invoke? Explain your answer.
+  
+  mySphere.displayStatistics();
+  myBall.displayStatistics();
+
+- b. If the statements
+  
+  Sphere* spherePtr;
+  Ball* ballPtr;
+  
+  declare spherePtr and ballPtr, which version of getArea does each of the following calls to displayStatistics invoke? Explain your answer.
+  
+  spherePtr->displayStatistics();
+  spherePtr = ballPtr;
+  spherePtr->displayStatistics();
+  ballPtr->displayStatistics();
+
+2. Define and implement a class Pen that has an instance of Ball as one of its members. Provide several members for the class Pen, such as the data member color and methods isEmpty and write.
+
+3. Consider the following classes:
+
+- LandVehicle represents a vehicle that travels on land. Its public methods include wheelCount and speed.
+- MotorizedLandVehicle represents a land vehicle that has a motor. Its public methods include engineCapacity and fuelType.
+
+- a. Which of the methods mentioned previously can the implementation of speed invoke?
+- b. Which of the methods mentioned previously can the implementation of engineCapacity invoke?
+
+4. Assume the classes described in Exercise 3 and consider a main method that contains the following statements:
+
+LandVehicle landVeh;
+MotorizedLandVehicle motorVeh;
+
+a. Which of these objects can invoke the method wheelCount?
+
+b. Which of these objects can invoke the method fuelType?
+
+5. Consider the following classes:
+
+```
+class Expr
+{
+    private:
+    char Array[MAX_STRING+1];
+    public:
+    ...
+    int getLength() const;
+    virtual void display() const;
+}; // end Expr
+
+class AlgExpr : public Expr
+{
+    public:
+    bool isExpression() const;
+    bool isBlank(int first, int last) const;
+}; // end AlgExpr
+
+class InfixExpr : public AlgExpr
+{
+    public:
+    bool isExpression() const;
+    int valueOf() const;
+    void display() const;
+    ...
+    protected:
+    int endFactor(int first, int last) const;
+    int endTerm(int first, int last) const;
+    int endExpression(int first, int last) const;
+    private:
+    Stack<int> values;
+    Stack<char> operators;
+}; // end InfixExpr
+```
+
+The class AlgExpr represents algebraic expressions, including prefix, postfix, and infix expressions. Its method isExpression simply examines the expression for valid characters but does not consider the order of the characters.
+
+The class InfixExpr represents infix expressions. Its isExpression calls isBlank, and its display calls valueOf.
+
+- a. Should isBlank be public, protected, or private? Explain.
+- b. If inExpr is an instance of InfixExpr in the main method, can inExpr invoke endExpression? Explain.
+- c. What small change(s) would you make to the classes to ensure that the correct version of isExpression is called?
+
+6. Assume the classes described in Exercise 5 and consider a main method that contains the statements
+
+   Expr expr;
+   AlgExpr aExp;
+   InfixExpr inExp;
+
+   a. Which of these objects can correctly invoke the method getLength?
+   b. Which of these objects can correctly invoke the method isExpression?
+   c. Which of these objects can correctly invoke the method valueOf?
+   d. Give an example of object-type compatibility by writing a method declaration and a call to it that could appear in this main method.
+
+7. Recall from Section 12.3.1 the copy constructor for the class SortedListHasA. Its definition uses a loop. Replace that definition with a recursive one, and show that it is O(n).
+
+8. Consider an ADT front list, which restricts insertions, removals, and retrievals to the first item in the list. Define and implement a class for the ADT stack that is a descendant of FrontList.
+
+9. Define an abstract base class Person that describes a typical person. Next, define a derived class Student that describes a typical student. Finally, derive from Student a class GradStudent for a typical graduate student.
+
+10. Design and implement the following classes:
+    a. An abstract base class Employee that represents a generic employee. Include methods to retrieve information about an employee.
+    b. A subclass of Employee called hourlyEmployee that describes an employee who gets paid by the hour. Include a public method called getPay that returns the pay of the employee for that month and any other relevant methods.
+    c. A subclass of Employee called NonHourlyEmployee that describes an employee who gets paid a fixed salary every month. Include a public method called getPay that returns the pay of the employee for that month. Include any other relevant methods.
+
+11. Confirm the results in Figures 12-5 and 12-6.
+
+12. Imagine an unknown implementation of an ADT sorted list of integers. This ADT organizes its items into ascending order. Suppose that you have just read n integers into a one-dimensional array of integers called data. Write some C++ statements that use the ADT sorted list operations to sort the array into ascending order.
+
+13. Write pseudocode that merges two sorted lists into a new third sorted list by using only ADT sorted list operations.
+
+14. Define a set of axioms for the ADT sorted list and use them to prove that the sorted list of characters, which is defined by the sequence of operations
+
+   sList = an empty sorted list
+   sList.insertSorted('S')
+   sList.insertSorted('T')
+   sList.insertSorted('R')
+   sList.removeSorted('T')
+
+   is exactly the same as the sorted list defined by the sequence
+
+   sList = an empty sorted list
+   sList.insertSorted('T')
+   sList.insertSorted('R')
+   sList.removeSorted('T')
+   sList.insertSorted('S')

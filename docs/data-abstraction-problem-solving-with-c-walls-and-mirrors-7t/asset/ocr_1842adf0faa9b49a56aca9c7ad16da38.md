@@ -1,0 +1,21 @@
+```
+/** @file BoxInterface.h */
+#ifndef BOX_INTERFACE
+#define BOX_INTERFACE
+template <class ItemType>
+class BoxInterface
+{
+public:
+   virtual void setItem(const ItemType& theItem) = 0;
+   virtual ItemType getItem() const = 0;
+}; // end BoxInterface
+#endif
+```
+
+We can indicate that our class PlainBox is derived from BoxInterface by changing its class header to
+
+```
+class PlainBox : public BoxInterface<ItemType>
+```
+
+In the future when we design the public interface for an ADT, we will express that interface as an abstract class. When we introduce pointers in C++ Interlude 2, we will explore the importance and use of abstract classes in depth. Until then, we will use only abstract classes as a design tool for our ADTs.

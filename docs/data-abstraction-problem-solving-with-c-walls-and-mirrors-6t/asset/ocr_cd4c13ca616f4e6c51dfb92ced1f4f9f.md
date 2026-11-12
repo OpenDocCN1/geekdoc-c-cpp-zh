@@ -1,0 +1,17 @@
+# D.3 What About the Waterfall Method of Development?
+
+The RUP is probably new to you, as is another development process—the **waterfall method**—in which the solution is developed by *sequentially* moving through phases such as requirements analysis, design, implementation, testing, and deployment. We think the waterfall method is inferior to the RUP. However, you doubtless will meet programmers during your career who know only the waterfall method. For this reason, you should know what it is.
+
+The waterfall method often results in the following actions:
+
+Systems analysts produce a set of documents specifying the requirements of the proposed system. The requirements documents are passed to a design team that produces a set of design documents, which are passed to programmers who code the design. The code is passed to a testing team, which verifies that the code correctly implements the requirements of the system, as specified by the systems analysts at the beginning of the process.
+
+Notice that the phases occur one after the other. If the systems analysts do not understand *everything* about all aspects of the system and its environment, it is likely that they will specify the wrong thing. Such aspects include the system's end users and their needs, other computer systems that must be used, the global business environment, and so on. Incorrect requirements analysis will create a design that, when implemented, leads to a correct system for the wrong problem. In other words, the system solves the problem defined by the requirements analysis, but the requirements analysis describes the wrong problem.
+
+The difficulty with trying to specify the requirements of the proposed system up front is that system requirements are not predictable. Most things in the world today, especially in the high-tech and business worlds, are highly speculative. Change is constant. This implies that the requirements of any system might change at any time. The development process must allow the system under development to evolve and adapt to the changing environment. The waterfall method requires analysts to be omnipotent. For a system to succeed, the waterfall method should not be used for its development. Using iterative, incremental, evolutionary development processes, however, allows feedback to guide the adaptation of the system to a correct solution.
+
+> The waterfall method is outdated and should not be used
+
+Be careful not to impose the waterfall method on the RUP development phases. For example, the RUP's inception phase is not the same as the waterfall requirements phase. During the inception phase, some, but not all, system requirements are specified, and programmers also make sure the system is feasible, estimate how much the system will cost to develop, and identify the significant high-risk issues that might doom the project. Trying to develop all use case scenarios during the inception phase makes it the same as the waterfall method.
+
+Further, the RUP's elaboration phase is not the same as the waterfall design phase. During the elaboration phase, some, but not all, design is done, and programmers also do analysis, coding, and testing. If the elaboration phase degrades to having only one iteration, the development process effectively becomes the waterfall method. Similarly, the RUP's construction phase is not only about implementation, and it is not the same as the waterfall implementation phase.

@@ -1,0 +1,39 @@
+# FIGURE 6-4 The effect of a postfix calculator on a stack when evaluating the expression 2 * (3 + 4)
+
+| Key entered | Calculator action | Stack (bottom to top): |
+|---|---|---|
+| 2 | push 2 | 2 |
+| 3 | push 3 | 2 3 |
+| 4 | push 4 | 2 3 4 |
+| + | operand2 = peek (4)<br>pop<br>operand1 = peek (3)<br>pop<br>result = operand1 + operand2 (7)<br>push result | 2 3 4<br>2 3<br>2<br>2 7 |
+| * | operand2 = peek (7)<br>pop<br>operand1 = peek (2)<br>pop<br>result = operand1 * operand2 (14)<br>push result | 2 7<br>2<br>2<br>14 |
+
+A pseudocode algorithm that evaluates postfix expressions
+
+The pseudocode algorithm is then
+
+```
+for (each character ch in the string)
+{
+  if (ch is an operand)
+    Push the value of the operand ch onto the stack
+  else // ch is an operator named op
+  {
+    // Evaluate and push the result
+    operand2 = top of stack
+    Pop the stack
+    operand1 = top of stack
+    Pop the stack
+    result = operand1 op operand2
+    Push result onto the stack
+  }
+}
+```
+
+Upon termination of the algorithm, the value of the expression will be on the top of the stack. Programming Problem 5 at the end of this chapter asks you to implement this algorithm.
+
+Question 5 Evaluate the postfix expression a b - c +. Assume the following values for the identifiers: a = 7, b = 3, and c = -2. Show the status of the stack after each step.
+
+# 6.3.2 Converting Infix Expressions to Equivalent Postfix Expressions
+
+Now that you know how to evaluate a postfix expression, you will be able to evaluate an infix expression if you first can convert it into an equivalent postfix expression. The infix expressions here are the

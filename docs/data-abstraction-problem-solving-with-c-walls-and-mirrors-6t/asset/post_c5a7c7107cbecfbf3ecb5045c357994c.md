@@ -1,0 +1,160 @@
+
+The array defines the bag's capacity—that is, its maximum size—we will define a constant whose value is this size. To hide these data members from the clients of the class, we make them private. Thus, we define the following private data members within the header file for our class:
+
+```cpp
+static const int DEFAULT_CAPACITY = 50;
+ItemType items[DEFAULT_CAPACITY]; // Array of bag items
+int itemCount; // Current count of bag items
+int maxItems; // Max capacity of the bag
+```
+
+Figure 3-2 illustrates these data members, assuming a bag of integers.
+
+![](img/4e46b89c20760dcd4e6d1b7d0bde2b6b_125_0.png)
+
+A client of the class cannot access the class's private members directly
+
+**Note: Data members should be private**
+
+By making a class's data members private, you control how a client can access or change their values. Doing so also makes debugging a program's logic easier. If the client could manipulate this data directly because the data was public, you would not know where to look for errors.
+
+## 3.2.1 The Header File
+
+Having chosen the data members, and knowing the details of BagInterface, which we developed in Chapter 1, we can write the header file shown in Listing 3-1 for our class of bags. We name the class ArrayBag and give it a default constructor, which is sufficient for this example. Notice the small value given to the constant DEFAULT_CAPACITY. It enables us to fill a bag completely and easily to verify that our class behaves gracefully in this situation. After you study C++ Interlude 2, you will be able to add another constructor that enables the client to set the capacity of the bag during program execution. We included the data field maxItems in anticipation of this enhancement.
+
+Also notice that we declare a private method getIndexOf. This method returns the index of the element within the array items that contains a given entry. As you will see later, we can use getIndexOf to the methods contains and remove more time efficiently. You most likely would not decide to add getIndexOf to the header file until after you began work on the implementation of the public methods.
+
+```cpp
+/* Header file for an array-based implementation of the ADT bag.
+@file ArrayBag.h */
+#ifndef _ARRAY_BAG
+#define _ARRAY_BAG
+#include "BagInterface.h"
+
+template<class ItemType>
+class ArrayBag : public BagInterface<ItemType>
+{
+private:
+    static const int DEFAULT_CAPACITY = 6;// Small size to test for a full bag
+    ItemType items[DEFAULT_CAPACITY];     // Array of bag items
+    int itemCount;                        // Current count of bag items
+    int maxItems;                         // Max capacity of the bag
+    // Returns either the index of the element in the array items that
+    // contains the given target or -1, if the array does not contain
+    // the target.
+    int getIndexOf(const ItemType& target) const;
+
+public:
+    ArrayBag();
+    int getCurrentSize() const;
+    bool isEmpty() const;
+    bool add(const ItemType& newEntry);
+    bool remove(const ItemType& anEntry);
+    void clear();
+    bool contains(const ItemType& anEntry) const;
+    int getFrequencyOf(const ItemType& anEntry) const;
+    vector<ItemType> toVector() const;
+}; // end ArrayBag
+#include "ArrayBag.cpp"
+#endif
+```
+
+> Programming Tip: When a method does not alter the class's data members, make it a const method as a safeguard against an implementation error.
+
+## 3.2.2 Defining the Core Methods
+
+Section 3.1.1 suggests that we consider the methods add and toVector as core methods and define them first. Since we will want to check that add correctly increments the count of the bag's entries, we should also implement getCurrentSize and isEmpty. Thus, we add these two methods to our core group, along with appropriate constructors.
+
+As we define the methods for the class ArrayBag, we place them into the file ArrayBag.cpp, which begins as follows:
+
+```cpp
+/** Implementation file for the class ArrayBag.
+* File ArrayBag.cpp */
+
+#include "ArrayBag.h"
+```
+
+The constructor. The following default constructor initializes the current number of items in the bag to zero, as well as the bag's capacity:
+
+```cpp
+template<class ItemType>
+ArrayBag<ItemType>::ArrayBag()
+{
+itemCount = 0;
+maxItems = DEFAULT_CAPACITY;
+} // end default constructor
+```
+
+Although you can simply use an assignment statement to assign a value to a data member, as we have done here, it is preferable to use an **initializer**. Each initializer uses a functional notation that consists of a data member name followed by its initial value enclosed in parentheses—for example, `itemCount(0)`. If you write more than one initializer, you separate them with commas. A colon precedes the first (or only) initializer. Thus, a better definition of ArrayBag's default constructor is
+
+```cpp
+template<class ItemType>
+ArrayBag<ItemType>::ArrayBag() : itemCount(0), maxItems(DEFAULT_CAPACITY)
+{
+} // end default constructor
+```
+
+Often the implementation of a constructor consists only of initializers, so its body is empty, as is the case here. Note that you can use these initializers with constructors but not with other methods.
+
+> **Programming Tip:** When a class has several data members, the constructor initializes them in the order in which they appear in the class definition instead of the order in which the initializers appear in the constructor definition. You should use the same order in both cases to avoid confusion, even if the initialization order does not make a difference.
+
+**The method add.** To add a new item to a bag that is not full, we can place it right after the last item in the array by writing the following statement:
+
+`items[itemCount] = newEntry;`
+
+If we are adding to an empty bag, `itemCount` will be zero, and the assignment will be to `items[0]`. If the bag contains one entry, an additional entry will be assigned to `items[1]`, and so on. In this way, no other items in the array need to move. After each addition to the bag, we increase the counter `itemCount`. Figure 3-3 depicts this insertion. If `add` is successful, it returns true. Otherwise—if the bag is full, for example—`add` returns false, as you can see from its definition:
+
+```cpp
+template<class ItemType>
+bool ArrayBag<ItemType>::add(const ItemType& newEntry)
+{
+   bool hasRoomToAdd = (itemCount < maxItems);
+   if (hasRoomToAdd)
+   {
+      items[itemCount] = newEntry;
+      itemCount++;
+   } // end if
+   return hasRoomToAdd;
+} // end add
+```
+
+> **Note:** The entries in a bag have no particular order. Thus, the method `add` can place a new entry into any convenient element of the array `items`. In the previous definition of `add`, that element is the one immediately after the last element used.
+
+**FIGURE 3-3 Inserting a new entry into an array-based bag**
+
+![](img/4e46b89c20760dcd4e6d1b7d0bde2b6b_128_0.png)
+
+> Note: An array-based implementation of an ADT restricts the number of items that you can store. Thus, the implementation should check whether the array has space available before inserting a new item, and the client should take appropriate action if the insertion is impossible.
+
+> Programming Tip: Variables that are local to a method's implementation should not be data members of the class.
+
+The method toVector. The method toVector in our initial core group gets the entries that are in a bag and returns them to the client within a vector. A simple loop within toVector adds the bag's entries to this vector.
+
+```cpp
+template<class ItemType>
+vector<ItemType> ArrayBag<ItemType>::toVector() const
+{
+   vector<ItemType> bagContents;
+   for (int i = 0; i < itemCount; i++)
+      bagContents.push_back(items[i]);
+   return bagContents;
+} // end toVector
+```
+
+> Note: The class vector is in the Standard Template Library (STL) and is described in Appendix A.
+
+The methods getCurrentSize and isEmpty. The last two methods in our core group have the following straightforward definitions:
+
+```cpp
+template<class ItemType>
+int ArrayBag<ItemType>::getCurrentSize() const
+{
+   return itemCount;
+} // end getCurrentSize
+
+template<class ItemType>
+bool ArrayBag<ItemType>::isEmpty() const
+{
+   return itemCount == 0;
+} // end isEmpty
+```

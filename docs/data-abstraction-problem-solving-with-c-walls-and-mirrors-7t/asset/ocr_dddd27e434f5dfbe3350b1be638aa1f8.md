@@ -1,0 +1,22 @@
+# SUMMARY
+
++   1. Using an array results in a straightforward implementation of the ADT list, but it is somewhat more involved than the implementations of either the ADT bag or the ADT stack.
++   2. An array provides direct access to any of its elements, so a method such as getEntry can quickly retrieve any entry in a list.
++   3. Adding an entry to or removing an entry from an array-based list typically requires that other entries shift by one position within the array. This data movement degrades the time efficiency of these operations, particularly when the list is long and the position of the addition or removal is near the beginning of the list.
++   4. Inserting entries into or removing entries from a chain of linked nodes does not require data to shift. Thus, the methods insert and remove of a link-based implementation of the ADT list require essentially the same effort—regardless of the length of the list or the position of the operation within the list—once the point of insertion or removal is known. Finding this point, however, requires a list traversal, the time for which will vary depending on where in the list the operation occurs.
++   5. For a link-based implementation of the ADT list, adding to the beginning of the list and removing a list’s first entry are treated as special cases.
++   6. Adding or removing an entry at the end of a link-based list requires a traversal of the underlying chain.
++   7. Adding or removing an entry anywhere within a link-based list requires a change of at most two pointers within the underlying chain.
++   8. The array-based getEntry method is almost instantaneous regardless of which list item you access. A link-based getEntry, however, requires i steps to access the i th item in the list.
+
+# EXERCISES
+
++   1. Add a constructor to each of the classes ArrayList and LinkedList that creates a list containing the entries in a given array.
++   2. Define the method setEntry for the class LinkedList.
++   3. Define the copy constructor for the class LinkedList.
++   4. Repeat the previous exercise, but use recursion in your definition.
++   5. Implement the method getPosition, as described in Exercise 5 of Chapter 8, for each of the classes ArrayList and LinkedList.
++   6. Repeat the previous exercise, but use recursion in your definitions.
++   7. Implement the method contains, as described in Exercise 7 of Chapter 8, for each of the classes ArrayList and LinkedList.
++   8. Repeat the previous exercise, but use recursion in your definitions.
++   9. Implement the method remove, as described in Exercise 9 of Chapter 8, for each of the classes ArrayList and LinkedList.

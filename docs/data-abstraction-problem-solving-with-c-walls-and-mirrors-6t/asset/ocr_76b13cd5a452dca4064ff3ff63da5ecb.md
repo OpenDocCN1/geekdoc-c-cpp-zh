@@ -1,0 +1,48 @@
+# FIGURE C-3 Three possible class diagrams for a class of banks
+
+![](bbox=[0.15, 0.135, 0.7, 0.265])
+
+The class diagram represents a conceptual model of a class of objects in a language-independent way. That is, the diagram does not dictate how the class is implemented. It just gives you a design to work from. However, you can specify many qualities associated with the attributes and operations of the class as an option. These qualities are easily implemented in C++, and they increase the amount of information given in a design.
+
+The UML syntax for the attributes of a class is
+
+```
+[visibility] name [:type][=defaultValue] [{property}]
+```
+
+where
+
++   - All elements within square brackets are optional.
++   - visibility can be + for public accessibility, - for private accessibility, or # for protected accessibility. (C++ Interlude 4 covers protected accessibility.) If omitted, the visibility defaults to private accessibility.
++   - name is the name of the attribute.
++   - type is the data type of the attribute.
++   - defaultValue is the default value of the attribute.
++   - property indicates some property that applies to this attribute.
+
+At a minimum, the name of an attribute should be given. The defaultValue is given only in situations where the design depicts that a default value is appropriate for that attribute. In certain cases it might be appropriate to omit the type of an attribute, leaving this detail until the implementation phase.
+
+The UML specifies that programming-language-independent names be used for the type of an attribute. This text will follow the UML recommendations by using integer for integral storage, float for floating-point storage, boolean for boolean storage, and string for storing strings.
+
+The property of an attribute can have one of the following values:
+
++   - changeable indicates a normal, modifiable attribute and is usually omitted.
++   - frozen indicates a constant or write-once attribute.
+
+The attributes for the Bank class in Figure C-3b could now be written as
+
+```
+-name: string
+-routingNum: integer
+```
+
+The visibility of these attributes is private and adheres to the object-oriented programming principle of information hiding.
+
+The UML syntax for a class's operations is more involved:
+
+```
+[visibility] name ([parameterList]) [:type] [{property}]
+```
+
+UML syntax for the attributes of a class
+
+UML syntax for the operations of a class

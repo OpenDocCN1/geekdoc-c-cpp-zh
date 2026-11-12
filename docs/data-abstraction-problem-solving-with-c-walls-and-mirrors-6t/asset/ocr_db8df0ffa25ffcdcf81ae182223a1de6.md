@@ -1,0 +1,9 @@
+Place your chosen pivot in theArray[last] before partitioning
+
+The partition function will receive an array segment theArray[first..last] as an argument. The function must arrange the items of the array segment into two regions: S1 contains the items less than or equal to the pivot and S2 contains the items greater than or equal to the pivot. Thus, as you saw in Figure 11-9, S1 is the segment theArray[first..pivotIndex - 1], and S2 is the segment theArray[pivotIndex + 1..last].
+
+What pivot should you use? Various strategies exist for making this choice, as you will see later, so let's assume for now that we have chosen a pivot and go on to develop the partition. Regardless of which pivot you choose, let's set it with the last entry theArray[last] to get it out of the way while we partition the array. Figure 11-10a shows an array after this step. Starting at the beginning of the array and moving toward the end (left to right), look for the first entry that is greater than or equal to the pivot. In Figure 11-10b, that entry is 5 and occurs at the index indexFromLeft. In a similar fashion, starting at the next-to-last entry and moving toward the beginning of the array (right to left), look for the first entry that is less than or equal to the pivot. In Figure 11-10b, that entry is 2 and occurs at the index indexFromRight. Now, if indexFromLeft is less than indexFromRight, swap the two entries at those indices. Figure 11-10c shows the result of this step. The 2, which is less than
+
+# FIGURE 11-10 A partitioning of an array during a quick sort
+
+![](bbox=[0.2, 0.4, 0.9, 0.9])

@@ -1,0 +1,365 @@
+
+- changing misleading field values
+  - using Python, 34
+  - using R, 34–6
+- identify outliers
+  - using Python, 41–2
+  - using R, 42–3
+- phase, 31
+- problem understanding phase
+  - data science problem, 30
+  - project objectives, 29–30
+- reexpression of categorical data as numeric
+  - using Python, 36–8
+  - using R, 38–9
+- standardizing the numeric fields
+  - using Python, 40
+  - using R, 40
+- data preparation phase, 2
+- data science, 1
+- Data Science Methodology (DSM)
+  - iterative and adaptive nature, 1, 2, 5
+  - phases, 3
+  - data preparation phase, 2
+  - deployment phase, 5
+  - evaluation phase, 4–5
+  - exploratory data analysis phase, 3
+  - modeling phase, 4
+  - problem understanding phase, 2
+  - setup phase, 3–4
+- data science tasks
+  - association, 5, 7
+  - classification, 5, 6–7
+  - clustering, 5, 7
+  - description, 5, 6
+  - estimation, 5, 6
+  - prediction, 5, 7
+- data scientists, 6
+- data summarization
+  - of bivariate relationships, 225–9
+  - building blocks of data analysis, 215–17
+  - measures of center, 222–3
+  - measures of position, 224–5
+  - measures of variability, 223–4
+- days between purchase, 154
+- days_since_previous variable, 34, 34, 35, 36
+- decision nodes, 81
+- DecisionTreeClassifier() command, 85, 90
+- decision trees, 30
+- C5.0 algorithm, 88–91
+- classification and regression trees, 83–8
+- random forests, 91–3
+- deployment phase, 5
+- describe() command, 146
+- description, 5, 6
+- descriptive regression modeling, 151–2
+- descriptive statistics, 6, 215
+- deviation, 223
+- dim() command, 32, 71
+- dimensionality, curse of, 167, 199
+- dimension reduction
+  - components should extract, 176–7
+  - Eigenvalue Criterion, 176–7
+  - proportion of variance explained criterion, 177
+  - curse of dimensionality, 167
+  - double-counting, 167
+  - multicollinearity, 167, 168–74, 183–4
+  - overfitting, 167
+  - performing PCA with K = 4, 178
+  - principal components analysis, 175–6, 178–83
+  - violates parsimony, 167
+- discrete variable, 216
+- distribution, 220
+- div() command, 50, 52, 53
+- dotplot, 220, 221
+- double-counting, 167
+- drop() command, 180
+- dropna() command, 172
+- DSM see Data Science Methodology (DSM)
+- EDA see exploratory data analysis (EDA)
+- education_numeric variable, 36, 37, 38, 39
+- education variable, 36, 37
+- Eigenvalue Criterion, 176–7
+- elements, 215
+- Empirical Rule, 224
+- ensemble method, 91
+- entropy of X, 88
+- estimation, 5, 6
+- evaluation phase, 4–5
+- exploratory data analysis (EDA), 30
+  - bar graphs with response overlay, 47–51
+  - binning based on predictive value, 58–63
+  - contingency tables, 31–3
+  - Framingham Heart Study, 136, 137
+  - histograms with response overlay, 53–8
+  - vs. HT, 47
+- exploratory data analysis phase, 3
+- export_graphviz() command, 86, 90
+- final logistic regression model, 189
+- final regression model, 153, 159
+- final regression results from R, 157
+- first quartile (Q1), 224
+- fit() command, 85, 155, 191, 194
+- five-number summary, 225
+- Framingham Heart Study data, 136
+- Framingham_training data set, 137
+- frequency distribution, 218
+- gene expression clustering, 142
+- generalized linear models (GLM)
+  - linear regression, 188
+  - logistic regression, 188–92
+  - Poisson regression, 192–5
+- geom_bar() command, 51, 58
+- geom_histogram() command, 58
+- get_dummies() command, 194
+- ggplot() code, 124
+- ggplot() command, 51, 57
+- ggplot2 package, 20–21
+- Gini criterion, 91
+- Gini Index, 83
+- GLM see generalized linear models (GLM)
+- GLM() command, 194
+- graphical data analysis, 47
+- grid.arrange() command, 124
+- gridExtra package, 124
+- head() command, 33, 42, 43, 205, 209
+- hierarchical clustering, 142
+- hist() command, 34, 35
+- histogram, 15, 220
+  - best practices, 55
+  - in Python, 35
+  - in R, 33, 36, 39
+  - with response overlay, 53–8
+  - using Python, 55–7
+  - using R, 54, 58
+  - of Spyder, 16, 17
+- holdout data set, 70
+- homogeneity of proportions, test for, 72
+- HT see hypothesis test (HT)
+- hypothesis test (HT), 47
+  - EDA vs., 47
+- ifelse() command, 35
+- "Import Dataset" window, 21, 22
+- importing packages
+  - in Python, 11–12
+  - in R, 20–21
+- index field, adding an
+  - using Python, 31–2
+  - using R, 32–3
+- individual value plot, 227
+- information gain or entropy reduction, concept of, 88
+- inspect() command, 205, 209
+- install.packages() command, 20
+- interval data, 216
+- IQR, 225
+- IQR method for detecting outliers, 225
+- k-fold cross-validation, 70
+- K-means clustering algorithm
+  - application of, 143–4
+  - using Python, 145–7
+  - in R, 147–9
+- KMeans() command, 145, 147
+- Kohonen networks clustering, 142
+- leaf nodes, 81
+- legend() command, 55
+- levels() command, 39
+- library() command, 21
+- linear predictor, 187
+- linear regression
+  - as general linear model, 188
+  - link function, 187, 188
+- lm() command, 156
+- logistic regression, 30
+  - application of, 189–92
+  - as general linear model, 188–9
+  - using Python, 190–191
+  - using R, 191–2
+- Logit() command, 191
+- MAE() command, 161
+- marginal distribution, 226
+- maximum a posteriori hypothesis, 114
+- mean, 222
+- mean absolute error (MAE), 158, 160, 161
+- measures of center, 222–4
+- measures of position, 224–5
+- median, 222
+- metrics, 208
+  - confidence, 207
+  - lift, 207
+  - support, 207
+- miningdance, 222
+- mining association rules
+  - "baseline" proportions, 202, 203
+  - Churn_Training_File data set, 202
+  - example of, 200
+  - using R, 203-6
+- misleading field values, 33-6
+  - histogram of days_since_previous, 33
+  - using Python, 34
+  - using R, 34-6
+- mode, 222
+- model evaluation
+  - accounting for unequal error costs
+    - adjusted cost matrix, 105
+    - cost matrix, 104
+  - application of, 100-104
+  - predictors, 100
+  - classification evaluation measures, 97-9
+  - cost per record and profit per record, 106
+  - data-driven error costs
+    - cost matrix, 107, 108
+    - simplified, 108
+  - method for, 100
+  - metrics for all models, 109
+  - precision, recall, and Fβ scores, 99-100
+  - sensitivity and specificity, 99
+  - unequal error costs, comparing models, 106-7
+- modeling phase, 4
+- model02.summary() command, 155
+- model02.test.summary() command, 155
+- multicollinearity, 167, 183-4
+  - predictors from Python, 171
+  - regression coefficients, 169-70
+  - regression equation, 170
+  - stable coefficient, 168
+  - unstable regression models, 167
+  - using Python, 172-3
+  - using R, 173, 174
+  - using variance inflation factors, 171-4
+  - variable coefficient, 168-9
+- MultinomialNB() command, 11
+- multiple regression modeling
+  - application of, 152-4
+  - using Python, 153, 154-5
+  - using R, 156-7
+- Naïve Bayes classification, 30
+  - application of, 115-25
+  - Bayes theorem, 113-14
+  - class conditional independence, 114
+  - maximum a posteriori hypothesis, 114
+  - in Python, 121-3
+  - in R, 123-5
+- naïveBayes() command, 124
+- nearly constant behavior, 133
+- nearly linear behavior, 133
+- net, 131
+- neural network model, 30, 70
+  - application of, 134-6
+  - backpropagation, 134
+  - connection weights and combination function, 131-3
+  - data inputs and initial values, 131
+  - example of, 130
+  - exploratory data analysis, 135-6
+  - hidden layers and nodes, 130-131
+  - interpreting weights, 136-7
+  - net input, 131-2
+  - output value, 132
+  - in R, 137-8
+  - real neuron and artificial neuron model, 129, 130
+  - sigmoid activation function, 133-4
+  - sigmoid function, 132
+  - structure, 129-31
+    - completely connected network, 130
+    - feedforward nature, 129
+    - layered, 129
+  - neuron model, real and artificial, 129, 130
+- nominal data, 216
+- normal distribution, 188
+- mtrec, 93
+- MultinomialNB() algorithm, 122
+- numerical variables see quantitative variables
+- numpy packages, 11, 12, 34
+- OLS() command, 154-5
+- order() command, 42-3
+- ordered() command, 204
+- ordinal data, 216
+- "Ordinary Least Squares" (OLS), 154
+- overfitting, 167
+- packages, 20
+- pandas package pd, 32
+- pandas packages, 11, 12, 32, 34
+- parameter, 217
+- Pareto chart, 218
+- parsimony, principle of, 167
+- PCA see principal components analysis (PCA)
+- PCA() command, 180
+- percentile rank, 224
+- pie chart, 218
+- plot() command, 49, 90, 182
+- plotnet() command, 138
+- Poisson regression model
+  - application of, 192–5
+  - structure of, 193
+  - using Python, 193–4
+  - using R, 194–5
+- population, 217
+- population mean, 222
+- population standard deviation, 223
+- population variance, 223
+- posterior distribution, 113, 119, 120
+- predict() command, 86, 91, 92, 103, 123, 125, 159, 160
+- prediction, 5, 7
+- predictor variables, 154, 217
+- Previous_outcome, 47, 48, 49, 50
+- principal() command, 182
+- principal components analysis (PCA)
+  - application of, 175–6
+  - with K = 4, 178
+  - predictor variables, 175
+  - results from R, 176
+  - R output, 179
+  - using Python, 179–81
+  - using R, 181–3
+  - validation, 178–9
+- prior distribution, 113, 119
+- problem understanding phase, 2
+  - objectives into data science problem, translate, 30
+  - project objectives, 29–30
+- proj.table() command, 63, 204
+- provisional regression equation, 152
+- pth percentile, 224
+- p-values, 152, 189
+- Python, 40
+  - adding an index field, 31–2
+  - balancing the training data set, 74–5
+  - bar graphs with response overlay, 49–50
+  - basics of coding in
+    - accessing records and variables in, 14–15
+    - button and hover text, 11
+    - executing commands, 10–11
+    - getting data into, 12–13
+    - importing packages in, 11–12
+    - saving output in, 13–14
+    - setting up graphics in, 15–17
+    - using comments, 9–10
+  - binning based on predictive value, 59–62
+  - C5.0 algorithm, 89–90
+  - CART model, 84–6
+  - categorical data as numeric, regexp of, 36–8
+  - contingency tables, 52–3
+  - correlation matrix from, 180
+  - downloading, 9
+  - histogram with response overlay, 55–7
+  - identifying outliers, 41–2
+  - importing packages, 11–12
+  - K-means clustering algorithm, 145–7
+  - logistic regression, 190–191
+  - misleading field values, 34
+  - model evaluation for estimation, 159–60
+  - multicollinearity, 172–3
+  - multiple regression modeling, 154–5
+  - Naive Bayes classification, 121–3
+  - PCA, 179–81
+  - Poisson regression model, 193–4
+  - random forests, 92
+  - standardizing the numeric fields, 40
+- Python logistic regression, 190
+- qualitative variables, 215
+- quantitative variables, 215, 216
+  - classes, 218
+  - cumulative (relative) frequency distribution, 219
+  - distribution, 220
+  - dotplot, 220, 221
+  - (relative) frequency distribution, 218–19
+  - histogram, 220
+  - skewed data, 221, 222

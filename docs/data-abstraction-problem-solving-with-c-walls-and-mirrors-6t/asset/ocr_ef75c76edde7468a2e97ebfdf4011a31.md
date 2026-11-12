@@ -1,0 +1,28 @@
+# # Contents
+
++   - 16.1 The Nodes in a Binary Tree 456
++     - 16.1.1 An Array-Based Representation 456
++     - 16.1.2 A Link-Based Representation 458
++   - 16.2 A Link-Based Implementation of the ADT Binary Tree 459
++     - 16.2.1 The Header File 459
++     - 16.2.2 The Implementation 462
++   - 16.3 A Link-Based Implementation of the ADT Binary Search Tree 471
++     - 16.3.1 Algorithms for the ADT Binary Search Tree Operations 471
++     - 16.3.2 The Class BinarySearchTree 481
++   - 16.4 Saving a Binary Search Tree in a File 483
++   - 16.5 Tree Sort 486
++   - 16.6 General Trees 487
++   - Summary 488
++   - Exercises 489
++   - Programming Problems 491
+
+# # Prerequisites
+
++   - Chapter 4 Link-Based Implementations
++   - Chapter 5 Recursion as a Problem-Solving Technique
++   - Chapter 6 Stacks (for optional nonrecursive traversal)
++   - Chapter 9 List Implementations
++   - Chapter 10 Algorithm Efficiency
++   - Chapter 12 Sorted Lists and Their Implementations
++   - C++ Interlude 5 Overloaded Operators and Friend Access
++   - Chapter 15 Trees

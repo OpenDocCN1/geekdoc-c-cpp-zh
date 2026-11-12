@@ -1,0 +1,9 @@
+# 14.1 INTRODUCTION TO ASSOCIATION RULES
+
+Association rules seek to uncover associations among the variables and take the form “If antecedent, then consequent,” along with a measure of the support and confidence associated with the rule. For example, a particular supermarket may find that of the 1000 customers shopping on a Thursday night, 200 bought diapers, and of the 200 who bought diapers, 50 bought beer. Thus, the association rule would be: “If you buy diapers, then buy beer,” with a support of 50/1000 = 5% and a confidence of 50/200 = 25%.
+
+The daunting problem that awaits any such algorithm is the curse of dimensionality: The number of possible association rules grows exponentially in the number of attributes. Specifically, if there are k attributes, we limit ourselves to binary attributes, we account only for the positive cases (e.g. buy diapers = yes), there are on the order of k · 2^(k-1) possible association rules! Consider a typical application for association rules is market basket analysis and that there may be thousands of binary attributes (buy beer? buy popcorn? buy milk? buy bread? etc.), the search problem appears at first glance to be utterly hopeless. For example, suppose that a tiny convenience store has only 100 different items and a customer could either buy or not buy any combination of those 100 items. Then, there are 2^100 ≈ 1.27 × 10^30 possible association rules that await your improper search algorithm. Thankfully, however, the a priori algorithm for mining association rules takes advantage of structure within the rules themselves to reduce the search problem to a more manageable size.²
+
+¹David J. Hand, Heikki Mannila, and Padhraic Smyth, Principles of Data Mining, MIT Press, Cambridge, 2001.
+
+²For details on how the a priori algorithm works, see Data Mining and Predictive Analytics.
