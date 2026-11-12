@@ -1,0 +1,116 @@
+level_changes:
+- line: 190
+  before: 2
+  after: 3
+- line: 272
+  before: 3
+  after: 4
+- line: 287
+  before: 3
+  after: 4
+- line: 300
+  before: 3
+  after: 4
+- line: 313
+  before: 3
+  after: 4
+- line: 325
+  before: 2
+  after: 3
+- line: 358
+  before: 2
+  after: 3
+- line: 372
+  before: 2
+  after: 4
+- line: 392
+  before: 2
+  after: 4
+- line: 413
+  before: 2
+  after: 3
+- line: 423
+  before: 2
+  after: 3
+- line: 544
+  before: 2
+  after: 3
+- line: 564
+  before: 2
+  after: 3
+- line: 628
+  before: 2
+  after: 3
+- line: 645
+  before: 3
+  after: 4
+- line: 657
+  before: 3
+  after: 4
+- line: 671
+  before: 3
+  after: 4
+- line: 677
+  before: 3
+  after: 4
+- line: 685
+  before: 2
+  after: 3
+- line: 700
+  before: 2
+  after: 3
+- line: 847
+  before: 2
+  after: 3
+- line: 1038
+  before: 2
+  after: 3
+- line: 1065
+  before: 2
+  after: 3
+- line: 1081
+  before: 2
+  after: 3
+- line: 1125
+  before: 2
+  after: 3
+- line: 1321
+  before: 2
+  after: 3
+- line: 1332
+  before: 2
+  after: 3
+- line: 1375
+  before: 2
+  after: 3
+text_changes:
+- line: 333
+  before: 项目1 动画基础
+  after: 项目 1 动画基础
+- line: 423
+  before: 总体国家安全观
+  after: 像狗一样说话
+- line: 431
+  before: 项目2 让了不起的角色动起来
+  after: 项目 2 让了不起的角色动起来
+- line: 592
+  before: 项目2：让优秀角色动起来
+  after: 项目 2 让了不起的角色动起来
+- line: 760
+  before: 让场景更具沉浸感
+  after: 项目 3 让场景更具沉浸感
+- line: 859
+  before: 项目4 听起来不错
+  after: 项目 4 听起来不错
+- line: 905
+  before: 项目4：这声音正合我意
+  after: 项目 4 听起来不错
+- line: 1135
+  before: 项目 5　灯光、摄像机、开拍！
+  after: 项目 5 灯光、摄像机、开拍！
+- line: 1164
+  before: '**项目5** *灯光，摄影，开拍！*'
+  after: 项目 5 灯光、摄像机、开拍！
+- line: 1176
+  before: '**关灯**'
+  after: 关灯

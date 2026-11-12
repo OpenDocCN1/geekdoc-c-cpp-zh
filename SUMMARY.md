@@ -901,6 +901,7 @@
 +   [Unity iPhone 的 3D 游戏美术创建：含 modo 与 Blender 流程（葡萄牙语版）](docs/creating-3d-game-art-for-the-iphone-with-unity-featuring-mod/README.md)
 +   [创建网站：设计与构建你的第一个网站！（达人迷少年版）](docs/creating-a-web-site-design-and-build-your-first-site-dummies/README.md)
 +   [Android 应用程序创建指南：开发与设计](docs/creating-android-applications-develop-and-design/README.md)
++   [数字动画创作：Scratch 故事动画制作](docs/creating-digital-animations-animate-stories-with-scratch/README.md)
 +   [创建 iOS 应用：开发与设计（第二版）](docs/creating-ios-apps-develop-and-design-second-edition/README.md)
 +   [创意播客制作人（数字世界！）](docs/creative-podcast-producers-its-a-digital-world/README.md)
 +   [关键代码研究：初始（方法）（软件研究）](docs/critical-code-studies-initialmethods-software-studies/README.md)

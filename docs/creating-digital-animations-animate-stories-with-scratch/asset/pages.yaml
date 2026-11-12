@@ -1,0 +1,3176 @@
+- pgno: 0
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# CREATING
+
+
+    **Digital Animations**
+
+
+    by Derek Breen
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "# CREATING DIGITAL ANIMATIONS\n\nPublished by  \nJohn Wiley & Sons, Inc.  \n\
+    111 River Street  \nHoboken, NJ 07030-5774  \nwww.wiley.com\n\nCopyright © 2016\
+    \ by John Wiley & Sons, Inc., Hoboken, NJ\n\nPublished simultaneously in Canada\n\
+    \nNo part of this publication may be reproduced, stored in a retrieval system\
+    \ or transmitted in any form or by any means, electronic, mechanical, photocopying,\
+    \ recording, scanning or otherwise, except as permitted under Sections 107 or\
+    \ 108 of the 1976 United States Copyright Act, without the prior written permission\
+    \ of the Publisher. Requests to the Publisher for permission should be addressed\
+    \ to the Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken,\
+    \ NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at http://www.wiley.com/go/permissions.\n\
+    \n**Trademarks:** Wiley, For Dummies, the Dummies Kid logo, Dummies.com, and related\
+    \ trade dress are trademarks or registered trademarks of John Wiley & Sons, Inc.\
+    \ and may not be used without written permission. Scratch is developed by the\
+    \ Lifelong Kindergarten Group at the MIT Media Lab. See www.scratch.mit.edu. Project\
+    \ figures, illustrations and Scratch projects: Copyright © 2015 by Derek Breen.\
+    \ All other trademarks are the property of their respective owners. John Wiley\
+    \ & Sons, Inc. is not associated with any product or vendor mentioned in this\
+    \ book.\n\n**LIMIT OF LIABILITY/DISCLAIMER OF WARRANTY:** THE PUBLISHER AND AUTHOR\
+    \ MAKE NO REPRESENTATIONS OR WARRANTIES WITH RESPECT TO THE ACCURACY OR COMPLETENESS\
+    \ OF THE CONTENTS OF THIS WORK AND SPECIFICALLY DISCLAIM ALL WARRANTIES, INCLUDING\
+    \ WITHOUT LIMITATION WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE. NO WARRANTY\
+    \ MAY BE CREATED OR EXTENDED BY SALES OR PROMOTIONAL MATERIALS. THE ADVICE AND\
+    \ STRATEGIES CONTAINED HEREIN MAY NOT BE SUITABLE FOR EVERY SITUATION. THIS WORK\
+    \ IS SOLD WITH THE UNDERSTANDING THAT THE PUBLISHER IS NOT ENGAGED IN RENDERING\
+    \ LEGAL, ACCOUNTING, OR OTHER PROFESSIONAL SERVICES. IF PROFESSIONAL ASSISTANCE\
+    \ IS REQUIRED, THE SERVICES OF A COMPETENT PROFESSIONAL PERSON SHOULD BE SOUGHT.\
+    \ NEITHER THE PUBLISHER NOR THE AUTHOR SHALL BE LIABLE FOR DAMAGES ARISING HEREFROM.\
+    \ THE FACT THAT AN ORGANIZATION OR WEBSITE IS REFERRED TO IN THIS WORK AS A CITATION\
+    \ AND/OR A POTENTIAL SOURCE OF FURTHER INFORMATION DOES NOT MEAN THAT THE AUTHOR\
+    \ OR THE PUBLISHER ENDORSES THE INFORMATION THE ORGANIZATION OR WEBSITE MAY PROVIDE\
+    \ OR RECOMMENDATIONS IT MAY MAKE. FURTHER, READERS SHOULD BE AWARE THAT INTERNET\
+    \ WEBSITES LISTED IN THIS WORK MAY HAVE CHANGED OR DISAPPEARED BETWEEN WHEN THIS\
+    \ WORK WAS WRITTEN AND WHEN IT IS READ.\n\nFor general information on our other\
+    \ products and services, please contact our Customer Care Department within the\
+    \ U.S. at 877-762-2974, outside the U.S. at 317-572-3993, or fax 317-572-4002.\
+    \ For technical support, please visit www.wiley.com/techsupport.\n\nWiley publishes\
+    \ in a variety of print and electronic formats and by print-on-demand. Some material\
+    \ included with standard print versions of this book may not be included in e-books\
+    \ or in print-on-demand. If this book refers to media such as a CD or DVD that\
+    \ is not included in the version you purchased, you may download this material\
+    \ at http://booksupport.wiley.com. For more information about Wiley products,\
+    \ visit www.wiley.com.\n\nLibrary of Congress Control Number: 2016931714\n\nISBN:\
+    \ 978-1-119-23352-7 (pbk); 978-1-119-23355-8 (ebk); 978-1-119-23354-1 (ebk)\n\n\
+    Manufactured in the United States of America\n\n10  9  8  7  6  5  4  3  2  1"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CONTENTS
+
+
+    # INTRODUCTION
+
+
+    +   - About Scratch . . . 1
+
+    +   - About This Book . . . 2
+
+    +   - Icons Used in This Book . . . 3
+
+    +   - Access Scratch . . . 3
+
+    +     - Create online account . . . 3
+
+    +     - Use Scratch offline . . . 4
+
+
+    # PROJECT 1: ANIMATION ESSENTIALS
+
+
+    +   - Draw Your First Character . . . 8
+
+    +     - Create project . . . 9
+
+    +     - Draw body parts . . . 9
+
+    +     - Sculpt the body with the Reshape tool . . . 10
+
+    +     - Adjust the thickness of multiple lines . . . 11
+
+    +   - Animate the Stick Figure . . . 12
+
+    +     - Draw a simple backdrop . . . 13
+
+    +     - Adjust movement against the backdrop . . . 14
+
+    +     - Putting the jump in jacks . . . 15
+
+    +   - Animate with Code Blocks . . . 17
+
+    +   - Bring Humor to Your Animation . . . 20
+
+    +   - Add Stick Man''s Best Friend . . . 20
+
+    +     - Modify parts to create a new character . . . 21
+
+    +     - Develop your humorous story . . . 22
+
+    +   - Walk Like a Man . . . 23
+
+    +     - Rotate parts with the Select tool . . . 24'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '# **PROJECT 3: LOCATION, LOCATION, LOCATION** 54
+
+
+    +   - Planning Animation Scenes . . . . . . . . . . . . . . . . . .54
+
+    +   - Design an Interior Scene . . . . . . . . . . . . . . . . . . . .55
+
+    +   - Make Scenes More Immersive . . . . . . . . . . . . . . . . .59
+
+    +     - Change a backdrop into a sprite . . . . . . . . . . . . . .60
+
+    +     - Design see-through windows . . . . . . . . . . . . . . . . .60
+
+    +     - Build your own furniture . . . . . . . . . . . . . . . . . . .63
+
+    +   - Design an Exterior Scene . . . . . . . . . . . . . . . . . . . .66
+
+    +     - Draw scenes with perspective . . . . . . . . . . . . . . . .69
+
+    +     - Scale characters inside a scene . . . . . . . . . . . . . . .71
+
+
+    # **PROJECT 4: SOUNDS GOOD TO ME** 74
+
+
+    +   - That''s What He Said. . . . . . . . . . . . . . . . . . . . .74
+
+    +     - Write dialogue for your characters . . . . . . . . . . . .75
+
+    +   - Record Dialogue in Scratch . . . . . . . . . . . . . . . . . .76
+
+    +     - Find the Record button . . . . . . . . . . . . . . . . . . .77
+
+    +   - Edit Audio Clips . . . . . . . . . . . . . . . . . . . . . . .80
+
+    +   - Trim Beginning of Sound . . . . . . . . . . . . . . . . . . .81
+
+    +     - Use sound editing effects . . . . . . . . . . . . . . . . . .82
+
+    +   - Play Sound with Code Blocks . . . . . . . . . . . . . . . . .83
+
+    +   - Animate Character Speech . . . . . . . . . . . . . . . . . .84
+
+    +     - Mouthing the words . . . . . . . . . . . . . . . . . . . . .85
+
+    +     - Easy lip-syncing. . . . . . . . . . . . . . . . . . . . . . .86
+
+    +     - Achieve more realistic lip-synching . . . . . . . . . . . .87
+
+    +     - Create custom phoneme costumes . . . . . . . . . . . . . .90
+
+    +     - Switch costumes to match phonemes . . . . . . . . . . . .91
+
+
+    # **PROJECT 5: LIGHTS, CAMERA, ACTION!** 95
+
+
+    +   - (Not) Starting from Scratch . . . . . . . . . . . . . . . . .95
+
+    +     - Create a night scene . . . . . . . . . . . . . . . . . . . .95
+
+    +     - Turn out the lights . . . . . . . . . . . . . . . . . . . .98'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '+   - Camera (or What Do I Focus On?) . . . . . . . . . . . . 101
+
+    +     - Increase the costume size. . . . . . . . . . . . . . 101
+
+    +     - Create a back view of characters . . . . . . . . . . . 103
+
+    +     - Create a side view of characters . . . . . . . . . . . 104
+
+
+    +   - Action! (or Let''s Get the Story Moving) . . . . . . . . . . . 104
+
+    +     - Animate sprite entering the scene . . . . . . . . . . . 105
+
+    +     - Add a (slightly) more realistic walk . . . . . . . . . . 105
+
+
+    +   - Broadcast Animation Messages . . . . . . . . . . . . . . 106
+
+    +     - Send a broadcast message . . . . . . . . . . . . . . . 106
+
+    +     - Receive a broadcast message . . . . . . . . . . . . . . 107
+
+
+    +   - Switch between Animation Scenes. . . . . . . . . . . . . . 108
+
+
+    +   - And Cut! . . . . . . . . . . . . . . . . . . . . . . . . 111
+
+
+    # ## AUTHOR NOTES . . . . . . . . . . . . . . . . . . . . 112
+
+
+    +   - Share Your Scratch Projects in the Scratch Online Community . . . . . .
+    . . . . . . . . . . . . . . 112
+
+    +     - Share project from the online Scratch editor . . . . . . 113
+
+    +     - Share project from the offline Scratch editor . . . . . . 114
+
+
+    +   - Broadcast Scratch Animation on Any Website. . . . . . . . . 114
+
+
+    +   - Record/Export Scratch Videos . . . . . . . . . . . . . . 115
+
+
+    +   - Export Scratch Graphics to Other Applications . . . . . . . 117'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# # INTRODUCTION
+
+
+    +   - Enable you to browse, play, and remix other projects
+
+    +   - Enable you to share your projects
+
+    +   - Create an online community where you can learn from one another
+
+
+    Now review that list of six goals. Where does it say, “Force parents or teachers
+    or coaches or kids to buy a big, fat Scratch book”? Nowhere! So why are you still
+    reading? Don’t you know you can go to scratch.mit.edu right now and start Scratching?!?
+
+
+    If you are completely new to Scratch, it might be a good idea to start with one
+    of the built-in tutorials. To see them, click the question mark in the top-right
+    corner.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_9_0.png)
+
+
+    # # ABOUT THIS BOOK
+
+
+    In this book, you can start with any project. If you have not done much animating
+    inside Scratch, you may find it useful to start with Project 1, which leads you
+    through creating a basic'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'stick figure animation. If you want to design your own cartoon characters,
+    check out Project 2, where I share all kinds of tricks (and you discover that
+    you don''t have to be an awesome artist to create great-looking characters).
+
+
+    # ### ICONS USED IN THIS BOOK
+
+
+    +   - **Tip icon** – *The Tip icon marks tips and shortcuts that you can use to
+    make coding easier.*
+
+    +   - **Warning icon** – *The Warning icon tells you to watch out! It marks important
+    information that may save you from scratching your head a ton.*
+
+
+    # ### ACCESS SCRATCH
+
+
+    To use Scratch online visit www.scratch.mit.edu, create an online account, and
+    start Scratching. To use Scratch without creating an account, you will have to
+    download and install the offline version of Scratch (see the upcoming "Use Scratch
+    offline" section).
+
+
+    Technically, you can use the Scratch website without an account, but you will
+    have to save projects to your computer and then upload them each time you visit
+    the Scratch website to continue working on them. With an account, you can save
+    files online and share projects with other Scratch users.
+
+
+    # ### CREATE ONLINE ACCOUNT
+
+
+    Go ahead and start Scratch! Turn on your computer, open a web browser, and visit
+    scratch.mit.edu. If you already have a Scratch account, click the Sign in button
+    in the top-right corner of the'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# # 3 INTRODUCTION
+
+
+    page. If you do not have an account, click the Join Scratch button and fill in
+    the brief online form. If you are under 13 or do not have an email account, please
+    ask an adult to help you create an account (or skip ahead to the upcoming “Use
+    Scratch Offline” section).
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_11_0.png)
+
+
+    > > To run Scratch online, you need a relatively recent web browser (Chrome 35
+    or later, Firefox 31 or later, or Internet Explorer 8 or later) with Adobe Flash
+    Player version 10.2 or later installed. Scratch 2 is designed to support screen
+    sizes 1024 x 768 or larger.
+
+
+    # ## USE SCRATCH OFFLINE
+
+
+    You can install the Scratch 2 Offline Editor to work on projects without a Scratch
+    user account. After Scratch 2 is installed, you will not need an Internet connection
+    to work on projects. This version will work on Mac, Windows, and some versions
+    of Linux (32 bit). Visit www.scratch.mit.edu/scratch2download to download and
+    install Adobe Air (required to run Scratch offline) and the Scratch 2 Offline
+    Editor.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# # 3 INTRODUCTION
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_13_0.png)
+
+
+    THE SCRATCH INTERFACE CAN BE A BIT INTIMIDATING AT FIRST, BUT IT SHOULD BE PRETTY
+    FAMILIAR BY THE TIME YOU FINISH YOUR FIRST PROJECT.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: "+   - DUPLICATE\n+   - DELETE\n+   - GROW\n+   - SHRINK\n+   - BLOCK HELP\n\
+    \n# EDITOR TABS\n\n```\n~~~\nwhen [green flag] clicked\nmove (10) steps\nsay [Hello!]\
+    \ for (2) secs\nstop this script\n~~~\n```\n\n+   - TIPS\n+   - STEP-BY-STEP\n\
+    +   - HOW TO\n+   - ABOUT BLOCKS\n\n# SCRIPTS AREA\n\n+   - SET COSTUME CENTER\n\
+    +   - FLIP VERTICAL\n+   - FLIP HORIZONTAL\n+   - CROP\n\nScripts   Costumes \
+    \  Sounds\n\nNew costume: costume1\n\nClear   Add   Import\n\n# COSTUMES\n\n+\
+    \   - costume1\n+   - costume2\n\n# TOOL OPTIONS\n\n+   - PAINT\n+   - LINE\n\
+    +   - RECTANGLE\n+   - ELLIPSE\n+   - TEXT\n+   - FILL COLOR\n+   - ERASE\n+ \
+    \  - SELECT\n+   - DUPLICATE\n\n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_14_0.png)\n\
+    \n+   - 100%\n+   - 200%\n\nBitmap Mode  \nConvert to vector"
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # PROJECT 1 ANIMATION ESSENTIALS
+
+
+    *THIS IS WHERE I AM SUPPOSED TO TALK ABOUT THE HISTORY OF ANIMATION.* And then
+    describe all the different kinds and give a bunch of examples and . . . (yawn)
+    . . . No thanks! Wouldn’t you rather start animating right now?
+
+
+    In this project, you begin by telling a short story with one of the simplest forms
+    of animation: stick figures. An obvious advantage of stick figures is that they
+    are almost as easy to animate as they are to draw.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_15_0.png)
+
+
+    # ## DRAW YOUR FIRST CHARACTER
+
+
+    Go ahead and start drawing! Just kidding. Of course you must create a project
+    before you can draw anything.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# ## CREATE PROJECT
+
+
+    +   1. Go to scratch.mit.edu or open the Scratch 2 Offline Editor.
+
+    +   2. If you are online, click Create. If offline, choose File ▸ New.
+
+    +   3. Name your project. (Online, select the title and type Stick Figure Animation.
+    Offline, choose File ▸ Save As and type Stick Figure Animation.)
+
+    +   4. Delete the cat. (Shift-click and select Delete.)
+
+
+    # ## DRAW BODY PARTS
+
+
+    For your stick figure, you need a circle for a head, a rectangle for a body, and
+    lines for arms and legs. Initially, drawing the parts separately might be easier.
+
+
+    +   1. Click the Paint New Sprite icon.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_16_0.png)
+
+
+    +   2. Click the Costumes tab.'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_18_0.png)
+
+
+    +   2. **Click and drag each corner of the body into a new position.**
+
+    +   3. **Click and drag the end of each arm onto the top body corners where the
+    shoulders would be.**
+
+    +   4. **Click and drag the top of each leg onto the bottom body corners.**
+
+
+    See how the *Reshape* tool helps you modify your stick figure easily? Because
+    you have been working zoomed in to 200% on the **Paint Editor** canvas, check
+    to see how your figure looks on the **Stage** (the large area to the left of the
+    Paint Editor). My lines appear a bit too thin.
+
+
+    # **ADJUST THE THICKNESS OF MULTIPLE LINES**
+
+
+    Fortunately, there is a quick way to adjust all the lines that make up your *vector
+    sprite*:
+
+
+    +   1. **Click the Select tool.**
+
+    +   2. **Click and drag across the entire figure on the Paint Editor canvas to
+    select all the lines.**
+
+    +   3. **Use the Line Width slider to increase the line thickness.**
+
+    +   4. **Check the sprite on the Stage to determine the best thickness for your
+    figure.**'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# PROJECT 1 ANIMATION ESSENTIALS
+
+
+    +   4. If necessary, use the Line Width slider to adjust the line thickness the
+    way you did for your stick figure.
+
+
+    Compare your figure and the new line on the Stage.
+
+
+    # ADJUST MOVEMENT AGAINST THE BACKDROP
+
+
+    In each jumping jack pose, the feet should be on the ground. You can treat the
+    bottom of the Paint Editor canvas as the ground for all your costumes to make
+    them consistent.
+
+
+    +   1. Click your stick figure sprite and then click Costume1 on the Scripts tab.
+
+
+    +   2. Use the Select tool to click and drag over the entire figure.
+
+
+    +   3. Click the Down Arrow key on your keyboard several times until the stick
+    figure''s feet line up with the bottom of the Paint Editor canvas.
+
+
+    +   4. If necessary, use the Reshape tool to align the bottom of each leg with
+    the bottom of the window.
+
+
+    +   5. Repeat Steps 1–4 for Costume2.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_21_0.png)
+
+
+    Why use the Down Arrow key when you can just click and drag? Because you don''t
+    want to move the sprite left or right accidentally (which would make the animation
+    appear jittery).
+
+
+    Return to the Stage, click your stick figure, and then drag it so the bottom of
+    each leg aligns with the ground. If you alternate'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'between Costume1 and Costume2, the feet should now remain on the ground.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_22_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_22_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_22_2.png)
+
+
+    But something is still missing. Stand up and do a few jumping jacks. Seriously!
+    One thing you need to do as an animator is act out each movement.
+
+
+    Do your feet stay in contact with the floor the entire time? Of course not. Why
+    do they call them *jumping jacks*? Because you jump up!
+
+
+    # ## PUTTING THE JUMP IN JACKS
+
+
+    Right now, if you alternate costumes, it''s like the feet just slide across the
+    floor. You need to add a pose between Costume1 and Costume2 with the arms and
+    legs midway between the other poses and the body above the ground. This also a
+    good time to rename the costumes so you don''t get confused.
+
+
+    +   1. **Click Costume1**, select the costume name, and then type Arms Up.
+
+    +   2. **Click Costume2** and rename it Arms Down.
+
+    +   3. **Shift-click the Arms Up costume** and select Duplicate.
+
+    +   4. **Click and drag the new costume up** so it comes between Arms Up and Arms
+    Down.
+
+    +   5. **Rename the middle costume** Arms Mid.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# # ANIMATE WITH CODE BLOCKS
+
+
+    You start by creating a loop, which will allow you to repeat part of your animation
+    as many times as you want. For ten jumping jacks, follow these steps:
+
+
+    +   1. **Click the Scripts tab for Sprite1.**
+
+    +   2. **Drag the following blocks into the Scripts Area and change the values
+    to match.**
+
+
+    ```
+
+    when [flag] clicked
+
+    switch costume to arms down
+
+    switch costume to arms mid
+
+    switch costume to arms up
+
+    ```
+
+
+    If you click the Green Flag button to test your code, what happens? Nothing appears
+    to happen because the costume changes appear so fast you can’t see them. You need
+    to add WAIT blocks between the SWITCH COSTUME blocks to slow down the change enough
+    for you to see it. The default of 1 second is too long, so try changing the value
+    to .25 (for a quarter of a second) for each block:
+
+
+    ```
+
+    when [flag] clicked
+
+    switch costume to arms down
+
+    wait .25 secs
+
+    switch costume to arms mid
+
+    wait .25 secs
+
+    switch costume to arms up
+
+    wait .25 secs
+
+    ```
+
+
+    Now when you click the Green Flag button, you should be able to see the costume
+    changes. If you want your figure to do ten jumping jacks, you could drag a whole
+    lot more blocks over or add just one REPEAT block.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: "```\n```scratch\nwhen green flag clicked\nrepeat 10\n    switch costume to\
+    \ arms down\n    wait 0.25 secs\n    switch costume to arms mid\n    wait 0.25\
+    \ secs\n    switch costume to arms up\n    wait 0.25 secs\n```\n```\n\nYour stick\
+    \ figure should do ten jumping jacks, but they don’t look right. Can you spot\
+    \ what is missing in the code? The figure starts in the arms down position, switches\
+    \ to arms mid, then arms up, and then skips back to arms down for the repeat.\
+    \ You need to add another arms mid position to smooth the animation between each\
+    \ repeat. And each SWITCH COSTUME needs a WAIT block, too:\n\n```\n```scratch\n\
+    when green flag clicked\nrepeat 10\n    switch costume to arms down\n    wait\
+    \ 0.25 secs\n    switch costume to arms mid\n    wait 0.25 secs\n    switch costume\
+    \ to arms up\n    wait 0.25 secs\n    switch costume to arms mid\n    wait 0.25\
+    \ secs\n```\n```\n\nClick the Green Flag button and you should now see all the\
+    \ costume changes through ten jumping jacks. But there’s still one more problem.\
+    \ When you do jumping jacks, don’t you pause a moment in both your arms up and\
+    \ arms down positions? There should be a longer WAIT after those poses, right?\
+    \ I spent a few"
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "minutes trying different WAIT values and found that these ones work best:\n\
+    \n```\nwhen [green flag] clicked\nrepeat (10)\n  switch costume to [arms down]\n\
+    \  wait (0.5) secs\n  switch costume to [arms mid]\n  wait (0.25) secs\n  switch\
+    \ costume to [arms up]\n  wait (0.5) secs\n  switch costume to [arms mid]\n  wait\
+    \ (0.25) secs\n```\n\nThe jumping jacks should look much better when you click\
+    \ the Green Flag button. But did you notice how it freezes on the last jumping\
+    \ jack mid-jump? You need one more SWITCH COSTUME block after the REPEAT block\
+    \ to bring your figure back to the upright position:\n\n```\nwhen [green flag]\
+    \ clicked\nswitch costume to [sleep]\nwait (5) secs\nswitch costume to [wake]\n\
+    ```\n\n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_26_0.png)\n\n> > Maybe I am in\
+    \ too much of a rush, but I don't want to have to sit through ten jumping jacks\
+    \ every time I make a change in my code. I usually use a smaller number while\
+    \ coding and then raise the value when I am happy with how the animation looks."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '# ## BRING HUMOR TO YOUR ANIMATION
+
+
+    If you search YouTube or other online video sites, you can find thousands of hilarious
+    stick figure animations. What do they all have in common? Like any story, your
+    animation should have a beginning, a middle, and an end. But what makes most of
+    them funny? Usually, it''s the element of surprise!
+
+
+    I know nothing is surprising about a stick figure who does ten jumping jacks.
+    If you want to make it funny, what could you add to surprise the audience? Right
+    now, the jumping jacks are like a story that''s just a middle (no beginning or
+    ending).
+
+
+    To transform this scene into a funny story, you need to answer two questions:
+
+
+    +   1. **Why is a stick figure doing jumping jacks?**
+
+    +   2. **What could prevent the stick figure from finishing jumping jacks?**
+
+
+    Watch just about any humorous scene and you will notice a character who really
+    wants something and an obstacle preventing the character from getting it. In the
+    Pixar movie *Up*, a grumpy old man wants to get away from everybody, so he straps
+    all these balloons on his house and then takes off. What goes wrong? An annoying
+    little Boy Scout flies off with him.
+
+
+    Maybe you need a second character, like the little boy in *Up*, or Batman in *The
+    Lego Movie*, or Donkey in the *Shrek* movies, or the dog in . . . that''s it!
+    Let''s give our stick person a stick pet! A dog that prevents him from finishing
+    his morning exercises!
+
+
+    # ## ADD STICK MAN''S BEST FRIEND
+
+
+    Here''s another of my favorite Scratch stick figure animation tricks. Instead
+    of drawing a new character, you can duplicate your first character and reassemble
+    the body parts (a bit like'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: "Dr. Frankenstein). This way, you make sure the characters are the right scale\
+    \ and look good together:\n\n+   1. Shift-click Sprite1 and choose Duplicate.\n\
+    +   2. To rename the two sprites, choose Info and then change the names.\n+  \
+    \ \n+      I'll call the first sprite Sticky and the second sprite Woof.\n+  \
+    \ 3. Click the Back button to exit Info view.\n\nYou should now have two sprites.\
+    \ Click the Woof sprite's icon, go to the Costumes tab, and delete all but the\
+    \ first costume by clicking the small X on each costume's icon. The first costume\
+    \ will be the basis for the new character.\n\n# ## MODIFY PARTS TO CREATE A NEW\
+    \ CHARACTER\n\nYou will use the Select tool to rotate the body and drag the other\
+    \ body parts into position. Then use the Reshape tool to sculpt the dog's head:\n\
+    \n+   1. Click the Select tool.\n+   2. Click the body shape.\n+   3. Click the\
+    \ rotate handle (the small circle above the selected shape) and drag to rotate\
+    \ the body into a horizontal position.\n+   4. Click and drag the arms and legs\
+    \ into position.\n+   5. Click the Reshape tool.\n+   6. Click the head, and then\
+    \ click and drag the control points to sculpt the head into more of a dog head\
+    \ shape."
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_29_0.png)
+
+
+    # ### DEVELOP YOUR HUMOROUS STORY
+
+
+    The dog will be the obstacle to *Sticky* finishing his morning exercise, but how
+    can you start the story? Why is *Sticky* exercising? I can think of all kinds
+    of reasons, but what would be a simple one that you could show quickly (so you
+    do not have to spend hours animating)? What if *Sticky* puts up a new poster of
+    muscle stick man? It might be funny to see a skinny stick figure walk across the
+    Stage and put up a poster of a stick figure with crazy muscles.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_29_1.png)
+
+
+    Then *Sticky* starts doing jumping jacks, but the dog runs over and nags him.
+    *Sticky* ignores the dog until it jumps up and tears part of the poster. Then
+    *Sticky* ends up chasing the dog for so long, he ends up with huge leg muscles
+    instead of muscular arms, chest, and six-pack abs. *That* could be funny.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_30_0.png)
+
+
+    How could you make it easier? What if the poster is already on the wall when *Sticky*
+    enters? The dog could be there, too. Then you just need to have the man enter
+    the scene.
+
+
+    # # WALK LIKE A MAN
+
+
+    Let''s get *Sticky* onto the Stage as fast as possible, okay? Wait, he''s already
+    on the Stage. Get him off there!
+
+
+    +   1. **Hide Woof for now by Shift-clicking the sprite and selecting Hide.**
+
+    +   2. **Select Sticky and change his costume to Arms Down.**
+
+    +   3. **Click and drag Sticky to the far-right side of the Stage.**'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '# # PROJECT 1 ANIMATION ESSENTIALS
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_31_0.png)
+
+
+    You want *Sticky* to walk onto the Stage before doing the jumping jacks, so the
+    new code needs to go between **WHEN GREEN FLAG CLICKED** and the **REPEAT** block.
+    Snap the following code blocks right under **WHEN GREEN FLAG CLICKED** and change
+    the values to match:
+
+
+    ```
+
+    ```scratch
+
+    when green flag clicked
+
+    switch costume to arms down
+
+    go to x: (-260) y: (-18)
+
+    glide (1) secs to x: (200) y: (-30)
+
+    wait (1) secs
+
+    ```
+
+    ```
+
+
+    What if you add a sleeping pose to *Woof* and have the dog wake up when the man
+    begins exercising?
+
+
+    # ## ROTATE PARTS WITH THE SELECT TOOL
+
+
+    To preserve the length of lines while rotating, use the Select tool. With vector
+    shapes, you can even change the point around which they rotate by following these
+    steps.
+
+
+    +   1. Shift-click the *Woof* icon and select Show.
+
+    +   2. Click *Woof* to select the sprite and then click the **Costumes** tab.'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# ANIMATE THE DOG
+
+
+    I think it''s finally time to bring the dog to life, don''t you? Design an awake
+    costume for Woof:
+
+
+    +   1. Shift-click Woof''s sleeping costume and choose Duplicate.
+
+    +   2. Rename the costume Wake.
+
+    +   3. Click the Select tool.
+
+    +   4. Click and drag the dog''s head up a bit (or you can use the Up Arrow key
+    for a more precise movement).
+
+    +   5. Click and drag to rotate the tail up.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_33_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_33_1.png)
+
+
+    # ADD CODE TO ANIMATE THE STICK DOG
+
+
+    Timing is essential in animation, especially when you have two or more characters
+    interacting. Can you figure out how many seconds the dog should wait until waking
+    up? Look back at the code on *Sticky*: three seconds to glide in and then a one-second
+    pause before starting the jumping jacks. So the dog should wait about five seconds,
+    right?
+
+
+    +   1. Click the Scripts tab.
+
+    +   2. If you duplicated the stick figure sprite to make the dog as I did, the
+    tab will already contain jumping jack code. Shift-click the `WHEN GREEN FLAG CLICKED`
+    block and choose Delete.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_33_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '+   3. **Drag the following code blocks to the Scripts Area and change the
+    values to match:**
+
+
+    ```
+
+    when green flag clicked
+
+    switch costume to sleep
+
+    wait 5 secs
+
+    switch costume to wake
+
+    ```
+
+
+    Click the Green Flag button and the dog should sleep for five seconds, and then
+    appear to wake up by lifting its head and tail. What might the dog do next? When
+    I enter a room that has a dog, it usually starts wagging its tail.
+
+
+    # # ANIMATE TAIL WAGGING
+
+
+    For a quick tail wag, duplicate the Wake costume, rename the new costume **Wag**,
+    and use the Select tool to rotate the tail.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_34_0.png)
+
+
+    Use a REPEAT block to switch between the Wake and Wag costumes. I think we also
+    should add a two-second delay between the dog first waking and then wagging its
+    tail. (Surely dogs need a few seconds between waking and showing excitement.)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "```\n~~~scratch\nwhen green flag clicked\nswitch costume to [sleep v]\nwait\
+    \ 2 secs\nswitch costume to [wake v]\nwait 2 secs\nrepeat 3\n    switch costume\
+    \ to [wag v]\n    wait 0.25 secs\n    switch costume to [wake v]\n    wait 0.25\
+    \ secs\n~~~\n```\n\n# ## TALK LIKE A MAN\n\nThe characters are stick figures,\
+    \ so I think it works best to “stick” (pretty hilarious, right?) to speech bubbles,\
+    \ rather than recorded sounds and voices. (You use digital audio in Project 4.)\
+    \ You could draw a speech bubble into a new costume or make a separate sprite,\
+    \ but I find using the SAY blocks easier.\n\nI want my figure to speak WHILE doing\
+    \ jumping jacks. If I put a SAY block inside the REPEAT block, Sticky will keep\
+    \ saying the same thing over and over until the last jumping jack is finished.\n\
+    \nWhat is a poor little animator to do?\n\nScratch can have different chunks of\
+    \ code running at the same time on different sprites and even within the same\
+    \ sprite. This means you can keep your current gliding and jumping jacks code\
+    \ blocks on the stick figure, add a second WHEN GREEN FLAG"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '# # 总体国家安全观
+
+
+    国家安全是指国家政权、主权、统一和领土完整、人民福祉、经济社会可持续发展和国家其他重大利益相对处于没有危险和不受内外威胁的状态，以及保障持续安全状态的能力。
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_36_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_37_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# # PROJECT 2 ANIMATE CREAT CHARACTERS
+
+
+    ENOUGH WITH STICK PEOPLE! In this project, you create a unique cast of characters
+    by using vector-drawing tools and then you learn a few design techniques to help
+    bring them to life.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_38_0.png)
+
+
+    # ## KEEP IT SIMPLE, STUPID
+
+
+    When I was younger, I learned that KISS means more than just smacking your lips
+    into somebody. It can stand for Keep It Simple, Stupid. The more complex your
+    characters are, the harder it is to animate them. So keep your character design
+    simple, dummy!'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '... draw a simple line for a mouth ...
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_40_0.png)
+
+
+    ... and then fill each face with a different color:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_40_1.png)
+
+
+    Wow, I don''t know what you see, but I see a zombie, a person, and a werewolf!
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_40_2.png)
+
+
+    To keep it simple, I will create a story that involves these three characters
+    and explore ways to bring the characters and their world to life.
+
+
+    # # GETTING A HEAD START
+
+
+    Before starting, take a moment to think about the story you want to tell and the
+    characters who would be the most fun to bring to life. If you don''t have a good
+    idea yet, don''t worry, you can start messing around with a few characters and
+    see where they lead you.'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '# PROJECT 2 ANIMATE GREAT CHARACTERS
+
+
+    # CREATE A NEW PROJECT
+
+
+    +   1. Go to scratch.mit.edu or open the Scratch 2 Offline Editor.
+
+    +   2. If you are online, click Create. If offline, choose File > New.
+
+    +   3. Name your project. (Online, select the title and type Animation Characters.
+    Offline, choose File > Save As and type Animation Characters.)
+
+    +   4. Delete the cat!
+
+
+    # PAINT A NEW SPRITE
+
+
+    +   1. Click the Paint New Sprite icon.
+
+    +   2. Click the Costumes tab.
+
+    +   3. Click the Convert to Vector button.
+
+    +   4. Click the Ellipse tool.
+
+    +   5. Click the Outline option.
+
+    +   6. Choose the black color swatch.
+
+    +   7. Click and drag to draw a head and two eyes.
+
+    +      You can hold down the Shift key to draw a perfect circle.
+
+    +   8. Draw two more ellipses for eye pupils.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_41_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_42_0.png)
+
+
+    If you want your eyes to be exactly the same size, use the Duplicate tool to make
+    exact copies.
+
+
+    Is your character beginning to emerge? If not, perhaps a bit of hair will help.
+
+
+    # ### QUICK HAIRSTYLING
+
+
+    You can draw hair with the Pencil tool or sculpt it by using the Reshape tool
+    on an ellipse or a rectangle. I will combine techniques to get a unique hairstyle
+    for my zombie:
+
+
+    +   1. Click the Ellipse tool.
+
+    +   2. Click the Solid option.
+
+    +   3. Choose a color swatch for your hair color.
+
+    +   4. Click and drag right over your character’s face.
+
+    +   5. Shift-click the Back a Layer button to send the hair to the bottom layer
+    (behind the head and eyes).
+
+    +   6. Click the Reshape tool.
+
+    +   7. Click the hair to select it.
+
+    +   8. Click and drag control points to style your hair.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_42_1.png)
+
+
+    The Pencil tool is better at drawing jagged shapes, like zombie hair bangs!
+
+
+    +   1. Click the Pencil tool.
+
+    +   2. Choose a color swatch.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: '+   4. **Click the Select tool, click the mouth, and then use the Line Width
+    slider to adjust the line thickness.**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_44_0.png)
+
+
+    # ## GIVE ’EM A NOSE JOB
+
+
+    Although some zombies may have lost a nose in their travels, I think my little
+    ghoul could use a petite schnoz. Use the Pencil tool to draw the nose on yours
+    and then use the Reshape tool to smooth it.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_44_1.png)
+
+
+    Nose placement can affect your character as much as the location of the eyes and
+    mouth, so you might want to try a few positions before you lock in your face for
+    all eternity.
+
+
+    # ## A LITTLE BODY WORK
+
+
+    Having the body, arms, and legs as separate objects makes characters easier to
+    animate.
+
+
+    +   1. **Click the Ellipse tool, choose your outline color, and then draw an oval
+    the approximate size you want for the body.**
+
+
+    I’ll choose classic black for my outline color.
+
+
+    +   2. **Click the Color a Shape tool, choose a color for the character’s shirt
+    or dress, and then click inside the initial body shape.**'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '# PROJECT 2 **ANIMATE GREAT CHARACTERS**
+
+
+    3. Click the Reshape tool, click the body to select it, and then click and drag
+    points into the shape that looks best to you.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_45_0.png)
+
+
+    # ADD SIMPLE LEGS
+
+
+    You can use the Rectangle tool to draw the legs together, use the Reshape tool
+    to taper them at the ankles, and then fill them in with the pants, tights, or
+    zombie skin color of your choice.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_45_1.png)
+
+
+    Something doesn’t look right. Oh yeah! I don’t want the zombie’s dress to be too
+    short. Shift-click the Back a Layer button so the legs appear behind the body.
+    Then draw an ellipse and reshape it into shoes.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_46_0.png)
+
+
+    # ## ARMING YOUR CHARACTERS
+
+
+    Although you can get away with combining legs, your character should have two
+    arms, right? You can follow the lazy animator way by drawing the left arm and
+    then using the ole’ one-two punch of duplicate and flip.
+
+
+    +   1. Use the Ellipse tool to draw the left arm.
+
+
+    +   2. Use the Reshape tool to refine the shape.
+
+
+    +   3. Fill the shape with skin color.
+
+
+    I’ll choose zombie-white.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_46_1.png)
+
+
+    +   4. Click the Duplicate tool, click the arm, and then drag the copy to the
+    other side.
+
+
+    +   5. Click the Flip Left-Right button.
+
+
+    +   6. Click the Select tool and then drag the arm into the correct position.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_46_2.png)
+
+
+    Oops, I just noticed my character is missing a neck! Why not duplicate the leg
+    shape and flip it vertically?'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: '# # FANGS MAKE THE BEAST
+
+
+    When drawing detailed shapes, such as sharp teeth, either zoom in or draw the
+    shape large and then shrink it to size:
+
+
+    +   1. Click the Line tool.
+
+    +   2. Click the Outline option.
+
+    +   3. Click the black color swatch.
+
+    +   4. Click and drag to draw one side of fangs.
+
+    +   5. Click back on first point to close the shape.
+
+    +   6. Click the Color a Shape tool, click the white swatch, and then click inside
+    the shape.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_50_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_50_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_50_2.png)
+
+
+    +   7. Click the Duplicate tool, click the first set of fangs, and then drag them
+    to the other side of the snout.
+
+    +   8. Click the Flip Left-Right button to flip the fangs.
+
+    +   9. Use the Select tool to drag the fangs into position.
+
+    +   10. Use the Reshape tool to adjust the mouth to fit the new snappers.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_50_3.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_50_4.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_50_5.png)'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '# # PROJECT 2 ANIMATE GREAT CHARACTERS
+
+
+    Ah, the fangs make my character much more ferocious, but he kinda looks like he''s
+    wearing a furry dress. Well, who says Werewoof is a boy? Okay, then she looks
+    like she''s wearing a furry dress!
+
+
+    # ## UNDRESS THE BEAST
+
+
+    Before you delete the dress (or some other body part), take a moment to think
+    about whether it could serve another purpose. It occurs to me that if I resize
+    the dress and move it up to the shoulders, it could look more like fur:
+
+
+    +   1. Click the Select tool, click the dress, and then drag the bottom side up
+    to make it shorter.
+
+    +   2. Click and drag the shape up to the shoulder area.
+
+    +   3. Click the Ellipse tool and then draw a new body shape.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_51_0.png)
+
+
+    +   4. Click the Reshape tool, click the body, and then drag the points to make
+    ribs.
+
+    +   5. Click the Select tool, click the legs shape, and then resize the legs to
+    fit.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_51_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '+   1. Click the Reshape tool and then click the legs.
+
+    +   2. Shift-click and drag a new point and curve on each side.
+
+    +   3. Click the Select tool, click the legs, and then drag up.
+
+    +   4. Click the feet and drag them up to the new leg position.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_53_0.png)
+
+
+    Rotating the arms was not enough. Now that the werewolf is crouching, I want to
+    bend the arms and add some claws! You could draw new claws, but your lazy author
+    will simply duplicate the fangs and reshape them to fit each paw:
+
+
+    +   1. Click the Reshape tool and then click the left arm.
+
+    +   2. Click and drag points into a bent arm position.
+
+    +   3. Click the Duplicate tool, click one set of fangs, and then drag them to
+    the left paw.
+
+    +   4. Click the Reshape tool, select the claws, and then adjust the points.
+
+    +   5. Repeat Steps 1–4 for the right arm (or duplicate and flip the left arm
+    and claw).'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_54_0.png)
+
+
+    # CREATE A THIRD CHARACTER
+
+
+    If you look at the two characters side-by-side, you would hardly guess they came
+    from the same basic figure (unless you did all the work).
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_54_1.png)
+
+
+    I set out to design three unique figures. The one remaining character is the regular
+    person — who should have a lot to worry about in this company.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'Decide which sprite is closer in shape to the new character you want to create.
+    Zomberta is more like a person than my crouching, snarling werewolf, so I will
+    duplicate her:
+
+
+    +   1. Shift-click the sprite you want to copy and then choose Duplicate.
+
+
+    +   2. Shift-click the new sprite, click the Info button, and then change the
+    name.
+
+
+    I will name my person Hector. Why not?
+
+
+    +   3. Click the Costumes tab.
+
+
+    # ## FROM ZOMBIE GIRL TO BLAND BOY
+
+
+    You already transformed one character into another character, so I am going to
+    move quickly this time. I will start by changing the skin and hair colors from
+    zombie girl to ordinary boy. Then I will draw more boyish hair (you can use the
+    Pencil or the old Reshape-on-an-Ellipse technique), reshape the nose, and move
+    the pupils to the middle of his eyes.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_55_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_55_1.png)
+
+
+    *I am not saying that anything is wrong with a boy wearing a dress, but I want
+    my character to have a more traditional boyish outfit to go with the story I have
+    in mind. The dress shape is all wrong, so I will delete it, create a new shirt,
+    and then color the legs to look like long pants.*'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_58_0.png)
+
+
+    # ### ADD A SET OF TEETH
+
+
+    I am much happier with how the eyes and nose look now. But that mouth is kinda
+    freakin'' me out. It looks like somebody knocked out the boy''s teeth out. Teeth!
+
+
+    +   1. Shift-click the costume and choose Duplicate.
+
+    +   2. Click the Color a Shape tool and then choose the white color swatch.
+
+    +   3. Click inside the mouth to fill it with white.
+
+    +   4. Click the Line tool, choose the black color swatch, and then draw a straight
+    line across the middle of the mouth.
+
+    +   5. Click the Reshape tool, click the mouth, and then adjust the shape.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_58_1.png)
+
+
+    What an improvement a set of teeth can make to a face! So keep brushing your teeth
+    or you''ll end up looking like *Zombertal*'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '# ## POSING CLOTHED FIGURES
+
+
+    Moving clothed characters involves a few extra steps. You will need to use the
+    Reshape tool to adjust the shirt after the arms have been rotated. Don''t forget
+    to duplicate the costume first in case you want the arms raised later!
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_59_0.png)
+
+
+    # ## ASSEMBLING YOUR CAST
+
+
+    After following the same steps for the right arm, I wanted to see how the boy
+    looks in comparison to his more gruesome animation mates, so I dragged all three
+    into position on the Stage.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_59_1.png)
+
+
+    You can spend as much time as you want refining your character designs, but this
+    book is about animation, so let''s move on to building your scenes, adding sound,
+    and using special effects to make your cartoons even more memorable.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# QUICK CHARACTER
+
+    IMPROVEMENTS
+
+
+    If you simply must spend a bit more time working on your characters, here are
+    some tips that might help:
+
+
+    +   - **Compare to other animation characters:** Spend a few minutes reviewing
+    a few of your favorite characters from animated films or shows with a critical
+    eye. What details help distinguish one character from another?
+
+    +   - **Add texture:** Bring your design skills to clothing by adding patterns,
+    shapes, and texture. A few wavy lines can also make for a better hairstyle.
+
+    +   - **Add a more striking pose:** Rather than just having your characters stand
+    around, experiment with more dramatic poses, which helps you express their personalities.
+
+    +   - **Add drama:** Choose a specific scene from the story you have in mind and
+    adjust the characters’ poses and expressions to match the tone and mood you want
+    to express.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_60_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '# SHARE SPRITES BETWEEN PROJECTS
+
+
+    What if you want to bring in characters from more than one project or start with
+    a blank project, work on your backdrops, and then bring characters in later? Whether
+    working online or offline, Scratch allows you to export sprites, individual costumes,
+    and backdrops from one project and then import them into another project.
+
+
+    Shift-click a sprite, costume, or backdrop and select Save to Local File.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_63_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_63_1.png)
+
+
+    Use the Upload Sprite from File or Upload Costume from File button to load your
+    character into a new project.
+
+
+    If you are working online and do not have permission to save files to your computer,
+    fear not! You can use the Scratch Backpack (at the bottom of your Scripts/Costumes/Sounds
+    page when working online).
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_63_2.png)
+
+
+    You can drag sprites, backdrops, costumes, scripts, and sounds into and out of
+    your Backpack. To date, the offline version of Scratch does not include a Backpack.'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: "+   5. For your floor, click off the bottom-left edge of the Paint Editor canvas\
+    \ and then drag toward the lower-right corner of the wall.\n+   6. Click the Color\
+    \ a Shape tool, select the color you want to use, and then fill the wall and floor\
+    \ shapes.\n+   \n+   I chose dark brown for the floor and light tan for the wall.\n\
+    \n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_64_0.png)\n\nMost of the walls in my\
+    \ house have either a window or a door. Windows have the advantage of helping\
+    \ you see the time of day, the weather, or a vicious monster looking for its next\
+    \ meal:\n\n+   1. Click the Rectangle tool, choose the black color swatch, and\
+    \ drag the Line Width slider to adjust the line thickness.\n+   2. Click and drag\
+    \ to draw the outer part of the window.\n+   3. Click the Line tool, hold down\
+    \ the Shift key, and drag across the middle of the rectangle to divide the shape\
+    \ into two parts.\n+   4. Shift-click and drag down the middle of the top section\
+    \ to indicate two panes of glass in the upper window.\n+   5. Click the Color\
+    \ a Shape tool, choose the light gray color swatch, and click inside the window\
+    \ to fill it with color."
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_65_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_65_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_65_2.png)
+
+
+    Adding curtains will bring more color into the room and make it obvious that you
+    are inside:
+
+
+    +   1. Click the Rectangle tool, and then click and drag across the left side
+    of the window.
+
+
+    +   2. Click the Reshape tool, Shift-click midway down the right side of the rectangle
+    to add a point and a curve, and then drag to the left for an open-curtain look.
+
+
+    +   3. Click and drag to adjust the top-right and bottom-right points.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_65_3.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_65_4.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_65_5.png)
+
+
+    +   4. Click the Color a Shape tool, choose a curtain color, and then click inside
+    the curtain.
+
+
+    +   5. Click the Duplicate tool, click the curtain, and then drag the copy to
+    the right side of the window.'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '# 6  Click the Flip Left-Right button.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_66_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_66_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_66_2.png)
+
+
+    You can use the Reshape tool to adjust the length of the curtain or reveal more
+    of the window.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_66_3.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_66_4.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_66_5.png)
+
+
+    # MAKE SCENES MORE IMMERSIVE
+
+
+    What if you want viewers to see objects through a window, or have characters enter
+    and exit through doors or hide behind trees? Instead of putting the walls, windows,
+    floors, and doors all in one backdrop, you can put them in a sprite! Scratch sprites
+    are far more flexible than backdrops; sprites can move behind and in front of
+    each other, move from side-to-side, and get smaller and larger.'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '# CHANGE A BACKDROP INTO A SPRITE
+
+
+    Although you cannot convert a backdrop into a sprite, you can drag a backdrop
+    onto a sprite, which will become a new costume on that sprite:
+
+
+    +   1. Click the Paint New Sprite button.
+
+    +   2. Click the Stage button (below the actual Stage).
+
+    +   3. On the Backdrops tab, click and drag onto the new sprite the backdrop that
+    includes your window.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_67_0.png)
+
+
+    +   4. While you are still on the Backdrops panel, select the plain white backdrop.
+
+
+    If you do not have a backdrop, click the Paint New Backdrop button.
+
+
+    +   5. Click and drag the new wall sprite into position on the Stage.
+
+
+    # DESIGN SEE-THROUGH WINDOWS
+
+
+    You can enable seeing other sprites through windows in a few ways. One way is
+    to delete the color inside the windowpanes, but that won''t work here. Can you
+    figure out why? You drew the wall'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: 'rectangle first and *then* drew the window over it. Because it''s a vector
+    sprite, each object is on its own layer.
+
+
+    Instead draw a different section of wall to the left, right, top, and bottom edges
+    of the window, remove the glass:
+
+
+    +   1. Select the wall/floor/window sprite and click the Costumes tab.
+
+    +   2. On the Paint Editor canvas, click anywhere on the wall and then click the
+    Delete key on your keyboard.
+
+    +   3. Click the Color a Shape tool, click the empty color swatch, and then click
+    the glass.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_68_0.png)
+
+
+    To make a character appear through the window, move the sprite into position,
+    and then send the character to a back layer:
+
+
+    +   1. On the Stage, click and drag the character(s) to overlap with the window.
+
+    +   2. Click anywhere on the curtain or floor and hold down your mouse or trackpad
+    button for a few seconds to make that sprite move to the front layer.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_68_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: 'To keep the window transparent, you will need to draw the wall in four sections
+    and leave a hole around the window:
+
+
+    +   1. **On the Paint Editor canvas, click the Rectangle tool. Then click the
+    Solid option and choose the color of your wall in the Paint Editor.**
+
+    +   2. **Click and drag from just above the top-right corner across the canvas
+    to the right side of the curtain and down to the floor.**
+
+    +      - It''s okay to overlap the curtain and the floor a bit.
+
+    +   3. **Hold down the Shift key while you click the Back a Layer button.**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_69_0.png)
+
+
+    **4 Repeat Steps 2 and 3 for the remaining three sections of the wall. Click off
+    the canvas to ensure the section fills each area.**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_69_1.png)
+
+
+    After your new wall is filled, you can give viewers a better sense of depth by
+    placing one character inside and placing another outside the window looking in.'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_70_0.png)
+
+
+    To make the scene more immersive, you can add something inside the room that the
+    character can move in front of and behind. In theater, film, and television, these
+    objects are called *props*.
+
+
+    # ## *BUILD YOUR OWN FURNITURE*
+
+
+    Nothing quite says “living room” like a big fluffy couch. You can follow along
+    or draw a different prop that fits your room (and your story) better.
+
+
+    The simplest way to draw props is to break them down into smaller parts. Even
+    though most couch cushions are rectangular, it is better to begin with an ellipse
+    and then use the Reshape tool to get the rounded corners right:
+
+
+    +   1. Click the **Paint New Sprite** icon below the Stage.
+
+    +   2. Click the **Costumes** tab and then click the **Convert to Vector** button.
+
+    +   3. Click the **Ellipse** tool, choose the black color swatch, drag the **Line
+    Width** slider to adjust the line thickness, and then choose the **Outline** option.
+
+    +   4. Click and drag to draw the first cushion.
+
+    +      Leave enough room for the arms and two more cushions.'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '+   5. Click the Reshape tool, select the cushion, and then click and drag
+    the middle edge points inward to form a rounded rectangle.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_71_0.png)
+
+
+    +   6. Click the Color a Shape tool, click the color you think will look good
+    in your room, and then click inside the cushion.
+
+
+    The color should contrast the color of the wall and the character''s skin, hair,
+    and clothing.
+
+
+    +   7. Click the Duplicate tool, click the first cushion, and drag the copy into
+    place beside it. Repeat for the third cushion.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_71_1.png)
+
+
+    > > *If you hold down the Shift key, you can keep making duplicates of the shape
+    without having to reselect the Duplicate button each time. Release the Shift key
+    before dragging the final copy into place.*
+
+
+    +   8. Click the Select tool and then Shift-click each cushion until all three
+    are selected.
+
+
+    Don''t worry about the gaps; you can fill them in later.
+
+
+    +   9. Click the Group button.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '+   10. Click the Duplicate tool, click the group of cushions, and then drag
+    them to where the seat cushions should be.
+
+
+    +   11. Click the Select tool and click the bottom-center control point to shorten
+    the group of cushions.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_72_0.png)
+
+
+    +   12. Click the Ellipse tool, choose the black color swatch, drag the Line Width
+    slider to adjust the line thickness, and then choose the Outline option.
+
+
+    +   13. Click and drag to draw an oval where the left couch arm should be.
+
+
+    +   14. Click the Reshape tool, select the arm, and then click and drag points
+    to sculpt a thick couch arm shape.
+
+
+    +   15. Click the Color a Shape tool, choose the same color you used for the cushions,
+    and then click inside the arm.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_72_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: "+   3. Click the Rectangle tool, click the Solid option, and then choose a\
+    \ light blue color swatch for the sky.\n+   4. Click just off the top-left edge\
+    \ of the Paint Editor canvas, and then click and drag to approximately halfway\
+    \ down the canvas.\n+   5. Choose a shade of green for the grass, click just off\
+    \ the bottom-left corner of the Paint Editor canvas, and then drag up to the bottom\
+    \ edge of the sky.\n+   \n+   It's okay to overlap a bit.\n\n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_74_0.png)\n\
+    \nYou can make a realistic sky by using a *gradient*, which allows you to blend\
+    \ between two colors.\n\n+   1. Click the Color a Shape tool.\n+   2. Click the\
+    \ Horizontal Gradient option.\n+   3. Click the white color swatch.\n+   4. Click\
+    \ the Swap Colors button to swap the foreground and background color.\n+   5.\
+    \ Click a sky blue color swatch.\n+   6. Click inside the sky rectangle to replace\
+    \ the flat blue color with the gradient."
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_75_0.png)
+
+
+    Generally, you will want the sky to be brightest near the horizon and darkest
+    toward the top of the canvas. You can also experiment with gradients on the ground.
+    (I chose a light and darker green.)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_75_1.png)
+
+
+    Click the Rectangle tool and select a dark gray color swatch. Then click and drag
+    from the horizon (the border between your sky and ground rectangles) down to the
+    bottom of the canvas.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_75_2.png)
+
+
+    Ewww! That does not look like a road; it ruins the nice sky-over-grass gradient
+    effect and looks more like a flag than a landscape.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '# DRAW SCENES WITH PERSPECTIVE
+
+
+    By using perspective, you can make some objects appear far away while others appear
+    to be closer to the viewer. Making the top of the road shape narrower will give
+    a better sense of perspective.
+
+
+    Click the Reshape tool, click the road rectangle to select it, and then click
+    and drag the top points closer together.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_76_0.png)
+
+
+    > *If you are having trouble getting the top corners of the road to line up with
+    the straight horizon or you just want to be lazy like me, try this simple trick.
+    Select the sky rectangle, bring it to the front layer (Shift-click on the Forward
+    A Layer button), and then drag the bottom down to cover the top of the grass and
+    road rectangles.*
+
+
+    You can adjust the distance between the left and right corners to give a sense
+    of the road''s width and length. The best part is that the road acts as a guide
+    for the rest of the objects in your scene.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_76_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: '# # QUICK SCENERY IMPROVEMENTS
+
+
+    Here are a few tips to enhance your scenes:
+
+
+    +   - **Use reference photographs:** You can use the web or your own camera to
+    grab interior and exterior images. If you want to trace over them, be sure to
+    convert to Vector mode after you import your photo as a sprite or backdrop.
+
+    +   - **Apply more gradients:** Gradients are not just for sky, ground, and road.
+    Try horizontal, vertical, and radial gradients on trees, buildings, or your favorite
+    breakfast cereal. Radial gradients work best on circular objects, and horizontal
+    and vertical gradients work better inside rectangular shapes.
+
+    +   - **Add shadows:** Think about how you might duplicate a sprite, fill it with
+    a dark gray color, and reshape it (like the trees in the first image in this project).
+    Be warned: After you put a shadow on one object, you have to put one on all the
+    other objects or your scene may look incomplete.
+
+    +   - **Consider the weather:** Is it a cloudy day? Rainy? Brainy?
+
+    +   - **Consider the time:** Especially for exterior scenes, it is important to
+    choose whether it is morning, afternoon, or evening.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_80_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: '# PROJECT 4 SOUNDS GOOD TO ME
+
+
+    **ARE YOU LIKE MY NIECE AND NEPHEW?** Half the time that you are supposedly watching
+    television, your eyes are not even on the screen. You’re texting somebody with
+    your phone or looking up something on your tablet or playing a game on your laptop
+    or even doing homework. One of the easiest ways to catch your attention is to
+    hit the Mute button on the remote, right? “Hey, I was watching that!” This should
+    illustrate how important sound is to conveying a story.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_81_0.png)
+
+
+    # THAT’S WHAT HE SAID
+
+
+    In previous projects, you began thinking about your story, designed some characters,
+    and created an interior and an exterior scene. The next step in the animation
+    process is to add dialogue.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: 'Dialogue is so important to the animation process that voices are recorded
+    before almost any animation begins because synchronizing character animation to
+    sound is easier than trying to fit sound into finished animation. In the animation
+    world, this initial sound recording is the *scratch track*. How perfect is that?
+
+
+    *Although this project is about recording and playing audio, there is another
+    way to have your characters speak to one another in Scratch. If you add the SAY
+    block to a character, any text you type in the block will appear in a speech bubble.
+    You can even control how long the speech bubble appears by using a SAY FOR SECONDS
+    block.*
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_82_0.png)
+
+
+    # WRITE DIALOGUE FOR YOUR CHARACTERS
+
+
+    Okay, don’t hate me, but even if you are going to provide the voice for all your
+    characters, writing your dialogue before you'
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: '+   2. **If you are online, browse and open the project you want to copy. If
+    offline, choose File ⇨ Open and select your project.**
+
+    +   3. **Name your project. If online, click the File menu and choose Save a Copy.
+    If offline, choose File ⇨ Save As.**
+
+    +      I will name my version *Animation Soundtrack*.
+
+    +   4. **Delete the cat.**
+
+
+    You can add sound to a Scratch project in three ways:
+
+
+    - Choose a sound from the Sound Library.
+
+    - Import a sound file (.mp3 or .wav format).
+
+    - Record a sound directly in Scratch.
+
+
+    Although the Sound Library has a bunch of music and sound effects to choose from,
+    it has no dialogue.
+
+
+    # FIND THE RECORD BUTTON
+
+
+    In the previous projects, you spent most of your time in the Paint Editor. As
+    you may have guessed, in this project you will be spending more time in the Sound
+    Editor.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_84_0.png)
+
+
+    Click the Sounds tab (to the right of the Costumes tab) to get to the Sound Editor.'
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: "# # PROJECT 4 SOUNDS GOOD TO ME\n\n*Note:* If you do not have a microphone\
+    \ connected to your computer or you want to use audio recorded on a different\
+    \ device (such as a phone or a digital recorder), click the **Upload Sound from\
+    \ File** button and skip ahead to the “Edit Sound Waves” section.\n\nBefore you\
+    \ start clicking, recording, and playing, it’s important to decide where each\
+    \ sound should go.\n\nIn Scratch, sounds are handled the same way as costumes\
+    \ and scripts. Just as each sprite can have several different costumes and code\
+    \ blocks, each sprite can also contain several different sounds. Because my character,\
+    \ *Hector*, has the first line of dialogue, I will select his sprite before recording:\n\
+    \n+   1. Click the sprite of the character who will be speaking (or growling or\
+    \ moaning), and then click the **Sounds** tab.\n+   2. Shift-click the **Pop**\
+    \ sound and choose **Delete**. Or click the **X** on the **Sound** icon to delete\
+    \ it.\n+   \n+      By default, each sprite has the *Pop* sound. Unless you are\
+    \ planning to have your character pop (or have it attack a roll of bubble wrap),\
+    \ you need to delete the sound.\n+   3. Click the **Record New Sound** button.\n\
+    \nYou might think that Scratch would start recording as soon as you click the\
+    \ **Record New Sound** button. Nope! That button works like the **Paint New Costume**\
+    \ button; it creates a sound object that appears in the **New Sound** column of\
+    \ the **Sound Editor**. Like using the Paint tools (Rectangle, Line, and so) to\
+    \ add shapes to a costume, recording adds sound to a sound object.\n\n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_85_0.png)\n\
+    \n*If you have more than one character in your animation, it is generally a good\
+    \ idea to record each of their lines separately. Later, you will learn how to\
+    \ use code blocks to control when each sound will play.*"
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: 'While you are speaking or growling or moaning, a vertical green bar should
+    appear to the left of the recording controls. The bar shows how loud your voice
+    sounds through the microphone. As your voice gets louder, you may see yellow or
+    even red appear near the top of the bar. This means the sound is too loud and
+    may be distorted. You can either lower your voice or adjust the Microphone Volume
+    slider below the Record button. (Move the slider to the left for a real loudmouth
+    or to the right for that friend you are always asking, “Say what?”)
+
+
+    # EDIT AUDIO CLIPS
+
+
+    Editing your sound recordings is one of the coolest features of Scratch! Imagine
+    if you bribe your big sister to act as the voice of a mad scientist in your cartoon;
+    you go to all the trouble of writing down her dialogue, you hit Record, and she
+    makes a mistake or just pauses too long between two words. Instead of recording
+    the lines again, you can cut out the part you don''t want, as easily as selecting
+    and deleting a shape on the Paint Editor canvas.
+
+
+    After you finish recording your sound, something like this should appear in the
+    sound canvas:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_87_0.png)
+
+
+    That row of black, squiggly shapes is called a sound wave, which is a visual version
+    of the sound you just recorded.
+
+
+    ▶ Do I really need to tell you to click the Play button to hear your recording?
+    Seriously? In case you have trouble finding the button, it’s beside Stop and Record.
+
+
+    Now that you have recording and playing sound out of the way, let’s get to the
+    cool part: editing sound clips!'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: 'When editing a long sound clip, you might find it helpful to expand the Sound
+    Editor. Choose Edit → Small Stage Layout or click the small, gray triangle between
+    the Stage and the Sound Editor to expand and contract your work area.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_88_0.png)
+
+
+    # TRIM BEGINNING OF SOUND
+
+
+    Start by deleting the extra silence (where the line is completely flat) at the
+    beginning of the sound wave:
+
+
+    +   1. **Select the sprite you recorded audio on, and then click the Sounds tab.**
+
+    +   2. **If you have more than one sound, click the one you want to edit.**
+
+    +   3. **Use the horizontal scroll bar to find the beginning of the sound you
+    want to use.**
+
+    +   4. **Click the sound wave right at the point where the silence ends and drag
+    left, all the way to the beginning of the sound wave.**
+
+    +   5. **Below the sound wave, click the Edit menu and choose Delete.**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_88_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: 'Okay, maybe you don''t think it''s that cool to **delete silence**. A bit like
+    deleting nothing, right? But check this out: Each blob represents one word, and
+    the flat lines are the bits of silence in between (unless you talk as fast as
+    my friends in New York City, whose words practically overlap).
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_89_0.png)
+
+
+    You can delete a word the same way you deleted silence, by clicking and dragging
+    over the word and then choosing Edit⇢ Delete. The Edit menu also enables you to
+    undo and redo edits, copy part of your audio and paste it somewhere else, and
+    select the entire sound wave.
+
+
+    # ## USE SOUND EDITING EFFECTS
+
+
+    *Sound Editor effects* allow you to modify the volume of any part of your sound
+    wave, as well as reversing a sound (fun to try out, but not useful for recorded
+    dialogue unless you want a character possessed by a demon).
+
+
+    Try making one of the words in your recording louder:
+
+
+    +   1. **Click and drag to select the part of the sound wave you want to make
+    louder.**
+
+    +   2. **Below the sound wave, click the Effects menu and choose Louder.**'
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_90_0.png)
+
+
+    Notice how that part of the sound wave appears taller after the effect is applied.
+    Sound may be invisible in the real world but not inside Scratch!
+
+
+    # # PLAY SOUND WITH CODE BLOCKS
+
+
+    You know how to play sound in the Sound Editor, but how do you get the sound to
+    play along with the animation? Two code blocks make the recorded dialogue start
+    when the Green Flag button on the Stage is clicked:
+
+
+    +   1. Click the sprite of the character for which you recorded dialogue.
+
+    +   2. Click the Scripts tab.
+
+    +   3. Click the Sound category.
+
+    +   4. Drag the PLAY SOUND block or the PLAY SOUND UNTIL DONE block into the Scripts
+    Area.
+
+    +   5. Click the Events category and then drag and snap the WHEN GREEN FLAG CLICKED
+    block onto the top of the PLAY SOUND block:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_90_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: '# PROJECT 4 SOUNDS GOOD TO ME
+
+
+    If you have more than one sound stored in your character sprite, you can choose
+    which one to play by using the drop-down menu in the PLAY SOUND block. Then when
+    you click the Green Flag button, the selected sound should play.
+
+
+    What''s the difference between PLAY SOUND and PLAY SOUND UNTIL DONE? If you have
+    more code blocks snapped into place below the PLAY SOUND block, those commands
+    will run *while* the sound is playing. If you use PLAY SOUND UNTIL DONE, the other
+    blocks will not run until the sound has finished playing.
+
+
+    If you do not want your sound to play right away, snap a WAIT block above it and
+    set the number of seconds to wait:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_91_0.png)
+
+
+    # ANIMATE CHARACTER SPEECH
+
+
+    If you''ve recorded dialogue for one of your characters, the next logical step
+    is to make them look like they are speaking. You can achieve this in several ways:
+
+
+    +   - Display the character while playing the recorded voice. (Duh!)
+
+    +   - Animate the character''s mouth. (Easier said than done, right?)
+
+    +   - Show who or what the character is speaking to. (Like how you only see Charlie
+    Brown while some invisible adult is saying, "Whuh wuh wh wh whaughh.")
+
+    +   - Use a voiceover, where you see the character but when he or she starts talking,
+    you show something else. (You often see this in a flashback, where a character
+    tells you about something that already happened while you see some of the stuff
+    he or she is describing.)'
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '# # PROJECT 4 SOUNDS GOOD TO ME
+
+
+    Did you notice how all the characters I designed in Project 2 start with an open
+    mouth? This lets me add teeth or a tongue or both. Then I can just duplicate the
+    costume and reshape the mouth for the closed-mouth view.
+
+
+    +   1. Select the sprite that will be talking, and then click the **Costumes**
+    tab.
+
+    +   2. Shift-click the costume with the character’s mouth open and select **Duplicate**.
+
+    +   3. Rename the first costume to *Mouth Open* and the second costume to *Mouth
+    Closed*.
+
+    +   4. Select the Mouth Closed costume.
+
+    +   5. Use the Reshape tool to modify the mouth so it appears closed.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_93_0.png)
+
+
+    You should now have a character sprite with at least two costumes (Mouth Open
+    and Mouth Closed), recorded dialogue, and a short script (two code blocks) that
+    makes the audio play as soon as somebody clicks the Green Flag button.
+
+
+    # ## EASY LIP-SYNCHING
+
+
+    You will use a sequence of code blocks to alternate between the open- and closed-mouth
+    costumes while the audio is playing:
+
+
+    +   1. Select the sprite that will be talking, and then click the **Scripts**
+    tab.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '# 2 Drag and snap the SWITCH COSTUME TO, WAIT, and REPEAT blocks to the bottom
+    of the other two blocks in the Scripts Area:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_94_0.png)
+
+
+    I used the drop-down menu to choose Open in one SWITCH COSTUME TO block and Closed
+    in the other. I also changed the WAIT time from the default 1 second to .25 second
+    and the REPEAT value to 8. At the least, you will probably have to tweak the REPEAT
+    value for your character. Can you figure out why?
+
+
+    When the Green Flag button is clicked, I want the mouth to open and close for
+    as long as the audio plays. I didn''t automatically know it would take 8 times
+    of opening and closing to match the audio. The first time, I guessed 10. That
+    was too long, so I tried 6, and then, finally, 8. You will have to adjust the
+    value based on the length of your audio. You can also try different times for
+    the WAIT block until you get the look you want.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_94_1.png)
+
+
+    > If you do not use the WAIT blocks, the costumes will swap so fast you will not
+    be able to see the costume change.
+
+
+    # ACHIEVE MORE REALISTIC LIP-SYNCHING
+
+
+    Go to a mirror, stand really close, fix your gaze on your mouth, and say the word
+    donut as slowly as you can. Notice how not only your lips but also your teeth
+    and even your tongue combine'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: 'in different ways depending on which letters or sounds you are forming. For
+    the *d*, your teeth start together and your tongue is at the roof of your mouth.
+    When you get to *o*, your mouth is open and then it closes partway while your
+    tongue bends up to the roof of your mouth for the *n*. Your mouth opens for the
+    *u* and returns to the same position as the *n* for the *t*.
+
+
+    Don''t worry: You do *not* have to draw every single letter of your dialogue (that
+    would take forever!) Most people talk so fast you see only a few distinct mouth
+    shapes. If you don''t believe me, go back to that mirror and say, “I love donuts,”
+    the way you normally speak.
+
+
+    The key to getting more realistic speaking animation is to animate the shapes
+    the mouth makes at key times, otherwise known as *keyframes* (frames in which
+    something important changes). Animators refer to the basic shapes your mouth makes
+    to form the vowel and consonant sounds as *phonemes*. Although the English alphabet
+    has 26 letters, there are far fewer phonemes because many letters overlap, such
+    as M, P, and B (lips together) and D and T (tongue against upper teeth).
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_95_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: 'So that you''re on the same page as I am, let''s all make our characters say,
+    "I love donuts." (I mean, who *doesn''t* love donuts?) I''m going to switch to
+    Zomberta. Surely, zombies would love those gooey jelly donuts if they tried them.
+
+
+    +   1. **Click the sprite of the character who will be speaking, and then click
+    the Sounds tab.**
+
+    +   2. **Click the Record New Sound button.**
+
+    +   3. **Rename the new sound object** Donuts.
+
+    +   4. **Click the Record button and say, "I love donuts."**
+
+    +   5. **Click the Stop button.**
+
+    +   6. **Select any silence at the beginning of your sound wave and choose Edit
+    → Delete.**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_96_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'When your donut recording is ready, it is time to choose the key phonemes to
+    add to your character. Here’s what I think will work best:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_97_0.png)
+
+
+    See what I mean about duplicate phonemes (using #1 three times and #3 and #6 twice)?
+    I did not create phonemes for the u or the t in *donuts*. Can you figure out why?
+    The t and d are the same phoneme, and when I say *donuts*, the emphasis is on
+    the first syllable (“DO-nuts”), so my mouth barely opens for the *u*.
+
+
+    # CREATE CUSTOM PHONEME COSTUMES
+
+
+    You need only phonemes 1, 3, 4, and 6 for your sentence. If you want to use your
+    Mouth Open costume for #1, you need to create just two more mouth shapes:
+
+
+    +   1. Select the character you want to animate, and then click the Costumes tab.
+
+    +   2. Shift-click the Mouth Open costume and choose Duplicate.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '+   3. Rename the new costume to correspond to the new phoneme mouth shape
+    you are creating (such as “D/5/T/E”).
+
+    +   4. Use the Reshape tool to change the mouth to the desired phoneme shape.
+
+    +   5. Repeat Steps 2–4 for each remaining phoneme.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_98_0.png)
+
+
+    *Wanna save yourself a ton of animation time? Why not make a new sprite named
+    Talking, with each phoneme as a different costume. Then you can place that mouth
+    over any character on the Stage. This trick will allow you to animate your character’s
+    body separately from its mouth and then duplicate the sprite instead of creating
+    a different set of phonemes for every character.*
+
+
+    After you create the phonemes you need, all that’s left is to synch them with
+    the audio recording.
+
+
+    # **SWITCH COSTUMES TO MATCH PHONEMES**
+
+
+    Make sure you renamed all your costumes; otherwise, coding will be tricky:
+
+
+    +   1. Select the sprite containing the phoneme costumes.
+
+    +   2. Click the Scripts tab.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: '+   5. **Drag the following blocks into the Scripts Area:**
+
+
+    ```
+
+    ~~~scratch
+
+    when [green flag v] clicked
+
+    play sound [donuts v]
+
+    switch costume to [L, N, TH v]
+
+    wait (1) secs
+
+    ~~~
+
+    ```
+
+
+    +   4. **Shift-click the SWITCH COSTUME TO block, choose Duplicate, and drag and
+    snap the copies to the bottom of the current blocks:**
+
+
+    ```
+
+    ~~~scratch
+
+    when [green flag v] clicked
+
+    play sound [donuts v]
+
+    switch costume to [L, N, TH v]
+
+    wait (1) secs
+
+    switch costume to [L, N, TH v]
+
+    wait (1) secs
+
+    ~~~
+
+    ```
+
+
+    +   5. **Repeat Step 4 until you have a SWITCH COSTUME TO block and a WAIT block
+    for each phoneme.**
+
+
+    +   6. **Select the phoneme in each SWITCH COSTUME block.**
+
+
+    +   7. **Adjust the values of the WAIT block so the phoneme costumes come at the
+    proper time while playing audio.**
+
+
+    My final script looks like this (I added red letters outside Scratch to show which
+    blocks correspond to each part of my donuts audio):'
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_100_0.png)
+
+
+    That final *M* shape closes the character''s mouth when he or she has finished
+    talking.
+
+
+    After you master the phonemes in *donuts*, you should be able to lip-sync all
+    your animation characters. The key is finding the most important mouth shapes
+    for any given word or phrase. And the faster your character talks, the fewer phonemes
+    you should use. Otherwise, your character''s mouth will be moving like crazy!'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '# MORE DIALOGUE TIPS
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_101_0.png)
+
+
+    +   - **Animate the jaw:** When you speak, it''s not just about your lips, teeth,
+    and tongue. Head back to the mirror and see where your jaw is when you go through
+    the phonemes. It''s easy to add: Just use the Reshape tool to tweak the bottom
+    of the head.
+
+    +   - **Animate the eyes and eyebrows:** People tend to raise their eyebrows and
+    open their eyes a bit wider when asking a question. What other ways can you change
+    the eyes when a character speaks? (Your mirror beckons.)
+
+    +   - **Add blinking:** Unless your characters are in a staring contest, try adding
+    an occasional blink to make them more realistic (or a wink to get them a date).
+
+    +   - **Animate hands:** Have you noticed how some people move their hands as
+    they speak, almost as if they are conducting an orchestra (or trying to distract
+    you while stealing your wallet)?
+
+    +   - **Try Audacity:** Audacity (audacity.sourceforge.net) is a free audio-editing
+    application that gives you far more control over audio editing than you have with
+    Scratch. Some of the biggest advantages are being able to zoom in to and out of
+    your sound wave, show precise time information, speed up and slow down audio,
+    and apply more sophisticated sound effects.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: '# PROJECT 5 LIGHTS, CAMERA, ACTION!
+
+
+    YOU HAVE COME UP WITH A STORY, CAST YOUR CHARACTERS, CREATED YOUR BACKDROPS, AND
+    RECORDED SOME DIALOGUE.
+
+
+    Now it’s time to put all the elements together into an animation.
+
+    The mix of design and programming tips in this project can
+
+    streamline your animation process.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_102_0.png)
+
+
+    # (NOT) STARTING FROM SCRATCH
+
+
+    You should begin by opening a project that contains any
+
+    characters, backdrops, or sounds (preferably all three) that you
+
+    want to include in your animation. If I’ll be using my characters,
+
+    backdrops, and sounds throughout this project, while you should
+
+    be using yours.
+
+
+    # CREATE A NIGHT SCENE
+
+
+    I want my first scene to be an interior of Hector’s apartment at
+
+    night. But what if the character and backdrop I designed look
+
+    like this?'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: 'Some Scratchers don''t even think to add code to their backdrop, but several
+    blocks in the Looks category work on backdrops. One of them can help you transform
+    day into night:
+
+
+    +   1. **Click the Stage button** located to the left of your sprite icons.
+
+    +   2. **Click the Scripts tab.**
+
+    +   3. **Click the Looks category.**
+
+    +   4. **In the Scripts Area, click one time in the SET EFFECT TO block.**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_104_0.png)
+
+
+    Inside the SET EFFECT TO block, choose Brightness, change the value to **50**,
+    and then click one time in the block. What happens to the backdrop? It gets quite
+    a bit brighter. If you changed the value to the maximum of **100**, the backdrop
+    would be completely white. So how would you make it darker? Try a negative number!'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: '# **PROJECT 5** *LIGHTS, CAMERA, ACTION!*
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_105_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_105_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_105_2.png)
+
+
+    I find -35 works well for my exterior scene. I''ll unhide (Shift-click and select
+    Show) the wall, the couch, and *Hector* to see how the scene looks now.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_105_3.png)
+
+
+    Better. But what if I want it to be darker inside?
+
+
+    # **TURN OUT THE LIGHTS**
+
+
+    What if you could put a black curtain over the entire scene and then make it partially
+    transparent? That''s where the Ghost effect comes in! (Hint: It''s not just for
+    ghosts.)
+
+
+    +   1. Below the Stage, click the Paint New Sprite icon.
+
+    +   2. Click the Costumes tab.
+
+    +   3. Click the Fill with Color tool.'
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "# # PROJECT 5 LIGHTS, CAMERA, ACTION!\n\nWhen you change the SET EFFECT TO\
+    \ values to Ghost and 35 and click the Green Flag button, your scene becomes darker.\
+    \ You can adjust the value to suit your taste.\n\n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_107_0.png)\n\
+    \n![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_107_1.png)\n\n# ## FADE-IN AND FADE-OUT\n\
+    \nYou can achieve a fade-in effect at the beginning of a scene by gradually changing\
+    \ the Ghost value from 0 to 100.\n\n```\n```\nset ghost effect to 0\nrepeat 100\n\
+    \    change ghost effect by 1\n```\n```\n\nTo fade to black at the end of a scene,\
+    \ set the Ghost value to 100 and change it by -1:\n\n```\n```\nset ghost effect\
+    \ to 100\nrepeat 100\n    change ghost effect by -1\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: '# CAMERA (OR WHAT DO I FOCUS ON?)
+
+
+    Have you noticed how animators alternate between wide shots that show you the
+    entire scene and close-ups that may show only part of a character (most frequently,
+    the face)?
+
+
+    In the following three images, I used the SET SIZE TO block to change the size
+    of *Hector*, the window, and the couch from 100% to 250% to 500%:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_108_0.png)
+
+
+    Wait a minute! Why is there so little difference between the size of *Hector*''s
+    face in the second and third image? Scratch has limitations on how much you can
+    increase a sprite size when using **LOOKS** blocks. Fortunately, I can make *Hector*
+    even larger in the Paint Editor.
+
+
+    # INCREASE THE COSTUME SIZE
+
+
+    You can increase the size of a character''s costume by grouping the shapes and
+    using the **Grow** tool near the very top of the Paint Editor. It is a good idea
+    to duplicate a costume before changing its size so you can quickly switch back
+    to its original size:
+
+
+    +   1. Click the **Costumes** tab.
+
+    +   2. Shift-click the current costume and choose **Duplicate**.'
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: 'A camera is capable of more than only zooming in and out on characters. Another
+    frequently employed camera technique is to alternate views, such as seeing a character
+    from the front or from the side.
+
+
+    # ## CREATE A BACK VIEW OF CHARACTERS
+
+
+    I ended Project 3 with *Zomberta’s* back to the viewer as she appeared to walk
+    toward a camp cabin in the distance.
+
+
+    The following sequence of images shows how I modified the sprite from a front
+    view to a rear view by pulling the hair over her face and then sending her arms
+    to the back layer.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_110_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_110_1.png)
+
+
+    After you have a front and back view for each character, you can alternate between
+    them during an encounter.
+
+
+    If you don’t like having a blank wall behind *Zomberta*, you could try flipping
+    the wall sprite so the window appears on the other side.'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_111_0.png)
+
+
+    # ## CREATE A SIDE VIEW OF CHARACTERS
+
+
+    The most frequent use of a side view is for characters walking or running. Here''s
+    how you could change *Hector* to a side view by using the **Reshape** tool:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_111_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_111_2.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_111_3.png)
+
+
+    You can spend days (even weeks) tweaking each character view. Scratch makes it
+    easy to swap costumes later, so don''t spend too much time on views until you
+    know your animation really needs each one.
+
+
+    # ## ACTION! (OR LET''S GET THE STORY MOVING)
+
+
+    It is finally time to bring your characters to life, tell your story, and impress
+    your friends, family, and classmates. If you find yourself'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: 'getting frustrated, check out the credits from any animated film to remind
+    yourself how many people come together to make an animated tale. If you enjoy
+    one part of the process much more than another, perhaps it''s time to recruit
+    a few collaborators.
+
+
+    # ANIMATE SPRITE ENTERING THE SCENE
+
+
+    To save a bit of time, I''m going to use the "cheap" walking technique, in which
+    a character keeps facing the camera and bounces up and down:
+
+
+    +   1. **Click and drag your sprite to the *ending position* on the Stage** (where
+    you want the character to stop once on the Stage).
+
+    +   2. **Click the Scripts tab.**
+
+    +   3. **Drag the following blocks into the Scripts Area and change the values
+    to better fit your sprite and scene:**
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_112_0.png)
+
+
+    When you click the Green Flag button, you should notice that the character looks
+    like it''s being pulled across the floor rather than walking.
+
+
+    # ADD A (SLIGHTLY) MORE REALISTIC WALK
+
+
+    When people walk, they do not just move horizontally across the floor. With each
+    step, their entire bodies also move up and down. Replacing that GLIDE block with
+    the following code blocks is a quick way to make your character''s walk more believable:
+
+
+    +   1. **Click the Scripts tab for your character''s sprite.**
+
+    +   2. **Delete the GLIDE block below the GO TO X Y block.** (Shift-click and
+    choose Delete.)'
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: '# PROJECT 5 LIGHTS, CAMERA, ACTION!
+
+
+    +   3. Drag and snap the following blocks to the bottom of the GO TO block (shown)
+    and change the values to match:
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_113_0.png)
+
+
+    When you click the Green Flag button, your character has a more realistic walk.
+    You can tweak the WAIT values to make your character a bit faster or slower, and
+    change the X and Y values for a better-looking stride.
+
+
+    # BROADCAST ANIMATION MESSAGES
+
+
+    When a character reaches its destination, how do you send a message to other sprites
+    and backdrops to do their thing? That''s where *broadcasting* comes in!
+
+
+    # SEND A BROADCAST MESSAGE
+
+
+    Let me show you how I''d broadcast a message that *Hector* has entered the room
+    to trigger the lightning flash, a sound effect, and the werewolf''s sudden appearance:
+
+
+    +   1. Click the **Scripts** tab for your character''s sprite, and then click
+    the **Events** category.
+
+    +   2. Drag and snap a **BROADCAST AND WAIT** block to the bottom of the "walking"
+    blocks (the REPEAT loop you created in the preceding section).'
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: '# # PROJECT 5 LIGHTS, CAMERA, ACTION!
+
+
+    You can trigger a sound effect at the same time by snapping a PLAY SOUND block
+    between the WHEN I RECEIVE and the SET BRIGHTNESS EFFECT blocks:
+
+
+    ```
+
+    ~~~
+
+    when I receive [Lightning v]
+
+    play sound [pop v]
+
+    set [brightness v] effect to (10)
+
+    ~~~
+
+    ```
+
+
+    You get the idea? Each event in your story can trigger as many code blocks as
+    you want to use by broadcasting and receiving messages, like a director calling
+    out instructions to actors and technicians during a rehearsal.
+
+
+    # ## SWITCH BETWEEN ANIMATION SCENES
+
+
+    To change scenes in your animation, you need a way to hide sprites that make up
+    your first scene and display sprites that make up your second scene, as well as
+    change any backdrops that may appear.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_115_0.png)
+
+
+    How do you send a message to hide or show several sprites and change backdrops?
+    This is another ideal use of broadcasting:
+
+
+    +   1. Add the following code to each sprite that you want to show at the beginning
+    of your animation and then hide in your second scene:'
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: 'It might also be a good idea to add a pause at the end of your scene for dramatic
+    effect by using another BROADCAST or simply a WAIT block.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_117_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_117_1.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_117_2.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_117_3.png)
+
+
+    # # LEARN MORE ABOUT ANIMATION
+
+
+    The following websites offer tons of tips, techniques, and tutorials to expand
+    your skills.
+
+
+    +   - www.scratch.mit.edu: Come on, I''m not the only Scratch animator out there
+    (and I''m sure not the best, either!). If you search for animation tutorials,
+    you''ll find thousands of projects and hundreds of studios covering a wide range
+    of styles.
+
+    +   - www.youtube.com: On YouTube, you get the best results when you type a specific
+    search. Try searching for "scratch animation tutorial," "simple animation tutorial,"
+    or "2d animation tutorial." (If you are in a school that blocks access to YouTube,
+    try www.schooltube.com.)'
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: '+   - www.vimeo.com: Enter the same search terms that you use in YouTube to
+    find many unique tutorials. For example, *The Six Steps of Animation* is a great
+    introduction to more traditional animation techniques that can also be applied
+    to Scratch.
+
+    +   - www.animatorisland.com: An animation community built to share animation
+    techniques from storytelling to drawing to special effects.
+
+    +   - www.jerrysartarama.com/art-lessons/Skill-Level/Kids/: Don’t let the long
+    web address scare you off. This site has a bunch of great art and design tutorials.
+
+    +   - diy.org/tags/animation: The online community for kids who like to make stuff,
+    create all kinds of art, learn about the world around them, and experiment with
+    everything from baking to beekeeping.
+
+
+    # AND CUT!
+
+
+    The world of animation has so many possibilities. If you go to your favorite library
+    or bookstore, you will find a bunch of books dedicated to animation, from the
+    classic hand-drawn approach to stop motion and computer animation. In the nearby
+    sidebar, you will find several great resources for inspiration and for expanding
+    your animation skills.'
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: '# # AUTHOR NOTES
+
+
+    ***THERE IS STILL SO MUCH I HAVEN''T SHARED!*** Honestly, I''ve only scratched
+    the surface of the programming power in those colorful blocks. But rather than
+    trying to squeeze in one more game project, I''d like to share some important
+    tips for all your Scratch projects.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_119_0.png)
+
+
+    # ## SHARE YOUR SCRATCH PROJECTS IN THE SCRATCH ONLINE COMMUNITY
+
+
+    By default, you are the only person who can see your Scratch projects. To allow
+    other Scratch users to view your project, remix it, or add it to their studio,
+    you must enable sharing. Sharing a project makes it available to all users around
+    the world, so you should delete any personal information or other elements (spare
+    sprites, blocks, and sounds) that you do not want strangers to see. If your project
+    is not yet complete, click the Draft check box before sharing it to inform people
+    that it is a work in process.'
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '# # AUTHOR NOTES
+
+
+    +   5. Fill out the Instructions box and the Notes and Credits box, and choose
+    one to three tags.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_121_0.png)
+
+
+    # ## SHARE PROJECT FROM THE OFFLINE SCRATCH EDITOR
+
+
+    If you are using the offline Scratch editor, click the File menu and choose Share
+    to Website. You will need to log in with your Scratch account, and then follow
+    Steps 2–5 in the preceding section.
+
+
+    # ## BROADCAST SCRATCH ANIMATION ON ANY WEBSITE
+
+
+    You have seen how sharing a Scratch project will allow logged-in Scratch users
+    to view and remix your projects. You can also display working Scratch projects
+    on your own blog or on another website.
+
+
+    +   1. Go to [www.scratch.mit.edu](http://www.scratch.mit.edu) and log into your
+    account.
+
+
+    +   2. Click the My Stuff button near the top-right part of the web page.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_121_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '+   5. Click the title of the project you want to share on another website.
+
+
+    +   4. If the project has not yet been shared, click the Share button.
+
+
+    +   5. Click the Embed button.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_122_0.png)
+
+
+    +   6. Select and copy the embed html code.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_122_1.png)
+
+
+    +   7. Paste the code into your external blog or website.
+
+
+    # # RECORD/EXPORT SCRATCH VIDEOS
+
+
+    You can record and export a video of your Scratch project, but this feature is
+    currently limited to 60 seconds or less. Depending on what kind of computer you
+    have, you may need to download'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: 'another program, such as VLC Media Player ([www.videolan.org](http://www.videolan.org)),
+    to play the file. This file will run on YouTube, Vimeo, and Facebook but may need
+    to be converted for other websites such as Twitter and Tumblr:
+
+
+    +   1. **Open your Scratch project.**
+
+    +   2. **From the Scratch File menu, choose Record Project Video.**
+
+
+    You need to be signed in to see this option.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_123_0.png)
+
+
+    +   3. **In the More Options menu, choose recording options (such as recording
+    sound and mouse clicks).**
+
+    +   4. **To record the beginning of your project, click the Start button. Or if
+    you want to start recording sometime after the start of the project, click the
+    Green Flag button.**
+
+    +   5. **Click the Stop Recording button (below the Stage).**
+
+
+    After you have recorded for 60 seconds, Scratch stops recording automatically.
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_123_1.png)
+
+
+    +   6. **Click the Save and Download button to download the file to your computer.**'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: '支持 Markdown 的文档编辑器。
+
+
+    # # 功能特性
+
+
+    +   - 实时预览
+
+    +   - 语法高亮'
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_126_0.png)
+
+
+    ![](img/4bf9ba0253c33fcb16d2bd3d8eb1b121_126_1.png)
+
+
+    Zoom your vector costume as much as you can before
+
+    you click the Convert to Bitmap button to export the
+
+    maximum resolution image.'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: '# # PUBLISHER''S ACKNOWLEDGMENTS
+
+
+    **Acquisitions Editor:** Amy Fandrei
+
+
+    **Project Editor:** Susan Pink
+
+
+    **Production Editor:** Siddique Shaik
+
+
+    **Scratch Logo:** Courtesy of Mitchel Resnick, Lifelong Kindergarten Group, MIT
+    Media Lab
+
+
+    **Chapter figures, illustrations, and Scratch projects:** Copyright © 2016 Derek
+    Breen
+
+
+    Scratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab.
+    See http://scratch.mit.edu.'
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: '# # WILEY END USER LICENSE AGREEMENT
+
+
+    Go to www.wiley.com/go/eula to access Wiley''s ebook EULA.'
+  merge: -1
+  img_proc: true
