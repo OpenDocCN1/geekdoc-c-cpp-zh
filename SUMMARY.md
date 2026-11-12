@@ -877,6 +877,7 @@
 +   [Java 核心技术，第二卷——高级特性：高级特性，第2卷](docs/core-java-volume-ii--advanced-features-advanced-features-vol/README.md)
 +   [Java Java 第二卷：高级特性](docs/core-java-volume-ii-advanced-features/README.md)
 +   [Core Java 卷 II：高级特性 II](docs/core-java-volume-ii-advanced-features-ii/README.md)
++   [Core-Plus 数学资源手册：情境中的当代数学·课程3](docs/core-plus-mathematics-resource-masters-contemporary-mathemat/README.md)
 +   [C++ Concurrency In Action](docs/cpp-concur-act/README.md)
 +   [C++ 核心准则](docs/cpp-cr-gdln/README.md)
 +   [C++ FAQ Lite](docs/cpp-faq-lite/README.md)

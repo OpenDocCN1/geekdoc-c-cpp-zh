@@ -1,0 +1,2901 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Unit 5
+
+    Resource Masters
+
+
+    # Course 3
+
+    Core-Plus Mathematics
+
+
+    Contemporary Mathematics in Context
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_0_0.png)
+
+
+    # Contents
+
+
+    +   - **Transparency Masters**
+
+    +     - Think About This Situation
+
+    +     - Summarize the Mathematics
+
+    +   - **Student Masters**
+
+    +     - Investigation Worksheets
+
+    +     - Math Toolkit Pages
+
+    +     - Unit Summary
+
+    +   - **Technology Resources**
+
+    +     - TI-83/84 Technology Tip
+
+    +     - TI-89 Technology Tip
+
+    +   - **Assessment Resources**
+
+    +     - Lesson Quizzes
+
+    +     - Unit Test
+
+    +     - Take-Home Assessments
+
+    +     - Projects
+
+    +     - Practicing for Standardized Tests
+
+
+    +   - Algebra and Functions
+
+    +   - Geometry and Trigonometry
+
+    +   - Statistics and Probability
+
+    +   - Discrete Mathematics'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - "[PAGE 2]\n\n# Course 3\n\n# Core-Plus Mathematics\n\nContemporary Mathematics\
+    \ in Context\n\n2nd Edition\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_2_0.png)\n\
+    \n# Unit 5\n\n# Resource Masters\n\n# *Polynomial and Rational Functions*\n\n\
+    James T. Fey · Christian R. Hirsch · Eric W. Hart  \nHarold L. Schoen · Ann E.\
+    \ Watkins\n\nwith\n\nBeth E. Ritsema · Rebecca K. Walker · Sabrina Keller  \n\
+    Robin Marcus · Arthur F. Coxford · Gail Burrill\n\nMcGraw Hill Glencoe"
+  - '[PAGE 3]
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_3_0.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_3_1.png)
+
+
+    This material is based upon work supported, in part, by the National Science Foundation
+    under grant no. ESI 0137718. Opinions expressed are those of the authors and not
+    necessarily those of the Foundation.
+
+
+    Copyright © 2009 by The McGraw-Hill Companies, Inc. All rights reserved. Permission
+    is granted to reproduce the material contained herein on the condition that such
+    material be reproduced only for classroom use; be provided to students, teachers,
+    and families without charge; and be used solely in conjunction with *Core-Plus
+    Mathematics*, Course 3. Any other reproduction, for use or sale, is prohibited
+    without prior written permission of the publisher.
+
+
+    Send all inquiries to:
+
+    The McGraw-Hill Companies
+
+    8787 Orion Place
+
+    Columbus, OH 43240-4027
+
+
+    ISBN: 978-0-07-890725-8
+
+    MHID: 0-07-890725-X
+
+
+    Core-Plus Mathematics
+
+    *Contemporary Mathematics in Context*
+
+    Course 3 Unit 5 Resource Masters
+
+
+    Printed in the United States of America.
+
+
+    1 2 3 4 5 6 7 8 9 10  066  17 16 15 14 13 12 11 10 09 08
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_3_2.png)'
+  - "[PAGE 4]\n\n# # Table of Contents\n\nTeacher’s Guide to Using the Unit 5 Resource\
+    \ Masters\n\n+   **Lesson 1**\n+   \n+   - TATS, page 321 ........................................................\
+    \ 1\n+   - Technology Tip for page 323 ........................................\
+    \ 2\n+   - STM, page 326 ...........................................................\
+    \ 3\n+   - Adding and Subtracting Polynomials ............................. 4\n\
+    +   - STM, page 331 ...........................................................\
+    \ 5\n+   - Technology Tip for page 334 ........................................\
+    \ 6\n+   - STM, page 335 ...........................................................\
+    \ 7\n+   - Lesson 1 Quiz ............................................................\
+    \ 8–13\n+   \n+   **Lesson 2**\n+   \n+   - TATS, page 348 ........................................................\
+    \ 14\n+   - Algebra Tiles ...............................................................\
+    \ 15\n+   - STM, page 352 ...........................................................\
+    \ 16\n+   - Proving the Quadratic Formula .....................................\
+    \ 17\n+   - STM, page 356 ...........................................................\
+    \ 18\n+   - Lesson 2 Quiz ............................................................\
+    \ 19–23\n+   \n+   **Lesson 3**\n+   \n+   - TATS, page 365 ........................................................\
+    \ 24\n+   - STM, page 369 ...........................................................\
+    \ 25\n+   - STM, page 371 ...........................................................\
+    \ 26\n+   - STM, page 376 ...........................................................\
+    \ 27\n+   - STM, page 379 ...........................................................\
+    \ 28\n+   - Lesson 3 Quiz ............................................................\
+    \ 29–34\n+   \n+   **Lesson 4**\n+   \n+   - STM, page 394 ...........................................................\
+    \ 35–36\n+   \n+   - Unit Summary ..............................................................\
+    \ 37–39\n+   - Unit Test ....................................................................\
+    \ 40–48\n+   - Take-Home Assessments ...............................................\
+    \ 49–50\n+   - Project: Volume and Pressure ........................................\
+    \ 51–53\n+   - Project: Chromatic Polynomials .....................................\
+    \ 54–57\n+   - Practicing for Standardized Tests ..................................\
+    \ 58–59"
+  - '[PAGE 5]
+
+
+    # # Core-Plus Mathematics
+
+    ## Using the Unit Resource Masters
+
+
+    # ## Overview of Unit Resource Masters
+
+
+    To assist you as you teach Course 3 of *Core-Plus Mathematics*, unit-specific
+    resource books have been developed. The unit resources provided can help you focus
+    student attention on the important mathematics being developed. They can be used
+    to help students organize their results related to specific problems, synthesize
+    what they are learning, and practice for standardized tests.
+
+
+    Unit resource books provide the following types of masters in the order that they
+    are used in the unit.
+
+
+    +   - *Transparency Masters*
+
+    +     1. Think About This Situation (TATS) masters to help launch the lesson
+
+    +     2. Masters to collect class results
+
+    +     3. Summarize the Mathematics (STM) masters to help facilitate the synthesis
+    of mathematical ideas from the investigation (To guide your planning, sample discussion
+    scenarios called “Promoting Mathematical Discourse” are provided in the Teacher’s
+    Guide for selected TATS and STM discussions.)
+
+
+    +   - *Student Masters*
+
+    +     1. Masters to help students organize or display their results or thinking.
+
+    +     2. Masters to help students develop their proof-writing abilities (differentiation)
+
+    +     3. Technology Tips to facilitate learning technology features of graphing
+    calculators, *CPMP*-Tools software, and computer algebra systems (CAS)
+
+    +     4. Templates for manipulatives
+
+    +     5. Unit Summary masters to provide a starting point for pulling together
+    the main mathematical ideas of a unit
+
+    +     6. Practice for Standardized Tests masters provide an opportunity for students
+    to complete tasks presented in the format of most high-stakes tests and to consider
+    test-taking strategies. (Solutions to these tasks are printed in the Teacher’s
+    Guide following the final unit Summarize the Mathematics. This allows you the
+    option of providing or not providing the solutions to students.)
+
+
+    +   - *Assessment Masters*
+
+    +     1. Quizzes (two forms for each lesson)
+
+    +     2. In-class tests (two forms for each unit)
+
+    +     3. Take-home assessment items (three items for each unit)
+
+    +     4. Projects (two for each unit except Unit 1)
+
+    +     5. Midterm and end-of-course assessment items (Unit 4 and Unit 8 contain
+    a bank of assessment items from which to design cumulative final exams.)
+
+
+    All of the items in this book are included for viewing and printing from the *Core-Plus
+    Mathematics* TeacherWorks Plus CD-ROM. Custom tailoring of assessment items in
+    this book, as well as creation of additional items, can be accomplished by using
+    the ExamView Assessment Suite.'
+  - '[PAGE 6]
+
+
+    # # Assessment in Core-Plus Mathematics
+
+
+    Throughout the *Core-Plus Mathematics* curriculum, the term “assessment” is meant
+    to include all instances of gathering information about students’ levels of understanding
+    and their disposition toward mathematics for purposes of making decisions about
+    instruction. The dimensions of student performance that are assessed in this curriculum
+    (see chart below) are consistent with the assessment recommendations of the National
+    Council of Teachers of Mathematics in the *Assessment Standards for School Mathematics*
+    (NCTM, 1995). They are more comprehensive than those of a typical testing program.
+
+
+    | **Assessment Dimensions** |  |  |
+
+    |---|---|---|
+
+    | **Process** | **Content** | **Disposition** |
+
+    | Problem Solving<br>Reasoning<br>Communication<br>Connections | Concepts<br>Applications<br>Representational
+    Strategies<br>Procedures | Beliefs<br>Perseverance<br>Confidence<br>Enthusiasm
+    |
+
+
+    These unit resource masters contain the tools for formal assessment of the process
+    and content dimensions of student performance. Calculators are assumed in most
+    cases on these assessments. Teacher discretion should be used regarding student
+    access to their textbooks and Math Toolkits for assessments. In general, if the
+    goals to be assessed are problem solving and reasoning, while memory of facts
+    and procedural skill are of less interest, resources should be allowed. However,
+    if automaticity of procedures or unaided recall are being assessed, it is appropriate
+    to prohibit resource materials.
+
+
+    You may want to consult the extended section on assessment in the front matter
+    of the Course 3 *Core-Plus Mathematics Teacher’s Guide and Implementing Core-Plus
+    Mathematics*. Among the topics presented in these sources are curriculum-embedded
+    assessment, student-generated assessment, and scoring assessments and assigning
+    grades. Since the *Core-Plus Mathematics* approach and materials provide a wide
+    variety of assessment information, the teacher will be in a good position to assign
+    grades. With such a wide choice of assessment opportunities, a word of caution
+    is appropriate: *It is easy to overassess students, and care must be taken to
+    avoid doing so.* Since many rich opportunities for assessing students are embedded
+    in the curriculum itself, you may choose not to use a quiz at the end of every
+    lesson or to replace all or portions of an in-class test with take-home tasks
+    or projects.'
+  md: "\n## Unit 5\n### Resource Masters\n\n## Course 3\n### Core-Plus Mathematics\n\
+    \nContemporary Mathematics in Context\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_0_0.png)\n\
+    \n## Contents\n\n- **Transparency Masters**\n  - Think About This Situation\n\
+    \  - Summarize the Mathematics\n- **Student Masters**\n  - Investigation Worksheets\n\
+    \  - Math Toolkit Pages\n  - Unit Summary\n- **Technology Resources**\n  - TI-83/84\
+    \ Technology Tip\n  - TI-89 Technology Tip\n- **Assessment Resources**\n  - Lesson\
+    \ Quizzes\n  - Unit Test\n  - Take-Home Assessments\n  - Projects\n  - Practicing\
+    \ for Standardized Tests\n\n- Algebra and Functions\n- Geometry and Trigonometry\n\
+    - Statistics and Probability\n- Discrete Mathematics\n\n## Course 3\n### Core-Plus\
+    \ Mathematics\n\nContemporary Mathematics in Context\n\n2nd Edition\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_2_0.png)\n\
+    \n## Unit 5\n### Resource Masters\n### *Polynomial and Rational Functions*\n\n\
+    James T. Fey · Christian R. Hirsch · Eric W. Hart  \nHarold L. Schoen · Ann E.\
+    \ Watkins\n\nwith\n\nBeth E. Ritsema · Rebecca K. Walker · Sabrina Keller  \n\
+    Robin Marcus · Arthur F. Coxford · Gail Burrill\n\nMcGraw-Hill Glencoe\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_3_0.png)\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_3_1.png)\n\nThis material is based\
+    \ upon work supported, in part, by the National Science Foundation under grant\
+    \ no. ESI 0137718. Opinions expressed are those of the authors and not necessarily\
+    \ those of the Foundation.\n\nCopyright © 2009 by The McGraw-Hill Companies, Inc.\
+    \ All rights reserved. Permission is granted to reproduce the material contained\
+    \ herein on the condition that such material be reproduced only for classroom\
+    \ use; be provided to students, teachers, and families without charge; and be\
+    \ used solely in conjunction with *Core-Plus Mathematics*, Course 3. Any other\
+    \ reproduction, for use or sale, is prohibited without prior written permission\
+    \ of the publisher.\n\nSend all inquiries to:  \nThe McGraw-Hill Companies  \n\
+    8787 Orion Place  \nColumbus, OH 43240-4027\n\nISBN: 978-0-07-890725-8  \nMHID:\
+    \ 0-07-890725-X\n\nCore-Plus Mathematics  \n*Contemporary Mathematics in Context*\
+    \  \nCourse 3 Unit 5 Resource Masters\n\nPrinted in the United States of America.\n\
+    \n1 2 3 4 5 6 7 8 9 10  066  17 16 15 14 13 12 11 10 09 08\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_3_2.png)\n\
+    \n## Table of Contents\n\nTeacher’s Guide to Using the Unit 5 Resource Masters\n\
+    \n- **Lesson 1**\n  - TATS, page 321 ........................................................\
+    \ 1\n  - Technology Tip for page 323 ........................................\
+    \ 2\n  - STM, page 326 ...........................................................\
+    \ 3\n  - Adding and Subtracting Polynomials ............................. 4\n\
+    \  - STM, page 331 ...........................................................\
+    \ 5\n  - Technology Tip for page 334 ........................................\
+    \ 6\n  - STM, page 335 ...........................................................\
+    \ 7\n  - Lesson 1 Quiz ............................................................\
+    \ 8–13\n- **Lesson 2**\n  - TATS, page 348 ........................................................\
+    \ 14\n  - Algebra Tiles ...............................................................\
+    \ 15\n  - STM, page 352 ...........................................................\
+    \ 16\n  - Proving the Quadratic Formula .....................................\
+    \ 17\n  - STM, page 356 ...........................................................\
+    \ 18\n  - Lesson 2 Quiz ............................................................\
+    \ 19–23\n- **Lesson 3**\n  - TATS, page 365 ........................................................\
+    \ 24\n  - STM, page 369 ...........................................................\
+    \ 25\n  - STM, page 371 ...........................................................\
+    \ 26\n  - STM, page 376 ...........................................................\
+    \ 27\n  - STM, page 379 ...........................................................\
+    \ 28\n  - Lesson 3 Quiz ............................................................\
+    \ 29–34\n- **Lesson 4**\n  - STM, page 394 ...........................................................\
+    \ 35–36\n- Unit Summary ..............................................................\
+    \ 37–39\n- Unit Test ....................................................................\
+    \ 40–48\n- Take-Home Assessments ...............................................\
+    \ 49–50\n- Project: Volume and Pressure ........................................\
+    \ 51–53\n- Project: Chromatic Polynomials .....................................\
+    \ 54–57\n- Practicing for Standardized Tests ..................................\
+    \ 58–59\n\n## Core-Plus Mathematics\n### Using the Unit Resource Masters\n\n###\
+    \ Overview of Unit Resource Masters\n\nTo assist you as you teach Course 3 of\
+    \ *Core-Plus Mathematics*, unit-specific resource books have been developed. The\
+    \ unit resources provided can help you focus student attention on the important\
+    \ mathematics being developed. They can be used to help students organize their\
+    \ results related to specific problems, synthesize what they are learning, and\
+    \ practice for standardized tests.\n\nUnit resource books provide the following\
+    \ types of masters in the order that they are used in the unit.\n\n- *Transparency\
+    \ Masters*\n    1. Think About This Situation (TATS) masters to help launch the\
+    \ lesson\n    2. Masters to collect class results\n    3. Summarize the Mathematics\
+    \ (STM) masters to help facilitate the synthesis of mathematical ideas from the\
+    \ investigation (To guide your planning, sample discussion scenarios called “Promoting\
+    \ Mathematical Discourse” are provided in the Teacher’s Guide for selected TATS\
+    \ and STM discussions.)\n\n- *Student Masters*\n    1. Masters to help students\
+    \ organize or display their results or thinking.\n    2. Masters to help students\
+    \ develop their proof-writing abilities (differentiation)\n    3. Technology Tips\
+    \ to facilitate learning technology features of graphing calculators, *CPMP*-Tools\
+    \ software, and computer algebra systems (CAS)\n    4. Templates for manipulatives\n\
+    \    5. Unit Summary masters to provide a starting point for pulling together\
+    \ the main mathematical ideas of a unit\n    6. Practice for Standardized Tests\
+    \ masters provide an opportunity for students to complete tasks presented in the\
+    \ format of most high-stakes tests and to consider test-taking strategies. (Solutions\
+    \ to these tasks are printed in the Teacher’s Guide following the final unit Summarize\
+    \ the Mathematics. This allows you the option of providing or not providing the\
+    \ solutions to students.)\n\n- *Assessment Masters*\n    1. Quizzes (two forms\
+    \ for each lesson)\n    2. In-class tests (two forms for each unit)\n    3. Take-home\
+    \ assessment items (three items for each unit)\n    4. Projects (two for each\
+    \ unit except Unit 1)\n    5. Midterm and end-of-course assessment items (Unit\
+    \ 4 and Unit 8 contain a bank of assessment items from which to design cumulative\
+    \ final exams.)\n\nAll of the items in this book are included for viewing and\
+    \ printing from the *Core-Plus Mathematics* TeacherWorks Plus CD-ROM. Custom tailoring\
+    \ of assessment items in this book, as well as creation of additional items, can\
+    \ be accomplished by using the ExamView Assessment Suite.\n\n## Assessment in\
+    \ Core-Plus Mathematics\n\nThroughout the *Core-Plus Mathematics* curriculum,\
+    \ the term “assessment” is meant to include all instances of gathering information\
+    \ about students’ levels of understanding and their disposition toward mathematics\
+    \ for purposes of making decisions about instruction. The dimensions of student\
+    \ performance that are assessed in this curriculum (see chart below) are consistent\
+    \ with the assessment recommendations of the National Council of Teachers of Mathematics\
+    \ in the *Assessment Standards for School Mathematics* (NCTM, 1995). They are\
+    \ more comprehensive than those of a typical testing program.\n\n| **Assessment\
+    \ Dimensions** |  |  |\n| --- | --- | --- |\n| **Process** | **Content** | **Disposition**\
+    \ |\n| Problem Solving<br>Reasoning<br>Communication<br>Connections | Concepts<br>Applications<br>Representational\
+    \ Strategies<br>Procedures | Beliefs<br>Perseverance<br>Confidence<br>Enthusiasm\
+    \ |\n\nThese unit resource masters contain the tools for formal assessment of\
+    \ the process and content dimensions of student performance. Calculators are assumed\
+    \ in most cases on these assessments. Teacher discretion should be used regarding\
+    \ student access to their textbooks and Math Toolkits for assessments. In general,\
+    \ if the goals to be assessed are problem solving and reasoning, while memory\
+    \ of facts and procedural skill are of less interest, resources should be allowed.\
+    \ However, if automaticity of procedures or unaided recall are being assessed,\
+    \ it is appropriate to prohibit resource materials.\n\nYou may want to consult\
+    \ the extended section on assessment in the front matter of the Course 3 *Core-Plus\
+    \ Mathematics Teacher’s Guide and Implementing Core-Plus Mathematics*. Among the\
+    \ topics presented in these sources are curriculum-embedded assessment, student-generated\
+    \ assessment, and scoring assessments and assigning grades. Since the *Core-Plus\
+    \ Mathematics* approach and materials provide a wide variety of assessment information,\
+    \ the teacher will be in a good position to assign grades. With such a wide choice\
+    \ of assessment opportunities, a word of caution is appropriate: *It is easy to\
+    \ overassess students, and care must be taken to avoid doing so.* Since many rich\
+    \ opportunities for assessing students are embedded in the curriculum itself,\
+    \ you may choose not to use a quiz at the end of every lesson or to replace all\
+    \ or portions of an in-class test with take-home tasks or projects.\n"
+  mdcn: "\n\n## 第5单元\n### 资源母版\n\n## 第3课程\n### Core-Plus Mathematics\n\n情境中的当代数学\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_0_0.png)\n\n## 目录\n\n- **透明胶片母版**\n\
+    \  - 思考此情境\n  - 总结数学\n- **学生用母版**\n  - 探究活动工作表\n  - 数学工具包页面\n  - 单元总结\n- **技术资源**\n\
+    \  - TI-83/84 技术提示\n  - TI-89 技术提示\n- **评估资源**\n  - 各课测验\n  - 单元测试\n  - 家庭评估\n\
+    \  - 项目\n  - 标准化考试练习\n\n- 代数与函数\n- 几何与三角学\n- 统计与概率\n- 离散数学\n\n## 第3课程\n### Core-Plus\
+    \ Mathematics\n\n情境中的当代数学\n\n第二版\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_2_0.png)\n\
+    \n## 第5单元\n### 资源母版\n### *多项式与有理函数*\n\nJames T. Fey · Christian R. Hirsch · Eric\
+    \ W. Hart  \nHarold L. Schoen · Ann E. Watkins\n\n与\n\nBeth E. Ritsema · Rebecca\
+    \ K. Walker · Sabrina Keller  \nRobin Marcus · Arthur F. Coxford · Gail Burrill\n\
+    \nMcGraw-Hill Glencoe\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_3_0.png)\n\n\
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_3_1.png)\n\n本材料部分基于美国国家科学基金会资助号 ESI 0137718\
+    \ 所支持的工作。所表达的观点属于作者，不一定代表基金会的观点。\n\n版权所有 © 2009 麦格劳-希尔公司。保留所有权利。允许复制本书所含材料，条件是：此类材料仅用于课堂教学；免费提供给\
+    \ students, teachers, and families；并且仅与 *Core-Plus Mathematics* 第3课程配套使用。未经出版方事先书面许可，禁止为使用或销售进行任何其他复制。\n\
+    \n所有查询请发送至：  \nThe McGraw-Hill Companies  \n8787 Orion Place  \nColumbus, OH 43240-4027\n\
+    \nISBN: 978-0-07-890725-8  \nMHID: 0-07-890725-X\n\nCore-Plus Mathematics  \n\
+    *情境中的当代数学*  \n第3课程 第5单元 资源母版\n\n美国印制。\n\n1 2 3 4 5 6 7 8 9 10  066  17 16 15 14\
+    \ 13 12 11 10 09 08\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_3_2.png)\n\n##\
+    \ 目录\n\n使用第5单元资源母版的教师指南\n\n- **第1课**\n  - TATS，第321页 ........................................................\
+    \ 1\n  - 第323页技术提示 ........................................ 2\n  - STM，第326页 ...........................................................\
+    \ 3\n  - 多项式加减 ............................. 4\n  - STM，第331页 ...........................................................\
+    \ 5\n  - 第334页技术提示 ........................................ 6\n  - STM，第335页 ...........................................................\
+    \ 7\n  - 第1课测验 ............................................................ 8–13\n\
+    - **第2课**\n  - TATS，第348页 ........................................................\
+    \ 14\n  - 代数拼块 ...............................................................\
+    \ 15\n  - STM，第352页 ...........................................................\
+    \ 16\n  - 证明二次公式 ..................................... 17\n  - STM，第356页 ...........................................................\
+    \ 18\n  - 第2课测验 ............................................................ 19–23\n\
+    - **第3课**\n  - TATS，第365页 ........................................................\
+    \ 24\n  - STM，第369页 ...........................................................\
+    \ 25\n  - STM，第371页 ...........................................................\
+    \ 26\n  - STM，第376页 ...........................................................\
+    \ 27\n  - STM，第379页 ...........................................................\
+    \ 28\n  - 第3课测验 ............................................................ 29–34\n\
+    - **第4课**\n  - STM，第394页 ...........................................................\
+    \ 35–36\n- 单元总结 ..............................................................\
+    \ 37–39\n- 单元测试 ....................................................................\
+    \ 40–48\n- 家庭评估 ............................................... 49–50\n- 项目：体积与压强\
+    \ ........................................ 51–53\n- 项目：色多项式 .....................................\
+    \ 54–57\n- 标准化考试练习 .................................. 58–59\n\n## Core-Plus Mathematics\n\
+    ### 使用单元资源母版\n\n### 单元资源母版概述\n\n为协助您教授 *Core-Plus Mathematics* 第3课程，已开发了针对各单元的资源书。所提供的单元资源可帮助您将学生的注意力集中到正在学习的重要数学内容上。它们可用于帮助学生整理与特定问题相关的结果、综合所学内容，并为标准化考试进行练习。\n\
+    \n单元资源书按照单元中的使用顺序提供以下类型的母版。\n\n- *透明胶片母版*\n    1. 思考此情境（TATS）母版，用于帮助引入本课\n   \
+    \ 2. 用于收集班级结果的母版\n    3. 总结数学（STM）母版，用于帮助促进对探究活动中数学思想的综合（为指导您的规划，教师指南中针对部分 TATS\
+    \ 和 STM 讨论提供了名为“促进数学对话”的示例讨论场景。）\n\n- *学生用母版*\n    1. 帮助学生整理或展示其结果或思考的母版。\n  \
+    \  2. 帮助学生培养证明写作能力的母版（差异化）\n    3. 技术提示，用于促进学习图形计算器、*CPMP*-Tools 软件和计算机代数系统（CAS）的技术功能\n\
+    \    4. 操作教具模板\n    5. 单元总结母版，为汇集一个单元的主要数学思想提供起点\n    6. 标准化考试练习母版，为学生提供机会完成以大多数高风险考试格式呈现的任务，并考虑应试策略。（这些任务的解答印在教师指南中最后一个单元“总结数学”之后。这使您可以选择是否向学生提供解答。）\n\
+    \n- *评估母版*\n    1. 测验（每课两种版本）\n    2. 课堂测试（每单元两种版本）\n    3. 家庭评估题（每单元三题）\n   \
+    \ 4. 项目（除第1单元外，每单元两个）\n    5. 期中与课程结业评估题（第4单元和第8单元包含题库，可用于设计累积性期末考试。）\n\n本书中的所有题目均包含在\
+    \ *Core-Plus Mathematics* TeacherWorks Plus CD-ROM 中，可供查看和打印。使用 ExamView Assessment\
+    \ Suite 可对本书中的评估题进行定制调整，并创建额外题目。\n\n## Core-Plus 数学中的评估\n\n在 *Core-Plus Mathematics*\
+    \ 课程中，“评估”一词旨在包括为作出教学决策而收集有关学生理解水平及其对数学态度的信息的所有情形。本课程所评估的学生表现维度（见下表）与全国数学教师委员会在\
+    \ *学校数学评估标准*（NCTM，1995）中提出的评估建议一致。这些维度比典型测试项目的维度更全面。\n\n| **评估维度** |  |  |\n|\
+    \ --- | --- | --- |\n| **过程** | **内容** | **态度** |\n| 问题解决<br>推理<br>交流<br>联系 |\
+    \ 概念<br>应用<br>表征策略<br>程序 | 信念<br>坚持<br>自信<br>热情 |\n\n这些单元资源母版包含用于正式评估学生表现的过程维度和内容维度的工具。在大多数情况下，这些评估假定使用计算器。对于学生在评估期间能否使用教科书和数学工具包，教师应自行斟酌。一般来说，如果评估目标是问题解决和推理，而不太关注事实记忆和程序技能，则应允许使用资源。然而，如果评估的是程序的自动化或无辅助回忆，则适宜禁止使用资源材料。\n\
+    \n您可能想查阅第3课程 *Core-Plus Mathematics Teacher’s Guide and Implementing Core-Plus\
+    \ Mathematics* 前文中的评估扩展章节。这些资料中介绍的主题包括课程嵌入式评估、学生生成的评估，以及评估评分和成绩评定。由于 *Core-Plus\
+    \ Mathematics* 的方法和材料提供了多种多样的评估信息，教师将能够很好地评定成绩。面对如此丰富的评估机会，适当的提醒是：*很容易对学生评估过度，必须注意避免这样做。*\
+    \ 由于课程本身嵌入了许多丰富的学生评估机会，您可以选择不在每课结束时使用测验，或用家庭任务或项目替换全部或部分课堂测试。\n\n"
+  merge: -1
+- raw:
+  - '[PAGE 7]
+
+
+    <!-- no content -->'
+  - "[PAGE 8]\n\n# ## Think About This Situation\n\nStudy the sketches of Section\
+    \ I and Section II of the proposed coaster design.\n\n+   a. What familiar functions\
+    \ have graphs that match all or parts of the design sketches?\n+   \n+   b. What\
+    \ strategies could you use to find functions with graphs that model the sketches?\n\
+    +   \n+   c. What do you think are the key points on each sketch that should be\
+    \ used in finding a function model for the graph pattern?\n\n# ### Custom Thrills,\
+    \ Inc.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_8_0.png)"
+  - '[PAGE 9]
+
+
+    # # Transformation Graphing Application
+
+
+    The Transformation Graphing App® is a dynamic application that allows you to input
+    a general equation for a function based on parameters, then view changes in its
+    graph as the parameters are changed.
+
+
+    | Calculator Commands | Expected Display |
+
+    |---|---|
+
+    | **Begin the application:**<br>`APPS`, highlight **Transfrm**, `ENTER` | Calculator
+    applications menu with **Transfrm** highlighted. |
+
+    | **Enter general equation:**<br>`Y=`, then enter, for example, **AX^2+BX+C**.
+    (Note that variable coefficients do not need to be separated from **X** by a multiplication
+    sign.) | The general equation is entered in the calculator''s function editor.
+    |
+
+    | **Set the initial parameter values:**<br>`WINDOW`, adjust the window settings,
+    enter `.5`, `ENTER`, `1.5`, `ENTER`, `-5`, `ENTER`, `.5` | Window settings showing
+    the initial parameter values. |
+
+    | **Display the graph, then dynamically change parameters:**<br>`GRAPH`, use the
+    arrow keys to select a parameter; use the left and right arrow keys to change
+    the selected parameter by the step value, or enter values using the keypad. |
+    The graph is displayed with the parameter values shown. |
+
+    | **Return to normal calculator functionality:**<br>`APPS`, highlight **Transfrm**,
+    `ENTER`, `ENTER` | Transformation Graphing menu with **1: Uninstall** and **2:
+    Continue**. |
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_9_0.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_9_1.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_9_2.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_9_3.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_9_4.png)
+
+
+    * This application is preloaded on TI-84 Plus and TI-84 Plus Silver Edition. A
+    download is available for TI-83 Plus and TI-83 Plus Silver Edition at the Texas
+    Instruments Web site: education.ti.com/educationportal/sites/US/productDetail/us_transng_83_84.html.'
+  - '[PAGE 10]
+
+
+    # Summarize the Mathematics
+
+
+    **In this investigation, you explored some basic properties and uses of polynomial
+    functions and expressions.**
+
+
+    +   a. What kinds of expressions and functions are called polynomials?
+
+
+    +   b. What is the degree of a polynomial?
+
+
+    +   c. What are local maximum and local minimum points of a graph? How is the
+    number of such points on the graph of a polynomial function related to the degree
+    of the polynomial expression used in its rule?
+
+
+    +   d. How many points are needed for use of a curve-fitting tool to find the
+    polynomial function of degree *n* that fits a data or graph pattern?
+
+
+    ***Be prepared to explain your ideas to the class.***'
+  - '[PAGE 11]
+
+
+    # Adding and Subtracting Polynomials
+
+
+    When a small music venue books a popular band, like *Ice and Fire*, business prospects
+    of the event depend on how the ticket prices are set. For example, if the ticket
+    price is set at $x$ dollars, income and expenses might be estimated as follows.
+
+
+    +   - Ticket sale income: $t(x)=-25x^2+750x$
+
+    +   - Snack bar income: $s(x)=7{,}500-250x$
+
+    +   - Concert operating expense: $c(x)=4{,}750-125x$
+
+    +   - Snack bar operating expense: $b(x)=2{,}250-75x$'
+  - '[PAGE 12]
+
+
+    <!-- no content -->'
+  - '[PAGE 13]
+
+
+    # # Multiplying Polynomials
+
+
+    | Multiplying Polynomials |  |
+
+    |---|---|
+
+    | **Calculator Commands** | **Expected Display** |
+
+    | `F2`<br>`ENTER`<br><br>Calculator key sequence for entering and expanding the
+    polynomial expression. | See calculator displays below. |
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_13_0.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_13_1.png)'
+  - "[PAGE 14]\n\n# Summarize the Mathematics\n\nIn this investigation, you discovered\
+    \ connections between factors, zeroes, and the expanded form of polynomial functions.\n\
+    \n+   a. How is the degree of a product of polynomials determined by the degrees\
+    \ of its factors?\n+   \n+   b. What strategies can be used to find the standard\
+    \ form of a product of polynomials?\n+   \n+   c. How are the zeroes of a polynomial\
+    \ function related to the zeroes of its factors?\n+   \n+   d. In what cases will\
+    \ the degree of a polynomial function not equal the number of its zeroes?\n\n\
+    *Be prepared to explain your ideas to the class.*"
+  - "[PAGE 15]\n\n# Lesson 1 Quiz\n\n# Form A\n\n1. Consider the graph of the polynomial\
+    \ function shown below.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_15_0.png)\n\
+    \n+   a. What is the smallest possible degree for this polynomial function? Explain\
+    \ your reasoning.\n+   \n+   b. Estimate the coordinates of all local maximum\
+    \ points.\n+   \n+   c. Estimate the coordinates of all local minimum points.\n\
+    +   \n+   d. Estimate the zeroes of this polynomial function.\n\n2. Consider the\
+    \ function \\(f(x)=(x^2-x)(x+5)\\).\n\n+   a. What are the zeroes of \\(f(x)\\\
+    )?\n+   \n+   b. Write \\(f(x)\\) in standard polynomial form."
+  - '[PAGE 16]
+
+
+    3. Consider the polynomial function $f(x)=7x^3+x^2-4x+10$.
+
+
+    a. Write a polynomial function rule for $g(x)$ so that the degree of $f(x)+g(x)$
+    is 4. Explain your reasoning.
+
+
+    b. Write a polynomial function rule for $h(x)$ so that the degree of $f(x)-h(x)$
+    is 2. Explain your reasoning.
+
+
+    c. Write a polynomial function rule for $p(x)$ so that the degree of $f(x)\cdot
+    p(x)$ is 6. Explain your reasoning.
+
+
+    4. Write a rule for a cubic function that has zeroes only at $(3, 0)$ and $(-2,
+    0)$. Explain your reasoning.
+
+
+    5. The daily revenue of the Lensic movie theater depends on the ticket cost $x$
+    according to the function $R(x)=x(250-5x)$. The daily expenses of the theater
+    are related to the ticket price according to the rule $E(x)=1{,}250-30x$.
+
+
+    a. Find a rule in standard polynomial form for the daily profit.
+
+
+    b. If the ticket price is $8, what is the daily profit?'
+  - "[PAGE 17]\n\n# LESSON 1 QUIZ\n\n# Form A\n\nSuggested Solutions\n\n+   1.  \n\
+    +      a. The polynomial must be at least degree 4 since it has three local maxima\
+    \ or minima and four *x*-intercepts.\n+      \n+      b. The local maximum points\
+    \ are (−3.9, 8.1) and (2.9, 8.1). Student estimates should be close to these.\n\
+    +      \n+      c. The local minimum point is (−0.5, −4.6).\n+      \n+      d.\
+    \ The zeroes of the function are *x* = −5, *x* = −2, *x* = 1, and *x* = 4.\n\n\
+    +   2.  \n+      a. The zeroes of *f(x)* are *x* = 0, *x* = 1, and *x* = −5.\n\
+    +      \n+      b. *f(x)* = *x*³ + 4*x*² − 5*x*\n\n+   3.  \n+      a. Any polynomial\
+    \ of degree 4 is correct.\n+      \n+      b. Any polynomial of degree 3 with\
+    \ −7*x*³ as the leading term is correct.\n+      \n+      c. Any polynomial of\
+    \ degree 3 is correct.\n\n+   4. The possible rules are of two forms:\n+   \n\
+    +      *f(x)* = *a*(*x* − 3)²(*x* + 2), where *a* is any real number, and\n+ \
+    \  \n+      *f(x)* = *a*(*x* − 3)(*x* + 2)², where *a* is any real number.\n\n\
+    +   5.  \n+      a. *P(x)* = *x*(250 − 5*x*) − (1,250 − 30*x*) = −5*x*² + 280*x*\
+    \ − 1,250\n+      \n+      b. The daily profit is $670, since *P*(8) = 670."
+  - "[PAGE 18]\n\n# Lesson 1 Quiz\n\n# Form B\n\n1. Consider the graph of the polynomial\
+    \ function shown below.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_18_0.png)\n\
+    \n+   a. What is the smallest possible degree for this polynomial function? Explain\
+    \ your reasoning.\n+   \n+   b. Use a curve-fitting tool to find a polynomial\
+    \ function rule that models the graph pattern. List the points you use as the\
+    \ basis of your curve fitting.\n+   \n+   Points: ________________________________\n\
+    +   \n+   Function rule: ________________________________\n\n2. Write an equivalent\
+    \ algebraic expression in standard polynomial form.\n\n+   a. \\((6x^3 + 3x^2\
+    \ - x + 5) + (2x^3 - 3x^2 - 2)\\)\n+   \n+   b. \\((12x^2 + 7x - 1) - (5 + 3x\
+    \ - 2x^2)\\)\n+   \n+   c. \\((6x - 5)(9x + 1)\\)\n+   \n+   d. \\((x + 3)(2x^2\
+    \ + 3x + 6)\\)"
+  - "[PAGE 19]\n\n3. Suppose that f(x) is a cubic function and g(x) is a quadratic\
+    \ function. Decide if each of the following statements is true or false. Explain\
+    \ your reasoning in each case.\n\n+   a. The polynomial function h(x) = f(x) +\
+    \ g(x) will always be a quadratic function.\n+   \n+   b. If k(x) = f(x) · g(x),\
+    \ then the degree of k(x) must be 5.\n+   \n+   c. If −1.6 is a zero of f(x),\
+    \ then −1.6 must also be a zero of k(x) = f(x) · g(x).\n\n4. Consider the function\
+    \ c(x) = (x + 5)(x − 3)^2.\n\n+   a. What are the zeroes of c(x)?\n+   \n+   b.\
+    \ What is the degree of c(x)?\n\n5. Robert runs two water parks. He has decided\
+    \ that admission prices at the two water parks should be the same. The weekly\
+    \ profit (in dollars) at each of the water parks is given by the following function\
+    \ rules, where t is the ticket price.\n\nRaging Waters: P_r(t) = −8t^2 + 300t\
+    \ − 2,450\nWonderful Waves: P_w(t) = −8t^2 + 250t − 1,800\n\n+   a. Write a function\
+    \ rule for the combined weekly profit of the two water parks.\n+   \n+   b. What\
+    \ weekly profit will Robert make if the ticket price is $16?\n+   \n+   c. What\
+    \ ticket admission price should he charge in order to maximize his combined weekly\
+    \ profit?"
+  md: "\n## Think About This Situation\n\nStudy the sketches of Section I and Section\
+    \ II of the proposed coaster design.\n\n- a. What familiar functions have graphs\
+    \ that match all or parts of the design sketches?\n- b. What strategies could\
+    \ you use to find functions with graphs that model the sketches?\n- c. What do\
+    \ you think are the key points on each sketch that should be used in finding a\
+    \ function model for the graph pattern?\n\n### Custom Thrills, Inc.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_8_0.png)\n\
+    \n## Transformation Graphing Application\n\nThe Transformation Graphing App® is\
+    \ a dynamic application that allows you to input a general equation for a function\
+    \ based on parameters, then view changes in its graph as the parameters are changed.\n\
+    \n| Calculator Commands | Expected Display |\n|---|---|\n| **Begin the application:**<br>`APPS`,\
+    \ highlight **Transfrm**, `ENTER` | Calculator applications menu with **Transfrm**\
+    \ highlighted. |\n| **Enter general equation:**<br>`Y=`, then enter, for example,\
+    \ **AX^2+BX+C**. (Note that variable coefficients do not need to be separated\
+    \ from **X** by a multiplication sign.) | The general equation is entered in the\
+    \ calculator's function editor. |\n| **Set the initial parameter values:**<br>`WINDOW`,\
+    \ adjust the window settings, enter `.5`, `ENTER`, `1.5`, `ENTER`, `-5`, `ENTER`,\
+    \ `.5` | Window settings showing the initial parameter values. |\n| **Display\
+    \ the graph, then dynamically change parameters:**<br>`GRAPH`, use the arrow keys\
+    \ to select a parameter; use the left and right arrow keys to change the selected\
+    \ parameter by the step value, or enter values using the keypad. | The graph is\
+    \ displayed with the parameter values shown. |\n| **Return to normal calculator\
+    \ functionality:**<br>`APPS`, highlight **Transfrm**, `ENTER`, `ENTER` | Transformation\
+    \ Graphing menu with **1: Uninstall** and **2: Continue**. |\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_0.png)\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_1.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_2.png)\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_3.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_4.png)\n\
+    \n* This application is preloaded on TI-84 Plus and TI-84 Plus Silver Edition.\
+    \ A download is available for TI-83 Plus and TI-83 Plus Silver Edition at the\
+    \ Texas Instruments Web site: education.ti.com/educationportal/sites/US/productDetail/us_transng_83_84.html.\n\
+    \n## Summarize the Mathematics\n\n**In this investigation, you explored some basic\
+    \ properties and uses of polynomial functions and expressions.**\n\n- a. What\
+    \ kinds of expressions and functions are called polynomials?\n- b. What is the\
+    \ degree of a polynomial?\n- c. What are local maximum and local minimum points\
+    \ of a graph? How is the number of such points on the graph of a polynomial function\
+    \ related to the degree of the polynomial expression used in its rule?\n- d. How\
+    \ many points are needed for use of a curve-fitting tool to find the polynomial\
+    \ function of degree $n$ that fits a data or graph pattern?\n\n***Be prepared\
+    \ to explain your ideas to the class.***\n\n## Adding and Subtracting Polynomials\n\
+    \nWhen a small music venue books a popular band, like *Ice and Fire*, business\
+    \ prospects of the event depend on how the ticket prices are set. For example,\
+    \ if the ticket price is set at $x$ dollars, income and expenses might be estimated\
+    \ as follows.\n\n- Ticket sale income: $t(x)=-25x^2+750x$\n- Snack bar income:\
+    \ $s(x)=7{,}500-250x$\n- Concert operating expense: $c(x)=4{,}750-125x$\n- Snack\
+    \ bar operating expense: $b(x)=2{,}250-75x$\n\n## Multiplying Polynomials\n\n\
+    | Multiplying Polynomials | |\n|---|---|\n| **Calculator Commands** | **Expected\
+    \ Display** |\n| `F2`<br>`ENTER`<br><br>Calculator key sequence for entering and\
+    \ expanding the polynomial expression. | See calculator displays below. |\n\n\
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_13_0.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_13_1.png)\n\
+    \n## Summarize the Mathematics\n\nIn this investigation, you discovered connections\
+    \ between factors, zeroes, and the expanded form of polynomial functions.\n\n\
+    - a. How is the degree of a product of polynomials determined by the degrees of\
+    \ its factors?\n- b. What strategies can be used to find the standard form of\
+    \ a product of polynomials?\n- c. How are the zeroes of a polynomial function\
+    \ related to the zeroes of its factors?\n- d. In what cases will the degree of\
+    \ a polynomial function not equal the number of its zeroes?\n\n*Be prepared to\
+    \ explain your ideas to the class.*\n\n## Lesson 1 Quiz\n\n### Form A\n\n- 1.\
+    \ Consider the graph of the polynomial function shown below.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_15_0.png)\n\
+    \n  - a. What is the smallest possible degree for this polynomial function? Explain\
+    \ your reasoning.\n  - b. Estimate the coordinates of all local maximum points.\n\
+    \  - c. Estimate the coordinates of all local minimum points.\n  - d. Estimate\
+    \ the zeroes of this polynomial function.\n\n- 2. Consider the function $f(x)=(x^2-x)(x+5)$.\n\
+    \n  - a. What are the zeroes of $f(x)$?\n  - b. Write $f(x)$ in standard polynomial\
+    \ form.\n\n- 3. Consider the polynomial function $f(x)=7x^3+x^2-4x+10$.\n\n  -\
+    \ a. Write a polynomial function rule for $g(x)$ so that the degree of $f(x)+g(x)$\
+    \ is 4. Explain your reasoning.\n  - b. Write a polynomial function rule for $h(x)$\
+    \ so that the degree of $f(x)-h(x)$ is 2. Explain your reasoning.\n  - c. Write\
+    \ a polynomial function rule for $p(x)$ so that the degree of $f(x)\\cdot p(x)$\
+    \ is 6. Explain your reasoning.\n\n- 4. Write a rule for a cubic function that\
+    \ has zeroes only at $(3, 0)$ and $(-2, 0)$. Explain your reasoning.\n\n- 5. The\
+    \ daily revenue of the Lensic movie theater depends on the ticket cost $x$ according\
+    \ to the function $R(x)=x(250-5x)$. The daily expenses of the theater are related\
+    \ to the ticket price according to the rule $E(x)=1{,}250-30x$.\n\n  - a. Find\
+    \ a rule in standard polynomial form for the daily profit.\n  - b. If the ticket\
+    \ price is \\$8, what is the daily profit?\n\n### Suggested Solutions\n\n- 1.\n\
+    \  - a. The polynomial must be at least degree 4 since it has three local maxima\
+    \ or minima and four $x$-intercepts.\n  - b. The local maximum points are $(-3.9,\
+    \ 8.1)$ and $(2.9, 8.1)$. Student estimates should be close to these.\n  - c.\
+    \ The local minimum point is $(-0.5, -4.6)$.\n  - d. The zeroes of the function\
+    \ are $x=-5$, $x=-2$, $x=1$, and $x=4$.\n\n- 2.\n  - a. The zeroes of $f(x)$ are\
+    \ $x=0$, $x=1$, and $x=-5$.\n  - b. $f(x)=x^3+4x^2-5x$.\n\n- 3.\n  - a. Any polynomial\
+    \ of degree 4 is correct.\n  - b. Any polynomial of degree 3 with $7x^3$ as the\
+    \ leading term is correct.\n  - c. Any polynomial of degree 3 is correct.\n\n\
+    - 4. The possible rules are of two forms:\n  - $f(x)=a(x-3)^2(x+2)$, where $a$\
+    \ is any real number, and\n  - $f(x)=a(x-3)(x+2)^2$, where $a$ is any real number.\n\
+    \n- 5.\n  - a. $P(x)=x(250-5x)-(1{,}250-30x)=-5x^2+280x-1{,}250$.\n  - b. The\
+    \ daily profit is \\$670, since $P(8)=670$.\n\n### Form B\n\n- 1. Consider the\
+    \ graph of the polynomial function shown below.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_18_0.png)\n\
+    \n  - a. What is the smallest possible degree for this polynomial function? Explain\
+    \ your reasoning.\n  - b. Use a curve-fitting tool to find a polynomial function\
+    \ rule that models the graph pattern. List the points you use as the basis of\
+    \ your curve fitting.\n  - Points: ________________________________\n  - Function\
+    \ rule: ________________________________\n\n- 2. Write an equivalent algebraic\
+    \ expression in standard polynomial form.\n\n  - a. $(6x^3+3x^2-x+5)+(2x^3-3x^2-2)$\n\
+    \  - b. $(12x^2+7x-1)-(5+3x-2x^2)$\n  - c. $(6x-5)(9x+1)$\n  - d. $(x+3)(2x^2+3x+6)$\n\
+    \n- 3. Suppose that $f(x)$ is a cubic function and $g(x)$ is a quadratic function.\
+    \ Decide if each of the following statements is true or false. Explain your reasoning\
+    \ in each case.\n\n  - a. The polynomial function $h(x)=f(x)+g(x)$ will always\
+    \ be a quadratic function.\n  - b. If $k(x)=f(x)\\cdot g(x)$, then the degree\
+    \ of $k(x)$ must be 5.\n  - c. If $-1.6$ is a zero of $f(x)$, then $-1.6$ must\
+    \ also be a zero of $k(x)=f(x)\\cdot g(x)$.\n\n- 4. Consider the function $c(x)=(x+5)(x-3)^2$.\n\
+    \n  - a. What are the zeroes of $c(x)$?\n  - b. What is the degree of $c(x)$?\n\
+    \n- 5. Robert runs two water parks. He has decided that admission prices at the\
+    \ two water parks should be the same. The weekly profit (in dollars) at each of\
+    \ the water parks is given by the following function rules, where $t$ is the ticket\
+    \ price.\n\n  Raging Waters: $P_r(t)=-8t^2+300t-2{,}450$\n\n  Wonderful Waves:\
+    \ $P_w(t)=-8t^2+250t-1{,}800$\n\n  - a. Write a function rule for the combined\
+    \ weekly profit of the two water parks.\n  - b. What weekly profit will Robert\
+    \ make if the ticket price is \\$16?\n  - c. What ticket admission price should\
+    \ he charge in order to maximize his combined weekly profit?\n"
+  mdcn: "\n\n## 思考这个情境\n\n研究拟建过山车设计的第一部分和第二部分的草图。\n\n- a. 哪些熟悉的函数的图像与设计草图的全部或部分匹配？\n\
+    - b. 你可以使用什么策略来找到图像可以模拟这些草图的函数？\n- c. 你认为每幅草图上，哪些关键点应该用于找到该图形模式的函数模型？\n\n### Custom\
+    \ Thrills 公司\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_8_0.png)\n\n## 变换作图应用程序\n\
+    \n变换作图应用程序® 是一个动态应用程序，允许你基于参数输入函数的一般方程，然后在参数变化时查看其图像的变化。\n\n| 计算器命令 | 预期显示 |\n\
+    |---|---|\n| **启动应用程序：**<br>`APPS`，高亮 **Transfrm**，`ENTER` | 计算器应用程序菜单，其中 **Transfrm**\
+    \ 被高亮显示。 |\n| **输入一般方程：**<br>`Y=`，然后输入，例如 **AX^2+BX+C**。（注意，变量系数不需要用乘号与 **X**\
+    \ 分隔。） | 一般方程已输入到计算器的函数编辑器中。 |\n| **设置初始参数值：**<br>`WINDOW`，调整窗口设置，输入 `.5`、`ENTER`、`1.5`、`ENTER`、`-5`、`ENTER`、`.5`\
+    \ | 显示初始参数值的窗口设置。 |\n| **显示图像，然后动态更改参数：**<br>`GRAPH`，使用箭头键选择参数；使用左、右箭头键按步长值更改所选参数，或使用键盘输入数值。\
+    \ | 显示图像并显示参数值。 |\n| **返回正常计算器功能：**<br>`APPS`，高亮 **Transfrm**，`ENTER`，`ENTER`\
+    \ | 变换作图菜单，包含 **1：卸载** 和 **2：继续**。 |\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_0.png)\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_1.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_2.png)\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_3.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_9_4.png)\n\
+    \n* 此应用程序预装在 TI-84 Plus 和 TI-84 Plus Silver Edition 上。TI-83 Plus 和 TI-83 Plus\
+    \ Silver Edition 可在德州仪器网站下载：education.ti.com/educationportal/sites/US/productDetail/us_transng_83_84.html。\n\
+    \n## 数学总结\n\n**在本探究中，你探索了多项式函数和表达式的一些基本性质与用途。**\n\n- a. 什么样的表达式和函数称为多项式？\n- b.\
+    \ 什么是多项式的次数？\n- c. 什么是图像的局部最大值点和局部最小值点？多项式函数图像上这类点的个数与其规则中多项式表达式的次数有何关系？\n- d.\
+    \ 需要使用多少个点，才能用曲线拟合工具找到拟合数据或图形模式的 $n$ 次多项式函数？\n\n***准备好向全班解释你的想法。***\n\n## 多项式的加法与减法\n\
+    \n当一个小型音乐演出场所预订了一支热门乐队，如*冰与火*时，该活动的商业前景取决于门票价格如何设定。例如，如果门票价格设为 $x$ 美元，收入和支出可能如下估算。\n\
+    \n- 门票销售收入：$t(x)=-25x^2+750x$\n- 小吃吧收入：$s(x)=7{,}500-250x$\n- 演唱会运营支出：$c(x)=4{,}750-125x$\n\
+    - 小吃吧运营支出：$b(x)=2{,}250-75x$\n\n## 多项式的乘法\n\n| 多项式的乘法 | |\n|---|---|\n| **计算器命令**\
+    \ | **预期显示** |\n| `F2`<br>`ENTER`<br><br>用于输入和展开多项式表达式的计算器按键顺序。 | 参见下方计算器显示。 |\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_13_0.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_13_1.png)\n\
+    \n## 数学总结\n\n在本探究中，你发现了多项式函数的因式、零点与展开形式之间的联系。\n\n- a. 多项式乘积的次数如何由其因式的次数决定？\n-\
+    \ b. 可以使用哪些策略来找到多项式乘积的标准形式？\n- c. 多项式函数的零点与其因式的零点有什么关系？\n- d. 在什么情况下，多项式函数的次数不等于其零点的个数？\n\
+    \n*准备好向全班解释你的想法。*\n\n## 第 1 课测验\n\n### 试卷 A\n\n- 1. 考虑下面显示的多项式函数图像。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_15_0.png)\n\
+    \n  - a. 这个多项式函数的最小可能次数是多少？解释你的推理。\n  - b. 估计所有局部最大值点的坐标。\n  - c. 估计所有局部最小值点的坐标。\n\
+    \  - d. 估计这个多项式函数的零点。\n\n- 2. 考虑函数 $f(x)=(x^2-x)(x+5)$。\n\n  - a. $f(x)$ 的零点是什么？\n\
+    \  - b. 将 $f(x)$ 写成标准多项式形式。\n\n- 3. 考虑多项式函数 $f(x)=7x^3+x^2-4x+10$。\n\n  - a. 写出\
+    \ $g(x)$ 的多项式函数规则，使得 $f(x)+g(x)$ 的次数为 4。解释你的推理。\n  - b. 写出 $h(x)$ 的多项式函数规则，使得\
+    \ $f(x)-h(x)$ 的次数为 2。解释你的推理。\n  - c. 写出 $p(x)$ 的多项式函数规则，使得 $f(x)\\cdot p(x)$ 的次数为\
+    \ 6。解释你的推理。\n\n- 4. 写出一个三次函数的规则，使其零点仅在 $(3, 0)$ 和 $(-2, 0)$ 处。解释你的推理。\n\n- 5.\
+    \ Lensic 电影院的日收入取决于票价 $x$，函数为 $R(x)=x(250-5x)$。电影院的日支出与票价的关系规则为 $E(x)=1{,}250-30x$。\n\
+    \n  - a. 求日利润的标准多项式形式的规则。\n  - b. 如果票价是 \\$8，日利润是多少？\n\n### 参考答案\n\n- 1.\n  -\
+    \ a. 该多项式至少是 4 次，因为它有三个局部最大值或最小值点和四个 $x$ 轴截距。\n  - b. 局部最大值点为 $(-3.9, 8.1)$ 和\
+    \ $(2.9, 8.1)$。学生的估计应接近这些值。\n  - c. 局部最小值点为 $(-0.5, -4.6)$。\n  - d. 函数的零点为 $x=-5$、$x=-2$、$x=1$\
+    \ 和 $x=4$。\n\n- 2.\n  - a. $f(x)$ 的零点为 $x=0$、$x=1$ 和 $x=-5$。\n  - b. $f(x)=x^3+4x^2-5x$。\n\
+    \n- 3.\n  - a. 任何 4 次多项式都是正确的。\n  - b. 任何以 $7x^3$ 为首项的 3 次多项式都是正确的。\n  - c. 任何\
+    \ 3 次多项式都是正确的。\n\n- 4. 可能的规则有两种形式：\n  - $f(x)=a(x-3)^2(x+2)$，其中 $a$ 是任意实数；\n \
+    \ - $f(x)=a(x-3)(x+2)^2$，其中 $a$ 是任意实数。\n\n- 5.\n  - a. $P(x)=x(250-5x)-(1{,}250-30x)=-5x^2+280x-1{,}250$。\n\
+    \  - b. 日利润为 \\$670，因为 $P(8)=670$。\n\n### 试卷 B\n\n- 1. 考虑下面显示的多项式函数图像。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_18_0.png)\n\
+    \n  - a. 这个多项式函数的最小可能次数是多少？解释你的推理。\n  - b. 使用曲线拟合工具，找出一个模拟该图形模式的多项式函数规则。列出你用作曲线拟合基础的点。\n\
+    \  - 点：________________________________\n  - 函数规则：________________________________\n\
+    \n- 2. 写出标准多项式形式的等价代数表达式。\n\n  - a. $(6x^3+3x^2-x+5)+(2x^3-3x^2-2)$\n  - b. $(12x^2+7x-1)-(5+3x-2x^2)$\n\
+    \  - c. $(6x-5)(9x+1)$\n  - d. $(x+3)(2x^2+3x+6)$\n\n- 3. 假设 $f(x)$ 是三次函数，$g(x)$\
+    \ 是二次函数。判断以下每个陈述是真还是假。在每种情况下解释你的推理。\n\n  - a. 多项式函数 $h(x)=f(x)+g(x)$ 总是二次函数。\n\
+    \  - b. 如果 $k(x)=f(x)\\cdot g(x)$，那么 $k(x)$ 的次数必定是 5。\n  - c. 如果 $-1.6$ 是 $f(x)$\
+    \ 的零点，那么 $-1.6$ 也必定是 $k(x)=f(x)\\cdot g(x)$ 的零点。\n\n- 4. 考虑函数 $c(x)=(x+5)(x-3)^2$。\n\
+    \n  - a. $c(x)$ 的零点是什么？\n  - b. $c(x)$ 的次数是多少？\n\n- 5. 罗伯特经营两个水上乐园。他已决定两个水上乐园的门票价格应该相同。每个水上乐园的每周利润（以美元计）由以下函数规则给出，其中\
+    \ $t$ 是票价。\n\n  Raging Waters（狂野水域）：$P_r(t)=-8t^2+300t-2{,}450$\n\n  Wonderful\
+    \ Waves（美妙波浪）：$P_w(t)=-8t^2+250t-1{,}800$\n\n  - a. 写出两个水上乐园合并后每周利润的函数规则。\n  -\
+    \ b. 如果票价是 \\$16，罗伯特每周利润是多少？\n  - c. 为了最大化合并后的每周利润，他应该收取多少门票价格？\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 20]
+
+
+    # Form B
+
+    Suggested Solutions
+
+
+    +   1. a. The polynomial must be at least degree 3 since it has one local maximum,
+    one local minimum, and three \(x\)-intercepts.
+
+    +      b. Students need to use at least 4 points as the basis of their curve fitting.
+    One set of points that works well is \((-8, 0)\), \((-4, 27)\), \((4.5, -2.5)\),
+    and \((8, 15)\). Using these points, the function rule is \(f(x) = 0.1x^3 - 0.1x^2
+    - 5.2x + 14.1\).
+
+    +   2. a. \(8x^3 - x + 3\)
+
+    +      b. \(14x^2 + 4x - 6\)
+
+    +      c. \(54x^2 - 39x - 5\)
+
+    +      d. \(2x^3 + 9x^2 + 15x + 18\)
+
+    +   3. a. False. If the polynomials do not have the same degree, the sum of the
+    polynomials will always have a degree equal to the highest degree of the polynomials
+    being added together, so this sum will be cubic.
+
+    +      b. True. The degree of a product of two polynomials will be the sum of
+    the degrees.
+
+    +      c. True. If \(f(-1.6) = 0\), then \(k(-1.6) = f(-1.6) \cdot g(-1.6) = 0
+    \cdot g(-1.6) = 0\).
+
+    +   4. a. The zeroes of \(c(x)\) are \(x = -5\) and \(x = 3\).
+
+    +      b. The degree of \(c(x)\) is 3.
+
+    +   5. a. \(P_r(t) + P_w(t) = -16t^2 + 550t - 4,250\)
+
+    +      b. The weekly profit will be $454 since \(P_r(16) + P_w(16) = 454\).
+
+    +      c. To maximize profit, the ticket price should be $17.19.'
+  - '[PAGE 21]
+
+
+    # ### Think About This Situation
+
+
+    Think about the various algebraic reasoning and calculator- or computer-based
+    methods that you have learned for work with linear and quadratic expressions and
+    functions.
+
+
+    +   a. What strategies can you apply to the tasks of finding linear or quadratic
+    function rules that model conditions or data patterns in problems?
+
+    +   b. What strategies can you apply to the tasks of solving linear or quadratic
+    equations and inequalities?
+
+    +   c. What strategies can you apply to find the maximum or minimum value of a
+    quadratic function?'
+  - '[PAGE 22]
+
+
+    # Algebra Tiles
+
+
+    # Problem 6
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_22_0.png)'
+  - '[PAGE 23]
+
+
+    # ## Summarize the Mathematics
+
+
+    In this investigation, you developed skill in transforming quadratic expressions
+    in standard form to vertex form and in using that form to analyze the graphs of
+    corresponding quadratic functions.
+
+
+    +   a. How can the vertex form of a quadratic expression like $(x-h)^2+k$ be used
+    to locate the max/min point and intercepts on the graph of the corresponding quadratic
+    function?
+
+
+    +   b. What are key steps in transforming $x^2+bx+c$ to vertex form?
+
+
+    *Be prepared to explain your ideas to the class.*'
+  - '[PAGE 24]
+
+
+    # # Proving the Quadratic Formula
+
+
+    # ## Problem 1
+
+
+    **Start:** If $ax^2+bx+c=0$ (and $a\ne0$),
+
+
+    **Step 1.** Then $\frac{ax^2}{a}+\frac{bx}{a}+\frac{c}{a}=0$.
+
+
+    **Step 2.** $x^2+\frac{b}{a}x+\frac{c}{a}=0$
+
+
+    **Step 3.** $x^2+\frac{b}{a}x=-\frac{c}{a}$
+
+
+    **Step 4.** $x^2+\frac{b}{a}x+\frac{b^2}{4a^2}=-\frac{c}{a}+\frac{b^2}{4a^2}$
+
+
+    **Step 5.** $x^2+\frac{b}{a}x+\frac{b^2}{4a^2}=\frac{b^2}{4a^2}+\frac{-c}{a}$
+
+
+    **Step 6.** $\left(x+\frac{b}{2a}\right)^2=\frac{b^2}{4a^2}+\frac{-c}{a}$
+
+
+    **Step 7.** $\left(x+\frac{b}{2a}\right)^2=\frac{b^2}{4a^2}+\frac{-4ac}{4a^2}$
+
+
+    **Step 8.** $\left(x+\frac{b}{2a}\right)^2=\frac{b^2-4ac}{4a^2}$
+
+
+    **Step 9.** $x+\frac{b}{2a}=\frac{\sqrt{b^2-4ac}}{2a}$ or $x+\frac{b}{2a}=\frac{-\sqrt{b^2-4ac}}{2a}$
+
+
+    **Step 10.** So, $x=\frac{-b}{2a}+\frac{\sqrt{b^2-4ac}}{2a}$ or $x=\frac{-b}{2a}-\frac{\sqrt{b^2-4ac}}{2a}$.'
+  - "[PAGE 25]\n\n# ## Summarize\n### the Mathematics\n\nIn this investigation, you\
+    \ used the technique of completing the square to derive the quadratic formula\
+    \ and practiced use of that formula in solving quadratic equations.\n\n+   a.\
+    \ What is the quadratic formula for solving equations in the form $ax^2 + bx +\
+    \ c = 0$?\n+   \n+   b. What does the value of the discriminant $b^2 - 4ac$ tell\
+    \ you about the number and type of solutions to the quadratic equation $ax^2 +\
+    \ bx + c = 0$?\n+   \n+   c. How will the graph of $f(x) = ax^2 + bx + c$ tell\
+    \ when the quadratic equation $ax^2 + bx + c = 0$ has 2, 1, 0, or 0 real number\
+    \ solutions? What will the graph tell about the value of the discriminant $b^2\
+    \ - 4ac$?\n\n**Be prepared to explain your ideas to the class.**"
+  - '[PAGE 26]
+
+
+    # # Lesson 2 Quiz
+
+
+    ## Form A
+
+
+    1. Consider the collection of squares and rectangles shown below.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_26_0.png)
+
+
+    **a.** What polynomial expression is represented by the squares and rectangles
+    above?
+
+
+    **b.** Rearrange the squares and rectangles to help you write the complete square
+    form of the polynomial expression. Draw your rearrangement below. Then write the
+    complete square form of the polynomial expression. Show or explain your work.
+
+
+    2. Consider the quadratic function $f(x)=x^2-10x+3$. Complete each task by algebraic
+    reasoning alone. Show all of your work to support your answers.
+
+
+    **a.** Rewrite the function rule in vertex form.
+
+
+    **b.** Does the graph of this function have a maximum or a minimum? Determine
+    the coordinates of the maximum or minimum point of the graph of this function.'
+  - '[PAGE 27]
+
+
+    c. What are the coordinates of the x-intercepts of the graph of this function?
+
+
+    d. What are the coordinates of the y-intercept of this function?
+
+
+    3. Consider the equation $2x^2 + 7x + c = 0$.
+
+
+    a. Find a value for $c$ so that the equation has two irrational solutions. Explain
+    your reasoning.
+
+
+    b. Find a value for $c$ so that the equation has two rational solutions. Explain
+    your reasoning.
+
+
+    c. Find a value for $c$ so that the equation has two complex number solutions.
+    Explain your reasoning.
+
+
+    4. Solve each quadratic equation.
+
+
+    a. $2x^2 + 5x + 1 = 0$
+
+
+    b. $(x - 7)^2 - 10 = 0$'
+  - "[PAGE 28]\n\n# LESSON 2 QUIZ\n\n# Form A\n\nSuggested Solutions\n\n+   1. a.\
+    \  $x^2 + 4x + 8$\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_28_0.png)\n\n$(x+2)^2+4$\n\
+    \n+   2. a.  $f(x)=(x-5)^2-22$\n+   \n+   b.  The minimum point has coordinates\
+    \ $(5,-22)$.\n+   \n+   c.  The $x$-intercepts are $(5+\\sqrt{22},0)$ and $(5-\\\
+    sqrt{22},0)$.\n+   \n+   d.  The $y$-intercept is $(0,3)$.\n\n+   3. a.  Any value\
+    \ of $c$ such that $b^2-4ac$ is positive and not a perfect square will give an\
+    \ equation with two irrational solutions. Since $b^2-4ac>0$, $7^2-4(2c)>0$ implies\
+    \ that $c<\\frac{49}{8}$.\n+   \n+   b.  In order for the solution to be rational,\
+    \ $b^2-4ac$ must be a perfect square. Some possible choices for $c$ are $c=-4$,\
+    \ $c=3$, and $c=5.21375$.\n+   \n+   &nbsp;&nbsp;&nbsp;&nbsp;If $c=-4$, $b^2-4ac=49-4(2)(-4)=81$.\n\
+    +   \n+   &nbsp;&nbsp;&nbsp;&nbsp;If $c=3$, $b^2-4ac=49-4(2)(3)=25$.\n+   \n+\
+    \   &nbsp;&nbsp;&nbsp;&nbsp;If $c=5.21375$, $b^2-4ac=49-4(2)(5.21375)=7.29$.\n\
+    +   \n+   c.  Any value of $c$ such that $49-4(2)c<0$, or $c>\\frac{49}{8}$, will\
+    \ give an equation with two complex solutions.\n\n+   4. a.  $x=\\frac{-5\\pm\\\
+    sqrt{25-4(2)(1)}}{4}=\\frac{-5\\pm\\sqrt{17}}{4}$\n+   \n+   b.  $x=7\\pm\\sqrt{10}$"
+  - "[PAGE 29]\n\n# LESSON 2 QUIZ\n\n# Form B\n\n+   1. Give function rules in the\
+    \ form \\(y=a(x-h)^2+k\\) that have graphs that meet each set of conditions. Explain\
+    \ your reasoning in each case.\n+   \n+      a. Opens up and has a y-intercept\
+    \ of 6\n+   \n+      b. Has a maximum point of \\((-3, 8)\\)\n+   \n+      c.\
+    \ Has x-intercepts of \\((2, 0)\\) and \\((8, 0)\\)\n\n2. How can the value of\
+    \ the discriminant \\((b^2-4ac)\\) be used to determine the number of x-intercepts\
+    \ of the graph of \\(y=ax^2+bx+c\\)?\n\n+   3. Rewrite each quadratic expression\
+    \ in vertex form.\n+   \n+      a. \\(x^2+16x+60\\)\n+   \n+      b. \\(x^2-6x+10\\\
+    )\n\n+   4. Solve each quadratic equation. If the solutions are nonreal complex\
+    \ numbers, write the solutions in standard form, \\(a\\pm bi\\).\n+   \n+    \
+    \  a. \\((x+4)^2-5=0\\)\n+   \n+      b. \\(3x^2-2x-1=0\\)\n+   \n+      c. \\\
+    (3x^2+3x=4\\)\n+   \n+      d. \\(x^2-4x+29=0\\)"
+  - "[PAGE 30]\n\n# Form B\n\nSuggested Solutions\n\n+   1. **a.** Any equation that\
+    \ satisfies $6=a(0-h)^2+k$ where $a>0$ is correct. One example is $y=(x-1)^2+5$.\n\
+    +   \n+      **b.** Any equation of the form $y=a(x+3)^2+8$ where $a<0$ will have\
+    \ a maximum point at $(-3,8)$.\n+   \n+      **c.** If the $x$-intercepts are\
+    \ $(2,0)$ and $(8,0)$, then a function rule must be of the form $y=a(x-2)(x-8)$.\
+    \ Students can then rewrite this rule in vertex form. If $a=1$, $y=x^2-10x+16$.\
+    \ In vertex form, this is $y=(x-5)^2-9$.\n\n+   2. If $b^2-4ac>0$, the graph will\
+    \ have 2 $x$-intercepts.\n+   \n+      If $b^2-4ac=0$, the graph will have 1 $x$-intercept.\n\
+    +   \n+      If $b^2-4ac<0$, the graph will not intersect the $x$-axis.\n\n+ \
+    \  3. **a.** $(x+8)^2-4$\n+   \n+      **b.** $(x-3)^2+1$\n\n+   4. **a.** $x=-4\\\
+    pm\\sqrt{5}$\n+   \n+      **b.** $x=-\\frac{1}{3}$ and $x=1$\n+   \n+      **c.**\
+    \ $x=\\frac{-3\\pm\\sqrt{57}}{6}$\n+   \n+      **d.** $x=2\\pm5i$"
+  md: "\n## Form B: Suggested Solutions\n\n- **1. a.** The polynomial must be at least\
+    \ degree 3 since it has one local maximum, one local minimum, and three \\(x\\\
+    )-intercepts.\n- **1. b.** Students need to use at least 4 points as the basis\
+    \ of their curve fitting. One set of points that works well is \\((-8, 0)\\),\
+    \ \\((-4, 27)\\), \\((4.5, -2.5)\\), and \\((8, 15)\\). Using these points, the\
+    \ function rule is \\(f(x) = 0.1x^3 - 0.1x^2 - 5.2x + 14.1\\).\n- **2. a.** \\\
+    (8x^3 - x + 3\\)\n- **2. b.** \\(14x^2 + 4x - 6\\)\n- **2. c.** \\(54x^2 - 39x\
+    \ - 5\\)\n- **2. d.** \\(2x^3 + 9x^2 + 15x + 18\\)\n- **3. a.** False. If the\
+    \ polynomials do not have the same degree, the sum of the polynomials will always\
+    \ have a degree equal to the highest degree of the polynomials being added together,\
+    \ so this sum will be cubic.\n- **3. b.** True. The degree of a product of two\
+    \ polynomials will be the sum of the degrees.\n- **3. c.** True. If \\(f(-1.6)\
+    \ = 0\\), then \\(k(-1.6) = f(-1.6) \\cdot g(-1.6) = 0 \\cdot g(-1.6) = 0\\).\n\
+    - **4. a.** The zeroes of \\(c(x)\\) are \\(x = -5\\) and \\(x = 3\\).\n- **4.\
+    \ b.** The degree of \\(c(x)\\) is 3.\n- **5. a.** \\(P_r(t) + P_w(t) = -16t^2\
+    \ + 550t - 4,250\\)\n- **5. b.** The weekly profit will be $454 since \\(P_r(16)\
+    \ + P_w(16) = 454\\).\n- **5. c.** To maximize profit, the ticket price should\
+    \ be $17.19.\n\n## Think About This Situation\n\nThink about the various algebraic\
+    \ reasoning and calculator- or computer-based methods that you have learned for\
+    \ working with linear and quadratic expressions and functions.\n\n- **a.** What\
+    \ strategies can you apply to the tasks of finding linear or quadratic function\
+    \ rules that model conditions or data patterns in problems?\n- **b.** What strategies\
+    \ can you apply to the tasks of solving linear or quadratic equations and inequalities?\n\
+    - **c.** What strategies can you apply to find the maximum or minimum value of\
+    \ a quadratic function?\n\n## Algebra Tiles\n\n### Problem 6\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_22_0.png)\n\
+    \n## Summarize the Mathematics\n\nIn this investigation, you developed skill in\
+    \ transforming quadratic expressions in standard form to vertex form and in using\
+    \ that form to analyze the graphs of corresponding quadratic functions.\n\n- **a.**\
+    \ How can the vertex form of a quadratic expression like $(x-h)^2+k$ be used to\
+    \ locate the max/min point and intercepts on the graph of the corresponding quadratic\
+    \ function?\n- **b.** What are key steps in transforming $x^2+bx+c$ to vertex\
+    \ form?\n\n*Be prepared to explain your ideas to the class.*\n\n## Proving the\
+    \ Quadratic Formula\n\n### Problem 1\n\n- **Start:** If $ax^2+bx+c=0$ (and $a\\\
+    ne0$),\n- **Step 1.** Then $\\frac{ax^2}{a}+\\frac{bx}{a}+\\frac{c}{a}=0$.\n-\
+    \ **Step 2.** $x^2+\\frac{b}{a}x+\\frac{c}{a}=0$\n- **Step 3.** $x^2+\\frac{b}{a}x=-\\\
+    frac{c}{a}$\n- **Step 4.** $x^2+\\frac{b}{a}x+\\frac{b^2}{4a^2}=-\\frac{c}{a}+\\\
+    frac{b^2}{4a^2}$\n- **Step 5.** $x^2+\\frac{b}{a}x+\\frac{b^2}{4a^2}=\\frac{b^2}{4a^2}+\\\
+    frac{-c}{a}$\n- **Step 6.** $\\left(x+\\frac{b}{2a}\\right)^2=\\frac{b^2}{4a^2}+\\\
+    frac{-c}{a}$\n- **Step 7.** $\\left(x+\\frac{b}{2a}\\right)^2=\\frac{b^2}{4a^2}+\\\
+    frac{-4ac}{4a^2}$\n- **Step 8.** $\\left(x+\\frac{b}{2a}\\right)^2=\\frac{b^2-4ac}{4a^2}$\n\
+    - **Step 9.** $x+\\frac{b}{2a}=\\frac{\\sqrt{b^2-4ac}}{2a}$ or $x+\\frac{b}{2a}=\\\
+    frac{-\\sqrt{b^2-4ac}}{2a}$\n- **Step 10.** So, $x=\\frac{-b}{2a}+\\frac{\\sqrt{b^2-4ac}}{2a}$\
+    \ or $x=\\frac{-b}{2a}-\\frac{\\sqrt{b^2-4ac}}{2a}$.\n\n## Summarize the Mathematics\n\
+    \nIn this investigation, you used the technique of completing the square to derive\
+    \ the quadratic formula and practiced use of that formula in solving quadratic\
+    \ equations.\n\n- **a.** What is the quadratic formula for solving equations in\
+    \ the form $ax^2 + bx + c = 0$?\n- **b.** What does the value of the discriminant\
+    \ $b^2 - 4ac$ tell you about the number and type of solutions to the quadratic\
+    \ equation $ax^2 + bx + c = 0$?\n- **c.** How will the graph of $f(x) = ax^2 +\
+    \ bx + c$ tell when the quadratic equation $ax^2 + bx + c = 0$ has 2, 1, or 0\
+    \ real number solutions? What will the graph tell about the value of the discriminant\
+    \ $b^2 - 4ac$?\n\n**Be prepared to explain your ideas to the class.**\n\n## Lesson\
+    \ 2 Quiz\n\n### Form A\n\n- **1.** Consider the collection of squares and rectangles\
+    \ shown below.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_26_0.png)\n\n  -\
+    \ **a.** What polynomial expression is represented by the squares and rectangles\
+    \ above?\n  - **b.** Rearrange the squares and rectangles to help you write the\
+    \ complete square form of the polynomial expression. Draw your rearrangement below.\
+    \ Then write the complete square form of the polynomial expression. Show or explain\
+    \ your work.\n\n- **2.** Consider the quadratic function $f(x)=x^2-10x+3$. Complete\
+    \ each task by algebraic reasoning alone. Show all of your work to support your\
+    \ answers.\n\n  - **a.** Rewrite the function rule in vertex form.\n  - **b.**\
+    \ Does the graph of this function have a maximum or a minimum? Determine the coordinates\
+    \ of the maximum or minimum point of the graph of this function.\n  - **c.** What\
+    \ are the coordinates of the x-intercepts of the graph of this function?\n  -\
+    \ **d.** What are the coordinates of the y-intercept of this function?\n\n- **3.**\
+    \ Consider the equation $2x^2 + 7x + c = 0$.\n\n  - **a.** Find a value for $c$\
+    \ so that the equation has two irrational solutions. Explain your reasoning.\n\
+    \  - **b.** Find a value for $c$ so that the equation has two rational solutions.\
+    \ Explain your reasoning.\n  - **c.** Find a value for $c$ so that the equation\
+    \ has two complex number solutions. Explain your reasoning.\n\n- **4.** Solve\
+    \ each quadratic equation.\n\n  - **a.** $2x^2 + 5x + 1 = 0$\n  - **b.** $(x -\
+    \ 7)^2 - 10 = 0$\n\n## Lesson 2 Quiz: Form A — Suggested Solutions\n\n- **1. a.**\
+    \ $x^2 + 4x + 8$\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_28_0.png)\n\n \
+    \ $(x+2)^2+4$\n\n- **2. a.** $f(x)=(x-5)^2-22$\n- **2. b.** The minimum point\
+    \ has coordinates $(5,-22)$.\n- **2. c.** The $x$-intercepts are $(5+\\sqrt{22},0)$\
+    \ and $(5-\\sqrt{22},0)$.\n- **2. d.** The $y$-intercept is $(0,3)$.\n- **3. a.**\
+    \ Any value of $c$ such that $b^2-4ac$ is positive and not a perfect square will\
+    \ give an equation with two irrational solutions. Since $b^2-4ac>0$, $7^2-4(2c)>0$\
+    \ implies that $c<\\frac{49}{8}$.\n- **3. b.** In order for the solution to be\
+    \ rational, $b^2-4ac$ must be a perfect square. Some possible choices for $c$\
+    \ are $c=-4$, $c=3$, and $c=5.21375$.\n\n  If $c=-4$, $b^2-4ac=49-4(2)(-4)=81$.\n\
+    \n  If $c=3$, $b^2-4ac=49-4(2)(3)=25$.\n\n  If $c=5.21375$, $b^2-4ac=49-4(2)(5.21375)=7.29$.\n\
+    \n- **3. c.** Any value of $c$ such that $49-4(2)c<0$, or $c>\\frac{49}{8}$, will\
+    \ give an equation with two complex solutions.\n- **4. a.** $x=\\frac{-5\\pm\\\
+    sqrt{25-4(2)(1)}}{4}=\\frac{-5\\pm\\sqrt{17}}{4}$\n- **4. b.** $x=7\\pm\\sqrt{10}$\n\
+    \n## Lesson 2 Quiz\n\n### Form B\n\n- **1.** Give function rules in the form \\\
+    (y=a(x-h)^2+k\\) that have graphs that meet each set of conditions. Explain your\
+    \ reasoning in each case.\n\n  - **a.** Opens up and has a y-intercept of 6\n\
+    \  - **b.** Has a maximum point of \\((-3, 8)\\)\n  - **c.** Has x-intercepts\
+    \ of \\((2, 0)\\) and \\((8, 0)\\)\n\n- **2.** How can the value of the discriminant\
+    \ \\((b^2-4ac)\\) be used to determine the number of x-intercepts of the graph\
+    \ of \\(y=ax^2+bx+c\\)?\n- **3.** Rewrite each quadratic expression in vertex\
+    \ form.\n\n  - **a.** \\(x^2+16x+60\\)\n  - **b.** \\(x^2-6x+10\\)\n\n- **4.**\
+    \ Solve each quadratic equation. If the solutions are nonreal complex numbers,\
+    \ write the solutions in standard form, \\(a\\pm bi\\).\n\n  - **a.** \\((x+4)^2-5=0\\\
+    )\n  - **b.** \\(3x^2-2x-1=0\\)\n  - **c.** \\(3x^2+3x=4\\)\n  - **d.** \\(x^2-4x+29=0\\\
+    )\n\n## Form B: Suggested Solutions\n\n- **1. a.** Any equation that satisfies\
+    \ $6=a(0-h)^2+k$ where $a>0$ is correct. One example is $y=(x-1)^2+5$.\n- **1.\
+    \ b.** Any equation of the form $y=a(x+3)^2+8$ where $a<0$ will have a maximum\
+    \ point at $(-3,8)$.\n- **1. c.** If the $x$-intercepts are $(2,0)$ and $(8,0)$,\
+    \ then a function rule must be of the form $y=a(x-2)(x-8)$. Students can then\
+    \ rewrite this rule in vertex form. If $a=1$, $y=x^2-10x+16$. In vertex form,\
+    \ this is $y=(x-5)^2-9$.\n- **2.** If $b^2-4ac>0$, the graph will have 2 $x$-intercepts.\n\
+    \n  If $b^2-4ac=0$, the graph will have 1 $x$-intercept.\n\n  If $b^2-4ac<0$,\
+    \ the graph will not intersect the $x$-axis.\n\n- **3. a.** $(x+8)^2-4$\n- **3.\
+    \ b.** $(x-3)^2+1$\n- **4. a.** $x=-4\\pm\\sqrt{5}$\n- **4. b.** $x=-\\frac{1}{3}$\
+    \ and $x=1$\n- **4. c.** $x=\\frac{-3\\pm\\sqrt{57}}{6}$\n- **4. d.** $x=2\\pm5i$\n"
+  mdcn: "\n\n## B 卷：建议解答\n\n- **1. a.** 该多项式至少为 3 次，因为它有一个局部最大值、一个局部最小值和三个 \\(x\\\
+    ) 截距。\n- **1. b.** 学生至少需要使用 4 个点作为曲线拟合的基础。一组效果不错的点是 \\((-8, 0)\\)、\\((-4, 27)\\\
+    )、\\((4.5, -2.5)\\) 和 \\((8, 15)\\)。利用这些点，函数规则为 \\(f(x) = 0.1x^3 - 0.1x^2 - 5.2x\
+    \ + 14.1\\)。\n- **2. a.** \\(8x^3 - x + 3\\)\n- **2. b.** \\(14x^2 + 4x - 6\\\
+    )\n- **2. c.** \\(54x^2 - 39x - 5\\)\n- **2. d.** \\(2x^3 + 9x^2 + 15x + 18\\\
+    )\n- **3. a.** 错误。如果两个多项式次数不同，那么多项式之和的次数总是等于被相加的多项式中的最高次数，因此这个和是三次的。\n- **3. b.**\
+    \ 正确。两个多项式乘积的次数等于它们次数之和。\n- **3. c.** 正确。如果 \\(f(-1.6) = 0\\)，则 \\(k(-1.6) = f(-1.6)\
+    \ \\cdot g(-1.6) = 0 \\cdot g(-1.6) = 0\\)。\n- **4. a.** \\(c(x)\\) 的零点为 \\(x\
+    \ = -5\\) 和 \\(x = 3\\)。\n- **4. b.** \\(c(x)\\) 的次数是 3。\n- **5. a.** \\(P_r(t)\
+    \ + P_w(t) = -16t^2 + 550t - 4,250\\)\n- **5. b.** 周利润为 454 美元，因为 \\(P_r(16) +\
+    \ P_w(16) = 454\\)。\n- **5. c.** 为使利润最大化，票价应为 17.19 美元。\n\n## 思考本情境\n\n回顾你在处理线性和二次表达式与函数时学到的各种代数推理方法，以及基于计算器或计算机的方法。\n\
+    \n- **a.** 对于寻找用于模拟问题中的条件或数据模式的线性或二次函数规则，你可以运用哪些策略？\n- **b.** 对于求解线性或二次方程与不等式的任务，你可以运用哪些策略？\n\
+    - **c.** 对于求二次函数的最大值或最小值，你可以运用哪些策略？\n\n## 代数拼图\n\n### 问题 6\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_22_0.png)\n\
+    \n## 数学总结\n\n在本探究中，你掌握了将标准形式的二次表达式转换为顶点形式的技能，并会利用该形式分析相应二次函数的图像。\n\n- **a.** 像\
+    \ $(x-h)^2+k$ 这样的二次表达式的顶点形式，如何用于确定相应二次函数图像上的最大值/最小值点和截距？\n- **b.** 将 $x^2+bx+c$\
+    \ 转换为顶点形式的关键步骤是什么？\n\n*请准备好向全班解释你的想法。*\n\n## 证明二次公式\n\n### 问题 1\n\n- **开始：** 如果\
+    \ $ax^2+bx+c=0$（且 $a\\ne0$），\n- **第 1 步：** 那么 $\\frac{ax^2}{a}+\\frac{bx}{a}+\\\
+    frac{c}{a}=0$。\n- **第 2 步：** $x^2+\\frac{b}{a}x+\\frac{c}{a}=0$\n- **第 3 步：**\
+    \ $x^2+\\frac{b}{a}x=-\\frac{c}{a}$\n- **第 4 步：** $x^2+\\frac{b}{a}x+\\frac{b^2}{4a^2}=-\\\
+    frac{c}{a}+\\frac{b^2}{4a^2}$\n- **第 5 步：** $x^2+\\frac{b}{a}x+\\frac{b^2}{4a^2}=\\\
+    frac{b^2}{4a^2}+\\frac{-c}{a}$\n- **第 6 步：** $\\left(x+\\frac{b}{2a}\\right)^2=\\\
+    frac{b^2}{4a^2}+\\frac{-c}{a}$\n- **第 7 步：** $\\left(x+\\frac{b}{2a}\\right)^2=\\\
+    frac{b^2}{4a^2}+\\frac{-4ac}{4a^2}$\n- **第 8 步：** $\\left(x+\\frac{b}{2a}\\right)^2=\\\
+    frac{b^2-4ac}{4a^2}$\n- **第 9 步：** $x+\\frac{b}{2a}=\\frac{\\sqrt{b^2-4ac}}{2a}$\
+    \ 或 $x+\\frac{b}{2a}=\\frac{-\\sqrt{b^2-4ac}}{2a}$\n- **第 10 步：** 所以，$x=\\frac{-b}{2a}+\\\
+    frac{\\sqrt{b^2-4ac}}{2a}$ 或 $x=\\frac{-b}{2a}-\\frac{\\sqrt{b^2-4ac}}{2a}$。\n\
+    \n## 数学总结\n\n在本探究中，你运用配方法推导出了二次公式，并练习了用该公式求解二次方程。\n\n- **a.** 求解形如 $ax^2 + bx\
+    \ + c = 0$ 的方程的二次公式是什么？\n- **b.** 判别式 $b^2 - 4ac$ 的值能告诉你关于二次方程 $ax^2 + bx + c\
+    \ = 0$ 的解的数目和类型的哪些信息？\n- **c.** 函数 $f(x) = ax^2 + bx + c$ 的图像如何表明二次方程 $ax^2 +\
+    \ bx + c = 0$ 有 2 个、1 个或 0 个实数解？图像又能说明判别式 $b^2 - 4ac$ 的值的哪些情况？\n\n**请准备好向全班解释你的想法。**\n\
+    \n## 第 2 课测验\n\n### A 卷\n\n- **1.** 考虑下面所示的正方形和长方形集合。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_26_0.png)\n\
+    \n  - **a.** 上面的正方形和长方形表示什么多项式表达式？\n  - **b.** 重新排列这些正方形和长方形，以帮助你写出该多项式表达式的完全平方形式。在下方画出你的重新排列方式，然后写出该多项式表达式的完全平方形式。展示或解释你的解答过程。\n\
+    \n- **2.** 考虑二次函数 $f(x)=x^2-10x+3$。仅通过代数推理完成下列各项任务。展示你的全部解答过程以支持你的答案。\n\n  - **a.**\
+    \ 将函数规则改写为顶点形式。\n  - **b.** 这个函数的图像有最大值还是最小值？确定该函数图像上最大值或最小值点的坐标。\n  - **c.**\
+    \ 这个函数图像的 x 截距坐标是多少？\n  - **d.** 这个函数的 y 截距坐标是多少？\n\n- **3.** 考虑方程 $2x^2 + 7x\
+    \ + c = 0$。\n\n  - **a.** 求一个 $c$ 的值，使得方程有两个无理数解。解释你的推理。\n  - **b.** 求一个 $c$ 的值，使得方程有两个有理数解。解释你的推理。\n\
+    \  - **c.** 求一个 $c$ 的值，使得方程有两个复数解。解释你的推理。\n\n- **4.** 解下列每个二次方程。\n\n  - **a.**\
+    \ $2x^2 + 5x + 1 = 0$\n  - **b.** $(x - 7)^2 - 10 = 0$\n\n## 第 2 课测验：A 卷 — 建议解答\n\
+    \n- **1. a.** $x^2 + 4x + 8$\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_28_0.png)\n\
+    \n  $(x+2)^2+4$\n\n- **2. a.** $f(x)=(x-5)^2-22$\n- **2. b.** 最小值点的坐标为 $(5,-22)$。\n\
+    - **2. c.** \\(x\\) 截距为 $(5+\\sqrt{22},0)$ 和 $(5-\\sqrt{22},0)$。\n- **2. d.**\
+    \ \\(y\\) 截距为 $(0,3)$。\n- **3. a.** 任何使 $b^2-4ac$ 为正数且不是完全平方数的 $c$ 值，都会使方程有两个无理数解。由于\
+    \ $b^2-4ac>0$，$7^2-4(2c)>0$ 意味着 $c<\\frac{49}{8}$。\n- **3. b.** 为了使解为有理数，$b^2-4ac$\
+    \ 必须是一个完全平方数。$c$ 的一些可能取值为 $c=-4$、$c=3$ 和 $c=5.21375$。\n\n  当 $c=-4$ 时，$b^2-4ac=49-4(2)(-4)=81$。\n\
+    \n  当 $c=3$ 时，$b^2-4ac=49-4(2)(3)=25$。\n\n  当 $c=5.21375$ 时，$b^2-4ac=49-4(2)(5.21375)=7.29$。\n\
+    \n- **3. c.** 任何使 $49-4(2)c<0$，即 $c>\\frac{49}{8}$ 的 $c$ 值，都会使方程有两个复数解。\n- **4.\
+    \ a.** $x=\\frac{-5\\pm\\sqrt{25-4(2)(1)}}{4}=\\frac{-5\\pm\\sqrt{17}}{4}$\n-\
+    \ **4. b.** $x=7\\pm\\sqrt{10}$\n\n## 第 2 课测验\n\n### B 卷\n\n- **1.** 给出形式为 \\\
+    (y=a(x-h)^2+k\\) 的函数规则，使其图像满足下列各组条件。分别解释你的推理。\n\n  - **a.** 开口向上，且 y 截距为 6\n \
+    \ - **b.** 最大值点为 \\((-3, 8)\\)\n  - **c.** x 截距为 \\((2, 0)\\) 和 \\((8, 0)\\)\n\
+    \n- **2.** 如何使用判别式 \\((b^2-4ac)\\) 的值来确定 \\(y=ax^2+bx+c\\) 图像与 x 轴交点（x 截距）的个数？\n\
+    - **3.** 将下列每个二次表达式改写为顶点形式。\n\n  - **a.** \\(x^2+16x+60\\)\n  - **b.** \\(x^2-6x+10\\\
+    )\n\n- **4.** 解下列每个二次方程。如果解是非实数复数，请以标准形式 \\(a\\pm bi\\) 写出解。\n\n  - **a.** \\\
+    ((x+4)^2-5=0\\)\n  - **b.** \\(3x^2-2x-1=0\\)\n  - **c.** \\(3x^2+3x=4\\)\n  -\
+    \ **d.** \\(x^2-4x+29=0\\)\n\n## B 卷：建议解答\n\n- **1. a.** 任何满足 $6=a(0-h)^2+k$（其中\
+    \ $a>0$）的方程都是正确的。例如 $y=(x-1)^2+5$。\n- **1. b.** 任何形如 $y=a(x+3)^2+8$（其中 $a<0$）的方程，其最大值点都在\
+    \ $(-3,8)$。\n- **1. c.** 如果 $x$ 截距为 $(2,0)$ 和 $(8,0)$，那么函数规则必须具有形式 $y=a(x-2)(x-8)$。然后学生可以将该规则改写为顶点形式。若\
+    \ $a=1$，$y=x^2-10x+16$。其顶点形式为 $y=(x-5)^2-9$。\n- **2.** 若 $b^2-4ac>0$，则图像有 2 个\
+    \ $x$ 截距。\n\n  若 $b^2-4ac=0$，则图像有 1 个 $x$ 截距。\n\n  若 $b^2-4ac<0$，则图像不与 $x$ 轴相交。\n\
+    \n- **3. a.** $(x+8)^2-4$\n- **3. b.** $(x-3)^2+1$\n- **4. a.** $x=-4\\pm\\sqrt{5}$\n\
+    - **4. b.** $x=-\\frac{1}{3}$ 和 $x=1$\n- **4. c.** $x=\\frac{-3\\pm\\sqrt{57}}{6}$\n\
+    - **4. d.** $x=2\\pm5i$\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 31]\n\n# Think About This Situation\n\nExamine the profit-per-ticket graph\
+    \ below.\n\n+   a. How would you describe the pattern of change in profit per\
+    \ ticket as ticket prices approach $30?\n+   \n+   b. When the ticket price is\
+    \ set at $15, the business plan predicts that 375 tickets will be sold. Total\
+    \ profit from ticket sales is predicted to be $2,750. How would you calculate\
+    \ the profit per ticket sold when tickets are $15? How is your answer shown in\
+    \ the graph?\n+   \n+   c. How would you find a rule for calculating profit per\
+    \ ticket at any ticket price?\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_31_0.png)"
+  - '[PAGE 32]
+
+
+    <!-- no content -->'
+  - "[PAGE 33]\n\n# **UNIT 5** *Polynomial and Rational Functions*\n\n# **Summarize**\
+    \ the **Mathematics**\n\nIn this investigation, you explored simplification of\
+    \ rational expressions.\n\n+   a. What is meant by simplifying rational expressions?\n\
+    +   \n+   b. For a given rational expression, what strategies can be applied to\
+    \ find another expression that is simpler but nearly equivalent to the original?\n\
+    +   \n+   c. What cautions must be observed when simplifying rational expressions?\n\
+    \n*Be prepared to explain your ideas to the class.*"
+  - '[PAGE 34]
+
+
+    # # Summarize the Mathematics
+
+
+    In this investigation, you learned how to add and subtract rational expressions.
+
+
+    +   a. Adding rational expressions is easy when the two expressions are related
+    in a particular way. What is that relationship? If it holds, how do you add the
+    expressions?
+
+
+    +   b. If the most convenient relationship between rational expressions does *not*
+    hold, what can you do to make addition or subtraction of the expressions possible?
+
+
+    *Be prepared to explain your ideas to the class.*'
+  - '[PAGE 35]
+
+
+    <!-- no content -->'
+  - '[PAGE 36]
+
+
+    # LESSON 3 QUIZ
+
+
+    # Form A
+
+
+    1. Information from an analysis of the past several years has allowed the owners
+    of Fountain Hills Water Park to develop the following function rules for the number
+    of customers $n(x)$ and total profit $p(x)$ based on the entrance fee to the park
+    $x$.
+
+
+    $n(x)=300-10x$
+
+
+    $p(x)=-10x^2+350x-2{,}000$
+
+
+    **a.** Write an algebraic rule for the profit per customer in terms of the entrance
+    fee $x$.
+
+
+    **b.** Estimate the entrance fee for which the profit per customer is maximized.
+    How much profit will the water park make per person?
+
+
+    **c.** Will the graph of your rule from Part a have any vertical asymptotes? If
+    so, describe them. If not, explain why not.
+
+
+    2. Consider the expression $\frac{x^2-4x+5}{x+5}$.
+
+
+    **a.** Identify all values for which this expression is undefined. Explain your
+    reasoning.
+
+
+    **b.** Can this expression be simplified? If so, simplify the expression. If not,
+    explain why not.'
+  - '[PAGE 37]
+
+
+    # # A New Algorithm for Dynamic Time Warping
+
+    Underlying Music Alignment
+
+
+    **Anonymous Author(s)**
+
+    Affiliation
+
+    Address
+
+    Email
+
+
+    **Abstract**
+
+    Dynamic Time Warping (DTW) is a common method for aligning two sequences. It is
+    widely used in audio alignment, bioinformatics, and other fields. Traditional
+    DTW requires $O(N^2)$ time and space, which limits its application to large-scale
+    data. This paper proposes a new algorithm that reduces the time complexity to
+    $O(N \log N)$ while maintaining high accuracy. We evaluate our algorithm on music
+    alignment tasks and demonstrate its superiority over existing methods.
+
+
+    **1. Introduction**
+
+    The alignment of time series data is a fundamental problem in many domains. For
+    example, in music information retrieval, aligning a performance to a score enables
+    applications such as score following and automatic accompaniment. The most widely
+    used approach is Dynamic Time Warping (DTW), which computes an optimal alignment
+    between two sequences under certain constraints. However, the classic DTW algorithm
+    has a quadratic time and space complexity, making it impractical for long sequences.
+
+
+    Recent works have attempted to speed up DTW by using approximations or parallel
+    computing. These methods often sacrifice accuracy or rely on specific hardware.
+    In contrast, our algorithm provides an exact solution with significantly lower
+    complexity. The main idea is to use a divide-and-conquer strategy combined with
+    fast distance computation.
+
+
+    The rest of this paper is organized as follows. Section 2 reviews the classic
+    DTW algorithm and its variants. Section 3 presents our proposed algorithm in detail.
+    Section 4 describes the experimental setup and results. Section 5 concludes the
+    paper and discusses future work.
+
+
+    **2. Preliminaries**
+
+    Let $X = (x_1, x_2, ..., x_n)$ and $Y = (y_1, y_2, ..., y_m)$ be two sequences.
+    A warping path $P = (p_1, p_2, ..., p_k)$ is a sequence of index pairs $p_t =
+    (i_t, j_t)$ that satisfies the following conditions:
+
+
+    ```
+
+    $$
+
+    \begin{aligned}
+
+    \text{(1)}&\quad p_1 = (1,1),\quad p_k = (n,m) \\
+
+    \text{(2)}&\quad 0 \le i_{t+1}-i_t \le 1 \quad \text{and} \quad 0 \le j_{t+1}-j_t
+    \le 1 \\
+
+    \text{(3)}&\quad \text{No two consecutive steps are both diagonal.}
+
+    \end{aligned}
+
+    $$
+
+    ```
+
+
+    The cost of a path is defined as the sum of the distances between the aligned
+    elements. The DTW distance is the minimum cost over all valid warping paths, computed
+    via dynamic programming:
+
+
+    **References**
+
+    [1] H. Sakoe and S. Chiba. Dynamic programming algorithm optimization for spoken
+    word recognition. *IEEE Transactions on Acoustics, Speech, and Signal Processing*,
+    26(1):43–49, 1978.
+
+    [2] D. Ellis and G. Poliner. Identifying cover songs with chroma features and
+    dynamic programming. In *Proc. ISMIR*, 2007.'
+  - '[PAGE 38]
+
+
+    count me in
+
+
+    i''d rather not
+
+
+    i''m in two minds about it
+
+
+    i''m up for it
+
+
+    i''m easy
+
+
+    i''m game'
+  - '[PAGE 39]
+
+
+    <!-- no content -->'
+  - '[PAGE 40]
+
+
+    4. Suppose an ammonia solution consists of 15 gallons of water mixed with 4 gallons
+    of ammonia. An additional \(x\) gallons of ammonia are added to the mixture.
+
+
+    +   a. In terms of \(x\), how many gallons of ammonia are now in the mixture?
+
+
+    +   b. In terms of \(x\), what is now the total volume of liquid in gallons?
+
+
+    +   c. The concentration of ammonia in the mixture is defined to be the ratio
+    of the volume of ammonia to the volume of liquid. This is a function of \(x\),
+    the number of gallons of ammonia added to the mixture. Find a formula for \(C(x)\),
+    the concentration of ammonia in the mixture.
+
+
+    +   d. Find the equation for the horizontal asymptote of \(C(x)\) from Part c.
+    Explain what this asymptote means about the mixture.
+
+
+    5. Write each sum, difference, product, or quotient in equivalent form as a single
+    algebraic fraction. Then simplify the result as much as possible.
+
+
+    +   a. \(\frac{6x+1}{8x-2}+\frac{2x-17}{8x-2}\)
+
+
+    +   b. \(\frac{7x+12}{x+1}-\frac{3x+8}{x+1}\)
+
+
+    +   c. \(\frac{x+5}{x-2}+\frac{3x+1}{x}\)
+
+
+    +   d. \(\frac{3x}{x+5}\cdot\frac{5}{12x}\)
+
+
+    +   e. \(\frac{x+7}{x}\div\frac{2x+14}{x}\)
+
+
+    +   f. \(\frac{15x}{x+5}\cdot\frac{x^2+10x+25}{6x^2}\)'
+  - '[PAGE 41]
+
+
+    # ## LESSON 3 QUIZ
+
+
+    # ### Form B
+
+    ### Suggested Solutions
+
+
+    +   1. a. The domain of f(x) is all real numbers except 8 and 0.
+
+    +      b. The only x-intercept of the graph is (−1, 0). The x-coordinate of the
+    x-intercept is a zero of the numerator of the function but not a zero of the denominator
+    of the function.
+
+    +      c. There is only one vertical asymptote at x = 0. Zero is the only value
+    that is a zero of the denominator and not a zero of the numerator.
+
+
+    +   2. a. (x − 5) / 10
+
+    +      b. No. They are not equivalent for x = −5. The original expression is undefined
+    for x = −5, but the simplified expression equals −1 when x = −5.
+
+
+    +   3. Responses will vary. Students should provide a rational function of the
+    form f(x) = p(x) / ((x − a)(x − b)) such that neither (x − a) nor (x − b) are
+    factors of p(x). In this case, x = a and x = b are vertical asymptotes.
+
+
+    +   4. a. x + 4
+
+    +      b. x + 15
+
+    +      c. C(x) = (x + 4) / (x + 15)
+
+    +      d. The horizontal asymptote is C(x) = 1 which represents 100% ammonia.
+    As more and more ammonia is added to the solution, that is, as x grows large (|x|
+    → ∞), the concentration of ammonia approaches 100%.
+
+
+    +   5. a. (8x − 16) / (6x − 2) = (4x − 8) / (4x − 1)
+
+    +      b. (4x + 4) / (x + 1) = (4(x + 1)) / (x + 1) = 4
+
+    +      c. x(x + 5) / (x(x − 2)) + ((x − 2)(3x + 1)) / (x(x − 2)) = (x² + 5x +
+    3x² − 5x − 2) / (x(x − 2)) = (4x² − 2) / (x² − 2x)
+
+    +      d. 5 / (4(x + 5)) = 5 / (4x + 20)
+
+    +      e. 1/2
+
+    +      f. 5(x + 5) / (2x) = (5x + 25) / (2x)'
+  md: "\n## Think About This Situation\n\nExamine the profit-per-ticket graph below.\n\
+    \n- a. How would you describe the pattern of change in profit per ticket as ticket\
+    \ prices approach $30?\n- b. When the ticket price is set at $15, the business\
+    \ plan predicts that 375 tickets will be sold. Total profit from ticket sales\
+    \ is predicted to be $2,750. How would you calculate the profit per ticket sold\
+    \ when tickets are $15? How is your answer shown in the graph?\n- c. How would\
+    \ you find a rule for calculating profit per ticket at any ticket price?\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_31_0.png)\n\
+    \n## UNIT 5: Polynomial and Rational Functions\n\n### Summarize the Mathematics\n\
+    \nIn this investigation, you explored simplification of rational expressions.\n\
+    \n- a. What is meant by simplifying rational expressions?\n- b. For a given rational\
+    \ expression, what strategies can be applied to find another expression that is\
+    \ simpler but nearly equivalent to the original?\n- c. What cautions must be observed\
+    \ when simplifying rational expressions?\n\n*Be prepared to explain your ideas\
+    \ to the class.*\n\n### Summarize the Mathematics\n\nIn this investigation, you\
+    \ learned how to add and subtract rational expressions.\n\n- a. Adding rational\
+    \ expressions is easy when the two expressions are related in a particular way.\
+    \ What is that relationship? If it holds, how do you add the expressions?\n- b.\
+    \ If the most convenient relationship between rational expressions does *not*\
+    \ hold, what can you do to make addition or subtraction of the expressions possible?\n\
+    \n*Be prepared to explain your ideas to the class.*\n\n## Lesson 3 Quiz\n\n###\
+    \ Form A\n\n- 1. Information from an analysis of the past several years has allowed\
+    \ the owners of Fountain Hills Water Park to develop the following function rules\
+    \ for the number of customers \\(n(x)\\) and total profit \\(p(x)\\) based on\
+    \ the entrance fee to the park \\(x\\).\n\n  \\(n(x)=300-10x\\)\n\n  \\(p(x)=-10x^2+350x-2{,}000\\\
+    )\n\n  - **a.** Write an algebraic rule for the profit per customer in terms of\
+    \ the entrance fee \\(x\\).\n  - **b.** Estimate the entrance fee for which the\
+    \ profit per customer is maximized. How much profit will the water park make per\
+    \ person?\n  - **c.** Will the graph of your rule from Part a have any vertical\
+    \ asymptotes? If so, describe them. If not, explain why not.\n\n- 2. Consider\
+    \ the expression \\(\\frac{x^2-4x+5}{x+5}\\).\n\n  - **a.** Identify all values\
+    \ for which this expression is undefined. Explain your reasoning.\n  - **b.**\
+    \ Can this expression be simplified? If so, simplify the expression. If not, explain\
+    \ why not.\n\n## A New Algorithm for Dynamic Time Warping Underlying Music Alignment\n\
+    \n**Anonymous Author(s)**  \nAffiliation  \nAddress  \nEmail\n\n### Abstract\n\
+    \nDynamic Time Warping (DTW) is a common method for aligning two sequences. It\
+    \ is widely used in audio alignment, bioinformatics, and other fields. Traditional\
+    \ DTW requires \\(O(N^2)\\) time and space, which limits its application to large-scale\
+    \ data. This paper proposes a new algorithm that reduces the time complexity to\
+    \ \\(O(N \\log N)\\) while maintaining high accuracy. We evaluate our algorithm\
+    \ on music alignment tasks and demonstrate its superiority over existing methods.\n\
+    \n### 1. Introduction\n\nThe alignment of time series data is a fundamental problem\
+    \ in many domains. For example, in music information retrieval, aligning a performance\
+    \ to a score enables applications such as score following and automatic accompaniment.\
+    \ The most widely used approach is Dynamic Time Warping (DTW), which computes\
+    \ an optimal alignment between two sequences under certain constraints. However,\
+    \ the classic DTW algorithm has a quadratic time and space complexity, making\
+    \ it impractical for long sequences.\n\nRecent works have attempted to speed up\
+    \ DTW by using approximations or parallel computing. These methods often sacrifice\
+    \ accuracy or rely on specific hardware. In contrast, our algorithm provides an\
+    \ exact solution with significantly lower complexity. The main idea is to use\
+    \ a divide-and-conquer strategy combined with fast distance computation.\n\nThe\
+    \ rest of this paper is organized as follows. Section 2 reviews the classic DTW\
+    \ algorithm and its variants. Section 3 presents our proposed algorithm in detail.\
+    \ Section 4 describes the experimental setup and results. Section 5 concludes\
+    \ the paper and discusses future work.\n\n### 2. Preliminaries\n\nLet \\(X = (x_1,\
+    \ x_2, ..., x_n)\\) and \\(Y = (y_1, y_2, ..., y_m)\\) be two sequences. A warping\
+    \ path \\(P = (p_1, p_2, ..., p_k)\\) is a sequence of index pairs \\(p_t = (i_t,\
+    \ j_t)\\) that satisfies the following conditions:\n\n$$\n\\begin{aligned}\n\\\
+    text{(1)}&\\quad p_1 = (1,1),\\quad p_k = (n,m) \\\\\n\\text{(2)}&\\quad 0 \\\
+    le i_{t+1}-i_t \\le 1 \\quad \\text{and} \\quad 0 \\le j_{t+1}-j_t \\le 1 \\\\\
+    \n\\text{(3)}&\\quad \\text{No two consecutive steps are both diagonal.}\n\\end{aligned}\n\
+    $$\n\nThe cost of a path is defined as the sum of the distances between the aligned\
+    \ elements. The DTW distance is the minimum cost over all valid warping paths,\
+    \ computed via dynamic programming:\n\n### References\n\n[1] H. Sakoe and S. Chiba.\
+    \ Dynamic programming algorithm optimization for spoken word recognition. *IEEE\
+    \ Transactions on Acoustics, Speech, and Signal Processing*, 26(1):43–49, 1978.\n\
+    \n[2] D. Ellis and G. Poliner. Identifying cover songs with chroma features and\
+    \ dynamic programming. In *Proc. ISMIR*, 2007.\n\n- Count me in\n- I'd rather\
+    \ not\n- I'm in two minds about it\n- I'm up for it\n- I'm easy\n- I'm game\n\n\
+    - 4. Suppose an ammonia solution consists of 15 gallons of water mixed with 4\
+    \ gallons of ammonia. An additional \\(x\\) gallons of ammonia are added to the\
+    \ mixture.\n\n  - a. In terms of \\(x\\), how many gallons of ammonia are now\
+    \ in the mixture?\n  - b. In terms of \\(x\\), what is now the total volume of\
+    \ liquid in gallons?\n  - c. The concentration of ammonia in the mixture is defined\
+    \ to be the ratio of the volume of ammonia to the volume of liquid. This is a\
+    \ function of \\(x\\), the number of gallons of ammonia added to the mixture.\
+    \ Find a formula for \\(C(x)\\), the concentration of ammonia in the mixture.\n\
+    \  - d. Find the equation for the horizontal asymptote of \\(C(x)\\) from Part\
+    \ c. Explain what this asymptote means about the mixture.\n\n- 5. Write each sum,\
+    \ difference, product, or quotient in equivalent form as a single algebraic fraction.\
+    \ Then simplify the result as much as possible.\n\n  - a. \\(\\frac{6x+1}{8x-2}+\\\
+    frac{2x-17}{8x-2}\\)\n  - b. \\(\\frac{7x+12}{x+1}-\\frac{3x+8}{x+1}\\)\n  - c.\
+    \ \\(\\frac{x+5}{x-2}+\\frac{3x+1}{x}\\)\n  - d. \\(\\frac{3x}{x+5}\\cdot\\frac{5}{12x}\\\
+    )\n  - e. \\(\\frac{x+7}{x}\\div\\frac{2x+14}{x}\\)\n  - f. \\(\\frac{15x}{x+5}\\\
+    cdot\\frac{x^2+10x+25}{6x^2}\\)\n\n## Lesson 3 Quiz\n\n### Form B: Suggested Solutions\n\
+    \n- 1.\n  - a. The domain of \\(f(x)\\) is all real numbers except 8 and 0.\n\
+    \  - b. The only \\(x\\)-intercept of the graph is \\((−1, 0)\\). The \\(x\\)-coordinate\
+    \ of the \\(x\\)-intercept is a zero of the numerator of the function but not\
+    \ a zero of the denominator of the function.\n  - c. There is only one vertical\
+    \ asymptote at \\(x = 0\\). Zero is the only value that is a zero of the denominator\
+    \ and not a zero of the numerator.\n\n- 2.\n  - a. \\((x − 5) / 10\\)\n  - b.\
+    \ No. They are not equivalent for \\(x = −5\\). The original expression is undefined\
+    \ for \\(x = −5\\), but the simplified expression equals \\(−1\\) when \\(x =\
+    \ −5\\).\n\n- 3. Responses will vary. Students should provide a rational function\
+    \ of the form \\(f(x) = p(x) / ((x − a)(x − b))\\) such that neither \\((x − a)\\\
+    ) nor \\((x − b)\\) are factors of \\(p(x)\\). In this case, \\(x = a\\) and \\\
+    (x = b\\) are vertical asymptotes.\n\n- 4.\n  - a. \\(x + 4\\)\n  - b. \\(x +\
+    \ 15\\)\n  - c. \\(C(x) = (x + 4) / (x + 15)\\)\n  - d. The horizontal asymptote\
+    \ is \\(C(x) = 1\\), which represents 100% ammonia. As more and more ammonia is\
+    \ added to the solution, that is, as \\(x\\) grows large (\\(|x| \\to \\infty\\\
+    )), the concentration of ammonia approaches 100%.\n\n- 5.\n  - a. \\((8x − 16)\
+    \ / (8x − 2) = (4x − 8) / (4x − 1)\\)\n  - b. \\((4x + 4) / (x + 1) = (4(x + 1))\
+    \ / (x + 1) = 4\\)\n  - c. \\(x(x + 5) / (x(x − 2)) + ((x − 2)(3x + 1)) / (x(x\
+    \ − 2)) = (x^2 + 5x + 3x^2 − 5x − 2) / (x(x − 2)) = (4x^2 − 2) / (x^2 − 2x)\\\
+    )\n  - d. \\(5 / (4(x + 5)) = 5 / (4x + 20)\\)\n  - e. \\(1/2\\)\n  - f. \\(5(x\
+    \ + 5) / (2x) = (5x + 25) / (2x)\\)\n"
+  mdcn: "\n\n## 思考这个情境\n\n观察下面的每张门票利润图。\n\n- a. 随着票价接近 30 美元，每张门票利润的变化模式是怎样的？\n- b.\
+    \ 当票价定为 15 美元时，商业计划预测将售出 375 张门票。门票销售总利润预计为 2,750 美元。你将如何计算票价为 15 美元时每张售出门票的利润？你的答案在图中是如何显示的？\n\
+    - c. 你将如何找到计算任意票价下每张门票利润的规则？\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_31_0.png)\n\
+    \n## 第 5 单元：多项式函数与有理函数\n\n### 数学总结\n\n在本项探究中，你探索了有理表达式的化简。\n\n- a. 化简有理表达式是什么意思？\n\
+    - b. 对于给定的有理表达式，可以运用哪些策略来找到另一个更简单但与原式几乎等价的表达式？\n- c. 在化简有理表达式时必须注意哪些事项？\n\n*请准备好向全班同学解释你的想法。*\n\
+    \n### 数学总结\n\n在本项探究中，你学习了如何加减有理表达式。\n\n- a. 当两个表达式以某种特定方式相关联时，加法运算会很简单。这种关系是什么？如果满足该关系，你如何进行加法运算？\n\
+    - b. 如果有理表达式之间最便捷的关系*不*成立，你可以采取什么措施使表达式的加法或减法得以进行？\n\n*请准备好向全班同学解释你的想法。*\n\n##\
+    \ 第 3 课测验\n\n### A 卷\n\n- 1. 对过去几年数据的分析使喷泉山水上乐园的经营者能够根据公园门票价格 \\(x\\) 制定出顾客数量\
+    \ \\(n(x)\\) 和总利润 \\(p(x)\\) 的函数规则。\n\n  \\(n(x)=300-10x\\)\n\n  \\(p(x)=-10x^2+350x-2{,}000\\\
+    )\n\n  - **a.** 写出以门票价格 \\(x\\) 表示的每位顾客利润的代数规则。\n  - **b.** 估算使每位顾客利润最大化的门票价格。水上乐园每人将获得多少利润？\n\
+    \  - **c.** 你从第 a 部分得到的规则图像是否会有任何垂直渐近线？如果有，请描述它们。如果没有，请解释原因。\n\n- 2. 考虑表达式 \\\
+    (\\frac{x^2-4x+5}{x+5}\\)。\n\n  - **a.** 找出使该表达式无定义的所有值。解释你的推理。\n  - **b.** 该表达式能否化简？如果能，请化简该表达式。如果不能，请解释原因。\n\
+    \n## 一种用于音乐对齐的动态时间规整新算法\n\n**匿名作者**  \n单位  \n地址  \n电子邮件\n\n### 摘要\n\n动态时间规整（DTW）是对齐两个序列的常用方法，广泛用于音频对齐、生物信息学等领域。传统\
+    \ DTW 需要 \\(O(N^2)\\) 的时间和空间，这限制了其在大规模数据上的应用。本文提出一种新算法，将时间复杂度降低至 \\(O(N \\log\
+    \ N)\\)，同时保持高精度。我们在音乐对齐任务上评估了该算法，并证明了其相对于现有方法的优越性。\n\n### 1. 引言\n\n时间序列数据的对齐是许多领域的基本问题。例如，在音乐信息检索中，将演奏与乐谱对齐可实现乐谱跟随和自动伴奏等应用。最广泛使用的方法是动态时间规整（DTW），它在特定约束条件下计算两个序列之间的最优对齐。然而，经典\
+    \ DTW 算法具有二次方的时间和空间复杂度，这使得它难以处理长序列。\n\n近年来的工作尝试通过近似方法或并行计算来加速 DTW。这些方法往往牺牲精度或依赖特定硬件。相比之下，我们的算法以显著更低的复杂度提供精确解。主要思想是结合分治策略与快速距离计算。\n\
+    \n本文其余部分组织如下。第 2 节回顾经典 DTW 算法及其变体。第 3 节详细介绍我们提出的算法。第 4 节描述实验设置和结果。第 5 节总结全文并讨论未来工作。\n\
+    \n### 2. 预备知识\n\n设 \\(X = (x_1, x_2, ..., x_n)\\) 和 \\(Y = (y_1, y_2, ..., y_m)\\\
+    ) 为两个序列。规整路径 \\(P = (p_1, p_2, ..., p_k)\\) 是索引对 \\(p_t = (i_t, j_t)\\) 的序列，满足以下条件：\n\
+    \n$$\n\\begin{aligned}\n\\text{(1)}&\\quad p_1 = (1,1),\\quad p_k = (n,m) \\\\\
+    \n\\text{(2)}&\\quad 0 \\le i_{t+1}-i_t \\le 1 \\quad \\text{and} \\quad 0 \\\
+    le j_{t+1}-j_t \\le 1 \\\\\n\\text{(3)}&\\quad \\text{No two consecutive steps\
+    \ are both diagonal.}\n\\end{aligned}\n$$\n\n路径的代价定义为对齐元素之间距离的总和。DTW 距离是所有有效规整路径中的最小代价，可通过动态规划计算：\n\
+    \n### 参考文献\n\n[1] H. Sakoe and S. Chiba. Dynamic programming algorithm optimization\
+    \ for spoken word recognition. *IEEE Transactions on Acoustics, Speech, and Signal\
+    \ Processing*, 26(1):43–49, 1978.\n\n[2] D. Ellis and G. Poliner. Identifying\
+    \ cover songs with chroma features and dynamic programming. In *Proc. ISMIR*,\
+    \ 2007.\n\n- 算我一个\n- 我还是不了\n- 我拿不定主意\n- 我乐意参加\n- 我无所谓\n- 我愿意\n\n- 4. 假设一种氨溶液由\
+    \ 15 加仑水和 4 加仑氨混合而成。再向混合物中加入 \\(x\\) 加仑的氨。\n\n  - a. 用含 \\(x\\) 的式子表示，现在混合物中有多少加仑的氨？\n\
+    \  - b. 用含 \\(x\\) 的式子表示，现在液体的总体积是多少加仑？\n  - c. 混合物中氨的浓度定义为氨的体积与液体体积之比。这是加入混合物的氨的加仑数\
+    \ \\(x\\) 的函数。求 \\(C(x)\\) 的公式，即混合物中氨的浓度。\n  - d. 求第 c 部分中 \\(C(x)\\) 的水平渐近线方程。解释该渐近线对混合物的含义。\n\
+    \n- 5. 将下列每个和、差、积或商写成等价形式的单个代数分式，然后尽可能化简结果。\n\n  - a. \\(\\frac{6x+1}{8x-2}+\\\
+    frac{2x-17}{8x-2}\\)\n  - b. \\(\\frac{7x+12}{x+1}-\\frac{3x+8}{x+1}\\)\n  - c.\
+    \ \\(\\frac{x+5}{x-2}+\\frac{3x+1}{x}\\)\n  - d. \\(\\frac{3x}{x+5}\\cdot\\frac{5}{12x}\\\
+    )\n  - e. \\(\\frac{x+7}{x}\\div\\frac{2x+14}{x}\\)\n  - f. \\(\\frac{15x}{x+5}\\\
+    cdot\\frac{x^2+10x+25}{6x^2}\\)\n\n## 第 3 课测验\n\n### B 卷：参考答案\n\n- 1.\n  - a.\
+    \ \\(f(x)\\) 的定义域是除 8 和 0 之外的所有实数。\n  - b. 图像的唯一 \\(x\\) 截距是 \\((−1, 0)\\)。该 \\\
+    (x\\) 截距的 \\(x\\) 坐标是函数分子的零点，但不是函数分母的零点。\n  - c. 在 \\(x = 0\\) 处只有一条垂直渐近线。0 是唯一一个为分母零点但不是分子零点的值。\n\
+    \n- 2.\n  - a. \\((x − 5) / 10\\)\n  - b. 不能。它们在 \\(x = −5\\) 处不等价。原表达式在 \\(x\
+    \ = −5\\) 处无定义，但化简后的表达式在 \\(x = −5\\) 时等于 \\(−1\\)。\n\n- 3. 答案会有所不同。学生应提供一个形如\
+    \ \\(f(x) = p(x) / ((x − a)(x − b))\\) 的有理函数，使得 \\((x − a)\\) 和 \\((x − b)\\)\
+    \ 都不是 \\(p(x)\\) 的因式。在这种情况下，\\(x = a\\) 和 \\(x = b\\) 是垂直渐近线。\n\n- 4.\n  - a.\
+    \ \\(x + 4\\)\n  - b. \\(x + 15\\)\n  - c. \\(C(x) = (x + 4) / (x + 15)\\)\n \
+    \ - d. 水平渐近线是 \\(C(x) = 1\\)，表示 100% 的氨。随着越来越多的氨被加入溶液，即当 \\(x\\) 变大（\\(|x| \\\
+    to \\infty\\)）时，氨的浓度趋近于 100%。\n\n- 5.\n  - a. \\((8x − 16) / (8x − 2) = (4x −\
+    \ 8) / (4x − 1)\\)\n  - b. \\((4x + 4) / (x + 1) = (4(x + 1)) / (x + 1) = 4\\\
+    )\n  - c. \\(x(x + 5) / (x(x − 2)) + ((x − 2)(3x + 1)) / (x(x − 2)) = (x^2 + 5x\
+    \ + 3x^2 − 5x − 2) / (x(x − 2)) = (4x^2 − 2) / (x^2 − 2x)\\)\n  - d. \\(5 / (4(x\
+    \ + 5)) = 5 / (4x + 20)\\)\n  - e. \\(1/2\\)\n  - f. \\(5(x + 5) / (2x) = (5x\
+    \ + 25) / (2x)\\)\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 42]
+
+
+    # # Summarize
+
+    the Mathematics
+
+
+    In this unit, you modeled problem situations using polynomial and rational functions
+    and developed an understanding of some of the properties of those families of
+    functions. You also learned how to add, subtract, and multiply polynomials and
+    rational expressions.
+
+
+    +   a. What kinds of functions are called:
+
+    +      i. polynomial functions?
+
+    +      ii. rational functions?
+
+
+    +   b. Describe how you can determine:
+
+    +      i. the degree of a polynomial.
+
+    +      ii. local maximum or local minimum points on the graph of a polynomial
+    function.
+
+    +      iii. the zeroes of a polynomial function.
+
+    +      iv. the sum or difference of two polynomials.
+
+    +      v. the product of two polynomials.
+
+
+    +   c. What is the vertex form of a quadratic function?
+
+    +      i. What are the advantages and disadvantages of using this form?
+
+    +      ii. How would you transform any quadratic expression in the form ax² +
+    bx + c into vertex form?'
+  - '[PAGE 43]
+
+
+    <!-- no content -->'
+  - '[PAGE 44]
+
+
+    # UNIT SUMMARY
+
+
+    In this unit, you learned how to use polynomial and rational functions and equations
+    to represent and analyze a variety of quantitative patterns and relationships.
+    You also extended your ability to work with quadratic functions, expressions,
+    and equations, and with algebraic expressions and functions that generalize quadratic
+    and inverse variation functions to polynomials and rational functions.
+
+
+    Give both standard and factored expressions for a polynomial function f(x) that
+    has zeroes at −3, 1, and 2. Identify the degree of the polynomial involved.
+
+
+    Give coordinates of all local maximum and local minimum points on the graph of
+    the polynomial function f(x) from (1). Explain how you found each local max/min
+    point.
+
+
+    Using the polynomial f(x) from (1) and g(x) = 3x² + 7x − 4, find simplest standard
+    polynomial expressions for the following combinations of f(x) and g(x). Identify
+    the degree of each result.
+
+
+    +   - f(x) + g(x) =
+
+    +   - f(x) − g(x) =
+
+    +   - f(x) · g(x) =
+
+
+    Explain how the degree of a polynomial p(x) is related to the following.
+
+
+    +   - The number of zeroes of p(x):
+
+    +   - The number of local max/min points of p(x):
+
+
+    Give the vertex form of a quadratic polynomial q(x) with a graph that has a minimum
+    point of (3, −5) and is a translation of y = x².
+
+
+    Give coordinates of the y-intercept of the graph for q(x).
+
+
+    Use the vertex form for q(x) to solve the equation q(x) = 11.'
+  - '[PAGE 45]
+
+
+    Find equivalent vertex forms for these functions.
+
+
+    +   - $p(x)=x^2-6x+11$
+
+    +   - $s(n)=n^2-n-3$
+
+
+    Give examples of quadratic equations with integer coefficients that have:
+
+
+    +   - two distinct integer solutions.
+
+    +   - two distinct irrational solutions.
+
+    +   - two distinct complex solutions.
+
+
+    *Identify the solutions in each case.*
+
+
+    Consider the rational function $f(x)=\frac{x^2+2x-3}{x^2-9}$.
+
+
+    +   - Describe the domain of $f(x)$.
+
+    +   - Sketch a graph of $f(x)$. Give equations of all vertical asymptotes. Estimate
+    coordinates of all local maximum and/or minimum points.
+
+    +   - Simplify the rational expression for the rule of $f(x)$. Describe its domain.
+
+
+    Suppose that $f(x)=\frac{x^2+2x-3}{x^2-9}$ and $g(x)=\frac{x-1}{x-3}$. Show how
+    to find simplest rational expressions for each of these functions.
+
+
+    +   - $f(x)+g(x)=$
+
+    +   - $f(x)-g(x)=$'
+  - '[PAGE 46]
+
+
+    +   - $f(x) \cdot g(x) =$\n- $f(x) \div g(x) =$
+
+
+    Explain the general strategies for solving each of these problems related to rational
+    functions.
+
+
+    +   - **Finding domain:** ________________________________________________\n  ________________________________________________\n  ________________________________________________\n\n-
+    **Finding equations of vertical asymptotes:** __________________________\n  ________________________________________________\n  ________________________________________________\n\n-
+    **Finding sums and differences:** _____________________________________\n  ________________________________________________\n  ________________________________________________\n\n-
+    **Finding products:** ________________________________________________\n  ________________________________________________\n  ________________________________________________\n\n-
+    **Finding quotients:** _______________________________________________\n  ________________________________________________\n  ________________________________________________'
+  - '[PAGE 47]
+
+
+    # ## UNIT TEST
+
+
+    # ### Form A
+
+
+    1. The United States Postal Service will accept a box for domestic shipment only
+    if the sum of the length and girth (distance around) does not exceed 108 inches.
+    Suppose that you want to find the dimensions of a box with a square end that has
+    the largest volume.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_47_0.png)
+
+
+    +   a. Explain why the volume of the box can be represented by \(V(x)=x^2(108-4x)\),
+    where \(x\) is the length of the side of the square end of the box.
+
+
+    +   b. Write \(V(x)\) in standard polynomial form.
+
+
+    +   c. What is the degree of this volume function?
+
+
+    +   d. What are the zeroes of this function?
+
+
+    +   e. Determine the maximum volume and the dimensions of the box with the maximum
+    volume.'
+  - "[PAGE 48]\n\n2. Match each description with the appropriate equation.\n\n+  \
+    \ a. A fourth degree polynomial function\n+   \n+   b. A rational function with\
+    \ asymptote of x = 2\n+   \n+   c. A polynomial function with one local maximum\n\
+    +   \n+   d. A quadratic function with exactly one real zero\n+   \n+   e. A rational\
+    \ function that is undefined when x = 3\n\n+   I. $y=\\frac{x+2}{x^2-4}$\n+  \
+    \ \n+   II. $y=\\frac{x}{x^2-2x-3}$\n+   \n+   III. $y=2x^2(x-3)$\n+   \n+   IV.\
+    \ $y=(x+2)(-x^3-3x^2)$\n+   \n+   V. $y=(x^2+2x+1)+(x^2-5x-6)$\n+   \n+   VI.\
+    \ $y=\\frac{x-2}{x^2-2x}$\n+   \n+   VII. $y=(x+1)^2$\n\n3. Consider the quadratic\
+    \ function $f(x)=x^2+6x-4$.\n\n+   a. Rewrite the function rule in vertex form.\n\
+    +   \n+   b. Determine the coordinates of the maximum or minimum point of the\
+    \ graph of this function.\n+   \n+   c. Solve the equation $x^2+6x-4=0$.\n\n4.\
+    \ Rewrite each sum or difference in standard polynomial form.\n\n+   a. $(5x^3+3x^2-4)+(x^4-3x^2+10)$\n\
+    +   \n+   b. $(15-3x^3+4x)-(5x^3+8)$"
+  - '[PAGE 49]
+
+
+    5. Write each sum or difference in a simplified form.
+
+
+    +   a. \(\frac{x-7}{x-5}+\frac{2x-8}{x-5}\)
+
+
+    +   b. \(\frac{4x^2+6x}{x+3}-\frac{x^2}{x+3}\)
+
+
+    +   c. \(\frac{x+4}{x}-\frac{3}{x-4}\)
+
+
+    6. Rewrite each product or quotient in an equivalent simpler form.
+
+
+    +   a. \((x^2+5x)(3x^2-6)\)
+
+
+    +   b. \((x+1)(2x^2+5x+3)\)
+
+
+    +   c. \(\frac{x^2-6x}{4}\cdot\frac{12x}{x-6}\)
+
+
+    +   d. \(\frac{3x^2-21x}{5x^2}\cdot\frac{x^2-2x-35}{10x}\)
+
+
+    7. Tran used a calculator to look at the graph of \(f(x)=\frac{x^2+7x+6}{x+1}\).
+    He was surprised when he saw a graph of a line.
+
+
+    +   a. Explain why the graph of this function looks like a line.
+
+
+    +   b. Is the graph of this function really a line? Explain.'
+  - "[PAGE 50]\n\n# # UNIT TEST\n\n# ## Form A\n### Suggested Solutions\n\n+   1.\
+    \ **a.** The girth of the box is 4x. Thus, the greatest length must be 108 − 4x.\
+    \ The area of one end of the box is x². Since the volume is the area of the end\
+    \ times the length, the volume is x²(108 − 4x).\n+   \n+      **b.** V(x) = −4x³\
+    \ + 108x²\n+   \n+      **c.** 3\n+   \n+      **d.** The zeroes are 0 and 27.\n\
+    +   \n+      **e.** The maximum volume of the box is 11,664 in³. The dimensions\
+    \ of this box are 18 in. × 18 in. × 36 in.\n\n+   2. **a.** IV\n+   \n+      **b.**\
+    \ I\n+   \n+      **c.** III\n+   \n+      **d.** VII\n+   \n+      **e.** II\n\
+    \n+   3. **a.** f(x) = x² + 6x + 9 − 4 − 9\n+   \n+      f(x) = (x + 3)² − 13\n\
+    +   \n+      **b.** The minimum point has coordinates (−3, −13).\n+   \n+    \
+    \  **c.** x = [−6 ± √(6² − 4(1)(−4))] / [2(1)] = −6/2 ± √52/2 = −3 ± √13\n\n+\
+    \   4. **a.** x⁴ + 5x³ + 6\n+   \n+      **b.** −8x³ + 4x + 7\n\n+   5. **a.**\
+    \ (3x − 15)/(x − 5) = 3(x − 5)/(x − 5) = 3\n+   \n+      **b.** (3x² + 6x)/(x\
+    \ + 3)\n+   \n+      **c.** (x² − 3x − 16)/(x² − 4x)\n\n+   6. **a.** 3x⁴ + 15x³\
+    \ − 6x² − 30x\n+   \n+      **b.** 2x³ + 7x² + 8x + 3\n+   \n+      **c.** 3x²\n\
+    +   \n+      **d.** 6/(x + 5)\n\n+   7. **a.** It looks like a line because the\
+    \ simplified form of f(x) = (x² + 7x + 6)/(x + 1) is f(x) = x + 6, which is a\
+    \ rule for a linear function.\n+   \n+      **b.** The graph is not really a line\
+    \ because the original function is undefined when x = −1. But the domain of a\
+    \ linear function is all real numbers."
+  md: "\n## Summarize the Mathematics\n\nIn this unit, you modeled problem situations\
+    \ using polynomial and rational functions and developed an understanding of some\
+    \ of the properties of those families of functions. You also learned how to add,\
+    \ subtract, and multiply polynomials and rational expressions.\n\n- a. What kinds\
+    \ of functions are called:\n  - i. polynomial functions?\n  - ii. rational functions?\n\
+    - b. Describe how you can determine:\n  - i. the degree of a polynomial.\n  -\
+    \ ii. local maximum or local minimum points on the graph of a polynomial function.\n\
+    \  - iii. the zeroes of a polynomial function.\n  - iv. the sum or difference\
+    \ of two polynomials.\n  - v. the product of two polynomials.\n- c. What is the\
+    \ vertex form of a quadratic function?\n  - i. What are the advantages and disadvantages\
+    \ of using this form?\n  - ii. How would you transform any quadratic expression\
+    \ in the form ax² + bx + c into vertex form?\n\n## UNIT SUMMARY\n\nIn this unit,\
+    \ you learned how to use polynomial and rational functions and equations to represent\
+    \ and analyze a variety of quantitative patterns and relationships. You also extended\
+    \ your ability to work with quadratic functions, expressions, and equations, and\
+    \ with algebraic expressions and functions that generalize quadratic and inverse\
+    \ variation functions to polynomials and rational functions.\n\n- **1.** Give\
+    \ both standard and factored expressions for a polynomial function f(x) that has\
+    \ zeroes at −3, 1, and 2. Identify the degree of the polynomial involved.\n- **2.**\
+    \ Give coordinates of all local maximum and local minimum points on the graph\
+    \ of the polynomial function f(x) from (1). Explain how you found each local max/min\
+    \ point.\n- **3.** Using the polynomial f(x) from (1) and g(x) = 3x² + 7x − 4,\
+    \ find simplest standard polynomial expressions for the following combinations\
+    \ of f(x) and g(x). Identify the degree of each result.\n  - f(x) + g(x) =\n \
+    \ - f(x) − g(x) =\n  - f(x) · g(x) =\n- **4.** Explain how the degree of a polynomial\
+    \ p(x) is related to the following.\n  - The number of zeroes of p(x):\n  - The\
+    \ number of local max/min points of p(x):\n- **5.** Give the vertex form of a\
+    \ quadratic polynomial q(x) with a graph that has a minimum point of (3, −5) and\
+    \ is a translation of y = x².\n- **6.** Give coordinates of the y-intercept of\
+    \ the graph for q(x).\n- **7.** Use the vertex form for q(x) to solve the equation\
+    \ q(x) = 11.\n- **8.** Find equivalent vertex forms for these functions.\n  -\
+    \ \\(p(x)=x^2-6x+11\\)\n  - \\(s(n)=n^2-n-3\\)\n- **9.** Give examples of quadratic\
+    \ equations with integer coefficients that have:\n  - two distinct integer solutions.\n\
+    \  - two distinct irrational solutions.\n  - two distinct complex solutions.\n\
+    \  \n  *Identify the solutions in each case.*\n- **10.** Consider the rational\
+    \ function \\(f(x)=\\frac{x^2+2x-3}{x^2-9}\\).\n  - Describe the domain of \\\
+    (f(x)\\).\n  - Sketch a graph of \\(f(x)\\). Give equations of all vertical asymptotes.\
+    \ Estimate coordinates of all local maximum and/or minimum points.\n  - Simplify\
+    \ the rational expression for the rule of \\(f(x)\\). Describe its domain.\n-\
+    \ **11.** Suppose that \\(f(x)=\\frac{x^2+2x-3}{x^2-9}\\) and \\(g(x)=\\frac{x-1}{x-3}\\\
+    ). Show how to find simplest rational expressions for each of these functions.\n\
+    \  - \\(f(x)+g(x)=\\)\n  - \\(f(x)-g(x)=\\)\n  - \\(f(x) \\cdot g(x) =\\)\n  -\
+    \ \\(f(x) \\div g(x) =\\)\n- **12.** Explain the general strategies for solving\
+    \ each of these problems related to rational functions.\n  - **Finding domain:**\
+    \ ________________________________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n  - **Finding equations\
+    \ of vertical asymptotes:** __________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n  - **Finding sums and\
+    \ differences:** _____________________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n  - **Finding products:**\
+    \ ________________________________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n  - **Finding quotients:**\
+    \ _______________________________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n\n## UNIT TEST\n\n### Form\
+    \ A\n\n- **1.** The United States Postal Service will accept a box for domestic\
+    \ shipment only if the sum of the length and girth (distance around) does not\
+    \ exceed 108 inches. Suppose that you want to find the dimensions of a box with\
+    \ a square end that has the largest volume.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_47_0.png)\n\
+    \n  - a. Explain why the volume of the box can be represented by \\(V(x)=x^2(108-4x)\\\
+    ), where \\(x\\) is the length of the side of the square end of the box.\n  -\
+    \ b. Write \\(V(x)\\) in standard polynomial form.\n  - c. What is the degree\
+    \ of this volume function?\n  - d. What are the zeroes of this function?\n  -\
+    \ e. Determine the maximum volume and the dimensions of the box with the maximum\
+    \ volume.\n- **2.** Match each description with the appropriate equation.\n  -\
+    \ a. A fourth degree polynomial function\n  - b. A rational function with asymptote\
+    \ of x = 2\n  - c. A polynomial function with one local maximum\n  - d. A quadratic\
+    \ function with exactly one real zero\n  - e. A rational function that is undefined\
+    \ when x = 3\n\n  - I. \\(y=\\frac{x+2}{x^2-4}\\)\n  - II. \\(y=\\frac{x}{x^2-2x-3}\\\
+    )\n  - III. \\(y=2x^2(x-3)\\)\n  - IV. \\(y=(x+2)(-x^3-3x^2)\\)\n  - V. \\(y=(x^2+2x+1)+(x^2-5x-6)\\\
+    )\n  - VI. \\(y=\\frac{x-2}{x^2-2x}\\)\n  - VII. \\(y=(x+1)^2\\)\n- **3.** Consider\
+    \ the quadratic function \\(f(x)=x^2+6x-4\\).\n  - a. Rewrite the function rule\
+    \ in vertex form.\n  - b. Determine the coordinates of the maximum or minimum\
+    \ point of the graph of this function.\n  - c. Solve the equation \\(x^2+6x-4=0\\\
+    ).\n- **4.** Rewrite each sum or difference in standard polynomial form.\n  -\
+    \ a. \\((5x^3+3x^2-4)+(x^4-3x^2+10)\\)\n  - b. \\((15-3x^3+4x)-(5x^3+8)\\)\n-\
+    \ **5.** Write each sum or difference in a simplified form.\n  - a. \\(\\frac{x-7}{x-5}+\\\
+    frac{2x-8}{x-5}\\)\n  - b. \\(\\frac{4x^2+6x}{x+3}-\\frac{x^2}{x+3}\\)\n  - c.\
+    \ \\(\\frac{x+4}{x}-\\frac{3}{x-4}\\)\n- **6.** Rewrite each product or quotient\
+    \ in an equivalent simpler form.\n  - a. \\((x^2+5x)(3x^2-6)\\)\n  - b. \\((x+1)(2x^2+5x+3)\\\
+    )\n  - c. \\(\\frac{x^2-6x}{4}\\cdot\\frac{12x}{x-6}\\)\n  - d. \\(\\frac{3x^2-21x}{5x^2}\\\
+    div\\frac{x^2-2x-35}{10x}\\)\n- **7.** Tran used a calculator to look at the graph\
+    \ of \\(f(x)=\\frac{x^2+7x+6}{x+1}\\). He was surprised when he saw a graph of\
+    \ a line.\n  - a. Explain why the graph of this function looks like a line.\n\
+    \  - b. Is the graph of this function really a line? Explain.\n\n### Form A —\
+    \ Suggested Solutions\n\n- **1.**\n  - **a.** The girth of the box is 4x. Thus,\
+    \ the greatest length must be 108 − 4x. The area of one end of the box is x².\
+    \ Since the volume is the area of the end times the length, the volume is x²(108\
+    \ − 4x).\n  - **b.** V(x) = −4x³ + 108x²\n  - **c.** 3\n  - **d.** The zeroes\
+    \ are 0 and 27.\n  - **e.** The maximum volume of the box is 11,664 in³. The dimensions\
+    \ of this box are 18 in. × 18 in. × 36 in.\n- **2.**\n  - **a.** IV\n  - **b.**\
+    \ I\n  - **c.** III\n  - **d.** VII\n  - **e.** II\n- **3.**\n  - **a.** f(x)\
+    \ = x² + 6x + 9 − 4 − 9\n  \n    f(x) = (x + 3)² − 13\n  - **b.** The minimum\
+    \ point has coordinates (−3, −13).\n  - **c.** x = [−6 ± √(6² − 4(1)(−4))] / [2(1)]\
+    \ = −6/2 ± √52/2 = −3 ± √13\n- **4.**\n  - **a.** x⁴ + 5x³ + 6\n  - **b.** −8x³\
+    \ + 4x + 7\n- **5.**\n  - **a.** (3x − 15)/(x − 5) = 3(x − 5)/(x − 5) = 3\n  -\
+    \ **b.** (3x² + 6x)/(x + 3)\n  - **c.** (x² − 3x − 16)/(x² − 4x)\n- **6.**\n \
+    \ - **a.** 3x⁴ + 15x³ − 6x² − 30x\n  - **b.** 2x³ + 7x² + 8x + 3\n  - **c.** 3x²\n\
+    \  - **d.** 6/(x + 5)\n- **7.**\n  - **a.** It looks like a line because the simplified\
+    \ form of f(x) = (x² + 7x + 6)/(x + 1) is f(x) = x + 6, which is a rule for a\
+    \ linear function.\n  - **b.** The graph is not really a line because the original\
+    \ function is undefined when x = −1. But the domain of a linear function is all\
+    \ real numbers.\n"
+  mdcn: "\n\n## 数学总结\n\n在本单元中，你使用多项式和有理函数对问题情境进行建模，并加深了对这些函数族某些性质的理解。你还学习了如何对多项式和有理表达式进行加、减、乘运算。\n\
+    \n- a. 哪些类型的函数被称为：\n  - i. 多项式函数？\n  - ii. 有理函数？\n- b. 描述你如何确定：\n  - i. 多项式的次数。\n\
+    \  - ii. 多项式函数图像上的局部最大值点或局部最小值点。\n  - iii. 多项式函数的零点。\n  - iv. 两个多项式的和或差。\n  -\
+    \ v. 两个多项式的积。\n- c. 二次函数的顶点式是什么？\n  - i. 使用这种形式有哪些优点和缺点？\n  - ii. 你会如何将任何形如 ax²\
+    \ + bx + c 的二次表达式转换为顶点式？\n\n## 单元总结\n\n在本单元中，你学习了如何使用多项式和有理函数及方程来表示和分析各种数量模式与关系。你还拓展了处理二次函数、表达式和方程的能力，以及处理将二次函数和反比例函数推广为多项式和有理函数的代数表达式和函数的能力。\n\
+    \n- **1.** 给出一个多项式函数 f(x) 的标准表达式和因式分解表达式，该函数在 −3、1 和 2 处有零点。指出所涉及多项式的次数。\n- **2.**\
+    \ 给出 (1) 中多项式函数 f(x) 图像上所有局部最大值点和局部最小值点的坐标。解释你是如何找到每个局部最大值/最小值点的。\n- **3.** 使用\
+    \ (1) 中的多项式 f(x) 和 g(x) = 3x² + 7x − 4，求下列 f(x) 与 g(x) 组合的最简标准多项式表达式。指出每个结果的次数。\n\
+    \  - f(x) + g(x) =\n  - f(x) − g(x) =\n  - f(x) · g(x) =\n- **4.** 解释多项式 p(x)\
+    \ 的次数与以下内容有何关系。\n  - p(x) 的零点个数：\n  - p(x) 的局部最大值/最小值点个数：\n- **5.** 给出二次多项式 q(x)\
+    \ 的顶点式，其图像的最小值点为 (3, −5)，并且是 y = x² 的平移。\n- **6.** 给出 q(x) 图像与 y 轴交点的坐标。\n- **7.**\
+    \ 使用 q(x) 的顶点式解方程 q(x) = 11。\n- **8.** 求下列函数的等价顶点式。\n  - \\(p(x)=x^2-6x+11\\)\n\
+    \  - \\(s(n)=n^2-n-3\\)\n- **9.** 给出具有整数系数的二次方程的例子，这些方程具有：\n  - 两个不同的整数解。\n  -\
+    \ 两个不同的无理数解。\n  - 两个不同的复数解。\n  \n  *指出每种情况下的解。*\n- **10.** 考虑有理函数 \\(f(x)=\\frac{x^2+2x-3}{x^2-9}\\\
+    )。\n  - 描述 \\(f(x)\\) 的定义域。\n  - 画出 \\(f(x)\\) 的草图。给出所有垂直渐近线的方程。估计所有局部最大值和/或最小值点的坐标。\n\
+    \  - 化简 \\(f(x)\\) 的规则所对应的有理表达式。描述其定义域。\n- **11.** 假设 \\(f(x)=\\frac{x^2+2x-3}{x^2-9}\\\
+    ) 且 \\(g(x)=\\frac{x-1}{x-3}\\)。说明如何求下列各函数的最简有理表达式。\n  - \\(f(x)+g(x)=\\)\n  -\
+    \ \\(f(x)-g(x)=\\)\n  - \\(f(x) \\cdot g(x) =\\)\n  - \\(f(x) \\div g(x) =\\)\n\
+    - **12.** 解释解决下列与有理函数相关问题的通用策略。\n  - **求定义域：** ________________________________________________\n\
+    \    ________________________________________________\n    ________________________________________________\n\
+    \  - **求垂直渐近线方程：** __________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n  - **求和与差：** _____________________________________\n\
+    \    ________________________________________________\n    ________________________________________________\n\
+    \  - **求积：** ________________________________________________\n    ________________________________________________\n\
+    \    ________________________________________________\n  - **求商：** _______________________________________________\n\
+    \    ________________________________________________\n    ________________________________________________\n\
+    \n## 单元测试\n\n### A卷\n\n- **1.** 美国邮政署只接受长度与围长（环绕距离）之和不超 108 英寸的国内运输箱子。假设你想求出一个具有正方形端面且体积最大的箱子的尺寸。\n\
+    \n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_47_0.png)\n\n  - a. 解释为什么箱子的体积可以表示为\
+    \ \\(V(x)=x^2(108-4x)\\)，其中 \\(x\\) 是箱子正方形端面的边长。\n  - b. 将 \\(V(x)\\) 写成标准多项式形式。\n\
+    \  - c. 这个体积函数的次数是多少？\n  - d. 这个函数的零点是什么？\n  - e. 确定最大体积以及具有最大体积的箱子的尺寸。\n- **2.**\
+    \ 将每个描述与适当的方程匹配。\n  - a. 一个四次多项式函数\n  - b. 一个渐近线为 x = 2 的有理函数\n  - c. 一个有一个局部最大值的多项式函数\n\
+    \  - d. 一个恰有一个实数零点的二次函数\n  - e. 一个在 x = 3 时无定义的有理函数\n\n  - I. \\(y=\\frac{x+2}{x^2-4}\\\
+    )\n  - II. \\(y=\\frac{x}{x^2-2x-3}\\)\n  - III. \\(y=2x^2(x-3)\\)\n  - IV. \\\
+    (y=(x+2)(-x^3-3x^2)\\)\n  - V. \\(y=(x^2+2x+1)+(x^2-5x-6)\\)\n  - VI. \\(y=\\\
+    frac{x-2}{x^2-2x}\\)\n  - VII. \\(y=(x+1)^2\\)\n- **3.** 考虑二次函数 \\(f(x)=x^2+6x-4\\\
+    )。\n  - a. 将函数规则改写为顶点式。\n  - b. 确定该函数图像的最大值点或最小值点的坐标。\n  - c. 解方程 \\(x^2+6x-4=0\\\
+    )。\n- **4.** 将每个和或差改写为标准多项式形式。\n  - a. \\((5x^3+3x^2-4)+(x^4-3x^2+10)\\)\n  -\
+    \ b. \\((15-3x^3+4x)-(5x^3+8)\\)\n- **5.** 将每个和或差写成最简形式。\n  - a. \\(\\frac{x-7}{x-5}+\\\
+    frac{2x-8}{x-5}\\)\n  - b. \\(\\frac{4x^2+6x}{x+3}-\\frac{x^2}{x+3}\\)\n  - c.\
+    \ \\(\\frac{x+4}{x}-\\frac{3}{x-4}\\)\n- **6.** 将每个积或商改写为等价的更简形式。\n  - a. \\((x^2+5x)(3x^2-6)\\\
+    )\n  - b. \\((x+1)(2x^2+5x+3)\\)\n  - c. \\(\\frac{x^2-6x}{4}\\cdot\\frac{12x}{x-6}\\\
+    )\n  - d. \\(\\frac{3x^2-21x}{5x^2}\\div\\frac{x^2-2x-35}{10x}\\)\n- **7.** Tran\
+    \ 用计算器观察 \\(f(x)=\\frac{x^2+7x+6}{x+1}\\) 的图像。当他看到一条直线的图像时，感到很惊讶。\n  - a. 解释为什么这个函数的图像看起来像一条直线。\n\
+    \  - b. 这个函数的图像真的是一条直线吗？解释。\n\n### A卷——建议答案\n\n- **1.**\n  - **a.** 箱子的围长为 4x。因此，最大长度必须是\
+    \ 108 − 4x。箱子一个端面的面积是 x²。由于体积等于端面面积乘以长度，所以体积为 x²(108 − 4x)。\n  - **b.** V(x) =\
+    \ −4x³ + 108x²\n  - **c.** 3\n  - **d.** 零点是 0 和 27。\n  - **e.** 箱子的最大体积为 11,664\
+    \ in³。这个箱子的尺寸是 18 in. × 18 in. × 36 in.\n- **2.**\n  - **a.** IV\n  - **b.** I\n\
+    \  - **c.** III\n  - **d.** VII\n  - **e.** II\n- **3.**\n  - **a.** f(x) = x²\
+    \ + 6x + 9 − 4 − 9\n  \n    f(x) = (x + 3)² − 13\n  - **b.** 最小值点的坐标为 (−3, −13)。\n\
+    \  - **c.** x = [−6 ± √(6² − 4(1)(−4))] / [2(1)] = −6/2 ± √52/2 = −3 ± √13\n-\
+    \ **4.**\n  - **a.** x⁴ + 5x³ + 6\n  - **b.** −8x³ + 4x + 7\n- **5.**\n  - **a.**\
+    \ (3x − 15)/(x − 5) = 3(x − 5)/(x − 5) = 3\n  - **b.** (3x² + 6x)/(x + 3)\n  -\
+    \ **c.** (x² − 3x − 16)/(x² − 4x)\n- **6.**\n  - **a.** 3x⁴ + 15x³ − 6x² − 30x\n\
+    \  - **b.** 2x³ + 7x² + 8x + 3\n  - **c.** 3x²\n  - **d.** 6/(x + 5)\n- **7.**\n\
+    \  - **a.** 它看起来像一条直线，因为 f(x) = (x² + 7x + 6)/(x + 1) 的化简形式是 f(x) = x + 6，而这是线性函数的规则。\n\
+    \  - **b.** 这个图像并不真的是一条直线，因为原函数在 x = −1 时无定义。但线性函数的定义域是所有实数。\n\n"
+  merge: 0
+- raw:
+  - "[PAGE 51]\n\n# UNIT TEST\n\n# Form B\n\n1. Emily is looking at a graph that has\
+    \ a local maximum at (−1, 4) and local minimums at (−5, −6) and (3, −6).\n\n+\
+    \   a. On the grid at the right, sketch a graph that shows the shape of a polynomial\
+    \ function with these characteristics.\n+   \n+   b. Could this be the graph of\
+    \ a cubic function? Explain your reasoning.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_51_0.png)\n\
+    \n2. Write a quadratic equation that has two nonreal complex solutions.\n\n3.\
+    \ Consider the quadratic function \\(f(x) = -4(x + 2)^2 + 9\\).\n\n+   a. Is the\
+    \ vertex of the graph of this function a maximum or minimum? How can you determine\
+    \ this without looking at a graph of the function?\n+   \n+   b. Find the coordinates\
+    \ of the vertex of the graph of this function.\n+   \n+   c. Find the coordinates\
+    \ of the x-intercept(s) of the graph.\n+   \n+   d. Find the coordinates of the\
+    \ y-intercept of the graph.\n+   \n+   e. Write the function rule in standard\
+    \ polynomial form."
+  - '[PAGE 52]
+
+
+    **4.** Outpost Packaging has been asked to design a metal container that has a
+    rectangular bottom that is twice as long as it is wide. In addition, the container
+    must have a volume of 1,000 cm³.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_52_0.png)
+
+
+    **a.** Explain why Jenni can use the formula \(h=\frac{500}{x^2}\) to determine
+    the necessary height of a container that is \(x\) cm wide.
+
+
+    **b.** The material used to make the top and bottom of the container costs 5 cents
+    per cm². The material used to make the sides of the container costs 2 cents per
+    cm². Verify that the formula \(C(x)=\frac{20x^3+6,000}{x}\) represents the total
+    cost of materials (in cents) for making a box meeting these conditions. (You will
+    need to use the formula for \(h\) that is in Part a.)
+
+
+    **c.** Is the cost function in Part b a rational function, a polynomial function,
+    or neither? Explain your reasoning.
+
+
+    **d.** Determine the minimum cost of a box meeting these conditions. What are
+    the dimensions of the box with the least cost?
+
+
+    **e.** Does the graph of the cost function have any vertical asymptotes? Explain
+    your reasoning.'
+  - '[PAGE 53]
+
+
+    5. Rewrite the expression \(x^2 + 8x - 10\) in vertex form.
+
+
+    6. Rewrite each sum or difference in an equivalent simpler form.
+
+
+    +   a. \((3x^3 - 8x^2) + (7x^3 - 3x^2 + 5)\)
+
+
+    +   b. \((x^2 + 10x + 11) - (3x^2 - 5x + 4)\)
+
+
+    +   c. \(\frac{2x+5}{x-1} + \frac{x-6}{x-1}\)
+
+
+    +   d. \(\frac{15}{3x+5} - \frac{5-6x}{3x+5}\)
+
+
+    +   e. \(\frac{x^2+2}{x+4} + \frac{9}{x}\)
+
+
+    7. Rewrite each product or quotient in an equivalent simpler form.
+
+
+    +   a. \((5x + 2)(x^2 + 6x - 8)\)
+
+
+    +   b. \(\frac{x}{x^2+5x} \div \frac{x}{x^2-25}\)
+
+
+    +   c. \(\frac{x^2+7x+12}{4x+12} \cdot \frac{x+5}{x+4}\)'
+  - '[PAGE 54]
+
+
+    <!-- no content -->'
+  - '[PAGE 55]
+
+
+    <!-- no content -->'
+  - "[PAGE 56]\n\n# TAKE-HOME ASSESSMENTS\n\n1. Two major forces determine the rise\
+    \ or fall of a hot air balloon, a lifting force and a drag force due to gravity.\
+    \ A formula for the force \\(F\\) in pounds on a spherical balloon is given by\n\
+    \n\\[F=\\frac{4}{3}\\pi bR^3-4\\pi wR^2-c,\\]\n\nwhere \\(R\\) is the radius in\
+    \ feet of the balloon, \\(b\\) is the lifting force in pounds per cubic foot,\
+    \ \\(w\\) is the drag force in pounds per square foot, and \\(c\\) is the weight\
+    \ in pounds of the equipment including the basket and its occupants.\n\n+   a.\
+    \ Assuming that \\(w\\) and \\(c\\) are both positive numbers, explain why the\
+    \ last two terms in the formula for \\(F\\) are preceded by minus signs.\n+  \
+    \ \n+   b. The balloon will rise or fall depending on whether \\(F\\) is positive\
+    \ or negative. Ignore the weight of the equipment, that is, assume \\(c=0\\).\
+    \ What is the minimum radius \\(R\\) of the balloon in terms of \\(b\\) and \\\
+    (w\\) that will keep it steady (neither rising nor falling)? Show or explain your\
+    \ work.\n+   \n+   c. Suppose that for a certain balloon, \\(b=0.1\\,\\text{lb/ft}^3\\\
+    ) and \\(w=0.2\\,\\text{lb/ft}^2\\). What maximum radius of the balloon is required\
+    \ to lift equipment weighing \\(c=750\\) pounds?\n\n2. Find three real number\
+    \ or nonreal complex number solutions to the equation\n\n\\[x^3-2x^2+26x=0.\\\
+    ]\n\n3. Determine a possible function rule for the following graph. The scales\
+    \ on both axes are one. The \\(x\\)-intercepts appear to be \\(\\frac{1}{2}\\\
+    ) and 2. Explain how the characteristics of the graph help you to determine this\
+    \ function rule.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_56_0.png)\n\nFunction\
+    \ Rule: ______________________________"
+  - "[PAGE 57]\n\n# TAKE-HOME ASSESSMENTS\n\n# Suggested Solutions\n\n+   1. **a.**\
+    \ These terms represent forces that pull the balloon downward.\n+   \n+      **b.**\
+    \ Solve ⅔πbR³ − 4πwR² = 4πR²(b⁄3R − w) = 0. Since 4πR² > 0, it follows that R\
+    \ = 3w⁄b.\n+   \n+      **c.** Solve ⅔πR³(0.1) − 4πR²(0.2) − 750 ≥ 0. Finding\
+    \ the x-intercept of the graph shows that the minimum radius of the balloon is\
+    \ approximately 14.51 ft.\n\n+   2. Since x³ − 2x² + 26x = x(x² − 2x + 26), we\
+    \ know that x = 0 is one solution to the equation. The other solutions will be\
+    \ solutions to x² − 2x + 26 = 0. They are 1 ± 5i. So, the three solutions are\
+    \ x = 0, x = 1 + 5i, and x = 1 − 5i.\n\n+   3. The zeroes are at x = 2 and x =\
+    \ 0.5, so the numerator could be (x − 2)(2x − 1). The horizontal asymptote is\
+    \ y = 1, so the degrees of the numerator and denominator are equal and their leading\
+    \ coefficients are equal. There are vertical asymptotes at x = 1 and x = −0.5,\
+    \ so the denominator could be (x − 1)(2x + 1). The equation y = [(x − 2)(2x −\
+    \ 1)]⁄[(x − 1)(2x + 1)] is a good choice, and it can be verified by checking other\
+    \ points on the graph."
+  - "[PAGE 58]\n\n# ## PROJECT\n\n# # Volume and Pressure\n\n# ### Purpose\n\nIn this\
+    \ unit and in previous ones, you have used algebraic models in a variety of real-world\
+    \ applications. In this project, you will explore such an application involving\
+    \ volume and pressure, two important variables in physics.\n\n# ### Directions\n\
+    \nAs the piston of an engine rotates, it compresses and decompresses the air in\
+    \ the chamber. A compressed air and fuel mixture produces greater forces than\
+    \ an uncompressed mixture when the gas is ignited by the spark plug. To model\
+    \ the compression of a piston, this project will explore the relationship between\
+    \ the volume and pressure for a 60-cubic centimeter (cc) syringe attached to a\
+    \ pressure sensor. There is no outlet for the air inside the syringe.\n\n+   1.\
+    \ Using a syringe and pressure sensor, gather your own data that will help you\
+    \ determine the relationship between the volume of air in the syringe and the\
+    \ pressure. If you cannot gather your own data, the table on the right gives the\
+    \ pressure readings for a syringe at 5-cc increments. The additional 3 cc of volume\
+    \ is to account for the volume of air in the connector tube. Make a scatterplot\
+    \ of the *(*volume, pressure*)* data.\n+   \n+   2. What do you expect to happen\
+    \ to the pressure as the volume continues to decrease? What does this tell you\
+    \ about the graph of the *(*volume, pressure*)* data?\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_58_0.png)\n\
+    \n| Volume (in cc) | Pressure |\n|---:|---:|\n| 63 | 0.448 |\n| 58 | 0.487 |\n\
+    | 53 | 0.526 |\n| 48 | 0.577 |\n| 43 | 0.638 |\n| 39 | 0.716 |\n| 33 | 0.823 |\n\
+    | 28 | 0.963 |\n| 23 | 1.190 |\n| 18 | 1.530 |"
+  - '[PAGE 59]
+
+
+    +   3. If instead of pushing in the plunger of the syringe, you pulled the plunger
+    out (assuming a long syringe), what would you expect to happen to the pressure?
+    If a syringe is available, try this and check your conjecture. How should your
+    conjecture be reflected in a graph of the *(volume, pressure)* data?
+
+
+    +   4. Find an algebraic model that you think best fits the data.
+
+
+    +   5. Graph your model on the same screen as the scatterplot. Explain the significance
+    of any asymptotes.
+
+
+    +   6. Write a report that includes your complete responses to Items 1–5 above.
+    In your report, include a comparison of your relationship in Item 5 to Boyle’s
+    Law. Boyle’s Law states that an ideal gas will satisfy the equation $PV = nRT$
+    where $P$ is the pressure, $V$ is the volume, $n$ is the number of moles, $T$
+    is the temperature of the gas, and $R$ is the gas constant. Also, include a summary
+    in which you discuss how the ideas in each of the above parts fit together.'
+  md: "\n## UNIT TEST\n\n### Form B\n\n- **1.** Emily is looking at a graph that has\
+    \ a local maximum at \\((-1, 4)\\) and local minimums at \\((-5, -6)\\) and \\\
+    ((3, -6)\\).\n\n  - **a.** On the grid at the right, sketch a graph that shows\
+    \ the shape of a polynomial function with these characteristics.\n  - **b.** Could\
+    \ this be the graph of a cubic function? Explain your reasoning.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_51_0.png)\n\
+    \n- **2.** Write a quadratic equation that has two nonreal complex solutions.\n\
+    \n- **3.** Consider the quadratic function \\(f(x) = -4(x + 2)^2 + 9\\).\n\n \
+    \ - **a.** Is the vertex of the graph of this function a maximum or minimum? How\
+    \ can you determine this without looking at a graph of the function?\n  - **b.**\
+    \ Find the coordinates of the vertex of the graph of this function.\n  - **c.**\
+    \ Find the coordinates of the \\(x\\)-intercept(s) of the graph.\n  - **d.** Find\
+    \ the coordinates of the \\(y\\)-intercept of the graph.\n  - **e.** Write the\
+    \ function rule in standard polynomial form.\n\n- **4.** Outpost Packaging has\
+    \ been asked to design a metal container that has a rectangular bottom that is\
+    \ twice as long as it is wide. In addition, the container must have a volume of\
+    \ 1,000 cm³.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_52_0.png)\n\n  - **a.**\
+    \ Explain why Jenni can use the formula \\(h=\\frac{500}{x^2}\\) to determine\
+    \ the necessary height of a container that is \\(x\\) cm wide.\n  - **b.** The\
+    \ material used to make the top and bottom of the container costs 5 cents per\
+    \ cm². The material used to make the sides of the container costs 2 cents per\
+    \ cm². Verify that the formula \\(C(x)=\\frac{20x^3+6,000}{x}\\) represents the\
+    \ total cost of materials (in cents) for making a box meeting these conditions.\
+    \ (You will need to use the formula for \\(h\\) that is in Part a.)\n  - **c.**\
+    \ Is the cost function in Part b a rational function, a polynomial function, or\
+    \ neither? Explain your reasoning.\n  - **d.** Determine the minimum cost of a\
+    \ box meeting these conditions. What are the dimensions of the box with the least\
+    \ cost?\n  - **e.** Does the graph of the cost function have any vertical asymptotes?\
+    \ Explain your reasoning.\n\n- **5.** Rewrite the expression \\(x^2 + 8x - 10\\\
+    ) in vertex form.\n\n- **6.** Rewrite each sum or difference in an equivalent\
+    \ simpler form.\n\n  - **a.** \\((3x^3 - 8x^2) + (7x^3 - 3x^2 + 5)\\)\n  - **b.**\
+    \ \\((x^2 + 10x + 11) - (3x^2 - 5x + 4)\\)\n  - **c.** \\(\\frac{2x+5}{x-1} +\
+    \ \\frac{x-6}{x-1}\\)\n  - **d.** \\(\\frac{15}{3x+5} - \\frac{5-6x}{3x+5}\\)\n\
+    \  - **e.** \\(\\frac{x^2+2}{x+4} + \\frac{9}{x}\\)\n\n- **7.** Rewrite each product\
+    \ or quotient in an equivalent simpler form.\n\n  - **a.** \\((5x + 2)(x^2 + 6x\
+    \ - 8)\\)\n  - **b.** \\(\\frac{x}{x^2+5x} \\div \\frac{x}{x^2-25}\\)\n  - **c.**\
+    \ \\(\\frac{x^2+7x+12}{4x+12} \\cdot \\frac{x+5}{x+4}\\)\n\n## TAKE-HOME ASSESSMENTS\n\
+    \n- **1.** Two major forces determine the rise or fall of a hot air balloon, a\
+    \ lifting force and a drag force due to gravity. A formula for the force \\(F\\\
+    ) in pounds on a spherical balloon is given by\n\n  \\[\n  F=\\frac{4}{3}\\pi\
+    \ bR^3-4\\pi wR^2-c,\n  \\]\n\n  where \\(R\\) is the radius in feet of the balloon,\
+    \ \\(b\\) is the lifting force in pounds per cubic foot, \\(w\\) is the drag force\
+    \ in pounds per square foot, and \\(c\\) is the weight in pounds of the equipment\
+    \ including the basket and its occupants.\n\n  - **a.** Assuming that \\(w\\)\
+    \ and \\(c\\) are both positive numbers, explain why the last two terms in the\
+    \ formula for \\(F\\) are preceded by minus signs.\n  - **b.** The balloon will\
+    \ rise or fall depending on whether \\(F\\) is positive or negative. Ignore the\
+    \ weight of the equipment, that is, assume \\(c=0\\). What is the minimum radius\
+    \ \\(R\\) of the balloon in terms of \\(b\\) and \\(w\\) that will keep it steady\
+    \ (neither rising nor falling)? Show or explain your work.\n  - **c.** Suppose\
+    \ that for a certain balloon, \\(b=0.1\\,\\text{lb/ft}^3\\) and \\(w=0.2\\,\\\
+    text{lb/ft}^2\\). What minimum radius of the balloon is required to lift equipment\
+    \ weighing \\(c=750\\) pounds?\n\n- **2.** Find three real number or nonreal complex\
+    \ number solutions to the equation\n\n  \\[\n  x^3-2x^2+26x=0.\n  \\]\n\n- **3.**\
+    \ Determine a possible function rule for the following graph. The scales on both\
+    \ axes are one. The \\(x\\)-intercepts appear to be \\(\\frac{1}{2}\\) and 2.\
+    \ Explain how the characteristics of the graph help you to determine this function\
+    \ rule.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_56_0.png)\n\n  Function\
+    \ Rule: ______________________________\n\n### Suggested Solutions\n\n- **1.**\n\
+    \n  - **a.** These terms represent forces that pull the balloon downward.\n  -\
+    \ **b.** Solve \\(\\frac{4}{3}\\pi bR^3 - 4\\pi wR^2 = 4\\pi R^2\\left(\\frac{bR}{3}-w\\\
+    right)=0\\). Since \\(4\\pi R^2>0\\), it follows that \\(R=\\frac{3w}{b}\\).\n\
+    \  - **c.** Solve \\(\\frac{4}{3}\\pi R^3(0.1)-4\\pi R^2(0.2)-750\\ge0\\). Finding\
+    \ the \\(x\\)-intercept of the graph shows that the minimum radius of the balloon\
+    \ is approximately 14.51 ft.\n\n- **2.** Since \\(x^3-2x^2+26x=x(x^2-2x+26)\\\
+    ), we know that \\(x=0\\) is one solution to the equation. The other solutions\
+    \ will be solutions to \\(x^2-2x+26=0\\). They are \\(1\\pm5i\\). So, the three\
+    \ solutions are \\(x=0\\), \\(x=1+5i\\), and \\(x=1-5i\\).\n\n- **3.** The zeros\
+    \ are at \\(x=2\\) and \\(x=0.5\\), so the numerator could be \\((x-2)(2x-1)\\\
+    ). The horizontal asymptote is \\(y=1\\), so the degrees of the numerator and\
+    \ denominator are equal and their leading coefficients are equal. There are vertical\
+    \ asymptotes at \\(x=1\\) and \\(x=-0.5\\), so the denominator could be \\((x-1)(2x+1)\\\
+    ). The equation \\(y=\\frac{(x-2)(2x-1)}{(x-1)(2x+1)}\\) is a good choice, and\
+    \ it can be verified by checking other points on the graph.\n\n## PROJECT: Volume\
+    \ and Pressure\n\n### Purpose\n\nIn this unit and in previous ones, you have used\
+    \ algebraic models in a variety of real-world applications. In this project, you\
+    \ will explore such an application involving volume and pressure, two important\
+    \ variables in physics.\n\n### Directions\n\nAs the piston of an engine rotates,\
+    \ it compresses and decompresses the air in the chamber. A compressed air and\
+    \ fuel mixture produces greater forces than an uncompressed mixture when the gas\
+    \ is ignited by the spark plug. To model the compression of a piston, this project\
+    \ will explore the relationship between the volume and pressure for a 60-cubic\
+    \ centimeter (cc) syringe attached to a pressure sensor. There is no outlet for\
+    \ the air inside the syringe.\n\n- **1.** Using a syringe and pressure sensor,\
+    \ gather your own data that will help you determine the relationship between the\
+    \ volume of air in the syringe and the pressure. If you cannot gather your own\
+    \ data, the table on the right gives the pressure readings for a syringe at 5-cc\
+    \ increments. The additional 3 cc of volume is to account for the volume of air\
+    \ in the connector tube. Make a scatterplot of the \\((volume, pressure)\\) data.\n\
+    \n- **2.** What do you expect to happen to the pressure as the volume continues\
+    \ to decrease? What does this tell you about the graph of the \\((volume, pressure)\\\
+    ) data?\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_58_0.png)\n\n| Volume (in\
+    \ cc) | Pressure |\n|---:|---:|\n| 63 | 0.448 |\n| 58 | 0.487 |\n| 53 | 0.526\
+    \ |\n| 48 | 0.577 |\n| 43 | 0.638 |\n| 39 | 0.716 |\n| 33 | 0.823 |\n| 28 | 0.963\
+    \ |\n| 23 | 1.190 |\n| 18 | 1.530 |\n\n- **3.** If instead of pushing in the plunger\
+    \ of the syringe, you pulled the plunger out (assuming a long syringe), what would\
+    \ you expect to happen to the pressure? If a syringe is available, try this and\
+    \ check your conjecture. How should your conjecture be reflected in a graph of\
+    \ the \\((volume, pressure)\\) data?\n\n- **4.** Find an algebraic model that\
+    \ you think best fits the data.\n\n- **5.** Graph your model on the same screen\
+    \ as the scatterplot. Explain the significance of any asymptotes.\n\n- **6.**\
+    \ Write a report that includes your complete responses to Items 1–5 above. In\
+    \ your report, include a comparison of your relationship in Item 5 to Boyle’s\
+    \ Law. Boyle’s Law states that an ideal gas will satisfy the equation \\(PV =\
+    \ nRT\\) where \\(P\\) is the pressure, \\(V\\) is the volume, \\(n\\) is the\
+    \ number of moles, \\(T\\) is the temperature of the gas, and \\(R\\) is the gas\
+    \ constant. Also, include a summary in which you discuss how the ideas in each\
+    \ of the above parts fit together.\n"
+  mdcn: "\n## 单元测试\n\n### B 卷\n\n- **1.** 艾米莉正在看一个图像，该图像在 \\((-1, 4)\\) 处有一个局部最大值，并在\
+    \ \\((-5, -6)\\) 和 \\((3, -6)\\) 处有局部最小值。\n\n  - **a.** 在右侧的网格上，画出一个图像，显示具有这些特征的多项式函数的形状。\n\
+    \  - **b.** 这可能是三次函数的图像吗？解释你的推理。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_51_0.png)\n\
+    \n- **2.** 写出一个有两个非实复数解的二次方程。\n\n- **3.** 考虑二次函数 \\(f(x) = -4(x + 2)^2 + 9\\)。\n\
+    \n  - **a.** 该函数图像的顶点是最大值还是最小值？你如何在不看函数图像的情况下确定这一点？\n  - **b.** 求该函数图像顶点的坐标。\n\
+    \  - **c.** 求该图像 \\(x\\) 轴截距的坐标。\n  - **d.** 求该图像 \\(y\\) 轴截距的坐标。\n  - **e.**\
+    \ 用标准多项式形式写出函数法则。\n\n- **4.** Outpost Packaging 公司受委托设计一个金属容器，其长方形底面的长度是宽度的两倍。此外，该容器的体积必须为\
+    \ 1,000 cm³。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_52_0.png)\n\n  - **a.**\
+    \ 解释为什么珍妮可以使用公式 \\(h=\\frac{500}{x^2}\\) 来确定宽度为 \\(x\\) cm 的容器所需的高度。\n  - **b.**\
+    \ 制作容器顶部和底部的材料每平方厘米花费 5 美分。制作容器侧面的材料每平方厘米花费 2 美分。验证公式 \\(C(x)=\\frac{20x^3+6,000}{x}\\\
+    ) 表示制作满足这些条件的盒子所需材料的总成本（以美分为单位）。（你将需要使用 a 部分中关于 \\(h\\) 的公式。）\n  - **c.** b 部分中的成本函数是有理函数、多项式函数，还是两者都不是？解释你的推理。\n\
+    \  - **d.** 确定满足这些条件的盒子的最低成本。成本最低的盒子的尺寸是多少？\n  - **e.** 成本函数的图像是否有任何垂直渐近线？解释你的推理。\n\
+    \n- **5.** 将表达式 \\(x^2 + 8x - 10\\) 改写为顶点式。\n\n- **6.** 将每个和或差改写为等价的更简形式。\n\n\
+    \  - **a.** \\((3x^3 - 8x^2) + (7x^3 - 3x^2 + 5)\\)\n  - **b.** \\((x^2 + 10x\
+    \ + 11) - (3x^2 - 5x + 4)\\)\n  - **c.** \\(\\frac{2x+5}{x-1} + \\frac{x-6}{x-1}\\\
+    )\n  - **d.** \\(\\frac{15}{3x+5} - \\frac{5-6x}{3x+5}\\)\n  - **e.** \\(\\frac{x^2+2}{x+4}\
+    \ + \\frac{9}{x}\\)\n\n- **7.** 将每个积或商改写为等价的更简形式。\n\n  - **a.** \\((5x + 2)(x^2\
+    \ + 6x - 8)\\)\n  - **b.** \\(\\frac{x}{x^2+5x} \\div \\frac{x}{x^2-25}\\)\n \
+    \ - **c.** \\(\\frac{x^2+7x+12}{4x+12} \\cdot \\frac{x+5}{x+4}\\)\n\n## 家庭评估\n\
+    \n- **1.** 两个主要力决定热气球上升或下降：升力和由重力引起的阻力。球形气球所受以磅为单位的力 \\(F\\) 的公式为\n\n  \\[\n \
+    \ F=\\frac{4}{3}\\pi bR^3-4\\pi wR^2-c,\n  \\]\n\n  其中 \\(R\\) 是气球的半径（英尺），\\(b\\\
+    ) 是升力（磅/立方英尺），\\(w\\) 是阻力（磅/平方英尺），\\(c\\) 是包括吊篮及其乘员在内的设备重量（磅）。\n\n  - **a.** 假设\
+    \ \\(w\\) 和 \\(c\\) 都是正数，解释为什么 \\(F\\) 公式中的最后两项前面带有负号。\n  - **b.** 气球上升还是下降取决于\
+    \ \\(F\\) 是正还是负。忽略设备重量，即假设 \\(c=0\\)。使气球保持稳定（既不上升也不下降）的最小半径 \\(R\\) 用 \\(b\\)\
+    \ 和 \\(w\\) 表示是什么？展示或解释你的工作。\n  - **c.** 假设对于某个气球，\\(b=0.1\\,\\text{lb/ft}^3\\\
+    )，\\(w=0.2\\,\\text{lb/ft}^2\\)。要提升重 \\(c=750\\) 磅的设备，所需气球的最小半径是多少？\n\n- **2.**\
+    \ 求方程的三个实数或非实复数解\n\n  \\[\n  x^3-2x^2+26x=0.\n  \\]\n\n- **3.** 为下图确定一个可能的函数法则。两个坐标轴上的刻度均为\
+    \ 1。\\(x\\) 轴截距似乎是 \\(\\frac{1}{2}\\) 和 2。解释图像的特征如何帮助你确定这个函数法则。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_56_0.png)\n\
+    \n  函数法则：______________________________\n\n### 参考答案\n\n- **1.**\n\n  - **a.**\
+    \ 这些项表示将气球向下拉的力。\n  - **b.** 解 \\(\\frac{4}{3}\\pi bR^3 - 4\\pi wR^2 = 4\\pi R^2\\\
+    left(\\frac{bR}{3}-w\\right)=0\\)。由于 \\(4\\pi R^2>0\\)，因此 \\(R=\\frac{3w}{b}\\\
+    )。\n  - **c.** 解 \\(\\frac{4}{3}\\pi R^3(0.1)-4\\pi R^2(0.2)-750\\ge0\\)。求该图像的\
+    \ \\(x\\) 轴截距可知，气球的最小半径约为 14.51 英尺。\n\n- **2.** 由于 \\(x^3-2x^2+26x=x(x^2-2x+26)\\\
+    )，我们知道 \\(x=0\\) 是方程的一个解。另外的解将是 \\(x^2-2x+26=0\\) 的解。它们是 \\(1\\pm5i\\)。因此，三个解是\
+    \ \\(x=0\\)、\\(x=1+5i\\) 和 \\(x=1-5i\\)。\n\n- **3.** 零点在 \\(x=2\\) 和 \\(x=0.5\\\
+    ) 处，因此分子可能是 \\((x-2)(2x-1)\\)。水平渐近线是 \\(y=1\\)，因此分子和分母的次数相等，且它们的首项系数相等。在 \\(x=1\\\
+    ) 和 \\(x=-0.5\\) 处有垂直渐近线，因此分母可能是 \\((x-1)(2x+1)\\)。方程 \\(y=\\frac{(x-2)(2x-1)}{(x-1)(2x+1)}\\\
+    ) 是一个不错的选择，并且可以通过检查图像上的其他点来验证。\n\n## 项目：体积与压强\n\n### 目的\n\n在本单元以及之前的单元中，你已经在各种现实世界应用中使用了代数模型。在这个项目中，你将探索一个涉及体积和压强的此类应用，这是物理学中两个重要的变量。\n\
+    \n### 说明\n\n当发动机的活塞旋转时，它会压缩和释放腔室中的空气。当火花塞点燃气体时，压缩的空气和燃料混合物比未压缩的混合物产生更大的力。为了模拟活塞的压缩，本项目将探索连接压力传感器的\
+    \ 60 立方厘米（cc）注射器中体积与压强之间的关系。注射器内的空气没有出口。\n\n- **1.** 使用注射器和压力传感器，收集你自己的数据，以帮助你确定注射器中空气体积与压强之间的关系。如果你无法收集自己的数据，右侧表格给出了注射器每隔\
+    \ 5 cc 的压强读数。额外的 3 cc 体积用于计入连接管中的空气体积。绘制 \\((体积, 压强)\\) 数据的散点图。\n\n- **2.** 当体积继续减小时，你预期压强会发生什么变化？这告诉你关于\
+    \ \\((体积, 压强)\\) 数据的图像什么信息？\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_58_0.png)\n\
+    \n| 体积（cc） | 压强 |\n|---:|---:|\n| 63 | 0.448 |\n| 58 | 0.487 |\n| 53 | 0.526 |\n\
+    | 48 | 0.577 |\n| 43 | 0.638 |\n| 39 | 0.716 |\n| 33 | 0.823 |\n| 28 | 0.963 |\n\
+    | 23 | 1.190 |\n| 18 | 1.530 |\n\n- **3.** 如果不是推入注射器的活塞，而是拉出活塞（假设注射器足够长），你预期压强会发生什么变化？如果有注射器可用，尝试这样做并检验你的猜想。你的猜想应如何反映在\
+    \ \\((体积, 压强)\\) 数据的图像中？\n\n- **4.** 找出你认为最拟合数据的代数模型。\n\n- **5.** 将你的模型与散点图绘制在同一屏幕上。解释任何渐近线的意义。\n\
+    \n- **6.** 写一份报告，包括你对上述第 1–5 项的完整回答。在你的报告中，包含将你在第 5 项中得到的关系与玻意耳定律进行比较。玻意耳定律指出，理想气体将满足方程\
+    \ \\(PV = nRT\\)，其中 \\(P\\) 是压强，\\(V\\) 是体积，\\(n\\) 是摩尔数，\\(T\\) 是气体温度，\\(R\\\
+    ) 是气体常数。此外，包含一个总结，讨论上述各部分中的想法如何相互联系。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 60]
+
+
+    <!-- no content -->'
+  - '[PAGE 61]
+
+
+    # **PROJECT**
+
+
+    # ## Chromatic Polynomials
+
+
+    # ### Purpose
+
+
+    In previous courses, you may have learned about how coloring vertex-edge graphs
+    can help you solve problems. You probably found that you and your classmates often
+    colored the same graph differently. In this project, you will investigate the
+    number of ways a graph can be colored using *k* colors.
+
+
+    # ### Directions
+
+
+    A *k*-coloring of a network or vertex-edge graph is an assignment of *k* colors
+    to the vertices so that no two vertices connected by an edge have the same color.
+    In the past, you have explored the existence of a coloring using a minimum number
+    of colors. (See Course 1, Unit 4, Lesson 2.) Shown at the right are two different
+    colorings of a graph on 4 vertices using 3 colors. Two colorings are different
+    if at least one vertex has a different color.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_0.png)
+
+
+    +   1. How many different 3-colorings are there of the graph shown below? Explain
+    your reasoning.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_1.png)
+
+
+    +   2. The function that gives the number of *k*-colorings for a graph *G* is
+    called the chromatic polynomial and is denoted by $C_G(k)$. Think about the chromatic
+    polynomials for the following two graphs.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_2.png)
+
+
+    Graph on 4 vertices with no edges
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_3.png)
+
+
+    Complete graph on 4 vertices (every edge)
+
+
+    +   **a.** Let *G* be a graph of 4 vertices with no edges. Explain why the chromatic
+    polynomial for a graph *G* of 4 vertices with no edges is $C_G(k)=k^4$.
+
+
+    +   **b.** Explain why the chromatic polynomial for a complete graph *G* on 4
+    vertices is $C_G(k)=k(k-1)(k-2)(k-3)$. What are the zeros for this polynomial?
+    Explain why the chromatic polynomial must be zero for these values of *k*.
+
+
+    +   **c.** What is the chromatic polynomial for a graph *G* on *p* vertices with
+    no edges? What is the chromatic polynomial for a complete graph *G* on *p* vertices?'
+  - '[PAGE 62]
+
+
+    3. Find the chromatic polynomial for each of the following graphs on 4 vertices.
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_0.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_1.png)
+
+
+    4. The graph shown below is a cycle of length 4. The chromatic polynomial for
+    a cycle of length 4 is \(k^4 - 4k^3 + 6k^2 - 3k\).
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_2.png)
+
+
+    Give a justification that shows this polynomial is correct.
+
+
+    5. Make a chart that shows all possible graphs on 1, 2, 3, and 4 vertices and
+    the corresponding chromatic polynomials. (Hint: There are 4 possible graphs on
+    3 vertices and 11 possible graphs on 4 vertices.)
+
+
+    6. Create at least three different graphs on 5 vertices for which you can determine
+    the chromatic polynomial. Give a clear justification of the chromatic polynomial.
+
+
+    7. Write a report which includes your complete responses to Items 1–6. Clearly
+    explain the reasoning you used to complete each item. Your drawings should be
+    neat and accurate. Include a summary in which you discuss your observations and
+    ideas on how to find the chromatic polynomial for a graph.'
+  - "[PAGE 63]\n\n# PROJECT\n\n# Suggested Solutions\nChromatic Polynomials\n\nStudents\
+    \ can work alone or in pairs on this project. You may wish to spend some time\
+    \ introducing or reviewing the Multiplication Principle of Counting before students\
+    \ begin work on this project. Every polynomial has a related *chromatic polynomial*.\
+    \ Using the Multiplication Principle of Counting, these polynomials are fairly\
+    \ easy to find for graphs with up to 4 vertices. However, it is easy to create\
+    \ a graph with 5 vertices for which the chromatic polynomial is complicated and\
+    \ difficult to justify. A recursive algorithm exists for computing the chromatic\
+    \ polynomial for any graph G. The algorithm shows that every graph has a chromatic\
+    \ polynomial. However, which polynomial have corresponding graphs is still an\
+    \ unanswered question in mathematics. Students who are ready for a challenge should\
+    \ be encouraged to investigate the recursive algorithm for computing the chromatic\
+    \ polynomial that is described in some graph theory textbooks: $C_G(k)=C_{G-e}(k)-C_{G/e}(k)$,\
+    \ where $G-e$ is the graph with the edge $e$ removed and $G/e$ is the graph where\
+    \ the vertices of $e$ are identified together (made one).\n\n# Suggested Timeline\n\
+    \nAllow students several days to work on Items 1–6. Have them submit their solutions\
+    \ in draft form. Check their drafts and provide them feedback. When you are comfortable\
+    \ that their solutions are essentially correct, give them a few days to prepare\
+    \ a draft of their report. After getting prompt feedback to their draft from you,\
+    \ they should be able to complete their final report in a few more days.\n\n#\
+    \ Solutions\n\n+   1. There are 6 different 3-colorings of the given graph. Start\
+    \ at any vertex; there are 3 choices for coloring that vertex. Then there are\
+    \ 2 possible colors for the next vertex that is chosen, and the last vertex must\
+    \ be colored using the remaining color. This gives 6 possible 3-colorings. Some\
+    \ students might choose to show all 6 possibilities. In this case, be sure they\
+    \ can justify that they have all possible 3-colorings.\n\n+   2. **a.** Since\
+    \ each vertex can be assigned any of the $k$ colors, there are $k^4$ possible\
+    \ assignments. Thus, the chromatic polynomial on a null graph (a graph with no\
+    \ edges) of 4 vertices is $C_G(k)=k^4$.\n+   \n+   **b.** Start with any vertex;\
+    \ choose one of $k$ colors. Choose a second vertex. Since it is adjacent to the\
+    \ first vertex, it can be colored with $(k-1)$ colors. Choose one of these colors.\
+    \ The third vertex can be colored with $(k-2)$ colors and the fourth vertex with\
+    \ $(k-3)$ colors. Thus, the chromatic polynomial for a complete graph on 4 vertices\
+    \ is $C_G(k)=k(k-1)(k-2)(k-3)$. The zeroes for this polynomial are 0, 1, 2, and\
+    \ 3, which indicates that there are no colorings if only 0, 1, 2, or 3 colors\
+    \ are used.\n+   \n+   **c.** Graph on $p$ vertices with no edges: $C_G(k)=k^p$\n\
+    +   \n+   Complete graph on $p$ vertices: $C_G(k)=k(k-1)(k-2)\\cdots(k-p+1)$"
+  - '[PAGE 64]
+
+
+    <!-- no content -->'
+  - "[PAGE 65]\n\n# PRACTICING FOR STANDARDIZED TESTS\n\n# Practice Set\n\nSolve each\
+    \ problem. Then record the letter that corresponds to the correct answer.\n\n\
+    +   1. If $a>0$ and $b>0$ and the slope of the line passing through $(-2a,a)$\
+    \ and $(b,3a)$ is 2, which of the following is an expression for $b$ in terms\
+    \ of $a$?\n+   \n+   (a) $-a$       (b) $-2a$       (c) $-2a-2$       (d) $3a$\
+    \       (e) $4a$\n\n+   2. Olivia is planning the mathematics club annual picnic.\
+    \ She may choose from 3 meat selections, 4 types of vegetables, and 5 kinds of\
+    \ cookies. How many different menus, each with a meat, a vegetable, and a cookie,\
+    \ could she select?\n+   \n+   (a) 12       (b) 17       (c) 23       (d) 35      \
+    \ (e) 60\n\n+   3. In $\\triangle PQR$ at the right, if $y=35^\\circ$, what is\
+    \ the value of $x$?\n+   \n+   (a) $30^\\circ$\n+   \n+   (b) $35^\\circ$\n+ \
+    \  \n+   (c) $40^\\circ$\n+   \n+   (d) $45^\\circ$\n+   \n+   (e) $50^\\circ$\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_65_0.png)\n\n+   4. A school’s honor\
+    \ society has 150 members. There are 70 boys and 80 girls, of whom 40 are juniors\
+    \ and 110 are seniors. What is the smallest possible number of senior girls in\
+    \ the society?\n+   \n+   (a) 0       (b) 20       (c) 40       (d) 60       (e)\
+    \ 80\n\n+   5. What value satisfies both $|3x-4|=5$ and $|1-2x|=5$?\n+   \n+ \
+    \  (a) $-2$       (b) $-\\frac{1}{3}$       (c) $1$       (d) $3$       (e) $5$\n\
+    \n+   6. If $p+q=5$ and $2pq=8$, what is $p^2+q^2$?\n+   \n+   (a) 1       (b)\
+    \ 3       (c) 9       (d) 13       (e) 17"
+  - "[PAGE 66]\n\n7. If \\(\\sqrt{k}\\) is an integer, which of the following must\
+    \ be integers?\n\nI. \\(\\sqrt{\\frac{k}{4}}\\)       II. \\((\\sqrt{5k})^2\\\
+    )       III. \\(\\sqrt{9k}\\)\n\n+   (a) None  \n+   (b) I and II only  \n+  \
+    \ (c) I and III only  \n+   (d) II and III only  \n+   (e) I, II, and III\n\n\
+    8. If \\(m^2 - 4n^2 = 32\\) and \\(m + 2n = 8\\), what is the value of \\(m -\
+    \ 2n\\)?\n\n+   (a) \\(-4\\)       (b) \\(\\frac{1}{4}\\)       (c) 2       (d)\
+    \ 4       (e) 16\n\n9. In the figure, \\(\\overline{AD} \\parallel \\overline{HE}\\\
+    ) and \\(\\overline{BH} \\parallel \\overline{DF}\\). Which one of the following\
+    \ quadrilaterals is a parallelogram?\n\n+   (a) ADEH  \n+   (b) CDFG  \n+   (c)\
+    \ BDEH  \n+   (d) BDFH  \n+   (e) CDEG\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_66_0.png)\n\
+    \n10. Approximately 25% of the cars sold are red. Michael is observing cars as\
+    \ they drive by his house. What is the probability that he has to watch at least\
+    \ three cars go by in order to see a red one?\n\n+   (a) 0.140625       (b) 0.25\
+    \       (c) 0.4375       (d) 0.5625       (e) 0.75\n\n# TEST-TAKING TIP\n\n**Factoring\
+    \ a quadratic expression often makes a question transparent.**\n\nCollege entrance\
+    \ examination authors think it is important for students to be able to factor\
+    \ several simple quadratic expressions such as \\(ax^2 + bx\\), \\(x^2 + 2ax +\
+    \ a^2\\), and \\(x^2 - y^2\\). However, you are seldom directly asked to factor.\
+    \ Rather, you are asked a question that is simple once you see that factoring\
+    \ a quadratic expression is involved.\n\n**Example**  Look back at Item 8. To\
+    \ use factoring, notice that in \\(m^2 - 4n^2 = 32\\), the left-hand expression\
+    \ is the difference of two squares, \\(m^2\\) and \\((2n)^2\\). Thus, \\(m^2 -\
+    \ 4n^2 = (m + 2n)(m - 2n) = 32\\). Since \\(m + 2n = 8\\), \\(m - 2n = 4\\). So,\
+    \ the answer is (d).\n\nFind, if possible, another test item in the practice set\
+    \ for which this strategy might be helpful."
+  md: "\n## PROJECT\n### Chromatic Polynomials\n\n**Purpose**\n\nIn previous courses,\
+    \ you may have learned about how coloring vertex-edge graphs can help you solve\
+    \ problems. You probably found that you and your classmates often colored the\
+    \ same graph differently. In this project, you will investigate the number of\
+    \ ways a graph can be colored using *k* colors.\n\n**Directions**\n\nA *k*-coloring\
+    \ of a network or vertex-edge graph is an assignment of *k* colors to the vertices\
+    \ so that no two vertices connected by an edge have the same color. In the past,\
+    \ you have explored the existence of a coloring using a minimum number of colors.\
+    \ (See Course 1, Unit 4, Lesson 2.) Shown at the right are two different colorings\
+    \ of a graph on 4 vertices using 3 colors. Two colorings are different if at least\
+    \ one vertex has a different color.\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_61_0.png)\n\
+    \n- **1.** How many different 3-colorings are there of the graph shown below?\
+    \ Explain your reasoning.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_1.png)\n\
+    \n- **2.** The function that gives the number of *k*-colorings for a graph *G*\
+    \ is called the chromatic polynomial and is denoted by $C_G(k)$. Think about the\
+    \ chromatic polynomials for the following two graphs.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_2.png)\n\
+    \  Graph on 4 vertices with no edges\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_3.png)\n\
+    \  Complete graph on 4 vertices (every edge)\n\n  - **a.** Let *G* be a graph\
+    \ of 4 vertices with no edges. Explain why the chromatic polynomial for a graph\
+    \ *G* of 4 vertices with no edges is $C_G(k)=k^4$.\n  - **b.** Explain why the\
+    \ chromatic polynomial for a complete graph *G* on 4 vertices is $C_G(k)=k(k-1)(k-2)(k-3)$.\
+    \ What are the zeros for this polynomial? Explain why the chromatic polynomial\
+    \ must be zero for these values of *k*.\n  - **c.** What is the chromatic polynomial\
+    \ for a graph *G* on *p* vertices with no edges? What is the chromatic polynomial\
+    \ for a complete graph *G* on *p* vertices?\n\n- **3.** Find the chromatic polynomial\
+    \ for each of the following graphs on 4 vertices.\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_0.png)\n\
+    \n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_1.png)\n\n- **4.** The graph shown\
+    \ below is a cycle of length 4. The chromatic polynomial for a cycle of length\
+    \ 4 is \\(k^4 - 4k^3 + 6k^2 - 3k\\).\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_2.png)\n\
+    \n  Give a justification that shows this polynomial is correct.\n\n- **5.** Make\
+    \ a chart that shows all possible graphs on 1, 2, 3, and 4 vertices and the corresponding\
+    \ chromatic polynomials. (Hint: There are 4 possible graphs on 3 vertices and\
+    \ 11 possible graphs on 4 vertices.)\n\n- **6.** Create at least three different\
+    \ graphs on 5 vertices for which you can determine the chromatic polynomial. Give\
+    \ a clear justification of the chromatic polynomial.\n\n- **7.** Write a report\
+    \ which includes your complete responses to Items 1–6. Clearly explain the reasoning\
+    \ you used to complete each item. Your drawings should be neat and accurate. Include\
+    \ a summary in which you discuss your observations and ideas on how to find the\
+    \ chromatic polynomial for a graph.\n\n## PROJECT\n### Suggested Solutions\n**Chromatic\
+    \ Polynomials**\n\nStudents can work alone or in pairs on this project. You may\
+    \ wish to spend some time introducing or reviewing the Multiplication Principle\
+    \ of Counting before students begin work on this project. Every graph has a related\
+    \ *chromatic polynomial*. Using the Multiplication Principle of Counting, these\
+    \ polynomials are fairly easy to find for graphs with up to 4 vertices. However,\
+    \ it is easy to create a graph with 5 vertices for which the chromatic polynomial\
+    \ is complicated and difficult to justify. A recursive algorithm exists for computing\
+    \ the chromatic polynomial for any graph G. The algorithm shows that every graph\
+    \ has a chromatic polynomial. However, which polynomials have corresponding graphs\
+    \ is still an unanswered question in mathematics. Students who are ready for a\
+    \ challenge should be encouraged to investigate the recursive algorithm for computing\
+    \ the chromatic polynomial that is described in some graph theory textbooks: $C_G(k)=C_{G-e}(k)-C_{G/e}(k)$,\
+    \ where $G-e$ is the graph with the edge $e$ removed and $G/e$ is the graph where\
+    \ the vertices of $e$ are identified together (made one).\n\n**Suggested Timeline**\n\
+    \nAllow students several days to work on Items 1–6. Have them submit their solutions\
+    \ in draft form. Check their drafts and provide them feedback. When you are comfortable\
+    \ that their solutions are essentially correct, give them a few days to prepare\
+    \ a draft of their report. After getting prompt feedback to their draft from you,\
+    \ they should be able to complete their final report in a few more days.\n\n**Solutions**\n\
+    \n- **1.** There are 6 different 3-colorings of the given graph. Start at any\
+    \ vertex; there are 3 choices for coloring that vertex. Then there are 2 possible\
+    \ colors for the next vertex that is chosen, and the last vertex must be colored\
+    \ using the remaining color. This gives 6 possible 3-colorings. Some students\
+    \ might choose to show all 6 possibilities. In this case, be sure they can justify\
+    \ that they have all possible 3-colorings.\n\n- **2.**\n  - **a.** Since each\
+    \ vertex can be assigned any of the $k$ colors, there are $k^4$ possible assignments.\
+    \ Thus, the chromatic polynomial on a null graph (a graph with no edges) of 4\
+    \ vertices is $C_G(k)=k^4$.\n  - **b.** Start with any vertex; choose one of $k$\
+    \ colors. Choose a second vertex. Since it is adjacent to the first vertex, it\
+    \ can be colored with $(k-1)$ colors. Choose one of these colors. The third vertex\
+    \ can be colored with $(k-2)$ colors and the fourth vertex with $(k-3)$ colors.\
+    \ Thus, the chromatic polynomial for a complete graph on 4 vertices is $C_G(k)=k(k-1)(k-2)(k-3)$.\
+    \ The zeroes for this polynomial are 0, 1, 2, and 3, which indicates that there\
+    \ are no colorings if only 0, 1, 2, or 3 colors are used.\n  - **c.** Graph on\
+    \ $p$ vertices with no edges: $C_G(k)=k^p$; complete graph on $p$ vertices: $C_G(k)=k(k-1)(k-2)\\\
+    cdots(k-p+1)$.\n\n## PRACTICING FOR STANDARDIZED TESTS\n### Practice Set\n\nSolve\
+    \ each problem. Then record the letter that corresponds to the correct answer.\n\
+    \n- **1.** If $a>0$ and $b>0$ and the slope of the line passing through $(-2a,a)$\
+    \ and $(b,3a)$ is 2, which of the following is an expression for $b$ in terms\
+    \ of $a$? (a) $-a$ (b) $-2a$ (c) $-2a-2$ (d) $3a$ (e) $4a$\n\n- **2.** Olivia\
+    \ is planning the mathematics club annual picnic. She may choose from 3 meat selections,\
+    \ 4 types of vegetables, and 5 kinds of cookies. How many different menus, each\
+    \ with a meat, a vegetable, and a cookie, could she select? (a) 12 (b) 17 (c)\
+    \ 23 (d) 35 (e) 60\n\n- **3.** In $\\triangle PQR$ at the right, if $y=35^\\circ$,\
+    \ what is the value of $x$? (a) $30^\\circ$ (b) $35^\\circ$ (c) $40^\\circ$ (d)\
+    \ $45^\\circ$ (e) $50^\\circ$\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_65_0.png)\n\
+    \n- **4.** A school’s honor society has 150 members. There are 70 boys and 80\
+    \ girls, of whom 40 are juniors and 110 are seniors. What is the smallest possible\
+    \ number of senior girls in the society? (a) 0 (b) 20 (c) 40 (d) 60 (e) 80\n\n\
+    - **5.** What value satisfies both $|3x-4|=5$ and $|1-2x|=5$? (a) $-2$ (b) $-\\\
+    frac{1}{3}$ (c) $1$ (d) $3$ (e) $5$\n\n- **6.** If $p+q=5$ and $2pq=8$, what is\
+    \ $p^2+q^2$? (a) 1 (b) 3 (c) 9 (d) 13 (e) 17\n\n- **7.** If \\(\\sqrt{k}\\) is\
+    \ an integer, which of the following must be integers? I. \\(\\sqrt{\\frac{k}{4}}\\\
+    ) II. \\((\\sqrt{5k})^2\\) III. \\(\\sqrt{9k}\\) (a) None (b) I and II only (c)\
+    \ I and III only (d) II and III only (e) I, II, and III\n\n- **8.** If \\(m^2\
+    \ - 4n^2 = 32\\) and \\(m + 2n = 8\\), what is the value of \\(m - 2n\\)? (a)\
+    \ \\(-4\\) (b) \\(\\frac{1}{4}\\) (c) 2 (d) 4 (e) 16\n\n- **9.** In the figure,\
+    \ \\(\\overline{AD} \\parallel \\overline{HE}\\) and \\(\\overline{BH} \\parallel\
+    \ \\overline{DF}\\). Which one of the following quadrilaterals is a parallelogram?\
+    \ (a) ADEH (b) CDFG (c) BDEH (d) BDFH (e) CDEG\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_66_0.png)\n\
+    \n- **10.** Approximately 25% of the cars sold are red. Michael is observing cars\
+    \ as they drive by his house. What is the probability that he has to watch at\
+    \ least three cars go by in order to see a red one? (a) 0.140625 (b) 0.25 (c)\
+    \ 0.4375 (d) 0.5625 (e) 0.75\n\n### TEST-TAKING TIP\n\n**Factoring a quadratic\
+    \ expression often makes a question transparent.**\n\nCollege entrance examination\
+    \ authors think it is important for students to be able to factor several simple\
+    \ quadratic expressions such as \\(ax^2 + bx\\), \\(x^2 + 2ax + a^2\\), and \\\
+    (x^2 - y^2\\). However, you are seldom directly asked to factor. Rather, you are\
+    \ asked a question that is simple once you see that factoring a quadratic expression\
+    \ is involved.\n\n**Example** Look back at Item 8. To use factoring, notice that\
+    \ in \\(m^2 - 4n^2 = 32\\), the left-hand expression is the difference of two\
+    \ squares, \\(m^2\\) and \\((2n)^2\\). Thus, \\(m^2 - 4n^2 = (m + 2n)(m - 2n)\
+    \ = 32\\). Since \\(m + 2n = 8\\), \\(m - 2n = 4\\). So, the answer is (d).\n\n\
+    Find, if possible, another test item in the practice set for which this strategy\
+    \ might be helpful.\n"
+  mdcn: "\n## 项目\n### 色多项式\n\n**目的**\n\n在之前的课程中，你可能已经学习过如何通过对顶点-边图进行着色来帮助解决问题。你很可能发现，你和同学经常对同一个图作出不同的着色。在本项目中，你将研究用\
+    \ *k* 种颜色对一个图进行着色的方法数。\n\n**说明**\n\n网络或顶点-边图的一个 *k*-着色，是将 *k* 种颜色分配给顶点，使得由一条边相连的两个顶点不具有相同颜色。过去，你们已经探讨过使用最少颜色数进行着色的存在性。（见课程1，第4单元，第2课。）右图展示了用3种颜色对一个4顶点图进行着色的两种不同方式。如果至少有一个顶点的颜色不同，则两种着色不同。\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_61_0.png)\n\n- **1.** 下图所示的图有多少种不同的3-着色？解释你的推理。\n\
+    \n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_1.png)\n\n- **2.** 给出图 *G* 的 *k*-着色数量的函数称为色多项式，记作\
+    \ $C_G(k)$。思考下面两个图的色多项式。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_2.png)\n\
+    \  4个顶点且无边的图\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_61_3.png)\n  4个顶点的完全图（每两个顶点之间都有边）\n\
+    \n  - **a.** 设 *G* 是一个有4个顶点且无边的图。解释为什么一个有4个顶点且无边的图 *G* 的色多项式是 $C_G(k)=k^4$。\n\
+    \  - **b.** 解释为什么4个顶点的完全图 *G* 的色多项式是 $C_G(k)=k(k-1)(k-2)(k-3)$。这个多项式的零点是什么？解释为什么对于这些\
+    \ *k* 值，色多项式必须为零。\n  - **c.** 一个有 *p* 个顶点且无边的图 *G* 的色多项式是什么？一个有 *p* 个顶点的完全图 *G*\
+    \ 的色多项式是什么？\n\n- **3.** 求下列每个4顶点图的色多项式。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_0.png)\n\
+    \n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_1.png)\n\n- **4.** 下图是一个长度为4的环。长度为4的环的色多项式为\
+    \ \\(k^4 - 4k^3 + 6k^2 - 3k\\)。\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_62_2.png)\n\
+    \n  给出一个能说明该多项式正确的论证。\n\n- **5.** 制作一张图表，展示1个、2个、3个和4个顶点的所有可能图及其对应的色多项式。（提示：3个顶点上有4种可能的图，4个顶点上有11种可能的图。）\n\
+    \n- **6.** 构造至少三个不同的5顶点图，并能够确定它们的色多项式。给出色多项式的清晰论证。\n\n- **7.** 写一份报告，包括你对第1—6项的完整回答。清楚解释你完成每一项所用的推理。你的绘图应整洁准确。包含一个总结，讨论你对如何求一个图的色多项式的观察和想法。\n\
+    \n## 项目\n### 建议解答\n**色多项式**\n\n学生可以独自或两人一组完成本项目。在学生开始本项目之前，你可能希望花一些时间介绍或复习计数乘法原理。每个图都有一个相关的*色多项式*。使用计数乘法原理，对于最多4个顶点的图，这些多项式相当容易求出。然而，很容易构造一个5顶点图，其色多项式复杂且难以论证。存在一种用于计算任意图\
+    \ G 的色多项式的递归算法。该算法表明每个图都有色多项式。然而，哪些多项式有对应的图，在数学中仍是一个未解问题。对于准备好接受挑战的学生，应鼓励他们研究一些图论教材中描述的、用于计算色多项式的递归算法：$C_G(k)=C_{G-e}(k)-C_{G/e}(k)$，其中\
+    \ $G-e$ 是删除边 $e$ 后得到的图，$G/e$ 是将 $e$ 的两个顶点合并（视为一个）后得到的图。\n\n**建议时间安排**\n\n给学生几天时间完成第1—6项。让他们以草稿形式提交解答。检查他们的草稿并提供反馈。当你确信他们的解答基本正确后，给他们几天时间准备报告草稿。在他们及时得到你对其草稿的反馈后，他们应该能在再过几天内完成最终报告。\n\
+    \n**解答**\n\n- **1.** 给定图有6种不同的3-着色。从任意顶点开始；给该顶点着色有3种选择。然后，对于下一个被选中的顶点有2种可能的颜色，而最后一个顶点必须使用剩余的颜色着色。这样得到6种可能的3-着色。有些学生可能选择展示全部6种可能性。在这种情况下，要确保他们能论证自己列出了所有可能的3-着色。\n\
+    \n- **2.**\n  - **a.** 由于每个顶点都可以分配 $k$ 种颜色中的任意一种，因此有 $k^4$ 种可能的分配。因此，4个顶点的空图（无边图）的色多项式是\
+    \ $C_G(k)=k^4$。\n  - **b.** 从任意顶点开始；选择 $k$ 种颜色中的一种。选择第二个顶点。由于它与第一个顶点相邻，因此可以用 $(k-1)$\
+    \ 种颜色给它着色。选择其中一种颜色。第三个顶点可以用 $(k-2)$ 种颜色着色，第四个顶点可以用 $(k-3)$ 种颜色着色。因此，4个顶点的完全图的色多项式是\
+    \ $C_G(k)=k(k-1)(k-2)(k-3)$。这个多项式的零点是0、1、2和3，这表明如果只使用0、1、2或3种颜色，则不存在着色。\n  - **c.**\
+    \ 有 $p$ 个顶点且无边的图：$C_G(k)=k^p$；有 $p$ 个顶点的完全图：$C_G(k)=k(k-1)(k-2)\\cdots(k-p+1)$。\n\
+    \n## 标准化考试练习\n### 练习集\n\n解答每一题。然后记录与正确答案对应的字母。\n\n- **1.** 如果 $a>0$ 且 $b>0$，且经过\
+    \ $(-2a,a)$ 和 $(b,3a)$ 的直线的斜率为2，那么下列哪一项是用 $a$ 表示 $b$ 的表达式？(a) $-a$ (b) $-2a$ (c)\
+    \ $-2a-2$ (d) $3a$ (e) $4a$\n\n- **2.** 奥利维娅正在筹划数学俱乐部的年度野餐。她可以从3种肉类选择、4种蔬菜和5种饼干中选择。她可以选出多少种不同的菜单，每种菜单包含一种肉、一种蔬菜和一种饼干？(a)\
+    \ 12 (b) 17 (c) 23 (d) 35 (e) 60\n\n- **3.** 在右图的 $\\triangle PQR$ 中，如果 $y=35^\\\
+    circ$，那么 $x$ 的值是多少？(a) $30^\\circ$ (b) $35^\\circ$ (c) $40^\\circ$ (d) $45^\\\
+    circ$ (e) $50^\\circ$\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_65_0.png)\n\
+    \n- **4.** 一所学校的荣誉学会有150名成员。其中有70名男生和80名女生，其中40名是三年级学生，110名是四年级学生。该学会中四年级女生的最小可能人数是多少？(a)\
+    \ 0 (b) 20 (c) 40 (d) 60 (e) 80\n\n- **5.** 什么值同时满足 $|3x-4|=5$ 和 $|1-2x|=5$？(a)\
+    \ $-2$ (b) $-\\frac{1}{3}$ (c) $1$ (d) $3$ (e) $5$\n\n- **6.** 如果 $p+q=5$ 且 $2pq=8$，那么\
+    \ $p^2+q^2$ 是多少？(a) 1 (b) 3 (c) 9 (d) 13 (e) 17\n\n- **7.** 如果 \\(\\sqrt{k}\\\
+    ) 是整数，下列哪些必定是整数？I. \\(\\sqrt{\\frac{k}{4}}\\) II. \\((\\sqrt{5k})^2\\) III. \\\
+    (\\sqrt{9k}\\) (a) 无 (b) 仅 I 和 II (c) 仅 I 和 III (d) 仅 II 和 III (e) I、II 和 III\n\
+    \n- **8.** 如果 \\(m^2 - 4n^2 = 32\\) 且 \\(m + 2n = 8\\)，那么 \\(m - 2n\\) 的值是多少？(a)\
+    \ \\(-4\\) (b) \\(\\frac{1}{4}\\) (c) 2 (d) 4 (e) 16\n\n- **9.** 在图中，\\(\\overline{AD}\
+    \ \\parallel \\overline{HE}\\) 且 \\(\\overline{BH} \\parallel \\overline{DF}\\\
+    )。下列哪一个四边形是平行四边形？(a) ADEH (b) CDFG (c) BDEH (d) BDFH (e) CDEG\n\n  ![](img/524030daad8f78e8d291a7f96ed9b8cb_66_0.png)\n\
+    \n- **10.** 售出的汽车中大约25%是红色的。迈克尔正在观察从他家旁驶过的汽车。他必须至少观察三辆车经过才能看到一辆红色汽车的概率是多少？(a)\
+    \ 0.140625 (b) 0.25 (c) 0.4375 (d) 0.5625 (e) 0.75\n\n### 考试技巧\n\n**对二次表达式进行因式分解往往能使问题变得清晰。**\n\
+    \n大学入学考试命题者认为，学生能够分解几个简单的二次表达式（如 \\(ax^2 + bx\\)、\\(x^2 + 2ax + a^2\\) 和 \\(x^2\
+    \ - y^2\\)）很重要。然而，你很少被直接要求进行因式分解。相反，你被问的问题一旦你看出其中涉及二次表达式的因式分解，就会变得简单。\n\n**示例**\
+    \ 回顾第8题。要使用因式分解，注意在 \\(m^2 - 4n^2 = 32\\) 中，左边表达式是平方差，即 \\(m^2\\) 与 \\((2n)^2\\\
+    ) 的差。因此，\\(m^2 - 4n^2 = (m + 2n)(m - 2n) = 32\\)。由于 \\(m + 2n = 8\\)，所以 \\(m -\
+    \ 2n = 4\\)。因此，答案是 (d)。\n\n如果可能，在练习集中找出另一道该策略可能有所帮助的测试题。\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 67]
+
+
+    <!-- no content -->'
+  - '[PAGE 68]
+
+
+    <!-- no content -->'
+  - '[PAGE 69]
+
+
+    <!-- no content -->'
+  - '[PAGE 70]
+
+
+    <!-- no content -->'
+  - '[PAGE 71]
+
+
+    <!-- no content -->'
+  - '[PAGE 72]
+
+
+    <!-- no content -->'
+  - '[PAGE 73]
+
+
+    <!-- no content -->'
+  - '[PAGE 74]
+
+
+    <!-- no content -->'
+  - '[PAGE 75]
+
+
+    # # Contents
+
+
+    +   - Unit 1 Reasoning and Proof
+
+    +   - Unit 2 Inequalities and Linear Programming
+
+    +   - Unit 3 Similarity and Congruence
+
+    +   - Unit 4 Samples and Variation
+
+    +   - Unit 5 Polynomial and Rational Functions
+
+    +   - Unit 6 Circles and Circular Functions
+
+    +   - Unit 7 Recursion and Iteration
+
+    +   - Unit 8 Inverse Functions
+
+
+    Visit us at www.glencoe.com
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_75_0.png)
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_75_1.png)
+
+
+    Macmillan/McGraw-Hill
+
+    Glencoe
+
+
+    The McGraw-Hill Companies
+
+
+    ISBN: 978-0-07-890725-8
+
+    MHID: 0-07-890725-X
+
+
+    ![](img/524030daad8f78e8d291a7f96ed9b8cb_75_2.png)
+
+
+    9 780078 907258
+
+
+    www.glencoe.com
+
+
+    P2-BGC-06+'
+  md: "\n## Contents\n\n- Unit 1 Reasoning and Proof\n- Unit 2 Inequalities and Linear\
+    \ Programming\n- Unit 3 Similarity and Congruence\n- Unit 4 Samples and Variation\n\
+    - Unit 5 Polynomial and Rational Functions\n- Unit 6 Circles and Circular Functions\n\
+    - Unit 7 Recursion and Iteration\n- Unit 8 Inverse Functions\n\nVisit us at www.glencoe.com\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_75_0.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_75_1.png)\n\
+    \nMacmillan/McGraw-Hill  \nGlencoe\n\nThe McGraw-Hill Companies\n\nISBN: 978-0-07-890725-8\
+    \  \nMHID: 0-07-890725-X\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_75_2.png)\n\
+    \n9 780078 907258\n\nwww.glencoe.com\n\nP2-BGC-06+\n"
+  mdcn: "\n\n## 目录\n\n- 第1单元 推理与证明\n- 第2单元 不等式与线性规划\n- 第3单元 相似与全等\n- 第4单元 样本与变异\n\
+    - 第5单元 多项式函数与有理函数\n- 第6单元 圆与圆函数\n- 第7单元 递归与迭代\n- 第8单元 反函数\n\n请访问我们的网站 www.glencoe.com\n\
+    \n![](img/524030daad8f78e8d291a7f96ed9b8cb_75_0.png)\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_75_1.png)\n\
+    \nMacmillan/McGraw-Hill  \nGlencoe\n\n麦格劳-希尔公司\n\nISBN: 978-0-07-890725-8  \n\
+    MHID: 0-07-890725-X\n\n![](img/524030daad8f78e8d291a7f96ed9b8cb_75_2.png)\n\n\
+    9 780078 907258\n\nwww.glencoe.com\n\nP2-BGC-06+\n\n"
+  merge: 0
