@@ -1,0 +1,5 @@
+subarrays. B[2j] and B[2j + 1] are numbers such that B[2j] ≤ B[2j + 1] and the pair B[2j], B[2j + 1] represents the subarray S[ B[2j], . . . , B[2j + 1] ].
+
++   - a multitude of doubly linked lists with n elements altogether. They represent a partition of the set of the bulbs. Each element contains an integer that corresponds to the ID of precisely one bulb, and each list represents precisely one candidate set. Initially, there is only one list in this multitude, call this list C. That reflects the fact that at the beginning we have no restrictions on the possible connections between bulbs and switches. At the end, there are n non-empty lists in this multitude. That reflects the fact that at the end we know precisely the wiring between the switches and the bulbs.
+
+Here is the pseudocode. Initially P[ ] is arbitrary.
