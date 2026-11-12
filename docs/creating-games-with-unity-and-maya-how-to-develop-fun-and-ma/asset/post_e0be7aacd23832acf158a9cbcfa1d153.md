@@ -1,0 +1,259 @@
+
+- broad strokes but not detail, 122
+- creating, 123, 123f
+- keeping reasonable size, 124
+- making believable, 122
+- making seamless, 129
+- moving, 124–125, 124f
+- resizing, 123–124
+- restrictions, 122–125
+- Terrain, as a GameObject, 121
+- Terrain, setting to Static, 169
+- Terrain Assets, collection of prebuilt, 132
+- Terrain Assets package, 132
+- Terrain Collider component, 125
+- terrain creation, multiple passes key to effective, 127
+- terrain editing tools, 125–136
+- terrain Settings tool, 127
+- terrain setting, tweaking, 143–144
+- terrain surface, raising, 126
+- Terrain, Texture size adjusting, 130, 131f
+- Terrain Textures, 131
+- terrain values folder, saving seamless texture to, 129
+- tessellation, 11–12, 15–16f
+- tessellation process, 15
+- testing
+  - birds, 302–303, 302f
+  - lockCursor(), 462
+  - rigs, 289–290, 290f
+  - sound, 327
+  - texture in Photoshop, 71
+- texture assets, made in Photoshop or BodyPaint, 4
+- texture atlases
+  - creating for weapons, 237
+  - holding texture information of multiple objects, 48–49
+  - knowing how to use, 62
+- texture files
+  - more and more screen filled with, 67
+  - related to EntryWay, 157
+  - user including relevant, 198
+- texture images, layering additional, 81–82
+- Texture Import settings, for spotlight, 162
+- texture node, renaming, 72
+- texture space, 43, 255
+- Texture2D type, 445
+- TextureColor, defining color of the LED, 410–411
+- Textured mode, viewing the scene in, 42
+- textured scene, 83f
+- textures
+  - adding to topography, 128–132
+  - aligning to top of the screen, 44
+  - applying, 71–73
+  - applying to a mesh, 238
+  - automatically over entire terrain, 130
+  - changing Max Size, 499, 499f
+  - cobbling together swatches of, 77
+  - creating in Photoshop, 5
+  - described, 63
+  - embedded into .fbx exported, 98
+  - finishing, 271, 274f
+  - folder for saving, 41
+  - giving depth to flat, 264
+  - layering, 132
+  - looking fine in Maya but not Unity, 107
+  - nature of effective, 64–65
+  - optimizing with mipmaps, 498–500
+  - painting, 77–78
+  - painting with, 131–132, 131f
+  - populating GUITextures with, 443
+  - problem area of, 108f
+  - repeating, 65
+  - resizing, 342
+  - seamless, 65
+  - selecting size of, 75–76
+  - tiling over a large surface, 67, 68f
+  - for use in GUITextures, 341
+- Threshold setting, turning up, 223, 224f
+  - adding loops to, 220, 220f
+  - creating base of, 218, 218f, 222
+  - creating string of joints for, 293–294, 293f
+- tiling textures
+  - over a large surface, 67, 67f
+  - working with, 58
+- timers, commas, 490–491
+- timing, adjusting, 320
+- toggle, expanding code to be, 451–452
+- Toggle UV shader display, 57, 57f
+- ToggleInventory function, writing, 461–462
+- Tool Attributes, bringing up, 190
+- tool functionality script, 443
+- toolbar of Unity, 94
+- tools, 16–17
+  - creating normal maps, 150–159
+  - for scripts, 336–337
+  - used by a team, 4
+- top lid, covering an eye's, 187, 187f
+- topography, adding texture to, 128–132
+- topology
+  - described, 15–16
+  - ensuring four-sided polygons, 23, 23f
+- torso, completing, 208–212
+- ToString function, built in Unity, 479
+- Transform component, 125
+- Transform methodology, GUITextures laid out using, 503
+- Transform scripting, of Inspector, 108
+- Transform values, for Position and Rotation, 458
+- transformations
+  - cleaning, 278–279
+  - freezing, 289
+  - transforms, locking and hiding unwanted, 300–301, 301f
+- Translate tools
+  - moving vertices, 29, 30f
+  - sliding projection down, 54–55
+- Tree generator, in Unity, 132
+- tree types, placing several, 134, 134f
+- trees
+  - adding, 132–136
+  - painting across highest parts of the scene, 133, 133f
+  - placing, 126, 133
+  - removing, 126
+  - as smart objects in Unity, 121
+- triangular polygons (tris), 11–12, 15, 31
+- Trigger functionality, creating, 362
+- Trigger-BulkheadDoor1, creating, 368
+- Trigger-Endgame, creating, 476, 476f
+- Trigger-FallDeath, 486–487, 486f
+- Trigger-FindDoorHint cube, 359
+- Trigger-HallwayPortal, creating, 365, 365f
+- Trigger-LockedDoor, creating, 468, 468f
+- triggers
+  - activating and changing screen hints with, 356–367
+  - checking key entered, 464
+  - creating, 358–359
+  - described, 355
+  - designating, 356, 356f
+  - destroying, 373
+  - handy but sometimes clumsy, 377
+  - scripting, 361–364
+  - setting up area of influence for steam, 487
+  - to swap levels, 364–366
+- Trigger-WaterKillers, creating, 482–483
+- Trigger-WaterKillerGameObject, 486
+- tris (triangular polygons), 11–12, 15
+- Tris: number, looking at, 31
+- trolley, 35f, 88
+- TrueType Fonts, in GUIText, 358
+- tunnel sound source, in 327
+- TurnOnLights function, 397–398, 401
+- Tutorials
+  - 10.1: Rigging, 276–301
+  - 10.2: Maya Skinning, 302–310
+  - 10.3: Maya Animation, 310–314
+  - 10.4: Getting Animated Characters to Unity, 314–319
+  - 10.5: Animating in Unity, 319–321
+  - 11.1: Placing Sound in Unity, 325–332
+  - 12.1: Graphical User Interfaces, 340–354
+  - 13.1: Activating and Changing Screen Hints with Triggers, 356–367
+  - 13.2: Triggers and Doors, 367–377
+  - 14.1: Highlighting Actionable Objects with Raycasting, 402
+  - 15.1: The Power of Prefabs, 406–413
+  - 15.2: Setting Up the Armed Arms, 414–417
+  - 15.3: Firing a Gun, 417–423
+  - 15.4: Sound Revisited, 423–425
+  - 15.5: The EMP Mines, 427–438
+  - 16.1: Setting Up Inventory GUI and Script, 443–463
+  - 16.2: Keys, 464–472
+  - 17.1: Winning, 481–482
+  - 17.2: Health Systems, 478–494
+  - 2.1: Game Level Modeling: The Entryway, 17–24
+  - 3.1: Game Level UV Layout, Tools and Techniques, 40–61
+  - 4.1: Seamless Tiled Textures, 66–74
+  - 4.2: Non-Tiled Textures and Their Dirt, 74–84
+  - 5.1: Creating a Unity Project, 90–93
+  - 5.2: Exporting from Maya, 97–101
+  - 5.3: Importing, Tweaking, and Placing Scenography Assets into Unity, 102–112
+  - 6.1: Adding and Manipulating Unity Water, Sky, and Fog, 114–121
+  - 6.2: Terrain Creation, 121–136
+  - 6.3: Primitives and Particles, 136–144
+- 7.1: Normal Maps, 148–177
+- 7.2: Lighting and Baking in Unity, 159–160
+- 8.1: Game Character Modeling: Aegis Chung, 182–232
+- 9.1: Character UV Mapping, 234–262
+- 9.2: Character Texture Painting, 262–271
+- on textures, 66
+- twitching, of vertices, 309
+- types
+  - assigning to a variable, 339
+  - assigning to variables, 500
+
+## U
+
+- Undo (Edit > Undo or Ctrl-Z or Command-Z), 133
+- unflattened version, of inner walls texture, 150–151
+- Unfold button, dragging several times, 255
+- Unfold UV tool, in Maya, 50
+- unification, of color fields, 70
+- unlimited, making sense to, 495
+- UniSciTE script editor
+  - basics of a script in, 330, 331f
+  - F1, 384
+  - line numbers not appearing by default, 346
+  - on a PC, 336
+- Unitron editor, on a Mac, 336
+- Unity
+  - adding interactivity to a scene, 321
+  - allowing for easy adjustments in size, 75–76
+  - assembling games in, 4
+  - asset creation in, 113
+  - attempting to resize images, 505
+  - bringing image in as a normal map, 158
+  - bringing in Maya-created objects, 41
+  - built-in animation system, 319
+  - constant experience across platforms, 496
+  - converting non-power-of-two textures, 64–65
+  - creating a new folder, 91
+  - creating and dealing with projects, 90–93
+  - described, 4
+  - documentation's examples
+    - primarily in JavaScript, 5–6
+  - downsampling imported textures, 107
+  - exploring the level within, 89
+  - free license, 90
+  - game development pipeline, 9
+  - generating an alpha automatically, 141
+  - getting animated characters to, 314–319
+  - getting assets into, 277
+  - lighting and baking in, 159–160
+  - lighting instruments in, 160–177
+  - lighting tools, 146
+  - lightmapping, 146–147
+  - nomenclature, 101–102
+  - placing scenography assets into, 102–112
+  - placing sound in, 325–332
+  - prefabs, 403, 405
+  - presenting polygons, 136
+  - reading most anything, 70
+  - scripts in, 335–340
+  - seeing joint rotation keyframes, 314
+  - standard (and free), 90
+  - taking non-power-of-two textures, 64–65
+  - Textures/Materials/Shaders compared to Maya, 65–66
+  - tracking whether player has emerged alive, 484
+  - understanding new asset, 158
+  - working structure much like Maya, 90
+  - working with GUIText, 356
+- Unity 3
+  - new technology (Beast) for lighting solutions, 147
+  - sound mechanisms, 323
+- Unity Explosion Framework, 420–423
+- Unity Interface, 93–96, 100
+- Unity Pro
+  - casting shadows, 162–163
+  - Deferred Lighting, 171–173
+  - features in, 90
+  - Global Illumination, 170
+  - real-time shadows, 168–169
+  - render to texture effects, 114
+  - scene baked with, 170f, 171
+  - Unity-Project Wizard window, 90–91, 91f
+- Untagged tag, 408–409

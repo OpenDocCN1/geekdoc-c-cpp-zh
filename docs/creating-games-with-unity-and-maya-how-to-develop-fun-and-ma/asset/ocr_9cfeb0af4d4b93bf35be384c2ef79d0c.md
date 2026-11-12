@@ -1,0 +1,13 @@
+pixel in the texture will be shown once on the surface. In situations like this, there is no need for seamless texture. We can paint a custom texture that wraps around the form and add or include any specific crack, stain, or bullet hole. There are times when this works great and in some ways is preferable. It allows for very interesting and accurate textures and placement.
+
+However, there are other areas of the model, like the ground surface, where we did not make sure that the UVs were set within the top-right quadrant. Although having all the UVs not sharing any texture space allows for intricately painted textures, these textures can fall apart upon close-up inspection (unless HUGE texture files are used that slow your game to a crawl) because suddenly more and more of the screen is being filled with a smaller and smaller chunk of the texture file. Although a crate may be able to use a 512x512 texture since the crate takes up only a small section of the screen, if a 512x512 texture is stretched out over the entire floor surface of our dock, when the player looks at his feet and the floor takes up the whole screen, he'd see only one or two pixels of the texture file; it'd look terrible (Figure 4.1).
+
+This is where seamless textures become powerful. If a seamless texture is created at 512x512, but repeated many times over the same dock surface, when the player looks at his feet, he may be seeing all 512x512 or even more if the texture has tiles small enough. It means that as the player looks out on the scene and the floor takes up a lot of screen space, the fidelity of the texture holds up much better (Figure 4.1).
+
+There are inherent problems with tiling a texture over a large surface. The first is that it can become pretty obvious that a texture is being tiled as it is easy to visually pick out the repeating pattern. This problem can sometimes be mitigated through picking a texture that doesn't have too many large defining visual elements (Figure 4.2). This can also be mitigated by developing a good lightmap (much more on this later).
+
+The second problem with tiling textures is when the tiles don't match up. If a texture is not seamless, it is easy to see where one copy of the texture ends and the next begins. This tutorial is out to fix this problem. Interestingly, solving the seamless problem is not a 3D issue at all, and thus not solved in Maya. We'll solve it in Photoshop.
+
+![](bbox=[0.15, 0.73, 0.64, 0.89])
+
+**FIGURE 4.1** The image on the left is a huge (4096x4096) texture stretched across the entire ground plane. The image on the right uses only a 512x512 image, but tiles.

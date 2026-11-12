@@ -1,0 +1,281 @@
+
+- normal maps, before and after using, 159f
+- Normal Maps, use of, 148
+- NormalMapFilter
+    - initial output compared to result of multiple overlayed, 156
+    - Nvidia's, 153–155, 154f
+    - results, 155
+- normals
+    - defining the front of a polygon, 11
+    - facing the wrong way, 234–235
+    - fixing errant, 235
+    - softening, 194, 194f
+- nose
+    - adding mass to, 194–197, 195f
+    - centered vertices of middle of, 190f
+    - continued extrusion after centering, 190f
+    - finding form of, 195, 195f
+- nostril
+    - completing, 197, 197f
+    - creating upper edges of, 195–196, 196f
+- NURBS (non-uniform rational b-splines), 15
+- NURBS circle, creating, 288, 288f
+- Nvidia, plug-ins for Photoshop, 150
+- Nvidia cards, better experiences with, 13
+
+## O
+
+- Object Mode, 288, 296
+- object selection hierarchy, in Maya, 303
+- objects
+    - assigning to layers in Unity, 94
+    - attaching scripts to, 335
+    - changing in Unity, 405
+    - creating at runtime, 413
+    - displaying multiple times, 403
+    - highlighting in bright white, 390
+    - naming, 97, 277
+    - scaling, 105, 189, 289
+    - as triggers, 356
+- oblique texture, times making the most sense, 64
+- occipital bun
+    - building toward, 201, 202f
+    - finishing off, 202, 202f
+- Occlusion Culling, 364
+- Offset, with Wrap Around option activated, 69
+- Offset command, selecting, 68–69
+- Offset filter, applying, 69
+- OnControllerColliderHit function, 367
+- OnMouseDown function, 338
+    - adjusting, 475–476
+    - creating a new, 448
+    - removing functions from, 451
+- OnMouseEnter built function, 346
+- OnMouseExit function, 347
+- OnMouseOver, raycasting as an alternative to, 380
+- OnParticleCollision function, in Unity, 487
+- OnTriggerEnter function, 362
+    - building, 483
+    - checking distance, 500–501
+    - creating, 369–370
+- Open Project tab, of Unity-Pro Project Wizard, 91
+- opening GUI, images for, 340
+- opening scene, laying ground work for, 317
+- OpenSceneButtonScript
+    - adding to, 348
+    - creating, 345
+    - duplicating, 474–475
+    - opening, 345, 348
+- optimization, 49–50, 496–501
+- optimizing
+    - in Maya, 97
+    - with scripts, 500–501
+    - with textures, 498–500
+- oral cavity, 191–192, 191f
+- order of operations, 6
+- organic modeling, methods of, 182
+- Orient Joint command, 294, 294f
+- Orient Joint function, 295
+- orphaned nodes, checking for, 97
+- outdoor lighting, 168
+- Outliner
+    - baking animation in, 314–315, 315f
+    - hierarchy in, 286–287, 287f
+    - keeping a clean, 27
+    - renaming joints, 282–283
+    - renaming new IK handle, 286
+    - output files, notes on, 507
+- overlapping UVs, shadows and, 169
+- Overlay Blending Mode, 155f
+
+## P
+
+- Package, in OSX, 507
+- packages, importing, 92, 114, 341
+- pads, UV mapping, 247–250
+    - on Aegis Chun's outfit, 225
+    - creating, 225
+- Paint Details button, in the Inspector, 134–135
+- Paint Details tool, 126
+- Paint Height tool, 126
+- Paint Operation, changing to Smooth, 307
+- Paint Skin Weights tool, 306–307, 306f
+- Paint Texture tool, 126
+- painting
+    - influence of a joint, 308
+    - skin weights, 305–308
+    - texture, 77–78
+    - on top of the default image, 76
+- palm
+    - adding an extra loop around, 219, 219f
+    - refining, 218, 218f
+- pants, adding detail to, 228, 230f
+- parameters, of a class, 385
+- parent joint, 284, 294
+- Particle Animator component, moving to, 141
+- Particle Animator section
+    - Autodestruct option, 420
+- particle emitter system
+    - constructing steam, 487
+    - effects of, 143f
+    - finished, 144f
+    - second, 143f
+- particle shaders, for smoke, fire, and steam, 139
+- particle system
+    - attributes of, 137
+    - key components of, 138
+- Particle Texture area swatch, 141
+- particles
+    - cutting through polygons, 138
+    - doing damage (steam), 487–489
+    - in Unity, 137
+    - uses for, 137
+- parts, of another object, 280
+- patches, on Aegis Chun's outfit, 225
+- Pause button, pausing game play, 94
+- Per-Platform Settings, 502, 503f
+- persp view panel, 250f, 251
+    - Backface Culling, 25–33
+    - with X-Ray turned off, 292, 292f
+- Photoshop
+    - creating alpha channels, 141
+    - creating splash image, 504, 504f
+    - developing normal maps, 149, 149f
+    - image planes in, 182–183
+    - Nvidia's Plug-ins for, 150
+    - opening Bad actor texture in, 267
+    - pasting in details, 271, 273f
+    - resizing the image to 512x512, 68
+    - results of AO baking, 268f
+    - testing texture in, 71
+- physical barrier, providing to the player, 122
+- Physics, Runtime Class of, 384, 385f
+- PickUpKey function
+    - creating, 464
+    - firing, 466
+    - fleshing out, 466–467
+- pipes, spewing steam, 487
+- pistol
+    - creating another function to store, 450
+    - turning on when called, 456
+    - variable housing geometry, 454
+- pistol shot, 25, 110
+- pistol sparks, notes about, 419–420
+- PistolActive variable, declaring, 418
+- PistolReady, playing animation, 449
+- PistolSpark particle system, 420, 420f
+- PistolSparks prefab, 414, 419
+- pit, 34f
+    - lift, 178f
+- Picture, secured, 86f
+- PivotCenter toggle button, in Unity, 94
+- Pixel Inset section, of GUITexture component, 342
+- Pixel Inset X, dialing value up or down, 344
+- Pixel Offset options, 503
+- Pixel Offset Y, changing, 357
+- Place Trees tool, 126
+- placedMEP private variable, declaring, 429
+- placeholder, temporary, 137
+- Placement Extras section, of the imagePlane node, 208
+- Planar Mapping
+    - shooting texture across a surface, 51
+    - using, 51
+    - using to ensure entire object has UVs, 50–51, 51f
+- Planar Mapping Options window, 55
+- planar projection
+    - applying, 257
+    - creating, 253–254
+- Planar Projection manipulator
+    - handles, 55, 57f
+- Plane, creating, 137, 171
+- Play Automatically, turning off, 456
+- Play button
+    - in Animation window, 320
+    - playing the game, 94
+    - in the Toolbar, 106–107
+- Play on Awake option, turning off, 372
+- player
+    - creating things to hurt, 482
+    - creating punching for distance of, 500–501
+    - giving location for crosshairs, 388
+    - quitting the game, 494
+    - using a flashlight, 393
+- Player Settings
+    - accessing, 502
+    - options to adjust, 354
+    - preparing, 501–506
+- PlayerSounding window, 501, 502
+- Playing the game, 95
+- PlayOneShot function, 424
+- pockets, selecting polygons of, 247, 248f
+- point lights, 161–162, 161f
+- pointer finger, creating joints for, 293, 293f
+- poly mesh, generating, 212
+- polycount
+    - for a character, 182–232
+    - effective use of, 14–15
+    - as important, 182
+    - keeping a tight grasp on, 22–24
+    - knowing, 31
+    - taking stock of, 31
+    - varying, 14f
+- Polygon Cylinder Options box, 29
+- polygon rings, creating, 186–189, 186f
+- polygon modeling techniques, 15
+- polygons
+    - anatomy of, 11–14
+    - creating and tweaking, 186
+    - deleting along the bottom, 24
+    - describing roundness of the arm, 213
+    - deselecting in the view panel, 258
+    - extruding out, 187, 187f
+    - hunting and destroying five-sided, 235–236
+    - methods of assembling, 11–12
+    - more allowing more bending, 11
+    - shards of floating in texture space, 11
+- Polygons>Mesh>Booleans>Difference, choosing, 29
+- Polygons>Mesh>Combine, 27
+- Polygons>Normals>Reverse, 26
+- pouch
+    - completed, 249f
+    - mapping, 239–240, 248
+    - moving UVs off to the side, 248, 248f
+    - selecting polygons of, 247, 248f
+    - sewn up, 248f
+    - UV mapping, 247–250
+- power of two (POT), 40, 64–65
+- power switch
+    - highlighted, 393f
+    - mechanics of, 402f
+    - rotation of, 400
+- prebuilt assets, using, 132
+- predefined functions, in Unity, 338
+- Prefab, of the imported Maya .fbx, 101
+- Prefab Apply button, 412, 423
+- prefab connection
+    - causing loss of, 329–330, 329f
+    - losing, 329–330, 405
+- prefabs, 403–406
+    - applying changes to, 405, 405f, 457
+    - constructed from an imported model, 405
+    - customizing, 412
+    - keeping intact, 336
+    - moving into a scene, 104
+    - power of, 368, 406–413
+    - versus prefab connections, 404–406
+    - in Unity, 101
+- Preview pane, in inspector, 325
+- primitives, small collection in Unity, 137
+- private variables, 352, 369
+    - declaring, 429
+    - described, 492
+    - holding reference to the actual script, 447–448
+    - nesting all variables in, 363
+- problem area, in a scene placed in Unity, 112, 112f
+- production team, broken into two teams, 4
+- Profiler, 497, 497f
+- programming, compared to scripting, 334
+- progress bar, watching for, 100
+- project file
+    - folder in, 100, 100f
+    - importance of, 90

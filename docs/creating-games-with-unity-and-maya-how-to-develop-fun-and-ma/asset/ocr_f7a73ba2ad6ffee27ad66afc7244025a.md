@@ -1,0 +1,15 @@
+Luckily because of the Console and Unity's functionality, which allows you to play the game within their Editor environment, most big bugs in the code have been taken care of long before you even think of having someone else play your game. However, there are those design bugs—bugs that happen when a tool is used in a way that isn't intended—that also need to be squashed before the game is shipped to the general public.
+
+There are other reasons to get your game in other people's hands, or more specifically, on other people's computers. There is really tremendous variation in machines out there—not only Mac/Windows/Linux, but even within a given platform the hardware on which that platform is running can vary significantly, and how your game looks and plays also can vary significantly. We've had games that looked great on our development machines and then suddenly on the users' machines the trees on the terrains were fluorescent green. In other cases the real-time shadows were suddenly a checkerboard that was equally spread out all over the scene. None of these issues were present on the machines we built the projects on, but the experience was certainly other than intended for the player.
+
+Now to be fair, often these issues were fixed with a driver update (the player hadn't updated the driver on his video card for three years!), and one of the things Unity does really, really well is provide a very constant experience across platforms. The built-in shaders are smart and if the video card drawing them can't do some of the things the game is asking it to, the shaders will send other information so the game doesn't crash or look really terrible. However, there are always potential issues, so the more people and the greater variation of hardware and operating configurations that can test the game, the more troubles can be found and bugs can be squashed.
+
+# ## Optimization
+
+Optimization is really a process that happens all along the game creation process. We've already covered extensively the issues on the art side that can keep games running smoothly (low polygon count, effective textures, texture maps, combined meshes, etc.). Ideally, much of the optimization of a project is done during art production. It can be difficult to go back and reduce polygons in a model, so building efficiently to begin with helps a great deal.
+
+When trying to work out the mechanics of a game, it can be frustrating and not terribly productive to try and do a whole lot of optimizing (although knowing what kind of code is expensive and not using it in the first place can certainly help). But once the game is functional, taking a bit of time to optimize both art assets and script can ensure a smoother experience for playing the game.
+
+# ## Finding What Needs to Be Optimized
+
+There are several ways that Unity lets you see what's taking a lot of hardware resources. They all take some interpretation but can be very effective.
