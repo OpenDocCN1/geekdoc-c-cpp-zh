@@ -1,0 +1,11 @@
+# # ANDROID, MEDIA, AND THE CONTENTRESOLVER
+
+Android will, under certain conditions, search your SD card for new media by using a helper called the MediaScanner. When new media is found, it's added to Android's media ContentProvider. Using the columns defined in the MediaStore class, you can query the phone's built-in media library for content. The MediaScanner will read ID3 tags and any other metadata it can to acquire information about the device's content. Although this example and the photo lookup example from the previous chapter are pretty simple, the media store and Android's ContentResolver can be powerful if used correctly. Check the SDK documentation for these classes to get more information.
+
+As you can see, I'm still fetching and caching the video view, but now I'm issuing a query to Android's ContentProvider for the DATA column of all media rows that are videos. Specifically, you can see this in action in the highlighted code. That query is fairly simple in that I want all videos on the external drive (SD card), and I only care about the data column for all those rows. This column for any particular row should always contain the path to the actual media content on disk. It's this path that I'll eventually hand off to the VideoView for playback.
+
+Note that it is possible to pass URIs to the video view. The video playback mechanism will find the path to the object for you. I would, however, like to show you the harder way so that you'll be more informed. And if you later need to upload or manipulate a file directly, you'll know how to acquire it.
+
+The Cursor object (a class Android uses to wrap database query responses) can be null if the external media card is removed (or mounted into USB storage mode), so I'll need to check for a null cursor or one with no results before moving on. Typically in this case, I'd display a message to the user about their SD card being unavailable, but I'll leave that task up to your imagination.
+
+Last, I'll get and cache the column index for the data row. This will make it easier for my playNextVideo method to interact with the cursor's results.

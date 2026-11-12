@@ -1,0 +1,5 @@
+# # WRAPPING UP
+
+Throughout this chapter, you've come to understand the fundamental building blocks that make up Android's UI. While I haven't yet had time to show you any of these particular classes in much depth, together we've laid the groundwork for more serious chapters to come. In this way I can dive deep into text views (yes, we will) without worrying that you'll not know how to arrange them next to an image or make them respond to click events.
+
+This concludes the overview of displaying information to users. You should be comfortable building and changing basic user interfaces through Java and Android's XML layout system. If you didn't skip any sections, you'll also be able to extend existing built-in views to make Android do exactly your bidding. Next you'll take a break from drawing things on screens and look at how to acquire data for your pretty user interfaces.

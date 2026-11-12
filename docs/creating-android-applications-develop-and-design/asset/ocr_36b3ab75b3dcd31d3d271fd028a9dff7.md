@@ -1,0 +1,3 @@
++   - Missing SD card. You'll want to make sure your app handles a missing or removed SD card correctly. Users can mount their external cards as removable drives with the USB cable at any point. Android will alert you if you listen for the ACTION_MEDIA_REMOVED intent.
+
+This might seem like a lot of things to look out for (and it is), but never fear, the developers at Google have released an open source media player (which they ship with the Android source code) that can be a great guide for dealing with this stuff. As always, the documentation will have a lot on the subject as well.
