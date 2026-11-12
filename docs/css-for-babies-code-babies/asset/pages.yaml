@@ -1,0 +1,255 @@
+- pgno: 0
+  md: '# <style>
+
+
+    # CSS
+
+
+    # cascading style sheets
+
+
+    # for Babies™
+
+
+    Web Design for Babies™ Volume 02
+
+
+    # </style>'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# # CSS=Cascading Style Sheets
+
+
+    Styles define how to display HTML elements
+
+
+    CSS rules have two main parts: a selector and one or more declarations.
+
+
+    ```
+
+    selector       declaration       declaration
+
+    H1 { color: blue; background: green; }
+
+    property  value   property  value
+
+    ```
+
+
+    A declaration always ends with a semicolon and declaration groups are surrounded
+    by curly brackets.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '```
+
+    <link rel="stylesheet" type="text/css" href="hello again.css" />
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'body {backgr
+
+    url(''img_fu
+
+    no-repeat'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '```
+
+    ound:#00ccff
+
+    ```
+
+
+    ```
+
+    nny.png'')
+
+    ```
+
+
+    ```
+
+    right top;}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '```
+
+    p { font-s
+
+    margin-lef
+
+    a:link { colo
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '```
+
+    ize:11em;
+
+    t:105px;}
+
+    r:green;}}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '```
+
+    .center
+
+    ```
+
+
+    ```
+
+    { border: 1px
+
+    ```
+
+
+    ```
+
+    padding: 12
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '```
+
+    _div
+
+    x solid blue;
+
+    px 18px;}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '```
+
+    #navlist a
+
+    ```
+
+
+    ```
+
+    123px; displ
+
+    ```
+
+
+    ```
+
+    #home { wid
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '```
+
+    { height:
+
+    lay:block;}
+
+    dth:45px;}}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '```
+
+    img: ho
+
+    { opacity:
+
+    alpha (opac
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '```
+
+    ver
+
+    :1.0;filter:
+
+    city=100);}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# div.left
+
+
+    left: paddin
+
+
+    width: 45678'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '```
+
+    { float:
+
+    ng:123em
+
+    8910px;}
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# # It''s never too early to be standards compliant!
+
+
+    Show your little ones how to display HTML elements properly with CSS (Cascading
+    Style Sheets) and familiarize them with the visual patterns and symbols that make
+    up the essential building blocks of the web.
+
+
+    Lot #: 2 4 6 8 10 9 7 5 3 1 05/16
+
+
+    STERLING CHILDREN''S BOOKS and the distinctive Sterling Children''s Books logo
+    are trademarks of Sterling Publishing Co., Inc. Text and design © 2015 by John
+    C. Vanden-Heuvel Sr. First Sterling edition published in 2016. First published
+    in the UK by Weldon Owen, part of the Bonnier Publishing Group. Distributed in
+    Canada by Sterling Publishing Co./Canadian Manda Group, 646 Annette Street, Toronto,
+    Ontario, Canada M6S 2C8. All rights reserved.
+
+
+    STERLING CHILDREN''S BOOKS
+
+    New York
+
+
+    ISBN 978-1-4549-2156-1
+
+    9 781454 921561
+
+    Manufactured in China
+
+
+    *06-DYE-558*'
+  merge: -1
+  img_proc: true
