@@ -1,0 +1,15 @@
+# Preface
+
+# Are You at Crossroads?
+
+Are you tired of getting IT interviews but not offers? Are you confused between preparing for the different competitive exams? Are you dazed of the competition seen in the computer market? Are you feeling fuzzy about the future in the programming world? Are you desperate for a better software job, but can’t figure out what that is or how to get there?
+
+If you are under the awe of even any one of the above questions then you have perhaps taken the right decision -- of buying this book and preparing for the technical interview! I suggest that you consume the contents from the first chapter to the end, sequentially, and not attempt to skip any section or chapter unless you are confident of the topic that you would want to skip. This is because, this book has been *specifically* designed to *orient* you for the technical interview vis-à-vis the C++ programming language. This book has been prepared with a *definite* purpose. Please stay with the preface and read it to the end to understand *why*. After reading the preface you will most likely revise your prep strategy.
+
+# IT Job Landscape
+
+You should take heart if you see the plethora of job openings, and which is *growing*, in the IT and ITeS space. The scenario looks like this: NASSCOM, the premier trade body for the IT-BPM sector in India has given a press release that the Indian IT-BPM sector continues to be one of the largest employers in the country—directly employing nearly 3.5 million professionals, adding over 2,30,000 employees. They have also predicted that the future looks promising as the IT-BPM industry is gearing itself well to next phase of challenges. Digitization, disruptive technologies and innovation will fuel growth with new opportunities in the years ahead. They have also projected that the Indian IT industry would grow to about $300 billion by 2020, and create different verticals that would focus on specific areas such as the domestic IT market, software products and e-commerce which tells us there are and there will be more job openings in the IT sector.
+
+# Recruiter’s Perspective
+
+As a potential job hunter, your chances of success increases manifold if you understand what your recruiters are looking at. According to a new career builder survey, overwhelming majority of IT companies say soft skills such as a positive attitude are just as important as hard skills. Positivity comes from within when you are confident on your subjects. The top 10 traits employers seek out in candidates include hardworking, dependable, positive, self-motivated, team-oriented, organized, works well under pressure, effective communication, flexible and confident. If all of these can boil down into one thing, then it is subject matter expertise which will help you attain rest of all the things.
