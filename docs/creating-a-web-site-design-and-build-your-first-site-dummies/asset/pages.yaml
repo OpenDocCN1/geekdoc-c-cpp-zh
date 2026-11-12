@@ -1,0 +1,3033 @@
+- pgno: 0
+  md: "by the people who make the **dummies** books!  \n*A Wiley Brand*\n\nCLARK COUNTY\
+    \ PUBLIC LIBRARY  \n3 0022 04825 9962\n\n# # CREATING A\n# *Web Site*\n\n**Design\
+    \ and Build Your First Site!**\n\nGreg Rickaby  \n*Web Developer and Tech Geek*\n\
+    \n![](img/b129720fc9ac9e14546b8756740d362a_0_0.png)\n\n![](img/b129720fc9ac9e14546b8756740d362a_0_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '# Learn even more at Dummies.com®
+
+
+    Go to **www.dummies.com/go/creatingawebsite** to find:
+
+
+    +   - Links to the sites you need to access to complete the projects
+
+    +   - Articles on similar topics
+
+    +   - Links to information on other books created to teach tech topics to young
+    learners
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_1_0.png)
+
+
+    Always ask for permission from a parent when you’re downloading and installing
+    software on your home computer or signing up membership on an online service.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_1_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# CREATING A
+
+
+    # Web Site
+
+
+    by Greg Rickaby
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_2_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# # CREATING A WEB SITE
+
+
+    Published by: John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030-5774,
+    www.wiley.com
+
+
+    Copyright © 2017 by John Wiley & Sons, Inc., Hoboken, New Jersey
+
+
+    Media and software compilation copyright © 2017 by John Wiley & Sons, Inc. All
+    rights reserved.
+
+
+    Published simultaneously in Canada
+
+
+    No part of this publication may be reproduced, stored in a retrieval system or
+    transmitted in any form or by any means, electronic, mechanical, photocopying,
+    recording, scanning or otherwise, except as permitted under Sections 107 or 108
+    of the 1976 United States Copyright Act, without the prior written permission
+    of the Publisher. Requests to the Publisher for permission should be addressed
+    to the Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken,
+    NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at http://www.wiley.com/go/permissions.
+
+
+    Trademarks: Wiley, For Dummies, the Dummies Man logo, Dummies.com, Making Everything
+    Easier, and related trade dress are trademarks or registered trademarks of John
+    Wiley & Sons, Inc. and may not be used without written permission. All other trademarks
+    are the property of their respective owners. John Wiley & Sons, Inc. is not associated
+    with any product or vendor mentioned in this book.
+
+
+    LIMIT OF LIABILITY/DISCLAIMER OF WARRANTY: THE PUBLISHER AND THE AUTHOR MAKE NO
+    REPRESENTATIONS OR WARRANTIES WITH RESPECT TO THE ACCURACY OR COMPLETENESS OF
+    THE CONTENTS OF THIS WORK AND SPECIFICALLY DISCLAIM ALL WARRANTIES, INCLUDING
+    WITHOUT LIMITATION WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE. NO WARRANTY
+    MAY BE CREATED OR EXTENDED BY SALES OR PROMOTIONAL MATERIALS. THE ADVICE AND STRATEGIES
+    CONTAINED HEREIN MAY NOT BE SUITABLE FOR EVERY SITUATION. THIS WORK IS SOLD WITH
+    THE UNDERSTANDING THAT THE PUBLISHER IS NOT ENGAGED IN RENDERING LEGAL, ACCOUNTING,
+    OR OTHER PROFESSIONAL SERVICES. IF PROFESSIONAL ASSISTANCE IS REQUIRED, THE SERVICES
+    OF A COMPETENT PROFESSIONAL PERSON SHOULD BE SOUGHT. NEITHER THE PUBLISHER NOR
+    THE AUTHOR SHALL BE LIABLE FOR DAMAGES ARISING HEREFROM. THE FACT THAT AN ORGANIZATION
+    OR WEBSITE IS REFERRED TO IN THIS WORK AS A CITATION AND/OR A POTENTIAL SOURCE
+    OF FURTHER INFORMATION DOES NOT MEAN THAT THE AUTHOR OR THE PUBLISHER ENDORSES
+    THE INFORMATION THE ORGANIZATION OR WEBSITE MAY PROVIDE OR RECOMMENDATIONS IT
+    MAY MAKE. FURTHER, READERS SHOULD BE AWARE THAT INTERNET WEBSITES LISTED IN THIS
+    WORK MAY HAVE CHANGED OR DISAPPEARED BETWEEN WHEN THIS WORK WAS WRITTEN AND WHEN
+    IT IS READ.
+
+
+    For general information on our other products and services, please contact our
+    Customer Care Department within the U.S. at 877-762-2974, outside the U.S. at
+    317-572-3993, or fax 317-572-4002. For technical support, please visit https://hub.wiley.com/community/support/dummies.
+
+
+    Wiley publishes in a variety of print and electronic formats and by print-on-demand.
+    Some material included with standard print versions of this book may not be included
+    in e-books or in print-on-demand. If this book refers to media such as a CD or
+    DVD that is not included in the version you purchased, you may download this material
+    at http://booksupport.wiley.com. For more information about Wiley products, visit
+    www.wiley.com.
+
+
+    Library of Congress Control Number is available from the publisher
+
+
+    ISBN 978-1-119-37651-4 (pbk); ISBN 978-1-119-37655-2 (ebk); ISBN 978-1-119-37653-8
+    (ebk)
+
+
+    Manufactured in the United States of America
+
+
+    10 9 8 7 6 5 4 3 2 1'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# CONTENTS
+
+
+    +   - **INTRODUCTION** 2
+
+
+    +     - About This Book 2
+
+
+    +     - A Word About Copyright 3
+
+
+    +     - About You 3
+
+
+    +     - About the Icons 4
+
+
+    +     - Further Reading 4
+
+
+    +   - **PROJECT 1: CHOOSE A TOPIC** 5
+
+
+    +     - Build a Word Cloud 5
+
+
+    +     - Look at Similar Web sites 6
+
+
+    +       - How to be safe while surfing the web 7
+
+
+    +       - How to search with Google.com 8
+
+
+    +       - How to search using SimilarSites.com 9
+
+
+    +       - Search offline 11
+
+
+    +     - Eliminate Weak Ideas 11
+
+
+    +     - Decide Whom You Want to Talk To 12
+
+
+    +   - **PROJECT 2: CREATE A SITE MAP** 13
+
+
+    +     - Decide How You Want to Lay Out Your Content 13
+
+
+    +     - Create a Site Map with Google Drawings 14
+
+
+    +       - Create a new Google Drawings document 14
+
+
+    +       - Draw your first content bubble in Google Drawings 16
+
+
+    +       - Create additional content bubbles 18
+
+
+    +     - Draw a Site Map Using a Pencil and Paper 21'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# # PROJECT 3: CREATE A WIREFRAME — 23
+
+
+    +   - What Is a Wireframe? — 23
+
+    +   - The Basics: What You Need to Know to Get Started — 24
+
+    +   - Create a Low-Fidelity Wireframe — 25
+
+    +     - Place the logo. — 26
+
+    +     - Create the navigation menu — 28
+
+    +     - Add your main content. — 29
+
+    +     - Create a sidebar and sidebar widgets — 30
+
+    +     - Create a footer — 31
+
+    +     - Your finished wireframe — 31
+
+
+    # # PROJECT 4: CREATE A STYLE GUIDE — 32
+
+
+    +   - What is a Style Guide? — 32
+
+    +   - Create a Style Guide with Frontify — 33
+
+    +     - Create an account with Frontify — 33
+
+    +     - Create a brand with Frontify — 35
+
+    +   - Learn about Color Codes — 38
+
+    +     - HEX codes — 38
+
+    +     - Discover color combinations with ColorHexa — 38
+
+    +     - Pick three colors to use in your web site — 39
+
+    +     - Add a color palette to Frontify — 42
+
+    +     - Find a font with Google Fonts. — 46
+
+    +     - Add your font to Frontify — 48
+
+    +     - Finding and using media from the web — 50
+
+    +     - Using VisualHunt to find free stock photos — 50
+
+    +     - Add photos to Frontify — 53
+
+
+    # # PROJECT 5: MAKE YOUR DESIGN COME TO LIFE — 51
+
+
+    +   - Setting Up Your Coding Environment — 57
+
+    +     - Create your Google folder — 57
+
+    +     - Add coding apps to Google Drive — 59'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '+   - Coding Your Home Page ........................................ 66
+
+
+    +   - The HTML structure ........................................... 67
+
+
+    +   - Add text to your web site .................................. 69
+
+
+    +   - Adding more structure to your web site .................... 70
+
+
+    +   - Add style attributes to your web site ..................... 72
+
+
+    +   - Adding pictures to your web site .......................... 78
+
+
+    +   - Adding More Pages to Your Web site ........................ 85
+
+
+    # PROJECT 6: MAKE YOUR WEB SITE LOOK GREAT .................... 93
+
+
+    +   - Getting Google Drive Ready ................................ 94
+
+
+    +   - Make your Google Drive folder public ....................... 95
+
+
+    +   - Add the CSS Edity app to Google Drive ...................... 96
+
+
+    +   - Creating a CSS File for Style ............................. 98
+
+
+    +   - Create a CSS file .......................................... 99
+
+
+    +   - Move your style code to your CSS file ..................... 100
+
+
+    +   - Link your CSS file to your HTML file ...................... 102
+
+
+    +   - Test your changes ......................................... 105
+
+
+    +   - Styling Your Web site ..................................... 106
+
+
+    +   - Decide where to put the background colors .................. 106
+
+
+    +   - Change the font color ..................................... 107
+
+
+    +   - Format your page .......................................... 108
+
+
+    +   - Stylize your links ........................................ 113
+
+
+    +   - Change your background .................................... 116
+
+
+    +   - Add Your Content ........................................... 118
+
+
+    +   - Add content and widgets to your home page .................. 118
+
+
+    +   - Change your footer text ................................... 119
+
+
+    +   - Add content to your other pages ........................... 120
+
+
+    +   - Share with Your Friends ................................... 120'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '# A WORD ABOUT COPYRIGHT
+
+
+    What is copyright? It means that someone has created a “thing” and only that person
+    is allowed to use that “thing” unless the person gives permission to someone else
+    who asked for it.
+
+
+    Luckily there are people and organizations who enjoy sharing their work. Photographs
+    that are allowed to be shared (or redistributed) are usually licensed under the
+    *Creative Commons Zero* (https://creativecommons.org/).
+
+
+    Some computer and web software is free under a license called “General Public
+    License” (or GPL for short). This software is called “open source,” meaning that
+    anyone can use or manipulate the source code any way he or she wants.
+
+
+    Copyright and intellectual property law is a serious issue and there are legal
+    consequences for using other people’s work without their permission. I encourage
+    you to read more about copyright on Wikipedia (https://en.wikipedia.org/wiki/Copyright).
+    I also ask that if you use a photo, video, or text from another web site, you
+    list your sources (just be sure you are allowed borrow this content!) either in
+    the footer or on a special page on your web site. If you have any questions about
+    copyright, ask an adult to help you find out more.
+
+
+    # ABOUT YOU
+
+
+    Every junior webmaster needs to start somewhere, but this book assumes that you
+    have the ability to
+
+
+    +   - Type on a computer, use a mouse, and follow directions.
+
+    +   - Have an email address and Google account. Several of the projects in this
+    book require you to sign up for a (free) account to access services and tools.
+    Please get an adult’s permission first!
+
+    +   - Not be afraid to fail. Nobody is perfect, and not a single person became
+    a web professional without first making lots (of) mistakes.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Finally, spelling and formatting is important. Computers are really powerful,
+    but they are actually pretty dumb and very picky about how their instructions
+    are written. If a computer can''t understand a command, it won''t know what to
+    do and nothing will happen. You may need to spend some extra time working through
+    spelling and formatting errors.
+
+
+    # ## ABOUT THE ICONS
+
+
+    As you read through the projects in this book, you''ll see a few icons. The icons
+    point out different things:
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_9_0.png)
+
+
+    *This icon points out tips that can make your projects run more smoothly.*
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_9_1.png)
+
+
+    *This icon alerts you to information that you''ll want to remember.*
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_9_2.png)
+
+
+    *This icon marks important information that you can use to avoid common pitfalls
+    when coding.*
+
+
+    # ## FURTHER READING
+
+
+    Some of the concepts for writing code are covered in another book written for
+    kids like you: Getting Started with Coding, by Camilla McCue, and Writing Computer
+    Code, by Chris Minnick and Eva Holland.
+
+
+    You are going to be learning a lot about Google Drive, programming languages,
+    and being creative. I recommend that you seek help from online tutorials, YouTube
+    videos, and web sites such as www.w3schools.com or thewecan.zone/website-building
+    any time you get stuck. And don''t ever be afraid to ask for help from a parent
+    or friend! The best webmasters are ones who talk with other people.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# # PROJECT 1 CHOOSE A TOPIC
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_10_0.png)
+
+
+    **FINDING A SINGLE TOPIC OR IDEA FOR YOUR WEB SITE TO FOCUS ON CAN BE DIFFICULT.**
+    In fact, it can be the single most difficult part of building a web site. Inspiration
+    is a funny thing; it can come from anywhere and nowhere! Sometimes coming up with
+    a topic can take days or weeks.
+
+
+    Don''t be discouraged if you can''t choose something quickly. You don''t want
+    to create a web site about a topic that really doesn''t interest you, only to
+    then feel that you have to stick with it. To help you avoid that situation, here
+    are some techniques to focus your energy on just one topic.
+
+
+    # ## BUILD A WORD CLOUD
+
+
+    Grab a pencil and notepad and start writing down your favorite things to do. If
+    you''re really into Pokémon, go ahead and write that down. If you enjoy studying
+    dinosaurs, write that down, too.
+
+
+    Do you participate in extracurricular activities such as karate class, ballet,
+    or soccer, or maybe you can play an instrument? Having experience with a particular
+    topic provides a solid foundation that makes creating fun and engaging content
+    easier.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# HOW TO SEARCH WITH GOOGLE.COM
+
+
+    Follow these steps to perform a search on Google:
+
+
+    +   1. **Open a web browser.**
+
+
+    A web browser is an application that lets you search the Internet and visit web
+    sites. Common web browsers are Microsoft Edge, Google Chrome, Mozilla Firefox,
+    and Safari. Which one do you use on your computer?
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_13_0.png)
+
+
+    +   2. **In the address bar, type** `https://google.com/` **and then press** **Enter**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_13_1.png)
+
+
+    A search box appears near the middle of the Google home page.
+
+
+    +   3. **Type search words in the search box.**
+
+
+    If you wanted to write a web site about dinosaurs, you could type **dinosaurs**
+    in this box. Google automatically performs a search and displays results immediately.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_14_0.png)
+
+
+    **4** Click the blue-colored links to view the web site.
+
+
+    > *While you are looking at other web sites for inspiration, pay close attention
+    to their layout, the colors, photos, and content. You might just stumble upon
+    something that you might want to use on your web site. Think about how could you
+    do it similarly — but without copying that web site.*
+
+
+    # HOW TO SEARCH USING SIMILARSITES.COM
+
+
+    Another great resource for finding topics is a web site service called Similar
+    Sites. Much like Google, it is a search engine that helps you find web sites that
+    contain similar information.
+
+
+    +   **1** Open a web browser.
+
+
+    By now, you should know how to open a web browser and enter web addresses. If
+    you still need help from an adult, don’t worry! It just takes a little practice.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '+   2. In the address bar, type http://similarsites.com/ and then press Enter.
+
+
+    In the middle of the home page, you see a **large search box**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_15_0.png)
+
+
+    +   3. In the **search box**, type the topic or idea (such as dinosaurs) and press
+    Enter.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_15_1.png)
+
+
+    You see a list of web sites. Click the results to view the web site.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '# # PROJECT 1 CHOOSE A TOPIC
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_17_0.png)
+
+
+    # ## DECIDE WHOM YOU WANT TO TALK TO
+
+
+    Almost as important as the topic is deciding whom you want to reach as an audience.
+    Do you want to create a web site for your family? Maybe classmates or teammates?
+    If you''re writing content about dinosaurs for your classmates, think about how
+    you would explain information to them in person.
+
+
+    Talking to your friends about your topic can really help you narrow down your
+    ideas. It can also help you come up with some of your content!
+
+
+    If your topic interests only you, it is probably not worth writing about. A good
+    web site keeps the reader in mind at all times. This often means choosing topics
+    that haven''t been written about too much, and maybe choosing a more current topic.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_17_1.png)
+
+
+    > Don''t be afraid to ask an adult for help with ideas. Chances are, an adult
+    you''re close to has had to find a topic for a school or college essay. I''m sure
+    that an adult in your life would love to help you figure out your topic.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# # PROJECT 2 CREATE A SITE MAP
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_18_0.png)
+
+
+    **WHAT EXACTLY IS A SITE MAP?** Just as a regular ol'' map will help you find
+    your way, a site map helps search engines, like Google, find their way around
+    your web site. A site map can also be a document for displaying a list of pages
+    in a web site. In this project, you will learn how to create a site map, which
+    will help you think about how you want to structure your content.
+
+
+    # ## DECIDE HOW YOU WANT TO LAY OUT YOUR CONTENT
+
+
+    Now that you have a topic, it''s time to focus on how you want to lay it out.
+    Web sites all have a home page, which is a great place to start your site map.
+    For example, if you are creating a web site about dinosaurs, here are some pages
+    and sections you might see:
+
+
+    +   - Home Page
+
+    +     - Dinosaur Timeline
+
+    +       - Jurassic Area
+
+    +       - Triassic Area'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '+   - Dinosaur Types
+
+    +     - Carnivore
+
+    +     - Herbivore
+
+    +     - Omnivore
+
+    +   - Dinosaur Names
+
+    +     - Stegosaurus
+
+    +     - Tyrannosaurus
+
+
+    Knowing how you want this content laid out before you start on the actual pages
+    will really help!
+
+
+    # CREATE A SITE MAP WITH GOOGLE DRAWINGS
+
+
+    In the Introduction, I mention that you need to have a Google account. If you
+    don''t have an account, grab an adult to help you log in to Google to create one.
+    (By law, you must be at least 13 years old to create any online account.)
+
+
+    > TIP: If you can''t use Google Drawings, follow along anyway. You can apply the
+    same concepts by using a pencil and paper.
+
+
+    # CREATE A NEW GOOGLE DRAWINGS DOCUMENT
+
+
+    +   1. Open a web browser.
+
+    +   2. In the address bar, type https://docs.google.com/drawings/ and press Enter.
+
+
+    If you''re logged in to Google, you should see a screen similar to the one in
+    the following figure.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_20_0.png)
+
+
+    +   3. In the top left, click the words *Untitled drawing*.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_20_1.png)
+
+
+    +   4. Type **a name for your drawing** and press Enter to save the title.
+
+
+    For this example, I name the drawing Dinosaur Website Site Map.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_20_2.png)
+
+
+    Now you can start choosing how to lay out content bubbles. To do so, you need
+    the topic you came up with in Project 1.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '+   3. The area below the toolbar (with the gray- and white-shaded boxes) is
+    called the canvas. Place your mouse cursor **near the top and middle of the canvas**.
+    Click and hold down your mouse button and move to the right to **draw a shape**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_22_0.png)
+
+
+    +   4. Double-click the shape again to activate the Text tool.
+
+
+    +   5. Type **Home Page** and then click anywhere in the canvas to save.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_22_1.png)
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_22_2.png)
+
+
+    > > The home page is always the parent page. Additional pages are called child
+    pages. Any additional pages below a child page are called grandchild pages. When
+    you assemble your pages in this order, you''re putting them in a hierarchy (a
+    rank), with the most important pages at the top.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '# # PROJECT 2 CREATE A SITE MAP
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_25_0.png)
+
+
+    Great! Now you have a basic site map that contains pages in the order of parent,
+    child, and grandchild (hierarchical) order.
+
+
+    Continue to repeat Steps 1–6 for each page you want to create for your topic.
+    When you finish, you might have a site map that looks similar to the following:
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_25_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: "Be patient! It may take a little while to get everything just right, but when\
+    \ you're done, you'll have a clear direction on how your content should be displayed.\
+    \ This process helps you stay focused when you work through the other projects\
+    \ in this book.\n\n# ## DRAW A SITE MAP USING A PENCIL AND PAPER\n\nDrawing a\
+    \ site map on paper rather than in Google Drawings is perfectly okay, too! In\
+    \ fact, you might find it easier to draw it out on paper first and then make a\
+    \ digital copy for easy reference later.\n\n+   1. Find a blank piece of paper\
+    \ and a pencil.\n+   2. Turn the paper sideways.\n+   3. At the top, write the\
+    \ name of your web site.\n+   \n+      *For this project's example, it's Dinosaur\
+    \ Website Site Map.*\n+   4. Draw a rectangular content bubble shape near the\
+    \ top and in the middle.\n+   5. Write **Home Page** in the middle of the content\
+    \ bubble.\n+   6. Draw another content bubble directly below, leaving just enough\
+    \ space to draw a straight line.\n+   7. Write the name of your first child page.\n\
+    +   \n+      *For this project's example, one is Types of Dinos.*\n+   8. Draw\
+    \ a line from the Home Page bubble to the child page bubble."
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Awesome! You''ve certainly got the idea now! Repeat Steps 4–8 until you''ve
+    drawn content bubbles for each of your pages.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_27_0.png)
+
+
+    By now, you should have a completed site map.
+
+
+    You will need to reference this site map later on, so make sure to keep it handy.
+    You can use a hand-drawn copy, a printed one, or a copy that you keep open in
+    a browser tab from Google Drawings. Now that you have a site map, you are ready
+    for Project 3! Excellent!'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# # PROJECT 3: CREATE A WIREFRAME
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_28_0.png)
+
+
+    ***YOU KNOW YOUR FINISHED WEB SITE IS GOING TO LOOK GREAT.*** *After all, with
+    all your exciting graphics and videos, why wouldn''t it? To make sure that your
+    web site lives up to your dreams and has room for all your content, you need to
+    have a plan. In this project, you figure out the initial layout for your web site.*
+
+
+    # ## *WHAT IS A WIREFRAME?*
+
+
+    *A wireframe is like a blueprint for a web site. It helps you figure out just
+    where to put all your content, graphics, videos, and other elements on a page.*'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: 'Usually, wireframes are presented in two formats:
+
+
+    +   - **Low-fidelity:** These wireframes are just rough sketches or doodles.
+
+    +   - **High-fidelity:** These wireframes can represent the final design, showing
+    each section in greater detail.
+
+
+    Typically, a web site has a header, body, sidebar, and footer. The layout of a
+    web site, of course, can be anything the web site creator wants it to be, but
+    most people who look at web sites have come to expect content to be laid out as
+    shown in the figure.
+
+
+    When you create your wireframe, you may want to model this layout.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_29_0.png)
+
+
+    # ## THE BASICS: WHAT YOU NEED TO KNOW TO GET STARTED
+
+
+    Before you dive in and create your web site, sketch a drawing of how you want
+    your web site to look.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'You can draw your wireframe on paper or make one using your favorite drawing
+    app, such as Google Drawings.
+
+
+    Of course, the one shown here is just an example. You can draw your wireframe
+    any way you want. Be as creative as you like!
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_30_0.png)
+
+
+    > > *No matter how you decide to create your low-fidelity wireframe, keep in mind
+    that you''re using straight lines and basic drawings for photos and videos. The
+    goal is to imagine what your web site layout might be.*
+
+
+    Right now, focus on where the logo, menu, body content, and footer are going to
+    go. Don''t be afraid to scratch stuff out and start over. You don''t need to worry
+    about colors or fonts in this project!
+
+
+    # ## CREATE A LOW-FIDELITY WIREFRAME
+
+
+    In Project 2, you learn how to make a site map with Google Drawings. In this project,
+    you use the same tool to create your first wireframe.'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'If you don''t have access to Google Drawings, you can still follow along. Just
+    grab a pencil and paper and do each step on paper instead of the computer.
+
+
+    > > It''s okay if the wireframe doesn''t look much like a web site. The goal is
+    to simply get your ideas sketched out and then improve on them!
+
+
+    For this project, you need to have your site map from Project 2. Open the site
+    map in your web browser, or print it. (Go back to Project 2 and create a site
+    map, if you haven''t already.)
+
+
+    # ### PLACE THE LOGO
+
+
+    With your site map handy, follow these steps to create a low-fidelity wireframe:
+
+
+    +   1. On your web browser, go to https://docs.google.com/drawings and open Google
+    Drawings.
+
+
+    +   2. For the logo, draw a rectangle.
+
+
+    You can draw a rectangle by clicking the **Shape tool** icon, choosing **Shapes**,
+    and then selecting **Rectangle**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_31_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '+   3. Place the rectangle near the **top left of the screen**.
+
+
+    You can place this logo anywhere you''d like, but most web sites put their logo
+    in the top-left area, which is called the header.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_32_0.png)
+
+
+    +   4. Double-click the center of your logo rectangle.
+
+
+    The text tool appears.
+
+
+    +   5. Type Logo.
+
+
+    +   6. Finish by clicking off to the left **in the blank space**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_32_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# # CREATE THE NAVIGATION MENU
+
+
+    Most web sites put their navigation menu near the top of the wireframe as well.
+    You could place navigation next to the logo or below it.
+
+
+    To create the navigation menu:
+
+
+    +   1. **Draw a smaller rectangle** and place it near the middle of the header.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_33_0.png)
+
+
+    +   2. **Duplicate this menu item a few times and place these rectangles next
+    to each other.** In the menu bar, click Edit and then click Duplicate.
+
+
+    > > *Using keyboard shortcuts and hotkeys is an essential skill for people who
+    work with computers. If you''re interested in programming, try to use keyboard
+    shortcuts whenever possible!*
+
+
+    (You can quickly duplicate this menu item by pressing Ctrl+D in Windows or ⌘-D
+    on a Mac.)
+
+
+    +   3. Add some **placeholder text,** such as Menu Item.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_33_1.png)
+
+
+    That should do it for the header area.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: '# # 莫比乌斯反演
+
+
+    设 $f(n)$ 与 $g(n)$ 是定义在正整数集合上的函数，$\mu(n)$ 为莫比乌斯函数。
+
+
+    莫比乌斯函数 $\mu(n)$ 定义为：当 $n$ 有平方因子时 $\mu(n)=0$；当 $n$ 是 $k$ 个不同素数的乘积时 $\mu(n)=(-1)^k$；特别地，$\mu(1)=1$。
+
+
+    > > **定理（莫比乌斯反演公式）** 若 $g(n)=\sum_{d\mid n} f(d)$，则 $$f(n)=\sum_{d\mid n} \mu(d)\,
+    g\left(\frac{n}{d}\right).$$
+
+
+    **证明：** 根据 $g$ 的定义并交换求和次序，
+
+    $$
+
+    \sum_{d\mid n}\mu(d)g\left(\frac{n}{d}\right)
+
+    =\sum_{d\mid n}\mu(d)\sum_{e\mid (n/d)} f(e)
+
+    =\sum_{e\mid n} f(e)\sum_{d\mid (n/e)}\mu(d).
+
+    $$
+
+    由于 $\sum_{d\mid m}\mu(d)=0$ 当 $m>1$，且等于 $1$ 当 $m=1$，故右边等于 $f(n)$。
+
+
+    推论：若 $f(n)=\sum_{n\mid m} g(m)$，则 $g(n)=\sum_{n\mid m}\mu\left(\frac{m}{n}\right)f(m)$。'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_36_0.png)
+
+
+    # # CREATE A FOOTER
+
+
+    After you have all your widgets in place, you can add the final section, the footer:
+
+
+    +   1. Draw a long and wide rectangle to cover the bottom of the screen.
+
+    +   2. Add the word Footer to the rectangle.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_36_1.png)
+
+
+    # # YOUR FINISHED WIREFRAME
+
+
+    Great! You''ve assembled all the pieces of your first wireframe. You should have
+    something that matches the very first figure in this project.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: 'For example, a style guide can include a logo, along with instructions about
+    how someone can or cannot use that logo. It can also include a list of colors
+    and maybe fonts that are okay to use with that logo. Style guides help you make
+    your web site pages look like they belong together.
+
+
+    # ## CREATE A STYLE GUIDE WITH FRONTIFY
+
+
+    You use a site map to plan the layout of your web site. Likewise, a style guide
+    acts as a road map for your web site''s look and feel. For this project, you create
+    a basic style guide using a free service called Frontify. To use Frontify, you
+    need to set up an account.
+
+
+    # ### CREATE AN ACCOUNT WITH FRONTIFY
+
+
+    +   1. Open a web browser.
+
+    +   2. In the address bar, type [https://frontify.com/](https://frontify.com/)
+    and press Enter.
+
+    +   3. Near the top right of the page, you should see a **button** that reads
+    **Sign Up.**
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_38_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: '+   4. **Click the Sign Up button.**
+
+
+    You should see a **Sign-Up form** in the middle of your screen.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_39_0.png)
+
+
+    +   5. **With an adult''s permission, type your name, email address, and a password.**
+
+
+    +   6. **Click the Sign Up button to continue.**
+
+
+    Great job! You have created an account and are ready to create your very first
+    style guide.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_39_1.png)
+
+
+    > > *Sometimes when you sign up for Frontify, the web site asks you to fill out
+    a survey. If a survey pops up, **fill it out** like this:*'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_40_0.png)
+
+
+    # CREATE A BRAND WITH FRONTIFY
+
+
+    After you create an account in Frontify, the next step is to create your style
+    guide. Frontify uses the word *brand* as its name for a style guide.
+
+
+    +   1. Right after you register your account, you should see a small window that
+    asks you to create a brand.
+
+    +   2. Type the name of your web site in the **Brand or Company Name** field.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_40_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: "# PROJECT 4 CREATE A STYLE GUIDE\n\n+   **3** Leave the Brand Icon as the house\
+    \ and the Brand Color as blue; you can change it later.\n+   \n+   For this example,\
+    \ I enter Dinosaur Web site.\n+   \n+   **4** Click Continue.\n+   \n+   A screen\
+    \ appears that asks whether you want to create a style guide from scratch or from\
+    \ a template. You can also set a title.\n+   \n+   **5** Choose Template.\n+ \
+    \  \n+   **6** Select Basic Style Guide.\n\n![](img/b129720fc9ac9e14546b8756740d362a_41_0.png)\n\
+    \n> **WHAT'S A TEMPLATE?**\n> \n> A template is an empty guide to give you a head\
+    \ start on creating your style guide. You will see that when you choose to start\
+    \ with a template, the web site will guide you through first adding a logo, and\
+    \ then adding the basic colors If you start with a blank style guide, you can\
+    \ add anything you want in any order. Sometimes it is helpful to use a template\
+    \ because then you don't have to remember everything and can instead just fill\
+    \ in the blanks!"
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_42_0.png)
+
+
+    +   1. On the same screen, click the **Create Style Guide** button.
+
+
+    Fontify takes you to your brand dashboard.
+
+
+    Don’t worry about creating a logo at this point. You don’t need a logo because
+    you can use text in your web site header. To skip the logo, click **Basics Colors**
+    at the bottom of the screen.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_42_1.png)
+
+
+    Next, you focus on learning about colors and fonts.'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: '# LEARN ABOUT COLOR CODES
+
+
+    As you know, people all over the world speak and write to each other in many different
+    languages. You probably also know that computers use languages as well, although
+    they’re not the same as human languages. To create a web site, you will have to
+    learn code (words from a computer language), and specifically web color codes.
+
+
+    # HEX CODES
+
+
+    Web color codes can be written a lot of different ways; the most common way is
+    using HEX codes. A HEX code can be a combination of letters and numbers with either
+    three or six characters. Here are some examples of HEX codes and the color they
+    stand for:
+
+
+    | HEX code | Color |
+
+    |---|---|
+
+    | `#ff0000` | Red |
+
+    | `#fff` | White |
+
+    | `#000` | Black |
+
+    | `#ffff00` | Yellow |
+
+
+    Using a HEX code, you can create any one of more than 16 million colors! Cool,
+    huh?
+
+
+    Thankfully, you don’t need to remember all 16 million HEX codes because there
+    is a tool that gives you the HEX code for the colors you want. The tool is called
+    ColorHexa.
+
+
+    # DISCOVER COLOR COMBINATIONS WITH COLORHEXA
+
+
+    Picking color schemes is a very important step in creating a web site. Color combinations
+    affect how people feel about your site. Using tools like ColorHexa (http://www.colorhexa.com/)
+    can make the process of building a color scheme very easy.'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '+   3. Click the first color listed in the drop-down list that appears.
+
+
+    ColorHexa takes you to a page containing all the different codes for your Primary
+    Color. The **HEX code** for your **Primary Color** appears at the very top of
+    the screen, below the word ColorHexa.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_45_0.png)
+
+
+    +   4. Write down the **HEX code** on a piece of paper so that you can use it
+    later. It''s also a good idea to write down what your **Primary Color** is.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_45_1.png)
+
+
+    +   5. Scroll down and you can see all the different ways that your Primary Color
+    can be represented. In **HEX code**, yellow is **ffff00**, but in **Binary code**,
+    yellow is represented as **11111111, 11111111, 00000000**. HEX code is much easier
+    to work with because it''s so much shorter!
+
+
+    # ### ffff00 Color Conversion
+
+
+    The hexadecimal color #ffff00 has RGB values of R: 255, G: 255, B: 0 and CMYK
+    values of C:0, M:0, Y:1, K:0. Its decimal value is 16776960.
+
+
+    | Property | Value | Property | Value |
+
+    |---|---|---|---|
+
+    | Hex triplet | #FFFF00 | CIE-LAB | 97.139, -21.556, 94.478 |
+
+    | RGB Decimal | 255,255,0 | XYZ | 0.9505, 1, 0.1089 |
+
+    | RGB Percent | 100,100,0 | Yxy | 0.9703, 1, 0.1089 |
+
+    | CMY | 0,0,1 | CIE-LCH | 97.139, 96.798, 102.853 |
+
+    | CMYK | 0,0,100,0 | CIE-LUV | 97.139, 7.572, 106.??? |
+
+    | HSL | 60°,100,50 | Hunter-Lab | 96.???, -30.???, 96.??? |
+
+    | HSV (or HSB) | 60°,100,100 | Binary | 11111111,11111111,00000000 |
+
+    | Web Safe | ffff00 |  |  |'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '6 Keep scrolling down with the mouse until you see **Color Schemes with** (followed
+    by your Primary Color''s HEX code).
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_46_0.png)
+
+
+    7 Hover over the **complementary color** on the right with your mouse until you
+    see a HEX code appear. This complementary color is called the Secondary Color.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_46_1.png)
+
+
+    8 Write down the Secondary Color and its HEX code on your paper as well.'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: '+   9. Move your mouse cursor and hover over the first Analogous Color to the
+    left of your Primary Color. That color is called the Tertiary Color.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_47_0.png)
+
+
+    +   10. Write down the Tertiary Color and its HEX code on your paper.
+
+
+    Awesome! That was an important step toward creating a web site. Now you can put
+    those colors into your style guide.
+
+
+    # ## ADD A COLOR PALETTE TO FRONTIFY
+
+
+    By now, you have three colors for your web site and their HEX codes. You''re ready
+    to build a color palette in Frontify! A color palette is simply a place where
+    you show a little bit of each color that will be in your web site.
+
+
+    +   1. Back in Frontify, you should see the Color page.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_47_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '+   2. If you closed your Frontify browser tab, open your web browser, type
+    [https://frontify.com/](https://frontify.com/), and press the Enter key.
+
+
+    +   3. Click the **Login** button near the top right.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_48_0.png)
+
+
+    +   4. You will see the Frontify brand dashboard. Click your **brand tile**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_48_1.png)
+
+
+    +   5. On the left side of the screen, click the link to **Colors**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_48_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '6 In the top-right corner, click **Edit**, and you will see the page in Step
+    1.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_49_0.png)
+
+
+    This turns on the Frontify editor, which lets you add the **colors** that you
+    chose on ColorHexa and finish making your style guide.
+
+
+    7 Scroll down with your mouse and look for the grayed-out section called **New
+    Color Palette**, which has **four grayed-out circles** in it.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_49_1.png)
+
+
+    8 Look for the **input field** underneath the four grayed-out circles, like the
+    one shown with this step. It will have some example color HEX codes in it. This
+    is where you'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'enter the color HEX codes that you wrote down from ColorHexa. (If the input
+    field isn''t showing, go back up and click the Edit button again.)
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_50_0.png)
+
+
+    +   9. Type the **color HEX code** for your Primary Color into the input field.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_50_1.png)
+
+
+    +   10. Press the Enter key to save your work, and you will see your Primary Color
+    fill in the grayed-out circle above the input field.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_50_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: "Google Fonts is a free resource that allows users to choose and freely use\
+    \ different fonts on their web sites. Google Fonts has even taken the hard work\
+    \ out of font pairing. You can easily see a popular font combination and even\
+    \ see contrast between headlines and paragraph text.\n\n![](img/b129720fc9ac9e14546b8756740d362a_52_0.png)\n\
+    \n> > *Google Fonts isn't the only option for viewing free fonts. You can also\
+    \ look at the Open Font Library at https://openfontlibrary.org/ or FontSquirrel\
+    \ https://fontsquirrel.com/.*\n\nThe following process of finding fonts in Google\
+    \ Fonts can take a little time. Don't be afraid to look through a few different\
+    \ fonts.\n\n+   1. Open your web browser, type https://fonts.google.com/, and\
+    \ press Enter.\n+   2. Scroll down. Look for an appealing font.\n+   \n+     \
+    \ This step is up to you. You can choose any font you like! I choose Open Sans.\n\
+    +   \n+   3. After you have found a font you like, click the font's name in the\
+    \ upper-left corner of its area on the screen. You are taken to the font's information\
+    \ page, where you can see a specimen of that font — that is, what it looks like.\n\
+    \nThis figure shows two fonts: one for the heading and one for the paragraph.\
+    \ You can play around with choosing fonts that go well together! For this book,\
+    \ you concentrate on choosing one.\n\n![](img/b129720fc9ac9e14546b8756740d362a_52_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_54_0.png)
+
+
+    +   4. Click Typography and you should see the screen in Step 1.
+
+    +   5. There is a search bar with different tabs, and the one that is already
+    clicked is the Google tab. Type your font into the search bar and select the style
+    you want from the list that appears.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_54_1.png)
+
+
+    Awesome! You''ve successfully added your font to Frontify. If you scroll down,
+    you should see your font in a few different styles, like *italics* and **bold**.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: 'Just as the colors you chose in the previous section are in your style guide,
+    now the font is part of your style guide as well. At the end of this project,
+    when you’re done with your style guide, you will use it as a guideline for actually
+    making your web site!
+
+
+    # ## FINDING AND USING MEDIA FROM THE WEB
+
+
+    Creating your own media can be fun, but sometimes drawing a lifelike image of
+    a T-rex, well, it just doesn’t make sense. Instead you could search for and use
+    an image that someone else drew or photographed. This is a common practice and
+    is referred to as using stock photography.
+
+
+    You have to follow some basic rules when you use someone else’s images on your
+    web site. The first rule is about the copyright (which I mention in this book’s
+    introduction). To use an image on your web site that you did not create, you need
+    to make sure that the following is true: The media is licensed as public domain
+    (CC0). Public domain means that the image is free for you to use, and you don’t
+    have to ask permission or say where the media came from. This is also called the
+    Creative Commons license.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_55_0.png)
+
+
+    > If you’re not sure about licenses and what they mean, (it can be very confusing),
+    you can read more about it at the Creative Commons (https://creativecommons.org/share-your-work/licensing-types-examples/).
+
+
+    My favorite web site for finding creative commons photos is VisualHunt (https://visualhunt.com).
+    VisualHunt searches hundreds of stock photos for you, making it easy to get just
+    the right photo.
+
+
+    # ## USING VISUALHUNT TO FIND FREE STOCK PHOTOS
+
+
+    To finish up your style guide, you need to find a few images and place them into
+    Frontify.'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '+   1. Open your web browser, type **visualhunt.com**, and press the Enter
+    key.
+
+    +   2. Place your cursor in the **search box** and type what you are looking for.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_56_0.png)
+
+
+    VisualHunt should return a few **images**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_56_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# **PROJECT 4** CREATE A STYLE GUIDE
+
+
+    +   3. Just above the images, a License Type filter appears. Move your mouse cursor
+    over **Public Domain** and click.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_57_0.png)
+
+
+    Notice how VisualHunt now displays only Public Domain images. These are free to
+    use to any way you want.
+
+
+    +   4. Click the image you want to add to your web site.
+
+    +   5. Move your mouse cursor to the right side of the web page. Click **Download
+    for Free**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_57_1.png)
+
+
+    +   6. Select the **large size option** (usually shown as L for large).'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_58_0.png)
+
+
+    +   1. The file automatically saves to your computer when you click the big **Download
+    button**.
+
+
+    # ## ADD PHOTOS TO FRONTIFY
+
+
+    The previous section shows you how to get photos for your web site downloaded
+    to your computer. In this section, you add them to Frontify. Getting them into
+    Frontify is the last step in creating your style guide! Follow these steps:
+
+
+    +   1. If you don''t already have Frontify open, type [https://frontify.com/](https://frontify.com/)
+    in your browser and press the Enter key.
+
+
+    +   2. Click the **Login** button at the top right. Then click the brand tile
+    and then click the **Edit** button near the top right.'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: '3 Move your mouse cursor to the left side of the screen and click Photography.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_59_0.png)
+
+
+    4 Move your mouse cursor to the middle of the screen. Click the image icon to
+    open the upload dialog box.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_59_1.png)
+
+
+    5 Find your image on your computer, most likely in the Downloads folder (unless
+    you decided to put it in a different folder). Double-click the filename of the
+    image to upload it to Frontify.'
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# Photography
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_60_0.png)
+
+
+    6 Scroll down and move your mouse cursor over the **image** icon to upload another
+    photograph. Repeat Steps 4 and 5 until you have uploaded all your images.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_60_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'When you''re finished, this page of your style guide should look something
+    like the following figure.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_61_0.png)
+
+
+    Now you have your style guide! In the next project, you learn how to bring together
+    your site map, wireframe, and style guide, combine a bit of coding, and make your
+    very own web site.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# # PROJECT 5: MAKE YOUR DESIGN COME TO LIFE
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_62_0.png)
+
+
+    **YOU NOW HAVE A FULL DESIGN OF YOUR OWN WEB SITE.** You have come up with a topic,
+    made a site map to plan what pages you''re going to have, made wireframes for
+    your pages, and even created a style guide to help you with the look and feel
+    of your site. Now it''s time to add a bit of computer coding to actually make
+    your web site!
+
+
+    In this project, you learn about HTML, a computer coding language that allows
+    you to make a working web site. You will make all your pages, and even add images!
+    In the next project, you get a chance to add a bit more color and interactivity
+    to your web site.
+
+
+    # ## SETTING UP YOUR CODING ENVIRONMENT
+
+
+    In Project 2, you used Google Drawings to make your site map. Now you will use
+    Google Drive and some of the apps that connect to it to build and share your web
+    site.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_62_1.png)
+
+
+    > > Before starting, you should have an adult''s permission. (By law, you must
+    be at least 13 years old to create any online account.)
+
+
+    # ## CREATE YOUR GOOGLE FOLDER
+
+
+    First, you have to create a Google Folder.
+
+
+    +   1. Open a web browser. The images in this book are using Chrome.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: '+   2. In the address bar, type http://drive.google.com and press Enter. If
+    you are signed in to Google, you should see something like what you see in the
+    following figure.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_63_0.png)
+
+
+    +   3. Create a new folder by clicking **New** and **New Folder**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_63_1.png)
+
+
+    +   4. You can name your folder anything. In the following figure, the folder
+    is called **MyDinoSite**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_63_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: '# ### 5 Double-click the **new folder** to open it.
+
+
+    This is where you will add all your coding files and image files for your web
+    site.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_64_0.png)
+
+
+    # ### ADD CODING APPS TO GOOGLE DRIVE
+
+
+    Now that you have your Google Folder, you can add a couple of apps that will make
+    it easy for you to code your web site.
+
+
+    # 1 **Click New**, then **More**, then **Connect More Apps**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_64_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: '2 A pop-up appears. Type **HTML** in the Search bar.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_65_0.png)
+
+
+    3 Press Enter, and you see an app called HTML Edity. Click the **Connect** button.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_65_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: '+   4. A pop-up will ask whether you want to make **HTML Editey** the default
+    app for files it can open. This means every time you try to open a file with .html
+    in the name, it will use HTML Editey to open the file. Click the box and then
+    click OK.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_66_0.png)
+
+
+    +   5. Scroll down in the pop-up from Step 3 until you find a second app called
+    HTML Viewer. Click the ==Connect== button.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_66_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '6. Just as in Step 4, a pop-up asks whether you want HTML Viewer to be the
+    default app to open files that it can open. Click the box to take the check mark
+    out this time, and click **OK**.
+
+
+    7. Close the pop-up and click **New**, then **More**. You should see HTML Editery
+    there now. Click **HTML Editery**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_67_0.png)
+
+
+    8. Google may ask you to choose an account to use this app with. If it does, choose
+    the account you have been using.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_67_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 68
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 69
+  md: '+   11. Google will ask you again to give Editey permissions. With your adult''s
+    permission, click **Allow**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_69_0.png)
+
+
+    +   12. A pop-up appears with an introduction to Editey. Click **Next** after
+    you have read through it.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_69_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 70
+  md: '13 The next page of the pop-up is the agreement. Make sure you have an adult
+    with you to read through this.
+
+
+    14 Scroll to the bottom of the pop-up and click both of the Agree boxes, and then
+    click Done.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_70_0.png)
+
+
+    15 At the top left of your screen, click where it says Untitled.html.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_70_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 71
+  md: '16 Change the name to index.html and add a description if you want. Then click
+    Rename.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_71_0.png)
+
+
+    Congratulations! You are now ready to write your web site code.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_71_1.png)
+
+
+    # # CODING YOUR HOME PAGE
+
+
+    Wow, you have designed a web site and set up your coding environment. You are
+    only a few steps away from becoming a real web site developer! This section teaches
+    you a little bit about HTML, a coding language that is used for making web sites.'
+  merge: -1
+  img_proc: true
+- pgno: 72
+  md: '> > *If you want to learn more HTML beyond this book, you should check out
+    html: www.w3schools.com. Here you will find all kinds of HTML tutorials and even
+    be able to test your coding.*
+
+
+    # ### THE HTML STRUCTURE
+
+
+    HTML is a coding language called a markup language. It''s called a markup language
+    because it is used to outline the page that you''re making for a web site. When
+    you''re coding a web site, your code will always have the same basic structure.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_72_0.png)
+
+
+    Not only do coding languages have certain structures, but each language also has
+    a different syntax. You already know a bit about syntax, because in English you
+    put a period at the end of a sentence and a question mark at the end of a question.
+    The period and question mark is part of the syntax of English.
+
+
+    In HTML, there are a lot of greater-than and less-than signs in the syntax. But
+    there is a pattern! Each section of an HTML file is surrounded by the name of
+    the section in `<SectionName>` `</SectionName>`. We call the first part the open
+    tag and the'
+  merge: -1
+  img_proc: true
+- pgno: 73
+  md: 'second one the close tag. Notice that the close tag has a / after the less-than
+    symbol.
+
+
+    +   1. Go to your Internet browser again. You should still have index.html open
+    in HTML Editey. If you don’t, go to [http://drive.google.com](http://drive.google.com),
+    double-click your project folder (like MyDinoSite), then right-click index.html
+    and choose Open With HTML Editey.
+
+
+    +   2. Add the **open tag** for the HTML section, and you will notice that the
+    close tag automatically gets added.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_73_0.png)
+
+
+    +   3. Looking back at the HTML structure at the beginning of this section, make
+    sure that the tags you add here (shown in the figure) are **inside the HTML tags.**
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_73_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 74
+  md: 'Awesome! You are now ready to start adding content to your HTML page! This
+    project walks you through making the dinosaur example site, but everything you
+    see here is an example of what you can do in your web site, too!
+
+
+    # ## ADDING TEXT TO YOUR WEB SITE
+
+
+    Now that you have your web site structure ready, you can start adding text to
+    display on it. Click between the close header tag and the open footer tag and
+    type **Hello World!**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_74_0.png)
+
+
+    Notice that on the right side of your screen, the words “Hello World!” appear.
+    That is because the right side of your screen is a preview of what your web site
+    looks like.
+
+
+    In this section, you use your Project 3 final wireframe and code all the text.'
+  merge: -1
+  img_proc: true
+- pgno: 75
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_75_0.png)
+
+
+    Right now, you will just have placeholder text. That means that you won''t write
+    the actual text yet; you''re just trying to make sure you know where everything
+    will go.
+
+
+    ```
+
+    ~~~html
+
+    1  <html>
+
+    2  <body>
+
+    3  <p>
+
+    4  Logo
+
+    5  <p>
+
+    6  Menu Item
+
+    7  <p>
+
+    8  Featured Dinosaur
+
+    9  <p>
+
+    10 Text about my Dinosaur right here
+
+    11 <p>
+
+    12 Footer Down Here
+
+    13 </html>
+
+
+    Logo and Menu up here
+
+    Text about my Dinosaur right here
+
+    Footer Down Here
+
+    ~~~
+
+    ```
+
+
+    # ## ADDING MORE STRUCTURE TO YOUR WEB SITE
+
+
+    Adding text to your web site is good, but you might want to add a little more
+    structure to your web site, too. For example, in the wireframe example from Project
+    3, there was a sidebar.'
+  merge: -1
+  img_proc: true
+- pgno: 76
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_76_0.png)
+
+
+    To add a different part of your web site, like a sidebar, you have to create new
+    sections inside the body tags called “divs.” The first div will go to the left
+    and take up most of the screen, and the second div will go to the right and take
+    up only a little of the screen. To create new divs, you use the open and close
+    div tags: `<div> </div>`. Even if you do not want these divs to be next to each
+    other, you might want to have different divs with different colors or content.
+
+
+    Look through your wireframe from Project 3 and **put the text** (or placeholder
+    text) in the correct places. For example, in the web site in this book, the text
+    about dinosaurs is on the left of the web site. The first div that was made in
+    this example will be the one on the left, so that’s why the dinosaur text is in
+    the first div.'
+  merge: -1
+  img_proc: true
+- pgno: 77
+  md: '```
+
+    ~~~html
+
+    <html>
+
+
+    <head>
+
+    <title>
+
+    Chicken
+
+    </title>
+
+    <body>
+
+    <h1>Chicken and Hen: up here</h1>
+
+    <h2>Chicken and Hen: up here</h2>
+
+    <h3>Chicken and Hen: up here</h3>
+
+    <hr>
+
+    <p>Text about my Dinosaur right here.</p>
+
+    <hr>
+
+    <p>Text about my Dinosaur right here.</p>
+
+    <ul>
+
+    <li>Eggs</li>
+
+    <li>Milk</li>
+
+    <li>Bread</li>
+
+    </ul>
+
+
+    </body>
+
+    </html>
+
+    ~~~
+
+    ```
+
+
+    # ## ADD STYLE ATTRIBUTES TO YOUR WEB SITE
+
+
+    Next, you will add attributes to your div sections to change the color of them,
+    making them easier to see them. Attributes can be a lot of different things in
+    web sites. They can be colors, size, or even the font style!
+
+
+    Look carefully through the code and add the following bits (see the next figure).
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_77_0.png)
+
+
+    > > You have to type everything in code exactly as it is in the book. If you capitalize
+    something that shouldn''t be capitalized, or add a space where there shouldn''t
+    be a space, your web site won''t work. This is because computers, even though
+    they are powerful, aren''t that smart! So they don''t know that the name Sarah
+    is the same as sarah. To a computer, those two names are different because one
+    has a capital S and the other has a lowercase s.
+
+
+    The head part of your web site is where you put your style code. You might want
+    to refer to your style guide from Project 4 for this part. The example in this
+    book uses orange, blue, and yellow for the colors and sans serif for the font,
+    so that''s what is shown here.'
+  merge: -1
+  img_proc: true
+- pgno: 78
+  md: "+   1. Between the head tags, add an open and close style tag.\n\n```\n```html\n\
+    <html>\n<head>\n  <style>\n  </style>\n</head>\n<body>\n  <header>Logo and Menu\
+    \ up here</header>\n  <p>Text about my Dinosaurs right here.</p>\n  <footer>Footer\
+    \ Down Here</footer>\n</body>\n</html>\n```\n```\n\n+   2. Between the style tags,\
+    \ add a section called body. This section, instead of having the less-than and\
+    \ greater-than tags, will have open and close curly braces. Everything inside\
+    \ the body section will change what is in the body part in your code below.\n\n\
+    ```\n```html\n<html>\n<head>\n  <style>\n    body {\n    }\n  </style>\n</head>\n\
+    <body>\n  <header>Logo and Menu up here</header>\n  <p>Text about my Dinosaurs\
+    \ right here.</p>\n  <footer>Footer Down Here</footer>\n</body>\n</html>\n```\n\
+    ```\n\n+   3. Add the following line exactly as it is written. When you finish\
+    \ typing it, your font will change!\n\n```\n```css\nbody {\n  font-family: \"\
+    Open Sans\", sans-serif;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 79
+  md: "+   4. **Add the following line** exactly as it is written. When you finish\
+    \ typing it, your web site should change to orange!\n\n```\n```html\n<!doctype\
+    \ html>\n<html>\n <head>\n  <title>\n   First Test Page\n  </title>\n  <meta charset=\"\
+    utf-8\">\n  <style>\n   body {\n    background-color: orange;\n   }\n   h1 {\n\
+    \    color: green;\n   }\n   p {\n    font-family: Arial;\n    font-size: 20px;\n\
+    \   }\n  </style>\n </head>\n <body>\n  <h1>\n   Welcome to My Web Page\n  </h1>\n\
+    \  <p>\n   This is my first web page.\n  </p>\n </body>\n</html>\n```\n```\n\n\
+    +   5. Change your style to the colors and fonts that you chose and watch your\
+    \ web site start to come to life.\n\n+   6. Incredible! You are already making\
+    \ such good progress. Next, make sure you understand where your other sections\
+    \ are. Turn the header and footer into your **secondary color** from your style\
+    \ guide. In this book, the secondary color is blue.\n\n```\n```html\n<!doctype\
+    \ html>\n<html>\n <head>\n  <title>\n   First Test Page\n  </title>\n  <meta charset=\"\
+    utf-8\">\n  <style>\n   body {\n    background-color: orange;\n   }\n   header\
+    \ {\n    background-color: blue;\n   }\n   h1 {\n    color: green;\n   }\n   p\
+    \ {\n    font-family: Arial;\n    font-size: 20px;\n   }\n  </style>\n </head>\n\
+    \ <body>\n  <header>\n   Welcome to My Web Page\n  </header>\n  <p>\n   This is\
+    \ my first web page.\n  </p>\n </body>\n</html>\n```\n```\n\n+   7. Next, you\
+    \ are going to turn your div sections into your **tertiary color**. In this book,\
+    \ the tertiary color is yellow."
+  merge: -1
+  img_proc: true
+- pgno: 80
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 81
+  md: 'In this book, the two divs are meant to be side by side. But your divs don’t
+    have to be like that; they could be one on top of the other. For example, this
+    book names the classes for the divs “left” and “right,” but you could name yours
+    “top” and “bottom.”
+
+
+    You might notice that the left div, which has gave a background color of #ffffff
+    (which is white) shows up, but the right div, which has gave a background color
+    of #000000 (which is black), doesn’t. That’s because there is nothing in the right
+    div!
+
+
+    +   9. Add some text in the right div (or the div that you haven’t filled in),
+    and that second div will show up; in this example, it’s the black div.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_81_0.png)
+
+
+    +   10. Be careful! Sometimes you have your text and background colors the same,
+    which makes it look like there is nothing there! In this book, the problem is
+    that you can’t see the text because the text and background are black. But never
+    fear! There is a style attribute for text color, too.'
+  merge: -1
+  img_proc: true
+- pgno: 82
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 83
+  md: 'Keep adding divs, fonts, and colors until your web site looks like the wireframe
+    that you made in Project 3.
+
+
+    Wow! Your web site is starting to come together. Even though it might look a little
+    silly right now, you actually have your structure built and you have some colors
+    down!
+
+
+    # ADDING PICTURES TO YOUR WEB SITE
+
+
+    Now that you have everything in place, you can start adding a couple of pictures
+    to your site.
+
+
+    +   1. Go to http://drive.google.com and double-click **your project folder**.
+    The one in this book is called MyDinoSite.
+
+    +   2. Click **New** and **File Upload** so that you can upload your first image
+    to your Google Drive folder.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_83_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 84
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 85
+  md: '+   6. Right-click the image and then click **Share**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_85_0.png)
+
+
+    +   7. Click **Advanced**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_85_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 86
+  md: '+   8. Click **Change**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_86_0.png)
+
+
+    +   9. Choose **On - Public on the Web** and click **Save**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_86_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 87
+  md: '# **10 Click Done.**
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_87_0.png)
+
+
+    # **11 Double-click your image, and it should open in large size on your screen.**
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_87_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 88
+  md: '12 Click the three dots on the top right and click **Open in New Window**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_88_0.png)
+
+
+    13 Click the three dots again and click **Embed Item**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_88_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 89
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 90
+  md: 'Even more exciting, you have a home page! In the next project, you will make
+    the home page look exactly as you want it to. But before you do that, you need
+    to create your other pages.
+
+
+    # ADDING MORE PAGES TO YOUR WEB SITE
+
+
+    Now that you have a basic home page, you can add the other pages that you planned
+    in your site map in Project 2. The site map example in this book has three new
+    pages: types of dinosaurs, names of dinosaurs, and the dinosaur timeline.
+
+
+    +   1. **Go back to** [http://drive.google.com](http://drive.google.com) **and
+    double-click your project folder.**
+
+    +   2. **Right-click index.html and click** **Make a Copy.**
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_90_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 91
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 92
+  md: '+   5. Do this again until you make all of the pages you need. This example
+    needs two more pages: names.html and timeline.html.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_92_0.png)
+
+
+    +   6. Highlight all the HTML files and images by clicking above and to the left
+    of index.html and dragging your mouse over all of them.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_92_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 93
+  md: '+   7. Right-click `index.html` and click **Share**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_93_0.png)
+
+
+    +   8. Just as you did for your first image, click **Advanced**. Then click **Change**
+    and change it to be **Public on the Web**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_93_1.png)
+
+
+    +   9. When you click **Save**, you should see that four files are all public.
+    Click **Done**.'
+  merge: -1
+  img_proc: true
+- pgno: 94
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_94_0.png)
+
+
+    10 Right-click one of your new pages, such as types.html, and click Open With
+    and then HTML Viewer.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_94_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 95
+  md: "# PROJECT 5 MAKE YOUR DESIGN COME TO LIFE\n\n**11** You should see the same\
+    \ thing as the home page (index.html), because you haven't changed what the new\
+    \ page looks like — you just copied the home page. That's okay for now.\n\n![](img/b129720fc9ac9e14546b8756740d362a_95_0.png)\n\
+    \n**12** From the address bar, copy the URL by clicking it, highlighting it, and\
+    \ pressing Ctrl+C on Windows or ⌘-C on Mac.\n\n**13** Go back to your index.html\
+    \ file. If you closed it, you can re-open it by right-clicking index.html and\
+    \ clicking Open With and then HTML Editory.\n\n**14** Find your header and type\
+    \ in the HTML code for a link: <a href=YOUR_URL_HERE> </a>. (Don't type the period.)\n\
+    \n```\n31-  <header>\n32-    <iframe src=\"https://drive.google.com/file/d/0B87t6P68R_Xt2d5Dv-fZGZ0pWT0lk/\n\
+    \      preview\" width=\"280\" height=\"140\"></iframe>\n33-    <a href=\"YOUR_URL_HERE\"\
+    >Types of Dinosaurs</a>\n34-  </header>\n```\n\n**15** Replace YOUR_URL_HERE with\
+    \ the URL you copied in Step 12. Do this by pressing Ctrl+V on Windows or ⌘-V\
+    \ on Mac.\n\n```\n31-  <header>\n32-    <iframe src=\"https://drive.google.com/file/d/0B87t6P68R_Xt2d5Dv-fZGZ0pWT0lk/\n\
+    \      preview\" width=\"280\" height=\"140\"></iframe>\n33-    <a href=\"https://drive.google.com/viewerng/viewer?url=https://api.stripe.com/v1/\n\
+    \      checkout/sessions?cs_live_b1GK7g9yzALsnR8796211dAnG2\n      %2Buz1er1oQZ\
+    \ %2t2211463355j79D9B3g8f21aDBc2N0\">Types of Dinosaurs</a>\n34-  </header>\n\
+    ```\n\nThis is how you will link all your pages. You should make a link to all\
+    \ of your pages from your home page, just as you made a link to the first new\
+    \ page you added."
+  merge: -1
+  img_proc: true
+- pgno: 96
+  md: "+   16. Change the **header background color** to orange so that you can see\
+    \ the links.\n\n```\n~~~\nheader {\n    background-color: #ff8000;\n}\n~~~\n```\n\
+    \n![](img/b129720fc9ac9e14546b8756740d362a_96_0.png)\n\n+   17. Add a link back\
+    \ to the home page on each of your three other pages. You do this the same way\
+    \ you added a link to each page.\n\n> > **Warning**\n> >\n> > *Make sure that\
+    \ you change the header color to orange for those pages, too! Otherwise it's really\
+    \ hard to see the links.*\n\nYou can check out a working version by going to [https://thewecanzone/website-building](https://thewecanzone/website-building)\
+    \ and clicking MyDinoSite Project 5.\n\n> > **Warning**\n> >\n> > *Sometimes when\
+    \ you open your web site from a new browser window, it asks you to authorize it\
+    \ again. Just click **Authorize**.*\n\n![](img/b129720fc9ac9e14546b8756740d362a_96_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 97
+  md: 'Choose your account and click Allow.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_97_0.png)
+
+
+    Congratulations! You now have a working web site that goes to other pages! In
+    the next project, you will learn how to make this web site match your wireframe
+    and style guide.'
+  merge: -1
+  img_proc: true
+- pgno: 98
+  md: '# # PROJECT 6 MAKE YOUR WEB SITE LOOK GREAT
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_98_0.png)
+
+
+    IF YOU HAVE BEEN FOLLOWING EACH PROJECT IN THIS BOOK, YOU ALREADY HAVE A WORKING
+    WEB SITE THAT IS READY FOR YOU TO SHARE WITH THE WORLD. But some of the pieces
+    are still missing. You made a site map, a wireframe, a style guide, and a basic
+    web site.'
+  merge: -1
+  img_proc: true
+- pgno: 99
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 100
+  md: '# MAKE YOUR GOOGLE DRIVE FOLDER PUBLIC
+
+
+    Because you will be adding new files to your Google Drive folder, it is a good
+    idea to make the entire folder public so that you can share your entire web site.
+
+
+    > > By making this folder public, everyone in the world can see what is inside.
+    It is very important that you do not put any personal information in this folder.
+    Make sure that you show an adult everything you plan to put on the Internet and
+    that you ask permission to do that.
+
+
+    +   1. Go to [http://drive.google.com](http://drive.google.com) and log in to
+    your Google account.
+
+    +   2. Right-click your project folder and click **Share**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_100_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 101
+  md: '3 Click advance and then Change. Choose Public on the Web and click Save. Now
+    your entire folder should be **public**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_101_0.png)
+
+
+    Now, any time you add a new file into this folder, **Google will tell** you that
+    it will be public. Just click OK.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_101_1.png)
+
+
+    # ## ADD THE CSS EDITEY APP TO GOOGLE DRIVE
+
+
+    As you might have noticed in the previous project, it can be really frustrating
+    to have to copy and paste code that you write for your home page into each of
+    your other pages. So instead of doing that, you will move all your style code
+    to a new file. Then you will reference that file from your HTML code. The next
+    section explains this more.'
+  merge: -1
+  img_proc: true
+- pgno: 102
+  md: 'For now, add the CSS Editey app to Google Drive.
+
+
+    +   1. Go to [http://drive.google.com](http://drive.google.com) and log in to
+    your Google account if you''re not logged in already.
+
+    +   2. Double-click your project folder to open it.
+
+    +   3. Click New, then More, then Connect More Apps.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_102_0.png)
+
+
+    +   4. Search "CSS" and click Enter. Click Connect next to CSS Editey.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_102_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 103
+  md: "+   5. Click <mark>OK</mark> when Google asks if it should open CSS files with\
+    \ CSS Editey.\n\n![](img/b129720fc9ac9e14546b8756740d362a_103_0.png)\n\nNow your\
+    \ coding environment is ready!\n\n# ## CREATING A CSS FILE FOR STYLE\n\nIn this\
+    \ section, you will move all your style code from your HTML files into one CSS\
+    \ file. CSS is another programming language, and it stands for Cascading Style\
+    \ Sheet. You have already written CSS code without even realizing it! All the\
+    \ code inside the head section of your HTML file between the <mark>style tags</mark>\
+    \ is the CSS code.\n\n```\n~~~html\n<!doctype html>\n<html>\n<head>\n  <title>\n\
+    \    <style>\n      body {\n        font-family: 'Open Sans', sans-serif;\n  \
+    \      background-color: #f0f0f0;\n      }\n      header {\n        background-color:\
+    \ #ff0000;\n      }\n      footer {\n        background-color: #0000ff;\n    \
+    \  }\n      div {\n        background-color: #ff0000;\n      }\n      .left {\n\
+    \        width: 75%;\n        float: left;\n        background-color: #ffffff;\n\
+    \      }\n      .right {\n        width: 25%;\n        float: left;\n        background-color:\
+    \ #000000;\n        color: #ffffff;\n      }\n    </style>\n~~~\n```"
+  merge: -1
+  img_proc: true
+- pgno: 104
+  md: '# CREATE A CSS FILE
+
+
+    First, you need the file to move all your CSS code into.
+
+
+    +   1. Go to http://drive.google.com and double-click your project folder to open
+    it.
+
+
+    +   2. Click New, then More, then CSS Editor.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_104_0.png)
+
+
+    +   3. Google might tell you that your file will have the same permissions as
+    the folder. This means that your new file will be public, which is good. Click
+    OK.
+
+
+    +   4. Click Untitled.css in the top left of your new file.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_104_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 105
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 106
+  md: "3. **Highlight the code** between your style tags and press Ctrl+C if you're\
+    \ on Windows or ⌘-C if you're on Mac to copy the code.\n\n```\n```css\nbody {\n\
+    \  font-family: \"Open Sans\", sans-serif;\n  background-color: #F88008;\n}\n\
+    header {\n  background-color: #FFB000;\n}\nfooter {\n  background-color: #0000FF;\n\
+    }\ndiv {\n  background-color: #FFFFFF;\n}\n.left {\n  width: 75%;\n  float: left;\n\
+    \  background-color: #FFFFFF;\n}\n.right {\n  width: 25%;\n  float: left;\n  background-color:\
+    \ #000000;\n  color: #FFFFFF;\n}\n```\n```\n\n4. Open your style.css file and\
+    \ click into the file editor. Click Ctrl+V if you're on Windows and ⌘-V if you're\
+    \ on Mac to paste in your style code.\n\n```\n```css\nbody {\n  font-family: \"\
+    Open Sans\", sans-serif;\n  background-color: #F88008;\n}\nheader {\n  background-color:\
+    \ #FFB000;\n}\nfooter {\n  background-color: #0000FF;\n}\ndiv {\n  background-color:\
+    \ #FFFFFF;\n}\n.left {\n  width: 75%;\n  float: left;\n  background-color: #FFFFFF;\n\
+    }\n.right {\n  width: 25%;\n  float: left;\n  background-color: #000000;\n  color:\
+    \ #FFFFFF;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 107
+  md: "![](img/b129720fc9ac9e14546b8756740d362a_107_0.png)\n\nThe way your code is\
+    \ written in your file really matters because it helps you understand what code\
+    \ is where. HTML and CSS Editey make this easy! Just click the Format Source Code\
+    \ button and your code will move so that it is easier to read!\n\n```\n```css\n\
+    body {\n    font-family: Ubuntu, Sans, sans-serif;\n    background-color: #f0f0f0;\n\
+    }\nheader {\n    background-color: #ff0000;\n}\nfooter {\n    background-color:\
+    \ #0000ff;\n}\ndiv {\n    background-color: #ffffff;\n}\n.left {\n    width: 75%;\n\
+    \    float: left;\n    background-color: #ffffff;\n}\n.right {\n    width: 25%;\n\
+    \    float: right;\n    background-color: #000000;\n    color: #ffffff;\n}\n```\n\
+    ```\n\n# ## LINK YOUR CSS FILE TO YOUR HTML FILE\n\nNow that your style code is\
+    \ in its own file, you need to tell your HTML file where it can find the style\
+    \ code.\n\n![](img/b129720fc9ac9e14546b8756740d362a_107_1.png)\n\n> > This is\
+    \ going to be a little strange. You have to get the URL exactly right for it to\
+    \ work properly, so do this part slowly and ask an adult for help if you need\
+    \ it.\n\n+   1. Open your index.html file and write the code to link your CSS\
+    \ file between the two `<head>` `</head>` tags.\n\n```\n```html\n<link rel=\"\
+    stylesheet\" type=\"text/css\" href=\"http://editey.com/preview/ID.NUMBER/style.css\"\
+    >\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 108
+  md: "```\n```html\n<!DOCTYPE html>\n<html>\n<head>\n<link rel=\"stylesheet\" type=\"\
+    text/css\" href=\"http://editey.com/preview/ID_NUMBER/style.css\">\n</head>\n\
+    ```\n```\n\nEverything you type should be exactly as it is in the code just above\
+    \ this paragraph. Don't add any spaces and don't get rid of any, and make sure\
+    \ everything is capitalized the same. The code is supposed to be all on one line,\
+    \ but as you see in the figure, depending on how wide your window is, the line\
+    \ of code can be split. That's okay! Just make sure that when you type it in,\
+    \ you never press Enter — you just type it in all at one time.\n\n![](img/b129720fc9ac9e14546b8756740d362a_108_0.png)\n\
+    \n+   2. You need to replace ID_NUMBER with the actual ID number of your style.css\
+    \ file. Open your style.css file and look at the URL from the address bar. The\
+    \ format is css.editey.com/file/ID_NUMBER/FILE_NUMBER.\n\n```\n```css\nbody {\n\
+    \    font-family: 'Open Sans', sans-serif;\n}\n```\n```\n\n+   3. Highlight the\
+    \ ID_NUMBER and press Ctrl+C if you're on Windows, ⌘-C if you're on Mac, to copy\
+    \ it.\n\n```\n```css\nbody {\n    font-family: 'Open Sans', sans-serif;\n    background-color:\
+    \ #F8F8F8;\n}\nh1 {\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 109
+  md: '# PROJECT 6 MAKE YOUR WEB SITE LOOK GREAT
+
+
+    +   4. Open your `index.html` file and **highlight the ID NUMBER** from Step 1.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_109_0.png)
+
+
+    +   5. Press Ctrl+V if you’re on Windows, ⌘-V if you’re on Mac, to **paste the
+    ID number** in the URL.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_109_1.png)
+
+
+    +   6. Copy the entire `<link` line of code and **paste it** into the other three
+    html files that you made in your previous project.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_109_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 110
+  md: '![](img/b129720fc9ac9e14546b8756740d362a_110_0.png)
+
+
+    To open each HTML file, go to http://drive.google.com, open your project folder,
+    right-click the file you want to open, and choose HTML Edity.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_110_1.png)
+
+
+    You should delete the style tags in all the HTML files. You need only the link
+    tag now.
+
+
+    # TEST YOUR CHANGES
+
+
+    Wow! You just made a lot of changes that could potentially hurt your web site.
+    Before moving on, you should test to make sure everything still works.
+
+
+    +   1. Go to http://drive.google.com and open your project folder.
+
+
+    +   2. Right-click **index.html**, go to **Open With**, and click **HTML Viewer**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_110_2.png)
+
+
+    +   3. If your style isn’t showing up, click the **Refresh** button.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_110_3.png)'
+  merge: -1
+  img_proc: true
+- pgno: 111
+  md: 'After all that work, your web site should look the same as it did at the end
+    of the Project 5. Now you are ready to make changes to make it look better, and
+    it will be much easier to make those changes!
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_111_0.png)
+
+
+    > > *When you test your web site, make sure to click all the buttons on your web
+    site to make sure they all still work. Just because something looks right doesn''t
+    mean it is acting right!*
+
+
+    # ## STYLING YOUR WEB SITE
+
+
+    Now that you have a style.css file, you can update the style of your web site
+    quickly! Before you add more content, you should fix the style.
+
+
+    # ## DECIDE WHERE TO PUT THE BACKGROUND COLORS
+
+
+    You can decide where to put the different colors yourself, but one way to help
+    you decide is to look up other web sites with similar colors.
+
+
+    > > *You should always ask an adult''s permission before looking anything up on
+    the Internet.*'
+  merge: -1
+  img_proc: true
+- pgno: 112
+  md: "If you're following the example in this book using orange and blue, you might\
+    \ change your header and footer to be orange, your left and right class to be\
+    \ blue, and your body to be white. The background color attribute (the name of\
+    \ the color for your background) is background-color.\n\n```\n```css\nbody {\n\
+    \    font-family: 'Open Sans', sans-serif;\n    background-color: #ffffff;\n}\n\
+    \nheader {\n    background-color: #ff8800;\n}\n\nfooter {\n    background-color:\
+    \ #ff8800;\n}\n\ndiv {\n    background-color: #ffffff;\n}\n\n.left {\n    width:\
+    \ 75%;\n    float: left;\n    background-color: #0000ff;\n}\n\n.right {\n    width:\
+    \ 25%;\n    float: left;\n    background-color: #0000ff;\n    color: #ffffff;\n\
+    }\n```\n```\n\n# ## CHANGE THE FONT COLOR\n\nNow that you have your background\
+    \ colors how you want them, change the text so that it's easy to read.\n\n+  \
+    \ 1. You might have to play around with the different colors. For the example\
+    \ of using orange and blue, the text in the body looks best as white. The font\
+    \ color attribute (the name of the color for your text) is color.\n\n```\n```css\n\
+    body {\n    font-family: 'Open Sans', sans-serif;\n    background-color: #ffffff;\n\
+    \    color: #ffffff;\n}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 113
+  md: "+   2. For an orange background, or other colors like orange, the white text\
+    \ doesn't look as good. If the white text doesn't look good on one of your colors,\
+    \ change the text to be a different color. For example, on an orange background,\
+    \ you would change the color of the text in your footer to be black (`color: #000000`).\n\
+    \n![](img/b129720fc9ac9e14546b8756740d362a_113_0.png)\n\n# FORMAT YOUR PAGE\n\n\
+    You can do a few simple things to make your web site look even better! Follow\
+    \ these steps to format your page.\n\n+   1. Center the text of the footer. To\
+    \ move the text to the left, right, or center, you use the `text-align` attribute.\
+    \ This is a good idea for any web site.\n\n```\nfooter {\n    background-color:\
+    \ #ff8000;\n    color: #000000;\n    text-align: center;\n}\n```\n\n![](img/b129720fc9ac9e14546b8756740d362a_113_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 114
+  md: "# 数字图像处理与分析\n\n# 图像分割（1）\n\n# 阈值化分割\n\n阈值化分割作为最经典的图像分割方法，其基本思想是确定一个阈值，然后根据该阈值将图像中的每个像素划分为目标或背景。阈值化分割方法计算简单、效率高，在图像分割领域占有重要地位。\n\
+    \n# 阈值化分割的基本原理\n\n阈值化分割的基本原理是依据一定的准则，将图像的灰度值划分为不同的集合。对于一幅灰度图像 f(x, y)，若选择一个阈值\
+    \ T，则分割后的图像 g(x, y) 可表示为：\n\n```\ng(x, y) = 1,  f(x, y) > T\n           = 0, \
+    \ f(x, y) ≤ T\n```\n\n其中，f(x, y) 为输入图像，g(x, y) 为输出二值图像，T 为阈值。阈值 T 的选择是阈值化分割的关键，通常可以表示为：\n\
+    \n```\nT = T[x, y, p(x, y), f(x, y)]\n```"
+  merge: -1
+  img_proc: true
+- pgno: 115
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 116
+  md: '+   5. In style.css, add a new style definition for any new classes that you
+    create, like the content class.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_116_0.png)
+
+
+    +   6. One trick to making sure your web site is always covering the entire screen
+    and your footer is always at the bottom is to set the vertical height to your
+    header, footer, and the main area (in this example, the content div). For this
+    example, the height of the content style definition is 80%, the height of the
+    header is 15%, and the height of the footer is 5%. This will make the header,
+    footer, and content always fit on the screen, no matter what size the screen is.'
+  merge: -1
+  img_proc: true
+- pgno: 117
+  md: "# # PROJECT 6 MAKE YOUR WEB SITE LOOK GREAT\n\n```\n```css\nbody {\n    font-family:\
+    \ 'Open Sans', sans-serif;\n    background-color: #ffffff;\n    color: #ffffff;\n\
+    }\nheader {\n    background-color: #ff0000;\n    height: 15%;\n}\nfooter {\n \
+    \   background-color: #ff0000;\n    color: #000000;\n    text-align: center;\n\
+    \    height: 5%;\n}\n.left {\n    width: 75%;\n    float: left;\n    background-color:\
+    \ #0000ff;\n}\n.right {\n    width: 22%;\n    float: left;\n    background-color:\
+    \ #0000ff;\n    color: #ffffff;\n    margin-left: 10px;\n}\n.content {\n    height:\
+    \ 60%;\n}\n```\n```\n\n7 After you have fixed the vertical sizing, try resizing\
+    \ your window to see the footer moving.\n\n![](img/b129720fc9ac9e14546b8756740d362a_117_0.png)"
+  merge: -1
+  img_proc: true
+- pgno: 118
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 119
+  md: "![](img/b129720fc9ac9e14546b8756740d362a_119_0.png)\n\n**Highlight all the\
+    \ code and press Ctrl+C if you're on Windows and ⌘-C if you're on Mac to copy\
+    \ it.**\n\n# The CSS\n\n```\n~~~css\n.button {\n  border: 1px solid #d6d6d6;\n\
+    \  background: #ffffff;\n  background: -webkit-gradient(linear, left top, left\
+    \ bottom, from(#f7f7f7), to(#e6e6e6));\n  background: -webkit-linear-gradient(top,\
+    \ #f7f7f7, #e6e6e6);\n  background: -moz-linear-gradient(top, #f7f7f7, #e6e6e6);\n\
+    \  background: -ms-linear-gradient(top, #f7f7f7, #e6e6e6);\n  background: -o-linear-gradient(top,\
+    \ #f7f7f7, #e6e6e6);\n  padding: 6px 13px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius:\
+    \ 4px;\n  border-radius: 4px;\n  -webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 0;\n\
+    \  -moz-box-shadow: rgba(0,0,0,0.1) 0 1px 0;\n  box-shadow: rgba(0,0,0,0.1) 0\
+    \ 1px 0;\n  color: white;\n  font-size: 13px;\n  font-family: 'Helvetica', Arial,\
+    \ sans-serif;\n  text-decoration: none;\n  vertical-align: middle;\n}\n\n.button:hover\
+    \ {\n  border-top-color: #d3d3d3;\n  background: #f2f2f2;\n  color: #333;\n}\n\
+    \n.button:active {\n  border-top-color: #d3d3d3;\n  background: #f2f2f2;\n}\n\
+    ~~~\n```"
+  merge: -1
+  img_proc: true
+- pgno: 120
+  md: 'Go to your style.css file and press Ctrl+V or ⌘-V to paste the code.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_120_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 121
+  md: '5 Go to index.html and add class="button" to each of your a tags.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_121_0.png)
+
+
+    6 Go to your other HTML files and add class="button" to the a tags.
+
+
+    ```
+
+    ```html
+
+    10 <a class="button" href="http://driv...">Book Home</a>
+
+    ```
+
+    ```
+
+
+    # ## CHANGE YOUR BACKGROUND
+
+
+    The background of your content area is just white. This section walks you through
+    changing it to an image instead.
+
+
+    1 Go to your style.css file and add background-image: url("IMAGE_URL"); to your
+    content style definition.
+
+
+    ```
+
+    ```css
+
+    29 .content {
+
+    30   height: 80%;
+
+    31   background-image: url("IMAGE_URL");}
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 122
+  md: '+   2. If you want to use a dinosaur picture, you can go to http://www.thewecan.zone/website-building
+    and click Dino.png. Otherwise, just find your own background image by searching
+    on google.com. Remember to always ask permission from a parent first!
+
+    +   3. Copy the URL of the image you found from the address bar. Highlight the
+    URL and press Ctrl+C if you''re on Windows and ⌘+C if you''re on Mac. If you decided
+    to find your own image, you can right-click the image and press Copy Image Address
+    instead of copying the URL from the address bar.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_122_0.png)
+
+
+    +   4. Paste the URL where it says IMAGE_URL from Step 1.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_122_1.png)
+
+
+    +   5. Add two more lines of code to your content style definition. `background-size:
+    cover;` will make sure that the image fills the entire content area, and `background-position:
+    center;` will make sure that the image is centered on your page.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_122_2.png)'
+  merge: -1
+  img_proc: true
+- pgno: 123
+  md: '# ## ADD YOUR CONTENT
+
+
+    Here comes the fun part! Add all your content about your topic into all your pages!
+    If you had left and right divs, as in this example, add text about your dinosaurs
+    on the left, and media on the right!
+
+
+    # ## ADD CONTENT AND WIDGETS TO YOUR HOME PAGE
+
+
+    First, you can add some information about your favorite fact in your topic. In
+    this example, it is about a triceratops. You can also add fun widgets, like YouTube
+    videos, into your sidebar!
+
+
+    +   1. **Delete the placeholder text that says “Text about my topic right here”
+    and write about your topic instead.**
+
+
+    ```
+
+    ~~~html
+
+    <div class="left">My favorite dinosaur is the Triceratops!
+
+    <br><br>
+
+    Go to http://www.kids-dinosaurs.com/dinosaurs-triceratops.html I found
+
+    some information about the triceratops.
+
+    <br><br>
+
+    They lived about 68 to 65 million years ago - in the cretaceous
+
+    period. This was at the same time as some really big meat eating
+
+    dinosaurs such as Tyrannosaurus rex, Albertosaurus and Spinosaurus.
+
+    <br><br>
+
+    <img class="logo" src="http://www.kids-dinosaurs.com/images/kids-dinosaurs-triceratops-facts.jpg.png/pagespeed.ic.c8bMQHqgXAw.webp"
+    />
+
+    <br><br>
+
+    To defend itself against meat eaters (predators) it had two long
+
+    brow horns. These could grow to be at least 1 metre (3 feet) long.
+
+    Triceratops would have been able to cause a lot of damage to an
+
+    attacker!
+
+    <br><br>
+
+    It also had a third shorter horn at the end of its nose. This gives
+
+    it its dinosaur name, which means ‘three-horned face’.
+
+    </div>
+
+    ~~~
+
+    ```
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_123_0.png)
+
+
+    If you copy anything from a book or web site, or you got ideas from a book or
+    web site, you should cite your source! That means you are giving credit to that
+    web site or book so that people know that the person who made that web site or
+    book are the ones who came up with that information.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_123_1.png)
+
+
+    Go to http://www.w3schools.com/tags/ for a guide reference on all the different
+    tags you can use. Notice that in the previous image, there is a new img tag. Try
+    using that one to add more pictures!'
+  merge: -1
+  img_proc: true
+- pgno: 124
+  md: "+   2. Go to YouTube.com with an adult’s permission and find a video on your\
+    \ topic.\n\n+   3. Click Share and then Embed. Copy the HTML code with the iframe\
+    \ tag in it by pressing Ctrl+C if you’re on Windows and ⌘-C if you’re on Mac.\n\
+    \n![](img/b129720fc9ac9e14546b8756740d362a_124_0.png)\n\n+   4. Go back to your\
+    \ index.html and delete the text “My right div.” Then paste the iframe tag in\
+    \ the right div by pressing Ctrl+V if you’re on Windows and ⌘-V if you’re on Mac.\n\
+    \n```\n```html\n<div class=\"right\">\n  <iframe width=\"560\" height=\"315\"\
+    \ src=\"https://www.youtube.com/embed/rk0RipISIU4\" frameborder=\"0\" allowfullscreen></iframe>\n\
+    </div>\n```\n```\n\n+   5. Change width=\"###\" to max-width=\"100%\" and change\
+    \ height=\"###\" to height=\"auto\".\n\n```\n```html\n<div class=\"right\">\n\
+    \  <iframe max-width=\"100%\" height=\"auto\" src=\"https://www.youtube.com/embed/rk0RipISIU4\"\
+    \ frameborder=\"0\" allowfullscreen></iframe>\n</div>\n```\n```\n\n# ## CHANGE\
+    \ YOUR FOOTER TEXT\n\nDon't forget to make changes to the text in your footer!\
+    \ Make your footer say something fun, but remember – don’t put any information\
+    \ about you. Not even your name."
+  merge: -1
+  img_proc: true
+- pgno: 125
+  md: "```\n```html\n<footer>\n    This is my website about dinosaurs.\n    <br>\n\
+    \    I learned how to build it from a book!\n</footer>\n```\n```\n\n# ## ADD CONTENT\
+    \ TO YOUR OTHER PAGES\n\nYou now have the skills to be able to add content to\
+    \ all your other pages! Try making more pages, and even try playing around with\
+    \ the style!\n\nFor more information about web site building, you can always check\
+    \ out the wecan.zone/website-building for updated content, videos, and more.\n\
+    \n# ## SHARE WITH YOUR FRIENDS\n\nThe final thing to do is share your web site!\
+    \ You know how to see your own web site, but the URL is really long and complicated.\n\
+    \n+   1. Highlight the URL in the address bar and press Ctrl+C if you're on Windows\
+    \ and ⌘-C if you're on Mac to copy it.\n\n![](img/b129720fc9ac9e14546b8756740d362a_125_0.png)\n\
+    \n+   2. Go to goo.gl. This a web site that takes a long URL and gives it a shorter\
+    \ version that is easier to remember!\n\n![](img/b129720fc9ac9e14546b8756740d362a_125_1.png)"
+  merge: -1
+  img_proc: true
+- pgno: 126
+  md: '+   3. Paste your URL into the URL shorter and click **Shorten URL**.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_126_0.png)
+
+
+    +   4. Copy the short URL by highlighting it and clicking Ctrl+C if you''re on
+    Windows and ⌘-C if you''re on Mac.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_126_1.png)
+
+
+    +   5. Open a new window in your browser and paste your URL into the address bar.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_126_2.png)
+
+
+    +   6. Press Enter and authorize the HTML viewer.
+
+
+    +   7. This shorter URL is the one you can share with friends and family, but
+    remind them that they will have to authorize HTML viewer and log in to Google!
+
+
+    You can see the web site that was built in this book by going to goo.gl/cG3uxk.
+
+
+    Congratulations! You have now built your very own web site using HTML and CSS
+    coding languages!'
+  merge: -1
+  img_proc: true
+- pgno: 127
+  md: '# ## ABOUT THE AUTHOR
+
+
+    Greg Rickaby is a Lead Front-End Developer at WebDevStudios, a development agency
+    that specializes in creating solutions using WordPress for enterprise-level clients
+    such as Microsoft, Viacom, the Discovery Channel, Uber, Campbell''s Soup, and
+    more. He''s been writing code for the web since the late 1990s and professionally
+    since 2000. Greg also has a passion for teaching others, contributing to open
+    source technologies, scouting, and being outdoors.
+
+
+    Greg and his beautiful wife, Tara, are the proud parents of Chase, Chloe, and
+    Wyatt. They reside in southern Alabama. Creating a Web Site is his first book
+    for Wiley.
+
+
+    # ## DEDICATION
+
+
+    To those who contribute to open source technology: Together we can build great
+    things.
+
+
+    # ## AUTHOR''S ACKNOWLEDGMENTS
+
+
+    First and foremost, I must acknowledge my best friend, Tara. Her tireless efforts
+    last fall allowed me to disappear on the weekends so that I could write this book.
+    I know that being alone with a newborn and two-year-old for an entire season isn''t
+    the most fun, so thank you, honey bear!
+
+
+    To my editors, Amy, Allison, and Susan, thank you for your patience and understanding
+    while I learned how to write a book. Thank you to Lisa Sabin-Wilson for being
+    my shoulder to cry on when things got tough. And a very special thank you to my
+    dad, who saw the value in personal computers back in the 1980s. He made sure that
+    my brother and I knew how to use them. As he put it, "I didn''t have enough to
+    send you to college, so the best I could do was provide you with the technology
+    necessary to make something of yourself." For that, I''m eternally grateful.
+
+
+    And finally, thank you to Dr. Sarah Guthals for jumping in at the last minute
+    to help get this book finished. Her tireless work behind the scenes is appreciated,
+    and I couldn''t have finished the book without her. She''s also an author of two
+    books for Wiley including Minecraft Modding For Kids For Dummies and Modding Minecraft.
+    If you''re into Minecraft, you should check them out!'
+  merge: -1
+  img_proc: true
+- pgno: 128
+  md: '# # PUBLISHER’S ACKNOWLEDGMENTS
+
+
+    +   - **Acquisitions Editor:** Amy Fandrei
+
+    +   - **Project and Copy Editor:** Susan Christophersen
+
+    +   - **Technical Editors:** Allison Tarr, Drake Kegley
+
+    +   - **Editorial Assistant:** Serena Novosel
+
+    +   - **Sr. Editorial Assistant:** Cherie Case
+
+
+    +   - **Production Editor:** Vasanth Kollraj
+
+    +   - **Marketing:** Melissa Duffy, Lauren Noens'
+  merge: -1
+  img_proc: true
+- pgno: 129
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 130
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 131
+  md: '# ***A technology book for kids!***
+
+
+    Do you have a favorite topic that you want to share with the world? You can showcase
+    your talents and share your interests through your own web site. You will use
+    planning tools and learn basic HTML to create a web site that can be used to share
+    your interests, artwork, and more.
+
+
+    +   * **Planning Makes Perfect** — Use online tools to help you figure out what
+    you want your site to be about.
+
+    +   * **Mapping It Out** — Draw a map for your site using Google Drawings, or
+    even your favorite notebook and a pencil.
+
+    +   * **Page One** — Create your site by choosing a template and then customizing
+    it with basic HTML and CSS coding.
+
+
+    # **Technology Requirements:**
+
+
+    **Hardware** – PC or tablet with internet connection running Windows 7 or higher
+    or Mac with internet connection running Mac OS X 10.7 or higher
+
+
+    **Software** – Google Apps, and Frontify.com, all available for free. Sign up
+    instructions inside.
+
+
+    Greg Rickaby has been writing code since the late 90''s, when he built simple
+    web pages on Geocities. Since then, Greg has gone on to make a living building
+    web sites for big companies like Microsoft, Discovery Channel, Uber, and Campbell''s
+    Soup.
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_131_0.png)
+
+
+    $19.99 USA / $29.99 CAN / £21.99
+
+
+    ISBN 978-1-119-37651-4
+
+
+    ![](img/b129720fc9ac9e14546b8756740d362a_131_1.png)
+
+
+    9 781119 376514
+
+
+    **WILEY**
+
+
+    **Also available** as an e-book'
+  merge: -1
+  img_proc: true
