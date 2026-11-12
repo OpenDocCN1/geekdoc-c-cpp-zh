@@ -922,6 +922,7 @@
 +   [CUDA 应用设计与开发指南](docs/cuda-application-design-and-development-c/README.md)
 +   [CUDA 示例：通用 GPU 编程入门指南 - 索引](docs/cuda-by-example-an-introduction-to-general-purpose-gpu-progr/README.md)
 +   [CUDA C 示例：通用 GPU 编程入门指南](docs/cuda-c-by-example-an-introduction-to-general-purpose-gpu-pro/README.md)
++   [CUDA C++ 编程指南](docs/cuda-c-programming-guide/README.md)
 +   [C++ CUDA 编程：从基础到精通](docs/cuda-programming-with-cfrom-basics-to-expert-proficiency/README.md)
 +   [好奇吗？发现充实生活缺失的要素](docs/curious-discover-the-missing-ingredient-to-a-fulfilling-life/README.md)
 +   [网络心理学：个体、社会与数字技术研究 (BPS 心理学教科书)](docs/cyberpsychology-the-study-of-individuals-society-and-digital/README.md)
