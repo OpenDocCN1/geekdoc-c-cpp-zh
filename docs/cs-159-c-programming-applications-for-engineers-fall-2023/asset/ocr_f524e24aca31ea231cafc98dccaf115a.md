@@ -1,0 +1,6 @@
+Example: The factoral of a number is the product of all integers from 1 to the number. Design a function that given a non-negative integer will calculate its factoral.
+
+# Factoral flow chart:
+
+| Identify the loop control variable: | Identify the type of loop: | Identify how the loop control variable is updated: | Is the algorithm logically correct when the user enters zero? |
+|---|---|---|---|

@@ -1,0 +1,46 @@
+```
+/******************************************************************
+*
+* Function Information
+*
+* Name of Function: displayResults
+*
+* Function Return Type: void
+*
+* Parameters (list data type, name, and comment one per line):
+*   1. int op1 – first operand for quotient and modulus calculation
+*   2. int op2 – second operand for quotient and modulus calculation
+*   3. int rem – result of modulus calculation
+*   4. int quo – result of division calculation
+*
+* Function Description: Displays final result of calculator program.
+*******************************************************************/
+```
+
+```
+void displayResults(int op1, int op2, int rem, int quo)
+{
+    printf("%d / %d = %d\n", op1, op2, quo);
+    printf("%d %% %d = %d\n", op1, op2, rem);
+}
+```
+
+```
+int calcRemainder(int op1, int op2)
+{
+    int rem; //TEMPORARY STORAGE OF REMAINDER
+    rem = op1 % op2;
+    return(rem);
+}
+
+int calcQuotient(int op1, int op2)
+{
+    return(op1 / op2);
+}
+```
+
+# Observations:
+
++   - Only the new `displayResults` function definition is included with its header to save space in the notes. Each and every one of your user-defined functions must include a completed course function header!
++   - Notice the declaration of this new function header! Between the parentheses the type and number of the arguments for the function are listed.
++   - The number, type, and order of the parameters are important! But any parameter names (identifiers) found in a function declaration are optional and non-binding.

@@ -1,0 +1,25 @@
+# Logical Operators
+
+There are three main logical operators. Operands to logical operators are considered for their logical status (true or false).
+
+| Operator | Character(s) | Description | Precedence |
+| :--- | :--- | :--- | :--- |
+| NOT | ! | Unary operator that changes a true value to false and a false value to true. | |
+| AND | && | Binary operator that is true only when both of its operands are true and is false in all other cases. | |
+| OR | || | Binary operator that is false only when both of its operands are false and is true in all other cases. | |
+
+# Logical Operators Truth Table:
+
+| | not | | | and | | | or | | |
+|---|---|---|---|---|---|---|---|---|---|
+| x | !x | x | y | x && y | x | y | x || y |
+| TRUE | | TRUE | TRUE | | TRUE | TRUE | |
+| | | TRUE | FALSE | | TRUE | FALSE | |
+| FALSE | | FALSE | TRUE | | FALSE | TRUE | |
+| | | FALSE | FALSE | | FALSE | FALSE | |
+
+# Evaluating Logical Expressions
+
++   - That is, evaluating expressions that contain logical operators.
++   - When evaluating mathematical expressions it would be the rare exception that you would not consider every operator.
++   - How can we evaluate an expression prior to evaluating every operator of the expression? With logical expressions there are only two possible results and we will see that when the result of the expression can be determined the evaluation will stop, or short-circuit, prior to evaluating every operator when doing so is unnecessary.

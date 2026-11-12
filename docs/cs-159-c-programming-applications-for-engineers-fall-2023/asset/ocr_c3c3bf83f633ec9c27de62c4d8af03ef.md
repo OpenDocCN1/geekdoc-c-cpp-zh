@@ -1,0 +1,5 @@
+# Bubble Sort
+
++   - Description of algorithm: Traverse the unsorted list and compare neighboring elements. Each time there is a pair of elements that are out of order, swap them.
+
+A pass constitutes comparing all neighboring elements in the unsorted list. In the selection sort on a single exchange was possible involving at most two elements, but in the bubble sort many swaps can occur on a single pass causing great change in the array.

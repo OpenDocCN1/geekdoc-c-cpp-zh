@@ -1,0 +1,27 @@
+# Constants - Literal Constants
+
+A literal constant is an unnamed value used to specify data. For example, we want to calculate the circumference of a circle:
+
+```
+circumference = 2 * 3.14159 * radius;
+```
+
++   The values 2 and 3.14159 are both literal constants in the above expression. We may often refer to such values as being "hard coded" when they are not represented by a symbol (next topic).
+
+# Constants - Symbolic/Defined Constants
+
+The #define preprocessor directive is used to create symbolic constants.
+
+![](bbox=[0.04, 0.29, 0.82, 0.45])
+
+When this statement appears among the preprocessor directives, all subsequent occurrences of `symbol` will be replaced by `replacement value` automatically before the program is compiled.
+
+> Note: The replacement will NOT take place inside of quotes.
+
+# Why use symbolic/defined constants?
+
++   It is difficult to determine what a literal constant value represents in an arithmetic expression when the program is long and includes many complex calculations. The use of constants helps document the program by giving meaning to operands in an expression.
+
++   Another great reason to use constants is to make your program more maintainable. For example, perhaps there are 100 students in a course. You might use the value 100 when loading data or determining the average, however, you might also use 100 to convert .853 to 85.3%. Now, what if the number of students changes to 105? You then need to search your program to determine which of those 100 values that occur in the program are related to the number of students in the course and change only those to 105.
+
+> Course Standard: The use of memory constants is discouraged. Why request memory for a value that will never change?

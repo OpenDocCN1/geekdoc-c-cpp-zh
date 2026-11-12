@@ -1,0 +1,138 @@
+
+## Modification of previous example to use Pass-by-address Technique
+
+```
+#include<stdio.h>
+
+void exchangeValues(int*, int*);
+
+int main(void)
+{
+int x = 3;
+int y = 5;
+
+printf("Before the function: x = %d y = %d\n", x, y);
+
+exchangeValues(&x, &y);
+
+printf("After the function: x = %d y = %d\n", x, y);
+
+return(0);
+}
+
+void exchangeValues(int *a, int *b)
+{
+int temp;
+
+printf("Before the exchange: a = %d b = %d\n", *a, *b);
+
+temp = *a;
+*a = *b;
+*b = temp;
+
+printf("After the exchange: a = %d b = %d\n", *a, *b);
+}
+```
+
+- Note: A function that makes use of pass by address does NOT have to be void, a value still can be returned through the use of the keyword return. Neither is such a function required to accept all parameters by address.
+
+## Describe the three assignment statement expressions between the two print statements in the `exchangeValues` function:
+
+- `temp = *a;` Assign the value in the location to which `a` refers to the `temp` variable.
+- `*a = *b;` Retrieve the value in the location which `b` refers and assign it to the location to which `a` refers.
+- `*b = temp;` Assign the value of `temp` to the location to which `b` refers.
+
+## When to use pass by address?
+
+When more than one value needs to be revised and that revision be retained in the calling function once the called function terminates.
+
+## AND
+
+The function continues to meet the definition of being functionally cohesive such that it completes only a single fundamental task.
+
+## Scope
+
+The scope of an object (think variable or function) is the region of the program for which it is defined and in which you can refer to it by its declared identifier. Can two or more objects have the same identifier? The answer is yes, if the **scope** of each object does not overlap! In many cases the reuse of an identifier with overlapping scope is a compiler error. In other situations it is a poor design choice.
+
+Two levels of scope are used in this course, **global** and **local**. All **functions** will be declared **globally** and all **variables** will be declared locally.
+
+## Structure Charts
+
+A **structure chart** is the primary design tool for a program. You should complete your structure chart for a program before you attempt to develop any flowcharts or write any code. A structure chart will represent each user-defined function that is present in your program and the order in which they are called. You can next create a flowchart for each function after your structure chart is complete.
+
+## Structure Chart Rules and Symbols
+
+The two symbols to the left are used to indicate function calls. The first symbol will represent a function called a single time in a program. The name of the function will go inside of the box.
+
+The second symbol contains a "cross-hatch" in the lower-right corner. All functions listed with such a cross-hatch indicate that it is called more than once in the program. To limit the number of sub-functions in a structure chart you only need to list the sub-functions called (if any) by this particular function one time (the first time it is used).
+
+## How to Read a Structure Chart
+
+Structure charts are read top-down and then left-right. The book is inconsistent when it comes to what should be in the top-most box, we will recommend that this box be a representation of the main function. A structure chart shows only the order in which user-defined functions are called and that data exchanged, it will contain no code!
+
+The following is a summary of the basic structure chart rules:
+
+- (1) Each rectangle in a structure chart represents a user-defined function. Standard C functions (`stdio.h`, `math.h`) are not included.
+- (2) The name in the rectangle should communicate the purpose of the function. It is the name that will be used in the program.
+- (3) The structure chart contains only the function flow, no other code is indicated.
+- (4) Common functions, those functions called more than once in a program, are indicated by a slash in the lower right corner of the rectangle. If such a function contains other function calls then the complete structure need be shown only once.
+
+You may find it helpful in certain circumstances to list the values going into and out from a user-defined function. The symbols on the left can be used to designate such values going in and out of a function. Variables sent to a function should be listed to the left of the line and those coming out of a function on the right.
+
+![](img/50641bd70680c74d7c49fe705f0d8389_73_0.png)
+
+## How does the design of the above structure chart represent the expectation regarding the role of the `main` function in a well-designed program?
+
+- In general, the structure charts are more horizontal (wide) than they are vertical (deep). This indicates that most, if not all, of the user-defined functions should be called from within the `main` function.
+- As mentioned previously, every user-defined function should be limited to completing a single task of the larger problem which your program is designed to solve.
+
+## Flawed Design #1:
+
+## Flawed Design #2:
+
+## Concerns with the above design:
+
+- Insufficient number of functions.
+- AND
+- One function to contain all tasks in the program.
+- The main function does nothing other than start the program.
+- OR
+- One function to contain a trivial task in the program.
+- The main function completes the remaining tasks.
+
+## Concerns with the above design:
+
+- The main function does nothing other than start the program.
+- Lack of understanding regarding either the return statement or passing parameter techniques.
+
+## Introduction to Problem Solving Method
+
+- 1. **Specify what is desired of the program.**
+  - In an introductory programming course the specifications are given to you by the instructor assigning the problem.
+  - In the real world you would meet with fellow engineers, scientists, supervisors, and/or clients to determine how and what the software must successfully accomplish.
+  - **Recommendation:** Get experience working in this area before you graduate from college. Try programs such as EPICS, ENTR, and professional experiences.
+
+- 2. **Analyze the problem.**
+  - Factor the tasks as specified by top-down design making use of tools such as **structure charts**.
+  - This step requires the development of the mathematical formulas necessary to solve the problem. Some formulas are very common such as determining the slope of a line, the distance between two points, the length of the hypotenuse of a right triangle, but other formulas are advanced and specific to your engineering or scientific discipline.
+  - Once you have determined the arithmetic expressions necessary to solve the problem, be mindful to consider potential errors that may arise. Examples include dividing by zero or dealing with negative values where such is impossible (number of people, certain measures of distance and time). **Through planning you begin to work out potential errors in your logic.**
+
+- 3. **Design the software solution.**
+  - The flow chart or pseudo-code representation of the algorithm is developed at this point in the process. Both flowcharting and pseudo-coding are techniques you can use to design your algorithm to solve the problem at hand.
+  - **Application:** When working with teams be sure to represent your logic visually so others can comprehend your thinking as you present an idea for a solution.
+  - As our ability to solve problems becomes more advanced be sure to design the solution to each task individually. When you have all of the tasks designed the work of implementing those tasks to create a final solution is much easier.
+
+- 4. **Translate the design into code.**
+  - Code only small portions of the solution, usually a single function at a time.
+  - Test each and every change you make!
+  - Never write an entire program prior to compiling and testing for the first time!
+  - **Benefit:** Investing time in the previous steps in the process can really make this step: (1) shorter in terms of time and (2) a lot less frustrating.
+
+- 5. **Test and debug the implementation.**
+  - When testing, be sure to develop test cases and expected output that go beyond those provided on the assignment.
+  - What tests have you run to ensure that your program handles all reasonable input?
+  - General cases, boundary cases, extreme/stress cases.
+
+- 6. **Refinement of the solution.**
+  - Congratulations, you have a solution! Now, review your solution and make sure it is efficient, well-designed, meets all requirements, produces no warnings or syntax errors, and satisfies all course documentation and programming standards.
+  - **Your first solution is rarely the best solution.** Make every effort to refine your algorithm so that it makes the best possible use of the limited resources of the computer.

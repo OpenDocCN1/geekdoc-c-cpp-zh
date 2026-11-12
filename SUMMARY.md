@@ -910,6 +910,7 @@
 +   [批判性游戏：激进的游戏设计](docs/critical-play-radical-game-design-the-mit-press/README.md)
 +   [跨平台游戏引擎开发：使用 C++ 和 SDL2 构建跨平台游戏引擎](docs/cross-platform-game-engine-development-learn-how-to-build-a-/README.md)
 +   [CryENGINE 游戏编程指南](docs/cryengine-game-programming-wit/README.md)
++   [CS 159 – C 语言编程（工程师的应用），2023 年秋季](docs/cs-159-c-programming-applications-for-engineers-fall-2023/README.md)
 +   [自底向上的计算机科学](docs/csbu/README.md)
 +   [CSS 核心指南 (Smashing eBook 系列 18)](docs/css-essentials-smashing-ebook-series-18/README.md)
 +   [Css3：入门指南](docs/css3-pocket-primer-computing/README.md)
