@@ -1,0 +1,15 @@
+# CUDA Hardware Overview
+
+# PC ARCHITECTURE
+
+Let's start by looking at the typical Core 2 architecture we still find today in many PCs and how it impacts our usage of GPU accelerators (Figure 3.1).
+
+Notice that all GPU devices are connected to the processor via the PCI-E bus. In this case we've assumed a PCI-E 2.0 specification bus, which is currently the fastest bus available, giving a transfer rate of 5 GB/s. PCI-E 3.0 has become available at the time of this writing and should significantly improve the bandwidth available.
+
+However, to get data from the processor, we need to go through the Northbridge device over the slow FSB (front-side bus). The FSB can run anything up to 1600 MHz clock rate, although in many designs it is much slower. This is typically only one-third of the clock rate of a fast processor.
+
+Memory is also accessed through the Northbridge, and peripherals through the Northbridge and Southbridge chipset. The Northbridge deals with all the high-speed components like memory, CPU, PCI-E bus connections, etc. The Southbridge chip deals with the slower devices such as hard disks, USB, keyboard, network connections, etc. Of course, it's quite possible to connect a hard-disk controller to the PCI-E connection, and in practice, this is the only true way of getting RAID high-speed data access on such a system.
+
+PCI-E (Peripheral Communications Interconnect Express) is an interesting bus as, unlike its predecessors, PCI (Peripheral Component Interconnect), it's based on guaranteed bandwidth. In the old PCI system each component could use the full bandwidth of the bus, but only one device at a time. Thus, the more cards you added, the less available bandwidth each card would receive. PCI-E solved this problem by the introduction of PCI-E lanes. These are high-speed serial links that can be combined together to form X1, X2, X4, X8, or X16 links. Most GPUs now use at least the PCI-E 2.0, X16 specification, as shown in Figure 3.1. With this setup, we have a 5 GB/s full-duplex bus, meaning we get the same upload and download speed, at the same time. Thus, we can transfer 5 GB/s to the card, while at the same time receiving 5 GB/s from the card. However, this does not mean we can transfer 10 GB/s to the card if we're not receiving any data (i.e., the bandwidth is not cumulative).
+
+In a typical supercomputer environment, or even in a desktop application, we are dealing with a large dataset. A supercomputer may deal with petabytes of data. A desktop PC may be dealing with as little as a several GB high-definition video. In both cases, there is considerable data to fetch from the attached peripherals. A single 100 MB/s hard disk will load 6 GB of data in one minute. At this rate it takes over two and a half hours to read the entire contents of a standard 1 TB disk.

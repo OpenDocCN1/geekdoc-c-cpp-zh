@@ -1,0 +1,3 @@
+![](bbox=[0.04, 0.06, 0.91, 0.6])
+
+The second exercise in part 1 of the BULLI consists of a Bull's Eye, which looks like a dartboard. Unlike a dartboard, it is further divided into the four domains of life that you just wrote about: work/education, relationships, personal growth/health, and leisure. Read through what you wrote about your values and put an X in each of the four domains to represent how well you live according to your values. Just like a dartboard, the closer to the center the better. Close marks mean you are living fully by

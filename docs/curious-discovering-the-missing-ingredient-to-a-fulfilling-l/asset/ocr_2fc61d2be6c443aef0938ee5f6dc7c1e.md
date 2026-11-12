@@ -1,0 +1,11 @@
+On the one hand, we are deciding whether someone is worthy of our time and energy when compared to all the other people we can be with at any given moment. On the other hand, other people are making the same decisions about us.
+
+From recent scientific discoveries, we can walk through some of the steps of this dance that triggers interest and excitement in others and ourselves.
+
+# Curiosity Acts as a Positive Spark in All Relationships
+
+We know that relationships are essential to well-being. And we're learning that curiosity propels us to connect with others so we can expand and grow. But we know less about how being a curious person is beneficial in creating healthy, meaningful relationships. Does it feel good to share your life with a very curious person, and if so, what is it that's desirable about them? I have devoted several years to conducting research to answer these questions.
+
+If being very curious improves social interactions, then it should be apparent to lovers, friends, and family. It should also be apparent to researchers who observe people talking behind a one-way mirror. I conducted some of the first studies on the social consequences of being curious. Strangers were brought into our lab to spend five minutes getting acquainted. Before these interactions, participants filled out questionnaires so we could rank them in order from least to most curious. What we found was that the more curious a person was, the more they enjoyed interacting with strangers and the closer they felt to them by the end. But the positive experience wasn't just "in their heads." The partners of the most curious people felt the same way, too.
+
+In looking for the traits that led to these beneficial exchanges, we found that curious people treat their partners as vast unknown territories to be explored, asking lots of questions, as they continually penetrate deeper into new terrain. The people who talked to very curious people appeared to enjoy being in the spotlight of this undivided attention.

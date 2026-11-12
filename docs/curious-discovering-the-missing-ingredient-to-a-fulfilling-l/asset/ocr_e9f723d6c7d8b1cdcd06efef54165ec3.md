@@ -1,0 +1,11 @@
+meaning, his purpose is central to his life space and he isn’t begging for vacation time. His purpose energizes him, creating room for family and long-standing passions for travel, cooking, wine, and triathlon workouts. Like Ray, we can expand the borders of our life and squeeze in more psychological and physical benefits when we find a match between our cherished values and our work.
+
+# Meaningful Work Benefits Many—Not One
+
+Given this talk of work as calling, you would think it only benefits the individual. Viewing work as meaningful benefits other people too. If you lose interest in your work, costly company expenses add up quickly. It might start with a few a few sick days and “mental-health” days and perhaps an argument or two that knocks down morale a few notches. It might escalate to gossip and complaint sessions, and finally, turnover. For the individual, it might have been a lot less stressful to have picked work that was a better fit. For the organization, all of that salary and training goes for naught as they have to find someone new and start all over again.
+
+# Meaningful Work Comes in All Shapes and Sizes
+
+If you are in a high-status field that requires a lot of education and training, or is highly respected by society, you are more likely to consider your work a calling. But this designation is not reserved for any particular occupation. Think about it. Somebody somewhere is lost in play doing what others are doing for pay. For example, compare going for a hike in the woods once a month versus leading scenic adventure expedition tours.
+
+Many of us feel tinges of envy and awe when we hear about “left-of-center” careers that also pay the bills. We wonder why our high-school guidance counselors forgot to tell us that we could produce documentaries of crocodiles and hippos fighting for supremacy in the lakes of Africa. Who knew that you could practice medicine on dangerous expeditions, providing high-altitude treatment to mountain climbers in the Himalayas or treating explorers plagued by aquatic creatures that leap into unsuspecting

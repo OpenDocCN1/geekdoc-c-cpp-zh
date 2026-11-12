@@ -1,0 +1,11 @@
+players standing on first base have a matter of seconds to decide whether to steal second base before the pitcher throws next).
+
+The difference between higher- and lower-performing athletes appears to be the amount of brain activity going on when they are doing nothing much at all. Lower-performing athletes show extremely active brains. This might sound good until you consider that the person with brain capacity to spare is in a better position to recognize what they are up against on the field, court, course, or track so that they can perform to the best of their ability. We need room for our brains to focus on what is happening in the present because no two athletic competitions are alike. Depending on the amount of rain on the soccer field, what we ate for breakfast, and how much we stretched before running, our body is going to work slightly differently at any other time—we are going to have to account for these unique circumstances to nail our best possible performance. Athletes who worry are not only performing worse, they are putting in more effort and don't have the energy left over to be interested and enjoy themselves (the fun part of being “in the zone” is gone). Whatever enticed them to play is being lost because no matter how you look at it, they are failing to reap the benefits.
+
+Nothing is unique to athletes, the same goes for workers, supervisors and managers, parents, friends and lovers, and so on. When people worry excessively, they are less flexible in their mindsets and show greater difficulty with back-and-forth shifts in thoughts, actions, and tasks (multi-tasking). For instance, a worried hiker is going to report less awareness of the scenic beauty and fewer minutes spent totally immersed (the joyous sense of oneness with the mountain).
+
+# Physically and Emotionally Drained for Whatever Comes Next
+
+Intense efforts to regulate anxiety exhaust mental and physical resources. Afterward, a person operates far below full power for any new challenges that arise.
+
+Let's suppose the boss tells you that you need to meet about something

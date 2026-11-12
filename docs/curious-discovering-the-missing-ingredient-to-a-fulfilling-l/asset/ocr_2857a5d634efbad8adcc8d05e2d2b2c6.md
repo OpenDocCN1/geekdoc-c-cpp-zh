@@ -1,0 +1,11 @@
+social exclusion hurt? The relationship between social and physical pain. Psychological Bulletin, 131, 202–223.; Leary, M. R., Springer, C., Negel, L., Ansell, E., & Evans, K. (1998). The causes, phenomenology, and consequences of hurt feelings. Journal of Personality and Social Psychology, 74, 1225–1237.; Reis, H. T., Sheldon, K. M., Gable, S. L., Roscoe, R., & Ryan, R. (2000). Daily well-being: The role of autonomy, competence, and relatedness. Personality and Social Psychology Bulletin, 26, 419–435.
+
+p. 130 THE BEST WAY TO EXPAND AND GROW IS TO ENTER CLOSE RELATIONSHIPS: Aron, A., & Aron, E. N. (1986). Love as expansion of self: Understanding attraction and satisfaction. New York: Hemisphere; Aron, A., McLaughlin-Volpe, T., Mashek, D., Lewandowski, G., Wright, S. C., & Aron, E. N. (2004). Including others in the self. European Review of Social Psychology, 15, 101–132.; Knee, C. R., Patrick, H., Victor, N. A., Nanayakkara, A., & Neighbors, C. (2002). Self-determination as growth motivation in romantic relationships. Personality and Social Psychology Bulletin, 28, 609–619.
+
+p. 132 AFTER FALLING IN LOVE: Aron, A., Paris, M., & Aron, E. N. (1995). Falling in love: Prospective studies of self-concept change. Journal of Personality and Social Psychology, 69, 1102–1112.
+
+p. 132 WHEN MARRIED PARTNERS TALK ABOUT THEIR RELATIONSHIP: Sillars, A., Shellen, W., McIntosh, A., & Pomegranate, M. (1997). Relational characteristics of language: Elaboration and differentiation in marital conversations. Western Journal of Communication, 61, 403–422.
+
+p. 132 AS A RESULT OF BEING IN A LASTING FRIENDSHIP WE CONSIDER MANY OF OUR FRIENDS’ QUALITIES, INTERESTS, AND VALUES TO BE PART OF US: Mashek, D., Aron, A., & Boncimino, M. (2003). Confusions of self with close others. Personality and Social Psychology Bulletin, 29, 382–392.
+
+p. 133 VISIBLE IN THE BRAIN: Aron, A., Fisher, H., Mashek, D. J., Strong, G., Li, H. F., & Brown, L. L. (2005). Reward, motivation and emotion systems associated with early-stage intense romantic love. An fMRI study. Journal of Neurophysiology, 94, 327–337.; Aron, A., Whitfield-Gabrieli, S. L., and Lichey, W. (2006). Whole brain correlations: Examining similarity across conditions of overall patterns of neural activation in fMRI. In S. S. Sivowlosky (Ed.),

@@ -1,0 +1,11 @@
+A profile of curiosity and joy is common. Consider a parent listening to a child enthusiastically describe a field trip, a teenager losing herself in dance to an unfamiliar song on the radio, or being immersed in a captivating conversation, book, movie, or game. Most positive experiences contain some degree of curiosity and exploration. It doesn’t matter whether it’s music, dancing, yoga, sports, leisure reading, movies, hiking, traveling, intimate conversation, good ol’ fashioned play, or being engrossed in an activity at home, work, on a plane, on a train, or anywhere.
+
+Emotional patterns of curiosity are visible in our brain circuitry. If we had access to the interior of our brains when we are consumed by joyous explorations, what we would see is an abundance of dopamine and opiate activity.
+
+# Curiosity Profile #2: Alone with Dopamine until Much Later
+
+But joy isn’t always part of the picture. Other feelings such as tension and frustration are often mixed in with our curiosity. We might agonize over gaps between what we know and don’t know. What’s that thing in my eye that is making me blink madly? Of all the cars in the parking lot, why do pigeons choose mine? We can see the distinctiveness of this emotional and motivational pattern of curiosity in the brain. The dopamine is there and the opiate activity arrives much later in the process (if at all).
+
+When our curiosity is sparked by a need to know something, the pleasure results from getting the answers and feeling a sense of completeness. Only after we fill the gap do we feel better, whether it’s feeling calm, less anxious, excited, or some other emotional blend. Just think of those rage-filled moments when you can’t get your computer to cooperate. You try to problem-solve, you stew as you wait on the phone for a computer technician, and neither of you can figure it out for several frustrating hours. You are interested in what the hell is going on, but I don’t need to tell you that joy is nowhere to be found. Satisfaction arrives, sometimes, when the problem is resolved.
+
+This is a pattern we find in all sorts of situations. Daters are curious

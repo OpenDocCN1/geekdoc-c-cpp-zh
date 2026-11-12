@@ -1,0 +1,5 @@
+they feel controlled by other people (administrative tasks, household chores, mandatory courses). Stumbles, set-backs, awkward moments, and feeling uncomfortable are part of the process. Persisting in the face of these obstacles is important.
+
+# Owning Moments
+
+We become accustomed to long-standing routines far too easily as we continue along the treadmill like proverbial lab rats, walking, running, eating, working, going to sleep, waking up, and doing it all again. The old adage to “know thyself” is useful, but far too often this is the only advice we get, leaving us to ask “okay, but now what?” Thankfully, a great deal of science has emerged to suggest several “interest enhancing” strategies to transform moments and create lasting interests. As shown in the last two chapters, with effort and intention, we can reclaim and energize seemingly mundane, boring, tedious, and repetitive day-to-day moments and ensure that the ultimate currency of energy is well spent. By doing so, we create value and meaning while navigating the terrain of our continually evolving, unique niche in this world.

@@ -1,0 +1,3959 @@
+- pgno: 0
+  md: '![](img/e2cb94e77057728e7ce105fa1f79ad61_0_0.png)
+
+
+    # INTRODUCTION TO LINEAR PROGRAMMING
+
+
+    +   ANDERSON | SWEENEY | WILLIAMS | CAMM | COCHRAN | FRY | OHLMANN'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: '![](img/e2cb94e77057728e7ce105fa1f79ad61_1_0.png)
+
+
+    Digitized by the Internet Archive in 2023 with funding from Kahle/Austin Foundation'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '# Introduction to Linear Programming
+
+
+    Anderson | Sweeney | Williams | Camm | Cochran | Fry | Ohlmann'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Quantitative Methods for Business, Twelfth Edition
+
+    David R. Anderson / Dennis J. Sweeney / Thomas A. Williams / Jeffrey D. Camm /
+    James J. Cochran / Michael J. Fry / Jeffrey W. Ohlmann
+
+    © 2013, 2010 Cengage Learning. All rights reserved.
+
+
+    ALL RIGHTS RESERVED. No part of this work covered by the copyright herein may
+    be reproduced, transmitted, stored or used in any form or by any means graphic,
+    electronic, or mechanical, including but not limited to photocopying, recording,
+    scanning, digitizing, taping, Web distribution, information networks, or information
+    storage and retrieval systems, except as permitted under Section 107 or 108 of
+    the 1976 United States Copyright Act, without the prior written permission of
+    the publisher.
+
+
+    For product information and technology assistance, contact us at Cengage Learning
+    Customer & Sales Support, 1-800-354-9706
+
+    For permission to use material from this text or product, submit all requests
+    online at cengage.com/permissions
+
+    Further permissions questions can be emailed to permissionrequest@cengage.com
+
+
+    This book contains select works from existing Cengage Learning resources and was
+    produced by Cengage Learning Custom Solutions for collegiate use. As such, those
+    adopting and/or contributing to this work are responsible for editorial content
+    accuracy, continuity, and completeness.
+
+
+    Compilation © 2015 Cengage Learning
+
+
+    ISBN: 978-1-337-05166-8
+
+
+    WCN: 01-100-101
+
+
+    Cengage Learning
+
+    20 Channel Center Street
+
+    Boston, MA 02210
+
+    USA
+
+
+    Cengage Learning is a leading provider of customized learning solutions with office
+    locations around the globe, including Singapore, the United Kingdom, Australia,
+    Mexico, Brazil, and Japan. Locate your local office at: www.international.cengage.com/region
+
+
+    Cengage Learning products are represented in Canada by Nelson Education, Ltd.
+
+
+    For your lifelong learning solutions, visit www.cengage.com/custom. Visit our
+    corporate website at www.cengage.com.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "# Introduction to Linear Programming\n\n# CONTENTS\n\n+   - 7.1 A SIMPLE MAXIMIZATION\
+    \ PROBLEM\n+     Problem Formulation\n+     Mathematical Model for the\n+    \
+    \ RMC Problem\n+   \n+   - 7.2 GRAPHICAL SOLUTION PROCEDURE\n+     A Note on Graphing\
+    \ Lines\n+     Summary of the Graphical\n+     Solution Procedure for\n+     Maximization\
+    \ Problems\n+     Slack Variables\n+   \n+   - 7.3 EXTREME POINTS AND THE OPTIMAL\
+    \ SOLUTION\n+   \n+   - 7.4 COMPUTER SOLUTION OF THE RMC PROBLEM\n+     Interpretation\
+    \ of Answer Report\n\n+   - 7.5 A SIMPLE MINIMIZATION PROBLEM\n+     Summary of\
+    \ the Graphical\n+     Solution Procedure for\n+     Minimization Problems\n+\
+    \     Surplus Variables\n+     Computer Solution of the M&D\n+     Chemicals Problem\n\
+    +   \n+   - 7.6 SPECIAL CASES\n+     Alternative Optimal Solutions\n+     Infeasibility\n\
+    +     Unbounded\n+   \n+   - 7.7 GENERAL LINEAR PROGRAMMING NOTATION"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "Linear programming is a problem-solving approach developed to help managers\
+    \ make decisions. Numerous applications of linear programming can be found in\
+    \ today's competitive business environment. For instance, IBM uses linear programming\
+    \ to perform capacity planning and to make capacity investment decisions for its\
+    \ semiconductor manufacturing operations. GE Capital uses linear programming to\
+    \ help determine optimal lease structuring. Marathon Oil Company uses linear programming\
+    \ for gasoline blending and to evaluate the economics of a new terminal or pipeline.\
+    \ The Q.M. in Action, Timber Harvesting Model at MeadWestvaco Corporation, provides\
+    \ another example of the use of linear programming. Later in the chapter another\
+    \ Q.M. in Action illustrates how the United States Navy uses linear programming\
+    \ to reduce fuel consumption for its ships.\n\nTo illustrate some of the properties\
+    \ that all linear programming problems have in common, consider the following\
+    \ typical applications:\n\n+   1. A manufacturer wants to develop a production\
+    \ schedule and an inventory policy that will satisfy sales demand in future periods.\
+    \ Ideally, the schedule and policy will enable the company to satisfy demand and\
+    \ at the same time minimize the total production and inventory costs.\n+   \n\
+    +   2. A financial analyst must select an investment portfolio from a variety\
+    \ of stock and bond investment alternatives. The analyst would like to establish\
+    \ the portfolio that maximizes the return on investment.\n+   \n+   3. A marketing\
+    \ manager wants to determine how best to allocate a fixed advertising budget among\
+    \ alternative advertising media such as radio, television, newspaper, and magazine.\
+    \ The manager would like to determine the media mix that maximizes advertising\
+    \ effectiveness.\n+   \n+   4. A company has warehouses in a number of locations.\
+    \ Given specific customer demands, the company would like to determine how much\
+    \ each warehouse should ship to each customer so that total transportation costs\
+    \ are minimized.\n\nThese examples are only a few of the situations in which linear\
+    \ programming has been used successfully, but they illustrate the diversity of\
+    \ linear programming applications. A close scrutiny reveals one basic property\
+    \ they all have in common. In each example, we were concerned with maximizing\
+    \ or minimizing some quantity. In example 1, the manufacturer wanted to minimize\
+    \ costs; in example 2, the financial analyst wanted to maximize return on investment;\
+    \ in example 3, the marketing manager wanted to maximize advertising effectiveness;\
+    \ and in example 4, the company wanted to minimize total transportation costs.\
+    \ In all linear programming problems, the maximization or minimization of some\
+    \ quantity is the objective.\n\n# Q.M. in ACTION\n\n# TIMBER HARVESTING MODEL\
+    \ AT MEADWESTVACO CORPORATION*\n\nMeadWestvaco Corporation is a major producer\
+    \ of coated papers for periodicals, books, commercial printing, and business forms.\
+    \ The company also produces pulp and lumber, designs and manufactures packaging\
+    \ systems for beverage and other consumables markets,\n\nand is a world leader\
+    \ in the production of coated board and shipping containers. Quantitative analyses\
+    \ at MeadWestvaco are developed and implemented by the company's Decision Analysis\
+    \ Department. The department assists decision makers by providing them with analytical\
+    \ tools of quantitative methods as well as personal analysis and recommendations.\n\
+    \n*Based on information provided by Dr. Edward P. Winkofsky of MeadWestvaco Corporation.\n\
+    \n(continued)"
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'MeadWestvaco uses quantitative models to assist with the long-range management
+    of the company''s timberland. Through the use of large-scale linear programs,
+    timber harvesting plans are developed to cover a substantial time horizon. These
+    models consider wood market conditions, mill pulpwood requirements, harvesting
+    capacities, and general forest management principles. Within these constraints,
+    the model arrives at an optimal harvesting and purchasing schedule based on discounted
+    cash flow. Alternative schedules reflect
+
+
+    changes in the various assumptions concerning forest growth, wood availability,
+    and general economic conditions. Quantitative methods are also used in the development
+    of the inputs for the linear programming models. Timber prices and supplies as
+    well as mill requirements must be forecast over the time horizon, and advanced
+    sampling techniques are used to evaluate land holdings and to project forest growth.
+    The harvest schedule is then developed using quantitative methods.
+
+
+    Linear programming was initially referred to as “programming in a linear structure.”
+    In 1948 Tjalling Koopmans suggested to George Dantzig that the name was much too
+    long; Koopman’s suggestion was to shorten it to linear programming. George Dantzig
+    agreed and the field we now know as linear programming was named.
+
+
+    All linear programming problems also have a second property: restrictions or constraints
+    that limit the degree to which the objective can be pursued. In the first example,
+    the manufacturer is restricted by constraints requiring product demand to be satisfied
+    and by constraints limiting production capacity. The financial analyst’s portfolio
+    problem is constrained by the total amount of investment funds available and the
+    maximum amounts that can be invested in each stock or bond. The marketing manager’s
+    media selection decision is constrained by a fixed advertising budget and the
+    availability of the various media. In the transportation problem, the minimum-cost
+    shipping schedule is constrained by the supply of product available at each warehouse.
+    Thus, constraints are another general feature of every linear programming problem.
+
+
+    # 7.1 A Simple Maximization Problem
+
+
+    RMC, Inc., is a small firm that produces a variety of chemical-based products.
+    In a particular production process, three raw materials are used to produce two
+    products: a fuel additive and a solvent base. The fuel additive is sold to oil
+    companies and is used in the production of gasoline and related fuels. The solvent
+    base is sold to a variety of chemical firms and is used in both home and industrial
+    cleaning products. The three raw materials are blended to form the fuel additive
+    and solvent base as indicated in Table 7.1, which shows that a ton of fuel additive
+    is a mixture of 0.4 tons of material 1 and 0.6 tons of material 3. A ton of solvent
+    base is a mixture of 0.5 tons of material 1, 0.2 tons of material 2, and 0.3 tons
+    of material 3.
+
+
+    | | Fuel Additive | Solvent Base |
+
+    |---|---|---|
+
+    | Material 1 | 0.4 | 0.5 |
+
+    | Material 2 | | 0.2 |
+
+    | Material 3 | 0.6 | 0.3 |'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'RMC''s production is constrained by a limited availability of the three raw
+    materials. For the current production period, RMC has available the following
+    quantities of each raw material:
+
+
+    | Material | Amount Available for Production |
+
+    |---|---|
+
+    | Material 1 | 20 tons |
+
+    | Material 2 | 5 tons |
+
+    | Material 3 | 21 tons |
+
+
+    It is important to understand that we are maximizing profit contribution, not
+    profit. Overhead and other shared costs cannot be deducted before arriving at
+    a profit figure.
+
+
+    Because of spoilage and the nature of the production process, any materials not
+    used for current production are useless and must be discarded.
+
+
+    The accounting department analyzed the production figures, assigned all relevant
+    costs, and arrived at prices for both products that will result in a profit contribution
+    of $40 for every ton of fuel additive produced and $30 for every ton of solvent
+    base produced. Let us now use linear programming to determine the number of tons
+    of fuel additive and the number of tons of solvent base to produce in order to
+    maximize total profit contribution.
+
+
+    # Problem Formulation
+
+
+    Problem formulation is the process of translating a verbal statement of a problem
+    into a mathematical statement. The mathematical statement of the problem is referred
+    to as a mathematical model. Developing an appropriate mathematical model is an
+    art that can only be mastered with practice and experience. Even though every
+    problem has at least some unique features, most problems also have many common
+    or similar features. As a result, some general guidelines for developing a mathematical
+    model can be helpful. We will illustrate these guidelines by developing a mathematical
+    model for the RMC problem.
+
+
+    # Understand the Problem Thoroughly
+
+
+    The RMC problem is relatively easy to understand. RMC wants to determine how much
+    of each product to produce in order to maximize the total contribution to profit.
+    The number of tons available for the three materials that are required to produce
+    the two products will limit the number of tons of each product that can be produced.
+    More complex problems will require more work in order to understand the problem.
+    However, understanding the problem thoroughly is the first step in developing
+    any mathematical model.
+
+
+    # Describe the Objective
+
+
+    RMC''s objective is to maximize the total contribution to profit.
+
+
+    # Describe Each Constraint
+
+
+    Three constraints limit the number of tons of fuel additive and the number of
+    tons of solvent base that can be produced.
+
+
+    # Constraint 1: The number of tons of material 1 used must be less than or equal
+    to the 20 tons available.
+
+
+    # Constraint 2: The number of tons of material 2 used must be less than or equal
+    to the 5 tons available.
+
+
+    # Constraint 3: The number of tons of material 3 used must be less than or equal
+    to the 21 tons available.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Define the Decision Variables The decision variables are the controllable inputs
+    in the problem. For the RMC problem the two decision variables are (1) the number
+    of tons of fuel additive produced, and (2) the number of tons of solvent base
+    produced. In developing the mathematical model for the RMC problem, we will use
+    the following notation for the decision variables:
+
+
+    F = number of tons of fuel additive
+
+    S = number of tons of solvent base
+
+
+    # Write the Objective in Terms of the Decision Variables
+
+
+    RMC''s profit contribution comes from the production of F tons of fuel additive
+    and S tons of solvent base. Because RMC makes $40 for every ton of fuel additive
+    produced and $30 for every ton of solvent base produced, the company will make
+    $40F from the production of the fuel additive and $30S from the production of
+    the solvent base. Thus,
+
+
+    Total profit contribution = 40F + 30S
+
+
+    Because the objective—maximize total profit contribution—is a function of the
+    decision variables F and S, we refer to 40F + 30S as the objective function. Using
+    “Max” as an abbreviation for maximize, we can write RMC’s objective function as
+    follows:
+
+
+    Max 40F + 30S (7.1)
+
+
+    # Write the Constraints in Terms of the Decision Variables
+
+
+    # Constraint 1:
+
+
+    Tons of material 1 used ≤ Tons of material 1 available
+
+
+    Every ton of fuel additive that RMC produces will use 0.4 tons of material 1.
+    Thus, 0.4F tons of material 1 is used to produce F tons of fuel additive. Similarly,
+    every ton of solvent base that RMC produces will use 0.5 tons of material 1. Thus,
+    0.5S tons of material 1 is used to produce S tons of solvent base. Therefore,
+    the number of tons of material 1 used to produce F tons of fuel additive and S
+    tons of solvent base is
+
+
+    Tons of material 1 used = 0.4F + 0.5S
+
+
+    Because 20 tons of material 1 are available for use in production, the mathematical
+    statement of constraint 1 is
+
+
+    0.4F + 0.5S ≤ 20 (7.2)
+
+
+    # Constraint 2:
+
+
+    Tons of material 2 used ≤ Tons of material 2 available
+
+
+    Fuel additive does not use material 2. However, every ton of solvent base that
+    RMC produces will use 0.2 tons of material 2. Thus, 0.2S tons of material 2 is
+    used to produce S tons of solvent base. Therefore, the number of tons of material
+    2 used to produce F tons of fuel additive and S tons of solvent base is
+
+
+    Tons of material 2 used = 0.2S'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'Because 5 tons of material 2 are available for production, the mathematical
+    statement of constraint 2 is
+
+
+    ```
+
+    0.2S ≤ 5
+
+    ```
+
+
+    # Constraint 3:
+
+
+    Tons of material 3 used ≤ Tons of material 3 available
+
+
+    Every ton of fuel additive RMC produces will use 0.6 tons of material 3. Thus,
+    0.6F tons of material 1 is used to produce F tons of fuel additive. Similarly,
+    every ton of solvent base RMC produces will use 0.3 tons of material 3. Thus,
+    0.3S tons of material 1 is used to produce S tons of solvent base. Therefore,
+    the number of tons of material 3 used to produce F tons of fuel additive and S
+    tons of solvent base is
+
+
+    ```
+
+    Tons of material 3 used = 0.6F + 0.3S
+
+    ```
+
+
+    Because 21 tons of material 3 are available for production, the mathematical statement
+    of constraint 3 is
+
+
+    ```
+
+    0.6F + 0.3S ≤ 21
+
+    ```
+
+
+    # Add the Nonnegativity Constraints
+
+
+    RMC cannot produce a negative number of tons of fuel additive or a negative number
+    of tons of solvent base. Therefore, nonnegativity constraints must be added to
+    prevent the decision variables F and S from having negative values. These nonnegativity
+    constraints are
+
+
+    ```
+
+    F ≥ 0 and S ≥ 0
+
+    ```
+
+
+    Nonnegativity constraints are a general feature of many linear programming problems
+    and may be written in the abbreviated form:
+
+
+    ```
+
+    F, S ≥ 0
+
+    ```
+
+
+    # Mathematical Model for the RMC Problem
+
+
+    Problem formulation is now complete. We have succeeded in translating the verbal
+    statement of the RMC problem into the following mathematical model:
+
+
+    ```
+
+    Max 40F + 30S
+
+    Subject to (s.t.)
+
+    0.4F + 0.55S ≤ 20 Material 1
+
+    0.2S ≤ 5 Material 2
+
+    0.6F + 0.3S ≤ 21 Material 3
+
+    F, S ≥ 0
+
+    ```
+
+
+    Our job now is to find the product mix (i.e., the combination of F and S) that
+    satisfies all the constraints and, at the same time, yields a maximum value for
+    the objective function. Once these values of F and S are calculated, we will have
+    found the optimal solution to the problem. This mathematical model of the RMC
+    problem is a linear program. The RMC problem has an objective and constraints
+    that, as we said earlier, are common properties of all'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'linear programs. But what is the special feature of this mathematical model
+    that makes it a linear program? The special feature that makes it a linear program
+    is that the objective function and all constraint functions (the left-hand sides
+    of the constraint inequalities) are linear functions of the decision variables.
+
+
+    Mathematical functions in which each variable appears in a separate term and is
+    raised to the first power are called linear functions. The objective function
+    (40F + 30S) is linear because each decision variable appears in a separate term
+    and has an exponent of 1. The amount of material 1 used (0.4F + 0.5S) is also
+    a linear function of the decision variables for the same reason. Similarly, the
+    functions on the left-hand side of the material 2 and material 3 constraint inequalities
+    (the constraint functions) are also linear functions. Thus, the mathematical formulation
+    is referred to as a linear program.
+
+
+    Linear programming has nothing to do with computer programming. The use of the
+    word programming here means “choosing a course of action.” Linear programming
+    involves choosing a course of action when the mathematical model of the problem
+    contains only linear functions.
+
+
+    Try Problem 1 to test your ability to recognize the types of mathematical relationships
+    that can be found in a linear program.
+
+
+    # NOTES AND COMMENTS
+
+
+    +   1. The three assumptions necessary for a linear programming model to be appropriate
+    are proportionality, additivity, and divisibility. Proportionality means that
+    the contribution to the objective function and the amount of resources used in
+    each constraint are proportional to the value of each decision variable. Additivity
+    means that the value of the objective function and the total resources used could
+    be found by summing the objective function contribution and the resources used
+    for all decision variables. Divisibility means that the decision variables are
+    continuous. The divisibility assumption plus the nonnegativity constraints mean
+    that decision variables can take on any value greater than or equal to zero.
+
+
+    +   2. Quantitative analysts formulate and solve a variety of mathematical models
+    that contain an objective function and a set of constraints. Models of this type
+    are referred to as mathematical programming models. Linear programming models
+    are a special type of mathematical programming model in that the objective function
+    and all constraint functions are linear.
+
+
+    # 7.2 Graphical Solution Procedure
+
+
+    A linear programming problem involving only two decision variables can be solved
+    using a graphical solution procedure. Let us begin the graphical solution procedure
+    by developing a graph that displays the possible solutions (F and S values) for
+    the RMC problem. The graph in Figure 7.1 has values of F on the horizontal axis
+    and values of S on the vertical axis. Any point on the graph can be identified
+    by its F and S values, which indicate the position of the point along the horizontal
+    and vertical axes, respectively. Thus, every point on the graph corresponds to
+    a possible solution. The solution of F = 0 and S = 0 is referred to as the origin.
+    Because both F and S must be nonnegative, the graph in Figure 7.1 only displays
+    solutions where F ≥ 0 and S ≥ 0.
+
+
+    Earlier we determined that the inequality representing the material 1 constraint
+    was
+
+
+    ```
+
+    0.4F + 0.5S ≤ 20
+
+    ```
+
+
+    To show all solutions that satisfy this relationship, we start by graphing the
+    line corresponding to the equation
+
+
+    ```
+
+    0.4F + 0.5S = 20
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '# FIGURE 7.1 GRAPH SHOWING TWO SOLUTIONS FOR THE TWO-VARIABLE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_11_0.png)
+
+
+    We graph this equation by identifying two points that satisfy this equation and
+    then drawing a line through the points. Setting F = 0 and solving for S gives
+    0.5S = 20, or S = 40; hence the solution (F = 0, S = 40) satisfies the preceding
+    equation. To find a second solution satisfying this equation, we set S = 0 and
+    solve for F. Doing so, we obtain 0.4F = 20, or F = 50. Thus, a second solution
+    satisfying the equation is (F = 50, S = 0). With these two points, we can now
+    graph the line. This line, called the material 1 constraint line, is shown in
+    Figure 7.2.
+
+
+    Recall that the inequality representing the material 1 constraint is 0.4F + 0.5S
+    <= 20
+
+
+    Can you identify all the solutions that satisfy this constraint? First, note that
+    any point on the line 0.4F + 0.5S = 20 must satisfy the constraint. But where
+    are the solutions satisfying 0.4F + 0.5S < 20? Consider two solutions (F = 10,
+    S = 10) and (F = 40, S = 30). Figure 7.2 shows that the first solution is on the
+    same side of the constraint line as the origin while the second solution is on
+    the side of the constraint line opposite of the origin. Which of these solutions
+    satisfies the material 1 constraint? For (F = 10, S = 10) we have
+
+
+    0.4F + 0.5S = 0.4(10) + 0.5(10) = 9
+
+
+    Because 9 tons is less than the 20 tons of material 1 available, the F = 10, S
+    = 10 solution satisfies the constraint. For F = 40 and S = 30 we have
+
+
+    0.4F + 0.5S = 0.4(40) + 0.5(30) = 31'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# FIGURE 7.2 MATERIAL 1 CONSTRAINT LINE
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_12_0.png)
+
+
+    The 31 tons is greater than the 20 tons available, so the F = 40, S = 30 solution
+    does not satisfy the constraint.
+
+
+    You should now be able to graph a constraint line and find the solution points
+    that satisfy the constraint. Try Problem 2.
+
+
+    If a particular solution satisfies the constraint, all other solutions on the
+    same side of the constraint line will also satisfy the constraint. If a particular
+    solution does not satisfy the constraint, all other solutions on the same side
+    of the constraint line will not satisfy the constraint. Thus, you need to evaluate
+    only one solution to determine which side of a constraint line provides solutions
+    that will satisfy the constraint. The shaded area in Figure 7.3 shows all the
+    solutions that satisfy the material 1 constraint.
+
+
+    Next let us identify all solutions that satisfy the material 2 constraint:
+
+
+    0.2S <= 5
+
+
+    We start by drawing the constraint line corresponding to the equation 0.2S = 5.
+    Because this equation is equivalent to the equation S = 25, we simply draw a line
+    whose S value is 25 for every value of F; this line is parallel to and 25 units
+    above the horizontal axis. Figure 7.4 shows the line corresponding to the material
+    2 constraint. Following the approach we used for the material 1 constraint, we
+    realize that only solutions on or below the line will satisfy the material 2 constraint.
+    Thus, in Figure 7.4 the shaded area corresponds to the solutions that satisfy
+    the material 2 constraint.
+
+
+    Similarly, we can determine the solutions that satisfy the material 3 constraint.
+    Figure 7.5 shows the result. For practice, try to graph the feasible solutions
+    that satisfy the material 3 constraint and determine whether your result agrees
+    with that shown in Figure 7.5.
+
+
+    We now have three separate graphs showing the solutions that satisfy each of the
+    three constraints. In a linear programming problem, we need to identify the solutions
+    that satisfy'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '# FIGURE 7.3 SOLUTIONS THAT SATISFY THE MATERIAL 1 CONSTRAINT
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_13_0.png)
+
+
+    # FIGURE 7.4 SOLUTIONS THAT SATISFY THE MATERIAL 2 CONSTRAINT
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_13_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# FIGURE 7.5 SOLUTIONS THAT SATISFY THE MATERIAL 3 CONSTRAINT
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_14_0.png)
+
+
+    all the constraints simultaneously. To find these solutions, we can draw the three
+    constraints on one graph and observe the region containing the points that do
+    in fact satisfy all the constraints simultaneously.
+
+
+    The graphs in Figures 7.3, 7.4, and 7.5 can be superimposed to obtain one graph
+    with all three constraints. Figure 7.6 shows this combined constraint graph. The
+    shaded region in this figure includes every solution point that satisfies all
+    the constraints simultaneously. Because solutions that satisfy all the constraints
+    simultaneously are termed feasible solutions, the shaded region is called the
+    feasible solution region, or simply the feasible region. Any point on the boundary
+    of the feasible region, or within the feasible region, is a feasible solution
+    point for the linear programming problem.
+
+
+    Can you now find the feasible region given several constraints? Try Problem 7.
+
+
+    Now that we have identified the feasible region, we are ready to proceed with
+    the graphical solution method and find the optimal solution to the RMC problem.
+    Recall that the optimal solution for a linear programming problem is the feasible
+    solution that provides the best possible value of the objective function. Let
+    us start the optimizing step of the graphical solution procedure by redrawing
+    the feasible region on a separate graph. Figure 7.7 shows the graph.
+
+
+    One approach to finding the optimal solution would be to evaluate the objective
+    function for each feasible solution; the optimal solution would then be the one
+    yielding the'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '# FIGURE 7.6 FEASIBLE REGION FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_15_0.png)
+
+
+    largest value. The difficulty with this approach is that the infinite number of
+    feasible solutions makes evaluating all feasible solutions impossible. Hence,
+    this trial-and-error procedure cannot be used to identify the optimal solution.
+
+
+    Rather than trying to compute the profit contribution for each feasible solution,
+    we select an arbitrary value for profit contribution and identify all the feasible
+    solutions that yield the selected value. For example, what feasible solutions
+    provide a profit contribution of $240? These values are given by the values of
+    F and S in the feasible region that will make the objective function
+
+
+    ```
+
+    40F + 30S = 240
+
+    ```
+
+
+    This expression is simply the equation of a line. Thus all feasible solutions
+    (F, S) yielding a profit contribution of $240 must be on the line. We learned
+    earlier in this section how to graph a constraint line. The procedure for graphing
+    the profit or objective function line is the same. Letting F = 0, we see that
+    S must be 8; thus the solution point (F = 0, S = 8) is on the line. Similarly,
+    by letting S = 0 we see that the solution point (F = 6, S = 0) is also on the
+    line. Drawing the line through these two points identifies all the solutions that
+    have a profit contribution of $240. A graph of this profit line is presented in
+    Figure 7.8. The graph shows that an infinite number of feasible production combinations
+    will provide a $240 profit contribution.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: '# FIGURE 7.7 FEASIBLE REGION FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_16_0.png)
+
+
+    # FIGURE 7.8 $240 PROFIT LINE FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_16_1.png)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'The objective is to find the feasible solution yielding the highest profit
+    contribution, so we proceed by selecting higher profit contributions and finding
+    the solutions that yield the stated values. For example, what solutions provide
+    a profit contribution of $720? What solutions provide a profit contribution of
+    $1200? To answer these questions, we must find the F and S values that are on
+    the profit lines:
+
+
+    40F + 30S = 720 and 40F + 30S = 1200
+
+
+    Using the previous procedure for graphing profit and constraint lines, we graphed
+    the $720 and $1200 profit lines presented in Figure 7.9. Not all solution points
+    on the $1200 profit line are in the feasible region, but at least some points
+    on the line are; thus, we can obtain a feasible solution that provides a $1200
+    profit contribution.
+
+
+    Can we find a feasible solution yielding an even higher profit contribution? Look
+    at Figure 7.9 and make some general observations about the profit lines. You should
+    be able to identify the following properties: (1) The profit lines are parallel
+    to each other, and (2) profit lines with higher profit contributions are farther
+    from the origin.
+
+
+    Because the profit lines are parallel and higher profit lines are farther from
+    the origin, we can obtain solutions that yield increasingly higher values for
+    the objective function by continuing to move the profit line farther from the
+    origin but keeping it parallel to the other profit lines. However, at some point
+    any further outward movement will place the profit line entirely outside the feasible
+    region. Because points outside the feasible region are unacceptable, the point
+    in the feasible region that lies on the highest profit line is an optimal solution
+    to the linear program.
+
+
+    You should now be able to identify the optimal solution point for the RMC problem.
+    Use a ruler and move the profit line as far from the origin as you can. What is
+    the last point in the feasible region? This point, which is the optimal solution,
+    is shown graphically in Figure 7.10. The optimal values for the decision variables
+    are the F and S values at this point.
+
+
+    # FIGURE 7.9 SELECTED PROFIT LINES FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_17_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '# FIGURE 7.10 OPTIMAL SOLUTION FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_18_0.png)
+
+
+    Depending on the accuracy of your graph, you may or may not be able to determine
+    the exact optimal values of F and S directly from the graph. However, refer to
+    Figure 7.6 and note that the optimal solution point for the RMC example is at
+    the intersection of the material 1 and material 3 constraint lines. That is, the
+    optimal solution is on both the material 1 constraint line,
+
+
+    0.4F + 0.5S = 20 (7.6)
+
+
+    and the material 3 constraint line,
+
+
+    0.6F + 0.3S = 21 (7.7)
+
+
+    Thus, the values of the decision variables F and S must satisfy both equations
+    (7.6) and (7.7) simultaneously. Using (7.6) and solving for F gives
+
+
+    0.4F = 20 - 0.5S
+
+
+    or
+
+
+    F = 50 - 1.25S (7.8)
+
+
+    Substituting this expression for F into equation (7.7) and solving for S yields
+
+
+    0.6(50 - 1.25S) + 0.3S = 21
+
+    30 - 0.75S + 0.3S = 21
+
+    -0.45S = -9
+
+    S = 20'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Substituting S = 20 in equation (7.8) and solving for F provides
+
+
+    ```
+
+    F = 50 - 1.25(20)
+
+    = 50 - 25 = 25
+
+    ```
+
+
+    Although the optimal solution to the RMC problem consists of integer values for
+    the decision variables, this result will not always be the case.
+
+
+    Thus, the exact location of the optimal solution point is F = 25 and S = 20. This
+    solution point provides the optimal production quantities for RMC at 25 tons of
+    fuel additive and 20 tons of solvent base and yields a profit contribution of
+    40(25) + 30(20) = $1600.
+
+
+    For a linear programming problem with two decision variables, you can determine
+    the exact values of the decision variables at the optimal solution by first using
+    the graphical procedure to identify the optimal solution point and then solving
+    the two simultaneous equations associated with this point.
+
+
+    # A Note on Graphing Lines
+
+
+    An important aspect of the graphical method is the ability to graph lines showing
+    the constraints and the objective function of the linear program. The procedure
+    we used for graphing the equation of a line is to find any two points satisfying
+    the equation and then draw the line through the two points. For the RMC constraints,
+    the two points were easily found by setting F = 0 and solving the constraint equation
+    for S. Then we set S = 0 and solved for F. For the material 1 constraint line
+
+
+    ```
+
+    0.4F + 0.5S = 20
+
+    ```
+
+
+    Try Problem 10 to test your ability to use the graphical solution procedure to
+    identify the optimal solution and find the exact values of the decision variables
+    at the optimal solution.
+
+
+    this procedure identified the two points (F = 0, S = 40) and (F = 50, S = 0).
+    The material 1 constraint line was then graphed by drawing a line through these
+    two points.
+
+
+    All constraints and objective function lines in two-variable linear programs can
+    be graphed if two points on the line can be identified. However, finding the two
+    points on the line is not always as easy as shown in the RMC problem. For example,
+    suppose a company manufactures two models of a small hand-held computer: the Professional
+    (P) and the Assistant (A). Management needs 50 units of the Professional model
+    for its own sales force and expects sales of the remaining Professionals to be
+    less than or equal to 50% of the sales of the Assistant. A constraint enforcing
+    this requirement is
+
+
+    ```
+
+    P - 50 <= 0.5A
+
+    ```
+
+
+    or
+
+
+    ```
+
+    P - 0.5A <= 50
+
+    ```
+
+
+    Using the equality form of the constraint and setting P = 0, we find that the
+    point (P = 0, A = -100) is on the constraint line. Setting A = 0, we find a second
+    point (P = 50, A = 0) on the constraint line. If we have drawn only the nonnegative
+    (P >= 0, A >= 0) portion of the graph, the first point (P = 0, A = -100) cannot
+    be plotted because A = -100 is not on the graph. Whenever we have two points on
+    the line, but one or both of the points cannot be plotted in the nonnegative portion
+    of the graph, the simplest approach is to enlarge the graph. In this example,
+    the point (P = 0, A = -100) can be plotted by extending the graph to include the
+    negative A axis. Once both points satisfying the constraint equation have been
+    located, the line can be drawn. The constraint line and the solutions that satisfy
+    the constraint P - 0.5A <= 50 are shown in Figure 7.11.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '# FIGURE 7.11 SOLUTIONS THAT SATISFY THE CONSTRAINT P – 0.5A ≤ 50
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_20_0.png)
+
+
+    As another example, consider a problem involving two decision variables, R and
+    T. Suppose that the number of units of R produced has to be at least equal to
+    the number of units of T produced. A constraint enforcing this requirement is
+    R ≥ T or R - T ≥ 0
+
+
+    Can you graph a constraint line when the origin is on the constraint line? Try
+    Problem 5.
+
+
+    To find all solutions satisfying the constraint as an equality, we first set R
+    = 0 and solve for T. This result shows that the origin (T = 0, R = 0) is on the
+    constraint line. Setting T = 0 and solving for R provides the same point. However,
+    we can obtain a second point on the line by setting T equal to any value other
+    than zero and then solving for R. For instance, setting T = 100 and solving for
+    R, we find that the point (T = 100, R = 100) is on the line. With the two points
+    (R = 0, T = 0) and (R = 100, T = 100), the constraint line R - T = 0 and the solutions
+    that satisfy the constraint R - T ≥ 0 can be plotted as shown in Figure 7.12.
+
+
+    # Summary of the Graphical Solution Procedure for Maximization Problems
+
+
+    As we have seen, the graphical solution procedure is a method for solving two-variable
+    linear programming problems such as the RMC problem. The steps of the graphical
+    solution procedure for a maximization problem are summarized here:
+
+
+    For additional practice in using the graphical solution procedure, try Problem
+    24.
+
+
+    +   1. Prepare a graph for each constraint that shows the solutions that satisfy
+    the constraint.
+
+    +   2. Determine the feasible region by identifying the solutions that satisfy
+    all the constraints simultaneously.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '# FIGURE 7.12 FEASIBLE SOLUTIONS FOR THE CONSTRAINT R - T ≥ 0
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_21_0.png)
+
+
+    +   3. Draw an objective function line showing the values of the decision variables
+    that yield a specified value of the objective function.
+
+    +   4. Move parallel objective function lines toward larger objective function
+    values until further movement would take the line completely outside the feasible
+    region.
+
+    +   5. Any feasible solution on the objective function line with the largest value
+    is an optimal solution.
+
+
+    # Slack Variables
+
+
+    In addition to the optimal solution and its associated profit contribution, the
+    RMC managers will want information about the production requirements for the three
+    materials. We can determine this information by substituting the optimal solution
+    values (F = 25, S = 20) into the constraints of the linear program.
+
+
+    | Constraint | Tons Required for F = 25, S = 20 Tons | Tons Available | Unused
+    Tons |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Material 1 | 0.4(25) + 0.5(20) = 20 | 20 | 0 |
+
+    | Material 2 | 0.2(20) = 4 | 5 | 1 |
+
+    | Material 3 | 0.6(25) + 0.3(20) = 21 | 21 | 0 |
+
+
+    Can you identify the slack associated with a constraint? Try Problem 24, part
+    (e).
+
+
+    Thus, the optimal solution tells management that the production of 25 tons of
+    fuel additive and 20 tons of solvent base will require all available material
+    1 and material 3 but only 4 of the 5 tons of material 2. The 1 ton of unused material
+    2 is referred to as slack. In linear programming terminology, any unused or idle
+    capacity for a ≤ constraint is referred to as the slack associated with the constraint.
+    Thus, the material 2 constraint has a slack of 1 ton.
+
+
+    Often variables, called slack variables, are added to the formulation of a linear
+    programming problem to represent the slack, or unused capacity, associated with
+    a constraint. Unused capacity makes no contribution to profit, so slack variables
+    have coefficients of zero in the objective function. More generally, slack variables
+    represent the difference between'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'Can you write a linear program in standard form? Try Problem 18.
+
+
+    the right-hand side and the left-hand side of a <= constraint. After the addition
+    of three slack variables, denoted S1, S2, and S3, the mathematical model of the
+    RMC problem becomes
+
+
+    Max 40F + 30S + 0S1 + 0S2 + 0S3
+
+    s.t.
+
+    0.4F + 0.5S + 1S1 = 20
+
+    0.2S + 1S2 = 5
+
+    0.6F + 0.3S + 1S3 = 21
+
+    F, S, S1, S2, S3 >= 0
+
+
+    Whenever a linear program is written in a form with all the constraints expressed
+    as equalities, it is said to be written in standard form.
+
+
+    Referring to the standard form of the RMC problem, we see that at the optimal
+    solution (F = 25, S = 20) the values for the slack variables are
+
+
+    | Constraint | Value of Slack Variable |
+
+    |---|---|
+
+    | Material 1 | S1 = 0 |
+
+    | Material 2 | S2 = 1 |
+
+    | Material 3 | S3 = 0 |
+
+
+    Could we have used the graphical analysis to provide some of the previous information?
+    The answer is yes. By finding the optimal solution in Figure 7.6, we see that
+    the material 1 constraint and the material 3 constraint restrict, or bind, the
+    feasible region at this point. Thus, the optimal solution requires the use of
+    all of these two resources. In other words, the graph shows that at the optimal
+    solution material 1 and material 3 will have zero slack. But, because material
+    2 constraint is not binding the feasible region at the optimal solution, we can
+    expect some slack for this resource.
+
+
+    Recognizing redundant constraints is easy with the graphical solution method.
+    In problems with more than two decision variables, redundant constraints usually
+    will not be apparent.
+
+
+    Finally, some linear programs may have one or more constraints that do not affect
+    the feasible region; that is, the feasible region remains the same whether or
+    not the constraint is included in the problem. Because such a constraint does
+    not affect the feasible region and thus cannot affect the optimal solution, it
+    is called a redundant constraint. Redundant constraints can be dropped from the
+    problem without having any effect on the optimal solution. However, in most linear
+    programming problems redundant constraints are not discarded because they are
+    not immediately recognizable as being redundant. The RMC problem had no redundant
+    constraints because each constraint had an effect on the feasible region.
+
+
+    # NOTES AND COMMENTS
+
+
+    +   1. In the standard form representation of a linear program, the objective
+    function coefficients for the slack variables are zero. This condition implies
+    that slack variables, which represent unused resources, do not affect the value
+    of the objective function. However, in some applications, some or all of the unused
+    resources can be sold and contribute to profit. In such cases the corresponding
+    slack variables become decision variables representing the amount of resources
+    to be sold. For each of these variables, a nonzero coefficient in the objective
+    function would
+
+
+    +   reflect the profit associated with selling a unit of the corresponding resource.
+
+
+    +   2. Redundant constraints do not affect the feasible region; as a result they
+    can be removed from a linear programming model without affecting the optimal solution.
+    However, if the linear programming model is to be resolved later, changes in some
+    of the data might change a previously redundant constraint into a binding constraint.
+    Thus, we recommend keeping all constraints in the linear programming model even
+    though one or more of the constraints may be redundant.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '# 7.3 Extreme Points and the Optimal Solution
+
+
+    Suppose that the profit contribution for 1 ton of solvent base increases from
+    $30 to $60 while the profit contribution for 1 ton of fuel additive and all the
+    constraints remain unchanged. The complete linear programming model of this new
+    problem is identical to the mathematical model in Section 7.2, except for the
+    revised objective function:
+
+
+    Max 40F + 60S
+
+
+    How does this change in the objective function affect the optimal solution to
+    the RMC problem? Figure 7.13 shows the graphical solution of the RMC problem with
+    the revised objective function. Note that because the constraints do not change,
+    the feasible region remains unchanged. However, the profit lines must be altered
+    to reflect the new objective function.
+
+
+    By moving the profit line in a parallel manner away from the origin, we find the
+    optimal solution as shown in Figure 7.13. The values of the decision variables
+    at this point are F = 18.75 and S = 25. The increased profit for the solvent base
+    caused a change in the optimal solution. In fact, as you might suspect, we cut
+    back the production of the lower profit fuel additive and increase the production
+    of the higher profit solvent base.
+
+
+    What do you notice about the location of the optimal solutions in the linear programming
+    problems that we solved thus far? Look closely at the graphical solutions in Figures
+    7.10 and 7.13. An important observation that you should be able to make is that
+    the optimal solutions occur at one of the vertices, or “corners,” of the feasible
+    region. In linear programming terminology these vertices are referred to as the
+    extreme points of the feasible region. Thus,
+
+
+    # FIGURE 7.13 OPTIMAL SOLUTION FOR THE RMC PROBLEM WITH AN OBJECTIVE FUNCTION
+    OF 40F + 60S
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_23_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# FIGURE 7.14 THE FIVE EXTREME POINTS OF THE FEASIBLE REGION FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_24_0.png)
+
+
+    the RMC has five vertices or five extreme points (Figure 7.14). We can now state
+    our observation about the location of optimal solutions:²
+
+
+    The optimal solution to a linear programming problem can be found at an extreme
+    point of the feasible region for the problem.
+
+
+    This property means that, if you are looking for the optimal solution to a linear
+    programming problem, you do not have to evaluate all feasible solution points.
+    In fact, you have to consider only the feasible solutions that occur at the extreme
+    points of the feasible region. Thus, for the RMC problem, instead of computing
+    and comparing the profit for all feasible solutions, we can find the optimal solution
+    by evaluating the five extreme-point solutions and selecting the one that provides
+    the highest profit. Actually, the graphical solution procedure is nothing more
+    than a convenient way of identifying an optimal extreme point for two-variable
+    problems.
+
+
+    For additional practice in identifying the extreme points of the feasible region
+    and determining the optimal solution, try computing and comparing the objective
+    function value at each extreme point, try Problem 13.
+
+
+    # 7.4 Computer Solution of the RMC Problem
+
+
+    Computer programs designed to solve linear programming problems are widely available.
+    After a short period of familiarization with the specific features of the program,
+    most users can solve linear programming problems with few difficulties. Problems
+    involving thousands of variables and thousands of constraints are now routinely
+    solved with computer packages. Some of the leading commercial packages include
+    CPLEX, LINGO, MOSEK, Gurobi, and Xpress-MP.
+
+
+    ²In Section 7.6 we show that two special cases (infeasibility and unboundedness)
+    in linear programming have no optimal solution. The observation stated does not
+    apply to these cases.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'In January, 1952 the first successful computer solution of a linear programming
+    problem was performed on the SEC (Standards Eastern Automatic Computer). The SEAC,
+    the first digital computer built by the National Bureau of Standards under U.S.
+    Air Force sponsorship, had a 512-word memory and internal magnetic tape for external
+    storage.
+
+
+    Instructions on how to solve linear programs using Excel and LINGO are provided
+    in appendixes at the end of the chapter.
+
+
+    Packages are also available for free download. A good example is Clp (COIN-OR
+    linear programming) available from the COIN-OR organization at http://www.coin-or.org.
+
+
+    A large number of user-friendly computer programs that can solve linear programs
+    are now available. These programs, developed by academicians and small software
+    companies, are almost all easy to use. Most of these programs are designed to
+    solve smaller linear programs (a few hundred variables), but some can be used
+    to solve problems involving thousands of variables and constraints. Linear programming
+    solvers are also available in the spreadsheet environment. In Appendix 7.1 we
+    show how to use the solver available with Excel. Appendix 7.2 demonstrates the
+    use of LINGO, a stand-alone software package for solving optimization problems.
+
+
+    Probably the most widely used tool is Solver, which is built into Microsoft Excel.
+    Therefore, the computer output we discuss is based on the output provided by Excel
+    Solver. The complete details for how to formulate the RMC problem in Excel and
+    use Solver are contained in Appendix 7.1.
+
+
+    ```
+
+    Recall the RMC linear program:
+
+    Max 40F + 30S
+
+    s.t.
+
+    0.4F + 0.5S <= 20 Material 1
+
+    0.2S <= 5 Material 2
+
+    0.6F + 0.35S <= 21 Material 3
+
+    F, S >= 0
+
+    ```
+
+
+    Figure 7.15 shows the optimal solution to the RMC problem. This output is based
+    on the Answer Report from Excel Solver, but includes the variable names we have
+    used in our linear programming model. This allows you to easily link the answer
+    report to the model under discussion. We will use this style to show the solutions
+    to optimization problems throughout Chapters 7–12.
+
+
+    # Interpretation of Answer Report
+
+
+    Let us look more closely at the answer report in Figure 7.15 and interpret the
+    computer solution provided for the RMC problem. First, note the number 1600.000
+    in the Objective Cells
+
+
+    FIGURE 7.15 ANSWER REPORT FOR THE RMC PROBLEM
+
+
+    **Objective Cells (Max)**
+
+
+    | Name | Original Value | Final Value |
+
+    |---|---|---|
+
+    | Maximize Total Profit | 0.000 | 1600.000 |
+
+
+    **Variable Cells**
+
+
+    | Model Variable | Name | Original Value | Final Value | Integer |
+
+    |---|---|---|---|---|
+
+    | F | Tons Produced Fuel Additive | 0.000 | 25.000 | Contin |
+
+    | S | Tons Produced Solvent Base | 0.000 | 20.000 | Contin |
+
+
+    **Constraints**
+
+
+    | Constraint Number | Name | Cell Value | Status | Slack |
+
+    |---|---|---|---|---|
+
+    | 1 | Material 1 Amount Used | 20.000 | Binding | 0.000 |
+
+    | 2 | Material 2 Amount Used | 4.000 | Not Binding | 1.000 |
+
+    | 3 | Material 3 Amount Used | 21.000 | Binding | 0.000 |'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '(Max) section, which appears in the Final Value column to the right of objective
+    function value, Maximize Total Profit. This number indicates that the optimal
+    solution to this problem will provide a profit of $1600. Directly below the objective
+    function value are the values of the decision variables at the optimal solution.
+    These are shown as the Final Value column of the Variable Cells section in the
+    answer report. Thus, we have F = 25 tons of fuel additive and S = 20 tons of solvent
+    base as the optimal production quantities. We will discuss the meaning of the
+    Integer column in the Variable Cells section in Chapter 11.
+
+
+    The Constraints section of the answer report provides information about the status
+    of the constraints. Recall that the RMC problem had three less-than-or-equal-to
+    constraints corresponding to the tons available for each of the three raw materials.
+    The information shown in the Slack column provides the value of the slack variable
+    for each of the three constraints. This information is summarized as follows:
+
+
+    | Constraint Number | Constraint Name | Value of Slack Variable |
+
+    |---|---|---|
+
+    | 1 | Material 1 Amount Used | 0 |
+
+    | 2 | Material 2 Amount Used | 1 |
+
+    | 3 | Material 3 Amount Used | 0 |
+
+
+    Thus, we see that the binding constraints (the Material 1 Amount Used and Material
+    3 Amount Used constraints) have zero slack at the optimal solution. The Material
+    2 Amount Used constraint has 1 ton of slack, or unused capacity.
+
+
+    # 7.5 A Simple Minimization Problem
+
+
+    M&D Chemicals produces two products that are sold as raw materials to companies
+    manufacturing bath soaps and laundry detergents. Based on an analysis of current
+    inventory levels and potential demand for the coming month, M&D''s management
+    has specified that the combined production of products A and B must total at least
+    350 gallons. Specifically, a major customer''s order for 125 gallons of product
+    A must also be satisfied. Product A requires 2 hours of processing time per gallon
+    while product B requires 1 hour of processing time per gallon, and for the coming
+    month, 600 hours of processing time are available. M&D''s objective is to satisfy
+    these requirements at a minimum total production cost. Production costs are $2
+    per gallon for product A and $3 per gallon for product B.
+
+
+    To find the minimum-cost production schedule, we will formulate the M&D Chemicals
+    problem as a linear program. Following a procedure similar to the one used for
+    the RMC problem, we first define the decision variables and the objective function
+    for the problem. Let
+
+
+    A = number of gallons of product A
+
+    B = number of gallons of product B
+
+
+    Because the production costs are $2 per gallon for product A and $3 per gallon
+    for product B, the objective function that corresponds to the minimization of
+    the total production cost can be written as
+
+
+    Min 2A + 3B
+
+
+    Next, consider the constraints placed on the M&D Chemicals problem. To satisfy
+    the major customer''s demand for 125 gallons of product A, we know A must be at
+    least 125. Thus, we write the constraint
+
+
+    1A >= 125'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: 'Because the combined production for both products must total at least 350 gallons,
+    we can write the constraint
+
+
+    ```
+
+    1A + 1B ≥ 350
+
+    ```
+
+
+    Finally, the limitation on available processing time of 600 hours means that we
+    need to add the constraint
+
+
+    ```
+
+    2A + 1B ≤ 600
+
+    ```
+
+
+    After adding the nonnegativity constraints (A, B ≥ 0), we have the following linear
+    program for the M&D Chemicals problem:
+
+
+    ```
+
+    Max 2A + 3B
+
+    s.t.
+
+    1A ≥ 125 Demand for product A
+
+    1A + 1B ≥ 350 Total production
+
+    2A + 1B ≤ 600 Processing time
+
+    A, B ≥ 0
+
+    ```
+
+
+    Because the linear programming model has only two decision variables, the graphical
+    solution procedure can be used to find the optimal production quantities. The
+    graphical method for this problem, just as in the RMC problem, requires us to
+    first graph the constraint lines to find the feasible region. By graphing each
+    constraint line separately and then checking points on either side of the constraint
+    line, the solutions that satisfy each constraint can be identified. By combining
+    the solutions that satisfy each constraint on the same graph, we obtain the feasible
+    region shown in Figure 7.16.
+
+
+    # FIGURE 7.16 FEASIBLE REGION FOR THE M&D CHEMICALS PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_27_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '# FIGURE 7.17 GRAPHICAL SOLUTION FOR THE M&D CHEMICALS PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_28_0.png)
+
+
+    To find the minimum-cost solution, we now draw the objective function line corresponding
+    to a particular total cost value. For example, we might start by drawing the line
+    2A + 3B = 1200. This line is shown in Figure 7.17. Clearly some points in the
+    feasible region would provide a total cost of $1200. To find the values of A and
+    B that provide smaller total cost values, we move the objective function line
+    in a lower left direction until, if we moved it any farther, it would be entirely
+    outside the feasible region. Note that the objective function line 2A + 3B = 800
+    intersects the feasible region at the extreme point A = 250 and B = 100. This
+    extreme point provides the minimum-cost solution with an objective function value
+    of $800. From Figures 7.16 and 7.17, we can see that the total production constraint
+    and the processing time constraint are binding. Just as in every linear programming
+    problem, the optimal solution occurs at an extreme point of the feasible region.
+
+
+    Can you use the graphical solution procedure to determine the optimal solution
+    for a minimization problem? Try Problem 31.
+
+
+    # Summary of the Graphical Solution Procedure for Minimization Problems
+
+
+    The steps of the graphical solution procedure for a minimization problem are summarized
+    here:
+
+
+    +   1. Prepare a graph for each constraint that shows the solutions that satisfy
+    the constraint.
+
+
+    +   2. Determine the feasible region by identifying the solutions that satisfy
+    all the constraints simultaneously.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '+   3. Draw an objective function line showing the values of the decision variables
+    that yield a specified value of the objective function.
+
+    +   4. Move parallel objective function lines toward smaller objective function
+    values until further movement would take the line completely outside the feasible
+    region.
+
+    +   5. Any feasible solution on the objective function line with the smallest
+    value is an optimal solution.
+
+
+    # ## Surplus Variables
+
+
+    The optimal solution to the M&D Chemicals problem shows that the desired total
+    production of A + B = 350 gallons is achieved by using all available processing
+    time of 2A + 1B = 2(250) + 1(100) = 600 hours. In addition, note that the constraint
+    requiring that product A demand be met is satisfied with A = 250 gallons. In fact,
+    the production of product A exceeds its minimum level by 250 – 125 = 125 gallons.
+    This excess production for product A is referred to as surplus. In linear programming
+    terminology, any excess quantity corresponding to a ≥ constraint is referred to
+    as surplus.
+
+
+    > Excel Solver refers to all nonbinding constraints as having positive slack values
+    regardless of whether they are > or ≤ constraints. However, we will use “surplus”
+    when referring to a nonbinding ≥ constraint.
+
+
+    Recall that with a ≤ constraint, a slack variable can be added to the left-hand
+    side of the inequality to convert the constraint to equality form. With a ≥ constraint,
+    a surplus variable can be subtracted from the left-hand side of the inequality
+    to convert the constraint to equality form. Just as with slack variables, surplus
+    variables are given a coefficient of zero in the objective function because they
+    have no effect on its value. After including two surplus variables, S1 and S2,
+    for the ≥ constraints and one slack variable, S3, for the ≤ constraint, the linear
+    programming model of the M&D Chemicals problem becomes
+
+
+    ```
+
+    Min 2A + 3B + 0S1 + 0S2 + 0S3
+
+    s.t.
+
+    1A - 1S1 = 125
+
+    1A + 1B - 1S2 = 350
+
+    2A + 1B + 1S3 = 600
+
+    A, B, S1, S2, S3 ≥ 0
+
+    ```
+
+
+    > Try Problem 35 to test your ability to use slack and surplus variables to write
+    a linear program in standard form.
+
+
+    All the constraints are now equalities. Hence, the preceding formulation is the
+    standard form representation of the M&D Chemicals problem. At the optimal solution
+    of A = 250 and B = 100, the values of the surplus and slack variables are as follows:
+
+
+    | Constraint | Value of Surplus or Slack Variable |
+
+    | :--- | :--- |
+
+    | Demand for product A | S1 = 125 |
+
+    | Total production | S2 = 0 |
+
+    | Processing time | S3 = 0 |
+
+
+    Refer to Figures 7.16 and 7.17. Note that the zero surplus and slack variables
+    are associated with the constraints that are binding at the optimal solution—that
+    is, the total production and processing time constraints. The surplus of 125 units
+    is associated with the nonbinding constraint on the demand for product A.
+
+
+    In the RMC problem all the constraints were of the ≤ type, and in the M&D Chemicals
+    problem the constraints were a mixture of ≥ and ≤ types. The number and types
+    of constraints encountered in a particular linear programming problem depend on
+    the specific conditions existing in the problem. Linear programming problems may
+    have some ≤ constraints, some ≥ constraints, and some = constraints. For an equality
+    constraint, feasible solutions must lie directly on the constraint line.'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: 'Try Problem 34 to practice solving a linear program with all three constraint
+    forms.
+
+
+    An example of a linear program with two decision variables, G and H, and all three
+    constraint forms is given here:
+
+
+    ```
+
+    Min 2G + 2H
+
+    s.t.
+
+    1G + 3H <= 12
+
+    3G + 1H >= 13
+
+    1G - 1H = 3
+
+    G, H >= 0
+
+    ```
+
+
+    The standard-form representation of this problem is
+
+
+    ```
+
+    Min 2G + 2H + 0S1 + 0S2
+
+    s.t.
+
+    1G + 3H + 1S1 = 12
+
+    3G + 1H - 1S2 = 13
+
+    1G - 1H = 3
+
+    G, H, S1, S2 >= 0
+
+    ```
+
+
+    The standard form requires a slack variable for the <= constraint and a surplus
+    variable for the >= constraint. However, neither a slack nor a surplus variable
+    is required for the third constraint because it is already in equality form.
+
+
+    When solving linear programs graphically, it is not necessary to write the problem
+    in its standard form. Nevertheless, it is helpful to be able to compute the values
+    of the slack and surplus variables and understand what they mean. A final point:
+    The standard form of the linear programming problem is equivalent to the original
+    formulation of the problem. That is, the optimal solution to any linear programming
+    problem is the same as the optimal solution to the standard form of the problem.
+    The standard form does not change the basic problem; it only changes how we write
+    the constraints for the problem.
+
+
+    # Computer Solution of the M&D Chemicals Problem
+
+
+    The answer report for the M&D Chemicals Problem is presented in Figure 7.18. The
+    answer report shows that the minimum-cost solution yields an objective function
+    value of $800. The
+
+
+    # FIGURE 7.18 ANSWER REPORT FOR THE M&D CHEMICALS PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_30_0.png)
+
+
+    ### Objective Cells (Min)
+
+    | Name | Original Value | Final Value |
+
+    | --- | --- | --- |
+
+    | Minimize Total Cost Product A | 0.000 | 800.000 |
+
+
+    ### Variable Cells
+
+    | Model Variable | Name | Original Value | Final Value | Integer |
+
+    | --- | --- | --- | --- | --- |
+
+    | A | Gallons Produced Product A | 0.000 | 250.000 | Contin |
+
+    | B | Gallons Produced Product B | 0.000 | 100.000 | Contin |
+
+
+    ### Constraints
+
+    | Constraint Number | Name | Cell Value | Status | Slack |
+
+    | --- | --- | --- | --- | --- |
+
+    | 1 | Demand for Product A | 250.000 | Not Binding | 125.000 |
+
+    | 2 | Total Production | 350.000 | Binding | 0.000 |
+
+    | 3 | Processing Time | 600.000 | Binding | 0.000 |'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: 'values of the decision variables show that 250 gallons of product A and 100
+    gallons of product B provide the minimum-cost solution.
+
+
+    The Slack column in the Constraints section of the answer report shows that the
+    >= constraint corresponding to the demand for product A (see constraint 1) has
+    a value of 125 units. Excel uses "slack" when referring to nonbinding >= constraints.
+    However, since this is a >= constraint, it tells us that production of product
+    A in the optimal solution exceeds demand by 125 gallons. In other words, the demand
+    for product A (constraint 1) has a surplus value of 125 units. The slack values
+    are zero for the total production requirement (constraint 2) and the processing
+    time limitation (constraint 3), which indicates that these constraints are binding
+    at the optimal solution.
+
+
+    # 7.6 Special Cases
+
+
+    In this section we discuss three special situations that can arise when we attempt
+    to solve linear programming problems.
+
+
+    # Alternative Optimal Solutions
+
+
+    From our discussion of the graphical solution procedure, we know that optimal
+    solutions can be found at the extreme points of the feasible region. Now let us
+    consider the special case where the optimal objective function line coincides
+    with one of the binding constraint lines. It can lead to alternative optimal solutions,
+    whereby more than one solution provides the optimal value for the objective function.
+
+
+    To illustrate the case of alternative optimal solutions, we return to the RMC
+    problem. However, let us assume that the profit contribution for the solvent base
+    (S) has increased to $50. The revised objective function is 40F + 50S. Figure
+    7.19 shows the graphical solution to this problem. Note that the optimal solution
+    still occurs at an extreme point. In fact, it occurs at two extreme points: extreme
+    point 3 (F = 25, S = 20) and extreme point 4 (F = 18.75, S = 25).
+
+
+    The objective function values at these two extreme points are identical; that
+    is, 40F + 50S = 40(25) + 50(20) = 2000
+
+
+    and
+
+
+    40F + 50S = 40(18.75) + 50(25) = 2000
+
+
+    Furthermore, any point on the line connecting the two optimal extreme points also
+    provides an optimal solution. For example, the solution point (F = 21.875, S =
+    22.5), which is halfway between the two extreme points, also provides the optimal
+    objective function value of
+
+
+    40F + 50S = 40(21.875) + 50(22.5) = 2000
+
+
+    A linear programming problem with alternative optimal solutions is generally a
+    good situation for the manager or decision maker. It means that several combinations
+    of the decision variables are optimal and that the manager can select the most
+    desirable optimal solution. Unfortunately, determining whether a problem has alternative
+    optimal solutions is not a simple matter.
+
+
+    # Infeasibility
+
+
+    Infeasibility means that no solution to the linear programming problem satisfies
+    all constraints, including the nonnegativity constraints. Graphically, infeasibility
+    means that a feasible region does not exist; that is, no points satisfy all constraint
+    equations and'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '# FIGURE 7.19 OPTIMAL SOLUTIONS FOR THE RMC PROBLEM WITH AN OBJECTIVE FUNCTION
+    OF 40F + 50S
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_32_0.png)
+
+
+    nonnegativity conditions simultaneously. To illustrate this situation, let us
+    return to the problem facing RMC.
+
+
+    Problems with no feasible solution do arise in practice, most often because management''s
+    expectations are too high or because too many restrictions have been placed on
+    the problem.
+
+
+    Suppose that management specified that at least 30 tons of fuel additive and at
+    least 15 tons of solvent base must be produced. Figure 7.20 shows the graph of
+    the solution region that reflects these requirements. The shaded area in the lower
+    left-hand portion of the graph depicts those points satisfying the less-than-or-equal-to
+    constraints on the amount of material available. The shaded area in the upper
+    right-hand portion depicts those points satisfying the minimum production requirements
+    of 30 tons of fuel additive and 15 tons of solvent base. But none of the points
+    satisfy both sets of constraints. Thus, if management imposes these minimum production
+    requirements, no feasible solution to the linear programming problem is possible.
+
+
+    How should we interpret this infeasibility in terms of the current problem? First,
+    we should tell management that, for the available amounts of the three materials,
+    producing 30 tons of fuel additive and 15 tons of solvent base isn''t possible.
+    Moreover, we can tell management exactly how much more of each material is needed.
+
+
+    | Material | Minimum Tons Required for F = 30, S = 15 | Tons Available | Additional
+    Tons Required |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Material 1 | 0.4(30) + 0.5(15) = 19.5 | 20 | — |
+
+    | Material 2 | 0.2(15) = 3 | 5 | — |
+
+    | Material 3 | 0.6(30) + 0.3(15) = 22.5 | 21 | 1.5 |'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '# FIGURE 7.20 NO FEASIBLE REGION FOR THE RMC PROBLEM WITH MINIMUM PRODUCTION
+    REQUIREMENTS
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_33_0.png)
+
+
+    Thus, RMC has a sufficient supply of materials 1 and 2 but will need 1.5 additional
+    tons of material 3 to meet management''s production requirements of 30 tons of
+    fuel additive and 15 tons of solvent base. If, after reviewing the preceding analysis,
+    management still wants this level of production for the two products, RMC will
+    have to obtain the additional 1.5 tons of material 3.
+
+
+    Often, many possibilities are available for corrective management action, once
+    we discover the lack of a feasible solution. The important thing to realize is
+    that linear programming analysis can help determine whether management''s plans
+    are feasible. By analyzing the problem using linear programming, we are often
+    able to point out infeasible conditions and initiate corrective action.
+
+
+    Whenever you attempt to solve a problem that is infeasible using Excel Solver,
+    you will obtain a message that says "Solver could not find a feasible solution."
+    In this case, you know that no solution to the linear programming problem will
+    satisfy all constraints. Careful inspection of your formulation is necessary to
+    identify why the problem is infeasible. In some situations the only reasonable
+    approach is to drop one or more constraints and resolve the problem. If you are
+    able to find an optimal solution for this revised problem, you will know that
+    the constraint(s) that were omitted are causing the problem to be infeasible.
+
+
+    # Unbounded
+
+
+    The solution to a maximization linear programming problem is unbounded if the
+    value of the solution may be made infinitely large without violating any of the
+    constraints; for a minimization problem, the solution is unbounded if the value
+    may be made infinitely small. This condition might be termed managerial utopia;
+    for example, if this condition were to occur in a profit maximization problem,
+    the manager could achieve an unlimited profit.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'However, in linear programming models of real problems, the occurrence of an
+    unbounded solution means that the problem has been improperly formulated. We know
+    it is not possible to increase profits indefinitely. Therefore, we must conclude
+    that if a profit maximization problem results in an unbounded solution, the mathematical
+    model doesn''t represent the real-world problem sufficiently. Usually, an unbounded
+    problem results from the inadvertent omission of a constraint during problem formulation.
+
+
+    As an illustration, consider the following linear program with two decision variables,
+    X and Y:
+
+
+    ```
+
+    Max 20X + 10Y
+
+    s.t.
+
+    1X ≥ 2
+
+    1Y ≤ 5
+
+    X, Y ≥ 0
+
+    ```
+
+
+    In Figure 7.21 we graphed the feasible region associated with this problem. Note
+    that we can only indicate part of the feasible region because the feasible region
+    extends indefinitely in the direction of the X-axis. Looking at the objective
+    function lines in Figure 7.21, we see that the solution to this problem may be
+    made as large as we desire. No matter what solution we pick, we will always be
+    able to reach some feasible solution with a larger value. Thus, we say that the
+    solution to this linear program is unbounded.
+
+
+    # FIGURE 7.21 EXAMPLE OF AN UNBOUNDED PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_34_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: "Can you recognize whether a linear program involves alternative optimal solutions,\
+    \ infeasibility, or is unbounded? Try Problems 42 and 43.\n\nWhenever you attempt\
+    \ to solve a problem that is unbounded using Excel Solver, you will obtain a message\
+    \ that says, “The Objective Cell values do not converge.” Because unbounded solutions\
+    \ cannot occur in real problems, the first thing you should do is to review your\
+    \ model to determine whether you have incorrectly formulated the problem.\n\n\
+    # NOTES AND COMMENTS\n\n+   1. Infeasibility is independent of the objective function.\
+    \ It exists because the constraints are so restrictive that they allow no feasible\
+    \ region for the linear programming model. Thus, when you encounter infeasibility,\
+    \ making changes in the coefficients of the objective function will not help.\
+    \ The problem will remain infeasible.\n+   \n+   2. The occurrence of an unbounded\
+    \ solution is often the result of a missing constraint. However, a change in the\
+    \ objective function may cause a previously unbounded problem to become bounded\
+    \ with an optimal solution. For example, the graph in Figure 7.21 shows an unbounded\
+    \ solution for the objective function Max 20X + 10Y. However, changing the objective\
+    \ function to Max 20X – 10Y will provide the optimal solution X = 2 and Y = 0\
+    \ even though no changes have been made in the constraints.\n\n# 7.7 General Linear\
+    \ Programming Notation\n\nIn this chapter we showed how to formulate mathematical\
+    \ models for the RMC and M&D Chemicals linear programming problems. To formulate\
+    \ a mathematical model of the RMC problem, we began by defining two decision variables:\
+    \ F = number of tons of fuel additive, and S = number of tons of solvent base.\
+    \ In the M&D Chemicals problem, the two decision variables were defined as A =\
+    \ number of gallons of product A, and B = number of gallons of product B. We selected\
+    \ decision variable names of F and S in the RMC problem and A and B in the M&D\
+    \ Chemicals problem to make it easier to recall what these decision variables\
+    \ represented in the problem. Although this approach works well for linear programs\
+    \ involving a small number of decision variables, it can become difficult when\
+    \ dealing with problems involving a large number of decision variables.\n\nA more\
+    \ general notation that is often used for linear programs uses the letter x with\
+    \ a subscript. For instance, in the RMC problem, we could have defined the decision\
+    \ variables as follows:\n\n```\nx1 = number of tons of fuel additive\nx2 = number\
+    \ of tons of solvent base\n```\n\nIn the M&D Chemicals problem, the same variable\
+    \ names would be used, but their definitions would change:\n\n```\nx1 = number\
+    \ of gallons of product A\nx2 = number of gallons of product B\n```\n\nA disadvantage\
+    \ of using general notation for decision variables is that we are no longer able\
+    \ to easily identify what the decision variables actually represent in the mathematical\
+    \ model. However, the advantage of general notation is that formulating a mathematical\
+    \ model for a problem that involves a large number of decision variables is much\
+    \ easier. For instance, for a linear programming problem with three decision variables,\
+    \ we would use variable names of x1, x2, and x3; for a problem with four decision\
+    \ variables, we would use variable names"
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'of x1, x2, x3, x4 and so on. Clearly, if a problem involved 1000 decision variables,
+    trying to identify 1000 unique names would be difficult. However, using the general
+    linear programming notation, the decision variables would be defined as x1, x2,
+    x3, ..., x1000.
+
+
+    To illustrate the graphical solution procedure for a linear program written using
+    general linear programming notation, consider the following mathematical model
+    for a maximization problem involving two decision variables:
+
+
+    ```
+
+    Max 3x1 + 2x2
+
+    s.t.
+
+    2x1 + 2x2 ≤ 8
+
+    1x1 + 0.5x2 ≤ 3
+
+    x1, x2 ≥ 0
+
+    ```
+
+
+    We must first develop a graph that displays the possible solutions (x1 and x2
+    values) for the problem. The usual convention is to plot values of x1 along the
+    horizontal axis and values of x2 along the vertical axis. Figure 7.22 shows the
+    graphical solution for this two-variable
+
+
+    # FIGURE 7.22 GRAPHICAL SOLUTION OF A TWO-VARIABLE LINEAR PROGRAM WITH GENERAL
+    NOTATION
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_36_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'problem. Note that for this problem the optimal solution is x1 = 2 and x2 =
+    2, with an objective function value of 10.
+
+    Using general linear programming notation, we can write the standard form of the
+    preceding problem as follows:
+
+
+    ```
+
+    Max 3x1 + 2x2 + 0s1 + 0s2
+
+    s.t.
+
+    2x1 + 2x2 + 1s1 = 8
+
+    1x1 + 0.5x2 + 1s2 = 3
+
+    x1, x2, s1, s2 >= 0
+
+    ```
+
+
+    Thus, at the optimal solution x1 = 2 and x2 = 2, the values of the slack variables
+    are s1 = s2 = 0.
+
+
+    # Summary
+
+
+    We formulated linear programming models for the RMC maximization problem and the
+    M&D Chemicals minimization problem. For both problems we showed how a graphical
+    solution procedure and Excel Solver can be used to identify an optimal solution.
+    In formulating a linear programming model of these problems, we developed a general
+    definition of a linear program.
+
+
+    A linear program is a mathematical model with the following qualities:
+
+
+    +   1. A linear objective function that is to be maximized or minimized
+
+    +   2. A set of linear constraints
+
+    +   3. Variables restricted to nonnegative values
+
+
+    Slack variables may be used to write less-than-or-equal-to constraints in equality
+    form, and surplus variables may be used to write greater-than-or-equal-to constraints
+    in equality form. The value of a slack variable can usually be interpreted as
+    the amount of unused resource, whereas the value of a surplus variable indicates
+    the amount over and above some stated minimum requirement. When all constraints
+    have been written as equalities, the linear program has been written in its standard
+    form.
+
+
+    If the solution to a linear program is infeasible or unbounded, no optimal solution
+    to the problem can be found. In the case of infeasibility, no feasible solutions
+    are possible. In the case of an unbounded solution, the objective function can
+    be made infinitely large for a maximization problem and infinitely small for a
+    minimization problem. In the case of alternative optimal solutions, two or more
+    optimal extreme points exist, and all the points on the line segment connecting
+    them are also optimal.
+
+
+    The chapter concluded with a section showing how to write a mathematical model
+    using general linear programming notation. The Q.M. in Action, The U.S. Navy Uses
+    Linear Programming for Fuel Conservation, provides just one of many examples of
+    the widespread use of linear programming. In the next two chapters we will see
+    many more applications of linear programming.'
+  merge: -1
+  img_proc: true
+- pgno: 38
+  md: '# ACTION
+
+
+    # THE U.S. NAVY USES LINEAR PROGRAMMING FOR FUEL CONSERVATION*
+
+
+    The U.S. Navy spends approximately one billion dollars per year on fuel for its
+    ships. The major determinant of fuel consumption for a ship is speed. A ship can
+    be operated in a number of different modes. For example, a naval destroyer ship,
+    with four engines available to run two shafts for propelling the ship, may operate
+    in three different modes: trail-shaft, split-plant, and full-power. In trail-shaft
+    mode, one of the four engines runs a single shaft. In split-plant mode, two engines
+    run, each driving its own shaft. Full-power mode has all four engines running,
+    two on each shaft. Full-power has the highest full consumption rate as measured
+    in gallons per hour. Depending on the mode, a ship may consume between 600 to
+    7000 gallons of fuel per hour.
+
+
+    The captain of a ship which needs to get from point A to point B in a certain
+    amount of time has mode options, each of which consumes different amounts of fuel.
+    The ship can run at a steady speed or at variable speeds. For example, a ship
+    can operate in a faster mode during first portion of the trip and in a slower
+    mode during the remaining portion of the trip and still arrive at the same time
+    as a vessel running at the required constant speed. The U.S. Navy uses a spreadsheet-based
+    linear programming model to determine the most fuel efficient way to make a trip
+    in a required amount of time.
+
+
+    The decision variables of the linear program are the amount of time (in hours)
+    to run at a given speed. The objective is to minimize fuel consumption subject
+    to constraints that the required distance must be covered within a specified amount
+    of time. The solution to the linear program specifies the amount of time to run
+    at each speed, but the order in which the speeds are implemented is flexible.
+    Compared to the fuel consumption when operating in a single mode, fuel savings
+    ranging from 2% to 54% have been realized by implementing the variable modes recommended
+    by the linear programming model.
+
+
+    *Based on G. Brown, J. Kline, R. Rosenthal, and A. Washburn, "Steaming on Convex
+    Hulls," Interfaces 37, no. 4 (July–August 2007): 342–352.
+
+
+    # Glossary
+
+
+    +   - **Constraint** An equation or inequality that rules out certain combinations
+    of decision variables as feasible solutions.
+
+    +   - **Problem formulation** The process of translating a verbal statement of
+    a problem into a mathematical statement called the *mathematical model*.
+
+    +   - **Mathematical model** A representation of a problem where the objective
+    and all constraint conditions are described by mathematical expressions.
+
+    +   - **Decision variable** A controllable input for a linear programming model.
+
+    +   - **Objective function** The expression that defines the quantity to be maximized
+    or minimized in a linear programming model.
+
+    +   - **Nonnegativity constraints** A set of constraints that requires all variables
+    to be nonnegative.
+
+    +   - **Linear program** A mathematical model with a linear objective function,
+    a set of linear constraints, and nonnegative variables.
+
+    +   - **Linear functions** Mathematical expressions in which the variables appear
+    in separate terms and are raised to the first power.
+
+    +   - **Feasible solution** A solution that satisfies all the constraints simultaneously.
+
+    +   - **Feasible region** The set of all feasible solutions.'
+  merge: -1
+  img_proc: true
+- pgno: 39
+  md: 'Slack variable A variable added to the left-hand side of a less-than-or-equal-to
+    constraint to convert the constraint into an equality. The value of this variable
+    can usually be interpreted as the amount of unused resource.
+
+
+    Standard form A linear program in which all the constraints are written as equalities.
+    The optimal solution of the standard form of a linear program is the same as the
+    optimal solution of the original formulation of the linear program.
+
+
+    Redundant constraint A constraint that does not affect the feasible region. If
+    a constraint is redundant, it can be removed from the problem without affecting
+    the feasible region.
+
+
+    Extreme point Graphically speaking, extreme points are the feasible solution points
+    occurring at the vertices, or “corners,” of the feasible region. With two-variable
+    problems, extreme points are determined by the intersection of the constraint
+    lines.
+
+
+    Surplus variable A variable subtracted from the left-hand side of a greater-than-or-equal-to
+    constraint to convert the constraint into an equality. The value of this variable
+    can usually be interpreted as the amount over and above some required minimum
+    level.
+
+
+    Alternative optimal solutions The case in which more than one solution provides
+    the optimal value for the objective function.
+
+
+    Infeasibility The situation in which no solution to the linear programming problem
+    satisfies all the constraints.
+
+
+    Unbounded The situation in which the value of the solution may be made infinitely
+    large in a maximization linear programming problem or infinitely small in a minimization
+    problem without violating any of the constraints.
+
+
+    # Problems
+
+
+    +   1. Which of the following mathematical relationships could be found in a linear
+    programming model, and which could not? For the relationships that are unacceptable
+    for linear programs, state why.
+
+    +   a. 1A + 2B <= 70
+
+    +   b. 2A - 2B <= 50
+
+    +   c. 1A - 2B^2 <= 10
+
+    +   d. 3√A + 2B >= 15
+
+    +   e. 1A + 1B = 6
+
+    +   f. 2A + 5B + 1AB <= 25
+
+
+    +   2. Find the solutions that satisfy the following constraints:
+
+    +   a. 4A + 2B <= 16
+
+    +   b. 4A + 2B >= 16
+
+    +   c. 4A + 2B = 16
+
+
+    +   3. Show a separate graph of the constraint lines and the solutions that satisfy
+    each of the following constraints:
+
+    +   a. 3A + 2B >= 18
+
+    +   b. 12A + 8B >= 480
+
+    +   c. 5A + 10B = 200
+
+
+    +   4. Show a separate graph of the constraint lines and the solutions that satisfy
+    each of the following constraints:
+
+    +   a. 3A + 4B >= 60
+
+    +   b. -6A + 5B <= 60
+
+    +   c. 5A - 2B <= 0'
+  merge: -1
+  img_proc: true
+- pgno: 40
+  md: '5. Show a separate graph of the constraint lines and the solutions that satisfy
+    each of the following constraints:
+
+    a. A ≥ 0.25 (A + B)
+
+    b. B ≤ 0.10 (A + B)
+
+    c. A ≤ 0.50 (A + B)
+
+
+    6. Three objective functions for linear programming problems are 7A + 10B, 6A
+    + 4B, and -4A + 7B. Show the graph of each for objective function values equal
+    to 420.
+
+
+    7. Identify the feasible region for the following set of constraints:
+
+    0.5A + 0.25B ≥ 30
+
+    1A + 5B ≤ 250
+
+    0.25A + 0.5B ≤ 50
+
+    A, B ≥ 0
+
+
+    8. Identify the feasible region for the following set of constraints:
+
+    2A - 1B ≤ 0
+
+    -1A + 1.5B ≤ 200
+
+    A, B ≥ 0
+
+
+    9. Identify the feasible region for the following set of constraints:
+
+    3A - 2B ≥ 0
+
+    2A - 1B ≤ 200
+
+    1A ≤ 150
+
+    A, B ≥ 0
+
+
+    10. For the linear program
+
+    Max 2A + 3B
+
+    s.t.
+
+    1A + 2B ≤ 6
+
+    5A + 3B ≤ 15
+
+    A, B ≥ 0
+
+    find the optimal solution using the graphical solution procedure. What is the
+    value of the objective function at the optimal solution?
+
+
+    11. Solve the following linear program using the graphical solution procedure:
+
+    Max 5A + 5B
+
+    s.t.
+
+    1A ≤ 100
+
+    1B ≤ 80
+
+    2A + 4B ≤ 400
+
+    A, B ≥ 0
+
+
+    12. Consider the following linear programming problem:
+
+    Max 3A + 3B
+
+    s.t.
+
+    2A + 4B ≤ 12
+
+    6A + 4B ≤ 24
+
+    A, B ≥ 0'
+  merge: -1
+  img_proc: true
+- pgno: 41
+  md: '+   a. Find the optimal solution using the graphical solution procedure.
+
+    +   b. If the objective function is changed to 2A + 6B, what will the optimal
+    solution be?
+
+    +   c. How many extreme points are there? What are the values of A and B at each
+    extreme point?
+
+
+    13. Consider the following linear program:
+
+
+    ```
+
+    Max 1A + 2B
+
+    s.t.
+
+    1A ≤ 5
+
+    1B ≤ 4
+
+    2A + 2B = 12
+
+    A, B ≥ 0
+
+    ```
+
+
+    +   a. Show the feasible region.
+
+    +   b. What are the extreme points of the feasible region?
+
+    +   c. Find the optimal solution using the graphical procedure.
+
+
+    14. Par, Inc. is a small manufacturer of golf equipment and supplies. Par''s distributor
+    believes a market exists for both a medium-priced golf bag, referred to as a standard
+    model, and a high-priced golf bag, referred to as a deluxe model. The distributor
+    is so confident of the market that, if Par can make the bags at a competitive
+    price, the distributor will purchase all the bags that Par can manufacture over
+    the next three months. A careful analysis of the manufacturing requirements resulted
+    in the following table, which shows the production time requirements for the four
+    required manufacturing operations and the accounting department''s estimate of
+    the profit contribution per bag:
+
+
+    | Product | Cutting and Dyeing | Sewing | Finishing | Inspection and Packaging
+    | Profit per Bag |
+
+    |---|---|---|---|---|---|
+
+    | Standard | 7/10 | 1/2 | 1 | 1/10 | $10 |
+
+    | Deluxe | 1 | 5/6 | 2/3 | 1/4 | $ 9 |
+
+
+    The director of manufacturing estimates that 630 hours of cutting and dyeing time,
+    600 hours of sewing time, 708 hours of finishing time, and 135 hours of inspection
+    and packaging time will be available for the production of golf bags during the
+    next three months.
+
+
+    +   a. If the company wants to maximize total profit contribution, how many bags
+    of each model should it manufacture?
+
+    +   b. What profit contribution can Par earn on these production quantities?
+
+    +   c. How many hours of production time will be scheduled for each operation?
+
+    +   d. What is the slack time in each operation?
+
+
+    15. Suppose that Par''s management (Problem 14) encounters the following situations:
+
+
+    +   a. The accounting department revises its estimate of the profit contribution
+    for the deluxe bag to $18 per bag.
+
+    +   b. A new low-cost material is available for the standard bag, and the profit
+    contribution per standard bag can be increased to $20 per bag. (Assume that the
+    profit contribution of the deluxe bag is the original $9 value.)
+
+    +   c. New sewing equipment is available that would increase the sewing operation
+    capacity to 750 hours. (Assume that 10A + 9B is the appropriate objective function.)
+    If each of these situations is encountered separately, what is the optimal solution
+    and the total profit contribution?'
+  merge: -1
+  img_proc: true
+- pgno: 42
+  md: '+   16. Refer to the feasible region for Par, Inc., in Problem 14.
+
+    +   a. Develop an objective function that will make extreme point (0, 540) the
+    optimal extreme point.
+
+    +   b. What is the optimal solution for the objective function you selected in
+    part (a)?
+
+    +   c. What are the values of the slack variables associated with this solution?
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_42_0.png)
+
+
+    +   17. Write the following linear program in standard form:
+
+    +   Max 5A + 2B
+
+    +   s.t.
+
+    +   1A - 2B <= 420
+
+    +   2A + 3B <= 610
+
+    +   6A - 1B <= 125
+
+    +   A, B >= 0
+
+
+    +   18. For the linear program
+
+    +   Max 4A + 1B
+
+    +   s.t.
+
+    +   10A + 2B <= 30
+
+    +   3A + 2B >= 12
+
+    +   2A + 2B <= 10
+
+    +   A, B >= 0
+
+    +   a. Write this problem in standard form.
+
+    +   b. Solve the problem using the graphical solution procedure.
+
+    +   c. What are the values of the three slack variables at the optimal solution?
+
+
+    +   19. Given the linear program
+
+    +   Max 3A + 4B
+
+    +   s.t.
+
+    +   -1A + 2B <= 8
+
+    +   1A + 2B <= 12
+
+    +   2A + 1B <= 16
+
+    +   A, B >= 0
+
+    +   a. Write the problem in standard form.
+
+    +   b. Solve the problem using the graphical solution procedure.
+
+    +   c. What are the values of the three slack variables at the optimal solution?
+
+
+    +   20. For the linear program
+
+    +   Max 3A + 2B
+
+    +   s.t.
+
+    +   A + B >= 4
+
+    +   3A + 4B <= 24
+
+    +   A >= 2
+
+    +   A - B <= 0
+
+    +   A, B >= 0'
+  merge: -1
+  img_proc: true
+- pgno: 43
+  md: 'a. Write the problem in standard form.
+
+    b. Solve the problem.
+
+    c. What are the values of the slack and surplus variables at the optimal solution?
+
+
+    # 21. Consider the following linear program:
+
+
+    ```
+
+    Max 2A + 3B
+
+    s.t.
+
+    5A + 5B <= 400 Constraint 1
+
+    -1A + 1B <= 10 Constraint 2
+
+    1A + 3B >= 90 Constraint 3
+
+    A, B >= 0
+
+    ```
+
+
+    Figure 7.23 shows a graph of the constraint lines.
+
+
+    +   a. Place a number (1, 2, or 3) next to each constraint line to identify which
+    constraint it represents.
+
+    +   b. Shade in the feasible region on the graph.
+
+    +   c. Identify the optimal extreme point. What is the optimal solution?
+
+    +   d. Which constraints are binding? Explain.
+
+    +   e. How much slack or surplus is associated with the nonbinding constraint?
+
+
+    22. Reiser Sports Products wants to determine the number of All-Pro (A) and College
+    (C) footballs to produce in order to maximize profit over the next four-week planning
+    horizon. Constraints affecting the production quantities are the production capacities
+    in three departments: cutting and dyeing; sewing; and inspection and packaging.
+    For the four-week planning period, 340 hours of cutting and dyeing time, 420 hours
+    of sewing time, and 200 hours of inspection and packaging time are available.
+    All-Pro footballs provide a profit
+
+
+    # FIGURE 7.23 GRAPH OF THE CONSTRAINT LINES FOR EXERCISE 21
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_43_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 44
+  md: 'of $5 per unit and College footballs provide a profit of $4 per unit. The linear
+    programming model with production times expressed in minutes is as follows:
+
+
+    ```
+
+    Max 5A + 4C
+
+    s.t.
+
+    12A + 6C ≤ 20,400 Cutting and dyeing
+
+    9A + 15C ≤ 25,200 Sewing
+
+    6A + 6C ≤ 12,000 Inspection and packaging
+
+    A, C ≥ 0
+
+    ```
+
+
+    A portion of the graphical solution to the Reiser problem is shown in Figure 7.24.
+
+
+    +   a. Shade the feasible region for this problem.
+
+    +   b. Determine the coordinates of each extreme point and the corresponding profit.
+    Which extreme point generates the highest profit?
+
+    +   c. Draw the profit line corresponding to a profit of $4000. Move the profit
+    line as far from the origin as you can in order to determine which extreme point
+    will provide the optimal solution. Compare your answer with the approach you used
+    in part (b).
+
+    +   d. Which constraints are binding? Explain.
+
+    +   e. Suppose that the values of the objective function coefficients are $4 for
+    each All-Pro model produced and $5 for each College model. Use the graphical solution
+    procedure to determine the new optimal solution and the corresponding value of
+    profit.
+
+
+    # FIGURE 7.24 PORTION OF THE GRAPHICAL SOLUTION FOR EXERCISE 22
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_44_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 45
+  md: '23. Embassy Motorcycles (EM) manufactures two lightweight motorcycles designed
+    for easy handling and safety. The EZ-Rider model has a new engine and a low profile
+    that make it easy to balance. The Lady-Sport model is slightly larger, uses a
+    more traditional engine, and is specifically designed to appeal to women riders.
+    Embassy produces the engines for both models at its Des Moines, Iowa, plant. Each
+    EZ-Rider engine requires 6 hours of manufacturing time and each Lady-Sport engine
+    requires 3 hours of manufacturing time. The Des Moines plant has 2100 hours of
+    engine manufacturing time available for the next production period. Embassy’s
+    motorcycle frame supplier can supply as many EZ-Rider frames as needed. However,
+    the Lady-Sport frame is more complex and the supplier can only provide up to 280
+    Lady-Sport frames for the next production period. Final assembly and testing requires
+    2 hours for each EZ-Rider model and 2.5 hours for each Lady-Sport model. A maximum
+    of 1000 hours of assembly and testing time are available for the next production
+    period. The company’s accounting department projects a profit contribution of
+    $2400 for each EZ-Rider produced and $1800 for each Lady-Sport produced.
+
+    a. Formulate a linear programming model that can be used to determine the number
+    of units of each model that should be produced in order to maximize the total
+    contribution to profit.
+
+    b. Solve the problem graphically. What is the optimal solution?
+
+    c. Which constraints are binding?
+
+
+    24. Kelson Sporting Equipment, Inc., makes two different types of baseball gloves:
+    a regular model and a catcher’s model. The firm has 900 hours of production time
+    available in its cutting and sewing department, 300 hours available in its finishing
+    department, and 100 hours available in its packaging and shipping department.
+    The production time requirements and the profit contribution per glove are given
+    in the following table:
+
+
+    | Model | Cutting and Sewing | Finishing | Packaging and Shipping | Profit/Glove
+    |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | Regular model | 1 | 1/2 | 1/8 | $5 |
+
+    | Catcher''s model | 3/2 | 1/3 | 1/4 | $8 |
+
+
+    Assuming that the company is interested in maximizing the total profit contribution,
+    answer the following:
+
+    a. What is the linear programming model for this problem?
+
+    b. Find the optimal solution using the graphical solution procedure. How many
+    gloves of each model should Kelson manufacture?
+
+    c. What is the total profit contribution Kelson can earn with the given production
+    quantities?
+
+    d. How many hours of production time will be scheduled in each department?
+
+    e. What is the slack time in each department?
+
+
+    25. George Johnson recently inherited a large sum of money; he wants to use a
+    portion of this money to set up a trust fund for his two children. The trust fund
+    has two investment options: (1) a bond fund and (2) a stock fund. The projected
+    returns over the life of the investments are 6% for the bond fund and 10% for
+    the stock fund. Whatever portion of the inheritance George finally decides to
+    commit to the trust fund, he wants to invest at least 30% of that amount in the
+    bond fund. In addition, he wants to select a mix that will enable him to obtain
+    a total return of at least 7.5%.
+
+    a. Formulate a linear programming model that can be used to determine the percentage
+    that should be allocated to each of the possible investment alternatives.
+
+    b. Solve the problem using the graphical solution procedure.'
+  merge: -1
+  img_proc: true
+- pgno: 46
+  md: '26. The Sea Wharf Restaurant would like to determine the best way to allocate
+    a monthly advertising budget of $1000 between newspaper advertising and radio
+    advertising. Management decided that at least 25% of the budget must be spent
+    on each type of media, and that the amount of money spent on local newspaper advertising
+    must be at least twice the amount spent on radio advertising. A marketing consultant
+    developed an index that measures audience exposure per dollar of advertising on
+    a scale from 0 to 100, with higher values implying greater audience exposure.
+    If the value of the index for local newspaper advertising is 50 and the value
+    of the index for spot radio advertising is 80, how should the restaurant allocate
+    its advertising budget in order to maximize the value of total audience exposure?
+
+    a. Formulate a linear programming model that can be used to determine how the
+    restaurant should allocate its advertising budget in order to maximize the value
+    of total audience exposure.
+
+    b. Solve the problem using the graphical solution procedure.
+
+
+    27. Blair & Rosen, Inc. (B&R) is a brokerage firm that specializes in investment
+    portfolios designed to meet the specific risk tolerances of its clients. A client
+    who contacted B&R this past week has a maximum of $50,000 to invest. B&R''s investment
+    advisor decides to recommend a portfolio consisting of two investment funds: an
+    Internet fund and a Blue Chip fund. The Internet fund has a projected annual return
+    of 12%, while the Blue Chip fund has a projected annual return of 9%. The investment
+    advisor requires that at most $35,000 of the client''s funds should be invested
+    in the Internet fund. B&R services include a risk rating for each investment alternative.
+    The Internet fund, which is the more risky of the two investment alternatives,
+    has a risk rating of 6 per thousand dollars invested. The Blue Chip fund has a
+    risk rating of 4 per thousand dollars invested. For example, if $10,000 is invested
+    in each of the two investment funds, B&R''s risk rating for the portfolio would
+    be 6(10) + 4(10) = 100. Finally, B&R developed a questionnaire to measure each
+    client''s risk tolerance. Based on the responses, each client is classified as
+    a conservative, moderate, or aggressive investor. Suppose that the questionnaire
+    results classified the current client as a moderate investor. B&R recommends that
+    a client who is a moderate investor limit his or her portfolio to a maximum risk
+    rating of 240.
+
+    a. What is the recommended investment portfolio for this client? What is the annual
+    return for the portfolio?
+
+    b. Suppose that a second client with $50,000 to invest has been classified as
+    an aggressive investor. B&R recommends that the maximum portfolio risk rating
+    for an aggressive investor is 320. What is the recommended investment portfolio
+    for this aggressive investor? Discuss what happens to the portfolio under the
+    aggressive investor strategy.
+
+    c. Suppose that a third client with $50,000 to invest has been classified as a
+    conservative investor. B&R recommends that the maximum portfolio risk rating for
+    a conservative investor is 160. Develop the recommended investment portfolio for
+    the conservative investor. Discuss the interpretation of the slack variable for
+    the total investment fund constraint.
+
+
+    28. Tom''s, Inc., produces various Mexican food products and sells them to Western
+    Foods, a chain of grocery stores located in Texas and New Mexico. Tom''s, Inc.,
+    makes two salsa products: Western Foods Salsa and Mexico City Salsa. Essentially,
+    the two products have different blends of whole tomatoes, tomato sauce, and tomato
+    paste. The Western Foods Salsa is a blend of 50% whole tomatoes, 30% tomato sauce,
+    and 20% tomato paste. The Mexico City Salsa, which has a thicker and chunkier
+    consistency, consists of 70% whole tomatoes, 10% tomato sauce, and 20% tomato
+    paste. Each jar of salsa produced weighs 10 ounces. For the current production
+    period, Tom''s, Inc., can purchase up to 280 pounds of whole tomatoes, 130 pounds
+    of tomato sauce, and 100 pounds of tomato paste; the price'
+  merge: -1
+  img_proc: true
+- pgno: 47
+  md: 'per pound for these ingredients is $0.96, $0.64, and $0.56, respectively. The
+    cost of the spices and the other ingredients is approximately $0.10 per jar. Tom''s,
+    Inc., buys empty glass jars for $0.02 each, and labeling and filling costs are
+    estimated to be $0.03 for each jar of salsa produced. Tom''s contract with Western
+    Foods results in sales revenue of $1.64 for each jar of Western Foods Salsa and
+    $1.93 for each jar of Mexico City Salsa.
+
+
+    +   a. Develop a linear programming model that will enable Tom''s to determine
+    the mix of salsa products that will maximize the total profit contribution.
+
+    +   b. Find the optimal solution.
+
+
+    29. Autolite produces electronic ignition systems for automobiles at a plant in
+    Cleveland, Ohio. Each ignition system is assembled from two components produced
+    at Autolight''s plants in Buffalo, New York, and Dayton, Ohio. The Buffalo plant
+    can produce 2000 units of component 1, 1000 units of component 2, or any combination
+    of the two components each day. For instance, 60% of Buffalo''s production time
+    could be used to produce component 1 and 40% of Buffalo''s production time could
+    be used to produce component 2; in this case, the Buffalo plant would be able
+    to produce 0.6(2000) = 1200 units of component 1 each day and 0.4(1000) = 400
+    units of component 2 each day. The Dayton plant can produce 600 units of component
+    1, 1400 units of component 2, or any combination of the two components each day.
+    At the end of each day, the component production at Buffalo and Dayton is sent
+    to Cleveland for assembly of the ignition systems on the following workday.
+
+
+    +   a. Formulate a linear programming model that can be used to develop a daily
+    production schedule for the Buffalo and Dayton plants that will maximize daily
+    production of ignition systems at Cleveland.
+
+    +   b. Find the optimal solution.
+
+
+    30. A financial advisor at Diehl Investments identified two companies that are
+    likely candidates for a takeover in the near future. Eastern Cable is a leading
+    manufacturer of flexible cable systems used in the construction industry, and
+    ComSwitch is a new firm specializing in digital switching systems. Eastern Cable
+    is currently trading for $40 per share, and ComSwitch is currently trading for
+    $25 per share. If the takeovers occur, the financial advisor estimates that the
+    price of Eastern Cable will go to $55 per share and ComSwitch will go to $43 per
+    share. At this point in time, the financial advisor has identified ComSwitch as
+    the higher-risk alternative. Assume that a client indicated a willingness to invest
+    a maximum of $50,000 in the two companies. The client wants to invest at least
+    $15,000 in ComSwitch and at least $10,000 in Eastern Cable. Because of the higher
+    risk associated with ComSwitch, the financial advisor has recommended that at
+    most $25,000 should be invested in ComSwitch.
+
+
+    +   a. Formulate a linear programming model that can be used to determine the
+    number of shares of Eastern Cable and the number of shares of ComSwitch that will
+    meet the investment constraints and maximize the total return for the investment.
+
+    +   b. Graph the feasible region.
+
+    +   c. Determine the coordinates of each extreme point.
+
+    +   d. Find the optimal solution.
+
+
+    31. Consider the following linear program:
+
+
+    ```
+
+    Min 3A + 4B
+
+    s.t.
+
+    1A + 3B ≥ 6
+
+    1A + 1B ≥ 4
+
+    A, B ≥ 0
+
+    ```
+
+
+    Identify the feasible region and find the optimal solution using the graphical
+    solution procedure. What is the value of the objective function?'
+  merge: -1
+  img_proc: true
+- pgno: 48
+  md: '32. Identify the three extreme-point solutions for the M&D Chemicals problem
+    (see Section 7.5).
+
+    Identify the value of the objective function and the values of the slack and surplus
+    variables
+
+    at each extreme point.
+
+
+    33. Consider the following linear programming problem:
+
+
+    ```
+
+    Min A + 2B
+
+    s.t.
+
+    A + 4B ≤ 21
+
+    2A + B ≥ 7
+
+    3A + 1.5B ≤ 21
+
+    -2A + 6B ≥ 0
+
+    A, B ≥ 0
+
+    ```
+
+
+    +   a. Find the optimal solution using the graphical solution procedure and the
+    value of the
+
+    +   objective function.
+
+    +   b. Determine the amount of slack or surplus for each constraint.
+
+    +   c. Suppose the objective function is changed to max 5A + 2B. Find the optimal
+    solution
+
+    +   and the value of the objective function.
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_48_0.png)
+
+
+    34. Consider the following linear program:
+
+
+    ```
+
+    Min 2A + 2B
+
+    s.t.
+
+    1A + 3B ≤ 12
+
+    3A + 1B ≥ 13
+
+    1A - 1B = 3
+
+    A, B ≥ 0
+
+    ```
+
+
+    +   a. Show the feasible region.
+
+    +   b. What are the extreme points of the feasible region?
+
+    +   c. Find the optimal solution using the graphical solution procedure.
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_48_1.png)
+
+
+    35. For the linear program
+
+
+    ```
+
+    Min 6A + 4B
+
+    s.t.
+
+    2A + 4B ≥ 12
+
+    1A + 1B ≥ 10
+
+    1B ≤ 4
+
+    A, B ≥ 0
+
+    ```
+
+
+    +   a. Write the problem in standard form.
+
+    +   b. Solve the problem using the graphical solution procedure.
+
+    +   c. What are the values of the slack and surplus variables?
+
+
+    36. As part of a quality improvement initiative, Consolidated Electronics employees
+    complete
+
+    a three-day training program on teaming and a two-day training program on problem
+    solv-
+
+    ing. The manager of quality improvement has requested that at least 8 training
+    programs
+
+    on teaming and at least 10 training programs on problem solving be offered during
+    the next
+
+    six months. In addition, senior-level management has specified that at least 25
+    training
+
+    programs must be offered during this period. Consolidated Electronics uses a consultant
+
+    to teach the training programs. During the next quarter, the consultant has 84
+    days of'
+  merge: -1
+  img_proc: true
+- pgno: 49
+  md: '+   training time available. Each training program on teaming costs $10,000
+    and each training program on problem solving costs $8000.
+
+    +   a. Formulate a linear programming model that can be used to determine the
+    number of training programs on teaming and the number of training programs on
+    problem solving that should be offered in order to minimize total cost.
+
+    +   b. Graph the feasible region.
+
+    +   c. Determine the coordinates of each extreme point.
+
+    +   d. Solve for the minimum-cost solution.
+
+
+    37. The New England Cheese Company produces two cheese spreads by blending mild
+    cheddar cheese with extra sharp cheddar cheese. The cheese spreads are packaged
+    in 12-ounce containers, which are then sold to distributors throughout the Northeast.
+    The Regular blend contains 80% mild cheddar and 20% extra sharp, and the Zesty
+    blend contains 60% mild cheddar and 40% extra sharp. This year, a local dairy
+    cooperative offered to provide up to 8100 pounds of mild cheddar cheese for $1.20
+    per pound and up to 3000 pounds of extra sharp cheddar cheese for $1.40 per pound.
+    The cost to blend and package the cheese spreads, excluding the cost of the cheese,
+    is $0.20 per container. If each container of Regular is sold for $1.95 and each
+    container of Zesty is sold for $2.20, how many containers of Regular and Zesty
+    should New England Cheese produce?
+
+
+    38. Applied Technology, Inc. (ATI) produces bicycle frames using two fiberglass
+    materials that improve the strength-to-weight ratio of the frames. The cost of
+    the standard-grade material is $7.50 per yard and the cost of the professional-grade
+    material is $9.00 per yard. The standard and professional-grade materials contain
+    different amounts of fiberglass, carbon fiber, and Kevlar, as shown in the following
+    table:
+
+
+    | | Standard Grade | Professional Grade |
+
+    |---|---|---|
+
+    | Fiberglass | 84% | 58% |
+
+    | Carbon fiber | 10% | 30% |
+
+    | Kevlar | 6% | 12% |
+
+
+    +   ATI signed a contract with a bicycle manufacturer to produce a new frame with
+    a carbon fiber content of at least 20% and a Kevlar content of not greater than
+    10%. To meet the required weight specification, a total of 30 yards of material
+    must be used for each frame.
+
+    +   a. Formulate a linear program to determine the number of yards of each grade
+    of fiber material that ATI should use in each frame in order to minimize total
+    cost. Define the decision variables and indicate the purpose of each constraint.
+
+    +   b. Use the graphical solution procedure to determine the feasible region.
+    What are the coordinates of the extreme points?
+
+    +   c. Compute the total cost at each extreme point. What is the optimal solution?
+
+    +   d. The distributor of the fiberglass material is currently overstocked with
+    the professional-grade material. To reduce inventory, the distributor offered
+    ATI the opportunity to purchase the professional-grade material for $8 per yard.
+    Will the optimal solution change?
+
+    +   e. Suppose that the distributor further lowers the price of the professional-grade
+    material to $7.40 per yard. Will the optimal solution change? What effect would
+    an even lower price for the professional-grade material have on the optimal solution?
+    Explain.
+
+
+    39. Innis Investments manages funds for a number of companies and wealthy clients.
+    The investment strategy is tailored to each client''s needs. For a new client,
+    Innis has been authorized to invest up to $1.2 million in two investment funds:
+    a stock fund and a money market'
+  merge: -1
+  img_proc: true
+- pgno: 50
+  md: 'fund. Each unit of the stock fund costs $50 and provides an annual rate of
+    return of 10%; each unit of the money market fund costs $100 and provides an annual
+    rate of return of 4%. The client wants to minimize risk subject to the requirement
+    that the annual income from the investment be at least $60,000. According to Innis’s
+    risk measurement system, each unit invested in the stock fund has a risk index
+    of 8, and each unit invested in the money market fund has a risk index of 3; the
+    higher risk index associated with the stock fund simply indicates that it is the
+    riskier investment. Innis’s client also specifies that at least $300,000 be invested
+    in the money market fund.
+
+    a. Determine how many units of each fund Innis should purchase for the client
+    to minimize the total risk index for the portfolio.
+
+    b. How much annual income will this investment strategy generate?
+
+    c. Suppose the client desires to maximize annual return. How should the funds
+    be invested?
+
+
+    40. Eastern Chemicals produces two types of lubricating fluids used in industrial
+    manufacturing. Both products cost Eastern Chemicals $1 per gallon to produce.
+    Based on an analysis of current inventory levels and outstanding orders for the
+    next month, Eastern Chemicals’ management specified that at least 30 gallons of
+    product 1 and at least 20 gallons of product 2 must be produced during the next
+    two weeks. Management also stated that an existing inventory of highly perishable
+    raw material required in the production of both fluids must be used within the
+    next two weeks. The current inventory of the perishable raw material is 80 pounds.
+    Although more of this raw material can be ordered if necessary, any of the current
+    inventory that is not used within the next two weeks will spoil—hence, the management
+    requirement that at least 80 pounds be used in the next two weeks. Furthermore,
+    it is known that product 1 requires 1 pound of this perishable raw material per
+    gallon and product 2 requires 2 pounds of the raw material per gallon. Because
+    Eastern Chemicals’ objective is to keep its production costs at the minimum possible
+    level, the firm’s management is looking for a minimum-cost production plan that
+    uses all the 80 pounds of perishable raw material and provides at least 30 gallons
+    of product 1 and at least 20 gallons of product 2. What is the minimum-cost solution?
+
+
+    41. Southern Oil Company produces two grades of gasoline: regular and premium.
+    The profit contributions are $0.30 per gallon for regular gasoline and $0.50 per
+    gallon for premium gasoline. Each gallon of regular gasoline contains 0.3 gallons
+    of grade A crude oil and each gallon of premium gasoline contains 0.6 gallons
+    of grade A crude oil. For the next production period, Southern has 18,000 gallons
+    of grade A crude oil available. The refinery used to produce the gasolines has
+    a production capacity of 50,000 gallons for the next production period. Southern
+    Oil’s distributors have indicated that demand for the premium gasoline for the
+    next production period will be at most 20,000 gallons.
+
+    a. Formulate a linear programming model that can be used to determine the number
+    of gallons of regular gasoline and the number of gallons of premium gasoline that
+    should be produced in order to maximize total profit contribution.
+
+    b. What is the optimal solution?
+
+    c. What are the values and interpretations of the slack variables?
+
+    d. What are the binding constraints?
+
+
+    42. Does the following linear program involve infeasibility, unbounded, and/or
+    alternative optimal solutions? Explain.
+
+
+    Max 4A + 8B
+
+    s.t.
+
+    2A + 2B <= 10
+
+    -1A + 1B >= 8
+
+    A, B >= 0'
+  merge: -1
+  img_proc: true
+- pgno: 51
+  md: '43. Does the following linear program involve infeasibility, unbounded, and/or
+    alternative optimal solutions? Explain.
+
+
+    Max 1A + 1B
+
+    s.t.
+
+    8A + 6B ≥ 24
+
+    2B ≥ 4
+
+    A, B ≥ 0
+
+
+    44. Consider the following linear program:
+
+
+    Max 1A + 1B
+
+    s.t.
+
+    5A + 3B ≤ 15
+
+    3A + 5B ≤ 15
+
+    A, B ≥ 0
+
+
+    +   a. What is the optimal solution for this problem?
+
+    +   b. Suppose that the objective function is changed to 1A + 2B. Find the new
+    optimal solution.
+
+
+    45. Consider the following linear program:
+
+
+    Max 1A - 2B
+
+    s.t.
+
+    -4A + 3B ≤ 3
+
+    1A - 1B ≤ 3
+
+    A, B ≥ 0
+
+
+    +   a. Graph the feasible region for the problem.
+
+    +   b. Is the feasible region unbounded? Explain.
+
+    +   c. Find the optimal solution.
+
+    +   d. Does an unbounded feasible region imply that the optimal solution to the
+    linear program will be unbounded?
+
+
+    46. The manager of a small independent grocery store is trying to determine the
+    best use of her shelf space for soft drinks. The store carries national and generic
+    brands and currently has 200 square feet of shelf space available. The manager
+    wants to allocate at least 60% of the space to the national brands and, regardless
+    of the profitability, allocate at least 10% of the space to the generic brands.
+    How many square feet of space should the manager allocate to the national brands
+    and the generic brands under the following circumstances?
+
+
+    +   a. The national brands are more profitable than the generic brands.
+
+    +   b. Both brands are equally profitable.
+
+    +   c. The generic brand is more profitable than the national brand.
+
+
+    47. Discuss what happens to the M&D Chemicals problem (see Section 7.5) if the
+    cost per gallon for product A is increased to $3.00 per gallon. What would you
+    recommend? Explain.
+
+
+    48. For the M&D Chemicals problem in Section 7.5, discuss the effect of management''s
+    requiring total production of 500 gallons for the two products. List two or three
+    actions M&D should consider to correct the situation you encounter.
+
+
+    49. PharmaPlus operates a chain of 30 pharmacies. The pharmacies are staffed by
+    licensed pharmacists and pharmacy technicians. The company currently employs 85
+    full-time-equivalent'
+  merge: -1
+  img_proc: true
+- pgno: 52
+  md: 'pharmacists (combination of full time and part time) and 175 full-time-equivalent
+    technicians. Each spring management reviews current staffing levels and makes
+    hiring plans for the year. A recent forecast of the prescription load for the
+    next year shows that at least 250 full-time-equivalent employees (pharmacists
+    and technicians) will be required to staff the pharmacies. The personnel department
+    expects 10 pharmacists and 30 technicians to leave over the next year. To accommodate
+    the expected attrition and prepare for future growth, management states that at
+    least 15 new pharmacists must be hired. In addition, PharmaPlus''s new service
+    quality guidelines specify no more than two technicians per licensed pharmacist.
+    The average salary for licensed pharmacists is $40 per hour and the average salary
+    for technicians is $10 per hour.
+
+    a. Determine a minimum-cost staffing plan for PharmaPlus. How many pharmacists
+    and technicians are needed?
+
+    b. Given current staffing levels and expected attrition, how many new hires (if
+    any) must be made to reach the level recommended in part (a)? What will the impact
+    on the payroll?
+
+
+    50. Expedition Outfitters manufactures a variety of specialty clothing for hiking,
+    skiing, and mountain climbing. The company has decided to begin production on
+    two new parkas designed for use in extremely cold weather: the Mount Everest parka
+    and the Rocky Mountain Parka. Expedition''s manufacturing plant has 120 hours
+    of cutting time and 120 hours of sewing time available for producing these two
+    parkas. Each Mount Everest Parka requires 30 minutes of cutting time and 45 minutes
+    of sewing time, and each Rocky Mountain Parka requires 20 minutes of cutting time
+    and 15 minutes of sewing time. The labor and material cost is $150 for each Mount
+    Everest Parka and $50 for each Rocky Mountain Parka, and the retail prices through
+    the firm''s mail order catalog are $250 for the Mount Everest Parka and $200 for
+    the Rocky Mountain Parka. Because management believes that the Mount Everest Parka
+    is a unique coat that will enhance the image of the firm, management specified
+    that at least 20% of the total production must consist of this model. Assuming
+    that Expedition Outfitters can sell as many coats of each type as it can produce,
+    how many units of each model should it manufacture to maximize the total profit
+    contribution?
+
+
+    51. English Motors, Ltd. (EML), developed a new all-wheel-drive sports utility
+    vehicle. As part of the marketing campaign, EML produced a digitally recorded
+    sales presentation to send to both owners of current EML four-wheel-drive vehicles
+    as well as to owners of four-wheel-drive sports utility vehicles offered by competitors;
+    EML refers to these two target markets as the current customer market and the
+    new customer market. Individuals who request the new promotion will also receive
+    a coupon for a test drive of the new EML model for one weekend. A key factor in
+    the success of the new promotion is the response rate, the percentage of individuals
+    who receive the new promotion and test drive the new model. EML estimates that
+    the response rate for the current customer market is 25% and the response rate
+    for the new customer market is 20%. For the customers who test drive the new model,
+    the sales rate is the percentage of individuals who make a purchase. Marketing
+    research studies indicate that the sales rate is 12% for the current customer
+    market and 20% for the new customer market. The cost for each promotion, excluding
+    the test drive costs, is $4 for each promotion sent to the current customer market
+    and $6 for each promotion sent to the new customer market. Management also specified
+    that a minimum of 30,000 current customers should test drive the new model and
+    a minimum of 10,000 new customers should test drive the new model. In addition,
+    the number of current customers who test drive the new vehicle must be at least
+    twice the number of new customers who test drive the new vehicle. If the marketing
+    budget, excluding test drive costs, is $1.2 million, how many promotions should
+    be sent to each group of customers in order to maximize total sales?'
+  merge: -1
+  img_proc: true
+- pgno: 53
+  md: '52. Creative Sports Design (CSD) manufactures a standard-size racket and an
+    oversize racket. The firm''s rackets are extremely light due to the use of a magnesium-graphite
+    alloy that was invented by the firm''s founder. Each standard-size racket uses
+    0.125 kilograms of the alloy and each oversize racket uses 0.4 kilograms; over
+    the next two-week production period, only 80 kilograms of the alloy are available.
+    Each standard-size racket uses 10 minutes of manufacturing time and each oversize
+    racket uses 12 minutes. The profit contributions are $10 for each standard-size
+    racket and $15 for each oversize racket, and 40 hours of manufacturing time are
+    available each week. Management specified that at least 20% of the total production
+    must be the standard-size racket. How many rackets of each type should CSD manufacture
+    over the next two weeks to maximize the total profit contribution? Assume that
+    because of the unique nature of its products, CSD can sell as many rackets as
+    it can produce.
+
+
+    53. Management of High Tech Services (HTS) would like to develop a model that
+    will help allocate its technicians'' time between service calls to regular contract
+    customers and new customers. A maximum of 80 hours of technician time is available
+    over the two-week planning period. To satisfy cash flow requirements, at least
+    $800 in revenue (per technician) must be generated during the two-week period.
+    Technician time for regular customers generates $25 per hour. However, technician
+    time for new customers only generates an average of $8 per hour because in many
+    cases a new customer contact does not provide billable services. To ensure that
+    new customer contacts are being maintained, the technician time spent on new customer
+    contacts must be at least 60% of the time spent on regular customer contacts.
+    Given these revenue and policy requirements, HTS would like to determine how to
+    allocate technician time between regular customers and new customers so that the
+    total number of customers contacted during the two-week period will be maximized.
+    Technicians require an average of 50 minutes for each regular customer contact
+    and 1 hour for each new customer contact. a. Develop a linear programming model
+    that will enable HTS to allocate technician time between regular customers and
+    new customers. b. Find the optimal solution.
+
+
+    54. Jackson Hole Manufacturing is a small manufacturer of plastic products used
+    in the automotive and computer industries. One of its major contracts is with
+    a large computer company and involves the production of plastic printer cases
+    for the computer company''s portable printers. The production cases are produced
+    on two injection molding machines. The M-100 machine has a production capacity
+    of 25 printer cases per hour, and the M-200 machine has a production capacity
+    of 40 cases per hour. Both machines use the same chemical material to produce
+    the printer cases; the M-100 uses 40 pounds of the raw material per hour and the
+    M-200 uses 50 pounds per hour. The computer company asked Jackson Hole to produce
+    as many of the cases during the upcoming week as possible; it will pay $18 for
+    each case Jackson Hole can deliver. However, next week is a regularly scheduled
+    vacation period for most of Jackson Hole''s production employees; during this
+    time, annual maintenance is performed for all equipment in the plant. Because
+    of the downtime for maintenance, the M-100 will be available for no more than
+    15 hours, and the M-200 will be available for no more than 10 hours. However,
+    because of the high set-up cost involved with both machines, management requires
+    that, if production is scheduled on either machine, the machine must be operated
+    for at least 5 hours. The supplier of the chemical material used in the production
+    process informed Jackson Hole that a maximum of 1000 pounds of the chemical material
+    will be available for next week''s production; the cost for this raw material
+    is $6 per pound. In addition to the raw material cost, Jackson Hole estimates
+    that the hourly costs of operating the M-100 and the M-200 are $50 and $75, respectively.'
+  merge: -1
+  img_proc: true
+- pgno: 54
+  md: '+   a. Formulate a linear programming model that can be used to maximize the
+    contribution to profit.
+
+    +   b. Find the optimal solution.
+
+
+    # Case Problem 1 Workload Balancing
+
+
+    Digital Imaging (DI) produces photo printers for both the professional and consumer
+    markets. The DI consumer division recently introduced two photo printers that
+    provide color prints rivaling those produced by a professional processing lab.
+    The DI-910 model can produce a 4" × 6" borderless print in approximately 37 seconds.
+    The more sophisticated and faster DI-950 can even produce a 13" × 19" borderless
+    print. Financial projections show profit contributions of $42 for each DI-910
+    and $87 for each DI-950.
+
+
+    The printers are assembled, tested, and packaged at DI''s plant located in New
+    Bern, North Carolina. This plant is highly automated and uses two manufacturing
+    lines to produce the printers. Line 1 performs the assembly operation with times
+    of 3 minutes per DI-910 printer and 6 minutes per DI-950 printer. Line 2 performs
+    both the testing and packaging operations. Times are 4 minutes per DI-910 printer
+    and 2 minutes per DI-950 printer. The shorter time for the DI-950 printer is a
+    result of its faster print speed. Both manufacturing lines are in operation one
+    8-hour shift per day.
+
+
+    # Managerial Report
+
+
+    Perform an analysis for Digital Imaging in order to determine how many units of
+    each printer to produce. Prepare a report to DI''s president presenting your findings
+    and recommendations. Include (but do not limit your discussion to) a consideration
+    of the following:
+
+
+    +   1. The recommended number of units of each printer to produce to maximize
+    the total contribution to profit for an 8-hour shift. What reasons might management
+    have for not implementing your recommendation?
+
+    +   2. Suppose that management also states that the number of DI-910 printers
+    produced must be at least as great as the number of DI-950 units produced. Assuming
+    that the objective is to maximize the total contribution to profit for an 8-hour
+    shift, how many units of each printer should be produced?
+
+    +   3. Does the solution you developed in part (2) balance the total time spent
+    on line 1 and the total time spent on line 2? Why might this balance or lack of
+    it be a concern to management?
+
+    +   4. Management requested an expansion of the model in part (2) that would provide
+    a better balance between the total time on line 1 and the total time on line 2.
+    Management wants to limit the difference between the total time on line 1 and
+    the total time on line 2 to 30 minutes or less. If the objective is still to maximize
+    the total contribution to profit, how many units of each printer should be produced?
+    What effect does this workload balancing have on total profit in part (2)?
+
+    +   5. Suppose that in part (1) management specified the objective of maximizing
+    the total number of printers produced each shift rather than total profit contribution.
+    With this objective, how many units of each printer should be produced per shift?
+    What effect does this objective have on total profit and workload balancing?
+
+
+    For each solution that you develop, include a copy of your linear programming
+    model and graphical solution in the appendix to your report.'
+  merge: -1
+  img_proc: true
+- pgno: 55
+  md: '# Case Problem 2 Production Strategy
+
+
+    Better Fitness, Inc. (BFI) manufactures exercise equipment at its plant in Freeport,
+    Long Island. It recently designed two universal weight machines for the home exercise
+    market. Both machines use BFI-patented technology that provides the user with
+    an extremely wide range of motion capability for each type of exercise performed.
+    Until now, such capabilities have been available only on expensive weight machines
+    used primarily by physical therapists.
+
+
+    At a recent trade show, demonstrations of the machines resulted in significant
+    dealer interest. In fact, the number of orders that BFI received at the trade
+    show far exceeded its manufacturing capabilities for the current production period.
+    As a result, management decided to begin production of the two machines. The two
+    machines, which BFI named the BodyPlus 100 and the BodyPlus 200, require different
+    amounts of resources to produce.
+
+
+    The BodyPlus 100 consists of a frame unit, a press station, and a pec-dec station.
+    Each frame produced uses 4 hours of machining and welding time and 2 hours of
+    painting and finishing time. Each press station requires 2 hours of machining
+    and welding time and 1 hour of painting and finishing time, and each pec-dec station
+    uses 2 hours of machining and welding time and 2 hours of painting and finishing
+    time. In addition, 2 hours are spent assembling, testing, and packaging each BodyPlus
+    100. The raw material costs are $450 for each frame, $300 for each press station,
+    and $250 for each pec-dec station; packaging costs are estimated to be $50 per
+    unit.
+
+
+    The BodyPlus 200 consists of a frame unit, a press station, and a leg-press station.
+    Each frame produced uses 5 hours of machining and welding time and 4 hours of
+    painting and finishing time. Each press station requires 3 hours machining and
+    welding time and 2 hours of painting and finishing time, each pec-dec station
+    uses 2 hours of machining and welding time and 2 hours of painting and finishing
+    time, and each leg-press station requires 2 hours of machining and welding time
+    and 2 hours of painting and finishing time. In addition, 2 hours are spent assembling,
+    testing, and packaging each BodyPlus 200. The raw material costs are $650 for
+    each frame, $400 for each press station, $250 for each pec-dec station, and $200
+    for each leg-press station; packaging costs are estimated to be $75 per unit.
+
+
+    For the next production period, management estimates that 600 hours of machining
+    and welding time; 450 hours of painting and finishing time; and 140 hours of assembly,
+    testing, and packaging time will be available. Current labor costs are $20 per
+    hour for machining and welding time; $15 per hour for painting and finishing time;
+    and $12 per hour for assembly, testing, and packaging time. The market in which
+    the two machines must compete suggests a retail price of $2400 for the BodyPlus
+    100 and $3500 for the BodyPlus 200, although some flexibility may be available
+    for BFI because of the unique capabilities of the new machines. Authorized BFI
+    dealers can purchase machines for 70% of the suggested retail price.
+
+
+    BFI''s president believes that the unique capabilities of the BodyPlus 200 can
+    help position BFI as one of the leaders in high-end exercise equipment. Consequently,
+    she states that the number of units of the BodyPlus 200 produced must be at least
+    25% of the total production.
+
+
+    # Managerial Report
+
+
+    Analyze the production problem at Better Fitness, Inc., and prepare a report for
+    BFI''s president presenting your findings and recommendations. Include (but do
+    not limit your discussion to) a consideration of the following items:
+
+
+    +   1. The recommended number of BodyPlus 100 and BodyPlus 200 machines to produce'
+  merge: -1
+  img_proc: true
+- pgno: 56
+  md: '+   2. The effect on profits of the requirement that the number of units of
+    the BodyPlus 200 produced must be at least 25% of the total production
+
+    +   3. Where efforts should be expended in order to increase contribution to profits
+
+
+    Include a copy of your linear programming model and graphical solution in an appendix
+    to your report.
+
+
+    # Case Problem 3 Hart Venture Capital
+
+
+    Hart Venture Capital (HVC) specializes in providing venture capital for software
+    development and Internet applications. Currently HVC has two investment opportunities:
+    (1) Security Systems, a firm that needs additional capital to develop an Internet
+    security software package, and (2) Market Analysis, a market research company
+    that needs additional capital to develop a software package for conducting customer
+    satisfaction surveys. In exchange for Security Systems stock, the firm asked HVC
+    to provide $600,000 in year 1, $600,000 in year 2, and $250,000 in year 3 over
+    the coming three-year period. In exchange for Market Analysis stock, the firm
+    asked HVC to provide $500,000 in year 1, $350,000 in year 2, and $400,000 in year
+    3 over the same three-year period. HVC believes that both investment opportunities
+    are worth pursuing. However, because of other investments, HVC is willing to commit
+    at most $800,000 for both projects in the first year, at most $700,000 in the
+    second year, and $500,000 in the third year.
+
+
+    HVC''s financial analyst team reviewed both projects and recommended that the
+    company''s objective should be to maximize the net present value of the total
+    investment in Security Systems and Market Analysis. The net present value takes
+    into account the estimated value of the stock at the end of the three-year period
+    as well as the capital outflows that are necessary during each of the three years.
+    Using an 8% rate of return, HVC''s financial analysis team estimates that 100%
+    funding of the Security Systems project has a net present value of $1,800,000,
+    and 100% funding of the Market Analysis project has a net present value of $1,600,000.
+
+
+    HVC has the option to fund any percentage of the Security Systems and Market Analysis
+    projects. For example, if HVC decides to fund 40% of the Security Systems project,
+    investments of 0.40($600,000) = $240,000 would be required in year 1, 0.40($600,000)
+    = $240,000 would be required in year 2, and 0.40($250,000) = $100,000 would be
+    required in year 3. In this case, the net present value of the Security Systems
+    project would be 0.40($1,800,000) = $720,000. The investment amounts and the net
+    present value for partial funding of the Market Analysis project would be computed
+    in the same manner.
+
+
+    # Managerial Report
+
+
+    Perform an analysis of HVC''s investment problem and prepare a report that presents
+    your findings and recommendations. Be sure to include information on the following:
+
+
+    +   1. The recommended percentage of each project that HVC should fund and the
+    net present value of the total investment
+
+    +   2. A capital allocation plan for Security Systems and Market Analysis for
+    the coming three-year period and the total HVC investment each year
+
+    +   3. The effect, if any, on the recommended percentage of each project that
+    HVC should fund if HVC is willing to commit an additional $100,000 during the
+    first year
+
+    +   4. A capital allocation plan if an additional $100,000 is made available
+
+    +   5. Your recommendation as to whether HVC should commit the additional $100,000
+    in the first year
+
+
+    Provide model details and relevant computer output in a report appendix.'
+  merge: -1
+  img_proc: true
+- pgno: 57
+  md: '# Appendix 7.1 Solving Linear Programs with Excel 2010
+
+
+    In this appendix we will use an Excel worksheet to solve the RMC linear programming
+    problem. We will enter the problem data for the RMC problem in the top part of
+    the worksheet and develop the linear programming model in the bottom part of the
+    worksheet. Note that Appendix A contains much more detail on how to formulate
+    models in Excel.
+
+
+    # Formulation
+
+
+    Whenever we formulate a worksheet model of a linear program, we perform the following
+    steps:
+
+
+    +   Step 1. Enter the problem data in the top part of the worksheet
+
+    +   Step 2. Specify cell locations for the decision variables
+
+    +   Step 3. Select a cell and enter a formula for computing the value of the objective
+    function
+
+    +   Step 4. Select a cell and enter a formula for computing the left-hand side
+    of each constraint
+
+    +   Step 5. Select a cell and enter a formula for computing the right-hand side
+    of each constraint
+
+
+    The formula worksheet that we developed for the RMC problem using these five steps
+    is shown in Figure 7.25. Let us review each of the preceding steps as they apply
+    to the RMC problem.
+
+
+    # FIGURE 7.25 EXCEL FORMULA WORKSHEET FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_57_0.png)'
+  merge: -1
+  img_proc: true
+- pgno: 58
+  md: '+   Step 1. Enter the problem data in the top part of the worksheet
+
+    +   Cells B5 to C7 show the material requirements per ton of each product.
+
+    +   Cells B8 and C8 show the profit contribution per ton for the two products.
+
+    +   Cells D5 to D7 show the maximum amounts available for each of the three materials.
+
+
+    +   Step 2. Specify cell locations for the decision variables
+
+    +   Cell B15 will contain the number of tons of fuel additive produced, and Cell
+
+    +   C15 will contain the number of tons of solvent base produced.
+
+
+    +   Step 3. Select a cell and enter a formula for computing the value of the objective
+
+    +   function
+
+    +   Cell B17: =B8*B15+C8*C15
+
+
+    +   Step 4. Select a cell and enter a formula for computing the left-hand side
+    of each con-
+
+    +   straint. With three constraints, we have
+
+    +   Cell B20: =B5*B15+C5*C15
+
+    +   Cell B21: =C6*C15
+
+    +   Cell B22: =B7*B15+C7*C15
+
+
+    +   Step 5. Select a cell and enter a formula for computing the right-hand side
+    of each con-
+
+    +   straint. With three constraints, we have
+
+    +   Cell D20: =D5
+
+    +   Cell D21: =D6
+
+    +   Cell D22: =D7
+
+
+    Note that descriptive labels make the model section of the worksheet easier to
+    read and under-
+
+    stand. For example, we added “Fuel Additive,” “Solvent Base,” and “Tons Produced”
+    in
+
+    rows 14 and 15 so that the values of the decision variables appearing in Cells
+    B15 and C15
+
+    can be easily interpreted. In addition, we entered “Maximize Total Profit” in
+    Cell A17 to in-
+
+    dicate that the value of the objective function appearing in Cell B17 is the maximum
+    profit
+
+    contribution. In the constraint section of the worksheet we added the constraint
+    names as
+
+    well as the “<=” symbols to show the relationship that exists between the left-hand
+    side
+
+    and the right-hand side of each constraint. Although these descriptive labels
+    are not neces-
+
+    sary to use Excel Solver to find a solution to the RMC problem, the labels make
+    it easier
+
+    for the user to understand and interpret the optimal solution.
+
+
+    # Excel Solution
+
+
+    Excel 2010 contains an updated Solver capability that incorporates much of what
+    was pre-
+
+    viously available as Premium Solver. Excel Solver, developed by Frontline Systems,
+    can be
+
+    used to solve all of the linear programming problems presented in this text.
+
+
+    The following steps describe how Excel Solver can be used to obtain the optimal
+    solu-
+
+    tion to the RMC problem:
+
+
+    +   Step 1. Select the Data tab from the Ribbon
+
+
+    +   Step 2. Select Solver from the Analysis Group (see Figure 7.25, where the
+    Analysis
+
+    +   Group and Data tab are displayed in the Ribbon)
+
+
+    +   Step 3. When the Solver Parameters dialog box appears (see Figure 7.26):
+
+    +   Enter B17 into the Set Objective box
+
+    +   Select the To: Max option
+
+    +   Enter B15:C15 into the By Changing Variable Cells box
+
+    +   Select Add
+
+
+    +   Step 4. When the Add Constraint dialog box appears:
+
+    +   Enter B20:B22 in the Cell Reference box'
+  merge: -1
+  img_proc: true
+- pgno: 59
+  md: "# FIGURE 7.26 EXCEL SOLVER PARAMETERS DIALOG BOX FOR THE RMC PROBLEM\n\n![](img/e2cb94e77057728e7ce105fa1f79ad61_59_0.png)\n\
+    \n+   Select <=\n+   Enter D20:D22 in the Constraint box\n+   Click OK\n+   \n\
+    +   Step 5. When the Solver Parameters dialog box reappears:\n+   Click the checkbox\
+    \ for Make Unconstrained Variables Non-negative\n+   \n+   Step 6. Select the\
+    \ Select a Solving Method drop-down button\n+   Select Simplex LP**\n+   \n+ \
+    \  Step 7. Click Solve\n+   \n+   Step 8. When the Solver Results dialog box appears:\n\
+    +   Select Keep Solver Solution\n+   Click OK\n\nThe Excel Answer Report that\
+    \ is similar to Figure 7.15 is generated from the Solver Results dialog box. This\
+    \ is created by clicking on Answer in the Reports group before clicking OK in\
+    \ step 7. We will discuss the Sensitivity Report in Chapter 8.\n\nFigure 7.26\
+    \ shows the completed Excel Solver Parameters dialog box, and Figure 7.27 shows\
+    \ the optimal solution in the worksheet. The optimal solution of 25 tons of fuel\
+    \ additive and 20 tons of solvent base is the same as we obtained using the graphical\
+    \ solution procedure. Solver also has an option to provide sensitivity analysis\
+    \ information. We discuss sensitivity analysis in Chapter 8.\n\nIn step 5 we selected\
+    \ the Make Unconstrained Variables Non-negative option in the Solver Parameters\
+    \ dialog box to avoid having to enter nonnegativity constraints for the decision\
+    \ variables. In general, whenever we want to solve a linear programming model\
+    \ in\n\n*Because we know this is a linear program, the Simplex LP algorithm is\
+    \ the most efficient solution method."
+  merge: -1
+  img_proc: true
+- pgno: 60
+  md: '# FIGURE 7.27 EXCEL SOLUTION FOR THE RMC PROBLEM
+
+
+    ![](img/e2cb94e77057728e7ce105fa1f79ad61_60_0.png)
+
+
+    which the decision variables are all restricted to be nonnegative, we will select
+    this option. In addition, in step 4 we entered all three less-than-or-equal-to
+    constraints simultaneously by entering B20:B22 into the Cell Reference box, selecting
+    <=, and entering D20:D22 into the Constraint box. Alternatively, we could have
+    entered the three constraints one at a time. The Solver Add-In should be found
+    under the Data tab on the Excel Ribbon. If it does not appear here, you will have
+    to add it by following the steps shown below.
+
+
+    +   Step 1. Select the File tab from the Ribbon
+
+    +   Step 2. Select Options from the File menu
+
+    +   Step 3. Choose Add-Ins from the Excel Options screen
+
+    +   Step 4. Click on Go next to Manage: Excel Add-ins
+
+    +   Step 5. Click on the Solver Add-in checkbox
+
+
+    # Appendix 7.2 Solving Linear Programs with LINGO
+
+
+    In this appendix we describe how to use LINGO to solve the RMC problem. When you
+    start LINGO, two windows are immediately displayed. The outer, or mainframe, window
+    contains all the command menus and the command toolbar. The smaller window is
+    the model window; this window is used to enter and edit your linear programming
+    model you want to solve. As with any model, it is good to document your LINGO
+    model with comments. A comment in a LINGO model begins with an exclamation point
+    and ends with a semicolon. If desired, a comment can span multiple lines.'
+  merge: -1
+  img_proc: true
+- pgno: 61
+  md: 'The first item we enter is a comment describing the objective function. Recall
+    that the objective function for the RMC problem is to maximize profit. Hence we
+    enter the following comment:
+
+
+    ```
+
+    ! MAXIMIZE PROFIT;
+
+    ```
+
+
+    Next we press the Enter key and then type the objective function. The objective
+    function for the RMC problem is Max 40F + 30S. Thus, in the second line of the
+    LINGO model window, we enter the following expression:
+
+
+    ```
+
+    MAX = 40*F + 30*S;
+
+    ```
+
+
+    Note that in LINGO the symbol * is used to denote multiplication and that the
+    objective function, like a comment, ends with a semicolon. In general, each mathematical
+    expression (objective function and constraints) in LINGO is terminated with a
+    semicolon.
+
+
+    Next, we press the Enter key to move to a new line. The first constraint in the
+    RMC problem is 0.4F + 0.5S <= 20, for material 1. Thus, in the third and fourth
+    lines of the LINGO model window, we enter the following expressions:
+
+
+    ```
+
+    !MATERIAL 1 CONSTRAINT;
+
+    0.4*F + 0.5*S <= 20;
+
+    ```
+
+
+    Note that LINGO interprets the <= symbol as <=. Alternatively, we could enter
+    < instead of <=. As was the case when entering the objective function, a semicolon
+    is required at the end of the first constraint. Pressing the Enter key moves us
+    to a new line, and we continue the process by entering the remaining comments
+    and constraints as shown here:
+
+
+    ```
+
+    !MATERIAL 2 CONSTRAINT;
+
+    0.2*S <= 5;
+
+    !MATERIAL 3 CONSTRAINT;
+
+    0.6*F + 0.3*S <= 21;
+
+    ```
+
+
+    The model window will now appear as follows:
+
+
+    ```
+
+    !MAXIMIZE PROFIT;
+
+    MAX = 40*F + 30*S;
+
+    !MATERIAL 1 CONSTRAINT;
+
+    0.4*F + 0.5*S <= 20;
+
+    !MATERIAL 2 CONSTRAINT;
+
+    0.2*S <= 5;
+
+    !MATERIAL 3 CONSTRAINT;
+
+    0.6*F + 0.3*S <= 21;
+
+    ```
+
+
+    If you make an error in entering the model, you can correct it at any time by
+    simply positioning the cursor where you made the error and entering the necessary
+    correction.
+
+
+    To solve the model, select the Solve command from the LINGO menu or press the
+    Solve button on the toolbar at the top of the mainframe window. LINGO will begin
+    the solution process by determining whether the model conforms to all syntax requirements.
+    If the LINGO model doesn''t pass these tests, you will be informed by an error
+    message. If LINGO does not find any errors in the model input, it will begin to
+    solve the model. As part of the solution process, LINGO displays a Solver Status
+    window that allows you to monitor the progress of the solver. LINGO displays the
+    solution in a new window titled "Solution Report". The output that appears in
+    the Solution Report window for the RMC problem is shown in Figure 7.28.'
+  merge: -1
+  img_proc: true
+- pgno: 62
+  md: '# FIGURE 7.28 SOLUTION TO THE RMC PROBLEM USING LINGO
+
+
+    Global optimal solution found.
+
+    Objective value: 1600.000
+
+    Total solver iterations: 2
+
+
+    | Variable | Value | Reduced Cost |
+
+    |---|---|---|
+
+    | F | 25.00000 | 0.000000 |
+
+    | S | 20.00000 | 0.000000 |
+
+
+    | Row | Slack or Surplus | Dual Price |
+
+    |---|---|---|
+
+    | 1 | 1600.000 | 1.000000 |
+
+    | 2 | 0.000000 | 33.333333 |
+
+    | 3 | 1.000000 | 0.000000 |
+
+    | 4 | 0.000000 | 44.44444 |
+
+
+    The first part of the output shown in Figure 7.28 indicates that an optimal solution
+    has been found and that the value of the objective function is 1600. We see that
+    the optimal solution is F = 25 and S = 20, and that the slack variables for the
+    three constraints (rows 2–4) are 0, 1, and 0. We will discuss the use of the information
+    in the Reduced Cost column and the Dual Price column in Chapter 8.'
+  merge: -1
+  img_proc: true
+- pgno: 63
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 64
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 65
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 66
+  md: <!-- no content -->
+  merge: -1
+  img_proc: true
+- pgno: 67
+  md: '![](img/e2cb94e77057728e7ce105fa1f79ad61_67_0.png)
+
+
+    CENGAGE Learning
+
+    For your lifelong learning solutions, visit www.cengage.com/custom
+
+    Visit our corporate website at www.cengage.com
+
+
+    ISBN-13: 978-1-337-05146-8
+
+    ISBN-10: 1-337-05146-7
+
+    90000
+
+    9 781337 051668
+
+
+    T2-BEN-474'
+  merge: -1
+  img_proc: true

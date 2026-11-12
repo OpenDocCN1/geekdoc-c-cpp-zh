@@ -1,0 +1,11 @@
+couples living together separate or divorce. Of course, those couples who argue incessantly, resort to violence, and engage in infidelities should end their relationships, but they are in the distinct minority. Most romantic partners face other problems that are less obvious.
+
+One of the main reasons for the stagnation, and sometimes the demise, of a relationship is a widening gap of shared interests and activities. Believing that relationships can rely on the past to function in the present is a recipe for failure. Offerings of novelty beckon us in every nook and cranny of our lives. When we experiment with new interests, our likes and dislikes broaden or strengthen (even if it is just by tiny fractions).
+
+To preserve intimacy, we need to be in relationships where new knowledge and insights are sought, shared, and welcomed by each partner. Even if we want things to stay the same, we know that we are changing, so why should we expect anything less from people we care about. How we respond to change ends up being the legacy of our social world. Are we open and curious or closed off?
+
+# Working with Negativity
+
+Many scientists and therapists who work with couples talk about the importance of good communication skills, problem-solving skills, and how to eliminate negative and increase positive thoughts and behaviors. If we want to avoid bad relationships, then we need to be honest and constructive when we talk to our partners and learn to handle arguments quickly and effectively before they fester and control the relationship. When it comes to spending time together with partners, there are studies showing that engaging in five positive behaviors (e.g., compliments or hugs) to each negative behavior (e.g., fighting or ignoring) is the ticket to satisfying relationships. Supposedly, if you fall below this magical 5:1 ratio, then you are pretty much on your way to a divorce, break-up, or endless inferno of suffering.
+
+But once we leave the laboratory and enter the real world, relationships are a lot messier. There are relationships full of positive experiences and almost nothing to complain about (high positive, low negative) and

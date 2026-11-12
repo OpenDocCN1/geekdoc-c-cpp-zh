@@ -1,0 +1,11 @@
+without even giving them a chance (see Chapter 4) can be reevaluated through the lens of our values. I cannot emphasize enough that you need to honor your own values, which may be different from any other person. A fulfilling life stems from acting in ways that are aligned with our core identities. Values fill up space in the core.
+
+However, your values can change, and your values might be different in various parts of your life. So, if you are unsatisfied with the moments in your relationships, think about what you value in relationships. The same goes for careers or how you spend your free time. If you can identify the exact area where you are unfulfilled, explore your values in that area and consider what to accept, what to transform, what to end, and what to begin anew.
+
+The appendix of this book contains two other instruments that can help you evaluate your values and, more importantly, determine whether you are moving in the direction of your values and living a life infused with meaning. Complete each part of the Valued Living Questionnaire and the BULLI.
+
+# Finding the Right Home to Align Your Actions with Your Values
+
+Doing something that is a good “fit” with your values, when you get to use your strengths on a regular basis, feels good. These positive feelings spill over into the activity itself, so you are more likely to be interested, devote greater effort, and persevere longer. It’s a powerful tool for developing, strengthening, and maintaining interest and meaning. This notion of “fit” cannot be explained by how enjoyable a task is or how much of a positive mood people feel. When your values and strengths are linked to an activity, this sparks interest over and above feeling good.
+
+We all know of situations that arm or disarm us, that seem to naturally fit with our strengths and values. Some of us are more people-oriented, which means we prefer to do things with someone rather than alone. Our strongest values may include helping others, sharing love, or being accepted. Ignore this element, and you are likely to find yourself in

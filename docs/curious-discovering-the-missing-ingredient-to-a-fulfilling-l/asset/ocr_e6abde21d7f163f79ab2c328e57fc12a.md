@@ -1,0 +1,11 @@
+the realization that a satisfactory purpose has been reached (or at least a purpose that can be further refined). In the process of developing a purpose, the “satisficing,” or good-enough, solution is less about pursuing happiness and more about discovering a way to finally express those elusive innermost values and interests.
+
+Going back to that 2007 Pew Religious Landscape Survey, we find a sizeable number of people who, in their search for meaning, found that they outgrew their beliefs. Of adults who were not raised to be religious as a child, 4% later identified with a religion. That is, they found a good fit for what they believe in and what they want their lives to be about. From what we know about people who are religious, we can be sure that some of them stumbled upon a purpose in life. Of course, it goes both ways. Of adults who were raised religious, nearly one in ten decided that this was not the guiding force in their lives and changed their life philosophies to something other than religious faith. Before you write off these changes as too small to be noticeable, consider that in the latest U.S. census, more than 85% of the country reported being religious—10% of this group is more than 25 million people!
+
+A dynamic process is at work, and people are on a quest for meaning. At any time, we can “learn” another set of values to guide us, and from these experiences, we can reshape our brains and modify our personalities.
+
+# The Intentional, Gradual Process of Purpose in Action
+
+Going back to Lee Wheeler, the sculptor I read about in the Washington Post, I was so intrigued by his farting lawn and curious attitude that I had to talk to him and find out more. It became clear that he exemplifies the proactive mindset.
+
+Lee Wheeler happened to find his own, odd purpose to appreciate and try to understand the absurdity of life and complexity of human beings. Now, it’s easy to see how this sort of purpose can lead one to become a psychologist, an international journalist, or any number of professions. Lee’s

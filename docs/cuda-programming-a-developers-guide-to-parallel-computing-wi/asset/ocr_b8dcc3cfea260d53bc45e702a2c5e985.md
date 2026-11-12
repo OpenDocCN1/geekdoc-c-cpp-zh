@@ -1,0 +1,21 @@
+branch address. However, this adds to the cost of branch misprediction, as now the instruction stream that has been executed has to be undone or discarded.
+
+The optimal model for both branch prediction and speculative execution is simply to execute both paths of the branch and then commit the results when the actual branch is known. As branches are often nested, in practice such an approach requires multiple levels of hardware and is therefore rarely used.
+
+Finally, we have the other major difference, seen until recently, which is the amount and number of cache memory levels. The CPU programming model works on the nice principle of abstraction, that is, the programmer doesn't have to care where the memory is because the hardware takes care of it. For most programs, except those that need to run fast, this works quite well. It used to be that instruction cycles were expensive, but with ever-increasing chip density, instruction cycles are now cheap. Accessing memory is now the bottleneck on modern processor design and this is addressed by the multiple levels of cache.
+
+GPUs, until the introduction of Fermi, took an alternative approach to this design. Fermi designers believe the programmer is best placed to make use of the high-speed memory that can be placed close to the processor, in this case, the shared memory on each SM. This is the same as the L1 cache found on a conventional processor, a small area of low latency and higher bandwidth memory. If you think about most programs, this makes a lot of sense. A programmer knows the program better than anyone else and therefore should be able to identify which off-chip memory accesses can be prevented by using shared memory.
+
+Fermi expanded the on-chip memory space to 64K, 16K of which must be allocated to an L1 cache. So that there was always some shared memory present, they did not allow the entire space to be allocated to either cache or shared memory. By default, Fermi allocates 48K to shared memory and 16K to cache. However, you can switch this and have 48K of cache and 16 K of shared memory. Kepler also introduces a 32K/32K split option. In programs that make no use of shared memory, setting this switch can significantly to prefer L1 cache instead of shared memory improve performance for memory-bound kernels. This is done with a call to
+
+```
+cudaFuncSetCacheConfig(cudaFuncCachePreferL1);
+```
+
+In the sample sort program we use to look at optimizing later in this chapter, this simple change reduced the overall execution time by 15%. This is a huge bonus for enabling a feature that is disabled by default.
+
+With the inclusion of an L1 cache, GPUs and CPUs moved closer to one another in terms of the data fetched from memory. With previous GPU generations, memory accesses needed to be coalesced to achieve any sort of performance. Consider a noncoalesced memory fetch on the G80 and GT200 based hardware. If thread 0 reads from memory address 0x1000, thread 1 reads from 0x2000, thread 3 reads from 0x3000, etc., this results in one memory fetch per thread of 32 bytes. Not 32 bits, but 32 bytes, the minimum memory transaction size. The next access (0x1004, 0x2004, 0x3004, etc.) did exactly the same.
+
+In Fermi, as with CPUs, a cache line of 128 bytes is fetched per memory access. Thus, subsequent access by an adjacent thread will usually hit the cache instead of having to go out to global memory on the device. This allows for a far more flexible programming model and is more akin to the CPU programming model most programmers are familiar with.
+
+One of the aspects of GPU design that differs significantly from CPU design is the SIMT model of execution. In the MIMD model, there is separate hardware for each thread, allowing entirely separate instruction streams. In the case where the threads are processing the same instruction flow, but with different data, this approach is very wasteful of hardware resources. The GPU thus provides a single set of hardware to run N threads, where N is currently 32, the warp size.

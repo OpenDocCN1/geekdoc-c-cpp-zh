@@ -1,0 +1,19 @@
+With a liquid-cooled system, you have spare slots between the cards, as most liquid-cooled solutions are single slot. As soon as you add a RAID controller card, the associated slot drops to X8 or X4 for both the GPU and RAID card. This is unless you dedicate an X16 slot to the RAID controller, something we'd recommend.
+
+There is a physical limit on the number of drive bays that can be included in a workstation format. Even a motherboard with seven PCI-E slots, often dubbed supercomputer motherboards, have only three slots left available once four liquid-cooled GPUs are present. This allows for two RAID controllers and a single high-speed network card to be squeezed into such systems.
+
+RAID, however, is not simply about speed, although the RAID-0 mode is used for this. RAID-1 supports mirroring, where the data is completely duplicated onto another disk. Failure of one disk then means the system falls back to the remaining disk without significant impact on the operation of the system. Clearly, however, the faulty disk needs to be replaced as soon as possible. It saves you the case where several weeks of compute time could be lost due to a faulty hard drive.
+
+With a small cluster, hard drives fail regularly enough that it's not that much of a problem. However, in a larger setup, with thousands of active drives, you will be changing drives regularly.
+
+RAID-5 is a system that balances storage usage with redundancy, allowing data to be split over multiple drives in a safe manner. One of the drives in a set is a dedicated parity drive that, if one drive fails, can be used to recover the RAID array. RAID is something you definitely need to consider if restarting your job on another machine and losing the computations to date is not acceptable.
+
+Check pointing is a system that is often used to avoid the effects of failure. After a certain period, the entire results to data are check-pointed or dumped to permanent storage. Thus, the job can be moved to another node by simply moving the check-pointed data and the associated program code. In designing applications that run for some period of time, you should always consider building a check pointing system into the application.
+
+# HDSL
+
+HDSL is a standard from a company called OCZ that has developed a number of innovative products in the SSD market. Most notable of these is the RevoDrive range, a product that is basically a number of SSD drives on a PCI-E card with a built-in hard disk controller. This original card achieved on the order of 500 MB/s, which is quite reasonable; the high-end cards (the R4 C series) claim 2800 MB/s. You would need a SATA-3 controller and at least five top-end SSDs to achieve the same sort of bandwidth.
+
+The HDSL drive offered by OCZ is also an interesting product and an insight into where storage is likely to go. It embeds four older-style SSD drives into a standard 3.5 inch hard disk, with an embedded RAID-0 controller. A special controller card is used that basically extends four lanes of the PCI-E bus through a cable directly to the drive interface. Four PCI-E 2.0 lanes equates to around 1 GB/s in both directions, vastly superior to the unidirectional SATA-3 interface.
+
+Being a new technology, it has some way to go before the drives themselves match this bandwidth. Currently, the drive peaks at around 750 MB/s, which is somewhat shy of the 1000 MB/s capacity of the link. The drive ships with a single-port X4 HDSL controller, but dual- and quad-port X8 and X16 controllers are planned. Assuming the drive picks up a little in speed to the full bandwidth of the interface, which is almost certain given the march of technology, this will be a very interesting technology to see evolve.

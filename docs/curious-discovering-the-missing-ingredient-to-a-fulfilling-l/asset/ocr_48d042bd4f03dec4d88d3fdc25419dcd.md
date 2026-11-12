@@ -1,0 +1,11 @@
+p. 60 AVERAGE AMERICAN'S DAILY ROUTINE: Kahneman, D., Krueger A. B., Schkade, D., Schwarz, N., & Stone, A. (2004). A survey method for characterizing daily life experience: The day reconstruction method. *Science*, 306, 1776–1780; Krueger, A. B., Kahneman, D., Schkade, D., Schwarz, N., & Stone, A. (in press). National time accounting: The currency of life. In A. B. Krueger (Ed.), *National accounting and subjective well-being*. Chicago, IL: University of Chicago Press; Schwarz, N., Kahneman, D., & Xu, J. (in press). Global and episodic reports of hedonic experience. In R. Belli, D. Alwin, & F. Stafford (Eds.), *Using calendar and diary methods in life events research*. Newbury Park, CA: Sage.
+
+p. 63 WORK PROVIDES AN IDEAL OUTLET TO CAPITALIZE ON OUR STRENGTHS: Csikszentmihalyi, M., & LeFevre, J. (1989). Optimal experience in work and leisure. *Journal of Personality and Social Psychology*, 56, 815–822; Wrzesniewski, A., McCauley, C. R., Rozin, P., & Schwartz, B. (1997). Jobs, careers, and callings: People’s relations to their work. *Journal of Research in Personality*, 31, 21–33.
+
+p. 67 OUR HOBBIES, INTERESTS ... FALL INTO THE CATEGORY OF DESIRABLE ACTIVITIES: Waterman, A. S. (2005). When effort is enjoyed: Two studies of intrinsic motivation for personally salient activities. *Motivation and Emotion*, 29, 165–188.; Fisher, C. D., & Noble, C. S. (2004). A within-person examination of correlates of performance and emotions while working. *Human Performance*, 17, 145–168.
+
+p. 71 AVERAGE HOUSEHOLD HAS THE TELEVISION ON FOR AN INCREDIBLE EIGHT HOURS AND 18 MINUTES OF TV PER DAY: November 21, 2008, Nielsen ratings. This is the highest level of viewer hours since Nielsen began recording behavior in the 1950s.
+
+p. 72 MEN FROM THESE CULTURES LEARN FROM ROLE MODELS: Kashdan, T. B., Mishra, A., Breen, W. E., & Froh, J. J. (in press). Gender differences in gratitude: Examining appraisals, narratives, the willingness to express emotions, and changes in psychological needs. *Journal of Personality*.
+
+p. 73 WALTER REED ARMY MEDICAL CENTER: For more details, see A Breath of Hope: Walter Reed Tries Yoga to Counter PTSD by Eileen Rivers, *The Washington Post*, Tuesday, May 6, 2008.
