@@ -1,0 +1,5 @@
+menu system, I used EZ GUI from Above and Beyond Software, which can be found at http://www.anbsoft.com/middleware/ezgui/. EZ GUI is a great system for developing GUI elements and menus for your game, as it allows you to lower the draw calls for your GUI elements by utilizing texture atlases and shared materials. I also heavily relied on iTween, which was created by Bob Berkebile. The iTween library is a rich animation system that can be used to create various animation effects ranging anywhere from the simple to complex. It is a great time saver, and it was used to animate the buttons in my menu. You can find more info on iTween at http://itween.pixelplacement.com/index.php.
+
+![](bbox=[0.054, 0.35, 0.898, 0.827])
+
+FIG 4.15 This image shows the menu system scene that utilizes EZ GUI. Here you can see the panels that were created for each menu option as well as the game rendered in the Game View.

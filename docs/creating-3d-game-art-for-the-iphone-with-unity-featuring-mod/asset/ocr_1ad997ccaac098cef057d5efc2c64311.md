@@ -1,0 +1,13 @@
+I create all of my textures using Photoshop and export the file as an 8-bit PNG to my Assets folder in my Unity iOS project. I then set all of my sizing and compression within Unity. Unity iOS 3 supports several platforms; so for iPhone, you’ll need to click the iPhone icon and then check the Override for iPhone box to set the size and compression scheme.
+
+# Using Mip Maps
+
+Mip maps are a precalculated, optimized set of textures that accompany a main texture, which can help to increase rendering speed and aliasing artifacts. Using Mip maps on your textures will replace the main texture with a smaller more optimized version, as objects in your scene are farther away from the camera. In Fig. 3.18, you can see that Mip maps are enabled in the Texture Importer. Using Mip maps is a very good idea on mobile platforms. That is unless you know your texture will not be displayed very small on screen. That is to say, if you’re sure each pixel of the texture will cover one or more pixels on the screen, then Mip maps are not a necessity for optimizing your textures. In Chapter 4, I’ll discuss how building on the grid can help you to keep a one-to-one ratio between geometry size in terms of units and texture size in terms of pixels so that Mip maps are not necessary. I’m not a big fan of using Mip maps as they tend to blur your textures too much.
+
+# Multiple Resolutions
+
+You need to be aware of the different resolutions between the iPhone 4, 3GS, and iPad when building your textures. For instance, if you only build textures for the 480 wide screen of the 3GS, then when your game runs on the higher resolution displays of the iPhone 4 and iPad, your content will look poor. This is why it’s best to build textures at the highest resolution that will be supported, i.e., the iPad, and then scale down as needed. As mentioned, you can always add logic to your game that will load different content based off the device running the game. This way, you’re sure to always give the player the best content for their device.
+
+# Texture Budget
+
+Now that we’ve discussed the fundamentals of how textures are rendered by the iPhone and iPad GPU and how compression affects the amount of memory consumed by a given texture, we can now properly work out the texture budget. We discussed in Chapter 2 about the importance of budgeting our game assets in terms of how much of the system resource that would consume. The iPhone 3GS and iPad contain 256 MB of memory, while the iPhone 4 contains 512 MB. As mentioned earlier, textures are typically the culprits behind running out of memory on the iPhone and iPad.
