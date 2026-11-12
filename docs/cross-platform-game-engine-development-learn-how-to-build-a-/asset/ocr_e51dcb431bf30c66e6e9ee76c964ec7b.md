@@ -1,0 +1,1 @@
+emitter in C++ matching the YAML 1.2 specification. We are going to clone the yaml-cpp repository and compile it ourselves.

@@ -908,6 +908,7 @@
 +   [创意播客制作人（数字世界！）](docs/creative-podcast-producers-its-a-digital-world/README.md)
 +   [关键代码研究：初始（方法）（软件研究）](docs/critical-code-studies-initialmethods-software-studies/README.md)
 +   [批判性游戏：激进的游戏设计](docs/critical-play-radical-game-design-the-mit-press/README.md)
++   [跨平台游戏引擎开发：使用 C++ 和 SDL2 构建跨平台游戏引擎](docs/cross-platform-game-engine-development-learn-how-to-build-a-/README.md)
 +   [CryENGINE 游戏编程指南](docs/cryengine-game-programming-wit/README.md)
 +   [自底向上的计算机科学](docs/csbu/README.md)
 +   [CSS 核心指南 (Smashing eBook 系列 18)](docs/css-essentials-smashing-ebook-series-18/README.md)
