@@ -1,0 +1,47 @@
+# Are either of the constructs below logically equivalent to the one on the previous page?
+
+```
+if (score >= MINA)
+{
+    grade = 'A';
+}
+else if (score >= MINB && score < MINA)
+{
+    grade = 'B';
+}
+else if (score >= MINC && score < MINB)
+{
+    grade = 'C';
+}
+else if (score >= MIND && score < MINC)
+{
+    grade = 'D';
+}
+else
+{
+    grade = 'F';
+}
+```
+
+```
+if (score >= MINA)
+{
+    grade = 'A';
+}
+if (score >= MINB && score < MINA)
+{
+    grade = 'B';
+}
+if (score >= MINC && score < MINB)
+{
+    grade = 'C';
+}
+if (score >= MIND && score < MINC)
+{
+    grade = 'D';
+}
+else
+{
+    grade = 'F';
+}
+```

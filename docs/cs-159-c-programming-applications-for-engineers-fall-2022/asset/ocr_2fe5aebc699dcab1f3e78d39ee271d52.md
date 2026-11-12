@@ -1,0 +1,22 @@
+# Why are there no recognizable differences between the post-fix and prefix examples above?
+
++   - When used on a line without any other expression the post-fix and prefix operations are interchangeable.
++   - Additionally, under those same conditions a simple or complex assignment could be substituted for the post-fix or prefix operations.
+
+# When are the differences between the post-fix and prefix operations demonstrable?
+
++   - When those operators are used within another expression.
+
+| Result of Post-fix: | Result of Prefix : |
+| --- | --- |
+| | |
+
+Example to demonstrate the differences between the prefix and post-fix operations:
+
+```
+int x = 0;
+printf("The value of ++x is: %d\n", ++x);
+x = 0; //RESET x
+printf("The value of x++ is: %d\n", x++);
+printf("The final value of x: %d\n", x);
+```

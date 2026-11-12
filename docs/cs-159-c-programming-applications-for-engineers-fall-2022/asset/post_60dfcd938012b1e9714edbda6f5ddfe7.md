@@ -1,0 +1,174 @@
+
+## CS 159
+### C Programming Applications for Engineers
+### Fall 2022
+### Purdue University
+STIPES PUBLISHING L.L.C.
+
+CS 159
+C Programming (Applications for Engineers)
+Fall 2022
+William Crum
+Department of Computer Science
+Purdue University
+ISBN 978-1-64617-319-8
+Copyright © 2022
+Stipes Publishing L.L.C.
+Published by
+Stipes Publishing L.L.C.
+204 West University Avenue
+Champaign, Illinois 61820
+
+![](img/e25602f5611b32eaf448a241a988eedc_1_0.png)
+
+CS 159: C Programming (Applications for Engineers) – Fall 2022
+ISBN 978-1-64617-319-8
+
+Copyright © 2022, Stipes Publishing L.L.C.
+All rights reserved
+
+Permission in writing must be obtained from the publisher before any part of this work may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying and recording, or by any information storage or retrieval system.
+
+## Table of Contents
+
+| Topic | Page |
+| --- | --- |
+| Syllabus | 1 |
+| Course Programming and Documentation Standards | 9 |
+| Spring 2022 Exams and Solutions | 19 |
+| Spring 2022 Midterm Exam #1 | 20 |
+| Spring 2022 Midterm Exam #2 | 33 |
+| Spring 2022 Final Exam | 45 |
+| Lecture Notes | 63 |
+| Chapter 1 – Introduction to Computers | 65 |
+| Chapter 2 – Introduction to the C Language | 75 |
+| Chapter 3 – Structure of a C Program | 87 |
+| Chapter 4 – User/Programmer Defined Functions | 97 |
+| Chapter 5 – Selection | 116 |
+| Chapter 6 – Repetition | 136 |
+| Chapter 8 – Arrays | 160 |
+| Chapters 9 and 10 – Pointers and Pointer Applications | 191 |
+| Chapter 11 – Strings: Character Arrays | 199 |
+| Lecture Quiz Difficulty Report | Last Page |
+
+## CS 159 – C Programming (Applications for Engineers), Fall 2022 Syllabus
+
+| Instructor: | Instructor Office Location: | Instructor Office Hours: |
+| :--- | :--- | :--- |
+| Department of Computer Science | Building: HAAS Room: Southeast corner of Third Street and University Street | |
+
+Please visit during instructor office hours for any administrative concerns regarding the course.
+
+- If you have a concern then it is expected that you make the effort to visit office hours of your instructor.
+
+CS 159 introduces the tools of software development that have become essential for innovative and creative problem solving in science and engineering. Educators and employers agree that it is important for future scientific and engineering professionals to be able to function as part of a technical team and develop the ability to communicate complex technical concepts. CS 159 will require students to work in assigned teams for lab assignments. Educational research informs us that structured collaboration leads to increased learning gains for all students participating in an introductory programming course. **Collaboration is a requirement of the course.** You will be assigned to your teams by your instructor.
+
+CS 159 explores the concepts of programming using a language and development environment that are new to most students. One objective of the course is to help students recognize how programming concepts are common to various languages to which you are exposed in your undergraduate education and how those concepts can be used to solve a problem.
+
+CS 159 is an introductory programming course without official prerequisite but does assume mathematical and physical science knowledge and sophistication typical of a first-year engineering student.
+
+The University expects students to invest 6-9 hours per week in preparation, in addition to time spent in class, for a three credit hour course. Previous students in CS 159 have reported that their keys to success included attending lecture, active participation in lab, preparation and regular review of course materials, and planning to start and complete all assignments well in advance of the due date.
+
+- Computer Science, A Structured Programming Approach Using C, Forouzan and Gilberg, THIRD EDITION, ISBN: 0-534-49132-4
+  - An e-book alternative is available (Cengage Unlimited): https://www.cengage.com/shop/isbn/9781337907651
+- Programming Applications for Engineers Course Packet (Fall 2022 edition)
+  - Physical copy available in local bookstores. See Brightspace for a link to purchase an electronic version.
+- Vocareum License, instructions will be provided on Brightspace to complete purchase.
+
+- All relevant class information, updates, and announcements will be available on the Brightspace site https://purdue.brightspace.com/
+
+### Supplemental Instruction
+
+There are Supplemental Instruction (SI) student sessions available for this course. These student groups are open to anyone enrolled in this course who would like to stay current with the course material and understand it better. Participation in these sessions is voluntary, but for the maximum benefit you should participate regularly. The schedule for the study sessions can be found on-line: http://www.purdue.edu/si.
+
+Students who attending these interactive sessions will find themselves working with peers as they compare notes, demonstrate and discuss relevant problems and important concepts, and share study and test-taking strategies.
+
+- Students are asked to have their lecture notes, textbook, and be prepared to participate with others during these sessions.
+- SI leaders are undergraduate students who have previously been very successful in the course and model their strategies for success to current students.
+- Every session will cover new material! No two sessions will repeat the same content.
+
+### Important Dates
+
+| Midterm Exam #1 | Midterm Exam #2 | Final Exam | Academic Calendar |
+|---|---|---|---|
+| Date: Wednesday October 5<br>Time: 6:30 - 7:30pm<br>Location: ELLT 116 | Date: Thursday November 17<br>Time: 8:00 - 9:30pm<br>Location: ELLT 116 | Date:<br>Time:<br>Location: | Last Day to Drop:<br>Tuesday October 25, 2022 |
+
+The final exam may be on Saturday December 17, 2022. Requests for alternative exam offerings will not be considered for reasons other than those outlined by the regulations of the university. Please make your end of semester travel arrangements accordingly.
+
+### Grading
+
+| Assignment | Points |
+|---|---|
+| Homework | 70 |
+| Lab Tasks | 60 |
+| Lab Quizzes | 60 |
+| Midterm Exams | 200 |
+| Final Exam | 150 |
+| Lecture Quizzes | 60 |
+| Total Possible: | 600 |
+
+### Grades
+
+| Grade | Points Required |
+|---|---|
+| A | 510 |
+| B | 450 |
+| C | 390 |
+| D | 330 |
+
+The instructor reserves the right to lower the minimum score required for each letter grade. If any change is made it will not be announced until after the final exam.
+
+- At no time during the semester will it be speculated if this will be done or how much any given cutoff will be lowered. You should have no expectation that all cutoffs if moved will be moved by an equal amount.
+- The use of plus (+) and minus (-) additions to a grade will be considered for those few individuals who are very close to, but fall short of, one of the posted minimum scores.
+
+### Attendance
+
+You are expected to attend every lab this semester. To be eligible to retain points earned on a lab programming assignment and related lab quiz you must be in your assigned lab within 5 minutes of the start of your lab session. Your lab instructor will provide the steps necessary to verify your attendance. Labs are collaborative programming assignments and it is an unfair expectation that your lab partners or teaching assistant incorporate a student arriving late or who is absent into the team effort. Students late or absent to more than two lab sessions will automatically fail the course.
+
+You are expected to attend every lecture this semester. Seats will be assigned in the lecture hall and attendance taken to ensure that only those students officially enrolled in each section are eligible to earn points for lecture quiz participation.
+
+### Emergency Absences and Make-Up Work
+
+Only documented and serious hardships will be considered for any missed work. If you have documentation of what you consider to be such a hardship then you must contact the instructor in a timely manner during office hours when you are able to resume participating in class. Any student who knows in advance of an absence must make a request for consideration one week prior to the absence.
+
+- University policies on absence reporting are available from the Office of the Dean of Students: https://www.purdue.edu/advocacy/students/absences.html
+- Make-up requests for reasons of illness MUST be accompanied by documentation from a medical professional stating the dates you were under their care and the date you were cleared to return to school/work.
+
+### Assignments
+
+### Exams (two evening midterms 100 points each, one final exam worth 150 points)
+
+Exams will be individual assessments of your knowledge. Exams will consist of multiple-choice problems covering programming concepts, best programming practices, lab and homework assignments, and the interpretation of code.
+
+Old exams are provided in the course notes packet for your preparation. Please read the cover page of this section for more information on how old exams can be a useful part of your comprehensive preparation process.
+
+| Homework Assignment | Due at 11pm on |
+|---|---|
+| 1 | September 5 |
+| 2 | September 19 |
+| 3 | October 3 |
+| 4 | October 17 |
+| 5 | October 31 |
+| 6 | November 14 |
+| 7 | December 5 |
+
+**Homework Assignments (7 total, 10 points each)**
+The homework assignments are individual efforts designed to give you the opportunity to solve programming problems on your own without the assistance of other students.
+All assignments will be posted on Brightspace 10-12 days before they are due.
+Please review the course policies as they relate to academic integrity found later in this document.
+
+### Lab Tasks (12 total, 5 points each):
+
+Lab assignments are to be completed collaboratively in your assigned lab groups and each of these lab programming assignments will be due 30 minutes prior to the next time your lab section meets (see schedules later in this document).
+
+- Collaborative groups are expected to communicate who will submit the assignment, when the assignment will be submitted, and how progress will be confirmed with all participating group members.
+- Setting expectations for every member of the group will improve the likelihood that a complete assignment will be submitted.
+- Lab partners failing to participate and contribute to the satisfaction of all group members will not receive credit for the lab assignment.
+- Lab teams will be reassigned after lab #4 and lab #8 during the semester. Enrollment and participation changes may warrant additional changes.
+
+### Lab Quizzes (12 total, 5 points each)
+
+At the end of twelve lab meetings there will be an individual assessment of your knowledge related to the topics introduced in lecture and implemented in the most recent lectures and assignments. Knowledge of course standards and good programming practices will be evaluated throughout the semester.
+
+- The best way to prepare for quizzes is to watch lecture recordings and to actively participate with your team during the process of solving the lab, including contributing to both the written problems and the development of the programming problem solution.
+- Lab quizzes can only be completed from your official lab location. No resources are permitted for use during the quiz.

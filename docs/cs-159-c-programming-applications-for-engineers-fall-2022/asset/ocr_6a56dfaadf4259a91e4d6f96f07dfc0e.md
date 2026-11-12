@@ -1,0 +1,31 @@
+# # Writing and Editing the Program
+
+The first step is writing the program (actually, the first step is developing your solution, but we are describing the implementation of the solution at this time) which will require the use of a piece of software known as a text editor. The text editor of choice for this semester will be vi (pronounced vee-eye). If you insist on another editor then you assume responsibility for understanding its operation and any potential compatibility issues with our server. We find the use of vi to be a powerful one for writing code. Please understand that there is a learning curve to vi, but with enough practice you too will be working with vi comfortably!
+
+# # Saving the Changes
+
+Please keep in mind the importance of saving your work regularly! Too many students in the past have lost a significant amount of unsaved work by a dropped connection, frozen computer, or power outage because they failed to save their work as they progressed.
+
++   - You should test your work regularly too! It is easy to write a lot of code and then only to find numerous errors or such a poor initial design that correcting all of the problems would be more difficult than starting over!
++   - Testing regularly should not imply you should create your solution while coding, but it cannot be stressed enough that when you write code it should be nothing more than the implementation of a well designed algorithm. Without planning, your solution is reduced to development through trial and error which tends to be an inefficient and frustrating process.
++   - It is possible to make multiple-submissions for a given assignment. However, it is only the last submission that is kept for grading. ALL previous submissions are over-written and cannot be restored.
+
+> > In your collaborative lab groups, and for each lab assignment, you must designate a single individual who will make all submissions for the group.
+
+# # Example:
+
+Assume we are implementing the solution to a problem and have progressed in our coding to the point that we want to test what we have input so far.
+
++   - What should be done next?
++   - 1. Send the work to make sure the source file containing our C code has been stored and reflects our most recent changes.
++   - 2. Send the source file to the compiler so that the instructions within can be prepared for execution by the computer.
+
+# # The Compiler
+
+The compiler is in a category of software that is used to convert the source programming language code into the machine language of the computer.
+
+# # Syntax
+
+Syntax is the set of rules of the programming language. The compiler will attempt to validate your source code with the syntax of the C programming language as it creates a new executable file.
+
+Violating the rules of the syntax may result in an error in which no new executable file can be created.

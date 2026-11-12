@@ -1,0 +1,205 @@
+
+Example: The factorial of a number is the product of all integers from 1 to the number. Design a function that given a non-negative integer will calculate its factorial.
+
+Factorial flow chart:
+
+| Content |
+|---------|
+| Identify the loop control variable: |
+| Identify the type of loop: |
+| Identify how the loop control variable is updated: |
+| Is the algorithm logically correct when the user enters zero? |
+
+## Event-Controlled and Counter-Controlled Processes
+
+The factorial problem from the previous page is an example of a counter-controlled process. The counter, which is also the loop control variable, controls the number of times the body of the loop is to be repeated.
+
+In an event-controlled process, an event takes place that changes the loop control expression from true to false and bringing the repetition to a halt. With such a process one can determine whether another iteration of the loop will take place but determining the number of remaining iterations is not possible. The exam statistics problem is an example of an event-controlled process. If you know the most recent input then you know if there will be another iteration, but nothing more.
+
+**Key Point:** If you can count or calculate the total number of iterations that will take place during the execution of a loop, then it is a counter-controlled process, otherwise the process is event-controlled.
+
+## Input Validation
+
+- The goal of adding code to our input functions is to ensure that before the function is allowed to terminate that we have a meaningful value to process in the remainder of our program.
+- The task of input validation is commonly found within the input function. Going forward from this point input functions will be more than print-scan-return statements.
+- You must always provide the user with an unlimited number of opportunities to enter meaningful data.
+- Due to its complexity you will not validate for particular data types only for acceptable values within a specified data type.
+- You will assume that the user will always enter the expected data type as input.
+- One important part of input validation is to display an appropriate message to the user making them aware of their mistake and that input which is desired.
+- Because input validation does make input functions more complex it is ill advised to use pass by address in an effort to “return” multiple values from a single input function. The syntax associated with pass by address and related pointer operations (chapters 9 and 10) make it challenging to apply to input validation.
+
+![](img/e25602f5611b32eaf448a241a988eedc_145_0.png)
+
+## Loops in C
+
+The C programming language provides three constructs for the looping technique of repetition. These are; while, for, and do-while. We will begin with the similar while and do-while constructs.
+
+### The while Loop
+
+The while construct is a pretest loop. As with all loops the while makes use of a loop control expression to determine whether the loop should begin or continue to iterate. Being a pretest loop the loop control expression is evaluated prior to the first iteration of the loop, then while the expression is evaluated to be true then the loop will complete another iteration.
+
+- The iterations will continue WHILE the loop control expression is true. When the control expression evaluates to false the iterative process stops.
+
+### Basic Syntax of the While Loop
+
+```
+while(loop control expression)
+{
+   //EXECUTABLE STATEMENT DESIGNATED
+   //FOR REPETITION - BODY OF THE LOOP
+}
+```
+
+> Note: There is no semicolon after the loop control expression of the while statement, because the loop is followed by a body which contains the actions to repeat.
+
+### The do-while Loop
+
+The do-while construct is a post-test loop. Similar to the while a loop control expression is used to determine if repetition continues, but is the case of a post-test construct the expression is evaluated after the initial execution of the instructions inside the body.
+
+- In Contrast to the while loop, the keyword while in a do-while is terminated with a semicolon.
+
+> Course Standard: Indent all statements that compose the body of a loop two additional spaces.
+
+### Basic Syntax of the Do While Loop
+
+```
+do
+{
+   //EXECUTABLE STATEMENT DESIGNATED
+   //FOR REPETITION - BODY OF THE LOOP
+}while(loop control expression);
+```
+
+> Course Standard: With all loops (and if statements) the braces that mark the start and end of the loop body MUST be used.
+
+What happens if the update of the loop control variable occurs in the middle of body of the loop, will this change the loop to terminate immediately at this point?
+
+- No. The loop will only terminate when the loop control expression is evaluated and found to be false.
+- There is no "mid-test" loop in the C programming language, only pretest and post-test.
+
+Is there reason to be concerned that the value of zero may be multiplied?
+
+- No. the loop control expression is evaluated and false prior to the multiplication of zero.
+
+The value entered by the user is stored locally in the variable num, how does changing num on each iteration influence what is going on back in the calling function?
+
+- No, the variable has been passed by value.
+
+### Factorial Example
+
+The factorial problem will permit a demonstration of both the do-while with input validation and the while the factorial.
+
+```
+int calcFactorial( int );
+int getInput( void );
+void displayResults( int, int );
+
+int main( void )
+{
+    int num;
+    int fact;
+
+    num = getInput();
+    fact = calcFactorial( num );
+    displayResults( num, fact );
+
+    return( 0 );
+}
+
+int calcFactorial( int num )
+{
+    int nFact = 1;
+
+    while( num > 0 )
+    {
+        nFact = nFact * num;
+        num -= 1;
+    }
+    return( nFact );
+}
+```
+
+### Why don't we use an "if loop" for input validation?
+
+- An if construct would only permit the user a second opportunity to enter acceptable data. We want the user to have an unlimited number of opportunities to enter valid data.
+
+### What is wrong with the term "if loop"?
+
+- An if is a selection construct and not a repetition construct.
+
+```c
+int getInput(void)
+{
+    int num;
+    do
+    {
+        printf("Enter n to calculate n! -> ");
+        scanf("%d", &num);
+        if(num < 0)
+        {
+            printf("\nError! Non-negative values only!!\n");
+        }
+    }while(num < 0);
+    return(num);
+}
+```
+
+```c
+void displayResults(int num, int fact)
+{
+    printf("\n%d!= %d\n", num, fact);
+}
+```
+
+### Nested Loops
+
+### What is a nested loop?
+
+- Nested loops, or any form of repetition, is when one repetitive process is found inside of another.
+
+### How does that definition help solve problems that make use of nested loops?
+
+- A better definition would be to consider that a loop solves a repetitive process. A nested loop would then be a repetitive process found inside of another repetitive process.
+
+### What is the recommended approach to solving nested looping problems?
+
+- First, solve and test the nested process placing it in its own user-defined function.
+- Next, solve the process that will call the nested process. We must ensure that the nested process is correct before we attempt to make use of (call) it repeatedly.
+
+### Calculating a Range of Factorials: Instead of calculating a single factorial the user will specify a range of values and desires the output of the factorial for all integers in the range.
+
+For example, if the user enters 2 and 5 then they want to see the result of 2!, 3!, 4!, and 5!.
+
+- What are the two repetitive processes here? One is the calculation of a single factorial and the other is counting from the starting value to the ending value.
+- Which process is the nested process? The calculation of a single factorial. We have already confirmed that we are able to accept an integer and calculate the factorial of that number.
+- Next we need to add to the existing program such that we can calculate each n! for all integers n in the range from a to b.
+- New tasks or revisions needed:
+  - Get the start and end values and validate both such that the end is not less than the start. Why is there a parameter for getEnd but none for getStart?
+  - Calculate and print the factorial for each integer between start and end (inclusive).
+
+```cpp
+int calcFactorial( int );
+int getStart( void ); //UNCHANGED FROM PREVIOUS EXAMPLE
+int getEnd( int );
+void displayResults( int, int ); //UNCHANGED FROM PREVIOUS EXAMPLE
+
+int main( void )
+{
+    int fact;
+    int start;
+    int end;
+
+    start = getStart();
+    end = getEnd( start );
+    while( start <= end )
+    {
+        fact = calcFactorial( start );
+        displayResults( start, fact );
+        start++;
+    }
+
+    return( 0 );
+}
+```
+
+Course Standard Note: A limited amount of control structures (selection, repetition) is permissible in the main function to ensure that it is the main function which makes most of the function calls for the program.

@@ -1,0 +1,38 @@
+# Spring 2022 Midterm Exam #1
+Wednesday February 23, 2022 (8:00 - 9:00 PM, Elliott Hall of Music)
+35 questions * 3 points each = 105 points
+Any points earned beyond 100 are considered extra credit
+
+1. Complete your name and your student identification number on the answer sheet (write in AND bubble-in all requested information).
+
+* There is no exam form or section.
+* An incorrect student ID number will result in a zero for this exam. All student ID numbers begin with two zero digits. This must be written and "bubbled-in" on your exam answer sheet.
+* You must be in your assigned seat to receive credit for this exam.
+
+2. Make sure you have all 35 questions to this exam. You should answer every question. All questions only have one best answer. Please be careful when filling in your answers: any answer determined to be unreadable by Instructional Data Processing will be considered incorrect. Only the answer on your answer sheet can be considered when grading.
+
+* An operator precedence table and ASCII table have been provided on the back of this exam.
+
+3. NO QUESTIONS WILL BE ANSWERED DURING THE EXAM. We do not answer questions during the exam due to the limited number of staff members present. It is easier for us to compensate for an erroneous test question than it is to answer questions or to effectively make an announcement during the examination period.
+
+* Manage your time accordingly!
+
+4. You must assume that all C programs and code segments are implemented on Vocareum and would be compiled with the gcc compiler. When only segments of code are presented, you may assume that the appropriate include statements are present and that the code would be inside of a fully operational function or program.
+
+5. Protect your work and keep your focus on your own exam. It is considered dishonest if you copy from another student or to permit another student to copy from you. Anyone found to violate course policies will receive a failing grade for the course and will be referred to the Office of the Dean of Students.
+
+6. You are NOT permitted to use any resources during this exam. This includes but is not limited to: texts, notes, calculators, cell phones, audio devices, and computers. If your cell phone audibly rings during the exam, you will be required to immediately submit your exam and leave the testing facility.
+
+7. When you are finished with the exam, please proceed to the lobby to submit your answer form and exit the facility.
+
+* You will be required to show photo identification before we can accept your work.
+* You will keep this exam form.
+* You may not return to your seat once you have submitted your exam.
+
+8. You may anticipate that scores and official exam answers will appear on Brightspace by Friday February 25. Do not contact course staff members about mistakes (if any) until answers are posted. If you feel an error remains after answers have been posted, you may make a written request for a regrade by Friday March 4 and deliver it to your instructor during their office hours. Your request must be a hard copy (no email) and include a detailed description, using code if applicable, demonstrating your belief why the posted answer is incorrect.
+
+9. When time is called ALL writing must stop. You are not permitted to continue to revise any answer on your exam once time has been called.
+
+10. Schedule update. There IS lecture tomorrow (Thursday February 24) and labs will continue this week. There will be NO labs from Tuesday March 8 to Friday March 11, and there will be NO lecture on Thursday March 10.
+
+# NO QUESTIONS WILL BE ANSWERED DURING THE EXAM.

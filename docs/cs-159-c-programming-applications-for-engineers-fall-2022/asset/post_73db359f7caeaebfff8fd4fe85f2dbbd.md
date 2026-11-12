@@ -1,0 +1,198 @@
+
+## Advanced Topic – Recursion
+
+Recursion is the alternative technique of repetition. The definition of recursion applies to a function which calls itself. Solutions to repetition problems that use loops are referred to as iterative solutions. As with loops the function calls cannot continue infinitely. The condition when another call is to be made is the recursive case. When no more calls are to be made then the base case has been reached.
+
+Remember, control of a program always returns from the called function to the calling function. In addition to the control of the program a value may be returned as well.
+
+The factorial is one of the most common first examples given to demonstrate the use of recursion.
+
+Consider how a factorial for a number n is calculated: n * (n - 1) * (n - 2) * ... * 2 * 1
+
+You could also say that n! is equivalent to n * (n - 1)! for n > 1, but what about when n = 1? It is at this point where we find our base case or a definition that when n = 1 then n! = 1.
+
+Let's take 4! as an example:
+
+- 4! = 4 * 3!
+- 3! = 3 * 2!
+- 2! = 2 * 1!
+- 1! = 1
+
+## Solving the factorial using a recursive function:
+
+```c
+int factorial (int n)
+{
+    int nFact = 1;
+    if (n > 1)
+    {
+        nFact = n * factorial (n - 1);
+    }
+    return (nFact);
+}
+```
+
+Trace of the recursive solution when the value 4 is passed to the factorial function. List the value of the variables in each call. Note the progression of the control of the program as the recursive function calls are made.
+
+## Solving the factorial with the while loop:
+
+```c
+int factorial (int n)
+{
+    int nFact = 1;
+    while (n > 0)
+    {
+        nFact *= n--;
+    }
+    return (nFact);
+}
+```
+
+Note: Calling a function is different than an iteration of a loop where the same code inside of the loop is being executed repeatedly. Each function call is independent of other function calls with local variables occupying unique memory locations.
+
+## Review of Repetition Constructs and Techniques
+
+## Limitations of Recursion
+
+In the factorial example we saw that calculating 4! required four function calls, in each function call a unique set of variables is created and the status of each function needs to be “remembered” in order to continue after the called function terminates. A large number of function calls can require more memory than the computer is capable of providing.
+
+## When should you NOT use recursion?
+
+- When the number of recursive function calls has the potential to be large (counter-controlled) or unpredictable (event-controlled).
+
+## Chapter 8 — Arrays
+
+The data types introduced up to this point in the course only have the capacity to store a single value. Repetition in the previous chapter opened the possibility to accepting and processing a large data set. How does that work with our existing data types?
+
+Problem: A recent exam was taken by ten students and we'd like to calculate maximum, minimum, and average. We know from a previous example that we can calculate maximum, minimum, and average without needing to store all of the scores in variables at the same time, but to calculate the median and mode we do need to keep all values and sort those values to assist in making these calculations.
+
+One possibility may include declaring variables for each value to be entered.
+
+```c
+int score0;
+int score1;
+int score2;
+int score3;
+int score4;
+int score5;
+int score6;
+int score7;
+int score8;
+int score9;
+```
+
+The task of input and output for ten individual variables will require either ten print and scan statements, one print and scan statement with ten placeholders, or calling a function ten times or with ten parameters. The amount of code should not depend on data set size!
+
+Perhaps it is possible to manage this small number of variables, but what if had 100 students? Or even 1,000 students?
+
+- What is needed is a more practical way to store and access a collection of related data items.
+
+An array is a consecutive series of variables that share one name and data type. Each variable, or element, of an array has a number known as an index value that represents its position in the array. When we reference the name of the array along with a given index value we are referring to a specific individual value stored in that array.
+
+Notice that this ten-element array has a range of index values that begins at zero and continues to one less than the size of the array. In the C programming language arrays are zero-based.
+
+![](img/e25602f5611b32eaf448a241a988eedc_165_0.png)
+
+## Declaring and Defining Arrays
+
+As with other variables we must declare and define arrays before they can be used in a function. Declaration and definition inform the compiler of the name of the array, the size of the array, and the data type of each element. The C programming language provides for two different array types: fixed-length arrays (length is known before program is compiled) and variable-length (size is determined when program is running).
+
+Course Standard: All arrays will be static (of fixed-length) until we introduce the topic of dynamic memory allocation in chapters 9 and 10. The application of variable-length arrays as seen in the example on pages 478-479 will violate course standards as it permits the local declarations and executable statements in a function to overlap.
+
+- Note: it will be a standard for the course to replace the number (size) between [ and ] with a symbolic constant for statically declared arrays.
+
+```c
+int students[15];
+```
+
+```c
+double gpa[50];
+```
+
+## Initialization of Arrays
+
+- What is stored in the memory of a newly declared array?
+
+An array can be initialized as part of its declaration statement:
+
+```c
+int data[5] = {9, 5, 1, 4, 2};
+```
+
+What if we attempted the following initialization?
+
+```c
+int moreData[500] = {1, 2, 3};
+```
+
+Note: If the number of values provided is less than the defined size of the array, the unassigned elements are filled with zeros.
+
+## Accessing Elements in Arrays
+
+- An index value is used to access individual elements in an array.
+
+- The index value must be an integral value which may include an expression that evaluates to such.
+
+## Assignment of Values into an Array
+
+Write a program that will assign the score of 9.5 to the first element in the array labScores. Next, print that element to the screen.
+
+```c
+#define NUMLABS 10
+int main(void)
+{
+    float labScores[NUMLABS];
+    labScores[0] = 9.5;
+    printf("First lab score: %.2f\n", labScores[0]);
+    return(0);
+}
+```
+
+## Input of Values into an Array
+
+```c
+#define NUMLABS 10
+int main(void)
+{
+    float labScores[NUMLABS];
+    printf("Enter first lab score -> ");
+    scanf("%f", &labScores[0]);
+    printf("First lab score: %.2f\n", labScores[0]);
+    return(0);
+}
+```
+
+- Why the use of %f in the printf and scanf seen above?
+- Individual elements of a float array are single float values.
+
+If elements can only be accessed through the use of constants representing index values then we have the same problem we had before arrays, the amount of code we need depends on the quantity of data to process. It is more common to use a loop when handling many tasks related to multiple elements of an array.
+
+## Example using a loop to access the elements of an array:
+
+```c
+#define NUMLABS 10
+int main( void )
+{
+   int i;
+   float labScores[ NUMLABS ];
+   for( i = 0; i < NUMLABS; i++ )
+   {
+      printf( "Enter lab #%d score > ", i + 1 );
+      scanf( "%f", &labScores[ i ] );
+   }
+   // PROCESS DATA
+   for( i = 0; i < NUMLABS; i++ )
+   {
+      printf( "Lab #%d score: %.2f\n", i + 1, labScores[ i ] );
+   }
+   return( 0 );
+}
+```
+
+## Index Range Checking
+
+The valid range of index values for an array of size NUMLABS is zero to one less than NUMLABS. What happens if the execution of the program an attempt is made to access index outside of this range?
+
+For example, what if we tried to access labScores[ 10 ] when the only valid index values are 0 - 9 for an array declared to be of size 10? The scenario described here would imply that this potential problem is a run-time error. The compiler will not, and cannot, detect an index range checking problem.
+
+Because this is a run-time error it can take several different forms. What are the possible consequences for attempting to access an index that is outside of the bounds of an array?

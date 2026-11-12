@@ -1,0 +1,128 @@
+
+## Rules regarding comments:
+
+- Comments can appear anywhere in the program.
+- Don't comment EVERY line of code you write.
+- You must include an assignment header in every assignment you submit. A well-written description in the header will reduce the need for comments within the code.
+- You MUST comment EVERY variable in your program.
+- Note: Multiple-line comments cannot be nested.
+
+Identifiers allow us to name data and other objects in a program.
+
+- Data used by a program may be stored by the computer in a unique memory address and as programmers we only need to recall the identifiers we select rather than specific memory addresses to store and retrieve data values from the memory of the computer.
+
+| Good Identifier | Bad Identifier | Documentation Standard: |
+| :--- | :--- | :--- |
+| numStudents | x | The name of an identifier should be related to its purpose in the program. |
+| depth | DEPTH | Rarely are single character identifiers meaningful. |
+| examAvg | exam-avg | Identifiers in all caps represent a symbolic/defined constant, that is, a value that will not change during the execution of the program. |
+| first_lab | 1st_lab | |
+
+```
+/************************************************************
+* Lab #: SPECIFY ASSIGNED NUMBER
+*
+* Academic Integrity Statement:
+*
+* We have not used source code obtained from any other unauthorized source,
+* either modified or unmodified. Neither have we provided access to our code
+* to another. The effort we are submitting is our own original work.
+*
+* Program Description: DESCRIBE YOUR ALGORITHM. WHAT DOES YOUR PROGRAM DO?
+* HOW DOES IT DO IT?
+************************************************************/
+```
+
+Multiple-line comments are used when your comments span more than one line. Instead of starting every line of code with //, we use /* to represent the start of the comment and */ to signify the end of the comment. The headers you will be required to use in all of your programs this semester are examples of a multiple-line comment. All text between the /* and */ is ignored by the compiler.
+
+## Rules regarding the selection of an identifier:
+
+- The first character must be an alphabetic character.
+- Must consist only of alphabetic characters, digits, or underscores.
+- Only the first 63 characters of an identifier are significant.
+- Cannot duplicate a reserved word. (Words used in the C statements include: main, int, return, void, see Appendix B)
+
+## Types (of Data)
+
+### What is determined by a data type?
+
+- The amount of memory necessary to store a value of a given type.
+- How a value of a given type is stored in the memory of the computer.
+- Which operations can be performed on the value. Some operations are restricted to particular data types.
+
+An integer (int) type is a number without a fraction part. C supports different sizes of the integer data type: short, int, long, and long long.
+
+- The type of integer you will use depends on the potential range of integer data you plan to store. The longer types will require more memory.
+
+| int range, -2147483648 to 2147483647 | Actual ranges will be system dependent. |
+|---|---|
+
+A character (char) is any value that can be represented in the “alphabet” of the computer. Each character has a corresponding small integer value. This standard table of integer values alongside the equivalent characters is known as the ASCII table. You will find the ASCII table in Appendix A of the text.
+
+- Since a character is stored in memory as an integer representing the ASCII code of a character it is possible to perform arithmetic operations on characters!
+
+## Boolean (bool) values represent logical data (either true or false). Prior to the C99 standard of the C language only integers were used to represent truth values. The compiler currently used by the course does not recognize the bool data type by default.
+
+- For backward compatibility, nonzero numbers represent true and a zero value can be used to represent false.
+- We will not use the bool data type this semester, an integer value can be used in its place.
+
+A floating point (float) number has a fractional part, such as 3.14159. C supports different sizes (smallest to largest) of the floating point data type: float, double, and long double. The most common implementations will be double and float. The longer types will provide additional precision and require more memory.
+
+Note: Many programming references will refer to any numeric value that is not an integer as a real number. This usage may not be consistent with what you know about real and imaginary numbers from mathematics.
+
+## Variables
+
+A variable is a named memory location that has a data type.
+
+Each variable in your program must be declared and defined. In C, a declaration is used to name an object (such as a variable) and definitions are used to create the object.
+
+- Declaration - gives the variable a name.
+- Definition - reserves memory for the variable.
+
+To create a variable (doing both declaration and definition in one step), you first need to list the intended data type of the variable, followed by the selected identifier, and a terminal semicolon.
+
+- The selected identifier, and a terminal semicolon.
+
+You need to know: A variable is defined to represent a particular data type and can only store and represent values of that type!
+
+Course Standard: Declare only a single variable per line.
+
+Those with previous programming experience in languages similar to C may know that it is possible to declare multiple variables in one statement. However, the course programming standards do not permit this practice. Organizing the data needs of a function can be a challenge and a single declaration per line assists with this and improves the documentation and readability of code.
+
+## Variable Initialization
+
+It is possible to initialize a variable at the same time it is created.
+
+```
+int count = 0;
+```
+
+The above will initialize the space in memory reserved for the integer count to the value of zero. We cannot assume the memory assigned to a variable has any default value unless we initialize the variable. Uninitialized variables will be assigned a location in memory that may have existing data from a prior use. Such data is referred to as garbage because it has no predictable value for the programmer.
+
+Course Standard: Move complex initialization expressions to the executable statement section of a function.
+
+## Constants - Literal Constants
+
+A literal constant is an unnamed value used to specify data. For example, we want to calculate the circumference of a circle:
+
+```
+circumference = 2 * 3.14159 * radius;
+```
+
+- The values 2 and 3.14159 are both literal constants in the above expression. We may often refer to such values as being "hard coded" when they are not represented by a symbol (next topic).
+
+## Constants - Symbolic/Defined Constants
+
+The #define preprocessor directive is used to create symbolic constants.
+
+When this statement appears among the preprocessor directives, all subsequent occurrences of symbol will be replaced by replacement value automatically before the program is compiled.
+
+> Note: The replacement will NOT take place inside of quotes.
+
+## Why use symbolic/defined constants?
+
+- It is difficult to determine what a literal constant value represents in an arithmetic expression when the program is long and includes many complex calculations. The use of constants helps document the program by giving meaning to operands in an expression.
+
+- Another great reason to use constants is to make your program more maintainable. For example, perhaps there are 100 students in a course. You might use the value 100 when loading data or changing the average, however, you might also use 100 to convert .853 to 85.3%. Now, what if the number of students changes to 105? You then need to search your program to determine which of those 100 values that occur in the program are related to the number of students in the course and change only those to 105.
+
+> Course Standard: The use of memory constants is discouraged. Why request memory for a value that will never change?
