@@ -1,0 +1,1835 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # PROJECT CODE
+
+
+    # ## CREATE COMPUTER GAMES WITH SCRATCH
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_0_0.png)
+
+
+    Kevin Wood'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    22 Aug 2018
+
+
+    Bromley
+
+    THE LONDON BOROUGH
+
+    www.bromley.gov.uk
+
+
+    ORPINGTON LIBRARY
+
+    01689 831551
+
+
+    Please return/renew this item by the last date shown. Books may also be renewed
+    by phone and Internet.
+
+
+    WITHDRAWN FROM BROMLEY LIBRARIES
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_2_0.png)'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # PROJECT CODE
+
+
+    CREATE COMPUTER GAMES WITH SCRATCH
+
+
+    Illustrated by Glen McBeth
+
+
+    Kevin Wood
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_4_0.png)
+
+
+    W FRANKLIN WATTS LONDON•SYDNEY'
+  - '[PAGE 5]
+
+
+    Franklin Watts
+
+    First published in Great Britain in 2017 by
+
+    The Watts Publishing Group
+
+
+    Copyright © The Watts Publishing
+
+    Group 2017
+
+
+    All rights reserved.
+
+
+    Credits
+
+    Editor: Julia Adams/Julia Bird
+
+    Series Designer: Alix Wood
+
+    Cover Designer: Peter Scoulding
+
+    Illustrations: Glen McBeth
+
+
+    Every attempt has been made to clear copyright.
+
+    Should there be any inadvertent omission please
+
+    apply to the publisher for rectification.
+
+
+    Speech bubble designed by Freepik
+
+
+    ISBN: 978 1 4451 5596 8
+
+
+    Printed in China
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_5_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_5_1.png)
+
+
+    Franklin Watts
+
+    An imprint of
+
+    Hachette Children’s Group
+
+    Part of The Watts Publishing Group
+
+    Carmelite House
+
+    50 Victoria Embankment
+
+    London EC4Y 0DZ
+
+
+    An Hachette UK Company
+
+    www.hachette.co.uk
+
+
+    www.franklinwatts.co.uk
+
+
+    # Using Scratch
+
+
+    Scratch is a programming language designed by MIT (Massachusetts Institute of
+    Technology) that lets you create your own interactive stories, animations, games,
+    music and art. Rather than using a complex computer language, it uses easy-to-understand
+    coding blocks. To get the most out of this book, you will need to be able to use
+    a computer and you will need to load Scratch onto your computer. Always check
+    with an adult if it is OK to download files from the Internet to your computer.
+    Go to: **https://scratch.mit.edu**
+
+
+    First, do Scratch’s ‘Getting Started with Scratch’ tutorial, found by going to
+    ‘Create’ on the home page, and then look in the ‘Tips’ menu. You can also work
+    on Scratch offline. Scroll to the bottom of the homepage and click on Offline
+    Editor in the Support menu. Follow the instructions to install it on your computer.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_5_2.png)
+
+
+    Scratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab.
+    See http://scratch.mit.edu.
+
+    Images and illustrations from Scratch included in this book have been developed
+    by the Lifelong Kindergarten Group at the MIT Media Lab (see http://scratch.mit.edu)
+    and made available under the Creative Commons Attribution-ShareAlike 2.0 license
+    (https://creativecommons.org/licenses/by-sa/2.0/deed.en). The third party trademarks
+    used in this book are the property of their respective owners, including the Scratch
+    name and logo. The owners of these trademarks have not endorsed, authorised or
+    sponsored this book.'
+  - '[PAGE 6]
+
+
+    <!-- no content -->'
+  - '[PAGE 7]
+
+
+    # # ALL ABOUT COMPUTER GAMES
+
+
+    Do you like computer games? Perhaps you like puzzles, action games or adventure
+    games. Have you ever wondered how people write computer games? You can create
+    games yourself using a program called Scratch.
+
+
+    # ## Planning your computer game
+
+
+    Before you write a computer game you need to decide a few things. What kind of
+    game do you want to write? What will the aim of the game be? Will your game have
+    characters? What will the characters do?
+
+
+    Once you have a plan, Scratch helps you create games easily using pieces of **code**,
+    called coding blocks. The blocks can be arranged to create different kinds of
+    programs, such as games.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_7_0.png)
+
+
+    # ## Starting from Scratch
+
+
+    To get some inspiration, have a look at some of the games that people have shared
+    on the Scratch website. You can click on the ''see inside'' button to look at
+    the code.
+
+
+    https://scratch.mit.edu/starter_projects/#Games'
+  - '[PAGE 8]
+
+
+    # Try it!
+
+
+    How about making a simple dressing-up game to play with your friends? Open our
+    game called dressing.sb2 to see one we have created. Or you can try making one
+    yourself:
+
+
+    +   1. In Scratch, you can choose backgrounds known as backdrops for your game.
+    Click on ''New backdrop''. You can choose a backdrop from the library, draw your
+    own, or upload one from your computer or camera.
+
+
+    +   2. Now you need someone to dress. Choose a **sprite** from the library. Sprites
+    are characters in Scratch that you can write code for. Go to ''New sprite'', and
+    choose ''Dress-Up'' from the menu on the left under ''Theme''. You''ll see a sprite
+    called Dani and some clothes that will fit her. Select the clothes you want and
+    click ''OK''.
+
+
+    +   3. To play the game, simply drag and drop the clothes onto Dani!
+
+
+    | Sprite Library | |
+
+    | --- | --- |
+
+    | Category: Animals, Fantasy, Letters, People, Things, Transportation | Bowtie,
+    Dani |
+
+    | Theme: Castle, City, Dance, Dress-Up, Flying, Holiday, Music, Space, Sports,
+    Underwater, Walking | Hat Winter, Hat Wizard, Dress, Short Blouse, Sunglasses1,
+    Sunglasses2 |
+
+    | Type: All, Animals, People, Wonder | |
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_8_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_8_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_8_2.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_8_3.png)'
+  - '[PAGE 9]
+
+
+    <!-- no content -->'
+  - '[PAGE 10]
+
+
+    2. Now you can use the different scoring elements in your game. For this basketball
+    game we change the score by 1 each time the sprite is clicked. When a new game
+    starts, we set the score back to 0.
+
+
+    3. This game uses a timer. If we didn''t put the timer in our code, the game would
+    play for ever! You can change how long the game goes on for by changing the value
+    in the timer. At the moment, the game lasts for 10 seconds.
+
+
+    ```
+
+    ```
+
+    when this sprite clicked
+
+    change [score v] by (1)
+
+
+    <[timer v] > (10)>
+
+    ```
+
+    ```
+
+
+    # ### Think about it
+
+
+    Part of the fun when you are designing a game is to make other people really want
+    to play it! Do you think having a scoreboard helps people want to play? Why? (The
+    answers are on page 32.)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_10_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_10_1.png)'
+  - "[PAGE 11]\n\n# USING LOOPS\n\nProgrammers use loops to tell the computer to repeat\
+    \ a set of instructions.\n\nIn Scratch, you can create a loop to:\n\n+   - repeat\
+    \ the code forever\n+   - repeat the code a number of times\n+   - repeat the\
+    \ code until something else happens.\n\nTo do this in Scratch, you use the FOREVER,\
+    \ REPEAT or REPEAT UNTIL blocks.\n\n```\nrepeat until <timer > 10>\n    hide\n\
+    \    wait (1) secs\n    go to x: (pick random -200 to 200) y: (pick random -140\
+    \ to 140)\n    show\n    wait (0.8) secs\n```\n\nIn our basketball game, we use\
+    \ a **repeat until** loop to program the ball appearing, waiting to be clicked\
+    \ and disappearing again.\n\nWithout the repeat until loop, we would have to tell\
+    \ the basketball sprite to hide, wait, appear in a random place, hide, wait and\
+    \ appear, over and over again. Using the repeat loop above tells the computer\
+    \ to repeat the same action until the time runs out, so we don’t have to write\
+    \ the same piece of code more than once.\n\n![](img/2028793d21e48318011e28fb666f71e7_11_0.png)"
+  - '[PAGE 12]
+
+
+    > > To make the game last longer, adjust the value next to the timer in the ''Repeat
+    until'' block.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_12_0.png)
+
+
+    # ## Try it
+
+
+    See if you can adjust the code in this game to make the game easier or harder.
+    Try changing the second ''wait'' value inside the forever loop. If the number
+    is larger, say 1, the ball will be on screen for a little longer. If you make
+    the number smaller, say 0.5, the ball will be on the screen for a shorter time,
+    making the game harder. You can also adjust the first wait value to make the ball
+    appear quicker each time.
+
+
+    # ## Adding sounds
+
+
+    You can add sounds to your game. Click on the ''Sound'' scripts and you''ll see
+    you can play sounds and musical instruments, and change their volume and tempo
+    (speed). To select a sound, you need to go to the Scratch Sound Library.
+
+
+    There are all kinds of fun sounds that would be great for different games. Click
+    on them to hear what they sound like, and choose some for your game.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_12_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_12_2.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_12_3.png)'
+  md: "\n## PROJECT CODE\n\n### CREATE COMPUTER GAMES WITH SCRATCH\n\n![](img/2028793d21e48318011e28fb666f71e7_0_0.png)\n\
+    \nKevin Wood\n\n22 Aug 2018\n\nBromley\nTHE LONDON BOROUGH\nwww.bromley.gov.uk\n\
+    \nORPINGTON LIBRARY\n01689 831551\n\nPlease return/renew this item by the last\
+    \ date shown. Books may also be renewed by phone and Internet.\n\nWITHDRAWN FROM\
+    \ BROMLEY LIBRARIES\n\n![](img/2028793d21e48318011e28fb666f71e7_2_0.png)\n\n##\
+    \ PROJECT CODE\n\n### CREATE COMPUTER GAMES WITH SCRATCH\n\nIllustrated by Glen\
+    \ McBeth\n\nKevin Wood\n\n![](img/2028793d21e48318011e28fb666f71e7_4_0.png)\n\n\
+    W FRANKLIN WATTS LONDON•SYDNEY\n\nFranklin Watts\n\nFirst published in Great Britain\
+    \ in 2017 by The Watts Publishing Group\n\nCopyright © The Watts Publishing Group\
+    \ 2017\n\nAll rights reserved.\n\nCredits\n\nEditor: Julia Adams/Julia Bird\n\n\
+    Series Designer: Alix Wood\n\nCover Designer: Peter Scoulding\n\nIllustrations:\
+    \ Glen McBeth\n\nEvery attempt has been made to clear copyright. Should there\
+    \ be any inadvertent omission please apply to the publisher for rectification.\n\
+    \nSpeech bubble designed by Freepik\n\nISBN: 978 1 4451 5596 8\n\nPrinted in China\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_5_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_5_1.png)\n\
+    \nFranklin Watts\nAn imprint of Hachette Children’s Group\nPart of The Watts Publishing\
+    \ Group\nCarmelite House\n50 Victoria Embankment\nLondon EC4Y 0DZ\n\nAn Hachette\
+    \ UK Company\nwww.hachette.co.uk\nwww.franklinwatts.co.uk\n\n## Using Scratch\n\
+    \nScratch is a programming language designed by MIT (Massachusetts Institute of\
+    \ Technology) that lets you create your own interactive stories, animations, games,\
+    \ music and art. Rather than using a complex computer language, it uses easy-to-understand\
+    \ coding blocks. To get the most out of this book, you will need to be able to\
+    \ use a computer and you will need to load Scratch onto your computer. Always\
+    \ check with an adult if it is OK to download files from the Internet to your\
+    \ computer. Go to: **https://scratch.mit.edu**\n\nFirst, do Scratch’s ‘Getting\
+    \ Started with Scratch’ tutorial, found by going to ‘Create’ on the home page,\
+    \ and then look in the ‘Tips’ menu. You can also work on Scratch offline. Scroll\
+    \ to the bottom of the homepage and click on Offline Editor in the Support menu.\
+    \ Follow the instructions to install it on your computer.\n\n![](img/2028793d21e48318011e28fb666f71e7_5_2.png)\n\
+    \nScratch is developed by the Lifelong Kindergarten Group at the MIT Media Lab.\
+    \ See http://scratch.mit.edu. Images and illustrations from Scratch included in\
+    \ this book have been developed by the Lifelong Kindergarten Group at the MIT\
+    \ Media Lab (see http://scratch.mit.edu) and made available under the Creative\
+    \ Commons Attribution-ShareAlike 2.0 license (https://creativecommons.org/licenses/by-sa/2.0/deed.en).\
+    \ The third party trademarks used in this book are the property of their respective\
+    \ owners, including the Scratch name and logo. The owners of these trademarks\
+    \ have not endorsed, authorised or sponsored this book.\n\n## ALL ABOUT COMPUTER\
+    \ GAMES\n\nDo you like computer games? Perhaps you like puzzles, action games\
+    \ or adventure games. Have you ever wondered how people write computer games?\
+    \ You can create games yourself using a program called Scratch.\n\n### Planning\
+    \ your computer game\n\nBefore you write a computer game you need to decide a\
+    \ few things. What kind of game do you want to write? What will the aim of the\
+    \ game be? Will your game have characters? What will the characters do?\n\nOnce\
+    \ you have a plan, Scratch helps you create games easily using pieces of **code**,\
+    \ called coding blocks. The blocks can be arranged to create different kinds of\
+    \ programs, such as games.\n\n![](img/2028793d21e48318011e28fb666f71e7_7_0.png)\n\
+    \n### Starting from Scratch\n\nTo get some inspiration, have a look at some of\
+    \ the games that people have shared on the Scratch website. You can click on the\
+    \ 'see inside' button to look at the code.\n\nhttps://scratch.mit.edu/starter_projects/#Games\n\
+    \n### Try it!\n\nHow about making a simple dressing-up game to play with your\
+    \ friends? Open our game called dressing.sb2 to see one we have created. Or you\
+    \ can try making one yourself:\n\n- 1. In Scratch, you can choose backgrounds\
+    \ known as backdrops for your game. Click on 'New backdrop'. You can choose a\
+    \ backdrop from the library, draw your own, or upload one from your computer or\
+    \ camera.\n- 2. Now you need someone to dress. Choose a **sprite** from the library.\
+    \ Sprites are characters in Scratch that you can write code for. Go to 'New sprite',\
+    \ and choose 'Dress-Up' from the menu on the left under 'Theme'. You'll see a\
+    \ sprite called Dani and some clothes that will fit her. Select the clothes you\
+    \ want and click 'OK'.\n- 3. To play the game, simply drag and drop the clothes\
+    \ onto Dani!\n\n| Sprite Library | |\n| --- | --- |\n| Category: Animals, Fantasy,\
+    \ Letters, People, Things, Transportation | Bowtie, Dani |\n| Theme: Castle, City,\
+    \ Dance, Dress-Up, Flying, Holiday, Music, Space, Sports, Underwater, Walking\
+    \ | Hat Winter, Hat Wizard, Dress, Short Blouse, Sunglasses1, Sunglasses2 |\n\
+    | Type: All, Animals, People, Wonder | |\n\n![](img/2028793d21e48318011e28fb666f71e7_8_0.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_8_1.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_8_2.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_8_3.png)\n\n- 2. Now you can use the\
+    \ different scoring elements in your game. For this basketball game we change\
+    \ the score by 1 each time the sprite is clicked. When a new game starts, we set\
+    \ the score back to 0.\n- 3. This game uses a timer. If we didn't put the timer\
+    \ in our code, the game would play for ever! You can change how long the game\
+    \ goes on for by changing the value in the timer. At the moment, the game lasts\
+    \ for 10 seconds.\n\n```\nwhen this sprite clicked\nchange [score v] by (1)\n\n\
+    <[timer v] > (10)>\n```\n\n### Think about it\n\nPart of the fun when you are\
+    \ designing a game is to make other people really want to play it! Do you think\
+    \ having a scoreboard helps people want to play? Why? (The answers are on page\
+    \ 32.)\n\n![](img/2028793d21e48318011e28fb666f71e7_10_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_10_1.png)\n\
+    \n## USING LOOPS\n\nProgrammers use loops to tell the computer to repeat a set\
+    \ of instructions.\n\nIn Scratch, you can create a loop to:\n\n- repeat the code\
+    \ forever\n- repeat the code a number of times\n- repeat the code until something\
+    \ else happens.\n\nTo do this in Scratch, you use the FOREVER, REPEAT or REPEAT\
+    \ UNTIL blocks.\n\n```\nrepeat until <timer > 10>\n    hide\n    wait (1) secs\n\
+    \    go to x: (pick random -200 to 200) y: (pick random -140 to 140)\n    show\n\
+    \    wait (0.8) secs\n```\n\nIn our basketball game, we use a **repeat until**\
+    \ loop to program the ball appearing, waiting to be clicked and disappearing again.\n\
+    \nWithout the repeat until loop, we would have to tell the basketball sprite to\
+    \ hide, wait, appear in a random place, hide, wait and appear, over and over again.\
+    \ Using the repeat loop above tells the computer to repeat the same action until\
+    \ the time runs out, so we don’t have to write the same piece of code more than\
+    \ once.\n\n![](img/2028793d21e48318011e28fb666f71e7_11_0.png)\n\n> To make the\
+    \ game last longer, adjust the value next to the timer in the 'Repeat until' block.\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_12_0.png)\n\n### Try it\n\nSee if you\
+    \ can adjust the code in this game to make the game easier or harder. Try changing\
+    \ the second 'wait' value inside the forever loop. If the number is larger, say\
+    \ 1, the ball will be on screen for a little longer. If you make the number smaller,\
+    \ say 0.5, the ball will be on the screen for a shorter time, making the game\
+    \ harder. You can also adjust the first wait value to make the ball appear quicker\
+    \ each time.\n\n### Adding sounds\n\nYou can add sounds to your game. Click on\
+    \ the 'Sound' scripts and you'll see you can play sounds and musical instruments,\
+    \ and change their volume and tempo (speed). To select a sound, you need to go\
+    \ to the Scratch Sound Library.\n\nThere are all kinds of fun sounds that would\
+    \ be great for different games. Click on them to hear what they sound like, and\
+    \ choose some for your game.\n\n![](img/2028793d21e48318011e28fb666f71e7_12_1.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_12_2.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_12_3.png)\n"
+  mdcn: "\n\n## 项目代码\n\n### 用 Scratch 创建电脑游戏\n\n![](img/2028793d21e48318011e28fb666f71e7_0_0.png)\n\
+    \n凯文·伍德\n\n2018年8月22日\n\n布罗姆利\n伦敦自治市\nwww.bromley.gov.uk\n\n奥平顿图书馆\n01689 831551\n\
+    \n请在最后所示日期前归还/续借本物品。图书也可通过电话和互联网续借。\n\n已从布罗姆利图书馆撤下\n\n![](img/2028793d21e48318011e28fb666f71e7_2_0.png)\n\
+    \n## 项目代码\n\n### 用 Scratch 创建电脑游戏\n\n插图：Glen McBeth\n\n凯文·伍德\n\n![](img/2028793d21e48318011e28fb666f71e7_4_0.png)\n\
+    \nW FRANKLIN WATTS 伦敦•悉尼\n\nFranklin Watts\n\n由 The Watts Publishing Group 于 2017\
+    \ 年在英国首次出版\n\n版权所有 © The Watts Publishing Group 2017\n\n保留所有权利。\n\n鸣谢\n\n编辑：Julia\
+    \ Adams/Julia Bird\n\n系列设计师：Alix Wood\n\n封面设计师：Peter Scoulding\n\n插图：Glen McBeth\n\
+    \n已尽一切努力厘清版权。如有任何无意遗漏，请向出版商申请更正。\n\n对话气泡由 Freepik 设计\n\nISBN: 978 1 4451 5596\
+    \ 8\n\n中国印刷\n\n![](img/2028793d21e48318011e28fb666f71e7_5_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_5_1.png)\n\
+    \nFranklin Watts\nHachette Children’s Group 的一个出版品牌\nThe Watts Publishing Group\
+    \ 的一部分\nCarmelite House\n50 Victoria Embankment\nLondon EC4Y 0DZ\n\n一家 Hachette\
+    \ UK 公司\nwww.hachette.co.uk\nwww.franklinwatts.co.uk\n\n## 使用 Scratch\n\nScratch\
+    \ 是麻省理工学院（MIT）设计的一种编程语言，可让你创建自己的互动故事、动画、游戏、音乐和艺术。它不使用复杂的计算机语言，而是使用易于理解的编码积木。为了充分利用本书，你需要会使用电脑，并需要将\
+    \ Scratch 加载到你的电脑上。从互联网下载文件到电脑前，请务必征得成年人同意。请访问：**https://scratch.mit.edu**\n\n\
+    首先，完成 Scratch 的“Scratch 入门”教程，可通过访问主页上的“创建”，然后查看“提示”菜单找到该教程。你也可以离线使用 Scratch。滚动到主页底部，在“支持”菜单中点击“离线编辑器”。按照说明将其安装到你的电脑上。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_5_2.png)\n\nScratch 由 MIT Media Lab\
+    \ 的 Lifelong Kindergarten Group 开发。参见 http://scratch.mit.edu。本书中包含的 Scratch 图像和插图由\
+    \ MIT Media Lab 的 Lifelong Kindergarten Group 开发（参见 http://scratch.mit.edu），并根据\
+    \ Creative Commons Attribution-ShareAlike 2.0 许可协议（https://creativecommons.org/licenses/by-sa/2.0/deed.en）提供。本书中使用的第三方商标是其各自所有者的财产，包括\
+    \ Scratch 名称和徽标。这些商标的所有者并未认可、授权或赞助本书。\n\n## 关于电脑游戏的一切\n\n你喜欢电脑游戏吗？也许你喜欢解谜游戏、动作游戏或冒险游戏。你有没有想过人们是如何编写电脑游戏的？你可以使用一个叫作\
+    \ Scratch 的程序自己创建游戏。\n\n### 规划你的电脑游戏\n\n在编写电脑游戏之前，你需要决定几件事。你想编写哪种游戏？游戏的目标是什么？你的游戏会有角色吗？这些角色会做什么？\n\
+    \n一旦有了计划，Scratch 就能借助称为编码积木的**代码**块，帮助你轻松创建游戏。这些积木可以组合起来创建不同类型的程序，例如游戏。\n\n![](img/2028793d21e48318011e28fb666f71e7_7_0.png)\n\
+    \n### 从 Scratch 开始\n\n为了获得一些灵感，可以看看人们在 Scratch 网站上分享的一些游戏。你可以点击“查看内部”按钮来查看代码。\n\
+    \nhttps://scratch.mit.edu/starter_projects/#Games\n\n### 试一试！\n\n做一个简单的换装游戏和朋友们一起玩怎么样？打开我们名为\
+    \ dressing.sb2 的游戏，看看我们创建的一个示例。或者你也可以自己尝试制作一个：\n\n- 1. 在 Scratch 中，你可以为游戏选择称为背景的图片。点击“新背景”。你可以从库中选择背景、自己绘制，或从电脑或相机上传一个背景。\n\
+    - 2. 现在你需要一个可以装扮的人。从库中选择一个**角色**。角色是 Scratch 中你可以为其编写代码的人物。转到“新角色”，在左侧“主题”下的菜单中选择“装扮”。你会看到一个叫\
+    \ Dani 的角色以及一些适合她的衣服。选择你想要的衣服，然后点击“确定”。\n- 3. 要玩这个游戏，只需将衣服拖放到 Dani 身上！\n\n| 角色库\
+    \ | |\n| --- | --- |\n| 类别：动物、幻想、字母、人物、物品、交通 | 领结、Dani |\n| 主题：城堡、城市、舞蹈、装扮、飞行、节日、音乐、太空、运动、水下、行走\
+    \ | 冬季帽子、巫师帽、连衣裙、短上衣、太阳镜1、太阳镜2 |\n| 类型：全部、动物、人物、奇妙 | |\n\n![](img/2028793d21e48318011e28fb666f71e7_8_0.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_8_1.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_8_2.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_8_3.png)\n\n- 2. 现在你可以在游戏中使用不同的计分元素。在这个篮球游戏中，每次点击角色时，我们将分数改变\
+    \ 1。新游戏开始时，我们将分数重置为 0。\n- 3. 这个游戏使用计时器。如果我们没有在代码中加入计时器，游戏就会一直进行下去！你可以通过更改计时器中的数值来改变游戏持续时间。目前，游戏持续\
+    \ 10 秒。\n\n```\nwhen this sprite clicked\nchange [score v] by (1)\n\n<[timer v]\
+    \ > (10)>\n```\n\n### 想一想\n\n设计游戏的部分乐趣就在于让别人非常想玩它！你认为有记分牌会让人更想玩吗？为什么？（答案在第 32\
+    \ 页。）\n\n![](img/2028793d21e48318011e28fb666f71e7_10_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_10_1.png)\n\
+    \n## 使用循环\n\n程序员使用循环来告诉计算机重复执行一组指令。\n\n在 Scratch 中，你可以创建循环来：\n\n- 永远重复代码\n- 将代码重复一定次数\n\
+    - 重复代码直到发生其他事情。\n\n要在 Scratch 中做到这一点，你可以使用 FOREVER、REPEAT 或 REPEAT UNTIL 积木。\n\
+    \n```\nrepeat until <timer > 10>\n    hide\n    wait (1) secs\n    go to x: (pick\
+    \ random -200 to 200) y: (pick random -140 to 140)\n    show\n    wait (0.8) secs\n\
+    ```\n\n在我们的篮球游戏中，我们使用**重复直到**循环来编写球的出现、等待被点击以及再次消失。\n\n如果没有重复直到循环，我们就必须一遍又一遍地告诉篮球角色隐藏、等待、随机出现在某个位置、隐藏、等待并出现。使用上面的重复循环会告诉计算机重复同样的动作，直到时间用完，因此我们不必多次编写同一段代码。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_11_0.png)\n\n> 要让游戏持续更长时间，请调整“重复直到”积木中计时器旁边的数值。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_12_0.png)\n\n### 试一试\n\n看看你能否调整这个游戏中的代码，让游戏变得更容易或更难。试着更改“永远”循环中的第二个“等待”数值。如果数值更大，比如\
+    \ 1，球会在屏幕上停留稍久一些。如果你把数值改小，比如 0.5，球在屏幕上停留的时间就会更短，从而使游戏更难。你也可以调整第一个“等待”数值，让球每次出现得更快。\n\
+    \n### 添加声音\n\n你可以为游戏添加声音。点击“声音”脚本，你会看到可以播放声音和乐器，并更改它们的音量和速度（节奏）。要选择声音，你需要转到 Scratch\
+    \ 声音库。\n\n有各种有趣的声音，非常适合不同的游戏。点击它们听听声音效果，并为你的游戏选择一些声音。\n\n![](img/2028793d21e48318011e28fb666f71e7_12_1.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_12_2.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_12_3.png)\n\
+    \n"
+  merge: -1
+- raw:
+  - '[PAGE 13]
+
+
+    <!-- no content -->'
+  - '[PAGE 14]
+
+
+    3 The ''Move'' block adjusts the speed at which the ball will travel. At the moment
+    the value is set to 10. If you want the ball to move faster, type a higher value,
+    such as 15, in the box. If you want it to go slower, lower the value. Try the
+    game again and see how you do.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_14_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_14_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_14_2.png)
+
+
+    # Try It
+
+
+    What if you want to use a different ball or add a second ball to your game? Choose
+    a new ball sprite. Copy the code from your original ball by right-clicking on
+    each code block and selecting ''duplicate''. Drag the duplicate code onto the
+    new sprite. The blocks may appear on top of each other so you might need to tidy
+    them up.
+
+
+    Delete the original ball and just use your new one, or try using two balls. It''s
+    much harder! We added the Earth to our space-themed Paddleball. Open paddleball2.sb2
+    to try out this version.'
+  - '[PAGE 15]
+
+
+    # # STRATEGY GAMES
+
+
+    > > A strategy game invites the player to make choices which affect what happens
+    next. Chess is a strategy game. Every piece that you move in chess makes a big
+    difference to what happens in the game. These games are won through tactics. A
+    lot of computer war games are strategy games.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_15_0.png)
+
+
+    # ## Dragons
+
+
+    For this book, we have created a strategy game called Dragons. Our hero is a little
+    frog that we need to save from an increasing number of nasty dragons. If you like,
+    you can play the finished game first, so that you can see what we are going to
+    create. Open dragons.sb2 in Scratch and click on the green flag. The game looks
+    better if you go to full screen mode.
+
+
+    # ## How to play the game
+
+
+    You can move the frog one space in any direction using the arrow keys on your
+    keyboard. Be careful not to make the frog fall into a hole, though. After the
+    frog has moved, all of the dragons will take one step towards it. Watch out! They
+    will eat the frog if they catch it. When you have beaten all the dragons you go
+    up to a new level. See how long you can keep the frog alive!'
+  - '[PAGE 16]
+
+
+    <!-- no content -->'
+  - "[PAGE 17]\n\n# # MAKING DECISIONS\n\nNow we are going to begin to create our\
+    \ own Dragons game. Let's start by looking at how our main character, the frog,\
+    \ will move around the screen. Open dragons1sb2 in Scratch and click the green\
+    \ flag.\n\nYou can see that we have divided the screen into a **grid** of 18 rows\
+    \ and 24 columns. Each square is called a cell and is 20 **pixels** high and 20\
+    \ pixels wide. At the start, the frog sits in a cell in the middle of the grid.\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_17_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_17_1.png)\n\
+    \n# ### Waiting for instructions ...\n\nThis part of our code needs to make three\
+    \ decisions. It is waiting for the green flag to be clicked, waiting for a key\
+    \ to be pressed and deciding which key has been pressed. The code is only activated\
+    \ if one of the arrow keys has been pressed. If it has, the frog moves to the\
+    \ left, right, up or down 20 spaces (or pixels), which is the same as one cell.\n\
+    \n```\n~~~scratch\nwhen [any v] key pressed\nif <key [right arrow v] pressed?>\
+    \ then\n    change x by (20)\nif <key [left arrow v] pressed?> then\n    change\
+    \ x by (-20)\nif <key [up arrow v] pressed?> then\n~~~\n```"
+  - '[PAGE 18]
+
+
+    # ## How do we make decisions in code?
+
+
+    We can use an IF statement to make decisions. The IF statement is one of the most
+    used statements in coding. It allows the code to make a decision by asking IF
+    something has happened. For example, IF an arrow key is pressed, THEN the code
+    moves the frog in the direction of the arrow key. IF no arrow key is pressed,
+    nothing will happen.
+
+
+    # ### Think about it
+
+
+    Being able to make decisions makes code seem more human.
+
+    If you programmed a robot to walk forwards, it would walk forwards even if there
+    was a cliff edge in front of it.
+
+    A person would make the decision to stop if they saw the drop! If you programmed
+    the robot to ''walk forwards IF no cliff edge'' they would make the same decision
+    as the person.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_18_0.png)
+
+
+    # ### Coding unplugged
+
+
+    You make IF decisions every day. If your arm is itchy, you''ll scratch it. For
+    a computer to make the decision to scratch, it needs to be told its arm is itchy,
+    and told to scratch as a result. Try this IF game and turn your decisions into
+    code. Write down six things you must do, such as ''eat a biscuit'' or ''do my
+    homework'' and number them 1-6. Now roll a die. To run your code you must do the
+    thing you wrote next to that number.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_18_1.png)'
+  - "[PAGE 19]\n\n# # PROJECT PAGE: OPERATORS\n\nNow that you can move the frog around\
+    \ the screen, you may notice that it is possible to move him off the screen entirely.\
+    \ We don't really want this, so let's add some code to stop it from happening.\
+    \ Open dragons2.sb2 in Scratch.\n\nYou will see that we have added an extra IF\
+    \ statement to each 'key pressed' one. Before the frog moves, the code needs to\
+    \ check whether there is a cell for the frog to move to. For this second IF statement,\
+    \ we need to use an **operator**.\n\n```\n```scratch\nif <(x position) < [220]>\
+    \ then\n    change x by (20)\n```\n```\n\n> > **Tip:** Adding a green operator\
+    \ block can be fiddly. Hover over the space until it glows white, then drop it\
+    \ in place.\n\n# ## Different types of operator\n\nComputer operators control\
+    \ how the computer uses data. Data are numbers or other information that we type\
+    \ into the computer or select on-screen. When we type a number into our computer,\
+    \ the operator tells the computer what to do with it.\n\nThere are a few different\
+    \ types of operator:\n\n+   - Maths operators let us perform simple maths such\
+    \ as 'add +', 'subtract -', 'multiply x' and 'divide ÷'.\n+   - Comparison operators\
+    \ compare values, and are operators such as 'less than' (shown as <), 'greater\
+    \ than' (shown as >) or 'equal to' (shown as =).\n+   - Logic operators are explained\
+    \ in the next chapter: they are operators such as AND, OR and NOT.\n\n![](img/2028793d21e48318011e28fb666f71e7_19_0.png)"
+  - '[PAGE 20]
+
+
+    # # Using comparison operators
+
+
+    In our project we use the comparison operators ''greater than'' and ''less than''.
+    If the player asks to move the frog right, the operator tells the computer to
+    only move the frog if its current position (''X'') is less than 220 (the edge
+    of the screen). The operator makes sure there is space for the frog to move right.
+    If there is, the frog can be moved. If there isn''t, the frog stays where it is.
+    Try moving the frog off the screen using the arrow keys. You should no longer
+    be able to do so.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_20_0.png)
+
+
+    > > **Think about it**
+
+    > >
+
+    > > Asking if something is ''less than'' or ''greater than'' is really useful
+    in coding. Imagine a game in which the player has to get a certain score before
+    they can go to the next level. You might use a ''greater than'' operator - the
+    player can only move to the next level when their score is greater than the score
+    needed.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_20_1.png)
+
+
+    # # What are X and Y?
+
+
+    All graphs and grids have an x-axis and a y-axis. They help you describe where
+    a point is on a grid. The horizontal axis is the x-axis. The vertical axis is
+    the y-axis. Each time the frog moves, we adjust the X and Y values of the frog
+    to pinpoint where he is.
+
+
+    # # Try it!
+
+
+    Now you can move the frog around the screen, you could make a maze game. Click
+    on the ''New backdrop'' paintbrush. Create a maze using the rectangle tool. Perhaps
+    you could add a timer, and make a clapping sound when you reach the exit. Open
+    maze.sb2 and try to steer the frog to the exit, marked by a green cell.'
+  - "[PAGE 21]\n\n# PROJECT PAGE:\n# THIS OR THAT?\n\nYou may have noticed in the\
+    \ full Dragons game that you could use many different keys to move the frog. People\
+    \ have different types of keyboard and some of them don't have arrow keys that\
+    \ can be used for games. In dragons2.sb2 we could only use the arrow keys.\n\n\
+    ![](img/2028793d21e48318011e28fb666f71e7_21_0.png)\n\nOpen dragons3.sb2 in Scratch.\
+    \ Now you can use many different keys to move up, down, left and right. We can\
+    \ use a block of letter keys from the left side of the keyboard, or the arrow\
+    \ keys.\n\nTo make sure the code allows all the different keys, we need to use\
+    \ the logic operator 'OR'. This operator allows us to list all the different keys\
+    \ we would like to be able to use to make the frog move in a particular direction.\n\
+    \n```\n```scratch\nwhen [any v] key pressed\nif <key [right arrow v] pressed?>\
+    \ or <key [d v] pressed?> then\n    if <(x position) < [220]> then\n        change\
+    \ x by (20)\nif <key [left arrow v] pressed?> or <key [a v] pressed?> then\n \
+    \   if <(x position) > [-240]> then\n```\n```"
+  md: "\n- 3. The 'Move' block adjusts the speed at which the ball will travel. At\
+    \ the moment the value is set to 10. If you want the ball to move faster, type\
+    \ a higher value, such as 15, in the box. If you want it to go slower, lower the\
+    \ value. Try the game again and see how you do.\n\n![](img/2028793d21e48318011e28fb666f71e7_14_0.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_14_1.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_14_2.png)\n\
+    \n### Try It\n\nWhat if you want to use a different ball or add a second ball\
+    \ to your game? Choose a new ball sprite. Copy the code from your original ball\
+    \ by right-clicking on each code block and selecting 'duplicate'. Drag the duplicate\
+    \ code onto the new sprite. The blocks may appear on top of each other so you\
+    \ might need to tidy them up.\n\nDelete the original ball and just use your new\
+    \ one, or try using two balls. It's much harder! We added the Earth to our space-themed\
+    \ Paddleball. Open paddleball2.sb2 to try out this version.\n\n## STRATEGY GAMES\n\
+    \n> A strategy game invites the player to make choices which affect what happens\
+    \ next. Chess is a strategy game. Every piece that you move in chess makes a big\
+    \ difference to what happens in the game. These games are won through tactics.\
+    \ A lot of computer war games are strategy games.\n\n![](img/2028793d21e48318011e28fb666f71e7_15_0.png)\n\
+    \n### Dragons\n\nFor this book, we have created a strategy game called Dragons.\
+    \ Our hero is a little frog that we need to save from an increasing number of\
+    \ nasty dragons. If you like, you can play the finished game first, so that you\
+    \ can see what we are going to create. Open dragons.sb2 in Scratch and click on\
+    \ the green flag. The game looks better if you go to full screen mode.\n\n###\
+    \ How to play the game\n\nYou can move the frog one space in any direction using\
+    \ the arrow keys on your keyboard. Be careful not to make the frog fall into a\
+    \ hole, though. After the frog has moved, all of the dragons will take one step\
+    \ towards it. Watch out! They will eat the frog if they catch it. When you have\
+    \ beaten all the dragons you go up to a new level. See how long you can keep the\
+    \ frog alive!\n\n## MAKING DECISIONS\n\nNow we are going to begin to create our\
+    \ own Dragons game. Let's start by looking at how our main character, the frog,\
+    \ will move around the screen. Open dragons1.sb2 in Scratch and click the green\
+    \ flag.\n\nYou can see that we have divided the screen into a **grid** of 18 rows\
+    \ and 24 columns. Each square is called a cell and is 20 **pixels** high and 20\
+    \ pixels wide. At the start, the frog sits in a cell in the middle of the grid.\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_17_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_17_1.png)\n\
+    \n### Waiting for instructions ...\n\nThis part of our code needs to make three\
+    \ decisions. It is waiting for the green flag to be clicked, waiting for a key\
+    \ to be pressed and deciding which key has been pressed. The code is only activated\
+    \ if one of the arrow keys has been pressed. If it has, the frog moves to the\
+    \ left, right, up or down 20 steps (or pixels), which is the same as one cell.\n\
+    \n```scratch\nwhen [any v] key pressed\nif <key [right arrow v] pressed?> then\n\
+    \    change x by (20)\nif <key [left arrow v] pressed?> then\n    change x by\
+    \ (-20)\nif <key [up arrow v] pressed?> then\n```\n\n### How do we make decisions\
+    \ in code?\n\nWe can use an IF statement to make decisions. The IF statement is\
+    \ one of the most used statements in coding. It allows the code to make a decision\
+    \ by asking IF something has happened. For example, IF an arrow key is pressed,\
+    \ THEN the code moves the frog in the direction of the arrow key. IF no arrow\
+    \ key is pressed, nothing will happen.\n\n#### Think about it\n\nBeing able to\
+    \ make decisions makes code seem more human.\nIf you programmed a robot to walk\
+    \ forwards, it would walk forwards even if there was a cliff edge in front of\
+    \ it.\nA person would make the decision to stop if they saw the drop! If you programmed\
+    \ the robot to 'walk forwards IF no cliff edge' they would make the same decision\
+    \ as the person.\n\n![](img/2028793d21e48318011e28fb666f71e7_18_0.png)\n\n####\
+    \ Coding unplugged\n\nYou make IF decisions every day. If your arm is itchy, you'll\
+    \ scratch it. For a computer to make the decision to scratch, it needs to be told\
+    \ its arm is itchy, and told to scratch as a result. Try this IF game and turn\
+    \ your decisions into code. Write down six things you must do, such as 'eat a\
+    \ biscuit' or 'do my homework' and number them 1-6. Now roll a die. To run your\
+    \ code you must do the thing you wrote next to that number.\n\n![](img/2028793d21e48318011e28fb666f71e7_18_1.png)\n\
+    \n## PROJECT PAGE: OPERATORS\n\nNow that you can move the frog around the screen,\
+    \ you may notice that it is possible to move him off the screen entirely. We don't\
+    \ really want this, so let's add some code to stop it from happening. Open dragons2.sb2\
+    \ in Scratch.\n\nYou will see that we have added an extra IF statement to each\
+    \ 'key pressed' one. Before the frog moves, the code needs to check whether there\
+    \ is a cell for the frog to move to. For this second IF statement, we need to\
+    \ use an **operator**.\n\n```scratch\nif <(x position) < [220]> then\n    change\
+    \ x by (20)\n```\n\n> **Tip:** Adding a green operator block can be fiddly. Hover\
+    \ over the space until it glows white, then drop it in place.\n\n### Different\
+    \ types of operator\n\nComputer operators control how the computer uses data.\
+    \ Data are numbers or other information that we type into the computer or select\
+    \ on-screen. When we type a number into our computer, the operator tells the computer\
+    \ what to do with it.\n\nThere are a few different types of operator:\n\n- Maths\
+    \ operators let us perform simple maths such as 'add +', 'subtract -', 'multiply\
+    \ ×' and 'divide ÷'.\n- Comparison operators compare values, and are operators\
+    \ such as 'less than' (shown as <), 'greater than' (shown as >) or 'equal to'\
+    \ (shown as =).\n- Logic operators are explained in the next chapter: they are\
+    \ operators such as AND, OR and NOT.\n\n![](img/2028793d21e48318011e28fb666f71e7_19_0.png)\n\
+    \n### Using comparison operators\n\nIn our project we use the comparison operators\
+    \ 'greater than' and 'less than'. If the player asks to move the frog right, the\
+    \ operator tells the computer to only move the frog if its current position ('X')\
+    \ is less than 220 (the edge of the screen). The operator makes sure there is\
+    \ space for the frog to move right. If there is, the frog can be moved. If there\
+    \ isn't, the frog stays where it is. Try moving the frog off the screen using\
+    \ the arrow keys. You should no longer be able to do so.\n\n![](img/2028793d21e48318011e28fb666f71e7_20_0.png)\n\
+    \n> **Think about it**\n>\n> Asking if something is 'less than' or 'greater than'\
+    \ is really useful in coding. Imagine a game in which the player has to get a\
+    \ certain score before they can go to the next level. You might use a 'greater\
+    \ than' operator - the player can only move to the next level when their score\
+    \ is greater than the score needed.\n\n![](img/2028793d21e48318011e28fb666f71e7_20_1.png)\n\
+    \n### What are X and Y?\n\nAll graphs and grids have an x-axis and a y-axis. They\
+    \ help you describe where a point is on a grid. The horizontal axis is the x-axis.\
+    \ The vertical axis is the y-axis. Each time the frog moves, we adjust the X and\
+    \ Y values of the frog to pinpoint where he is.\n\n### Try it!\n\nNow you can\
+    \ move the frog around the screen, you could make a maze game. Click on the 'New\
+    \ backdrop' paintbrush. Create a maze using the rectangle tool. Perhaps you could\
+    \ add a timer, and make a clapping sound when you reach the exit. Open maze.sb2\
+    \ and try to steer the frog to the exit, marked by a green cell.\n\n## PROJECT\
+    \ PAGE: THIS OR THAT?\n\nYou may have noticed in the full Dragons game that you\
+    \ could use many different keys to move the frog. People have different types\
+    \ of keyboard and some of them don't have arrow keys that can be used for games.\
+    \ In dragons2.sb2 we could only use the arrow keys.\n\n![](img/2028793d21e48318011e28fb666f71e7_21_0.png)\n\
+    \nOpen dragons3.sb2 in Scratch. Now you can use many different keys to move up,\
+    \ down, left and right. We can use a block of letter keys from the left side of\
+    \ the keyboard, or the arrow keys.\n\nTo make sure the code allows all the different\
+    \ keys, we need to use the logic operator 'OR'. This operator allows us to list\
+    \ all the different keys we would like to be able to use to make the frog move\
+    \ in a particular direction.\n\n```scratch\nwhen [any v] key pressed\nif <key\
+    \ [right arrow v] pressed?> or <key [d v] pressed?> then\n    if <(x position)\
+    \ < [220]> then\n        change x by (20)\nif <key [left arrow v] pressed?> or\
+    \ <key [a v] pressed?> then\n    if <(x position) > [-240]> then\n```\n"
+  mdcn: "\n- 3. “移动”积木块调整球的移动速度。目前值设为10。如果你想让球移动得更快，在框中输入更高的值，例如15。如果你想让球移动得更慢，就降低该值。再试玩一次游戏，看看表现如何。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_14_0.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_14_1.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_14_2.png)\n\n### 试一试\n\n如果你想使用不同的球，或者向游戏中添加第二个球，该怎么办？选择一个新的球角色。通过右键单击每个代码块并选择“复制”，来复制原始球的代码。将复制出的代码拖到新角色上。这些积木块可能会彼此重叠，因此你可能需要整理一下。\n\
+    \n删除原来的球，只使用新球，或者尝试使用两个球。那样会难得多！我们在太空主题的 Paddleball 中加入了地球。打开 paddleball2.sb2\
+    \ 来试试这个版本。\n\n## 策略游戏\n\n> 策略游戏邀请玩家做出会影响接下来发生什么的选择。国际象棋就是一种策略游戏。在国际象棋中，你每移动一个棋子，都会对游戏进程产生很大影响。这类游戏靠战术取胜。许多电脑战争游戏都是策略游戏。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_15_0.png)\n\n### 龙\n\n为了本书，我们创作了一款名为《龙》的策略游戏。我们的主角是一只小青蛙，我们需要从越来越多凶恶的龙手中拯救它。如果你愿意，可以先玩一玩完成版游戏，这样就能看到我们将要创作的内容。在\
+    \ Scratch 中打开 dragons.sb2 并点击绿旗。如果进入全屏模式，游戏看起来会更好。\n\n### 如何玩这个游戏\n\n你可以使用键盘上的方向键，让青蛙向任意方向移动一格。不过要小心，别让青蛙掉进洞里。青蛙移动之后，所有龙都会朝它走一步。当心！如果它们抓住青蛙，就会把青蛙吃掉。当你击败所有龙后，就会升到新的一关。看看你能让青蛙存活多久！\n\
+    \n## 做决定\n\n现在我们要开始创作自己的《龙》游戏了。我们先来看看主角青蛙将如何在屏幕上移动。在 Scratch 中打开 dragons1.sb2\
+    \ 并点击绿旗。\n\n你可以看到，我们把屏幕划分成了一个由 18 行和 24 列组成的**网格**。每个方格称为一个单元格，高 20 **像素**、宽 20\
+    \ 像素。开始时，青蛙位于网格中间的一个单元格中。\n\n![](img/2028793d21e48318011e28fb666f71e7_17_0.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_17_1.png)\n\n### 等待指令……\n\n我们代码的这一部分需要做出三个决定。它在等待绿旗被点击、等待某个键被按下，并判断按下了哪个键。只有当某个方向键被按下时，代码才会被激活。如果按下了，青蛙就会向左、右、上或下移动\
+    \ 20 步（或像素），这相当于一个单元格。\n\n```scratch\nwhen [any v] key pressed\nif <key [right\
+    \ arrow v] pressed?> then\n    change x by (20)\nif <key [left arrow v] pressed?>\
+    \ then\n    change x by (-20)\nif <key [up arrow v] pressed?> then\n```\n\n###\
+    \ 我们如何在代码中做决定？\n\n我们可以使用 IF 语句来做决定。IF 语句是编程中最常用的语句之一。它通过询问某件事是否发生，让代码做出决定。例如，如果按下了方向键，那么代码就会让青蛙朝该方向键的方向移动。如果没有按下任何方向键，就什么也不会发生。\n\
+    \n#### 想一想\n\n能够做决定让代码看起来更像人类。\n如果你给机器人编程让它向前走，那么即使前方是悬崖边缘，它也会一直向前走。\n而人如果看到前面有落差，就会决定停下来！如果你给机器人编程为“如果没有悬崖边缘就向前走”，它们就会做出和人一样的决定。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_18_0.png)\n\n#### 不插电编程\n\n你每天都会做出\
+    \ IF 决定。如果你的手臂发痒，你就会去挠它。要让计算机做出“挠”的决定，就需要告诉它手臂发痒，并告诉它因此要去挠。试试这个 IF 游戏，把你的决定变成代码。写下六件你必须做的事，例如“吃一块饼干”或“做我的作业”，并把它们编号为\
+    \ 1—6。现在掷一个骰子。要运行你的代码，你必须做该数字旁边写的那件事。\n\n![](img/2028793d21e48318011e28fb666f71e7_18_1.png)\n\
+    \n## 项目页面：运算符\n\n既然你可以让青蛙在屏幕上移动了，你可能会注意到，有可能把它完全移出屏幕。我们并不希望这样，所以让我们添加一些代码来阻止这种情况发生。在\
+    \ Scratch 中打开 dragons2.sb2。\n\n你会看到，我们给每个“按键被按下”的 IF 语句都额外添加了一个 IF 语句。在青蛙移动之前，代码需要检查是否有可供青蛙移动到的单元格。对于这第二个\
+    \ IF 语句，我们需要使用一个**运算符**。\n\n```scratch\nif <(x position) < [220]> then\n    change\
+    \ x by (20)\n```\n\n> **提示：** 添加绿色运算符积木块可能有点麻烦。将鼠标悬停在空白处，直到它发出白光，然后将其放到合适位置。\n\
+    \n### 不同类型的运算符\n\n计算机运算符控制计算机如何使用数据。数据是我们输入计算机或在屏幕上选择的数字或其他信息。当我们在计算机中输入一个数字时，运算符会告诉计算机如何处理它。\n\
+    \n运算符有几种不同类型：\n\n- 数学运算符让我们执行简单的数学运算，例如“加 +”、“减 -”、“乘 ×”和“除 ÷”。\n- 比较运算符比较数值，例如“小于”（显示为<）、“大于”（显示为>）或“等于”（显示为=）。\n\
+    - 逻辑运算符将在下一章解释：它们包括 AND、OR 和 NOT 等运算符。\n\n![](img/2028793d21e48318011e28fb666f71e7_19_0.png)\n\
+    \n### 使用比较运算符\n\n在我们的项目中，我们使用“大于”和“小于”这两个比较运算符。如果玩家要求把青蛙向右移动，运算符会告诉计算机，只有当青蛙的当前位置（“X”）小于\
+    \ 220（屏幕边缘）时，才移动青蛙。运算符会确保有空间让青蛙向右移动。如果有空间，青蛙就可以移动。如果没有空间，青蛙就留在原地。试着用方向键把青蛙移出屏幕。你应该再也无法做到这一点了。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_20_0.png)\n\n> **想一想**\n>\n> 在编程中，询问某事物是否“小于”或“大于”真的很有用。想象一个游戏，玩家必须先获得一定分数才能进入下一关。你可能会使用“大于”运算符——只有当玩家的分数大于所需分数时，玩家才能进入下一关。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_20_1.png)\n\n### X 和 Y 是什么？\n\n所有图表和网格都有\
+    \ x 轴和 y 轴。它们帮助你描述一个点在网格上的位置。水平轴是 x 轴。垂直轴是 y 轴。每次青蛙移动时，我们都会调整青蛙的 X 值和 Y 值，以精确指出它的位置。\n\
+    \n### 试一试！\n\n现在你可以让青蛙在屏幕上移动了，你可以制作一个迷宫游戏。点击“新背景”画笔。使用矩形工具创建迷宫。也许你可以添加一个计时器，并在到达出口时发出拍手声。打开\
+    \ maze.sb2，试着把青蛙引导到由绿色单元格标记的出口。\n\n## 项目页面：这个还是那个？\n\n你可能已经注意到，在完整的《龙》游戏中，你可以使用许多不同的键来移动青蛙。人们使用的键盘类型不同，有些键盘没有可用于游戏的方向键。在\
+    \ dragons2.sb2 中，我们只能使用方向键。\n\n![](img/2028793d21e48318011e28fb666f71e7_21_0.png)\n\
+    \n在 Scratch 中打开 dragons3.sb2。现在你可以使用许多不同的键来向上、向下、向左和向右移动。我们可以使用键盘左侧的一组字母键，或者方向键。\n\
+    \n为了确保代码允许所有不同的按键，我们需要使用逻辑运算符“OR”。这个运算符让我们列出所有希望用来让青蛙朝特定方向移动的不同按键。\n\n```scratch\n\
+    when [any v] key pressed\nif <key [right arrow v] pressed?> or <key [d v] pressed?>\
+    \ then\n    if <(x position) < [220]> then\n        change x by (20)\nif <key\
+    \ [left arrow v] pressed?> or <key [a v] pressed?> then\n    if <(x position)\
+    \ > [-240]> then\n```\n"
+  merge: 0
+- raw:
+  - '[PAGE 22]
+
+
+    # # Logic operators
+
+
+    Logic operators use Boolean logic. Boolean logic is named after a man called George
+    Boole. Boole invented a really simple system of logic, where every question can
+    be answered with either ''true'' or ''false''. The answer to ''Am I itchy?'' is
+    either ''yes'' (true) or ''no'' (false). Logic operators can also use Boolean
+    logic to answer more complex questions by using AND and OR. For example, if you
+    wanted to know ''Am I itchy OR hot?'', the operator would check which of the conditions
+    (itchy or hot) is true.
+
+
+    # # OR logic
+
+
+    OR logic tests to see if one of the conditions is true. For example: ''If I press
+    the right arrow OR I press the ''D'' key THEN move the frog to the right''. If
+    the answer to either question is true then the frog is moved one cell to the right.
+
+
+    # # AND logic
+
+
+    AND logic tests to see if the answers to both questions are true. For example:
+    ''If I press the right arrow key AND there is space to the right of the frog,
+    THEN move the frog to the right''. If the answer to either question is ''no'',
+    then the frog won''t move.
+
+
+    # # Think about it
+
+
+    Does this statement use OR logic or AND logic? ''If I press the 7 key and there
+    is space to move up and left, then move up and left'' (The answers are on page
+    32.)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_22_0.png)'
+  - "[PAGE 23]\n\n# # COORDINATES AND VARIABLES\n\n> > It is important in the game\
+    \ to know which cell the frog is in, as well as which cells have holes or dragons.\
+    \ To keep track of the cells, we need to use a number of variables.\n\n# ## Storage\
+    \ containers\n\nVariables are values that can be changed. A variable is a little\
+    \ like a container for data. You name your variable and store data in it. You\
+    \ can use that data any time you want by typing the variable's name. Your code\
+    \ will then fetch the data in that container.\n\nOpen dragons4.sb2 in Scratch.\
+    \ This project operates just like the last one, but the code is quite different.\
+    \ We have now used variables. In our 'Row' variable block we have entered the\
+    \ value 9. In our 'Column' (col) variable box we have entered the value 12. These\
+    \ values place the frog in the centre cell of the grid. 'Row', 'Col' and 'Cell'\
+    \ are variables, because you can change them by altering the values in the white\
+    \ boxes.\n\n![](img/2028793d21e48318011e28fb666f71e7_23_0.png)\n\n```\n    when\
+    \ green flag clicked\n    set row to 9\n    set col to 12\n```"
+  - '[PAGE 24]
+
+
+    ```
+
+    ```
+
+    set [Cell v] to [row * 24 + col]
+
+    ```
+
+    ```
+
+
+    This piece of code uses variables to give each cell a number. It works like this.
+    There are 24 columns. Each cell on the bottom row (0) is given its number by multiplying
+    the row number (0) by 24 and then adding its column number.
+
+
+    Let''s work out the cell number of the green cross on our grid: 0 (row number)
+    x 24 = 0; 0 + 0 (column number) = 0, so the cell number is ''0''. For the blue
+    cross, the sum is: 1 (row number) x 24 = 24; 24 + 1 (column number) = 25; the
+    cell next to it would be 24 + 2 = 26 and so on, all the way to the top right cell,
+    which is number 431.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_24_0.png)
+
+
+    See if you can work out the cell number for some other grid positions. Check the
+    table below to see if you were right.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_24_1.png)
+
+
+    # ## Try it!
+
+
+    Try getting the frog to start from different positions on the grid. Type a number
+    between 0 and 23 in the column variable and 0-17 in the row variable. Can you
+    predict which square your frog will start in? The numbers go from 0-17 and 0-23,
+    but there are 18 rows and 24 columns. Why? (The answers are on page 32.)'
+  - '[PAGE 25]
+
+
+    # # UNPREDICTABLE FROG
+
+
+    In the game, the frog starts from a different cell each time you click the green
+    flag. You have seen how you can do this yourself by changing the cell and row
+    number. How can we get our code to do this for us? We need the code to pick a
+    random starting place each time.
+
+
+    Open dragons5.sb2 in Scratch. Now when the green flag is clicked, we set the ''row''
+    variable to pick at random any number between 0 and 17 (the row numbers on our
+    grid), then the ''col'' variable to pick any number between 0 and 23 (the column
+    numbers on our grid). In this way we place the frog in any one of the 432 cells
+    of the grid, completely at random.
+
+
+    ```
+
+    ```
+
+    when green flag clicked
+
+    set row to pick random 0 to 17
+
+    set col to pick random 0 to 23
+
+    ```
+
+    ```
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_25_0.png)'
+  - '[PAGE 26]
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_0.png)
+
+
+    # ### Not really random numbers ...
+
+
+    As computers only deal with true and false values they can''t create a truly random
+    number. They have to create a maths sum that appears random, instead. The sum
+    needs to be complicated, or we might be able to predict what number it will pick.
+    Can you guess what sum we did to create these numbers? Can you predict the next
+    number?
+
+
+    1, 3, 5, 7, 9
+
+
+    Try to think up a sum that might be harder to predict.
+
+
+    Being able to choose random numbers is very important in game design. In fact,
+    most games couldn''t work at all unless this was possible.
+
+
+    # ### Coding unplugged
+
+
+    People really can be random. Play this number guessing game with a friend. Think
+    of a random number between 1 and 10. Ask your friend to guess the number. Tell
+    them if their guess was less than or greater than your number. Your friend will
+    be working like a computer''s brain does, using comparison operators to decide
+    which number to choose next depending on your answer. See how many guesses it
+    takes for them to get it right. Now try choosing a number between 1 and 50!
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_2.png)'
+  - '[PAGE 27]
+
+
+    # PROJECT PAGE:
+
+    # ADDING DRAGONS!
+
+
+    Open `dragons6.sb2` in Scratch. Now we have a frog appearing at random places
+    on the screen. Using a similar method, we have also created the holes to appear
+    at random around the screen. Our game board is ready, and it’s time to bring on
+    the dragons!
+
+
+    # ## Using sub-routines
+
+
+    When we want to repeat the same thing at different points in our code we use a
+    **sub-routine**. To get a sub-routine to run, we ‘call’ it. That just means that
+    we call it by name in our code, and our code then fetches it and runs it.
+
+
+    +   1. You will see that we now have a sub-routine called ‘CreateDragons’, we
+    can enter how many dragons we want to create. We check that each dragon is not
+    where the frog is. We also make sure that there is not a hole or another dragon
+    in the same cell.
+
+
+    +   2. Once we have checked these things, we create a new dragon by making a clone
+    of the dragon sprite. A clone is a copy.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_27_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_27_1.png)
+
+
+    ```
+
+    Scratch blocks showing the `CreateDragons` sub-routine, including blocks for creating
+    clones of dragons, checking the length of the `Dragons` list, selecting cells,
+    checking whether a cell contains a hole or dragon, and adding cells to the `Dragons`
+    list.
+
+    ```'
+  - '[PAGE 28]
+
+
+    # ### Frog hunting
+
+
+    The dragons chase the frog. They do this by waiting for the frog to broadcast
+    the message “Chase”. Broadcasting messages is a way of one sprite talking to another.
+    This message tells the dragons the frog’s position. The dragons then move towards
+    that position by one square.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_28_0.png)
+
+
+    # ### Using costumes
+
+
+    You may not have noticed, but the dragons always face towards the frog. We do
+    this by having four **costumes** (character poses), two facing to the left and
+    two facing to the right. Click on the dragon sprite and then click on ‘Costumes’.
+    You will see the four different dragon poses that we use.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_28_1.png)
+
+
+    # ### Think about it
+
+
+    To make a game work really well it may need a lot of code! When you are creating
+    your own game, the code will make sense to you. You will be adding it, little
+    by little, as you go. Someone else’s code, like you are looking at now, can look
+    pretty complicated! Just focus on the bits we are talking about and think about
+    how you could use them in your game.'
+  md: '
+
+    ## Logic operators
+
+
+    Logic operators use Boolean logic. Boolean logic is named after a man called George
+    Boole. Boole invented a really simple system of logic, where every question can
+    be answered with either ''true'' or ''false''. The answer to ''Am I itchy?'' is
+    either ''yes'' (true) or ''no'' (false). Logic operators can also use Boolean
+    logic to answer more complex questions by using AND and OR. For example, if you
+    wanted to know ''Am I itchy OR hot?'', the operator would check which of the conditions
+    (itchy or hot) is true.
+
+
+    ### OR logic
+
+
+    OR logic tests to see if one of the conditions is true. For example: "If I press
+    the right arrow OR I press the ''D'' key THEN move the frog to the right." If
+    the answer to either question is true, then the frog is moved one cell to the
+    right.
+
+
+    ### AND logic
+
+
+    AND logic tests to see if the answers to both questions are true. For example:
+    "If I press the right arrow key AND there is space to the right of the frog, THEN
+    move the frog to the right." If the answer to either question is ''no'', then
+    the frog won''t move.
+
+
+    ### Think about it
+
+
+    Does this statement use OR logic or AND logic? "If I press the 7 key and there
+    is space to move up and left, then move up and left" (The answers are on page
+    32.)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_22_0.png)
+
+
+    ## COORDINATES AND VARIABLES
+
+
+    It is important in the game to know which cell the frog is in, as well as which
+    cells have holes or dragons. To keep track of the cells, we need to use a number
+    of variables.
+
+
+    ### Storage containers
+
+
+    Variables are values that can be changed. A variable is a little like a container
+    for data. You name your variable and store data in it. You can use that data any
+    time you want by typing the variable''s name. Your code will then fetch the data
+    in that container.
+
+
+    Open `dragons4.sb2` in Scratch. This project operates just like the last one,
+    but the code is quite different. We have now used variables. In our ''Row'' variable
+    block we have entered the value 9. In our ''Column'' (col) variable box we have
+    entered the value 12. These values place the frog in the centre cell of the grid.
+    ''Row'', ''Col'' and ''Cell'' are variables, because you can change them by altering
+    the values in the white boxes.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_23_0.png)
+
+
+    ```
+
+    when green flag clicked
+
+    set row to 9
+
+    set col to 12
+
+    ```
+
+
+    ```
+
+    set [Cell v] to [row * 24 + col]
+
+    ```
+
+
+    This piece of code uses variables to give each cell a number. It works like this.
+    There are 24 columns. Each cell on the bottom row (0) is given its number by multiplying
+    the row number (0) by 24 and then adding its column number.
+
+
+    Let''s work out the cell number of the green cross on our grid: 0 (row number)
+    x 24 = 0; 0 + 0 (column number) = 0, so the cell number is ''0''. For the blue
+    cross, the sum is: 1 (row number) x 24 = 24; 24 + 1 (column number) = 25; the
+    cell next to it would be 24 + 2 = 26 and so on, all the way to the top right cell,
+    which is number 431.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_24_0.png)
+
+
+    See if you can work out the cell number for some other grid positions. Check the
+    table below to see if you were right.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_24_1.png)
+
+
+    ### Try it!
+
+
+    Try getting the frog to start from different positions on the grid. Type a number
+    between 0 and 23 in the column variable and 0-17 in the row variable. Can you
+    predict which square your frog will start in? The numbers go from 0-17 and 0-23,
+    but there are 18 rows and 24 columns. Why? (The answers are on page 32.)
+
+
+    ## UNPREDICTABLE FROG
+
+
+    In the game, the frog starts from a different cell each time you click the green
+    flag. You have seen how you can do this yourself by changing the column and row
+    number. How can we get our code to do this for us? We need the code to pick a
+    random starting place each time.
+
+
+    Open `dragons5.sb2` in Scratch. Now when the green flag is clicked, we set the
+    ''row'' variable to pick at random any number between 0 and 17 (the row numbers
+    on our grid), then the ''col'' variable to pick any number between 0 and 23 (the
+    column numbers on our grid). In this way we place the frog in any one of the 432
+    cells of the grid, completely at random.
+
+
+    ```
+
+    when green flag clicked
+
+    set row to pick random 0 to 17
+
+    set col to pick random 0 to 23
+
+    ```
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_25_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_0.png)
+
+
+    ### Not really random numbers ...
+
+
+    As computers only deal with true and false values, they can''t create a truly
+    random number. They have to create a maths sum that appears random instead. The
+    sum needs to be complicated, or we might be able to predict what number it will
+    pick. Can you guess what sum we did to create these numbers? Can you predict the
+    next number?
+
+
+    1, 3, 5, 7, 9
+
+
+    Try to think up a sum that might be harder to predict.
+
+
+    Being able to choose random numbers is very important in game design. In fact,
+    most games couldn''t work at all unless this was possible.
+
+
+    ### Coding unplugged
+
+
+    People really can be random. Play this number guessing game with a friend. Think
+    of a random number between 1 and 10. Ask your friend to guess the number. Tell
+    them if their guess was less than or greater than your number. Your friend will
+    be working like a computer''s brain does, using comparison operators to decide
+    which number to choose next depending on your answer. See how many guesses it
+    takes for them to get it right. Now try choosing a number between 1 and 50!
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_2.png)
+
+
+    ## PROJECT PAGE: ADDING DRAGONS!
+
+
+    Open `dragons6.sb2` in Scratch. Now we have a frog appearing at random places
+    on the screen. Using a similar method, we have also created the holes to appear
+    at random around the screen. Our game board is ready, and it’s time to bring on
+    the dragons!
+
+
+    ### Using sub-routines
+
+
+    When we want to repeat the same thing at different points in our code we use a
+    **sub-routine**. To get a sub-routine to run, we ‘call’ it. That just means that
+    we call it by name in our code, and our code then fetches it and runs it.
+
+
+    - 1. You will see that we now have a sub-routine called ‘CreateDragons’. We can
+    enter how many dragons we want to create. We check that each dragon is not where
+    the frog is. We also make sure that there is not a hole or another dragon in the
+    same cell.
+
+    - 2. Once we have checked these things, we create a new dragon by making a clone
+    of the dragon sprite. A clone is a copy.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_27_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_27_1.png)
+
+
+    Scratch blocks showing the `CreateDragons` sub-routine, including blocks for creating
+    clones of dragons, checking the length of the `Dragons` list, selecting cells,
+    checking whether a cell contains a hole or dragon, and adding cells to the `Dragons`
+    list.
+
+
+    ### Frog hunting
+
+
+    The dragons chase the frog. They do this by waiting for the frog to broadcast
+    the message “Chase”. Broadcasting messages is a way of one sprite talking to another.
+    This message tells the dragons the frog’s position. The dragons then move towards
+    that position by one square.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_28_0.png)
+
+
+    ### Using costumes
+
+
+    You may not have noticed, but the dragons always face towards the frog. We do
+    this by having four **costumes** (character poses), two facing to the left and
+    two facing to the right. Click on the dragon sprite and then click on ‘Costumes’.
+    You will see the four different dragon poses that we use.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_28_1.png)
+
+
+    ### Think about it
+
+
+    To make a game work really well it may need a lot of code! When you are creating
+    your own game, the code will make sense to you. You will be adding it, little
+    by little, as you go. Someone else’s code, like you are looking at now, can look
+    pretty complicated! Just focus on the bits we are talking about and think about
+    how you could use them in your game.
+
+    '
+  mdcn: '
+
+    ## 逻辑运算符
+
+
+    逻辑运算符使用布尔逻辑。布尔逻辑以一位名叫乔治·布尔的人命名。布尔发明了一套非常简单的逻辑系统，其中每个问题都可以用“真”或“假”来回答。“我痒吗？”的答案要么是“是”（真），要么是“否”（假）。逻辑运算符还可以使用
+    AND 和 OR 来回答更复杂的问题。例如，如果你想知道“我是发痒 OR 发热吗？”，运算符会检查哪个条件（发痒或发热）为真。
+
+
+    ### OR 逻辑
+
+
+    OR 逻辑测试其中一个条件是否为真。例如：“如果我按右箭头 OR 我按‘D’键，那么把青蛙向右移动。”如果任一问题的答案为真，青蛙就向右移动一个单元格。
+
+
+    ### AND 逻辑
+
+
+    AND 逻辑测试两个问题的答案是否都为真。例如：“如果我按右箭头键 AND 青蛙右边有空间，那么把青蛙向右移动。”如果任一问题的答案为“否”，青蛙就不会移动。
+
+
+    ### 想一想
+
+
+    这句话使用的是 OR 逻辑还是 AND 逻辑？“如果我按 7 键，并且左上方有移动空间，那么向左上方移动”（答案见第32页。）
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_22_0.png)
+
+
+    ## 坐标与变量
+
+
+    在游戏中，知道青蛙位于哪个单元格，以及哪些单元格有洞或龙，很重要。为了跟踪这些单元格，我们需要使用若干变量。
+
+
+    ### 存储容器
+
+
+    变量是可以改变的值。变量有点像数据的容器。你给变量命名，并把数据存进去。任何时候只要输入变量名，就可以使用这些数据。然后代码会取出该容器中的数据。
+
+
+    在 Scratch 中打开 `dragons4.sb2`。这个项目的运行方式和上一个一样，但代码却大不相同。我们现在使用了变量。在 ''Row'' 变量积木中，我们输入了值
+    9。在 ''Column''（col）变量框中，我们输入了值 12。这些值把青蛙放在网格的中心单元格。''Row''、''Col'' 和 ''Cell''
+    都是变量，因为你可以通过修改白色输入框中的值来改变它们。
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_23_0.png)
+
+
+    ```
+
+    when green flag clicked
+
+    set row to 9
+
+    set col to 12
+
+    ```
+
+
+    ```
+
+    set [Cell v] to [row * 24 + col]
+
+    ```
+
+
+    这段代码使用变量为每个单元格分配一个编号。它的工作原理如下。共有 24 列。底行（0）上的每个单元格，其编号由行号（0）乘以 24，再加上列号得到。
+
+
+    我们来算一下网格上绿色十字的单元格编号：0（行号）× 24 = 0；0 + 0（列号）= 0，所以单元格编号是‘0’。对于蓝色十字，计算为：1（行号）× 24
+    = 24；24 + 1（列号）= 25；它旁边的单元格会是 24 + 2 = 26，依此类推，一直到右上角单元格，其编号为 431。
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_24_0.png)
+
+
+    看看你能否算出其他一些网格位置的单元格编号。查看下面的表格，看看你是否算对了。
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_24_1.png)
+
+
+    ### 试一试！
+
+
+    试着让青蛙从网格上的不同位置开始。在 column 变量中输入 0 到 23 之间的数字，在 row 变量中输入 0 到 17 之间的数字。你能预测青蛙会从哪个方格开始吗？数字范围是
+    0-17 和 0-23，但网格有 18 行和 24 列。为什么？（答案见第32页。）
+
+
+    ## 不可预测的青蛙
+
+
+    在游戏中，每次点击绿旗，青蛙都会从不同的单元格开始。你已经看到如何通过改变列号和行号来自己做到这一点。我们怎样才能让代码替我们完成这件事？我们需要让代码每次都选择一个随机起点。
+
+
+    在 Scratch 中打开 `dragons5.sb2`。现在，当点击绿旗时，我们把 ''row'' 变量设置为在 0 到 17 之间随机选取任意数字（我们网格中的行号），然后把
+    ''col'' 变量设置为在 0 到 23 之间随机选取任意数字（我们网格中的列号）。这样，我们就把青蛙完全随机地放在网格的 432 个单元格中的任意一个里。
+
+
+    ```
+
+    when green flag clicked
+
+    set row to pick random 0 to 17
+
+    set col to pick random 0 to 23
+
+    ```
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_25_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_0.png)
+
+
+    ### 并非真正的随机数……
+
+
+    由于计算机只处理真值和假值，它们无法生成真正随机的数字。它们必须改为创建一个看起来随机的数学算式。这个算式需要足够复杂，否则我们可能预测出它会选什么数字。你能猜出我们用了什么算式来生成这些数字吗？你能预测下一个数字吗？
+
+
+    1, 3, 5, 7, 9
+
+
+    试着想出一个可能更难预测的算式。
+
+
+    能够选择随机数在游戏设计中非常重要。事实上，如果没有这种能力，大多数游戏根本无法运行。
+
+
+    ### 不插电编程
+
+
+    人真的可以做到随机。和朋友玩这个猜数字游戏。想一个 1 到 10 之间的随机数。让朋友猜这个数字。告诉他们猜的数是小于还是大于你的数字。你的朋友会像计算机的大脑那样工作，使用比较运算符，根据你的回答决定下一个要猜哪个数字。看看他们猜多少次才能猜对。现在试试选一个
+    1 到 50 之间的数字！
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_26_2.png)
+
+
+    ## 项目页面：添加龙！
+
+
+    在 Scratch 中打开 `dragons6.sb2`。现在，我们让青蛙随机出现在屏幕上的不同位置。使用类似的方法，我们还让洞随机出现在屏幕各处。我们的游戏板准备好了，是时候让龙登场了！
+
+
+    ### 使用子程序
+
+
+    当我们想在代码中的不同位置重复同一件事时，我们会使用**子程序**。要让子程序运行，我们‘调用’它。这只是说，我们在代码中按名称调用它，然后代码会取出并运行它。
+
+
+    - 1. 你会看到我们现在有一个名为‘CreateDragons’的子程序。我们可以输入想要创建多少条龙。我们会检查每条龙都不在青蛙所在的位置。我们还会确保同一个单元格中没有洞或另一条龙。
+
+    - 2. 检查完这些事项后，我们通过制作龙角色的克隆体来创建一条新龙。克隆体就是副本。
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_27_0.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_27_1.png)
+
+
+    Scratch 积木展示了 `CreateDragons` 子程序，包括用于创建龙的克隆体、检查 `Dragons` 列表长度、选择单元格、检查单元格中是否包含洞或龙，以及将单元格添加到
+    `Dragons` 列表的积木。
+
+
+    ### 追捕青蛙
+
+
+    龙会追捕青蛙。它们通过等待青蛙广播消息“Chase”来做到这一点。广播消息是一个角色与另一个角色交流的一种方式。这个消息告诉龙青蛙的位置。然后龙朝那个位置移动一格。
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_28_0.png)
+
+
+    ### 使用造型
+
+
+    你可能没有注意到，但龙总是面向青蛙。我们通过使用四个**造型**（角色姿态）来做到这一点，两个面向左，两个面向右。点击龙角色，然后点击‘造型’。你会看到我们使用的四种不同的龙姿态。
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_28_1.png)
+
+
+    ### 想一想
+
+
+    要让一个游戏运行得非常好，可能需要大量代码！当你在创建自己的游戏时，代码对你会是有意义的。你会随着进展一点一点地添加它。别人的代码，就像你现在看到的那样，可能看起来相当复杂！只需关注我们正在讨论的部分，并思考如何把它们用到你的游戏中。
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 29]
+
+
+    <!-- no content -->'
+  - "[PAGE 30]\n\n![](img/2028793d21e48318011e28fb666f71e7_30_0.png)\n\nSorry, you\
+    \ have died! If the frog moves to a cell which already contains a hole or a dragon,\
+    \ it dies. The game runs a sub-routine called ‘Die’, which looks like this:\n\n\
+    ```\n    define Die\n    set GameOn to 0\n    broadcast Delete\n    switch backdrop\
+    \ to Die\n    hide\n```\n\n![](img/2028793d21e48318011e28fb666f71e7_30_1.png)\n\
+    \nThis routine sets ‘GameOn’ to 0, meaning that the frog no longer moves; it also\
+    \ switches the backdrop to the ‘die’ screen and hides the frog. It then broadcasts\
+    \ a message named ‘Delete’.\n\n# ## Message received\n\nMessages are another way\
+    \ of one sprite talking to another. If you look in the code for the hole and dragon\
+    \ you will see that they look for this ‘Delete’ message. When it is received,\
+    \ the clones are deleted.\n\n```\n    when I receive Delete\n    delete this clone\n\
+    ```\n\n![](img/2028793d21e48318011e28fb666f71e7_30_2.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_30_3.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_30_4.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_30_5.png)"
+  - '[PAGE 31]
+
+
+    <!-- no content -->'
+  - '[PAGE 32]
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_32_0.png)
+
+
+    # Testing, testing
+
+
+    When you create a game it is a good idea to get lots of people to test it for
+    you. Code can get complicated, and you can get bugs. Bugs are when your code doesn’t
+    do exactly what you expect. If something isn’t right, debug it. Check your code
+    carefully to see what went wrong. Be careful that your changes do not cause another
+    bug! Even the best programmers get bugs in their code, so don’t worry if you do.
+    Just test and fix as you go.
+
+
+    # Try it!
+
+
+    Start creating your own game. It is best to try something simple first. One way
+    is to look at some already-written code and make little changes. How about changing
+    the sprites in the Dragons game? Choose your new hero from the ‘New Sprite’ menu.
+    To give it the frog’s code, right click your new sprite and click ‘save to local
+    file.’ Save it somewhere easy to find.
+
+
+    Now click on the frog sprite, and then ‘Costumes’. Click on the open folder symbol
+    (left), point to the new sprite and import it. Delete the frog costume and you
+    have a new hero! Now click the blue ‘i’ in the top left corner and type the name
+    of your new hero.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_32_1.png)
+
+
+    Now use the skills you have learned to make your own great games. Have fun!'
+  - '[PAGE 33]
+
+
+    <!-- no content -->'
+  - "[PAGE 34]\n\n# # MORE INFORMATION\n\n# ## BOOKS\n\nVorderman, Carol. *Coding\
+    \ In Scratch For Games Made Easy* (DK) DK Children, London, UK: 2016.\n\nWainewright,\
+    \ Max. *Generation Code: I’m an Advanced Scratch Coder* Wayland, London, UK: 2017\n\
+    \n# ## WEBSITES\n\n**MIT’s Scratch website, where you can download the program\
+    \ for free**  \nhttps://scratch.mit.edu/about/\n\n**The Hour of Code website,\
+    \ which has tutorials that teach coding from beginner’s level upwards**  \nhttps://code.org/learn\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_34_0.png)\n\n# ## VISIT\n\nThe **National\
+    \ Videogame Arcade**, Nottingham, houses thousands of video games, runs clubs\
+    \ and encourages hands-on experience of game-making.\n\nThe **Retro Computer Museum**,\
+    \ Leicester, is full of old gaming consoles. It holds gaming and computing events\
+    \ with access to retro computer equipment, and hosts educational visits and tours."
+  - "[PAGE 35]\n\n# # INDEX\n\n+   - backdrop 5, 17, 27\n+   - background 5\n+   -\
+    \ broadcast 25, 27\n+   - bug 29\n+   \n+   - character 4, 14, 25\n+   - clone\
+    \ 24, 27\n+   - coding block 6, 7, 8, 9, 10, 11, 14, 16, 18, 20, 21, 22, 24, 26,\
+    \ 27, 28\n+   - competitive 6\n+   - computer 4, 5, 8, 10, 12, 15, 16, 17, 23\n\
+    +   - coordinates 20-21\n+   - costume 25, 29\n+   \n+   - data 6, 16, 20\n+ \
+    \  - debug 29\n+   - decision 14-15\n\n+   - grid 14, 17, 20, 21, 22\n+   - horizontal\
+    \ 17\n+   \n+   - key 12, 13, 14, 15, 16, 17, 18, 19, 28\n+   - keyboard 12, 13,\
+    \ 18, 19\n+   \n+   - logic 16, 18-19\n+   - logic, AND 19\n+   - logic, Boolean\
+    \ 19\n+   - logic, OR 19\n+   - loop 8-9, 10, 26\n+   \n+   - operator 16-17,\
+    \ 18, 19, 23\n+   \n+   - program 4, 8\n+   - programmer 8, 29\n\n+   - repeat\
+    \ 8, 24\n+   - round (computer game level) 28\n+   \n+   - score 6-7, 17, 28\n\
+    +   - sound 9, 11, 17, 28\n+   - Sound Library 9\n+   - sprite 5, 6, 7, 8, 10,\
+    \ 11, 24, 25, 27, 29\n+   - strategy 12-13\n+   - sub-routine 24, 27\n+   \n+\
+    \   - timer 7, 9, 17\n+   \n+   - variable 6, 20, 21, 22, 26, 28\n+   - vertical\
+    \ 17\n\n# **ANSWERS**\n\npage 7  A scoreboard makes a game more competitive. Players\
+    \ will want to achieve as high a score as possible.\n\npage 19  The statement\
+    \ uses AND logic: a move is only possible if the 7 key is pressed AND there is\
+    \ enough space.\n\npage 21  The number ‘0’ is also counted in both cases.\n\n\
+    ![](img/2028793d21e48318011e28fb666f71e7_35_0.png)"
+  - '[PAGE 36]
+
+
+    <!-- no content -->'
+  - '[PAGE 37]
+
+
+    <!-- no content -->'
+  - '[PAGE 38]
+
+
+    # # 精确飞行
+
+
+    # ## 中级飞行训练
+
+
+    您已经掌握了基本的飞行技能，现在是有目的地飞行的时候了。
+
+
+    # ### 您需要什么
+
+
+    +   - 完成基础飞行训练
+
+    +   - 获得合格的飞行执照'
+  - '[PAGE 39]
+
+
+    # PROJECT
+
+
+    # CODE
+
+
+    # ### CREATE COMPUTER GAMES
+
+    ### WITH SCRATCH
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_39_0.png)
+
+
+    Do you already know the basics of using Scratch? This book will help you take
+    those skills and build on them to create action-packed computer games that you
+    can even play with your friends! Using ready-made blocks of code, have a go at
+    simple projects to develop your Scratch knowledge and have fun getting creative.
+    You can use the code as it is, play around with it or use it as inspiration -
+    it’s up to you!
+
+
+    Project Code is a series of books that supports the National Curriculum in the
+    important STEAM skill of computer coding.
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_39_1.png)
+
+
+    ![](img/2028793d21e48318011e28fb666f71e7_39_2.png)'
+  md: "\n![](img/2028793d21e48318011e28fb666f71e7_30_0.png)\n\nSorry, you have died!\
+    \ If the frog moves to a cell which already contains a hole or a dragon, it dies.\
+    \ The game runs a sub-routine called ‘Die’, which looks like this:\n\n```scratch\n\
+    define Die\nset GameOn to 0\nbroadcast Delete\nswitch backdrop to Die\nhide\n\
+    ```\n\n![](img/2028793d21e48318011e28fb666f71e7_30_1.png)\n\nThis routine sets\
+    \ ‘GameOn’ to 0, meaning that the frog no longer moves; it also switches the backdrop\
+    \ to the ‘die’ screen and hides the frog. It then broadcasts a message named ‘Delete’.\n\
+    \n### Message received\n\nMessages are another way of one sprite talking to another.\
+    \ If you look in the code for the hole and dragon you will see that they look\
+    \ for this ‘Delete’ message. When it is received, the clones are deleted.\n\n\
+    ```scratch\nwhen I receive Delete\ndelete this clone\n```\n\n![](img/2028793d21e48318011e28fb666f71e7_30_2.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_30_3.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_30_4.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_30_5.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_32_0.png)\n\
+    \n## Testing, testing\n\nWhen you create a game it is a good idea to get lots\
+    \ of people to test it for you. Code can get complicated, and you can get bugs.\
+    \ Bugs are when your code doesn’t do exactly what you expect. If something isn’t\
+    \ right, debug it. Check your code carefully to see what went wrong. Be careful\
+    \ that your changes do not cause another bug! Even the best programmers get bugs\
+    \ in their code, so don’t worry if you do. Just test and fix as you go.\n\n##\
+    \ Try it!\n\nStart creating your own game. It is best to try something simple\
+    \ first. One way is to look at some already-written code and make little changes.\
+    \ How about changing the sprites in the Dragons game? Choose your new hero from\
+    \ the ‘New Sprite’ menu. To give it the frog’s code, right click your new sprite\
+    \ and click ‘save to local file.’ Save it somewhere easy to find.\n\nNow click\
+    \ on the frog sprite, and then ‘Costumes’. Click on the open folder symbol (left),\
+    \ point to the new sprite and import it. Delete the frog costume and you have\
+    \ a new hero! Now click the blue ‘i’ in the top left corner and type the name\
+    \ of your new hero.\n\n![](img/2028793d21e48318011e28fb666f71e7_32_1.png)\n\n\
+    Now use the skills you have learned to make your own great games. Have fun!\n\n\
+    ## MORE INFORMATION\n\n### BOOKS\n\nVorderman, Carol. *Coding In Scratch For Games\
+    \ Made Easy* (DK) DK Children, London, UK: 2016.\n\nWainewright, Max. *Generation\
+    \ Code: I’m an Advanced Scratch Coder* Wayland, London, UK: 2017\n\n### WEBSITES\n\
+    \n**MIT’s Scratch website, where you can download the program for free**  \nhttps://scratch.mit.edu/about/\n\
+    \n**The Hour of Code website, which has tutorials that teach coding from beginner’s\
+    \ level upwards**  \nhttps://code.org/learn\n\n![](img/2028793d21e48318011e28fb666f71e7_34_0.png)\n\
+    \n### VISIT\n\nThe **National Videogame Arcade**, Nottingham, houses thousands\
+    \ of video games, runs clubs and encourages hands-on experience of game-making.\n\
+    \nThe **Retro Computer Museum**, Leicester, is full of old gaming consoles. It\
+    \ holds gaming and computing events with access to retro computer equipment, and\
+    \ hosts educational visits and tours.\n\n## INDEX\n\n- backdrop 5, 17, 27\n- background\
+    \ 5\n- broadcast 25, 27\n- bug 29\n- character 4, 14, 25\n- clone 24, 27\n- coding\
+    \ block 6, 7, 8, 9, 10, 11, 14, 16, 18, 20, 21, 22, 24, 26, 27, 28\n- competitive\
+    \ 6\n- computer 4, 5, 8, 10, 12, 15, 16, 17, 23\n- coordinates 20-21\n- costume\
+    \ 25, 29\n- data 6, 16, 20\n- debug 29\n- decision 14-15\n- grid 14, 17, 20, 21,\
+    \ 22\n- horizontal 17\n- key 12, 13, 14, 15, 16, 17, 18, 19, 28\n- keyboard 12,\
+    \ 13, 18, 19\n- logic 16, 18-19\n- logic, AND 19\n- logic, Boolean 19\n- logic,\
+    \ OR 19\n- loop 8-9, 10, 26\n- operator 16-17, 18, 19, 23\n- program 4, 8\n- programmer\
+    \ 8, 29\n- repeat 8, 24\n- round (computer game level) 28\n- score 6-7, 17, 28\n\
+    - sound 9, 11, 17, 28\n- Sound Library 9\n- sprite 5, 6, 7, 8, 10, 11, 24, 25,\
+    \ 27, 29\n- strategy 12-13\n- sub-routine 24, 27\n- timer 7, 9, 17\n- variable\
+    \ 6, 20, 21, 22, 26, 28\n- vertical 17\n\n## ANSWERS\n\n**page 7** A scoreboard\
+    \ makes a game more competitive. Players will want to achieve as high a score\
+    \ as possible.\n\n**page 19** The statement uses AND logic: a move is only possible\
+    \ if the 7 key is pressed AND there is enough space.\n\n**page 21** The number\
+    \ ‘0’ is also counted in both cases.\n\n![](img/2028793d21e48318011e28fb666f71e7_35_0.png)\n\
+    \n## 精确飞行\n\n### 中级飞行训练\n\n您已经掌握了基本的飞行技能，现在是有目的地飞行的时候了。\n\n#### 您需要什么\n\n- 完成基础飞行训练\n\
+    - 获得合格的飞行执照\n\n## PROJECT CODE\n\n### CREATE COMPUTER GAMES WITH SCRATCH\n\n![](img/2028793d21e48318011e28fb666f71e7_39_0.png)\n\
+    \nDo you already know the basics of using Scratch? This book will help you take\
+    \ those skills and build on them to create action-packed computer games that you\
+    \ can even play with your friends! Using ready-made blocks of code, have a go\
+    \ at simple projects to develop your Scratch knowledge and have fun getting creative.\
+    \ You can use the code as it is, play around with it or use it as inspiration\
+    \ - it’s up to you!\n\nProject Code is a series of books that supports the National\
+    \ Curriculum in the important STEAM skill of computer coding.\n\n![](img/2028793d21e48318011e28fb666f71e7_39_1.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_39_2.png)\n"
+  mdcn: "\n![](img/2028793d21e48318011e28fb666f71e7_30_0.png)\n\n抱歉，你已经死了！如果青蛙移动到一个已经有洞或龙的格子，它就会死亡。游戏会运行一个名为“Die”的子程序，如下所示：\n\
+    \n```scratch\ndefine Die\nset GameOn to 0\nbroadcast Delete\nswitch backdrop to\
+    \ Die\nhide\n```\n\n![](img/2028793d21e48318011e28fb666f71e7_30_1.png)\n\n这个子程序将“GameOn”设为\
+    \ 0，意味着青蛙不再移动；它还会将背景切换为“die”画面，并隐藏青蛙。然后它会广播一条名为“Delete”的消息。\n\n### 收到消息\n\n消息是角色之间相互交流的另一种方式。如果你查看洞和龙的代码，就会发现它们在寻找这条“Delete”消息。收到消息后，克隆体会被删除。\n\
+    \n```scratch\nwhen I receive Delete\ndelete this clone\n```\n\n![](img/2028793d21e48318011e28fb666f71e7_30_2.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_30_3.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_30_4.png)\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_30_5.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_32_0.png)\n\
+    \n## 测试，测试\n\n当你创建一个游戏时，最好让很多人帮你测试。代码可能会变得复杂，你也可能会遇到漏洞。漏洞是指代码没有完全按你的预期运行。如果有什么不对，就调试它。仔细检查你的代码，看看哪里出了问题。注意你的修改不要引发另一个漏洞！即使最优秀的程序员也会在代码中遇到漏洞，所以如果你遇到了也不用担心。边测试边修复就好。\n\
+    \n## 试一试！\n\n开始创建你自己的游戏吧。最好先尝试简单的东西。一种方法是查看一些已经写好的代码，并做一些小改动。把《龙》游戏中的角色换掉怎么样？从“新建角色”菜单中选择你的新英雄。要赋予它青蛙的代码，请右键点击你的新角色，然后单击“保存到本地文件”。把它保存到容易找到的地方。\n\
+    \n现在点击青蛙角色，然后点击“造型”。点击打开文件夹的符号（左侧），指向新角色并导入它。删除青蛙造型，你就有了一个新英雄！现在点击左上角的蓝色“i”，然后输入你的新英雄的名字。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_32_1.png)\n\n现在运用你学到的技能，制作属于你自己的精彩游戏吧。玩得开心！\n\
+    \n## 更多信息\n\n### 书籍\n\nVorderman, Carol. *Scratch 游戏编程轻松学*（DK）DK Children，英国伦敦：2016。\n\
+    \nWainewright, Max. *代码一代：我是 Scratch 高级程序员* Wayland，英国伦敦：2017\n\n### 网站\n\n**MIT\
+    \ 的 Scratch 网站，你可以在这里免费下载该程序**  \nhttps://scratch.mit.edu/about/\n\n**“编程一小时”网站，其中有从初学者水平开始教授编程的教程**\
+    \  \nhttps://code.org/learn\n\n![](img/2028793d21e48318011e28fb666f71e7_34_0.png)\n\
+    \n### 参观\n\n位于诺丁汉的**国家电子游戏中心**收藏了数千款电子游戏，举办俱乐部活动，并鼓励亲身体验游戏制作。\n\n位于莱斯特的**复古计算机博物馆**满是老式游戏主机。它举办游戏和计算机活动，提供使用复古计算机设备的机会，并承办教育参观和导览。\n\
+    \n## 索引\n\n- 背景 5、17、27\n- 背景 5\n- 广播 25、27\n- 漏洞 29\n- 人物 4、14、25\n- 克隆体 24、27\n\
+    - 代码积木 6、7、8、9、10、11、14、16、18、20、21、22、24、26、27、28\n- 竞争性 6\n- 计算机 4、5、8、10、12、15、16、17、23\n\
+    - 坐标 20-21\n- 造型 25、29\n- 数据 6、16、20\n- 调试 29\n- 判断 14-15\n- 网格 14、17、20、21、22\n\
+    - 水平 17\n- 按键 12、13、14、15、16、17、18、19、28\n- 键盘 12、13、18、19\n- 逻辑 16、18-19\n- 逻辑，AND\
+    \ 19\n- 逻辑，布尔 19\n- 逻辑，OR 19\n- 循环 8-9、10、26\n- 运算符 16-17、18、19、23\n- 程序 4、8\n\
+    - 程序员 8、29\n- 重复 8、24\n- 回合（电脑游戏关卡）28\n- 得分 6-7、17、28\n- 声音 9、11、17、28\n- 声音库\
+    \ 9\n- 角色 5、6、7、8、10、11、24、25、27、29\n- 策略 12-13\n- 子程序 24、27\n- 计时器 7、9、17\n-\
+    \ 变量 6、20、21、22、26、28\n- 垂直 17\n\n## 答案\n\n**第7页** 记分板让游戏更具竞争性。玩家会想要获得尽可能高的分数。\n\
+    \n**第19页** 该语句使用 AND 逻辑：只有当按下 7 键并且有足够空间时，才能移动。\n\n**第21页** 数字“0”在两种情况下也都会被计入。\n\
+    \n![](img/2028793d21e48318011e28fb666f71e7_35_0.png)\n\n## 精确飞行\n\n### 中级飞行训练\n\
+    \n您已经掌握了基本的飞行技能，现在是有目的地飞行的时候了。\n\n#### 您需要什么\n\n- 完成基础飞行训练\n- 获得合格的飞行执照\n\n##\
+    \ 项目代码\n\n### 用 Scratch 制作电脑游戏\n\n![](img/2028793d21e48318011e28fb666f71e7_39_0.png)\n\
+    \n你已经了解使用 Scratch 的基础知识了吗？本书将帮助你在此基础上进一步提升，制作出动作十足、甚至能和朋友们一起玩的电脑游戏！通过使用现成的代码积木，尝试简单的项目来提升你的\
+    \ Scratch 知识，并在创作中享受乐趣。你可以直接使用这些代码、随意摆弄它们，或者把它们当作灵感——全由你决定！\n\n《项目代码》是一套丛书，支持国家课程中计算机编程这一重要的\
+    \ STEAM 技能。\n\n![](img/2028793d21e48318011e28fb666f71e7_39_1.png)\n\n![](img/2028793d21e48318011e28fb666f71e7_39_2.png)\n\
+    \n"
+  merge: 0

@@ -895,6 +895,7 @@
 +   [编码面试指南（第四版）：150 道编程面试题与答案](docs/cracking-the-coding-interview-fourth-edition-150-programming/README.md)
 +   [编译器构建指南](docs/crafting-a-compiler/README.md)
 +   [创建计算机游戏：设计并构建你自己的游戏](docs/create-computer-games-design-and-build-your-own-game/README.md)
++   [Scratch 电脑游戏创作（项目代码）](docs/create-computer-games-with-scratch-project-code/README.md)
 +   [在 Twine 中创建交互式故事](docs/create-interactive-stories-in-twine/README.md)
 +   [使用 Oracle Application Express 快速创建 Web 应用程序：开发专业 Web 应用程序实用指南](docs/create-rapid-web-applications-using-oracle-application-expre/README.md)
 +   [创建 iOS 应用：开发与设计（第二版）](docs/creating-ios-apps-develop-and-design-second-edition/README.md)
