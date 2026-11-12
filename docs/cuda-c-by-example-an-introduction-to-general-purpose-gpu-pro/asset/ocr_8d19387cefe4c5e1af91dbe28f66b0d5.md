@@ -1,0 +1,7 @@
+# 12.2.7 CUDA VISUAL PROFILER
+
+We often tout the CUDA Architecture as a wonderful foundation for high-performance computing applications. Unfortunately, the reality is that after ferreting out all the bugs from your applications, even the most well-meaning “high-performance computing” applications are more accurately referred to as simply “computing” applications. We have often been in the position where we wonder, “Why in the Sam Hill is my code performing so poorly?” In situations like this, it helps to be able to execute the kernels in question under the watchful gaze of a profiling tool. NVIDIA provides just such a tool, available as a separate download on the CUDA Zone website. Figure 12.1 shows the Visual Profiler being used to compare two implementations of a matrix transpose operation. Despite not looking at a line of code, it becomes quite easy to determine that both memory and instruction throughput of the `transpose ()` kernel outstrip that of the `transpose_naive ()` kernel. (But then again, it would be unfair to expect much more from a function with `naive` in the name.]
+
+![](bbox=[0.263, 0.455, 0.783, 0.84])
+
+Figure 12.1 The CUDA Visual Profiler being used to profile a matrix transpose application
