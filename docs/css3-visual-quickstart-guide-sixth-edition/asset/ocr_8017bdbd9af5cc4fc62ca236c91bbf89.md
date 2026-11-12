@@ -1,0 +1,41 @@
+# TABLE A.10 Box Properties continued
+
+| Name | Values | Applies To | Inherited | IE | FF | S | C | O |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| display | normal | All | No | ■ | ■ | ■ | ■ | ■ |
+| | block | | | ■ | ■ | ■ | ■ | ■ |
+| | inline | | | ■ | ■ | ■ | ■ | ■ |
+| | inline-block | | | ■ | ■ | ■ | ■ | ■ |
+| | run-in | | | ■ | ■ | ■ | ■ | ■ |
+| | table | | | ■ | ■ | ■ | ■ | ■ |
+| | table-cell | | | ■ | ■ | ■ | ■ | ■ |
+| | table-footer-group | | | ■ | ■ | ■ | ■ | ■ |
+| | table-header-group | | | ■ | ■ | ■ | ■ | ■ |
+| | table-row | | | ■ | ■ | ■ | ■ | ■ |
+| | table-row-group | | | ■ | ■ | ■ | ■ | ■ |
+| | inline-table | | | ■ | ■ | ■ | ■ | ■ |
+| | none | | | ■ | ■ | ■ | ■ | ■ |
+| | inherit | | | ■ | ■ | ■ | ■ | ■ |
+| float | none | All | No | ■ | ■ | ■ | ■ | ■ |
+| | left | | | ■ | ■ | ■ | ■ | ■ |
+| | right | | | ■ | ■ | ■ | ■ | ■ |
+| height | auto | Block | No | ■ | ■ | ■ | ■ | ■ |
+| | <length> | | | ■ | ■ | ■ | ■ | ■ |
+| | <percentage> | | | ■ | ■ | ■ | ■ | ■ |
+| | inherit | | | ■ | ■ | ■ | ■ | ■ |
+| margin | <length> | All | No | ■ | ■ | ■ | ■ | ■ |
+| | auto | | | ■ | ■ | ■ | ■ | ■ |
+| | <percentage> | | | ■ | ■ | ■ | ■ | ■ |
+| max/min-height | none | Block | No | ■ | ■ | ■ | ■ | ■ |
+| | <length> | | | ■ | ■ | ■ | ■ | ■ |
+| | <percentage> | | | ■ | ■ | ■ | ■ | ■ |
+| | inherit | | | ■ | ■ | ■ | ■ | ■ |
+| max/min-width | none | Block | No | ■ | ■ | ■ | ■ | ■ |
+| | <length> | | | ■ | ■ | ■ | ■ | ■ |
+| | <percentage> | | | ■ | ■ | ■ | ■ | ■ |
+| | inherit | | | ■ | ■ | ■ | ■ | ■ |
+| outline | <outline-width> | All | No | ■ | ■ | ■ | ■ | ■ |
+| | <outline-style> | | | ■ | ■ | ■ | ■ | ■ |
+| | <outline-color> | | | ■ | ■ | ■ | ■ | ■ |
+
+table continues on next page

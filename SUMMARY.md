@@ -918,6 +918,7 @@
 +   [Css3：入门指南](docs/css3-pocket-primer-computing/README.md)
 +   [CSS3：挑战极限](docs/css3-ppushing-the-limits/README.md)
 +   [CSS3：视觉快速启动指南，第5版](docs/css3-visual-quickstart-guide-5th-edition/README.md)
++   [CSS3 视觉快速启动指南 第六版](docs/css3-visual-quickstart-guide-sixth-edition/README.md)
 +   [CUDA 应用设计与开发指南](docs/cuda-application-design-and-development-c/README.md)
 +   [CUDA 示例：通用 GPU 编程入门指南 - 索引](docs/cuda-by-example-an-introduction-to-general-purpose-gpu-progr/README.md)
 +   [C++ CUDA 编程：从基础到精通](docs/cuda-programming-with-cfrom-basics-to-expert-proficiency/README.md)

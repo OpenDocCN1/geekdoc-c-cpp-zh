@@ -1,0 +1,325 @@
+
+## Index
+
+### Symbols
+- "..." (double quotation marks), declaration lists, 39
+- '...' (single quotation marks), 39
+- / (slash), comments, 67
+- & (ampersand), character entities, 129, 424
+- * (asterisk), universal selector, 61–63
+- { } curly brackets. See curly brackets { }, CSS rules
+
+### Numbers
+- 2D transformations, 312–315
+- 3D
+  - stacking objects in, 294–295
+  - text shadow effect, 168
+  - transformations, 316–319
+- 8-bit Unicode Transformation Format (UTF-8)
+  - character set, 126, 423–428
+
+### A
+- absolute positioning, 289–291
+- absolute values
+  - font size, 143–144
+  - transforming length value, 311
+  - vertical text alignment, 174–175
+- accessibility
+  - access keys for, 339
+  - color and, 201
+  - content in <body> for, 240
+  - CSS2 emphasis on, 7
+- accesskey attribute, 339
+- :active pseudo-class, 84–89
+- additive design
+  - large.css, 368–369
+  - with media queries, 370–373
+  - medium.css, 366–368
+  - print.css, 368–369
+  - responsive Web design, 353
+  - small.css, 366–367
+- adjacent sibling selector, 78–79
+- adjacent siblings, family tree, 70
+- Adobe's Kuler tool, online color scheme, 200
+- :after pseudo-element, 96, 98–99
+- Aggregate method, style sheets, 384
+- alpha values
+  - color transparency, 190
+  - element opacity, 301
+  - text color, 203
+- alphabetical order, selectors, 378
+- ampersand (&), character entities, 129, 424
+- analogous color-combination scheme, 198
+- angle quotation marks, 244
+- angle value
+  - 2D transforms, 314
+  - 3D transforms, 318–319
+  - linear gradients, 191–192
+  - transformations, 311
+- ANI images, 239
+- animations, in CSS3, 14
+- apps, mobile, 87
+- <article> tag, 28–29, 31
+- <aside> tag, 28–29, 31, 332
+- aspect-ratio media queries, 104–105
+- * (asterisk), universal selector, 61–63
+- attachment property, background image, 205–206, 208
+- attributes, assigning to styles, 2, 100–103
+- Audio and Video Timed media playback, 27
+- author styles, 118
+- auto value
+  - background-image, 205
+  - background-size, 209
+  - clip, 298–299
+  - column-count, 278–279
+  - cursor, 238
+  - margin, 265–267
+  - overflow, 260–261, 336
+  - overriding inheritance, 116
+  - position, 292–293
+  - table-layout, 228
+  - text-align, 171–172
+  - text-align-last, 172
+  - text-justify, 173
+  - width and height, 256
+  - z-index, 294–295
+- automatic method, table-layout, 228
+- Available symbol, browsers, 410
+
+### B
+- backface-visibility property, 3D transformations, 318
+- background-color, specifying gradient as, 195
+- background color
+  - choosing, 196–197
+  - differentiating hypertext from text, 340
+  - setting, 204–205
+  - specifying with background image, 211
+  - styling for print, 114
+  - text and, 203
+  - using CSS sprites, 344
+- background images
+  - best practices, 404
+  - border, 274–275
+  - differentiating hypertext from text, 340
+  - gradients (see multiple), 212–216
+  - repeating in CSS3, 14
+  - setting, 205–211
+  - using CSS sprites, 343–344
+- background properties
+  - adding multiple images and gradients, 212–216
+  - getting started, 184
+  - overview of, 183
+  - putting it all together, 217–218
+  - quick reference, 414
+  - setting background color, 204
+  - setting background images, 205–211
+  - setting text color, 202–203
+- background property, 204, 251
+- background shorthand property, 212–216
+- background-color property
+  - setting background color, 204
+  - text shadow effects, 168–170
+  - transitions, 321
+  - values, 212
+- background-image property
+  - setting background images, 206
+  - setting gradients in background, 195
+  - transitions, 321
+  - values, 212
+- backward compatibility, XHTML2 and, 25
+- :before pseudo-element, 96, 98–99
+- best practices
+  - CSS libraries and frameworks, 376
+  - minify CSS, 396–398
+  - overview of, 375
+  - readable style sheets, 376–380
+  - style sheet strategy, 381–385
+  - summary of, 399–407
+  - troubleshooting CSS code, 386–389
+  - validating CSS code, 395
+  - viewing CSS in Firebug, 390–392
+  - viewing CSS with Web Inspector, 390, 393–394
+- billing systems, Web font service bureaus, 143
+- blink value, obsolete for text, 180
+- block level elements, 22, 330
+- block value, display property, 252, 254
+- Blueprint CSS framework, 376
+- blur
+  - setting element's shadow, 302–303
+  - text drop shadow, 166
+  - text shadow effect, 168
+- <body> tag
+  - adding unique name or ID to each, 401
+  - choosing background color for body, 196
+  - HTML document setup, 30
+  - HTML document structure, 19
+  - keeping content within, 240
+  - margin setup, 266, 291
+  - specifying styles with @media, 112
+- bold, bolder, boldest, for text, 149
+- border property, 190, 251, 269–270
+- border-bottom property, 340, 359
+- border-collapse property, 230–231
+- border-image property, 274–275
+- border-radius properties, 272–273
+- borders
+  - background image for, 208, 211, 274–275
+  - collapsing between table cells, 230–231
+  - colors, 197
+  - CSS resets for, 359
+  - element edge within, 287
+  - of element's box, 251
+  - fixing box model for older versions of IE, 338
+  - multiple, 304
+  - new in CSS3, 14
+  - rounding corners, 272–273
+  - setting, 269–271
+  - setting how box sizes, 258
+  - setting image, 274–275
+  - setting padding, 276–277
+- border-spacing property, 229
+- border-style values, 270–271
+- border-width values, 270–271
+- both keyword, clear, 264
+- box properties
+  - background image, 274–275
+  - coming soon, 280
+  - controlling overflow content, 259–261
+  - displaying element, 252–254
+  - element's border, 269–271
+  - element's margin, 265–267
+  - element's outline, 268
+  - element's padding, 276–277
+  - element's width and height, 255–258
+  - floating elements in window, 262–264
+  - multicolumn text layout, 278–279
+  - overview of, 247–249
+  - putting it all together, 281–282
+  - quick reference, 417–419
+  - rounding border corners, 272–273
+  - setting how box sizes, 258
+  - understanding element's box, 250–251
+- box shadows, 302–304
+- boxes
+  - fixing for older IE versions, 333, 337–338
+  - new features in CSS3, 15
+  - understanding, 250–251
+- box-resize property, 251
+- box-shadow property, 190, 302–303
+- box-sizing property, 258, 338
+- break points, 352–353, 366–367
+- break tag clearfix, fixing float problem, 335
+- brightness, using color wheel to choose, 198
+- browser extensions, CSS3, 12–13
+- browsers
+  - default margin issues, 267
+  - default styles, 20, 358–362
+  - defining style sheets, 118
+  - displaying documents, 286
+  - evolution of CSS, 6–7
+  - how CSS works, 4–5
+  - inherited styles, 20
+  - mouse pointer appearance and, 238
+  - responsive Web design
+    - symbols indicating values available for use by.
+    - See quick reference
+  - teaching to count, 242–243
+  - using HTML5, 29
+  - Web font formats for, 134–135
+  - Web font support, 134
+  - z-index order determined by, 295
+- bullets, 223–227
+
+### C
+- cache, font file, 139
+- Canvas element, new in HTML5, 27
+- capitalize value, text-transform, 164–165
+- caption keyword, mimicking visitor's font style, 152
+- caption-side property, tables, 233–234
+- cascade order
+  - important declaration and, 117–118
+  - best practices, 403
+  - default styles, 119–121
+  - grouped selectors and, 66
+  - troubleshooting CSS code, 386
+  - typeface overrides and, 132
+- case, setting text, 164–165
+- characters
+  - encoding HTML, 129
+  - encoding HTML and UTF, 423–428
+  - specifying character set, 126
+- child elements
+  - box model, 250
+  - of elements box, 250
+  - family tree, 70
+  - floating elements in window, 263
+  - in nested tags, 250
+  - pseudo-classes for styling, 90–91
+  - setting position of, 293
+- child selectors, 76–77, 346
+- choosing shading shadows, 302
+- chords, 193
+- circle shape value, radial gradients, 193
+- class selectors
+  - CSS rules, 9
+  - defining, 53–56
+  - elements styled by, 36
+  - troubleshooting CSS code, 386
+- classes
+  - defining reusable, 53–56
+  - generic names for, 401
+  - mixing and matching, 402
+  - setting up float, 264
+- clear property, 264
+- clearfix class, 335
+- clip property
+  - setting background images, 205–206, 210
+  - text-overflow, 261
+  - visibility area, 298–299
+- clipping, defined, 288
+- color (#), CSS declarations, 39
+- color
+  - best practices, 404–405
+  - emotional associations of color, 196
+  - gradients. See gradients, color links, 86–87
+  - new in CSS3, 14
+  - for readable style sheets, 378–379
+  - shadows, 302
+  - text drop shadows, 166–167
+  - transitioning CSS properties, 320–324
+- color palette, 196, 200
+- color properties
+  - accessibility for visually impaired, 201
+  - choosing color palette, 196–201
+  - choosing color values, 185–190
+  - creating color gradients, 191–195
+  - getting started, 184
+  - other ways to add color, 190
+  - overview of, 183
+  - putting it all together, 217–218
+  - quick reference, 414
+- color property, 106, 202
+- Color Scheme Designer tool, 200
+- color stop, 192, 194
+- color values
+  - alpha values for transparency, 190
+  - backgrounds, 204
+  - borders, 270–271
+  - for color keywords, 185–187
+  - color wheel, 198
+  - HSL, 189
+  - multiple background images, 213
+  - overview of, 185
+  - RGB, 188–189
+  - shadows, 303
+  - text, 202
+- color wheel
+  - basics, 198–200
+  - online tool for advanced, 200
+- color-index property, media queries, 106
+- Colour Contrast Check tool, 203
+- ColrD: Palette Creator tool, 200
+- column-count property, 278
+- column-gap property, 279
+- column-rule property, 279
+- columns. See multicolumn layouts

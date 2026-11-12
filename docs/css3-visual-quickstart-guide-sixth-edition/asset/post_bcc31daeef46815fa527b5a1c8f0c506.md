@@ -1,0 +1,30 @@
+
+![](img/e1ed1e3c1873fa9fc855210fb83699d0_465_0.png)
+
+## WATCH READ CREATE
+
+Unlimited online access to all Peachpit, Adobe Press, Apple Training and New Riders videos and books, as well as content from other leading publishers including: O'Reilly Media, Focal Press, Sams, Que, Total Training, John Wiley & Sons, Course Technology PTR, Class on Demand, VTC and more.
+
+No time commitment or contract required! Sign up for one month or a year. All for $19.99 a month
+
+## SIGN UP TODAY
+
+peachpit.com/creativeedge
+
+## Learn CSS3— the quick and easy way!
+
+- Three ways to learn! Now you can curl up with the book, learn on the mobile device of your choice, or watch an expert guide you through the new features of CSS3. This book includes an eBook version and the CSS3 Video QuickStart for the same price!
+- Concise steps and explanations let you get up and running in no time.
+- Essential reference guide keeps you coming back again and again.
+- Whether you're a CSS newbie or an experienced veteran, this book will teach you all you need to know—from the nuts and bolts of designing for the Web to the latest advances in using CSS3 and responsive design, allowing you to create a site that works on computer screens, tablets, and other mobile devices.
+- Visit the companion website at www.jasonspeaking.com/css3vqs to download code samples so you can work along with the author.
+
+![](img/e1ed1e3c1873fa9fc855210fb83699d0_467_0.png)
+
+Jason Cranford Teague has been at the forefront of Web design for over 18 years as a designer, writer, and teacher. He practices his craft as the Director of User Experience for Forum One (forumone.com), an interactive agency with clients that include the Solar Energy Industries Association, The Aspen Institute, and the Half the Sky Foundation. He's written over a dozen books, hundreds of articles, and currently blogs for Wired's GeekDad (geekdad.com). See Jason's designs at jasonspeaking.com. Follow him on Twitter (@jasonspeaking) and Facebook (www.facebook.com/jasonspeaking).
+
+Peachpit Press www.peachpit.com CATEGORY: Web Design and Development / CSS3 BOOK LEVEL: Beginning / Intermediate AUTHOR PHOTO: Jamie Kowol COVER MADE: Micael Bican / shutterstock
+
+![](img/e1ed1e3c1873fa9fc855210fb83699d0_467_1.png)
+
+US $34.99 CAN $36.99 ISBN-13: 978-0-321-88893-8 ISBN-10: 0-321-88893-6 5 3499 > 9 780321 888938
