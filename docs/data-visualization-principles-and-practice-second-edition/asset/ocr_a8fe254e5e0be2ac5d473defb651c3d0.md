@@ -1,0 +1,7 @@
+![](bbox=[0.28, 0.12, 0.82, 0.53])
+
+# Figure 5.6. Color banding caused by a small number of colors in a look-up table.
+
+data ranges between -0.23 and 0.23. The dataset is visualized four times using the same rainbow look-up table, each time with fewer colors in the look-up table. As the number of different colors in the look-up table decreases, equal color bands become visible in both the image and the color legend. Mathematically, color banding produces artifacts identical to quantizing the scalar signal range. Indeed, when we use, for example, just 32 colors to visualize the dataset in Figure 5.6(b), the effect is practically the same as if we first quantized our scalar signal to 5 bits, and then visualized it via a colormap with a high number of colors.
+
+When we visualize a continuous dataset, color banding is usually not desirable, as it creates discrete visual artifacts in the rendered image that do not reflect any discreteness of the input data. As demonstrated in Figure 5.6, color banding can be avoided by increasing the number of colors in the colormap and ensuring there are no sharp perceptual transitions in the colormap. The more quickly the data varies spatially, the smoother the colormap has to be to avoid color banding. Typical scalar visualization applications would use between 64

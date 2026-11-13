@@ -1,0 +1,7 @@
+![](bbox=[0.08, 0.11, 0.85, 0.51])
+
+Figure 7.8. Different types of tensor glyphs. (a) Ellipsoids. (b) Cuboids. (c) Cylinders. (d) Superquadrics.
+
+Figure 7.9 demonstrates the use of various shapes to visualize a DT-MRI diffusion tensor dataset. The figure shows a zoomed-in detail of the corpus callosum structure (red glyphs). The glyphs are colored by direction, similar to the hedgehog visualization used in Figure 7.7. The color saturation is modulated using the fractional anisotropy. Saturated glyphs indicate regions of high anisotropy, whereas gray ones indicate low-anisotropy regions. In contrast to the hedgehog visualization in the previous section, where seeds were distributed over a 2D slice, the tensor glyphs are here seeded over a 3D region. As we can see from this figure, smooth glyph shapes like those provided by the ellipsoids provide a less-distracting picture than shapes with sharp edges, such as the cuboids and cylinders.
+
+The cuboid, ellipsoid, and cylinder glyphs each have their own advantages and disadvantages. Cuboids are very good at clearly indicating the eigenvector directions with their facets, but thereby also fail to convey the directional ambiguity for eigenvectors corresponding to equal eigenvalues. Cylinders clearly convey the major eigenvector by their axis, but will brusquely rotate their shape

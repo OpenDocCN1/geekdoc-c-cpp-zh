@@ -1,0 +1,9 @@
+![](bbox=[0.08, 0.1, 0.76, 0.4])
+
+Figure 11.16. The call graphs of two programs visualized together with the programs' hierarchical layering. The layout used suggests that the left system is more modular than the right system.
+
+problem of understanding complex call graphs. As shown in Figure 11.14, it is useful to visualize the relation in a software system of the function calls to the system layering. The layering describes how source code elements are contained within each other in a hierarchical fashion. A typical layering in object-oriented systems has three levels: methods (functions), classes, and files. We would like to extend the visualization from Figure 11.14 to show call relations between all layers.
+
+We have now a graph with three types of nodes, i.e., methods, classes, and files, and two types of relations, i.e., call and containment. The proposed method, described by Holten [Holten 06], works as illustrated in Figure 11.16. First, we lay out all the graph nodes in three concentric rings. The inner ring shows the functions, the middle ring the classes, and the outer ring the files. Every node is shown as a ring sector. The relative positioning of the sectors along the three rings indicates containment. For example, in the lower-left area of Figure 11.16(a), the green-colored methods are all contained in a single light blue-colored class, which is in turn contained in the yellow-colored file. This layout is called an icicle plot [Kruskal and Landwehr 83].
+
+After the nodes are laid out, the layout of the call relations proceeds. Every call edge is laid out using a spline curve whose start and end points are the caller

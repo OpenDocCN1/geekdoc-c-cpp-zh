@@ -968,6 +968,7 @@
 +   [C 编程 数据结构](docs/data-structures-with-c-programming/README.md)
 +   [C 数据结构 (Sie) (Sos)](docs/data-structures-with-c-sie-sos/README.md)
 +   [C++ 数据类型、变量、运算符与控制结构：C++ 编程入门指南](docs/data-types-and-variables-operators-and-control-structures-in/README.md)
++   [数据可视化：原理与实践（第2版）](docs/data-visualization-principles-and-practice-second-edition/README.md)
 +   [David Chisnall Objective C 常用句手册 Pearson 2011](docs/david-chisnall-objective-c-phrasebook-pearson-2011/README.md)
 +   [极简 Python：急躁程序员的地道 Python 编程](docs/dead-simple-python-idiomatic-python-for-the-impatient-progra/README.md)
 +   [C++ 面向对象编程解码](docs/deciphering-object-oriented-programming-with-c/README.md)

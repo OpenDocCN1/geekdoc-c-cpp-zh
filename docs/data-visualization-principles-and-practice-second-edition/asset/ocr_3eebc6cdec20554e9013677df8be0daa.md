@@ -1,0 +1,7 @@
+![](bbox=[0.1, 0.12, 0.5, 0.49])
+
+![](bbox=[0.53, 0.12, 0.93, 0.49])
+
+Figure 10.9. (a) Volume rendering of head dataset. (b) The transfer function used emphasizes skin, soft bone, and hard bone.
+
+Integration issues. A second choice regards the evaluation of the rendering integral given by Equation (10.11). An accurate, but slower, method is to evaluate the integral by taking samples along the ray in front-to-back order (see Section 10.3). A different approach approximates the rendering integral using back-to-front blending of textured polygons in graphics hardware (see Section 10.4). In both cases, the choice of the volume-sampling strategy is essential to obtaining high-quality renderings. Finally, let us note that several of the previously described ray functions can be seen as particular cases of the composite ray function, although this does not mean they are implemented in practice using the composite function. For example, the isosurface ray function would use a zero attenuation \(\tau = 0\) everywhere and a zero emission \(c(\tau) = 0\) except for the isovalue \(t_0\). This is how the isosurface in Figures 10.7(d–f) are computed. The result is clearly very similar to the geometric isosurface computed by marching cubes (see Figure 10.7(a)) and the one computed using the isosurface ray function (see Figure 10.7(b)).

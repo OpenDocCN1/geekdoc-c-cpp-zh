@@ -1,0 +1,13 @@
+point \( p_i \) as vertex. In other words, vertex data is the area-weighted average of the cell data in the cells that use a given vertex. Equation (3.42) is identical to Equation (2.8) used in Section 2.2 to compute vertex normals for Gourand shading from the polygon normals.
+
+Vertex to cell resampling. Using similar reasoning, we can compute the conversion formula from vertex attributes (\( f_i \)) to cell attributes (\( f_i \)) as being
+
+```
+\( f_i = \frac{\sum_{P_j \in \text{points}(c_i)} f_j^{P_j}}{C}, \quad (3.43) \)
+```
+
+where points(\( c_i \)) denotes all points \( p_j \) that are vertices of cell \( c_i \) and \( C = |\text{points}(c_i)|\) is the number of vertices of cell \( c_i \). In other words, cell attributes are the average of the cell's vertex attributes.
+
+In conclusion, we can always convert between cell attributes and vertex attributes. However, this does not mean that a dataset with cell attributes is identical to one with vertex attributes. As explained previously, cell attributes imply using piecewise constant interpolation, whereas vertex attributes imply a higher-order interpolation, such as linear. Resampling data from, e.g., cells to vertices increases the assumed continuity. If our original sampled data were indeed continuous of that order, no problem appears. However, if the original data contained, e.g., zero-order discontinuities, such as jumps or holes, resampling it to a higher-continuity grid also throws away discontinuities which might have been a feature of the data and not a sampling artifact. An example of this delicate problem is given in Section 9.4.7. In contrast, resampling from a higher continuity (e.g., vertex data) to a lower continuity (e.g., cell data) has fewer side effects—overall, the smoothness of the data decreases globally.
+
+Subsampling and supersampling. Data resampling is not limited to converting between cell and vertex samples. Two other frequently used resampling operations are subsampling and supersampling. Subsampling is a resampling operation that reduces the number of sample points. Supersampling is useful when we are interested in optimizing the processing speed and memory demands of a visualization application by working with smaller datasets. In most cases, the subsampled dataset uses the same basis functions as the original dataset and its points are actually a subset of the original dataset points. However, this is not mandatory. After eliminating a certain number of sample points, subsampling operations can choose to redistribute the remaining points in order to obtain a better approximation of the original data in terms of the integral criterion defined earlier. Subsampling implementations can take advantage of the dataset

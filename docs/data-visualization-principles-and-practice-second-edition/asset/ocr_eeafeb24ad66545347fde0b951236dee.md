@@ -1,0 +1,9 @@
+![](bbox=[0.05, 0.12, 0.95, 0.25])
+
+# Figure 3.7. Converting quadratic cells to linear cells.
+
+in 2D, and cubes and voxels in 3D. Such cells have similar (linear) interpolation functions and properties to the ones described here. Squares and pixels are essentially identical to our rectangle cell, except that they have equal-size edges, and pixels are usually thought to be aligned with the coordinate axes. Triangle strips [Shreiner et al. 03, Schroeder et al. 06] are not a different type of cell from an interpolation point of view, but just a more memory-efficient way to store sequences of triangle cells that share edges, so they can be seen as an implementation-level optimization. Cubes and voxels play the role in 3D that squares and pixels respectively have in 2D.
+
+Finally, let us mention that the piecewise constant and linear basis functions, which we have described so far, are not the only ones used in practice. Some applications use _quadratic_ cells, which are called so because they can support quadratic basis functions.3 Quadratic cells are the equivalents of the cells presented here, but also contain the midpoints of cell edges—shown by the red points in Figure 3.7 for several cell types. Such cells can support quadratic basis functions and provide piecewise quadratic (C2), hence smoother, reconstruction of data, and are often used in numerical applications such as finite element methods [Reddy 93].4 Figure 3.7 (left) shows the quadratic interpolation f_quad along a one-dimensional quadratic cell, which yields a parabola, and the equivalent linear interpolation f_lin along the corresponding two linear cells obtained from splitting the quadratic cell.
+
+However, few visualization applications support such cells natively. In practice, visualization applications usually convert datasets that contain quadratic cells to the cell types we described previously by splitting the quadratic cells using

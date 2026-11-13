@@ -1,0 +1,13 @@
+# 3.3 Discrete Datasets
+
+In the previous sections, we have described how to reconstruct continuous functions from sampled data provided at the vertices of the cells of a given grid. In brief, we can say that, given
+
++   - a grid in terms of a set of cells defined by a set of sample points,
++   - some sampled values at the cell centers or cell vertices,
++   - a set of basis functions,
+
+we can define a piecewise continuous reconstruction of the sampled signal on this grid, and work with it (e.g., compute its derivatives or draw its graph) in similar ways to what we would have done with the continuous signal the samples came from.
+
+In Section 3.1, we defined a continuous dataset for a function f : D → C as the triplet D = (D, C, f). In the discrete case, we replaced the function domain D by the sampling domain D by the sampling grid ({pᵢ}, {cᵢ}), and the continuous function f by its piecewise k-order continuous reconstruction f̃ computed using the grid, the sample values fᵢ, and a set of basis functions {Φᵢᵏ} (Equation (3.2)). Hence, the discrete (sampled) dataset counterpart of (D, C, f) is the tuple Dₛ = ({pᵢ}, {cᵢ}, {fᵢ}, {Φᵢᵏ}): grid points, grid cells, sample values, and reference basis functions. Visualization deals in the overwhelming majority of situations with discrete data, so discrete datasets are a fundamental instrument, both in theory and practice. When talking about datasets in the remainder of this book, we shall always refer to discrete datasets, as defined here.
+
+In the previous sections, we have shown how to replace a continuous dataset D_c with its discrete counterpart Dₛ. We have seen that this replacement means, from a mathematical point, working with a piecewise k-order continuous function f̃ instead of a potentially higher-order continuous function f. In this section, we turn our attention to the implementation aspects of discrete datasets. We recall the dataset requirements introduced in Section 3.1: A dataset should be accurate, minimal, generic, efficient, and simple. For a discrete dataset, these requirements translate to constraints on the number and position of sample points pᵢ, shape of cells cᵢ, type of reference basis functions Φᵢ, and number and type of sample values fᵢ. These constraints determine specific implementation solutions, as follows. The cell shapes, together with the basis functions, determine different cell types. These are described next in Section 3.4. The number and position of sample points determine different grid types. These are described in

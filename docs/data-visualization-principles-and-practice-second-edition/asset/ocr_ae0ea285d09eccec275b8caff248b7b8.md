@@ -1,0 +1,15 @@
+Curves described by Equation 9.22 are also called *implicit*, or *geometric*, *active contours*—in contrast to the parametric, or explicit, active contours described earlier. Implicit active contours have several advantages: They can describe complex contour shapes, including contours consisting of multiple separate connected components. Topology changes during evolution, such as the appearance, disappearance, merging, or splitting of contours are captured transparently. There is no need for explicit contour resampling, as the contours are discretized implicitly by the spatial sampling of \(\phi\) (usually, done on a uniform grid). However, solving Equation 9.22 robustly and efficiently poses several subtle challenges, such as numerical stability and ensuring that \(\phi\) is always negative outside, respectively positive, inside its evolving contours. Solving such challenges is an advanced topic, for which we refer to [Li et al. 10].
+
+Figure 9.9(g) shows the result of a level-set segmentation of our skin image, using the method described in [Li et al. 10].\(^4\) The resulting contour has a similar level-of-detail to the ones created by mean shift and the IFT. Similar to the GVF snakes, the method can be sensitive to local image edges such as those created by the occluding hairs.
+
+Level set methods are very powerful image processing tools, used for more applications than segmentation. Later in this chapter we present additional level set applications for the efficient computation of distance transforms (Section 9.4.5) and shape skeletons (Section 9.4.6).
+
+Threshold sets. The final segmentation method we present uses *threshold sets*. Given a grayscale image \(I : \mathbb{R}^2 \rightarrow \mathbb{R}_+\), and a gray value \(\tau > 0\), we define its threshold set
+
+```
+\(T_I(\tau) = \{(x, y) \in \mathbb{R}^2 | I(x, y) \ge \tau\}.\) (9.23)
+```
+
+That is, the threshold set \(T_I(\tau)\) contains all image pixels of grayvalue equal or larger to \(\tau\). By construction, threshold sets for higher \(\tau\) values thus include threshold sets for lower \(\tau\) values. Given an 8-bit grayscale image \(I\), the threshold sets \(\{T_I(0), \dots, T_I(255)\}\) represent a lossless encoding of the entire image. Indeed, we can reconstruct \(I\) by drawing all threshold sets \(T_I(\tau)\), in increasing order of \(\tau\), and coloring pixels in each threshold set by its gray value \(\tau\).
+
+We can now model segmentation as a lossy image encoding problem. Given a threshold set decomposition of an image \(I\), we first define the relevance of a threshold set \(T_I(\tau)\) as the difference \(\|I - \hat{I}\|\) between \(I\) and the image \(\hat{I}\) reconstructed using all threshold sets except \(T_I(\tau)\). By sorting threshold sets in decreasing relevance order, we next select the most relevant ones. These will

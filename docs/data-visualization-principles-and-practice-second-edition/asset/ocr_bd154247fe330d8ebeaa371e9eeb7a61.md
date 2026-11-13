@@ -1,0 +1,9 @@
+As visible, the method can capture surfaces with complex topologies, such as the outer and inner (cavity) surfaces shown by our model. Figure 8.6(b) shows the reconstructed outer surface for the same input cloud. Each color indicates a different surface component found by the method. As visible, noisy points are excluded from the reconstruction. Figure 8.6(c) shows the reconstruction of a medial point cloud, or surface skeleton, of a shoulder-blade bone, also called a scapula (see Section 9.4.5 for a detailed discussion of surface skeletons). As in the first example, noisy outliers are excluded from the reconstruction, and several smooth surface components are found. As such, this local triangulation method can serve not just for surface reconstruction, but also for point cloud segmentation and noisy outlier removal tasks.
+
+Alpha shapes. Another surface reconstruction method for unoriented point sets is provided by *alpha shapes* [Edelsbrunner et al. 83]. The intuition behind alpha shapes can be best described by Edelsbrunner's carving analogy: Assume that the 2D or 3D space containing our point set $P$ is filled up with ice cream, and we have a spherical spoon of radius $\alpha$, we first curve out all ice cream we can without removing, or touching, any point. The resulting shape will have a boundary composed of spherical pieces (in 3D) or circle arcs (in 2D). The alpha shape corresponding to $P$ is obtained by straightening out these curved parts into line segments (in 2D), respectively triangles (in 3D).
+
+Alpha shapes offer a generalization of the notion of *hull*, or envelope, of a set of points representing a branching structure. Figure 8.7 illustrates this for a 2D point set $P$. Here, points are rendered in yellow, and the circles corresponding
+
+![](bbox=[0.078, 0.625, 0.796, 0.795])
+
+Figure 8.7. Alpha shapes of a 2D point cloud.

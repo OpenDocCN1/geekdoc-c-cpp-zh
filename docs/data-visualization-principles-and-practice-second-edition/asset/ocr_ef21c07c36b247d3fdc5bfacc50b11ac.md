@@ -1,0 +1,13 @@
+zooming, panning, and brushing to reveal data values. The provided visualizations are kept on purpose simpler than the equivalent ones offered by toolkits such as Tulip or Prefuse. However, their built-in default values and presets make them suitable for visualizing a wide range of datasets. Also, the data model is kept very simple: All datasets are basically text documents or two-dimensional data tables. While this offers arguably less freedom to model complex relational datasets, it allows for a very short, easy-to-learn, and error-tolerant path from generating the datasets to creating the actual visualizations.
+
+Utilization: In contrast to most other toolkits, that run as local applications on the user’s machine, ManyEyes offers a web-based model: Users format their datasets in a simple, typically text-based tabular model, and upload the resulting data file to the ManyEyes site. Next, visualizations can be created online from the uploaded dataset, both by the user who uploaded data, but also by other users. This model allows for an easy sharing of datasets, constructed visualizations, and insights generated from these visualizations—hence the application’s name. The main advantage of this model is the ease by which any user can create a (simple) visualization from tabular data, with zero software installation requirements, and with all the software development and maintenance effort located at the site’s provider. Disadvantages involve the need to format the data in the template demanded by ManyEyes; having to share potentially confidential data; and the dependence of a third-party service “in the cloud.”
+
+# Treemap
+
++   Type: Turnkey system
+
++   Availability: Open source for nonprofit uses (written in Java)
+
++   Address: http://www.cs.umd.edu/hcil/treemap/
+
+Description: Treemap is a customizable turnkey system for the visualization of large multivariate datasets using the treemap layout. Treemap implements several layout algorithms (slice and dice, squarified, and strip) and allows one to parameterize several elements of the mapping process, such as size, color, borders, and labels of the treemap nodes by the data attributes of the underlying tree. Several interactive navigation and filtering mechanisms support a wide range of structure and attribute-based user queries. Treemap also allows one to construct tree hierarchies from data dynamically using a mechanism called flexible hierarchies. Given a set of multivariate data points, trees can be built level-by-level by successively grouping the points by different user-defined criteria on the data attributes.

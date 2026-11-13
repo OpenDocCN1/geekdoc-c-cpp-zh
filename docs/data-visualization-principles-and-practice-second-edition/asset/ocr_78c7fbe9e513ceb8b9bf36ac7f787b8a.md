@@ -1,0 +1,14 @@
+izing large datasets with parallel coordinates [Fua et al. 99]. Various brushing mechanisms can be added to help selecting more complex patterns than possible by simple axis range selection [Hauser et al. 02]. Parallel coordinate plots can be integrated with other techniques, such as scatter plots and statistical analysis tools, to facilitate the combination of different exploration tasks [Ward 94]. An early survey on this topic is given in [Inselberg 98]. For more details, we refer the reader to a comprehensive recent book on parallel coordinate plot variations and their multiple applications [Inselberg 09].
+
+However useful, parallel coordinate plots also have their limitations. For large, complex datasets with many attributes, they can produce cluttered images that are hard to understand. The ordering of axes is also very important. Correlations are easier to find between axes that are (direct) neighbors than between axes placed far away from each other. In practice, this means a fair amount of interaction such as brushing and axis swapping and reordering is needed to understand complex datasets. Finally, parallel coordinates are abstract and novel for many users and may require a certain amount of training.
+
+# 11.5.2 Dimensionality Reduction
+
+Consider again our multivariate dataset consisting of a set of data points \(D = \{p_i\}_{1<i<N}\), where every points \(p_i = (a_i^1, \dots, a_i^K)\) lives in some \(K\)-dimensional space \(A^K\). One task that frequently occurs in practice is to visualize the *structure* of the dataset \(D\). Subtasks thereof are finding points which have similar attribute values; finding groups, or clusters, of similar points; finding which points belong to which group; and assigning a meaning to a point group.
+
+To do this, we proceed by construction a so-called projection function
+\(P : A^K \rightarrow \mathbb{R}^k\) (11.8)
+
+Instead of visualizing the original dataset \(D \subset A^K\), we now map each point \(p_i \in D\) to its projection \(P(p_i) \in \mathbb{R}^k\), where we typically have \(k \in \{2, 3\}\). In other words, we replace the (complex) problem of visualizing a \(K\)-dimensional point cloud by the (simpler) problem of visualizing a two- or three-dimensional point cloud. The latter can be achieved, for instance, by using a 2D or 3D scatter plot, which is straightforward to construct. For such a point cloud, graph slatting can be used (see Section 11.4.2). Graph slatting is especially good if we are interested to find compact groups of points.
+
+However, to be able to use the resulting low-dimensional point cloud to complete the tasks listed earlier in this section, the relative positions and distances of the projected points should, in some way, reflect the corresponding distances and

@@ -1,0 +1,13 @@
+# 3.6.1 Scalar Attributes
+
+Scalar attributes are c = 1 dimensional. These are represented by plain real numbers. Scalar attributes can encode various physical quantities, such as temperature, concentration, pressure, or density, or geometrical measures, such as length or height. The latter is the case for our function f : R^2 -> R visualized in our elevation plot example.
+
+# 3.6.2 Vector Attributes
+
+Vector attributes are usually c = 2 or c = 3 dimensional. Vector attributes can encode position, direction, force, or gradients of scalar functions. Usually, vectors have an orientation and a magnitude, the latter also called length or norm. If only the magnitude is relevant then we actually have a scalar, rather than a vector, attribute. If only the orientation is relevant, we talk about normalized vectors, i.e., vectors of unit length. When such vectors represent the normalized gradient of an implicit function whose graph is a 2D curve or 3D surface, these unit vectors are called also normals, as described in Chapter 2. Some authors regard vectors and normals as two different attribute types. However, in practice there is no structural difference between the two in terms of data representation. In particular, in most visualization software, normals are also stored using the same number of components as vectors, i.e., c = 2 for 2D curve normals and c = 3 for 3D surface normals, as this considerably simplifies the data storage implementation.
+
+# 3.6.3 Color Attributes
+
+Color attributes are usually c = 3 dimensional and represent the displayable colors on a computer screen. The three components of a color attribute can have different meanings, depending on the color system in use. One of the most-used color systems is the well-known RGB system, where the three color components specify the amount, or intensity, of red, green, and blue that a given color contains. Usually, these components range from 0 (no amount of a given component) to 1 (component is at full brightness). The RGB system is an additive system. That is, every color is represented as a mix of “pure” red, green, and blue colors in different amounts. Equal amounts of the three colors determine gray shades, whereas other combinations determine various hues.
+
+RGB space. The RGB color space is usually represented as a color cube with one corner at the origin, the diagonally opposite corner at location (1, 1, 1), and the edges aligned with the R, G, and B axes (see Figure 3.13(a)). Every point inside

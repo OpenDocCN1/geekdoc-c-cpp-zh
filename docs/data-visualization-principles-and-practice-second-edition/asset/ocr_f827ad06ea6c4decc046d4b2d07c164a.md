@@ -1,0 +1,9 @@
+![](bbox=[0.05, 0.11, 0.95, 0.41])
+
+Figure 11.28. Parallel coordinate plot showing six attributes (miles-per-gallon, cylinders, horsepower, weight, acceleration, and manufacturing year) for about 400 cars. A selected car in the image as a red polyline with the individual attribute values displayed as labels.
+
+Figure 11.28 illustrates the parallel plot technique for the car dataset.14 There are six axes, corresponding to the first six data attributes. Each axis is scaled individually to show the full range of its attribute value. Although the different axes have different ranges, this does not reduce the usefulness of the parallel coordinate plot, which shows correlations of attribute value distributions rather than the absolute values. Each polyline represents a different car amount of the several hundred in the dataset. The polylines are drawn with a certain amount of transparency using additive blending (see Section 2.5). In this way, areas covered by many lines, i.e., where the data are correlated, appear darker on the plot. The red line and associated labels show the details of the car record under the mouse pointer: a six-cylinder vehicle weighing 3410 lbs manufactured in 1978. The "origin" attribute is shown only for the selected data point, and not for all data points on a separate axis, as it is of the ordinal type. For the selected car in the image, its value is "Japan."
+
+This visualization already shows a number of facts. Clusters of lines that run parallel indicate similar data points. Lines widely spread apart along an axis
+
+14 The visualizations in this section are created with the parvis open-source software. The software and example dataset are available from [Lederman 12].

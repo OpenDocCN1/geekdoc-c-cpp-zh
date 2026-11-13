@@ -1,0 +1,9 @@
+# Chapter 6
+
+# Vector Visualization
+
+VECTOR data is frequently encountered, and as important, as scalar data. Strictly put, a vector is a tuple of n scalar components v = (v1, ..., vn), vi ∈ R. An n-dimensional vector describes, for example, a position, direction, rate of change, or force in Rn. However, the majority of visualization applications deal with data that describes physical phenomena in two- or three-dimensional space. As a consequence, most visualization software defines all vectors to have three components. 2D vectors are modeled as 3D vectors with the third (z) component equal to null. Although one could provide separate implementation-level support for 2D vectors, this would massively complicate the structure of visualization software, lead to code replication, and ultimately reduce performance.
+
+Recalling from Section 3.6, vector fields are functions f : D → R3, where D is usually a subset of R2 or R3. Vector datasets are samplings of vector fields over discrete spatial domains. In this chapter, we shall discuss a number of popular visualization methods for vector datasets: vector glyphs, vector color coding, displacement plots, stream objects, texture-based vector visualization, and the simplified representation of vector fields.
+
+A very important application domain for vector visualization is computational fluid dynamics (CFD). CFD simulations are able to predict the time-dependent behavior of compressible 3D fluid flows consisting of several potentially interacting substances, or species, having different densities and pressures, over complex spatial geometries. The solution of a CFD simulation consists of several datasets, each for a different time step. For each time step, several attributes are computed and stored into the solution dataset, such as velocity, pressure, density, flow divergence, and vorticity. Since divergence and vorticity are fundamental

@@ -1,0 +1,13 @@
+direction of the surface edges and weak across the edges. Anisotropic techniques that perform this type of smoothing are an advanced subject and are described further in specialized literature [Perona and Malik 90, Weickert 98, Bajaj and Xu 03].
+
+Grid-smoothing and grid-refinement methods can be effectively combined to produce high-quality grids. A simple way to do this is to first refine the grid, in order to create enough sample points so that the smoothing can act on a small spatial scale, and next perform a number of smoothing steps until the desired surface quality is reached. More efficient implementations can alternate smoothing and refinement steps and also introduce grid-decimation steps, all in order to redistribute the points to the optimal locations on the surface in order to achieve the desired quality.
+
+Grid processing is an extensive topic of research. Polygon mesh processing, a key ingredient to all domain processing algorithms presented in this chapter, is covered in great detail by Botsch et al. in [Botsch et al. 10]. A more general resource for the fundamental computational geometry algorithms that underlie all the domain processing algorithms outlined above is the book of Overmars et al. [de Berg et al. 00].
+
+# 8.5 Conclusion
+
+Grids are a fundamental element of visualization datasets. They provide a discrete representation of a compact spatial domain on which the signals to be visualized are sampled. Grids can vary in several respects: the type of cells, the regularity of the discretization, and the types of basis functions used to perform interpolation on the grid.
+
+In this chapter, we have presented a number of fundamental methods for grid manipulation and processing. Since grids are used in visualization as a representation of the underlying domain of a signal, these methods are referred to as domain-modeling techniques. Cutting techniques extract a lower-dimensional domain from a higher-dimensional one, such as when slicing a volume with a surface, or a subdomain with the same dimensionality, such as in the case of bricking. Selection techniques extract a set of cells or points from a dataset, based on data properties. These techniques are useful when we are interested in extracting a specific subset of interest from a larger dataset.
+
+Grids can be constructed from scattered points using triangulation techniques. An alternative is to use gridless techniques, e.g., using radial basis functions. Triangulation has the advantage of producing a cell-based grid, which can

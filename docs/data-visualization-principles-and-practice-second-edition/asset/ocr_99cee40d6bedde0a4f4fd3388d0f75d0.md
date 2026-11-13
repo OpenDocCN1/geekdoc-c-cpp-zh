@@ -1,0 +1,13 @@
+In OpenGL, specifying the eye, center, and up vector values for a camera can be done using the gluLookAt function²
+
+```
+glMatrixMode (GL_MODELVIEW);
+glLoadIdentity ();
+gluLookAt (ex, ey, ez, cx, cy, cz, ux, uy, uz)
+```
+
+The first two function calls (glMatrixMode and glLoadIdentity) ensure that the subsequent gluLookAt call will modify the extrinsic camera parameters of OpenGL, rather than intrinsic camera parameters, which are discussed in the next section. Extrinsic camera parameters are also called modelview parameters in OpenGL, hence the name GL_MODELVIEW. The up vector u should not be parallel to the viewing direction c — e, otherwise we cannot unambiguously define the view plane. A simple but effective default setting is to have c equal to the center of the viewed scene, i.e., the average of all vertex coordinates; u equal to the y-axis of the 3D space, i.e., u = (0, 1, 0); and e at a distance from c slightly larger than the size of the scene’s bounding-box. All three vectors e, c, and u are given in the same coordinate system as the 3D scene to view. These values are also known as the extrinsic camera parameters, since they do not specify how the camera is actually constructed, but only its placement in the 3D space.
+
+Projection. After placing the camera in 3D space, we need to specify how the camera itself operates, or its intrinsic parameters. Following the analogy with a physical photo camera, which captures perspective projections of a 3D scene on a planar surface, intrinsic parameters give the focal length, field-of-view, and aspect ratio of the view area where we wish to capture the image (Figure 2.10). This view area is a rectangle in the view plane whose center is on the view direction line c — e and whose axes are parallel to u, respectively (c — e) × u. The focal length znear gives the distance, along the view direction, from the eye position e to the view plane. No objects closer to e than znear are “seen” by the camera. Hence, the view plane is also called the near clipping plane, as it clips, or removes from viewing, objects in front of it. The field-of-view fov is the angle formed by the top, respective bottom, borders of the view area with the eye position e. The aspect ratio aspect gives the ratio of the horizontal to the vertical size of the view area. Finally, the value zfar gives the distance, along the view direction, from the eye position e to a plane parallel to, and behind, the
+
+2Strictly speaking, gluLookAt and all other functions discussed next that start with glu are part of the Graphics Library Utility (GLU) library and OpenGL. As virtually any system which offers OpenGL also offers GLU, we do not make this distinction next.

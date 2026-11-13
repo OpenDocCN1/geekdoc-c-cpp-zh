@@ -1,0 +1,7 @@
+![](bbox=[0.23, 0.12, 0.92, 0.46])
+
+Figure 5.2. Scalar visualization with various colormaps.
+
+to display does not form a *compact* domain (such as the 2D slice in Figure 5.2). Examples of such datasets are scattered 2D point clouds, parallel coordinate plots, or node-link graph drawings, such as the ones shown in Figures 11.32, 11.29, and 11.23 respectively for information visualization applications (Chapter 11). In such cases, we cannot use the grayscale colormap, or for that matter any colormap which includes very bright colors, since such colormaps will make data points appear too similar to the background color, and thus make them potentially invisible.
+
+*Two-hue*: Figure 5.2(c) shows a *two-hue* colormap. The colormap entries are obtained by linearly interpolating between two user-selected colors, blue and yellow in our case. The two-hue colormap can be seen as a generalization of the grayscale colormap, where we interpolate between two colors, rather than between black and white. If the two colors used for interpolation are perceptually quite different (such as in our case, where they differ both in hue but also in perceived luminance), the resulting colormap allows an easy color ordering, and also produces a perceptually more linear result than the rainbow colormap. Also, in case none of the two colors that define this colormap is too bright, the result is suitable to be used for non-compact data displayed on a white background.

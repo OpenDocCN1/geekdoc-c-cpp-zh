@@ -1,0 +1,9 @@
+![](bbox=[0.18, 0.11, 0.66, 0.43])
+
+Figure 6.20. Stream tubes traced from a seed area placed at the flow inlet.
+
+3×3×3 undersampling rate but now trace streamlines until a maximal time of 100 is reached (see Figure 6.19(d)). In this dataset, the velocity magnitude ranges between 0 and 2. However, as we see in Figure 6.19(d), we now obtain many very short streamlines in the low-speed flow areas. This lets us better visualize the flow’s high-speed inner core. This image can be thought as generally the vector glyph visualization in Figure 6.8(c): The vector glyphs are actually very short streamlines computed with a single integration step.
+
+Being 3D objects, stream tubes have the extra advantage of providing some shading and occlusion cues, which allow us to better determine their actual relative position and orientation in 3D vector visualizations, as compared to plain streamlines drawn as 1D curves. However, as it is already visible from Figure 6.19, stream tubes are thicker, so they take more screen space, which increases cluttering.
+
+In case we are not interested in a dense coverage of the complete domain with stream objects, choosing the seed area must be done with the same level of care for 3D datasets as for 2D datasets. Figure 6.20 illustrates this for the already familiar 3D flow dataset. Here, we densely sample a circular area close to the flow inlet with 200 stream tubes. The visualization clearly shows how the flow bounces against the invisible obstacle close to the inlet, gets deflected in all directions, next bends to avoid a second obstacle, and finally exits the domain

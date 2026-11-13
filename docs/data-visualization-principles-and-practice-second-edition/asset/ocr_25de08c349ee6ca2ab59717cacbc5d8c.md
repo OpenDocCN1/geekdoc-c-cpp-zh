@@ -1,0 +1,7 @@
+![](bbox=[0.11, 0.11, 0.73, 0.52])
+
+Figure 11.42. Visualization of growth and author contributions in a software repository.
+
+for the entire project duration, having specific values of code size and complexity. This is done by dividing the ranges of these metrics in equal-size intervals. Each interval is shown by a color-coded icon using a rainbow colormap. For each interval, we show a horizontal bar indicating he number of file revisions taking metric values in that interval.
+
+Figure 11.43(a) shows that the average file size does not sharply increase over the project duration, but fluctuates around 100 lines of code per file. Similarly, Figure 11.43(b) shows that the average complexity of a method is stable around the value 2, and actually has a decreasing tendency. Both file size and code complexity histograms show a monotonic decrease of number of files and average method complexity with file size, respectively. Correlating these findings with those from Figure 11.42, we can conclude that, although the amount of code increases in time, the average difficulty of maintaining individual code components such as functions and files stays constant. As such, an increase in maintenance effort will most likely come from newly added files rather than from

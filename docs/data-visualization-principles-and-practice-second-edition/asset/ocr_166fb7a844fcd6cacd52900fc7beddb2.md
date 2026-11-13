@@ -1,0 +1,13 @@
+For the scanning example, the data values $f_i$ are the surface normals and/or colors measured by the scanner device.
+
+Remember, the goal of a dataset is to allow reconstructing some continuous signal from a sampled representation. In our surface scanning example, how can we reconstruct a smooth surface $\hat{S}$ if all we are given is the point set $\{p_i\}$ with optional normal or color data $\{f_i\}$? Recalling the reconstruction formula (see Equation (3.2)), we need to define some basis functions $\phi_i$ at the sample points $p_i$. There are several ways to do this.
+
+Constructing a grid from scattered points. First, we can construct a grid from the point set. The way this is done depends on the meaning of the point samples $p_i$. If these points come from the sampling of some supposedly smooth 3D surface, we can construct an unstructured grid with 2D cells, e.g., triangles, which have $p_i$ as vertices, and which approximate a smooth surface as much as possible. Several triangulation methods exist to do this. We shall describe such method in more detail in Section 8.3. Once we have this grid, we can use the constant or linear interpolation functions described earlier in this chapter.
+
+Gridless interpolation. A second way is to avoid constructing a grid altogether. This has several advantages. Constructing unstructured grids from large, complex 3D point clouds can be a delicate process. Storing the grid can be a high burden for very large datasets. As described in Section 3.5.4, storing the cell information can double the amount of memory required in the worst case. Moreover, our point set can change in time, because it represents some moving object or because we would like to process it with geometric modeling operations such as editing, filtering, or deformations. Triangulating the point set to compute a grid every time the points change can be a very costly operation. Finally, if we have a large point set representing a complex 3D surface, visualizing it by rendering the corresponding triangulation may not be the fastest option. In such cases, we can do better by using a gridsless point representation.
+
+How can we reconstruct a continuous function from a scattered point set without recurring to an explicit grid? What we need is a set of gridsless basis functions, which should respect the properties in Equations (3.4) and (3.5) as much as possible. There are several ways to construct such functions. A frequently used choice for gridsless basis functions is radial basis functions, or RBFs. These are functions $\Phi : \mathbb{R}^d \to \mathbb{R}_+$, which depend only on the distance
+
+```
+$r = \|x\| = \sqrt{\sum_{i=1}^d x_i^2}$ (3.44)
+```

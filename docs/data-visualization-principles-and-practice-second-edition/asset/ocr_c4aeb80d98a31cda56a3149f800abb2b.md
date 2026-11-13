@@ -1,0 +1,3 @@
+# 10.6. Conclusion
+
+authored by Lichtenbelt et al., provides a practical presentation of volume rendering, from the perspective of the practitioner, and also includes software to support the material and datasets to start experimenting with [Lichtenbelt et al. 98]. The book can be used as a hands-on guide to learn volume rendering by doing it, but provides also an extensive list of compiled references of this field. For an incursion into the field of medical visualization, with a focus on volumetric techniques, a highlight is the recent book of Preim and Bartz [Preim and Bartz 07].
