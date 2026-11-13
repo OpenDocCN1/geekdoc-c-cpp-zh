@@ -966,6 +966,7 @@
 +   [C 数据结构使用：BPUT 学科代码 BE-2106 专用](docs/data-structures-using-c-for-bput-subject-code-be-2106/README.md)
 +   [C 语言数据结构 第二版](docs/data-structures-using-c-second-edition/README.md)
 +   [C 编程 数据结构](docs/data-structures-with-c-programming/README.md)
++   [C 数据结构 (Sie) (Sos)](docs/data-structures-with-c-sie-sos/README.md)
 +   [C++ 数据类型、变量、运算符与控制结构：C++ 编程入门指南](docs/data-types-and-variables-operators-and-control-structures-in/README.md)
 +   [David Chisnall Objective C 常用句手册 Pearson 2011](docs/david-chisnall-objective-c-phrasebook-pearson-2011/README.md)
 +   [极简 Python：急躁程序员的地道 Python 编程](docs/dead-simple-python-idiomatic-python-for-the-impatient-progra/README.md)
