@@ -1,0 +1,288 @@
+
+## Example
+
+```
+sum = 0;
+for (i=0; i<n*n; i++)
+{
+sum++;
+}
+```
+
+Here, the statement sum++ executes n^2 times.
+
+Answer: The complexity is O (n^2)
+
+## Example
+
+```
+sum = 0;
+for (i = 0; i < n; i++) {
+ if (is_even(i)) {
+ for (j = 0; j < n; j++)
+ sum++;
+ }
+ else
+ sum = sum + n;
+}
+```
+
+Here, inside the loop: if “true” clause executed for half the values of n, that is O(n) and if “false” clause executed for the other half of n, O(1), so innermost loop is O(n). The outer loop is O (n).
+
+Answer: The complexity is O (n^2)
+
+## Example
+
+```
+for (i=1; i<=n; i++) {
+ for (j=1; j<=2*i; j++) {
+ k=j;
+ while (k>0)
+ k=k-1;
+ }
+ }
+```
+
+At first, consider the innermost while loop: it is executed k = j, j - 1, j - 2 ... 0. Time consumed inside the while loop is constant. Let I(j) be the time consumed in the while loop. Thus,
+
+I(j) = \sum_{k=0}^{j} 1
+
+Consider the middle for loop, its running time is determined by i. Let M(i) be the time consumed in the for loop:
+
+M(i) = \sum_{j=1}^{2i} I(j)
+= \sum_{j=1}^{2i} (j+1)
+= \sum_{j=1}^{2i} j + \sum_{j=1}^{2i} 1
+= 2i(2i + 1) + 2i
+= 2i^2 + 3i
+
+Finally, the outermost for loop, it is executed i = 1, 2, 3 ... n. Let T(n) be running time of the entire algorithm:
+
+T(n) = \sum_{i=1}^{n} M(i)
+= \sum_{i=1}^{n} (2i^2 + 3i)
+= \sum_{i=1}^{n} 2i^2 + \sum_{i=1}^{n} 3i
+= 2 \frac{2n^3 + 3n^2 + n}{6} + 3 \frac{n(n + 1)}{2}
+= \frac{4n^3 + 15n^2 + 11n}{6}
+
+**Answer:** The complexity is O(n^3)
+
+## Example
+
+T (n) = 4n^2 + 3n log n, express T (n) in Big-O notation
+Ta = 4n^2 = O (n^2) and
+Tb = 3nlog n = O (nlog n)
+Now, T (n)
+= O (max (Ta, Tb))
+= O (max (O (n^2), O (nlog n)))
+= O (n^2) [because n > log n, hence n^2 > nlog n]
+
+## Summary
+
+- The algorithm is a finite sequence of instructions/steps, each of which is very elementary that must be followed to solve a problem.
+- The space complexity of a program is the amount of memory it needed to run to completion.
+- The time complexity of a program is the amount of computer time needs to run to completion.
+- The asymptotic notations commonly used in performance analysis to characterize the complexity of an algorithm.
+- The Big-O notation is the formal method of expressing the upper bound of an algorithm's running time.
+
+## Exercises
+
+- 1. Show that the function f (n) defined by
+  f (1) = 1
+  f (n) = f (n-1) + \frac{1}{n} for n > 1
+  has a time complexity O(log n).
+- 2. Define Big-O notation, Θ notation, Ω notations.
+- 3. The designer of an algorithm needs to balance between space complexity and time complexity.” - Comment on the validity of the statement for the context of recursion algorithms.
+- 4. Choose the correct alternatives for the following:
+
+  - i) Which of the following is the best time for an algorithm?
+    - a) O (n) b) O (log n) c) O (2n) d) O (n log n)
+
+  - ii) Which of the following algorithm should execute the slowest for large value of N
+    - a) O (n) b) O (n^2) c) O (log n) d) None of these
+
+  - iii) Let us consider a function f(n) = 1000nlog n + 500 n^3 + 0.52^n. We can say that f(n) is
+    - a) O (n^3) b) O (n log n) c) O (2^n) d) None of the above
+
+  - iv) An algorithm is made up of two independent time complexities f(n) and g(n). Then the complexities of the algorithm is in the order of
+    - a) f(n) x g(n) b) Max(f(n), g(n)) c) Min(f(n),g(n)) d) f(n) + g(n)
+
+  - v) Two main measures for the efficiency of an algorithm are
+    - a) Time and space b) Processor and memory c) Time and space d) Data and space
+
+  - vi) Which of the following shows the correct relationship between some of the more common computing time for the algorithm?
+    - a) O (log n) < O (n) < O (n log n) < O (2^n) < O (n^2)
+    - b) O (n) < O (log n) < O (n^log n) < O (2^n) < O (n)
+    - c) O (n) < O (log n) < O (n log n) < O (n^2) < O (2^n)
+    - d) O (log n) < O (n) < O (n*log n) < O (n^2) < O (2^n)
+
+## ARRAY AND STRING
+
+> "Computers make it easier to do a lot of things, but most of the things they make it easier to do don't need to be done." -Andy Rooney
+
+Many applications require the processing of multiple data items, that have common characteristics. For example, let us say we have to find the average marks obtained in a class. In this case, we have a couple of choices. Either we can store all the values in different variables or we can create an array that will hold all these values in contiguous memory location. If they are stored in different variables and the number of such variables is quite large then it is quite unmanageable as these variables are scattered throughout the memory. In such situations, it is often convenient to place the data items into an array, where they will all share the same name.
+
+### KEY FEATURES
+
+- One dimensional array
+- Processing an array
+- Two-dimensional array
+- Representation of 2D array
+- Sparse Matrix
+- String
+
+## ARRAY
+
+Definition: An array is a collection of the same type of data items, which are stored in consecutive memory locations under a common name.
+
+An array variable must be followed by square bracket enclosing size specification of the array. The size signifies the number of elements of the array. That number should be a positive integer number (greater than 0).
+
+### One-dimensional Array
+
+A one-dimensional array is one in which only one subscript is needed to specify a particular element of the array.
+
+### Declaration of One-Dimensional Array
+
+The one-dimensional array can be declared as follows:
+
+```
+data_type array_name[size];
+```
+
+where array_name is the name of an array and size is the number of elements of data type data_type and size must be an integer constant specified within a pair of square brackets.
+
+### Example
+
+```
+int a[10];
+```
+
+The above declaration states an array, named “a”, consisting of ten elements, each of type int. Simply speaking, an array is a variable that can hold more than one value. (Arrays in programming are similar to vectors or matrices in mathematics.) We represent the array in above with a picture like this:
+
+![](img/723fa3ef35f5102eb67dc45b74bb823d_43_0.png)
+
+Sometimes symbolic constant can be used to define array size rather than an integer number.
+
+### Example
+
+```c
+#define N 10
+int a[N];
+```
+
+In C, arrays are zero-based, that means the index of an array starts from zero. The ten elements of a 10-element array are numbered from 0 to 9. The subscript, which specifies a single element of an array, is simply an integer expression in square brackets. The first element of the array is a[0], the second element is a[1], etc.
+
+### Example
+
+```c
+a[0] = 10;
+a[1] = 20;
+a[2] = a[0] + a[1];
+```
+
+Notice that the subscripted array references (i.e. expressions such as a[0] and a[1]) can appear on either side of the assignment operator.
+
+The subscript does not have to be a constant like 0 or 1; it can be any integral expression; it is common to loop over all elements of an array:
+
+### Example
+
+```c
+int i;
+for (i = 0; i < 10; i++)
+    a[i] = 0;
+```
+
+This loop sets 0 to all ten elements of the array a[0] to a[9].
+
+Arrays are a real convenience for many problems, but there is not a lot that C will do with them automatically. In particular, you can neither set all elements of an array at once, nor assign one array to another; both of the assignments are illegal.
+
+### Example
+
+```c
+int a[10];
+a = 0;         /* illegal */
+and
+int b[10];
+b = a;         /* illegal*/
+```
+
+To set all of the elements of an array to some value, you must do so one by one, as shown in the loop above. To copy the contents of one array to another, you must again do so by one.
+
+### Example
+
+```c
+int b[10];
+for (i = 0; i < 10; i++)
+    b[i] = a[i];
+```
+
+Remember that for an array declared
+
+```
+int a[10];
+```
+
+there is no element a[10]; the end element is a[9].
+
+Arrays are not limited to type int; you can have arrays of char or float or double or any other type.
+
+### Example
+
+```
+char name[30];
+float x[10];
+double d[100];
+```
+
+There are some important points about arrays. These are as follows:
+
+- Arrays are always stored in consecutive memory locations.
+- An array can store multiple values that can be referenced by a single name.
+- An array name is actually an address of the first element of the array.
+- An array can be either an integer, character or floating-point data type can be initialized only during declaration.
+- In C, array index starts from zero.
+- There is no bound checking concept for arrays in C.
+
+### Size of One-Dimensional Array
+
+The one-dimensional array can be declared as:
+
+```
+data_type array_name[size];
+```
+
+The total size of the array in bytes can be calculated by using the following expression:
+
+```
+sizeof(data_type) * size
+```
+
+where data_type is the data type of the array and size specifies the total number of elements of the array.
+
+Another way to calculate the total size of the array in bytes is simpler; that uses the following expression
+
+```
+sizeof(array_name)
+```
+
+where array_name is the name of the array.
+
+### Initialization of One-Dimensional Array
+
+Although it is not possible to assign values to all elements of an array at once using an assignment expression, it is possible to initialize some or all elements of an array when the array is defined.
+
+The syntax looks like this:
+
+```
+int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+```
+
+The list of values, enclosed in braces {}, separated by commas, provides the initial values for successive elements of the array. The individual array elements are as follows:
+
+```
+a[0] = 0
+a[1] = 1
+a[2] = 2
+a[3] = 3
+a[4] = 4
+a[5] = 5
+a[6] = 6
+a[7] = 7

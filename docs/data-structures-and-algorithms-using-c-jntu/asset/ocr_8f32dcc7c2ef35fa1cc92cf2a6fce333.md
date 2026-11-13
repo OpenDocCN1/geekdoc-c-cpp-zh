@@ -1,0 +1,13 @@
+![](bbox=[0.105, 0.085, 0.895, 0.345])
+
+Figure 9.1 A tree
+
+nodes except the root must have a single indegree. The nodes that emerge from the branches of a node are the children, and the node from which the branches emerge is the parent node. Two or more nodes of the same parent are referred to as siblings. The nodes that appear in the path from the root to a given node are the ancestors of the given node, and the nodes that appear in all paths from a given node to a leaf are the descendants of the node. Level of a node is defined starting with the root given at Level 1 and the other nodes are given with higher level numbers based on their association. If a parent is at Level i then its children must be at Level i+1. The height of a tree is the maximum level of a node in the tree. A set of zero or more disjoint trees is a forest. If a root node is deleted from a tree then the set of all disjoint trees i.e. subtrees leads to a forest. Hierarchical structures such as family, university, etc. can be very effectively depicted using trees. In a tree a node can have any number of children and every child node is again considered a tree, which may have either zero or more children.
+
+In Figure 9.1, A is the root and D, G, H, I, J, K, L, M, N, O, P, Q are the leaf nodes and the remaining are the internal nodes or non-terminal or non-leaf nodes. Nodes G, H are the children of B and B is a parent node. Nodes B, C, D, E, F are siblings. Nodes J, K, L are also siblings. Nodes A, E, J are ancestors to node Q. J, K, L, Q are descendants of E. The root A is at level 1, its children B, C, D, E, F are at level 2 and so on. The height of a tree is the maximum level, i.e. 4. When a is removed from the tree, it results in a forest with five disjoint trees such as {B, G, H}, {C, I}, {D}, {E, J, K, L, O}, {F, M, N, O, P}.
+
+A tree does not limit the number of children for a given node. A University with two constituent colleges and each having many departments and each department having professors, undergraduate (UG) students and post-graduate (PG) students can be clearly represented using a tree (Figure 9.2).
+
+# 9.3 REPRESENTATION OF A TREE
+
+A tree can be very effectively represented using linked lists. In this the root node appears first and it is followed by the list of subtrees of the node. The same is repeated for every subtree in the tree. The general node structure of a linked list is shown in Figure 9.3(a). The list form of the tree depicted in Figure 9.1 is as: (A, (B, (G, H)), C (I), D, E (J, (Q), K, L)), F (M, N, O, P))). Figure 9.3(b) shows the linked representation of the tree depicted in Figure 9.1.

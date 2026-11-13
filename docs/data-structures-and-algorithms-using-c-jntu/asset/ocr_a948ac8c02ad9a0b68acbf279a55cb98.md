@@ -1,0 +1,50 @@
+```
+enter the position
+3
+menu
+1.insertion at front
+2.insertion at end
+3.insertion at any position
+4.deletion at front
+5.deletion at end
+6.deletion at any position
+7.display
+8.exit
+enter your choice
+7
+20 10 50 30 40
+menu
+1.insertion at front
+2.insertion at end
+3.insertion at any position
+4.deletion at front
+5.deletion at end
+6.deletion at any position
+7.display
+8.exit
+enter your choice
+4
+the deleted element is 20
+menu
+1.insertion at front
+2.insertion at end
+3.insertion at any position
+4.deletion at front
+5.deletion at end
+6.deletion at any position
+7.display
+8.exit
+enter your choice
+7
+10 30 40
+menu
+1.insertion at front
+2.insertion at end
+3.insertion at any position
+4.deletion at front
+5.deletion at end
+6.deletion at any position
+7.display
+8.exit
+enter your choice
+```

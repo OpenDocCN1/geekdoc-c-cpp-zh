@@ -1,0 +1,1 @@
+If the difference in the height of left and right sub-trees is more than 1, the tree is balanced using some rotation techniques.

@@ -1,0 +1,24 @@
+# QuickSortPivotPseudocode
+
+The pseudocode for the above algorithm can be derived as –
+
+```
+function partitionFunc(left, right, pivot) leftPointer = left -1
+rightPointer = right
+
+while True do
+while A[++leftPointer] < pivot do //do-nothing
+end while
+
+while rightPointer > 0 && A[—rightPointer] > pivot do //do-nothing
+end while
+
+if leftPointer >= rightPointer break
+else
+swap leftPointer,rightPointer
+end if
+
+end while
+
+swap leftPointer,right return leftPointer end function
+```

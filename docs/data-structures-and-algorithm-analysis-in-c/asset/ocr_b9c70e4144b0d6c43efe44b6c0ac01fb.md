@@ -1,0 +1,17 @@
+as the initial current position. Two players alternate turns. At each turn, a player must select a grid element in the current row or column. The value of the selected position is added to the player's score, and that position becomes the current position and cannot be selected again. Players alternate until all grid elements in the current row and column are already selected, at which point the game ends and the player with the higher score wins.
+
++   10.67 Othello played on a six-by-six board is a forced win for black. Prove this by writing a program. What is the final score if play on both sides is optimal?
+
+# References
+
+The original paper on Huffman codes is [27]. Variations on the algorithm are discussed in [35], [36], and [39]. Another popular compression scheme is Ziv–Lempel encoding [72], [73]. Here the codes have a fixed length but represent strings instead of characters. [10] and [41] are good surveys of the common compression schemes.
+
+The analysis of bin-packing heuristics first appeared in Johnson's Ph.D. thesis and was published in [28]. Improvements in the additive constants of the bounds for first fit and first fit decreasing were given in [68] and [17], respectively. The improved lower bound for online bin packing given in Exercise 10.8 is from [69]; this result has been improved further in [43], [65], and [5]. [58] describes another approach to online bin packing.
+
+Theorem 10.7 is from [9]. The closest points algorithm appeared in [60]. [62] and describes the turnpike reconstruction problem and its applications. The exponential worst-case input was given by [71]. Books on computational geometry include [18], [49], [50], and [54]. [2] contains the lecture notes for a computational geometry course taught at MIT; it includes an extensive bibliography.
+
+The linear-time selection algorithm appeared in [11]. The best bound for selecting the median is currently ~2.95N comparisons [16]. [21] discusses the sampling approach that finds the median in 1.5N expected comparisons. The O(N^1.99) multiplication is from [29]. Generalizations are discussed in [12] and [31]. Strassen's algorithm appears in the short paper [63]. The paper states the results and not much else. Pan [51] gives several divide-and-conquer algorithms, including the one in Exercise 10.28. Coopersmith and Winograd [14] gave an O(N^2.376) algorithm that was the best-known for over two decades. This bound was silently lowered to O(N^2.3736) in 2010 by Stothers, and then to O(N^2.3727) by Vassilevska-Williams in 2011 [66].
+
+The classic references on dynamic programming are the books [7] and [8]. The matrix ordering problem was first studied in [23]. It was shown in [26] that the problem can be solved in O(N log N) time.
+
+An O(N^2) algorithm was provided for the construction of optimal binary search trees by Knuth [32]. The all pairs shortest-path algorithm is from Floyd [20]. A theoretically better O(N^3 log N log N / log N^(1/3)) algorithm is given by Fredman [22], but not surprisingly, it is not practical. A slightly improved bound (with 1/2 instead of 1/3) is given in [64], lowered to O(N^3 sqrt(log N / log N) [74]), and most recently to O(N^3 log N / log^2 N) [25]; see also [4] for related results. For undirected graphs, the all-pairs problem can be solved in O(|E||V| log alpha(|E|, |V|) ), where alpha was previously seen in the union/find analysis in Chapter 8 [53]. Under certain conditions, the running time of dynamic programs can

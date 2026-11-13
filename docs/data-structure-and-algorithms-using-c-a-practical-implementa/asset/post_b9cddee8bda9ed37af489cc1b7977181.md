@@ -1,0 +1,221 @@
+
+## 9 Graph
+
+GRAPH is a non-linear data structure in which the elements are arranged randomly inside the memory and are interconnected with each other like a tree. The GRAPH has a wide range of application in general life implementation like road map, electrical circuit designs, etc.
+
+A graph G is an ordered pair of sets (V, E) where V is the set of vertices and E is the edges which connect the vertices.
+
+A graph can be of two types such as
+
+- Directed Graph
+- Undirected Graph
+
+### DIRECTED GRAPH
+
+A graph in which every edge is directed is called a directed graph.
+
+### UNDIRECTED GRAPH
+
+A graph in which every edge is undirected is called an undirected graph.
+
+If in a graph some edges are directed and some are undirected, then that graph will be called a mixed graph.
+
+### 9.1 Graph Terminologies
+
+#### DIRECTED GRAPH
+
+A graph in which every edge is directed is called a directed graph.
+
+#### UNDIRECTED GRAPH
+
+A graph in which every edge is undirected is called an undirected graph.
+
+#### WEIGHTED GRAPH
+
+A graph is said to be weighted if its edges have been assigned some non-negative value as weight.
+
+#### ADJACENT NODES
+
+A node N0 is adjacent to another node or is a neighbor of another node N1 if there is an edge from node N0 to N1.
+In an undirected graph, if (N0, N1) is an edge, then N0 is adjacent to N1 and N1 is adjacent to N0.
+In a digraph, <N0, N1> is an edge; then N0 is adjacent to N1 and N1 is adjacent from N0.
+
+#### INCIDENCE
+
+In an undirected graph, the edge (V0, V1) is incident on nodes V0 and V1.
+In a digraph, the edge <V0, V1> is incident from node V0 and is incident to node V1.
+
+#### PATH
+
+A path from a node U0 to node Un is a sequence of nodes U1, U2, U3, ..., Un such that U0 is adjacent to U1, U1 is adjacent to U2, ..., Un-1 is adjacent to Un.
+In other words, we can say that (U0, U1), (U1, U2), (U2, U3), ... are the edges.
+
+#### LENGTH OF PATH
+
+It is the total number of edges included in the path.
+
+#### CLOSED PATH
+
+A path is said to be closed if the first and last nodes of the path are the same.
+
+#### SIMPLE PATH
+
+A simple path is a path in which all the nodes are distinct, with the exception that the first and last nodes of the path can be the same.
+
+#### CYCLE
+
+A cycle is a simple path in which the first and last nodes are the same, or we can say that a closed simple path is a cycle.
+
+In a digraph, a path is called a cycle if it has one or more nodes and the start node is connected to the last node.
+
+In an undirected graph, a path is called a cycle if it has at least three nodes and the start node is connected to the last node. In an undirected graph, if (u, v) is an edge, then u-v-u should not be considered a path since (u, v) and (v, u) are the same edges. So, for a path to be a cycle in an undirected graph, there should be at least three nodes.
+
+#### CYCLIC GRAPH
+
+A graph that has cycles is called a cyclic graph.
+
+#### ACYCLIC GRAPH
+
+A graph that has no cycle is known as an acyclic graph.
+
+#### DAG
+
+A directed acyclic graph is named a DAG after its acronym. Graph-5 is a DAG.
+
+#### DEGREE
+
+In an undirected graph, the number of edges connected to a node is called the degree of that node, or we can say that the degree of a node is the number of edges incident on it. In Graph-2, the degree of node A is 1, and the degree of node B is 0. In Graph-3, the degree of node A is 3, and the degree of node B is 2.
+
+In a digraph, there are two degrees for every node, known as indegree and outdegree.
+
+#### INDEGREE
+
+The indegree of a node is the number of edges coming to that node, or in other words, edges incident to it. In Graph-8, the indegree of nodes A, B, D, and G are 0, 2, 6, and 1, respectively.
+
+#### OUTDEGREE
+
+The outdegree of a node is the number of edges going outside from that node, or in other words, the edges incident from it. In Graph-8, the outdegrees of nodes A, B, D, F, and G are 3, 1, 6, 3, and 2, respectively.
+
+#### SOURCE
+
+A node which has no incoming edges but has outgoing edges is called a source. The indegree of a source is zero. In Graph-8, nodes A and F are sources.
+
+#### SINK
+
+A node which has no outgoing edges but has incoming edges is called a sink. The outdegree of a sink is zero. In Graph-8, node D is a sink.
+
+#### PENDANT NODE
+
+A node is said to be pendant if its indegree is equal to 1 and its outdegree is equal to 0.
+
+#### REACHABLE
+
+If there is a path from a node to any other node, then it will be called reachable from that node.
+
+#### ISOLATED NODE
+
+If a node has no edges connected with any other node, then its degree will be 0 and it will be called an isolated node. In Graph-2, node B is an isolated node.
+
+#### SUCCESSOR AND PREDECESSOR
+
+In a graph, if a node u is adjacent to node v, then u is the predecessor of v and v is the successor of u.
+
+#### CONNECTED GRAPH
+
+An undirected graph is connected if there is a path from any node of the graph to any other node, or any node is reachable from any other node. Graph-2 is not a connected graph.
+
+#### STRONGLY CONNECTED
+
+A digraph is strongly connected if there is a directed path from any node of the graph to any other node. We can also say that a digraph is strongly connected if, for any pair of nodes u and v, there is a path from u to v and also a path from v to u. Graph-7 is strongly connected.
+
+#### WEAKLY CONNECTED
+
+A digraph is weakly connected or unilaterally connected if, for any pair of nodes u and v, there is a path from u to v or a path from v to u. If, from the digraph, we remove the directions and the resulting undirected graph is connected, then that digraph is weakly connected. Graph-6 is a weakly connected graph.
+
+#### MAXIMUM EDGES IN GRAPH
+
+In an undirected graph, there can be n(n - 1)/2 maximum edges, and in a digraph, there can be n(n - 1) maximum edges, where n is the total number of nodes in the graph.
+
+#### COMPLETE GRAPH
+
+A graph is complete if any node in the graph is adjacent to all the nodes of the graph, or we can say that there is an edge between any pair of nodes in the graph. An undirected complete graph will contain n(n - 1)/2 edges.
+
+#### MULTIPLE EDGE
+
+If between a pair of nodes there is more than one edge, then they are known as multiple edges or parallel edges. In Graph-3, there are multiple edges between nodes A and C.
+
+#### LOOP
+
+An edge will be called a loop or self-edge if it starts and ends on the same node. Graph-4 has a loop at node B.
+
+#### MULTIGRAPH
+
+A graph which has a loop or multiple edges can be described as a multigraph. Graph-3 and Graph-4 are multigraphs.
+
+#### REGULAR GRAPH
+
+A graph is regular if every node is adjacent to the same number of nodes. Graph-1 is regular since every node is adjacent to the other three nodes.
+
+#### PLANAR GRAPH
+
+A graph is called planar if it can be drawn in a plane without any two edges intersecting. Graph-1 is not a planar graph, while Graph-2, Graph-3, and Graph-4 are planar graphs.
+
+#### ARTICULATION POINT
+
+If, on removing a node from the graph, the graph becomes disconnected, then that node is called the articulation point.
+
+#### BRIDGE
+
+If, on removing an edge from the graph, the graph becomes disconnected, then that edge is called the bridge.
+
+#### TREE
+
+An undirected connected graph will be called a tree if there is no cycle in it.
+
+#### BICONNECTED GRAPH
+
+A graph with no articulation points is called a biconnected graph.
+
+![](img/1faaa0256577c74e8a61f42967760aa8_305_0.png)
+
+![](img/1faaa0256577c74e8a61f42967760aa8_306_0.png)
+
+![](img/1faaa0256577c74e8a61f42967760aa8_306_1.png)
+
+![](img/1faaa0256577c74e8a61f42967760aa8_306_2.png)
+
+![](img/1faaa0256577c74e8a61f42967760aa8_306_3.png)
+
+![](img/1faaa0256577c74e8a61f42967760aa8_306_4.png)
+
+### 9.2 Representation of Graph
+
+The major components of the graph are nodes and edges. Like a tree, the graph can also be represented in two different ways, such as
+
+- ARRAY REPRESENTATION
+- LINKED REPRESENTATION
+
+But overall, there are four major approaches to represent the graph as
+
+- Adjacency Matrix
+- Adjacency Lists
+- Adjacency Multilists
+- Incidence Matrix
+
+#### ADJACENCY MATRIX
+
+The nodes that are adjacent to one another are represented as a matrix. Thus, the adjacency matrix is the matrix that keeps the information of adjacent or nearby nodes. In other words, we can say that this matrix keeps the information of whether a node is adjacent to any other node or not.
+
+The adjacency matrix is a square matrix with one row and one column for each vertex. The values in the matrix are either 0 or 1. The adjacency matrix of graph G is a two-dimensional array of size n × n (where n is the number of vertices in the graph) with the property that A[I][J] = 1 if the edge (Vp, Vq) is in the set of edges, and A[I][J] = 0 if there is no such edge.
+
+#### EXAMPLE
+
+![](img/1faaa0256577c74e8a61f42967760aa8_307_0.png)
+
+#### ADJACENCY MATRIX IS
+
+| | V1 | V2 | V3 | V4 | V5 | V6 |
+|---|---|---|---|---|---|---|
+| V1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| V2 | 1 | 0 | 0 | 0 | 0 | 0 |
+| V3 | 0 | 0 | 0 | 0 | 0 | 0 |

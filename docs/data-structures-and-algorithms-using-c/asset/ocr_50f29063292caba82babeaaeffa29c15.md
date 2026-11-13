@@ -1,0 +1,16 @@
+# Installation on UNIX/Linux
+
+If you are using **Linux or UNIX**, then check whether GCC is installed on your system by entering the following command from the command line –
+
+$ gcc -v
+
+If you have GNU compiler installed on your machine, then it should print a message such as the following –
+
+Using built-in specs.
+Target: i386-redhat-linux
+Configured with: ../configure --prefix=/usr ...... Thread model: posix
+gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
+
+If GCC is not installed, then you will have to install it yourself using the detailed instructions available at http://gcc.gnu.org/install/
+
+This tutorial has been written based on Linux and all the given examples have been compiled on Cent OS flavor of Linux system.

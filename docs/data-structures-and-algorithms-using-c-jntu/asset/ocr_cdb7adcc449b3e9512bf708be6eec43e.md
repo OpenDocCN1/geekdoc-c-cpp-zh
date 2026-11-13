@@ -1,0 +1,8 @@
+![](bbox=[0.1, 0.08, 0.9, 0.54])
+
+# Figure 13.3 Insertion of elements 29 and 50 into 4-way search tree in Figure 11.2
+
+Case 2: c_i ≠ Nil and c_i = Nil, i.e. if the left subtree and right subtree is not empty then select the largest element from the left subtree and k is replaced with it. This will recursively invoke the deletion of the largest element by following one or more of the four cases.
+Case 3: c_i = Nil and c_i ≠ Nil, i.e. if the left subtree of k is empty and the right subtree is not empty. Select the smallest element from the right subtree and replace k with it. This will recursively invoke the deletion of the smallest element by following one or more of the four cases.
+Case 4: c_i ≠ Nil and c_i ≠ Nil, i.e. if both left and right subtrees of k are not empty. Select either the largest element from the left subtree or the smallest element from the right subtree and replace k with it. This follows the appropriate steps to delete the replaced element from the tree.
+Consider the 4-way search tree shown in Figure 13.2. To delete element 14 which does not have both left and right subtrees, Case 1 can be applied. So, simply 14 and its corresponding pointer are deleted from the node. Deletion of 27 which has the left subtree but not right subtree follows Case 2. From the left subtree the largest element 25 is replaced with 27. Case 1 is applied again in deleting 25. To delete 30 which has both left and right subtrees, Case 4 is applied. Either the largest element 27 from the left subtree or the smallest element 36 from the right subtree may be selected to replace 30. Here 36 is replaced with 30. Case 1 is applied again to delete 36 from the tree. These instances may be shown in Figure 13.4.

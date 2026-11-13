@@ -1,0 +1,145 @@
+
+```c
+1 long long pow( long long x, int n )
+2 {
+3   if( n == 0 )
+4     return 1;
+5   if( n == 1 )
+6     return x;
+7   if( isEven( n ) )
+8     return pow( x * x, n / 2 );
+9   else
+10    return pow( x * x, n / 2 ) * x;
+11 }
+```
+
+## Figure 2.11 Efficient exponentiation
+
+without affecting the correctness of the program. Indeed, the program will still run in O(log N), because the sequence of multiplications is the same as before. However, all of the following alternatives for line 8 are bad, even though they look correct:
+
+```
+8a    return pow( pow( x, 2 ), n / 2 );
+8b    return pow( pow( x, n / 2 ), 2 );
+8c    return pow( x, n / 2 ) * pow( x, n / 2 );
+```
+
+Both lines 8a and 8b are incorrect because when N is 2, one of the recursive calls to pow has 2 as the second argument. Thus no progress is made, and an infinite loop results (in an eventual crash).
+
+Using line 8c affects the efficiency, because there are now two recursive calls of size N/2 instead of only one. An analysis will show that the running time is no longer O(log N). We leave it as an exercise to the reader to determine the new running time.
+
+## 2.4.5 Limitations of Worst-Case Analysis
+
+Sometimes the analysis is shown empirically to be an overestimate. If this is the case, then either the analysis needs to be tightened (usually by a clever observation), or it may be that the average running time is significantly less than the worst-case running time and no improvement in the bound is possible. For many complicated algorithms the worst-case bound is achievable by some bad input but is usually an overestimate in practice. Unfortunately, for most of these problems, an average-case analysis is extremely complex (in many cases still unsolved), and a worst-case bound, even though overly pessimistic, is the best analytical result known.
+
+## Summary
+
+This chapter gives some hints on how to analyze the complexity of programs. Unfortunately, it is not a complete guide. Simple programs usually have simple analyses, but this is not always the case. As an example, later in the text we shall see a sorting algorithm (Shellsort, Chapter 7) and an algorithm for maintaining disjoint sets (Chapter 8), each of which requires about 20 lines of code. The analysis of Shellsort is still not complete, and the disjoint set algorithm has an analysis that until recently was extremely difficult and requires pages and pages of intricate calculations. Most of the analyses that we will encounter here will be simple and involve counting through loops.
+
+An interesting kind of analysis, which we have not touched upon, is lower-bound analysis. We will see an example of this in Chapter 7, where it is proved that any algorithm that sorts by using only comparisons requires $\Omega(N \log N)$ comparisons in the worst case. Lower-bound proofs are generally the most difficult, because they apply not to an algorithm but to a class of algorithms that solve a problem.
+
+We close by mentioning that some of the algorithms described here have real-life application. The gcd algorithm and the exponentiation algorithm are both used in cryptography. Specifically, a 600-digit number is raised to a large power (usually another 600-digit number), with only the low 600 or so digits retained after each multiplication. Since the calculations require dealing with 600-digit numbers, efficiency is obviously important. The straightforward algorithm for exponentiation would require about $10^{900}$ multiplications, whereas the algorithm presented requires only about 4,000 in the worst case.
+
+## Exercises
+
+- 2.1 Order the following functions by growth rate: $N$, $\sqrt{N}$, $N^{1.5}$, $N^2$, $N \log N$, $N \log \log N$, $N \log^2 N$, $N \log(N^2)$, $2/N$, $2^{N/2}$, $2^N$, $37$, $N^2 \log N$, $N^3$. Indicate which functions grow at the same rate.
+
+- 2.2 Suppose $T_1(N) = O(f(N))$ and $T_2(N) = O(f(N))$. Which of the following are true?
+  - a. $T_1(N) + T_2(N) = O(f(N))$
+  - b. $T_1(N) - T_2(N) = o(f(N))$
+  - c. $T_1(N) / T_2(N) = O(1)$
+  - d. $T_1(N) = O(T_2(N))$
+
+- 2.3 Which function grows faster: $N \log N$ or $N^{1+\epsilon/\sqrt{\log N}}$, $\epsilon > 0$?
+
+- 2.4 Prove that for any constant $k$, $\log^k N = o(N)$.
+
+- 2.5 Find two functions $f(N)$ and $g(N)$ such that neither $f(N) = O(g(N))$ nor $g(N) = O(f(N))$.
+
+- 2.6 In a recent court case, a judge cited a city for contempt and ordered a fine of $2 for the first day. Each subsequent day, until the city followed the judge's order, the fine was squared (i.e., the fine progressed as follows: $2, $4, $16, $256, $65,536, ...).
+  - a. What would be the fine on day N?
+  - b. How many days would it take for the fine to reach D dollars (a Big-Oh answer will do)?
+
+- 2.7 For each of the following six program fragments:
+  - a. Give an analysis of the running time (Big-Oh will do).
+  - b. Implement the code in the language of your choice, and give the running time for several values of N.
+  - c. Compare your analysis with the actual running times.
+
+    (1) sum = 0;
+    for ( i = 0; i < n; ++i )
+        ++sum;
+
+    (2) sum = 0;
+    for ( i = 0; i < n; ++i )
+        for ( j = 0; j < n; ++j )
+            ++sum;
+
+    (3) sum = 0;
+    for ( i = 0; i < n; ++i )
+        for ( j = 0; j < n * n; ++j )
+            ++sum;
+
+    (4) sum = 0;
+    for ( i = 0; i < n; ++i )
+        for ( j = 0; j < i; ++j )
+            ++sum;
+
+    (5) sum = 0;
+    for ( i = 0; i < n; ++i )
+        for ( j = 0; j < i * i; ++j )
+            ++sum;
+
+    (6) sum = 0;
+    for ( i = 1; i < n; ++i )
+        for ( j = 1; j < i * i; ++j )
+            if ( j % i == 0 )
+                for ( k = 0; k < j; ++k )
+                    ++sum;
+
+- 2.8 Suppose you need to generate a random permutation of the first N integers. For example, {4, 3, 1, 5, 2} and {3, 1, 4, 2, 5} are legal permutations, but {5, 4, 1, 2, 1} is not, because one number (1) is duplicated and another (3) is missing. This routine is often used in simulation of algorithms. We assume the existence of a random number generator, r, with method randInt(i,j), that generates integers between i and j with equal probability. Here are three algorithms:
+  - 1. Fill the array a from a[0] to a[N-1] as follows: To fill a[i], generate random numbers until you get one that is not already in a[0], a[1], ..., a[i-1].
+  - 2. Same as algorithm (1), but keep an extra array called the used array. When a random number, ran, is first put into the array a, set used[ran] = true. This means that when filling a[i] with a random number, you can test in one step to see whether the random number has been used, instead of the (possibly) i steps in the first algorithm.
+  - 3. Fill the array such that a[i] = i+1. Then
+    ```
+    for ( i = 1; i < n; ++i )
+        swap( a[ i ], a[ randInt( 0, i ) ] );
+    ```
+  - a. Prove that all three algorithms generate only legal permutations and that all permutations are equally likely.
+  - b. Give as accurate (Big-Oh) an analysis as you can of the expected running time of each algorithm.
+  - c. Write (separate) programs to execute each algorithm 10 times, to get a good average. Run program (1) for N = 250, 500, 1,000, 2,000; program (2) for N = 25,000, 50,000, 100,000, 200,000, 400,000, 800,000; and program (3) for N = 100,000, 200,000, 400,000, 800,000, 1,600,000, 3,200,000, 6,400,000.
+  - d. Compare your analysis with the actual running times.
+  - e. What is the worst-case running time of each algorithm?
+
+## 2.9 Complete the table in Figure 2.2 with estimates for the running times that were too long to simulate. Interpolate the running times for these algorithms and estimate the time required to compute the maximum subsequence sum of 1 million numbers. What assumptions have you made?
+
+- 2.10 Determine, for the typical algorithms that you use to perform calculations by hand, the running time to do the following:
+  - a. Add two N-digit integers.
+  - b. Multiply two N-digit integers.
+  - c. Divide two N-digit integers.
+
+- 2.11 An algorithm takes 0.5 ms for input size 100. How long will it take for input size 500 if the running time is the following (assume low-order terms are negligible)?
+  - a. linear
+  - b. O(N log N)
+  - c. quadratic
+  - d. cubic
+
+- 2.12 An algorithm takes 0.5 ms for input size 100. How large a problem can be solved in 1 min if the running time is the following (assume low-order terms are negligible)?
+  - a. linear
+  - b. O(N log N)
+  - c. quadratic
+  - d. cubic
+
+- 2.13 How much time is required to compute f(x) = \sum_{i=0}^N a_i x^i.
+  - a. Using a simple routine to perform exponentiation?
+  - b. Using the routine in Section 2.4.4?
+
+- 2.14 Consider the following algorithm (known as Horner's rule) to evaluate f(x) = \sum_{i=0}^N a_i x^i.
+
+```
+poly = 0;
+for ( i = n; i >= 0; --i )
+    poly = x * poly + a[ i ];
+```
+
+  - a. Show how the steps are performed by this algorithm for x = 3, f(x) = 4x^4 + 8x^3 + x + 2.
+  - b. Explain why this algorithm works.
+  - c. What is the running time of this algorithm?
