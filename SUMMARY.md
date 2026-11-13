@@ -960,6 +960,7 @@
 +   [C 语言数据结构与程序设计：自学入门指南](docs/data-structures-and-program-design-using-c-a-self-teaching-i/README.md)
 +   [C++ 数据结构与程序设计入门指南 2019](docs/data-structures-and-program-design-using-cintroduction-2019/README.md)
 +   [数据结构解秘：自学指南](docs/data-structures-demystified-a-self-teaching-guide/README.md)
++   [C++ 数据结构使用指南](docs/data-structures-using-c/README.md)
 +   [C 数据结构：初学者实用指南](docs/data-structures-using-c-a-practical-approach-for-beginners/README.md)
 +   [C and C++ 数据结构使用指南](docs/data-structures-using-c-and-c/README.md)
 +   [C 数据结构使用：BPUT 学科代码 BE-2106 专用](docs/data-structures-using-c-for-bput-subject-code-be-2106/README.md)

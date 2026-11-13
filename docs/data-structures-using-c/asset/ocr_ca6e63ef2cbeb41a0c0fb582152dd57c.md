@@ -1,0 +1,7 @@
+# Table 9.6 Comparison of sorting techniques
+
+| Sorting method | Technique in brief | Best case | Worst case | Memory requirement | Is stable? | Pros | Cons |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Bubble sort | Repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order | O(n²) | O(n²) | No extra space needed | Yes | 1. A simple and easy method 2. Efficient for small lists n > 100 | Highly inefficient for large data |
+| Selection sort | Finds the minimum value in the list and then swaps it with the value in the first position. repeats these steps for the remainder of the list (starting at the second position) and advancing each time) | O(n²) | O(n²) | No extra space needed | No | 1. Recommended for small files 2. Good for partially sorted data | Inefficient for large lists |
+| Insertion sort | Every repetition of insertion sort removes an element from the input data, inserts it into the correct position in the already sorted list until no input elements remain. The choice of which element to remove from the input is arbitrary and can be made using almost any choice of algorithm | O(n) | O(n²) | No extra space needed | Yes | 1. Relatively simple and easy to implement 2. Good for almost sorted data | Inefficient for large lists |

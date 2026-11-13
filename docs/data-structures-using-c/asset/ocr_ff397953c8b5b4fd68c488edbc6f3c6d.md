@@ -1,0 +1,11 @@
+The tree in Fig. 7.8(a) is the empty tree since there are no nodes. The tree in Fig. 7.8(b) has only one node, the root. The tree in Fig. 7.8(c) has 16 nodes. The root node has four subtrees. The roots of these subtrees are called the children of the root. There are 16 nodes in the tree, so there are 15 non-empty subtrees. The nodes with no subtrees are called terminal nodes or more commonly, leaves. These are 10 leaves in the tree in Fig. 7.8(c).
+
+![](bbox=[0.2, 0.23, 0.8, 0.5])
+
+**Fig. 7.8** Degree of a tree (a) Empty tree—degree undefined (b) Tree with a single node—degree 0 (c) Tree of height 3—degree 4
+
+The degree of a node is the number of subtrees it has. Thus, the degree of the nodes in Fig. 7.8(c) ranges from zero to four. By definition, the degree of each leaf node is zero. The degree of a tree is the maximum degree of a node in the tree. As each leaf in Fig. 7.8(a) has no nodes, there is no maximum degree of a node, and the degree of the tree is not defined. The tree in Fig. 7.8(b) has degree zero, and the tree in Fig. 7.8(c) has degree four.
+
+Since family relationships can be modelled as trees, we often call the root of a tree (or subtree) the parent, and the roots of the subtrees the children. Consequently, the children of the same parent are called siblings.
+
+The advantage of the relationship between a parent and its children is that a directed edge (or, simply an edge) extends from a parent to its children. Thus, the edges connect a root with the roots of each subtree. For example, in Fig. 7.8(c), an edge extends from the root b to each of the nodes c, d, e, and f. Similarly, edges extend from e to i and from d to g. An undirected edge extends in both directions between a parent and a child. Thus, the undirected edges would also extend from i to e and from g to d. A directed path (or simply path) is a sequence of directed edges e1, e2, ..., ep where the node at the end of one edge serves as the beginning of the next edge. An undirected path is a similar sequence of undirected edges.

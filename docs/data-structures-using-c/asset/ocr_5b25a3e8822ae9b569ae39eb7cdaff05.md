@@ -1,0 +1,15 @@
+Each language is considered the best to solve a particular class of problems but unsuitable to solve another class of problems. Today, there are over 200 high-level languages. Some of the most common ones are C, C++, Java, Pascal, FORTRAN, and COBOL. A system program that translates a high-level language such as C++ to a machine language is called a compiler. It is thus a peculiar sort of program whose input is one program and output is another program.
+
+# 1.2 OBJECT-ORIENTED PROGRAMMING
+
+Traditional structured programming has been used as algorithmic decomposition. Algorithmic or functional decomposition views software as a process. It decomposes the software/program into modules, which represent the steps of the process. These modules are implemented by language constructs such as procedures in Pascal, subroutines in FORTRAN, or functions in C++. Object-oriented programming-based (OOP-based) design represents a fundamental change from the structured programming design method. Object-oriented decomposition views software as a set of well-defined objects that model entities in the application domain. These objects interact with each other to form a software system. Functional decomposition is addressed after the system has been decomposed into objects. The basic concept in OOP is an object. Object-oriented programming is used to model the real world through objects. In our real world, everything, from an apple to a car, is an object, which can be distinguished from one another in the physical as well as the behavioural point of view. An object is an entity that performs computations and has a local state. It is also viewed as a combination of data and procedural (behavioural) elements.
+
+The success of a software project often depends upon the choices made in the representation of data and algorithms designed to process the data. The proper choice of a data structure can be a key point in the design of many algorithms. Clearly, we need proper ways to describe and process data.
+
+A data type consists of a collection of values together with a set of basic operations defined on these values. A data type is called an abstract data type (ADT) if the programmer can use it without having access to and also without knowing the details of how the values and operations are implemented.
+
+An object-oriented language such as C++ is a programming paradigm that has a direct link to ADTs by implementing them as a class. We shall use C++ as the programming language in this book.
+
+# 1.3 INTRODUCTION TO DATA STRUCTURES
+
+Computer science includes the study of data, its representation, and its processing by computers. Hence, it is essential to study about the terms associated with data and its representation. As mentioned in Section 1.2, the success of a software project often depends upon the choices made in the representation of the data and the choice of algorithms, and hence we need better methods to describe and process the data. The term data structure refers to the organization of data elements and the interrelationships among them.
