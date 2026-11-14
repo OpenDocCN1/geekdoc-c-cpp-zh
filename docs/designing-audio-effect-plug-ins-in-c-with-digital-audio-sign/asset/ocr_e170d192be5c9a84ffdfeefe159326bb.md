@@ -1,0 +1,13 @@
+client to maintain. During subsequent calls to the DLL, the client passes the pointer back to the DLL as a function argument so that it may operate on the persistent data. This is shown in Figure 2.3. When the DLL is no longer needed, it clears the memory by deleting the structure.
+
+In the C++ programming language, the class data type defines an object that is a collection of member variables and member functions which can operate on those variables. By packaging a plug-in as a C++ class, you get several advantages: first, all the benefits of C++ (encapsulation, polymorphism, etc.) are available during the coding process. Second, rather than allocating a data structure and returning a pointer to it, the DLL can create a new instance of the plug-in object and pass a pointer to the object to the client. Now, the client can simply call functions on the object—it does not have to communicate with the DLL again until it is time to either unload the DLL or, better yet, create another instance of the plug-in object. This leads to a third advantage over the C-based DLL: the client can create multiple plug-ins easily. The DLL can serve up multiple instances of the object. Sometimes, the plug-in is referred to as a server and this becomes another kind of client-server system. This is illustrated in Figure 2.4.
+
+Any variable declared inside a function, after the first open curly bracket { is only defined for the duration of the function. After the closing curly bracket } is encountered, the variable ceases to exist.
+
+![](bbox=[0.22, 0.43, 0.78, 0.71])
+
+Figure 2.3: In a C-style DLL, the client first calls an initialization function and the DLL returns a pointer to a dynamically allocated data structure (pData), which the client stores. Later, the client calls a function do_something() and passes the pointer back to the DLL as a function argument. The DLL accesses the stored data, uses it, and then typically responds with a success flag.
+
+# 2.4 Maintaining the User Interface
+
+Most plug-ins have an associated graphical user interface (GUI or UI) with controls for manipulating the device. There are several schemes, but in general, when a new instance of the plug-in is created, a new child window is created with the GUI embedded in it. Whenever a GUI control changes state, a function on the plug-in is called. The client or GUI passes the plug-in information about which control

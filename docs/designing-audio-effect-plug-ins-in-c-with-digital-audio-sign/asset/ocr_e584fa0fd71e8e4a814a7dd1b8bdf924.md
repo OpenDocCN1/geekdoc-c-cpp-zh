@@ -1,0 +1,6 @@
+highly customizable personal plug-in development lab with a drag-and-drop GUI designer. Of course those features and enhancements came from suggestions, comments, and critiques from the numerous students who used the software in class. The API would not be as robust today without their invaluable input and feedback. Stefan Sullivan tirelessly beta-tested the software, even in the middle of his thesis work; his comments led to many of the features in the current product. The RackAFX power users (students who went above and beyond the parameters of their projects and pushed the envelope of the API) include Mike Chemistruck, Greg Dion, Felipe Espic, Chen Zhang, Tim Schweichler, Phil Mimnick, Sherif Ahmed, Scott Dickey, Matan Ben-Asher, Jay Coggin, Michael Everman, and Jordan Whitney.
+
+I hope you enjoy learning the audio effects theory and plug-in design from the book and that each chapter opens up a new treasure box of cool audio gems you can use to make your own truly unique audio effects in your own audio effect laboratory. The software FAQs, sample code, and tutorials are all available at the website www.willpirkle.com and you are encouraged to upload your own plug-ins and videos as well. I can't wait to hear what you cook up in your lab!
+
+Will Pirkle
+June 1, 2012

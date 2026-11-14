@@ -1,0 +1,7 @@
+![](bbox=[0.13, 0.01, 0.86, 0.39])
+
+Figure 8.4: The familiar FIR feed-forward structure expanded out to $N$ delay taps with $N + 1$ coefficients. It is important to see that there is one less delay element than coefficients since $a_0$ is multiplied against the original undelayed signal.
+
+Next, mentally rotate the structure so it looks like Figure 8.5. In Figure 8.5 you can see that at any given time, a portion of the input signal $x(n)$ is trapped in the delay line. On each sample period, the input signal slides to the right and a summation is formed with the product of the coefficients and the samples $x(n - d)$. The words “sliding, summation and product” are key here—they’re the same words used to describe convolution.
+
+In Figure 8.6, the input signal $x(n)$ moves through the delay line being convolved with the IR on each sample period. Since each sample in the delay line is an impulse, and each impulse is symmetrical when reversed, this is the same as conceptually overlapping the IR on top of each sample and scaling by the sample value. The result is the final summation of all the peaks and valleys of the IR with the delayed signal $x(n)$. Thus, an FIR filter exactly implements discrete convolution in the time domain. This ultimately gives us a whole new way to filter a signal—by convolving against an impulse.

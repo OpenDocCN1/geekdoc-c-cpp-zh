@@ -1,0 +1,1 @@
+If you have enabled your plug-in to be compiled to produce a Virtual Studio Technology (VST) plug-in (Appendix A) then your RackAFX custom GUI will be available in any Windows VST client that supports custom GUIs (which is just about all of them). You launch it in whatever way the client digital audio workstation (DAW) requires.

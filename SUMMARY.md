@@ -987,6 +987,7 @@
 +   [高质量自动化测试设计模式：高质量测试属性与最佳实践](docs/design-patterns-for-high-quality-automated-tests-high-qualit/README.md)
 +   [C# 设计模式](docs/design-patterns-in-c/README.md)
 +   [为使用而设计：为应用程序和网络创建可用界面](docs/designed-for-use-create-usable-interfaces-for-applications-a/README.md)
++   [C++ 音频效果插件设计指南：数字音频信号处理理论](docs/designing-audio-effect-plug-ins-in-c-with-digital-audio-sign/README.md)
 +   [32位 PIC 微控制器与 MicroC 嵌入式系统设计](docs/designing-embedded-systems-with-32-bit-pic-microcontrollers-/README.md)
 +   [C++ 软件合成器插件设计：适用于 RackAFX、VST3 和 Audio Units](docs/designing-software-synthesizer-plug-ins-in-c-for-rackafx-vst/README.md)
 +   [对象设计：通过哈利·波特故事详解对象对象设计模式](docs/designing-with-objects-object-oriented-design-patterns-expla/README.md)
