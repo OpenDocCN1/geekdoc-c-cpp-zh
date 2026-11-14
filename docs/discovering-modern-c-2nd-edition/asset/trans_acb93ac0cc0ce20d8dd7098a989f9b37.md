@@ -1,0 +1,94 @@
+
+
+面向生成式编程与组件工程会议，第 67–76 页，ACM，2008年。
+
+- [23] Peter Gottschling, David S. Wise, and Adwait Joshi. “面向科学计算的算法与结构递归泛型支持.” 《并行、新兴与分布式系统国际期刊》(IJPEDS), 24(6):479–503, 2009年12月.
+- [24] Douglas Gregor, et al. C++ 泛型编程的语言支持：概念. https://dl.acm.org/doi/10.1145/1167473.1167499.
+- [25] Rainer Grimm. “C++20：使用 CppCoro 的协程.” https://www.modernescpp.com/index.php/c-20-coroutines-with-cppcoro.
+- [26] Rainer Grimm. 使用现代 C++ 进行并发编程. LeanPub, 2018.
+- [27] Rainer Grimm. 现代 C++：并发大师. Carl Hanser Verlag GmbH & Co. KG, 2018.
+- [28] E. Hairer, S.P. Norsett, and G. Wanner. 求解常微分方程 I：非刚性问题. 计算数学 Springer 系列. Springer, 2008.
+- [29] Lutz Hamel. “计算理论.” https://sites.google.com/a/uri.edu/csc544/. 第 11 讲，2017年春季.
+- [30] Kjell Hedström. “数值计算：为什么你永远、永远、永远不应该在代码中再次使用链表.” http://www.codeproject.com/Articles/340797/Number-crunching-Why-you-should-never-ever-EVER-Us, 2012年8月.
+- [31] Magnus R. Hestenes and Eduard Stiefel. “求解线性系统的共轭梯度方法.” 国家标准局研究杂志, 49(6):409–436, 1952年12月.
+- [32] Roger W. Hockney. 计算机基准测试科学，第 2 卷. SIAM, 1996.
+- [33] “C++ 参考：隐式转换.” http://en.cppreference.com/w/cpp/language/implicit_cast.
+- [34] ISO/IEC. ISO/IEC 14882:1998：编程语言 – C++ (C++98), 1998. 草案: http://www.lirmm.fr/~7Educour/Doc-objects/ISO+IEC+14882-1998.pdf.
+- [35] ISO/IEC. ISO/IEC 14882:2003：编程语言 – C++ (C++03), 2003. 草案: https://cs.nyu.edu/courses/fall11/CSCI-GA.2110-003/documents/c++2003std.pdf.
+- [36] ISO/IEC. ISO/IEC 14882:2011：编程语言 – C++ (C++11), 2011. 草案: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf.
+- [37] ISO/IEC. ISO/IEC 14882:2014：编程语言 – C++ (C++14), 2014年10月. 草案: https://github.com/cplusplus/draft/blob/master/papers/n4140.pdf?raw=true.
+- [38] ISO/IEC. ISO/IEC 14882:2017：编程语言 – C++ (C++17), 第 5 版, 2017年12月. 草案: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf.
+- [39] ISO/IEC. ISO/IEC 14882:2020：编程语言 – C++ (C++20), 2020. 草案: http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4659.pdf.
+- [40] Nicolai Josuttis. C++ 标准库：教程与参考，第 2 版. Addison-Wesley, 2012.
+- [41] Björn Karlsson. 超越 C++ 标准库：Boost 入门. Addison-Wesley, 2006.
+- [42] Kenny Kerr. “从算法到 C++ 中的协程”. http://msdn.microsoft.com/magazine/mt826346, 2017.
+- [43] Karl Meerbergen. 泛型线性代数软件. K.U. Leuven, 2014. http://people.cs.kuleuven.be/~karl.meerbergen/glas/.
+- [44] Karl Meerbergen, Krešimir Fresl, and Toon Knapen. “C++ 对外部软件库的绑定，包含 BLAS、LAPACK、UMFPACK 和 MUMPS 的示例.” ACM 数学软件事务 (TOMS), 36(4):22, 2009.
+- [45] Scott Meyers. “关于零规则的担忧.” http://scottmeyers.blogspot.de/2014/03/a-concern-about-rule-of-zero.html.
+- [46] Scott Meyers. 现代 C++ 编程要领：42 条改进 C++11 和 C++14 使用的具体方法. O’Reilly Media, Inc., 2014.
+- [47] Microsoft. “使用 CRT 库查找内存泄漏.” https://docs.microsoft.com/en-us/visualstudio/debugger/finding-memory-leaks-using-the-crt-library?view=vs-2019.
+- [48] Theodor Omtzigt and Peter Gottschling. HPR-BLAS. Stillwater Supercomputing 和 SimuNova, 2018. https://github.com/stillwater-sc/hpr-blas.
+- [49] Theodor Omtzigt and Peter Gottschling. HPR-Tensor. Stillwater Supercomputing 和 SimuNova, 2018. https://github.com/stillwater-sc/hpr-tensor.
+- [50] Theodor Omtzigt and Peter Gottschling. 通用数字算术库. Stillwater Supercomputing 和 SimuNova, 2018. https://github.com/stillwater-sc/universal.
+- [51] Oracle. “Oracle C++ 调用接口.” http://www.oracle.com/technetwork/database/features/oci/index-090820.html.
+- [52] Edward Ott. 动力系统中的混沌. Cambridge University Press, 2002.
+- [53] Dan Quinlan. “Rose：面向对象框架的编译器支持.” 并行处理快报, 10(02-03):215–226, 2000.
+- [54] Jan Rudl. 金融数学讲义, 2013年10月.
+- [55] Jeremy Siek, Douglas Gregor, Ronald Garcia, Jeremiah Willcock, Jaakko Järvi, and Andrew Lumsdaine. “面向 C++0x 的概念.” 技术报告 N1758, ISO/IEC JTC 1, 信息技术, 分委员会 SC 22, 编程语言 C++, 2005年1月.
+- [56] Jeremy G. Siek, Lie-Quan Lee, and Andrew Lumsdaine. Boost 图库：用户指南与参考手册. Addison-Wesley, 2001.
+- [57] Jeremy G. Siek and Andrew Lumsdaine. 泛型编程语言. 博士论文, Indiana University, 2005.
+- [58] Malte Skarupke. “统一初始化的问题.” http://probablydance.com/2013/02/02/the-problems-with-uniform-initialization, 2013年2月.
+- [59] A.A. Stepanov. “抽象惩罚基准测试,” 1.2 版 (KAI), 1992. http://www.open-std.org/jtc1/sc22/wg21/docs/D_3.cpp.
+- [60] Walter Storm. “STL deque 容器深入研究.” http://www.codeproject.com/Articles/5425/An-In-Depth-Study-of-the-STL-Deque-Container.
+- [61] Bjarne Stroustrup. C++ 程序设计语言，第 3 版. Addison-Wesley, 1997.
+- [62] Bjarne Stroustrup. C++ 程序设计语言，第 4 版. Addison-Wesley, 2013.
+- [63] Bjarne Stroustrup and Herb Sutter. “C++ 核心准则.” https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines.
+- [64] Herb Sutter. “为何不特化函数模板？” http://www.gotw.ca/publications/mill17.htm, 2009.
+- [65] Herb Sutter. “简单移动.” https://herbsutter.com/2020/02/17/move-simply, 2020年2月.
+- [66] Herb Sutter and Andrei Alexandrescu. C++ 编码标准：101 条规则、准则与最佳实践. Addison-Wesley, 2005.
+- [67] Xiaolong Tang and Jaakko Järvi. “基于概念的 C++ 中面向流的泛型优化变换.” 在 SAC’10：2010 年 ACM 应用计算研讨会论文集中, 2010年3月.
+- [68] Gerald Teschl. 常微分方程与动力系统，第 140 卷. American Mathematical Soc., 2012.
+- [69] David Vandevoorde, Nicolai M. Josuttis, and Douglas Gregor. C++ 模板：完全指南，第 2 版. Addison-Wesley, 2018.
+- [70] Kenton Varda. “协议缓冲区：Google 的数据交换格式.” 技术报告, Google, 2008年6月.
+- [71] T.L. Veldhuizen. “C++ 模板是图灵完备的.” citeseer.ist.psu.edu/581150.html, 2003.
+- [72] Vaughn Vernon. 领域驱动设计实战. Addison-Wesley, 2013.
+- [73] R.C. Whaley, A. Petitet, and J. Dongarra. “软件自动经验优化与 ATLAS 项目.” 并行计算, 27(1–2):3–35, 2001年1月.
+- [74] Baptiste Wicht. “C++ 基准测试 – `std::vector` vs `std::list` vs `std::deque`.” http://baptiste-wicht.com/posts/2012/12/cpp-benchmark-vector-list-deque.html, 2012.
+- [75] Anthony Williams. C++ 并发编程实战. Manning Publications, 2019.
+- [76] P. Wilmott. 保罗·威尔莫特量化金融导论. Wiley, 2007.
+- [77] Greg Wilson. 数据处理：使用 Java、Python 等解决日常问题. The Pragmatic Programmers. Pragmatic Bookshelf, 2005.
+
+## 主题索引
+
+- _MSC_VER, 68
+- __cpp_lib_chrono, 69
+- __cpp_modules, 68
+- Abrahams, David, 398
+- abs, 167
+  - 返回类型, 298
+- abs
+  - 在 Mandelbrot 集合中, 239
+- abs_view, 402
+- 抽象
+  - 惩罚, 347
+  - 提供一个, 72
+- 访问, 74–76
+  - 修饰符, 74
+- Accumutable, 196
+- accumulate, 231
+  - 抽象惩罚, 347
+  - 与概念, 193
+  - 用于求和, 154
+  - 来自 STL, 149
+  - 泛型, 184
+  - 在 STL 中, 212
+- accumulate, 354
+- accumulate_array, 152
+- Ada, 491
+- Adams, Douglas, 1
+- add, 355
+- 地址
+  - 0, 55
+  - 映射, 422
+  - 空间, 422
+

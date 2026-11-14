@@ -1,0 +1,13 @@
+Time mult<1, 1> is 1968 µs. These are 2122 MFlops.
+Time mult<1, 2> is 1356 µs. These are 3079 MFlops.
+Time mult<1, 4> is 1038 µs. These are 4022 MFlops.
+Time mult<1, 8> is 871 µs. These are 4794 MFlops.
+Time mult<1, 16> is 2039 µs. These are 2048 MFlops.
+Time mult<2, 1> is 1394 µs. These are 2996 MFlops.
+Time mult<4, 1> is 1142 µs. These are 3658 MFlops.
+Time mult<8, 1> is 1127 µs. These are 3705 MFlops.
+Time mult<16, 1> is 2307 µs. These are 1810 MFlops.
+Time mult<2, 2> is 1428 µs. These are 2923 MFlops.
+Time mult<2, 4> is 1012 µs. These are 4126 MFlops.
+Time mult<2, 8> is 2081 µs. These are 2007 MFlops.
+Time mult<4, 4> is 1988 µs. These are 2100 MFlops.

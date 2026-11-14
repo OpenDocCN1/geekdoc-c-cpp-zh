@@ -1,0 +1,16 @@
+```
+void f(c1::c2::cc& o) {}
+
+namespace f1 {
+    void f(const c1::c2::cc& o) {}
+    namespace f2 {
+        void f(const c1::c2::cc& o) {}
+        using ::f;
+        void g()
+        {
+            c1::c2::cc o;
+            f(o);
+        }
+    } // namespace f2
+} // namespace f1
+```

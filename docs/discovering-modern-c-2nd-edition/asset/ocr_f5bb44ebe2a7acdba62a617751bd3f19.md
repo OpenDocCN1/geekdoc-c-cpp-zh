@@ -1,0 +1,3 @@
+```
+for (int i= begin(xyz), e= end(xyz); i < e; ++i) ...
+```

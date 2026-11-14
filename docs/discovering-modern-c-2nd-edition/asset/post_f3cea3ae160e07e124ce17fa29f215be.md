@@ -1,0 +1,206 @@
+
+case is for creating a Singleton: a design pattern ensuring that only one instance of a certain class exists [16, pages 127–136].
+
+Thus, a data member that is both static and const exists only once and cannot be changed. As a consequence, it is available at compile time. We will use this for meta-programming in Chapter 5.
+
+Methods can also be declared static. This means that they can only access static data and call static functions. This can enable extra optimizations when a method does not need access to object data.
+
+Our examples use static data members only in their constant form and no static methods. However, the latter appears in the standard libraries in Chapter 4.
+
+## 2.2.5 Member Functions
+
+Functions in classes are called Member Functions or Methods. Typical member functions in object-oriented software are getters and setters:
+
+# Listing 2-1: Class with getters and setters
+
+Click here to view code image
+
+```cpp
+class complex
+{
+public:
+    double get_r() { return r; } // Causes clumsy
+    void set_r(double newr) { r = newr; } // code
+    double get_i() { return i; }
+    void set_i(double newi) { i = newi; }
+private:
+    double r, i;
+};
+```
+
+Methods are like every member by default private; i.e., they can only be called by functions within the class. Evidently, this would not be particularly useful for our getters and setters. Therefore, we give them public accessibility. Now, we can write c.get_r() but not c.r. The class above can be used in the following way:
+
+# Listing 2-2: Using getters and setters
+
+Click here to view code image
+
+```cpp
+int main()
+{
+    complex c1, c2;
+    // set c1
+    c1.set_r(3.0);        // Clumsy init
+    c1.set_i(2.0);
+    // copy c1 to c2
+    c2.set_r(c1.get_r()); // Clumsy copy
+    c2.set_i(c1.get_i());
+    return 0;
+}
+```
+
+At the beginning of our `main` function, we create two objects of type `complex`. Then we set one of the objects and copy it to the other one. This works but it is a bit clumsy, isn’t it?
+
+Our member variables can only be accessed via functions. This gives the class designer the maximal control over the behavior. For instance, we could limit the range of values that are accepted by the setters. We could count for each `complex` number how often it is read or written during the execution. The functions could have additional printouts for debugging (although a debugger is usually a better alternative than putting printouts into programs). We could even allow reading only at certain times of the day or writing only when the program runs on a computer with a certain IP. We will most likely not do the latter, at least not for complex numbers, but we could. If the variables are public and accessed directly, such behavior would not be possible. Nevertheless, handling the real and imaginary parts of a complex number in this fashion is cumbersome and we will discuss better alternatives.
+
+Most C++ programmers would not implement it this way. What would a C++ programmer then do first? Write constructors.
+
+## 2.3 Setting Values: Constructors and Assignments
+
+Construction and assignment are two mechanisms to set the value of an object, either at its creation or later. Therefore, these two mechanisms have much in common and are introduced here together.
+
+### 2.3.1 Constructors
+
+Constructors are methods that initialize objects of classes and create a working environment for other member functions. Sometimes such an environment includes resources like files, memory, or locks that have to be freed after their use. We come back to this later.
+
+Our first constructor will set the real and imaginary values of our complex:
+
+![](img/5682e787fc967e93d7e33e8bac5f58a0_146_0.png)
+
+```cpp
+class complex
+{
+public:
+    complex(double rnew , double inew)
+    {
+        r = rnew; i = inew;
+    }
+// ...
+};
+```
+
+A constructor is a member function with the same name as the class itself. It has no return type and can possess an arbitrary number of parameters. The constructor above allows us to set the values of c1 directly in the definition:
+
+![](img/5682e787fc967e93d7e33e8bac5f58a0_146_1.png)
+
+```cpp
+complex c1(2.0, 3.0); // Traditional constructor
+```
+
+To verify that we don’t lose accuracy here, we can use uniform initialization:
+
+```cpp
+[C++11] complex c1(2.0, 3.0); // Modern style
+```
+
+There is a special syntax for setting member variables and constants in constructors called Member Initialization List or for short Initialization List:
+
+![](img/5682e787fc967e93d7e33e8bac5f58a0_146_2.png)
+
+```cpp
+class complex
+{
+public:
+    complex(double rnew , double inew)
+    : r(rnew), // Old-fashioned
+    i{inew} // Modern style
+{}
+// ...
+};
+```
+
+An initialization list starts with a colon after the constructor's function head. It is in principle a non-empty list of constructor calls for the member variables (and base classes) or a subset thereof. The constructor syntax is applicable to non-class types as `double` as well. And here we have again the choice between the traditional syntax with parentheses and braces (since C++11). The braces impede narrowing conversions from the constructor parameters (or expressions thereof) to the member variables. In most cases they will have the same type anyway, but the braces communicate the initialization character better than the parentheses, which are more closely associated with function calls.
+
+The order of the initialized members should match that of their declarations to handle possible reference between the members properly. Compilers check this and warn us when we didn't respect the members' order. For members that aren't present in the initialization list, constructor calls without arguments are implicitly inserted at the according places. Such an argumentless constructor is called a `Default Constructor` (we will discuss it more in §2.3.1.1). Thus, our first constructor example is equivalent to:
+
+Click here to view code image
+
+```cpp
+class complex
+{
+public:
+    complex(double rnew , double inew)
+    : r{}, i{} // generated by the compiler
+    {
+        r = rnew; i = inew;
+    }
+};
+```
+
+For simple arithmetic types like `int` and `double`, it is not important whether we set their values in the initialization list or the constructor body. Data members of intrinsic types that do not appear in the initialization list remain uninitialized. A member data item of a class type is implicitly default-constructed when it is not contained in the initialization list.
+
+How members are initialized becomes more important when the members themselves are classes. Imagine we have written a class that solves linear systems with a given matrix which we store in our class:
+
+Click here to view code image
+
+```cpp
+class solver
+{
+public:
+    solver(int nrows, int ncols)
+    // : A{}   #1 Error: calls non-existing default constructor
+    {
+        A(nrows, ncols);   // #2 Error: ctor call not allowed
+    }
+    // ...
+    private:
+    matrix_type A;
+};
+```
+
+Suppose our matrix class has only a constructor taking two arguments for setting the dimensions. This constructor cannot be called in the function body of the constructor (#2). The expression in #2 is not interpreted as a constructor but as a function call: A.operator() (nrows, ncols); see §3.7.
+
+As all member variables are constructed before the constructor body is reached, our matrix A will be default-constructed at #1. Unfortunately, matrix_type is not Default-Constructible, causing an error message like:
+
+Click here to view code image
+
+```
+Operator >>matrix_type::matrix_type()<< not found.
+```
+
+Thus, we need to write:
+
+Click here to view code image
+
+```cpp
+class solver
+{
+public:
+    solver(int nrows, int ncols) : A(nrows , ncols) {}
+    // ...
+};
+```
+
+to call the right constructor of the matrix.
+
+In the preceding examples, the matrix was part of the `solver`. A more likely scenario is that the matrix already exists. Then we would not want to waste all the memory for a copy but refer to the matrix. Now our class contains a reference as a member and we are again obliged to set the reference in the initialization list (since references are not default-constructible either):
+
+Click here to view code image
+
+```cpp
+class solver
+{
+public:
+    solver(const matrix_type& A) : A(A) {}
+
+    // ...
+private:
+    const matrix_type& A;
+};
+```
+
+The code also demonstrates that we can give the constructor argument(s) the same name(s) as the member variable(s). This raises the question of to which objects the names are referring, in our case which `A` is meant in the different occurrences? The rule is that names in the initialization list outside the parentheses always refer to members. Inside the parentheses, the names follow the scoping rules of a member function. Names local to the member function—including argument names—hide names from the class. The same applies to the body of the constructor: names of arguments and of local variables hide the names in the class. This is confusing at the beginning but you will get used to it quicker than you think.
+
+Let us return to our `complex` example. So far, we have a constructor allowing us to set the real and the imaginary parts. Often only the real part is set and the imaginary is defaulted to 0.
+
+Click here to view code image
+
+```cpp
+class complex
+{
+public:
+    complex(double r, double i) : r(r), i(i) {}
+    // complex(double r) : r(r), i(0) {}
+
+    // ...
+};
+```

@@ -1,0 +1,1 @@
+my_root(3.0) = 1.73205, the calculation took 0 μs.

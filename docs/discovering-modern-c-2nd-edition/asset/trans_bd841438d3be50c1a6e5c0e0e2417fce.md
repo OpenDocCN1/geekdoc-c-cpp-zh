@@ -1,0 +1,167 @@
+
+
+#include <cmath>
+template <typename Base, typename Exponent>
+Base inline power(const Base& x, const Exponent& y) { ... }
+double inline power(double x , double y)
+{
+    return std::pow(x, y);
+}
+
+Functions with many specializations are best implemented by means of class specialization. This allows for full and partial specialization without taking all overloading and ADL rules into consideration. We will show this in Section 3.5.4.
+
+If you ever feel tempted to write hardware-specific specializations in assembler code, try to resist. If you cannot, please read first the few remarks in Appendix A.6.3.
+
+### 3.5.2.2 Ambiguities
+
+In the previous examples, we specialized all parameters of the function. It is also possible to specialize some of them in overloads and leave the remaining parameter(s) as template(s):
+
+Click here to view code image
+
+```
+template <typename Base, typename Exponent>
+Base inline power(const Base& x, const Exponent& y);
+template <typename Base>
+Base inline power(const Base& x, int y);
+template <typename Exponent>
+double inline power(double x, const Exponent& y);
+```
+
+The compiler will find all overloads that match the argument combination and select the most specific, which is supposed to provide the most efficient special-case implementation. For instance, `power(3.0, 2u)` will match for the first and third overloads where the latter is more specific. To put it in terms of higher math: type specificity is a partial order that forms a lattice, and the compiler picks the maximum of the available overloads. However, you don’t need to dive deep into algebra to see which type combination is more specific.
+
+10. For those who like higher mathematics. And only for those.
+
+If we called `power(3.0, 2)` with the previous overloads, all three would match. However, this time we cannot determine the most specific overload. The compiler will tell us that the call is ambiguous and show us overloads 2 and 3 as candidates. As we implemented the overloads consistently and with optimal performance we might be happy with either choice but the compiler will not choose for us. To disambiguate, we must add a fourth overload:
+
+```
+double inline power(double x, int y);
+```
+
+The lattice experts will immediately say: “Of course, we were missing the join in the specificity lattice.” But even without this expertise, most of us understand why the call was ambiguous with the three overloads and why the fourth one rescued us. In fact, the majority of C++ programmers get along without studying lattices.
+
+### 3.5.3 Partial Specialization of Classes
+
+When we implement template classes, we will sooner or later run into situations where we want to specialize a template class for another template class. Suppose we have templates `complex` and `vector` and want to specialize the latter for all instances of `complex`. It would be quite annoying doing this one by one:
+
+Click here to view code image
+
+```
+template <>
+class vector<complex<float>>;
+
+template <>
+class vector<complex<double>>; // again ??? :-/
+
+template <>
+class vector<complex<long double>>; // how many more ??? :-P
+```
+
+This is not only inelegant, it also destroys our ideal of universal applicability because the `complex` class supports all `Real` types and our specialization above only takes a limited number thereof into account. In particular, instances of `complex` with future user types cannot be considered for obvious reasons.
+
+The solution that avoids the implementation redundancy and the ignorance of new types is *Partial Specialization*. We specialize our vector class for all `complex` instantiations:
+
+```cpp
+template <typename Real>
+class vector<complex<Real> >
+{
+    ... ;
+};
+```
+
+If you use a compiler without C++11 support, pay attention to put spaces between closing `>`; otherwise your compiler may interpret two subsequent `>` as shift operator `>>`, leading to rather confusing errors. Although this book mainly addresses C++11 programming, we still keep the separating spaces for readability. Partial specialization also works for classes with multiple parameters, for instance:
+
+Click here to view code image
+
+```cpp
+template <typename Value, typename Parameters>
+class vector<sparse_matrix<Value, Parameters> >
+{
+    ... ;
+};
+```
+
+We can also specialize for all pointers:
+
+```cpp
+template <typename T>
+class vector<T*>
+{
+    ... ;
+};
+```
+
+Whenever the set of types is expressible by a *Type Pattern*, we can apply partial specialization on it. Partial template specialization can be combined with regular template specialization from §3.5.1—let us call it *Full Specialization* for distinction. In this case, the full specialization is prioritized over the partial one. Between different partial specializations the most specific is selected. In the following example:
+
+Click here to view code image
+
+```cpp
+template <typename Value, typename Parameters>
+class vector<sparse_matrix<Value, Parameters> >
+{
+    ... ;
+};
+
+template <typename Parameters>
+class vector<sparse_matrix<float, Parameters> > { ... };
+```
+
+the second specialization is more specific than the first one and picked when it matches. According to the same notion of specificity, a full specialization is always more specific than any partial one.
+
+### 3.5.4 Partially Specializing Functions
+
+Function templates actually cannot be specialized partially. We can, however, as for the full specialization (§3.5.2.1), use overloading to provide special implementations. For that purpose, we write more specific function templates that are prioritized when they match. As an example, we overload the generic `abs` with an implementation for all `complex` instances:
+
+```cpp
+template <typename T>
+inline T abs(const T& x)
+{
+    return x < T(0) ? -x : x;
+}
+template <typename T>
+inline T abs(const std::complex <T>& x)
+{
+    return sqrt(real(x)*real(x) + imag(x)*imag(x));
+}
+```
+
+Overloading of function templates is easy to implement and works reasonably well. However, for massively overloaded functions or for overloads spread over many files of a large project, sometimes the intended overload is not called. The reason is the non-trivial interplay of the already challenging namespace resolution with the overload resolution of mixed template and non-template functions.
+
+=> c++14/abs_functor.cpp
+
+To ascertain a predictable specialization behavior, it is safest to implement it internally in terms of class template specialization and only provide a single function template as a user interface. The challenging part here is the `return` type of this single function when the `return` types for the specializations vary. As in our `abs` example: the general code returns the argument type while the more specific `complex` version returns the underlying value type. This can be handled in a portable way so that it even works with C++03. However, using type deduction in newer standards simplifies such specializations dramatically.
+
+[C++14] We start with the easiest implementation by using C++14:
+
+```cpp
+template <typename T> struct abs_functor ;
+
+template <typename T>
+decltype(auto) abs(const T& x)
+{
+    return abs_functor<T>()(x);
+}
+```
+
+Our generic abs function creates an anonymous object abs_functor<T>() and calls its operator() with the argument x. Thus, the corresponding specialization of abs_functor needs a default constructor (usually implicitly generated) and an operator() as a unary function accepting an argument of type T. The return type of operator() is automatically deduced. For abs, we could most likely deduce the return type with auto instead since all different specializations should return a value. Just for the unlikely case that some specializations might be const- or reference-qualified, we use decltype(auto) to pass on the qualifiers.
+
+[C++11] When we program with C++11, we have to declare the return type explicitly. At least, this declaration can apply type deduction:
+
+```cpp
+template <typename T>
+auto abs(const T& x) -> decltype(abs_functor<T>()(x))
+{
+    return abs_functor<T>()(x);
+}
+```
+
+It is admittedly redundant to repeat abs_functor<T>()(x) because any redundancy is a potential source of inconsistency but the alternatives in C++11 aren't better.
+
+[C++03] Back in C++03, we could not use type deduction at all for the return type. Thus, the functor had to provide it by a typedef like result_type:
+
+```cpp
+template <typename T>
+typename abs_functor<T>::result_type
+abs(const T& x)
+{
+```
+
