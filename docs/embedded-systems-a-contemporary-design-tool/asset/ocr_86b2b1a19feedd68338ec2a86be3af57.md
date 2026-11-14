@@ -1,0 +1,19 @@
++   exchanging/sharing synchronizing, scheduling, sharing resources, operating system, real-time
+
+include exchanging/sharing data between tasks, synchronizing tasks, scheduling task execution, and sharing resources among the tasks. The piece of software that provides the required coordination is called an operating system. When the control must ensure that task execution satisfies a set of specified time constraints, the operating system is called a real-time operating system (RTOS).
+
+This chapter provides an introduction to and motivation for implementing tasks and multitasking as a design strategy for an embedded application. We will introduce some of the necessary terminology and examine the critical role of time in developing and deploying many embedded applications.
+
+We will start by examining the tasks themselves and look at some of the problems that arise when we seek to build, operate, and control a system made up of a number of independent tasks. We will introduce the operating system as one means to coordinate and control the task execution so as to ensure that the higher level application performs as we desire. We will identify the major responsibilities of an operating system, examine the characteristics and capabilities that distinguish an RTOS, and then study the core set of requirements of the OS as embodied in the kernel. We will identify the central responsibilities of and the basic architecture for various control strategies. Finally, we will look at different kinds of stacks and their role in managing context switches associated with task state changes, task preemption, or interrupts.
+
+# RTOS – Real-Time Operating System
+
+# 11.2 TASKS AND THINGS
+
+Let's open the discussion with an invitation to a small group of special friends. We invite them over for an evening filled with music, a gourmet meal, and perhaps some congenial philosophical discussions while dining. For our friends, it is important that everything be perfect. We want each of the dishes that are being prepared to finish at the same time so that they are cooked to perfection and all can be presented at the table together. As we plan the meal, we have to decide when we must start cooking the meat, the fish, the vegetables, the rice or potatoes or noodles. If we have scheduled everything properly, they will all finish together and culminate in a marvelous banquet; if not, we order out and then rely on the music and conversation.
+
+At some point, all of the different dishes are cooking together. We have broken the main task – cook the meal – down into a number of smaller ones, subtasks, that can be done at the same time. However, since there is only one of us, we cannot devote all of our attention to each of the subtasks all the time. Therefore, we continually check one dish and then the next to make sure that everything is proceeding smoothly – add a little salt here, adjust the flame a bit there, add a little wine to that sauce, adjust the seasoning on this one, start that one. We can capture the meal preparation in a high-level UML activity diagram as shown in Figure 11.1.
+
+The common approach to designing an embedded application follows the same pattern. The application comprises a number of tasks that must be completed in order for the intended application to be completed. In the preparation of the meal, we are working on several of the tasks at the same time; in the application, the CPU is being shared among the tasks so that each can progress.
+
+In the earlier studies of design, as with the meal, we learned to partition the application first into major functions and then into smaller pieces. Ultimately, we mapped those pieces onto the hardware and software modules. Each of the software modules that comprise the embedded program is simply a collection of instructions – the firmware – that direct the system's central processing unit, the CPU, to carry out a prescribed job. If the partitioning

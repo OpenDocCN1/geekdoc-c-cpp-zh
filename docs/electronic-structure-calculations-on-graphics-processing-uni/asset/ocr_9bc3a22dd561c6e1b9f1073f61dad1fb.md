@@ -1,0 +1,3 @@
++   137. Becke, A.D. (1988) Density-functional exchange-energy approximation with correct asymptotic behavior. Phys. Rev. A, 38, 3098-3100.
++   138. Lee, C., Yang, W. and Parr, R.G. (1988) Development of the Colle-Salvetti correlation-energy formula into a functional of the electron density. Phys. Rev. B, 37, 785-789.
++   139. Miehlich, B., Savin, A., Stoll, H. and Preuss, H. (1989) Results obtained with the correlation energy density functionals of Becke and Lee, Yang and Parr. Chem. Phys. Lett., 157, 200-206.

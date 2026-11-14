@@ -1,0 +1,13 @@
+![](bbox=[0.15, 0.08, 0.9, 0.46])
+
+Figure 4.6 Schematic representation of a J-Engine kernel for one angular momentum class, for example, (ss|ss). Cyan squares represent significant ERI contributions. Sorted bra and ket vectors are represented by triangles to the left and above the grid. The path of a 2 x 2 block as it sweeps across the grid is shown in orange. The final reduction across rows of the block is illustrated within the inset to the right. (See insert for colour resolution of this figure.)
+
+```
+\langle \mu\nu | \mu\nu \rangle^{1/2} (\Delta \sigma | \Delta \sigma)^{1/2} = (\mu\nu | \mu\nu)^{1/2} (\lambda \sigma | \lambda \sigma)^{1/2}. (4.42)
+```
+
+As the distance R between \(\phi_\mu\) and \(\phi_\nu\) increases, the quantity \(\langle \mu\nu | \mu\nu \rangle\) decays slowly as 1/R compared to \(e^{-R^2}\) for \(\langle \mu\nu | \mu\nu \rangle\). This weaker bound means that all N\(^4\) ERIs would need to be examined, leading to a severe performance reduction compared to the N\(^2\) Coulomb algorithm. Thus, the scaling advantages of the \(\mu\lambda / \nu\sigma\) pairing are very much worth maintaining, even at the cost of reduced hardware efficiency.
+
+The K-Engine begins with the now-unusual step of enumerating AO shell pairs \(\phi_\mu \phi_\nu\). Because the \(\phi_\mu \phi_\nu\) and \(\phi_\lambda \phi_\sigma\) pairs contribute to different matrix elements, symmetry cannot be exploited without introducing dependencies between exchange outputs. Neglecting symmetry, AO pairs are constructed for both \(\mu \le \lambda\) and \(\mu > \lambda\) pairs. As with Coulomb evaluation, the pairs are separated by angular momentum class, and different kernels are tuned for each type of integral. Inclusion of \(\mu > \lambda\) pairs requires additional pair and kernel classes compared to the J-Engine, since, for example, kernels handling \(\mu s\) pairs are distinct from those handling \(sp\) pairs.
+
+The J-Engine ordering of bra and ket primitive pairs would leave contributions to individual K elements scattered throughout the ERI grid. In order to avoid inter-block communication, it is necessary to localize these exchange contributions. This can be accomplished by sorting the primitive pairs by the \(\mu\) index, so that the ERIs contributing to each element, \(K_{\mu\nu}\), form a contiguous tile in the ERI grid. This is illustrated in Figure 4.7. Within each segment of \(\mu\) pairs, primitive PQs are additionally

@@ -1,0 +1,17 @@
+**Negative impact attacks** Negative impact attacks are intended to cause the system to malfunction or to completely prevent operation. Many embedded systems are battery powered and utilize an activity schedule intended to minimize power usage. Continually issuing commands, subverting power-down periods, or routinely activating high-power peripheral devices can lead to excessive power usage and premature battery drain. A reduced or limited power level within the system may preclude the activation of subsystems intended to detect and block intruders. In the extreme, a fully drained battery can effectively halt the operation of the system. Depending upon the design, an embedded system may require some form or internal temperature management, ranging from mechanical devices such as fans or a cooling fluid flow through the system to controlled and limited use higher current devices. Subverting such cooling has the potential of damaging or destroying sundry subsystem components and, thereby, partially or fully impeding operation and corrupting data collection or control signal generation. Input sensors and output control signaling can easily be damaged. Once again, fundamental electromagnetic physics provides the means to couple unwanted and corrupting signals into data streams from or to such devices.
+
+# ## 8.23 DEALING WITH THE PROBLEM – PROTECTING AGAINST THE ATTACKS
+
+Given the number of ways that an embedded system can be compromised, how should one address the problem? As we stressed repeatedly earlier, the problem must be seriously addressed on day one, when the system requirements are being defined and the design specification written. Good system security cannot be an afterthought. In Chapter 5, we learned about unified modeling language (UML) modeling and, specifically, Use Cases. A critical component to a Use Case is an enumeration of the exceptions to that Use Case. In that list, should we endeavor to identify where and how that Use Case could be attacked. A similar tool can be a simple variation on Failure Modes and Criticality Analysis in which system vulnerabilities are searched for. Recognizing the potential for attack is the first step in planning a defense.
+
+# ### 8.23.1 Protecting the Software
+
+Protecting the software begins with a solid, well designed, secure operating system or kernel. As the development of the system proceeds, good, disciplined design and coding practices are essential. In the following, the term *identifier* is used to collectively refer to variables, constants, and function names. We will begin with the following. We note that engineering and the design cycle are an iterative, not a one pass process. Iterative does not mean that we keep guessing until something works but, rather, that we continually revisit all steps, as necessary, to ensure a safe, reliable, secure design that meets all initial or modified requirements. See the material of Co-Design in Chapter 9.
+
+# #### 8.23.1.1 FIRST Steps
+
+# #### 8.23.1.1 THE OPERATING SYSTEM
+
+**Multiple Independent Levels of Security**
+
+Looking first at the operating system, a number of technologies have been conjoined to try to make a potential successful attack as distant as possible and to minimize any potential damage should an attack occur. Such an architecture is based upon a philosophy called MILS, that is, an architecture supporting Multiple Independent Levels of Security. The design is

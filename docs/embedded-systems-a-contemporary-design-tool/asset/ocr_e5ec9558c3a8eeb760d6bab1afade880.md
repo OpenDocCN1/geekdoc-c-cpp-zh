@@ -1,0 +1,11 @@
+one time. Devices built by a vendor mirror the technologies studied earlier for implementing ROM-type devices. Transistors are selectively included to produce the desired behavior. antifuse Devices that can be programmed once, in the field, are often based on a technology called the antifuse. In traditional electronics, a fuse is utilized in a circuit to protect against potentially damaging high currents by opening a conducting path when necessary. The anti-fuse is designed to do the opposite. When a sufficiently high voltage is applied across an amorphous silicon link between two metal conductors, a metal-crystalline alloy is formed to complete the conducting path. The newly formed conducting path(s) enable the interconnection of generic blocks of primitive logic components to form more complex logic circuits. Once the low-resistance resistance path is formed, the process is irreversible.
+
+# 19.5.2 Reprogrammable Technologies
+
+Today's (re)programmable logic devices are generally either Static Random Access Memory (SRAM) based or use variations on programmable ROM technologies. SRAM-based architectures are built around volatile Read/Write memory cells that control the state of intra-device connections. The device configuration and interconnection information are held in a companion nonvolatile storage medium such as a PROM or similar flash type of external boot device. One significant advantage of such an approach is that the configuration of the device can be dynamically changed at runtime, thereby permitting the system to adapt to the problem at hand.
+
+floating gate Programmable ROM technologies fall into three broad categories: EPROM, Electrically Erasable PROM (EEPROM), and FLASH. All three of these devices are built on what are known as floating gate technologies. To introduce the concept, we will begin with the memory fragment in Figure 19.8, which gives a high-level view of a portion of a programmable AND array.
+
+![](bbox=[0.27, 0.54, 0.7, 0.86])
+
+Figure 19.8 Programmable ROM Memory Architecture

@@ -1,0 +1,9 @@
+multiplications and a floating-point division. With a little thought, this can be rewritten to improve performance considerably. The constants must be recalculated for the second example, but it requires an assignment, 10 integer-to-integer conversions, 10 integer additions, a single conversion from an integer to a float and a single floating-point multiplication. The number of operations has been almost halved and many of those operations are faster than in the first example, especially if no floating-point unit is available. As additional, but less intuitive, benefit of the second example is that it is potentially more accurate as there if less opportunity for floating point rounding errors to creep in.
+
+In theory, it is possible to optimise the performance of logical operators to an extent by exploiting the short-circuit evaluation technique used in The idea is because the logical-and operator only evaluates the right-hand argument if the left hand argument evaluates as true (or false, in the case of the logical-or operator) then the average speed of evaluation can be reduced by carefully choosing the order of the arguments: if an expression is relatively slow to evaluate, it is best used as the right-hand argument; if one argument is more likely to be false than the other, it is best used as the left-hand argument of a logical-and operation; and if one argument is more likely to be true than the other, it is best used as the left-hand argument of a logical-or operation. The principle is sound enough, but in practice, there are probably not many opportunities to make significant performance gains in this manner and there are other considerations which should take priority, such as ensuring the right-hand argument does not have any side-effects.
+
+```
+/* Short-circuit evaluation ensures pp_apple is
+* checked before dereferencing to check the
+* pointer it points to. */
+```

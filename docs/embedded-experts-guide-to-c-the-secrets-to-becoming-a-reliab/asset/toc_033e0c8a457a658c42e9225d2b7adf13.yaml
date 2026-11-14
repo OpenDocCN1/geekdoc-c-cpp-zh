@@ -1,0 +1,191 @@
+level_changes:
+- line: 17
+  before: 2
+  after: 1
+- line: 52
+  before: 3
+  after: 2
+- line: 81
+  before: 3
+  after: 2
+- line: 174
+  before: 2
+  after: 1
+- line: 184
+  before: 3
+  after: 2
+- line: 368
+  before: 2
+  after: 1
+- line: 438
+  before: 1
+  after: 2
+- line: 543
+  before: 1
+  after: 2
+- line: 591
+  before: 2
+  after: 1
+- line: 982
+  before: 2
+  after: 1
+- line: 1180
+  before: 2
+  after: 1
+- line: 1190
+  before: 3
+  after: 2
+- line: 1200
+  before: 3
+  after: 2
+- line: 1248
+  before: 3
+  after: 2
+- line: 1268
+  before: 3
+  after: 2
+- line: 1422
+  before: 2
+  after: 1
+- line: 1848
+  before: 2
+  after: 1
+- line: 1858
+  before: 3
+  after: 2
+- line: 1870
+  before: 3
+  after: 2
+- line: 1996
+  before: 1
+  after: 2
+- line: 2062
+  before: 2
+  after: 1
+- line: 2226
+  before: 3
+  after: 2
+- line: 2232
+  before: 3
+  after: 2
+- line: 2236
+  before: 3
+  after: 2
+- line: 2317
+  before: 2
+  after: 1
+- line: 2367
+  before: 3
+  after: 2
+- line: 2389
+  before: 3
+  after: 2
+- line: 2476
+  before: 3
+  after: 2
+- line: 2480
+  before: 3
+  after: 2
+- line: 2520
+  before: 2
+  after: 1
+- line: 2554
+  before: 3
+  after: 2
+- line: 2690
+  before: 2
+  after: 1
+- line: 2822
+  before: 2
+  after: 1
+- line: 2824
+  before: 3
+  after: 2
+- line: 2944
+  before: 2
+  after: 1
+- line: 2988
+  before: 2
+  after: 1
+- line: 3008
+  before: 2
+  after: 1
+- line: 3016
+  before: 2
+  after: 1
+- line: 3027
+  before: 2
+  after: 1
+text_changes:
+- line: 232
+  before: Counter-intuitive syntax
+  after: 反直觉的语法
+- line: 438
+  before: define PEARS
+  after: '#define PEARS'
+- line: 543
+  before: error IEEE 754 support is required.
+  after: IEEE 754 支持要求
+- line: 603
+  before: Arrays
+  after: 数组
+- line: 611
+  before: Structures
+  after: 结构体
+- line: 635
+  before: Unions
+  after: 联合体
+- line: 639
+  before: Linked lists
+  after: 链表
+- line: 756
+  before: Fig 3.2 基本链表数据结构易于实现。列表中的每个元素都包含一个指向下一个元素的指针，这提供了“链接”——最后一个链接指向 NULL。双向链表在每个条目中添加一个指向前一个元素的链接。在循环链表中，列表最终会回到自身——而不是链接到最后一个元素，它链接回第一个元素，尽管在这种情况下“第一个”和“最后一个”基本上变得没有意义。列表通常仅旨在包含一种类型，尽管类型泛型实现是可能的。
+  after: 图 3.2 基本链表数据结构
+- line: 819
+  before: Fig 3.3 栈
+  after: 图 3.3 栈
+- line: 1392
+  before: Endnotes for Chapter 5 - Interacting with Hardware
+  after: 第 5 章 - 与硬件交互 尾注
+- line: 1422
+  before: 'Chapter 6: Data Security and Integrity'
+  after: 第 6 章：数据安全与完整性
+- line: 1807
+  before: Sharing keys
+  after: 密钥共享
+- line: 1817
+  before: Endnotes for Chapter 6 - Data Security and Integrity
+  after: 第 6 章 - 数据安全与完整性 尾注
+- line: 1848
+  before: 第7章：C预处理器
+  after: 第 7 章：C 预处理器
+- line: 1996
+  before: error Use a compiler that supports C99.
+  after: C99 编译器支持要求
+- line: 2030
+  before: 第 7 章尾注 - C 处理器
+  after: 第 7 章尾注 - C 预处理器
+- line: 2307
+  before: Endnotes for Chapter 8 - Understanding the Translation Process
+  after: 第 8 章 - 理解翻译过程 尾注
+- line: 2317
+  before: 'Chapter 9: Run! Run! Run! Optimising Software'
+  after: 第 9 章：运行！运行！运行！优化软件
+- line: 2520
+  before: 第10章：多任务
+  after: 第 10 章：多任务
+- line: 2717
+  before: 与操作系统协作：C标准的规定
+  after: 与操作系统协作：C 标准的规定
+- line: 2822
+  before: References
+  after: 参考文献
+- line: 2944
+  before: Websites
+  after: 网站
+- line: 2988
+  before: Author's Note
+  after: 作者的话
+- line: 3008
+  before: 以下致谢：
+  after: 致谢

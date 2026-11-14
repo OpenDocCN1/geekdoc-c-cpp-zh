@@ -1,0 +1,15 @@
+For ket pairs, a density-weighted Schwarz contribution $b_y^{ks} = \langle ij|ij \rangle^{1/2} |P_y|^{\max}$ is stored such that the full density-weighted Schwarz bound can be efficiently evaluated as follows:
+
+$|\langle ij|kP|kl \rangle| \le B_y^{\max} B_y^{\max} = \langle ij|ij \rangle^2 \langle k|k \rangle^2 |P|_{\max}^{\max}$.
+
+Here, the max is taken over all functions in the shell pair. For ket PQs, the corresponding block of the density matrix is also transformed to the Hermite basis and incorporated into the Hermite coefficients to produce the combined $(D_p^0)$ [24]:
+
+$|ij|P|_{ab} = \sum_p E_p^{(ij)} P_{a^*} [\lambda_p] = \sum_p D_p^{(ij)} [\lambda_p]$.
+
+The generalized outer product of these bra and ket PQ vectors represents all primitive integrals needed to evaluate the Coulomb matrix. This structure is illustrated in the left half of Figure 4.5, where each pixel represents a primitive ERI and is colored according to the magnitude of the Schwarz bound for that integral. Before mapping the grid of primitive ERIs to CUDA compute units, it is important to consider the pattern of ERI magnitudes within the ERI matrix of Figure 4.5. Before evaluating an ERI, its Schwarz bound is formed by the product $b_y^{ks} b_y^{kt}$. If the bound falls below the ERI threshold, $\epsilon \approx 10^{-11}$, the ERI is deemed insignificant and no further evaluation is performed. If the primitives are ordered arbitrarily, as in Figure 4.5a, skipped and evaluated integrals will be interspersed among the threads of each warp. As a result, neglecting integrals offers almost no performance advantage, since all cores in the warp are occupied to compute the non-negligible elements. A solution is to sort the primitive bra and ket arrays for each angular momentum class by decreasing Schwarz contributions $b_y^{\max}$. This results in the grid shown in Figure 4.5b, where significant integrals are localized in the upper left corner of each grid. Because the bounds $b_y^{\max}$ rapidly decrease with increasing $ij$ distance, the number of bra and ket pairs grows linearly as the size of the system, and the total number of significant ERIs will only $N^2$, a tremendous reduction from the full set of $M^4$ integrals.
+
+In addition to removing warp divergence when computing significant ERIs, the sorted PQs can also be exploited to completely avoid examining bounds for most negligible integrals. After sorting
+
+![](bbox=[0.15, 0.55, 0.85, 0.76])
+
+Figure 4.5. Organization of ERIs for Coulomb formation. Rows and columns correspond to primitive bra and ket pairs, respectively. Each ERI is colored according to the magnitude of its Schwarz bound. Data are derived from calculation on ethane molecule. Figure (a) obtained by arbitrary ordering of pairs within each angular momentum class and suffers from load imbalance because large and small integrals are located in neighboring cells, and (b) that sorts bra and ket primitives by Schwarz contribution within each momentum class, providing an efficient structure for parallel evaluation (see inset for colour representation of this figure)

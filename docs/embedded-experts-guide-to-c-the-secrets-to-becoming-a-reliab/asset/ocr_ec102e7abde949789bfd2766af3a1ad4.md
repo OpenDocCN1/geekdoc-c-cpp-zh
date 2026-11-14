@@ -1,0 +1,1 @@
+5 This is occasionally referred to as “Allman style” or “BSD style” – it is named after Eric Allman who used it in much of the code for the utilities he wrote for the BSD operating system.

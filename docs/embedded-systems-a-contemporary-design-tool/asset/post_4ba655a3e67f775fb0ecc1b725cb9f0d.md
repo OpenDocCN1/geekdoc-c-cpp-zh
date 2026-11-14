@@ -1,0 +1,64 @@
+
+## 19.8.1 Lane Departure Detection Implementation and Acceleration
+
+The project was designed and developed by Aaron Severance of the University of Washington, Seattle, WA, November 2005.
+
+### 19.8.1.1 Introduction
+
+A recent advance in safety technology in the automotive industry has been the design of lane departure detection systems. These systems are designed to alert an unaware driver that his or her vehicle has started to leave the designated lane. Such a system can be very useful in alerting tired or distracted drivers of their potentially harmful state.
+
+In order to function properly, such a system must be able to handle different size, color, shape, and spacing of lane markings. One popular approach is to use a forward-looking camera, mounted in the windshield of the vehicle, to examine the road. This approach's utility lies in its ability to analyze a large field of information and to be easily adapted/upgraded, something that approaches utilizing specialized sensors lack.
+
+Algorithmically, this can be accomplished using three main steps: edge detection, line finding, and image space conversion. Edge detection is the process of reducing the amount of information to be analyzed by selecting only portions of the image with a strong gradient. Line finding does a transformation on the image in order to detect predominant lines in the image, which should correspond to lane markings. Finally, image space conversion converts the positions of the lines found in the image to positions in a real-world coordinate system, relative to the position of the vehicle.
+
+Implementation was done as a dual core processor system on a Xilinx Spartan-III FPGA. The hardware and software configurations were created using Xilinx Platform Studio 6.2i, which included the MicroBlaze soft processor core that was used in the design. In addition, Xilinx StateCAD was used in order to design the custom hardware acceleration logic.
+
+### 19.8.1.2 Requirements
+
+The lane detection problem reduces to two tasks: edge detection followed by line finding.
+
+#### 19.8.1.2.1 EDGE DETECTION
+
+To identify an edge within a visual field, a region of the input must be specified to be the region of interest (ROI). The edge detection routine must have an output that corresponds to convolving the image with a 3x3 Sobel vertical edge detection filter in the ROI. Any pixels in the image not in the ROI must be set to zero. The convolution must not be circular; the outermost pixels of the image, where a full convolution cannot be performed, must be set to zero. Finally, a threshold input must be specified; pixels with edge strength below this threshold must be set to zero.
+
+#### 19.8.1.2.2 LINE FINDING
+
+Line finding was implemented using the Hough Transform, with the output bin of angles equal in number to the input width of the image. Each of the left/right halves of the image must be searched for one lane marking, with at least r/2 angles scanned. A line finding algorithm must be able to identify the two peaks with the highest value in the output of the Hough Transform as probable lane markings. An inverse Hough Transform must be provided; this will allow for output to an image buffer of the lines identified as lane markings.
+
+### 19.8.1.3 Design
+
+The design of the system was implemented through a set of phased deliverables. First, a basic setup with the MicroBlaze processor was developed. Next, the code for edge detection and line finding were ported to the setup. A dual processor system was then implemented, and basic communication between the processors was established. The code was then parallelized, and functional, static, semidynamic, and dynamic approaches were examined. Finally, the Sobelator hardware accelerator was designed and tested.
+
+The baseline system was designed using Xilinx Platform Studio's Base System Builder™. This allowed for the creation of a basic design including a MicroBlaze processor, OPB Synchronous DRAM (SDRAM) controller, and OPB timers. The necessary user constraint file was also generated to map I/O correctly to the prototyping board used.
+
+All code was written in C. In order to minimize code size, lookup tables for the sin and cos functions used in the Hough Transform had to be precomputed rather than be generated upon initialization of the program.
+
+Because Base System Builder does not allow for more than one microprocessor, the dual processor system had to be implemented in Platform Studio. Adding the hardware simply required manually connecting cores to the appropriate busses and allocating space for memory-mapped I/O appropriately. The two MicroBlaze processors share a common OPB bus for peripherals and external memory. The two processors could also be connected through Fast Simplex Link (FSL) connections to examine the performance of message passing rather than shared memory.
+
+Since there was only one external memory available, however, this message passing system would not have the distributed memory of a typical point-to-point network and, therefore, would be a poor model. Message passing was used through shared memory for command information but all data was shared via pointers to buffers.
+
+In addition, memory contention and critical sections had to be dealt with. For the sake of keeping the code small and simple, it was decided to use no operating system, and the MicroBlaze instruction set architecture (ISA) does not provide test and set instructions for synchronization. A simple solution was to design the system as a master/slave setup rather than true symmetrical multiprocessing. Communication then became a matter of sending commands from the master and receiving acknowledgments from the slave. In order to implement this in an extensible manner, a first-in first-out (FIFO) was modeled in memory, using a circular buffer.
+
+With the dual processor system in place, the code needed to be parallelized in order to take advantage of the second processor. The edge detection algorithm requires the same processing time for each pixel and has no interdependencies of data. It was, therefore, decided that a static, data parallel partitioning should be sufficient. Testing later showed that this assumption was correct. The runtime of the Hough Transform is dependent on the number of points that must be examined, which may change between frames and between different portions of a frame. A static partitioning then should not be optimal. Compared against the static partitioning baseline would be a semidynamic partitioning scheme, where the amount of the image to be processed by each processor would be updated between frames, and a dynamic partitioning scheme, where blocks of pixels would be dynamically assigned to each processor. A functional implementation would also be compared, where one processor did lane finding while the other did edge detection of the previous frame.
+
+Finally, the Sobelator hardware accelerator was designed. Its purpose was to implement in hardware the additions, subtractions, shifts, magnitude and rounding operations required to do edge detection. The FSL interface was chosen because of its simplicity and its low latency to the MicroBlaze's data path. The design was initially developed in the VHDL hardware description language. As the design progressed, Xilinx's StateCAD™ was used to generate the VHDL code for the Sobelator from a specified state diagram. The Sobelator was designed to take 32-bit words consisting of four 8-bit pixel values as input. This led to a shift-and-add design, allowing it to process a different pixel after each shift. Separate code had to be written to take advantage of the Sobelator. One change made to the code was to not write the output of the edge detection performed by the Sobelator to a memory buffer but perform the Hough Transform on it directly.
+
+### 19.8.1.4 Results
+
+The assembled system was tested to make sure all functions worked correctly. The board was able to receive and transmit images as bitmaps. The system was then tested on 16 input frames, taken from inside the front windshield of a Pontiac Sunfire outside of the University of Washington campus. Times for performing the Sobel transform varied less than 1% between frames. The combination of Sobel and Hough was able to identify lane markings for some test images, as shown in Figure 19.18.
+
+![](img/679b8d2d47f1bf86e17aca48f596f5cc_951_0.png)
+
+Figure 19.18 Lane Marking Detection
+
+### 19.8.1.5 Section Summary
+
+Lane Departure Detection was successfully implemented on a Xilinx Spartan-III FPGA. The algorithms used were examined in a dual processor setup. Doubling the number of processors gave less than a doubling of speed. For the given algorithms, a simple static partitioning of the data gave the most consistent and generally fastest results. Using the Sobelator hardware accelerator gave a large gain in speed in the edge detection algorithm; however, the line finding part of the algorithm dominated runtime.
+
+## 19.8.2 Local Area Tracking System – LATS with uCLinux™ OS
+
+The project was designed and developed by John Burnette and David Burnett of the University of Washington, Seattle, WA, November 2004.
+
+### 19.8.2.1 Introduction
+
+As a component in a larger project, an ultra wideband Local Area Tracking System (LATS) control unit, a MicroBlaze softcore CPU-based system utilizing a Xilinx Spartan-III has been designed and developed. This CPU runs an implementation of uCLinux, custom-compiled for the MicroBlaze hardware environment.

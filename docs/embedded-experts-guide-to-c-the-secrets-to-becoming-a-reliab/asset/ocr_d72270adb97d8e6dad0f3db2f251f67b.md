@@ -1,0 +1,8 @@
+# Chapter 10:
+Multitasking
+
+We are all used to the idea of computers performing many tasks at any one time. As well as being able to run multiple applications, modern operating systems run numerous background processes. Although servicing interrupts could be considered a basic form of multitasking, a more general ability to balance multiple concurrent processes which have no clear interrupt mechanism is necessary in many embedded systems. There are times when this functionality is required and understanding how to properly implement a system running multiple processes is a valuable skill for any embedded engineer to have.
+
+Consider a simple system which must handle a small number of tasks: communicate with external systems through a UART, read user input from a control panel and update a display. Initially there might appear to be two ways to structure your program: perform each task sequentially in a loop so each task runs once in each loop iteration; use interrupts to handle each task as required – you could use a buffer full/empty interrupt for the UART, an interrupt-on-change to handle the user input and a timer interrupt to update the display. So far in this book we have assumed one of these approaches (or a combination of the two) is sufficient to tackle any programming problem we might face.
+
+The major disadvantage of the first approach is three essentially unrelated and asynchronous tasks are being run one after the other – the rate at which the UART communicates has nothing to do with the rate at which user input arrives. A large amount of processing time is also potentially wasted monitoring tasks which do not need attention.

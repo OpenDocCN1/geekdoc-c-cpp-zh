@@ -1,0 +1,9 @@
+functionality has since been extended substantially, both in its standardised form and through vendor-specific extensions. Perhaps unexpectedly, the preprocessor is not limited to being used only with C; it can be (and usually is) implemented as a standalone program, without the need for a C compiler, and as such has sometimes been used for processing other types of files. You may occasionally come across files written in assembly which contain C preprocessor commands for this reason.
+
+Beyond including additional files and defining constants, the preprocessor (from the programmer's perspective) is used to control conditional compilation of code, issue custom errors and, in generally implementation-defined ways, determine how code is compiled. These are the topics we will be exploring in this chapter.
+
+# The #include directive
+
+Source files may reference other files for inclusion using the #include directive. The most common use is to reference “header” files, those which typically use a file extension. Although header files may contain any valid C, they normally use a limited subset of the language to declare functions (referred to as and define macros and typedefs relevant to the code being referenced. The full source is usually found elsewhere, either as a precompiled library or as a file, usually with the same name as the Occasionally the source is provided by a file written in assembly language, but this does not require any changes to the header file.
+
+When the preprocessor encounters a #include directive, it simply replaces the directive with the contents of the referenced file. This is performed recursively: any directives found in the referenced file are also replaced. It

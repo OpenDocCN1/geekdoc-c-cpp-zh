@@ -1,0 +1,13 @@
+# rate multiplier
+
+A scheme to select a fractional portion of a clock signal is called a rate multiplier. The block diagram for such a circuit is given in Figure 3.45.
+
+![](bbox=[0.25, 0.13, 0.9, 0.3])
+
+A rate multiplier is simply a combinational logic block combined with an N-bit counter. The period of the counter will be 2^n, that is, the counter will cycle through all of its states every 2^n clock pulses. The N-bit selector also permits 2^n combinations. For each of the 2^n combinations on the selector input, the device will output that many pulses. Thus, if N is 4, the counter will be 4 bits and there will be 4 selector lines. If the counter is a binary counter, and the selector pattern is 0101, binary 5, then for every 16 clock pulses coming into the counter, there will be 5 output pulses. The output frequency will be 5/16 of the input frequency. The design of the rate multiplier is such that the selected number of output pulses is evenly distributed across the period of the clock, as illustrated in the timing diagram in Figure 3.46 for a selector pattern of binary 5.
+
+![](bbox=[0.25, 0.5, 0.9, 0.59])
+
+If one is using a high-frequency oscillator as the primary clock source in a design but a portion of the application requires a significantly lower frequency, a ripple counter can provide a very effective means of developing such a signal. Twelve- to fourteen-stage ripple counters are commonly found as a single MSI part. By using such a counter, one can easily divide the high-frequency source by as much as 16 K. When doing so, however, one must be aware that there will be a substantial skew between the edge of the input signal and the resulting edge of any of the lower frequency signals coming out of the counter because of the ripple delay through the device. The application of such a divider is illustrated in the logic diagram in Figure 3.47. The effect of edge skew is reflected in the subsequent timing diagram in Figure 3.47 for an asynchronous binary up counter.
+
+The timing diagram illustrates the propagation delay for the first four stages as the counter changes from a count of binary 7 to binary 8. Observe that the interstage delay accumulates as subsequent flip-flops change state. In this example, the change in state of the third stage is delayed by four propagation delays following the causative event in the first stage. It doesn't take too much imagination to visualize the situation in which the least significant stage may have changed states twice before the nth stage is able to change.

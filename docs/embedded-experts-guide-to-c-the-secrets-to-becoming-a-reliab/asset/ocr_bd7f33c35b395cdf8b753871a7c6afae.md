@@ -1,0 +1,9 @@
++   6 If you require a tab to be encoded within a string or character (there are no other cases where it would be required or even desirable), the correct way to do this is to use the \t escape sequence, ensuring that a tab character is used rather than a series of spaces.
+
++   7 This is the example given in the C Standard; in my opinion, such a statement, needs to be completely rewritten anyway, since even in its correct form, its intended purpose appears completely undecipherable.
+
++   8 If you didn’t spot it straight away, the problem is that /* is interpreted by the compiler as opening a comment, rather than as division by a dereferenced pointer.
+
++   9 Not everyone agrees with this – some people do not use an additional space when declaring variables. There is some merit to this approach, however, it can cause some confusion if the address of the pointed-to variable (i.e., the value of the pointer, rather than value of the referenced variable) needs to be qualified using either const or Although technically legal according to the C Standard, it is best never to omit the space between the type and the * as this increases confusion further, particularly if you are in the habit of writing multiple declarations at once (a habit that is best avoided) because the pointer-to-part of the declaration is associated with the variable and not the type being pointed to (it has right associativity for the pedantically minded) and it must be included with each variable being declared.
+
++   10 The C Standard does not actually prevent longer symbol names, but only requires a conforming compiler to consider the first 31 characters when resolving names. Unless you are in the habit of using very long

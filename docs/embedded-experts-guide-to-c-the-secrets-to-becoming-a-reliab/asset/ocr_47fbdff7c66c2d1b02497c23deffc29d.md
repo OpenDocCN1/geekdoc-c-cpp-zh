@@ -1,0 +1,9 @@
+instance is declared.
+
+# Unions
+
+Unions are used to allocate multiple variables to the same address. A union definition resembles a structure definition, except the keyword union is used instead of Like structures, the name can also include a tag and they have named members, but unlike structures, the members are not independent of each other: they overlap in memory. The members of a union are always of different types; although this is not strictly a requirement of the language, there is little point in using a union to store two variables of the same type. The most common use of unions is for converting a variable from one type to another while preserving the binary representation of the original type. Thus, unions are one method of bypassing the type system in C; they should be considered type-unsafe and used with care. An acceptable use of unions is to pack and unpack individual bytes for use with a serial interface. A pointer to a union is also, in effect, a pointer to each of the members of the union, although an appropriate cast will be required to access the members correctly.
+
+# Linked lists
+
+A linked list is a data structure intended to be accessible sequentially without relying upon the order of elements within memory. To achieve this, each element contains a link to the next element, usually in the form of a pointer. This allows elements to be efficiently inserted to or removed from the list. However, unlike arrays, accessing arbitrary elements within a linked list is not efficient since this can only be achieved by working through the list one element at a time until the required entry is found.

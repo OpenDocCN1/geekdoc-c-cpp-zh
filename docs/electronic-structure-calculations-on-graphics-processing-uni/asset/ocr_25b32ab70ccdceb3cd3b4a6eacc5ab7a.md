@@ -1,0 +1,15 @@
+# 6.3 Parallelization
+
+Two data distribution schemes are used in the parallel version of our program. In the orbital distribution scheme, each processor works on one or a few orbitals. The processor holds its scaling function coefficients and wavelet coefficients. In the coefficient distribution scheme (see Figure 6.4), each processor holds a certain subset of the coefficients of all the orbitals. Most of the operations, such as applying the Hamiltonian on the orbitals and the preconditioning, are done in the orbital distribution scheme. This has the advantage that we do not have to parallelize these routines with MPI. The calculation of the Lagrange multipliers that enforce the orthogonality constraints onto the gradient as well as the orthogonalization of the orbitals is done in the coefficient distribution scheme (Figure 6.4). Switching back and forth between the orbital distribution scheme and the coefficient distribution scheme is done by the MPI global transposition routine MPI_ALLTOALL(V). For parallel computers where the cross-sectional bandwidth [16] scales well with the number of processors, this global transposition does not require much CPU time. Another time-consuming communication is the global reduction sum required to obtain the total charge distribution from the partial charge distribution of the individual orbital.
+
+In the parallelization scheme of the BigDFT code, another level of parallelization was added via in the OpenMP directive. In particular, all the convolutions and the linear algebra part can be executed in the multi-threaded mode. This adds further flexibility to the parallelization scheme. Several tests and improvements have been made to stabilize the behavior of the code in a multilevel MPI/OpenMP parallelization. At present, optimal performance can be reached by associating one MPI process per CPU (socket), or even one MPI process per compute node, depending on the network and MPI library performances. This has been possible also thanks to recent improvements of the OpenMP implementation of the compilers.
+
+# 6.3.1 MPI Parallel Performance and Architecture Dependence
+
+The parallelization scheme of the code has been continuously tested since its first version. Since MPI communications do not interfere with calculations, as long as the computational workload is more demanding than the time required for the communication, the overall efficiency remains high, also for simulations with a large number of processors [17].
+
+We have evaluated the amount of time spent for a given operation on a typical run. To do this, we have profiled the different sections of the BigDFT code for parallel calculations. In Figure 6.5, we show the percentage of time that is dedicated to the operations described above for runs with two different architectures: the French CCRT Titane platform (Bull Novascape R422), and the Swiss
+
+![](bbox=[0.106, 0.675, 0.842, 0.845])
+
+Figure 6.4 Orbital (a) and coefficient (b) distribution schemes

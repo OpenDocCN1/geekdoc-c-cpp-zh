@@ -1,0 +1,205 @@
+
+
+3.3 Why is the concept of time important in an embedded system?
+
+## Designing Finite-State Machines – Registers
+
+3.4 Propose some situations in which a latch rather than a register would be the preferred storage device. Explain the reasoning behind your choices.
+
+3.5 Propose some situations in which a register rather than a latch would be the preferred storage device. Explain the reasoning behind your choices.
+
+3.6 How can the shifting function be implemented without a storage element?
+
+3.7 What advantages can you think of for a design such as that proposed in Question 3.6?
+
+3.8 Propose several uses for a parallel in/serial out shift register for a serial in/parallel out shift register?
+
+3.9 Can a latch be used instead of a flip-flop to implement a shift register?
+
+3.10 Propose several uses for a linear feedback shift register?
+
+3.11 Can a linear feedback shift register be used as a counter timer? What would be the pros and cons of such design?
+
+## Designing Finite-State Machines – Counting and Dividing
+
+3.12 Why is a Power On Reset control signal important in the design of finite-state machine-based designs?
+
+3.13 Is a Power On Reset control signal subject to fan-out restrictions?
+
+3.14 What are the major problems that one encounters with a ripple counter? How does the frequency of the input clock affect these problems?
+
+3.15 Are there cases for which the ripple counter is preferred to a comparable synchronous counter? Explain your choice(s).
+
+3.16 Are there cases for which the synchronous counter is preferred to a comparable ripple counter? Explain your choice(s).
+
+3.17 What is the major difference between a counter and a timer?
+
+3.18 For a timing application, what determines the temporal resolution of your timer?
+
+3.19 One problem with a long synchronous counter or divider chain is the rapid increase in the complexity of the flip-flop input equations. Can you propose a possible solution to this problem?
+
+3.20 Can a latch be used instead of a flip-flop as the basic storage element in a counter or divider? Why or why not?
+
+3.21 Is it necessary that the clock input to a counter, timer, or divider be a square wave?
+
+## Designing Finite-State Machines
+
+3.22 Give several examples in which a Mealy state machine is preferred to a Moore machine? Explain your choice.
+
+3.23 Give several examples in which a Mealy state machine is preferred to a Moore machine? Explain your choice.
+
+3.24 As the complexity of a design increases, the finite-state machine used to implement a solution can become large rather quickly. Propose several solutions to such a problem.
+
+3.25 Give several examples in which we might use a finite-state machine as the underlying control mechanism.
+
+3.26 Must a finite-state machine always be implemented in hardware?
+
+3.27 Please give several examples of embedded applications for which a pattern recognition system would be required.
+
+3.28 Cite several examples showing when a sliding window recognizer would or would not be an appropriate solution. Explain your choices.
+
+3.29 Why or under what circumstances might a one hot state assignment scheme be appropriate for a Moore machine?
+
+3.30 Why or under what circumstances might a Gray-code-based state assignment be appropriate for a Mealy machine?
+
+## Practical Considerations – Timing in Latches and Flip-Flops
+
+3.31 What are the consequences of failing to meet the setup time specifications for a storage device? Hold time specifications?
+
+3.32 Setup time in a storage device is based on what factors in the design of the device?
+
+3.33 What are some of the factors that limit the operating speed in a counting, dividing, or timing circuit?
+
+3.34 What are some of the factors that one must consider when generating control or clocking signals by decoding the states of a finite-state machine?
+
+3.35 Why is generating control or clocking signals by decoding the states of a ripple counter generally discouraged? Under what circumstances might such a technique be considered reasonable?
+
+## Practical Considerations – Clocks and Clock Distribution
+
+3.36 Discuss the pros and cons of utilizing multiphase versus a single-phase clocking scheme or time base for an embedded application.
+
+3.37 What problems might arise in a clocking scheme that utilizes the rising edge of a timing signal to clock some flip-flops in a system and the falling edge to clock others?
+
+3.38 Are timing signals subject to fan-out restrictions?
+
+3.39 When routing timing signals throughout a system, not all paths may be of equal length. Is this a potential problem?
+
+3.40 What potential problem might arise from including a timing signal such as a clock on a system bus?
+
+3.41 What problems might arise in a clocking scheme from parasitic R, L, C components in a system? How can these be addressed?
+
+3.42 What are some of the factors that limit the frequency at which the embedded hardware in a system may be clocked?
+
+3.43 Normally, for high-performance systems we strive to have signals change state quickly. What are some of the consequences of very small rise and fall times in clocking and timing signals?
+
+## Testing Sequential Circuits
+
+3.44 What are some of the things that can be done to facilitate the test of sequential circuits?
+
+3.45 Is it necessary to test all possible combinations of inputs to a finite-state machine?
+
+3.46 What combinations of signals should be included in the set of test vectors for a sequential machine?
+
+## 3.13 PROBLEMS
+
+## Flip-Flops, Latches, and Shift Register Designs
+
+3.1 For the two devices in Figure P3.1 and their inputs, data and signal, please draw the corresponding output signals, QA and QB. Be sure to explain your answer.
+
+![](img/679b8d2d47f1bf86e17aca48f596f5cc_218_0.png)
+
+![](img/679b8d2d47f1bf86e17aca48f596f5cc_218_1.png)
+
+Figure P3.1
+
+3.2 Design and implement an 8-bit shift register that can shift 1 or 2 bits to the left or right based on the states of two input control lines.
+
+3.47 Why are synchronous designs easier to test than asynchronous?
+
+3.48 What purpose does the Power On Reset control signal play in the test of sequential circuits?
+
+3.49 What does the expression “break the feedback loop” mean in the test of sequential circuits?
+
+3.50 When testing sequential machines, how should we deal with the machines for which the associated state diagram has loops or cycles?
+
+3.51 What is a homing sequence, and what purpose does it serve in testing finite-state machines?
+
+3.52 Can you think of an easy way to test shift registers?
+
+3.53 How can a long counting, timing, or dividing chain be tested without having to traverse all states? Discuss any caveats with your proposed approach.
+
+3.54 Must a counting, timing, or dividing chain be tested at its intended operating frequency? What are the consequences of not doing so?
+
+3.3 You have just won a contract to design and implement a high-speed logical shifter. The specification you have been given requires the design of a circuit that will shift a 16-bit word to the right or to the left by 1-, 2-, 3-, or 4-bit positions in a single clock time.
+The input to your system is a 3-bit word that is to be interpreted as follows:
+
+| B2 | Meaning |
+|---|---|
+| 0 | Shift right |
+| 1 | Shift left |
+
+| B1 | B0 | Meaning |
+|---|---|---|
+| 0 | 0 | Shift by 1 |
+| 0 | 1 | Shift by 2 |
+| 1 | 0 | Shift by 3 |
+| 1 | 1 | Shift by 4 |
+
+- (a) Draw a top-level block diagram for your system.
+- (b) Assume you decide to build the shifter using 16 D flip-flops. Write the logic equations for the D inputs.
+- (c) Explain how your design works.
+- (d) Confirm your design by writing and testing a structural Verilog model.
+
+3.4 Extend the design in Problem 3.2 by incorporating the ability to load the contents of the shift register in parallel. Confirm your design by writing and testing a behavioral Verilog model.
+
+3.5 An N-bit circular shift register, as shown in Figure P3.2, operates as follows:
+
+![](img/679b8d2d47f1bf86e17aca48f596f5cc_219_0.png)
+
+Figure P3.2
+
+| Dir | Amt | Meaning |
+|---|---|---|
+| 0 | 0 | Shift right by 1 |
+| 0 | 1 | Shift right by 2 |
+| 1 | 0 | Shift left by 1 |
+| 1 | 1 | Shift left by 2 |
+
+Assuming that the shift register is implemented using D flip-flops, write the input equation for the 0th flip-flop.
+
+- (a) Write the input equation for the ith flip-flop.
+- (b) It's just days away from first shipment and the customer requests a simple addition to the design. They would now like to be able to load the shift register in parallel (all bits at once). What additional signals, if any, will we have to add to the design and how would they be used? Be specific.
+- (c) Rewrite the input equation for the ith flip-flop to incorporate the design change in part (b).
+
+3.6 The purchasing department in your company, Storage Stuff, Ltd., has just gotten a great deal on 100,000 74LS175 quad D flip-flops. These devices have an internal logic diagram as shown in Figure P3.3.
+
+![](img/679b8d2d47f1bf86e17aca48f596f5cc_219_1.png)
+
+Figure P3.3
+
+Using the 74LS175, and any other parts you need, design an 8-bit shift register that can be loaded, in parallel, from two different sources and then enabled to shift the data to the right or to the left.
+
+- (a) From the vendor's data sheet, we have the following information: t_setup = 5 ns, t_hold = 0 ns, t_CLH = 15 ns and t_HLH = 10 ns for each flip flop.
+- (b) What is the maximum rate that data can be reliably shifted through the shift register? Explain how you arrived at your answer.
+
+## Counters
+
+3.7 Design and implement a synchronous BCD counter using D flip-flops that will count up or down based on the state of an input control line, UP-DOWN.
+
+3.8 Design and implement a 3-bit synchronous counter using D flip-flops that counts according to the sequence:
+
+| A | B | C |
+|---|---|---|
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 1 | 1 |
+| 1 | 1 | 0 |
+| 0 | 1 | 1 |
+
+3.9 The following circuit is designed to provide an output signal on QC with an input clock frequency of 12MHz. The system containing the circuit has been in production for several months, but now sometimes it works and sometimes it does not.
+
+- (a) Draw the theoretical timing diagram for the circuit showing the signals at points A, B, and C with respect to the clock.
+- (b) After a little bit of research, you find from the vendor's data sheets that the flip-flops have the following characteristics: t_AHL = 25 to 40 ns, t_LH = 15 to 25 ns, t_SU = 25 ns and the exclusive OR gate has the following characteristics: t_AHL = 20 to 30 ns, t_dLH = 13 to 20 ns
+- (c) Draw the actual timing diagram for the circuit showing the signals at points A, B, and C with respect to the clock when the practical circuit parameters are considered.
+

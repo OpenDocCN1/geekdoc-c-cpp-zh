@@ -1,0 +1,19 @@
+verifiable. Our first focus must be on the world or environment in which system is to operate. We follow with an increasingly detailed description of the role played by the system in the application. At each step, we add to the specification.
+
+From Figures 9.21 and 9.22, and as stated earlier, our design must include a model of the containing environment, a description/definition of the inputs and outputs, a description of necessary behavior, and a description of how system is to be used. We start at a high level of abstraction with an outside view of the system. We then develop the model(s) appropriate to that level. Through progressive refinement, we move to lower levels of abstraction, to a more detailed model.
+
+Let's now examine some of the things that one should think about when starting to identify and capture the requirements and when trying to define them in a formal specification. The form, extent, and formality of such a specification depends on the project on which one is working, the target audience, and the company for which one is working. Remember, too, that it is a product that is being delivered, not a pile of paper. As a rule of thumb, the specification should be the absolute minimum necessary to capture and clearly identify all of the necessary requirements.
+
+# requirements specification
+
+In capturing requirements, one strives to be very specific about the details from the user's point of view. Bear in mind that one is identifying and formalizing the requirements. One still cannot begin to design until the specification has been completed and the customer has agreed to it. Remember, too, that one should not be discussing microprocessors, memory, peripheral chips, or software modules at this point in the development process.
+
+As one begins the designs, one usually has some general ideas, casual discussion, and thoughts but nothing firm. One can use these as a guide in directing the steps, but one cannot design from them. It is important to be careful, however, not to rely too heavily on preconceived ideas; one should always be open to alternative approaches. Starting to code or draw logic diagrams at this point is inviting major problems as the project proceeds. In all likelihood, the project will fail.
+
+For the environment component of the specification, one must identify and establish a detailed picture that includes all inputs, outputs, and characterization of the functional behavior for each of the relevant entities that make up the target environment. We must know and understand how the environment is interacting with and affecting our system as well as the effect(s) on the environment of the system's output(s). For the system, we require a description of all inputs and outputs as well as a complete description of the functional and operational behaviors and the technological constraints.
+
+At this juncture we can naturally ask: how can one get such information about (let alone model) the system and the environment without describing or knowing implementation of the system? The internals are inherently unknown at this point. How does one capture the desired behaviors?
+
+# 9.11.1 The Environment
+
+A reasonable first step begins with defining and describing the environment, the world in which the system must operate. The environment is a temporal world; it is a heterogeneous collection of entities of one form or another. It comprises the collection of physical devices to which the system is interconnected as well as any physical world attributes that the system intends to measure or control or that can have an effect on the system. The initial goals in understanding the environment are to identify all relevant entities, then characterize their

@@ -1,0 +1,7 @@
+# Chapter 11:
+Bootloaders and
+Operating Systems
+
+Previous chapters have been written assuming the reader is writing standalone software – software which runs in what is called a freestanding environment in the C Standard – which does not require an operating system to run. While a great deal of embedded software falls into this category, it is worth briefly looking at software which is not expected to run in this way but instead requires what the C Standard refers to as a hosted environment . An operating system provides software and hardware management functions, such as task scheduling, IO control and memory management. Embedded operating systems are generally lightweight in comparison to the more familiar ones found on PCs, servers and other general-purpose computers; their design also often prioritises efficiency and determinism over extensive functionality and maintainability. ¹ A Real-time Operating System (RTOS) is one which has predictable task timing and is therefore well suited to time-critical applications.
+
+Although having an operating system takes embedded programming a step closer to more general-purpose programming, it is still important to continue following the rules for writing good embedded software – a good operating system will give you some protection against some common programming errors, but it is still preferable to write good software rather than relying on the environment helping it to recover when an error does occur.

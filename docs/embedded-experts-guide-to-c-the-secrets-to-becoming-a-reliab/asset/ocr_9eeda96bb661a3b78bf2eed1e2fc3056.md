@@ -1,0 +1,9 @@
+checking code syntax and highlighting problems as you work without needing to compile, which can be confusing if many symbols are not resolved until the last moment.
+
+There is no technical reason why file inclusion should be limited only to header files. Complete C source files may be included, but this is unnecessary, since the source itself does not need to be included, and is considered bad practice, since it exposes the entire contents of the source file, including static functions and variables which were intended to be hidden. Other file types can, and occasionally are, included. The only restriction is the file can be understood by either the preprocessor, the C compiler or a combination of both. At times this has resulted in some unusual filetypes being developed; for example, the XBM image format, which is actually a C file containing a monochrome bitmap as an array.
+
+# The #define directive
+
+The #define directive is used to create macros which may then be referenced throughout the rest of the code. Macros may be of one of two forms; they are either object-like macros or function-like macros. Object-like macros are generally used to define symbols and constants, whereas function-like macros are able to accept arguments and can therefore be used elsewhere in a similar way to normal C functions, although it is important to remember the macros themselves are not functions.
+
+Of the preprocessor directives, #define is by far the easiest to misuse, particularly when working with function-like macros. There is also a #undef directive, which is used to remove a definition created using In addition, there are three preprocessor operators: ## And The or “stringising” operator is used to convert a token into a string literal. The or

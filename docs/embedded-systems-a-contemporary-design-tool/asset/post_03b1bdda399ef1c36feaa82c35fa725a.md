@@ -1,0 +1,306 @@
+
+- thread 216
+- heavyweight 547
+- lightweight 547
+- thread of control 216
+- three-way handshake 393
+- time
+  - absolute 574
+  - duration 574
+  - finite state machine 122
+  - following an interval 574
+  - interval 574
+  - relative 574
+- time based system 573
+- time loading 645
+  - see performance, analyzing
+- timing in latches and flip-flops 131
+- timing margin 133-134
+- tools, ASIC design
+  - place and route 870
+  - synthesis 870
+- top-down design 249
+- top of stack pointer 300
+- token pole 60
+- transducer 222, 719
+- translation process 245
+- translation unit, C Language 268
+- transmission lines 917
+  - bias termination 933
+  - buried 918
+  - characteristic impedance 919
+  - dispersive 918
+  - embedded 918
+  - finite 927
+  - high source impedance 931
+  - lossless 927
+  - low source impedance 931
+  - microstrip 918
+  - model 925
+  - parallel termination 932
+  - propagation delay 927
+  - propagation velocity 927, 939
+  - reflected voltage 928
+  - reflections 929
+  - Source terminated 936
+  - split termination 934
+  - stripline 918
+  - terminated 932
+  - unterminated 921
+- tri-state driver 89-90
+- TMR-Triple Modular Redundancy 350
+- troubleshooting 96, 507-513
+- true value of physical quantity 508
+- TrustZone 395
+- TTL-Transistor-Transistor Logic 59
+- Twisted Pair 721, 860
+- type, C Language, 243, 251-261
+  - char integer 255
+  - floating point 253, 256
+  - fundamental 253
+  - integral 251
+  - intrinsic 252
+  - long integer 256
+  - short integer 256
+  - signed 255
+  - unsigned 255
+- type checking 305
+- type conversion, C Language
+  - cast 261
+  - explicit cast 261
+  - implicit 261
+  - promotion 261
+- typedef, C Language 267, 311
+- typing 347
+  - none 347
+  - strong 347
+  - weak 347
+
+### U
+- UART-Universal Asynchronous Receiver/Transmitter 889
+- UML-Unified Modeling Language 114, 215
+- UML interaction 224
+  - Call and Return 224
+  - Create and Destroy 224
+  - Send 224
+- UML activity diagram 429
+- UML dynamic modeling 223
+- UML object diagram 312
+- underscore, identifiers, C Language 250
+- unexpected input faults 335, 405
+- Unified Modeling Language 417
+- unresolved external reference, linkage 270
+- up time 334
+- USART-Universal Synchronous / Asynchronous Receiver Transmitter 842
+- USB-Universal Serial Bus 845-855
+  - addressing
+    - enumeration 850
+    - reset 850
+  - architecture 846
+  - configuration descriptor 849
+  - device descriptors 849
+  - class Specific descriptors 850
+  - configuration descriptor 849
+  - endpoint descriptor 849
+  - interface descriptor 849
+  - string descriptor 849
+  - devices detachment 854
+  - devices
+    - high speed 848
+    - low speed 848
+  - interface signals 852
+    - bit stuffing 853
+    - differential pair signaling 855
+    - NRZI-Non-Return to Zero Inverted 852
+    - phase locked loop 852
+  - physical environment
+    - cables
+      - TWSP-twisted shielded pair 853
+      - high speed cables 853
+      - low speed cables 853
+        - also called sub-channel cables
+    - low-speed ports 848
+    - power 853
+  - synchronous serial communication 845
+  - USB-Universal Serial Bus device attachment 853
+    - detection 853
+  - USB system
+    - protocol 847
+    - communication pipe 847
+    - driver 847
+    - frames 847
+    - host controller 847
+    - host controller driver 847
+    - IRP-IO Request Packet 847
+    - preamble packet 848
+    - root hub 847
+    - transactions 847
+      - data packet 851
+      - handshake packet 851
+      - packet identifiers 851
+      - token packet phase 851
+    - transfer descriptors 848
+    - transfer types
+      - bulk 848
+      - control 848
+      - interrupt 848
+      - isochronous 848
+- Use Case 217
+- Use Case, UML 217
+  - exceptional conditions 219
+  - normal activity 219
+- user written module, C Language 248
+- UUT-Unit Under Test 142, 508, 950
+  - also called DUT-Device Under Test
+
+### V
+- Validation Test 536
+- van Oech, Roger 406
+- variable, C Language
+  - assignment to 252
+  - identifier 251
+  - initialize 252
+- variable lifetime 216
+- variable scope 216
+- variance 508
+- VCC, logic supply 516
+- VCO-voltage controlled oscillator 125, 761
+- Verification Test, testing 536
+- Verilog 871, 949
+  - Verilog model
+    - behavioral 949, 966-976
+      - always block 967
+      - begin 951
+      - block
+        - separate flow of control 967
+      - blocking assignment 968
+      - combinational logic 972
+      - continuous assignment 968
+      - delay 969
+      - end 951
+      - flow of control constructs 973
+        - branches 974
+        - event based control 973
+          - level 973
+          - named event 973
+          - OR event 973
+          - regular event 973
+        - if 974
+        - else 974
+        - loop constructs 974
+          - for 974
+          - forever 974
+          - repeat 974
+          - while 974
+        - switch or case 974
+      - initial block 968
+      - non-blocking assignment 968
+      - parallel block 968
+      - procedural assignment 968
+      - program structure 966
+        - sequential 966
+      - sequential block 968
+  - behavioral level 956
+  - dataflow 956-967
+    - combinational logic 964
+    - continuous assignment 963
+    - delays 966
+    - operators 966
+    - sequential logic 966
+  - dataflow level 956
+  - gate level 956
+    - see also Verilog, structural
+  - LFSR-Linear Feedback Shift Register 122
+  - RTL-Register Transfer Level 963
+  - sequential, flow 968
+  - shift register 117
+  - structural 949, 956-963
+    - combinational logic 972
+    - //-comment 958
+    - constants 960
+    - creating modules 957
+    - delay 959
+    - endmodule 958
+    - magic numbers 960
+    - module 958
+    - parameter 960
+    - sequential logic 961
+    - symbolic constant 960
+    - using modules 958
+    - wire 959
+  - structural level 956
+  - testing 976
+    - clocks and reset 979
+    - initial block 978
+    - simulation 979
+    - test bench 979
+    - test module 977
+    - UUT 979
+  - Verilog source file 951-956
+    - always block 955
+    - annotation 951
+    - block delimiters 951
+    - case-sensitivity 951
+    - $display 955
+    - @-event control symbol 973
+    - $finish 955
+    - formatString 955
+    - identifier names 951
+    - initial block 955
+    - inputs 952
+    - module 952
+    - name 952
+    - user defined type 951
+    - $monitor 955
+    - nets 953
+    - # operator 959
+    - outputs 952
+    - sequential block 951
+    - $stop 955
+    - $time 956
+    - type
+      - reg 953
+      - wire 953
+      - variables 953
+    - white space 951
+  - wire
+    - multi-bit 954
+    - multibit subset 955
+  - Verilog source program elements 950
+    - system model 950
+    - test bench 950
+    - test modules 950
+- VHDL 880, 949
+- VIH 57
+- VIL 57
+- virtual machine 765, 767
+- virtual memory 189
+- VLSI-Very Large Scale Integrated Circuit 3, 533
+- VOH-Voltage Output High 57
+- VOL-Voltage Output Low 57
+- volatile 263
+- voltage 57
+- von Neumann machine 189
+  - input and output 716
+- vulnerabilities 382
+
+### W
+- watch dog timer 370
+- weak protection 332
+- weighted number system 791
+- white box tests 521
+  - see also testing, test category
+- Wilder, Bob 414
+- The Working Environment 910
+  - knee frequency 901
+  - the PCB environment 917
+- The Signaling Environment 937
+  - spectral power density 914
+
+### X
+- Xilinx Spartan-III™ FPGA 888, 889
+- Xilinx's StateCAD™ 888
+
+## WILEY END USER LICENSE AGREEMENT
+
+Go to www.wiley.com/go/eula to access Wiley's ebook EULA.
