@@ -1,0 +1,9 @@
+# Conclusion
+
+GUILT will follow. It is for this people, recognize the existence of the Blame Game in life. Now you can see how it is that the Blame Game is a direct derivative of the Blame Frame, i.e. the Aristotelian system of Cause and Effect, A.
+
+In the world of Relativity and Relatedness we realize that each person is unique in their way of thinking. Within our DLS, are all the holons that constitute our language structures. Any language structure is a basic unit of language that contains all possible language and vocabulary of a semantic item of consideration. An example of language structure is CUISINE. This language structure would have sub-language structures such as EUROPEAN CUISINE, NORTH AMERICAN CUISINE and so forth. In the sub-language structure of EUROPEAN CUISINE are sub-sub language structures such as ENGLISH, ITALIAN, FRENCH, DANISH and FINNISH CUISINES.
+
+Therefore, in a conversation with another on the topic, i.e. sub-sub language structure, Italian Cuisine, you need to know if he is at the same sub-sub-sub language structures, such as Milanese or Sicilian or Veneto cooking. In a conversation, it is not automatically done to tell the other where he is coming from. People just assume that the other knows. Since one knows where one is at, then one knows-to-know-to say what he shares. One’s problem is what the other’s sub-sub-sub site is.
+
+When one gets into the sub-sub-sub-sub-topics of say, recipes for pasta you can now see the importance of knowing which sub-sub-sub language structure the recipe comes from. In other words, are we talking about the different kinds of recipes for pasta a la Milanese, or Sicilian or Veneto. For this information, one needs to know how to ask good questions. From an NSP point of view, it is a necessity of life to be able to ask good questions. A good question is one that:

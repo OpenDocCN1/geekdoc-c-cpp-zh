@@ -1,0 +1,9 @@
+have just come from my legal advisors. I have instructed them to file a divorce action against my husband.
+
+I was silent for a moment as I took in the import of what she shared with me. She was a very elegant, beautiful, well-groomed and well attired woman. I could not see how her husband had lapsed into arrogant disregard and disrespectful inattentiveness to her. Now, at 75, through the Freedom Seminar she found her clarity and power to say to her husband: I am not going to give you one more second of my life.
+
+I could see in my mind how she had spent the last 8 weeks, in one last effort to save her marriage. Then she knew, in the end there was only one answer. And she acted. With olde Ontario money, you may marry into it. But on divorce, there is not a way in Law that you can ever lay claim to one cent of it. He was such an unaware man. Now he was suddenly awakened.
+
+In our lives, there is nothing more wonderful than to discover that moment: AHA, THIS is it. This is what my life purpose is to be! However, in our experience, it is as if, out of our conscious awareness, some mystical hand would touch us; and then before us was a new: AHA: This is a better path of life. Seamlessly we would change direction. This happened to us more than five times. In the end, now at our age, it has brought us to the writing of this book!
+
+Yet, we cannot be sure that we have found our defining life purpose. With the completion and publication of this work, we sense, our time to retire has not yet come. Dennis at 80+, does not feel it. That mystical hand might yet have a new direction for us. If it happens, it will be like an extension of an extended journey and it will be in a new direction, A NEW LIFE. We would love to know how many of you bear witness to this same experience, as we cannot

@@ -1014,6 +1014,7 @@
 +   [分布式传感器网络（第二版）：传感器网络与应用](docs/distributed-sensor-networks-second-edition-sensor-networking/README.md)
 +   [DK 练习册：Scratch 编程练习：计算机编程入门指南](docs/dk-workbooks-coding-with-scratch-workbook-an-introduction-to/README.md)
 +   [DKfindout! 编程入门指南](docs/dkfindout-coding/README.md)
++   [你是否知道另一个人如何认知存在？：超认识论 神经语义编程，NSP](docs/do-you-know-how-another-knows-to-be-epiepistemology-neuro-se/README.md)
 +   [机器学习文档处理指南](docs/document-processing-using-machine-learning/README.md)
 +   [Clifford A Shaffer C 语言数据结构与算法分析第3版 Dover 出版社 2011](docs/dr-clifford-a-shaffer-data-structures-and-algorithm-analysis/README.md)
 +   [动态网站开发者指南（这是一个数字世界！）](docs/dynamic-website-developers-its-a-digital-world/README.md)
