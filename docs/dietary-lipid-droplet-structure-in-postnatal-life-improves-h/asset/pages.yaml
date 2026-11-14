@@ -1,0 +1,1247 @@
+- pgno: 0
+  md: '# # Dietary lipid droplet structure in postnatal life improves hepatic energy
+    and lipid metabolism in a mouse model for postnatal programming
+
+
+    Tomas Jelenik<sup>a,b,1,2,3</sup>, Andrea Kodde<sup>c,1,4</sup>, Dominik Pesta<sup>a,b,d,e,f,1,5</sup>,
+    Esther Phielix<sup>g,6</sup>, Annemieke Oosting<sup>c</sup>, Elisabeth Rohbeck<sup>g,b</sup>,
+    Bedir Deyab<sup>a,b</sup>, Lucia Mastrototaro<sup>a</sup>, Sandra Trenkmann<sup>b,5</sup>,
+    Jaap Keijer<sup>1,7</sup>, Eline M. van der Beek<sup>1,8</sup>, Michael Roden<sup>a,b,k,9</sup>
+
+
+    +   <sup>a</sup> Institute for Clinical Diabetology, German Diabetes Center, Leibniz
+    Center for Diabetes Research at Heinrich-Heine University, Düsseldorf, Germany
+
+    +   <sup>b</sup> German Center for Diabetes Research, Partner Düsseldorf, Germany
+
+    +   <sup>c</sup> Danone Nutricia Research, Utrecht, The Netherlands
+
+    +   <sup>d</sup> Institute of Aerospace Medicine, German Aerospace Center (DLR),
+    Cologne, Germany
+
+    +   <sup>e</sup> German Center for Cardiovascular Disease, Partner Cologne (DZHK),
+    University Hospital Cologne, Cologne, Germany
+
+    +   <sup>f</sup> Cologne Excellence Cluster on Cellular Stress Responses in Aging-Associated
+    Diseases (CECAD), Cologne, Germany
+
+    +   <sup>g</sup> Department of Nutrition and Movement Sciences, School for Nutrition
+    and Translational Research in Metabolism, Maastricht University Medical Center,
+    Maastricht, The Netherlands
+
+    +   <sup>h</sup> Department of Physiology and Toxicology, Faculty of Pharmacy,
+    Tanta University, Tanta, Egypt
+
+    +   <sup>i</sup> Human and Animal Physiology, Wageningen University, Wageningen,
+    The Netherlands
+
+    +   <sup>j</sup> Department of Pediatrics, University Medical Centre Groningen,
+    University of Groningen, Groningen, The Netherlands
+
+    +   <sup>k</sup> Department of Endocrinology and Diabetology, Medical Faculty
+    and University Hospital, Heinrich-Heine University, Düsseldorf, Germany
+
+
+    # ## ARTICLE INFO
+
+
+    +   Keywords:
+
+    +   Early life programming
+
+    +   Mitochondrial function
+
+    +   Structure and function of lipid droplets
+
+    +   Milk fat globule membrane
+
+    +   Insulin resistance
+
+    +   Diacylglycerol
+
+
+    # ## ABSTRACT
+
+
+    Early-life diets may have a long-lasting impact on metabolic health. This study
+    tested the hypothesis that an early-life diet with large, phospholipid-coated
+    lipid droplets (Concept) induces sustained improvements of hepatic mitochondrial
+    function and metabolism. Young C57BL/6 mice were fed Concept or control (CTRL)
+    diet from postnatal day 15 (PN15) to PN42, followed by western style (WSD) or
+    standard rodent diet (AIN) until PN98. Measurements comprised body composition,
+    insulin resistance (HOMA-IR), tricarboxylic acid (TCA) cycle- and β-oxidation-related
+    hepatic oxidative capacity, high-resolution respirometry, mitochondrial DNA content,
+    markers of mitochondrial biogenesis and dynamics (PGC1α), markers of endoplasmic
+    reticulum stress as well as systemic oxidative stress. Concept feeding increased
+    TCA cycle-related respiration by 33% and mitochondrial fusion protein-1 by 65%
+    at PN42 (both p 0.05). At PN98, CTRL, but not Concept, mice developed
+
+
+    Abbreviations: AIN, American Institute of Nutrition rodent diet; Concept, concept
+    diet (Nutricia); cER, cytoplasmic ceramides; DAG, cytoplasmic diacylglycerols;
+    CER, ceramides; CETT, electron-transferring flavoprotein complex; CSA, citrate
+    synthase activity; CTRL, control diet; DAG, diacylglycerol; ET, electron transfer
+    capacity; FCCP, carbonyl cyanide-p-trifluoromethoxyphenylhydrazone; LCR, leak
+    control ratio; mCER, membrane ceramides; mDAG, membrane diacylglycerols; mCER/L,
+    liver droplet ceramides; tDAG, lipid droplet diacylglycerols; NAFLD, non-alcoholic
+    fatty liver disease; NEFA, non-esterified fatty acids; OXPHOS, oxidative phosphorylation;
+    PN, postnatal day; RCR, respiratory control ratio; ROS, reactive oxygen species;
+    TBARS, thiobarbituric acid reactive substances; TCA, tricarboxylic acid; WSD,
+    Western style diet.
+
+
+    * Correspondence to: c/o Institute for Clinical Diabetology, German Diabetes Center,
+    Leibniz Institute for Diabetes Research at Heinrich-Heine University, 40225 Düsseldorf,
+    Germany.
+
+    E-mail address: michael.roeden@ddz.de (M. Roden).
+
+    <sup>1</sup> Current address: notated equally.
+
+    <sup>2</sup> Address: TJ is currently an employee of Boehringer-Ingelheim Pharma
+    GmbH & Co. KG, Biberach an der Riss, Germany. EvdB was an employee of Danone Nutricia
+    Research at the time of the study.
+
+    ORCID ID: 0000-0002-2061-1162.
+
+    ORCID ID: 0000-0001-8692-3684.
+
+    ORCID ID: 0000-0002-8089-3546.
+
+    ORCID ID: 0000-0002-0548-3528.
+
+    ORCID ID: 0000-0002-7290-7491.
+
+    ORCID ID: 0000-0002-9232-3653.
+
+    ORCID ID: 0000-0002-8200-6382'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'hyperinsulinemia (CTRL/AIN 0.22 ± 0.44 vs. CTRL/WSD 1.49 ± 0.53 μmol/l, p <
+    0.05 and Concept/AIN 0.28 ± 0.38 vs. Concept/WSD 1.00 ± 0.29 nmol/l, n.s.) and
+    insulin resistance after WSD (CTRL/AIN 107 ± 23 vs. CTRL/WSD 738 ± 284, p < 0.05
+    and Concept/AIN 109 ± 24 vs. Concept/WSD 154 ± 157, n.s.). WSD-induced liver weight
+    was 18% lower in adult Concept-fed mice and β-oxidation-related respiration was
+    69% higher (p < 0.05; Concept/WSD vs. Concept/AIN) along with lower plasma lipid
+    peroxides (CTRL/AIN 4.85 ± 0.28 vs. CTRL/WSD 5.73 ± 0.47 μmol/l, p < 0.05 and
+    Concept/AIN 4.49 ± 0.31 vs. Concept/WSD 4.42 ± 0.33 μmol/l, n.s.) and were in
+    part protected from WSD-induced increase in hepatic cytosolic DAG C16:0/C18:1.
+    Early-life feeding of Concept partly protected from WSD-induced insulin resistance
+    and systemic oxidative stress, potentially via changes in specific DAG and mitochondrial
+    function, highlighting the role of early life diets on metabolic health later
+    in life.
+
+
+    # 1. Introduction
+
+
+    The prevalence of childhood obesity keeps increasing [1] and contributes to the
+    global rise in the incidence of type 2 diabetes, cardiovascular diseases and non-alcoholic
+    fatty liver disease (NAFLD) [2,3]. Consumption of hypercaloric fat- and carbohydrate-rich
+    diets contributes to this pandemic, by promoting ectopic lipid deposition, which
+    is related to insulin resistance, and key to the development of type 2 diabetes
+    [4]. Excessive lipid deposition can lead to adaptation of hepatic mitochondrial
+    function as demonstrated in mouse models of insulin resistance, obesity or lipotoxicity
+    [5–7]. In addition, subcellular accumulation of bioactive lipids, such as diacylglycerols
+    (DAG) and ceramides (CER), have a major role in mediating lipid-induced insulin
+    resistance by interfering with the insulin signalling pathway [4]. Both the quantity
+    and quality of dietary lipids affect metabolic function.
+
+
+    Dietary lipids can either exert beneficial metabolic effects, as reported for
+    n-3 polyunsaturated fatty acids- and monounsaturated fatty acids-enriched diets
+    [8,9], or may promote metabolic and insulin resistance effects, as observed for
+    saturated fat [10]. In addition, early-life exposure, dietary lipid quality, particularly
+    during pre- and (early) postnatal life, was shown to have sustained effects on
+    offspring metabolic health. Moreover, a high saturated fat intake during pregnancy
+    impaired insulin sensitivity [11,12], as well as hepatic and skeletal muscle mitochondrial
+    function [13,14] in adult offspring. Interestingly, post-natal dietary modulations
+    can attenuate the metabolic consequences of an adverse maternal diet for the offspring
+    [15]. Postnatal feeding of a diet rich in n-3 long-chain polyunsaturated fatty
+    acids prevented adult adiposity in rodents exposed to an obesogenic environment
+    [16].
+
+
+    Observational studies demonstrated that breastfeeding associates with a reduced
+    risk of overweight and obesity [17,18], and it is postulated that besides fatty
+    acid composition also the physical characteristics of human milk fat globules
+    influence these properties. Lipid characteristics of human milk are larger compared
+    to those of infant milk formula and are surrounded by a milk fat globule membrane,
+    consisting of phospholipids, glycolipids, cholesterol and membrane proteins [19,20].
+    To mimic the supramolecular structure of human milk lipid droplets, an infant
+    milk formula with large lipid droplets, coated with phospholipids (Nutrisp®) was
+    developed [21]. Previous studies in mice demonstrated that postnatal feeding with
+    a diet containing Nutrisp® (Concept) protects, at least in part, from western
+    style diet (WSD)-induced lipid accumulation, adipocyte hypertrophy and insulin
+    resistance [22,23]. Although the underlying mechanisms remain elusive, there is
+    evidence that Concept may enhance expression of genes regulating mitochondrial
+    content and oxidative function in murine adipose tissue [24]. Of note, hepatic
+    pathogenesis such as adipose tissue dysfunction and liver NAFLD [4].
+
+
+    Hepatic mitochondrial functionality is important for the regulation of lipid metabolism
+    and indeed Concept has been shown to enhance expression of hepatic mitochondrial
+    markers, directly after postnatal exposure, suggesting increased lipid oxidation
+    [25]. However, the long-term effects of the early life Concept exposure on hepatic
+    mitochondrial function, biogenesis and dynamics as well as lipid composition and
+    content has not been investigated. To this end, we examined
+
+
+    effects of postnatal Concept feeding on key features of hepatic mitochondrial
+    function, biogenesis, dynamics, efficiency and oxidative stress, as well as hepatic
+    lipid content and composition (1) after postnatal exposure and (ii) after subsequent
+    exposure to standard chow diet or WSD in adult mice. We hypothesized that early
+    postnatal Concept feeding improves hepatic mitochondrial function and lipid metabolism,
+    ultimately protecting from WSD-induced metabolic deterioration later in life.
+
+
+    # 2. Materials and methods
+
+
+    # 2.1. Animals
+
+
+    All experiments were performed according to the guidelines for the care and use
+    of animals (GV-SOLAS (Society for Laboratory Animal Science), Freiburg, Germany)
+    and approved by the local council of animal care in line with the requirements
+    of the German Animal Protection Act (permission no. AZ 35-9185.81/G-244/16).
+
+
+    Male and female Wistar Hannover (n = 36) C57BL/6JOlaHsd breeder mice (9 weeks
+    old at arrival, Envigo, Horst, The Netherlands) were maintained on a 12-h light/dark
+    cycle in standard cages under conventional conditions, regularly checked for pathogens
+    and received all diets and water ad libitum. Upon arrival, breeder mice were housed
+    with 1 per cage (Makrolon type 3 cages, floor area 800 cm2, height 150 mm, equipped
+    with poplar bedding, nest material made of hemp fibres, wooden blocks for gnawing
+    and red shelter mouse houses), and were allowed to acclimatize for one week, receiving
+    a grain-based diet (2018, Teklad Global 18% Protein Rodent Diet, Envigo, The Netherlands)
+    as provided by the breeder and subsequently adapted to a semi-synthetic American
+    Institute of Nutrition 93 G (growth) diet (AIN93G, Research Diets Services) for
+    two weeks. Breeders were time-mated (the day of vaginal plug detection for more
+    information see Supplemental Material at www.nutricia.com/pregnancy and until
+    day 15 of lactation. At PN2, pups were randomly assigned to a dam to reduce between-litter
+    variability and per litter effects, and culled to four male and two female pups
+    per dam, except one litter who consisted of three males and three females, and
+    another litter which consisted of two males and four females, respectively, due
+    to the sex-ratio and total offspring born. On PN15, dam and litters were assigned
+    to either Concept or CTRL groups and fed with respective diets (see below), while
+    pups were also allowed to drink milk from the dams (Fig. 1).
+
+
+    Concept and CTRL diets were provided daily as a dough on the floor of the cage.
+    After weaning on PN21, male offspring were housed in pairs of the same litter
+    in macrolon type 3 cages identical to the breeder mice and continued their respective
+    diets until PN42. At PN42, males were either dissected and sacrificed to an AIN-93M
+    (AIN) diet or to a WSD (20 w/w % fat) challenge until PN98 (Fig. 1). The study
+    comprised the following six groups: PN42: CTRL (n = 13) and Concept (n = 10) and
+    PN98: CTRL/AIN (n = 10), CTRL/WSD (n = 12), Concept/AIN (n = 12) and Concept/WSD
+    (n = 16) (for power calculation see supplementary material). Group sizes were
+    different as one litter (n = 4 males) was incorrectly assigned to the Concept
+    group, but these 4 animals were kept in the study after consultation with the
+    Animal Welfare Officer, as the animals could not be used for other experiments
+    given their exposure to'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'the diet. The extra male in the litter with 3 males and 3 females was kept
+    in the study. For the same reason and housed with the two littermates until the
+    end of the study. To further reduce litter effects, offspring of the same litter
+    were paired divided into different groups, i. e. either statined at PN42 or assigned
+    to WSD vs AIN-93G groups.
+
+
+    Body weight was measured twice a week from PN21 onwards, and food intake once
+    a week from PN42 onwards. Food intake was assessed per cage by weighing the metal
+    cage top with food per 24 h. Body composition was monitored by using nuclear magnetic
+    resonance (Whole Body Composition Analyzer, Echo MRI, Houston, Texas, USA) at
+    PN42 and PN98 [27]. All animal procedures were performed in the light phase.
+
+
+    At PN42 or PN98, mice were fasted for 3 h, anesthetized (isoflurane/N2O/O2) and
+    killed by cervical incision, while trunk blood was obtained for EDTA plasma. Fresh
+    pieces of liver were immediately transferred to biopsy preservation solution on
+    ice for analysis of mitochondrial functions using High-resolution respirometry
+    within 2 h. The remaining tissues were snap-frozen and stored at – 80 °C for later
+    analysis.
+
+
+    # 2.2. Diets
+
+
+    The postnatal diets are semi-synthetic diets (Research Diets Services), containing
+    28.2% (w/w) CTRL or Concept infant milk formula (IMF) powder, are iso-caloric
+    and contain similar amounts of macro-components. To establish appropriate rodent
+    macro- and micronutrient composition according to AIN-93G standards [26] only
+    proteins, carbohydrates, vitamins and minerals were added, i. e. the lipid portions
+    of the diets were entirely derived from the IMFs. The CTRL IMF powder was a commercially
+    available IMF manufactured for good manufacturing practices (ISO 22000) and intended
+    for use of 0-6 months old infants (Danone Nutricia Research, Utrecht, The Netherlands).
+    To produce Concept IMF (Nutricia, Danone Nutricia Research, Utrecht, The Netherlands),
+    0.5 g/1 milk phospholipid concentrate of bovine origin (Lipinor MG20, Lecico,
+    Hamburg, Germany) was added to the recipe and the phospholipid levels matched
+    those of human milk lipid droplets. The average phospholipid diameter [21,22].
+    The average diameter based on volume of the lipid droplets was 3.13 µm for Concept
+    compared to 0.47 µm for CTRL. The composition of the diets is given in Table 1.
+
+
+    # 2.3. Hepatic and skeletal muscle mitochondrial function
+
+
+    Mitochondrial respiration (O2 flux) and reactive oxygen species (ROS) emission
+    were measured in freshly permeabilized liver and soleus muscle samples using the
+    Oxygraph-2k (Oroboros Instruments, Innsbruck, Austria) as described [28]. Defined
+    respiratory states were obtained by employing the following protocols: (i) TCA-linked
+    respiration, by consecutive addition of 2 mM malate, 10 mM pyruvate (complex I,
+
+
+    | Diet | CTRL | Concept |
+
+    |---|---|---|
+
+    | Carbohydrates | 655 | 655 |
+
+    | Sugarsa | 189 | 189 |
+
+    | Non-digestible carbohydratesb | 460 | 460 |
+
+    | Proteins | 203 | 203 |
+
+    | Fat | 70 | 70 |
+
+    | Saturated fatty acids | 31 | 31 |
+
+    | Monounsaturated fatty acids | 27 | 27 |
+
+    | Polyunsaturated fatty acids | 12 | 12 |
+
+    | Phospholipidsc | 0.1 | 1.1 |
+
+    | Cholesterol | - | 0.03 |
+
+    | Fiber | 45.2 | 45.2 |
+
+    | Iron & mineral mix | 42 | 45 |
+
+
+    state 2 respiration also termed as LEAK), 2.5 mM ADP, 10 mM glutamate and (complex
+    I, state 3 also termed as OXPHOS (oxidative phosphorylation), 10 mM succinate
+    (complex I+II, state 3 OXPHOS), 10 µM cytochrome C (mitochondrial membrane integrity
+    check), 5 mM oligomycin (complex I+II, state 4o also termed as LEAKomy), carbonyl
+    cyanide-p-trifluoromethoxyphenylhydrazone (FCCP, stepwise titrations of 0.25 µM
+    up to the final concentration of max. 1.25 µM) in order to obtain maximal electron
+    transfer capacity (ETC) and 2.5 µM antimycin A (non-mitochondrial respiration),
+    as well as (ii) oxidation-linked respiration (succinate addition) of 2 mM malate,
+    10 mM glutamate, 10 mM succinate (complex I + II + succinate, state 3 + flavin
+    mononucleotide (FMN), state 2 (LEAK), 2.5 mM ADP (complex I + II + FCCP, state
+    3 (OXPHOS)), 10 µM cytochrome C, 5 mM oligomycin (complex I + C, state 4o (LEAKomy)),
+    FCCP to obtain maximal ETC (stepwise titrations of 0.25 µM up to the final concentration
+    of max. 1.25 µM, state u) and 2.5 µM antimycin A. Addition of cytochrome C did
+    not significantly increase oxygen consumption, indicating integrity of the mitochondrial
+    outer membrane after saponin permeabilization. Respiratory control ratio (RCR),
+    reflecting mitochondrial coupling, was calculated for each protocol from the respective
+    ratio of state 3 (OXPHOS)/state 4o (LEAKomy) [28,29]. Leak control ratio (LCR),
+    reflecting mitochondrial proton leak, was calculated using state 4o (LEAKomy)/ETC
+    ratios [28].
+
+
+    Rates of hepatic ROS emission at state 4o were quantified by fluorescence measurement
+    of H2O2 concentration by the O2k-Fluorescence module (Oroboros Instruments) as
+    described [30]. Citrate synthase activity (CSA) was assessed spectrophotometrically
+    (Citrate Synthase Assay kit, Sigma-Aldrich, St. Louis, MO).
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_2_0.png)
+
+
+    Fig. 1. Study design. Mice were assigned to one of the 6 experimental groups and
+    exposed to either CTRL or Concept diet from PN15 to 42. At PN42, CTRL and Concept-fed
+    mice were sacrificed and liver tissue was used for respirometry. Mice of the other
+    groups were fed AIN-93M or WSD until PN98. At PN98, remaining mice were sacrificed,
+    and liver tissue was used for respirometry. MRI was performed at PN42 and PN98.
+    AIN: American Institute of Nutrition rodent diet 93-maintenance, CTRL: control,
+    MRI: magnetic resonance imaging, PN: postnatal day, WSD: western style diet.'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# 2.4. Circulating hormones and metabolites
+
+
+    Plasma glucose was measured using the Glucose Assay Kit (Cabiochem®, Merck, KGaA,
+    Darmstadt) and plasma insulin using the Mercodia Mouse Insulin ELISA (Mercodia
+    AB, Uppsala, Sweden). Plasma levels of thiobarbituric acid reactive substances
+    (TBARS), as markers of lipid peroxidation, were measured fluorimetrically (BioTek,
+    Bad Friedrichshall, Germany) as reported previously [31]. Plasma non-esterified
+    fatty acid (NEFA) levels were measured using the Free Fatty Acids Kit (Cell Biolabs,
+    Inc., San Diego, USA).
+
+
+    # 2.5. Hepatic lipid analysis
+
+
+    Hepatic triglyceride concentration was measured colorimetrically (Triglyceride
+    Quantification Colorimetric/Fluorometric Kit, BioVision, California, USA). For
+    the rapid and simultaneous quantification of DAG and ceramide species in liver
+    tissue, we used a liquid chromatography triple quadrupole mass spectrometry (LC-MS/MS)
+    method as described briefly [32]. After immediate freezing of the samples in liquid
+    nitrogen, lipids were extracted and purified from ~50 mg of liver and muscle tissue
+    each. For extraction, fractionation and purification of bioactive lipids, liver
+    tissue was homogenized in 500 µl of buffer A (20 mM Tris/HCl, 1 mM EDTA 0.25 mM
+    EGTA, 250 mM Sucrose, PIC) using an IKA T10 basic Ultra Turrax (IKA, NC, USA)
+    and a tight-fitting glass homogenizer (Wheaton, USA) [32]. Lipids of three subcellular
+    compartments, i.e. lipid droplet, cytosolic membrane fraction and endoplasmic
+    reticulum-enriched fraction, were separated according to a previously described
+    protocol, overlaid with 150 µl Buffer A and centrifuged for 1 h, 100,000 * g,
+    4 °C. The floating lipid droplet layer was separated from the underlying cytosol
+    fraction using a slicer (Beckman Coulter, Brea, CA, USA). Subsequently, the cytosol
+    fraction was transferred to a fresh tube, while the membrane fraction remained
+    as a pellet in the centrifuge tube. Internal standards were added and lipids of
+    lipid droplet, cytosol and membrane fraction were extracted according to Folch
+    et al. [33], followed by solid phase extraction (Sep Pak Diol Cartridges; Waters,
+    MA, USA). The resulting lipid phase was dried under a gentle flow of nitrogen,
+    resuspended in 400 µl methanol and then analyzed by LC-MS/MS [32]. In brief, the
+    chromatographic separation of analytes was conducted using an Infinity 1290 Ultra
+    High Performance Liquid Chromatography system (Agilent Technologies Inc., Santa
+    Clara, CA, USA) and a reversed-phase Luna Omega C18 column, 50 × 2.1 mm, 1.6 µm
+    (Phenomenex, Torrance, CA, USA) operated at 50 °C. A binary gradient was used
+    consisting of 5 mM ammonium formate in water (Solvent A) and 5 mM ammonium formate
+    in 90% methanol/10% i-propanol (solvent B) at the flow rate of 0.4 ml/min. The
+    analytes were measured as ammonia adducts (DAGs) or protonated adducts (CERs)
+    using electrospray ionization (ESI) and detected by multiple reaction monitoring
+    (MRM) on a triplequadrupole mass spectrometer (MS, Agilent 6495; Agilent Technologies,
+    CA, USA) operated in positive ion mode.
+
+
+    # 2.6. Immunoblotting
+
+
+    Immunoblotting of proteins was performed according to a previously described protocol
+    [34]. Proteins were extracted from approximately 30 mg of liver tissue, homogenized
+    in 300 µl of lysis buffer (25 mM Trisaminomethane-hydrochloride (Tris-HCl), pH
+    7.4, 150 mM NaCl, 0.20% Nonidet P-40, 1 mM ethylenediaminetetraacetic acid (EDTA)
+    and 0.1% sodium dodecyl sulfate (SDS), supplemented with a Protease Inhibitor
+    Cocktail II (Roche, Mannheim, Germany) and loaded onto SDS polyacrylamide gradient
+    gels (4–20% Mini-PROTEAN® TGX™ Precast Protein Gels, Biorad,
+
+
+    Hercules, CA, USA). An inter-run calibrator (IRC) was loaded to each gel to account
+    for between-run differences. Prior to immunoblotting, the stain-free gels were
+    UV-activated for 1 min and pictures were taken using the ChemiDoc MP imaging system
+    (Biorad). Proteins were transferred to a polyvinylidene difluoride (PVDF) membrane
+    using the Trans-Blot Turbo Transfer System (Biorad), imaged using the ChemiDoc
+    MP and quantified using Image LabTM 6.0.1 software (Bio-Rad 199 Laboratories)
+    for normalization. The PVDF membrane was blocked with 5% non-fat milk in Tris-buffered
+    saline with Tween 20 (TBST buffer: 10 mM Tris, pH 8.0, 150 mM NaCl, and 0.5% Tween
+    20) for 2 h at room temperature. Afterwards, the membranes were incubated overnight
+    with primary antibodies at 4 °C and then with horseradish peroxidase (HRP)-conjugated
+    secondary antibodies for 1 h at room temperature. Finally, membranes were coated
+    with Immobilon Western Chemiluminescent HRP Substrate (Merck Millipore, Darmstadt,
+    Germany) and proteins were detected using a ChemiDoc imaging system in combination
+    with the software Image Lab 6.0.1 (Biorad) for densitometric analysis. The expression
+    levels of target proteins were normalized to actin-dependent anion channel (VDAC)
+    protein to normalize for mitochondrial content. The dynamin related protein (DRP1)
+    (5391) and phospho-DRP1 Ser616 (3455) antibodies were purchased from Cell Signaling
+    Technology; peroxisome proliferator-activated receptor gamma coactivator 1 (PGC-1)
+    α from Millipore (ST1202); mitochondrial transcription factor A (TFAM) from Santa
+    Cruz Biotechnology (sc-166965); other primary antibodies were purchased from Abcam:
+    Mitofusin1 (MFN1) (ab57602), Mitofusin2 (MFN2) (ab56889) and VDAC (ab14734).
+
+
+    Quantitative real-time PCR (RT-PCR) was performed as described previously [35].
+    Briefly, total RNA was isolated from 10 mg of frozen liver using the RNeasy Mini
+    Kit (Qiagen, Düsseldorf, Germany). cDNA was synthesized from 1000 ng total RNA
+    with the QuantiTect Reverse Transcription Kit (Qiagen, Cat. No.205311) and used
+    for RT-PCR with QuantiTect SYBR® Green PCR Kit (Qiagen, Cat. No.204145) in a StepOnePlus
+    RT-PCR System (Applied Biosystems, Waltham, MA, USA) using QuantiTect Primer Assays
+    (Qiagen, Düsseldorf, Germany). The following primers were purchased from Qiagen:
+    TFAM (QT00154413), PGC1α (QT02524422); hypotaurine-taurine phosphosulfurtransferase
+    (PGA (QT0166768), Peptidylprolyl isomerase A (QT00247709) and β2-microglobulin
+    (QT01149547) were used as endogenous reference genes. Ct values were first normalized
+    to geometric mean of Ct of the 3 reference genes, then to Ct of IRC to obtain
+    the expression fold-change following the ΔΔCt method [35]. A melting curve was
+    created to ensure primer specificity. Each sample was measured in triplicate.
+
+
+    # 2.7. Calculations and statistics
+
+
+    As a surrogate of insulin resistance, HOMA-IR was calculated from 3-h fasting
+    insulin (mIU/l) * fasting glucose (mmol/l)/22.5 [36,37]. Statistical analyses
+    were performed using GraphPad Prism (8.0.0) except for changes in body weight
+    and body composition over time, which were analyzed using SPSS (19.0.0). Data
+    are expressed as mean ± SEM. The effects of early-life diet (Concept vs. CTRL)
+    at PN42 were compared using the unpaired t-test. At PN98, effects of the early-life
+    (Concept vs. CTRL) and adult diet (AIN vs. WSD) and the interaction between those,
+    were analysed using two-way ANOVA and Sidak’s multiple comparisons test in case
+    of an overall early-life or adult diet effect. Data were analyzed using GraphPad
+    Prism 9.0.0 (GraphPad Software, San Diego, CA, USA) and when data did not show
+    a Gaussian distribution, analysed with a Mann-Whitney or Kruskal-Wallis test.
+    Changes in body weight and body composition over time were analysed using repeated
+    measure ANOVA. Differences were considered significant when p < 0.05, p < 0.01
+    and p < 0.001.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '# ## 3. Results
+
+
+    # ### 3.1. Direct effects of postnatal Concept feeding at PN42
+
+
+    The direct effects of the early-life dietary intervention, as defined by the 4
+    weeks from PN11 to PN42, were studied at PN42. Body weight was similar between
+    Concept and CTRL (Fig. 2A). However, Concept fed mice had a higher lean body mass
+    (Fig. 2B), while total body fat mass tended to be lower compared to CTRL (p =
+    0.06). Consequently, relative body fat mass was lower after Concept feeding compared
+    to CTRL (Fig. 2C, D).
+
+
+    The differences in body composition did not affect organ weights (Supplementary
+    Table 1).
+
+
+    In the liver, maximum uncoupled TCA cycle-linked respiration was 33% higher (p
+    = 0.05) after Concept feeding compared to CTRL (Fig. 3A). No differences were
+    observed for other parameters of TCA-cycle-linked respiration, including LCR and
+    RCR (Supplementary Fig. 1A, B). The activities of β-oxidation-linked respiration-linked
+    LCR and RCR and CSA activities did not differ between Concept and CTRL (Fig. 3B,
+    C, Supplementary Fig. 1c, D). Also, hepatic mitochondrial ROS production, expressed
+    as H2O2 emission, was similar between both groups (Fig. 3D). Mitochondrial function
+    and content as well as oxidative stress of the soleus muscle were not different
+    between groups (Supplementary Fig. 2A-D).
+
+
+    Protein content of the biomarkers of mitochondrial biogenesis, PGC-1α and TFAM,
+    was not different between Concept and CTRL at PN42 (Fig. 4A, B). However, there
+    was a 65% increase in MFN1 protein indicating higher mitochondrial fusion after
+    Concept feeding (p = 0.03) (Fig. 4C, D). DRP1 protein and the ratio of DRP1 to
+    phospho-DRP1 (Ser616), as biomarkers of mitochondrial fission, were not different
+    between Concept and CTRL (Fig. 4E, F).
+
+
+    After 3 h of fasting, there were no differences in plasma glucose, insulin, HOMA-IR,
+    as well as plasma TBARS and NEFA (Supplementary Fig. 3A–F). Liver weight and liver
+    triglycerides were comparable between Concept and CTRL at PN42 (Fig. 5A, B). Cytosolic
+    DAGs (cdAG), lipid droplet DAGs (ldDAG) and most membrane DAGs (mDAG
+
+
+    as measured in liver tissue, were not affected by Concept compared to CTRL. However,
+    C20, C22 and C24 mCER were higher in Concept compared to CTRL mice (Fig. 5C and
+    Supplementary Fig. 4A–E).
+
+
+    # ### 3.2. Effects of postnatal Concept feeding in adult mice
+
+
+    At PN88, the effect of the early-life feeding with Concept vs CTRL was assessed
+    upon a WSD challenge. Compared to AIN, WSD exposure increased body weight and
+    lean mass over time (PN42–89) by a similar extent in Concept/WSD and CTRL/WSD
+    groups, also when corrected for the dependent baseline values (Fig. 6A, B and
+    Supplementary Figure 5A, B). Concept/WSD showed a somewhat lower increase (relative)
+    body fat mass over time than CTRL/WSD, which was statistically different compared
+    to CTRL/WSD, when corrected for baseline values (Fig. 6C, D and Supplementary
+    Fig. 5C and D). Neither early nor adult diets affected fasting plasma glucose
+    and NEFA levels (Fig. 6E, I). Plasma insulin and HOMA-IR significantly worsened
+    in CTRL/WSD compared to CTRL/AIN, but not in Concept/WSD compared to Concept/AIN
+    (Fig. 6F–G). Plasma TBARs levels were increased in CTRL/WSD compared to CTRL/AIN,
+    but not in Concept/WSD mice (Fig. 6H).
+
+
+    Compared to AIN, WSD increased hepatic TCA cycle-linked state 3 (succinate) respiration,
+    to a similar extent in the Concept/WSD and CTRL/WSD mice (Fig. 7A), while LGR
+    and RCR remained unchanged by WSD and WSD mice did not differ between Concept
+    and CTRL at PN88. WSD similarly induced early life differences of β-oxidation-linked
+    respiration and RCR in Concept/WSD and CTRL/WSD (Fig. 7B. Supplementary Fig. 6D),
+    while LCR remained unaffected and was not different between groups. (Supplementary
+    Fig. 6C). WSD, however, increased maximal (FCCP) β-oxidation-linked uncoupled
+    respiration only in Concept/WSD and was 69% (p = 0.05) higher compared to Concept/AIN
+    (Fig. 6B). Finally, mitochondrial content, as assessed by CSA, was lower in Concept/WSD
+    than CTRL/AIN (Fig. 7C). Mitochondrial oxidative stress was reduced by WSD as
+    compared to the restrictive AIN diet (Fig. 7D). There were no group-differences
+    when oxidative stress levels were normalized to CSA (Fig. 7E). Soleus muscle mitochondrial
+    function and content as well as oxidative stress were not different between CTRL/AIN,
+    CTRL/WSD,
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_4_0.png)
+
+
+    Fig. 2. Direct effects of Concept vs CTRL on body weight and body composition.
+    (A) Body weight at PN42. (B-D) Body composition at PN42. Data are shown as mean
+    ±SEM. CTRL n = 13; Concept n = 10. Unpaired t-test; *p < 0.05. CTRL: control.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/66bfb1245694ee2efee2f3a8fb0ec90d_5_0.png)
+
+
+    Fig. 3. Direct effects of the Concept diet on mitochondrial function of the liver
+    at PN42. Mitochondrial respiration (O2 flux normalized to CSA) was measured with
+    substrates supporting TCA cycle (A) and β-oxidation (B). Mitochondrial content
+    (C) was assessed by CSA normalized to protein concentration. Oxidative stress
+    (D) was measured as the rate of mitochondrial H2O2 emission. Data are presented
+    as mean±SEM. CTRL: n = 13; Concept: n = 10. Multiple t-test (A, B) or unpaired
+    t-test (C, D): *p < 0.05; CSA: citrate synthase activity; CTRL: control; cyto
+    c: cytochrome c; fccp: carbonyl cyanide-p-trifluoromethoxyphenylhydrazone; TCA:
+    tricarboxylic acid.
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_5_1.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_5_2.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_5_3.png)
+
+
+    Concept/AIN, and Concept/WSD (Supplementary Fig. 7A–D). In order to assess long-term
+    effects of postnatal Concept feeding on mitochondrial bioenergetics and dynamics,
+    we assessed protein levels of PGC-1α, TFAM, MFN1, MFN2, DRP1 and the ratio of
+    DRP1 to phosphorylation (Ser616). Neither early nor adult diets affected these
+    biomarkers of mitochondrial biogenesis and dynamics (Fig. 9A–F) or the differences
+    of mitochondrial protein between PN42 and PN98 (Supplementary Fig. 9A–F). In contrast
+    to CTRL/WSD, liver weight of the Concept/WSD group did not increase upon WSD challenge
+    and was lower compared to that of CTRL/WSD (Fig. 9A). The WSD-induced increase
+    in weight of any other tissue or organ studied was not affected by the early-life
+    Concept diet (Supplementary Table 2). Hepatic triglyceride levels increased upon
+    WSD feeding in both CTRL/WSD and the Concept/WSD (Fig. 9B). When assaying subcellular
+    fractions to study bioactive lipids in more detail, we found that the WSD challenge
+    increased hepatic cDAG and mDAG species containing C18:1 mainly in CTRL/WSD compared
+    to CTRL/AIN, which reached significance for cDAG C16:0/C18:1 (Fig. 9C, D and Supplementary
+    Fig. 9A, C, E). Neither the WSD, nor the early Concept feeding had an effect on
+    CER species in the different subcellular fractions (Supplementary Fig. 9B, D and
+    F).
+
+
+    # 3.3. Correlation analyses
+
+
+    Energy expenditure can best be correlated to lean mass [38], due to significant
+    weight contribution but low metabolic activity of white adipose tissue [39]. Indeed,
+    at PN98, the lean body mass of CTRL groups (CTRL/AIN and CTRL/WSD together) correlated
+    to hepatic mitochondrial respiration (r = 0.436; Supplementary Table 3). However,
+    r = 0.490; r = 0.436; p < 0.05 for all; Supplementary Table 3). However, in concept
+    fed groups, no such correlations were found. As for AIN and WSD animals at PN98,
+    we observed a correlation between lean body mass and respiration rate after ADP
+    (r = −0.548), cytochrome c (r = −0.523) and FCCP titration (r = −0.403), p < 0.05
+    for all (Supplementary Table 4).
+
+
+    # 4. Discussion
+
+
+    This diet intervention showed that early-life exposure to a diet comprising large,
+    phospholipid-coated lipid droplets (Concept) affects various features of mitochondrial
+    function and lipid metabolism in rodent liver, but not skeletal muscle. Concept
+    feeding not only directly enhanced mitochondrial TCA-cycle-linked oxidative capacity
+    and mitochondrial function at PN42, but also potentiated β-oxidation-linked oxidative
+    capacity later in life, at PN98. Furthermore,'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/66bfb1245694ee2efee2f3a8fb0ec90d_6_0.png)
+
+
+    Fig. 4. Direct effects of Concept and CTRL on protein markers of mitochondrial
+    biogenesis and dynamics at P42. PCG-1α: (A), TFAM (B), MFN1 (C), MFN2 (D), DRP1
+    (E) and pDRP1/DRP1 (F). Data are shown as mean±SEM, CTRL: n = 13; Concept: n =
+    10. Unpaired t-test, CTRL: control, PGC-1α: peroxisome proliferator-activated
+    receptor gamma coactivator 1-α; TFAM: mitochondrial transcription factor A; MFN1
+    or 2: mitofusion 1 or 2; DRP1: dynamin-related protein 1, VDAC: voltage-dependent
+    anion channel.
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_6_1.png)
+
+
+    Fig. 5. Direct effects of Concept and CTRL on liver weight and hepatic lipids
+    at P42. Liver weight (A), liver TG (B) and mCER (C). Data are shown as mean±SEM,
+    CTRL: control; mCER: ceramides in membranes, TG: triglycerides.
+
+
+    postnatal exposure to the Concept diet at least partially protected piglets against
+    WSD-induced hyperinsulinemia, insulin resistance, body fat accumulation, cytosolic
+    and membrane DAG accumulation and systemic oxidative stress. Early-life environment
+    can affect metabolic health and specifically liver function either adversely,
+    e. g. by foetal over- or undernutrition [40,41], or beneficially, e. g. by breastfeeding
+    [42]. Several rodent and piglet studies suggested that altered hepatic mitochondrial
+    function and ROS production may be associated with this so-called programming
+    of metabolic health [13,43,44]. In those studies, intrauterine growth
+
+
+    restricted piglets [43] and rodents born to obese dams [13,44] showed reduced
+    hepatic mitochondrial content, oxidative capacity and increased production of
+    ROS and/or expression of its markers. Early-life feeding with the Concept diet
+    for several weeks increased maximum uncoupled TCA-cycle-linked respiration directly
+    after exposure and maximum uncoupled β-oxidation-linked respiration after WSD-fed
+    adult mice. These findings suggest that the Concept diet induces programming of
+    hepatic mitochondrial function, increasing maximum oxidative capacity. Interestingly,
+    in the current study, hepatic mitochondrial ROS emission remained unchanged between
+    Concept/WSD'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_0.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_1.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_2.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_3.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_4.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_5.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_6.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_7.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_7_8.png)
+
+
+    Fig. 6. Long-term effects of postnatal Concept feeding on changes in body weight,
+    body composition and glucose metabolism. Development of body weight (A), lean
+    mass (B), fat mass (C) and relative fat mass (D, % of body weight) from PN42 to
+    PN98 as classified for baseline. Fasted (3 h) plasma glucose (E), insulin (F),
+    (F), HOMA-IR (G) TBARS (H), and NEFA (I). Data are means ± SEM. CTRL/AIN: n =
+    10; CTRL/WSD: n = 12; Concept/AIN: n = 12; Concept/WSD: n = 16, except for the
+    glucose, HOMA-IR which had n = 9 for the CTRL/AIN and n = 11 for the Concept/AIN.
+    For body weight and composition, repeated measures ANOVA with two factors (diet
+    and time) were used. For comparisons between factors within groups, separate t
+    tests were performed. *p < 0.05 CTRL/WSD different from CTRL/AIN. Glucose and
+    insulin data were tested with two-way ANOVA. p# < 0.01 WSD in groups fed the same
+    maternal diet. Abbreviations: AIN: control diet; CTRL: control diet; NEFA: non-esterified
+    fatty acids; PN: postnatal day; TBARS: thiobarbituric acid reactive substances;
+    WSD: western style diet.
+
+
+    and CTRL/WSD, while plasma lipid peroxides (TBARS) increased only in CTRL/WSD,
+    but not in Concept/WSD. The absence of a rise in ROS production in the face of
+    higher oxidative capacity hints at an improved antioxidant activity and/or altered
+    lipid metabolism, maybe due to preferred β-oxidation and decreased VLDL secretion
+    from the liver of Concept/WSD mice. Mitochondrial dynamics, i. e. fission and
+    fusion events, are closely related to mitochondrial function. One of the factors
+    contributing to NAFLD development is the inadequate mitochondrial quality control
+    [45]. While mitochondrial fusion positively correlates with oxidative phosphorylation
+    capacity [46], mitochondrial fission has a role in the development of hepatic
+    steatosis and metabolic derotation [47,48]. The present study found evidence for
+    higher mitochondrial fusion upon normalization to mitochondrial content in mice
+    receiving Concept during early life, supporting the contention of an association
+    with the improvement of mitochondrial function in these mice [46]. While there
+    were no long-term effects of postnatal Concept feeding on liver-specific mitochondrial
+    biogenesis and dynamics, we cannot exclude longer-lasting effects on hepatic metabolism,
+    maybe occurring via epigenetic alterations associated with fetal programming [49].
+
+
+    Fat droplets of concept diet are composed of a mixture of phospholipids, proteins
+    and cholesterol, mimicking largely the structure and composition of human fat
+    globules [50]. Although exact mechanisms are still under investigation, the specific
+    structure of Concept may enhance intestinal lipolysis and postnatal lipemia in
+    a way that postnatal responses and bioavailability of ingested fatty acids exert
+    possible longer-term consequences on hepatic bioenergetics. The WSD intervention
+    increases hepatic oxidative capacity from postnatal life onwards. Recent studies
+    have demonstrated that hepatic mitochondria can adapt their activity to short-term
+    as well as long-term changes to substrate availability. Specifically, increased
+    lipid availability leads to adaptive increases in mitochondrial oxidative capacity,
+    indicating “metabolic flexibility” in both humans and murine obesity, at least
+    during the early course of NAFLD [29]. In the present study, the Concept/WSD mice
+    featured higher hepatic mitochondrial function from different substrates independent
+    of WSD-induced changes in lean body mass, in line with a sustained effect of early
+    life Concept exposure. This effect is likely not related to improved mitochondrial
+    biogenesis, as Concept did not affect hepatic CSA, reflecting mitochondrial content
+    or mass. Collectively, these'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/66bfb1245694ee2efee2f3a8fb0ec90d_8_0.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_8_1.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_8_2.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_8_3.png)
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_8_4.png)
+
+
+    Fig. 7. Long-term effects of postnatal Concept feeding on mitochondrial function
+    in the liver at PN98. Mitochondrial respiration (O2 flux normalised to citrate
+    synthase activity (CSA)) was measured with substrates supporting TCA cycle (A)
+    and β-oxidation (B). Mitochondrial content (C) was assessed by CSA activity. Mitochondrial
+    H2O2 emission was measured with substrates supporting TCA cycle (D) and β-oxidation
+    (E). Data are shown as mean±SEM. CTRL/AIN: n = 10; CTRL/WSD: n = 12; Concept/AIN:
+    n = 12; Concept/WSD: n = 16. Two-way ANOVA; *p < 0.05; **p < 0.01 overall WSD
+    effect; # WSEC effect in groups fed the same early-life diet. AIN: American Institute
+    of Nutrition rodent diet; CSA: citrate synthase activity; CTRL: control; cyt c:
+    cytochrome c; fccp: carbonyl cyanide-p-trifluoromethoxyphenylhydrazone; TCA: tricarboxylic
+    acid; WSD: western style diet.
+
+
+    findings point towards a protective effect of Concept in early life from WSD-induced
+    impairment of hepatic lipid metabolism in later life [22, 23]. The long-term effects
+    of Concept on mitochondrial respiration may result from different mechanisms.
+    Previously, we showed that Concept increases postprandial glucose concentrations
+    [51]. One might speculate that higher glucose levels may have stimulated TCA-cycle-linked
+    respiration and de novo lipogenesis and lipid export at PN28. Subsequently, the
+    increased β-oxidation-linked respiration in
+
+
+    Concept/WSD at PN98 observed in the current study, may result from adaptation
+    of hepatic mitochondria to several weeks of higher lipid exposure. Early Concept
+    diet could thereby lead to improved handling of lipid overloads by improved “mitochondrial
+    flexibility” by oxidation of the lipid surplus instead of storing it, supported
+    by the observation of a lower fat mass gain in Concept/WSD. Notably, Concept feeding
+    did not impact skeletal muscle mitochondrial function, content or oxidative stress.
+    Nutrient overload, induced by high-fat feeding, can result in exhaustion of adipose
+    tissue storage'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/66bfb1245694ee2efee2f3a8fb0ec90d_9_0.png)
+
+
+    Fig. 8. Long-term effects of postnatal Concept feeding on liver-specific markers
+    of mitochondrial biogenesis on P98. PGC-1α (A), TFAM (B), MFN1 (C), MFN2 (D),
+    DRP1 (E) and pDRP1/DRP1 (F). Data are shown as mean±SEM, two-way ANOVA; CTRL/AIN:
+    n = 10; CTRL/WSD: n = 12; Concept/AIN: n = 12; Concept/WSD: n = 14. PGC-1α: peroxisome
+    proliferator-activated receptor gamma coactivator 1-α; TFAM: mitochondrial transcription
+    factor A; MFN1 or 2: mitofusin protein 1 or 2; DRP1: dynamin-related protein 1;
+    VDAC: voltage-dependent anion channel.
+
+
+    ![](img/66bfb1245694ee2efee2f3a8fb0ec90d_9_1.png)
+
+
+    Fig. 9. Long-term effects of postnatal Concept feeding on liver weight and liver
+    lipids on P98. Liver weight (A), liver TG (B), mDAG (C) and cDAG (D) in livers
+    from CTRL/AIN, CTRL/WSD, Concept/AIN and Concept/WSD rats. n = 10; CTRL/WSD: n
+    = 12; Concept/AIN: n = 12 for all; Concept/WSD: n = 16 for liver weight, n = 12
+    for liver TG and n = 14 for mDAG and cDAG. Two-way ANOVA; groups with the same
+    WSD effect: # WSD effect in AIN fed groups feed the same early-life diet. AIN:
+    casein-based control diet; CTRL: control; cDAG: sn-1,3-diacylglycerols in cytosol;
+    CTRL: control; mDAG: diacylglycerols in membranes. TG: triglycerides; WSD: western
+    style diet.
+
+
+    capacities and subsequent “spillover” of lipids into other tissues such as skeletal
+    muscle or liver [52,53], potentially impairing mitochondrial function [54]. Although
+    we cannot infer general effects of the WSD on skeletal muscle mitochondrial function,
+    we conclude that Concept at least did not result in improved mitochondrial function
+    in soleus muscle. Of note, Concept feeding prevented a WSD-induced increase in
+    mRNA levels of key lipid-induced inflammatory proteins, suggesting that, particularly,
+    C18:0 ceramides are involved in the activation of PKCs, which then phosphorylates
+    threonine residues of the insulin receptor kinase and thereby impairs insulin
+    signalling [4,55]. In contrast, sequestration of DAGs into neutral cellular lipid
+    storage sites such as lipid droplets is considered protective against metabolic
+    derangements [56]. Concept feeding therefore seems to favour cellular lipid
+
+
+    re-distribution with a profile favouring protection from hepatic insulin resistance.
+    Moreover, the lower DAG lipid profile after Concept feeding could explain higher
+    mitochondrial respiration, as it has recently been shown that C18-containing DAG
+    reduced state 3 mitochondrial respiration in vitro in a dose-dependent manner
+    [57]. In addition, to exert effects via DAGs, early life exposure to Concept feeding
+    may cause epigenetic changes in gene expression in mitochondrial metabolism and
+    consequently contribute to changes in body mass composition and changes in skeletal
+    muscle and liver in humans [58,59]. Indeed, a recent study has revealed a novel
+    role of phospholipids as a meaty sink and important regulator of histone methylation
+    [60]. Elevated ceramides, particularly C16, C18, C24 and C24 species, have been
+    associated with fatty liver disease and impaired mitochondrial function after
+    feeding high-fat diets'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'ranging from 45% to 60% fat content [61,62]. Early life diets, mimicking human
+    breast milk, are also naturally rich in fat (70%, see Table 1 for composition).
+    As there are no differences regarding key metabolic outcomes (Suppl. Fig. 2),
+    we conclude that elevated CER at birth do not associate with metabolic impairments.
+    Further, the milk phospholipid concentrations used to coat the lipid droplets
+    in the Concept diet also contained ceramides, which may have a direct effect on
+    ceramide levels in blood and membranes, as shown for phosphatidylcholines [63,64].
+    With regard to longer-term effects, it is important to note that feeding a WSD
+    did not differentially affect CTRL or Concept mice, as shown in Suppl. Fig. 6.
+
+
+    Despite the significant improvements in hepatic lipid oxidation and circulating
+    lipid peroxides, the effects of Concept on fasting glycemia, NEFA and insulin
+    sensitivity were relatively modest. The relatively short exposure to the WSD (8
+    weeks) may be explanatory as the effect of Concept on fasting plasma glucose,
+    lipids, leptin, resistin and total body fat mass were more prominent after longer
+    (12 weeks) exposure to WSD in our previous study [22]. Other factors such as the
+    oxidation of hepatic insulin sensitivity would have required clamp tests, as HOMA-IR
+    was assessed only upon a rather short duration of fasting (3 h), based on ethical
+    considerations for animal well-being. Concept treated animals did respond to the
+    obesogenic diet, but Concept feeding, even when challenged for a longer period
+    with WSD, protected animals from development of hyperinsulinemia. Elevated plasma
+    insulin results from higher insulin secretion or lower insulin clearance [65].
+    In humans, insulin clearance is not necessarily related to liver fat content [66],
+    whereas a high-fat diet may impair insulin clearance in mice [67]. In our study,
+    hyperinsulinemia could therefore originate from both compensatory increased insulin
+    secretion or decreased insulin clearance. As C-peptide clearance by the liver
+    is negligible, this parameter is used to estimate insulin secretion [68]. Unfortunately,
+    we could not assess C-peptide in this study due to limited plasma availability.
+
+
+    This study has some limitations We need to address. We cannot conclude whether
+    the effects of Concept on mitochondrial oxidative activity and lipid metabolism
+    are due to the increased size of dietary lipid droplets, the phospholipid coating
+    of these droplets or its combined effects. Previous studies showed, however, that
+    both an increase in lipid droplet size and phospholipid coating are required for
+    the phenotypic Concept effects [70]. Also monitoring of mitochondrial ATP concentration
+    and/or synthesis, which is affected by lipid diets, diabetes and NAFLD in humans
+    [71–73] would have been of interest, but was not possible due to the limited amount
+    of tissue available. In addition, metabolic changes, detailed analysis of tissue-specific
+    insulin sensitivity using hyperinsulinemic clamp tests with isotopic dilution
+    methods [74] would be required.
+
+
+    In conclusion, early-life feeding with a diet containing large, phospholipid coated
+    lipid droplets (Nutricis®) was shown to improve hepatic oxidative capacity, mitochondrial
+    fusion and lipid profiles, directly after exposure, which persisted into later
+    life under an obesogenic environment in a mouse model for nutritional programming.
+    Thus, this study highlights the role of an early life diet containing specific
+    phospholipids mimicking human breast milk on metabolic health later in life.
+
+
+    # Sources of support
+
+
+    This study was sponsored in part by Danone/Nutricia as well as by the Ministry
+    of Culture and Science of the State of North Rhine-Westfalia (MKW NRW), the German
+    Federal Ministry of Health (BMG) as well as by a grant for Diabetes Research (DZD
+    e. V.), the German Research Foundation (DFG, CRC 1116/2) as well as the Schmutzler-Stiftung.
+
+
+    # Credit author statement
+
+
+    TJ, AK, AO, EP, EvDB and MR designed research; TJ, AK, DP, ER, ST, LM and BD conducted
+    research; TJ, AK, and ER analysed data; TJ, AK, DP, EP, LM, JK, EvDB and MR interpret
+    the data; TJ, AK, DP and MR wrote the paper; MR had primary responsibility for
+    final content. All authors read and approved the final manuscript.
+
+
+    # Declaration of Competing Interest
+
+
+    TJ: none; AK, AO: are employees of Danone Nutricia Research, EvDB: was an employee
+    of Danone Nutricia Research at the time of the study conduct and analyses; DP:
+    none; EP: none; ER: none; BD: none; ST: none; JK: none; MR: none.
+
+
+    # Data availability
+
+
+    Data supporting the conclusions of this manuscript are available upon reasonable
+    request from the corresponding author.
+
+
+    # Acknowledgements
+
+
+    Assistance: We wish to thank Ilka Rokitta and Fariba Ziveh for expert help with
+    performing experiments and analyses, Eefje Engels for her advice for conduct of
+    the study and Dennis Acton for contribution to data interpretation of the study
+    and Demis Acton for contribution to data interpretation.
+
+
+    Grants: This study was sponsored in part by Danone Nutricia Research as well as
+    by the Ministry of Culture and Science of the State of North Rhine-Westfalia (MKW
+    NRW), the German Federal Ministry of Health (BMG) as well as by a grant for the
+    Federal Ministry for Research (BMBF) to the German Center for Diabetes Research
+    (DZD e. V.), the German Research Foundation (DFG, CRC 1116/2) as well as the Schmutzler-Stiftung.
+    Danone Nutricia Research provided the animal diets and was involved in discussions
+    on study design, data interpretation and writing of the manuscript.
+
+
+    # Appendix A. Supporting information
+
+
+    Supplementary data associated with this article can be found in the online version
+    at doi:10.1016/j.phrs.2022.106193.
+
+
+    # References
+
+
+    +   [1] M. Ng, et al., Global, regional, and national prevalence of overweight
+    and obesity in children and adults during 1980-2013: a systematic analysis for
+    the Global Burden of Disease Study 2013, Lancet 384 (9945) (2014) 766–781.
+
+    +   [2] R. Singh, et al., Prevalence of impaired glucose tolerance among children
+    and adolescents with marked obesity, N. Engl. J. Med. 346 (11) (2002) 802–810.
+
+    +   [3] M. Weiss, et al., Obesity and the metabolic syndrome in children and adolescents,
+    J. Pediatr. 140 (S5) (2002) S5–S12.
+
+    +   [4] ... The predictive biology of type 2 diabetes, Nature 576 (7787) (2019)
+    31–40.
+
+    +   [5] A.P. Arruda, et al., Chronic enrichment of hepatic endoplasmic reticulum-mitochondria
+    contact leads to mitochondrial dysfunction in obesity, Nat. Med. 20 (2) (2014)
+    174–183.
+
+    +   [6] S. Sánchez, et al., Interorgan mitochondrial crosstalk in human insulin
+    resistance, Physiol. Rev. 98 (3) (2018) 1717–1741.
+
+    +   [7] T. Jelnik, et al., Early-life feeding with a diet containing large phospholipid-coated
+    lipid droplets improves mitochondrial activity and secondary bile acid metabolism
+    in mice, Diabetes 66 (8) (2017) 2241–2253.
+
+    +   [8] Y.B. Lombardo, G. Hein, A. Chicco, Mitochondrial syndrome: effects of
+    a n-3 PUFAs on a model of dyslipidemia, insulin resistance and adiposity, Lipids
+    42 (5) (2007) ...
+
+    +   [9] L.G. Gillings, S. Harris-Janz, P.J. Jones, Dietary monounsaturated fatty
+    acids are protective against metabolic syndrome and cardiovascular disease risk
+    factors, Nutrients 11 (1) (2019) ...
+
+    +   [10] A. Kennedy, et al., Saturated fatty acid-mediated inflammation and insulin
+    resistance in adipose tissue: mechanisms of action and implications, J. Nutr.
+    139 (1) (2009) 1–4.
+
+    +   [11] J. Li, et al., Maternal obesity during pregnancy and lactation programs
+    the development of offspring non-alcoholic fatty liver disease in mice, J. Hepatol.
+    52 (6) (2010) 913–920.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '+   [12] A.M. Samuelson, et al., Diet-induced obesity in female mice leads
+    to offspring hyperphagia, adiposity, hypertension, and insulin resistance: a novel
+    murine model of developmental programming, Hypertension 51 (2) (2008) 383–392.
+
+    +   [13] R.D. Bruce, et al., Maternal high-fat feeding primes steatohepatitis
+    in adult mice exposed to a postweaning obesogenic environment, J. Lipid Res. 50
+    (11) (2009) 2204–2213.
+
+    +   [14] C.A. Plegge, et al., Maternal high fat diet alters skeletal muscle development
+    and function in the offspring of mice, J. Anim. Physiol. Anim. Nutr. 98 (4) (2014)
+    634–641.
+
+    +   [15] W. Jorgensen, et al., Changed mitochondrial function by pre- and/or postparturum
+    diet alterations in sheep, Am. J. Physiol. Endocrinol. Metab. 297 (6) (2009) E1349–1557.
+
+    +   [16] N. Plagemann, et al., N-3 long-chain polyunsaturated fatty acids prevent
+    excessive fat deposition in adulthood in a mouse model of postnatal nutritional
+    programming, Pediatr. Res. 66 (6) (2009) 494–499.
+
+    +   [17] A.A. Mikkelsen, et al., Fish oil supplementation and risk of overweight:
+    a meta-analysis, Am. J. Epidemiol. 162 (5) (2005) 497–503.
+
+    +   [18] C.G. Owen, et al., Effect of infant feeding on the risk of obesity across
+    the life course: a quantitative review of published evidence, Pediatrics 115 (5)
+    (2005) 1367–1377.
+
+    +   [19] S. Galletti, et al., Using confocal laser scanning microscopy to probe
+    the milk fat globule membrane and associated proteins, J. Agric. Food Chem. 58
+    (7) (2010) 4072–4079.
+
+    +   [20] M.C. Michalski, et al., Size distribution of fat globules in human colostrum,
+    breast milk, and infant formula, J. Dairy Sci. 88 (6) (2005) 1972–1984.
+
+    +   [21] J. Hamosh, Bioactive factors in human milk, Pediatr. Clin. North Am.
+    47 (1) (2001) 69.
+
+    +   [22] A. Ostling, et al., Colloids and Surf. Biointerfaces 136 (2015) 329–339.
+
+    +   [23] S. Aoe, et al., Effect of dietary lipid structure in early postnatal
+    life on mouse adipose tissue development and function in adulthood, Pediatr. Res.
+    72 (4) (2012) 402–409.
+
+    +   [24] A. Kode, et al., Supramolecular structure of dietary fat in early life
+    modulates expression of markers for mitochondrial content and capacity in adipose
+    tissue of mice, J. Nutr. Biochem. 23 (12) (2012) 1612–1628.
+
+    +   [25] O. Rønda, et al., Effects of an early life diet containing large phospholipid-coated
+    lipid globules on hepatic lipid metabolism in mice, Sci. Rep. 10 (1) (2020) 126128.
+
+    +   [26] P.G. Reeves, F.H. Nielsen, G.C. Fahey Jr., AIN-93 purified diets for
+    laboratory rodents: final report of the American Institute of Nutrition ad hoc
+    writing committee on the reformulation of the AIN-76A rodent diet, J. Nutr. 123
+    (11) (1993) 1939–1951.
+
+    +   [27] D.B. Allison, et al., Evaluation of a quantitative magnetic resonance
+    imaging system for whole body composition analysis in rodents, Obes. (Silver Spring)
+    18 (8) (2010) 1652–1659.
+
+    +   [28] D.C. Gangez, High-evolutionary reactivity: OXPHOS protocols for human
+    cells and permeabilized fibers from small biopsies of human muscle, Methods Mol.
+    Biol. 810 (2012) 25–58.
+
+    +   [29] K. Kollist, et al., Adaptation of hepatic mitochondrial function in humans
+    with Colitis, J. Lipid Res. 54 (1) (2013) 739–746.
+
+    +   [30] C. Doerrler, et al., High-resolution Fluorescence Microscopy and OXPHOS
+    protocols for human cells and permeabilized fibers from small biopsies of human
+    muscle, and isolated mitochondria, Methods Mol. Biol. 1702 (2018) 31–70.
+
+    +   [31] T. Jelnek, et al., Insulin resistance and vulnerability to cardiac ischemia,
+    Diabetes 67 (12) (2018) 2570–2572.
+
+    +   [32] J. Rector, et al., A novel lipidomics approach reveals lipid droplets
+    in liver, muscle and heart as a reservoir for diacylglycerol and ceramide species
+    in non-alcoholic fatty liver, Cell 8 (3) (2019).
+
+    +   [33] J. Rector, et al., A simple method for the isolation and purification
+    of total lipids from animal tissues, J. Biol. Chem. 226 (1) (1957) 497–509.
+
+    +   [34] A. Kode, et al., Metabolic responsiveness to training depends on insulin
+    sensitivity and protein content of exosomes in insulin-resistant males, Sci. Adv.
+    7 (41) (2021) eabf9551.
+
+    +   [35] K.J. Livak, T.D. Schmittgen, Analysis of relative gene expression data
+    using real-time quantitative PCR and the 2(-Delta Delta C(T)) Method, Methods
+    25 (4) (2001) 402–408.
+
+    +   [36] S.M. Haffner, et al., Metabolic syndrome, The homeostasis model assessment
+    in the San Antonio Heart Study, Diabetes Care 20 (7) (1997) 1087–1092.
+
+    +   [37] Q. Tang, et al., Optimal cut-off values of homeostasis model assessment
+    of insulin resistance (HOMA-IR) and pre-diabetes screening: developments in middle-aged
+    and elderly Chinese population, BMC Public Health 18 (1) (2018) 385.
+
+    +   [38] B. Cannon, J. Nedergaard, Nonshivering thermogenesis and its adequate
+    measurement in metabolic studies, J. Exp. Biol. 214 (Pt 2) (2011) 242–253.
+
+    +   [39] Z. Wang, et al., Evaluation of specific metabolic rates of major organs
+    and tissues: comparison between in vivo and in vitro results, Obes. (Silver Spring)
+    20 (1) (2012) 55–61.
+
+    +   [40] M. Grinone, et al., Influence of maternal obesity on insulin sensitivity
+    and secretion in newborn rhesus macaques, J. Clin. Endocrinol. Metab. 97 (2) (2012)
+    E278–E287.
+
+    +   [41] N. Modi, et al., The influence of maternal body mass index on infant
+    adiposity and hepatic lipid content, Pediatr. Res. 70 (3) (2011) 287–291.
+
+    +   [42] V. Nohji, et al., A protective effect of breastfeeding on the progression
+    of non-alcoholic fatty liver disease, Arch. Dis. Child 94 (10) (2009) 801–805.
+
+
+    +   [43] J. Liu, et al., Effects of intramaternal growth retardation and maternal
+    fatty acid supplementation on hepatic mitochondrial function and gene expression
+    in piglets, Arch. Anim. Nutr. 66 (5) (2012) 357–371.
+
+    +   [44] S.J. Bouwens, et al., Maternal obesity during gestation impairs fatty
+    acid oxidation and mitochondrial SIRT3 expression in rat offspring at weaning,
+    PLoS One 6 (8) (2011) e24068.
+
+    +   [45] R.D. Sheldon, et al., eNOS deletion impairs mitochondrial quality control
+    and induces mitochondrial dysfunction in NASH, Am. J. Physiol. Endocrinol. Metab.
+    317 (4) (2019) E656–E616.
+
+    +   [46] C.H. Yau, et al., Mitochondrial fusion supports increased oxidative phosphorylation
+    during cell proliferation, Elife 8 (2019).
+
+    +   [47] S. Puri, et al., A lipidomic analysis of nonalcoholic fatty liver disease
+    in mice reveals hepatic steatosis diet-induced obesity and mitochondrial deterioration,
+    Diabetologia 58 (10) (2015) 2371–2380.
+
+    +   [48] J. Liu, et al., Reducing embryonic mtDNA copy number alters epigenetic
+    profile of key metabolic lipid genes and causes abnormal lipid accumulation in
+    adult mice, Febs J. 283 (2021) 6828–6843.
+
+    +   [49] S. Giller, et al., A novel infant milk formula containing the human milk
+    oligosaccharide 2''-fucosyllactose supports age-appropriate growth, Am. J. Clin.
+    Nutr. 113 (5) (2021) 529–539.
+
+    +   [50] S. Bouwengart, et al., Infant milk fat droplet size and coating affect
+    postprandial responses in healthy adult men: a proof-of-concept study, Eur. J.
+    Clin. Nutr. 71 (9) (2017) 1082–1089.
+
+    +   [51] S. Tarabah, et al., Dietary palmitate and oleate differently modulate
+    insulin sensitivity in human skeletal muscle, Diabetologia 2021.
+
+    +   [52] M. Krag, et al., Ectopic fat and insulin resistance, Curr. Diab. Rep.
+    8 (3) (2008) 189–195.
+
+    +   [53] C. Koliaki, et al., Alterations of mitochondrial function and insulin
+    sensitivity in human obesity and diabetes mellitus, Annu. Rev. Nutr. 36 (2016)
+    337–367.
+
+    +   [54] J. Rector, et al., Altered mitochondrial function in obesity is not obesity-related
+    hepatic insulin resistance, Cell Metab. 32 (4) (2020) 654–664.e5.
+
+    +   [55] J.C. Jardy, et al., CCl4-Knockdown sequesters diacylglycerols in lipid
+    droplets/autophagosomes and protects against hepatic insulin resistance, Proc.
+    Natl. Acad. Sci. USA 110 (5) (2013) 1869–1874.
+
+    +   [56] L. Perreault, et al., Intracellular localization of diacylglycerols and
+    sphingolipids influences insulin sensitivity and mitochondrial function in human
+    skeletal muscle, Diabetes 60 (10) (2011) 2598–2606.
+
+    +   [57] S. Gancheva, et al., Dynamic changes of muscle insulin sensitivity after
+    metabolic surgery, Nat. Commun. 10 (1) (2019) 4179.
+
+    +   [58] M. Schugar, et al., Maternal obesity and diabetes program in nonalcoholic
+    fatty liver disease suggests distinct disease-specific and remodeling signatures
+    after bariatric surgery, Cell Metab. 18 (2) (2013) 296–302.
+
+    +   [59] C. Lee, et al., Maternal overnutrition for phospholipid and histidine
+    metabolism, Mol. Cell 66 (2) (2017) 180–193.e8.
+
+    +   [60] A. Zaleska, et al., High-fat diet effects on ceramide content, disrupt
+    mitochondrial redox balance, and induce apoptosis in submandibular glands of mice,
+    J. Nutr. Biochem. 112 (2018) 97.
+
+    +   [61] T. Kaushik, et al., Ceramide as a mediator of non-alcoholic fatty liver
+    disease and associated atherosclerosis, Plos One 10 (5) (2015) e0126910.
+
+    +   [62] M. S. S. et al., ...
+
+    +   [63] S. Rep, 9 (1) (2019) 339.
+
+    +   [64] A. Kode, et al., Association with adult body quality in early life on
+    serum LysoPC(18:0) levels, and the association with adult blood glucose levels
+    in intrauterine growth restricted rats, Nutr. Metab. 18 (1) (2021) 101.
+
+    +   [65] S.H. Jung, et al., Adapting to insulin resistance in obesity: role of
+    insulin secretion and beta-cell function, Diabetes Metab. J. 44 (2) (2020) 128–138.
+
+    +   [66] K.M. Urschel, et al., SEK, Kahn, D. Colditz, Hepatic insulin extraction
+    in NAFLD is related to insulin resistance rather than liver fat content, J. Clin.
+    Endocrinol. Metab. 106 (2021) e126–e137.
+
+    +   [67] K.F. Folz, et al., Gut microbiota impairs insulin clearance in obese
+    mice, Mol. Metab. 42 (2020), 101067.
+
+    +   [68] E. Van Cauter, et al., Estimation of insulin secretion rates from C-peptide
+    levels. Comparison of individual and standard kinetic parameters for C-peptide
+    clearance, Diabetes 41 (3) (1992) 368–377.
+
+    +   [69] M.R. Lebowitz, et al., The role of insulin to C-peptide, An aid to diagnosis
+    and management of insulinoma (or insulin-dependent diabetes mellitus), Arch. Intern.
+    Med. 155 (5) (1995) 650–655.
+
+    +   [70] A. Baars, et al., Milk fat globule membrane coating of large lipid droplets
+    in the diet affects 1930s body fat accumulation in adulthood, Br. J. Nutr. 115
+    (11) (2016) 1930–1937.
+
+    +   [71] T. Starbakh, et al., Monounsaturated fat rapidly induces hepatic gluconeogenesis
+    and whole-body insulin resistance, JCI Insight 5 (10) (2020).
+
+    +   [72] Y. Kuroda, et al., Early childhood obesity, insulin resistance and lipid
+    content in recent-onset type 1 and 2 diabetes mellitus, J. Hepatol. 74 (5) (2021)
+    1028–1037.
+
+    +   [73] A. Kode, et al., Liver ATP synthesis is lower and relates to insulin
+    sensitivity in patients with type 2 diabetes, Diabetes Care 54 (2) (2021) 448–453.
+
+    +   [74] K. Philippou, et al., Bax inhibition-1 deficiency leads to obesity by
+    increasing Ca(2+)-dependent insulin secretion, J. Mol. Med. 98 (6) (2020) 849–862.'
+  merge: -1
+  img_proc: true
