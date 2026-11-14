@@ -1,0 +1,2 @@
++   [.net Core 3 和 Visual Studio 2019 多平台桌面应用程序开发：macOS、Linux 和 Windows 的 C# GUI 应用程序构建指南](README.md)
++   [.net Core 3 和 Visual Studio 2019 多平台桌面应用程序开发：macOS、Linux 和 Windows 的 C# GUI 应用程序构建指南](developing-multi-platform-desktop-applications-with-net-core.md)
