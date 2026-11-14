@@ -1,0 +1,192 @@
+level_changes:
+- line: 4
+  before: 2
+  after: 1
+- line: 20
+  before: 2
+  after: 1
+- line: 22
+  before: 3
+  after: 2
+- line: 58
+  before: 3
+  after: 2
+- line: 60
+  before: 4
+  after: 3
+- line: 110
+  before: 4
+  after: 3
+- line: 126
+  before: 3
+  after: 2
+- line: 144
+  before: 2
+  after: 3
+- line: 154
+  before: 2
+  after: 3
+- line: 156
+  before: 2
+  after: 3
+- line: 194
+  before: 3
+  after: 4
+- line: 206
+  before: 3
+  after: 4
+- line: 208
+  before: 2
+  after: 3
+- line: 250
+  before: 3
+  after: 4
+- line: 256
+  before: 2
+  after: 3
+- line: 274
+  before: 3
+  after: 4
+- line: 280
+  before: 2
+  after: 3
+- line: 284
+  before: 3
+  after: 4
+- line: 306
+  before: 3
+  after: 4
+- line: 388
+  before: 3
+  after: 4
+- line: 410
+  before: 2
+  after: 3
+- line: 420
+  before: 3
+  after: 4
+- line: 426
+  before: 2
+  after: 1
+- line: 428
+  before: 2
+  after: 1
+- line: 1126
+  before: 2
+  after: 1
+- line: 1130
+  before: 3
+  after: 2
+- line: 3304
+  before: 2
+  after: 1
+- line: 3864
+  before: 2
+  after: 1
+- line: 3868
+  before: 3
+  after: 2
+- line: 3870
+  before: 4
+  after: 3
+- line: 4259
+  before: 2
+  after: 1
+- line: 4263
+  before: 3
+  after: 2
+- line: 6592
+  before: 2
+  after: 1
+- line: 7819
+  before: 2
+  after: 1
+- line: 7821
+  before: 3
+  after: 2
+- line: 8451
+  before: 2
+  after: 1
+- line: 8453
+  before: 3
+  after: 2
+- line: 12926
+  before: 2
+  after: 1
+- line: 17047
+  before: 2
+  after: 1
+- line: 17049
+  before: 3
+  after: 2
+- line: 17957
+  before: 2
+  after: 1
+- line: 17959
+  before: 3
+  after: 2
+- line: 18907
+  before: 2
+  after: 1
+- line: 18955
+  before: 2
+  after: 1
+- line: 18957
+  before: 3
+  after: 2
+- line: 19014
+  before: 2
+  after: 1
+- line: 19018
+  before: 3
+  after: 2
+- line: 19183
+  before: 2
+  after: 1
+- line: 19211
+  before: 2
+  after: 1
+text_changes:
+- line: 274
+  before: 练习 2.5. 证明最优 \( T = \hat{T}$ 为
+  after: 练习 2.5. 证明最优 \( T = \hat{T} \) 为
+- line: 3486
+  before: 7.2.2. OPTIMAL STOPPING FORMULATION.
+  after: 7.2.2. 最优停止表述。
+- line: 3546
+  before: 7.2.3. DIRECT APPROACH.
+  after: 7.2.3. 直接法。
+- line: 3583
+  before: 7.3. PENALTY APPROXIMATION
+  after: 7.3. 惩罚逼近
+- line: 3589
+  before: 7.3.1. FORMULATION.
+  after: 7.3.1. 表述。
+- line: 3611
+  before: 7.3.2. SOLUTION OF THE PENALTY PROBLEM.
+  after: 7.3.2. 惩罚问题的解
+- line: 3653
+  before: 7.3.3. CONVERGENCE.
+  after: 7.3.3. 收敛性。
+- line: 4898
+  before: '**9.2.3. K-凸性理论.**'
+  after: 9.2.3. K-凸性理论。
+- line: 4956
+  before: '**练习 9.1.** 证明'
+  after: 练习 9.1. 证明
+- line: 4962
+  before: '**练习 9.2.**'
+  after: 练习 9.2.
+- line: 4984
+  before: '**练习 9.3.** 证明每当 (9.2.33) 满足时，Eu((y - D)^+) 是连续的，因此 G(y) 也是连续的。由于 G(x)
+    是 K-凸的、连续的，并且当 x 趋于 \infty 时趋于 \infty，最优反馈由一个 s, S 策略描述。'
+  after: 练习 9.3. 证明每当 (9.2.33) 满足时，Eu((y - D)^+) 是连续的，因此 G(y) 也是连续的。由于 G(x) 是 K-凸的、连续的，并且当
+    x 趋于 \infty 时趋于 \infty，最优反馈由一个 s, S 策略描述。
+- line: 6035
+  before: '**命题 9.5.** 函数 \(S(s)\) 是递减的，因此若 \(s \le \bar{s}\) 则 \(S(s) \ge \bar{s}\)，且当
+    \(s \to -\infty\) 时 \(S(s) \to S^+\)，其中'
+  after: 命题 9.5. 函数 \(S(s)\) 是递减的，因此若 \(s \le \bar{s}\) 则 \(S(s) \ge \bar{s}\)，且当
+    \(s \to -\infty\) 时 \(S(s) \to S^+\)，其中
+- line: 6073
+  before: '**命题 9.6.** 函数 \(u(x)\) 是 \(K\)-凸的。'
+  after: 命题 9.6. 函数 \(u(x)\) 是 \(K\)-凸的。

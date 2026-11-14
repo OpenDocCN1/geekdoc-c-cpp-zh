@@ -1017,6 +1017,7 @@
 +   [你是否知道另一个人如何认知存在？：超认识论 神经语义编程，NSP](docs/do-you-know-how-another-knows-to-be-epiepistemology-neuro-se/README.md)
 +   [机器学习文档处理指南](docs/document-processing-using-machine-learning/README.md)
 +   [Clifford A Shaffer C 语言数据结构与算法分析第3版 Dover 出版社 2011](docs/dr-clifford-a-shaffer-data-structures-and-algorithm-analysis/README.md)
++   [动态规划与库存控制：第3卷 概率、优化与统计研究](docs/dynamic-programming-and-inventory-control-volume-3-studies-i/README.md)
 +   [动态网站开发者指南（这是一个数字世界！）](docs/dynamic-website-developers-its-a-digital-world/README.md)
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [Python 地球观测指南：实用编程指南](docs/earth-observation-using-python-a-practical-programming-guide/README.md)
