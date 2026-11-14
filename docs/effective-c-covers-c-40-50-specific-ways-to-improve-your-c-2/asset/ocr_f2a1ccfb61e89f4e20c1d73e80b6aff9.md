@@ -1,0 +1,45 @@
+```
+if (rightAsD == null)
+    return false;
+
+if (base.Equals(rightAsD) == false)
+    return false;
+
+return this.Equals(rightAsD);
+}
+```
+
+```
+#region IEquatable<>D Members
+public bool Equals(D other)
+{
+    // elided.
+    return true; // or false, based on test
+}
+#endregion
+}
+```
+
+```
+//Test:
+B baseObject = new B();
+D derivedObject = new D();
+```
+
+```
+// Comparison 1.
+if (baseObject.Equals(derivedObject))
+    Console.WriteLine("Equals");
+else
+    Console.WriteLine("Not Equal");
+```
+
+```
+// Comparison 2.
+if (derivedObject.Equals(baseObject))
+    Console.WriteLine("Equals");
+else
+    Console.WriteLine("Not Equal");
+```
+
+Under any possible circumstances, you would expect to see either Equals or Not Equal printed twice. Because of some errors, this is not the case with the previous code. The second comparison will never return true. The base object, of type B, can never be converted into a D. However, the first comparison might evaluate to true. The derived object, of type D, can be implicitly converted to a type B. If the B members of the right-side argu-

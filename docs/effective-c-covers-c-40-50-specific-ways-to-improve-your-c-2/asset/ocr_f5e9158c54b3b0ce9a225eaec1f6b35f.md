@@ -1,0 +1,67 @@
++   ISerializable, 160–166
++   Isolated storage, 296–297
++   IStructuralEquality, 36, 44
+
++   J
++   Java, 105
++   JIT (Just-In-Time) compiler
++   small functions, 64–68
++   using Conditional attribute, 25
++   Johnson, Ralph, 146, 240
+
++   K
++   Key/value pairs, 162–163
++   Keys, 44–51
++   Keywords, 55–56
+
++   L
++   Labeling, 74
++   Lambda expressions
++   dynamic programming and,
++   229–231
++   expressing callbacks with delegates,
++   144–145
++   making use of expression API,
++   256–261
++   Language idioms. See C# language
++   idioms
++   Large-grain internet service APIs,
++   166–171
++   Late binding, 261–267
++   Library functions, 22–28
+
++   LINQ
++   constructing parallel algorithms with
++   exceptions in mind, 224–225
++   expressing callbacks with delegates,
++   144–145
++   to XML, 244–245
+
++   LINQ queries
++   building small functions, 67
++   interface extension methods,
++   133–134
++   PLINQ implementation of parallel
++   algorithms, 203–215
++   LINQ to Objects, 208–214
++   Listener notification, 147–154
++   List.ForEach(), 144–145
++   List<T>, 52–53
++   Local variables, 95–98
++   Log event handlers, 148
++   Logging events, 147–152
++   Loops
++   preferring query syntax to, 51–56
++   strong exception guarantee, 286–287
++   using casts with foreach, 18–19
+
++   M
++   Managing resources. See .NET
++   resource management
++   Mathematical properties of equality,
++   38
++   Member initializers, 74–77
++   Member variables
++   initialization for static, 77–79
++   promoting local variables to, 95–98
++   syncing with constructors, 74–77

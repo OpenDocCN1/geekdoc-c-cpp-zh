@@ -1,0 +1,51 @@
+```
+```csharp
+if (object.ReferenceEquals(right, null))
+    return false;
+
+// Check reference equality:
+if (object.ReferenceEquals(this, right))
+    return true;
+
+// Problems here, discussed below.
+B rightAsB = right as B;
+if (rightAsB == null)
+    return false;
+
+return this.Equals(rightAsB);
+}
+```
+```
+
+```
+```csharp
+#region IEquatable<B> Members
+
+public bool Equals(B other)
+{
+    // elided
+    return true;
+}
+#endregion
+}
+```
+```
+
+```
+```csharp
+public class D : B, IEquatable<D>
+{
+    // etc.
+    public override bool Equals(object right)
+    {
+        // check null:
+        if (object.ReferenceEquals(right, null))
+            return false;
+
+        if (object.ReferenceEquals(this, right))
+            return true;
+
+        // Problems here.
+        D rightAsD = right as D;
+```
+```

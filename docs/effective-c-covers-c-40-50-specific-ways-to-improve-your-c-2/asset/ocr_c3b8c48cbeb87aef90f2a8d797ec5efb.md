@@ -1,0 +1,60 @@
+Exceptions (continued)
+strong guarantee, 284–294
+using is to remove, 17
+Explicit conversion operators, 57, 59–60
+Explicit properties, 119–120
+Expressing designs in C#. See design expression
+Expression trees
+in dynamic programming, 230–231
+handling dynamic invocation, 251–254
+making use of, 254–261
+Expressions
+making use of API, 254–261
+transforming late binding to early binding with, 261–267
+vs. dynamic, 230–235
+Extensions
+of anonymous types, 243
+member implementation for interfaces, 130
+ParallelEnumerable, 214 property, 4
+using expressions to create, 262–267
+
+F
+Feedback, 143–146
+Fields, data, 5, 7
+File system security, 296–297
+Finalizers
+for disposing of nonmemory resources, 98–104
+in GC, 71–74
+no-throw guarantee, 293–294
+finally, 285
+
+Find(), 144–145
+FinishDownload(), 217–218
+Flags enumerations, 113–114
+Flexibility
+with event handling, 182
+of runtime constants, 8
+Flow control with exceptions, 17
+ForAll, 52–53
+foreach, 18–19
+Formatting human-readable output, 31–33
+Func<>, 144
+Functions. See also Methods
+pitfalls of GetHashCode(), 44–51
+understanding equality and relationships, 36–44
+understanding small, 64–68
+
+G
+Gamma, Erich, 146, 240
+GC (Garbage Collector)
+avoiding unnecessary object creation, 94
+defined, 69–74
+finalization and, 99
+Generations of objects, 73
+Generic covariance and contravariance, 171–177
+Get accessors, 4–5
+GetFormat(), 35
+GetHashCode(), 44–51
+GetMetaObject(), 250–254
+GetObjectData(), 161–163, 166
+GetType(), 19

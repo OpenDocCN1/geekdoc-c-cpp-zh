@@ -1,0 +1,9 @@
+# 4 | Working with the Framework
+
+My friend and colleague Martin Shoemaker created a roundtable called “Do I Have to Write That .NET Code?” shortly after .NET was first released in 2002. It was a great roundtable back then, and it’s much more relevant now. The .NET Framework has grown and now includes many more new classes and features than it did back then. It’s important that you don’t create features that already exist.
+
+The .NET Framework is a rich class library. The more you learn about the framework, the less code you need to write yourself. The framework library will do more of the work for you. Sadly, the Base Class Library must now contend with the problems associated with release 4. There are better ways to solve problems than existed in release 1. But the framework team can’t just delete those old APIs and classes. It may not even make sense to mark those older APIs as deprecated. They still work, and it is not in your best interest to rewrite working code. But when you’re creating new code, you should reach for the best tool that exists now. This chapter shows you techniques to get the most out of the .NET Framework now, in version 4.0. Other items help you choose the best option when multiple choices are available in the framework. Still other items explain some of the techniques you should use if you want your classes to operate well with the classes created by the framework designers.
+
+# Item 30: Prefer Overrides to Event Handlers
+
+Many .NET classes provide two different ways to handle events from the system. You can attach an event handler, or you can override a virtual function in the base class. Why provide two ways of doing the same thing? Because different situations call for different methods, that’s why. Inside derived classes, you should always override the virtual function. Limit your use of the event handlers to responding to events in unrelated objects.

@@ -1,0 +1,46 @@
+```
+```csharp
+public void Foo2(IEnumerable<D2> parm)
+{
+    Console.WriteLine("In B.Foo2");
+}
+}
+```
+```
+
+Then, provide a different overload in the derived class:
+
+```
+```csharp
+public class D : B
+{
+    public void Foo(B2 parm)
+    {
+        Console.WriteLine("In D.Foo");
+    }
+
+    public void Bar(B2 parm1, B2 parm2 = null)
+    {
+        Console.WriteLine("In D.Bar");
+    }
+
+    public void Foo2(IEnumerable<B2> parm)
+    {
+        Console.WriteLine("In D.Foo2");
+    }
+}
+```
+```
+
+Call Foo2 in a manner similar to before:
+
+```
+```csharp
+var sequence = new List<D2> { new D2(), new D2() };
+var obj2 = new D();
+
+obj2.Foo2(sequence);
+```
+```
+
+What do you suppose gets printed this time? If you’ve been paying attention, you’d figure that “In D.Foo2” gets printed. That answer gets you partial credit. That is what happens in C# 4.0. Starting in C# 4.0, generic interfaces support covariance and contravariance, which means D.Foo2 is a candidate method for an IEnumerable<D2> when its formal parameter type is an IEnumerable<B2>. However, earlier versions of C# do not support generic variance. Generic parameters are invariant. In those versions, D.Foo2 is not a candidate method when the parameter is an IEnumerable<D2>. The only candidate method is B.Foo2, which is the correct answer in those versions.

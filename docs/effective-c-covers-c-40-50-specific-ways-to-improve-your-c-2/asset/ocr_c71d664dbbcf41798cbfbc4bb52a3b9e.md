@@ -1,0 +1,22 @@
+```
+string item = string.Empty;
+SomeMethod(item = names.Dequeue());
+Console.WriteLine(item);
+```
+
+SomeMethod has been created with a Conditional attribute attached:
+
+```
+[Conditional("DEBUG")]
+private static void SomeMethod(string param)
+{
+}
+```
+
+That's going to cause very subtle bugs. The call to SomeMethod() only happens when the DEBUG symbol is defined. If not, that call doesn't happen. Neither does the call to names.Dequeue(). Because the result is not needed, the method is not called. Any method marked with the Conditional attribute should not take any parameters. The user could use a method call with side effects to generate those parameters. Those method calls will not take place if the condition is not true.
+
+The Conditional attribute generates more efficient IL than #if/#endif does. It also has the advantage of being applicable only at the function level, which forces you to better structure your conditional code. The compiler uses the Conditional attribute to help you avoid the common errors we've all made by placing the #if or #endif in the wrong spot. The Conditional attribute provides better support for you to cleanly separate conditional code than the preprocessor did.
+
+# Item 5: Always Provide ToString()
+
+System.Object.ToString() is one of the most-used methods in the .NET environment. You should write a reasonable version for all the clients of your class. Otherwise, you force every user of your class to use the properties in your class and create a reasonable human-readable representation. This string representation of your type can be used to easily display information about an object to users: in Windows Presentation Foundation (WPF) controls, Silverlight controls, Web Forms, or console output. The string representation can also be useful for debugging. Every type that you create should provide a reasonable override of this method. When you create more complicated types, you should implement the more sophisticated IFormattable.ToString(). Face it: If you don't override this routine, or if you write a poor one, your clients are forced to fix it for you.

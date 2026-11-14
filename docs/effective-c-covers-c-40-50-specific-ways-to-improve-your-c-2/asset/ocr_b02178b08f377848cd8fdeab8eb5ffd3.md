@@ -1,0 +1,41 @@
+```
+public static implicit operator MyType(String aString)
+{
+    return new MyType { StringMember = aString };
+}
+```
+
+See Item 28 for why conversion operators are bad; however, a user-defined conversion operator is key to this issue. Consider this code (assume that GetSomeStrings() returns a sequence of strings):
+
+```
+var answer1 = GetSomeStrings().Cast<MyType>();
+try
+{
+    foreach (var v in answer1)
+        Console.WriteLine(v);
+}
+catch (InvalidCastException)
+{
+    Console.WriteLine("Cast Failed!");
+}
+```
+
+Before starting this item, you may have expected that GetSomeStrings().Cast<MyType>() would correctly convert each string to a MyType using the implicit conversion operator defined in MyType. Now you know it doesn't; it throws an InvalidCastException.
+
+The above code is equivalent to this construct, using a query expression:
+
+```
+var answer2 = from MyType v in GetSomeStrings()
+              select v;
+try
+{
+    foreach (var v in answer2)
+        Console.WriteLine(v);
+}
+catch (InvalidCastException)
+{
+    Console.WriteLine("Cast failed again");
+}
+```
+
+The type declaration on the range variable is converted to a call to Cast<MyType> by the compiler. Again, it throws an InvalidCastException. Here's one way to restructure the code so that it works:

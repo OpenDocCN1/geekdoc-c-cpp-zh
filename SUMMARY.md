@@ -1030,6 +1030,7 @@
 +   [Effective C++：改进程序与设计的 55 种特效，第三版 (Gal Zentner 图书系列)](docs/effective-c-55-specific-ways-to-improve-your-programs-and-de/README.md)
 +   [高效 C：专业 C 编程入门指南](docs/effective-c-an-introduction-to-professional-c-programming/README.md)
 +   [高效 C：专业 C 语言入门指南，第 2 版](docs/effective-c-an-introduction-to-professional-c-programming-2e/README.md)
++   [C# 高效指南（涵盖 C# 4.0）：50 个改善你 C# 的具体方法（第2版）（高效软件开发系列）](docs/effective-c-covers-c-40-50-specific-ways-to-improve-your-c-2/README.md)
 +   [Effective C++ 数字合集：提升编程能力的 140 种方法](docs/effective-c-digital-collection-140-ways-to-improve-your-prog/README.md)
 +   [嵌入式环境下的高效 C++](docs/effective-c-in-an-embedded-environment/README.md)
 +   [Effective JavaScript：利用 JavaScript  de 68 种特定方法（高效软件开发系列）](docs/effective-javascript-68-specific-ways-to-harness-the-power-o/README.md)

@@ -1,0 +1,41 @@
+```
+#region IEnumerable Members
+System.Collections.IEnumerator
+System.Collections.IEnumerable.GetEnumerator()
+{
+    return getElements();
+}
+}
+#endregion
+}
+```
+
+The WeatherStream class models a sequence of weather observations. To do that it implements IEnumerable<WeatherData>. That means creating two methods: the GetEnumerator<T>() method and the classic GetEnumerator method. The latter interface is explicitly implemented so that client code would naturally be drawn to the generic interface over the version typed as System.Object.
+
+Implementing those two methods means that the WeatherStream class supports all the extension methods defined in System.Linq.Enumerable. That means WeatherStream can be a source for LINQ queries:
+
+```
+var warmDays = from item in
+    new WeatherDataStream("Ann Arbor")
+    where item.Temperature > 80
+    select item;
+```
+
+LINQ query syntax compiles to method calls. The query above translates to the following calls:
+
+```
+var warmDays2 = new WeatherDataStream("Ann Arbor").
+    Where(item => item.Temperature > 80).
+    Select(item => item);
+```
+
+In the code above, the Where and Select calls look like they belong to IEnumerable<WeatherData>. They do not. Those methods appear to belong to IEnumerable<WeatherData> because they are extension methods. They are actually static methods in System.Linq.Enumerable. The compiler translates those calls into the following static calls:
+
+```
+// Don't write this, for explanatory purposes
+var warmDays3 = Enumerable.Select(
+    Enumerable.Where(
+        new WeatherDataStream("Ann Arbor"),
+        item => item.Temperature > 80),
+        item => item);
+```

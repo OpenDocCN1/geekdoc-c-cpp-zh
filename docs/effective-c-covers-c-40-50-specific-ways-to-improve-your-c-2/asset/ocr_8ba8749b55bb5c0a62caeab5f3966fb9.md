@@ -1,0 +1,13 @@
+The final advantage of using const over readonly is performance: Known constant values can generate slightly more efficient code than the variable accesses necessary for readonly values. However, any gains are slight and should be weighed against the decreased flexibility. Be sure to profile performance differences before giving up the flexibility.
+
+You'll encounter similar tradeoffs between runtime and compile-time processing of constant values when you use named and optional parameters. The default values for optional parameters are placed in the call site just like the default value for compile-time constants (those declared with const). Like working with readonly and const values, you'll want to be careful with changes to the values of optional parameters. (See Item 10.)
+
+const must be used when the value must be available at compile time: attribute parameters and enum definitions, and those rare times when you mean to define a value that does not change from release to release. For everything else, prefer the increased flexibility of readonly constants.
+
+# Item 3: Prefer the is or as Operators to Casts
+
+By embracing C#, you've embraced strong typing. That is almost always a good thing. Strong typing means you expect the compiler to find type mismatches in your code. That also means your applications do not need to perform as much type checking at runtime. But sometimes, runtime type checking is unavoidable. There will be times in C# when you write functions that take object parameters because the framework defines the method signature for you. You likely need to attempt to cast those objects to other types, either classes or interfaces. You've got two choices: Use the as operator or force the compiler to bend to your will using a cast. You also have a defensive variant: You can test a conversion with is and then use as or casts to convert it.
+
+The correct choice is to use the as operator whenever you can because it is safer than blindly casting and is more efficient at runtime. The as and is operators do not perform any user-defined conversions. They succeed only if the runtime type matches the sought type; they never construct a new object to satisfy a request.
+
+Take a look at an example. You write a piece of code that needs to convert an arbitrary object into an instance of MyType. You could write it this way:

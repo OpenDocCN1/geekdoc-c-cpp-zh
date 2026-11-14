@@ -1,0 +1,39 @@
+```
+url => startDownload(url),
+task => finishDownload(task.AsyncState.ToString()),
+task.Result);
+}
+catch (AggregateException problems)
+{
+    var handlers = new Dictionary<Type, Action<Exception>>();
+    handlers.Add(typeof(WebException),
+    ex => Console.WriteLine(ex.Message));
+
+    if (!HandleAggregateError(problems, handlers))
+        throw;
+}
+```
+
+The HandleAggregateError method recursively looks at every exception. If the exception is expected, the handler is called. Otherwise, HandleAggregateError returns false, indicating that this set of aggregate exceptions cannot be processed correctly.
+
+```
+private static bool HandleAggregateError(
+    AggregateException aggregate,
+    Dictionary<Type, Action<Exception>> exceptionHandlers)
+{
+    foreach (var exception in aggregate.InnerExceptions)
+        if (exception is AggregateException)
+            return HandleAggregateError(
+                exception as AggregateException,
+                exceptionHandlers);
+        else if (exceptionHandlers.ContainsKey(
+            exception.GetType()))
+            exceptionHandlers[exception.GetType()](
+                exception);
+        else
+            return false;
+    return true;
+}
+```
+
+This code does look a bit dense, but it's not that hard. When it encounters an AggregateException, it evaluates that child list recursively. When it

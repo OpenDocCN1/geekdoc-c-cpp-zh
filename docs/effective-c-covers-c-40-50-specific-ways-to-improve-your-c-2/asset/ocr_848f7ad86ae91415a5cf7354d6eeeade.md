@@ -1,0 +1,21 @@
+encounters any other kind of exception, it looks into the dictionary. If a handler Action<> has been registered, it calls that handler. If not, then it returns false immediately, having found an exception that it should not be handled.
+
+You may be wondering why the original AggregateException gets thrown rather than the single exception for which there was no handler. The problem is that throwing one exception out of the collection could lose important information. The InnerExceptions may contain any number of exceptions. More than one may be of a type that is not expected. You must return the entire collection or risk losing much of that information. In many cases, there will be only one exception in the AggregateException's InnerExceptions collection. However, you should not code that way because when you do need that extra information, it won't be there.
+
+Of course, this feels a bit ugly. Wouldn't it be better to prevent the exception from leaving the task doing the background work? In almost all cases, that is better. That requires changing the code that runs the background task to ensure that no exceptions can exit the background task. Whenever you use the TaskCompletionSource<> class, that means never calling TrySetException(), but rather ensuring that every task somehow calls TrySetResult() to indicate completeness. That would mean the following changes to startDownload. But, just like I said earlier, you should not be catching every single exception. You should catch only those exceptions from which you can recover. In this example, you can reasonably recover from a WebException, indicating that the remote host isn't available. Other exception types would indicate more serious problems. Those should continue to generate exceptions and stop all processing. That causes the following changes to the startDownload method:
+
+```
+private static Task<byte[]> startDownload(string url)
+{
+    var tcs = new TaskCompletionSource<byte[]>(url);
+    var wc = new WebClient();
+    wc.DownloadDataCompleted += (sender, e) =>
+    {
+        if (e.UserState == tcs)
+        {
+            if (e.Cancelled)
+            {
+                tcs.TrySetCanceled();
+            }
+            else if (e.Error != null)
+```

@@ -1,0 +1,31 @@
+# Item 21: Limit Visibility of Your Types
+
+Not everybody needs to see everything. Not every type you create needs to be public. You should give each type the least visibility necessary to accomplish your purpose. That's often less visibility than you think. Internal or private classes can implement public interfaces. All clients can access the functionality defined in the public interfaces declared in a private type.
+
+It's just too easy to create public types. And, it's often expedient to do just that. Many standalone classes that you create should be internal. You can further limit visibility by creating protected or private classes nested inside your original class. The less visibility there is, the less the entire system changes when you make updates later. The fewer places that can access a piece of code, the fewer places you must change when you modify it.
+
+Expose only what needs to be exposed. Try implementing public interfaces with less visible types. You'll find examples using the Enumerator pattern through the .NET Framework library. System.Collections.Generic.List<T> contains a private class, Enumerator<T>, that implements the IEnumerable<T> interface:
+
+```
+// For illustration, not complete source
+public class List<T> : IEnumerable<T>
+{
+    private class Enumerator<T> : IEnumerator<T>
+    {
+        // Contains specific implementation of
+        // MoveNext(), Reset(), and Current.
+
+        public Enumerator(List<T> storage)
+        {
+            // elided
+        }
+    }
+
+    public IEnumerator<T> GetEnumerator()
+    {
+        return new Enumerator<T>(this);
+    }
+
+    // other List members.
+}
+```
