@@ -1,0 +1,40 @@
+
+Stock markets worldwide closed this evening with no gains and no losses amidst news that today is just another day, like every day. In response, the Securities and Exchange Commission released a statement that, “The numbers just aren’t changing. There’s no point in watching them all day. Investors should go home and get a life.” Industry pundits claim that someone forgot to turn the crank that winds up NASDAQ. Meanwhile, Twitter was ablaze with discussions about BitCoin, but nobody really understood what they were talking about.
+
+Stock markets worldwide closed this evening with no gains and no losses amidst news that today is just another day, like every day. In response, the Securities and Exchange Commission released a statement that, “The numbers just aren’t changing. There’s no point in watching them all day. Investors should go home and get a life.” Industry pundits claim that someone forgot to turn the crank that winds up NASDAQ. Meanwhile, Twitter was ablaze with discussions about BitCoin, but nobody really understood what they were talking about.
+
+Figure 2: These text settings show the balance of vertical and horizontal proportions in a news context. Both columns are set on an 8-point baseline grid. The right column is set in a newspaper typeface, Nimrod, at 8-point. The left column is set in Hoefler Text, and has been scaled to match Nimrod’s x-height, thus both columns should have equal legibility. The left column is harder to read, though because its ascendars and descenders break up the interlinear space, often causing collisions as in the case of the letter g on the second line, making the text hard to scan.
+
+Stock markets worldwide closed this evening with no gains and no losses amidst news that today is just another day, like every day. In response, the Securities and Exchange Commission released a statement that, “The numbers just aren’t changing. There’s no point in watching them all day. Investors should go home and get a life.” Industry pundits claim that someone forgot to turn the crank that winds up NASDAQ. Meanwhile, Twitter was ablaze with discussions about BitCoin, but nobody really understood what they were talking about. Traders at the New York Stock Exchange
+
+Stock markets worldwide closed this evening with no gains and no losses amidst news that today is just another day, like every day. In response, the Securities and Exchange Commission released a statement that, “The numbers just aren’t changing. There’s no point in watching them all day. Investors should go home and get a life.” Industry pundits claim that someone forgot to turn the crank that winds up NASDAQ. Meanwhile, Twitter was ablaze with discussions about BitCoin, but nobody really understood what they were talking about. Traders at the New York Stock Exchange
+
+Figure 3: These settings continue the illustration: The right column is set in Nimrod 8-point exactly as in figure 2. The left column is set in Mrs. Eaves, also at 8-point, set solid. Its small x-height and proportionally narrow letters pack in more text than Nimrod and with plenty of interlinear space. However, the very small letters are difficult to read and are off-putting. Taking figures 2 and 3 together, we see that for news settings, the x-height must be large enough for readability, ascendars and descenders moderate for interlinear space, and widths narrow enough for the necessary text density. It is easy to see that Nimrod was designed for this environment whereas Hoefler Text and Mrs. Eaves were not.
+
+### 1.3.2.5 Pitfalls
+
+Often designers believe that page economy requires a condensed typeface, however this is not always the case. The contemporary news writing style tends towards short paragraphs, leaving much whitespace following the last line of each paragraph. Walter Tracy and Allen Hutt found that when setting English text in this writing style, a wider (or less condensed) letterform has little or no effect on the column length [Hutt, 1973]. The whitespace on the last line of a paragraph absorbs the extra space used by the wider letters. The proportions of a news typeface, therefore, need not be highly condensed to be economic. This effect varies with language and editorial style.
+
+### 1.3.2.6 Related patterns
+
+This pattern contributes to the economy of a legible economic text setting.
+
+### 1.3.3 Discussion: the anatomy of a pattern
+
+The first section of the pattern sets up the context of the pattern it attempts to solve (e.g. Morison’s quote), and identifies any constraints the context identifies (e.g. 8–9pt text size, set solid). The pattern explicitly lists the source of these constraints (e.g. the legible economic text setting pattern) so that designers understand the relationship between those sources and the solution to this problem, and thus how to adapt changes in one to the other. It also identifies environmental requirements, such as the editor’s lack of time for fine-tuning, so that hard requirements are clear.
+
+The solution section provides a concise statement of the solution to the problem in terms of relationships to other entities. Specifying relationships (e.g. relating letter proportion to line spacing requirements) creates a concrete solution that enables designers to adapt the solution to the particular document, while still being abstract enough to apply to other documents.
+
+The rationale for this solution immediately follows. This rationale is one of the unique factors of patterns as it not only explains why the solution works, but abstracts the solution so it is broadly applicable. The implementation section contains the concrete details on how to implement the solution, including examples wherever possible. This gives the practical side of the pattern. In a way the rationale and implementation are yin-yang complements: the abstract and the practical. As described above, this attribute enables patterns to be both actionable and broadly applicable.
+
+This pattern language contains a unique section not found in pattern languages used in other fields: the pitfalls’ section. This section captures an important body of knowledge that often differentiates experts from novices: the knowledge of what does not work. The pitfalls’ section documents common misunderstandings, misinterpretations, or easy mistakes one can make in implementing the solution to this context. The hope is to improve a practitioner’s efficiency by warning them about known bad ideas. Reiner et al. [2011] employed a similar idea as an Anti-pattern–attribute in their software pattern language framework.
+
+The pattern concludes with references to other patterns. This explicitly identifies the other patterns to which this pattern contributes a part of the solution (e.g. this pattern helps solve a **legible economic text setting**), as well as other patterns this pattern depends on.
+
+## 1.4 Possibilities for pattern languages in typographic design
+
+There are many ways pattern languages can be useful in typographic design. This section focuses on three key opportunities: solving complex problems simply, combining knowledge from related fields, and making unstated assumptions explicit.
+
+### 1.4.1 Solving complex problems simply
+
+Typeface design and typographic layout require solutions to problems that are multilayered and have many variables to balance. For example, the layout of a paragraph depends not only on the column width and the overall page layout, but also on the design of the typeface used for the text, especially letterform proportions. For example, the proportions of newspaper typefaces enable them to work with much less line spacing than the designs of book typefaces do. Meanwhile, printing costs can encourage editors to increase the density of text on the page, and thus to reduce the type size used in a paragraph. That type size influences the overall impression that a page of text gives. Choosing how to lay out a paragraph of text requires balancing all of these factors and considering the implications on broad and minute design requirements.

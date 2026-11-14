@@ -1,0 +1,5 @@
+process of selecting fonts for newspapers through two case studies (one English, one Arabic), providing an interesting complement to the pattern language approach (chapter 10). The personality of the font is also touched upon, which is the subject of chapter 13. Shaikh and Chaparro focus on the perception of onscreen typefaces in terms of personality and the perceived appropriateness of typefaces for various document types. In common with Dyson et al., this research is concerned with the stylistic characteristics of fonts. Almhajri and Suen (chapter 14) conduct experiments to compare Arabic fonts in terms of legibility and readability with a view to recommending fonts for Personal Digital Assistants.
+
+The publication of this book would not have been possible without the wonderful enthusiasm of authors, the support of colleagues in the Department of Typography & Graphic Communication at the University of Reading, and the patient assistance and skill of Natassia Swulinska in typesetting and laying out pages.
+
+Mary C. Dyson

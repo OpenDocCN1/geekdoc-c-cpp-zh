@@ -1,0 +1,11 @@
+Greek type design experts and from Greek readers that the tonos marks in Georgia are a particularly terrible design. For Sitka we designed a tonos mark that experts said was a better and more traditional angled form. We expected the angled design to perform better than the upright tonos mark.
+
+The letter recognition for the unmarked vowels were pretty similar between Georgia and Sitka. 45% of the trials were recognized correctly with Georgia and 44% were recognized correctly with Sitka. The interesting comparison though was how the accuracy changed with the addition of the tonos mark. When the upright tonos mark is added to the Georgia vowels, the recognition accuracy decreased slightly from 45% to 44%. But when the angled tonos mark was added to the Sitka vowels, the recognition accuracy decreased dramatically from 44% correct down to 33% correct (Figure 10).
+
+The results are compelling that Greek readers are more successful at recognizing the upright Georgia tonos marks than the angled tonos mark in Sitka. This left us with the decision between changing the Sitka tonos mark to a more-legible, upright design or staying with the less-legible, angled tonos mark in deference to the advice of experts in contemporary Greek orthography. In this case we decided that it was more important to go with the opinions of experts and readers.
+
+# 1.11 Conclusions
+
+The novel collaborative process that was used in the development of the Sitka typeface family worked well in the sense that the participants, designers on the one side, scientists on the other, saw very much eye to eye. It never happened that designers produced something that the scientists said was untestable, or the scientists produced results that the designers said were unusable. The process was always a matter of discussion and interpretation between participants who had great confidence in one another’s abilities.
+
+Some of the test results were anticipated, such as the problems inherent in narrow letters. In such a case our findings tended to reinforce the conclusions, or suggestions, of earlier researchers. The corollary, that lowercase m is an excellent letter, had perhaps not been so well established, and the superior legibility of the most frequent letters in the language seemed to be a discovery, if not a very surprising one. Despite our best efforts cer-

@@ -997,6 +997,7 @@
 +   [嵌入式系统与产品的开发与管理：方法、技术、工具、流程与团队协作](docs/developing-and-managing-embedded-systems-and-products-method/README.md)
 +   [.net Core 3 和 Visual Studio 2019 多平台桌面应用程序开发：macOS、Linux 和 Windows 的 C# GUI 应用程序构建指南](docs/developing-multi-platform-desktop-applications-with-net-core/README.md)
 +   [产后期膳食脂质滴结构改善产后编程小鼠模型的肝脏能量和脂质代谢](docs/dietary-lipid-droplet-structure-in-postnatal-life-improves-h/README.md)
++   [数字字体与阅读（语言处理、模式识别和智能系统）](docs/digital-fonts-and-reading-language-processing-pattern-recogn/README.md)
 +   [C++ 数字图像处理：使用 CImg 库实现参考算法](docs/digital-image-processing-with-c-implementing-reference-algor/README.md)
 +   [数字媒体处理：C语言DSP算法](docs/digital-media-processing-dsp-algorithms-using-c/README.md)
 +   [数字媒体处理：使用 C 语言的 DSP 算法（包含配套网站补充材料）](docs/digital-media-processing-dsp-algorithms-using-c-including-ad/README.md)

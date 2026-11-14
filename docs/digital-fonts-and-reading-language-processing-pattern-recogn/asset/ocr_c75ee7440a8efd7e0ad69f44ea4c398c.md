@@ -1,0 +1,11 @@
+With Arial, the largest number of words read was at 16 pts with an unnoticeable difference from the results of the same typeface at 20 pts. Interestingly, the difference in reading speed between the most and least read size of Arial (16 and 12 pts) was 64 words, almost half of the equivalent in Times New Roman. Hence, readers benefit from the size increase only in particular typefaces. Thus, additional parameters are contributing towards higher readability.
+
+Lastly, participants commented negatively on the paragraphs typeset in the smallest sizes when introduced at the beginning of the testing process, or after a break. This should be taken into account, as it might determine whether they would engage in reading.
+
+# 1.4.2 Visual noise and type size: a complementary study
+
+When conducting the experiment, one participant suffering from macular degeneration commented twice: ‘I’ve got black spots and they get in the way.’ This comment led to an exploratory study based on Liang’s [2002] and Pelli’s [1994] research, showing that legibility is more affected by ‘noise’ (any disrupting visual element that renders the recognition of a visual signal more difficult) than size. The aim was to understand which typographical details benefit from a size increase to a deficient eye.
+
+The only noticeable difference after increasing the size of letters was that their thinner parts were more visible and the signal became stronger than the noise (Figure 5).
+
+When using Tiresias LP (bolder typeface with monolinear stems) the word ‘limited’ was comparably more distinguishable. Therefore, the solution for a legible font seems not to rely only on the size, but also on the thickness of the stroke. Hence, if the exact noise ratio of each deficiency is discovered, a potentially beneficial typeface with higher or lower frequencies than the noise could be designed. Previous research has shown that ‘subjects with cloudy media read better when white letters appear on a black background’ [Legge et al., 1985]. This statement comes in agreement with the illustration (Figure 6) and therefore the solution in legibility does not rely only on the typeface but also on the background against which it is used.
