@@ -1,0 +1,13 @@
+that there are actually red values both at 0 and 1.0. As saturation varies from 0 to 1.0, the corresponding colors (hues) vary from unsaturated (shades of gray) to fully saturated (no white component). As value, or brightness, varies from 0 to 1.0, the corresponding colors become increasingly brighter. Figure 2.6 illustrates the HSV color space.
+
+# 2.5 ALGORITHMIC ACCOUNT
+
+In order to work with RGB images in any programming environment, basic information about size and data precision representation must be obtained before actual processing starts. An RGB image, also called *truecolor image*, of screen dimensions M rows and N columns, has a size of M×N×3 pixels. Here, 3 represents the three layers of red, green, and blue intensities. Hence, an RGB pixel is, in fact, a 3-tuple vector with values corresponding to the red, green, and blue intensities on the screen. Graphics file formats store RGB images as 24-bit images, where the red, green, and blue components are 8 bits each. This yields a potential of 16 million colors. The precision with which a real-life image can be replicated has led to the commonly used term *truecolor image*. An RGB array can be of class double, uint8, or uint16. In an RGB array of class double, each color component is a value between 0 and 1. A pixel whose color components are (0,0,0) is displayed as black, and a pixel whose color components are (1,1,1) is displayed as white. The three color components for each pixel are stored along the third dimension of the data array. Figure 2.7 illustrates this.
+
+The other types of image that are most commonly used are indexed images (MATLAB specific), grayscale, and binary images. Assuming the same screen dimensions as those of the foregoing RGB image, these images will respectively be M × N + P × 3, M × N, and M × N. The index images are specific to MATLAB and store the RGB colors as a separate color map of size P × 3, where P represents the total color combinations present in the RGB image. The M × N component of the index image has only the table entry index from the color map that corresponds to the color present at that particular pixel in the M × N image space. P is usually a small finite number and, therefore, there is a remarkable savings in the space requirements for storing such an image.
+
+The grayscale image of size M×N would contain only the intensity values for that particular pixel. Conversion from RGB to grayscale depends on the sensitivity response curve of the sensor to light as a function of wavelength. However, a common equation used for this purpose is
+
+```
+gray = 0.3 × R + 0.59 × G + 0.11 × B. (2.4)
+```

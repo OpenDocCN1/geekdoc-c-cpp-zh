@@ -1,0 +1,9 @@
+![](bbox=[0.22, 0.08, 0.82, 0.33])
+
+FIGURE 10.6 Some strels used in the thinning operation. (a) A piercing edge from bottom; (b) an angular piercing edge; (c) simply finds the boundary of a binary object; that is, it deletes any foreground points that do not have at least one neighboring background point (note that the detected boundary is 4-connected); (d) does the same thing but produces an 8-connected boundary; (e) and (f) are used for pruning, that is, reapplying thinning until convergence.
+
+pixels in the image, then the image pixel under the origin of the structuring element is set to foreground (one). Otherwise, it is left unchanged. Note that the strel must always have a zero or a blank at its origin if it is to have any effect. The choice of strel determines in what situations a background pixel will be set to foreground and, hence, it determines the application for the thinning operation. Two typical strels are shown in Figure 10.8. Figure 10.9 shows the application of this operator to a real image.
+
+# 10.8 SKELETONIZATION/MEDIAL AXIS TRANSFORM
+
+Skeletonization is a process for reducing foreground regions in a binary image to a skeletal remnant that largely preserves the extent and connectivity of the original region while throwing away most of the original foreground pixels. Essentially, in each iteration, some pixels are systematically removed without causing any hole or break to be created. To see how this works, imagine that the foreground regions in the input binary image are made of some uniform slow-burning material. Light fires simultaneously at all points along the boundary of this region, and watch the fire move into the interior. At points where the fire traveling from two different

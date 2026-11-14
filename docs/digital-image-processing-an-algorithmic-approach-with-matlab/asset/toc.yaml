@@ -1,0 +1,206 @@
+level_changes:
+- line: 56
+  before: 2
+  after: 1
+- line: 58
+  before: 3
+  after: 2
+- line: 86
+  before: 3
+  after: 2
+- line: 327
+  before: 2
+  after: 1
+- line: 329
+  before: 3
+  after: 2
+- line: 642
+  before: 2
+  after: 1
+- line: 1013
+  before: 2
+  after: 1
+- line: 1015
+  before: 3
+  after: 2
+- line: 1019
+  before: 3
+  after: 2
+- line: 1279
+  before: 2
+  after: 3
+- line: 1295
+  before: 2
+  after: 3
+- line: 1461
+  before: 3
+  after: 2
+- line: 1478
+  before: 3
+  after: 2
+- line: 1486
+  before: 2
+  after: 1
+- line: 1488
+  before: 3
+  after: 2
+- line: 1505
+  before: 3
+  after: 2
+- line: 1535
+  before: 3
+  after: 2
+- line: 1738
+  before: 2
+  after: 3
+- line: 1779
+  before: 2
+  after: 3
+- line: 1860
+  before: 2
+  after: 1
+- line: 1862
+  before: 3
+  after: 2
+- line: 1866
+  before: 3
+  after: 2
+- line: 2073
+  before: 2
+  after: 3
+- line: 2546
+  before: 2
+  after: 1
+- line: 2548
+  before: 3
+  after: 2
+- line: 2556
+  before: 3
+  after: 2
+- line: 2882
+  before: 2
+  after: 1
+- line: 2884
+  before: 3
+  after: 2
+- line: 3271
+  before: 2
+  after: 1
+- line: 3273
+  before: 3
+  after: 2
+- line: 3512
+  before: 2
+  after: 1
+- line: 3514
+  before: 3
+  after: 2
+- line: 3522
+  before: 3
+  after: 2
+- line: 3830
+  before: 2
+  after: 1
+- line: 3832
+  before: 3
+  after: 2
+- line: 3850
+  before: 3
+  after: 2
+- line: 3862
+  before: 3
+  after: 2
+- line: 3900
+  before: 2
+  after: 3
+- line: 4130
+  before: 2
+  after: 1
+- line: 4132
+  before: 3
+  after: 2
+- line: 4136
+  before: 3
+  after: 2
+- line: 4161
+  before: 3
+  after: 2
+- line: 4570
+  before: 2
+  after: 1
+- line: 4572
+  before: 3
+  after: 2
+- line: 4578
+  before: 3
+  after: 2
+- line: 4604
+  before: 3
+  after: 2
+- line: 4624
+  before: 2
+  after: 3
+- line: 4636
+  before: 2
+  after: 3
+- line: 4775
+  before: 2
+  after: 1
+- line: 4812
+  before: 2
+  after: 3
+- line: 4845
+  before: 2
+  after: 3
+- line: 4907
+  before: 2
+  after: 3
+text_changes:
+- line: 56
+  before: 图像处理与 MATLAB® 环境简介
+  after: 1 图像处理与 MATLAB® 环境简介
+- line: 327
+  before: 图像获取、类型和文件输入/输出
+  after: 2 图像获取、类型和文件输入/输出
+- line: 642
+  before: 图像算术
+  after: 3 图像算术
+- line: 1013
+  before: 仿射与逻辑运算、图像畸变与噪声
+  after: 4 仿射与逻辑运算、图像畸变与噪声
+- line: 1486
+  before: Image Transforms
+  after: 5 Image Transforms
+- line: 1860
+  before: 空间域和频率域滤波器设计
+  after: 6 空间域和频率域滤波器设计
+- line: 2239
+  before: 图像恢复与盲去卷积
+  after: 7 图像恢复与盲去卷积
+- line: 2546
+  before: 图像压缩
+  after: 8 图像压缩
+- line: 2882
+  before: 边缘检测
+  after: 9 边缘检测
+- line: 3271
+  before: 二值图像处理
+  after: 10 二值图像处理
+- line: 3512
+  before: 图像加密与水印
+  after: 11 图像加密与水印
+- line: 3830
+  before: 图像分类与分割
+  after: 12 图像分类与分割
+- line: 4130
+  before: 基于图像的目标跟踪
+  after: 13 基于图像的目标跟踪
+- line: 4570
+  before: 人脸识别
+  after: 14 人脸识别
+- line: 4775
+  before: 图像处理中的软计算
+  after: 15 图像处理中的软计算
+- line: 4640
+  before: 表14.1 公共领域中可用的精选人脸数据库
+  after: 表 14.1 公共领域中可用的精选人脸数据库
