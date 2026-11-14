@@ -1,0 +1,2 @@
++   [Microsoft Enterprise Library 开发者指南（Visual Basic 版）（patterns & Practices）](README.md)
++   [Microsoft Enterprise Library 开发者指南（Visual Basic 版）（patterns & Practices）](developers-guide-to-microsoft-enterprise-library-visual-basi.md)

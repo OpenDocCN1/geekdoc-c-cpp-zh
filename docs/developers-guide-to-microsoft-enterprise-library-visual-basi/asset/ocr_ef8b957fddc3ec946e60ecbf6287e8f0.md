@@ -1,0 +1,7 @@
+Now, when the application causes an exception, the global exception handler continues to display the same sanitized error message. However, the **Logging** handler captures details of the original exception before the Exception Handling block policy replaces it, and writes the details to whichever logging sink you specify in the configuration for the Logging block. The default in this example is Windows Application Event Log. If you run the example **Logging an Exception to Preserve the Information it Contains**, you will see an exception like the one in Figure 5.
+
+![](bbox=[0.11, 0.22, 0.84, 0.68])
+
+# FIGURE 5 Details of the logged exception
+
+This example shows the Exception Handling block using the default settings for the Logging block. However, as you can see in Chapter 4, “As Easy As Falling Off a Log,” the Logging block is extremely configurable. So you can arrange for the Logging handler in your exception handling policy to write the information to any Windows Event Log, an e-mail message, a database, a message queue, a text file, a Windows Management Instrumentation (WMI) event, or a custom location using classes you create that take advantage of the application block extension points.

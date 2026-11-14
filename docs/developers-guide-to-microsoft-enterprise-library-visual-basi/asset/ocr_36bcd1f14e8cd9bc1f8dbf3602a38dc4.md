@@ -1,0 +1,13 @@
+# CHOOSING A VALIDATION APPROACH
+
+Before you start to use the Validation block, you should consider how you want to perform validation. As you've seen, there are several approaches you can follow. Table 2 summarizes these, and will help you to choose one, or a combination, most suited to your requirements.
+
+# TABLE 2 Validation approaches
+
+| Validation approach | Advantages | Considerations |
+| :--- | :--- | :--- |
+| Rule sets in configuration | Supports the full capabilities of the Validation block validators. Validation rules can be changed without requiring recompilation and redeployment. Validation rules are more visible and easier to manage. | Rules are visible in configuration files unless the content is encrypted. May be open to unauthorized alteration if not properly protected. Type definitions and validation rule definitions are stored in different files and accessed using different tools, which can be confusing. |
+| Validation block attributes | Supports the full capabilities of the Validation block validators. Validation attributes may be defined in separate metadata classes. Rules can be extracted from the metadata for a type by using reflection. | Requires modification of the source code of the types to validate. Some complex rule combinations may not be possible—only a single **And** or **Or** combination is available for multiple rules. Hides validation rules from administrators and operators. |
+| Data annotation attributes | Allows you to apply validation rules defined by .NET data annotation attributes, which may be defined in separate metadata classes. Typically used with technologies such as LINQ, for which supporting tools might be used to generate code. Technologies such as ASP.NET Dynamic Data that use these attributes can perform partial client-side validation. Rules can be extracted from the metadata for a type by using reflection. | Requires modification of the source code. Does not support all of the powerful validation capabilities of the Validation block. |
+| Self-validation | Allows you to create custom validation rules that may combine values of different members of the class. | Requires modification of the source code. Hides validation rules from administrators and operators. Rules cannot be extracted from the metadata for a type by using reflection. |
+| Validators created programmatically | A simple way to validate individual values as well as entire objects. Useful if you only need to perform small and specific validation tasks, especially on value types held in variables. | Requires additional code and is generally more difficult to manage for complex validation scenarios. Hides validation rules from administrators and operators. More difficult to administer and manage. |

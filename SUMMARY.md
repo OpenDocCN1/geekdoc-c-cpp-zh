@@ -992,6 +992,7 @@
 +   [C++ 软件合成器插件设计：适用于 RackAFX、VST3 和 Audio Units](docs/designing-software-synthesizer-plug-ins-in-c-for-rackafx-vst/README.md)
 +   [对象设计：通过哈利·波特故事详解对象对象设计模式](docs/designing-with-objects-object-oriented-design-patterns-expla/README.md)
 +   [以心理为本的设计：用户界面设计指南简易指南](docs/designing-with-the-mind-in-mind-simple-simple-guide-to-under/README.md)
++   [Microsoft Enterprise Library 开发者指南（Visual Basic 版）（patterns & Practices）](docs/developers-guide-to-microsoft-enterprise-library-visual-basi/README.md)
 +   [开发 hapi Edge：一个用于应用和服务的 Node.js 丰富框架](docs/developing-a-hapi-edge-a-rich-nodejs-framework-for-apps-and-/README.md)
 +   [嵌入式系统与产品的开发与管理：方法、技术、工具、流程与团队协作](docs/developing-and-managing-embedded-systems-and-products-method/README.md)
 +   [C++ 数字图像处理：使用 CImg 库实现参考算法](docs/digital-image-processing-with-c-implementing-reference-algor/README.md)

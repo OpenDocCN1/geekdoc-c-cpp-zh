@@ -1,0 +1,17 @@
+The aim is for you to understand the basic principles of each of the application blocks in Enterprise Library, and how you can choose exactly which blocks and features you require. Chapter 1 also discusses the fundamentals of using the blocks, such as how to configure them, how to instantiate the components, and how to use these components in your code.
+
+The remaining seven chapters discuss in detail the application blocks that provide the basic crosscutting functionality such as data access, caching, logging, and exception handling. These chapters explain the concepts that drove development of the blocks, the kinds of tasks they can comprehend, and how they help you implement many well-known design patterns. And, of course, they explain—by way of code extracts and sample programs—how you actually use the blocks in your applications. After you’ve read each chapter, you should be familiar with the block and be able to use it to perform a range of functions quickly and easily, in both new and existing applications.
+
+Finally, the appendixes present more detailed information on specific topics that you don’t need to know about in detail to use Enterprise Library, but are useful as additional resources and will help you understand how features such as dependency injection, interception, and encryption fit into the Enterprise Library world.
+
+You can also download and work through the Hands-On Labs for Enterprise Library, which are available at http://go.microsoft.com/fwlink/?LinkId=188936.
+
+# WHAT THIS GUIDE DOES NOT COVER
+
+The aim of this guide is to help you learn how to benefit from the capabilities of Enterprise Library. It does not describe the common design patterns in depth, or attempt to teach you about application architecture in general. Instead, it concentrates on getting you up to speed quickly and with minimum fuss so you can use Enterprise Library to manage your crosscutting concerns.
+
+One of the core tenets of modern application design is that you should reduce the coupling or dependencies between components and objects, and Enterprise Library version 5.0 helps you achieve this goal through use of the Dependency Injection (DI) design pattern. However, you do not have to be a DI expert to use Enterprise Library; all of the complexity is managed internally by the core mechanisms within the framework. While we do explain the basic use of DI in terms of Enterprise Library, that is not a fundamental feature of this guide.
+
+Enterprise Library is designed to be extensible. You can extend it simply by writing custom plug-in providers, by modifying the core code of the library, or even by creating entirely new blocks. In this guide, we provide pointers to how you can do this and explain the kinds of providers that you may be tempted to create, but it is not a topic that we cover in depth. These topics are discussed more fully in the documentation installed with Enterprise Library and available online at http://go.microsoft.com/fwlink/?LinkId=188874, and in the many other resources available from our community Web site at http://www.codeplex.com/entlib.
+
+For more information about the Dependency Injection (DI) design pattern and the associated patterns, see “Inversion of Control Containers and the Dependency Injection pattern” at http://martinfowler.com/articles/injection.html.

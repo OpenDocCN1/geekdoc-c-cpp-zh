@@ -1,0 +1,13 @@
+Two more exception handling patterns that you should consider implementing are the Exception Logging pattern and the Exception Translation pattern. The Exception Logging pattern can help you diagnose and troubleshoot errors, audit user actions, and track malicious activity and security issues. The Exception Translation pattern describes wrapping exceptions within other exceptions specific to a layer to ensure that they actually reflect user or code actions within the layer at that time, and not some miscellaneous details that may not be useful.
+
+In this chapter, you will see how the Enterprise Library Exception Handling block can help you to implement these patterns, and become familiar with the other techniques that make up a comprehensive exception management strategy. You’ll see how to replace, wrap, and log exceptions; and how to modify exception messages to make them more useful. And, as a bonus, you’ll see how you can easily implement exception shielding for Windows® Communication Foundation (WCF) Web services.
+
+# When Should I Use the Exception Handling Block?
+
+The Exception Handling block allows you to configure how you want to manage exceptions, and centralize your exception handling code. It provides a selection of plug-in exception handlers and formatters that you can use, and you can even create your own custom implementations. You can use the block when you want to implement exception shielding, modify exceptions in a range of ways, or chain exceptions (for example, by logging an exception and then passing it to another layer of your application). The configurable approach means that administrators can change the behavior of the exception management mechanism simply by editing the application configuration without requiring any changes to the code, recompilation, or redeployment.
+
+> The Exception Handling block was never intended for use everywhere that you catch exceptions. The block is primarily designed to simplify exception handling and exception management at your application or layer boundaries.
+
+# How Do I Use the Exception Handling Block?
+
+Like all of the Enterprise Library application blocks, you start by configuring your application to use the block, as demonstrated in Chapter 1, “Introduction.” Then you add one or more exception policies and, for each policy, specify the type of exception it applies to. Finally, you add one or more exception handlers to each policy. The simplest approach is a policy that specifies the base type, Exception, and uses one of the handlers provided with the block. However, you’ll see the various handlers, and other options, demonstrated in the examples in this chapter.

@@ -1,0 +1,15 @@
+# What Does the Security Block Do?
+
+The Security Application Block implements two related features. It provides the capability to configure and manage sets of authorization rules using a variety of rule providers, and can help you to cache credentials for your application to use where it must make repeated authorization checks. These two features combine to provide an environment for implementing authorization in a flexible way, while allowing the details of the authorization policies (the sets of rules) to be administered without requiring changes to the application—eliminating the requirement to recompile, test, and redeploy the application as the policies change. It also means that administrators can manage the policies using Group Policy if required.
+
+In your application code, you can quickly and easily create tokens for users, cache these tokens, expire them, and check if users are authorized to perform specific tasks or operations. These features make use of one or more authorization rule providers and security caches that you define for your application, and even use across multiple applications. The following sections of this chapter explain what an authorization rule provider and a security cache are, and how they help you to implement a security strategy for your applications.
+
+# WHAT ARE AUTHORIZATION RULE PROVIDERS?
+
+An authorization rule provider is a component or service that allows you to define rules. Using a rule you specify a task or operation that users may perform, and you then allocate users and groups to this task or operation. The Security block uses these rules to determine whether a specific user or role is authorized to execute a specified task or operation.
+
+The Security block includes a rule provider that stores the information as a series of expressions, one for each task or operation, in the application configuration file. You can encrypt this section of the configuration file to prevent anyone who can access it from being able to see the expressions. Alternatively, you can use the Windows® Authorization Manager (AzMan) provider, part of the current Microsoft® Windows® operating systems, which allows you to store the authorization rules in a variety of locations, and include Windows users and groups in the rules. Enterprise Library includes an assembly named Microsoft.Practices.EnterpriseLibrary.Security.AzMan.dll that allows it to interact with AzMan.
+
+# About Authorization Manager (AzMan)
+
+While it's useful to be able to define your security roles and authorization rules in the application configuration file, what would be really cool is to be able to make use of the groups, roles, and user accounts already defined on your system or network, and store the rules in some portable format such as an XML file or (perhaps less portable) a database. The details of Windows users and groups are stored in Active Directory®, and—while you can write code to access the information—using Active Directory is not
