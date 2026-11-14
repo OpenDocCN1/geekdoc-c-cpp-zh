@@ -1,0 +1,104 @@
+
+
+本节其余部分专门用于证明定理 9.3.8。我们从基模型 \(\langle L, \in \rangle\) 开始。令 \(\mathbb{P}\) 为 Cohen 强迫条件的集合。\(\mathbb{P}_{\aleph_1}\) 是长度为 \(\aleph_1\) 的有限支持的结果积强迫。
+
+For \(\alpha < \omega_1\), let \(\mathbb{P}_{<\alpha} = (\mathbb{P}_{<\alpha}, \le)\), where \(p \in \mathbb{P}_{<\alpha}\) if and only if \(p \in \mathbb{P}_{\aleph_1}\) and \(\text{dom}(p) \subseteq \alpha\). The partial order on \(\mathbb{P}_{<\alpha}\) is the restriction of that on \(\mathbb{P}_{\aleph_1}\) to \(\mathbb{P}_{<\alpha}\). Thus \(\mathbb{P}_{\aleph_1} = \mathbb{P}_{<\aleph_1}\). Let \(E\) be the set of limit ordinals less than \(\omega_1\). For \(\alpha < \omega_1\), let \(\omega_1^\alpha\) be the least admissible ordinal greater than \(\alpha\). Then \(\mathbb{P}_{<\alpha} \in L_{\omega_1^\alpha}\).
+
+**Lemma 9.3.9.** There exists an uncountable set \(E_1 \subseteq E\) in \(L\) and a sequence of binary relations \(\{R_\alpha\}_{\alpha \in E_1} \in L\) such that for each \(\alpha \in E_1\),
+- \(R_\alpha \in L\) is a binary relation on \([2^n \mid n < \omega]\) that is a well-ordering of order type \(\alpha\);
+- for each \(\beta < \alpha\), there is a function \(f_\beta \le_T R_\alpha\) which is an isomorphism between \(R_\beta\) and an initial segment of \(R_\alpha\).
+
+Proof. We define \(E_1\) and \(\{R_\alpha\}_{\alpha \in E_1}\) by induction on \(\alpha < \omega_1\). Let \(E_{1,0} = \emptyset\). At stage \(\alpha + 1\), suppose that \(E_{1,\alpha}\) and \(\{R_\gamma\}_{\gamma \in E_{1,\alpha}}\) have been defined. Let \(R \in L\) be a well-ordering of \(\{2^n \mid n < \omega\}\) of order type a limit ordinal greater than that of \(R_\gamma\) for \(\gamma \in E_{1,\alpha}\). Then for every \(\gamma \in E_{1,\alpha}\), there is a function \(f_\gamma\) which maps \(R_\gamma\) isomorphically onto an initial segment of \(R\). Let \(x \in L\) be a real that computes all the \(f_\gamma\)’s. Let \(E_{1,\alpha+1} = E_{1,\alpha} \cup \{\gamma_1\}\) where \(\gamma_1 = \alpha + \omega \cdot \alpha\). Let \(R^1\) be a binary relation on \(\{2^{n+1} \mid n < \omega\}\) such that for any \(n \neq m\), \((2^{n+1}, 2^{m+1}) \in R^1\) if and only if either \(n \in x\) and \(m \notin x\) or \(n \notin x \land m \in x\) and \(n < m\). So \(R^1 \ge_T x\) in \(L\) and is a well-ordering of order type \(\omega + \omega\) on \(\{2^{n+1} \mid n < \omega\}\). Let
+
+\[
+R_{\alpha+1} = R \cup R^1 \cup \langle (2^{2n}, 2^{2m+1}) \mid n, m \in \omega \rangle.
+\]
+
+If \(\alpha\) is a limit ordinal, let \(E_{1,<\alpha} = \bigcup_{\gamma < \alpha} E_{1,\gamma}\) and repeat the above upon replacing \(E_{1,\alpha}\) by \(E_{1,<\alpha}\).
+Let \(E_1 = \bigcup_{\beta < \omega_1} E_{1,\beta}\). Then \(E_1\) and \(\{R_\alpha\}_{\alpha \in E_1}\) are as required.
+
+From now on, let \(E_1\) and \(\{R_\alpha\}_{\alpha \in E_1}\) in \(L\) be as above. Let \(G\) be a \(\mathbb{P}_{\aleph_1}\)-generic set over \(L\). Then \(G\) may be viewed as an \(\omega_1\)-sequence \(\langle G_\alpha \mid \alpha < \omega_1 \rangle\) such that for every \(\alpha < \omega_1\), \(G_\alpha = \bigcup_{p \in G} p(\alpha)\) is a real. Let \(G_\alpha = \langle \langle \beta, G_\beta \rangle \mid \beta < \alpha \rangle\).
+
+**Definition 9.3.10.** For any \(\gamma < \alpha \in E_1\) and any sequence \(\langle z_\beta \rangle_{\beta < \alpha}\) of reals, define the join of \(\langle z_\beta \rangle_{\beta < \gamma}\) along \(R_\alpha\) to be the set
+
+\[
+\bigoplus_{R_\alpha} \langle z_\beta \rangle_{\beta < \gamma} = R_\alpha \upharpoonright \{2^n \cdot 3^j \mid (\exists \beta < \gamma)(j \in z_\beta \land \beta = \text{order type of } (R_\alpha \upharpoonright n))\}.
+\]
+
+The following lemma says that the join operator is order preserving.
+
+**Lemma 9.3.11.** For any \(\beta_1 \le \beta_2 \le \alpha_1 \le \alpha_2 \in E_1\),
+
+\[
+\bigoplus_{R_{\beta_2}} \langle G_\gamma \rangle_{\gamma < \beta_1} \le_T \bigoplus_{R_{\alpha_2}} \langle G_\gamma \rangle_{\gamma < \alpha_1}.
+\]
+
+Proof. It is immediate that \( R_{\beta_1} \le_T R_{\alpha_1} \). Let \( f \) be an \( R_{\alpha_1} \)-recursive function which is an isomorphism between \( R_{\beta_1} \) and an initial segment of \( R_{\alpha_1} \). Then for any \( n, j \), \( 2^n \cdot 3^j \in \bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1} \) if and only if \( 2^{f(n)} \cdot 3^j \in \bigoplus_{R_{\alpha_1}} (G_\gamma)_{\gamma < \alpha_1} \). Hence \(\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1} \le_T \bigoplus_{R_{\alpha_1}} (G_\gamma)_{\gamma < \alpha_1} \).
+
+The following lemma is used in the construction of a cofinal chain.
+
+**Lemma 9.3.12.** For any real \(x\) and \(\alpha \in E_1\), if \( x \in L[G_\alpha] \) then there is a \(\beta \ge \alpha\) in \( E_1 \) such that \( x \le_T (\bigoplus_{R_\beta} (G_\gamma)_{\gamma < \beta})^\beta \).
+
+Proof. Note that for any \(\alpha < \omega_1\), \( L[G_\alpha] = L[(\bigoplus_{R_\alpha} (G_\gamma)_{\gamma < \alpha})] \) since \( R_\alpha \in L \). Suppose that \( x \in L[G_\alpha] \). There is a \(\beta_1 \ge \alpha\) in \( E_1 \) such that \( x \in L_{\beta_1} [(\bigoplus_{R_\alpha} (G_\gamma)_{\gamma < \alpha})] \). By Lemma 9.3.11, \(\bigoplus_{R_\alpha} (G_\gamma)_{\gamma < \alpha} \le_T \bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1} \). Thus \( x \in L_{\beta_1} [(\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1})] \). Since \(\beta_1 < \omega_1\), by relating Theorem 3.7.1 to \(\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1} \) we have \( x \) to be \( A^1 \) in \(\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1} \). Hence there is a \(\beta_2 \ge \beta_1\) below \(\omega_1^{\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1}}\) such that \( x \le_T (\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1})^{(\beta_2)} \). By Lemma 9.3.11 again, \( x \le_T (\bigoplus_{R_{\beta_1}} (G_\gamma)_{\gamma < \beta_1})^{(\beta_1)} \). Then \(\beta_2\) is the required \(\beta\).
+
+In \( L[G] \), if \(\alpha \in E_1\) let \( x_\alpha^G = (\bigoplus_{R_\alpha} (G_\gamma)_{\gamma < \alpha})^{(\alpha)} \), and let \( r_\alpha \) be the canonical \(\text{P}_{\aleph_1}\)-name of \( x_\alpha^G \). Let
+
+\[
+A = \{z \mid (\exists \alpha \in E_1) (z \le_T r_\alpha^G) \}.
+\]
+
+Obviously \( A \) is a chain of Turing degrees in \( L[G] \). Set
+
+\[
+N = (\text{HOD}(\text{TC}([A])))^{L[G]}.
+\]
+
+where \(\text{TC}([A]) \in L[G] \) is the transitive closure of \( [A] \).
+
+**Lemma 9.3.13.** For any \(\alpha < \omega_1\), (i) \(\text{P}_{\alpha}\) preserves cardinals; (ii) \( G_{\alpha} \) is \(\text{P}_{\alpha}\)-generic over \( L \); (iii) \( A \in \mathbb{N} \) is a cofinal chain of Turing degrees of order type \(\omega_1 \); (iv) \( (2^\omega)^{L[G]} = (2^\omega)^{\mathbb{N}} \).
+
+Proof. (i) follows from Theorem 6.11.1 and (ii) from Theorem 6.1.9, while (iv) is an immediate consequence of (iii). We prove (iii). Given \( x \in L[G] \), there is an ordinal \(\alpha < \omega_1 \) such that \( x \in L[G_\alpha] \). Then there is a countable ordinal \(\alpha_1 \ge \alpha \) such that \( x \in L_{\alpha_1} [G_\alpha] \). By Lemma 9.3.12, for any \(\beta \ge \alpha_1\) in \( E_1 \), \( x \le_T (\bigoplus_{R_\beta} (G_\gamma)_{\gamma < \beta})^{(\beta)} \). Thus \( x \le_T x_\beta^G \).
+
+Hence \(\mathbb{N}\) is a cardinal preserving extension of \( L \) satisfying \(\text{ZF}^+\)-"There exists a cofinal chain of Turing degrees". If we take \(\mathbb{N}' = \text{HOD}((G_\alpha \mid \alpha < \omega_1))\), then in \(\mathbb{N}'\) there is no well-ordering of \( 2^\omega \) by the proof of Theorem 6.2.15. However, to apply the argument for \(\mathbb{N}\), additional precaution is required to preserve the name of \( A \). For this purpose, we work with a subset of permutations of \(\omega_1\).
+
+If \(\pi\) is a permutation of \(\omega_1\), let \(\text{spt}(\pi) = \{ \alpha < \omega_1 \mid \pi(\alpha) \neq \alpha \}\). Let \(H_0\) be the set of all permutations \(\pi\) of \(\omega_1\) with \(|\text{spt}(\pi)| < \omega\), and set
+
+\[
+H = \{ \pi \in H_0 \mid (\forall \alpha < \omega_1)(\pi(\alpha) < \alpha + \omega) \}.
+\]
+
+For each \(\pi \in H\), let \(\hat{\pi}\) be the permutation of \(L^{\aleph_1}\) induced by \(\pi\). Let \(B\) be the set of \(\mathbf{P}_{\aleph_1}\)-names of reals, and define
+
+\[
+\hat{A} = \{ (\tau, p) \in B \times \mathbf{P}_{\aleph_1} \mid (\exists \alpha \in E_1)(p \Vdash (\tau =_T \tau_\alpha)) \}.
+\]
+
+**Lemma 9.3.14.** If \(\pi \in H\) and \(\alpha \in E_1\) then \(\Vdash \tau_\alpha = \hat{\pi}(\tau_\alpha)\).
+
+Proof. Note that the canonical name \(\dot{\alpha}\) of \(\alpha\) is invariant under \(\pi\), and \(R_\gamma\) is definable in \(\alpha\) as \(L\) is the minimal inner model. Then for any \(\mathbf{P}_{\aleph_1}\)-generic \(G\), \(\tau_\alpha^G\) and \(\hat{\pi}(\tau_\alpha)^G\) differ at most finitely many columns. The lemma follows immediately.
+
+**Corollary 9.3.15.** If \(\pi \in H\), then \(\emptyset \Vdash \hat{A} = \hat{\pi}(\hat{A})\).
+
+Hence the permutations in \(H\) are sufficient to show
+
+\[
+\mathbb{N} \Vdash \text{``There is no well-ordering of } 2^\omega\text{''}.
+\]
+
+By Proposition 9.3.7, \(\mathbb{N} \Vdash \neg \text{CH}\) and this completes the proof of Theorem 9.3.8.
+
+## 9.3.4 Exercises
+
+- **Exercise 9.3.1.** Prove Lemma 9.3.2.
+- **Exercise 9.3.2** (Kunen). Prove that if there is a well-ordering of the Turing degrees, then there is a well-ordering of \(2^\omega\).
+- **Exercise 9.3.3** (Wang, Wu and Yu [168]). Prove that in the proof of Theorem 9.3.8, we may assume \(\mathbb{M} \Vdash \text{ZFC} + \text{CH} + \omega_1 = (\omega_1)^L\).
+- **Exercise 9.3.4.** Prove that there is a model \(\mathbb{M}\) of ZF in which no set of reals has exactly one representative from each Turing degree, and in which there is a thin set \(A\) where \(2^\omega \setminus A\) is also thin.
+
+## 9.4 \(\omega\)-homogeneity of the Turing degrees
+
+**Definition 9.4.1.** \(\langle \mathscr{D}, \le \rangle\) is \(\omega\)-homogeneous if for any two \(n+1\)-tuples \((\mathbf{a}_0, \dots, \mathbf{a}_n)\) and \((\mathbf{b}_0, \dots, \mathbf{b}_n)\) in \(\mathscr{D}\), if \(\langle \mathscr{D}, \le, \mathbf{a}_0, \dots, \mathbf{a}_n \rangle \equiv \langle \mathscr{D}, \le, \mathbf{b}_0, \dots, \mathbf{b}_n \rangle\) then there is an automorphism \(\pi : \mathscr{D} \to \mathscr{D}\) such that \(\pi(\mathbf{a}_i) = \mathbf{b}_i\) for each \(i \le n\).
+
+Slaman and Woodin [144] showed:
+
+**Theorem 9.4.2.** The \(\omega\)-homogeneity of \(\langle \mathscr{D}, \le \rangle\) is independent of ZFC.
+

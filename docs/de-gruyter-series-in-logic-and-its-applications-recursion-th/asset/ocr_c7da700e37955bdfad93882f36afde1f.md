@@ -1,0 +1,15 @@
+lot further. Certainly the solution to Post Problem really fascinated me. I couldn't get over it. It seemed quite different from what I'd ever seen or thought about. I mean it's trivial now, of course, but at that time, there was nothing like that.
+
++   **Q:** When did you first hear of the Friedberg solution?
+
++   **S:** In the fall of the second year, Norede taught a course in recursion theory. This would be the academic year '59-'60 and he did the solution. He explained it.
+
++   **Q:** I see. Rosser didn't make you do a seminar and talk about ...
+
++   **S:** I guess if he hadn't been there that year, he would have made me do it. But we kept busy that first year. He knew about Friedberg, when he got to it. We touched on a lot of different things. Then Norede made me aware of these other papers by Shoenfield, Spector and the like. I was also intrigued, Spector gave a measure theoretic argument then, that there exists incomparable hyper-degrees. So again that is intriguing. Again that was an unexpected argument: What made him think like that? At the end of the second year, the beginning of the summer I started my thesis. Of course, I have memories of that time, some of them maybe false, who knows? We always rewrite the past. But Shoenfield had a theorem in his paper: Here is 0', there exist degrees a and b both less than 0', and their union is 0'. He splits 0' into two smaller degrees a and b. So I wondered why can't a and b be degrees of r.e. sets? I thought about that during the summer. I finally saw, if I took an r.e. set which is nonrecursive ... Oh, first I took one of degree 0', I finally saw I could split it into two incomparables. Then I realized for any nonrecursive r.e., the argument would still work. So I had a theorem and I was rolling ...
+
+That was the summer of, I guess, 1960. That's the end of my second year. Oh yes, I forgot, it was Friedberg's Splitting Theorem. I think Nerode brought that to my attention. Friedberg had split a nonrecursive r.e. set into two nonrecursive r.e. sets – that was in my head. So the question was to get them of lower degrees. So that was an influence. The proof of the Splitting Theorem used a finite injury argument, but there was a further twist.
+
++   **Q:** Yes, we now call it the Sacks preservation strategy. The method is by now classic in recursion theory.
+
++   **S:** I can't explain how my thinking was. I just fooled around with the problem day by day. But it finally worked out. Now Shoenfield had another open problem at the end of that paper, a minimal degree less than 0'. So I thought about that and didn't get anywhere. At the end of the summer, although I was still a student, I went down to Princeton to become a visiting student at Princeton for my third and final year of graduate study, because Rosser was down there. When he left at the end of the first year, he decided he was going to stay two years in Princeton. So I was reunited with him. I kept thinking about the Shoenfield problem, minimal degree below 0', because this minimal degree construction was yet another one that intrigued me immensely.

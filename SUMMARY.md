@@ -970,6 +970,7 @@
 +   [C++ 数据类型、变量、运算符与控制结构：C++ 编程入门指南](docs/data-types-and-variables-operators-and-control-structures-in/README.md)
 +   [数据可视化：原理与实践（第2版）](docs/data-visualization-principles-and-practice-second-edition/README.md)
 +   [David Chisnall Objective C 常用句手册 Pearson 2011](docs/david-chisnall-objective-c-phrasebook-pearson-2011/README.md)
++   [De Gruyter 逻辑及其应用丛书：递归论：可定义性的计算方面](docs/de-gruyter-series-in-logic-and-its-applications-recursion-th/README.md)
 +   [极简 Python：急躁程序员的地道 Python 编程](docs/dead-simple-python-idiomatic-python-for-the-impatient-progra/README.md)
 +   [C++ 面向对象编程解码](docs/deciphering-object-oriented-programming-with-c/README.md)
 +   [声明式逻辑编程：理论、系统与应用](docs/declarative-logic-programming-theory-systems-and-application/README.md)

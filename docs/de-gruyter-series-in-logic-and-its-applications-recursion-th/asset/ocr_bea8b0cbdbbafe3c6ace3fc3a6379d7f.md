@@ -1,0 +1,18 @@
+(ii) there exists a \(\sigma' < \sigma\) which is the leftmost splitting node of \(T_1[\beta]\) such that \(\sigma'\) has \(l\)-many splitting nodes extending \(\sigma'_{s-1}^{-1}\) in \(T_1[\beta]\), and
+(iii) for the \(\sigma'\) above, there is a node \(\sigma'' < \sigma\) extending \(\sigma'\) which is the second leftmost splitting node extending \(\sigma'\) in \(T_1[\beta]\) so that \(\sigma\) is the next splitting node extending \(\sigma''\) in \(T_1[\beta]\).
+
+Suppose that during the search in Case 2, \(z\) is always correct up to \(j_{s+1} - 1\). By the definition of \(z\), \(\beta\) as stipulated exists. Then let \(\beta_{s+1} = \beta\), \(f_{s+1}(j_{s+1}) = l\) and \(\sigma'_{s+1}^{-1} = \sigma\). Declare that \(j_{s+1}\) receives attention at stage \(s + 1\). Otherwise, \(z\) is not correct up to \(j_{s+1} - 1\) at \(\beta\), and we replace \(j_{s+1}\) by \(j_{s+1} - 1\) to do the search. However, this process of replacement occurs only finitely many times since \(z\) is always correct up to 0 at any \(\beta\). This completes the construction.
+
+Let \(\gamma = \bigcup_{s \in \omega} \beta_s\). Then \(\{\beta_s\}_{s \in \omega}\) is a \(\Delta_1(L_{w_1}[z])\)-sequence and hence \(\gamma < \omega_1^z\).
+
+# **Lemma 11.1.4.** For every \(j\), there exists a stage \(s_j\) such that if \(s \ge s_j\) then \(z\) is correct up to \(j\) at \(\beta_s\).
+
+Proof. Suppose otherwise. Let \(j^*\) be the least \(j\) such that for infinitely many \(s\), \(z\) is not correct up to \(j^*\) at \(\beta_s\). Then Case 2 in the construction applies to \(j^*\). Let \(s_{j^*-1}\) be the least stage such that for every \(s \ge s_{j^*-1}\), \(z\) is correct up to \(j^* - 1\) at \(\beta_s\). For \(s > s_{j^*-1}\), let \(\sigma_s^0\) be the \(\sigma^0\) defined in the construction for \(j^*\) at stage \(s\). In other words, for some initial segment \(\sigma\) of \(z\), \(\sigma_s^0 < \sigma\) is the leftmost splitting node of \(T_1[\beta_s]\) such that \(\sigma_s^0\) has \(f_s(j^*)\)-many splitting nodes extending \(\sigma_s^{0-1}\) in \(T_1[\beta_s]\). Note that for any \(s \ge s_{j^*-1}\), \(f_{s+1}(j^*) \ge f_s(j^*)\). Hence \(|\sigma_{s+1}^0| \ge |\sigma_s^0|\) whenever \(s > s_{j^*-1}\). Since for any \(r\), \(z\) is not the leftmost path of \(T_1[\gamma \cap r]\), \(\sigma^0 = \lim_s \sigma_s^0\) exists. Let \(s_1 > s_{j^*-1}\) be chosen such that \(\sigma_s^0 = \sigma^0\) for \(s \ge s_1\). By the construction, \(f_s(j^*) = f_s(j^*)\) for \(s \ge s_2\). It follows that there exists an \(s_{j^*} \ge s_1\) such that for all \(s \ge s_{j^*}\), \(\sigma_s^0 = \sigma_{s_{j^*}}^0 = \sigma^0\). Then for any \(s \ge s_{j^*}\), \(z\) is correct up to \(j^*\) at \(\beta_s\).
+
+By Lemma 11.1.4, we may let \(f(j) = \lim_{s \to \omega} f_s(j)\). Obviously, \(\hat{f} \in L_{\omega+1}[z]\). Note that for any \(j\), \(T_0 \supseteq \sigma \langle \forall k \le j \rangle (\sigma(k) = \hat{f}(k))\). So \(\hat{f}\) is an infinite path in \(T_0\). By the construction, \(\hat{f} = f\) and hence \(f \in L_{\omega+1}[z]\). Since \(\hat{f} \notin \emptyset\), we have \(\emptyset \notin z\) and \(\omega_1^{CK} < \omega_1^z\). Then the construction may be decoded from \(z\). Thus \(z \not\ge_h x\). If \(x \not\ge_h \emptyset\), then \(x\) may also decode the construction so that \(x \not\ge_h z\).
+
+The construction in the proof above yields a perfect tree \(T \le_T \emptyset\) with \([T] \subseteq A\) in which every infinite path \(x\) is hyperarithmetically above \(\emptyset\). This completes the proof of Theorem 11.1.2.
+
+# 11.1.3 Exercises
+
+**Exercise 11.1.1.** Prove that there is a \(\Sigma^1_1\)-set \(A\) containing a real \(x \ge_h \emptyset\) but not every hyperdegree above that of \(\emptyset\) has a representative in \(A\).
