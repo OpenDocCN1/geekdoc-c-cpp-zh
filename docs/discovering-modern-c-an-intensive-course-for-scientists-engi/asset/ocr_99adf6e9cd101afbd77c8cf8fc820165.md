@@ -1,0 +1,46 @@
+```
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: ... /buildtools/build
+```
+
+Finally it builds a `makefile` that we call now:
+
+```
+make
+```
+
+Running:
+
+```
+[ Scanning dependencies of target solver
+[ 33%] Building CXX object CMakeFiles/solver.dir/solver.cpp.o
+Linking CXX static library libsolver.a
+[ 33%] Built target solver
+Scanning dependencies of target mesher
+[ 66%] Building CXX object CMakeFiles/mesher.dir/mesher.cpp.o
+Linking CXX shared library libmesher.so
+[ 66%] Built target mesher
+Scanning dependencies of target fluxer
+[100%] Building CXX object CMakeFiles/fluxer.dir/fluxer.cpp.o
+Linking CXX executable fluxer
+[100%] Built target fluxer
+```
+
+The generated makefiles reflect the dependencies, and when we change some sources the next `make` will only rebuild what is affected by the changes. In contrast to our simplistic makefile from Section 7.2.2.1, modified header files are considered here. If we changed, for instance, `solver.hpp`, `libsolver.a` and `fluxer` would be freshly built.
+
+The biggest benefit we kept for the end: `CMake`'s portability. From the same `CMakeLists.txt` file from which we generated makefiles, we can create a Visual Studio project by just using another generator. The author enjoyed this feature a lot: till today he never created a Visual Studio project himself but generated them all with `CMake`. Nor did he migrate these projects to newer Visual Studio versions. Instead he just created new projects with new versions of the generators. Likewise one can generate `Eclipse` and `XCode` projects. `KDevelop` can build its projects from `CMake` files and even update them. In short, it is a really powerful build tool and at the time of writing probably the best choice for many projects.
+
+# 7.2.3 Separate Compilation
+
+Having seen how we can build an executable from multiple sources, we will now discuss how those sources should be designed for avoiding conflicts.
+
+# 7.2.3.1 Headers and Source Files
+
+Each unit of source code is typically split into
+
++   - A header file with declarations (e.g., .hpp), and
++   - A source file (e.g., .cpp).

@@ -1004,6 +1004,7 @@
 +   [数字媒体处理：使用 C 语言的 DSP 算法（包含配套网站补充材料）](docs/digital-media-processing-dsp-algorithms-using-c-including-ad/README.md)
 +   [数字孪生驱动智能制造](docs/digital-twin-driven-smart-manufacturing/README.md)
 +   [现代 C++ 探索指南 第2版](docs/discovering-modern-c-2nd-edition/README.md)
++   [发现现代 C++：科学家、工程师和程序员的密集课程（C++ 深度系列）](docs/discovering-modern-c-an-intensive-course-for-scientists-engi/README.md)
 +   [探索现代 C++ (C++ 深度系列)](docs/discovering-modern-c-c-in-depth-series/README.md)
 +   [R 统计学入门指南](docs/discovering-statistics-using-r/README.md)
 +   [离散代数方法：算术、密码学、自动机与群 (De Gruyter 教科书)](docs/discrete-algebraic-methods-arithmetic-cryptography-automata-/README.md)
