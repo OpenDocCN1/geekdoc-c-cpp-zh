@@ -980,6 +980,7 @@
 +   [现代 C++ 深度学习实战：深度学习算法的端到端开发与实现](docs/deep-learning-in-modern-c-end-to-end-development-and-impleme/README.md)
 +   [C++ Arduino 防御性编程](docs/defensive-c-arduino-programming/README.md)
 +   [使用 Ember 2 构建出的 Web 应用](docs/deliver-audacious-web-apps-with-ember-2-for-sandi-frank/README.md)
++   [SAS 实验设计与分析示例](docs/design-and-analysis-of-experiments-with-examples-of-sas-chap/README.md)
 +   [用于编程与计算思维教学的深度学习推荐增强现实系统设计与评估](docs/design-and-evaluation-of-a-deep-learning-recommendation-base/README.md)
 +   [设计模式详解：面向对象设计的新视角（第2版）（软件模式系列）](docs/design-patterns-explained-a-new-perspective-on-object-orient/README.md)
 +   [C 语言嵌入式系统设计模式：嵌入式软件工程工具包](docs/design-patterns-for-embedded-systems-in-c-an-embedded-softwa/README.md)

@@ -1,0 +1,9 @@
+# Figure 12.10 Interaction between Percent Lime and Kiln Position - Ina Tile Experiment
+
+![](bbox=[0.25, 0.13, 0.8, 0.43])
+
+tested with the smaller subplot error term. In experiments where noise factors represent environmental variables like ambient temperature and humidity, this arrangement makes more sense. All combinations of levels of the control factors could be run in random order within blocks where the environmental variables are constant. Resolution III designs could be utilized for the noise factor whole-plot array since estimating interactions between noise factors is usually not of interest.
+
+As an example of the response modeling approach with multiple noise factors, consider analyzing the data from the experiment to optimize the installation procedure for an elastomeric connector used in the automotive industry described by Taguchi and Byrne (1984) and shown in Figure 12.4. The design was a 3^4 x 2^3 resulting in a total of 72 experiments with no replicates. The runs were made in a completely random order, and this was not a split-plot design. From the 3^4-2 control factor array only the main effects A, B, C, and D are estimable. Each of these main effects have two degrees of freedom. From the noise factor array, the main effects (E, F, and G), all two-factor interactions (EF, EG, FG), and the three-factor interaction EFG are estimable. Since the design is a cartesian product design, all interactions between estimable effects from the control factor array and estimable effects from the noise factor array are estimable, i.e., AE, AF, AG, AEF, AEG, AFG, AEFG, BE, ..., DEFG. However, if a model involving all of these effects is fit to the response (pull-off force) there will be zero degrees of freedom for error and no way to test for significance.
+
+A normal probability plot of the estimated effects or regression coefficients

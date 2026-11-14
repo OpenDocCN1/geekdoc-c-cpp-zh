@@ -1,0 +1,12 @@
+page configuration. Since the responses for the individual visitors to each configuration of the Web site are Bernoulli, the aggregate response data, which is read into SAS, is Binomial with large and approximately equal sample sizes (i.e., number of visitors to each possible Web configuration). The arcsin square root transformation shown in Table 2.4 of Section 2.5.2 could be applied and proc glm could be used for analysis. However, the problem with using this procedure is that the individual responses were summed to get the aggregate responses, and when using these aggregate binomial responses there are no replicate observations in any of the cells, and thus no way to calculate sse. This would be similar to summing or averaging the replicate responses in each cell if the data were normally distributed, leaving only one observation per cell and no way to compute sse. The alternative is to use the method of maximum likelihood to fit model (3.8). This can be done using proc genmod, that was described briefly in Section 2.5.3. It will automatically set sigma^2 = 1.0 and the type III sums of squares of the form (L(beta)'(L(X'X)^-1 L)')^-1(L(beta)) will be asymptotically distributed as chi-squares under the null hypothesis. The commands to analyze the data using proc genmod are shown below.
+
+```
+proc genmod data=raw;
+class A B C D;
+model signup/visitors=A|B|C|D/ dist=bin type3 ;
+run;
+```
+
+signup/visitors is the observed proportion signing up and the model specification A|B|C|D is a shorthand for A B A*B A*C B*C A*D B*D C*D A*B*C A*B*D A*C*D B*C*D A*B*C*D The option dist=bin declares the response to be binomially distributed, and the option type3 requests a table of the type III sums of squares and chi-square tests. The first output from proc genmod is a table of parameter estimates produced from the generalized inverse beta = (X'X)^- X'y similar to that resulting from the /solution option in proc glm. It is not shown here. The individual coefficients are biased and should not be interpreted. The next section of the output is the table of type III analysis resulting from the type3 option and is shown on the next page.
+
+In this output we can see that (at the alpha = 0.05 level of significance) factors A (background style) and factor D (sign-up button or link) were significant along with the three-way interaction ACD, where factor C represents the text color. Since there is a significant interaction, the main effects A and D cannot be interpreted separately. Whether it is better to use a sign-up button or link

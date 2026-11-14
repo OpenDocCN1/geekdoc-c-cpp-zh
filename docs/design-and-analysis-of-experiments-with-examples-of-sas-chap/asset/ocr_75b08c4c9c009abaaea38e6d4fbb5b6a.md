@@ -1,0 +1,16 @@
+As one example of the use of these tables, Wang, Fang and Lin used them to construct an improved noise array for an experiment that was described by Phadke (1989). The experiment involved a process to deposit polysilicon on silicon wafers. In this process wafers are placed on two quartz carriers that were positioned in a hot-wall-reduced pressure reactor. Silane and nitrogen gasses were introduced at one end of the reactor and pumped out the other. As the silane gas pyrolizes a polysilicon layer is deposited on the wafers. The quartz carriers each held twenty-five wafers and occupied half the reactor so that a total of fifty wafers were deposited along the flow of gasses from the inlet to the outlet. Gas flow patterns caused different concentrations along the length of the reactor. The noise array consisted of three measurements made along the two quartz carriers at locations 3, 23, and 48. The optimal spacing of samples is shown in Table 12.15 with n=3 and k=1 (0.1667, 0.5000, 0.8333). Therefore, a better noise array could be constructed using the table. It would consist of sampling locations 8=50x0.1667, 25=50x0.5000 and 42=50x0.8333.
+
+As a second example of using the tables, consider again the design of the temperature controller circuit described in Section 12.3. In that example, a OA(18) was used for the noise factor array to simulate the noise environment where actual values of the control factors, could deviate from the specified nominal values by ±2.04%. To get a more accurate estimate of the variance of R_T for any combination of levels of the control factors Wang, Fang and Lin's table can be used. For example, the left side of Table 12.16 shows the coded factor levels for five noise factors and n=8 runs taken from Table 12.15. The right side of Table 12.16 shows the perturbations of the actual control factor levels across the noise-factor array when all control factors are set at their low levels (i.e., A=2.67, B=1.33, C=5.33, D=8.00, F=4.80).
+
+| 1 | 2 | 3 | 4 | 5 | A | B | C | D | E | F |
+|---|---|---|---|---|---|---|---|---|---|---|
+| .0625 | .4375 | .8125 | .1875 | .9375 | 2.62 | 1.33 | 5.40 | 7.90 | 4.89 |
+| .1875 | .9375 | .5625 | .4375 | .8125 | 2.64 | 1.35 | 5.34 | 7.98 | 4.86 |
+| .3125 | .3125 | .3125 | .6875 | .6875 | 2.65 | 1.32 | 5.29 | 8.06 | 4.84 |
+| .4375 | .8125 | .0625 | .9375 | .5625 | 2.66 | 1.35 | 5.23 | 8.14 | 4.81 |
+| .5625 | .1875 | .9375 | .0625 | .4375 | 2.68 | 1.31 | 5.43 | 7.86 | 4.79 |
+| .6875 | .6875 | .6875 | .3125 | .3125 | 2.69 | 1.34 | 5.37 | 7.94 | 4.76 |
+| .8125 | .0625 | .4375 | .5625 | .1875 | 2.70 | 1.31 | 5.32 | 8.02 | 4.74 |
+| .9375 | .5625 | .1875 | .8125 | .0625 | 2.72 | 1.33 | 5.26 | 8.10 | 4.71 |
+
+The perturbed level for factor A in the first line of the table was created as 2.62 = 2.67 + ((2 x .0625) - 1.0) x 0.0204 x 2.67. Here the term ((2 x .0625) - 1.0) converts the coded level from the [0, 1] scale to the [-1, 1] scale. Multiplying by 0.0204 x 2.67 changes the coded level on the [-1, 1] scale to a perturbation of the specified nominal level in the ±2.04% of nominal range. Similar calculations were made to convert the other coded factor levels to perturbations

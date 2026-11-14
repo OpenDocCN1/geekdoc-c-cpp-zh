@@ -1,0 +1,273 @@
+level_changes:
+- line: 113
+  before: 2
+  after: 3
+- line: 127
+  before: 2
+  after: 3
+- line: 145
+  before: 2
+  after: 3
+- line: 177
+  before: 2
+  after: 3
+- line: 201
+  before: 2
+  after: 3
+- line: 353
+  before: 2
+  after: 3
+- line: 396
+  before: 2
+  after: 3
+- line: 621
+  before: 2
+  after: 4
+- line: 627
+  before: 2
+  after: 3
+- line: 1257
+  before: 2
+  after: 3
+- line: 1292
+  before: 2
+  after: 3
+- line: 1378
+  before: 2
+  after: 3
+- line: 1400
+  before: 3
+  after: 4
+- line: 1594
+  before: 2
+  after: 4
+- line: 1732
+  before: 2
+  after: 4
+- line: 1821
+  before: 2
+  after: 4
+- line: 2107
+  before: 3
+  after: 4
+- line: 2144
+  before: 2
+  after: 4
+- line: 2187
+  before: 2
+  after: 4
+- line: 2283
+  before: 3
+  after: 4
+- line: 2303
+  before: 2
+  after: 4
+- line: 2802
+  before: 2
+  after: 3
+- line: 3624
+  before: 2
+  after: 3
+- line: 4061
+  before: 2
+  after: 4
+- line: 4138
+  before: 2
+  after: 4
+- line: 4142
+  before: 2
+  after: 4
+- line: 5053
+  before: 2
+  after: 3
+- line: 5407
+  before: 3
+  after: 4
+- line: 5414
+  before: 3
+  after: 4
+- line: 5725
+  before: 2
+  after: 4
+- line: 6346
+  before: 2
+  after: 3
+- line: 6492
+  before: 2
+  after: 4
+- line: 6798
+  before: 2
+  after: 4
+- line: 6930
+  before: 2
+  after: 4
+- line: 7211
+  before: 2
+  after: 4
+- line: 7504
+  before: 2
+  after: 4
+- line: 7592
+  before: 2
+  after: 4
+- line: 7626
+  before: 2
+  after: 4
+- line: 7748
+  before: 2
+  after: 4
+- line: 8148
+  before: 2
+  after: 4
+- line: 8264
+  before: 2
+  after: 4
+- line: 8726
+  before: 2
+  after: 4
+- line: 8764
+  before: 2
+  after: 4
+- line: 8815
+  before: 2
+  after: 4
+- line: 9269
+  before: 2
+  after: 4
+- line: 9286
+  before: 2
+  after: 4
+- line: 9687
+  before: 2
+  after: 3
+- line: 9748
+  before: 2
+  after: 4
+- line: 9810
+  before: 2
+  after: 4
+- line: 9822
+  before: 2
+  after: 4
+- line: 10143
+  before: 2
+  after: 3
+- line: 10160
+  before: 2
+  after: 3
+- line: 10168
+  before: 2
+  after: 3
+- line: 10184
+  before: 2
+  after: 3
+- line: 10219
+  before: 2
+  after: 4
+- line: 10241
+  before: 2
+  after: 3
+- line: 10428
+  before: 2
+  after: 4
+- line: 10471
+  before: 2
+  after: 4
+- line: 11290
+  before: 2
+  after: 4
+- line: 11656
+  before: 2
+  after: 4
+- line: 12012
+  before: 2
+  after: 4
+- line: 12564
+  before: 2
+  after: 3
+- line: 12572
+  before: 2
+  after: 3
+- line: 12607
+  before: 2
+  after: 3
+- line: 13059
+  before: 2
+  after: 4
+- line: 13271
+  before: 2
+  after: 3
+- line: 13548
+  before: 2
+  after: 4
+- line: 13552
+  before: 2
+  after: 3
+- line: 13739
+  before: 2
+  after: 3
+- line: 13763
+  before: 2
+  after: 3
+- line: 13818
+  before: 2
+  after: 3
+- line: 13911
+  before: 2
+  after: 3
+- line: 13932
+  before: 2
+  after: 3
+- line: 13952
+  before: 2
+  after: 3
+text_changes:
+- line: 191
+  before: 图1.2 按行位划分的产量图 - 番茄实验
+  after: 图 1.2 按行位划分的产量图 - 番茄实验
+- line: 617
+  before: 图2.2 Pr > F
+  after: 图 2.2 Pr > F
+- line: 645
+  before: 图2.3 面包发酵实验的响应与因素水平图
+  after: 图 2.3 面包发酵实验的响应与因素水平图
+- line: 1447
+  before: 表3.3 乙醇燃料实验数据
+  after: 表 3.3 乙醇燃料实验数据
+- line: 1566
+  before: 图3.5 乙醇与空气/燃料比交互作用图
+  after: 图 3.5 乙醇与空气/燃料比交互作用图
+- line: 3028
+  before: 图4.1 药物剂量函数下的杠杆按压速率均值
+  after: 图 4.1 药物剂量函数下的杠杆按压速率均值
+- line: 3241
+  before: 图4.3 RCB和拉丁方设计比较
+  after: 图 4.3 RCB和拉丁方设计比较
+- line: 4279
+  before: 表5.8 双因素嵌套设计的符号方差分析
+  after: 表 5.8 双因素嵌套设计的符号方差分析
+- line: 4492
+  before: 表5.12 棉花植株上的农药残留
+  after: 表 5.12 棉花植株上的农药残留
+- line: 9302
+  before: 表9.9 治疗前后观测
+  after: 表 9.9 治疗前后观测
+- line: 9330
+  before: 表9.10 降解研究中各天的除草剂浓度
+  after: 表 9.10 降解研究中各天的除草剂浓度
+- line: 11149
+  before: 11.1. 引言
+  after: 11.1 引言
+- line: 13271
+  before: 表12.10 电动踏板车启动电机实验的因子和水平
+  after: 表 12.10 电动踏板车启动电机实验的因子和水平
+- line: 12380
+  before: '8. 如果混合设计中所有三个组分都有相同的下限和上限约束（L=0.20，U=0.80），使用表 11.6 创建一个正交阻塞混合设计，用于拟合
+    Scheffé 二次模型，包含两个阻塞，每个阻塞四种混合物。  '
+  after: 8. 如果混合设计中所有三个组分都有相同的下限和上限约束（L=0.20，U=0.80），使用表 11.6 创建一个正交阻塞混合设计，用于拟合 Scheffé
+    二次模型，包含两个阻塞，每个阻塞四种混合物。
+- line: 12389
+  before: '10. 下面的表 11.13 显示了 Chau 和 Kelly (1993) 关于可印刷涂层材料的混合工艺变量实验（MPV）的结果，这些实验在第
+    11.7 节中有所描述。  '
+  after: 10. 下面的表 11.13 显示了 Chau 和 Kelly (1993) 关于可印刷涂层材料的混合工艺变量实验（MPV）的结果，这些实验在第
+    11.7 节中有所描述。
