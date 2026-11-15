@@ -1,0 +1,168 @@
+
+
+char		 ajChararrGet (const AjPChar arr, ajint n);
+short		 ajShortGet (const AjPShort arr, ajint n);
+short		 ajShort2dGet (const AjPShort2d arr, ajint n1, ajint n2);
+short		 ajShort3dGet (const AjPShort3d arr, ajint n1, ajint n2, ajint n3);
+ajuint		 ajUintGet (const AjPUint arr, ajint n);
+ajuint		 ajUint2dGet (const AjPUint2d arr, ajint n1, ajint n2);
+...
+
+For example, to retrieve the very first element of a 3D float array:
+
+```c
+AjPFloat3d arr = NULL;
+float val;
+...
+/* Allocate array */
+val = ajFloat3dGet(arr, 0, 0, 0);
+```
+
+Functions to set an element of an array have the suffix Put. They take the address of an array, the index of the element to set and of course the value to set. They return ajTrue if the element was set successfully:
+
+```c
+AjBool	 ajCharrarrPut (const AjPChar* Parr, ajint n, char chr);
+AjBool	 ajShortPut (const AjPShort* Parr, ajint n, short i);
+AjBool	 ajShort2dPut (const AjPShort2d* Parr, ajint n1, ajint n2, short i);
+AjBool	 ajShort3dPut (const AjPShort3d* Parr, ajint n1, ajint n2, ajint n3, short i);
+AjBool	 ajUintPut (const AjPUint* Parr, ajint n, ajuint i);
+AjBool	 ajUint2dPut (const AjPUint2d* Parr, ajint n1, ajint n2, ajuint i);
+...
+```
+
+For example, to set the very first element of a 3D float array:
+
+```c
+AjPFloat3d arr = NULL;
+float	 val = 1.0;
+arr = ajFloat3dNew();
+ajFloat3dPut(&arr, 0, 0, 0, val);
+```
+
+## 6.17.10 对数组进行排序
+
+Functions are provided in ajsort.h/c to sort C-type arrays of integers, unsigned integers and floating point numbers. Arrays may be sorted in the following ways:
+
+- 对单个数组进行基本排序
+- 按另一个数组中元素的顺序对单个数组进行排序
+- 同时对两个数组进行排序
+- 按升序或降序排序。
+
+Functions for array sorting have the prefix ajSortInc (for sorting in incremental ascending order) or prefix ajSortDec (for sorting in descending order), followed by the datatype (Int, Uint or Float) of the array(s) that is sorted. The array size must be provided. The basic sort functions include:
+
+```c
+extern void ajSortIntDec (ajint *a, ajuint n);
+extern void ajSortUintDec (ajuint *a, ajuint n);
+extern void ajSortFloatDec (float *a, ajuint n);
+extern void ajSortIntInc (ajint *a, ajuint n);
+extern void ajSortUintInc (ajuint *a, ajuint n);
+extern void ajSortFloatInc (float *a, ajuint n);
+```
+
+There are functions for sorting a single array (p) by the order of elements in another array (a):
+
+```c
+void ajSortFloatDecI (const float *a, ajuint *p, ajuint n);
+void ajSortIntDecI (const ajint *a, ajuint *p, ajuint n);
+void ajSortUintDecI (const ajuint *a, ajuint *p, ajuint n);
+void ajSortFloatIncI (const float *a, ajuint *p, ajuint n);
+void ajSortIntIncI (const ajint *a, ajuint *p, ajuint n);
+void ajSortUintIncI (const ajuint *a, ajuint *p, ajuint n);
+```
+
+Functions for sorting two arrays simultaneously:
+
+```c
+void ajSortTwoIntIncI (ajint *a, ajuint n, ajuint *p);
+void ajSortTwoUintIncI (ajuint *a, ajuint n, ajuint *p);
+```
+
+## 6.17.11 检索 C 类型数组
+
+The C-type array may be retrieved from any of the array objects using the following functions. The function naming scheme should be obvious. Again, not all variants are shown:
+
+```c
+char* ajChararrChararr (const AjPChar arr);
+short* ajShortShort (const AjPShort arr);
+short** ajShort2dShort (const AjPShort2d arr);
+short*** ajShort3dShort (const AjPShort3d arr);
+ajuint* ajUintUint (const AjPUint arr);
+ajuint** ajUint2dUint (const AjPUint2d arr);
+...
+```
+
+Once the C-type array is retrieved then standard array notation can be used to access array elements. It is of course your responsibility to ensure you do not try to access an array element that is out of bounds. To help avoid doing so you can use the *Len functions (see above) to return the array size(s).
+
+## 6.18 处理表
+
+### 6.18.1 简介
+
+A hash table is a data structure holding key:value pairs which allows for very efficient retrieval of a value given a key. For example, a key might be the accession number of a sequence and a value might be the sequence itself. Hash tables work by translating the key into a number called a ‘hash’ using a hashing function. The hash then provides the index of an array element or ‘bucket’ in the data structure holding the value. Hash tables have the great advantage that the search time is independent of the number of items stored, and that new key:value pairs can be added efficiently.
+
+EMBOSS supports a standard hash table using strings for keys and generic hash tables with keys of arbitrary datatype. All the basic functionality you would expect for creating, manipulating and using hash tables is provided. This includes:
+
+- 用于构建字符串哈希函数的哈希函数
+- 用于添加和删除键值对或更改与键关联的值的函数
+- 用于返回给定键关联的真实键或值的函数
+- 能够对每个键值对应用函数
+- 打印字符串哈希表。
+
+There is no ACD datatype for hash tables, they are always created directly from within the C source code.
+
+### 6.18.2 AJAX 库文件
+
+AJAX library files for handling hash tables are listed in the table below. Library file documentation, including a complete description of datatypes and functions with usage notes is available at: http://emboss.open-bio.org/rel/dev/libs/
+
+| 库文件文档 | 描述 |
+| --- | --- |
+| ajtable | 哈希表函数 |
+
+ajtable.h/c. Defines the hash table object (AjPTable) and functions for handling hash tables. They also contains static functions for handling same at a low level. You are unlikely to need the static functions unless you plan to extend the hash table code.
+
+### 6.18.3 ACD 数据类型
+
+There are no ACD datatypes dedicated for tables.
+
+### 6.18.4 AJAX 数据类型
+
+For handling tables use:
+
+AjPTable Hash table – a set of key:value pairs using a simple hash function to provide rapid searching for keys. Tables can hold any data type.
+
+### 6.18.5 表对象内存管理
+
+### 6.18.5.1 默认对象构造
+
+To use a hash table object you must first instantiate the appropriate object pointer. Default constructor functions are provided for generic hash tables and EMBOSS string (AjPStr) hash tables:
+
+```c
+/* Generic hash table */
+AjPTable ajTableNewLen(ajuint size)
+
+/* Generic hash table with compare and hash functions */
+AjPTable ajTableNewFunctionLen (ajuint n,
+                 ajint cmp(const void* x, const void* y),
+                 unsigned hash(const void* key, unsigned hashsize)) ;
+
+/* String hash table */
+AjPTable   ajTablestrNew (ajuint n);
+AjPTable   ajTablestrNewLen (ajuint n);
+AjPTable   ajTablestrNewCaseLen (ajuint n);
+```
+
+Both functions will create, initialise and return a new empty hash table that can hold an arbitrary number of key:value pairs. For a generic hash table, created with ajTableNewFunctionLen, an estimate of the number of unique keys (n) is passed, and functions for comparison (cmp) and for hashing the keys (hash) should be provided. If either of the cmp or hash arguments are NULL then it will use a default general-purpose hash function. The ajTableNewLen uses the general-purpose functions. Note that these cannot inspect the data, and can only use the addresses or values provided.
+
+All constructors return the address of a new object. In the following code comp is the comparison function and hash is the hash function. An initial size of 50 is used. The pointer does not need to be initialised to NULL but it is good practice to do so:
+
+```c
+AjPTable table = NULL;
+
+table   = ajTableNewFunctionLen(50, comp, hash);
+
+/* The table is instantiated and ready for use */
+```
+
+The comparison function must return the result of comparing two keys as an integer which is 0 if the comparison is equal, +1 if the x is higher than y or -1 otherwise. The hash function must return the hash value for a given key.
+
+Assume that you want a hash table with a case-insensitive C-type character string (char *) key. The comparison function may then be defined as ajCharCmpCase (available from ajstr.h) which returns the sort order of two text strings:
+

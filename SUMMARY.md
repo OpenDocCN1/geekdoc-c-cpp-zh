@@ -1052,6 +1052,7 @@
 +   [嵌入式专家的 C 指南：成为可靠嵌入式 C 专家的秘密](docs/embedded-experts-guide-to-c-the-secrets-to-becoming-a-reliab/README.md)
 +   [嵌入式系统：现代设计工具](docs/embedded-systems-a-contemporary-design-tool/README.md)
 +   [C++ 嵌入式系统编程：实战技术](docs/embedded-systems-programming-with-c-real-world-techniques/README.md)
++   [EMBOSS 开发者指南：生物信息学编程](docs/emboss-developers-guide-bioinformatics-programming/README.md)
 +   [安全地使用现代 C++](docs/embracing-modern-c-safely/README.md)
 +   [SAS 端到端数据科学：实用编程指南](docs/end-to-end-data-science-with-sas-a-hands-on-programming-guid/README.md)
 +   [C++ 工程问题解决 (第3版)](docs/engineering-problem-solving-with-c-3rd-edition/README.md)

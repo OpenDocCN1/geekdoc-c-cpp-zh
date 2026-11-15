@@ -1,0 +1,140 @@
+
+
+## 5.3 对象（C 数据结构）
+
+link between datatypes and the functions that act upon them so that it’s easy to find the objects and functions you need.
+
+### 5.3.1 对象定义
+
+Objects in EMBOSS are defined (Appendix C, C coding standards) and documented (Appendix D, Code documentation standards) in a standard way.
+
+A typical definition, for the public AJAX string object, is shown below and includes the standard documentation:
+
+```
+/* @data AjPStr *********************************************************************************************
+**
+** Ajax string object.
+**
+** Holds a null terminated character string with additional data.
+** The length is known and held internally.
+** The reserved memory size is known and held internally.
+** The reference count is known and held internally.
+** New pointers can refer to the same string without needing
+** to duplicate the character data.
+**
+** If a string has multiple references it cannot be changed. Any
+** instance to be changed is first copied to a new string. This
+** means that any function which can change the character data must
+** pass a pointer to the string so that the string can be moved.
+**
+** A default null string is provided. New strings are by default
+** implemented as pointers to this with increased reference counters.
+**
+** AjPStr is implemented as a pointer to a C data structure.
+**
+** @alias AjPPStr
+** @alias AjSStr
+** @alias AjOStr
+** @iterator AjIStr
+**
+** @attr Res [ajuint] Reserved bytes (usable for expanding in place)
+** @attr Len [ajuint] Length of current string, excluding NULL at end
+** @attr Ptr [char*] The string, as a NULL-terminated C string.
+** @attr Use [ajuint] Use count: 1 for single reference, more if several
+**     pointers share the same string.
+**     Must drop to 0 before deleting. Modifying means making
+**     a new string if not 1.
+** @attr Padding [ajuint] Padding to alignment boundary
+** @
+*********************************************************************************************/
+
+typedef struct AjSStr
+{
+    ajuint    Res;
+    ajuint    Len;
+    char    *Ptr;
+    ajuint    Use;
+    ajint    Padding;
+}   AjOStr;
+#define AjPStr AjOStr*
+typedef AjPStr* AjPPStr;
+```
+
+The declaration defines:
+
+- The object name (AjSStr)
+- A datatype for the string object proper (AjOStr)
+- A datatype for the string object pointer (AjPStr)
+- A datatype for a pointer to the string object pointer (AjPPStr).
+
+> **注意**
+>
+> 对象指针 (AjPStr) 是你通常会使用的数据类型，因此 AjPStr 通常被称为“字符串对象”，而不是更繁琐的“字符串对象指针”。当然，AjPStr 指向内存中的字符串对象。
+
+The datatype naming conventions are supposed to make the names intuitive:
+
+- Aj indicates that the object belongs to the AJAX library
+- P indicates that the datatype is a pointer
+- Str gives a clue to the name of the AJAX library file in which the object is defined, i.e. the string-handling library ajstr.h.
+
+Many other basic datatypes are available. For example the basic file object AjPFile is defined in the AJAX file ajfile.h whereas the input (AjPSeq) and output (AjPSeqout) sequence objects are in ajseqdata.h and ajseqwrite.h respectively. Different naming conventions apply for public NUCLEUS objects and for private objects including those listed in the application code (see Appendix C, C coding standards).
+
+### 5.3.2 对象函数
+
+You should never access the elements of an object directly, that is what the library functions are for. Objects should always be accessed by calling the appropriate functions. These are fully described by structured comments in a similar way to the objects themselves (see Appendix D, Code documentation standards). Functions are organised by the datatype they act upon and, for easier navigation, into sections of related functionality.
+
+The function sections are supposed to help you to quickly find the functions you need. Functions in the same section tend to have similar names and return types, and similar number, order and type of parameters. As functions in the same section are all used in a similar way then programming with the libraries is reasonably intuitive.
+
+Most of the sections are unique to a given library file however there are some common sections. For example, many of the library files have an ‘element retrieval’ section for functions which return a data element of an object and an ‘element set’ section for functions that set the value of a data element directly. Most of the complex biological datatypes have ‘input’ and ‘output’ sections for reading or writing the data to file in a formatted way. This includes input (AjPSeq) and output (AjPSeqout) sequence objects, application reports (AjPReport) and sequence alignments (AjPAlign).
+
+The common sections are described in more detail in Appendix D, Code documentation standards.
+
+The main thing to be aware of when using objects with functions is that object pointers (for example an AjPStr) are always used: a data structure proper is never passed to or returned from a function for reasons of efficiency. Furthermore, for consistency, all functions in EMBOSS should obey the following rules:
+
+- If a function changes the pointer (so that it points to a new object) or changes the data pointed to in any way then the address of the object pointer is passed.
+- If the function merely reads the data pointed to and does not change the pointer itself then the plain object pointer is passed.
+
+Consider, for example, two functions in the AJAX string library ajstr.c: ajStrMatchS and ajStrAssignS. ajStrMatchS compares two strings and returns ajTrue if they are the same whereas ajStrAssignS copies one string value into another.
+
+You can deduce that ajStrMatchS merely reads two string values and therefore object pointers will be passed. In contrast, ajStrAssignS must change the value of the destination string, possibly allocating a new string (as a failsafe in case a NULL pointer is passed to it) or reallocating a new bigger string in cases where a destination string is passed but is too small to hold the new value. In either case the string value will be changed and possibly the pointer too, therefore the address of the object pointer for the destination string is required.
+
+The prototypes show that this is indeed the case:
+
+```
+AjBool ajStrMatchS(const AjPStr str, const AjPStr str2);
+AjBool ajStrAssignS(AjPStr* Pstr, const AjPStr str);
+```
+
+The two strings (str and str2) passed to ajStrMatchS are only read from, therefore the parameters are object pointers (AjPStr). The source string (str) of ajStrAssignS is also read-only, whereas the destination string (Pstr) is modified and therefore the address must be passed (AjPStr* Pstr).
+
+> **提示**
+>
+> 使用现有库函数时，你无需担心函数内部实现。文档说明是需要对象指针还是其地址。只要你向函数传递原型中显示的内容即可。此外，EMBOSS 应用程序代码是函数在实践中使用方式的丰富示例来源。
+
+## 5.4 EMBOSS 中的内存管理
+
+### 5.4.1 内存管理简介
+
+Memory management in C can be a difficult area to master, especially if you are used to scripting or object-oriented languages where this aspect might be automatically taken care of. It requires a sound knowledge of pointers and discipline in coding but is one of the most powerful aspects of the language, allowing very memory-intensive code to be written in an efficient way that might not be feasible in other languages. Curiously many C programming books omit a detailed coverage of pointers and memory management, yet these areas account for most of the time spent debugging C programs. For this reason great effort has been made to make handling memory in EMBOSS as simple as possible.
+
+Memory management when using the libraries is greatly simplified, at least when programming with the existing datatypes. As far as possible the developer is shielded from low-level C calls to allocate and free memory. This is achieved in the following ways:
+
+- General memory management macros
+- Object memory management macros
+- Object constructor and destructor functions
+- Failsafe object construction
+- Dynamic objects
+- EMBOSS is free of arbitrary limits.
+
+### 5.4.1.1 通用内存管理宏
+
+General memory management macros (Section 5.4.2.1, ‘General macros’) are provided to wrap the C malloc, calloc and free functions. malloc allocates memory with uninitialised content, calloc allocates memory and initialises it to zero, and free frees allocated memory. When programming using the libraries you should use the objects provided (or create new ones) and therefore will seldom need to call these C functions. In some cases, however, it is necessary or desirable to do so and you should use these associated macros.
+
+### 5.4.1.2 对象内存管理宏
+
+Macros (Section 5.4.2.2, ‘Object macros’) are provided to simplify the memory allocation for single objects and arrays of objects of any type, and for freeing that memory. Bear in mind these macros only allocate memory for a basic object (or an array of them) as defined by a single object definition. Where the object itself includes pointers for nested data structures then memory for these nested objects is not allocated. That is what the constructor functions are for (see below).
+
+### 5.4.1.3 对象构造函数和析构函数
+
+A constructor function (memory allocation) (Section 5.4.3.2, ‘Object construction’) and destructor function (freeing memory (Section 5.4.3.3, ‘Object destruction’)) are provided for every type of object. Their function goes beyond that of the object macros, which merely allocate or free a single block of memory referenced by a single pointer. Constructors will allocate the object and all nested objects and initialise the memory, possibly with values passed in by argument. Similarly, destructors ensure that all pointers nested within the structure are freed correctly and that the main object pointer passed is reset to NULL so that it’s ready for reuse in the calling code.
+

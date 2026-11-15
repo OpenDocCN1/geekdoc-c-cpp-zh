@@ -1,0 +1,51 @@
+```
+agctctttgtccgcgcccaggagctacacaccttcgaggtgaccggccagg aaacggtcg
+ccagatcacaggctcatgtagcctcactggagggcattgccccggaagatcaagtcgtgc
+tcctggcagggcgccccctggaggatgaggccactctggccacgtgcggggtggaggccc
+tgactacctggaagtagcaggccgcatgcttggaggttaaagttcatggttccctggccc
+gtgctggaaaggtgagaggttcagactcctaaggtggccaaacacggagagaagaagaaga
+agacaggtcgggctaaggcgggatgcagtacaaccggcgctttgtcaacgttgtgccca
+cctttggcaagagaagggccccaatgccaactcttaagcttttgtaattctggctttc
+ctaataaaaaaggcacttagttcagtcaaaaaaaaa
+%
+% secret swissprot:UBR5_RAT
+Reads and writes (returns) sequences
+Output sequence [ubr5_rat.fasta]:
+% more ubr5_rat.fasta
+>UBR5_RAT Q62671 Q62671 E3 ubiquitin-protein ligase UBR5 (6.3.2.-)
+MSARGDFLNYALSLMRSHNDEHSDVLPVLDVCSLKHVAYVFQALIYWIKAMNQQTTLDT
+PQLERKRTRELLELGIDNDESEHENDDTSQSATLNDKDDESLPAETGQNHFPFRRSDSM
+TFLGCIPPNPFEVPLAEAIPLADQPHLLQPNARKEDLFGRPSQGLYSSSAGSGKCLVEVT
+MDRNCEVLPTKMSYAANLKNVMNQNRQKKAGEDQSMLAEEDASSKKPSAHVDVAAQLK
+SSLAAIGLTESGEGPPLTSFRPCQSFMGMVISHDMILLGRWRLSLELFGRVFMEGAEPG
+SILTELGGFEVKESKFREMEKLRNQGSRDLSLEVDRDRDLLIQQTMRQLNNHFGRRCAT
+TPMAVHRVKVTFKDEPGEGSGVARSFYTAIAQAFLSNEKLPLNLDCIQNANKGTHTSLMQR
+LRNRGERDREREREREMRRSSGLRAGSRRDRDRDFRRQLSIDTRPFRPASEGNPSDDPPDP
+LPAHRQALGERLYPRVQAMQPAFASKITGMLELISPAQLLLLLLASEDSLRARVEEAMELI
+VAHGRENGADSILDLGLLDSSEKVQENRKRHGSSRSVVDMDLDDTDDGDDNAPLFYQPGK
+RGFYTPRPGKNTEARLNCFRNIGRILGCLLQNELCPITLNRHVIKVLLGRKVNWHDFAF
+FDPVMYESLRQLILASQSSDADAVFSAMDLFAFVDLCKEEGGGQVELIPNGVNIPIVTPQN
+VYEYVRKYAEHRMLVVAEQPLHAMRKGLLDVLPKNSLEDLTAEDFRLLVNGCGEVNVQML
+ISFTSFNDESGENAEKLLQFKRWFWSIVERMSMTERQDLVYFWTSSPSPLPASEEGQFPMP
+SITIRPPDDQHLPTANTCISRLYVPLYSSKQILKQKLLLLAIKTKNFGFV
+```
+
+# 1.2.8 EMBASSY packages
+
+The example below is for installing the CVS (developer's) version of an EMBASSY package.
+
++   1. Go to the package directory:
+
+```
+cd embassy/PackageName
+```
+
++   2. Make the configuration file:
+
+```
+aclocal -I m4
+autoconf
+automake -a
+```
+
++   3. Configure and compile the package. Configuration should be done using the same options you used for the main package. So, if you used:

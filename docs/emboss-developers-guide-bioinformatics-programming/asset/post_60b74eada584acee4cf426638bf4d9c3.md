@@ -1,0 +1,292 @@
+
+Instead of hard-coding the check for feature type, it can be enforced on the second of the features that is read: the first feature table can be of the any type but the second must match the first. This is achieved by declaring the type : attribute for the feature tables. The type : of the second feature table is set to that of the first by retrieving the fprotein calculated attribute of the first feature table in a ternary conditional (see Section 4.4, ‘Operations’):
+
+```
+features: afeatures
+[
+    parameter: "Y"
+    type: "any"
+]
+
+features: bfeatures
+[
+    parameter: "Y"
+    type: "@($(afeatures.fprotein) ? protein : nucleotide)"
+]
+]
+```
+
+## 4.4 Operations
+
+### 4.4.1 Types of operation
+
+Operations are used within ACD files to achieve flexible and precise control over the command line interface. Currently the following types of operation are supported:
+
+- To retrieve the value of a data definition
+- To retrieve the values of attributes and calculated attributes of a data definition
+- To retrieve the values of variables
+- Arithmetic operations
+- Tests for equality
+- Boolean logical operations
+- Calculations that use the above operations
+- Unary and ternary conditional statements using the above operations.
+
+### 4.4.2 General operation syntax
+
+An operation must be enclosed in a pair of parentheses and preceded by the ‘at’ symbol (‘@’):
+
+```
+@(operation)
+```
+
+If the operation contains whitespaces, the whole token should be enclosed by double quotes (" "):
+
+```
+"@(operation with white space)"
+```
+
+Operations can be nested, in which case each operation must be enclosed in parentheses:
+
+"@(operation @(nested operation)) "
+
+An operation typically contains a reference to the value or attribute of a data definition or variable. They may also contain arithmetic, logical and conditional operators.
+
+### 4.4.2.1 Arithmetic operators
+
+- @(a+b) [Addition]
+- @(a-b) [Subtraction]
+- @(a*b) [Multiplication]
+- @(a/b) [Division]
+
+### 4.4.2.2 Logical operators
+
+- @(!a) [Not boolean]
+- @(a|b) [Or]
+- @(a&b) [And]
+
+### 4.4.2.3 Equality operators
+
+- @(token1==token2) [Equality]
+- @(token1!=token2) [Non-equality]
+- @(token1<token2) [Less-than]
+- @(token1>token2) [Greater-than]
+
+### 4.4.2.4 Conditional operators
+
+- @(boolval ? iftrue : iffalse) [If]
+- @(testval = A : 1 B : 2 else : 0) [Case]
+
+### 4.4.3 Retrieving data values in ACD files
+
+The attribute values for a given data definition can depend on the values from other data definitions. It is possible to retrieve the value of:
+
+- A data definition (application parameter)
+- An attribute of a data definition
+- A calculated attribute of a data definition
+- An ACD variable definition.
+
+Such values are retrieved using the ACD “get the value of” syntax which consists of a term ParameterName.AttributeName term surrounded by parentheses with a dollar sign ($) at the front:
+
+```
+$(ParameterName.AttributeName)
+```
+
+If only the value of the data definition is to be retrieved then the AttributeName component is omitted:
+
+```
+$(ParameterName)
+```
+
+Of course a variable name may also be given. Variables do not have attributes therefore the syntax is:
+
+```
+$(VariableName)
+```
+
+For example, in the following ACD file excerpt two integer inputs are defined:
+
+```
+integer: gapopenalty
+[
+  standard: "Y"
+  default: "10"
+]
+
+integer: gapextpenalty
+[
+  standard: "Y"
+  default: "$(gapopenalty)"
+]
+```
+
+The default for the standard qualifier gapextpenalty is set to the value of qualifier gapopenalty.
+
+As another example assume a sequence input and a window over that sequence which should not be longer than the sequence itself. There is also a sub-window which (by default) is one residue shorter than the main window, and an array of numbers that is the same size as the sub-window. The following ACD code would suffice:
+
+```
+sequence: sequence
+[
+  parameter: "Y"
+]
+
+integer: window
+[
+  standard: "Y"
+  default: "10"
+  maximum: "$(sequence.length)"
+]
+
+integer: subwindow [
+  standard: "Y"
+  default: "@($(window)-1)"
+  maximum: "@($(window.maximum)-1)"
+]
+array: values
+[
+  standard: "Y"
+  size: "$(subwindow)"
+]
+```
+
+sequence.length is a calculated attribute and is the length of the sequence. The $(sequence.length) value is calculated during ACD processing once the input sequence has been read in. In contrast window.maximum simply refers to the maximum: attribute of the window data definition.
+
+Of course you need to be careful that the type of retrieved value matches that of the attribute which is being calculated. For instance, if you have defined a toggle datatype:
+
+```
+toggle: dovalues
+[
+  standard: "Y"
+]
+```
+
+then the following definition is perfectly valid because the standard: global attribute has a boolean value, which is the same type as the toggle datatype.
+
+```
+array: values
+[
+  standard: "$(toggle)"
+  size: "$(subwindow)"
+]
+```
+
+The following definition is *not* valid and an error will be generated during ACD processing:
+
+```
+array: values
+[
+  standard: "Y"
+  size: "$(toggle)"    /* This is not valid ! */
+]
+```
+
+It is invalid because the size: attribute of the array datatype has an integer value, whereas the toggle datatype has a boolean value.
+
+### 4.4.4 Calculations and tests
+
+Calculations can be performed in ACD using the @ syntax. A rather silly, but legal, calculation would be:
+
+```
+@(5 + 9)
+```
+
+which equates to the value 14. Calculations can be used to add, subtract, multiply or divide, or test for equality, inequality, “greater than” or “less than”. The test values can be integers, floats and strings. You can use calculations with most attributes of datatypes where they make sense. In the following example a start condition is set to have a maximum value of the sequence length minus a window size value plus 1:
+
+```
+sequence: sequence
+[
+   parameter: "Y"
+   type: pureprotein
+]
+
+integer: window
+[
+   standard: "Y"
+]
+
+integer: start
+[
+   standard: "Y"
+   maximum: "@(@($(sequence.length) - $(window)) + 1)"
+]
+```
+
+Note that there are two separate calculations here so each needs to be surrounded by the @() syntax. Long calculations can get messy. If you need to use them then you possibly need to rethink your ACD logic. If they can't be avoided then they can be tidied up with the use of variables (see below).
+
+### 4.4.4.1 Arithmetic operations
+
+The supported arithmetic operations are addition, subtraction, multiplication and division. The standard characters for the arithmetic operations are used: +, -, * and /.
+
+```
+@(a+b)   (Addition)
+@(a-b)   (Subtraction)
+@(a*b)   (Multiplication)
+@(a/b)   (Division)
+```
+
+The operands a and b must resolve to a numeric value (integer or floating point); the result is undefined otherwise but will most probably result in an error during ACD processing.
+
+Only a single arithmetic operation is allowed per set of parentheses, for instance, the code below is not valid:
+
+```
+integer: a []
+integer: b []
+integer: c []
+integer: n
+
+[
+   default: "@(a + b + c)"   /* This is not valid ! */
+]
+```
+
+It could however be rewritten using nested operations. The following is perfectly valid:
+
+```
+integer: n
+[
+default: "@(@(a + b)+c)"
+]
+```
+
+Note that two sets of parentheses are required: The first around the addition of a and b which gives @(a + b). The second around the addition of @(a + b) to c, which gives @(@(a + b)+c). Where more than one arithmetic operation is required, however, one would typically use an internal ACD variable to hold the intermediate results.
+
+### 4.4.4.2 Tests for equality
+
+The supported equality tests (symbols in parenthesis) are “equality” (==), “non-equality” (!=), “less than” (<) and “greater than” (>):
+
+```
+@(token1 == token2)   (Equality)
+@(token1 != token2)   (Non-equality)
+@(token1 < token2)    (Less-than)
+@(token1 > token2)    (Greater-than)
+```
+
+The above equality tests can be used on strings in which case the lexicographical sorting order of the string is used.
+
+### 4.4.4.3 Boolean tests
+
+The supported boolean operations are logical AND, logical OR and logical NOT. Again, the standard characters are used: &, | and !:
+
+```
+@(!a)   (NOT)
+@(a|b)  (OR)
+@(a&b)  (AND)
+```
+
+In the following ACD code snippet:
+
+```
+integer: fubar
+[
+    standard: "Y"
+    default: 5
+    etc
+]
+
+integer: rtfm
+[
+    standard: "@(@($(fubar)==3) | @($(fubar)==7)) "
+    etc
+]
+```
+
+The integer rtfm will only be prompted for if the value of fubar is either 3 or 7. Each of the equality tests is a calculation and the boolean test is another calculation. There are therefore three instances of @().
