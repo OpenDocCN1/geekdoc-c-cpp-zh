@@ -1058,6 +1058,7 @@
 +   [多路径路由 能源高效主动缓存](docs/energy-efficient-proactive-caching-with-multipath-routing/README.md)
 +   [C++ 工程问题解决 (第3版)](docs/engineering-problem-solving-with-c-3rd-edition/README.md)
 +   [C++ 工程问题解决指南（第四版）](docs/engineering-problem-solving-with-c-fourth-edition/README.md)
++   [C 工程问题求解：国际版](docs/engineering-problem-solving-with-c-international-edition/README.md)
 +   [安全可靠可靠软件系统工程 (Artech House 信息安全与隐私)](docs/engineering-safe-and-secure-software-systems-artech-house-in/README.md)
 +   [工程系统设计 2：数字系统、编程与机械入门指南](docs/engineering-system-design-2-introduction-to-digital-systems-/README.md)
 +   [英语语料语言学：时间、空间与体裁变异：Icame 32选论文（语言与计算机——实用语言学研究）](docs/english-corpus-linguistics-variation-in-time-space-and-genre/README.md)

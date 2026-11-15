@@ -1,0 +1,101 @@
+level_changes:
+- line: 225
+  before: 2
+  after: 1
+- line: 820
+  before: 2
+  after: 1
+- line: 3024
+  before: 2
+  after: 1
+- line: 5617
+  before: 2
+  after: 1
+- line: 7976
+  before: 2
+  after: 1
+- line: 10942
+  before: 2
+  after: 1
+- line: 12836
+  before: 2
+  after: 1
+- line: 14333
+  before: 2
+  after: 1
+- line: 245
+  before: 3
+  after: 2
+- line: 355
+  before: 3
+  after: 2
+- line: 3056
+  before: 3
+  after: 2
+- line: 5641
+  before: 3
+  after: 2
+- line: 10968
+  before: 3
+  after: 2
+- line: 12856
+  before: 3
+  after: 2
+- line: 14355
+  before: 3
+  after: 2
+- line: 14359
+  before: 3
+  after: 2
+- line: 14395
+  before: 3
+  after: 2
+- line: 824
+  before: 3
+  after: 2
+- line: 394
+  before: 2
+  after: 3
+- line: 398
+  before: 2
+  after: 3
+- line: 413
+  before: 2
+  after: 3
+- line: 568
+  before: 2
+  after: 3
+text_changes:
+- line: 2947
+  before: 表 2.8 氨基酸分子
+  after: 表 2.8 氨基酸分子量
+- line: 8590
+  before: 表 5.3 氨基酸分子
+  after: 表 5.3 氨基酸分子量
+- line: 11288
+  before: Table 6.1 运算符优先级
+  after: 表 6.1 运算符优先级
+- line: 12456
+  before: 6.9 A Quicksort Algorithm*
+  after: 6.9 快速排序算法*
+- line: 4834
+  before: MODIFY!
+  after: 修改！
+- line: 4920
+  before: MODIFY!
+  after: 修改！
+- line: 6126
+  before: PRACTICE!
+  after: 练习！
+- line: 6601
+  before: Random-number seed
+  after: 随机数种子
+- line: 6758
+  before: Floating-Point Sequences
+  after: 浮点序列
+- line: 9447
+  before: 5.8 Two-Dimensional Arrays
+  after: 5.8 二维数组
+- line: 9525
+  before: PRACTICE!
+  after: 练习！
