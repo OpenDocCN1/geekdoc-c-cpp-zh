@@ -1,0 +1,1545 @@
+- pgno: 0
+  md: '# Energy-efficient proactive caching with multipath routing
+
+
+    Yantong Wang a,*, Vasilis Friderikos b
+
+
+    a School of Information Science and Engineering, Shandong Normal University, Changqing
+    District, 250358, Jinan, China b Center of Telecommunications Research, Department
+    of Engineering, King''s College London, Strand, WC2R 2LS, London, UK
+
+
+    # ARTICLE INFO
+
+
+    +   - Keywords: Wireless networks
+
+    +   - Proactive caching
+
+    +   - Multipath routing
+
+    +   - Energy saving
+
+    +   - Integer linear programming
+
+    +   - Simultaneous casting
+
+
+    # ABSTRACT
+
+
+    The ever-continuing explosive growth of on-demand content distribution has imposed
+    great pressure on mobile/wireless network infrastructures. To ease congestion
+    in the network and to increase perceived user experience, caching of popular content
+    closer to the end-users can play a significant role and as such this issue has
+    received significant attention over the last few years. Additionally, energy saving
+    is treated as a fundamental requirement in the design of next-generation mobile
+    networks. However, there has been little attention to the overlapping area between
+    energy saving and network caching especially when considering multipath routing.
+    To this end, this paper proposes an energy-efficient caching with multipath routing
+    support. The proposed scheme provides a joint anchoring of popular content into
+    a set of potential caching nodes with optimized caching probabilities and routing
+    probabilities for minimizing the total energy consumption of the proposed model
+    also considers different content delivery modes, such as multicast and unicast.
+    Two separated Integer-Linear Programming (ILP) models are formulated for each
+    delivery mode. To tackle the curse of dimensionality we then provide a greedy
+    simulated annealing algorithm, which not only reduces the time complexity but
+    also provides a competitive performance. A wide set of numerical investigations
+    reveal that the proposed scheme reduces the energy consumption up to 75% compared
+    with other widely used caching approaches under the premise of network resource
+    limitation. Sensitivity analysis to different parameters is also meticulously
+    discussed in this paper.
+
+
+    # 1. Introduction
+
+
+    The enormous amount of mobile traffic, which is expected to reach more than 300
+    exabytes per month in 2026 [1], is creating great challenges in the 5G and beyond
+    mobile network infrastructures. As an evolutionary network architecture, Information-Centric
+    Networking (ICN) is designed to support content distribution and user mobility
+    with in-network caching feature [3]. Compared with other caching approaches, in-network
+    caching can significantly improve network capacity and latency, whose key aspects
+    are related to the following type of questions: “where to cache”, “what to cache”,
+    “cache dimensioning”, and “content delivery” [3]. In this paper, the focus is
+    on the location to anchor popular content and determining an efficient routing
+    path to be employed for caching delivery.
+
+
+    Despite the well-known benefits of mobile/wireless ICN, there are still a number
+    of significant and challenging open-ended topics in this field, such as utilizing
+    multipath routing, security and energy consumption [4]. When addressing energy
+    consumption, it is treated as one of the key pillars in the design of 5G and beyond
+    networks, which is not only important in monetary terms due to energy savings
+
+
+    but also for curbing the CO2 emissions [5] and aligning operators with the goals
+    related to the so-called 1.5 °C climate trajectory.1 Recently, 5G has been commercialized
+    in many markets across the world and 6G has already started to attract significant
+    attentions from both academia and industry [6]. Though the vision and requirements
+    of 6G are still under study, there is no doubt that reducing the overall network
+    energy consumption is a significant target for 6G. According to [7], the energy
+    efficiency of 6G is expected to be improved by at least a factor of 10, when compared
+    with 5G networks.
+
+
+    The energy consumption in ICN can be divided into two parts [8–12]: the energy
+    required for content caching and the energy for data transmission. Content replicas
+    can be placed near access routers as a means of reducing transmission costs but
+    with an extra cost paid for being popular content, repeatedly consuming caching
+    hash nodes can be adopted to reduce caching energy. However, the cache placement
+    of an application-specific content, the cache placement and content routing decisions
+    are inherently coupled since the request can only be served from a node that caches
+    the required information. This inherent trade-off raises the following key question:
+    where to cache'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'popular content and how to design an efficient routing path to minimize the
+    total energy consumption while satisfying the network resource limitations. To
+    date, there are a number of prior works on the issues related to location selection
+    for hosting popular content in order to minimize energy consumption as detailed
+    in Section 2. However, most of these works do not take the routing policies into
+    consideration or only adopt the shortest path. It is insufficient to only consider
+    the shortest path routing especially when the network bandwidth is limited.
+
+
+    Inspired by the above discussion, in this article, we jointly consider the caching
+    placement and multipath routing to minimize the total energy consumption and study
+    the following two content delivery models [13]: (1) the service flow can be shared
+    if the users have the same content preference as well as connected access router,
+    which is called *multicast mode*. For example, semi-synchronous requests can be
+    bundled together and served via a single transmission. (2) the service flow cannot
+    be shared and each request is satisfied with an independent (unicast) transmission,
+    i.e. unicast mode. We also consider explicitly the caching memory space and link
+    bandwidth limitations. The main contributions of this work can be summarized as
+    follows.
+
+
+    +   - An energy-efficient caching scheme is proposed by jointly considering the
+    content placement and multipath routing. The problem is formulated as an optimization
+    model with caching space and link capacity limitations. In particular, two Integer
+    Linear Programming (ILP) models are derived according to the two delivery models.
+
+    +   - Since the proposed ILP models belong to the N-P hard family, we provide
+    a heuristic algorithm named Greedy Simulated Annealing Caching (GSAC). In this
+    approach, we divide the original problem into several sub-problems and employ
+    the simulated annealing to find sub-optimal, albeit competitive, solutions for
+    caching nodes recursively.
+
+    +   - To understand the performance gap among evaluated methods, a wide-set of
+    simulations is performed under different scenarios. More specifically, we evaluate
+    influences from the aspects of the user (in terms of the number of requests, user
+    preference and prediction accuracy) and the network (such as the available bandwidth
+    and caching space and the underlying network topology).
+
+
+    The rest of this paper is organized as follows. Section 2 reviews the existing
+    research on proactive caching. Section 3 formulates the system model. Section
+    4 provides a simulated annealing-based heuristic algorithm. Section 5 presents
+    an ICN and multi-access edge computing (MEC) integration platform for proposed
+    methods deployment. In the end, Sections 6 and 7 give the numerical investigations
+    and conclusions respectively.
+
+
+    # 2. Related work
+
+
+    This section first reviews some related works on energy-efficient caching in ICN-based
+    networks [8–12]. An ILP model is studied in [8], where the limitation of router
+    caching space and different caching hardware technologies have been taken into
+    account. J. Llorca et. al [9] explicitly consider the temporal and spatial dynamics
+    of user requests and the heterogeneity of network resources. The authors in [10]
+    present a distributed in-network caching scheme in which each content router determines
+    its own caching policy in [10], which is a centralized approach is also provided
+    in the non-cooperative mode. An energy consumption model with propagation delay-awareness
+    is investigated in [11] and a quantized Hopfield neural network is proposed to
+    derive competitive solutions. The relationship between aggregate energy consumption
+    per transmitted bit of information and the average number of hops has been studied
+    in [12].
+
+
+    There are also some researches concentrating on energy-efficient caching in cellular
+    networks [14–18]. The authors in [14] propose a coordinated caching model in eNodeBs
+    for energy saving. A hybrid
+
+
+    caching policy for reducing latency and energy consumption is designed in [15]
+    which consists of device local caching, device-to-device (D2D) caching, base station
+    (BS) caching. Except for saving the traditional energy in the above works, energy
+    harvesting technology together with cooperative caching has also received scholarly
+    attention in recent years, such as BS caching in [16,17] and D2D caching in [18].
+    In particular, the authors in [16] formulate a BS caching problem as a mixed integer
+    linear programming routing problem and then decompose it as two sub-problems,
+    and the work [18] considers the caching performance with storage capacity limit.
+    Unlike [16,18], the study in [17] uses a simulation-based method, instead of an
+    optimization model, to measure the energy efficiency of different BS switching.
+    Apart from the aforementioned scenarios, the dense vehicular network and the unmanned
+    aerial vehicle (UAV) network are considered in paper [19,20] respectively.
+
+
+    Furthermore, a number of studies have investigated the energy-efficient schemes
+    by jointly considering caching, communication, and resource allocations. For instance,
+    the authors in [21] propose a framework combining software defined networking,
+    caching, and computing (SD-NCC) to balance the energy consumption and network
+    resource utilization, which has the potential to support general in-network services.
+    In addition, the problem investigated in [21] is formulated as a mixed-integer
+    nonlinear programming (MINLP) problem and an alternating direction method of multipliers
+    (ADMM)-based algorithm is provided for computational complexity reduction purpose.
+    The inherent lack of user request arrival knowledge case is considered in [22]
+    where caching, transcoding, and backhaul retrieving are jointly optimized. The
+    research in [23] concentrates on the trade-offs between communication, computation
+    and caching and provides a ~optimal solution to the proposed non-linear optimization
+    model. Another joint optimization research can be found in [24], where the user
+    association, resource allocation, and caching deployment are jointly utilized
+    in the fog radio access networks (Fog-RAN) environment.
+
+
+    However, the majority of the aforementioned works do not take the routing policies
+    into consideration [8,10,11,15–20,22,24] or only adopt the shortest path [9,12,4,2,3,23].
+    Therefore, the designed caching strategies may be inefficient when dealing with
+    the limited network bandwidth scenario. There are also some researches discussing
+    the design of joint caching and routing schemes. For example, a study in [25]
+    formulates a joint caching and multipath routing problem as an ILP problem to
+    maximize the volume of cached-served file requests in the wireless network. Chu
+    et al. [26] jointly consider the cache allocation and routing path to maximize
+    content utilities based on cache partitioning. The delay optimization scenario
+    is also considered in [26]. The authors in [27] investigate the caching and routing
+    problem considering both source routing and nominal shortest path routing to minimize
+    routing cost. To simplify the model, the link bandwidth in [27] is assumed to
+    be abundant. However, none of the above studies [25–27] consider caching placement
+    for energy efficiency purposes. For a more detailed and extensive treatment of
+    the overall state-of-the-art caching and routing policies in ICN, we refer the
+    reader to [28].
+
+
+    We summarized the aforementioned works in Table 1. Motivated by these researches,
+    the caching placement and multipath routing are jointly optimized in this paper
+    to minimize energy consumption. The existing research in [29] is closest to the
+    problem we tackle here. Though [29] considers the energy-efficient caching and
+    routing algorithm in content delivery networks (CDN), here are some main differences
+    between our work and [29]. On the one hand, the caching methods are quite different.
+    For example, we allow replicated caching while [29] considers unique caching that
+    each content is satisfied by exactly one node. On the other hand, our work includes
+    modelling for different delivery modes, i.e. multicast and unicast, while [29]
+    only considers the nominal method of delivery which is the unicast.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '| Ref. | Scenario | Solution | Energy saving | Routing design | Delivery mode
+    |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | [8] | ICN | ILP & Genetic algorithm | ✓ | × | × |
+
+    | [9] | ICN | ILP & Local search | ✓ | Shortest path | Multicast |
+
+    | [10] | ICN | ILP & Game theory | ✓ | × | × |
+
+    | [11] | ICN | ILP & Hopfield Neural Network | ✓ | × | × |
+
+    | [12] | ICN | Relaxation method | ✓ | Shortest path | × |
+
+    | [14] | Cellular network | Optimization model & Lagrangian Relaxation | ✓ | Shortest
+    path | × |
+
+    | [15] | Cellular network | Optimization model | ✓ | × | × |
+
+    | [16] | Cellular network | MILP & Particle Swarm Optimization | ✓ | × | × |
+
+    | [17] | Cellular network | Genetic Algorithm & Simulated Annealing | ✓ | × |
+    × |
+
+    | [18] | Cellular network | Optimization model & Simulated Annealing | ✓ | × |
+    × |
+
+    | [19] | Vehicular Network | Optimization model & Dual Decomposition | ✓ | × |
+    × |
+
+    | [20] | UAV | Lyapunov Optimization | ✓ | Shortest path | × |
+
+    | [21] | SDN/CC | DRL & Optimization | ✓ | × | Unicast |
+
+    | [22] | Cellular network | Stochastic Optimization & Benders Decomposition |
+    ✓ | × | × |
+
+    | [23] | Tree network | MINLP & Spatial Branch and Bound | ✓ | Shortest path |
+    × |
+
+    | [24] | Fog-RAN | Optimization model & ADMM | ✓ | × | × |
+
+    | [25] | SoftNFV | Optimization model & Randomized Rounding | ✓ | Multipath |
+    Unicast |
+
+    | [26] | ICN | Optimization model | × | Multipath | × |
+
+    | [27] | ICN | Optimization model | × | Multipath | Unicast |
+
+    | [29] | CDN | ILP & Heuristics | ✓ | Multipath | Unicast |
+
+    | This paper | ICN&5G | ILP & Simulated Annealing | ✓ | Multipath | Multicast
+    & Unicast |
+
+
+    ![](img/6b9226526d7260024653712412f81bfd_2_0.png)
+
+
+    # ## 3. System model
+
+
+    # ### 3.1. Network model
+
+
+    The network is modelled as an undirected graph G = (E, L) as shown in Fig. 1,
+    where E represents the set of nodes and L denotes the set of links. Each link
+    l ∈ L is equipped with bandwidth c_l. The nodes are partitioned to access routers²
+    (AR) A ⊂ C, forward routers F ⊂ C and servers {0} ∈ E. Additionally, each caching
+    node c ∈ E^C = E\{0} has storage capacity a_c, and can provide both data flow
+    forwarding and content caching services.
+
+
+    Let N be the set of contents. For each content n ∈ N, the required caching size
+    and transmission bandwidth are represented by s_n and b_n, respectively. Without
+    loss of generality, we assume all contents can be retrieved from backbone servers;
+    in case of a cache miss, the user-requested file is described as x_{n,k}, which
+    is the probability of user k requesting file n. Furthermore, we use x_{k,t} to
+    represent the user k accesses to the network service via AR a_t, which depends
+    on
+
+
+    2 Here we consider the ICN-based network structure. Thus, the term router in this
+    paper is not the core router in the Internet backbone but the ICN content router
+    [2].
+
+
+    the user movement behaviour. For modelling simplification purposes, we assume
+    the user''s movement is already known, thus x_{k,t} becomes a binary indicator;
+    otherwise, x_{k,t} is the moving probability and the model for this case is discussed
+    in our previous work [30]. Regarding the user mobility prediction, some commonly-used
+    models include association rule-based model [31], Markov-based model [32,33] and
+    deep neural network-based model [34,35] by mining historical data and extracting
+    user location information. Consequently the aggregated number of request for content
+    n at AR a, x_{n,a}, can be determined by x_{n,a} = \sum_k x_{n,k}. For ease of
+    reference, all used symbols and their meanings are summarized in Table 2.
+
+
+    # ### 3.2. Energy model
+
+
+    In this paper, we focus on two types of energy consumption in the caching-enabled
+    network: the caching energy E^C and the communication transmission energy E^T.
+    Therefore, the total energy consumption can be represented by E = E^C + E^T. Similar
+    to [22], the caching energy is a proportional iteration of content size and can
+    be given by,
+
+
+    ```
+
+    E^C = \sum_{n \in \mathcal{N}} \sum_{k \in \mathcal{K}} \alpha x_n \cdot s_n \cdot
+    T, (1)
+
+    ```
+
+
+    where \alpha is the power efficiency for caching n-bit of information; s_n is
+    the required caching space for content n; x_n is a binary decision'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '# Table 2
+
+    # Summary of main notations.
+
+
+    | Symbol | Description |
+
+    | :--- | :--- |
+
+    | \(\mathcal{E}^o\) | Set of caching candidates |
+
+    | \(\mathcal{A}\) | Set of access routers (AR), \(A \in \mathcal{E}^o\) |
+
+    | [0] | Data server |
+
+    | \(\mathcal{N}\) | Set of contents |
+
+    | \(\mathcal{L}\) | Set of links, \(\mathcal{L} = \mathcal{E}^o \cup [0]\) |
+
+    | \(\mathcal{E}\) | Set of links |
+
+    | \(\mathcal{K}\) | Set of users |
+
+    | \(\alpha\) | Power efficiency of caching 1 bit data (Watts per bit) |
+
+    | \(\beta\) | Power cost for transmitting 1 bit data within 1 hop |
+
+    | \(\mathcal{T}\) | Time slot per bit hop |
+
+    | \(s_n\) | Size of content \(n\) |
+
+    | \(b_n\) | Bandwidth requirement of content \(n\) |
+
+    | \(c_n\) | Caching cost of caching node \(e\) |
+
+    | \(c_l\) | Capacity of link \(l\) |
+
+    | \(\rho_n\) | Preference on content \(n\) for user \(k\) |
+
+    | \(\pi_{ns}\) | Connection with AR \(a\) for user \(k\) |
+
+    | \(x_{ns}\) | Aggregated popularity of content \(n\) at AR \(a\) |
+
+    | \(y_{nps}\) | Indicates whether path \(p \in \mathcal{P}_{ns}\) |
+
+    | \(N_{nps}\) | Indicates whether link \(l\) is in path \(p \in \mathcal{P}_{ns}\),
+    or not |
+
+    | \(B_{nps}\) | Indicates whether content \(n\) is cached in node \(e\) or not
+    |
+
+
+    variable with,
+
+    \(x_{ns} = \begin{cases} 1. & \text{if content } n \text{ is cached in node }
+    e; \\ 0. & \text{otherwise.} \end{cases}\)
+
+
+    \(T\) is the time interval normalization factor partitioned in time epochs of
+    equal length and the hosting content in one time period might be totally different
+    from the data in the next time epoch; this is also called as caching refreshing
+    cycle [22] or windowed grouped data aggregation [23]. Without loss of generality,
+    hereafter we focus on optimization procedures in one time epoch.
+
+
+    The communication transmission energy consumption is measured by the number of
+    hops the network traffic and can be given by,
+
+
+    \(E^t = \sum_{n \in \mathcal{N}} \sum_{a \in \mathcal{A}} \sum_{e \in \mathcal{E}^o}
+    \sum_{p \in \mathcal{P}_{ns}} \beta \cdot N_{nps} \cdot s_n \cdot y_{nps}.\) (2)
+
+
+    where \(\beta\) is the energy cost for transmitting 1-bit of information within
+    a single hop; \(N_{nps}\) expresses the number of hops on path \(p \in \mathcal{P}_{ns}\)
+    and \(\mathcal{P}_{ns}\) represents all available paths between AR \(a\) and caching
+    node \(e\); notably \(N_{nps} = 0\) if \(a = e\); \(y_{nps}\) is a decision variable
+    with
+
+
+    \(y_{nps} = \begin{cases} 1, & \text{if the delivery of content } n \text{ uses
+    path } p \in \mathcal{P}_{ns}; \\ 0, & \text{otherwise.} \end{cases}\)
+
+
+    It is worth noting that we do not take the static energy consumption of network
+    devices into consideration, such as the idle power to support routers and network
+    interfaces. The rational behind this is that in this paper we assume that these
+    devices are being kept in power-on mode to provide various kinds of network services
+    for different requests, instead of only content caching.
+
+
+    # ## 3.3. Optimization model
+
+
+    In this subsection, we consider two types of content delivery mode, i.e. the multicast
+    and the unicast mode. For modelling simplification purposes, the following optimization
+    models are under the assumption that the user''s interested content is already
+    known by request prediction, which indicates \(p_{kn}\) becomes a binary indicator
+    to bridge user \(k\) and content \(n\). To lay out how the user request can be
+    predicted, we introduce related algorithms from two perspectives. Please note
+    that this brief introduction is not exhaustive since the request prediction is
+    beyond the scope of this paper. From the view of aggregated content popularity
+    prediction, the Zipf model [36], the shot noise model [37],
+
+
+    and the stochastic block model [38] are widely used models for the case of static
+    popularity, time-varying popularity, and location-dependent popularity, respectively.
+    Recently, deep learning has become an active method for popularity prediction
+    [39–41]. From the aspect of individual user preference prediction, it can be predicted
+    by collaborative filtering [42] which predicts the histories of the similar user
+    and the similarity among users. The typical collaborative filtering model includes
+    matrix factorization [43], latent Dirichlet allocation [44], and probabilistic
+    latent semantic analysis [45]. The influence of the predicted accuracy on system
+    energy consumption is discussed in Section 6. Moreover, in this paper we focus
+    on delay-insensitive requests, such as non-real-time HTTP video downloading and
+    video on demand services. Therefore, the latency constraint for energy-efficient
+    caching is not considered in the latency models and would be studied as a future
+    work.
+
+
+    # ### 3.3.1. Multicast mode
+
+
+    The ILP model is formulated as follows:
+
+
+    \((\text{P1}) \quad \min_{x_{ns}} E\) (3a)
+
+    \(\text{s.t.} \quad \sum_{n \in \mathcal{N}} s_n \cdot x_{ns} \le \forall n, \forall
+    e \in \mathcal{E}^o;\) (3b)
+
+    \(\sum_{n \in \mathcal{N}} \sum_{a \in \mathcal{A}} \sum_{e \in \mathcal{E}^o}
+    \sum_{p \in \mathcal{P}_{ns}} b_n \cdot B_{nps} \cdot y_{nps} \le \forall l \in
+    \mathcal{L};\) (3c)
+
+    \(y_{nps} \le x_{ns}; \forall n \in \mathcal{N}, a \in \mathcal{A}, e \in \mathcal{E}^o,
+    p \in \mathcal{P}_{ns};\) (3d)
+
+    \(y_{nps} \le s_{ns}; \forall n \in \mathcal{N}, a \in \mathcal{A}, e \in \mathcal{E}^o,
+    p \in \mathcal{P}_{ns};\) (3e)
+
+    \(\lambda_{nu} \sum_{e \in \mathcal{E}^o} \sum_{p \in \mathcal{P}_{ns}} y_{nps}
+    = \lambda_{nu}; \forall n \in \mathcal{N}, a \in \mathcal{A};\) (3f)
+
+    \(x_{ns} \in \{0, 1\}, \forall n \in \mathcal{N}, e \in \mathcal{E}^o;\) (3g)
+
+    \(y_{nps} \in \{0, 1\}, \forall n \in \mathcal{N}, a \in \mathcal{A}, e \in \mathcal{E}^o,
+    p \in \mathcal{P}_{ns}.\) (3h)
+
+
+    The objective function (3a) aims to minimize the total energy consumption, which
+    is introduced in Section 3.2. Constraint (3b) relates to the storage space used
+    for caching which should not exceed the node capacity. Constraint (3c) satisfies
+    the link bandwidth limitation. We note that \(B_{nps}\) is a binary indicator,
+    where \(B_{nps} = 1\) means that the link \(l\) is in path \(p \in \mathcal{P}_{ns}\),
+    and \(B_{nps} = 0\), otherwise. Therefore, \(\sum_l \sum_p \sum_s B_{nps} \cdot
+    y_{nps}\) selects all links used for content \(n\) delivery. Constraint (3d) limits
+    the source of delivery path should host related contents. Moreover, in constraint
+    (3e) when \(y_{nps} = 0\), \(y_{nps}\) is forced to be 0, which means the delivery
+    path to AR \(a\) should not be assigned if there is no such requirement in that
+    AR and not in constraint (3f) if \(\lambda_{nu} \neq 0\), \(\sum_{e \in \mathcal{E}^o}
+    \sum_{p \in \mathcal{P}_{ns}} y_{nps} = 1\) guarantees that at least one requirement
+    of AR \(y_{nps} = 1\) locate a delivery path since content \(n\) is requested
+    at AR \(y_{nps}\). To locate a delivery path efficiently, it is necessary that
+    when dealing with caching allocation, we only focus on the storage node \(e \in
+    \mathcal{E}^o\) such as constraints (3b) and (3d); however, for the path assignment,
+    we consider both the caching node \(e \in \mathcal{E}^o\) (for cache hitting case)
+    and the core network server (0) (for the cache missing case), like constraint
+    (3c), (3e) and (3f).
+
+
+    # ### 3.3.2. Unicast mode
+
+
+    In the unicast mode of delivery, \(y_{nps}\) is no longer binary but an integer
+    decision variable where the value represents the number of flows for content \(n\)
+    that traverse path \(p \in \mathcal{P}_{ns}\). In that case, the proposed ILP
+    model would be as follows,
+
+
+    \((\text{P2}) \quad \min_{x_{ns}} E\) (4a)
+
+    \(\text{s.t.} \quad y_{nps} \le M \cdot x_{ns}; \forall n \in \mathcal{N}, a \in
+    \mathcal{A}, e \in \mathcal{E}^o, p \in \mathcal{P}_{ns};\) (4b)
+
+    \(\sum_{e \in \mathcal{E}^o} \sum_{p \in \mathcal{P}_{ns}} y_{nps} = \lambda_{nu};
+    \forall n \in \mathcal{N}, a \in \mathcal{A};\) (4c)
+
+    \(y_{nps} \in \mathbb{Z}^+, \forall n \in \mathcal{N}, a \in \mathcal{A}, e \in
+    \mathcal{E}^o, p \in \mathcal{P}_{ns};\) (4d)
+
+    (3b),(3e),(3g).'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'The constraint (4b) updates from constraint (3d) and M is a sufficiently large
+    number, which represents this node can serve the requests as long as it hosts
+    the required content. For the scenario considering node service capability, M
+    should be replaced by the service rate, i.e. the number of requests that a node
+    can serve during the time period T, which is given by (30). Constraint (4c) replaces
+    constraint (3c) and (3d), where all served flows for content n at AR a should
+    exactly match the number of requests.
+
+
+    Regarding the time complexity of aforementioned models, we have the following
+    theorem:
+
+
+    # Theorem 1. The ILP models (P1) and (P2) fall into the family of N-P-hard problems.
+
+
+    Proof. For (P1), we will establish the proof by showing that model (3) is a generalization
+    of the uncapacitated facility location (UFL) problem where UFL is a well-known
+    N-P-hard problem. Suppose the network is a tree topology and all users request
+    the same content, then the distance between any two nodes is unique. In addition,
+    the link capacity x_e and y_ea. Consider the case that the caching space and link
+    bandwidth are infinite, i.e. w_i = c_j = +\infty, and hence, constraints (3b)
+    and (3c) can be relaxed. Furthermore, let \lambda_a \ge 1, \forall a \in A. As
+    a result, constraint (3e) is guaranteed by (3b), and \lambda_a can be safely divided
+    on both sides of (3b). In the end, (P1) can be rewritten as a UFL problem as follows:
+
+
+    ```
+
+    min_{x,yap,yap} \sum_{a \in A} s: T_a x_s + \sum_{n \in N} \sum_{a \in A} (b \cdot
+    s - N_n) y_{nae} \quad (5a)
+
+    s.t. \quad y_{yae} = x_s, \forall a \in A, e \in e^0; \quad (5b)
+
+    \sum_{e \in e^0} y_{yae} = 1, \forall a \in A; \quad (5c)
+
+    x_e \in \{0, 1\}, \forall e \in e^0; \quad (5d)
+
+    y_{yae} \in \{0, 1\}, \forall a \in A, e \in e^0. \quad (5e)
+
+    ```
+
+
+    This means (P1) is at least as difficult as UFL. Thus, we have proved that (P1)
+    is N-P-hard.
+
+
+    Similarly, by setting \lambda_a = 1 constraint (4c) and slacking model (4) as
+    above, (P2) can be converted to UFL optimization model, which means (P2) is a
+    generalization of the UFL problem, and consequently (P2) is N-P hard as well.
+    \(\square\)
+
+
+    Therefore, due to the curse of dimensionality it is challenging to solve problems
+    (P1) and (P2) in a reasonable time when the network instances becomes large. In
+    order to accelerate the computational time and provide decision making that is
+    amenable for real-time operation we propose a Greedy Simulated Annealing Caching
+    (GSAC) algorithm in the next section.
+
+
+    # 4. A metaheuristic optimization algorithm
+
+
+    In GSAC, the original optimization model is decomposed by the content categories
+    and these contents are allocated in descending order, i.e. the network serves
+    the content with the most requests first. Then, for each content assignment, we
+    employ a simulated annealing algorithm to allocate popular content in the most
+    suitable nodes.
+
+
+    Simulated Annealing (SA) [46] is a well-known optimization method for approximating
+    the global optimization of a given function. SA is an annealing process by statistical
+    mechanics concepts, and it is motivated by an analogy with the behaviour of physical
+    systems during the cooling process. It can be deemed as a powerful heuristic method
+    which is suitable for global optimization which requires no particular assumption
+    on the structure of the objective function. Compared with other evolutionary algorithms
+    such as genetic algorithm, SA can provide competitive solutions with faster convergence.
+    The main structure of SA contains two nested loops, where the external is controlled
+    by the temperature and the internal is managed by a Markov-chain length. In each
+    loop a new solution is produced which
+
+
+    then compared with the previously stored result. The new solution is accepted
+    if its performance is better than the previous otherwise, the new solution would
+    be accepted with some predefined probability. The iterations continue until meeting
+    the stopping criterion.
+
+
+    Regarding the optimization model (P1), the solution generated in each loop includes
+    the decision variable x_e and y_{yap} (here we deal with the sub-problem oriented
+    towards specific content n, so n is omitted from the subscript notation for simplicity).
+    Note, however, that the decision about those two variables, i.e., x_e and y_{yap}
+    might result in an infeasible allocation. To restore feasibility, we set x_e as
+    the pivot variable. Then, once x_e is allocated, y_{yap} can be determined as
+    follows,
+
+
+    ```
+
+    [y_{yae}[0] = 1, \quad \text{if } \sum_{e \in e^0} x_e = 0 \text{ and } [a|a_a
+    > 0];
+
+    [y_{yap} = 1, \quad \text{if } ((a, p) \in l_a, x_e > x_e, 1 \min N_{na}, b \leq
+    c_j, \forall a \in A, \exists e \in e^0, l \in p \in P_a];
+
+    [y_{yap} = 0, \quad \text{otherwise.}
+
+    ```
+
+
+    If there is a request in RA (i.e. l_a > 0) but all caching nodes e \in e^0 do
+    not host the required content (i.e. \sum_{e \in e^0} x_e = 0), then the request
+    is redirected to the backbone server (via the shortest path (i.e. p = 1)). If
+    there is a request in RA (i.e. l_a > 0), some nodes host the content (i.e. x_e
+    = 1, \exists e \in e^0), and the connected link l guarantees the transmission
+    bandwidth (i.e. b > c), then the request is served by the nearest caching node
+    (i.e. e) to alleviate the network congestion.
+
+
+    The determination of x_{yap} in problem (P2) is as follows:
+
+
+    ```
+
+    [y_{yae}[0] = \lambda_a, \quad \text{if } \sum_{e \in e^0} x_e = 0 \text{ and
+    } [a|a_a > 0];
+
+    [y_{yap} = |c/b|, \quad \text{if } ((a, p) \in l_a, x_e > x_e, 1 \min N_{na},
+    b \leq c_j, \forall a \in A, \exists e \in e^0, l \in p \in P_a];
+
+    [y_{yap} = 0, \quad \text{otherwise.}
+
+    ```
+
+
+    Similar to the multicast case, all requests are served at the backbone server
+    (0) in the cache-miss case (i.e. \sum_{e \in e^0} x_e = 0, \lambda_a > 0). If
+    some nodes host the content and the link capacity is sufficient to support at
+    least one request transmission, then we keep allocating routing paths according
+    to the bandwidth (i.e. y_{yap} = |c/b|) until all requests are assigned or no
+    more link is available; Otherwise, the routing assignment is neglected.
+
+
+    The details of the proposed GSAC framework is depicted in Algorithm 1. There are
+    four hyperparameters involved as explained in the sequel. The L parameter controls
+    the internal loop from line 8 to 20, whilst parameters T_0, T_{end} and \gamma
+    manage the external loop from line 7 to 21. Moreover, the current temperature
+    T_m influences the acceptance probability, i.e. the external loop of the GSAC
+    algorithm. In line 2, we compute the k-shortest path via Yen’s Algorithm where
+    the time complexity is O(K|E|^2) and symbol | | represents set cardinality. In
+    this paper, we consider the 5-shortest paths, i.e. k = 5, and we require the path
+    for each AR a. Consequently, the time complexity of line 2 becomes O(|A| k |E|^2).
+    For each external iteration of simulated annealing, the temperature is reduced
+    by \gamma from T_0 to T_{end}. Suppose I is the number of external loops, then
+    there is \gamma^I = T_f / T_0 when terminating. In most cases, the cooled down
+    factor \gamma is between 0 and 1. Therefore, we have I = \lceil \log_\gamma(T_{end}/T_0)
+    \rceil. It is clear that the number of internal loops is L. In each external loop,
+    the worst case is enumerating the combination of a, e and p when determining decision
+    variable y_{yap}. In addition, the time complexity of checking whether y_{yap}
+    is O(|A||P||E|). Note that we need to assign caching location for each content
+    n \in N^c. In the end, the time complexity of Algorithm 1 becomes O(|L| \cdot
+    |A||P||E|^N + |A||E|^2).
+
+
+    The configuration of hyperparameters depends on the scope of problem. In this
+    paper, after several rounds of grid search and by considering the trade-off after
+    time complexity and performance, the best configuration is recorded as follows:
+    T_0 = 10^6, T_{end} = 10^{-4}, \gamma = 0.9 and L = 300.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '# Algorithm 1: Greedy Simulated Annealing Caching (GSAC)
+
+
+    ```
+
+    Data: Variables in Table 2; Simulated Annealing Initial Temperature T0; Stopping
+    Temperature Tend; Annealing Parameter γ; Markov-chain Length L
+
+    Result: Cache allocation Xap and path delivery yuap
+
+    1 Initialize N'' = (n Σa,q,u > 0) and sort descendingly;
+
+    2 Generate {p ∈ Pe} the k-shortest path for each {a, e} pair via Yen''s Algorithm;
+
+    3 foreach x ∈ N'' do
+
+    4 Initialize x randomly {xε | 0/1 | xε ≤ uε, ∀e ∈ E0}, Tn = T0,
+
+    5 j ← 1;
+
+    6 Determine yuap through (6) or (7); // for (P1) or (P2)
+
+    7 Set best solution x* ← x ← yuap;
+
+    8 while Tn ≥ Tend do
+
+    9 while j ≤ L do
+
+    10 Generate xε via flipping one bit in xε randomly;
+
+    11 Determine yuap through (6) or (7);
+
+    12 if δ ∈ E(xε, yuap) − E(xε−1, yuap) < 0 then
+
+    13 Update xε−1 ← xε, yuap−1 ← yuap;
+
+    14 if E(xε, yuap) − E(x*, y*) < 0 then
+
+    15 Update x* ← x*, y* ← yuap;
+
+    16 end
+
+    17 else
+
+    18 Update xε, yuap ← xε−1, yuap−1 with probability exp(−δ/Tn);
+
+    19 end
+
+    20 j ← j + 1;
+
+    21 end
+
+    22 Tn = γ × Tn;
+
+    23 end
+
+    24 xuap, yuap ← x*, y*;
+
+    25 Update wε, c;
+
+    26 end
+
+    ```
+
+
+    # 5. Algorithm deployment
+
+
+    In this section, we first introduce an integrated ICN and MEC platform in a 5G
+    environment for the proposed caching schemes deployment. Then we briefly describe
+    the workflow during a caching time slot.
+
+
+    # 5.1. Architecture of the integrated framework
+
+
+    The amalgamated platform is presented in Fig. 2 based on [47,48], which consists
+    of 5G network, MEC, ICN, and network virtualisation technologies.
+
+
+    Unlike the 4G network, 5G is more than a network; it brings a global ecosystem
+    that promises not only to provide massive data traffic and connectivity with high
+    reliability, but also to support massive communication types. The 5G core network
+    evolves to a service-based architecture (SBA). As shown in the top left of Fig.
+    2, five key network functions (NFs, i.e. network repository function — NRF, policy
+    control function — PCF, network exposure function — NEF, access and mobility management
+    function — AMF, and session management function — SMF) are connected via a service-based
+    interface (SBI) message bus. In particular, NRF maintains NFs and their profiles;
+    PCF controls network behaviours; NEF exposes services and available resources
+    within and outside core networks; AMF manages end device connection; and SMF is
+    primarily responsible for the session context with the user plane function (UPF).
+    Additionally, UPF is used to route and forward caching content.
+
+
+    MEC refers to the platform that provide computing, caching and other kinds of
+    services at the network edge, which can release
+
+
+    backhaul congestion and achieve quality of service (QoS) for the 5G network. On
+    the right-hand side of Fig. 2 are the MEC functional entities. The MEC orchestrator
+    acts as an external application function and communicates with NF via the Nef
+    interface, which is responsible for maintaining the entire system. Moreover, the
+    proposed caching strategies (i.e. optimization model as user QoS) and those behaviour
+    and prediction algorithms are used to achieve prediction accuracy. According to
+    the user request forecast [36–45] and the caching in the MEC orchestrator. After
+    the caching decision is determined, the content and transmission path routing
+    policy can be distributed via the NEF-PCP-SMF-UPF route. The MEC host, which contains
+    a MEC platform and a virtualisation infrastructure, provides compute, storage,
+    and network resources for the MEC applications. Additionally, the ICN caching
+    service is viewed as a MEC application. The network available resource information,
+    like memory space and link bandwidth in the local ICN data network (ICN-DN), is
+    collected by the virtualisation infrastructure manager in the MEC host level,
+    and then is maintained in the MEC orchestrator. To supports the caching service,
+    the MEC host can be deployed on access routers, forward routers and even data
+    server.
+
+
+    # 5.2. Illustration of working process
+
+
+    The proposed algorithm can be extended to various ICN implementations, like Data
+    Oriented Network Architecture (DONA) [49], Content Centric Network (CCN) [50]
+    and Named Data Network (NDN) [51]. Here we use the NDN as an example to further
+    illustrate the workflow. The working process of the proposed algorithm is presented
+    in two phases: the content deployment phase and the flow service phase.
+
+
+    The content deployment phase is presented as follows:
+
+
+    +   Step 1: The MEC orchestrator collects the current user behaviour information
+    from access routers and the network available resource status (like storage space
+    and link bandwidth) from all caching nodes.
+
+    +   Step 2: The MEC orchestrator calls the predicted algorithms, such as user
+    mobility prediction and request preference forecast, to estimate the user behaviour
+    in the next time slot;
+
+    +   Step 3: Based on the prediction and available network resources, the orchestrator
+    call the proposed algorithm to determine caching locations and relevant routing
+    path;
+
+    +   Step 4: The orchestrator distributes the routing path to all routers by broadcasting,
+    and proactively pushes the content from the original data server to the routers
+    according to the caching decisions;
+
+    +   Step 5: Based on the received routing path, the router updates the Forwarding
+    Information Base (FIB) by translating the path to the representation of interface,
+    and caches relevant content in the Content Store (CS).
+
+
+    After the content deployment phase, in the next time slot the flow service process
+    works as follows:
+
+
+    +   Step 1: Access routers receive requests from connected end-users and record
+    for the next time slot estimation;
+
+    +   Step 2: The router does a CS lookup to check whether the content is stored
+    in local ICN-DN or not. If cache hits, then the request can be served locally;
+    Otherwise,'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/6b9226526d7260024653712412f81bfd_6_0.png)
+
+
+    Fig. 2. A depiction of ICN and MEC platform in 5G architecture.
+
+
+    Step 3: The router does a pending interest table (PIT) lookup to verify the existence
+    of the same content request. If matches, the request is pended until the content
+    is retrieved from other routers; Otherwise,
+
+
+    Step 4: The router does a FIB lookup to find the node hosting this content. If
+    there is a caching node matching, the request is forwarded via FIB recorded interface;
+    Otherwise, the request is sent to the data server.
+
+
+    **Table 3 Simulation parameters [23,55].**
+
+
+    | Parameter | Default value | Range |
+
+    | :--- | :--- | :--- |
+
+    | Caching power coefficient (\(\varsigma\)) | \(2.5 \times 10^{-4}\) W/b | - |
+
+    | Transmission power coefficient (\(\varrho\)) | \(4 \times 10^{-6}\) J/b | -
+    |
+
+    | Content popularity (\(\lambda\) (1)) | 1.000 | - |
+
+    | Cache size (\(\gamma_s\)) | - | [10,100] MB |
+
+    | Content transmitting bandwidth (\(\kappa_s\)) | - | [10,100] Mbps |
+
+    | Available caching space (\(\gamma_{rs}\)) | 0.5 GB | [0.25,1] GB |
+
+    | Available bandwidth (\(\kappa_{rs}\)) | 0.5 Gbps | [0.25,1] Gbps |
+
+    | Preference prediction accuracy (\(\rho_{rs}\)) | 100% | [0%,100%] |
+
+    | Number of requests (\(\sum_m \lambda_m\)) | 1100 | [200,2000] |
+
+    | Time slot duration (\(T\)) | 10 s | - |
+
+
+    # 6. Numerical investigations
+
+
+    # 6.1. Simulation setting
+
+
+    In this section, we compare the caching allocation derived from the set of proposed
+    schemes against some well known previously proposed techniques such as the Random
+    Caching and the Coordinated Caching schemes, which have been introduced in [52]
+    and [14] respectively. The proposed set of techniques include the ILP optimization
+    model (which is viewed as offering the optimal solution in this paper by using
+    the branch-and-bound method, hence in the figures to follow we use term Optimal
+    to represent the results of the ILP model) and the GSAC technique. Random Caching
+    can be deemed as a technique that can be easily adopted and used by operators
+    where hosting nodes are chosen randomly for the requested content. Based on the
+    caching capacity, the Coordinated Caching places content in local or nearby caching
+    nodes, and, thus, balances the energy consumption between data transmission and
+    storage.
+
+
+    The experiments are performed in a 20 caching nodes and 52 links network model,
+    which captures a nominal tree-like configuration of a mobile edge network. Without
+    loss of generality, we assume that all links have equal capacity and all caching
+    nodes have identical memory space, but the actual values vary to investigate the
+    trade-off between bandwidth and storage (caching memory capacity). Accordingly,
+    we investigate the trade-off between caching memory capacity and 80/20 rule, i.e.,
+    approximate 80% of user requests concentrate on the top 20% content categories.
+    This rule has been widely used in various fields including caching [38]. The caching
+    allocation based on such prediction and the impact of predicted accuracy is also
+    discussed.
+
+
+    The performance is evaluated mainly via two key metrics: the energy gain and cache-hit
+    ratio. As for the energy gain, we use the so-called No-caching approach as the
+    benchmark, which, in essence, means we do not host any content in caching nodes,
+    and each flow request should be transferred to a core network content server.
+    In that case, the gain is calculated by
+
+
+    \(Gain = \frac{E(\chi_{s_{no\_snap}})}{E(\chi_{s_{snap}})}\)
+
+    where \(E(\chi_{s_{no\_snap}})\) is the energy cost by applying No-caching strategy,
+    and \(E(\chi_{s_{snap}})\) represents the energy consumption by using estimated
+    algorithms, i.e. the Optimal, the GSAC, the Coordinated Caching and the Random
+    Caching. As a result, a larger energy gain indicates a better energy-saving performance.
+    Furthermore, the cache-hit ratio is defined as the percentage of content requests
+    served by caching nodes.
+
+
+    All results presented hereafter are averaged over one hundred network scenarios
+    (i.e., Monte Carlo simulations) and based on those we analyse the performance
+    of different schemes. To put the computational times in context we note that all
+    simulations performed using MATLAB R2021b running on top of a 64-bit Windows 10
+    environment, whilst the machine is equipped with an Intel Core i9-10900K CPU with
+    64 GB RAM. The simulation parameters assumed in the investigations are presented
+    and summarized in Table 5. Unless stated otherwise, the values of \(\kappa_s\),
+    \(\kappa_{rs}\), PL\(_{max}\) and \(\sum_m a_m\) are set with their default values.
+
+
+    # 6.2. Impact of the number of requests
+
+
+    We first study how the number of content requests affects the performance of proposed
+    schemes, in which case we set \(\sum_m a_m\) to vary from 200 to 2000. As Fig.
+    3 shows, the evaluation is among energy gain, cache-hit ratio, time complexity
+    of running each algorithm, and time for proactively pushing contents to caching
+    nodes. Moreover, the confidence interval of each simulation case is added on the
+    plot. In'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'Fig. 3(a), both the Optimal and GSAC on (P1) share a climbing-remaining-dropping
+    trend while the Random has a decreasing trend. With the increase in user requests,
+    as expected, the energy consumption for caching service is increasing accordingly,
+    and this trend is independent if we utilize the Optimal scheme, the GSAC, the
+    Coordinated, and the No-caching scheme. However, the performance plays a significant
+    role in the overall energy gains: (1) an increase (i.e., positive slope) represents
+    the No-caching scheme grows at a faster rate than the evaluated algorithm; (2)
+    a plateau (i.e., zero slope) shows that both the No-caching and the evaluated
+    algorithm have similar increasing rates; and (3) a decrease (i.e., negative slope)
+    indicates that the No-caching grows slower than the evaluated algorithm.
+
+
+    In Fig. 3(a), when the number of requests ranges from 200 to 500, the network
+    has sufficient resources (i.e. caching space and link bandwidth) to serve end-users,
+    and the Optimal together with GSAC can both significantly outperform the No-caching
+    scheme in reducing energy consumption. The energy gain ranges from 302 to 317
+    for the Optimal and 2.93 to 2.99 for the GSAC scheme. Then passing that state,
+    the energy gain starts to decrease gradually while the energy ranges between 500
+    and 1400, which reflects a plateau on the energy gain of the Optimal curve. For
+    the GSAC method, the plateau ends at 1100 requests. After the turning points (i.e.
+    1400-request for the Optimal and 1100-requests for the GSAC), more users'' flows
+    are redirected to a core network server, hence the performance resembles more
+    to the No-caching scheme. Therefore, the energy gain is reduced to 2.70 for the
+    Optimal and 2.50 for GSAC. Regarding Coordinated Caching, the energy gain performs
+    similarly as the Optimal when there are 200 requests, and then decreases continuously,
+    especially after 800 requests. This is expected by the fact that the Coordinated
+    Caching neglects the bandwidth limitation. Therefore, once the connected link
+    is congested, the performance of Coordinated Caching degrades.
+
+
+    For Random Caching, observe the gradual decline on the energy gain from 1.92 to
+    1.29 in the simulation, which indicates this method cannot deal with the increasing
+    requests in a flexible manner. Finally, it is worth noting that the energy gain
+    in Fig. 3(a) is above 1, so all evaluated algorithms can save energy compared
+    to the No-caching approach.
+
+
+    Fig. 3(b) reveals that there is a continuous decrease in the cache-hit ratio as
+    the number of requests increases. Generally, the Optimal and GSAC guarantee that
+    the majority of requests (over 90% in the simulation) can be satisfied on the
+    caching nodes. Nearly one-fifth of the flows are redirected to a core network
+    server by applying Coordinated Caching in the 2000-request case, while the ratio
+    for Random Caching is almost half. Note that, while the ratio for Optimal and
+    GSAC have marked decreased after 1400-request and 1100-request respectively, which
+    match the turning points in Fig. 3(a).
+
+
+    A similar pattern still holds on (P2) as shown in Figs. 3.(c) and 3.(d). However,
+    in (P2) the energy gain of the Optimal keeps rising beyond the 500-request point.
+    The reason is that in (P2) each flow is served independently, even if the requested
+    content is in essence the same. Thus, the No-caching algorithm consumes more energy
+    than in (P1). Although the Optimal energy is also increasing, it is at a similar
+    rate as the No-caching, which reflects a plateau when the number of requests ranges
+    from 800 to 1700. Fig. 3.(c) reports the performance of GSAC and Coordinated Caching
+    that decreases continuously. In contrast to the decreasing trend in Fig. 3.(a),
+    the energy gain is localized around 1.00 of GSAC should be the last instead of
+    network resource limitation. Because the Optimal solution keeps steady which indicates
+    the better allocation exists but GSAC cannot find it. Similar to (P1), the gain
+    of Random Caching keeps decreasing with increasing number of requests. Compared
+    with Random Caching, the Optimal can save around 75% energy in the 1100-request
+    case, which is also the maximum attained performance gain in the simulations.
+    Interestingly, the actual influence of the different delivery modes on energy
+    gain and cache-hit ratio vary: on the one hand, unicast mode (P2) generates more
+    traffic flows which make the energy gain higher than (P1)
+
+
+    comparing 3.(a) and 3.(c) vertically; on the other hand, more flows exhaust the
+    network resource rapidly and, thus, the cache-hit ratio in 3.(d) is less than
+    3.(b).
+
+
+    The running time of (P1) and (P2) are evaluated in Figs. 3.(e) and 3.(f) respectively.
+    The time for Optimal solution varies from around 10 minutes to 4 h, while Coordinated
+    Caching and the proposed heuristic algorithm GSAC are less than 4.5 s and 4 s
+    respectively. Random Caching is the fastest among the evaluated algorithms, which
+    requires less than 100 milliseconds. The time for performing proactive caching,
+    i.e. pushing content from the data server to the caching candidates according
+    to the four estimated algorithms, are also presented in 3.(g) and (h) respectively.
+    Both figures reveals that there is a gradual increase in the content pushing time
+    with the growth of user requests. Compared to the other algorithms, the GSAC scheme
+    has more caching items to allocate. Therefore, the pushing time of the red curve
+    is higher than the other.
+
+
+    In Fig. 5 the Optimal outperforms the other methods in both (P1) and (P2) problems,
+    albeit with a higher time complexity cost. The heuristic algorithm GSAC is able
+    to provide a competitive result, followed by Coordinated and Random schemes. For
+    instance, compared with the Optimal allocation, in (P1) GSAC saves 99.9% running
+    time with the cost of approximate 6.0% performance loss when there are 1100 requests.
+    Under the same scenario, the time-saving ratio for Coordinated Caching and Random
+    Caching is similar to the GSAC scheme; but the performance reductions are 12.2%
+    and 54.9% respectively.
+
+
+    # 6.3. Impact of the available network capacity (in terms of bandwidth and storage)
+
+
+    To further appreciate the underlying trade-off between the bandwidth and caching
+    space, the values of the parameters $w_c$ and $c_l$ are varied from 0.25 to 1
+    with a sampling interval of 0.25. This setting aims to shed light on the following
+    key question: when the memory space and link capacity are insufficient to support
+    all content requests, to further improve the performance (i.e. energy gain and
+    cache-hit ratio), should we increase the link capacity first or the caching space?
+
+
+    In Fig. 4 we test the performance of the different algorithms over (P1) and (P2).
+    The contour lines with labels represent the energy gain or cache-hit ratio accordingly.
+    Moreover, the blue arrows depict the gradient, which can be viewed as the directionality
+    towards optimized parameterization. In Fig. 4.(a), when both the bandwidth and
+    memory are less than 0.5, either increasing the caching space or expanding the
+    link capacity results in an energy gain growth. However, once the link capacity
+    exceeds 0.5 GB, the energy gain increases when link bandwidth is greater than
+    the memory, as shown in Fig. 4.(a) that the arrow points towards the bandwidth
+    increasing direction. To some extent, enlarging the caching memory implies more
+    energy consumption for hosting content. A similar trend holds on Fig. 4.(b), 0.5
+    GB works as a watershed: before 0.5 GB both bandwidth and caching memory make
+    contributions to the energy gain; after 0.5 GB the bandwidth dominates the performance
+    improvement. When it comes to (P2), the tendencies of optimal 4.(i) and GSAC 4.(j)
+    are similar with (P1). What is striking in Fig. 4.(c) is that all arrows points
+    towards the bandwidth increasing direction, which indicates that expanding link
+    capacity has a distinct effect on the energy gain improvement while the caching
+    space has a negligible effect on the energy gain improvement. The reason for its
+    insensitivity on caching memory is that Coordinated Caching neglects the link
+    bandwidth limitation. In other words, Coordinated Caching provides an optimal
+    caching allocation when the link capacity is infinite. Therefore, a larger bandwidth
+    is closer to the Coordinated Caching assumption. This reason can also explain
+    why the gradient arrows in Figs. 4.(g), 4.(k), and 4.(c) towards right. Similarly,
+    as shown in Figs. 4.(d), 4.(h), and 4.(p), the performance of Random Caching is
+    very sensitive to the bandwidth change but sluggish to the caching memory. For
+    the other cases of cache-hit ratio (Figs. 4.(e)-(f), 4.(m)-(n)), both caching
+    space and link bandwidth play an equally'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/6b9226526d7260024653712412f81bfd_8_0.png)
+
+
+    Fig. 3. Algorithms performance versus the number of requests.
+
+
+    important role in the performance improvement, as the slope of arrows keeps close
+    to 1.
+
+
+    Thus, based on the aforementioned analysis the answer on how to prioritize expanding
+    of the caching memory first or the link capacity can be categorized into the following
+    three cases: (1) for the Optimal and GSAC algorithms, both bandwidth and memory
+    expanding lead to better cache-hit ratios. However, raising the link capacity
+    can bring more energy gains, especially when the memory space exceeds 0.5 GB on
+    (P1) or 0.75 GB on (P2); (2) if the Coordinated Caching or Random Caching is utilized
+    then the best network strategy is to prioritize towards bandwidth increase instead
+    of caching to increase energy reduction benefits.
+
+
+    # 6.4. Impact of the network topology
+
+
+    The influence of different network topologies is investigated in Table 4, in which
+    the confidence interval of each simulation scenario is also illustrated. In addition
+    to the normal tree-like network used in the previous simulations which is marked
+    as original, we also employ a strict-tree structure, in which only one path exists
+    between any two nodes on the network, and a full mesh topology that provides the
+    maximum diversity in terms of routes between nodes in the network. It is expected
+    that as the degree of a node in the network increases, both the energy gain and
+    cache-hit ratio of the evaluated algorithms can
+
+
+    further improved since providing more direct connections is equivalent to expanding
+    the available link bandwidth, especially for (P2). It is also clearly illustrated
+    that in the case of a full mesh network topology, even the use of Random Caching
+    can be considered as a suitable method for energy-saving purposes. Observe however
+    that the performance gap between Random Caching and other strategies becomes smaller
+    with the increase of connected links. Coordinated Caching is even under-performing
+    in a fully mesh network topology. The main reason is that one advantage of Optimal,
+    GSAC and Coordinated on saving transmission energy becomes less obvious when every
+    two caching nodes are connected within one hop. As a result, the caching energy
+    dominates the energy gain.
+
+
+    # 6.5. Impact of the prediction accuracy (\(\rho_{ls}\))
+
+
+    In the previous evaluation, we test the performance of different schemes under
+    the salient assumption of an ideal condition that all users'' preference is exactly
+    predicted, i.e. \(\rho_{ls} = 1\). Hereafter, we relax this assumption and perform
+    a wide set of experiments to understand the impact of prediction accuracy by varying
+    it from 100% down to, effectively, 0%. As shown in Figs. 5(a) and 5(c), regarding
+    the Optimal, GSAC, and Coordinated Caching, there is a steep drop on the energy
+    gain from 100% to 80% then, the value decline steadily. By the same token, the
+    performance gap among the Optimal, GSAC,'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# Fig. 4. The trade-off between bandwidth and caching space.
+
+
+    # Table 4 Algorithms performance versus network topology.
+
+
+    | Topology | | P1 | | | P2 | | |
+
+    |---|---|---|---|---|---|---|---|
+
+    | | | Tree | Original | Full mesh | Tree | Original | Full mesh |
+
+    | # Nodes | | 20 | 20 | 20 | 20 | 20 | 20 |
+
+    | # Links | | 29 | 52 | 200 | 29 | 52 | 200 |
+
+    | Energy gain | Optimal | 2.48 ±0.04 | 3.19 ±0.04 | 5.93 ±0.05 | 3.02 ±0.03 |
+    4.07 ±0.06 | 6.94 ±0.05 |
+
+    | | GSAC | 2.32 ±0.01 | 3.00 ±0.05 | 5.47 ±0.01 | 2.91 ±0.05 | 3.78 ±0.02 | 6.82
+    ±0.03 |
+
+    | | Coordinated | 2.25 ±0.04 | 2.81 ±0.06 | 3.93 ±0.05 | 2.75 ±0.05 | 3.48 ±0.04
+    | 4.94 ±0.05 |
+
+    | | Random | 1.20 ±0.03 | 1.41 ±0.03 | 4.67 ±0.11 | 1.23 ±0.09 | 1.88 ±0.02 |
+    6.67 ±0.09 |
+
+    | Cache-hit Ratio | Optimal | 0.91 ±0.01 | 1.00 ±0.00 | 1.00 ±0.00 | 0.90 ±0.03
+    | 0.91 ±0.01 | 1.00 ±0.00 |
+
+    | | GSAC | 0.92 ±0.01 | 0.98 ±0.01 | 1.00 ±0.00 | 0.92 ±0.02 | 0.97 ±0.01 | 1.00
+    ±0.00 |
+
+    | | Coordinated | 0.88 ±0.01 | 0.94 ±0.01 | 1.00 ±0.00 | 0.86 ±0.01 | 0.93 ±0.02
+    | 1.00 ±0.00 |
+
+    | | Random | 0.55 ±0.03 | 0.68 ±0.04 | 1.00 ±0.00 | 0.59 ±0.03 | 0.71 ±0.01 |
+    1.00 ±0.00 |
+
+
+    Coordinated, and Random Caching becomes very small when prediction accuracy significantly
+    deteriorates. It is worth noting that for (P1), when the predicted accuracy is
+    less than 30% (For (P2), the threshold is 20%), the energy gain is less than 1.
+    In other words, the proactive caching method cannot save energy but consume more
+    than No-caching, if the user preference prediction is inaccurate, since we
+
+
+    pay extra energy for caching contents. This result means that attention should
+    be placed on managing effectively user content prediction in order to fully capitalize
+    on gains stemming from network and storage dimensioning. In Figs. 5-(b) and 5-(d),
+    the cache-hit ratio reduces as the accuracy is declining. An interesting observation
+    is that even when the prediction accuracy reduces to 0% (for example in the case
+    of very new'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/6b9226526d7260024653712412f81bfd_10_0.png)
+
+
+    popular content), the cache-hit ratio is still above 0. The main reason is that
+    inaccurate predicted requests can be redirected to other nodes where the required
+    content is cached, and it is still counted for the cache-hit ratio calculation.
+
+
+    # 7. Conclusions
+
+
+    To meet the significant growth of popular on-demand content whilst empowering
+    a network energy saving operation, we jointly consider the problem of anchoring
+    popular content at network nodes with caching capabilities and deciding delivery
+    routing paths. The proposed integer linear programming model amalgamates energy
+    consumption, the constraints of caching memory, link bandwidth, multipath routing,
+    and different delivery modes, i.e. multicast and unicast. In addition, a greedy
+    simulated annealing caching algorithm is presented and the effectiveness of the
+    proposed scheme is evaluated by a wide set of numerical investigations. For instance,
+    we test the performance of evaluated algorithms under different network resources,
+    topologies, mobility patterns, user preferences, and cache sizes. The results
+    suggest that the proposed algorithms have the potential to reduce the energy consumption
+    to up to 75% compared with other caching schemes. Furthermore, expanding link
+    bandwidth, enriching path diversity, and increasing the preference prediction
+    accuracy can have beneficial effects on energy saving. Furthering this work, we
+    plan to consider ML/AI-driven algorithms amalgamated with the proposed framework
+    to augment the model with deep learning capabilities so that the optimal allocation
+    patterns can be learnt autonomously. In that case a number of open ended questions
+    arises such as the resource usage history to be used in machine-learning-based
+    decision making actions has to be made some appropriate algorithms should also
+    be taking into account to provide theoretical performance guarantees. Those aspects
+    open up new research avenues that may expand our contributions in future work.
+
+
+    # CRediT authorship contribution statement
+
+
+    Yantong Wang: Conceptualization, Methodology, Software, Investigation, Data curation,
+    Writing – original draft. Vasilis Friderikos: Validation, Writing – review & editing,
+    Supervision.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # References
+
+
+    +   [1] P. Corwall, J. Johnston, S. Carson, Ericsson Mobility Report, White Paper,
+    Ericsson, 2021. (Online): https://www.ericsson.com/4ad256/assets/local/mobility-report/documents/2021/ericsson-mobility-report.pdf
+
+    +   [2] G. Xylomenos, C. Ververidis, V.A. Siris, N. Fotiou, C. Tsilopoulos, V.
+    Vasilakos, K.V. Katsaros, G.C. Polyzos, A survey of information-centric networking
+    research, IEEE Commun. Surv. Tutor. 16 (2) (2014) 1024–1049.
+
+    +   [3] Y. Wang, Y. Friderikos, A survey of deep learning for data caching in
+    edge computing and information, Vol. 7, Multidisciplinary Digital Publishing Institute,
+    2020, p. 43.
+
+    +   [4] C. Fang, H. Yao, Z. Wang, W. Wu, X. Jin, F.R. Yu, A survey of mobile information-centric
+    networking: Research issues and challenges, IEEE Commun. Surv. Tutorials 18 (2016)
+    2337–2362.
+
+    +   [5] S. Buzzi, I. Chih-Lin, T.E. Klein, H.V. Poor, C. Yang, A. Zappone, A survey
+    of energy-efficient techniques for 5G networks and challenges ahead, IEEE J. Sel.
+    Areas Commun. 34 (4) (2016) 697–709.
+
+    +   [6] Area 5.1: Knowledge sharing and dissemination, beyond 5G network with
+    the advent of 6G: Architecture and emerging technologies, IEEE Access 9 (2020)
+    67512–67547.
+
+    +   [7] M. Matal-o, K. Leppänen, F. Clazzer, A. Munari, Key Drivers and Research
+    Challenges for 5G Ubiquitous Wireless Intelligence, White Paper, 5G PPP, 5G Infrastructure
+    Public Private Partnership, 2019. (Online): http://5g-ppp.eu/wp-content/uploads/2014/02/5G-PPP-White-Paper-on-AI.pdf
+
+    +   [8] N. Choi, K. Guan, D.C. Kilper, G. Atkinson, In-network caching effect
+    on optimal energy consumption in content-centric networking, in: Proc. of IEEE
+    International Conference on Communications (ICC), Ottawa, ON, Canada, IEEE, 2012,
+    pp. 2689–2694.
+
+    +   [9] J. Llorca, A.M. Tulino, K. Guan, J. Esteban, M. Varvello, N. Choi, D.C.
+    Kilper, Dynamic in-network caching for energy efficient content delivery, in:
+    Proc. of IEEE International Conference on Computer Communications (INFOCOM), Turin,
+    Italy, 2013, pp. 245–249.
+
+    +   [10] C. Fang, F.R. Yu, T. Huang, J. Liu, Y. Liu, An energy-efficient distributed
+    in-network caching scheme for green content-centric networks, Comput. Netw. 78
+    (2015) 119–134.
+
+    +   [11] E. Yaacoub, M. Alouini, Key6G: energy-delay aware cache management using
+    quantized hoffman, J. Netw. Syst. Manage. (2018) 1–21.
+
+    +   [12] J. Li, B. Liu, H. Wu, Energy-efficient in-network caching for content-centric
+    networking, IEEE Commun. Lett. 17 (14) (2013) 797–800.
+
+    +   [13] D. Liu, B. Chen, C. Yang, T. Abdelzaher, Caching at the edge: A survey
+    of architecture, challenges, and future directions, IEEE Commun. Mag. 54 (9) (2016)
+    22–28.
+
+    +   [14] Y. Xu, Y. Li, Z. Wang, T. Liu, G. Zhang, S. Ci, Coordinated caching model
+    for minimizing energy consumption in radio access network, in: Proc. of IEEE International
+    Conference on Communications (ICC), Sydney, Australia, IEEE, 2014, pp. 2406–2411.
+
+    +   [15] J. Xu, K. Ota, M. Dong, Energy efficient hybrid edge caching scheme for
+    tactile internet in 5G, IEEE Trans. Green Commun. Netw. 3 (2) (2019) 483–493.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '[16] H. Zhang, Y. Wang, H. Ji, X. Li, A sleeping mechanism for cache-enabled
+    small cell networks with energy harvesting function, IEEE Trans. Green Commun.
+    Netw. 4 (2) (2020) 497-505.
+
+    [17] G. Vallero, M. Derya, S. Meo, W. Joseph, Base station switching and edge
+    caching optimization in high energy-efficiency wireless access network, Comput.
+    Commun. 152 (2020) 1-12.
+
+    [18] Y. Meng, Z. Zhang, Y. Huang, Cache and energy harvesting-enabled D2D cellular
+    network: Modeling, analysis and optimization, IEEE Trans. Green Commun. Netw.
+    (2021).
+
+    [19] Y. Zhang, H. Zhang, K. Long, Energy efficient resource allocation in cache-based
+    heterogeneous mobile networks: A mean-field game approach, IEEE Trans. Veh. Technol.
+    70 (6) (2021) 5275-5285.
+
+    [20] P. Yang, K. Guo, X. Li, T.Q. Quek, X. Cao, C. Liu, Fair and energy-efficient
+    caching: Proactive or a private cache and cache-enabled UAV network, IEEE J. Sel.
+    Top. Signal Process. (2021).
+
+    [21] Q. Chen, F.R. Yu, T. Huang, R. Xie, J. Liu, Y. Liu, Joint resource allocation
+    for software-defined networking, caching, and computing, IEEE/ACM Trans. Netw.
+    26 (1) (2018) 274-287.
+
+    [22] Y. Zeng, R. Zhang, T.J. Lim, B. Lim, M. Pan, Energy-efficient proactive caching
+    for adaptive video streaming via data-driven optimization, IEEE Internet Things
+    J. 7 (6) (2020) 5540-5561.
+
+    [23] F. Jafari, J.I. Li, K.K. Leung, D. Towley, A. Swami, Optimal energy tradeoff
+    for computation offloading in small-cell networks with caching with Opti-Guarantee,
+    in: Proceedings of IEEE Global Communications Conference (GLOBECOM), Abu Dhabi,
+    United Arab Emirates, IEEE, 2018, pp. 1-7.
+
+    [24] X. Liu, H. Zhang, K. Long, A. Nallanathan, V.C. Leung, Energy efficient user
+    association and caching arrangement in ultra-dense deployment in fog radio access
+    networks, IEEE Trans. Veh. Technol. (2021).
+
+    [25] B. Liu, K. Poularakis, L. Tassiulas, T. Jiang, Joint caching and routing
+    in congestible networks of arbitrary topology, IEEE Internet Things J. 6 (2) (2019)
+    1331 (18) 1-14.
+
+    [26] W. Chu, M. Debbah, J.C. Lai, D. Tooley, Z.-L. Zhang, Joint cache resource
+    allocation and request routing for in-network caching services, Comput. Netw.
+    131 (2018) 1-14.
+
+    [27] Y. Zeng, R. Zhang, Jointly optimal routing and caching for arbitrary network
+    topology, IEEE J. Sel. Areas Commun. 36 (6) (2018) 1258-1275.
+
+    [28] A. Seetharam, On caching and routing in information-centric networks, IEEE
+    Commun. Mag. 56 (3) (2017) 204-209.
+
+    [29] Y. Zeng, R. Zhang, Y. Zeng, P. Patavina, Energy-efficient video-on-demand
+    transmission and distribution in metro area networks, IEEE Trans. Green Commun.
+    Netw. 3 (1) (2018) 159-169.
+
+    [30] Y. Wang, G. Zheng, V. Friderikos, Proactive caching in mobile networks with
+    limited storage capacity, in: IEEE International Conference on Communications
+    (ICC), Shanghai, China, IEEE, 2019, pp. 1-6.
+
+    [31] P. Rathore, D. Kumar, S. Rajasegaran, M. Palaniswami, J.C. Bendts, A scalable
+    framework for trajectory prediction, IEEE Trans. Ind. Technol. 20 (10) (2021)
+    1-1.
+
+    [32] L. Yao, Y. Wang, X. Wang, G. Wuovic, Cooperative caching in vehicular content
+    centric network based on social attributes and mobility, IEEE Trans. Mob. Comput.
+    20 (2) (2021) 391-402.
+
+    [33] M. Yan, S. Li, C. Chan, S. Shen, Y. Ye, Mobility prediction using a weighted
+    Markov chain model for vehicular content classification, Sensors 21 (5) (2021)
+    1740.
+
+    [34] M. Chen, M. Mozaffari, W. Saad, C. Yin, M. Debbah, C.S. Hong, Caching in
+    the sky: Proactive deployment of cache-enabled unmanned aerial vehicles for optimized
+    quality-of-experience, IEEE J. Sel. Areas Commun. 35 (5) (2017) 1046-1061.
+
+    [35] L. Li, Y. Xu, J. Qin, W. Liang, X. Li, W. Chen, Z. Han, Deep reinforcement
+    learning approaches for content caching in cache-enabled D2D networks, IEEE Internet
+    Things J. 7 (1) (2019) 544-557.
+
+    [36] S. Traverso, M. Ahmed, M. Garetto, P. Antoniadis, A survey on predicting
+    the popularity of web content, J. Internet Serv. Appl. 5 (1) (2014) 1-20.
+
+    [37] S. Traverso, M. Ahmed, M. Garetto, P. Giaccone, E. Leonardi, S. Niccolini,
+    T. Saleh, Temporal locality in today’s content caching: Why it matters and how
+    to model it, ACM SIGCOMM Comput. Commun. Rev. 43 (5) (2013) 5-12.
+
+    [38] G. Paschos, G. Iosifidis, G. Caire, Cache optimization models and algorithms,
+    2019, arXiv preprint arXiv:1812.11239.
+
+    [39] L. Lei, N. Cheng, Z. Hu, D.W.K. Tuan, Online proactive caching in mobile
+    content-centric networks with unknown content popularity, IEEE Internet Things
+    J. 6 (3) (2019) 5520-5530.
+
+    [40] C. Zhang, H. Pang, J. Liu, S. Tang, R. Zhang, D. Wang, L. Sun, Toward edge-assisted
+    video content intelligent caching with long short-term memory learning, IEEE Internet
+    Things J. 8 (11) (2021) 9204-9217.
+
+    [41] S. Li, B. Liu, W. Zhao, Joint optimization of caching and computation in
+    multi-server NOMA-MEC system via reinforcement learning, IEEE Access 8 (2020)
+    112762-112771.
+
+
+    [42] Y. Shi, J. Lv,ou, A. Hajiaghie, Collaborative filtering beyond the user-item
+    matrix: A survey of the state of the art and future challenges, ACM Comput. Surv.
+    47 (1) (2014) 1-45.
+
+    [43] H. Liu, W. Wang, Y. Zhang, R. Gu, Y. Hao, Neural matrix factorization recommendation
+    for user preference prediction based on explicit and implicit feedback, Comput.
+    Commun. 183 (2022) 20-26.
+
+    [44] Y. Kim, K. Shim, TWILITE: A recommendation system for Twitter using a probabilistic
+    model based on latent Dirichlet allocation, Inf. Syst. 42 (4) (2014) 59-77.
+
+    [45] B. Chen, C. Yang, Caching policy for cache-enabled D2D communications by
+    reinforcement learning, IEEE Trans. Commun. 66 (12) (2018) 5866-6601.
+
+    [46] R. Horst, P. Pardalos, Handbook of Global Optimization, Vol. 2, Springer,
+    Boston, MA, 2002.
+
+    [47] N. Rajatheva, P. Suthar, A. Chakraborty, S.O. Amin, A. Azgin, G. Wang, Deploying
+    RISs, 3GPP 5G NextGen core architecture, in: Proc. of IEEE 5G World Forum (5GWF),
+    Silicon Valley, CA, USA, IEEE, 2018, pp. 26-32.
+
+    [48] G. Gir, P. Porambage, M. Liyanage, Convergence of ICN and MEC for 5G: Opportunities
+    and Challenges, IEEE Commun. Stand. Mag. 5 (1) (2020) 54-60.
+
+    [49] S. Dang, O. Amin, B. Shihada, M.-S. Alouini, What should 6G be?, Nat. Electron.
+    3 (1) (2020) 20-29.
+
+    [50] I. Stojkoska, A data-driven and beyond network architecture, in: Proc. of
+    the ACM SIGCOMM Conference on Applications, Technologies, Architectures, and Protocols
+    for Computer Communications, Kyoto, Japan, ACM, 2007, pp. 181-192.
+
+    [51] L. Zhang, A. Afanasyev, J. Burke, V. Jacobson, K. Claffy, P. Crowley, C.
+    Papadopoulos, L. Wang, B. Zhang, Named data networking, ACM SIGCOMM Comput. Commun.
+    Rev. 43 (4) (2014) 66-73.
+
+    [52] P. Papadopoulos, A taxonomy of Caching Approaches in Information-Centric
+    Networking Architectures, Technical Report of Trinity Approaches in Information-Centric
+    Networking Architectures, Trinity College, Dublin, Ireland, TCD-CS-2015-02, 2015.
+
+    [53] M.I.A. Zahid, I. Ahmad, D. Habib, Q.V. Phung, Content caching in industrial
+    IoT: Security and energy considerations, IEEE Internet Things J. 7 (1) (2019)
+    491-504.
+
+
+    ![](img/6b9226526d7260024653712412f81bfd_11_0.png)
+
+
+    Yantong Wang received the BE degree in Internet of Things from Shanghai University,
+    China, in 2014, the integrated master degree from the University of Electronic
+    Science and Technology of China, in 2017, and the Ph.D. degree in telecommunications
+    from King’s College London, UK, in 2022. He is currently working as a lecturer
+    with the School of Computer Science and Electronic Engineering, University of
+    Essex, Colchester, UK. His research interests include Information-Centric Networking,
+    mobile edge computing, network optimization, and the application of machine learning
+    on telecommunications.
+
+
+    ![](img/6b9226526d7260024653712412f81bfd_11_1.png)
+
+
+    Vasillis Friderikos is currently a Reader at the Centre for Telecommunications
+    Research at King’s College London. He has published more than 200 research papers
+    in flagship IEEE, Elsevier, Springer journals, international conferences and book
+    chapters. He has been track co-chair at the IEEE International Conference on Communications
+    and the committee member for IEEE Globecom, IEEE ICC and several other flagship
+    international conferences. He has also been organizing committee member of the
+    Green Wireless Communications Symposium at IEEE Globecom and the IEEE VTC Spring
+    2011. He has also been teaching advanced mobility management protocols for the
+    Future Internet at the Institut Supérieur de l’Electronique et du Numérique (ISEN)
+    Lille, France, and the University of Lille for two times best paper awards in
+    IEEE ICC 2010 and WWRF conferences respectively. He has been visiting researcher
+    at WinLab in Rutgers University (USA) and recipient of the British Telecom Research
+    and Innovation (BT) award on Future Internet. He is broadly within the closely
+    overlapped areas of wireless networking, mobile computing, and architectural aspects
+    of the Future Internet. Vasillis is a member of IEEE, member of IET and member
+    of the INFORMS section on Telecommunications.'
+  merge: -1
+  img_proc: true
