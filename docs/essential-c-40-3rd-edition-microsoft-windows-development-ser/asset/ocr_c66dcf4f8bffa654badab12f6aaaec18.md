@@ -1,0 +1,11 @@
+In Listing 14.7, the MoveNext() method returns false when it moves past the end of the collection. This replaces the need to count elements while looping.
+
+Listing 14.7 uses a System.Collections.Generic.Stack<T> as the collection type. Numerous other collection types exist; this is just one example. The key trait of Stack<T> is its design as a last in, first out (LIFO) collection. It is important to note that the type parameter T identifies the type of all items within the collection. Collecting one particular type of object within a collection is a key characteristic of a generic collection. It is important that the programmer understands the data type within the collection when adding, removing, or accessing items within the collection.
+
+This preceding example shows the gist of the C# compiler output, but it doesn't actually compile that way because it omits two important details concerning the implementation: interleaving and error handling.
+
+# State Is Shared
+
+The problem with an implementation such as Listing 14.7 is that if two such loops interleaved each other—one foreach inside another, both using the same collection—the collection must maintain a state indicator of the current element so that when MoveNext() is called, the next element can be determined. The problem is that one interleaving loop can affect the other. (The same is true of loops executed by multiple threads.)
+
+To overcome this problem, the collection classes do not support IEnumerable<T> and IEnumerator interfaces directly. As shown in Figure 14.1, there is a second interface, called IEnumerable<T>, whose only method is GetEnumerator(). The purpose of this method is to return an object that supports IEnumerable<T>. Instead of the collection class maintaining the state, a different class, usually a nested class so that it has access to the internals of the collection, will support the IEnumerable<T> interface and will keep the state of the iteration loop. The enumerator is like a “cursor” or a “bookmark” in the sequence. You can have multiple bookmarks, and moving each of them enumerates over the collection independently of the other. Using this pattern, the C# equivalent of a foreach loop will look like the code shown in Listing 14.8.

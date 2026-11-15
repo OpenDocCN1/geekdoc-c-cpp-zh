@@ -1,0 +1,11 @@
+Like the output of Listing 18.9, which used TPL, Listing 18.18’s code (see Output 18.9) intersperses . and – in the output. The code that is to execute in a new thread appears in the `DoWork()` method. The `DoWork()` method outputs a . during each iteration within a loop. Besides the fact that it contains code for starting another thread, the `Main()` method is virtually identical in structure to `DoWork()`, except that it displays -. The resultant output is due to a series of dashes until the thread context switches, at which time the program displays periods until the next thread switch, and so on.²
+
+In order for code to run under the context of a different thread, you need a delegate of type `System.Threading.ThreadStart` or `System.Threading.ParameterizedThreadStart` (the latter allows for a single parameter of type object), identifying the code to execute. Give a Thread instance created using the thread-start delegate constructor, you can start the thread executing with a call to `thread.Start()`. (Listing 18.18 shows the `ThreadStart` explicitly to identify the delegate type. In general, `DoWork` could be passed directly to the thread constructor using C# 2.0’s delegate inference.) Starting the thread simply involves a call to `Thread.Start()`. As soon as the `DoWork()` method begins execution, the call to `Thread.Start()` returns and executes the for loop in the `Main()` method. The threads are now independent and neither waits for the other. The output from Listing 18.18 and Listing 18.19 will intermingle the output of each thread, instead of creating a series of . followed by -.
+
+# Thread Management
+
+Threads include a number of methods and properties for managing their execution.
+
++   - Join(): Once threads are started, you can cause a “wait for completion” with a call to `thread.Join()`. The calling thread will wait until the thread instance terminates. The `Join()` method is overloaded to take either an int or a TimeSpan to support a maximum time to wait for thread completion before continuing execution.
+
+2. As mentioned earlier, it is possible to increase the chances of a thread context switch by using `Start /low </program.exe>` to execute the program.

@@ -1,0 +1,9 @@
+The beginning of the listing is the manifest information. It includes not only the full name of the disassembled module (HelloWorld.exe), but also all the modules and assemblies it depends on, along with their version information.
+
+Perhaps the most interesting thing that you can glean from such a listing is how relatively easy it is to follow what the program is doing compared to trying to read and understand machine code (assembler). In the listing, an explicit reference to System.Console.WriteLine() appears. There is a lot of peripheral information to the CIL code listing, but if a developer wanted to understand the inner workings of a C# module (or any CLI-based program) without having access to the original source code, it would be relatively easy unless an obfuscator is used. In fact, several free tools are available (such as Lutz Roeder/Red Gate’s Reflector for .NET) that can decompile from CIL to C# automatically.
+
+# SUMMARY
+
+This chapter served as a rudimentary introduction to C#. It provided a means of familiarizing you with basic C# syntax. Because of C#’s similarity to C++ style languages, much of what I presented here might not have been new material. However, C# and managed code do have some distinct characteristics, such as compilation down to CIL. Although it is not unique, another key characteristic is that C# includes full support for object-oriented programming. Even things such as reading and writing data to the console are object-oriented. Object orientation is foundational to C#, and you will see this throughout this book.
+
+The next chapter examines the fundamental data types that are part of the C# language, and discusses how you can use these data types with operands to form expressions.

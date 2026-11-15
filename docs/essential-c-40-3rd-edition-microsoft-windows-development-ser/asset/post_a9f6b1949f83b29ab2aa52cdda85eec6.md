@@ -1,0 +1,256 @@
+
+### threads (contd.)
+- multiple. See multiple threads
+- overview of, 703–706
+- pools, 706, 742–743
+- running, 706–738
+  - canceling tasks, 718–722
+  - disposing tasks, 723–724
+  - long-running threads, 722–723
+  - unhandled exception
+    - handling on Task, 715–718
+- synchronization, 750–777
+- thread-safe, 752
+  - incrementing and decrementing, 96
+- ThreadStaticAttribute, 775–777
+- three-dimensional arrays
+  - initializing, 69
+- forward slash (//), 387
+- throwing exceptions, 406–407
+- Throw statement, 196
+- Tic-Tac-Toe, 869–874
+- timers, 778–783
+- time slices, 704
+- torn reads, 753
+- ToString() method
+  - overriding, 358
+- Tuple() method, 50
+- TPL (Task Parallel Library), 703
+  - APMs (Asynchronous Programming Models), calling, 791–796
+- trapping errors, 187–192
+- trees, expressions, 498–505
+  - object graphs
+    - viewing, 503–505
+- lookahead arrays, 69, 785–80
+- true operator, 373–375
+- TryParse() method, 63
+  - numeric conversion with, 198–199
+- Tuple generic types, 437–438
+- turning off warning messages (#pragma), 142–143
+- two-dimensional arrays. See also arrays
+  - declaring, 68
+  - initializing, 69
+- Type aliases, declaring, 164
+- typeof expressions, 654–655
+- type-safe type, avoiding, 759–760
+
+### types
+- aliasing, 164–165
+- anonymous, 245–246
+- collection interfaces, 536–538
+- implicit local variables, 54
+- projection to, 558
+- base, casting between derived and, 272–273
+- Boolean, 40–41
+- categories of, 55–57, 332–339
+- Cell, 427
+- char, 41
+- checking, 851
+- comments, 21–22
+- compatibility between enums, 349–350
+- conversion without casting, 62
+- data, 13–14. See also data types
+- delegates, 472–473
+  - parameters, 818–819
+- decimal, 34–35
+- definitions, 7–8
+- delegates, defining, 474–475
+- encapsulation of, 379–380
+- enums, naming, 348
+- exceptions, 193–194
+- floating-point, 33–34
+- inequality with, 89–92
+  - special characteristics of, 89
+- generics, 427–439
+  - nested, 438–439
+  - reflection, 660–662
+  - Tuple, 437–438
+  - inferencing, 454–455
+- inheritance, 205
+- integers, 32–33
+- metadata, reflection, 652–662
+- multiple exception, 405–407
+- names, methods, 154
+- numeric, 32–40
+- parameterized, 427
+- parameters, 429
+  - in, 460–462
+    - determining type of, 660–661
+  - multiple, 436
+  - naming conventions, 431
+  - out, 458–460
+- predefined, 31
+- references, 56–57, 169–170, 333–336, 465–467
+- referent, 832, 839
+- safety, 25, 541, 851
+- sizes, 752
+- specializing, 205
+- string, avoiding, 759–760
+- synchronization, 766–774
+- this, avoiding, 759–760
+- typeof, avoiding, 759–760
+- underlying
+  - unboxing, 342
+  - verifying, 301
+- unmanaged, 833
+- values, 55–56, 169–170, 331, 332
+  - boxing, 339–346
+  - enums, 346–355
+  - inheritance, 338–339
+  - instantiating generics
+    - boxing, 464–465
+  - interfaces, 338–339
+  - nullable, 425–427
+- well-formed, 357. See also well-formed types
+
+## U
+- UML (Unified Modeling Language), 204, 325n1
+- unary operators, 373–375
+  - minus (-), 84–92
+  - plus (+), 84–92
+- unboxing, 339, 342
+  - avoiding, 345
+- unary multithreading, 706
+- unchecked conversions, 59–61, 417–419
+- underlying types
+  - unboxing, 342
+  - verifying, 301
+- underscore (_), 15
+- unhandled exceptions
+  - on AppDomain, 744–746
+  - handling on Task, 715–718
+- Unicode characters, 41–43
+- Unified Modeling Language. See UML
+- Union() standard query operator, 584
+- unmanaged types, 833
+- unnecessary locking, avoiding, 765–766
+- unsafe code, 832–851
+- unsynchronized states, 750
+- unwinding stacks, 168
+- updating statements
+  - LINQ to PLINQ-to-Entities method, 671
+- uppercase, Java 9
+- using directive, 161–168
+- using statements, 217n1, 395–398
+- utilization of resources, 400
+
+## V
+- validation, applying properties, 228–229
+- values
+  - calculating, 115
+  - CTS (Common Type System), 859
+  - default, specifying, 435–436
+  - hardcoding, 35–37
+  - hexadecimal notation, 38
+  - integers, overflowing, 59
+  - iterators, yielding, 637–639
+  - literals, 35, 68
+  - parameters, 168–169
+  - permanent, 259
+  - placeholders, 115
+  - types, 55–56, 169–170, 331, 332
+    - boxing, 339–346
+    - enums, 346–355
+    - inheritance, 338–339
+    - instantiating generics based on, 464–465
+    - interfaces, 338–339
+    - nullable, 425–427
+- variables, modifying, 15
+  - applying, 12–16
+  - assigning, 13, 14–16
+  - declaring, 13, 14
+    - applying methods, 481
+    - of the Class Type, 206
+  - implicitly typed local, 53–55
+  - local, 13
+    - implicitly typed, 538–540
+  - multiple threads, 753–753
+  - members, 209
+  - out, 495–496
+  - parameters, defining index operators, 633–634
+  - values, modifying, 15
+- variance, applying delegates, 485
+- var keyword, 53
+- Venn diagrams, 568
+- verbatim string literals, 44
+- verifying underlying types, 301
+- versioning
+  - interfaces, 327–328
+  - .NET, 26–27
+  - serialization, 684–687
+- VES (Virtual Execution System), 24, 844
+- viewing expression trees, 503–505
+- VirtualAllocEx() APIs, declaring, 818–819
+- virtual computers, 816
+  - detection using P/Invoke, 888–894
+- Virtual Execution System. See VES
+- virtual fields, properties as, 232–234
+- virtual methods, 282–286
+- Visual Basic
+  - accessing class instances with Me keyword, 214
+  - global methods, 158
+  - global variables and functions, 248
+  - line-based statements, 10
+  - redimensioning arrays, 75
+  - var, 540
+  - Variant, 540
+  - var*, 540
+- Visual Studio.NET project scope, 162
+  - Imports directive, 162
+- visual editors, hints for, 144–145
+- Visual Studio, XML comments in, 386
+- void keyword, 52–55
+- volatile, declaring fields as, 760–761
+
+## W
+- weak references, 391–393
+- well-formed types, 357
+  - accessibility modifiers, 381
+  - assemblies, referencing, 377–381
+  - garbage collection, 390–393
+  - lazy initialization, 400–402
+  - namespaces, defining, 382–385
+  - object members, overriding, 357–369
+  - operators, overloading, 369–377
+  - resource cleanup, 393–400
+  - XML comments, 385–389
+- where clauses, converting expression trees to, 499
+- where() method, filtering with, 556-557
+- while loops, 121-123
+- whitespace, formatting, 11-12
+- wildcards in import directive, 162
+- Win32 APIs, declaring, 818n1
+- Windows
+  - Error Reporting dialog box, 715
+  - executable, 378
+  - Forms, 809-811
+  - Presentation Foundation (WPF), 811-813
+  - UI programming, 809-813
+  - WPF (Windows Presentation Foundation), 811-813
+- wrappers
+  - RCW (runtime callable wrapper), 813
+  - simplifying API calls with, 828-829
+- write-only properties, 230-231
+- writing
+  - comments, 20-23
+  - output to consoles, 18-20
+  - www.pinvoke.net, 818n1
+- single-line comments, 22
+### XOR (exclusive OR) operator, 112
+
+## Y
+- yield break, iterators, 645-646
+- yielding iterator values, 637-639
+- yield keyword, 6n5
+- yield returns, placing in loops, 643-645
+- yield statements, 649

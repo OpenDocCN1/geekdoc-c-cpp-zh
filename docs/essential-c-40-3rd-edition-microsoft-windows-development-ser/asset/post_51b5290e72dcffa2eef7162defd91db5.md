@@ -1,0 +1,330 @@
+
+using System;
+using System.Collections.Specialized;
+using System.Reflection;
+
+[AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
+public class CommandLineSwitchRequiredAttribute : Attribute
+{
+    public static string[] GetMissingRequiredOptions(
+        object commandLine)
+    {
+        StringCollection missingOptions = new StringCollection();
+        PropertyInfo[] properties =
+            commandLine.GetType().GetProperties();
+
+        foreach (PropertyInfo property in properties)
+        {
+            Attribute[] attributes =
+                (Attribute[])property.GetCustomAttributes(
+                    typeof(CommandLineSwitchRequiredAttribute),
+                    false);
+            if ((attributes.Length > 0) &&
+                (property.GetValue(commandLine, null) == null))
+            {
+                if (property.GetValue(commandLine, null) == null)
+                    missingOptions.Add(property.Name);
+            }
+        }
+
+        string[] results = new string[missingOptions.Count];
+        missingOptions.CopyTo(results, 0);
+        return results;
+    }
+}
+
+using System;
+using System.Reflection;
+using System.Collections.Generic;
+
+[AttributeUsage(AttributeTargets.Property)]
+public class CommandLineSwitchAliasAttribute : Attribute
+{
+    public CommandLineSwitchAliasAttribute(string alias)
+    {
+        Alias = alias;
+    }
+
+    public string Alias
+    {
+        get { return _Alias; }
+        set { _Alias = value; }
+    }
+    private string _Alias;
+
+    public static Dictionary<string, PropertyInfo> GetSwitches(
+        object commandLine)
+    {
+        PropertyInfo[] properties = null;
+        Dictionary<string, PropertyInfo> options =
+            new Dictionary<string, PropertyInfo>();
+
+        properties = commandLine.GetType().GetProperties(
+            BindingFlags.Public | BindingFlags.NonPublic |
+            BindingFlags.Instance);
+
+        foreach (PropertyInfo property in properties)
+        {
+            options.Add(property.Name.ToLower(), property);
+            foreach (CommandLineSwitchAliasAttribute attribute in
+                property.GetCustomAttributes(
+                typeof(CommandLineSwitchAliasAttribute), false))
+            {
+                options.Add(attribute.Alias.ToLower(), property);
+            }
+        }
+        return options;
+    }
+}
+
+using System;
+using System.Reflection;
+using System.Collections.Generic;
+
+public class CommandLineHandler
+{
+    // ...
+
+    public static bool TryParse(
+        string[] args, object commandLine,
+        out string errorMessage)
+    {
+        bool success = false;
+        errorMessage = null;
+
+        Dictionary<string, PropertyInfo> options =
+            CommandLineSwitchAliasAttribute.GetSwitches(
+            commandLine);
+
+        foreach (string arg in args)
+        {
+            PropertyInfo property;
+            string option;
+            if (arg[0] == '/' || arg[0] == '-')
+            {
+                string[] optionParts = arg.Split(
+                    new char[] { ':', '=' }, 2);
+                option = optionParts[0].Remove(0, 1).ToLower();
+                if (options.TryGetValue(option, out property))
+                {
+                    success = SetOption(
+                        commandLine, property,
+                        optionParts, ref errorMessage);
+                }
+                else
+                {
+                    success = false;
+                    errorMessage = string.Format(
+                        "Option '{0}' is not supported.",
+                        option);
+                }
+            }
+        }
+        return success;
+    }
+
+    private static bool SetOption(
+        object commandline, PropertyInfo property,
+        string[] optionParts, ref string errorMessage)
+    {
+        bool success;
+        if (property.PropertyType == typeof(bool))
+        {
+            // Last parameters for handling indexers
+            property.SetValue(commandline, true, null);
+            success = true;
+        }
+        else
+        if ((optionParts.Length < 2)
+            || optionParts[1] == ""
+            || optionParts[1] == string.Empty)
+        {
+            // No setting was provided for the switch.
+            success = false;
+            errorMessage = string.Format(
+                "You must specify the value for the {0} option.",
+                property.Name);
+        }
+        else if (
+            property.PropertyType == typeof(string))
+        {
+            property.SetValue(
+                commandline, optionParts[1], null);
+            success = true;
+        }
+        else if (property.PropertyType.IsEnum)
+        {
+            success = TryParseEnumSwitch(
+                commandline, optionParts,
+                property, ref errorMessage);
+        }
+        else
+        {
+            success = false;
+            errorMessage = string.Format(
+                "Data type '{0}' on {1} is not supported.",
+                property.PropertyType.ToString(),
+                commandline.GetType().ToString());
+        }
+        return success;
+    }
+}
+
+## Chapter 17
+
+### Listing B.5: Virtual Computer Detection Using P/Invoke
+
+```
+using System.Runtime.InteropServices;
+
+class Program
+{
+    delegate void MethodInvoker();
+
+    unsafe static int Main(string[] args)
+    {
+        // Assign redpill
+        byte[] redpill = {
+            0x0f, 0x01, 0x0d, 0x0d,    // asm SIDT instruction
+            0x00, 0x00, 0x00, 0x00, 0x00,  // placeholder for an address
+            0xc3};    // asm return instruction
+
+        unsafe
+        {
+            fixed (byte* matrix = new byte[6],
+                redpillPtr = redpill)
+            {
+                // Move the address of matrix immediately
+                // following the SIDT instruction of memory.
+                /*(uint*)&redpillPtr[3] = (uint)&matrix[0];
+                using (VirtualMemoryPtr codeBytesPtr =
+                    new VirtualMemoryPtr(redpill.Length))
+                {
+                    Marshal.Copy(
+                        redpill, 0,
+                        codeBytesPtr, redpill.Length);
+                    MethodInvoker method =
+                        (MethodInvoker)Marshal.GetDelegateForFunctionPointer(
+                            codeBytesPtr, typeof(MethodInvoker));
+                    method();
+                    if (matrix[5] > 0x0d)
+                    {
+                        Console.WriteLine("Inside Matrix! \n");
+                        return 1;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Not in Matrix. \n");
+                        return 0;
+                    }
+                } // fixed
+            } // unsafe
+        }
+    }
+}
+
+public class VirtualMemoryPtr :
+    System.Runtime.InteropServices.SafeHandle
+{
+    public VirtualMemoryPtr(int memorySize) :
+        base(IntPtr.Zero, true)
+    {
+        ProcessHandle =
+            VirtualMemoryManager.GetCurrentProcessHandle();
+        MemorySize = (IntPtr)memorySize;
+        AllocatedPointer =
+            VirtualMemoryManager.AllocExecutionBlock(
+            memorySize, ProcessHandle);
+        Disposed = false;
+    }
+    public readonly IntPtr AllocatedPointer;
+    readonly IntPtr ProcessHandle;
+    readonly IntPtr MemorySize;
+    bool Disposed;
+
+    public static implicit operator IntPtr(
+        VirtualMemoryPtr virtualMemoryPointer)
+    {
+        return virtualMemoryPointer.AllocatedPointer;
+    }
+
+    // SafeHandle abstract member
+    public override bool IsInvalid
+    {
+        get
+        {
+            return Disposed;
+        }
+    }
+
+    // SafeHandle abstract member
+    protected override bool ReleaseHandle()
+    {
+        if (!Disposed)
+        {
+            Disposed = true;
+            GC.SuppressFinalize(this);
+            VirtualMemoryManager.VirtualFreeEx(ProcessHandle,
+            AllocatedPointer, MemorySize);
+        }
+        return true;
+    }
+}
+
+class VirtualMemoryManager
+{
+    /// <summary>
+    /// The type of memory allocation. This parameter must
+    /// contain one of the following values.
+    /// </summary>
+
+    [Flags]
+    private enum AllocationType : uint
+    {
+        /// <summary>
+        /// Allocates physical storage in memory or in the
+        /// paging file on disk for the specified reserved
+        /// memory pages. The function initializes the memory
+        /// to zero.
+        /// </summary>
+        Commit = 0x1000,
+        /// <summary>
+        /// Reserves a range of the process's virtual address
+        /// space without allocating any actual physical
+        /// storage in memory or in the paging file on disk.
+        /// </summary>
+        Reserve = 0x2000,
+        /// <summary>
+        /// Indicates that data in the memory range specified by
+        /// lpAddress and dwSize is no longer of interest. The
+        /// pages should not be read from or written to the
+        /// paging file. However, the memory block will be used
+        /// again later, so it should not be decommitted. This
+        /// value cannot be used with any other value.
+        /// </summary>
+        Reset = 0x80000,
+        /// <summary>
+        /// Allocates physical memory with read-write access.
+        /// This value is solely for use with Address Windowing
+        /// Extensions (AWE) memory.
+        /// </summary>
+        Physical = 0x400000,
+        /// <summary>
+        /// Allocates memory at the highest possible address.
+        /// </summary>
+        TopDown = 0x100000,
+    }
+
+    /// <summary>
+    /// The memory protection for the region of pages to be
+    /// allocated.
+    /// </summary>
+    [Flags]
+    private enum ProtectionOptions : uint
+    {
+        /// <summary>
+        /// Enables execute access to the committed region of
+        /// pages. An attempt to read or write to the committed
+        /// region results in an access violation.
+        /// </summary>
+```

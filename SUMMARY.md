@@ -1068,6 +1068,7 @@
 +   [核心算法：计算机算法实用指南](docs/essential-algorithms-a-practical-approach-to-computer-algori/README.md)
 +   [C# 12.0 核心指南（第 8 版）](docs/essential-c-120-8th-edition/README.md)
 +   [C# 4.0 核心指南 (第3版) (Microsoft .NET 开发系列)](docs/essential-c-40-3rd-edition-microsoft-net-development-series/README.md)
++   [C# 4.0 核心指南（第3版）（Microsoft Windows 开发系列）](docs/essential-c-40-3rd-edition-microsoft-windows-development-ser/README.md)
 +   [C# 4.0 入门指南](docs/essential-c-40-description-based-on-print-version-record---i/README.md)
 +   [C# 5.0 必备指南 (Microsoft Windows 开发系列)](docs/essential-c-50-microsoft-windows-development-series/README.md)
 +   [C# 7.0 实用指南](docs/essential-c-70-essential-c-sharp-seven-point-zero/README.md)

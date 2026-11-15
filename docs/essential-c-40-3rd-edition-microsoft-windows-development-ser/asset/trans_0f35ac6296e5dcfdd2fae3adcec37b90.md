@@ -1,0 +1,145 @@
+
+
+## Lambda 表达式
+
+Introduced in C# 3.0, lambda expressions are a more succinct syntax of **anonymous functions** than anonymous methods, where _anonymous functions_ is a general term that includes both lambda expressions and anonymous methods. Lambda expressions are themselves broken into two types: statement lambdas and expression lambdas. Figure 12.2 shows the hierarchical relationship between the terms.
+
+![](img/ef1bd88b5fdf5fb56f8510479607fe66_534_0.png)
+
+As mentioned earlier in the context of delegates, all anonymous functions are immutable.
+
+## Statement Lambdas
+
+With statement lambdas, C# 3.0 provides a reduced syntax for anonymous methods, a syntax that does not include the delegate keyword and adds the lambda operator, =>. Listing 12.15 shows equivalent functionality to Listing 12.12, except that Listing 12.15 uses a statement lambda rather than an anonymous method.
+
+### Listing 12.15: Passing a Delegate with a Statement Lambda
+
+```csharp
+class DelegateSample
+{
+    // ...
+
+    static void Main(string[] args)
+    {
+        int i;
+        int[] items = new int[5];
+        for (i = 0; i < items.Length; i++)
+        {
+            Console.Write("Enter an integer:");
+            items[i] = int.Parse(Console.ReadLine());
+        }
+        BubbleSort(items,
+            (int first, int second) =>
+            {
+                return first < second;
+            });
+        for (i = 0; i < items.Length; i++)
+        {
+            Console.WriteLine(items[i]);
+        }
+    }
+}
+```
+
+When reading code that includes a lambda operator, you would replace the lambda operator with the words *go to goes to*. For example, you would read `n => { return n.ToString(); }` as “n goes to return n dot ToString.” In Listing 12.15, you would read the second `BubbleSort()` parameter as “integers first and second go to returning the result of first less than second.”
+
+As readers will observe, the syntax in Listing 12.15 is virtually identical to that in Listing 12.12, apart from the changes already outlined. However, statement lambdas allow for an additional shortcut via type parameter inference. Rather than explicitly declaring the data type of the parameters, statement lambdas can omit parameter types as long as the compiler can infer the types. In Listing 12.16, the delegate data type is `bool ComparisonHandler(int first, int second)`, so the compiler verifies that the return type is a bool and infers that the input parameters are both integers (int).
+
+### Listing 12.16: Omitting Parameter Types from Statement Lambdas
+
+```csharp
+// ...
+BubbleSort(items,
+(first, second) =>
+{
+    return first < second;
+});
+// ...
+```
+
+In general, statement lambdas do not need parameter types as long as the compiler can infer the types or can implicitly convert them to the requisite expected types. If the types are specified, however, there must be an exact match for the delegate type. In cases where inference is not possible, the data type is required, although even when it is not required, you can specify the data type explicitly to increase readability; once the statement lambda includes one type, all types are required.
+
+In general, C# requires a lambda expression to have parentheses around the parameter list regardless of whether the data type is specified. Even parameterless statement lambdas, representing delegates that have no input parameters, are coded using empty parentheses (see Listing 12.17).
+
+### Listing 12.17: Parameterless Statement Lambdas
+
+```csharp
+using System;
+// ...
+Func<string> getUserInput =
+() =>
+{
+    string input;
+    do
+    {
+        input = Console.ReadLine();
+    }
+    while(input.Trim().Length==0);
+    return input;
+};
+// ...
+```
+
+The exception to the parenthesis rule is that if the compiler can infer the data type and there is only a single input parameter, the statement lambda does not require parentheses (see Listing 12.18).
+
+### Listing 12.18: Statement Lambdas with a Single Input Parameter
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+// ...
+IEnumerable<Process> processes = Process.GetProcesses().Where(
+    // process => { return process.WorkingSet64 > 2^30; });
+    ...
+```
+
+(In Listing 12.18, Where() returns a query for processes that have a physical memory utilization greater than 1GB)
+
+Note that back in Listing 12.17, the body of the statement lambda includes multiple statements inside the statement block (via curly braces). Although a statement lambda can have any number of statements, typically a statement lambda uses only two or three statements in its statement block.
+
+## Expression Lambdas
+
+Unlike a statement lambda, which includes a statement block and, therefore, zero or more statements, an expression lambda has only an expression, with no statement block. Listing 12.19 is the same as Listing 12.15, except that it uses an expression lambda rather than a statement lambda.
+
+### Listing 12.19: Passing a Delegate with an Expression Lambda
+
+```csharp
+class DelegateSample
+{
+    // ...
+    static void Main(string[] args)
+    {
+        int i;
+        int[] items = new int[5];
+        for (i = 0; i < items.Length; i++)
+        {
+            Console.Write("Enter an integer:");
+            items[i] = int.Parse(Console.ReadLine());
+        }
+        BubbleSort(items, (first, second) => first < second);
+        for (i = 0; i < items.Length; i++)
+        {
+            Console.WriteLine(items[i]);
+        }
+    }
+}
+```
+
+The difference between a statement and an expression lambda is that the statement lambda has a statement block on the right side of the lambda operator, whereas the expression lambda has only an expression (no return statement or curly braces, for example).
+
+Generally, you would read a lambda operator in an expression lambda in the same way you would read a statement lambda: “goes to.” In addition, “becomes” is sometimes clearer. In cases such as the BubbleSort() call, where the expression lambda specified is a predicate (returns a Boolean), it is frequently clearer to replace the lambda operator with “such that.” This changes the pronunciation of the statement lambda in Listing 12.19 to read “first and second such that first is less than second.” One of the most common places for a predicate to appear is in the call to System.Linq.Enumerable's Where() function. In cases such as this, neither “such that” nor “goes to” is needed. We would read names.Where(name => name.Contains(" ")) as “names where names dot Contains a space,” for example. One pronunciation difference between the lambda operator in statement lambdas and in expression lambdas is that “such that” terminology applies more to expression lambdas than to statement lambdas since the latter tend to be more complex.
+
+The anonymous function does not have any intrinsic type associated with it, although implicit conversion is possible for any delegate type as long as the parameters and return type are compatible. In other words, an anonymous method is no more a ComparisonHandler type than another delegate type such as LessThanHandler. As a result, you cannot use the typeof() operator (see Chapter 17) on an anonymous method, and calling GetType() is possible only after assigning or casting the anonymous method to a delegate variable.
+
+Table 12.1 contains additional lambda expression characteristics.
+
+### Table 12.1: Lambda Expression Notes and Examples
+
+| Statement | Example |
+| :--- | :--- |
+| Lambda expressions themselves do not have type. In fact, there is no concept of a lambda expression in the CLR. Therefore, there are no members to call directly from a lambda expression. The . operator on a lambda expression will not compile, eliminating even the option of calls to object methods. | // ERROR: Operator '.' cannot be applied to // operand of type 'lambda expression' Type type = ((int x) => x).ToString(); |
+| Given that a lambda expression does not have an intrinsic type, it cannot appear to the right of an is operator. | // ERROR: The first operand of an 'is' or 'as' // operator may not be a Lambda expression or // anonymous method bool boolean = (int x) => x is Func<int, int>; |
+| Although there is no type on the lambda expression on its own, once assigned it or cast, the lambda expression takes on a type. Therefore, it is common for developers to informally refer to the type of the lambda expression concerning type compatibility, for example. | // ERROR: Lambda expression is not compatible with // Func<int, bool> type. Func<int, bool> expression = (int x) => x; |
+| A lambda expression cannot be assigned to an implicitly typed local variable since the compiler does not know what type to make the variable given that lambda expressions do not have type. | // ERROR: Cannot assign lambda expression to an // implicitly typed local variable var thing = (x => x); |
+

@@ -1,0 +1,11 @@
+for the same memory allocation, introduces memory leaks or corruption into the program, something exacerbated by long-running programs such as web servers. Because of the runtime's built-in support for garbage collection, programmers targeting runtime execution can focus on adding program features rather than “plumbing” related to memory management.
+
+# Language Contrast: C++ — Deterministic Destruction
+
+The exact mechanics for how the garbage collector works are not part of the CLI specification; therefore, each implementation can take a slightly different approach. (In fact, garbage collection is one item not explicitly required by the CLI.) One key concept that may take C++ programmers a little getting used to is that garbage-collected objects are not necessarily collected deterministically (at well-defined, compile-time-known locations). In fact, objects can be garbage-collected anytime between when they are last accessed and when the program shuts down. This includes collection prior to falling out of scope, or waiting until well after an object instance is accessible by the code.
+
+It should be noted that the garbage collector only takes responsibility for handling memory management. It does not provide an automated system for managing resources unrelated to memory. Therefore, if an explicit action to free a resource (other than memory) is required, programmers using that resource should utilize special CLI-compatible programming patterns that will aid in the cleanup of those resources (see Chapter 9).
+
+# Garbage Collection on .NET
+
+The .NET platform implementation of garbage collection uses a generational, compacting, mark-and-sweep-based algorithm. It is generational because objects that have lived for only a short period will be cleaned up sooner than objects that have already survived garbage collection sweeps because they were still in use. This conforms to the general pattern of memory allocation that objects that have been around longer will continue to outlive objects that have only recently been instantiated.
