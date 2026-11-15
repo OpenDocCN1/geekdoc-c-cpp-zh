@@ -1,0 +1,29 @@
+# 4.3 Problem Solving Applied: GPS
+
+The Global Positioning System (GPS) originated as a constellation of 24 satellites that broadcasts position, velocity, and time information worldwide. A GPS receiver, using data received from a minimum of four satellites, can determine very precise measurements of the receiver's location.
+
+To determine a GPS receiver's location, the time information received from a satellite broadcast is used to determine the transit time of the broadcast. The **transit time**, or the time it takes for the data to travel between the satellite and receiver, is used to calculate the distance between the satellite and the receiver. This distance is referred to as the **pseudorange**. Assuming that data travels at the speed of light, the pseudorange, $p$, is defined as:
+
+```
+P = (t_r - t_b)C
+```
+
++   where:
++   t_r is the time the data was received,
++   t_b is the time the data was broadcast,
++   c is the speed of light, and
++   (t_r - t_b) is the transit time.
+
+The position and pseudorange of a satellite define a sphere centered at the satellite, with a radius equal to the pseudorange, as illustrated in Figure 4.5.
+
+![](bbox=[0.32, 0.49, 0.52, 0.59])
+
+Figure 4.5 Cross-sectional view of sphere centered at satellite.
+
+The GPS receiver is located somewhere on the surface of this sphere. Using position and time data from four satellites, the location of the receiver can be determined by the intersection of the surfaces of the four spheres.[1]
+
+Assume the transit time for four satellite broadcasts is known relative to a GPS receiver. Write a program that prompts the user to enter the satellite ID code and transit time for each of the four satellites. The program should then compute and print the pseudorange for each satellite and the ID code of the satellite that is closest to the GPS receiver.
+
+# 1. PROBLEM STATEMENT
+
+Given the satellite ID and the transit time of broadcasts from four satellites, compute and print the pseudorange for each satellite. Also print the satellite ID code of the satellite that is closest to the GPS receiver.

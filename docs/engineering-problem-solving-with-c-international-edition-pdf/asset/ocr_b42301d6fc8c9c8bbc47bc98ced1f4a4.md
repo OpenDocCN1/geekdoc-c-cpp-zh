@@ -1,0 +1,31 @@
+```
+while(top<=bottom)
+{
+    // Determine mid point of list.
+    mid = (top + bottom)/2;
+
+    // Value is found.
+    if(list[mid] == value)
+        return mid;
+
+    // Look for value in top half of list.
+    else if(list[mid] > value)
+        bottom=mid-1;
+
+    // Look for value in bottom half of list.
+    else
+        top=mid+1;
+}
+// Value was not found in the list.
+return -1;
+```
+
++   1. Modify the sequential search on an ordered list to return a count of the number of times a specified value occurred in an ordered list.
++   
++   2. Modify the binary-search function so that it correctly searches a list that is ordered in descending order instead of ascending order. Write a main program to test your function.
+
+# 7.6 Problem Solving Applied: Tsunami Warning Systems
+
+A tsunami is a series of water waves that occurs following a large displacement of water. Underwater explosions, such as volcanoes and earthquakes, have the potential to displace large volumes of water, resulting in tsunamis that flood low-lying areas. The Pacific Tsunami Warning Center (PTWC) uses seismic data and real-time oceanographic data to calculate possible threats and issue warnings when a tsunami is detected. Oceanographic data collected from tide gauges and buoys are monitored to determine the formation of a tsunami. The National Oceanic and Atmospheric Administration (NOAA) National Data Buoy Center (NDBC) develops and maintains a network of data-collecting buoys and coastal stations. Real-time data files are generated that contain the last 45 days of recorded data. Raw data from these files is sampled and analyzed to generate oceanographic data, including wind direction, wind speed, significant wave height, average wave period, and dominant wave period. To support this network and other data-collection projects, the NDBC employs a variety of professionals, including engineers, meteorologists, oceanographers, and computer scientists.
+
+In this application, we use recorded data to calculate the significant wave height (WVHT) over a 20-minute sampling period. The significant wave height is measured in meters and is defined as the average of the highest one-third of all wave heights recorded during a 20-minute

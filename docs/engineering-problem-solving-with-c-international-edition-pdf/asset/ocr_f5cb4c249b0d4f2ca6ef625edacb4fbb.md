@@ -1,0 +1,33 @@
+# Practice!
+
++   2. Modify your stack class to be a stack of type double.
++   3. Modify your stack class to be a stack of type point.
+
+# 9.8 The C++ Standard Template Library
+
+Writing programmer-defined functions to insert and remove elements from a linked data structure requires careful memory management and reassignment of pointers, as illustrated in the development of a programmer-defined type to implement the concept of a binary tree, provided in Chapter 10. However, as an alternative to implementing your own library of data structures, you may choose to use the container classes defined in the C++ STL. A container class is a class, such as the vector class, that is designed to hold objects. The SGI website (http://www.sgi.com/tech/stl/) is a good source for complete and current documentation. Our first example will illustrate the use of the list class.
+
+# The list class
+
+The compiler directive #include<list> must be included to use the list class. When defining a new list, the data type of the objects in the list must be specified. The following type declaration statement defines an empty list of integers, named alist:
+
+```
+list<int> alist;
+```
+
+To systematically insert and remove elements from a list, we must be able to traverse the list. The list class provides a special type of pointer, called an iterator, to support accessing successive elements in a list. An iterator is basically a pointer to an element in a list. We can define an iterator named iter to access elements in our list of integers with the following statement:
+
+```
+list<int>::iterator iter;
+```
+
+The list class includes numerous member functions to support a list structure, including functions to insert and remove elements from a list. Table 9.2 lists several of the commonly used member functions of the list class.
+
+| Member Function | Description |
+|---|---|
+| begin() | returns an iterator that points to first element in the list. |
+| end() | returns an iterator that points to one past the last element in the list. |
+| empty() | returns true if the list is empty; false otherwise. |
+| insert(iterator, value) | insert value at location specified by the iterator. |
+| remove(value) | remove all instances of value from the list. |
+| sort() | arranges elements in ascending order. |

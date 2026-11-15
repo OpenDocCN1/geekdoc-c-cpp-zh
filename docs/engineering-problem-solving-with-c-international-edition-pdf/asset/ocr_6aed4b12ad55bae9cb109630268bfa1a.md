@@ -1,0 +1,48 @@
+Note that it is not necessary to show the contents of ptr, as long as the object to which it points is specified.
+
+Consider this set of statements:
+
+```
+// Declare and initialize objects.
+int a(5), b(9), *ptr(&a);
+...
+// Assign the value pointed to by ptr to b.
+b = *ptr;
+```
+
+This last statement is read as “b is assigned the value at the address contained in ptr,” or “b is assigned the value pointed to by ptr.” The memory snapshot before the assignment statement is executed is the following:
+
+int* ptr [ ]
+  |
+int a   [5]   int b [9]
+
+The memory snapshot after the assignment statement is executed is the following:
+
+int* ptr [ ]
+  |
+int a   [5]   int b [5]
+
+Thus, b is assigned the value pointed to by ptr. Now consider this set of statements:
+
+```
+// Declare and initialize objects.
+// int a=5, b=9, *ptr=&a;
+...
+// Assign the value of b to the object
+// pointed to by ptr.
+*ptr = b;
+```
+
+The assignment statement in this set of statements is read “what is pointed to by ptr is assigned the value of b.” The memory snapshot before the assignment statement is executed is the following:
+
+int* ptr [ ]
+  |
+int a   [5]   int b [9]
+
+The memory snapshot after the assignment statement is executed is the following:
+
+int* ptr [ ]
+  |
+int a   [9]   int b [9]
+
+Thus, the value pointed to by ptr is assigned the value in b.

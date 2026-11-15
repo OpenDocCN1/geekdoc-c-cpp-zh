@@ -1,0 +1,7 @@
+# C++ 工程问题求解 国际版 PDF电子书
+
+> 原文：[Engineering Problem Solving with C++ International Edition PDF EBook]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)

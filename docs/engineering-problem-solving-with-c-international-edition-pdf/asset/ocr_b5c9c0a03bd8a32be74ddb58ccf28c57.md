@@ -1,0 +1,47 @@
+the function and to document the steps. We also use a comment line with dashes to separate a programmer-defined function from the main function and from other programmer-defined functions.
+
+All functions that return a value must include a return statement. The general form of the return statement is
+
+```
+return expression;
+```
+
+The expression specifies the value to be returned to the statement that referenced the function. The expression type used in the return statement should match the return_type indicated in the function definition to avoid potential errors. The cast operator (discussed in Chapter 2) can be used to explicitly specify the type of the expression if necessary. A void function does not return a value, and thus has this general function header:
+
+```
+void function_name(parameter declarations)
+```
+
+The return statement in a void function is optional, and it does not contain an expression. The general form is
+
+```
+return;
+```
+
+| Function Definition: A function definition consists of a function header followed by a statement block. |
+|---|
+| Syntax:
+return-type function name(parameter list) //function header
+{
+ return;
+ //Statement block
+} |
+| Examples:
+int main()
+{
+ cout << "hello world" << endl;
+ return 0;
+}
+
+void drawBlock(ostream& out, int size)
+{
+ int width, height;
+ for(height=0; height<size; ++height)
+ {
+  for(width=0; width<size; ++width)
+  {
+   out << " *";
+  }
+  out << endl;
+ }
+} |

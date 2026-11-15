@@ -1,0 +1,28 @@
+```
+cout << "Year: " << *(year+maxK) << " Quarter: "
+<< *(qtr+maxK) << endl;
+return 0;
+}
+/*............................................................*/
+```
+
+# 5. TESTING
+
+The output from the program using the data from the hand example follows:
+
+Maximum El Nino conditions in Data File
+Year: 1998 Quarter: 1
+
++   1. Modify the program to find and print the maximum La Niña Conditions.
++   2. Modify the program to find the conditions closest to zero. These would be the closest to normal conditions.
++   3. Modify the program so that it prints all years and quarters with El Niño conditions.
++   4. Modify the program so that it counts the number of years with El Niño conditions and the number of La Niña conditions. Print both values.
++   5. Modify the program so that it computes and prints the average intensity for the years with El Niño conditions.
+
+# 9.4 Dynamic Memory Allocation
+
+Dynamic memory allocation allows a program to allocate memory for objects during execution of the program rather than determining memory requirements at the time the program is compiled. This is important when a program uses an array that size cannot be determined until the program is executing; without dynamic memory allocation, the program would have to specify the maximum size anticipated for the array. For systems with limited memory, it is possible that there would not be enough memory to run a program if all arrays had to be specified to the maximum size anticipated. Dynamic memory is allocated from a region of available memory referred to as the program's heap. Dynamic memory is allocated on the heap using the new operator and returned to the heap using the delete operator.
+
+# The new Operator
+
+Dynamic memory allocation is specified using the keyword new, followed by a type specifier to indicate the data type of the object to be allocated. The new operator returns the address of

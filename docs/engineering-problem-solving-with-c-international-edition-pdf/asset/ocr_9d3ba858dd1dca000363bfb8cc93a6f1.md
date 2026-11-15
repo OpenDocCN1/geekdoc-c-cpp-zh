@@ -1,0 +1,58 @@
+```
+// Function prototype.
+double mean(const double x[], int n);
+
+double variance(const double x[], int n) // Function header.
+{
+    // Declare objects.
+    double sum(0), mu;
+
+    // Determine variance.
+    mu = mean(x,n);
+    for (int k=0; k<n; ++k)
+    {
+        sum += (x[k] - mu)*(x[k] - mu);
+    }
+
+    // Return variance.
+    return sum/(n-1);
+}
+```
+
+```
+/* This function returns the standard deviation
+ * of an array with n elements.
+ */
+```
+
+```
+// Declare function prototypes.
+double variance(const double x[], int n);
+
+double std_dev(const double x[], int n) // Function header.
+{
+    // Return standard deviation.
+    return sqrt(variance(x,n));
+}
+```
+
+```
+/* ---------------------------------------------------------------------- */
+```
+
+# Practice!
+
+Assume that the array x is defined and initialized with the following statement:
+
+```
+double x[]={2.5, 5.5, 6.0, 6.25, 9.0};
+```
+
+Compute by hand the values returned by the following function references:
+
++   1. maxval(x,5)
++   2. median(x,5)
++   3. variance(x,5)
++   4. std_dev(x,5)
++   5. minval(x,4)
++   6. median(x,4)

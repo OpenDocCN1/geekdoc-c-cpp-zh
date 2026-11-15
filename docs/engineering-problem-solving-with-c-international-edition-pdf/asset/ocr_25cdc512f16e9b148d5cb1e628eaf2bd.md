@@ -1,0 +1,20 @@
+# # Preface
+
+The C++ programming language is derived from the C programming language, with added features to support object-oriented programming through the use of classes and programmer-defined types. The features of the C programming language that make it attractive for system-level operations and embedded programming are also supported by C++, making C++ one of the most powerful and versatile programming languages available—and a good choice for an introduction to computing course for scientists and engineers. This text was written to introduce engineering problem solving with C++ and also the object-oriented features of the C++ programming language. Our objectives are the following:
+
++   * to develop a consistent methodology for solving engineering problems
++   * to present the object-oriented features of C++, while focusing on the fundamentals of programming and problem solving
++   * to illustrate a problem-solving process with C++ through a variety of engineering examples and applications
++   * to provide an easy-to-understand, integrated introduction to data types, functions, and container classes defined in the C++ Standard Template Library
+
+To accomplish these objectives, Chapter 1 presents a five-step process that is used consistently in the rest of the text for solving engineering problems. Chapter 2 introduces the built-in data types supported by C++ and provides an introduction to classes, pre-defined objects, and member functions that support standard input and output. Chapters 3–6 present the fundamental capabilities of C++ for solving engineering problems, including control structures, data files, functions, and programmer-defined data types. Chapters 7 and 8 present arrays, vectors, and the string class. Chapter 9 introduces the use of pointers, dynamic memory allocation, and linked data structures. Chapter 10 provides a more in-depth look at some advanced topics, including function templates, class templates, recursive member functions, inheritance, and virtual functions. Throughout all these chapters, we present a large number of examples from many different engineering, science, and computer science disciplines. The solutions to these examples are developed using the five-step process and Standard C++.
+
+# ## Features of the Third Edition
+
+The third edition of our text:
+
++   * Introduces students to three integrated development environments (IDEs)
++   * NetBeans
++   * MS Visual Studio
++   * Includes new engineering applications using global positioning system (GPS) data and data used with tsunami warning systems.
++   * Includes coverage of bitwise operators.
