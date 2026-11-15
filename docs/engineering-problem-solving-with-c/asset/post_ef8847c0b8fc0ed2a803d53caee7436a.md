@@ -1,0 +1,40 @@
+
+## 1.3 Computing Systems
+
+Before we begin our presentation of C++, a brief discussion of computing systems will be useful. A computing system is a complete, working system. The system includes not only a computer, but also software and peripheral devices. A computer is a machine that is designed to perform operations that are specified with a set of instructions called software. Computer hardware refers to the physical parts of the system that have mass and can actually be touched. Hardware includes the computer and peripheral devices such as the keyboard, the mouse, the display, the hard disk, the printer, and even the ink. Computer software refers to programs that reside and run electronically on the hardware such as compilers, operating systems, and application programs. Software provides a human computer interface (HCI) and defines the operations that a computer will perform.
+
+### Computer Hardware
+
+Recall Menabrea's description of Babbage's Analytical Engine as a machine capable of solving any problem using inputs, outputs, and programs written on punch cards. In 1946, John von Neumann proposed a computing model as shown in Figure 1.1 that is still used today in the design of most digital computers. In Von Neumann's model, we see an input device, an output device, a memory unit, and a machine that consists of a control unit and an arithmetic logic unit (ALU) with an accumulator. The memory unit stores data and the control unit controls the transfer and processing of data. The control unit retrieves and interprets instructions stored in memory, accepts data from an input device such as a keyboard or a mouse, sends data to a specified output device such as a printer or a display, and stores data in the memory unit.
+
+Suppose that we wrote a program to instruct a computer to add two values and display the result. The control unit will interpret the executable instructions and send data to the ALU. The ALU will perform the addition and the control unit will send the result to the output device. Together the control unit and the ALU are referred to as the Central Processing Unit or CPU. The accumulator in the ALU is a collection of high-speed registers for the temporary storage of values and results of arithmetic and logic operations. The time required to access the memory unit is large compared to the time required by the ALU to perform an arithmetic or logic operation. Thus, the use of registers within the ALU increases the overall speed of an operation. The size of each register in the ALU corresponds to the **word size** of the computer. Common word sizes are 16 bits, 32 bits, and 64 bits, depending on the design of the processor. Note that a **bit** represents a binary digit, and the word size of a processor is a power of 2.
+
+![](img/0235a4ea835dc4575bd036e024a533b3_31_0.png)
+
+Figure 1.1 von Neumann computing model.
+
+### Computer Software
+
+![](img/0235a4ea835dc4575bd036e024a533b3_32_0.png)
+
+Figure 1.2 Software interface to the computer.
+
+Computer software contains the instructions or commands that we want the computer to perform. There are several important categories of software, which include operating systems, software tools, and language compilers. Figure 1.2 illustrates the interaction between these categories of software and the computer hardware. We now discuss each of these software categories in more detail.
+
+**Operating Systems.** Some software, such as the operating system, typically comes with the computer hardware when it is purchased. The operating system provides an interface between you (the user) and the hardware by providing a convenient and efficient environment in which you can select and execute the software on your system.
+
+Operating systems also contain a group of programs called utilities that allow you to perform functions such as printing files, copying files, and listing the files that you have saved on file system. Whereas these utilities are common to most operating systems, the environment for executing commands vary from operating system to operating system. For example, to list your files with UNIX (a powerful operating system frequently used with workstations), or Linux (UNIX for PCs) from the command line is ls. Some operating systems simplify the interface with the operating system by using icons and menus; examples of user-friendly Graphical User Interface (GUI) systems, are the Macintosh environment and the Windows environment.
+
+Because C++ programs can be run on many different platforms or computer systems and because a specific computer can use different operating systems, it is not feasible to discuss the wide variety of operating systems that you might use while taking this course. We assume that your professor will provide the specific operating system information that you need to know to use the computers available at your university; this information is also contained in the operating system manuals, and provided via help menus.
+
+**Application Software.** Numerous application programs are available to perform common operations. For example, word processors such as Word and Pages are application programs that have been written to help you create formatted documents such as resumes, newsletters and reports. Word processors have capabilities that allow you to enter mathematical equations and to check your spelling and grammar. Word processors also provide tools that facilitate the creation of charts and graphics with text and headers. Text editors, such as vi and Emacs, are provided for the creation of text files such as C++ application programs and data files and may include compilers and a user-friendly environment for developing application programs.
+
+Spreadsheet programs are software tools that allow you to easily work with data that can be displayed in a grid of rows and columns. Spreadsheets were initially used for financial and accounting applications, but many science and engineering problems can be easily solved using spreadsheets. Most spreadsheet packages include plotting capabilities, so they can be especially useful in analyzing and displaying information. Lotus 1-2-3, OpenOffice, and Excel are popular spreadsheet packages.
+
+Another popular group of software tools are database management software, such as MySQL and Oracle. These programs allow you to efficiently store and retrieve large amounts of data. Databases are used by many Web applications and search engines as well as organizations such as banks, hospitals, hotels, and airlines. Scientific databases are also used to analyze large amounts of data. Meteorological data is an example of scientific data that require large databases for storage and analysis.
+
+Computer-aided design software, such as AutoCAD, SOLIDWORKS, Civil 3D, and Architectural Desktop, allow you to define objects and then manipulate them graphically. For example, you can define an object and then view it from different angles or observe a rotation of the object from one position to another.
+
+There is also some very powerful mathematical computation software such as MATLAB, Mathematica, and Maple. Not only do these tools have very powerful mathematical commands, but they are also graphics tools that provide extensive capabilities for generating graphs. This combination of computational power and visualization power make them particularly useful tools for engineers. Appendix C contains a discussion on using MATLAB to plot data from a data file generated by a C++ program.
+
+If an engineering problem can be solved using a software tool, it is usually more efficient to use the software tool than to write a program in a computer language to solve the problem. However, many problems cannot be solved using software tools, or a software tool may not be available on the computer system that must be used for solving the problem; thus, we also need to know how to write programs using computer languages. The distinction between a software tool and a computer language is becoming less clear as some of the more powerful tools such

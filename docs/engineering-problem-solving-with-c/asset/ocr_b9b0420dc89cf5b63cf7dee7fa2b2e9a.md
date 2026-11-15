@@ -1,0 +1,51 @@
+```
+#include <iostream> //Required for cout
+#include <cctype> //Required for toupper()
+using namespace std;
+//Function prototypes.
+void stringupper(char*);
+int countchar(const char*, char);
+int main()
+{
+   // Declare and initialize objects.
+   char strg1[] = "abbcfgwdibbw";
+   char *ptr_strg1 = strg1, ch='B';
+// Convert string to uppercase.
+stringupper(ptr_strg1);
+cout << "The letter " << ch << " appears "
+     << countchar(ptr_strg1, ch) << " times in the string "
+     << ptr_strg1 << endl;
+return 0;
+}
+```
+
+```
+/**
+*----------------------------------------------------------------------*/
+/*
+*
+* This function counts the number of times the character ch *
+* appears in the string pointed to by ptr_strg.              *
+*                                                          *
+*/
+int stringupper(const char * ptr_strg, char ch)
+{
+   // Declare and initialize local objects.
+   int cnt(0);
+// While not end of string.
+while(*ptr_strg)
+{
+   // Look for ch and increment cnt.
+   if( *ptr_strg == ch)
+      cnt++;
+// Mover pointer to next character
+   ptr_strg++;
+}
+   return cnt;
+}
+/**----------------------------------------------------------------------*/
+```
+
+This program generates the following output:
+
+The letter B appears 5 times in the string ABCCFGWDBIBBW

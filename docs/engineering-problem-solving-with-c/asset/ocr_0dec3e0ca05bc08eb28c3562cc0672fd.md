@@ -1,0 +1,62 @@
+```
+/*------------------------------------------------------------*/
+/*
+ * This function returns the average power
+ * of an array x with n elements.
+ */
+double ave_power(double x[], int n)
+{
+  // Declare and initialize objects.
+  double sum(0);
+
+  // Determine average power.
+  for (int k=0; k<n; ++k)
+  {
+    sum += x[k]*x[k];
+  }
+
+  // Return average power.
+  return sum/n;
+}
+```
+
+```
+/*------------------------------------------------------------*/
+/*
+ * This function returns the average magnitude
+ * of an array x with n values.
+ */
+double ave_magn(double x[], int n)
+{
+  // Declare and initialize objects.
+  double sum(0);
+
+  // Determine average magnitude.
+  for (int k=0; k<n; ++k)
+  {
+    sum += abs(x[k]);
+  }
+
+  // Return average magnitude.
+  return sum/n;
+}
+```
+
+```
+/*------------------------------------------------------------*/
+/*
+ * This function returns a count of the number
+ * of zero crossings in an array x with n values.
+ */
+int crossings(double x[], int n)
+{
+  // Declare and initialize objects.
+  int count(0);
+
+  // Determine number of zero crossings.
+  for (int k=0; k<(n-1); ++k)
+  {
+    if (x[k]*x[k+1] < 0)
+      count++;
+}
+```

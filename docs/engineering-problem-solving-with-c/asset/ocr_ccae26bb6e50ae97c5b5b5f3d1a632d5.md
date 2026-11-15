@@ -1,0 +1,51 @@
+```
+// Ouput string before and after call to function.
+cout << ptr_str1 << endl;
+stringupper (ptr_str1);
+cout << ptr_str1 << endl;
+return 0;
+}
+/* -------------------------------------------------------------------*/
+/*                                                                     */
+/*                                                                     */
+/*    This function converts each character in the string              */
+/*    pointed to by ptr_strg to uppercase.                             */
+/*                                                                     */
+/*-------------------------------------------------------------------*/
+void stringupper(char *ptr_strg)
+{
+    // While not end of string.
+    while(*ptr_strg)
+    {
+        // Convert character to uppercase
+        /*ptr_strg = toupper(*ptr_strg);*/
+
+        // Mover pointer to next character
+        ptr_strg++;
+    }
+}
+/*-------------------------------------------------------------------*/
+```
+
+> Notice the order of operators in the function prototype and the function header. When passing a pointer by reference the address operator must follow the dereference operator.
+
+In this version of the program, the string is converted to uppercase just as it was in program chapter9_6. However, in this version, incrementing the formal parameter in the function changes the argument in main because a pass by reference is used. After the call to the function stringupper (), the pointer ptr_strg1 points to the null character at the end of the string. Thus, the uppercase string will not be printed. A sample output from this program is
+
+```
+abbcfgwdbbibw
+```
+
+In both examples, the function stringupper() was able to modify the string being pointed to by the formal parameter.
+
+Sometimes it is desirable to pass a pointer as an argument to a function and also ensure that the function will not inadvertently modify the object being pointed to. We can use the const modifier in the function prototype, and the function header, to protect the object being pointer to, as illustrated in the next example. The definition for the function stringupper() is not included in this example:
+
+```
+/* -------------------------------------------------------------------*/
+/*                                                                     */
+/*    Program chapter9_7                                             */
+/*                                                                     */
+/*    This program counts the number of times a specified             */
+/*    letter appears in an uppercase string.                          */
+/*                                                                     */
+/*-------------------------------------------------------------------*/
+```

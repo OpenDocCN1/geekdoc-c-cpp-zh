@@ -1,0 +1,40 @@
+# SIMPLE C++ PROGRAMS
+
+# CHAPTER OUTLINE
+
++   Objectives
++   2.1 Program Structure
++   2.2 Constants and Variables
++   2.3 C++ Classes
++   2.4 Building C++ Solutions with IDEs: Xcode
++   2.5 C++ Operators
++   2.6 Standard Input and Output
++   2.7 Building C++ Solutions with IDEs: NetBeans
++   2.8 Basic Functions Included in the C++ Standard Library
++   2.9 Problem Solving Applied: Velocity Computation
++   2.10 System Limitations
++   Summary, Key Terms, C++ Statement Summary, Style Notes, Debugging Notes, Problems
+
+# OBJECTIVES
+
+In this chapter, we develop problem solutions containing:
+
++   * simple arithmetic computations
++   * user-supplied information from the keyboard
++   * information printed on the screen
++   * programmer-defined data types
+
+# 2.1 Program Structure
+
+In this section, we analyze the structure of a specific C++ program, and then we present the general structure of a C++ program. The program that follows was first introduced in Chapter 1; it computes and prints the distance between two points.
+
+```
+/*-------------------------------------------------------------*/
+/*
+ Program chapter1_1
+*/
+/*
+ This program computes the
+ distance between two points.
+*/
+```

@@ -1,0 +1,263 @@
+
+a set of 100 temperature measurements that we want to use to perform several computations. Obviously, we do not want to use 100 different names for the temperature measurements, so we need a method for working with a group of values using a single identifier. One solution to this problem uses a data structure called an array.
+
+## one-dimensional array
+
+A one-dimensional array can be visualized as a list of values arranged in either a row or a column, as follows:
+
+```
+double s[6] = {0.5, 0.0, -0.1, 0.2, 0.15, 0.2};
+[s[0] s[1] s[2] s[3] s[4] s[5]]
+
+char v[5] = {'a', 'e', 'i', 'o', 'u'};
+[v[0] v[1] v[2] v[3] v[4]]
+```
+
+## elements offsets
+
+We assign a type and an identifier to an array and then distinguish between elements, or values, in the array using offsets, also referred to as indicies or subscripts. Thus, by using the example arrays, the first value in the s array is referenced by s[0], the second value in the s array is referenced by s[1] and the last value in array v is referenced by v[4]. In C++, the array identifier holds the address of the first element, so the offset always starts at 0 and is incremented by 1.
+
+![](img/0235a4ea835dc4575bd036e024a533b3_360_0.png)
+
+## Definition and Initialization
+
+An array is defined using declaration statements. An integer expression in brackets follows the identifier and specifies the number of elements in the array. Note that all elements in an array must be of the same data type. The declaration statements for the two example arrays are as follows:
+
+```
+double s[6];
+char v[5];
+```
+
+## initialization list
+
+An array can be initialized with declaration statements or assigned values with program statements. To initialize an array with a declaration statement, we use an initialization list. An initialization list is a block of values, specified in a sequence and separated by commas. The following statements define and initialize the sample arrays s and v:
+
+```
+double s[6]={0.5, 0.0, -0.1, 0.2, 0.15, 0.2};
+char v[5]={'a', 'e', 'i', 'o', 'u'};
+```
+
+If the initializing sequence is shorter than the array, then the rest of the values are initialized to zero. Hence, the following statement defines an integer array of 100 values; each value is also initialized to zero:
+
+```
+int t[100]={0};
+```
+
+If an array is specified without a size, but with an initialization list, the size is defined to be equal to the number of values in the sequence:
+
+```
+double s[]={0.5, 0.0, -0.1, 0.2, 0.15, 0.2};
+int t[]={0, 1, 2, 3};
+```
+
+A memory snapshot of s and t is given below:
+
+```
+double s   0.5  0.0  -0.1  0.2  0.15  0.2  <-- data values
+               [0]  [1]  [2]  [3]  [4]  [5]  <-- offsets
+int t      0   1   2   3   <-- data values
+               [0][1][2][3]   <-- offsets
+```
+
+The size of an array must be specified in the declaration statement, using either a constant within brackets or by an initialization list.
+
+![](img/0235a4ea835dc4575bd036e024a533b3_361_0.png)
+
+## Statement Box 7.1
+
+Array Declaration Statements: The declaration of a one-dimensional array allocates a consecutive block of memory addresses, and the name of the array holds the first address in the block. The array name and an offset are used to access individual values, thus the data type of each value must be the same.
+
+```
+Syntax:
+data type identifier[size] [= initialization list];
+```
+
+```
+Example:
+int data[5]; //allocates consecutive memory for 5 integer values
+Memory diagram: data [?][?][?][?][?]
+Offsets: 0 1 2 3 4
+
+char vowels[5] = {'a', 'e', 'i', 'o', 'u'}; //allocates and
+initializes
+Memory diagram: vowels ['a'|'e'|'i'|'o'|'u']
+Offsets: 0 1 2 3 4
+
+double t[100] = {0.0}; //allocates and initialized all values to 0.0
+Memory diagram: t [0|0|0|0|...|0]
+Offsets: 0 1 2 ... 99
+```
+
+```
+Valid References:
+cout << vowels[0];
+cout << t[2];
+```
+
+```
+Invalid References:
+cout << vowels[5]; //invalid offset.
+cout << t[-1]; //invalid offset
+```
+
+Arrays can also be assigned values after they have been declared. For example, suppose that we want to fill a double array t with the values 0.0, 0.5, 1.0, 1.5, ..., 10.0. Because there are 21 different values, listing the values in an initialization list would be tedious, but assigning the values to the array within a for loop is very easy, as illustrated in program chapter7_1.
+
+## Pseudocode
+
+```
+main: set i to 0
+while i<21
+assign i*0.5 to t[i]
+increment i by 1
+print heading
+set i to 0
+while i<21
+print t[i]
+increment i by 1
+```
+
+```
+/********************************************************************
+/* Program chapter7_1
+/*
+/* This program assigns a set of values to a
+/* one-dimensional array, then prints a list of the array
+/* offsets and values to standard output.
+/* ********************************************************************/
+```
+
+```
+#include<iostream> //Required for cout.
+#include<iomanip> //Required for setw().
+using namespace std;
+int main()
+{
+//Declare variables.
+double t[21]; //The array.
+int i; //The loop index.
+//Assign 21 value to array t.
+for(i = 0; i<21; ++i)
+{
+t[i] = i*0.5; //i provides offset and value.
+}
+//Print list of array offsets and values.
+//Print heading.
+cout << "21 values assigned to t"<< endl
+<< "Offset Value" << endl;
+//Print list inside for loop.
+for(i = 0; i<21; ++i)
+{
+cout << setw(6) << i << setw(10) << t[i] << endl;
+}
+return 0;
+}
+```
+
+The output from program chapter7_1 is given below.
+
+| Offset | Value |
+|--------|-------|
+| 0 | 0 |
+| 1 | 0.5 |
+| 2 | 1 |
+| 3 | 1.5 |
+| 4 | 2 |
+| 5 | 2.5 |
+| 6 | 3 |
+| 7 | 3.5 |
+| 8 | 4 |
+| 9 | 4.5 |
+| 10 | 5 |
+| 11 | 5.5 |
+| 12 | 6 |
+| 13 | 6.5 |
+| 14 | 7 |
+| 15 | 7.5 |
+| 16 | 8 |
+| 17 | 8.5 |
+| 18 | 9 |
+| 19 | 9.5 |
+| 20 | 10 |
+
+It is important to recognize that the final offset value is 20, not 21. This is because the offset of the first element is 0, not 1, thus the offset of the last element is 20, not 21. It is a common mistake to specify an offset that is one greater than the largest valid offset. This error can be very difficult to find because it is not reported by the compiler and it accesses a memory location outside of the declared memory space of the array. Accessing memory locations outside the bounds of an array can produce execution errors such as “segmentation fault” or “bus error”. More often this error is not detected during the program execution, but will cause unpredictable program results, since your program has potentially modified a memory location allocated for a different use.
+
+![](img/0235a4ea835dc4575bd036e024a533b3_363_0.png)
+
+Arrays are often used to store information that is read from data files. For example, suppose that we have a data file named sensor3.dat that contains ten time and motion measurements collected from a seismometer. Program chapter7_2 illustrates how these values can be read from the data file and assigned to the arrays named time and motion.
+
+```
+/*-----------------------------------------------*/
+/* Program chapter7_2 */
+/* */
+/* This program reads time and motion values from an input file */
+/* and assigns the values to the arrays time and motion. */
+/* Input values are printed to standard output for verification. */
+/*------------------------------------------------*/
+#include<iostream> //Required for cout
+#include<fstream> //Required for ifstream
+
+using namespace std;
+
+int main()
+{
+// Declare objects.
+double time[10], motion[10];
+ifstream sensor3("sensor3.dat");
+
+// Check for successful open and read data into arrays.
+if (!sensor3.fail())
+{
+    for(int k=0; k<10; ++k)
+    {
+        sensor3 >> time[k] >> motion[k];
+        cout << time[k] << '\t' << motion[k] << endl;
+    }
+}
+else
+{
+    cout << "Could not open file sensor3.dat. Goodbye." << endl;
+}
+return 0;
+}
+```
+
+If the data file sensor3.dat held the set of data
+
+```
+0.0   1
+0.1   1
+0.2   2.5
+0.3   1.7
+0.4   2
+0.5   2.5
+0.6   3.5
+0.7   1.5
+0.8   1.5
+0.9   1
+```
+
+then the arrays time and motion would contain the following values:
+
+| double time | double motion |
+| :--- | :--- |
+| 0.0 | 1.0 |
+| 0.1 | 1.0 |
+| 0.2 | 2.5 |
+| 0.3 | 1.7 |
+| 0.4 | 2.0 |
+| 0.5 | 2.5 |
+| 0.6 | 3.5 |
+| 0.7 | 1.5 |
+| 0.8 | 1.5 |
+| 0.9 | 1.0 |
+
+The output from program chapter7_2 is given below:
+
+```
+0   1
+0.1 1
+0.2 2.5
+0.3 1.7
+0.4 2
+0.5 2.5
+```

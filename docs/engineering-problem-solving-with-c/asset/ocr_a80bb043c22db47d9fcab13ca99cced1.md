@@ -1,0 +1,42 @@
+# Practice 8.3 continued
+
+```
+2. int sum[1];
+   for (int i=1; i<3; i++)
+   {
+       for (int j=0; j<1; j++)
+       {
+           sum *= g[i][j];
+       }
+   }
+```
+
+```
+3. int sum = (0);
+   for (int j=0; j<3; ++j)
+   {
+       sum -= g[2][j];
+   }
+```
+
+```
+4. int sum(0);
+   for (int i=0; i<3; ++i)
+   {
+       sum += g[1][1];
+   }
+```
+
+# Function Arguments
+
+When arrays are used as function parameters, the default is pass by reference, instead of pass by value. As discussed in Chapter 7, this means that array parameters in a function refer to the original array and not to a copy of the array. Thus, we must be careful that we do not change values in the original array when we do not intend to make changes.
+
+When using a one-dimensional array as a function argument, the function needs only the address of the first element in the array, which is specified by the array name. When using a two-dimensional array as a function argument, the function also needs information about the declared column size of the array. In general, the function header and function prototype need to give the declared column size of a two-dimensional array. To illustrate, suppose that we need to write a program that computes the sum of the elements in an array containing four rows and four columns. Computing this sum requires two nested loops, so the program will be more readable if we put the steps to compute the sum in a function. The program can then reference the function with a single statement, as in the following:
+
+![](bbox=[0.06, 0.72, 0.2, 0.79])
+
+```
+#include <iostream> //Required for cout
+using namespace std;
+const int NROWS(4), NCOLS(4);
+```

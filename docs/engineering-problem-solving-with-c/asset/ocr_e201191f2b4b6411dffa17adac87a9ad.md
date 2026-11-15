@@ -1,0 +1,11 @@
+![](bbox=[0.22, 0.1, 0.65, 0.19])
+
+![](bbox=[0.22, 0.23, 0.75, 0.39])
+
+![](bbox=[0.22, 0.43, 0.65, 0.57])
+
+![](bbox=[0.22, 0.61, 0.75, 0.75])
+
+To insert a value into a linked list, we must traverse the list to find the location for the insert. We begin at the head of the list and move from one element to another using the pointer in the current element, until we find the desired location for the insert. The insertion location can be one of four places: before the first element, between two elements, after the last element, or in an empty list. Figures 9.5 through 9.8 outline each of these cases assuming that we started with the linked list given in Figure 9.4 for each of the first three cases.
+
+To delete a value from a linked list, we must traverse the list to find the element to be deleted. We begin at the head of the list and move from one element to another using the pointer in the current element. If the element to be deleted is found, it can be the first element,

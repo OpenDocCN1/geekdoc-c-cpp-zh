@@ -1056,6 +1056,7 @@
 +   [安全地使用现代 C++](docs/embracing-modern-c-safely/README.md)
 +   [SAS 端到端数据科学：实用编程指南](docs/end-to-end-data-science-with-sas-a-hands-on-programming-guid/README.md)
 +   [多路径路由 能源高效主动缓存](docs/energy-efficient-proactive-caching-with-multipath-routing/README.md)
++   [C++ 工程问题求解](docs/engineering-problem-solving-with-c/README.md)
 +   [C++ 工程问题解决 (第3版)](docs/engineering-problem-solving-with-c-3rd-edition/README.md)
 +   [C++ 工程问题解决指南（第四版）](docs/engineering-problem-solving-with-c-fourth-edition/README.md)
 +   [C 工程问题求解：国际版](docs/engineering-problem-solving-with-c-international-edition/README.md)

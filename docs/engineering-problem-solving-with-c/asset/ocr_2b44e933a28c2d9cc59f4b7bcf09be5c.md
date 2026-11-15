@@ -1,0 +1,44 @@
+# 1. PROBLEM STATEMENT
+
+Determine the year and quarter with the strongest El Niño conditions.
+
+# 2. INPUT/OUTPUT DESCRIPTION
+
+The I/O diagram shows the data file as the input and the year and quarter as output.
+
+![](bbox=[0.22, 0.26, 0.52, 0.36])
+
+# 3. HAND EXAMPLE
+
+Assume that the data file contained the following data:
+
+| Year | Quarter | ENSO Index |
+| :--- | :--- | :--- |
+| 1990 | 1 | 0.6 |
+| 1991 | 1 | 0.2 |
+| 1992 | 1 | 1.1 |
+| 1993 | 1 | 0.5 |
+| 1994 | 1 | 0.1 |
+| 1995 | 1 | 1.2 |
+| 1996 | 1 | -0.3 |
+| 1997 | 1 | -0.1 |
+| 1998 | 1 | 2.2 |
+| 1999 | 1 | -0.7 |
+| 2000 | 1 | -1.1 |
+
+The corresponding output would then be the following report:
+
+```
+Maximum El Nino Conditions in Data file
+Year: 1998, Quarter: 1
+```
+
+# 4. ALGORITHM DEVELOPMENT
+
+We first develop the decomposition outline because it divides the solution into a set of sequential steps.
+
+*Decomposition Outline*
+
++   1. Read the ENOS data into arrays and determine the maximum positive index.
+
++   2. Print the year and quarter that go with the maximum intensity.

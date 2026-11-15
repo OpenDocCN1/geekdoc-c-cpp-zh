@@ -1,0 +1,31 @@
+# 5. TESTING
+
+Using the data from the hand example as the input, along with three additional pairs of satellite data, we get the following program output:
+
+```
+Enter ID and transit time for 4 satellites:
+Use whitespace to separate the values(i.e., 25 0.00257)
+23 0.001
+Satellite 23 has a pseudorange of 299792 m
+25 0.00257
+Satellite 25 has a pseudorange of 770467 m
+18 0.00529
+Satellite 18 has a pseudorange of 1.5859e+06 m
+20 0.00176
+Satellite 20 has a pseudorange of 527635 m
+Satellite 23 is closest to GPS receiver.
+```
+
+The pseudorange calculated for satellite 23 matches our hand example, and is also the closest to the GPS receiver.
+
+# Modify 4.2
+
+These problems relate to the program developed in this section.
+
++   1. Modify the program to use the transit time instead of the pseudorange to find the satellite that is closest to the receiver.
++   2. Modify the program to find the satellite that is farthest from the receiver.
++   3. Modify the program to handle input from five satellites instead of three.
+
+# 4.4 break and continue Statements
+
+We used the break statement in the previous chapter with the switch statement. The break statement can also be used with any of the loop structures presented in this chapter to immediately exit from the loop in which it is contained. In contrast, the continue statement is used to skip the remaining statements in the current pass or iteration of the loop and then continue with the next iteration of the loop. Thus, in a while loop or a do/while loop the condition is evaluated after the continue statement is executed to determine if the statements in the loop are to be executed again. In a for loop, the loop-control object is modified,

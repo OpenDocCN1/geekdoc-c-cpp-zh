@@ -1,0 +1,49 @@
+```
+//Toggle B and C
+B = !B;
+C = !C;
+cout << A << '\t' << B << '\t' << C << '\t' << !t << '\t' << !t << '\t' << !t << '\t' << !t << endl;
+<< (A && B || B && C) << endl;
+
+//Toggle C
+C = !C;
+cout << A << '\t' << B << '\t' << C << '\t' << !t << '\t' << !t << '\t' << !t << '\t' << !t << endl;
+<< (A && B || B && C) << endl;
+return 0;
+)
+```
+
+short circuiting
+
+When expressions with logical operators are executed, C++ will only evaluate as much of the expression as necessary to evaluate it. This is known as short circuiting. For example, if A is false, then the expression
+
+```
+A && B
+```
+
+is also false, and there is no need to evaluate B. Similarly, if A is true, then the expression
+
+```
+A || B
+```
+
+is true, and there is no need to evaluate B. To verify the correctness of Table 3.2, you must be aware that the && operator takes precedence over the | operator. The precedence of operators is discussed in the following section.
+
+# Modify 3.1
+
++   1. Modify program chapter3_1 to generate a truth table for the condition A&&B&&C.
++   2. Modify program chapter3_1 to generate a truth table for the condition A||B||C.
++   3. Modify program chapter3_1 to generate a truth table for the condition A&&&B.
++   4. Modify program chapter3_1 by replacing logical operators with C++11 keywords.
+
+# Precedence and Associativity
+
+A condition can contain several logical operators, as in the following:
+
+```
+! (b==c || b==5.5)
+```
+
+The hierarchy, from highest to lowest, is !, &&, ||, but parentheses can be used to change the hierarchy. In the previous example, the expressions b==c and b==5.5 are evaluated first. Suppose b is equal to 3 and c is equal to 5. Then neither expression is true, so the expression b==c || b==5.5 is false. We then apply the ! operator to the false condition, which gives a true condition.
+
+A condition can contain both arithmetic operators and relational operators, as well as logical operators. Table 3.3 contains the precedence and the associativity order for the elements in a condition.

@@ -1,0 +1,47 @@
+# Modify 6.2
+
++   1. Modify the driver program developed in the previous section by adding the following function call:
++   swapIntegers(10, 5);
++   What results do you see when you attempt to compile and execute the program?
++   Explain.
+
++   2. Modify the driver program developed in the previous section by adding the following function call:
++   swapIntegers(a, a * b);
++   What results do you see when you attempt to compile and execute this program?
++   Explain.
+
+# Practice 6.2
+
+In Problems 1–4, consider the references to the swapIntegers function. For invalid reference, explain why the reference is invalid. For valid references, give a memory snapshot before and after the reference.
+
++   1. int x=1, y=3;
++   ...
++   swapIntegers(x,y);
+
++   2. ...
++   swapIntegers(10, 5);
+
++   3. int x=1, y=3;
++   ...
++   swapIntegers(x, y+5);
+
++   4. double x=1.5, y=3.2;
++   ...
++   swapIntegers(x, y);
+
++   5. What is output by the following program?
+
+```
+#include<iostream>
+using namespace std;
+
+void fun_ch6(int first, int& second);
+
+int main()
+{
+    int n1(0), n2(0);
+    fun_ch6(n1,n2);
+    cout << n1 << endl << n2 << endl;
+    return 0;
+}
+```
