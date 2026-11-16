@@ -1,0 +1,17 @@
+# 5.4 INTRODUCTION TO THE ARM® CORTEX™-M3 v7M ARCHITECTURE
+
+Any practical discussion of computer organization must ultimately focus on a particular CPU. Although the information presented here is for a single processor among the ARM family of microprocessors, this section is not intended to be a comprehensive description of that processor or others in the ARM family. Our objective here is to understand how the algorithms we implement in a higher-level language like C are brought to life within the architecture of a specific microprocessor, and to be able to code at either level when appropriate or necessary.
+
+Here, we present only a first introduction to the ARM® Cortex-M3 v7M architecture, which was specifically designed for small-footprint embedded applications. The Cortex-M3 processor implements the Thumb-2 instruction subset of the ARM architecture specification. Most Thumb-2 instructions are 16 bits wide, expanded internally to a full 32-bit ARM instruction. The next few chapters provide a number of examples of assembly language code that illustrate the more commonly used Thumb-2 Instructions.
+
+# 5.4.1 Internal Organization
+
+ARM processors have a sophisticated CPU capable of performing multiple low-level operations in parallel. As operands are read from memory and placed on the data bus, a hardware sign extender converts 8-bit and 16-bit operands to a full 32-bit representation so that all data inside the CPU are always 32 bits wide.
+
+The ARM processor uses a "load-store" architecture. This means that any computation must first use load instructions to read the operands from memory into registers and a store instruction must be used to write the result back to memory. In other words, instructions such as add, subtract, bitwise-and, and so on can only operate on the contents of registers; they cannot operate directly on the contents of memory locations. Such instructions take their operands from registers (referred to as Rm and Rn) and leave a result in a register referred to as Rd.
+
+A barrel shifter allows operand Rm to be shifted left or right arithmetically, logically, or rotated any number of bit positions before being combined with operand Rn in the ALU. Among other advantages, the barrel shifter allows calculations of the form Rn + 2xRm. When the same register is specified for both Rn and Rm, the barrel shifter simplifies the calculation of certain multiples of a value, such as 5X = X + 2^2X or -7X = X - 2^3X (Figure 5-11).
+
+A separate memory address calculator (MAC) prepares subscribed and relative address references for memory access, and a special incrementer can adjust the memory address on subsequent instructions without having to entirely recalculate the address, which can be useful in repetitive operations such as initializing the contents of an array to a constant value.
+
+The CPU contains a set of 13 general-purpose registers (R0 through R12) and three special-purpose registers (R13, R14, and R15). The general-purpose registers are divided into the "low" registers (R0 through R7) and the "high" registers (R8 through R12), with minor restrictions regarding which instructions can use the latter. R15 is used as the PC, R13 as the SP, and R14 as the "link" register (LR) that holds the return address when a subroutine is called.

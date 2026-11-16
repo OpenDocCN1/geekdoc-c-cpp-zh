@@ -1,0 +1,13 @@
+The ideal situation is a function such as function f1 in Figure 7-13, which does not itself contain a function call and which modifies no registers other than R0 through R3.
+
+In this case, no registers need to be preserved.
+
+When a function modifies any register other than R0 through R3, it is required to preserve their original content. The best way to do is to push those registers onto the stack immediately upon entering the function, and to pop them back just before the function returns as is done in function f2 of Figure 7-13.
+
+When a function calls are nested, the second call will overwrite the current return address held in LR. Thus when one function (such function as f3 in Figure 7-13) contains a call (BL) to a second function (f4), the first must push the content of LR at its entry and pop it back just before it returns. Note that since LR is already on the stack, the BL LR instruction normally used to return to the caller may be eliminated by replacing LR by PC in the POP instruction.
+
+Registers R0 through R3 are not a good place for functions that call other functions to keep information. For example, in Figure 7-13, the call to function f4 may require parameters to be placed in R0 through R3, and/or may modify their content before return. Therefore, a common practice is for f3 to move its parameters and temporaries into R4 through R11, preserving their original content on entry to f3 and restoring them just before it returns.
+
+| ;Function f1<br>;modifies<br>;only R0-R3<br>;and does<br>;not call any<br>;functions.<br>f1<br>...<br>...<br>BX LR | ;Function f2 does<br>;not call any functions,<br>;but modifies one or<br>;more registers other<br>;than R0-R3; their<br>;original content must<br>;be preserved.<br>f2 PUSH {R4,...}<br>...<br>...<br>POP {R4,...}<br>BX LR | ;Function f3 contains a call to a second<br>;function (f4). The BL used to call f4<br>;modifies LR, which contains f3's return<br>;address, so we must preserve LR on the<br>;stack. That value is then POP'd into PC<br>;to cause a return. Also, since f4 may<br>;modify R0-R3,<br>;<br>; (1) f3's parameters should be moved to<br>; R4-R7 for use,<br>; (2) any temporary variables should be<br>; allocated from R4-R11, and<br>; (3) any of R4-R11, that are used should<br>; be preserved on entry to f3 and<br>; restored just prior to return.<br>f3 PUSH {R4,...,LR} ; preserve<br>MOV R4,R0 ; move parameter to R4<br>...<br>BL f4 ; may modify R0-R3<br>...<br>POP {R4,...,PC} ; restore and return |
+
+FIGURE 7-13 Summary of when a function needs to preserve registers.

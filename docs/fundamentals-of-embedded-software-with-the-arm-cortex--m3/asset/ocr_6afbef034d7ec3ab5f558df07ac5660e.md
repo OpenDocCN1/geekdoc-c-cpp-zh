@@ -1,0 +1,5 @@
+enters it into an associated queue. An interrupt from an output device signals the completion of the previous output command, thus its handler would normally check an output queue to see if there is more data to be sent to the device. If more output data is available, it would be removed from the queue and sent.
+
+Installing a handler is simply a matter of storing its entry point address at the appropriate position in the vector table. Some of the vector table entry positions are predefined by the Cortex-M3 architecture, while others depend on what peripheral devices are available in a specific implementation and would have to be found in documentation for the MCU.
+
+There are several good source code examples available that show how to initialize a particular peripheral device, and how to implement an interrupt handler for it. These examples are found in the laboratory assignments on the Companion Website at www.pearsonhighered.com/lewis and in the source code of the Stellaris Peripheral Driver Library and the FreeRTOS real-time kernel used by those assignments.

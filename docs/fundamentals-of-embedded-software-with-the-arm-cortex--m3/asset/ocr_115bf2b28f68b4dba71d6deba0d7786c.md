@@ -1,0 +1,11 @@
+# 12.5.1 The Effect of Processor Architecture
+
+The previous example usually applies only to load/store architectures like that of the ARM processor. Other processors often have increment and decrement instructions that can update the count in a single instruction instead of a sequence as shown. Since interrupts occur only _between_ instructions, the decrement of the count would then complete before the interrupt was recognized. However, if the count is kept in a 32-bit integer (such as the timer tick count in the IBM-PC) and if the processor registers are only 8 or 16 bits wide, then more than one instruction would be required to increment or decrement the count. In general, any multi-instruction increment or decrement sequence would have to be protected against interruption. Thus you would have to disable interrupts before the increment or decrement operation, and reenable them after, as shown in Figure 12-9.
+
+![](bbox=[0.2, 0.34, 0.88, 0.53])
+
+FIGURE 12-9 Even simple operations in C must be protected against interruption.
+
+As we have just seen, interrupts can occur not only between two lines of C code, but also between any two machine instructions. As shown in Table 12-2, even the simplest line of C code can produce more than one machine instruction, especially when it involves operands whose sizes exceed the capabilities of single instructions. For 16-bit processors this includes longs, pointers, any floating-point data, and most structures. For 8-bit processors we have to also consider all of the 16-bit operands, such as shorts. Rather than worrying about these differences, it is a good programming practice to just protect access to _any_ shared memory—regardless of size. But life is clearly simpler with a 32-bit processor!
+
+ISRs are not the only example of code sequences that execute asynchronously. Preemptive real-time kernels are common in embedded software, and they use ISRs as trigger points to context switch from one thread to another in a multithreaded application. When an interrupt occurs, the ISR may return to a thread other than the one that was interrupted. Since an interrupt can occur at any point during the execution of a thread, all threads are asynchronous with respect to all other threads. As a result, we must worry about objects shared between threads, even if those objects are not accessed by any ISR.

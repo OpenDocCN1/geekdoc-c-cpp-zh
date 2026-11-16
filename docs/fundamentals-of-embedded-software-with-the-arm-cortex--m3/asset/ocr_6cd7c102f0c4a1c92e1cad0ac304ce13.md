@@ -1,0 +1,15 @@
+complement of a number produces the representation of its negative counterpart, and vice versa. The simplest algorithm to do this is to invert all the bits and then add 1 to the result. A second technique is to process the bits once from right to left, copying the bits exactly as they appear, through and including the first 1, and then copying the inverse of all the remaining bits.
+
+First, we must know exactly how many bits are used in the representation if either algorithm is to work correctly. For example, suppose you are asked to find the 2's-complement signed representation of -2710. The easiest way to do this is to first find the representation of +2710 and then apply the 2's-complement algorithm to get the corresponding negative representation. Let us assume that you converted 2710 to binary and got 101112. Inverting these five bits and adding 1 produces 001012, which is +5, not -2710. The problem is that we started with an unsigned representation of 2710 (110112), not a signed representation of 4 +2710 (0110112). Simply adding one or more leading 0's to the original number, as in 000110112, causes the algorithm to produce 111001012 instead, which is the correct representation of -2710.
+
+Note that there is an anomaly that occurs when you try to apply the algorithm to the full-scale negative representation (10 ... 02). Using 4 bits as an example, if we invert 10002, then it becomes 01112, and adding 1 to this produces 10002 (what we started with). This should not be surprising for 2's-complement, however, because the magnitude of its full-scale negative value is always one greater than the largest positive value that can be represented.
+
+After a little observation, you will soon realize that nonnegative quantities must begin with one or more leading 0's and that negative quantities must begin with one or more leading 1's. Hence, you can easily determine the sign of a 2's-complement number by looking only at the most significant bit. However, even though this bit is referred to as the "sign bit," do not be fooled into thinking that the sign and magnitude portions of the representation are independent.
+
+> Remember: You cannot change the sign of a 2's-complement number by simply inverting the most significant bit!
+
+# 2.3.3 Interpreting the Value of a 2's-Complement Number
+
+When given a 2's-complement number in binary and asked to convert it to decimal, most people look first at the sign bit. If it is 0, then they simply treat the number as if it were an unsigned binary number and convert using polynomial evaluation. However, if the sign bit is 1, then the value must be negative. In this case, they find the corresponding positive representation of the same magnitude by forming the 2's complement of the bit pattern, use that to determine the decimal magnitude, and then put a minus sign in front of it (Figure 2-5):
+
+A single approach that works for both positive and negative values is to use polynomial evaluation, but with a different weight for the most significant digit. Instead of using a weight of 2n-1, simply change it to -2n-1 as shown in Figure 2-6.
