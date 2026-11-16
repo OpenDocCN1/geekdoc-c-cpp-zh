@@ -1,0 +1,11 @@
+![](bbox=[0.195, 0.115, 0.885, 0.43])
+
+Figure 7.25 LEFT: Output of a noisy boundary detector. (Library Name: cutleryNoisy.png) MIDDLE: Distance transform. (Library Name: cutleryDT.png) RIGHT: Dilated image. (Library Name: cutleryThick.png). Redrawn from [74]. Used with permission.
+
+For every pixel with a DT value of 2 (for this example), we assign that pixel to the label of the majority of its neighbors. If ties occur, random decisions are made. After eroding all the black pixels with labels of 2, the process is repeated with labels of 1 and then zero. Finally the labeling on the right of Figure 7.24 results. There is always a problem with boundary labeling: Should one count the boundary pixels themselves as part of the region? This labeling has not only separated the two regions; it has labeled the boundary pixels explicitly as pixels of the region.
+
+In Figure 7.25, we show another example of how DT-dilation and DT-erosion help close the gaps in an image of cutlery. On the left of Figure 7.25, a single image is shown, resulting from edge detection and thresholding on an image of cutlery. The dilation shown on the right is the result of DT-dilation, but it could easily have resulted from conventional binary dilation. One could, at this point, choose to use thinning to find the skeleton of the boundary. The results of thinning are shown in the center of Figure 7.26. One observes that sometimes the thinning works well. But when the relative resolution (the ratio of the spacing of the fork tines to the pixel size) is small, thinning produces the wrong skeleton. This occurs because there is no information in the dilated fork to tell the thinning algorithm how to move. Using DT-erosion allows the boundary to be eroded down to the proper, closed boundary on the right of Figure 7.26.
+
+# 7.6 Conclusion
+
+In this chapter, we have looked at a particular approach to processing the shape of regions. Morphological operators are useful in both binary images, and in grayscale images.

@@ -1133,6 +1133,7 @@
 +   [C++ 编程基础](docs/fundamentals-of-c-programming/README.md)
 +   [信息系统的 C# 编程基础 全彩版](docs/fundamentals-of-c-programming-for-information-systems-full-c/README.md)
 +   [C 语言计算机编程基础](docs/fundamentals-of-computer-programming-with-c/README.md)
++   [计算机视觉基础（完整教师资源，含解答手册与解答）](docs/fundamentals-of-computer-vision-complete-instructor-resource/README.md)
 +   [C 语言计算与编程入门指南](docs/fundamentals-of-computing-and-programming-in-c-paperback-jan/README.md)
 +   [傅里叶变换红外光谱基础，第二版](docs/fundamentals-of-fourier-transform-infrared-spectroscopy-seco/README.md)
 +   [逻辑设计基础指南](docs/fundamentals-of-logic-design-with-companion-cd-rom/README.md)
