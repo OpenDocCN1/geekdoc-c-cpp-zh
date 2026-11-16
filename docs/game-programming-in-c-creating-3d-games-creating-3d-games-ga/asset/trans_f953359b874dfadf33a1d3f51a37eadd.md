@@ -1,0 +1,305 @@
+
+
+- testing in PhysWorld, 329–331
+
+- bounding volumes, 302–303
+- AABB (axis-aligned bounding box), 303–306
+- capsules, 306–307
+- convex polygons, 307
+- OBB (oriented bounding box), 306
+- spheres, 303
+- BoxComponent class, 324–325
+- CircleComponent subclass, creating, 83–84
+- circle-versus-circle intersection, 82
+- dynamic objects, 321–323
+- geometric types, 298
+- line segments, 298–301
+- planes, 301–302
+- intersection tests. See intersection tests
+- line segment tests
+- line segment versus AABB test, 318–320
+- line segment versus plane test, 314–315
+- line segment versus sphere test, 315–317
+- PhysWorld class, 325–327
+- player collision, against walls, 331–333
+- CollisionInfo, 326
+- color buffer, 15–16
+- color depth, 15
+- column vectors, 155, 156
+- combining
+  - equations, 154
+  - rotation, for 3D, 187
+  - transformations, 152–153, 159
+  - vectors, 63–64
+
+- compatibility profiles, OpenGL, 129
+- CompileShader, 142–143
+- Complete transition, Alarm state, 93
+- Component class, 440
+- component declaration, 39–40
+- component-based game object model, 36–38
+- ComponentFunc, 442
+- components
+  - game objects, 36–38
+  - as hierarchy, 38–40
+  - loading, in level files, 439–444
+  - saving, in level files, 446–448
+- composite, 248
+- ComputeGlobalInvBindPose, 379
+- ComputeMatrixPalette, 384, 389
+- computing
+  - camera position, 282
+  - positions, with Euler integration, 80
+- const, 464–465
+- contains point tests, 308
+  - AABB contains point tests, 308
+  - capsule contains point tests, 309
+  - convex polygon contains point (2D) tests, 309–310
+  - sphere contains point tests, 308
+
+- ContainsPoint, 347
+- context, OpenGL, 130
+- continuous collision detection (CCD), 321
+- controller input, 261
+  - buttons, 262–264
+  - disabling controllers, 262
+  - enabling single controllers, 261–262
+  - multiple controllers, 269–270
+- ControllerState, 263, 267
+- converting
+  - from angles to forward vectors, 66–67
+  - forward vectors, to angles, 67–68
+- convex polygon contains point (2D) tests, 309–310
+- convex polygons, 307
+- coordinate systems
+  - 3D coordinate system, 184
+  - left-handed coordinate system, 184
+  - UV coordinates, 395
+- coordinates, NDC (normalized device coordinates),
+  - 132–133
+- copy constructor, 467–468
+- core profile, OpenGL, 129
+- Create, 410
+- CreateMirrorTarget, 404
+- CreateMirrorTexture, 402
+- CreateRotationZ, 160
+- CreateScale, 160
+- CreateTranslation, 160
+- CreateWorldTransform, 160
+- cross product, 70–72
+- crosshair texture, drawing, 353
+- cross-platform libraries, 3
+
+## D
+
+- dead zones, 265
+- Death state transition, 92
+- debug logging, initializing, 225
+- Debug_Initialize, 225
+- deferred shading, 407–408, 424–425
+  - G-buffer
+    - creating, 408–411
+    - writing to, 412–414
+  - global lighting, 414–418
+  - point lights, 418–419
+  - drawing, 421–424
+- deleting, dynamically allocated arrays, 463
+- delta time, 24–28
+- dependency injection, 39
+- depth buffer, 201
+- depth buffering. See z-buffering
+- designing, state machines, AI (artificial intelligence),
+  - 92–93
+- Destroy, 411
+- destructors, 466–467
+
+- development environments, setting up, 2
+  - Apple macOS, 2
+  - Microsoft Windows, 2
+- dialog boxes, 349–352
+- diamond inheritance, 36
+- DiffuseColor, 421
+- digital signal processing (DSP), 241
+- Dijkstra’s Algorithm, 113–114
+- directed, 98
+- directed edges, 100
+- directional light, 208
+  - loading global properties, 434–435
+- directions, vectors, 65–66
+- disabling controllers, 262
+- distance, vectors, 64–65
+- Doppler effect, 240–241
+- Dot function, 70
+- dot product, 68–70
+- double buffering, 16–18
+- Draw function, 52
+- Draw3DScene, 404–405, 413
+- DrawComponent, 36
+- DrawFromGBuffer, 416–417
+- drawing
+  - 2D graphics, 19–21
+  - 3D meshes, 195–196
+  - balls, 20–23
+  - crosshair texture, 353
+  - mirror texture, in HUD, 406–407
+  - paddles, 20–23
+  - point lights, 421–424
+  - radar, 357
+  - with skinning vertex attributes, 374–378
+  - sprites, 44–48
+  - textures, 47
+  - triangles, 146–148
+  - transformations, 148–149
+  - walls, 20–23
+- DrawScreen, 348
+- DSP (digital signal processing), 241
+- dynamic memory allocation, 462–463
+- dynamic memory allocation of classes, 465
+- dynamic objects, collision detection, 321–323
+- DynamicArray, 466, 467
+
+## E
+
+- edges, 98
+- effects, audio, 241–242
+- encapsulating buttons, 346
+- endianness, 451
+- equalization, 242
+- equations, combining, 154
+- ES profiles, OpenGL, 129
+- Escape key, 256
+- Euclidean distance heuristic, 105
+- Euler angles, 185–186
+- Euler integration, 80
+- event instances, FMOD, 229–230
+- event processing, 11–12
+- EventInstances, 229–230
+- events, 11
+- FMOD, 226–227
+- input devices, 251
+- exchange formats, 191
+- extensions
+  - .frag extension, 139
+  - .vert extension, 139
+
+## F
+
+- falloff function, 233
+- falloff radius, 208
+- FBO (framebuffer objects)
+  - creating, 402–404
+  - rendering, 404–405
+- Feline Swordsman, bind pose, 378
+- FIFO (first-in, first out), 473
+- Filter1D, 265–267
+- Filter2D, 268–269
+- filtering, 400
+- analog sticks, 267–269
+- anisotropic filtering, 399–400
+- bilinear filtering, 394, 395–397, 400
+- nearest-neighbor filtering, 395
+- trilinear filtering, 398, 399, 400
+- filters, for axis, 265
+- first-in, first-out (FIFO), 473
+- first-person camera, 276
+  - adding pitch, 278–280
+  - cameras without pitch, 277–278
+  - first-person models, 280–281
+  - movement, 276–277
+- first-person models, 280–281
+- first-person movement, 276–277
+- FixCollisions, 332–333
+- flat shading, 211
+- flipY option, adding to UIScreen::DrawTexture, 406
+- FMOD, 222–223
+  - audio systems, creating, 224–226
+  - banks and events, 226–227
+  - event instances, 229–230
+  - installing, 223–224
+  - occlusion, 244
+  - positional audio, 234
+  - snapshots, 243
+- FMOD Studio, 223
+  - buses, 242–243
+  - DSP (digital signal processing), 242
+- FMOD_VECTOR, 234–235
+- FMOD_ErrorString, 225
+- follow cameras, 281–283
+  - adding springs, 283–285
+  - FollowCamera, 282
+  - FollowCamera::Update, 283, 284–285
+- following paths, AI (artificial intelligence), 114–115
+- font rendering, 338–340
+  - Font::Load, 338–339
+  - Font::RenderText, 339, 340, 359
+- For loops, 475–476
+- force, 79–80
+- force feedback, 5
+- formats, 3D model formats, choosing, 191–193
+- forward rendering, 407–408
+- forward vectors
+  - converting from angles, 66–67
+  - converting to angles, 67–68
+- FPS (frames per second), 4
+- FPS angular speed, 277
+- FPSActor::FixCollisions, 332–333
+- FPSCamera, 278
+  - FPSCamera::Update, 279
+- .frag extension, 139
+- fragment shaders, 139, 412
+- frame buffer, 201
+- frame limiting, 25–26
+- frame rate, 4
+- framebuffer, 15
+- framebuffer objects
+  - creating, 402–404
+  - rendering, 404–405
+- frames, 4–6
+  - rendering, in OpenGL, 131
+- frames per second (FPS), 4
+- front buffer, 17
+
+## G
+
+- game classes
+  - main function, 10–11
+  - skeleton game class, 6–7
+    - Initialize function, 7–9
+    - RunLoop function, 9–10
+    - Shutdown function, 9
+    - Game Declaration, skeleton game class, 7
+- game loops, 4
+  - frames, 4–6
+  - integrating game objects into, 40–42
+  - single-threaded game loop, 5
+- game object models, 40
+- game objects as class hierarchies, 34–36
+- game objects as hierarchy with components, 38–40
+- game objects with components, 36–38
+- game objects, 34
+  - as class hierarchies, 34–36
+  - with components, 36–38
+  - as hierarchy with components, 38–40
+  - integrating, into game loops, 40–42
+  - types of, 34
+- game projects
+  - 3D graphics, 216
+  - Asteroids, 84–86
+  - audio, 244–245
+  - cameras, 295
+  - collision detection, 333–334
+  - converting Asteroids game to OpenGL, 180
+  - intermediate graphics, 425
+  - level files and binary data, 454–455
+  - moving spaceships, 271–272
+  - skeletal animation, 389–390
+  - sprites, 53–55
+  - tower defense game, 124
+  - user interfaces, 362
+- game time, 24
+- game trees, 116–118
+  - AI (artificial intelligence)
+    - alpha-beta pruning, 121–124
+    - incomplete game trees, 120–121
+    - minimax, 118–119
+

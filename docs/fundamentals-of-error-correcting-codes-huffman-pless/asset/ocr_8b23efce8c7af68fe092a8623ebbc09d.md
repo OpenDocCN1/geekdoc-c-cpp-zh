@@ -1,0 +1,19 @@
+# 12.3 Cyclic codes over $\mathbb{Z}_4$
+
+$a(x)g(x) + b(x)f(x) = 1 + 2s(x)$ for some $s(x) \in \mathbb{Z}_4[x]$. Therefore $a(x)g(x)h(x)(1 + 2s(x)) + b(x)f(x)yh(x)(1 + 2s(x)) = h(x)(1 + 2s(x))^2 = h(x)$, implying that $h(x) \in \langle f(x) \rangle$. Suppose now that $d = \mu(f(x))$. Then there exists $a(x) \in \mathbb{Z}_4[x]$ such that $\mu(g(x)) = \mu(f(x))\mu(a(x))$, implying that $g(x) = f(x)a(x) + 2s(x)$ for some $s(x) \in \mathbb{Z}_4[x]$. Hence $g(x)^2 = (f(x)a(x))^2 \in \langle f(x) \rangle$. Thus $f(x)$ is a primary polynomial.
+
+If $\mathcal{R} = \mathbb{Z}_4[x]$ or $\mathbb{F}_2[x]$, two polynomials $f(x)$ and $g(x)$ in $\mathcal{R}$ are coprime or relatively prime provided $\mathcal{R} = \langle f(x) \rangle + \langle g(x) \rangle$.
+
+**Exercise 708** Let $\mathcal{R} = \mathbb{Z}_4[x]$ or $\mathbb{F}_2[x]$ and suppose that $f(x)$ and $g(x)$ are polynomials in $\mathcal{R}$. Prove that $f(x)$ and $g(x)$ are coprime if and only if there exist $a(x)$ and $b(x)$ in $\mathcal{R}$ such that $a(x)f(x) + b(x)g(x) = 1$.
+
+**Exercise 709** Let $\mathcal{R} = \mathbb{Z}_4[x]$ or $\mathbb{F}_2[x]$. Let $k \ge 2$. Prove that if $f_i(x)$ are pairwise coprime polynomials in $\mathcal{R}$ for $1 \le i \le k$, then $f_1(x)$ and $f_2(x)f_3(x) \cdots f_k(x)$ are coprime.
+
+**Lemma 12.3.3** Let $f(x)$ and $g(x)$ be polynomials in $\mathbb{Z}_4[x]$. Then $f(x)$ and $g(x)$ are coprime if and only if $\mu(f(x))$ and $\mu(g(x))$ are coprime polynomials in $\mathbb{F}_2[x]$.
+
+**Proof:** Suppose that $f(x)$ and $g(x)$ are coprime. By Exercise 708, $a(x)f(x) + b(x)g(x) = 1$ for some $a(x)$ and $b(x)$ in $\mathbb{Z}_4[x]$. Then $\mu(a(x))\mu(f(x)) + \mu(b(x))\mu(g(x)) = \mu(1) = 1$, implying that $\mu(f(x))$ and $\mu(g(x))$ are coprime. Conversely, suppose that $\mu(f(x))$ and $\mu(g(x))$ are coprime. Then there exist $a(x)$ and $b(x)$ in $\mathbb{Z}_4[x]$ such that $\mu(a(x))\mu(f(x)) + \mu(b(x))\mu(g(x)) = 1$. Thus $a(x)f(x) + b(x)g(x) = 1 + 2s(x)$ for some $s(x) \in \mathbb{Z}_4[x]$. But then $a(x)(1 + 2s(x))f(x) + b(x)(1 + 2s(x))g(x) = (1 + 2s(x))^2 = 1$ showing that $f(x)$ and $g(x)$ are coprime by Exercise 708.
+
+The following, which is a special case of a result called Hensel's Lemma, shows how to get from a factorization of $\mu(f(x))$ to a factorization of $f(x)$. 
+
+**Theorem 12.3.4 (Hensel's Lemma)** Let $f(x) \in \mathbb{Z}_4[x]$. Suppose $\mu(f(x)) = h_1(x)h_2(x) \cdots h_t(x)$, where $h_1(x), h_2(x), \dots, h_t(x)$ are pairwise coprime polynomials in $\mathbb{F}_2[x]$. Then there exist $g_1(x), g_2(x), \dots, g_t(x)$ in $\mathbb{Z}_4[x]$ such that: (i) $\mu(g_i(x)) = h_i(x)$ for $1 \le i \le k$, (ii) $g_1(x), g_2(x), \dots, g_t(x)$ are pairwise coprime, and (iii) $f(x) = g_1(x)g_2(x) \cdots g_t(x)$. 
+
+**Proof:** The proof is by induction on k. Suppose k = 2. Choose $g'_1(x)$ and $g'_2(x)$ in $\mathbb{Z}_4[x]$ so that $\mu(g'_1(x)) = h_1(x)$ and $\mu(g'_2(x)) = h_2(x)$. So $f(x) = g'_1(x)g'_2(x) + 2s(x)$ for some $s(x) \in \mathbb{Z}_4[x]$. As $h_1(x)$ and $h_2(x)$ are coprime, so are $g'_1(x)$ and $g'_2(x)$ by Lemma 12.3.3. Thus by Exercise 708 there are polynomials $a_i(x) \in \mathbb{Z}_4[x]$ such that $a_1(x)g'_1(x) + a_2(x)g'_2(x) = 1$. Let $g_1(x) = g'_1(x) + 2a_2(x)s(x)$ and $g_2(x) = g'_2(x) + 2a_1(x)s(x)$. Then (i) and (ii) hold as $\mu(g_i(x)) = \mu(g'_i(x)) = h_i(x)$. Also $g_1(x)g_2(x) = g'_1(x)g'_2(x) + 2a_1(x)g'_1(x)s(x) + 2a_2(x)g'_2(x)s(x) = g'_1(x)g'_2(x) + 2s(x) = f(x)$. Now suppose k = 3. By Exercise 709, $h_1(x)$ and $h_2(x)h_3(x)$ are coprime. Thus using the case k = 2, there exist coprime polynomials $g_1(x)$ and $g_{23}(x)$ in $\mathbb{Z}_4[x]$ such that $\mu(g_1(x)) = h_1(x)$, $\mu(g_{23}(x)) = h_2(x)h_3(x)$, and $f(x) = g_1(x)g_{23}(x)$. Since $h_2(x)$ and $h_3(x)$ are coprime, again using the case k = 2, there are coprime polynomials $g_2(x)$ and $g_3(x)$

@@ -1,0 +1,1 @@
+In addition, this chapter explores the trade-offs of using text-based file formats versus binary file formats. As an example, it discusses an implementation of a binary mesh file format.

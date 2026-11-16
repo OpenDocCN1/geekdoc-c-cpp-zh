@@ -1,0 +1,13 @@
+various repository types. With this basic infrastructure in place, the prospect of hooking up Eclipse to your SCM tool of choice generally involves little more than installing a repository provider plug-in (if it’s not installed already).
+
+# ## 4.3.1 Introduction to Git and GitHub
+
+At this point, we’ve already established that Git is an SCM tool. However, for many, Git is much more than just another SCM tool. Git was developed by Linus Torvalds (the creator of Linux) from the ground up as a distributed SCM tool with the goal of simplifying the coordination of Linux kernel development with developers across the world. Particular emphasis was placed on speed, distributed development, and efficient handling of large projects.
+
+Again, it is not our intent to prescribe the use of Git (or any other SCM tool, for that matter) in this book; however, it bears mentioning that Git usage has increased exponentially in the past couple of years, and its footprint continues to grow. As of the time of writing, this growth has also extended to SAP HCP, as Git has been selected as the repository of choice for HTML5 applications (a subject we’ll consider in Chapter 7). For these reasons, we would recommend that you at least familiarize yourself with Git so that you have a general sense for how it’s used. If you’re looking for more in-depth coverage, we recommend Version Control with Git, 2nd Edition (Loeliger, McCullough, O’Reilly, 2012).
+
+Although it is certainly possible to install and maintain Git repositories in various configurations on-premise, many organizations have begun to enlist web-based hosting services such as GitHub due to their relative low cost and value-added services for project management. For the purposes of our demonstration, we’ll be using a GitHub-based repository to give you a feel for what distributed development looks like with Git.
+
+# ## 4.3.2 Getting Started with EGit
+
+Though there are many ways to interface with Git, our focus in this section will be on access from within the Eclipse IDE using the EGit repository provider. If you followed along with the Eclipse installation steps described in Chapter 2, then EGit should be installed already. If you’re unsure about this, you can verify the installation by opening the HELP • ABOUT ECLIPSE menu option and looking for the Eclipse EGit feature (see Figure 4.25). If EGit isn’t installed, then you can quickly install it by opening the HELP • INSTALL NEW SOFTWARE... menu option

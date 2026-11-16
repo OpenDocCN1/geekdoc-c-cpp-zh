@@ -1,0 +1,15 @@
+This looks an awful lot like we are doing a lot of the things we just said are wrong with the traditional systems. Everything derives from one base class and we are using inheritance all over the place. How is this different? It is different because now all our inheritance chains lead to classes that perform a closely related set of tasks. In other words, the classes have tight internal cohesion.
+
+# Keeping Track
+
+We need to organize all these components somehow. For that purpose, we have the object manager. It is really an interface to a database that the rest of our code is not allowed to see very much of. The database does not have to be (and is unlikely to be) of the Oracle or SQL kind; it just needs to keep track of all our components and make the access methods exposed in the object manager as efficient as possible. The object manager allows us to create, query, and destroy components, among other things. We will have a closer look at the object manager and one possible implementation of the database in the “Implementation” section.
+
+# There Is No Spoon
+
+Let us go back to our spoon object example (illustrated in Figure 1.3.4). We have all these components, but what has happened to our object in all this? There is none! It may be tempting to keep a `c00bject` class around for comfort, but we are not going to. There is nothing that requires us to retain a `cObject` class; if we did, how would we decide what was allowed to live in the `c00bject` class and what would have to live in components? If we make everything live in components, that is one less choice to make when we are designing our system. All that remains of the object is an object ID. This can be anything as long as it uniquely represents an object and is convenient to pass around. Some kind of handle based on an `int` should do just fine. Of course, it is still convenient to talk about objects, because that is what they appear to be to the rest of the world. Any talk about objects from here on really means the collection of components that form an object when combined.
+
+# We Need to Talk
+
+The components that form our spoon object all perform their own well-defined tasks, but it would be naive to think that they can accomplish this without communicating with each other. The Render component needs to ask the Entity component about the world position of the object when rendering, and the `c01lectable` component will probably have to tell the `Render` component to switch off rendering when the object is picked up.
+
+There are two ways that components can communicate. In the case that we know of a particular interface that we would like to ask or tell something, we can ask the object manager for a pointer to the particular interface and then call methods on the particular component through that interface pointer. This would be a good solution

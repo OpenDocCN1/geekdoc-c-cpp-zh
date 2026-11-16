@@ -1,0 +1,3 @@
+![](bbox=[0.305, 0.385, 0.685, 0.555])
+
+Figure 9.3 In a high-quality optimized Delaunay mesh of Bimba con Nastrino, we show the set of tetrahedra for which the distance between weighted circumcenter and barycenter is greater than a threshold, before (left) and after (right) the HOT optimization [289]. The primal triangulations are the same, and this significant optimization is done only on the dual, using the weights. See color insert.

@@ -1,0 +1,7 @@
+# SUMMARY
+
+This chapter covers a handful of intermediate graphics techniques. First, it looks at how texture filtering works—both nearest-neighbor filtering and bilinear filtering. Mipmapping can reduce sampling artifacts when reducing the size of textures because it generates several lower-resolution textures. However, for oblique surfaces, mipmapping may appear blurry. In this case, anisotropic filtering improves the quality of the textures.
+
+Another powerful technique is rendering the scene to textures. OpenGL allows creation of arbitrary framebuffer objects associated with textures. Then, you can choose to draw the 3D scene to this texture. One use of this technique is to draw a high-quality reflection, such as for a mirror.
+
+Finally, this chapter explores deferred shading, which is a two-pass approach to lighting. In the first pass, you write the object's surface properties, such as diffuse color, normals, and world position, into a G-buffer. In the second pass, you read from the G-buffer to calculate lighting equations. For lights with limited ranges, such as point lights, you render lighting geometry to ensure that the light affects only the fragments in range. Deferred shading is an excellent approach when there are many lights in the scene, though there are some issues, such as the inability to handle partially transparent objects.

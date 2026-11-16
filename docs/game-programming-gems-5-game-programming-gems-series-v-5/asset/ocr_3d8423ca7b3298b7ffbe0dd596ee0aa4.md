@@ -1,0 +1,15 @@
+mal cost path ending in optimal entry location. Similar to the example in Figure 3.7.1, this example also demonstrates how an entry location that has the shortest straight-line distance to the unit's location—in this case, the location in the upper-left corner of the building—is not necessarily an optimal entry location.
+
+# Examples with Both Multiple Start and Stop Nodes
+
+Now that we have seen how multiple start nodes and multiple stop nodes work on their own, it is time to examine how they work together. Consider a situation when there is a unit garrisoned inside a containing game object. The unit is ordered to exit the containing game object and immediately enter another. It is our task to find a minimal cost path between the two objects while taking into consideration potential obstructions.
+
+Using what we have learned from the previous examples, it is obvious that the exit locations around the first object will provide us with multiple start nodes, and the entry locations around the second object with provide us with stop nodes. In addition, a target node needs to be placed inside the second object, close to the object's center point. Using these parameters, the derived algorithm can determine where the unit exits the first game object, where it enters the second game object, and the path it should follow in the process. The algorithm guarantees that the path found is a minimal cost path.
+
+The situation presented is not necessarily an unusual situation, and we can find it in many games. For example, we could have a unit producing building that automatically sends units into a defensive structure that allows garrisoning, such as a bunker or a tower. To set this up, a player could set a rally point from the unit producing building to the defensive structure.
+
+Figure 3.7.4 shows an example of two buildings, A and B, and a minimal cost path connecting them. As with previous examples, there are wall-like structures obstructing the direct path between the buildings, demonstrating that the straight-line approach does not work.
+
+The techniques we have presented so far also prove very useful when applied to a search space represented by a viewpoint graph [Tozour03]. In such a system, points in continuous 2D or 3D space, known as waypoints, define nodes of the graph. The placement of waypoints is usually rather sparse, due to the nature of the world and the graph data used to represent it.
+
+When trying to find a path in this search space, the main problem is pathing object's current location, which can be quite far from the graph. Because of this, choosing proper start and stop nodes becomes a bit of a challenge. If we use the node with the shortest straight-line distance to the pathing object as the start node, the unusual results might happen. The movement of the object onto the start node can render the actual path to be suboptimal, which would manifest itself as an object moving away from the target location before moving towards it. Figure 3.7.5a shows an example of a situation where this kind of movement happens.

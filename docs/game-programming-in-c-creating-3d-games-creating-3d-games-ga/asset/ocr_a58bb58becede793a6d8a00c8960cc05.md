@@ -1,0 +1,32 @@
+```
+void Game::RunLoop()
+{
+    while (!mShouldQuit)
+    {
+        // Process Inputs
+        JoystickData j = GetJoystickData();
+
+        // Update Game World
+        UpdatePlayerPosition(j);
+
+        for (Ghost& g : mGhosts)
+        {
+            if (g.Collides(player))
+            {
+                // Handle Pac-Man colliding with a ghost
+            }
+            else
+            {
+                g.Update();
+            }
+        }
+
+        // Handle Pac-Man eating pellets
+        // ...
+
+        // Generate Outputs
+        RenderGraphics();
+        RenderAudio();
+    }
+}
+```

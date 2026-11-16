@@ -1,0 +1,267 @@
+
+## INDEX
+
+Numbers with "GPG" preceding refer to previous editions of the Game Programming Gems Series. Numbers without this notation refer to the current volume.
+
+- A*
+- A* algorithm, GPG2: 250
+- aesthetic optimizations, GPG1: 264-271
+- costs, GPG3: 295-296, GPG3: 298-300, 302-303
+- D* (dynamic A*), 383-389
+- derivative algorithm with improved heuristic estimate function of, 367-368
+- Master Node List and Priority Queue Open List implementation, GPG1: 264-265
+- multiple solutions returned by, 381
+- navigation meshes and, GPG1: 294-295
+- node count reduction, GPG1: 294-295, 371-372, 373-379, 380-381
+- pathfinding and, 367-382, GPG1: 294, 296-297, 302-303
+- path planning with, GPG1: 254-262
+- performance, 367-382, GPG3: 301-302
+- priority queue for speed, GPG1: 301-306
+- pseudocode listing for reference, 368-370
+- speed optimizations for, 367-382
+- A Star Explorer program, A* tool, GPG3: 305
+- star maps and, GPG4: 325-326
+- straight-line pathfinding, GPG3: 294-305
+- waypoints and, GPG2: 315
+- weaknesses of, GPG1: 361-362
+- Alpha-beta
+- and defined, GPG2: 20-22
+- disadvantages of, GPG2: 26-27
+- Enhanced Alpha-Beta, GPG2: as traps, GPG2: 23-26
+- virtual destructors, GPG2:
+- Alpha-beta pruning (ABT), for performance, GPG2: 20-22
+- vertex shader, GPG3: 410
+- ABT Trees
+- set binary trees, 162
+- cache-conscious implementation of, 159-161
+- complexity of, 163
+- memory usage of, 162-163
+- performance testing of, 166-167
+- redundancy and reduction of memory usage for, 162-163
+- van Emde Boas layout, 160
+- Acceleration, GPG4: 221-225
+- lookup table and, GPG4: 224
+- memory coherency, Heuristic curves, 225-231
+- and velocity on splines, GPG4: 180
+- Accidental complexity, GPG2: 258-259
+- Accuracy
+- fair position (hybrid between fixed-point and floating-point numbers), GPG4: 102-106
+- large world coordinates and, GPG4: 162-166
+- Actions
+- GoCap, 233-234, GPG3: 231-232
+- for MMFs, GPG3: 509
+- GoCap, GPG3: 232
+- for MMFs, GPG2: 512-513
+- Actor
+- collision detection with multiple players, GPG3: 513
+- Adabala, Neharika
+- article by, 539-549
+- Address-space layout, OS X
+- Address-space management of dynamic arrays, GPG4: 55-59
+- ADPCM
+- and wave conversion format, GPG3: 589, GPG3: 620-621
+- Aerodynamics, 395-409
+- airfoil theory, 398-406
+- of buff bodies, 399-403
+- curve balls, 407
+- drag, 404
+- fluid properties and standard atmosphere, 398
+- Kutta-Joukowski theorem, 401
+- Navier-Stokes equations, 396-398
+- Navier-Stokes equation, 398-399, 401
+- rigid body dynamics, 396-397
+- and streamlines bodies, 403-406
+- thin wing theory, 403
+- for smoke particle system storms, 407
+- Ahmad, Ani
+- article by, GPG1: 581-583
+- AI (Artificial Intelligence, GPG1: xxxiv)
+- AL Script Artificial Intelligence (AI)
+- AI/ControlStates, for massively multiplayer games, GPG3: 509-510
+- Aiming, tactical pathfinding and, GPG3: 298
+- Air, cellular automata to model currents and pressure, GPG3: 208, 209-205
+- Aircraft
+- AI for, 407-408
+- Alexander, Thor
+- articles by, GPG3: 231-239, GPG3: 240-241
+- contact and bio info, GPG3: xxxii
+- Algorithms
+- for authentication, GPG3: 555
+- bit packing algorithm, GPG4: 573-574
+- Bloom Filter algorithm, GPG2: 133
+- bone-based collision detection algorithm, GPG2: 248-253
+- brute-force comparison algorithm, GPG2: 228
+- bubble sort algorithm, GPG2: 228
+- collision detection algorithms, GPG2:
+- combined search tree algorithms, GPG2: 354
+- compression algorithms, GPG4: 253-256
+- cPLP algorithm, GPG3: 555-558
+- culture simulation, GPG3: 425-426
+- Cylinder
+- GPG3: 382-384
+- key evaluation algorithm, GPG4:
+- D* (dynamic A*), 383-389
+- for details, GPG2: 411-413
+- decision trees for multi-threaded architectures, 345-552
+- Diamond-square algorithm, GPG1: 505-507
+- Dijkstra's algorithm, GPG1: 294
+- for dilating impostors, 531-538
+- DP (dynamic programming) algorithm, dynamic gamma algorithm, GPG4: for 470-474
+- Fast Fourier Transforms (FFT) and, GPG: 265
+- Gouraud shading, GPG2: 172-174
+- Grand central algorithm, GPG3: 276
+- group finding with, GPG2: 229
+- for heat transfer, heat distortion, GPG3: 477-478
+- Heuristic costs algorithm, GPG1: for 276-278
+- Hierarchical algorithms, GPG1: 136-139
+- f(Wave algorithm, 411-414
+- killing algorithms and real physics, for 411-414
+- for landscaping, GPG1: 485-490
+- LCA (linear congruential algorithm, GPG3: 623-626
+- levels of detail (LOD) selection, GPG3:
+- levels of detail (LOD) selection, GPG1: 435-437
+- Linear congruential algorithm (LCA), GPG3: 623-626
+- line / line intersection, GPG2: 191
+- Marching Cubes algorithm, GPG2: 229
+- marching cubes, GPG1: 492-495
+- Metaball clusters, and, GPG2: 229
+- name generation, GPG1: 493-498
+- normal animation, simulation of, 411-419
+- octree animation and game trees, GPG1: 258-263
+- occlusion culling, GPG3: 54-58
+- Perlin noise algorithms, GPG3: 453
+- PLP algorithm, GPG3: 354-358
+- particle systems, GPG2: 123-126, GPG3: 623-624
+- randomness, GPG1: 135-136, GPG3: 453, GPG3: 623-624
+- random number generator algorithm, GPG2: 130
+- RDC algorithm, GPG2: 229
+- Real-time strategy games, (RTS), GPG2: 228-238, GPG2: 235-236
+- Rendering algorithms, GPG2: 274-276
+- Render Exchange algorithm, GPG3: 180-181
+- Rendering algorithm, GPG3: 340-343
+- Schu's algorithm, GPG3: 617
+- sector-based portal, GPG2: 254-262, GPG4: 217-219
+- server scheduling algorithms, GPG4: 549-550
+- shadow volume calculation, GPG3: 172-174
+- sphere collision detection and bounding volume algorithms, GPG3: 390-393
+- Standard Template Library, C++ (STL), GPG1: 42
+- triangle collision detection algorithm, GPG3: 390
+- tri-strip algorithm, pseudo code for, GPG2: 204
+- vertex-blending algorithm, GPG4: 489-490
+- visibility algorithms, GPG3: 54-58
+- voice control and effects with LPC algorithm, GPG3: 613-621
+- wall building algorithm, GPG3: 365-372
+- water rendering algorithm, GPG2:
+- wave propagation, GPG4: 269-270
+- Weller-Atherton algorithm, GPG3: 367, 369-370
+- ser A* algorithm
+- Aliasing
+- filtering techniques and, GPG2: 485
+- "pixel-jitter" technique, GPG2: 485-486
+- shadows and aliasing problems, GPG2: 485-486
+- Alien voices, GPG3: 613-621
+- Alignment, GPG3: 305-306
+- flocking rule, GPG2: 330
+- Allocators, memory on CD, GPG2: 67
+- Allocation
+- algorithm, GPG3: 51-52
+- block-based memory allocation on CD-ROM, GPG3: 58
+- CompactChunkPolicy allocation policy, GPG3: 54
+- construction, GPG3: 54
+- construction, GPG3: 51-53
+- ConstructOnStack allocation policy, 139
+- copying of, GPG3: 51
+- custom allocators, creating, GPG3:
+- default allocators, GPG3: 52
+- default allocator object described, GPG3: 54-55
+- design, GPG3: 52-53
+- freelists and allocation, 133-134
+- pre-object data and, GPG3: 57
+- Placement new, object/block/allocation policy, 139
+- random, GPG3: 53-54
+- ShinyPolicy allocation policy, 139
+- temporary register allocation, GPG3: 406, GPG3: 409-410
+- types of, GPG3: 50-51
+- utility functions, GPG3: 51
+- Alpha-beta pruning, GPG1: 251-253
+- Alpha-beta search, GPG1: 193, GPG1: 522-523
+- "A-Tab" problem, GPG2: 82-83
+- Audio, 3DML audio mg, GPG4: 626-627
+- Authored modifiers, GPG3: 402
+- Automatic algorithms and population dynamics, GPG4: 217-219
+- Animation
+- actor / reproduction forces and animation forces, GPG3: 362-363
+- bone animation keys, GPG2: 148
+- clouds, procedural creature generation, GPG4: 203-204
+- cloud shadows, GPG3: 436-438, GPG3: 440-442, GPG3: 447-448
+- collision detection, GPG3: 419
+- foot-sliding, GPG3: 396-399
+- inverse kinematics and, GPG3: 192-198
+- joints, GPG3: 400-401, GPG4: 32, GPG4: 159, GPG4: 906
+- keyframing for, GPG1: 465-470
+- light maps, GPG3: 528-534
+- lip-synching, GPG3: 588, GPG4: 607-611
+- mass-spring model for realistic cloth, GPG3: 149
+- mesh deformation and skin calculation, GPG2: 149
+- motion capture, GPG3: 400-401
+- noise to add randomness, GPG3: 436
+- projected soft-body model, 435-448
+- projectile motion, GPG3: 402
+- characters, GPG2: 421-424
+- ragdoll physics with feedback control systems, GPG4: 217-219
+- realistic locomotion, GPG3: 394-413
+- simple animation scheme, GPG2: 406-407
+- smooth transitions between motion captures, GPG3: 396, GPG3: 402
+- spline interpolation control, 235-246
+- spring mass system, deformable bodies, 436-437
+- subdivision surfaces for, GPG3: 122-123
+- Super Mario 64 controls, GPG2: 431
+- system (time and smooth animation, GPG2: 148
+- texture coordinate animation, GPG1: 549-550
+- shader control schemes for, GPG2: 425-432
+- 3ds max skin exporter and animation tools, GPG2: 141-142
+- time-based animation, 233-246
+- traditional / rotational offsets, modification of, GPG3: 395-396
+- vertex animation, 411-414
+- set avatar Bones
+- Anisian, Man, X
+- anti-aliasing, GPG4: 461-463
+- Anti-aliasing
+- contact and iso info, GPG4: xxx
+- jittering
+- GPG4: 386-387
+- pixel quality and, GPG3: 385-388
+- pixel with adjustments for, GPG4:
+- Poisson disk sampling distribution and, GPG4: 387-388
+- randomness distribution and, GPG4: 386
+- API functions
+- explicit DLL loading and, GPG2: 36
+- GetProcAddress
+- Approximations
+- Greedy Algorithm for, GPG3: 172-174
+- minimax numerical approximations, 269-280
+- equioscillation approximation methods, 252-264
+- range reduction for, GPG3: 176-179
+- rational functions, GPG3: 171-172
+- table-based approximation functions, GPG3: 173-177
+- Taylor series approximating functions, GPG4: 180
+- Trigonometric functions, GPG1: 161-176, GPG3: 171-185
+- see also Taylor series
+- Architectures
+- DirectPlay 8.1 architectures described, GPG3: 561-562
+- distributed networking voting architecture, GPG3: 545-549
+- GasCap, GPG3: 231-233
+- multithreading architecture, GPG4: 581-583
+- object-oriented unit-based decision making, GPG4: 337-349
+- online lobby, state-event system for, GPG3: 533-534
+- Precomputed Visibility, 76-77
+- see also Multi-threading, AI architecture
+- Area navigation, AI path finding, GPG3: 240-255
+- area of interest summarized, GPG3: 245-246
+- path traversal, GPG3: 249-255
+- regulating the world for, GPG3: 247-249
+- Armies, GPG3: 272
+- ArrayProxy class, GPG3: 103
+- Arrays
+- address space management of dynamic arrays, GPG4: 85-93
+- bit arrays, GPG1: 101-103

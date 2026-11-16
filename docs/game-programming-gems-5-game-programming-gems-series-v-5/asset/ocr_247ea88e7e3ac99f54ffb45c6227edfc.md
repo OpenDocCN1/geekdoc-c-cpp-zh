@@ -1,0 +1,15 @@
+Far more importantly, it makes freelists configured with this policy safer and easier to use. Because placement new invokes the object's constructor, this policy's create function naturally mimics the way objects are constructed when they are created by a call to operator new(). As an added bonus, defining templated overloads of create() that pass arbitrary parameters to our class constructor becomes relatively trivial, allowing any public constructor to be called. Of course, the natural complement to initialization in a constructor is cleanup by a destructor, and that is exactly what happens in the destroy() function.
+
+Examining the result of configuring FreeList with this policy shows that we have met all our goals with flying colors. Allocating and freeing objects is certainly fast, consisting of only a few pointer operations plus a call to a constructor or destructor. It also has zero memory overhead per allocation. Most importantly though, using constructors and destructors to automate initialization and cleanup makes using our freelist a very safe and natural replacement for calls to operator new() and operator delete().
+
+# Possibilities
+
+If this were the end of the story, all the effort to split our freelist into policies would have been a waste. It would be great if the previously mentioned policies solved all our problems all the time, but unfortunately they do not. To illustrate just how versatile our policy-based design has made our freelist class, the following sections provide four separate allocation policies with varying behaviors and associated tradeoffs.
+
+# PlacementNewEmbeddedLink
+
+This is the allocation policy described earlier. Its combination of performance, zero per-block memory overhead, type safety, and ease of use makes it a versatile choice. Due to all these positive factors, this is the allocation policy with which FreeList is configured by default. It is not without limitations, however. For one, freelists configured with this policy never return memory back to the global heap and do not share their free blocks in any way. Depending on your allocation patterns, a large amount of memory may end up just sitting in freelists as free blocks, unavailable for any other purposes. Also, in extremely performance critical areas, PlacementNewEmbeddedLink may not be appropriate for classes with expensive constructors and destructors. Because of its ease of use, however, this is the default allocation policy.
+
+# ConstructOnceStack
+
+This allocation policy exactly marches the design and behavior of the freelist in [Glinker04]. The full set of that implementation's benefits and tradeoffs described in the beginning of this gem are encoded in ConstructOnceStack. The ability of our freelist to easily and perfectly emulate such a different implementation is a testament to the power of policies. This policy even exposes the additional function provided by the previous gem's freelist, FreeAll(), making the imitation complete.

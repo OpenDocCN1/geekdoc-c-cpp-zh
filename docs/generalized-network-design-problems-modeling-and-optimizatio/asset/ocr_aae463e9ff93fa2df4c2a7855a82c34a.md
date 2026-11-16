@@ -1,0 +1,14 @@
+known nearest-neighbor heuristic for the TSPg. Fischetti et al. [43] propose similar adaptations of the farthest-insertion, nearest-insertion, and cheapest-insertion heuristics. Renaud and Boctor [178] developed the most sophisticated heuristic published to date, which they call GI³ (Generalized Initialization, Insertion, and Improvement). It consists of three phases and it is a generalization of the I³ heuristic proposed by Renaud et al. [179]. Recently, Cacchiari et al. [14] proposed a multistart heuristic, which starts iteratively with a randomly chosen set of vertices and applies a decomposition approach, combined with improvement procedures. Karapetyan and Gutin [95] investigated specific neighborhoods for GTSP and algorithms that can explore these neighborhoods quickly.
+
+Several metaheuristic approaches have been proposed for solving the GTSP, including a genetic algorithm that uses a random-key encoding, which assures that the constructed solutions by crossover and mutation operators are feasible, and which was introduced by Snyder and Daskin [188]. Pinto et al. [139] developed a metaheuristic, based on an ant colony system, called the reinforcing ant colony system (RACS) algorithm, because it uses new pheromone rules and pheromone evaporation techniques. A genetic algorithm with several new features, including isolated initial populations and a new reproduction mechanism, based upon the TSP ordered crossover operator, was described by Silberholz and Golden [184]. An ensemble of differential evolutionary algorithms, with parallel populations, was developed by Tasgetiren et al. [197]. Particle Swarm Optimization based algorithms have been developed by Shi et al. [185] and by Tasgetiren et al. [196]. Gutin et al. [65, 66]. Bontoux et al. [13] proposed memetic algorithms, which combine the power of genetic algorithms with local search procedures.
+
+Recently, two hybrid algorithms have been developed by Pop et al. [161, 166], in which a genetic algorithm, respectively a consultant-guided search technique are combined with a local-global approach, in order to efficiently solve the GTSP. The memetic algorithm obtained by Gutin and Karapetyan [65] by combining a genetic algorithm with a powerful local search procedure can be considered the most competitive algorithm published to date.
+
+In this section we will describe two algorithmic methods for solving the generalized traveling salesman problem:
+
++   - a reinforcing ant colony system
++   - a hybrid heuristic technique obtained by combining the consultant-guided search technique with a local-global approach to the GTSP.
+
+# ## 3.5.1 Reinforcing ant colony system for solving the GTSP
+
+In this section, we describe a new algorithm called the reinforcing ant colony system (RACS), based on the Ant Colony System (ACS) for solving the Generalized Traveling Salesman Problem.

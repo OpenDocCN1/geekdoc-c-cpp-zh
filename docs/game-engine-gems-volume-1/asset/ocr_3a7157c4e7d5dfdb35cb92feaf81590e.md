@@ -1,0 +1,7 @@
+synchronization could be based on a non-rendering thread's update rate (such as simulation updates), but then the rendering thread could not be locked to a specific visual refresh schedule.
+
+This architecture can be extended to support additional per-thread context structures containing thread-local fields that are not synchronized. This allows thread-specific code to store object-specific data using the existing object system. For example, the rendering system could store scene culling information on each object that would only be accessible through that thread's context.
+
+The memory cost associated with this approach scales with the number of duplicated contexts. The minimum number of contexts is two, so this architecture could potentially halve the number of objects that can fit in memory at one time, assuming all object fields needed to be synchronized. There are also runtime costs associated with selecting the active thread, tracking modified fields, and merging contexts.
+
+This approach has the advantage that all thread synchronization is centralized within the object system. Code that works with objects can remain ignorant of the underlying synchronization system and will never block outside the explicit synchronization barrier, which is predictable. It also guarantees a consistent view across all object data from each thread's perspective, as long as all data access respects the per-thread context partitioning scheme.

@@ -1,0 +1,17 @@
+Most graphics API such as Direct3D and OpenGL are mainly state machines. Several render states are set and a batch of polygons is sent to the hardware using the specified render states. Our shader system rendering interface will use the same mechanism. States will be set by an interface to our graphics subsystem and stored by the shader system until a call is made to prepare a shader to render the next batch of polygons.
+
+Having recorded all active states, the shader system can gather all the relevant states and encode them in bit field with 64 or 128 bits. For example, the lowest 2 bits may encode the number of skinning weights that need to be used while the next 3 bits may contain the number of lights, etc. This shader key only describes what effects need to be activated. It does not contain specific parameters such as light positions, direction, color, etc., as these do not affect which shader fragments need to be linked in.
+
+The shader system can then look up the key value in a STL Map. If the key is found, that particular combination of effects was used recently and thus the precompiled shader can be retrieved from the map immediately. Otherwise, a new shader variant must be generated. This generated shader can be built by taking the generic shader code, finding a proper insertion point, and using code specialization for subtractive shader combining; setting number of lights as a constant, number of skinning weights, and so forth. The shader key can be used to derive all code specialization.
+
+To add fragments using the additive method, the shader combiner must find which shader functions it will graft to at which attachment points. Each shader fragment has a standard call form string for each compatible attachment point, which will be pasted into the main shader body at the specified attachment point in the main shader code's body.
+
+After the shader is compiled, we can query the shader compiler to find which shader parameters are needed for this shader. These parameters can be uploaded to the GPU in succession, retrieving them from the active render states.
+
+The generated shader is added to the map and associated with its key, thus giving us a cache of recently used shaders. As we generate shaders, their compiled binary size is computed. If a newly compiled shader causes the cache to exceed a threshold, the least recently used shader will be destroyed.
+
+At this point, the shader has been compiled and activated, and the parameters have been set up. The renderer can proceed to rendering the polygon batch.
+
+# Building a Complete Pipeline through Shaders
+
+The approach described herein allows us to achieve a flexible, unified pipeline where all shader effects can be combined together. It is actually possible using this approach to have a 3D engine using shader variants for 100% of all rendering. At the moment, this may not be ideal on all cards, as older video cards still use a specialized hardware path for fixed function transform that may make the standard fixed pipeline faster than the shader pipeline. Video cards such as the ATI RADEON™ 9600 and above, however, actually use shaders internally for all rendering, whether the fixed function pipeline API is used or not.

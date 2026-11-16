@@ -1,0 +1,226 @@
+
+
+- Actor::RotateToNewForward，327–328
+- 带组件的 Actor，JSON（完整文件摘录），440
+- Actor::SaveProperties 实现，447
+- 为 UIScreen::DrawTexture 添加 flipY 选项，406
+- AIComponent::ChangeState 实现，96
+- AlphaBetaDecide 实现，122
+- AlphaBetaMin 实现，123
+- AlphaBetaMax 实现，123
+- 动画声明，381–382
+- AnimSpriteComponent 声明，49
+- AnimSpriteComponent::Update 实现，50
+- Asteroid 构造函数，74–75
+- AudioComponent 声明，237
+- AudioSystem::LoadBank 实现，227–228
+- 带事件 ID 的 AudioSystem::PlayEvent 实现，230–231
+- AudioSystem::SetListener 实现，235–236
+- 带事件 ID 的 AudioSystem::Update 实现，231
+- 基本 InputSystem 声明，252
+- Basic.frag 代码，141
+- Basic.vert 代码，140
+- 骨骼数据的开头，370
+- 动画数据的开头，380–381
+- BGSpriteComponent 声明，51
+- BoxComponent 声明，324
+- BoxComponent::OnUpdateWorldTransform 实现，325
+- 广度优先搜索，102
+- Button 声明，346
+- 带 const 成员的 Circle 类，464
+- CircleComponent 声明，83
+- CircleComponent 交点，83
+- Component 声明，39–40
+- ComputeGlobalInvBindPose，379–380
+- ComputeMatrixPalette，384
+- 从三个点构建平面，301
+- ConvexPolygon::Contains 实现，310
+- 为渲染创建纹理，401–402
+- 创建镜像帧缓冲，403–404
+- Cube.gpmesh，192
+- SpriteComponent::Draw 的当前实现，166–167
+- 在 VertexArray 构造函数中声明顶点属性，375–376
+- 方向光，加载全局属性，434–435
+- 在 Renderer::Draw 中绘制 MeshComponent，205
+- 在 Renderer::DrawFromGBuffer 中绘制点光源，422
+- English.gptext 文本映射文件，359
+- Filter1D 实现，266
+- GetGlobalPoseAtTime 的最终版本，387–388
+- GetGlobalPoseAtTime 的第一个版本，382–383
+- FollowCamera::Update 实现（带弹簧），284–285
+- Font 声明，338
+- Font::Load 实现，339
+- Font::RenderText 实现，340
+- 从鼠标计算 FPS 角速度，277
+- FPSActor::FixCollisions，332–333
+- FPSCamera::Update 实现（添加俯仰角），279
+- FPSCamera::Update 实现（无俯仰角），278
+- Game 声明，7
+- Game::GenerateOutput 尝试绘制精灵，147
+- Game::ProcessInput 实现，13
+- Game::UpdateGame 实现，26
+- Game::UpdateGame 更新 Actor，41–42
+- GBuffer 声明，409
+- GBuffer::Create 实现，410
+- GBufferGlobal.frag 着色器，415–416
+- GBufferPointLight.frag 主函数，420–421
+- GBufferWrite.frag 着色器，412
+- 贪婪最佳优先搜索，110–111
+- HUD::UpdateCrosshair，353
+- HUD::UpdateRadar 实现，356–357
+- 初始 AudioSystem 声明，224
+- 初始 ControllerState，263
+- 初始 MouseState 声明，258
+- 初始着色器声明，142
+- 初始 UIScreen 声明，341–342
+- InputComponent 声明，77
+- InputComponent::ProcessInput 实现，77–78
+- InputSystem::Filter2D，268–269
+- 针对滚轮的 InputSystem::ProcessEvent 实现，260
+- JsonHelper::GetInt 实现，433
+- KeyboardState 声明，254
+- KeyboardState::GetKeyState，255
+- 带 Actor 的关卡（Level1.gplevel），435–436
+- 带全局光照属性的关卡，430–431
+- LevelLoader::LoadActors 实现，438–439
+- LevelLoader::LoadComponents 实现，443–444
+- LevelLoader::LoadGlobalProperties，434–435
+- LevelLoader::LoadJSON，432
+- LevelLoader::SaveActors 实现，447–448
+- LevelLoader::SaveLevel 实现，445
+- 线段与 AABB 辅助函数，319
+- 线段与 AABB 交点，320
+- 线段与平面交点，315
+- 线段与球体交点，317
+- LineSegment::MinDistSq 实现，300–301
+- 加载 G-buffer 全局光照着色器，416
+- 在 A* 搜索中遍历相邻节点，112–113
+- main 实现，10
+- MaxPlayer 和 MinPlayer 函数，118–119
+- MaxPlayerLimit 实现，120
+- Mesh 声明，194
+- MeshBinHeader 结构体，449–450
+- MeshComponent 声明，204
+- MeshComponent::Draw 实现，205
+- MeshComponent::LoadProperties 实现，442
+- Mesh::LoadBinary 大纲，452–453
+- Mesh::SaveBinary 实现，450–451
+- MoveComponent 声明，73
+- MoveComponent::Update 实现，74
+- 带四元数的 MoveComponent::Update 实现，190
+- OrbitCamera::Update 实现，287–288
+- 吃豆人游戏循环伪代码，6
+- Phong.frag 光照 uniform，212
+- Phong.frag 主函数，215
+- Phong.vert 主函数，214
+- PhysWorld::SegmentCast，326–327
+- PhysWorld::TestPairWise，329
+- PhysWorld::TestSweepAndPrune，330–331
+- PointLightComponent 声明，419
+- PointLightComponent::Draw 实现，423–424
+- 值得注意的四元数函数，189
+- Renderer::Draw 已更新以渲染镜像和默认两个通道，405
+- Renderer::Draw3DScene 辅助函数，404–405
+- Renderer::DrawFromGBuffer 实现，417
+- Renderer::GetScreenDirection 实现，294
+- Renderer::Unproject 实现，293
+- 请求 OpenGL 属性，129
+- Shader::CompileShader 实现，143
+- Shader::IsCompiled 实现，144
+- Shader::Load 实现，144–145
+- Shader::SetMatrixUniform，165
+- Ship 声明，54
+- SkeletalMeshComponent 声明，377
+- Skeleton 声明，378–379
+- Skeleton PhysWorld 声明，325–326
+- Skinned.vert 主函数，385–386
+- SoundEvent 声明，232
+- SoundEvent 的 Is3D 和 Set3DAttributes 实现，236–237
+- SplineCamera::Update，291–292
+- Spline::Compute 实现，290
+- SpriteComponent 声明，45–46
+- SpriteComponent::Draw 实现，48
+- Sprite.frag 实现，177
+- Sprite.vert 实现，176
+- 扫掠球体交点，323
+- Texture 声明，170–171
+- Texture::Load 实现，172–173
+- Transform.vert 顶点着色器，164
+- UIScreen::ProcessInput，348–349
+- 更新第一人称模型的位置和旋转，280
+- 使用 SegmentCast 进行球体移动，328
+- VertexArray 声明，135
+- Z 缓冲伪代码，202
+- Load 函数，144–145, 338–339, 379
+- LoadActors，438
+- LoadBank，227–228
+- LoadBinary，452–453
+- LoadComponents，443–444
+- LoadData 函数，44
+- LoadGlobalProperties，434
+- 加载
+  - 3D 模型，190
+  - 动画数据，骨骼动画，380–385
+  - 音库，227–229
+  - 二进制网格文件，452–454
+  - G-buffer 全局光照着色器，416
+  - 全局属性，430–434
+  - gpmesh 文件，194–195
+  - 图像文件，43–44
+  - 关卡文件，430
+    - Actor，435–439
+    - 组件，439-444
+    - 全局属性，430-434
+    - 着色器
+      - 向游戏添加着色器，146
+      - CompileShader，142-143
+      - IsCompiled，143-144
+      - IsValidProgram，145
+      - Load，144-145
+      - OpenGL，141-142
+      - SetActive，145
+      - Unload，146
+    - 骨骼，378-380
+    - 纹理，170-173
+    - LoadJSON，431-433
+    - LoadLevel 函数，431
+    - LoadProperties，436, 441
+    - LoadShaders，146, 415
+    - LoadText，359
+  - 局部光照模型，209
+  - 局部姿态，368
+  - 本地化，358, 361
+    - 文本映射，添加，359-361
+    - Unicode，358-359
+  - 观察矩阵，196
+  - 低通滤波器，遮挡，243
+  - 低质量反射，401
+
+## M
+- Mac，安装 FMOD，223
+- 宏
+  - offsetof 宏，175
+  - SDL_BUTTON 宏，257
+- main 函数，10-11
+- 曼哈顿距离启发式，104-105
+- 映射，474-475
+  - 哈希映射，475
+- 质量，79-80
+- Math::Clamp，266
+- Math::Cos，67
+- Math.h 库
+  - Dot 函数，70
+  - Normalize()，66
+- Math::Max，313
+- Math::NearZero 函数，73-74
+- Math::Sin，67
+- Math::ToDegrees，47
+- 矩阵
+  - 逆绑定姿态矩阵，371
+  - 观察矩阵，196
+  - 变换，矩阵乘法，154-155
+  - 变换和，154
+  - 变换点，155-157
+  - 视图矩阵 (3D)，196-197
+  - 视图投影矩阵，计算，200
+

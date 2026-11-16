@@ -1,0 +1,322 @@
+
+
+```cpp
+void Game::AddActor(Actor* actor)
+{
+    // If updating actors, need to add to pending
+    if (mUpdatingActors)
+    {
+        mPendingActors.emplace_back(actor);
+    }
+    else
+    {
+        mActors.emplace_back(actor);
+    }
+}
+```
+
+```cpp
+void Game::UpdateGame()
+{
+    // Compute delta time (as in Chapter 1)
+    float deltaTime = /* ... */;
+
+    // Update all actors
+    mUpdatingActors = true;
+    for (auto actor : mActors)
+    {
+        actor->Update(deltaTime);
+    }
+    mUpdatingActors = false;
+
+    // Move any pending actors to mActors
+    for (auto pending : mPendingActors)
+    {
+        mActors.emplace_back(pending);
+    }
+    mPendingActors.clear();
+}
+```
+
+```cpp
+// Add any dead actors to a temp vector
+std::vector<Actor*> deadActors;
+for (auto actor : mActors)
+{
+    if (actor->GetState() == Actor::EDead)
+    {
+        deadActors.emplace_back(actor);
+    }
+}
+
+// Delete dead actors (which removes them from mActors)
+for (auto actor : deadActors)
+{
+    delete actor;
+}
+```
+
+```cpp
+// Because ~Actor calls RemoveActor, use a different style loop
+while (!mActors.empty())
+{
+    delete mActors.back();
+}
+```
+
+```cpp
+// Loads an image from a file
+// Returns a pointer to an SDL_Surface if successful, otherwise nullptr
+SDL_Surface* IMG_Load(
+    const char* file // Image file name
+);
+```
+
+```cpp
+// Converts an SDL_Surface to an SDL_Texture
+// Returns a pointer to an SDL_Texture if successful, otherwise nullptr
+SDL_Texture* SDL_CreateTextureFromSurface(
+    SDL_Renderer* renderer, // Renderer used
+    SDL_Surface* surface    // Surface to convert
+);
+```
+
+```cpp
+SDL_Texture* LoadTexture(const char* fileName)
+{
+    // Load from file
+    SDL_Surface* surf = IMG_Load(fileName);
+    if (!surf)
+    {
+        SDL_Log("Failed to load texture file %s", fileName);
+        return nullptr;
+    }
+
+    // Create texture from surface
+    SDL_Texture* text = SDL_CreateTextureFromSurface(mRenderer, surf);
+    SDL_FreeSurface(surf);
+    if (!text)
+    {
+        SDL_Log("Failed to convert surface to texture for %s", fileName);
+        return nullptr;
+    }
+
+    return text;
+}
+```
+
+```cpp
+class SpriteComponent : public Component
+{
+public:
+    // (Lower draw order corresponds with further back)
+    SpriteComponent(class Actor* owner, int drawOrder = 100);
+    ~SpriteComponent();
+    virtual void Draw(SDL_Renderer* renderer);
+    virtual void SetTexture(SDL_Texture* texture);
+
+    int GetDrawOrder() const { return mDrawOrder; }
+    int GetTexHeight() const { return mTexHeight; }
+    int GetTexWidth() const { return mTexWidth; }
+
+protected:
+    // Texture to draw
+    SDL_Texture* mTexture;
+    // Draw order used for painter's algorithm
+    int mDrawOrder;
+    // Width/height of texture
+    int mTexWidth;
+    int mTexHeight;
+};
+```
+
+```cpp
+void Game::AddSprite(SpriteComponent* sprite)
+{
+    // Find the insertion point in the sorted vector
+    // (The first element with a higher draw order than me)
+    int myDrawOrder = sprite->GetDrawOrder();
+    auto iter = mSprites.begin();
+    for ( ;
+         iter != mSprites.end();
+         ++iter)
+    {
+        if (myDrawOrder < (*iter)->GetDrawOrder())
+        {
+            break;
+        }
+    }
+    // Inserts element before position of iterator
+    mSprites.insert(iter, sprite);
+}
+```
+
+```cpp
+void SpriteComponent::SetTexture(SDL_Texture* texture)
+{
+    mTexture = texture;
+    // Get width/height of texture
+    SDL_QueryTexture(texture, nullptr, nullptr,
+        &mTexWidth, &mTexHeight);
+}
+```
+
+```cpp
+// Renders a texture to the rendering target
+// Returns 0 on success, negative value on failure
+int SDL_RendererCopy(
+    SDL_Renderer* renderer, // Render target to draw to
+    SDL_Texture* texture, // Texture to draw
+    const SDL_Rect* srcrect, // Part of texture to draw (null if whole)
+    const SDL_Rect* dstrect, // Rectangle to draw onto the target
+);
+```
+
+```cpp
+// Renders a texture to the rendering target
+// Returns 0 on success, negative value on failure
+int SDL_RenderCopyEx(
+    SDL_Renderer* renderer,     // Render target to draw to
+    SDL_Texture* texture,       // Texture to draw
+    const SDL_Rect* srcrect,    // Part of texture to draw (null if whole)
+    const SDL_Rect* dstrect,    // Rectangle to draw onto the target
+    double angle,               // Rotation angle (in degrees, clockwise)
+    const SDL_Point* center,    // Point to rotate about (nullptr for center)
+    SDL_RendererFlip flip,      // How to flip texture (usually SDL_FLIP_NONE)
+);
+```
+
+```cpp
+void SpriteComponent::Draw(SDL_Renderer* renderer)
+{
+    if (mTexture)
+    {
+        SDL_Rect r;
+        // Scale the width/height by owner's scale
+        r.w = static_cast<int>(mTexWidth * mOwner->GetScale());
+        r.h = static_cast<int>(mTexHeight * mOwner->GetScale());
+        // Center the rectangle around the position of the owner
+        r.x = static_cast<int>(mOwner->GetPosition().x - r.w / 2);
+        r.y = static_cast<int>(mOwner->GetPosition().y - r.h / 2);
+
+        // Draw
+        SDL_RendererCopyEx(renderer,
+            mTexture, // Texture to draw
+            nullptr, // Source rectangle
+            &r, // Destination rectangle
+            -Math::ToDegrees(mOwner->GetRotation()), // (Convert angle)
+            nullptr, // Point to rotate
+            SDL_FLIP_NONE); // Flip behavior
+    }
+}
+```
+
+```cpp
+class AnimSpriteComponent : public SpriteComponent
+{
+public:
+    AnimSpriteComponent(class Actor* owner, int drawOrder = 100);
+    // Update animation every frame (overriden from component)
+    void Update(float deltaTime) override;
+    // Set the textures used for animation
+    void SetAnimTextures(std::vector<SDL_Texture*>& textures);
+    // Set/get the animation FPS
+    float GetAnimFPS() const { return mAnimFPS; }
+    void SetAnimFPS(float fps) { mAnimFPS = fps; }
+private:
+    // All textures in the animation
+    std::vector<SDL_Texture*> mAnimTextures;
+    // Current frame displayed
+    float mCurrFrame;
+    // Animation frame rate
+    float mAnimFPS;
+};
+```
+
+```cpp
+void AnimSpriteComponent::Update(float deltaTime)
+{
+    SpriteComponent::Update(deltaTime);
+
+    if (mAnimTextures.size() > 0)
+    {
+        // Update the current frame based on frame rate
+        // and delta time
+        mCurrFrame += mAnimFPS * deltaTime;
+
+        // Wrap current frame if needed
+        while (mCurrFrame >= mAnimTextures.size())
+        {
+            mCurrFrame -= mAnimTextures.size();
+        }
+
+        // Set the current texture
+        SetTexture(mAnimTextures[static_cast<int>(mCurrFrame)]);
+    }
+}
+```
+
+```cpp
+class BGSpriteComponent : public SpriteComponent
+{
+public:
+    // Set draw order to default to lower (so it's in the background)
+    BGSpriteComponent(class Actor* owner, int drawOrder = 10);
+    // Update/draw override from parent
+    void Update(float deltaTime) override;
+    void Draw(SDL_Renderer* renderer) override;
+
+    void SetBGTextures(const std::vector<SDL_Texture*>& textures);
+    // Get/Set screen size and scroll speed
+    void SetScreenSize(const Vector2& size) { mScreenSize = size; }
+    void SetScrollSpeed(float speed) { mScrollSpeed = speed; }
+    float GetScrollSpeed() const { return mScrollSpeed; }
+
+private:
+    // Struct to encapsulate each BG image and its offset
+    struct BGTexture
+    {
+        SDL_Texture* mTexture;
+        Vector2 mOffset;
+    };
+    std::vector<BGTexture> mBGTextures;
+    Vector2 mScreenSize;
+    float mScrollSpeed;
+};
+```
+
+```cpp
+void BGSpriteComponent::SetBGTextures(const std::vector<SDL_Texture*>& textures)
+{
+    int count = 0;
+    for (auto tex : textures)
+    {
+        BGTexture temp;
+        temp.mTexture = tex;
+        // Each texture is screen width in offset
+        temp.mOffset.x = count * mScreenSize.x;
+        temp.mOffset.y = 0;
+        mBGTextures.emplace_back(temp);
+        count++;
+    }
+}
+```
+
+```cpp
+void BGSpriteComponent::Update(float deltaTime)
+{
+    SpriteComponent::Update(deltaTime);
+    for (auto& bg : mBGTextures)
+    {
+        // Update the x offset
+        bg.mOffset.x += mScrollSpeed * deltaTime;
+        // If this is completely off the screen, reset offset to
+        // the right of the last bg texture
+        if (bg.mOffset.x < -mScreenSize.x)
+        {
+            bg.mOffset.x = (mBGTextures.size() - 1) * mScreenSize.x - 1;
+        }
+    }
+}
+```
+

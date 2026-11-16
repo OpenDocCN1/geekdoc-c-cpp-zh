@@ -1,0 +1,94 @@
+
+
+### Exercise 249
+Prove Theorem 4.4.9. $\diamond$
+
+### Exercise 250
+Let $\mathcal{C}$ be a cyclic code with cyclic complement $\mathcal{C}^c$. Prove that if $\mathcal{C}$ is MDS so is $\mathcal{C}^c$. $\diamond$
+
+The following corollary determines, from the generator polynomial, when a cyclic code is self-orthogonal.
+
+### Corollary 4.4.10
+Let $\mathcal{C}$ be a cyclic code over $\mathbb{F}_q$ of length $n$ with generator polynomial $g(x)$ and check polynomial $h(x) = (x^n - 1)/g(x)$. Then $\mathcal{C}$ is self-orthogonal if and only if $h^*(x) | g(x)$.
+
+### Exercise 251
+Prove Corollary 4.4.10. $\diamond$
+
+### Exercise 252
+Using Corollary 4.4.10 and Examples 3.7.8, 4.2.4, and 4.3.4 give the generator polynomials of the self-orthogonal binary cyclic codes of lengths 7, 9, and 15. $\diamond$
+
+In the next theorem we show how to decide when a cyclic code is self-orthogonal. In particular, this characterization shows that all self-orthogonal cyclic codes are even-like. In this theorem we use the observation that if $C$ is a $q$-cyclotomic coset modulo $n$, either $C_{\mu^{-1}} = C$ or $C_{\mu^{-1}} = C'$ for some different $q$-cyclotomic coset $C'$, in which case $C'_{\mu^{-1}} = C$ as $\mu_{-1}^2$ is the identity.
+
+### Theorem 4.4.11
+Let $\mathcal{C}$ be a self-orthogonal cyclic code over $\mathbb{F}_q$ of length $n$ with defining set $T$. Let $C_1, \dots, C_k, D_1, \dots, D_\ell, E_1, \dots, E_\ell$ be all the distinct $q$-cyclotomic cosets modulo $n$ partitioned so that $C_i = C_{i\mu^{-1}}$ for $1 \le i \le k$ and $D_i = E_{i\mu^{-1}}$ for $1 \le i \le \ell$. The following hold.
+
+- (i) $C_i \subseteq T$ for $1 \le i \le k$ and at least one of $D_i$ or $E_i$ is contained in $T$ for $1 \le i \le \ell$.
+- (ii) $\mathcal{C}$ is even-like.
+- (iii) $\mathcal{C} \cap \mathcal{C}_{\mu^{-1}} = \{\mathbf{0}\}$.
+
+**Conversely:** if $\mathcal{C}$ is a cyclic code with defining set $T$ that satisfies (i), then $\mathcal{C}$ is self-orthogonal.
+
+**Proof:** Let $N = \{0, 1, \dots, n-1\}$. Let $T^\perp$ be the defining set of $\mathcal{C}^\perp$. By Theorem 4.4.9, $T^\perp = N \setminus (-1)T \mod n$. As $\mathcal{C} \subseteq \mathcal{C}^\perp$, $N \setminus (-1)T \mod n \subseteq T$ by Exercise 239. If $C_i \nsubseteq T$, then $C_i \subseteq (-1)T \mod n$ because $C_i = C_{i\mu^{-1}}$ implying that $C_i \subseteq N \setminus (-1)T \mod n \subseteq T$, a contradiction. If $D_i \nsubseteq T$, then $E_i \subseteq (-1)T \mod n$ because $E_i = D_{i\mu^{-1}}$ implying that $E_i \subseteq N \setminus (-1)T \mod n \subseteq T$, proving (i). Part (ii) follows from part (i) and Exercise 238 as $C_i = \{0\}$ for some $i$. By Corollary 4.4.5, $C_{\mu^{-1}}$ has defining set $(-1)T \mod n$. By (i) $T \cup (-1)T \mod n = N$ yielding (iii) using Exercise 239.
+
+For the converse, assume $T$ satisfies (i). We only need to show that $T^\perp \subseteq T$, where $T^\perp = N \setminus (-1)T \mod n$ by Exercise 239. As $C_i \subseteq T$ for $1 \le i \le k$, $C_i \subseteq (-1)T \mod n$ implying $C_i \subseteq T^\perp$. Hence $T^\perp$ is a union of some $D_i$'s and $E_i$'s. If $D_i \subseteq N \setminus (-1)T \mod n$, then $D_i \nsubseteq (-1)T \mod n$ and so $E_i \subseteq T$. By (i) $D_i \subseteq T$. Similarly if $E_i \subseteq N \setminus (-1)T \mod n$, then $E_i \subseteq T$. Hence $T^\perp \subseteq T$ implying $\mathcal{C}$ is self-orthogonal. $\square$
+
+### Exercise 253
+Continuing with Exercise 242, do the following: (a) Show that all [31, 5] binary cyclic codes are self-orthogonal. (b) Show that there are two inequivalent [31, 15] self-orthogonal binary cyclic codes, and give defining sets for a code in each equivalence class. $\diamond$
+
+### Corollary 4.4.12
+Let $\mathcal{D} = \mathcal{C} + \langle \mathbf{1} \rangle$ be a cyclic code of length $n$ over $\mathbb{F}_q$, where $\mathcal{C}$ is self-orthogonal. Then $\mathcal{D} \cap \mathcal{D}^{\perp_{-1}} = \langle \mathbf{1} \rangle$.
+
+### Exercise 254
+Prove Corollary 4.4.12. $\diamond$
+
+### Corollary 4.4.13
+Let $p_1(x), \dots, p_\ell(x), q_1(x), \dots, q_\ell(x), r_1(x), \dots, r_\ell(x)$ be the monic irreducible factors of $x^n - 1$ over $\mathbb{F}_q[x]$ arranged as follows. For $1 \le i \le \ell$, $p_i^*(x) = a_i p_i(x)$ for some $a_i \in \mathbb{F}_q$, and for $1 \le i \le \ell$, $r_i^*(x) = b_i q_i(x)$ for some $b_i \in \mathbb{F}_q$. Let $\mathcal{C}$ be a cyclic code of length $n$ over $\mathbb{F}_q$ with generator polynomial $g(x)$. Then $\mathcal{C}$ is self-orthogonal if and only if $g(x)$ has factors $p_1(x) \cdots p_\ell(x)$ and at least one of $q_i(x)$ or $r_i(x)$ for $1 \le i \le \ell$.
+
+### Exercise 255
+Prove Corollary 4.4.13. $\diamond$
+
+### Exercise 256
+Using Corollary 4.4.13 and Examples 3.7.8, 4.2.4, and 4.3.4 give the generator polynomials of the self-orthogonal binary cyclic codes of lengths 7, 9, and 15. Compare your answers to those of Exercise 252. $\diamond$
+
+### Exercise 257
+Let $j(x) = 1 + x + x^2 + \cdots + x^{n-1}$ in $\mathcal{R}_n$, and $\overline{j(x)} = (1/n)j(x)$. In Exercise 221 we gave properties of $j(x)$ and $\overline{j(x)}$. Let $\mathcal{C}$ be a cyclic code over $\mathbb{F}_q$ with generating idempotent $i(x)$. Let $\mathcal{C}_e$ be the subcode of all even-like vectors in $\mathcal{C}$. In Exercise 238 we found the generator polynomial of $\mathcal{C}_e$. (a) Prove that $1 - \overline{j(x)}$ is the generating idempotent of the $[n, n-1]$ cyclic code over $\mathbb{F}_q$ consisting of all even-like vectors in $\mathcal{R}_q$. (b) Prove that $i(1) = 0$ if $\mathcal{C} = \mathcal{C}_e$ and $i(1) = 1$ if $\mathcal{C} \neq \mathcal{C}_e$. (c) Prove that if $\mathcal{C} \neq \mathcal{C}_e$, then $i(x) - \overline{j(x)}$ is the generating idempotent of $\mathcal{C}_e$. $\diamond$
+
+We illustrate Theorems 4.3.13, 4.3.17, 4.4.6, and 4.4.9 by returning to Examples 4.3.4 and 4.3.5.
+
+### Example 4.4.14
+In Examples 4.3.4 and 4.3.5, the following codes are cyclic complementary pairs: $\mathcal{C}_1$ and $\mathcal{C}_6$, $\mathcal{C}_2$ and $\mathcal{C}_5$, and $\mathcal{C}_3$ and $\mathcal{C}_4$. In both examples, the following are dual pairs: $\mathcal{C}_1$ and $\mathcal{C}_6$, $\mathcal{C}_2$ and $\mathcal{C}_4$, and $\mathcal{C}_3$ and $\mathcal{C}_5$. In Example 4.3.4, $\mathcal{C}_2$ and $\mathcal{C}_3$ are equivalent under $\mu_3$, as are $\mathcal{C}_4$ and $\mathcal{C}_5$. In Example 4.3.5, the same pairs are equivalent under $\mu_2$. In both examples, the permutation automorphism group for each of $\mathcal{C}_1$, $\mathcal{C}_6$, and $\mathcal{C}_7$ is the full symmetric group. (In general, the permutation automorphism group of the repetition code of length $n$, and hence its dual, is the symmetric group on $n$ letters.) In Example 4.3.4, the group of order 3 generated by $\mu_2$ is a subgroup of the automorphism group of the remaining four codes; in Example 4.3.5, the group of order 5 generated by $\mu_3$ is a subgroup of the automorphism group of the remaining four codes. $\blacksquare$
+
+### Exercise 258
+Verify all the claims in Example 4.4.14. $\diamond$
+
+### Exercise 259
+Let $\mathcal{C}$ be a cyclic code of length $n$ over $\mathbb{F}_q$ with generator polynomial $g(x)$. What conditions on $g(x)$ must be satisfied for the dual of $\mathcal{C}$ to equal the cyclic complement of $\mathcal{C}$? $\diamond$
+
+### Exercise 260
+Identify all binary cyclic codes of lengths 7, 9, and 15 whose duals equal their cyclic complements. (Examples 3.7.8, 4.2.4, and 4.3.4 will be useful.) $\diamond$
+
+In Theorem 4.4.9 we found the generating idempotent of the dual of any code. The multiplier $\mu_{-1}$ was key in that theorem. We can also find the generating idempotent of the Hermitian dual of a cyclic code over $\mathbb{F}_4$. Here $\mu_{-2}$ will play the role of $\mu_{-1}$. Recall from Exercise 8 that if $\mathcal{C}$ is a code over $\mathbb{F}_4$, then $C^{\perp_h} = \overline{C^\perp}$.
+
+### Theorem 4.4.15
+Let $\mathcal{C}$ be a cyclic code of length $n$ over $\mathbb{F}_4$ with generating idempotent $e(x)$ and defining set $T$. The following hold:
+- (i) $C^{\perp_h}$ is a cyclic code and $C^{\perp_h} = \mathcal{C}^c \mu_{-2}$, where $\mathcal{C}^c$ is the cyclic complement of $\mathcal{C}$.
+- (ii) $C^{\perp_h}$ has generating idempotent $1 - e(x)\mu_{-2}$.
+- (iii) If $N = \{0, 1, \dots, n-1\}$, then $N \setminus (-2)T \text{ mod } n$ is the defining set of $C^{\perp_h}$.
+- (iv) Precisely one of $\mathcal{C}$ and $C^{\perp_h}$ is odd-like and the other is even-like.
+
+**Proof:** We leave the fact that $C^{\perp_h}$ is a cyclic code as Exercise 8. Exercise 8 shows that $C^{\perp_h} = \overline{C^\perp}$. By Theorem 4.4.9 $\overline{C^\perp} = \mathcal{C}^c \mu_{-1}$. Theorem 4.3.16 shows that $\overline{\mathcal{C}^c} = \overline{\mathcal{C}}^c = \mathcal{C}^c \mu_2$, and (i) follows since $\mu_2 \mu_{-1} = \mu_{-2}$. By Theorem 4.4.6 $C^{\perp_h} = \overline{C^\perp} \mu_{-2}$ has generating idempotent $(1 - e(x))\mu_{-2} = 1 - e(x)\mu_{-2}$, giving (ii). $\mathcal{C} \mu_{-2}$ has defining set $(-2)^{-1}T \text{ mod } n$ by Corollary 4.4.5. However, $(-2)^{-1}T = (-2)T$ modulo $n$ because $\mu_{-2}^2 = \mu_4$ and $\mu_4$ fixes all 4-cyclotomic cosets. By Theorem 4.4.6(ii) and Corollary 4.4.5, $C^{\perp_h} = \mathcal{C}^c \mu_{-2}$ has defining set $(-2)^{-1}(N \setminus T) = N \setminus (-2)T \text{ mod } n$, giving (iii). Part (iv) follows from (iii) and Exercise 238 as precisely one of $N$ and $N \setminus (-2)T \text{ mod } n$ contains 0. $\square$
+
+### Exercise 261
+Prove that if $\mathcal{C}$ be a cyclic code over $\mathbb{F}_4$, then $C^{\perp_h}$ is also a cyclic code. $\diamond$
+
+### Exercise 262
+Using Theorem 4.3.16 find generating idempotents of all the cyclic codes $\mathcal{C}$ of length 9 over $\mathbb{F}_4$, their ordinary duals $C^\perp$, and their Hermitian duals $C^{\perp_h}$. $\diamond$
+
+We can obtain a result analogous to Theorem 4.4.11 for Hermitian self-orthogonal cyclic codes over $\mathbb{F}_4$. Again we simply replace $\mu_{-1}$ by $\mu_{-2}$ and apply Theorem 4.4.15. Notice that if $\mathcal{C}$ is a 4-cyclotomic coset modulo $n$, then either $C\mu_{-2} = \mathcal{C}$ or $C\mu_{-2} = \mathcal{C}'$ for a different 4-cyclotomic coset $\mathcal{C}'$, in which case $C'\mu_{-2} = \mathcal{C}$ as $\mu_{-2}^2 = \mu_4$ and $\mu_4$ fixes all 4-cyclotomic cosets.
+
+### Theorem 4.4.16
+Let $\mathcal{C}$ be a Hermitian self-orthogonal cyclic code over $\mathbb{F}_4$ of length $n$ with defining set $T$. Let $C_1, \dots, C_k, D_1, \dots, D_\ell, E_1, \dots, E_\ell$ be all the distinct 4-cyclotomic cosets modulo $n$ partitioned so that $C_i = C_i \mu_{-2}$ for $1 \le i \le k$ and $D_j = E_j \mu_{-2}$ for $1 \le j \le \ell$. The following hold:
+- (i) $C_i \subseteq T$ for $1 \le i \le k$ and at least one of $D_j$ or $E_j$ is contained in $T$ for $1 \le j \le \ell$.
+- (ii) $\mathcal{C}$ is even-like.
+- (iii) $\mathcal{C} \cap \mathcal{C}\mu_{-2} = \{0\}$.
+

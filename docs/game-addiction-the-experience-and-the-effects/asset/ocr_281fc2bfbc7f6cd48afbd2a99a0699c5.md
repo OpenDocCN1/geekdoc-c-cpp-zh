@@ -1,0 +1,11 @@
+not the other way around.\(^{30}\) As more forms of entertainment start to take on the features of games, we as consumers will have to insist on creative new tools to regulate ourselves. When somebody reaches the point of motivational monopoly, he isn’t using media to recuperate and recharge. It’s not about enjoying a medium for the skill of the artist behind it. It’s about giving the brain a powerful jolt — which could be dulling the taste for reality. This isn’t happening just because some gamers are sloppy and irresponsible; it’s the consequence of having spaces that are rewarding and real-feeling. Until now only a few people have completely lost themselves in things like books or television, so not too many folks have taken the time to understand why.
+
+# Taking Care of Business
+
+Game addiction takes an addict, but that’s not a topic that invites easy self-exploration. For gamers, it’s partially the problem of facing the demons that make them play. I played partly to face the embarrassment of not having many vile demons to speak of. The case of slipping into a game, demons or no baffles the best of us.
+
+In high school, somebody close to me began suffering from a serious string of drug addictions. She was sent to an international rehab center, so in order to understand the process I attended an affiliated group therapy program. Surrounded by alcoholics, hardcore drug addicts, and your standard dysfunctional people, it was time to share our demons: put them on the table. Someone asked, “What’s your problem, Nails?” (My name gets mispronounced a lot.) “Well,” I started, “It’s not life-threatening or anything, but I get caught up in playing video games. There are times when my days just vanish.”
+
+It took a while for the eighty people in the room to stop laughing, even the Tony Robbins wannabe. Rather than entertain the thought that a computer could cause problems, the psychologist leading the session spoke for the crowd. “Games,” he scoffed, “games don’t cause problems, Nails. Are you sure that you don’t have any real problems?” He listed off some examples, like alcohol or past molestation.
+
+Is that what they really expected? “Oh, you guys know everything!

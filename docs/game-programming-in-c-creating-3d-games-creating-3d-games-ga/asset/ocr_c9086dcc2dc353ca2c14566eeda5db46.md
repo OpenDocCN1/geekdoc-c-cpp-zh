@@ -1,0 +1,1 @@
+Leveraging the powerful FMOD API, this chapter covers how to bootstrap an audio system that goes well beyond simply playing sound files. Covered topics include using sound events, adding positional 3D audio, mixing sounds, and adding effects.

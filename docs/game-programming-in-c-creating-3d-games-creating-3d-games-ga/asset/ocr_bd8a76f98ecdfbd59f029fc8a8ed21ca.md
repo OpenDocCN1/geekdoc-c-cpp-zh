@@ -1,0 +1,7 @@
+# # LEVEL FILE LOADING
+
+To this point, this book hasn't used a data-driven approach to the placement of objects in the game world. Instead, the `Game::LoadData` function code dictates the actors and components in the game, as well as global properties, such as the ambient light. The current approach has several disadvantages, most notably that even small changes, such as placement of a cube in a level, requires recompilation of the source code. A designer who wants to change the placement of objects in the game shouldn't have to change the C++ source code.
+
+The solution is to create a separate data file for the level. This data file should be able to specify which actors the level contains and which properties and, optionally, adjust the components of these actors. This level file should also include any needed global properties.
+
+For a 2D game, using a basic text file works perfectly well. You can simply define different ASCII characters for different objects in the world and create a text grid of these objects. This makes the level file look like ASCII art. Unfortunately, this approach doesn't work very well for a 3D game because each object in the game world could be at some arbitrary 3D coordinate. Furthermore, in the game object model used in this book, actors can have components, so you may need to also save

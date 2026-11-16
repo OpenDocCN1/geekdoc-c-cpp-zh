@@ -1,0 +1,1 @@
+the game state from `InPlay` to `BetweenLevels` and using the game state observer pattern to notify the automatic game save mechanism to update the player's stats and inventory.

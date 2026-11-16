@@ -1,0 +1,9 @@
+In this chapter, we'll show you how to develop Java-based applications for SAP HCP. This gentle introduction will serve as the foundation for more advanced topics covered in later chapters of the book.
+
+# # 3 Developing Java Applications
+
+Despite boasting an open, bring-your-own-language (BYOL) approach to cloud-based application development, SAP HCP definitely has some strong ties with Java. In terms of core language support, Java's been around the longest (going back to the days when SAP HCP went under the code name "NEO"). As a result, it's not surprising to learn that Java is the most mature language offering within SAP HCP.
+
+This history, in and of itself, doesn't make Java a better language choice than other languages supported by SAP HCP. However, it does mean that there are many more Java-based application examples and resources available online to browse through when kick starting your own development projects. Therefore, even if you don't have plans to utilize Java in your daily work, it's not a bad idea to understand how Java is used on SAP HCP so that you can at least follow along and understand how to adapt these examples for the language of your choice.
+
+In this chapter, we'll demonstrate how to develop Java-based web applications for SAP HCP. Although our intent with this chapter is to provide a gentle introduction, we should point out that this chapter should not be seen as an introduction to the Java programming language. If you're a fairly experienced programmer, then you should probably be able to follow along with the examples provided in this chapter, but we would strongly recommend that you read through some of the reference materials described in Section 3.5 if you plan on performing serious Java development on SAP HCP.

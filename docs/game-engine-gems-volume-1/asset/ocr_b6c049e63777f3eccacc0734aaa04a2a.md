@@ -1,0 +1,7 @@
+# 16.4 Embellishing Your Skybox
+
+After drawing the skybox itself, you'll want to draw billboards representing the sun and the moon (preferably in the correct phase) in their proper locations. Both the sun and moon, by an amazing coincidence, cover a half a degree of the sky. However, if you render them at their physically accurate size, they'll seem much too small due to psycho-perceptual issues and typical fields of view that are unrealistically large—go ahead and draw them at whatever size looks right to you. Users also expect to see a large glare effect surrounding the sun, which will also help it look bigger.
+
+Another dramatic effect is rendering the stars and planets as part of your skybox. If you draw them as points with an additive blending mode, they'll start to emerge at dusk. Using the matrices in our Ephemeris class, your stars will move across the sky in a realistic manner. Data on the positions, magnitudes, and colors of the visible stars are readily available, and integrating this data into your skybox is a fun project.
+
+This gem will render clear skies for any time of day and location, but clear skies are not the norm. Adding some clouds to the scene adds an extra level of realism. Rendering properly lit 3D volumetric clouds is a challenging task, but even a single large quad high in the sky with a cirrus cloud texture on it will go a long way.

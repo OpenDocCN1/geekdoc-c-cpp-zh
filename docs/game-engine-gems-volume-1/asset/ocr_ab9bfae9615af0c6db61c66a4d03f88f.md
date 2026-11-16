@@ -1,0 +1,3 @@
+an 8-bit channel and simply give the dynamic objects random IDs from the range [1,255].
+
+This kind of object ID management could also be done using the stencil buffer. However, testing stencil values prevents us from using instancing to render the decals due to the fact that we cannot pass the stencil compare value as a uniform constant to the shader and change the stencil test on a per-fragment basis.

@@ -1,0 +1,15 @@
+we obtained the known optimal values for the GTSP, and for the remaining instances the percentage gap between the known optimal values and the values obtained using our RACS approach was at most 1.5%.
+
+It is possible to improve the results by choosing a longer execution time or by making better choices for the parameters there. The RACS algorithm for the Generalized Traveling Salesman Problem may be improved if finely tuned parameter values are used. Also, an efficient combination with other algorithms might improve the results.
+
+# 3.5.3 A hybrid heuristic approach for solving the GTSP
+
+We start with a brief description of the Consultant-Guided Search (CGS) metaheuristic. We refer the reader to [86] for a detailed presentation.
+
+CGS is a recent swarm intelligence technique for solving hard combinatorial optimization problems, which takes inspiration from the way real people make, decisions based on advice received from consultants. It has been successfully applied to the classical Traveling Salesman Problem (TSP) [87] and to the Quadratic Assignment Problem [88].
+
+CGS is a population-based method. An individual of the CGS population is a virtual person, who can act simultaneously as both a client and a consultant. As a client, a virtual person constructs a solution to the problem in each iteration. As a consultant, a virtual person provides advice to clients, in accordance with its strategy. Usually, at each step of the construction of the solution, there are several variants which a client can choose from. The variant recommended by the consultant has a higher probability for being chosen, but the client may opt for one of the other variants, which will be selected based on some heuristic.
+
+At the beginning of each iteration, a client chooses a consultant based on his personal preference and on the consultant's reputation. The reputation of a consultant increases with the number of successes achieved by his clients. A client achieves a success, if he constructs a solution which is better than all others found by any client guided by the same consultant up to that point. Each time a client achieves a success, the consultant adjusts his strategy, in order to reflect the sequence of decisions made by the client. Because the reputation fades over time, a consultant needs his clients to constantly achieve successes, in order to maintain his reputation. If the consultant's reputation sinks below a minimum value, he will take a sabbatical leave, during which he will stop offering advice to clients and will instead start searching for a new strategy for future use.
+
+In this subsection, we describe an algorithm for the GTSP that combines the consultant-guided search technique with a local-global approach and improves the solutions by using a local search procedure. The GTSP instances of most practical importance are symmetric problems with Euclidean distances, where the clusters are composed of nodes that are spatially close one to the other. We design our algorithm to take advantage of the structure of these instances.

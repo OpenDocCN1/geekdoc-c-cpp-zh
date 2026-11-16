@@ -1,0 +1,185 @@
+level_changes:
+- line: 35
+  before: 2
+  after: 1
+- line: 111
+  before: 2
+  after: 1
+- line: 128
+  before: 2
+  after: 1
+- line: 148
+  before: 3
+  after: 2
+- line: 156
+  before: 4
+  after: 3
+- line: 170
+  before: 4
+  after: 3
+- line: 184
+  before: 4
+  after: 3
+- line: 202
+  before: 3
+  after: 2
+- line: 1749
+  before: 2
+  after: 1
+- line: 1753
+  before: 3
+  after: 2
+- line: 3287
+  before: 2
+  after: 1
+- line: 3291
+  before: 3
+  after: 2
+- line: 3910
+  before: 2
+  after: 1
+- line: 3922
+  before: 3
+  after: 2
+- line: 5249
+  before: 2
+  after: 1
+- line: 5255
+  before: 3
+  after: 2
+- line: 6342
+  before: 2
+  after: 1
+- line: 6346
+  before: 3
+  after: 2
+- line: 7462
+  before: 2
+  after: 1
+- line: 7466
+  before: 3
+  after: 2
+- line: 8728
+  before: 2
+  after: 1
+- line: 8732
+  before: 3
+  after: 2
+- line: 9928
+  before: 2
+  after: 1
+- line: 9934
+  before: 3
+  after: 2
+- line: 11838
+  before: 2
+  after: 1
+- line: 11840
+  before: 3
+  after: 2
+- line: 12927
+  before: 2
+  after: 1
+- line: 12933
+  before: 3
+  after: 2
+- line: 13985
+  before: 2
+  after: 1
+- line: 13991
+  before: 3
+  after: 2
+- line: 15459
+  before: 2
+  after: 1
+- line: 15465
+  before: 3
+  after: 2
+- line: 16312
+  before: 2
+  after: 1
+- line: 16318
+  before: 3
+  after: 2
+- line: 16975
+  before: 2
+  after: 1
+- line: 16979
+  before: 3
+  after: 2
+- line: 1288
+  before: 2
+  after: 3
+- line: 1351
+  before: 2
+  after: 3
+text_changes:
+- line: 1288
+  before: 1.1.1.1 编码
+  after: 1.8.1 编码
+- line: 1351
+  before: 1.1.2 解码与香农定理
+  after: 1.8.2 解码与香农定理
+- line: 1399
+  before: 定理 1.1.12
+  after: 定理 1.8.12
+- line: 1407
+  before: 推论 1.11.3
+  after: 推论 1.8.3
+- line: 1419
+  before: 定理 1.11.4
+  after: 定理 1.8.4
+- line: 1441
+  before: 定理 1.11.5
+  after: 定理 1.8.5
+- line: 1530
+  before: 定理 1.11.6
+  after: 定理 1.8.6
+- line: 1546
+  before: 示例 1.11.7
+  after: 示例 1.8.7
+- line: 1563
+  before: 示例 1.1.17
+  after: 示例 1.8.17
+- line: 1579
+  before: 示例 1.1.18
+  after: 示例 1.8.18
+- line: 1585
+  before: 示例 1.1.19
+  after: 示例 1.8.19
+- line: 1587
+  before: 练习 74 假设通信信道的交叉概率为 \(\varrho\)。 (a) 使用示例 1.1.7，计算扩展海明码 \(\widehat{\mathcal{H}}_3\)
+    的 $P_{err}$。 (b) 证明示例 1.1.9 中求得的 \(\widehat{\mathcal{H}}_3$ 和 $\mathcal{H}_3$
+    的 $P_{err}$ 值相等。 (c) 在 BSC 上通信时，使用哪种码 $\widehat{\mathcal{H}}_3$ 或 $\mathcal{H}_3$
+    更好？为什么？
+  after: 练习 74 假设通信信道的交叉概率为 \(\varrho\)。 (a) 使用示例 1.8.7，计算扩展海明码 \(\widehat{\mathcal{H}}_3\)
+    的 $P_{err}$。 (b) 证明示例 1.8.9 中求得的 \(\widehat{\mathcal{H}}_3$ 和 $\mathcal{H}_3$
+    的 $P_{err}$ 值相等。 (c) 在 BSC 上通信时，使用哪种码 $\widehat{\mathcal{H}}_3$ 或 $\mathcal{H}_3$
+    更好？为什么？
+- line: 1599
+  before: 定理 1.1.11（香农）设 $\delta > 0$ 且 $R < C(\varrho)$。则对于足够大的 $n$，存在一个 $[n, k]$
+    二进制线性码 $\mathcal{C}$，其中 $k/n \ge R$，使得当 $\mathcal{C}$ 用于在交叉概率为 $\varrho$ 的 BSC
+    上通信时，$P_{err} < \delta$。此外，若 $R > C(\varrho)$，则不存在这样的码。
+  after: 定理 1.8.11（香农）设 $\delta > 0$ 且 $R < C(\varrho)$。则对于足够大的 $n$，存在一个 $[n, k]$
+    二进制线性码 $\mathcal{C}$，其中 $k/n \ge R$，使得当 $\mathcal{C}$ 用于在交叉概率为 $\varrho$ 的 BSC
+    上通信时，$P_{err} < \delta$。此外，若 $R > C(\varrho)$，则不存在这样的码。
+- line: 3125
+  before: 定理 2.1.0.6（第一个 MRRW 界）设 $0 < \delta < 1 - q^{-1}$。则
+  after: 定理 2.10.5.1（第一个 MRRW 界）设 $0 < \delta < 1 - q^{-1}$。则
+- line: 3133
+  before: 定理 2.1.0.7（第二个 MRRW 界）设 $0 < \delta < 1/2$。则
+  after: 定理 2.10.5.2（第二个 MRRW 界）设 $0 < \delta < 1/2$。则
+- line: 3155
+  before: 定理 2.1.0.8（渐近 Gilbert–Varshamov 界）如果 $0 < \delta \le 1 - q^{-1}$ 且 $q \ge
+    2$，则 \(\alpha_q(\delta) \ge 1 - H_q(\delta)\)。
+  after: 定理 2.10.6（渐近 Gilbert–Varshamov 界）如果 $0 < \delta \le 1 - q^{-1}$ 且 $q \ge
+    2$，则 \(\alpha_q(\delta) \ge 1 - H_q(\delta)\)。
+- line: 6669
+  before: 定理 6.6.33
+  after: 定理 6.3.3
+- line: 16090
+  before: 练习 79
+  after: 练习 781
+- line: 15136
+  before: Exercise 12.746
+  after: Exercise 746

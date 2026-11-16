@@ -1,0 +1,254 @@
+
+
+- PR要求
+- PWS
+- 金字塔分解
+- QMF
+- 二次啁啾
+- 二次叠加原理
+- 正交镜滤波器
+- 四分之一移位法
+- 雷达散射截面
+- 雷达成像
+- Radon变换
+- RCS
+- 重建
+- 重建过程
+- 矩形时标网格
+- 细化方程
+- 收敛区域
+- 渲染技术
+- 水库数据分析
+- 脊线变换
+- Riesz基
+- Riesz界
+- Riesz引理
+- 均方根带宽
+- 运行长度编码
+- 采样
+- 采样定理
+- 标量积
+- 标度函数
+- 散射电场
+- 第二类积分方程
+- 半正交
+- 半正交基
+- 半正交分解
+- 半正交样条小波
+- 半正交子空间
+- Shannon函数
+- Shannon小波
+- 平移不变系统
+- 短时傅里叶变换
+- 信号表示
+- 签名识别
+- 奇异矩阵
+- 槽
+- 平滑滤波器
+- 平滑函数
+- Sobel边缘检测器
+- 软阈值
+- SOT
+- 时空自适应方法
+- 稀疏矩阵
+- 稀疏性
+- 空间定向树
+- 频域分析
+- 频域方法
+- 谱特征提取
+- 谱方法
+- 样条函数
+- 样条
+  - 计算机程序
+  - 三次
+  - 线性
+  - 性质
+- 样条小波
+- 分割法
+- 稳定基
+- 稳定数值格式
+- 标准小波分解
+- STFT
+- Strang-Fix条件
+- 条带
+- 子单元建模
+- 子域基
+- 表面电流分布
+- 合成变换
+- 合成小波
+- 目标检测
+- 目标识别
+- 测试函数
+- 薄条带
+- 细导线
+- 三维小波
+- 阈值处理
+  - 硬
+  - 直方图
+  - 百分比
+  - 软
+- 时域分析
+- 时域双正交条件
+- 时频分析
+  - 连续小波变换
+  - 离散Gabor表示
+  - 离散短时傅里叶变换
+  - 离散小波变换
+  - Gabor变换
+  - 积分小波变换
+  - 短时傅里叶变换
+- 时频窗
+- 时频窗乘积
+- 不确定性原理
+- 小波级数
+- 时频窗
+- 时频窗乘积
+- 时标分析
+- 时标网格
+- 时标图
+- 时标缩放
+- 时移
+- 音调均衡器
+- 全正性
+- TP
+- 变换
+  - 曲线小波
+  - 离散Walsh-Hadamard
+  - 离散小波
+  - 傅里叶
+  - Gabor
+  - Hilbert
+  - 积分小波
+  - Karhunen-Loeve变换
+  - 提升小波
+  - Radon
+  - 脊线
+  - 短时傅里叶
+- 平移
+- 传输线
+- 传输线不连续
+- 转置
+- 横磁
+- 真正例
+- 双通道双正交滤波器组
+- 双通道完美重构
+- 二维小波包
+- 二维小波
+- 双尺度关系
+- 不确定性原理
+- 酉矩阵
+- 酉相似
+- 消失矩
+- 向量空间
+- 波导
+- 小波系数
+- 小波分解
+- 小波特征提取
+- 小波MoM
+- 小波包算法
+- 基于小波包的交叉项删除表示
+- 小波包特征提取
+- 小波包
+- 小波包树分解
+- 小波
+  - Battle–Lemarie
+  - 双正交
+  - 边界
+  - Chui-Wang
+  - Cohen, Daubechies, and Fauveau
+  - Coiflets
+  - 复值
+  - Daubechies
+  - Haar小波
+  - 区间
+  - 提升小波
+  - Meyer
+  - Morlet
+  - 标准正交
+  - 周期
+  - Shannon
+  - 样条
+  - 三维
+  - 二维
+- 小波边缘检测器
+- 小波级数
+- 小波子空间
+- 小波技术
+- 小波树编码器
+- 权函数
+- 井测分析
+- 宽带相关处理
+- Wigner–Ville分布
+  - 自项
+  - 计算机程序
+  - 交叉项
+  - 性质
+  - 基于小波包的交叉项删除表示
+  - WPCDR
+- 窗函数
+  - 中心
+  - 半径
+  - 时频窗
+  - 时频窗乘积
+  - 不确定性原理
+  - 宽度
+- WPCDR
+- WS
+- 零树算法
+- ZTR
+- z变换
+  - 逆z变换
+  - 收敛区域
+
+## WILEY微波与光学工程丛书
+
+### KAI CHANG，主编
+
+得克萨斯农工大学
+
+- 光纤通信系统，第四版 · Govind P. Agrawal
+- 微波集成电路中的非对称无源器件 · Hee-Ran Ahn
+- 相干光通信系统 · Silvello Betti, Giancarlo De Marchis, and Eugenio Iannone
+- 相控阵天线：Floquet分析、综合、BFNs及有源阵列系统 · Arun K. Bhattacharyya
+- 高频电磁技术：最近进展与应用 · Asoke K. Bhattacharyya
+- 无线通信链路的无线电传播与自适应天线：地面、大气和电离层 · Nathan Blaunstein and Christos G. Christodoulou
+- 电磁学与微波的计算方法 · Richard C. Booton, Jr.
+- 电磁屏蔽 · Salvatore Celozzi, Rodolfo Araneo, and Giampiero Lovat
+- 微波环路电路与天线 · Kai Chang
+- 微波固态电路与应用 · Kai Chang
+- 射频和微波无线系统 · Kai Chang
+- 无线系统的射频和微波电路与器件设计 · Kai Chang, Inder Bahl, and Vijay Nair
+- 微波环路电路及相关结构，第二版 · Kai Chang and Lung-Hwa Hsieh
+- 电磁工程多分辨率时域方案 · Yinchao Chen, Qunsheng Cao, and Raj Mitra
+- 二极管激光器与光子集成电路 · Larry Coldren and Scott Corzine
+- 隐蔽目标的电磁探测 · David J. Daniels
+- 射频电路设计 · W. Alan Davis and Krishna Agarwal
+- 射频电路设计，第二版 · W. Alan Davis
+- 多导体传输线结构：模态分析技术 · J. A. Brandão Faria
+- 基于相控阵的系统与应用 · Nick Fournikis
+- 太阳能电池及其应用，第二版 · Lewis M. Fraas and Larry D. Partain
+- 微波传输线基础 · Jon C. Freeman
+- 光学半导体器件 · Mitsuo Fukuda
+- 微带电路 · Fred Gardiol
+- 高速VLSI互连，第二版 · Ashok K. Goel
+- 小波基础：理论、算法与应用，第二版 · Jaideva C. Goswami and Andrew K. Chan
+- 高频模拟集成电路设计 · Ravender Goyal (ed.)
+- 集成电路天线模块的分析与设计 · K. C. Gupta and Peter S. Hall
+- 相控阵天线，第二版 · R. C. Hansen
+- 微带环形器 · Joseph Helszajn
+- 微带环形器：理论与实践 · Joseph Helszajn
+- 局域波 · Hugo E. Hernández-Figueroa, Michel Zamboni-Rached, and Erasmo Recami (eds.)
+- 射频/微波应用的微带滤波器 · Jia-Sheng Hong and M. J. Lancaster
+- 高度不规则光纤光学的微波方法 · Huang Hung-Chia
+- 非线性光通信网络 · Eugenio Iannone, Francesco Matera, Antonio Mecozzi, and Marina Settembre
+- 微波工程有限元软件 · Tatsuo Itoh, Giuseppe Pelosi, and Peter P. Silvester (eds.)
+- 红外技术：在电光学、光子器件和传感器中的应用 · A. R. Jha
+- 超导技术：在微波、电光学、电机和推进系统中的应用 · A. R. Jha
+- 采用积分方程和混合方法求解电磁问题的时域和频域解 · B. H. Jung, T. K. Sarkar, S. W. Ting, Y. Zhang, Z. Mei, Z. Ji, M. Yuan, A. De, M. Salazar-Palma, and S. M. Rao
+- 光计算：导论 · M. A. Karim and A. S. S. Awwal
+- 电磁学与微波工程导论 · Paul R. Karmel, Gabriel D. Colef, and Raymond L. Camisa
+- 毫米波光学介电集成波导和电路 · Shiban K. Koul
+- 先进集成通信微系统 · Joy Laskar, Sudipto Chakraborty, Manos Tentzeris, Franklin Bien, and Anh-Vu Pham
+- 微波器件、电路及其相互作用 · Charles A. Lee and G. Conrad Dalman
+- 微带与印刷天线的进展 · Kai-Fong Lee and Wei Chen (eds.)
+

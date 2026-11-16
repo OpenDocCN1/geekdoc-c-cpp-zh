@@ -1,0 +1,7 @@
+# CHAPTER TEN
+
+# Wavelets in Boundary Value Problems
+
+All of the applications discussed so far deal with processing a given function (signal, image, etc.) in the time, frequency, and time-frequency domains. We have seen that wavelet-based time-scale analysis of a function can provide either additional information that cannot be obtained by either time or frequency domain analyses. There is another class of problems that we quite often come across involve solving boundary value problems (BVPs). In BVPs functions are not known explicitly; some of their properties along with function values are known at a set of certain points in the domain of interest. In this chapter we discuss the applications of wavelets in solving such problems.
+
+Much of the phenomena studied in electrical engineering can be described mathematically by second-order partial differential equations (PDEs). Some examples of PDEs are the Laplace, Poisson, Helmholtz, and Schrödinger equations. Each of these equations may be solved analytically for some but not for all cases of interest. These PDEs can often be converted to integral equations. One of the attractive features of integral equations is that boundary conditions are built-in and, therefore, do not have to be applied externally [1]. Mathematical questions of existence and uniqueness of a solution may be handled with more ease with the integral form.

@@ -1,0 +1,5 @@
+various options for Java-based application deployment and what to do when deployments go wrong. From here, we looked at some different techniques for source code management and build automation. Finally, we showed how these tools can be leveraged towards the implementation of continuous integration scenarios.
+
+Collectively, the tools and techniques described in this chapter should provide you with the foundation you need to organize the vast number of development objects created during the course of SAP HCP application development. We'll also see many of these concepts on display in later chapters, when we approach software logistics for native SAP HANA and HTML5 applications on SAP HCP.
+
+In the next chapter, we'll shift gears a bit and take a look at native SAP HANA application development concepts.

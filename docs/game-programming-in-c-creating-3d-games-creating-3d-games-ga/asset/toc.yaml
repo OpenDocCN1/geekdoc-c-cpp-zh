@@ -1,0 +1,38 @@
+level_changes:
+- line: 459
+  before: 3
+  after: 4
+- line: 460
+  before: 3
+  after: 4
+- line: 461
+  before: 3
+  after: 4
+- line: 1254
+  before: 1
+  after: 3
+- line: 1266
+  before: 1
+  after: 3
+- line: 1294
+  before: 1
+  after: 3
+- line: 1334
+  before: 1
+  after: 3
+- line: 1369
+  before: 1
+  after: 3
+text_changes:
+- line: 0
+  before: C++ 游戏编程：3D游戏构建指南：3D游戏构建指南（游戏设计）
+  after: C++ 游戏编程：3D游戏构建指南（游戏设计）
+- line: 483
+  before: 24. 第 14 章：关卡文件与二进制数据
+  after: 第 14 章：关卡文件与二进制数据
+- line: 501
+  before: 25. 附录 A：中级 C++ 复习
+  after: 附录 A：中级 C++ 复习
+- line: 503
+  before: 26. 索引
+  after: 索引

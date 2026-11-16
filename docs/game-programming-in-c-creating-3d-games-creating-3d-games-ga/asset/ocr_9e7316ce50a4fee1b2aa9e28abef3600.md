@@ -1,0 +1,7 @@
+player, such as health or a score. If the player pauses the game, the game might show a menu that lets the player choose between different options. While the game shows the pause menu, you may still want the HUD elements to be visible under the pause menu.
+
+Now suppose that one of the options in the pause menu is to quit the game. When the player selects this option, you might want to have the game show a confirmation dialog box that asks whether the player truly wants to quit. The player might still see parts of both the HUD and pause menu onscreen under this dialog box.
+
+During this sequence, the player can typically interact with only the topmost layer of the UI. This naturally leads to the idea of using a stack to represent the different layers of the UI. You can implement the idea of a single UI layer with the UIScreen class. Each type of UI screen, such as the pause menu or HUD, is a subclass of UIScreen. After drawing the game world, the game draws all UI screens on the stack in a bottom-up order. At any point in time, only the UIScreen on top of the UI stack might receive input events.
+
+Listing 11.4 shows the first iteration of the base UIScreen class. Notice that it has several virtual functions that subclasses can override: Update for updating the UI screen's state, Draw for drawing it, and the two input functions to handle different types of incoming input. You can also keep track of the state of a specific UI screen; in this case, you only need two states

@@ -1,0 +1,3 @@
+(refrain!), or declaring a special heap that is dedicated to the subsystem using your choice of allocation strategy. Some middleware provide only a method for registering allocation callbacks. It is a common pet peeve to unnecessarily waste CPU cycles, and this is one minor gripe I have about otherwise solid offerings.
+
+The worst possible situation is a library that is littered with direct calls to new/malloc and delete/free. This provides you no simple means to encapsulate the system's resources and no simple way to measure or limit its consumption.

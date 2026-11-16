@@ -1,0 +1,7 @@
+per second, and every iteration of the game loop updates the game in a discrete time step. So, in the 30 FPS example, each iteration of the game loop should simulate 33ms of time progression in the game. This section looks at how to consider this discrete progression of time when programming a game.
+
+# ## Real Time and Game Time
+
+It is important to distinguish **real time**, the time elapsing in the real world, from **game time**, the time elapsing in the game’s world. Although there often is a 1:1 correspondence between real time and game time, this isn’t always the case. Take, for instance, a game in a paused state. Although a great deal of time might elapse in the real world, the game doesn’t advance at all. It’s not until the player unpauses the game that the game time resumes updating.
+
+There are many other instances where real time and game time might diverge. For example, some games feature a “bullet time” gameplay mechanic that reduces the speed of the game. In this case, the game time must update at a substantially slower rate than actual time. On the opposite end of the spectrum, many sports games feature sped-up time. In a football game, rather than requiring a player to sit through 15 full minutes per quarter, the game may update the clock twice as fast, so each quarter takes only 7.5 minutes. And some games

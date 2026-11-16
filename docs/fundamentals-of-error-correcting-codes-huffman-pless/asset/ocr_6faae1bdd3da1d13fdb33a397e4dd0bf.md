@@ -1,0 +1,17 @@
+![](bbox=[0.146, 0.083, 0.853, 0.246])
+
+Figure 1.2 Binary symmetric channel.
+
+# 1.11.2 Decoding and Shannon's Theorem
+
+The process of decoding, that is, determining which codeword (and thus which message x) was sent when a vector y is received, is more complex. Finding efficient (fast) decoding algorithms is a major area of research in coding theory because of their practical applications. In general, encoding is easy and decoding is hard, if the code has a reasonably large size.
+
+In order to set the stage for decoding, we begin with one possible mathematical model of a channel that transmits binary data. This model is called the binary symmetric channel (or BSC) with crossover probability \(\varrho\) and is illustrated in Figure 1.2. If 0 or 1 is sent, the probability it is received without error is \(1 - \varrho\); if a 0 (respectively 1) is sent, the probability that a 1 (respectively 0) is received is \(\varrho\). In most practical situations \(\varrho\) is very small. This is an example of a *discrete memoryless channel* (or *DMC*), a channel in which inputs and outputs are discrete and the probability of error in one bit is independent of previous bits. We will assume that it is more likely that a bit is received correctly than in error; so \(\varrho < 1/2\).
+
+If \(E_1\) and \(E_2\) are events, let \(\text{prob}(E_1)\) denote the probability that \(E_1\) occurs and \(\text{prob}(E_1 \mid E_2)\) the probability that \(E_1\) occurs given that \(E_2\) occurs. Assume that \(\mathbf{c} \in \mathbb{F}_2^n\) is sent and \(\mathbf{y} \in \mathbb{F}_2^n\) is received and denoted as \(\widehat{\mathbf{c}} \in \mathbb{F}_2^n\). So \(\text{prob}(\mathbf{c} \mid \mathbf{y})\) is the probability that the codeword \(\mathbf{c}\) is sent given that \(\mathbf{y}\) is received, and \(\text{prob}(\mathbf{y} \mid \mathbf{c})\) is the probability that \(\mathbf{y}\) is received given that the codeword \(\mathbf{c}\) is sent. These probabilities can be computed from the statistics associated with the channel. These probabilities are related by Bayes’ Rule
+
+\(\text{prob}(\mathbf{c} \mid \mathbf{y}) = \frac{\text{prob}(\mathbf{y} \mid \mathbf{c}) \text{prob}(\mathbf{c})}{\text{prob}(\mathbf{y})},\)
+
+where \(\text{prob}(\mathbf{c})\) is the probability that \(\mathbf{c}\) is sent and \(\text{prob}(\mathbf{y})\) is the probability that \(\mathbf{y}\) is received. There are two natural means by which a decoder can make a choice based on these two probabilities. First, the decoder could choose \(\widehat{\mathbf{c}} = \mathbf{c}\) for the codeword \(\mathbf{c}\) with \(\text{prob}(\mathbf{c} \mid \mathbf{y})\) maximum; such a decoder is called a *maximum a posteriori probability* (or *MAP*) decoder.
+
+5 While \(\varrho\) is usually very small, if \(\varrho > 1/2\), the probability that a bit is received in error is higher than the probability that it is received correctly. So one strategy is to interchange 0 and 1 immediately at the receiving end. This converts the BSC with crossover probability \(\varrho\) to a BSC with crossover probability \(1 - \varrho < 1/2\). This of course does not help if \(\varrho = 1/2\), in this case communication is not possible - see Exercise 77.

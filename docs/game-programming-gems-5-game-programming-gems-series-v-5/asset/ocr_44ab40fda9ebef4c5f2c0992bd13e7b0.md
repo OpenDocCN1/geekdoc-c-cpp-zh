@@ -1,0 +1,14 @@
+LIVERPOOL
+JOHN MOORES UNIVERSITY
+AVRIL ROBARTS LRC
+TITHEBARN STREET
+LIVERPOOL L2 2ER
+TEL 0151 231 4022
+
+Cmp1
+
+| Liverpool John Moores University |
+| LEARNING & INFO SERVICES |
+| Accession Number 13297665 W |
+| Class Number 794.48152 PA |
+| Site | A | M | V |

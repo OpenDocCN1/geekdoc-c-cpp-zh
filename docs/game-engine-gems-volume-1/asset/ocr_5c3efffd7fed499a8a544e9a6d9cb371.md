@@ -1,0 +1,1 @@
+significant performance increase by compositing the rendering command data on a separate thread.

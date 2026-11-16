@@ -1,0 +1,320 @@
+
+
+- [338] J. L. Vasil'ev, "关于非群紧密堆积码," Probl. Kibernet. **8** (1962), 375–378. (英文译文见 [23] 第 351–357 页.)
+- [339] A. J. Viterbi, "卷积码误差界及渐近最优解码算法," IEEE Trans. Inform. Theory **IT-13** (1967), 260–269. (另见 [17] 第 195–204 页的重印.)
+- [340] S. G. Vlăduţ and A. N. Skorobogatov, "长 BCH 码的覆盖半径," Problemy Peredachi Informatsii **25**(1) (1989) 38–45. (英文译文见 Problems of Inform. Trans. **25**(1) (1989), 28–34.)
+- [341] L. B. Vries 和 K. Odaka, "CIRC——紧凑盘的纠错码," 在《数字音频》（AES 首届会议论文集，纽约州赖，1982 年 6 月 3–6 日），B. A. Blesser 等编。音频工程学会公司，1983，178–186.
+- [342] B. Vucetic 和 J. Yuan, 《涡轮码：原理与应用》。马萨诸塞州诺威尔：库卢韦学术出版社，2000.
+- [343] J. L. Walker, 《码与曲线》。学生数学文库 第 7 卷。罗德岛州普罗维登斯：美国数学学会，2000.
+- [344] H. N. Ward, "自双码权重枚举子的限制," J. Comb. Theory **21** (1976), 253–255.
+- [345] H. N. Ward, "可除码," Archiv Math. (Basel) **36** (1981), 485–494.
+- [346] H. N. Ward, "达到格里斯默界码的可除性," J. Comb. Theory **83A** (1998), 79–93.
+- [347] H. N. Ward, "二次剩余码与可除性," 在《编码理论手册》，V. S. Pless 和 W. C. Huffman 编。阿姆斯特丹：爱思唯尔，1998，第 827–870 页.
+- [348] V. K. Wei, "线性码的广义汉明权," IEEE Trans. Inform. Theory **IT-37** (1991), 1412–1418.
+- [349] E. J. Weldon, Jr., "Reed–Muller 码的新推广。第二部分：非原始码," IEEE Trans. Inform. Theory **IT-14** (1968), 199–205. (另见 [23] 第 334–340 页的重印.)
+- [350] N. Wiener, H.-A. Loeliger, 和 R. Kötter, "一般图上的码与迭代解码," Euro. Trans. Telecommun. **6** (1995), 513–526.
+- [351] S. B. Wicker, 《数字通信与存储的误差控制系统》。新泽西州恩格尔伍德克利夫斯：Prentice-Hall，1995.
+- [352] S. B. Wicker, "深空应用," 在《编码理论手册》，V. S. Pless 和 W. C. Huffman 编。阿姆斯特丹：爱思唯尔，1998，第 2119–2169 页.
+- [353] H. A. Wilbrink, "平面差集简论," J. Comb. Theory **38A** (1985), 94–95.
+- [354] X.-W. Wu 和 P. H. Siegel, "高效求根算法及其在代数几何码列表解码中的应用," IEEE Trans. Inform. Theory **IT-47** (2001), 2579–2587.
+
+## 符号索引
+
+- L, 5, 275
+- L^p, 7
+- <=, 165
+- >=, 533
+- (f), 219
+- (g(x), 125
+- (g(x), 125, 481
+- (x, y), 383
+- (x, y)^T, 383
+- Q(x), 89, 541
+- P^Aut(G), 26, 384
+- P^Aut(G), C, 28
+- \Gamma(L, G), 521
+- \Delta_i, 187
+- \Delta_i(k), 567
+- \Theta_s(q), 426
+- A_2, 423
+- A_{23}, 429
+- A_1, 424
+- A(C), 427
+- A_i(C), 503
+- A_C(x, y), 196
+- x_i, 293
+- \lambda, 295
+- \lambda_i(C), 609
+- \mu_n, 138
+- (Q(x)), 565
+- v(P), 584
+- v(x, s'), 584
+- v^{(m)}(x), 608, 610
+- \rho(C), 50, 432
+- p_{Aut}(G, m), 440
+- \rho_{PF}(r, m), 437
+- \sigma, 111
+- \sigma(C), 181
+- \sigma^{(k)}(x), 187
+- \phi, 181
+- \theta, \mathbb{E}[Z] \leftarrow \mathcal{I}, 164
+- v(x), 190
+- A^2, 309
+- A^+, 4
+- A(C), 8, 252
+- A(n, d), 48
+- A_s(n, d), 48
+- A_s(n, d, \omega), 60
+- k^E(P), 517
+- Aut(P, B), 292
+- B(C), 75
+- B(n, d), 48
+- B_i(n, d), 48
+- B(G), 564
+- B'(t, m), 439
+- C_i \in C_i, 438
+- C_i, 168
+- C_i / C_j, 353
+- C_i, L, C_j, 353
+- C^*, 13
+- C|_{P_i}, 116
+- C^E, 145
+- C_i, 14
+- C^{U_i}, 565
+- C^L, 5, 469
+- C^{U_i}, 384
+- C_i(A_i), 308
+- C_i, 114, 122
+- C_i^T, 14
+- C_T, 16
+- C(P, X, D), 535
+- d_{2M}, 367
+- d_{free}, 563
+- d_{free}, 333
+- D_2(A), 309
+- d(x, C), 65
+- d(x, y), 7
+- d(x, x), 470
+- d_U(x, y), 470
+- d_U(x, y), 470
+- deg f(x), 101
+- d_H, 423
+- d^{(k)}, 349
+- p^*, 367
+- e_i, 367
+- E_k, 428
+- E_k, 577
+- E_v, 209
+- E_v, 573
+- evp, 534
+- extdeg G, 558
+- F_2, 3
+- F_3, 3
+- F_4, 3
+- F_9, 243
+- F_{18}, 184
+- F_q, 2, 100
+- F_q[x]
+- F[x_1, ..., x_n], 519
+- F^h, 519
+- f, 373
+- f(x) | g(x), 102
+- G_0, 7
+- G_{11}, 33
+- G_{22}, 32
+- G_{23}, 32
+- G_{24}, 31
+- g_{24}, 374
+- GA(Z), 165
+- GA(2), 368
+- Gal(F_q), 112
+- Gal(F_q / F_p), 112
+- G(C), 372
+- g(C), 372
+- g(C), 371
+- G(C), 472
+- gcd(f(x), g(x)), 102
+- GF(q), 2, 100
+- GR(4^r), 505
+- GRS_q(\gamma, v), 176, 196, 520
+- H
+- H_1, 6
+- H_2, 29
+- H_{2^r}, 29
+- H_{3,2}, 6
+- H_{q, r}, 29
+- H_d(x), 90
+- H_t(x), 90
+- Hamming, v(x), 470
+- J
+- J(r), 367
+- J(C, r), 203
+- J_{indeg} G, 559
+- J, 309
+- J(x), 209
+- K(r + 1), 509
+- K^{r+1}(x), 275, 256
+- L(D), 534
+- L_{k-1, z}, 520
+- L_q(x, y), 447
+- L_{q+1}(x, y), 448
+- M_{12}, 419
+- M_{23}, 402
+- M_{24}, 402
+- Maut(C), 26, 469
+- Maut_G(C), 28
+- mC, 368
+- N_0, 575
+- N_{16}, 68
+- n_0(x), 470
+- (n, 2^r, d), 383
+- (n, c, r), 596
+- (n, k, m), 561
+- (n, k, m, d), 563
+- (N, M, d, \lambda), 525
+- N_q, 237
+- N(d), 195
+- N(v), 426
+- ord_q(g), 122
+- PAut(C), 22, 469
+- (P, E), 291
+- P_{2^r}, 57
+- P_{2^r}, 6
+- PG(2, 2^r), 319
+- PG(r - 1, q), 29
+- PGL(2(q), 422
+- P_i, 174
+- P^{U+1}, 515
+- prob(E_i), 39
+- prob(E_i | E_j), 39
+- P(x), 470
+- PSL(v, q), 238
+- PSL(2, 7), 238
+- Q_2, 237
+- Res(C), 496
+- Res(C, e), 80
+- Res^f, 524
+- R_{2^r}, 121, 124, 209
+- R_{2^r}, 6
+- R(r, m), 34
+- R_{q, r}(m), 524
+- R, 577
+- span(x, y), 275
+- S(q), 420
+- S(r, v), 256
+- S(a, b), 40
+- S(C), 291
+- supp(x), 120
+- supp(D), 283
+- Sym_r, 21
+- t_i(r, k), 447
+- Tor(C), 496
+- T(R), 506
+- Tr, 508
+- Tr, 119
+- Tr_{q^m/q}, 119
+- V_q(x, e), 74
+- V_q(C), 255
+- W_C(x, y), 255
+- wt(x), 8
+- wt_C(x), 470
+- wt_H(x), 470
+- wt_t(x), 470
+- X_1 \cap X_2, 531
+- X'(E), 526
+- \tilde{X}(t), 587
+- x \perp y, 275
+- x \cap y, 8
+- x \cdot y, 6, 469
+- Z_p, 76
+
+## 主题索引
+
+- a priori term, 609
+- e notation, 608
+- A-plane, 275
+- acceptable coordinate, 451
+- Adams Bound, 455
+- additive code over F_2, 383
+- automorphism group, 384
+- Balance Principle, 387
+- dodecacode, 388
+- equivalent, 394
+- generator matrix, 383
+- hexacode, 383
+- mass formula, 386
+- trace dual, 384
+- trace inner product, 383
+- trace self-dual, 384
+- trace self-orthogonal, 384
+- Type I, 385
+- Type II, 385
+- extremal, 386
+- Gleason's Theorem, 385
+- additive white Gaussian noise (AWGN), 575
+- adjoining a root, 108
+- affine group, 165, 251, 366, 368
+- affine plane curve, 526
+- affine space, 517
+- affine variety, 162, 165
+- extended BCH, 172
+- AG, 535
+- algebraic geometry (AG) code C(X, P, D), 535
+  - dimension, 535
+  - dual, 541
+  - exceed Asymptotic Gilbert–Varshamov Bound, 544
+  - generalized Reed–Solomon code as, 537
+  - generator matrix, 535
+  - minimum distance, 535
+  - Reed–Solomon code as, 536
+- algorithm
+  - Berlekamp–Massey Decoding, 186, 188
+  - Classification, 366
+  - Division, 102
+  - Euclidian, 102
+  - Gallager Hard Decision Decoding, 599
+  - General Viterbi, 584, 586
+  - Meggitt Decoding, 158–160
+  - Message Passing Decoding, 595
+  - Permutation Decoding, 402, 403
+  - Peterson–Gorenstein–Zierler Decoding, 179, 182
+  - Soft Decision Viterbi Decoding, 580, 581, 612
+  - Sudan–Guruswami Decoding, 195, 196
+  - Sugiyama Decoding, 190, 191
+  - Sum-Product Decoding, 602
+  - Syndrome Decoding, 42, 43
+  - Turbo Decoding, 610
+  - Two Weighted Posterior Probability (APP) Decoding, 587, 592
+  - Viterbi Decoding, 551, 556
+- amalgamated direct sum (ADS), 452
+- ancestor, 460
+- APP, 587
+- Asmus–Matson Theorem, 303
+- asymptotic bound, 88
+  - Elias, 93
+  - First MRRW, 94
+  - Gilbert–Varshamov, 94, 541
+    - exceeded by algebraic geometry codes, 544
+    - met by Goppa codes, 542
+  - Hamming, 92
+  - Plotkin, 89
+  - Second MRRW, 94
+  - Singleton, 92
+  - Tsfasman–Vladut–Zink, 544
+- asymptotically bad code, 173, 541
+- asymptotically good code, 173, 542
+- automorphism group, 22, 26, 384
+  - monomial, 26, 469
+  - of a design, 292
+  - permutation, 28, 469
+  - transitive, 23, 271, 308
+- automorphism group of a design, 292
+- automorphism of a field, 111
+  - fixed element, 112
+  - Frobenius, 112
+  - Galois group, 112
+- AWGN, 575
+- Balance Principle, 351, 379, 387
+- bandwidth, 577
+- basic generator matrix, 559
+

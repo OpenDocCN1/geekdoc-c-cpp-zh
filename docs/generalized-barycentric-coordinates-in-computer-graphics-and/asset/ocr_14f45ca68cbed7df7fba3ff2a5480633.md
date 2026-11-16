@@ -1,0 +1,13 @@
+![](bbox=[0.18, 0.12, 0.82, 0.22])
+
+Figure 11.5 (a) Example polyhedron with element shape functions (b-d) based on harmonic coordinates. Shape functions for three vertices are shown. (Adapted from [47].)
+
+tegrate the contribution to the volume integral in (11.7), are also defined in the reference configuration.
+
+Harmonic functions satisfy the Laplace equation (1.17). For use in defining shape functions of a polyhedral finite element, solutions of (1.17) with appropriate boundary conditions possess the necessary properties of partition of unity (1.8) and linear reproduction (1.9). These properties result in an isoparametric displacement-based finite element formulation with an optimal rate of convergence, assuming that the weak form given by (11.7) is integrated in a consistent manner [47]. The shape functions also possess the Kronecker-delta property at the nodes. This property greatly simplifies the enforcement of displacement boundary conditions in the finite element solution.
+
+The appropriate boundary conditions for the solution of (1.17) on a polyhedral finite element are developed hierarchically. Equation (1.17) is first applied to each edge, with appropriate end-point boundary conditions (zero or one). Equation (1.17) is then solved for each face, with the previous edge solutions applied as boundary conditions. Equation (1.17) is then solved in the interior of the polyhedron, with the previous face solutions applied as boundary conditions. Example shape functions are shown in Figure 11.5. In [47], solutions to (1.17) were approximated using the finite element method with a sub-tetrahedral mesh of the element. The construction of this sub-tetrahedral mesh was facilitated by assuming that the element shape was star-convex with respect to the vertex-averaged centroid. These approximate solutions still provide the necessary properties of finite element shape functions described previously.
+
+# 11.3.3 Element integration
+
+The integration points of the polyhedral finite element are defined based on the approach of Rashid and Selimovic [322]. In this approach, integration points are placed in so-called tributary volumes associated with each polyhedral vertex. Thus, the number of integration points is equal to the number of vertices. In practice, this integration method is sufficient to prevent any zero-energy modes of deformation. However, this integration scheme has only linear precision (can integrate linear functions exactly). Since the harmonic shape functions are non-polynomial in

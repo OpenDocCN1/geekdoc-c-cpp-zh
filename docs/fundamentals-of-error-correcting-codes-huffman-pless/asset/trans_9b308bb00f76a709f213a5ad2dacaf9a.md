@@ -1,0 +1,80 @@
+
+- [259] V. Pless, "有限几何中各向同性子空间的数量," Rend. Cl. Scienze fisiche, matematiche e naturali, Acc. Naz. Lincei 39 (1965), 418-421.
+- [260] V. Pless, "关于 Golay 码的唯一性," J. Comb. Theory 5 (1968), 215-228.
+- [261] V. Pless, "p=29 时对称码的权重及其中包含的 5-设计," Annals N. Y. Acad. of Sciences 175 (1970), 310-313.
+- [262] V. Pless, "GF(2) 上自正交码的分类," Discrete Math. 3 (1972), 209-246.
+- [263] V. Pless, "GF(3) 上的对称码与新的 5-设计," J. Comb. Theory 12 (1972), 119-142.
+- [264] V. Pless, "(32, 16) 二重偶码的子码," IEEE Trans. Inform. Theory IT-24 (1978), 738-746.
+- [265] V. Pless, "23 不整除 (72, 36, 16) 二重偶码的群阶," IEEE Trans. Inform. Theory IT-28 (1982), 112-117.
+- [266] V. Pless, "Q-码," J. Comb. Theory 43A (1986), 258-276.
+- [267] V. Pless, "循环射影平面与二进制扩展循环自双码," J. Comb. Theory 43A (1986), 331-333.
+- [268] V. Pless, "Golay 码的解码," IEEE Trans. Inform. Theory IT-32 (1986), 561-567.
+- [269] V. Pless, "关于 Golay 码唯一性的进一步研究," Discrete Math. 106/107 (1992), 391-398.
+- [270] V. Pless, "双元码及其推广," 载于 Eurocode 92 论文集, 意大利乌迪内, CISM 课程与讲座 第 339 号, P. Camion, P. Charpin, 和 S. Harari 编, 维也纳: Springer, 1993, 第 3-16 页.
+- [271] V. Pless, "父母、子女、邻居与影子," Contemporary Math. 168 (1994), 279-290.
+- [272] V. Pless, "二进制码中权重的约束," Applicable Algebra in Engineering, Communication and Computing (AAECC Journal) 8 (1997), 411-414.
+- [273] V. Pless, 《纠错码理论导论》, 第 3 版. 纽约: J. Wiley & Sons, 1998.
+- [274] V. Pless, "编码构造," 载于《编码理论手册》, V. S. Pless 和 W. C. Huffman 编, 阿姆斯特丹: Elsevier, 1998, 第 141-176 页.
+- [275] V. S. Pless, W. C. Huffman, and R. A. Brualdi, "代数码导论," 载于《编码理论手册》, V. S. Pless 和 W. C. Huffman 编, 阿姆斯特丹: Elsevier, 1998, 第 3-139 页.
+- [276] V. Pless, J. Leon, and J. Fields, "所有 II 型长度为 16 的 Z4 码均已知," J. Comb. Theory 78A (1997), 32-50.
+- [277] V. Pless, J. M. Masley, and J. S. Leon, "关于双元码中的权重," J. Comb. Theory 44A (1987), 6-21.
+- [278] V. Pless and J. N. Pierce, "GF(q) 上的自双码满足修正的 Varshamov-Gilbert 界," Inform. and Control 23 (1973), 35-40.
+- [279] V. Pless and Z. Qian, "Z4 上的循环码与二次剩余码," IEEE Trans. Inform. Theory IT-42 (1996), 1594-1600.
+- [280] V. Pless and J. R. Rushanan, "三元码," Lin. Alg. and Its Appl. 98 (1988), 415-433.
+- [281] V. Pless and N. J. A. Sloane, "关于自双码的分类与枚举," J. Comb. Theory 18 (1975), 313-335.
+- [282] V. Pless, N. J. A. Sloane, and H. N. Ward, "最小权为 6 的三元码与长度为 20 的自双码的分类," IEEE Trans. Inform. Theory IT-26 (1980), 305-316.
+- [283] V. Pless, P. Solé, and Z. Qian, "循环自双 Z4 码," Finite Fields and Their Appl. 3 (1997), 48-69.
+- [284] V. Pless and J. Thompson, "17 不整除 (72, 36, 16) 二重偶码的群阶," IEEE Trans. Inform. Theory IT-28 (1982), 537-544.
+- [285] M. Plotkin, "具有指定最小距离的二进制码," IRE Trans. Inform. Theory IT-6 (1960), 445-450. (另载于 [17] 第 238-243 页.)
+- [286] K. C. Pohlmann, 《数字音频原理》, 第 4 版. 纽约: McGraw-Hill, 2000.
+- [287] A. Pot, "DFT 在阿贝尔差集中的应用," Arch Math. 51 (1988), 283-288.
+- [288] F. P. Preparata, "一类最优非线性双错差纠正码," Inform. and Control 13 (1968), 378-400. (另载于 [23] 第 366-388 页.)
+- [289] Z. Qian, "Z4 上的循环码," 博士论文, 芝加哥伊利诺伊大学, 1996.
+- [290] E. M. Rains, "自双码的影子界," IEEE Trans. Inform. Theory IT-44 (1998), 134-139.
+- [291] E. M. Rains and N. J. A. Sloane, "自双码," 载于《编码理论手册》, V. S. Pless 和 W. C. Huffman 编. 阿姆斯特丹: Elsevier, 1998, 第 177-294 页.
+- [292] E. M. Rains and N. J. A. Sloane, "模格与准模格的影子理论," J. Number Theory 73 (1998), 359-389.
+- [293] I. S. Reed, "一类多错差纠正码及其解码方案," IRE Trans. Inform. Theory IT-4 (1954), 38-49. (另载于 [17] 第 27-38 页和 [29] 第 50-61 页.)
+- [294] I. S. Reed and G. Solomon, "某些有限域上的多项式码," J. SIAM 8 (1960), 300-304. (另载于 [17] 第 70-71 页和 [23] 第 189-193 页.)
+- [295] T. J. Richardson and R. Urbanke, "消息传递解码下低密度奇偶校验码的容量," IEEE Trans. Inform. Theory IT-47 (2001), 599-618.
+- [296] C. Roos, "循环码 BCH 界的推广, 包括 Hartmann-Tzeng 界," J. Comb. Theory 33A (1982), 229-232.
+- [297] C. Roos, "循环码最小距离的新下界," IEEE Trans. Inform. Theory IT-29 (1983), 330-332.
+- [298] R. M. Roth, 个人通信.
+- [299] R. M. Roth and A. Lempel, "基于 Cauchy 矩阵的 MDS 码," IEEE Trans. Inform. Theory IT-35 (1989), 1314-1319.
+- [300] R. M. Roth and G. Ruckenstein, "超过最小距离一半的 Reed-Solomon 码高效解码," IEEE Trans. Inform. Theory IT-46 (2000), 246-257.
+- [301] J. J. Rushanan, "广义 Q-码," 博士论文, 加州理工学院, 1986.
+- [302] C. J. Salwach, "平面、双平面及其码," American Math. Monthly 88 (1981), 106-125.
+- [303] N. V. Semakov and V. A. Zin’ovev, "完全与准完全平衡码," Problems of Inform. Trans. 5(2) (1969), 11-13.
+- [304] N. V. Semakov and V. A. Zin’ovev, "平衡码与战术配置," Problems of Inform. Trans. 5(3) (1969), 22-28.
+- [305] N. V. Semakov, V. A. Zin’ovev, and G. V. Zaitsev, "均匀打包码," Problems of Inform. Trans. 7(1) (1971), 30-39.
+- [306] C. Shannon, "通信的数学理论," Bell System Tech. J. 27 (1948), 379-423 和 623-656.
+- [307] K. Shum, I. Aleshnikov, P. V. Kumar, and H. Stichtenoth, "构造优于 Gilbert-Varshamov 界的代数几何码的低复杂度算法," 第 38 届 Allerton 通信、控制与计算会议论文集 (2000 年 10 月 4-6 日), 1031-1037.
+- [308] J. Simonis, "关于码的生成矩阵," IEEE Trans. Inform. Theory IT-38 (1992), 516.
+- [309] J. Simonis, "[18, 9, 6] 码是唯一的," Discrete Math. 106/107 (1992), 439-448.
+- [310] J. Simonis, "子码的有效长度," Applicable Algebra in Engineering, Communication and Computing (AECC Journal) 5 (1994), 371-377.
+- [311] J. Simonis, "子码与覆盖半径: Adam 结果的推广," 未发表.
+- [312] R. C. Singleton, "最大距离 q 元码," IEEE Trans. Inform. Theory IT-10 (1964), 116-118.
+- [313] N. J. A. Sloane, "码的权重枚举子," 载于《组合数学》, M. Hall Jr. 和 J. H. van Lint 编, 荷兰多德雷赫特: Reidel 出版社, 1975, 115-142.
+- [314] N. J. A. Sloane, "组合数学与数学其他部分的关系," Proc. Symposia Pure Math. 34 (1979), 273-308.
+- [315] M. H. M. Smid, "双元码," IEEE Trans. Inform. Theory IT-33 (1987), 432-433.
+- [316] K. J. C. Smith, "有限射影几何中点与超平面关联矩阵的 p-秩," J. Comb. Theory 7 (1969), 122-129.
+- [317] S. L. Snover, "Nordstrom-Robinson 码与 Golay 二进制码的唯一性," 博士论文, 密歇根州立大学, 1973.
+- [318] P. Solé, "一种四元循环码及一组低相关性四相序列," Lecture Notes in Computer Science 388 (1989), 193-201.
+- [319] G. Solomon and J. J. Stiffler, "代数删短循环码," Inform. and Control 8 (1965), 170-179.
+- [320] H. Stichtenoth, 《代数函数域与码》, 纽约: Springer-Verlag, 1993.
+- [321] L. Storme and J. A. Thas, "q 为偶数时 PG(n, q) 中的 M.D.S. 码与弧: 对 Bruen, Thas 和 Blokhuis 界的改进," J. Comb. Theory 62A (1993), 139-154.
+- [322] R. Struik, "覆盖半径为二和三的线性码的结构," IEEE Trans. Inform. Theory IT-40 (1994), 1406-1416.
+- [323] M. Sudan, "超越纠错界的 Reed-Solomon 码解码," J. Complexity 13 (1997), 180-193.
+- [324] Y. Sugiyama, M. Kasahara, S. Hirasawa, and T. Namekawa, "求解 Goppa 码解码关键方程的方法," Inform. and Control 27 (1975), 87-99.
+- [325] R. M. Tanner, "低复杂度码的递归方法," IEEE Trans. Inform. Theory IT-27 (1981), 533-547.
+- [326] L. Teirlinck, "对所有 t 都存在无重复块的非平凡 t-设计," Discrete Math. 65 (1987), 301-311.
+- [327] A. Tue, "平面内全等圆的最密排列," Norske Vid. Selsk. Skr. No. 1 (1910), 1-9.
+- [328] H. C. A. van Tilborg, "关于满足 Griesmer 界的某些码的唯一性或不存在性," Inform. and Control 44 (1980), 16-35.
+- [329] H. C. A. van Tilborg, "编码理论在密码学中的应用及其逆过程," 载于《编码理论手册》, V. S. Pless 和 W. C. Huffman 编. 阿姆斯特丹: Elsevier, 1998, 第 1195-1227 页.
+- [330] J. A. Todd, "一个组合问题," J. Math. Phys. 12 (1933), 321-333.
+- [331] V. D. Tonchev, 《组合配置》, 纽约: Longman-Wiley, 1988.
+- [332] V. D. Tonchev, "码与设计," 载于《编码理论手册》, V. S. Pless 和 W. C. Huffman 编. 阿姆斯特丹: Elsevier, 1998, 第 1229-1267 页.
+- [333] M. A. Tsfasman, S. G. Vlăduţ, and T. Zink, "模曲线、Shimura 曲线与优于 Varshamov-Gilbert 界的 Goppa 码," Math. Nachrichten 109 (1982), 21-28.
+- [334] J. V. Uspensky, 《方程论》, 纽约: McGraw-Hill, 1948.
+- [335] S. A. Vanstone and P. C. van Oorschot, 《误差纠正码导论及其应用》, 波士顿: Kluwer Academic Publishers, 1989.
+- [336] A. Vardy, "码的栅格结构," 载于《编码理论手册》, V. S. Pless 和 W. C. Huffman 编. 阿姆斯特丹: Elsevier, 1998, 第 1989-2117 页.
+- [337] R. R. Varshamov, "纠错码中信号数量的估计," Dokl. Akad. Nauk SSSR 117 (1957), 739-741. ([23] 第 68-71 页有英文译文.)

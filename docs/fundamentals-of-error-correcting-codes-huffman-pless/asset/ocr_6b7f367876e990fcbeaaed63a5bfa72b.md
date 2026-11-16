@@ -1,0 +1,17 @@
+that \(A_{15} = A_{12} = A_{16} = 0\). In each case when a vector of weight 15, 12, or 16 was assumed to be in \(C_2(A)\), a contradiction was reached for a projective plane could be constructed (by exhaustive computer search). Once these values for \(A_i\) were determined to be 0, the unique weight distribution of \(C_2(A)\) was computed and all the entries, many of astronomical size, turned out to be nonnegative integers. It also turned out that \(A_{19}\) was nonzero. Then C. W. H. Lam tried to construct \(\mathcal{D}\) where \(C_2(A)\) contained a codeword of weight 19 or show that \(A_{19} = 0\). When he got the latter result, he concluded that there is no plane of order 10 [186].
+
+We give a very short description of what was involved in showing that \(C_2(A)\) would not contain any vectors of weights 15, 12, or 16. In the first paper on this topic, MacWilliams, Sloane, and Thompson [220] assume that \(C_2(A)\) contains a vector \(\mathbf{x}\) of weight 15. As \(\widehat{C_2^\perp}(A)\) is doubly-even, each line must meet \(\text{supp}(\mathbf{x})\) in an odd number of points \(s\). The minimum value of \(C_2(A)\) excludes values of \(s\) higher than 7. The value 7 can be eliminated since a vector \(\mathbf{y} \in C_2(A)\) of weight 11 that meets \(\text{supp}(\mathbf{x})\) in seven points when added to \(\mathbf{x}\) gives a vector of weight 12 (hence the support of an oval by Corollary 8.6.7) that meets a line in four points, something that cannot happen by Theorem 8.6.5. Let \(b_i\) denote the number of lines that meet \(\text{supp}(\mathbf{x})\) in \(i\) points for \(i = 1, 3, \text{and } 5\). Then we have:
+
++   \(b_1 + b_3 + b_5 = 111,\)
++   \(b_1 + 3b_3 + 5b_5 = 165,\)
++   \(3b_3 + 10b_5 = 105.\)
+
+The first equation counts the 111 lines in \(C_2(A)\). Each of the 15 points of \(\text{supp}(\mathbf{x})\) lies on 11 lines, and the second equation counts the incidences of points of \(\text{supp}(\mathbf{x})\) on lines. Each of the 105 pairs of points on \(\text{supp}(\mathbf{x})\) determines a line and the last equation counts these. The solution to this system is \(b_1 = 90, b_3 = 15, \text{and } b_5 = 6\). It is a short step [220] to show that the six lines that meet \(\text{supp}(\mathbf{x})\) in five points are uniquely determined (where “uniquely” means up to permutation of coordinates). A bit more analysis after this gives (uniquely) the 15 lines that meet \(\text{supp}(\mathbf{x})\) in three points. It requires much more analysis and the use of a computer to show that the remaining 90 lines cannot be constructed.
+
+The analysis of how the lines must meet a vector of a presumed weight, the number of cases to be considered, and the amount of computer time needed increases as one assumes that \(C_2(A)\) contains a codeword of weight 12 [48, 184], weight 16 [185], and the final case, weight 19 [186]. The last calculation used the equivalent of 800 days on a VAX-11/780 and 3000 hours on a Cray-1S. This unusual amount of computing prompted the authors [186] to analyze where possible errors could occur and the checks used. Solution of the following problem would be very interesting.
+
+Research Problem 8.8.1 Find a proof of the nonexistence of the projective plane of order 10 without a computer or with an easily reproducible computer program.
+
+# 8.9 Hadamard matrices and designs
+
+There are many combinatorial configurations that are related to designs. One of these, Hadamard matrices, appears in codes in various ways. An \(n \times n\) matrix \(H\) all of whose

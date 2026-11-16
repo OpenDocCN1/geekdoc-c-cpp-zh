@@ -1,0 +1,18 @@
+is simple, and polyhedra generated from a Voronoi diagram are simple if the seed points are in general position. We introduce the associated class of polytopes:
+\(\mathfrak{p}_{\text{simp}} \longrightarrow P\) is simple.
+
+The following result is a generalization of Lemma 2.12 to \(d\) dimensions. Recall the definition of \(\mathfrak{p}_{\text{rf}}\) from the end of Section 2.4; the following result is from [147, Theorem 2.3].
+
+**Theorem 2.14.** Fix \(d \ge 2\). Then the inequality in (2.7) holds uniformly for the Wachspress coordinates on \(\mathfrak{p}_{\text{cvx}} \cap \mathfrak{p}_{\text{rf}} \cap \mathfrak{p}_{\text{simp}}\).
+
+A sketch of the proof is as follows. First, the quantity \(\|\nabla \phi_i(\boldsymbol{x})\|\) is bounded by terms that are \(O(h_f(\boldsymbol{x})^{-1})\); recall that \(h_f(\boldsymbol{x})\) is the distance from point \(\boldsymbol{x}\) to face \(f\). These estimates are summed over all the vertices of \(P\) and regrouped. Since the function \(h_f(\boldsymbol{x})\) is affine in \(\boldsymbol{x}\), it can be written as a linear combination of \(\{\phi_i(\boldsymbol{x})\}\), allowing further simplification of the estimate. Since \(P \in \mathfrak{p}_{\text{rf}}\), we have \(h_f(\boldsymbol{x}) \ge h_\ell(P) > 0\) and since \(P \in \mathfrak{p}_{\text{simp}}\), we can factor out \(2d\) to produce the result.
+
+As highlighted by the above proof and other results in [147], the sum of gradients of Wachspress coordinates scales roughly like \(h_\ell^{-1}\). Thus, if \(h_\ell\) is small, we would expect the Wachspress coordinates to have poor interpolation properties. Any polyhedron with a large dihedral angle has a small value of \(h_\ell\), meaning any meshing scheme designed to allow Wachspress interpolation on the output mesh should aim to avoid large dihedral angles. Further analysis along these lines remains an important direction for future work.
+
+# 2.7 EXTENSIONS AND FUTURE DIRECTIONS
+
+The results from this chapter focus on interpolation error estimates for generalized barycentric coordinates in the context of linear finite element methods on polygonal and polyhedral meshes for scalar-valued elliptic partial differential equations. In [320], we have shown how to construct basis functions for quadratic order finite elements on polygons by taking linear combinations of pairwise products of generalized barycentric coordinates. The gradients of such functions have terms of the form \(\phi_i \nabla \phi_j\), and thus our estimates on \(\|\nabla \phi_j\|\) remain a crucial ingredient in error estimates for such higher order methods.
+
+In [165], we have shown how to construct basis functions for linear order, vector-valued, \(H(\text{curl})\)- and \(H(\text{div})\)-conforming elements on polygons and polyhedra. Our construction uses generalized barycentric functions and their gradients in forms like \(\phi_i \nabla \phi_j - \phi_j \nabla \phi_i\), mimicking the approach of Whitney functions for barycentric coordinates on simplices. Again, the bounds on \(\|\nabla \phi_j\|\) explained in this chapter are necessary in the error analysis of such methods.
+
+At the beginning of this chapter we raised the question of whether a change in mesh or an alternative selection of generalized barycentric coordinate type could fix a simulation code that would otherwise crash. The answer is certainly yes, both approaches can improve numerical methods for interpolation. In particular, the Wachspress, discrete harmonic, and maximum entropy coordinates with the uniform

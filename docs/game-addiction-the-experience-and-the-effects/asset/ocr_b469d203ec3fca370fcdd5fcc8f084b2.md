@@ -1,0 +1,9 @@
+# MEDIA EXPERIENCE AND REAL ILLUSION
+
+> Hamlet, Prince of Denmark ... has excited questions about its meanings over centuries, and in many languages.... It has grown a literature of tens of thousands of learned papers and books of comment, and at least one journal.... We speak of Hamlet as thinking . . . Hamlet as being conscious. But Hamlet never lived. He is but a product of the bard's wonderful imagination.'— R.L. Gregory
+
+Shakespeare's Hamlet, though only a story, has enchanted millions. In spite of being completely fictional, most of the stories that we tell play a huge role in helping us to understand our universe, our world, even ourselves. We live and breathe them, yet very few people understand what actually happens in our brains and bodies when we read a play, listen to the radio, or watch a movie. These media are all livable and breathable stories; they all excite different senses, senses which employ unique methods for pulling the human mind into worlds.
+
+When it comes to engaging the brain, video games blow them all away. Games take players inside, immersing them by portraying fantastic and imaginative worlds, believable visual imagery, and interactivity that they can't help but pay attention to. Some games take it a step further and connect players to other real people. Depending on what's responsible for the immersion, the human body can release a variety of chemicals, responding to games as though they were a completely real, physical experience.
+
+It's easy for some people to hate games. This book is, after all, about people who can't stop playing. While the immersions in games do present us with new and serious challenges, games are simply the state of the

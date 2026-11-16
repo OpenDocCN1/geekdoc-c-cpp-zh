@@ -1,0 +1,1 @@
+FIGURE 8.9: IWT of the function shown in Figure 8.7 using the cubic spline wavelet for $a = 0.50$ and $a = 0.75$. Direct integration is performed with $\hat{f}_3(t)$.

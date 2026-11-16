@@ -1,0 +1,11 @@
+We can use the ordering of binary vectors already developed in this section to simplify the proof of the following result from [123].
+
+# Theorem 11.7.15 If C is an [n, k] binary code, then
+
+0 \le \rho(C) - \nu(C) \le k.
+
+# Proof.
+
+That: That: 0 \le \rho(C) - \nu(C) follows from Lemma 11.7.13. Let e_i be the binary vector of length n and weight 1 with 1 in coordinate i. Let x_1 be a weight \rho = \rho(C) coset leader of a coset C_1 of C. By rearranging coordinates we may assume that supp(x_1) = {1, 2, ..., \rho}. Then either v(C) = \rho, in which case we are done, or v(C) \le \rho - 1 by Lemma 11.7.13. Suppose the latter occurs. Then there exists another coset leader x_2 of C_1. Hence x_1 + x_2 = e_i \in C. By rearranging coordinates we may assume that 1 \in supp(x_1), since x_1 and x_2 must disagree on some coordinate. By Corollary 11.7.7, there is a child C_2 of C_1 with all coset leaders having first coordinate 0, one of which is x_3 = x_1 + e_1. If v(C) \le \rho - 2, there is a coset leader x_4 of C_2 that must disagree with x_3 on some coordinate in supp(x_3) = {2, 3, ..., \rho}; by rearranging, we may assume that e_2 = x_3 + x_4 \in C is 1 on the second coordinate. Since all coset leaders of C_2 are 0 on the first coordinate, so is e_2. Since e_1 begins 1 \cdot \cdot \cdot and e_2 begins 01 \cdot \cdot \cdot, they are independent. By Corollary 11.7.7, there is a child C_3 of C_2 with all coset leaders having second coordinate 0, one of which is x_5 = e_2 + x_1. If C_3 has a coset leader that is 1 on the first coordinate, then C_2 must have a coset leader with a 1 in the coordinate by Corollary 11.7.8, which is a contradiction. So all coset leaders of C_3 are 0 on the first and second coordinates. If v(C) \le \rho - 3, there is a coset leader x_6 of C_3 which must disagree with x_5 on some coordinate in supp(x_5) = {3, 4, ..., \rho}; by rearranging, we may assume that e_3 = x_5 + x_6 \in C is 1 on the third coordinate. Since e_1 begins 1 \cdot \cdot \cdot, e_2 begins 01 \cdot \cdot \cdot, and e_3 begins 001 \cdot \cdot \cdot, they are independent. We can continue inductively to find s independent codewords as long as v(C) \le \rho - s. Since the largest value of s possible is k, v(C) \ge \rho - k.
+
+# Exercise 678 In the proof of Theorem 11.7.15, carry out one more step in the induction.

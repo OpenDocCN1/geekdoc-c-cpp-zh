@@ -1,0 +1,7 @@
+# 13.4 Future Work
+
+There are many interesting applications that a partitioner can be used for, once you have it. What kinds of rapid backface culling could you do on a large mesh if you partitioned it into triangles that all have relatively the same face normal with minor deviations? The speedup from bulk triangle rejection could be dramatic, without having to even transmit the triangles to the GPU.
+
+Similarly, there is value in extending the partitioner to pay attention to the size of packets generated so that they fit inside a fixed memory size. This fixed size might make data management simpler and faster because less bookkeeping is necessary, particularly for an architecture like the PlayStation 3 where SPU memory is tight and double-buffering DMA is mandatory for best performance. Dynamically managing memory is slower and more complicated than using fixed buffers, so leaving room in your implementation to extend the fitness function of a partition in arbitrary ways is valuable.
+
+It is relatively straightforward to convert a partitioner into a hill-climbing partitioner by remembering the order that faces were selected for inclusion in partitions, perturbing that order slightly, and re-evaluating the results. By recording the best sequence, you can use that as the basis for perturbations. It is unlikely to perform significantly better than the core algorithm, but as slight as the improvements may be, if squeezing out the absolute best performance and smallest memory footprint is your objective, it may be worth doing.

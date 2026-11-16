@@ -1,0 +1,5 @@
+# 8.7 Summary
+
+In this chapter, you learned various techniques for securing cloud applications. From SAML and OAuth to Java EE security concepts and SAP HCP APIs, it's plain to see that security has a lot of moving parts. Therefore, if nothing else, we hope that you'll take from this chapter one important lesson: Security development requires a holistic approach that encompasses all aspects of an application. Although this may seem overwhelming at first, we think that you'll find that the methods described in this chapter will fall into place quite naturally if you plan for security at the beginning of the development process. Otherwise, factoring for security after an application is built can be a very dicey proposition.
+
+This chapter concludes our in-depth look at SAP HCP application development. From here on out, we'll broaden our focus a bit and look at some of the key enablement services supported by SAP HCP. In Chapter 9, we'll start by looking at SAP HANA Cloud Portal, a full-fledged portal service that can be used to build customer portal sites, mashups, and more.

@@ -1,0 +1,7 @@
+Luckily, FMOD has built-in support for positional audio. To integrate this into a game, you must provide position and orientation data for both the listener and any active 3D event instances. There are three parts to this: setting up the listener, adding positional functionality to SoundEvent, and creating an AudioComponent to associate actors with sound events.
+
+# Setting Up a Basic Listener
+
+A common approach is to use the camera as the listener. In this case, the position of the listener is the position of the camera in the world, and the orientation of the listener is the orientation of the camera. This approach works great for games with a first-person camera, such as this chapter’s game project. However, third-person cameras have additional issues to consider, as discussed later in this section.
+
+A trap to watch out for when using any 3D positional audio library (not just FMOD) is that the library may use a different coordinate system than the game. For example, FMOD uses a left-handed coordinate system with +z forward, +x right, and +y up. However, our game uses a left-handed coordinate system with +x forward, +y right, +z up. So, when passing position and directions from the game to FMOD, you must convert the coordinates. This just involves switching around some components when converting between a Vector3 and FMOD’s vector type, FMOD_VECTOR. To help with this,

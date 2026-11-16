@@ -1,0 +1,8 @@
+platform, including Windows, Mac, Linux, iOS, Android, HTML5, and every modern console. The current version of FMOD has two distinct components: FMOD Studio, which is an external authoring tool for sound designers, and the FMOD API (application programming interface), which integrates into games that use FMOD.
+
+The FMOD Studio tool grants a lot of power to sound designers and can implement many of the features discussed earlier. A **sound event** can correspond to one or more sound files, and these events can have **parameters** that dynamically drive the behavior of the sound events. FMOD Studio also allows designers to control how the different sounds mix together. For example, the designer can place music and sound effects on separate tracks and then adjust the volume of the tracks separately.
+
+> note
+> This chapter doesn't cover how to use FMOD Studio, but there are excellent references available on the official FMOD website, among other places. For interested readers, the FMOD Studio project file used for the audio content in this chapter is in the GitHub repository, in the FMODStudio/Chapter07 directory.
+
+The FMOD API has two parts. The FMOD Low Level API is the foundation for FMOD. It contains functionality to load and play sounds, manage channels, update sounds in a 3D environment, add digital effects to sound, and more. It's possible to use the Low Level API by itself, but then any events created in FMOD Studio are not usable. Supporting FMOD Studio requires the FMOD Studio

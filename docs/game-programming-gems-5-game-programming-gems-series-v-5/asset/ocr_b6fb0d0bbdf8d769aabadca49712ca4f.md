@@ -1,0 +1,11 @@
+Wrappers also facilitate the modularity of your implementation, distancing your code from any PVM-specific calls. While PVM supports the basic pack and unpacking mechanisms of strings, integers, and the like, you will have to write some of your own. These game-specific data-packing routines will increase modularity, allowing you to create data classes that can be automatically archived and unarchived by your wrapper without any direct dependencies upon the PVM system. They will also help keep the same game processes going without interruption, if the game is executed on a single processor system.
+
+The example design includes a base class for fundamental behaviors, alongside parallel implementations. This allows the game to target single processor or PVM-friendly machines; see Figure 3.6.4.
+
+![](bbox=[0.263, 0.333, 0.853, 0.563])
+
+FIGURE 3.6.4 Class diagram of a sample parallel AI. The task manager shell (cTaskManagerShell) resides inside the games AI workspace. The task manager shell holds both the parallel shell object (cParallelShell) and the core task object (cCoreTask). Both of these classes are created via simple factory methods.
+
+PVM has a rudimentary resource manager that will handle the placement of tasks. This simple resource manager should be used only as a simple routing mechanism to the available processors. Complex, game-specific resource management should occur within your task manager/router implementation. This will allow you to identify which processor elements have recently executed an identical or similar task, which in turn will aid in using previously cached data evaluations. Data evaluations are usually stored in shared memory to speed up processing.
+
+PVM uses the user datagram protocol (UDP) for interprocess communication. To customize, consider adding a fault tolerance system. The addition of fault tolerance allows the game to continue executing, even if communication is lost with a PE processing a task. With a basic system in place, the task manager/router would verify

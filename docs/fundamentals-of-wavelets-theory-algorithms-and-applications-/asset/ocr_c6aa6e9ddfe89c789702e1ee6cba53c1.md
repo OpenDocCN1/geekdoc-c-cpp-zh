@@ -1,0 +1,5 @@
+\(\begin{bmatrix} \vdots \\ y(-2) \\ y(-1) \\ y(0) \\ y(1) \\ y(2) \\ y(3) \\ \vdots \\ \vdots \end{bmatrix} = \begin{bmatrix} \vdots \\ x(-4) \\ x(-2) \\ x(0) \\ x(2) \\ x(4) \\ x(6) \\ x(8) \\ \vdots \\ \vdots \end{bmatrix} \quad (7.9)\)
+
+In terms of matrix operator, we write (7.9) as
+
+\(\begin{bmatrix} \vdots \\ y(-2) \\ y(-1) \\ y(0) \\ y(1) \\ y(2) \\ y(3) \\ \vdots \\ \vdots \end{bmatrix} = \begin{bmatrix} 1 & 0 & 0 & \cdot & \cdot \\ 0 & 0 & 1 & 0 & 0 & \cdot & \cdot \\ \cdot & 0 & 0 & 1 & 0 & 0 \\ \cdot & \cdot & \cdot & 0 & 0 & 1 & 0 & 0 & \cdot \\ \cdot & \cdot & \cdot & \cdot & \cdot & 0 & 0 & 1 & 0 & 0 \\ \cdot & \cdot & \cdot & \cdot & \cdot & \cdot & 0 & 0 & 1 \\ \vdots \\ \vdots \end{bmatrix} \begin{bmatrix} \vdots \\ x(-2) \\ x(-1) \\ x(0) \\ x(1) \\ x(2) \\ x(3) \\ x(4) \\ \vdots \\ \vdots \end{bmatrix} \quad (7.10)\)

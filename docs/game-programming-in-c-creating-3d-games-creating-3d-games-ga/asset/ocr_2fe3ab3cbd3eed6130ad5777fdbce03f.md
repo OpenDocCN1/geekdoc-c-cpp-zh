@@ -1,0 +1,7 @@
+# FOUNDATIONS OF SKELETAL ANIMATION
+
+As described in Chapter 2, “Game Objects and 2D Graphics,” for 2D animation, games use a sequence of image files to yield the illusion of an animated character. A naïve solution for animating 3D characters is similar: Construct a sequence of 3D models and render those different models in rapid succession. Although this solution conceptually works, it’s not a very practical approach.
+
+Consider a character model composed of 15,000 triangles, which is a conservative number for a modern game. Assuming only 10 bytes per vertex, the total memory usage of this one model might be around 50 to 100 KB. A two-second animation running at 30 frames per second would need a total of 60 different models. This means the total memory usage for this single animation would be 3 to 6 MB. Now imagine that the game uses several different animations and several different character models. The memory usage for the game’s models and animations will quickly become too high.
+
+In addition, if a game has 20 different humanoid characters, chances are their movements during an animation such as running are largely the same. If you use the naïve solution just described, each of these 20

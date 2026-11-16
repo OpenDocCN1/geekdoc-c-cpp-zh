@@ -1,0 +1,248 @@
+
+- matrix multiplication, 154–155, 156
+- matrix palettes, 385
+- max players, 116
+- maxAngularSpeed, 277
+- maxMouseSpeed, 277
+- MaxPlayer, 119
+- MaxPlayerLimit function, 120
+- mCurrFrame, 50
+- membership tests, 106
+- memory allocation, 462–463
+- memory usage, reducing, 375
+- Mesh, 194–195
+- MeshBinHeader, 449–450
+- MeshBinHeader*, 451
+- MeshComponent, 439
+- 3D, 204–206
+- MeshComponent::GetType, 441
+- MeshComponent::LoadProperties, 442
+- meshes, drawing 3D meshes, 195–196
+- Mesh::Load, 195, 452
+- Mesh::LoadBinary, 452–453
+- Mesh::SaveBinary, 450–451
+- Microsoft Visual Studio Community 2017, 2
+- Microsoft Windows
+  - API (application programming interface), 3
+  - setting up development environments, 2
+- min players, 116
+
+## N
+
+- narrowphase techniques, 331
+
+## O
+
+- OBB (oriented bounding box), 306
+- object space, 149–150
+- occlusion, 243–244
+- offsetof of macro, 175
+- OnClick, 347, 349
+- OnEnter, 95
+- OnExit, 95
+- OnUpdateWorldTransform, 324–325
+- open set, GBFS (greedy best-first search), 106
+- OpenGL
+  - alpha blending, 178–180
+  - anisotropic filtering, 399
+  - context, 130
+  - initializing, 128
+  - loading shaders, 141–142
+    - adding shaders to games, 146
+    - CompileShader, 142–143
+    - IsCompiled, 143–144
+    - IsValidProgram, 145
+    - Load, 144–145
+    - SetActive, 145
+    - Unload, 146
+  - mipmapping, 399
+  - rendering frames, 131
+  - requesting attributes, 129
+  - setting up OpenGL window, 128–129
+  - texture mapping, 167–170
+  - updating vertex format, 173–175
+  - UBOs (uniform buffer objects), 165
+  - vertex array object, 134–135
+  - writing basic shaders, 139–141
+- operator overloading, 468–470
+- operator+, 469
+- optimizing A*, 113
+- orbit cameras, 286–288
+- OrbitCamera class, 287
+- OrbitCamera::Update, 287–288
+- oriented bounding box (OBB), 306
+- orthographic projection, 197
+- outMap, 101
+- overdraw, 200
+- overloading operators, 468–470
+
+## P
+
+- Pac-Man game
+- partial class hierarchy, 36
+- pseudocode, 6
+- state machine behaviors, 92
+- paddles
+  - drawing, 20–23
+  - updating position of, 26–28
+- painter's algorithm, issues with in 3D, 200–201
+- parallax effect, 53
+- parameters, sound events, 223
+- parent nodes, 100
+- pass by value, 459
+- path nodes, 115
+- path-cost component, 111
+- pathfinding, AI (artificial intelligence), 98
+  - BFS (breadth-first search), 100–103
+  - Dijkstra's Algorithm, 113–114
+  - following paths, 114–115
+  - heuristics, 104–105
+  - navigation meshes, 115–116
+  - path nodes, 115
+- Patrol state, 92, 94–95
+- pause menu, 344–345
+- perspective divide, 199
+- perspective projection, 197
+- phantom inputs, 265
+- Phong reflection model, 209–211
+- Phong shading, 211
+- physics, Newtonian physics, 79
+  - linear mechanics, 79–80
+- PhysWorld class, 325–327
+  - testing ball collisions, 329–331
+- PhysWorld::TestPairWise, 329
+- pitch, 185
+- PlaneActor, 331, 333
+- planes, 301–302
+- platform specific libraries, 3
+- player collision, against walls, 331–333
+- PlayEvent, 229, 230, 238
+- playing event instances, 229–230
+- PNG files, 43
+- point light fragment shaders, 419–421
+- point lights, 208
+  - adding, 418–419
+  - drawing, 421–424
+- pointers, 459–460
+- PointLightComponent class, adding, 419
+- PointLightComponent::Draw, 423–424
+- points, transforming, with matrices, 155–157
+- polling, 248
+- polygons, 131–132
+- Pong
+  - drawing walls, balls, and paddles, 20–23
+  - updating
+    - ball's position, 28–30
+    - paddle's position, 26–28
+- poses, skeletons and, 367–370
+- position of
+  - balls, updating, 28–30
+  - mouse, 256–258
+  - paddles, updating, 26–28
+- positional functionality, adding to SoundEvent, 236–237
+- positions, computing with Euler integration, 80
+- positive edges, 248–251
+- PosNormTex format, 191–192
+- PrepareForUpdate, 255, 264
+- printf function, 8
+- processing, basic input processing, 11–13
+- ProcessInput, 11–12, 13, 251, 343
+  - InputComponent class, 76
+- ProcessKeyboard function, 54
+- projection matrix (3D), transforming, clip space, 197–200
+- properties, loading global properties, 430–434
+
+## Q
+
+- quality, improving texture quality, 394
+- quaternions, 186–187
+  - in code, 188–189
+  - combining, rotations, 187
+  - MoveComponent, 190
+  - quaternion-to-rotation matrix, 188
+  - rotating vectors, 188
+  - spherical linear interpolation (Slerp), 188
+  - quaternion-to-rotation matrix, 188
+- queues, 473–474
+- quit dialog box, 351
+
+## R
+
+- radar
+  - adding, 354–358
+  - drawing, 357
+- Random function, 75
+- range-based For loops, 475–476
+- RapidJSON, 194, 430, 449
+  - saving level files, 444–446
+- raster graphics, 14
+- real time, 24
+- red, green, blue (RGB), 14
+- reducing memory usage, 375
+- references, 458–459, 464–465
+- reflections, 401
+- refresh rate, 16
+- RegisterState function, 96
+- relative motion, mouse input, 258–259
+- RemoteTarget, 352
+- RemoveActor, 41
+- Renderer, abbreviated declaration, 195–196
+- renderer, 19
+- Renderer::Draw, 343, 377, 405
+- Renderer::DrawFromGBuffer, 417
+- Renderer::GetScreenDirection, 294
+- Renderer::Initialize, 404, 411
+- Renderer::Shutdown, 404, 411
+- rendering
+  - framebuffer objects, 404–405
+  - frames, OpenGL, 131
+  - to textures, 400–401
+    - creating framebuffer objects, 402–404
+    - creating textures, 401–402
+- RenderText, 338, 340, 347
+- repositories, 3
+- requesting OpenGL, attributes, 129
+- resolution, 14
+  - supporting multiple resolutions, 361–362
+  - reticule, adding, aiming reticule, 352–354
+- reverb, 242
+- RGB (red, green, and blue), 14
+- RGBA, 14–15
+- roll, 185
+- RotateToNewForward, 327–328
+- rotating vectors, quaternions, 188
+- rotation, 152
+  - combining for 3D, 187
+  - Euler angles, 3D, 185–186
+  - quaternions, 3D, 186–187
+  - quaternion-to-rotation matrix, 188
+- rotation matrix, 157–158
+- row vectors, 155
+- RunLoop function, 9–10
+- sample data, 226–227
+- SaveActors, 447–448
+- SaveBinary, 450–451
+- SaveComponents, 448
+- SaveLevel, 445, 446
+- saving
+  - binary mesh files, 449–452
+  - level files, 444–446
+  - actors, 446–448
+  - components, 446–448
+  - global properties, 446
+- scalar multiplication, 62–63
+- scale, 151–152
+- scale matrix, 157
+- scaling vectors, 62–63
+- screen tearing, 16–17
+- scroll wheels, mouse input, 260–261
+- scrolling backgrounds, 51–53
+- SDL (Simple DirectMedia Layer) library, 4
+  - input devices, 251
+- SDL 2D coordinate system, mouse position, 257
+- SDL controller axis constants, 264
+- SDL Image, 43
+- SDL image file formats, 43
+- SDL subsystem flags, 8
+- SDL TTF library, 338
+- SDL_BUTTON macro, 257

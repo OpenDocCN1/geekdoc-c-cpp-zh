@@ -1,0 +1,15 @@
+# 7.5 IMPLEMENTATION DETAILS
+
+In this section we provide some directions for the efficient implementation of a planar deformation system and point out some practical aspects that should be considered.
+
+# 7.5.1 Visualizing planar maps
+
+Accurate and efficient visualization of barycentric maps is an important part of our shape deformation system. To this end, we should make an effort to perform as much as possible computations in preprocessing for the sake of faster computations during interaction. In addition, it is advised to utilize parallelism and in particular to shift computations to the graphics processor when possible.
+
+The simplest and most efficient way to visualize the map is to use the GPU's ability to efficiently texture map triangle meshes. The user provides the polygonal cage that defines the source domain and a dense triangulation (a mesh) of the domain computed (once) in preprocessing. We have found the code of [355] useful, though other high quality and efficient triangulation algorithms exist. At runtime, the map is evaluated on the vertices of this mesh and the GPU renders the deformed mesh with the original vertex positions as (u, v) texture coordinates. Since the GPU's rasterizer assumes that the map is piecewise linear on the triangles, it is preferable to use a high density mesh in order to obtain smooth results.
+
+The next step is to compute the barycentric coordinates and store them in a large dense matrix. Some care should be taken with certain types of coordinates such as Cauchy's, since their expression (7.18) is singular on the boundary. The limits when approaching an edge or a vertex from within the cage exist [414], but special classification of the vertices according to their position is required. This complicates the implementation and is less suitable for implementation on the GPU, where regularity is crucial. A simple "trick" to avoid this problem is to offset the cage in the outward normal direction and to use the offset cage for the derivation of the coordinates. The amount of offsetting should be small enough to avoid visual artifacts and large enough to avoid numerical errors when evaluating the vertices that lie on the boundary. We used a default value of 0.0001, where the cages we used have a diameter of 10 units.
+
+Evaluating basis functions is an embarrassingly parallel process. For each internal mesh vertex $v_j$ and each cage vertex $z_i$ the coordinate function $C_i(v_j)$ can be computed independently. Moreover, the regular memory access pattern is suited perfectly for a GPU implementation. Algorithm 1 shows our MATLAB code for computing a matrix of Cauchy's coordinates. The running time on a machine with Nvidia's Quadro K6000 processor for a mesh with 125,000 vertices of the pants shape of Figure 7.2 is 17 milliseconds.
+
+The most critical computation is the evaluation of the barycentric map, since this is done during interaction. Here again, there is room for exploiting parallelism, since the evaluation of $f(v_j) = \sum_{i=1}^n C_i(v_j)f_i$ is independent for each internal vertex $v_j$. This computation can be expressed as a matrix-vector multiplication,

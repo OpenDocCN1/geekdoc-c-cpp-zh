@@ -1,0 +1,14 @@
+# Introduction
+
+Eric Lengyel, Naughty Dog Inc.
+lengyel@terathon.com
+
+Most modern video games take place within some kind of simulated virtual environment. They usually attempt to make that environment appear and behave like the real world, at least to the degree that the computer hardware allows at an acceptable frame rate. Displaying a realistic representation of a 3D environment and simulating dynamic systems that follow the laws of physics requires that programmers understand the mathematics used to model what we experience in the world around us.
+
+Mathematics as a whole is an unending series of generalizations—many are known, and many more await discovery. Two seemingly different mathematical notions applied in separate manners at one level can often be unified at some higher level of thinking and regarded as two cases of a single generalized concept. Our first gem, by Chris Lomont, discusses the branch of mathematics known as geometric algebra and presents the multivector generalization of commonly used operations such as rotations and cross products.
+
+During the course of game development, it is often desirable for some set of data points to be smoothly interpolated. Examples of such data are a set of camera positions, animation keyframes, and even the vertices of a low-resolution mesh. A commonly used tool for performing smooth interpolation is splines, usually the cubic variety. This section continues with two gems that pertain to splines. The first, by Tony Barrera, Anders Hast, and Evert Bengtsson, discusses a technique for minimizing the curvature of Hermite curves while maintaining smooth interpolation. The second is a gem by James Van Verth that discusses applications of splines to animation control.
+
+Although game engines aim to simulate realistic environments as best they can, the result is inescapably an approximation at many different levels. In the realm of computation, precision and speed are opposing forces that need to be balanced in the way that best suits the application. Our next two gems offer approximation techniques whose goal is achieving the best possible speed while sacrificing as little precision as possible. Andy Thomason first describes approximations for quaternion interpolation, and Christopher Tremblay next discusses the minmax approximation technique.
+
+We wrap up the mathematics section with a projection matrix modification trick written by Eric Lengyel. The mathematics behind the perspective projection matrix and the properties of homogeneous clip space are sometimes unintuitive, but a deeper understanding of their nature can lead to many useful adjustments. The technique described in the final gem distorts the view frustum so that the near plane is replaced by an arbitrary clipping plane and shows how to minimize the effect on depth buffer precision.

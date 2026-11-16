@@ -1,0 +1,1 @@
+quite rare, and so a lot of extra triangles are currently generated to support this worst-case scenario.

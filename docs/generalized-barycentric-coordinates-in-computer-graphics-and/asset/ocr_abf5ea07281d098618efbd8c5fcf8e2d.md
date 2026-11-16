@@ -1,0 +1,17 @@
+Note that if the ME-U coordinates are used throughout an entire mesh, the resulting interpolant will be conforming, that is globally C^0. However, the value of the ME-U interpolant along adjacent collinear edges may not be the same as the interpolant produced by other kinds of generalized barycentric coordinates. We flag this special case with * in Table 2.1. On the other hand, when using the “triangle inequality” prior (ME-T), the Lagrange property is satisfied when \(\epsilon = 0\) and the success of the interpolant as \(\epsilon \to 0\) is confirmed by the data.
+
+Moving least squares coordinates [267] are defined in terms of a minimization problem, weighted by the distance from a point to the boundary. The weight function \(W(x, t) = ||p(t)|| / ||p(t) - x||^k\) ensures that the coordinates have the boundary values encoded by \(p\) on each edge; the larger the exponent \(\alpha\), the more weight is given to smoothness of the coordinates near the boundary relative to smoothness on the interior of the domain. As reported in the \(L^\infty\) columns of Table 2.1, for \(\alpha = 1, 2, 3\), the moving least squares interpolant exhibits small error compared to the harmonic interpolant as the geometry degenerates to a square, with \(\alpha = 2\) producing the smallest error. From this perspective, the quadratic weight seems to do the best mimicking harmonic coordinates by balancing smooth enforcement of boundary requirements with interior smoothness; the other weight choices overly prefer one of these objectives to the detriment of the interpolation error. Note that moving least squares coordinates may take on negative values, which can present challenges in graphics applications. In regards to the error analysis presented here, however, non-negativity of the interpolant is not required.
+
+The results of our experiments for the domains shown in Figures 2.1b and 2.1c are provided in Tables 2.2 (page 34) and 2.4 (page 37), respectively. All the results are discussed more thoroughly in Section 2.5.
+
+# ## 2.2 DECONSTRUCTING THE A PRIORI ERROR ESTIMATE
+
+The typical *a priori* error analysis of a finite element method begins with a characterization of the partial differential equation to be solved as an equation between a coercive, continuous bilinear form on \(V \times V\) and a bounded linear operator \(L\) on \(V\), where \(V\) is the function space from which \(u\) is sought [70, 369]. We fix the common setting of \(V = H_0^1(\Omega)\), the space of \(H^1\) functions on domain \(\Omega\), with zero boundary conditions on \(\partial\Omega\). Cea’s lemma then asserts the existence of a constant \(C_C\) such that
+
+```
+\(\|u - u_h\|_{H^1(\Omega)} \le C_C \min_{v_h \in V_h} \|u - v_h\|_{H^1(\Omega)}.\) (2.1)
+```
+
+Here, \(u \in V\) is the unknown continuous solution to the problem, \(u_h\) is the approximation to \(u\) computed by the finite element method, and \(V_h\) is a finite-dimensional subspace of \(V\) from which \(u_h\) is sought. Hence, (2.1) establishes that the error between \(u_h\) and \(u\) is within a constant multiple of the best possible error when looking for a solution in \(V_h\).
+
+The next step in the analysis is to bound the error in the particular case of \(v_h := Iu\), where \(I: V \to V_h\) is an interpolation operator. A subtle but crucial point is that \(I\) takes as input the entire unknown function \(u\) to produce \(Iu\) and thus

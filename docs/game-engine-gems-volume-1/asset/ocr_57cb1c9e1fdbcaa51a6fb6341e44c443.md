@@ -1,0 +1,9 @@
+also provides an understanding of what assets need to be rebuilt when they depend on assets that have been changed.
+
+# Fast Path
+
+The fast path is the ability for assets to be loaded into the game engine without going through the full build process. This shortcut is very important to provide for better artist efficiency. When using the fast path, the artist invokes a minimal export mechanism that enables a faster iteration. Note that an artist is often working on a particular subset of the assets, and only the data for those assets will follow the fast path; the other elements of the scene can still be loaded from the final build path. This means the engine needs to allow for both full build and fast path assets to be active simultaneously during production. The fast path loader can later be pruned from the engine unless the developer wants to keep this capability as a feature to modders (see Section 2.6). The fast path is an optimization of the overall production process, which may be very important to the success of delivering the game within time and budget constraints.
+
+# Intermediate Assets
+
+Intermediate assets represent the data in between the source and the final form. Intermediate assets are created using an exporter from the DCC tool and also represent the data that has been processed along the build process just before final transformation into the final asset packaging. The intermediate asset format should be very easy to read, parse, and extend. Intermediate assets should contain all the information that may be necessary down the pipeline, and be lossless wherever possible [1]. There is no need to prune and over-optimize early; it is much more efficient and automatic to discard data further down in the pipeline rather than having to re-export all the source assets each time additional information is required. Plain text, or structured XML files [6] are recommended formats for most intermediate assets; this provides

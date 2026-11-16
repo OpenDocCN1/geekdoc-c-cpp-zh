@@ -1,0 +1,3 @@
+![](bbox=[0.19, 0.27, 0.81, 0.63])
+
+Figure 13.4 Extensions of maximum-entropy approximations. (a) Representative second-order maximum entropy basis function, compared to a moving-least-squares function, which is wiggly and negative at some points. (b) Comparison of a standard LME basis function and a cell-based maximum entropy basis function supported on a triangulation, which results in a structured adjacency relation and more efficient calculations to approximate PDEs for a comparable accuracy. (c) Combination of LME approximants with a boundary representation based on B-splines.

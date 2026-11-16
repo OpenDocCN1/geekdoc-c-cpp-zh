@@ -1,0 +1,80 @@
+
+- [259] V. Pless, "The number of isotropic subspaces in a finite geometry," Rend. Cl. Scienze fisiche, matematiche e naturali, Acc. Naz. Lincei 39 (1965), 418-421.
+- [260] V. Pless, "On the uniqueness of the Golay code," J. Comb. Theory 5 (1968), 215-228.
+- [261] V. Pless, "The weight of the symmetry code for p=29 and the 5-designs contained therein," Annals N. Y. Acad. of Sciences 175 (1970), 310-313.
+- [262] V. Pless, "A classification of self-orthogonal codes over GF(2)," Discrete Math. 3 (1972), 209-246.
+- [263] V. Pless, "Symmetry codes over GF(3) and new 5-designs," J. Comb. Theory 12 (1972), 119-142.
+- [264] V. Pless, "The children of the (32, 16) doubly even codes," IEEE Trans. Inform. Theory IT-24 (1978), 738-746.
+- [265] V. Pless, "23's does not divide the order of the group of a (72, 36, 16) doubly-even code," IEEE Trans. Inform. Theory IT-28 (1982), 112-117.
+- [266] V. Pless, "Q-Codes," J. Comb. Theory 43A (1986), 258-276.
+- [267] V. Pless, "Cyclic projective planes and binary, extended cyclic self-dual codes," J. Comb. Theory 43A (1986), 331-333.
+- [268] V. Pless, "Decoding the Golay codes," IEEE Trans. Inform. Theory IT-32 (1986), 561-567.
+- [269] V. Pless, "More on the uniqueness of the Golay code," Discrete Math. 106/107 (1992), 391-398.
+- [270] V. Pless, "Duadic codes and generalizations," in Proc. of Eurocode 92, Udine, Italy, CISM Courses and Lectures No. 339, eds. P. Camion, P. Charpin, and S. Harari, Vienna: Springer, 1993, pp. 3-16.
+- [271] V. Pless, "Parents, children, neighbors and the shadow," Contemporary Math. 168 (1994), 279-290.
+- [272] V. Pless, "Constraints on weights in binary codes," Applicable Algebra in Engineering, Communication and Computing (AAECC Journal) 8 (1997), 411-414.
+- [273] V. Pless, Introduction to the Theory of Error-Correcting Codes, 3rd ed. New York: J. Wiley & Sons, 1998.
+- [274] V. Pless, "Coding constructions," in Handbook of Coding Theory, eds. V. S. Pless and W. C. Huffman, Amsterdam: Elsevier, 1998, pp. 141-176.
+- [275] V. S. Pless, W. C. Huffman, and R. A. Brualdi, "An introduction to algebraic codes," in Handbook of Coding Theory, eds. V. S. Pless and W. C. Huffman, Amsterdam: Elsevier, 1998, pp. 3-139.
+- [276] V. Pless, J. Leon, and J. Fields, "All Z4 codes of Type II and length 16 are known," J. Comb. Theory 78A (1997), 32-50.
+- [277] V. Pless, J. M. Masley, and J. S. Leon, "On weights in duadic codes," J. Comb. Theory 44A (1987), 6-21.
+- [278] V. Pless and J. N. Pierce, "Self-dual codes over GF(q) satisfy a modified Varshamov-Gilbert bound," Inform. and Control 23 (1973), 35-40.
+- [279] V. Pless and Z. Qian, "Cyclic codes and quadratic residue codes over Z4," IEEE Trans. Inform. Theory IT-42 (1996), 1594-1600.
+- [280] V. Pless and J. R. Rushanan, "Triadic Codes," Lin. Alg. and Its Appl. 98 (1988), 415-433.
+- [281] V. Pless and N. J. A. Sloane, "On the classification and enumeration of self-dual codes," J. Comb. Theory 18 (1975), 313-335.
+- [282] V. Pless, N. J. A. Sloane, and H. N. Ward, "Ternary codes of minimum weight 6 and the classification of self-dual codes of length 20," IEEE Trans. Inform. Theory IT-26 (1980), 305-316.
+- [283] V. Pless, P. Solé, and Z. Qian, "Cyclic self-dual Z4-codes," Finite Fields and Their Appl. 3 (1997), 48-69.
+- [284] V. Pless and J. Thompson, "17 does not divide the order of the group of a (72, 36, 16) doubly-even code," IEEE Trans. Inform. Theory IT-28 (1982), 537-544.
+- [285] M. Plotkin, "Binary codes with specified minimum distance," IRE Trans. Inform. Theory IT-6 (1960), 445-450. (Also reprinted in [17] pp. 238-243.)
+- [286] K. C. Pohlmann, Principles of Digital Audio, 4th ed. New York: McGraw-Hill, 2000.
+- [287] A. Pot, "Applications of the DFT to abelian difference sets," Arch Math. 51 (1988), 283-288.
+- [288] F. P. Preparata, "A class of optimum nonlinear double-error correcting codes," Inform. and Control 13 (1968), 378-400. (Also reprinted in [23] pp. 366-388.)
+- [289] Z. Qian, "Cyclic codes over Z4," Ph.D. Thesis, University of Illinois at Chicago, 1996.
+- [290] E. M. Rains, "Shadow bounds for self-dual codes," IEEE Trans. Inform. Theory IT-44 (1998), 134-139.
+- [291] E. M. Rains and N. J. A. Sloane, "Self-dual codes," in Handbook of Coding Theory, eds. V. S. Pless and W. C. Huffman. Amsterdam: Elsevier, 1998, pp. 177-294.
+- [292] E. M. Rains and N. J. A. Sloane, "The shadow theory of modular and unimodular lattices," J. Number Theory 73 (1998), 359-389.
+- [293] I. S. Reed, "A class of multiple-error-correcting codes and the decoding scheme," IRE Trans. Inform. Theory IT-4 (1954), 38-49. (Also reprinted in [17] pp. 27-38 and [29] pp. 50-61.)
+- [294] I. S. Reed and G. Solomon, "Polynomial codes over certain finite fields," J. SIAM 8 (1960), 300-304. (Also reprinted in [17] pp. 70-71 and [23] pp. 189-193.)
+- [295] T. J. Richardson and R. Urbanke, "The capacity of low-density parity-check codes under message-passing decoding," IEEE Trans. Inform. Theory IT-47 (2001), 599-618.
+- [296] C. Roos, "A generalization of the BCH bound for cyclic codes, including the Hartmann-Tzeng bound," J. Comb. Theory 33A (1982), 229-232.
+- [297] C. Roos, "A new lower bound on the minimum distance of a cyclic code," IEEE Trans. Inform. Theory IT-29 (1983), 330-332.
+- [298] R. M. Roth, personal communication.
+- [299] R. M. Roth and A. Lempel, "On MDS codes via Cauchy matrices," IEEE Trans. Inform. Theory IT-35 (1989), 1314-1319.
+- [300] R. M. Roth and G. Ruckenstein, "Efficient decoding of Reed-Solomon codes beyond half the minimum distance," IEEE Trans. Inform. Theory IT-46 (2000), 246-257.
+- [301] J. J. Rushanan, "Generalized Q-codes," Ph.D. Thesis, California Institute of Technology, 1986.
+- [302] C. J. Salwach, "Planes, biplanes, and their codes," American Math. Monthly 88 (1981), 106-125.
+- [303] N. V. Semakov and V. A. Zin’ovev, "Complete and quasi-complete balanced codes," Problems of Inform. Trans. 5(2) (1969), 11-13.
+- [304] N. V. Semakov and V. A. Zin’ovev, "Balanced codes and tactical configurations," Problems of Inform. Trans. 5(3) (1969), 22-28.
+- [305] N. V. Semakov, V. A. Zin’ovev, and G. V. Zaitsev, "Uniformly packed codes," Problems of Inform. Trans. 7(1) (1971), 30-39.
+- [306] C. Shannon, "A mathematical theory of communication," Bell System Tech. J. 27 (1948), 379-423 and 623-656.
+- [307] K. Shum, I. Aleshnikov, P. V. Kumar, and H. Stichtenoth, "A low complexity algorithm for the construction of algebraic geometry codes better than the Gilbert-Varshamov bound," Proc. 38th Allerton Conf. on Commun. Control and Computing (October 4-6, 2000), 1031-1037.
+- [308] J. Simonis, "On generator matrices of codes," IEEE Trans. Inform. Theory IT-38 (1992), 516.
+- [309] J. Simonis, "The [18, 9, 6] code is unique," Discrete Math. 106/107 (1992), 439-448.
+- [310] J. Simonis, "The effective length of subcodes," Applicable Algebra in Engineering, Communication and Computing (AECC Journal) 5 (1994), 371-377.
+- [311] J. Simonis, "Subcodes and covering radius: a generalization of Adam's result," unpublished.
+- [312] R. C. Singleton, "Maximum distance q-ary codes," IEEE Trans. Inform. Theory IT-10 (1964), 116-118.
+- [313] N. J. A. Sloane, "Weight enumerators of codes", in Combinatorics, eds. M. Hall, Jr. and J. H. van Lint, Dordrecht, Holland: Reidel Publishing, 1975, 115-142.
+- [314] N. J. A. Sloane, "Relations between combinatorics and other parts of mathematics," Proc. Symposia Pure Math. 34 (1979), 273-308.
+- [315] M. H. M. Smid, "Duadic codes," IEEE Trans. Inform. Theory IT-33 (1987), 432-433.
+- [316] K. J. C. Smith, "On the p-rank of the incidence matrix of points and hyperplanes in a finite projective geometry," J. Comb. Theory 7 (1969), 122-129.
+- [317] S. L. Snover, "The uniqueness of the Nordstrom-Robinson and the Golay binary codes," Ph.D. Thesis, Michigan State University, 1973.
+- [318] P. Solé, "A quaternary cyclic code, and a family of quadriphase sequences with low correlation properties," Lecture Notes in Computer Science 388 (1989), 193-201.
+- [319] G. Solomon and J. J. Stiffler, "Algebraically punctured cyclic codes," Inform. and Control 8 (1965), 170-179.
+- [320] H. Stichtenoth, Algebraic Function Fields and Codes. New York: Springer-Verlag, 1993.
+- [321] L. Storme and J. A. Thas, "M.D.S. codes and arcs in PG(n, q) with q even: an improvement on the bounds of Bruen, Thas, and Blokhuis," J. Comb. Theory 62A (1993), 139-154.
+- [322] R. Struik, "On the structure of linear codes with covering radius two and three," IEEE Trans. Inform. Theory IT-40 (1994), 1406-1416.
+- [323] M. Sudan, "Decoding of Reed-Solomon codes beyond the error-correction bound," J. Complexity 13 (1997), 180-193.
+- [324] Y. Sugiyama, M. Kasahara, S. Hirasawa, and T. Namekawa, "A method for solving a key equation for decoding Goppa codes," Inform. and Control 27 (1975), 87-99.
+- [325] R. M. Tanner, "A recursive approach to low-complexity codes," IEEE Trans. Inform. Theory IT-27 (1981), 533-547.
+- [326] L. Teirlinck, "Nontrivial t-designs without repeated blocks exist for all t," Discrete Math. 65 (1987), 301-311.
+- [327] A. Tue, "Über die dichteste Zusammenstellung von kongruenten Kreisen in einer Ebene," Norske Vid. Selsk. Skr. No. 1 (1910), 1-9.
+- [328] H. C. A. van Tilborg, "On the uniqueness resp. nonexistence of certain codes meeting the Griesmer bound," Inform. and Control 44 (1980), 16-35.
+- [329] H. C. A. van Tilborg, "Coding theory at work in cryptology and vice versa," in Handbook of Coding Theory, eds. V. S. Pless and W. C. Huffman. Amsterdam: Elsevier, 1998, pp. 1195-1227.
+- [330] J. A. Todd, "A combinatorial problem," J. Math. Phys. 12 (1933), 321-333.
+- [331] V. D. Tonchev, Combinatorial Configurations. New York: Longman-Wiley, 1988.
+- [332] V. D. Tonchev, "Codes and designs," in Handbook of Coding Theory, eds. V. S. Pless and W. C. Huffman. Amsterdam: Elsevier, 1998, pp. 1229-1267.
+- [333] M. A. Tsfasman, S. G. Vlăduţ, and T. Zink, "Modular curves, Shimura curves and Goppa codes, better than Varshamov-Gilbert bound," Math. Nachrichten 109 (1982), 21-28.
+- [334] J. V. Uspensky, Theory of Equations. New York: McGraw-Hill, 1948.
+- [335] S. A. Vanstone and P. C. van Oorschot, An Introduction to Error Correcting Codes with Applications. Boston: Kluwer Academic Publishers, 1989.
+- [336] A. Vardy, "Trellis structure of codes," in Handbook of Coding Theory, eds. V. S. Pless and W. C. Huffman. Amsterdam: Elsevier, 1998, pp. 1989-2117.
+- [337] R. R. Varshamov, "Estimate of the number of signals in error correcting codes," Dokl. Akad. Nauk SSSR 117 (1957), 739-741. (English translation in [23] pp. 68-71.)

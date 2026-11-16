@@ -1,0 +1,5 @@
+(in blue) is at the voxel position (8,8,8). The grid in Figure 12.4 represents only the voxels with z = 8 in the fluid domain since it is not easy to visualize the velocities with vectors when all 17×17×17 voxels are displayed in a still image.
+
+The full solver frame rate is around 172 FPS on a laptop equipped with an Intel CPU T2400 at 1.83 GHz (dual core), with no parallelism in the simulation and visualization processes. The same scene using "blower heuristic" (see Figure 12.4(a)) allows a frame rate around 392 FPS. We get 331 FPS with the two heuristics (see Figure 12.4(b)).
+
+Some other optimizations are possible in a game physics context. For example, we don't have to update the velocity field when the blower doesn't change and the obstacle doesn't move for a certain time. The heuristics of this article can be simply added to an existing game physics engine. The velocities can be precomputed at setup or loaded from a file.

@@ -1,0 +1,7 @@
+Although this approach could work, there are some issues with it. You need to test every fragment against every point light, even for lights that are nowhere near the fragment. This means a lot of conditional checks in the shader code, which is expensive.
+
+The solution to these problems is to instead use **light geometry**, or meshes that represent the lights. Because a point light has a radius, its corresponding light geometry is a sphere placed in the world. Drawing this sphere will then trigger a fragment shader call for every fragment the sphere touches. Using the world position information from the G-buffer, you can compute the intensity of the light to the fragment.
+
+# Adding a `PointLightComponent` Class
+
+For point lights, you can create a component so that it's easy to attach to any actor to move the light. First, you declare the `PointLightComponent` class, as shown in Listing 13.12. For simplicity, you make its member variables public. The diffuse color is simply the diffuse color of the point light. The inner and outer radius variables determine the area of influence of the point light. The **outer radius** is the maximum distance from which the point light affects an object. The **inner radius** is the radius at which the point light applies its full intensity of light. Anything inside the inner radius has the full diffuse color, while the color intensity falls off when approaching the outer radius. The point light doesn't affect anything past the outer radius.

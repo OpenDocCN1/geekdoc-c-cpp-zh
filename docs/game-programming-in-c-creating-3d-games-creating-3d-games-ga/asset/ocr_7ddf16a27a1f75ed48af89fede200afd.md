@@ -1,0 +1,7 @@
+Because graphics hardware is optimized for polygons, 2D and 3D games internally use polygons (usually triangles) to represent all graphical objects in the world. Even a 2D sprite that you might think of as an image is a rectangle with a texture mapped to it. To send triangles to the graphics hardware, you must declare the attributes of each vertex and create a vertex and an index buffer.
+
+All modern graphics APIs expect a programmer to use vertex and fragment (pixel) shaders to specify how polygons should render. You write these shaders as separate programs in a shader programming language (not C++). The vertex shader minimally outputs the vertex position in clip space, while the fragment shader determines the final color at a pixel.
+
+Transformations allow you to draw several instances of the same object without needing separate vertex and index buffers for each instance. Object space is the coordinate space relative to the origin of an object, while world space is the coordinate space relative to the game world.
+
+Games use matrices to represent transformations, and there are several different matrices for transformations, such as scale, rotation, and translation. Combining these transformations in the order scale, rotate, and translate yields a world transform matrix that can transform from object space to world space. To convert from world space to clip space, you use the view-projection matrix. For 2D games, you can simplify this by making 1 unit in world

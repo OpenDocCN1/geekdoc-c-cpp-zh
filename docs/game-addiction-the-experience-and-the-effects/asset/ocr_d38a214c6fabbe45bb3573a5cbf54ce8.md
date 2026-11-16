@@ -1,0 +1,11 @@
+aren't really unique here; sexy, violent games sell the best. We can't wonder why they get made the most. While society tends to agree that enjoying entertainment is legitimate, there comes a point where things fall out of balance. Though video games that encourage long and intense sessions are going to invite trouble, game addiction isn't ever an event. It's almost always a slow-moving process.
+
+# More Than Enough
+
+Meet Rick Pendlebury, a gamer's gamer from the United Kingdom. He balances games, work, relationships, World of Warcraft, and even human conversation "without breaking into a sweat." Rick has been playing since he was five; in every game that he mentions, he remembers something unique. Rick's love of gaming is a lot more complex than a rat suckling on a nicotine dispenser. "Up, Down, Left, Right; put your finger on A and press Start, which was the level select cheat," he recalls, like a Freemason reciting some secret code of membership. "Sonic the Hedgehog was colorful, fast-paced and had a catchy tune." After buying over a dozen different game systems and upgrading his computer "God knows how many times," Rick has picked up the games that speak to him. Games with sense of humor, visual and artistic beauty, games that speak to his love of travel and exploration, that enchant his mind with vivid characters and deep back story, that let him mentor younger players and bring in friends. He's in a place to say, "It's just a game," and has humor enough to laugh when his roommate asks, "How are things in 'The World'?" At the same time, he understands the draw on a practical level. "The more I played it, the more I mastered it and so the more I craved it."
+
+Like a lot of players, Rick understands a good deal of what he's looking for in the gaming experience. Although he puts his craving for games in roughly the same ballpark as a nicotine addiction, he knows how to balance things.
+
+"I can put things into perspective," he says, grinning. "It's just that Warcraft comes quite high in that ranking."
+
+Games can very naturally climb that ranking. For gamers like Rick, a video game offers "just enough." It's just the right amount of fun and

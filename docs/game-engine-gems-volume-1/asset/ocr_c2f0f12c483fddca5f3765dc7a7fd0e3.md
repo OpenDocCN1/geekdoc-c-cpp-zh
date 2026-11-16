@@ -1,0 +1,5 @@
+# 11.6 Memory Pool Eviction
+
+When the memory pool is oversubscribed in our streaming system, we often need to select a candidate for eviction. Our memory pool logic implements this by assigning each resource in the streaming system an "eviction metric". The calculation of this eviction metric is determined solely by application-specific logic. Once per frame, we evict the items in the memory pool with eviction metrics higher than the lowest eviction metrics of resources that are not in the memory pool. Because the GPU serializes all movement in the memory pool, eviction is simply a case of marking the evicted items' chunks as being free and therefore ready for reuse.
+
+When calculating a sensible eviction metric, it is important to consider the possibility of cache thrashing. For an excellent summary of cache replacement algorithms suitable for a streaming memory pool see [3].

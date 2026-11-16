@@ -1,0 +1,9 @@
+# 10.3 Device-Independent Command Buffers
+
+For legacy titles that would like to reduce the amount of API performance overhead without too much code rework, the method of [1] works quite well, allowing a drop-in solution that can benefit performance. For those titles with the luxury of analysis and not being bound by crunch deadlines, it's worth pointing out that the presented method can be considered overkill in terms of complexity, and short-sighted in terms of API differentiation. Analysis of your rendering systems will prove that a subset of device APIs are often used, and more so that most of them occur in frequently predictable patterns. As such, when generating an API wrapper to the device, you waste time by offering support for functions that are not used by your title.
+
+Logically, API calls should be hidden behind a wrapper interface, anyway, in order to minimize the amount of code that would need to be reworked to support multiple platforms and rendering APIs; as such, it makes sense that API calls for dynamic command buffer recording should also be hidden. In this context, the presented method of [1] is lacking, and a custom API-independent solution is required.
+
+# RenderCommand Structure
+
+To this end, we present the concept of a `RenderCommand`, which contains the least amount of information required to submit a draw call to the API in a device-independent fashion. In effect, our `RenderCommand` structure is designed to mimic the draw commands that modern APIs use internally, containing information about which vertex buffer to use, the shading states, and how many polygons to draw. Depending on the needs of your graphics engine, the layout and members of this structure can vary greatly; however, in the interest of memory throughput, it's a good idea to keep this structure as small as possible by quantizing as much state data as you can. The code in Listing 10.1 shows an example
