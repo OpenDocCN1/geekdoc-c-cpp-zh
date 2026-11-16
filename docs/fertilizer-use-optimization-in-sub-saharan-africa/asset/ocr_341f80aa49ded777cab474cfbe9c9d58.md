@@ -1,0 +1,23 @@
+organic resources such as manure, household waste and crop residues, and contracting herdsmen to keep livestock overnight in fields during the dry season to benefit from their excretion of urine and faeces. However, these practices are insufficient to meet crop-nutrient requirements as the organic materials are limited in quantity and generally of low nutrient content.
+
+Most crop residue is removed from the field for other uses, such as animal feed, fuel and construction, with negative consequences including high soil temperature and increased evaporation, less trapping of relatively high fertility dust, seedling damage by blowing sand, reduced in-field nutrient cycling and less soil organic matter replenishment (Mason et al., 2015). Crop residue left in the field is subject to livestock grazing and removal by termites. Therefore, leaving residue in the field may be less valuable than anticipated.
+
+Maintaining trees in crop fields, such as Faidherbia albida, is important to soil fertility management: crop performance under trees is often better than performance far from trees. Tillage can be advantageous to nutrient availability in that plant growth tends to be more vigorous with tillage compared with no tillage (Mason et al., 2015). Combining crop residue management, manure and/or compost application, and fertilizer application affords the greatest opportunity to increase yields, e.g. to apply 2 t/ha of poultry manure pre-planting followed by point application of 6 kg each of N, P2O5 and K2O at tillering for pearl millet (Maman and Mason, 2013). Cereal yield is greater following a pulse compared with a cereal crop in rotation (Mason et al., 2015).
+
+An important component of nutrient management is to control other constraints. This is true for the parasitic weed Striga, which can be reduced by late planting, reduced tillage, fertilizer application and intercropping cereals with legumes (Mason et al., 2015).
+
+Alternating four-row strips of cereal and legume, followed by rotating crops on the strips the following year, is an improved intercrop system that takes better advantage of crop rotation effects compared with continuous intercropping. Other beneficial practices include application of alternative P sources such as rock phosphate
+
+(RP) and phospho-compost; fertilizer micro-dosing; and soil and water harvesting techniques such as zai and half-moon and stones bunds.
+
+Current fertilizer use is about 3.7 kg/ha/yr for cultivated land but most is applied to rice and high value rainfed crops like tiger nut. Fertilizer NPK blends (15-15-15 and 20-10-10) are more often used than urea and phosphate fertilizers. In Niger, fertilizer subsidies are an interim measure to enhance capacity for fertilizer use. Most of the fertilizers come from the agro-dealers of the Centrale d’Approvisionnement en Intrants et Matériels Agricoles (CAIMA), the national input supply organization, with less from the private sector. A uniform fertilizer price is applied throughout the country through adjustment and subsidy systems. More private sector supply of fertilizer is being encouraged.
+
+Fertilizer recommendations are issued by the national research institute INRAN. The recommendations issued in 1981 and updated in 1992 were for sole crop pearl millet or sorghum with blanket application rates of 46 kg/ha N, 15 kg/ha P2O5 and 20 to 25 kg/ha K2O when crop residues are returned, or 90 kg/ha N, 20 kg/ha P2O5, and 20 to 25 kg/ha K2O with crop residue removal.
+
+For groundnut and cowpea sole crop, the recommended rates were 22.5 kg/ha P2O5 . Fertilizer recommended for rice is 30-45 kg/ha of N, P2O5 and K2O applied as NPK 15-15-15, plus 46 to 60 kg/ha N top-dressing applied as urea.
+
+A modification of the recommendations for pearl millet and cowpea varies from 8 to 12 kg/ha of P applied as SSP and 46 kg/ha of N with early planting, but only 4 kg/ha of P for planting after July 15th.
+
+Salou and Sido (2006) found 132-90-30 kg/ha to be economic for irrigated rice. Buerkert et al. (2001) suggested 30 kg/ha each of N, P2O5 and K2O for pearl millet and 20 kg/ha P for cowpea. A starter N application of 15 kg/ha N is recommended for cowpea applied at 5-10 days after emergence.
+
+Fertilizer micro-dosing is an approach to increase efficiency of fertilizer use through point application at 9 kg/ha each of N, P2O5 and K2O at planting or after emergence. Alternative micro-dosing rates are about 4 and 9 kg/ha of N and

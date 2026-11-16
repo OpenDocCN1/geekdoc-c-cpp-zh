@@ -1,0 +1,30 @@
+```
+```c
+// numbits2.c
+#include <stdio.h>
+int main(void) {
+    int i;
+    unsigned num = ~0;
+    for (i = 0; num > 0; i++) {
+        num >>= 1;
+    }
+    printf("%d\n", i);
+    return 0;
+}
+```
+```
+
+```
+```c
+// numbits3.c
+#include <stdio.h>
+int main(void) {
+    int i;
+    unsigned num = ~0;
+    for (i = 1; num >>= 1; i++) {
+    }
+    printf("%d\n", i);
+    return 0;
+}
+```
+```

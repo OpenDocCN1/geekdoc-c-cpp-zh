@@ -1,0 +1,13 @@
+A to B ∪ {⊥} and the set of partial functions from A to B. (Partial functions were defined in Section 2.5. The symbol “⊥” is sometimes used in theoretical computer science to represent the value “undefined.”)
+
+# 2.7 Relations
+
+In Section 2.4, we saw that “mother of” is a functional relationship because every person has one and only one mother, but that “child of” is not a functional relationship, because a person can have no children or more than one child. However, the relationship expressed by “child of” is certainly one that we have a right to be interested in and one that we should be able to deal with mathematically.
+
+There are many examples of relationships that are not functional relationships. The relationship that holds between two natural numbers n and m when n ≤ m is an example in mathematics. The relationship between a person and a book that that person has on loan from the library is another. Some relationships involve more than two entities, such as the address book that associates a name, an address, and a phone number in an address book or the relationship that holds among three real numbers x, y, and z if x² + y² + z² = 1. Each of these relationships can be represented mathematically by what is called a “relation”.
+
+A relation on two sets, A and B, is defined to be a subset of A × B. Since a function from A to B is defined, formally, as a subset of A × B that satisfies certain properties, a function is a relation. However, relations are more general than functions, since any subset of A × B is a relation. We also define a relation among three or more sets to be a subset of the cross product of those sets. In particular, a relation on A, B, and C is a subset of A × B × C.
+
+For example, if P is the set of people and B is the set of books owned by a library, then we can define a relation R on the sets P and B to be the set R = {(p, b) ∈ P × B | p has b out on loan}. The fact that a particular (p, b) ∈ R is a fact about the world where that library will certainly want to keep track of. When a collection of facts about the world is stored on a computer, it is called a database. We’ll see in the next section that relations are the most common means of representing data in databases.
+
+If A is a set and R is a relation on the sets A and A (that is, on two copies of A), then R is said to be a binary relation on A. That is, a binary relation on the set A is a subset of A × A. The relation consisting of all ordered pairs (c, p) of people such that c is a child of p is a binary relation on the set of people. The set {(n, m) ∈ N × N | n ≤ m} is a binary relation on N. Similarly, we define a ternary relation on a set A to be a

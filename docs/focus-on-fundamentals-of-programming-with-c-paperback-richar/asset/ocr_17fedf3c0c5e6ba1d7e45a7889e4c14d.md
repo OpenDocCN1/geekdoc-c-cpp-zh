@@ -1,0 +1,25 @@
+```
+```c
+// gcd.c
+// Program to calculate the greatest common divisor of two numbers
+
+#include <stdio.h>
+
+int main(void) {
+    int A, B, remainder;
+
+    printf("Enter two positive integers: ");
+    scanf("%d%d", &A, &B);
+
+    while (B != 0) {
+        remainder = A % B;
+        A = B;
+        B = remainder;
+    }
+
+    printf("The greatest common divisor = %d\n", A);
+
+    return 0;
+}
+```
+```

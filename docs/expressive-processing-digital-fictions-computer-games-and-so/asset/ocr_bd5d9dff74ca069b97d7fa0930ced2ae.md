@@ -1,0 +1,9 @@
+> 12. And of course Eliza also makes an occasional fallback on prerecorded transformations when the most recent audience statement contains no keywords.
+
+# Quest and Dialogue Logics
+
+The primary operational logic at work in Eliza is transformation—each statement from the audience is immediately transformed into Eliza's next statement, using a set of processes in a manner specified by the data of the current script. In computer systems parlance, we might say that Eliza conversations are nearly “stateless.” Eliza doesn't model the ongoing state of the conversation, using its script differently depending on prior interactions, except to avoid excessive repetition of the use of certain rules.12
+
+The combination of quest flags and dialogue trees, on the other hand, is in some ways all about state. The quest flag logic is precisely one of milestone-based progression. Quest flag fictions are ordered sets of discrete units. What matters is where the player is located—at which milestone along the path—and this is precisely what is exposed through the mechanism of the player journal. In some cases the beginning of the progression may be skipped and the end may never be reached, but at each moment of play the fiction is at a particular point, among a small number of predefined points arranged in order.
+
+The logic of the dialogue tree, in contrast, is essentially that of the directed graph. Rather than modeling conversation as a set of discrete exchanges with no context (as in Eliza), the dialogue tree always locates the current conversational state at one particular point, among a set of predetermined points, from which navigation is possible to other points via predefined links. As with the milestones of quest flags, it's usually impossible to go backward—the graph is directed toward “progress” in the conversation—but it is also usually possible to loop back

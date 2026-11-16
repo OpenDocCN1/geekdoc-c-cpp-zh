@@ -1,0 +1,15 @@
+> It is not my aim to surprise or shock you – but the simplest way I can summarize is to say that there are now in the world machines that think, that learn and that create. Moreover, their ability to do these things is going to increase rapidly until – in a visible future – the range of problems they can handle will be coextensive with the range to which the human mind has been applied.
+> 
+> — Simon, 1957
+
+However, systems that could prove theorems containing a limited number of facts and systems that behaved well in a microworld failed to scale up to systems that could prove theorems involving many facts and ones that interact with complex worlds. One reason for this is combinatorial explosion. There are relatively few objects in a microworld, and therefore there are not many possible actions. As the number of objects increases, the complexity of the search can increase exponentially. Another difficulty is in representing a complex world rather than a simple microworld.
+
+# 1.1.5 Knowledge-Based Systems
+
+The initial AI efforts just described concerned the development of all-purpose intelligent programs, which worked in limited domains and solved relatively simple problems. However, these programs failed to scale up to handling difficult problems. Such methods are called weak methods because of their failure to scale up (not to be confused with weak AI discussed earlier). With HAL and the terminator nowhere in sight, many researchers turned their efforts to developing useful systems that solved difficult problems in specialized domains. These systems used powerful, domain-specific knowledge and are called knowledge-based systems. Because they often perform the task of an expert, another term for many such systems is expert systems. Ordinarily, they follow the approach McCarthy specified for the Advice Taker. That is, the knowledge is represented by rules about the particular domain, and the reasoning consists of general-purpose algorithms that manipulate the rules. The details of how this is done appear in Section 2.3.1.
+
+Successful knowledge-based systems include DENDRAL [Lindsay et al., 1980], a system for analyzing mass spectrograms in chemistry; XCON [McDermott, 1982], a system for configuring VAX computers; and ACRONYM [Brooks, 1981], a vision support system.
+
+Initially, knowledge-based systems were based on logic, performed exact inference, and arrived at categorical conclusions. However, in many domains, in particular medicine, we cannot be certain of our conclusions.
+
+Why are categorical decisions not sufficient for all of medicine? Because the world is too complex! Although many decisions may be made straightforwardly, many are too difficult to be prescribed in any simple matter. When many factors may enter into a decision, when these factors may themselves be uncertain, when some factors

@@ -1,0 +1,50 @@
+```
+void Distance::addDist(Distance d2, Distance d3) {
+  inches = d2.inches + d3.inches;
+  feet = d2.feet + d3.feet;
+  if (inches >= 12.0) {
+    inches -= 12.0;
+    feet++;
+  }
+}
+
+Distance Distance::addDist(Distance d) {
+  Distance temp;
+  temp.inches = inches + d.inches;
+  temp.feet = feet + d.feet;
+  if (temp.inches >= 12.0) {
+    temp.inches -= 12.0;
+    temp.feet += 1;
+  }
+  return temp;
+}
+
+Distance Distance::doubleDist() {
+  int ft = feet * 2;
+  float in = inches * 2;
+  if (in >= 12.0) {
+    ++ft;
+    in -= 12.0;
+  }
+  return Distance(ft, in);
+}
+
+int main() {
+  Distance d1(3, 6.0), d2;
+  d2 = d1.doubleDist();
+  cout << "d2 = ";
+  d2.showDist();
+}
+```
+
+Note that:
+
+```
+d2 = d1.doubleDist();
+```
+
+works all right but we might want to work with `Distance` objects using the same syntax that we use with ordinary numbers:
+
+```
+d2 = doubleDist(d1);
+```

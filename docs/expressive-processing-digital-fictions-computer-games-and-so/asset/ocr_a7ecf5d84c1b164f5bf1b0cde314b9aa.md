@@ -1,0 +1,9 @@
+he knows he needs to reposition, but is unaware of a better tactical position. The A.I. says “I’ve got nowhere to go” (2006).
+
+In my experience, Orkin’s hybridization of thirty-five-year-old AI techniques with more recent game-authoring expertise was a great success. By comparison, the AI enemies in even the best games released around the same period (such as Half-Life 2 in 2004) feel like part of a shooting gallery—more moving parts of the landscape than characters. That this was accomplished with limited development resources demonstrates the potential of thinking through even quite dated AI approaches.
+
+The experience appears to have left Orkin looking to go further. After F.E.A.R., he departed the industry for graduate study at MIT’s Media Lab. I will discuss one of his next projects later in this chapter.
+
+# Critiques of Strips and F.E.A.R.
+
+In his dissertation’s discussion of Tale-Spin, Meehan addresses Strips as an important piece of prior work in AI. But he also critiques it severely, contending that it is an unlikely model for human cognition. For example, Meehan points to the way that Strips stores information about the world using first-order predicate calculus. This represents all facts about the world as formal logical expressions, with “reasoning” about those facts performed using theorem-proving techniques. Meehan and other scruffy researchers argued strongly—with some experimental data for support—that humans don’t remember all facts about the world in the same way or reason about them all using the same approach. Instead, scruffy researchers maintained that human intelligence operates in different ways within

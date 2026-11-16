@@ -1,0 +1,9 @@
+The way that microcontrollers and microprocessors generally work when fetching a machine code instruction from memory, is that the address in the program counter is placed on the address bus. A chip select line that is part of the control bus is then asserted to select the correct memory chip. The control bus read line is asserted to ensure that the instruction is read from memory. At this stage the correct instruction from memory is placed on the data bus from the memory location that is addressed. The data that is fetched from memory is a machine code instruction that will be decoded and executed by the microcontroller core or CPU (Central Processing Unit).
+
+![](bbox=[0.15, 0.29, 0.85, 0.54])
+
+# 6.3 Harvard and von Neumann Architectures
+
+Figure 6.4 shows a von Neumann architecture where the program memory, data memory and I/O address space share common address, data and control buses. AVR microcontrollers use a Harvard architecture which has separate buses for program memory and data memory as shown in Figure 6.5.
+
+The AVR with its Harvard architecture increases performance with its parallel data and program buses. While an instruction is being fetched from program memory, data can be transferred between I/O or data memory space on the separate bus. On a von Neumann architecture, an instruction would first be fetched and executed. If the instruction was an instruction that accesses data memory, the address of the data memory would then be placed on the common address bus and the memory accessed via the data bus. The next instruction would only be fetched after the transfer from the data memory.

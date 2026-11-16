@@ -1,0 +1,29 @@
+# Organizing Your Code
+
+Notice that all this code fits inside a single file. But when you work on larger projects, odds are that the code will be divided into several files. Your code will be a lot more maintainable and much easier to rebuild if you spread it out over many files.
+
+Both C and C++ use a concept called header files. A header file has declarations that are used in more than one place. You include the header file anyplace you want to use the names in that file, both when the names are defined and when they are used.
+
+In C++, a header can include any of the following declarations:
+
++   - class declarations
++   - class name declarations
++   - inline functions
++   - constant values
++   - function declarations
+
+Note that none of the information in a C++ header allocates storage. Since a header file is included in several files that are later linked, allocating storage in a header file would cause multiple definitions across the files where the header was included. The linker wouldn't like this.
+
+# Header File Rules
+
+The first rule for header files is:
+
++   - they can only include declarations
+
+The second rule is:
+
++   - include header files anywhere the class name is used.
+
+Since you are forced to declare a class anyplace an object of that class is used, and anyplace member functions of that class are defined, you are basically forced to put the class declaration in a header file in C++.
+
+Note: the interface to the class is defined in the header file (.h) but the implementation is defined in the definition file (.cpp).

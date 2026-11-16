@@ -1,0 +1,53 @@
+level_changes:
+- line: 47
+  before: 3
+  after: 2
+- line: 91
+  before: 3
+  after: 2
+- line: 5259
+  before: 1
+  after: 2
+- line: 5264
+  before: 1
+  after: 2
+text_changes:
+- line: 22867
+  before: 第 6 章——“Vector2F 更新”
+  after: 第 6 章——“Vector2f 更新”
+- line: 4892
+  before: VECTOR2F 更新
+  after: Vector2f 更新
+- line: 22887
+  before: 第 7 章—"相交测试"
+  after: 第 7 章——“相交测试”
+- line: 22893
+  before: 第 8 章—"游戏原型"
+  after: 第 8 章——“游戏原型”
+- line: 22901
+  before: 第 9 章—"文件和资源"
+  after: 第 9 章——“文件和资源”
+- line: 22911
+  before: 第 10 章—"图像"
+  after: 第 10 章——“图像”
+- line: 22920
+  before: 第 11 章—"文本"
+  after: 第 11 章——“文本”
+- line: 22928
+  before: 第 12 章—"线程"
+  after: 第 12 章——“线程”
+- line: 22937
+  before: 第 13 章—"声音"
+  after: 第 13 章——“声音”
+- line: 22947
+  before: 第 14 章—"使用 Ant 进行部署"
+  after: 第 14 章——“使用 Ant 进行部署”
+- line: 22951
+  before: 第 15 章—"碰撞检测"
+  after: 第 15 章——“碰撞检测”
+- line: 22959
+  before: 第 16 章—"工具"
+  after: 第 16 章——“工具”
+- line: 22966
+  before: 第 17 章—"太空岩石"
+  after: 第 17 章——“太空岩石”

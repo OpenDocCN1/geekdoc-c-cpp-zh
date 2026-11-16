@@ -1,0 +1,41 @@
+# # Precedence of Operators
+
+In the following table of operator precedence, C operators are divided into 15 categories. The #1 category has the highest precedence, category #2 (Unary operators) takes second precedence, and so on to the Comma operator, which has lowest precedence. The operators within each category have equal precedence. The Unary (category #2), Conditional (category #13), and Assignment (category #14) operators associate right-to-left; all other operators associate left-to-right.
+
+| # | Category | Oper | What it is (or does) |
+|---|---|---|---|
+| 1. | Highest | ()
+[]
+->
+. | Function call
+Array subscript
+Indirect component selector
+Direct component selector |
+| 2. | Unary | !
+~
++
+-
+++
+--
+&
+*
+sizeof | Logical negation (NOT)
+Bitwise (1's) complement
+Unary plus
+Unary minus
+Preincrement or postincrement
+Predecrement or postdecrement
+Address of
+Indirection
+returns size of operand, in bytes |
+| 3. | Multiplicative | *
+/
+% | Multiply
+Divide
+Remainder (modulus) |
+| 4. | Additive | +
+- | Binary plus
+Binary minus |
+| 5. | Shift | <<
+>> | Shift left
+Shift right |

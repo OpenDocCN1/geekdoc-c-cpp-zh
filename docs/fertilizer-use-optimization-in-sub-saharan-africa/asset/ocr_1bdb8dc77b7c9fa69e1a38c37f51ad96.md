@@ -1,0 +1,23 @@
+and distributed to 500 stakeholders in other countries to guide their planning for enablement of fertilizer use optimization.
+
+Farmers who have seen the benefit of fertilizer use optimization in Uganda work with their advisors in fertilizer use decisions. Fertilizer use optimization has been presented to research stakeholders through numerous international conferences and journal publications (e.g. Jansen et al., 2013; Kaizzi et al., 2013), this 17-chapter book and other journal articles are in preparation. The promotion of fertilizer use optimization through the media and other channels is expected to generate demand from scientists and other stakeholders to learn more about the approach and adapt it to suit farmer interests.
+
+# 17.4 Training farmer advisors on fertilizer use optimization
+
+Government and non-government extension staff and fertilizer-supplying agro-dealers are typically important sources of information for farmers concerning fertilizer use. In Uganda, the fertilizer optimization approach was deployed by training researchers of the National Agricultural Research Organization (NARO), extension staff of the National Agricultural Advisory Services (NAADS) and other farmer advisors on the principles of fertilizer use optimization and in the use of FOTs (FOT: http://agronomy.unl.edu/OFRA). During the 2-day training events, conceptual/informational sessions covered soil and crop management and use of organic materials and fertilizers. Trainees had hands-on experience with the FOTs and associated tools. Nine agro-ecological zones were targeted.
+
+Over 1000 farmer advisors were trained in Uganda, Kenya and Tanzania. Using lessons from Uganda, the approach was popularized in Kenya and Tanzania through mass media and seminars. In Kenya, a training event was held at KALRO headquarters for farmer advisors, agro-dealers, farmers and researchers. In Tanzania, events have been held at Sokoine University of Agriculture and Selian Agriculture Research Institute.
+
+Extension training materials include English and French versions of three Microsoft PowerPoint presentations, a manual for fertilizer use optimization and practical exercises (http://agronomy.unl.edu/OFRA).
+
+The trainees learn a 3-step process to aiding farmers in deciding on fertilizer use. First, they practically learned to use the Excel and/or paper versions of the FOT for generating fertilizer recommendations specific to the farmer’s context. They then learned to use a fertilizer calibration tool and to advise farmers on how to achieve the correct rates of fertilizer application. The third step was to adjust the recommended fertilizer rates in consideration of soil test information and other soil fertility management practices, e.g. use of crop rotation, use of organic materials such as farmyard manure and intercropping. These fertilizer rate adjustments were made using a fertilizer substitution table that accompanies the FOT (see Chapters 4–16).
+
+# 17.5 Lessons learned
+
+At the time of writing (May 2016), FOTs have been developed for 67 recommendation domains across the 13 OFRA countries. Most countries are in the early stages of enabling fertilizer use optimization with farmers and their advisors. Therefore, the following lessons were drawn mostly from reflection on experiences from Uganda where enablement of fertilizer use optimization by farmers began in 2012.
+
++   Given the diversity of the stakeholders involved in enabling fertilizer use optimization, communication support was critical to ensure that harmonized messages were passed to the diverse stakeholders. Information materials needed to be packaged for different audiences such as researchers, farmer advisors including fertilizer retail dealers, fertilizer manufacturers, policy makers and farmers. Experience in Uganda showed that farmer advisors needed training on integrated soil fertility management, including fertilizer use, to support the delivery and use of fertilizer use optimization. Policy makers also required information to support adoption and scale-up of fertilizer use optimization within their national frameworks.
+
++   Having paper FOT versions was essential for advisors and farmers to optimize fertilizer use when a computer was not available.
+
++   Essential to fertilizer use optimization was good agronomy and fertilizer use practices including the 4Rs of fertilizer use (right source at the right rate, right time and right method of application). Other yield limiting factors typically

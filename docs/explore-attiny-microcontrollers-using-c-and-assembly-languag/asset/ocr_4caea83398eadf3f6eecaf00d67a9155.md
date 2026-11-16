@@ -1,0 +1,13 @@
+testing the second call to wait_ms, first step over the PORTB line and then reset the Cycle Counter to 1 again. If F5 is pressed at this stage to automatically run until the next breakpoint, the value in the Cycle Counter will be incorrect. This is because the total number of cycles will include the RJMP instruction that is executed after the wait_ms subroutine to get back to the top of the while(1) loop, adding an extra 2 cycles to the total. To measure the clock cycles properly, a breakpoint must be put on the RJMP instruction which has to be done in the Disassembly window.
+
+Open the Disassembly window and look for the RJMP instruction. It will be just above the line that says "No source file". Click on the vertical gray bar at the left of the RJMP instruction to place a breakpoint on it. Now use the F5 key to run the subroutine code and stop on the RJMP instruction. Notice that when execution stops on the breakpoint the Stopwatch in the Processor Status window has the value 1,000,000 µs, which is 1000ms or 1s, as we would expect after passing 1000 to wait_ms.
+
+# 10.3.1.2 How the wait_ms_C Project Code Works
+
+Code in main.c should be self explanatory and the description already given should suffice. Most important is the inclusion of wait_ms.h in main.c. This file allows the wait_ms subroutine to be called and the WAIT_MS_TIME_C macro to be used.
+
+In wait_ms.h is the WAIT_MS_TIME_C macro definition. This macro is used to calculate the number used by the wait_ms subroutine to generate the correct number of delay cycles for the given millisecond delay. This macro is passed the number of milliseconds and uses this value together with F_CPU to calculate the number for wait_ms to use. This is the same calculation as we have used before, but it now subtracts 20 because the number of clock cycles used before and after the loop in wait_ms has changed.
+
+The wait_ms subroutine is declared external by using the extern C keyword placed before the wait_ms subroutine function prototype in wait_ms.h. This declaration together with the .global directive in the wait_ms.S file makes the wait_ms subroutine available and visible to any C file that includes the wait_ms.h header file.
+
+The wait_ms.S file contains the code for the wait_ms subroutine. This code is basically the same code that we have been using to generate software time delays in the previous few projects, but does have some modifications. It is still decrementing a 32-bit number in the loop, but this time uses different registers to hold the 32-bit number. The reason for

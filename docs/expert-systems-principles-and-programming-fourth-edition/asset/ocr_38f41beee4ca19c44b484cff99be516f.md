@@ -1,0 +1,15 @@
+then used on unknown features to successfully predict the molybdenum deposit worth $100,000,000.
+
+Note that different models of geologic features, different certainty factors, and fuzzy logic would be needed to detect other types of minerals. There is nothing wrong with doing this because it simply reflects the fact that different minerals form in different ways in the real world and so the evidence and theories of detecting them are different. This is where the expert's knowledge of different domains is important. An expert who is good at locating molybdenum would not necessarily be good at locating oil.
+
+The important thing to remember is that you must make your expert system fit the real world and not try to make the real world fit your expert system for that will lead to failure. All theories are ultimately based on axioms which are unproven truths, such as Euclid's axiom that straight lines only meet at infinity. While this is true on the flat Euclidean plane it does not hold in spherical geometry or other types that are not flat. Theories of uncertainty are also based on axioms. The fact that we have to introduce extra factors such as confidence factors and fuzzy logic simply means we don't know the correct axioms because of ignorance on how minerals really developed millions of years ago and the particular chemical composition of the earth at that location.
+
+We also discussed the meaning of the terms impossible, possible, plausible, probable, and certain. It's important to understand these terms when interviewing an expert to separate probability from belief, which is a matter of "a pinion". In particular you need to be careful about things that are certain because this may be commonsense masquerading as reason. For example, commonsense would say that the conditional probability of a horse finishing a race is 100% if the horse is alive, P (Finish | Live) = 100%. Note that we are not stating that the horse will necessarily win but only that it will finish. Commonsense tell us that a contestant must be alive to win a race. That is a certainty. Right? So would you bet your grade in this course on that?
+
+As mentioned before, political logic is not the same as any other type of logic. In October 2000, Missouri Governor Mel Carnahan died in a plane crash during a campaign trip. His opponent, Sen. John Ashcroft (R-Mo.), still lost his reelection bid in November. The voters elected a dead man Senator and the seat was filled by Gov. Carnahan's widow (http://www.specialednews.com/washwashnews/election11000.html). This is further evidence that even death is not a certain fact these days in commonsense reasoning.
+
+# PROBLEMS
+
++   4.1 (a) Using only the three axioms of probability, prove the Additive Law of probability: P (A U B) = P (A) + P (B) - P (A n B)
+
+Hint: Any event X U Y can be written in the form X U (X' n Y) where X and X' n Y are mutually exclusive. Also, write B as the union of two mutually exclusive sets.

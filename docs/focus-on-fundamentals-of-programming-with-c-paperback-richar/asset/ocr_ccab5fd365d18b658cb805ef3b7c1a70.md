@@ -1,0 +1,27 @@
+# Function Examples
+
+Functions let you chop up a long program into named sections so that the sections can be reused throughout the program. A function is considered to be an independent set of statements for performing some computation. As we've seen, functions typically accept parameters and can also return a result.
+
+# Example 1: Leap Year Function
+
+Here's an example of a function that returns false (0) or true (1) depending upon whether or not a year is a leap year. We define a leap year as any year that is evenly divisible by 4 but not 100, except that years divisible by 400 are leap years:
+
+```
+// leapYear1.c
+
+int leapYear(int year) {
+   int num;
+   if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+      num = 1;
+   } else {
+      num = 0;
+   }
+   return num;
+}
+```
+
+This function contains one local variable, num, which is declared after the opening brace of the function. The local variable of a function vanishes as soon as the matching closing brace is reached in the function. While they exist, local variables live on the system stack. Actually, C allows you to declare variables after any opening brace, and they exist until the program reaches the matching closing brace and then they disappear.
+
+Note that there is no semicolon after the parentheses in the function header. If you accidentally put one in, you would get a huge cascade of error messages from the compiler that make no sense.
+
+The type of the value that is returned from the function, in this case int, is specified before the function name. The data value that is passed to the function, the formal parameter, appears in the parentheses after the function name. The data type of the parameter precedes the formal parameter (int year).

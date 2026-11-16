@@ -1,0 +1,9 @@
+processes, used to create a world in which characters behave according to the theories. As Meehan puts it:
+
+> > Tale-Spin includes a simulator of the real world: Turn it on and watch all the people. The purpose of the simulator is to model rational behavior; the people are supposed to act like real people. (1976, 107)
+
+Most Tale-Spin stories don’t feature “people” that are human characters, however. Instead, the people are largely birds, bears, bees, foxes, and so on. This was Schank’s suggestion, inspired by as he puts it, “the fact that I had little kids at the time so I was making up [stories] and trying to see how [I] did it.” It also served to compensate, Meehan writes, for the fact that “we weren’t going to get very sophisticated or elaborate output from this program” (2006). In other words, the decision to tell animal stories is an example of the common AI approach of defining a microworld in which the program will operate. Just as some AI researchers demonstrated programs that could understand the physics of a simplified “blocks world” (allowing them to ignore issues such as the relative strength of materials), Tale-Spin operated in a simplified animal world resembling the settings for Aesop’s fables (shaving complexity both from the possibilities of the world and the potential motivations of the characters).
+
+# **Tale-Spin Today**
+
+Today Tale-Spin is one of the most widely discussed digital fictions ever produced. It is not only a touchstone for computer science accounts of story generation but also broadly cited in writing about digital literature and the future of fiction. At the same time, Tale-Spin itself seemed

@@ -1,0 +1,29 @@
+# Hexadecimal to Decimal Conversion
+
+It's now a matter of adding the appropriate powers of 16 to convert a hexadecimal value into a decimal value:
+
+| Hexadecimal Number: | 1 | A | F |
+| Power of 16: | 16^2 | 16^1 | 16^0 |
+| Decimal Equivalent: | 256 | 160 | 15 |
+
+```
+F * 16^0 = 15 * 1 = 15
+A * 16^1 = 10 * 16 = 160
+1 * 16^2 = 1 * 256 = 256
+-------------------
+431
+```
+
+So hexadecimal 1AF is equivalent to 431 decimal.
+
+# Decimal to Hexadecimal Conversion
+
+We use a similar algorithm to convert a decimal value into a hexadecimal value as we used to convert a decimal value into a binary value:
+
+```
+while num != 0
+    divide num by 16
+    store the remainder
+    assign the quotient to num
+output the remainders in reverse order
+```

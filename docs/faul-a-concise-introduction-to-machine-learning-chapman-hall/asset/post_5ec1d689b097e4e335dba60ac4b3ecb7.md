@@ -1,0 +1,144 @@
+
+![](img/d3c00252180686426c9e63ab889b535b_219_0.png)
+
+Figure 7.5: Probabilistic Principal Component Analysis for two-dimensional data.
+
+where we again used the cyclic permutation property of the trace. Using the product rule, Appendices A.2.1 and A.2.3, the derivative with respect to $\mathbf{w}_j$ is
+
+\[
+\frac{\partial}{\partial \mathbf{w}_j} \text{tr}(\mathbf{C}^{-1} \mathbf{\Sigma}) = - \frac{\sigma^{-2}}{(\sigma^2 + \mathbf{w}_j^T \mathbf{w}_j)^2} [(\sigma^2 + \mathbf{w}_j^T \mathbf{w}_j) 2 \mathbf{\Sigma} \mathbf{w}_j - (\mathbf{w}_j^T \mathbf{\Sigma} \mathbf{w}_j) 2 \mathbf{w}_j].
+\]
+
+Therefore, the derivative of the log likelihood with respect to $\mathbf{w}_j$ is
+
+\[
+\frac{\partial}{\partial \mathbf{w}_j} \mathcal{L} = - \frac{\sigma^{-2} N}{\sigma^2 + \mathbf{w}_j^T \mathbf{w}_j} \left[ \left( \sigma^2 + \frac{\mathbf{w}_j^T \mathbf{\Sigma} \mathbf{w}_j}{\sigma^2 + \mathbf{w}_j^T \mathbf{w}_j} \right) \mathbf{w}_j - \mathbf{\Sigma} \mathbf{w}_j \right].
+\]
+
+This vanishes, if $\mathbf{w}_j$ is an eigenvector of $\Sigma$ with eigenvalue $\lambda_j$ and the length of $\mathbf{w}_j$ is such that
+
+\[
+\sigma^2 + \frac{\mathbf{w}_j^T \mathbf{\Sigma} \mathbf{w}_j}{\sigma^2 + \mathbf{w}_j^T \mathbf{w}_j} = \lambda_j.
+\]
+
+Using $\mathbf{\Sigma} \mathbf{w}_j = \lambda_j \mathbf{w}_j$, we arrive at $\mathbf{w}_j^T \mathbf{w}_j = \lambda_j - \sigma^2$, or equivalently $\sigma^2 + \mathbf{w}_j^T \mathbf{w}_j = \lambda_j$. Since $\mathbf{\Sigma}$ is symmetric, it has a set of mutually orthogonal eigenvectors and hence this agrees with our assumption.
+
+Figure 7.5 shows two-dimensional data and the principal component $\mathbf{w}_1$ is drawn as the red arrow with length $\sqrt{\lambda_1 - \sigma^2}$ starting at the sample mean, where $\lambda_1$ is the larger eigenvalue of the sample covariance matrix. In the following we will see that choosing the largest eigenvalues is the right choice to maximize the log likelihood.
+
+Letting all $\mathbf{w}_k$, $k = 1, \dots, K$, be some eigenvectors of $\Sigma$ with squared length $\mathbf{w}_k^T \mathbf{w}_k = \lambda_k - \sigma^2$ and inserting this into (7.4), we get
+
+\[
+|\mathbf{C}| = |\mathbf{C}_{-j}|(1 + \sigma^{-2}(\lambda_j - \sigma^2)) = \sigma^{-2}\lambda_j |\mathbf{C}_{-j}| = \dots
+= (\sigma^{-2})^K \prod_{k=1}^K \lambda_k |\sigma^2 \mathbf{I}| = (\sigma^2)^{D-K} \prod_{k=1}^K \lambda_k.
+\]
+
+Equally using this in (7.3), we arrive at
+
+\[
+\mathbf{C}^{-1} = \sigma^2 \left( \mathbf{I} - \sum_{k=1}^K \frac{\mathbf{w}_k \mathbf{w}_k^T}{\lambda_k} \right),
+\]
+
+and
+
+\[
+\text{tr}(\mathbf{C}^{-1} \mathbf{\Sigma}) = \sigma^{-2} \left( \text{tr}(\mathbf{\Sigma}) - \sum_{k=1}^K \frac{\text{tr}(\mathbf{w}_k \mathbf{w}_k^T \mathbf{\Sigma})}{\lambda_k} \right)
+= \sigma^{-2} \left( \text{tr}(\mathbf{\Sigma}) - \sum_{k=1}^K \mathbf{w}_k^T \mathbf{w}_k \right) = \sigma^{-2} \left( \text{tr}(\mathbf{\Sigma}) - \sum_{k=1}^K \lambda_k \right) + K,
+\]
+
+where we used the cyclic permutation property of the trace and the fact that $\mathbf{w}_k$ is an eigenvector of $\mathbf{\Sigma}$.
+
+With these two results, the expression for the log likelihood is
+
+\[
+\mathcal{L} = -\frac{N}{2} \left[ D \log(2\pi) + (D-K) \log \sigma^2 + \sum_{k=1}^K \log \lambda_k + \sigma^{-2} \left( \sum_{k=K+1}^D \lambda_k \right) + K \right],
+\]
+
+since the trace of a matrix is the sum of its eigenvalues. We differentiate this with respect to $\sigma^2$ in order to optimize with respect to the noise variance.
+
+\[
+\frac{\partial}{\partial \sigma^2} \mathcal{L} = -\frac{N}{2} \left( (D-K)(\sigma^2)^{-1} - (\sigma^2)^{-2} \sum_{k=K+1}^D \lambda_k \right).
+\]
+
+This will be zero for
+
+\[
+\sigma^2 = \frac{1}{D-K} \sum_{k=K+1}^D \lambda_k.
+\]
+
+In other words, $\sigma^2$ is the average of all the other eigenvalues apart from $\lambda_1, \dots, \lambda_K$. As mentioned before, $\sigma^2$ explains the data protruding beyond the $K$-dimensional subspace of the feature space. This needs to be as small as possible. Therefore $\lambda_1, \dots, \lambda_K$ are chosen to be the $K$ largest eigenvalues of $\mathbf{\Sigma}$. The value of $K$ itself is chosen such that $\sigma^2$ is acceptably small. The log likelihood takes the value
+
+\[
+\mathcal{L} = -\frac{N}{2} \left[ D \log(2\pi) + (D-K) \log \left( \frac{1}{D-K} \sum_{k=K+1}^D \lambda_k \right) + \sum_{k=1}^K \log \lambda_k + D \right].
+\]
+
+![](img/d3c00252180686426c9e63ab889b535b_221_0.png)
+
+![](img/d3c00252180686426c9e63ab889b535b_221_1.png)
+
+(a) Viewing the plane spanned by two principal components.
+
+(b) Viewing the data along one of the principal components.
+
+Figure 7.6: Probabilistic Principal Component Analysis for three-dimensional data.
+
+Figure 7.6 illustrates the concepts. The data is viewed from two angles, firstly looking onto the plane spanned by the two principal components and secondly looking along one of the principal components. The latter angle shows that not all data points lie in the plane of the two principal components. The noise variance $\sigma^2$ explains this deviation and is equal to the smallest eigenvalue of the sample covariance matrix of this data.
+
+## 7.3 Expectation-Maximization
+
+The previous section was based on the assumption that the data samples $\mathbf{v}_1, \dots, \mathbf{v}_N$ are related to vectors in a lower dimensional space via a linear mapping given by (7.2) with additive Gaussian noise with zero mean and covariance matrix $\sigma^2\mathbf{I}$. Therefore, each $\mathbf{v}_n$ follows a conditional normal distribution with mean $\mathbf{W}\mathbf{u}_n + \mathbf{m}$ and covariance matrix $\sigma^2\mathbf{I}$, where $\mathbf{u}_n$, $n = 1, \dots, N$, are hidden latent variables following the standard multivariate distribution. The solution in the previous section effectively calculated the marginal distribution from which the $\mathbf{v}_n$ are drawn by marginalizing the latent variables. The likelihood of the data set was then maximized to find $\mathbf{m}$, $\mathbf{W}$ and $\sigma^2$. The likelihood takes a maximum with respect to $\mathbf{m}$, when $\mathbf{m} = \boldsymbol{\mu}$, the sample mean which is easily obtained. The maximization with respect to $\mathbf{W}$ and $\sigma^2$, however, involves finding the $K$ largest eigenvalues and eigenvectors of the sample covariance matrix which is in itself a computationally expensive problem. Firstly, calculating the covariance matrix is of complexity $O(ND^2)$. The computational complexity of then finding the $K$ largest eigenvalues is $O(KD^2)$ (see for example [12]).
+
+In the following, we will use the result $\mathbf{m} = \boldsymbol{\mu}$ and we employ the Expectation-Maximization technique introduced in Section 6.4 to find $\mathbf{W}$ and $\sigma^2$, making use of the joint distribution of $\mathbf{v}$ and $\mathbf{u}$ and the distribution of $\mathbf{u}$ conditioned on $\mathbf{v}$. Note that while in Section 6.4 the latent variables are discrete, here they are continuous. The principles remain the same though.
+
+By the product rule, the joint probability is given by
+
+\[
+p(\mathbf{v}, \mathbf{u}) = p(\mathbf{u})p(\mathbf{v}|\mathbf{u})
+= (2\pi)^{-K/2}\exp \left(-\frac{1}{2}\mathbf{u}^T\mathbf{u}\right) \times
+(2\pi\sigma^2)^{-D/2}\exp \left(-\frac{1}{2}\sigma^{-2}(\mathbf{v} - \mathbf{Wu} - \boldsymbol{\mu})^T(\mathbf{v} - \mathbf{Wu} - \boldsymbol{\mu})\right).
+\]
+
+Gathering the terms in the exponential gives
+
+\[
+-\frac{1}{2}\sigma^{-2}\left[(\mathbf{v} - \boldsymbol{\mu})^T(\mathbf{v} - \boldsymbol{\mu}) - (\mathbf{v} - \boldsymbol{\mu})^T\mathbf{Wu} - \mathbf{u}^T\mathbf{W}^T(\mathbf{v} - \boldsymbol{\mu}) + \mathbf{u}^T(\mathbf{W}^T\mathbf{W} + \sigma^2\mathbf{I})\mathbf{u}\right]. \tag{7.5}
+\]
+
+This can be written as
+
+\[
+-\frac{1}{2} \begin{pmatrix} \mathbf{v} - \boldsymbol{\mu} \\ \mathbf{u} \end{pmatrix}^T \sigma^{-2} \begin{pmatrix} \mathbf{I} & -\mathbf{W} \\ -\mathbf{W}^T & \mathbf{W}^T\mathbf{W} + \sigma^2\mathbf{I} \end{pmatrix} \begin{pmatrix} \mathbf{v} - \boldsymbol{\mu} \\ \mathbf{u} \end{pmatrix}.
+\]
+
+Hence the mean of the joint normal distribution is $(\boldsymbol{\mu} \quad \mathbf{0})^T$, while the matrix with the scalar factor $\sigma^{-2}$ is the *precision matrix*, i.e. the inverse of the covariance matrix. Therefore, using the inversion formula for a block matrix in Appendix A.1.1, the covariance matrix of the joint distribution is
+
+\[
+\begin{pmatrix} \sigma^2 \mathbf{I} + \mathbf{W} \mathbf{W}^T & \mathbf{W} \\ \mathbf{W}^T & \mathbf{I} \end{pmatrix}.
+\]
+
+Using the formula for the calculation of the determinant of a block matrix in Appendix A.1.2, the determinant of the joint covariance matrix is $(\sigma^2)^D$ which agrees with the factor of the joint probability distribution.
+
+Also the conditional distribution $p(\mathbf{u}|\mathbf{v})$ can be deduced from (7.5) by treating $\mathbf{v}$ as a constant. The quadratic term in $\mathbf{u}$ is
+
+\[
+-\frac{1}{2} \sigma^{-2} \mathbf{u}^T(\mathbf{W}^T\mathbf{W} + \sigma^2\mathbf{I})\mathbf{u},
+\]
+
+and thus the covariance matrix of $p(\mathbf{u}|\mathbf{v})$ is
+
+\[
+\mathbf{\Sigma}_{\mathbf{u}|\mathbf{v}} = \sigma^2(\mathbf{W}^T\mathbf{W} + \sigma^2\mathbf{I})^{-1}, \tag{7.6}
+\]
+
+which is independent of $\mathbf{v}$.
+
+The linear term in $\mathbf{u}$ is
+
+\[
+-\frac{1}{2}\sigma^{-2}(-2\mathbf{u}^T\mathbf{W}^T(\mathbf{v} - \boldsymbol{\mu})) = \mathbf{u}^T\sigma^{-2}\mathbf{W}^T(\mathbf{v} - \boldsymbol{\mu}).
+\]
+
+This needs to be equal $\mathbf{u}^T\mathbf{\Sigma}_{\mathbf{u}|\mathbf{v}}^{-1}\mathbf{\mu}_{\mathbf{u}|\mathbf{v}}$. Therefore, the mean of the conditional distribution is
+
+\[
+\mathbf{\mu}_{\mathbf{u}|\mathbf{v}} = \mathbf{\Sigma}_{\mathbf{u}|\mathbf{v}}\sigma^{-2}\mathbf{W}^T(\mathbf{v} - \boldsymbol{\mu}) = (\mathbf{W}^T\mathbf{W} + \sigma^2\mathbf{I})^{-1}\mathbf{W}^T(\mathbf{v} - \boldsymbol{\mu}), \tag{7.7}
+\]

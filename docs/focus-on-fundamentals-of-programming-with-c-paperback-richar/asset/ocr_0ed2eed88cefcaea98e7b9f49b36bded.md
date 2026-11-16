@@ -1,0 +1,46 @@
+# Continue Statement
+
+The break statement can be used to immediately take you out of a loop.
+Sometimes, however, you want to go back to the top of the loop when something unexpected happens.
+
+For example, we can use the continue statement to avoid a division by zero error:
+
+```
+// reciprocals.c
+// calculate reciprocals for -5 to 5
+
+int main(void) {
+   int i;
+
+   for (i = -5.0; i <= 5.0; i += 1.0) {
+      if (i == 0.0) {
+         printf("Divide by zero trap.\n");
+         continue;
+      }
+      printf("%f\n", 1.0 / i);
+   }
+   return 0;
+}
+```
+
+Note that in the body of the for statement, the continue statement jumps to
+the loopExpression, the third expression of the for statement. In the while
+and do while loops, it jumps to the test.
+
+Like a break statement, you should always question the need for a continue
+statement. By simply restructuring the code you can often eliminate the need for
+a continue statement. You are very unlikely to use it.
+
+```
+-0.200000
+-0.250000
+-0.333333
+-0.500000
+-1.000000
+Divide by zero trap.
+1.000000
+0.500000
+0.333333
+0.250000
+0.200000
+```

@@ -1,0 +1,15 @@
+# # Procedural Code
+
+# ## Main Program
+
+Do while payroll file not at end Read a payroll record If employee is manager calculate manager pay using salary If employee is clerk calculate clerk pay using hourly rate and overtime rate
+
+# ## Routines
+
+Calculate for Manager
+
+Calculate for Hourly
+
+# ## Data
+
+Manager Salary Hourly Wage Overtime Rate

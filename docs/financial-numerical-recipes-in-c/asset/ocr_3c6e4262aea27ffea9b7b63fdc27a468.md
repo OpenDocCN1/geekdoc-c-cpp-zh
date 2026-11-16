@@ -1,0 +1,5 @@
+# 12.5.3 Discrete dividends
+
+The problem is when the dividends are constant dollar amounts. In that case the nodes of the binomial tree do not “link up,” and the number of branches increases dramatically, which means that the time to do the calculation is increased.
+
+The algorithm presented in C++ Code 12.7 implements this case, with no linkup, by constructing a binomial tree up to the ex-dividend date, and then, at the terminal nodes of that tree, call itself with one less dividend payment, and time to maturity the time remaining at the ex-dividend date. Doing that calculates the value of the option at the ex-dividend date, which is then compared to the value of exercising just before the ex-dividend date. It is a instructive example of using recursion in simplifying calculations, but as with most recursive solutions, it has a cost in computing time. For large binomial trees and several dividends this procedure is costly in computing time.

@@ -1,0 +1,71 @@
+level_changes:
+- line: 115
+  before: 2
+  after: 3
+- line: 135
+  before: 2
+  after: 3
+- line: 173
+  before: 2
+  after: 3
+- line: 185
+  before: 2
+  after: 3
+- line: 207
+  before: 2
+  after: 3
+- line: 240
+  before: 2
+  after: 3
+- line: 250
+  before: 2
+  after: 3
+- line: 510
+  before: 3
+  after: 2
+- line: 5371
+  before: 3
+  after: 2
+- line: 6815
+  before: 3
+  after: 2
+- line: 7261
+  before: 1
+  after: 2
+- line: 8413
+  before: 1
+  after: 3
+- line: 8429
+  before: 1
+  after: 3
+- line: 8637
+  before: 3
+  after: 2
+- line: 8723
+  before: 3
+  after: 2
+text_changes:
+- line: 26
+  before: 关于C++和编程。
+  after: 关于C++和编程
+- line: 1982
+  before: 利率期限结构与一堂对象课
+  after: 利率期限结构与一类对象课
+- line: 3319
+  before: 期货算法。
+  after: 期货算法
+- line: 7916
+  before: Chapter 20
+  after: 第 20 章
+- line: 8051
+  before: Chapter 21
+  after: 第 21 章
+- line: 8635
+  before: 第23章
+  after: 第 23 章
+- line: 8721
+  before: 第24章
+  after: 第 24 章
+- line: 9376
+  before: 第27章
+  after: 第 27 章

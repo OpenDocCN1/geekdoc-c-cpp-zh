@@ -1,0 +1,15 @@
+A in the T[1,1]. We then visit the next array slot (T[2,2]), we find an “x” on its edge, and see from the rules that A, B, and C can all determine an “x”. So we place A, B, and C all in T[2,2]. In the same way, A, B, and C are placed in the remaining array slots in diagonal 1. The result appears in Figure 15.5 (a). Note that these array slots now contain the values that could possibly be in the nodes directly above the leaves (terminals) in the parse tree.
+
+Next we determine the values in diagonal 2. The value of the first one (T[1,2]) is determined as follows. We investigate the values in the array slot on its left (T[1,1]) and in the array slot above (T[2,2]), and look for rules that have precisely one nonterminal from each of these array slots on its right side. For each such rule we find, we place the nonterminal on its left side in T[1,2]. For example, we place S in T[1,2] because we have the rule S <- A B, and A is in T[1,1] while B is in T[2,2]. We place an A in T[1,2] owing to the rule A <- A C. We now know that the sentence “y x” can be derived as an S and as an A. The remainder of diagonal 2 is completed in the same way. That is, the values in each array slot are determined from the values in the slot to its left and in the slot above it. Figure 15.5 (b) shows the result.
+
+The completion of diagonal 3 is done in the same way, but is a little more complicated. Look again at Figure 15.4. It shows that three pairs of array slots are used to determine the values in T[2,5], which is in diagonal 4. Similarly, two pairs of array slots are used to determine the values in diagonal 3. To determine the values in T[1,3], we investigate T[1,1] with T[2,3] and T[1,2] with T[3,3]. These investigations enable us to place an S and an A in T[1,3]. We now know that the sentence “y x x” can be derived as an S or as an A. Diagonals 4 and 5 are completed in the same way. Because S appears in T[1,5], we know that we can derive the sentence “y x x x x” as an S, which means it is a legal sentence.
+
+Suppose now that we want to parse the sentence
+
+```
+y x y x x.
+```
+
+Figure 15.6 shows the steps in the parsing of this sentence. Notice that there is a $\phi$ in array slot T[2,3]. This is because there is no rule whose left-hand side consists of A, B, C followed by A. This means that it is not possible derive the sentence “x y” as any nonterminal. Note that this does not necessarily mean that we cannot derive “y x y x x” because possibly we could derive “y x” as a nonterminal, “y x x” as a nonterminal, and these two nonterminals as an S. However, this is not the case because we end up with a $\phi$ in T[1,5], which means S $\notin$ T[1,5] and the sentence is not legal.
+
+It is left as an exercise to write the CYK algorithm and show that its time complexity is $\theta(mn^3)$, where m is the number of rules and n is the number of words in the sentence. Furthermore, the algorithm can be extended by storing pointers to parse tree nodes in the array slots (or in a second array). All possible parse trees (which might be exponential in number) can then be retrieved from the array. It is also left as an exercise to write this extension.

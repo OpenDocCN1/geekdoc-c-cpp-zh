@@ -1,0 +1,40 @@
+Here are some additional examples of how macros can replace function calls:
+
+```
+#define MAX(x,y) ( ((x) > (y)) ? (x) : (y))
+#define ABS(x) ( ((x) < 0) ? -(x) : (x))
+```
+
+Of course we must be careful that the macro arguments do not contain any side-effects. For example:
+
+```
+ABS(++n)
+```
+
+would expand to:
+
+```
+(( (++n) < 0) ? -(++n) : (++n))
+```
+
+thus incrementing n twice!
+
+# Fun With Macros
+
+You can also have some fun with macros. For example:
+
+```
+#define print(x) printf("%d\n", x)
+```
+
+will expand:
+
+```
+print(5);
+```
+
+to the following:
+
+```
+printf("%d\n", 5)
+```

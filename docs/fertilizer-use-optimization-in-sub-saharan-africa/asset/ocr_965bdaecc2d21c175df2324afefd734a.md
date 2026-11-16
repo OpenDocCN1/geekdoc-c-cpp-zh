@@ -1,0 +1,21 @@
+# # 4. Optimizing Fertilizer Use within an Integrated Soil Fertility Management Framework in Burkina Faso
+
+Korodjoua Ouattara¹ korodjoua_ouattara@hotmail.com, Idriss Serme¹, Alimata Azouma Bandaogo¹, Souleymane Ouedraogo¹, Adama Sohoro¹, Zakaria Gnankambary², Sansan Youf³, Pascal Yaka¹, Tahioure Pare²
+¹Institut de l’Environnement et de Recherches Agricoles (INERA), 04 BP 8645 Ouagadougou 04
+²Bureau National des Sols (BUNASOLS), 03 BP 7005 Ouagadougou
+³International Fertilizer Development Center Burkina Faso (IFDC), 11 BP 82 Ouaga 11 Ouagadougou, Burkina Faso
+⁴Centre Agrométéorologique du Burkina Faso, 01 BP 4413 Ouagadougou 01, Burkina Faso
+
+# ## 4.1 Introduction
+
+Nutrient application is important to increase crop productivity in Burkina Faso. While fertilizer use has increased by 50% during recent decades, the mean total of N, P₂O₅ and K₂O applied was just 15.3 kg/ha/yr in 2013 (World Bank 2013). Only 8 to 35 % of farmers use fertilizer, depending on the region, in spite of government supported subsidies.
+
+Fertilizer recommendations have been developed since 1974, first for commercial peanut and cotton production. The extension service applied the cotton recommendations to cereals. However, during the 1980s, with the support of a World Bank project known as Fertilizer for Food Crops, research was conducted to develop fertilizer recommendations for maize, sorghum and pearl millet in three main agro-ecological zones (AEZ) to account for annual rainfall differences. These recommendations are still general and do not account for variation in soil type, labour capacity and climate risk. Worse, most farmers are not informed of the recommendations.
+
+Increased crop production has depended on increased cropland area rather than on intensification. Soil nutrients are removed in harvests without replenishment through fertilizer application resulting in soil nutrient depletion and decreased soil productivity and crop yield (Batino et al., 1998; Ouattara et al., 2006 and 2011; Mason et al., 2014 and 2015). More fertilizer is used where farmers have support from government and non-government extension services. Fertilizer use for food crop production is often constrained because farmers are inadequately informed and have little financial capacity for fertilizer use. Also, the fertilizer supply system is inefficient with untimely delivery.
+
+The Optimizing Fertilizer Recommendation in Africa (OFRA) project worked to improve the basis for more profitable fertilizer use decisions without increased financial risks for the major crop producing AEZ. Based on multi-location experiments for two main soil types in each agro-ecological zone and for the main crops in Burkina Faso, OFRA has improved the information basis for fertilizer use optimization. Fertilizer use optimization in this chapter refers to maximizing profit from fertilizer use, including profit per hectare for farmers with adequate finance and profit on small investments in fertilizer use by the financially constrained.
+
+Farmers wish to profit from fertilizer use. They are more likely to apply fertilizer to cash compared with food crops. If finance is adequate, farmers may apply fertilizer to maximize net returns per hectare resulting from fertilizer use. However, for those living in ongoing financial peril with little opportunity for improvement and much vulnerability, investment in fertilizer use competes with other pressing needs. Therefore, fertilizer use must give high returns with little risk. To reduce risk in fertilizer use, the recommendation should take into consideration the farmers’ cropping system and financial conditions. Aspects of farmer profitability and risk were not adequately accounted for when developing fertilizer recommendations in Burkina Faso.
+
+This chapter describes the general agricultural context of Burkina Faso, the characteristics of the AEZ, the soil types, and the main cropping. It addresses fertilizer use optimization in Burkina Faso and factors that affect profitability of fertilizer. Computer-run and paper-based decision tools are introduced for optimizing fertilizer use giving choices expected to maximize profit to fertilizer use. Also, a tool for adjusting fertilizer rates according to practices such as manure use and according to soil test information is provided. A comparison is made

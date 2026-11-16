@@ -1,0 +1,13 @@
+# Object-Oriented Decomposition Showing Relationships
+
+![](bbox=[0.28, 0.19, 0.72, 0.38])
+
++   For example, the paddle and the ball are clearly interrelated. When the paddle strikes the ball, the ball will change direction.
+
++   Similarly, there is a relationship between the wall and the ball.
+
++   Component, or part-of relationships can also be identified:
+
++   - This kind of relationship exists between individual bricks and the wall. The wall is made up of bricks.
+
++   - In this way, we can establish how the game objects interact with each other to achieve a simulation of the video game.

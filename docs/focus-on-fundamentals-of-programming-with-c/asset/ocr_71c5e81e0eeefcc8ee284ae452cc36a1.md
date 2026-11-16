@@ -1,0 +1,37 @@
+In general, if num is an array of elements of type x, px is of type pointer to x, and i is an int, then:
+
+```
+px = num;
+```
+
+sets px to point to the first element of num,
+
+```
+*(px + i)
+```
+
+references the value contained in num[i], and
+
+```
+px += i;
+```
+
+sets px to point to i elements further in the array, no matter what type of element is contained within the array!
+
+# Comparing Pointer Variables
+
+It is valid in C to compare two pointer variables. This is useful when comparing two pointers that point to the same array. For example, we could test ptr to see if it points past the end of an array containing 100 elements by comparing its value against a pointer to the last element in the array:
+
+```
+ptr > &num[99]
+or
+ptr > (num + 99)
+```
+
+We could also determine if a pointer has gone too far in the other direction:
+
+```
+ptr < &num[0]
+or
+ptr < num
+```

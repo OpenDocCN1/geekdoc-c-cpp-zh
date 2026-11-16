@@ -1,0 +1,29 @@
+You will often see #define used with arrays. The syntax is:
+
+```
+#define some_name replacement_text
+```
+
+This statement would go right after the #include statement:
+
+```
+#include <stdio.h>
+#define SIZE 100
+```
+
+For example, the following code will define the size of an array and initialize each array element to 0.
+
+```
+// array1.c
+#include <stdio.h>
+#define SIZE 100
+int main(void) {
+   int i, num[SIZE];
+   for (i = 0; i < SIZE; i++) {
+      num[i] = 0;
+   }
+   return 0;
+}
+```
+
+Note that the text SIZE will be replaced with 100 before the program compiles.

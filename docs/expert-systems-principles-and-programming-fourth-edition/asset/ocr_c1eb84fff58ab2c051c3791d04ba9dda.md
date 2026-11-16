@@ -1,0 +1,15 @@
+information is needed. The question of how the system came to a certain conclusion is easy to answer in a rule-based system since a history of the activated rules and contents of working memory can be maintained in a stack. This is not readily available in artificial neural networks, genetic algorithms, or other systems that evolve. Although attempts have been made to provide an explanation capability is some systems, they cannot match the clarity of a human-design expert system. Sophisticated explanation facilities may allow the user to ask what if questions to explore alternate reasoning paths through hypothetical reasoning.
+
+# 1.10 PRODUCTION SYSTEMS
+
+The most popular type of expert system today is the rule-based system. Instead of representing knowledge in a relatively declarative, static way (as a number of things that are true), rule-based systems represent knowledge in terms of multiple rules that specify what should or should not be concluded in different situations. A rule-based system consists of IF-THEN rules, facts, and an interpreter that controls which rule is invoked depending on the facts in working memory.
+
+There are two broad kinds of rule systems: forward chaining and backward chaining. A forward-chaining system starts with the known initial facts and keep using the rules to draw new conclusions or take certain actions. A backward-chaining system starts with some hypothesis or goal you are trying to prove, and keeps looking for rules that would allow the hypothesis to be proven true. New subgoals may be created to break up the large problem into smaller pieces that can be more easily proved. Forward-chaining systems are primarily data-driven, while backward-chaining systems are goal-driven (Debenham 98). There will be more extensive discussion of chaining in a later chapter and a complete example of how backward-chaining can be done in CLIPS.
+
+Rules are popular for a number of reasons:
+
++   - Modular nature. This makes it easy to encapsulate knowledge and expand the expert system by incremental development.
++   - Explanation facilities. It is easy to build explanation facilities with rules since the antecedents of a rule specify exactly what is necessary to activate the rule. By keeping track of which rules have fired, an explanation facility can present the chain of reasoning that led to a certain conclusion.
++   - Similarity to the human cognitive process. Based on the work of Newell and Simon, rules appear to be a natural way of modeling how humans solve problems. The simple IF-THEN representation of rules make it easy to explain to experts the structure of the knowledge that you are trying to elicit from them.
+
+Rules are a type of production whose origins go back to the 1940s. Because of the importance of rule-based systems, it is worthwhile to examine the development of the rule concept. This will give you a better idea of why rule-based systems are so useful for expert systems.

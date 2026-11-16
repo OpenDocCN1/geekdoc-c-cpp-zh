@@ -1,0 +1,5 @@
+the list. If the array contains an even number of items, the median is the average of the two numbers in the middle (to the nearest tenth). Your program should output the median of the test scores given to the nearest tenth. (Note: Your program should determine on its own whether there is an odd or even number of test scores).
+
+Note that each section of the lab should be designed within its own function, passing parameters as necessary. Be sure to use the set of test data given above in your program and be sure you input the data in the order given.
+
+Output from your program should be sent to the terminal window (your screen) as well as the requested csis.txt output file. Be sure to read the document on Capturing Program Output. Your full name and Palomar ID number must appear as a comment in the source file that contains main(). Be sure to include the csis.txt output file in your zip archive.

@@ -1,0 +1,9 @@
+for accomplishing this. Years later, when this strategy was applied to characters, Wright created one of the most culturally and economically successful games of all time.
+
+# The Sims
+
+The “Sims” are arguably the most popular human characters ever created in digital media. The game named after them—The Sims (Wright, Ryan, London, et.al. 2000)—is one of the best-selling games ever released, shifting the broad culture’s understanding of computational media and producing chart-topping expansion packs, sequels, and ports to new platforms. Perhaps surprisingly, the game is focused entirely on interaction with and between these characters and their environment. There is no shooting, no platform jumping, no puzzle solving, and not a single test of speed or agility.
+
+Yet the Sims are incredibly simple characters. They don’t speak except in iconic cartoon images. They can’t be communicated with except by clicking on an object or person, and then directing them to take some action with regard to it. They are represented with such simple graphics—even for the time of the game’s release—that they convey almost nothing through facial expression and employ only broad gestures. Most of their actions (whether selected by the player or the Sims themselves in “free will” mode) are determined by eight simple measures of their current state, which must be continually maintained so that they don’t fall too low: Hunger, Comfort, Hygiene, Bladder, Energy, Fun, Social, and Room (figure 8.3).
+
+While other media communicate the state of characters through word, gesture, and action, the state of the currently selected Sim is, for much of play, directly visible at the

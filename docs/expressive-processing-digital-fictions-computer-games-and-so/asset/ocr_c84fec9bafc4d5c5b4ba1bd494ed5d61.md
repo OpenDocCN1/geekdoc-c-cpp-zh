@@ -1,0 +1,9 @@
+its own FSM, of a much more manageable size than an FSM for controlling the character's entire behavior, and the rules for transitioning between these goal-specific FSMs are decoupled from the FSMs themselves—instead those rules are handled at the level that determines the current highest-priority goal). Orkin describes the results for non-player characters, or NPCs, (referring to them, in game industry parlance, as "AI"):
+
+Each goal contained an embedded FSM. There was no way to separate the goal from the plan used to satisfy that goal. ...
+
+Characters in NOLF2 were surrounded by objects in the environment that they could interact with. For example someone could sit down at a desk and do some work. The problem was that only the Work goal knew that the A.I. was in a sitting posture, interacting with the desk. When we shot the A.I., we wanted him to slump naturally over the desk. Instead, he would finish his work, stand up, push in his chair, and then fall to the floor. This was because there was no information sharing between goals, so each goal had to exit cleanly, and get the A.I. back into some default state where he could cleanly enter the next goal. (ibid.)
+
+Of course, adding more states and transitions to the Work goal's FSM could have addressed this. But pursuing such a path in general would have raised the same complexity issues that motivated the decision to compartmentalize the NOLF2 FSM for each goal. The problem lies in the compartmentalization strategy itself as a method for addressing the complexity of character behavior.
+
+Ken Perlin, who pioneered computer graphics based on procedural textures and animations, describes the consequences of a similar problem in a rather different sort of game—The Sims (Wright, Ryan, London, et al. 2000):

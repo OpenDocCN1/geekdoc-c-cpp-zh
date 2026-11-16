@@ -1,0 +1,13 @@
+# Electronic Components
+
+Basic electronic components, such as LEDs, resistors and switches are needed for interfacing with ATtiny microcontrollers when following along with this book. For example, LEDs with series resistors are the most basic requirement when using pins as outputs, as they show when a pin is switched high or low. Other components such as 100n decoupling capacitors may be needed in the circuits. As this book deals mostly with the internal architecture of ATtiny AVR microcontrollers, only a minimum of components are needed. 5 through-hole LEDs with series resistors of around 470Ω each, a push-button switch and an optional 100n ceramic capacitor are all the components needed.
+
+# Optional Test Equipment
+
+A multimeter is very useful for verifying voltages of power supplies before connecting them to circuits, as well as for general fault finding on circuits. Although not essential, an oscilloscope may be needed for testing of circuits and fault finding.
+
+# Microchip, Atmel, Microchip Studio and Atmel Studio
+
+There can be some confusion when dealing with AVR microcontrollers if one does not know the history of Atmel and Microchip, so an explanation is in order. Originally a company called Atmel was the designer and manufacturer of AVR microcontrollers including the ATtiny and ATmega ranges. In 2016, Microchip (www.microchip.com) bought Atmel and is now the owner and manufacturer of AVR microcontrollers. At the time of writing, some of the AVR documentation still has the Atmel name on it. Many AVR microcontrollers still bear the Atmel name and have not been changed to Microchip yet.
+
+Microchip Studio is the free development software used with this book to program ATtiny AVR microcontrollers using assembly language and C. Microchip Studio is the same as the previously available Atmel Studio, it is simply a brand name change. Although Microchip acquired Atmel back in 2016, Atmel Studio was only rebranded to Microchip Studio in 2020. The first release of Microchip Studio was available in November 2020, and continued with the version numbering left by Atmel Studio. Thus the first release of Microchip Studio is version 7.0.2542, rather than version 1.0. It follows on from the last release of Atmel Studio which was version 7.0.2389. Everything in Microchip Studio is identical to Atmel Studio, so those readers who have previously used Atmel Studio will immediately be able to use Microchip Studio.

@@ -1,0 +1,34 @@
+# # Flow of Program Execution
+
+The flow of execution of a program refers to the order in which the C code is executed. Execution always begins at the first statement in main() and statements are executed one after another, from first to last.
+
+For example, consider the following program that swaps the value of two variables:
+
+```
+```c
+// flow.c
+int main(void) {
+    int x, y, temp;       // Statement 1
+    x = 5;                // Statement 2
+    y = 8;                // Statement 3
+    temp = x;             // Statement 4
+    x = y;                // Statement 5
+    y = temp;             // Statement 6
+    return 0;             // Statement 7
+}
+```
+```
+
+The statements in the program above are executed in the following order:
+
++   Statement 1
++   Statement 2
++   Statement 3
++   Statement 4
++   Statement 5
++   Statement 6
++   Statement 7
+
+Adding function definitions to a program does not alter the flow of execution of the program. However, the statements within the function are not executed until the function is called.
+
+When a function call is made, control of the program jumps to the first statement in the function. All of the statements in the function are executed until either a return statement is reached or a closing brace to the function is reached. Control of the program returns to the location in the program where the function call was made.

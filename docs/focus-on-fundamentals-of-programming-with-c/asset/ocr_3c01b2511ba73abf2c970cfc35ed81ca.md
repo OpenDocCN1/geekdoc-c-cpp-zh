@@ -1,0 +1,19 @@
+![](bbox=[0.105, 0.078, 0.942, 0.332])
+
+# By convention:
+
++   - argc is at least one
++   - argv[0] is the name of the command itself (the name by which the program was invoked
++   - argv[1] points to the first argument string
++   - argv[2] points to the second argument string, etc
++   - argv[argc] is always the last element of the array and always contains a null pointer
+
+For example, if we were to execute a program, foo, with two arguments:
+
+```
+foo arg1 arg2
+```
+
+the program will receive a value for argc equal to 3 and argv will look like:
+
+![](bbox=[0.105, 0.682, 0.942, 0.882])

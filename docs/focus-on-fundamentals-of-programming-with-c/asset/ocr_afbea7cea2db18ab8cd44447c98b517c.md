@@ -1,0 +1,18 @@
+# Variable Length Argument List - Advanced
+
+It is possible to create functions that receive an unspecified number of arguments! In fact, printf() takes a variable number of arguments. As a minimum, printf() must receive a string as its first argument, but can receive any number of additional arguments. The actual function prototype for printf() is:
+
+```
+int printf(char *fmt, ...);
+```
+
+The declaration ... (ellipse) means that the number and types of these arguments may vary. The function may receive a variable number of arguments of any type. This declaration can only appear at the end of an argument list.
+
+Declaring a function with a variable number of arguments can provide us great flexibility. Consider a function average() that can find the average of a variable number of arguments. It might be invoked as follows:
+
+```
+avg = average(a, b, c);
+avg = average(a, b, c, d);
+```
+
+The secret to handling a variable number of arguments in C lies in the way arguments are passed to a function. Lets take a look at the contents of the stack at the moment a C function is entered. When a function is called, the arguments followed by the return address are placed on the stack:

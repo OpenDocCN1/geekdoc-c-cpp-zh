@@ -1,0 +1,17 @@
+halfhearted attempt is troubled. While Eco’s postscript does say that he eventually found a 1975 notebook in which he had written down a list of monks, the postscript’s primary account of the genesis of the book reads: “I began writing in March of 1978, prodded by a seminal idea: I like poisoning a monk” (Eco 1994: 509). That said, as Mark Nelson pointed out in an email message after this book’s blog-based peer review, Eco also emphasizes the importance of world development in the process that followed this seminal idea. In short, if Eco’s process for _The Name of the Rose_ bears a resemblance to the way that _Universe_ stories begin, it is probably at the level of plot fragments (poisoning a monk is a fragment with one character specified) though world development is certainly part of the process.
+
+8. As Michael Mateas pointed out in the blog-based peer review of this manuscript, Lebowitz dedicates a major portion of one paper to describing how an explanation-based learning approach could enable the program “to automatically expand its plot fragment library by creating new plot fragments” (1985: 492). He also indicates that he and his collaborators “have implemented [494] some portion of such an expansion. Yet there is no indication that this work was completed. In the paper just mentioned Lebowitz writes, “There are many areas left to explore before our generalization methods can be fully implemented—when to generalize a plot fragment, deciding exactly how much to generalize, and using a causal [sic] explanation to adjust details of the plot fragment, for example” (501). (The word casual in the original, for “causal.”) Lebowitz’s later publication on _Universe_ (1987) indicates no further progress on this front.
+
+9. Note that given the story example, it must be possible for the Betrayer to be consciously unaware of this evil plan, even after executing it. Also, Bringsjord and Ferrucci employ two spellings: “betrayer” and “betrayer.” I will use the former except in direct quotations, in which case I will use the spelling that appears in their text.
+
+10. During the blog-based review of this manuscript on Grand Text Auto, Scott Turner noted, “This representation of Betrayal reminds me of the similar construct Meehan used to force coherence onto Tale-Spin stories.” While little discussed in this book’s chapter on Tale-Spin, a good portion of that system’s well-known stories were created by “fixing” the world data ahead of time in order to make stories (such as Aesop’s “The Fox and the Crow”) result from the operations of its processes. As Meehan explains:
+
+> > What happens when the simulator runs may or may not be interesting, and since interest is a criterion for stories, we may or may not get a story by simply watching the simulator run.
+
+> > How do you make it interesting? You fix it in advance. You rig the world so that if people do behave rationally, they’ll do so in interesting ways. (1976: 108)
+
+This aspect of Tale-Spin and the lessons that Meehan draws from work with it are further described in his dissertation (108–113).
+
+11. As described in the previous chapter’s section on Minitel, the genealogy of story grammars is usually traced back to Vladimir Propp’s _Morphology of the Folktale_.
+
+12. The first version of nn was developed in Montfort’s dissertation work at the University of Pennsylvania, under Mitchell P. Marcus, who trained at MIT.

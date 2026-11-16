@@ -1,0 +1,47 @@
+Here's another example:
+
+```
+// and2.c
+
+#include <stdio.h>
+
+int main(void) {
+    int x = 0x1234;    // 0001 0010 0011 0100
+    int y = 0x3468;    // 0011 0100 0110 1000
+    int z = 0x5248;    // 0101 0010 0100 1000
+
+    printf("0x%x\n", x & x);
+    printf("0x%x\n", x & y);
+    printf("0x%x\n", x & y & z);
+    printf("0x%x\n", x & 1);
+    return 0;
+}
+```
+
+In the first printf() statement, any quantity bit-anded with itself returns itself as a value:
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+x = 0x1234 = 0001 0010 0011 0100
+---------------------------------
+0001 0010 0011 0100 = 0x1234
+```
+
+In the second printf() statement, variables x and y are bit-anded together producing:
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+y = 0x3468 = 0011 0100 0110 1000
+---------------------------------
+0001 0000 0010 0000 = 0x1020
+```
+
+In the third printf() statement, all three variables x, y, and z are bit-anded together producing:
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+y = 0x3468 = 0011 0100 0110 1000
+z = 0x5248 = 0101 0010 0100 1000
+---------------------------------
+0001 0000 0000 0000 = 0x1000
+```

@@ -1,0 +1,9 @@
+# Inheritance
+
+But what does it mean to say that one class is a subclass of another?
+
+Intuitively, we mean that the subclass has all the characteristics of the more general class, but EXTENDS it in some way.
+
++   - Precious metals have all the characteristics of metals but, in addition, they can be distinguished from some metals on the basis of monetary value.
+
+Allows us to conceive of a new class of objects as a refinement of another, to abstract out the similarities between classes and to design and specify only the differences for the new class.

@@ -1,0 +1,11 @@
++   12. This kind of distinction—between processing used for graphics and processing used for behavior—is not only of interest to game developers. It is also a distinction understood by players. For example, as Jesper Juul (2005) and ...
+
+craft innovative system behavior, rather than processing that allows more impressive means of displaying data.12 I believe the central issue has become which digital media systems are exhibiting a comparative intensity of behavioral processing, rather than how this relates to the amount of data employed.
+
++   13. Or to put it another way, the processes of the original version of The Sims make operational an innovative model of character behavior that creates an emergent complexity. This was seen as risky by the industry (which tends to reskin proven ...
+
+A good case in point is The Sims (Wright, Ryan, London, et al. 2000). Will Wright and his team at Maxis designed The Sims around a large library of graphics and a set of comparatively complex behavioral landscapes. The game's publisher, Electronic Arts, at first resisted the title—in part because its process-intensive design had created innovative, unproven gameplay focused on managing the lives of simulated suburban characters. But when The Sims was released it became the best-selling personal computer game of all time. It accomplished this in part by reaching a significantly wider audience than the "hard core" (stereotypically, young males) toward whom most high-budget computer games seem to cater. Yet despite the success of The Sims and the fact that game company executives regularly express the desire to reach wider demographics, innovation at the level of behavior-oriented processes is still largely resisted within the game industries, viewed as a risky alternative to the tried-and-true approach of combining flashier graphics processing with the same gameplay behavior processing as previous hits.13
+
+Notes continued at end of this chapter...
+
+This book's focus is on what systems do—what they enact and how they behave—rather than what the surface output looks like. This could be characterized as an interest in "behavioral process intensity" of the sort practiced by digital media designers like Wright. In this take on the term, the process intensity of Wright's design

@@ -1,0 +1,27 @@
+For example, we might assign the following numbers:
+
+```
+10111
+12214
+12802
+12905
+13541
+13715
+14214
+15112
+```
+
+Finally, the order of the numbers is scrambled:
+
+```
+13541
+12214
+10111
+15112
+13715
+12802
+14214
+12905
+```
+
+This is the list of numbers you would be given to decode. To decode a message, simply reverse the process: read the numbers into an array and sort them into ascending order. “Cut” each sorted number into two, using the last two digits (hint: think modulus operator) as the index to the correct character and print the character.

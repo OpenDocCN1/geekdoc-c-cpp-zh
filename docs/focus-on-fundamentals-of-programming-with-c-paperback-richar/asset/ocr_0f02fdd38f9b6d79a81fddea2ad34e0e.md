@@ -1,0 +1,18 @@
+You lab should include at least the following functions:
+
+```
+getCode()       - reads string from codefile.txt
+getMessage()    - reads encoded message from msgfile.txt
+sortMessage()   - sorts the encoded message array
+decodeMessage() - decodes and outputs the message
+```
+
+Note that the string used to hold the 52 characters read from codefile.txt should be declared to be of length 53 (to reserve a space for the terminating NULL character.
+
+Be sure to do error checking when attempting to open a file for input or output. For extra credit, pass the file names to this lab as command-line arguments. Compiler specific information regarding command-line arguments can be found in Blackboard at this location:
+
+# Docs | Set Command-Line Arguments
+
+Remember that the main() function should appear as the first function in the program. Be sure to use function prototypes for each of the functions that are used in your program.
+
+Output from your program should be sent to the terminal window (your screen) as well as the requested csis.txt output file. Be sure to read the document on Capturing Program Output. Your full name and Palomar ID number must appear as a comment in the source file that contains main(). Be sure to include the csis.txt output file in your zip archive.

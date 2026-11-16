@@ -1,0 +1,15 @@
+then the command:
+
+```
+(load-instances "instances.dat")
+```
+
+would load the instances contained in that file. Calling `load-instances` is equivalent to making a series of `make-instance` calls. The `restore-instances` command is similar to the `load-instances` command; however, it does not use message-passing when deleting, initializing, or setting the slot values of the instances it is loading. The return value of both of these commands is the number of instances loaded or -1 if the command was unable to access the instance file.
+
+The `save-instances` command can be used to save instances to the file specified by <file-name>. The instances are stored in the format required by the `load-instances` and `restore-instances` commands. If <scope> is not specified or if it is specified as `local`, then only those instances corresponding to defclasses defined in the current module would be saved to the file. If <save-scope> is specified as `visible`, then all instances corresponding to defclasses that are visible to the current module would be saved to the file. If <save-scope> is specified, one or more defclass names may also be specified. In this case, only instances corresponding to the specified defclasses will be saved (however, the defclass names must still satisfy the `local` or `visible` specification). If the `inherit` keyword is specified, then instances of subclasses of the specified classes will also be saved if the subclasses also satisfy the `local` or `visible` specification. The return value of this command is the number of instances saved.
+
+The `bsave-instances` and `bload-instances` commands are similar to the `save-instances` and `load-instances` commands except a binary format is used to store instances rather than a text format. Because of this, you can use `bload-instances` only with files created using the `bsave-instances` command. The benefit of using these commands is that for large numbers of instances, it is faster to load the binary format than it is to load the text format. The drawback is that the binary files are usually not portable from one platform to another.
+
+# 11.18 SUMMARY
+
+This chapter introduced the CLIPS Object-Oriented Language (COOL). Instances (or objects) are another data representation provided by CLIPS. The attributes of an instance are specified using the `defclass` construct. Procedural code, called message-handlers, can be associated with classes using the `defmessage-handler` construct. Inheritance allows a class to make use of the slots and message-handlers associated with another class. COOL supports both single and multiple inheritance. A class that inherits from another class is a subclass of the other class. The class from which it inherits is called the superclass of that class. A subclass inherits attributes and message-handlers from its superclasses, but when duplicate definitions are found in both classes, the subclass overrides the superclass definition. Using the `role` attribute, `abstract` classes can be created

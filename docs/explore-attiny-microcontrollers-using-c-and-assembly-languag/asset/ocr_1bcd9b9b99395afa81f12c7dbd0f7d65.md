@@ -1,0 +1,3 @@
+# 1.4 Summary
+
+Any DIP ATtiny AVR microcontroller from 8-pin to 28-pin that are in-system programmable are fine to use when following this book, although 8-pin devices are mainly targeted. Be sure to read the introduction chapter, to get an overview of this book and information on the hardware and software needed when reading this book. In Chapter 2 we install Microchip Studio and use it to program an ATtiny microcontroller in order to get the necessary tools and hardware set up for use in the chapters that follow.

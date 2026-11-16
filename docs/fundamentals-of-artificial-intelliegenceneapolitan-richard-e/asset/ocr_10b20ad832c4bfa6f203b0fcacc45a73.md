@@ -1,0 +1,13 @@
+Based on his Chinese room experiment, Searle concludes that strong AI is not possible. He states that “I can have any formal program you like, but I still understand nothing.” Searle’s paper resulted in a great deal of controversy and discussion for some time to come (See, for example, [Harnad, 2001]).
+
+The position that computers could appear and behave intelligently, but not necessarily understand, is called **weak AI**. The essence of the matter is whether a computer could actually have a mind (strong AI) or could only simulate a mind (weak AI). This distinction is of greater concern to the philosopher who is discussing the notion of consciousness [Chalmers, 1996]. Perhaps facetiously, a philosopher could even argue that emergentism might take place in the Chinese room experiment, and a mind might arise from Searle performing all his manipulations. Practically speaking, none of this is of concern to the computer scientist. If the program for all purposes behaves as if it is intelligent, computer scientists have achieved their goal.
+
+# 1.1.2 Emergence of AI
+
+Initial efforts at AI involved modeling the neurons in the brain. An artificial neuron is treated as a binary variable that is switched to either _on_ or _off_. This notion was first proposed in [McCulloch and Pitts, 1943], and was furthered by Donald Hebb [1949] when he developed **Hebbian learning** for **neural networks**. In 1951, Marvin Minsky and Dean Edmonds built SNARC, the first neural network computer.
+
+Following this accomplishment and Turing’s development of the Turing test, researchers became increasingly interested in the study of neural networks and intelligent systems, resulting in John McCarthy¹ organizing a 2-month workshop involving interested researchers at Dartmouth University in 1956. He coined the term _Artificial Intelligence_ at that workshop. Attendees included Minsky, Claude Shannon (the developer of information theory), and many others. AI emerged as a new discipline whose goal was to create computer systems that could learn, react, and make decisions in a complex, changing environment.
+
+# 1.1.3 Cognitive Science and AI
+
+**Cognitive science** is the discipline that studies the mind and its processes. It concerns how information is represented and processed by the mind. It is an interdisciplinary field spanning philosophy, psychology, artificial intelligence, neuroscience, linguistics, and anthropology, and emerged as its own discipline somewhat concurrently with AI. Cognitive science involves empirical studies of the mind, whereas AI concerns the development of an artificial mind. However, owing to their related endeavors, each field is able to borrow from the other.

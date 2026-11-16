@@ -1,0 +1,2345 @@
+- pgno: 0
+  md: '# Forward- or reverse-mode automatic differentiation: What''s the difference?
+
+
+    Birthe van den Berg a,*, Tom Schrijvers a, James McKinna b, Alexander Vandenbroucke
+    c
+
+
+    a KU Leuven, Celestijnenlaan 200A, Leuven, Belgium b Heriot-Watt University, Edinburgh
+    Campus, G2, Edinburgh EH14 4AS, United Kingdom c Standard Chartered, 1 Basinghall
+    Avenue, London, EC2V 5DD, United Kingdom
+
+
+    # ARTICLE INFO
+
+
+    Article history:
+
+    Received 22 December 2022
+
+    Revised 22 February 2023
+
+    Accepted 9 August 2023
+
+    Available online 15 August 2023
+
+
+    Keywords:
+
+    Automatic differentiation
+
+    Cayley representation
+
+    Semimodules
+
+    Nagata idealization
+
+    Kronecker
+
+
+    # ABSTRACT
+
+
+    Automatic differentiation (AD) has been a topic of interest for researchers in
+    many disciplines, with increased popularity since its application to machine learning
+    and neural networks. Although many researchers appreciate and know how to apply
+    AD, it remains a challenge to truly understand the underlying processes. From
+    an algebraic point of view, however, AD use cases appear natural: it originates
+    from the differentiation of variants. In this work, we use Algebraic Feature Grammars
+    to formalize two different AD variants, leveraging Haskell to illustrate our observations.
+    Our findings stem from three fundamental algebraic abstractions: (1) the notion
+    of semimodule, (2) Nagata’s construction of the ‘idealization of a module’, and
+    (3) Kronecker’s delta function, that together allow us to write a single-line
+    abstract definition of AD. From this single-line definition, and by instantiating
+    our algebraic structures in various ways, we derive different AD variants, that
+    have (almost) the same computational cost, but different properties, mainly in
+    terms of (asymptotic) computational complexity. We show how the different variants
+    obtained by means of Kronecker isomorphisms, a further elaboration of our Haskell
+    infrastructure which guarantees correctness by construction. With this framework
+    in place, this paper seeks to make AD variants more comprehensible, taking an
+    algebraic perspective on the matter. © 2023 The Author(s). Published by Elsevier
+    B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+
+    # 1. Introduction
+
+
+    Many algorithms in artificial intelligence crucially depend not only on the efficient
+    large-scale evaluation of arithmetic expressions, but also on the evaluation of
+    their partial derivatives at specific points [1,2]. Symbolic and numerical differentiation
+    can be used for these computations but suffer from performance and accuracy issues,
+    respectively. As a consequence, there is much interest in a third approach, called
+    automatic differentiation (AD) [3]. AD efficiently and accurately evaluates the
+    derivatives of any computation composed of basic arithmetic and exponential, logarithmic,
+    and trigonometric functions.
+
+
+    The orthodox accounts of automatic differentiation, since its first introduction
+    by Wengert [3], emphasise it as a whole-program transformation. It is coupled
+    with a shift from evaluation of the primitive operations of the underlying language
+    of numerical computation to those on the so-called dual numbers (due originally
+    to Clifford [4], considerably predating'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'their subsequent application to AD). The various AD modes (forward, reverse,
+    mixed) then arise as further optimisations of this basic picture in terms of the
+    efficient organisation and traversal of the underlying datastructures, typically
+    exploiting mutability.
+
+
+    The vast literature on AD, which is impossible to survey here, covers extensions
+    of Wengert’s original approach in all possible directions: algorithmic improvements,
+    language designs and extended expressivity, novel applications and much more.
+    The contribution of this paper is not to extend this body of work even further,
+    but rather to revisit the original algorithms from an algebraic perspective. Following
+    Bird and de Moor’s “Algebra of Programming” [5], we show how algebra can be used
+    to (re-)derive existing AD algorithms from a basic executable specification, expressed
+    in the purely functional programming language Haskell. The algebra involved consists
+    of largely standard constructions (with one notable exception, namely Nagata’s
+    construction described in Section 3.2 below), which—because they yield isomorphic
+    mathematical objects—have no extensional consequences. Yet, they do enable the
+    functorial equivalence between the different algorithmic variants. At the algebra
+    level, the algebraically derived change of representation are precisely what allows
+    us to exploit intensional aspects, specifically to change the computational complexity.
+
+
+    Specifically, this paper makes the following contributions.
+
+
+    +   - First, we show how symbolic differentiation and evaluation of symbolic expressions
+    can both be seen algebraically as unique semiring homomorphisms from the free
+    semiring. In terms of code, they are both instances of the same fold-like recursion
+    scheme. This algebra view enables us first to fuse the two homomorphisms to obtain
+    basic forward mode AD, and then to recover symbolic differentiation as an instance
+    of that (Section 2).
+
+
+    +   - Next, we abstract the AD model in terms of three fundamental algebraic abstractions,
+    whose specification and (equational) properties we realise via Haskell type classes:
+    modules over a semiring, a generalization of dual numbers which we dub Nagata
+    numbers (whose construction appears originally due to Nagata [6]), and of Kronecker’s
+    delta function. This abstract algorithm readily instantiates to a more efficient
+    form of forward mode AD that computes the whole gradient vector of partial derivatives
+    in one go (Section 3).
+
+
+    +   - Then, we show how other instances of the abstract algorithm can be obtained
+    by replacing the representation of the gradient using an isomorphic representation,
+    using Elliott’s method of type class morphisms [7]. This is demonstrated on a
+    sparse representation (Section 4).
+
+
+    +   - Using the above methodology, we ultimately derive purely functional and
+    imperative variants of reverse-mode AD: we successively improve the time complexity
+    of scalar multiplication and gradient vector addition with representations based
+    on homomorphisms, and switch to their equivalent mutable representation (Section
+    5).
+
+
+    +   - As an epilogue, we demonstrate that our approach readily admits common,
+    useful extensions: additional primitive functions, direct computation with Nagata
+    numbers to eliminate the overhead in building and evaluating symbolic expressions,
+    higher derivatives, and let-sharing (Section 6).
+
+
+    +   - We provide an implementation of the approach and different AD versions.
+
+
+    Finally, the paper discusses related work (Section 7) and concludes (Section 8).
+
+
+    We believe that this paper may be of interest to algebraists, (Haskell) programmers
+    and AD experts alike. While the paper does its best to be accessible to these
+    three groups, we acknowledge that this requires working through unfamiliar concepts
+    or unfamiliar presentations of familiar concepts below the three strands come
+    together. Appendix C supports readers who are not familiar with Haskell, briefly
+    introducing type classes and library functions that are used throughout this work.
+
+
+    # 2. Setting the stage
+
+
+    This section provides a basic executable definition of automatic differentiation
+    (AD) based on a minimal setup. For readers who want a gentle introduction to the
+    methodology used here, we refer to “Domain-Specific Languages of Mathematics”
+    [8].
+
+
+    # 2.1. Symbolic expressions and their evaluation
+
+
+    In order to focus on the essential algorithmic mechanics, throughout most of this
+    paper we pare down to a minimal programming language in which functions can be
+    expressed: symbolic expressions Expr v that capture polynomials over variables
+    v, that vary independently:¹
+
+
+    ```
+
+    ```
+
+    data Expr v = Var v | Zero |
+
+    | Plus (Expr v) (Expr v) | Times (Expr v) (Expr v)
+
+    ```
+
+    ```
+
+
+    For example, for univariate expressions we can define a type X with one variable.
+    The symbolic representation of x × (x + 1) is captured in example¹.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: "```\nidentity:\nzero ⊕ x = x ⊕ zero\none ⊗ x = x = x ⊗ one\n\nassociativity:\n\
+    x ⊕ (y ⊕ z) = (x ⊕ y) ⊕ z\nx ⊗ (y ⊗ z) = (x ⊗ y) ⊗ z\n\ndistributivity:\nx ⊗ (y\
+    \ ⊕ z) = (x ⊗ y) ⊕ (x ⊗ z)\n(x ⊕ y) ⊗ z = (x ⊗ z) ⊕ (y ⊗ z)\n\nannihilator: zero\
+    \ ⊗ x = zero = x ⊗ zero\n```\n\nFig. 1. The commutative semiring laws.\n\n```\n\
+    data X = X\nexample₁ : Expr X\nexample₁ = Times (Var X) (Plus (Var X) One)\n```\n\
+    \nWe assign an overloaded meaning to symbolic expressions by mapping them to a\
+    \ (commutative) semiring. The 'semi' in semiring refers to the fact that a semi-ring\
+    \ is a ring that does not need to have an additive inverse. We omit it here because\
+    \ AD does not require it. Nevertheless, Section 6.1 shows that, if such an inverse\
+    \ exists, it can be accommodated. The commutativity requirement we impose is not\
+    \ essential, but simplifies the presentation. Section 6.2 extends the approach\
+    \ to non-commutative semirings, which is necessary to support, for instance, matrices.\
+    \ The overloading gives us the flexibility to interpret expressions in terms of\
+    \ both their plain value and of different AD flavors.\n\nDefinition 1 (Semiring).\
+    \ A semiring is a set, together with two binary operators ⊕ (\"addition\") and\
+    \ ⊗ (\"multiplication\") and two distinguished elements zero and one. These should\
+    \ obey the laws of Fig. 1: ⊕ and ⊗ should both be associative and commutative\
+    \ and have neutral elements zero and one respectively. Moreover, ⊗ should distribute\
+    \ over ⊕ and have zero as annihilator.\n\nIn Haskell, we capture the algebraic\
+    \ concept of a semiring in the Semiring type class, with instances for numeric\
+    \ types (e.g., Int, Float⁴) that respect the laws.\n\n```\nclass Semiring d where\n\
+    \  zero : d\n  one : d\n  (⊕) : d → d → d\n  (⊗) : d → d → d\n```\n\n```\ninstance\
+    \ Num a => Semiring a where\n  zero = 0\n  one = 1\n  (⊕) = (+)\n  (⊗) = (*)\n\
+    ```\n\nThere is one instance of semirings that is of special interest to us: that\
+    \ for symbolic expressions Expr v, quotiened by the laws⁴.\n\n```\ninstance Semiring\
+    \ (Expr v) where\n  zero = Zero\n  one = One\n  (⊕) = Plus\n  (⊗) = Times\n```\n\
+    \nWhat makes this instance special is that it is the free semiring instance, which\
+    \ gives rise to a fold-style eval function. This evaluator proceeds by structural\
+    \ recursion over the symbolic expressions to map them to their interpretation\
+    \ in a semiring d, given a mapping var :: v → d for variables.\n\n```\neval ::\
+    \ Semiring d => (v → d) → Expr v → d\neval var (Var x) = var x\neval var Zero\
+    \ = zero\neval var One = one\neval var (Plus e₁ e₂) = eval var e₁ ⊕ eval var e₂\n\
+    eval var (Times e₁ e₂) = eval var e₁ ⊗ eval var e₂\n```"
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: "This way we can evaluate example₁ for X = 5 with the Int semiring.\n\n```\n\
+    > eval (λX → 5) example₁\n30\n```\n\n# 2.2. Homomorphisms\n\nThe notion of free\
+    \ semiring, the associated eval function and its properties are special cases\
+    \ of generic results from the Algebra of Programming [5] which hold for any algebraic\
+    \ structure. Another related notion, which will turn out to be central to this\
+    \ paper, is that of homomorphism. Informally, this is a function that preserves\
+    \ algebraic structure. More formally,\n\nDefinition 2 (Semiring homomorphism).\
+    \ A (semiring) homomorphism between two semirings D₁ and D₂ is a function h ::\
+    \ D₁ → D₂ that preserves the semiring structure:\n\nh zero₁ = zero₂          h\
+    \ (x ⊕₁ y) = h x ⊕₂ h y\none₁ = one₂             h (x ⊗₁ y) = h x ⊗₂ h y\n\nSemiring\
+    \ homomorphisms compose: given homomorphisms h₁ :: D₁ → D₂ and h₂ :: D₂ → D₃,\
+    \ their composition h₂ ∘ h₁ :: D₁ → D₃ is also a homomorphism; and the expected\
+    \ laws hold. Furthermore, the identity function id :: D → D is trivially a homomorphism.\
+    \ The function eval var is a homomorphism for any choice of var. In fact, it is\
+    \ the unique homomorphism h such that h (Var v) = var v. From this uniqueness\
+    \ property follow two useful properties:\n\nProperty 1 (Fusion). The fusion property\
+    \ allows us to incorporate any homomorphism h into evaluation: h ∘ eval var =\
+    \ eval (h ∘ var).\n\nProperty 2 (Reflection). The reflection property observes\
+    \ that evaluation with Var is the identity: eval Var = id.\n\n# 2.3. Symbolic\
+    \ differentiation and dual numbers\n\nThe eval homomorphism also allows us to\
+    \ do symbolic differentiation. We capture its rules in the derive function, using\
+    \ the Semiring instance of Expr v, and exploiting the commutativity in the multiplication\
+    \ case.\n\n```\nderive :: Eq v ⇒ v → Expr v → Expr v\nderive x (Var y)   = if\
+    \ x == y then one else zero\nderive x Zero      = zero\nderive x One       = zero\n\
+    derive x (Plus e₁ e₂) = derive x e₁ ⊕ derive x e₂\nderive x (Times e₁ e₂) = (e₂\
+    \ ⊗ derive x e₁) ⊕ (e₁ ⊗ derive x e₂)\n```\n\nThese do not fit eval's fold-style\
+    \ recursion scheme because, in the case for Times, e₁ and e₂ appear outside of\
+    \ recursive calls (gray). Using the so-called “banana-split” property [3–11],\
+    \ we can turn this function into the proper shape: we make it return a tuple (Expr\
+    \ v, Expr v) of the original expression and the symbolic derivative.\n\n```\n\
+    derive' x e = (e, derive x e)\n```\n\nWe thus obtain the following structurally\
+    \ recursive definition for derive', from which we may then recover derive by projecting\
+    \ on the second component:\n\n```\nderive' :: Eq v ⇒ v → Expr v → (Expr v, Expr\
+    \ v)\nderive' x (Var y)   = (Var y, if x == y then one else zero)\nderive' x Zero\
+    \      = (zero, zero)\nderive' x One       = (one, zero)\nderive' x (Plus e₁ e₂)\
+    \ = let (e'₁, d₁) = derive' x e₁\n                             (e'₂, d₂) = derive'\
+    \ x e₂\n                             in (e'₁ ⊕ e'₂, d₁ ⊕ d₂)\nderive' x (Times\
+    \ e₁ e₂) = let (e'₁, d₁) = derive' x e₁\n                             (e'₂, d₂)\
+    \ = derive' x e₂\n                             in (e'₁ ⊗ e'₂, (e'₂ ⊗ d₁) ⊕ (e'₁\
+    \ ⊗ d₂))\n```"
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: "Before we write the functionality of derive' in terms of eval, we generalize\
+    \ (Expr v, Expr v) to tuples whose components are drawn from an arbitrary semiring.\
+    \ In the AD literature, these are known as dual numbers, originally due to Clifford\
+    \ [4].\n\n```\ndata Dual d = D [pr^D :: d,\n    tan^D :: d\ninstance Functor Dual\
+    \ where\nfmap :: (a -> b) -> Dual a -> Dual b\nfmap h (D f g) = D (h f) (h g)\n\
+    ```\n\nDual numbers are functorial; fmap f transforms both parameters using f.\
+    \ The two components of a dual number D d x are respectively known as the primal\
+    \ x and the tangent dx. For a semiring d, the type Dual d also admits a semiring\
+    \ structure, where the definition of tangent precisely follows the corresponding\
+    \ cases of derive.\n\n```\ninstance Semiring d => Semiring (Dual d) where\nzero\
+    \ = D zero zero\none = D one zero\n(D f d) + (D g dg) = D (f + g) (d + dg)\n(D\
+    \ f d) * (D g dg) = D (f * g) ((g * d) + (f * dg))\n```\n\nNow, symbolic differentiation\
+    \ may be seen as another instance of evaluation, but into the semiring of dual\
+    \ numbers over symbolic expressions:\n\n```\nsymbolic :: Eq v => v -> Expr v ->\
+    \ Dual (Expr v)\nsymbolic x = eval gen where gen y = D (Var y) (δ_x y)\nδ_x y\
+    \ = if x == y then one else zero\n```\n\n# 2.4. Classic forward automatic differentiation\n\
+    \nAutomatic differentiation (AD) is the umbrella term for algorithms that programmatically\
+    \ compute both the value and the derivative of an expression at a point [12-14].\
+    \ Thus, if we combine symbolic differentiation with subsequent evaluation into\
+    \ a semiring d, we obtain a specification for forward-mode AD:\n\n```\nforwardAD\
+    \ var x = fmap (eval var) o symbolic x\n```\n\nWe can make this specification\
+    \ more efficient by exploiting eval's fusion property.\n\n```\nfmap (eval var)\
+    \ o symbolic x\n= {- definition of symbolic -\nfmap (eval var) o eval gen where\
+    \ gen y = D (Var y) (δ_x y)\n= {- eval fusion (Property 1.) -\neval (fmap (eval\
+    \ var) o gen) where gen y = D (Var y) (δ_x y)\n= {- fmap (eval var) o gen -\n\
+    δ_x y = if x == y then one else zero\n```\n\nAfter inlining fmap (eval var) into\
+    \ gen, we get the classic definition of forward-mode AD, which calls eval only\
+    \ once. Differences compared with symbolic are highlighted in gray.\n\n```\nforwardAD\
+    \ :: (Eq v, Semiring d) => (v -> d) -> v -> Expr v -> Dual d\nforwardAD var x\
+    \ = eval gen where gen y = D (Var y) (δ_x y)\nδ_x y = if x == y then one else\
+    \ zero\n```\n\nFor example, the derivative of example_1 at the point X = 5 is\
+    \ 11; the process computing the result is depicted in Fig. 2.\n\n```\n> forwardAD\
+    \ (\\X -> 5) X example_1\nD 30 11\n```\n\n# 2.5. Symbolic AD as forward AD\n\n\
+    Observe that the only essential difference between symbolic and automatic differentiation\
+    \ is that the former evaluates into the symbolic Expr v semiring, while the latter\
+    \ uses a 'numeric' semiring d. In fact, we can also have forwardAD use the symbolic\
+    \ semiring, interpreting variables with Var.\n\n```\nforwardAD Var\n= {- AD specification\
+    \ (Specification 2.4.) -}\n```"
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: "![](img/e423791fd87c536ca132e7d760db042c_5_0.png)\n\nFig. 2. Running forward-mode\
+    \ AD on example, at X = 5.\n\n![](img/e423791fd87c536ca132e7d760db042c_5_1.png)\n\
+    \nFig. 3. The laws for a D-module E over a semiring D, where E is a commutative\
+    \ monoid. We overload the monoidal operation ⊕ for the corresponding Semiring,\
+    \ to emphasise its additive interpretation.\n\n```\nfmap (eval Var) ∘ symbolic\n\
+    = ( - reflection property (Property 2 ) - )\nfmap id ∘ symbolic\n= ( - functor\
+    \ law and id as unit of composition - )\nsymbolic\n```\n\nIn summary, symbolic\
+    \ is a special case of forwardAD:\n\n```\nsymbolic = forwardAD Var\n```\n\nThis\
+    \ sets the stage for the remainder of this paper: we use algebraic techniques\
+    \ to reason about the structure of differentiation algorithms and by exposing\
+    \ more abstract structure, one and the same abstract algorithm (Section 3) subsumes\
+    \ various concrete AD flavors.\n\n# 3. Abstract automatic differentiation\n\n\
+    The central claim of this paper is that we can express the two previous differentiation\
+    \ functions (symbolic differentiation and classic forward-mode AD) as well as\
+    \ several more variants to come later, as the same one-line generic program. This\
+    \ section identifies three fundamental algebraic structures to accomplish this:\
+    \ d-modules e, generalized dual numbers d × e, and the Kronecker delta function.\
+    \ It also shows how to instantiate these to recover a version of forward-mode\
+    \ AD that computes the gradient vector of all partial derivatives at once, rather\
+    \ than for a single variable at a time.\n\n# 3.1. Modules over semirings\n\nOur\
+    \ first abstraction generalizes the notion of gradient ∇e of an expression e.\n\
+    \n```\n∇e = [ ∂e/∂x1 ]\n     [ ...    ]\n     [ ∂e/∂xn ]\n```\n\nBy analogy with\
+    \ vector spaces (over a field) or modules (over a ring), we consider semimodules\
+    \ over a semiring d [15], which we refer to as d-modules.\n\nDefinition 3 (Semimodule).\
+    \ Given a semiring D, then a D-module E is defined as a commutative monoid E,\
+    \ together with scalar multiplication (●) : D × E → E, which distributes over\
+    \ the additive structure of E. This means that E should have a commutative, associative\
+    \ binary operator ⊕ with neutral element zero. Fig. 3 gives E’s monoid laws and\
+    \ the laws that govern the interaction between the monoid structure of E and a\
+    \ scalar multiplication."
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: "In Haskell, we capture the concept of a semimodule in the type class Module,\
+    \ on top of the Monoid type class.\n\n```\nclass Monoid e where\n  zero :: e\n\
+    \  (⊕) :: e → e → e\n\nclass (Semiring d, Monoid e)\n=> Module d e | e → d where\n\
+    \  (●) :: d → e → e\n```\n\nEvery semiring d may be viewed trivially as a d-module,\
+    \ by taking (●) = (⊗). A well-known example that is not itself a semiring is the\
+    \ vector space R³: it forms a monoid with vector addition and the zero vector\
+    \ [ 0 0 0 ], and an R-module with the usual scalar multiplication.\n\n# 3.2. Nagata\
+    \ numbers\n\nThe second abstraction generalizes dual numbers of Section 2.3 to\
+    \ two components d and e that have distinct types, reflecting the idea that the\
+    \ value of an expression (its primal), and that of its derivative (tangent), conceptually\
+    \ live in different spaces. We exploit precisely the generalization that permits\
+    \ primal and tangent to vary independently. This concept first appeared in the\
+    \ work of Nagata [6] in the early 1950s, under the name “idealization of a module”.\
+    \ However, the application of Nagata’s construction to the study of AD appears\
+    \ to be novel. By analogy with dual numbers, we call the type d x e Nagata numbers.\n\
+    \n```\ndata d x e = N { primN :: d,\n                 tanN :: e }\n\ninstance\
+    \ Functor (d x ) where\n  fmap h (N f d) = N f (h d)\n```\n\nObserve that the\
+    \ type constructor d x is functorial in its second parameter and a bifunctor in\
+    \ both parameters (Appendix A).\n\nNagata proved the following fundamental theorem.\n\
+    \n> Theorem 1. Given a d-module e, then d x e admits a semiring structure.\n\n\
+    The Haskell type class instance below witnesses this theorem.\n\n```\ninstance\
+    \ Module d e => Semiring (d x e) where\n  zero        = N zero zero\n  one   \
+    \      = N one   zero\n  (N f df) ⊕ (N g dg) = N (f ⊕ g) (df ⊕ dg)\n  (N f df)\
+    \ ⊗ (N g dg) = N (f ⊗ g) ((f ⊗ dg) ⊕ (g ⊗ df))\n```\n\n# 3.3. Kronecker delta\n\
+    \nThe final piece of our jigsaw comes from the observation that the function δ_x\
+    \ y = if x == y then one else zero is the Kronecker delta function.\n\n```\nδ_x(y)\
+    \ = { 1   x = y\n         { 0   otherwise\n```\n\nThis gives rise to our third\
+    \ fundamental algebraic abstraction. In Haskell, we capture a generalized notion\
+    \ of this concept in the Kronecker type class.\n\n```\nclass Module d e => Kronecker\
+    \ v d e where\n  delta :: v → e\n```\n\nNotice that, at this point, no extra laws\
+    \ are imposed on Kronecker v d e; later, we will use isomorphism conditions (Definition\
+    \ 5) to constrain different AD variants. The idea is that delta x does not compute\
+    \ δ_x(y) for just a single variable y, but for all variables at once. Thus delta\
+    \ x is a value in a d-module e where only the x-component is one, and all others\
+    \ are zero. A helpful analogy may be to think of v as the type of basis vectors\
+    \ of e. Then, delta x is the embedding of basis vector x into e. Continuing Section\
+    \ 3.1’s example of the R-module R³, there are usually three variables x, y, z\
+    \ such that"
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: "```\ndelta x = [1 0 0]\ndelta y = [0 1 0]\ndelta z = [0 0 1]\n```\n\nIn the\
+    \ AD literature, these basis vectors, where one entry is one and all the other\
+    \ are zero, are often referred to as one-hot vectors.\n\n# 3.4. Abstract automatic\
+    \ differentiation\n\nWith the three algebraic structures in place, we present\
+    \ our abstract definition of differentiation.\n\n```\nabstractD :: Kronecker v\
+    \ d => e -> (v -> d) -> Expr v -> d × e\nabstractAD var = eval gen where gen x\
+    \ = N (var x) (delta x)\n```\n\nNext, we show how this abstract definition can\
+    \ be instantiated to recover forwardAD. Later, we vary e to obtain more efficient\
+    \ versions.\n\n# 3.5. Base case: forward-mode AD as AD in the dense function space\n\
+    \nWe recover forwardAD—the classical forward-mode AD implementation given in Section\
+    \ 2.4—as an instance of abstractD, by using the standard function space e = v\
+    \ -> d. We call this space Dense to contrast with the sparse function space coming\
+    \ up in Section 4.3: by analogy with dense/sparse polynomial representations in\
+    \ computer algebra [16].\n\n```\ntype Dense v d = v -> d\n```\n\nInformally, we\
+    \ can think of this structure as a functional representation of a gradient vector,\
+    \ required by least square fitting, gradient descent and many other applications.\
+    \ Just like a gradient vector, it contains one d-value per variable of type v.\
+    \ The actions of its monoid and d-module instances are given pointwise, using\
+    \ the ‘d-as-d-module construction’ of Section 3.1.\n\n```\ninstance Semiring d\
+    \ => Monoid (Dense v d) where\n  zero   = λv → zero\n  f₁ ⊕ f₂ = λv → f₁ v ⊕ f₂\
+    \ v\n```\n\n```\ninstance Semiring d => Module d (Dense v d) where\n  d • f =\
+    \ λv → d • (f v) = λv → d ⊗ (f v)\n```\n\nThe Kronecker delta function for dense\
+    \ functions is the textbook one.\n\n```\ninstance (Eq v, Semiring d) => Kronecker\
+    \ v d (Dense v d) where\n  delta v = λw → if v ≡ w then one else zero\n```\n\n\
+    Using this Kronecker instance and generalizing dual numbers into d × (Dense v\
+    \ d), we obtain the following definition for forward-mode AD.\n\n```\nforwardAD_dense\
+    \ :: (Eq v, Semiring d) => (v -> d) -> Expr v -> d × (Dense v d)\nforwardAD_Dense\
+    \ = abstractD\n```\n\nThis is forwardAD with its parameters re-arranged and Dual\
+    \ d generalized:\n\n```\nprimD (forwardAD var x) = primN (forwardAD_Dense var\
+    \ x)\ntanD (forwardAD var x) = tanN (forwardAD_Dense var x)\n```\n\nThe essential\
+    \ difference between forwardAD and forwardAD_Dense is intensional. In moving from\
+    \ computing a value in v -> d × d to one in d × (v -> d), we no longer compute\
+    \ both the primal and tangent for each individual v, but instead only compute\
+    \ the primal once for the whole gradient. In other words, we share the computation\
+    \ of the primal among all partial derivatives. For instance, example 2 represents\
+    \ expression (x × y) + x + 1 in variables x and y using our expression language."
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '```
+
+    data XY = X | Y
+
+    example_1 : Exp XY
+
+    example_2 = Plus (Plus (Times (Var X) (Var Y)) (Var X)) One
+
+    ```
+
+
+    We compute its gradient at the point (5, 3):
+
+
+    ```
+
+    > let (var X = 5; var Y = 3; e = tan^N (forwardAD_dense var example_2))
+
+    in (e, X e Y)
+
+    (4, 5)
+
+    ```
+
+
+    In contrast, when using forwardAD, we would have to call it twice:
+
+
+    ```
+
+    > let (var X = 5; var Y = 3, e = example_2)
+
+    in (tan^D (forwardAD var X e), tan^D (forwardAD var Y e))
+
+    ```
+
+
+    # 4. AD variants by construction
+
+
+    This section explains our methodology, which is based on constructing Kronecker
+    isomorphisms, and demonstrates it on the sparse variant of forwardAD_dense. This
+    methodology will allow us to instantiate our abstract algorithm by varying the
+    tangent type to obtain different flavors of automatic differentiation.
+
+
+    # 4.1. Relating AD variants with Kronecker isomorphisms
+
+
+    A key concern when devising new AD variants is their correctness. We can establish
+    this by showing their functional equivalence to an established AD baseline. We
+    do so using Kronecker isomorphisms.
+
+
+    **Definition 4** (Kronecker homomorphism). Given a type of variables V and a semiring
+    D, with types E1 and E2 such that Kronecker V D E1 and Kronecker V D E2 hold (and
+    thus also Monoid E1, Monoid E2, Module D E1 and Module D E2), then a Kronecker
+    homomorphism is a function h :: E1 -> E2 that preserves the Kronecker V D structure:
+
+    h zeroE1 = zeroE2
+
+    h (x ⊕E1 y) = (h x) ⊕E2 (h y)
+
+    h (d •E1 v) = d •E2 (h m)
+
+    h (deltaE1 v) = deltaE2 v
+
+
+    **Definition 5** (Kronecker isomorphism). A Kronecker isomorphism is a pair of
+    Kronecker homomorphisms h :: E1 -> E2 and h'' :: E2 -> E1, that are inverses:
+    h . h'' = id and h'' . h = id.
+
+
+    In the rest of the paper we use Dense V D as the baseline. Hence, when coming
+    up with a new tangent type E, we also want to find a Kronecker isomorphism h ::
+    Dense V D -> E to establish its correctness. This isomorphism is a function pair
+    consisting of a representation function rep and its inverse abs (abstraction),
+    following the terminology of data representation [17,18]. To streamline our approach,
+    we capture this isomorphism in a type class CorrectAD.
+
+
+    ```
+
+    class Kronecker v d e => CorrectAD v d e where
+
+    rep :: Dense v d -> e
+
+    abs :: e -> Dense v d
+
+    ```
+
+
+    With the free theorem [19] that follows from the parametricity of abstractD [20]
+    we can then relate the new instance of the algorithm to the baseline.
+
+
+    > **Theorem 2.** Given a CorrectAD V D E instance, we have that
+
+    > fmap abs (abstractD_E var e) = abstractD_Dense var e
+
+    > abstractD_E var e = fmap rep (abstractD_Dense var e)'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: "# 4.2. Kronecker isomorphisms by construction\n\nGiven the Kronecker V D (Dense\
+    \ V D) structure as our starting point and a newly desired representation E, we\
+    \ do not have to devise the Kronecker V D E structure and the Kronecker isomorphism\
+    \ out of the blue: Instead, following the method outlined by Elliott [7], we can\
+    \ constructively derive both from a plain invertible function h :: Dense V D ->\
+    \ E. Indeed, we can create the instances for E in terms of the instances of Dense\
+    \ V D and of h.\n\n```\n```\ninstance Monoid E where\n  zero = h zeroDense\n \
+    \ x ⊕ y = h (h⁻¹ x ⊕Dense h⁻¹ y)\ninstance Module D E where\n  d • x = h (d •Dense\
+    \ h⁻¹ x)\ninstance Kronecker V D E where\n  delta v = h (deltaDense v)\ninstance\
+    \ CorrectAD V D E where\n  rep h = h\n  abs = h⁻¹\n```\n```\n\nBy construction,\
+    \ these instances both (1) satisfy all the necessary laws, and (2) ensure that\
+    \ h is a Kronecker isomorphism. For example, we can verify that x ⊕ zero = x and\
+    \ that h x ⊕ h y = h (x ⊕ y) as follows:\n\n```\n```\nx ⊕ zero\n= { - definitions\
+    \ of zero and ⊕ - }\nh (h⁻¹ x ⊕ h⁻¹ (h zero))\n= { - isomorphism - }\nh (h⁻¹ x\
+    \ ⊕ zero)\n= { - monoid identity law for Dense v d - }\nh (h⁻¹ x)\n= { - isomorphism\
+    \ - }\nx\n\nh x ⊕ h y\n= { - definition of ⊕ - }\nh (h⁻¹ (h x) ⊕ h⁻¹ (h y))\n\
+    = { - isomorphism - }\nh (x ⊕ y)\n```\n```\n\nVerifying the other laws and homomorphism\
+    \ properties proceeds similarly.\n\nIn short, each time we devise a new AD variant,\
+    \ we come up with a new representation E and an invertible function h :: Dense\
+    \ V D -> E. The rest of the infrastructure then follows mechanically, except for\
+    \ the fact that we can simplify the definitions, sometimes exploiting further\
+    \ equations, for the sake of optimizing the (algorithmic properties of) the representation.\n\
+    \nThe invertible function ensures, through the constructed Kronecker isomorphism,\
+    \ that the extensional behaviour remains the same, and thus guarantees correctness.\
+    \ At the same time, a well-chosen alternative representation may improve intentional\
+    \ properties like asymptotic runtime.\n\n# 4.3. Sparse maps\n\nWe demonstrate\
+    \ that the above approach to switch from the dense function space representation\
+    \ to that of sparse maps. This exploits the fact that many partial derivatives\
+    \ of sub-expressions are zero. Indeed, if a variable x does not occur in an expression\
+    \ e, the partial derivative ∂e/∂x is zero. Notably, in the base instance of dense\
+    \ functions, when the expression is just a variable, all partial derivatives but\
+    \ one are by definition zero. We avoid explicit representations of such zeros-as\
+    \ well as explicit operations with them-by replacing the dense function space\
+    \ v -> d with the type of finite key-value maps Map v d. We use Haskell's Data.Map\
+    \ library (Appendix C) instead of a specialized dictionary representation [21].\n\
+    \n```\n```\ntype Sparse v d = Map v d\n```\n```\n\nThe omitted values in the map\
+    \ are zero. This way we recover the Dense representation from the sparse one by\
+    \ looking up the variables in the map and defaulting to zero when a variable is\
+    \ not present.\n\n```\n```\nabs↝ :: ... :: (Ord v, Semiring d) => Sparse v d ->\
+    \ Dense v d\nabs↝ m = \\v -> findWithDefault zero v m\nrep↝ :: ... :: (Ord v,\
+    \ Bounded v, Enum v, Semiring d, Eq d)\n=> Dense v d -> Sparse v d\nrep↝ dense\
+    \ = fromList [(v, dense v) | v <- [minBound .. maxBound], dense v ≠ zero]\n```\n\
+    ```\n\nObserve that abs↝ and rep↝ are inverse functions under the constraints\
+    \ (modulo the equivalence of explicit and implicit zeroes). With the new Sparse\
+    \ v d representation and the two inverse functions we can derive the Monoid, Module,\
+    \ Kronecker and CorrectAD instances following the approach outlined in Section\
+    \ 4.1. This results in the all-zero map being empty. Addition of maps is performed\
+    \ key-wise, but avoided if either or both maps have an implicit zero at a given\
+    \ (variable) key."
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '```
+
+    instance (Ord v, Semiring d) => Monoid (Sparse v d) where
+
+    zero = empty
+
+    (⊕) = unionWith (⊕)
+
+    ```
+
+
+    Scalar multiplication is also key-wise. As d ⊗ zero = zero (Fig. 1), we can effortlessly
+    preserve the implicit zero entries.
+
+
+    ```
+
+    instance (Ord v, Semiring d) => Module d (Sparse v d) where
+
+    d • m = fmap (d⊗) m
+
+    ```
+
+
+    The only non-zero entry for delta x is that for x.
+
+
+    ```
+
+    instance (Ord v, Semiring d) => Kronecker v d (Sparse v d) where
+
+    delta x = singleton x one
+
+    ```
+
+
+    Moreover, and crucially in what follows, we observe the following relationship
+    between this Kronecker structure and its Module and Monoid instances:
+
+
+    ```
+
+    d • delta v = singleton v d (1)
+
+    e ⊕ (d • delta v) = insertWith (⊕) v d e (2)
+
+    ```
+
+
+    Lastly, the CorrectAD instance is straightforward.
+
+
+    ```
+
+    instance (Ord v, Bounded v, Enum v, Semiring d, Eq d) => CorrectAD d v d (Sparse
+    v d) where
+
+    rep = rep_-
+
+    abs = abs_-
+
+    ```
+
+
+    In summary, all that the sparse gradient computation requires, in comparison to
+    the dense computation, is the switch from d × (Dense v d) to d × (Sparse v d).
+
+
+    ```
+
+    forwardADSparse : : (Ord v, Semiring d) => (v -> d) -> Exp v -> d × Sparse v d
+
+    forwardADsparse = abstractD
+
+    ```
+
+
+    Theorem 2 now holds by construction. We can verify this correspondence by revisiting
+    example2 at the point (5, 3).
+
+
+    ```
+
+    > let {var X = 5; var Y = 3} in tan^y (forwardADsparse var example2)
+
+    [X -> 4; Y -> 5]
+
+    ```
+
+
+    # 5. Reverse-mode automatic differentiation
+
+
+    We now develop the appropriate d-module structure that exhibits reverse-mode AD
+    as an instance of abstractD by refining the above sparse representation. Motivated
+    by the quest for improved efficiency, we optimize the time complexity of the essential
+    functions for abstract differentiation with the underlying Nagata numbers semiring:
+    scalar multiplication (⊙), addition (⊕) and Kronecker''s delta.
+
+
+    # 5.1. Accumulating multiplications
+
+
+    We start with another function-based representation. Instead of the d-module e,
+    we consider the space of d-module homomorphisms from d to e. It is a standard
+    result in commutative algebra [22, p. 18] that these two structures are isomorphic,
+    considered as d-modules. In terms of the underlying Haskell types, this amounts
+    to taking the plain function space.
+
+
+    ```
+
+    type d -> e = d -> e
+
+    ```
+
+
+    7 For the case of commutative rings and their modules; the argument for semirings
+    and modules is identical, but simpler, because there are fewer equations to check.'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: "But we intend this type d -> e to represent only the d-module homomorphisms.\
+    \ This is the case for linear functions from d to e. A function f : d -> e is\
+    \ linear^3 iff it has the multiplicative homogeneity property:\n\nf (\\x) y =\
+    \ x • f y\n\nAs the Haskell type d -> e also includes non-linear functions, we\
+    \ have to make disciplined use of d -> e, being careful to avoid the non-linear\
+    \ ones. Intuitively, we can think of d -> e as augmenting e with an accumulator\
+    \ for a scalar multiplier of type d. By supplying the scalar one, we recover the\
+    \ original module.\n\n```\n```haskell\nrep_- :: Module d e => d -> e -> (d ->\
+    \ e)\nrep_e e = \\x d -> d • e\nabs_- :: Module d e => (d -> e) -> e\nabs_- f\
+    \ = f one\n```\n```\n\nIn particular, as one e • e = e (Fig. 3), we have that\
+    \ abs_- o rep_- = id. Moreover, for linear functions also rep_- o abs_- = id.\
+    \ Now we derive Monoid, Module and Kronecker instances that make rep_- a homomorphism\
+    \ by construction. It follows that d -> e inherits its monoid structure in a pointwise\
+    \ fashion from e. For e = Dense v d, the time complexity for additive operations\
+    \ remains linear in the number of variables.\n\n```\n```haskell\ninstance Monoid\
+    \ e => Monoid (d -> e) where\n  zero = \\x d -> zero\n  f ⊕ g = \\x d -> f x d\
+    \ ⊕ g x d\n```\n```\n\nFurthermore, its d-module structure uses the function parameter\
+    \ as an accumulator for the scalar multiplier. This affords a \"strength reduction\"\
+    : the expensive scalar multiplication (•) is replaced by the cheaper semiring\
+    \ multiplication (⊕).\n\n```\n```haskell\ninstance Module d e => Module d (d ->\
+    \ e) where\n  d' • f = \\x d -> f (x ⊕ d d)\n```\n```\n\nThis reduces the time\
+    \ complexity of scalar multiplication from O(|V|) (where V denotes the number\
+    \ of variables with non-zero values in the given sparse map) for the Sparse v\
+    \ d representation to O(1) for that of d -> Sparse v d. However, the general Kronecker\
+    \ instance of d -> e still contains the expensive (•) operator.\n\n```\n```haskell\n\
+    instance Kronecker v d e => Kronecker v d (d -> e) where\n  delta v = \\x d ->\
+    \ d • delta v\n```\n```\n\nFortunately, we only require a specialized instance\
+    \ for sparse maps, which operates in constant time, as a consequence of equation\
+    \ (1) for d -> delta v.\n\n```\n```haskell\ninstance (Ord v, Semiring d) => Kronecker\
+    \ v d (d -> Sparse v d) where\n  delta = singleton\n```\n```\n\nFinally, the CorrectAD\
+    \ instance for d -> e is defined as the composition of rep_-/abs_- with rep/abs\
+    \ of e.\n\n```\n```haskell\ninstance CorrectAD v d e => CorrectAD v d (d -> e)\
+    \ where\n  rep = rep_- . o rep\n  abs = abs_- o abs_-\n```\n```\n\nIn summary,\
+    \ by using d < (d -> Sparse v d) we obtain reverse-mode AD.\n\n```\n```haskell\n\
+    reverseAD :: (Ord v, Semiring d) => (v -> d) -> Exp v -> d < (d -> Sparse v d)\n\
+    reverseAD = abstractD\n```\n```\n\nFor instance, consider the more extensive example\
+    \ expression x x × (x + 1) × (x + x), encoded in Haskell as example_3.\n\n```\n\
+    ```haskell\nexample_3 :: Exp X\nexample_3 = Times (Var X) (Times (Plus (Var X)\
+    \ One) (Plus (Var X) (Var X)))\n```\n```\n\nRunning reverse-mode AD on this expression,\
+    \ the derivative at X = 5 is 170.\n\n```\n```\n> (abs_- . tanh^n) (reverseAD (\\\
+    x -> 5) example_3)\n{X -> 170}\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '# Forward Pass:
+
+
+    ![](img/e423791fd87c536ca132e7d760db042c_12_0.png)
+
+
+    # Constructed Function Closures:
+
+
+    | Derivative | Closure | Argument (d) | Result |
+
+    | :--- | :--- | :--- | :--- |
+
+    | $c_{\oplus_2}$ | $\lambda d \rightarrow c_{r_1} (d \otimes 60) \oplus c_{\ominus_1}
+    (d \otimes 5)$ | 1 | 170 |
+
+    | $c_{\ominus_1}$ | $\lambda d \rightarrow c_{r_2} (d \otimes 10) \oplus c_{\ominus_2}
+    (d \otimes 6)$ | 5 | 110 |
+
+    | $c_{\ominus_2}$ | $\lambda d \rightarrow c_{r_3} d \oplus c_1 d$ | 50 | 50 |
+
+    | $c_{\ominus_2}$ | $\lambda d \rightarrow c_{r_4} d \oplus c_{r_4} d$ | 30 |
+    60 |
+
+    | $c_1$ | $\lambda d \rightarrow \{ \}$ | 50 | 0 |
+
+    | $c_{r_4}$ | $\lambda d \rightarrow \{ x \mapsto d \}$ | 60, 50, 30, 30 | 60,
+    50, 30, 30 |
+
+
+    Fig. 4. Reverse-mode AD of x × (x + 1) × (x + ·), for x = 5.
+
+
+    Fig. 4 shows that this computation effectively works in multiple passes, which
+    is a key characteristic of reverse-mode AD. During the forward (bottom-up) pass
+    (shown by the black arrows), the algorithm computes Nagata numbers, which contain
+    the value of each sub-expression, and the dependencies between the nodes as function
+    closures c : d ⇢ Spare v, d, e.g. N 300 c$_{\ominus_2}$ for the final outcome.
+    In the backward (top-down) pass (shown by the red left-to-right arrows), we invoke
+    the function closure c$_{\ominus_2}$ on argument one (using abs$_{\rightarrow}$).
+    It propagates the scalar accumulator downwards. At each downward step, the accumulator
+    changes to reflect how much the overall derivative changes given that the subexpression
+    changes by one. Finally, the results at the leaves are added (shown by the blue
+    right-to-left arrows) to yield the overall derivative. The conventional imperative
+    algorithms typically accomplish this with imperative updates. We derive that form
+    in Section 5.3, but first we address the linear cost of addition.
+
+
+    # 5.2. Accumulating additions
+
+
+    We can optimize the additive structure of d-modules in much the same way as we
+    have optimized scalar multiplications: by considering a representation of e →
+    e functions that have the additive homogeneity property:
+
+
+    ```
+
+    f (x ⊗ y) = x ⊗ f y
+
+    ```
+
+
+    This representation is also known as the Cayley representation [23,24] of e, the
+    most well-known example of which is difference lists [25] or Hughes lists [26].
+    Again, the Haskell type e → e includes functions that do not have the homogeneity
+    property; those are not included in the Cayley e type.
+
+
+    a Preservation of addition follows from the fact that the result of f is a semimodule.'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '```
+
+    ```
+
+    type Cayley e = e -> e
+
+    rep₀ :: Monoid e => e -> Cayley e
+
+    rep₀ e = λe'' -> e'' ⊕ e
+
+    abs₀ :: Monoid e => Cayley e -> e
+
+    abs₀ f = f zero
+
+    ```
+
+    ```
+
+
+    This representation typically implies another “strength reduction”, namely from
+    e’s binary operator (⊕) to function composition (∘). We thereby reduce the time
+    complexity of addition from O(V) for Sparse v d to O(1) for Cayley (Sparse v d).
+
+
+    ```
+
+    ```
+
+    instance Monoid (Cayley e) where
+
+    zero = id
+
+    f ⊕ g = g ∘ f
+
+    ```
+
+    ```
+
+
+    We derive the Module and Kronecker instances following our standard recipe. However,
+    we cannot eliminate the expensive operations from the Cayley e instances for Module
+    and Kronecker. Indeed, the Module instance requires converting from Cayley e to
+    e and back, where notably rep₀ re-introduces e’s expensive O(V) addition operation
+    (⊕), which we have just managed to eliminate from the Monoid instance.
+
+
+    ```
+
+    ```
+
+    instance Module d e => Module d (Cayley e) where
+
+    d • f = rep₀ . (d • abs₀ . f)
+
+    ```
+
+    ```
+
+
+    The Kronecker instance derived via rep₀ from e similarly features e’s addition
+    operation (⊕).
+
+
+    ```
+
+    ```
+
+    instance Kronecker v d e => Kronecker v d (Cayley e) where
+
+    delta v = λe -> e ⊕ delta v
+
+    ```
+
+    ```
+
+
+    Fortunately, we can again define a specialized Kronecker instance for the type
+    e = d ↝ Cayley (Sparse v d), which avoids appeal to the expensive ⊕ operation.
+    Indeed, the (⊙) operation defined on e need not make use of that defined on Cayley
+    (Sparse v d). For the specialized delta, we instead calculate:
+
+
+    ```
+
+    ```
+
+    delta v = {- definition of delta for d ↝ -}
+
+    λd -> d • delta v
+
+    = {- definition of (⊙) and delta for Cayley -}
+
+    λd -> rep₀ . (d • abs₀) . (λe -> e ⊕ delta v)
+
+    = {- definition of rep₀, and abs₀ -}
+
+    λd -> λe -> e ⊕ (d • (λe -> e ⊕ delta v) zero)
+
+    = {- β-reduction and unit of monoid (Fig. 3) -}
+
+    λd -> λe -> e ⊕ (d • delta v)
+
+    = {- equation (2) -}
+
+    λd -> λe -> insertWith (⊙) v d e
+
+    = {- η-reduction -}
+
+    λd -> insertWith (⊙) v d
+
+    ```
+
+    ```
+
+
+    Hence, we obtain an implementation of delta that takes only O(log V) time.
+
+
+    ```
+
+    ```
+
+    instance (Ord v, Semiring d) => Kronecker v d (d ↝ Cayley (Sparse v d))
+
+    where delta = insertWith (⊙)
+
+    ```
+
+    ```
+
+
+    Moreover, the Cayley e representation preserves the correctness of e.
+
+
+    ```
+
+    ```
+
+    instance CorrectAD v d e => CorrectAD v d (Cayley e) where
+
+    rep = rep₀ . rep
+
+    abs = abs₀ . abs₀
+
+    ```
+
+    ```
+
+
+    In summary, with type d ↝ Cayley (Sparse v d), both (⊙) and (⊕) take O(1) and
+    delta takes O(log V). As a consequence, the time complexity of abstractD for a
+    program with N nodes and V variables is now O(N × log V).
+
+
+    ```
+
+    ```
+
+    reverseAD_Cayley :: (Ord v, Semiring d)
+
+    => (v -> d) -> Expr v -> d × (d ↝ Cayley (Sparse v d))
+
+    reverseAD_Cayley = abstractD
+
+    ```
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'For example, as before, the derivative of example3, at X = 5 is 170.
+
+
+    ```
+
+    > (abs_o . abs_o .= tan ^^n'') (reverseAD_Cayley (λX -> 5) example3)
+
+    [X |-> 170]
+
+    ```
+
+
+    Notice that we can see values of type Cayley (Sparse v d) as a functional model
+    for computations that modify a state of type Sparse v d, i.e., immutable maps.
+
+
+    # 5.3. Array-based reverse mode
+
+
+    Performance-wise, we can do even better by switching from immutable maps to mutable
+    arrays (from Data.Array.ST) (Appendix C). Using these to represent the state,
+    instead of the purely functional implementation above, we can perform in-place
+    updates. Furthermore, the array can be provided by an implicit environment (Control.Monad.Reader).
+    Hence, instead of type Cayley (Sparse v d), we can work with the type ReaderT
+    (STArray s v) (ST s) (). It is convenient to encapsulate this rather wordy type
+    in the type synonym STCayley v d.
+
+
+    ```
+
+    type STCayley v d = VS.ReaderT (STArray s v s) (ST s) ()
+
+    ```
+
+
+    Observe that STCayley v d polymorphically quantifies over the state thread parameter
+    s, which is necessary if we want to run the computation using Haskell’s built-in
+    primitive runST :: (∀S. ST s a) -> a.
+
+
+    The isomorphism between Cayley (Sparse v d) and STCayley v d essentially converts
+    between the array and map representations.
+
+
+    ```
+
+    rep_∞ :: (λx v. Semiring d) => Cayley (Sparse v d) -> STCayley v d
+
+    rep_∞ p = foldMap (λ (v, d) -> modifyAt (⊕ v) d (toList (p zero)))
+
+    abs_∞ :: (λx v. Bounded v v. Semiring d) => STCayley v d -> Cayley (Sparse v d)
+
+    abs_∞ q = runST (do arr <- newArray (minBound, maxBound) zero
+
+    runReaderT q arr
+
+    l <- getAssocs arr
+
+    return $ foldMap (λ (v, d) -> insertWith (⊕) v d l))
+
+    ```
+
+
+    The rep_∞ function uses a helper function modifyAt to edit the value at a specific
+    position of the array, which is the counterpart of insertWith on maps.
+
+
+    ```
+
+    modifyAt :: v -> (d -> d) -> v -> STCayley v d
+
+    modifyAt f v = do arr <- ask; x <- readArr arr v; writeArray arr v (f x)
+
+    ```
+
+
+    Using the methodology of Section 4.1 the Monoid instance works out to be the generic
+    instance that is available to any type m () where m is a monad.
+
+
+    ```
+
+    instance Monoid (STCayley v d) where
+
+    zero = return ()
+
+    p ⊕ q = p >> q
+
+    ```
+
+
+    As we work with d -> STCayley v d, the Module structure of STCayley v d is not
+    used. For that reason, we skip immediately to the Kronecker instance where the
+    purpose of using mutable arrays is to reduce the O(log V) time complexity of insertWith
+    in delta to the O(1) time complexity of modifyAt.
+
+
+    ```
+
+    instance (λx v. Semiring d) => Kronecker v d (STCayley v d) where
+
+    delta v = modifyAt (⊕one) v
+
+    ```
+
+
+    In the d -> STCayley v d combination this becomes:
+
+
+    ```
+
+    instance (λx v. Semiring d) => Kronecker v d (d -> STCayley v d) where
+
+    delta v = λd -> modifyAt (⊕v) d
+
+    ```
+
+
+    The correctness of STCayley v d is established in terms of that of Cayley (Sparse
+    v d).
+
+
+    ```
+
+    instance (λx v. Ord v, Bounded v, Enum v, Semiring d, Eq d) =>
+
+    CorrectAD v d (STCayley v d) where
+
+    rep = rep_∞ . rep
+
+    abs = abs ∘ abs_∞
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: "| Differentiation Mode | Semiring Type | Time Complexity |\n|---|---|---|\n\
+    | Symbolic | (Expr v) ⋈ (Expr v) | O(N^2) |\n| Forward Mode | d ⋈ (Dense v d)\
+    \ | O(N x V) |\n| Forward Mode | d ⋈ (Sparse v d) | O(N x V) |\n| Reverse Mode\
+    \ | d ⋈ (d -> Sparse v d) | O(N x V) |\n| Reverse Mode | d ⋈ (d -> Cayley (Sparse\
+    \ v d)) | O(N x log V) |\n| Reverse Mode | d ⋈ (d -> STCayley v d) | O(N x V)\
+    \ |\n\nFig. 5. The successive refinements of the semiring type, with their corresponding\
+    \ differentiation modes and time complexity, for an expression of N nodes in V\
+    \ variables.\n\n```\nautodiff :: (Ord v, Semiring d) => (v -> d) -> Expr v ->\
+    \ Map v d\nautodiff var e = snd (go var e) one zero where\n  go :: (Ord v, Semiring\
+    \ d)\n  => (v -> d) -> Expr v -> (d, d -> Map v d -> Map v d)\n  go var (Var v)\
+    \ = (var v, \\d -> \\m -> insertWith (⊕) v d m)\n  go var Zero = (zero, \\d ->\
+    \ \\m -> m)\n  go var One = (one, \\d -> \\m -> m)\n  go var (Plus e1 e2) = let\
+    \ (f, df) = go var e1\n                        (g, dg) = go var e2\n         \
+    \               in (f ⊕ g, \\d -> \\m -> df d (dg d m))\n  go var (Times e1 e2)\
+    \ = let (f, df) = go var e1\n                         (g, dg) = go var e2\n  \
+    \                       in (f ⊗ g, \\d -> \\m -> df (d ⊗ g) (dg (d ⊗ f) m))\n\
+    ```\n\nFig. 6. Fully inlined AD code based on the d ⋈ (d -> Cayley (Sparse v d))\
+    \ semiring.\n\nFinally, we get the resulting monadic definition for reverse-mode\
+    \ AD.\n\n```\nreverseADm :: ((x v, Semiring d)\n=> (v -> d) -> Expr v -> d ⋈ (d\
+    \ -> STCayley v d)\nreverseADm = abstractD\n```\n\nWe use this efficient version\
+    \ of reverse-mode AD on example₂ as follows:\n\n```\n> (abs_ ⊙ abs_ ⊙ ... ⊙ tan^n)\
+    \ (reverseADm (x -> 5) example₂)\n(x -> 170)\n```\n\n# 5.4. Summary\n\nFig. 5\
+    \ summarizes the successive differentiation algorithms we have constructed by\
+    \ instantiating abstractD with semiring types d ⋈ e for different choices of tangent\
+    \ type e. It also shows the worst-case time complexity of each algorithm. Notice\
+    \ that, when V is large, i.e., there are many variables, reverse-mode AD, and\
+    \ the last two variants in particular, is the most interesting. However, for few\
+    \ variables, forward-mode AD is preferable as it only takes a single pass.\n\n\
+    Finally, in Fig. 6 we collapse the layers of abstraction to show what the one-but-last\
+    \ entry of Fig. 5—our most efficient purely functional reverse-mode AD algorithm—looks\
+    \ like after aggressive inlining. For the sake of simplicity we have also replaced\
+    \ the custom algebraic datatype for Nagata numbers with plain Haskell tuples.\n\
+    \n# 6. Extensions\n\nOur setup allows for various extensions that make AD more\
+    \ useful. Notice that, in these extensions, we often revert to the more naive\
+    \ forwardAD_dense with the Dense representation for the sake of brevity.\n\n#\
+    \ 6.1. Additional primitives\n\nWe have so far focused only on the minimal Semiring\
+    \ interface. Yet, it is well-known that dual numbers (and, by extension, Nagata\
+    \ numbers) easily adapt to other primitives, such as trigonometric, exponential\
+    \ and logarithmic functions. We"
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: "model such functions as subclasses of the Semiring type class. For instance,\
+    \ we can extend the approach from semirings to rings by creating a Ring subclass\
+    \ with a negate method for additive inverses.\n\n```\n```\nclass Semiring d =>\
+    \ Ring d\n  where negate :: d -> d\ninstance (Module d e, Ring d) => Ring (d ×\
+    \ e)\n  where negate (N f) df = N (f) (-one • df)\n```\n```\n\nHere, we use the\
+    \ fact that Haskell allows us to write -x for negate x.\n\nLikewise, we collect\
+    \ trigonometric functions in Trig, whose Nagata number instance relies on the\
+    \ well-known chain rule. In general, to enrich d (and hence Expr v) with differentiable\
+    \ primitives requires us to know both the operation (sin), and its derivative\
+    \ (cos). Here, in order to be able to negate sin as the derivative of cos, d must\
+    \ be a Ring.\n\n```\n```\nclass Trig d where\n  sin :: d -> d\n  cos :: d -> d\n\
+    instance (Module d e, Trig d, Ring d) => Trig (d × e)\n  where sin (N f) df =\
+    \ N (sin f) (cos • df)\n  cos (N f) df = N (cos f) (-sin • df)\n```\n```\n\nObserve\
+    \ that, while d must now also have a Trig instance, no additional demands are\
+    \ made of e. Hence, all the AD variations we have covered, which are only based\
+    \ on variations of e, also support additional primitive functions.\n\n# 6.2. Non-commutative\
+    \ semirings\n\nWe can generalize our approach from commutative semirings to semirings\
+    \ with non-commutative multiplication (⊗), such as (square) matrices over semi-rings\
+    \ and the semiring of formal languages over an alphabet.\n\nThe key change in\
+    \ our approach is that rather than starting from the following rule for symbolic\
+    \ differentiation, which exploits the commutativity:\n\n```\nderive x (Times e1\
+    \ e2) = (e2 ⊗ derive x e1) ⊕ (e1 ⊗ derive x e2)\n```\n\nwhere e1 and e2's derivatives\
+    \ are both scaled on the left, we instead use the more conventional rule:\n\n\
+    ```\nderive x (Times e1 e2) = (derive x e1 ⊗ e2) ⊕ (e1 ⊗ derive x e2)\n```\n\n\
+    which scales derive x e2 on the left and derive x e1 on the right.\n\nMore abstractly,\
+    \ we can model this with d-d-bimodules that feature distinct left-scaling and\
+    \ right-scaling operators.\n\n```\n```\nclass Semiring d => Bimodule d e | e ->\
+    \ d where\n  (⊙) :: d -> e -> e\n  (⊙) :: e -> d -> e\n```\n```\n\nNote that,\
+    \ for every d whose multiplication is commutative, every Module d e instance gives\
+    \ rise to a Bimodule d e instance, by taking the two scaling operations to be\
+    \ the same underlying (⊙) operation. If multiplication in d is not commutative,\
+    \ nevertheless the distinguished case e = d yields a Bimodule structure with (⊙)\
+    \ resp. (⊙) given by left-(resp. right-) multiplication (see below). However,\
+    \ it is not sufficient to take (a restricted subset of) d -> e as a representative\
+    \ of the set of Bimodule homomorphisms from d to e.\n\nInstead, we can avoid introducing\
+    \ this new d-d-bimodule abstraction and reuse the existing Module-related infrastructure\
+    \ by means of (d, d)-modules. At the core of this idea is the following semiring\
+    \ construction for pairs.\n\n```\n```\ninstance Semiring d => Semiring (d, d)\
+    \ where\n  zero = (zero, zero)\n  one = (one, one)\n  (lx, rx) ⊕ (ly, ry) = (lx\
+    \ ⊕ ly, rx ⊕ ry)\n  (lx, rx) ⊗ (ly, ry) = (lx ⊗ ly, ry ⊗ rx)\n```\n```\n\nThis\
+    \ is the usual component-wise instance, with one exception: the factors in the\
+    \ multiplication are flipped for the second component. Then d is a (d, d) module\
+    \ as follows:\n\n```\n```\ninstance Semiring d => Module (d, d) d where\n  (l,\
+    \ r) • d = l ⊗ d ⊗ r\n```\n```"
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: "Here, the first component of the tuple scales from the left and the second\
+    \ component scales from the right. We can make use of the left and right injections\
+    \ below to turn a `d` value either into a left or right factor, using the neutral\
+    \ element `one` for the other factor.\n\n```\ninl, inr :: Semiring d => d -> (d,\
+    \ d)\ninl x = (x, one)\ninr y = (one, y)\n```\n\nMore generally, with a `(d, d)`-module\
+    \ `e` we obtain a variation on the Nagata numbers:\n\n```\ninstance (Semiring\
+    \ d, Module (d, d) e) => Semiring (Nagata d e) where\n  zero = N zero zero\n \
+    \ one = N one zero\n  N fj dg + N dg' dg = N (fj ⊕ dg') (dj ⊕ dg)\n  N fj dg ⊗\
+    \ N dg dg' = N (fj ⊗ dg) (((inr • g • dg') ⊗ (inl • f • dg)))\n```\n\nThis one\
+    \ localized modification seamlessly integrates non-commutative multiplication\
+    \ into our AD variants. In particular, following the earlier recipe we now use\
+    \ the `(d, d) → e` representation for accumulating multiplications, which is that\
+    \ of `(d, d) → e` functions that take two `d` accumulators. The scalar multiplication\
+    \ of this representation updates both accumulators.\n\n```\ninstance (Semiring\
+    \ d, Module (d, d) e) => Module (d, d) ((d, d) -> e) where\n  (d1', d2') • f =\
+    \ λ(d1, d2) -> f (d1' ⊗ d1, d2' ⊗ d2)\n```\n\nThis shows that the first accumulator\
+    \ is for multiplications on the left and the other for multiplications on the\
+    \ right.\n\nIn short, `(d, d)`-modules support non-commutative multiplication\
+    \ with minimal upheaval.\n\n# 6.3. Overloading initial expressions\n\nAutomatic\
+    \ differentiation avoids the intermediate symbolic derivative when computing precise\
+    \ numeric results. This is shown by the elimination of `eval` in Section 2.4,\
+    \ which was invoked twice in the naive implementation. In this subsection we show\
+    \ that, by overloading operators in the initial expression and thereby avoiding\
+    \ the initial symbolic expression, we can further eliminate the `eval` call and\
+    \ thus further reduce verbosity.\n\nIn particular, we assume that the initial\
+    \ expression is not given as a value of type `Expr v`, but as a polymorphic function\
+    \ of type `∀d.Semiring d => d → ... → d → d` with as many inputs of type `d` as\
+    \ there are variables `v`. For example, `example2` from Section 2.5, can be written\
+    \ as a polymorphic function of arity 2.\n\n```\nexample'_2 :: Semiring d => d\
+    \ -> d -> d\nexample'_2 x y = (x ⊗ y) ⊗ x ⊕ one\n```\n\nThe mechanism by which\
+    \ deriving `example'_2` is that of fold/build fusion [27], applied to `eval var\
+    \ example2`, where `example2` is an instance of the builder pattern, building\
+    \ a symbolic expression, and `eval` is a fold. Fold/build fusion eliminates the\
+    \ intermediate symbolic structure and directly builds the result of evaluation.\
+    \ Gibbons and Wu [28] show how to exploit such structure systematically (generalising\
+    \ to all algebraic structures defined by Haskell type classes, not only `Semiring`s),\
+    \ by restructuring the underlying terms in terms of symbolic expressions `Expr\
+    \ v` with the corresponding shallow embedding `VarSemiring d => (v -> d) -> d`.\
+    \ Here, `eval` is one half of an isomorphism pair between these two types, with\
+    \ the inverse given by instantiation at `Var`.\nHence, instead of the verbose\
+    \ calls (left), we readily invoke `example'_2` (right).\n\n```\n> let {var X =\
+    \ 5; var Y = 3}        > example'_2 5 3\n21                                  21\n\
+    > let {var X = 5; var Y = 3}        > example'_2 (N 5 (delta X))\n> in forwardAD.sparse\
+    \ var example2  (N 3 (delta Y))\nN 21 (X -> 4; Y -> 5)               N 21 (X ->\
+    \ 4; Y -> 5)\n```\n\nBoth cases avoid the interpretative overhead of evaluating\
+    \ the symbolic expression. Yet, we can also recover the original symbolic expression.\n\
+    \n```\n> example'_2 (Var X) (Var Y)\nPlus (Plus (Times (Var X) (Var Y)) (Var X))\
+    \ One\n```"
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/e423791fd87c536ca132e7d760db042c_18_0.png)
+
+
+    # 6.4. Higher derivatives
+
+
+    Higher derivatives are obtained through repeated differentiation. For instance,
+    the second-order derivative is the derivative of the derivative. The naive approach
+    to compute the second-order derivative at a point is through repeated evaluation
+    of the symbolic derivative.
+
+
+    ```
+
+    derive2nd :: (Eq v, Semiring d) => (v -> d) -> Expr v -> Dense v (Dense v d)
+
+    derive2nd_var e = \x y -> eval var tan^n (forwardAD_Dense Var
+
+    (tan^n (forwardAD_Dense (var x)) y))
+
+    ```
+
+
+    The Haskell call derive2nd var e x y corresponds to the mathematical notation
+    ∂/∂y (∂/∂x e)|var. By using naturality of tan^n and eval''s fusion property, we
+    merge the three traversals of derive2nd into a single traversal (see Appendix
+    A):
+
+
+    ```
+
+    derive2nd_var var e = \x y -> tan^n (tan^n (forwardAD_Dense gen e x) y)
+
+    where gen z = N (var z) (delta z)
+
+    ```
+
+
+    This instance of abstractD uses the (d <- (Dense v d))-module of nested Nagata
+    numbers of type (d <- (Dense v d)) × (Dense v d <- (Dense v d)).
+
+
+    The nested derivative (Fig. 7) of the second-order derivative contains redundancy:
+    the value ∂²/∂x² appears twice. This redundancy gets worse as the order (and thus
+    the level of nesting) increases. In general, for the nth-order derivative we get
+    2^n values of which only n + 1 are distinct. To avoid this, it is more economical
+    to use a compact representation.
+
+
+    ```
+
+    data N_2nd v d = N_2nd d (Dense v (d <- (Dense v d)))
+
+    ```
+
+
+    The corresponding forward AD is similar to abstractD:
+
+
+    ```
+
+    forwardAD_2nd :: (Semiring d) => (v -> d) -> Expr v -> N_2nd v d
+
+    forwardAD_2nd_var = eval gen where gen x = N_2nd (var x) (delta x)
+
+    ```
+
+
+    Running this on example3, gives the evaluation result, first and second derivative:
+
+
+    ```
+
+    -> forwardAD_2nd (\X -> 5) example3
+
+    N_2nd 300 (\X -> N [ prim'' = 170, tan^n = (\X -> 64) ])
+
+    ```
+
+
+    This generalizes straightforwardly to other higher derivatives.
+
+
+    All higher partial derivatives In the extreme case where n = ∞, the economical
+    representation becomes an infinite stream of all successive derivatives [29].
+    This stream of derivatives has the form x :< dxs where x is the value and dxs
+    are all higher-order partial derivatives with respect to all variables v.10
+
+
+    ```
+
+    data Stream v d = d :< Dense v (Stream v d)
+
+    ```
+
+
+    Then, the semiring operations for the infinite stream of successive derivatives
+    are defined as follows.
+
+
+    ```
+
+    instance Semiring d => Semiring (Stream v d) where
+
+    zero = zero :< zero
+
+    one = one :< zero
+
+    (x :< xs) ⊕ (y :< ys) = (x ⊕ y) :< (xs ⊕ ys)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '```
+
+    xcs ⊗ yys = (x ⊗ y) : λv → ((xs ⊗ yys) ⊕ (xss ⊗ ys v))
+
+    where xss = (x :< xs)
+
+    yys = (y :< ys)
+
+    ```
+
+
+    The `Module` and `Kronecker` instances follow naturally from this definition.
+    They allow us to automatically differentiate a symbolic expression and obtain
+    its stream (of series of derivatives).
+
+
+    ```
+
+    forwardADAll :: (Eq v, Semiring d) => (v -> d) -> Expr v -> Stream d
+
+    forwardADAll var = eval gen where gen y = var y :< delta y
+
+    > forwardADAll (λX -> (5 :Int)) example₃
+
+    300 :< (X -> 170 :< (λX -> 64 :< (λX -> 12 :< (λX -> 0 :< ...
+
+    ```
+
+
+    # Hybrid automatic differentiation
+
+
+    In second-order optimization, it is often preferred to use a hybrid approach,
+    i.e., combine forward mode and backward mode to get a more efficient algorithm.
+    For instance, when taking a function''s curvature into account, it is necessary
+    to compute the Hessian¹¹ applied to a vector. Pearlmutter [31] introduces this
+    mix of the two modes. In a forward sweep the first derivative is computed, whereupon
+    the second, reverse sweep computes the second-order derivative at a point. This
+    can be obtained by exploiting the d-module isomorphisms to work with
+
+
+    ```
+
+    data Nᵢ v d = Nᵢ d (Dense v (d (<- (Cayley (Sparse v d)))))
+
+    ```
+
+
+    # 6.5. Basic sharing of subexpressions
+
+
+    Our approach so far ignores any sharing in the source expression. Consider for
+    instance example₄, which denotes the expression (x + x) · (x + x), but at the
+    level of Haskell shares the two occurrences of x + x by means of a `let` binding.
+
+
+    ```
+
+    example₄ :: Expr X
+
+    example₄ = let y = Plus (Var X) (Var X) in Times y y
+
+    ```
+
+
+    The `eval` recursion scheme used by `abstractD` does not see the `let` binding
+    and processes both occurrences of x + x. In particular, `abstractD (λX -> 5) example₄`
+    reduces to (N 5 one ⊕ N 5 one) ⊗ (N 5 one ⊕ N 5 one) which features two (⊕) operations
+    instead of one. To avoid this recomputation of intermediate results, we extend
+    the symbolic expression language with a let-construct so that we can write example₄''
+    with this new syntax.
+
+
+    ```
+
+    data Expr v = ... example₄'' :: Expr XY
+
+    | Let v (Expr v) example₄'' = Let Y (Plus (Var X) (Var X))
+
+    (Expr v) (Times (Var Y) (Var Y))
+
+    ```
+
+
+    We adapt the evaluator accordingly with the standard semantics for let-binding.
+
+
+    ```
+
+    eval :: (Eq v, Semiring d) => (v -> d) -> Expr v -> d
+
+    ...
+
+    eval gen (Let y e₁ e₂) = let d₁ = eval gen e₁;
+
+    gen₂ x = if x == y then d₁ else gen x
+
+    in eval gen₂ e₂
+
+    ```
+
+
+    Observe that, because e₂ has the additional `let`-bound variable in scope, we
+    evaluate it with the extended generator `gen₂`, which maps the free variables
+    to their given `gen` meaning and the new `let`-bound variable `y` to the meaning
+    `d₁` of `e₁`. The definition of `abstractD` is as before, now with support for
+    sharing.
+
+
+    Sharing for sparse maps Now, `abstractD (λX -> 5) example₄''` reduces to an intermediate
+    form with only one (⊕) operation, and if we commit for the tangent to the sparse
+    module, this reduces further in a way that nicely preserves the sharing.
+
+
+    ```
+
+    let y = N 5 ⊕ₑ N 5 one in (y ⊗ y)
+
+    ≡ let y = N 5 (X -> 1) ⊕ₑ N 5 (X -> 1) in (y ⊗ y)
+
+    ≡ let y = N 10 (fromList [(1, 2)]) in (y ⊗ y)
+
+    ≡ N (10 x 10) (fmap (10 x) (X -> 2) @|fmap (10 x) (X -> 2))
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '```
+
+    ≡ N 100 ((X ↦ 20) ⊕ (X ↦ 20))
+
+    ≡ N 100 (X ↦ 40)
+
+    ```
+
+
+    Sharing for functions. However, if we use a function-based module representation,
+    such as Dense and our three reverse-mode variants, then the (⊕) is duplicated
+    again later in the evaluation. This happens because the (⊕) under the function
+    binder is not reduced until the function is applied. When both references of the
+    shared function are applied, the (⊕) in its body will be evaluated each time.
+    The following shows this for dense functions because it is the simplest of the
+    function-based representations.
+
+
+    ```
+
+    let y = N 5 ⊕ N 5 one in (y ⊕ y)
+
+    let y = N 5 (X ↦ 1) ⊕ N 5 (X ↦ 1) in (y ⊕ y)
+
+    ≡ let y = N 10 (X ↦ (X ↦ 1) ⊕ (X ↦ 1)) in (y ⊕ y)
+
+    ≡ (N 10 (X ↦ (X ↦ 1) ⊕ (X ↦ 1)) ⊕ (X ↦ 1) ⊕ ...
+
+    ≡ N (10 × 10) ((X X'' ↦ (X X'' ↦ 10 × (X X'' ↦ 1) ⊕ ...
+
+    (X X'' ↦ 1) ⊕ ...
+
+    (X ↦ 1) X'') X'''' +
+
+    (X ↦ 1) X'') X''''
+
+    ```
+
+
+    Fortunately, we can address the problem of sharing for function-representations
+    with a custom symbolic rule for Let (Proof in Appendix B).
+
+
+    > Lemma 1 (Let rule).
+
+    > ∂(let y = e₁ in e₂) / ∂xᵢ = ∂e₂ / ∂y | y=e₁ × ∂e₁ / ∂xᵢ + ∂e₂ / ∂xᵢ | y=e₁
+
+
+    For instance, the expression example₄ has partial derivative:
+
+
+    ```
+
+    ∂example₄ / ∂x = ∂y × y / ∂x | y=x+x × ∂x+x / ∂x + ∂y × y / ∂x | y=x+x
+
+    = ((x + x) + (x + x)) × (1 + 1) + 0
+
+    ```
+
+
+    This formula (Lemma 1) is captured in a Letin type class with a method letin,
+    which in turn is defined in terms of abs :: e → v → d of the CorrectAD type class,
+    that extracts the v-component of a d-module e.
+
+
+    ```
+
+    class CorrectAD v e ⇒ Letin v d e where
+
+    letin :: v → e → e → e
+
+    letin y d e₁ e₂ = (abs d₂ y) • e₁) ⊕ d₂
+
+    ```
+
+
+    We specialize the evaluator used by abstractD to use this formula, also specializing
+    its type d to d ⋈ e.
+
+
+    ```
+
+    eval :: (Eq v, Letin v d e) ⇒ (v → d ⋈ e) → Exp v → d ⋈ e
+
+    ...
+
+    eval gen (Let y e₁ e₂) =
+
+    let N f₁ d f₁ = eval gen e₁
+
+    gen₂ x = λx → if x ≡ y then N f₁ (delta y) else gen x
+
+    N f₂ d₂ = eval gen₂ e₂
+
+    in N f₂ (letin y d f₂ d₂)
+
+    ```
+
+
+    This evaluator uses the standard substitution behavior for the primal, but defers
+    to the letin method of the Letin type class for the behavior of the tangent. If
+    we inline and specialize letin for d ⇀ Cayley (Sparse v d), we get a tight definition
+    that computes the maps produced by dₑ and dₑ only once.
+
+
+    ```
+
+    instance (Ord v, Semiring d) ⇒ Letin v d (Cayley (Sparse v d)) where
+
+    letin y d e₁ e₂ = λm m → let m'' = dₑ m in dₑ₁ (m'' ?y m'')
+
+    ```
+
+
+    With the above definition, the let-sharing is properly preserved.'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: "# Complications\n\nIn order to get the main points across, we have ignored\
+    \ two complicating aspects above.\n\nNestly, the way the Let case of eval extends\
+    \ the generator gen results in a lookup time that is linear in the number (L)\
+    \ of nested let-bindings. A more efficient datastructure (a map or array) can\
+    \ be used instead to improve the lookup time complexity to O(log L) or O(1).\n\
+    \nSecondly, we have implicitly assumed that let-bound variables do not shadow\
+    \ other variables, be they free variables or other let-bound variables. To support\
+    \ shadowing, the partial derivative for the shadowed variable y—or at least, as\
+    \ much of it as has been accumulated so far in m—should be saved before running\
+    \ dx2 and restored afterwards. Regardless, other than for debugging purposes,\
+    \ one may want to purge the partial derivative for the let-bound variable y from\
+    \ m' as it is no longer relevant. Both together are accomplished as follows.\n\
+    \n```\nletin y de1 de2 = λn m → let old = lookup m y\n                       \
+    \         m' = de2 n m\n                                in de1 (m' ! y) (update\
+    \ (const old) y m')\n```\n\n# 7. Related work\n\nThere is a vast amount of literature\
+    \ on automatic differentiation since the idea was first presented by Wengert [3].\n\
+    \n# State-of-the-art AD algorithms\n\nMuch of the effort in recent years has been\
+    \ devoted to establishing the correctness of different AD variants, and to extending\
+    \ the supported language features. Most works focus on the operational semantics\
+    \ of formal calculi they define, and reason about the correctness of their AD\
+    \ approaches in operational terms. One of the most comprehensive and accessible\
+    \ of these, in our view, is the recent work of Krawiec et al. [12]. It too goes\
+    \ through several steps of refinement, from a standard forward mode AD to an efficient\
+    \ reverse mode variant. While we present several purely functional map-based variants,\
+    \ their main focus is the imperative version, which uses a defunctionalized form\
+    \ of d → STCovy d representation that resembles the so-called trace or Wengert\
+    \ list [3] used in many AD implementations. They cover several additional language\
+    \ features, which we believe can also be incorporated into our approach, such\
+    \ as support for higher-order functions, sum and product types.\n\nA virtue of\
+    \ their paper is in identifying criteria for a (successful!) approach to AD: that\
+    \ it should demonstrate efficient reverse-mode AD; that it be higher-order; that\
+    \ it be asymptotically efficient; and that it be provably correct. The approach\
+    \ we have presented here, thanks to our careful algebraic treatment, ensures that\
+    \ (functional) correctness is more or less immediate, and that our approach has\
+    \ type-class efficiency relative to the computation of the primal follows from\
+    \ our use of a single abstract constraint class abstractD, based on eval; and\
+    \ our ability to capture all the various modes of AD may be seen as arising by\
+    \ careful instantiation of Nagata's foundational construction, which nevertheless\
+    \ may be summarised in completely elementary terms by the Semiring typeclass instance\
+    \ given in Section 3.2.\n\nThe authors of [12] give only informal arguments for\
+    \ the relation between different variants, but the correctness proof of their\
+    \ final version constitutes a non-trivial effort involving a Kripke logical relation.\
+    \ This proof approach is inspired by the earlier work of Huot et al. [32,33] on\
+    \ a logical-relation-based correctness proof of a basic forward mode algorithm\
+    \ for a higher-order language.\n\nAnother recent work in a similar vein is that\
+    \ of Smeding and Vákár [34], who derive several variants of reverse-mode AD. They\
+    \ use “well-known program transformations”, reasoning mostly in algorithmic terms.\n\
+    \n# AD and functional programming\n\nKarczmarczuk [29] shows how to use type classes\
+    \ to overload arithmetic operations to obtain forward-mode AD with dual numbers,\
+    \ and generalizes that to an infinite stream of higher derivatives.\n\nElliott\
+    \ takes a more algebraic approach based on program derivation. First, he explores\
+    \ a derivation of forward-mode AD, focusing on the chain rule as the guiding principle,\
+    \ and generalizing from scalars to vector spaces [35]. Next, he shifts his view\
+    \ to derivatives as linear maps and the categorical structure of differentiation\
+    \ [36]. More recently, Elliott has also explored the application of automatic\
+    \ differentiation to languages [37].\n\nElm et al. [38] follow Elliott's lead,\
+    \ with their functional analysis for differentiation based on linear functions.\
+    \ They show that symbolic and forward-mode derivatives follow from the same rules,\
+    \ but reverse-mode essentially computes the adjoint of a derivative. Adjoints\
+    \ arise by taking a curried form of d-valued inner product structure on vector\
+    \ spaces e, giving rise to a duality between e and the linear function space e\
+    \ → d. Our more general setting does not consider such normed/inner product structure\
+    \ on our d-modules e, but we expect that such richer structure may be smoothly\
+    \ incorporated into a general picture, and we leave this as a topic for future\
+    \ work.\n\nWang et al. [39] show that the two passes of reverse-mode AD can be\
+    \ conveniently implemented using delimited control in an impure functional setting\
+    \ like Scala; they provide no formal argument for its correctness.\n\nKmett's\
+    \ ad library [40] is a Haskell implementation based on “Featmutter and Siskind's\
+    \ work [41], which explained how to incorporate Ad as a first-class function in\
+    \ a functional language. The library exploits Haskell's abstraction and overloading\
+    \ mechanisms to support different AD modes.\n\n13 Observe that features like higher-order\
+    \ functions are parametric with respect to the semi-ring type and can thus be\
+    \ used as is."
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'Oleksandr et al. [42] discuss the challenges in automatic differentiation of
+    higher-order functions, for example functions in curried form.
+
+
+    # Nagata numbers.
+
+
+    As far as we know, our use of Nagata''s idealization of a module ("Nagata numbers")
+    in the context of AD is novel. Most works in the AD literature use the standard
+    homogenous dual numbers. Some, like those of Krawiec et al. [12] and Smeding and
+    Vákár [34], do feature various heterogeneous dual numbers, but they do not observe
+    that these are instances of a general structure. Nagata originally defined his
+    idealization of a module over a ring. Our weakening to consider only semiring
+    structure is just cosmetic, and the extension of our methods to consider a (commutative)
+    ring d of coefficients is straightforward, and we appeal to it without comment
+    in Section 6. See also [43] for a comprehensive survey.
+
+
+    # Leibniz vs. Newton
+
+
+    One way to understand our contribution, in contrast to those of Elliott and others,
+    is that while they take a ''Newtonian'' view of AD as an algebraic operation on
+    spaces of (abstract) functions, we take the ''Leibnizian'' approach of understanding
+    both AD and symbolic differentiation as an algebraic operation on a language Expr
+    v of ''(concrete) symbolic expressions''. This in particular contrasts with Baydin
+    et al.''s assertion [2, Section 2.2, under ''What AD Is Not''] that AD is ''not
+    symbolic differentiation'', but echoes their observation, following Griewank [44],
+    that it has a ''two-sided nature that is partly symbolic and partly numerical''.
+
+
+    # 8. Conclusion
+
+
+    Having identified three algebraic abstractions, we can write symbolic differentiation,
+    forward-mode and reverse-mode AD as different instances of one and the same abstract
+    algorithm. A significant contribution is the observation that we can generalize
+    the well-known dual numbers into the Nagata idealization abstraction d κ ε for
+    any d-module ε, which allows the ε parameter to vary independently of the semiring
+    d of coefficients, and that we can use abstract Kronecker deltas to represent
+    partial derivatives. Furthermore, guided by structure-preserving maps in the form
+    of Kronecker isomorphisms, we have taken successive steps in optimising the representation,
+    in a correct-by-construction manner, from basic symbolic differentiation via forward-mode
+    AD to the (typically) much more efficient reverse-mode AD.
+
+
+    Future work includes further exploring matrix differentiation with this framework.
+    Square matrices form a (non-commutative) semiring but matrices of arbitrary dimensions
+    form an extra challenge, in particular when reflecting these dimensions in the
+    types.
+
+
+    # CRediT authorship contribution statement
+
+
+    Birthe van den Berg: Conceptualization, Formal analysis, Investigation, Methodology,
+    Project administration, Software, Writing – original draft, Writing – review &
+    editing. Tom Schrijvers: Conceptualization, Formal analysis, Funding acquisition,
+    Investigation, Methodology, Software, Writing – original draft, Writing – review
+    & editing. James McKinna: Conceptualization, Formal analysis, Investigation, Methodology,
+    Software, Writing – review & editing. Alexander Vandenbroucke: Conceptualization,
+    Formal analysis, Investigation, Methodology, Software, Writing – original draft,
+    Writing – review & editing.
+
+
+    # Declaration of competing interest
+
+
+    Co-author currently employed by Standard Chartered, UK.
+
+
+    # Acknowledgements
+
+
+    This work has been funded by KU Leuven''s BOF grant number C14/20/079, and by
+    the Flemish Fund for Scientific Research (FWO) grant number G0A9423N. The third
+    author would like to thank Bernhard Rybkowicz for background insight into Nagata''s
+    construction.
+
+
+    # Appendix A. Derivation of the second-order derivative
+
+
+    This appendix expands on Section 6.4''s claim that we can derive from the specification
+
+
+    ```
+
+    derive_e2nd :: (Eq v, Smering d) => (v -> d) -> Expr v -> Dense v (Dense v d)
+
+    derive_e2nd var y x = eval var (tan^n (forwardAD_Dense Var
+
+    (tan^n (forwardAD_Dense Var e) y)) x)
+
+    ```
+
+
+    that consists of three successive appeals to eval, an equivalent version that
+    is an instance of abstractD (which consists of a single eval):'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '```
+
+    derive_pwd ∀ var x y = e tan^n (tan^n (abstractD gen e) x) y
+
+    where gen z = N (var z) (delta z)
+
+    ```
+
+
+    We start the derivation from a point-free formulation of derive_pwd :
+
+
+    ```
+
+    λ y x → eval var ∘ (Sx) ∘ tan^n ∘ forwardAD_Dense Var
+
+    ∘ (Sy) ∘ tan^n ∘ forwardAD_Dense Var
+
+    = { naturality of function application - }
+
+    λ y x → (Sx) ∘ fmap (eval var) ∘ tan^n ∘ forwardAD_Dense Var
+
+    ∘ (Sy) ∘ tan^n ∘ forwardAD_Dense Var
+
+    = { - n - reduction - }
+
+    λ y → fmap (eval var) ∘ tan^n ∘ forwardAD_Dense Var
+
+    ∘ (Sy) ∘ tan^n ∘ forwardAD_Dense Var
+
+    = { - naturality of function application - }
+
+    λ y → (Sy) ∘ fmap (fmap (eval var) ∘ tan^n ∘ forwardAD_Dense Var)
+
+    ∘ tan^n ∘ forwardAD_Dense Var
+
+    = { - n - reduction - }
+
+    fmap (fmap (eval var) ∘ tan^n ∘ forwardAD_Dense Var)
+
+    ∘ tan^n ∘ forwardAD_Dense Var
+
+    = { - naturality of tan^n, see equation (A.1) below - }
+
+    fmap (tan^n ∘ bimap (eval var) (fmap (eval var))) ∘ forwardAD_Dense Var
+
+    ∘ tan^n ∘ forwardAD_Dense Var
+
+    = { - eval fusion - }
+
+    fmap (tan^n ∘ eval gen'' ∘ tan^n ∘ forwardAD_Dense Var
+
+    where gen'' z = N (var z) (delta z)
+
+    = { - fmap fusion + naturality of tan^n - }
+
+    fmap (tan^n ∘ tan^n ∘ bimap (eval gen'') (fmap (eval gen''))
+
+    ∘ forwardAD_Dense Var
+
+    where gen'' z = N (var z) (delta z)
+
+    = { - eval fusion - }
+
+    fmap (tan^n ∘ tan^n ∘ eval gen"
+
+    where gen" z = N (N (var z) (delta z)) (delta z)
+
+    = { - abstractD definition - }
+
+    fmap tan^n ∘ abstractD
+
+    where gen z = N (var z) (delta z)
+
+    ```
+
+
+    The steps involving the naturality of tan^n do not concern the Functor instance
+    of Natagata numbers, but their Bifunctor instance, which allows to vary both components.
+
+
+    ```
+
+    instance Bifunctor (<:>) where
+
+    bimap f g (N d e) = N (f d) (g d)
+
+    ```
+
+
+    The general naturality property of tan^n : ∀ v d e. e -> e for this Bifunctor
+    instance is:
+
+
+    ```
+
+    g ∘ tan^n = tan^n ∘ bimap f g
+
+    ```
+
+
+    However, for the specialized type tan^n : ∀ v d. (Dense v d) → Dense v d where
+    the two components are not independent, we also have this specialized naturality
+    property:
+
+
+    ```
+
+    fmap f ∘ tan^n = tan^n ∘ bimap f (fmap f) (A.1)
+
+    ```
+
+
+    # Appendix B. Proof of Lemma 1
+
+
+    Proof. We prove this rule by means of the chain rule for multi-variate functions:
+
+
+    ```
+
+    \frac{\partial f(e_1, ..., e_n)}{\partial x} = \sum_{i=1}^n \left( \frac{\partial
+    f(x_1, ..., x_n)}{\partial x_i} \right|_{x_1=e_1, ..., x_n=e_n} \times \frac{\partial
+    e_i}{\partial x} \right)
+
+    ```
+
+
+    Define f as f (y, x1, ..., xn) = e2 where x1, ..., xn comprise all the free variables
+    of e1 and e2. Then we have that f (e1, x1, ..., xn) = let y = e1 in e2.'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: "Using this in combination with the chain rule yields:\n\n\\frac{\\partial (\\\
+    mathbf{let}\\ \\mathbf{y} = \\mathbf{e}_1\\ \\mathbf{in}\\ \\mathbf{e}_2)}{\\\
+    partial x_i} = \\frac{\\partial f (\\mathbf{e}_1, \\dots, \\mathbf{x}_n)}{\\partial\
+    \ x_i}\n= \\left. \\frac{\\partial f (\\mathbf{y}, \\mathbf{x}_1, \\dots, \\mathbf{x}_n)}{\\\
+    partial \\mathbf{y}} \\right|_{\\mathbf{y}=\\mathbf{e}_1, \\mathbf{x}_1=\\mathbf{x}_1,\
+    \ \\dots, \\mathbf{x}_n=\\mathbf{x}_0} \\times \\frac{\\partial \\mathbf{e}_1}{\\\
+    partial x_i}\n+ \\sum_{j=1}^{n} \\left( \\left. \\frac{\\partial f (\\mathbf{y},\
+    \ \\mathbf{x}_1, \\dots, \\mathbf{x}_n)}{\\partial \\mathbf{x}_j} \\right|_{\\\
+    mathbf{y}=\\mathbf{e}_1, \\mathbf{x}_1=\\mathbf{x}_1, \\dots, \\mathbf{x}_n=\\\
+    mathbf{x}_0} \\times \\frac{\\partial \\mathbf{x}_j}{\\partial x_i} \\right)\n\
+    = \\frac{\\partial \\mathbf{e}_2}{\\partial \\mathbf{y}} \\bigg|_{\\mathbf{y}=\\\
+    mathbf{e}_1} \\times \\frac{\\partial \\mathbf{e}_1}{\\partial x_i} + \\frac{\\\
+    partial \\mathbf{e}_2}{\\partial \\mathbf{x}_i} \\bigg|_{\\mathbf{y}=\\mathbf{e}_1}\
+    \ \\quad \\square\n\n# Appendix C. Haskell libraries and functionality\n\nThis\
+    \ section briefly introduces Haskell's type class feature and summarizes the key\
+    \ library functions that we use.\n\n# C.1. Type classes\n\nWe use Haskell's type\
+    \ classes [45] to model the interface of algebraic structures, such as the semirings:\n\
+    \n```\nclass Semiring d where\n  zero :: d\n  one :: d\n  (⊕) :: d -> d -> d\n\
+    \  (⊗) :: d -> d -> d\n```\n\nUnder the hood, the Haskell compiler creates a datatype,\
+    \ called a dictionary type, that contains all the methods of the type class.\n\
+    \n```\ndata SemiringDict d = SD (zero :: d\n                      , one :: d\n\
+    \                      , (⊕) :: d -> d -> d\n                      , (⊗) :: d\
+    \ -> d -> d)\n```\n\nA type class instance provides the implementation of the\
+    \ interface for a specific type. For example,\n\n```\ninstance Semiring (Expr\
+    \ v) where\n  zero = Zero\n  one = One\n  (⊕) = Plus\n  (⊗) = Times\n```\n\nUnder\
+    \ the hood, an instance gives rise to a dictionary value that contains these implementations.\n\
+    \n```\nsemiringExprDict :: SemiringDict (Expr v)\nsemiringExprDict = SD (zero\
+    \ = Zero\n                   , one = One\n                   , (⊕) = Plus\n  \
+    \                 , (⊗) = Times)\n```\n\nWe can use the type class methods at\
+    \ a specific type for which there is an instance. E.g.,\n\n```\nexpr :: Expr v\n\
+    expr = one ⊕ one\n```\n\nThe compiler turns this into code that explicitly extracts\
+    \ the implementations from the appropriate dictionary:\n\n```\nexpr :: Expr v\n\
+    expr = d.(⊕) d.one d.one where d = semiringExprDict\n```"
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: 'The selection of the appropriate dictionary is known as type class resolution
+    and directed by the type at which the methods are used. Because every type can
+    have at most one instance of a type class, there is always at most one appropriate
+    dictionary.
+
+
+    We can also abstract over the particular type used with a type variable d. Then
+    the type variable is subject to the type class constraint Semiring d. This means
+    that d can be freely chosen as long as it has a Semiring instance. This is known
+    as constrained polymorphism.
+
+
+    ```
+
+    expr :: Semiring d => d -> expr = one ⊕ one
+
+    ```
+
+
+    Under the hood, the type class constraint is transformed into an explicit dictionary
+    parameter.
+
+
+    ```
+
+    expr :: SemiringDict d -> d expr = d ⊕ (d).one d.one
+
+    ```
+
+
+    When using such a constraint polymorphic definition at a specific type, the Haskell
+    compiler implicitly provides the appropriate dictionary parameter. For example,
+    it turns expr :: Expr v into expr semiringExprDict :: Expr v.
+
+
+    In multi-parameter type classes, i.e., type classes with multiple parameters in
+    their signature (e.g., Module d e), we can declare functional dependencies between
+    parameters to aid type class resolution. A functional dependency indicates that
+    one type parameter is uniquely determined by the other(s). For example, our Module
+    class uses such a functional dependency:
+
+
+    ```
+
+    class (Semiring d, Monoid e) => Module d e | e -> d where ...
+
+    ```
+
+
+    Here the semiring type d can be determined from type e.
+
+
+    For a more thorough introduction to type classes and Haskell in general, we refer
+    to Bird [46] and Hutton [47].
+
+
+    # C.2. Maps
+
+
+    The functions below are from Haskell''s Data.Map library,14 copied with their
+    type signature and explanation.
+
+
+    +   • (!) :: Ord k => Map k a -> k -> a O(log n). Find the value at a key. Calls
+    error when the element can not be found.
+
+    +   • findWithDefault :: Ord k => a -> k -> Map k -> a O(log n). The expression
+    findWithDefault def k map returns the value at key or returns default value def
+    when the key is not in the map.
+
+    +   • fromList :: Ord k => [(k, a)] -> Map k a O(n * log n). Build a map from
+    a list of key/value pairs. If the list contains more than one value for the same
+    key, the last value for the key is retained.
+
+    +   • unionWith :: Ord k => (a -> a -> a) -> Map k a -> Map k a -> Map k a O(n
+    + m). Union with a combining function. The implementation uses the efficient hedge-union
+    algorithm.
+
+    +   • insertWith :: Ord k => (a -> a -> a) -> k -> a -> Map k a -> Map k a O(log
+    n). Insert with a function, combining new value and old value. insertWith f key
+    value mp will insert the pair (key, value) into mp if key does not exist in the
+    map. If the key does exist, the function will insert the pair (key, f new_value
+    old_value).
+
+
+    # C.3. Arrays
+
+
+    The functions below are from Haskell''s Data.Array.MArray library,15 copied with
+    their type signature and explanation.
+
+
+    +   • newArray :: Ix i => (i, i) -> e -> m (a i e) Builds a new array, with every
+    element initialised to the supplied value.
+
+    +   • readArray :: (MArray a e m, Ix i) => a i e -> i -> m e Read an element from
+    a mutable array
+
+    +   • writeArray :: (MArray a e m, Ix i) => a i e -> i -> e -> m () Write an element
+    in a mutable array
+
+    +   • getElems :: (MArray a e m, Ix i) => a i e -> m [i, e] Return a list of all
+    the associations of a mutable array, in index order.'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: 'Below, we document the ST monad from Haskell''s Control.Monad.ST library.16
+
+
+    +   • data ST s a
+
+
+    The ST monad allows for destructive updates, but is escapable. A computation of
+    type ST s a returns a value of type a, and execute in “thread” s. It serves to
+    keep the internal states of different invocations of runST separate from each
+    other.
+
+
+    +   • runST :: (forall s. ST s a) -> a
+
+
+    Return the value computed by a state thread. The forall ensures that the internal
+    state used by the ST computation is inaccessible to the rest of the program.
+
+
+    Below, we document the STArray''s from Haskell''s Data.Array.ST library.17
+
+
+    +   • data STArray s i e
+
+
+    Mutable, boxed, non-strict arrays in the ST monad. s is the state variable argument
+    for the ST type, i is the index type of the array (should be an instance of Ix),
+    and e is the element type of the array.
+
+
+    # C.4. Other
+
+
+    Below, we document the foldMap function from Haskell''s Data.Foldable library.18
+
+
+    +   • foldMap :: Monoid m => (a -> m) -> t a -> m
+
+
+    Map each element of the structure into a monoid, and combine the results with
+    (<>). This fold is right-associative and lazy in the accumulator.
+
+
+    Below, we document the ReaderT monad transformer taken from Haskell''s Control.Monad.Trans.Reader
+    library.19
+
+
+    +   • newtype ReaderT r m a = ReaderT {runReaderT :: r -> m a}
+
+
+    The reader monad transformer, which adds a read-only environment to the given
+    monad m. The return function ignores the environment, while (>>=) passes the inherited
+    environment to both subcomputations.
+
+
+    # References
+
+
+    +   [1] M. Abadi, P. Barham, J. Chen, Z. Chen, A. Davis, J. Dean, M. Devin, S.
+    Ghemawat, G. Irving, M. Isard, M. Kudlur, J. Levenberg, R. Monga, S. Moore, D.G.
+    Murray, B. Steiner, P.A. Tucker, V. Vasudevan, P. Warden, M. Wicke, Y. Yu, X.
+    Zhang, Tensorflow: a system for large-scale machine learning, CoRR arXiv:1605.08695
+    (abs) (2016).
+
+    +   [2] A.G. Baydin, B.A. Pearlmutter, A.A. Radul, J.M. Siskind, Automatic differentiation
+    in machine learning: a survey, J. Mach. Learn. Res. 18 (1) (2017) 5595–5637.
+
+    +   [3] J. Backus, Can programming be liberated from the von neumann style? a
+    functional style and its algebra of programs, Commun. ACM 7 (8) (1964) 463–464,
+    https://doi.org/10.1145/355586.364791.
+
+    +   [4] W.K. Clifford, Preliminary sketch of bi-quaternions, Proc. Lond. Math.
+    Soc. 4 (1873) 381–395.
+
+    +   [5] R.B. D. de Moor, Algebra of Programming, Prentice-Hall, Inc., USA, 1997.
+
+    +   [6] M. Magnagu, Local Rings, Wiley Interscience, 1962.
+
+    +   [7] C. Elliott, Denotational design with type class morphisms (extended version),
+    Tech. Rep. 2009-01, LambdaPix, March 2009, http://conal.net/papers/type-class-morphisms/.
+
+    +   [8] P. Jansson, C. Ionescu, J.-P. Bernardy, Domain-Specific Languages of Mathematics,
+    Texts in Computing, vol. 24, College Publications, 2022.
+
+    +   [9] G. Hutton, A tutorial on the universality and expressiveness of fold,
+    J. Funct. Program. 9 (4) (1999) 355–372, https://doi.org/10.1017/s0956796899003500.
+
+    +   [10] R.J.M. Brisard, R. Paterson, Functional programming with bananas, lenses,
+    envelopes and barbed wire, in: Proceedings of the 5th ACM Conference on Functional
+    Programming Languages and Computer Architecture, Springer-Verlag, Berlin, Heidelberg,
+    1991, pp. 124–144.
+
+    +   [11] E. Meijer, Calculating compilers, Ph.D. thesis, Katholieke Universiteit
+    Nijmegen, 1992.
+
+    +   [12] F. Kawienc, S. Peyton Jones, N. Krishnaswami, T. Ellis, R.A. Eisenberg,
+    A.W. Higgitt, Probably correct, asymptotically efficient, higher-order reverse-mode
+    automatic differentiation, Proc. ACM Program. Lang. 6 (POPL) (2022) 1–28, https://doi.org/10.1145/3498710.
+
+    +   [13] L. Számoki-Kalocs, Higher order functions in automatic differentiation,
+    Numer. Algorithms 72 (3) (2016) 755–811, https://doi.org/10.1007/s11075-015-0067-6,
+    doi.org/10.3311/PP.16341.
+
+    +   [14] P.E.H. Harrison, Abstract data types in parametric polymorphism, Numer.
+    Algorithms 72 (3) (2016) 755–811, https://doi.org/10.1007/s11075-015-0067-6, doi.org/10.3311/PP.16341.
+
+    +   [15] J. van der Zwaan, G. Hutton, Modern Compiler Algebra, 3rd edition, Cambridge
+    University Press, 2013.
+
+    +   [16] A. Gill, G. Hutton, The worker/wrapper transformation, J. Funct. Program.
+    19 (2) (2009) 227–251, https://doi.org/10.1017/S0956796809007175.
+
+    +   [17] C.A.R. Hoare, Proof of correctness of data representations, Acta Inform.
+    1 (4) (1972) 271–281, https://doi.org/10.1007/BF00289507.
+
+    +   [18] P. Wadler, Theorems for free!, in: J. Stoy (Ed.), Proceedings of the
+    Fourth International Conference on Functional Programming Languages and Computer
+    Architecture, 1989, pp. 347–359.
+
+    +   [19] J.C. Reynolds, Types, abstraction and parametric polymorphism, in: R.E.A.
+    Mason (Ed.), Information Processing 83, Proceedings of the IFIP 9th World Computer
+    Congress, Paris, France, September 19-23, 1983, North-Holland/IFIP, 1983, pp.
+    513–523.
+
+    +   [20] J.C. Reynolds, Types, abstraction and parametric polymorphism, in: R.E.A.
+    Mason (Ed.), Information Processing 83, Proceedings of the IFIP 9th World Computer
+    Congress, Paris, France, September 19-23, 1983, North-Holland/IFIP, 1983, pp.
+    513–523.
+
+
+    +   16 https://hackage.haskell.org/package/base-4.18.0.0/docs/Control-Monad-ST.html.
+
+    +   17 https://hackage.haskell.org/package/array-0.5.5.0/docs/Data-Array-ST.html.
+
+    +   18 https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Foldable.html.
+
+    +   19 https://hackage.haskell.org/package/transformers-0.6.1.0/docs/Control-Monad-Trans-Reader.html.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '[21] A. Shaikhha, M. Huot, J. Smith, D. Oleana, Functional collection programming
+    with semi-ring dictionaries, Proc. ACM Program. Lang. 6 (OOPSLA1) (apr 2022).
+    https://doi.org/10.1145/3527333.
+
+
+    [22] M.F. Atiyah, I.G. Macdonald, Introduction to Commutative Algebra, Addison-Wesley-Longman,
+    1969.
+
+
+    [23] M.J. Bezem, Strong normalization for explicit substitution or: or, tu and
+    Don adan explain an old trick, in: G. Pighizzini, P. Nogueira (Eds.), Mathematics
+    of Program Construction - Proceedings of the 11th International Conference, MPC
+    2012, Madrid, Spain, June 25-27, 2012, in: Lecture Notes in Computer Science,
+    vol. 7342, Springer, 2012, pp. 224-362.
+
+
+    [24] G. Bracha, J. Gilbraith, What you know about Yoneda: profunctor optics and
+    the Yoneda lemma (Functional Pearl), Proc. ACM Program. Lang. 6 (POPL) (2022).
+    https://doi.org/10.1145/3498678.
+
+
+    [25] K.L. Clark, S.A. Tarnlund, A first order theory of data and programs, Inf.
+    Process. 77 (1977).
+
+
+    [26] J. Hughes, A novel representation of lists and its application to the function
+    “reverse”, Inf. Process. Lett. 22 (3) (1986) 141-144. https://doi.org/10.1016/0020-0190(86)90059-1.
+
+
+    [27] P. Jansson, J. Jeuring, PolyP - a short cut to deforestation, in: J. Williams
+    (Ed.), Proceedings of the Conference on Functional Programming Languages and Computer
+    Architecture, FPCA 1993, Copenhagen, Denmark, June 9-11, 1993, ACM, 1993, pp.
+    233-232.
+
+
+    [28] J. Gibbons, N. Wu, Folding domain-specific languages: deep and shallow embeddings
+    (Functional Pearl), in: Proceedings of the 19th ACM SIGPLAN International Conference
+    on Functional Programming, 2014, pp. 339-347.
+
+
+    [29] J. Karczmarczuk, Functional differentiation of computer programs, in: P.
+    Lee, F. Henglein, P. Hudak, C. Queinnec (Eds.), Proceedings of the Third ACM SIGPLAN
+    International Conference on Functional Programming, ICFP ''98, Baltimore, Maryland,
+    USA, September 27-29, 1998, 1998, pp. 195-203.
+
+
+    [30] R. Hinze, Functional pearl: streams and unique fixed points, in: Proceedings
+    of the 13th ACM SIGPLAN International Conference on Functional Programming, ICFP
+    ''08, Association for Computing Machinery, New York, NY, USA, 2008, pp. 189-200.
+
+
+    [31] B.A. Pearlmutter, J.M. Siskin, Lazy higher-order multithreading, Neural Comput.
+    6 (1) (1994) 140-160. https://doi.org/10.1162/neco.1994.6.1.140.
+
+
+    [32] B. van den Berg, M. Vákár, Correctness by construction: a categorical semantics
+    for reverse mode automatic differentiation, in: J. Goubault-Larrecq, B. König
+    (Eds.), Foundations of Software Science and Computation Structures - Proceedings
+    of the 23rd International Conference, FOSSACS 2020, Held as Part of the European
+    Joint Conferences on Theory and Practice of Software, ETAPS 2020, Dublin, Ireland,
+    April 25-30, 2020, in: Lecture Notes in Computer Science, vol. 12077, Springer,
+    2020, pp. 319-338.
+
+
+    [33] R. Cockett, Differential categories, differential order automatic differentiation
+    of higher order functions, Log. Methods Comput. Sci. 18 (1) (2022). https://doi.org/10.46298/lmcs-18(1:44)2022.
+
+
+    [34] T. Steding, M. Vákár, Efficient dual-numbers reverse AD via well-known program
+    transformations, https://arxiv.org/abs/2207.03418, 2022.
+
+
+    [35] C.M. Elliott, Beautiful differentiation, in: G. Hutton, A.P. Tolmach (Eds.),
+    Proceedings of the 14th ACM SIGPLAN International Conference on Functional Programming,
+    ICFP 2009, Edinburgh, Scotland, UK, August 24-29, 2009, ACM, 2009.
+
+
+    [36] C. Elliott, The simple essence of automatic differentiation, Proc. ACM Program.
+    Lang. 2 (ICFP) (2018) 70:1-70:29. https://doi.org/10.1145/3236765.
+
+
+    [37] C. Elliott, Symbolic and automatic differentiation of languages, Proc. ACM
+    Program. Lang. 5 (ICFP) (2021) 1-18. https://doi.org/10.1145/3473583.
+
+
+    [38] M. Eilam, T. Hengl, R. Kaarsgaard, M. Matthies, R. Schenk, Combinatory adjunctions
+    and differentiation, in: J. Gibbons, M.S. New (Eds.), Proceedings of the 2022
+    ACM SIGPLAN International Symposium on Haskell, Haskell@ICFP 2022, Munich, Germany,
+    11 September 2022, 2022, pp. 360-373.
+
+
+    [39] F. Wang, D. Zheng, J. Decker, X. Wu, G. Essertel, T. Rompf, Demystifying
+    differentiable programming: shift/reset the penultimate backpropagator, Proc.
+    ACM Program. Lang. 3 (ICFP) (2019) 96:1-96:31. https://doi.org/10.1145/3341700.
+
+
+    [40] J.M.E. Hyland, G.D. Plotkin, Combining effects: sum and tensor, Theor. Comput.
+    Sci. 357 (1) (2006).
+
+
+    [41] B.A. Pearlmutter, J.M. Siskin, Reverse-mode AD in a functional framework:
+    Lambda the ultimate backpropagator, ACM Trans. Program. Lang. Syst. 30 (2) (2008)
+    7:1-7:36. https://doi.org/10.1145/1330017.1330018.
+
+
+    [42] O. Zaykov, B.A. Pearlmutter, A.L. Radul, D.R. Rush, J.M. Siskin, Perturbation
+    confusion in forward automatic differentiation of higher-order functions, Tech.
+    Rep. 29 (2019) e12. https://doi.org/10.1017/S095679681900008X.
+
+
+    [43] D. Gruntz, A new algorithm for computing asymptotic series, Journal of Symbolic
+    Computation 1 (1) (2003) 5-6. https://doi.org/10.1216/JCA-2009-1-1-3.29200200132.
+
+
+    [44] A. Griewank, A mathematical view of automatic differentiation, Acta Numer.
+    12 (2003) 321-398. https://doi.org/10.1017/S0962492902000132.
+
+
+    [45] C. Hankin, Programming in Haskell, 2nd edition, Cambridge University Press,
+    USA, 2016.'
+  merge: -1
+  img_proc: true

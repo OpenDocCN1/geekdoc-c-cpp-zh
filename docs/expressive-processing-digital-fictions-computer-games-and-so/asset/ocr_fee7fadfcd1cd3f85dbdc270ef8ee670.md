@@ -1,0 +1,7 @@
+# Chapter 4 Making Models
+
+# Implementable Models
+
+Games are systems—and these systems have varying relationships with the everyday world. Hopscotch, for example, is made up of a small number of rules that structure full-body actions in the everyday world. Most of the challenge of play comes from the way that the game’s space is demarcated on the ground, the properties of balance of the human body, and the physics of planet Earth. Scrabble, on the other hand, is challenging because of the rules for what happens on the board (rather than being a physical challenge, as we can see by the fact that it would be permissible for another player to arrange my tiles on the board for me, under my direction), but the nature of this challenge is shaped by our knowledge of the English language. And Monopoly relates to our everyday world not, primarily, through the motion of our bodies or our knowledge of facts outside the game, but instead by being a representation—a model—of the economic system under which it was produced: capitalism.
+
+Like traditional games, computer games are also systems. Some are quite close to traditional games—like Dance Dance Revolution, which requires quick movement over a pressure-sensitive surface in time with on-screen instructions, essentially creating a computer-driven version of the traditional sort of full body play found in Hopscotch, Simon Says, and Red Light/Green Light. But most computer games are closer to Monopoly; the game play challenges, while they may require physical dexterity,

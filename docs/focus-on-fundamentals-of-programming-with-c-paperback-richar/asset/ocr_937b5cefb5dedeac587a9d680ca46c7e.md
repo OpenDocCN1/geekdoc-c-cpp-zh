@@ -1,0 +1,11 @@
+This creates a file containing the output of foo. Any values displayed by printf() would not be displayed at the terminal but instead would be written into the file called outFile.txt. Error messages, if any, will continue to be displayed on the terminal window, instead of being buried inside the output file.
+
+![](bbox=[0.14, 0.16, 0.93, 0.29])
+
+A similar redirection is possible for the standard input. Any call to a function that normally reads data from the terminal, such as getchar() and scanf(), can be made to read its information from a file. For example, we can run program foo using data that we have stored in a file called inFile.txt:
+
+```
+foo < inFile.txt
+```
+
+![](bbox=[0.14, 0.59, 0.93, 0.71])

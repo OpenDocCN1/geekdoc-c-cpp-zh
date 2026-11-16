@@ -1,0 +1,5 @@
+in which these are particularly powerful. I proposed a collaboration with Utterback, who agreed, and we brought in Cilly Castiglia and Nathan Wardrip-Fruin (my brother). We conceived something rather different from the hallway-style installations of Text Rain. Our piece, Talking Care (Wardrip-Fruin, Utterback, Castiglia, et al. 2002; see figure 9.3), includes a table and chair in a darkened room with a large projection screen. An audience member entering the space sees a light shining from the table onto the chair, hears an audio environment made up of mixtures of text, and sees the projection screen filled with one text: excerpts from Joseph Breuer's case study of Anna O. This text—a discussion of the patient who gave the idea of the “talking cure” to Breuer, who then gave it to Sigmund Freud—provides the word pictures of her condition, such as the snake hallucinations she
+
+![](bbox=[0.17, 0.51, 0.83, 0.9])
+
+Figure 9.3. Talking Cure creates an image from text.

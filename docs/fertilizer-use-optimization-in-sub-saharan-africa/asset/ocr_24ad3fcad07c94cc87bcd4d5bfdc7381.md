@@ -1,0 +1,21 @@
+farmer may be at the expense of seed purchase, food expenditure, school fee payment or bicycle repair. Linear programming requires a single clearly defined, unambiguous finite objective function to be optimized that can be expressed as a linear function of the decision variables. For example, a farmer allocating a budget to fertilizer use may strive to maximize profit or production. Hence, the maximization of production/profit, or the minimization of loss for this specific farmer, are finite objective functions.
+
+# 1.3 Fertilizer use optimization
+
+Profit oriented recommendations for non-finance constrained fertilizer use commonly strive to maximize mean marginal rates of return across all cropland. Many smallholder farmers do not have the financial capacity to purchase enough fertilizer to maximize net returns per hectare for fertilizer use for all of their cropland. They need to maximize returns on their limited investment through choice of crop-nutrient-rates combinations with potential to achieve the highest marginal returns until the budgeted financial resources are exhausted (Jensen et al., 2013).
+
+Constraints in linear programming are limitations on the available resources, such as availability of equipment, budget, managerial time or labour, production capacity and the market demand for the finished goods. Such limitations also occur with smallholders.
+
+Crop nutrient response functions are essential to efficiently applying economics to fertilizer use decisions. These were determined from results of field research conducted across the 13 OFRA countries as asymptotic curvilinear-plateau functions taking the form of an exponential rise to a maximum or plateau yield. The asymptotic function is Y = a – bc^X, where Y is yield (t/ha), a is the maximum or plateau yield (t/ha) for application of a specific nutrient, b is the maximum gain in yield (t/ha) due to application of the nutrient, and c^X represents the shape of the quadratic response, where c is a curvature coefficient and n the nutrient application rate (kg/ha). Information available from locally conducted research was supplemented by geo-spatial transfer of response functions determined elsewhere under similar crop growing conditions, that is, in the same incidence space (Chapter 2).
+
+The maximization equation may take the form of net returns or profit resulting from decisions on different fertilizer uses (e.g. X1 and X2) and the LP optimization solves the values for X1 and X2 which maximize the objective function of high profit from fertilizer use (Figure 1.1). A limitation of linear programming is that both the objective and constrained functions must be linear and the coefficients for each function must be specified.
+
+The response functions were then graphically displayed for each crop nutrient combination, such as for maize response to nitrogen (N) for growing conditions similar to those of the Transitional/Derived Savanna of Ghana and Nigeria (Figure 1.2). The legend identifies the source of the curves with a three letter country identifier followed by the research site’s latitude and longitude (degrees). The results in this case were primarily from Ghana and Nigeria but also from Mali, Burkina Faso, Togo and even one case from eastern Tanzania.
+
+Linear programming was applied to develop fertilizer optimization tools (FOT) as a component of the fertilizer use optimization approach developed by the project Optimising Fertilizer Recommendations in Africa (OFRA). The FOTs are used to maximize the net returns of farmers from nutrient application, subject to budget constraints, fertilizer costs and produce values. National research teams of Burkina Faso, Ethiopia, Ghana, Kenya, Mali, Malawi, Mozambique, Niger, Nigeria, Rwanda, Tanzania, Uganda and Zambia collaborated in OFRA.
+
+A response function representing the median yield results across all N levels, displayed as the heavy green dashed line, was determined; median rather than mean results were used to reduce the influence of outlier responses. The response function for high yield maize (>3 t/ha),
+
+![](bbox=[0.09, 0.71, 0.49, 0.88])
+
+Figure 1.1: Schematic illustration of LP optimization.

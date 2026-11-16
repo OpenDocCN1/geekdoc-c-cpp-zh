@@ -1,0 +1,9 @@
+# # RESOURCES
+
+In the last chapter we explored some of the rich graphics capabilities that *WPF* provides. We only skimmed the surface, of course, but you should have a sense of what the basic graphic objects like gradients and brushes are capable of. With the exception of writing custom effects in *HLSL*, none of the graphics classes are difficult to use.
+
+But what if you have a beautiful radial gradient with, say, eight or nine gradient stops, all custom colors, that you want to use for every button in your application? You wouldn't want to define it in every *<Button>* tag; that would just be too tedious. Not to mention almost guaranteeing that the gradient would change at some point in the future, requiring you to change the code for every button in your application. Ouch.
+
+You could create a *Class* that declares the *Brush* as a property, but that adds to the complexity of your class hierarchy, and it means defining the brush in code, which is awkward, and not a good option if you're lucky enough to have a graphic designer working on your application.
+
+The best solution, in most situations, is to define the brush as a *WPF* resource. In *WPF*, a *Resource* is an object that is defined once, either directly in the *XAML* of the window or (more commonly) as a separate file, and used by multiple elements. The object could be a graphic object like our radial gradient, some *XML* data, or even just a simple value that you need to reference in several places. *Resources* are usually defined in *XAML*, but you can do it in code (if you really need to). *Resources* are also, by a strange coincidence, the subject of this chapter.

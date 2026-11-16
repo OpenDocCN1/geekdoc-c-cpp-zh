@@ -1,0 +1,53 @@
+```
+// String Class
+
+const int MAX=80;
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class String {
+   private:
+      char str[MAX];
+   public:
+      String();
+      String(char *s);
+      void display();
+      void concat(String s);
+};
+
+String::String() {
+   str[0] = '\0';
+}
+
+String::String(char *s) {
+   strcpy(str, s);
+}
+
+void String::display() {
+   cout << str << endl;
+}
+
+void String::concat(String s) {
+   if (strlen(str) + strlen(s.str) < MAX)
+      strcat(str, s.str);
+   else
+      cout << "String too long";
+}
+
+int main() {
+   String s1, s2("Hello, world."), s3("Samantha");
+
+   s1 = s2;
+   s3.concat(s2);
+   s1.display();
+   s2.display();
+   s3.display();
+
+   return 0;
+}
+```
+
+Our newly defined String class may seem just like the original definition of a string, an array of characters. But by making it a class, we gain some benefits.

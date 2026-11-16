@@ -1,0 +1,16 @@
+Causal reasoning can be used to construct a **model** of the real system that behaves in all respects like the real system. Such a model can be used for simulation, to explore hypothetical reasoning of the “What if” type of queries. However, causal models are neither always necessary or desirable. For example, the classic MUD expert system serves as a consultant to drilling fluid or mud engineers. Drilling fluid, called mud because of its resemblance to mud, is an important aid in drilling for a number of reasons, such as cooling and lubrication of the bit. MUD diagnoses problems with the mud and suggests treatments.
+
+A causal system would not be of much use because the drilling engineer cannot normally observe the causal chain of events occurring far below the ground. Instead, the engineer can observe only the symptoms on the surface and not the unobservable intermediate events of potential diagnostic significance.
+
+The situation is very different in medicine where physicians have a wide range of diagnostic tests that can be used to verify intermediate events. For example, if a person complains of feeling ill, the physician can check for fever. If there is a fever, there may be an infection and so a blood test may be done. If the blood test reveals a tetanus infection, the physician must check the person for recent cuts from a rusty object. In contrast, if the drilling fluid becomes salty, the drilling engineer may suspect the drill has gone through a salt dome. However, there is no simple way to check this since it’s not possible to go into the hole (except by robot), and a seismic test is expensive and not always reliable. Because drilling engineers cannot normally test intermediate hypotheses the way that physicians can, they do not approach diagnostic problems the way that physicians do, and MUD reflects this approach.
+
+Another reason for not using causal reasoning in MUD is that there are a limited number of diagnostic possibilities and symptoms. Most of the relevant tests used by MUD are conducted routinely and input in advance. There is little advantage in an interactive query session with an engineer to explore alternate diagnostic paths if the system knows all the relevant tests and diagnostic paths. If there were many possible diagnostic paths to follow with a verifiable intermediate hypothesis, there would be an advantage to causal knowledge because the engineer could work with the system to prune the search to likely paths.
+
+Because of the increased requirements for causal reasoning, it may become necessary to combine certain rules into a shallow reasoning one. The resolution method with refutation can be used to prove that a single rule is a true conclusion of multiple rules. The single rule is the theorem that will be proved by resolution.
+
+As an example, suppose we want to prove that rule (1) is a logical conclusion of rules (2) – (5). Using the following propositional definitions, the rules can be expressed as follows:
+
++   B = battery is good       C = car will move
++   E = there is electricity  F = sparkplugs will fire
++   G = there is gas          R = engine will run
++   S = sparkplugs are good   T = there are good tires

@@ -1,0 +1,85 @@
+
+```
+created on stack       created on heap       created on heap
+-----------------------------------------------------------
+pstud ---------------> 0 | . . . . . . . --> [student struct]
+                       1 | . . . . . . . --> [student struct]
+                       2 | . . . . . . . --> [student struct]
+                       3 | . . . . . . . --> [student struct]
+                       4 | . . . . . . . --> [student struct]
+```
+
+## Chapter 19. Linear Linked Lists
+
+- Introduction to Linear Linked Lists
+- Operations on Linear Linked Lists
+- Three List Algorithms
+- Additional List Algorithms
+- Linear Linked List Examples
+- Linear Linked List Homework
+
+## Introduction to Linear Linked Lists
+
+### Sequential Storage of Arrays
+
+One of the big advantages of arrays is that you can allocate memory for a large number of variables without writing a lot of code. It's also simple to initialize or change their values “all at once” with a while or for loop. Additionally, we can have direct access to any array element with the use of the correct index into the array.
+
+However, the big disadvantage of using an array is that the size of an array is fixed and you may not always know exactly how many items you will need to store. You may be reading in data from a file, and you won’t necessarily know how big to make your array to hold the data.
+
+Another problem with arrays is that rearranging elements in the array can be time consuming. Suppose you have 1,000 elements in an array and you decide that you want the 1,000th element to be the second element and the second to be the third and the third to be the fourth and so on. You’ll have to shift all the elements down one place. This is not very efficient.
+
+### Linked Lists
+
+In a sequential representation, the items of an array are implicitly ordered by the sequential order of storage. For example, if num[i] represents an element of an array, num[i+1] represents the next element of the array.
+
+Now suppose that the items of a data structure were explicitly ordered. This would mean that every element of the data structure would have to contain within itself the address in memory of the next element of the data structure.
+
+Note that in this new representation we can no longer use the fact that items are related by their location or address as in an array. Individual items in this data structure must have explicit pointers to the location of the other data items within the data structure. This gives rise to a new type of data structure called the linear linked list.
+
+![](img/3a848cfa6d95e726766ad07c3ec2474a_463_0.png)
+
+A linear linked list consists of a collection of nodes (items), each of which contains two fields:
+
+- information field (info) – holds the actual data element on the list
+- next address field (next) – contains the address in memory (pointer) to the next node in the list
+
+Note that linear linked lists are typically drawn with boxes representing nodes, and pointers are drawn as arrows that connect one node to another. Thus, the arrows represent the links between the nodes, and each node contains data for one element.
+
+The entire linked list is accessed via an external pointer, `list`, which points to (contains the address of) the first node in the list. Note that the external pointer is not included within a node but its value is accessed directly by referencing a pointer variable.
+
+The `next` address field of the last node in the list contains a special pointer value, `NULL`, which is not a valid address but is used to signify the end of a list. The `NULL` pointer is represented by the symbol:
+
+![](img/3a848cfa6d95e726766ad07c3ec2474a_463_1.png)
+
+A list with no nodes is called the empty list or `NULL` list and is represented below. In this case the external pointer `list` has the `NULL` value:
+
+![](img/3a848cfa6d95e726766ad07c3ec2474a_463_2.png)
+
+Data elements of a linear linked list are contained in the `info` field of the list and must be of the same data type (`int`, `char`, `struct`, etc). As each node contains within itself (within its `next` field) a pointer to the next node in the list, we are able to traverse the list and access the nodes of the list in order (that is, from first to last).
+
+The linked list is a dynamic structure and can change size as the program executes. Nodes can be inserted and deleted at any position of a list (beginning, between nodes, at the end). Only the first node, accessed by the list pointer, is known. From there links between nodes can be used to move from one node to another node. Theoretically, there is no upper limit on the length of a list, but practically a computer's memory size is the limit.
+
+Here's an example of a new node being inserted into the middle of the list without causing the other elements to change their locations in memory. Notice that this can be done with just the manipulation of two pointers and requires no data movements:
+
+![](img/3a848cfa6d95e726766ad07c3ec2474a_464_0.png)
+
+Working with linear linked lists can be fun because they are easy to draw, yet give a useful way to organize data. In certain places lists can be tricky, but a good drawing can go a long ways toward clarifying such a situation. Actually, I cannot emphasize this enough. It's very important to draw pictures when you're trying to build and understand linked list code. Generally, all you need to do is to draw a box for each node and an arrow going from each node to the next to represent the `next` pointer.
+
+## Linked Lists vs. Arrays
+
+Notice that the above list gives numbers in numeric order. You might wonder how this compares with storing an ordered list of numbers in an array. The key difference is that an array gives random access in that you can directly access any data item by its index number. This allows one to use binary search instead of the slower sequential search, for example. A linked list gives only sequential access to the data, so that only sequential search is available. For example, to read the millionth element of a linked list, you must read the 999,999 elements that precede it!
+
+However, there are other comparisons that could be made between the two. Although the array method allows the faster search to be used, if we want to insert a new item after the one found, we are in trouble! There is probably no room in the array to insert a new item at this point. Instead, all items to the right of this location have to be slid over to the next array location. This is a slow process but does make room to insert the new item. As we will see more clearly when we code linked lists, it is fairly easy to insert a new item into an ordered linked list. In fact, it is just a matter of changing a couple of pointers (as shown above).
+
+Deletion of an item from an ordered list is also a simple matter of changing a pointer, whereas in an ordered array, all of the data to the right has to be shifted left to fill in the hole left upon deletion. Thus, once again, the linked list is faster and more flexible. In general, a linked list is probably the better method if you are going to dynamically insert and delete items a lot. (A linked list is one example of a dynamic data structure. This means that it can easily grow, contract, and change as needed. An array is a static data structure.)
+
+Another comparison could be made based on the amount of space that the two methods use. With the array scheme, you would need to set the size of the array in advance, overestimating the amount of space needed. However, the linked list method also wastes space, in that it needs room in each node for a pointer. In general it is not possible to say which method wastes more space.
+
+Writing linked list code is a bit more complicated than using arrays, but for many applications such as:
+
+- Information retrieval
+- Programming language development
+- Simulation
+- Storage management techniques
+
+using a linked list instead of an array can be much more efficient.

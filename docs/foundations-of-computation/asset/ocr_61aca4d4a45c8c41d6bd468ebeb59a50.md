@@ -1,0 +1,13 @@
+cardinality of A. That is, if A is a finite set, then |A| is the natural number n such that there is a one-to-one correspondence between A and N<sub>n</sub>. A set that is not finite is said to be **infinite**. That is, a set B is infinite if for every n ∈ N, there is **no** one-to-one correspondence between B and N<sub>a</sub>.
+
+Fortunately, we don't always have to count every element in a set individually to determine its cardinality. Consider, for example, the set A × B, where A and B are finite sets. If we already know |A| and |B|, then we can determine |A × B| by computation, without explicit counting of elements. In fact, |A × B| = |A| · |B|. The cardinality of the cross product A × B can be computed by multiplying the cardinality of A by the cardinality of B. To see why this is true, think of how you might count the elements of A × B. You could put the elements into piles, where all the ordered pairs in a pile have the same first coordinate. There are as many piles as there are elements of A, and each pile contains as many ordered pairs as there are elements of B. That is, there are |A| piles, with |B| items in each. By the definition of multiplication, the total number of items in all the piles is |A| · |B|. A similar result holds for the cross product of more than two finite sets. For example, |A × B × C| = |A| · |B| · |C|.
+
+It's also easy to compute |A ∪ B| in the case where A and B are disjoint finite sets. (Recall that two sets A and B are said to be disjoint if they have no members in common, that is, if A ∩ B = ∅.) Suppose |A| = n and |B| = m. If we wanted to count the elements of A ∪ B, we could use the n numbers from 0 to n − 1 to count the elements of A and then use the m numbers from n to n + m − 1 to count the elements of B. This amounts to a one-to-one correspondence between A ∪ B and the set N<sub>n+m</sub>. We see that |A ∪ B| = n + m. That is, for disjoint finite sets A and B, |A ∪ B| = |A| + |B|.
+
+What about A ∪ B, where A and B are not disjoint? We have to be careful not to count the elements of A ∩ B twice. After counting the elements of A, there are only |B| − |A ∩ B| new elements in B that still need to be counted. So we see that for any two finite sets A and B, |A ∪ B| = |A| + |B| − |A ∩ B|.
+
+What about the number of subsets of a finite set A? What is the relationship between |A| and |P(A)|? The answer is provided by the following theorem.
+
+**Theorem 2.7.** A finite set with cardinality n has 2<sup>n</sup> subsets.
+
+**Proof.** Let P(n) be the statement “Any set with cardinality n has 2<sup>n</sup> subsets.” We will use induction to show that P(n) is true for all n ∈ N. Base case: For n = 0, P(n) is the statement that a set with cardinality

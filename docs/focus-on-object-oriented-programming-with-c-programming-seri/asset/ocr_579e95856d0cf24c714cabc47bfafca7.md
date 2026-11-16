@@ -1,0 +1,14 @@
+intuitive. Now suppose you were to put this class into a library and announce its existence so that users could take advantage of it. But someone then says to you, "The class is fine, except that I meant to overload the unary – as a member function so that it reverses the sequence of letters in the `String` and returns a new instance of the class. What should I do?". Your answer in this case would be for the user to derive a new class from the `String` class and add the new function. Then, when instantiations are made from the newly created class, all of the capabilities of the original class will still be there, plus the added capability of the new function. Since this newly created class is the `String` class with more features, the new class really is a kind of `String` class.
+
+Write a class called `ReverseString` that is publicly derived from the `String` class, with the following member functions:
+
++   - a default constructor function
++   - a copy constructor function
++   - a constructor function that takes a `const char*` as its one argument
++   - an overloaded assignment operator
++   - an overloaded unary `operator~()` function that reverses the letters of the string itself, and returns a new `ReverseString` instance by value (note that the actual contents of the string literal pointed to by `buf` are never modified)
+
+Write a class called `CaseString`, that is publicly derived from the `String` class, with the following data members:
+
++   - a pointer, `upper`, of type `char*`, which holds the contents of the string literal in upper case
++   - a pointer, `lower`, of type `char*`, which holds the contents of the string literal in lower case

@@ -1,0 +1,9 @@
+# Chapter 17. Structures
+
++   - Introduction to Structures
++   - Manipulating Entire Structures
++   - Struct Example: Today's Date and Tomorrow's Date
++   - Arrays of Structures
++   - Nesting Structures
++   - Structures Homework
++   - Database Lab

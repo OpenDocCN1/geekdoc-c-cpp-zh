@@ -1,0 +1,109 @@
+
+## Calculating Very Large Factorials Lab
+
+This assignment will focus on the manipulation of linear linked lists. You are to write a C program which queries the user for an integer, n, and returns the exact value of that integer's factorial, n!. The limit to the size of n can be quite large (up to 9,999), producing factorials containing hundreds and thousands of digits. Needless to say, our methodology will circumvent the inherent representation limitations of integers and longs in our programming languages.
+
+### The Storage of n!
+
+Factorials will be stored in linear linked lists in which each node contains two fields. The first field, info, will hold an integer containing a value from 0 through 999. The second field, next, holds a reference to the next node in the linear linked list. To be certain that the nature of this storage plan is correctly conceptualized, depicted below are the representations of 10! and 15!:
+
+```
+10! = 3,628,800
+
+| 3 |=====>| 628 |=====>| 800 |=====>X
+
+15! = 1,307,674,368,000
+
+| 1 |=====>| 307 |=====>| 674 |=====>| 368 |=====>| 000 |=====>X
+```
+
+Note that by storing only three digits per node, the placement of commas in the output is readily accomplished as just another action in stepping from one node to the next.
+
+### Multiplication
+
+Suppose that the value of 15! is to be multiplied by 6. The value of 15!, stored in a linked list, is the multiplicand. The 6, stored as an ordinary scalar, is the multiplier. The multiplicand is always held in a linked list, and the multiplier is always a numeral between 0 and 9. The action consists of a sequence of individual multiplications where the number from a node's info field is multiplied by the fixed multiplier. There are as many individual multiplications as there are nodes in the list holding the multiplicand.
+
+The sequence of individual multiplications yields a sequence of individual products that have to be synthesized into the actual product of the full multiplicand times the multiplier. Realize that the actual product is to be stored in another linked list, identical in form to that of the multiplicand. This is accomplished by treating the thousands digit of each individual product as a "carry out" which is added to the units digit of the individual product from the node to the immediate left. This is perhaps more clearly seen through a concrete example. A diagram of the multiplication of 15! times 6 is shown below:
+
+![](img/7f36c52b5170b89b142dbb7b1ea4666b_508_0.png)
+
+A complication to be contended with when implementing this scheme for multiplication is that the individual multiplications have to start at the right-hand end of the multiplicand, which is stored at the rear of the list. In fact, it is necessary to proceed through the list taking the nodes in the reversed order. There are several ways to deal with this. One is to make the multiplicand's list doubly-linked, so that it is just as readily traversed from the rear to the front as from the front to the rear. Another approach is to store the 3-digit numbers in nodes, from front to rear, in the order in which they will need to be processed (instead of the order reflecting conventional representation):
+
+```
+15! = 1, 307, 674, 368, 000
+
+| 000 |=====>| 368 |=====>| 674 |=====>| 307 |=====>| 001 |=====>X
+```
+
+A further complication entails extending the multiplication scheme so that it can deal with multiplications like 15! times 16, which is to say multiplications in which a factorial is multiplied by a number with two or more digits. The extension is directly analogous to the paper and pencil multiplication taught in grade school in which the digits in the multiplier are treated one-by-one. Just as each successive digit in the multiplier (i.e., the unit's digit, the ten's digit, the hundred's digit) requires another "round of multiplying" the multiplicand by a numeral (a number between 0 and 9) and another "intermediate product line", so it goes in the extension of the present multiplication scheme.
+
+In implementing the multiplication of 15! times 16, first 15! would be multiplied times 6 and the result stored in a new linked list. Then, 15! would be multiplied times 1 (the numeral in the multiplier's tens place), and this result would be stored in a new linked list of its own. Next, the numerals in the linked list holding the product of 15! times 1 would be shifted one digit to the left, effecting a multiplication by ten to transform the 15! * 1 product to a 15! * 10 product. Lastly, the corresponding digits in the two "helping lists" would be added to give the final result. For example:
+
+```
+16: * 16 =
+1207674368000
+* 16
+7046046208000
+1307614368000
+4098276988000
+
+1002 ==> 2 | 001 ==> | 674 ==> | 368 ==> | 1000 ==> 2
+151
+* 16 * 16
+
+007 ==> | 546 ==> | 046 ==> | 208 ==> | 000 ==> X
+151 * 6
+
+001 ==> 2 | 207 ==> | 676 ==> | 368 ==> | 000 ==> X
+151 * 1
+
+015 ==> | 076 ==> | 142 ==> | 680 ==> | 000 ==> X
+151 * 10 | 041790
+
+007 ==> | 846 ==> | 046 ==> | 208 ==> | 000 ==> X
+151 * 6 (accepted)
+
+4
+
+031 ==> | 076 ==> | 142 ==> | 690 ==> | 000 ==> X
+181 ~ 10 (accepted)
+
+0020
+01922
+01789
+01858
+01000
+tax code = 1117
+
+- 0 - 0 + 0 - 0
+
+1090 ==> | 421 ==> | 192 ==> | 162 ==> | 1000 ==> N
+2000
+```
+
+Although the 15! times 16 example just happens not to show this, provision has to be made for a node-to-node carry when adding the intermediate products in the "helping lists" to get the final result.
+
+Because the program will have to support the multiplication of factorial multiplicands (e.g., 567!) times three-digit numbers (e.g., 568), or four-digit numbers, the idea embraced above will have to be enhanced to accommodate up to three or four intermediate products in three or four "helping lists".
+
+### General Computational Strategy
+
+Suppose the user wished to calculate 15!. 15! would be derived in the most straightforward of all possible ways, building it up from one factorial. One factorial, "hard wired" into the program as 1, would be used as the basis for computing 2!. Two factorial would be the basis for computing 3!. This would continue until 14! and this would be used as the basis for deriving 15!.
+
+### Specification
+
+The program will query the user for an integer, n, and return the exact value of that integer's factorial, n!. While there is no reason that there has to be a logical limit to the size of the n the program can handle, your program should be able to handle a number at least as high as 9,999!.
+
+Since n! may be an integer hundreds or thousands of digits long, its display will spill across several lines. When this happens, print out n! with the most significant digit at the left end of the top line and the units digit on the right-hand end of the number's lowest line. You should print a comma after every third digit (i.e., between the hundred's digit and the thousand's digit, between the hundred thousand's digit and the million's digit, etc.). Break lines at points where commas belong, and put the comma to the right of the number on the line being broken. This signifies that the number continues on the next line. Specifically, print no more than 45 digits per line. Your program should also output statistics on the following:
+
+- Number of digits in each factorial
+- Time, in milliseconds, taken by program to calculate n! .
+
+Your program should be run and produce output on the following data:
+
+```
+10, 98, 234, 567, 999, 5432, 9999
+```
+
+Note that this lab has nothing to do with factorials and the multiplication of numbers. By this I mean that I am not looking for a cleaner or more efficient approach to calculating factorials. The goal of this lab is to manipulate linear linked lists using dynamic storage allocation! You are required to implement the algorithm specified.
+
+Output from your program should be sent to the terminal window (your screen) as well as the requested `csis.txt` output file. Be sure to read the document on Capturing Program Output. Your full name and Palomar ID number must appear as a comment in the source file that contains `main()`. Be sure to include the `csis.txt` output file in your zip archive.

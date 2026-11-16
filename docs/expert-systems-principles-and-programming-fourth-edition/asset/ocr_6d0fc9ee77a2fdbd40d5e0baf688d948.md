@@ -1,0 +1,15 @@
+say is correct outside of their domain of expertise. (Of course, this is true of your boss and you should tell them so every day, especially paydays.)
+
+**Syntax Errors.** These are simple errors that occur when the incorrect form of a rule or fact is entered. The expert systems tools should flag these errors and issue an appropriate message. Other errors that occur in the knowledge-base building phase are due to knowledge source errors that were not detected in the previous stages.
+
+**Inference Engine Errors.** Just as with any other piece of software, the inference engine may have bugs. By the time that an expert systems tool is released for general use, all of the common bugs should be fixed. However, there may be bugs that show up only in rare circumstances, such as having 159 rules on the agenda on April 1. Some bugs may be very subtle and show up only in certain pattern-matching operations.
+
+In general, inference engine bugs may show up in pattern matching, conflict resolution, and execution of the actions. These bugs may be very difficult to detect if they are not consistent. If the expert systems tool is used for mission-critical applications, you should determine how the tool was validated. In general, a test suite should be run for every new version of the expert systems tool, as is done with CLIPS. The testing is automated so it delivers unbiased results; not hurried because management insists that the product is launched because of external pressures.
+
+The simplest method of checking for tool errors is the classic method of asking other users and the tool vendor. The tool vendor should be willing to supply a list of customers, bug reports, and fixes, and how long the tool has been in use. A user's group is an excellent source of information.
+
+**Inference Chain Errors.** These errors may be caused by erroneous knowledge, semantic errors, inference engine bugs, incorrect specification of rule priorities, and unplanned interactions between rules. More complex inference chain errors are due to uncertainty of rules and evidence, the propagation of uncertainty in the inference chain, and nonmonotonicity where facts shown invalid should be retracted and all facts they generated be retracted. It's similar to your hearing that a meeting has been canceled. You don't go any anyway and wait in an empty room but rather make other plans (like taking a nap since no one else is around.)
+
+The choice of a method for dealing with uncertainty does not automatically resolve all issues dealing with uncertainty. For example, before choosing simple Bayesian inference, you should check to see if the assumption of conditional independence is warranted.
+
+**Limits of Ignorance Errors.** A problem that is common to all development stages is specifying the limits of ignorance of the system. As mentioned in Chapter 1, human experts (hopefully) know the extent of their knowledge and

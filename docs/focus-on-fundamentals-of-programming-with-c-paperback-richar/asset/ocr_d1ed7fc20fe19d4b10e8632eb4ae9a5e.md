@@ -1,0 +1,12 @@
+# Chapter 8. Repetition Statements
+
++   - While Statement
++   - For Statement
++   - Comma Operator
++   - Do-While Loop
++   - Break Statement
++   - Continue Statement
++   - Repetition Homework
++   - Grade Lab
++   - Penny Lab
++   - Fibonacci Lab

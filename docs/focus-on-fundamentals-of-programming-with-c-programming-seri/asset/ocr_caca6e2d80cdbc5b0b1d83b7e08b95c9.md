@@ -1,0 +1,33 @@
+Here's a rather simple algorithm to sort a linked list. Assume list points to an unsorted list and sortList points to NULL.
+
+```
+while list != null
+    remove first node from list
+    insert node into correct location into sortList
+list = sortList
+```
+
+Here is what the data files for the lab look like:
+
+```
+Payfile2.txt
+Debbie Starr F 3 W 1000.00
+Joan Jacobus F 9 W 925.00
+David Renn M 3 H 4.75
+Albert Cahana M 3 H 18.75
+Douglas Sheer M 5 W 250.00
+Shari Buchman F 9 W 325.00
+Sara Jones F 1 H 7.50
+Ricky Mofsen M 6 H 12.50
+Jean Brennan F 6 H 5.40
+Jamie Michaels F 8 W 150.00
+
+Hirefile2.txt
+Barry Allen M 0 H 6.75
+Nina Pinella F 0 W 425.00
+Lane Wagger M 0 W 725.00
+
+Firefile2.txt
+Jean Brennan F
+Ricky Mofsen M
+```

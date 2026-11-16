@@ -1,0 +1,23 @@
+```
+va_list ap;
+```
+
+We declare ap to be an argument pointer of type va_list. ap will be used by the other macros to process the variable-length argument list, i.e., ap will point to each argument in turn.
+
+va_start is a macro which initializes the argument pointer, ap, to point to the first unnamed argument on the stack being passed to the function. va_start must be called once before ap is used to access any of the unnamed arguments. The prototype for va_start is:
+
+```
+void va_start(va_list ap, lastarg);
+```
+
+The first argument, ap, is the argument pointer. The second argument, lastarg, is the name of the last fixed function parameter being passed to the called function. This is the rightmost argument in the argument list before the ellipse (...). Note that there must be at least one named argument to the function va_arg is a macro that advances the argument pointer, ap, to the next argument on the stack. The first time va_arg is used, it returns the first argument in the list. Each successive time va_arg is used, it returns the next argument in the list. It does this by first dereferencing ap, and then incrementing ap to point to the following item.
+
+The prototype for va_arg is:
+
+```
+type va_arg(va_list ap, type);
+```
+
+The first argument, ap, is the argument pointer. The second argument, type, represents the type of the value expected in the argument list such as int, double, etc. Note that we can't use char, unsigned char, or float. va_arg uses the type to both perform the dereference to determine what type to return and to determine how big a step to take to locate the next argument on the stack. The macro returns the value of the argument type.
+
+va_end is a macro which does whatever cleanup is necessary to help the called function perform a normal return. It must be called after va_arg has read all of the arguments and before the function returns. Failure to do so might cause strange, undefined behavior in your program. va_end is prototyped as follows:

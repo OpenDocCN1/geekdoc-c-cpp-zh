@@ -1,0 +1,32 @@
+# Bitwise Or
+
+Similar to the logical OR operator (||), the bitwise-or operator (|) produces a true value if at least one operand is true (i.e., has a non-zero value).
+
+| b1 | b2 | b1 | b2 |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+```
+// or1.c
+
+#include <stdio.h>
+
+int main(void) {
+    int x = 0x2719;    // 0010 0111 0001 1001
+    int y = 0x85CD;    // 1000 0101 1100 1101
+    int z;
+
+    z = x | y;    // 1010 0111 1101 1101
+    printf("z = 0x%x\n", z);    // A 7 P D
+    return 0;
+}
+```
+
+The output of this program is:
+
+z = 0xA7DD
+
+The bitwise-or operator is used to set specified bits of a word to 1 (i.e., to turn on bits). For example, suppose we want to set the rightmost 3 bits of an int to 1, regardless of the state of these bits before the operation was performed:

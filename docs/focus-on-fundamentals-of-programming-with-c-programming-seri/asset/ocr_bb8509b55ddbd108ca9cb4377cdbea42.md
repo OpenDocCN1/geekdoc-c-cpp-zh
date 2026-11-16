@@ -1,0 +1,17 @@
+Note that the definition of the Date struct appears in the global space, outside of any function. This allows all functions in the program to see and utilize the user-defined Date data type.
+
+Shown below is the output for a few runs of the program:
+
+```
+Enter today's date mm/dd/yyyy: 02/28/1984
+Today: 2/28/1984
+Tomorrow: 2/29/1984
+
+Enter today's date mm/dd/yyyy: 12/31/1999
+Today: 12/31/1999
+Tomorrow: 1/1/2000
+
+Enter today's date mm/dd/yyyy: 5/31/2013
+Today: 5/31/2013
+Tomorrow: 6/1/2013
+```

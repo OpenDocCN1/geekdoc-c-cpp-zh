@@ -1,0 +1,27 @@
+# Strings and Pointers
+
+Consider the following two declarations:
+
+```
+(1) char word[] = "Computer";
+(2) char *word = "Computer";
+```
+
+In declaration (1) the compiler counts up the characters and sizes the array accordingly, for a total of 9 bytes (including the '\0' character). Here, the array name word is a constant pointer to the first element of the array:
+
+```
+word == &word[0]
+```
+
+and we can show the following equalities:
+
+```
+*word == 'C'
+*(word + 1) == word[1] == 'o'
+```
+
+In declaration (2) pointer notation is used to set up a string. The compiler actually reserves 13 bytes of storage: 9 for the string and 4 for the pointer variable that will point to the string.
+
+In each case word is a pointer to a string. In each case the string itself determines the amount of storage set aside for the string. But the forms are not identical. The array form sets up an array of 9 elements (including the '\0' character) in storage and the compiler recognizes the name word as a synonym for the address of the first array element, &word[0]. Note that word is a pointer constant that contains the base address of the array and that cannot change. You can reference word[i] to identify the next element in the array, but *word is not allowed.
+
+The pointer form also causes 9 elements in storage to be set aside for the string. However, it also sets aside one more storage location for the pointer variable word. This variable initially points to the beginning of the string, but its value can change. Here, ++word would point to the second character, etc.

@@ -1,0 +1,7 @@
+In the last eleven chapters, you’ve learned about C# syntax and the .NET Framework types that represent basic data. You know (in theory) how to define a type in code or by using the Visual Studio Class Designer. But if you’re like most people, the idea of starting from a problem description and working out how to represent it as .NET Framework types is probably still pretty scary. How do you decide how the problem should be divided into classes? How do you choose between classes, structures, or something else? How do you know what properties and methods they need to expose? And how are those classes going to interact to actually do something?
+
+Every application you build is going to be different. That’s what makes application design interesting. But you don’t have to start with a blank slate. There are rules and principles that will help you get started. Collectively, they’re part of OOA&D (Object-Oriented Analysis & Design). In this
+
+chapter we'll begin our examination of these guidelines by looking at how classes can interact, based on their relationships and the basic principles of OOP (Object-Oriented Programming and OOD (Object-Oriented Design).
+
+![](bbox=[0.285, 0.505, 0.905, 0.895])

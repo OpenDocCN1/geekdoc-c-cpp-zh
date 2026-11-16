@@ -1,0 +1,13 @@
+After the loop label in the code, a SBI instruction and then a CBI instruction cause a change in the I/O window. This time the changes appears in the PORTB register. Continue to step through the program using the F10 key or Step Over icon. When the first SBI instruction after the loop label is executed, a change is seen in the PORTB register in the I/O window. This change represents the LED switching on. Step over the call to the delay subroutine and then over the CBI instruction. The CBI instruction switches the LED off, which is seen in the PORTB register of the I/O window.
+
+When the RJMP (relative jump) instruction is executed, program execution starts at the top of the loop again, at the first instruction after the loop label. This completes the loop and the instructions in the loop execute again until the bottom of the loop is reached and the RJMP instruction is executed again.
+
+This was just a basic introduction to using the simulator and was intended to show how instructions are executed from top to bottom unless a jump instruction is executed which changes the flow of a program. Stop the simulator and debugger by clicking the Stop Debugging icon on the second top toolbar (the red square ■), or by selecting Debug ▶ Stop Debugging from the top menu, or the keyboard shortcut Ctrl + Shift + F5.
+
+# 3.6.2 Using a Physical AVR Microcontroller and Debugger
+
+Using the debugger with a physical AVR microcontroller circuit is basically the same as using it with the simulator, but the correct debugging tool must be selected instead of the simulator, and the AVR must be put into a state that enables its debug capabilities. A USB debugger/programmer, such as the Atmel-ICE or AVR Dragon must be used. USB devices that are programmers only will not be able to be used for debugging. This means that those readers who are using a hobby programmer or the AVRISP mkii will not be able to debug physical hardware, but can just read through this section.
+
+In ATtiny13(A) and ATtiny25/45/85, and in fact all of the PDIP packaged microcontrollers from Table 1.1 in section 1.3 of Chapter 1 except the ATtiny26, debugging is done by first enabling debugWIRE on the microcontroller chip itself. For this exercise we use the same LED circuit from Figure 2.1 in Chapter 2 and the same led_blink_asm project.
+
+Plug your debugging device, such as the Atmel-ICE, into a USB port of the host PC. Select the debugger/programmer in Microchip Studio by clicking the hammer icon on the

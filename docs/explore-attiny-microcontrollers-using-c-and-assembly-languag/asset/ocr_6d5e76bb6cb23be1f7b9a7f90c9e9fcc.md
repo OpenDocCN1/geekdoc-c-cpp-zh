@@ -1,0 +1,13 @@
+An Arduino board, such as an Arduino Uno, can also be used to program ATtiny microcontrollers, simply by loading an example sketch to turn the Arduino into an ISP programmer. This appendix shows how to set up a USBasp, USBtinyISP and an Arduino Uno, shown in Figure A.1, as AVR ISP programmers in Microchip Studio. Figure A.1 shows from left to right, a USBtinyISP compatible programmer, a version of the USBasp that is widely available, optional adapter for the USBasp, optional cable for the USBasp and an Arduino Uno.
+
+# A.1 Hobby USB Programmer Capabilities
+
+Before using a hobby USB programmer, it is important to understand how it compares to the Atmel-ICE, and what the limitations of these programmers are. The subsections that follow discuss these issues. In addition to a programmer, the correct USB cable and leads, such as Dupont wires, are needed to connect the programmer to a circuit.
+
+# A.1.1 Differences Between Hobby Programmers and the Atmel-ICE
+
+An Atmel-ICE is the official USB programmer/debugger from Microchip for 8-bit AVR microcontrollers. It also supports 32-bit ARM microcontrollers from the Microchip Cortex-M SAM range, that were originally from Atmel, as well as 32-bit AVR microcontrollers. The Atmel-ICE can not only be used to program in-circuit programmable ATtiny AVR microcontrollers, but can also be used for debugging these devices (and other supported microcontrollers from the Cortex-M, AVR 32-bit, XMEGA and megaAVR ranges).
+
+Hobby programmers are all “program only” devices, that do not support debugging, and mostly only support 8-bit AVR microcontrollers through the ISP/SPI interface. The main differences between the Atmel-ICE and hobby programmers, is 1) that the Atmel-ICE supports many more programming interfaces than hobby programmers (discussed in the next section), 2) the Atmel-ICE supports debugging, and 3) the Atmel-ICE does not supply voltage to a circuit, whereas hobby programmers usually do or can.
+
+To elaborate on hobby programmers supplying power to a circuit – most hobby programmers supply power through the ISP header. This is usually 5V, but in some cases 3.3V can be selected by changing a jumper on the programmer. The ISP interface on an Atmel-ICE has a VTG pin which is used to sense what voltage the circuit is powered from, instead of supplying voltage to the circuit from this pin. An Atmel-ICE must therefore always be used to program an AVR in a circuit that has an external power supply. Hobby

@@ -1,0 +1,24 @@
+int isspace(int c);
+c is a whitespace character (space, tab, carriage return newline, or form feed
+returns nonzero if c is a space, tab, carriage return, new line, vertical tab, or
+formfeed (0x09-0x0D, 0x20)
+
+int isupper(int c);
+c is an uppercase letter
+returns nonzero if c is an uppercase letter
+
+int isxdigit(int c);
+c is a hex digit
+returns nonzero if c is a hexadecimal digit (0-9, A-F, a-f)
+
+int toascii(int c);
+converts integer c to ASCII by clearing all but the lower 7 bits (0-127)
+returns the converted value of c
+
+int tolower(int c);
+translates c to lowercase
+returns the converted value of c if it is uppercase; it returns all others unchanged
+
+int toupper(int c);
+translates c to uppercase
+returns the converted value of c if it is lowercase; it returns all others unchanged

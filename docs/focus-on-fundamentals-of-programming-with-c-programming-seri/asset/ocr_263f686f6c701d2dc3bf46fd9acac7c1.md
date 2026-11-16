@@ -1,0 +1,33 @@
+We could create our own function, drawCircle(), to display a circle:
+
+```
+// drawCircle.c
+// Displays a circle
+void drawCircle( ) {
+    printf(" *** \n");
+    printf("*   * \n");
+    printf("*   * \n");
+    printf("*   * \n");
+    printf(" *** \n");
+}
+```
+
+There are three things we must do to create our own user-defined functions.
+
++   1. Declare the Function.
+
+We do this with a function prototype, which declares the function so that the compiler knows about it. This declaration provides a complete description of the function interface. Function prototypes usually precede main() and they tell the compiler, and us, what a function will do, but not how it will do it.
+
++   2. Write the Function Definition.
+
+The function definition consists of comments, a header and a body. The header is virtually a repeat of the prototype. The body contains the executable statements for the function.
+
++   3. Write the Call(s) to the Function.
+
+These calls cause the function to execute and return values (if there are any values to be returned). While there is one prototype and one definition per function, there may be many calls, with different arguments.
+
+Let's look at an example of a function that calculates the area of a rectangle.
+
++   1. Declare the Function.
+
+First we declare a function prototype. The prototype is the interface (sometimes called the signature) of the function and also declares how the function must be used. It tells the compiler all it needs to know to properly translate the calls to the function. (We will better understand why this is important when we write functions with arguments).

@@ -1,0 +1,1 @@
+Osborne, J. W., & Costello, A. B. (2004). Sample size and subject to item ratio in principal components analysis. Practical Assessment, Research & Evaluation, 9(11), 8.

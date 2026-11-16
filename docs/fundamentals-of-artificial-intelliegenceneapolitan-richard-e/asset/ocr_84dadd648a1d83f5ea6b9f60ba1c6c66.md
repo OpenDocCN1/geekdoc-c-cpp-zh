@@ -1,0 +1,9 @@
+![](bbox=[0.42, 0.08, 0.6, 0.39])
+
+Figure 6.9 If all variables are binary and a joint distribution satisifes the Markov condition with this DAG, there are 1024 values in the joint distribution, but only 68 values in the conditional distributions.
+
+only 34 values in the conditional distributions for the DAG in Figure 6.9 but still 1023 in the joint distribution. We see then that a Bayesian network is a structure for representing a joint probability distribution succinctly.
+
+We cannot take just any DAG and expect a joint distribution to equal the product of its conditional distributions in the DAG. This is only true if the Markov condition is satisfied. Exercise 6.2 illustrates that this is the case in this exercise. It seems that we are left in a dilemma. That is, our goal is to succinctly represent a joint probability distribution using a DAG and conditional distributions for the DAG (a Bayesian network) rather than enumerating every value in the joint distribution. However, we do not know which DAG to use until we check whether the Markov condition is satisfied, and, in general, we would need to have the joint distribution to check this. A common way to resolve this dilemma is to construct a causal DAG, which is a DAG in which there is an edge from X to Y if X causes Y. The DAG concerning the burglar, the alarm, etc., and the DAGs in Figures 6.2 and 6.3 are causal; other DAGs shown so far in this chapter are not causal.
+
+Next we discuss why a causal DAG should satisfy the Markov condition with the probability distribution of the variables in the DAG. A second way of obtaining the DAG is to learn it from data. This second way is discussed in Chapter 12.

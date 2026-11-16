@@ -1,0 +1,13 @@
+![](bbox=[0.105, 0.095, 0.485, 0.255])
+
+# Figure 5.4: Curvilinear response to plateau nature of crop response to applied N for the tepid to cold humid mid-highlands, 1700 – 2200 masl.
+
+increases and rates > 80 kg/ha result in very little added yield. Response curves for sorghum and barley N are only slightly curvilinear without much slope suggesting relatively little N response compared with maize. The response of faba bean to applied N is curvilinear to plateau with the plateau reached at a low N rate, although magnitude of response is small. Response curves have economic implications. Farmers with adequate finance and risk security need to know the rate at which the value of yield gained justifies the cost of additional N in order to apply fertilizer at EOR. Financially constrained farmers need to apply fertilizer at less than EOR at a relatively steep part of the curve to maximize yield gain for a constrained investment.
+
+Another economic consideration that is very important to financially constrained farmers is that the profit potential of applying a nutrient to a crop differs from the potential of applying the same nutrient to another crop and of other crop-nutrient combinations (Figure 5.5). In Figure 5.5, the x-axis gives the cost of a nutrient applied to a single crop (ETb/ha). The y-axis gives net returns to an investment in nutrient application. Each curve represents a different crop-nutrient combination.
+
+The results show that the curve for N applied to teff is steep at low N rates and therefore has more profit potential per small investment than with other crop-nutrient options. At about ETb 750 worth of N applied to teff, P applied to teff at low rates has similar profit potential as indicated by a similar slope. Following teff, maize has a good profit potential to applied N. Lower in the chart are less profitable options. Some crop-nutrient options, such as K applied to crops other than maize, are not shown due to lack of profit potential. The financially constrained farmers need first to take advantage of the crop-nutrient-rate options with the highest profit potential if the crop is a part of cropping systems, and then go on to take advantage of some less profitable options in order to maximize profit from a constrained investment. Farmers with adequate finance
+
+![](bbox=[0.205, 0.575, 0.795, 0.825])
+
+# Figure 5.5: Net returns to investment in single nutrients applied to a crop for the tepid to cold moist mid-highlands, 1700-2200 masl.

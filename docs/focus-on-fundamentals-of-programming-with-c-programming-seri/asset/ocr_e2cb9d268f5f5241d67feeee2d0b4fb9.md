@@ -1,0 +1,36 @@
+# Bitwise Negate
+
+The bitwise-negate operator is a unary operator. That means the operator requires only one operand. Its effect is to flip the bit of the operand.
+
+| b | ~b |
+|---|---|
+| 0 | 1 |
+| 1 | 0 |
+
+For example:
+
+```
+// negate1.c
+#include <stdio.h>
+int main(void) {
+    int x = 0x1234;    // 0001 0010 0011 0100
+    int y;
+    y = ~x;            // 1110 1101 1100 1011
+    printf("y = 0x%x\n", y);
+    return 0;
+}
+```
+
+The output of this program is:
+
+```
+y = 0xEDCB
+```
+
+Remember not to confuse the bit-negate (~) operator with the arithmetic minus (-) operator or with the logical negation (!) operator. For example, if x is equal to 0:
+
+```
+-x = 0
+!x = 1 (true)
+-x = -1 (when treated as a signed value)
+```

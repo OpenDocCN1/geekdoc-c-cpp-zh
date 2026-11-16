@@ -1,0 +1,48 @@
+# Virtual Destructors
+
+Destructors can be virtual, as well as member functions, but not constructors. A virtual destructor is typically used when one class needs to delete objects of a derived class that are addressed by pointers to a base class.
+
+Example without using virtual destructors:
+
+```
+// vdtor1.cpp
+
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+class Base {
+  private:
+    char *buf1;
+
+  public:
+    Base(const char * s) {
+      cout << "Base 1 arg constructor" << endl;
+      buf1 = new char[strlen(s) + 1];
+      strcpy(buf1, s);
+    }
+
+    ~Base() {
+      cout << "Base destructor" << endl;
+      delete [] buf1;
+    }
+};
+
+class Derived : public Base {
+  private:
+    char *buf2;
+
+  public:
+    Derived(const char *s1, const char *s2) : Base(s1) {
+      cout << "Derived 2 arg constructor " << endl;
+      buf2 = new char[strlen(s2) + 1];
+      strcpy(buf2, s2);
+    }
+
+    ~Derived() {
+      cout << "Derived destructor" << endl;
+      delete [] buf2;
+    }
+};
+```

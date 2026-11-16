@@ -1,0 +1,17 @@
++   -= Assign difference
++   &= Assign bitwise AND
++   ^= Assign bitwise XOR
++   |= Assign bitwise OR
++   <<= Assign left shift
++   >>= Assign right shift
+
+# 13. Comma
+
++   , Evaluate
+
+All of the operators in this table can be overloaded except the following:
+
++   . C++ direct component selector
++   .* C++ dereference
++   :: C++ scope access/resolution
++   ?: Conditional

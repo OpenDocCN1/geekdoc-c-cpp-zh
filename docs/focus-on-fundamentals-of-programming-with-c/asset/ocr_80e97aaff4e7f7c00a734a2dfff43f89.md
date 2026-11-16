@@ -1,0 +1,33 @@
+# Defining Nodes in C
+
+We've seen that pointers allow us to build and manipulate linked lists of various types. By altering the values of pointers, nodes can be attached, detached, and reassembled in patterns that grow and shrink as execution of a program progresses.
+
+We can create a chain of these nodes, and keep track of the first one in the list and then store within each node a pointer to the next node in the list. To accomplish this, each node will therefore be defined as a `struct` with one field containing the information and another field containing the address of the next node in the list.
+
+We make the declarations as follows:
+
+```
+struct node {
+    int info;
+    struct node *next;
+};
+typedef struct node *NODEPTR;
+```
+
+or, we can combine the two declarations above as follows:
+
+```
+typedef struct node {
+    int info;
+    struct node *next;
+} *NODEPTR;
+```
+
+In either case, we declare `NODEPTR` to be a pointer to a `node struct`. Note that the `next` field in the `node struct` is a pointer that contains the address of the next node in the list.
+
+We can now declare a `NODEPTR p` and dynamically create a new node:
+
+```
+NODEPTR p;
+p = (NODEPTR) malloc(sizeof(struct node));
+```

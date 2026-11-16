@@ -1,0 +1,20 @@
+Note when we set the `float`, we use the `f`; when we set the `double`, we don't. That's because when we write a literal, including the decimal point, it's always going to take it as a double unless we put the `f` after it. In both of these cases we're just using 7.2, which is a value that will fit in both a float and a double just fine. So it doesn't really matter in this case, but the `f` is good practice.
+
+# C provides three floating data types:
+
+| float | Single-precision floating point |
+| double | Double-precision floating point |
+| long double | Extended-precision floating point |
+
+The C standard doesn't state how much precision the `float`, `double`, and `long double` provide, since different computers may store floating-point numbers in different ways. All that is guaranteed by C is that:
+
+```
+sizeof(float) <= sizeof(double)
+```
+
+So depending upon your computer system, the maximum and minimum values for a `float` and a `double` might look like this:
+
+| Name | Bytes | Minimum Value | Maximum Value | Precision |
+|---|---|---|---|---|
+| float | 4 | 1.17549 x 10^-38 | 3.40282 x 10^38 | 6 digits |
+| double | 8 | 2.22507 x 10^-308 | 1.79769 x 10^308 | 15 digits |

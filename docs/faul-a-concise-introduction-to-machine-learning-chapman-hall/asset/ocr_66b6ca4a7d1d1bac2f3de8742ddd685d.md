@@ -1,0 +1,31 @@
+# List of Figures
+
++   1.1 Vertical environment. Reprinted by permission from Macmillan Publishers Ltd. Nature [4], copyright (1970). 2
+
++   1.2 Discorsi e Dimostrazioni Matematiche Intorno a Due Nuove Scienze Imge in the public domain. 4
+
++   1.3 Two smoothly connected ramps. 5
+
++   2.1 Distribution of participants across age groups in [1]. 11
+
++   2.2 The normal probability density function for various values of \(\mu\) and \(\sigma\). 14
+
++   2.3 Approximate percentages of data falling within ranges determined by \(\sigma\). 16
+
++   2.4 The normal cumulative distribution function for various values of \(\mu\) and \(\sigma\). 17
+
++   2.5 The discrete uniform probability mass function and its cumulative distribution function. 21
+
++   2.6 The Bernoulli probability mass function and its cumulative distribution function. 22
+
++   2.7 The binomial probability mass function and its cumulative distribution function for \(N=20\) and \(\mu=0.3\) (top row), \(\mu=0.5\) (middle row), and \(\mu=0.8\) (bottom row). 23
+
++   2.8 The geometric probability mass function and its cumulative distribution function for \(\mu=0.3\) (top row), \(\mu=0.5\) (middle row), and \(\mu=0.8\) (bottom row). 24
+
++   2.9 The Poisson probability mass function and its cumulative distribution function for \(\lambda=1\) (top row), \(\lambda=5\) (middle row), and \(\lambda=10\) (bottom row). 25
+
++   2.10 The categorical probability mass function and its cumulative distribution function for \(\mu=(1/3,1/2,1/6)^T\). 26
+
++   2.11 The multinomial probability mass function for \(N=5\) and \(\mu=(1/3,1/2,1/6)^T\). 28
+
++   2.12 The uniform probability density function and its cumulative distribution function. 29

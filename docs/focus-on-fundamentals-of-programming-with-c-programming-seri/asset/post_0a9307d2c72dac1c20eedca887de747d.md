@@ -1,0 +1,418 @@
+
+As mentioned previously, in the evaluation of logical expressions, the evaluation process stops as soon as the outcome, true or false, is known (short circuit.)
+
+For example, if `expr1` is false (0), then in the statement:
+
+```
+expr1 && expr2
+```
+
+`expr2` will not be evaluated because the value of the logical expression is already determined to be zero.
+
+Likewise, if `expr1` is true (non-zero), then in the statement:
+
+```
+expr1 || expr2
+```
+
+`expr2` will not be evaluated because the value of the logical expression is already determined to be 1.
+
+## De Morgan's Laws
+
+De Morgan's Laws can sometimes make it more convenient for us to express a logical expression. De Morgan's Laws can be expressed mathematically as follows:
+
+```
+~(P or Q) = ~P and ~Q
+~(P and Q) = ~P or ~Q
+```
+
+In C, these laws state that the expression:
+
+```
+! (condition1 && condition2)
+```
+
+is logically equivalent to the expression:
+
+```
+(!condition1 || !condition2)
+```
+
+Also, the expression:
+
+```
+! (condition1 || condition2)
+```
+
+is logically equivalent to the expression:
+
+```
+(!condition1 && !condition2)
+```
+
+To summarize:
+
+```
+!(condition1 && condition2) = (!condition1 || !condition2)
+!(condition1 || condition2) = (!condition1 && !condition2)
+```
+
+See if you can apply DeMorgan's Law to the following expression:
+
+```
+!(x > 5) || !(y > 7)
+```
+
+## Combining Logical and Relational Operators
+
+We can combine logical and relational operators to test whether a character is a:
+
+- digit
+- uppercase letter
+- lowercase letter
+- printable character
+
+Note that it is typical to place 0x in front of a hexadecimal (base 16) digit:
+
+```
+// ascii1.c
+
+#include <stdio.h>
+
+int main(void) {
+    unsigned char c;
+
+    for (c = 0; c <= 127; ++c) {
+        printf("%3d 0x%03x", c, c);
+
+        // check for printable character
+        if (c >= ' ' && c <= '~') {
+            printf(" '%c'", c);
+        }
+
+        // check for digit
+        if (c >= '0' && c <= '9') {
+            printf("digit");
+        }
+
+        // check for uppercase
+        if (c >= 'A' && c <= 'Z') {
+            printf("uppercase");
+        }
+
+        // check for lowercase
+        if (c >= 'a' && c <= 'z') {
+            printf("lowercase");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+## Here's the program output:
+
+0 0x000
+1 0x001
+2 0x002
+3 0x003
+4 0x004
+5 0x005
+6 0x006
+7 0x007
+8 0x008
+9 0x009
+10 0x00a
+11 0x00b
+12 0x00c
+13 0x00d
+14 0x00e
+15 0x00f
+16 0x010
+17 0x011
+18 0x012
+19 0x013
+20 0x014
+21 0x015
+22 0x016
+23 0x017
+24 0x018
+25 0x019
+26 0x01a
+27 0x01b
+28 0x01c
+29 0x01d
+30 0x01e
+31 0x01f
+32 0x020 ' '
+33 0x021 '!'
+34 0x022 '"'
+35 0x023 '#'
+36 0x024 '$'
+37 0x025 '%'
+38 0x026 '&'
+39 0x027 "'"
+40 0x028 '('
+41 0x029 ')'
+42 0x02a '*'
+43 0x02b '+'
+44 0x02c ','
+45 0x02d '-'
+46 0x02e '.'
+47 0x02f '/'
+48 0x030 '0' digit
+49 0x031 '1' digit
+50 0x032 '2' digit
+51 0x033 '3' digit
+52 0x034 '4' digit
+53 0x035 '5' digit
+54 0x036 '6' digit
+55 0x037 '7' digit
+56 0x038 '8' digit
+57 0x039 '9' digit
+58 0x03a ':' 
+59 0x03b ';' 
+60 0x03c '<' 
+61 0x03d '=' 
+62 0x03e '>' 
+63 0x03f '?' 
+64 0x040 '@' 
+65 0x041 'A' uppercase
+66 0x042 'B' uppercase
+67 0x043 'C' uppercase
+68 0x044 'D' uppercase
+69 0x045 'E' uppercase
+70 0x046 'F' uppercase
+71 0x047 'G' uppercase
+72 0x048 'H' uppercase
+73 0x049 'I' uppercase
+74 0x04a 'J' uppercase
+75 0x04b 'K' uppercase
+76 0x04c 'L' uppercase
+77 0x04d 'M' uppercase
+78 0x04e 'N' uppercase
+79 0x04f 'O' uppercase
+80 0x050 'P' uppercase
+81 0x051 'Q' uppercase
+82 0x052 'R' uppercase
+83 0x053 'S' uppercase
+84 0x054 'T' uppercase
+85 0x055 'U' uppercase
+86 0x056 'V' uppercase
+87 0x057 'W' uppercase
+88 0x058 'X' uppercase
+89 0x059 'Y' uppercase
+90 0x05a 'Z' uppercase
+91 0x05b '[' 
+92 0x05c '\\' 
+93 0x05d ']' 
+94 0x05e '^' 
+95 0x05f '_' 
+96 0x060 '`'
+
+| Dec | Hex | Char | Type |
+|-----|-----|------|------|
+| 97 | 0x061 | 'a' | lowercase |
+| 98 | 0x062 | 'b' | lowercase |
+| 99 | 0x063 | 'c' | lowercase |
+| 100 | 0x064 | 'd' | lowercase |
+| 101 | 0x065 | 'e' | lowercase |
+| 102 | 0x066 | 'f' | lowercase |
+| 103 | 0x067 | 'g' | lowercase |
+| 104 | 0x068 | 'h' | lowercase |
+| 105 | 0x069 | 'i' | lowercase |
+| 106 | 0x06a | 'j' | lowercase |
+| 107 | 0x06b | 'k' | lowercase |
+| 108 | 0x06c | 'l' | lowercase |
+| 109 | 0x06d | 'm' | lowercase |
+| 110 | 0x06e | 'n' | lowercase |
+| 111 | 0x06f | 'o' | lowercase |
+| 112 | 0x070 | 'p' | lowercase |
+| 113 | 0x071 | 'q' | lowercase |
+| 114 | 0x072 | 'r' | lowercase |
+| 115 | 0x073 | 's' | lowercase |
+| 116 | 0x074 | 't' | lowercase |
+| 117 | 0x075 | 'u' | lowercase |
+| 118 | 0x076 | 'v' | lowercase |
+| 119 | 0x077 | 'w' | lowercase |
+| 120 | 0x078 | 'x' | lowercase |
+| 121 | 0x079 | 'y' | lowercase |
+| 122 | 0x07a | 'z' | lowercase |
+| 123 | 0x07b | '{' | |
+| 124 | 0x07c | '|' | |
+| 125 | 0x07d | '}' | |
+| 126 | 0x07e | '~' | |
+| 127 | 0x07f | | |
+
+## Character Type Tests
+
+Character-type tests occur frequently enough in programming that they have been incorporated into the standard C library in a header file called ctype.h. Use of this file allows us to say:
+
+```
+if(isdigit(c))
+```
+
+instead of
+
+```
+if (c >= '0' && c <= '9')
+```
+
+or
+
+```
+if (isupper(c))
+```
+
+instead of
+
+```
+if (c >= 'A' && c <= 'Z')
+```
+
+To use the ctype.h header file that would allow us to access this library, we issue the following preprocessor command:
+
+```
+#include <ctype.h>
+```
+
+This line is a command to the C preprocessor to include some standard definitions into our compilation so that names such as isdigit() and isupper() will be recognized.
+
+Here is a list of the available library functions:
+
+```c
+int isalnum(int c);
+```
+c is an alphanumeric character
+returns nonzero if c is a letter (A-Z or a-z) or a digit (0-9)
+
+```c
+int isalpha(int c);
+```
+c is a letter
+returns nonzero if c is a letter (A-Z or a-z)
+
+```c
+int isascii(int c);
+```
+c is an ascii character (code less than 0200 or 128)
+returns nonzero if the low order byte of c is in the range 0-127 (0x00-0x7F)
+
+```c
+int iscntrl(int c);
+```
+c is a non-printable character (less than ' ')
+returns nonzero if c is a delete character or ordinary control character (0x7F or 0x00-0x1F)
+
+```c
+int isdigit(int c);
+```
+c is a digit
+returns nonzero if c is a digit (0-9)
+
+```c
+int isgraph(int c);
+```
+c is a graphics character
+returns nonzero if c is a printing character, like isprint(), except that a space character is excluded
+
+```c
+int islower(int c);
+```
+c is a lower case letter
+returns nonzero if c is a lower case letter
+
+```c
+int isprint(int c);
+```
+c is a printable character (including space)
+returns nonzero if c is a printing character (0x20-0x7E)
+
+```c
+int ispunct(int c);
+```
+c is a punctuation character
+returns nonzero if c is a punctuation character (iscntrl() or isspace())
+
+```c
+int isspace(int c);
+```
+c is a whitespace character (space, tab, carriage return newline, or form feed)
+returns nonzero if c is a space, tab, carriage return, new line, vertical tab, or formfeed (0x09-0x0D, 0x20)
+
+```c
+int isupper(int c);
+```
+c is an uppercase letter
+returns nonzero if c is an uppercase letter
+
+```c
+int isxdigit(int c);
+```
+c is a hex digit
+returns nonzero if c is a hexadecimal digit (0-9, A-F, a-f)
+
+```c
+int toascii(int c);
+```
+converts integer c to ASCII by clearing all but the lower 7 bits (0-127)
+returns the converted value of c
+
+```c
+int tolower(int c);
+```
+translates c to lowercase
+returns the converted value of c if it is uppercase; it returns all others unchanged
+
+```c
+int toupper(int c);
+```
+translates c to uppercase
+returns the converted value of c if it is lowercase; it returns all others unchanged
+
+We can rewrite the previous program using the ctype.h library:
+
+```
+// ascii2.c
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void) {
+    unsigned char c;
+    for (c = 0; c <= 127; ++c) {
+        printf("%3d 0x%03x", c, c);
+        if (isprint(c)) {
+            printf(" '%c'", c);
+        }
+        if (isdigit(c)) {
+            printf("%d", c);
+        }
+        if (isupper(c)) {
+            printf("UC");
+        }
+        if (islower(c)) {
+            printf("lc");
+        }
+        if (isalpha(c)) {
+            printf("L");
+        }
+        if (isalnum(c)) {
+            printf("AN");
+        }
+        if (isspace(c)) {
+            printf("S");
+        }
+        if (ispunct(c)) {
+            printf("P");
+        }
+        if (iscntrl(c)) {
+            printf("C");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```

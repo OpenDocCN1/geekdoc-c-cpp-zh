@@ -1,0 +1,331 @@
+
+
+## 附录 F
+
+### CLIPS BNF
+
+### CLIPS 程序
+
+```
+<CLIPS-program> ::= <construct>*
+<construct> ::= <deffacts-construct> |
+    <deftemplate-construct> |
+    <defglobal-construct> |
+    <defrule-construct> |
+    <deffunction-construct> |
+    <defgeneric-construct> |
+    <defmethod-construct> |
+    <defclass-construct> |
+    <definstance-construct> |
+    <defmessage-handler-construct> |
+    <defmodule-construct>
+```
+
+### Deffacts 构造
+
+```
+<deffacts-construct> ::= (deffacts <name> [<comment>]
+                        <RHS-pattern>*)
+```
+
+### Deftemplate 构造
+
+```
+<deftemplate-construct> ::= (deftemplate <name>
+                           [<comment>]
+                           <slot-definition>*)
+<slot-definition>
+    ::= <single-slot-definition> |
+        <multislot-definition>
+<single-slot-definition> ::= (slot <name>
+                           <slot-attribute>*)
+<multislot-definition> ::= (multislot <name>
+                           <template-attribute>*)
+<template-attribute> ::= <default-attribute> |
+                        <constraint-attribute>
+```
+
+### 事实规范
+
+```
+<RHS-pattern> ::= <ordered-RHS-pattern> |
+ <template-RHS-pattern>
+<ordered-RHS-pattern> ::= (<symbol> <RHS-field>+)
+<template-RHS-pattern> ::= (<deftemplate-name>
+ <RHS-slot>*)
+<RHS-slot> ::= <single-field-RHS-slot> |
+ <multifield-RHS-slot>
+<single-field-RHS-slot> ::= (<slot-name> <RHS-field>)
+<multifield-RHS-slot> ::= (<slot-name> <RHS-field>*)
+<RHS-field> ::= <variable> |
+ <constant> |
+ <function-call>
+```
+
+### Defrule 构造
+
+```
+<defrule-construct> ::= (defrule <name> [<comment>]
+ [<declaration>]
+ <conditional-element>*
+ =>
+ <expression>*)
+<declaration> ::= (declare <rule-property>+)
+<rule-property>
+ ::= (salience <integer-expression>) |
+ (auto-focus <boolean-symbol>)
+<boolean-symbol> ::= TRUE | FALSE
+<conditional-element> ::= <pattern-CE> |
+ <assigned-pattern-CE> |
+ <not-CE> |
+ <and-CE> |
+ <or-CE> |
+ <logical-CE> |
+ <test-CE> |
+ <exists-CE> |
+ <forall-CE>
+<pattern-CE> ::= <ordered-pattern-CE> |
+ <template-pattern-CE> |
+ <object-pattern-CE>
+<assigned-pattern-CE>
+ ::= <single-field-variable> <- <pattern-CE>
+<not-CE> ::= (not <conditional-element>)
+<and-CE> ::= (and <conditional-element>+)
+<or-CE> ::= (or <conditional-element>+)
+<logical-CE> ::= (logical <conditional-element>+)
+<test-CE> ::= (test <function-call>)
+<exists-CE> ::= (exists <conditional-element>+)
+<forall-CE> ::= (forall <conditional-element>+)
+<ordered-pattern-CE> ::= <symbol> <constraint>+
+<template-pattern-CE>
+::= (<deftemplate-name> <LHS-slot>*)
+<object-pattern-CE>
+::= (object <attribute-constraint*>)
+<attribute-constraint> ::= (is-a <constraint>) |
+(name <constraint>) |
+(<slot-name> <constraint>*)
+
+<LHS-slot>
+::= <single-field-LHS-slot> |
+<multifield-LHS-slot>
+<single-field-LHS-slot> ::= (<slot-name> <constraint>)
+<multifield-LHS-slot> ::= (<slot-name> <constraint>*)
+<constraint> ::= ? | $? | <connected-constraint>
+
+<connected-constraint>
+::= <single-constraint> |
+<single-constraint> & <connected-constraint> |
+<single-constraint> | <connected-constraint>
+<single-constraint> ::= <term> | <~term>
+<term> ::= <constant> |
+<single-field-variable> |
+<multifield-variable> |
+<function-call> |
+= <function-call>
+```
+
+### Defglobal 构造
+
+```
+<defglobal-construct>
+::= (defglobal [<defmodule-name>]
+<global-assignment>*)
+
+<global-assignment>
+::= <global-variable> = <expression>
+
+<global-variable> ::= ?*<symbol>*
+```
+
+### Deffunction 构造
+
+```
+<deffunction-construct>
+::= (deffunction <name> [<comment>]
+(<regular-parameter>* [<wildcard-parameter>])
+<expression>*)
+
+<regular-parameter> ::= <single-field-variable>
+<wildcard-parameter> ::= <multifield-variable>
+```
+
+### Defgeneric 构造
+
+```
+<defgeneric-construct>
+::= (defgeneric <name> [<comment>])
+```
+
+### Defmethod 构造
+
+```
+<defmethod-construct>
+::= (defmethod <name> [<index>] [<comment>]
+(<parameter-restriction>* [<wildcard-parameter-restriction>])
+<expression>*)
+<parameter-restriction>
+::= <single-field-variable> |
+(<single-field-variable> <type>* [<query>])
+<wildcard-parameter-restriction>
+::= <multifield-variable> |
+(<multifield-variable> <type>* [<query>])
+<type> ::= <class-name>
+<query> ::= <global-variable>. | <function-call>
+```
+
+### Defclass 构造
+
+```
+<defclass-construct> ::= (defclass <name> [<comment>]
+                        (is-a <superclass-name>+)
+                        (<role>)
+                        (<pattern-match-role>)
+                        <slot>*
+                        <handler-documentation>*)
+
+<role> ::= (role concrete | abstract)
+
+<pattern-match-role>
+::= (pattern-match reactive | non-reactive)
+
+<slot> ::= (slot <name> <facet>*) |
+(single-slot <name> <facet>*) |
+(multislot <name> <facet>*)
+
+<facet> ::= <default-facet> | <storage-facet> |
+<access-facet> | <propagation-facet> |
+<source-facet> | <pattern-match-facet> |
+<visibility-facet> |
+<create-accessor-facet> |
+<override-message-facet> |
+<constraint-attribute>
+
+<default-facet>
+::= (default ?DERIVE | ?NONE | <expression>*) |
+(default-dynamic <expression>*)
+<storage-facet> ::= (storage local | shared)
+<access-facet> ::= (access read-write |
+read-only |
+initialize-only)
+<propagation-facet>
+::= (propagation inherit | no-inherit)
+<source-facet> ::= (source exclusive | composite)
+<pattern-match-facet>
+::= (pattern-match reactive | non-reactive)
+<visibility-facet> ::= (visibility private | public)
+<create-accessor-facet>
+::= (create-accessor ?NONE | read |
+write | read-write)
+<override-message-facet>
+::= (override-message ?DEFAULT | <message-name>)
+<handler-documentation>
+::= (message-handler <name> [<handler-type>])
+<handler-type> ::= primary | around | before | after
+```
+
+### Defmessage-handler 构造
+
+```
+<defmessage-handler-construct>
+::= (defmessage-handler <class-name>
+<message-name> [<handler-type>] [<comment>]
+(<parameter>* [<wildcard-parameter>])
+<action>+)
+<handler-type> ::= around | before | primary | after
+<parameter> ::= <single-field-variable>
+<wildcard-parameter> ::= <multifield-variable>
+```
+
+### Definstances 构造
+
+```
+<definstances-construct> ::= (definstances <name>
+[active] [<comment>]
+<instance-template>*)
+<instance-template> ::= (<instance-definition>)
+<instance-definition>
+::= <instance-name-expression> of
+<class-name-expression> <slot-override>*
+<slot-override>
+::= (<slot-name-expression> <expression>*)
+```
+
+### Defmodule 构造
+
+```
+<defmodule-construct>
+ ::= (defmodule <name> [<comment>])
+     <port-specification>*)
+<port-specification>
+ ::= (export <port-item>) |
+     (import <module-name> <port-item>)
+<port-item> ::= ?ALL |
+        ?NONE |
+        <port-construct> ?ALL |
+        <port-construct> ?NONE |
+        <port-construct> <construct-name>+
+<port-construct> ::= deftemplate | defclass |
+        defglobal | deffunction |
+        defgeneric
+```
+
+### 约束属性
+
+```
+<constraint-attribute>
+ ::= <type-attribute> |
+     <allowed-constant-attribute> |
+     <range-attribute> |
+     <cardinality-attribute>
+<type-attribute> ::= (type <type-specification>)
+<type-specification> ::= <allowed-type> | ?VARIABLE
+<allowed-type> ::= SYMBOL | STRING | LEXEME
+        INTEGER | FLOAT | NUMBER |
+        INSTANCE-NAME |
+        INSTANCE-ADDRESS |
+        INSTANCE | EXTERNAL-ADDRESS |
+        FACT-ADDRESS
+<allowed-constant-attribute>
+ ::= (allowed-symbols <symbol-list>) |
+     (allowed-strings <string-list>) |
+     (allowed-lexemes <lexeme-list>) |
+     (allowed-integers <integer-list>) |
+     (allowed-floats <float-list>) |
+     (allowed-numbers <number-list>) |
+     (allowed-instance-names <instance-list>) |
+     (allowed-values <value-list>)
+<symbol-list> ::= <symbol>+ | ?VARIABLE
+<string-list> ::= <string>+ | ?VARIABLE
+<lexeme-list> ::= <lexeme>+ | ?VARIABLE
+<integer-list> ::= <integer>+ | ?VARIABLE
+<float-list> ::= <float>+ | ?VARIABLE
+<number-list> ::= <number>+ | ?VARIABLE
+<instance-name-list> ::= <instance-name>+ | ?VARIABLE
+<value-list> ::= <constant>+ | ?VARIABLE
+<range-attribute> ::= (range <range-specification>)
+<range-specification> ::= <number> | ?VARIABLE
+<cardinality-attribute> ::= (cardinality <cardinality-specification>)
+<cardinality-specification> ::= <integer> | ?VARIABLE
+```
+
+### 变量和表达式
+
+```
+<single-field-variable> ::= ?<variable-symbol>
+<multifield-variable> ::= $?<variable-symbol>
+<global-variable> ::= ?*<symbol>*
+<variable> ::= <single-field-variable> | <multifield-variable> | <global-variable>
+<function-call> ::= (<function-name> <expression>*) | (<special-function-name> <special-function-arguments>)
+<special-function-name> ::= The name of a function such as assert or make-instance that does not parse its arguments in the default manner that standard functions use.
+<special-function-arguments> ::= Argument parsing for special functions varies. Refer to the documentation for each special function for its valid syntax. For example, in the function (assert <relation>), the relation value (3) is a call to the function with an argument of 3, it is the fact to be asserted.
+<expression> ::= <constant> | <variable> | <function-call>
+```
+
+### 数据类型
+
+```
+<symbol> ::= A valid symbol as specified in Section 7.4
+<string> ::= A valid string as defined in Section 7.4
+<float> ::= A valid float as defined in Section 7.4
+<integer> ::= A valid integer as specified in Section 7.4
+```

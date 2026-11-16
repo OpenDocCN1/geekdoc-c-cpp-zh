@@ -1,0 +1,33 @@
+Suppose you make an innocent modification to the above program:
+
+```
+// value2.c
+
+#include <stdio.h>
+
+#define TOP 100
+#define BOTTOM 47
+#define SIZE TOP - BOTTOM
+
+int main(void) {
+    int i, a[SIZE * 2];
+    for (i = 0; i < SIZE; i++)
+        a[i] = 0;
+    printf("SIZE * 2 = %d\n", SIZE * 2);
+    return 0;
+}
+```
+
+All we've done is to multiply SIZE by 2, but the results are unexpected. The output produced is:
+
+SIZE * 2 = 6
+
+If SIZE were a C variable, this wouldn't happen since the operator precedence would occur as you would expect. This problem can certainly be avoided by the correct use of parentheses. But if code like this gets buried and you aren't looking for it, it can be very difficult to find.
+
+You might think that you can solve this problem by making SIZE a const. But ANSI C treats a const differently than a preprocessor name. A C const is a variable that cannot be changed, but the C compiler cannot evaluate an expression that contains a const within array brackets. So if SIZE is a const, you cannot say this in ANSI C:
+
+```
+int a[SIZE * 2];
+```
+
+Therefore in ANSI C, const cannot replace the use of the preprocessor.

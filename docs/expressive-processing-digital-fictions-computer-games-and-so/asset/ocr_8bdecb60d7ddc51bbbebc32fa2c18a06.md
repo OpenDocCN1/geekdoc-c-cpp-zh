@@ -1,0 +1,9 @@
+any honey is, DKnow is called. DKnow forms the goal “Arthur knows where some honey is.” It’s not already true, and it’s not yet part of the goal structure, so it is added. The first planbox of DKnow is used if there is a standard method for finding the information: like checking a watch or clock to learn the time. There isn’t one of these for honey in Tale-Spin, so the next planbox of DKnow is to see if there’s someone who is an expert on these matters to ask.” Bears are experts at honey, but Arthur’s the only bear he knows about, so Tale-Spin moves to the next planbox, which is to use the methods of the Persuade package to convince a friend to tell you. A friend is someone that you think relates to you with a positive value for affection. Arthur’s opinion of George Bird’s opinion of him is unknown. If the audience says that Arthur doesn’t think they’re friends, Arthur will have only one DKnow planbox left before he has to give up on the goal of having some honey: Persuade-ing an agent to find out the answer and tell him.
+
+9. According to Meehan’s dissertation (1976, 50). The description of this portion of chapter 11’s story (ibid., 170) elides this step.
+
+Relationship and personality states are extensions to Schank’s and Abelson’s work created by Meehan for his work on Tale-Spin (1976, 40). Testing memory for a relationship state is done by a procedure that adds the state to memory if it isn’t there. Since Tale-Spin is in the mode of asking the audience, it types:
+
++   DOES ARTHUR BEAR THINK THAT GEORGE BIRD LIKES HIM? 1: A LOT : 2: A LITTLE : 3: NOT MUCH : 4: NOT AT ALL
+
+Tale-Spin can simultaneously maintain four different states that are similar to this in memory. The first, this one, is: Does Arthur think that George likes him? The

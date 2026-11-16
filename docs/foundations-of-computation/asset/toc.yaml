@@ -1,0 +1,317 @@
+level_changes:
+- line: 20
+  before: 2
+  after: 3
+- line: 28
+  before: 2
+  after: 3
+- line: 98
+  before: 2
+  after: 3
+- line: 143
+  before: 2
+  after: 3
+- line: 196
+  before: 2
+  after: 3
+- line: 311
+  before: 2
+  after: 3
+- line: 325
+  before: 2
+  after: 3
+- line: 386
+  before: 2
+  after: 3
+- line: 538
+  before: 2
+  after: 3
+- line: 570
+  before: 2
+  after: 3
+- line: 608
+  before: 2
+  after: 3
+- line: 678
+  before: 2
+  after: 3
+- line: 725
+  before: 2
+  after: 3
+- line: 909
+  before: 2
+  after: 3
+- line: 954
+  before: 2
+  after: 3
+- line: 1120
+  before: 2
+  after: 3
+- line: 1180
+  before: 2
+  after: 3
+- line: 1218
+  before: 2
+  after: 3
+- line: 1266
+  before: 2
+  after: 3
+- line: 1268
+  before: 2
+  after: 3
+- line: 1294
+  before: 2
+  after: 3
+- line: 1296
+  before: 2
+  after: 3
+- line: 1453
+  before: 2
+  after: 3
+- line: 1499
+  before: 2
+  after: 3
+- line: 1578
+  before: 2
+  after: 3
+- line: 1619
+  before: 2
+  after: 3
+- line: 1703
+  before: 2
+  after: 3
+- line: 1820
+  before: 2
+  after: 3
+- line: 1926
+  before: 2
+  after: 3
+- line: 1973
+  before: 2
+  after: 3
+- line: 2139
+  before: 2
+  after: 3
+- line: 2185
+  before: 2
+  after: 3
+- line: 2288
+  before: 2
+  after: 3
+- line: 2327
+  before: 2
+  after: 3
+- line: 2397
+  before: 2
+  after: 3
+- line: 2421
+  before: 2
+  after: 3
+- line: 2542
+  before: 2
+  after: 3
+- line: 2681
+  before: 2
+  after: 3
+- line: 2694
+  before: 2
+  after: 3
+- line: 2702
+  before: 2
+  after: 3
+- line: 2716
+  before: 2
+  after: 3
+- line: 2756
+  before: 2
+  after: 3
+- line: 2826
+  before: 2
+  after: 3
+- line: 2871
+  before: 2
+  after: 3
+- line: 2967
+  before: 2
+  after: 3
+- line: 3123
+  before: 2
+  after: 3
+- line: 3129
+  before: 2
+  after: 3
+- line: 3175
+  before: 2
+  after: 3
+- line: 3191
+  before: 2
+  after: 3
+- line: 3216
+  before: 2
+  after: 3
+- line: 3239
+  before: 2
+  after: 3
+- line: 3318
+  before: 2
+  after: 3
+- line: 3356
+  before: 2
+  after: 3
+- line: 3377
+  before: 2
+  after: 3
+- line: 3470
+  before: 2
+  after: 3
+- line: 3482
+  before: 2
+  after: 3
+- line: 3520
+  before: 2
+  after: 3
+- line: 3524
+  before: 2
+  after: 3
+- line: 3552
+  before: 2
+  after: 3
+- line: 3559
+  before: 2
+  after: 3
+- line: 3573
+  before: 2
+  after: 3
+- line: 3644
+  before: 3
+  after: 2
+- line: 3751
+  before: 2
+  after: 3
+- line: 3773
+  before: 2
+  after: 3
+- line: 3809
+  before: 2
+  after: 3
+- line: 3839
+  before: 2
+  after: 3
+- line: 3868
+  before: 2
+  after: 3
+- line: 3872
+  before: 2
+  after: 3
+- line: 3874
+  before: 2
+  after: 3
+- line: 3930
+  before: 2
+  after: 3
+- line: 3999
+  before: 2
+  after: 3
+- line: 4052
+  before: 2
+  after: 3
+- line: 4214
+  before: 2
+  after: 3
+- line: 4244
+  before: 2
+  after: 3
+- line: 4256
+  before: 2
+  after: 3
+- line: 4384
+  before: 2
+  after: 3
+- line: 4413
+  before: 2
+  after: 3
+- line: 4460
+  before: 2
+  after: 3
+- line: 4466
+  before: 2
+  after: 3
+- line: 4480
+  before: 2
+  after: 3
+- line: 4507
+  before: 2
+  after: 3
+- line: 4529
+  before: 2
+  after: 3
+- line: 4544
+  before: 2
+  after: 3
+- line: 4644
+  before: 2
+  after: 3
+- line: 4667
+  before: 3
+  after: 2
+- line: 4739
+  before: 2
+  after: 3
+- line: 4763
+  before: 2
+  after: 3
+- line: 4901
+  before: 2
+  after: 3
+- line: 4913
+  before: 2
+  after: 3
+- line: 4959
+  before: 2
+  after: 3
+text_changes:
+- line: 28
+  before: 1.1. 命题逻辑
+  after: 1.1 命题逻辑
+- line: 98
+  before: 1.1. 命题逻辑
+  after: 1.1 命题逻辑
+- line: 311
+  before: 1.2. 布尔代数
+  after: 1.2 布尔代数
+- line: 1120
+  before: 1.6. 证明
+  after: 1.6 证明
+- line: 1232
+  before: 引理 1.5. 如果 \(N$ 是整数且 \(N > 1\)，则存在一个能整除 \(N$ 的质数。
+  after: 引理 1.5. 如果 \(N\) 是整数且 \(N > 1\)，则存在一个能整除 \(N\) 的质数。
+- line: 1619
+  before: 1.9. 应用：递归与归纳
+  after: 1.9 应用：递归与归纳
+- line: 1820
+  before: 2.1. 基本概念
+  after: 2.1 基本概念
+- line: 3318
+  before: 3.4. 有限状态自动机
+  after: 3.4 有限状态自动机
+- line: 3636
+  before: 3.7. 非正规语言
+  after: 3.7 非正则语言
+- line: 3751
+  before: 4.1. 上下文无关文法
+  after: 4.1 上下文无关文法
+- line: 3809
+  before: 4.1. 上下文无关文法
+  after: 4.1 上下文无关文法
+- line: 3839
+  before: 4.1. 上下文无关文法
+  after: 4.1 上下文无关文法
+- line: 3999
+  before: 4.2. 应用：BNF
+  after: 4.2 应用：BNF
+- line: 4256
+  before: 4.4. 下推自动机
+  after: 4.4 下推自动机
+- line: 4959
+  before: 5.3. 计算的极限
+  after: 5.3 计算的极限

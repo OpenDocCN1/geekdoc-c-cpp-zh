@@ -1,0 +1,46 @@
+Here's our code which first finds the index of the smallest item in the array and then swaps the integer at that location with the first integer in the array:
+
+```
+```c
+// swap3.c
+#include <stdio.h>
+
+int main(void);
+int getMinIndex(int num[], int size);
+void swap(int *x, int *y);
+
+int main(void) {
+    int i, small;
+    int num[10] = { 43, 66, 12, -16, 42, -8, 12, 33, -19, 11 };
+
+    small = getMinIndex(num, 10);
+    swap(&num[0], &num[small]);
+
+    for (i = 0; i < 10; ++i) {
+        printf("%5d", num[i]);
+    }
+
+    return 0;
+}
+
+// Function returns the index of the smallest value in an array
+int getMinIndex(int num[], int size) {
+    int i, minIndex = 0;
+
+    for (i = 1; i < size; ++i) {
+        if (num[i] < num[minIndex]) {
+            minIndex = i;
+        }
+    }
+
+    return minIndex;
+}
+
+// Function swaps two integers
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+```
+```

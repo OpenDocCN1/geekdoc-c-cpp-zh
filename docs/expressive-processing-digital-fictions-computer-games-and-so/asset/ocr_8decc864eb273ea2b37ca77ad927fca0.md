@@ -1,0 +1,9 @@
+name or another) can become pervasive enough that, in the future, those writing for the media will be less easily fooled. This is especially important for software systems with broader social impact, but I believe the relevant phenomena are particularly legible in examples such as *Brutus*—which are lent readability by our familiarity with storytelling and ability to perform commonsense evaluations of claims related to it.
+
+In the *Brutus* illusion we may also see the lingering impact of traditional views of AI. Even though Bringsjord and Ferrucci no longer claim that their system simulates human creative behavior, they still can't escape trying to create the impression that the system is the creative actor—that its stories are artworks, and the system is the author of these stories. Of course, this is not a necessary perspective. One could view the *Brutus* system as an artwork, its stories as particular surface outputs from the artwork, and Bringsjord and Ferrucci as the authors of the artwork. This view of system authoring would doubtless produce less press attention, but this is often the case with accurate reports of software systems, and it would not make this perspective more difficult to hold. More substantially, this would require a different conceptual approach to AI—such as that which produced the *Terminal Time* project.
+
+# **Terminal Time**
+
+Picture a darkened theater. An audience watches, presumably somewhat disconcerted, as “a montage of Tibetan Buddhist imagery and Chinese soldiers holding monks at gunpoint” unfolds on-screen. A computerized voice tells them:
+
+There were reports that Buddhist monks and nuns

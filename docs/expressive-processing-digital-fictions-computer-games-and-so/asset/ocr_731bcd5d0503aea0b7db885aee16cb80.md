@@ -1,0 +1,9 @@
+California at Irvine in 2007) point to the importance of this shift between showings. As the Terminal Time authors write in the book Narrative Intelligence.
+
+Typically, during the first performance, audiences respond to the questions truthfully, that is, actively trying to reflect their true beliefs in their answers to the questions. During the second performance they tend to respond playfully to the questions, essentially trying on different belief systems to see how this will effect the resulting history. (Domike, Mateas, and Vanouse, 2003)
+
+Of course, the dual showings also serve to allow the audience to begin to form a mental image of how the Terminal Time model of ideology drives the documentary-creation process. From there it becomes possible for the audience to reflect on the gap between this and how (in their view) ideology shapes the documentary-creation process of human filmmakers. This can be seen as another of Terminal Time's inversions of the history of AI: a gap in its simulation of human behavior that is not a failure or an opportunity for future work but an opportunity for reflection and debate.
+
+# Terminal Time and Interaction
+
+Little of the sort of reflection discussed above is likely with noninteractive story-generation systems. In a sense, it is the interactive nature of Terminal Time that actually warrants the use of computational processes. This separates it, for example, from the public presentation of Brutus. A human author could easily write a Brutus story for posting on a web site or printing in a newspaper. The same is true of Universe. A human author could (and many human authors do) produce plot outlines

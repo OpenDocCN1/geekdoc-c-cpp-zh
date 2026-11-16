@@ -1,0 +1,28 @@
+The includes in the linear linked list .c file would look like this:
+
+```
+// list.c
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "list.h"
+```
+
+Note the statement:
+
+```
+#include "list.h"
+```
+
+This instructs the compiler to read in the statements from the list.h header file.
+At this point, you should be able to compile the list.c file separately from the
+rest of your program. So when you are ready to use the linked list code in your
+program, you would create a new source code file within the project and include
+the header file for the linked list functions:
+
+```
+#include "list.h"
+```
+
+You will also need to bring in the list.c source code for linked lists by adding
+the source code file to the other source code files in the project.

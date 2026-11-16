@@ -1,0 +1,26 @@
+For example, find the greatest common divisor of A = 24 and B = 9:
+
+```
+1. The remainder of 24 / 9 = 6.
+2. A = 9.
+3. B = 6.
+4. Repeat steps 1 ~ 3.
+
+1. The remainder of 9 / 6 = 3.
+2. A = 6.
+3. B = 3.
+4. Repeat steps 1 ~ 3.
+
+1. The remainder of 6 / 3 = 0.
+2. A = 3.
+3. B = 0.
+4. The greatest common divisor is 3.
+```
+
+There are typically three important features of an algorithm:
+
++   1. The algorithm must have a finite number of instructions or steps.
++   2. Each instruction in the algorithm is well defined (not ambiguous).
++   3. The algorithm eventually halts.
+
+A computer program is also an example of an algorithm. In fact, here's a program written in C to compute the greatest common divisor of two numbers following Euclid's algorithm:

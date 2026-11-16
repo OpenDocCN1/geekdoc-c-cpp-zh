@@ -1,0 +1,7 @@
+and engaged by the focalized character, which not only shapes actions in the world but also the extent and tone of stream-of-consciousness character daydreams.
+
+What I find fascinating is Harrell's work to make linguistic play an engagement with underlying conceptual models—while also organizing his system so that both the linguistic and conceptual structures are individually authored for each work. While its conceptual blending methods may require that concepts be represented in similar form in each work, this seems much more promising than assuming the same concepts will be appropriate for every work (an assumption that seems to foreclose one of art's most important possibilities).
+
+# Process and Fiction
+
+The research and writing for this book has given me a much greater interest in the possibilities for simulation-oriented approaches to process-intensive fiction. Perhaps because of my training as a fiction writer, I was more inclined to image stories with fixed events, in which computational models opened variability related to language and theme. But the richness of the simulative tradition—much of it little discussed in the books I found on electronic literature and game design, both of which tend to focus on approaches with low process intensity—has convinced me of the potential of this direction. In the meantime, I hope that this chapter has convinced some who have largely seen computational approaches to fiction as synonymous with simulation that a much wider range of possibilities awaits our exploration.

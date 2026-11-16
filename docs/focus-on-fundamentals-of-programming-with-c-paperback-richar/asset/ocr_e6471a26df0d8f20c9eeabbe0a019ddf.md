@@ -1,0 +1,29 @@
+```
+// bitprnt1.c
+int bitprnt1(int num) {
+    int i, mask;
+    mask = 1;
+    mask <<= 15;
+    for (i = 1; i <= 16; i++) {
+        printf(num & mask ? "1" : "0");
+        num <<= 1;
+    }
+    return 0;
+}
+```
+
+Unfortunately this function is not portable due to the fact that the `sizeof(int)` will vary on different computers. We thus modify the program to make it portable to different computers as follows:
+
+```
+// bitprnt2.c
+int bitprnt2(int num) {
+    int i, mask;
+    mask = 1;
+    mask <<= (sizeof(int) * 8) - 1;
+    for (i = 1; i <= sizeof(int) * 8; i++) {
+        printf(num & mask ? "1" : "0");
+        num <<= 1;
+    }
+    return 0;
+}
+```

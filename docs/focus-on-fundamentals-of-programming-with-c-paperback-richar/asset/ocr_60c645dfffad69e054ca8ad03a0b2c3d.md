@@ -1,0 +1,36 @@
+Of course you might want to switch the order of `foo1()` and `foo2()` in your program and all would be well. However, in a large program with dozens of functions, it might not be so easy to order the functions properly. With the use of function prototypes, we never have to worry about the order of our functions.
+
+One last reason for the use of function prototypes deals with the building of larger programs and linking source codes together. This will be a topic for discussion at a later time.
+
+# # Function Return Values
+
+Note that even though a function returns a value, a program need not make use of it:
+
+```
+```c
+// return1.c
+
+while (...) {
+    :
+    getchar();    // get a character and do nothing with it
+    c = getchar(); // get another character and assign to c
+    :
+}
+```
+```
+
+# # void Return Values and void Parameter List
+
+If a function does not return any value, its return type should be specified as `void`. The `void` specifier informs the compiler that a function does not return a value. In a sense, the `void` data type is actually defining the absence of a data type and a function declared to be of type `void` has no return value and cannot be used in an expression as if it does.
+
+```
+```c
+// return2.c
+
+void printHeader(void) {
+    printf("Program Number 1\n");
+    printf("by Richard Stegman\n");
+    printf("Version 1.0, released 2/12/14\n");
+}
+```
+```

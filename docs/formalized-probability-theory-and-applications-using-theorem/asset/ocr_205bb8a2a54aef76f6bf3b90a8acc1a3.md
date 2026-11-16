@@ -1,0 +1,13 @@
+Consequently, for any \(\epsilon > 0\) and \(n\) sufficiently large, the code rate \(\bar{\pi}\) can be made as close as needed to the entropy \(H(X)\) while maintaining a probability of error of the encoder that is bounded by \(\epsilon\).
+
+In this application, we made use of the framework presented in previous chapters for formally verifying the limit of data compression. This has the advantage of providing an exact mechanical proof of the result, similar to the one obtained through paper-and-pencil analysis, compared to less accurate results given by other computer based simulation approaches. Compared to the paper-and-pencil based analytical method, the correctness of the result is guaranteed by the soundness of the theorem prover. Furthermore, the formal proof serves as a way to improve the formal specification of the problem, by focusing only on the necessary assumptions to prove the result and ignoring the unnecessary ones.
+
+To the best of our knowledge, this was the first time the AEP has been formally verified. This is also the first formal proof of Chebychev and Markov inequalities that uses measure theory and Lebesgue integration and that can be applied to various similar inequalities. The formalization of Shannon entropy allowed us to define the typical set and prove its properties. These proofs required approximately 3 weeks of human effort and around 1000 lines of HOL4 code. The upside is that these results can be reused in several other engineering applications.
+
+Our formalization has influenced the work of Affeldt et al., in which they proved the Shannon’s theorems in the Coq proof assistants. In that work, the authors provided a simplified formalization of the concepts involved instead of generalized definitions that can be used in other applications, like we did in this book.
+
+# 11.2 ANONYMITY-BASED SINGLE MIX
+
+In communication networks, privacy requires not only confidentiality of the information but also hiding the identities of the communicating parties. Several anonymous networks have been proposed to ensure anonymous communication, e.g. Onion Routing (Syverson, Goldschlag, & Reed, 1997), Crowds (Reiter & Rubin, 1998), etc. Most of the proposed solutions are based on Chaum’s original idea of a threshold mix. Mixes are relay nodes that collect packets from different users, shuffle them then forward them to their destinations in such a way that an external eavesdropper cannot link an outgoing packet to its corresponding sender.
+
+In this section, we use our formalization to reason about an anonymity-based single MIX (Zhu & Bettati, 2009), designed to hide the communication links between a set of senders and a set of receivers. We model a single MIX as a communication

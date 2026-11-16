@@ -1,0 +1,3 @@
+Remember that the main() function should appear as the first function in the program. Be sure to use function prototypes for each of the functions that are used in your program.
+
+Output from your program should be sent to the terminal window (your screen) as well as the requested csis.txt output file. Be sure to read the document on Capturing Program Output. Your full name must appear as a comment in the source file that contains main(). Be sure to include the csis.txt output file in your zip archive.

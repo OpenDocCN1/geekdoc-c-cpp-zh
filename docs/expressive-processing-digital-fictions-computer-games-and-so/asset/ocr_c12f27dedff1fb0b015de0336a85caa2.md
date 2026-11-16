@@ -1,0 +1,9 @@
+19. This is something that Steven Dow and Blair MacIntyre have explored in creating the “wizard” interface for their augmented reality version of Façade (Dow 2008).
+
+Façade system actually reduce each player utterance to one of a set of discrete discourse acts—and not always successfully. This creates a serious mismatch. Personally, every time that I have played Façade in a manner I considered “according to expectations,” a statement that I thought of as perfectly normal produced a reaction so unexpected that I found myself thinking about the shape of the underlying system.
+
+In fact, Façade's authors estimate that natural-language understanding failure takes place at about 30 percent of the time. My subjective feeling as a player is that failures are less frequent, but this is due to the clever ways that Façade defects and recovers in many circumstances. And as Mateas and Stern write, “This tradeoff was intentional, since we wanted to better understand the new pleasures that natural language can offer when it succeeds” (2007, 206). One can see here that natural-language interaction offers powerful potential to the audience, but also, by digital media authors, must be regarded as an area of active research (rather than a mature technology). It points to other research areas as well, such as interfaces that might allow for players to directly express Façade's discourse acts, removing from the equation any unreliable natural language understanding.19
+
+# Hearing from Façade
+
+Interestingly, Façade also presents a similar trade-off in the area of the Tale-Spin effect. This is one in which it follows the model of many contemporary games, though, rather than departing from it. This is the choice to use voice acting, so that Grace and Trip's statements are performed by playing a sequence of prerecorded sound files to which their animations are synchronized.

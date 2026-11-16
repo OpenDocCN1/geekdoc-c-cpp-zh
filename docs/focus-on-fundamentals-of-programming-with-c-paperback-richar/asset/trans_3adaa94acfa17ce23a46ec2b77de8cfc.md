@@ -1,0 +1,286 @@
+
+
+15! * 16 =
+1307674368000
+* 16
+7846046208000
+1307674368000
+20922789888000
+
+| 001 | 307 | 674 | 368 | 000 | X 15! * 16 * 16 |
+| 007 | 846 | 046 | 208 | 000 | X 15! * 6 |
+| 001 | 307 | 674 | 368 | 000 | X 15! * 1 |
+| 013 | 076 | 743 | 680 | 000 | X 15! * 10 (已移位) |
+| 007 | 846 | 046 | 208 | 000 | X 15! * 6 (重新复制) |
+
++
+
+| 013 | 076 | 743 | 680 | 000 | X 15! * 10 (重新复制) |
+| 020 | 922 | 789 | 888 | 000 | X 进位前的和 |
+
++ 0 + 0 + 0 + 0 + 0
+
+| 020 | 922 | 789 | 888 | 000 | X 和 |
+
+Although the 15! times 16 example just happens not to show this, provision has to be made for a node-to-node carry when adding the intermediate products in the "helping lists" to get the final result.
+
+Because the program will have to support the multiplication of factorial multiplicands (e.g., 567!) times three-digit numbers (e.g., 568), or four-digit numbers, the idea embraced above will have to be enhanced to accommodate up to three or four intermediate products in three or four "helping lists".
+
+## 一般计算策略
+
+Suppose the user wished to calculate 15!. 15! would be derived in the most straightforward of all possible ways, building it up from one factorial. One factorial, "hard wired" into the program as 1, would be used as the basis for computing 2!. Two factorial would be the basis for computing 3!. This would continue until 14! and this would be used as the basis for deriving 15!.
+
+## 规范
+
+The program will query the user for an integer, n, and return the exact value of that integer's factorial, n!. While there is no reason that there has to be a logical limit to the size of the n the program can handle, your program should be able to handle a number at least as high as 9,999!.
+
+Since n! may be an integer hundreds or thousands of digits long, its display will spill across several lines. When this happens, print out n! with the most significant digit at the left end of the top line and the units digit on the right-hand end of the number's lowest line. You should print a comma after every third digit (i.e., between the hundred's digit and the thousand's digit, between the hundred thousand's digit and the million's digit, etc.). Break lines at points where commas belong, and put the comma to the right of the number on the line being broken. This signifies that the number continues on the next line. Specifically, print no more than 45 digits per line. Your program should also output statistics on the following:
+
+- Number of digits in each factorial
+- Time, in milliseconds, taken by program to calculate n! .
+
+Your program should be run and produce output on the following data:
+
+```
+10, 98, 234, 567, 999, 5432, 9999
+```
+
+Note that this lab has nothing to do with factorials and the multiplication of numbers. By this I mean that I am not looking for a cleaner or more efficient approach to calculating factorials. The goal of this lab is to manipulate linear linked lists using dynamic storage allocation! You are required to implement the algorithm specified.
+
+Output from your program should be sent to the terminal window (your screen) as well as the requested `csis.txt` output file. Be sure to read the document on Capturing Program Output. Your full name and Palomar ID number must appear as a comment in the source file that contains `main()`. Be sure to include the `csis.txt` output file in your zip archive.
+
+- 位运算符简介
+- 按位与
+- 掩码
+- WordStar
+- 按位或
+- 按位异或
+- 按位取反
+- 左移运算符
+- 右移运算符
+- 旋转示例
+- 提取位字段
+- 位运算符作业
+- 位运算符实验
+
+## 位运算符简介
+
+C provides a host of operators specifically designed for performing operations on individual bits:
+
+| 运算符 | 描述 |
+|----------|-------------|
+| & | 按位与 |
+| \| | 按位或 |
+| ^ | 按位异或 |
+| ~ | 按位取反（反码） |
+| << | 左移 |
+| >> | 右移 |
+
+All bitwise operators except the bit-negate are binary operators and therefore take two operands. Bit operations can be performed on any type of integer value in C, such as:
+
+int unsigned int
+short unsigned short
+long unsigned long
+char unsigned char
+
+but not on:
+
+float
+double
+long double
+
+The bitwise operators are applied in parallel to the individual bit positions within each operand. This is unlike logical operators that treat each operand as one single zero (false) or non-zero (true) value.
+
+## 按位与
+
+Similar to the logical AND operator (`&&`), the bitwise-and operator (`&`) produces a true value only if both operands are true (i.e., have non-zero values).
+
+| b1 | b2 | b1 & b2 |
+|---|---|---|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+We assume a 16-bit integer:
+
+```c
+// and1.c
+
+#include <stdio.h>
+
+int main(void) {
+   int x = 0x2719;   // 0010 0111 0001 1001
+   int y = 0x35CD;   // 0011 0101 1100 1101
+   int z;
+
+   z = x & y;        // 0010 0101 0000 1001
+   printf("z = 0x%x\n", z);
+   return 0;
+}
+```
+
+The output of this program is:
+
+```
+z = 0x2509
+```
+
+Note that each of the corresponding bits within each `int` variable are bit-anded together.
+
+Here's another example:
+
+```c
+// and2.c
+
+#include <stdio.h>
+
+int main(void) {
+    int x = 0x1234;        // 0001 0010 0011 0100
+    int y = 0x3468;        // 0011 0100 0110 1000
+    int z = 0x5248;        // 0101 0010 0100 1000
+
+    printf("0%x\n", x & x);
+    printf("0%x\n", x & y);
+    printf("0%x\n", x & y & z);
+    printf("0%x\n", x & 1);
+
+    return 0;
+}
+```
+
+In the first printf() statement, any quantity bit-anded with itself returns itself as a value:
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+x = 0x1234 = 0001 0010 0011 0100
+
+0001 0010 0011 0100 = 0x1234
+```
+
+In the second printf() statement, variables x and y are bit-anded together producing:
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+y = 0x3468 = 0011 0100 0110 1000
+
+0001 0000 0010 0000 = 0x1020
+```
+
+In the third printf() statement, all three variables x, y, and z are bit-anded together producing:
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+y = 0x3468 = 0011 0100 0110 1000
+z = 0x5248 = 0101 0010 0100 1000
+
+0001 0000 0000 0000 = 0x1000
+```
+
+The fourth printf() statement has the effect of extracting the rightmost bit of x, either a 0 or a 1.
+
+```
+x = 0x1234 = 0001 0010 0011 0100
+   0x0001 = 0000 0000 0000 0001
+   -----------------------
+   0000 0000 0000 0000 = 0x0
+```
+
+Note that this is a good test to see whether x is odd or even:
+
+```
+printf("%s", x & 1 ? "Odd" : "Even");
+```
+
+Keep in mind the distinction between the bitwise-and operator (&) and the logical-and operator (&&):
+
+```c
+// and3.c
+#include <stdio.h>
+void main(void) {
+    int x = 1;
+    int y = 2;
+    printf("bitwise = %d \t logical = %d\n", x & y, x && y);
+    return 0;
+}
+```
+
+The output produced looks like this:
+
+```
+bitwise = 0   logical = 1
+```
+
+## 掩码
+
+Bitwise ANDing is frequently used for masking operations. A *mask* is a constant or variable that is used to extract desired bits in a variable or expression. A mask can be used to set specific bits of a data item to 0. In the example below, we'll preserve the rightmost two bits from `x` and zero (mask) out all of the other bits:
+
+```c
+// mask1.c
+
+#include <stdio.h>
+
+int main (void) {
+    int x = 0x679;        // 0000 0110 0111 1001
+    int mask = 0x0003;    // 0000 0000 0000 0011
+
+    x = x & mask;         // 0000 0000 0000 0001
+
+    printf("x = 0x%x\n", x);
+    return 0;
+}
+```
+
+The output produced is:
+
+```
+x = 0x1
+```
+
+Note that we could have written:
+
+```
+x &= mask;
+```
+
+Now suppose we want to set all but the rightmost four bits of a word to 0:
+
+```c
+// mask2.c
+#include <stdio.h>
+int main(void) {
+    int x = 0x1234;       // 0001 0010 0011 0100
+    int mask = 0x000F;    // 0000 0000 0000 1111
+    x &= mask;            // 0000 0000 0000 0100
+    printf("x = 0x%x\n", x);
+    return 0;
+}
+```
+
+The output produced is:
+
+```
+x = 0x4
+```
+
+We can also use a mask to determine the low-order bit of an int expression:
+
+```c
+// mask3.c
+#include <stdio.h>
+int main(void) {
+    int i;
+    int mask = 0x0001;    // 0000 0000 0000 0001
+    for (i = 0; i < 10; i++) {
+        printf("%d ", i & mask);
+    }
+    return 0;
+}
+```
+
+The above program prints an alternating sequence of 0's and 1's:
+
+```
+0 1 0 1 0 1 0 1 0 1
+```
+

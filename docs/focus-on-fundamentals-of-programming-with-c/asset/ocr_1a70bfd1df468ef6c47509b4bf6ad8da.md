@@ -1,0 +1,21 @@
+# Pseudo-Code Example
+
+```
+❖ Non-Polymorphic Code:
+for each item x             // loop over all items
+  if x is a car             // depending on what x is
+    call stopCar            // call different function
+  else if x is a bike
+    call stopBike           // for each different type
+  else if x is a plane      // send a specific stop
+    call stopPlane          // message
+```
+
+```
+❖ Polymorphic Code:
+for each item x             // loop over all items
+  x.stop()                  // send general message
+                            // to x
+```
+
+❖ This polymorphic solution is more adaptable to change and reuse.

@@ -1,0 +1,433 @@
+
+- Discriminant Analysis
+- Fisher's, 93
+- Linear, 93, 96
+- Quadratic, 110
+- discrimination information, 240
+- dispersion, 178
+- distribution, 57
+- base, 44
+- Bernoulli, 21
+- beta, 37
+- binomial, 23
+- χ², 48, 51
+- categorical, 26, 57
+- chi-square(d), 48
+- conjugate, 56
+- Dirichlet, 40, 58
+- exponential, 34, 50, 51, 72
+- flat Dirichlet, 40
+- Galton, 30
+- gamma, 50
+- Gaussian, 14
+- geometric, 24
+- Laplace, 36
+- log-normal, 30
+- multinomial, 27
+- multivariate, 26
+- normal, 14
+- Poisson, 25, 294
+- standard normal, 14
+- symmetric Dirichlet, 40
+- uniform, 11
+- univariate, 26
+- Weibull, 65
+- dot product, 91
+- doubly stochastic matrix, 77
+- drunkard's walk, 81
+- dual, 104
+- dual representation, 105
+- E-step, 166
+- edge, 59
+- effects, 217
+- elastic net regularization, 235
+- EM, 166, 239
+- endogenous, 217
+
+- entropy, 15
+- entropy measure, 234
+- equilibrium, 80
+- ergodic theorem, 80
+- error
+- exponential, 138
+- error backpropagation, 275
+- error sum of squares, 220, 268, 291
+- ESS, 220, 268
+- Euclidean norm, 91, 117, 123, 150, 220, 222, 235
+- evidence, 10
+- exhaustive cross-validation, 230
+- exogenous, 217
+- expectation, 18
+- Expectation-Maximization, 166, 239
+- explanatory, 217
+- exponential distribution, 34, 50, 51, 72
+- exponential error, 138
+- exponential kernel, 118
+- exponentiated quadratic kernel, 118
+- factor
+- normalizing, 10
+- factor loading matrix, 293
+- factor loadings, 205, 293
+- factorial, 22, 38
+- fall-out, 142
+- false, 133
+- false negative rate, 142
+- false negatives, 142
+- false positive rate, 142
+- false positives, 142
+- feasible set, 103
+- feature
+- global, 295
+- local, 295
+- feature detection, 5
+- feature learning, 263
+- features, 89
+- feed-forward, 266
+- first moment, 18
+- Fisher's Discriminant Analysis, 93
+- flat Dirichlet distribution, 40
+
+- fold, 230
+- forward propagation, 266
+- FP, 142
+- FPR, 142
+- Frobenius norm, 279
+- Fundamental Theorem of Calculus, 18
+- Galilei
+- Galileo, 2
+- Galton distribution, 30
+- gambler's ruin, 81
+- gamma distribution, 50
+- gamma function, 37
+- Gaussian activation function, 135
+- Gaussian distribution, 14
+- Gaussian kernel, 118
+- Gaussian Mixture, 156
+- Gaussian process, 254
+- Gaussian random field, 254
+- gdi, 126
+- Generalized Portrait Method, 105
+- geometric distribution, 24, 71
+- Gibbs sampling, 86
+- collapsed, 177
+- Gini Diversity Index, 126
+- global feature, 295
+- gradient, 95
+- gradient descent, 271
+- mini-batch, 272
+- online, 272
+- sequential, 272
+- stochastic, 272
+- Gram matrix, 114, 254
+- Gramian matrix, 114
+- graph
+- directed, 59
+- Hadamard product, 294
+- hard clustering, 150
+- hard-limit transfer function, 133
+- Heaviside step function, 133
+- hidden, 56, 132, 137, 150
+- histogram, 11
+- homogeneous, 75
+
+- homoscedasticity, 217
+- hyper-prior, 61
+- hyperbolic tangent, 135
+- hyperbolic tangent kernel, 116
+- hyperparameter, 239
+- hyperparameters, 55
+- hyperplane, 91
+- hypothesis
+- null, 16
+- i.i.d., 15, 217, 238
+- IBP, 294
+- ICA, 196
+- idempotent, 209
+- identifiability, 156
+- importance sampling, 73
+- importance weights, 73
+- impropriety, 125
+- inactive, 102
+- incomplete, 159
+- independent, 8, 217
+- independent and identically distributed, 15, 217
+- Independent Component Analysis (ICA), 196
+- Indian Buffet Process, 294
+- Information Criterion
+- Akaike, 235
+- Bayesian, 235
+- information divergence, 240
+- information gain, 240
+- inner product, 91
+- input, 132, 217
+- integration by parts, 20, 21, 36, 37
+- interpolation, 213
+- invariant, 76
+- inverse multiquadratics, 136
+- inverse multiquadric kernel, 118
+- inverse probability integral transform, 64
+- inverse scale matrix, 167
+- inverse transform sampling, 64
+- inverse transformation, 64
+- inverse Wishart distribution, 168
+- inversion sampling, 64
+
+- irreducible, 76, 82
+- isolines, 102
+- isotropic covariance matrix, 196
+- Jacobian, 53
+  - determinant, 53
+  - matrix, 53
+- joint probability, 7
+- K-means clustering, 150
+- K-medoids, 151
+- K Nearest Neighbours, 123
+- k-NN, 123
+- k-fold cross-validation, 230
+- k-sparse, 235
+- k-sparse autoencoder, 278
+- kernel, 114, 208
+  - exponential, 118
+  - exponentiated quadratic, 118
+  - Gaussian, 118
+  - hyperbolic tangent, 116
+  - inverse multiquadric, 118
+  - linear, 116
+  - multiquadric, 118
+  - polynomial, 116
+  - quadratic, 116
+  - rational quadratic, 118
+  - sigmoid, 116
+  - squared exponential, 118
+  - thin plate spline, 118
+  - trivial, 116
+- kernel matrix, 210
+- kernel trick, 4, 106, 113
+- KL divergence, 164, 240
+- Kronecker delta, 257
+- Kullback-Leibler divergence, 164, 240, 279, 282
+- kurtosis, 19, 31, 196
+- L0 regularization, 235
+- L1 regularization, 235
+- L2 norm, 91, 117, 123, 150, 220, 222, 235
+- L2 regularization, 235
+- Lp norm, 238
+- L2 regularization, 279, 285
+
+- Lagrange multiplier, 58, 103, 155
+- Lagrangian, 103
+- Lagrangian function, 191
+- Laplace distribution, 36
+- LASSO, 235
+- latent, 56, 59, 60, 137, 150, 217
+- law of parsimony, 223
+- LDA, 96
+- leaf, 123
+- learner
+  - strong, 138
+  - weak, 138
+- learning
+  - deep, 4, 6
+  - supervised, 4, 6
+  - unsupervised, 5
+- learning rate, 100, 272
+- Least Absolute Shrinkage and Selection Operator, 235
+- Least Squares
+  - Ordinary, 220
+- leave-p-out cross-validation, 230
+- leave-one-out cross-validation, 230
+- left stochastic matrix, 77
+- left-order, 295
+- leptokurtic, 21
+- least squares
+  - partial, 233
+- level of significance, 17
+- level-crossing phenomenon, 81
+- likelihood, 10, 54, 109, 110, 220
+  - marginal, 239
+- linear, 4
+- linear activation function, 135, 265
+- linear classification, 89
+- linear combination, 217
+- Linear Discriminant Analysis, 93, 96, 110
+- linear kernel, 116
+- linear regression, 217
+- link, 59
+- location parameter, 37
+- location vector, 166
+- log concave, 72
+- log evidence, 240, 244
+
+- log likelihood, 55, 155, 197, 220
+- log-normal distribution, 30
+- logistic regression, 136
+- logistic sigmoid, 135, 266
+- look elsewhere effect, 17
+- lossy data compression, 151
+- m-permutation, 22
+- M-step, 166
+- manifold, 208
+- many-to-one, 48
+- margin, 102
+- marginal, 8
+- marginal likelihood, 239
+- marginalizing, 8, 154, 239
+- Markov chain, 75
+- absorbing, 81
+- aperiodic, 77
+- irreducible, 76
+- Markov Chain Monte Carlo, 86
+- mass function, 14
+- matrix determinant lemma, 198, 244, 298
+- maximum likelihood estimator, 55, 58
+- Maximum-Likelihood Estimate, 239
+- Maxwell
+- James Clerk, 213
+- MCMC, 86
+- mean, 14, 18
+- sample, 93
+- mean centred, 208, 216, 285
+- mean fraction, 166
+- mean squared error, 278
+- measured, 217
+- memoryless, 36
+- method of direct transformation, 47
+- Metropolis, 82
+- Metropolis-Hastings, 85
+- mini-batch, 272
+- mini-batch gradient descent, 272
+- miss rate, 142
+- mixing coefficients, 77, 154
+- mixture, 154
+- MLE, 239
+
+- mode, 33
+- model, 217
+- moment
+- central, 19
+- crude, 19
+- first, 18
+- normalized central, 19
+- raw, 19
+- second central, 18
+- second crude, 19
+- second raw, 19
+- monomial, 257
+- Monte-Carlo, 86
+- multicollinearity, 230
+- perfect, 230
+- multilayer perceptron, 266
+- multimodal, 33
+- multinomial coefficient, 27
+- multinomial distribution, 27
+- multiquadrics, 136
+- multiquadratic kernel, 118
+- multivariate distribution, 26
+- NAND, 134
+- negatives, 141
+- false, 142
+- true, 142
+- neural network, 132
+- neuron, 132
+- neurons
+- hidden, 132
+- input, 132
+- output, 132
+- node, 59, 123, 132
+- terminal, 123
+- noise, 217
+- non-exhaustive cross-validation, 230
+- non-linear classification, 109
+- norm
+- Euclidean, 222
+- Frobenius, 279
+- normal distribution, 14
+- standard, 14
+- normal inverse Wishart distribution, 166
+
+- normalized central moment, 19
+- normalized exponential, 136
+- normalizing factor, 10
+- NP-hard, 150, 235
+- null hypothesis, 16
+- object oriented programming, 2
+- objective function, 102, 150, 244
+- Occam's razor, 223
+- offline learning, 99
+- OLS, 220
+- One vs All, 98
+- One vs One, 98
+- One vs Rest, 98
+- one-of-K representation, 25, 266
+- one-to-one, 46
+- online, 272
+- online gradient descent, 272
+- online learning, 99
+- optimization
+- constraint, 58
+- OR, 134
+- ordinal, 89
+- Ordinary Least Squares, 220, 242
+- outer product, 93
+- output, 132
+- OvA, 98
+- over-fitting, 222, 223
+- OvO, 98
+- OvR, 98
+- Pólya urn, 44
+- paradox
+- Simpson's, 10
+- parameter vector, 217
+- parsimony, 223
+- partial least squares, 233
+- PCA, 190
+- pdf, 13
+- Perceptron, 99
+- period, 77
+- plane, 91
+- plate, 60
+- platykurtic, 21
+- PLS, 233
+- pmf, 14
+- Poisson distribution, 25, 294
+- polynomial kernel, 116
+- positive definite, 94
+- positives, 141
+- false, 142
+- true, 142
+- posterior, 10, 239
+- pre-image, 208
+- precision, 239
+- precision matrix, 202, 258
+- predictor, 217
+- primal, 102, 104
+- principal component, 191
+- Principal Component Analysis, 190
+- Principal Component Regression, 230
+- principal components, 231
+- principal subspace, 190
+- prior, 10, 55, 238
+- probability, 7, 109
+- conditional, 9, 154
+- joint, 7
+- rules, 9, 18
+- probability density function, 13
+- probability mass function, 14
+- probability of detection, 142
+- procedural programming, 2
+- product
+- dot, 91
+- inner, 91
+- outer, 93
+- scalar, 91
+- product rule, 9, 18, 239
+- product rule of differentiation, 20
+- programming
+- object oriented, 2
+- procedural, 2
+- projection, 91
+- propagation function, 133, 265
+- pure, 125
+- QDA, 110
+- Quadratic Discriminant Analysis, 110
+- quadratic kernel, 116

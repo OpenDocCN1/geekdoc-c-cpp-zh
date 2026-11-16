@@ -1,0 +1,22 @@
+```
+int main() {
+    int i1 = 100, i2 = 200;
+    double d1 = 3.14, d2 = 9.876;
+    char c1 = 'A', c2 = 'z';
+    cout << max(i1, i2) << endl;
+    cout << max(d1, d2) << endl;
+    cout << max(c1, c2) << endl;
+    return 0;
+}
+```
+
+Each max() function returns a different data type and requires pairs of arguments of the same types.
+
+Keep in mind that you could also use more than one placeholder. For example, you could declare max() with two different possible types:
+
+```
+template <class T1, class T2>
+T1 max(T1 a, T2 b);
+```
+
+This returns a value of type T1 and requires two arguments, one of type T1 and one of type T2.

@@ -1,0 +1,9 @@
+an inescapable fact that some things can be built and other things cannot. (1997, 10)
+
+9. On the other hand, the speculative future Eliza discussed in this chapter, imagined as engaging the results of Abelson's ideology machine, produced nothing unexpected. Since it was never constructed, since it is an artificial intelligence project never ... Notes continued at end of this chapter.
+
+With a less open-ended agenda, the same is also true of work in digital media. In such engagements with what Agre calls “practical reality,” a number of things are learned. This happens not only when answering the question of what can be built but also in unexpected moments—moments that occur when trying to build systems, when interacting with those systems, and so on.
+
+If AI pursues system building as a way of knowing, if this is one approach to how we learn from models, the question still remains: What do we want to know? Weizenbaum’s contemporaries, however they fell along the continuum between scruffy and neat, generally assumed the answer to be: Can we build a system that exhibits genuinely intelligent behavior?
+
+But this is not all it is possible to learn. This book’s chapter on the Eliza effect was precisely an exploration of some other areas in which we have learned—and can still learn—from Weizenbaum’s early AI system. We don’t learn from Eliza because it is a testable model of how human cognition may actually work (or because it is genuinely intelligent in any way). One way we do learn from it is by studying how humans interact with its simple model, just as Garfinkel’s yes/no therapy experiment was informative for what it revealed about humans interacting with the system. One can also learn important things in a wide variety of other areas: interpretations of computational systems, the limits of relatively state-free designs for interaction, and what can make a computer character compelling.

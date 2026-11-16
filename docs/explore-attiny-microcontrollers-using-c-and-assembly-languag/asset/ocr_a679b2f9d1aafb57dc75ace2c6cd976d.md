@@ -1,0 +1,9 @@
+# 12.1.1.3 AVRASM2 Options in Microchip Studio
+
+Some of the command line options passed to AVRASM2 can be changed from within Microchip Studio, for example whether or not to generate a list file. These options can be found by selecting Project ▶ test_asm Properties... from the top menu, or by using the Alt + F7 keyboard shortcut, and then clicking the Toolchain item on the left of the page that opens. With the Toolchain item selected, click General under AVR Assembler to display the options for the AVRASM2 assembly language program, as shown in Figure 12.1.
+
+![](bbox=[0.14, 0.26, 0.9, 0.55])
+
+Figure 12.1: AVR Assembler Toolchain Options
+
+Checkboxes that are checked by default, as shown in Figure 12.1, correspond to options that are passed to AVRASM2 in the Output pane listing. For example unchecking Generate MAP file removes the -m switch from the options passed to AVRASM2. Generate Hex file corresponds to the -o switch that comes after -f1, and Generate LSS file corresponds to the -l switch. Unchecking any of these items removes them from the options passed to AVRASM2 that we looked at in section 12.1.1.1. Generate EEP file corresponds to the -e switch, and Wrap Relative Jumps corresponds to the lowercase -w switch, both of which can be found in the AVR Assembler document from Microchip. The top drop-down list called Hex Output Format changes the option next to the -f switch, depending on which format is selected. The second drop-down list called Unsupported Instructions changes the option used with the uppercase -W switch to flag unsupported instructions as either warnings or errors. The other optimization flags box is used to pass other command line options to AVRASM2 when it is run by Microchip Studio, for example placing the -v6 switch in this box stops AVRASM2 from printing additional information in the Output window.

@@ -1,0 +1,10 @@
+# # CONTEMPORARY ARTIFICIAL INTELLIGENCE
+
+![](bbox=[0.15, 0.15, 0.85, 0.8])
+
+RICHARD E. NEAPOLITAN
+Xia Jiang
+
+CRC Press
+Taylor & Francis Group
+A CHAPMAN & HALL BOOK

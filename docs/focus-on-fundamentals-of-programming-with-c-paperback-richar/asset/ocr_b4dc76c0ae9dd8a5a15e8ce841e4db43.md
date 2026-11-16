@@ -1,0 +1,26 @@
+Another example:
+
+```
+// typedef5.c
+typedef char STRING[81];
+```
+
+defines a type called STRING which is an array of 81 characters. We can now define variables to be of type STRING as in:
+
+```
+// typedef6.c
+typedef char STRING[81];
+STRING text;
+```
+
+This has the effect of defining the variable text to be a character array containing 81 characters and is equivalent to:
+
+```
+char text[81];
+```
+
+# Procedure to Define a New Type Name
+
++   1. Write the statement as if a variable of the desired type were being defined.
++   2. Where the name of the defined variable would normally appear, substitute the new type name.
++   3. In front of everything, place the keyword typedef.

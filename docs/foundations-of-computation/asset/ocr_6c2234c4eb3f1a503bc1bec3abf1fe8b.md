@@ -1,0 +1,11 @@
+The state $q_4$ in the preceding example is often called a garbage or trap state: it is a non-accepting state which, once reached by the machine, cannot be escaped. It is fairly common to omit such states from transition diagrams. For example, one is likely to see the diagram:
+
+![](bbox=[0.215, 0.215, 0.635, 0.275])
+
+Note that this cannot be a complete DFA, because a DFA is required to have a transition defined for every state-input pair. The diagram is “short for” the full diagram:
+
+![](bbox=[0.105, 0.335, 0.895, 0.435])
+
+As well as recognizing what language is accepted by a given DFA, we often want to do the reverse and come up with a DFA that accepts a given language. Building DFAs for specified languages is an art, not a science. There is no algorithm that you can apply to produce a DFA from an English-language description of the set of strings the DFA should accept. On the other hand, it is not generally successful, either, to simply write down a half-dozen strings that are in the language and design a DFA to accept those strings—invariably there are strings that are in the language that aren’t accepted, and other strings that aren’t in the language that are accepted. So how do you go about building DFAs that accept all and only the strings they’re supposed to accept? The best advice I can give is to think about relevant characteristics that determine whether a string is in the language or not, and to think about what the possible values or “states” of those characteristics are; then build a machine that has a state corresponding to each possible combination of values of relevant characteristics, and determine how the consumption of inputs affects those values. I’ll illustrate what I mean with a couple of examples.
+
+Example 3.13 Find a DFA with input alphabet $\Sigma = \{a, b\}$ that accepts the language $L = \{w \in \Sigma^* \mid n_a(w) \text{ and } n_b(w) \text{ are both even } \}$. The characteristics that determine whether or not a string $w$ is in $L$ are the parity of $n_a(w)$ and $n_b(w)$. There are four possible combinations of “values” for these characteristics: both numbers could be even, both could be odd, the first could be odd and the second even, or the first could be even

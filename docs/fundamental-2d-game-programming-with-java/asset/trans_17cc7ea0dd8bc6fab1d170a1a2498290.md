@@ -1,0 +1,418 @@
+
+
+## 方法（续）
+
+- createsStars(), 216–217
+- createTransform(), 293
+- createTransformOn(), 293
+- currentTimeMillis(), 3
+- displayInfo(), 228
+- dispose(), 9, 13, 263–264
+- div(), 137
+- doAffineTransform(), 290–291, 293
+- doAffineTransformOp(), 290–291, 293
+- dot(), 139–141
+- doTexturePaint(), 290–291, 293
+- draw(), 387, 390
+- draw(), 193
+- drawAABB(), 155–156
+- drawArc(), 66–67
+- drawAsteroids(), 218
+- drawBackground(), 198
+- drawBullets(), 218
+- drawCenteredString(), 510–511
+- drawCrosshairs(), 475
+- drawGreenBorder(), 292
+- drawLine(), 57, 198, 480
+- drawLineIntersection(), 475
+- drawOval(), 157, 448
+- drawPoint(), 198
+- drawPolygon(), 198
+- drawShip(), 218
+- drawSprite(), 516, 526
+- drawStars(), 218
+- drawString(), 323
+- enter(), 572, 584
+- equals(), 16
+- exit(), 11, 572
+- fillPolygon(), 205
+- fire(), 376
+- fireEvent(), 357
+- flush(), 387
+- generateMergedInstance(), 301, 303
+- generateNearestNeighbor(), 303
+- get(), 350, 367–368
+- getAllElements(), 252, 255
+- getAscent(), 323
+- getAsteroidStartPosition(), 217
+- getAttribute(), 254
+- getBufferStrategy(), 13
+- getButton(), 33
+- getClass(), 239
+- getComponentCenter(), 42
+- getConsumer(), 301
+- getDataBuffer(), 269
+- getDescent(), 323
+- getDrawGraphics(), 9, 13
+- getElement(), 252, 255
+- getIcon(), 515
+- getIntersection(), 480
+- getKeyCode(), 27
+- getKeyTyped(), 342
+- getLeading(), 323
+- getLineMetrics(), 329
+- getLoadFirstProperty(), 247
+- getMainPanel(), 16–17, 514–515
+- getName(), 228
+- getNewVelocity(), 488
+- getNodeName(), 254
+- getNotches(), 34
+- getPoint(), 33
+- getPointLineDistance(), 488
+- getPointPosition(), 192
+- getProperty(), 34, 245
+- getRandomAsteroid(), 205
+- getRandomFloat(), 191
+- getRandomPosition(), 532
+- getRandomRadians(), 191
+- getRandomRotationDelta(), 192
+- getRaster(), 269
+- getReflectionVector(), 480
+- getRelativeWorldMousePosition(), 498
+- getResourceAsStream(), 238–239
+- getReverseViewportTransform(), 124, 498
+- getScaledInstance(), 299–301, 303, 527
+- getScreenHeight(), 497, 505, 508
+- getScreenWidth(), 497, 505, 508
+- getSelectedMode(), 17
+- getSize(), 192
+- getState(), 584
+- getSystemResourceAsStream(), 238
+- getTextContent(), 254
+- getViewportTransform(), 124, 498
+- getWaitTime(), 584
+- getWheelRotation(), 34
+- getX(), 124, 498
+- hasDied(), 531
+- hasLeftWorld(), 184
+- hasPolygon(), 488
+- ImageConsumer(), 301
+- initialize(), 3, 56, 109, 127, 133
+- intersectAABB(), 156
+- intersectCircle(), 158
+- intersectCircleAABB(), 159–160
+- 相交测试
+  - 直线-直线重叠法, 169–172
+  - 矩形-矩形重叠法, 173–177
+  - 分离轴法, 166–169
+- inv(), 135
+- isDirectory(), 228
+- isHidden(), 228
+- isTouching(), 209
+- JButton(), 515
+- join(), 11
+- JToolBar(), 515
+- KeyDown(), 27, 31, 342
+- keyDownOnce(), 31, 342
+- keyPressed(), 26
+- keyReleased(), 26
+- keyTyped(), 26
+- lastModified(), 228
+- launchApp(), 126, 132–133
+- launchBullet(), 209
+- len(), 137–138
+- length(), 228
+- less(), 137–138
+- lineCircleIntersection(), 467–470
+- lineLineIntersection(), 473–475, 488
+- lineRectIntersection(), 454–463
+- listDisplayModes(), 17
+- listFiles(), 229
+- loadFile(), 264
+- loadWaveFile(), 416
+- lock(), 363
+- lockInterruptibly(), 364
+- loop(), 396–397
+- mirror(), 201
+- MouseClicked(), 33
+- mouseDragged(), 33
+- MouseEntered(), 33
+- MouseExited(), 33
+- mouseMoved(), 33, 43
+- MousePressed(), 33
+- MouseReleased(), 33
+- mouseWheelMoved(), 34
+- mul(), 137
+- newCachedThreadPool(), 350
+- newFixedThread(), 363
+- notify(), 138
+- notify(), 360–362
+- notifyAll(), 361
+- onComponentResized(), 126
+- onCreateAndShowGUI(), 508, 514
+- onEnterFullScreen(), 17
+- onExitFullScreen(), 17
+- onLoadXML(), 515
+- onPaint(), 6
+- onShutDown(), 498–499, 506
+- onWindowClosing(), 11
+- open(), 387, 396–397
+- pack(), 13
+- paint(), 6–9
+- parseDocument(), 252
+- parseXML(), 254
+- perp(), 139
+- pointInAABB(), 156
+- pointInCircle(), 158
+- pointInPolygon(), 146–147, 149, 151, 193
+- polar(), 141–142
+- poll(), 31–32, 34, 341–342
+- printPolygon(), 197
+- processEvent(), 373, 565
+- processInput(), 37, 47, 127, 133, 151
+- processTypedChar(), 345
+- public void run(), 10–11
+- put(), 567–568
+- read(), 321, 262, 386
+- readBoolean(), 391, 416
+- readByte(), 231
+- readChar(), 231
+- readSoundData(), 402
+- ReadWriteLock(), 364
+- rectRectIntersection(), 174
+- ReentrantLock(), 363–364
+- removeCharacter(), 345
+- render(), 47, 57, 66, 94, 127, 133
+- renderFrame(), 498, 504, 508
+- renderFrameGraphics(), 497
+- renderToBufferedImage(), 275
+- renderToVolatileImage(), 275
+- renderToVolatileImageEveryFrame(), 275
+- repaint(), 6, 508
+- reset(), 56
+- resetFieldKey(), 601
+- restart(), 396–397
+- run(), 92, 94, 127
+- runTask(), 357
+- runTest(), 228, 368
+- runTestWithoutWaiting(), 391
+- runWithWaiting(), 391
+- scaleOpenDialog(), 516
+- scaleSaveDialog(), 303
+- scaleImage(), 511–512
+- scaleWithGraphics(), 303
+- setAntialiasing(), 293
+- setComposite(), 282–284
+- setIgnoreRepaint(), 13
+- setPolygon(), 192
+- setPosition(), 192
+- setRenderingHint(), 218
+- setSize(), 192
+- setStart(), 357
+- setUndecorated(), 20–21
+- setupInput(), 498, 504
+- setViewport(), 498, 504
+- setVisible(), 6
+- show(), 9, 13
+- showOpenDialog(), 516
+- shutdown(), 350, 373, 498
+- shutDownClips(), 416
+- signalAll(), 363
+- sleep(), 10
+- start(), 356, 364, 387, 396–397
+- stop(), 356, 364, 387, 396–397
+- stringWidth(), 323
+- sub(), 136–137
+- synchronizedList(), 357
+- terminated(), 127, 133, 416
+- TextLayout(), 329–333
+- Thread(), 29
+- toDegrees(), 63
+- toRadians(), 63
+- toString(), 17, 142–144
+- transform(), 189
+- tryLock(), 363
+- turnOff(), 356, 364
+- turnOn(), 356, 364
+- unlock(), 363
+- update(), 116, 192
+- updateHeldKey(), 601
+- updateObject(), 170, 213
+- updateObjects(), 94, 127, 133, 151, 174
+- updatePosition(), 209
+- updateShip(), 218
+- wait(), 360–362
+- wrapPolygon(), 184
+- wrapPosition(), 184, 539
+- write(), 262, 386
+- mirror() 方法, 201
+- Mixer 类, 385
+- 模式（显示模式）
+  - 更改, 15–20
+- 全屏模式
+  - 更改, 20–23
+  - 运行时更改, 15–20
+  - 渲染, 8
+- 鼠标
+  - 居中, 42–43
+  - 输入
+    - 颜色, 37
+    - 处理, 33–51
+    - 相对, 41–51
+    - 显示/隐藏光标, 47
+    - 窗口边框, 41–51
+- 相交测试
+  - AABBs, 155–156, 158–166, 178–179
+  - 圆, 156–166
+  - 直线-直线重叠法, 169–172
+  - 优化, 178–179
+  - 矩形-矩形重叠法, 173–177
+  - 分离轴法, 166–169
+- 多边形内点测试
+  - 相交直线, 148–150
+  - 概述, 145–148
+  - PointInPolygonExample 类, 150–154
+- MouseClicked() 方法, 33
+- mouseDragged() 方法, 33
+- MouseEntered() 方法, 33
+- MouseExited() 方法, 33
+- MouseListener 接口, 33
+- MouseMoved() 方法, 33, 43
+- MousePressed() 方法, 33
+- MouseReleased() 方法, 33
+- MouseWheelListener 接口, 34
+- mouseWheelMoved() 方法, 34
+- 移动对象
+  - 帧率, 91–98
+  - 摩擦力, 209
+  - 随机速度, 191–196, 204–207
+  - 速度, 114–122
+- 平移
+  - AffineTransform 类, 88–89
+  - 列主序矩阵, 74–75
+  - 矩阵乘法, 72–73, 77, 80, 82–83, 86–87
+  - 概述, 53–54
+  - 行主序矩阵, 74–75
+  - Vector2f 类, 54–63
+- 速度, 209
+- 屏幕环绕, 181–190, 204–207
+- mul() 方法, 137
+- 乘法（矩阵）, 72–73, 75–88
+- MultiThreadEventExample 类, 381–383
+
+## N
+
+- 名称（字体）, 319–320
+- newCachedThreadPool() 方法, 350
+- newCondition() 方法, 363
+- 非阻塞类, 356–357, 360–361, 367
+- norm() 方法, 138
+- notify() 方法, 360–362
+- notifyAll() 方法, 361
+
+## O
+
+- 对象。另请参见：图像；多边形
+  - 小行星，创建, 201–207
+  - 子弹，创建, 207–208
+  - 碰撞检测
+    - 弹跳球, 445–451
+    - 弹跳点, 483–492
+    - BouncingBallsExample 类, 447–451
+    - BouncingPointExample 类, 487–492
+    - CircleLineIntersectionExample 类, 466–470
+    - 直线-圆相交, 463–470
+    - 直线-直线相交, 470–477
+    - LineLineIntersectionExample 类, 474–477
+    - 直线-矩形相交, 453–463
+    - LineRectIntersectionExample 类, 459–463
+    - 概述, 445
+    - 参数直线方程, 451–453
+    - 反射向量, 478–483
+    - ReflectionVectorExample 类, 480–483
+  - 颜色, 259–260
+  - 创建
+    - 上色, 196–201
+    - 随机, 204–207
+    - 翻转, 201
+  - Future, 350
+  - Graphics, 6, 260
+  - GraphicsEnvironment, 319–320
+  - 相交测试
+    - AABBs, 155–156, 158–166, 178–179
+    - 圆, 156–166
+    - 直线-直线重叠法, 169–172
+    - 优化, 178–179
+    - 矩形-矩形重叠法, 173–177
+    - 分离轴法, 166–169
+  - 位置（Vector2f 类）, 54–63
+  - 移动。另请参见：平移
+    - 帧率, 91–98
+    - 摩擦力, 209
+    - 随机速度, 191–196, 204–207
+    - 速度, 114–122
+    - Vector2f 类, 54–63
+    - 速度, 209
+  - 多边形内点测试
+    - 相交直线, 148–150
+    - 相交点, 148–148
+    - PointInPolygonExample 类, 150–154
+  - 旋转
+    - AffineTransform 类, 88–89
+    - 列主序矩阵, 74–75
+    - 矩阵乘法, 72–73, 78, 81–83, 87
+    - 概述, 53–54
+    - 极坐标, 64–65
+    - 随机, 191–196, 204–207
+    - 行主序矩阵, 74–75
+    - Vector2f 类, 54–63
+  - 缩放
+    - AffineTransform 类, 88
+    - 列主序矩阵, 74
+    - 矩阵乘法, 72, 77, 80–81
+    - 概述, 53–54
+    - 行主序矩阵, 74
+    - Vector2f 类, 54, 56–63
+  - 剪切
+    - AffineTransform 类, 88
+    - 矩阵乘法, 72, 78, 80–81
+    - 概述, 53–54
+    - Vector2f 类, 54–63
+  - 移位
+    - 概述, 56–57
+    - 移位, 56, 209–215
+  - 大小。另请参见：缩放
+  - 旋转。另请参见：旋转
+  - TextLayout, 329–333
+  - 转换。另请参见：转换
+  - 平移。另请参见：移动
+    - AffineTransform 类, 88–89
+    - 列主序矩阵, 74–75
+    - 矩阵乘法, 72–73, 77, 80, 82–83, 86–87
+    - 概述, 53–54
+    - 行主序矩阵, 74–75
+    - Vector2f 类, 54–63
+  - 屏幕环绕, 181–190, 204–207
+- onComponentResized() 方法, 126
+- onCreateAndShowGUI() 方法, 508, 514
+- onEnterFullScreen() 方法, 17
+- OnShootEvent 类, 372–375, 411–413
+- onExitFullScreen() 方法, 17
+- onLoadXML() 方法, 515
+- onPaint() 方法, 6
+- onShutDown() 方法, 498–499, 506
+- onWindowClosing() 方法, 11
+- open() 方法, 387, 396–397
+- 运算符（%）, 37
+- 运算符，相交测试, 178–179
+- OutputStream 类, 233–234
+- OverlapExample 类, 160–166
+
+## P
+
+- pack() 方法, 13
+- 页面翻转（渲染）, 8–9
+- paint() 方法, 6–9
+- 参数直线方程（碰撞检测）, 451–453
+- parseDocument() 方法, 252
+

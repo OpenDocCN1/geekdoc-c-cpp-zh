@@ -1,0 +1,28 @@
+# Introduction to Operator Overloading
+
+Operator overloading is one of the most exciting features of object-oriented programming. It can transform complex, obscure programs into intuitively obvious ones. For example, a statement like:
+
+```
+d3.addObjects(d1, d2);
+```
+
+can be changed to the much more readable:
+
+```
+d3 = d1 + d2;
+```
+
+The term operator overloading refers to giving the normal C++ operators additional meanings when they are applied to user-defined types. We're already familiar with operator overloading:
+
+```
+c = a + b;
+```
+
+When you use the plus sign with int values, one specific set of machine language instructions is involved. When used with float values, a completely different set of machine language instructions is invoked. Attempting to apply + and = when a, b, c are objects of a user-defined class will cause complaints from the compiler. However, this statement would become legal with operator overloading. In effect, operator overloading gives us the opportunity to redefine the C++ language.
+
+You can overload the following operators:
+
+| arithmetic | +, -, *, /, % |
+| logical | &&, ||, ! |
+| bitwise | &, |, ~, ^, <<, >> |
+| comparison | <, >, <=, >= |

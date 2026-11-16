@@ -1,0 +1,17 @@
+# Notes
+
++   1. Though an expansion focused on crafting the underlying terrain on which the city rests.
+
++   2. During the review of this book's draft manuscript on Grand Text Auto, Dennis G. Jerz offered a telling series of observations—including that the graphic user interface (GUI) of SimCity is already a much more restricted interaction channel than Eliza's free-form textual input. In his comment he writes:
+
+> On the one hand, you've got the naive user who sits down to Eliza with a preconception of the idea of a therapist and a preconception of what it means to communicate through typing—but probably no idea of what a therapist does. On the other hand, you've got the naive user who sits down in front of SimCity with preconceptions about cities, and with a pretty good idea of what it means to use a GUI.
+
+Any GUI interface restricts the meaningful gestures the user can perform, just as the iconic display restricts the possible meanings that the image can convey. So the initial "surface" of the GUI is already a mental model, in a way that doesn't the "surface" of Eliza is (at least not until the user has first noticed something fishy about Eliza's responses).
+
+The resolution of the information that goes into Eliza is a lot deeper than the information that goes into SimCity. Even if Eliza can't actually understand all of that information, the fact that it's there on the screen (or on the fan-fold printout) means that it was available for the user to refer to when interpreting Eliza's responses. But yes, limiting the input to yes/no (or some other finite set of verbs) would replicate the restrictions of SimCity's GUI.
+
+On the other hand, SimCity is a much more complex program. Once you're consciously aware of Eliza's rules, there's not much left to do, unless of course the leading questions guide you to a life-changing self-revelation. In SimCity you have to learn how the various resources interact over time.
+
+The naive users who first played Eliza weren't consciously trying to grok the rules of the text parser, but may instead have been very self-conscious about what might have been their first significant encounter with a computer. If we put SimCity in historical perspective, we can assume that most players of SimCity were familiar with GUIs, and were thus willing to accept restrictions (such as the requirement to zone rectangular areas and not be able to put a railroad, street, and power line in the same space). The GUI has trained us to lower our expectations. But those restrictions break the illusion of being a "real" city planner just as much as Eliza's gaffes break the illusion of talking to a real therapist.
+
+I think Jerz's comments are generally insightful. At the same time, though, I would argue that the experience of Eliza or SimCity isn't fruitfully considered in terms of being a real patient or real mayor. Rather, I think we must employ the conception of interaction as conversation or dialogue, as outlined by authors such as Chris Crawford (2003) and Myron Krueger (1977). For such authors, a successful interactive system has to both "speak" and "listen." When interacting with SimCity, the GUI tells us the tools we have available for speaking (acting) and listening (gathering information), while expression reveals that the system genuinely has an underlying model of the city that shapes its actions (speaking) and is informed by our actions (listening). Interacting with Eliza, on the other hand, reveals that it does not have

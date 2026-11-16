@@ -1,0 +1,21 @@
+# Introduction to Assignment & Initialization
+
+The C++ compiler is always busy on our behalf, doing things we can't be bothered to do. If we take charge, it will defer to our judgment. Otherwise, it will do things its own way! Two important examples of this process are the assignment operator and the copy constructor.
+
+We've used the assignment operator many times, probably without thinking too much about it. For example, suppose `d1` and `d2` are two `Distance` objects. Unless you tell the compiler otherwise, the statement:
+
+```
+d2 = d1;
+```
+
+will cause the compiler to copy the data from `d1`, member-by-member, into `d2`. This is the default activation of the assignment operator, `=`.
+
+We're also familiar with initializing variables. Initializing an object with another object, such as:
+
+```
+Distance d2(d1);
+```
+
+causes a similar action. The compiler creates a new object, `d2`, and copies the data from `d1`, member-by-member, into `d2`. This is the default action of the copy constructor.
+
+Both of these activities are provided, free of charge, by the compiler. If member-by-member copying is what you want, you need take no further action. However, if you want assignment or initialization to do something more complex, then you can override these default functions.

@@ -1,0 +1,305 @@
+
+- logic one 70
+- logic zero 70
+- logical operator 143
+- long address 153
+- loop 60, 123, 168, 216
+- low 70
+- low() 115, 141, 195, 203, 227
+- lower case 188
+- LPM 194, 196
+- LSB 75, 228
+- LSD 73
+
+### M
+- machine code 18, 56, 164
+- machine language 124
+- macro 253, 255, 264
+- Macro expansion 259
+- macros 352
+- main clock 101
+- main.asm 46
+- map file 325
+- mask 163
+- mask value 145, 146, 160
+- masking 145
+- mathematical formula 215
+- MCS51 35
+- memory 79
+- memory cell 70
+- memory map 91
+- memory size calculation 80
+- memory sizes 79
+- memory window 96, 116
+- Memory window 125
+- Microchip 28
+- Microchip Studio 17, 23, 28, 40, 336
+- millisecond delay 235, 251
+- milliseconds 237
+- misalignment 194
+- Mixing Assembly and C 261
+- mnemonic 56
+- mnemonics 55
+- most significant bit 75
+- most significant digit 75
+- MOV 228
+- MSB 75
+- MSB:LSB order 292
+- MSD 73
+- multi-pass assembler 258
+- multimeter 28
+- multiple files 232
+
+### N
+- N flag 111
+- NEG 295
+- negative number 111, 136
+- new file 234
+- new project 45, 50
+- newline 233
+- nibble 73
+- non-volatile memory 94
+- NOP 169, 206, 229
+- null terminated 193
+- null terminator 196
+- numbers 193
+
+### O
+- OCF0A 275
+- OCR0A 270
+- one's complement 136, 294
+- opcode 56, 58
+- open-source assembler 329
+- open-source designs 333
+- operands 56, 58, 184, 187
+- operational code 56
+- Optimization setting 329
+- optimized C 19
+- OR 145, 181, 228
+- OR operation 145
+- ORG 188
+- ORI 145, 273
+- origin 188
+- oscillator 101
+- oscilloscope 28, 214
+- OUT 115, 131, 151, 159, 173
+- output pins 159
+
+### P
+- Parameter passing 265
+- part name 186
+- pass parameters 265
+- passing a 32-bit value 253
+- passing a value 251
+- PB4 60, 122
+- PC 103
+- PDIP 32, 155
+- period 101, 102, 207
+- pin PB4 121
+- PINB 131, 175, 181
+- pipeline 107
+- pointer register 196
+- polling 268, 270
+- POP 114, 260
+- port 32
+- PORTB 60, 63, 122, 159, 163, 179
+- PORTB4 122
+- positive number 136
+- post-increment 313
+- power 334
+- power supply 26, 44
+- pre-decrement 313
+- pre-fetching 107
+- preprocessor 185
+- preprocessor directives 185
+- prescaler 270
+- Processor Status window 88, 110, 210
+- program counter 100, 103
+- program memory 92
+- program only 334
+- program origin 188
+- program-only programmers 25
+- programmer/debugger 23
+- programming tool 49
+- protection resistors 155
+- publisher's website 29
+- pull-up resistor 160, 177
+- PUSH 114, 260
+
+### Q
+- quartz crystal 102
+
+### R
+- RAMEND 115
+- RC 101
+- RC oscillator 102, 214
+- RCALL 61, 119, 252
+- read-modify-write 273
+- real clock pulse 100
+- register and bit definitions 187
+- register convention 265
+- register definitions 150, 186
+- register direct addressing 130
+- register file 86
+- Register usage 261
+- registers 86
+- reserving memory 192
+- reset vector 164
+- resistors 28
+- resources 29
+- RET 119
+- RETI 278, 283
+- return address 119
+- returning a value 266
+- RJMP 60, 89, 128, 297
+- run time 237
+
+### S
+- SBCI 228
+- SBI 60, 152, 160, 179, 208
+- SBIC 152, 179, 209, 210
+- SBIS 152, 179, 210
+- SBIW 293
+- SBRC 172
+- SBRS 275
+- SEI 282, 287
+- sei() 287
+- semicolon 47, 51, 58
+- SER 91
+- SET 200
+- short address 153
+- signed 136
+- simulator 22, 25, 62
+- single cycle instructions 105
+- single-step debugging 23
+- SMD 32
+- software delay subroutine 226
+- software time delay 207
+- software time delay subroutine 231
+- source code 29
+- SP 112
+- SPH 114, 169, 201
+- SPL 114, 166, 170
+- split 234
+- square wave 100
+- SRAM 93, 152, 190, 268
+- SRAM start address 97
+- SRAM_START 97
+- SREG_Z 110
+- ST 152, 314
+- stack 60, 112, 118, 260
+- stack pointer 170, 201
+- stack pointer initialization 114
+- stack pointer low register 166
+- stack pointer register 112
+- start address 188
+- status register 109, 278, 282
+- STD 152, 268
+- step into 120
+- step over 120
+- Stop Watch 210
+- string 193
+- STS 94, 152, 191
+- SUB 111, 142
+- SUBI 167, 196, 228
+- subroutine 61, 104, 118, 251
+- subtraction 111, 142
+- switch 177
+- switches 28
+- symbol table 258
+
+### T
+- tab 184
+- Tab 47, 51
+- TCCR0A 269
+- TCCR0B 270
+- TCNT0 270
+- TIFR 270
+- TIFR0 270
+- time delay 52, 122
+- time delay subroutine 213
+- timer/counter 268
+- timers 268
+- TIMSK 286
+- TIMSK0 286
+- toggle 147, 173
+- toolbox button 353
+- true 70
+- truth table 143
+- two's complement 136, 167, 223, 295
+- two's complement format 112, 129
+
+### U
+- Undefined symbol 233
+- underscore 82, 184
+- upper case 188
+- USART 35
+- USB programmer 23
+- USB programming device 22
+- USBasp 24, 25, 155, 333
+- USBtinyISP 24, 25, 155, 333, 339, 345
+
+## V
+- variable 190
+- volatile 267
+- volatile memory 93
+- voltage levels 70
+- von Neumann architecture 106
+- VTG 334
+
+## W
+- warning 240
+- warning message 243
+- weight 75
+- weighted number 73
+- while(1) loop 168
+- Windows computer 21
+
+## X
+- X register 292
+- X, Y and Z registers 194
+- XH:XL 292
+
+## Y
+- Y register 292
+- YH:YL 292
+
+## Z
+- Z flag 111, 196, 216
+- Z register 194, 291, 292
+- zero flag 109, 216
+- ZH 195
+- ZH:ZL 291, 292
+- ZL 195
+
+- _ 82, 184
+- _delay_ms() 52, 167
+- _NOP() 207
+- ; 47, 51, 58
+- : 59
+- . 185
+- .DEF 200
+- .elif directive 249
+- .endif directive 241
+- .endmacro directive 255
+- .equ 244
+- .EQU 200
+- .error directive 241
+- .global directive 263, 264
+- .if directive 241, 249
+- .IFDEF 201
+- .ifndef 271
+- .ifndef directive 286
+- .inc 150
+- .inc file 253, 328
+- .include 185
+- .include directive 233, 328
+- .list 328
+- .macro directive 255
+- .nolist 328
+- .ORG 188
+- .org 0 234
+- .ORG 0 188
+- .warning 243
+- @ 255
+- @0 255

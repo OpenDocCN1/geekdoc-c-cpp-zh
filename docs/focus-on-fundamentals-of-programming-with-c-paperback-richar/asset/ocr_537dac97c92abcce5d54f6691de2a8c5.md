@@ -1,0 +1,32 @@
+```
+grep the genesis.txt
+grep the getty.txt genesis.txt shakes.txt
+grep hello getty.txt genesis.txt shakes.txt
+grep the genesis.txt foo.txt shakes.txt
+grep -v the getty.txt
+grep -l and shakes.txt
+grep -n the genesis.txt shakes.txt
+grep -c the getty.txt shakes.txt genesis.txt
+grep -l in getty.txt shakes.txt genesis.txt
+```
+
+Here are the contents of each of the files:
+
+# getty.txt
+
+Four score and seven years ago our fathers brought forth, upon this continent, a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.
+
+# shakes.txt
+
+All the world's a stage,
+And all the men and women merely players.
+They have their exits and their entrances;
+And one man in his time plays many parts.
+
+# genesis.txt
+
+In the beginning God created the heaven and the earth. Now the earth was uniform and void, and darkness was upon the face of the earth and the spirit of God hovered over the face of the waters. And God said: 'Let there be light.' And there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light day, and the morning He called night. And there was evening and there was morning, one day.
+
+For extra credit, see if you can generalize your program so that it works with more than one option at a time.
+
+Remember that the `main()` function should appear as the first function in the program. Be sure to use function prototypes for each of the functions that are used in your program.

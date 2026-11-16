@@ -1,0 +1,44 @@
+```
+// frees all the nodes in a list
+void freeList(NODEPTR *list) {
+    NODEPTR p;
+    while (*list) {
+        p = *list;
+        *list = p->next;
+        freeNode(p);
+    }
+}
+```
+
+```
+// returns a pointer to the node with the requested value;
+// otherwise returns NULL
+NODEPTR select(NODEPTR list, int num) {
+    while (list) {
+        if (list->info == num) {
+            return list;
+        } else {
+            list = list->next;
+        }
+    }
+    return list;
+}
+```
+
+```
+// removes the first occurrence of an item in a list
+int remove(NODEPTR *list, int num) {
+    NODEPTR p, q;
+    p = *list;
+    q = NULL;
+    while (p != NULL && p->info != num) {
+        q = p;
+        p = p->next;
+    }
+    if (p == NULL) {
+        return -1;
+    } else {
+        return q == NULL ? deleteFront(list) : deleteAfter(q);
+    }
+}
+```

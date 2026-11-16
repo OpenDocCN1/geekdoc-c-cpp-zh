@@ -1,0 +1,13 @@
+# Location of DB Data in Program Memory and Alignment
+
+Remember that program memory is 16 bits wide, and that each 16-bit wide memory location has an address that is one bigger than the previous address. This means that we are moving up two bytes at a time when counting through sequential program memory locations. When byte wide data is placed in this program memory, two bytes of data are placed at one single address location, because each address location addresses a 16-bit, or two byte wide memory location. If an odd number of bytes is placed in program memory using the DB directive, then the assembler program will pad the odd number of bytes with a zero byte to make the data an even number of bytes and therefore use up both bytes of the last 16-bit memory location that the data is placed in. This ensures that the next data or program instruction starts at the next 16-bit instruction address. When DB is used to define an odd number of bytes in a Microchip Studio assembly language project, and the project is built, a warning message is displayed in the bottom pane. This warning message is to notify the programmer that the bytes are misaligned because they do not fill up all bytes of the two byte wide program memory locations. The following warning message is seen.
+
+```
+.cseg .db misalignment - padding zero byte
+```
+
+Try removing the 0 off the end of any of the DB data lines in the code from the previous listing and then build the project in Microchip Studio to see the above message. Be sure to also remove the comma before the zero, so that the line does not end with a comma, otherwise a syntax error will be reported instead. A second zero was added to the end of message2, the “HI” message in order to suppress the warning message. This is a legitimate way to suppress the warning message.
+
+# 16-bit Address Pointer Registers
+
+When we looked at the AVR registers in section 5.1 of Chapter 5, including the diagram in Figure 5.1 of that chapter, we did not look at details of the X, Y and Z registers, except to see them marked in the figure. The code that we are using to show how the DB assembler directive works uses the Z register, so we will look at the details of this register now. Although register R30 and R31 can be used as separate 8-bit wide registers, some instructions use them as a single Z register, such as the LPM instruction in our current example. This Z register is effectively two bytes, or 16 bits wide, made up of R30 being the LSB of the Z register, and R31 being the MSB.

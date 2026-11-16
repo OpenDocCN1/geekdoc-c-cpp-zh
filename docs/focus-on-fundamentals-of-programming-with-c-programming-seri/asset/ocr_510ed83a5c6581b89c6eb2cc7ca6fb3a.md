@@ -1,0 +1,37 @@
+```
+// deletes the last element in a list
+int deleteLast(NODEPTR *list) {
+    NODEPTR p, q;
+    int temp = -1;
+    if (*list) {
+        p = *list;
+        q = NULL;
+        while (p->next) {
+            q = p;
+            p = p->next;
+        }
+        if (!q) {
+            *list = NULL;
+        } else {
+            q->next = NULL;
+        }
+        temp = p->info;
+        freeNode(p);
+    }
+    return temp;
+}
+```
+
+```
+// inserts a new node after the node pointed to by p
+void insertAfter(NODEPTR p, int num) {
+    NODEPTR q;
+    if (p == NULL) {
+        error("Void insertion.");
+    }
+    q = getNode();
+    q->info = num;
+    q->next = p->next;
+    p->next = q;
+}
+```

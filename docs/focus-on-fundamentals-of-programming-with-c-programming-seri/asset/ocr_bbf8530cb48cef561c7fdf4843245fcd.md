@@ -1,0 +1,25 @@
+# Text Statistics Lab
+
+The purpose of this assignment is to give you practice using text and data processing techniques in order to compute some statistics about a file of text. The assignment will also give you a chance to learn more about strings and files and about how to organize a moderate-sized program.
+
+Construct a program, `stats.c`, to examine the characters and words in a data file, `getty.txt`. Your program should perform the following operations:
+
++   Count the number of lines in the text.
+
++   Count the number of words in the text.
+
++   Calculate the average length of all the words in the text.
+
++   Display a histogram of the length of words in the text, i.e., a bar graph such as:
+
+![](bbox=[0.12, 0.4, 0.93, 0.54])
+
+to indicate that there are 2 one letter words in the text, 6 two letter words, 3 three letter words, 8 four letter words, etc.
+
++   Count the number of characters in the text, excluding blanks and punctuation.
+
++   Display a table showing the frequency of each letter in the text.
+
++   Count the number of vowels in the text and output the frequency of each vowel as a percentage of the total number of vowels read.
+
+Remember that the `main()` function should appear as the first function in the program. Be sure to use function prototypes for each of the functions that are used in your program.

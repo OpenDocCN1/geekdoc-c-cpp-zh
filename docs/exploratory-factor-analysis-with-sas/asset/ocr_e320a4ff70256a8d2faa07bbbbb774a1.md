@@ -1,0 +1,7 @@
+Another way to visualize these results is to plot them. Figure 3.5 on page 43 presents a plot of the average squared partial correlations. As you can see, the inflection point (minimum) on the plot is at 2.
+
+# Figure 3.5 Plot of average partial correlations for MAP test of the engineering data
+
+![](bbox=[0.175, 0.205, 0.805, 0.585])
+
+The results for the parallel analysis are presented in Figure 3.6 on page 44 below. The parallel analysis computed the eigenvalues from the data and then generated a series of comparable sets of random data. The mean eigenvalues across the sets of random data were computed along with the 95th percentile of those values. These values are presented on the right of the figure, in the columns labeled Raw Data, Means, and Prcntyle. Remember, the goal is to select the number of factors whose observed eigenvalues exceed those produced from random data. The current results would recommend two factors be extracted since the raw data eigenvalue goes below the generated mean eigenvalue and 95th percentile eigenvalue among the random data sets at factor 3. Again, we can visualize these results by plotting the mean eigenvalues of the random data against the eigenvalues in the raw data. (See Figure 3.7 on page 44.)

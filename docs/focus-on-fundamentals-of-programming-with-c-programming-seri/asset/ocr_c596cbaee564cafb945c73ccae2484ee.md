@@ -1,0 +1,42 @@
+The value of myClass[2].gpa is 3.25.
+
+The value of myClass[24].name is Garrett.
+
+The value of myClass[0].year is 2015.
+
+We can now assign values to the different fields of each myClass struct as follows:
+
+```
+// arrayStruct2.c
+
+myClass[21].year = 2018;
+myClass[13].gpa = 3.50;
+strcpy(myClass[4].name, "Griffin");
+```
+
+Once the array of structs is defined, we can iterate through the array and access each of the structs individually:
+
+```
+// arrayStruct3.c
+
+for (i = 0; i < SIZE; ++i) {
+    if (myClass[i].gpa > 3.75) {
+        printf("Congratulations %s, you have made the honor roll.", myClass[i].name);
+    }
+}
+```
+
+We can initialize arrays containing structures:
+
+```
+// arrayStruct4.c
+
+Student myClass[SIZE] = {
+    { "Freda", 3.75, 2015 },
+    { "Karen", 3.85, 2016 },
+    { "Naomi", 3.25, 2017 },
+    { "Garrett", 2.85, 2019 }
+};
+```
+
+Note that the inner braces are optional.

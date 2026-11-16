@@ -1,0 +1,38 @@
+```
+```cpp
+class Point {
+private:
+    int x, y;
+public:
+    Point( int a, int b ) { x = a; y = b; }
+    int xPos() const { return x; }
+    int yPos() const { return y; }
+    void move( int dx, int dy ) { x += dx; y += dy; }
+    void modify() const { random(&x); random(&y); }
+};
+
+void random(int *num) {
+    // set num to some random value
+}
+```
+```
+
+We've incorrectly declared modify() to be a constant function. The code won't compile because the calls to random() require pointers to integers when, in fact, x and y are typed as constants.
+
+We can change random() to be acceptable to the compiler by changing its argument type:
+
+```
+```cpp
+void random(const int *num) {
+    // can't really change num here
+}
+```
+```
+
+This prevents random() from changing the value of the coordinate.
+
+The same rule about calling other functions inside constant functions applies to calling other member functions. A constant member function can only call other constant member functions. It can't call standard member functions since they might update the object's data.
+
+Note that you could find a clever way to get around the restrictions for constant member functions by using clever programming techniques! You could use type casts and pointers to trick the compiler into letting you change the constants. There is no guarantee that a constant member function won't change the data members. C++ doesn't always stop you from violating the rules. It only prevents accidental misuse.
+
+Also note that constructors and destructors are not required to be declared const in order to be applied to constant class objects.

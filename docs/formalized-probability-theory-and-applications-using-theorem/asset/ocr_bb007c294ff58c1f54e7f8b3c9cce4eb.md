@@ -1,0 +1,13 @@
+Barcelos, T. S., & Silveira, I. F. (2014). Computational Thinking and Mathematics: Possible Relationships Revealed by an Analysis of National Curriculum Guidelines. In V. Wang (Ed.), Handbook of Research on Education and Technology in a Changing Society (pp. 922–934). Hershey, PA: Information Science Reference; doi:10.4018/978-1-4666-6046-5.ch069
+
+Baruah, H. K. (2014). Construction of Normal Fuzzy Numbers using the Mathematics of Partial Presence. In S. Chakraverty (Ed.), Mathematics of Uncertainty Modeling in the Analysis of Engineering and Science Problems (pp. 109–126). Hershey, PA: Information Science Reference; doi:10.4018/978-1-4666-4991-0.ch006\
+
+Bellamine, F. H., & Gdoua, A. (2013). Numerical Simulation of Distributed Dynamic Systems using Hybrid Tools of Intelligent Computing. In M. Khalgui, O. Mosbahi, & A. Valentini (Eds.), Embedded Computing Systems: Applications, Optimization, and Advanced Design (pp.360–383). Hershey, PA: Information Science Reference; doi:10.4018/978-1-4666-3922-5.ch018
+
+Bensouyad, M., Guidoum, N., & Saïdouni, D. (2014). An Efficient Evolutionary Algorithm for Strict Strong Graph Coloring Problem. [IAEAC]. International Journal of Applied Evolutionary Computation, 5(2), 22–36. doi:10.4018/ijaec.2014040102
+
+Bentayeb, F., Maïzi, N., Mahboubi, H., Favre, C., Loudcher, S., Harbi, N., & Darmont, J. et al. (2012). Innovative Approaches for Efficiently Warehousing Complex Data from the Web. In M. Zorrilla, J. Mazón, Ó. Ferrández, I. Garrigós, F. Daniel, & J. Trujillo (Eds.), Business Intelligence Applications and the Web: Models, Systems and Technologies (pp. 26–52). Hershey, PA: Business Science Reference; doi:10.4018/978-1-61350-038-5.ch002
+
+Bentayeb, F., Maïzi, N., Mahboubi, H., Favre, C., Loudcher, S., Harbi, N., ... Darmont, J. (2013). Innovative Approaches for Efficiently Warehousing Complex Data from the Web. In Data Mining: Concepts, Methodologies, Tools, and Applications (pp. 1422–1448). Hershey, PA: Information Science Reference; doi:10.4018/978-1-4666-2455-9.ch074
+
+Beynon, M. J., & Clatworthy, M. (2013). Analysing the Returns-Earnings Relationship: Dempster-Shafer Theory and Evolutionary Computation Based Analyses Using the Classification and Ranking Belief Simplex. In P. Vasant (Ed.), Meta-Heuristics Optimization Algorithms in Engineering, Business, Economics, and Finance (pp.198–222). Hershey, PA: Information Science Reference; doi:10.4018/978-1-4666-2086-5.ch007

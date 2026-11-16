@@ -1,0 +1,36 @@
+To generate a name, the C compiler simply adds an underscore to the function name (there's no information about the argument types that would make the function name unique).
+
+A C++ compiler generates unique names by combining the name of the function as given in the source code with information about its argument types. This encoding is sometimes called name mangling, because the function name and its argument types are mangled together to create the name used in the assembly language. For example, the following C++ code:
+
+```
+void foo(int);
+void foo(char*);
+void foo(double);
+
+int main() {
+    foo(5);
+    foo("haley");
+    foo(5.5);
+}
+```
+
+might generate the following calls:
+
+```
+call ?foo@@YAXH@Z
+call ?foo@@YAXPAD@Z
+call ?foo@@YAXN@Z
+```
+
+Notice that extra characters have been added. The characters after the @ signs contain argument type information. Thus, name encoding generates unique names by combining the name of the function with its argument types, so you can overload the same function name using different argument lists.
+
+Name encoding is also used to generate the names of class member functions, by combining the function name and argument types with the class name. For example:
+
+```
+class button {
+private:
+    int pressed;
+public:
+    void push();
+};
+```

@@ -1,0 +1,10 @@
+# What's the Big Deal?
+
+| Category | Number of Programmers | Duration | Lines of Code |
+|---|---|---|---|
+| Trivial | 1 | 1-4 weeks | 500 |
+| Small | 1 | 1-6 months | 1-2K |
+| Medium | 2-5 | 1-2 years | 5-50K |
+| Large | 5-20 | 2-3 years | 50-100K |
+| Very Large | 100-1000 | 4-5 years | 1M |
+| Extremely Large | 2000-5000 | 5-10 years | 1-10M |

@@ -1,0 +1,24 @@
+# Class Function Members
+
+Class member functions such as display() are declared as function prototypes. The actual function statements are provided at another place in the program.
+
+Let's look at the implementation of the member function display():
+
+```
+void Time1::display() {
+   cout << (month < 10 ? "0" : "") << month << "/"
+       << (day < 10 ? "0" : "") << day << "/"
+       << year << " ";
+
+   cout << ((hour == 0 || hour == 12) ? 12 : hour % 12) << ":"
+       << (min < 10 ? "0" : "") << min << ":"
+       << (sec < 10 ? "0" : "") << sec
+       << (hour < 12 ? " AM" : " PM") << endl;
+}
+```
+
+There are two main differences between the implementation of a member function and the implementation of a common function:
+
++   - The member function name is prefaced by the class name and the scope resolution operator (::). This tells the compiler that display() is a member of the Time1 class. Because the class name uniquely qualifies the member function's name, the program may have other functions and other class member functions named display() without conflicts.
+
++   - Inside the member function, statements have direct access to the class's members without the need for pointers or even parameter passing.

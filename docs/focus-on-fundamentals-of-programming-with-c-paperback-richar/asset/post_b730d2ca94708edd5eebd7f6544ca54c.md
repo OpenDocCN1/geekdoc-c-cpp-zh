@@ -1,0 +1,295 @@
+
+Because C contains no built-in function to read an entire line of input, it could be called a rather primitive language. However, this encourages tool building! So let's build a function to read a line of input and package it as a function named getline() to be used whenever needed.
+
+The following program copies lines of input onto the output. It reads one line at a time into string buf. A null terminator is put at the end of string buf. If the input is at EOF, the value of EOF is returned.
+
+```c
+// copyLines1.c
+
+#include <stdio.h>
+
+#define BUFSIZ 81
+
+int getline(char buf[]);
+
+int main(void) {
+    char buf[BUFSIZ];
+
+    while (getline(buf) != EOF) {
+        printf("%s", buf);
+    }
+    return 0;
+}
+
+int getline(char buf[]) {
+    char c;
+    int i = 0;
+
+    do {
+        c = getchar();
+        buf[i++] = c;
+    } while(c != '\n');
+    buf[i-1] = '\0';
+    return i;
+}
+```
+
+Watch how we can rewrite getline() more simply:
+
+```c
+// copyLines2.c
+
+int getline(char buf[]) {
+    char c;
+    int i = 0;
+
+    while ((buf[i++] = getchar()) != '\n') {
+        ;
+    }
+
+    buf[i] = '\0';
+    return i;
+}
+```
+
+putchar() outputs a single character to standard output (terminal window). The arguments to putchar() should be one individual character, either variable or constant:
+
+```c
+putchar(c);
+putchar('a');
+putchar('\n');
+```
+
+If you just need to output a single character without format, use putchar() instead of printf(). Here's a program that copies its input to output:
+
+```c
+// copy.c
+
+#include <stdio.h>
+
+int main(void) {
+    int c;
+
+    while ((c = getchar()) != EOF) {
+        putchar(c);
+    }
+    return 0;
+}
+```
+
+Note, if this program is applied to a file of 100 bytes, it will call getchar() 101 times. The first 100 calls will return a data byte. The 101st call will return the EOF value. Therefore the test is evaluated 101 times and the loop body is executed 100 times.
+
+With this program we can write our own command line copy command using I/O redirection:
+
+```
+copy < inFile.txt > outFile.txt
+```
+
+![](img/0603fdf2eefeabaf26542250cc2fb439_207_0.png)
+
+Here's a program to map its input to lower case:
+
+```c
+// map2.c
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void) {
+    int c;
+
+    while ((c = getchar()) != EOF) {
+        putchar(isupper(c) ? tolower(c) : c);
+    }
+    return 0;
+}
+```
+
+Finally, let's write some code that reads text of all lower case letters and selectively capitalize the first letter of each word. A letter will be defined as any non-whitespace character.
+
+First an algorithm:
+
+```c
+// caps1.c
+
+for each whitespace character w
+    output w
+for each word
+    capitalize initial letter
+    for each succeeding letter
+        output c
+    for each whitespace character w
+        output w
+```
+
+Now some code:
+
+```c
+// caps2.c
+
+while ((c = getchar()) != EOF) {
+    if (isspace(c)) {
+        putchar(c);
+    } else {
+        putchar(toupper(c));
+        while ((isspace(c = getchar()))) {
+            putchar(c);
+        }
+        putchar(c);
+    }
+}
+```
+
+Let's see if we can redesign this algorithm and code:
+
+First the algorithm:
+
+```c
+// caps3.c
+
+for each input character c
+    if c is the first letter of a word
+        output capitalized c
+    else
+        output c
+```
+
+Now the code:
+
+```c
+// caps4.c
+
+for (wasWhite = 1; (c = getchar()) != EOF; wasWhite = isspace(c)) {
+    putchar (!isspace(c) && wasWhite ? toupper(c) : c);
+}
+```
+
+Note that this design results in a simpler program.
+
+## Text Files
+
+A text file is a sequence of *characters* terminated by an *end-of-file marker*. The length of the file is not specified when the file is defined. The characters in the file are stored on a storage device other than the memory occupied by the program while the program is executing, such as a disk drive.
+
+Note the emphasis on characters. That's all there is in a text file, just characters. Sprinkled among the characters may be newline characters, `\n`, or tab `\t` characters. In addition, each data element in the file (words, numeric data) is usually (though not always) separated from the others by blanks.
+
+The advantage of files is that they can exist independently of the program that creates or uses the data in the file. The size of the file is also not a limiting factor as we can increase the file size simply by adding a character to the end of the file.
+
+## Accessing Text Files
+
+A text file is accessed via a pointer to a structure that is defined in the standard header file *stdio.h* as FILE. This structure FILE contains members (fields) that describe the current state of the file.
+
+C communicates with files using a data type called a *file pointer*. This type is defined within *stdio.h*, and is written as FILE *. A file pointer called fp is declared in a statement like:
+
+```c
+FILE *fp;
+```
+
+Your program must first open a file before it can access it. This is done using the *fopen()* function, which returns the required file pointer. *fopen()* is declared as follows:
+
+```c
+FILE *fopen(char *fileName, char *fileMode);
+```
+
+*fopen()* opens a file for I/O and returns a pointer to FILE. Both *fileName* and *fileMode* are strings. File names may be any valid file name that can exist under the operating system and can include path information:
+
+```c
+"myfile.dat"
+"/users/home/input.txt"
+```
+
+If the path information is not specified, then the file location is assumed to be the directory where the program was run from, which is known as the working directory.
+
+### The file modes are:
+
+| Mode | Meaning | Description |
+|------|---------|-------------|
+| "r" | read | file to read in data |
+| "w" | write | write data to file |
+| "a" | append | append data to end of file that already contains some data |
+
+The "r" mode opens the named file for reading only from the beginning of the file. The named file must exist in order to be opened successfully. Note that the contents of the file cannot be changed.
+
+The "w" mode opens the named file for writing from the beginning of the file. The named file will be created if it doesn't exist. If it does exist then the original contents of the file will be overwritten regardless of whether any file operations are performed or not.
+
+The "a" mode opens the named file for writing from the end of the file. The named file will be created if it doesn't exist. If it does exist then the original contents of the file will not be changed. All write operations are appended to the end of the file.
+
+To open a file for reading, we might say:
+
+```c
+FILE *fp;
+fp = fopen("infile.txt", "r");
+```
+
+If the fileName cannot be opened for any reason, then the pointer value NULL will be returned. We can test this variable against the defined value NULL:
+
+```c
+// file1.c
+
+FILE *fp;
+
+fp = fopen("infile.txt", "r");
+if (fp == NULL) {
+    printf("File could not be opened.\n");
+    exit(1);
+}
+```
+
+This will tell us if the open was successful or not. Note that exit(1) is a function that requires the #include <stdlib.h> header file and will cause the program to abort.
+
+We can actually combine the fopen() call, the assignment of the returned FILE pointer variable, and the test against the NULL pointer, into a single expression:
+
+```c
+// file2.c
+
+FILE *fp;
+
+if ((fp = fopen("infile.txt", "r")) == NULL) {
+    printf("File could not be opened.\n");
+    exit(1);
+}
+```
+
+Or we can say even more concisely:
+
+```c
+// file3.c
+
+FILE *fp;
+
+if (!(fp = fopen("infile.txt", "r"))) {
+    printf("File could not be opened.\n");
+    exit(1);
+}
+```
+
+The `fclose()` command can be used to disconnect a file pointer from a file. This is usually done so that the pointer can be used to access a different file. Systems have a limit on the number of files that can be open simultaneously, so it is a good idea to close a file when you have finished using it.
+
+The `fclose()` statement is defined as follows:
+
+```c
+int fclose(FILE *fp);
+```
+
+and is called like this:
+
+```c
+fclose(fp);
+```
+
+`fclose()` empties the buffer and breaks all connections to the indicated file. EOF is returned if fp is not associated with a file. Note that if you fail to close a file when the program exits, the system will close the file for you. However, it is usually better to close the files properly yourself to ensure that the data in the file is properly saved.
+
+## File I/O statements
+
+Having opened a file pointer, you will wish to use it for either input or output. C supplies a set of functions to allow you to do this. All are very similar to input and output functions that you have already seen.
+
+File input and output is performed using the equivalents of `getchar()` and `putchar()` which are called `getc()` and `putc()`. Each takes an extra argument, which identifies the file pointer to be used for input or output.
+
+```c
+c = getc(fp)
+```
+
+A macro which retrieves the next character from the file pointed to by fp. The value of the character is returned as an int. It returns EOF if an end of file is encountered or if there is an error. Note that `getchar()` is actually a macro defined as: `getc(stdin)`.
+
+```c
+int getc(FILE *fp);
+```

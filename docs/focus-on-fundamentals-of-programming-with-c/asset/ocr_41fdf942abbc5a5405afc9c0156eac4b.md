@@ -1,0 +1,30 @@
+# Right Shift Operator
+
+The right shift (>>) operator shifts the bits of a value to the right. Bits that are shifted out of the low-order bit are lost. Right shifting an unsigned value will always result in 0's being shifted in on the left.
+
+For example:
+
+```
+// rshift.c
+#include <stdio.h>
+int main(void) {
+    int num = 12;      // 0000 0000 0000 1100
+    num = num >> 1;    // 0000 0000 0000 0110
+    printf("%d\n", num);
+    return 0;
+}
+```
+
+In the program above, all bits of num are right shifted by one position to the right. The output produced is:
+
+```
+num = 6
+```
+
+Notice that right shifting a value by one results in dividing the value that is shifted by 2. The right shift operation could also have been written as:
+
+```
+num >>= 1;
+```
+
+What is shifted in on the left for signed values depends on the sign of the value that is being shifted and also how this operation is implemented on your system. If the sign bit is 0 (positive value), then 0's will be shifted in, no matter what system we're on. If the sign bit is 1, some computers will shift in 1's (arithmetic right-shift) and some will shift in 0's (logical right shift).

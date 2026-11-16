@@ -1,0 +1,9 @@
+but also some of what authors of textual instruments might learn from the designs of folk instruments:
+
+Maybe some instruments will be hard to play. They may require practice. Or not. As a teacher once said to me about the guitar, “After five or ten minutes you’ll make sounds that are almost musical. That’s what the frets are for.” And that’s a great virtue of folk instruments. They do allow you to get in touch with a productive vocabulary very quickly. I think a good instrument would do that. It would stimulate engagement. It should make people want to get in there and interact, and to repeat the experience. (2003a)
+
+But for Mouthrop, perhaps unlike Cayley, musical and literary figures were not the only relevant touchstones. Mouthrop employs musical figures as a vocabulary that can help one imagine projects that occupy a space between two other types of work at play in discussions of instrumental texts. As Mouthrop puts it:
+
+> What I’m particularly taken with is the notion of a middle space between literary texts and ludic texts—between interactive fiction, or hypertext fiction, and games. You have, with instruments, a text with behavior and temporal dimensions that in some ways maps onto the temporal experience and interactive possibilities in game design. (ibid.)
+
+These are intriguing notions, but also somewhat elusive when discussed on a purely theoretical level. How do we conceive of projects that are literary, but played in a somewhat musical manner, and perhaps occupy some ground nearby the established field of games? A deeper inquiry requires looking at specific projects. In particular, Cayley’s interview statement about instrumental texts came in the context of an answer to a question about his piece riverIsland (2002b). The occasion of my interview

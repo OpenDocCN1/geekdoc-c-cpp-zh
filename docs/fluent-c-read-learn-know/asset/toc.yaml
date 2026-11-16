@@ -1,0 +1,203 @@
+level_changes:
+- line: 982
+  before: 2
+  after: 1
+- line: 1008
+  before: 2
+  after: 1
+- line: 1040
+  before: 2
+  after: 1
+- line: 1066
+  before: 2
+  after: 1
+- line: 2367
+  before: 2
+  after: 1
+- line: 3174
+  before: 2
+  after: 1
+- line: 3753
+  before: 2
+  after: 1
+- line: 6697
+  before: 2
+  after: 1
+- line: 8469
+  before: 1
+  after: 2
+- line: 8473
+  before: 1
+  after: 2
+- line: 8477
+  before: 1
+  after: 2
+- line: 8481
+  before: 1
+  after: 2
+- line: 8519
+  before: 1
+  after: 2
+- line: 8530
+  before: 1
+  after: 2
+- line: 12005
+  before: 1
+  after: 2
+- line: 12007
+  before: 1
+  after: 2
+- line: 12014
+  before: 1
+  after: 2
+- line: 12020
+  before: 1
+  after: 2
+- line: 12030
+  before: 1
+  after: 2
+- line: 12032
+  before: 1
+  after: 2
+- line: 12034
+  before: 1
+  after: 2
+- line: 12036
+  before: 1
+  after: 2
+- line: 12068
+  before: 1
+  after: 2
+- line: 12076
+  before: 1
+  after: 2
+- line: 12082
+  before: 1
+  after: 2
+- line: 12088
+  before: 1
+  after: 2
+- line: 12092
+  before: 1
+  after: 2
+- line: 12096
+  before: 1
+  after: 2
+- line: 12100
+  before: 1
+  after: 2
+- line: 12104
+  before: 1
+  after: 2
+- line: 12108
+  before: 1
+  after: 2
+- line: 12110
+  before: 1
+  after: 2
+- line: 12112
+  before: 1
+  after: 2
+- line: 12114
+  before: 1
+  after: 2
+- line: 12118
+  before: 1
+  after: 2
+- line: 12122
+  before: 1
+  after: 2
+- line: 12126
+  before: 1
+  after: 2
+- line: 12130
+  before: 1
+  after: 2
+- line: 12136
+  before: 1
+  after: 2
+- line: 12140
+  before: 1
+  after: 2
+- line: 12144
+  before: 1
+  after: 2
+- line: 12148
+  before: 1
+  after: 2
+- line: 12152
+  before: 1
+  after: 2
+text_changes:
+- line: 6270
+  before: REVIEW
+  after: 复习
+- line: 6280
+  before: INTERFACES
+  after: 接口
+- line: 6350
+  before: TAKE A BREAK
+  after: 休息一下
+- line: 6356
+  before: WORKING WITH TYPES
+  after: 使用类型
+- line: 6364
+  before: IMPLICIT CASTING
+  after: 隐式转换
+- line: 6368
+  before: SAFE CASTS
+  after: 安全转换
+- line: 6376
+  before: INHERITANCE CASTS
+  after: 继承转换
+- line: 6382
+  before: EXPLICIT CASTS
+  after: 显式转换
+- line: 6409
+  before: IS AND AS CASTS
+  after: is 和 as 转换
+- line: 6668
+  before: REVIEW
+  after: 复习
+- line: 6943
+  before: TAKE A BREAK
+  after: 休息一下
+- line: 6947
+  before: REVIEW
+  after: 复习
+- line: 6960
+  before: THE OBJECT BROWSER
+  after: 对象浏览器
+- line: 6974
+  before: THE BROWSER WINDOW
+  after: 浏览器窗口
+- line: 10551
+  before: .NET解决方案
+  after: .NET 解决方案
+- line: 12032
+  before: PCL 技术
+  after: FCL 技术
+- line: 15476
+  before: GRADIENTS
+  after: 渐变
+- line: 15492
+  before: BOUNDING BOXES
+  after: 边界框
+- line: 15508
+  before: DEFINING A LINEAR GRADIENT
+  after: 定义线性渐变
+- line: 15534
+  before: PUT ON YOUR THINKING HAT
+  after: 戴上你的思考帽
+- line: 15542
+  before: HOW'D YOU DO?
+  after: 你做得怎么样？
+- line: 15574
+  before: TAKE A BREAK
+  after: 休息一下
+- line: 15578
+  before: PUT ON YOUR THINKING HAT
+  after: 戴上你的思考帽
+- line: 15610
+  before: HOW'D YOU DO?
+  after: 你做得怎么样？
