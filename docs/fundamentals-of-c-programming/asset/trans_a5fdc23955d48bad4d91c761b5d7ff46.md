@@ -1,0 +1,185 @@
+
+
+```
+// Found n; cursor is pointing at the node containing n
+if (head == tail) // n was the only element in the list
+    head = tail = nullptr; // cursor still points to node with n
+else if (cursor == head) // Is n the first element in the list?
+    head = head->next; // Redirect head around n
+else // n is not the first element
+    prev->next = cursor->next; // Redirect previous node around n
+if (cursor == tail) // Was n the last element in the list?
+    tail = prev; // Update tail to new last element
+delete cursor; // Delete n's node
+len--; // List size decreases by 1
+return true; // We found n and deleted its node
+}
+```
+
+The remove method is more complicated than the insert method because the insert method always adds new elements to the back end of the list. The remove method must be able to remove elements from anywhere in the list—front, back, and anywhere in between.
+
+The remove method for our IntList6 smart list class would look like the following:
+
+```
+// Removes the first occurrence of n from the list.
+// Returns true if successful (found n and removed it).
+// Returns false if n is not originally present in the list.
+bool IntList6::remove(int n) {
+    auto cursor = head, // Start at head of list
+         prev = head; // Keep track of previous node seen
+    // Loop until we run off the end of the list or find n,
+    // whichever comes first
+    while (cursor && cursor->data != n) {
+        prev = cursor; // Remember previous node
+        cursor = cursor->next; // Move to next node
+    }
+    if (!cursor) // Did we run off the end of the list?
+        return false; // Indicate we did not find n
+    // Found n; cursor is pointing at the node containing n
+    if (head == tail) // n was the only element in the list
+        head = tail = nullptr; // cursor still points to node with n
+    else if (cursor == head) // Is n the first element in the list?
+        head = head->next; // Redirect head around n
+    else // n is not the first element
+        prev->next = cursor->next; // Redirect previous node around n
+    if (cursor == tail) // Was n the last element in the list?
+        tail = prev; // Update tail to new last element
+    // No delete is necessary
+    len--; // List size decreases by 1
+    return true; // We found n and deleted its node
+}
+```
+
+The IntList6::remove method still needs to perform all the checks and properly redirect the pointers within the list, but it no longer needs to call delete explicitly.
+
+## 第 19 章
+
+## 泛型编程
+
+The flexible sorting examples in Listing 12.2 (flexibleintsort.cpp), Listing 16.5 (loggingflexiblesort.cpp), and Listing 17.35 (polymorphicsort.cpp) allow us to arrange the elements in integer vectors in creative ways and perform other interesting activities such as logging. Those examples demonstrate the power of function pointers, inheritance, and polymorphism. As flexible and powerful as these techniques are, they all contain one major limitation: they deal with vectors of integers only. Consider the `Comparer` class from Listing 17.33 (comparer.h) and Listing 17.34 (comparer.cpp), and the “flexible” `selection_sort` function from Listing 17.38 (loggingsort.cpp). The `selection_sort` function accepts a vector of integers and a `Comparer` reference. What if we need to sort a vector of double-precision floating-point numbers or a vector of `std::string` objects? Unfortunately, all of this “flexible” code cannot handle this seemingly minor variation.
+
+In this chapter we look at C++’s template mechanism that enables programmers to develop truly generic algorithms and data structures. We will see how the standard C++ library has embraced the template technology to provide a wealth of generic algorithms and data structures that greatly assist developers in the construction of quality software.
+
+### 19.1 函数模板
+
+Consider the following comparison function found in Listings Listing 12.2 (flexibleintsort.cpp), Listing 16.5 (loggingflexiblesort.cpp), and Listing 17.38 (loggingsort.cpp):
+
+```
+/*
+ * less_than(a, b)
+ *
+ * Returns true if a < b; otherwise, returns
+ * false.
+ */
+bool less_than(int a, int b) {
+    return a < b;
+}
+```
+
+Listing 19.1 (testlessthan.cpp) tests the `less_than` function with various arguments.
+
+### 清单 19.1: testlessthan.cpp
+
+```
+#include <iostream>
+
+/* less_than(a, b)
+ * Returns true if a < b; otherwise, returns
+ * false.
+ */
+bool less_than(int a, int b) {
+    return a < b;
+}
+
+int main() {
+    std::cout << std::boolalpha;
+    std::cout << less_than(2, 3) << '\n';
+    std::cout << less_than(2.2, 2.7) << '\n';
+    std::cout << less_than(2.7, 2.2) << '\n';
+}
+```
+
+The compiler generates warnings for the last two statements. The less_than function expects two integer arguments, but the calling code sends two double-precision floating-point values. The automatic conversion from double to int can lose information, hence the warnings. The output of Listing 19.1 (testlessthan.cpp) shows that we should take these warnings seriously:
+
+```
+true
+false
+false
+```
+
+Obviously 2 < 3 and 2.7 != 2.7, but 2.2 < 2.7? The automatic double to int conversion truncates, so the less_than function treats both 2.2 and 2.7 as 2, and clearly 2 != 2.
+
+The situation is even worse for the following code:
+
+```
+std::string word1 = "ABC", word2 = "XYZ";
+std::cout << (word1 < word2) << '\n';
+std::cout << (word2 < word1) << '\n';
+// The next statement will not compile
+//std::cout << less_than(word1, word2) << '\n';
+```
+
+The C++ standard library provides a global operator< function that compares two std::string objects lexicographically. The first two std::cout statements produce the expected output:
+
+```
+1
+0
+```
+
+but because the last line that is commented out will not compile if we remove the commenting symbols. This is because the C++ library does not provide a standard conversion from std::string to int, and less_than requires two int parameters.
+
+As another example, consider the following function that computes the sum of the elements in a vector of integers:
+
+```
+int sum(const std::vector<int>& v) {
+    int result = 0;
+    for (int elem : v)
+        result += elem;
+    return result;
+}
+```
+
+The following client code works well:
+
+```
+std::vector<int> v {10, 20, 30};
+std::cout << sum(v) << '\n';
+```
+
+It prints 60. The following code does not compile:
+
+```
+std::vector<double> v {10, 20, 30};
+std::cout << sum(v) << '\n';
+```
+
+The second code fragment attempts to pass a vector of double-precision floating-point values to the sum function. Unfortunately, the sum function accepts only vectors that contain integers. More precisely, sum accepts only arguments of type std::vector<int>, and a std::vector<double> object is not a std::vector<int>. The solution is easy: just copy and paste the original sum function and change all the occurrences of “int” to “double”, creating an overloaded sum function:
+
+```
+double sum(const std::vector<double>& v) {
+    double result = 0;
+    for (double elem : v)
+        result += elem;
+    return result;
+}
+```
+
+This works, but the duplicated effort is unsatisfying. These two overloaded sum functions are identical except for the types involved. The actions of the two functions—the initialization, vector traversal and arithmetic—are essentially the same. In general, code duplication is undesirable. A programmer that discovers and repairs an error in one of the functions must remember to apply the corresponding correction to the function’s overloaded counterpart.
+
+Both the less_than and sum functions share a common shortcoming: they are tied in some way to a particular data type. It would be convenient to be able to specify the common pattern and let the compiler fill in the types as required. In the case of less_than we would like to be able to write a function that can use the < operator on parameters of any type for which < is compatible. For sum, we would like to create a generic function that works for vectors containing any numeric type.
+
+C++ enables programmers to write such generic functions via templates. A function template specifies a pattern of code, and either the programmer or the compiler supplies the exact type as needed. Listing 19.2 (templateless_than.cpp) uses C++’s template mechanism to create a generic less_than function.
+
+### 清单 19.2: templateless_than.cpp
+
+```
+#include <iostream>
+#include <string>
+/**
+* less_than(a, b)
+* Returns true if a < b; otherwise, returns
+* false.
+*/
+template <typename T>
+```
+

@@ -1130,6 +1130,7 @@
 +   [Java 2D 游戏编程基础](docs/fundamental-2d-game-programming-with-java/README.md)
 +   [C 语言基础：深入底层机器](docs/fundamental-c-getting-closer-to-the-machine/README.md)
 +   [人工智能基础](docs/fundamentals-of-artificial-intelliegenceneapolitan-richard-e/README.md)
++   [C++ 编程基础](docs/fundamentals-of-c-programming/README.md)
 +   [信息系统的 C# 编程基础 全彩版](docs/fundamentals-of-c-programming-for-information-systems-full-c/README.md)
 +   [C 语言计算机编程基础](docs/fundamentals-of-computer-programming-with-c/README.md)
 +   [C 语言计算与编程入门指南](docs/fundamentals-of-computing-and-programming-in-c-paperback-jan/README.md)

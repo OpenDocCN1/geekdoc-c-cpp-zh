@@ -1,0 +1,33 @@
+# Chapter 2
+
+# Writing a C++ Program
+
+Properly written C++ programs have a particular structure. The syntax must be correct, or the compiler will generate error messages and not produce executable machine language. This chapter introduces C++ by providing some simple example programs and associated fundamental concepts. Most of the concepts presented in this chapter are valid in many other programming languages as well. While other languages may implement the concepts using slightly different syntax, the ideas are directly transferable to other languages like C, Java, C#, and Ada.
+
+# 2.1 General Structure of a Simple C++ Program
+
+Listing 2.1 (simple.cpp) is one of the simplest C++ programs that does something:
+
+```
+Listing 2.1: simple.cpp
+
+#include <iostream>
+
+int main() {
+    std::cout << "This is a simple C++ program!\n";
+}
+```
+
+You can type the text as shown in Listing 2.1 (simple.cpp) into an editor and save it to a file named simple.cpp. The actual name of the file is irrelevant, but the name “simple” accurately describes the nature of this program. The extension .cpp is a common extension used for C++ source code.
+
+After creating this file with a text editor and compiling it, you can run the program. The program prints the message
+
+```
+This is a simple C++ program!
+```
+
+Listing 2.1 (simple.cpp) contains four non-blank lines of code:
+
++   * #include <iostream>
+
+This line is a preprocessing directive. All preprocessing directives within C++ source code begin with a # symbol. This one directs the preprocessor to add some predefined source code to our existing
